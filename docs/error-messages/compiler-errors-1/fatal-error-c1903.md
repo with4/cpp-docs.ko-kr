@@ -1,0 +1,30 @@
+---
+title: "심각한 오류 C1903 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "C1903"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C1903"
+ms.assetid: 4b4719d6-35d2-4ca5-81ce-903ecd28dfb9
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 심각한 오류 C1903
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+이전 오류를 복구할 수 없습니다. 컴파일이 중지됩니다.  
+  
+ 컴파일러가 너무 많은 오류를 발견하여 계속할 수 없습니다. 오류를 수정한 다음 다시 컴파일하세요.

@@ -1,0 +1,51 @@
+---
+title: "컴파일러 오류 C2630 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2630"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2630"
+ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 컴파일러 오류 C2630
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+쉼표로 구분된 목록이 있어야 하는 곳에 'symbol'이\(가\) 있습니다.  
+  
+ 쉼표가 필요한 컨텍스트에 기호가 표시됩니다.  
+  
+ 다음 샘플에서는 C2630 오류가 발생하는 경우를 보여 줍니다.  
+  
+```  
+// C2630.cpp  
+// compile with: /c  
+struct D {  
+   D(int);  
+};  
+  
+struct E {  
+   E(int);  
+};  
+  
+class C : public D, public E {  
+   C();  
+};  
+  
+C::C() : D(0) ; E(0) { }   // C2630  
+C::C() : D(0), E(0) {}   // OK  
+```

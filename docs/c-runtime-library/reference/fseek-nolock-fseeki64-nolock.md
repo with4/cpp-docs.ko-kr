@@ -1,0 +1,104 @@
+---
+title: "_fseek_nolock, _fseeki64_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_fseek_nolock"
+  - "_fseeki64_nolock"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_fseek_nolock"
+  - "_fseeki64_nolock"
+  - "fseek_nolock"
+  - "fseeki64_nolock"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_fseek_nolock 함수"
+  - "_fseeki64_nolock 함수"
+  - "파일 포인터[C++], 이동"
+  - "fseek_nolock 함수"
+  - "fseeki64_nolock 함수"
+  - "파일 찾기 포인터"
+ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
+caps.latest.revision: 13
+caps.handback.revision: 13
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _fseek_nolock, _fseeki64_nolock
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+지정된 된 위치에 파일 포인터를 이동합니다.  
+  
+## 구문  
+  
+```  
+int _fseek_nolock(   
+   FILE *stream,  
+   long offset,  
+   int origin   
+);  
+int _fseeki64_nolock(   
+   FILE *stream,  
+   __int64 offset,  
+   int origin   
+);  
+```  
+  
+#### 매개 변수  
+ `stream`  
+ 이 `FILE` 구조체에 대한 포인터입니다.  
+  
+ `offset`  
+ `origin.` 에서의 바이트의 수  
+  
+ `origin`  
+ 초기 위치입니다.  
+  
+## 반환 값  
+ 각각 [fseek, \_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md) 와 같습니다.  
+  
+## 설명  
+ 이러한 함수는 각각 `fseek` 및 `_fseeki64`의 잠겨 있지 않은 버전입니다.          그들은 다른 스레드의 간섭으로부터 보호받지 못하는 것을 제외하고는 `fseek` 및 `_fseeki64`와 동일합니다.  이러한 함수는 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다.  단일 스레드 응용 프로그램과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.  
+  
+## 요구 사항  
+  
+|Function|필수 헤더|  
+|--------------|-----------|  
+|`fseek`|\<stdio.h\>|  
+|`_fseeki64`|\<stdio.h\>|  
+  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+  
+## 해당 .NET Framework 항목  
+  
+-   [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
+  
+-   [System::IO::FileStream::Seek](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)  
+  
+## 참고 항목  
+ [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
+ [rewind](../../c-runtime-library/reference/rewind.md)

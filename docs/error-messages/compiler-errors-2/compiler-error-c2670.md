@@ -1,0 +1,32 @@
+---
+title: "컴파일러 오류 C2670 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2670"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2670"
+ms.assetid: 4b3b74c7-a750-4b0d-abd3-216d1234461f
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 컴파일러 오류 C2670
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+'identifier' : 함수 템플릿이 number번째 매개 변수를 'type' 형식으로부터 변환할 수 없습니다.  
+  
+ 매개 변수를 필수 형식으로 변환하지 못했습니다.  
+  
+ 명시적 변환을 만들면 이 오류를 해결할 수 있습니다.

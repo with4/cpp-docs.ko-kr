@@ -1,0 +1,74 @@
+---
+title: "C 런타임 라이브러리 참조 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "c.runtime"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "CRT"
+  - "CRT, 참조"
+  - "런타임 라이브러리"
+ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
+caps.latest.revision: 9
+caps.handback.revision: 9
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# C 런타임 라이브러리 참조
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Microsoft 런타임 라이브러리는 Microsoft Windows 운영체제에 대한 프로그래밍 루틴을 제공합니다.  이러한 루틴은 C 및 C\+\+ 언어에서 제공하지 않는 여러 일반 프로그래밍 작업을 자동화합니다.  
+  
+ 샘플 프로그램은 라이브러리에서 대부분 루틴에 관한 개별 참조 항목에 포함됩니다.  
+  
+## 단원 내용  
+ [C 런타임 라이브러리\(CRT\)](../c-runtime-library/crt-library-features.md)  
+ C 런타임 라이브러리를 구성하는.lib 파일에 대해 설명합니다.  
+  
+ [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)  
+ 범주에서 런타임 라이브러리에 대한 링크를 제공합니다.  
+  
+ [전역 변수 및 표준 형식](../c-runtime-library/global-variables-and-standard-types.md)  
+ 런타임 라이브러리에서 제공된 표준항목과 전역 변수에 대한 링크를 제공합니다.  
+  
+ [전역 상수](../c-runtime-library/global-constants.md)  
+ 런타임 라이브러리에 의해 정의된 전역 상수에 대한 링크를 제공합니다.  
+  
+ [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
+ 알파벳순으로 모든 C 런타임 라이브러리 함수들의 진입점에 대한 표를 제공합니다.  
+  
+ [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)  
+ Tchar.h에서 정의된 제네릭 테스트 매핑에 대한 링크를 제공합니다.  
+  
+ [언어 및 국가\/지역 문자열](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
+ 국가\/지역 문자열들과 언어를 설정하기 위해 `setlocale` 를 사용하는 방법을 설명합니다.  
+  
+## 관련 단원  
+ [디버그 루틴](../c-runtime-library/debug-routines.md)  
+ 런타임 라이브러리 루틴들의 디버그 버전을 위한 링크를 제공합니다.  
+  
+ [런타임 오류 검사](../c-runtime-library/run-time-error-checking.md)  
+ 런타임 오류 검사를 지원하는 함수에 대한 링크를 제공합니다.  
+  
+ [런타임 라이브러리 동작](../build/run-time-library-behavior.md)  
+ CRT DLL의 진입점을 설명합니다.  
+  
+ [Visual C\+\+ 라이브러리](http://msdn.microsoft.com/ko-kr/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, 표준 C\+\+ 라이브러리를 포함하여 Visual C\+\+에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
+  
+ [디버깅](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ Visual Studio 디버거를 사용하여 응용 프로그램이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.  
+  
+## 참고 항목  
+ [Visual C\+\+ Libraries Reference](http://msdn.microsoft.com/ko-kr/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
