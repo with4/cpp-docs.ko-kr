@@ -1,0 +1,75 @@
+---
+title: "_CrtDbgBreak | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_CrtDbgBreak"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_CrtDbgBreak"
+  - "CrtDbgBreak"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_CrtDbgBreak 함수"
+  - "CrtDbgBreak 함수"
+ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
+caps.latest.revision: 12
+caps.handback.revision: 12
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _CrtDbgBreak
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+특정 코드 줄에 중단점을 설정합니다. \(디버그 모드에서만 사용\)  
+  
+## 구문  
+  
+```  
+void _CrtDbgBreak( void );  
+```  
+  
+## 반환 값  
+ 반환되는 값이 없습니다.  
+  
+## 설명  
+ `_CrtDbgBreak` 함수는 함수가 상주하는 코드의 특정 줄에 디버그 중단점을 설정합니다.  이 함수는 디버그 모드에서만 사용 되고 이전에 정의된 `_DEBUG` 에 따라 달라집니다.  
+  
+ 다른 사용 가능한 후크 런타임 함수를 사용하고 클라이언트 정의 후크 함수를 쓰는 방법에 대한 자세한 내용은 [디버그 후크 함수를 직접 장석](../Topic/Debug%20Hook%20Function%20Writing.md) 을 참조하십시오.  
+  
+## 해당 .NET Framework 항목  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+  
+## 요구 사항  
+  
+|루틴|필수 헤더|  
+|--------|-----------|  
+|`_CrtDbgBreak`|\<CRTDBG.h\>|  
+  
+## 라이브러리  
+ [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 의 유일한 디버그 버전입니다.  
+  
+## 참고 항목  
+ [디버그 루틴](../../c-runtime-library/debug-routines.md)   
+ [\_\_debugbreak](../../intrinsics/debugbreak.md)

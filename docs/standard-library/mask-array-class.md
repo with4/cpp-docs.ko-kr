@@ -1,0 +1,146 @@
+---
+title: "mask_array 클래스 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "std.mask_array"
+  - "mask_array"
+  - "std::mask_array"
+  - "valarray/std::mask_array"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "mask_array 클래스"
+ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
+caps.latest.revision: 20
+caps.handback.revision: 10
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# mask_array 클래스
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+하위 집합 배열 간의 작업을 제공하여 부울 식으로 지정된 부모 valarray의 하위 집합인 개체를 지원하는 내부 보조 템플릿 클래스입니다.  
+  
+## 구문  
+  
+```  
+template<class Type>  
+   class mask_array {  
+public:  
+   typedef Type value_type;  
+   void operator=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator=(  
+      const Type& x  
+   ) const;  
+  
+   void operator*=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator/=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator%=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator+=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator-=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator^=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator&=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator|=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator<<=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+   void operator>>=(  
+      const valarray<Type>& x  
+   ) const;  
+  
+// The rest is private or implementation defined  
+}  
+```  
+  
+## 설명  
+ 이 클래스는 **valarray\<Type\>** 개체에서 선택할 요소의 시퀀스를 설명하는 [valarray\<bool\>](../standard-library/valarray-bool-class.md) 클래스의 **ba** 개체와 함께 [valarray](../standard-library/valarray-class.md)**\<Type\>** 클래스의 **va** 개체에 대한 참조를 저장하는 개체를 설명합니다.  
+  
+ **mask\_array\<Type\>** 개체를 생성하려면 [va&#91;ba&#93;](../Topic/valarray::operator.md) 형식의 식을 작성해야 합니다. 그려면 mask\_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점만 제외하고 **valarray\<Type\>**에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다.  
+  
+ 시퀀스는 최대 **ba.size**개 요소로 구성됩니다. 요소 *J*는 **ba**\[*J*\]가 true인 경우에만 포함됩니다. 따라서 **ba**에 있는 true 요소 수 만큼의 요소가 시퀀스에 있습니다.`I`가 **ba**에서 가장 낮은 true 요소의 인덱스인 경우 **va**\[`I`\]는 선택한 시퀀스의 요소 0입니다.  
+  
+## 예제:  
+  
+```  
+// mask_array.cpp  
+// compile with: /EHsc  
+#include <valarray>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   int i;  
+  
+   valarray<int> va ( 10 );  
+   for ( i = 0 ; i < 10 ; i += 2 )  
+      va [ i ] =  i;  
+   for ( i = 1 ; i < 10 ; i += 2 )  
+      va [ i ] =  -1;  
+  
+   cout << "The initial operand valarray is:  ( ";  
+      for ( i = 0 ; i < 10 ; i++ )  
+         cout << va [ i ] << " ";  
+   cout << ")." << endl;  
+  
+   // Use masked subsets to assign a value of 10  
+   // to all elements grrater than 3 in value  
+   va [va > 3 ] = 10;  
+   cout << "The modified operand valarray is:  ( ";  
+      for ( i = 0 ; i < 10 ; i++ )  
+         cout << va [ i ] << " ";  
+   cout << ")." << endl;  
+}  
+```  
+  
+### 출력  
+  
+```  
+The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
+The modified operand valarray is:  ( 0 -1 2 -1 10 -1 10 -1 10 -1 ).  
+```  
+  
+## 요구 사항  
+ **Header:** \<valarray\>  
+  
+ **네임스페이스:** std  
+  
+## 참고 항목  
+ [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

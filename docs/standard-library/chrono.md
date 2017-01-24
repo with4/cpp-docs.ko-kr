@@ -1,0 +1,128 @@
+---
+title: "&lt;chrono&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "chrono/std::chrono::nanoseconds"
+  - "chrono/std::chrono::minutes"
+  - "chrono/std::chrono::seconds"
+  - "<chrono>"
+  - "chrono/std::chrono::hours"
+  - "chrono/std::chrono::milliseconds"
+  - "chrono/std::chrono::microseconds"
+dev_langs: 
+  - "C++"
+ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
+caps.latest.revision: 17
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# &lt;chrono&gt;
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+표준 헤더 \<chrono\>를 포함하여 기간 및 시간 인스턴트를 나타내고 조작하는 클래스와 함수를 정의합니다.  
+  
+ **\(Visual Studio 2015:\)** `steady_clock`의 구현은 지속성 및 단조성에 대한 C\+\+ 표준 요구 사항을 충족하도록 변경되었습니다.  현재 `steady_clock`은 QueryPerformanceCounter\(\)를 기반으로 하며 `high_resolution_clock`은 `steady_clock`에 대한 typedef입니다.  따라서 Visual C\+\+에서 `steady_clock::time_point`는 현재 `chrono::time_point<steady_clock>`에 대한 typedef이나, 다른 구현에 이를 반드시 적용할 필요는 없습니다.  
+  
+## 구문  
+  
+```cpp  
+#include <chrono>  
+```  
+  
+### 리터럴  
+ \<chrono\> 헤더에 있는 리터럴은 literals::chrono\_literals 인라인 네임 스페이스의 멤버입니다.  자세한 내용은 참조 [chrono 리터럴](../standard-library/chrono-literals.md) 참조하세요.  
+  
+|||  
+|-|-|  
+|연산자 "" h\(부호 없는 long long Val\) 연산자 "" h\(long double Val\)|값이 시간을 나타내도록 지정합니다.|  
+|연산자 "" min\(부호 없는 long long Val\)  연산자 "" min\(long double Val\)|값이 분을 나타내도록 지정합니다.|  
+|연산자 ""s\(부호 없는 long long Val\)연산자 "" s\(long double Val\)|값이 초를 나타내도록 지정합니다.|  
+|연산자 "" ms\(부호 없는 long long Val\)연산자 "" ms\(long double Val\)|값이 밀리초를 나타내도록 지정합니다.|  
+|연산자 "" us\(부호 없는 long long Val\)연산자 "" us\(long double Val\)|값이 마이크로초를 나타내도록 지정합니다.|  
+|연산자 "" ns\(부호 없는 long long Val\)연산자 "" ns\(long double Val\)|값이 나노초를 나타내도록 지정합니다.|  
+  
+### 클래스  
+  
+|이름|설명|  
+|--------|--------|  
+|[duration 클래스](../standard-library/duration-class.md)|시간 간격을 포함하는 유형을 설명합니다.|  
+|[time\_point 클래스](../standard-library/time-point-class.md)|시점을 나타내는 형식을 설명합니다.|  
+  
+### 구조체  
+  
+|이름|설명|  
+|--------|--------|  
+|[common\_type 구조체](../standard-library/common-type-structure.md)|`duration` 및 `time_point`의 인스턴스화에 대한 템플릿 클래스 [common\_type](../standard-library/common-type-class.md)의 특수화를 설명합니다.|  
+|[duration\_values 구조체](../standard-library/duration-values-structure.md)|`duration` 템플릿 매개 변수 `Rep`에 대한 특정 값을 제공합니다.|  
+|[steady\_clock 구조체](../standard-library/steady-clock-struct.md)|`steady` 클록을 나타냅니다.|  
+|[system\_clock 구조체](../standard-library/system-clock-structure.md)|시스템의 실시간 시계를 기준으로 하는 *시간 형식*을 나타냅니다.|  
+|[treat\_as\_floating\_point 구조체](../standard-library/treat-as-floating-point-structure.md)|형식이 부동 소수점 형식으로 처리될 수 있는지 여부를 지정합니다.|  
+  
+### 함수  
+  
+|이름|설명|  
+|--------|--------|  
+|[duration\_cast 함수](../Topic/duration_cast%20Function.md)|지정된 형식으로 `duration` 개체를 캐스팅합니다.|  
+|[time\_point\_cast 함수](../Topic/time_point_cast%20Function.md)|지정된 형식으로 `time_point` 개체를 캐스팅합니다.|  
+  
+### 연산자  
+  
+|이름|설명|  
+|--------|--------|  
+|[operator\- 연산자\(STL\)](../Topic/operator-%20Operator%20\(STL\)1.md)|`duration` 및 `time_point` 개체의 빼기 또는 부정에 대한 연산자입니다.|  
+|[operator\!\= 연산자\(STL\)](../Topic/operator!=%20Operator%20\(STL\).md)|`duration` 또는 `time_point` 개체와 함께 사용하는 같지 않음 연산자입니다.|  
+|[modulo 연산자\(STL\)](../Topic/operator%20modulo%20\(STL\).md)|`duration` 개체에 대한 모듈로 연산용 연산자입니다.|  
+|[operator\* 연산자\(STL\)](../Topic/operator*%20Operator%20\(STL\).md)|`duration` 개체에 대한 곱하기 연산자입니다.|  
+|[operator\/ 연산자\(STL\)](../Topic/operator-%20Operator%20\(STL\)2.md)|`duration` 개체에 대한 나누기 연산자입니다.|  
+|[operator\+ 연산자\(STL\)](../Topic/operator+%20Operator%20\(STL\).md)|`duration` 및 `time_point` 개체를 추가합니다.|  
+|[operator\< 연산자\(STL\)](../Topic/operator%3C%20Operator%20\(STL\).md)|하나의 `duration` 또는 `time_point`개체가 다른 `duration` 또는 `time_point` 개체보다 작은지 여부를 확인합니다.|  
+|[operator\<\= 연산자\(STL\)](../Topic/operator%3C=%20Operator%20\(STL\).md)|하나의 `duration` 또는 `time_point`개체가 다른 `duration` 또는 `time_point` 개체보다 작거나 같은지 여부를 확인합니다.|  
+|[operator\=\= 연산자\(STL\)](../Topic/operator==%20Operator%20\(STL\).md)|두 `duration` 개체가 길이가 동일한 시간 간격을 나타내는지 여부 또는 두 `time_point` 개체가 동일한 시점을 나타내는지 여부를 확인합니다.|  
+|[operator\> 연산자\(STL\)](../Topic/operator%3E%20Operator%20\(STL\).md)|하나의 `duration` 또는 `time_point`개체가 다른 `duration` 또는 `time_point` 개체보다 큰지 여부를 확인합니다.|  
+|[operator\>\= 연산자\(STL\)](../Topic/operator%3E=%20Operator%20\(STL\).md)|하나의 `duration` 또는 `time_point`개체가 다른 `duration` 또는 `time_point` 개체보다 크거나 같은지 여부를 확인합니다.|  
+  
+### 미리 정의된 기간 형식  
+ 다음 typedef에 사용되는 비율 형식에 대한 자세한 내용은 [\<ratio\>](../standard-library/ratio.md)를 참조하세요.  
+  
+|Typedef|설명|  
+|-------------|--------|  
+|`typedef duration<long long, nano> nanoseconds;`|틱 기간이 1나노초인 `duration` 형식의 동의어입니다.|  
+|`typedef duration<long long, micro> microseconds;`|틱 기간이 1마이크로초인 `duration` 형식의 동의어입니다.|  
+|`typedef duration<long long, milli> milliseconds;`|틱 기간이 1밀리초인 `duration` 형식의 동의어입니다.|  
+|`typedef duration<long long> seconds;`|틱 기간이 1초인 `duration` 형식의 동의어입니다.|  
+|`typedef duration<int, ratio<60> > minutes;`|틱 기간이 1분인 `duration` 형식의 동의어입니다.|  
+|`typedef duration<int, ratio<3600> > hours;`|틱 기간이 1시간인 `duration` 형식의 동의어입니다.|  
+  
+### 리터럴  
+ **\(C\+\+11\)**\<chrono\> 헤더는 코드의 형식 안전성과 유지 관리 및 편의성을 위해 사용할 수 있는 다음과 같은 [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)을 정의합니다.  이러한 리터럴은 `literals::chrono_literals` 인라인 네임스페이스에 정의되며 std::chrono가 범위 내에 있을 때 범위 안에 있습니다.  
+  
+|리터럴|설명|  
+|---------|--------|  
+|chrono::hours 연산자 "" h\(부호 없는 long long Val\)|정수 계열 값으로 시간을 지정합니다.|  
+|chrono::duration\<double, ratio\<3600\> \> 연산자 "" h\(long double Val\)|부동 소수점 값으로 시간을 지정합니다.|  
+|chrono::minutes \(연산자 "" min\)\(부호 없는 long long Val\)|정수 계열 값으로 분을 지정합니다.|  
+|chrono::duration\<double, ratio\<60\> \>\(연산자 "" min\)\(long double Val\)|부동 소수점 값으로 분을 지정합니다.|  
+|chrono::seconds 연산자 "" s\(부호 없는 long long Val\)|정수 계열 값으로 분을 지정합니다.|  
+|chrono::duration\<double\> 연산자 "" s\(long double Val\)|부동 소수점 값으로 초를 지정합니다.|  
+|chrono::milliseconds 연산자 "" ms\(부호 없는 long long Val\)|정수 계열 값으로 밀리초를 지정합니다.|  
+|chrono::duration\<double, milli\> 연산자 "" ms\(long double Val\)|부동 소수점 값으로 밀리초를 지정합니다.|  
+|chrono::microseconds 연산자 "" us\(부호 없는 long long Val\)|정수 계열 값으로 마이크로초를 지정합니다.|  
+|chrono::duration\<double, micro\> 연산자 "" us\(long double Val\)|부동 소수점 값으로 마이크로초를 지정합니다.|  
+|chrono::nanoseconds 연산자 "" ns\(부호 없는 long long Val\)|정수 계열 값으로 나노초를 지정합니다.|  
+|chrono::duration\<double, nano\> 연산자 "" ns\(long double Val\)|부동 소수점 값으로 나노초를 지정합니다.|  
+|||  
+  
+## 설명  
+  
+## 참고 항목  
+ [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)

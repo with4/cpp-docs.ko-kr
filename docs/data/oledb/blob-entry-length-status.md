@@ -1,0 +1,77 @@
+---
+title: "BLOB_ENTRY_LENGTH_STATUS | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BLOB_ENTRY_LENGTH_STATUS"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "BLOB_ENTRY_LENGTH_STATUS 매크로"
+ms.assetid: 09da67de-421b-4853-9a26-760e38324502
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# BLOB_ENTRY_LENGTH_STATUS
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+`BEGIN_COLUMN_MAP` 및 `END_COLUMN_MAP` 을 사용하여 2진 대형 개체를 바인딩하십시오. \([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\)  이 매크로가BLOB 열의 길이와 상태를 가져오는 것을 제외하고 [BLOB\_ENTRY](../../data/oledb/blob-entry.md) 와 유사합니다.  
+  
+## 구문  
+  
+```  
+  
+BLOB_ENTRY_LENGTH_STATUS(  
+nOrdinal  
+,   
+IID  
+,   
+flags  
+,   
+data  
+, length, status )  
+```  
+  
+#### 매개 변수  
+ `nOrdinal`  
+ \[in\] 열 번호입니다.  
+  
+ *IID*  
+ \[in\] **IDD\_ISequentialStream** 와 같은 GUID 인터페이스는 BLOB을 검색할 때 사용됩니다.  
+  
+ `flags`  
+ \[in\] OLE 구조적 저장소 모델이 지정하는 저장소 모드 플래그입니다.\(예를 들어, **STGM\_READ**\).  
+  
+ `data`  
+ \[in\] 사용자 레코드에서 해당 데이터 멤버입니다.  
+  
+ *length*  
+ \[out\] BLOB 열의 \(실제\)바이트 길이입니다.  
+  
+ *status*  
+ \[out\] BLOB 데이터 열의 상태입니다.  
+  
+## 예제  
+ [How Can I Retrieve a BLOB?](../../data/oledb/retrieving-a-blob.md) 를 참조하십시오.  
+  
+## 요구 사항  
+ **헤더:** atldbcli.h  
+  
+## 참고 항목  
+ [OLE DB 소비자 템플릿에 대한 매크로 및 전역 함수](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
+ [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB\_ENTRY](../../data/oledb/blob-entry.md)   
+ [BLOB\_ENTRY\_LENGTH](../../data/oledb/blob-entry-length.md)   
+ [BLOB\_ENTRY\_STATUS](../../data/oledb/blob-entry-status.md)

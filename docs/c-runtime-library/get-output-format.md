@@ -1,0 +1,75 @@
+---
+title: "_get_output_format | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_get_output_format"
+apilocation: 
+  - "msvcr110_clr0400.dll"
+  - "msvcr100.dll"
+  - "msvcr80.dll"
+  - "msvcrt.dll"
+  - "msvcr90.dll"
+  - "msvcr120.dll"
+  - "msvcr110.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "get_output_format"
+  - "_get_output_format"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_get_output_format 함수"
+  - "get_output_format 함수"
+  - "출력 서식"
+ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
+caps.latest.revision: 13
+caps.handback.revision: 13
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _get_output_format
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+출력 형식 플래그의 현재 값을 가져옵니다.  
+  
+> [!IMPORTANT]
+>  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.  
+  
+## 구문  
+  
+```  
+unsigned int _get_output_format();  
+```  
+  
+## 반환 값  
+ 출력 형식 플래그의 현재 값입니다.  
+  
+## 설명  
+ 출력 형식 플래그는 형식이 지정된 I\/O의 기능을 제어합니다. 현재 플래그는 두 가지 가능한 값인 0과 `_TWO_DIGIT_EXPONENT`를 사용합니다.`_TWO_DIGIT_EXPONENT`가 설정된 경우 부동 소수점 숫자는 세 번째 숫자가 지수의 크기에 따라 필요한 경우가 아닌 한 지수에 두 자리 숫자로 인쇄됩니다. 플래그가 0이면 부동 소수점 출력은 필요한 경우 0을 사용하여 세 자리에 값을 채워 지수의 세 자리를 표시합니다.  
+  
+## 요구 사항  
+  
+|루틴|필수 헤더|  
+|--------|-----------|  
+|`_get_output_format`|\<stdio.h\>|  
+  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+  
+## 해당 .NET Framework 항목  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+  
+## 참고 항목  
+ [printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [printf 형식 필드 문자](../c-runtime-library/printf-type-field-characters.md)   
+ [\_set\_output\_format](../c-runtime-library/set-output-format.md)
