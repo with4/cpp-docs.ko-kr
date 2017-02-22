@@ -1,8 +1,7 @@
 ---
 title: "구조체 및 공용 구조체 멤버 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - ". operator"
   - "-> 연산자, 구조체 및 공용 구조체 멤버"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "구조체 멤버, 참조"
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 구조체 및 공용 구조체 멤버
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

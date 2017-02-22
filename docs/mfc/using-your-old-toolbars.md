@@ -1,8 +1,7 @@
 ---
 title: "이전 도구 모음 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "도구 모음[C++], 이전 버전과의 호환성"
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 이전 도구 모음 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/clr 제한 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "/clr 컴파일러 옵션[C++], 제한 사항"
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # /clr 제한
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

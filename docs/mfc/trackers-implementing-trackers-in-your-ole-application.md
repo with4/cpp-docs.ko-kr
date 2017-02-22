@@ -1,8 +1,7 @@
 ---
 title: "추적기: OLE 응용 프로그램에서 추적기 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "OLE 항목 추적"
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 추적기: OLE 응용 프로그램에서 추적기 구현
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "설명 블록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE 프로그램, 설명 블록"
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 설명 블록
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "파일 변환 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "상수[C++], 파일 변환 모드"
   - "파일 변환[C++]"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "변환, 파일 변환 상수"
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 파일 변환 상수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

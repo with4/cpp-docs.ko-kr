@@ -1,8 +1,7 @@
 ---
 title: "아래 첨자 연산자: | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "아래 첨자 연산자, 구문"
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 아래 첨자 연산자:
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "구 구조 문법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "문법, 구 구조"
   - "구 구조 문법"
 ms.assetid: 546c2961-5d37-4ef9-a0ce-74e7550e3899
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 구 구조 문법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/ORDER(함수에 순서 지정) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "페이징, 최적화"
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /ORDER(함수에 순서 지정)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

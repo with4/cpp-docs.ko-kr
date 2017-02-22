@@ -1,8 +1,7 @@
 ---
 title: "CL에서의 링커 호출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "LINK 도구[C++], CL 컴파일러에서 호출"
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CL에서의 링커 호출
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

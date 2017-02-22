@@ -1,8 +1,7 @@
 ---
 title: "기본 DLL에서 데이터베이스, OLE 및 소켓 확장 DLL 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL[C++], 기본"
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 기본 DLL에서 데이터베이스, OLE 및 소켓 확장 DLL 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

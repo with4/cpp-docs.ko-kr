@@ -1,8 +1,7 @@
 ---
 title: "방법: 특정 Scheduler 정책 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "스케줄러 정책, 지정[동시성 런타임]"
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: 특정 Scheduler 정책 지정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

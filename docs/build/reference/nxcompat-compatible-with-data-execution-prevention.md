@@ -1,8 +1,7 @@
 ---
 title: "/NXCOMPAT(데이터 실행 방지 기능과 호환) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-NXCOMPAT 링커 옵션"
 ms.assetid: 5858e7ff-24d3-4ac3-9046-af2c9e220d9b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /NXCOMPAT(데이터 실행 방지 기능과 호환)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "스키마 행 집합을 사용하여 메타데이터 구하기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "스키마 행 집합, OLE DB 공급자 메타데이터 얻기"
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 스키마 행 집합을 사용하여 메타데이터 구하기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

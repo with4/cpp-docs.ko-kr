@@ -1,8 +1,7 @@
 ---
 title: "fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "_fscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fscanf_l 함수"
   - "_ftscanf 함수"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "스트림[C++], 서식이 지정된 데이터 읽기"
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # fscanf, _fscanf_l, fwscanf, _fwscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

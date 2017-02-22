@@ -1,8 +1,7 @@
 ---
 title: "형식 사양 구문: printf 및 wprintf 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "wprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "플래그 지시문 printf 함수"
   - "printf 함수의 형식 사양 필드"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "형식 필드, printf 함수"
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 형식 사양 구문: printf 및 wprintf 함수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

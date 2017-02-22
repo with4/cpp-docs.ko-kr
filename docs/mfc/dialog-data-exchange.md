@@ -1,8 +1,7 @@
 ---
 title: "대화 상자 데이터 교환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "사용자 입력, MFC 대화 상자에서 검색"
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 대화 상자 데이터 교환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

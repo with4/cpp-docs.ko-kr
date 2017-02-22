@@ -1,8 +1,7 @@
 ---
 title: "바로 사용할 수 있는 배열 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "컬렉션 클래스, 배열"
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 바로 사용할 수 있는 배열 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

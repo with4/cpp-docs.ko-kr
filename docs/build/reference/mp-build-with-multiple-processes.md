@@ -1,8 +1,7 @@
 ---
 title: "-MP(여러 프로세스로 빌드) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "cl.exe 컴파일러, 다중 프로세스 빌드"
 ms.assetid: a932b14a-74fe-4b45-84e4-6bf53f0f5e07
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # /MP(여러 프로세스로 빌드)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

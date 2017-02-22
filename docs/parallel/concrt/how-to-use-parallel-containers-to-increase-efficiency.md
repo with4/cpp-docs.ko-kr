@@ -1,8 +1,7 @@
 ---
 title: "방법: 병렬 컨테이너를 사용하여 효율성 향상 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "concurrent_vector 클래스, 예제"
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 병렬 컨테이너를 사용하여 효율성 향상
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

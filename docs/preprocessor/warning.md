@@ -1,8 +1,7 @@
 ---
 title: "경고 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +13,6 @@ f1_keywords:
   - "vc-pragma.warning"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "팝 경고 pragma"
   - "pragma, 경고"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "경고 pragma"
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 경고
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

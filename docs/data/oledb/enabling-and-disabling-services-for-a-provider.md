@@ -1,8 +1,7 @@
 ---
 title: "공급자 서비스 사용 및 사용 안 함 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "서비스 공급자[OLE DB]"
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 공급자 서비스 사용 및 사용 안 함
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

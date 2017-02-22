@@ -1,8 +1,7 @@
 ---
 title: "국가별 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "유니코드[C++], 사용"
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 국가별 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

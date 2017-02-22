@@ -1,8 +1,7 @@
 ---
 title: "데이터 소스: ODBC 데이터 소스에서 프로그래밍 방식으로 테이블 작성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "테이블[C++], 프로그래밍 방식으로 만들기"
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 데이터 소스: ODBC 데이터 소스에서 프로그래밍 방식으로 테이블 작성
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

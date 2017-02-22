@@ -1,8 +1,7 @@
 ---
 title: "대화 상자에 컨트롤 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "vc.editors.dialog.dialog"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "대화 상자, 컨트롤 추가"
   - "대화 상자 컨트롤, 대화 상자에 추가"
   - "컨트롤[C++], 대화 상자에 추가"
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 대화 상자에 컨트롤 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

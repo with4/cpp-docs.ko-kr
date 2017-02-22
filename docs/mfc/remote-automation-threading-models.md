@@ -1,8 +1,7 @@
 ---
 title: "원격 자동화 스레드 모델 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "스레딩[MFC], 원격 자동화"
 ms.assetid: 8828ccff-12a4-4f7a-865d-d19fbb0a82e2
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 원격 자동화 스레드 모델
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

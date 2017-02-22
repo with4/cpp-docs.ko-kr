@@ -1,8 +1,7 @@
 ---
 title: "문자열 초기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "문자 배열, 초기화"
   - "배열 초기화, 문자열"
   - "문자열[C++], 초기화"
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 문자열 초기화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

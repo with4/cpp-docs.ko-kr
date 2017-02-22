@@ -1,8 +1,7 @@
 ---
 title: "메뉴 및 리소스: 서버 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "비주얼 편집, 응용 프로그램 메뉴 및 리소스"
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 메뉴 및 리소스: 서버 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

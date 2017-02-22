@@ -1,8 +1,7 @@
 ---
 title: "필수 및 선택적 헤더 파일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.headers"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "헤더 파일, 런타임에 필수"
   - "포함 파일, 런타임에 필수"
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 필수 및 선택적 헤더 파일
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

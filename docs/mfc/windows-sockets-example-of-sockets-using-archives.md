@@ -1,8 +1,7 @@
 ---
 title: "Windows 소켓: 아카이브를 사용하는 소켓의 예 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 소켓[C++], 보관"
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows 소켓: 아카이브를 사용하는 소켓의 예
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

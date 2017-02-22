@@ -1,8 +1,7 @@
 ---
 title: "인라인 어셈블리에서 MASM 매크로 지시문 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MASM(Microsoft Macro Assembler), 인라인 어셈블리 매크로 지시문"
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 인라인 어셈블리에서 MASM 매크로 지시문
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

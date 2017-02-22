@@ -1,8 +1,7 @@
 ---
 title: "Windows 플랫폼(CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "이전 버전과의 호환성[C++], C 런타임 라이브러리"
   - "호환성[C++], C 런타임 라이브러리"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "유니코드[C++], Win32 플랫폼"
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Windows 플랫폼(CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

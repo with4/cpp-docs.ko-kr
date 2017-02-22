@@ -1,8 +1,7 @@
 ---
 title: "함수 선언이 포함된 저장소 클래스 지정자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "함수 선언, 지정자"
   - "외부 선언"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "지정자, 함수"
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 함수 선언이 포함된 저장소 클래스 지정자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

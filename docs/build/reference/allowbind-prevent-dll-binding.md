@@ -1,8 +1,7 @@
 ---
 title: "/ALLOWBIND(DLL 바인딩 방지) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "DLL 바인딩 방지"
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /ALLOWBIND(DLL 바인딩 방지)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

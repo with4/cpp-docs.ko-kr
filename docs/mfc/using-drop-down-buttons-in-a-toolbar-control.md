@@ -1,8 +1,7 @@
 ---
 title: "도구 모음 컨트롤에서 드롭다운 단추 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "도구 모음[C++], 드롭다운 단추"
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 도구 모음 컨트롤에서 드롭다운 단추 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

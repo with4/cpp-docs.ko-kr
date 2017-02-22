@@ -1,8 +1,7 @@
 ---
 title: "기타 창 작업 조정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "인쇄 미리 보기, 및 프레임 창"
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 기타 창 작업 조정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

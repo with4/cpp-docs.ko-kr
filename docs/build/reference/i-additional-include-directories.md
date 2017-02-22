@@ -1,8 +1,7 @@
 ---
 title: "/I(추가 포함 디렉터리) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "포함 디렉터리 설정"
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /I(추가 포함 디렉터리)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

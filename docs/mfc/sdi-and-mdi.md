@@ -1,8 +1,7 @@
 ---
 title: "SDI 및 MDI | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "SDI(단일 문서 인터페이스), 응용 프로그램"
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SDI 및 MDI
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

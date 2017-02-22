@@ -1,8 +1,7 @@
 ---
 title: "스레드 로컬 저장소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "저장소, 스레드 로컬 저장소"
   - "스레드 저장소 클래스 특성"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "TLS(스레드 로컬 저장소)"
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 스레드 로컬 저장소
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

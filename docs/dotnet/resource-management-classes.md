@@ -1,8 +1,7 @@
 ---
 title: "리소스 관리 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "리소스[C++], 관리"
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 리소스 관리 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

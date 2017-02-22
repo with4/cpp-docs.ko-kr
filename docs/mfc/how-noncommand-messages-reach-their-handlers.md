@@ -1,8 +1,7 @@
 ---
 title: "명령이 아닌 메시지가 해당 처리기에 도달하는 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Windows 메시지[C++], 라우팅"
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 명령이 아닌 메시지가 해당 처리기에 도달하는 방법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

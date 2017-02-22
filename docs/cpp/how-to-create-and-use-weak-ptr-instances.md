@@ -1,8 +1,7 @@
 ---
 title: "방법: weak_ptr 인스턴스 만들기 및 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: weak_ptr 인스턴스 만들기 및 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

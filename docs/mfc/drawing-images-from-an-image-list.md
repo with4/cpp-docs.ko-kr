@@ -1,8 +1,7 @@
 ---
 title: "이미지 목록에서 이미지 그리기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "이미지[C++], 그리기"
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 이미지 목록에서 이미지 그리기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

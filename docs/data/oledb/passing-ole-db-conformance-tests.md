@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 적합성 테스트 통과 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "테스트, OLE DB 공급자"
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # OLE DB 적합성 테스트 통과
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "빌드 사용자 지정 문제 해결 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "문제 해결[C++], 빌드"
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 빌드 사용자 지정 문제 해결
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

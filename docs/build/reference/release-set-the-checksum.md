@@ -1,8 +1,7 @@
 ---
 title: "/RELEASE(체크섬 설정) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-RELEASE 링커 옵션"
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /RELEASE(체크섬 설정)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

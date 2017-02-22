@@ -1,8 +1,7 @@
 ---
 title: "조건식 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "조건 연산자"
   - "식[C++], 조건부"
   - "연산자[C++], 조건부"
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 조건식 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

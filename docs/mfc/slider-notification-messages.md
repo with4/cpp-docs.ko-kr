@@ -1,8 +1,7 @@
 ---
 title: "슬라이더 알림 메시지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "슬라이더 컨트롤, 알림 메시지"
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 슬라이더 알림 메시지
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

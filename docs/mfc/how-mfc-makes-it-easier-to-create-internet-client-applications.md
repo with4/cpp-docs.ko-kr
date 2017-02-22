@@ -1,8 +1,7 @@
 ---
 title: "MFC를 사용하여 인터넷 클라이언트 응용 프로그램을 손쉽게 만드는 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, 인터넷 응용 프로그램"
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC를 사용하여 인터넷 클라이언트 응용 프로그램을 손쉽게 만드는 방법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

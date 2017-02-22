@@ -1,8 +1,7 @@
 ---
 title: "동기화(lock 클래스) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "잠금 클래스"
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 동기화(lock 클래스)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

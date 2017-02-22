@@ -1,8 +1,7 @@
 ---
 title: "register 저장소 클래스 지정자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "레지스터 저장소 클래스"
   - "레지스터 변수"
 ms.assetid: 7577bf48-88ec-4191-873c-ef4217a4034e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # register 저장소 클래스 지정자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

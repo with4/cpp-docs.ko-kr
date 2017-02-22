@@ -1,8 +1,7 @@
 ---
 title: "컴파일러 처리량 향상 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "처리량, C++ 컴파일러"
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 컴파일러 처리량 향상
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

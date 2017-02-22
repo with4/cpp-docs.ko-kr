@@ -1,8 +1,7 @@
 ---
 title: "수동 접근자 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "수동 접근자"
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 수동 접근자 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

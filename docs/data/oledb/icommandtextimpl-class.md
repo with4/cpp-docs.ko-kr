@@ -1,8 +1,7 @@
 ---
 title: "ICommandTextImpl 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ICommandText 클래스"
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ICommandTextImpl 클래스
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

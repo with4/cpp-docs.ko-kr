@@ -1,8 +1,7 @@
 ---
 title: "ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AfxEnableControlContainer 메서드"
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

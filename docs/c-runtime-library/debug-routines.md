@@ -1,8 +1,7 @@
 ---
 title: "디버그 루틴 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.debug"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "디버깅[CRT], 매크로 사용"
   - "매크로, 디버깅"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "디버깅[CRT], 런타임 루틴"
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 디버그 루틴
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

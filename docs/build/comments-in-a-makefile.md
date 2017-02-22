@@ -1,8 +1,7 @@
 ---
 title: "메이크파일의 주석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "메이크파일, 주석"
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 메이크파일의 주석
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

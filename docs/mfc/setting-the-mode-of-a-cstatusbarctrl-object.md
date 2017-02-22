@@ -1,8 +1,7 @@
 ---
 title: "CStatusBarCtrl 개체의 모드 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "상태 표시줄 컨트롤, 단순 및 비단순 모드"
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CStatusBarCtrl 개체의 모드 설정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

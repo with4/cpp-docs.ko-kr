@@ -1,8 +1,7 @@
 ---
 title: "accelerator 및 accelerator_view 개체 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # accelerator 및 accelerator_view 개체 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

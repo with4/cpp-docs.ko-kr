@@ -1,8 +1,7 @@
 ---
 title: "WinInet을 사용하여 인터넷 클라이언트 응용 프로그램을 손쉽게 만드는 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WinInet 클래스, WinSock과 비교"
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # WinInet을 사용하여 인터넷 클라이언트 응용 프로그램을 손쉽게 만드는 방법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

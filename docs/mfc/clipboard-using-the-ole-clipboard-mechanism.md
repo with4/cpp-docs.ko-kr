@@ -1,8 +1,7 @@
 ---
 title: "클립보드: OLE 클립보드 메커니즘 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "OLE 클립보드, 형식"
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 클립보드: OLE 클립보드 메커니즘 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

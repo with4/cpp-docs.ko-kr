@@ -1,8 +1,7 @@
 ---
 title: "int 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "int 데이터 형식"
   - "이식성[C++], int 형식"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "int 형식"
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # int 형식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

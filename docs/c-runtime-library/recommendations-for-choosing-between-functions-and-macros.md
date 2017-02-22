@@ -1,8 +1,7 @@
 ---
 title: "함수와 매크로 중 선택에 대한 권장 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.functions"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "함수[CRT], 매크로와 비교"
   - "매크로, 함수와 비교"
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 함수와 매크로 중 선택에 대한 권장 사항
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

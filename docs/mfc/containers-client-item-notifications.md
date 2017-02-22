@@ -1,8 +1,7 @@
 ---
 title: "컨테이너: 클라이언트 항목 알림 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE 컨테이너, 클라이언트 항목 알림"
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 컨테이너: 클라이언트 항목 알림
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

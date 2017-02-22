@@ -1,8 +1,7 @@
 ---
 title: "TN040: MFC/OLE 내부 크기 조정 및 확대/축소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "확대/축소 및 내부 활성화"
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN040: MFC/OLE 내부 크기 조정 및 확대/축소
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

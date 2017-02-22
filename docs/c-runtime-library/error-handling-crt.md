@@ -1,8 +1,7 @@
 ---
 title: "오류 처리(CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.errors"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "오류 처리, C 루틴"
   - "오류 처리, 라이브러리 루틴"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "테스트, 프로그램 오류"
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 오류 처리(CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

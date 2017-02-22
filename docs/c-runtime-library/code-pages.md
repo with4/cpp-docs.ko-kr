@@ -1,8 +1,7 @@
 ---
 title: "코드 페이지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI[C++], 코드 페이지"
   - "문자 집합[C++], 코드 페이지"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "시스템 기본값 코드 페이지"
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 코드 페이지
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

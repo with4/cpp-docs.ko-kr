@@ -1,8 +1,7 @@
 ---
 title: "전역 바로 가기 키 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "바로 가기 키[C++], 바로 가기 키"
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 전역 바로 가기 키
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

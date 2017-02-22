@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 레코드 추가, 업데이트 및 삭제(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "레코드 집합[C++], 업데이트"
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 레코드 집합: 레코드 추가, 업데이트 및 삭제(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

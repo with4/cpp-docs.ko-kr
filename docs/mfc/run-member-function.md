@@ -1,8 +1,7 @@
 ---
 title: "Run 멤버 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "WinMain 메서드, CWinApp::Run 호출"
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Run 멤버 함수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

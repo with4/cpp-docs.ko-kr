@@ -1,8 +1,7 @@
 ---
 title: "명령 및 컨트롤 알림에 대한 처리기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "알림, 컨트롤에 대한 처리기"
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 명령 및 컨트롤 알림에 대한 처리기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

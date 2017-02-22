@@ -1,8 +1,7 @@
 ---
 title: "/EXPORT(함수 내보내기) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-EXPORT 링커 옵션"
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /EXPORT(함수 내보내기)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

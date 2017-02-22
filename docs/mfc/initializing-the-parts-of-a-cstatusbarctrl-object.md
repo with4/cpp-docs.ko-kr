@@ -1,8 +1,7 @@
 ---
 title: "CStatusBarCtrl 개체의 일부 초기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "상태 표시줄, 단순 모드"
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CStatusBarCtrl 개체의 일부 초기화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

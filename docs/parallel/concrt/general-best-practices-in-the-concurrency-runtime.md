@@ -1,8 +1,7 @@
 ---
 title: "동시성 런타임의 유용한 일반 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 런타임, 유용한 일반 정보"
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 동시성 런타임의 유용한 일반 정보
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

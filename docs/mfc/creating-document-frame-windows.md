@@ -1,8 +1,7 @@
 ---
 title: "문서 프레임 창 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "창[C++], 만들기"
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 문서 프레임 창 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

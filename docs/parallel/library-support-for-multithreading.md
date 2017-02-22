@@ -1,8 +1,7 @@
 ---
 title: "다중 스레딩을 위한 라이브러리 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "스레딩[C++], 라이브러리 지원"
 ms.assetid: 54cf10d5-b800-481b-a149-b0ee373f41a1
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 다중 스레딩을 위한 라이브러리 지원
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

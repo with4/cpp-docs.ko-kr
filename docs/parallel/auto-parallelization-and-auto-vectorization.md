@@ -1,8 +1,7 @@
 ---
 title: "자동 병렬화 및 자동 벡터화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 자동 병렬화 및 자동 벡터화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

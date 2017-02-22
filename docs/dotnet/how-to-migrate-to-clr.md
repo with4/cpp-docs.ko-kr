@@ -1,8 +1,7 @@
 ---
 title: "방법: /clr로 마이그레이션 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Visual C++ 응용 프로그램 업그레이드, /clr 컴파일러 옵션"
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 caps.latest.revision: 37
-caps.handback.revision: 37
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 방법: /clr로 마이그레이션
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

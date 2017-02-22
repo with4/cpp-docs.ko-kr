@@ -1,8 +1,7 @@
 ---
 title: "연습: MFC 프로젝트에 애니메이션 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC, 애니메이션"
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 연습: MFC 프로젝트에 애니메이션 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "싱글바이트 및 멀티바이트 문자 집합 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "문자 집합[C++], 멀티바이트"
   - "문자 집합[C++], 싱글바이트"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "SBCS(싱글바이트 문자 집합)"
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 싱글바이트 및 멀티바이트 문자 집합
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

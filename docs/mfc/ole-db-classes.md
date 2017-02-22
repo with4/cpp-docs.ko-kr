@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "OLE DB 소비자, 지원"
 ms.assetid: 65245d26-8743-4efd-9a72-90e19aef3c3a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # OLE DB 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

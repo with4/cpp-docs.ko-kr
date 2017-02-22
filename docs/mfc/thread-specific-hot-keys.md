@@ -1,8 +1,7 @@
 ---
 title: "스레드 관련 바로 가기 키 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "스레딩[C++], CHotKeyCtrl의 바로 가기 키"
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 스레드 관련 바로 가기 키
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

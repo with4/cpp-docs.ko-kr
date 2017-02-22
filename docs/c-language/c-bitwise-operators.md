@@ -1,8 +1,7 @@
 ---
 title: "C 비트 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "& 연산자, 비트 연산자"
   - "^ 연산자"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "연산자[C], 비트"
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 비트 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

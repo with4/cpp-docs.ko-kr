@@ -1,8 +1,7 @@
 ---
 title: "문자열 리터럴의 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "문자열 리터럴, 형식"
   - "형식[C], 문자열 리터럴"
 ms.assetid: f50a28af-20c1-4440-bdc6-564c86a309c8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 문자열 리터럴의 형식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/Zl(기본 라이브러리 이름 생략) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Zl 컴파일러 옵션[C++]"
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /Zl(기본 라이브러리 이름 생략)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

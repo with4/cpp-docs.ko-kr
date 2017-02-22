@@ -1,8 +1,7 @@
 ---
 title: "Rich Edit 컨트롤에서 보내는 알림 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "rich edit 컨트롤, 알림"
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Rich Edit 컨트롤에서 보내는 알림
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CLR 열거형 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "범위, CLR 열거형"
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # CLR 열거형 형식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "애니메이션 컨트롤 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "컨트롤[MFC], 애니메이션"
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 애니메이션 컨트롤 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "링커의 지연 로드된 DLL 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "지연 DLL 로드, 링커 지원"
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 링커의 지연 로드된 DLL 지원
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "C 명령줄 처리 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec 함수"
   - "_setargv 함수"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "환경 처리 표시하지 않음"
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # C 명령줄 처리 사용자 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

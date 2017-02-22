@@ -1,8 +1,7 @@
 ---
 title: "헤더 컨트롤에서 항목 순서 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "SetOrderArray 메서드"
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 헤더 컨트롤에서 항목 순서 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

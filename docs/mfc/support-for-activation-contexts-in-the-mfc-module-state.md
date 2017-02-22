@@ -1,8 +1,7 @@
 ---
 title: "MFC 모듈 상태의 활성화 컨텍스트 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "활성화 컨텍스트[C++], MFC 지원"
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC 모듈 상태의 활성화 컨텍스트 지원
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

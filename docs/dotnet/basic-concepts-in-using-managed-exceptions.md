@@ -1,8 +1,7 @@
 ---
 title: "관리되는 예외 사용의 기본 개념 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Visual C++, 관리되는 예외 처리"
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 관리되는 예외 사용의 기본 개념
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

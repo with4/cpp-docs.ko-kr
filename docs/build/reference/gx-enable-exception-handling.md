@@ -1,8 +1,7 @@
 ---
 title: "/GX(예외 처리 사용) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-GX 컴파일러 옵션[C++]"
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /GX(예외 처리 사용)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

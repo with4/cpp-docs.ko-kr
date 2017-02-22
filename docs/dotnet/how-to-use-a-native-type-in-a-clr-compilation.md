@@ -1,8 +1,7 @@
 ---
 title: "방법: /clr 컴파일에 네이티브 형식 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "컴파일, /clr에 네이티브 형식 사용"
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # 방법: /clr 컴파일에 네이티브 형식 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

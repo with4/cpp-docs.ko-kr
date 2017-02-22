@@ -1,8 +1,7 @@
 ---
 title: "/Zo(최적화된 디버깅 향상) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zo 컴파일러 옵션[C++]"
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /Zo(최적화된 디버깅 향상)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

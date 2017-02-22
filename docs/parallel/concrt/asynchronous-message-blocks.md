@@ -1,8 +1,7 @@
 ---
 title: "비동기 메시지 블록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "greedy 조인[동시성 런타임]"
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # 비동기 메시지 블록
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

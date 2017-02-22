@@ -1,8 +1,7 @@
 ---
 title: "함수 호출 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "함수 호출"
   - "함수 호출, C 함수"
   - "함수[C++], 호출"
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 함수 호출 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

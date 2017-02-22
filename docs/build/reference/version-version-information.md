@@ -1,8 +1,7 @@
 ---
 title: "/VERSION(버전 정보) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "버전 번호, .exe에서 지정"
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /VERSION(버전 정보)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

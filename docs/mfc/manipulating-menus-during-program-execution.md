@@ -1,8 +1,7 @@
 ---
 title: "프로그램 실행 중 메뉴 조작 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "메뉴, 실행 중 조작"
 ms.assetid: 722c7c00-4be2-4967-877d-f96aaa604396
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 프로그램 실행 중 메뉴 조작
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "단순 할당 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "할당 연산자[C++], 소규모"
   - "데이터 형식 변환[C++], 단순 할당"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "형식 변환[C++], 단순 할당"
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 단순 할당 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "외부 수준 선언에 대한 저장소 클래스 지정자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "선언[C++], 외부"
   - "선언[C++], 지정자"
@@ -28,10 +26,10 @@ helpviewer_keywords:
   - "표시 여부, 변수"
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 외부 수준 선언에 대한 저장소 클래스 지정자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

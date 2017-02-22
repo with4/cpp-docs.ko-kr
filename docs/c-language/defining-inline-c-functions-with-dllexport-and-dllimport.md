@@ -1,8 +1,7 @@
 ---
 title: "dllexport 및 dllimport로 인라인 C 함수 정의 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 특성[C++]"
   - "dllexport 특성[C++], 인라인 함수"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "인라인 함수[C++], dllexport 및 dllimport"
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # dllexport 및 dllimport로 인라인 C 함수 정의
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

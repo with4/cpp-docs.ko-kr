@@ -1,8 +1,7 @@
 ---
 title: "/GA(Windows 응용 프로그램 최적화) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows 최적화 컴파일러 옵션"
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GA(Windows 응용 프로그램 최적화)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

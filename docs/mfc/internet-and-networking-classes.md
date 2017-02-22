@@ -1,8 +1,7 @@
 ---
 title: "인터넷 및 네트워킹 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "네트워킹 클래스"
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 인터넷 및 네트워킹 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

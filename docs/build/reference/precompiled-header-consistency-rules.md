@@ -1,8 +1,7 @@
 ---
 title: "미리 컴파일된 헤더의 일관성 규칙 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "미리 컴파일된 헤더 파일, 일관성 규칙"
 ms.assetid: 844b1a14-5b0b-4276-a1f5-cc62f13f6dda
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 미리 컴파일된 헤더의 일관성 규칙
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/AI(메타데이터 디렉터리 지정) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-AI 컴파일러 옵션[C++]"
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /AI(메타데이터 디렉터리 지정)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

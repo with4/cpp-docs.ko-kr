@@ -1,8 +1,7 @@
 ---
 title: "값 형식 의미 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "가상 함수, 값 형식"
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 값 형식 의미
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

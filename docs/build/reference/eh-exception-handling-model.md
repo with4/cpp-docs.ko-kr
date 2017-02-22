@@ -1,8 +1,7 @@
 ---
 title: "/EH(예외 처리 모델) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "/EH 컴파일러 옵션[C++]"
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # /EH(예외 처리 모델)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

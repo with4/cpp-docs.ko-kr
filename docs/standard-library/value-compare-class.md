@@ -1,8 +1,7 @@
 ---
-title: "클래스 value_compare 클래스 | Microsoft Docs"
+title: "value_compare 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "value_compare 클래스"
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 클래스 value_compare 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

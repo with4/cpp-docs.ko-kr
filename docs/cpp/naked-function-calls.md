@@ -1,8 +1,7 @@
 ---
 title: "Naked 함수 호출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "VXD 가상 장치 드라이버"
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Naked 함수 호출
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

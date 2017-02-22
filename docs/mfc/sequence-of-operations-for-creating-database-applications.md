@@ -1,8 +1,7 @@
 ---
 title: "데이터베이스 응용 프로그램을 만드는 작업 시퀀스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC[C++], 데이터베이스 응용 프로그램"
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 데이터베이스 응용 프로그램을 만드는 작업 시퀀스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

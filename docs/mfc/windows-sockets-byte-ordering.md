@@ -1,8 +1,7 @@
 ---
 title: "Windows 소켓: 바이트 순서 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 소켓[C++], 바이트 순서 문제"
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Windows 소켓: 바이트 순서 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

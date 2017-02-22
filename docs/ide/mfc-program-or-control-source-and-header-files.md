@@ -1,8 +1,7 @@
 ---
 title: "MFC 프로그램 또는 컨트롤 소스 및 헤더 파일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "파일 형식[C++], MFC 소스 및 헤더"
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC 프로그램 또는 컨트롤 소스 및 헤더 파일
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

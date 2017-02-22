@@ -1,8 +1,7 @@
 ---
 title: "방법: 직접 WRL 구성 요소 인스턴스화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 방법: 직접 WRL 구성 요소 인스턴스화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "단항 연산자 오버로드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "단항 연산자, 더하기"
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 단항 연산자 오버로드
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

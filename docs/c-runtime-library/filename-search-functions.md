@@ -1,8 +1,7 @@
 ---
 title: "파일 이름 검색 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,7 +19,6 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "파일 이름[C++], 검색"
   - "_find 함수"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "_wfind 함수"
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 파일 이름 검색 함수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

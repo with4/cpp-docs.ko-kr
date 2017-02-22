@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 마법사 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "사용자 지정 마법사, Visual C++ 프로젝트에서 만들기"
 ms.assetid: e9644201-c496-44d8-a7cf-e589b20f533a
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 사용자 지정 마법사 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

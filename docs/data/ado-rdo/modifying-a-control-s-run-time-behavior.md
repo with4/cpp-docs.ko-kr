@@ -1,8 +1,7 @@
 ---
 title: "컨트롤의 런타임 동작 수정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ActiveX 컨트롤[C++], 런타임 동작"
 ms.assetid: 78b44b0f-0d5a-4da0-8aa2-595f5789c634
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 컨트롤의 런타임 동작 수정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

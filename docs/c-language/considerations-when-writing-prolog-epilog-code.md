@@ -1,8 +1,7 @@
 ---
 title: "프롤로그/에필로그 코드를 작성할 때 고려 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__LOCAL_SIZE 상수"
   - "레이아웃, 스택 프레임"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "스택, 스택 프레임 레이아웃"
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 프롤로그/에필로그 코드를 작성할 때 고려 사항
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

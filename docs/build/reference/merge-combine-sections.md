@@ -1,8 +1,7 @@
 ---
 title: "/MERGE(섹션 결합) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "섹션, 명명"
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MERGE(섹션 결합)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

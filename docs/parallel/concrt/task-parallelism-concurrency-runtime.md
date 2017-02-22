@@ -1,8 +1,7 @@
 ---
 title: "작업 병렬 처리(동시성 런타임) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "작업[동시성 런타임]"
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 caps.latest.revision: 56
-caps.handback.revision: 56
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 56
 ---
 # 작업 병렬 처리(동시성 런타임)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

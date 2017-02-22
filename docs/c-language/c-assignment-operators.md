@@ -1,8 +1,7 @@
 ---
 title: "C 할당 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "%= 연산자"
   - "&= 연산자"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "빼기 연산자, C 할당 연산자"
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 할당 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

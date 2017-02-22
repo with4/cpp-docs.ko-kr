@@ -1,8 +1,7 @@
 ---
 title: "__asm 블록에서 어셈블리 언어 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "어셈블리 언어[C++], 기능"
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # __asm 블록에서 어셈블리 언어 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

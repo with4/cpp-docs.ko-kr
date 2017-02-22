@@ -1,8 +1,7 @@
 ---
 title: "데이터 바인딩된 컨트롤(ADO 및 RDO) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "데이터 바인딩 컨트롤[C++], ActiveX"
 ms.assetid: 337fdc86-7916-41a9-a7df-13355c8218e9
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 데이터 바인딩된 컨트롤(ADO 및 RDO)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

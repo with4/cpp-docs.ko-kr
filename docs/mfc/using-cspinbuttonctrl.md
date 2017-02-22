@@ -1,8 +1,7 @@
 ---
 title: "CSpinButtonCtrl 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "up-down 컨트롤, spin button 컨트롤"
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CSpinButtonCtrl 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

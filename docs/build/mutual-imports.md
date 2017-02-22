@@ -1,8 +1,7 @@
 ---
 title: "상호 가져오기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "실행 파일 상호 가져오기[C++]"
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 상호 가져오기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

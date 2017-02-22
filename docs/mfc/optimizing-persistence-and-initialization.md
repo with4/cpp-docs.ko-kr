@@ -1,8 +1,7 @@
 ---
 title: "지속성 및 초기화 최적화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "성능, ActiveX 컨트롤"
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 지속성 및 초기화 최적화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

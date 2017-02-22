@@ -1,8 +1,7 @@
 ---
 title: "라이브러리 멤버 추출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "라이브러리, 멤버 추출"
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 라이브러리 멤버 추출
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

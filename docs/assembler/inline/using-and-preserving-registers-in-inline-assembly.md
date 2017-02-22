@@ -1,8 +1,7 @@
 ---
 title: "인라인 어셈블리에서 레지스터 사용 및 유지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "레지스터, 인라인 어셈블리"
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 인라인 어셈블리에서 레지스터 사용 및 유지
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

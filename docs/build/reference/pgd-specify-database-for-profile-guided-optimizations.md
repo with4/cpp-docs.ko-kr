@@ -1,8 +1,7 @@
 ---
 title: "/PGD(프로필 기반 최적화를 위한 데이터베이스 지정) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-PGD 링커 옵션"
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /PGD(프로필 기반 최적화를 위한 데이터베이스 지정)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

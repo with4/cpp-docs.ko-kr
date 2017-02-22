@@ -1,8 +1,7 @@
 ---
 title: "ActiveX 컨트롤에 대한 컨테이너 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ActiveX 컨트롤 컨테이너[C++], 응용 프로그램 지원"
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ActiveX 컨트롤에 대한 컨테이너
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

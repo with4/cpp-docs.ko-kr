@@ -1,8 +1,7 @@
 ---
 title: "저장 프로시저 하나에서 여러 결과 집합 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "저장 프로시저, 결과 집합 반환"
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 저장 프로시저 하나에서 여러 결과 집합 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

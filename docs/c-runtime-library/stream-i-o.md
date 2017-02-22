@@ -1,8 +1,7 @@
 ---
 title: "스트림 I/O | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "I/O[CRT], 스트림"
   - "I/O 루틴, 스트림 I/O"
   - "스트림 I/O"
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 스트림 I/O
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

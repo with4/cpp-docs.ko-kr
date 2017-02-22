@@ -1,8 +1,7 @@
 ---
 title: "색상표 로드 대화 상자(아이콘에 대한 이미지 편집기) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "색상표 로드 대화 상자"
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 색상표 로드 대화 상자(아이콘에 대한 이미지 편집기)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

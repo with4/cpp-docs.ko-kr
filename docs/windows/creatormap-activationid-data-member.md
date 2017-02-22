@@ -1,8 +1,7 @@
 ---
 title: "CreatorMap::activationId 데이터 멤버 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "activationId 데이터 멤버"
 ms.assetid: 77518b76-6e6a-4b48-8e2e-a4c7c67769e0
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # CreatorMap::activationId 데이터 멤버
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

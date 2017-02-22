@@ -1,8 +1,7 @@
 ---
 title: "그래픽 개체를 선택하여 장치 컨텍스트로 넣기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "SelectObject 메서드"
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 그래픽 개체를 선택하여 장치 컨텍스트로 넣기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

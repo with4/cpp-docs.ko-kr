@@ -1,8 +1,7 @@
 ---
 title: "C 언어 참조의 조직 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 언어 참조의 조직
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

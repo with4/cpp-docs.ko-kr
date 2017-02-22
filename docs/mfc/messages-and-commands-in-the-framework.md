@@ -1,8 +1,7 @@
 ---
 title: "프레임워크의 메시지 및 명령 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "메시지 구동 프로그래밍"
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 프레임워크의 메시지 및 명령
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

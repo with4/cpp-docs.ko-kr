@@ -1,8 +1,7 @@
 ---
 title: "클래스 범위가 있는 이름의 링크 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "범위[C++], 링크 규칙"
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 클래스 범위가 있는 이름의 링크
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

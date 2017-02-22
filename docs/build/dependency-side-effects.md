@@ -1,8 +1,7 @@
 ---
 title: "종속 줄의 부수적 효과 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 프로그램, 종속 항목"
 ms.assetid: d4e8db25-fdc0-4d73-81ec-1538f2e1b3e8
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 종속 줄의 부수적 효과
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

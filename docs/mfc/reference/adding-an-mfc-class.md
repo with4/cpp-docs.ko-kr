@@ -1,8 +1,7 @@
 ---
 title: "MFC 클래스 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC, 클래스 추가"
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # MFC 클래스 추가
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

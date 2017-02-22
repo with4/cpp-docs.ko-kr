@@ -1,8 +1,7 @@
 ---
 title: "이전 버전과의 호환성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "이전 버전과의 호환성"
   - "이전 버전과의 호환성, C 런타임 라이브러리"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "CRT, 호환성"
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 이전 버전과의 호환성
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

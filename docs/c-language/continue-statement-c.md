@@ -1,8 +1,7 @@
 ---
 title: "continue 문 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "continue"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "continue 키워드[C]"
   - "루프 구조, continue 키워드"
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # continue 문 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

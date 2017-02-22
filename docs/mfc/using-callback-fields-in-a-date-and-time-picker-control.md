@@ -1,8 +1,7 @@
 ---
 title: "날짜 및 시간 선택 컨트롤에서 콜백 필드 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "DTN_FORMATQUERY 알림"
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 날짜 및 시간 선택 컨트롤에서 콜백 필드 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

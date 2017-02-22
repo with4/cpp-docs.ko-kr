@@ -1,8 +1,7 @@
 ---
 title: "방법: 대상 프레임워크 및 플랫폼 도구 집합 수정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild(c++), 방법: 대상 프레임워크 및 플랫폼 도구 집합 수정"
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # 방법: 대상 프레임워크 및 플랫폼 도구 집합 수정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

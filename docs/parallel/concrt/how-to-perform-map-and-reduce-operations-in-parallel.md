@@ -1,8 +1,7 @@
 ---
 title: "방법: 매핑 수행 및 병렬 작업 줄이기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "parallel_reduce 함수, 예:"
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 방법: 매핑 수행 및 병렬 작업 줄이기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

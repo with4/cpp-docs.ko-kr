@@ -1,8 +1,7 @@
 ---
 title: "ATL 레지스트리 구성 요소(등록자) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "스크립트, 등록자 스크립트"
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL 레지스트리 구성 요소(등록자)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

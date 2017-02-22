@@ -1,8 +1,7 @@
 ---
 title: "코드 최적화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "성능, 코드 최적화"
 ms.assetid: 4f33e6c7-9870-43b3-9c2f-d7e44f764971
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 코드 최적화
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

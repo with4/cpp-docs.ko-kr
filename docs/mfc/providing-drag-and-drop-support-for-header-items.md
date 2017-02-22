@@ -1,8 +1,7 @@
 ---
 title: "헤더 항목에 대한 끌어서 놓기 지원 제공 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "헤더 컨트롤의 헤더 항목"
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 헤더 항목에 대한 끌어서 놓기 지원 제공
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

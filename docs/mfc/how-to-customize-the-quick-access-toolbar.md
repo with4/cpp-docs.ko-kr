@@ -1,8 +1,7 @@
 ---
 title: "방법: 빠른 실행 도구 모음 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "빠른 실행 도구 모음, 사용자 지정"
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 방법: 빠른 실행 도구 모음 사용자 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

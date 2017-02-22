@@ -1,8 +1,7 @@
 ---
 title: "/INCREMENTAL(증분 링크) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "LINK 도구[C++], 전체 링크 옵션"
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /INCREMENTAL(증분 링크)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

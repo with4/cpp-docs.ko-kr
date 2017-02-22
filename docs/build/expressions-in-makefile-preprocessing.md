@@ -1,8 +1,7 @@
 ---
 title: "메이크파일 전처리 식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "메이크파일 전처리"
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 메이크파일 전처리 식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

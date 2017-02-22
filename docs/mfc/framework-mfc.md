@@ -1,8 +1,7 @@
 ---
 title: "프레임워크(MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "래퍼 클래스, 설명됨"
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 프레임워크(MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

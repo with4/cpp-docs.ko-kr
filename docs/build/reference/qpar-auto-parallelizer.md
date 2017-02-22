@@ -1,8 +1,7 @@
 ---
 title: "/Qpar(자동 평행화 도우미) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Qpar(자동 평행화 도우미)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

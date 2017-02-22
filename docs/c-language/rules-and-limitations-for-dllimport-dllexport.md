@@ -1,8 +1,7 @@
 ---
 title: "dllimport/dllexport에 대한 규칙 및 제한 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 특성[C++]"
   - "dllexport 특성[C++], 제한 사항 및 규칙"
   - "dllimport 특성[C++], 제한 사항 및 규칙"
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # dllimport/dllexport에 대한 규칙 및 제한
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

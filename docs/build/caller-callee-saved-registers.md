@@ -1,8 +1,7 @@
 ---
 title: "호출자/호출 수신자 저장 레지스터 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0533bd4b-d6bb-4ce1-8201-495e16870cbb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 호출자/호출 수신자 저장 레지스터
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

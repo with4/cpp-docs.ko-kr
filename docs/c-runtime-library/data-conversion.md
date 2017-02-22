@@ -1,8 +1,7 @@
 ---
 title: "데이터 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.conversions"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "데이터 변환"
   - "데이터 변환 루틴[C++]"
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 데이터 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

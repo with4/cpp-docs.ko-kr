@@ -1,8 +1,7 @@
 ---
 title: "스톡 속성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "스톡 속성, 스톡 속성 정보"
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 스톡 속성
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

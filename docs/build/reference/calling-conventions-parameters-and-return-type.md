@@ -1,8 +1,7 @@
 ---
 title: "호출 규칙, 매개 변수, 반환 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "도우미 함수, 반환 형식"
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 호출 규칙, 매개 변수, 반환 형식
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

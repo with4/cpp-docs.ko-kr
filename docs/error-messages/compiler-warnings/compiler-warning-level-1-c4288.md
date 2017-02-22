@@ -1,8 +1,7 @@
 ---
 title: "컴파일러 경고 (수준 1) C4288 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4288"
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 컴파일러 경고 (수준 1) C4288
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

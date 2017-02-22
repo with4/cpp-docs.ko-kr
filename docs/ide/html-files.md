@@ -1,8 +1,7 @@
 ---
 title: "HTML 파일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "마법사[C++], 사용자 지정 마법사의 사용자 인터페이스"
 ms.assetid: 3b6ed080-6560-418b-b908-d84d71bdf145
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # HTML 파일
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/C(전처리 중에 주석 유지) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "전처리하는 동안 주석 유지"
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /C(전처리 중에 주석 유지)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

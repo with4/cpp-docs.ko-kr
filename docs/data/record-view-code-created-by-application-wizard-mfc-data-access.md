@@ -1,8 +1,7 @@
 ---
 title: "응용 프로그램 마법사가 만든 레코드 뷰 코드  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "레코드 뷰, 컨트롤 새로 고침"
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 응용 프로그램 마법사가 만든 레코드 뷰 코드  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

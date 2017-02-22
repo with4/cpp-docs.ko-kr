@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 아키텍처 설계 문제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB, 응용 프로그램 디자인 고려 사항"
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # OLE DB 아키텍처 설계 문제
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

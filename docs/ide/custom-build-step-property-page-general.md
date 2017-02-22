@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 빌드 단계 속성 페이지: 일반 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "사용자 지정 빌드 단계(일반)"
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 사용자 지정 빌드 단계 속성 페이지: 일반
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

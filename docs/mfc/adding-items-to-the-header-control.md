@@ -1,8 +1,7 @@
 ---
 title: "헤더 컨트롤에 항목 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "헤더 컨트롤, 항목 추가"
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 헤더 컨트롤에 항목 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "PPL(병렬 패턴 라이브러리) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "PPL(병렬 패턴 라이브러리)"
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # PPL(병렬 패턴 라이브러리)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

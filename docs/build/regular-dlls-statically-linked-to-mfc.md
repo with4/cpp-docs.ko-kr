@@ -1,8 +1,7 @@
 ---
 title: "정적으로 MFC에 링크된 기본 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "USRDLL, MFC에 정적으로 링크됨"
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 정적으로 MFC에 링크된 기본 DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

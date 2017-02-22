@@ -1,8 +1,7 @@
 ---
 title: "매개 변수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "... 줄임표"
   - "인수[C++], 함수"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "매개 변수[C++], 함수"
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 매개 변수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

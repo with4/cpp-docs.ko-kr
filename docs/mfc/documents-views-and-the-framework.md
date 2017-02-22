@@ -1,8 +1,7 @@
 ---
 title: "문서, 뷰 및 프레임워크 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "뷰 개체, 다른 MFC 개체와의 관계"
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 문서, 뷰 및 프레임워크
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

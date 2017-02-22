@@ -1,8 +1,7 @@
 ---
 title: "C 및 Wind32를 사용한 다중 스레딩 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows API[C++], 다중 스레딩"
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 및 Wind32를 사용한 다중 스레딩
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

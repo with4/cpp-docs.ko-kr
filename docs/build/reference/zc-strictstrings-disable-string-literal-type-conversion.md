@@ -1,8 +1,7 @@
 ---
 title: "/Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Zc 컴파일러 옵션(C++)"
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

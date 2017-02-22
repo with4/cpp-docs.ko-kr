@@ -1,8 +1,7 @@
 ---
 title: "방법: Windows Forms에서 DDX/DDV 데이터 바인딩 수행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows Forms[C++], MFC 지원"
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 방법: Windows Forms에서 DDX/DDV 데이터 바인딩 수행
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

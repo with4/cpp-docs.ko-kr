@@ -1,8 +1,7 @@
 ---
 title: "파일 탐색기 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC 응용 프로그램, Windows 탐색기 스타일"
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 파일 탐색기 스타일 MFC 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

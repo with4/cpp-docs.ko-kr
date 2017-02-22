@@ -1,8 +1,7 @@
 ---
 title: "소비자 마법사 생성 메서드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "마법사 생성 클래스 및 메서드"
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 소비자 마법사 생성 메서드
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

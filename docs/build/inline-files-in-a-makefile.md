@@ -1,8 +1,7 @@
 ---
 title: "메이크파일의 인라인 파일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "NMAKE 프로그램, 인라인 파일"
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 메이크파일의 인라인 파일
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

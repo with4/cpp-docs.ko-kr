@@ -1,8 +1,7 @@
 ---
 title: "안내선 설정 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "DLU(대화 상자 단위)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "안내선 설정 대화 상자(대화 상자 편집기)"
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 안내선 설정 대화 상자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

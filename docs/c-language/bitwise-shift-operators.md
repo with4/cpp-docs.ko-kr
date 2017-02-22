@@ -1,8 +1,7 @@
 ---
 title: "비트 시프트 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "비트 시프트 연산자"
   - "연산자[C++], 비트"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "시프트 연산자, 비트"
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 비트 시프트 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

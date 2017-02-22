@@ -1,8 +1,7 @@
 ---
 title: "/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-CLRSUPPORTLASTERROR 링커 옵션"
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

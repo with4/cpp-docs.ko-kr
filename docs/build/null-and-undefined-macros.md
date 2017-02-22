@@ -1,8 +1,7 @@
 ---
 title: "null 및 정의되지 않은 매크로 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "정의되지 않은 매크로 및 NMAKE"
 ms.assetid: 1db4611a-1755-4328-b00f-d35365af8b6c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # null 및 정의되지 않은 매크로
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

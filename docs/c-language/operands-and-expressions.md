@@ -1,8 +1,7 @@
 ---
 title: "연산자 및 식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "식[C++], 구문"
   - "피연산자"
   - "피연산자, 정의"
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 연산자 및 식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

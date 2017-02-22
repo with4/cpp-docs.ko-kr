@@ -1,8 +1,7 @@
 ---
 title: "C 열거형 선언 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "#define 지시문, 대체"
   - "선언, 열거형"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "명명된 상수, 열거형 선언"
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # C 열거형 선언
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

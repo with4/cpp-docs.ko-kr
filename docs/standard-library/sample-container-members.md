@@ -1,8 +1,7 @@
 ---
 title: "샘플 컨테이너 멤버 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "컨테이너 클래스"
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 샘플 컨테이너 멤버
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: 실행 순서에 영향을 주는 일정 그룹 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "일정 그룹 사용[동시성 런타임]"
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: 실행 순서에 영향을 주는 일정 그룹 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/SWAPRUN(링커 출력을 스왑 파일로 로드) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "-SWAPRUN 링커 옵션"
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /SWAPRUN(링커 출력을 스왑 파일로 로드)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

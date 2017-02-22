@@ -1,8 +1,7 @@
 ---
 title: "MFC 공용 컨트롤 라이브러리 격리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, 공용 컨트롤 라이브러리"
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MFC 공용 컨트롤 라이브러리 격리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

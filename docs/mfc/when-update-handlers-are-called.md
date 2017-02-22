@@ -1,8 +1,7 @@
 ---
 title: "업데이트 처리기가 호출되는 시점 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "사용자 인터페이스 개체 업데이트"
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 업데이트 처리기가 호출되는 시점
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

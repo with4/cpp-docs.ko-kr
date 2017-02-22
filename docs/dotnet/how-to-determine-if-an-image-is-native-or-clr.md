@@ -1,8 +1,7 @@
 ---
 title: "방법: 이미지가 네이티브인지 CLR인지 확인 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "이미지[C++], CLR 확인"
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: 이미지가 네이티브인지 CLR인지 확인
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

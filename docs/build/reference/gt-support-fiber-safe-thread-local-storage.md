@@ -1,8 +1,7 @@
 ---
 title: "/GT(파이버 안전 스레드 로컬 저장소 지원) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "스레드 지역 저장소"
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GT(파이버 안전 스레드 로컬 저장소 지원)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "라이브러리 명명 규칙 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "개체 코드 라이브러리, MFC 명명 규칙"
 ms.assetid: 39fe7d93-5a14-4c6a-b16c-bf318fa01278
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 라이브러리 명명 규칙
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
