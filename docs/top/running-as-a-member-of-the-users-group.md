@@ -1,32 +1,6 @@
 ---
-title: "사용자 그룹의 멤버로 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PRJ0050"
-  - "VCD0047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "사용자 그룹[C++]"
-  - "보안[C++], 사용자 그룹"
-  - "Windows 계정[C++]"
-  - "관리자가 아닌 사용자[C++]"
-  - "사용자 계정[C++]"
-  - "관리자 역할로 실행 안 함[C++]"
-ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 17
+redirect_url: /cpp/security/running-as-a-member-of-the-users-group
 caps.handback.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # 사용자 그룹의 멤버로 실행
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

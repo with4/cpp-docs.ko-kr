@@ -1,8 +1,7 @@
 ---
 title: "spawn 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,7 +16,6 @@ f1_keywords:
   - "_P_NOWAITO"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_P_DETACH 상수"
   - "_P_NOWAIT 상수"
@@ -32,10 +30,10 @@ helpviewer_keywords:
   - "spawn 상수"
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawn 상수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "예외: 예외 Catch 및 삭제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "try-catch 예외 처리, 예외 catch 및 삭제"
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 예외: 예외 Catch 및 삭제
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 색 선택 대화 상자(아이콘에 대한 이미지 편집기) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "색, 이미지"
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 사용자 지정 색 선택 대화 상자(아이콘에 대한 이미지 편집기)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

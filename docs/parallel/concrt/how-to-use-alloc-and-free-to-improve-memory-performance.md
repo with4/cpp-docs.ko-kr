@@ -1,8 +1,7 @@
 ---
 title: "방법: Alloc 및 Free를 사용하여 메모리 성능 개선 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Alloc 및 Free 사용[동시성 런타임]"
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: Alloc 및 Free를 사용하여 메모리 성능 개선
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "고급 공급자 기술 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB 공급자, using"
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 고급 공급자 기술
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

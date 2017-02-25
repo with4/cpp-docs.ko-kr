@@ -1,8 +1,7 @@
 ---
 title: "레코드 뷰에서의 탐색 지원  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "레코드[C++], 탐색"
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 레코드 뷰에서의 탐색 지원  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

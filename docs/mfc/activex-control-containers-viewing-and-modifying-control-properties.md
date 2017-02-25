@@ -1,8 +1,7 @@
 ---
 title: "ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "리소스 편집기, ActiveX 컨트롤 보기 및 수정"
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

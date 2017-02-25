@@ -1,8 +1,7 @@
 ---
 title: "방법: System::Guid 및 _GUID 사이에 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "System::GUID, GUID로 변환"
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 방법: System::Guid 및 _GUID 사이에 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ATL 프로젝트에 새 인터페이스 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "인터페이스, ATL 개체에 추가"
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ATL 프로젝트에 새 인터페이스 추가
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

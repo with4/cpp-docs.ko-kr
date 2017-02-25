@@ -1,8 +1,7 @@
 ---
 title: "클래스에 Windows 메시지 매핑 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows 메시지[C++], 대화 상자 클래스 매핑"
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 클래스에 Windows 메시지 매핑
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

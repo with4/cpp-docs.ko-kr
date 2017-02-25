@@ -1,8 +1,7 @@
 ---
 title: "데이터베이스 특성을 사용하여 데이터 액세스 단순화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "OLE DB 소비자[C++], 데이터베이스 특성"
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 데이터베이스 특성을 사용하여 데이터 액세스 단순화
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "상태 표시줄 창의 텍스트 업데이트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "사용자 인터페이스 개체, 업데이트"
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 상태 표시줄 창의 텍스트 업데이트
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

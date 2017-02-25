@@ -1,8 +1,7 @@
 ---
 title: "공용 컨트롤을 자식 창으로 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows 공용 컨트롤[C++], 자식 창"
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 공용 컨트롤을 자식 창으로 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

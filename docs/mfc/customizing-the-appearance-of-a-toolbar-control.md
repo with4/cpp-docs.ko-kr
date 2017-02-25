@@ -1,8 +1,7 @@
 ---
 title: "도구 모음 컨트롤의 모양 사용자 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "투명한 도구 모음"
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 도구 모음 컨트롤의 모양 사용자 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

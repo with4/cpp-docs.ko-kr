@@ -1,8 +1,7 @@
 ---
 title: "DLL 가져오기 및 내보내기 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "함수 선언, dllexport 및 dllimport"
   - "DLL 내보내기[C++]"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "확장 저장소 클래스 특성"
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DLL 가져오기 및 내보내기 함수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

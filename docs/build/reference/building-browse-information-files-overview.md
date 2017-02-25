@@ -1,8 +1,7 @@
 ---
 title: "찾아보기 정보 파일 빌드: 개요 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "bsc 파일, bsc 파일 정보"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 찾아보기 정보 파일 빌드: 개요
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

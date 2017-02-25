@@ -1,8 +1,7 @@
 ---
 title: "식 및 인수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "C에서의 값 할당"
   - "대입 연산자, 식에서의 값 할당"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "Visual C, 식"
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 식 및 인수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

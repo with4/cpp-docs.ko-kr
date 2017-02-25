@@ -1,8 +1,7 @@
 ---
 title: "형식 변환 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "변환, 형식"
   - "형식 변환"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "형식 변환"
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 형식 변환 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

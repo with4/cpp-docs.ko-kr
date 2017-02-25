@@ -1,8 +1,7 @@
 ---
 title: "컨테이너: 컨테이너 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OLE 컨테이너, 구현"
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 컨테이너: 컨테이너 구현
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

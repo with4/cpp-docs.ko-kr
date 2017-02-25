@@ -1,8 +1,7 @@
 ---
 title: "선언자 및 변수 선언 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "선언자, 정의"
   - "변수 선언, 선언문"
   - "변수 선언, 선언자"
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 선언자 및 변수 선언
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "인터페이스, ATL 컨트롤 마법사 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL 컨트롤 마법사, 인터페이스"
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 인터페이스, ATL 컨트롤 마법사
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

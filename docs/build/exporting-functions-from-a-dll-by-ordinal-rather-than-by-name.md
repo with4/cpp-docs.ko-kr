@@ -1,8 +1,7 @@
 ---
 title: "이름 대신 서수를 사용하여 DLL에서 함수 내보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "서수 내보내기[C++]"
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 이름 대신 서수를 사용하여 DLL에서 함수 내보내기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

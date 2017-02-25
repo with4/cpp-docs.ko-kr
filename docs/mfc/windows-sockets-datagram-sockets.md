@@ -1,8 +1,7 @@
 ---
 title: "Windows 소켓: 데이터그램 소켓 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows 소켓[C++], 데이터그램"
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Windows 소켓: 데이터그램 소켓
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "데이터베이스 연결 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ODBC 연결[C++], 데이터 컨트롤"
 ms.assetid: cf85fb26-b22f-4aa2-bd40-991da412892d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 데이터베이스 연결 만들기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

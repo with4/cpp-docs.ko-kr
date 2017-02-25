@@ -1,8 +1,7 @@
 ---
 title: "부동 소수점 숫자의 정밀도가 떨어지는 이유 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FLT_EPSILON 상수"
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 부동 소수점 숫자의 정밀도가 떨어지는 이유
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

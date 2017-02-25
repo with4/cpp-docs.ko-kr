@@ -1,8 +1,7 @@
 ---
 title: "동시성 런타임과 기타 동시성 모델 비교 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "동시성 런타임, 다른 모델과 비교"
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 동시성 런타임과 기타 동시성 모델 비교
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

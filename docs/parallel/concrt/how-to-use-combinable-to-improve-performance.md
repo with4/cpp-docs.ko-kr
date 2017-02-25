@@ -1,8 +1,7 @@
 ---
 title: "방법: combinable을 사용하여 성능 개선 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "combinable로 병렬 성능 향상[동시성 런타임]"
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 방법: combinable을 사용하여 성능 개선
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

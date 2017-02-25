@@ -1,8 +1,7 @@
 ---
 title: "확장된 콤보 상자 컨트롤에서 알림 메시지 처리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "알림, 확장된 콤보 상자 컨트롤"
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 확장된 콤보 상자 컨트롤에서 알림 메시지 처리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

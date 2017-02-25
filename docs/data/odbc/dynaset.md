@@ -1,8 +1,7 @@
 ---
 title: "다이너셋 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "레코드 집합[C++], 다이너셋"
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 다이너셋
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

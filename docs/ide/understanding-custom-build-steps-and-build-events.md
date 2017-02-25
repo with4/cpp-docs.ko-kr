@@ -1,8 +1,7 @@
 ---
 title: "사용자 지정 빌드 단계 및 빌드 이벤트 이해 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "이벤트[C++], 빌드"
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 사용자 지정 빌드 단계 및 빌드 이벤트 이해
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

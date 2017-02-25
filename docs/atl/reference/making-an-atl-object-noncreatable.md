@@ -1,8 +1,7 @@
 ---
 title: "ATL 개체를 만들 수 없도록 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "생성할 수 없는 ATL 개체"
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ATL 개체를 만들 수 없도록 설정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

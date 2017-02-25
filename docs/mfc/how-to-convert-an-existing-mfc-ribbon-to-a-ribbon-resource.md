@@ -1,8 +1,7 @@
 ---
 title: "방법: 기존 MFC 리본을 리본 리소스로 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "리본 리소스, MFC 리본에서 변환"
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 방법: 기존 MFC 리본을 리본 리소스로 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

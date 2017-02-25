@@ -1,8 +1,7 @@
 ---
 title: "트리 컨트롤 부모 및 자식 항목 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "트리 컨트롤, 부모 및 자식 항목"
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 트리 컨트롤 부모 및 자식 항목
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

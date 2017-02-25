@@ -1,8 +1,7 @@
 ---
 title: "/DEF(모듈 정의 파일 지정) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "모듈 정의 파일, 지정"
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /DEF(모듈 정의 파일 지정)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

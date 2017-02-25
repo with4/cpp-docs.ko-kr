@@ -1,8 +1,7 @@
 ---
 title: "방법: 스케줄러 인스턴스 관리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "스케줄러 인스턴스, 관리[동시성 런타임]"
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: 스케줄러 인스턴스 관리
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

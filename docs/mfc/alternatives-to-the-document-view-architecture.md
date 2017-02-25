@@ -1,8 +1,7 @@
 ---
 title: "문서/뷰 아키텍처의 대체 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "뷰, 응용 프로그램"
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 문서/뷰 아키텍처의 대체
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

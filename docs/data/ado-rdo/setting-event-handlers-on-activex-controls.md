@@ -1,8 +1,7 @@
 ---
 title: "ActiveX 컨트롤에 이벤트 처리기 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "이벤트[C++], ActiveX 컨트롤"
 ms.assetid: c076386f-c78b-4dc9-9201-a544252d5337
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # ActiveX 컨트롤에 이벤트 처리기 설정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

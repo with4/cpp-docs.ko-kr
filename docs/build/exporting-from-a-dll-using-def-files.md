@@ -1,8 +1,7 @@
 ---
 title: "DEF 파일을 사용하여 DLL에서 내보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL 내보내기[C++], DEF 파일"
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # DEF 파일을 사용하여 DLL에서 내보내기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "사용자 정의 처리기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "사용자 정의 처리기"
 ms.assetid: 99478294-bef0-4ba7-a369-25a6abdcdb62
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 사용자 정의 처리기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

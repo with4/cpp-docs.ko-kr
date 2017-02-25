@@ -1,8 +1,7 @@
 ---
 title: "빈 Windows 데스크톱 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "빈 프로젝트, 만들기"
 ms.assetid: e0f0e628-041d-4c50-b221-5807b9184000
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 빈 Windows 데스크톱 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 레코드 집합 매개 변수화(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "레코드 집합, 매개 변수화"
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 레코드 집합: 레코드 집합 매개 변수화(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

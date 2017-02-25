@@ -1,8 +1,7 @@
 ---
 title: "원격 자동화를 사용하는 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "원격 자동화, 프로그램 만들기"
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 원격 자동화를 사용하는 프로그램 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

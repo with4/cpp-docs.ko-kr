@@ -1,8 +1,7 @@
 ---
 title: "방법: /clr 컴파일 감지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "컴파일, /clr 감지"
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: /clr 컴파일 감지
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

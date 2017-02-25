@@ -1,8 +1,7 @@
 ---
 title: "스크롤 막대 스타일 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ helpviewer_keywords:
   - "스크롤 막대, 스타일"
 ms.assetid: 8bcde35b-387d-49ae-bdd6-7cda9f5dae26
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 스크롤 막대 스타일
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

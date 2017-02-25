@@ -1,8 +1,7 @@
 ---
 title: "MFC 라이브러리 버전 자동 링크 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "MFC 라이브러리, 버전"
 ms.assetid: 02af4a20-2034-4fce-b200-c2202c3c8311
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MFC 라이브러리 버전 자동 링크
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

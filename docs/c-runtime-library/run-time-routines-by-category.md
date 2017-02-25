@@ -1,8 +1,7 @@
 ---
 title: "범주별 런타임 루틴 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "범주, 런타임 함수"
   - "함수[CRT]"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "루틴, 런타임"
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 범주별 런타임 루틴
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

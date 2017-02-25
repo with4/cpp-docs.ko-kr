@@ -1,8 +1,7 @@
 ---
 title: "printf 형식 필드 문자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "printf 함수, 형식 사양 필드"
   - "printf 함수, 형식 필드 문자"
 ms.assetid: 699cb438-cd14-402e-9f81-c7a32acc3317
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # printf 형식 필드 문자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

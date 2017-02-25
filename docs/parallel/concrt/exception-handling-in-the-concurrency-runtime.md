@@ -1,8 +1,7 @@
 ---
 title: "동시성 런타임에서 예외 처리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "작업 그룹, 예외 처리[동시성 런타임]"
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 caps.latest.revision: 29
-caps.handback.revision: 26
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 동시성 런타임에서 예외 처리
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

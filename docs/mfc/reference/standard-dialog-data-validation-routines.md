@@ -1,8 +1,7 @@
 ---
 title: "표준 대화 상자 데이터 유효성 검사 루틴 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "표준 대화 상자, 데이터 유효성 검사 루틴"
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
 caps.latest.revision: 13
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 표준 대화 상자 데이터 유효성 검사 루틴
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

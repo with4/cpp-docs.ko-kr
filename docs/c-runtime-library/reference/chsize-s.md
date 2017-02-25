@@ -1,8 +1,7 @@
 ---
 title: "_chsize_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_chsize_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_chsize_s 함수"
   - "chsize_s 함수"
   - "파일[C++], 크기 변경"
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _chsize_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

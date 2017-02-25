@@ -1,8 +1,7 @@
 ---
 title: "방법: 동시성 런타임을 사용하기 위해 OpenMP parallel for 루프 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "병렬 루프, OpenMP에서 동시성 런타임으로 변환"
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 동시성 런타임을 사용하기 위해 OpenMP parallel for 루프 변환
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

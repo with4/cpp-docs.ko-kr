@@ -1,8 +1,7 @@
 ---
 title: "도구 설명에 대한 TTN_NEEDTEXT 알림 처리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TTN_NEEDTEXT 메시지"
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 도구 설명에 대한 TTN_NEEDTEXT 알림 처리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

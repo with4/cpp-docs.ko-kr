@@ -1,8 +1,7 @@
 ---
 title: "내부 수준 선언에 대한 저장소 클래스 지정자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "내부 링크, 저장소 클래스 지정자"
   - "저장소 클래스 지정자, internal"
 ms.assetid: feca8ab5-23df-4b6c-921a-4d51f9be35d7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 내부 수준 선언에 대한 저장소 클래스 지정자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

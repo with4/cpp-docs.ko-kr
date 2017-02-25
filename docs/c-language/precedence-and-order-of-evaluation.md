@@ -1,8 +1,7 @@
 ---
 title: "우선 순위 및 식 평가 순서 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "연산자 결합성[C++]"
   - "데이터 바인딩[C++], 연산자 우선 순위"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "우선 순위[C++], 연산자"
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 우선 순위 및 식 평가 순서
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

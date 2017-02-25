@@ -1,8 +1,7 @@
 ---
 title: "파일 읽기/쓰기 액세스 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "파일 읽기/쓰기용 액세스 상수"
   - "상수[C++], 파일 특성"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "쓰기 액세스 상수"
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 파일 읽기/쓰기 액세스 상수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

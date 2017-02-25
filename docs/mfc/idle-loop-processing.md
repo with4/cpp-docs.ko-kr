@@ -1,8 +1,7 @@
 ---
 title: "유휴 루프 처리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "스레딩[MFC], 다중 스레딩 대체 방법"
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 유휴 루프 처리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

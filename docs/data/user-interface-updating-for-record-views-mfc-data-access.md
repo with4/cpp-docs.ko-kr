@@ -1,8 +1,7 @@
 ---
 title: "레코드 뷰의 사용자 인터페이스 업데이트  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "사용자 인터페이스, 업데이트"
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 레코드 뷰의 사용자 인터페이스 업데이트  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

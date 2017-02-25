@@ -1,8 +1,7 @@
 ---
 title: "DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "DLL 충돌[C++]"
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

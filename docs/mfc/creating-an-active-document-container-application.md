@@ -1,8 +1,7 @@
 ---
 title: "액티브 문서 컨테이너 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC COM[C++], 활성 문서 포함"
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 액티브 문서 컨테이너 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

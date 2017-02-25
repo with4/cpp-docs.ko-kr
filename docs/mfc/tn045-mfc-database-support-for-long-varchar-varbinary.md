@@ -1,8 +1,7 @@
 ---
 title: "TN045: Long Varchar/Varbinary에 대한 MFC/데이터베이스 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Varchar 데이터 형식"
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN045: Long Varchar/Varbinary에 대한 MFC/데이터베이스 지원
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

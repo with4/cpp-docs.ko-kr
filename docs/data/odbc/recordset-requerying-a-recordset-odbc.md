@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 레코드 집합 다시 쿼리(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "레코드 집합 다시 쿼리"
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 레코드 집합: 레코드 집합 다시 쿼리(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

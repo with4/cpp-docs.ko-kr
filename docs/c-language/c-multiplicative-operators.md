@@ -1,8 +1,7 @@
 ---
 title: "곱하기 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "% 연산자"
   - "/ 연산자"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "슬래시(/) 연산자"
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 곱하기 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

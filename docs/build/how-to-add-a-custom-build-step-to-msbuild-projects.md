@@ -1,8 +1,7 @@
 ---
 title: "방법: MSBuild 프로젝트에 사용자 지정 빌드 단계 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild(c++), 방법: 사용자 지정 빌드 단계 추가"
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: MSBuild 프로젝트에 사용자 지정 빌드 단계 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

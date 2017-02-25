@@ -1,8 +1,7 @@
 ---
 title: "가져오기 라이브러리 및 내보내기 파일 빌드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "-OUT 라이브러리 관리자 옵션"
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 가져오기 라이브러리 및 내보내기 파일 빌드
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

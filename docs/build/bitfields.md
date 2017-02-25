@@ -1,8 +1,7 @@
 ---
 title: "비트 필드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "비트 필드"
 ms.assetid: e9a1010d-1e1b-487f-9943-3c574e08f544
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 비트 필드
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

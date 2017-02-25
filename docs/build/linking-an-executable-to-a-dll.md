@@ -1,8 +1,7 @@
 ---
 title: "DLL에 실행 파일 링크 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "런타임[C++], 링크"
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # DLL에 실행 파일 링크
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

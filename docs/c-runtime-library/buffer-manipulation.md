@@ -1,8 +1,7 @@
 ---
 title: "버퍼 조작 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.memory"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "버퍼"
   - "버퍼, 조작 루틴"
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 버퍼 조작
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

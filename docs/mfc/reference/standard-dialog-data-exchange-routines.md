@@ -1,8 +1,7 @@
 ---
 title: "표준 대화 상자 데이터 교환 루틴 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "표준 대화 상자, 데이터 교환 루틴"
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
 caps.latest.revision: 13
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 표준 대화 상자 데이터 교환 루틴
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

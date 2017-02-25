@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 미리 정의된 쿼리에 대한 클래스 선언(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "저장 프로시저, 레코드 집합"
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 레코드 집합: 미리 정의된 쿼리에 대한 클래스 선언(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

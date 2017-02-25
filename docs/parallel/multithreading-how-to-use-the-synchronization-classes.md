@@ -1,8 +1,7 @@
 ---
 title: "다중 스레딩: 동기화 클래스 사용 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "스레드로부터 안전한 클래스[C++]"
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 다중 스레딩: 동기화 클래스 사용 방법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

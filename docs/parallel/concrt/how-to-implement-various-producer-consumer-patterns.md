@@ -1,8 +1,7 @@
 ---
 title: "방법: 다양한 공급자/소비자 패턴 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "공급자/소비자 패턴 구현[동시성 런타임]"
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 방법: 다양한 공급자/소비자 패턴 구현
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

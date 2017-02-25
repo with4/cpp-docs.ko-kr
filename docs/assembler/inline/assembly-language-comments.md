@@ -1,8 +1,7 @@
 ---
 title: "어셈블리 언어 주석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "매크로[C++], 어셈블리 언어"
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 어셈블리 언어 주석
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

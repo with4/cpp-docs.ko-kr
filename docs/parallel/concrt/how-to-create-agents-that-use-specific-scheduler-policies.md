@@ -1,8 +1,7 @@
 ---
 title: "방법: 특정 스케줄러 정책을 사용하는 에이전트 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "특정 정책을 사용하는 에이전트 만들기[동시성 런타임]"
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 방법: 특정 스케줄러 정책을 사용하는 에이전트 만들기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "트리 컨트롤 항목 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "트리 컨트롤, 항목 정보"
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 트리 컨트롤 항목 정보
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

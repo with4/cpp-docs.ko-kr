@@ -1,8 +1,7 @@
 ---
 title: "일반적으로 재정의되는 멤버 함수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "재정의, 대화 상자 클래스 멤버"
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 일반적으로 재정의되는 멤버 함수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

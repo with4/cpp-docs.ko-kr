@@ -1,8 +1,7 @@
 ---
 title: "마법사 생성 접근자의 필드 상태 데이터 멤버 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OLE DB 소비자 템플릿, 필드 상태"
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 마법사 생성 접근자의 필드 상태 데이터 멤버
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

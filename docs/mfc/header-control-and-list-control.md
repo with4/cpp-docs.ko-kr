@@ -1,8 +1,7 @@
 ---
 title: "헤더 컨트롤 및 목록 컨트롤 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "헤더 컨트롤, 목록 컨트롤과 함께 사용"
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 헤더 컨트롤 및 목록 컨트롤
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

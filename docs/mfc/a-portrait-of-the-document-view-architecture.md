@@ -1,8 +1,7 @@
 ---
 title: "문서/뷰 아키텍처에 대한 자세한 설명 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "뷰, 업데이트"
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 문서/뷰 아키텍처에 대한 자세한 설명
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

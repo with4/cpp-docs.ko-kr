@@ -1,8 +1,7 @@
 ---
 title: "기본적으로 해제되어 있는 컴파일러 경고 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "cl.exe 컴파일러, 옵션 설정"
   - "경고, 컴파일러"
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 caps.latest.revision: 39
-caps.handback.revision: 37
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 기본적으로 해제되어 있는 컴파일러 경고
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

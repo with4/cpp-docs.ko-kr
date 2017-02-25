@@ -1,8 +1,7 @@
 ---
 title: "집합체 형식 초기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "집계 형식[C++]"
   - "집계[C++], 초기화"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "union 키워드[C], 선언"
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 집합체 형식 초기화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

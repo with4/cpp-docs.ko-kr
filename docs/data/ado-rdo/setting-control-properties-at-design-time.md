@@ -1,8 +1,7 @@
 ---
 title: "디자인 타임에 컨트롤 속성 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ActiveX 컨트롤[C++], 속성"
 ms.assetid: 963bf498-d371-4cfd-8bed-865427dcfad9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 디자인 타임에 컨트롤 속성 설정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

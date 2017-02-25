@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 레코드 잠금(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "레코드 집합[C++], 레코드 잠금"
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 레코드 집합: 레코드 잠금(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

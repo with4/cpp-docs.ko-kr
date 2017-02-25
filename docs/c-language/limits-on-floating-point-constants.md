@@ -1,8 +1,7 @@
 ---
 title: "부동 소수점 상수에 대한 제한 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "상수, 부동 소수점"
   - "FLOAT.H 헤더 파일"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "범위, 부동 소수점 상수"
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 부동 소수점 상수에 대한 제한
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

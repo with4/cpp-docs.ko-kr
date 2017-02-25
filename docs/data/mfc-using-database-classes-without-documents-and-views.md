@@ -1,8 +1,7 @@
 ---
 title: "MFC: 문서 및 뷰를 이용하지 않는 데이터베이스 클래스 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "사용자 인터페이스[C++], 그리기 정보"
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC: 문서 및 뷰를 이용하지 않는 데이터베이스 클래스 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

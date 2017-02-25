@@ -1,8 +1,7 @@
 ---
 title: "섹션 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.section"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "pragma, 섹션"
   - "섹션 pragma"
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 섹션
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

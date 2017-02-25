@@ -1,8 +1,7 @@
 ---
 title: "방법: 어셈블리에서 STL/CLR 컨테이너 노출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "STL/CLR, 어셈블리 간 문제"
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 어셈블리에서 STL/CLR 컨테이너 노출
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

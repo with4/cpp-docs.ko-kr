@@ -1,8 +1,7 @@
 ---
 title: "MFC 메시지 처리기 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "메시지 처리, 처리기 추가"
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC 메시지 처리기 추가
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

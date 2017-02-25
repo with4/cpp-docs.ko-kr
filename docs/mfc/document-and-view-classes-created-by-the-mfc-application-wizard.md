@@ -1,8 +1,7 @@
 ---
 title: "MFC 응용 프로그램 마법사에서 만든 문서 및 뷰 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "뷰 클래스, 응용 프로그램 마법사로 만들기"
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC 응용 프로그램 마법사에서 만든 문서 및 뷰 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "데이터 교환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "속성 시트, 데이터 교환"
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 데이터 교환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Windows 소켓: 문자열 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 소켓[C++], 멀티바이트 문자열 변환"
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Windows 소켓: 문자열 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

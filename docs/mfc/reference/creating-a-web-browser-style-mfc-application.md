@@ -1,8 +1,7 @@
 ---
 title: "웹 브라우저 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "웹 브라우저, MFC 아키텍처에서 만들기"
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 웹 브라우저 스타일 MFC 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: " 번째 레코드 집합에서 목록 상자 채우기  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "레코드 집합[C++], 목록 상자 또는 콤보 상자 채우기"
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 #  번째 레코드 집합에서 목록 상자 채우기  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

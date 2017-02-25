@@ -1,8 +1,7 @@
 ---
 title: "명령 개체 인터페이스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB[C++], 명령 개체 인터페이스"
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 명령 개체 인터페이스
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

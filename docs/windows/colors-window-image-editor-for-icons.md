@@ -1,8 +1,7 @@
 ---
 title: "색상 창(아이콘에 대한 이미지 편집기) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "색 표시기"
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 색상 창(아이콘에 대한 이미지 편집기)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

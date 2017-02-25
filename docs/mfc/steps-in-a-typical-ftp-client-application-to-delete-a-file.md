@@ -1,8 +1,7 @@
 ---
 title: "일반적인 FTP 클라이언트 응용 프로그램에서 파일을 삭제하는 단계 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "WinInet 클래스, FTP"
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 일반적인 FTP 클라이언트 응용 프로그램에서 파일을 삭제하는 단계
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

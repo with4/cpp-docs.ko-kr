@@ -1,8 +1,7 @@
 ---
 title: "기존 코드 파일에서 새 프로젝트 만들기 마법사, 프로젝트 설정 지정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "기존 코드 파일에서 새 프로젝트 만들기 마법사, 프로젝트 설정"
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 기존 코드 파일에서 새 프로젝트 만들기 마법사, 프로젝트 설정 지정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

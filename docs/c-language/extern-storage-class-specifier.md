@@ -1,8 +1,7 @@
 ---
 title: "extern 저장소 클래스 지정자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "extern 키워드[C]"
   - "extern 키워드[C], 저장소 클래스 지정자"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "저장소 클래스 지정자, extern"
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # extern 저장소 클래스 지정자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

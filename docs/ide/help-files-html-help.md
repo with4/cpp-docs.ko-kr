@@ -1,8 +1,7 @@
 ---
 title: "도움말 파일(HTML 도움말) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "파일 형식[C++], HTML 도움말 파일"
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 도움말 파일(HTML 도움말)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

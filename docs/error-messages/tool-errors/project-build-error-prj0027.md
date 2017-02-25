@@ -1,8 +1,7 @@
 ---
 title: "프로젝트 빌드 오류 PRJ0027 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0027"
 ms.assetid: 85d73a78-4b9e-4553-9f5d-2d76c48a790a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 프로젝트 빌드 오류 PRJ0027
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

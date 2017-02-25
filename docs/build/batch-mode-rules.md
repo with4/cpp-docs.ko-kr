@@ -1,8 +1,7 @@
 ---
 title: "일괄 처리 모드 규칙 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE 프로그램, 유추 규칙"
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 일괄 처리 모드 규칙
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

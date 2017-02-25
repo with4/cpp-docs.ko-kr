@@ -1,8 +1,7 @@
 ---
 title: "모듈 단추 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "모듈 단추"
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 모듈 단추
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

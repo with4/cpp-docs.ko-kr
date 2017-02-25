@@ -1,8 +1,7 @@
 ---
 title: "DLL 가져오기 및 내보내기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 특성[C++]"
   - "dllexport 특성[C++], 저장소 클래스 특성"
   - "dllimport 특성[C++], 저장소 클래스 특성"
 ms.assetid: ab058610-0190-4354-8955-86db66add7c6
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DLL 가져오기 및 내보내기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

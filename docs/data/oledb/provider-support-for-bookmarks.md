@@ -1,8 +1,7 @@
 ---
 title: "공급자의 책갈피 지원 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "OLE DB 공급자, 책갈피 지원"
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 공급자의 책갈피 지원
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

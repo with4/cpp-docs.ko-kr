@@ -1,8 +1,7 @@
 ---
 title: "방법: 값 형식에 대한 참조를 네이티브 형식에 저장 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "값 형식 참조를 네이티브 형식에 저장"
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 방법: 값 형식에 대한 참조를 네이티브 형식에 저장
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "명시적 인스턴스화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "인스턴스화, 명시적"
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 명시적 인스턴스화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

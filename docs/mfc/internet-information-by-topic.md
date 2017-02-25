@@ -1,8 +1,7 @@
 ---
 title: "항목별 인터넷 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, 인터넷 응용 프로그램"
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 항목별 인터넷 정보
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

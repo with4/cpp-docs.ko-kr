@@ -1,8 +1,7 @@
 ---
 title: "가변 매개 변수 형식 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -46,10 +45,10 @@ helpviewer_keywords:
   - "VTS_YSIZE_PIXELS 상수"
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 가변 매개 변수 형식 상수
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

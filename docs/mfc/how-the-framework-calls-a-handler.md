@@ -1,8 +1,7 @@
 ---
 title: "프레임워크가 처리기를 호출하는 방법 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC, 명령 라우팅"
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 프레임워크가 처리기를 호출하는 방법
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

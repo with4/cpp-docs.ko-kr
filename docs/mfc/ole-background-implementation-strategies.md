@@ -1,8 +1,7 @@
 ---
 title: "OLE 백그라운드 구현 전략 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE 응용 프로그램[C++], OLE 구현"
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # OLE 백그라운드 구현 전략
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

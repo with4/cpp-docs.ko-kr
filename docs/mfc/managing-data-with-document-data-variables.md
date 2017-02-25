@@ -1,8 +1,7 @@
 ---
 title: "문서 데이터 변수로 데이터 관리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "멤버 변수[C++], 문서 클래스"
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 문서 데이터 변수로 데이터 관리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CComBSTR을 사용한 프로그래밍(ATL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Unicode, CComBSTR 사용[ATL]"
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CComBSTR을 사용한 프로그래밍(ATL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

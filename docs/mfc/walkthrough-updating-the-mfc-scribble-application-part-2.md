@@ -1,8 +1,7 @@
 ---
 title: "연습: MFC 자유 곡선 응용 프로그램 업데이트(파트 2) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "연습[C++]"
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-caps.handback.revision: 32
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # 연습: MFC 자유 곡선 응용 프로그램 업데이트(파트 2)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

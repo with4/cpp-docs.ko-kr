@@ -1,16 +1,13 @@
 ---
 title: "Debug Iterator Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-f1_keywords: 
-  - "_HAS_ITERATOR_DEBUGGING symbol"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "표준 C++ 라이브러리, 반복기 디버깅 지원"
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Debug Iterator Support
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "리소스 추가 대화 상자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "리소스 추가 대화 상자"
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 리소스 추가 대화 상자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

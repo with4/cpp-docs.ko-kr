@@ -1,8 +1,7 @@
 ---
 title: "인터넷 클라이언트 클래스의 필수 구성 요소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "URL[C++], 인터넷 클라이언트 응용 프로그램"
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 인터넷 클라이언트 클래스의 필수 구성 요소
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

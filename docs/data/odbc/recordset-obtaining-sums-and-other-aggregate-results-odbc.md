@@ -1,8 +1,7 @@
 ---
 title: "레코드 집합: 합계 및 다른 집계 결과 구하기(ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "SQL, 레코드 집합에서 집계 값 검색"
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 레코드 집합: 합계 및 다른 집계 결과 구하기(ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

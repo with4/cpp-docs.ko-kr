@@ -1,8 +1,7 @@
 ---
 title: "샘플 일반 텍스트 프로그램 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_TCHAR 형식"
   - "매핑, TCHAR.H 데이터 형식"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "TCHAR.H 데이터 형식, 매핑"
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 샘플 일반 텍스트 프로그램
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

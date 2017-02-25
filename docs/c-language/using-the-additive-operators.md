@@ -1,8 +1,7 @@
 ---
 title: "가감 연산자 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "가감 연산자"
   - "연산자[C++], 더하기"
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 가감 연산자 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

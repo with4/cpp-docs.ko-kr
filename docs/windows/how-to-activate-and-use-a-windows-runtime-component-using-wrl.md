@@ -1,8 +1,7 @@
 ---
 title: "방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Module::MethodReleaseNotifier::method_ 데이터 멤버 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "method_ 데이터 멤버"
 ms.assetid: 57f35cee-4eef-4a3a-9c70-ed4356b37d87
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Module::MethodReleaseNotifier::method_ 데이터 멤버
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

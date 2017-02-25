@@ -1,8 +1,7 @@
 ---
 title: "프로젝트에 미리 컴파일된 헤더 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "미리 컴파일된 헤더"
 ms.assetid: 95010260-a035-4327-9d61-222016ac146c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 프로젝트에 미리 컴파일된 헤더 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

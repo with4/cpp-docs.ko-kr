@@ -1,8 +1,7 @@
 ---
 title: "Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows Forms[C++], MFC 대화 상자로 호스팅"
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

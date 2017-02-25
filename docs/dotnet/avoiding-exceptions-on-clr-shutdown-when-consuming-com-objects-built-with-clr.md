@@ -1,8 +1,7 @@
 ---
 title: "/clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "혼합형 어셈블리[C++], CLR 종료 예외"
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # /clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "원시 네이티브 형식 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "raw_native_types"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "raw_native_types 특성"
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 원시 네이티브 형식
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

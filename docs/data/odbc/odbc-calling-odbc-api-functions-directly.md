@@ -1,8 +1,7 @@
 ---
 title: "ODBC: ODBC API 함수 직접 호출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ODBC 클래스[C++], ODBC API와 비교"
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ODBC: ODBC API 함수 직접 호출
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

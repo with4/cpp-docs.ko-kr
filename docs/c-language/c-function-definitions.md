@@ -1,8 +1,7 @@
 ---
 title: "C 함수 정의 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "선언자, 함수"
   - "함수 선언, 함수 선언 정보"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "함수[C++], 매개 변수"
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C 함수 정의
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

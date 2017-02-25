@@ -1,8 +1,7 @@
 ---
 title: "ATL 컨트롤 포함 FAQ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ATL을 사용하여 컨트롤 호스팅"
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
 caps.latest.revision: 15
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # ATL 컨트롤 포함 FAQ
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

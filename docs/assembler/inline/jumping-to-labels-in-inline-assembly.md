@@ -1,8 +1,7 @@
 ---
 title: "인라인 어셈블리에서 레이블로 점프 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "레이블, 인라인 어셈블리"
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 인라인 어셈블리에서 레이블로 점프
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

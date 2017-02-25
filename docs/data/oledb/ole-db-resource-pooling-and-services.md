@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 리소스 풀링 및 서비스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "서비스 공급자[OLE DB]"
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # OLE DB 리소스 풀링 및 서비스
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

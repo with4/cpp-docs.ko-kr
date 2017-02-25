@@ -1,8 +1,7 @@
 ---
 title: "가져오기 라이브러리 및 내보내기 파일을 사용한 작업 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "LIB[C++], 라이브러리 가져오기 및 파일 내보내기"
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 가져오기 라이브러리 및 내보내기 파일을 사용한 작업
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

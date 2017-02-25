@@ -1,8 +1,7 @@
 ---
 title: "로캘 범주 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,7 +19,6 @@ f1_keywords:
   - "LC_ALL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "LC_ALL 상수"
   - "LC_COLLATE 상수"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "로캘 상수"
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 로캘 범주
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

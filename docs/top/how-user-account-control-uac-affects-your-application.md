@@ -1,27 +1,6 @@
 ---
-title: "UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UAC[C++]"
-  - "보안[C++], 사용자 계정 컨트롤"
-  - "사용자 계정[C++]"
-  - "사용자 계정 컨트롤[C++]"
-ms.assetid: 0d001870-253e-4989-b689-f78035953799
-caps.latest.revision: 5
+redirect_url: /cpp/security/how-user-account-control-uac-affects-your-application
 caps.handback.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

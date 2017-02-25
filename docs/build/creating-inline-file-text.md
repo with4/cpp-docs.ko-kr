@@ -1,8 +1,7 @@
 ---
 title: "인라인 파일 텍스트 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "텍스트, 인라인 파일"
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 인라인 파일 텍스트 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

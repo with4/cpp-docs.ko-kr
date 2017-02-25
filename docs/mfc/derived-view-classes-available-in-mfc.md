@@ -1,8 +1,7 @@
 ---
 title: "MFC에서 사용할 수 있는 파생된 뷰 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "뷰 클래스, 파생"
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC에서 사용할 수 있는 파생된 뷰 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

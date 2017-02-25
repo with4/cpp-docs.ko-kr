@@ -1,8 +1,7 @@
 ---
 title: "main 함수 제한 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "main 함수, 사용 시 적용되는 제한"
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # main 함수 제한
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "코드를 미리 컴파일하기 위한 두 가지 선택 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "코드 미리 컴파일"
 ms.assetid: f50ac76f-e2a2-462d-bda5-0e2ab7cccdeb
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 코드를 미리 컴파일하기 위한 두 가지 선택 사항
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

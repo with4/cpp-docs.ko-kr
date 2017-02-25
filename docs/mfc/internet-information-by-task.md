@@ -1,8 +1,7 @@
 ---
 title: "작업별 인터넷 정보 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, 인터넷 응용 프로그램"
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 작업별 인터넷 정보
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: C#에서 사용하기 위해 네이티브 클래스 래핑 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "네이티브 코드[C++], Visual C#"
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # 방법: C#에서 사용하기 위해 네이티브 클래스 래핑
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

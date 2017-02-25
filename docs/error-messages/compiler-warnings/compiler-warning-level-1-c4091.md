@@ -1,8 +1,7 @@
 ---
 title: "컴파일러 경고 (수준 1) C4091 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4091"
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 컴파일러 경고 (수준 1) C4091
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_strtime, _wstrtime | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +32,6 @@ f1_keywords:
   - "_tstrtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtime 함수"
   - "_tstrtime 함수"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "wstrtime 함수"
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _strtime, _wstrtime
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

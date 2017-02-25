@@ -1,8 +1,7 @@
 ---
 title: "릴리스 빌드를 만들 때의 일반적인 문제 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "예기치 않은 코드 생성"
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 릴리스 빌드를 만들 때의 일반적인 문제
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

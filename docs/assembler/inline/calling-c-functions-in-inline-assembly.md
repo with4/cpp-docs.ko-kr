@@ -1,8 +1,7 @@
 ---
-title: "인라인 어셈블리에서 C 함수 호출 | Microsoft Docs"
+title: "인라인 어셈블리에서 C++ 함수 호출 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,17 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "__asm 키워드[C++], 함수 호출"
-  - "함수 호출, C 함수"
+  - "함수 호출, C++ 함수"
   - "함수 호출, 인라인 어셈블리"
   - "함수[C++], 인라인 어셈블리에서 호출"
   - "인라인 어셈블리, 함수 호출"
-  - "Visual C, 함수"
+  - "Visual C++, 함수"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 인라인 어셈블리에서 C 함수 호출
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

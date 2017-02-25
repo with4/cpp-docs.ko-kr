@@ -1,8 +1,7 @@
 ---
 title: "기존 ADO 레코드 집합 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "레코드 집합[C++], OLE DB에서 사용"
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 기존 ADO 레코드 집합 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

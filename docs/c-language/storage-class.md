@@ -1,8 +1,7 @@
 ---
 title: "저장소 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "외부 링크, 저장소 클래스 지정자"
   - "함수 지정자, 저장소 클래스"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "저장소 클래스"
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 저장소 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

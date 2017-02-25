@@ -1,8 +1,7 @@
 ---
 title: "함수 본문 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "함수 본문"
   - "함수 정의, 함수 본문"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "변수, 함수 구문"
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 함수 본문
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

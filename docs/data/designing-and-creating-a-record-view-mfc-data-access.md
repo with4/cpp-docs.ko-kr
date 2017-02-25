@@ -1,8 +1,7 @@
 ---
 title: "레코드 뷰 디자인 및 만들기  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "레코드 뷰, 디자인"
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 레코드 뷰 디자인 및 만들기  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

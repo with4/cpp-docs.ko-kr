@@ -1,8 +1,7 @@
 ---
 title: "ASSERT 대신 VERIFY 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "VERIFY 매크로"
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ASSERT 대신 VERIFY 사용
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

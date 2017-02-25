@@ -1,8 +1,7 @@
 ---
 title: "지연 로드된 가져오기 덤프 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "가져오기(지연 로드)"
 ms.assetid: f766acf4-9df8-4b85-8cf6-0be3ffc4c124
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 지연 로드된 가져오기 덤프
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

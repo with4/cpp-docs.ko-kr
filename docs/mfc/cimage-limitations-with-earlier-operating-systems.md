@@ -1,8 +1,7 @@
 ---
 title: "이전 운영 체제의 CImage 제한 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CImage 클래스, 제한 사항"
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 이전 운영 체제의 CImage 제한 사항
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

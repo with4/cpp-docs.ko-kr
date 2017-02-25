@@ -1,8 +1,7 @@
 ---
 title: "부동 소수점 형식에서 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "부동 소수점 변환"
   - "부동 소수점 변환"
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 부동 소수점 형식에서 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "형식 라이브러리에서 MFC 클래스 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "형식 라이브러리, MFC 클래스 추가"
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 형식 라이브러리에서 MFC 클래스 추가
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "이항 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "연산자[C++], 이진"
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 이항 연산자
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

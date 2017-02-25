@@ -1,8 +1,7 @@
 ---
 title: "방법: parallel_invoke를 사용하여 병렬 정렬 루틴 작성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "작업 그룹으로 병렬 성능 향상[동시성 런타임]"
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 caps.latest.revision: 23
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 방법: parallel_invoke를 사용하여 병렬 정렬 루틴 작성
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

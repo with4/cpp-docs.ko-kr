@@ -1,8 +1,7 @@
 ---
 title: "전역 변수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.variables"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "전역 변수"
   - "전역 변수, Microsoft 런타임 라이브러리"
   - "변수, global"
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 전역 변수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

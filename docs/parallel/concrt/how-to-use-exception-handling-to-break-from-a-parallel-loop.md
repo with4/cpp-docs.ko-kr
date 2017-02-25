@@ -1,8 +1,7 @@
 ---
 title: "방법: 예외 처리를 사용하여 병렬 루프 중단 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "검색 알고리즘 작성[동시성 런타임]"
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 방법: 예외 처리를 사용하여 병렬 루프 중단
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

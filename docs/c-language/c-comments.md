@@ -1,8 +1,7 @@
 ---
 title: "C 주석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "/* */ 주석 구분 기호"
   - "코드 주석, C 코드"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "주석, 코드 문서화"
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 주석
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

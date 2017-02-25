@@ -1,8 +1,7 @@
 ---
 title: "인라인 어셈블리에서 데이터 지시문 및 연산자 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "구조체[C++], MASM"
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 인라인 어셈블리에서 데이터 지시문 및 연산자
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

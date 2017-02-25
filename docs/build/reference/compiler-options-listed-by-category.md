@@ -1,8 +1,7 @@
 ---
 title: "컴파일러 옵션 범주별 목록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "컴파일러 옵션, C++"
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 caps.latest.revision: 64
-caps.handback.revision: 64
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 64
 ---
 # 컴파일러 옵션 범주별 목록
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

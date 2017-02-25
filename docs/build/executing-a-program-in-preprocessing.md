@@ -1,8 +1,7 @@
 ---
 title: "전처리에서 프로그램 실행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "프로그램 실행[C++]"
 ms.assetid: 5ecf123a-20e5-40cd-b8d8-dd5a9fdd4b24
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 전처리에서 프로그램 실행
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

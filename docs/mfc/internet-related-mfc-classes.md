@@ -1,8 +1,7 @@
 ---
 title: "인터넷 관련 MFC 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, 인터넷 클래스"
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 인터넷 관련 MFC 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

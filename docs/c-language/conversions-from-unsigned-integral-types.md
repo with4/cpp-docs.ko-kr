@@ -1,8 +1,7 @@
 ---
 title: "부호 없는 정수 계열 형식에서 변환 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "데이터 형식 변환[C++], 부호 있는 정수와 부호 없는 정수"
   - "정수, 변환"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "형식 변환[C++], 부호 있는 정수와 부호 없는 정수"
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 부호 없는 정수 계열 형식에서 변환
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

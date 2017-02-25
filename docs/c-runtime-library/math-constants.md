@@ -1,8 +1,7 @@
 ---
 title: "Math 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_USE_MATH_DEFINES 상수"
   - "상수, 수학"
@@ -34,10 +32,10 @@ helpviewer_keywords:
   - "USE_MATH_DEFINES 상수"
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Math 상수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

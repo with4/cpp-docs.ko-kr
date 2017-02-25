@@ -1,8 +1,7 @@
 ---
 title: "배열 선언 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "배열[C++], 선언"
   - "배열 선언"
   - "다차원 배열"
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 배열 선언
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

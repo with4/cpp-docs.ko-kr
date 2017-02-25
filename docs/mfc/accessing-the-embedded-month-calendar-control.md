@@ -1,8 +1,7 @@
 ---
 title: "포함된 MonthCalendar 컨트롤 액세스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "MonthCalendar 컨트롤, 날짜/시간 선택에 포함"
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 포함된 MonthCalendar 컨트롤 액세스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

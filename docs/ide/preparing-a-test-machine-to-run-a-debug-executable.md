@@ -1,8 +1,7 @@
 ---
 title: "디버그 실행 파일을 실행하기 위한 테스트 컴퓨터 준비 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "디버그 실행 파일, 실행할 테스트 컴퓨터 준비"
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 디버그 실행 파일을 실행하기 위한 테스트 컴퓨터 준비
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

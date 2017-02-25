@@ -1,8 +1,7 @@
 ---
 title: "릴리스 빌드 문제 해결 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Visual C++ 문제 해결, 릴리스 빌드"
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 릴리스 빌드 문제 해결
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

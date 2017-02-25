@@ -1,8 +1,7 @@
 ---
 title: "C 저장소 클래스 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "수명, 변수"
   - "지정자, 저장소 클래스"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "저장 기간"
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 저장소 클래스
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

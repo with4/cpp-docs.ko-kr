@@ -1,8 +1,7 @@
 ---
 title: "비동기 에이전트 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "asynchronous 에이전트"
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
 caps.latest.revision: 15
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 비동기 에이전트
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

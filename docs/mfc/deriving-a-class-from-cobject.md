@@ -1,8 +1,7 @@
 ---
 title: "CObject에서 클래스 파생시키기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "serialization[C++], 매크로"
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CObject에서 클래스 파생시키기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

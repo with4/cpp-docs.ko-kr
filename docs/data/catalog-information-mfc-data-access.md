@@ -1,8 +1,7 @@
 ---
 title: "카탈로그 정보  (MFC Data Access) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "테이블[C++], 카탈로그 정보"
 ms.assetid: c184e80f-ff17-409f-9df8-05275080bb8d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 카탈로그 정보  (MFC Data Access)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

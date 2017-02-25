@@ -1,8 +1,7 @@
 ---
 title: "_getdcwd, _wgetdcwd | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_tgetdcwd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wgetdcwd 함수"
   - "디렉터리 작업"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "디렉터리 [c + +] 현재 작업"
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _getdcwd, _wgetdcwd
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

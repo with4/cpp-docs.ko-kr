@@ -1,8 +1,7 @@
 ---
 title: "예: 메뉴 명령을 통해 대화 상자 표시 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "모덜리스 대화 상자, 표시"
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 예: 메뉴 명령을 통해 대화 상자 표시
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

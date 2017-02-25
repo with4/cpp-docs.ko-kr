@@ -1,8 +1,7 @@
 ---
 title: "생성자 초기화 순서 변경 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "생성자, C++"
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 생성자 초기화 순서 변경 사항
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

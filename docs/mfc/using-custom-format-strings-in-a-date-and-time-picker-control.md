@@ -1,8 +1,7 @@
 ---
 title: "날짜 및 시간 선택 컨트롤에서 사용자 지정 서식 문자열 사용 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DateTimePicker 컨트롤[MFC], 표시 스타일"
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 날짜 및 시간 선택 컨트롤에서 사용자 지정 서식 문자열 사용
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

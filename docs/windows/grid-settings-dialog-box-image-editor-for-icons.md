@@ -1,8 +1,7 @@
 ---
 title: "모눈 설정 대화 상자(아이콘에 대한 이미지 편집기) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,15 +13,14 @@ f1_keywords:
   - "vc.editors.gridsettings"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "모눈 설정 대화 상자"
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 모눈 설정 대화 상자(아이콘에 대한 이미지 편집기)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

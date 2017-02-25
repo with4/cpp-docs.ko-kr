@@ -1,8 +1,7 @@
 ---
 title: "일반적인 인터넷 클라이언트 응용 프로그램의 단계 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WinInet 클래스, 프로그래밍"
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 일반적인 인터넷 클라이언트 응용 프로그램의 단계
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

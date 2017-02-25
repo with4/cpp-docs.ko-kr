@@ -1,8 +1,7 @@
 ---
 title: "공용 구조체의 저장소 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "저장소, 공용 구조체"
   - "union 키워드[C]"
   - "union 키워드[C], 저장소"
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 공용 구조체의 저장소
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

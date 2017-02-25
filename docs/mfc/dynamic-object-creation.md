@@ -1,8 +1,7 @@
 ---
 title: "동적 개체 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "개체[C++], 런타임에 동적으로 만들기"
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 동적 개체 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

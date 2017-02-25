@@ -1,8 +1,7 @@
 ---
 title: "/Fi (출력 파일 이름 전처리) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "출력 파일 전처리, 파일 이름"
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # /Fi (출력 파일 이름 전처리)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

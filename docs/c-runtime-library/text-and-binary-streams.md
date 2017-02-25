@@ -1,8 +1,7 @@
 ---
 title: "텍스트 및 이진 스트림 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "이진 스트림"
   - "텍스트 스트림"
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 텍스트 및 이진 스트림
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

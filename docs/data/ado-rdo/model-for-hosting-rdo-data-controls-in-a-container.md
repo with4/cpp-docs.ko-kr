@@ -1,8 +1,7 @@
 ---
 title: "컨테이너에서 RDO 데이터 컨트롤을 호스팅하기 위한 모델 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "RemoteData 컨트롤, 호스팅 모델"
 ms.assetid: ca598bac-9fef-40e6-b6cd-03d817e16b2e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 컨테이너에서 RDO 데이터 컨트롤을 호스팅하기 위한 모델
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

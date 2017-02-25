@@ -1,8 +1,7 @@
 ---
 title: "입력/출력 처리에 대한 권장 사항 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "I/O[MFC], I/O 정보"
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 입력/출력 처리에 대한 권장 사항
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

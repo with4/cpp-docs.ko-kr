@@ -1,8 +1,7 @@
 ---
 title: "값 형식 명시적 boxing | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "값 형식, Boxed"
 ms.assetid: 9597c92f-a3fe-44af-ad80-f9d656847a35
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 값 형식 명시적 boxing
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

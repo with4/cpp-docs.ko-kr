@@ -1,8 +1,7 @@
 ---
 title: "방법: 네이티브 함수에서 참조 클래스 수정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "참조 형식, C++ 네이티브 함수에서 수정"
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 방법: 네이티브 함수에서 참조 클래스 수정
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

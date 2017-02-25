@@ -1,8 +1,7 @@
 ---
 title: "코드 마법사를 사용하여 컨트롤에 대한 형식이 안전한 액세스 수행 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "대화 상자, 컨트롤 액세스"
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 코드 마법사를 사용하여 컨트롤에 대한 형식이 안전한 액세스 수행
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

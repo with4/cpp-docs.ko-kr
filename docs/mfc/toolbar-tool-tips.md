@@ -1,8 +1,7 @@
 ---
 title: "도구 모음 도구 설명 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "상태 표시줄 메시지 업데이트"
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 도구 모음 도구 설명
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

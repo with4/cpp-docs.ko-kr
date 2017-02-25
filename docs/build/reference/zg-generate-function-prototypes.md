@@ -1,8 +1,7 @@
 ---
 title: "/Zg(함수 프로토타입 생성) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-Zg 컴파일러 옵션[C++]"
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Zg(함수 프로토타입 생성)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

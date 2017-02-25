@@ -1,8 +1,7 @@
 ---
 title: "모든 아키텍처에 내장 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "cl.exe 컴파일러, 내장 함수"
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 모든 아키텍처에 내장
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild(c++), 방법: 사용자 지정 빌드 도구 추가"
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

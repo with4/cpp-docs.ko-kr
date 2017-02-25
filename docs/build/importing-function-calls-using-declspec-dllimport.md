@@ -1,8 +1,7 @@
 ---
 title: "__declspec(dllimport)을 사용하여 함수 호출 가져오기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "함수 호출 가져오기[C++]"
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # __declspec(dllimport)을 사용하여 함수 호출 가져오기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

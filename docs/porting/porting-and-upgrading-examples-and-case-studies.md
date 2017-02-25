@@ -1,8 +1,7 @@
 ---
 title: "포팅 및 업그레이드: 예제 및 사례 연구 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 포팅 및 업그레이드: 예제 및 사례 연구
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

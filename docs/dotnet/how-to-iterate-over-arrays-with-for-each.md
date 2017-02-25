@@ -1,8 +1,7 @@
 ---
 title: "방법: for each로 배열 반복 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "배열[C++], for each로 반복 처리"
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 방법: for each로 배열 반복
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "출력 스트림 개체 생성 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "output stream 개체"
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 출력 스트림 개체 생성
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

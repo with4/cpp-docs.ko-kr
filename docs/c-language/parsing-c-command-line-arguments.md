@@ -1,8 +1,7 @@
 ---
 title: "C 명령줄 인수 구문 분석 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "명령줄, 구문 분석"
   - "큰따옴표"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "시작 코드, 명령줄 인수 구문 분석"
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 명령줄 인수 구문 분석
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

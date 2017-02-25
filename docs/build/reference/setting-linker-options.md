@@ -1,8 +1,7 @@
 ---
 title: "링커 옵션 설정 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "개체/라이브러리 모듈"
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 링커 옵션 설정
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

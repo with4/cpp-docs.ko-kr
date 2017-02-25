@@ -1,8 +1,7 @@
 ---
 title: "스레드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "TLS(스레드 로컬 저장소), 컴파일러 구현"
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 스레드
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

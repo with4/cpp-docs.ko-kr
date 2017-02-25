@@ -1,8 +1,7 @@
 ---
 title: "수학 오류 상수 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,7 +17,6 @@ f1_keywords:
   - "_OVERFLOW"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_DOMAIN 상수"
   - "_OVERFLOW 상수"
@@ -35,10 +33,10 @@ helpviewer_keywords:
   - "UNDERFLOW 상수"
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 수학 오류 상수
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

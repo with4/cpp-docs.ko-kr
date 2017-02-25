@@ -1,8 +1,7 @@
 ---
 title: "MASM에 대한 해제 도우미 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 36591f9d-43d5-47b1-ae09-e45cf127204c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MASM에 대한 해제 도우미
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

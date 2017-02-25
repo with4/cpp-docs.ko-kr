@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedAdd Intrinsic Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "_InterlockedAdd64_rel intrinsic"
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _InterlockedAdd Intrinsic Functions
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

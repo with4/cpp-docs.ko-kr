@@ -1,8 +1,7 @@
 ---
 title: "스칼라 형식 초기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "자동 저장소 클래스"
   - "자동 저장소 클래스, 스칼라 형식 초기화"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "형식[C], 초기화"
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 스칼라 형식 초기화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

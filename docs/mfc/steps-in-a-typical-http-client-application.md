@@ -1,8 +1,7 @@
 ---
 title: "일반적인 HTTP 클라이언트 응용 프로그램의 단계 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "WinInet 클래스, HTTP"
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 일반적인 HTTP 클라이언트 응용 프로그램의 단계
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

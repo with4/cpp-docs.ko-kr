@@ -1,8 +1,7 @@
 ---
 title: "리플렉션된 메시지 처리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "리플렉트된 메시지, 처리"
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 리플렉션된 메시지 처리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

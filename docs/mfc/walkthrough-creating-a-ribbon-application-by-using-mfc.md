@@ -1,8 +1,7 @@
 ---
 title: "연습: MFC를 사용하여 리본 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "리본 응용 프로그램, 만들기(MFC)"
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 연습: MFC를 사용하여 리본 응용 프로그램 만들기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

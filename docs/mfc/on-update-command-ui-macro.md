@@ -1,8 +1,7 @@
 ---
 title: "ON_UPDATE_COMMAND_UI 매크로 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "사용자 인터페이스 개체 업데이트"
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ON_UPDATE_COMMAND_UI 매크로
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

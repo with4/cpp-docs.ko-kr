@@ -1,8 +1,7 @@
 ---
 title: "지연 로드된 DLL에 대한 모든 가져오기 로드 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "__HrLoadAllImportsForDll 링커 옵션"
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 지연 로드된 DLL에 대한 모든 가져오기 로드
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/QIfist(_ftol 사용 안 함) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "/QIfist 컴파일러 옵션[C++]"
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /QIfist(_ftol 사용 안 함)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

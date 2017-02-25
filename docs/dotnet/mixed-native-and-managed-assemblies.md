@@ -1,8 +1,7 @@
 ---
 title: "혼합형(네이티브 및 관리) 어셈블리 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "네이티브 코드[C++], .NET 상호 운용성"
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # 혼합형(네이티브 및 관리) 어셈블리
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

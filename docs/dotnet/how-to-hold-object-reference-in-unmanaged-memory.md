@@ -1,8 +1,7 @@
 ---
 title: "방법: 관리되지 않는 메모리에 개체 참조 유지 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "참조, 네이티브 함수에 개체 유지"
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 방법: 관리되지 않는 메모리에 개체 참조 유지
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

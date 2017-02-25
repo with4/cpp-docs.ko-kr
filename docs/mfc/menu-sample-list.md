@@ -1,8 +1,7 @@
 ---
 title: "메뉴 샘플 목록 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "샘플 응용 프로그램[MFC], 메뉴"
 ms.assetid: 6d89c723-03d6-474e-8ca5-e98f93bd41cc
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 메뉴 샘플 목록
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

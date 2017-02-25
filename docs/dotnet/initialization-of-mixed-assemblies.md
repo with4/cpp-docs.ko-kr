@@ -1,8 +1,7 @@
 ---
 title: "혼합형 어셈블리 초기화 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "혼합형 어셈블리[C++], 초기화"
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 혼합형 어셈블리 초기화
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

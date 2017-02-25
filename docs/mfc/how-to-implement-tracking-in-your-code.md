@@ -1,8 +1,7 @@
 ---
 title: "방법: 코드에서 추적 구현 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CRectTracker 클래스, 추적기 구현"
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 방법: 코드에서 추적 구현
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

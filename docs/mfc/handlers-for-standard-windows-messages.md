@@ -1,8 +1,7 @@
 ---
 title: "표준 Windows 메시지에 대한 처리기 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows 메시지[C++], 처리기"
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 표준 Windows 메시지에 대한 처리기
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

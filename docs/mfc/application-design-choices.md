@@ -1,8 +1,7 @@
 ---
 title: "응용 프로그램 디자인 선택 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "서버 응용 프로그램, 인터넷 클라이언트 응용 프로그램과 비교"
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 응용 프로그램 디자인 선택
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

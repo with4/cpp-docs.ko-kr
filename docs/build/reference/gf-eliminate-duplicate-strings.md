@@ -1,8 +1,7 @@
 ---
 title: "/GF(중복 문자열 제거) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "문자열[C++], 풀링"
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /GF(중복 문자열 제거)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

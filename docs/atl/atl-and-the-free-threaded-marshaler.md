@@ -1,8 +1,7 @@
 ---
 title: "ATL 및 자유 스레드된 마샬러 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "스레딩[C++], ATL에서 마샬링"
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL 및 자유 스레드된 마샬러
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

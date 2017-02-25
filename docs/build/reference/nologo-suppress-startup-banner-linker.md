@@ -1,8 +1,7 @@
 ---
 title: "/NOLOGO(시작 배너 표시 안 함)(링커) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "버전 번호, 링커 표시 방지"
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /NOLOGO(시작 배너 표시 안 함)(링커)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CToolTipCtrl을 사용하여 CToolTipCtrl 개체 만들기 및 조작 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "도구 설명[C++], 만들기"
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CToolTipCtrl을 사용하여 CToolTipCtrl 개체 만들기 및 조작
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
