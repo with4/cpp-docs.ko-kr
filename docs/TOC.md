@@ -11,7 +11,6 @@
 # [Linux 개발](linux/download-install-and-setup-the-linux-development-workload.md)
 # [C++/CLI를 사용한 .NET 개발](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Visual C++의 클라우드 및 웹 프로그래밍](cloud/cloud-and-web-programming-in-visual-cpp.md)
-## [C++ REST SDK(코드명 "Casablanca")](cloud/cpp-rest-sdk-codename-casablanca.md)
 # [병렬 프로그래밍](parallel/parallel-programming-in-visual-cpp.md)
 # [데이터 액세스](data/data-access-programming-mfc-atl.md)
 # [텍스트 및 문자열](text/text-and-strings-in-visual-cpp.md)
@@ -24,8 +23,3 @@
 # [Visual C++ 샘플](visual-cpp-samples.md)
 # [Visual C++ 도움말 및 커뮤니티](visual-cpp-help-and-community.md)
 # [Visual C++ 도구 집합의 문제를 보고하는 방법](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
