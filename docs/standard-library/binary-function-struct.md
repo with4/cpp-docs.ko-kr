@@ -1,58 +1,70 @@
 ---
-title: "binary_function 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.binary_function"
-  - "functional/std::binary_function"
-  - "std::binary_function"
-  - "binary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_function 클래스"
+title: "binary_function 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.binary_function
+- functional/std::binary_function
+- std::binary_function
+- binary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# binary_function 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 7fa7e543bbf51583c34ade759112a6e101a06f46
+ms.lasthandoff: 02/24/2017
 
-An empty base struct that defines types that may be inherited by derived classes that provides a binary function object.  
+---
+# <a name="binaryfunction-struct"></a>binary_function 구조체
+이항 함수 개체를 제공하는 파생 클래스에 상속될 수 있는 형식을 정의하는 빈 기본 구조체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
+```    
+struct binary_function {
+   typedef Arg1 first_argument_type;
+   typedef Arg2 second_argument_type;
+   typedef Result result_type;    
+   };  
+ ```  
+## <a name="remarks"></a>설명  
+ 템플릿 구조체는 다음 형식의 멤버 함수를 정의하는 클래스의 기준으로 사용됩니다.  
   
-```  
+ **result_type operator()**( **constfirst_argument_type&**,  
   
-   template<class Arg1, class Arg2, class Result>  
-struct binary_function {  
-   typedef Arg1 first_argument_type;  
-   typedef Arg2 second_argument_type;  
-   typedef Result result_type;  
-};  
-```  
+ **const second_argument_type&** ) **const**  
   
-## 설명  
- The template struct serves as a base for classes that define a member function of the form:  
+ 이러한 모든 이항 함수는 첫 번째 인수 형식을 **first_argument_type**, 두 번째 인수 형식을 **second_argument_type**, 반환 형식을 ***result_type***으로 참조할 수 있습니다.  
   
- **result\_type operator\(\)**\( **const first\_argument\_type&**,  
+## <a name="example"></a>예제  
   
- **const second\_argument\_type&** \) **const**  
-  
- All such binary functions can refer to their first argument type as **first\_argument\_type**, their second argument type as **second\_argument\_type**, and their return type as ***result\_type***.  
-  
-## 예제  
-  
-```  
+```cpp  
 // functional_binary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -103,17 +115,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )  
+The vector v2 = ( -0 -2 -4 -6 -8 -10 )  
+The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )  
+*\  
+  
 ```  
   
-  **벡터 v1 \= \(11 5.5 3.66667 2.75 2.2 1.83333\)**  
-**벡터 v2 \= \( \-0 \-2 \-4 \-6 \-8 \-10 \)**  
-**The element\-wise averages are: \( 5.5 1.75 \-0.166667 \-1.625 \-2.9 \-4.08333 \)**   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [binary\_function 구조체 샘플](../misc/binary-function-structure-sample.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

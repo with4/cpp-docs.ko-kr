@@ -1,49 +1,67 @@
 ---
-title: "C++ Program Startup 및 Termination | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "텍스트 스트림 제어"
-  - "Function Main 프로시저"
-  - "main 함수, 프로그램 시작"
-  - "표준 C++ 라이브러리, 프로그램 시작 및 종료"
-  - "시작 코드, C++ 프로그램 종료"
-  - "실행 종료"
+title: "C++ 프로그램 시작 및 종료 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, program startup and termination
+- terminating execution
+- Function Main procedures
+- control text streams
+- startup code, and C++ program termination
+- main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++ Program Startup 및 Termination
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 53e31f3f3a175013a248401f4231bb87cf444681
+ms.lasthandoff: 02/24/2017
 
-A C\+\+ program performs the same operations as a C program does at program startup and at program termination, plus a few more outlined here.  
+---
+# <a name="c-program-startup-and-termination"></a>C++ Program Startup 및 Termination
+C++ 프로그램은 여기에 설명된 몇 가지 추가 작업 외에도 C 프로그램이 프로그램 시작 시와 프로그램 종료 시에 수행하는 것과 동일한 작업을 수행합니다.  
   
- Before the target environment calls the function `main`, and after it stores any constant initial values you specify in all objects that have static duration, the program executes any remaining constructors for such static objects.  The order of execution is not specified between translation units, but you can nevertheless assume that some [iostreams](../standard-library/iostreams-conventions.md) objects are properly initialized for use by these static constructors.  These control text streams are:  
+ 대상 환경에서 `main` 함수를 호출하기 전과 정적 기간이 있는 모든 개체에서 지정한 모든 상수 초기 값을 저장한 후에 프로그램은 이러한 정적 개체에 대해 나머지 생성자를 실행합니다. 실행 순서가 변환 단위 간에 지정되지 않지만, 그럼에도 불구하고 이러한 정적 생성자에서 사용하기 위해 일부 [iostreams](../standard-library/iostreams-conventions.md) 개체가 제대로 초기화된다고 추정할 수 있습니다. 이러한 텍스트 스트림 제어는 다음과 같습니다.  
   
--   [cin](../Topic/cin.md) — for standard input.  
+-   [cin](../standard-library/iostream.md#cin) - 표준 입력의 경우  
   
--   [cout](../Topic/cout.md) — for standard output.  
+-   [cout](../standard-library/iostream.md#cout) - 표준 출력의 경우  
   
--   [cerr](../Topic/cerr.md) — for unbuffered standard error output.  
+-   [cerr](../standard-library/iostream.md#cerr) - 버퍼링되지 않은 표준 오류 출력의 경우  
   
--   [clog](../Topic/clog.md) — for buffered standard error output.  
+-   [clog](../standard-library/iostream.md#clog) - 버퍼링된 표준 오류 출력의 경우  
   
- You can also use these objects within the destructors called for static objects, during program termination.  
+ 또한 프로그램 종료 중 정적 개체에 대해 호출된 소멸자 내에서도 이러한 개체를 사용할 수 있습니다.  
   
- As with C, returning from `main` or calling `exit` calls all functions registered with `atexit` in reverse order of registry.  An exception thrown from such a registered function calls `terminate`.  
+ C에서와 마찬가지로 `main`에서 반환하거나 `exit`를 호출하면 `atexit`를 통해 등록된 모든 함수가 레지스트리의 역순으로 호출됩니다. 이렇게 등록된 함수에서 throw된 예외는 `terminate`를 호출합니다.  
   
-## 참고 항목  
- [STL 개요](../standard-library/cpp-standard-library-overview.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)   
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

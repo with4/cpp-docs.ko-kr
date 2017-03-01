@@ -1,74 +1,99 @@
 ---
-title: "kbhit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_kbhit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "kbhit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "kbhit 함수"
+title: "_kbhit | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _kbhit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _kbhit
+- kbhit
+- conio/_kbhit
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard input
+- user input, checking for keyboard
+- kbhit function
+- console
+- console, checking
+- keyboards, keyboard input
+- _kbhit function
+- keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _kbhit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e213247266cad2c0f96b96057cf8e6933dfe45c6
+ms.lasthandoff: 02/24/2017
 
-콘솔 키보드 입력을 검사합니다.  
+---
+# <a name="kbhit"></a>_kbhit
+콘솔에서 키보드 입력을 확인합니다.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 int _kbhit( void );  
 ```  
   
-## 반환 값  
- `_kbhit` 는 키를 눌렀을 경우 0이 아닌 값을 반환 합니다.  그렇지 않으면 0이 반환됩니다.  
+## <a name="return-value"></a>반환 값  
+ `_kbhit`은 키가 눌렸으면&0;이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
-## 설명  
- 다음 `_kbhit` 함수는 콘솔 최근의 키 입력을 확인 합니다.  함수에서 0이 아닌 값을 반환하는 경우, 키 입력은 버퍼에서 대기 중입니다.  프로그램은 `_getch` 또는 `_getche` 를 호출하여 키를 가져올 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `_kbhit` 함수는 콘솔에서 최근의 키 입력을 확인합니다. 이 함수가&0;이 아닌 값을 반환하면 키 입력이 버퍼에서 대기 중인 것입니다. 그러면 프로그램이 `_getch` 또는 `_getche`를 호출하여 키 입력을 가져올 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_kbhit`|\<conio.h\>|  
+|-------------|---------------------|  
+|`_kbhit`|\<conio.h>|  
   
- 호환성 정보에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_kbhit.c  
@@ -93,12 +118,12 @@ int main( void )
 }  
 ```  
   
-## 샘플 출력  
+## <a name="sample-output"></a>샘플 출력  
   
 ```  
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!  
 Key struck was 'q'   
 ```  
   
-## 참고 항목  
- [콘솔 및 포트 I\/O](../../c-runtime-library/console-and-port-i-o.md)
+## <a name="see-also"></a>참고 항목  
+ [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)

@@ -1,63 +1,80 @@
 ---
-title: "C++ 라이브러리 규칙 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "클래스[C++]"
-  - "코딩 규칙, 표준 C++ 라이브러리"
-  - "규칙[C++], 표준 C++ 라이브러리"
-  - "함수 이름[C++]"
-  - "함수[C++], 라이브러리 명명 규칙"
-  - "명명 규칙[C++], C++ 라이브러리"
-  - "명명 규칙[C++], 표준 C++ 라이브러리"
-  - "표준 C++ 라이브러리, 규칙"
+title: "C++ 라이브러리 규칙 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, conventions
+- classes [C++]
+- functions [C++], library naming conventions
+- naming conventions [C++], C++ Standard Library
+- conventions [C++], C++ Standard Library
+- function names [C++]
+- coding conventions, C++ Standard Library
+- naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++ 라이브러리 규칙
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 55d3959b12b1b1a25a6c4b5c65fce59db57cf838
+ms.lasthandoff: 02/24/2017
 
-The C\+\+ library obeys much the same conventions as the Standard C Library, plus a few more outlined here.  
+---
+# <a name="c-library-conventions"></a>C++ 라이브러리 규칙
+C++ 라이브러리는 표준 C 라이브러리와 동일한 규칙 외에도 여기에 설명된 몇 가지 추가 규칙도 적절히 준수합니다.  
   
- An implementation has certain latitude in how it declares types and functions in the C\+\+ library:  
+ 구현 시에는 C++ 라이브러리의 형식 및 함수를 선언하는 방법과 관련하여 다음과 같은 약간의 자유재량도 있습니다.  
   
--   Names of functions in the Standard C library may have either extern \#"C\+\+" or extern "C" linkage.  Include the appropriate Standard C header rather than declare a library entity inline.  
+-   표준 C 라이브러리의 함수 이름에 extern #"C++" 또는 extern "C" 링크가 있을 수 있습니다. 라이브러리 엔터티 인라인을 선언하지 않고 적절한 표준 C 헤더를 포함합니다.  
   
--   A member function name in a library class may have additional function signatures over those listed in this document.  You can be sure that a function call described here behaves as expected, but you cannot reliably take the address of a library member function. \(The type may not be what you expect.\)  
+-   이 문서에 나열된 함수 시그니처 이상의 추가 함수 시그니처가 라이브러리 클래스의 멤버 함수 이름에 있을 수 있습니다. 여기에 설명된 함수 호출이 예상대로 동작할 것을 확신할 수 있지만, 라이브러리 멤버 함수의 주소를 안정적으로 가져올 수는 없습니다. 형식이 예상과 다를 수 있습니다.  
   
--   A library class may have undocumented \(nonvirtual\) base classes.  A class documented as derived from another class may, in fact, be derived from that class through other undocumented classes.  
+-   라이브러리 클래스가 기본 클래스(비가상)를 문서화하지 않을 수 있습니다. 다른 클래스에서 파생되는 것으로 문서화된 클래스가 실제로 문서화되지 않은 다른 클래스를 통해 해당 클래스에서 파생될 수 있습니다.  
   
--   A type defined as a synonym for some integer type may be the same as one of several different integer types.  
+-   일부 정수 형식에 대한 동의어로 정의된 형식이 다른 여러 정수 형식 중 하나와 동일할 수 있습니다.  
   
--   A bitmask type can be implemented as either an integer type or an enumeration.  In either case, you can perform bitwise operations \(such as `AND` and `OR`\) on values of the same bitmask type.  The elements `A` and `B` of a bitmask type are nonzero values such that `A` & `B` is zero.  
+-   비트 마스크 형식이 정수 형식 또는 열거형으로 구현될 수 있습니다. 어떠한 경우에도 동일한 비트 마스크 형식의 값에 대해 비트 연산(예: `AND` 및 `OR`)을 수행할 수 있습니다. 비트 마스크 형식의 요소 `A` 및 `B`는 `A` & `B`가&0;이 되도록&0;이 아닌 값입니다.  
   
--   A library function that has no exception specification can throw an arbitrary exception, unless its definition clearly restricts such a possibility.  
+-   예외 사양이 없는 라이브러리 함수는 해당 정의가 이러한 가능성을 명확하게 제한하지 않는 한 임의의 예외를 throw할 수 있습니다.  
   
- On the other hand, there are some restrictions:  
+ 반면에 다음과 같은 몇 가지 제한 사항이 있습니다.  
   
--   The Standard C Library uses no masking macros.  Only specific function signatures are reserved, not the names of the functions themselves.  
+-   표준 C 라이브러리에서 마스킹 매크로를 사용하지 않습니다. 함수 자체의 이름이 아니라 특정 함수 시그니처만 예약됩니다.  
   
--   A library function name outside a class will not have additional, undocumented, function signatures.  You can reliably take its address.  
+-   클래스 외부의 라이브러리 함수 이름에는 문서화되지 않은 추가 함수 시그니처가 없습니다. 해당 주소를 안정적으로 가져올 수 있습니다.  
   
--   Base classes and member functions described as virtual are assuredly virtual, while those described as nonvirtual are assuredly nonvirtual.  
+-   가상으로 설명된 기본 클래스 및 멤버 함수는 확실히 가상이고, 비가상으로 설명된 기본 클래스 및 멤버 함수는 확실히 비가상입니다.  
   
--   Two types defined by the C\+\+ library are always different unless this document explicitly suggests otherwise.  
+-   이 문서에서 달리 명시적으로 제시하지 않는 한 C++ 라이브러리로 정의된 두 가지 형식은 항상 서로 다릅니다.  
   
--   Functions supplied by the library, including the default versions of replaceable functions, can throw *at most* those exceptions listed in any exception specification.  No destructors supplied by the library throw exceptions.  Functions in the Standard C Library may propagate an exception, as when `qsort` calls a comparison function that throws an exception, but they do not otherwise throw exceptions.  
+-   대체 가능한 함수의 기본 버전을 비롯하여 라이브러리에서 제공한 함수는 *최대한* 모든 예외 사양에 나열된 해당 예외를 throw할 수 있습니다. 라이브러리에서 제공한 소멸자는 예외를 throw하지 않습니다. 표준 C 라이브러리의 함수는 `qsort`에서 예외를 throw하는 비교 함수를 호출할 때와 같이 예외를 전파할 수 있지만, 예외를 throw하지는 않습니다.  
   
-## 참고 항목  
- [STL 개요](../standard-library/cpp-standard-library-overview.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)   
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

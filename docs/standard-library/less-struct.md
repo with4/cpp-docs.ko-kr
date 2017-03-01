@@ -1,78 +1,90 @@
 ---
-title: "less 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::less"
-  - "std.less"
-  - "less"
-  - "xfunctional/std::less"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "less 구조체"
-  - "less 함수"
+title: "less 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::less
+- std.less
+- less
+- xfunctional/std::less
+dev_langs:
+- C++
+helpviewer_keywords:
+- less struct
+- less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# less 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: ff9530d08066cf0cf9b9421ac8b1b72d1a229bbe
+ms.lasthandoff: 02/24/2017
 
-해당 인수에서 보다 적은 작업 \(`operator<`\) 을 수행하는 이진 조건부 입니다.  
+---
+# <a name="less-struct"></a>less 구조체
+인수에서 작음 연산(`operator<`)을 수행하는 이진 조건자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
-template<class Type = void>  
-   struct less : public binary_function <Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator<  
-template<>  
-   struct less<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            < std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct less : public binary_function <Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+ };
+
+// specialized transparent functor for operator<
+template <>
+struct less<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) <std::forward<U>(Right));
+ };
 ```  
   
-#### 매개 변수  
- `Type`, `Type1`, `Type2`  
- 유추 또는 지정된 형식의 피연산자를 사용하는 `operator<` 를 지원하는 모든 형식입니다.  
+#### <a name="parameters"></a>매개 변수  
+ `Type`, `T`, `U`  
+ 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator<`를 지원하는 모든 형식입니다.  
   
  `Left`  
- 보다 작은 연산의 왼쪽 피연산자입니다.  특수화 되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 취합니다.  특수화 되지 않은 템플릿은 암시된 `Type1` 형식의 lvalue 및 rvalue 참조 인수 형식의 전달을 완벽히 수행합니다.  
+ 작음 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
  `Right`  
- 보다 작은 연산의 오른쪽 피연산자 입니다.  특수화 되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 취합니다.  특수화 되지 않은 템플릿은 암시된 `Type2` 형식의 lvalue 및 rvalue 참조 인수 형식의 전달을 완벽히 수행합니다.  
+ 작음 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
-## 반환 값  
- `Left` `<` `Right`의 결과입니다.  특수화 된 템플릿은 `operator<` 으로 반환되는 형식의 결과 전달을 완벽히 수행합니다.  
+## <a name="return-value"></a>반환 값  
+ `Left``<``Right`의 결과입니다. 특수화된 템플릿은 `operator<`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
   
-## 설명  
- 이진 술부 `less`\<`Type`\> 는 `Type` 형식의 요소 값의 집합을 엄격한 순서로 동일 클래스에 제공하고, 이것은 이 형식이 정렬된 표준 수학 요구 사항이 충족 하는 경우에만 적용됩니다.  포인터 형식에 대한 특수화는 서로 대해 고유한 값의 모든 요소를 정렬 하는 요소의 전체 순서를 생성 합니다.  
+## <a name="remarks"></a>설명  
+ 이진 조건자 `less`< `Type`>은 이 형식이 표준 수학 요구 사항을 충족하는 경우에만 동등 클래스에 `Type` 형식 요소 값 집합의 엄격하고 약한 순서를 제공하여 그렇게 정렬되도록 합니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // functional_less.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -115,17 +127,21 @@ cout << Iter1->m_i << " ";
  }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
-```  
-Original vector v1 = ( 41 18467 6334 26500 19169 15724 11478 )  
-Sorted vector v1 = ( 41 6334 11478 15724 18467 19169 26500 )  
+```
+Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
+Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```  
   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
