@@ -1,80 +1,209 @@
 ---
-title: "CD2DLayer 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DLayer"
-  - "CD2DLayer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DLayer 클래스"
+title: "CD2DLayer 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DLayer
+- CD2DLayer
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DLayer class
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# CD2DLayer 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d0034c37da7fa61c10cf6c7662ba361de8313aa0
+ms.lasthandoff: 02/24/2017
 
-ID2D1Layer에 대한 래퍼입니다.  
+---
+# <a name="cd2dlayer-class"></a>CD2DLayer 클래스
+ID2D1Layer에 대 한 래퍼입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CD2DLayer : public CD2DResource;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DLayer::CD2DLayer](../Topic/CD2DLayer::CD2DLayer.md)|CD2DLayer 개체를 생성합니다.|  
-|[CD2DLayer::~CD2DLayer](../Topic/CD2DLayer::~CD2DLayer.md)|소멸자  D2D 계층 개체가 소멸될 때 호출됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|CD2DLayer 개체를 만듭니다.|  
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|소멸자입니다. D2D 계층 개체가 소멸 될 때 호출 됩니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DLayer::Attach](../Topic/CD2DLayer::Attach.md)|개체에 기존 리소스 인터페이스를 연결합니다.|  
-|[CD2DLayer::Create](../Topic/CD2DLayer::Create.md)|CD2DLayer를 만듭니다.  \([CD2DResource::Create](../Topic/CD2DResource::Create.md) 무시.\)|  
-|[CD2DLayer::Destroy](../Topic/CD2DLayer::Destroy.md)|CD2DLayer 개체를 소멸시킵니다.  \([CD2DResource::Destroy](../Topic/CD2DResource::Destroy.md) 무시.\)|  
-|[CD2DLayer::Detach](../Topic/CD2DLayer::Detach.md)|개체에서 리소스 인터페이스를 분리합니다.|  
-|[CD2DLayer::Get](../Topic/CD2DLayer::Get.md)|ID2D1Layer 인터페이스를 반환합니다.|  
-|[CD2DLayer::GetSize](../Topic/CD2DLayer::GetSize.md)|장치 독립적인 픽셀로 렌더링 대상의 크기를 반환합니다.|  
-|[CD2DLayer::IsValid](../Topic/CD2DLayer::IsValid.md)|리소스 유효성 검사\([CD2DResource::IsValid](../Topic/CD2DResource::IsValid.md) 무시\)|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DLayer::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|  
+|[CD2DLayer::Create](#create)|CD2DLayer를 만듭니다. (재정의 [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DLayer::Destroy](#destroy)|CD2DLayer 개체를 소멸 시킵니다. (재정의 [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DLayer::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|  
+|[CD2DLayer::Get](#get)|반환 ID2D1Layer 인터페이스|  
+|[CD2DLayer::GetSize](#getsize)|장치 독립적 픽셀의 렌더링 대상의 크기를 반환합니다.|  
+|[CD2DLayer::IsValid](#isvalid)|리소스 유효성 검사 (재정의 [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DLayer::operator ID2D1Layer\*](../Topic/CD2DLayer::operator%20ID2D1Layer*.md)|ID2D1Layer 인터페이스를 반환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|반환 ID2D1Layer 인터페이스|  
   
-### 보호된 데이터 멤버  
+### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DLayer::m\_pLayer](../Topic/CD2DLayer::m_pLayer.md)|ID2D1Layer 개체에 대한 포인터를 저장합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DLayer::m_pLayer](#m_player)|ID2D1Layer 개체에 대 한 포인터를 저장합니다.|  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
- [CD2DLayer](../../mfc/reference/cd2dlayer-class.md)  
+ `CD2DLayer`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-## 참고 항목  
+##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+ 소멸자입니다. D2D 계층 개체가 소멸 될 때 호출 됩니다.  
+  
+```  
+virtual ~CD2DLayer();
+```  
+  
+##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+ 기존 개체에 대 한 리소스 인터페이스를 연결.  
+  
+```  
+void Attach(ID2D1Layer* pResource);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pResource`  
+ 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+  
+##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+ CD2DLayer 개체를 만듭니다.  
+  
+```  
+CD2DLayer(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pParentTarget`  
+ 렌더링 대상에 대 한 포인터입니다.  
+  
+ `bAutoDestroy`  
+ 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+  
+##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+ CD2DLayer를 만듭니다.  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pRenderTarget`  
+ 렌더링 대상에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
+  
+##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+ CD2DLayer 개체를 소멸 시킵니다.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+ 개체에서 리소스 인터페이스를 분리합니다.  
+  
+```  
+ID2D1Layer* Detach();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 분리 된 리소스 인터페이스에 대 한 포인터입니다.  
+  
+##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+ 반환 ID2D1Layer 인터페이스  
+  
+```  
+ID2D1Layer* Get();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Layer 인터페이스에 대 한 포인터입니다.  
+  
+##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+ 장치 독립적 픽셀의 렌더링 대상의 크기를 반환합니다.  
+  
+```  
+CD2DSizeF GetSize() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 장치 독립적 픽셀의 렌더링 대상의 현재 크기  
+  
+##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+ 리소스 유효성 검사  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
+  
+##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+ ID2D1Layer 개체에 대 한 포인터를 저장합니다.  
+  
+```  
+ID2D1Layer* m_pLayer;  
+```  
+  
+##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+ 반환 ID2D1Layer 인터페이스  
+  
+```  
+operator ID2D1Layer* ();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Layer 인터페이스에 대 한 포인터입니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
+

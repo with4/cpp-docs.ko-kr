@@ -1,96 +1,353 @@
 ---
-title: "CD2DBitmapBrush 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CD2DBitmapBrush"
-  - "afxrendertarget/CD2DBitmapBrush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DBitmapBrush 클래스"
+title: "CD2DBitmapBrush 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CD2DBitmapBrush
+- afxrendertarget/CD2DBitmapBrush
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DBitmapBrush class
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# CD2DBitmapBrush 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a9ab15dcae8715b98cc9f723a710b64e83649bf9
+ms.lasthandoff: 02/24/2017
 
-ID2D1BitmapBrush에 대한 래퍼입니다.  
+---
+# <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 클래스
+ID2D1BitmapBrush에 대 한 래퍼입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CD2DBitmapBrush : public CD2DBrush;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DBitmapBrush::CD2DBitmapBrush](../Topic/CD2DBitmapBrush::CD2DBitmapBrush.md)|오버로드.  파일에서 CD2DBitmapBrush 개체를 생성합니다.|  
-|[CD2DBitmapBrush::~CD2DBitmapBrush](../Topic/CD2DBitmapBrush::~CD2DBitmapBrush.md)|소멸자  D2D 비트맵 브러시 개체가 소멸될 때 호출됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|오버로드됨. 파일에서 CD2DBitmapBrush 개체를 만듭니다.|  
+|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|소멸자입니다. D2D 비트맵 브러시 개체가 소멸 될 때 호출 됩니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DBitmapBrush::Attach](../Topic/CD2DBitmapBrush::Attach.md)|개체에 기존 리소스 인터페이스를 연결합니다.|  
-|[CD2DBitmapBrush::Create](../Topic/CD2DBitmapBrush::Create.md)|CD2DBitmapBrush를 만듭니다.  \([CD2DResource::Create](../Topic/CD2DResource::Create.md) 무시.\)|  
-|[CD2DBitmapBrush::Destroy](../Topic/CD2DBitmapBrush::Destroy.md)|CD2DBitmapBrush 개체를 소멸시킵니다.  \([CD2DBrush::Destroy](../Topic/CD2DBrush::Destroy.md) 무시.\)|  
-|[CD2DBitmapBrush::Detach](../Topic/CD2DBitmapBrush::Detach.md)|개체에서 리소스 인터페이스를 분리합니다.|  
-|[CD2DBitmapBrush::Get](../Topic/CD2DBitmapBrush::Get.md)|ID2D1BitmapBrush 인터페이스를 반환합니다.|  
-|[CD2DBitmapBrush::GetBitmap](../Topic/CD2DBitmapBrush::GetBitmap.md)|이 브러시가 그리는 데 사용하는 비트맵의 소스를 가져옵니다.|  
-|[CD2DBitmapBrush::GetExtendModeX](../Topic/CD2DBitmapBrush::GetExtendModeX.md)|브러시가 비트맵을 지나 확장되는 영역을 수평으로 바둑판식으로 표시하는 메서드를 가져옵니다.|  
-|[CD2DBitmapBrush::GetExtendModeY](../Topic/CD2DBitmapBrush::GetExtendModeY.md)|브러시가 비트맵을 지나 확장되는 영역을 수직으로 바둑판식으로 표시하는 메서드를 가져옵니다.|  
-|[CD2DBitmapBrush::GetInterpolationMode](../Topic/CD2DBitmapBrush::GetInterpolationMode.md)|브러시 비트맵을 크기 조정 또는 회전할 때 사용되는 보간 메서드를 가져옵니다.|  
-|[CD2DBitmapBrush::SetBitmap](../Topic/CD2DBitmapBrush::SetBitmap.md)|이 브러시가 그리는 데 사용하는 비트맵의 소스를 지정합니다.|  
-|[CD2DBitmapBrush::SetExtendModeX](../Topic/CD2DBitmapBrush::SetExtendModeX.md)|브러시가 비트맵을 지나 확장되는 영역을 수평으로 바둑판식으로 표시되는 방법을 지정합니다.|  
-|[CD2DBitmapBrush::SetExtendModeY](../Topic/CD2DBitmapBrush::SetExtendModeY.md)|브러시가 비트맵을 지나 확장되는 영역을 수직으로 바둑판식으로 표시되는 방법을 지정합니다.|  
-|[CD2DBitmapBrush::SetInterpolationMode](../Topic/CD2DBitmapBrush::SetInterpolationMode.md)|브러시 비트맵을 크기 조정 또는 회전할 때 사용되는 보간 모드를 지정합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DBitmapBrush::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|  
+|[CD2DBitmapBrush::Create](#create)|CD2DBitmapBrush를 만듭니다. (재정의 [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DBitmapBrush::Destroy](#destroy)|CD2DBitmapBrush 개체를 소멸 시킵니다. (재정의 [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DBitmapBrush::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|  
+|[CD2DBitmapBrush::Get](#get)|반환 ID2D1BitmapBrush 인터페이스|  
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|이 브러시를 그릴 때 사용 하는 비트맵의 소스를 가져옵니다.|  
+|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|브러시가 비트맵을 지 나 확장 되는 영역 가로 바둑판식는 메서드를 가져옵니다.|  
+|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|브러시가 비트맵을 지 나 확장 되는 영역 세로 바둑판식는 메서드를 가져옵니다.|  
+|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 메서드를 가져옵니다.|  
+|[CD2DBitmapBrush::SetBitmap](#setbitmap)|이 브러시를 그릴 때 사용 하는 비트맵의 소스를 지정 합니다.|  
+|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|브러시가 비트맵을 지 나 확장 되는 영역을 수평으로 바둑판식으로 표시 되는 방법을 지정 합니다.|  
+|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|브러시가 비트맵을 지 나 확장 되는 영역을 세로로으로 바둑판식으로 표시 되는 방법을 지정 합니다.|  
+|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 모드를 지정 합니다.|  
   
-### Protected 메서드  
+### <a name="protected-methods"></a>Protected 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DBitmapBrush::CommonInit](../Topic/CD2DBitmapBrush::CommonInit.md)|개체를 초기화합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DBitmapBrush::CommonInit](#commoninit)|개체를 초기화합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush\*](../Topic/CD2DBitmapBrush::operator%20ID2D1BitmapBrush*.md)|ID2D1BitmapBrush 인터페이스를 반환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|반환 ID2D1BitmapBrush 인터페이스|  
   
-### 보호된 데이터 멤버  
+### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[CD2DBitmapBrush::m\_pBitmap](../Topic/CD2DBitmapBrush::m_pBitmap.md)|CD2DBitmap 개체에 대한 포인터를 저장합니다.|  
-|[CD2DBitmapBrush::m\_pBitmapBrush](../Topic/CD2DBitmapBrush::m_pBitmapBrush.md)|ID2D1BitmapBrush 개체에 대한 포인터를 저장합니다.|  
-|[CD2DBitmapBrush::m\_pBitmapBrushProperties](../Topic/CD2DBitmapBrush::m_pBitmapBrushProperties.md)|비트맵 브러시 속성입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|CD2DBitmap 개체에 대 한 포인터를 저장합니다.|  
+|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|ID2D1BitmapBrush 개체에 대 한 포인터를 저장합니다.|  
+|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|브러시 속성은 비트맵입니다.|  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)  
   
- [CD2DBitmapBrush](../../mfc/reference/cd2dbitmapbrush-class.md)  
+ `CD2DBitmapBrush`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-## 참고 항목  
+##  <a name="a-namedtora--cd2dbitmapbrushcd2dbitmapbrush"></a><a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
+ 소멸자입니다. D2D 비트맵 브러시 개체가 소멸 될 때 호출 됩니다.  
+  
+```  
+virtual ~CD2DBitmapBrush();
+```  
+  
+##  <a name="a-nameattacha--cd2dbitmapbrushattach"></a><a name="attach"></a>CD2DBitmapBrush::Attach  
+ 기존 개체에 대 한 리소스 인터페이스를 연결.  
+  
+```  
+void Attach(ID2D1BitmapBrush* pResource);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pResource`  
+ 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+  
+##  <a name="a-namecd2dbitmapbrusha--cd2dbitmapbrushcd2dbitmapbrush"></a><a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
+ CD2DBitmapBrush 개체를 만듭니다.  
+  
+```  
+CD2DBitmapBrush(
+    CRenderTarget* pParentTarget,  
+    D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties = NULL,  
+    CD2DBrushProperties* pBrushProperties = NULL,  
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DBitmapBrush(
+    CRenderTarget* pParentTarget,  
+    UINT uiResID,  
+    LPCTSTR lpszType = NULL,  
+    CD2DSizeU sizeDest = CD2DSizeU(0, 0), 
+    D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties = NULL,  
+    CD2DBrushProperties* pBrushProperties = NULL,  
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DBitmapBrush(
+    CRenderTarget* pParentTarget,  
+    LPCTSTR lpszImagePath,  
+    CD2DSizeU sizeDest = CD2DSizeU(0, 0), 
+    D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties = NULL,  
+    CD2DBrushProperties* pBrushProperties = NULL,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pParentTarget`  
+ 렌더링 대상에 대 한 포인터입니다.  
+  
+ `pBitmapBrushProperties`  
+ 확장 모드 및 비트맵 브러시의 보간 모드에 대 한 포인터입니다.  
+  
+ `pBrushProperties`  
+ 불투명도 및 브러시의 변환에 대 한 포인터입니다.  
+  
+ `bAutoDestroy`  
+ 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+  
+ `uiResID`  
+ 리소스의 리소스 ID.  
+  
+ `lpszType`  
+ 리소스 종류를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+  
+ `sizeDest`  
+ 비트맵의 대상 크기입니다.  
+  
+ `lpszImagePath`  
+ 파일의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+  
+##  <a name="a-namecommoninita--cd2dbitmapbrushcommoninit"></a><a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
+ 개체를 초기화합니다.  
+  
+```  
+void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pBitmapBrushProperties`  
+ 비트맵 브러시 속성에 대 한 포인터입니다.  
+  
+##  <a name="a-namecreatea--cd2dbitmapbrushcreate"></a><a name="create"></a>CD2DBitmapBrush::Create  
+ CD2DBitmapBrush를 만듭니다.  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pRenderTarget`  
+ 렌더링 대상에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
+  
+##  <a name="a-namedestroya--cd2dbitmapbrushdestroy"></a><a name="destroy"></a>CD2DBitmapBrush::Destroy  
+ CD2DBitmapBrush 개체를 소멸 시킵니다.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dbitmapbrushdetach"></a><a name="detach"></a>CD2DBitmapBrush::Detach  
+ 개체에서 리소스 인터페이스를 분리합니다.  
+  
+```  
+ID2D1BitmapBrush* Detach();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 분리 된 리소스 인터페이스에 대 한 포인터입니다.  
+  
+##  <a name="a-namegeta--cd2dbitmapbrushget"></a><a name="get"></a>CD2DBitmapBrush::Get  
+ 반환 ID2D1BitmapBrush 인터페이스  
+  
+```  
+ID2D1BitmapBrush* Get();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1BitmapBrush 인터페이스에 대 한 포인터입니다.  
+  
+##  <a name="a-namegetbitmapa--cd2dbitmapbrushgetbitmap"></a><a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
+ 이 브러시를 그릴 때 사용 하는 비트맵의 소스를 가져옵니다.  
+  
+```  
+CD2DBitmap* GetBitmap();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ CD2DBitmap 개체 또는 개체가 아직 초기화 되지 않은 경우에 NULL에 대 한 포인터입니다.  
+  
+##  <a name="a-namegetextendmodexa--cd2dbitmapbrushgetextendmodex"></a><a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
+ 브러시가 비트맵을 지 나 확장 되는 영역 가로 바둑판식는 메서드를 가져옵니다.  
+  
+```  
+D2D1_EXTEND_MODE GetExtendModeX() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 수평으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
+  
+##  <a name="a-namegetextendmodeya--cd2dbitmapbrushgetextendmodey"></a><a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
+ 브러시가 비트맵을 지 나 확장 되는 영역 세로 바둑판식는 메서드를 가져옵니다.  
+  
+```  
+D2D1_EXTEND_MODE GetExtendModeY() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 세로로으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
+  
+##  <a name="a-namegetinterpolationmodea--cd2dbitmapbrushgetinterpolationmode"></a><a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
+ 브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 메서드를 가져옵니다.  
+  
+```  
+D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 메서드  
+  
+##  <a name="a-namempbitmapa--cd2dbitmapbrushmpbitmap"></a><a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
+ CD2DBitmap 개체에 대 한 포인터를 저장합니다.  
+  
+```  
+CD2DBitmap* m_pBitmap;  
+```  
+  
+##  <a name="a-namempbitmapbrusha--cd2dbitmapbrushmpbitmapbrush"></a><a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
+ ID2D1BitmapBrush 개체에 대 한 포인터를 저장합니다.  
+  
+```  
+ID2D1BitmapBrush* m_pBitmapBrush;  
+```  
+  
+##  <a name="a-namempbitmapbrushpropertiesa--cd2dbitmapbrushmpbitmapbrushproperties"></a><a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
+ 브러시 속성은 비트맵입니다.  
+  
+```  
+D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
+```  
+  
+##  <a name="a-nameoperatorid2d1bitmapbrushstara--cd2dbitmapbrushoperator-id2d1bitmapbrush"></a><a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
+ 반환 ID2D1BitmapBrush 인터페이스  
+  
+```  
+operator ID2D1BitmapBrush*();
+```   
+  
+### <a name="return-value"></a>반환 값  
+ 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1BitmapBrush 인터페이스에 대 한 포인터입니다.  
+  
+##  <a name="a-namesetbitmapa--cd2dbitmapbrushsetbitmap"></a><a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
+ 이 브러시를 그릴 때 사용 하는 비트맵의 소스를 지정 합니다.  
+  
+```  
+void SetBitmap(CD2DBitmap* pBitmap);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pBitmap`  
+ 브러시에 사용 되는 비트맵 소스  
+  
+##  <a name="a-namesetextendmodexa--cd2dbitmapbrushsetextendmodex"></a><a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 수평으로 바둑판식으로 표시 되는 방법을 지정 합니다.  
+  
+```  
+void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `extendModeX`  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 수평으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
+  
+##  <a name="a-namesetextendmodeya--cd2dbitmapbrushsetextendmodey"></a><a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 세로로으로 바둑판식으로 표시 되는 방법을 지정 합니다.  
+  
+```  
+void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `extendModeY`  
+ 브러시가 비트맵을 지 나 확장 되는 영역을 세로로으로 바둑판식으로 표시 되는 방법을 지정 하는 값  
+  
+##  <a name="a-namesetinterpolationmodea--cd2dbitmapbrushsetinterpolationmode"></a><a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
+ 브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 모드를 지정 합니다.  
+  
+```  
+void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `interpolationMode`  
+ 브러시 비트맵을 크기 조정 또는 회전 때 사용 되는 보간 모드  
+  
+## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
+
