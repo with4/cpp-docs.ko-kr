@@ -1,67 +1,79 @@
 ---
-title: "CAutoVectorPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoVectorPtrElementTraits<T>"
-  - "ATL.CAutoVectorPtrElementTraits"
-  - "ATL.CAutoVectorPtrElementTraits<T>"
-  - "ATL::CAutoVectorPtrElementTraits"
-  - "CAutoVectorPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAutoVectorPtrElementTraits class"
+title: "CAutoVectorPtrElementTraits 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoVectorPtrElementTraits<T>
+- ATL.CAutoVectorPtrElementTraits
+- ATL.CAutoVectorPtrElementTraits<T>
+- ATL::CAutoVectorPtrElementTraits
+- CAutoVectorPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CAutoVectorPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 메서드, 정적 함수 및 형식 정의 새 벡터를 사용 하 여 스마트 포인터의 컬렉션을 만들고 연산자를 삭제 하면 편리 하 게 제공 합니다.  
+---
+# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits 클래스
+이 클래스는 메서드, 정적 함수 및 delete 연산자와 새 벡터를 사용 하 여 스마트 포인터의 컬렉션을 만들 때 유용 합니다. 형식 정의 제공 합니다.  
   
 > [!IMPORTANT]
->  런타임에서 Windows를 실행 하는 응용 프로그램에서이 클래스와 해당 멤버를 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
+```
+template <typename T>  
+class CAutoVectorPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
+```    
   
-      template<  
-typename T  
->  
-class CAutoVectorPtrElementTraits : public CDefaultElementTraits<  
-ATL::CAutoVectorPtr< T>  
->  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
  포인터 형식입니다.  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### 공용 Typedefs  
+### <a name="public-typedefs"></a>공용 Typedefs  
   
 |이름|설명|  
-|--------|--------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](../Topic/CAutoVectorPtrElementTraits::INARGTYPE.md)|컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하는 데이터 형식입니다.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](../Topic/CAutoVectorPtrElementTraits::OUTARGTYPE.md)|컬렉션 클래스 개체에서 요소를 검색 하는 데 사용 하는 데이터 형식입니다.|  
+|----------|-----------------|  
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.|  
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|컬렉션 클래스 개체에서 요소를 검색에 사용할 데이터 형식입니다.|  
   
-## 설명  
- 이 클래스 대본이 스마트 포인터를 포함 하는 컬렉션 클래스 개체를 만들기 위한 메서드, 정적 함수 및 형식 정의 제공 합니다.  달리  [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md),이 클래스 사용 하 여 새 벡터 및 연산자를 삭제 합니다.  
+## <a name="remarks"></a>주의  
+ 이 클래스는 스마트 포인터를 포함 하는 컬렉션 클래스 개체의 생성을 위한 메서드, 정적 함수 및 형식 정의 제공 합니다. 와 달리 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md),이 클래스에서 사용 하는 벡터 new 및 delete 연산자입니다.  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -72,10 +84,25 @@ ATL::CAutoVectorPtr< T>
   
  `CAutoVectorPtrElementTraits`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-## 참고 항목  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CAutoVectorPtr Class](../../atl/reference/cautovectorptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+ 컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.  
+  
+```
+typedef CAutoVectorPtr<T>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+ 컬렉션 클래스 개체에서 요소를 검색에 사용할 데이터 형식입니다.  
+  
+```
+typedef T*& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [CDefaultElementTraits 클래스](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CAutoVectorPtr 클래스](../../atl/reference/cautovectorptr-class.md)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

@@ -1,85 +1,154 @@
 ---
-title: "CMFCDesktopAlertWndInfo Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCDesktopAlertWndInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCDesktopAlertWndInfo class"
+title: "CMFCDesktopAlertWndInfo 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCDesktopAlertWndInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCDesktopAlertWndInfo class
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CMFCDesktopAlertWndInfo Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7013a7c9b29c6dc9e6324ca0490a667ed79c88f7
+ms.lasthandoff: 02/24/2017
 
-`CMFCDesktopAlertWndInfo` 클래스는 [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)와 함께 사용됩니다.  바탕 화면 알림 창이 열리면 표시 되는 컨트롤을 지정 합니다.  
+---
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 클래스
+`CMFCDesktopAlertWndInfo` 클래스와 함께 사용 되는 [CMFCDesktopAlertWnd 클래스](../../mfc/reference/cmfcdesktopalertwnd-class.md)합니다. 바탕 화면 경고 창이 표시될 경우 표시되는 컨트롤을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CMFCDesktopAlertWndInfo  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|소멸자.|  
+|이름|설명|  
+|----------|-----------------|  
+|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|소멸자|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CMFCDesktopAlertWndInfo::operator\=](../Topic/CMFCDesktopAlertWndInfo::operator=.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||  
   
-### 데이터 멤버  
+### <a name="data-members"></a>데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[CMFCDesktopAlertWndInfo::m\_hIcon](../Topic/CMFCDesktopAlertWndInfo::m_hIcon.md)|표시 되는 아이콘에 대 한 핸들입니다.|  
-|[CMFCDesktopAlertWndInfo::m\_nURLCmdID](../Topic/CMFCDesktopAlertWndInfo::m_nURLCmdID.md)|바탕 화면 알림 창에 링크로 연결 된 명령 ID입니다.|  
-|[CMFCDesktopAlertWndInfo::m\_strText](../Topic/CMFCDesktopAlertWndInfo::m_strText.md)|바탕 화면 알림 창에 표시 되는 텍스트입니다.|  
-|[CMFCDesktopAlertWndInfo::m\_strURL](../Topic/CMFCDesktopAlertWndInfo::m_strURL.md)|바탕 화면 알림 창에 표시 되는 링크입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|표시 되는 아이콘에 대 한 핸들입니다.|  
+|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|바탕 화면 알림 창에서 링크와 관련 된 명령 ID입니다.|  
+|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|바탕 화면 알림 창에 표시 되는 텍스트입니다.|  
+|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|바탕 화면 알림 창에 표시 되는 링크입니다.|  
   
-## 설명  
- `CMFCDesktopAlertWndInfo` 클래스에 전달 되는 [CMFCDesktopAlertWnd::Create](../Topic/CMFCDesktopAlertWnd::Create.md) 바탕 화면 경고 창이 기본 대화 상자에 표시 되는 요소를 지정할 수 있는 메서드.  기본 대화 세 가지 항목을 포함할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ `CMFCDesktopAlertWndInfo` 클래스에 전달 됩니다는 [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) 메서드의 바탕 화면 경고 창이 기본 대화 상자에 표시 되는 요소를 지정 합니다. 기본 대화 상자는 세 개의 항목을 포함할 수 있습니다.  
   
--   호출 하 여 설정 된 아이콘을 [CMFCDesktopAlertWndInfo::m\_hIcon](../Topic/CMFCDesktopAlertWndInfo::m_hIcon.md).  
+-   호출 하 여 설정 하는 아이콘이 [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)합니다.  
   
--   레이블 또는 텍스트 메시지를 호출 하 여 설정 된 [CMFCDesktopAlertWndInfo::m\_strText](../Topic/CMFCDesktopAlertWndInfo::m_strText.md).  
+-   레이블 또는 문자 메시지를 호출 하 여 설정 된 [CMFCDesktopAlertWndInfo::m_strText](#m_strtext)합니다.  
   
--   링크를 호출 하 여 설정 된 [CMFCDesktopAlertWndInfo::m\_strURL](../Topic/CMFCDesktopAlertWndInfo::m_strURL.md).  링크를 클릭할 때 실행 될 명령을 설정 하려면 호출 [CMFCDesktopAlertWndInfo::m\_nURLCmdID](../Topic/CMFCDesktopAlertWndInfo::m_nURLCmdID.md).  
+-   호출 하 여 설정 하는 링크를 [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)합니다. 링크를 클릭할 때 실행 되는 명령을 설정 하려면 호출 [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)합니다.  
   
- 기본 대화 충분 하지 않으면, 사용자 지정 대화 상자 만들기 및 전달의 [CMFCDesktopAlertWnd::Create](../Topic/CMFCDesktopAlertWnd::Create.md) 메서드 대신이 클래스를 사용 합니다.  자세한 내용은 [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)를 참조하십시오.  
+ 기본 대화 상자에 충분 하지 않으면 사용자 지정 대화 상자를 만들 하 수에 전달 된 [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) 이 클래스를 사용 하는 대신 메서드. 자세한 내용은 참조 [CMFCDesktopAlertDialog 클래스](../../mfc/reference/cmfcdesktopalertdialog-class.md)합니다.  
   
-## 예제  
- 다양 한 구성원을 사용 하는 방법 다음 예제는 `CMFCDesktopAlertWndInfo` 클래스입니다.  표시 되는 바탕 화면 알림 창, 바탕 화면 알림 창에 표시 되는 링크 및 바탕 화면 경고 창에서 링크로 연결 된 명령 ID 표시 텍스트 아이콘 핸들을 설정 하는 예제입니다.  이 이때의 일부인의  [바탕 화면 경고 데모 샘플](../../top/visual-cpp-samples.md).  
+## <a name="example"></a>예제  
+ 다음 예제에서 다양 한 멤버를 사용 하는 방법을 보여 줍니다는 `CMFCDesktopAlertWndInfo` 클래스입니다. 바탕 화면 경고 창이에서 링크와 연결 된 명령 ID 및 바탕 화면 알림 창에 표시 되는 링크를 사용 하는, 바탕 화면 알림 창에 표시 되는 텍스트 아이콘 표시 되는 핸들을 설정 하는 방법을 보여가 줍니다. 이 예제는의 일부는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/CPP/cmfcdesktopalertwndinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo #&3;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxDesktopAlertDialog.h  
   
-## 참고 항목  
+##  <a name="a-nameoperatoreqa--cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `src`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namemhicona--cmfcdesktopalertwndinfomhicon"></a><a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+ 표시 되는 아이콘에 대 한 핸들입니다.  
+  
+```  
+HICON m_hIcon;  
+```  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namemnurlcmdida--cmfcdesktopalertwndinfomnurlcmdid"></a><a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+ 바탕 화면 알림 창에서 링크와 관련 된 명령 ID입니다.  
+  
+```  
+UINT m_nURLCmdID;  
+```  
+  
+### <a name="remarks"></a>주의  
+ 명령 ID로 지정 된 링크를 클릭할 때 팝업 창의 소유자에 게 전송 됩니다 [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)합니다.  
+  
+##  <a name="a-namemstrtexta--cmfcdesktopalertwndinfomstrtext"></a><a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+ 바탕 화면 알림 창에 표시 되는 텍스트입니다.  
+  
+```  
+CString m_strText;  
+```  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namemstrurla--cmfcdesktopalertwndinfomstrurl"></a><a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+ 바탕 화면 알림 창에 표시 되는 링크입니다.  
+  
+```  
+CString m_strURL;  
+```  
+  
+### <a name="remarks"></a>주의  
+ 사용자가 링크를 클릭 하면 명령이 포함 된 [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) 명령 ID가 팝업 창의 소유자에 게 전송 됩니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   
  [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [CMFCDesktopAlertWnd::Create](../Topic/CMFCDesktopAlertWnd::Create.md)   
- [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+ [CMFCDesktopAlertWnd 클래스](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+ [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)   
+ [CMFCDesktopAlertDialog 클래스](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+

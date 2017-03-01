@@ -1,78 +1,290 @@
 ---
-title: "CCustomInterpolator 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CCustomInterpolator"
-  - "CCustomInterpolator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCustomInterpolator 클래스"
+title: "CCustomInterpolator 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CCustomInterpolator
+- CCustomInterpolator
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCustomInterpolator class
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# CCustomInterpolator 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
+ms.openlocfilehash: 4d0b38543092dc68c2527f7e1385712164faf996
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ccustominterpolator-class"></a>CCustomInterpolator 클래스
 기본 보간자를 구현합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CCustomInterpolator;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CCustomInterpolator::CCustomInterpolator](../Topic/CCustomInterpolator::CCustomInterpolator.md)|오버로드.  사용자 지정 보간기 개체를 생성하고 기간과 속도를 지정된 값으로 초기화합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|오버로드됨. 사용자 지정 보간 기 개체를 생성 하 고 기간 및 지정 된 값으로 개발 속도 초기화 합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CCustomInterpolator::GetDependencies](../Topic/CCustomInterpolator::GetDependencies.md)|보간기의 종속성을 가져옵니다.|  
-|[CCustomInterpolator::GetDuration](../Topic/CCustomInterpolator::GetDuration.md)|보간기의 기간을 가져옵니다.|  
-|[CCustomInterpolator::GetFinalValue](../Topic/CCustomInterpolator::GetFinalValue.md)|보간기가 안내하는 최종 값을 가져옵니다.|  
-|[CCustomInterpolator::Init](../Topic/CCustomInterpolator::Init.md)|기간 및 최종 값을 초기화합니다.|  
-|[CCustomInterpolator::InterpolateValue](../Topic/CCustomInterpolator::InterpolateValue.md)|지정된 오프셋에서 값을 보간합니다.|  
-|[CCustomInterpolator::InterpolateVelocity](../Topic/CCustomInterpolator::InterpolateVelocity.md)|지정된 오프셋에서 속도를 보간합니다.|  
-|[CCustomInterpolator::SetDuration](../Topic/CCustomInterpolator::SetDuration.md)|보간기의 기간을 설정합니다.|  
-|[CCustomInterpolator::SetInitialValueAndVelocity](../Topic/CCustomInterpolator::SetInitialValueAndVelocity.md)|보간기의 초기 값 및 속도를 설정합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CCustomInterpolator::GetDependencies](#getdependencies)|보간의 종속성을 가져옵니다.|  
+|[CCustomInterpolator::GetDuration](#getduration)|보간의 기간을 가져옵니다.|  
+|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|보간 잠재 고객의 최종 값을 가져옵니다.|  
+|[CCustomInterpolator::Init](#init)|기간 및 최종 값을 초기화합니다.|  
+|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|지정된 된 오프셋 위치에서 값을 보간합니다.|  
+|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|지정 된 오프셋 위치 속도를 보간합니다.|  
+|[CCustomInterpolator::SetDuration](#setduration)|보간 기의 기간을 설정합니다.|  
+|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|보간의 초기 값과 개발 속도 설정합니다.|  
   
-### 보호된 데이터 멤버  
+### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[CCustomInterpolator::m\_currentValue](../Topic/CCustomInterpolator::m_currentValue.md)|보간된 값입니다.|  
-|[CCustomInterpolator::m\_currentVelocity](../Topic/CCustomInterpolator::m_currentVelocity.md)|보간된 속도입니다.|  
-|[CCustomInterpolator::m\_duration](../Topic/CCustomInterpolator::m_duration.md)|전환 기간입니다.|  
-|[CCustomInterpolator::m\_finalValue](../Topic/CCustomInterpolator::m_finalValue.md)|전환이 끝날 때 변수의 최종 값입니다.|  
-|[CCustomInterpolator::m\_initialValue](../Topic/CCustomInterpolator::m_initialValue.md)|전환을 시작할 때 변수의 값입니다.|  
-|[CCustomInterpolator::m\_initialVelocity](../Topic/CCustomInterpolator::m_initialVelocity.md)|전환을 시작할 때 변수의 속도입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CCustomInterpolator::m_currentValue](#m_currentvalue)|보간된 값입니다.|  
+|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|보간된 속도입니다.|  
+|[CCustomInterpolator::m_duration](#m_duration)|전환의 기간입니다.|  
+|[CCustomInterpolator::m_finalValue](#m_finalvalue)|전환의 끝에는 변수의 최종 값입니다.|  
+|[CCustomInterpolator::m_initialValue](#m_initialvalue)|전환의 시작에 있는 변수의 값입니다.|  
+|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|전환의 시작에 있는 변수의 속도입니다.|  
   
-## 설명  
- CCustomInterpolator에서 클래스를 파생시키고 사용자 지정 보간 알고리즘을 구현하기 위해 필요한 모든 메서드를 재정의합니다.  이 클래스에 대한 포인터를 CCustomTransition에 매개 변수로 전달해야 합니다.  
+## <a name="remarks"></a>주의  
+ CCustomInterpolator에서 클래스를 파생 하 고 사용자 지정 보간 알고리즘을 구현 하기 위해 필요한 모든 메서드를 재정의 합니다. 이 클래스에 대 한 포인터 CCustomTransition를 매개 변수로 전달 되어야 합니다.  
   
-## 상속 계층 구조  
- [CCustomInterpolator](../../mfc/reference/ccustominterpolator-class.md)  
+## <a name="inheritance-hierarchy"></a>상속 계층  
+ `CCustomInterpolator`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-## 참고 항목  
+##  <a name="a-nameccustominterpolatora--ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
+ 사용자 지정 보간 기 개체를 생성 하 고 기본값은 0에 있는 모든 값을 설정 합니다.  
+  
+```  
+CCustomInterpolator();
+
+ 
+CCustomInterpolator(
+    UI_ANIMATION_SECONDS duration,  
+    DOUBLE finalValue);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `duration`  
+ 전환의 기간입니다.  
+  
+ `finalValue`  
+  
+### <a name="remarks"></a>주의  
+ CCustomInterpolator::Init를 사용 하 여 기간과 코드 뒷부분에서 마지막 값을 초기화 합니다.  
+  
+##  <a name="a-namegetdependenciesa--ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
+ 보간의 종속성을 가져옵니다.  
+  
+```  
+virtual BOOL GetDependencies(
+    UI_ANIMATION_DEPENDENCIES* initialValueDependencies,  
+    UI_ANIMATION_DEPENDENCIES* initialVelocityDependencies,  
+    UI_ANIMATION_DEPENDENCIES* durationDependencies);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `initialValueDependencies`  
+ 출력입니다. 보간의 초기 값에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
+  
+ `initialVelocityDependencies`  
+ 출력입니다. 보간의 초기 속도에 의존 하는 측면 SetInitialValueAndVelocity에 전달 합니다.  
+  
+ `durationDependencies`  
+ 출력입니다. 보간의 기간에 의존 하는 측면 SetDuration에 전달 합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-namegetdurationa--ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustomInterpolator::GetDuration  
+ 보간의 기간을 가져옵니다.  
+  
+```  
+virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `duration`  
+ 출력입니다. 시간 (초)에 있는 전환의 기간입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-namegetfinalvaluea--ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
+ 보간 잠재 고객의 최종 값을 가져옵니다.  
+  
+```  
+virtual BOOL GetFinalValue(DOUBLE* value);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `value`  
+ 출력입니다. 전환의 끝에는 변수의 최종 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-nameinita--ccustominterpolatorinit"></a><a name="init"></a>CCustomInterpolator::Init  
+ 기간 및 최종 값을 초기화합니다.  
+  
+```  
+void Init(
+    UI_ANIMATION_SECONDS duration,  
+    DOUBLE finalValue);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `duration`  
+ 전환의 기간입니다.  
+  
+ `finalValue`  
+ 전환의 끝에는 변수의 최종 값입니다.  
+  
+##  <a name="a-nameinterpolatevaluea--ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
+ 지정된 된 오프셋 위치에서 값을 보간합니다.  
+  
+```  
+virtual BOOL InterpolateValue(
+    UI_ANIMATION_SECONDS */,  
+    DOUBLE* value);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `value`  
+ 출력입니다. 보간된 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-nameinterpolatevelocitya--ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
+ 지정 된 오프셋 위치 속도를 보간합니다.  
+  
+```  
+virtual BOOL InterpolateVelocity(
+    UI_ANIMATION_SECONDS */,  
+    DOUBLE* velocity);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `velocity`  
+ 출력입니다. 오프셋에 있는 변수의 속도입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-namemcurrentvaluea--ccustominterpolatormcurrentvalue"></a><a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
+ 보간된 값입니다.  
+  
+```  
+DOUBLE m_currentValue;  
+```  
+  
+##  <a name="a-namemcurrentvelocitya--ccustominterpolatormcurrentvelocity"></a><a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
+ 보간된 속도입니다.  
+  
+```  
+DOUBLE m_currentVelocity;  
+```  
+  
+##  <a name="a-namemdurationa--ccustominterpolatormduration"></a><a name="m_duration"></a>CCustomInterpolator::m_duration  
+ 전환의 기간입니다.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+##  <a name="a-namemfinalvaluea--ccustominterpolatormfinalvalue"></a><a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
+ 전환의 끝에는 변수의 최종 값입니다.  
+  
+```  
+DOUBLE m_finalValue;  
+```  
+  
+##  <a name="a-nameminitialvaluea--ccustominterpolatorminitialvalue"></a><a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
+ 전환의 시작에 있는 변수의 값입니다.  
+  
+```  
+DOUBLE m_initialValue;  
+```  
+  
+##  <a name="a-nameminitialvelocitya--ccustominterpolatorminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
+ 전환의 시작에 있는 변수의 속도입니다.  
+  
+```  
+DOUBLE m_initialVelocity;  
+```  
+  
+##  <a name="a-namesetdurationa--ccustominterpolatorsetduration"></a><a name="setduration"></a>CCustomInterpolator::SetDuration  
+ 보간 기의 기간을 설정합니다.  
+  
+```  
+virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `duration`  
+ 전환의 기간입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+##  <a name="a-namesetinitialvalueandvelocitya--ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
+ 보간의 초기 값과 개발 속도 설정합니다.  
+  
+```  
+virtual BOOL SetInitialValueAndVelocity(
+    DOUBLE initialValue,  
+    DOUBLE initialVelocity);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `initialValue`  
+ 전환의 시작에 있는 변수의 값입니다.  
+  
+ `initialVelocity`  
+ 전환의 시작에 있는 변수의 속도입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
+

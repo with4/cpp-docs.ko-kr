@@ -1,96 +1,116 @@
 ---
-title: "CMapPtrToWord Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMapPtrToWord"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "16-bit word mapping"
-  - "CMapPtrToWord class"
+title: "CMapPtrToWord 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMapPtrToWord
+dev_langs:
+- C++
+helpviewer_keywords:
+- 16-bit word mapping
+- CMapPtrToWord class
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMapPtrToWord Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a1e9604aab0a0488533cacba851d200b87d634b3
+ms.lasthandoff: 02/24/2017
 
-Void 포인터에 의해 지정 된 16 비트 단어의 지도 지원 합니다.  
+---
+# <a name="cmapptrtoword-class"></a>CMapPtrToWord 클래스
+void 포인터로 키가 지정된 16비트 단어 맵을 지원합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CMapPtrToWord : public CObject  
 ```  
   
-## Members  
- 멤버 함수를 `CMapPtrToWord` 클래스의 멤버 함수와 유사  [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md).  이 유사성 때문에 사용할 수 있는 `CMapStringToOb` 멤버 함수 사양에 대 한 설명서를 참조 합니다.  볼 위치는 `CObject` 포인터가 함수 매개 변수 또는 반환 값으로 대체  **단어**.  볼 위치는 `CString` 또는  **const** 포인터를 `char` 에 대 한 포인터를 함수 매개 변수 또는 반환 값으로 대체 `void`.  
+## <a name="members"></a>멤버  
+ 멤버 함수는 `CMapPtrToWord` 클래스의 멤버 함수와 유사 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 표시 될 때마다는 `CObject` 포인터를 함수 매개 변수 또는 반환 값으로 대체 **WORD**합니다. 표시 될 때마다는 `CString` 또는 **const** 에 대 한 포인터 `char` 대체에 대 한 포인터를 함수 매개 변수 또는 반환 값으로 `void`합니다.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
  `CObject*& <rValue> ) const;`  
   
- 예를 들어, 변환  
+ 예를 들어 위의 코드는  
   
  `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CMapStringToOb::CMapStringToOb](../Topic/CMapStringToOb::CMapStringToOb.md)|생성자입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|생성자입니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CMapStringToOb::GetCount](../Topic/CMapStringToOb::GetCount.md)|이 지도에서 요소의 개수를 반환합니다.|  
-|[CMapStringToOb::GetHashTableSize](../Topic/CMapStringToOb::GetHashTableSize.md)|현재 해시 테이블에서 요소를 결정합니다.|  
-|[CMapStringToOb::GetNextAssoc](../Topic/CMapStringToOb::GetNextAssoc.md)|반복에 대 한 다음 요소를 가져옵니다.|  
-|[CMapStringToOb::GetSize](../Topic/CMapStringToOb::GetSize.md)|이 지도에서 요소의 개수를 반환합니다.|  
-|[CMapStringToOb::GetStartPosition](../Topic/CMapStringToOb::GetStartPosition.md)|첫 번째 요소를 반환합니다.|  
-|[CMapStringToOb::HashKey](../Topic/CMapStringToOb::HashKey.md)|지정 된 키의 해시 값을 계산합니다.|  
-|[CMapStringToOb::InitHashTable](../Topic/CMapStringToOb::InitHashTable.md)|해시 테이블을 초기화합니다.|  
-|[CMapStringToOb::IsEmpty](../Topic/CMapStringToOb::IsEmpty.md)|빈 지도 조건 \(요소\)에 대해 테스트 합니다.|  
-|[CMapStringToOb::Lookup](../Topic/CMapStringToOb::Lookup.md)|Void 포인터는 void 포인터 키를 기반으로 찾습니다.  포인터 값을 않는 가리키는 엔터티 키 비교에 사용 됩니다.|  
-|[CMapStringToOb::LookupKey](../Topic/CMapStringToOb::LookupKey.md)|지정 된 키 값과 연결 된 키에 대 한 참조를 반환 합니다.|  
-|[CMapStringToOb::RemoveAll](../Topic/CMapStringToOb::RemoveAll.md)|이 지도에서 모든 요소를 제거합니다.|  
-|[CMapStringToOb::RemoveKey](../Topic/CMapStringToOb::RemoveKey.md)|키에 지정 된 요소를 제거 합니다.|  
-|[CMapStringToOb::SetAt](../Topic/CMapStringToOb::SetAt.md)|지도에 요소를 삽입합니다. 일치 하는 키가 없는 경우 기존 요소를 대체 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|이 map의 요소 수를 반환합니다.|  
+|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|현재 해시 테이블의 요소 수를 결정합니다.|  
+|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|반복에 대 한 다음 요소를 가져옵니다.|  
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|이 map의 요소 수를 반환합니다.|  
+|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|첫 번째 요소의 위치를 반환합니다.|  
+|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|지정된 된 키의 해시 값을 계산합니다.|  
+|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|해시 테이블을 초기화합니다.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|빈 맵 조건 (요소 없음)에 대해 테스트 합니다.|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Void 포인터 키를 기반으로 하는 void 포인터를 조회 합니다. 포인터 값을 가리키는 것 엔터티 하지 비교에 사용 되는 키입니다.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|지정 된 키 값과 연결 된 키에 대 한 참조를 반환 합니다.|  
+|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|이 맵에서 모든 요소를 제거합니다.|  
+|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|키가 지정 된 요소를 제거 합니다.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Map에 요소를 삽입합니다. 일치 하는 키가 있을 경우에 기존 요소를 대체 합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[CMapStringToOb::operator](../Topic/CMapStringToOb::operator.md)|지도에 요소를 삽입 합니다.\-운영자 대체 `SetAt`.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map에 요소를 삽입-에 대 한 연산자 대체 `SetAt`합니다.|  
   
-## 설명  
- `CMapWordToPtr`통합은 `IMPLEMENT_DYNAMIC` 런타임 형식 액세스 및 덤프를 지원 하기 위해 매크로 `CDumpContext` 개체.  개별 지도 요소에 대 한 덤프를 해야 하는 경우 1 이상으로 깊이 덤프 컨텍스트를 설정 해야 합니다.  
+## <a name="remarks"></a>주의  
+ `CMapWordToPtr`는 `IMPLEMENT_DYNAMIC` 매크로를 통합하여 런타임 형식 액세스와 `CDumpContext` 개체에 대한 덤핑을 지원합니다. 개별 지도 요소의 덤프가 필요한 경우 덤프 컨텍스트의 수준을 1 이상으로 설정 해야 합니다.  
   
- 포인터가 되도록 지도 직렬화 할 수 없습니다.  
+ 단어 포인터-맵을 serialize 할 수 있습니다.  
   
- 경우는 `CMapPtrToWord` 개체를 삭제 하거나 해당 요소를 제거할 경우 포인터를 단어를 제거 합니다.  키 포인터에 의해 참조 되는 엔터티는 제거 되지 않습니다.  
+ 경우는 `CMapPtrToWord` 개체를 삭제 하거나 해당 요소를 제거 하 고, 포인터 및 단어 제거 됩니다. 키 포인터에 의해 참조 하는 엔터티는 제거 되지 않습니다.  
   
- 에 대 한 자세한 내용은 `CMapPtrToWord`, 문서를 참조 하십시오.  [컬렉션](../../mfc/collections.md).  
+ 대 한 자세한 내용은 `CMapPtrToWord`, 문서를 참조 하십시오 [컬렉션](../../mfc/collections.md)합니다.  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMapPtrToWord`  
   
-## 요구 사항  
- **헤더:**  afxcoll.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxcoll.h  
   
-## 참고 항목  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>참고 항목  
+ [CObject 클래스](../../mfc/reference/cobject-class.md)   
  [계층 구조 차트](../../mfc/hierarchy-chart.md)
+
+
+
+

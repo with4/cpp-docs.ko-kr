@@ -1,71 +1,127 @@
 ---
-title: "CComClassFactory Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComClassFactory"
-  - "CComClassFactory"
-  - "ATL::CComClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComClassFactory class"
+title: "CComClassFactory 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComClassFactory
+- CComClassFactory
+- ATL::CComClassFactory
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComClassFactory Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c7c488732d7b32248acaaa5c5c9c6a29404c3872
+ms.lasthandoff: 02/24/2017
 
-이 클래스에서 구현 된  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스.  
+---
+# <a name="ccomclassfactory-class"></a>CComClassFactory 클래스
+이 클래스를 구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class CComClassFactory 
+   : public IClassFactory,  
+     public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-   class CComClassFactory : public IClassFactory,   
-public CComObjectRootEx< CComGlobalsThreadModel >  
+## <a name="members"></a>멤버  
+  
+### <a name="public-methods"></a>Public 메서드  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CComClassFactory::CreateInstance](#createinstance)|지정된 된 CLSID의 개체를 만듭니다.|  
+|[CComClassFactory::LockServer](#lockserver)|메모리에서 클래스 팩터리를 잠급니다.|  
+  
+## <a name="remarks"></a>주의  
+ `CComClassFactory`구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스를 위한 새 개체를 보다 신속 하 게 만들 수 있도록 메모리에서 클래스 팩터리 잠금 수 있을 뿐만 아니라 특정 CLSID의 개체를 만드는 메서드를 포함 합니다. **IClassFactory** 시스템 레지스트리에 및 CLSID을 할당할를 등록 하는 모든 클래스에 대해 구현 해야 합니다.  
+  
+ ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로가 포함 [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4)를 선언 하 `CComClassFactory` 기본 클래스 팩터리로 합니다. 이 기본값을 재정의 하려면 중 하나를 지정 된 `DECLARE_CLASSFACTORY` *XXX* 클래스 정의에 매크로입니다. 예를 들어는 [DECLARE_CLASSFACTORY_EX](http://msdn.microsoft.com/library/4181ef00-0f30-4e19-b0ee-e7648062e926) 매크로 클래스 팩터리에 대 한 지정된 된 클래스를 사용 합니다.  
+  
+ [!code-cpp[NVC_ATL_COM&#8;](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
+  
+ 위의 클래스 정의 지정 하는 **CMyClassFactory** 개체의 기본 클래스 팩터리로 사용 됩니다. **CMyClassFactory** 에서 파생 되어야 `CComClassFactory` 시키고 `CreateInstance`합니다.  
+  
+ ATL은 클래스 팩터리를 선언 하는 세 가지 매크로 제공:  
+  
+- [DECLARE_CLASSFACTORY2](http://msdn.microsoft.com/library/38a6c969-7297-4bb1-9ba6-1fe2d355b285) 사용 하 여 [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), 컨트롤 라이선스를 통해 생성 됩니다.  
+  
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) 사용 하 여 [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)는 여러 아파트에서 개체를 만듭니다.  
+  
+- [DECLARE_CLASSFACTORY_SINGLETON](http://msdn.microsoft.com/library/0e4a3964-c03d-463e-884c-fe3b416db478) 사용 하 여 [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)를 생성 하는 단일 [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 개체입니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlcom.h  
+  
+##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+ 지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
+  
+```
+STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ```  
   
-## Members  
+### <a name="parameters"></a>매개 변수  
+ `pUnkOuter`  
+ [in] 개체를 만드는 경우 집계의 일부로 다음 `pUnkOuter` 알 수 없는 외부 이어야 합니다. 그렇지 않으면 `pUnkOuter` 해야 **NULL**합니다.  
   
-### Public 메서드  
+ `riid`  
+ [in] 요청된 된 인터페이스의 IID입니다. 경우 `pUnkOuter` 이 아닌 **NULL**, `riid` 해야 **IID_IUnknown**합니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComClassFactory::CreateInstance](../Topic/CComClassFactory::CreateInstance.md)|지정한 CLSID의 개체를 만듭니다.|  
-|[CComClassFactory::LockServer](../Topic/CComClassFactory::LockServer.md)|메모리에서 클래스 팩터리를 잠급니다.|  
+ `ppvObj`  
+ [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 `riid`합니다. 개체는이 인터페이스를 지원 하지 않는 경우 `ppvObj` 로 설정 된 **NULL**합니다.  
   
-## 설명  
- `CComClassFactory`구현 된  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 클래스 팩터리 새 개체를 더 빨리 만들 수 있도록 메모리에서 잠금 뿐만 아니라 개체의 특정 CLSID 만들기 위한 메서드를 포함 하는 인터페이스입니다.  **IClassFactory** 하는 CLSID를 할당 하 고 시스템 레지스트리를 등록 하는 모든 클래스를 구현 해야 합니다.  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
   
- ATL 개체 정상적으로 취득 팩터리 클래스에서 파생 하 여  [CComCoClass](../../atl/reference/ccomcoclass-class.md).  이 클래스는 매크로 포함  [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md)는 선언 `CComClassFactory` 기본 클래스 팩터리로.  이 기본값을 재정의 하려면 중 하나를 지정 된 `DECLARE_CLASSFACTORY`*XXX* 매크로 클래스 정의에.  예를 들어 있는  [DECLARE\_CLASSFACTORY\_EX](../Topic/DECLARE_CLASSFACTORY_EX.md) 매크로 대 한 클래스 팩터리 사용 하 여 지정 된 클래스:  
+##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+ 증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
- [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/CPP/ccomclassfactory-class_1.h)]  
+```
+STDMETHOD(LockServer)(BOOL fLock);
+```  
   
- 위의 클래스 정의 지정  **CMyClassFactory** 개체의 기본 클래스 팩터리로 사용 됩니다.  **CMyClassFactory** 에서 파생 되어야 `CComClassFactory` 및 재정의 `CreateInstance`.  
+### <a name="parameters"></a>매개 변수  
+ `fLock`  
+ [in] 경우 **TRUE**, 잠금 횟수가 증가 하 고, 그렇지 않으면, 잠금 수가 감소 됩니다.  
   
- ATL 클래스 팩터리를 선언 하는 다른 세 가지 매크로 제공 합니다.  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
   
--   [DECLARE\_CLASSFACTORY2](../Topic/DECLARE_CLASSFACTORY2.md) 를 사용 하 여  [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), 만들기를 통해 라이센스를 제어 합니다.  
+### <a name="remarks"></a>주의  
+ **_Module** 의 전역 인스턴스를 가리키며 [CComModule](../../atl/reference/ccommodule-class.md) 에서 파생 된 클래스 또는 합니다.  
   
--   [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) 를 사용 하 여  [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), 여러 아파트에서 개체가 만들어집니다.  
+ 호출 `LockServer` 클라이언트가 여러 개체를 신속 하 게 만들 수 있도록 클래스 팩터리를 점유 하는 데 사용 합니다.  
   
--   [DECLARE\_CLASSFACTORY\_SINGLETON](../Topic/DECLARE_CLASSFACTORY_SINGLETON.md) 를 사용 하 여  [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), 하나를 생성 하는  [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 개체입니다.  
-  
-## 요구 사항  
- **헤더:**  atlcom.h  
-  
-## 참고 항목  
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComGlobalsThreadModel](../Topic/CComGlobalsThreadModel.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>참고 항목  
+ [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

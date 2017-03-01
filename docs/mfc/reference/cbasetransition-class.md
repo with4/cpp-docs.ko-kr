@@ -1,91 +1,362 @@
 ---
-title: "CBaseTransition 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CBaseTransition"
-  - "afxanimationcontroller/CBaseTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBaseTransition 클래스"
+title: "CBaseTransition 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CBaseTransition
+- afxanimationcontroller/CBaseTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CBaseTransition class
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# CBaseTransition 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: b979d03587ada42486d0462733dfe6fd22f9f7cc
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cbasetransition-class"></a>CBaseTransition 클래스
 기본 전환을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CBaseTransition : public CObject;  
 ```  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 열거형  
+### <a name="public-enumerations"></a>public 열거형  
   
-|Name|설명|  
-|----------|--------|  
-|[CBaseTransition::TRANSITION\_TYPE 열거형](../Topic/CBaseTransition::TRANSITION_TYPE%20Enumeration.md)|Windows 애니메이션 API의 MFC 구현에서 현재 지원하는 전환 유형을 정의합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CBaseTransition::TRANSITION_TYPE 열거형](#transition_type_enumeration)|현재 Windows 애니메이션 API의 MFC 구현에서 지 원하는 전환 유형을 정의 합니다.|  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CBaseTransition::CBaseTransition](../Topic/CBaseTransition::CBaseTransition.md)|기본 전환 개체를 생성합니다.|  
-|[CBaseTransition::~CBaseTransition](../Topic/CBaseTransition::~CBaseTransition.md)|소멸자  전환 개체가 소멸될 때 호출됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CBaseTransition::CBaseTransition](#cbasetransition)|기본 전환 개체를 생성합니다.|  
+|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|소멸자입니다. 전환 개체가 소멸 될 때 호출 됩니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CBaseTransition::AddToStoryboard](../Topic/CBaseTransition::AddToStoryboard.md)|전환을 스토리보드에 추가합니다.|  
-|[CBaseTransition::AddToStoryboardAtKeyframes](../Topic/CBaseTransition::AddToStoryboardAtKeyframes.md)|전환을 스토리보드에 추가합니다.|  
-|[CBaseTransition::Clear](../Topic/CBaseTransition::Clear.md)|캡슐화된 IUIAnimationTransition COM 개체를 해제합니다.|  
-|[CBaseTransition::Create](../Topic/CBaseTransition::Create.md)|COM 전환을 만듭니다.|  
-|[CBaseTransition::GetEndKeyframe](../Topic/CBaseTransition::GetEndKeyframe.md)|시작 키프레임을 반환합니다.|  
-|[CBaseTransition::GetRelatedVariable](../Topic/CBaseTransition::GetRelatedVariable.md)|관련 변수에 대한 포인터를 반환합니다.|  
-|[CBaseTransition::GetStartKeyframe](../Topic/CBaseTransition::GetStartKeyframe.md)|시작 키프레임을 반환합니다.|  
-|[CBaseTransition::GetTransition](../Topic/CBaseTransition::GetTransition.md)|오버로드.  내부 COM 전환 개체에 대한 포인터를 반환합니다.|  
-|[CBaseTransition::GetType](../Topic/CBaseTransition::GetType.md)|전환 형식을 반환합니다.|  
-|[CBaseTransition::IsAdded](../Topic/CBaseTransition::IsAdded.md)|전환이 스토리보드에 추가되었는지 여부를 지정합니다.|  
-|[CBaseTransition::SetKeyframes](../Topic/CBaseTransition::SetKeyframes.md)|전환을 위한 키프레임을 설정합니다.|  
-|[CBaseTransition::SetRelatedVariable](../Topic/CBaseTransition::SetRelatedVariable.md)|애니메이션 변수와 전환 간에 관계를 설정합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CBaseTransition::AddToStoryboard](#addtostoryboard)|전환을 스토리 보드에 추가 합니다.|  
+|[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|전환을 스토리 보드에 추가 합니다.|  
+|[CBaseTransition::Clear](#clear)|릴리스는 IUIAnimationTransition COM 개체를 캡슐화 합니다.|  
+|[CBaseTransition::Create](#create)|COM 전환을 만듭니다.|  
+|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|시작 키 프레임을 반환 합니다.|  
+|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|관련 된 변수에 대 한 포인터를 반환합니다.|  
+|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|시작 키 프레임을 반환 합니다.|  
+|[CBaseTransition::GetTransition](#gettransition)|오버로드됨. 기본 COM 전환 개체에 대 한 포인터를 반환합니다.|  
+|[CBaseTransition::GetType](#gettype)|반환 형식으로 전환 되었습니다.|  
+|[CBaseTransition::IsAdded](#isadded)|전환을 스토리 보드에 추가 되어 있는지 알려 줍니다.|  
+|[CBaseTransition::SetKeyframes](#setkeyframes)|전환에 대 한 키 프레임을 설정합니다.|  
+|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|애니메이션 변수 및 전환 사이의 관계를 설정 합니다.|  
   
-### 보호된 데이터 멤버  
+### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[CBaseTransition::m\_bAdded](../Topic/CBaseTransition::m_bAdded.md)|전환이 스토리보드에 추가되었는지 여부를 지정합니다.|  
-|[CBaseTransition::m\_pEndKeyframe](../Topic/CBaseTransition::m_pEndKeyframe.md)|전환의 끝을 지정하는 키프레임에 대한 포인터를 저장합니다.|  
-|[CBaseTransition::m\_pRelatedVariable](../Topic/CBaseTransition::m_pRelatedVariable.md)|m\_transition에 저장된 애니메이션으로 애니메이션 효과가 적용되는 애니메이션 변수에 대한 포인터입니다.|  
-|[CBaseTransition::m\_pStartKeyframe](../Topic/CBaseTransition::m_pStartKeyframe.md)|전환의 시작을 지정하는 키프레임에 대한 포인터를 저장합니다.|  
-|[CBaseTransition::m\_transition](../Topic/CBaseTransition::m_transition.md)|IUIAnimationTransition에 대한 포인터를 저장합니다.  전환 COM 개체를 만들지 않은 경우 NULL입니다.|  
-|[CBaseTransition::m\_type](../Topic/CBaseTransition::m_type.md)|전환 형식을 저장합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CBaseTransition::m_bAdded](#m_badded)|전환을 스토리 보드에 추가 되어 있는지를 지정 합니다.|  
+|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|전환의 끝을 지정 하는 키 프레임에 대 한 포인터를 저장 합니다.|  
+|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|M_transition에 저장 된 전환 애니메이션을 적용 하는 애니메이션 변수에 대 한 포인터입니다.|  
+|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|전환의 시작을 지정 하는 키 프레임에 대 한 포인터를 저장 합니다.|  
+|[CBaseTransition::m_transition](#m_transition)|IUIAnimationTransition에 대 한 포인터를 저장합니다. COM 전환 개체 생성 되지 않은 경우 NULL입니다.|  
+|[CBaseTransition::m_type](#m_type)|변환 유형을 저장합니다.|  
   
-## 설명  
- 이 클래스는 IUIAnimationTransition 인터페이스를 캡슐화하고 모든 전환에 대한 기본 클래스로 사용됩니다.  
+## <a name="remarks"></a>주의  
+ 이 클래스는 IUIAnimationTransition 인터페이스를 캡슐화 하 고 모든 전환에 대 한 기본 클래스 역할을 합니다.  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
+ `CBaseTransition`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-## 참고 항목  
+##  <a name="a-namedtorcbasetransitiona--cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
+ 소멸자입니다. 전환 개체가 소멸 될 때 호출 됩니다.  
+  
+```  
+virtual ~CBaseTransition();
+```  
+  
+##  <a name="a-nameaddtostoryboarda--cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard  
+ 전환을 스토리 보드에 추가 합니다.  
+  
+```  
+BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pStoryboard`  
+ 관련된 된 변수에 애니메이션 효과 적용할 스토리 보드에 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ TRUE로 전환 스토리 보드에 추가 했습니다.  
+  
+### <a name="remarks"></a>주의  
+ 스토리 보드에 있는 관련 변수에 전환을 적용합니다. 이 스토리 보드에서이 변수에 적용 된 첫 번째 전환 인 경우 전환이 스토리 보드의 시작 부분에서 시작 합니다. 그렇지 않으면 전환 변수의 가장 최근에 추가 된 전환에 추가 됩니다.  
+  
+##  <a name="a-nameaddtostoryboardatkeyframesa--cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
+ 전환을 스토리 보드에 추가 합니다.  
+  
+```  
+BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pStoryboard`  
+ 관련된 된 변수에 애니메이션 효과 적용할 스토리 보드에 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ TRUE로 전환 스토리 보드에 추가 했습니다.  
+  
+### <a name="remarks"></a>주의  
+ 스토리 보드에 있는 관련 변수에 전환을 적용합니다. 시작 키 프레임을 지정 하는 경우 해당 키 프레임에서 전환을 시작 합니다. End 키 프레임을 지정 하는 경우 전환 시작 키 프레임에서 시작 및 끝 키 프레임에서 중단 합니다. 전환을 지정 된 기간 매개 변수를 만든 경우 해당 시간 기간 시작 및 종료 키 프레임 간격을 덮어씁니다. 없는 키 프레임을 지정 하는 경우 전환이 변수의 가장 최근에 추가 된 전환에 추가 됩니다.  
+  
+##  <a name="a-namecbasetransitiona--cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
+ 기본 전환 개체를 생성합니다.  
+  
+```  
+CBaseTransition();
+```  
+  
+##  <a name="a-namecleara--cbasetransitionclear"></a><a name="clear"></a>CBaseTransition::Clear  
+ 릴리스는 IUIAnimationTransition COM 개체를 캡슐화 합니다.  
+  
+```  
+void Clear();
+```  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드는 파생된 클래스의 Create 메서드에서 IUITransition 인터페이스 누수를 방지 하기 위해 호출 되어야 합니다.  
+  
+##  <a name="a-namecreatea--cbasetransitioncreate"></a><a name="create"></a>CBaseTransition::Create  
+ COM 전환을 만듭니다.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* pFactory) = 0;  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pLibrary`  
+ 전환 라이브러리를 만드는 표준 전환에 대 한 포인터입니다. 사용자 지정 전환을 NULL이 될 수 있습니다.  
+  
+ `pFactory`  
+ 사용자 지정 전환을 만드는 전환 팩토리에 대 한 포인터입니다. 표준 전환에 대 한 NULL 수 있습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ TRUE 이면 전환 COM 개체를 만들었습니다. 그렇지 않으면 FALSE입니다.  
+  
+### <a name="remarks"></a>주의  
+ 파생된 클래스에서 재정의 해야 하는 순수 가상 함수입니다. 기본 COM 전환 개체를 인스턴스화하 려는 프레임 워크에서 호출 됩니다.  
+  
+##  <a name="a-namegetendkeyframea--cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
+ 시작 키 프레임을 반환 합니다.  
+  
+```  
+CBaseKeyFrame* GetEndKeyframe();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 유효한 포인터를 키프레임 또는 전환 키 프레임 간에 삽입 해야 하는 경우에 NULL입니다.  
+  
+### <a name="remarks"></a>주의  
+ Setkeyframes에 의해 이전에 설정 된 키 프레임 개체에 액세스 하려면이 메서드를 사용할 수 있습니다. 최상위 수준 코드에서 전환 스토리 보드에 추가 될 때 호출 됩니다.  
+  
+##  <a name="a-namegetrelatedvariablea--cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
+ 관련 된 변수에 대 한 포인터를 반환합니다.  
+  
+```  
+CAnimationVariable* GetRelatedVariable();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 애니메이션 변수 또는 애니메이션 변수 SetRelatedVariable로 설정 되지 않은 경우 NULL을 유효한 포인터입니다.  
+  
+### <a name="remarks"></a>주의  
+ 관련 된 애니메이션 변수에 대 한 접근자입니다.  
+  
+##  <a name="a-namegetstartkeyframea--cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
+ 시작 키 프레임을 반환 합니다.  
+  
+```  
+CBaseKeyFrame* GetStartKeyframe();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 유효한 포인터를 키프레임 또는 키프레임 뒤의 전환을 시작 하지 않아야 하는 경우에 NULL입니다.  
+  
+### <a name="remarks"></a>주의  
+ Setkeyframes에 의해 이전에 설정 된 키 프레임 개체에 액세스 하려면이 메서드를 사용할 수 있습니다. 최상위 수준 코드에서 전환 스토리 보드에 추가 될 때 호출 됩니다.  
+  
+##  <a name="a-namegettransitiona--cbasetransitiongettransition"></a><a name="gettransition"></a>CBaseTransition::GetTransition  
+ 기본 COM 전환 개체에 대 한 포인터를 반환합니다.  
+  
+```  
+IUIAnimationTransition* GetTransition(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* pFactory);  
+  
+IUIAnimationTransition* GetTransition();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pLibrary`  
+ 전환 라이브러리를 만드는 표준 전환에 대 한 포인터입니다. 사용자 지정 전환을 NULL이 될 수 있습니다.  
+  
+ `pFactory`  
+ 사용자 지정 전환을 만드는 전환 팩토리에 대 한 포인터입니다. 표준 전환에 대 한 NULL 수 있습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ IUIAnimationTransition 또는 내부 전환 하는 경우에 NULL에 대 한 유효한 포인터를 만들 수 없습니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드는 기본 COM 전환 개체에 대 한 포인터를 반환 하 고 필요한 경우 만듭니다.  
+  
+##  <a name="a-namegettypea--cbasetransitiongettype"></a><a name="gettype"></a>CBaseTransition::GetType  
+ 반환 형식으로 전환 되었습니다.  
+  
+```  
+TRANSITION_TYPE GetType() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 값 열거 TRANSITION_TYPE 중 하나입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드 유형을 기준으로 전환 개체를 식별 하려면 사용할 수 있습니다. 파생된 클래스의 생성자에는 형식이 설정 됩니다.  
+  
+##  <a name="a-nameisaddeda--cbasetransitionisadded"></a><a name="isadded"></a>CBaseTransition::IsAdded  
+ 전환을 스토리 보드에 추가 되어 있는지 알려 줍니다.  
+  
+```  
+BOOL IsAdded();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 그렇지 않으면 FALSE 스토리 보드에 전환을 추가 되었습니다 경우 TRUE를 반환 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 최상위 수준 코드를 사용 하는 스토리 보드에 전환을 추가 하는 경우이 플래그는 내부적으로 설정 됩니다.  
+  
+##  <a name="a-namembaddeda--cbasetransitionmbadded"></a><a name="m_badded"></a>CBaseTransition::m_bAdded  
+ 전환을 스토리 보드에 추가 되어 있는지를 지정 합니다.  
+  
+```  
+BOOL m_bAdded;  
+```  
+  
+##  <a name="a-namempendkeyframea--cbasetransitionmpendkeyframe"></a><a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe  
+ 전환의 끝을 지정 하는 키 프레임에 대 한 포인터를 저장 합니다.  
+  
+```  
+CBaseKeyFrame* m_pEndKeyframe;  
+```  
+  
+##  <a name="a-namemprelatedvariablea--cbasetransitionmprelatedvariable"></a><a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable  
+ M_transition에 저장 된 전환 애니메이션을 적용 하는 애니메이션 변수에 대 한 포인터입니다.  
+  
+```  
+CAnimationVariable* m_pRelatedVariable;  
+```  
+  
+##  <a name="a-namempstartkeyframea--cbasetransitionmpstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe  
+ 전환의 시작을 지정 하는 키 프레임에 대 한 포인터를 저장 합니다.  
+  
+```  
+CBaseKeyFrame* m_pStartKeyframe;  
+```  
+  
+##  <a name="a-namemtransitiona--cbasetransitionmtransition"></a><a name="m_transition"></a>CBaseTransition::m_transition  
+ IUIAnimationTransition에 대 한 포인터를 저장합니다. COM 전환 개체 생성 되지 않은 경우 NULL입니다.  
+  
+```  
+ATL::CComPtr<IUIAnimationTransition> m_transition;  
+```  
+  
+##  <a name="a-namemtypea--cbasetransitionmtype"></a><a name="m_type"></a>CBaseTransition::m_type  
+ 변환 유형을 저장합니다.  
+  
+```  
+TRANSITION_TYPE m_type;  
+```  
+  
+##  <a name="a-namesetkeyframesa--cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBaseTransition::SetKeyframes  
+ 전환에 대 한 키 프레임을 설정합니다.  
+  
+```  
+void SetKeyframes(
+    CBaseKeyFrame* pStart = NULL,  
+    CBaseKeyFrame* pEnd = NULL);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pStart`  
+ 전환의 시작을 지정 하는 키 프레임입니다.  
+  
+ `pEnd`  
+ 전환의 끝을 지정 하는 키 프레임입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드의 지시에 시작 하 고 필요에 따라 보류가 NULL 인 경우 종료로 전환을 지정 된 키 프레임 전 합니다. 전환을 지정 된 기간 매개 변수를 만든 경우 해당 시간 기간 시작 및 종료 키 프레임 간격을 덮어씁니다.  
+  
+##  <a name="a-namesetrelatedvariablea--cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
+ 애니메이션 변수 및 전환 사이의 관계를 설정 합니다.  
+  
+```  
+void SetRelatedVariable(CAnimationVariable* pVariable);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pVariable`  
+ 관련 된 애니메이션 변수에 대 한 포인터입니다.  
+  
+### <a name="remarks"></a>주의  
+ 애니메이션 변수 및 전환 사이의 관계를 설정 합니다. 전환은 변수 하나에 적용할 수 있습니다.  
+  
+##  <a name="a-nametransitiontypeenumerationa--cbasetransitiontransitiontype-enumeration"></a><a name="transition_type_enumeration"></a>CBaseTransition::TRANSITION_TYPE 열거형  
+ 현재 Windows 애니메이션 API의 MFC 구현에서 지 원하는 전환 유형을 정의 합니다.  
+  
+```  
+enum TRANSITION_TYPE;  
+```  
+  
+### <a name="remarks"></a>주의  
+ 변환 유형은 특정 전환의 생성자에서 설정 됩니다. 예를 들어 CSinusoidalTransitionFromRange SINUSOIDAL_FROM_RANGE 해당 유형을 설정합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
+
