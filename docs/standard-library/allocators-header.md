@@ -1,73 +1,88 @@
 ---
-title: "&lt;allocators&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::<allocators>"
-  - "allocators/stdext::allocators"
-  - "<allocators>"
-  - "stdext.<allocators>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocators 헤더"
+title: "&lt;allocators&gt; | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::<allocators>
+- allocators/stdext::allocators
+- <allocators>
+- stdext.<allocators>
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
 caps.latest.revision: 19
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;allocators&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
+ms.lasthandoff: 02/24/2017
 
-Defines several templates that help allocate and free memory blocks for node\-based containers.  
+---
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+노드 기반 컨테이너에 대해 메모리 블록을 할당 및 해제하는 데 도움이 되는 여러 템플릿을 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #include <allocators>  
 ```  
   
-## 설명  
- The \<allocators\> header provides six allocator templates that can be used to select memory\-management strategies for node\-based containers.  For use with these templates, it also provides several different synchronization filters to tailor the memory\-management strategy to a variety of different multithreading schemes \(including none\).  Matching a memory management strategy to the known memory usage patterns, and synchronization requirements, of a particular application can often increase the speed or reduce the overall memory requirements of an application.  
+## <a name="remarks"></a>설명  
+ \<allocators> 헤더는 노드 기반 컨테이너에 대한 메모리 관리 전략을 선택하는 데 사용할 수 있는&6;개의 할당자 템플릿을 제공합니다. 이러한 템플릿과 함께 사용하도록, 메모리 관리 전략을 다양한 다중 스레딩 스키마(none 포함)에 맞게 조정할 수 있는 몇 가지 서로 다른 동기화 필터도 제공합니다. 메모리 관리 전략을 특정 응용 프로그램의 알려진 메모리 사용 패턴 및 동기화 요구 사항과 일치시키면 종종 응용 프로그램의 속도를 높이거나 전체 메모리 요구 사항을 줄일 수 있습니다.  
   
- The allocator templates are implemented with reusable components that can be customized or replaced to provide additional memory\-management strategies.  
+ 할당자 템플릿은 추가 메모리 관리 전략을 제공하기 위해 사용자 지정하거나 대체할 수 있는 재사용 가능한 구성 요소로 구현됩니다.  
   
- The node\-based containers in the Standard C\+\+ library \(std::list, std::set, std::multiset, std::map and std::multimap\) store their elements in individual nodes.  All the nodes for a particular container type are the same size, so the flexibility of a general\-purpose memory manager is not needed.  Because the size of each memory block is known at compile time, the memory manager can be much simpler and faster.  
+ C++ 표준 라이브러리(std::list, std::set, std::multiset, std::map and std::multimap)의 노드 기반 컨테이너는 개별 노드에 해당 요소를 저장합니다. 특정 컨테이너 형식에 대한 모든 노드는 크기가 같기 때문에 범용 메모리 관리자의 유연성이 필요하지 않습니다. 각 메모리 블록의 크기는 컴파일 시간에 알려지기 때문에 메모리 관리자는 훨씬 간단하고 빠를 수 있습니다.  
   
- When used with containers that are not node\-based \(such as the Standard C\+\+ library containers std::vector std::deque, and std::basic\_string\), the alllocator templates will work correctly, but are not likely to provide any performance improvement over the default allocator.  
+ 노드 기반이 아닌 컨테이너(예: C++ 표준 라이브러리 컨테이너 std::vector std::deque 및 std::basic_string)와 함께 사용할 경우 할당자 템플릿은 올바르게 작동하지만, 기본 할당자에 비해 더 나은 성능을 제공하지는 않을 수 있습니다.  
   
- An allocator is a template class that describes an object that manages storage allocation and freeing for objects and arrays of objects of a designated type.  Allocator objects are used by several container template classes in the Standard C\+\+ library.  
+ 할당자는 지정된 형식의 개체 및 개체 배열에 대한 저장소 할당 및 해제를 관리하는 개체를 설명하는 템플릿 클래스입니다. 할당자 개체는 C++ 표준 라이브러리의 여러 컨테이너 템플릿 클래스에서 사용됩니다.  
   
- The allocators are all templates of this type:  
+ 할당자는 다음 형식의 모든 템플릿입니다.  
   
- `template<class`  `Type` `>`  
+ `template<class` `Type` `>`  
   
  `class allocator;`  
   
- where the template argument `Type` is the type managed by the allocator instance.  The Standard C\+\+ library provides a default allocator, template class [allocator](../standard-library/allocator-class.md), which is defined in [\<memory\>](../standard-library/memory.md).  The \<allocators\> header provides the following allocators:  
+ 여기서 템플릿 인수 `Type`은 할당자 인스턴스에 의해 관리되는 형식입니다. C++ 표준 라이브러리는 [\< memory>](../standard-library/memory.md)에 정의된 기본 할당자인 템플릿 클래스 [allocator](../standard-library/allocator-class.md)를 제공합니다. \<allocators> 헤더는 다음과 같은 할당자를 제공합니다.  
   
--   [allocator\_newdel](../standard-library/allocator-newdel-class.md)  
+- [allocator_newdel](../standard-library/allocator-newdel-class.md)  
   
--   [allocator\_unbounded](../standard-library/allocator-unbounded-class.md)  
+- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)  
   
--   [allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)  
+- [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)  
   
--   [allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)  
+- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)  
   
--   [allocator\_suballoc](../standard-library/allocator-suballoc-class.md)  
+- [allocator_suballoc](../standard-library/allocator-suballoc-class.md)  
   
--   [allocator\_chunklist](../standard-library/allocator-chunklist-class.md)  
+- [allocator_chunklist](../standard-library/allocator-chunklist-class.md)  
   
- Use an appropriate instantiation of an allocator as the second type argument when creating a container, such as the following code example.  
+ 다음 코드 예제와 같이, 컨테이너를 만들 때 할당자의 적절한 인스턴스화를 두 번째 형식 인수로 사용합니다.  
   
  `#include <list>`  
   
@@ -75,9 +90,9 @@ Defines several templates that help allocate and free memory blocks for node\-ba
   
  `std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`  
   
- \_List0 allocates nodes with `allocator_chunklist` and the default synchronization filter.  
+ _List0은 `allocator_chunklist` 및 기본 동기화 필터를 사용하여 노드를 할당합니다.  
   
- Use the macro [ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md) to create allocator templates with synchronization filters other than the default:  
+ 기본 필터 이외의 동기화 필터로 할당자 템플릿을 만들려면 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로를 사용합니다.  
   
  `#include <list>`  
   
@@ -87,94 +102,98 @@ Defines several templates that help allocate and free memory blocks for node\-ba
   
  `std::list<int, alloc<int> > _List1;`  
   
- \_Lst1 allocates nodes with `allocator_chunklist` and the [sync\_per\_thread](../standard-library/sync-per-thread-class.md) synchronization filter.  
+ _Lst1은 `allocator_chunklist` 및 [sync_per_thread](../standard-library/sync-per-thread-class.md) 동기화 필터를 사용하여 노드를 할당합니다.  
   
- A block allocator is a cache or a filter.  A cache is a template class that takes one argument of type std::size\_t.  It defines a block allocator that allocates and deallocates memory blocks of a single size.  It must obtain memory using operator `new`, but it need not make a separate call to operator `new` for each block.  It may, for example, suballocate from a larger block or cache deallocated blocks for subsequent reallocation.  
+ 블록 할당자는 캐시 또는 필터입니다. 캐시는 std::size_t 형식의 인수 하나를 받는 템플릿 클래스입니다. 단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다. `new` 연산자를 사용하여 메모리를 확보해야 하지만 각 블록에 대해 `new` 연산자를 별도로 호출할 필요는 없습니다. 예를 들어, 더 큰 블록에서 하위 할당을 수행하거나 후속 재할당을 위해 할당 취소된 블록을 캐시할 수 있습니다.  
   
- With a compiler that cannot compile rebind the value of the std::size\_t argument used when the template was instantiated is not necessarily the value of the argument \_Sz passed to a cache's member functions allocate and deallocate.  
+ rebind를 컴파일할 수 없는 컴파일러에서는, 템플릿이 인스턴스화될 때 사용되는 std::size_t 인수의 값이 캐시의 멤버 함수인 allocate 및 deallocate에 전달되는 인수 _Sz의 값과 다를 수 있습니다.  
   
- \<allocators\> provides the following cache templates:  
+ \<allocators>는 다음 캐시 템플릿을 제공합니다.  
   
--   [cache\_freelist](../standard-library/cache-freelist-class.md)  
+- [cache_freelist](../standard-library/cache-freelist-class.md)  
   
--   [cache\_suballoc](../standard-library/cache-suballoc-class.md)  
+- [cache_suballoc](../standard-library/cache-suballoc-class.md)  
   
--   [cache\_chunklist](../standard-library/cache-chunklist-class.md)  
+- [cache_chunklist](../standard-library/cache-chunklist-class.md)  
   
- A filter is a block allocator that implements its member functions using another block allocator which is passed to it as a template argument.  The most common form of filter is a synchronization filter, which applies a synchronization policy to control access to the member functions of an instance of another block allocator. \<allocators\> provides the following synchronization filters:  
+ 필터는 템플릿 인수로서 전달되는 다른 블록 할당자를 사용하여 멤버 함수를 구현하는 블록 할당자입니다. 필터의 가장 일반적인 형태는 동기화 필터입니다. 동기화 필터는 다른 블록 할당자 인스턴스의 멤버 함수에 대한 액세스를 제어하기 위해 동기화 정책을 적용합니다. \<allocators>는 다음 동기화 필터를 제공합니다.  
   
--   [sync\_none](../standard-library/sync-none-class.md)  
+- [sync_none](../standard-library/sync-none-class.md)  
   
--   [sync\_per\_container](../standard-library/sync-per-container-class.md)  
+- [sync_per_container](../standard-library/sync-per-container-class.md)  
   
--   [sync\_per\_thread](../standard-library/sync-per-thread-class.md)  
+- [sync_per_thread](../standard-library/sync-per-thread-class.md)  
   
--   [sync\_shared](../standard-library/sync-shared-class.md)  
+- [sync_shared](../standard-library/sync-shared-class.md)  
   
- \<allocators\> also provides the filter [rts\_alloc](../standard-library/rts-alloc-class.md), which holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time.  It is used with compilers that cannot compile rebind.  
+ \<allocators>는 또한 여러 개의 블록 할당자 인스턴스를 보유하고 컴파일 시간 대신 런타임에 할당 또는 할당 취소에 사용할 인스턴스를 결정하는 [rts_alloc](../standard-library/rts-alloc-class.md) 필터를 제공합니다. rebind를 컴파일할 수 없는 컴파일러에서 사용됩니다.  
   
- A synchronization policy determines how an allocator instance handles simultaneous allocation and deallocation requests from multiple threads.  The simplest policy is to pass all requests directly through to the underlying cache object, leaving synchronization management to the user.  A more complex policy could be to use a mutex to serialize access to the underlying cache object.  
+ 동기화 정책은 할당자 인스턴스가 다중 스레드의 동시 할당 및 할당 취소 요청을 처리하는 방법을 결정합니다. 가장 간단한 정책은 모든 요청을 기본 캐시 개체에 직접 전달하여 동기화 관리를 사용자에게 맡기는 것입니다. 좀 더 복잡한 정책은 뮤텍스를 사용하여 기본 캐시 개체에 대한 액세스를 직렬화하는 것일 수 있습니다.  
   
- If a compiler supports compiling both single\-threaded and multi\-threaded applications, the default synchronization filter for single\-threaded applications is `sync_none`; for all other cases it is `sync_shared`.  
+ 컴파일러가 단일 스레드 및 다중 스레드 응용 프로그램 컴파일을 모두 지원하는 경우 단일 스레드 응용 프로그램에 대한 기본 동기화 필터는 `sync_none`이고, 다른 모든 경우에는 `sync_shared`입니다.  
   
- The cache template `cache_freelist` takes a max class argument which determines the maximum number of elements to be stored in the free list.  
+ `cache_freelist` 캐시 템플릿은 free list에 저장할 최대 요소 수를 결정하는 최대 클래스 인수를 가져옵니다.  
   
- \<allocators\> provides the following max classes:  
+ \<allocators>는 다음의 최대 클래스를 제공합니다.  
   
--   [max\_none](../standard-library/max-none-class.md)  
+- [max_none](../standard-library/max-none-class.md)  
   
--   [max\_unbounded](../standard-library/max-unbounded-class.md)  
+- [max_unbounded](../standard-library/max-unbounded-class.md)  
   
--   [max\_fixed\_size](../standard-library/max-fixed-size-class.md)  
+- [max_fixed_size](../standard-library/max-fixed-size-class.md)  
   
--   [max\_variable\_size](../standard-library/max-variable-size-class.md)  
+- [max_variable_size](../standard-library/max-variable-size-class.md)  
   
-### 매크로  
-  
-|||  
-|-|-|  
-|[ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md)|Yields an allocator template class.|  
-|[CACHE\_CHUNKLIST](../Topic/CACHE_CHUNKLIST%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
-|[CACHE\_FREELIST](../Topic/CACHE_FREELIST%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
-|[CACHE\_SUBALLOC](../Topic/CACHE_SUBALLOC%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
-|[SYNC\_DEFAULT](../Topic/SYNC_DEFAULT%20\(%3Callocators%3E\).md)|Yields a synchronization filter.|  
-  
-### 연산자  
+### <a name="macros"></a>매크로  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/operator!=%20\(%3Callocators%3E\).md)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
-|[operator\=\=](../Topic/operator==%20\(%3Callocators%3E\).md)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|할당자 템플릿 클래스를 생성합니다.|  
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|`stdext::allocators::cache_chunklist<sizeof(Type)>`을 생성합니다.|  
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|`stdext::allocators::cache_freelist<sizeof(Type), max>`를 생성합니다.|  
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|`stdext::allocators::cache_suballoc<sizeof(Type)>`을 생성합니다.|  
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|동기화 필터를 생성합니다.|  
   
-### 클래스  
+### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[allocator\_base](../standard-library/allocator-base-class.md)|Defines the base class and common functions needed to create a user\-defined allocator from a synchronization filter.|  
-|[allocator\_chunklist](../standard-library/allocator-chunklist-class.md)|Describes an object that manages storage allocation and freeing for objects using a cache of type [cache\_chunklist](../standard-library/cache-chunklist-class.md).|  
-|[allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_fixed\_size](../standard-library/max-fixed-size-class.md).|  
-|[allocator\_newdel](../standard-library/allocator-newdel-class.md)|Implements an allocator that uses `operator delete` to deallocate a memory block and `operator new` to allocate a memory block.|  
-|[allocator\_suballoc](../standard-library/allocator-suballoc-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_suballoc](../standard-library/cache-suballoc-class.md).|  
-|[allocator\_unbounded](../standard-library/allocator-unbounded-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_unbounded](../standard-library/max-unbounded-class.md).|  
-|[allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_variable\_size](../standard-library/max-variable-size-class.md).|  
-|[cache\_chunklist](../standard-library/cache-chunklist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[cache\_freelist](../standard-library/cache-freelist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[cache\_suballoc](../standard-library/cache-suballoc-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[freelist](../standard-library/freelist-class.md)|Manages a list of memory blocks.|  
-|[max\_fixed\_size](../standard-library/max-fixed-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a fixed maximum length.|  
-|[max\_none](../standard-library/max-none-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length of zero.|  
-|[max\_unbounded](../standard-library/max-unbounded-class.md)|Describes a max class object that does not limit the maximum length of a [freelist](../standard-library/freelist-class.md) object.|  
-|[max\_variable\_size](../standard-library/max-variable-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length that is roughly proportional to the number of allocated memory blocks.|  
-|[rts\_alloc](../standard-library/rts-alloc-class.md)|The rts\_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.|  
-|[sync\_none](../standard-library/sync-none-class.md)|Describes a synchronization filter that provides no synchronization.|  
-|[sync\_per\_container](../standard-library/sync-per-container-class.md)|Describes a synchronization filter that provides a separate cache object for each allocator object.|  
-|[sync\_per\_thread](../standard-library/sync-per-thread-class.md)|Describes a synchronization filter that provides a separate cache object for each thread.|  
-|[sync\_shared](../standard-library/sync-shared-class.md)|Describes a synchronization filter that uses a mutex to control access to a cache object that is shared by all allocators.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
   
-## 요구 사항  
- **Header:** \<allocators\>  
+### <a name="classes"></a>클래스  
+  
+|||  
+|-|-|  
+|[allocator_base](../standard-library/allocator-base-class.md)|동기화 필터에서 사용자 정의 할당자를 만드는 데 필요한 기본 클래스 및 일반 함수를 정의합니다.|  
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|[cache_chunklist](../standard-library/cache-chunklist-class.md) 유형의 캐시를 사용하여 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.|  
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|[max_fixed_size](../standard-library/max-fixed-size-class.md)에 의해 관리되는 길이와 함께 [cache_freelist](../standard-library/cache-freelist-class.md) 형식의 캐시를 사용하여 `Type` 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.|  
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|`operator delete`를 사용하여 메모리 블록의 할당을 취소하고 `operator new`를 사용하여 메모리 블록을 할당하는 할당자를 구현합니다.|  
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|[cache_suballoc](../standard-library/cache-suballoc-class.md) 형식의 캐시를 사용하여 `Type` 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.|  
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|[max_unbounded](../standard-library/max-unbounded-class.md)에 의해 관리되는 길이와 함께 [cache_freelist](../standard-library/cache-freelist-class.md) 형식의 캐시를 사용하여 `Type` 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.|  
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|[max_variable_size](../standard-library/max-variable-size-class.md)에 의해 관리되는 길이와 함께 [cache_freelist](../standard-library/cache-freelist-class.md) 형식의 캐시를 사용하여 `Type` 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.|  
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다.|  
+|[cache_freelist](../standard-library/cache-freelist-class.md)|단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다.|  
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다.|  
+|[freelist](../standard-library/freelist-class.md)|메모리 블록의 목록을 관리합니다.|  
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|[freelist](../standard-library/freelist-class.md) 개체를 고정된 최대 길이로 제한하는 최대 클래스 개체를 설명합니다.|  
+|[max_none](../standard-library/max-none-class.md)|[freelist](../standard-library/freelist-class.md) 개체를 최대 영(0)의 길이로 제한하는 최대 클래스 개체를 설명합니다.|  
+|[max_unbounded](../standard-library/max-unbounded-class.md)|[freelist](../standard-library/freelist-class.md) 개체의 최대 길이를 제한하지 않는 최대 클래스 개체를 설명합니다.|  
+|[max_variable_size](../standard-library/max-variable-size-class.md)|[freelist](../standard-library/freelist-class.md) 개체를 할당된 메모리 블록의 수와 대략 비례하는 최대 길이로 제한하는 최대 클래스 개체를 설명합니다.|  
+|[rts_alloc](../standard-library/rts-alloc-class.md)|rts_alloc 템플릿 클래스는 캐시 인스턴스의 배열을 보유하고 컴파일 시간 대신 런타임에 할당 및 할당 취소에 사용할 인스턴스를 결정하는 [필터](../standard-library/allocators-header.md)를 설명합니다.|  
+|[sync_none](../standard-library/sync-none-class.md)|동기화를 제공하지 않는 동기화 필터를 설명합니다.|  
+|[sync_per_container](../standard-library/sync-per-container-class.md)|각 할당자 개체에 대해 별도의 캐시 개체를 제공하는 동기화 필터를 설명합니다.|  
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|각 스레드에 대해 별도의 캐시 개체를 제공하는 동기화 필터를 설명합니다.|  
+|[sync_shared](../standard-library/sync-shared-class.md)|뮤텍스를 사용하여 모든 할당자가 공유하는 캐시 개체에 대한 액세스를 제어하는 동기화 필터를 설명합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<allocators>  
   
  **네임스페이스:** stdext  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

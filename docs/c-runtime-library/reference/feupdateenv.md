@@ -1,48 +1,64 @@
 ---
-title: "feupdateenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feupdateenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "feupdateenv"
-  - "fenv/feupdateenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "feupdateenv 함수"
+title: "feupdateenv | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- feupdateenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- feupdateenv
+- fenv/feupdateenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# feupdateenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
+ms.lasthandoff: 02/24/2017
 
-현재 발생된 하는 부동 소수점 예외를 저장 하 고, 지정 된 부동 소수점 환경 상태를 복원 및 저장 된 부동 소수점 예외를 발생 시킵니다.  
+---
+# <a name="feupdateenv"></a>feupdateenv
+현재 발생한 부동 소수점 예외를 저장하고, 지정된 부동 소수점 환경 상태를 복원하고 나서, 저장된 부동 소수점 예외를 발생시킵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int feupdateenv(  
@@ -50,27 +66,27 @@ int feupdateenv(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `penv`  
- 에 대 한 포인터는 `fenv_t` 를 호출 하 여 부동 소수점 환경 설정 포함 된 개체 [fegetenv](../Topic/fegetenv2.md) 또는 [feholdexcept](../Topic/feholdexcept1.md)합니다. FE\_DFL\_ENV 매크로 사용 하 여 기본 시작 부동 소수점 환경도 지정할 수 있습니다.  
+ [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 또는 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9)를 호출하여 설정한 부동 소수점 환경을 포함하는 `fenv_t` 개체에 대한 포인터입니다. FE_DFL_ENV 매크로를 사용하여 기본 시작 부동 소수점 환경을 지정할 수도 있습니다.  
   
-## 반환 값  
- 모든 작업이 성공적으로 완료 하는 경우 0을 반환 합니다. 0이 아닌 값을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 모든 작업이 성공적으로 완료되면 0을 반환합니다.        그렇지 않으면&0;이 아닌 값을 반환합니다.  
   
-## 설명  
- `feupdateenv` 함수는 여러 작업을 수행 합니다. 첫째, 자동 저장에는 현재 발생된 한 부동 소수점 예외 상태 플래그를 저장합니다. 그런 다음, 현재 부동 소수점 환경에 저장 된 값에서 설정 된 `fenv_t` 가리키는 개체 `penv`합니다. 경우 `penv` FE\_DFL\_ENV 되었거나 유효한를 가리키지 않습니다 `fenv_t` 개체를 후속 동작이 정의 되지 않습니다. 마지막으로, `feupdateenv` 로컬에 저장 된 부동 소수점 예외를 발생 시킵니다.  
+## <a name="remarks"></a>설명  
+ `feupdateenv` 함수는 여러 작업을 수행합니다. 먼저, 현재 발생한 부동 소수점 예외 상태 플래그를 자동 저장소에 저장합니다. 그런 다음 `penv`가 가리키는 `fenv_t` 개체에 저장된 값에 따라 현재 부동 소수점 환경을 설정합니다. `penv`가 FE_DFL_ENV가 아니거나 유효한 `fenv_t` 개체를 가리키지 않을 경우 후속 동작이 정의 해제됩니다. 마지막으로 `feupdateenv`는 로컬에 저장된 부동 소수점 예외를 발생시킵니다.  
   
- 사용 하 여 액세스를 방지할 수 있는 부동 소수점 최적화를 해제 해야이 함수를 사용 하는 `#pragma fenv_access(on)` 호출 하기 전에 지시문입니다. 자세한 내용은 [fenv\_access](../../preprocessor/fenv-access.md)을 참조하십시오.  
+ 이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)를 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|함수|C 헤더|C\+\+ 헤더|  
-|--------|----------|--------------|  
-|`feupdateenv`|\<fenv.h\>|\<cfenv\>|  
+|함수|C 헤더|C++ 헤더|  
+|--------------|--------------|------------------|  
+|`feupdateenv`|\<fenv.h>|\<cfenv>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   

@@ -1,98 +1,309 @@
 ---
-title: "duration 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "chrono/std::chrono::duration"
-dev_langs: 
-  - "C++"
+title: "duration 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- chrono/std::chrono::duration
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# duration 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 843e4954b3a5b20d504dd5c8bf582dc56d4cbcbd
+ms.lasthandoff: 02/24/2017
 
-이 *시간 간격* 보유하고 있는 형식에 설명하는데, 두 시점 간의 경과된 시간입니다.  
+---
+# <a name="duration-class"></a>duration 클래스
+두 시점 사이에 경과된 시간을 나타내는 *시간 간격*을 포함하는 형식을 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-template<  
-   class Rep,  
-   class Period = ratio<1>  
->  
+template <class Rep, class Period = ratio<1>>  
 class duration;  
-template<  
-   class Rep,  
-   class Period  
->  
+template <class Rep, class Period>  
 class duration;  
-template<  
-   class Rep,  
-   class Period1,  
-   class Period2  
->  
-class duration  
-   <duration<Rep, Period1>, Period2>;  
+template <class Rep, class Period1, class Period2>  
+class duration <duration<Rep, Period1>, Period2>;  
 ```  
   
-## 설명  
- 템플릿 인수 `Rep` 는 간격에 클록 틱 수를 보유하는 데 사용 되는 형식을 설명 합니다.  템플릿 인수 `Period` 는 [비율](../standard-library/ratio.md) 나타내는 각 눈금 간격의 크기를 설명하는 인스턴스 입니다.  
+## <a name="remarks"></a>설명  
+ 템플릿 인수 `Rep`는 간격에 클록 틱 수를 포함하는 데 사용되는 형식을 설명합니다. 템플릿 인수 `Period`는 각 틱이 나타내는 간격 크기를 설명하는 [ratio](../standard-library/ratio.md)의 인스턴스화입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 공용 Typedefs  
+### <a name="public-typedefs"></a>공용 Typedefs  
   
-|Name|설명|  
-|----------|--------|  
-|[duration::period Typedef](http://msdn.microsoft.com/ko-kr/ebf2a1b9-769f-475f-8c66-cf9ed12015f2)|동의어에 대한 템플릿 `Period`매개 변수를 나타냅니다.|  
-|[duration::rep Typedef](http://msdn.microsoft.com/ko-kr/f47b8abb-ae2c-4dc8-858a-f44695156950)|동의어에 대한 템플릿 `Rep`매개 변수를 나타냅니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|duration::period Typedef|템플릿 매개 변수 `Period`의 동의어를 나타냅니다.|  
+|duration::rep Typedef|템플릿 매개 변수 `Rep`의 동의어를 나타냅니다.|  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[duration::duration 생성자](../Topic/duration::duration%20Constructor.md)|`duration` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[duration::duration Constructor](#duration__duration_constructor)|`duration` 개체를 생성합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[duration::count 메서드](../Topic/duration::count%20Method.md)|개체에 대한 클록 시간의 틱 수를 반환합니다.|  
-|[duration::max 메서드](../Topic/duration::max%20Method.md)|Static.  템플릿 매개 `Ref` 변수에 허용되는 최대 값을 반환 합니다.|  
-|[duration::min 메서드](../Topic/duration::min%20Method.md)|Static.  템플릿 매개 `Ref` 변수에 허용되는 최소 값을 반환 합니다.|  
-|[duration::zero 메서드](../Topic/duration::zero%20Method.md)|Static.  사실, `Rep`\(0\)를 반환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[duration::count](#duration__count_method)|시간 간격의 클록 틱 수를 반환합니다.|  
+|[duration::max](#duration__max_method)|정적. 템플릿 매개 변수 `Ref`의 최대 허용 값을 반환합니다.|  
+|[duration::min](#duration__min_method)|정적. 템플릿 매개 변수 `Ref`의 최저 허용 값을 반환합니다.|  
+|[duration::zero](#duration__zero_method)|정적. 실제로 `Rep`(0)를 반환합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[duration::operator\- 연산자](../Topic/duration::operator-%20Operator.md)|부정된 틱 수의 `duration` 개체 복사본을 반환합니다.|  
-|[duration::operator\-\- 연산자](../Topic/duration::operator--%20Operator.md)|저장된 tick 횟수를 줄입니다.|  
-|[duration::operator\= 연산자](../Topic/duration::operator=%20Operator.md)|지정된 값을 나눈 나머지 값으로 저장된 틱 수를 줄일 수 있습니다.|  
-|[duration::operator\*\= 연산자](../Topic/duration::operator*=%20Operator.md)|지정된 값을 저장된 틱 수를 곱합니다.|  
-|[duration::operator\/\= 연산자](../Topic/duration::operator-=%20Operator1.md)|이 `duration` 개체 지정된 틱 수로 저장된 틱 수를 나눕니다.|  
-|[duration::operator\+ 연산자](../Topic/duration::operator+%20Operator.md)|`*this`를 반환합니다.|  
-|[duration::operator\+\+ 연산자](../Topic/duration::operator++%20Operator.md)|저장된 tick 횟수를 증가합니다.|  
-|[duration::operator\+\= 연산자](../Topic/duration::operator+=%20Operator.md)|저장된 틱 카운터의 `duration` 개체 지정된 틱 수로 저장된 틱 수를 추가합니다.|  
-|[duration::operator\-\= 연산자](../Topic/duration::operator-=%20Operator2.md)|저장된 틱 카운터의 `duration` 개체 지정된 틱 수로 저장된 틱 수를 뺍니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[duration::operator-](#duration__operator-)|`duration` 개체의 복사본을 부정 틱 개수와 함께 반환합니다.|  
+|[duration::operator--](#duration__operator--)|저장된 틱 개수를 줄입니다.|  
+|[duration::operator=](#duration__operator_eq)|저장된 틱 개수 모듈로를 지정된 값으로 줄입니다.|  
+|[duration::operator*=](#duration__operator_star_eq)|저장된 틱 개수에 지정된 값을 곱합니다.|  
+|[duration::operator/=](#duration__operator__eq)|저장된 틱 개수를 지정된 `duration` 개체의 틱 개수로 나눕니다.|  
+|[duration::operator+](#duration__operator_add)|`*this`를 반환합니다.|  
+|[duration::operator++](#duration__operator_add_add)|저장된 틱 개수를 늘립니다.|  
+|[duration::operator+=](#duration__operator_add_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에 더합니다.|  
+|[duration::operator-=](#duration__operator-_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에서 뺍니다.|  
   
-## 요구 사항  
- **Header:** chrono  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** chrono  
   
- **네임 스페이스:** std::chrono  
+ **네임스페이스:** std::chrono  
   
-## 참고 항목  
+##  <a name="a-namedurationcountmethoda--durationcount"></a><a name="duration__count_method"></a>  duration::count  
+ 시간 간격의 클록 틱 수를 검색합니다.  
+  
+```  
+constexpr Rep count() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 시간 간격의 클록 틱 수입니다.  
+  
+##  <a name="a-namedurationdurationconstructora--durationduration-constructor"></a><a name="duration__duration_constructor"></a>  duration::duration Constructor  
+ `duration` 개체를 생성합니다.  
+  
+```  
+constexpr duration() = default;  
+ 
+template <class Rep2>  
+constexpr explicit duration(const Rep2& R);
+
+ 
+template <class Rep2, class Period2>  
+constexpr duration(const duration<Rep2, Period2>& Dur);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Rep2`  
+ 틱 수를 나타내는 산술 형식입니다.  
+  
+ `Period2`  
+ 틱 기간(초)을 나타내는 `std::ratio` 템플릿 특수화입니다.  
+  
+ `R`  
+ 기본 기간의 틱 수입니다.  
+  
+ `Dur`  
+ `Period2`로 지정되는 기간의 틱 수입니다.  
+  
+### <a name="remarks"></a>설명  
+ 기본 생성자는 초기화되지 않은 개체를 생성합니다. 빈 중괄호를 사용한 값 초기화는&0; 클록 틱의 시간 간격을 나타내는 개체를 초기화합니다.  
+  
+ 두 번째 하나의 템플릿 인수 생성자는 `std::ratio<1>`의 기본 기간을 사용하여 `R` 클록 팁의 시간 간격을 나타내는 개체를 생성합니다. 틱 개수 반올림을 방지하려는 경우, `duration::rep`를 부동 소수점 형식으로 처리할 수 없을 때 부동 소수점 형식으로 처리 가능한 표현 형식`Rep2`에서 기간 개체를 생성하는 것은 오류입니다.  
+  
+ 세 번째 두 개의 템플릿 인수 생성자는 `Dur`로 지정되는 시간 간격과 같은 길이를 가진 시간 간격을 나타내는 개체를 생성합니다. 틱 개수 잘림을 방지하려는 경우, 대상 형식과 *전혀 다른* 형식을 가진 다른 기간 개체에서 기간 개체를 생성하는 것은 오류입니다.  
+  
+ `D2`를 부동 소수점 형식으로 처리할 수 없으며 [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md)이 1이 아닌 경우 기간 형식 `D1`은 또 다른 기간 형식 `D2`와 *전혀 다른* 형식입니다.  
+  
+ `Rep2`가 암시적으로 `rep`로 변환 가능하고 `treat_as_floating_point<rep>`*가 true를 포함*하거나 `treat_as_floating_point<Rep2>`*가 false를 포함*할 경우 두 번째 생성자가 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
+  
+ 오버플로가 변환에서 유도되고 `treat_as_floating_point<rep>`*가 true를 포함*하거나, `ratio_divide<Period2, period>::den`가 1과 같고 `treat_as_floating_point<Rep2>`*가 false를 포함*할 경우 세 번째 생성자는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
+  
+##  <a name="a-namedurationmaxmethoda--durationmax"></a><a name="duration__max_method"></a>  duration::max  
+ 템플릿 매개 변수 형식 `Ref`의 값에 대한 상한을 반환하는 정적 메서드입니다.  
+  
+```  
+static constexpr duration max();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 실제로 `duration(duration_values<rep>::max())`를 반환합니다.  
+  
+##  <a name="a-namedurationminmethoda--durationmin"></a><a name="duration__min_method"></a>  duration::min  
+ 템플릿 매개 변수 형식 `Ref`의 값에 대한 하한을 반환하는 정적 메서드입니다.  
+  
+```  
+static constexpr duration min();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 실제로 `duration(duration_values<rep>::min())`를 반환합니다.  
+  
+##  <a name="a-namedurationoperator-a--durationoperator-"></a><a name="duration__operator-"></a>  duration::operator-  
+ `duration` 개체의 복사본을 부정 틱 개수와 함께 반환합니다.  
+  
+```  
+constexpr duration operator-() const;
+```  
+  
+##  <a name="a-namedurationoperator--a--durationoperator--"></a><a name="duration__operator--"></a>  duration::operator--  
+ 저장된 틱 개수를 줄입니다.  
+  
+```  
+duration& operator--();
+
+duration operator--(int);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 첫 번째 메서드는 `*this`를 반환합니다.  
+  
+ 두 번째 메서드는 감소 전에 만들어진 `*this`의 복사본을 반환합니다.  
+  
+##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator_eq"></a>  duration::operator=  
+ 저장된 틱 개수 모듈로를 지정된 값으로 줄입니다.  
+  
+```  
+duration& operator%=(const rep& Div);
+
+duration& operator%=(const duration& Div);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Div`  
+ 첫 번째 메서드의 경우 `Div`는 틱 개수를 나타냅니다. 두 번째 메서드의 경우 `Div`는 틱 개수가 포함된 `duration` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 모듈로 연산이 수행된 후의 `duration` 개체입니다.  
+  
+##  <a name="a-namedurationoperatorstareqa--durationoperator"></a><a name="duration__operator_star_eq"></a>  duration::operator*=  
+ 저장된 틱 개수에 지정된 값을 곱합니다.  
+  
+```  
+duration& operator*=(const rep& Mult);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Mult`  
+ `duration::rep`로 지정된 형식의 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 곱하기가 수행된 후의 `duration` 개체입니다.  
+  
+##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator__eq"></a>  duration::operator/=  
+ 저장된 틱 개수를 지정된 값으로 나눕니다.  
+  
+```  
+duration& operator/=(const rep& Div);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Div`  
+ `duration::rep`로 지정된 형식의 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 나누기가 수행된 후의 `duration` 개체입니다.  
+  
+##  <a name="a-namedurationoperatoradda--durationoperator"></a><a name="duration__operator_add"></a>  duration::operator+  
+ `*this`를 반환합니다.  
+  
+```  
+constexpr duration operator+() const;
+```  
+  
+##  <a name="a-namedurationoperatoraddadda--durationoperator"></a><a name="duration__operator_add_add"></a>  duration::operator++  
+ 저장된 틱 개수를 늘립니다.  
+  
+```  
+duration& operator++();
+
+duration operator++(int);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 첫 번째 메서드는 `*this`를 반환합니다.  
+  
+ 두 번째 메서드는 증가 전에 만들어진 `*this`의 복사본을 반환합니다.  
+  
+##  <a name="a-namedurationoperatoraddeqa--durationoperator"></a><a name="duration__operator_add_eq"></a>  duration::operator+=  
+ 지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에 더합니다.  
+  
+```  
+duration& operator+=(const duration& Dur);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Dur`  
+ `duration` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 더하기가 수행된 후의 `duration` 개체입니다.  
+  
+##  <a name="a-namedurationoperator-eqa--durationoperator-"></a><a name="duration__operator-_eq"></a>  duration::operator-=  
+ 지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에서 뺍니다.  
+  
+```  
+duration& operator-=(const duration& Dur);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Dur`  
+ `duration` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 빼기가 수행된 후의 `duration` 개체입니다.  
+  
+##  <a name="a-namedurationzeromethoda--durationzero"></a><a name="duration__zero_method"></a>  duration::zero  
+ `duration(duration_values<rep>::zero())`를 반환합니다.  
+  
+```  
+static constexpr duration zero();
+```  
+  
+##  <a name="a-namedurationoperatormodeqa--durationoperator-mod"></a><a name="duration__operator_mod_eq"></a>  duration::operator mod=  
+ 저장된 틱 수 모듈로 Div 또는 Div.count()를 줄입니다.  
+  
+```  
+duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Div`  
+ 기간 개체 또는 틱 수를 나타내는 값인 제수입니다.  
+  
+### <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 저장된 틱 수 모듈로 Div를 줄이고 *this를 반환합니다. 두 번째 멤버 함수는 저장된 틱 수 모듈로 Div.count()를 줄이고 \*this를 반환합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [\<chrono\>](../standard-library/chrono.md)   
- [duration\_values 구조체](../standard-library/duration-values-structure.md)
+ [\<chrono>](../standard-library/chrono.md)   
+ [duration_values 구조체](../standard-library/duration-values-structure.md)
+

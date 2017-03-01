@@ -1,58 +1,75 @@
 ---
-title: "realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_brealloc"
-  - "_nrealloc"
-  - "realloc"
-  - "_frealloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_brealloc 함수"
-  - "realloc 함수"
-  - "nrealloc 함수"
-  - "frealloc 함수"
-  - "_nrealloc 함수"
-  - "메모리 블록, 다시 할당"
-  - "메모리, 다시 할당"
-  - "_frealloc 함수"
-  - "메모리 블록 다시 할당"
+title: realloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _brealloc
+- _nrealloc
+- realloc
+- _frealloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _brealloc function
+- realloc function
+- nrealloc function
+- frealloc function
+- _nrealloc function
+- memory blocks, reallocating
+- memory, reallocating
+- _frealloc function
+- reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
+ms.lasthandoff: 02/24/2017
 
-메모리 블록 다시 할당  
+---
+# <a name="realloc"></a>realloc
+메모리 블록을 다시 할당합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void *realloc(  
@@ -61,50 +78,50 @@ void *realloc(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `memblock`  
  이전에 할당된 메모리 블록에 대한 포인터입니다.  
   
  `size`  
- 새 크기\(바이트로\)입니다.  
+ 새 크기(바이트)입니다.  
   
-## 반환 값  
- `realloc` 는 메모리 블럭을 재할당\(이동 가능한\) 하기 위해 `void` 포인터를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ `realloc`는 다시 할당된(그리고 이동되었을 수 있는) 메모리 블록에 대한 `void` 포인터를 반환합니다.  
   
- 주어진 크기에 대해 확장 가능하고 충분히 사용 가능한 메모리 블록이 있는 경우, 원래 블록은 변경 되지 않고 `NULL` 가 반환됩니다.  
+ 블록을 지정된 크기로 확장하는 데 사용할 수 있는 충분한 메모리가 없으면 원래 블록은 변경되지 않고 그대로 유지되며 `NULL`이 반환됩니다.  
   
- `size`가 0 인 경우 `memblock` 가 가르키는 포인터는 해제 됩니다. 반환 값은 `NULL` 이고 `memblock` 는 해제 된 블록을 가르킵니다.  
+ `size`가&0;이면 `memblock`에서 가리키는 블록이 해제됩니다. 반환 값은 `NULL`이며, `memblock`은 해제된 블록을 가리키는 상태로 유지됩니다.  
   
- 반환 값은 모든 개체 형식의 저장소가 적절하게 정렬되도록 하는 것을 보증하는 저장 공간을 가리킵니다.  `void`가 아닌 형식에 포인터를 반환하려면 반환 값에 대한 형식 캐스트를 사용합니다.  
+ 반환 값은 모든 형식의 개체 저장을 위해 적절하게 맞도록 보장되어 있는 저장소 공간을 가리킵니다. `void`가 아닌 형식의 포인터를 가져오려면 반환 값에 형식 캐스팅을 사용합니다.  
   
-## 설명  
- \_`realloc` 함수는 할당된 메모리 블록의 크기를 변경합니다.  `memblock` 인수는 메모리 블록의 시작 부분을 가리킵니다.  `memblock` 가 `NULL` 인 경우, `realloc` 는 `size` 바이트의 새로운 블록을 할당하고 `malloc` 와 같은 방법으로 작동합니다.  `memblock` 가 `NULL` 이 아닌 경우, `calloc`, `malloc`, 또는 `realloc`의 이전 호출에서 반환하는 포인터입니다.  
+## <a name="remarks"></a>설명  
+ `realloc` 함수는 할당된 메모리 블록의 크기를 변경합니다. `memblock` 인수는 메모리 블록의 시작 부분을 가리킵니다. `memblock`이 `NULL`이면 `realloc`는 `malloc`와 같은 방식으로 동작하며 `size`바이트의 새 블록을 할당합니다. `memblock`은 `NULL`이 아닌 경우 `calloc`, `malloc` 또는 `realloc`에 대한 이전 호출에서 반환된 포인터여야 합니다.  
   
- `size` 인수는 블록의 새 크기를 바이트 단위로 제공합니다.  새로운 블록이 다른 위치에있을 수 있지만, 블록의 내용은 새롭고 오래된 크기 중 짧은것으로 변하지 않습니다.  새 블럭이 새로운 메모리 위치에 있을 수 있기 때문에, \_`realloc` 가 반환하는 포인터는 `memblock` 인수로 전달 되는 포인터로 생성 되지 않습니다.  `realloc` 는 버퍼 증가의 경우 메모리에 새로 할당 된 0이 아닙니다.  
+ `size` 인수는 블록의 새 크기(바이트)를 제공합니다. 블록의 내용은 새 크기와 이전 크기 중 더 짧은 쪽까지는 변경되지 않습니다. 그러나 새 블록은 다른 위치에 있을 수 있습니다. 새 블록은 새 메모리 위치에 있을 수 있으므로, `realloc`에서 반환하는 포인터가 `memblock` 인수를 통해 전달되는 포인터임이 보장되지 않습니다. `realloc`는 버퍼가 증가해도 새로 할당된 메모리를 비우지 않습니다.  
   
- `realloc` 는 메모리 할당이 실패하거나 요청한 메모리 크기가 `_HEAP_MAXREQ`를 초과하는 경우 `errno` 는 `ENOMEM` 로 설정됩니다.  이 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+ 메모리 할당이 실패하거나 요청된 메모리의 양이 `_HEAP_MAXREQ`를 초과하는 경우 `realloc`는 `errno`를 `ENOMEM`으로 설정합니다. 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
- `realloc`  는 새 처리 모드를 설정하기 위한 C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) 함수를 사용하기 위해 `malloc` 를 호출합니다.  새 처리기 모드는 실패 시 `malloc`이 [\_set\_new\_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지 여부를 나타냅니다.  기본적으로 `malloc`은 메모리 할당에 실패한 경우 새 처리기 루틴을 호출하지 않습니다.  `realloc`이 메모리 할당에 실패하면 `malloc`이 새 처리기 루틴을 `new` 연산자가 같은 이유로 실패할 때와 동일한 방식으로 호출할 수 있도록 기본 동작을 재정의할 수 있습니다.  기본값을 재정의하려면 다음을 호출합니다.  
+ `realloc`는 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 함수를 사용하여 새 처리기 모드를 설정하기 위해 `malloc`를 호출합니다. 새 처리기 모드는 실패 시 `malloc`가 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `realloc`가 메모리 할당에 실패한 경우 `malloc`이 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음 코드를  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- 초기 프로그램 또는 NEWMODE.OBJ에 대한 링크\([링크 옵션](../../c-runtime-library/link-options.md) 참조\).  
+ 프로그램에서 초기에 호출하거나, NEWMODE.OBJ를 사용하여 연결합니다([링크 옵션](../../c-runtime-library/link-options.md) 참조).  
   
- 응용 프로그램이 C 런타임 라이브러리의 디버그 버전에 연결되면 `realloc`은 [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md)가 됩니다.  디버깅 프로세스를 하는 동안 힙을 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙](../Topic/CRT%20Debug%20Heap%20Details.md) 를 참조하십시오.  
+ 응용 프로그램이 디버그 버전의 C 런타임 라이브러리에 연결되면 `realloc`는 [_recalloc_dbg](../../c-runtime-library/reference/realloc-dbg.md)가 됩니다. 디버깅 프로세스 동안 힙을 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
- `realloc`는 `__declspec(noalias)` 및 `__declspec(restrict)`로 표시됩니다. 즉, 함수가 전역 변수를 수정하지 않고 반환된 포인터가 별칭이 지정되지 않도록 보증합니다.  자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md) 를 참조하십시오.  
+ `realloc`는 `__declspec(noalias)` 및 `__declspec(restrict)`로 표시되며, 이는 함수가 전역 변수를 수정할 수 없도록 보장되고 반환된 포인터에 별칭이 지정되지 않음을 의미합니다. 자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md)를 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`realloc`|\<stdlib.h\> 및 \<malloc.h\>|  
+|-------------|---------------------|  
+|`realloc`|\<stdlib.h> 및 \<malloc.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_realloc.c  
@@ -146,12 +163,15 @@ int main( void )
 }  
 ```  
   
-  **Size of block after malloc of 1000 longs: 4000**  
-**Size of block after realloc of 1000 more longs: 8000**   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+```Output  
+Size of block after malloc of 1000 longs: 4000  
+Size of block after realloc of 1000 more longs: 8000  
+```  
   
-## 참고 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

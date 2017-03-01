@@ -1,68 +1,249 @@
 ---
 title: "promise 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "future/std::promise"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- future/std::promise
+dev_langs:
+- C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# promise 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ad79ecc3497182a451ef85ea53c8ec5603fdca69
+ms.lasthandoff: 02/24/2017
 
-이 *비동기 공급자* 를 설명합니다.  
+---
+# <a name="promise-class"></a>promise 클래스
+*비동기 공급자*를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class Ty>
+class promise;
 ```  
-template<class Ty>  
-class promise;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[promise::promise 생성자](../Topic/promise::promise%20Constructor.md)|`promise` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[promise::promise 생성자](#promise__promise_constructor)|`promise` 개체를 생성합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[promise::get\_future 메서드](../Topic/promise::get_future%20Method.md)|반환된 [이후](../standard-library/future-class.md) 이 완성도와 관련됩니다.|  
-|[promise::set\_exception 메서드](../Topic/promise::set_exception%20Method.md)|예외를 나타내기 위해 이 약속의 결과 자동 설정 합니다.|  
-|[promise::set\_exception\_at\_thread\_exit 메서드](../Topic/promise::set_exception_at_thread_exit%20Method.md)|예외를 나타내기 위해 결국 스레드 지역 개체 현재 스레드가 알림을 배달\(대개 스레드 종료\)에 결과를 자동적으로 설정합니다.|  
-|[promise::set\_value 메서드](../Topic/promise::set_value%20Method.md)|원자적으로 값을 나타내려면이 약속의 결과 설정 합니다.|  
-|[promise::set\_value\_at\_thread\_exit 메서드](../Topic/promise::set_value_at_thread_exit%20Method.md)|값를 나타내기 위해 결국 스레드 지역 개체 현재 스레드가 알림을 배달\(대개 스레드 종료\)에 결과를 자동적으로 설정합니다.|  
-|[promise::swap 메서드](../Topic/promise::swap%20Method.md)|이 *연관 된 비동기 상태* 약속 지정된 개체를 사용하여 이 약속을 교환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[promise::get_future](#promise__get_future_method)|이 promise와 연관된 [future](../standard-library/future-class.md)를 반환합니다.|  
+|[promise::set_exception](#promise__set_exception_method)|예외를 나타내기 위해 이 promise의 결과를 원자 단위로 설정합니다.|  
+|[promise::set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)|예외를 나타내기 위해 이 promise의 결과를 원자 단위로 설정하고 현재 스레드에 있는 모든 스레드 지역 개체가 제거된 후에만 통지를 전달합니다.|  
+|[promise::set_value](#promise__set_value_method)|이 promise의 결과를 원자 단위로 설정하여 값을 나타냅니다.|  
+|[promise::set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)|값을 나타내기 위해 이 promise의 결과를 원자 단위로 설정하고 현재 스레드에 있는 모든 스레드 지역 개체가 제거된 후에만 통지를 전달합니다.|  
+|[promise::swap](#promise__swap_method)|이 promise의 *연결된 비동기 상태*를 지정한 개체의 연결된 비동기 상태와 교환합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[promise::operator\= 연산자](../Topic/promise::operator=%20Operator.md)|이 약속 개체의 공유 상태가 할당 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[promise::operator=](#promise__operator_eq)|이 promise 개체의 공유 상태에 대한 할당입니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `promise`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** future  
   
  **네임스페이스:** std  
   
-## 참고 항목  
+##  <a name="a-namepromisegetfuturemethoda--promisegetfuture"></a><a name="promise__get_future_method"></a>  promise::get_future  
+ 이 promise와 동일한 *연결된 비동기 상태*가 있는 [future](../standard-library/future-class.md) 개체를 반환합니다.  
+  
+```
+future<Ty> get_future();
+```  
+  
+### <a name="remarks"></a>설명  
+ promise 개체가 비어 있는 경우 이 메서드는 [error_code](../standard-library/error-code-class.md)가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
+  
+ 이 메서드가 연결된 비동기 상태가 동일한 promise 개체를 위해 호출된 경우 `future_error`가 `error_code`인 `future_already_retrieved`를 thorw합니다.  
+  
+##  <a name="a-namepromiseoperatoreqa--promiseoperator"></a><a name="promise__operator_eq"></a>  promise::operator=  
+ 지정된 `promise` 개체에서 *연결된 비동기 상태*를 전송합니다.  
+  
+```
+promise& operator=(promise&& Other) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Other`  
+ `promise` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `*this`  
+  
+### <a name="remarks"></a>설명  
+ 이 연산자는 `Other`에서 연결된 비동기 상태를 전송합니다. 전송 후에 `Other`는 *빈* 상태가 됩니다.  
+  
+##  <a name="a-namepromisepromiseconstructora--promisepromise-constructor"></a><a name="promise__promise_constructor"></a>  promise::promise 생성자  
+ `promise` 개체를 생성합니다.  
+  
+```
+promise();
+template <class Alloc>
+promise(allocator_arg_t, const Alloc& Al);
+promise(promise&& Other) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Al`  
+ 메모리 할당자입니다. 자세한 내용은 [\<allocators>](../standard-library/allocators-header.md)를 참조하세요.  
+  
+ `Other`  
+ `promise` 개체입니다.  
+  
+### <a name="remarks"></a>설명  
+ 첫 번째 생성자는 *빈* `promise` 개체를 생성합니다.  
+  
+ 두 번째 생성자는 빈 `promise` 개체를 생성하고 `Al`을 사용하여 메모리를 할당합니다.  
+  
+ 세 번째 생성자는 `promise` 개체를 생성하며 `Other`에서 연결된 비동기 상태를 전송하고 `Other`를 비워 둡니다.  
+  
+##  <a name="a-namepromisesetexceptionmethoda--promisesetexception"></a><a name="promise__set_exception_method"></a>  promise::set_exception  
+ 이 `promise` 개체의 결과로 예외를 원자 단위로 저장하고 *연결된 비동기 상태*를 *ready*로 설정합니다.  
+  
+```
+void set_exception(exception_ptr Exc);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Exc`  
+ 이 메서드가 예외 결과로 저장한 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)입니다.  
+  
+### <a name="remarks"></a>설명  
+ `promise` 개체에 연결된 비동기 상태가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
+  
+ `set_exception`, [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), [set_value](#promise__set_value_method) 또는 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)가 동일한 연관 비동기 상태의 `promise` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+  
+ 이 메서드의 결과로 연결된 비동기 상태에서 차단된 모든 스레드의 차단은 해제됩니다.  
+  
+##  <a name="a-namepromisesetexceptionatthreadexitmethoda--promisesetexceptionatthreadexit"></a><a name="promise__set_exception_at_thread_exit_method"></a>  promise::set_exception_at_thread_exit  
+ 이 `promise`의 결과를 원자 단위로 예외로 설정하여 현재 스레드의 스레드 로컬 개체가 모두 소멸된 후에만 통지를 전달합니다.  
+  
+```
+void set_exception_at_thread_exit(exception_ptr Exc);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Exc`  
+ 이 메서드가 예외 결과로 저장한 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)입니다.  
+  
+### <a name="remarks"></a>설명  
+ promise 개체에 *연결된 비동기 상태*가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
+  
+ [set_exception](#promise__set_exception_method), `set_exception_at_thread_exit`, [set_value](#promise__set_value_method) 또는 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)가 동일한 연관 비동기 상태의 `promise` 개체에 대해 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+  
+ [set_exception](#promise__set_exception_method)과 달리 이 메서드는 현재 스레드에서 모든 스레드 로컬 개체가 제거될 때까지 연결된 비동기 상태를 ready로 설정하지 않습니다. 일반적으로 연관된 비동기 상태에서 차단된 스레드는 현재 스레드가 종료될 때까지 차단 해제되지 않습니다.  
+  
+##  <a name="a-namepromisesetvaluemethoda--promisesetvalue"></a><a name="promise__set_value_method"></a>  promise::set_value  
+ 이 `promise` 개체의 결과로 값을 원자 단위로 저장하고 *연결된 비동기 상태*를 *ready*로 설정합니다.  
+  
+```
+void promise::set_value(const Ty& Val);
+void promise::set_value(Ty&& Val);
+void promise<Ty&>::set_value(Ty& Val);
+void promise<void>::set_value();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Val`  
+ 결과로 저장할 값입니다.  
+  
+### <a name="remarks"></a>설명  
+ `promise` 개체에 연결된 비동기 상태가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
+  
+ [set_exception](#promise__set_exception_method), [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), `set_value` 또는 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)가 동일한 연관 비동기 상태의 `promise` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+  
+ 이 메서드의 결과로 연결된 비동기 상태에서 차단된 모든 스레드의 차단은 해제됩니다.  
+  
+ 또한 첫 번째 메서드는 `Val`을 연결된 비동기 상태로 복사할 때 throw되는 예외도 throw합니다. 이 경우 연결된 비동기 상태는 ready로 설정되지 않습니다.  
+  
+ 또한 두 번째 메서드는 `Val`을 연결된 비동기 상태로 이동할 때 throw되는 예외를 throw합니다. 이 경우 연결된 비동기 상태는 ready로 설정되지 않습니다.  
+  
+ 부분 특수화 `promise<Ty&>`의 경우 저장된 값은 실제로는 `Val`에 대한 참조입니다.  
+  
+ 특수화 `promise<void>`에 대해 저장된 값은 없습니다.  
+  
+##  <a name="a-namepromisesetvalueatthreadexitmethoda--promisesetvalueatthreadexit"></a><a name="promise__set_value_at_thread_exit_method"></a>  promise::set_value_at_thread_exit  
+ 이 `promise` 개체의 결과로 값을 원자 단위로 저장합니다.  
+  
+```
+void promise::set_value_at_thread_exit(const Ty& Val);
+void promise::set_value_at_thread_exit(Ty&& Val);
+void promise<Ty&>::set_value_at_thread_exit(Ty& Val);
+void promise<void>::set_value_at_thread_exit();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Val`  
+ 결과로 저장할 값입니다.  
+  
+### <a name="remarks"></a>설명  
+ promise 개체에 *연결된 비동기 상태*가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
+  
+ [set_exception](#promise__set_exception_method), [set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method), [set_value](#promise__set_value_method) 또는 `set_value_at_thread_exit`가 동일한 연관 비동기 상태의 `promise` 개체에 대해 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+  
+ `set_value`와 달리 이 메서드는 현재 스레드에서 모든 스레드 로컬 개체가 제거될 때까지 연결된 비동기 상태를 ready로 설정하지 않습니다. 일반적으로 연관된 비동기 상태에서 차단된 스레드는 현재 스레드가 종료될 때까지 차단 해제되지 않습니다.  
+  
+ 또한 첫 번째 메서드는 `Val`을 연결된 비동기 상태로 복사할 때 throw되는 예외도 throw합니다.  
+  
+ 또한 두 번째 메서드는 `Val`을 연결된 비동기 상태로 이동할 때 throw되는 예외를 throw합니다.  
+  
+ 부분 특수화 `promise<Ty&>`의 경우 저장된 값은 실제로는 `Val`에 대한 참조입니다.  
+  
+ 특수화 `promise<void>`에 대해 저장된 값은 없습니다.  
+  
+##  <a name="a-namepromiseswapmethoda--promiseswap"></a><a name="promise__swap_method"></a>  promise::swap  
+ 이 promise 개체의 *연결된 비동기 상태*를 지정한 개체의 연결된 비동기 상태와 교환합니다.  
+  
+```
+void swap(promise& Other) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Other`  
+ `promise` 개체입니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+
+ 
+
+

@@ -1,63 +1,79 @@
 ---
-title: "hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_hypotf"
-  - "hypot"
-  - "hypotf"
-  - "_hypot"
-  - "_hypotl"
-  - "hypotl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "hypotf"
-  - "hypotl"
-  - "_hypotl"
-  - "hypot"
-  - "_hypot"
-  - "_hypotf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_hypot 함수"
-  - "빗변 계산"
-  - "hypot 함수"
-  - "빗변 계산"
-  - "hypotf 함수"
-  - "hypotl 함수"
-  - "삼각형, 빗변 계산"
+title: "hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _hypotf
+- hypot
+- hypotf
+- _hypot
+- _hypotl
+- hypotl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- hypotf
+- hypotl
+- _hypotl
+- hypot
+- _hypot
+- _hypotf
+dev_langs:
+- C++
+helpviewer_keywords:
+- hypotenuse calculation
+- hypot function
+- hypotf function
+- triangles, calculating hypotenuse
+- hypotl function
+- calculating hypotenuses
+- _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c372095f4ae5903f27e5f6add9a79de728a5e202
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 빗변을 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double hypot(   
@@ -86,29 +102,29 @@ long double _hypotl(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `x`, `y`  
- 부동 소수점 값  
+ 부동 소수점 값입니다.  
   
-## 반환 값  
- 성공 하면 `hypot` 빗변의 길이를 반환 합니다; 넘침 영역에 `hypot` 은 \(무한대\) INF를 반환하고 `errno` 변수를 `ERANGE` 설정합니다.  `_matherr` 는 오류 처리를 수정하는 것을 사용합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 `hypot`는 빗변의 길이를 반환합니다. 오버플로 시 `hypot`는 INF(무한대)를 반환하고 `errno` 변수는 `ERANGE`로 설정됩니다. `_matherr`를 사용하여 오류 처리를 수정할 수 있습니다.  
   
- 반환 코드에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하십시오.  
+ 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
-## 설명  
- `hypot` 함수는 직각 삼각형의 빗변의 길이를 계산합니다, `x` 두 변의 길이가 주어집니다. `y` \(달리 말하면, 제곱근, 즉 `x`<sup>2</sup> \+ `y`<sup>2</sup>\)  
+## <a name="remarks"></a>설명  
+ `hypot` 함수는 두 변 `x` 및 `y`의 길이가 제공된 경우(즉, `x`<sup>2</sup> + `y`<sup>2</sup>의 제곱근) 정삼각형의 빗변 길이를 계산합니다.  
   
- 선행 밑줄 함수 버전은 이전 표준과 호환성을 위해 제공 됩니다.  해당 동작은 선행 밑줄이 없는 버전으로 동일합니다.  새 코드에 대해 선행 밑줄이 없는 버전을 사용하는 것이 좋습니다.  
+ 이전 표준과의 호환성을 위해 선행 밑줄이 있는 함수 버전이 제공됩니다. 해당 동작은 선행 밑줄이 없는 버전과 동일합니다. 새 코드에는 선행 밑줄이 없는 버전을 사용하는 것이 좋습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h\>|  
+|-------------|---------------------|  
+|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_hypot.c  
@@ -126,11 +142,14 @@ int main( void )
 }  
 ```  
   
-  **직각 삼각형이 면이 3.0 과 4.0이면, 빗변은 5.0입니다.**   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+```Output  
+If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0  
+```  
   
-## 참고 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)

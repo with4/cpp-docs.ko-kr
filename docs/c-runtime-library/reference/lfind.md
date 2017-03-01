@@ -1,47 +1,69 @@
 ---
-title: "lfind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lfind 함수"
+title: "_lfind | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind
+- _lfind
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- lfind function
+- arrays [CRT], searching
+- searching, linear
+- finding keys in arrays
+- _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lfind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4101348ee1344accb0a0117c997dceb1c79d0b40
+ms.lasthandoff: 02/24/2017
 
-지정된 키에 대한 선형 검색을 수행합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md) 를 참조하십시오.  
+---
+# <a name="lfind"></a>_lfind
+지정된 키에 대해 선형 검색을 수행합니다. 이 함수의 보다 안전한 버전을 사용할 수 있습니다. [_lfind_s](../../c-runtime-library/reference/lfind-s.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void *_lfind(  
@@ -53,12 +75,12 @@ void *_lfind(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `key`  
  검색할 개체입니다.  
   
  `base`  
- 검색 데이터 베이스에 대한 포인터입니다.  
+ 검색 데이터의 기준에 대한 포인터입니다.  
   
  `num`  
  배열 요소의 수입니다.  
@@ -67,25 +89,25 @@ void *_lfind(
  배열 요소의 너비입니다.  
   
  `compare`  
- 비교 루틴에 대한 포인터입니다.  첫 번째 매개 변수는 검색에 대한 키에 대한 포인터입니다.  두 번째 매개 변수는 키와 비교하여 배열 요소에 대한 포인터입니다.  
+ 비교 루틴에 대한 포인터입니다. 첫 번째 매개 변수는 검색할 키에 대한 포인터입니다. 두 번째 매개 변수는 키와 비교할 배열 요소에 대한 포인터입니다.  
   
-## 반환 값  
- 만일 키가 파악된 경우, `_lfind` 는 `base` 에서 배열의 요소에 대한 포인터를 반환합니다. 이는 `key`와 매치됩니다.  키가 없는 경우 `_lfind` 는 `NULL`을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 키가 있으면 `_lfind`는 `key`와 일치하는 `base`에서 배열의 요소에 대한 포인터를 반환합니다. 키가 없으면 `_lfind`는 `NULL`을 반환합니다.  
   
-## 설명  
- 이 `_lfind` 함수는 `key` 값을 위한 선형 검색을 `num` 요소에 대하여 실행합니다. 이는 각각 `width` 바이트입니다.  이 `bsearch` 와 달리, `_lfind` 는 배열이 저장되는 것을 필요로 하지 않습니다.  이 `base` 인수는 검색할 배열의 기초인 포인터입니다.  이 `compare` 인수는 사용자가 공급한 루틴의 포인터 입니다. 이는 두 배열 요소를 비교하고 그때 그것의 관계를 명시하는 값을 반환합니다.  `_lfind` 는 각 호출에서 두 배열 원소들에 대한 포인터를 전달하여 검색하는 동안 `compare` 루틴을 한번 이상 호출합니다.  이 `compare` 루틴은 요소를 비교하고, 그때, 요소를 0이 아니니 것으로 반환하거나\(요소가 다르단 의미\) 0을\(요소가 동일하단 의미\) 반환합니다.  
+## <a name="remarks"></a>설명  
+ `_lfind` 함수는 각각 `width` 바이트인 `num` 요소의 배열에서 `key` 값에 대해 선형 검색을 수행합니다. `bsearch`와 달리 `_lfind`에서는 배열을 정렬할 필요가 없습니다. `base` 인수는 검색할 배열의 밑에 대한 포인터입니다. `compare` 인수는 두 배열 요소를 비교하여 해당 관계를 지정하는 값을 반환하는 사용자가 제공한 루틴에 대한 포인터입니다. `_lfind`는 검색 중에 `compare` 루틴을 한 번 이상 호출하며 각 호출에서 두 배열 요소에 대한 포인터를 전달합니다. `compare` 루틴은 요소를 비교한 다음 0이 아닌 값(요소가 다르다는 의미) 또는 0(요소가 동일하다는 의미)을 반환합니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.  `compare` 의 경우, `key` 또는 `num` 이 `NULL` 이거나 `base` 이 NULL이고, \*`num` 인 경우 또는 `width` 이 0보다 더 적은 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에서처럼 잘못된 매개변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 `NULL`을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `compare`, `key` 또는 `num`이 `NULL`인 경우, `base`가 NULL이고 *`num`이&0;이 아닌 경우 또는 `width`가&0;보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_lfind`|\<검색\>|  
+|-------------|---------------------|  
+|`_lfind`|\<search.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_lfind.c  
@@ -118,13 +140,16 @@ int main( )
 }  
 ```  
   
-  **Hello를 발견했습니다.**   
-## 해당 .NET Framework 항목  
+```Output  
+Hello found  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
  [System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

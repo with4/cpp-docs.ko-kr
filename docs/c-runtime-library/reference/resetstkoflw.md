@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw 함수"
-  - "resetstkoflw 함수"
-  - "스택 오버플로"
-  - "스택, 복구"
+title: _resetstkoflw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
-스택 오버플로를 복구합니다.  
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
+스택 오버플로에서 복구합니다.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -55,68 +71,68 @@ int _resetstkoflw ( void );
   
 ```  
   
-## 반환 값  
- 함수가 성공 하면 0이고 실패 하면 0입니다.  
+## <a name="return-value"></a>반환 값  
+ 함수가 성공하면&0;이 아닌 값이고, 실패하면&0;입니다.  
   
-## 설명  
- `_resetstkoflw` 함수는 스택 오버플로 상태를 복구하여 프로그램이 치명적 예외 오류와 함께 실패하는 대신 계속 실행되도록 합니다.  `_resetstkoflw` 함수를 호출하지 않으면 앞의 예외 다음에는 가드 페이지가 없게 됩니다.  다음에 스택 오버플로가 발생하면 예외가 전혀 발생하지 않고 프로세스가 경고 없이 종료됩니다.  
+## <a name="remarks"></a>설명  
+ `_resetstkoflw` 함수는 스택 오버플로 조건으로부터 복구하여 프로그램이 예외 오류와 함께 실패하는 대신 계속 실행되도록 합니다. `_resetstkoflw` 함수를 호출하지 않으면 이전 예외 다음에 가드 페이지가 없습니다. 다음번에 스택 오버플로가 발생하는 경우에는 예외가 전혀 발생하지 않으며 프로세스는 경고 없이 종료됩니다.  
   
- 스레드 응용 프로그램에서 발생 하는 경우는 **EXCEPTION\_STACK\_OVERFLOW** 예외 스레드는 스택이 손상된 상태로 남겨집니다.  이와 반대로 다른 예외와 같은 **EXCEPTION\_ACCESS\_VIOLATION** 또는 **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**스택 손상 되지 않았는지 대조합니다.  프로그램이 처음 로드 될 때 스택은 임의로 작은 값으로 설정 됩니다.  스택 다음 스레드가 요구를 충족 시키기에 필요에 따라 증가 합니다.  현재 스택의 끝 PAGE\_GUARD 접근할 수 있는 페이지를 배치하여 구현 됩니다.  자세한 내용은 [하위 쿼리 만들기](http://msdn.microsoft.com/library/windows/desktop/aa366549)를 참조하십시오.  
+ 응용 프로그램의 스레드에서 **EXCEPTION_STACK_OVERFLOW** 예외가 발생하는 경우 스레드의 스택이 손상된 상태로 남습니다. 이는 스택이 손상되지 않는 **EXCEPTION_ACCESS_VIOLATION** 또는 **EXCEPTION_INT_DIVIDE_BY_ZERO**와 같은 다른 예외와 반대입니다. 프로그램이 처음 로드될 때 스택은 임의로 작은 값으로 설정됩니다. 그런 다음 스택은 스레드의 요구 사항을 충족하도록 요구에 맞게 증가합니다. 이는 PAGE_GUARD가 있는 페이지를 현재 스택의 끝에 배치하여 구현됩니다. 자세한 내용은 [가드 페이지 만들기](http://msdn.microsoft.com/library/windows/desktop/aa366549)를 참조하세요.  
   
- 코드는 이 페이지의 주소를 가리키도록 스택 포인터를 야기시킬 경우 , 예외가 발생하고 시스템에서 다음 세 가지를 따릅니다. :  
+ 코드로 인해 스택 포인터가 이 페이지의 주소를 가리키는 경우 예외가 발생하고 시스템에서 다음 세 가지 작업이 수행됩니다.  
   
--   스레드 읽기 및 메모리에 데이터를 쓸 수 있도록 가드 페이지의 PAGE\_GUARD 보호를 제거 합니다.  
+-   스레드에서 데이터를 읽고 메모리에 쓸 수 있도록 가드 페이지의 PAGE_GUARD 보호를 제거합니다.  
   
--   새 가드 할당 즉 있는 한 페이지 아래쪽에 마지막 페이지입니다.  
+-   마지막 페이지에서 한 페이지 아래에 위치한 새 가드 페이지를 할당합니다.  
   
--   예외를 발생 시킨 명령을 다시 실행 합니다.  
+-   예외를 발생시킨 명령을 다시 실행합니다.  
   
- 이렇게 시스템 크기를 늘릴 수 있는 스레드에 대한 스택 자동으로 증가시킵니다.  각 스레드는 프로세스의 최대 스택 크기가 되었습니다.  스택 크기는 [\/STACK\(스택 할당\)](../../build/reference/stack-stack-allocations.md)에 의한 컴파일 시간을 설정합니다. 또는 [STACKSIZE](../../build/reference/stacksize.md) 프로젝트에 대한.def 파일 명세서를 설정합니다.  
+ 이러한 방식으로 시스템은 자동으로 스레드에 대한 스택의 크기를 늘릴 수 있습니다. 프로세스의 각 스레드는 최대 스택 크기를 가집니다. 스택 크기는 [/STACK(스택 할당)](../../build/reference/stack-stack-allocations.md) 또는 프로젝트에 대한 .def 파일에 있는 [STACKSIZE](../../build/reference/stacksize.md) 문에 의해 컴파일 시간에 설정됩니다.  
   
- 이 최대 스택 크기를 초과 하는 경우 시스템은 다음 세 가지를 따릅니다. :  
+ 이 최대 스택 크기를 초과하면 시스템에서 다음 세 가지 작업을 수행합니다.  
   
--   가드 페이지 앞에서 설명한 대로 PAGE\_GUARD 보호를 제거 합니다.  
+-   앞에서 설명한 대로 가드 페이지에 대한 PAGE_GUARD 보호를 제거합니다.  
   
--   마지막 아래에 새 가드 페이지를 할당 하려고 시도 합니다.  그러나 최대 스택 크기를 초과 했기 때문에 실패 합니다.  
+-   새 가드 페이지를 마지막 가드 페이지 아래에 할당하려고 합니다. 그러나 최대 스택 크기를 초과했기 때문에 이러한 작업이 실패합니다.  
   
--   스레드는 예외 블록에서 처리할 수 있도록 예외를 발생 시킵니다.  
+-   스레드가 예외 블록에서 처리할 수 있도록 예외를 발생시킵니다.  
   
- ,이 시점에서 스택은 더 이상 가드 페이지가 아닙니다.  다음시간은 프로그램이 끝까지 스택을 시킵니다. 가드페이지가 있는 곳에서 프로그램은 스택의 끝에서부터 쓰여지며 접근 위반을 야기시킵니다.  
+ 여기서 스택은 더 이상 가드 페이지를 포함하지 않습니다. 다음에 프로그램이 가드 페이지가 있어야 하는 끝 부분까지 계속 스택을 증가시킬 때 프로그램은 스택의 끝을 벗어나 쓰며 액세스 위반을 발생시킵니다.  
   
- `_resetstkoflw` 는 스택 오버플로우 예외를 복구할 때마다, 가드 페이지를 복원하기 위하여 호출합니다.  본문 내에서 이 함수를 호출할 수 있는 `__except` 블록이거나 **\_\_except** 블럭 밖입니다.  그러나 사용할 때 몇 가지 제한 사항이 있습니다.  `_resetstkoflw` 호출하면 안 됩니다.:  
+ 스택 오버플로 예외가 발생한 후 복원이 수행될 때마다 가드 페이지를 복원하려면 `_resetstkoflw`를 호출합니다. 이 함수는 `__except` 블록의 주 본문 내부 또는 **__except** 블록 외부에서 호출될 수 있습니다. 그러나 사용할 때 몇 가지 제한 사항이 있습니다. `_resetstkoflw`를 다음에서 호출하면 안 됩니다.  
   
--   필터 식입니다.  
+-   필터 식  
   
--   filter 함수\[F\#\]  
+-   필터 함수  
   
--   필터 함수에서 호출 하는 함수입니다.  
+-   필터 함수에서 호출한 함수  
   
--   하나의 **catch** 블록  
+-   **catch** 블록  
   
--   `__finally` 블록.  
+-   `__finally` 블록  
   
- 이러한 점에서, 스택은 충분하게 아직 해제되지 않습니다.  
+ 이러한 지점에서 스택이 아직 충분하게 해제되지 않습니다.  
   
- 스택 오버플로우 예외는 c \+ \+ 예외가 아닌, 구조화된 예외로 발생됩니다, 따라서, 스택 오버플로우 예외는 catch되지 않기 때문에 `_resetstkoflw` 는 일반적인 **catch** 블럭에서는 유용하지 않습니다.  그러나, [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 가 스택 오버플로 예외 \(예: 두 번째 예제에서는\) c \+ \+ 예외를 throw 하는 구조화된 예외 변환기를 구현하는데 이용될 경우, c \+ \+ catch 블록에서 처리할 수 있는 c \+ \+ 예외가 발생합니다.  
+ 스택 오버플로 예외는 C++ 예외가 아닌 구조적 예외로 생성되어 `_resetstkoflw`가 스택 오버플로 예외를 catch하지 않기 때문에 일반적인 **catch** 블록에서 유용하지 않습니다. 그러나 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)가 C++ 예외를 throw하는 구조적 예외 변환기를 구현하는 데 사용되는 경우(두 번째 예제) 스택 오버플로 예외는 C++ catch 블록에 의해 처리될 수 있는 C++ 예외를 발생시킵니다.  
   
- 구조화된 예외 변환기 함수로부터 throw 된 예외로부터 도달하는 c \+ \+ catch 블록에서 **\_resetstkoflw** 를 호출하는 것은 안전하지 않습니다.  이 경우, catch 블록 외부도 심지어 소멸자가 catch 블럭 전에 모든 소멸자 개체들에 대해 호출될 때까지 스택 공간이 해제 되지 않고 스택 포인터는 다시 설정되지 않습니다.  스택 공간이 확보되고 스택 포인터를 다시 설정할 때까지 이 함수를 호출합니다.  따라서 catch 블록을 종료 한 후에 호출해야 합니다.  가급적 작은 스택 공간은 catch 블럭에서 이용되어야만 합니다. catch 블럭에서 오버플로우는 동일한 catch 블럭에 의해 스스로 다뤄지는 예외를 촉발시키는데, 전 스택 오버플로우로부터 복구되길 스스로 시도했던 catch블럭에서 발생하는 오버플로우는 복구될 수 없고 프로그램이 반응을 멈추는 것을 야기하기 때문입니다.  
+ 구조적 예외 변환기 함수에 의해 throw된 예외로부터 도달한 C++ catch 블록에서 **_resetstkoflw**를 호출하는 것은 안전하지 않습니다. 이 경우 catch 블럭 이전에 소멸적인 개체에 대한 소멸자가 호출되었어도 catch 블럭 외부까지 스택 공간이 비워지지 않고 스택 포인터가 다시 설정되지 않습니다. 이 함수는 스택 공간이 비워지고 스택 포인터가 다시 설정될 때까지 호출되지 않아야 합니다. 따라서 catch 블록을 종료한 후에만 이 함수를 호출해야 합니다. 이전 스택 오버플로에서 자체적으로 복구하려고 하는 catch 블록에서 수행되는 스택 오버플로가 복구할 수 없으며 catch 블록의 오버플로가 자체적으로 동일한 catch 블록에 의해 처리되는 예외를 트리거함에 따라 프로그램에서 응답을 중지하도록 할 수 있습니다.  
   
- **\_\_except** 블록과 같이, 올바른 위치로 설령 사용되더라도, **\_resetstkoflw** 이 실패인 상황입니다.  심지어 스택 해제 후에도, 스택의 마지막 페이지에서 쓰이는 것 없이 **\_resetstkoflw** 가 실행되기 위해 남겨진 스택 공간은 충분하지 않을 경우, **\_resetstkoflw** 는 가드 페이지로서 스택의 마지막 페이지를 다시 설정하는 데 실패합니다. 그 결과 0을 반환하고, 실패를 암시합니다.  그러므로 이 함수의 안전한 사용량은 스택을 사용하는데 안전함을 가정하는 대신 반환 값을 확인하는 것을 포함해야 합니다.  
+ **__except** 블록 내에서와같이 올바른 위치에서 사용되는 경우에도 **_resetstkoflw**가 실패할 수 있는 상황이 있습니다. 스택을 해제한 이후에도 스택의 마지막 페이지에 쓰지 않고 **_resetstkoflw**를 실행할 수 있는 남은 스택 공간이 계속 부족한 경우 **_resetstkoflw**는 스택의 마지막 페이지를 가드 페이지로 다시 설정하고 실패를 나타내는 0을 반환합니다. 따라서 이 함수의 안전한 사용에는 스택을 사용하는 것이 안전하다는 가정 대신 반환 값을 확인하는 것이 포함되어야 합니다.  
   
- 구조화된 예외 처리는 `STATUS_STACK_OVERFLOW` 응용 프로그램을 catch할 것입니다. `/clr` 또는 `/clr:pure` 을 컴파일할 때입니다. \(참조 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)\).  
+ 구조적된 예외 처리를 catch 하지 않기를 `STATUS_STACK_OVERFLOW` 예외와 응용 프로그램이 컴파일될 때 `/clr` (참조 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
- **라이브러리:** 의 모든 버전은 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.  
+ **라이브러리:** 모든 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
- 다음 코드 예제에서는 `_resetstkoflw` 함수를 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 권장되는 `_resetstkoflw` 함수 사용법을 보여 줍니다.  
   
 ```  
 // crt_resetstkoflw.c  
@@ -185,16 +201,16 @@ int main(int ac)
 }  
 ```  
   
-## 샘플 출력  
- 프로그램 인수 없이.  
+## <a name="sample-output"></a>샘플 출력  
+ 프로그램 인수 없음  
   
 ```  
 loop #1  
 ```  
   
- 프로그램이 반복을 실행 하지 않고 응답 하지 않습니다.  
+ 프로그램이 반복을 실행하지 않고 응답하지 않습니다.  
   
- 프로그램 인수 없이.  
+ 프로그램 인수 있음  
   
 ```  
 loop #1  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### 설명  
- 다음 예제에서는 구조화된 예외가 c \+ \+ 예외로 변환되는 프로그램에서 권장되는 사용인 `_resetstkoflw` 을 보여줍니다.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 구조화된 예외가 C++ 예외로 변환되는 프로그램에서 `_resetstkoflw`의 권장 사용 방법을 보여 줍니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## 샘플 출력  
+## <a name="sample-output"></a>샘플 출력  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>참고 항목  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

@@ -1,75 +1,91 @@
 ---
-title: "_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fstat32"
-  - "_fstat64"
-  - "_fstati64"
-  - "_fstat"
-  - "_fstat64i32"
-  - "_fstat32i64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstat32i64"
-  - "fstat"
-  - "fstat64i32"
-  - "_fstat64"
-  - "_fstati64"
-  - "fstat64"
-  - "_fstat32"
-  - "fstat32i64"
-  - "fstati64"
-  - "_fstat"
-  - "fstat32"
-  - "_fstat64i32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstat64 함수"
-  - "fstati64 함수"
-  - "_fstat64i32 함수"
-  - "_fstat32i64 함수"
-  - "_fstat32 함수"
-  - "파일 정보"
-  - "fstat64i32 함수"
-  - "fstat32 함수"
-  - "fstat 함수"
-  - "fstat64 함수"
-  - "_fstat 함수"
-  - "_fstati64 함수"
-  - "fstat32i64 함수"
+title: "_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fstat32
+- _fstat64
+- _fstati64
+- _fstat
+- _fstat64i32
+- _fstat32i64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstat32i64
+- fstat
+- fstat64i32
+- _fstat64
+- _fstati64
+- fstat64
+- _fstat32
+- fstat32i64
+- fstati64
+- _fstat
+- fstat32
+- _fstat64i32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fstat64 function
+- fstati64 function
+- _fstat64i32 function
+- _fstat32i64 function
+- _fstat32 function
+- file information
+- fstat64i32 function
+- fstat32 function
+- fstat function
+- fstat64 function
+- _fstat function
+- _fstati64 function
+- fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
+ms.lasthandoff: 02/24/2017
 
-열려 있는 파일에 대 한 정보를 가져옵니다.  
+---
+# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
+열린 파일에 대한 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int _fstat(   
@@ -98,30 +114,30 @@ int _fstat64i32(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `fd`  
  열린 파일의 파일 설명자입니다.  
   
  `buffer`  
- 결과를 저장할 구조에 대 한 포인터입니다.  
+ 결과를 저장할 구조체에 대한 포인터입니다.  
   
-## 반환 값  
- 파일 상태 정보를 가져오는 경우 0을 반환 합니다. 반환 값 –1은 오류를 나타냅니다. 파일 설명자가 잘못 된 경우 또는 `buffer` 는 `NULL`, 를에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 `errno` 로 설정 된 `EBADF`, 잘못 된 파일 설명자를의 경우 또는 `EINVAL`, 경우 `buffer` 는 `NULL`합니다.  
+## <a name="return-value"></a>반환 값  
+ 파일 상태 정보를 가져오는 경우 0을 반환합니다. 반환 값 –1은 오류를 나타냅니다. 파일이 잘못되었거나 `buffer`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EBADF`(잘못된 파일 설명자인 경우) 또는 `EINVAL`(`buffer`가 `NULL`인 경우)로 설정됩니다.  
   
-## 설명  
- `_fstat` 함수에 연결 된 열려 있는 파일에 대 한 정보를 가져오는 데 `fd` 가리키는 구조에 저장 하 고 `buffer`합니다.`_stat` SYS\\Stat.h에 정의 된 구조에는 다음 필드가 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ `_fstat` 함수는 `fd`와 연결된 열린 파일에 대한 정보를 가져오고 `buffer`가 가리키는 구조체에 저장합니다. SYS\Stat.h에 정의된 `_stat` 구조체에는 다음 필드가 포함되어 있습니다.  
   
  `st_atime`  
  마지막 파일 액세스 시간입니다.  
   
  `st_ctime`  
- 파일의 생성의 시간입니다.  
+ 파일 생성 시간입니다.  
   
  `st_dev`  
- 경우 장치를 `fd`그렇지 않으면 0입니다.  
+ 장치인 경우 `fd`이고, 그렇지 않으면 0입니다.  
   
  `st_mode`  
- 파일 모드 정보의 비트 마스크입니다.`_S_IFCHR` 비트가 경우 `fd` 장치를 참조 합니다.`_S_IFREG` 비트가 경우 `fd` 일반 파일을 가리킵니다. 읽기\/쓰기 비트는 파일의 사용 권한 모드에 따라 설정 됩니다.`_S_IFCHR` 및 다른 상수 SYS\\Stat.h에 정의 됩니다.  
+ 파일 모드 정보의 비트 마스크입니다. `fd`가 장치를 참조할 경우 `_S_IFCHR` 비트가 설정됩니다. `fd`가 일반 파일을 참조할 경우 `_S_IFREG` 비트가 설정됩니다. 파일의 사용 권한 모드에 따라 사용자 읽기/쓰기 비트가 설정됩니다. `_S_IFCHR` 및 기타 상수는 SYS\Stat.h에 정의됩니다.  
   
  `st_mtime`  
  파일의 마지막 수정 시간입니다.  
@@ -130,25 +146,25 @@ int _fstat64i32(
  NTFS가 아닌 파일 시스템에서 항상 1입니다.  
   
  `st_rdev`  
- 경우 장치를 `fd`그렇지 않으면 0입니다.  
+ 장치인 경우 `fd`이고, 그렇지 않으면 0입니다.  
   
  `st_size`  
- 크기 \(바이트\)에서 파일입니다.  
+ 파일 크기(바이트)입니다.  
   
- 경우 `fd` 을 장치에 대 한 참조는 `st_atime`, `st_ctime`, `st_mtime`, 및 `st_size` 필드는 의미가 없습니다.  
+ `fd`가 장치를 참조할 경우 `st_atime`, `st_ctime`, `st_mtime` 및 `st_size` 필드는 의미가 없습니다.  
   
- Stat.h 사용 하기 때문에 [\_dev\_t](../../c-runtime-library/standard-types.md) 입력 Types.h에 정의 된를 포함 해야 합니다 Types.h Stat.h 하기 전에 코드에서.  
+ Stat.h에서는 Types.h에 정의된 [_dev_t](../../c-runtime-library/standard-types.md) 형식을 사용하므로 코드에서 Stat.h 앞에 Types.h를 포함해야 합니다.  
   
- `_fstat64`, 를 사용 하는 `__stat64` 파일 작성 날짜 23시 59분: 59 까지의 3000 년 12 월 31 일 UTC 표현할 수를 허용 하는 다른 함수만 23시 59분: 59 까지의 2038 년 1 월 18 일 UTC 날짜를 나타내는 반면, 구조입니다. 자정 1970 년 1 월 1 일에 이러한 모든 함수에 대 한 날짜 범위의 하한값입니다.  
+ `__stat64` 구조체를 사용하는 `_fstat64`는 3000년 12월 31일 23:59:59(UTC)까지 파일 생성 날짜를 표현할 수 있습니다. 반면, 다른 함수는 2038년 1월 18일 23:59:59(UTC)까지의 날짜만 나타냅니다. 1970년 1월 1일 자정은 이러한 모든 함수에 대한 날짜 범위의 하한입니다.  
   
- 이러한 함수의 변형 32 비트 또는 64 비트 시간 형식 및 32 비트 또는 64 비트 파일 길이 지원합니다. 첫 번째 숫자 접미사\(`32` 또는 `64`\)는 사용된 시간 형식의 크기를 나타내며, 두 번째 접미사\(`i32` 또는 `i64`\)는 파일 크기가 32비트 정수로 표시되는지 아니면 64비트 정수로 표시되는지를 나타냅니다.  
+ 이러한 함수의 변형은 32비트 또는 64비트 시간 형식과 32비트 또는 64비트 파일 길이를 지원합니다. 첫 번째 숫자 접미사(`32` 또는 `64`)는 사용된 시간 형식의 크기를 나타내며, 두 번째 접미사( `i32` 또는 `i64`)는 파일 크기가 32비트 정수로 표시되는지 아니면 64비트 정수로 표시되는지를 나타냅니다.  
   
- `_fstat` 에 해당 `_fstat64i32`, 및 `struct``_stat` 64 비트 시간을 포함 합니다. 그렇습니다 하지 않는 한 `_USE_32BIT_TIME_T` 이 있는 경우 이전 동작이 적용; 정의 된 `_fstat` 는 32 비트 시간을 사용 하 고 `struct``_stat` 32 비트 시간을 포함 합니다. 같은 기준이 `_fstati64`합니다.  
+ `_fstat`는 `_fstat64i32`와 동일하며, `struct``_stat`는 64비트 시간을 포함합니다. `_USE_32BIT_TIME_T` 가 정의되지 않는 한 그러하며, 이 경우 이전 동작이 적용됩니다. `_fstat` 는 32비트 시간을 사용하고 `struct``_stat` 는 32비트 시간을 포함합니다. 이는 `_fstati64`의 경우에도 마찬가지입니다.  
   
-### \_stat의 시간 형식 및 파일 길이 형식 변형  
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat의 시간 형식 및 파일 길이 형식 변형  
   
-|함수|\_USE\_32BIT\_TIME\_T 정의 여부|시간 형식|파일 길이 형식|  
-|--------|---------------------------------|-----------|--------------|  
+|함수|_USE_32BIT_TIME_T 정의 여부|시간 형식|파일 길이 형식|  
+|---------------|------------------------------------|---------------|----------------------|  
 |`_fstat`|정의되지 않음|64비트|32비트|  
 |`_fstat`|정의됨|32비트|32비트|  
 |`_fstat32`|매크로 정의의 영향을 받지 않음|32비트|32비트|  
@@ -158,20 +174,20 @@ int _fstat64i32(
 |`_fstat32i64`|매크로 정의의 영향을 받지 않음|32비트|64비트|  
 |`_fstat64i32`|매크로 정의의 영향을 받지 않음|64비트|32비트|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |함수|필수 헤더|  
-|--------|-----------|  
-|`_fstat`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
-|`_fstat32`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
-|`_fstat64`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
-|`_fstati64`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
-|`_fstat32i64`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
-|`_fstat64i32`|\< sys\/stat.h \> 및 \< sys\/types.h \>|  
+|--------------|---------------------|  
+|`_fstat`|\<sys/stat.h> 및 \<sys/types.h>|  
+|`_fstat32`|\<sys/stat.h> 및 \<sys/types.h>|  
+|`_fstat64`|\<sys/stat.h> 및 \<sys/types.h>|  
+|`_fstati64`|\<sys/stat.h> 및 \<sys/types.h>|  
+|`_fstat32i64`|\<sys/stat.h> 및 \<sys/types.h>|  
+|`_fstat64i32`|\<sys/stat.h> 및 \<sys/types.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_fstat.c  
@@ -232,15 +248,16 @@ int main( void )
 ```  
   
 ```Output  
-파일 크기: 수정 하는 16 시간: 월 7 일 수요일 15시 25분: 11 2003  
+File size     : 16  
+Time modified : Wed May 07 15:25:11 2003  
 ```  
   
-## 해당 .NET Framework 항목  
- 적용할 수 없음 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하세요.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   
- [\_access, \_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_filelength, \_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [\_stat, \_wstat 함수](../../c-runtime-library/reference/stat-functions.md)
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
+ [_stat, _wstat 함수](../../c-runtime-library/reference/stat-functions.md)

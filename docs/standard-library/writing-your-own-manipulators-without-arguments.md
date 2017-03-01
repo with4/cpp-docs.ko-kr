@@ -1,54 +1,73 @@
 ---
 title: "인수 없이 고유 조작자 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "조작자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 인수 없이 고유 조작자 작성
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 276bba3dd5ce5debd926ebbc4ccfaf52c6b92097
+ms.lasthandoff: 02/24/2017
 
-Writing manipulators that do not use arguments requires neither class derivation nor use of complex macros.  Suppose your printer requires the pair \<ESC\>\[ to enter bold mode.  You can insert this pair directly into the stream:  
+---
+# <a name="writing-your-own-manipulators-without-arguments"></a>인수 없이 고유 조작자 작성
+인수를 사용하지 않는 조작자를 작성할 때는 클래스 파생이 필요하지 않으며 복잡한 매크로를 사용할 필요도 없습니다. 프린터에서 \<ESC>[ 쌍을 굵은 글꼴 모드로 입력해야 한다고 가정해 보겠습니다. 이 경우 스트림에 이 쌍을 직접 삽입할 수 있습니다.  
   
 ```  
-cout << "regular " << '\033' << '[' << "boldface" << endl;  
+cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;  
 ```  
   
- Or you can define the `bold` manipulator, which inserts the characters:  
+ 또는 문자를 삽입하는 `bold` 조작자를 정의할 수 있습니다.  
   
 ```  
-ostream& bold( ostream& os ) {  
-    return os << '\033' << '[';  
+ostream& bold(ostream& os) {  
+    return os <<'\033' <<'[';  
 }  
-cout << "regular " << bold << "boldface" << endl;  
+cout <<"regular " <<bold <<"boldface" <<endl;  
 ```  
   
- The globally defined `bold` function takes an `ostream` reference argument and returns the `ostream` reference.  It is not a member function or a friend because it does not need access to any private class elements.  The `bold` function connects to the stream because the stream's `<<` operator is overloaded to accept that type of function, using a declaration that looks something like this:  
+ 전역적으로 정의된 `bold` 함수는 `ostream` 참조 인수를 사용하며 `ostream` 참조를 반환합니다. 이 함수는 private 클래스 요소에 액세스할 필요가 없으므로 구성원 함수나 friend가 아닙니다. `bold` 함수는 스트림에 연결됩니다. 해당 함수 유형을 허용하기 위해 스트림의 `<<` 연산자가 다음과 같은 선언을 사용하여 오버로드되기 때문입니다.  
   
 ```  
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))  
-{     
-   // call ios_base manipulator  
-   (*_Pfn)(*(ios_base *)this);  
-   return (*this);  
+{     // call ios_base manipulator  
+ (*_Pfn)(*(ios_base *)this);
+
+    return (*this);
+
 }  
 ```  
   
- You can use this feature to extend other overloaded operators.  In this case, it is incidental that `bold` inserts characters into the stream.  The function is called when it is inserted into the stream, not necessarily when the adjacent characters are printed.  Thus, printing could be delayed because of the stream's buffering.  
+ 이 기능을 사용하여 오버로드된 다른 연산자를 확장할 수 있습니다. 이 경우 해당 기능을 사용하는 경우의 결과는 `bold`에서 스트림에 문자를 삽입하는 것과 동일합니다. 함수는 인접 문자가 인쇄될 때가 아니라 스트림에 삽입될 때 호출됩니다. 따라서 스트림의 버퍼링으로 인해 인쇄가 지연될 수 있습니다.  
   
-## 참고 항목  
- [Output Streams](../standard-library/output-streams.md)
+## <a name="see-also"></a>참고 항목  
+ [출력 스트림](../standard-library/output-streams.md)
+
+

@@ -1,49 +1,65 @@
 ---
-title: "wcsrtombs_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자열 변환, 와이드 문자"
-  - "wcsrtombs_s 함수"
-  - "와이드 문자, 문자열"
+title: wcsrtombs_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- string conversion, wide characters
+- wcsrtombs_s function
+- wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# wcsrtombs_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 52f3395cc878c1f051867d81ee12d0c9b3de619d
+ms.lasthandoff: 02/24/2017
 
-와이드 문자 문자열을 멀티 바이트 문자 문자열 표현으로 변환합니다.  [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 향상 기능이 포함된 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 버전입니다.  
+---
+# <a name="wcsrtombss"></a>wcsrtombs_s
+와이드 문자열을 멀티바이트 문자열 표현으로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 버전입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 errno_t wcsrtombs_s(  
@@ -64,66 +80,66 @@ errno_t wcsrtombs_s(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
- \[out\] `pReturnValue`  
- 변환 된 문자 수입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `pReturnValue`  
+ 변환된 문자 수입니다.  
   
- \[out\] `mbstr`  
- 결과 변환 멀티 바이트 문자열을위한 버퍼의 주소입니다.  
+ [out] `mbstr`  
+ 결과 변환된 멀티바이트 문자열에 대한 버퍼 주소입니다.  
   
- \[out\] `sizeInBytes`  
- 바이트에서 `mbstr` 버퍼의 크기입니다.  
+ [out] `sizeInBytes`  
+ `mbstr` 버퍼의 크기(바이트)입니다.  
   
- \[in\] `wcstr`  
- 변환하는 와이드 문자열에 대한 포인터입니다.  
+ [in] `wcstr`  
+ 변환할 와이드 문자열을 가리킵니다.  
   
- \[in\] `count`  
- `mbstr` 버퍼 또는 [\_TRUNCATE](../../c-runtime-library/truncate.md) 에서 최대 바이트로 저장되어집니다.  
+ [in] `count`  
+ `mbstr` 버퍼에 저장할 최대 바이트 수 또는 [_TRUNCATE](../../c-runtime-library/truncate.md)입니다.  
   
- \[in\] `mbstate`  
- `mbstate_t` 전환상태개체에 대한 포인터입니다.  
+ [in] `mbstate`  
+ `mbstate_t` 변환 상태 개체에 대한 포인터입니다.  
   
-## 반환 값  
- 성공 시 0이고, 실패 시 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공시&0;, 실패시 오류 코드.  
   
-|오류 조건|반환 값과 `errno`|  
-|-----------|-------------------|  
-|`mbstr` 는 `NULL` 및 `sizeInBytes` \> 0 입니다.|`EINVAL`|  
+|오류 조건|반환 값 및 `errno`|  
+|---------------------|------------------------------|  
+|`mbstr`은 `NULL` 및 `sizeInBytes` > 0입니다.|`EINVAL`|  
 |`wcstr`가 `NULL`인 경우|`EINVAL`|  
-|대상 버퍼가 너무 작아 변환 된 문자열을 포함할 수 없습니다. \( `count` 가 `_TRUNCATE` 가 아닌 한, 아래 설명 참조\)|`ERANGE`|  
+|대상 버퍼가 너무 작아 변환 문자열을 포함할 수 없습니다(`count`가 `_TRUNCATE`가 아닌 경우 아래 설명 참조).|`ERANGE`|  
   
- 이러한 조건이 발생 하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못 된 매개 변수 예외를 호출합니다.  실행이 계속 되도록 혀용된 경우, 함수는 오류 코드를 반환하고 `errno` 를 테이블에 표시 된 대로 설정합니다.  
+ 이러한 조건 중 하나라도 발생하는 경우, 매개 변수 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외가 발생합니다. 계속해서 실행하도록 허용된 경우 이 함수는 오류 코드를 반환하고 `errno`를 표에 표시된 대로 설정합니다.  
   
-## 설명  
- `wcsrtombs_s` 함수는 `mbstr` 로 지정된 버퍼에 저장된 멀티 바이트 문자들로 `wcstr` 로 지정된 와이드 문자 문자열을 변환합니다. 이 때 `mbstate` 에 포함된 변환 상태를 사용합니다.  이러한 조건 중 하나가 충족 될 때까지 변환은 문자마다 계속합니다.  
+## <a name="remarks"></a>설명  
+ `wcsrtombs_s` 함수는 `mbstate`에 포함된 변환 상태를 사용하여 `wcstr`이 가리키는 와이드 문자열을 `mbstr`이 가리키는 버퍼에 저장되는 멀티바이트 문자로 변환합니다. 이러한 조건 중 하나가 충족될 때까지 변환은 문자마다 계속합니다.  
   
--   와이드 null 문자를 발생합니다.  
+-   null 와이드 문자가 있는 경우  
   
--   변환할 수 없는 와이드 문자를 발생합니다.  
+-   변환할 수 없는 와이드 문자가 있는 경우  
   
--   `mbstr` 버퍼에 저장되는 바이트의 수는 `count` 와 같습니다.  
+-   `mbstr` 버퍼에 저장된 바이트 수가 `count`와 같은 경우  
   
- 대상 문자열은 항상 null로 끝납니다. \(오류의 경우에도\)  
+ 대상 문자열은 항상 null로 끝납니다(오류 발생 시도 포함).  
   
- `count`가 특별한 값 [\_TRUNCATE](../../c-runtime-library/truncate.md) 인 경우, null 종료의 여지가 남겨진 동안 대상 버퍼에 맞도록 `wcsrtombs_s` 는 많은 문자열을 변환합니다.  
+ `count`가 특수 값 [_TRUNCATE](../../c-runtime-library/truncate.md)이면 `wcsrtombs_s`는 대상 버퍼에 포함할 수 있는 만큼 문자열을 최대한 변환하지만 null 종결자를 포함한 공간은 남겨 둡니다.  
   
- 만일 `wcsrtombs_s` 가 성공적으로 소스 문자열을 변환하는 경우, 이것은 null 종결자를 포함한 변환된 문자열의 바이트들의 크기를 `*``pReturnValue` 로 넣습니다.\( `NULL`가 아닌 `pReturnValue` 를 제공합니다.\)  `mbstr` 인수는 `NULL` 이고 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다.  `mbstr` 가 `NULL` 인 경우, `count` 는 무시 됩니다.  
+ `wcsrtombs_s`는 소스 문자열을 성공적으로 변환하는 경우 `pReturnValue`가 `NULL`이 아니면 null 종결자를 포함하여 변환된 문자열의 크기(바이트)를 `*``pReturnValue`에 배치합니다. `mbstr` 인수가 `NULL`이며 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다. `mbstr`이 `NULL`인 경우 `count`가 무시됩니다.  
   
- `wcsrtombs_s` 가 멀티 바이트 문자로 변한 될 수 없는 와이드 문자를 만나면, `*``pReturnValue` 에 \-1을 넣고 대상 버퍼에 빈 문자열을 설정하고 `errno` 를 `EILSEQ` 로 설정하고 `EILSEQ` 를 반환합니다.  
+ `wcsrtombs_s`는 멀티바이트 문자로 변환할 수 없는 와이드 문자가 있으면 `*``pReturnValue`에 -1을 추가하고, 대상 버퍼를 빈 문자열로 설정하고, `errno`를 `EILSEQ`로 설정한 다음 `EILSEQ`를 반환합니다.  
   
- 만일 시퀀스에서 `wcstr` 와 `mbstr` 오버랩을 가리키는 경우, `wcsrtombs_s` 의 동작은 정의되지 않습니다.  `wcsrtombs_s` 는 현재 로캘의 LC\_TYPE 범주에 영향을 미칩니다.  
+ `wcstr`이 가리키는 시퀀스와 `mbstr`이 가리키는 시퀀스가 겹치는 경우 `wcsrtombs_s`의 동작이 정의되지 않습니다. 현재 로캘의 LC_TYPE 범주가 `wcsrtombs_s`에 영향을 줍니다.  
   
 > [!IMPORTANT]
->  되도록 `wcstr` 및 `mbstr` 가 겹치지 않도록 하고, `count` 가 변환할 와이드 문자의 수를 올바르게 반영하도록 합니다.  
+>  `wcstr`와 `mbstr`이 겹치지 않고 `count`가 변환할 와이드 문자 수를 정확하게 반영하도록 합니다.  
   
- `wcsrtombs_s` 함수는 이것의 재시작 가능성이라는면에서 [wcstombs\_s, \_wcstombs\_s\_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) 과는 다릅니다.  변환 상태는 이후의 호출을 위해 같거나 다른 다시 시작할 수 있는 함수들로 `mbstate` 에 저장됩니다.  재 시작 가능하거나 그렇지 않은 함수들을 혼용할 때 결과들은 정의되지 않습니다.  예를 들어, `wcstombs_s.` 대신 `wcsrtombs_s` 이 사용되었다면, 응용 프로그램은 `wcslen` 보다 `wcsrlen` 을 사용합니다.  
+ `wcsrtombs_s` 함수는 다시 시작할 수 있다는 점에서 [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)과 다릅니다. 같거나 다른 다시 시작 가능 함수에 대한 후속 호출에서는 변환 상태가 `mbstate`에 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 `wcstombs_s.` 대신 후속 `wcsrtombs_s` 호출을 사용하는 경우 응용 프로그램은 `wcslen` 대신 `wcsrlen`을 사용해야 합니다.  
   
- C\+\+에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며\(크기 인수를 지정할 필요가 없어짐\), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다.  자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)을 참조하십시오.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
-## 예외  
- `wcsrtombs_s` 함수는 실행되는 동안, 현재 스레드가 `setlocale` 를 호출하는 함수가 필요없는 안전한 멀티스레드이고 `mbstate` 는 null입니다.  
+## <a name="exceptions"></a>예외  
+ `wcsrtombs_s` 함수는 이 함수가 실행 중인 동안 현재 스레드의 함수가 `setlocale`을 호출하지 않으며 `mbstate`가 null이면 다중 스레드로부터 안전합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_wcsrtombs_s.cpp  
@@ -166,22 +182,25 @@ void main()
 }  
 ```  
   
-  **문자열이 성공적으로 변환되었습니다.**   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+```Output  
+The string was successfully converted.  
+```  
   
-## 요구 사항  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`wcsrtombs_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs_s`|\<wchar.h>|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   
  [로캘](../../c-runtime-library/locale.md)   
  [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

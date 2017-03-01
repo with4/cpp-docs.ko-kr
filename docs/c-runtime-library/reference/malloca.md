@@ -1,49 +1,65 @@
 ---
-title: "_malloca | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_malloca"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "malloca"
-  - "_malloca"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_malloca 함수"
-  - "malloca 함수"
-  - "메모리 할당, 스택"
+title: "_malloca | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _malloca
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- malloca
+- _malloca
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, stack
+- malloca function
+- _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _malloca
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70a37640ec7f6024539ad1e2134152190e698133
+ms.lasthandoff: 02/24/2017
 
-스택에 메모리를 할당합니다.  [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md) 에 설명된 대로 이 버전은 보안 향상 기능이 포함된 [\_alloca](../../c-runtime-library/reference/alloca.md) 버전입니다.  
+---
+# <a name="malloca"></a>_malloca
+스택에 메모리를 할당합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_alloca](../../c-runtime-library/reference/alloca.md) 버전입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void *_malloca(   
@@ -51,40 +67,40 @@ void *_malloca(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `size`  
- 스택에서 할당할 바이트 수입니다.  
+ 스택에서 할당할 바이트입니다.  
   
-## 반환 값  
- `_malloca` 루틴은 할당된 공간에 대해 개체의 저장소에 대해 적절하게 정렬되는`void` 포인터를 반환합니다.  `size`이 0인 경우 `_malloca`는  길이가 0인 항목을 할당하고 유효한 포인터를 해당 항목에 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ `_malloca` 루틴은 할당된 공간에 대한 `void` 포인터를 반환하며, 이 공간은 모든 형식의 개체 저장소에 적절하게 맞춰지도록 보장됩니다. `size`가 0이면 `_malloca`는 길이가 0인 항목을 할당하고 해당 항목에 대한 유효한 포인터를 반환합니다.  
   
- 해당 공간을 할당할 수 없는 경우 스택 오버플로 예외가 생성 됩니다.  스택 오버플로 예외는 C\+\+ 예외가 아닙니다. 구조화 된 예외는 입니다.  C \+\+ 예외 처리를 사용 하는 대신에 [구조적 예외 처리](../../cpp/structured-exception-handling-c-cpp.md) \(SEH\) 을 사용하십시오.  
+ 공간을 할당할 수 없는 경우 스택 오버플로 예외가 생성됩니다. 스택 오버플로 예외는 C++ 예외가 아니며 구조적 예외입니다. C++ 예외 처리를 사용하는 대신 [SEH(구조적 예외 처리)](../../cpp/structured-exception-handling-c-cpp.md)를 사용해야 합니다.  
   
-## 설명  
- `_malloca` 는 요청이 `_ALLOCA_S_THRESHOLD` 가 제공한 특정한 바이트를 넘어서는 경우, 프로그램 스텍 또는 힙에서 `size` 바이트를 할당합니다.   `_malloca` 및 `_alloca` 의 차이는 `_alloca` 는 크기에 따라 항상 스택에 할당한 다는 것입니다.  할당된 메모리를 해제하기 위해 `free` 를 호출하는 허가 또는 요청을 허락하지 않는 `_alloca` 와 달리, `_malloca` 는 메모리 해제를 위해 [\_freea](../../c-runtime-library/reference/freea.md) 를 사용해야 합니다.  디버그 모드에서 `_malloca` 는 항상 힙에서 메모리를 할당 합니다.  
+## <a name="remarks"></a>설명  
+ `_malloca`는 요청이 `_ALLOCA_S_THRESHOLD`에서 제공하는 특정 크기(바이트)를 초과하는 경우 프로그램 스택이나 힙에서 `size` 바이트를 할당합니다. `_malloca`와 `_alloca`의 차이점은 `_alloca`는 크기에 관계없이 항상 스택에서 할당한다는 점입니다. 메모리를 확보하여 할당하기 위해 `free` 호출이 필요하거나 이 호출을 허용할 필요가 없는 `_alloca`와 달리 `_malloca`는 메모리를 확보하려면 [_freea](../../c-runtime-library/reference/freea.md)를 사용해야 합니다. 디버그 모드에서 `_malloca`는 항상 힙에서 메모리를 할당합니다.  
   
- 예외 처리기\(EH\) 에서 `_malloca` 를 명시적으로 호출하는 것에는 제한이 있습니다.  x86 프로세서에서 실행되는 EH 루틴은 자신의 메모리의 프레임에서 작동합니다 : 바깥 쪽 함수의 스택 포인터의 현재 위치를 기반으로하지 않는 메모리 공간에서 자신의 작업을 수행 할 수 있습니다.  가장 일반적인 구현은 Windows NT 구조적 예외 처리\(SEH\) 및 C\+\+ catch 절 식에 포함됩니다.  그러므로, EH 루틴 호출에 반환하는 동안 발생한 에러 시나리오 중 하나에서의 명시적인 `_malloca` 호출 :  
+ EH(예외 처리기)에서 `_malloca`를 명시적으로 호출하는 데는 제한이 있습니다. x86급 프로세서에서 실행되는 EH 루틴은 고유한 메모리 프레임에서 작동합니다. 즉, 바깥쪽 함수 스택 포인터의 현재 위치를 기반으로 하지 않는 메모리 공간에서 해당 작업을 수행합니다. 가장 일반적인 구현에는 Windows NT SEH(구조적 예외 처리) 및 C++ catch 절 식이 포함됩니다. 따라서 다음 시나리오 중 하나에서 `_malloca`를 명시적으로 호출하면 호출 EH 루틴으로 돌아가는 동안 프로그램 오류가 발생합니다.  
   
--   Windows NT SEH 예외 필터 식: `__except` \(`_malloca ()` \)  
+-   Windows NT SEH 예외 필터 식: `__except` (`_malloca ()` )  
   
--   Windows NT SEH 마지막 예외 처리기: `__finally` {`_malloca ()` }  
+-   Windows NT SEH 최종 예외 처리기: `__finally` {`_malloca ()` }  
   
--   C\+\+ EH catch clause expression  
+-   C++ EH catch 절 식  
   
- 그러나 `_malloca`는 EH 루틴이나 이전에 나열 된 EH 시나리오 중 하나에 의해 호출 된 응용 프로그램 지원 콜백에서 직접적으로 호출 될 수 있습니다.  
+ 그러나 `_malloca`는 EH 루틴 내에서 또는 위에 나열된 EH 시나리오 중 하나에서 호출되는 응용 프로그램 제공 콜백에서 직접 호출할 수 있습니다.  
   
 > [!IMPORTANT]
->  Windows XP 에서, `_malloca` 가 try\/catch 블록에서 호출 된 경우, [\_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) 를 호출해야 합니다.  
+>  Windows XP의 경우 try/catch 블록 내에서 `_malloca`를 호출하면 catch 블록에서 [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)를 호출해야 합니다.  
   
- 위의 제한을 사용 하는 경우 외에, [\/clr \(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션을 사용할 때 `_malloca` 는 `__except` 블록에서 사용될 수 없습니다.  자세한 내용은 [\/clr Restrictions](../../build/reference/clr-restrictions.md) 를 참조하십시오.  
+ 위의 제한 외에도 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션을 사용하는 경우 `_malloca`는 `__except` 블록에서 사용할 수 없습니다. 자세한 내용은 [/clr 제한](../../build/reference/clr-restrictions.md)을 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_malloca`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_malloca`|\<malloc.h>|  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_malloca_simple.c  
@@ -104,7 +120,7 @@ int main()
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_malloca_exception.c  
@@ -164,24 +180,24 @@ int main()
 }  
 ```  
   
-## 입력  
+## <a name="input"></a>입력  
   
 ```  
 1000  
 ```  
   
-## 샘플 출력  
+## <a name="sample-output"></a>샘플 출력  
   
 ```  
 Enter the number of bytes to allocate using _malloca: 1000  
 ```  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

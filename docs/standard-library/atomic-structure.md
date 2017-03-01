@@ -1,80 +1,95 @@
 ---
-title: "atomic 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic/std::atomic"
-dev_langs: 
-  - "C++"
+title: "atomic 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# atomic 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
+ms.lasthandoff: 02/24/2017
 
-이 `Ty` 형식의 저장 된 값의 최소 작업을 수행 하는 개체에 설명합니다.  
+---
+# <a name="atomic-structure"></a>atomic 구조체
+`Ty` 형식의 저장된 값에 대해 원자 연산을 수행하는 개체를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class Ty>
+struct atomic;
 ```  
-template <class Ty>  
-struct atomic;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[atomic::atomic 생성자](../Topic/atomic::atomic%20Constructor.md)|원자 개체를 생성 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[atomic::atomic 생성자](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|atomic 개체를 생성합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[atomic::operator Ty 연산자](../Topic/atomic::operator%20Ty%20Operator.md)|읽고 저장된 값을 반환 합니다. \([atomic::load 메서드](../Topic/atomic::load%20Method.md)\)|  
-|[atomic::operator\= 연산자](../Topic/atomic::operator=%20Operator.md)|지정된 값 저장된 값을 사용 합니다. \([atomic::store 메서드](../Topic/atomic::store%20Method.md)\)|  
-|||  
-|[atomic::operator\+\+ 연산자](../Topic/atomic::operator++%20Operator.md)|저장된 값을 증가 시킵니다.  포인터와 정수 계열 특수화만 사용합니다.|  
-|[atomic::operator\+\= 연산자](../Topic/atomic::operator+=%20Operator.md)|저장된 값에 지정된 값을 추가합니다.  포인터와 정수 계열 특수화만 사용합니다.|  
-|[atomic::operator\-\- 연산자](../Topic/atomic::operator--%20Operator.md)|저장된 값을 감소 시킵니다.  포인터와 정수 계열 특수화만 사용합니다.|  
-|[atomic::operator\-\= 연산자](../Topic/atomic::operator-=%20Operator.md)|저장하는 값으로 부터 지정된 값을 뺍니다.  포인터와 정수 계열 특수화만 사용합니다.|  
-|[atomic::operator&\= 연산자](../Topic/atomic::operator&=%20Operator.md)|연산을 수행 `and` 에 지정 된 값과 저장된 된 값입니다.  완전한 특수화로만 사용됩니다.|  
-|[atomic::operator&#124;\= 연산자](../Topic/atomic::operator%7C=%20Operator.md)|연산을 수행 `or` 에 지정 된 값과 저장된 된 값입니다.  완전한 특수화로만 사용됩니다.|  
-|[atomic::operator^\= 연산자](../Topic/atomic::operator%5E=%20Operator.md)|연산을 수행 `exclusive or` 에 지정 된 값과 저장된 된 값입니다.  완전한 특수화로만 사용됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[atomic::operator Ty 연산자](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|저장된 값을 읽고 반환합니다. ([atomic::load 메서드](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= 연산자](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|지정된 값을 사용하여 저장된 값을 바꿉니다. ([atomic::store 메서드](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator++ 연산자](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|저장된 값을 증가시킵니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
+|[atomic::operator+= 연산자](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|지정된 값을 저장된 값에 더합니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
+|[atomic::operator-- 연산자](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|저장된 값을 감소시킵니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
+|[atomic::operator-= 연산자](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|지정된 값을 저장된 값에서 뺍니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
+|[atomic::operator&= 연산자](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|지정된 값 및 저장된 값에서 비트 `and`를 수행합니다. 정수 계열 특수화에서만 사용됩니다.|  
+|[atomic::operator&#124;= 연산자](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|지정된 값 및 저장된 값에서 비트 `or`를 수행합니다. 정수 계열 특수화에서만 사용됩니다.|  
+|[atomic::operator^= 연산자](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|지정된 값 및 저장된 값에서 비트 `exclusive or`를 수행합니다. 정수 계열 특수화에서만 사용됩니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[atomic::compare\_exchange\_strong 메서드](../Topic/atomic::compare_exchange_strong%20Method.md)|수행는 `atomic_compare_and_exchange` 에서 작업 `this` 이고 결과 반환 합니다.|  
-|[atomic::compare\_exchange\_weak 메서드](../Topic/atomic::compare_exchange_weak%20Method.md)|수행는 `weak_atomic_compare_and_exchange` 에서 작업 `this` 이고 결과를 반환 합니다.|  
-|[atomic::fetch\_add 메서드](../Topic/atomic::fetch_add%20Method.md)|저장된 값에 지정된 값을 추가합니다.|  
-|[atomic::fetch\_and 메서드](../Topic/atomic::fetch_and%20Method.md)|연산을 수행 `and` 에 지정 된 값과 저장된 된 값입니다.|  
-|[atomic::fetch\_or 메서드](../Topic/atomic::fetch_or%20Method.md)|연산을 수행 `or` 에 지정 된 값과 저장된 된 값입니다.|  
-|[atomic::fetch\_sub 메서드](../Topic/atomic::fetch_sub%20Method.md)|저장하는 값으로 부터 지정된 값을 뺍니다.|  
-|[atomic::fetch\_xor 메서드](../Topic/atomic::fetch_xor%20Method.md)|연산을 수행 `exclusive or` 에 지정 된 값과 저장된 된 값입니다.|  
-|[atomic::is\_lock\_free 메서드](../Topic/atomic::is_lock_free%20Method.md)|이 `this` 은 *잠금 가능*의 원자 연산인지 지정합니다.  원자 형식이 *잠금 가능* 원자 단위 작업이 해당 형식에는 잠금을 사용하는 경우입니다.|  
-|[atomic::load 메서드](../Topic/atomic::load%20Method.md)|읽고 저장된 값을 반환 합니다.|  
-|[atomic::store 메서드](../Topic/atomic::store%20Method.md)|지정된 값 저장된 값을 사용 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[atomic::compare_exchange_strong 메서드](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|`this`에서 `atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
+|[atomic::compare_exchange_weak 메서드](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|`this`에서 `weak_atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
+|[atomic::fetch_add 메서드](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|지정된 값을 저장된 값에 더합니다.|  
+|[atomic::fetch_and 메서드](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|지정된 값 및 저장된 값에서 비트 `and`를 수행합니다.|  
+|[atomic::fetch_or 메서드](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|지정된 값 및 저장된 값에서 비트 `or`를 수행합니다.|  
+|[atomic::fetch_sub 메서드](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|지정된 값을 저장된 값에서 뺍니다.|  
+|[atomic::fetch_xor 메서드](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|지정된 값 및 저장된 값에서 비트 `exclusive or`를 수행합니다.|  
+|[atomic::is_lock_free 메서드](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|`this`의 원자 연산이 *잠금 해제*인지를 지정합니다. 원자 형식의 어떤 원자 연산도 잠금을 사용하지 않는 경우 해당 원자 형식을 *잠금 해제*라고 합니다.|  
+|[atomic::load 메서드](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|저장된 값을 읽고 반환합니다.|  
+|[atomic::store 메서드](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|지정된 값을 사용하여 저장된 값을 바꿉니다.|  
   
-## 설명  
- 유형 `Ty` 은 *사소 하 게 복사할 수* 있어야만 합니다.  즉, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 의 바이트를 복사 생성해야 올바른 `Ty` 개체가 원래 개체와 동일한 지 비교하여 사용합니다.  이 `compare_exchange_weak` 와 `compare_exchange_strong` 맴버 함수는 `Ty` 값이 같은 지 확인하려는 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 를 사용합니다.  이러한 함수는 `operator==` 로 정의된 `Ty` 사용합니다.  이 `atomic` 의 맴버 함수는 `Ty` 형식의 값을 복사하는 `memcpy` 을 사용합니다.  
+## <a name="remarks"></a>설명  
+ `Ty` 형식은 *일반적으로 복사 가능*해야 합니다. [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)를 사용하여 바이트를 복사하면 비교 시 원본 개체와 같은 유효한 `Ty` 개체가 생성되어야 합니다. `compare_exchange_weak` 및 `compare_exchange_strong` 멤버 함수는 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)를 사용하여 두 개의 `Ty` 값이 같은지 확인합니다. 이러한 함수는 `operator==`에 정의된 `Ty`를 사용하지 않습니다. `atomic`의 멤버 함수는 `memcpy`를 사용하여 `Ty` 형식의 값을 복사합니다.  
   
- 부분 특수화에서, `atomic<Ty *>`, 모든 포인터 형식에 대해 존재 합니다.  전문화된 관리되는 포인터 값을 오프셋 더하기 또는 빼기를 오프셋 수 있습니다.  형식 인수를 사용하는 산술 연산을 `ptrdiff_t` 의 크기에 따라 해당 인수를 조정하고 `Ty` 일반 주소 산술 연산을 사용하여 일관성을 유지합니다.  
+ 부분 특수화 `atomic<Ty *>`는 모든 포인터 형식에 대해 존재합니다. 특수화를 사용하면 관리되는 포인터 값에 오프셋을 더하거나 값에서 오프셋을 뺄 수 있습니다. 산술 연산은 `ptrdiff_t` 형식의 인수를 가져와서 `Ty`의 크기에 따라 일반 주소 산술과 일관되게 조정합니다.  
   
- 이 `bool` 특수화를 제외한 모든 정수 계열 형식에 있습니다.  각 특수화 풍부한 원자 산술 및 논리 연산에 사용할 수 있는 메서드를 제공합니다.  
+ 특수화는 `bool`을 제외한 모든 정수 형식에 대해 존재합니다. 각 특수화에서는 원자 산술 및 논리 연산을 위한 다양한 방법을 제공합니다.  
   
 ||||  
 |-|-|-|  
@@ -84,13 +99,17 @@ struct atomic;
 |`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
 |`atomic<long long>`|`atomic<unsigned long long>`|  
   
- 정수 특수화는 해당하는 `atomic_``integral` 형식으로 부터 파생됩니다.  예를 들어, `atomic<unsigned int>` 는 `atomic_uint`에서 파생됩니다.  
+ 정수 특수화는 해당 `atomic_``integral` 형식에서 파생됩니다. 예를 들어 `atomic<unsigned int>`는 `atomic_uint`에서 파생됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atomic  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<atomic\>](../standard-library/atomic.md)   
+## <a name="see-also"></a>참고 항목  
+ [\<atomic>](../standard-library/atomic.md)   
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

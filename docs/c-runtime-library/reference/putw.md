@@ -1,51 +1,67 @@
 ---
-title: "_putw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putw"
-  - "putw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putw 함수"
-  - "정수, 스트림에 쓰기"
-  - "putw 함수"
-  - "스트림, 정수 쓰기"
+title: _putw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putw
+- putw
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, writing to streams
+- putw function
+- streams, writing integers to
+- _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _putw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae689f0f299f307bdda9771d4929623e04a7196f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="putw"></a>_putw
 정수를 스트림에 씁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -55,33 +71,33 @@ caps.handback.revision: 14
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *binint*  
- 이진 정수로 출력됩니다.  
+ 출력할 이진 정수입니다.  
   
  `stream`  
- 구조체에 대한 포인터입니다.  
+ **FILE** 구조체에 대한 포인터입니다.  
   
-## 반환 값  
- 작성된 값을 반환합니다.  `EOF`의 반환 값은 오류를 나타낼 수 있습니다.  `EOF`도 정당한 정수 값이기 때문에, 오류를 확인하기 위해 `ferror`를 사용합니다.  만약 `stream` 가 널 포인터라면, 잘못된 매개변수 처리기가 호출됩니다, 이는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)로 설명됩니다.  계속해서 실행하도록 허용된 경우, 함수는 `errno` 를 `EINVAL` 에 설정하고 `EOF`을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 작성된 값을 반환합니다. `EOF`의 반환 값이 오류를 나타낼 수 있습니다. `EOF`도 유효한 정수 값이므로 `ferror`를 사용하여 오류를 확인할 수 있습니다. `stream`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EOF`을 반환합니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [\_doserrno, errno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+ 이러한 오류 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## 설명  
- `_putw`함수는 형식 `int`의 바이너리 값을 스트림 내 항목의 정렬에 영향을 미치지 못하며, 모든 특정한 정렬을 나타내지 못하는 *stream.* `_putw`의 현재 위치에 씁니다.  `_putw`는 주로 이전 라이브러리와의 호환성을 위합니다.  `int`의 크기와 `int`안의 바이트 정렬이 교차 시스템과 다르기 때문에, 이동성 문제가 `_putw`를 사용하여 발생할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `_putw` 함수는 *스트림*의 현재 위치에 `int` 형식의 이진값을 씁니다. `_putw`는 스트림의 항목 정렬에 영향을 주지 않으며 특수한 정렬을 사용하지도 않습니다. `_putw`는 주로 이전 라이브러리와의 호환성을 위해 사용됩니다. 시스템마다 `_putw`의 크기와 `int` 내의 바이트 순서가 다르기 때문에 `int`에 이동성 문제가 발생할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_putw`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_putw`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_putw.c  
@@ -113,15 +129,15 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Wrote ten words  
 ```  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_getw](../../c-runtime-library/reference/getw.md)
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_getw](../../c-runtime-library/reference/getw.md)

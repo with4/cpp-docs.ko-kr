@@ -1,86 +1,384 @@
 ---
-title: "fpos 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.fpos"
-  - "std::fpos"
-  - "iosfwd/std::fpos"
-  - "fpos"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fpos 클래스"
-  - "fpos 클래스, fpos 클래스 정보"
+title: "fpos 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.fpos
+- std::fpos
+- iosfwd/std::fpos
+- fpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpos class, about fpos class
+- fpos class
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# fpos 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
+ms.openlocfilehash: 35d52be41d8d8ac113d15e78196b30a02aacb415
+ms.lasthandoff: 02/24/2017
 
-이 템플릿 클래스는 스트림 내의 임의 파일 위치 표시기를 복원하는 데 필요한 모든 정보를 저장할 수 있는 개체를 설명합니다.  fpos\<**St**\> 클래스의 개체는 적어도 다음 두 개의 멤버 개체를 효과적으로 저장합니다.  
+---
+# <a name="fpos-class"></a>fpos 클래스
+이 템플릿 클래스는 스트림 내의 임의 파일 위치 표시기를 복원하는 데 필요한 모든 정보를 저장할 수 있는 개체를 설명합니다. fpos\< **St**> 클래스의 개체는 적어도 다음 두 개의 멤버 개체를 효과적으로 저장합니다.  
   
--   [streamoff](../Topic/streamoff.md) 형식의 바이트 오프셋  
+-   [streamoff](../standard-library/ios-typedefs.md#streamoff) 형식의 바이트 오프셋  
   
--   basic\_filebuf 클래스의 개체에서 사용하기 위한 **St** 형식의 변환 상태\(일반적으로 `mbstate_t`\)  
+-   basic_filebuf 클래스의 개체에서 사용하기 위한 **St** 형식의 변환 상태(일반적으로 `mbstate_t`)  
   
- [basic\_filebuf](../standard-library/basic-filebuf-class.md) 클래스의 개체에서 사용하기 위한 `fpos_t` 형식의 임의 파일 위치를 저장할 수도 있습니다.  그러나 파일 크기가 제한된 환경에서는 `streamoff`와 `fpos_t`를 바꿔서 사용할 수 있는 경우도 있습니다.  상태 종속적 인코딩을 포함하는 스트림이 없는 환경에서는 `mbstate_t`가 실제로 사용되지 않을 수 있습니다.  따라서 저장되는 멤버 개체 수는 경우에 따라 다를 수 있습니다.  
+ [basic_filebuf](../standard-library/basic-filebuf-class.md) 클래스의 개체에서 사용하기 위한 `fpos_t` 형식의 임의 파일 위치를 저장할 수도 있습니다. 그러나 파일 크기가 제한된 환경에서는 `streamoff`와 `fpos_t`를 바꿔서 사용할 수 있는 경우도 있습니다. 상태 종속적 인코딩을 포함하는 스트림이 없는 환경에서는 `mbstate_t`가 실제로 사용되지 않을 수 있습니다. 따라서 저장되는 멤버 개체 수는 경우에 따라 다를 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-     template <class   
-     Statetype  
-     >  
+template <class Statetype>  
 class fpos  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *Statetype*  
  상태 정보입니다.  
   
-### 생성자  
+### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[fpos](../Topic/fpos::fpos.md)|스트림 내의 위치\(오프셋\)에 대한 정보를 포함하는 개체를 만듭니다.|  
+|[fpos](#fpos__fpos)|스트림 내의 위치(오프셋)에 대한 정보를 포함하는 개체를 만듭니다.|  
   
-### 멤버 함수  
-  
-|||  
-|-|-|  
-|[seekpos](../Topic/fpos::seekpos.md)|표준 C\+\+ 라이브러리에서만 내부적으로 사용됩니다.  사용자 코드에서 이 메서드를 호출하지 마세요.|  
-|[state](../Topic/fpos::state.md)|변환 상태를 설정하거나 반환합니다.|  
-  
-### 연산자  
+### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/fpos::operator!=.md)|파일 위치 표시기가 같지 않은지 테스트합니다.|  
-|[operator \+](../Topic/fpos::operator+.md)|파일 위치 표시기를 증가시킵니다.|  
-|[operator \+\=](../Topic/fpos::operator+=.md)|파일 위치 표시기를 증가시킵니다.|  
-|[연산자\-](../Topic/fpos::operator-.md)|파일 위치 표시기를 감소시킵니다.|  
-|[연산자\-\=](../Topic/fpos::operator-=.md)|파일 위치 표시기를 감소시킵니다.|  
-|[operator\=\=](../Topic/fpos::operator==.md)|파일 위치 표시기가 같은지 테스트합니다.|  
-|[operator streamoff](../Topic/fpos::operator%20streamoff.md)|`fpos` 형식의 개체를 `streamoff` 형식의 개체로 캐스팅합니다.|  
+|[seekpos](#fpos__seekpos)|C++ 표준 라이브러리에서만 내부적으로 사용됩니다. 사용자 코드에서 이 메서드를 호출하지 마세요.|  
+|[state](#fpos__state)|변환 상태를 설정하거나 반환합니다.|  
   
-## 요구 사항  
- **헤더:** \<ios\>  
+### <a name="operators"></a>연산자  
+  
+|||  
+|-|-|  
+|[operator!=](#fpos__operator_neq)|파일 위치 표시기가 같지 않은지 테스트합니다.|  
+|[operator+](#fpos__operator_add)|파일 위치 표시기를 증가시킵니다.|  
+|[operator+=](#fpos__operator_add_eq)|파일 위치 표시기를 증가시킵니다.|  
+|[operator-](#fpos__operator-)|파일 위치 표시기를 감소시킵니다.|  
+|[operator-=](#fpos__operator-_eq)|파일 위치 표시기를 감소시킵니다.|  
+|[operator==](#fpos__operator_eq_eq)|파일 위치 표시기가 같은지 테스트합니다.|  
+|[operator streamoff](#fpos__operator_streamoff)|`fpos` 형식의 개체를 `streamoff` 형식의 개체로 캐스팅합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<ios>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+##  <a name="a-namefposfposa--fposfpos"></a><a name="fpos__fpos"></a>  fpos::fpos  
+ 스트림 내의 위치(오프셋)에 대한 정보를 포함하는 개체를 만듭니다.  
+  
+```  
+fpos(streamoff _Off = 0);
+
+fpos(Statetype _State, fpos_t _Filepos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Off`  
+ 스트림에 대한 오프셋입니다.  
+  
+ `_State`  
+ `fpos` 개체의 시작 상태입니다.  
+  
+ *_Filepos*  
+ 스트림에 대한 오프셋입니다.  
+  
+### <a name="remarks"></a>설명  
+ 첫 번째 생성자는 파일의 시작 위치를 기준으로 초기 변환 상태에서 오프셋 `_Off`를 저장합니다(문제가 되는 경우) `_Off`가 -1이면 결과 개체는 잘못된 스트림 위치를 나타냅니다.  
+  
+ 두 번째 생성자는&0; 오프셋 및 개체 `_State`를 저장합니다.  
+  
+##  <a name="a-namefposoperatorneqa--fposoperator"></a><a name="fpos__operator_neq"></a>  fpos::operator!=  
+ 파일 위치 표시기가 같지 않은지 테스트합니다.  
+  
+```  
+bool operator!=(const fpos<Statetype>& right) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 비교할 파일 위치 표시기입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 파일 위치 표시기가 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ 이 멤버 함수는 **!**(**\*this ==** ` right`)을 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// fpos_op_neq.cpp  
+// compile with: /EHsc  
+#include <fstream>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   fpos<int> pos1, pos2;  
+   ifstream file;  
+   char c;  
+  
+   // Compare two fpos object  
+   if ( pos1 != pos2 )  
+      cout << "File position pos1 and pos2 are not equal" << endl;  
+   else  
+      cout << "File position pos1 and pos2 are equal" << endl;  
+  
+   file.open( "fpos_op_neq.txt" );  
+   file.seekg( 0 );   // Goes to a zero-based position in the file  
+   pos1 = file.tellg( );  
+   file.get( c);  
+   cout << c << endl;  
+  
+   // Increment pos1  
+   pos1 += 1;  
+   file.get( c );  
+   cout << c << endl;  
+  
+   pos1 = file.tellg( ) - fpos<int>( 2);  
+   file.seekg( pos1 );  
+   file.get( c );  
+   cout << c << endl;  
+  
+   // Increment pos1  
+   pos1 = pos1 + fpos<int>( 1 );  
+   file.get(c);  
+   cout << c << endl;  
+  
+   pos1 -= fpos<int>( 2 );  
+   file.seekg( pos1 );  
+   file.get( c );  
+   cout << c << endl;  
+  
+   file.close( );  
+}  
+```  
+  
+##  <a name="a-namefposoperatoradda--fposoperator"></a><a name="fpos__operator_add"></a>  fpos::operator+  
+ 파일 위치 표시기를 증가시킵니다.  
+  
+```  
+fpos<Statetype> operator+(streamoff _Off) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Off`  
+ 파일 위치 표시기를 증분시킬 기준 오프셋입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 파일 내 위치입니다.  
+  
+### <a name="remarks"></a>설명  
+ 이 멤버 함수는 **fpos(\*this) +=** `_Off`를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  `operator+` 사용에 대한 샘플은 [operator!=](#fpos__operator_neq)을 참조하세요.  
+  
+##  <a name="a-namefposoperatoraddeqa--fposoperator"></a><a name="fpos__operator_add_eq"></a>  fpos::operator+=  
+ 파일 위치 표시기를 증가시킵니다.  
+  
+```  
+fpos<Statetype>& operator+=(streamoff _Off);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Off`  
+ 파일 위치 표시기를 증분시킬 기준 오프셋입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 파일 내 위치입니다.  
+  
+### <a name="remarks"></a>설명  
+ 이 멤버 함수는 `_Off`를 저장된 오프셋 멤버 개체에 추가하고 **\*this**를 반환합니다. 파일 내 위치를 지정할 경우 결과는 일반적으로 상태 종속적 인코딩이 없는 이진 스트림의 경우에만 유효합니다.  
+  
+### <a name="example"></a>예제  
+  `operator+=` 사용에 대한 샘플은 [operator!=](#fpos__operator_neq)을 참조하세요.  
+  
+##  <a name="a-namefposoperator-a--fposoperator-"></a><a name="fpos__operator-"></a>  fpos::operator-  
+ 파일 위치 표시기를 감소시킵니다.  
+  
+```  
+streamoff operator-(const fpos<Statetype>& right) const;
+ 
+fpos<Statetype> operator-(streamoff _Off) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 파일 위치입니다.  
+  
+ `_Off`  
+ 스트림 오프셋입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 첫 번째 멤버 함수는 **(streamoff)\*this - (streamoff)**` right`를 반환합니다. 두 번째 멤버 함수는 **fpos(\*this) -=** `_Off`를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  `operator-` 사용에 대한 샘플은 [operator!=](#fpos__operator_neq)을 참조하세요.  
+  
+##  <a name="a-namefposoperator-eqa--fposoperator-"></a><a name="fpos__operator-_eq"></a>  fpos::operator-=  
+ 파일 위치 표시기를 감소시킵니다.  
+  
+```  
+fpos<Statetype>& operator-=(streamoff _Off);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Off`  
+ 스트림 오프셋입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 이 멤버 함수는 **fpos(\*this) -=** `_Off`를 반환합니다.  
+  
+### <a name="remarks"></a>설명  
+ 파일 내 위치를 지정할 경우 결과는 일반적으로 상태 종속적 인코딩이 없는 이진 스트림의 경우에만 유효합니다.  
+  
+### <a name="example"></a>예제  
+  `operator-=` 사용에 대한 샘플은 [operator!=](#fpos__operator_neq)을 참조하세요.  
+  
+##  <a name="a-namefposoperatoreqeqa--fposoperator"></a><a name="fpos__operator_eq_eq"></a>  fpos::operator==  
+ 파일 위치 표시기가 같은지 테스트합니다.  
+  
+```  
+bool operator==(const fpos<Statetype>& right) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 비교할 파일 위치 표시기입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 파일 위치 표시기가 같으면 **true**이고, 그렇지 않으면 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ 이 멤버 함수는 **(streamoff)\*this == (streamoff)**` right`를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  `operator+=` 사용에 대한 샘플은 [operator!=](#fpos__operator_neq)을 참조하세요.  
+  
+##  <a name="a-namefposoperatorstreamoffa--fposoperator-streamoff"></a><a name="fpos__operator_streamoff"></a>  fpos::operator streamoff  
+ `fpos` 형식 개체를 `streamoff` 형식 개체로 캐스트합니다.  
+  
+```  
+operator streamoff() const;
+```  
+  
+### <a name="remarks"></a>설명  
+ 이 멤버 함수는 저장된 오프셋 멤버 개체와 `fpos_t` 멤버 개체의 일부로 저장된 모든 추가 오프셋을 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// fpos_op_streampos.cpp  
+// compile with: /EHsc  
+#include <ios>  
+#include <iostream>  
+#include <fstream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   streamoff s;  
+   ofstream file( "rdbuf.txt");  
+  
+   fpos<mbstate_t> f = file.tellp( );  
+   // Is equivalent to ..  
+   // streampos f = file.tellp( );  
+   s = f;  
+   cout << s << endl;  
+}  
+```  
+  
+```Output  
+0  
+```  
+  
+##  <a name="a-namefposseekposa--fposseekpos"></a><a name="fpos__seekpos"></a>  fpos::seekpos  
+ 이 메서드는 C++ 표준 라이브러리에서만 내부적으로 사용됩니다. 사용자 코드에서 이 메서드를 호출하지 마세요.  
+  
+```  
+fpos_t seekpos() const;
+```  
+  
+##  <a name="a-namefposstatea--fposstate"></a><a name="fpos__state"></a>  fpos::state  
+ 변환 상태를 설정하거나 반환합니다.  
+  
+```  
+Statetype state() const;
+
+void state(Statetype _State);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_State`  
+ 새로운 변환 상태입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 변환 상태입니다.  
+  
+### <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 **St** 멤버 개체에 저장된 값을 반환합니다. 두 번째 멤버 함수는 `_State`를 **St** 멤버 개체에 저장합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// fpos_state.cpp  
+// compile with: /EHsc  
+#include <ios>  
+#include <iostream>  
+#include <fstream>  
+  
+int main() {  
+   using namespace std;  
+   streamoff s;  
+   ifstream file( "fpos_state.txt" );  
+  
+   fpos<mbstate_t> f = file.tellg( );  
+   char ch;  
+   while ( !file.eof( ) )  
+      file.get( ch );  
+   s = f;  
+   cout << f.state( ) << endl;  
+   f.state( 9 );  
+   cout << f.state( ) << endl;  
+}  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 프로그래밍](../standard-library/iostream-programming.md)   
  [iostreams 규칙](../standard-library/iostreams-conventions.md)
+
+

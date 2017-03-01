@@ -1,36 +1,54 @@
 ---
-title: "What a Stream Is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터[C++], 읽기"
-  - "데이터 읽기[C++], iostream 프로그래밍"
-  - "스트림[C++]"
-  - "스트림[C++], iostream 클래스"
+title: "스트림이란 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], iostream programming
+- data [C++], reading
+- streams [C++], in iostream classes
+- streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# What a Stream Is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 75c23582cbbb42a417a7a5effdb879300c2a7732
+ms.lasthandoff: 02/24/2017
 
-Like C, C\+\+ does not have built\-in input\/output capability.  All C\+\+ compilers, however, come bundled with a systematic, object\-oriented I\/O package, known as the iostream classes.  The stream is the central concept of the iostream classes.  You can think of a stream object as a smart file that acts as a source and destination for bytes.  A stream's characteristics are determined by its class and by customized insertion and extraction operators.  
+---
+# <a name="what-a-stream-is"></a>What a Stream Is
+C++에도 C와 마찬가지로 기본 제공 입력/출력 기능은 없습니다. 하지만, 모든 C++ 컴파일러는 iostream class라고 알려진 체계적이고 객체지향화된 I/O 패키지를 번들로(기본으로) 제공합니다. 스트림은 iostream 클래스의 중요 컨셉입니다. 스트림 객체는 Byte 데이터에 대한 원본과 대상의 역할을 하는 스마트 파일로 간주하면 됩니다. 스크림의 형질(특성)은 클래스 자체와 삽입(Insertion)과 추출(Extraction) 연산자에 의해 커스터마이징됨으로서 결정됩니다.  
   
- Through device drivers, the disk operating system deals with the keyboard, screen, printer, and communication ports as extended files.  The iostream classes interact with these extended files.  Built\-in classes support reading from and writing to memory with syntax identical to that for disk I\/O, which makes it easy to derive stream classes.  
+ 디스크 운영 시스템은 장치 드라이버를 통해, 키보드, 스크린, 프린터 그리고 통신 포트를 마치 확장된 파일인 것 처럼 처리합니다. Iostream 클래스는 이 다수의 확장된 파일과 상호 작용합니다. 내장 클래스들은 Disk I/O와 동일한 Syntax를 이용하여 메모리로부터 읽기와 쓰기를 지원하므로, 스트림 클래스들을 파생하기가 한결 쉬워집니다.  
   
-## 단원 내용  
- [입력\/출력 대체](../standard-library/input-output-alternatives.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [입력/출력 대체](../standard-library/input-output-alternatives.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [iostream 프로그래밍](../standard-library/iostream-programming.md)
+
+
