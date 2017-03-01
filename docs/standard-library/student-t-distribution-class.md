@@ -1,83 +1,103 @@
 ---
 title: "student_t_distribution 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::student_t_distribution"
-  - "tr1::student_t_distribution"
-  - "std.tr1.student_t_distribution"
-  - "random/std::tr1::student_t_distribution"
-  - "tr1.student_t_distribution"
-  - "student_t_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "student_t_distribution 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- student_t_distribution
+- std::student_t_distribution
+- random/std::student_t_distribution
+- random/std::student_t_distribution::result_type
+- random/std::student_t_distribution::reset
+- random/std::student_t_distribution::operator()
+- random/std::student_t_distribution::n
+- random/std::student_t_distribution::param
+- random/std::student_t_distribution::min
+- random/std::student_t_distribution::max
+dev_langs:
+- C++
+helpviewer_keywords:
+- student_t_distribution class
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# student_t_distribution 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 61781e74ed9cc5424255b8697800000f8de5eb30
+ms.lasthandoff: 02/24/2017
 
-스튜던트 *t* 분포를 생성합니다.  
+---
+# <a name="studenttdistribution-class"></a>student_t_distribution 클래스
+Student의 *t* 분포를 생성합니다.  
   
-## 구문  
-  
+## <a name="syntax"></a>구문  
 ```  
-template<class RealType = double>  
-class student_t_distribution  
-{  
+template<class RealType = double>
+class student_t_distribution {  
 public:  
-    // types  
-    typedef RealType result_type;  
-    struct param_type;  
-    // constructor and reset functions  
-    explicit student_t_distribution(RealType n = 1.0);  
-    explicit student_t_distribution(const param_type& parm);  
-    void reset();  
-    // generating functions  
-    template<class URNG>  
-    result_type operator()(URNG& gen);  
-    template<class URNG>  
-    result_type operator()(URNG& gen, const param_type& parm);  
-    // property functions  
-    RealType n() const;  
-    param_type param() const;  
-    void param(const param_type& parm);  
-    result_type min() const;  
-    result_type max() const;  
-};  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructor and reset functions  
+   explicit student_t_distribution(result_type n = 1.0);
+   explicit student_t_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type n() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>매개 변수  
+*RealType*  
+ 부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-#### 매개 변수  
- `RealType`  
- 부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식에 대 한 참조 [\<random\>](../standard-library/random.md)합니다.  
-  
-## 설명  
- 스튜던트 *t* 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>설명  
+ Student의 *t* 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
   
 ||||  
 |-|-|-|  
-|[student\_t\_distribution::student\_t\_distribution](../Topic/student_t_distribution::student_t_distribution.md)|`student_t_distribution::n`|`student_t_distribution::param`|  
-|`student_t_distribution::operator()`||[student\_t\_distribution::param\_type](../Topic/student_t_distribution::param_type.md)|  
+|[student_t_distribution::student_t_distribution](#student_t_distribution__student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
+|`student_t_distribution::operator()`||[student_t_distribution::param_type](#student_t_distribution__param_type)|  
   
  속성 함수 `n()`은 저장된 분포 매개 변수 `n`의 값을 반환합니다.  
   
- 배포 클래스 및 해당 멤버에 대 한 자세한 내용은 참조 [\<random\>](../standard-library/random.md)합니다.  
+ 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
- 학생의에 대 한 자세한 내용은 *t*\-분포를 Wolfram MathWorld 문서를 참조 하십시오. [스튜던트 t 분포](http://go.microsoft.com/fwlink/?LinkId=401094)합니다.  
+ Student의 *t* 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Student의 t 분포](http://go.microsoft.com/fwlink/LinkId=401094)를 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -129,36 +149,84 @@ int main()
   
     test(n_dist, samples);  
 }  
-  
 ```  
   
-## 출력  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:  -1.3084956212  
-          2:  -1.0899518684  
-          3:  -0.9568771388  
-          4:  -0.9372088821  
-          5:  -0.7381334669  
-          6:  -0.2488074854  
-          7:  -0.2028714601  
-          8:   1.4013074495  
-          9:   5.3244792236  
-         10:  92.7084335614  
+    1: -1.3084956212  
+    2: -1.0899518684  
+    3: -0.9568771388  
+    4: -0.9372088821  
+    5: -0.7381334669  
+    6: -0.2488074854  
+    7: -0.2028714601  
+    8: 1.4013074495  
+    9: 5.3244792236  
+    10: 92.7084335614  
 ```  
   
-## 요구 사항  
- **헤더:** \<random\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<random>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namestudenttdistributionstudenttdistributiona--studenttdistributionstudenttdistribution"></a><a name="student_t_distribution__student_t_distribution"></a>  student_t_distribution::student_t_distribution  
+ 분포를 생성합니다.  
+  
+```  
+explicit student_t_distribution(RealType n = 1.0);
+explicit student_t_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+*n*  
+ `n` 분포 매개 변수입니다.  
+  
+*parm*  
+ 분포를 생성하는 데 사용되는 매개 변수 패키지입니다.  
+  
+### <a name="remarks"></a>설명  
+ **사전 조건:** `0.0 < n`  
+  
+ 첫 번째 생성자는 저장된 `n` 값이 *n* 값을 갖는 개체를 생성합니다.  
+  
+ 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+  
+##  <a name="a-namestudenttdistributionparamtypea--studenttdistributionparamtype"></a><a name="student_t_distribution__param_type"></a>  student_t_distribution::param_type  
+ 분포의 모든 매개 변수를 저장합니다.  
+```cpp    
+struct param_type {  
+   typedef student_t_distribution<result_type> distribution_type;  
+   param_type(result_type n = 1.0);
+   result_type n() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+*n*  
+`n` 분포 매개 변수입니다.  
+  
+*right*  
+이 매개 변수와 비교할 `param_type` 개체입니다.  
+  
+### <a name="remarks"></a>설명  
+ **사전 조건:** `0.0 < n`  
+  
+ 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [\<random>](../standard-library/random.md)
+
+
+
+

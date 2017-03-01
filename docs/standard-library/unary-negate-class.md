@@ -1,71 +1,81 @@
 ---
 title: "unary_negate 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unary_negate"
-  - "std::unary_negate"
-  - "std.unary_negate"
-  - "xfunctional/std::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unary_negate
+- std::unary_negate
+- std.unary_negate
+- xfunctional/std::unary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_negate 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
+ms.lasthandoff: 02/24/2017
 
-지정된 단항 함수의 반환 값을 무효화하는 멤버 함수를 제공하는 템플릿 클래스.  
+---
+# <a name="unarynegate-class"></a>unary_negate 클래스
+지정된 단항 함수의 반환 값을 부정하는 멤버 함수를 제공하는 템플릿 클래스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class Predicate>
+class unary_negate
+    : public unaryFunction<typename Predicate::argument_type, bool>
+{
+public:
+    explicit unary_negate(const Predicate& Func);
+    bool operator()(const typename Predicate::argument_type& left) const;
+};
 ```  
   
-   template<class Predicate>  
-class unary_negate  
-   : public unary_function<  
-      typename Predicate::argument_type,  
-      bool>   
-{  
-public:  
-explicit unary_negate(  
-   const Predicate& _Func  
-);  
-bool operator()(  
-   const typename Predicate::argument_type& _Left ) const;  
-};  
-```  
+#### <a name="parameters"></a>매개 변수  
+ `Func`  
+ 부정할 단항 함수입니다.  
   
-#### 매개 변수  
- `_Func`  
- The unary function to be negated.  
+ `left`  
+ 부정할 단항 함수의 피연산자입니다.  
   
- `_Left`  
- The operand of the unary function to be negated.  
+## <a name="return-value"></a>반환 값  
+ 단항 함수의 부정  
   
-## 반환 값  
- The negation of the unary function.  
+## <a name="remarks"></a>설명  
+ 템플릿 클래스는 단항 함수 개체 function object _ *Func*의 복사본을 저장합니다. 그리고 **!**\_를 반환하도록 해당 구성원 함수 `operator()`를 정의합니다. *Func(left).*  
   
-## 설명  
- The template class stores a copy of a unary function object \_*Func.* It defines its member function `operator()` as returning **\!**\_*Func\(\_Left\).*  
+ `unary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. 도우미 함수 [not1](../standard-library/functional-functions.md#not1_function)을 사용하면 **unary_negator** 어댑터 조건자를 보다 쉽게 선언하고 사용할 수 있습니다.  
   
- The constructor of `unary_negate` is rarely used directly.  The helper function [not1](../Topic/not1%20Function.md) provides an easier way to declare and use the **unary\_negator** adaptor predicate.  
+## <a name="example"></a>예제  
   
-## 예제  
-  
-```  
+```cpp  
 // functional_unary_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -108,16 +118,22 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 30 35 )  
+The number of elements in v1 greater than 10 is: 5.  
+The number of elements in v1 not greater than 10 is: 3.  
+*/  
 ```  
   
-  **The vector v1 \= \( 0 5 10 15 20 25 30 35 \)**  
-**The number of elements in v1 greater than 10 is: 5.**  
-**The number of elements in v1 not greater than 10 is: 3.**   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

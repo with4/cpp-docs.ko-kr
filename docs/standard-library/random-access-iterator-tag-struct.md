@@ -1,51 +1,65 @@
 ---
 title: "random_access_iterator_tag 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xutility/std::random_access_iterator_tag"
-  - "random_access_iterator_tag"
-  - "std.random_access_iterator_tag"
-  - "std::random_access_iterator_tag"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "random_access_iterator_tag 클래스"
-  - "random_access_iterator_tag 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xutility/std::random_access_iterator_tag
+- random_access_iterator_tag
+- std.random_access_iterator_tag
+- std::random_access_iterator_tag
+dev_langs:
+- C++
+helpviewer_keywords:
+- random_access_iterator_tag class
+- random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# random_access_iterator_tag 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 394b40a61a8404d65555680ce110f8f3b3a9fae0
+ms.lasthandoff: 02/24/2017
 
-임의 액세스 반복기를 나타내는 **iterator category** 함수에 반환 형식을 제공하는 클래스입니다.  
+---
+# <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 구조체
+임의 액세스 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 ```  
   
-   struct random_access_iterator_tag  
-: public bidirectional_iterator_tag {};  
-```  
+## <a name="remarks"></a>설명  
+ 범주 태그 클래스는 알고리즘 선택을 위한 컴파일 태그로 사용됩니다. 템플릿 함수는 컴파일 시간에서 가장 효율적인 알고리즘을 사용할 수 있도록 해당 반복기 인수의 가장 구체적인 범주를 찾아야 합니다. `Iterator` 형식의 모든 반복기에 대해 `iterator_traits`< `Iterator`> **::iterator_category**는 반복기 동작을 설명하는 가장 구체적인 범주 태그로 정의되어야 합니다.  
   
-## 설명  
- The category tag classes are used as compile tags for algorithm selection.  The template function needs to find the most specific category of its iterator argument so that it can use the most efficient algorithm at compile time.  For every iterator of type `Iterator`, `iterator_traits`\<`Iterator`\>**::iterator\_category** must be defined to be the most specific category tag that describes the iterator's behavior.  
+ **Iter**가 임의 액세스 반복기로 사용될 수 있는 개체를 설명할 경우 형식은 **iterator**\< **Iter**> **::iterator_category**와 같습니다.  
   
- The type is the same as **iterator**\<**Iter**\>**::iterator\_category** when **Iter** describes an object that can serve as a random\-access iterator.  
+## <a name="example"></a>예제  
   
-## 예제  
-  
-```  
+```cpp  
 // iterator_rait.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -92,28 +106,32 @@ int main( )
 }  
 ```  
   
-## 샘플 출력  
- x86으로 다음 출력이 생성됩니다.  
+## <a name="sample-output"></a>샘플 출력  
+ x86의 경우 다음과 같이 출력됩니다.  
   
+```
+The type of iterator for vector<int> is identified by the tag:
+    struct std::random_access_iterator_tag
+The type of iterator for vector<char> is identified by the tag:
+    struct std::random_access_iterator_tag
+The iterators are the same.
+
+The type of iterator for list<char> is identified by the tag:
+    struct std::bidirectional_iterator_tag
+The iterators are not the same.
+0012FF3B
 ```  
-The type of iterator for vector<int> is identified by the tag:  
- struct std::random_access_iterator_tag  
-The type of iterator for vector<char> is identified by the tag:  
- struct std::random_access_iterator_tag  
-The iterators are the same.  
   
-The type of iterator for list<char> is identified by the tag:  
- struct std::bidirectional_iterator_tag  
-The iterators are not the same.  
-0012FF3B  
-```  
-  
-## 요구 사항  
- **헤더:** \<iterator\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<iterator>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [bidirectional\_iterator\_tag 구조체](../standard-library/bidirectional-iterator-tag-struct.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [bidirectional_iterator_tag 구조체](../standard-library/bidirectional-iterator-tag-struct.md)   
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

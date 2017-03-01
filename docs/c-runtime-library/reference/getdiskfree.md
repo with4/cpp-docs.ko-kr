@@ -1,55 +1,71 @@
 ---
-title: "_getdiskfree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdiskfree"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdiskfree"
-  - "_getdiskfree"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_diskfree_t 형식"
-  - "_getdiskfree 함수"
-  - "디스크 크기"
-  - "diskfree_t 형식"
-  - "getdiskfree 함수"
+title: "_getdiskfree | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdiskfree
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdiskfree
+- _getdiskfree
+dev_langs:
+- C++
+helpviewer_keywords:
+- diskfree_t type
+- _getdiskfree function
+- _diskfree_t type
+- disk size
+- getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _getdiskfree
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5d4d3fea944955b75002e88e3692d42954612a3a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getdiskfree"></a>_getdiskfree
 디스크 드라이브에 대한 정보를 사용하여 `_diskfree_t` 구조체를 채웁니다.  
   
 > [!IMPORTANT]
->  이 API는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  자세한 내용은 [CRT 함수는 \/ZW 옵션을 지원하지 않음](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)을 참조하세요.  
+>  이 API는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 unsigned _getdiskfree(  
@@ -58,17 +74,17 @@ unsigned _getdiskfree(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `drive`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `drive`  
  정보를 표시할 디스크 드라이브입니다.  
   
- \[out\] `driveinfo`  
+ [out] `driveinfo`  
  드라이브에 대한 정보로 채워질 `_diskfree_t` 구조체입니다.  
   
-## 반환 값  
- 함수가 성공할 경우 반환 값은 0입니다.  함수가 실패할 경우 반환 값은 오류 코드입니다.  운영 체제에서 반환되는 모든 오류에 대해 `errno` 값이 설정됩니다.  `errno`에 의해 표시되는 오류 조건에 대한 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요.  
+## <a name="return-value"></a>반환 값  
+ 함수가 성공할 경우 반환 값은&0;입니다. 함수가 실패할 경우 반환 값은 오류 코드입니다. 운영 체제에서 반환되는 모든 오류에 대해 `errno` 값이 설정됩니다. `errno`에 의해 표시되는 오류 조건에 대한 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `_diskfree_t` 구조체는 Direct.h에 정의되어 있습니다.  
   
 ```  
@@ -80,7 +96,7 @@ struct _diskfree_t {
 };  
 ```  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.  `driveinfo` 포인터가 `NULL`인 경우 또는 `drive`가 잘못된 드라이브를 지정하는 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우 함수가 `EINVAL`를 반환하며 `errno`를 `EINVAL`로 설정합니다.  올바른 드라이브의 범위는 0에서 26 사이입니다.  `drive` 값 0은 현재 드라이브를 지정합니다. 따라서 1이 드라이브 A, 3이 드라이브 C 등을 가리키는 것과 같이 숫자가 영어 알파벳 문자에 매핑됩니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `driveinfo` 포인터가 `NULL`인 경우 또는 `drive`가 잘못된 드라이브를 지정하는 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 함수가 `EINVAL`를 반환하며 `errno`를 `EINVAL`로 설정합니다. 올바른 드라이브의 범위는 0에서 26 사이입니다. `drive` 값 0은 현재 드라이브를 지정합니다. 따라서 1이 드라이브 A, 3이 드라이브 C 등을 가리키는 것과 같이 숫자가 영어 알파벳 문자에 매핑됩니다.  
   
  `total_clusters`  
  디스크에서 사용된 클러스터와 사용 가능한 클러스터의 총 수입니다.  
@@ -92,20 +108,21 @@ struct _diskfree_t {
  각 클러스터의 섹터 수입니다.  
   
  `bytes_per_sector`  
- 각 섹터의 크기\(바이트\)입니다.  
+ 각 섹터의 크기(바이트)입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_getdiskfree`|\<direct.h\>|  
+|-------------|---------------------|  
+|`_getdiskfree`|\<direct.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
-// crt_getdiskfree.c  
+  
+      // crt_getdiskfree.c  
 // compile with: /c  
 #include <windows.h>  
 #include <direct.h>  
@@ -193,16 +210,19 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 }  
 ```  
   
-  **\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**  
-**&#124;DRIVE&#124;TOTAL CLUSTERS&#124;AVAIL CLUSTERS&#124;SECTORS \/ CLUSTER&#124;BYTES \/ SECTOR&#124;**  
-**&#124;\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;**  
-**&#124;  A: &#124; The device is not ready.  &#124;                 &#124;              &#124;**  
-**&#124;  C: &#124;    4,721,093 &#124;    3,778,303 &#124;               8 &#124;          512 &#124;**  
-**&#124;  D: &#124;    1,956,097 &#124;    1,800,761 &#124;               8 &#124;          512 &#124;**  
-**&#124;  E: &#124; The device is not ready.  &#124;                 &#124;              &#124;**  
-**\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**    
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하세요.  
+```Output  
+======================================================================  
+|DRIVE|TOTAL CLUSTERS|AVAIL CLUSTERS|SECTORS / CLUSTER|BYTES / SECTOR|  
+|=====|==============|==============|=================|==============|  
+|  A: | The device is not ready.    |                 |              |  
+|  C: |    4,721,093 |    3,778,303 |               8 |          512 |  
+|  D: |    1,956,097 |    1,800,761 |               8 |          512 |  
+|  E: | The device is not ready.    |                 |              |  
+======================================================================  
+```  
   
-## 참고 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
  [디렉터리 제어](../../c-runtime-library/directory-control.md)

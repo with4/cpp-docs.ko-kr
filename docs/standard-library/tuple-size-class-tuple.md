@@ -1,68 +1,114 @@
 ---
-title: "tuple_size 클래스 &lt;tuple&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tuple_size"
-  - "std::tr1::tuple_size"
-  - "std.tr1.tuple_size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tuple_size 클래스 <tuple> (TR1)"
+title: "tuple_size 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple_size
+- std::tuple_size
+- utility/std::tuple_size
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple_size Class
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# tuple_size 클래스 &lt;tuple&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.lasthandoff: 02/24/2017
 
-요소 수를 보고 하는 `tuple` 포함 합니다.  
+---
+# <a name="tuplesize-class"></a>tuple_size 클래스
+`tuple` 에 포함된 요소 수를 보관합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
 // TEMPLATE STRUCT tuple_size  
 template <class Tuple>  
-struct tuple_size;  
- 
+   struct tuple_size;  
+  
+// number of elements in array  
+template <class Elem, size_t Size>  
+   struct tuple_size<array<Elem, Size>>  
+      : integral_constant<size_t, Size>; 
+  
+// size of pair
+template <class T1, class T2>
+   struct tuple_size<pair<T1, T2>> 
+      : integral_constant<size_t, 2>
+
 // size of tuple  
 template <class... Types>  
-struct tuple_size<tuple<Types...>>  
-: integral_constant<size_t, sizeof...(Types)>;  
- 
+   struct tuple_size<tuple<Types...>>  
+      : integral_constant<size_t, sizeof...(Types)>;  
+  
 // size of const tuple  
 template <class Tuple>  
-struct tuple_size<const Tuple>;  
- 
+   struct tuple_size<const Tuple>;  
+  
 // size of volatile tuple  
 template <class Tuple>  
-struct tuple_size<volatile Tuple>;  
- 
+   struct tuple_size<volatile Tuple>;  
+  
 // size of const volatile tuple  
 template <class Tuple>  
-struct tuple_size<const volatile Tuple>;   
+   struct tuple_size<const volatile Tuple>;   
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `Tuple`  
- 튜플의 형식입니다.  
+*Tuple*  
+튜플의 형식입니다. 
   
-## <a name="remarks"></a>주의  
- 템플릿 클래스에 멤버가 `value` 즉 정수 계열 상수 식 값은 튜플 형식의 범위로 `Tuple`합니다.  
+*Elem*  
+배열 요소의 형식입니다. 
+  
+*Size*  
+배열의 크기입니다. 
+  
+*T1*  
+쌍의 첫 번째 구성원 형식입니다. 
+  
+*T2*  
+쌍의 두 번째 구성원 형식입니다. 
+  
+*유형*  
+튜플 요소의 형식입니다. 
+  
+  
+## <a name="remarks"></a>설명  
+템플릿 클래스에는 해당 값이 `value` 형식 튜플의 범위인 내부 상수 식인 `Tuple`멤버가 있습니다.  
+  
+배열의 템플릿 특수화에는 해당 값이 `value`(배열의 크기)인 정수 계열 상수 식 `Size` 구성원이 있습니다.  
+  
+쌍의 템플릿 특수화에는 해당 값이 2인 정수 계열 상수 식 `value` 구성원이 있습니다.  
   
 ## <a name="example"></a>예제  
   
-```  
+```cpp  
 #include <tuple>   
 #include <iostream>  
   
@@ -82,20 +128,21 @@ int main()
     // display size " 4"   
     cout << " " << tuple_size<MyTuple>::value << endl;  
 }  
+```  
   
-/*  
-Output:  
-0 1.5 2 3.7  
-4  
-*/  
+```Output  
+ 0 1.5 2 3.7  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \< 튜플>  
+ **헤더:** \<tuple>  
+ **헤더:** \<array>(배열 특수화용)  
+ **헤더:** \<utility>(쌍 특수화용)  
   
- **네임 스페이스:** std  
+ **네임스페이스:** std  
   
 ## <a name="see-also"></a>참고 항목  
- [\< 튜플>](../standard-library/tuple.md)   
- [튜플](../standard-library/tuple-class.md)  
+ [\<tuple>](../standard-library/tuple.md)   
+ [tuple](../standard-library/tuple-class.md)  
  [tuple_element 클래스](../standard-library/tuple-element-class-tuple.md)
+

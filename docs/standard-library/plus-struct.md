@@ -1,74 +1,87 @@
 ---
 title: "plus 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::plus"
-  - "std.plus"
-  - "plus"
-  - "std::plus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plus 클래스"
-  - "plus 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::plus
+- std.plus
+- plus
+- std::plus
+dev_langs:
+- C++
+helpviewer_keywords:
+- plus class
+- plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# plus 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
+ms.lasthandoff: 02/24/2017
 
-해당 인수에서 덧셈 연산을 \(이진 `operator+`\) 수행하는 미리 정의된 함수 개체입니다.  
+---
+# <a name="plus-struct"></a>plus 구조체
+인수에 대해 더하기 연산(이진 `operator+`)을 수행하는 미리 정의된 함수 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
-template<class Type = void>  
-   struct plus : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator+  
-template<> struct plus<void>  
-   {  
-   template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         + std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct plus : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator+
+template <>  
+struct plus<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
+ };
 ```  
   
-#### 매개 변수  
- `Type`, `Type1`, `Type2`  
- 유추 또는 지정된 형식의 피연산자를 사용하는 이진 `operator+` 를 지원하는 형식입니다.  
+#### <a name="parameters"></a>매개 변수  
+ `Type`, `T`, `U`  
+ 지정되었거나 유추된 형식의 피연산자를 가져오는 이진 `operator+`를 지원하는 형식입니다.  
   
  `Left`  
- 덧셈 연산의 왼쪽 피연산자입니다.  특수화 되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 취합니다.  특수화 되지 않은 템플릿은 암시된 `Type1` 형식의 lvalue 및 rvalue 참조 인수 형식의 전달을 완벽히 수행합니다.  
+ 더하기 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
  `Right`  
- 덧셈 연산의 오른쪽 피연산자입니다.  특수화 되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 취합니다.  특수화 되지 않은 템플릿은 암시된 `Type2` 형식의 lvalue 및 rvalue 참조 인수 형식의 전달을 완벽히 수행합니다.  
+ 더하기 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
-## 반환 값  
- `Left` `+` `Right`의 결과입니다.  특수화 된 템플릿은 이진 `operator+` 으로 반환되는 형식의 결과 전달을 완벽히 수행합니다.  
+## <a name="return-value"></a>반환 값  
+ `Left``+``Right`의 결과입니다. 특수 템플릿은 이진 `operator+`에 의해 반환되는 형식을 포함하는 결과를 완벽하게 전달합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // functional_plus.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -109,16 +122,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 4 8 12 16 20 )  
+The vector v2 = ( -4 -6 -8 -10 -12 -14 )  
+The element-wise sums are: ( -4 -2 0 2 4 6 )  
+*\  
 ```  
   
-  **벡터 v1 \= \(0 4 8 12 16 20\)**  
-**벡터 v2 \= \( \-4 \-6 \-8 \-10 \-12 \-14 \)**  
-**Element\-wise 합계는: \(\-4 0 2 4 6\-2\)**   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
