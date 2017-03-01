@@ -1,48 +1,71 @@
 ---
-title: "regex_traits &lt; char &gt; 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::regex_traits<char>"
-  - "regex_traits<char>"
-  - "std.tr1.regex_traits<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "< 문자 > regex_traits 클래스 [TR1]"
+title: "regex_traits&lt;char&gt; 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::regex_traits<char>
+- regex/std::regex_traits<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# regex_traits &lt; char &gt; 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: ccff902e47483f7f5346637e66e66cb5036d6ffb
+ms.lasthandoff: 02/24/2017
 
-char에 대한 regex\_traits의 특수화입니다.  
+---
+# <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; 클래스
+char에 대한 regex_traits의 특수화입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <>  
-    class regex_traits<char>  
+class regex_traits<char>  
 ```  
   
-## 설명  
- 클래스는 템플릿 클래스의 명시적 특수화 [regex\_traits 클래스](../standard-library/regex-traits-class.md) 형식의 요소에 대 한 `char` \(것 취할 수 있도록이 유형의 개체를 조작 하는 라이브러리 함수 사용\).  
+## <a name="remarks"></a>설명  
+ 이 클래스는 `char` 형식의 요소에 대한 템플릿 클래스 [regex_traits](../standard-library/regex-traits-class.md)의 명시적 특수화입니다(이 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있도록 함).  
   
-## 요구 사항  
- **헤더:** \<regex\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<regex>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<regex\>](../standard-library/regex.md)   
- [regex\_traits 클래스](../standard-library/regex-traits-class.md)
+## <a name="see-also"></a>참고 항목  
+[\<regex>](../standard-library/regex.md)  
+[regex_constants 클래스](../standard-library/regex-constants-class.md)  
+[regex_error 클래스](../standard-library/regex-error-class.md)  
+[\<regex> 함수](../standard-library/regex-functions.md)  
+[regex_iterator 클래스](../standard-library/regex-iterator-class.md)  
+[\<regex> 연산자](../standard-library/regex-operators.md)  
+[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
+[regex_traits 클래스](../standard-library/regex-traits-class.md)  
+[\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
+

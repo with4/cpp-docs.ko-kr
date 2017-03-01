@@ -1,86 +1,423 @@
 ---
 title: "ostream_iterator 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ostream_iterator"
-  - "std.ostream_iterator"
-  - "std::ostream_iterator"
-  - "iterator/std::ostream_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ostream_iterator 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ostream_iterator
+- std.ostream_iterator
+- std::ostream_iterator
+- iterator/std::ostream_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostream_iterator class
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# ostream_iterator 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 3542d4a47abc3616c00360f9885761d08de5e884
+ms.lasthandoff: 02/24/2017
 
-템플릿 클래스 ostream\_iterator는 연속 요소를 추출 **연산자 \<\<**가 포함된 출력 스트림에 쓰는 출력 반복기 개체에 대해 설명합니다.  
+---
+# <a name="ostreamiterator-class"></a>ostream_iterator 클래스
+템플릿 클래스 ostream_iterator는 연속 요소를 추출 **operator <<**가 포함된 출력 스트림에 쓰는 출력 반복기 개체에 대해 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class Type class CharType = char class Traits = char_traits <CharType>>  
+class ostream_iterator
 ```  
   
-      template <  
-   class Type   
-   class CharType = char  
-   class Traits = char_traits<CharType>  
->  
-class ostream_iterator  
-```  
-  
-#### 매개 변수  
- *형식*  
+#### <a name="parameters"></a>매개 변수  
+ *Type*  
  출력 스트림에 삽입될 개체의 형식입니다.  
   
  `CharType`  
- `ostream_iterator`의 문자 형식을 나타내는 형식입니다.  이 인수는 선택 사항이며 기본값은 `char`*입니다.*  
+ `ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char`입니다*.*  
   
  `Traits`  
- `ostream_iterator`의 문자 형식을 나타내는 형식입니다.  이 인수는 선택 사항이며 기본값은 `char_traits`\<*CharType\>입니다.*  
+ `ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*  
   
- ostream\_iterator 클래스는 출력 반복기에 대한 요구 사항을 충족해야 합니다.  알고리즘은 `ostream_iterator`를 사용하여 출력 스트림에 직접 쓸 수 있습니다.  
+ ostream_iterator 클래스는 출력 반복기에 대한 요구 사항을 충족해야 합니다. 알고리즘은 `ostream_iterator`를 사용하여 출력 스트림에 직접 쓸 수 있습니다.  
   
-### 생성자  
-  
-|||  
-|-|-|  
-|[ostream\_iterator](../Topic/ostream_iterator::ostream_iterator.md)|출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.|  
-  
-### 형식 정의  
+### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[char\_type](../Topic/ostream_iterator::char_type.md)|`ostream_iterator`의 문자 형식을 허용하는 형식입니다.|  
-|[ostream\_type](../Topic/ostream_iterator::ostream_type.md)|`ostream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
-|[traits\_type](../Topic/ostream_iterator::traits_type.md)|`ostream_iterator`의 특성 형식을 허용하는 형식입니다.|  
+|[ostream_iterator](#ostream_iterator__ostream_iterator)|출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.|  
   
-### 연산자  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\*](../Topic/ostream_iterator::operator*.md)|출력 반복기 식 \*`i` \= `x`을 구현하는 데 사용된 역참조 연산자.|  
-|[operator\+\+](../Topic/ostream_iterator::operator++.md)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|  
-|[operator\=](../Topic/ostream_iterator::operator=.md)|출력 스트림을 작성하기 위해 출력 반복기 식 \*`i` \= `x`을 구현하는 데 사용된 할당 연산자.|  
+|[char_type](#ostream_iterator__char_type)|`ostream_iterator`의 문자 형식을 허용하는 형식입니다.|  
+|[ostream_type](#ostream_iterator__ostream_type)|`ostream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
+|[traits_type](#ostream_iterator__traits_type)|`ostream_iterator`의 특성 형식을 허용하는 형식입니다.|  
   
-## 요구 사항  
- **헤더:** \<iterator\>  
+### <a name="operators"></a>연산자  
+  
+|||  
+|-|-|  
+|[operator*](#ostream_iterator__operator_star)|출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 역참조 연산자.|  
+|[operator++](#ostream_iterator__operator_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|  
+|[operator=](#ostream_iterator__operator_eq)|출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<iterator>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<iterator\>](../standard-library/iterator.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+##  <a name="a-nameostreamiteratorchartypea--ostreamiteratorchartype"></a><a name="ostream_iterator__char_type"></a>  ostream_iterator::char_type  
+ 반복기의 문자 형식을 제공하는 형식입니다.  
+  
+```
+typedef CharType char_type;
+```  
+  
+### <a name="remarks"></a>설명  
+ 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_char_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   typedef ostream_iterator<int>::char_type CHT1;  
+   typedef ostream_iterator<int>::traits_type CHTR1;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter:  
+    ostream_iterator<int, CHT1, CHTR1> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream:  
+   cout << "The integers written to the output stream\n"  
+        << "by intOut are:" << endl;  
+ *intOut = 10;  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+The integers written to the output stream  
+by intOut are:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatorstara--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_star"></a>  ostream_iterator::operator*  
+ 출력 반복기 식 \* *ii* = *x*를 구현하는 데 사용된 역참조 연산자.  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator*();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `ostream_iterator`에 대한 참조입니다.  
+  
+### <a name="remarks"></a>설명  
+ `ostream_iterator`가 충족해야 하는 출력 반복기에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구현에서는 구성원 연산자가 **\*this**를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_op_deref.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatoraddadda--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_add_add"></a>  ostream_iterator::operator++  
+ 연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator++();
+ostream_iterator<Type, CharType, Traits> operator++(int);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `ostream_iterator`에 대한 참조입니다.  
+  
+### <a name="remarks"></a>설명  
+ 이러한 구성원 연산자는 둘 다 **\*this**를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_op_incr.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatoreqa--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_eq"></a>  ostream_iterator::operator=  
+ 출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자입니다.  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `val`  
+ 출력 스트림에 삽입될 `Type` 형식의 개체 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 연산자는 개체와 연결된 출력 스트림에 `val`을 삽입하고 [ostream_iterator constructor](#ostream_iterator__ostream_iterator)에 지정된 구분 기호(있는 경우)를 그 뒤에 붙인 다음 `ostream_iterator`에 대한 참조를 반환합니다.  
+  
+### <a name="remarks"></a>설명  
+ `ostream_iterator`가 충족해야 하는 출력 반복기에 대한 요구 사항은 * `ii` = `t` 식만 유효해야 한다는 것과 해당 반복기 자체는 operator 또는 operator=에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구성원 연산자는 `*this`를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_op_assign.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratorostreamiteratora--ostreamiteratorostreamiterator"></a><a name="ostream_iterator__ostream_iterator"></a>  ostream_iterator::ostream_iterator  
+ 출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.  
+  
+```
+ostream_iterator(
+    ostream_type& _Ostr);
+
+ostream_iterator(
+    ostream_type& _Ostr,
+    const CharType* _Delimiter);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Ostr`  
+ 반복할 [ostream_iterator::ostream_type](#ostream_iterator__ostream_type) 형식의 출력 스트림입니다.  
+  
+ `_Delimiter`  
+ 출력 스트림에서 값 사이에 삽입되는 구분 기호입니다.  
+  
+### <a name="remarks"></a>설명  
+ 첫 번째 생성자는 `&_Ostr`로 출력 스트림 포인터를 초기화합니다. 구분 기호 문자열 포인터는 빈 문자열을 지정합니다.  
+  
+ 두 번째 생성자는 `&_Ostr`로 출력 스트림 포인터를 초기화하고 `_Delimiter`로 구분 기호 문자열 포인터를 초기화합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_ostream_iterator.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+ *intOut = 10;  
+   intOut++;  
+ *intOut = 20;  
+   intOut++;  
+  
+   int i;  
+   vector<int> vec;  
+   for ( i = 1 ; i < 7 ; ++i )  
+   {  
+      vec.push_back (  i );  
+   }  
+  
+   // Write elements to standard output stream  
+   cout << "Elements output without delimiter: ";  
+   copy ( vec.begin ( ), vec.end ( ),  
+          ostream_iterator<int> ( cout ) );  
+   cout << endl;  
+  
+   // Write elements with delimiter " : " to output stream  
+   cout << "Elements output with delimiter: ";  
+   copy ( vec.begin ( ), vec.end ( ),  
+          ostream_iterator<int> ( cout, " : " ) );  
+   cout << endl;  
+}  
+\* Output:   
+10  
+20  
+Elements output without delimiter: 123456  
+Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :   
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratorostreamtypea--ostreamiteratorostreamtype"></a><a name="ostream_iterator__ostream_type"></a>  ostream_iterator::ostream_type  
+ 반복기의 스트림 형식을 제공하는 형식입니다.  
+  
+```
+typedef basic_ostream<CharType, Traits> ostream_type;
+```  
+  
+### <a name="remarks"></a>설명  
+ 이 형식은 쓰기에 사용할 수 있는 개체를 정의하는 iostream 계층의 스트림 클래스인 [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>와 동일한 의미입니다.  
+  
+### <a name="example"></a>예제  
+  `ostream_type`을 선언하고 사용하는 방법의 예제는 [ostream_iterator](#ostream_iterator__ostream_iterator)를 참조하세요.  
+  
+##  <a name="a-nameostreamiteratortraitstypea--ostreamiteratortraitstype"></a><a name="ostream_iterator__traits_type"></a>  ostream_iterator::traits_type  
+ 반복기의 특성 형식을 제공하는 형식입니다.  
+  
+```
+typedef Traits traits_type;
+```  
+  
+### <a name="remarks"></a>설명  
+ 이 형식은 템플릿 매개 변수 **Traits**와 동일한 의미입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// ostream_iterator_traits_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // The following not OK, but are just the default values:  
+   typedef ostream_iterator<int>::char_type CHT1;  
+   typedef ostream_iterator<int>::traits_type CHTR1;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter:  
+    ostream_iterator<int, CHT1, CHTR1> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream:  
+   cout << "The integers written to output stream\n"  
+        << "by intOut are:" << endl;  
+ *intOut = 1;  
+ *intOut = 10;  
+ *intOut = 100;  
+}  
+\* Output:   
+The integers written to output stream  
+by intOut are:  
+1  
+10  
+100  
+*\  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

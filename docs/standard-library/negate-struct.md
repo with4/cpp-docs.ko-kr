@@ -1,70 +1,84 @@
 ---
 title: "negate 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "negate"
-  - "std.negate"
-  - "std::negate"
-  - "xfunctional/std::negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "negate 구조체"
-  - "negate 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- negate
+- std.negate
+- std::negate
+- xfunctional/std::negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- negate struct
+- negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# negate 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 810861f1f1343d13b5e539a1a21206a72bcb3ec1
+ms.lasthandoff: 02/24/2017
 
-해당 인수에서 산술 부정 연산을 \(단항 `operator-`\) 수행하는 미리 정의된 함수 개체입니다.  
+---
+# <a name="negate-struct"></a>negate 구조체
+인수에 대해 산술 부정 연산(단항 `operator-`)을 수행하는 미리 정의된 함수 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class Type = void>
+struct negate : public unary_function<Type, Type>  
+{
+    Type operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for unary operator-
+template <>
+struct negate<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+    -> decltype(-std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct negate : public unary_function<Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for unary operator-  
-template<>  
-   struct negate<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(-std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `Type`  
- 유추 또는 지정된 형식의 피연산자를 사용하는 `operator-` 를 지원하는 모든 형식입니다.  
+ 지정되었거나 유추된 형식의 피연산자를 사용하는 `operator-`를 지원하는 모든 형식입니다.  
   
  `Left`  
- 피연산자는 부정합니다.  특수화 되지 않은 템플릿은 암시된 `Type` 형식의 lvalue 및 rvalue 참조 인수 형식의 전달을 완벽히 수행합니다.  
+ 부정할 피연산자입니다. 특수화된 템플릿은 유추 형식 `Type`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
-## 반환 값  
- `-`   `Left.` 의 결과, 특수 템플릿은 형식은   `operator-` 단항에서 반환 되는 결과를 완벽히 전달한다.  
+## <a name="return-value"></a>반환 값  
+ `-``Left.`의 결과. 특수화된 템플릿은 단항 `operator-`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // functional_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -98,15 +112,21 @@ int main( )
       cout << *Iter2 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )  
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )  
+*\  
 ```  
   
-  **벡터 v1 1 \= \( \-10 \-5 0 5 10 15 20 25 \)**  
-**벡터의 부정된 요소 \= \(10 5 0\-5\-10\-15\-20\-25\)**   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

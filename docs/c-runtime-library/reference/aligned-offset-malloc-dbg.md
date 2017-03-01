@@ -1,48 +1,65 @@
 ---
-title: "_aligned_offset_malloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_malloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_offset_malloc_dbg"
-  - "aligned_offset_malloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_offset_malloc_dbg 함수"
-  - "aligned_offset_malloc_dbg 함수"
+title: "_aligned_offset_malloc_dbg | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_malloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_offset_malloc_dbg
+- aligned_offset_malloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_offset_malloc_dbg function
+- aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _aligned_offset_malloc_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 67f314989e0069902ae983805a4f8ce839307ea5
+ms.lasthandoff: 02/24/2017
 
-지정 된 맞춤 경계 \(디버그 버전에만 해당\)에서 메모리를 할당합니다.  
+---
+# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+지정된 맞춤 경계에 메모리를 할당합니다(디버그 버전에만 해당).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void * _aligned_offset_malloc_dbg(  
@@ -54,53 +71,53 @@ void * _aligned_offset_malloc_dbg(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `size`  
- 요청된 메모리 할당의 크기입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `size`  
+ 요청된 메모리 할당 크기입니다.  
   
- \[in\] `alignment`  
- 맞춤 값은 \-2의 정수 거듭제곱이어야 합니다.  
+ [in] `alignment`  
+ 맞춤 값으로 2의 정수 거듭제곱이어야 합니다.  
   
- \[in\] `offset`  
- 강제로 정렬을하기 위한 메모리 할당에 대한 오프셋입니다.  
+ [in] `offset`  
+ 맞춤을 강제하는 메모리 할당으로의 오프셋입니다.  
   
- \[in\] `filename`  
- 할당 작업 또는 NULL 요청하는 소스 파일의 이름에 대한 포인터입니다.  
+ [in] `filename`  
+ 할당 작업 또는 NULL을 요청한 소스 파일의 이름에 대한 포인터입니다.  
   
- \[in\] `linenumber`  
- 할당 작업 요청하는 소스 파일의 줄 번호 또는 NULL입니다.  
+ [in] `linenumber`  
+ 할당 작업이 요청되었거나 NULL인 소스 파일의 줄 번호입니다.  
   
-## 반환 값  
- 할당 된 메모리 블록에 대한 포인터 또는 작업에 실패한 경우  `NULL` 입니다.  
+## <a name="return-value"></a>반환 값  
+ 할당된 메모리 블록에 대한 포인터로 작업 실패 시 `NULL`입니다.  
   
-## 설명  
- `_aligned_offset_malloc_dbg`은 [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 함수의 디버그 버전입니다.  [\_DEBUG](../../c-runtime-library/debug.md)를 정의 하지 않으면,  `_aligned_offset_malloc_dbg` 의 각 호출은  `_aligned_offset_malloc` 의 호출에 감소됩니다.   `_aligned_offset_malloc`  및  `_aligned_offset_malloc_dbg`  모두  기본 힙에서 블록 메모리를 할당 하지만  `_aligned_offset_malloc_dbg` 은 몇 개의 디버깅 기능을 제공합니다: 특정 유형의 할당을 추적하는 누출 블록 타입 파라미터를 테스트하는 블록의 사용자 부분의 양쪽에 버퍼 및  할당 요청의 출처를 확인하기 위한  `filename` \/ `linenumber`  정보.  
+## <a name="remarks"></a>설명  
+ `_aligned_offset_malloc_dbg`는 [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_aligned_offset_malloc_dbg`에 대한 각 호출이 `_aligned_offset_malloc`에 대한 호출로 줄어듭니다. `_aligned_offset_malloc`와 `_aligned_offset_malloc_dbg` 둘 다 기본 힙에서 메모리 블록을 할당하지만 `_aligned_offset_malloc_dbg`는 여러 디버깅 기능을 제공합니다. 이러한 기능에는 블록의 사용자 부분 한 쪽에서의 버퍼(어느 쪽이든지 상관없이)로 누수 테스트, 블록 형식 매개 변수로 특정 할당 형식 추적 및 `filename`/`linenumber` 정보로 할당 요청의 원점을 확인하는 기능이 있습니다.  
   
- `_aligned_offset_malloc_dbg`은 요청된  `size` 보다 조금 더 많은 공간을 사용하여 메모리 블록을 할당합니다.  추가 공간은 디버그 힙 관리자가 디버그 메모리 블록을 연결하고 디버그 헤더 정보를 사용하여 응용 프로그램을 제공하고 버퍼를 덮어쓰는데 사용됩니다.  블록이 할당 될 때, 사용자의 블록 부분은 0xCD 값으로 채워지고 덮어쓰기 각 버퍼들은 0xFD로 채워집니다.  
+ `_aligned_offset_malloc_dbg`는 요청된 `size`보다 약간 큰 공간의 메모리 블록을 할당합니다. 디버그 힙 관리자는 추가 공간을 사용하여 디버그 메모리 블록을 연결하고 응용 프로그램에 디버그 헤더 정보를 제공하고 버퍼를 덮어씁니다. 블록이 할당되면 블록의 사용자 부분은 값 0xCD로 채워지고 각 덮어쓰기 버퍼는 0xFD로 채워집니다.  
   
- `_aligned_offset_malloc_dbg`는 중첩 된 요소에서 정렬이 필요한 경우에 유용합니다. 예를 들어, 중첩 된 클래스에 정렬이 필요한 경우.  
+ `_aligned_offset_malloc_dbg`는 중첩된 요소에 맞춤이 필요한 상황에서 유용합니다(예: 중첩된 클래스에 맞춤이 필요한 경우).  
   
- `malloc` 을 기반으로 하는 `_aligned_offset_malloc_dbg`에 대한 자세한 내용은  [malloc](../../c-runtime-library/reference/malloc.md)을 참조하십시오.  
+ `_aligned_offset_malloc_dbg`는 `malloc`를 기반으로 합니다. 자세한 내용은 [malloc](../../c-runtime-library/reference/malloc.md)를 참조하세요.  
   
- 이 함수는 메모리 할당에 실패 한 경우 또는 요청된 된 크기  `_HEAP_MAXREQ` 보다 큰 경우,   `errno`  를  `ENOMEM` 로 설정합니다.  `errno`에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  또한 `_aligned_offset_malloc` 매개 변수 유효성을 검사 합니다.   `alignment`  2의 거듭제곱이 아닌 경우,  `offset` 이  `size` 보다 크거나 같은거나 0이 아닌 경우, 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로  잘못된 매개 변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우, 이 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ 이 함수는 메모리 할당에 실패한 경우 또는 요청된 크기가 `errno`보다 큰 경우 `ENOMEM`를 `_HEAP_MAXREQ`으로 설정합니다. `errno`에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요. 또한 `_aligned_offset_malloc`는 매개 변수의 유효성을 검사합니다. `alignment`가 2의 거듭제곱이 아니거나 `offset`이 `size`와 같거나 크고 0이 아닌 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에서 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `NULL`을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
- 기본 힙의 디버그 버전에서 메모리 블록이 어떻게 할당되고 초기화되고 관리되는지에 대한 자세한 내용은 [CRT 디버그 힙 정보](../Topic/CRT%20Debug%20Heap%20Details.md) 를 참조하십시오.  
+ 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙 정보](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
   
- 할당 블록 종류 및 사용 방법에 대한 더 자세한 내용은  [디버그 힙의 블록 형식](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)을 참조하십시오.  
+ 할당 블록 형식과 이러한 형식의 사용 방법에 대한 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_aligned_offset_malloc_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_malloc_dbg`|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
- [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 의 유일한 디버그 버전입니다.  
+## <a name="libraries"></a>라이브러리  
+ [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)

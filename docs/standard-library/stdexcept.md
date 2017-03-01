@@ -1,32 +1,48 @@
 ---
-title: "&lt; stdexcept &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<stdexcept>"
-  - "std::<stdexcept>"
-  - "<stdexcept>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stdexcept 헤더"
+title: '&lt;stdexcept&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<stdexcept>
+- std::<stdexcept>
+- <stdexcept>
+dev_langs:
+- C++
+helpviewer_keywords:
+- stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt; stdexcept &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a01f0cf531196d59815eb87f03ee9d8a15574088
+ms.lasthandoff: 02/24/2017
 
-예외 보고에 사용되는 여러 표준 클래스를 정의합니다. 모든 파생된 클래스에서 파생 계층 구조를 형성 하는 클래스 [예외](../standard-library/exception-class1.md) 두 가지 일반 유형의 예외를 포함 하 고: 논리 오류 및 런타임 오류입니다. 논리 오류는 프로그래머 실수로 인해 발생합니다. 기본 클래스 logic_error에서 파생되며 다음을 포함합니다.  
+---
+# <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
+예외 보고에 사용되는 여러 표준 클래스를 정의합니다. 클래스는 [exception](../standard-library/exception-class.md) 클래스에서 모두 파생된 파생 계층 구조를 형성하고 두 가지 일반 형식의 예외(논리 오류 및 런타임 오류)를 포함합니다. 논리 오류는 프로그래머 실수로 인해 발생합니다. 기본 클래스 logic_error에서 파생되며 다음을 포함합니다.  
   
 -   `domain_error`  
   
@@ -60,5 +76,6 @@ caps.handback.revision: 19
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

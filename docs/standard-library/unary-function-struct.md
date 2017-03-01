@@ -1,53 +1,66 @@
 ---
 title: "unary_function 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.unary_function"
-  - "unary_function"
-  - "functional/std::unary_function"
-  - "std::unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_function 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.unary_function
+- unary_function
+- functional/std::unary_function
+- std::unary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_function 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.lasthandoff: 02/24/2017
 
-An empty base struct that defines types that may be inherited by derived classes that provides a unary function object.  
+---
+# <a name="unaryfunction-struct"></a>unary_function 구조체
+단항 함수 개체를 제공하는 파생 클래스에 상속될 수 있는 형식을 정의하는 빈 기본 구조체입니다.  
   
-## 구문  
-  
+## <a name="syntax"></a>구문  
 ```  
-  
-   template<class Arg, class Result>  
-struct unary_function {  
-   typedef Arg argument_type;  
-   typedef Result result_type;  
+struct unary_function 
+{
+   typedef Arg argument_type;
+   typedef Result result_type;
 };  
-```  
+``` 
+## <a name="remarks"></a>설명  
+ 템플릿 구조체는 **result_type**`operator()`(**constargument_type&**) **const** 형식의 구성원 함수를 정의하는 클래스의 기준으로 사용됩니다.  
   
-## 설명  
- The template struct serves as a base for classes that define a member function of the form **result\_type** `operator()`\(**const argument\_type&**\) **const**.  
+ 이러한 모든 파생 단항 함수는 유일한 인수 유형을 **argument_type**으로, 반환 형식을 **result_type**로 참조할 수 있습니다.  
   
- All such derived unary functions can refer to their sole argument type as **argument\_type** and their return type as **result\_type**.  
+## <a name="example"></a>예제  
   
-## 예제  
-  
-```  
+```cpp  
 // functional_unary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -89,16 +102,21 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "  
          << result1 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+*\  
 ```  
   
-  **벡터 v1 \= \(0 5 10 15 20 25\)**  
-**The number of elements in v1 greater than 10 is: 3.**   
-## 요구 사항  
- **헤더:** \<기능\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [unary\_function\<\> 구조체](../misc/unary-function-angles-structure.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [표준 템플릿 라이브러리](../misc/standard-template-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

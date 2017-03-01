@@ -1,30 +1,46 @@
 ---
-title: "&lt; 튜플 &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<tuple>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "튜플 헤더[TR1]"
+title: '&lt;tuple&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <tuple>
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt; 튜플 &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
+ms.lasthandoff: 02/24/2017
 
-템플릿을 정의 `tuple` 인스턴스가 다양 한 유형의 개체를 포함 합니다.  
+---
+# <a name="lttuplegt"></a>&lt;tuple&gt;
+해당 인스턴스에 다양한 형식의 개체가 포함된 `tuple` 템플릿을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +52,7 @@ caps.handback.revision: 20
   
 |||  
 |-|-|  
-|[튜플](../standard-library/tuple-class.md)|고정 길이의 요소 시퀀스를 래핑합니다.|  
+|[tuple](../standard-library/tuple-class.md)|고정 길이의 요소 시퀀스를 래핑합니다.|  
 |[tuple_element 클래스](../standard-library/tuple-element-class-tuple.md)|`tuple` 요소의 형식을 래핑합니다.|  
 |[tuple_size 클래스](../standard-library/tuple-size-class-tuple.md)|`tuple` 요소 개수를 래핑합니다.|  
   
@@ -44,21 +60,22 @@ caps.handback.revision: 20
   
 |||  
 |-|-|  
-|[연산자 = =](../Topic/%3Ctuple%3E%20operators.md#operator_eq_eq)|비교 `tuple` 같은 개체|  
-|[연산자! =](../Topic/%3Ctuple%3E%20operators.md#operator_neq)|비교 `tuple` 개체, 같지 않음|  
-|[연산자 <](../Topic/%3Ctuple%3E%20operators.md#operator_lt_)|비교 `tuple` 개체 미만|  
-|[연산자 < =](../Topic/%3Ctuple%3E%20operators.md#operator_lt__eq)|비교 `tuple` 개체 보다 작거나 같음|  
-|[연산자 >](../Topic/%3Ctuple%3E%20operators.md#operator_gt_)|비교 `tuple` 보다 큰 개체|  
-|[연산자 > =](../Topic/%3Ctuple%3E%20operators.md#operator_gt__eq)|비교 `tuple` 개체 보다 크거나 같음|  
+|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|`tuple` 개체 비교, 같음|  
+|[operator!=](../standard-library/tuple-operators.md#operator_neq)|`tuple` 개체 비교, 같지 않음|  
+|[operator<](../standard-library/tuple-operators.md#operator_lt_)|`tuple` 개체 비교, 더 작음|  
+|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|`tuple` 개체 비교, 작거나 같음|  
+|[operator>](../standard-library/tuple-operators.md#operator_gt_)|`tuple` 개체 비교, 더 큼|  
+|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|`tuple` 개체 비교, 크거나 같음|  
   
 ### <a name="functions"></a>함수  
   
 |||  
 |-|-|  
-|[가져오기](../Topic/%3Ctuple%3E%20functions.md#get_function)|`tuple` 개체에서 요소를 가져옵니다.|  
-|[make_tuple](../Topic/%3Ctuple%3E%20functions.md#make_tuple_function)|사용 하면 한 `tuple` 에서 요소 값입니다.|  
-|[연결](../Topic/%3Ctuple%3E%20functions.md#tie_function)|사용 하면 한 `tuple` 요소 참조에서 합니다.|  
+|[get](../standard-library/tuple-functions.md#get_function)|`tuple` 개체에서 요소를 가져옵니다.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|요소 값에서 `tuple`을 만듭니다.|  
+|[tie](../standard-library/tuple-functions.md#tie_function)|요소 선언에서 `tuple`을 만듭니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [\< 배열>](../standard-library/array.md)
+ [\<array>](../standard-library/array.md)
+
 

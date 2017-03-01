@@ -1,49 +1,66 @@
 ---
-title: "_expand_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_expand_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "expand_dbg"
-  - "_expand_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메모리 블록, 크기 변경"
-  - "expand_dbg 함수"
-  - "_expand_dbg 함수"
+title: "_expand_dbg | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _expand_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- expand_dbg
+- _expand_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, changing size
+- expand_dbg function
+- _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _expand_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 18cf0578ea136ea6c84bb351b4bc087f3282910b
+ms.lasthandoff: 02/24/2017
 
-블록을 확장 또는 축소하여 힙 메모리에 지정된 블록 크기 조정합니다. \(디버그 버전에만 해당\)  
+---
+# <a name="expanddbg"></a>_expand_dbg
+블록을 확장하거나 축소하여 힙에서 지정된 메모리 블록의 크기를 조정합니다(디버그 버전에만 해당).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void *_expand_dbg(   
@@ -55,50 +72,50 @@ void *_expand_dbg(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `userData`  
- 이전에 할당 된 메모리 블록에 대 한 포인터입니다.  
+ 이전에 할당된 메모리 블록에 대한 포인터입니다.  
   
  `newSize`  
- 블록 \(바이트 단위\)의 새로운 크기를 다시 요청합니다.  
+ 요청된 블록의 새 크기(바이트)입니다.  
   
  `blockType`  
- 크기가 조정된 블록의 형식을 요청합니다:  `_CLIENT_BLOCK` 또는  `_NORMAL_BLOCK` .  
+ 크기가 조정된 블록의 요청된 형식: `_CLIENT_BLOCK` 또는 `_NORMAL_BLOCK`.  
   
  `filename`  
- `NULL` 또는 확장 작업을 요청하는 소스 파일의 이름에 대한 포인터입니다.  
+ 확장 작업 또는 `NULL`을 요청한 소스 파일의 이름에 대한 포인터입니다.  
   
  `linenumber`  
- 확장 작업 요청하는 소스 파일의 줄 번호 또는 `NULL`입니다.  
+ 확장 작업이 요청되었거나 `NULL`인 소스 파일의 줄 번호입니다.  
   
- `filename`  및  `linenumber`  매개 변수는  `_expand_dbg`  가 명시적으로 호출되거나  [\_CRTDBG\_MAP\_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 전처리기 상수가 정의되었을 경우, 사용할 수 있습니다.  
+ `filename` 및 `linenumber` 매개 변수는 `_expand_dbg`가 명시적으로 호출되었거나 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 전처리기 상수가 정의된 경우에만 사용할 수 있습니다.  
   
-## 반환 값  
- 성공적으로 완료하면,  `_expand_dbg` 는 리사이즈된 메모리 블록에 대한 포인터를 반환합니다.  메모리를 이동하지 않으므로 주소는 해당 사용자데이터처럼 같습니다.  오류가 발생 하거나 블록이 요청된 크기만큼 확장할 수 없을 경우,  `NULL` 을 반환합니다.  오류가 발생 하면  `errno` 는 실패의 본질에 대한 운영 체제의 정보를 사용합니다.  `errno`에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+## <a name="return-value"></a>반환 값  
+ 성공적으로 완료되면 `_expand_dbg`는 크기가 조정된 메모리 블록의 포인터를 반환합니다. 메모리가 이동되지 않으므로 주소는 userData와 같습니다. 오류가 발생했거나 블록을 요청된 크기로 확장할 수 없는 경우 `NULL`이 반환됩니다. 오류가 발생할 경우 `errno`는 운영 체제에서 제공되는 오류 특성에 대한 정보에 기반을 둡니다. `errno`에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
-## 설명  
- `_expand_dbg` 함수는 \_[확장](../../c-runtime-library/reference/expand.md) 함수의 디버그 버전입니다.  [\_DEBUG](../../c-runtime-library/debug.md)를 정의 하지 않으면,  `_expand_dbg` 의 각 호출은  `_expand` 의 호출에 감소됩니다.   `_expand`  및  `_expand_dbg` 는 모두 기본 힙에서 블록 메모리를 리사이즈하지만  `_expand_dbg` 은 몇 개의 디버깅 기능을 수용합니다: 특정 유형의 할당을 추적하는 누출 블록 타입 파라미터를 테스트하는 블록의 사용자 부분의 양쪽에 버퍼 및  할당 요청의 출처를 확인하기 위한  `filename` \/ `linenumber`  정보.  
+## <a name="remarks"></a>설명  
+ `_expand_dbg` 함수는 _[expand](../../c-runtime-library/reference/expand.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_expand_dbg`에 대한 각 호출이 `_expand`에 대한 호출로 줄어듭니다. `_expand`와 `_expand_dbg` 둘 다 기본 힙에서 메모리 블록을 크기 조정하지만 `_expand_dbg`는 여러 디버깅 기능을 수용합니다. 이러한 기능에는 메모리 블록의 사용자 부분 한 쪽에서의 버퍼(어느 쪽이든지 상관없이)로 누수 테스트, 블록 형식 매개 변수로 특정 할당 형식 추적 및 `filename`/`linenumber` 정보로 할당 요청의 원점을 확인하는 기능이 있습니다.  
   
- `_expand_dbg`은 요청된  `newSize` 보다 조금 더 많은 공간을 사용하여 지정된 메모리 블록을 리사이즈합니다.  `newSize`는 원래 할당된 메모리 블록의 크기보다 작거나 클 수 있습니다.  추가 공간은 디버그 힙 관리자가 디버그 메모리 블록을 연결하고 디버그 헤더 정보를 사용하여 응용 프로그램을 제공하고 버퍼를 덮어쓰는데 사용됩니다.  크기 조정은 원래 메모리 블록을 축소 하거나 확장하여 수행됩니다.  `_expand_dbg`은 [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md) 함수와 마찬가지로 메모리 블록을 이동하지 않습니다.  
+ `_expand_dbg`는 요청된 `newSize`보다 약간 더 많은 공간을 사용하여 메모리 블록의 크기를 조정합니다. `newSize`는 원래 할당된 메모리 블록의 크기보다 더 크거나 작을 수 있습니다. 디버그 힙 관리자는 추가 공간을 사용하여 디버그 메모리 블록을 연결하고 응용 프로그램에 디버그 헤더 정보를 제공하고 버퍼를 덮어씁니다. 크기를 조정하려면 원래 메모리 블록을 확장하거나 축소합니다. `_expand_dbg`도 [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md) 함수처럼 메모리 블록을 이동하지 않습니다.  
   
- `newSize` 가 원래 블록 크기보다 클 떄, 메모리 블록을 확장합니다.  확장 하는 동안 , 메모리 블록의 요청 된 크기에 맞게 확장할 수 없는 경우에  `NULL` 이 반환됩니다.   `newSize` 가 원본 블록 크기보다 작을 때,  메모리 블록은 새로운 크기를 얻을 때까지 수축됩니다.  
+ `newSize`가 원래 블록 크기보다 클 경우 메모리 블록이 확장됩니다. 확장 중에 메모리 블록이 요청된 크기를 수용할 만큼 확장될 수 없다면 `NULL`이 반환됩니다. `newSize`가 원래 블록 크기보다 작으면 메모리 블록은 새 크기와 같아질 때까지 축소됩니다.  
   
- 기본 힙의 디버그 버전에서 메모리 블록이 어떻게 할당되고 초기화되고 관리되는지에 대한 자세한 내용은 [CRT 디버그 힙 정보](../Topic/CRT%20Debug%20Heap%20Details.md) 를 참조하십시오.  할당 블록 종류 및 사용 방법에 대한 더 자세한 내용은  [디버그 힙의 블록 형식](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)을 참조하십시오.  호출 표준 힙 함수 및 응용 프로그램의 디버그 빌드에서 디버그 버전의 차이점에 대한 내용은 [힙 할당 함수의 디버그 버전](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)를 참조하십시오.  
+ 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙 정보](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요. 할당 블록 형식과 이러한 형식의 사용 방법에 대한 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요. 응용 프로그램의 디버그 빌드에서 표준 힙 함수를 호출하는 것과 해당 함수의 디버그 버전을 호출하는 것의 차이에 대한 자세한 내용은 [힙 할당 함수의 디버그 버전](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)을 참조하세요.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.   `memblock` 이 null 포인터이거나  `_HEAP_MAXREQ` 보다 크기가 큰 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 이 함수는 잘못 된 매개 변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 `NULL`을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `memblock`가 null 포인터인 경우 또는 크기가 `_HEAP_MAXREQ`보다 큰 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_expand_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_expand_dbg`|\<crtdbg.h>|  
   
- 호환성 정보에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
- [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 의 유일한 디버그 버전입니다.  
+## <a name="libraries"></a>라이브러리  
+ [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_expand_dbg.c  
@@ -146,14 +163,17 @@ int main( void )
 }  
 ```  
   
-  **40 Longs \_malloc\_dbg 이후 블록의 크기: 160**  
-**1 더 긴 \_expand\_dbg 이후 블록 크기: 164**   
-## 주석  
- 이 프로그램의 출력을 컴퓨터의 모든 섹션을 확장하는 능력에 따라 달라집니다.  모든 섹션이 확장 되어 있으면 출력은 출력 섹션에 반영됩니다.  
+```Output  
+Size of block after _malloc_dbg of 40 longs: 160  
+Size of block after _expand_dbg of 1 more long: 164  
+```  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="comment"></a>설명  
+ 이 프로그램의 출력은 모든 섹션을 확장하는 컴퓨터 기능에 따라 달라집니다. 모든 섹션이 확장되면 출력이 출력 섹션에 반영됩니다.  
   
-## 참고 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

@@ -1,47 +1,67 @@
 ---
-title: "fcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fcvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fcvt 함수"
+title: "_fcvt | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting floating point, to strings
+- _fcvt function
+- floating-point functions, converting number to string
+- fcvt function
+- floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _fcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9f191d64115bca85502d8fd3fbe0525c0e2be65c
+ms.lasthandoff: 02/24/2017
 
-부동 소수점 숫자를 문자열로 변환합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md) 를 참조하십시오.  
+---
+# <a name="fcvt"></a>_fcvt
+부동 소수점 숫자를 문자열로 변환합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 char *_fcvt(   
@@ -52,44 +72,44 @@ char *_fcvt(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `value`  
- 변환될 수 있는 숫자  
+ 변환할 숫자입니다.  
   
  `count`  
- 소수점 뒤에 자릿수입니다.  
+ 소수점 뒤의 자릿수입니다.  
   
  `dec`  
- 저장된 소수점 위치에 대한 포인터입니다.  
+ 저장된 소수점 위치의 포인터입니다.  
   
  `sign`  
- 저장된 부호 표시기에 대한 포인터입니다.  
+ 저장된 부호 표시기의 포인터입니다.  
   
-## 반환 값  
- `_fcvt`는 숫자의 문자열을 가리키는 포인터나 NULL, 혹은 오류를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ `_fcvt`는 숫자 문자열에 대한 포인터를 반환합니다. 오류가 발생한 경우 NULL입니다.  
   
-## 설명  
- `_fcvt` 함수는 null로 끝나는 문자열을 부동 소수점 숫자로 변환합니다.  `value` 매개 변수는 변환된 부동 소수점 숫자입니다.  `_fcvt`은 `value`의 자릿수를 문자열로 저장하고 null 문자 \('\\0'\)를 추가합니다.  `count` 매개 변수는 소숫점 이후에 저장될 자릿수를 지정합니다.  초과 자릿수는 `count`를 반올림합니다.  `count`보다 적은 자릿수의 정밀도인 경우, 문자열은 0으로 채워집니다.  
+## <a name="remarks"></a>설명  
+ `_fcvt` 함수는 부동 소수점 숫자를 null 종료 문자열로 변환합니다. `value` 매개 변수는 변환할 부동 소수점 숫자입니다. `_fcvt`는 `value` 중 숫자를 문자열로 저장하고 null 문자('\0')를 추가합니다. `count` 매개 변수는 소수점 뒤에 저장할 자릿수를 지정합니다. 나머지 숫자는 `count`자리로 반올림됩니다. 정밀도의 숫자가 `count`개보다 적으면 문자열이&0;으로 채워집니다.  
   
- `_fcvt` 로 반환 되는 전체 자릿수는 `_CVTBUFSIZE`를 넘어서는 안됩니다.  
+ `_fcvt`에서 반환된 전체 숫자 개수는 `_CVTBUFSIZE`를 초과하지 않습니다.  
   
- 숫자만이 문자열에 저장됩니다.  소수점의 위치 및 `value`의 부호는 호출 이후 `dec`과 sign으로부터 얻을 수 있습니다.  `dec` 매개 변수는 정수 값을 가리킵니다. 이 정수 값은 문자열의 시작 부분에 대한 소수점의 위치를 제공합니다.  0 또는 음수 값은 소수점이 첫째 자리의 왼쪽에 위치하는 것을 가리킵니다.  매개 변수 `sign`은 `value`의 부호를 나타내는 정수를 가리킵니다.  이 정수는 `value`가 양수인 경우 0으로 설정되며 `value`가 음수인 경우  0이 아닌 숫자로 설정됩니다.  
+ 숫자만 문자열에 저장됩니다. 소수점 위치와 `value`의 부호는 호출 후에 `dec` 및 sign에서 얻을 수 있습니다. `dec` 매개 변수는 문자열의 시작을 기준으로 소수점의 위치를 제공하는 정수 값을 가리킵니다. 0 또는 음의 정수 값은 소수점이 첫 번째 숫자의 왼쪽에 있다는 것을 나타냅니다. 매개 변수 `sign`은 `value`의 부호를 나타내는 정수를 가리킵니다. `value`가 양수일 경우 정수가 0으로 설정되고 `value`가 음수일 경우 0이 아닌 숫자로 설정됩니다.  
   
- `_ecvt` 및 `_fcvt`에서 `count` 매개 변수의 번역 차이입니다.  `_ecvt`는 `count`을 출력 문자열의 전체 자릿수로 해석하며, `_fcvt`은 `count`를 소수점 뒤의 자릿수로 해석합니다.  
+ `_ecvt`와 `_fcvt`의 차이는 `count` 매개 변수의 해석에 있습니다. `_ecvt`는 `count`를 출력 문자열의 전체 숫자 개수로 해석하는 반면, `_fcvt`는 `count`를 소수점 뒤의 자릿수로 해석합니다.  
   
- `_ecvt`와 `_fcvt` 는 변환에 정적으로 할당된 버퍼를 사용합니다.  이러한 루틴 중 하나를 호출 할 때마다 이전 호출의 결과를 삭제합니다.  
+ `_ecvt` 및 `_fcvt`는 정적으로 할당된 단일 버퍼를 변환에 사용합니다. 이러한 루틴 중 하나를 호출할 때마다 이전 호출의 결과가 삭제됩니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.  만일 `dec` 또는 `sign` 이 NULL이거나 `count` 이 0이라면, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, `errno` 는 `EINVAL` 와 NULL을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `dec` 또는 `sign`이 NULL이거나 `count`가 0이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `errno`는 `EINVAL`로 설정되고 NULL이 반환됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|Function|필수 헤더|  
-|--------------|-----------|  
-|`_fcvt`|\<stdlib.h\>|  
+|함수|필수 헤더|  
+|--------------|---------------------|  
+|`_fcvt`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_fcvt.c  
@@ -114,13 +134,16 @@ int main( void )
 }  
 ```  
   
-  **source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0**   
-## 해당 .NET Framework 항목  
- [System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0  
+```  
   
-## 참고 항목  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+  
+## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

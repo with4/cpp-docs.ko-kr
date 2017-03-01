@@ -1,112 +1,354 @@
 ---
 title: "reference_wrapper 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.reference_wrapper"
-  - "tr1.reference_wrapper"
-  - "reference_wrapper"
-  - "tr1::reference_wrapper"
-  - "xrefwrap/std::tr1::reference_wrapper"
-  - "std::tr1::reference_wrapper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reference_wrapper 클래스"
-  - "reference_wrapper 클래스[TR1]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reference_wrapper
+- std::reference_wrapper
+- functional/std::reference_wrapper
+- type_traits/std::reference_wrapper
+- xrefwrap/std::reference_wrapper
+- type_traits/std::reference_wrapper::get
+- type_traits/std::reference_wrapper::operator()
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference_wrapper class
+- reference_wrapper
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# reference_wrapper 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
+ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="referencewrapper-class"></a>reference_wrapper 클래스
 참조를 래핑합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-template<class Ty>  
-    class reference_wrapper  
-    : public unary_function<T1, Ret>        // see below  
-    : public binary_function<T1, T2, Ret>   // see below  
-    {  
+template <class Ty>  
+class reference_wrapper  
+{  
 public:  
     typedef Ty type;  
-    typedef T0 result_type;                 // see below  
-  
-    reference_wrapper(Ty&);  
-  
-    Ty& get() const;  
-    operator Ty&() const;  
-    template<class T1, class T2, ..., class TN>  
-        typename result_of<T(T1, T2, ..., TN)>::type  
-        operator()(T1&, T2&, ..., TN&);  
-  
+ 
+    reference_wrapper(Ty&) noexcept;
+    operator Ty&() const noexcept;
+    Ty& get() const noexcept;
+
+    template <class... Types> 
+    auto operator()(Types&&... args) const ->
+        decltype(std::invoke(get(), std::forward<Types>(args)...));
+ 
 private:  
     Ty *ptr; // exposition only  
-    };  
+};  
 ```  
   
-## 설명  
- `reference_wrapper<Ty>`는 복사를 통해 생성 및 할당할 수 있으며 `Ty` 형식의 개체를 가리키는 포인터를 보유합니다.  
+## <a name="remarks"></a>설명  
+`reference_wrapper<Ty>`는 `Ty` 형식의 개체 또는 함수에 대한 참조를 래핑하며 해당 형식의 개체를 가리키는 포인터가 포함된 복사본 생성/할당 가능 래퍼입니다. `reference_wrapper`를 사용하면 표준 컨테이너에 참조를 저장하고 `std::bind`에 대한 참조를 통해 개체를 전달할 수 있습니다.  
   
- `reference_wrapper<Ty>` 특수화는 `Ty` 형식이 다음과 같은 경우에만 `std::unary_function<T1, Ret>`에서 파생되어 중첩 형식 `result_type`을 `Ret`의 동의어로 정의하고 중첩 형식 `argument_type`을 `T1`의 동의어로 정의합니다.  
+`Ty` 형식은 개체 형식 또는 함수 형식이어야 하며, 그렇지 않으면 컴파일 시간에 정적 어설션이 실패합니다.  
   
- `T1` 형식의 인수 하나를 사용하고 `Ret`를 반환하는 함수 형식 또는 함수 형식에 대한 포인터 또는  
+도우미 함수 [std::ref](functional-functions.md#ref_function) 및 [std::cref](functional-functions.md#cref_function)를 사용하여 `reference_wrapper` 개체를 만들 수 있습니다.  
   
- 멤버 함수 `Ret T::f() cv`에 대한 포인터. 여기서 `cv`는 멤버 함수의 cv 한정자를 나타내고, `T1` 형식은 `cv` `T*`입니다. 또는  
-  
- `unary_function<T1, Ret>`에서 파생된 클래스 형식.  
-  
- `reference_wrapper<Ty>` 특수화는 `Ty` 형식이 다음과 같은 경우에만 `std::binary_function<T1, T2, Ret>`에서 파생되어 중첩 형식 `result_type`을 `Ret`의 동의어로 정의하고, 중첩 형식 `first_argument_type`을 `T1`의 동의어로 정의하고, 중첩 형식 `second_argument_type`을 `T2`의 동의어로 정의합니다.  
-  
- `T1` 및 `T2` 형식의 인수 두 개를 사용하고 `Ret`를 반환하는 함수 형식 또는 함수 형식에 대한 포인터 또는  
-  
- 멤버 함수 `Ret T::f(T2) cv`에 대한 포인터. 여기서 `cv`는 멤버 함수의 cv 한정자를 나타내고, `T1` 형식은 `cv` `T*`입니다. 또는  
-  
- `binary_function<T1, T2, Ret>`에서 파생된 클래스 형식.  
-  
-### 생성자  
+### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[reference\_wrapper::reference\_wrapper](../Topic/reference_wrapper::reference_wrapper.md)|`reference_wrapper`를 생성합니다.|  
+|[reference_wrapper::reference_wrapper](#reference_wrapper)|`reference_wrapper`를 생성합니다.|  
   
-### Typedefs  
-  
-|||  
-|-|-|  
-|[reference\_wrapper::result\_type](../Topic/reference_wrapper::result_type.md)|래핑된 참조의 약한 결과 형식입니다.|  
-|[reference\_wrapper::type](../Topic/reference_wrapper::type.md)|래핑된 참조 형식입니다.|  
-  
-### 멤버 함수  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[reference\_wrapper::get](../Topic/reference_wrapper::get.md)|래핑된 참조를 가져옵니다.|  
+|[reference_wrapper::result_type](#result_type)|래핑된 참조의 약한 결과 형식입니다.|  
+|[reference_wrapper::type](#type)|래핑된 참조 형식입니다.|  
   
-### 운영자  
+### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[reference\_wrapper::operator Ty&](../Topic/reference_wrapper::operator%20Ty&.md)|래핑된 참조에 대한 포인터를 가져옵니다.|  
-|[reference\_wrapper::operator\(\)](../Topic/reference_wrapper::operator\(\).md)|래핑된 참조를 호출합니다.|  
+|[reference_wrapper::get](#get)|래핑된 참조를 가져옵니다.|  
   
-## 요구 사항  
- **헤더:** \<functional\>  
+### <a name="operators"></a>연산자  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|래핑된 참조에 대한 포인터를 가져옵니다.|  
+|[reference_wrapper::operator()](#operator_call)|래핑된 참조를 호출합니다.|  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [cref 함수](../Topic/cref%20Function.md)   
- [ref 함수](../Topic/ref%20Function.md)
+##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a>  reference_wrapper::get  
+ 래핑된 참조를 가져옵니다.  
+  
+```  
+Ty& get() const noexcept;
+```  
+  
+### <a name="remarks"></a>설명  
+구성원 함수는 래핑된 참조를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_get.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a>  reference_wrapper::operator Ty&amp;  
+ 래핑된 참조를 가져옵니다.  
+  
+```  
+operator Ty&() const noexcept;
+```  
+  
+### <a name="remarks"></a>설명  
+ 멤버 연산자는 `*ptr`을 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_cast.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "(int)rwi = " << (int)rwi << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+(int)rwi = 1  
+```  
+  
+##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a>  reference_wrapper::operator()  
+ 래핑된 참조를 호출합니다.  
+  
+```  
+template <class... Types>  
+auto operator()(Types&&... args);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Types`  
+ 인수 목록 유형입니다.  
+  
+ `args`  
+ 인수 목록입니다.  
+  
+### <a name="remarks"></a>설명  
+ 템플릿 구성원 `operator()`는 `std::invoke(get(), std::forward<Types>(args)...)`를 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_call.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    std::reference_wrapper<int (int)> rwi(neg);   
+  
+    std::cout << "rwi(3) = " << rwi(3) << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+rwi(3) = -3  
+```  
+  
+##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
+ `reference_wrapper`를 생성합니다.  
+  
+```  
+reference_wrapper(Ty& val) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Ty`  
+ 래핑할 형식입니다.  
+  
+ `val`  
+ 래핑할 값입니다.  
+  
+### <a name="remarks"></a>설명  
+ 생성자는 저장된 값 `ptr`을 `&val`로 설정합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_reference_wrapper.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a>  reference_wrapper::result_type  
+ 래핑된 참조의 약한 결과 형식입니다.  
+  
+```  
+typedef R result_type;  
+```  
+  
+### <a name="remarks"></a>설명  
+ `result_type` 형식 정의는 래핑된 함수의 취약한 결과 형식과 동일한 의미입니다. 이 형식 정의는 함수 형식에서만 의미가 있습니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_result_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    typedef std::reference_wrapper<int (int)> Mywrapper;   
+    Mywrapper rwi(neg);   
+    Mywrapper::result_type val = rwi(3);   
+  
+    std::cout << "val = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+val = -3  
+```  
+  
+##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a>  reference_wrapper::type  
+ 래핑된 참조 형식입니다.  
+  
+```  
+typedef Ty type;  
+```  
+  
+### <a name="remarks"></a>설명  
+ typedef는 템플릿 인수 `Ty`의 동의어입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// std__functional__reference_wrapper_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    typedef std::reference_wrapper<int> Mywrapper;   
+    Mywrapper rwi(i);   
+    Mywrapper::type val = rwi.get();   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [cref 함수](../standard-library/functional-functions.md#cref_function)   
+ [ref 함수](../standard-library/functional-functions.md#ref_function)
+
+
