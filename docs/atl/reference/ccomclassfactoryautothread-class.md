@@ -1,61 +1,77 @@
 ---
-title: "CComClassFactoryAutoThread Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComClassFactoryAutoThread"
-  - "ATL.CComClassFactoryAutoThread"
-  - "CComClassFactoryAutoThread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComClassFactoryAutoThread class"
+title: "CComClassFactoryAutoThread 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComClassFactoryAutoThread
+- ATL.CComClassFactoryAutoThread
+- CComClassFactoryAutoThread
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CComClassFactoryAutoThread Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: fcc5671fc136b061bf3e8109999ac91d302d3d3b
+ms.lasthandoff: 02/24/2017
 
-이 클래스에서 구현 된  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스, 및 여러 아파트에서 만들 수 있습니다.  
+---
+# <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 클래스
+이 클래스를 구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) , 인터페이스 및 개체를 여러 아파트에서 만들 수 있습니다.  
   
 > [!IMPORTANT]
->  런타임에서 Windows를 실행 하는 응용 프로그램에서이 클래스와 해당 멤버를 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class CComClassFactoryAutoThread 
+   : public IClassFactory, 
+     public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-      class CComClassFactoryAutoThread : public IClassFactory,   
-public CComObjectRootEx< CComGlobalsThreadModel >  
-```  
+## <a name="members"></a>멤버  
   
-## Members  
-  
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
-|--------|--------|  
-|[CComClassFactoryAutoThread::CreateInstance](../Topic/CComClassFactoryAutoThread::CreateInstance.md)|지정한 CLSID의 개체를 만듭니다.|  
-|[CComClassFactoryAutoThread::LockServer](../Topic/CComClassFactoryAutoThread::LockServer.md)|메모리에서 클래스 팩터리를 잠급니다.|  
+|----------|-----------------|  
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|지정된 된 CLSID의 개체를 만듭니다.|  
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|메모리에서 클래스 팩터리를 잠급니다.|  
   
-## 설명  
- `CComClassFactoryAutoThread`유사한  [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), 하지만 여러 아파트에서 만들 수 있습니다.  이 지원을 활용 하 여 EXE 모듈에서 파생  [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+## <a name="remarks"></a>주의  
+ `CComClassFactoryAutoThread`유사한 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), 개체를 여러 아파트에서 만들 수 있습니다. 이 지원을 활용 하 여 EXE 모듈에서 파생 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다.  
   
- ATL 개체 정상적으로 취득 팩터리 클래스에서 파생 하 여  [CComCoClass](../../atl/reference/ccomcoclass-class.md).  이 클래스는 매크로 포함  [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md)는 선언  [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로.  사용할 `CComClassFactoryAutoThread`, 지정 된  [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) 매크로 개체의 클래스 정의에.  예를 들면 다음과 같습니다.  
+ ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로가 포함 [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4)를 선언 하 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하 여 `CComClassFactoryAutoThread`, 지정는 [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) 개체의 클래스 정의에 매크로입니다. 예:  
   
- [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/CPP/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `CComObjectRootBase`  
   
  [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)  
@@ -64,13 +80,59 @@ public CComObjectRootEx< CComGlobalsThreadModel >
   
  `CComClassFactoryAutoThread`  
   
-## 요구 사항  
- **헤더:**  atlcom.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlcom.h  
   
-## 참고 항목  
+##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+ 지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
+  
+```
+STDMETHODIMP CreateInstance(
+    LPUNKNOWN pUnkOuter,
+    REFIID riid,
+    void** ppvObj);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pUnkOuter`  
+ [in] 개체를 만드는 경우 집계의 일부로 다음 `pUnkOuter` 알 수 없는 외부 이어야 합니다. 그렇지 않으면 `pUnkOuter` 해야 **NULL**합니다.  
+  
+ `riid`  
+ [in] 요청된 된 인터페이스의 IID입니다. 경우 `pUnkOuter` 이 아닌 **NULL**, `riid` 해야 **IID_IUnknown**합니다.  
+  
+ `ppvObj`  
+ [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 `riid`합니다. 개체는이 인터페이스를 지원 하지 않는 경우 `ppvObj` 로 설정 된 **NULL**합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 모듈에서 파생 된 경우 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` 먼저 개체를 만드는 연결된 아파트에 스레드를 선택 합니다.  
+  
+##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+ 증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
+  
+```
+STDMETHODIMP LockServer(BOOL fLock);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `fLock`  
+ [in] 경우 **TRUE**, 잠금 횟수가 증가 하 고, 그렇지 않으면, 잠금 수가 감소 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 사용 하는 경우 `CComClassFactoryAutoThread`, **_Module** 의 전역 인스턴스를 가리키며 일반적으로 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다.  
+  
+ 호출 `LockServer` 클라이언트가 여러 개체를 신속 하 게 만들 수 있도록 클래스 팩터리를 점유 하는 데 사용 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
- [CComClassFactory2 Class](../../atl/reference/ccomclassfactory2-class.md)   
- [CComClassFactorySingleton Class](../../atl/reference/ccomclassfactorysingleton-class.md)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComGlobalsThreadModel](../Topic/CComGlobalsThreadModel.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [CComClassFactory2 클래스](../../atl/reference/ccomclassfactory2-class.md)   
+ [CComClassFactorySingleton 클래스](../../atl/reference/ccomclassfactorysingleton-class.md)   
+ [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

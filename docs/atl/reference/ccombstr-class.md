@@ -1,111 +1,664 @@
 ---
-title: "CComBSTR 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComBSTR"
-  - "CComBSTR"
-  - "ATL.CComBSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR, 래퍼"
-  - "CComBSTR"
-  - "CComBSTR 클래스"
+title: "CComBSTR 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComBSTR
+- CComBSTR
+- ATL.CComBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- BSTRs, wrapper
+- CComBSTR class
+- CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CComBSTR 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
+ms.openlocfilehash: e7b61a5826836e7d26a0d470631d7230f7b7be56
+ms.lasthandoff: 02/24/2017
 
-이 대 한 래퍼 클래스인 `BSTR`s.  
+---
+# <a name="ccombstr-class"></a>CComBSTR 클래스
+이 클래스에 대 한 래퍼는 `BSTR`s.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class CComBSTR
 ```  
   
-class CComBSTR  
+## <a name="members"></a>멤버  
   
+### <a name="public-constructors"></a>Public 생성자  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CComBSTR::CComBSTR](#ccombstr)|생성자입니다.|  
+|[CComBSTR:: ~ CComBSTR](#dtor)|소멸자입니다.|  
+  
+### <a name="public-methods"></a>Public 메서드  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CComBSTR::Append](#append)|문자열을 추가 `m_str`합니다.|  
+|[CComBSTR::AppendBSTR](#appendbstr)|추가 `BSTR` 를 `m_str`합니다.|  
+|[CComBSTR::AppendBytes](#appendbytes)|지정 된 바이트 수를 추가 `m_str`합니다.|  
+|[CComBSTR::ArrayToBSTR](#arraytobstr)|만듭니다는 `BSTR` safearray에 있는 각 요소의 첫 번째 문자에 연결 된 `CComBSTR` 개체입니다.|  
+|[CComBSTR::AssignBSTR](#assignbstr)|할당 한 `BSTR` 를 `m_str`합니다.|  
+|[CComBSTR::Attach](#attach)|연결 된 `BSTR` 에 `CComBSTR` 개체입니다.|  
+|[CComBSTR::BSTRToArray](#bstrtoarray)|여기서는 배열의 각 요소는 문자를&0;부터&1; 차원 safearray 만듭니다는 `CComBSTR` 개체입니다.|  
+|[CComBSTR::ByteLength](#bytelength)|길이 반환 `m_str` (바이트)에서입니다.|  
+|[CComBSTR::Copy](#copy)|복사본을 반환 `m_str`합니다.|  
+|[CComBSTR::CopyTo](#copyto)|복사본을 반환 `m_str` 통해는 **[out]** 매개 변수|  
+|[CComBSTR::Detach](#detach)|분리 `m_str` 에서 `CComBSTR` 개체입니다.|  
+|[CComBSTR::Empty](#empty)|해제 `m_str`합니다.|  
+|[CComBSTR::Length](#length)|길이 반환 `m_str`합니다.|  
+|[CComBSTR::LoadString](#loadstring)|문자열 리소스를 로드합니다.|  
+|[CComBSTR::ReadFromStream](#readfromstream)|로드 한 `BSTR` 스트림에서 개체입니다.|  
+|[CComBSTR::ToLower](#tolower)|문자열을 소문자로 변환 합니다.|  
+|[CComBSTR::ToUpper](#toupper)|문자열을 대문자로 변환 합니다.|  
+|[CComBSTR::WriteToStream](#writetostream)|저장 `m_str` 스트림으로.|  
+  
+### <a name="public-operators"></a>Public 연산자  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[BSTR CComBSTR::operator](#operator_bstr)|캐스트는 `CComBSTR` 개체는 `BSTR`합니다.|  
+|[CComBSTR::operator!](#operator_not)|반환 `true` 또는 `false`인지 여부에 따라 `m_str`는 `NULL`합니다.|  
+|[CComBSTR::operator! =](#operator_neq)|비교는 `CComBSTR` 문자열입니다.|  
+|[CComBSTR::operator / /](#operator_amp)|주소를 반환 `m_str`합니다.|  
+|[CComBSTR::operator + =](#operator_add_eq)|추가 `CComBSTR` 개체입니다.|  
+|[CComBSTR::operator](#operator_lt)|비교는 `CComBSTR` 문자열입니다.|  
+|[CComBSTR::operator =](#operator_eq)|에 값을 할당 `m_str`합니다.|  
+|[CComBSTR::operator = =](#operator_eq_eq)|비교는 `CComBSTR` 문자열입니다.|  
+|[CComBSTR::operator >](#operator_gt)|비교는 `CComBSTR` 문자열입니다.|  
+  
+### <a name="public-data-members"></a>공용 데이터 멤버  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CComBSTR::m_str](#m_str)|포함 된 `BSTR` 와 관련 된는 `CComBSTR` 개체입니다.|  
+  
+## <a name="remarks"></a>주의  
+ `CComBSTR` 클래스에 대 한 래퍼는 `BSTR`는 길이 접두사가 문자열입니다. 길이 정수 데이터 앞에 문자열의 메모리 위치에 저장 됩니다.  
+  
+ A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 는 null로 끝나는 마지막 문자를 계산 하지만 문자열 내에 포함 된 null 문자가 포함 될 수도 있습니다. 문자열 길이 문자 수를 첫 번째 null 문자에 따라 결정 됩니다.  
+  
+> [!NOTE]
+>  `CComBSTR` 클래스는 다양 한 ANSI 또는 유니코드 문자열을 인수로 사용 하는 멤버 (생성자, 대입 연산자 및 비교 연산자)를 제공 합니다. 이러한 함수는 ANSI 버전은 만들어지기 때문에 임시 유니코드 문자열이 종종 내부적으로 유니코드 대응 보다 효율성이 떨어집니다. 효율성을 위해 가능한 경우 유니코드 버전을 사용 합니다.  
+  
+> [!NOTE]
+>  Visual Studio.NET에서 구현 되는 향상 된 조회 동작으로 인해 코드와 같은 `bstr = L"String2" + bstr;`, 이전 릴리스에서 컴파일 되었을 수 있는 대신 구현 해야 `bstr = CStringW(L"String2") + bstr`합니다.  
+  
+ 사용 시 주의 사항 목록은 `CComBSTR`, 참조 [CComBSTR을 사용한 프로그래밍](../../atl/programming-with-ccombstr-atl.md)합니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlbase.h  
+  
+##  <a name="a-nameappenda--ccombstrappend"></a><a name="append"></a>CComBSTR::Append  
+ 추가 하거나 `lpsz` 또는 `BSTR` 소속 `bstrSrc` 를 [m_str](#m_str)합니다.  
+  
+```
+HRESULT Append(const CComBSTR& bstrSrc) throw();
+HRESULT Append(wchar_t ch) throw();
+HRESULT Append(char ch) throw();
+HRESULT Append(LPCOLESTR lpsz) throw();
+HRESULT Append(LPCSTR lpsz) throw();
+HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 ```  
   
-## Members  
+### <a name="parameters"></a>매개 변수  
+ `bstrSrc`  
+ [in] A `CComBSTR` 추가할 개체입니다.  
   
-### Public 생성자  
+ *ch*  
+ [in] 추가할 문자입니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComBSTR::CComBSTR](../Topic/CComBSTR::CComBSTR.md)|생성자입니다.|  
-|[CComBSTR::~CComBSTR](../Topic/CComBSTR::~CComBSTR.md)|소멸자|  
+ `lpsz`  
+ [in]&0;으로 끝나는 문자 추가할 문자열입니다. 통해 유니코드 문자열을 전달 하는 **LPCOLESTR** 오버 로드 또는 ANSI 문자열을 통해는 `LPCSTR` 버전입니다.  
   
-### Public 메서드  
+ `nLen`  
+ [in] 문자 수가 `lpsz` 추가 합니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComBSTR::Append](../Topic/CComBSTR::Append.md)|문자열에 추가 `m_str`.|  
-|[CComBSTR::AppendBSTR](../Topic/CComBSTR::AppendBSTR.md)|Appends a `BSTR` to `m_str`.|  
-|[CComBSTR::AppendBytes](../Topic/CComBSTR::AppendBytes.md)|지정한 수의 바이트를 추가 `m_str`.|  
-|[CComBSTR::ArrayToBSTR](../Topic/CComBSTR::ArrayToBSTR.md)|만듭니다는 `BSTR` 에서 safearray에서 각 요소의 첫 번째 문자를 연결 하 고는 `CComBSTR` 개체.|  
-|[CComBSTR::AssignBSTR](../Topic/CComBSTR::AssignBSTR.md)|Assigns a `BSTR` to `m_str`.|  
-|[CComBSTR::Attach](../Topic/CComBSTR::Attach.md)|첨부는 `BSTR` 에 `CComBSTR` 개체입니다.|  
-|[CComBSTR::BSTRToArray](../Topic/CComBSTR::BSTRToArray.md)|배열의 각 요소는 문자에서부터 1 차원 safearray를 만들고 있는 `CComBSTR` 개체입니다.|  
-|[CComBSTR::ByteLength](../Topic/CComBSTR::ByteLength.md)|길이 반환 합니다. `m_str` \(바이트\)에서입니다.|  
-|[CComBSTR::Copy](../Topic/CComBSTR::Copy.md)|복사본을 반환 합니다. `m_str`.|  
-|[CComBSTR::CopyTo](../Topic/CComBSTR::CopyTo.md)|복사본을 반환 합니다. `m_str` 통해는  **\[out\]** 매개 변수|  
-|[CComBSTR::Detach](../Topic/CComBSTR::Detach.md)|분리 `m_str` 에서 `CComBSTR` 개체입니다.|  
-|[CComBSTR::Empty](../Topic/CComBSTR::Empty.md)|Frees `m_str`.|  
-|[CComBSTR::Length](../Topic/CComBSTR::Length.md)|길이 반환 합니다. `m_str`.|  
-|[CComBSTR::LoadString](../Topic/CComBSTR::LoadString.md)|문자열 리소스를 로드합니다.|  
-|[CComBSTR::ReadFromStream](../Topic/CComBSTR::ReadFromStream.md)|로드는 `BSTR` 스트림에서 개체입니다.|  
-|[CComBSTR::ToLower](../Topic/CComBSTR::ToLower.md)|문자열을 소문자로 변환 합니다.|  
-|[CComBSTR::ToUpper](../Topic/CComBSTR::ToUpper.md)|문자열을 대문자로 변환 합니다.|  
-|[CComBSTR::WriteToStream](../Topic/CComBSTR::WriteToStream.md)|저장 `m_str` 스트림을 합니다.|  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
   
-### Public 연산자  
+### <a name="remarks"></a>주의  
+ ANSI 문자열 추가하기 전에 유니코드로 변환 됩니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComBSTR::operator BSTR](../Topic/CComBSTR::operator%20BSTR.md)|Casts a `CComBSTR` object to a `BSTR`.|  
-|[CComBSTR::operator \!](../Topic/CComBSTR::operator%20!.md)|Returns `true` or `false`, depending on whether `m_str`is `NULL`.|  
-|[CComBSTR::operator \!\=](../Topic/CComBSTR::operator%20!=.md)|비교는 `CComBSTR` 는 문자열을 사용 합니다.|  
-|[CComBSTR::operator &](../Topic/CComBSTR::operator%20&.md)|반환 주소를 `m_str`.|  
-|[CComBSTR::operator \+\=](../Topic/CComBSTR::operator%20+=.md)|추가 된 `CComBSTR` 개체입니다.|  
-|[CComBSTR::operator \<](../Topic/CComBSTR::operator%20%3C.md)|비교는 `CComBSTR` 는 문자열을 사용 합니다.|  
-|[CComBSTR::operator \=](../Topic/CComBSTR::operator%20=.md)|값으로 할당 `m_str`.|  
-|[CComBSTR::operator \=\=](../Topic/CComBSTR::operator%20==.md)|비교는 `CComBSTR` 는 문자열을 사용 합니다.|  
-|[CComBSTR::operator \>](../Topic/CComBSTR::operator%20%3E.md)|비교는 `CComBSTR` 는 문자열을 사용 합니다.|  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&32;](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
   
-### 공용 데이터 멤버  
+##  <a name="a-nameappendbstra--ccombstrappendbstr"></a><a name="appendbstr"></a>CComBSTR::AppendBSTR  
+ 지정 된 추가 `BSTR` 를 [m_str](#m_str)합니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComBSTR::m\_str](../Topic/CComBSTR::m_str.md)|포함의 `BSTR` 연관 된 `CComBSTR` 개체.|  
+```
+HRESULT AppendBSTR(BSTR p) throw();
+```  
   
-## 설명  
- `CComBSTR` 클래스에 대 한 래퍼는 `BSTR`s 길이 접두사가 문자열입니다.  길이 문자열에는 데이터 이전 메모리 위치를 정수로 저장 됩니다.  
+### <a name="parameters"></a>매개 변수  
+ `p`  
+ [in] A `BSTR` 추가 합니다.  
   
- A  [BSTR](http://msdn.microsoft.com/ko-kr/1b2d7d2c-47af-4389-a6b6-b01b7e915228) null 종료\-마지막 문자 계산 되지만 문자열 안에 포함 된 null 문자를 포함할 수도 있습니다.  문자열 길이가 첫 번째 null 문자는 문자 수에 따라 결정 됩니다.  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드에 일반 와이드 문자 문자열을 전달 하지 마십시오. 컴파일러 오류를 catch 하 고 런타임 오류가 발생할 수 없습니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&33;](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
+  
+##  <a name="a-nameappendbytesa--ccombstrappendbytes"></a><a name="appendbytes"></a>CComBSTR::AppendBytes  
+ 지정된 된 수의 바이트 수를 추가 [m_str](#m_str) 변환 하지 않고 있습니다.  
+  
+```
+HRESULT AppendBytes(const char* lpsz, int nLen) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `lpsz`  
+ [in] 추가할 바이트 배열에 대 한 포인터입니다.  
+  
+ `p`  
+ [in] 추가 하는 바이트 수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&34;](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
+  
+##  <a name="a-namearraytobstra--ccombstrarraytobstr"></a><a name="arraytobstr"></a>CComBSTR::ArrayToBSTR  
+ 에 저장 된 기존 문자열을 해제는 `CComBSTR` 개체를 만든 다음 만듭니다는 `BSTR` safearray에 있는 각 요소의 첫 번째 문자에 연결 하 고는 `CComBSTR` 개체입니다.  
+  
+```
+HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pSrc`  
+ [in] 문자열을 만드는 사용 되는 요소를 포함 하는 safearray입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
+  
+##  <a name="a-nameassignbstra--ccombstrassignbstr"></a><a name="assignbstr"></a>CComBSTR::AssignBSTR  
+ 할당 한 `BSTR` 를 [m_str](#m_str)합니다.  
+  
+```
+HRESULT AssignBSTR(const BSTR bstrSrc) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bstrSrc`  
+ [in] A `BSTR` 현재에 할당할 `CComBSTR` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
+  
+##  <a name="a-nameattacha--ccombstrattach"></a><a name="attach"></a>CComBSTR::Attach  
+ 연결 된 `BSTR` 에 `CComBSTR` 설정 하 여 개체는 [m_str](#m_str) 멤버를 *src*.  
+  
+```
+void Attach(BSTR src) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *src*  
+ [in] `BSTR` 개체에 연결 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드에 일반 와이드 문자 문자열을 전달 하지 마십시오. 컴파일러 오류를 catch 하 고 런타임 오류가 발생할 수 없습니다.  
   
 > [!NOTE]
->  `CComBSTR` ANSI 또는 유니코드 문자열을 인수로 사용 하는 멤버 \(생성자, 대입 연산자 및 비교 연산자\)의 여러 클래스를 제공 합니다.  유니코드 문자열 임시 종종 내부적으로 생성 되기 때문에 이러한 함수의 ANSI 버전이 해당 유니코드 보다 덜 효율적입니다.  효율성을 위해 가능한 유니코드 버전을 사용 합니다.  
+>  이 메서드는 경우 어설션 `m_str` 이 아닌 **NULL**합니다.  
   
-> [!NOTE]
->  Visual Studio.net에서 구현 되는 향상 된 조회 동작 때문에 같은 코드 `bstr = L"String2" + bstr;`에 이전 릴리스에서 컴파일된 수 대신 구현으로 `bstr = CStringW(L"String2") + bstr`.  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&35;](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
- 사용 시 주의 사항 목록은 `CComBSTR`를 참조 하십시오  [Ccombstr와 프로그래밍](../../atl/programming-with-ccombstr-atl.md).  
+##  <a name="a-namebstrtoarraya--ccombstrbstrtoarray"></a><a name="bstrtoarray"></a>CComBSTR::BSTRToArray  
+ 여기서는 배열의 각 요소는 문자를&0;부터&1; 차원 safearray 만듭니다는 `CComBSTR` 개체입니다.  
   
-## 요구 사항  
- **헤더:**  atlbase.h  
+```
+HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
+```  
   
-## 참고 항목  
- [Class Overview](../../atl/atl-class-overview.md)   
- [ATL and MFC String Conversion Macros](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)
+### <a name="parameters"></a>매개 변수  
+ `ppArray`  
+ [out] 함수의 결과 저장 하는 데 사용 되는 safearray에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`성공 또는 표준에 `HRESULT` 오류 값입니다.  
+  
+##  <a name="a-namebytelengtha--ccombstrbytelength"></a><a name="bytelength"></a>CComBSTR::ByteLength  
+ 바이트 수를 반환 `m_str`, null 종결 문자를 제외 합니다.  
+  
+```
+unsigned int ByteLength() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 길이 [m_str](#m_str) 멤버 (바이트)에서입니다.  
+  
+### <a name="remarks"></a>주의  
+ 0을 반환 `m_str` 는 **NULL**합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&36;](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
+  
+##  <a name="a-nameccombstra--ccombstrccombstr"></a><a name="ccombstr"></a>CComBSTR::CComBSTR  
+ 생성자입니다. 기본 생성자 집합은 [m_str](#m_str) 멤버를 **NULL**합니다.  
+  
+```
+CComBSTR() throw();
+CComBSTR(const CComBSTR& src);  
+CComBSTR(REFGUID  guid);  
+CComBSTR(int nSize);  
+CComBSTR(int nSize, LPCOLESTR sz);  
+CComBSTR(int nSize, LPCSTR sz);  
+CComBSTR(LPCOLESTR pSrc);  
+CComBSTR(LPCSTR pSrc);  
+CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `nSize`  
+ [in] `sz`에서 복사할 문자 수 또는 `CComBSTR`에 대한 문자의 초기 크기입니다.  
+  
+ `sz`  
+ [in] 복사할 문자열입니다. 유니코드 버전을 지정 된 **LPCOLESTR**; ANSI 버전 지정는 `LPCSTR`합니다.  
+  
+ `pSrc`  
+ [in] 복사할 문자열입니다. 유니코드 버전을 지정 된 **LPCOLESTR**; ANSI 버전 지정는 `LPCSTR`합니다.  
+  
+ *src*  
+ [in] `CComBSTR` 개체입니다.  
+  
+ `guid`  
+ [in] 에 대 한 참조는 **GUID** 구조입니다.  
+  
+### <a name="remarks"></a>주의  
+ 복사 생성자 집합 `m_str` 의 복사본에는 `BSTR` 소속 *src*합니다. **REFGUID** 변환 생성자는 **GUID** 사용 하 여 문자열을 **StringFromGUID2** 하 고 결과 저장 합니다.  
+  
+ 다른 생성자는 `m_str`을 지정된 문자열의 복사본으로 설정합니다. `nSize`에 대한 값을 전달하면 `nSize` 문자만 복사되고 그 뒤에 null 종결 문자가 옵니다.  
+  
+ `CComBSTR`은 이동 의미 체계를 지원합니다. 이동 생성자를 사용할 수 있습니다 (rvalue 참조를 사용 하는 생성자 ( `&&`) 이전 개체를 복사 하는 오버 헤드 없이 인수로 전달 하면 개체에 동일한 기본 데이터를 사용 하는 새 개체를 만듭니다.  
+  
+ 소멸자는 `m_str`에서 가리키는 문자열을 해제합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&37;](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
+  
+##  <a name="a-namedtora--ccombstrccombstr"></a><a name="dtor"></a>CComBSTR:: ~ CComBSTR  
+ 소멸자입니다.  
+  
+```
+~CComBSTR();
+```  
+  
+### <a name="remarks"></a>주의  
+ 소멸자는 `m_str`에서 가리키는 문자열을 해제합니다.  
+  
+##  <a name="a-namecopya--ccombstrcopy"></a><a name="copy"></a>CComBSTR::Copy  
+ 할당의 복사본을 반환 하 고 `m_str`합니다.  
+  
+```
+BSTR Copy() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 복사본은 [m_str](#m_str) 멤버입니다. If `m_str` is **NULL**, returns **NULL**.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&38;](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
+  
+##  <a name="a-namecopytoa--ccombstrcopyto"></a><a name="copyto"></a>CComBSTR::CopyTo  
+ 할당의 복사본을 반환 하 고 [m_str](#m_str) 매개 변수를 통해.  
+  
+```
+HRESULT CopyTo(BSTR* pbstr) throw();
+
+HRESULT CopyTo(VARIANT* pvarDest) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbstr*  
+ [out] 주소는 `BSTR` 를이 메서드에 의해 할당 된 문자열을 반환 합니다.  
+  
+ `pvarDest`  
+ [out] 주소는 **VARIANT** 를이 메서드에 의해 할당 된 문자열을 반환 합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 복사본의 성공 여부를 나타내는 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드를 호출한 후는 **VARIANT** 가리키는 `pvarDest` 유형 `VT_BSTR`합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&39;](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
+  
+##  <a name="a-namedetacha--ccombstrdetach"></a><a name="detach"></a>CComBSTR::Detach  
+ 분리 [m_str](#m_str) 에서 `CComBSTR` 개체 집합과 `m_str` 를 **NULL**합니다.  
+  
+```
+BSTR Detach() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `BSTR` 연관 된 `CComBSTR` 개체입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&40;](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
+  
+##  <a name="a-nameemptya--ccombstrempty"></a><a name="empty"></a>CComBSTR::Empty  
+ 해제는 [m_str](#m_str) 멤버입니다.  
+  
+```
+void Empty() throw();
+```  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&41;](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
+  
+##  <a name="a-namelengtha--ccombstrlength"></a><a name="length"></a>CComBSTR::Length  
+ 에 있는 문자의 수를 반환 `m_str`, null 종결 문자를 제외 합니다.  
+  
+```
+unsigned int Length() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 길이 [m_str](#m_str) 멤버입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&42;](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
+  
+##  <a name="a-nameloadstringa--ccombstrloadstring"></a><a name="loadstring"></a>CComBSTR::LoadString  
+ 지정 된 문자열 리소스를 로드 `nID` 이 개체에 저장 합니다.  
+  
+```
+bool LoadString(HINSTANCE hInst, UINT nID) throw();
+bool LoadString(UINT nID) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ 참조 [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 성공적으로 로드 하 고 그렇지 않으면 문자열이 이면 반환 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 통해 사용자에 의해 식별 되는 모듈에서 리소스를 로드 하는 첫 번째 함수는 `hInst` 매개 변수입니다. 와 연결 된 리소스 모듈에서 리소스를 로드 하는 두 번째 함수는 [CComModule](../../atl/reference/ccommodule-class.md)-이 프로젝트에 사용 되는 개체를 파생 합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&43;](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
+  
+##  <a name="a-namemstra--ccombstrmstr"></a><a name="m_str"></a>CComBSTR::m_str  
+ 포함 된 `BSTR` 와 관련 된는 `CComBSTR` 개체입니다.  
+  
+```
+BSTR m_str;
+```  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&49;](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
+  
+##  <a name="a-nameoperatorbstra--ccombstroperator-bstr"></a><a name="operator_bstr"></a>BSTR CComBSTR::operator  
+ 캐스트는 `CComBSTR` 개체는 `BSTR`합니다.  
+  
+```  
+operator BSTR() const throw();
+```  
+  
+### <a name="remarks"></a>주의  
+ 전달할 수 있도록 `CComBSTR` 개체는 함수를 **[in] BSTR** 매개 변수입니다.  
+  
+### <a name="example"></a>예제  
+ 예를 참조 [CComBSTR::m_str](#m_str)합니다.  
+  
+##  <a name="a-nameoperatornota--ccombstroperator-"></a><a name="operator_not"></a>CComBSTR::operator!  
+ 확인 여부 `BSTR` 문자열은 NULL입니다.  
+  
+```
+bool operator!() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 경우는 [m_str](#m_str) 멤버는 **NULL**고, 그렇지 않으면 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 연산자는 NULL 값, 빈 문자열을 하지 확인합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&35;](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
+  
+##  <a name="a-nameoperatorneqa--ccombstroperator-"></a><a name="operator_neq"></a>CComBSTR::operator! =  
+ 논리적 반대를 반환 [연산자 = =](#operator_eq_eq)합니다.  
+  
+```
+bool operator!= (const CComBSTR& bstrSrc) const throw();
+bool operator!= (LPCOLESTR pszSrc) const;
+bool operator!= (LPCSTR pszSrc) const;
+bool operator!= (int nNull) const throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bstrSrc`  
+ [in] `CComBSTR` 개체입니다.  
+  
+ `pszSrc`  
+ [in]&0;으로 끝나는 문자열입니다.  
+  
+ `nNull`  
+ [in] 해야 **NULL**합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 비교 되는 항목에 같지 않은 경우는 `CComBSTR` 개체 하 고, 그렇지 않으면 반환 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ `CComBSTR`사용자의 기본 로케일의 컨텍스트에서 s 텍스트 방식으로 비교 됩니다. 최종 비교 연산자에 대해 포함 된 문자열을 방금 비교 **NULL**합니다.  
+  
+##  <a name="a-nameoperatorampa--ccombstroperator-amp"></a><a name="operator_amp"></a>CComBSTR::operator&amp;  
+ 주소를 반환 하는 `BSTR` 에 저장 된는 [m_str](#m_str) 멤버입니다.  
+  
+```
+BSTR* operator&() throw();
+```  
+  
+### <a name="remarks"></a>주의  
+ `CComBstr operator &`특별 한 어설션이 연관 된 메모리 누수를 식별 하기 위해. 프로그램은 어설션 될 때의 `m_str` 멤버가 초기화 됩니다. 이 어설션이 생성 프로그래머를 사용 하는 상황을 파악 하는 `& operator` 새 값을 할당할 `m_str` 멤버의 첫 번째 할당 해제 되지 않은 상태로 `m_str`합니다. 경우 `m_str` NULL 이면 프로그램 해당 m_str 아직 할당 되지 않은 것으로 가정 합니다. 이 경우 프로그램을 어설션 하지 않습니다.  
+  
+ 이 어설션이 기본적으로 사용 되지 않습니다. 정의 `ATL_CCOMBSTR_ADDRESS_OF_ASSERT` 이 구문은 사용할 수 있도록 합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&46;](../../atl/codesnippet/cpp/ccombstr-class_14.cpp)]  
+  
+ [!code-cpp[NVC_ATL_Utilities #&47;](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
+  
+##  <a name="a-nameoperatoraddeqa--ccombstroperator-"></a><a name="operator_add_eq"></a>CComBSTR::operator + =  
+ 문자열을 추가 하는 `CComBSTR` 개체입니다.  
+  
+```
+CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const LPCOLESTR pszSrc);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bstrSrc`  
+ [in] A `CComBSTR` 추가할 개체입니다.  
+  
+ `pszSrc`  
+ [in]&0;으로 끝나는 추가할 문자열입니다.  
+  
+### <a name="remarks"></a>주의  
+ `CComBSTR`사용자의 기본 로케일의 컨텍스트에서 s 텍스트 방식으로 비교 됩니다. **LPCOLESTR** 비교가 수행 사용 하 여 `memcmp` 각 문자열의 원시 데이터에 있습니다. `LPCSTR` 비교 수행한 동일한 방식으로 임시 유니코드의 복사 되 면 `pszSrc` 만들었습니다. 최종 비교 연산자에 대해 포함 된 문자열을 방금 비교 **NULL**합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&48;](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
+  
+##  <a name="a-nameoperatorlta--ccombstroperator-lt"></a><a name="operator_lt"></a>CComBSTR::operator&lt;  
+ 비교는 `CComBSTR` 문자열입니다.  
+  
+```
+bool operator<(const CComBSTR& bstrSrc) const throw();
+bool operator<(LPCOLESTR pszSrc) const throw();
+bool operator<(LPCSTR pszSrc) const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 비교 되는 항목이 있으면 보다 작은 `CComBSTR` 개체 하 고, 그렇지 않으면 반환 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 사용자의 기본 로캘을 사용 하 여 비교 합니다.  
+  
+##  <a name="a-nameoperatoreqa--ccombstroperator-"></a><a name="operator_eq"></a>CComBSTR::operator =  
+ 설정의 [m_str](#m_str) 멤버의 복사본에 `pSrc` 또는 복사본을는 `BSTR` 소속 *src*합니다. 이동 할당 연산자 이동 `src` 복사 하지 않고 있습니다.   
+  
+```
+CComBSTR& operator= (const CComBSTR& src);  
+CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (LPCSTR pSrc);
+CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
+```  
+  
+### <a name="remarks"></a>주의  
+ `pSrc` 매개 변수를 지정 하거나 한 **LPCOLESTR** 유니코드 버전에 대 한 또는 `LPCSTR` ANSI 버전입니다.  
+  
+### <a name="example"></a>예제  
+ 예를 참조 [CComBSTR::Copy](#copy)합니다.  
+  
+##  <a name="a-nameoperatoreqeqa--ccombstroperator-"></a><a name="operator_eq_eq"></a>CComBSTR::operator = =  
+ 비교는 `CComBSTR` 문자열입니다. `CComBSTR`사용자의 기본 로케일의 컨텍스트에서 s 텍스트 방식으로 비교 됩니다.  
+  
+```
+bool operator== (const CComBSTR& bstrSrc) const throw();
+bool operator== (LPCOLESTR pszSrc) const;
+bool operator== (LPCSTR pszSrc) const;
+bool operator== (int nNull) const throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bstrSrc`  
+ [in] `CComBSTR` 개체입니다.  
+  
+ `pszSrc`  
+ [in]&0;으로 끝나는 문자열입니다.  
+  
+ `nNull`  
+ [in] 해야 **NULL**합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 비교 하 고 항목이 같은 경우에 `CComBSTR` 개체 하 고, 그렇지 않으면 반환 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 최종 비교 연산자에 대해 포함 된 문자열을 방금 비교 **NULL**합니다.  
+  
+##  <a name="a-nameoperatorgta--ccombstroperator-gt"></a><a name="operator_gt"></a>CComBSTR::operator&gt;  
+ 비교는 `CComBSTR` 문자열입니다.  
+  
+```
+bool operator>(const CComBSTR& bstrSrc) const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **true** 비교 되는 항목 보다 큰 경우는 `CComBSTR` 개체 하 고, 그렇지 않으면 반환 **false**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 사용자의 기본 로캘을 사용 하 여 비교 합니다.  
+  
+##  <a name="a-namereadfromstreama--ccombstrreadfromstream"></a><a name="readfromstream"></a>CComBSTR::ReadFromStream  
+ 설정의 [m_str](#m_str) 멤버를는 `BSTR` 지정 된 스트림에 포함 합니다.  
+  
+```
+HRESULT ReadFromStream(IStream* pStream) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pStream`  
+ [in] 에 대 한 포인터는 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 인터페이스에 데이터를 포함 하는 스트림입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ **ReadToStream** 를 호출 하 여 기록 데이터 형식을 호환 되도록 현재 위치에서 스트림 내용이 필요 [WriteToStream](#writetostream)합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&44;](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
+  
+##  <a name="a-nametolowera--ccombstrtolower"></a><a name="tolower"></a>CComBSTR::ToLower  
+ 포함 된 문자열을 소문자로 변환합니다.  
+  
+```
+HRESULT ToLower() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 참조 **CharLowerBuff** 변환이 수행 되는 방식을 대 한 자세한 내용은 합니다.  
+  
+##  <a name="a-nametouppera--ccombstrtoupper"></a><a name="toupper"></a>CComBSTR::ToUpper  
+ 포함 된 문자열을 대문자로 변환합니다.  
+  
+```
+HRESULT ToUpper() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 참조 **CharUpperBuff** 변환이 수행 되는 방식을 대 한 자세한 내용은 합니다.  
+  
+##  <a name="a-namewritetostreama--ccombstrwritetostream"></a><a name="writetostream"></a>CComBSTR::WriteToStream  
+ 저장 된 [m_str](#m_str) 스트림에 멤버입니다.  
+  
+```
+HRESULT WriteToStream(IStream* pStream) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pStream`  
+ [in] 에 대 한 포인터는 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 스트림에서 인터페이스입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ BSTR에서 사용 하 여 스트림의 콘텐츠를 다시 만들 수는 [ReadFromStream](#readfromstream) 함수입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_ATL_Utilities #&45;](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]  
+  
+## <a name="see-also"></a>참고 항목  
+ [클래스 개요](../../atl/atl-class-overview.md)   
+ [ATL 및 MFC 문자열 변환 매크로](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)
+

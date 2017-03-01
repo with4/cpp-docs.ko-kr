@@ -1,168 +1,185 @@
 ---
-title: "CDaoFieldInfo 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoFieldInfo 구조체"
-  - "DAO(Data Access Objects), 필드 컬렉션"
+title: "CDaoFieldInfo 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Fields collection
+- CDaoFieldInfo structure
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoFieldInfo 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 15db0c56480dfefb9fc8806c08596e37c7d38eb2
+ms.lasthandoff: 02/24/2017
 
-The `CDaoFieldInfo` structure contains information about a field object defined for data access objects \(DAO\).  
+---
+# <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 구조체
+`CDaoFieldInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 된 field 개체에 대 한 정보가 들어 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      struct CDaoFieldInfo  
+struct CDaoFieldInfo  
 {  
-   CString m_strName;           // Primary  
-   short m_nType;               // Primary  
-   long m_lSize;                // Primary  
-   long m_lAttributes;          // Primary  
-   short m_nOrdinalPosition;    // Secondary  
-   BOOL m_bRequired;            // Secondary  
-   BOOL m_bAllowZeroLength;     // Secondary  
-   long m_lCollatingOrder;      // Secondary  
-   CString m_strForeignName;    // Secondary  
-   CString m_strSourceField;    // Secondary  
-   CString m_strSourceTable;    // Secondary  
-   CString m_strValidationRule; // All  
-   CString m_strValidationText; // All  
-   CString m_strDefaultValue;   // All  
+    CString m_strName;           // Primary  
+    short m_nType;               // Primary  
+    long m_lSize;                // Primary  
+    long m_lAttributes;          // Primary  
+    short m_nOrdinalPosition;    // Secondary  
+    BOOL m_bRequired;            // Secondary  
+    BOOL m_bAllowZeroLength;     // Secondary  
+    long m_lCollatingOrder;      // Secondary  
+    CString m_strForeignName;    // Secondary  
+    CString m_strSourceField;    // Secondary  
+    CString m_strSourceTable;    // Secondary  
+    CString m_strValidationRule; // All  
+    CString m_strValidationText; // All  
+    CString m_strDefaultValue;   // All  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `m_strName`  
- Uniquely names the field object.  For details, see the topic "Name Property" in DAO Help.  
+ Field 개체의 고유 이름을 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
  `m_nType`  
- A value that indicates the data type of the field.  For details, see the topic "Type Property" in DAO Help.  The value of this property can be one of the following:  
+ 필드의 데이터 형식을 나타내는 값입니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다. 이 속성의 값은 다음 중 하나일 수 있습니다.  
   
--   **dbBoolean** Yes\/No, same as **TRUE**\/**FALSE**  
+- **dbBoolean** 예/아니요, 동일 **TRUE**/**FALSE**  
   
--   **dbByte** Byte  
+- **dbByte** 바이트  
   
--   **dbInteger** Short  
+- **dbInteger** 짧은  
   
--   **dbLong** Long  
+- **dbLong** 긴  
   
--   **dbCurrency** Currency; see MFC class [COleCurrency](../../mfc/reference/colecurrency-class.md)  
+- **dbCurrency** 통화, 참조 MFC 클래스 [COleCurrency](../../mfc/reference/colecurrency-class.md)  
   
--   **dbSingle** Single  
+- **dbSingle** 단일  
   
--   **dbDouble** Double  
+- **dbDouble** Double  
   
--   **dbDate** Date\/Time; see MFC class [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)  
+- **dbDate** 날짜/시간, 참조 MFC 클래스 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)  
   
--   **dbText** Text; see MFC class [CString](../../atl-mfc-shared/reference/cstringt-class.md)  
+- **dbText** 텍스트 이거나, 이러한 참조 MFC 클래스 [CString](../../atl-mfc-shared/reference/cstringt-class.md)  
   
--   **dbLongBinary** Long Binary \(OLE Object\); you might want to use MFC class [CByteArray](../../mfc/reference/cbytearray-class.md) instead of class `CLongBinary` as `CByteArray` is richer and easier to use.  
+- **dbLongBinary** 긴 이진 (OLE 개체); MFC 클래스를 사용 하려는 [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스 대신 `CLongBinary` 으로 `CByteArray` 풍부 하 고 쉽게 사용할 수 있습니다.  
   
--   **dbMemo** Memo; see MFC class `CString`  
+- **dbMemo** 메모; 참조 MFC 클래스`CString`  
   
--   **dbGUID** A Globally Unique Identifier\/Universally Unique Identifier used with remote procedure calls.  For more information, see the topic "Type Property" in DAO Help.  
+- **dbGUID** 는 전역적으로 고유 식별자/Universally Unique Identifier 원격 프로시저 호출에 사용 합니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 하십시오.  
   
 > [!NOTE]
->  Do not use string data types for binary data.  This causes your data to pass through the Unicode\/ANSI translation layer, resulting in increased overhead and possibly unexpected translation.  
+>  이진 데이터에 대 한 문자열 데이터 형식을 사용 하지 마십시오. 이렇게 하면 오버 헤드가 증가 하 고 예상치 못한 변환에서 발생 하는 유니코드/ANSI 변환 계층을 통해 전달할 데이터입니다.  
   
- *m\_lSize*  
- A value that indicates the maximum size, in bytes, of a DAO field object that contains text or the fixed size of a field object that contains text or numeric values.  For details, see the topic "Size Property" in DAO Help.  Sizes can be one of the following values:  
+ *m_lSize*  
+ 텍스트 또는 고정된 크기의 텍스트 또는 숫자 값을 포함 하는 필드 개체를 포함 하는 DAO 필드 개체를 바이트 단위로 최대 크기를 나타내는 값입니다. 자세한 내용은 DAO 도움말의 "크기 속성" 항목을 참조 합니다. 크기는 다음 값 중 하나일 수 있습니다.  
   
-|형식|Size \(Bytes\)|설명|  
-|--------|--------------------|--------|  
-|**dbBoolean**|1바이트|Yes\/No \(same as True\/False\)|  
-|**dbByte**|1|Byte|  
+|형식|크기(바이트)|설명|  
+|----------|--------------------|-----------------|  
+|**dbBoolean**|1바이트|예/아니요 (True/False와 같음)|  
+|**dbByte**|1|바이트|  
 |**dbInteger**|2|정수|  
 |**dbLong**|4|Long|  
-|**dbCurrency**|8|Currency \([COleCurrency](../../mfc/reference/colecurrency-class.md)\)|  
+|**dbCurrency**|9|통화 ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
 |**dbSingle**|4|Single|  
-|**dbDouble**|8|Double|  
-|**dbDate**|8|Date\/Time \([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)\)|  
-|**dbText**|1 \- 255|Text \([CString](../../atl-mfc-shared/reference/cstringt-class.md)\)|  
-|**dbLongBinary**|0|Long Binary \(OLE Object; [CByteArray](../../mfc/reference/cbytearray-class.md); use instead of `CLongBinary`\)|  
-|**dbMemo**|0|Memo \([CString](../../atl-mfc-shared/reference/cstringt-class.md)\)|  
-|**dbGUID**|16|A Globally Unique Identifier\/Universally Unique Identifier used with remote procedure calls.|  
+|**dbDouble**|9|Double|  
+|**dbDate**|9|날짜/시간 ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|**dbText**|1 - 255|텍스트 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbLongBinary**|0|긴 이진 (OLE 개체입니다. [CByteArray](../../mfc/reference/cbytearray-class.md); 대신 `CLongBinary`)|  
+|**dbMemo**|0|메모 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbGUID**|16|전역적으로 고유 식별자/범용 고유 식별자 원격 프로시저 호출에 사용 합니다.|  
   
  `m_lAttributes`  
- Specifies characteristics of a field object contained by a tabledef, recordset, querydef, or index object.  The value returned can be a sum of these constants, created with the C\+\+ bitwise\-OR \(  **&#124;**\) operator:  
+ 테이블 정의 레코드 집합, 쿼리 또는 인덱스 개체에 포함 된 field 개체의 특성을 지정 합니다. 반환 되는 값의 비트 OR는 c + +를 사용 하 여 만든이 상수를 합 될 수 있습니다 (**|**) 연산자:  
   
--   **dbFixedField** The field size is fixed \(default for Numeric fields\).  
+- **dbFixedField** 필드 크기 (숫자 필드에 대 한 기본값) 고정 됩니다.  
   
--   **dbVariableField** The field size is variable \(Text fields only\).  
+- **dbVariableField** 필드 크기는 변수 (텍스트 필드에만 해당).  
   
--   **dbAutoIncrField** The field value for new records is automatically incremented to a unique long integer that cannot be changed.  Only supported for Microsoft Jet database tables.  
+- **dbAutoIncrField** 는 고유한 정수 (long) 변경할 수 없는 새 레코드에 대 한 필드 값 자동으로 증가 합니다. Microsoft Jet 데이터베이스 테이블에 대해서만 지원 합니다.  
   
--   **dbUpdatableField** The field value can be changed.  
+- **dbUpdatableField** 필드 값을 변경할 수 있습니다.  
   
--   **dbDescending** The field is sorted in descending \(Z \- A or 100 \- 0\) order \(applies only to a field object in a Fields collection of an index object; in MFC, index objects are themselves contained in tabledef objects\).  If you omit this constant, the field is sorted in ascending \(A \- Z or 0 \- 100\) order \(default\).  
+- **dbDescending** 필드가 내림차순으로 정렬 됩니다 (A-Z 또는 100-0) 순서 (field 개체는 index 개체의 필드 컬렉션, MFC, 개체 자체 테이블 정의 개체에 포함 된 인덱스에만 적용). 이 상수를 생략 하면 필드 오름차순으로 정렬 됩니다 (A-Z 또는 0-100) 순서 (기본값).  
   
- When checking the setting of this property, you can use the C\+\+ bitwise\-AND operator \(**&**\) to test for a specific attribute.  When setting multiple attributes, you can combine them by combining the appropriate constants with the bitwise\-OR \(  **&#124;**\) operator.  For details, see the topic "Attributes Property" in DAO Help.  
+ 이 속성의 설정은 검사할 때 사용할 수 있습니다 c + + 비트-및 연산자 (**&**)을 특정 특성에 대 한 테스트 합니다. 여러 특성을 설정할 때 비트 OR와 적절 한 상수를 결합 하 여 결합 수 있습니다 (**|**) 연산자. 자세한 내용은 DAO 도움말에서 "특성 속성" 항목을 참조 합니다.  
   
- *m\_nOrdinalPosition*  
- A value that specifies the numeric order in which you want a field represented by a DAO field object to be displayed relative to other fields.  You can set this property with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  For details, see the topic "OrdinalPosition Property" in DAO Help.  
+ *m_nOrdinalPosition*  
+ 다른 필드를 기준으로 표시 되는 DAO 필드 개체를 나타내는 필드를 원하는 숫자 순서를 지정 하는 값입니다. 이 속성을 설정할 수 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다. 자세한 내용은 DAO 도움말에서 "OrdinalPosition 속성" 항목을 참조 합니다.  
   
  `m_bRequired`  
- Indicates whether a DAO field object requires a non\-Null value.  If this property is **TRUE**, the field does not allow a Null value.  If Required is set to **FALSE**, the field can contain Null values as well as values that meet the conditions specified by the AllowZeroLength and ValidationRule property settings.  For details, see the topic "Required Property" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ DAO field 개체는 Null이 아닌 값을 필요한 지 여부를 나타냅니다. 이 속성이 **TRUE**, 필드에 Null 값을 허용 하지 않습니다. 로 설정 되어 필요한 경우 **FALSE**, 필드에 Null 값 뿐 아니라 AllowZeroLength 및 유효성 검사 규칙 속성 설정에 지정 된 조건을 충족 하는 값 포함 될 수 있습니다. 자세한 내용은 DAO 도움말의 "필수 속성" 항목을 참조 하십시오. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- *m\_bAllowZeroLength*  
- Indicates whether an empty string \(""\) is a valid value of a DAO field object with a Text or Memo data type.  If this property is **TRUE**, an empty string is a valid value.  You can set this property to **FALSE** to ensure that you cannot use an empty string to set the value of a field.  For details, see the topic "AllowZeroLength Property" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ *m_bAllowZeroLength*  
+ 나타냅니다 여부 빈 문자열 ("")는 DAO 필드 개체를 사용 하는 텍스트 또는 메모 데이터 형식과 유효한 값입니다. 이 속성이 **TRUE**, 빈 문자열은 유효한 값입니다. 이 속성을 설정할 수 **FALSE** 필드의 값을 설정 하려면 빈 문자열을 사용할 수 없습니다. 자세한 내용은 DAO 도움말에서 "AllowZeroLength 속성" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  `m_lCollatingOrder`  
- Specifies the sequence of the sort order in text for string comparison or sorting.  For details, see the topic "Customizing Windows Registry Settings for Data Access" in DAO Help.  For a list of the possible values returned, see the **m\_lCollatingOrder** member of the [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) structure.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ 문자열 비교 또는 정렬에 대 한 텍스트 정렬 순서를 지정 합니다. 자세한 내용은 "사용자 지정 Windows 레지스트리 설정에 대 한 데이터 액세스" DAO 도움말의 항목을 참조 합니다. 목록이 반환 되는 가능한 값에 대 한 참조는 **m_lCollatingOrder** 의 멤버는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 구조입니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  `m_strForeignName`  
- A value that, in a relation, specifies the name of the DAO field object in a foreign table that corresponds to a field in a primary table.  For details, see the topic "ForeignName Property" in DAO Help.  
+ 관계에서 기본 테이블의 필드에 해당 하는 외래 테이블의 DAO field 개체의 이름을 지정 하는 값입니다. 자세한 내용은 DAO 도움말에서 "ForeignName 속성" 항목을 참조 합니다.  
   
- *m\_strSourceField*  
- Indicates the name of the field that is the original source of the data for a DAO field object contained by a tabledef, recordset, or querydef object.  This property indicates the original field name associated with a field object.  For example, you could use this property to determine the original source of the data in a query field whose name is unrelated to the name of the field in the underlying table.  For details, see the topic "SourceField, SourceTable Properties" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ *m_strSourceField*  
+ 테이블 정의 레코드 집합 또는 쿼리 정의 개체에 포함 된 DAO field 개체에 대 한 데이터 필드의 이름을 나타냅니다. 이 속성은 field 개체와 연결 된 원래 필드 이름을 나타냅니다. 예를 들어 이름이 기본 테이블의 필드의 이름으로 관련 없는 쿼리 필드에 있는 데이터의 원본 소스를 확인 하려면이 속성을 사용할 수 있습니다. 내용은 DAO 도움말의 "원본 필드, SourceTable 속성" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- *m\_strSourceTable*  
- Indicates the name of the table that is the original source of the data for a DAO field object contained by a tabledef, recordset, or querydef object.  This property indicates the original table name associated with a field object.  For example, you could use this property to determine the original source of the data in a query field whose name is unrelated to the name of the field in the underlying table.  For details, see the topic "SourceField, SourceTable Properties" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ *m_strSourceTable*  
+ 테이블 정의 레코드 집합 또는 쿼리 정의 개체에 포함 된 DAO field 개체에 대 한 데이터 테이블의 이름을 나타냅니다. 이 속성은 field 개체와 연결 된 원래 테이블 이름을 나타냅니다. 예를 들어 이름이 기본 테이블의 필드의 이름으로 관련 없는 쿼리 필드에 있는 데이터의 원본 소스를 확인 하려면이 속성을 사용할 수 있습니다. 내용은 DAO 도움말의 "원본 필드, SourceTable 속성" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  `m_strValidationRule`  
- A value that validates the data in a field as it is changed or added to a table.  For details, see the topic "ValidationRule Property" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ 이 변경 되거나 테이블에 추가 되는 필드의 데이터 유효성을 검사 하는 값입니다. 자세한 내용은 DAO 도움말에서 "ValidationRule 속성" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- For related information about tabledefs, see the **m\_strValidationRule** member of the [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) structure.  
+ 테이블 정의 대 한 관련된 정보에 대 한 참조는 **m_strValidationRule** 의 멤버는 [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) 구조입니다.  
   
  `m_strValidationText`  
- A value that specifies the text of the message that your application displays if the value of a DAO field object does not satisfy the validation rule specified by the ValidationRule property setting.  For details, see the topic "ValidationText Property" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ DAO field 개체의 값은 ValidationRule 속성 설정으로 지정 된 유효성 검사 규칙을 충족 하지 않으면 응용 프로그램에서 표시 하는 메시지의 텍스트를 지정 하는 값입니다. 자세한 내용은 DAO 도움말의 "유효성 검사 텍스트 Property" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- *m\_strDefaultValue*  
- The default value of a DAO field object.  When a new record is created, the DefaultValue property setting is automatically entered as the value for the field.  For details, see the topic "DefaultValue Property" in DAO Help.  You can set this property for a tabledef with [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md).  
+ *m_strDefaultValue*  
+ DAO field 개체의 기본값입니다. 새 레코드를 만들면 DefaultValue 속성 설정이 자동으로 입력 값으로 필드입니다. 자세한 내용은 DAO 도움말에서 "DefaultValue 속성" 항목을 참조 합니다. 와 테이블 정의 대해이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
-## 설명  
- The references to Primary, Secondary, and All above indicate how the information is returned by the `GetFieldInfo` member function in classes [CDaoTableDef](../Topic/CDaoTableDef::GetFieldInfo.md), [CDaoQueryDef](../Topic/CDaoQueryDef::GetFieldInfo.md), and [CDaoRecordset](../Topic/CDaoRecordset::GetFieldInfo.md).  
+## <a name="remarks"></a>주의  
+ 기본, 보조 및 위에서 모두에 대 한 참조에서의 정보를 반환 하는 방법을 나타내는 `GetFieldInfo` 클래스 멤버 함수 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), 및 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)합니다.  
   
- Field objects are not represented by an MFC class.  Instead, the DAO objects underlying MFC objects of the following classes contain collections of field objects: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), and [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md).  These classes supply member functions to access some individual items of field information, or you can access them all at once with a `CDaoFieldInfo` object by calling the `GetFieldInfo` member function of the containing object.  
+ Field 개체는 MFC 클래스에 의해 표시 되지 않습니다. MFC 개체 클래스의 기본 DAO 개체 field 개체의 컬렉션을 포함 하는 대신,: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), 및 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)합니다. 이러한 클래스의 필드 정보를 일부 개별 항목에 액세스 하는 멤버 함수를 제공 하거나 한 번에 액세스할 수 있습니다는 `CDaoFieldInfo` 를 호출 하 여 개체의 `GetFieldInfo` 포함 하는 개체의 멤버 함수입니다.  
   
- Besides its use for examining object properties, you can also use `CDaoFieldInfo` to construct an input parameter for creating new fields in a tabledef.  Simpler options are available for this task, but if you want finer control, you can use the version of [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md) that takes a `CDaoFieldInfo` parameter.  
+ 개체 속성을 검사 하는 데 사용 외에도 사용할 수도 있습니다 `CDaoFieldInfo` 테이블 정의에 새 필드를 만들기 위한 입력된 매개 변수를 만들려고 합니다. 간단한 옵션은이 작업에 사용할 수 있지만 보다 세부적으로 제어를 원하는 경우에 버전을 사용할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) 사용 하는 `CDaoFieldInfo` 매개 변수입니다.  
   
- Information retrieved by the `GetFieldInfo` member function \(of the class that contains the field\) is stored in a `CDaoFieldInfo` structure.  Call the `GetFieldInfo` member function of the containing object in whose Fields collection the field object is stored.  `CDaoFieldInfo` also defines a `Dump` member function in debug builds.  You can use `Dump` to dump the contents of a `CDaoFieldInfo` object.  
+ 검색 한 정보는 `GetFieldInfo` (필드를 포함 하는 클래스)의 멤버 함수에 저장 되는 `CDaoFieldInfo` 구조입니다. 호출 된 `GetFieldInfo` 필드 개체가 보관 되어 있는 Fields 컬렉션에 포함 하는 개체의 멤버 함수입니다. `CDaoFieldInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoFieldInfo` 개체입니다.  
   
-## 요구 사항  
- **Header:** afxdao.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxdao.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef::GetFieldInfo](../Topic/CDaoTableDef::GetFieldInfo.md)   
- [CDaoRecordset::GetFieldInfo](../Topic/CDaoRecordset::GetFieldInfo.md)   
- [CDaoQueryDef::GetFieldInfo](../Topic/CDaoQueryDef::GetFieldInfo.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)   
+ [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)   
+ [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+
+

@@ -1,61 +1,78 @@
 ---
-title: "CDaoIndexFieldInfo 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoIndexFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoIndexFieldInfo 구조체"
-  - "DAO(Data Access Objects), 인덱스 필드 컬렉션"
+title: "CDaoIndexFieldInfo 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoIndexFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoIndexFieldInfo structure
+- DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# CDaoIndexFieldInfo 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 975b3a704936adc9d4205938bb2c757ab650f0d9
+ms.lasthandoff: 02/24/2017
 
-`CDaoIndexFieldInfo` 구조체는 데이터 액세스 개체 \(DAO\)에 정의 된 인덱스 필드 개체에 대한 정보가 들어 있습니다.  
+---
+# <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 구조체
+`CDaoIndexFieldInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 되는 인덱스 필드 개체에 대 한 정보가 들어 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      struct CDaoIndexFieldInfo  
+struct CDaoIndexFieldInfo  
 {  
-   CString m_strName;          // Primary  
-   BOOL m_bDescending;         // Primary  
+    CString m_strName;          // Primary  
+    BOOL m_bDescending;         // Primary  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `m_strName`  
- 고유 인덱스 필드 개체의 이름을 지정 합니다.  자세한 내용은 DAO 도움말의 "속성 이름" 항목을 참조 하십시오.  
+ 인덱스 필드 개체의 고유 이름을 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- *m\_bDescending*  
- 인덱스 개체에 정의 된 인덱스 순서를 나타냅니다.  명령이 내림차순인 경우 **TRUE** 입니다.  
+ *m_bDescending*  
+ Index 개체에 정의 된 인덱스 순서를 나타냅니다. **True 이면** 내림차순의 경우.  
   
-## 설명  
- 인덱스 개체가 테이블 정의 \(또는 테이블을 기반으로 레코드 집합\)에서 인덱싱된 필드를 나타내는 필드의 번호를 가질 수 있습니다.  [CDaoTableDef](../Topic/CDaoTableDef::GetIndexInfo.md) 또는 [CDaoRecordset](../Topic/CDaoRecordset::GetIndexInfo.md) 클래스의 `GetIndexInfo` 멤버 함수를 호출하여 얻어지는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 개체의 `m_pFieldInfos` 멤버에서 어떻게 정보를 반환 할 것인지를 나타내는 것 이상의 참조입니다.  
+## <a name="remarks"></a>주의  
+ Index 개체에서 테이블 정의 (또는 테이블을 기반으로 레코드 집합)는 인덱싱된 필드를 나타내는 필드의 있을 수 있습니다. 위의 기본에 대 한 참조 정보에 반환 되는 방법을 나타내는 `m_pFieldInfos` 의 멤버는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 를 호출 하 여 가져온 개체는 `GetIndexInfo` 클래스의 멤버 함수 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)합니다.  
   
- 인덱스 및 인덱스 필드 개체는 MFC 클래스에 의해 표시 되지 않습니다.  대신, [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 클래스의 MFC 개체내에 DAO 개체는 인덱스 컬렉션을 호출하여 인덱스 개체의 컬렉션을 포함합니다.  각 인덱스 개체 필드 개체의 컬렉션을 포함합니다.  이러한 클래스는 멤버 함수를 인덱스 정보의 개별 아이템에 액세스하도록 제공합니다 또는 포함하는 개체의 `GetIndexInfo` 멤버 함수를 호출하여 `CDaoIndexInfo` 개체를 사용하여 모든 아이템에 한번에 액세스 할 수 있습니다.  `CDaoIndexInfo` 개체는 그다음 `m_pFieldInfos` 데이터 멤버를 가지고, `CDaoIndexFieldInfo` 개체의 배열을 가르킵니다.  
+ Index 개체 및 인덱스 필드 개체는 MFC 클래스에 의해 표시 되지 않습니다. DAO 클래스의 기본 MFC 개체를 개체 대신 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 은 인덱스 컬렉션 이라고 하는 인덱스 개체의 컬렉션을 포함 합니다. 각 인덱스 개체 field 개체의 컬렉션을 포함합니다. 이러한 클래스는 개별 항목의 인덱스 정보에 액세스 하는 멤버 함수를 제공 하거나 한 번에 액세스할 수 있습니다는 `CDaoIndexInfo` 를 호출 하 여 개체의 `GetIndexInfo` 포함 하는 개체의 멤버 함수입니다. `CDaoIndexInfo` 개체, 그런 다음에 데이터 멤버가, `m_pFieldInfos`, 배열을 가리키는 `CDaoIndexFieldInfo` 개체입니다.  
   
- 관심 있는 인덱스 개체가 저장된 인덱스 콜렉션에 포함된 tabledef 또는 레코드 집합 개체의 `GetIndexInfo` 멤버 함수를 호출하십시오.  그 다음 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 개체의 `m_pFieldInfos` 멤버에 액세스 합니다.  `m_pFieldInfos` 배열의 길이는 `m_nFields` 에 저장됩니다.  `CDaoIndexFieldInfo` 는 디버그 빌드에서 `Dump` 멤버 함수를 정의합니다.  `Dump` 를 사용하여 `CDaoIndexFieldInfo` 개체의 컨텐츠를 버릴 수 있습니다.  
+ 호출 된 `GetIndexInfo` 인덱스가 있는 컬렉션은 포함 된 테이블 정의 또는 레코드 집합 개체의 멤버 함수에 관심이 index 개체를 저장 합니다. 다음 액세스는 `m_pFieldInfos` 의 멤버는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 개체입니다. 길이 `m_pFieldInfos` 배열에 저장 된 `m_nFields`합니다. `CDaoIndexFieldInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoIndexFieldInfo` 개체입니다.  
   
-## 요구 사항  
- **Header:** afxdao.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxdao.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef::GetIndexInfo](../Topic/CDaoTableDef::GetIndexInfo.md)   
- [CDaoRecordset::GetIndexInfo](../Topic/CDaoRecordset::GetIndexInfo.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)   
+ [CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+
+

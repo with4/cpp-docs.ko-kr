@@ -1,61 +1,77 @@
 ---
-title: "CMultiPageDHtmlDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMultiPageDHtmlDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMultiPageDHtmlDialog class"
+title: "CMultiPageDHtmlDialog 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMultiPageDHtmlDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMultiPageDHtmlDialog class
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMultiPageDHtmlDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c00af20731b2c47a0074366722da3f4a0711ef85
+ms.lasthandoff: 02/24/2017
 
-여러 페이지로 구성 된 대화 상자 순차적으로 여러 HTML 페이지를 표시 하 고 각 페이지에서 이벤트 처리.  
+---
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 클래스
+여러 페이지로 구성된 대화 상자는 여러 HTML 페이지를 순차적으로 표시하고 각 페이지의 이벤트를 처리합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CMultiPageDHtmlDialog : public CDHtmlDialog  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](../Topic/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog.md)|여러 페이지 \(마법사 스타일\) DHTML dialog 개체를 만듭니다.|  
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](../Topic/CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog.md)|여러 페이지로 된 DHTML dialog 개체를 소멸 시킵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|(마법사 스타일) 다중 페이지 DHTML 대화 상자 개체를 생성합니다.|  
+|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|다중 페이지 DHTML 대화 상자 개체를 소멸 시킵니다.|  
   
-## 설명  
- 이 작업을 수행 하는 메커니즘입니다는  [URL 및 DHTML 이벤트 맵](http://msdn.microsoft.com/ko-kr/2a7332f0-79d7-46e4-b816-0a618c46777a), 포함 된  [포함 된 이벤트 맵](../Topic/BEGIN_EMBED_DHTML_EVENT_MAP.md) 각 페이지에 대 한.  
+## <a name="remarks"></a>주의  
+ 이 작업을 수행 하는 메커니즘은 한 [DHTML 및 URL 이벤트 맵](http://msdn.microsoft.com/en-us/2a7332f0-79d7-46e4-b816-0a618c46777a), 포함 된 [이벤트 맵 포함](http://msdn.microsoft.com/library/5346210f-f8b7-4e28-9d2c-d9d7fd42421d) 각 페이지에 대 한 합니다.  
   
-## 예제  
- 간단한 마법사와 비슷한 기능을 정의 하는 HTML 리소스 세이 여러 페이지로 구성 된 대화 상자를 가정 합니다.  첫 페이지는 `Next` 단추, 두 번째는  **이전** 및 `Next` 단추 및 세 번째는  **이전** 단추.  처리기 함수를 호출 하는 단추 중 하나를 누를 때  [CDHtmlDialog::LoadFromResource](../Topic/CDHtmlDialog::LoadFromResource.md) 적절 한 새 페이지를 로드 합니다.  
+## <a name="example"></a>예제  
+ 이 다중 페이지 대화 상자에서는 간단한 마법사와 비슷한 기능을 정의 하는 세 가지 HTML 리소스를 가정 합니다. 첫 번째 페이지에는 `Next` 단추, 두 번째는 **Prev** 및 `Next` 단추 및 세 번째는 **Prev** 단추입니다. 처리기 함수를 호출 하는 단추 중 하나를 누르면 [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) 적절 한 새 페이지를 로드 합니다.  
   
- 클래스 선언 \(CMyMultiPageDlg.h\)에 관련 된 부분:  
+ (CMyMultiPageDlg.h)에서 클래스 선언의 관련 부분인:  
   
- [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/CPP/cmultipagedhtmldialog-class_1.h)]  
+ [!code-cpp[NVC_MFCDocView #&181;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
- 클래스 구현 \(CMyMultipageDlg.cpp\)에 관련 된 부분:  
+ 클래스 구현 (CMyMultipageDlg.cpp)의 관련 부분:  
   
- [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/CPP/cmultipagedhtmldialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView #&182;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
@@ -76,9 +92,50 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxdhtml.h  
   
-## 참고 항목  
- [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)   
- [Multipage DHTML and URL Event Maps \(NIB\)](http://msdn.microsoft.com/ko-kr/2a7332f0-79d7-46e4-b816-0a618c46777a)
+##  <a name="a-namecmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+ (마법사 스타일) 다중 페이지 DHTML 대화 상자 개체를 생성합니다.  
+  
+```  
+CMultiPageDHtmlDialog(
+    LPCTSTR lpszTemplateName,  
+    LPCTSTR szHtmlResID = NULL,  
+    CWnd* pParentWnd = NULL);
+
+ 
+CMultiPageDHtmlDialog(
+    UINT nIDTemplate,  
+    UINT nHtmlResID = 0,  
+    CWnd* pParentWnd = NULL);  
+  
+CMultiPageDHtmlDialog();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `lpszTemplateName`  
+ 대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열입니다.  
+  
+ `szHtmlResID`  
+ HTML 리소스의 이름에 해당 하는 null로 끝나는 문자열입니다.  
+  
+ `pParentWnd`  
+ 부모 또는 소유자 창 개체에 대 한 포인터 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+  
+ `nIDTemplate`  
+ 대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
+  
+ `nHtmlResID`  
+ HTML 리소스의 ID 번호를 포함합니다.  
+  
+##  <a name="a-namedtorcmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+ 다중 페이지 DHTML 대화 상자 개체를 소멸 시킵니다.  
+  
+```  
+virtual ~CMultiPageDHtmlDialog();
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [CDHtmlDialog 클래스](../../mfc/reference/cdhtmldialog-class.md)
+

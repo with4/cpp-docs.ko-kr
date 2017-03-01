@@ -1,59 +1,114 @@
 ---
-title: "CComFakeCriticalSection Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComFakeCriticalSection"
-  - "CComFakeCriticalSection"
-  - "ATL::CComFakeCriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComFakeCriticalSection class"
+title: "CComFakeCriticalSection 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComFakeCriticalSection
+- CComFakeCriticalSection
+- ATL::CComFakeCriticalSection
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComFakeCriticalSection Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 동일한 방법으로 제공  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) 임계 영역을 제공 하지 않지만.  
+---
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 클래스
+이 클래스와 같은 방법으로 제공 [클래스](../../atl/reference/ccomcriticalsection-class.md) 하지만 임계 영역을 제공 하지 않습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class CComFakeCriticalSection
 ```  
   
-class CComFakeCriticalSection  
+## <a name="members"></a>멤버  
   
-```  
+### <a name="public-methods"></a>Public 메서드  
   
-## Members  
+|이름|설명|  
+|----------|-----------------|  
+|[CComFakeCriticalSection::Init](#init)|없는 임계 영역 이므로 일어나지 않습니다.|  
+|[CComFakeCriticalSection::Lock](#lock)|없는 임계 영역 이므로 일어나지 않습니다.|  
+|[CComFakeCriticalSection::Term](#term)|없는 임계 영역 이므로 일어나지 않습니다.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|없는 임계 영역 이므로 일어나지 않습니다.|  
   
-### Public 메서드  
+## <a name="remarks"></a>주의  
+ `CComFakeCriticalSection`메서드를에 반영 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComFakeCriticalSection` 임계;에서는 이므로 해당 메서드는 아무것도 수행 합니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CComFakeCriticalSection::Init](../Topic/CComFakeCriticalSection::Init.md)|없는 임계 이므로 아무 작업도 하지 않습니다.|  
-|[CComFakeCriticalSection::Lock](../Topic/CComFakeCriticalSection::Lock.md)|없는 임계 이므로 아무 작업도 하지 않습니다.|  
-|[CComFakeCriticalSection::Term](../Topic/CComFakeCriticalSection::Term.md)|없는 임계 이므로 아무 작업도 하지 않습니다.|  
-|[CComFakeCriticalSection::Unlock](../Topic/CComFakeCriticalSection::Unlock.md)|없는 임계 이므로 아무 작업도 하지 않습니다.|  
+ 일반적으로 사용 `CComFakeCriticalSection` 통해는 `typedef` 이름, 하거나 `AutoCriticalSection` 또는 `CriticalSection`합니다. 사용 하는 경우 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 또는 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), 두 가지 모두 `typedef` 이름이 참조 `CComFakeCriticalSection`합니다. 사용 하는 경우 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), 참조 [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) 및 `CComCriticalSection`각각.  
   
-## 설명  
- `CComFakeCriticalSection`미러링에 메서드  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  그러나 `CComFakeCriticalSection` ; 임계 제공 하지 않습니다 따라서 해당 메서드는 그대로 둡니다.  
-  
- 일반적으로 사용 `CComFakeCriticalSection` 통해는 `typedef` , 이름 `AutoCriticalSection` 또는 `CriticalSection`.  사용 하는 경우  [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 또는  [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), 둘 다 `typedef` 참조의 이름을 `CComFakeCriticalSection`.  사용 하는 경우  [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)을 참조  [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) 및 `CComCriticalSection`, 각각.  
-  
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-## 참고 항목  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinita--ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init  
+ 없는 임계 영역 이므로 일어나지 않습니다.  
+  
+```
+HRESULT Init() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ S_OK 반환 합니다.  
+  
+##  <a name="a-namelocka--ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock  
+ 없는 임계 영역 이므로 일어나지 않습니다.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ S_OK 반환 합니다.  
+  
+##  <a name="a-nameterma--ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Term  
+ 없는 임계 영역 이므로 일어나지 않습니다.  
+  
+```
+HRESULT Term() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ S_OK 반환 합니다.  
+  
+##  <a name="a-nameunlocka--ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock  
+ 없는 임계 영역 이므로 일어나지 않습니다.  
+  
+```
+HRESULT Unlock() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ S_OK 반환 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [클래스 개요](../../atl/atl-class-overview.md)
+

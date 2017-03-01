@@ -1,113 +1,121 @@
 ---
-title: "CDaoTableDefInfo 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoTableDefInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoTableDefInfo 구조체"
-  - "DAO(Data Access Objects), TableDefs 컬렉션"
+title: "CDaoTableDefInfo 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoTableDefInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoTableDefInfo structure
+- DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoTableDefInfo 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4d1ac5ca00f98f8c34332ce2eb1a180ab715e6ba
+ms.lasthandoff: 02/24/2017
 
-The `CDaoTableDefInfo` structure contains information about a tabledef object defined for data access objects \(DAO\).  
+---
+# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 구조체
+`CDaoTableDefInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 된 tabledef 개체에 대 한 정보가 들어 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      struct CDaoTableDefInfo  
+struct CDaoTableDefInfo  
 {  
-   CString m_strName;               // Primary  
-   BOOL m_bUpdatable;               // Primary  
-   long m_lAttributes;              // Primary  
-   COleDateTime m_dateCreated;      // Secondary  
-   COleDateTime m_dateLastUpdated;  // Secondary  
-   CString m_strSrcTableName;       // Secondary  
-   CString m_strConnect;            // Secondary  
-   CString m_strValidationRule;     // All  
-   CString m_strValidationText;     // All  
-   long m_lRecordCount;             // All  
+    CString m_strName;               // Primary  
+    BOOL m_bUpdatable;               // Primary  
+    long m_lAttributes;              // Primary  
+    COleDateTime m_dateCreated;      // Secondary  
+    COleDateTime m_dateLastUpdated;  // Secondary  
+    CString m_strSrcTableName;       // Secondary  
+    CString m_strConnect;            // Secondary  
+    CString m_strValidationRule;     // All  
+    CString m_strValidationText;     // All  
+    long m_lRecordCount;             // All  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `m_strName`  
- Uniquely names the tabledef object.  To retrieve the value of this property directly, call the tabledef object's [GetName](../Topic/CDaoTableDef::GetName.md) member function.  For more information, see the topic "Name Property" in DAO Help.  
+ 테이블 정의 개체의 고유 이름을 지정 합니다. 이 속성의 값을 직접 검색 하려면 테이블 정의 개체의 호출 [GetName](../../mfc/reference/cdaotabledef-class.md#getname) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 하십시오.  
   
  `m_bUpdatable`  
- Indicates whether changes can be made to the table.  The quick way to determine whether a table is updatable is to open a `CDaoTableDef` object for the table and call the object's [CanUpdate](../Topic/CDaoTableDef::CanUpdate.md) member function.  `CanUpdate` always returns nonzero \(**TRUE**\) for a newly created tabledef object and 0 \(**FALSE**\) for an attached tabledef object.  A new tabledef object can be appended only to a database for which the current user has write permission.  If the table contains only nonupdatable fields, `CanUpdate` returns 0.  When one or more fields are updatable, `CanUpdate` returns nonzero.  You can edit only the updatable fields.  For more information, see the topic "Updatable Property" in DAO Help.  
+ 테이블에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 테이블은 업데이트할 수 있는지 여부를 결정 하는 빠른 방법은를 여는 `CDaoTableDef` 테이블에 대 한 개체와 개체의 호출 [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) 멤버 함수입니다. `CanUpdate`항상 0이 아닌 값을 반환 (**TRUE**)는 새로 만든된 테이블 정의 개체 및 0에 대 한 (**FALSE**) 연결 된 테이블 정의 개체입니다. 새 테이블 정의 개체는 현재 사용자에 대 한 쓰기 권한이 있는 데이터베이스에만 추가할 수 있습니다. 테이블에는 업데이트할 수 없는 필드만 포함 하는 경우 `CanUpdate` 0을 반환 합니다. 하나 이상의 필드를 업데이트할 수, `CanUpdate`&0;이 아닌 값을 반환 합니다. 업데이트할 수 있는 필드에만 편집할 수 있습니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 속성" 항목을 참조 하십시오.  
   
  `m_lAttributes`  
- Specifies characteristics of the table represented by the tabledef object.  To retrieve the current attributes of a tabledef, call its [GetAttributes](../Topic/CDaoTableDef::GetAttributes.md) member function.  The value returned can be a combination of these long constants \(using the bitwise\-OR \(  **&#124;**\) operator\):  
+ 테이블 정의 개체로 표시 된 테이블의 특성을 지정 합니다. 테이블 정의의 현재 속성을 검색 하려면 해당 [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) 멤버 함수입니다. 반환 된 값이 긴 상수의 조합일 수 있습니다 (비트 OR를 사용 하 여 (**|**) 연산자).  
   
--   **dbAttachExclusive** For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.  
+- **dbAttachExclusive** Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스, 테이블은 단독 사용을 위해 열린 연결 된 테이블을 나타냅니다.  
   
--   **dbAttachSavePWD** For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.  
+- **dbAttachSavePWD** Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스에 대 한 연결 정보로 사용자 ID와 연결 된 테이블에 대 한 암호 저장 된를 나타냅니다.  
   
--   **dbSystemObject** Indicates the table is a system table provided by the Microsoft Jet database engine. 읽기 전용입니다.  
+- **dbSystemObject** 테이블은 Microsoft Jet 데이터베이스 엔진에서 제공 하는 시스템 테이블을 나타냅니다. 읽기 전용입니다.  
   
--   **dbHiddenObject** Indicates the table is a hidden table provided by the Microsoft Jet database engine \(for temporary use\). 읽기 전용입니다.  
+- **dbHiddenObject** (임시 사용) 하기 위해 Microsoft Jet 데이터베이스 엔진에서 제공 하는 숨겨진된 테이블 테이블이 나타냅니다. 읽기 전용입니다.  
   
--   **dbAttachedTable** Indicates the table is an attached table from a non\-ODBC database, such as a Paradox database.  
+- **dbAttachedTable** 는 테이블은 Paradox 데이터베이스와 같은 비 ODBC 데이터베이스에서 연결 된 테이블을 나타냅니다.  
   
--   **dbAttachedODBC** Indicates the table is an attached table from an ODBC database, such as Microsoft SQL Server.  
+- **dbAttachedODBC** 는 테이블은 Microsoft SQL Server 등의 ODBC 데이터베이스에서 연결 된 테이블을 나타냅니다.  
   
  `m_dateCreated`  
- The date and time the table was created.  To directly retrieve the date the table was created, call the [GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md) member function of the `CDaoTableDef` object associated with the table.  See Comments below for more information.  For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
+ 날짜 및 테이블을 만든 시간입니다. 테이블을 만든 날짜를 직접 검색 하려면 호출의 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래의 설명을 참조 하십시오. 관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
  `m_dateLastUpdated`  
- The date and time of the most recent change made to the design of the table.  To directly retrieve the date the table was last updated, call the [GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md) member function of the `CDaoTableDef` object associated with the table.  See Comments below for more information.  For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
+ 날짜 및 시간을 테이블의 디자인에서 가장 최근의 변경입니다. 테이블을 마지막으로 수정한 날짜를 직접 검색 하려면 호출의 [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래의 설명을 참조 하십시오. 관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
- *m\_strSrcTableName*  
- Specifies the name of an attached table if any.  To directly retrieve the source table name, call the [GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md) member function of the `CDaoTableDef` object associated with the table.  
+ *m_strSrcTableName*  
+ 있는 경우 연결된 된 테이블의 이름을 지정 합니다. 직접를 검색 하려면 원본 테이블 이름을 호출 된 [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다.  
   
  `m_strConnect`  
- Provides information about the source of an open database.  You can check this property by calling the [GetConnect](../Topic/CDaoTableDef::GetConnect.md) member function of your `CDaoTableDef` object.  For more information about connect strings, see `GetConnect`.  
+ 열려 있는 데이터베이스의 원본에 대 한 정보를 제공합니다. 호출 하 여이 속성을 확인할 수는 [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) 의 멤버 함수에 `CDaoTableDef` 개체입니다. 에 대 한 자세한 내용은 연결 문자열을 참조 하십시오 `GetConnect`합니다.  
   
  `m_strValidationRule`  
- A value that validates the data in tabledef fields as they are changed or added to a table.  Validation is supported only for databases that use the Microsoft Jet database engine.  To directly retrieve the validation rule, call the [GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md) member function of the `CDaoTableDef` object associated with the table.  For related information, see the topic "ValidationRule Property" in DAO Help.  
+ 변경 되거나 테이블에 추가 될 때 테이블 정의 필드의 데이터 유효성을 검사 하는 값입니다. 유효성 검사는 Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스에 대해서만 지원 됩니다. 유효성 검사 규칙을 직접 검색 하려면 호출의 [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 관련된 내용은 DAO 도움말에서 "ValidationRule 속성" 항목을 참조 합니다.  
   
  `m_strValidationText`  
- A value that specifies the text of the message that your application should display if the validation rule specified by the ValidationRule property is not satisfied.  For related information, see the topic "ValidationText Property" in DAO Help.  
+ ValidationRule 속성에 지정 된 유효성 검사 규칙을 충족 되지 않는 경우 응용 프로그램을 표시 하는 메시지의 텍스트를 지정 하는 값입니다. 관련된 내용은 DAO 도움말의 "유효성 검사 텍스트 속성" 항목을 참조 합니다.  
   
- *m\_lRecordCount*  
- The number of records accessed in a tabledef object.  This property setting is read\-only.  To directly retrieve the record count, call the [GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md) member function of the `CDaoTableDef` object.  The documentation for `GetRecordCount` describes the record count further.  Note that retrieving this count can be a time\-consuming operation if the table contains many records.  
+ *m_lRecordCount*  
+ 테이블 정의 개체에 액세스 하는 레코드 수입니다. 이 속성 설정은 읽기 전용입니다. 레코드 수를 직접 검색 하려면 호출의 [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) 의 멤버 함수는 `CDaoTableDef` 개체입니다. 에 대 한 설명서 `GetRecordCount` 레코드 수를 더 이상에 대해 설명 합니다. Note이 개수를 검색 되도록 시간이 많이 걸리는 작업 테이블 레코드 수를 포함 합니다.  
   
-## 설명  
- The tabledef is an object of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md).  The references to Primary, Secondary, and All above indicate how the information is returned by the [GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md) member function in class `CDaoDatabase`.  
+## <a name="remarks"></a>주의  
+ 테이블 정의 클래스의 개체 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)합니다. 기본, 보조 및 위에서 모두에 대 한 참조에서의 정보를 반환 하는 방법을 나타내는 [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  
   
- Information retrieved by the [CDaoDatabase::GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md) member function is stored in a `CDaoTableDefInfo` structure.  Call the `GetTableDefInfo` member function of the `CDaoDatabase` object in whose TableDefs collection the tabledef object is stored.  `CDaoTableDefInfo` also defines a `Dump` member function in debug builds.  You can use `Dump` to dump the contents of a `CDaoTableDefInfo` object.  
+ 검색 한 정보는 [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) 멤버 함수에 저장 되는 `CDaoTableDefInfo` 구조입니다. 호출 된 `GetTableDefInfo` 의 멤버 함수는 `CDaoDatabase` 인 TableDefs 컬렉션에 테이블 정의 개체는 저장 된 개체입니다. `CDaoTableDefInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoTableDefInfo` 개체입니다.  
   
- The date and time settings are derived from the computer on which the base table was created or last updated.  In a multiuser environment, users should get these settings directly from the file server to avoid discrepancies in the DateCreated and LastUpdated property settings.  
+ 날짜 및 시간 설정이 있는 기본 테이블을 만들거나 마지막으로 업데이트 하는 컴퓨터에서 파생 됩니다. 다중 사용자 환경에서 사용자가 이러한는 DateCreated에서 불일치를 방지 하려면 파일 서버에서 직접 설정 및 LastUpdated 속성 설정을 가져와야 합니다.  
   
-## 요구 사항  
- **Header:** afxdao.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxdao.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoTableDef::CanUpdate](../Topic/CDaoTableDef::CanUpdate.md)   
- [CDaoTableDef::GetAttributes](../Topic/CDaoTableDef::GetAttributes.md)   
- [CDaoTableDef::GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md)   
- [CDaoTableDef::GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md)   
- [CDaoTableDef::GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md)   
- [CDaoTableDef::GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md)   
- [CDaoTableDef::GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md)   
- [CDaoTableDef::GetValidationText](../Topic/CDaoTableDef::GetValidationText.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef 클래스](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoDatabase 클래스](../../mfc/reference/cdaodatabase-class.md)
+
