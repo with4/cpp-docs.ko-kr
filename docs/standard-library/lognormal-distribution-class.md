@@ -1,61 +1,127 @@
 ---
-title: "lognormal_distribution 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.lognormal_distribution"
-  - "tr1.lognormal_distribution"
-  - "tr1::lognormal_distribution"
-  - "std::tr1::lognormal_distribution"
-  - "lognormal_distribution"
-  - "random/std::tr1::lognormal_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lognormal_distribution 클래스"
+title: "lognormal_distribution 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- lognormal_distribution
+- std::lognormal_distribution
+- random/std::lognormal_distribution
+- std::lognormal_distribution::reset
+- random/std::lognormal_distribution::reset
+- std::lognormal_distribution::m
+- random/std::lognormal_distribution::m
+- std::lognormal_distribution::s
+- random/std::lognormal_distribution::s
+- std::lognormal_distribution::param
+- random/std::lognormal_distribution::param
+- std::lognormal_distribution::min
+- random/std::lognormal_distribution::min
+- std::lognormal_distribution::max
+- random/std::lognormal_distribution::max
+- std::lognormal_distribution::operator()
+- random/std::lognormal_distribution::operator()
+- std::lognormal_distribution::param_type
+- random/std::lognormal_distribution::param_type
+- std::lognormal_distribution::param_type::m
+- random/std::lognormal_distribution::param_type::m
+- std::lognormal_distribution::param_type::s
+- random/std::lognormal_distribution::param_type::s
+- std::lognormal_distribution::param_type::operator==
+- random/std::lognormal_distribution::param_type::operator==
+- std::lognormal_distribution::param_type::operator!=
+- random/std::lognormal_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- lognormal_distribution class
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# lognormal_distribution 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 9e3e74b396e0f5026cc69c6cf4e2ca7cf5215ad5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lognormaldistribution-class"></a>lognormal_distribution 클래스
 대수 정규 분포를 생성합니다.  
   
-## 구문  
-  
+## <a name="syntax"></a>구문  
 ```  
-template<class RealType = double> class lognormal_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);     explicit lognormal_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType m() const;     RealType s() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template <class RealType = double>  
+class lognormal_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   // constructor and reset functions  
+   explicit lognormal_distribution(result_type m = 0.0, result_type s = 1.0);
+   explicit lognormal_distribution(const param_type& parm);
+   void reset();
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   // property functions  
+   result_type m() const;
+   result_type s() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+### <a name="parameters"></a>매개 변수  
+*RealType*  
+부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-#### 매개 변수  
- `RealType`  
- 부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다.  가능한 형식은 [\<random\>](../standard-library/random.md)을 참조하세요.  
-  
-## 설명  
- 대수 정규 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다.  다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>설명  
+대수 정규 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
   
 ||||  
 |-|-|-|  
-|[lognormal\_distribution::lognormal\_distribution](../Topic/lognormal_distribution::lognormal_distribution.md)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal\_distribution::param\_type](../Topic/lognormal_distribution::param_type.md)|  
+|[lognormal_distribution::lognormal_distribution](#lognormal_distribution__lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal_distribution::param_type](#lognormal_distribution__param_type)|  
   
- 속성 함수 `m()` 및 `s()`은 저장된 분포 매개 변수인 `m` 및 `s` 각각에 대한 값을 반환합니다.  
+속성 함수 `m()` 및 `s()`는 각각 저장된 분포 매개 변수인 *m* 및 *s*에 대한 값을 반환합니다.  
   
- 분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random\>](../standard-library/random.md)을 참조하세요.  
+속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+
+`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
   
- 대수 정규 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [대수 정규 분포](http://go.microsoft.com/fwlink/?LinkId=400917)를 참조하세요.  
+`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
   
-## 예제  
+`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+  
+분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+  
+로그 정규 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917)(로그 정규 분포)을 참조하세요.  
+  
+## <a name="example"></a>예제  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -114,38 +180,91 @@ int main()
   
     test(m_dist, s_dist, samples);  
 }  
-  
 ```  
   
-## 출력  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'm' distribution parameter: 0  
 Enter a floating point value for the 's' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 m() == 0.0000000000  
 s() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.3862809339  
-          2:   0.4128865601  
-          3:   0.4490576787  
-          4:   0.4862035428  
-          5:   0.5930607126  
-          6:   0.8190778771  
-          7:   0.8902379317  
-          8:   2.8332911667  
-          9:   5.1359445565  
-         10:   5.4406507912  
+    1: 0.3862809339  
+    2: 0.4128865601  
+    3: 0.4490576787  
+    4: 0.4862035428  
+    5: 0.5930607126  
+    6: 0.8190778771  
+    7: 0.8902379317  
+    8: 2.8332911667  
+    9: 5.1359445565  
+    10: 5.4406507912  
 ```  
   
-## 요구 사항  
- **헤더:** \<random\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<random>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namelognormaldistributionlognormaldistributiona--lognormaldistributionlognormaldistribution"></a><a name="lognormal_distribution__lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
+ 분포를 생성합니다.  
+  
+```  
+explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
+explicit lognormal_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+*m*  
+`m` 분포 매개 변수입니다.  
+  
+*s*  
+`s` 분포 매개 변수입니다.  
+  
+*parm*  
+분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+  
+### <a name="remarks"></a>설명  
+**사전 조건:** `0.0 < s`  
+  
+첫 번째 생성자는 저장된 `m` 값이 *m* 값을 보유하고 저장된 `s` 값이 *s* 값을 보유하고 있는 개체를 생성합니다.  
+  
+두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+  
+##  <a name="a-namelognormaldistributionparamtypea--lognormaldistributionparamtype"></a><a name="lognormal_distribution__param_type"></a>  lognormal_distribution::param_type  
+분포의 매개 변수를 저장합니다.  
+  
+```  
+struct param_type {  
+   typedef lognormal_distribution<result_type> distribution_type;  
+   param_type(result_type m = 0.0, result_type s = 1.0);
+   result_type m() const;
+   result_type s() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+};  
+```    
+### <a name="parameters"></a>매개 변수  
+*m*  
+`m` 분포 매개 변수입니다.  
+  
+*s*  
+`s` 분포 매개 변수입니다.  
+  
+*right*  
+비교에 사용되는 `param_type` 구조체입니다.  
+  
+### <a name="remarks"></a>설명  
+**사전 조건:** `0.0 < s`  
+  
+이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+  
+## <a name="see-also"></a>참고 항목  
+[\<random>](../standard-library/random.md)
+
+

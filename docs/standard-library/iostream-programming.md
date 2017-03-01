@@ -1,55 +1,73 @@
 ---
-title: "iostream 프로그래밍 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "콘솔[C++], 읽기"
-  - "콘솔[C++], 텍스트"
-  - "콘솔[C++], 쓰기"
-  - "콘솔 응용 프로그램[C++]"
-  - "데이터[C++], 읽기"
-  - "I/O[C++], iostream 프로그래밍"
-  - "iostream 라이브러리"
-  - "출력[C++]"
-  - "인쇄[C++], 콘솔로 인쇄"
-  - "프로그래밍[C++], iostream 프로그래밍"
-  - "데이터 읽기[C++], iostream 프로그래밍"
-  - "텍스트[C++], 서식 지정"
-  - "텍스트 입력[C++]"
-  - "텍스트 출력[C++]"
+title: "iostream 프로그래밍 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- text output [C++]
+- text [C++], formatting
+- console [C++], writing to
+- console [C++], reading from
+- console applications [C++]
+- reading data [C++], iostream programming
+- output [C++]
+- console [C++], text
+- data [C++], reading
+- I/O [C++], iostream programming
+- iostream library
+- printing [C++], printing to console
+- programming [C++], iostream programming
+- text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# iostream 프로그래밍
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 58f49647766d21369145474d908bd3c0436deae8
+ms.lasthandoff: 02/24/2017
 
-This section provides a [general description](../standard-library/what-a-stream-is.md) of the iostream classes and then describes [output streams](../standard-library/output-streams.md), [input streams](../standard-library/input-streams.md), and [input\/output streams](../standard-library/input-output-streams.md).  The end of the section provides information about advanced iostream programming.  
+---
+# <a name="iostream-programming"></a>iostream 프로그래밍
+이 섹션에서는 iostream 클래스에 대한 [일반적인 설명](../standard-library/what-a-stream-is.md)을 제공한 다음 [출력 스트림](../standard-library/output-streams.md), [입력 스트림](../standard-library/input-streams.md) 및 [입력/출력 스트림](../standard-library/input-output-streams.md)에 대해 설명합니다. 이 섹션의 끝에서는 고급 iostream 프로그래밍에 대한 정보를 제공합니다.  
   
- There is also a discussion on [Thread Safety in the Standard C\+\+ Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) and [the stdext namespace](../standard-library/stdext-namespace.md).  
+ 또한 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md) 및 [stdext 네임스페이스](../standard-library/stdext-namespace.md)에 대한 토론도 제공합니다.  
   
-## 단원 내용  
- [What a Stream Is](../standard-library/what-a-stream-is.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [스트림이란](../standard-library/what-a-stream-is.md)  
   
- [Output Streams](../standard-library/output-streams.md)  
+ [출력 스트림](../standard-library/output-streams.md)  
   
- [Input Streams](../standard-library/input-streams.md)  
+ [입력 스트림](../standard-library/input-streams.md)  
   
- [입력\/출력 스트림](../standard-library/input-output-streams.md)  
+ [입력/출력 스트림](../standard-library/input-output-streams.md)  
   
  [인수 포함 사용자 지정 조작자](../standard-library/custom-manipulators-with-arguments.md)  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
  [iostreams 규칙](../standard-library/iostreams-conventions.md)
+
+

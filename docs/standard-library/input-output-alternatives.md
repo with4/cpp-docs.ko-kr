@@ -1,42 +1,60 @@
 ---
-title: "입력/출력 대체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O[C++], 대체 항목"
+title: "입력-출력 대체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 입력/출력 대체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 45cec9f7c4c45ef12c7d22a7c3c311f7ce3f4cb5
+ms.lasthandoff: 02/24/2017
 
-Visual C\+\+ provides several alternatives for I\/O programming:  
+---
+# <a name="inputoutput-alternatives"></a>입력/출력 대체
+Visual C++는 I/O 프로그래밍을 위해 여러 가지 대체 방법을 제공합니다.  
   
--   C run\-time library direct, unbuffered I\/O.  
+-   C 런타임 라이브러리 버퍼링되지 않은 직접 I/O  
   
--   ANSI C run\-time library stream I\/O.  
+-   ANSI C 런타임 라이브러리 스트림 I/O  
   
--   Console and port direct I\/O.  
+-   콘솔 및 포트 직접 I/O  
   
--   Microsoft Foundation Class Library.  
+-   Microsoft Foundation Class 라이브러리  
   
--   Microsoft Standard C\+\+ Library.  
+-   Microsoft C++ 표준 라이브러리  
   
- The iostream classes are useful for buffered, formatted text I\/O.  They are also useful for unbuffered or binary I\/O if you need a C\+\+ programming interface and decide not to use the Microsoft Foundation Class \(MFC\) library.  The iostream classes are an object\-oriented I\/O alternative to the C run\-time functions.  
+ iostream 클래스는 버퍼링된 서식 있는 텍스트 I/O에 유용합니다. 또한 C++ 프로그래밍 인터페이스가 필요하고 MFC(Microsoft Foundation Class) 라이브러리를 사용하지 않으려는 경우 이진 또는 버퍼링되지 않은 I/O에도 유용합니다. iostream 클래스는 C 런타임 함수 대신 사용되는 개체 지향 I/O입니다.  
   
- You can use iostream classes with the Microsoft Windows operating system.  String and file streams work without restrictions, but the character\-mode stream objects `cin`, `cout`, `cerr`, and `clog` are inconsistent with the Windows graphical user interface.  You can also derive custom stream classes that interact directly with the Windows environment.  
+ iostream 클래스는 Microsoft Windows 운영 체제에서 사용할 수 있습니다. 문자열 및 파일 스트림은 제한 없이 작동하지만 문자 모드 스트림 개체 `cin`, `cout`, `cerr` 및 `clog`는 Windows 그래픽 사용자 인터페이스와 일치하지 않습니다. 또한 Windows 환경과 직접 상호 작용하는 사용자 지정 스트림 클래스를 파생시킬 수 있습니다.  
   
-## 참고 항목  
- [What a Stream Is](../standard-library/what-a-stream-is.md)
+## <a name="see-also"></a>참고 항목  
+ [스트림이란](../standard-library/what-a-stream-is.md)
+
+

@@ -1,58 +1,71 @@
 ---
-title: "is_same 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_same"
-  - "std.tr1.is_same"
-  - "is_same"
-  - "std.is_same"
-  - "std::is_same"
-  - "type_traits/std::is_same"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_same 클래스[TR1]"
-  - "is_same"
+title: "is_same 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_same
+- std::is_same
+- type_traits/std::is_same
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_same class
+- is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_same 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="issame-class"></a>is_same 클래스
 두 형식이 동일한지 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-template<class Ty1, class Ty2>  
-    struct is_same;  
+template <class Ty1, class Ty2>  
+struct is_same;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `Ty1`  
  쿼리할 첫 번째 형식입니다.  
   
  `Ty2`  
  쿼리할 두 번째 형식입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty1` 및 `Ty2` 형식이 동일한 형식인 경우 true이고 그렇지 않은 경우 false입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
-// std_tr1__type_traits__is_same.cpp   
+```cpp  
+// std__type_traits__is_same.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -85,17 +98,21 @@ int main()
   
 ```  
   
-  **is\_same\<base, base\> \=\= true**  
-**is\_same\<base, derived\> \=\= false**  
-**is\_same\<derived, base\> \=\= false**  
-**is\_same\<int, int\> \=\= true**  
-**is\_same\<int, const int\> \=\= false**   
-## 요구 사항  
- **헤더:** \<type\_traits\>  
+```Output  
+is_same<base, base> == true  
+is_same<base, derived> == false  
+is_same<derived, base> == false  
+is_same<int, int> == true  
+is_same<int, const int> == false  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<type_traits>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_convertible 클래스](../standard-library/is-convertible-class.md)   
- [is\_base\_of 클래스](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>참고 항목  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_convertible 클래스](../standard-library/is-convertible-class.md)   
+ [is_base_of 클래스](../standard-library/is-base-of-class.md)
+

@@ -1,47 +1,63 @@
 ---
-title: "longjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "longjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "longjmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "longjmp 함수"
-  - "스택 환경 및 실행 로캘 복원"
+title: "longjmp | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- longjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- longjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- restoring stack environment and execution locale
+- longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# longjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8d6ae9f6207bc0cc42ec2a0749ddfb6253c496f6
+ms.lasthandoff: 02/24/2017
 
-스택 환경 및 실행 로캘 복원  
+---
+# <a name="longjmp"></a>longjmp
+스택 환경 및 실행 로캘을 복원합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -51,47 +67,47 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `env`  
- 환경이 저장되어 있는 변수입니다.  
+ 환경이 저장되는 변수입니다.  
   
  *value*  
- `setjmp` 호출에 대해 반환 되는 값입니다.  
+ `setjmp` 호출에 대해 반환되는 값입니다.  
   
-## 설명  
- `longjmp` 함수는 스택 환경과 이전에 `setjmp` 에 의해 `env` 에 저장된 실행 로캘을 복원합니다.  `setjmp` 및 `longjmp` 은 로캘이 아닌 `goto` 을 실행하는 방법을 제공합니다. 일반적으로 표준 호출이나 반환 규식을 사용하지 않고 전에 호출된 루틴에서 오류 핸들링이나 복원 코드에 실행을 전달하는데 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ `longjmp` 함수는 `env`에 의해 `setjmp`에서 이전에 저장된 스택 환경 및 실행 로캘을 복원합니다. `setjmp` 및 `longjmp`는 로캘이 아닌 `goto`를 실행하는 방법을 제공합니다. 이는 일반적으로 표준 호출 및 반환 규칙을 사용하지 않고 이전에 호출된 루틴에서 오류 처리 또는 복구 코드에 실행 제어를 전달하는 데 사용됩니다.  
   
- `setjmp` 에 대한 호출은 현재 스택 환경을 `env` 에 저장합니다.  `longjmp` 에 대한 후속 호출은 저장된 환경을 복원하고 포인터에 컨트롤을 `setjmp` 호출에 따라 즉시 반환합니다.  실행은 *value* 가 `setjmp` 호출에 의해 반환된 것이라고 가정합니다.  루틴 수신 컨트롤에 액세스 할 수 있는 모든 변수의 값은 \(레지스터 변수를 제외하고\) `longjmp` 가 호출 될 때 있던 값을 포함합니다.  레지스터 변수 값을 예측할 수 없습니다.  `setjmp` 가 반환한 값은 0이 아니어야 합니다.  *value* 값이 0으로 전달 되는 경우, 값 1은 실제 반환에 대체 됩니다.  
+ `setjmp`에 대한 호출은 현재 스택 환경을 `env`에 저장합니다. `longjmp`에 대한 후속 호출은 저장된 환경을 복원하고 컨트롤을 해당 `setjmp` 호출 바로 다음에 오는 포인터로 반환합니다. *value*가 `setjmp` 호출에 의해 반환된 것처럼 실행이 다시 시작됩니다. 컨트롤을 받는 루틴에 액세스할 수 있는 모든 변수 값(레지스터 변수 제외)은 `longjmp`가 호출될 때 가지고 있던 값을 포함합니다. 레지스터 변수 값은 예측할 수 없습니다. `setjmp`에서 반환되는 값은&0;이 아니어야 합니다. *value*가 0으로 전달되는 경우 값 1은 실제 반환에서 대체됩니다.  
   
- `setjmp` 을 호출하는 함수가 반환하기 전에 `longjmp` 을 호출하십시오. 그렇지 않으면 결과는 예측할 수 없습니다.  
+ `longjmp`를 호출한 함수가 반환되기 전에 `setjmp`를 호출합니다. 그렇지 않으면 결과를 예측할 수 없습니다.  
   
- `longjmp` 을 사용 할때 아래의 사항을 준수하십시오.  
+ `longjmp`를 사용할 때 다음 제한 사항을 준수하십시오.  
   
--   레지스터 변수 값이 그대로 유지 된다고 가정 하지 마십시오.  루틴 호출 `setjmp` 에서 레지스터 변수의 값은 `longjmp` 가 실행된 후에는 적절한 값으로 복원되지 않을 수 있습니다.  
+-   레지스터 변수 값이 그대로 유지된다고 가정하지 마십시오. `setjmp`를 호출하는 루틴의 레지스터 변수 값은 `longjmp`가 실행된 이후 적절한 값으로 복원되지 않을 수 있습니다.  
   
--   수동 소수점 예외가 인터럽트를 발생시키지 않는 한 인터럽트 처리 루틴의 컨트롤을 전달하기 위해 `longjmp` 를 사용하지 마십시오.  이 경우, 먼저 `_fpreset` 를 호출하여 부동 소수점 연산 패키지를 다시 초기화 하는 경우 프로그램은 `longjmp` 를 통해 인터럽트 핸들러에서 반환될 수 있습니다.  
+-   부동 소수점 예외로 인해 인터럽트가 발생하지 않는 한 `longjmp`를 사용하여 컨트롤을 인터럽트 처리 루틴 외부로 전달하지 마십시오. 이 경우 먼저 `longjmp`을 호출하여 부동 소수점 연산 패키지를 다시 초기화하는 경우 프로그램은 `_fpreset`를 통해 인터럽트 처리기에서 반환될 수 있습니다.  
   
-     **참고** C 프로그램에서 `setjmp` 및 `longjmp` 를 사용할 때 주의 하십시오.  이러한 함수는 C \+ \+ 의미 객체를 지원하지 않기 때문에, C \+ \+ 예외 처리 메커니즘을 사용하는 것이 더 안전합니다.  
+     **참고** C++ 프로그램에서 `setjmp` 및 `longjmp`를 사용할 때는 주의하세요. 이러한 함수는 C++ 개체 의미 체계를 지원하지 않기 때문에 C++ 예외 처리 메커니즘을 사용하는 것이 보다 안전합니다.  
   
- 자세한 내용은 [Using setjmp and longjmp](../../cpp/using-setjmp-longjmp.md) 를 참조하십시오.  
+ 자세한 내용은 [setjmp 및 longjmp 사용](../../cpp/using-setjmp-longjmp.md)을 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`longjmp`|\<setjmp.h\>|  
+|-------------|---------------------|  
+|`longjmp`|\<setjmp.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
- [\_fpreset](../../c-runtime-library/reference/fpreset.md) 의 예제를 참조하십시오.  
+## <a name="example"></a>예제  
+ [_fpreset](../../c-runtime-library/reference/fpreset.md)에 대한 예제를 참조하세요.  
   
-## 해당 .NET Framework 항목  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.  
+## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
+ 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   
  [setjmp](../../c-runtime-library/reference/setjmp.md)
