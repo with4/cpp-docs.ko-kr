@@ -1,75 +1,48 @@
 ---
-title: "컴파일러 오류 C3815 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3815"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3815"
+title: "컴파일러 오류 C3815 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3815
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3815
 ms.assetid: c5a3b404-6341-4fd3-92af-152b404c4dde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3815
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0c8c034d7d52e66bcd88c2a1046c40c68a9e0784
+ms.lasthandoff: 02/24/2017
 
-'get\_accessor' 메서드의 반환 형식은 setter의 마지막 매개 변수 형식과 일치해야 합니다.  
+---
+# <a name="compiler-error-c3815"></a>컴파일러 오류 C3815
+'get_accessor' 메서드의 반환 형식에는 setter의 마지막 매개 변수 형식을 같아야 합니다.  
   
- [properties](../../misc/property.md)를 선언할 때 `get_accessor` 메서드의 반환 값은 set 접근자 메서드 선언의 마지막 매개 변수와 일치해야 합니다.  
+ 속성의 반환 값을 선언 하는 경우는 `get_accessor` 메서드는 set 접근자 메서드 선언에 대 한 마지막 매개 변수를 일치 해야 합니다.  
   
- C3815는 **\/clr:oldSyntax**를 사용하는 경우에만 발생합니다.  
-  
- 다음 샘플에서는 C3815 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3815.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class X  
-{  
-public:  
-   __property char get_N()  
-   // try the following line instead  
-   // __property int get_N()  
-   {  
-      return m_val;  
-   }  
-  
-   __property void set_N( int val)  
-   {  
-      m_val = val;  
-   }  
-  
-private:  
-   int m_val;  
-};   // C3815  
-```  
-  
- 다음 샘플에서는 getter의 반환 형식이 setter의 마지막 매개 변수와 일치하지 않도록 속성을 오버로드하는 경우를 보여 줍니다.  
-  
-```  
-// C3815b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __gc class MyClass {  
-public:  
-// 1st property:  
-   __property System::Int32 get_p1();  
-   __property void set_p1(System::Int32 i);  
-  
-// 2nd property (only setter):  
-   __property void set_p1(System::Int32* i);  
-  
-};  
-```
+ C3815는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+

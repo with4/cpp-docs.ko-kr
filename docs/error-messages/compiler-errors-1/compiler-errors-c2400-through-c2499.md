@@ -1,26 +1,42 @@
 ---
-title: "컴파일러 오류s C2400 Through C2499 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "컴파일러 오류 C2400 ~ C2499 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류s C2400 Through C2499
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
+ms.openlocfilehash: dafd64aff08c48b4a0c3d56bced4bfa7f7bc923c
+ms.lasthandoff: 02/24/2017
 
-설명서의 이 항목에는 Visual C\+\+ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다.  여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
+---
+# <a name="compiler-errors-c2400-through-c2499"></a>컴파일러 오류 C2400 ~ C2499
+설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
  [컴파일러 오류 C2400](../../error-messages/compiler-errors-1/compiler-error-c2400.md)  
   
@@ -53,6 +69,8 @@ caps.handback.revision: 14
  [컴파일러 오류 C2427](../../error-messages/compiler-errors-1/compiler-error-c2427.md)  
   
  [컴파일러 오류 C2428](../../error-messages/compiler-errors-1/compiler-error-c2428.md)  
+  
+ [컴파일러 오류 C2429](../../error-messages/compiler-errors-1/compiler-error-c2429.md)  
   
  [컴파일러 오류 C2430](../../error-messages/compiler-errors-1/compiler-error-c2430.md)  
   

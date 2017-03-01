@@ -1,55 +1,85 @@
 ---
-title: "default_scheduler_exists 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::default_scheduler_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default_scheduler_exists 클래스"
+title: "default_scheduler_exists 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::default_scheduler_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# default_scheduler_exists 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 기본 스케줄러가 프로세스 내에서 이미 있는 경우 `Scheduler::SetDefaultSchedulerPolicy` 메서드를 호출할 때 throw되는 예외를 설명합니다.  
+---
+# <a name="defaultschedulerexists-class"></a>default_scheduler_exists 클래스
+이 클래스는 프로세스 내에 기본 스케줄러가 이미 있을 때 `Scheduler::SetDefaultSchedulerPolicy` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class default_scheduler_exists : public std::exception;
 ```  
-class default_scheduler_exists : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[default\_scheduler\_exists::default\_scheduler\_exists 생성자](../Topic/default_scheduler_exists::default_scheduler_exists%20Constructor.md)|오버로드됨.  `default_scheduler_exists` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[default_scheduler_exists 생성자](#ctor)|오버로드됨. `default_scheduler_exists` 개체를 생성합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `default_scheduler_exists`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler::SetDefaultSchedulerPolicy 메서드](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md)
+##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+
+ `default_scheduler_exists` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
+
+default_scheduler_exists() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

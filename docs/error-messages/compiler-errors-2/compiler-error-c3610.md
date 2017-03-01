@@ -1,50 +1,48 @@
 ---
-title: "컴파일러 오류 C3610 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3610"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3610"
+title: "컴파일러 오류 C3610 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3610
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3610
 ms.assetid: 9349a348-9d37-4a00-9eab-481039268d31
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3610
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 31cef33981bbc2063bf68e433f9d3ba32780363d
+ms.lasthandoff: 02/24/2017
 
-'valuetype': 'method' 메서드를 호출하려면 값 형식이 'boxed'여야 합니다.  
+---
+# <a name="compiler-error-c3610"></a>컴파일러 오류 C3610
+'valuetype': 값 형식 해야 수 '박스형' ' method '메서드를 호출할 수 있습니다  
   
- 기본적으로 값 형식은 관리되는 힙에 없습니다.  `Object`를 비롯한 .NET 런타임 클래스의 메서드를 호출하려면 우선 값 형식을 관리되는 힙으로 이동해야 합니다.  
+ 기본적으로 값 형식에 없는 경우 관리 되는 힙 .NET 런타임 클래스에서와 같은 메서드를 호출 하기 전에 `Object`, 관리 되는 힙에 값 형식을 이동 해야 합니다.  
   
- C3610은 **\/clr:oldSyntax**를 사용하는 경우에만 발생합니다.  
-  
- 다음 샘플에서는 C3610 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3610.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__value class A {};  
-  
-int main() {  
-   A a;  
-   a.GetType(); // C3610  
-  
-   // OK  
-   __box A* ovar = __box(a);  
-   ovar->GetType();  
-}  
-```
+ C3610는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+

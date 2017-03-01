@@ -1,29 +1,45 @@
 ---
-title: "심각한 오류 C1083 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1083"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1083 오류가"
+title: "심각한 오류 C1083 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1083
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# 심각한 오류 C1083
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fatal-error-c1083"></a>심각한 오류 C1083
 filetype 파일을 열 수 없습니다. 'file': message  
   
  컴파일러가 파일을 찾을 수 없는 경우 C1083 오류가 발생합니다. 컴파일러에서 이 오류가 발생하는 일반적인 원인은 다음과 같습니다.  
@@ -36,7 +52,7 @@ filetype 파일을 열 수 없습니다. 'file': message
 #include <algorithms.h>  
 ```  
   
- 원하는 파일을 찾을 수 없습니다. .h 파일 확장명이 없는, algorithms라는 표준 C++ 라이브러리 헤더 파일이 있습니다. 이 파일은 `include` 지시문으로 찾을 수 없습니다. 이 문제를 해결하려면 올바른 파일 이름을 입력했는지 확인합니다.  
+ 원하는 파일을 찾을 수 없습니다. C + + 표준 라이브러리 헤더 파일이 algorithms 라는.h 파일 확장명이 없는 있습니다. 이 파일은 `include` 지시문으로 찾을 수 없습니다. 이 문제를 해결하려면 올바른 파일 이름을 입력했는지 확인합니다.  
   
  특정 C 런타임 라이브러리 헤더는 표준 포함 디렉터리의 하위 디렉터리에 있습니다. 예를 들어 sys\types.h를 포함하려면 include 지시문에 sys 하위 디렉터리 이름을 포함해야 합니다.  
   
@@ -54,11 +70,11 @@ filetype 파일을 열 수 없습니다. 'file': message
   
  컴파일러가 빌드 환경에 의해 정의 된 검색 경로 따릅니다는 **/I** 컴파일러 옵션의 **/X** 컴파일러 옵션 및 **포함** 환경 변수입니다. 파일을 찾는 데 검색 순서에 대 한 특정 세부 정보를 포함 한 자세한 내용은 참조 하십시오. [#include 지시문 (C/c + +)](../../preprocessor/hash-include-directive-c-cpp.md) 및 [#import 지시문](../../preprocessor/hash-import-directive-cpp.md)합니다.  
   
- 헤더 파일에 표시 되는 경우에 **솔루션 탐색기** 프로젝트의 일부로 파일을 찾을 수는 컴파일러에서으로 참조 되는 `include` 또는 `import` 지시문 되 고 디렉터리 검색 경로에 있어야 합니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다.  **/X** include 파일 검색 경로에서 디렉터리를 제외 하 컴파일러 옵션을 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. 에 대 한 자세한 내용은 **/X** 컴파일러 옵션을 참조 하십시오 [/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)합니다.  
+ 헤더 파일에 표시 되는 경우에 **솔루션 탐색기** 프로젝트의 일부로 파일을 찾을 수는 컴파일러에서으로 참조 되는 `include` 또는 `import` 지시문 되 고 디렉터리 검색 경로에 있어야 합니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다. **/X** include 파일 검색 경로에서 디렉터리를 제외 하 컴파일러 옵션을 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. 에 대 한 자세한 내용은 **/X** 컴파일러 옵션을 참조 하십시오 [/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)합니다.  
   
- 명령줄에서 컴파일러를 호출하는 경우 대체로 환경 변수를 사용하여 검색 경로를 지정합니다. 설명 하는 검색 경로 **포함** 환경 변수가 올바르게 설정 되지 않았습니다, c1083 오류가 발생 합니다. 환경 변수를 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 빌드 시에서 환경 변수를 사용 하 여](../Topic/How%20to:%20Use%20Environment%20Variables%20in%20a%20Build.md)합니다.  
+ 명령줄에서 컴파일러를 호출하는 경우 대체로 환경 변수를 사용하여 검색 경로를 지정합니다. 설명 하는 검색 경로 **INCLUDE** 환경 변수가 올바르게 설정 되지 않았습니다, c1083 오류가 발생 합니다. 환경 변수를 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 빌드 시에서 환경 변수를 사용 하 여](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77)합니다.  
   
- 이 문제를 해결하려면 컴파일러가 포함되거나 가져온 파일을 찾는 데 사용하는 경로를 수정합니다. 새 프로젝트는 기본 검색 경로를 사용합니다. 프로젝트에 대한 디렉터리를 추가하려면 경로를 수정해야 할 수도 있습니다. 명령줄에서 컴파일할 경우 설정의 **포함** 환경 변수 또는 **/I** 컴파일러 옵션을 파일의 경로 지정 합니다. Visual Studio에서 include 디렉터리 경로 설정 하려면 프로젝트를 열고 **속성 페이지** 대화 상자에서 **구성 속성** 및 **VC + + 디렉터리**, 를 선택한 다음 편집는 **포함 디렉터리** 값. Visual Studio에서 컴파일러가 검색 하는 사용자 단위 및 프로젝트 디렉터리에 대 한 자세한 내용은 참조 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md)합니다. 에 대 한 자세한 내용은 **/I** 컴파일러 옵션을 참조 하십시오 [/I (추가 포함 디렉터리)](../../build/reference/i-additional-include-directories.md)합니다.  
+ 이 문제를 해결하려면 컴파일러가 포함되거나 가져온 파일을 찾는 데 사용하는 경로를 수정합니다. 새 프로젝트는 기본 검색 경로를 사용합니다. 프로젝트에 대한 디렉터리를 추가하려면 경로를 수정해야 할 수도 있습니다. 명령줄에서 컴파일할 경우 설정의 **포함** 환경 변수 또는 **/I** 컴파일러 옵션을 파일의 경로 지정 합니다. Visual Studio에서 include 디렉터리 경로 설정 하려면 프로젝트를 열고 **속성 페이지** 대화 상자에서 **구성 속성** 및 **VC + + 디렉터리**, 선택한 다음 편집는 **포함 디렉터리** 값입니다. Visual Studio에서 컴파일러가 검색 하는 사용자 단위 및 프로젝트 디렉터리에 대 한 자세한 내용은 참조 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md)합니다. 에 대 한 자세한 내용은 **/I** 컴파일러 옵션을 참조 하십시오 [/I (추가 포함 디렉터리)](../../build/reference/i-additional-include-directories.md)합니다.  
   
  **잘못 된 버전의 파일 이름이 포함 됩니다.**  
   
@@ -70,9 +86,9 @@ filetype 파일을 열 수 없습니다. 'file': message
   
  **추가 원인**  
   
--   하지만 컴파일러 옵션의 관리 되는 코드를 사용 하는 파일 **/clr** 지정 되지 않았습니다. 자세한 내용은 참조 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)합니다.  
+-   하지만 컴파일러 옵션의 관리 되는 코드를 사용 하는 파일 **/clr** 지정 되지 않았습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
--   다른를 사용 하 여 파일을 컴파일하 **/analyze** 헤더를 미리 컴파일하는 데 사용 된 컴파일러 옵션을 설정 합니다. (프로젝트의 헤더가 미리 컴파일된 경우 모두 사용할지 동일한 **/analyze** 설정 합니다.) 자세한 내용은 참조 [/analyze (코드 분석)](../../build/reference/analyze-code-analysis.md)합니다.  
+-   다른를 사용 하 여 파일을 컴파일하 **/analyze** 헤더를 미리 컴파일하는 데 사용 된 컴파일러 옵션을 설정 합니다. (프로젝트의 헤더가 미리 컴파일된 경우 모두 사용할지 동일한 **/analyze** 설정 합니다.) 자세한 내용은 [/analyze(코드 분석)](../../build/reference/analyze-code-analysis.md)를 참조하세요.  
   
 -   파일, 디렉터리 또는 디스크가 읽기 전용입니다.  
   
@@ -92,4 +108,4 @@ filetype 파일을 열 수 없습니다. 'file': message
  IDE 또는 명령줄에서 C/c + + 프로젝트를 빌드하는 방법에 대 한 정보 및 환경 변수를 설정 하는 방법에 대 한 정보에 대 한 참조 [C/c + + 프로그램 빌드](../../build/building-c-cpp-programs.md)합니다.
  
  ## <a name="see-also"></a>참고 항목
- [MSBuild 속성](MSBuild%20Properties.md)
+ [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)

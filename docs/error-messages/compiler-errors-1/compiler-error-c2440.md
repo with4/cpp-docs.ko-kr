@@ -1,35 +1,51 @@
 ---
-title: "컴파일러 오류 C2440 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2440"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2440"
+title: "컴파일러 오류 C2440 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2440
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# 컴파일러 오류 C2440
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5f0472f7d318de24c38898388906a264cf56db7b
+ms.lasthandoff: 02/24/2017
 
-'conversion' : 'type1'에서 'type2'\(으\)로 변환할 수 없습니다.  
+---
+# <a name="compiler-error-c2440"></a>컴파일러 오류 C2440
+'conversion': 'type1'에서 'type2' 변환할 수 없습니다  
   
- 컴파일러가 '`type1`'에서 '`type2`'로 캐스팅할 수 없습니다.  
+컴파일러에서 캐스팅할 수 없습니다 `type1` 를 `type2`합니다.  
   
-## 예제  
- C2440은 컴파일러 성능 옵션 [\/Zc:strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)가 설정되었을 때 C\+\+ 코드의 문자열 리터럴을 사용하여 비상수 `char*`\(또는 `wchar_t*`\)를 초기화하려고 시도하는 경우 발생할 수 있습니다.  C에서 문자열 리터럴의 형식은 `char`의 배열이지만 C\+\+에서는 `const` `char`의 배열입니다.  이 샘플은 C2440을 생성합니다.  
+## <a name="example"></a>예제  
+C2440 비 const 초기화 하려는 경우 발생할 수 있습니다 `char*` (또는 `wchar_t*`) 문자열 리터럴로 c + + 코드를 사용 하 여 때 컴파일러 규칙 옵션 [/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) 설정 됩니다. C에서 문자열 리터럴 형식은 배열을 `char`, 이지만 c + +에서는 배열을 `const char`합니다. 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // C2440s.cpp  
@@ -46,8 +62,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 멤버에 대한 포인터를 void\*로 변환하려고 할 때도 발생할 수 있습니다.  다음 샘플에서는 C2440이 발생하는 경우를 보여줍니다.  
+## <a name="example"></a>예제  
+ C2440은 void * 멤버 포인터 변환 하려는 경우에 발생할 수 있습니다. 다음 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // C2440.cpp  
@@ -68,8 +84,8 @@ public:
 };  
 ```  
   
-## 예제  
- C2440은 전방 선언되기만 하고 정의되지는 않은 형식에서 캐스팅을 시도하는 경우에도 발생할 수 있습니다.  이 샘플은 C2440을 생성합니다.  
+## <a name="example"></a>예제  
+ C2440 앞 으로만 선언 되었지만 정의 되지 하는 형식에서 캐스팅 하려고 하면 발생할 수 있습니다. 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // c2440a.cpp   
@@ -83,14 +99,14 @@ Base * func(Derived * d) {
   
 ```  
   
-## 예제  
- 다음 샘플의 15줄과 16줄에 있는 C2440 오류는 `Incompatible calling conventions for UDT return value` 메시지로 한정됩니다. UDT는 클래스, 구조체 또는 공용 구조체와 같은 사용자 정의 형식입니다. 이러한 종류의 비호환 오류는 전방 선언의 반환 형식에 지정한 UDT의 호출 규칙이 UDT의 실제 호출 규칙과 충돌하는 경우 및 함수 포인터와 연관된 경우에 발생합니다.  
+## <a name="example"></a>예제  
+ 15, 16 다음 샘플의 줄에 있는 C2440 오류도 한정 되는 `Incompatible calling conventions for UDT return value` 메시지입니다. A *UDT* 클래스, 구조체 또는 공용 구조체와 같은 사용자 정의 형식입니다. 이러한 종류의 비 호환성 오류는 UDT의 호출 규칙 함수 포인터와 연관 된 때와 UDT의 실제 호출 규칙과 충돌 하는 정방향 선언의 반환 형식에 지정 된 경우에 발생 합니다.  
   
- 예제에서는 struct를 반환하는 함수에 대해 그리고 struct에 대해 전방 선언이 사용되며, 컴파일러는 struct가 C\+\+ 호출 규칙을 사용한다고 가정합니다.  다음은 기본적으로 C 호출 규칙을 사용하는 struct 정의입니다.  컴파일러는 전체 구조체를 읽을 때까지 구조체의 호출 규칙을 알지 못하므로 `get_c2`의 반환 형식에서 구조체에 대한 호출 규칙은 C\+\+로 간주됩니다.  
+ 예제에서는 먼저 가지; 구조체를 반환 하는 함수 및 구조체에 대 한 정방향 선언 컴파일러는 구조체에는 c + + 호출 규칙에서 사용 하는 가정 합니다. 다음은 기본적으로 C를 사용 하는 구조체 정의가 호출 규칙입니다. 모르기 때문에 컴파일러는 구조체의 호출 규칙 전체 구조체의 반환 형식에는 구조체에 대 한 호출 규칙 읽기를 마칠 때까지 `get_c2` 도 c + +로 간주 됩니다.  
   
- struct 다음에는 struct를 반환하는 다른 함수 선언이 옵니다. 이때 컴파일러는 struct의 호출 규칙이 C\+\+임을 알고 있습니다.  마찬가지로 구조체를 반환하는 함수 포인터는 컴파일러가 구조체에서 C\+\+ 호출 규칙이 사용되는지 알 수 있도록 구조체 정의 다음에 정의됩니다.  
+ 구조체는 구조체를 반환 하는 다른 함수 선언 뒤 못하지만 시점에서 컴파일러는 구조체의 호출 규칙은 c + +. 마찬가지로, 컴파일러는 구조체에는 c + + 호출 규칙에서 사용 하는 알 수 있도록 구조체, 반환 하는 함수 포인터를 구조체 정의 뒤 정의 됩니다.  
   
- 호환되지 않는 호출 규칙으로 인해 발생하는 C2440을 해결하려면 UDT 정의 다음에 UDT를 반환하는 함수를 선언합니다.  
+ 호환 되지 않는 호출 규칙으로 인해 발생 하는 c2440 오류를 해결 하려면 UDT 정의 다음에 UDT를 반환 하는 함수를 선언 합니다.  
   
 ```cpp  
 // C2440b.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 내부 포인터에 0을 할당하는 경우에도 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ C2440 내부 포인터에&0;을 할당 하는 경우에 발생할 수 있습니다.  
   
 ```cpp  
 // C2440c.cpp  
@@ -146,8 +162,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 사용자 정의 변환을 잘못 사용할 때도 발생할 수 있습니다.  사용자 정의 변환에 대한 자세한 내용은 [사용자 정의 변환](../../dotnet/user-defined-conversions-cpp-cli.md)을 참조하십시오.  이 샘플은 C2440을 생성합니다.  
+## <a name="example"></a>예제  
+ 사용자 정의 변환 사용이 잘못 C2440 때도 발생할 수 있습니다. 예를 들어 때 변환 연산자 정의 된 `explicit`, 컴파일러는 암시적 변환에 사용할 수 없습니다. 사용자 정의 변환에 대 한 자세한 내용은 참조 [사용자 정의 변환 (C + + /cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // C2440d.cpp  
@@ -169,8 +185,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 해당 형식이 <xref:System.Array>인 Visual C\+\+ 배열의 인스턴스를 만들려는 경우에도 발생할 수 있습니다.  자세한 내용은 [Arrays](../../windows/arrays-cpp-component-extensions.md)을 참조하십시오.  다음 샘플에서는 C2440이 발생하는 경우를 보여줍니다.  
+## <a name="example"></a>예제  
+ C2440는 <xref:System.Array>.</xref:System.Array> 형식이 Visual c + + 배열의 인스턴스를 만들려고 할 경우에 발생할 수 있습니다.  자세한 내용은 참조 [배열](../../windows/arrays-cpp-component-extensions.md)합니다.  다음 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // C2440e.cpp  
@@ -183,8 +199,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 특성 기능이 변경된 경우에도 발생할 수 있습니다.  다음 샘플에서는 C2440 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C2440 특성 기능의 변경으로 인해 발생할 수도 있습니다.  다음 샘플에서는 c2440 오류가 발생 합니다.  
   
 ```cpp  
 // c2440f.cpp  
@@ -194,12 +210,12 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];  
 ```  
   
-## 예제  
- Visual C\+\+ 컴파일러에서는 **\/clr** 프로그래밍을 사용하는 소스 코드를 컴파일할 때 더 이상 [const\_cast 연산자](../../cpp/const-cast-operator.md)의 다운 캐스트가 허용되지 않습니다.  
+## <a name="example"></a>예제  
+ Visual c + + 컴파일러는 더 이상 허용는 [const_cast 연산자](../../cpp/const-cast-operator.md) 다운 캐스팅 될 때 소스 코드를 사용 하는 **/clr** 프로그래밍 컴파일됩니다.  
   
- 이 C2440을 해결하려면 올바른 캐스트 연산자를 사용합니다.  자세한 내용은 [캐스팅 연산자](../../cpp/casting-operators.md)을 참조하십시오.  
+ 이 c2440 오류를 해결 하려면 올바른 캐스트 연산자를 사용 합니다. 자세한 내용은 참조 [캐스팅 연산자](../../cpp/casting-operators.md)합니다.  
   
- 이 샘플은 C2440을 생성합니다.  
+ 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // c2440g.cpp  
@@ -214,18 +230,30 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2440은 **\/clr:oldSyntax**를 사용할 때도 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+C2440 Visual Studio 2015 업데이트 3에서 컴파일러에 규칙 변경으로 인해 발생할 수 있습니다. 이전에 컴파일러 잘못 처리 고유한 특정 식 같은 형식으로 일치 하는 서식 파일을 식별 하는 경우는 `static_cast` 작업 합니다. 이전에 의존 하는 이제 컴파일러는 형식이 올바르게 구분 하 고 코드 `static_cast` 동작은 중단 합니다. 이 문제를 해결 하려면 변경 템플릿 매개 변수 형식과 일치 하거나 사용 하려면 템플릿 인수는 `reinterpret_cast` 또는 C 스타일 캐스트 합니다.
+  
+이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
-// c2440h.cpp  
-// compile with: /clr:oldSyntax  
-__gc class Base {};  
-__gc class Derived : public Base {};  
-int main() {  
-   Derived *d = new Derived;  
-   Base *b = d;  
-   d = const_cast<Derived*>(b);   // C2440  
-   d = dynamic_cast<Derived*>(b);   // OK  
-}  
+// c2440h.cpp
+
+template<int *a>
+struct S1 {};
+
+int g;
+struct S2 : S1<&g> {
+};
+
+int main()
+{
+    S2 s;
+    static_cast<S1<&*&g>>(s); // C2440 in VS 2015 Update 3 
+    // This compiles correctly:
+    // static_cast<S1<&g>>(s);
+}
+
+This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
+
 ```
+

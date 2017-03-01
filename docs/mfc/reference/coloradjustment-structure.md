@@ -1,44 +1,59 @@
 ---
-title: "COLORADJUSTMENT 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLORADJUSTMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLORADJUSTMENT 구조체"
+title: "COLORADJUSTMENT 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COLORADJUSTMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLORADJUSTMENT structure
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# COLORADJUSTMENT 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7f88877fa009abf4e811ba0a99b7e0e1683f998a
+ms.lasthandoff: 02/24/2017
 
-The `COLORADJUSTMENT` structure defines the color adjustment values used by the Windows `StretchBlt` and **StretchDIBits** functions when the `StretchBlt` mode is **HALFTONE**.  
+---
+# <a name="coloradjustment-structure"></a>COLORADJUSTMENT 구조체
+`COLORADJUSTMENT` 구조 정의 Windows에서 사용 되는 색 조정 값 `StretchBlt` 및 **StretchDIBits** 함수는 경우는 `StretchBlt` 모드는 **하프톤**합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      typedef struct  tagCOLORADJUSTMENT {    /* ca */  
-    WORD  caSize;  
-    WORD  caFlags;  
-    WORD  caIlluminantIndex;  
-    WORD  caRedGamma;  
-    WORD  caGreenGamma;  
-    WORD  caBlueGamma;  
-    WORD  caReferenceBlack;  
-    WORD  caReferenceWhite;  
+typedef struct  tagCOLORADJUSTMENT {    /* ca */  
+    WORD caSize;  
+    WORD caFlags;  
+    WORD caIlluminantIndex;  
+    WORD caRedGamma;  
+    WORD caGreenGamma;  
+    WORD caBlueGamma;  
+    WORD caReferenceBlack;  
+    WORD caReferenceWhite;  
     SHORT caContrast;  
     SHORT caBrightness;  
     SHORT caColorfulness;  
@@ -46,76 +61,79 @@ The `COLORADJUSTMENT` structure defines the color adjustment values used by the 
 } COLORADJUSTMENT;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *caSize*  
- Specifies the size of the structure in bytes.  
+ 구조체의 크기를 바이트 단위로 지정 합니다.  
   
  *caFlags*  
- Specifies how the output image should be prepared.  This member can be set to **NULL** or any combination of the following values:  
+ 출력 이미지를 준비 하는 방식을 지정 합니다. 이 멤버 설정할 수 있습니다 **NULL** 또는 다음 값을 조합 합니다.  
   
--   **CA\_NEGATIVE** Specifies that the negative of the original image should be displayed.  
+- **CA_NEGATIVE** 원본 이미지의 음수 표시 되어야 함을 지정 합니다.  
   
--   **CA\_LOG\_FILTER** Specifies that a logarithmic function should be applied to the final density of the output colors.  This will increase the color contrast when the luminance is low.  
+- **CA_LOG_FILTER** 최종 출력 색상의 밀도를 로그 하는 함수를 적용 해야 하는지 지정 합니다. 그러면 광도 적을 때 색상 대비를 증가 됩니다.  
   
  *caIlluminantIndex*  
- Specifies the luminance of the light source under which the image object is viewed.  This member can be set to one of the following values:  
+ 이미지 개체를 볼 광원의 광도 지정 합니다. 이 멤버는 다음 값 중 하나로 설정할 수 있습니다.  
   
--   **ILLUMINANT\_EQUAL\_ENERGY**  
+- **ILLUMINANT_EQUAL_ENERGY**  
   
--   **ILLUMINANT\_A**  
+- **ILLUMINANT_A**  
   
--   **ILLUMINANT\_B**  
+- **ILLUMINANT_B**  
   
--   **ILLUMINANT\_C**  
+- **ILLUMINANT_C**  
   
--   **ILLUMINANT\_D50**  
+- **ILLUMINANT_D50**  
   
--   **ILLUMINANT\_D55**  
+- **ILLUMINANT_D55**  
   
--   **ILLUMINANT\_D65**  
+- **ILLUMINANT_D65**  
   
--   **ILLUMINANT\_D75**  
+- **ILLUMINANT_D75**  
   
--   **ILLUMINANT\_F2**  
+- **ILLUMINANT_F2**  
   
--   **ILLUMINANT\_TURNGSTEN**  
+- **ILLUMINANT_TURNGSTEN**  
   
--   **ILLUMINANT\_DAYLIGHT**  
+- **ILLUMINANT_DAYLIGHT**  
   
--   **ILLUMINANT\_FLUORESCENT**  
+- **ILLUMINANT_FLUORESCENT**  
   
--   **ILLUMINANT\_NTSC**  
+- **ILLUMINANT_NTSC**  
   
  *caRedGamma*  
- Specifies the nth power gamma\-correction value for the red primary of the source colors.  The value must be in the range from 2,500 to 65,000.  A value of 10,000 means no gamma\-correction.  
+ 소스 색의 빨강 주에 대 한 n 번째 전원 감마 보정 값을 지정합니다. 65000 2500 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
   
  *caGreenGamma*  
- Specifies the nth power gamma\-correction value for the green primary of the source colors.  The value must be in the range from 2,500 to 65,000.  A value of 10,000 means no gamma\-correction.  
+ 소스 색의 녹색 주에 대 한 n 번째 전원 감마 보정 값을 지정합니다. 65000 2500 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
   
  *caBlueGamma*  
- Specifies the nth power gamma\-correction value for the blue primary of the source colors.  The value must be in the range from 2,500 to 65,000.  A value of 10,000 means no gamma\-correction.  
+ 소스 색의 파랑 원색의 n 번째 전원 감마 보정 값을 지정합니다. 65000 2500 사이의 값 이어야 합니다. 값이 10, 000 없는 감마 보정을 의미합니다.  
   
  *caReferenceBlack*  
- Specifies the black reference for the source colors.  Any colors that are darker than this are treated as black.  The value must be in the range from 0 to 4,000.  
+ 원본 색상에 대 한 검정 참조를 지정합니다. 이것 보다 더 어두운 색은 검정으로 처리 됩니다. 값 범위는 0에서 4, 000에 있어야 합니다.  
   
  *caReferenceWhite*  
- Specifies the white reference for the source colors.  Any colors that are lighter than this are treated as white.  The value must be in the range from 6,000 to 10,000.  
+ 원본 색상에 대 한 흰색 참조를 지정합니다. 이것 보다 더 밝은 색이 흰색으로 처리 됩니다. 값 6, 000에서 10000 사이에 있어야 합니다.  
   
  *caContrast*  
- Specifies the amount of contrast to be applied to the source object.  The value must be in the range from \-100 to 100.  A value of 0 means no contrast adjustment.  
+ 원본 개체에 적용할 수 대비 양을 지정 합니다. 100-100 사이의 값 이어야 합니다. 값이 0 대비 조정이 없음을 의미합니다.  
   
  *caBrightness*  
- Specifies the amount of brightness to be applied to the source object.  The value must be in the range from \-100 to 100.  A value of 0 means no brightness adjustment.  
+ 원본 개체에 적용 될 밝기를 지정 합니다. 100-100 사이의 값 이어야 합니다. 값이 0 밝기 조정이 없음을 의미합니다.  
   
  *caColorfulness*  
- Specifies the amount of colorfulness to be applied to the source object.  The value must be in the range from \-100 to 100.  A value of 0 means no colorfulness adjustment.  
+ 원본 개체에 적용 될 colorfulness 양을 지정 합니다. 100-100 사이의 값 이어야 합니다. 값 0은 colorfulness 조정이 없음을 의미합니다.  
   
  *caRedGreenTint*  
- Specifies the amount of red or green tint adjustment to be applied to the source object.  The value must be in the range from \-100 to 100.  Positive numbers would adjust towards red and negative numbers adjust towards green.  A 0 means no tint adjustment.  
+ 원본 개체에 적용 될 빨간색 또는 녹색 색조 조정 양을 지정 합니다. 100-100 사이의 값 이어야 합니다. 양수는 빨간색으로 조정한 음수 녹색으로 조정 합니다. A 0 색조 조정이 없음을 의미합니다.  
   
-## 요구 사항  
- **Header:** wingdi.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** wingdi.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetColorAdjustment](../Topic/CDC::GetColorAdjustment.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
+
+
+

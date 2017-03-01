@@ -1,41 +1,55 @@
 ---
-title: "컴파일러 경고 (수준 1) C4803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4803"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4803"
+title: "컴파일러 경고 (수준 1) C4803 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4803
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 경고 (수준 1) C4803
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
+ms.lasthandoff: 02/24/2017
 
-'method' : raise 메서드에 이벤트 'event'의 저장소 클래스와 다른 저장소 클래스가 있습니다.  
+---
+# <a name="compiler-warning-level-1-c4803"></a>컴파일러 경고(수준 1) C4803
+'method': raise 메서드는 이벤트의 구현과 다른 저장소 클래스는 'event'  
   
- 이벤트 메서드에는 이벤트 선언에 있는 저장소 클래스와 같은 저장소 클래스가 있어야 하므로  컴파일러에서 이벤트의 메서드에 저장소 클래스가 같아지도록 적용합니다.  
+이벤트 메서드의 같은 저장소 클래스의 이벤트 선언 해야 합니다. 컴파일러는 저장소 클래스는 동일한 있도록 이벤트의 메서드를 조정 합니다.  
   
- 인터페이스에서 이벤트를 구현하는 클래스가 있으면 이 경고가 발생합니다.  컴파일러에서 인터페이스의 이벤트에 대한 raise 메서드를 암시적으로 생성하지 않습니다.  클래스에 해당 인터페이스를 구현할 때 컴파일러에서 raise 메서드를 암시적으로 생성하고 해당 메서드는 가상이 아니므로 경고가 발생합니다.  
+이 경고는 이벤트 인터페이스에서를 구현 하는 클래스가 있는 경우에 발생할 수 있습니다. 컴파일러가 생성 하지 않습니다 암시적으로 이벤트에 대 한 raise 메서드를 인터페이스에. 클래스에서 해당 인터페이스를 구현 하는 경우 컴파일러에서 암시적으로 raise 메서드를 생성 하 고 해당 메서드에 됩니다 가상, 따라서 경고 합니다. 이벤트에 대 한 자세한 내용은 참조 하십시오. [이벤트](../../windows/event-cpp-component-extensions.md)합니다.  
   
- 경고를 해제하는 방법에 대한 자세한 내용은 [warning](../../preprocessor/warning.md) pragma를 참조하십시오.  
+참조 [경고](../../preprocessor/warning.md) pragma는 경고를 해제 하는 방법에 대 한 내용은 합니다.  
   
-## 예제  
- C4803은 **\/clr**를 사용할 때 발생할 수 있습니다.  이벤트 사용에 대한 자세한 내용은 [event](../../windows/event-cpp-component-extensions.md)를 참조하십시오.  
-  
- 다음 샘플에서는 C4803 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 c4803 오류가 발생 합니다.  
   
 ```  
 // C4803.cpp  
@@ -74,42 +88,4 @@ int main() {
    ep->E1();  
 }  
 ```  
-  
-## 예제  
- C4803은 **\/clr:oldSyntax**를 사용할 때 발생할 수 있습니다.  다음 샘플에서는 C4803 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C4803_b.cpp  
-// compile with: /clr:oldSyntax /W1  
-using namespace System;  
-  
-public __delegate void Del();  
-  
-__gc struct E {  
-   Del* _pd1;  
-   virtual __event void add_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Combine(_pd1, pd1));  
-   }  
-  
-   virtual __event void remove_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Remove(_pd1, pd1));  
-   }  
-  
-   __event void raise_E1 () {   // C4803, add virtual  
-      if (_pd1)  
-         _pd1->Invoke();  
-   }  
-  
-   void func() {  
-      Console::WriteLine("In E::func()");  
-   }  
-};  
-  
-int main() {  
-   E* ep = new E;  
-   ep->E1 += new Del(ep, &E::func);  
-   ep->E1();  
-   ep->E1 -= new Del(ep, &E::func);  
-   ep->E1();  
-}  
-```
+

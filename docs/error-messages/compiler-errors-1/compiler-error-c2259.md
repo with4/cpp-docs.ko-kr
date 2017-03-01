@@ -1,38 +1,55 @@
 ---
-title: "컴파일러 오류 C2259 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2259"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2259"
+title: "컴파일러 오류 C2259 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2259
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 컴파일러 오류 C2259
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.lasthandoff: 02/24/2017
 
-'class' : 추상 클래스를 인스턴스화할 수 없습니다.  
+---
+# <a name="compiler-error-c2259"></a>컴파일러 오류 C2259
+'class': 추상 클래스를 인스턴스화할 수 없습니다  
   
- 코드가 추상 클래스 또는 구조체의 인스턴스를 선언합니다.  
+ 코드는 추상 클래스 또는 구조체의 인스턴스를 선언합니다.  
   
- 하나 이상의 순수 가상 함수를 사용하여 클래스나 구조체를 인스턴스화할 수 없습니다.  파생 클래스의 개체를 인스턴스화하려면 파생 클래스가 각 순수 가상 함수를 재정의해야 합니다.  
+ 클래스 또는 구조체와 하나 이상의 순수 가상 함수를 인스턴스화할 수 없습니다. 파생된 클래스의 개체를 인스턴스화할 때 파생된 클래스는 각 순수 가상 함수를 재정의 해야 합니다.  
   
- 자세한 내용은 [암시적 추상 클래스](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)를 참조하십시오.  
+ 자세한 내용은 참조 [암시적 추상 클래스](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)합니다.  
   
- 다음 샘플에서는 C2259 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2259 오류가 생성 됩니다.  
   
 ```  
 // C2259.cpp  
@@ -51,17 +68,17 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- 인터페이스를 통해 파생된 클래스에서 public 이외의 액세스 권한을 사용하여 인터페이스 메서드를 구현할 때마다 C2259가 발생합니다.  파생 클래스에서 구현된 인터페이스 메서드에는 public 액세스 권한이 있어야 하기 때문입니다.  액세스 권한이 더 제한적인 인터페이스에 대해 멤버 함수를 구현하는 경우 컴파일러는 이러한 함수가 인터페이스에 정의된 인터페이스 메서드에 대해 구현되는 것으로 간주하지 않으므로 파생 클래스가 추상 클래스가 됩니다.  
+ 인터페이스에서 파생 하 고 공용 액세스 권한 사용 하 여 파생된 클래스에서 인터페이스 메서드를 구현할 때마다 C2259 나타날 수 있습니다.  이 컴파일러는 공용 액세스 하려면 파생된 클래스에서 구현 된 인터페이스 메서드를 예상 하기 때문에 발생 합니다. 더 제한적인 액세스 권한 사용 하 여 인터페이스에 대 한 멤버 함수를 구현 하는 경우 컴파일러는 파생된 클래스는 추상 클래스 인터페이스에 정의 된 인터페이스 메서드에 대 한 구현으로 고려 하지 않습니다.  
   
- 이 문제를 해결하는 데는 두 가지 방법이 있습니다.  
+ 이 문제를 해결할 수 있는 방법은 두 가지가 있습니다.  
   
--   구현된 메서드에 대한 액세스 권한을 public으로 설정합니다.  
+-   구현 된 메서드에 대 한 공용 액세스 권한을 확인 합니다.  
   
--   파생 클래스에서 구현된 인터페이스 메서드에 대해 범위 결정 연산자를 사용하여 구현된 메서드 이름을 인터페이스 이름으로 한정합니다.  
+-   파생된 클래스에서 구현 된 인터페이스 메서드에 대 한 범위 확인 연산자를 사용 하 여 구현 된 메서드 이름을 인터페이스의 이름으로 한정 합니다.  
   
- C2259 오류는 Visual C\+\+ 2005에 대해 적용되었으며, 이제 **\/Zc:wchar\_t**가 기본적으로 설정된다는 컴파일러 규칙의 결과로 발생할 수도 있습니다.  이 경우 C2599는 이전 버전의 동작을 활용할 수 있도록 **\/Zc:wchar\_t\-**를 사용하여 컴파일하거나 형식이 호환되도록 업데이트하여 해결할 수 있습니다.  자세한 내용은 [\/Zc:wchar\_t\(wchar\_t를 네이티브 형식으로 인식\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)을 참조하십시오.  
+ Visual c + + 2005에서 수행 된 규칙 작업의 결과로 C2259도 발생할 수 있습니다 **/zc: wchar_t** 는 이제 기본적으로 설정 합니다. 이 경우 C2599 사용 하 여 컴파일하거나 확인 될 수 **/Zc:wchar_t-**, 이전 버전에서 컴파일하거나 호환 되도록 형식이 업데이트 하 여 동작을 활용할 수 있습니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   
- 다음 샘플에서는 C2259 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2259 오류가 생성 됩니다.  
   
 ```  
 // C2259b.cpp  
@@ -99,7 +116,7 @@ public:
 MyClass4 y;  
 ```  
   
- 다음 샘플에서는 C2259 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2259 오류가 생성 됩니다.  
   
 ```  
 // C2259c.cpp  
@@ -121,25 +138,4 @@ int main() {
    MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259  
 }  
 ```  
-  
- 다음 샘플에서는 C2259 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C2259d.cpp  
-// compile with: /clr:oldSyntax  
-public __gc __interface MyInterface {  
-   void MyMethod();  
-};  
-  
-__gc class MyDerivedClass : public MyInterface {  
-// Uncomment the following line to resolve.  
-// public:  
-   void MyMethod() {};  
-   // or the following line  
-   // void MyInterface::MyMethod() {};  
-};  
-  
-int main() {  
-   MyDerivedClass *instance = new MyDerivedClass();   // C2259  
-}  
-```
+

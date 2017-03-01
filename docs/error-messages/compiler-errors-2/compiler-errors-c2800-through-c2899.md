@@ -1,26 +1,42 @@
 ---
-title: "컴파일러 오류s C2800 Through C2899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "컴파일러 오류 C2800 ~ C2899 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류s C2800 Through C2899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 06061d98a0bdbbd69c8fe2fb05c75c7b301e4072
+ms.lasthandoff: 02/24/2017
 
-설명서의 이 항목에는 Visual C\+\+ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다.  여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
+---
+# <a name="compiler-errors-c2800-through-c2899"></a>컴파일러 오류 C2800 ~ C2899
+설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
  [컴파일러 오류 C2800](../../error-messages/compiler-errors-2/compiler-error-c2800.md)  
   
@@ -66,8 +82,6 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C2825](../../error-messages/compiler-errors-2/compiler-error-c2825.md)  
   
- [컴파일러 오류 C2826](../Topic/Compiler%20Error%20C2826.md)  
-  
  [컴파일러 오류 C2827](../../error-messages/compiler-errors-2/compiler-error-c2827.md)  
   
  [컴파일러 오류 C2828](../../error-messages/compiler-errors-2/compiler-error-c2828.md)  
@@ -106,7 +120,7 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C2854](../../error-messages/compiler-errors-2/compiler-error-c2854.md)  
   
- [컴파일러 오류 C2855](../../error-messages/compiler-errors-2/compiler-error-c2855.md)  
+ [컴파일러 오류 c&2855;](../../error-messages/compiler-errors-2/compiler-error-c2855.md)  
   
  [컴파일러 오류 C2856](../../error-messages/compiler-errors-2/compiler-error-c2856.md)  
   
@@ -124,11 +138,9 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C2863](../../error-messages/compiler-errors-2/compiler-error-c2863.md)  
   
- [컴파일러 오류 C2864](../../error-messages/compiler-errors-2/compiler-error-c2864.md)  
+ [컴파일러 오류 c&2864;](../../error-messages/compiler-errors-2/compiler-error-c2864.md)  
   
  [컴파일러 오류 C2865](../../error-messages/compiler-errors-2/compiler-error-c2865.md)  
-  
- [컴파일러 오류 C2866](../Topic/Compiler%20Error%20C2866.md)  
   
  [컴파일러 오류 C2867](../../error-messages/compiler-errors-2/compiler-error-c2867.md)  
   
@@ -140,7 +152,7 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C2871](../../error-messages/compiler-errors-2/compiler-error-c2871.md)  
   
- [컴파일러 오류 C2872](../../error-messages/compiler-errors-2/compiler-error-c2872.md)  
+ [컴파일러 오류 c&2872;](../../error-messages/compiler-errors-2/compiler-error-c2872.md)  
   
  [컴파일러 오류 C2873](../../error-messages/compiler-errors-2/compiler-error-c2873.md)  
   
@@ -185,5 +197,4 @@ caps.handback.revision: 12
  [컴파일러 오류 C2897](../../error-messages/compiler-errors-2/compiler-error-c2897.md)  
   
  [컴파일러 오류 C2898](../../error-messages/compiler-errors-2/compiler-error-c2898.md)  
-  
- [컴파일러 오류 C2899](../../error-messages/compiler-errors-2/compiler-error-c2899.md)
+

@@ -1,36 +1,54 @@
 ---
-title: "컴파일러 오류 C3767 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3767"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3767"
+title: "컴파일러 오류 c&3767; | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3767
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류 C3767
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.lasthandoff: 02/24/2017
 
-'function': 후보 함수에 액세스할 수 없습니다.  
+---
+# <a name="compiler-error-c3767"></a>컴파일러 오류 C3767
+'function' 후보 함수에 액세스할 수 없습니다.  
   
- 클래스에 정의된 friend 함수가 전역 네임스페이스 범위에서 정의되고 선언된 것으로 간주되지 않습니다.  그러나 인수 종속성을 조회하여 찾을 수 있습니다.  
+ Friend 함수는 클래스에 정의 된 경우 정의 되 고 전역 네임 스페이스 범위에서 선언 된 것으로 처리 해서는 안 됩니다. 그러나 인수 종속성 조회에서 찾을 수, 그 수 있습니다.  
   
- C3767은 컴파일러의 변경 사항으로 인해 발생할 수도 있습니다. **\/clr** 컴파일에서 네이티브 형식은 이제 기본적으로 private입니다. 자세한 내용은 [형식 표시](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)를 참조하십시오.  
+ C&3767; 주요 변경에 의해서도 발생할 수 있습니다: 네이티브 형식은 이제 전용 형식에 기본적으로는 **/clr** 컴파일; 참조 [가시성 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 에 대 한 자세한 내용은 합니다.  
   
- 다음 샘플에서는 C3767 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
   
 ```  
 // C3767a.cpp  
@@ -61,38 +79,7 @@ int main() {
 };  
 ```  
   
- 다음 샘플에서는 C3767 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3767b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__delegate void TestDel();  
-  
-public __gc class MyClass {  
-public:  
-   static __event TestDel * MyClass_Event;  
-};  
-  
-public __gc class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass* patient = new MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass* x = new MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2 * y = new MyClass2();  
-   y->Test();  
-};  
-```  
-  
- 다음 샘플에서는 C3767 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
   
 ```  
 // C3767c.cpp  
@@ -114,31 +101,9 @@ ref class Der : public Base {
 };  
 ```  
   
- 다음 샘플에서는 C3767 오류가 발생하는 경우를 보여 줍니다.  
+ Visual c + +.NET 2002 컴파일러 기호를 조회 하는 방법을 변경 합니다. 경우에 따라 것은 자동으로 알아보았습니다 지정된 된 네임 스페이스의 기호에 대 한 합니다. 이제, 인수 종속성 조회를 사용합니다.  
   
-```  
-// C3767d.cpp  
-// compile with: /clr:oldSyntax /c  
-  
-__gc class Base {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-__gc class Der : public Base {  
-   void Method() {  
-      ((Base*)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- Visual C\+\+ .NET 2002에서는 컴파일러가 기호를 조회하는 방법을 변경했습니다.  이전에는 일부 경우에 지정된 네임스페이스에서 컴파일러가 자동으로 기호를 찾았습니다.  지금은 인수 종속성 조회를 사용합니다.  
-  
- 다음 샘플에서는 C3767 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
   
 ```  
 // C3767e.cpp  
@@ -157,7 +122,7 @@ int main() {
 }  
 ```  
   
- Visual C\+\+ .NET 2003 및 Visual C\+\+ .NET 2002에서 유효한 코드의 경우 클래스 범위에서 friend를 선언하고 네임스페이스 범위에서 이를 정의합니다.  
+ Visual c + +.NET 2003 및 Visual c + +.NET 2002에서 유효한 코드에 대 한 friend 클래스 범위에서 선언 하 고 네임 스페이스 범위에 정의 합니다.  
   
 ```  
 // C3767f.cpp  

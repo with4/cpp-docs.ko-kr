@@ -1,60 +1,93 @@
 ---
-title: "CSimpleArrayEqualHelper Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CSimpleArrayEqualHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleArrayEqualHelper class"
+title: "CSimpleArrayEqualHelper 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSimpleArrayEqualHelper
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CSimpleArrayEqualHelper Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 4a87879683257c66de5fe4e720dd29fa4c47031d
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 도우미에 대 한 것은  [CSimpleArray](../../atl/reference/csimplearray-class.md) 클래스.  
+---
+# <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 클래스
+이 클래스는에 대 한 도우미는 [CSimpleArray](../../atl/reference/csimplearray-class.md) 클래스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class T>  
+class CSimpleArrayEqualHelper
 ```  
   
-      template <  
-   class T   
->  
-class CSimpleArrayEqualHelper  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 파생 된 클래스입니다.  
+ 파생된 클래스입니다.  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CSimpleArrayEqualHelper::IsEqual](../Topic/CSimpleArrayEqualHelper::IsEqual.md)|\(정적\) 두 테스트 `CSimpleArray` 개체 요소가 같은지.|  
+|이름|설명|  
+|----------|-----------------|  
+|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(정적) 두 `CSimpleArray` 개체 같음에 대 한 요소입니다.|  
   
-## 설명  
- 이 특성 클래스인 보완 하는 `CSimpleArray` 클래스입니다.  저장에서 두 요소를 비교 하는 방법을 제공 된 `CSimpleArray` 개체입니다.  기본적으로 요소를 사용 하 여 비교  **operator\=\(\)**, 하지만 배열 자신의 같음 연산자가 없는 복잡 한 데이터 형식이 포함 되어 있으면이 클래스를 재정의 해야 합니다.  
+## <a name="remarks"></a>주의  
+ 이 특성 클래스는 보완은 `CSimpleArray` 클래스입니다. 에 저장 된 두 요소를 비교에 대 한 메서드를 제공 된 `CSimpleArray` 개체입니다. 사용 하는 요소를 비교 하는 기본적으로 **operator=()**, 배열에 자신의 같음 연산자가 없는 복잡 한 데이터 형식을 포함 하는 경우이 클래스를 재정의 해야 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-## 참고 항목  
- [CSimpleArray Class](../../atl/reference/csimplearray-class.md)   
- [CSimpleArrayEqualHelperFalse Class](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameisequala--csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
+ 두 `CSimpleArray` 개체 같음에 대 한 요소입니다.  
+  
+```
+static bool IsEqual(
+    const T& t1,
+    const T& t2);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *t1*  
+ T. 형식의 개체  
+  
+ *t&2;*  
+ T. 형식의 개체  
+  
+### <a name="return-value"></a>반환 값  
+ 요소가 같은지, false 그렇지 않으면 true를 반환 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [CSimpleArray 클래스](../../atl/reference/csimplearray-class.md)   
+ [CSimpleArrayEqualHelperFalse 클래스](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

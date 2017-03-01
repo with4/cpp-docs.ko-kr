@@ -1,26 +1,43 @@
 ---
-title: "컴파일러 오류s C3500 through C3999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "컴파일러 오류 C3500 C3999 통해 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류s C3500 through C3999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
+ms.lasthandoff: 02/24/2017
 
-설명서의 이 항목에는 Visual C\+\+ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
+---
+# <a name="compiler-errors-c3500-through-c3999"></a>컴파일러 오류 C3500 C3999 통해
+설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
  [컴파일러 오류 C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
   
@@ -48,8 +65,6 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
   
- [컴파일러 오류 C3534](../Topic/Compiler%20Error%20C3534.md)  
-  
  [컴파일러 오류 C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
   
  [컴파일러 오류 C3536](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
@@ -64,7 +79,7 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
   
- [Compiler Error C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
+ [컴파일러 오류 C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
   
  [컴파일러 오류 C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
   
@@ -75,8 +90,6 @@ caps.handback.revision: 12
  [컴파일러 오류 C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
   
  [컴파일러 오류 C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [컴파일러 오류 C3616](../Topic/Compiler%20Error%20C3616.md)  
   
  [컴파일러 오류 C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
   
@@ -139,8 +152,6 @@ caps.handback.revision: 12
  [컴파일러 오류 C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
   
  [컴파일러 오류 C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
-  
- [컴파일러 오류 C3658](../Topic/Compiler%20Error%20C3658.md)  
   
  [컴파일러 오류 C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
   
@@ -218,8 +229,6 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
   
- [컴파일러 오류 C3730](../Topic/Compiler%20Error%20C3730.md)  
-  
  [컴파일러 오류 C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
   
  [컴파일러 오류 C3732](../../error-messages/compiler-errors-2/compiler-error-c3732.md)  
@@ -272,7 +281,7 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3766](../../error-messages/compiler-errors-2/compiler-error-c3766.md)  
   
- [컴파일러 오류 C3767](../../error-messages/compiler-errors-2/compiler-error-c3767.md)  
+ [컴파일러 오류 c&3767;](../../error-messages/compiler-errors-2/compiler-error-c3767.md)  
   
  [컴파일러 오류 C3768](../../error-messages/compiler-errors-2/compiler-error-c3768.md)  
   
@@ -286,8 +295,6 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
   
- [컴파일러 오류 C3802](../Topic/Compiler%20Error%20C3802.md)  
-  
  [컴파일러 오류 C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
   
  [컴파일러 오류 C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
@@ -300,13 +307,9 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
   
- [컴파일러 오류 C3811](../Topic/Compiler%20Error%20C3811.md)  
-  
  [컴파일러 오류 C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
   
  [컴파일러 오류 C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [컴파일러 오류 C3814](../Topic/Compiler%20Error%20C3814.md)  
   
  [컴파일러 오류 C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
   
@@ -316,19 +319,11 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
   
- [컴파일러 오류 C3819](../Topic/Compiler%20Error%20C3819.md)  
-  
  [컴파일러 오류 C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [컴파일러 오류 C3822](../Topic/Compiler%20Error%20C3822.md)  
-  
- [컴파일러 오류 C3823](../Topic/Compiler%20Error%20C3823.md)  
   
  [컴파일러 오류 C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
   
  [컴파일러 오류 C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
-  
- [컴파일러 오류 C3826](../Topic/Compiler%20Error%20C3826.md)  
   
  [컴파일러 오류 C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
   
@@ -347,8 +342,6 @@ caps.handback.revision: 12
  [컴파일러 오류 C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
   
  [컴파일러 오류 C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
-  
- [컴파일러 오류 C3840](../Topic/Compiler%20Error%20C3840.md)  
   
  [컴파일러 오류 C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
   
@@ -460,8 +453,5 @@ caps.handback.revision: 12
   
  [컴파일러 오류 C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
   
- [컴파일러 오류 C3921](../Topic/Compiler%20Error%20C3921.md)  
-  
  [컴파일러 오류 C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
-  
- [컴파일러 오류 C3996](../Topic/Compiler%20Error%20C3996.md)
+
