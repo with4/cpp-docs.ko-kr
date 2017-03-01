@@ -1,68 +1,188 @@
 ---
-title: "위치 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::location"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "location 클래스"
+title: "위치 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::location
+dev_langs:
+- C++
+helpviewer_keywords:
+- location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 위치 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
+ms.lasthandoff: 02/24/2017
 
-하드웨어의 물리적 위치를 추상화 합니다.  
+---
+# <a name="location-class"></a>위치 클래스
+하드웨어의 실제 위치에 대한 추상화입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class location;
 ```  
-class location;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[location::location 생성자](../Topic/location::location%20Constructor.md)|오버로드됨.  `location` 개체를 생성합니다.|  
-|[location::~location 소멸자](../Topic/location::~location%20Destructor.md)|`location` 개체를 소멸시킵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[위치 생성자](#ctor)|오버로드됨. `location` 개체를 생성합니다.|  
+|[~ location 소멸자](#dtor)|`location` 개체를 제거합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[location::current 메서드](../Topic/location::current%20Method.md)|호출한 스레드에서 실행 되는 구체적인 장소를 나타내는  `location` 개체를 반환합니다.|  
-|[location::from\_numa\_node 메서드](../Topic/location::from_numa_node%20Method.md)|주어진 NUMA 노드를 나타내는  `location` 개체가 반환됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[현재 메서드](#current)|호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.|  
+|[from_numa_node 메서드](#from_numa_node)|지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[location::operator\!\= 연산자](../Topic/location::operator!=%20Operator.md)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|  
-|[location::operator\= 연산자](../Topic/location::operator=%20Operator.md)|다른 `location` 개체의 내용을 여기에 할당합니다.|  
-|[location::operator\=\= 연산자](../Topic/location::operator==%20Operator.md)|두 `location` 개체가 동일한 위치를 나타내는지 여부를 나타냅니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[연산자! = 연산자](#operator_neq)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|  
+|[operator = 연산자](#operator_eq)|다른 `location` 개체의 내용을 여기에 할당합니다.|  
+|[연산자 = = 연산자](#operator_eq_eq)|두 결정 `location` 개체는 같은 위치를 나타냅니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `location`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ 위치 
+
+ `location` 개체를 제거합니다.  
+  
+```
+~location();
+```  
+  
+##  <a name="a-namecurrenta-current"></a><a name="current"></a>현재 
+
+ 호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.  
+  
+```
+static location __cdecl current();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 위치입니다.  
+  
+##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+
+ 지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.  
+  
+```
+static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_NumaNodeNumber`  
+ 위치를 생성하기 위한 NUMA 노드 번호입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `_NumaNodeNumber` 매개 변수로 지정된 NUMA 노드를 나타내는 위치입니다.  
+  
+##  <a name="a-namectora-location"></a><a name="ctor"></a>위치 
+
+ `location` 개체를 생성합니다.  
+  
+```
+location();
+
+location(
+    const location& _Src);
+
+location(
+    T _LocationType,
+    unsigned int _Id,
+    unsigned int _BindingId = 0,
+    _Inout_opt_ void* _PBinding = NULL);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+ `_LocationType`  
+ `_Id`  
+ `_BindingId`  
+ `_PBinding`  
+  
+### <a name="remarks"></a>주의  
+ 기본적으로 생성되는 위치는 시스템 전체를 나타냅니다.  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>연산자! = 
+
+ 두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.  
+  
+```
+bool operator!= (const location& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Rhs`  
+  
+### <a name="return-value"></a>반환 값  
+ 두 위치가 다르면 `true`이고, 그렇지 않으면 `false`입니다.  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+
+ 다른 `location` 개체의 내용을 여기에 할당합니다.  
+  
+```
+location& operator= (const location& _Rhs);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Rhs`  
+ 소스 `location` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>연산자 = = 
+
+ 두 결정 `location` 개체는 같은 위치를 나타냅니다.  
+  
+```
+bool operator== (const location& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Rhs`  
+  
+### <a name="return-value"></a>반환 값  
+ `true`두 위치가 동일 하면 및 `false` 그렇지 않은 경우.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

@@ -1,79 +1,142 @@
 ---
-title: "IPersistPropertyBagImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPersistPropertyBagImpl"
-  - "ATL.IPersistPropertyBagImpl<T>"
-  - "ATL::IPersistPropertyBagImpl"
-  - "ATL::IPersistPropertyBagImpl<T>"
-  - "ATL.IPersistPropertyBagImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPersistPropertyBagImpl class"
+title: "IPersistPropertyBagImpl 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPersistPropertyBagImpl
+- ATL.IPersistPropertyBagImpl<T>
+- ATL::IPersistPropertyBagImpl
+- ATL::IPersistPropertyBagImpl<T>
+- ATL.IPersistPropertyBagImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# IPersistPropertyBagImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
+ms.lasthandoff: 02/24/2017
 
-이 클래스를 구현 합니다.  **IUnknown** 및 해당 속성을 클라이언트가 제공한 속성 모음에 저장 하도록 합니다.  
+---
+# <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 클래스
+이 클래스는 구현 **IUnknown** 개체가 클라이언트에서 제공한 속성 모음에 해당 속성을 저장할 수 있도록 하 고 있습니다.  
   
 > [!IMPORTANT]
->  이 클래스와 해당 멤버를 실행 하는 응용 프로그램에서 사용할 수 있는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class T>  
+class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```  
   
-      template <   
-class T   
->  
-class ATL_NO_VTABLE IPersistPropertyBagImpl :  
-public IPersistPropertyBag  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 파생 클래스에서 `IPersistPropertyBagImpl`.  
+ 파생 된 클래스에 `IPersistPropertyBagImpl`합니다.  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[IPersistPropertyBagImpl::GetClassID](../Topic/IPersistPropertyBagImpl::GetClassID.md)|개체의 CLSID를 검색합니다.|  
-|[IPersistPropertyBagImpl::InitNew](../Topic/IPersistPropertyBagImpl::InitNew.md)|새로 만든된 개체를 초기화합니다.  ATL 구현을 반환 `S_OK`.|  
-|[IPersistPropertyBagImpl::Load](../Topic/IPersistPropertyBagImpl::Load.md)|클라이언트가 제공한 속성 모음에서 개체의 속성을 로드합니다.|  
-|[IPersistPropertyBagImpl::Save](../Topic/IPersistPropertyBagImpl::Save.md)|개체의 속성을 클라이언트가 제공한 속성 모음에 저장 됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[IPersistPropertyBagImpl::GetClassID](#getclassid)|개체의 CLSID를 검색합니다.|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|새로 만든된 개체를 초기화합니다. ATL 구현은 `S_OK`합니다.|  
+|[IPersistPropertyBagImpl::Load](#load)|클라이언트에서 제공한 propertybag에서 해당 개체의 속성을 로드합니다.|  
+|[IPersistPropertyBagImpl::Save](#save)|클라이언트에서 제공한 속성 모음에 해당 개체의 속성을 저장합니다.|  
   
-## 설명  
- [IPersistPropertyBag](https://msdn.microsoft.com/en-us/library/aa768205.aspx) 인터페이스 속성을 클라이언트가 제공한 속성 모음에 저장 하는 개체 수 있습니다.  클래스 `IPersistPropertyBagImpl` 는이 인터페이스의 기본 구현을 제공 하 고 구현  **IUnknown** 덤프에 정보를 전송 하 여 장치에서 디버그 빌드.  
+## <a name="remarks"></a>주의  
+ [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) 인터페이스를 사용 하는 클라이언트에서 제공한 propertybag에 해당 속성을 저장 하는 개체입니다. 클래스 `IPersistPropertyBagImpl` 이 인터페이스의 기본 구현을 제공 하 고 구현 **IUnknown** 장치에서 디버그 덤프를 정보를 전송 하 여 빌드합니다.  
   
- **IPersistPropertyBag** 함께  [IPropertyBag](https://msdn.microsoft.com/en-us/library/aa768196.aspx) 및  [IErrorLog](https://msdn.microsoft.com/en-us/library/aa768231.aspx).  이러한 후자의 두 가지 인터페이스는 클라이언트에 의해 구현 되어야 합니다.  \- `IPropertyBag`, 클라이언트 저장 하 고 개체의 개별 속성을 로드 합니다.  \-  **IErrorLog**, 개체와 클라이언트 모두에 발생 한 오류를 보고할 수 있습니다.  
+ **IPersistPropertyBag** 와 함께 작동 [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) 및 [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)합니다. 클라이언트에서 이러한 마지막 두 개의 인터페이스를 구현 해야 합니다. 통해 `IPropertyBag`, 클라이언트는 저장 및 해당 개체의 개별 속성을 로드 합니다. 통해 **IErrorLog**, 개체와 클라이언트 모두에서 발생 한 오류를 보고할 수 있습니다.  
   
- **관련된 기사** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md),  [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
+ **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `IPersistPropertyBag`  
   
  `IPersistPropertyBagImpl`  
   
-## 요구 사항  
- **헤더:**  atlcom.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlcom.h  
   
-## 참고 항목  
- [BEGIN\_PROP\_MAP](../Topic/BEGIN_PROP_MAP.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetclassida--ipersistpropertybagimplgetclassid"></a><a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+ 개체의 CLSID를 검색합니다.  
+  
+```
+STDMETHOD(GetClassID)(CLSID* pClassID);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nameinitnewa--ipersistpropertybagimplinitnew"></a><a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+ 새로 만든된 개체를 초기화합니다.  
+  
+```
+STDMETHOD(InitNew)();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nameloada--ipersistpropertybagimplload"></a><a name="load"></a>IPersistPropertyBagImpl::Load  
+ 클라이언트에서 제공한 propertybag에서 해당 개체의 속성을 로드합니다.  
+  
+```
+STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
+```  
+  
+### <a name="remarks"></a>주의  
+ ATL 개체의 속성 매핑이 사용 하 여이 정보를 검색 합니다.  
+  
+ 참조 [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namesavea--ipersistpropertybagimplsave"></a><a name="save"></a>IPersistPropertyBagImpl::Save  
+ 클라이언트에서 제공한 속성 모음에 해당 개체의 속성을 저장합니다.  
+  
+```
+STDMETHOD(Save)(
+    LPPROPERTYBAG pPropBag,
+    BOOL fClearDirty,
+    BOOL fSaveAllProperties);
+```  
+  
+### <a name="remarks"></a>주의  
+ ATL 개체의 속성 매핑이 사용 하 여이 정보를 저장 합니다. 기본적으로이 메서드는 값에 관계 없이 모든 속성을 저장 *fSaveAllProperties*합니다.  
+  
+ 참조 [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

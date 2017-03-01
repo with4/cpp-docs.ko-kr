@@ -1,64 +1,103 @@
 ---
-title: "_U_RECT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::_U_RECT"
-  - "_U_RECT"
-  - "ATL._U_RECT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_RECT class"
-  - "U_RECT class"
+title: "_U_RECT 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::_U_RECT
+- _U_RECT
+- ATL._U_RECT
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_RECT class
+- _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _U_RECT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.lasthandoff: 02/24/2017
 
-이 인수 어댑터 클래스가 `RECT` 포인터 또는 참조 포인터를 측면에서 구현 되는 함수에 전달 됩니다.  
+---
+# <a name="urect-class"></a>_U_RECT 클래스
+이 인수 어댑터 클래스를 사용 하거나 `RECT` 포인터 또는 참조에 대 한 포인터를 기준으로 구현 되는 함수에 전달할 수 있습니다.  
   
 > [!IMPORTANT]
->  런타임에서 Windows를 실행 하는 응용 프로그램에서이 클래스와 해당 멤버를 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
-  
-class _U_RECT  
-  
-```  
+```
+class _U_RECT```  
   
 ## Members  
   
-### Public 생성자  
+### Public Constructors  
   
-|Name|설명|  
-|----------|--------|  
-|[\_U\_RECT::\_U\_RECT](../Topic/_U_RECT::_U_RECT.md)|생성자입니다.|  
+|Name|Description|  
+|----------|-----------------|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
   
-### 공용 데이터 멤버  
+### Public Data Members  
   
-|Name|설명|  
-|----------|--------|  
-|[\_U\_RECT::m\_lpRect](../Topic/_U_RECT::m_lpRect.md)|포인터는 `RECT`.|  
+|Name|Description|  
+|----------|-----------------|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
   
-## 설명  
- 두 개의 생성자 오버 로드에 정의 된 클래스: 허용 하나는  **RECT &** 인수와 다른 허용는 `LPRECT` 인수.  첫 번째 생성자 참조 인수의 주소 클래스의 단일 데이터 멤버에 저장  [m\_lpRect](../Topic/_U_RECT::m_lpRect.md).  포인터 생성자 인수를 변환 하지 않고 직접 저장 됩니다.  
+## Remarks  
+ The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
   
-## 요구 사항  
- **헤더:**  atlwin.h  
+## Requirements  
+ **Header:** atlwin.h  
   
-## 참고 항목  
+##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
+ The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+  
+```
+LPRECT m_lpRect;
+```  
+  
+##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
+ The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+  
+```
+(RECT / rc); _U_RECT  
+_U_RECT (LPRECT lpRect);
+```  
+  
+### Parameters  
+ `rc`  
+ A `RECT` reference.  
+  
+ `lpRect`  
+ A `RECT` pointer.  
+  
+### Remarks  
+ The argument to the pointer constructor is stored directly without conversion.  
+  
+## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
+

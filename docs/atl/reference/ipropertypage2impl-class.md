@@ -1,78 +1,105 @@
 ---
-title: "IPropertyPage2Impl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPropertyPage2Impl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage2 ATL implementation"
-  - "IPropertyPage2Impl class"
-  - "속성 페이지"
+title: "IPropertyPage2Impl 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPropertyPage2Impl
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages
+- IPropertyPage2 ATL implementation
+- IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# IPropertyPage2Impl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 43680d12febbd94137009f66242198129d4b3630
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 구현  **IUnknown** 의 기본 구현에서 상속 하 고  [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
+---
+# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 클래스
+이 클래스는 구현 **IUnknown** 의 기본 구현을 상속 하 고 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)합니다.  
   
 > [!IMPORTANT]
->  이 클래스와 해당 멤버를 실행 하는 응용 프로그램에서 사용할 수 있는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template<class T>  
+class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
-      template< class   
-      T  
-      >  
-class IPropertyPage2Impl : public IPropertyPageImpl< T>  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 파생 클래스에서 `IPropertyPage2Impl`.  
+ 파생 된 클래스에 `IPropertyPage2Impl`합니다.  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[IPropertyPage2Impl::EditProperty](../Topic/IPropertyPage2Impl::EditProperty.md)|속성 컨트롤 속성 페이지에서 활성화 될 때 포커스를 받을지 지정 합니다.  ATL 구현을 반환  **E\_NOTIMPL**.|  
+|이름|설명|  
+|----------|-----------------|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|속성 페이지를 활성화할 때 어떤 속성 컨트롤에서 포커스를 받을지 지정 합니다. ATL 구현은 **E_NOTIMPL**합니다.|  
   
-## 설명  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) 인터페이스 확장  [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 추가 된 `EditProperty` 메서드.  이 메서드는 클라이언트를 속성 페이지 개체에 특정 속성을 선택할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) 인터페이스를 확장 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 추가 하 여는 `EditProperty` 메서드. 이 메서드는 클라이언트가 속성 페이지 개체에서 특정 속성을 선택 하는 데 사용 합니다.  
   
- 클래스 `IPropertyPage2Impl` 단순히 반환  **E\_NOTIMPL** 의  **IPropertyPage2::EditProperty**.  그러나 기본 구현을 상속  [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) 및 구현  **IUnknown** 덤프에 정보를 전송 하 여 장치에서 디버그 빌드.  
+ 클래스 `IPropertyPage2Impl` 반환 **E_NOTIMPL** 에 대 한 **IPropertyPage2::EditProperty**합니다. 하지만 기본 구현 상속 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) 구현 **IUnknown** 장치에서 디버그 덤프를 정보를 전송 하 여 빌드합니다.  
   
- 속성 페이지를 만들 때 클래스 일반적으로에서 파생 된 `IPropertyPageImpl`.  추가 지원을 제공 하기  **IPropertyPage2**, 클래스 정의 수정 하 고 재정의 `EditProperty` 메서드.  
+ 클래스에서 파생 된 일반적으로 속성 페이지를 만들 때 `IPropertyPageImpl`합니다. 추가 지원을 제공 하기 위해 **IPropertyPage2**, 클래스 정의 수정 하 고 재정의 `EditProperty` 메서드.  
   
- **관련된 기사** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md),  [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
+ **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `IPropertyPage`  
   
  [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)  
   
  `IPropertyPage2Impl`  
   
-## 요구 사항  
- **헤더:**  atlctl.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlctl.h  
   
-## 참고 항목  
- [IPerPropertyBrowsingImpl Class](../../atl/reference/iperpropertybrowsingimpl-class.md)   
- [ISpecifyPropertyPagesImpl Class](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameeditpropertya--ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+ 속성 페이지를 활성화할 때 어떤 속성 컨트롤에서 포커스를 받을지 지정 합니다.  
+  
+```
+HRESULT EditProperty(DISPID dispID);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 반환 **E_NOTIMPL**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [IPerPropertyBrowsingImpl 클래스](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [ISpecifyPropertyPagesImpl 클래스](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

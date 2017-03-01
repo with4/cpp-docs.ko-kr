@@ -1,56 +1,93 @@
 ---
-title: "ITopologyExecutionResource 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::ITopologyExecutionResource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ITopologyExecutionResource 구조체"
+title: "ITopologyExecutionResource 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::ITopologyExecutionResource
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# ITopologyExecutionResource 구조체
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
 리소스 관리자에 의해 정의된 실행 리소스에 대한 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+struct ITopologyExecutionResource;
 ```  
-struct ITopologyExecutionResource;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[ITopologyExecutionResource::GetId 메서드](../Topic/ITopologyExecutionResource::GetId%20Method.md)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|  
-|[ITopologyExecutionResource::GetNext 메서드](../Topic/ITopologyExecutionResource::GetNext%20Method.md)|열거 순서에서 다음 실행 리소스에 인터페이스를 반환 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[Itopologyexecutionresource:: Getid 메서드](#getid)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|  
+|[Itopologyexecutionresource:: Getnext 메서드](#getnext)|열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.|  
   
-## 설명  
- 이 인터페이스는 일반적으로 리소스 관리자에 의해 관찰된 대로 시스템 토폴로지를 이용합니다.  
+## <a name="remarks"></a>주의  
+ 이 인터페이스는 일반적으로 리소스 관리자가 확인 되는 시스템의 토폴로지를 설명 하는 데 사용 됩니다.  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `ITopologyExecutionResource`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrtrm.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namegetida--itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Itopologyexecutionresource:: Getid 메서드  
+ 이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.  
+  
+```
+virtual unsigned int GetId() const = 0;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 이 실행 리소스에 대한 리소스 관리자의 고유 식별자입니다.  
+  
+##  <a name="a-namegetnexta--itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Itopologyexecutionresource:: Getnext 메서드  
+ 열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.  
+  
+```
+virtual ITopologyExecutionResource *GetNext() const = 0;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 열거 순서에서 다음 실행 리소스에 대한 인터페이스입니다. 이 실행 리소스가 속한 노드의 열거 순서에 노드가 더 이상 없을 경우 이 메서드는 `NULL` 값을 반환합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

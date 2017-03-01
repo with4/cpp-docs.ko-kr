@@ -1,56 +1,85 @@
 ---
-title: "task_canceled 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::task_canceled"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "task_canceled 클래스"
+title: "task_canceled 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::task_canceled
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# task_canceled 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: dcf930c7efd1a7d7b015919b2009440045dd18fe
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다.  또한 취소된 작업의 경우 [작업](../Topic/Task%20Class%20-%20Internal%20Members.md)에서 `get()` 메서드에 의해 throw됩니다.  
+---
+# <a name="taskcanceled-class"></a>task_canceled 클래스
+이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. 또한 의해 throw 되는 `get()` 메서드를 [작업](/visualstudio/extensibility/debugger/task-class-internal-members), 취소 된 작업에 대 한 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class task_canceled : public std::exception;
 ```  
-class task_canceled : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[task\_canceled::task\_canceled 생성자](../Topic/task_canceled::task_canceled%20Constructor.md)|오버로드됨.  `task_canceled` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[task_canceled 생성자](#ctor)|오버로드됨. `task_canceled` 개체를 생성합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `task_canceled`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task::get 메서드](../Topic/task::get%20Method.md)   
- [cancel\_current\_task 함수](../Topic/cancel_current_task%20Function.md)
+##  <a name="a-namectora-taskcanceled"></a><a name="ctor"></a>task_canceled 
+
+ `task_canceled` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
+
+task_canceled() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

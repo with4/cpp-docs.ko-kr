@@ -1,38 +1,54 @@
 ---
-title: "컴파일러 오류 C3149 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3149"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3149"
+title: "컴파일러 오류 C3149 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3149
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C3149
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.lasthandoff: 02/24/2017
 
-'type' : 여기에 이 형식을 사용하려면 최상위 'char'이\(가\) 있어야 합니다.  
+---
+# <a name="compiler-error-c3149"></a>컴파일러 오류 C3149
+'type': 최상위 'char' 없이 여기이 형식을 사용할 수 없습니다  
   
- 선언을 올바르게 지정하지 않았습니다.  
+ 선언 올바르게 지정 되지 않았습니다.  
   
- 예를 들어, 전역 범위에서 CLR 형식을 정의하고 이 형식의 변수를 정의의 일부로 만들려고 했습니다.  CLR 형식의 전역 변수는 허용되지 않으므로 컴파일러에서 C3149가 발생합니다.  
+ 예를 들어 수 정의 전역 범위에서 CLR 형식을 하 고 정의의 일부로 형식의 변수를 만들려고 합니다. CLR 형식의 전역 변수 허용 되지 않기 때문에 컴파일러 c&3149;가 발생 합니다.  
   
- 이 오류를 해결하려면 함수나 형식 정의 안에서 CLR 형식의 변수를 선언해야 합니다.  
+ 이 오류를 해결 하려면 함수 또는 형식 정의 내 CLR 형식의 변수를 선언 합니다.  
   
- 다음 샘플에서는 C3149 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3149 오류가 생성 됩니다.  
   
 ```  
 // C3149.cpp  
@@ -45,7 +61,7 @@ int main() {
 }  
 ```  
   
- 다음 샘플에서는 C3149 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3149 오류가 생성 됩니다.  
   
 ```  
 // C3149b.cpp  
@@ -54,20 +70,4 @@ delegate int MyDelegate(const int, int);
 void Test1(MyDelegate m) {}   // C3149  
 void Test2(MyDelegate ^ m) {}   // OK  
 ```  
-  
- **Managed Extensions for C\+\+**  
-  
- 관리되는 개체를 올바르게 사용하지 않았습니다.  
-  
- 다음 샘플에서는 C3149 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3149c.cpp  
-// compile with: /clr:oldSyntax  
-__gc class A {};  
-  
-int main() {  
-   A a = new A;   // C3149  
-   A *a = new A;   // OK  
-}  
-```
+

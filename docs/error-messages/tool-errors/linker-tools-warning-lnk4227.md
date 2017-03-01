@@ -1,46 +1,62 @@
 ---
-title: "링커 도구 경고 LNK4227 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4227"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4227"
+title: "링커 도구 경고 LNK4227 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4227
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 링커 도구 경고 LNK4227
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ee566318c7d19159f9a2c084d348b5010a65e2de
+ms.lasthandoff: 02/24/2017
 
-메타데이터 작업 경고\(HRESULT\) : warning\_message  
+---
+# <a name="linker-tools-warning-lnk4227"></a>링커 도구 경고 LNK4227
+메타 데이터 작업 경고 (HRESULT): warning_message  
   
- 링커에서 다음과 같은 병합 작업 도중 메타데이터에서 차이점을 발견했습니다.  
+링커가 병합할 때 메타 데이터 차이 발견 했습니다.  
   
--   현재 빌드되는 어셈블리와 하나 이상의 참조된 어셈블리를 병합  
+-   현재 구축 중인 어셈블리와 하나 이상의 참조 된 어셈블리입니다.  
   
--   컴파일 도중 하나 이상의 소스 코드 파일을 병합  
+-   하나 이상의 소스 코드 파일을 컴파일입니다.  
   
- 예를 들어 두 전역 함수의 이름이 동일하지만 매개 변수 정보가 다르게 선언된 경우\(선언이 전체 컴파일 대상에 걸쳐 일치하지 않는 경우\) LNK4227이 발생할 수 있습니다.  각 .obj 파일에 ildasm.exe \/TEXT \/METADATA `object_file`을 사용하면 형식 간의 차이를 확인할 수 있습니다.  
+예를 들어 LNK4227 원인은 두 전역 함수의 이름이 같지만 다르게 선언 된 매개 변수 정보를 설정한 경우 (선언 모든 컴파일 대상에 일치 하지 않습니다.). /TEXT ildasm.exe를 사용 하 여 /METADATA `object_file` 각.obj 파일을 표시 형식을 어떻게 다른 지 합니다.  
   
- LNK4227은 다른 도구로 인해 발생한 문제도 보고합니다.  예를 들어, al.exe로 인해 발생한 문제는 [Al.exe 도구 오류 및 경고](http://msdn.microsoft.com/ko-kr/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)를 참조하십시오.  
+또한 LNK4227 다른 도구로 인해 발생 하는 문제를 보고 합니다. 예를 들어 al.exe; 참조 [Al.exe 도구 오류 및 경고](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)합니다.  
   
- 이 경고를 해결하려면 메타데이터 문제를 수정해야 합니다.  
+경고를 해결 하는 메타 데이터 문제를 해결 해야만 합니다.  
   
- 예를 들어, LNK4227은 참조된 어셈블리가 이 어셈블리를 참조하는 어셈블리와 다르게 서명된 경우 발생합니다.  
+예를 들어 LNK4227 참조 된 어셈블리가 참조 하는 어셈블리와 다르게 서명 하는 경우 생성 됩니다.  
   
- 다음 샘플에서는 LNK4227 오류가 발생하는 경우를 보여 줍니다.  
+다음 샘플에서는 LNK4227 오류가 생성 됩니다.  
   
 ```  
 // LNK4227.cpp  
@@ -52,7 +68,7 @@ using namespace System::Reflection;
 int main() {}  
 ```  
   
- 두 번째 코드 파일:  
+ 한 다음,  
   
 ```  
 // LNK4227b.cpp  
@@ -69,38 +85,9 @@ ref class MyClass
 };  
 ```  
   
- 다음 샘플에서는 LNK4227 오류가 발생하는 경우를 보여 줍니다.  
+LNK4227 잘못 된 형식으로 버전 번호는 어셈블리 특성에 전달 되는 경우에 생성할 수 있습니다.  ' *' 표기법은 AssemblyVersionAttribute에만 적용 됩니다.  이 경고를 해결 하려면 숫자만 AssemblyVersionAttribute 이외의 버전 특성에 사용 합니다.  
   
-```  
-// LNK4227c.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-  
-[assembly:AssemblyDelaySignAttribute(false)];  
-  
-int main() {}  
-```  
-  
- 두 번째 코드 파일:  
-  
-```  
-// LNK4227d.cpp  
-// compile with: /clr:oldSyntax LNK4227c.cpp /FeLNK4227d.exe  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-using namespace System::Runtime::CompilerServices;  
-  
-[assembly:AssemblyDelaySignAttribute(true)];  
-  
-__gc class MyClass  
-{  
-};  
-```  
-  
- 형식이 잘못된 버전 번호가 어셈블리 특성에 전달되는 경우에도 LNK4227이 발생될 수 있습니다.  '\*' 표기법은 AssemblyVersionAttribute에만 해당합니다.  이 경고를 해결하려면 AssemblyVersionAttribute 이외의 버전 특성에는 숫자만 사용하십시오.  
-  
- 다음 샘플에서는 LNK4227 오류가 발생하는 경우를 보여 줍니다.  
+다음 샘플에서는 LNK4227 오류가 생성 됩니다.  
   
 ```  
 // LNK4227e.cpp  

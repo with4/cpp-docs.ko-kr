@@ -1,36 +1,51 @@
 ---
-title: "RGNDATA 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RGNDATA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RGNDATA 구조체"
+title: "RGNDATA 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RGNDATA
+dev_langs:
+- C++
+helpviewer_keywords:
+- RGNDATA structure
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# RGNDATA 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 93a7c79f175e22dcb0b40cb39b157cfe21a98e93
+ms.lasthandoff: 02/24/2017
 
- `RGNDATA` 구조는 헤더 및 영역을 구성 하는 사각형의 배열을 포함 합니다. 이 사각형을 정렬된 하 여 위에서 아래로 왼쪽에서 오른쪽으로 중첩 되지 않습니다.  
+---
+# <a name="rgndata-structure"></a>RGNDATA 구조체
+`RGNDATA` 구조는 헤더 및 영역을 구성 하는 사각형의 배열을 포함 합니다. 이 사각형을 정렬된 하 여 위에서 아래로 왼쪽에서 오른쪽으로 중첩 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
- 
-    typedef struct _RGNDATA { /* rgnd */  
+typedef struct _RGNDATA { /* rgnd */  
     RGNDATAHEADER rdh;  
     char Buffer[1];  
 } RGNDATA;  
@@ -48,6 +63,7 @@ caps.handback.revision: 15
   
 ## <a name="see-also"></a>참고 항목  
  [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#CreateFromData)   
- [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#GetRegionData)
+ [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
+ [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
+
 

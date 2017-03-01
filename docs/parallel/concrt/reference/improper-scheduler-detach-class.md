@@ -1,57 +1,86 @@
 ---
-title: "improper_scheduler_detach 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::improper_scheduler_detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "improper_scheduler_detach 클래스"
+title: "improper_scheduler_detach 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::improper_scheduler_detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# improper_scheduler_detach 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 6a4bb4be90966f3abed8792bfbef086e7b399922
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 `Scheduler` 개체의 `Attach` 메서드를 사용해서 스케줄러에 연결되지 않은 컨텍스트에서 `CurrentScheduler::Detach` 메서드가 호출될 때마다 throw되는 예외를 설명합니다.  
+---
+# <a name="improperschedulerdetach-class"></a>improper_scheduler_detach 클래스
+이 클래스는 `Scheduler` 개체의 `Attach` 메서드를 사용하여 스케줄러에 연결되지 않은 컨텍스트에 대해 `CurrentScheduler::Detach` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class improper_scheduler_detach : public std::exception;
 ```  
-class improper_scheduler_detach : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[improper\_scheduler\_detach::improper\_scheduler\_detach 생성자](../Topic/improper_scheduler_detach::improper_scheduler_detach%20Constructor.md)|오버로드됨.  `improper_scheduler_detach` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[improper_scheduler_detach 생성자](#ctor)|오버로드됨. `improper_scheduler_detach` 개체를 생성합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `improper_scheduler_detach`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler 클래스](../../../parallel/concrt/reference/scheduler-class.md)   
- [CurrentScheduler::Detach 메서드](../Topic/CurrentScheduler::Detach%20Method.md)   
- [Scheduler::Attach 메서드](../Topic/Scheduler::Attach%20Method.md)
+##  <a name="a-namectora-improperschedulerdetach"></a><a name="ctor"></a>improper_scheduler_detach 
+
+ `improper_scheduler_detach` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
+
+improper_scheduler_detach() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [Scheduler 클래스](scheduler-class.md)
+

@@ -1,74 +1,193 @@
 ---
-title: "multi_link_registry 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::multi_link_registry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multi_link_registry 클래스"
+title: "multi_link_registry 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::multi_link_registry
+dev_langs:
+- C++
+helpviewer_keywords:
+- multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# multi_link_registry 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1548d2f920cf5566cced499e189cdcc19bf757ee
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="multilinkregistry-class"></a>multi_link_registry 클래스
 `multi_link_registry` 개체는 여러 소스 블록 또는 여러 대상 블록을 관리하는 `network_link_registry`입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
-template<  
-   class _Block  
->  
-class multi_link_registry : public network_link_registry<_Block>;  
+```
+template<class _Block>
+class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_Block`  
- `multi_link_registry` 개체에 저장되는 블록 데이터 형식입니다.  
+ 블록 데이터 형식에 저장 되는 `multi_link_registry` 개체입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[multi\_link\_registry::multi\_link\_registry 생성자](../Topic/multi_link_registry::multi_link_registry%20Constructor.md)|`multi_link_registry` 개체를 생성합니다.|  
-|[multi\_link\_registry::~multi\_link\_registry 소멸자](../Topic/multi_link_registry::~multi_link_registry%20Destructor.md)|`multi_link_registry` 개체를 소멸시킵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[multi_link_registry 생성자](#ctor)|`multi_link_registry` 개체를 생성합니다.|  
+|[~ multi_link_registry 소멸자](#dtor)|소멸은 `multi_link_registry` 개체입니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[multi\_link\_registry::add 메서드](../Topic/multi_link_registry::add%20Method.md)|`multi_link_registry` 개체에 링크를 추가합니다. \([network\_link\_registry::add](../Topic/network_link_registry::add%20Method.md)를 재정의합니다.\)|  
-|[multi\_link\_registry::begin 메서드](../Topic/multi_link_registry::begin%20Method.md)|`multi_link_registry` 개체에서 첫 번째 요소에 대한 반복기를 반환합니다. \([network\_link\_registry::begin](../Topic/network_link_registry::begin%20Method.md)를 재정의합니다.\)|  
-|[multi\_link\_registry::contains 메서드](../Topic/multi_link_registry::contains%20Method.md)|지정된 블록에 대해 `multi_link_registry` 개체를 검색합니다. \([network\_link\_registry::contains](../Topic/network_link_registry::contains%20Method.md)를 재정의합니다.\)|  
-|[multi\_link\_registry::count 메서드](../Topic/multi_link_registry::count%20Method.md)|`multi_link_registry` 개체의 항목 수를 카운트합니다. \([network\_link\_registry::count](../Topic/network_link_registry::count%20Method.md)를 재정의합니다.\)|  
-|[multi\_link\_registry::remove 메서드](../Topic/multi_link_registry::remove%20Method.md)|`multi_link_registry` 개체에서 링크를 제거합니다. \([network\_link\_registry::remove](../Topic/network_link_registry::remove%20Method.md)를 재정의합니다.\)|  
-|[multi\_link\_registry::set\_bound 메서드](../Topic/multi_link_registry::set_bound%20Method.md)|`multi_link_registry` 개체가 저장할 수 있는 연결 수에 대한 상한을 설정합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[메서드 추가](#add)|추가에 대 한 링크는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: add](network-link-registry-class.md#add).)|  
+|[begin 메서드](#begin)|첫 번째 요소에 반복기를 반환 합니다.는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: begin](network-link-registry-class.md#begin).)|  
+|[메서드를 포함합니다.](#contains)|검색 된 `multi_link_registry` 지정된 된 블록에 대 한 개체입니다. (재정의 [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
+|[count 메서드](#count)|에 있는 항목의 개수는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: count](network-link-registry-class.md#count).)|  
+|[remove 메서드](#remove)|링크를 제거는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
+|[set_bound 메서드](#set_bound)|링크의 수에 대 한 상한을 설정의 `multi_link_registry` 개체가 보유할 수 있습니다.|  
   
-## 상속 계층  
- [network\_link\_registry](../../../parallel/concrt/reference/network-link-registry-class.md)  
+## <a name="inheritance-hierarchy"></a>상속 계층  
+ [network_link_registry](network-link-registry-class.md)  
   
  `multi_link_registry`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** agents.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [single\_link\_registry 클래스](../../../parallel/concrt/reference/single-link-registry-class.md)
+##  <a name="a-nameadda-add"></a><a name="add"></a>추가 
+
+ 추가에 대 한 링크는 `multi_link_registry` 개체입니다.  
+  
+```
+virtual void add(_EType _Link);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Link`  
+ 추가할 블록에 대 한 포인터입니다.  
+  
+### <a name="remarks"></a>주의  
+ 메서드에서 throw 한 [invalid_link_target](invalid-link-target-class.md) 예외 링크 레지스트리에 이미 있습니다. 또는 바인딩된 경우 이미 설정 되어 있는 `set_bound` 함수 및 링크 하므로 제거 되었습니다.  
+  
+##  <a name="a-namebegina-begin"></a><a name="begin"></a>시작 
+
+ 첫 번째 요소에 반복기를 반환 합니다.는 `multi_link_registry` 개체입니다.  
+  
+```
+virtual iterator begin();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 첫 번째 요소를 주소 지정 하는 반복기는 `multi_link_registry` 개체입니다.  
+  
+### <a name="remarks"></a>주의  
+ 최종 상태 하 여 표시 되는 `NULL` 링크 합니다.  
+  
+##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>포함 
+
+ 검색 된 `multi_link_registry` 지정된 된 블록에 대 한 개체입니다.  
+  
+```
+virtual bool contains(_EType _Link);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Link`  
+ 검색 한 블록에 대 한 포인터는 `multi_link_registry` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `true`지정한 블록이 있으면 `false` 그렇지 않은 경우.  
+  
+##  <a name="a-namecounta-count"></a><a name="count"></a>개수 
+
+ 에 있는 항목의 개수는 `multi_link_registry` 개체입니다.  
+  
+```
+virtual size_t count();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 항목 수는 `multi_link_registry` 개체입니다.  
+  
+##  <a name="a-namectora-multilinkregistry"></a><a name="ctor"></a>multi_link_registry 
+
+ `multi_link_registry` 개체를 생성합니다.  
+  
+```
+multi_link_registry();
+```  
+  
+##  <a name="a-namedtora-multilinkregistry"></a><a name="dtor"></a>~ multi_link_registry 
+
+ 소멸은 `multi_link_registry` 개체입니다.  
+  
+```
+virtual ~multi_link_registry();
+```  
+  
+### <a name="remarks"></a>주의  
+ 메서드에서 throw 한 [invalid_operation](invalid-operation-class.md) 모든 링크가 제거 되기 전에 호출 된 경우에 예외입니다.  
+  
+##  <a name="a-nameremovea-remove"></a><a name="remove"></a>제거 
+
+ 링크를 제거는 `multi_link_registry` 개체입니다.  
+  
+```
+virtual bool remove(_EType _Link);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Link`  
+ 제거 될 경우 블록에 대 한 포인터를 찾을 수 있습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `true`링크를 찾아 제거 했으면 `false` 그렇지 않은 경우.  
+  
+##  <a name="a-namesetbounda-setbound"></a><a name="set_bound"></a>set_bound 
+
+ 링크의 수에 대 한 상한을 설정의 `multi_link_registry` 개체가 보유할 수 있습니다.  
+  
+```
+void set_bound(size_t _MaxLinks);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_MaxLinks`  
+ 최대 수 있는 링크는 `multi_link_registry` 개체가 보유할 수 있습니다.  
+  
+### <a name="remarks"></a>주의  
+ 한도가 설정된 후 항목의 연결을 해제하면 `multi_link_registry` 개체가 변경 불가능한 상태로 전환됩니다. 이 상태에서 `add`를 추가로 호출하면 `invalid_link_target` 예외가 throw됩니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [single_link_registry 클래스](single-link-registry-class.md)
+

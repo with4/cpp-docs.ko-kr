@@ -1,48 +1,61 @@
 ---
-title: "make_exception_ptr 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppltasks/std::make_exception_ptr"
-dev_langs: 
-  - "C++"
+title: "make_exception_ptr 함수 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppltasks/std::make_exception_ptr
+dev_langs:
+- C++
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# make_exception_ptr 함수
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 311546068c7df077dcc0c1624924beda8902c832
+ms.lasthandoff: 02/24/2017
 
-## 구문  
+---
+# <a name="makeexceptionptr-function"></a>make_exception_ptr 함수
+## <a name="syntax"></a>구문  
   
-```  
-template<  
-   class _E  
->  
-exception_ptr make_exception_ptr(  
-   _E_Except  
-);  
+```
+template<class _E>
+exception_ptr make_exception_ptr(_E _Except);
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_E`  
  `_Except`  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** ppltasks.h  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [std 네임스페이스](../../../parallel/concrt/reference/std-namespace.md)
+## <a name="see-also"></a>참고 항목  
+ [std Namespace](std-namespace.md)
+

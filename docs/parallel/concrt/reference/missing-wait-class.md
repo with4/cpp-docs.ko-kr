@@ -1,63 +1,92 @@
 ---
-title: "missing_wait 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::missing_wait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "missing_wait 클래스"
+title: "missing_wait 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::missing_wait
+dev_langs:
+- C++
+helpviewer_keywords:
+- missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# missing_wait 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 개체의 소멸자를 실행할 때 `task_group` 또는 `structured_task_group` 개체에 작업이 예약되어 있을 때 throw되는 예외를 설명합니다.  예외의 결과로 스택 해제로 소멸자가 도달할 경우 이 예외는 throw되지 않습니다.  
+---
+# <a name="missingwait-class"></a>missing_wait 클래스
+이 클래스는 개체의 소멸자를 실행할 때 `task_group` 또는 `structured_task_group` 개체에 여전히 예약된 작업이 있는 경우 발생하는 예외를 설명합니다. 예외의 결과로 스택 해제 때문에 소멸자에 도달한 경우에는 이 예외가 발생하지 않습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class missing_wait : public std::exception;
 ```  
-class missing_wait : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[missing\_wait::missing\_wait 생성자](../Topic/missing_wait::missing_wait%20Constructor.md)|오버로드됨.  `missing_wait` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[missing_wait 생성자](#ctor)|오버로드됨. `missing_wait` 개체를 생성합니다.|  
   
-## 설명  
- 예외 흐름이 없으면 해당 개체가 소멸되기 전에 `task_group` 또는 `structured_task_group` 개체의 `wait` 또는 `run_and_wait` 메서드를 호출해야 합니다.  런타임은 `wait` 또는 `run_and_wait` 메서드를 호출하지 않았음을 알리기 위해 이 예외를 throw합니다.  
+## <a name="remarks"></a>주의  
+ 예외 흐름이 없으면 담당 하는 호출의 `wait` 또는 `run_and_wait` 의 메서드는 `task_group` 또는 `structured_task_group` 개체를 소멸 하는 개체를 허용 하기 전에 합니다. 호출 하는 것을 잊어버린 한다는 표시로이 예외를 throw 하는 런타임에서 `wait` 또는 `run_and_wait` 메서드.  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `missing_wait`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task\_group 클래스](../Topic/task_group%20Class.md)   
- [task\_group::wait 메서드](../Topic/task_group::wait%20Method.md)   
- [task\_group::run\_and\_wait 메서드](../Topic/task_group::run_and_wait%20Method.md)   
- [structured\_task\_group 클래스](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [structured\_task\_group::wait 메서드](../Topic/structured_task_group::wait%20Method.md)   
- [structured\_task\_group::run\_and\_wait 메서드](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+
+ `missing_wait` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
+
+missing_wait() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [task_group 클래스](task-group-class.md)   
+ [wait 메서드](task-group-class.md)   
+ [run_and_wait 메서드](task-group-class.md)   
+ [structured_task_group 클래스](structured-task-group-class.md)
+

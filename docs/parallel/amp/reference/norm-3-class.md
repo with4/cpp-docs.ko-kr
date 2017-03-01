@@ -1,219 +1,307 @@
 ---
-title: "norm_3 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_z"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator="
-  - "amp_short_vectors/Concurrency::graphics::norm_3::r"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_zyx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::xyz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator/="
-  - "amp_short_vectors/Concurrency::graphics::norm_3::yz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_xyz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::br"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_yzx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_xyz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::gr"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::g"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_yxz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_zyx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::zx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::yzx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::gb"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::xzy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::xz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::rb"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::rgb"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::b"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::z"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator*="
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator+="
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_zy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_xz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::gbr"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_yz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_zx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_xzy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_xz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_xzy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_zy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::y"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::rbg"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::zxy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_yz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::brg"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator--"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::yxz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::x"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_yxz"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::grb"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::zy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::rg"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_yzx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator-="
-  - "amp_short_vectors/Concurrency::graphics::norm_3::bg"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator++"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::zyx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_z"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::operator-"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::get_zxy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_zxy"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::set_zx"
-  - "amp_short_vectors/Concurrency::graphics::norm_3::bgr"
-dev_langs: 
-  - "C++"
+title: "norm_3 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::norm_3::get_z
+- amp_short_vectors/Concurrency::graphics::norm_3::operator=
+- amp_short_vectors/Concurrency::graphics::norm_3::r
+- amp_short_vectors/Concurrency::graphics::norm_3::set_zyx
+- amp_short_vectors/Concurrency::graphics::norm_3::xyz
+- amp_short_vectors/Concurrency::graphics::norm_3::operator/=
+- amp_short_vectors/Concurrency::graphics::norm_3::yz
+- amp_short_vectors/Concurrency::graphics::norm_3::get_xyz
+- amp_short_vectors/Concurrency::graphics::norm_3::br
+- amp_short_vectors/Concurrency::graphics::norm_3::xy
+- amp_short_vectors/Concurrency::graphics::norm_3::get_yzx
+- amp_short_vectors/Concurrency::graphics::norm_3::set_xyz
+- amp_short_vectors/Concurrency::graphics::norm_3::gr
+- amp_short_vectors/Concurrency::graphics::norm_3::g
+- amp_short_vectors/Concurrency::graphics::norm_3::set_yxz
+- amp_short_vectors/Concurrency::graphics::norm_3::get_zyx
+- amp_short_vectors/Concurrency::graphics::norm_3::get_y
+- amp_short_vectors/Concurrency::graphics::norm_3::zx
+- amp_short_vectors/Concurrency::graphics::norm_3::yzx
+- amp_short_vectors/Concurrency::graphics::norm_3::gb
+- amp_short_vectors/Concurrency::graphics::norm_3::xzy
+- amp_short_vectors/Concurrency::graphics::norm_3::xz
+- amp_short_vectors/Concurrency::graphics::norm_3::rb
+- amp_short_vectors/Concurrency::graphics::norm_3::rgb
+- amp_short_vectors/Concurrency::graphics::norm_3::b
+- amp_short_vectors/Concurrency::graphics::norm_3::z
+- amp_short_vectors/Concurrency::graphics::norm_3::operator*=
+- amp_short_vectors/Concurrency::graphics::norm_3::operator+=
+- amp_short_vectors/Concurrency::graphics::norm_3::get_zy
+- amp_short_vectors/Concurrency::graphics::norm_3::get_xz
+- amp_short_vectors/Concurrency::graphics::norm_3::gbr
+- amp_short_vectors/Concurrency::graphics::norm_3::get_yz
+- amp_short_vectors/Concurrency::graphics::norm_3::get_zx
+- amp_short_vectors/Concurrency::graphics::norm_3::get_xzy
+- amp_short_vectors/Concurrency::graphics::norm_3::set_xz
+- amp_short_vectors/Concurrency::graphics::norm_3::set_xzy
+- amp_short_vectors/Concurrency::graphics::norm_3::set_zy
+- amp_short_vectors/Concurrency::graphics::norm_3::get_xy
+- amp_short_vectors/Concurrency::graphics::norm_3::y
+- amp_short_vectors/Concurrency::graphics::norm_3::yx
+- amp_short_vectors/Concurrency::graphics::norm_3::rbg
+- amp_short_vectors/Concurrency::graphics::norm_3::zxy
+- amp_short_vectors/Concurrency::graphics::norm_3
+- amp_short_vectors/Concurrency::graphics::norm_3::set_yz
+- amp_short_vectors/Concurrency::graphics::norm_3::brg
+- amp_short_vectors/Concurrency::graphics::norm_3::operator--
+- amp_short_vectors/Concurrency::graphics::norm_3::yxz
+- amp_short_vectors/Concurrency::graphics::norm_3::x
+- amp_short_vectors/Concurrency::graphics::norm_3::set_x
+- amp_short_vectors/Concurrency::graphics::norm_3::get_x
+- amp_short_vectors/Concurrency::graphics::norm_3::get_yxz
+- amp_short_vectors/Concurrency::graphics::norm_3::grb
+- amp_short_vectors/Concurrency::graphics::norm_3::get_yx
+- amp_short_vectors/Concurrency::graphics::norm_3::zy
+- amp_short_vectors/Concurrency::graphics::norm_3::rg
+- amp_short_vectors/Concurrency::graphics::norm_3::set_yzx
+- amp_short_vectors/Concurrency::graphics::norm_3::operator-=
+- amp_short_vectors/Concurrency::graphics::norm_3::bg
+- amp_short_vectors/Concurrency::graphics::norm_3::operator++
+- amp_short_vectors/Concurrency::graphics::norm_3::set_y
+- amp_short_vectors/Concurrency::graphics::norm_3::zyx
+- amp_short_vectors/Concurrency::graphics::norm_3::set_z
+- amp_short_vectors/Concurrency::graphics::norm_3::operator-
+- amp_short_vectors/Concurrency::graphics::norm_3::get_zxy
+- amp_short_vectors/Concurrency::graphics::norm_3::set_xy
+- amp_short_vectors/Concurrency::graphics::norm_3::set_zxy
+- amp_short_vectors/Concurrency::graphics::norm_3::set_yx
+- amp_short_vectors/Concurrency::graphics::norm_3::set_zx
+- amp_short_vectors/Concurrency::graphics::norm_3::bgr
+dev_langs:
+- C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# norm_3 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 51769d252d82ff1f307517a93ce01e22b8b69fdd
+ms.lasthandoff: 02/24/2017
 
-세 개의 보통 숫자의 짧은 벡터를 나타냅니다.  
+---
+# <a name="norm3-class"></a>norm_3 클래스
+세 가지 일반 숫자의 short 벡터를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class norm_3;  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 공용 Typedefs  
+### <a name="public-typedefs"></a>공용 Typedefs  
   
-|Name|설명|  
-|----------|--------|  
+|이름|설명|  
+|----------|-----------------|  
 |`value_type`||  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[norm\_3::norm\_3 생성자](../Topic/norm_3::norm_3%20Constructor.md)|오버로드됨.  기본 생성자는, 모든 요소를 0으로 초기화 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[norm_3 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|norm\_3::get\_x 메서드||  
-|norm\_3::get\_xy 메서드||  
-|norm\_3::get\_xyz 메서드||  
-|norm\_3::get\_xz 메서드||  
-|norm\_3::get\_xzy 메서드||  
-|norm\_3::get\_y 메서드||  
-|norm\_3::get\_yx 메서드||  
-|norm\_3::get\_yxz 메서드||  
-|norm\_3::get\_yz 메서드||  
-|norm\_3::get\_yzx 메서드||  
-|norm\_3::get\_z 메서드||  
-|norm\_3::get\_zx 메서드||  
-|norm\_3::get\_zxy 메서드||  
-|norm\_3::get\_zy 메서드||  
-|norm\_3::get\_zyx 메서드||  
-|norm\_3::ref\_b 메서드||  
-|norm\_3::ref\_g 메서드||  
-|norm\_3::ref\_r 메서드||  
-|norm\_3::ref\_x 메서드||  
-|norm\_3::ref\_y 메서드||  
-|norm\_3::ref\_z 메서드||  
-|norm\_3::set\_x 메서드||  
-|norm\_3::set\_xy 메서드||  
-|norm\_3::set\_xyz 메서드||  
-|norm\_3::set\_xz 메서드||  
-|norm\_3::set\_xzy 메서드||  
-|norm\_3::set\_y 메서드||  
-|norm\_3::set\_yx 메서드||  
-|norm\_3::set\_yxz 메서드||  
-|norm\_3::set\_yz 메서드||  
-|norm\_3::set\_yzx 메서드||  
-|norm\_3::set\_z 메서드||  
-|norm\_3::set\_zx 메서드||  
-|norm\_3::set\_zxy 메서드||  
-|norm\_3::set\_zy 메서드||  
-|norm\_3::set\_zyx 메서드||  
+|이름|설명|  
+|----------|-----------------|  
+|norm_3::get_x 메서드||  
+|norm_3::get_xy 메서드||  
+|norm_3::get_xyz 메서드||  
+|norm_3::get_xz 메서드||  
+|norm_3::get_xzy 메서드||  
+|norm_3::get_y 메서드||  
+|norm_3::get_yx 메서드||  
+|norm_3::get_yxz 메서드||  
+|norm_3::get_yz 메서드||  
+|norm_3::get_yzx 메서드||  
+|norm_3::get_z 메서드||  
+|norm_3::get_zx 메서드||  
+|norm_3::get_zxy 메서드||  
+|norm_3::get_zy 메서드||  
+|norm_3::get_zyx 메서드||  
+|norm_3::ref_b 메서드||  
+|norm_3::ref_g 메서드||  
+|norm_3::ref_r 메서드||  
+|norm_3::ref_x 메서드||  
+|norm_3::ref_y 메서드||  
+|norm_3::ref_z 메서드||  
+|norm_3::set_x 메서드||  
+|norm_3::set_xy 메서드||  
+|norm_3::set_xyz 메서드||  
+|norm_3::set_xz 메서드||  
+|norm_3::set_xzy 메서드||  
+|norm_3::set_y 메서드||  
+|norm_3::set_yx 메서드||  
+|norm_3::set_yxz 메서드||  
+|norm_3::set_yz 메서드||  
+|norm_3::set_yzx 메서드||  
+|norm_3::set_z 메서드||  
+|norm_3::set_zx 메서드||  
+|norm_3::set_zxy 메서드||  
+|norm_3::set_zy 메서드||  
+|norm_3::set_zyx 메서드||  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|norm\_3::operator\- 연산자||  
-|norm\_3::operator\-\- 연산자||  
-|norm\_3::operator\*\- 연산자||  
-|norm\_3::operator\/\= 연산자||  
-|norm\_3::operator\+\+ 연산자||  
-|norm\_3::operator\+\= 연산자||  
-|norm\_3::operator\= 연산자||  
-|norm\_3::operator\-\= 연산자||  
+|이름|설명|  
+|----------|-----------------|  
+|norm_3::operator 연산자||  
+|norm_3::operator-연산자||  
+|norm_3::operator * = 연산자||  
+|norm_3::operator / = 연산자||  
+|norm_3::operator + + 연산자||  
+|norm_3::operator + = 연산자||  
+|norm_3::operator = 연산자||  
+|norm_3::operator-= 연산자||  
   
-### 공용 상수  
+### <a name="public-constants"></a>공용 상수  
   
-|Name|설명|  
-|----------|--------|  
-|[norm\_3::size 상수](../Topic/norm_3::size%20Constant.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[상수 크기](#size)||  
   
-### 공용 데이터 멤버  
+### <a name="public-data-members"></a>공용 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|norm\_3::b 데이터 멤버||  
-|norm\_3::bg 데이터 멤버||  
-|norm\_3::bgr 데이터 멤버||  
-|norm\_3::br 데이터 멤버||  
-|norm\_3::brg 데이터 멤버||  
-|norm\_3::g 데이터 멤버||  
-|norm\_3::gb 데이터 멤버||  
-|norm\_3::gbr 데이터 멤버||  
-|norm\_3::gr 데이터 멤버||  
-|norm\_3::grb 데이터 멤버||  
-|norm\_3::r 데이터 멤버||  
-|norm\_3::rb 데이터 멤버||  
-|norm\_3::rbg 데이터 멤버||  
-|norm\_3::rg 데이터 멤버||  
-|norm\_3::rgb 데이터 멤버||  
-|norm\_3::x 데이터 멤버||  
-|norm\_3::xy 데이터 멤버||  
-|norm\_3::xyz 데이터 멤버||  
-|norm\_3::xz 데이터 멤버||  
-|norm\_3::xzy 데이터 멤버||  
-|norm\_3::y 데이터 멤버||  
-|norm\_3::yx 데이터 멤버||  
-|norm\_3::yxz 데이터 멤버||  
-|norm\_3::yz 데이터 멤버||  
-|norm\_3::yzx 데이터 멤버||  
-|norm\_3::z 데이터 멤버||  
-|norm\_3::zx 데이터 멤버||  
-|norm\_3::zxy 데이터 멤버||  
-|norm\_3::zy 데이터 멤버||  
-|norm\_3::zyx 데이터 멤버||  
+|이름|설명|  
+|----------|-----------------|  
+|norm_3::b 데이터 멤버||  
+|norm_3::bg 데이터 멤버||  
+|norm_3::bgr 데이터 멤버||  
+|norm_3::br 데이터 멤버||  
+|norm_3::brg 데이터 멤버||  
+|norm_3::g 데이터 멤버||  
+|norm_3::gb 데이터 멤버||  
+|norm_3::gbr 데이터 멤버||  
+|norm_3::gr 데이터 멤버||  
+|norm_3::grb 데이터 멤버||  
+|norm_3::r 데이터 멤버||  
+|norm_3::rb 데이터 멤버||  
+|norm_3::rbg 데이터 멤버||  
+|norm_3::rg 데이터 멤버||  
+|norm_3::rgb 데이터 멤버||  
+|norm_3::x 데이터 멤버||  
+|norm_3::xy 데이터 멤버||  
+|norm_3::xyz 데이터 멤버||  
+|norm_3::xz 데이터 멤버||  
+|norm_3::xzy 데이터 멤버||  
+|norm_3::y 데이터 멤버||  
+|norm_3::yx 데이터 멤버||  
+|norm_3::yxz 데이터 멤버||  
+|norm_3::yz 데이터 멤버||  
+|norm_3::yzx 데이터 멤버||  
+|norm_3::z 데이터 멤버||  
+|norm_3::zx 데이터 멤버||  
+|norm_3::zxy 데이터 멤버||  
+|norm_3::zy 데이터 멤버||  
+|norm_3::zyx 데이터 멤버||  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `norm_3`  
   
-## 요구 사항  
- **헤더:** amp\_short\_vectors.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** amp_short_vectors.h  
   
- **네임스페이스:** Concurrency::graphics  
+ **Namespace:** concurrency:: graphics  
+
+## <a name="a-namectora-norm3-constructor"></a><a name="ctor"></a>norm_3 생성자
+기본 생성자를 0부터 모든 요소를 초기화 합니다.  
   
-## 참고 항목  
- [Concurrency::graphics 네임스페이스](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+## <a name="syntax"></a>구문  
+  
+```  
+norm_3() restrict(amp,cpu);  
+norm_3(  
+   norm _V0,  
+   norm _V1,  
+   norm _V2  
+) restrict(amp,cpu);  
+norm_3(  
+   float _V0,  
+   float _V1,  
+   float _V2  
+) restrict(amp,cpu);  
+norm_3(  
+   unorm _V0,  
+   unorm _V1,  
+   unorm _V2  
+) restrict(amp,cpu);  
+norm_3(  
+   norm _V  
+) restrict(amp,cpu);  
+explicit norm_3(  
+   float _V  
+) restrict(amp,cpu);  
+norm_3(  
+   const norm_3& _Other  
+) restrict(amp,cpu);  
+explicit inline norm_3(  
+   const uint_3& _Other  
+) restrict(amp,cpu);  
+explicit inline norm_3(  
+   const int_3& _Other  
+) restrict(amp,cpu);  
+explicit inline norm_3(  
+   const float_3& _Other  
+) restrict(amp,cpu);  
+explicit inline norm_3(  
+   const unorm_3& _Other  
+) restrict(amp,cpu);  
+explicit inline norm_3(  
+   const double_3& _Other  
+) restrict(amp,cpu);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ `_V0`  
+ 0 요소를 초기화할 값입니다.  
+  
+ `_V1`  
+ 1 요소를 초기화할 값입니다.  
+  
+ `_V2`  
+ 2 요소를 초기화할 값입니다.  
+  
+ `_V`  
+ 초기화에 대 한 값입니다.  
+  
+ `_Other`  
+ 초기화 하는 데 사용 되는 개체입니다.  
+  
+## <a name="a-namesize-size-constant"></a><a name="size">상수 크기
+### <a name="syntax"></a>구문  
+  
+```  
+static const int size = 3;  
+```   
+ 
+## <a name="see-also"></a>참고 항목  
+ [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+

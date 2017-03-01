@@ -1,58 +1,86 @@
 ---
-title: "invalid_scheduler_policy_key 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_scheduler_policy_key"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_scheduler_policy_key 클래스"
+title: "invalid_scheduler_policy_key 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_key
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# invalid_scheduler_policy_key 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 잘못되었거나 알 수 없는 키가 `SchedulerPolicy` 개체 생성자로 전달되거나 `SchedulerPolicy` 개체의 `SetPolicyValue` 메서드가 `SetConcurrencyLimits` 메서드 같은 다른 수단을 사용해 변경해야 하는 키를 전달할 때 throw되는 예외를 설명합니다.  
+---
+# <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key 클래스
+이 클래스는 잘못되었거나 알 수 없는 키가 `SchedulerPolicy` 개체 생성자에 전달된 경우 또는 `SchedulerPolicy` 개체의 `SetPolicyValue` 메서드에 `SetConcurrencyLimits` 메서드와 같은 기타 방법으로 변경해야 하는 키가 전달된 경우 발생하는 예외를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class invalid_scheduler_policy_key : public std::exception;
 ```  
-class invalid_scheduler_policy_key : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[invalid\_scheduler\_policy\_key::invalid\_scheduler\_policy\_key 생성자](../Topic/invalid_scheduler_policy_key::invalid_scheduler_policy_key%20Constructor.md)|오버로드됨.  `invalid_scheduler_policy_key` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[invalid_scheduler_policy_key 생성자](#ctor)|오버로드됨. `invalid_scheduler_policy_key` 개체를 생성합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `invalid_scheduler_policy_key`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [SchedulerPolicy 클래스](../../../parallel/concrt/reference/schedulerpolicy-class.md)   
- [PolicyElementKey 열거형](../Topic/PolicyElementKey%20Enumeration.md)   
- [SchedulerPolicy::SetPolicyValue 메서드](../Topic/SchedulerPolicy::SetPolicyValue%20Method.md)   
- [SchedulerPolicy::SetConcurrencyLimits 메서드](../Topic/SchedulerPolicy::SetConcurrencyLimits%20Method.md)
+##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+
+ `invalid_scheduler_policy_key` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
+
+invalid_scheduler_policy_key() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [SchedulerPolicy 클래스](schedulerpolicy-class.md)
+

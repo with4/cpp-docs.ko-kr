@@ -1,70 +1,225 @@
 ---
-title: "sampler 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "sampler 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# sampler 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 090e05e294646b7571a3d06ca8ed23583a306756
+ms.lasthandoff: 02/24/2017
 
-샘플러 클래스는 텍스처 샘플링에 사용되는 샘플링 구성 정보를 집계합니다.  
+---
+# <a name="sampler-class"></a>sampler 클래스
+Sampler 클래스 텍스처 샘플링에 사용할 샘플링 구성 정보를 집계 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class sampler;  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[sampler::sampler 생성자](../Topic/sampler::sampler%20Constructor.md)|오버로드됨.  샘플러 인스턴스를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[sampler 생성자](#ctor)|오버로드됨. 샘플러 인스턴스를 생성 합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[sampler::get\_address\_mode 메서드](../Topic/sampler::get_address_mode%20Method.md)|샘플러 개체와 연관된 `address_mode`를 반환합니다.|  
-|[sampler::get\_border\_color 메서드](../Topic/sampler::get_border_color%20Method.md)|샘플러 개체와 연관된 테두리 색을 반환합니다.|  
-|[sampler::get\_filter\_mode 메서드](../Topic/sampler::get_filter_mode%20Method.md)|샘플러 개체와 연관된 `filter_mode`를 반환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[get_address_mode 메서드](#get_address_mode)|반환 된 `address_mode` 샘플러 개체와 관련 된입니다.|  
+|[get_border_color 메서드](#get_border_color)|샘플러 개체와 관련 된 테두리 색을 반환 합니다.|  
+|[get_filter_mode 메서드](#get_filter_mode)|반환 된 `filter_mode` 샘플러 개체와 관련 된입니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[sampler::operator\= 연산자](../Topic/sampler::operator=%20Operator.md)|오버로드됨.  할당 연산자입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[operator = 연산자](#operator_eq)|오버로드됨. 대입 연산자입니다.|  
   
-### 공용 데이터 멤버  
+### <a name="public-data-members"></a>공용 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[sampler::address\_mode 데이터 멤버](../Topic/sampler::address_mode%20Data%20Member.md)|주소 모드의 `sampler` 개체를 가져옵니다.|  
-|[sampler::border\_color 데이터 멤버](../Topic/sampler::border_color%20Data%20Member.md)|`sampler` 개체의 테두리 색을 가져옵니다.|  
-|[sampler::filter\_mode 데이터 멤버](../Topic/sampler::filter_mode%20Data%20Member.md)|필터 모드의 `sampler` 개체를 가져옵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[address_mode 데이터 멤버](#address_mode)|주소 모드를 가져옵니다는 `sampler` 개체입니다.|  
+|[border_color 데이터 멤버](#border_color)|테두리 색을 가져옵니다는 `sampler` 개체입니다.|  
+|[filter_mode 데이터 멤버](#filter_mode)|필터 모드를 가져옵니다는 `sampler` 개체입니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `sampler`  
   
-## 요구 사항  
- **헤더:** amp\_graphics.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** amp_graphics.h  
   
- **네임스페이스:** concurrency::graphics  
+ **Namespace:** concurrency:: graphics  
   
-## 참고 항목  
- [Concurrency::graphics 네임스페이스](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-sampler"></a><a name="ctor"></a>샘플러 
+
+ 인스턴스를 생성 된 [sampler 클래스](sampler-class.md)합니다.  
+  
+```  
+sampler() restrict(cpu);
+
+ *// [1] default constructor  
+ 
+sampler(// [2] constructor  
+    filter_mode _Filter_mode) restrict(cpu);
+
+ 
+sampler(// [3] constructor  
+    address_mode _Address_mode,  
+    float_4 _Border_color = float_4(0.0f,
+    0.0f,
+    0.0f,
+    0.0f)) restrict(cpu);
+
+ 
+sampler(// [4] constructor  
+    filter_mode _Filter_mode,  
+    address_mode _Address_mode,  
+    float_4 _Border_color = float_4(0.0f,
+    0.0f,
+    0.0f,
+    0.0f)) restrict(cpu);
+
+ 
+sampler(// [5] copy constructor  
+    const sampler& _Other) restrict(amp,
+    cpu);
+
+ 
+sampler(// [6] move constructor  
+    sampler&& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Filter_mode`  
+ 샘플링 하는 데 사용 되는 필터 모드입니다.  
+  
+ `_Address_mode`  
+ 모든 차원에 대 한 샘플링에 사용할 주소 지정 모드입니다.  
+  
+ `_Border_color`  
+ 주소 모드가 address_border 경우에 사용할 테두리 색입니다. 기본값은 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`입니다.  
+  
+ `_Other`  
+ [5] 복사 생성자  
+ `sampler` 개체를 새를 `sampler` 인스턴스.  
+  
+ [6] 이동 생성자  
+ `sampler` 개체를 새 이동 `sampler` 인스턴스.  
+  
+##  <a name="a-nameaddressmodea-addressmode"></a><a name="address_mode"></a>address_mode 
+
+ 주소 모드를 가져옵니다는 `sampler` 개체입니다.  
+  
+```  
+__declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
+```  
+  
+##  <a name="a-namebordercolora-bordercolor"></a><a name="border_color"></a>border_color 
+
+ 테두리 색을 가져옵니다는 `sampler` 개체입니다.  
+  
+```  
+__declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
+```  
+  
+##  <a name="a-namefiltermodea-filtermode"></a><a name="filter_mode"></a>filter_mode 
+
+ 필터 모드를 가져옵니다는 `sampler` 개체입니다.  
+  
+```  
+__declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
+```  
+  
+##  <a name="a-namegetaddressmodea-getaddressmode"></a><a name="get_address_mode"></a>get_address_mode 
+
+ 이 위해 구성 된 필터 모드 반환 `sampler`합니다.  
+  
+```  
+Concurrency::graphics::address_mode get_address_mode() const __GPU;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 샘플러에 대 한 구성 된 주소 모드입니다.  
+  
+##  <a name="a-namegetbordercolora-getbordercolor"></a><a name="get_border_color"></a>get_border_color 
+
+ 이 위해 구성 된 테두리 색을 반환 `sampler`합니다.  
+  
+```  
+Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 테두리 색을 포함 하는 float_4 합니다.  
+  
+##  <a name="a-namegetfiltermodea-getfiltermode"></a><a name="get_filter_mode"></a>get_filter_mode 
+
+ 이 위해 구성 된 필터 모드 반환 `sampler`합니다.  
+  
+```  
+Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 샘플러에 대해 구성 되는 필터 모드입니다.  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+
+ 기존 샘플러를 다른 샘플러 개체의 값을 할당합니다.  
+  
+```  
+sampler& operator= (// [1] copy assignment operator const sampler& _Other) restrict(amp,
+    cpu);
+
+ 
+sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Other`  
+ [1] 복사 할당 연산자  
+ `sampler` 여기에 복사할 개체를 `sampler`합니다.  
+  
+ [2] 이동 할당 연산자  
+ `sampler` 개체를이 이동 `sampler`합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 이 샘플러 인스턴스에 대 한 참조입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+

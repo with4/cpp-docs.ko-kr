@@ -1,60 +1,89 @@
 ---
-title: "nested_scheduler_missing_detach 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::nested_scheduler_missing_detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nested_scheduler_missing_detach 클래스"
+title: "nested_scheduler_missing_detach 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::nested_scheduler_missing_detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# nested_scheduler_missing_detach 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 `Scheduler` 개체의 `Attach` 메서드를 사용해 두 번째 스케줄러에 연결된 컨텍스트에서 `CurrentScheduler::Detach` 메서드를 호출하지 않은 것을 동시성 런타임이 발견할 때 throw되는 예외를 설명합니다.  
+---
+# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 클래스
+이 클래스는 동시성 런타임에서 `Scheduler` 개체의 `Attach` 메서드를 사용하여 두 번째 스케줄러에 연결된 컨텍스트에 대해 `CurrentScheduler::Detach` 메서드를 호출하지 않은 것을 감지하는 경우 발생하는 예외를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class nested_scheduler_missing_detach : public std::exception;
 ```  
-class nested_scheduler_missing_detach : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[nested\_scheduler\_missing\_detach::nested\_scheduler\_missing\_detach 생성자](../Topic/nested_scheduler_missing_detach::nested_scheduler_missing_detach%20Constructor.md)|오버로드됨.  `nested_scheduler_missing_detach` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[nested_scheduler_missing_detach 생성자](#ctor)|오버로드됨. `nested_scheduler_missing_detach` 개체를 생성합니다.|  
   
-## 설명  
- 이 예외는 이미 소유하고 있거나 다른 스케줄러에 추가된 컨텍스트에서 `Scheduler` 개체의 `Attach` 메서드를 호출하여 다른 컨텍스트 내에 한 스케줄러를 중첩할 때만 throw됩니다.  동시성 런타임은 문제 해결을 위한 도움을 제공하는 시나리오를 발견하면 잘못하여 예외를 throw합니다.  `CurrentScheduler::Detach` 메서드 호출을 무시하는 모든 인스턴스가 이 예외를 throw한다는 보장은 없습니다.  
+## <a name="remarks"></a>주의  
+ 이 예외는 다른 스케줄러에서 이미 소유하고 있거나 다른 스케줄러에 연결된 컨텍스트에서 `Attach` 개체의 `Scheduler` 메서드를 호출함으로써 다른 컨텍스트 내에 한 스케줄러를 중첩할 때만 throw됩니다. 동시성 런타임 시나리오 문제를 찾기 위해 발견 하면 선택적이 예외를 throw 합니다. 호출을 무시 하는 모든 인스턴스가 `CurrentScheduler::Detach` 메서드는 항상이 예외를 throw 합니다.  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `nested_scheduler_missing_detach`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler 클래스](../../../parallel/concrt/reference/scheduler-class.md)   
- [CurrentScheduler::Detach 메서드](../Topic/CurrentScheduler::Detach%20Method.md)   
- [Scheduler::Attach 메서드](../Topic/Scheduler::Attach%20Method.md)
+##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+
+ `nested_scheduler_missing_detach` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
+
+nested_scheduler_missing_detach() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [Scheduler 클래스](scheduler-class.md)
+

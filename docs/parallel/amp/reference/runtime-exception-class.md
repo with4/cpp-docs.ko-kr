@@ -1,67 +1,155 @@
 ---
-title: "runtime_exception 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::direct3d_abort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "runtime_exception 클래스"
+title: "runtime_exception 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d_abort
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# runtime_exception 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1a2655ed4c8783dd5f7a3b8af2a7d6a9db88f43e
+ms.lasthandoff: 02/24/2017
 
-C\+\+ 가속 대용량 병렬 처리 \(AMP\) 라이브러리에서 예외에 대한 기본 형식입니다.  
+---
+# <a name="runtimeexception-class"></a>runtime_exception 클래스
+C++ AMP(C++ Accelerated Massive Parallelism) 라이브러리의 예외에 대한 기본 형식입니다.  
   
-## 구문  
+### <a name="syntax"></a>구문  
   
 ```  
 class runtime_exception : public std::exception;  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[runtime\_exception::runtime\_exception 생성자](../Topic/runtime_exception::runtime_exception%20Constructor.md)|`runtime_exception` 클래스의 새 인스턴스를 초기화합니다.|  
-|[runtime\_exception::~runtime\_exception 소멸자](../Topic/runtime_exception::~runtime_exception%20Destructor.md)|`runtime_exception` 개체를 소멸시킵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[runtime_exception 생성자](#ctor)|`runtime_exception` 클래스의 새 인스턴스를 초기화합니다.|  
+|[~ runtime_exception 소멸자](#dtor)|소멸은 `runtime_exception` 개체입니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[runtime\_exception::get\_error\_code 메서드](../Topic/runtime_exception::get_error_code%20Method.md)|예외의 원인이 된 오류 코드를 반환합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[get_error_code 메서드](#runtime_exception__get_error_code)|예외를 발생 시킨 오류 코드를 반환 합니다.|  
+
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[runtime\_exception::operator\= 연산자](../Topic/runtime_exception::operator=%20Operator.md)|지정된 `runtime_exception` 개체의 내용을 여기로 복사합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[operator = 연산자](#operator_eq)|지정 된 내용을 복사 `runtime_exception` 을 여기에 개체입니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `runtime_exception`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** amprt.h  
   
  **네임스페이스:** 동시성  
+
+## <a name="a-nameruntimeexceptionctora--runtimeexception-constructor"></a><a name="runtime_exception__ctor"></a>runtime_exception 생성자  
+클래스의 새 인스턴스를 초기화합니다.  
   
-## 참고 항목  
- [Concurrency 네임스페이스\(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+### <a name="syntax"></a>구문  
+  
+```  
+runtime_exception(  
+    const char * _Message,  
+    HRESULT _Hresult ) throw();  
+  
+explicit runtime_exception(  
+    HRESULT _Hresult ) throw();  
+  
+runtime_exception(  
+    const runtime_exception & _Other ) throw();  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 예외를 발생 시킨 오류에 대 한 설명입니다.  
+  
+ `_Hresult`  
+ 예외를 발생 시킨 오류의 HRESULT입니다.  
+  
+ `_Other`  
+ `runtime_exception` 복사할 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `runtime_exception` 개체  
+
+## <a name="a-namedtora--runtimeexception-destructor"></a><a name="dtor"></a>~ runtime_exception 소멸자  
+개체를 소멸 시킵니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```  
+virtual ~runtime_exception() throw();  
+```  
+  
+## <a name="a-nameruntimeexceptiongeterrorcodea--geterrorcode"></a><a name="runtime_exception__get_error_code"></a>get_error_code   
+예외를 발생 시킨 오류 코드를 반환 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```  
+HRESULT get_error_code() const throw();  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 예외를 발생 시킨 오류의 HRESULT입니다.  
+  
+## <a name="a-nameruntimeexceptionoperatoreqa--operator"></a><a name="runtime_exception__operator_eq"></a>  operator=   
+  지정 된 내용을 복사 `runtime_exception` 을 여기에 개체입니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```  
+runtime_exception & operator= (    const runtime_exception & _Other ) throw();  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Other`  
+ `runtime_exception` 복사할 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 이에 대 한 참조 `runtime_exception` 개체입니다.  
+  
+
+  
+## <a name="see-also"></a>참고 항목  
+ [동시성 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+

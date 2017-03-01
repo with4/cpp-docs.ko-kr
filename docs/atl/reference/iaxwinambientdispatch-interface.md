@@ -1,97 +1,593 @@
 ---
-title: "IAxWinAmbientDispatch Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IAxWinAmbientDispatch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAxWinAmbientDispatch interface"
+title: "IAxWinAmbientDispatch 인터페이스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IAxWinAmbientDispatch
+dev_langs:
+- C++
+helpviewer_keywords:
+- IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# IAxWinAmbientDispatch Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 2352b970c81f58d164fb47a6d7a4728c708d864a
+ms.lasthandoff: 02/24/2017
 
-이 인터페이스는 호스팅된 컨트롤 또는 컨테이너의 특성을 지정 하는 방법을 제공 합니다.  
+---
+# <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 인터페이스
+이 인터페이스는 컨테이너 또는 호스팅된 컨트롤의 특성을 지정 하는 메서드를 제공 합니다.  
   
 > [!IMPORTANT]
->  이 클래스와 해당 멤버를 실행 하는 응용 프로그램에서 사용할 수 있는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+interface IAxWinAmbientDispatch : IDispatch
 ```  
   
-interface IAxWinAmbientDispatch : IDispatch  
+## <a name="members"></a>멤버  
   
-```  
-  
-## Members  
-  
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[get\_AllowContextMenu](../Topic/IAxWinAmbientDispatch::get_AllowContextMenu.md)|**컨텍스트 메뉴 사용** 속성이 호스팅된 컨트롤 자체 컨텍스트 메뉴를 표시할 수 있는지 여부를 지정 합니다.|  
-|[get\_AllowShowUI](../Topic/IAxWinAmbientDispatch::get_AllowShowUI.md)|**AllowShowUI** 속성이 호스팅된 컨트롤 자체 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.|  
-|[get\_AllowWindowlessActivation](../Topic/IAxWinAmbientDispatch::get_AllowWindowlessActivation.md)|**AllowWindowlessActivation** 속성 컨테이너는 창 없는 활성화를 허용 하는지 여부를 지정 합니다.|  
-|[get\_BackColor](../Topic/IAxWinAmbientDispatch::get_BackColor.md)|`BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.|  
-|[get\_DisplayAsDefault](../Topic/IAxWinAmbientDispatch::get_DisplayAsDefault.md)|**DisplayAsDefault** 앰비언트 속성이 기본 컨트롤 인지 확인 하려면 컨트롤을 사용할 수 있습니다.|  
-|[get\_DocHostDoubleClickFlags](../Topic/IAxWinAmbientDispatch::get_DocHostDoubleClickFlags.md)|**DocHostDoubleClickFlags** 속성 지정 작업 수행에 대 한 응답을 두 번 클릭 해야 합니다.|  
-|[get\_DocHostFlags](../Topic/IAxWinAmbientDispatch::get_DocHostFlags.md)|**DocHostFlags** 속성 호스트 개체의 사용자 인터페이스 기능을 지정 합니다.|  
-|[get\_Font](../Topic/IAxWinAmbientDispatch::get_Font.md)|**글꼴** 속성은 컨테이너의 앰비언트 글꼴을 지정 합니다.|  
-|[get\_ForeColor](../Topic/IAxWinAmbientDispatch::get_ForeColor.md)|`ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.|  
-|[get\_LocaleID](../Topic/IAxWinAmbientDispatch::get_LocaleID.md)|**LocaleID** 속성은 컨테이너의 앰비언트 로캘 ID를 지정 합니다.|  
-|[get\_MessageReflect](../Topic/IAxWinAmbientDispatch::get_MessageReflect.md)|**MessageReflect** 앰비언트 속성 컨테이너 호스팅된 컨트롤에 메시지를 반영 합니다 여부를 지정 합니다.|  
-|[get\_OptionKeyPath](../Topic/IAxWinAmbientDispatch::get_OptionKeyPath.md)|**OptionKeyPath** 속성 사용자 설정 레지스트리 키 경로 지정 합니다.|  
-|[get\_ShowGrabHandles](../Topic/IAxWinAmbientDispatch::get_ShowGrabHandles.md)|**ShowGrabHandles** 앰비언트 속성 컨트롤 자체 잡기 핸들을 그리는 해야 하는 경우를 찾을 수 있습니다.|  
-|[get\_ShowHatching](../Topic/IAxWinAmbientDispatch::get_ShowHatching.md)|**ShowHatching** 앰비언트 속성 컨트롤 자체 부 화 그리는 해야 하는 경우를 찾을 수 있습니다.|  
-|[get\_UserMode](../Topic/IAxWinAmbientDispatch::get_UserMode.md)|**UserMode** 속성은 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
-|[put\_AllowContextMenu](../Topic/IAxWinAmbientDispatch::put_AllowContextMenu.md)|**컨텍스트 메뉴 사용** 속성이 호스팅된 컨트롤 자체 컨텍스트 메뉴를 표시할 수 있는지 여부를 지정 합니다.|  
-|[put\_AllowShowUI](../Topic/IAxWinAmbientDispatch::put_AllowShowUI.md)|**AllowShowUI** 속성이 호스팅된 컨트롤 자체 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.|  
-|[put\_AllowWindowlessActivation](../Topic/IAxWinAmbientDispatch::put_AllowWindowlessActivation.md)|**AllowWindowlessActivation** 속성 컨테이너는 창 없는 활성화를 허용 하는지 여부를 지정 합니다.|  
-|[put\_BackColor](../Topic/IAxWinAmbientDispatch::put_BackColor.md)|`BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.|  
-|[put\_DisplayAsDefault](../Topic/IAxWinAmbientDispatch::put_DisplayAsDefault.md)|**DisplayAsDefault** 앰비언트 속성이 기본 컨트롤 인지 확인 하려면 컨트롤을 사용할 수 있습니다.|  
-|[put\_DocHostDoubleClickFlags](../Topic/IAxWinAmbientDispatch::put_DocHostDoubleClickFlags.md)|**DocHostDoubleClickFlags** 속성 지정 작업 수행에 대 한 응답을 두 번 클릭 해야 합니다.|  
-|[put\_DocHostFlags](../Topic/IAxWinAmbientDispatch::put_DocHostFlags.md)|**DocHostFlags** 속성 호스트 개체의 사용자 인터페이스 기능을 지정 합니다.|  
-|[put\_Font](../Topic/IAxWinAmbientDispatch::put_Font.md)|**글꼴** 속성은 컨테이너의 앰비언트 글꼴을 지정 합니다.|  
-|[put\_ForeColor](../Topic/IAxWinAmbientDispatch::put_ForeColor.md)|`ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.|  
-|[put\_LocaleID](../Topic/IAxWinAmbientDispatch::put_LocaleID.md)|**LocaleID** 속성은 컨테이너의 앰비언트 로캘 ID를 지정 합니다.|  
-|[put\_MessageReflect](../Topic/IAxWinAmbientDispatch::put_MessageReflect.md)|**MessageReflect** 앰비언트 속성 컨테이너 호스팅된 컨트롤에 메시지를 반영 합니다 여부를 지정 합니다.|  
-|[put\_OptionKeyPath](../Topic/IAxWinAmbientDispatch::put_OptionKeyPath.md)|**OptionKeyPath** 속성 사용자 설정 레지스트리 키 경로 지정 합니다.|  
-|[put\_UserMode](../Topic/IAxWinAmbientDispatch::put_UserMode.md)|**UserMode** 속성은 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
+|[get_AllowContextMenu](#get_allowcontextmenu)|**컨텍스트 메뉴 사용** 속성 호스팅된 컨트롤 자체 상황에 맞는 메뉴를 표시 하도록 허용 되는지 여부를 지정 합니다.|  
+|[get_AllowShowUI](#get_allowshowui)|**AllowShowUI** 속성 호스팅된 컨트롤 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.|  
+|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|**AllowWindowlessActivation** 속성 컨테이너가 창 없는 활성화를 허용 되는지 여부를 지정 합니다.|  
+|[get_BackColor](#get_backcolor)|`BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.|  
+|[get_DisplayAsDefault](#get_displayasdefault)|**DisplayAsDefault** 은 앰비언트 속성 컨트롤을 기본 컨트롤 인지 확인할 수 있도록 합니다.|  
+|[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|**DocHostDoubleClickFlags** 속성 때 수행 해야 하는 두 번 클릭에 대 한 응답에서 작업을 지정 합니다.|  
+|[get_DocHostFlags](#get_dochostflags)|**DocHostFlags** 속성 개체의 사용자 인터페이스 기능을 지정 합니다.|  
+|[get_Font](#get_font)|**글꼴** 속성 컨테이너의 앰비언트 글꼴을 지정 합니다.|  
+|[get_ForeColor](#get_forecolor)|`ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.|  
+|[get_LocaleID](#get_localeid)|**LocaleID** 속성 컨테이너의 앰비언트 로캘 ID를 지정 합니다.|  
+|[get_MessageReflect](#get_messagereflect)|**MessageReflect** 앰비언트 속성 컨테이너는 호스팅된 컨트롤에 메시지를 반영 하는지 여부를 지정 합니다.|  
+|[get_OptionKeyPath](#get_optionkeypath)|**OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.|  
+|[get_ShowGrabHandles](#get_showgrabhandles)|**ShowGrabHandles** 앰비언트 속성 경우 그 그릴지 자체 잡기 핸들을 사용한 찾을 컨트롤을 사용 합니다.|  
+|[get_ShowHatching](#get_showhatching)|**ShowHatching** 앰비언트 속성 무늬 자체 그리기 해야 하는 경우 찾을 컨트롤을 사용 합니다.|  
+|[get_UserMode](#get_usermode)|**UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
+|[put_AllowContextMenu](#put_allowcontextmenu)|**컨텍스트 메뉴 사용** 속성 호스팅된 컨트롤 자체 상황에 맞는 메뉴를 표시 하도록 허용 되는지 여부를 지정 합니다.|  
+|[put_AllowShowUI](#put_allowshowui)|**AllowShowUI** 속성 호스팅된 컨트롤 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.|  
+|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|**AllowWindowlessActivation** 속성 컨테이너가 창 없는 활성화를 허용 되는지 여부를 지정 합니다.|  
+|[put_BackColor](#put_backcolor)|`BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.|  
+|[put_DisplayAsDefault](#put_displayasdefault)|**DisplayAsDefault** 은 앰비언트 속성 컨트롤을 기본 컨트롤 인지 확인할 수 있도록 합니다.|  
+|[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|**DocHostDoubleClickFlags** 속성 때 수행 해야 하는 두 번 클릭에 대 한 응답에서 작업을 지정 합니다.|  
+|[put_DocHostFlags](#put_dochostflags)|**DocHostFlags** 속성 개체의 사용자 인터페이스 기능을 지정 합니다.|  
+|[put_Font](#put_font)|**글꼴** 속성 컨테이너의 앰비언트 글꼴을 지정 합니다.|  
+|[put_ForeColor](#put_forecolor)|`ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.|  
+|[put_LocaleID](#put_localeid)|**LocaleID** 속성 컨테이너의 앰비언트 로캘 ID를 지정 합니다.|  
+|[put_MessageReflect](#put_messagereflect)|**MessageReflect** 앰비언트 속성 컨테이너는 호스팅된 컨트롤에 메시지를 반영 하는지 여부를 지정 합니다.|  
+|[put_OptionKeyPath](#put_optionkeypath)|**OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.|  
+|[put_UserMode](#put_usermode)|**UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
   
-## 설명  
- 이 인터페이스는 개체 호스팅 ATL의 ActiveX 컨트롤에 의해 노출 됩니다.  호스팅된 컨트롤에 앰비언트 속성을 사용할 수 있는 설정 또는 기타 컨테이너의 동작을 지정 하려면이 인터페이스에서 메서드를 호출 합니다.  제공한 속성을 보완 하기 위해 `IAxWinAmbientDispatch`를 사용 하 여  [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).  
+## <a name="remarks"></a>주의  
+ 이 인터페이스는 개체 호스팅 ATL의 ActiveX 컨트롤에 의해 노출 됩니다. 호스팅된 컨트롤에 사용할 수 있는 앰비언트 속성을 설정 하거나 컨테이너의 동작의 다른 측면을 지정 하려면이 인터페이스에서 메서드를 호출 합니다. 제공 하는 속성을 보완 하기 위해 `IAxWinAmbientDispatch`를 사용 하 여 [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)합니다.  
   
- [사용할 수 있는 클래스](https://msdn.microsoft.com/en-us/library/system.windows.forms.axhost.aspx) 에 대 한 형식 정보를 로드 하려고 `IAxWinAmbientDispatch` 및 `IAxWinAmbientDispatchEx` 코드를 포함 하는 형식 라이브러리에서.  
+ [사용할 수 있는 클래스](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) 에 대 한 형식 정보를 로드 하려고 `IAxWinAmbientDispatch` 및 `IAxWinAmbientDispatchEx` 코드를 포함 하는 형식 라이브러리에서.  
   
- Atl90.dll을 연결 하는 경우  **사용할 수 있는 클래스** 형식 정보에서 typelib DLL에 로드 됩니다.  
+ ATL90.dll에 연결 하는 경우 **AXHost** DLL에서 형식 라이브러리에서 형식 정보를 로드 합니다.  
   
- 참조  [사용할 수 있는 호스팅 ActiveX 컨트롤을 사용 하 여 ATL 클래스](../../atl/hosting-activex-controls-using-atl-axhost.md) 에 대 한 자세한 내용은.  
+ 참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 대 한 자세한 내용은 합니다.  
   
-## 요구 사항  
- 이 인터페이스의 정의 아래 표와 같이 여러 개의 폼에서 사용할 수 있는입니다.  
+## <a name="requirements"></a>요구 사항  
+ 이 인터페이스의 정의 아래 표에 나와 있는 것 처럼 다양 한 폼에서에서 사용할 수 있습니다.  
   
 |형식 정의|파일|  
-|-----------|--------|  
+|---------------------|----------|  
 |IDL|atliface.idl|  
 |형식 라이브러리|ATL.dll|  
-|C\+\+|atliface.h \(Atlbase.h에 포함 됨\)|  
+|C++|atliface.h (ATLBase.h에도 포함)|  
   
-## 참고 항목  
- [IAxWinAmbientDispatchEx Interface](../../atl/reference/iaxwinambientdispatchex-interface.md)   
- [IAxWinHostWindow Interface](../../atl/reference/iaxwinhostwindow-interface.md)   
- [CAxWindow::QueryHost](../Topic/CAxWindow::QueryHost.md)   
- [AtlAxGetHost](../Topic/AtlAxGetHost.md)
+##  <a name="a-namegetallowcontextmenua--iaxwinambientdispatchgetallowcontextmenu"></a><a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
+ **컨텍스트 메뉴 사용** 속성 호스팅된 컨트롤 자체 상황에 맞는 메뉴를 표시 하도록 허용 되는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbAllowContextMenu*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetallowshowuia--iaxwinambientdispatchgetallowshowui"></a><a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
+ **AllowShowUI** 속성 호스팅된 컨트롤 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbAllowShowUI*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetallowwindowlessactivationa--iaxwinambientdispatchgetallowwindowlessactivation"></a><a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
+ **AllowWindowlessActivation** 속성 컨테이너가 창 없는 활성화를 허용 되는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbAllowWindowless*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetbackcolora--iaxwinambientdispatchgetbackcolor"></a><a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
+ `BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.  
+  
+```
+STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pclrBackground*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **COLOR_BTNFACE** 또는 **COLOR_WINDOW** 호스트 창의 부모 인지 여부는 대화 상자) (따라이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetdisplayasdefaulta--iaxwinambientdispatchgetdisplayasdefault"></a><a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
+ **DisplayAsDefault** 은 앰비언트 속성 컨트롤을 기본 컨트롤 인지 확인할 수 있도록 합니다.  
+  
+```
+STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbDisplayAsDefault*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetdochostdoubleclickflagsa--iaxwinambientdispatchgetdochostdoubleclickflags"></a><a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
+ **DocHostDoubleClickFlags** 속성 때 수행 해야 하는 두 번 클릭에 대 한 응답에서 작업을 지정 합니다.  
+  
+```
+STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pdwDocHostDoubleClickFlags*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **DOCHOSTUIDBLCLK_DEFAULT** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetdochostflagsa--iaxwinambientdispatchgetdochostflags"></a><a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
+ **DocHostFlags** 속성 개체의 사용자 인터페이스 기능을 지정 합니다.  
+  
+```
+STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pdwDocHostFlags*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **DOCHOSTUIFLAG_NO3DBORDER** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetfonta--iaxwinambientdispatchgetfont"></a><a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
+ **글꼴** 속성 컨테이너의 앰비언트 글꼴을 지정 합니다.  
+  
+```
+STDMETHOD(get_Font)(IFontDisp** pFont);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pFont`  
+ [out] 주소는 **IFontDisp** 인터페이스 포인터를이 속성의 현재 값을 받는 데 사용 합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 기본 GUI 글꼴 또는 시스템 글꼴을 사용 하 여이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetforecolora--iaxwinambientdispatchgetforecolor"></a><a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
+ `ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.  
+  
+```
+STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pclrForeground*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 시스템 창 텍스트 색을 사용 하 여이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetlocaleida--iaxwinambientdispatchgetlocaleid"></a><a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
+ **LocaleID** 속성 컨테이너의 앰비언트 로캘 ID를 지정 합니다.  
+  
+```
+STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *plcidLocaleID*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 속성의 값을 기본값으로 사용자의 기본 로캘을 사용 하는 ATL 호스트 개체 구현 합니다.  
+  
+ 이 방법으로 앰비언트 LocalID를 검색할 수 있습니다, 즉, 프로그램의 LocaleID 컨트롤 사용량입니다. LocaleID를 알고 있다면 위성 DLL 또는 리소스 파일에서 로드 하는 코드 로캘별 캡션, 오류 메시지 텍스트와 대조해 호출할 수 있습니다.  
+  
+##  <a name="a-namegetmessagereflecta--iaxwinambientdispatchgetmessagereflect"></a><a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
+ **MessageReflect** 앰비언트 속성 컨테이너는 호스팅된 컨트롤에 메시지를 반영 하는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbMessageReflect*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-namegetoptionkeypatha--iaxwinambientdispatchgetoptionkeypath"></a><a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
+ **OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.  
+  
+```
+STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbstrOptionKeyPath*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+##  <a name="a-namegetshowgrabhandlesa--iaxwinambientdispatchgetshowgrabhandles"></a><a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
+ **ShowGrabHandles** 앰비언트 속성 경우 그 그릴지 자체 잡기 핸들을 사용한 찾을 컨트롤을 사용 합니다.  
+  
+```
+STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbShowGrabHandles*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현 시 항상 반환 **VARIANT_FALSE** 이 속성의 값으로.  
+  
+##  <a name="a-namegetshowhatchinga--iaxwinambientdispatchgetshowhatching"></a><a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
+ **ShowHatching** 앰비언트 속성 무늬 자체 그리기 해야 하는 경우 찾을 컨트롤을 사용 합니다.  
+  
+```
+STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbShowHatching*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현 시 항상 반환 **VARIANT_FALSE** 이 속성의 값으로.  
+  
+##  <a name="a-namegetusermodea--iaxwinambientdispatchgetusermode"></a><a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
+ **UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.  
+  
+```
+STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pbUserMode*  
+ [out] 이 속성의 현재 값을 받을 변수 주소입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputallowcontextmenua--iaxwinambientdispatchputallowcontextmenu"></a><a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
+ **컨텍스트 메뉴 사용** 속성 호스팅된 컨트롤 자체 상황에 맞는 메뉴를 표시 하도록 허용 되는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bAllowContextMenu*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputallowshowuia--iaxwinambientdispatchputallowshowui"></a><a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
+ **AllowShowUI** 속성 호스팅된 컨트롤 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bAllowShowUI*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputallowwindowlessactivationa--iaxwinambientdispatchputallowwindowlessactivation"></a><a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
+ **AllowWindowlessActivation** 속성 컨테이너가 창 없는 활성화를 허용 되는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bAllowWindowless*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputbackcolora--iaxwinambientdispatchputbackcolor"></a><a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
+ `BackColor` 속성 컨테이너의 앰비언트 배경색을 지정 합니다.  
+  
+```
+STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *clrBackground*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **COLOR_BTNFACE** 또는 **COLOR_WINDOW** 호스트 창의 부모 인지 여부는 대화 상자) (따라이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputdisplayasdefaulta--iaxwinambientdispatchputdisplayasdefault"></a><a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
+ **DisplayAsDefault** 은 앰비언트 속성 컨트롤을 기본 컨트롤 인지 확인할 수 있도록 합니다.  
+  
+```
+STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bDisplayAsDefault`  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputdochostdoubleclickflagsa--iaxwinambientdispatchputdochostdoubleclickflags"></a><a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
+ **DocHostDoubleClickFlags** 속성 때 수행 해야 하는 두 번 클릭에 대 한 응답에서 작업을 지정 합니다.  
+  
+```
+STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *dwDocHostDoubleClickFlags*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **DOCHOSTUIDBLCLK_DEFAULT** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputdochostflagsa--iaxwinambientdispatchputdochostflags"></a><a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
+ **DocHostFlags** 속성 개체의 사용자 인터페이스 기능을 지정 합니다.  
+  
+```
+STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *dwDocHostFlags*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 **DOCHOSTUIFLAG_NO3DBORDER** 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputfonta--iaxwinambientdispatchputfont"></a><a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
+ **글꼴** 속성 컨테이너의 앰비언트 글꼴을 지정 합니다.  
+  
+```
+STDMETHOD(put_Font)(IFontDisp* pFont);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pFont`  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 기본 GUI 글꼴 또는 시스템 글꼴을 사용 하 여이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputforecolora--iaxwinambientdispatchputforecolor"></a><a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
+ `ForeColor` 속성 컨테이너의 앰비언트 전경색을 지정 합니다.  
+  
+```
+STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *clrForeground*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 시스템 창 텍스트 색을 사용 하 여이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputlocaleida--iaxwinambientdispatchputlocaleid"></a><a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
+ **LocaleID** 속성 컨테이너의 앰비언트 로캘 ID를 지정 합니다.  
+  
+```
+STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *lcidLocaleID*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 속성의 값을 기본값으로 사용자의 기본 로캘을 사용 하는 ATL 호스트 개체 구현 합니다.  
+  
+##  <a name="a-nameputmessagereflecta--iaxwinambientdispatchputmessagereflect"></a><a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
+ **MessageReflect** 앰비언트 속성 컨테이너는 호스팅된 컨트롤에 메시지를 반영 하는지 여부를 지정 합니다.  
+  
+```
+STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bMessageReflect`  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+##  <a name="a-nameputoptionkeypatha--iaxwinambientdispatchputoptionkeypath"></a><a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
+ **OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.  
+  
+```
+STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bstrOptionKeyPath*  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+##  <a name="a-nameputusermodea--iaxwinambientdispatchputusermode"></a><a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
+ **UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.  
+  
+```
+STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bUserMode`  
+ [in] 이 속성의 새 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 표준 `HRESULT` 값입니다.  
+  
+### <a name="remarks"></a>주의  
+ ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [IAxWinAmbientDispatchEx 인터페이스](../../atl/reference/iaxwinambientdispatchex-interface.md)   
+ [IAxWinHostWindow 인터페이스](../../atl/reference/iaxwinhostwindow-interface.md)   
+ [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+ [AtlAxGetHost](http://msdn.microsoft.com/library/ad1f4f16-608d-4e96-8d30-04d4ca906a7b)
+
+
+
+
+
+
+
+
+
+

@@ -1,148 +1,164 @@
 ---
-title: "링커 도구 오류 LNK2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2001"
+title: "링커 도구 오류 LNK2001 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# 링커 도구 오류 LNK2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
+ms.openlocfilehash: 3629075e5659cb89ab751b011f3ce2cbf89397cc
+ms.lasthandoff: 02/24/2017
 
-"symbol" 외부 기호를 확인할 수 없습니다.  
+---
+# <a name="linker-tools-error-lnk2001"></a>링커 도구 오류 LNK2001
+확인 되지 않은 외부 기호 "기호"  
   
- 링커가 라이브러리 및 개체 파일에서 찾을 수 없는 함수, 변수 또는 레이블을 코드가 참조합니다.  
+ 코드는 참조 항목 (예: 함수, 변수 또는 레이블)을 링커에 개체 파일 및 라이브러리에서 찾을 수 없습니다.  
   
- 이 오류 메시지 다음에 심각한 오류인 [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)이 옵니다.  
+ 이 오류 메시지 오류가 이어서 [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)합니다.  
   
  **가능한 원인**  
   
--   관리되는 라이브러리 또는 웹 서비스 프로젝트를 Visual C\+\+ 2003에서 업그레이드하면 **명령줄** 속성 페이지에 **\/Zl** 컴파일러 옵션이 추가됩니다.  이로 인해 LNK2001이 발생합니다.  
+-   관리 되는 라이브러리 또는 웹 서비스 프로젝트를 Visual c + + 2003에서에서 업그레이드 하는 경우는 **/Zl** 컴파일러 옵션에 추가 되는 **명령줄** 속성 페이지. 그러면 LNK2001 있습니다.  
   
-     이 오류를 해결하려면 msvcrt.lib 및 msvcmrt.lib를 링커의 추가 종속성 속성에 추가하거나  **명령줄** 속성 페이지에서 **\/Zl**을 제거합니다.  자세한 내용은 [\/Zl\(기본 라이브러리 이름 생략\)](../../build/reference/zl-omit-default-library-name.md) 및 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+     이 오류를 해결 하려면을 추가 하거나 msvcrt.lib 및 msvcmrt.lib 링커의 추가 종속성 속성입니다. 또는 제거 **/Zl** 에서 **명령줄** 속성 페이지. 자세한 내용은 참조 [/Zl (기본 라이브러리 이름 생략)](../../build/reference/zl-omit-default-library-name.md) 및 [프로젝트 속성](../../ide/working-with-project-properties.md)합니다.  
   
--   코드가 요청하는 항목이 없습니다. 예를 들어, 기호의 철자가 잘못되었거나 기호에 잘못된 대\/소문자가 사용된 경우입니다.  
+-   존재 하지 않는 대 한 코드 요청 (기호는 철자가 잘못 또는 예를 들어 잘못 된 대/소문자를 사용 하 여).  
   
--   코드가 잘못된 항목을 요청했습니다. 예를 들어, 서로 다른 버전의 제품에서 라이브러리를 조금씩 가져와 혼합된 버전의 라이브러리를 사용하고 있습니다.  
+-   코드에서 잘못 된 항목 (사용 하는 다른 버전에서 다른 제품의 한 버전에서 일부 라이브러리의 혼합 된 버전)을 요청 합니다.  
   
  **특정 원인**  
   
  **코딩 문제**  
   
--   LNK2001 진단 텍스트에서 `__check_commonlanguageruntime_version`이 확인되지 않은 외부 기호라고 보고할 경우 이를 해결하는 방법에 대한 자세한 내용은 [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)를 참조하십시오.  
+-   LNK2001 진단 텍스트를 보고 하는 경우 `__check_commonlanguageruntime_version` 는 확인 되지 않은 외부 기호 참조 [l n k&2019;](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) 해결 하는 방법에 대 한 내용은 합니다.  
   
--   멤버 템플릿 정의가 클래스 외부에 있습니다.  Visual C\+\+에서는 멤버 템플릿을 포함 클래스 내부에 완전히 정의해야 합니다.  LNK2001 및 멤버 템플릿에 대한 자세한 내용은 기술 자료 문서 Q239436을 참조하십시오.  
+-   멤버 템플릿 정의 클래스를 벗어납니다. Visual c + +에는&1; 멤버 템플릿은 바깥쪽 클래스 내에서 완벽 하 게 정의 합니다. LNK2001 및 멤버 템플릿에 대 한 자세한 내용은 기술 자료 문서를 q&23943;6를 참조 하십시오.  
   
--   코드 또는 모듈 정의\(.def\) 파일에서 대\/소문자가 일치하지 않으면 LNK2001이 발생할 수 있습니다.  예를 들어, 한 C\+\+ 소스 파일에 `var1` 변수를 명명한 다음 다른 파일에서 이 변수를 `VAR1`으로 액세스하려는 경우입니다.  
+-   대/소문자를 일치 하지 않는 코드 또는 모듈 정의 (.def) 파일에는 LNK2001 발생할 수 있습니다. 예를 들어 변수를 명명 된 `var1` 한 c + + 소스 파일 및으로 액세스 하려고 했습니다. `VAR1` 다른 합니다.  
   
--   [함수 인라이닝](../../error-messages/tool-errors/function-inlining-problems.md)을 사용하는 프로젝트가 헤더 파일 대신에 .cpp 파일에 함수를 정의하면 LNK2001이 발생할 수 있습니다.  
+-   사용 하는 프로젝트 [함수 인라이닝](../../error-messages/tool-errors/function-inlining-problems.md) 헤더에서 파일 LNK2001 하면 보다는.cpp 파일에서 함수를 정의 합니다.  
   
--   `extern` "C"를 사용하지 않고 C\+\+ 프로그램에서 C 함수를 호출하면 컴파일러가 C 명명 규칙을 사용하게 되므로 LNK2001이 발생할 수 있습니다.  컴파일러 옵션 [\/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 및 [\/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)를 사용하면 컴파일러가 파일 확장명에 관계없이 파일을 C\+\+ 또는 C로 컴파일합니다.  이러한 옵션으로 인해 함수 이름이 예상했던 이름과 달라질 수 있습니다.  
+-   C + + 프로그램에서 C 함수를 사용 하지 않고 호출 `extern` (컴파일러가 C 명명 규칙을 사용 하 여)는 "C" LNK2001 발생할 수 있습니다. 컴파일러 옵션 [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 및 [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 사용 하면 컴파일러가 파일 이름 확장명에 관계 없이 파일을 c + + 또는 C로 컴파일합니다. 이러한 옵션에는 원하는 것과 다른 함수 이름을 발생할 수 있습니다.  
   
--   외부 링크를 사용하지 않는 데이터 또는 함수를 참조하려고 하면 LNK2001이 발생할 수 있습니다.  C\+\+에서 `extern`으로 명시적으로 지정되지 않은 인라인 함수 및 `const` 데이터는 내부 링크를 사용합니다.  
+-   외부 링크를 사용 하지 않는 데이터 또는 함수를 참조 하려고 하면 LNK2001 발생할 수 있습니다. C + +에서 인라인 함수 및 `const` 으로 명시적으로 지정 되지 않은 데이터는 내부 링크 `extern`합니다.  
   
--   [함수 본문 또는 변수 누락](../../error-messages/tool-errors/missing-function-body-or-variable.md)으로 인해 LNK2001이 발생할 수 있습니다.  함수 프로토타입이나 `extern` 선언을 사용하면 컴파일러가 오류 발생 없이 작업을 계속할 수 있지만, 예약된 변수 공간이나 함수 코드가 없으므로 링커가 변수의 참조나 주소에 대한 호출을 확인할 수 없습니다.  
+-   A [함수 본문 또는 변수 누락](../../error-messages/tool-errors/missing-function-body-or-variable.md) LNK2001 발생할 수 있습니다. 함수 프로토타입을 사용 또는 `extern` 선언 컴파일러는 오류 없이 계속할 수 있지만 함수 코드 또는 예약 된 변수 공간이 없을 때문에 링커 주소에 대 한 호출 또는 변수에 대 한 참조를 확인할 수 없습니다.  
   
--   함수 선언에 있는 매개 변수 형식과 일치하지 않는 매개 변수 형식을 사용하는 함수를 호출하면 LNK2001이 발생할 수 있습니다.  [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md)은 함수의 매개 변수를 최종으로 데코레이팅된 함수 이름에 포함시킵니다.  
+-   함수 선언에 있는 일치 하지 않는 매개 변수 형식으로 함수를 호출 하면 lnk2001이 발생할 수 있습니다. [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md) 데코 레이트 된 최종 함수 이름에는 함수의 매개 변수를 포함 시킵니다.  
   
--   잘못 포함된 프로토타입으로 인해, 컴파일러가 제공되지 않는 함수 본문을 기대하는 경우에는 LNK2001이 발생할 수 있습니다.  `F` 함수에 대한 클래스 구현과 비클래스 구현을 모두 사용하는 경우에는 C\+\+ 범위 결정 규칙에 유의하십시오.  
+-   잘못 포함 된 프로토타입으로 하면 컴파일러는 제공 되지 않는 함수 본문의 결과 LNK2001 발생할 수 있습니다. 함수는 클래스와 비 클래스 구현이 있는 경우 `F`, c + + 범위 결정 규칙에 주의 하세요.  
   
--   C\+\+를 사용할 때 클래스 정의에 함수 프로토타입을 포함시키고 해당 클래스에 대한 함수의 [구현을 포함](../../error-messages/tool-errors/missing-function-body-or-variable.md)시키지 못하면 LNK2001이 발생할 수 있습니다.  
+-   C + +를 사용 하면 함수 프로토타입을 클래스 정의에 포함 하 고 실패 [구현을 포함](../../error-messages/tool-errors/missing-function-body-or-variable.md) 해당 클래스에 대 한 함수의 LNK2001 발생할 수 있습니다.  
   
--   추상 기본 클래스의 생성자나 소멸자에서 순수 가상 함수를 호출하려고 하면 LNK2001이 발생할 수 있습니다.  순수 가상 함수에서는 기본 클래스가 구현되지 않습니다.  
+-   생성자 나 소멸자는 추상 기본 클래스의 순수 가상 함수를 호출 하려고 하면 LNK2001 발생할 수 있습니다. 순수 가상 함수에는 기본 클래스 구현이 없습니다.  
   
--   함수 범위에 속하지 않는 함수\([지역 변수](../../error-messages/tool-errors/automatic-function-scope-variables.md)\) 내에 선언된 변수를 사용하려고 하면 LNK2001이 발생할 수 있습니다.  
+-   함수 내에 선언 된 변수를 사용 하려고 ([지역 변수](../../error-messages/tool-errors/automatic-function-scope-variables.md)) 해당 함수의 범위 밖에 LNK2001 발생할 수 있습니다.  
   
--   ATL 프로젝트의 릴리스 버전을 빌드할 경우에는 CRT 시작 코드가 필요한지 여부를 표시해야 합니다.  이를 해결하려면 다음 중 하나를 수행하십시오.  
+-   ATL 프로젝트의 릴리스 버전을 빌드하는 경우 CRT 시작 코드가 필요 함을 나타냅니다. 다음 중 하나를 수행를 해결 하려면  
   
-    -   전처리기 목록에서 `_ATL_MIN_CRT`를 제거하면 CRT 시작 코드를 포함할 수 있도록 정의됩니다.  자세한 내용은 [일반 구성 설정 속성 페이지](../../ide/general-property-page-project.md)를 참조하십시오.  
+    -   제거 `_ATL_MIN_CRT` 전처리기의 목록에서 CRT 시작 코드가 포함 될 수 있도록 정의 합니다. 참조 [일반 구성 설정의 속성 페이지](../../ide/general-property-page-project.md) 에 대 한 자세한 내용은 합니다.  
   
-    -   가능하다면 CRT 시작 코드를 필요로 하는 CRT 함수에 대한 호출을 제거하고  대신에 Win32 동등 항목을 사용하십시오.  예를 들어, `strcmp` 대신 `lstrcmp`를 사용합니다.  CRT 시작 코드를 필요로 한다고 알려진 함수에는 몇몇 문자열 함수와 부동 소수점 함수가 있습니다.  
+    -   가능 하면 CRT 시작 코드를 필요로 하는 CRT 함수에 대 한 호출을 제거 합니다. 대신 Win32이에 해당 합니다. 예를 들어 사용 `lstrcmp` 대신 `strcmp`합니다. CRT 시작 코드가 필요한 알려진된 함수에 문자열 및 부동 소수점 함수가 중 일부입니다.  
   
  **컴파일 및 링크 문제**  
   
--   프로젝트에 라이브러리 파일\(.LIB\) 또는 개체 파일\(.OBJ\)에 대한 참조가 없습니다.  자세한 내용은 [링커 입력 파일로 사용하는 .lib 파일](../../build/reference/dot-lib-files-as-linker-input.md)을 참조하십시오.  
+-   프로젝트에 라이브러리에 대 한 참조를 없습니다 (합니다. LIB) 또는 개체 (합니다. OBJ) 파일입니다. 참조 [링커 입력 파일로 사용 하는.lib 파일](../../build/reference/dot-lib-files-as-linker-input.md) 에 대 한 자세한 내용은 합니다.  
   
--   [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 또는 [\/Zl](../../build/reference/zl-omit-default-library-name.md)을 사용하는 경우 필요한 코드가 들어 있는 라이브러리를 명시적으로 포함하지 않으면 해당 라이브러리가 프로젝트에 링크되지 않습니다. **\/clr** 또는 **\/clr:pure**를 사용하여 컴파일하는 경우 .cctor에 대한 참조가 표시됩니다. 자세한 내용은 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md)를 참조하십시오.  
+-   사용 하는 경우 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 또는 [/Zl](../../build/reference/zl-omit-default-library-name.md), 명시적으로 포함 하지 않으면 필요한 코드가 포함 된 라이브러리를 프로젝트에 연결 되지 것입니다. (로 컴파일할 때 **/clr** 또는 **/clr: pure**,.cctor에 대 한 참조가 표시 됩니다; 참조 [혼합 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md) 에 대 한 자세한 내용은.)  
   
--   유니코드 및 MFC를 사용하는 경우 `wWinMainCRTStartup`에 대한 진입점을 만들지 않으면 `_WinMain@16`에 대해 확인할 수 없는 외부 참조가 생성됩니다. [\/ENTRY](../../build/reference/entry-entry-point-symbol.md)를 사용하십시오.  [유니코드 프로그래밍 요약](../../text/unicode-programming-summary.md)을 참조하십시오.  
+-   유니코드 및 MFC를 사용 하는 경우에서 확인할 수 없는 외부를 얻을 수 있습니다 `_WinMain@16` 한 entrypoint를 만들지 않으면 `wWinMainCRTStartup`; 사용는 [/ENTRY](../../build/reference/entry-entry-point-symbol.md)합니다. 참조 [유니코드 프로그래밍 요약](../../text/unicode-programming-summary.md)합니다.  
   
-     자세한 내용은 MSDN Library에서 다음 기술 자료 문서를 참조하십시오.  MSDN Library에서 **검색** 탭을 클릭하고 입력란에 문서 번호나 문서 제목을 붙여넣은 다음 **항목 나열**을 클릭합니다.  문서 번호를 검색하는 경우에는 **제목만 검색** 옵션의 선택을 취소해야 합니다.  
+     자세한 내용은 MSDN Library에 있는 다음 기술 자료 문서를 참조 하십시오. MSDN Library에서 클릭 된 **검색** 탭, 문서 번호 또는 문서 제목 텍스트 상자에 붙여 클릭 한 후 **항목 목록**합니다. 문서 번호를 검색 하는 경우는 **제목 에서만 검색** 옵션의 선택을 취소 합니다.  
   
-    -   Q125750   "PRB: Error LNK2001: '\_WinMain@16': Unresolved External Symbol"  
+    -   Q125750 "PRB: 오류 LNK2001: '_WinMain@16': 외부 기호를 확인할 수 없는"  
   
-    -   Q131204   "PRB: Wrong Project Selection Causes LNK2001 on \_WinMain@16"  
+    -   Q131204 "PRB: 잘못 된 프로젝트 선택 하면 LNK2001에 _WinMain@16"  
   
-    -   Q100639   "Unicode Support in the Microsoft Foundation Class Library"  
+    -   Q100639 "유니코드 지원 Microsoft Foundation 클래스 라이브러리"  
   
-    -   Q291952   "PRB: Link Error LNK2001: Unresolved External Symbol \_main"  
+    -   Q291952 "PRB: 연결 오류 LNK2001: 확인 되지 않은 외부 기호 _main"  
   
--   \/MT로 컴파일한 코드를 LIBC.lib 라이브러리와 링크시키면 `_beginthread`, `_beginthreadex`, `_endthread` 및 `_endthreadex`에 대해 LNK2001이 발생합니다.  
+-   라이브러리 LIBC.lib /MT으로 컴파일된 코드를 연결로 인해 LNK2001 `_beginthread`, `_beginthreadex`, `_endthread`, 및 `_endthreadex`합니다.  
   
--   다중 스레드 라이브러리를 필요로 하는 코드\(MFC 코드 또는 [\/MT](../../build/reference/md-mt-ld-use-run-time-library.md)로 컴파일한 코드\)를 링크시키면 [\_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md), `_beginthreadex`, [\_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) 및 `_endthreadex`에 대해 LNK2001이 발생합니다.  자세한 내용은 다음 기술 자료 문서를 참조하십시오.  
+-   다중 스레드 라이브러리를 필요로 하는 코드를 연결할 (MFC 코드나 사용 하 여 컴파일된 코드 [/MT](../../build/reference/md-mt-ld-use-run-time-library.md))로 인해 LNK2001 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md), `_beginthreadex`, [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md), 및 `_endthreadex`합니다. 자세한 내용은 다음 기술 자료 문서를 참조 하십시오.  
   
-    -   Q126646 "PRB: Error Msg: LNK2001 on \_\_beginthreadex and \_\_endthreadex"  
+    -   Q126646 "PRB: 오류 메시지: __beginthreadex에 LNK2001 및 \__endthreadex"  
   
-    -   Q128641 "INFO: \/Mx Compiler Options and the LIBC, LIBCMT, MSVCRT Libs"  
+    -   Q128641 "INFO: /Mx 컴파일러 옵션 및 LIBC, LIBCMT, MSVCRT Libs"  
   
-    -   Q166504 "PRB: MFC and CRT Must Match in debug\/release and static\/dynamic"  
+    -   Q166504 "PRB: MFC, CRT 디버그/릴리스 및 정적 및 동적 일치 해야 합니다"  
   
--   **\/MD**로 컴파일하는 경우 모든 런타임이 DLL 내에 있으므로 소스의 "func"에 대한 참조가 개체의 "`__imp__func`" 참조로 됩니다.  정적 라이브러리 LIBC.lib 또는 LIBCMT.lib에 링크하려고 하면 `__imp__func`에 대해 LNK2001이 발생합니다.  \/MD 없이 컴파일하는 경우에 MSVCxx.lib에 링크하려고 하면, 항상 LNK2001이 발생하지는 않지만 다른 문제가 발생할 수 있습니다.  
+-   로 컴파일할 때 **/MD**, 원본의 "func"에 대 한 참조에서 참조 하 게 "`__imp__func`" DLL 내에서 모든 실행 시간은 이제 보유 하므로 개체에 있습니다. LNK2001 LIBC.lib 또는 LIBCMT.lib 정적 라이브러리와 링크 하려는 경우 얻을 수 있습니다 `__imp__func`합니다. /MD 없이 컴파일할 때 msvcxx.lib 연결 하려고 하는 경우 항상 LNK2001을 가져오지 않습니다 하지만 다른 문제를 사용할 수 있습니다.  
   
--   응용 프로그램의 디버그 버전을 빌드할 때 릴리스 모드 라이브러리에 링크하면 LNK2001이 발생할 수 있습니다.  마찬가지로, **\/Mxd** 옵션\(**\/MTd** 또는 **\/MDd**\)을 사용하거나 `_DEBUG`를 정의한 다음 릴리스 라이브러리에 링크하면 특히 확인할 수 없는 외부 참조 문제가 발생할 수 있습니다.  릴리스 모드 빌드를 디버그 라이브러리와 링크시키는 경우에도 유사한 문제가 발생합니다.  
+-   응용 프로그램의 디버그 버전을 빌드할 때 릴리스 모드 라이브러리에 링크 LNK2001 발생할 수 있습니다. 마찬가지로,를 사용 하는 **/Mxd** 옵션 (**/MTd**, 또는 **/MDd**) 정의 및/또는 `_DEBUG` 다음 릴리스 라이브러리에 링크 제공 됩니다 (다른 문제가) 간에 잠재적인 해결 되지 않은 외부 참조입니다. 디버그 라이브러리와 릴리스 모드 빌드를 연결 하는 경우에 비슷한 문제가 발생도 합니다.  
   
--   혼합 버전의 Microsoft 라이브러리 및 컴파일러 제품에는 문제가 있을 수 있습니다.  새로운 컴파일러 버전의 라이브러리에는 이전 버전에 포함된 라이브러리에는 없었던 새 기호가 포함될 수 있습니다.  검색 경로에서 디렉터리의 순서를 변경할 수 있으며 또한 디렉터리를 변경하여 현재 버전을 가리키도록 할 수도 있습니다.  
+-   혼합 버전의 Microsoft 라이브러리 및 컴파일러 제품 문제가 될 수 있습니다. 새 컴파일러 버전의 라이브러리는 이전 버전에 포함 된 라이브러리에서 찾을 수 없는 새 기호를 포함할 수 있습니다. 현재 버전을 가리키도록 변경 또는 검색 경로에 있는 디렉터리의 순서를 변경 해야 할 수 있습니다.  
   
-     도구 &#124; 옵션 &#124; 프로젝트 &#124; VC\+\+ 디렉터리 대화 상자의 라이브러리 파일 선택 영역에서 검색 순서를 변경할 수 있습니다.  프로젝트의 속성 페이지 대화 상자에 있는 링커 폴더에 만료된 경로를 포함할 수도 있습니다.  
+     도구 | 옵션 | 프로젝트 | 라이브러리 파일 선택 영역에서 VC + + 디렉터리 대화 상자를 사용 하면 검색 순서를 변경할 수 있습니다. 링커 폴더는 프로젝트의 속성 페이지 대화 상자에 만료 될 수 있는 경로 포함할 수도 있습니다.  
   
-     이 문제는 새로운 SDK가 다른 위치에 설치되는 경우에 발생할 수 있으며 검색 순서가 새 위치를 가리키도록 업데이트되지 않습니다.  일반적으로 새로운 SDK의 포함 및 라이브러리 디렉터리에 대한 경로는 기본 Visual C\+\+ 위치 앞쪽에 둡니다.  또한 포함된 경로를 포함하는 프로젝트는 유효한 경로이긴 하지만 다른 위치에 설치된 새 버전에 의해 추가된 새로운 기능에 대해 만료된 이전 경로를 가리키기도 합니다.  
+     이 문제는 (아마도 다른 위치로), 새 SDK 설치 될 때 검색 순서가 새 위치를 가리키도록 업데이트 되지 않습니다 나타날 수 있습니다. 일반적으로 새 Sdk로의 경로 입력 해야 포함 및 라이브러리의 기본 Visual c + + 위치 앞에 디렉터리입니다. 또한 포함 된 경로 포함 하는 프로젝트 경로 이전 경로 유효 하지만 다른 위치에 설치 되어 있는 새 버전에 의해 추가 된 새로운 기능에 대 한 오래 된를 가리키기도 합니다.  
   
--   현재, 컴파일러 공급업체 간에 또는 다른 버전의 컴파일러 간에 [C\+\+ 이름 지정](../../error-messages/tool-errors/name-decoration.md)에 대한 표준이 없습니다.  따라서 다른 컴파일러로 컴파일한 개체 파일을 링크하면 동일한 명명 스키마를 생성할 수 없으므로 오류 LNK2001이 발생합니다.  
+-   현재 표준이 없습니다 [c + + 명명](../../error-messages/tool-errors/name-decoration.md) 컴파일러 공급 업체 간에 또는 서로 다른 버전의 컴파일러 간 합니다. 따라서 다른 컴파일러로 컴파일한 개체 파일에 연결 될 수 있습니다 하지 같은 명명 체계가 생성 하 고 오류 LNK2001.  
   
--   서로 다른 모듈에서 [인라인과 비인라인 컴파일 옵션을 혼합](../../error-messages/tool-errors/function-inlining-problems.md)하면 LNK2001이 발생할 수 있습니다.  함수 인라이닝은 설정\(**\/Ob1** 또는 **\/Ob2**\)했지만 함수를 설명하는 해당 헤더 파일이 인라이닝을 해제한 상태\(`inline` 키워드 없음\)에서 C\+\+ 라이브러리를 만들면 이 오류가 발생합니다.  이 문제를 방지하려면 다른 파일에 포함시킬 헤더 파일에서 `inline`을 사용하여 인라인 함수를 정의하십시오.  
+-   [혼합 인라인이 아닌 컴파일 옵션](../../error-messages/tool-errors/function-inlining-problems.md) 서로 다른 모듈에서 LNK2001 발생할 수 있습니다. C + + 라이브러리 함수 인라이닝 설정 만들어집니다 (**/Ob1** 또는 **/Ob2**)는 해당 하는 함수를 설명 하는 헤더 파일 해제 인라인 처리 하지만 (없습니다 `inline` 키워드),이 오류가 표시 됩니다. 이 문제를 방지 하 여 인라인 함수 정의 되어 있는 `inline` 다른 파일에 포함 하는 것은 헤더 파일에 있습니다.  
   
--   `#pragma inline_depth` 컴파일러 지시문을 사용하는 경우에는 [2 이상의 값을 설정](../../error-messages/tool-errors/function-inlining-problems.md)해야 하며 [\/Ob1](../../build/reference/ob-inline-function-expansion.md) 또는 [\/Ob2](../../build/reference/ob-inline-function-expansion.md) 컴파일러 옵션을 사용해야 합니다.  
+-   사용 하는 경우는 `#pragma inline_depth` 있는지 컴파일러 지시문을 확인 한 [2 이상 집합의 값에](../../error-messages/tool-errors/function-inlining-problems.md), 사용 하 고 있는지 확인 하 고는 [/Ob1](../../build/reference/ob-inline-function-expansion.md) 또는 [/Ob2](../../build/reference/ob-inline-function-expansion.md) 컴파일러 옵션입니다.  
   
--   리소스 전용 DLL을 만들 때 LINK 옵션 \/NOENTRY를 생략하면 LNK2001이 발생합니다.  
+-   연결 옵션을 생략 하 여 리소스 전용 DLL을 만들 때 /NOENTRY LNK2001 발생 합니다.  
   
--   잘못된 \/SUBSYSTEM 또는 \/ENTRY 설정을 사용하면 LNK2001이 발생할 수 있습니다.  예를 들어, 문자 기반의 응용 프로그램\(콘솔 응용 프로그램\)을 작성하고 \/SUBSYSTEM:WINDOWS를 지정한 경우에는 `WinMain`에 대해 확인할 수 없는 외부 참조가 생성됩니다.  이러한 옵션 및 진입점에 대한 자세한 내용은 [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 및 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 링커 옵션을 참조하십시오.  
+-   잘못 된 /SUBSYSTEM 또는 /ENTRY 설정을 사용 하 여 LNK2001 발생할 수 있습니다. 예를 들어 문자 기반 응용 프로그램 (콘솔 응용 프로그램)을 작성 하 고 /subsystem 받습니다에 대 한 확인 되지 않은 외부 `WinMain`합니다. 이러한 옵션 및 진입점에 대 한 자세한 내용은 참조는 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 및 [/ENTRY](../../build/reference/entry-entry-point-symbol.md) 링커 옵션입니다.  
   
  **내보내기 문제**  
   
--   16비트 응용 프로그램을 32비트 또는 64비트 응용 프로그램으로 이식하면 LNK2001이 발생할 수 있습니다.  현재 모듈 정의\(.def\) 파일 구문에서는 `__cdecl`, `__stdcall` 및 `__fastcall` 함수가 EXPORTS 섹션에 밑줄 없이 데코레이팅되지 않고 표시되어야 합니다.  이 구문은 16비트 구문과 다릅니다. 16비트 구문에서는 함수에 밑줄이 표시되어야 합니다\(데코레이팅됨\).  자세한 내용은 모듈 정의 파일의 [EXPORTS](../../build/reference/exports.md) 섹션에 대한 설명을 참조하십시오.  
+-   32 또는 64 비트 16에서 응용 프로그램을 이식 하는 LNK2001 발생할 수 있습니다. 현재 모듈 정의 (.def) 파일 구문에서는 `__cdecl`, `__stdcall`, 및 `__fastcall` 함수 없이 데코레이팅되지 밑줄 없이 EXPORTS 섹션에 나열 되어야 합니다. 이 밑줄 (데코레이팅된)로 표시 되어야 합니다 여기서는 16 비트 구문에서와 다릅니다. 자세한 내용은 참조에 대 한 설명을 [내보내기](../../build/reference/exports.md) 모듈 정의 파일의 섹션입니다.  
   
--   .def 파일에 표시된 내보내기를 찾지 못하면 LNK2001이 발생합니다.  이 오류는 내보내기가 없거나 내보내기의 철자가 잘못되었거나 내보내기가 C\+\+ 데코레이팅된 이름을 사용\(.def 파일은 데코레이팅된 이름을 사용하지 않음\)하기 때문에 발생할 수 있습니다.  
+-   .Def 파일에 나열 된 내보내기를 찾지 LNK2001 발생 합니다. 존재 하지 않는 것은 철자가 잘못 또는 c + + 데코레이팅된 이름 (.def 파일 데코레이팅된 이름을 사용 하지 않음)를 사용 하 여 때문일 수 있습니다.  
   
  **결과 해석**  
   
- 기호를 확인할 수 없는 경우에는 다음 지침에 따라 함수에 대한 정보를 가져올 수 있습니다.  
+ 기호 확인 없는 경우 다음 지침에 따라 함수에 대 한 정보를 얻을 수 있습니다.  
   
- x86 플랫폼의 경우, C에서 컴파일된 이름에 대한 호출 규칙 데코레이션 또는 C\+\+에서의 extern "C" 이름에 대한 호출 규칙 데코레이션은 다음과 같습니다.  
+ X86 플랫폼에서 이름에 대 한 호출 규칙 장식 c에서 컴파일된 또는 extern "C" 이름을 c + +에서는:  
   
  `__cdecl`  
- 함수에 밑줄\(\_\) 접두사가 옵니다.  
+ 함수에는 밑줄 (_)이 접두사로 있습니다.  
   
  `__stdcall`  
- 함수에 밑줄\(\_\) 접두사 및 @ 접미사가 오며 뒤이어 스택에서의 매개 변수에 대한 dword 맞춤 크기가 옵니다.  
+ 함수에는 밑줄 (_) 접두사와 접미사 뒤에 있는 dword @ 맞춤 크기가 스택에 매개 변수입니다.  
   
  `__fastcall`  
- 함수에 @ 접두사 및 @ 접미사가 오며 뒤이어 스택에서의 매개 변수에 대한 dword 맞춤 크기가 옵니다.  
+ 함수에는 @ 접두사와 접미사 뒤에 있는 dword @ 맞춤 크기가 스택에 매개 변수입니다.  
   
- undname.exe를 사용하여 데코레이팅된 이름의 데코레이팅되지 않은 형식을 가져오십시오.  
+ Undname.exe를 사용 하 여 데코레이팅되지 않은 형태의 데코레이팅된 이름 가져옵니다.  
   
- 위에서 설명한 몇 가지 원인에 대한 자세한 내용은 [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md)을 참조하십시오.
+ 위에 나열 된 원인 중 일부에 대 한 자세한 내용은 참조 하십시오. [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md)합니다.

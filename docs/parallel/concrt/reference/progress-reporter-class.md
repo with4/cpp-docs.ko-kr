@@ -1,69 +1,101 @@
 ---
-title: "progress_reporter 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppltasks/concurrency::progress_reporter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "progress_reporter 클래스"
+title: "progress_reporter 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppltasks/concurrency::progress_reporter
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# progress_reporter 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: c6b4dfee5b5f9df98a36fcdac116182ced4cbe30
+ms.lasthandoff: 02/24/2017
 
-진행률 보고자 클래스를 사용하면 특정 형식의 진행률 알림을 사용할 수 있습니다.  각 progress\_reporter 개체는 특정 비동기 작업 또는 작업에 바인딩됩니다.  
+---
+# <a name="progressreporter-class"></a>progress_reporter 클래스
+진행률 보고자 클래스를 사용하면 특정 형식의 진행률 알림을 보고할 수 있습니다. 각 progress_reporter 개체는 특정 비동기 작업이나 연산에 바인딩됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template<typename _ProgressType>
+class progress_reporter;
 ```  
-template<  
-   typename _ProgressType  
->  
-class progress_reporter;  
-```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_ProgressType`  
  진행률 보고자를 통해 보고되는 각 진행률 알림의 페이로드 형식입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[progress\_reporter::progress\_reporter 생성자](../Topic/progress_reporter::progress_reporter%20Constructor.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[progress_reporter 생성자](#ctor)||  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[progress\_reporter::report 메서드](../Topic/progress_reporter::report%20Method.md)|진행률 보고서를 이 진행률 보고자가 바인딩된 비동기 작업으로 보냅니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[보고서 메서드](#report)|이 진행률 보고자가 바인딩된 비동기 작업이나 연산에 진행률 보고서를 보냅니다.|  
   
-## 설명  
- 이 형식은 Windows 스토어 응용 프로그램에만 사용할 수 있습니다.  
+## <a name="remarks"></a>주의  
+ 이 형식은 Windows 스토어 앱에만 사용할 수 있습니다.  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `progress_reporter`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** ppltasks.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [create\_async 함수](../Topic/create_async%20Function.md)
+##  <a name="a-namectora-progressreporter"></a><a name="ctor"></a>progress_reporter 
+
+```
+progress_reporter();
+```  
+  
+##  <a name="a-namereporta-report"></a><a name="report"></a>보고서 
+
+ 이 진행률 보고자가 바인딩된 비동기 작업이나 연산에 진행률 보고서를 보냅니다.  
+  
+```
+void report(const _ProgressType& val) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `val`  
+ 진행률 알림을 통해 보고서에 대 한 페이로드입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

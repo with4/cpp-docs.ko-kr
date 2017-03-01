@@ -1,105 +1,734 @@
 ---
-title: "CDockSite Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CDockSite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDockSite class"
+title: "CDockSite 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDockSite
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDockSite class
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
 caps.latest.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# CDockSite Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 3b230542bface4d729866c37dc4c74cb0173b389
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- [CPane Class](../../mfc/reference/cpane-class.md)에서 파생되는 창을 행 집합으로 배열하기 위한 기능을 제공합니다.  
+ 파생 되는 창을 정렬할 때 기능을 제공 된 [CPane 클래스](../../mfc/reference/cpane-class.md) 행 집합으로 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CDockSite: public CBasePane  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
-|--------|--------|  
-|[CDockSite::AddRow](../Topic/CDockSite::AddRow.md)||  
-|[CDockSite::AdjustDockingLayout](../Topic/CDockSite::AdjustDockingLayout.md)|\([CBasePane::AdjustDockingLayout](../Topic/CBasePane::AdjustDockingLayout.md) 재정의\)|  
-|[CDockSite::AdjustLayout](../Topic/CDockSite::AdjustLayout.md)|\([CBasePane::AdjustLayout](../Topic/CBasePane::AdjustLayout.md) 재정의\)|  
-|[CDockSite::AlignDockSite](../Topic/CDockSite::AlignDockSite.md)||  
-|[CDockSite::CalcFixedLayout](../Topic/CDockSite::CalcFixedLayout.md)|\([CBasePane::CalcFixedLayout](../Topic/CBasePane::CalcFixedLayout.md) 재정의\)|  
-|[CDockSite::CanAcceptPane](../Topic/CDockSite::CanAcceptPane.md)|\([CBasePane::CanAcceptPane](../Topic/CBasePane::CanAcceptPane.md) 재정의\)|  
-|[CDockSite::CreateEx](../Topic/CDockSite::CreateEx.md)|\([CBasePane::CreateEx](../Topic/CBasePane::CreateEx.md) 재정의\)|  
-|[CDockSite::CreateRow](../Topic/CDockSite::CreateRow.md)||  
-|[CDockSite::DockPane](../Topic/CDockSite::DockPane.md)|\([CBasePane::DockPane](../Topic/CBasePane::DockPane.md) 재정의\)|  
-|[CDockSite::DoesAllowDynInsertBefore](../Topic/CDockSite::DoesAllowDynInsertBefore.md)|\([CBasePane::DoesAllowDynInsertBefore](../Topic/CBasePane::DoesAllowDynInsertBefore.md) 재정의\)|  
-|[CDockSite::FindRowIndex](../Topic/CDockSite::FindRowIndex.md)||  
-|[CDockSite::FixupVirtualRects](../Topic/CDockSite::FixupVirtualRects.md)||  
-|[CDockSite::GetDockSiteID](../Topic/CDockSite::GetDockSiteID.md)||  
-|[CDockSite::GetDockSiteRowsList](../Topic/CDockSite::GetDockSiteRowsList.md)||  
-|[CDockSite::IsAccessibilityCompatible](../Topic/CDockSite::IsAccessibilityCompatible.md)|\(`CBasePane::IsAccessibilityCompatible` 재정의\)|  
-|[CDockSite::IsDragMode](../Topic/CDockSite::IsDragMode.md)||  
-|[CDockSite::IsLastRow](../Topic/CDockSite::IsLastRow.md)||  
-|[CDockSite::IsRectWithinDockSite](../Topic/CDockSite::IsRectWithinDockSite.md)||  
-|[CDockSite::IsResizable](../Topic/CDockSite::IsResizable.md)|\([CBasePane::IsResizable](../Topic/CBasePane::IsResizable.md) 재정의\)|  
-|[CDockSite::MovePane](../Topic/CDockSite::MovePane.md)||  
-|[CDockSite::OnInsertRow](../Topic/CDockSite::OnInsertRow.md)||  
-|[CDockSite::OnRemoveRow](../Topic/CDockSite::OnRemoveRow.md)||  
-|[CDockSite::OnResizeRow](../Topic/CDockSite::OnResizeRow.md)||  
-|[CDockSite::OnSetWindowPos](../Topic/CDockSite::OnSetWindowPos.md)||  
-|[CDockSite::OnShowRow](../Topic/CDockSite::OnShowRow.md)||  
-|[CDockSite::OnSizeParent](../Topic/CDockSite::OnSizeParent.md)||  
-|[CDockSite::PaneFromPoint](../Topic/CDockSite::PaneFromPoint.md)|주어진 매개 변수로 지정된 지점에서 도킹 사이트에 도킹된 창을 반환합니다.|  
-|[CDockSite::DockPaneLeftOf](../Topic/CDockSite::DockPaneLeftOf.md)|창을 다른 창의 왼쪽에 도킹합니다.|  
-|[CDockSite::FindPaneByID](../Topic/CDockSite::FindPaneByID.md)|지정된 ID로 식별되는 창을 반환합니다.|  
-|[CDockSite::GetPaneList](../Topic/CDockSite::GetPaneList.md)|도킹 사이트에 도킹된 창 목록을 반환합니다.|  
-|[CDockSite::RectSideFromPoint](../Topic/CDockSite::RectSideFromPoint.md)||  
-|[CDockSite::RemovePane](../Topic/CDockSite::RemovePane.md)||  
-|[CDockSite::RemoveRow](../Topic/CDockSite::RemoveRow.md)||  
-|[CDockSite::ReplacePane](../Topic/CDockSite::ReplacePane.md)||  
-|[CDockSite::RepositionPanes](../Topic/CDockSite::RepositionPanes.md)||  
-|[CDockSite::ResizeDockSite](../Topic/CDockSite::ResizeDockSite.md)||  
-|[CDockSite::ResizeRow](../Topic/CDockSite::ResizeRow.md)||  
-|[CDockSite::ShowPane](../Topic/CDockSite::ShowPane.md)|창을 표시합니다.|  
-|[CDockSite::ShowRow](../Topic/CDockSite::ShowRow.md)||  
-|[CDockSite::SwapRows](../Topic/CDockSite::SwapRows.md)||  
+|----------|-----------------|  
+|[CDockSite::AddRow](#addrow)||  
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(재정의 [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
+|[CDockSite::AdjustLayout](#adjustlayout)|(재정의 [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|  
+|[CDockSite::AlignDockSite](#aligndocksite)||  
+|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(재정의 [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CDockSite::CanAcceptPane](#canacceptpane)|(재정의 [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|  
+|[CDockSite::CreateEx](#createex)|(재정의 [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|  
+|[CDockSite::CreateRow](#createrow)||  
+|[CDockSite::DockPane](#dockpane)|(재정의 [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|  
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(재정의 [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CDockSite::FindRowIndex](#findrowindex)||  
+|[CDockSite::FixupVirtualRects](#fixupvirtualrects)||  
+|[CDockSite::GetDockSiteID](#getdocksiteid)||  
+|[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||  
+|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(`CBasePane::IsAccessibilityCompatible`를 재정의합니다.)|  
+|[CDockSite::IsDragMode](#isdragmode)||  
+|[CDockSite::IsLastRow](#islastrow)||  
+|[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||  
+|[CDockSite::IsResizable](#isresizable)|(재정의 [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|  
+|[CDockSite::MovePane](#movepane)||  
+|[CDockSite::OnInsertRow](#oninsertrow)||  
+|[CDockSite::OnRemoveRow](#onremoverow)||  
+|[CDockSite::OnResizeRow](#onresizerow)||  
+|[CDockSite::OnSetWindowPos](#onsetwindowpos)||  
+|[CDockSite::OnShowRow](#onshowrow)||  
+|[CDockSite::OnSizeParent](#onsizeparent)||  
+|[CDockSite::PaneFromPoint](#panefrompoint)|주어진 매개 변수로 지정된 지점에서 도킹 사이트에 도킹된 창을 반환합니다.|  
+|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|창을 다른 창의 왼쪽에 도킹합니다.|  
+|[CDockSite::FindPaneByID](#findpanebyid)|지정된 ID로 식별되는 창을 반환합니다.|  
+|[CDockSite::GetPaneList](#getpanelist)|도킹 사이트에 도킹된 창 목록을 반환합니다.|  
+|[CDockSite::RectSideFromPoint](#rectsidefrompoint)||  
+|[CDockSite::RemovePane](#removepane)||  
+|[CDockSite::RemoveRow](#removerow)||  
+|[CDockSite::ReplacePane](#replacepane)||  
+|[CDockSite::RepositionPanes](#repositionpanes)||  
+|[CDockSite::ResizeDockSite](#resizedocksite)||  
+|[CDockSite::ResizeRow](#resizerow)||  
+|[CDockSite::ShowPane](#showpane)|창을 표시합니다.|  
+|[CDockSite::ShowRow](#showrow)||  
+|[CDockSite::SwapRows](#swaprows)||  
   
-## 설명  
- [CFrameWndEx::EnableDocking](../Topic/CFrameWndEx::EnableDocking.md)을 호출하면 프레임워크에서 `CDockSite` 개체를 자동으로 만듭니다.  도킹 사이트 창은 주 프레임 창에서 클라이언트 영역의 가장자리에 배치됩니다.  
+## <a name="remarks"></a>주의  
+ 프레임 워크를 만들고 `CDockSite` 개체를 호출할 때 자동으로 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 도킹 사이트 창은 주 프레임 창에서 클라이언트 영역의 가장자리에 배치됩니다.  
   
- 도킹 사이트에서 제공하는 서비스는 일반적으로 [CFrameWndEx Class](../../mfc/reference/cframewndex-class.md)에서 처리하기 때문에 호출하지 않아도 됩니다.  
+ 일반적으로 않아도 때문에 도킹 사이트에서 제공 하는 서비스를 호출 하려면 [CFrameWndEx 클래스](../../mfc/reference/cframewndex-class.md) 이러한 서비스를 처리 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `CDockSite` 클래스의 개체를 만드는 방법을 보여 줍니다.  
   
- [!code-cpp[NVC_MFC_RibbonApp#27](../../mfc/reference/codesnippet/CPP/cdocksite-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp #&27;](../../mfc/reference/codesnippet/cpp/cdocksite-class_1.cpp)]  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** afxDockSite.h  
   
-## 참고 항목  
+##  <a name="a-nameaddrowa--cdocksiteaddrow"></a><a name="addrow"></a>CDockSite::AddRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CDockingPanesRow* AddRow(
+    POSITION pos,  
+    int nHeight);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pos`  
+ [in] `nHeight`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameadjustdockinglayouta--cdocksiteadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockSite::AdjustDockingLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void AdjustDockingLayout();
+```  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameadjustlayouta--cdocksiteadjustlayout"></a><a name="adjustlayout"></a>CDockSite::AdjustLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void AdjustLayout();
+```  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namealigndocksitea--cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDockSite::AlignDockSite  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void AlignDockSite(
+    const CRect& rectToAlignBy,  
+    CRect& rectResult,  
+    BOOL bMoveImmediately);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `rectToAlignBy`  
+ [in] `rectResult`  
+ [in] `bMoveImmediately`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namecalcfixedlayouta--cdocksitecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockSite::CalcFixedLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize CalcFixedLayout(
+    BOOL bStretch,  
+    BOOL bHorz);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `bStretch`  
+ [in] `bHorz`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namecanacceptpanea--cdocksitecanacceptpane"></a><a name="canacceptpane"></a>CDockSite::CanAcceptPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pBar`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namecreateexa--cdocksitecreateex"></a><a name="createex"></a>CDockSite::CreateEx  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CreateEx(
+    DWORD dwStyleEx,  
+    DWORD dwStyle,  
+    const RECT& rect,  
+    CWnd* pParentWnd,  
+    DWORD dwControlBarStyle,  
+    CCreateContext* pContext = NULL);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `dwStyleEx`  
+ [in] `dwStyle`  
+ [in] `rect`  
+ [in] `pParentWnd`  
+ [in] `dwControlBarStyle`  
+ [in] `pContext`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namecreaterowa--cdocksitecreaterow"></a><a name="createrow"></a>CDockSite::CreateRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CDockingPanesRow* CreateRow(
+    CDockSite* pParentDockBar,  
+    int nOffset,  
+    int nRowHeight);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pParentDockBar`  
+ [in] `nOffset`  
+ [in] `nRowHeight`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namedockpanea--cdocksitedockpane"></a><a name="dockpane"></a>CDockSite::DockPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void DockPane(
+    CPane* pWnd,  
+    AFX_DOCK_METHOD dockMethod,  
+    LPCRECT lpRect = NULL);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pWnd`  
+ [in] `dockMethod`  
+ [in] `lpRect`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namedockpaneleftofa--cdocksitedockpaneleftof"></a><a name="dockpaneleftof"></a>CDockSite::DockPaneLeftOf  
+ 창을 다른 창의 왼쪽에 도킹합니다.  
+  
+```  
+virtual BOOL DockPaneLeftOf(
+    CPane* pBarToDock,  
+    CPane* pTargetBar);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] [out]`pBarToDock`  
+ 왼쪽에 도킹 창에 대 한 포인터 `pTargetBar`합니다.  
+  
+ [in] [out]`pTargetBar`  
+ 대상 창에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `TRUE`창에서 성공적으로 고정 되어 있는 경우 그렇지 않으면 `FALSE`합니다.  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namedoesallowdyninsertbeforea--cdocksitedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL DoesAllowDynInsertBefore() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namefindpanebyida--cdocksitefindpanebyid"></a><a name="findpanebyid"></a>CDockSite::FindPaneByID  
+ 창에는 지정 된 ID 반환합니다.  
+  
+```  
+CPane* FindPaneByID(UINT nID);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `nID`  
+ 찾을 창의 명령 ID입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 창에는 지정 된 명령 ID에 대 한 포인터 또는 `NULL` 창을 찾을 수 없는 경우.  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namefindrowindexa--cdocksitefindrowindex"></a><a name="findrowindex"></a>CDockSite::FindRowIndex  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int FindRowIndex(CDockingPanesRow* pRow);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRow`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namefixupvirtualrectsa--cdocksitefixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void FixupVirtualRects();
+```  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namegetdocksiteida--cdocksitegetdocksiteid"></a><a name="getdocksiteid"></a>CDockSite::GetDockSiteID  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual UINT GetDockSiteID() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namegetdocksiterowslista--cdocksitegetdocksiterowslist"></a><a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+const CObList& GetDockSiteRowsList() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namegetpanelista--cdocksitegetpanelist"></a><a name="getpanelist"></a>CDockSite::GetPaneList  
+ 도킹 사이트에 도킹 된 창 목록을 반환 합니다.  
+  
+```  
+const CObList& GetPaneList() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 에 대 한 읽기 전용 참조 창의 목록은 현재 도킹 모음에 도킹 합니다.  
+  
+##  <a name="a-nameisaccessibilitycompatiblea--cdocksiteisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CDockSite::IsAccessibilityCompatible  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsAccessibilityCompatible();
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameisdragmodea--cdocksiteisdragmode"></a><a name="isdragmode"></a>CDockSite::IsDragMode  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsDragMode() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameislastrowa--cdocksiteislastrow"></a><a name="islastrow"></a>CDockSite::IsLastRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+bool IsLastRow(CDockingPanesRow* pRow) const;  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRow`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameisrectwithindocksitea--cdocksiteisrectwithindocksite"></a><a name="isrectwithindocksite"></a>CDockSite::IsRectWithinDockSite  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsRectWithinDockSite(
+    CRect rect,  
+    CPoint& ptDelta);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `rect`  
+ [in] `ptDelta`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameisresizablea--cdocksiteisresizable"></a><a name="isresizable"></a>CDockSite::IsResizable  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsResizable() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namemovepanea--cdocksitemovepane"></a><a name="movepane"></a>CDockSite::MovePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL MovePane(
+    CPane* pWnd,  
+    UINT nFlags,  
+    CPoint ptOffset);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pWnd`  
+ [in] `nFlags`  
+ [in] `ptOffset`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameoninsertrowa--cdocksiteoninsertrow"></a><a name="oninsertrow"></a>CDockSite::OnInsertRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnInsertRow(POSITION pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pos`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameonremoverowa--cdocksiteonremoverow"></a><a name="onremoverow"></a>CDockSite::OnRemoveRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnRemoveRow(
+    POSITION pos,  
+    BOOL bByShow = FALSE);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pos`  
+ [in] `bByShow`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameonresizerowa--cdocksiteonresizerow"></a><a name="onresizerow"></a>CDockSite::OnResizeRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual int OnResizeRow(
+    CDockingPanesRow* pRowToResize,  
+    int nOffset);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRowToResize`  
+ [in] `nOffset`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameonsizeparenta--cdocksiteonsizeparent"></a><a name="onsizeparent"></a>CDockSite::OnSizeParent  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnSizeParent(
+    CRect& rectAvailable,  
+    UINT nSide,  
+    BOOL bExpand,  
+    int nOffset);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `rectAvailable`  
+ [in] `nSide`  
+ [in] `bExpand`  
+ [in] `nOffset`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameonsetwindowposa--cdocksiteonsetwindowpos"></a><a name="onsetwindowpos"></a>CDockSite::OnSetWindowPos  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL OnSetWindowPos(
+    const CWnd* pWndInsertAfter,  
+    const CRect& rectWnd,  
+    UINT nFlags);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pWndInsertAfter`  
+ [in] `rectWnd`  
+ [in] `nFlags`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameonshowrowa--cdocksiteonshowrow"></a><a name="onshowrow"></a>CDockSite::OnShowRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnShowRow(
+    POSITION pos,  
+    BOOL bShow);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pos`  
+ [in] `bShow`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namepanefrompointa--cdocksitepanefrompoint"></a><a name="panefrompoint"></a>CDockSite::PaneFromPoint  
+ 주어진 매개 변수로 지정된 지점에서 도킹 사이트에 도킹된 창을 반환합니다.  
+  
+```  
+virtual CPane* PaneFromPoint(CPoint pt);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pt`  
+ 점, 검색 하 고 창에 대 한 화면 좌표입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 지정 된 지점에 있는 창에 대 한 포인터 또는 `NULL` 없는 창이 지정된 된 지점에 있는 경우.  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namerectsidefrompointa--cdocksiterectsidefrompoint"></a><a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+static int __stdcall RectSideFromPoint(
+    const CRect& rect,  
+    const CPoint& point);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `rect`  
+ [in] `point`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameremovepanea--cdocksiteremovepane"></a><a name="removepane"></a>CDockSite::RemovePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void RemovePane(
+    CPane* pWnd,  
+    AFX_DOCK_METHOD dockMethod);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pWnd`  
+ [in] `dockMethod`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameremoverowa--cdocksiteremoverow"></a><a name="removerow"></a>CDockSite::RemoveRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void RemoveRow(CDockingPanesRow* pRow);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRow`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namereplacepanea--cdocksitereplacepane"></a><a name="replacepane"></a>CDockSite::ReplacePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL ReplacePane(
+    CPane* pOldBar,  
+    CPane* pNewBar);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pOldBar`  
+ [in] `pNewBar`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-namerepositionpanesa--cdocksiterepositionpanes"></a><a name="repositionpanes"></a>CDockSite::RepositionPanes  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void RepositionPanes(CRect& rectNewClientArea);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `rectNewClientArea`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameresizedocksitea--cdocksiteresizedocksite"></a><a name="resizedocksite"></a>CDockSite::ResizeDockSite  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void ResizeDockSite(
+    int nNewWidth,  
+    int nNewHeight);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `nNewWidth`  
+ [in] `nNewHeight`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameresizerowa--cdocksiteresizerow"></a><a name="resizerow"></a>CDockSite::ResizeRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int ResizeRow(
+    CDockingPanesRow* pRow,  
+    int nNewSize,  
+    BOOL bAdjustLayout = TRUE);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRow`  
+ [in] `nNewSize`  
+ [in] `bAdjustLayout`  
+  
+### <a name="return-value"></a>반환 값  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameshowpanea--cdocksiteshowpane"></a><a name="showpane"></a>CDockSite::ShowPane  
+ 창을 표시합니다.  
+  
+```  
+virtual BOOL ShowPane(
+    CBasePane* pBar,  
+    BOOL bShow,  
+    BOOL bDelay,  
+    BOOL bActivate);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] [out]`pBar`  
+ 창에 표시 하거나 숨길 수에 대 한 포인터입니다.  
+  
+ [in] `bShow`  
+ `TRUE`창으로 표시 됩니다; 임을 지정 하려면 `FALSE` 창이 숨겨집니다 되는지 지정 합니다.  
+  
+ [in] `bDelay`  
+ `TRUE`창 레이아웃 창이 표시 되 고; 후까지 연기를 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+  
+ [in] `bActivate`  
+ 이 매개 변수는 사용되지 않습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ `TRUE`창 표시 또는 숨김 성공적으로 됨. `FALSE`지정한 창에 속하지 않는 경우 사이트를 도킹 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 표시 하거나 숨기려면 도킹 된 창에이 메서드를 호출 합니다. 호출할 필요가 없습니다 일반적으로 `CDockSite::ShowPane` 를 직접 기본 창 또는 부모 프레임 창에서 호출 되어 합니다.  
+  
+##  <a name="a-nameshowrowa--cdocksiteshowrow"></a><a name="showrow"></a>CDockSite::ShowRow  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void ShowRow(
+    CDockingPanesRow* pRow,  
+    BOOL bShow,  
+    BOOL bAdjustLayout);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pRow`  
+ [in] `bShow`  
+ [in] `bAdjustLayout`  
+  
+### <a name="remarks"></a>주의  
+  
+##  <a name="a-nameswaprowsa--cdocksiteswaprows"></a><a name="swaprows"></a>CDockSite::SwapRows  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SwapRows(
+    CDockingPanesRow* pFirstRow,  
+    CDockingPanesRow* pSecondRow);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `pFirstRow`  
+ [in] `pSecondRow`  
+  
+### <a name="remarks"></a>주의  
+  
+## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   
  [클래스](../../mfc/reference/mfc-classes.md)   
- [CBasePane Class](../../mfc/reference/cbasepane-class.md)
+ [CBasePane 클래스](../../mfc/reference/cbasepane-class.md)
+

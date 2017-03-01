@@ -1,104 +1,325 @@
 ---
-title: "IPropertyPageImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPropertyPageImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage ATL implementation"
-  - "IPropertyPageImpl class"
-  - "속성 페이지"
+title: "IPropertyPageImpl 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPropertyPageImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages
+- IPropertyPage ATL implementation
+- IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# IPropertyPageImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 1179e13eb33f09a363c7a3f4425a9ebf13c73b91
+ms.lasthandoff: 02/24/2017
 
-이 클래스를 구현 합니다.  **IUnknown** 의 기본 구현을 제공 하 고 있는  [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 인터페이스.  
+---
+# <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 클래스
+이 클래스는 구현 **IUnknown** 의 기본 구현을 제공 하 고는 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 인터페이스입니다.  
   
 > [!IMPORTANT]
->  이 클래스와 해당 멤버를 실행 하는 응용 프로그램에서 사용할 수 있는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template<class T>  
+class IPropertyPageImpl
 ```  
   
-      template< class   
-      T  
-      >  
-class IPropertyPageImpl  
-```  
-  
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 파생 클래스에서 `IPropertyPageImpl`.  
+ 파생 된 클래스에 `IPropertyPageImpl`합니다.  
   
-## Members  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[IPropertyPageImpl::IPropertyPageImpl](../Topic/IPropertyPageImpl::IPropertyPageImpl.md)|생성자입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|생성자입니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[IPropertyPageImpl::Activate](../Topic/IPropertyPageImpl::Activate.md)|대화 상자 창에 대 한 속성 페이지를 만듭니다.|  
-|[IPropertyPageImpl::Apply](../Topic/IPropertyPageImpl::Apply.md)|속성 페이지의 현재 값을 통해 지정 된 내부 개체가 적용 `SetObjects`.  ATL 구현을 반환 `S_OK`.|  
-|[IPropertyPageImpl::Deactivate](../Topic/IPropertyPageImpl::Deactivate.md)|작성 창을 소멸  **활성화**.|  
-|[IPropertyPageImpl::GetPageInfo](../Topic/IPropertyPageImpl::GetPageInfo.md)|속성 페이지에 대 한 정보를 검색합니다.|  
-|[IPropertyPageImpl::Help](../Topic/IPropertyPageImpl::Help.md)|속성 페이지에 대 한 Windows 도움말을 호출합니다.|  
-|[IPropertyPageImpl::IsPageDirty](../Topic/IPropertyPageImpl::IsPageDirty.md)|활성화 된 후 속성 페이지를 변경 했는지 여부를 나타냅니다.|  
-|[IPropertyPageImpl::Move](../Topic/IPropertyPageImpl::Move.md)|배치 및 속성 페이지 대화 상자 크기를 조정 합니다.|  
-|[IPropertyPageImpl::SetDirty](../Topic/IPropertyPageImpl::SetDirty.md)|속성 페이지의 상태가 변경 되거나 변경 되지 않은 플래그를 지정 합니다.|  
-|[IPropertyPageImpl::SetObjects](../Topic/IPropertyPageImpl::SetObjects.md)|배열을 제공  **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다.  현재 페이지 값 속성 호출을 통해 이러한 개체를 받을  **적용**.|  
-|[IPropertyPageImpl::SetPageSite](../Topic/IPropertyPageImpl::SetPageSite.md)|속성 페이지에서 제공 된 `IPropertyPageSite` 포인터 속성 페이지 통신 속성 프레임을 통해.|  
-|[IPropertyPageImpl::Show](../Topic/IPropertyPageImpl::Show.md)|속성 페이지 대화 상자를 표시 하거나 숨길 수 있습니다.|  
-|[IPropertyPageImpl::TranslateAccelerator](../Topic/IPropertyPageImpl::TranslateAccelerator.md)|지정 된 키 입력을 처리합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[IPropertyPageImpl::Activate](#activate)|속성 페이지에 대 한 대화 상자 창을 만듭니다.|  
+|[IPropertyPageImpl::Apply](#apply)|현재 속성 페이지 값을 통해 지정 된 기본 개체에 적용 됩니다. `SetObjects`합니다. ATL 구현은 `S_OK`합니다.|  
+|[IPropertyPageImpl::Deactivate](#deactivate)|창을 사용 하 여 만든 **활성화**합니다.|  
+|[IPropertyPageImpl::GetPageInfo](#getpageinfo)|속성 페이지에 대 한 정보를 검색합니다.|  
+|[IPropertyPageImpl::Help](#help)|속성 페이지에 대 한 Windows 도움말을 호출합니다.|  
+|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|속성 페이지 활성화 된 후 변경 되었는지 여부를 나타냅니다.|  
+|[IPropertyPageImpl::Move](#move)|배치 하 고 속성 페이지 대화 상자 크기를 조정 합니다.|  
+|[IPropertyPageImpl::SetDirty](#setdirty)|속성 페이지의 상태 변경 또는 변경 되지 않은으로 플래그를 지정 합니다.|  
+|[IPropertyPageImpl::SetObjects](#setobjects)|배열을 제공 **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다. 이러한 개체를 호출 하 여 현재 속성 페이지 값을 받을 **적용**합니다.|  
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|제공 된 속성 페이지는 `IPropertyPageSite` 속성 페이지 속성 프레임와 통신 하는 포인터입니다.|  
+|[IPropertyPageImpl::Show](#show)|표시 되거나 숨겨지도록 속성 페이지 대화 상자를 만듭니다.|  
+|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|지정 된 키 입력을 처리합니다.|  
   
-### 공용 데이터 멤버  
+### <a name="public-data-members"></a>공용 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[IPropertyPageImpl::m\_bDirty](../Topic/IPropertyPageImpl::m_bDirty.md)|속성 페이지의 상태가 변경 되었는지 여부를 지정 합니다.|  
-|[IPropertyPageImpl::m\_dwDocString](../Topic/IPropertyPageImpl::m_dwDocString.md)|속성 페이지를 설명 하는 텍스트 문자열을 연결 하는 리소스 식별자를 저장 합니다.|  
-|[IPropertyPageImpl::m\_dwHelpContext](../Topic/IPropertyPageImpl::m_dwHelpContext.md)|속성 페이지와 관련 된 도움말 컨텍스트 식별자를 저장 합니다.|  
-|[IPropertyPageImpl::m\_dwHelpFile](../Topic/IPropertyPageImpl::m_dwHelpFile.md)|속성 페이지를 설명 하는 도움말 파일의 이름에 연결 하는 리소스 식별자를 저장 합니다.|  
-|[IPropertyPageImpl::m\_dwTitle](../Topic/IPropertyPageImpl::m_dwTitle.md)|속성 페이지의 탭에 표시 되는 텍스트 문자열을 연결 하는 리소스 식별자를 저장 합니다.|  
-|[IPropertyPageImpl::m\_nObjects](../Topic/IPropertyPageImpl::m_nObjects.md)|속성 페이지와 관련 된 개체를 저장 합니다.|  
-|[IPropertyPageImpl::m\_pPageSite](../Topic/IPropertyPageImpl::m_pPageSite.md)|가리키는 있는 `IPropertyPageSite` 인터페이스 속성 페이지 통신 속성 프레임을 통해.|  
-|[IPropertyPageImpl::m\_ppUnk](../Topic/IPropertyPageImpl::m_ppUnk.md)|배열을 가리키는  **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다.|  
-|[IPropertyPageImpl::m\_size](../Topic/IPropertyPageImpl::m_size.md)|높이 너비의 속성 페이지 대화 상자에서 픽셀 단위로 저장 됩니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|속성 페이지의 상태가 변경 되었는지 여부를 지정 합니다.|  
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|속성 페이지를 설명 하는 텍스트 문자열로 연결 된 리소스 식별자를 저장 합니다.|  
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|속성 페이지와 관련 된 도움말 항목에 대 한 컨텍스트 식별자를 저장 합니다.|  
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|속성 페이지를 설명 하는 도움말 파일의 이름과 연결 된 리소스 식별자를 저장 합니다.|  
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|속성 페이지에 대 한 탭에 나타나는 텍스트 문자열로 연결 된 리소스 식별자를 저장 합니다.|  
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|속성 페이지와 관련 된 개체의 수를 저장 합니다.|  
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|가리키는 `IPropertyPageSite` 속성 페이지 속성 프레임와 통신 하는 인터페이스입니다.|  
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|배열을 가리키는 **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다.|  
+|[IPropertyPageImpl::m_size](#m_size)|속성 페이지 대화 상자의 너비와 높이 (픽셀)를 저장합니다.|  
   
-## 설명  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 인터페이스 개체 속성 시트 내에서 특정 속성 페이지를 관리할 수 있습니다.  클래스 `IPropertyPageImpl` 는이 인터페이스의 기본 구현을 제공 하 고 구현  **IUnknown** 덤프에 정보를 전송 하 여 장치에서 디버그 빌드.  
+## <a name="remarks"></a>주의  
+ [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 인터페이스를 사용 하는 속성 시트 내에서 특정 속성 페이지를 관리 하는 개체입니다. 클래스 `IPropertyPageImpl` 이 인터페이스의 기본 구현을 제공 하 고 구현 **IUnknown** 장치에서 디버그 덤프를 정보를 전송 하 여 빌드합니다.  
   
- **관련된 기사** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md),  [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
+ **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
-## 상속 계층 구조  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `IPropertyPage`  
   
  `IPropertyPageImpl`  
   
-## 요구 사항  
- **헤더:**  atlctl.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atlctl.h  
   
-## 참고 항목  
- [IPropertyPage2Impl Class](../../atl/reference/ipropertypage2impl-class.md)   
- [IPerPropertyBrowsingImpl Class](../../atl/reference/iperpropertybrowsingimpl-class.md)   
- [ISpecifyPropertyPagesImpl Class](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameactivatea--ipropertypageimplactivate"></a><a name="activate"></a>IPropertyPageImpl::Activate  
+ 속성 페이지에 대 한 대화 상자 창을 만듭니다.  
+  
+```
+HRESULT Activate(  
+    HWND hWndParent,
+    LPCRECT pRect,
+    BOOL bModal);
+```  
+  
+### <a name="remarks"></a>주의  
+ 기본적으로 대화 상자는 항상 값에 관계 없이 모덜리스는 *bModal* 매개 변수입니다.  
+  
+ 참조 [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nameapplya--ipropertypageimplapply"></a><a name="apply"></a>IPropertyPageImpl::Apply  
+ 현재 속성 페이지 값을 통해 지정 된 기본 개체에 적용 됩니다. `SetObjects`합니다.  
+  
+```
+HRESULT Apply();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `S_OK`를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namedeactivatea--ipropertypageimpldeactivate"></a><a name="deactivate"></a>IPropertyPageImpl::Deactivate  
+ 대화 상자 창을 사용 하 여 만든 [활성화](#activate)합니다.  
+  
+```
+HRESULT Deactivate();
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namegetpageinfoa--ipropertypageimplgetpageinfo"></a><a name="getpageinfo"></a>IPropertyPageImpl::GetPageInfo  
+ 채웁니다는 *pPageInfo* 데이터 멤버에 포함 된 정보가 포함 된 구조체입니다.  
+  
+```
+HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
+```  
+  
+### <a name="remarks"></a>주의  
+ `GetPageInfo`와 연결 된 문자열 리소스를 로드 [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), 및 [m_dwTitle](#m_dwtitle)합니다.  
+  
+ 참조 [IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namehelpa--ipropertypageimplhelp"></a><a name="help"></a>IPropertyPageImpl::Help  
+ 속성 페이지에 대 한 Windows 도움말을 호출합니다.  
+  
+```
+HRESULT Help(PROPPAGEINFO* pPageInfo);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nameipropertypageimpla--ipropertypageimplipropertypageimpl"></a><a name="ipropertypageimpl"></a>IPropertyPageImpl::IPropertyPageImpl  
+ 생성자입니다.  
+  
+```
+IPropertyPageImpl();
+```  
+  
+### <a name="remarks"></a>주의  
+ 모든 데이터 멤버를 초기화합니다.  
+  
+##  <a name="a-nameispagedirtya--ipropertypageimplispagedirty"></a><a name="ispagedirty"></a>IPropertyPageImpl::IsPageDirty  
+ 속성 페이지 활성화 된 후 변경 되었는지 여부를 나타냅니다.  
+  
+```
+HRESULT IsPageDirty(void);
+```  
+  
+### <a name="remarks"></a>주의  
+ `IsPageDirty`반환 `S_OK` 페이지 활성화 된 후 변경 된 경우.  
+  
+##  <a name="a-namembdirtya--ipropertypageimplmbdirty"></a><a name="m_bdirty"></a>IPropertyPageImpl::m_bDirty  
+ 속성 페이지의 상태가 변경 되었는지 여부를 지정 합니다.  
+  
+```
+BOOL m_bDirty;
+```  
+  
+##  <a name="a-namemnobjectsa--ipropertypageimplmnobjects"></a><a name="m_nobjects"></a>IPropertyPageImpl::m_nObjects  
+ 속성 페이지와 관련 된 개체의 수를 저장 합니다.  
+  
+```
+ULONG m_nObjects;
+```  
+  
+##  <a name="a-namemdwhelpcontexta--ipropertypageimplmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>IPropertyPageImpl::m_dwHelpContext  
+ 속성 페이지와 관련 된 도움말 항목에 대 한 컨텍스트 식별자를 저장 합니다.  
+  
+```
+DWORD m_dwHelpContext;
+```  
+  
+##  <a name="a-namemdwdocstringa--ipropertypageimplmdwdocstring"></a><a name="m_dwdocstring"></a>IPropertyPageImpl::m_dwDocString  
+ 속성 페이지를 설명 하는 텍스트 문자열로 연결 된 리소스 식별자를 저장 합니다.  
+  
+```
+UINT m_dwDocString;
+```  
+  
+##  <a name="a-namemdwhelpfilea--ipropertypageimplmdwhelpfile"></a><a name="m_dwhelpfile"></a>IPropertyPageImpl::m_dwHelpFile  
+ 속성 페이지를 설명 하는 도움말 파일의 이름과 연결 된 리소스 식별자를 저장 합니다.  
+  
+```
+UINT m_dwHelpFile;
+```  
+  
+##  <a name="a-namemdwtitlea--ipropertypageimplmdwtitle"></a><a name="m_dwtitle"></a>IPropertyPageImpl::m_dwTitle  
+ 속성 페이지에 대 한 탭에 나타나는 텍스트 문자열로 연결 된 리소스 식별자를 저장 합니다.  
+  
+```
+UINT m_dwTitle;
+```  
+  
+##  <a name="a-namemppagesitea--ipropertypageimplmppagesite"></a><a name="m_ppagesite"></a>IPropertyPageImpl::m_pPageSite  
+ 가리키는 [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) 속성 페이지 속성 프레임와 통신 하는 인터페이스입니다.  
+  
+```
+IPropertyPageSite* m_pPageSite;
+```  
+  
+##  <a name="a-namemppunka--ipropertypageimplmppunk"></a><a name="m_ppunk"></a>IPropertyPageImpl::m_ppUnk  
+ 배열을 가리키는 **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다.  
+  
+```
+IUnknown** m_ppUnk;
+```  
+  
+##  <a name="a-namemsizea--ipropertypageimplmsize"></a><a name="m_size"></a>IPropertyPageImpl::m_size  
+ 속성 페이지 대화 상자의 너비와 높이 (픽셀)를 저장합니다.  
+  
+```
+SIZE m_size;
+```  
+  
+##  <a name="a-namemovea--ipropertypageimplmove"></a><a name="move"></a>IPropertyPageImpl::Move  
+ 배치 하 고 속성 페이지 대화 상자 크기를 조정 합니다.  
+  
+```
+HRESULT Move(LPCRECT pRect);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namesetdirtya--ipropertypageimplsetdirty"></a><a name="setdirty"></a>IPropertyPageImpl::SetDirty  
+ 속성 페이지의 상태 변경 또는 값에 따라 변경 되지 않은 플래그 `bDirty`합니다.  
+  
+```
+void SetDirty(BOOL bDirty);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `bDirty`  
+ [in] 경우 **TRUE**, 속성 페이지의 상태가 변경 된 것으로 표시 됩니다. 그렇지 않으면 표시 되어으로 변경 되지 않습니다.  
+  
+### <a name="remarks"></a>주의  
+ 필요한 경우 `SetDirty` 속성 페이지가 변경 된 프레임을 알립니다.  
+  
+##  <a name="a-namesetobjectsa--ipropertypageimplsetobjects"></a><a name="setobjects"></a>IPropertyPageImpl::SetObjects  
+ 배열을 제공 **IUnknown** 속성 페이지와 관련 된 개체에 대 한 포인터입니다.  
+  
+```
+HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-namesetpagesitea--ipropertypageimplsetpagesite"></a><a name="setpagesite"></a>IPropertyPageImpl::SetPageSite  
+ 제공 된 속성 페이지는 [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) 속성 페이지 속성 프레임와 통신 하는 포인터입니다.  
+  
+```
+HRESULT SetPageSite(IPropertyPageSite* pPageSite);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nameshowa--ipropertypageimplshow"></a><a name="show"></a>IPropertyPageImpl::Show  
+ 표시 되거나 숨겨지도록 속성 페이지 대화 상자를 만듭니다.  
+  
+```
+HRESULT Show(UINT nCmdShow);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+##  <a name="a-nametranslateacceleratora--ipropertypageimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IPropertyPageImpl::TranslateAccelerator  
+ 에 지정 된 키 입력을 처리 `pMsg`합니다.  
+  
+```
+HRESULT TranslateAccelerator(MSG* pMsg);
+```  
+  
+### <a name="remarks"></a>주의  
+ 참조 [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [IPropertyPage2Impl 클래스](../../atl/reference/ipropertypage2impl-class.md)   
+ [IPerPropertyBrowsingImpl 클래스](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [ISpecifyPropertyPagesImpl 클래스](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

@@ -1,54 +1,85 @@
 ---
-title: "operation_timed_out 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::operation_timed_out"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operation_timed_out 클래스"
+title: "operation_timed_out 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::operation_timed_out
+dev_langs:
+- C++
+helpviewer_keywords:
+- operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# operation_timed_out 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 64fdbfa539218bb24211d12cefb415cfcacd8313
+ms.lasthandoff: 02/24/2017
 
-이 클래스는 작업 제한 시간이 초과되면 throw되는 예외를 설명합니다.  
+---
+# <a name="operationtimedout-class"></a>operation_timed_out 클래스
+이 클래스는 작업이 시간 초과된 경우 발생하는 예외를 설명합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class operation_timed_out : public std::exception;
 ```  
-class operation_timed_out : public std::exception;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[operation\_timed\_out::operation\_timed\_out 생성자](../Topic/operation_timed_out::operation_timed_out%20Constructor.md)|오버로드됨.  `operation_timed_out` 개체를 생성합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[operation_timed_out 생성자](#ctor)|오버로드됨. `operation_timed_out` 개체를 생성합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
   
  `operation_timed_out`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-operationtimedout"></a><a name="ctor"></a>operation_timed_out 
+
+ `operation_timed_out` 개체를 생성합니다.  
+  
+```
+explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
+
+operation_timed_out() throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Message`  
+ 오류 설명 메시지입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+
