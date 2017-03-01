@@ -1,33 +1,49 @@
 ---
-title: "ctype &lt; char &gt; 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "< char > ctype 클래스"
+title: "ctype&lt;char&gt; 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# ctype &lt; char &gt; 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-클래스는 템플릿 클래스의 명시적 특수화 **ctype \< CharType**> 형식으로 `char`, 형식의 문자의 다양 한 속성의 특징을 지정 하는 로캘 패싯으로 사용할 수 있는 개체를 설명 하는 `char`합니다.  
+---
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 클래스
+이 클래스는 `char` 형식에 대한 템플릿 클래스 **ctype\<CharType**>의 명시적 특수화입니다. `char` 형식 문자의 다양한 속성에 대해 특징을 지정하기 위한 로캘 패싯으로 사용할 수 있는 개체를 설명합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -129,30 +145,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>주의  
- 명시적 특수화는 여러 가지 방법으로 템플릿 클래스에서 다릅니다.  
+## <a name="remarks"></a>설명  
+ 명시적 특수화는 다음과 같은 여러 가지 면에서 템플릿 클래스와 다릅니다.  
   
--   Ctype 클래스의 개체 < `char`> UCHAR_MAX 배열을 + 1 개 요소 형식의 ctype 마스크 테이블의 첫 번째 요소에 대 한 포인터를 저장 **ctype_base::mask**합니다. 배열 삭제 되어야 할지 여부를 나타내는 Boolean 개체를 저장 합니다 (사용 하 여 `operator delete[]`) 때는 ctype \< **Elem**> 개체는 소멸 됩니다.  
+-   ctype<`char`> 클래스의 개체는 **ctype_base::mask** 형식의 UCHAR_MAX + 1 요소로 구성된 배열인, ctype 마스크 테이블의 첫 번째 요소에 대한 포인터를 저장합니다. 또한 ctype\< **Elem**> 개체가 삭제된 경우 배열을 삭제해야 할지(`operator delete[]`를 사용하여) 여부를 나타내는 부울 개체도 저장합니다.  
   
--   유일한 공용 생성자를 사용 하면 지정 **탭**, ctype 마스크 테이블 및 **del**, Boolean 개체 배열 해야 하면 true를 삭제는 ctype < `char`> 참조 횟수 매개 변수 refs 뿐만 아니라 개체 소멸 합니다.  
+-   유일한 공용 생성자를 사용하여 ctype 마스크 테이블, **tab**을 지정하고 ctype<`char`> 개체가 삭제되었을 때 배열을 삭제해야 하는 경우 true인 부울 개체, **del**을 지정하고 참조 횟수 매개 변수 refs도 지정할 수 있습니다.  
   
--   보호 된 멤버 함수 **테이블** 저장된 ctype 마스크 테이블을 반환 합니다.  
+-   보호된 멤버 함수 **table**은 저장된 ctype 마스크 테이블을 반환합니다.  
   
--   정적 멤버 개체 **table_size** ctype 마스크 테이블의 최소 요소 수를 지정 합니다.  
+-   정적 멤버 개체 **table_size**는 ctype 마스크 테이블의 최소 요소 수를 지정합니다.  
   
--   보호 된 정적 멤버 함수 **classic_table**(반환 ctype 마스크 테이블 "C" 로캘에 적합 합니다.  
+-   보호된 정적 멤버 함수 **classic_table**은 "C" 로캘에 적합한 ctype 마스크 테이블을 반환합니다.  
   
--   보호 된 가상 멤버 함수가 없는 [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), 또는 [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not)합니다. 해당 공용 멤버 함수 자체 동일한 작업을 수행 합니다.  
+-   보호된 가상 멤버 함수 [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) 또는 [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not)이 없습니다. 해당 공용 멤버 함수는 동일한 작업을 자체적으로 수행합니다.  
   
- 멤버 함수는 [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) 및 [do_widen](../standard-library/ctype-class.md#ctype__do_widen) 도 동일 하 게 하는 요소를 복사 합니다.  
+ 멤버 함수 [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) 및 [do_widen](../standard-library/ctype-class.md#ctype__do_widen)은 변경되지 않은 요소를 복사합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \< 로캘>  
+ **헤더:** \<locale>  
   
- **네임 스페이스:** std  
+ **네임스페이스:** std  
   
 ## <a name="see-also"></a>참고 항목  
- [facet 클래스](../Topic/facet%20Class.md)   
+ [facet 클래스](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
  [ctype_base 클래스](../standard-library/ctype-base-class.md)   
- [C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
