@@ -1,112 +1,1015 @@
 ---
-title: "CAccessToken Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATLSECURITY/CAccessToken"
-  - "ATL.CAccessToken"
-  - "CAccessToken"
-  - "ATL::CAccessToken"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessToken class"
+title: "CAccessToken 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATLSECURITY/CAccessToken
+- ATL.CAccessToken
+- CAccessToken
+- ATL::CAccessToken
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CAccessToken Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 79845a2be4f79a1ee94a9440e8508bcb0e38bcdd
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="caccesstoken-class"></a>CAccessToken 클래스
 이 클래스는 액세스 토큰에 대 한 래퍼입니다.  
   
 > [!IMPORTANT]
->  런타임에서 Windows를 실행 하는 응용 프로그램에서이 클래스와 해당 멤버를 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class CAccessToken
 ```  
   
-class CAccessToken  
+## <a name="members"></a>멤버  
   
-```  
+### <a name="public-constructors"></a>Public 생성자  
   
-## Members  
+|이름|설명|  
+|----------|-----------------|  
+|[CAccessToken:: ~ CAccessToken](#dtor)|소멸자입니다.|  
   
-### Public 생성자  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[CAccessToken::~CAccessToken](../Topic/CAccessToken::~CAccessToken.md)|소멸자|  
+|이름|설명|  
+|----------|-----------------|  
+|[CAccessToken::Attach](#attach)|지정 된 액세스 토큰 핸들의 소유권을 갖도록이 메서드를 호출 합니다.|  
+|[CAccessToken::CheckTokenMembership](#checktokenmembership)|호출에 지정 된 SID를 사용할 수 있는지 확인 하려면이 메서드는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::CreateImpersonationToken](#createimpersonationtoken)|새 가장 액세스 토큰을 생성 하도록이 메서드를 호출 합니다.|  
+|[CAccessToken::CreatePrimaryToken](#createprimarytoken)|새 기본 토큰을 생성 하도록이 메서드를 호출 합니다.|  
+|[CAccessToken::CreateProcessAsUser](#createprocessasuser)|가 나타내는 사용자의 보안 컨텍스트에서 실행 되는 새 프로세스를 만들도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|이 메서드를 새로 만드는 제한 된 `CAccessToken` 개체입니다.|  
+|[CAccessToken::Detach](#detach)|액세스 토큰의 소유권을 취소 하려면이 메서드를 호출 합니다.|  
+|[CAccessToken::DisablePrivilege](#disableprivilege)|권한을 사용 하지 않도록 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::DisablePrivileges](#disableprivileges)|하나 이상의 권한을 사용 하지 않으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::EnablePrivilege](#enableprivilege)|권한을 사용 하도록 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::EnablePrivileges](#enableprivileges)|하나 이상의 권한을 사용 가능 하도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|반환 하려면이 메서드를 호출는 `CAccessToken` 개체의 기본 DACL입니다.|  
+|[CAccessToken::GetEffectiveToken](#geteffectivetoken)|이 메서드를 호출 하는 `CAccessToken` 개체를 현재 스레드에 적용에 대 한 액세스 토큰입니다.|  
+|[CAccessToken::GetGroups](#getgroups)|호출 반환 하려면이 메서드는 `CAccessToken` 토큰 개체의 그룹.|  
+|[CAccessToken::GetHandle](#gethandle)|액세스 토큰에 대 한 핸들을 검색 하려면이 메서드를 호출 합니다.|  
+|[CAccessToken::GetImpersonationLevel](#getimpersonationlevel)|액세스 토큰에서 가장 수준을 가져오려면이 메서드를 호출 합니다.|  
+|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|와 연결 된 로그온 세션 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetLogonSid](#getlogonsid)|와 연결 된 로그온 SID를 가져오는이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetOwner](#getowner)|와 연결 된 소유자를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetPrimaryGroup](#getprimarygroup)|연결 된 기본 그룹을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetPrivileges](#getprivileges)|연관 된 권한을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetProcessToken](#getprocesstoken)|지정된 프로세스의 액세스 토큰을 사용해서 `CAccessToken`을 초기화하려면 이 메서드를 호출합니다.|  
+|[CAccessToken::GetProfile](#getprofile)|이 메서드를 호출에 연결 된 사용자 프로필을 가리키는 핸들을 가져올는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetSource](#getsource)|소스를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetStatistics](#getstatistics)|와 관련 된 정보를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetTerminalServicesSessionId](#getterminalservicessessionid)|연결 된 터미널 서비스 세션 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetThreadToken](#getthreadtoken)|초기화 하려면이 메서드를 호출의 `CAccessToken` 주어진된 스레드의에서 토큰을 사용 합니다.|  
+|[CAccessToken::GetTokenId](#gettokenid)|연결 된 토큰 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetType](#gettype)|토큰 형식을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::GetUser](#getuser)|연결 된 사용자를 식별 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|이 메서드를 호출에 연결 된 사용자 프로필을 가리키는 핸들을 가져올는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::Impersonate](#impersonate)|가장을 할당 하려면이 메서드를 호출 `CAccessToken` 스레드에 있습니다.|  
+|[CAccessToken::ImpersonateLoggedOnUser](#impersonateloggedonuser)|로그온 한 사용자의 보안 컨텍스트를 가장할 호출 스레드를 허용 하려면이 메서드를 호출 합니다.|  
+|[CAccessToken::IsTokenRestricted](#istokenrestricted)|테스트 하기 위해이 메서드를 호출 하는 `CAccessToken` 개체 제한 된 Sid의 목록을 포함 합니다.|  
+|[CAccessToken::LoadUserProfile](#loaduserprofile)|와 연결 된 사용자 프로필을 로드 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::LogonUser](#logonuser)|지정된 된 자격 증명을 연관 된 사용자에 대 한 로그온 세션을 만들려면이 메서드를 호출 합니다.|  
+|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|초기화 하는 클라이언트에서 호출을 처리 하는 COM 서버에서이 메서드를 호출 하는 `CAccessToken` COM 클라이언트에서 액세스 토큰을 사용 합니다.|  
+|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|호출 하는 서버에서이 메서드를 작성 요청 초기화 하는 명명 된 파이프를 통한는 `CAccessToken` 클라이언트에서 액세스 토큰을 사용 합니다.|  
+|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|초기화 하도록 RPC 클라이언트에서 호출을 처리 하는 서버에서이 메서드를 호출 하는 `CAccessToken` 클라이언트에서 액세스 토큰을 사용 합니다.|  
+|[CAccessToken::OpenThreadToken](#openthreadtoken)|가장 수준을 설정 하 고 다음을 초기화 하려면이 메서드를 호출 하는 `CAccessToken` 주어진된 스레드의에서 토큰을 사용 합니다.|  
+|[CAccessToken::PrivilegeCheck](#privilegecheck)|지정된 된 권한 집합에 사용 되는지 여부를 확인 하려면이 메서드를 호출 하는 **CAccessToken** 개체입니다.|  
+|[CAccessToken::Revert](#revert)|가장 토큰을 사용 하는 스레드를 중지 하려면이 메서드를 호출 합니다.|  
+|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|기본 설정 하려면이 메서드를 호출의 DACL은 `CAccessToken` 개체입니다.|  
+|[CAccessToken::SetOwner](#setowner)|소유자를 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
+|[CAccessToken::SetPrimaryGroup](#setprimarygroup)|주 그룹을 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
   
-### Public 메서드  
+## <a name="remarks"></a>주의  
+ [액세스 토큰](http://msdn.microsoft.com/library/windows/desktop/aa374909) 는 프로세스 또는 스레드의 보안 컨텍스트를 설명 하 고 Windows NT 또는 Windows 2000 시스템에 로그온 한 각 사용자에 게 할당 하는 개체입니다.  
   
-|Name|설명|  
-|----------|--------|  
-|[CAccessToken::Attach](../Topic/CAccessToken::Attach.md)|지정 된 액세스 토큰 핸들의 소유권을 가져오려면이 메서드를 호출 합니다.|  
-|[CAccessToken::CheckTokenMembership](../Topic/CAccessToken::CheckTokenMembership.md)|지정 된 SID를 사용 하는지 확인 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::CreateImpersonationToken](../Topic/CAccessToken::CreateImpersonationToken.md)|새 가장 액세스 토큰을 만들 때이 메서드를 호출 합니다.|  
-|[CAccessToken::CreatePrimaryToken](../Topic/CAccessToken::CreatePrimaryToken.md)|새 주 토큰을 만들 때이 메서드를 호출 합니다.|  
-|[CAccessToken::CreateProcessAsUser](../Topic/CAccessToken::CreateProcessAsUser.md)|표시 되는 사용자의 보안 컨텍스트에서 실행 되는 새 프로세스를 만들려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::CreateRestrictedToken](../Topic/CAccessToken::CreateRestrictedToken.md)|새로 만들려면이 메서드를 호출 합니다. 제한 된 `CAccessToken` 개체입니다.|  
-|[CAccessToken::Detach](../Topic/CAccessToken::Detach.md)|액세스 토큰의 소유권을 해지 하려면이 메서드를 호출 합니다.|  
-|[CAccessToken::DisablePrivilege](../Topic/CAccessToken::DisablePrivilege.md)|권한을 사용 하지 않으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::DisablePrivileges](../Topic/CAccessToken::DisablePrivileges.md)|에 하나 이상의 권한을 사용 하지 않으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::EnablePrivilege](../Topic/CAccessToken::EnablePrivilege.md)|권한을 사용할 수 있도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::EnablePrivileges](../Topic/CAccessToken::EnablePrivileges.md)|에 하나 이상의 권한을 사용 가능 하도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetDefaultDacl](../Topic/CAccessToken::GetDefaultDacl.md)|반환 하려면이 메서드를 호출 하 여 `CAccessToken` 개체의 DACL을 기본.|  
-|[CAccessToken::GetEffectiveToken](../Topic/CAccessToken::GetEffectiveToken.md)|가져오려면이 메서드를 호출 하는 `CAccessToken` 개체 액세스 토큰을 현재 스레드에 대 한 적용 합니다.|  
-|[CAccessToken::GetGroups](../Topic/CAccessToken::GetGroups.md)|반환 하려면이 메서드를 호출 하는 `CAccessToken` 토큰 개체의 그룹입니다.|  
-|[CAccessToken::GetHandle](../Topic/CAccessToken::GetHandle.md)|액세스 토큰에 대 한 핸들을 검색 하려면이 메서드를 호출 합니다.|  
-|[CAccessToken::GetImpersonationLevel](../Topic/CAccessToken::GetImpersonationLevel.md)|가장 수준의 액세스 토큰에서 가져오도록이 메서드를 호출 합니다.|  
-|[CAccessToken::GetLogonSessionId](../Topic/CAccessToken::GetLogonSessionId.md)|관련 된 로그온 세션 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetLogonSid](../Topic/CAccessToken::GetLogonSid.md)|연관 된 로그온 SID를 얻으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetOwner](../Topic/CAccessToken::GetOwner.md)|연결 소유자를 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetPrimaryGroup](../Topic/CAccessToken::GetPrimaryGroup.md)|관련 된 주 그룹을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetPrivileges](../Topic/CAccessToken::GetPrivileges.md)|관련 된 권한을 얻으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetProcessToken](../Topic/CAccessToken::GetProcessToken.md)|초기화 하는이 메서드를 호출 하는 `CAccessToken` 지정 된 프로세스에서 액세스 토큰.|  
-|[CAccessToken::GetProfile](../Topic/CAccessToken::GetProfile.md)|관련 사용자 프로 파일을 가리키는 핸들을 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetSource](../Topic/CAccessToken::GetSource.md)|소스를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetStatistics](../Topic/CAccessToken::GetStatistics.md)|관련 정보를 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetTerminalServicesSessionId](../Topic/CAccessToken::GetTerminalServicesSessionId.md)|연결 된 터미널 서비스 세션 ID를 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetThreadToken](../Topic/CAccessToken::GetThreadToken.md)|초기화 하는이 메서드를 호출 하는 `CAccessToken` 토큰에서 지정 된 스레드.|  
-|[CAccessToken::GetTokenId](../Topic/CAccessToken::GetTokenId.md)|토큰에 연결 된 ID를 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetType](../Topic/CAccessToken::GetType.md)|토큰 형식을 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::GetUser](../Topic/CAccessToken::GetUser.md)|와 관련 된 사용자를 확인 하려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::HKeyCurrentUser](../Topic/CAccessToken::HKeyCurrentUser.md)|관련 사용자 프로 파일을 가리키는 핸들을 가져오려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::Impersonate](../Topic/CAccessToken::Impersonate.md)|할당 된 가장이이 메서드를 호출 `CAccessToken` 스레드 수입니다.|  
-|[CAccessToken::ImpersonateLoggedOnUser](../Topic/CAccessToken::ImpersonateLoggedOnUser.md)|호출 스레드는 로그온 한 사용자의 보안 컨텍스트를 가장할 수 있도록이 메서드를 호출 합니다.|  
-|[CAccessToken::IsTokenRestricted](../Topic/CAccessToken::IsTokenRestricted.md)|테스트 하는 경우이 메서드를 호출 하는 `CAccessToken` 개체의 제한 된 Sid 목록을 포함 합니다.|  
-|[CAccessToken::LoadUserProfile](../Topic/CAccessToken::LoadUserProfile.md)|관련 된 사용자 프로필을 로드 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.|  
-|[CAccessToken::LogonUser](../Topic/CAccessToken::LogonUser.md)|지정 된 자격 증명과 관련 된 사용자에 로그온 세션을 만들려면이 메서드를 호출 합니다.|  
-|[CAccessToken::OpenCOMClientToken](../Topic/CAccessToken::OpenCOMClientToken.md)|초기화 하는 클라이언트에서 호출을 처리 하는 COM 서버 내에서이 메서드를 호출 하는 `CAccessToken` COM 클라이언트에서 액세스 토큰.|  
-|[CAccessToken::OpenNamedPipeClientToken](../Topic/CAccessToken::OpenNamedPipeClientToken.md)|초기화는 명명 된 파이프를 통해이 서버에서이 메서드 호출 기록 요청은 `CAccessToken` 액세스 토큰을 클라이언트에서.|  
-|[CAccessToken::OpenRPCClientToken](../Topic/CAccessToken::OpenRPCClientToken.md)|초기화 하는 RPC 클라이언트에서 호출을 처리 하는 서버에서이 메서드를 호출의 `CAccessToken` 액세스 토큰은 클라이언트에서에.|  
-|[CAccessToken::OpenThreadToken](../Topic/CAccessToken::OpenThreadToken.md)|가장 수준을 설정 하 고 다음 초기화 하려면이 메서드를 호출 하는 `CAccessToken` 토큰에서 지정 된 스레드입니다.|  
-|[CAccessToken::PrivilegeCheck](../Topic/CAccessToken::PrivilegeCheck.md)|지정 된 집합의 권한 있는 사용에 있는지 확인 하려면이 메서드를 호출 하는  **CAccessToken**  개체.|  
-|[CAccessToken::Revert](../Topic/CAccessToken::Revert.md)|가장 토큰을 사용 하 여 스레드를 중지 하려면이 메서드를 호출 합니다.|  
-|[CAccessToken::SetDefaultDacl](../Topic/CAccessToken::SetDefaultDacl.md)|기본값을 설정 하려면이 메서드를 호출의 DACL의 `CAccessToken` 개체입니다.|  
-|[CAccessToken::SetOwner](../Topic/CAccessToken::SetOwner.md)|소유자를 설정 하려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
-|[CAccessToken::SetPrimaryGroup](../Topic/CAccessToken::SetPrimaryGroup.md)|주 그룹을 설정 하려면이 메서드를 호출 하 여 `CAccessToken` 개체입니다.|  
+ Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-## 설명  
- [액세스 토큰](http://msdn.microsoft.com/library/windows/desktop/aa374909) 프로세스 또는 스레드의 보안 컨텍스트를 설명 하 고 Windows NT 또는 Windows 2000 시스템에 로그온 한 각 사용자에 게 할당 되는 개체입니다.  
-  
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오.  [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 있는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
-  
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-## 참고 항목  
- [ATLSecurity 샘플](../../top/visual-cpp-samples.md)   
- [Access Tokens](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameattacha--caccesstokenattach"></a><a name="attach"></a>CAccessToken::Attach  
+ 지정 된 액세스 토큰 핸들의 소유권을 갖도록이 메서드를 호출 합니다.  
+  
+```
+void Attach(HANDLE hToken) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *hToken*  
+ 액세스 토큰에 대 한 핸들입니다.  
+  
+### <a name="remarks"></a>주의  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다는 `CAccessToken` 개체는 액세스 토큰의 소유권을 이미가지고 있습니다.  
+  
+##  <a name="a-namedtora--caccesstokencaccesstoken"></a><a name="dtor"></a>CAccessToken:: ~ CAccessToken  
+ 소멸자입니다.  
+  
+```
+virtual ~CAccessToken() throw();
+```  
+  
+### <a name="remarks"></a>주의  
+ 할당 된 모든 리소스를 해제합니다.  
+  
+##  <a name="a-namechecktokenmembershipa--caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
+ 호출에 지정 된 SID를 사용할 수 있는지 확인 하려면이 메서드는 `CAccessToken` 개체입니다.  
+  
+```
+bool CheckTokenMembership(
+    const CSid& rSid, 
+    bool* pbIsMember) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rSid`  
+ 에 대 한 참조는 [CSid 클래스](../../atl/reference/csid-class.md) 개체입니다.  
+  
+ `pbIsMember`  
+ 에 대 한 검사 결과 수신 하는 변수에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ `CheckTokenMembership` 메서드는 사용자 및 그룹 Sid 액세스 토큰의 SID가 있는지 확인 합니다. SID가 있고 SE_GROUP_ENABLED 특성이 있는 경우 *pbIsMember* 가 false로 설정 된에 true이 고, 그렇지 않으면을 설정 합니다.  
+  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 `pbIsMember` 유효한 포인터가 아닙니다.  
+  
+> [!NOTE]
+>  `CAccessToken` 가장 토큰 및 주 토큰 하지 개체 여야 합니다.  
+  
+##  <a name="a-namecreateimpersonationtokena--caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
+ 가장 액세스 토큰을 생성 하도록이 메서드를 호출 합니다.  
+  
+```
+bool CreateImpersonationToken(
+    CAccessToken* pImp, 
+    SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pImp`  
+ 새 포인터 `CAccessToken` 개체입니다.  
+  
+ `sil`  
+ 지정는 [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) 열거 새 토큰의 가장 수준을 제공 하는 형식입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ `CreateImpersonationToken`호출 [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) 새 가장 토큰을 만듭니다.  
+  
+##  <a name="a-namecreateprimarytokena--caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
+ 새 기본 토큰을 생성 하도록이 메서드를 호출 합니다.  
+  
+```
+bool CreatePrimaryToken(
+    CAccessToken* pPri,
+    DWORD dwDesiredAccess = MAXIMUM_ALLOWED,
+    const CSecurityAttributes* pTokenAttributes = NULL) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pPri*  
+ 새 포인터 `CAccessToken` 개체입니다.  
+  
+ `dwDesiredAccess`  
+ 새 토큰에 대 한 요청 된 액세스 권한을 지정합니다. 기본적으로 MAXIMUM_ALLOWED, 호출자가 사용할 수 있는 모든 액세스 권한을 요청 합니다. 참조 [액세스 권한 및 액세스 마스크](http://msdn.microsoft.com/library/windows/desktop/aa374902) 에 더 많은 액세스 권한에 대 한 합니다.  
+  
+ *pTokenAttributes*  
+ 에 대 한 포인터는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 새 토큰에 대 한 보안 설명자를 지정 하 고 자식 프로세스 토큰을 상속할 수 있는지 여부를 결정 하는 구조입니다. 경우 *pTokenAttributes* 가 NULL이 고, 토큰에는 기본 보안 설명자를 가져옵니다 핸들을 상속할 수 없습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ `CreatePrimaryToken`호출 [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) 새 기본 토큰을 만듭니다.  
+  
+##  <a name="a-namecreateprocessasusera--caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+ 가 나타내는 사용자의 보안 컨텍스트에서 실행 되는 새 프로세스를 만들도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool CreateProcessAsUser(
+    LPCTSTR pApplicationName,
+    LPTSTR pCommandLine,
+    LPPROCESS_INFORMATION pProcessInformation,
+    LPSTARTUPINFO pStartupInfo,
+    DWORD dwCreationFlags = NORMAL_PRIORITY_CLASS,
+    bool bLoadProfile = false,
+    const CSecurityAttributes* pProcessAttributes = NULL,
+    const CSecurityAttributes* pThreadAttributes = NULL,
+    bool bInherit = false,
+    LPCTSTR pCurrentDirectory = NULL) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pApplicationName*  
+ 모듈에서 실행 하도록 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 이 매개 변수는 NULL 일 수 없습니다.  
+  
+ *pCommandLine*  
+ 실행할 명령줄을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+  
+ *pProcessInformation*  
+ 에 대 한 포인터는 [PROCESS_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/ms684873) 새 프로세스에 대 한 식별 정보를 수신 하는 구조입니다.  
+  
+ *pStartupInfo*  
+ 에 대 한 포인터는 [STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331) 새 프로세스에 대 한 주 창 표시 되는 방식을 지정 하는 구조입니다.  
+  
+ `dwCreationFlags`  
+ 우선 순위 클래스 및 프로세스 생성을 제어 하는 추가 플래그를 지정 합니다. Win32 함수를 참조 하십시오. [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) 플래그 목록은 합니다.  
+  
+ *bLoadProfile*  
+ True 인 경우 함께 사용자의 프로필 로드는 [LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281)합니다.  
+  
+ *pProcessAttributes*  
+ 에 대 한 포인터는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 새로운 프로세스에 대 한 보안 설명자를 지정 하 고 자식 프로세스에 반환 된 핸들을 상속할 수 있는지 여부를 결정 하는 구조입니다. 경우 *pProcessAttributes* 가 NULL이 고, 프로세스에는 기본 보안 설명자를 가져옵니다 핸들을 상속할 수 없습니다.  
+  
+ *pThreadAttributes*  
+ 에 대 한 포인터는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 새 스레드에 대 한 보안 설명자를 지정 하 고 자식 프로세스에 반환 된 핸들을 상속할 수 있는지 여부를 결정 하는 구조입니다. 경우 *pThreadAttributes* 가 NULL이 고, 스레드는 기본 보안 설명자를 가져옵니다 핸들을 상속할 수 없습니다.  
+  
+ *bInherit*  
+ 새 프로세스가 호출 프로세스에서 핸들을 상속 되는지 여부를 나타냅니다. True 인 경우, 각 상속 가능한 열린 핸들 호출 프로세스에서 새 프로세스에 의해 상속 됩니다. 상속 된 핸들에는 원래 핸들 동일한 값 및 액세스 권한을 가져야 합니다.  
+  
+ *pCurrentDirectory*  
+ 새 프로세스에 대 한 디렉터리와 현재 드라이브를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 문자열에 드라이브 문자를 포함 하는 전체 경로 여야 합니다. 이 매개 변수가 NULL 이면 새 프로세스에 호출 프로세스와 같은 현재 드라이브와 디렉터리 될 것입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ **CreateProcessAsUser** 사용 하는 `CreateProcessAsUser` Win32 함수를 나타내는 사용자의 보안 컨텍스트에서 실행 되는 새 프로세스를 만드는 `CAccessToken` 개체입니다. 에 대 한 설명을 참조는 [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) 대 한 전체 설명은 필요한 매개 변수는 함수입니다.  
+  
+ 이 메서드가 성공 하려면에 대 한는 `CAccessToken` 개체 (하지 않은 제한 된 토큰) AssignPrimaryToken 남겨두어야 및 IncreaseQuota 권한.  
+  
+##  <a name="a-namecreaterestrictedtokena--caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+ 이 메서드를 새로 만드는 제한 된 `CAccessToken` 개체입니다.  
+  
+```
+bool CreateRestrictedToken(
+    CAccessToken* pRestrictedToken,
+    const CTokenGroups& SidsToDisable,
+    const CTokenGroups& SidsToRestrict,
+    const CTokenPrivileges& PrivilegesToDelete = CTokenPrivileges()) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pRestrictedToken*  
+ 새로운 제한 `CAccessToken` 개체입니다.  
+  
+ `SidsToDisable`  
+ A `CTokenGroups` 거부 전용 Sid를 지정 하는 개체입니다.  
+  
+ *SidsToRestrict*  
+ A `CTokenGroups` 제한 Sid를 지정 하는 개체입니다.  
+  
+ `PrivilegesToDelete`  
+ A `CTokenPrivileges` 삭제 하는 권한이 제한 된 토큰을 지정 하는 개체입니다. 기본값은 빈 개체를 만듭니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ `CreateRestrictedToken`사용 하 여는 [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 함수를 만들기 위한 `CAccessToken` 개체를 제한 합니다.  
+  
+> [!NOTE]
+>  이 메서드는 에서만 이상 Windows 2000에서 사용할 수 있습니다.  
+  
+> [!IMPORTANT]
+>  사용 하는 경우 `CreateRestrictedToken`, 다음 사항을 확인 하십시오: 기존 토큰은 유효한 (및 사용자가 입력 한 하지) 및 `SidsToDisable` 및 `PrivilegesToDelete` 모두 유효한 (및 사용자가 입력 없습니다). 메서드가 false를 반환 하면 기능을 거부 합니다.  
+  
+##  <a name="a-namedetacha--caccesstokendetach"></a><a name="detach"></a>CAccessToken::Detach  
+ 액세스 토큰의 소유권을 취소 하려면이 메서드를 호출 합니다.  
+  
+```
+HANDLE Detach() throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 에 대 한 핸들을 반환 된 `CAccessToken` 는 분리 되었습니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 메서드를 해지는 `CAccessToken`의 액세스 토큰의 소유 합니다.  
+  
+##  <a name="a-namedisableprivilegea--caccesstokendisableprivilege"></a><a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
+ 권한을 사용 하지 않도록 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool DisablePrivilege(
+    LPCTSTR pszPrivilege,
+    CTokenPrivileges* pPreviousState = NULL) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pszPrivilege`  
+ 사용 하지 않도록 설정할 수 있는 권한이 포함 된 문자열에 대 한 포인터는 `CAccessToken` 개체입니다.  
+  
+ `pPreviousState`  
+ 에 대 한 포인터는 `CTokenPrivileges` 권한의 이전 상태를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namedisableprivilegesa--caccesstokendisableprivileges"></a><a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
+ 하나 이상의 권한을 사용 하지 않으려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool DisablePrivileges(
+    const CAtlArray<LPCTSTR>& rPrivileges,
+    CTokenPrivileges* pPreviousState = NULL) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rPrivileges`  
+ 사용 하지 않도록 설정 하는 권한을 포함 하는 문자열의 배열에 대 한 포인터는 `CAccessToken` 개체입니다.  
+  
+ `pPreviousState`  
+ 에 대 한 포인터는 `CTokenPrivileges` 권한의 이전 상태를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-nameenableprivilegea--caccesstokenenableprivilege"></a><a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
+ 권한을 사용 하도록 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool EnablePrivilege(
+    LPCTSTR pszPrivilege,
+    CTokenPrivileges* pPreviousState = NULL) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pszPrivilege`  
+ 사용할 수 있도록 권한을 포함 하는 문자열에 대 한 포인터는 `CAccessToken` 개체입니다.  
+  
+ `pPreviousState`  
+ 에 대 한 포인터는 `CTokenPrivileges` 권한의 이전 상태를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-nameenableprivilegesa--caccesstokenenableprivileges"></a><a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
+ 하나 이상의 권한을 사용 가능 하도록이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool EnablePrivileges(
+    const CAtlArray<LPCTSTR>& rPrivileges,
+    CTokenPrivileges* pPreviousState = NULL) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rPrivileges`  
+ 사용 하기 위한 권한을 포함 하는 문자열의 배열에 대 한 포인터는 `CAccessToken` 개체입니다.  
+  
+ `pPreviousState`  
+ 에 대 한 포인터는 `CTokenPrivileges` 권한의 이전 상태를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetdefaultdacla--caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
+ 반환 하려면이 메서드를 호출는 `CAccessToken` 개체의 기본 DACL입니다.  
+  
+```
+bool GetDefaultDacl(CDacl* pDacl) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pDacl`  
+ 에 대 한 포인터는 [CDacl 클래스](../../atl/reference/cdacl-class.md) 를 수신할 개체는 **CAccessToken** 개체의 기본 DACL입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 기본 DACL 되었으면 false로 설정 복구 그렇지 않으면 true를 반환 합니다.  
+  
+##  <a name="a-namegeteffectivetokena--caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+ 이 메서드를 호출 하는 `CAccessToken` 개체를 현재 스레드에 적용에 대 한 액세스 토큰입니다.  
+  
+```
+bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetgroupsa--caccesstokengetgroups"></a><a name="getgroups"></a>CAccessToken::GetGroups  
+ 호출 반환 하려면이 메서드는 `CAccessToken` 토큰 개체의 그룹.  
+  
+```
+bool GetGroups(CTokenGroups* pGroups) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pGroups*  
+ 에 대 한 포인터는 [CTokenGroups 클래스](../../atl/reference/ctokengroups-class.md) 그룹 정보를 받을 수 있는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegethandlea--caccesstokengethandle"></a><a name="gethandle"></a>CAccessToken::GetHandle  
+ 액세스 토큰에 대 한 핸들을 검색 하려면이 메서드를 호출 합니다.  
+  
+```
+HANDLE GetHandle() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 에 대 한 핸들을 반환 된 `CAccessToken` 개체의 액세스 토큰입니다.  
+  
+##  <a name="a-namegetimpersonationlevela--caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
+ 액세스 토큰에서 가장 수준을 가져오려면이 메서드를 호출 합니다.  
+  
+```
+bool GetImpersonationLevel(
+    SECURITY_IMPERSONATION_LEVEL* pImpersonationLevel) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pImpersonationLevel*  
+ 에 대 한 포인터는 [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) 가장 수준 정보를 수신할 열거형 형식입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetlogonsessionida--caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
+ 와 연결 된 로그온 세션 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetLogonSessionId(LUID* pluid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pluid`  
+ 에 대 한 포인터는 [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) 는 로그온 세션 id입니다. 수신할 됩니다  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 `pluid` 은 잘못 된 값입니다.  
+  
+##  <a name="a-namegetlogonsida--caccesstokengetlogonsid"></a><a name="getlogonsid"></a>CAccessToken::GetLogonSid  
+ 와 연결 된 로그온 SID를 가져오는이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetLogonSid(CSid* pSid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pSid`  
+ 에 대 한 포인터는 [CSid 클래스](../../atl/reference/csid-class.md) 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 *pSid* 은 잘못 된 값입니다.  
+  
+##  <a name="a-namegetownera--caccesstokengetowner"></a><a name="getowner"></a>CAccessToken::GetOwner  
+ 와 연결 된 소유자를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetOwner(CSid* pSid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pSid`  
+ 에 대 한 포인터는 [CSid 클래스](../../atl/reference/csid-class.md) 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 소유자는이 액세스 토큰이 적용 되는 동안 생성 된 모든 개체에는 기본적으로 설정 됩니다.  
+  
+##  <a name="a-namegetprimarygroupa--caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+ 연결 된 기본 그룹을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetPrimaryGroup(CSid* pSid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pSid`  
+ 에 대 한 포인터는 [CSid 클래스](../../atl/reference/csid-class.md) 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 그룹은이 액세스 토큰이 적용 되는 동안 생성 된 모든 개체에는 기본적으로 설정 됩니다.  
+  
+##  <a name="a-namegetprivilegesa--caccesstokengetprivileges"></a><a name="getprivileges"></a>CAccessToken::GetPrivileges  
+ 연관 된 권한을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pPrivileges`  
+ 에 대 한 포인터는 [CTokenPrivileges 클래스](../../atl/reference/ctokenprivileges-class.md) 개체 권한을 받게 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetprocesstokena--caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
+ 지정된 프로세스의 액세스 토큰을 사용해서 `CAccessToken`을 초기화하려면 이 메서드를 호출합니다.  
+  
+```
+bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ *hProcess*  
+ 액세스 토큰이 열린 프로세스에 대한 핸들입니다. 기본값 `NULL`이 사용된 경우 현재 프로세스가 사용됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 `true`를 반환하고 실패하면 `false`를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 호출 된 [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 함수입니다.  
+  
+##  <a name="a-namegetprofilea--caccesstokengetprofile"></a><a name="getprofile"></a>CAccessToken::GetProfile  
+ 이 메서드를 호출에 연결 된 사용자 프로필을 가리키는 핸들을 가져올는 `CAccessToken` 개체입니다.  
+  
+```
+HANDLE GetProfile() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 프로필이 없는 경우 사용자 프로필 또는 NULL을 가리키는 핸들을 반환 합니다.  
+  
+##  <a name="a-namegetsourcea--caccesstokengetsource"></a><a name="getsource"></a>CAccessToken::GetSource  
+ 소스를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pSource*  
+ 에 대 한 포인터는 [TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631) 구조입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetstatisticsa--caccesstokengetstatistics"></a><a name="getstatistics"></a>CAccessToken::GetStatistics  
+ 와 관련 된 정보를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pStatistics*  
+ 에 대 한 포인터는 [TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632) 구조입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetterminalservicessessionida--caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+ 연결 된 터미널 서비스 세션 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *pdwSessionId*  
+ 터미널 서비스 세션 id입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegetthreadtokena--caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
+ 초기화 하려면이 메서드를 호출의 `CAccessToken` 주어진된 스레드의에서 토큰을 사용 합니다.  
+  
+```
+bool GetThreadToken(
+    DWORD dwDesiredAccess,
+    HANDLE hThread = NULL,
+    bool bOpenAsSelf = true) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ `hThread`  
+ 해당 액세스 토큰이 열린 스레드 핸들입니다.  
+  
+ `bOpenAsSelf`  
+ 스레드 호출의 보안 컨텍스트에 대해 수행 되는 액세스 검사 인지를 나타냅니다는 `GetThreadToken` 메서드 또는 호출 스레드에 대 한 프로세스의 보안 컨텍스트에 대 한 합니다.  
+  
+ 이 매개 변수가 false 인 경우 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사가 수행 됩니다. 스레드는 클라이언트를 가장 하는 경우이 보안 컨텍스트는 클라이언트 프로세스의 될 수 있습니다. 이 매개 변수가 true 인 경우 프로세스의 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사는 수행 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegettokenida--caccesstokengettokenid"></a><a name="gettokenid"></a>CAccessToken::GetTokenId  
+ 연결 된 토큰 ID를 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetTokenId(LUID* pluid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pluid`  
+ 에 대 한 포인터는 [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) 토큰 id입니다. 수신할 됩니다  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namegettypea--caccesstokengettype"></a><a name="gettype"></a>CAccessToken::GetType  
+ 토큰 형식을 가져오려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetType(TOKEN_TYPE* pType) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pType`  
+ 주소에 [TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633) 성공 시 토큰의 유형을 수신 하는 변수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ **TOKEN_TYPE** 주 토큰 및 가장 토큰을 구분 하는 값을 포함 하는 열거형입니다.  
+  
+##  <a name="a-namegetusera--caccesstokengetuser"></a><a name="getuser"></a>CAccessToken::GetUser  
+ 연결 된 사용자를 식별 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool GetUser(CSid* pSid) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pSid`  
+ 에 대 한 포인터는 [CSid 클래스](../../atl/reference/csid-class.md) 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+##  <a name="a-namehkeycurrentusera--caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
+ 이 메서드를 호출에 연결 된 사용자 프로필을 가리키는 핸들을 가져올는 `CAccessToken` 개체입니다.  
+  
+```
+HKEY HKeyCurrentUser() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 프로필이 없는 경우 사용자 프로필 또는 NULL을 가리키는 핸들을 반환 합니다.  
+  
+##  <a name="a-nameimpersonatea--caccesstokenimpersonate"></a><a name="impersonate"></a>CAccessToken::Impersonate  
+ 가장을 할당 하려면이 메서드를 호출 `CAccessToken` 스레드에 있습니다.  
+  
+```
+bool Impersonate(HANDLE hThread = NULL) const throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `hThread`  
+ 가장 토큰을 할당 하는 스레드 핸들입니다. 이 핸들을 TOKEN_IMPERSONATE 액세스 권한으로 열려 있어야 합니다. 경우 `hThread` 가 NULL 인 메서드를 호출 하면 가장 토큰을 사용 하 여 중지 하는 스레드입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 `CAccessToken` 토큰에 대 한 유효한 포인터는 없습니다.  
+  
+ [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 가장된 액세스 토큰을 자동으로 되돌리는 데 사용할 수 있습니다.  
+  
+##  <a name="a-nameimpersonateloggedonusera--caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
+ 로그온 한 사용자의 보안 컨텍스트를 가장할 호출 스레드를 허용 하려면이 메서드를 호출 합니다.  
+  
+```
+bool ImpersonateLoggedOnUser() const throw(...);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+  
+> [!IMPORTANT]
+>  어떤 이유로 든 실패 하면 가장 함수를 호출 하는 경우 클라이언트는 가장 되지 않고 및 클라이언트 요청이 호출이 발생 하는 프로세스의 보안 컨텍스트에서 수행 됩니다. 높은 권한 있는 계정으로 진행 하는 경우 관리 그룹의 멤버로 사용자 작업을 수행할 수 있습니다 대금은 그렇지 않으면 허용 되지 것입니다. 따라서이 함수에 대 한 반환 값 항상 확인 합니다.  
+  
+##  <a name="a-nameistokenrestricteda--caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
+ 테스트 하기 위해이 메서드를 호출 하는 `CAccessToken` 개체 제한 된 Sid의 목록을 포함 합니다.  
+  
+```
+bool IsTokenRestricted() const throw();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 개체에 제한 Sid, 제한 없는 Sid 있으면 false의 목록이 포함 되어 있는 경우 또는 메서드가 실패 하면 true를 반환 합니다.  
+  
+##  <a name="a-nameloaduserprofilea--caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
+ 와 연결 된 사용자 프로필을 로드 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool LoadUserProfile() throw(...);
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다는 `CAccessToken` 유효한 토큰을 포함 하지 않거나 사용자 프로필에 이미 존재 합니다.  
+  
+##  <a name="a-namelogonusera--caccesstokenlogonuser"></a><a name="logonuser"></a>CAccessToken::LogonUser  
+ 지정된 된 자격 증명을 연관 된 사용자에 대 한 로그온 세션을 만들려면이 메서드를 호출 합니다.  
+  
+```
+bool LogonUser(
+    LPCTSTR pszUserName,
+    LPCTSTR pszDomain,
+    LPCTSTR pszPassword,
+    DWORD dwLogonType = LOGON32_LOGON_INTERACTIVE,
+    DWORD dwLogonProvider = LOGON32_PROVIDER_DEFAULT) throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pszUserName`  
+ 사용자 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 에 로그온 할 사용자 계정의 이름입니다.  
+  
+ *pszDomain*  
+ 도메인 또는 해당 계정 데이터베이스를 포함 하는 서버 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터는 `pszUserName` 계정.  
+  
+ `pszPassword`  
+ 지정 된 사용자 계정에 대 한 일반 텍스트 암호를 지정 하는 null로 끝나는 문자열에 대 한 포인터 `pszUserName`합니다.  
+  
+ *dwLogonType*  
+ 수행할 로그온 작업 유형을 지정 합니다. 참조 [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) 대 한 자세한 내용은 합니다.  
+  
+ *dwLogonProvider*  
+ 로그온 공급자를 지정합니다. 참조 [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) 대 한 자세한 내용은 합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 과 연결 될 로그온에서 토큰 결과 액세스는 `CAccessToken`합니다. 이 메서드의 성공 하는 `CAccessToken` 기본 신뢰할 수 있는 컴퓨터의 일환으로 소유자를 식별 하는 SE_TCB_NAME 권한이 보유 해야 하는 개체입니다. 참조 [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) 필요한 권한에 대 한 자세한 내용은 합니다.  
+  
+##  <a name="a-nameopencomclienttokena--caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
+ 초기화 하는 클라이언트에서 호출을 처리 하는 COM 서버에서이 메서드를 호출 하는 `CAccessToken` COM 클라이언트에서 액세스 토큰을 사용 합니다.  
+  
+```
+bool OpenCOMClientToken(
+    DWORD dwDesiredAccess,
+    bool bImpersonate = false,
+    bool bOpenAsSelf = true) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ `bImpersonate`  
+ True 이면 현재 스레드는이 호출이 완료 되 면 호출 COM 클라이언트를 가장 합니다. False 인 경우, 액세스 토큰이 열린 있지만 스레드의 가장 토큰은이 호출이 완료 될 때입니다.  
+  
+ `bOpenAsSelf`  
+ 스레드 호출의 보안 컨텍스트에 대해 수행 되는 액세스 검사 인지를 나타냅니다는 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) 메서드 또는 호출 스레드에 대 한 프로세스의 보안 컨텍스트에 대 한 합니다.  
+  
+ 이 매개 변수가 false 인 경우 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사가 수행 됩니다. 스레드는 클라이언트를 가장 하는 경우이 보안 컨텍스트는 클라이언트 프로세스의 될 수 있습니다. 이 매개 변수가 true 인 경우 프로세스의 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사는 수행 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 자동으로 설정 하 여 만든 가장된 액세스 토큰을 되돌리는 데 사용할 수는 `bImpersonate` 플래그를 *true*합니다.  
+  
+##  <a name="a-nameopennamedpipeclienttokena--caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
+ 호출 하는 서버에서이 메서드를 작성 요청 초기화 하는 명명 된 파이프를 통한는 `CAccessToken` 클라이언트에서 액세스 토큰을 사용 합니다.  
+  
+```
+bool OpenNamedPipeClientToken(
+    HANDLE hPipe,
+    DWORD dwDesiredAccess,
+    bool bImpersonate = false,
+    bool bOpenAsSelf = true) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *hPipe*  
+ 명명된 된 파이프에 대 한 핸들입니다.  
+  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ `bImpersonate`  
+ True 이면 현재 스레드는이 호출이 완료 되 면 호출 파이프 클라이언트를 가장 합니다. False 인 경우, 액세스 토큰이 열린 있지만 스레드의 가장 토큰은이 호출이 완료 될 때입니다.  
+  
+ `bOpenAsSelf`  
+ 스레드 호출의 보안 컨텍스트에 대해 수행 되는 액세스 검사 인지를 나타냅니다는 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) 메서드 또는 호출 스레드에 대 한 프로세스의 보안 컨텍스트에 대 한 합니다.  
+  
+ 이 매개 변수가 false 인 경우 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사가 수행 됩니다. 스레드는 클라이언트를 가장 하는 경우이 보안 컨텍스트는 클라이언트 프로세스의 될 수 있습니다. 이 매개 변수가 true 인 경우 프로세스의 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사는 수행 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 자동으로 설정 하 여 만든 가장된 액세스 토큰을 되돌리는 데 사용할 수는 `bImpersonate` 플래그를 *true*합니다.  
+  
+##  <a name="a-nameopenrpcclienttokena--caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
+ 초기화 하도록 RPC 클라이언트에서 호출을 처리 하는 서버에서이 메서드를 호출 하는 `CAccessToken` 클라이언트에서 액세스 토큰을 사용 합니다.  
+  
+```
+bool OpenRPCClientToken(
+    RPC_BINDING_HANDLE BindingHandle,
+    DWORD dwDesiredAccess,
+    bool bImpersonate = false,
+    bool bOpenAsSelf = true) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *BindingHandle*  
+ 클라이언트에 대 한 바인딩을 나타내는 서버 바인딩 핸들입니다.  
+  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ `bImpersonate`  
+ True 이면 현재 스레드는이 호출이 완료 되 면 호출 RPC 클라이언트를 가장 합니다. False 인 경우, 액세스 토큰이 열린 있지만 스레드의 가장 토큰은이 호출이 완료 될 때입니다.  
+  
+ `bOpenAsSelf`  
+ 스레드 호출의 보안 컨텍스트에 대해 수행 되는 액세스 검사 인지를 나타냅니다는 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) 메서드 또는 호출 스레드에 대 한 프로세스의 보안 컨텍스트에 대 한 합니다.  
+  
+ 이 매개 변수가 false 인 경우 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사가 수행 됩니다. 스레드는 클라이언트를 가장 하는 경우이 보안 컨텍스트는 클라이언트 프로세스의 될 수 있습니다. 이 매개 변수가 true 인 경우 프로세스의 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사는 수행 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 자동으로 설정 하 여 만든 가장된 액세스 토큰을 되돌리는 데 사용할 수는 `bImpersonate` 플래그를 *true*합니다.  
+  
+##  <a name="a-nameopenthreadtokena--caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
+ 가장 수준을 설정 하 고 다음을 초기화 하려면이 메서드를 호출 하는 `CAccessToken` 주어진된 스레드의에서 토큰을 사용 합니다.  
+  
+```
+bool OpenThreadToken(
+    DWORD dwDesiredAccess,
+    bool bImpersonate = false,
+    bool bOpenAsSelf = true,
+    SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `dwDesiredAccess`  
+ 액세스 토큰에 대해 요청된 액세스 형식을 지정하는 액세스 마스크를 지정합니다. 이러한 요청된 액세스 형식은 토큰의 DACL과 비교하여 액세스가 허용 또는 거부되는 경우를 확인합니다.  
+  
+ `bImpersonate`  
+ True 이면이 메서드가 완료 된 후 스레드가 요청 된 가장 수준에 남게 됩니다. False 이면 스레드는 원래 가장 수준으로 되돌아갑니다.  
+  
+ `bOpenAsSelf`  
+ 스레드 호출의 보안 컨텍스트에 대해 수행 되는 액세스 검사 인지를 나타냅니다는 [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) 메서드 또는 호출 스레드에 대 한 프로세스의 보안 컨텍스트에 대 한 합니다.  
+  
+ 이 매개 변수가 false 인 경우 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사가 수행 됩니다. 스레드는 클라이언트를 가장 하는 경우이 보안 컨텍스트는 클라이언트 프로세스의 될 수 있습니다. 이 매개 변수가 true 인 경우 프로세스의 보안 컨텍스트를 사용 하 여 호출 스레드에 대 한 액세스 검사는 수행 됩니다.  
+  
+ `sil`  
+ 지정 된 [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) 열거 토큰의 가장 수준을 제공 하는 형식.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ `OpenThreadToken`비슷합니다 [CAccessToken::GetThreadToken](#getthreadtoken), 초기화 하기 전에 가장 수준으로 설정 된 `CAccessToken` 스레드의 액세스 토큰에서.  
+  
+ [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 자동으로 설정 하 여 만든 가장된 액세스 토큰을 되돌리는 데 사용할 수는 `bImpersonate` 플래그를 *true*합니다.  
+  
+##  <a name="a-nameprivilegechecka--caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+ 지정된 된 권한 집합에 사용 되는지 여부를 확인 하려면이 메서드를 호출 하는 **CAccessToken** 개체입니다.  
+  
+```
+bool PrivilegeCheck(
+    PPRIVILEGE_SET RequiredPrivileges,
+     bool* pbResult) const throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *RequiredPrivileges*  
+ 에 대 한 포인터는 [PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307) 구조입니다.  
+  
+ *pbResult*  
+ 지정 된 권한 중 일부 또는 모두에 사용 되는지 여부를 나타내기 위해이 값에 대 한 포인터 메서드 설정는 `CAccessToken` 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 때 `PrivilegeCheck` 반환는 **특성** 의 각 구성원 [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263) 구조는 해당 권한을 사용 하는 경우 SE_PRIVILEGE_USED_FOR_ACCESS로 설정 됩니다. 이 메서드는 [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 함수입니다.  
+  
+##  <a name="a-namereverta--caccesstokenrevert"></a><a name="revert"></a>CAccessToken::Revert  
+ 가장 토큰을 사용 하 여 스레드를 중지 하려면이 메서드를 호출 합니다.  
+  
+```
+bool Revert(HANDLE hThread = NULL) const throw();
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `hThread`  
+ 가장에서 되돌리려면 스레드 핸들입니다. 경우 *hThread* 가 NULL 이면 현재 스레드의 것으로 간주 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 가장 토큰의 버전으로 자동으로 수행할 수는 [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md)합니다.  
+  
+##  <a name="a-namesetdefaultdacla--caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
+ 기본 설정 하려면이 메서드를 호출의 DACL은 `CAccessToken` 개체입니다.  
+  
+```
+bool SetDefaultDacl(const CDacl& rDacl) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rDacl`  
+ 새 기본 [CDacl 클래스](../../atl/reference/cdacl-class.md) 정보입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ DACL은 새 개체를 만들 때이 액세스 토큰으로 적용 기본적으로 사용 되는 DACL  
+  
+##  <a name="a-namesetownera--caccesstokensetowner"></a><a name="setowner"></a>CAccessToken::SetOwner  
+ 소유자를 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool SetOwner(const CSid& rSid) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rSid`  
+ [CSid 클래스](../../atl/reference/csid-class.md) 소유자 정보를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 소유자는이 액세스 토큰이 적용 되는 동안 생성 된 새 개체에 사용 되는 기본 소유자가입니다.  
+  
+##  <a name="a-namesetprimarygroupa--caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+ 주 그룹을 설정 하려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
+  
+```
+bool SetPrimaryGroup(const CSid& rSid) throw(...);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `rSid`  
+ [CSid 클래스](../../atl/reference/csid-class.md) 주 그룹 정보를 포함 하는 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 기본 그룹에는이 액세스 토큰이 적용 되는 동안 생성 된 새 개체에 대 한 기본 그룹이입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [ATLSecurity 샘플](../../visual-cpp-samples.md)   
+ [액세스 토큰](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [클래스 개요](../../atl/atl-class-overview.md)
+

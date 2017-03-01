@@ -1,71 +1,204 @@
 ---
-title: "cancellation_token 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplcancellation_token/concurrency::cancellation_token"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cancellation_token 클래스"
+title: "cancellation_token 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplcancellation_token/concurrency::cancellation_token
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# cancellation_token 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 93d5abe132203a53f3ffac8490fe32604e7e896e
+ms.lasthandoff: 02/24/2017
 
-`cancellation_token` 클래스는 일부 작업을 취소하도록 요청되었는지 여부를 확인하는 기능을 나타냅니다.  지정된 토큰을 `task_group`, `structured_task_group` 또는 `task`와 연결하여 암시적 취소를 제공할 수 있습니다.  연결된 `cancellation_token_source`가 취소된 경우 취소를 폴링하거나 콜백을 등록할 수도 있습니다.  
+---
+# <a name="cancellationtoken-class"></a>cancellation_token 클래스
+`cancellation_token` 클래스는 일부 작업을 취소하도록 요청되었는지 여부를 확인하는 기능을 나타냅니다. 지정된 토큰을 `task_group`, `structured_task_group` 또는 `task`와 연결하여 암시적 취소를 제공할 수 있습니다. 연결된 `cancellation_token_source`가 취소된 경우 취소를 폴링하거나 콜백을 등록할 수도 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class cancellation_token;
 ```  
-class cancellation_token;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[cancellation\_token::cancellation\_token 생성자](../Topic/cancellation_token::cancellation_token%20Constructor.md)||  
-|[cancellation\_token::~cancellation\_token 소멸자](../Topic/cancellation_token::~cancellation_token%20Destructor.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[cancellation_token 생성자](#ctor)||  
+|[~ cancellation_token 소멸자](#dtor)||  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[cancellation\_token::deregister\_callback 메서드](../Topic/cancellation_token::deregister_callback%20Method.md)|등록 시 반환된 `cancellation_token_registration` 개체를 기반으로 `register` 메서드를 통해 이전에 등록한 콜백을 제거합니다.|  
-|[cancellation\_token::is\_cancelable 메서드](../Topic/cancellation_token::is_cancelable%20Method.md)|이 토큰을 취소할 수 있는지 여부를 나타내는 값을 반환합니다.|  
-|[cancellation\_token::is\_canceled 메서드](../Topic/cancellation_token::is_canceled%20Method.md)|토큰이 취소된 경우 `true`를 반환합니다.|  
-|[cancellation\_token::none 메서드](../Topic/cancellation_token::none%20Method.md)|취소에 영향을 받을 수 없는 취소 토큰을 반환합니다.|  
-|[cancellation\_token::register\_callback 메서드](../Topic/cancellation_token::register_callback%20Method.md)|토큰에 콜백 함수를 등록합니다.  만약 토큰이 취소되면 콜백이 만들어집니다.  이 메서드가 호출된 시점에 토큰이 이미 취소된 경우, 동기적으로 즉시 콜백이 만들어집니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[deregister_callback 메서드](#deregister_callback)|등록 시 반환된 `register` 개체를 기반으로 `cancellation_token_registration` 메서드를 통해 이전에 등록한 콜백을 제거합니다.|  
+|[is_cancelable 메서드](#is_cancelable)|이 토큰을 취소할 수 있는지 여부를 나타내는 값을 반환합니다.|  
+|[is_canceled 메서드](#is_canceled)|토큰이 취소된 경우 `true`를 반환합니다.|  
+|[none 메서드](#none)|취소에 영향을 받을 수 없는 취소 토큰을 반환합니다.|  
+|[register_callback 메서드](#register_callback)|토큰에 콜백 함수를 등록합니다. 만약 토큰이 취소되면 콜백이 만들어집니다. 이 메서드가 호출된 시점에 토큰이 이미 취소된 경우, 동기적으로 즉시 콜백이 만들어집니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[cancellation\_token::operator\!\= 연산자](../Topic/cancellation_token::operator!=%20Operator.md)||  
-|[cancellation\_token::operator\= 연산자](../Topic/cancellation_token::operator=%20Operator.md)||  
-|[cancellation\_token::operator\=\= 연산자](../Topic/cancellation_token::operator==%20Operator.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[연산자! = 연산자](#operator_neq)||  
+|[operator = 연산자](#operator_eq)||  
+|[연산자 = = 연산자](#operator_eq_eq)||  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `cancellation_token`  
   
-## 요구 사항  
- **헤더:** pplcancellation\_token.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** pplcancellation_token.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-cancellationtoken"></a><a name="dtor"></a>~ cancellation_token 
+
+```
+~cancellation_token();
+```  
+  
+##  <a name="a-namectora-cancellationtoken"></a><a name="ctor"></a>cancellation_token 
+
+```
+cancellation_token(const cancellation_token& _Src);
+
+cancellation_token(cancellation_token&& _Src);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+##  <a name="a-namederegistercallbacka-deregistercallback"></a><a name="deregister_callback"></a>deregister_callback 
+
+ 등록 시 반환된 `register` 개체를 기반으로 `cancellation_token_registration` 메서드를 통해 이전에 등록한 콜백을 제거합니다.  
+  
+```
+void deregister_callback(const cancellation_token_registration& _Registration) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Registration`  
+ `cancellation_token_registration` 개체는 등록을 취소할 콜백에 해당합니다. `register` 메서드에 대한 호출에서 이 토큰이 이전에 반환됐어야 합니다.  
+  
+##  <a name="a-nameiscancelablea-iscancelable"></a><a name="is_cancelable"></a>is_cancelable 
+
+ 이 토큰을 취소할 수 있는지 여부를 나타내는 값을 반환합니다.  
+  
+```
+bool is_cancelable() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 이 토큰을 취소할 수 있는지 여부를 나타냅니다.  
+  
+##  <a name="a-nameiscanceleda-iscanceled"></a><a name="is_canceled"></a>is_canceled 
+
+ 토큰이 취소된 경우 `true`를 반환합니다.  
+  
+```
+bool is_canceled() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 토큰이 취소되면 값은 `true`이고, 그렇지 않으면 값은 `false`입니다.  
+  
+##  <a name="a-namenonea-none"></a><a name="none"></a>없음 
+
+ 취소에 영향을 받을 수 없는 취소 토큰을 반환합니다.  
+  
+```
+static cancellation_token none();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 취소할 수 없는 취소 토큰입니다.  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>연산자! = 
+
+```
+bool operator!= (const cancellation_token& _Src) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+
+```
+cancellation_token& operator= (const cancellation_token& _Src);
+
+cancellation_token& operator= (cancellation_token&& _Src);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>연산자 = = 
+
+```
+bool operator== (const cancellation_token& _Src) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameregistercallbacka-registercallback"></a><a name="register_callback"></a>register_callback 
+
+ 토큰에 콜백 함수를 등록합니다. 만약 토큰이 취소되면 콜백이 만들어집니다. 이 메서드가 호출된 시점에 토큰이 이미 취소된 경우, 동기적으로 즉시 콜백이 만들어집니다.  
+  
+```
+template<typename _Function>
+::Concurrency::cancellation_token_registration register_callback(const _Function& _Func) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Function`  
+ 이 `cancellation_token`이 취소될 때 콜백되는 함수 개체의 형식입니다.  
+  
+ `_Func`  
+ 이 `cancellation_token`이 취소되었을 때 콜백되는 함수 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 이전에 등록된 콜백의 등록을 해제하고 콜백이 이루어지지 않도록 하기 위해 `cancellation_token_registration` 메서드에서 이용할 수 있는 `deregister` 개체입니다. 메서드를 발생 시킵니다는 [invalid_operation](invalid-operation-class.md) 에서 호출 될 경우 예외는 `cancellation_token` 를 사용 하 여 만든 개체는 [cancellation_token:: none](#none) 메서드.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

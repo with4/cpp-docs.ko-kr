@@ -1,80 +1,97 @@
 ---
-title: "AFX_EXTENSION_MODULE 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AFX_EXTENSION_MODULE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AFX_EXTENSION_MODULE 구조체"
+title: "AFX_EXTENSION_MODULE 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AFX_EXTENSION_MODULE
+dev_langs:
+- C++
+helpviewer_keywords:
+- AFX_EXTENSION_MODULE structure
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# AFX_EXTENSION_MODULE 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: f2699316266e9cc061fa898c4176e36ae8323b33
+ms.lasthandoff: 02/24/2017
 
-The `AFX_EXTENSION_MODULE` is used during initialization of MFC extension DLLs to hold the state of extension DLL module.  
+---
+# <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 구조체
+`AFX_EXTENSION_MODULE` MFC 확장 Dll 초기화 하는 동안 확장 DLL 모듈의 상태를 저장 하는 데 사용 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      struct AFX_EXTENSION_MODULE  
+struct AFX_EXTENSION_MODULE  
 {  
-   BOOL bInitialized;  
-   HMODULE hModule;  
-   HMODULE hResource;  
-   CRuntimeClass* pFirstSharedClass;  
-   COleObjectFactory* pFirstSharedFactory;  
+    BOOL bInitialized;  
+    HMODULE hModule;  
+    HMODULE hResource;  
+    CRuntimeClass* pFirstSharedClass;  
+    COleObjectFactory* pFirstSharedFactory;  
 };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *bInitialized*  
- **TRUE** if the DLL module has been initialized with `AfxInitExtensionModule`.  
+ **True 이면** DLL 모듈으로 초기화 된 경우 `AfxInitExtensionModule`합니다.  
   
  `hModule`  
- Specifies the handle of the DLL module.  
+ DLL 모듈의 핸들을 지정합니다.  
   
  *hResource*  
- Specifies the handle of the DLL custom resource module.  
+ DLL 사용자 지정 리소스 모듈의 핸들을 지정합니다.  
   
  *pFirstSharedClass*  
- A pointer to information \(the `CRuntimeClass` structure\) about the DLL module's first runtime class.  Used to provide the start of the runtime class list.  
+ 정보에 대 한 포인터 (의 `CRuntimeClass` 구조) DLL 모듈의 첫 번째 런타임 클래스에 대 한 합니다. 런타임 클래스 목록의 시작 부분을 제공 하는 데 사용 합니다.  
   
  *pFirstSharedFactory*  
- A pointer to the DLL module's first object factory \(a `COleObjectFactory` object\).  Used to provide the start of the class factory list.  
+ DLL 모듈의 첫 번째 개체 팩터리에 대 한 포인터 (한 `COleObjectFactory` 개체). 클래스 팩터리 목록의 시작 부분을 제공 하는 데 사용 합니다.  
   
-## 설명  
- MFC extension DLLs need to do two things in their `DllMain` function:  
+## <a name="remarks"></a>주의  
+ MFC 확장 Dll의 두 가지를 수행 해야 자신의 `DllMain` 함수:  
   
--   Call [AfxInitExtensionModule](../Topic/AfxInitExtensionModule.md) and check the return value.  
+-   호출 [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1) 반환 값을 확인 합니다.  
   
--   Create a **CDynLinkLibrary** object if the DLL will be exporting [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objects or has its own custom resources.  
+-   만들기는 **CDynLinkLibrary** DLL를 내보내는 경우 개체 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체, 한 고유한 사용자 지정 리소스입니다.  
   
- The `AFX_EXTENSION_MODULE` structure is used to hold a copy of the extension DLL module state, including a copy of the runtime class objects that have been initialized by the extension DLL as part of normal static object construction executed before `DllMain` is entered.  예를 들면 다음과 같습니다.  
+ `AFX_EXTENSION_MODULE` 구조는 DLL 모듈 상태를 일반 정적 개체가 생성 되기 전에 실행의 일부로 확장 DLL 초기화 된 후 런타임 클래스 개체의 복사본을 포함 하 여 확장의 복사본을 저장 하는 데 사용 됩니다 `DllMain` 를 입력 합니다. 예:  
   
- [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/CPP/afx-extension-module-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_DLL&#2;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- The module information stored in the `AFX_EXTENSION_MODULE` structure can be copied into the **CDynLinkLibrary** object.  예를 들면 다음과 같습니다.  
+ 에 저장 된 모듈 정보는 `AFX_EXTENSION_MODULE` 구조를 복사할 수는 **CDynLinkLibrary** 개체입니다. 예:  
   
- [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/CPP/afx-extension-module-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_DLL&#5;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
-## 요구 사항  
- **Header:** afx.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afx.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxInitExtensionModule](../Topic/AfxInitExtensionModule.md)   
- [AfxTermExtensionModule](../Topic/AfxTermExtensionModule.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1)   
+ [AfxTermExtensionModule](http://msdn.microsoft.com/library/b64de402-f1e3-4c26-9823-08c07876aaaa)
+
+

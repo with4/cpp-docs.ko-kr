@@ -1,61 +1,132 @@
 ---
-title: "cancellation_token_registration 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplcancellation_token/concurrency::cancellation_token_registration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cancellation_token_registration 클래스"
+title: "cancellation_token_registration 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplcancellation_token/concurrency::cancellation_token_registration
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# cancellation_token_registration 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 72c317bb95b646a3a97b361ac3248f015cd0f29a
+ms.lasthandoff: 02/24/2017
 
-`cancellation_token_registration` 클래스는 `cancellation_token`의 콜백 알림을 나타냅니다.  취소 발생 시 알림을 받는 데 `cancellation_token`의 `register` 메서드를 사용하면 `deregister` 메서드 사용을 통해 더 이상 만들어지지 않는 특정 콜백을 호출자가 요청할 수 있도록 `cancellation_token_registration` 개체가 콜백에 대한 핸들로 반환됩니다.  
+---
+# <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 클래스
+`cancellation_token_registration` 클래스는 `cancellation_token`의 콜백 알림을 나타냅니다. 취소 발생 시 알림을 받는 데 `register`의 `cancellation_token` 메서드를 사용하면 `cancellation_token_registration` 메서드 사용을 통해 더 이상 만들어지지 않는 특정 콜백을 호출자가 요청할 수 있도록 `deregister` 개체가 콜백에 대한 핸들로 반환됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class cancellation_token_registration;
 ```  
-class cancellation_token_registration;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[cancellation\_token\_registration::cancellation\_token\_registration 생성자](../Topic/cancellation_token_registration::cancellation_token_registration%20Constructor.md)||  
-|[cancellation\_token\_registration::~cancellation\_token\_registration 소멸자](../Topic/cancellation_token_registration::~cancellation_token_registration%20Destructor.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[cancellation_token_registration 생성자](#ctor)||  
+|[~ cancellation_token_registration 소멸자](#dtor)||  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[cancellation\_token\_registration::operator\!\= 연산자](../Topic/cancellation_token_registration::operator!=%20Operator.md)||  
-|[cancellation\_token\_registration::operator\= 연산자](../Topic/cancellation_token_registration::operator=%20Operator.md)||  
-|[cancellation\_token\_registration::operator\=\= 연산자](../Topic/cancellation_token_registration::operator==%20Operator.md)||  
+|이름|설명|  
+|----------|-----------------|  
+|[연산자! = 연산자](#operator_neq)||  
+|[operator = 연산자](#operator_eq)||  
+|[연산자 = = 연산자](#operator_eq_eq)||  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `cancellation_token_registration`  
   
-## 요구 사항  
- **헤더:** pplcancellation\_token.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** pplcancellation_token.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-cancellationtokenregistration"></a><a name="dtor"></a>~ cancellation_token_registration 
+
+```
+~cancellation_token_registration();
+```  
+  
+##  <a name="a-namectora-cancellationtokenregistration"></a><a name="ctor"></a>cancellation_token_registration 
+
+```
+cancellation_token_registration();
+
+cancellation_token_registration(const cancellation_token_registration& _Src);
+
+cancellation_token_registration(cancellation_token_registration&& _Src);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>연산자! = 
+
+```
+bool operator!= (const cancellation_token_registration& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Rhs`  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+
+```
+cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
+
+cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Src`  
+  
+### <a name="return-value"></a>반환 값  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>연산자 = = 
+
+```
+bool operator== (const cancellation_token_registration& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Rhs`  
+  
+### <a name="return-value"></a>반환 값  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)
+

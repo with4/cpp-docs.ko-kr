@@ -1,82 +1,230 @@
 ---
-title: "call 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::call"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call 클래스"
+title: "클래스를 호출 합니다. | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concurrency::call
+- agents/concurrency::call
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# call 클래스
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
+ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
+ms.lasthandoff: 02/24/2017
 
-`call` 메시징 블록은 메시지를 받을 때 지정된 함수를 호출하는 다중 소스, 순서형 `target_block`입니다.  
+---
+# <a name="call-class"></a>call 클래스
+`call` 메시징 블록은 메시지를 받을 때 지정된 함수를 호출하는 순서가 지정된 다중 소스 `target_block`입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template<class T, class _FunctorType = std::function<void(T const&)>>
+class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
-template<  
-   class _Type,  
-   class _FunctorType = std::tr1::function<void(_Type const&)>  
->  
-class call : public target_block<multi_link_registry<ISource<_Type>>>;  
-```  
   
-#### 매개 변수  
- `_Type`  
- 이 블록에 전파되는 메시지의 페이로드 형식입니다.  
+#### <a name="parameters"></a>매개 변수  
+ `T`  
+ 이 블록에 전파 하는 메시지의 페이로드 유형입니다.  
   
  `_FunctorType`  
- 이 블록이 받아들일 수 있는 함수의 서명입니다.  
+ 이 블록을 수락할 수 있는 함수의 서명입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[call::call 생성자](../Topic/call::call%20Constructor.md)|오버로드됨.  `call` 메시징 블록을 생성합니다.|  
-|[call::~call 소멸자](../Topic/call::~call%20Destructor.md)|`call` 메시징 블록을 소멸시킵니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[생성자를 호출 합니다.](#ctor)|오버로드됨. 생성 된 `call` 메시징 블록입니다.|  
+|[~ call 소멸자](#dtor)|소멸은 `call` 메시징 블록입니다.|  
   
-### Protected 메서드  
+### <a name="protected-methods"></a>Protected 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[call::process\_input\_messages 메서드](../Topic/call::process_input_messages%20Method.md)|입력된 메시지에서 호출 함수를 실행합니다.|  
-|[call::process\_message 메서드](../Topic/call::process_message%20Method.md)|이 `call` 메시징 블록에서 수락한 메시지를 처리합니다.|  
-|[call::propagate\_message 메서드](../Topic/call::propagate_message%20Method.md)|비동기적으로 메시지를 `ISource` 블록에서 이 `call` 메시징 블록에 전달합니다.  소스 블록에 의해 호출되면 `propagate` 메서드가 호출됩니다.|  
-|[call::send\_message 메서드](../Topic/call::send_message%20Method.md)|동기적으로 메시지를 이 `ISource` 블록에서 이 `call` 메시징 블록에 전달합니다.  소스 블록에 의해 호출되면 `send` 메서드가 호출됩니다.|  
-|[call::supports\_anonymous\_source 메서드](../Topic/call::supports_anonymous_source%20Method.md)|`supports_anonymous_source`  메서드를 재정의하여 이 블록에 연결 되지 않은 소스에서 제공하는 메시지를 사용할 수 있도록 표시합니다. \(재정의  [ITarget::supports\_anonymous\_source](../Topic/ITarget::supports_anonymous_source%20Method.md).\)|  
+|이름|설명|  
+|----------|-----------------|  
+|[process_input_messages 메서드](#process_input_messages)|입력된 메시지에서 호출 함수를 실행합니다.|  
+|[process_message 메서드](#process_message)|이 수락 했던 메시지를 처리 `call` 메시징 블록입니다.|  
+|[propagate_message 메서드](#propagate_message)|메시지를 비동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[send_message 메서드](#send_message)|메시지를 동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[supports_anonymous_source 메서드](#supports_anonymous_source)|`supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다. (재정의 [itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
-## 설명  
- 자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)을 참조하십시오.  
+## <a name="remarks"></a>주의  
+ 자세한 내용은 참조 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
   
-## 상속 계층  
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+## <a name="inheritance-hierarchy"></a>상속 계층  
+ [ITarget](itarget-class.md)  
   
- [target\_block](../../../parallel/concrt/reference/target-block-class.md)  
+ [target_block](target-block-class.md)  
   
  `call`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** agents.h  
   
  **네임스페이스:** 동시성  
   
-## 참고 항목  
- [동시성 네임스페이스](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [transformer 클래스](../../../parallel/concrt/reference/transformer-class.md)
+##  <a name="a-namectora-call"></a><a name="ctor"></a>호출 
+
+ 생성 된 `call` 메시징 블록입니다.  
+  
+```
+call(
+    _Call_method const& _Func);
+
+call(
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Func`  
+ 수락 된 각 메시지에 대 한 호출 될 함수입니다.  
+  
+ `_Filter`  
+ 제공 된 메시지를 허용 해야 하는지 여부를 결정 하는 필터 함수  
+  
+ `_PScheduler`  
+ `Scheduler` 의 전파에 대 한 작업이 있는 개체는 `call` 메시징 블록 예약 됩니다.  
+  
+ `_PScheduleGroup`  
+ `ScheduleGroup` 의 전파에 대 한 작업이 있는 개체는 `call` 메시징 블록 예약 됩니다. 사용된 `Scheduler` 개체는 일정 그룹에서 암시됩니다.  
+  
+### <a name="remarks"></a>주의  
+ 런타임은 `_PScheduler` 또는 `_PScheduleGroup` 매개 변수를 지정하지 않는 경우 기본 스케줄러를 사용합니다.  
+  
+ 형식을 `_Call_method` 시그니처가 있는 함수는 `void (T const &)` 이 호출 되는 `call` 메시징 블록 메시지를 처리 합니다.  
+  
+ 형식 `filter_method` 시그니처가 있는 함수는 `bool (T const &)` 이 호출 되는 `call` 메시징 블록에 제공된 된 메시지를 수락 해야 하는지 여부를 결정 합니다.  
+  
+##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ 호출 
+
+ 소멸은 `call` 메시징 블록입니다.  
+  
+```
+~call();
+```  
+  
+##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+
+ 입력된 메시지에서 호출 함수를 실행합니다.  
+  
+```
+virtual void process_input_messages(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_PMessage`  
+  
+##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+
+ 이 수락 했던 메시지를 처리 `call` 메시징 블록입니다.  
+  
+```
+virtual void process_message(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_PMessage`  
+ 처리할 메시지에 대 한 포인터입니다.  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ 메시지를 비동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_PMessage`  
+ `message` 개체에 대한 포인터입니다.  
+  
+ `_PSource`  
+ 메시지를 제공 하는 소스 블록에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ 메시지를 동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_PMessage`  
+ `message` 개체에 대한 포인터입니다.  
+  
+ `_PSource`  
+ 메시지를 제공 하는 소스 블록에 대 한 포인터입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
+  
+##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+
+ `supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다.  
+  
+```
+virtual bool supports_anonymous_source();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 블록은 제공된 메시지를 연기하지 않기 때문에 `true`입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Namespace 동시성](concurrency-namespace.md)   
+ [transformer 클래스](transformer-class.md)
+
