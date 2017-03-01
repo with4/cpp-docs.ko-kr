@@ -1,64 +1,48 @@
 ---
-title: "컴파일러 오류 C3818 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3818"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3818"
+title: "컴파일러 오류 C3818 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3818
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3818
 ms.assetid: f9502f6a-0690-4135-ab88-cc97cf490f5c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3818
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 51aadb095d035a18249a344a402f51abc839feba
+ms.lasthandoff: 02/24/2017
 
-'property1' 배열 속성 선언은 'property2' 인덱스 속성을 오버로드하지 않습니다.  
+---
+# <a name="compiler-error-c3818"></a>컴파일러 오류 C3818
+배열 속성 선언을 'property1' '속성&2;' 인덱스 속성 오버 로드 하지 않습니다.  
   
- 하나는 인덱서이고 다른 하나는 배열 속성인 경우에는 속성을 오버로드할 수 없습니다.  자세한 내용은 [\_\_property](../../misc/property.md)를 참조하십시오.  
+ 오버 로드 하나 인덱서 이며 다른 하나는 배열 속성 때 속성에 대 한 가능한있지 않습니다. 
   
- C3818은 **\/clr:oldSyntax**를 사용하는 경우에만 발생합니다.  
-  
- 다음 샘플에서는 C3818 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3818.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-__gc class X {  
-public:  
-   __property int get_Int(int index) {  
-      Console::WriteLine(S"Called indexed property");  
-      return m_value;  
-   }  
-  
-   __property int get_Int() __gc[] {   // C3818, rename a property  
-      Console::WriteLine(S"Called array property");  
-      return m_arr;  
-   }  
-  
-   int m_arr __gc[];  
-   int m_value;  
-};  
-  
-int main() {  
-   X* x = new X;  
-   x->m_arr = new int __gc[3];  
-   x->m_value = 3;  
-  
-   x->Int[0];  
-}  
-```
+ C3818는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+

@@ -1,63 +1,80 @@
 ---
-title: "MINMAXINFO 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MINMAXINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MINMAXINFO 구조체"
+title: "MINMAXINFO 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MINMAXINFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- MINMAXINFO structure
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MINMAXINFO 구조체
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 772416bdac3c72f55644fa31aef23ba76a14e606
+ms.lasthandoff: 02/24/2017
 
-The `MINMAXINFO` structure contains information about a window's maximized size and position and its minimum and maximum tracking size.  
+---
+# <a name="minmaxinfo-structure"></a>MINMAXINFO 구조체
+`MINMAXINFO` 구조 창 최대화 된 크기와 위치 및 추적 최소 및 최대 크기에 대 한 정보를 포함 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      typedef struct tagMINMAXINFO {  
-   POINT ptReserved;  
-   POINT ptMaxSize;  
-   POINT ptMaxPosition;  
-   POINT ptMinTrackSize;  
-   POINT ptMaxTrackSize;  
+typedef struct tagMINMAXINFO {  
+    POINT ptReserved;  
+    POINT ptMaxSize;  
+    POINT ptMaxPosition;  
+    POINT ptMinTrackSize;  
+    POINT ptMaxTrackSize;  
 } MINMAXINFO;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *ptReserved*  
  내부용으로 예약됩니다.  
   
  *ptMaxSize*  
- Specifies the maximized width \(point.x\) and the maximized height \(point.y\) of the window.  
+ 최대화 된 너비 (point.x) 및 창 최대화 높이 (point.y)를 지정합니다.  
   
  `ptMaxPosition`  
- Specifies the position of the left side of the maximized window \(point.x\) and the position of the top of the maximized window \(point.y\).  
+ 최대화 된 창 (point.x)의 왼쪽의 위치와 맨 위에 있는 최대화 된 창 (point.y)의 위치를 지정합니다.  
   
  *ptMinTrackSize*  
- Specifies the minimum tracking width \(point.x\) and the minimum tracking height \(point.y\) of the window.  
+ 최소 추적 너비 (point.x) 및 최소 추적 창의 높이 (point.y)를 지정 합니다.  
   
  *ptMaxTrackSize*  
- Specifies the maximum tracking width \(point.x\) and the maximum tracking height \(point.y\) of the window.  
+ 최대 너비 (point.x)을 추적 및 추적 창의 높이 (point.y) 최대 지정 합니다.  
   
-## 요구 사항  
- **Header:** winuser.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** winuser.h  
   
-## 참고 항목  
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnGetMinMaxInfo](../Topic/CWnd::OnGetMinMaxInfo.md)
+## <a name="see-also"></a>참고 항목  
+ [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
+
+

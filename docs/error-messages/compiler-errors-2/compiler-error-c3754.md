@@ -1,34 +1,51 @@
 ---
-title: "컴파일러 오류 C3754 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3754"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3754"
+title: "컴파일러 오류 C3754 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3754
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3754
 ms.assetid: 14b877bc-9277-40ec-af1c-196a58b45f10
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3754
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2a72db01b88f062f2b8866109cab6375930121ef
+ms.lasthandoff: 02/24/2017
 
-대리 생성자: 멤버 함수 'function'을\(를\) 'type' 형식의 인스턴스에 대해 호출할 수 없습니다.  
+---
+# <a name="compiler-error-c3754"></a>컴파일러 오류 C3754
+생성자 위임: 'type' 형식의 인스턴스에서 멤버 ' function '함수를 호출할 수 없습니다  
   
- 함수를 포함하지 않는 형식에 대한 포인터를 통해 함수를 호출했습니다.  
+ 함수를 포함 하지 않는 형식에 대 한 포인터를 통해 함수를 호출 했습니다.  
   
- 다음 샘플에서는 C3754 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3754 오류가 생성 됩니다.  
   
 ```  
 // C3754a.cpp  
@@ -50,27 +67,4 @@ int main() {
 //   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);  
 }  
 ```  
-  
- 다음 샘플에서는 C3754 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3754b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-__delegate void MyDel();  
-  
-__gc __interface MyInterface {};  
-  
-__gc struct MyClass : MyInterface {  
-   void f() {}  
-};  
-  
-int main() {  
-   MyInterface* p = new MyClass;  
-   MyDel* q = new MyDel(p, &MyClass::f);   // C3754  
-   // try the following line instead  
-   // MyDel* q = new MyDel(__try_cast<MyClass*>(p), &MyClass::f);  
-}  
-```
+

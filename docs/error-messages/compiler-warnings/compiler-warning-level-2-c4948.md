@@ -1,56 +1,48 @@
 ---
-title: "컴파일러 경고 (수준 2) C4948 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4948"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4948"
+title: "컴파일러 경고 (수준 2) C4948 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4948
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4948
 ms.assetid: d006cb17-754a-4c70-ba7f-c3200e2cd8fa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 경고 (수준 2) C4948
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 6483f704967faa75d9298e0bb7e942e9a8202c00
+ms.lasthandoff: 02/24/2017
 
-'accessor'의 반환 형식이 해당 setter의 마지막 매개 변수 형식과 일치하지 않습니다.  
+---
+# <a name="compiler-warning-level-2-c4948"></a>컴파일러 경고(수준 2) C4948
+'접근자'의 반환 형식은 해당 setter의 마지막 매개 변수 형식과 일치 하지 않습니다.  
   
- 컴파일러에서 인덱싱된 속성에 대해 가져오는 데이터 형식과 설정되는 데이터 형식이 서로 일치하지 않음을 발견했습니다.  
+컴파일러에서 어떤 데이터 형식이 get 되 고 인덱싱된 속성에 대 한 설정 사이 불일치가 발견 합니다.  
   
- C4948은 **\/clr:oldSyntax**를 사용하는 경우에만 발생합니다.  
-  
- 다음 샘플에서는 C4948 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C4948.cpp  
-// compile with: /clr:oldSyntax /LD /W2  
-  
-__gc class MyClass  
-{  
-   int prop __nogc [2];  
-   public:  
-  
-      __property int get_P(int i)  
-      // try the following line instead  
-      // __property char get_P(int i)  
-      {  
-         return prop[i];  
-      }  
-  
-      __property void set_P(int i, char c)  
-      {  
-         prop[i] = c;  
-      }  
-};   // C4948  
-```
+C4948는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+

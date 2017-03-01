@@ -1,28 +1,45 @@
 ---
-title: "MFC 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 클래스"
-  - "클래스 [C++], MFC"
+title: "MFC 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- classes [C++], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
 caps.latest.revision: 33
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 35
----
-# MFC 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4e63a2eed54968087fd32e1cb8d7754e99ad033c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mfc-classes"></a>MFC 클래스
 다음 목록의 클래스는 MFC(Microsoft Foundation Class) 라이브러리에 포함되어 있습니다.  
   
 > [!TIP]
@@ -135,13 +152,13 @@ caps.handback.revision: 35
  Windows 검사 목록 상자의 기능을 제공합니다.  
   
  [CClientDC 클래스](../../mfc/reference/cclientdc-class.md)  
- Windows 함수 호출을 처리 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 생성 시 및 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 소멸 시.  
+ 생성 시 Windows 함수 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 의 호출과 소멸 시 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 의 호출을 처리합니다.  
   
  [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)  
  MFC 라이브러리 메시지 맵 아키텍처의 기본 클래스입니다.  
   
  [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)  
- `ON_UPDATE_COMMAND_UI` 파생 클래스의 `CCmdTarget` 처리기에서만 사용합니다.  
+ `ON_UPDATE_COMMAND_UI` 파생 클래스의 `CCmdTarget`처리기에서만 사용합니다.  
   
  [CColorDialog 클래스](../../mfc/reference/ccolordialog-class.md)  
  색 선택 항목 대화 상자를 응용 프로그램에 통합할 수 있습니다.  
@@ -330,7 +347,7 @@ caps.handback.revision: 35
  도킹 사이트에 도킹되거나 탭 창에 포함될 수 있는 창을 구현합니다.  
   
  [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)  
- `CWnd` 파생 창에 대해 도킹 지원을 제공합니다.  
+ `CWnd`파생 창에 대해 도킹 지원을 제공합니다.  
   
  [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md)  
  주 프레임 창에서 도킹 레이아웃을 제어하는 핵심 기능을 구현합니다.  
@@ -345,7 +362,7 @@ caps.handback.revision: 35
  영구 메모리(파일)에서 하나 이상의 도킹 컨트롤 막대의 상태를 로드, 언로드 또는 지우는 serialize된 `CObject` 클래스입니다.  
   
  [CDocObjectServer 클래스](../../mfc/reference/cdocobjectserver-class.md)  
- 일반 `COleDocument` 서버를 전체 DocObject 서버로 만드는 데 필요한 추가 OLE 인터페이스(`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, 및 `IPrint`)를 구현합니다.  
+ 일반 `COleDocument` 서버를 전체 DocObject 서버로 만드는 데 필요한 추가 OLE 인터페이스( `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, 및 `IPrint`)를 구현합니다.  
   
  [CDocObjectServerItem 클래스](../../mfc/reference/cdocobjectserveritem-class.md)  
  DocObject 서버 전용 OLE 서버 동사를 구현합니다.  
@@ -567,10 +584,10 @@ caps.handback.revision: 35
  기능을 확장 [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md), Windows 인터페이스 MDI (다중 문서) 프레임 창입니다.  
   
  [CMDITabInfo 클래스](../../mfc/reference/cmditabinfo-class.md)  
- 매개 변수를 전달 하는 데 [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#cmdiframewndex__enablemditabbedgroups) 메서드. MDI 탭 그룹의 동작을 제어하려면 이 클래스의 멤버를 설정합니다.  
+ 매개 변수를 전달 하는 데 [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) 메서드. MDI 탭 그룹의 동작을 제어하려면 이 클래스의 멤버를 설정합니다.  
   
  [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)  
-  [CFile 클래스](../../mfc/reference/cfile-class.md)-을 지 원하는 메모리 파일 클래스를 파생 합니다.  
+ [CFile 클래스](../../mfc/reference/cfile-class.md)-을 지 원하는 메모리 파일 클래스를 파생 합니다.  
   
  [CMemoryException 클래스](../../mfc/reference/cmemoryexception-class.md)  
  메모리 부족 예외 상태를 나타냅니다.  
@@ -597,7 +614,7 @@ caps.handback.revision: 35
  탭 창의 기본 기능을 구현합니다.  
   
  [CMFCButton 클래스](../../mfc/reference/cmfcbutton-class.md)  
- 기능을 추가 [CButton 클래스](../../mfc/reference/cbutton-class.md) 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 등 클래스입니다.  
+ 에 새로운 기능이 추가 된 [CButton 클래스](../../mfc/reference/cbutton-class.md) 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 등 클래스입니다.  
   
  [CMFCCaptionBar 클래스](../../mfc/reference/cmfccaptionbar-class.md)  
  단추, 텍스트 레이블, 비트맵의 세 가지 요소를 표시할 수 있는 컨트롤 막대입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.  
@@ -609,7 +626,7 @@ caps.handback.revision: 35
  문서 또는 응용 프로그램에서 색을 선택할 수 있는 도킹 컨트롤 막대를 나타냅니다.  
   
  [CMFCColorButton 클래스](../../mfc/reference/cmfccolorbutton-class.md)  
-  `CMFCColorButton` 및 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 클래스 색 선택 컨트롤을 구현 하는 데 함께 사용 됩니다.  
+ `CMFCColorButton` 및 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 클래스 색 선택 컨트롤을 구현 하는 데 함께 사용 됩니다.  
   
  [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)  
  색 선택 항목 대화 상자를 나타냅니다.  
@@ -678,13 +695,13 @@ caps.handback.revision: 35
  사용자가 선택한 메뉴에 팝업 메뉴와 보고서를 표시하는 단추입니다.  
   
  [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)  
- 시각적으로 유사한 탭된 창은 **탐색 창** Microsoft Outlook 2000 또는 Outlook 2003 합니다.  `CMFCOutlookBar` 개체를 포함 한 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 개체와 일련의 탭 합니다. 탭 수 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 또는 `CWnd`-파생 개체입니다. Outlook 표시줄은 사용자에게 일련의 단추와 표시 영역으로 나타납니다. 사용자가 단추를 클릭하면 해당 컨트롤 또는 단추 창이 표시됩니다.  
+ Microsoft Outlook 2000 또는 Outlook 2003의 **탐색 창** 과 시각적으로 유사한 탭 창입니다. `CMFCOutlookBar` 개체를 포함 한 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 개체와 일련의 탭 합니다. 탭 수 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 또는 `CWnd`-파생 개체입니다. Outlook 표시줄은 사용자에게 일련의 단추와 표시 영역으로 나타납니다. 사용자가 단추를 클릭하면 해당 컨트롤 또는 단추 창이 표시됩니다.  
   
  [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md)  
  파생 되는 컨트롤 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md) Outlook 표시줄에 삽입할 수 있는 ([CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)). Outlook 표시줄 창에 큰 단추의 열이 포함되어 있습니다. 단추 목록이 창보다 크면 위 아래로 스크롤할 수 있습니다. 사용자가 Outlook 표시줄 창을 Outlook 표시줄에서 분리하면 기본 프레임 창에서 이동하거나 도킹할 수 있습니다.  
   
  [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
- 탭 컨트롤의 시각적 모양을 가진는 **탐색 창** Microsoft Outlook에서.  
+ Microsoft Outlook의 **탐색 창** 과 시각적으로 유사한 탭 컨트롤입니다.  
   
  [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)  
  Windows 팝업 메뉴 기능을 구현하고 분리 메뉴, 도구 설명 같은 기능을 추가하여 확장합니다.  
@@ -720,10 +737,10 @@ caps.handback.revision: 35
  rebar 컨트롤의 레이아웃, 지속성 및 상태 정보를 제공하는 컨트롤 막대입니다.  
   
  [CMFCRibbonApplicationButton 클래스](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
- 응용 프로그램 창의 왼쪽 위 모서리에 있는 특수 단추를 구현합니다. 일반적으로 일반적인를 포함 하는 메뉴가 열리고 화살표를 클릭 하면 **파일** 같은 명령은 **열려**, **저장**, 및 **종료**합니다.  
+ 응용 프로그램 창의 왼쪽 위 모서리에 있는 특수 단추를 구현합니다. 클릭하면 단추는 **열기** , **저장**및 **종료**와 같은 일반적인 **파일**명령이 포함된 메뉴를 엽니다.  
   
  [CMFCRibbonBaseElement 클래스](../../mfc/reference/cmfcribbonbaseelement-class.md)  
- 기본 클래스에 추가할 수 있는 모든 요소에는 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  
+ 기본 클래스에 추가할 수 있는 모든 요소에 대 한 한 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  
   
  [CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md)  
  패널, 빠른 실행 도구 모음 및 팝업 메뉴와 같은 리본 막대 요소에 배치할 수 있는 단추를 구현합니다.  
@@ -801,7 +818,7 @@ caps.handback.revision: 35
  `CStatusBar` 클래스와 유사한 상태 표시줄을 구현합니다. 그러나 `CMFCStatusBar` 클래스에는 `CStatusBar` 클래스에 의해 제공되지 않는 기능(예: 이미지, 애니메이션 및 진행률 표시줄을 표시하는 기능 및 마우스 두 번 클릭에 응답하는 기능)이 포함되어 있습니다.  
   
  [CMFCTabCtrl 클래스](../../mfc/reference/cmfctabctrl-class.md)  
- 탭 컨트롤에 대한 기본 기능을 제공합니다. 탭 컨트롤은 맨 위 또는 아래에 평면 또는 3차원 탭이 포함된 도킹 가능한 창을 표시합니다. 탭은 텍스트와 이미지를 표시하고 활성화된 경우 색을 변경할 수 있습니다.  
+ 탭 컨트롤에 대한 기본 기능을 제공합니다. 탭 컨트롤은 맨 위 또는 아래에 평면 또는&3;차원 탭이 포함된 도킹 가능한 창을 표시합니다. 탭은 텍스트와 이미지를 표시하고 활성화된 경우 색을 변경할 수 있습니다.  
   
  [CMFCTabToolTipInfo 구조](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
  사용자가 마우스로 가리키고 있는 MDI 탭에 대한 정보를 제공합니다.  
@@ -813,7 +830,7 @@ caps.handback.revision: 35
  작업 창 컨트롤에 대 한 작업을 나타내는 도우미 클래스 ([CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md)). 작업 개체의 작업 그룹에서 항목을 나타냅니다 ([CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). 각 작업은 사용자가 작업을 클릭할 때 프레임워크가 실행하는 명령과 작업 이름의 왼쪽에 나타내는 아이콘을 포함할 수 있습니다.  
   
  [CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
- 사용 되는 도우미 클래스는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다. 형식의 개체 `CMFCTasksPaneTaskGroup` 나타내는 *작업 그룹*합니다. 작업 그룹은 축소 단추가 포함된 별도 상자에 프레임워크가 표시하는 항목 목록입니다. 상자는 선택적 캡션(그룹 이름)을 가질 수 있습니다. 그룹을 축소하면 작업 목록이 표시되지 않습니다.  
+ 사용 되는 도우미 클래스는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다. `CMFCTasksPaneTaskGroup` 형식의 개체는 *작업 그룹*을 나타냅니다. 작업 그룹은 축소 단추가 포함된 별도 상자에 프레임워크가 표시하는 항목 목록입니다. 상자는 선택적 캡션(그룹 이름)을 가질 수 있습니다. 그룹을 축소하면 작업 목록이 표시되지 않습니다.  
   
  [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)  
  유사한 [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), 사용자 인터페이스 기능에 대 한 추가 지원을 제공 합니다. 여기에는 평면 도구 모음, 핫 이미지 포함 도구 모음, 큰 아이콘, 페이저 단추, 잠긴 도구 모음, rebar 컨트롤, 이미지 아래 텍스트, 배경 이미지, 탭 도구 모음이 포함됩니다. `CMFCToolBar` 클래스에는 기본 제공 사용자 지정 도구 모음과 메뉴, 메뉴 사이 끌어 놓기, 콤보 상자 단추, 편집 상자 단추, 색 선택 및 롤업 단추 도구 모음이 포함됩니다.  
@@ -822,13 +839,13 @@ caps.handback.revision: 35
  응용 프로그램 리소스 또는 파일에서 로드된 도구 모음 이미지를 관리합니다.  
   
  [CMFCToolBarInfo 클래스](../../mfc/reference/cmfctoolbarinfo-class.md)  
- 다양한 상태의 도구 모음 이미지의 리소스 ID를 포함합니다. `CMFCToolBarInfo` 클래스의 매개 변수로 사용 되는 도우미 클래스는 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#cmfctoolbar__loadtoolbarex) 메서드.  
+ 다양한 상태의 도구 모음 이미지의 리소스 ID를 포함합니다. `CMFCToolBarInfo`클래스의 매개 변수로 사용 되는 도우미 클래스는 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 메서드.  
   
  [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  팝업 메뉴를 포함하는 도구 모음 단추입니다.  
   
  [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)  
- 모덜리스 탭 대화 상자 ([CPropertySheet 클래스](../../mfc/reference/cpropertysheet-class.md)) 하는 도구 모음, 메뉴, 바로 가기 키, 사용자 정의 형식 및 응용 프로그램에서 비주얼 스타일을 사용자 지정할 수 있습니다. 사용자를 선택 하 여이 대화 상자에 액세스 하는 일반적으로 **사용자 지정** 에서 **도구** 메뉴.  
+ 모덜리스 탭 대화 상자 ([CPropertySheet 클래스](../../mfc/reference/cpropertysheet-class.md)) 하는 도구 모음, 메뉴, 바로 가기 키, 사용자 정의 형식 및 응용 프로그램에서 비주얼 스타일을 사용자 지정할 수 있습니다. 일반적으로 사용자가 **도구** 메뉴에서 **사용자 지정** 을 선택하여 이 대화 상자에 액세스합니다.  
   
  [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md)  
  확장 된 도구 설명 구현에 따라는 [CToolTipCtrl 클래스](../../mfc/reference/ctooltipctrl-class.md)합니다. `CMFCToolTipCtrl` 클래스 기반의 도구 설명은 아이콘, 레이블 및 설명을 표시할 수 있습니다. 그라데이션 채우기, 사용자 지정 텍스트와 테두리 색, 굵은 텍스트, 둥근 모서리 또는 풍선 스타일을 사용하여 시각적인 모양을 사용자 지정할 수 있습니다.  
@@ -837,7 +854,7 @@ caps.handback.revision: 35
  도구 설명의 시각적 모양에 대한 정보를 저장합니다.  
   
  [CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md)  
- 응용 프로그램의 모양을 전역 수준에서 변경하는 기능을 지원합니다. `CMFCVisualManager`클래스는 일관된 스타일을 사용하여 응용 프로그램의 GUI 컨트롤을 그리는 명령을 제공하는 클래스와 함께 작동합니다. 이러한 다른 클래스를 비주얼 관리자라고 하며 `CMFCBaseVisualManager`에서 상속됩니다.  
+ 응용 프로그램의 모양을 전역 수준에서 변경하는 기능을 지원합니다. `CMFCVisualManager` 클래스는 일관된 스타일을 사용하여 응용 프로그램의 GUI 컨트롤을 그리는 명령을 제공하는 클래스와 함께 작동합니다. 이러한 다른 클래스를 비주얼 관리자라고 하며 `CMFCBaseVisualManager`에서 상속됩니다.  
   
  [CMFCVisualManagerOffice2003 클래스](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
  응용 프로그램에 Microsoft Office 2003 모양을 제공합니다.  
@@ -861,7 +878,7 @@ caps.handback.revision: 35
  일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  
   
  [CMonikerFile 클래스](../../mfc/reference/cmonikerfile-class.md)  
- 데이터의 스트림을 나타냅니다 ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))로 명명 된 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)합니다.  
+ [IMoniker](http://msdn.microsoft.com/library/windows/desktop/aa380034)에서 이름을 지정한 데이터 스트림( [IStream](http://msdn.microsoft.com/library/windows/desktop/ms679705))을 나타냅니다.  
   
  [CMonthCalCtrl 클래스](../../mfc/reference/cmonthcalctrl-class.md)  
  달력 컨트롤의 기능을 캡슐화합니다.  
@@ -885,7 +902,7 @@ caps.handback.revision: 35
  한 스레드가 한 리소스에 상호 배타적으로 액세스하도록 허용하는 동기화 개체인 뮤텍스를 나타냅니다.  
   
  [CNetAddressCtrl 클래스](../../mfc/reference/cnetaddressctrl-class.md)  
- `CNetAddressCtrl`클래스에 입력 한 IPv4, IPv6 및 DNS 주소를 이름이 지정된 형식의 유효성을 검사하는 데 사용할 수 있는 네트워크 주소 컨트롤을 나타냅니다.  
+ `CNetAddressCtrl` 클래스에 입력 한 IPv4, IPv6 및 DNS 주소를 이름이 지정된 형식의 유효성을 검사하는 데 사용할 수 있는 네트워크 주소 컨트롤을 나타냅니다.  
   
  [CNotSupportedException 클래스](../../mfc/reference/cnotsupportedexception-class.md)  
  지원되지 않는 기능을 요청한 결과인 예외를 나타냅니다.  
@@ -915,7 +932,7 @@ caps.handback.revision: 35
  OLE 항목에 대한 컨테이너 인터페이스를 정의합니다.  
   
  [COleCmdUI 클래스](../../mfc/reference/colecmdui-class.md)  
- 응용 프로그램의 `IOleCommandTarget` 기반 기능과 관련된 사용자 인터페이스 개체의 상태를 업데이트하기 위한 MFC용 메서드를 구현합니다.  
+ 응용 프로그램의 `IOleCommandTarget`기반 기능과 관련된 사용자 인터페이스 개체의 상태를 업데이트하기 위한 MFC용 메서드를 구현합니다.  
   
  [COleControl 클래스](../../mfc/reference/colecontrol-class.md)  
  OLE 컨트롤을 개발할 수 있는 강력한 기본 클래스입니다.  
@@ -1020,7 +1037,7 @@ caps.handback.revision: 35
  OLE 편집 링크 대화 상자의 특별한 경우에 사용됩니다. 예를 들어, 문서에서 기존에 연결되거나 포함된 개체만 업데이트할 경우에 사용해야 합니다.  
   
  [COleVariant 클래스](../../mfc/reference/colevariant-class.md)  
- 캡슐화 된 [VARIANT](http://msdn.microsoft.com/ko-kr/e305240e-9e11-4006-98cc-26f4932d2118) 데이터 형식입니다.  
+ 캡슐화 된 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 데이터 형식입니다.  
   
  [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` 클래스는 윈도우에 맞지 않는 포함된 창을 보기로 스크롤할 수 있는 Windows 페이저 컨트롤을 래핑합니다.  
@@ -1035,7 +1052,7 @@ caps.handback.revision: 35
  Windows 색상표를 캡슐화합니다.  
   
  [CPane 클래스](../../mfc/reference/cpane-class.md)  
- 향상 된 [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)합니다. 기존 MFC 프로젝트를 업그레이드하는 경우 발견되는 모든 `CControlBar`를 `CPane`으로 바꿔야 합니다.  
+ 향상 된 [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)합니다. 기존 MFC 프로젝트를 업그레이드하는 경우 발견되는 모든 `CControlBar` 를 `CPane`으로 바꿔야 합니다.  
   
  [CPaneContainer 클래스](../../mfc/reference/cpanecontainer-class.md)  
  MFC에서 구현한 도킹 모델의 기본 구성 요소입니다. 이 클래스의 개체는 도킹 창 두 개 또는 `CPaneContainer.` 인스턴스 두 개를 가리키며 창이나 컨테이너를 나누는 구분선의 포인터를 저장합니다. 컨테이너 안에 컨테이너를 중첩하면 프레임워크에서 복잡한 도킹 레이아웃을 나타내는 이진 트리를 빌드할 수 있습니다. 이진 트리의 루트에 저장 되는 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 개체입니다.  
@@ -1107,7 +1124,7 @@ caps.handback.revision: 35
  컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  
   
  [CRect 클래스](../../atl-mfc-shared/reference/crect-class.md)  
- Windows와 유사한 [RECT 구조체](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-US)합니다.  
+ Windows와 유사한 [RECT 구조체](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)합니다.  
   
  [CRectTracker 클래스](../../mfc/reference/crecttracker-class.md)  
  항목을 다른 방식으로 표시, 이동하거나 크기를 변경할 수 있도록 합니다.  
@@ -1152,7 +1169,7 @@ caps.handback.revision: 35
  인스턴스를 만드는 데 사용할 수 있는 도우미 클래스는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
   
  [CSharedFile 클래스](../../mfc/reference/csharedfile-class.md)  
-  [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
+ [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
   
  [CShellManager 클래스](../../mfc/reference/cshellmanager-class.md)  
  PIDL(식별자 포인터 목록)에 대한 포인터를 사용하여 작업할 수 있는 몇 가지 메서드를 구현합니다.  
@@ -1173,7 +1190,7 @@ caps.handback.revision: 35
  애니메이션 변수의 초기 속도에 의해 진폭이 결정되는 사인 곡선 속도 전환을 캡슐화합니다.  
   
  [CSize 클래스](../../atl-mfc-shared/reference/csize-class.md)  
- Windows와 유사한 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 상대 좌표 또는 위치를 구현 하는 구조입니다.  
+ 상대 좌표 또는 위치를 구현하는 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조체와 유사합니다.  
   
  [CSliderCtrl 클래스](../../mfc/reference/csliderctrl-class.md)  
  Windows의 공용 슬라이더 컨트롤의 기능을 제공합니다.  
@@ -1199,7 +1216,7 @@ caps.handback.revision: 35
  [CSplitterWnd 클래스](../../mfc/reference/csplitterwnd-class.md)  
  여러 개의 창이 포함된 창인 분할자 창 기능을 제공합니다.  
   
- [CSplitterWndEx 클래스](../Topic/CSplitterWndEx%20Class.md)  
+ [CSplitterWndEx 클래스](csplitterwndex-class.md)  
  사용자 지정된 분할자 창을 나타냅니다.  
   
  [CStatic 클래스](../../mfc/reference/cstatic-class.md)  
@@ -1233,7 +1250,7 @@ caps.handback.revision: 35
  탭 컨트롤 클래스의 사용을 간소화 ([CTabView 클래스](../../mfc/reference/ctabview-class.md))에서 MFC의 문서/뷰 아키텍처를 사용 하는 응용 프로그램입니다.  
   
  [CTaskDialog 클래스](../../mfc/reference/ctaskdialog-class.md)  
- 메시지 상자처럼 작동하지만 사용자에게 추가 정보를 표시할 수 있는 팝업 대화 상자입니다. `CTaskDialog`에는 사용자로부터 정보를 수집하는 기능을 포함합니다.  
+ 메시지 상자처럼 작동하지만 사용자에게 추가 정보를 표시할 수 있는 팝업 대화 상자입니다. `CTaskDialog` 에는 사용자로부터 정보를 수집하는 기능을 포함합니다.  
   
  [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md)  
  비트맵 단추의 행과 구분 기호(선택 사항)가 있는 컨트롤 막대입니다.  
@@ -1254,13 +1271,13 @@ caps.handback.revision: 35
  및 트리 컨트롤의 사용을 간소화 [CTreeCtrl 클래스](../../mfc/reference/ctreectrl-class.md), MFC의 문서 뷰 아키텍처를 트리 컨트롤 기능을 캡슐화 하는 클래스입니다.  
   
  [CTypedPtrArray 클래스](../../mfc/reference/ctypedptrarray-class.md)  
- `CPtrArray` 또는 `CObArray` 클래스의 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
+ `CPtrArray` 또는 `CObArray`클래스의 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
   
  [CTypedPtrList 클래스](../../mfc/reference/ctypedptrlist-class.md)  
  클래스 `CPtrList`의 개체에 대한 형식 안전 "래퍼"를 제공합니다.  
   
  [CTypedPtrMap 클래스](../../mfc/reference/ctypedptrmap-class.md)  
- `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr` 및 `CMapStringToPtr` 포인터-맵 클래스 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
+ `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`및 `CMapStringToPtr`포인터-맵 클래스 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
   
  [CUIntArray 클래스](../../mfc/reference/cuintarray-class.md)  
  부호 없는 정수의 배열을 지원합니다.  
@@ -1269,7 +1286,7 @@ caps.handback.revision: 35
  최종 사용자 작업을 중지하도록 throw됩니다.  
   
  [CUserTool 클래스](../../mfc/reference/cusertool-class.md)  
- 외부 응용 프로그램을 실행하는 메뉴 항목입니다.  **도구** 탭은 **사용자 지정** 대화 상자 ([CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용자 도구를 추가 하 고 이름, 명령, 인수 및 각 사용자 도구에 대 한 초기 디렉터리를 지정할 수 있습니다.  
+ 외부 응용 프로그램을 실행하는 메뉴 항목입니다. **도구** 탭은 **사용자 지정** 대화 상자 ([CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용자 도구를 추가 하 고 이름, 명령, 인수 및 각 사용자 도구에 대 한 초기 디렉터리를 지정할 수 있습니다.  
   
  [CUserToolsManager 클래스](../../mfc/reference/cusertoolsmanager-class.md)  
  컬렉션을 유지 관리 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 응용 프로그램의 개체입니다. 사용자 도구는 외부 응용 프로그램을 실행하는 메뉴 항목입니다. `CUserToolsManager` 개체를 사용하면 사용자 또는 개발자가 응용 프로그램에 새 사용자 도구를 추가할 수 있습니다. 사용자 도구와 연결된 명령 실행을 지원하고 사용자 도구에 관한 정보를 Windows 레지스트리를 저장합니다.  
@@ -1313,6 +1330,7 @@ caps.handback.revision: 35
 ## <a name="related-sections"></a>관련 단원  
  [MFC 데스크톱 응용 프로그램](../../mfc/mfc-desktop-applications.md)  
  클래스, 전역 함수, 전역 변수 및 MFC 라이브러리를 구성하는 매크로에 대한 항목을 볼 수 있는 링크를 포함합니다.
+
 
 
 

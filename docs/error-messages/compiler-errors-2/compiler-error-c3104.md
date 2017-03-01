@@ -1,39 +1,55 @@
 ---
-title: "컴파일러 오류 C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: "컴파일러 오류 C3104 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류 C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>컴파일러 오류 C3104
 특성 인수가 잘못되었습니다.  
   
- 특성에 잘못된 인수를 지정했습니다.  
+ 특성에 잘못 된 인수를 지정 했습니다.  
   
- 자세한 내용은 [Attribute Parameter Types](../../windows/attribute-parameter-types-cpp-component-extensions.md)를 참조하십시오.  
+ 참조 [특성 매개 변수 형식](../../windows/attribute-parameter-types-cpp-component-extensions.md) 에 대 한 자세한 내용은 합니다.  
   
- 이 오류는 Visual C\+\+ 2005에 대해 적용되었으며, 관리되는 배열을 사용자 지정 특성에 전달하는 경우 이 배열의 형식이 더 이상 집합체 초기화 목록에서 추론되지 않는다는 컴파일러 규칙의 결과로 발생할 수 있습니다.  컴파일러를 실행할 때 이니셜라이저 목록과 배열의 형식을 함께 지정해야 합니다.  
+ 이 오류는 Visual c + + 2005에 대해 수행 된 컴파일러 규칙의 결과로 생성 될 수 없습니다: 관리 되는 배열, 사용자 지정 특성에 전달 하는 경우 배열의 형식은 집합체 초기화 목록에서 더 이상 추론 됩니다. 이제 컴파일러를 요구 이니셜라이저 목록 뿐 아니라 배열 형식을 지정할 수 있습니다.  
   
-## 예제  
- 다음 샘플에서는 C3104 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3104 오류가 발생 합니다.  
   
 ```  
 // C3104a.cpp  
@@ -52,8 +68,8 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## 예제  
- 다음 샘플에서는 C3104 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3104 오류가 발생 합니다.  
   
 ```  
 // C3104b.cpp  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## 예제  
- 다음 샘플에서는 C3104 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

@@ -1,67 +1,50 @@
 ---
-title: "컴파일러 오류 C3744 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3744"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3744"
+title: "컴파일러 오류 C3744 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3744
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3744
 ms.assetid: a447d050-80d1-406a-9a6e-f15c527d717c
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C3744
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: f6cd256454b51a103d9c4249b050c8c05781bc78
+ms.lasthandoff: 02/24/2017
 
-관리되는 이벤트의 경우 \_\_unhook를 사용하려면 인수가 적어도 3개는 있어야 합니다.  
+---
+# <a name="compiler-error-c3744"></a>컴파일러 오류 C3744
+관리되는 이벤트의 경우 __unhook를 사용하려면 인수가 적어도 3개는 있어야 합니다.  
   
- [\_\_unhook](../../cpp/unhook.md) 함수는 Managed Extensions for C\+\+에 대해 컴파일된 프로그램에서 사용될 경우에 매개 변수를 세 개 사용해야 합니다.  
+ [__unhook](../../cpp/unhook.md) 함수는 c + +에 대 한 관리 되는 확장에 대 한 컴파일된 프로그램에서 사용 하는 경우 세 개의 매개 변수를 사용 해야 합니다.  
   
- `__hook` 및 `__unhook`는 \/clr 프로그래밍에 사용할 수 없습니다.  \+\= 및 \-\= 연산자를 대신 사용하십시오.  
+ `__hook`및 `__unhook` /clr 프로그래밍와 호환 되지 않습니다. 대신 + = 및-= 연산자를 사용 합니다.  
   
- C3744는 **\/clr:oldSyntax**를 사용하는 경우에만 발생합니다.  
-  
- 다음 샘플에서는 C3744 오류가 발생하는 경우를 보여 줍니다.  
-  
-```  
-// C3744.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-public __delegate void delegate1();  
-  
-[ event_source(managed) ]  
-public __gc class CPSource {  
-public:  
-   __event delegate1* event1;  
-};  
-  
-[event_receiver(managed)]  
-public __gc class CReceiver {  
-public:  
-   void Handler1() {  
-   }  
-  
-   void UnhookAll1(CPSource* pSrc, CReceiver* pRec) {  
-      pRec;  
-      __unhook(pSrc);   // C3744  
-      // The following line resolves the error.  
-      // __unhook(&CPSource::event1, pSrc, &CReceiver::Handler1);  
-   }  
-};  
-  
-int main() {  
-}  
-```
+ C3744는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+

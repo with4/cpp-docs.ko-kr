@@ -1,34 +1,52 @@
 ---
-title: "컴파일러 오류 C3641 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3641"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3641"
+title: "컴파일러 오류 C3641 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3641
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3641
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 1f928242a26ed45a48cc9bc19be231e2d0e09a51
+ms.lasthandoff: 02/24/2017
 
-'function' : \/clr:pure 또는 \/clr:safe로 컴파일한 함수에 대한 호출 규칙 'calling\_convention'이\(가\) 잘못되었습니다.  
+---
+# <a name="compiler-error-c3641"></a>컴파일러 오류 C3641
+'function': 잘못 된 호출 규칙 'calling_convention' /clr을 사용 하 여 컴파일된 함수에 대 한: pure 또는 /clr: safe  
   
- [\/clr:pure](../../build/reference/clr-common-language-runtime-compilation.md)에는 [\_\_clrcall](../../cpp/clrcall.md) 호출 규칙만 사용할 수 있습니다.  
+ **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않습니다.  
   
- 다음 샘플에서는 C3641 오류가 발생하는 경우를 보여 줍니다.  
+ 만 [__clrcall](../../cpp/clrcall.md) 에서 허용 되는 호출 규칙 [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)합니다.  
+  
+ 다음 샘플에서는 C3641 오류가 생성 됩니다.  
   
 ```  
 // C3641.cpp  

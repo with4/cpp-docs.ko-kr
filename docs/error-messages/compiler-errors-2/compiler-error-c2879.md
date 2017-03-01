@@ -1,34 +1,50 @@
 ---
-title: "컴파일러 오류 C2879 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2879"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2879"
+title: "컴파일러 오류 C2879 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2879
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2879
 ms.assetid: ac92b645-2394-49de-8632-43d44e0553ed
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2879
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: b09a83e77e906a4a65efa12cf51a067361fad95a
+ms.lasthandoff: 02/24/2017
 
-'symbol' : 네임스페이스 별칭 정의에 따라 기존 네임스페이스에만 다른 이름을 지정할 수 있습니다.  
+---
+# <a name="compiler-error-c2879"></a>컴파일러 오류 C2879
+'symbol':만 기존 네임 스페이스는 네임 스페이스 별칭 정의 하 여 다른 이름을 지정할 수 있습니다  
   
- 네임스페이스 이외의 기호에 대해 [네임스페이스 별칭](../../misc/namespace-alias.md)을 만들 수 없습니다.  
+ 만들 수 없습니다는 [네임 스페이스 별칭](../../cpp/namespaces-cpp.md#namespace_aliases) 네임 스페이스 이외의 기호입니다.  
   
- 다음 샘플에서는 C2879 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2879 오류가 생성 됩니다.  
   
 ```  
 // C2879.cpp  
