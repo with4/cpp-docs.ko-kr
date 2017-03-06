@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime 클래스
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>주의  
  다음은 각 생성자에 대 한 설명입니다.  
   
-- **CTime (); **초기화 되지 않은 생성 `CTime` 개체입니다. 이 생성자를 사용 하면 정의 하 `CTime` 배열 개체입니다. 이러한 배열을 사용 하기 전에 유효한 시간으로 초기화 해야 합니다.  
+- **CTime(); ** 초기화 되지 않은 생성 `CTime` 개체입니다. 이 생성자를 사용 하면 정의 하 `CTime` 배열 개체입니다. 이러한 배열을 사용 하기 전에 유효한 시간으로 초기화 해야 합니다.  
   
-- **CTime (const CTime / /); **생성 한 `CTime` 개체에서 다른 `CTime` 값입니다.  
+- **CTime (const CTime / /); ** 생성 한 `CTime` 개체에서 다른 `CTime` 값입니다.  
   
-- **CTime (__time64_t); **생성 한 `CTime` 에서 개체는 **__time64_t** 유형입니다. 이 생성자는 UTC 시간을 예상 하 고 결과 저장 하기 전에 결과 현지 시간으로 변환 합니다.  
+- **CTime (__time64_t); ** 생성 한 `CTime` 에서 개체는 **__time64_t** 유형입니다. 이 생성자는 UTC 시간을 예상 하 고 결과 저장 하기 전에 결과 현지 시간으로 변환 합니다.  
   
-- **CTime (int, int,...); **생성 한 `CTime` 각 구성 요소와 현지 시간 구성 요소에서 개체는 다음 범위를 제한 합니다.  
+- **CTime (int, int,...); ** 생성 한 `CTime` 각 구성 요소와 현지 시간 구성 요소에서 개체는 다음 범위를 제한 합니다.  
   
     |구성 요소|범위|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      이 생성자를 사용 하면 적절 한 UTC로 변환 합니다. 하나는 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 또는 범위를 벗어나는 시간 구성 요소입니다. 호출 하기 전에 인수를 확인 해야 합니다. 이 생성자가 현지 시간을 예상합니다.  
   
-- `CTime`( **WORD, WORD** ) **;** 생성 된 `CTime` 개체는 지정 된 MS-DOS 날짜 및 시간 값에서입니다. 이 생성자가 현지 시간을 예상합니다.  
+- **CTime (WORD, 단어); ** 생성 한 `CTime` 개체는 지정 된 MS-DOS 날짜 및 시간 값에서입니다. 이 생성자가 현지 시간을 예상합니다.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** 생성 된 `CTime` 에서 개체는 `SYSTEMTIME` 구조입니다. 이 생성자가 현지 시간을 예상합니다.  
+- **CTime (const SYSTEMTIME / /); ** 생성 한 `CTime` 에서 개체는 `SYSTEMTIME` 구조입니다. 이 생성자가 현지 시간을 예상합니다.  
   
-- `CTime`( **const FILETIME&** ) **;** 생성 된 `CTime` 에서 개체는 `FILETIME` 구조입니다. 대부분의 경우 사용 하지 것입니다 `CTime``FILETIME` 직접 초기화 합니다. 사용 하는 경우는 `CFile` 파일을 조작 하는 개체 `CFile::GetStatus` 를 통해 파일 타임 스탬프를 검색 한 `CTime` 사용 하 여 개체 초기화는 `FILETIME` 구조입니다. 이 생성자는 시간을 UTC 기준으로 간주 하 고 결과 저장 하기 전에 현지 시간 값을 자동으로 변환 합니다.  
+- **CTime (const FILETIME / /); ** 생성 한 `CTime` 에서 개체는 `FILETIME` 구조입니다. 대부분의 경우 사용 하지 것입니다 `CTime FILETIME` 직접 초기화 합니다. 사용 하는 경우는 `CFile` 파일을 조작 하는 개체 `CFile::GetStatus` 를 통해 파일 타임 스탬프를 검색 한 `CTime` 사용 하 여 개체 초기화는 `FILETIME` 구조입니다. 이 생성자는 시간을 UTC 기준으로 간주 하 고 결과 저장 하기 전에 현지 시간 값을 자동으로 변환 합니다.  
   
     > [!NOTE]
     >  사용 하 여 생성자 **DBTIMESTAMP** OLEDB.h 포함 되는 경우에 매개 변수는 사용할 수만 있습니다.  

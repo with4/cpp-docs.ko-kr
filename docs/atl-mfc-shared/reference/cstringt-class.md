@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 클래스
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  문자열의 문자 집합으로 해석 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 있는 문자열에 문자를 포함 하는 부분 `pszCharSet`, 문자열의 첫 번째 문자로 시작 및 끝 문자에 속하지 않은 문자열에서 발견 되 면 `pszCharSet.``SpanIncluding` 문자열의 첫 번째 문자는 지정 된 집합에 없는 경우 빈 부분 문자열을 반환 합니다.  
+ 에 있는 문자열에 문자를 포함 하는 부분 `pszCharSet`, 문자열의 첫 번째 문자로 시작 및 끝 문자에 속하지 않은 문자열에서 발견 되 면 `pszCharSet`합니다. `SpanIncluding`문자열의 첫 번째 문자는 지정 된 집합에 없는 경우 빈 부분 문자열을 반환 합니다.  
   
 ### <a name="remarks"></a>주의  
  문자열의 첫 번째 문자에에서 없는 경우 문자 집합을 다음 `SpanIncluding` 빈 문자열을 반환 합니다. 그렇지 않으면 집합에 있는 연속 된 문자 시퀀스를 반환 합니다.  

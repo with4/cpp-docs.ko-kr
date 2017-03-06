@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 718aac826916b977eec4fb8400da81b5e32d4afa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: dd14e5c941da5383dce19e9f7f539bfb9909759f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 클래스
@@ -70,9 +70,9 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Increment](#increment)|(정적) 스레드로부터 안전한 방식으로 지정 된 변수의 값을 증가 시킵니다.|  
   
 ## <a name="remarks"></a>주의  
- `CComMultiThreadModelNoCS`유사한 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 제공 한다는 점에서 스레드로부터 안전한 메서드 증가 및 감소에 대 한 변수입니다. 그러나 참조 하는 경우를 통해 중요 섹션 클래스 `CComMultiThreadModelNoCS`와 같은 메서드 `Lock` 및 `Unlock` 조치도 취하지 않습니다.  
+ `CComMultiThreadModelNoCS`유사한 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 제공 한다는 점에서 스레드로부터 안전한 메서드 증가 및 감소에 대 한 변수입니다. 그러나 참조 하는 경우를 통해 중요 섹션 클래스 `CComMultiThreadModelNoCS`와 같은 메서드 `Lock` 및 `Unlock` 아무 작업도 하지 것입니다.  
   
- 일반적으로 사용 `CComMultiThreadModelNoCS` 통해는 `ThreadModelNoCS``typedef` 이름입니다. 이 `typedef` 에 정의 된 `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)합니다.  
+ 일반적으로 사용 `CComMultiThreadModelNoCS` 통해는 `ThreadModelNoCS` `typedef` 이름입니다. 이 `typedef` 에 정의 된 `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)합니다.  
   
 > [!NOTE]
 >  전역 `typedef` 이름 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) 및 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) 참조 하지 않는 `CComMultiThreadModelNoCS`합니다.  

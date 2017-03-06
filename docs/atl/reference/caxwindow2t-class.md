@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: deed13f7e44246eca1e9d3d138f73d0f540dc0b1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: a0724b0ea8922d1f39d8cf7ccd630068c32ea3ac
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 클래스
@@ -133,7 +133,7 @@ HWND Create(
 ```  
   
 ### <a name="remarks"></a>주의  
- `CAxWindow2T::Create`호출 [CWindow::Create](../../atl/reference/cwindow-class.md#create) 와 `LPCTSTR``lpstrWndClass` 제어 호스팅을 제공 하는 창 클래스에 매개 변수 설정 ( **AtlAxWinLic80**).  
+ `CAxWindow2T::Create`호출 [CWindow::Create](../../atl/reference/cwindow-class.md#create) 와 `LPCTSTR lpstrWndClass` 제어 호스팅을 제공 하는 창 클래스에 매개 변수 설정 ( **AtlAxWinLic80**).  
   
  참조 `CWindow::Create` 에 대 한 설명은 매개 변수 및 반환 값입니다.  
   
@@ -164,7 +164,7 @@ HRESULT CreateControlLic(
  컨트롤에 대 한 라이선스 키 라이센스가 없는 컨트롤을 만드는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>주의  
- 참조 [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 에 대 한 설명은 한 나머지 매개 변수 및 반환 값입니다.  
+ 참조 [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 에 대 한 설명은 나머지 매개 변수 및 반환 값입니다.  
   
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CAxWindow2T::CreateControlLic`합니다.  
@@ -197,7 +197,7 @@ HRESULT CreateControlLicEx(
  컨트롤에 대 한 라이선스 키 라이센스가 없는 컨트롤을 만드는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>주의  
- 참조 [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 에 대 한 설명은 한 나머지 매개 변수 및 반환 값입니다.  
+ 참조 [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 에 대 한 설명은 나머지 매개 변수 및 반환 값입니다.  
   
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CAxWindow2T::CreateControlLicEx`합니다.  

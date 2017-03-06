@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 클래스
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  새 `CSimpleStringT` 개체를 생성합니다. 새 할당 된 저장소에는 입력된 데이터를 복사 하는 생성자, 때문에 메모리 예외가 발생할 수 있습니다.  
   
 ### <a name="example"></a>예제  
- 다음 예제에서는 `CSimpleStringT::CSimpleStringT` ATL을 사용 하 여 `typedef``CSimpleString`합니다. `CSimpleString`자주 사용 되는 클래스 템플릿의 특수화 `CSimpleStringT`합니다.  
+ 다음 예제에서는 `CSimpleStringT::CSimpleStringT` ATL을 사용 하 여 `typedef` `CSimpleString`합니다. `CSimpleString`자주 사용 되는 클래스 템플릿의 특수화 `CSimpleStringT`합니다.  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -514,7 +514,7 @@ IAtlStringMgr* GetManager() const throw();
  에 대 한 메모리 관리자에 대 한 포인터는 `CSimpleStringT` 개체입니다.  
   
 ### <a name="remarks"></a>주의  
- 이 메서드를 호출 검색할 메모리 관리자에서 사용 하는 `CSimpleStringT` 개체입니다. 메모리 관리자 및 문자열 개체에 대 한 자세한 내용은 참조 하십시오. [메모리 관리 및 CStringT](../memory-management-with-cstringt.md)합니다.  
+ 이 메서드를 호출 검색할 메모리에서 사용 하는 관리자는 `CSimpleStringT` 개체입니다. 메모리 관리자 및 문자열 개체에 대 한 자세한 내용은 참조 하십시오. [메모리 관리 및 CStringT](../memory-management-with-cstringt.md)합니다.  
   
 ##  <a name="a-namegetstringa--csimplestringtgetstring"></a><a name="getstring"></a>CSimpleStringT::GetString
 문자열을 검색합니다.  
