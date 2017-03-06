@@ -1,4 +1,4 @@
-# [C-C++ 빌드 오류](c-cpp-build-errors.md)
+# [C++ 빌드 오류](c-cpp-build-errors.md)
 # [심각한 컴파일러 오류(C999~C1999)](compiler-fatal-errors-c999-through-c1999.md)
 ## [심각한 오류 C999](fatal-error-c999.md)
 ## [심각한 오류 C1001](fatal-error-c1001.md)

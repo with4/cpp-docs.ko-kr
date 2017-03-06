@@ -238,7 +238,7 @@
 #### [C(구조적) 및 C++ 예외 혼합](mixing-c-structured-and-cpp-exceptions.md)
 ##### [setjmp-longjmp 사용](using-setjmp-longjmp.md)
 ##### [예외 처리 차이점](exception-handling-differences.md)
-### [구조적 예외 처리(C-C++)](structured-exception-handling-c-cpp.md)
+### [구조적 예외 처리(C/C++)](structured-exception-handling-c-cpp.md)
 #### [예외 처리기 작성](writing-an-exception-handler.md)
 ##### [try-except 문](try-except-statement.md)
 ##### [예외 필터 작성](writing-an-exception-filter.md)

@@ -102,6 +102,6 @@
 ### [C.1 표기법](c-1-notation.md)
 ### [C.2 규칙](c-2-rules.md)
 ## [D. schedule 절 사용](d-using-the-schedule-clause.md)
-## [E. OpenMP C-C++에서 구현이 정의된 동작](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+## [E. OpenMP C/C++에서 구현이 정의된 동작](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F. Version 2.0에서 새 기능 및 설명](f-new-features-and-clarifications-in-version-2-0.md)
 # [참조](reference/toc.md)

@@ -3,6 +3,7 @@
 # [MFC(Microsoft Foundation Class)](../mfc/TOC.md)
 # [ATL 및 MFC 공유 클래스](../atl-mfc-shared/TOC.md)
 # [런타임 플랫폼용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+## [C++/CX](../cppcx/TOC.md)
 ## [추적 참조 연산자(C++ 구성 요소 확장)](tracking-reference-operator-cpp-component-extensions.md)
 ## [개체 연산자에 대한 핸들(^)(C++ 구성 요소 확장)](handle-to-object-operator-hat-cpp-component-extensions.md)
 ## [abstract(C++ 구성 요소 확장)](abstract-cpp-component-extensions.md)
