@@ -1,6 +1,7 @@
 # [Visual Studio 2017 RC의 Visual C++](visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017 RC의 Visual C++에 대한 새로운 기능](what-s-new-for-visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)
+## [Visual C/C++ 언어 규칙](c-cpp-language-conformance.md)
 # [지원되는 플랫폼(Visual C++)](supported-platforms-visual-cpp.md)
 # [C 언어](c-language/c-language-reference.md)
 # [C++ 언어](cpp/cpp-language-reference.md)
