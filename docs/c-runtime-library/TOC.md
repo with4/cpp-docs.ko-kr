@@ -12,7 +12,6 @@
 ### [바이트 및 와이드 스트림](byte-and-wide-streams.md)
 ### [스트림 제어](controlling-streams.md)
 ### [스트림 상태](stream-states.md)
-## [서식이 지정된 입력 및 출력](formatted-input-and-output.md)
 ## [함수와 매크로 중 선택에 대한 권장 사항](recommendations-for-choosing-between-functions-and-macros.md)
 ## [형식 검사(CRT)](type-checking-crt.md)
 ## [방향 플래그](direction-flag.md)
@@ -171,7 +170,6 @@
 # [함수 패밀리 개요](function-family-overviews.md)
 ## [_exec, _wexec 함수](exec-wexec-functions.md)
 ## [파일 이름 검색 함수](filename-search-functions.md)
-## [플래그 지시문](flag-directives.md)
 ## [형식 사양 구문: printf 및 wprintf 함수](format-specification-syntax-printf-and-wprintf-functions.md)
 ## [형식 사양 필드: scanf 및 wscanf 함수](format-specification-fields-scanf-and-wscanf-functions.md)
 ## [is, isw 루틴](is-isw-routines.md)
@@ -181,13 +179,9 @@
 ## [operator new(CRT)](operator-new-crt.md)
 ## [operator delete(CRT)](delete-operator-crt.md)
 ## [operator delete(CRT)](operator-delete-crt.md)
-## [전체 자릿수 사양](precision-specification.md)
-## [printf 형식 필드 문자](printf-type-field-characters.md)
-## [printf 너비 사양](printf-width-specification.md)
 ## [printf_p 위치 매개 변수](printf-p-positional-parameters.md)
 ## [scanf 형식 필드 문자](scanf-type-field-characters.md)
 ## [scanf 너비 사양](scanf-width-specification.md)
-## [크기 사양](size-specification.md)
 ## [_spawn, _wspawn 함수](spawn-wspawn-functions.md)
 ## [strcoll 함수](strcoll-functions.md)
 ## [문자열을 숫자 값으로 변환하는 함수](string-to-numeric-value-functions.md)
@@ -207,7 +201,3 @@
 ## [_set_output_format](set-output-format.md)
 ## [_unlock](unlock.md)
 # [사전순 함수 참조](reference/TOC.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
