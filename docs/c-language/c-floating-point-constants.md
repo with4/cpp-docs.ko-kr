@@ -1,64 +1,76 @@
 ---
 title: "C 부동 소수점 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "상수, 부동 소수점"
-  - "double 데이터 형식, 부동 소수점 상수"
-  - "부동 소수점 상수"
-  - "부동 소수점 상수, 부동 소수점 상수 정보"
-  - "부동 소수점 숫자, 부동 소수점 상수"
-  - "형식[C], 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- types [C], constants
+- floating-point numbers, floating-point constants
+- constants, floating-point
+- floating-point constants
+- floating-point constants, about floating-point constants
+- double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# C 부동 소수점 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
+ms.lasthandoff: 02/24/2017
 
-"부동 소수점 상수"는 부호 있는 실수를 나타내는 10진수입니다.  부호 있는 실수의 표현에는 정수 부분, 소수 부분 및 지수가 포함됩니다.  부동 소수점 상수는 변경할 수 없는 부동 소수점 값을 나타낼 때 사용합니다.  
+---
+# <a name="c-floating-point-constants"></a>C 부동 소수점 상수
+"부동 소수점 상수"는 부호 있는 실수를 나타내는&10;진수 숫자입니다. 부호 있는 실수 표현에는 정수 부분, 분수 부분 및 지수가 포함됩니다. 부동 소수점 상수를 사용하여 변경할 수 없는 부동 소수점 값을 나타냅니다.  
   
-## 구문  
- *floating\-point\-constant*:  
- *fractional\-constant exponent\-part*  opt *floating\-suffix* opt  
+## <a name="syntax"></a>구문  
+ *floating-point-constant*:  
+ &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
+ &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
   
- *digit\-sequence exponent\-part floating\-suffix*  opt  
+ *fractional-constant*:  
+ &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
+ &nbsp;&nbsp; *digit-sequence*  **.**  
   
- *fractional\-constant*:  
- *digit\-sequence*  opt **.** *digit\-sequence*  
+ *exponent-part*:  
+ &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
+ &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
- *digit\-sequence*  **.**  
+ *sign*: 다음 중 하나  
+ &nbsp;&nbsp; **+ –**  
   
- *exponent\-part*:  
- **e**  *sign*  opt *digit\-sequence*  
+ *digit-sequence*:  
+ &nbsp;&nbsp; *digit*  
+ &nbsp;&nbsp; *digit-sequence digit*  
   
- **E**  *sign*  opt *digit\-sequence*  
+ *floating-suffix*: 다음 중 하나  
+ &nbsp;&nbsp; **f l F L**  
   
- *기호* : ~ 중의 하나  
- **\+ –**  
+ 소수점 이전 숫자(값의 정수 부분), 소수점 이후 숫자(값의 소수 부분) 중 하나만 생략할 수 있습니다. 지수를 포함하는 경우에만 소수점을 생략할 수 있습니다. 공백 문자로 상수의 숫자나 문자를 구분할 수 없습니다.  
   
- *digit\-sequence*:  
- *digit*  
-  
- *digit\-sequence digit*  
-  
- *floating\-suffix* : one of  
- **f l F L**  
-  
- 소수점 앞자리 \(값의 정수 부분\) 또는 소수점 뒷자리 \(소수 부분\)를 생략할 수 있지만, 두 개 모두는 생략할 수 없습니다.  지수를 포함하는 경우에만 소수점을 남겨둘 수 있습니다.  공백 문자로 정상수의 자리 또는 문자를 구분할 수 없습니다.  
-  
- 다음 예제에서는 일부 형식의 부동 소수점 상수 및 식을 보여 줍니다.  
+ 다음 예제에서는 부동 소수점 상수 및 식의 몇 가지 형태를 보여 줍니다.  
   
 ```  
 15.75  
@@ -68,18 +80,18 @@ caps.handback.revision: 12
 25E-4     /* =  0.0025 */  
 ```  
   
- 빼기 기호가 앞에 없을 경우 부동 소수점 상수는 양수입니다\(**–**\).  이 경우 빼기 기호는 단항 산술 부정 연산자로 간주됩니다.  부동 소수점 상수의 형식은 **float**, **double**, 또는 `long double`입니다.  
+ 부동 소수점 상수는 빼기 기호(**–**)가 앞에 없는 경우 양수입니다. 이 경우 빼기 기호는 단항 산술 부정 연산자로 처리됩니다. 부동 소수점 상수의 형식은 `float`, `double` 또는 `long double`입니다.  
   
- **f**, **F**, **l** 또는 **L** 접미사가 없는 부동 소수점 상수의 형식은 **double**입니다.  문자 **f** 또는 **F**가 접미사이면 상수 형식은 **float**입니다.  접미사가 **l** 또는 **L** 문자인 경우 `long double` 형식을 사용합니다.  예를 들면 다음과 같습니다.  
+ **f**, **F**, **l** 또는 **L** 접미사가 없는 부동 소수점 상수는 `double` 형식입니다. 문자 **f** 또는 **F**가 접미사이면 상수 형식은 `float`입니다. 그 뒤에 문자 **l** 또는 **L**이 오는 경우 형식은 `long double`입니다. 예:  
   
 ```  
 100L  /* Has type long double  */  
 100F  /* Has type float        */  
 ```  
   
- Microsoft C 컴파일러는 **long double** 을 **이중** 입력하도록 매핑합니다.  **double**, **float** 및 **long** 유형에 대한 정보는 [기본 유형 저장소@@](../c-language/storage-of-basic-types.md)를 참조하십시오.  
+ Microsoft C 컴파일러는 내부적으로 `long double`을 `double` 형식과 동일하게 나타냅니다. `double`, `float` 및 `long double` 형식에 대한 내용은 [기본 형식 저장소](../c-language/storage-of-basic-types.md)를 참조하세요.  
   
- 다음 예와 같이 부동 소수점 상수는 정수 부분을 생략할 수 있습니다.  숫자 .75는 다음과 같은 다양한 방법으로 나타낼 수 있습니다.  
+ 다음 예제와에서 같이 부동 소수점 상수의 정수 부분을 생략할 수 있습니다. 숫자 .75는 다음을 포함한 다양한 방식으로 나타낼 수 있습니다.  
   
 ```  
 .0075e2  
@@ -88,5 +100,5 @@ caps.handback.revision: 12
 75e-2  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [C 상수](../c-language/c-constants.md)

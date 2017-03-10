@@ -1,40 +1,56 @@
 ---
 title: "예외 처리 루틴 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.exceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "예외 처리, 루틴"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.exceptions
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 예외 처리 루틴
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: fe4946a8d3785c6295cb7537de0a11e06cd7a1cc
+ms.lasthandoff: 02/24/2017
 
-C \+ \+ 예외 처리 함수를 사용하여 프로그램 실행 중에 예기치 않은 상황 으로부터 복구합니다.  
+---
+# <a name="exception-handling-routines"></a>예외 처리 루틴
+C++ 예외 처리 함수를 사용하여 프로그램 실행 중에 예기치 않은 이벤트에서 복구할 수 있습니다.  
   
-### 예외 처리 함수  
+### <a name="exception-handling-functions"></a>예외 처리 함수  
   
-|Function|기능|해당 .NET Framework|  
-|--------------|--------|-----------------------|  
-|[\_set\_se\_translator](../c-runtime-library/reference/set-se-translator.md)|C\+\+ 예외 형식 같은 Win32 예외 처리 \(C 구조적 예외\)|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[set\_terminate](../c-runtime-library/reference/set-terminate-crt.md)|`terminate` 에게 호출되기 위해 종료 루틴을 설치합니다.|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[set\_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|`unexpected`가 호출한 자체 종료 함수를 설치합니다.|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[terminate](../c-runtime-library/reference/terminate-crt.md)|후에 호출 자동으로 특정 상황에서 예외가 throw 됩니다.  이 `terminate` 함수는 `abort` 또는 `set_terminate` 을 사용하여 지정한 함수를 호출합니다.|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|`terminate` 또는 `set_unexpected`를 사용하여 사용자가 지정한 함수를 호출하세요.  이 `unexpected` 함수는 현재 Microsoft c \+ \+ 예외 처리 구현에 사용 되지 않습니다|[\<caps:sentence id\="tgt30" sentenceid\="ec8332f3bf55c7bd183338eca87744ec" class\="tgtSentence"\>System::Exception Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.exception.aspx)|  
+|함수|기능|.NET Framework의 해당 값|  
+|--------------|---------|-------------------------------|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Win32 예외(C 구조적 예외)를 C++ 형식 예외로 처리|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|`terminate`로 호출할 자체 종료 루틴을 설치합니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|`unexpected`로 호출할 자체 종료 함수를 설치합니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[terminate](../c-runtime-library/reference/terminate-crt.md)|예외가 throw된 후에 특정 상황에서 자동으로 호출됩니다. `terminate` 함수는 `abort` 또는`set_terminate`를 사용하여 지정한 함수를 호출합니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|`terminate`를 사용하여 `set_unexpected` 또는 사용자가 지정하는 함수를 호출합니다. `unexpected` 함수는 현재 Microsoft C++ 예외 처리 구현에서 사용되지 않습니다.|[System::Exception Class](https://msdn.microsoft.com/en-us/library/system.exception.aspx)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)

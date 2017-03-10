@@ -1,46 +1,62 @@
 ---
 title: "검색 및 정렬 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터[CRT], 검색"
-  - "검색[C++]"
-  - "검색[C++], CRT 검색 함수"
-  - "데이터 정렬"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- sorting data
+- data [CRT], searching
+- searching [C++], CRT search functions
+- searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 검색 및 정렬
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5ba605d61ddcf1ae6bd2adc24c41737536fa2ce9
+ms.lasthandoff: 02/24/2017
 
-다음 함수를 사용 하여 검색 및 정렬 합니다.  
+---
+# <a name="searching-and-sorting"></a>검색 및 정렬
+검색 및 정렬을 위해 다음 함수를 사용합니다.  
   
-### 검색 및 정렬 기능  
+### <a name="searching-and-sorting-functions"></a>검색 및 정렬 함수  
   
-|Function|검색 하거나 정렬|해당 .NET Framework|  
-|--------------|---------------|-----------------------|  
-|[bsearch](../c-runtime-library/reference/bsearch.md)|Binary search|[\<caps:sentence id\="tgt8" sentenceid\="07fe7161f1b3ff07a50d0fdb13bc8ade" class\="tgtSentence"\>System::Collections::ArrayList::BinarySearch\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[bsearch\_s](../c-runtime-library/reference/bsearch-s.md)|`bsearch` 의 더 안전한 버전입니다.|[\<caps:sentence id\="tgt10" sentenceid\="07fe7161f1b3ff07a50d0fdb13bc8ade" class\="tgtSentence"\>System::Collections::ArrayList::BinarySearch\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[\_lfind](../c-runtime-library/reference/lfind.md)|지정 되는 값에 대한 선형 검색|[\<caps:sentence id\="tgt13" sentenceid\="2b0a5c761626afecd7137a4eab4525f0" class\="tgtSentence"\>System::Collections::ArrayList::Contains\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[\_lfind\_s](../c-runtime-library/reference/lfind-s.md)|`_lfind` 의 더 안전한 버전입니다.|[\<caps:sentence id\="tgt15" sentenceid\="2b0a5c761626afecd7137a4eab4525f0" class\="tgtSentence"\>System::Collections::ArrayList::Contains\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[\_lsearch](../c-runtime-library/reference/lsearch.md)|값을 찾을 수 없는 경우 주어진 값에 대한 선형 검색이 배열에 추가 됩니다.|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[\_lsearch\_s](../c-runtime-library/reference/lsearch-s.md)|`_lsearch` 의 더 안전한 버전입니다.|해당 사항 없음.  표준 C 함수를 호출하려면 `PInvoke`를 사용합니다.  자세한 내용은 [플랫폼 호출 예제](../Topic/Platform%20Invoke%20Examples.md)를 참조하십시오.|  
-|[qsort](../c-runtime-library/reference/qsort.md)|빠른 정렬|[\<caps:sentence id\="tgt27" sentenceid\="f0305a177c6971f2c3c37537da538229" class\="tgtSentence"\>System::Collections::ArrayList::Sort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
-|[qsort\_s](../c-runtime-library/reference/qsort-s.md)|`qsort` 의 더 안전한 버전입니다.|[\<caps:sentence id\="tgt29" sentenceid\="f0305a177c6971f2c3c37537da538229" class\="tgtSentence"\>System::Collections::ArrayList::Sort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|함수|검색 또는 정렬|.NET Framework의 해당 값|  
+|--------------|--------------------|-------------------------------|  
+|[bsearch](../c-runtime-library/reference/bsearch.md)|이진 검색|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
+|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|`bsearch`의 보다 안전한 버전입니다.|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
+|[_lfind](../c-runtime-library/reference/lfind.md)|지정된 값에 대한 선형 검색|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
+|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|`_lfind`의 보다 안전한 버전입니다.|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
+|[_lsearch](../c-runtime-library/reference/lsearch.md)|지정된 값에 대한 선형 검색. 찾을 수 없으면 배열에 추가됩니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|`_lsearch`의 보다 안전한 버전입니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|[qsort](../c-runtime-library/reference/qsort.md)|빠른 정렬|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|[qsort_s](../c-runtime-library/reference/qsort-s.md)|`qsort`의 보다 안전한 버전입니다.|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)

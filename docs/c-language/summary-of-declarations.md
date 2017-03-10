@@ -1,58 +1,74 @@
 ---
 title: "선언 요약 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 선언 요약
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: cf1442e98cdd7489a395bec211cda1bbb037bae2
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="summary-of-declarations"></a>선언 요약
 `declaration`:  
- *declaration\-specifiers attribute\-seq*  opt *init\-declarator\-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list*opt**;**  
   
- \/\* *attribute\-seq*는 Microsoft 전용임 \*\/  
+ /\* *attribute-seq*는 Microsoft 전용임 */  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers* opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers*opt  
   
- *type\-specifier declaration\-specifiers* opt  
+ *type-specifier declaration-specifiers*opt  
   
- *type\-qualifier declaration\-specifiers* opt  
+ *type-qualifier declaration-specifiers*opt  
   
- *attribute\-seq*:            \/\* *attribute\-seq*는 Microsoft 전용임 \*\/  
- *attribute attribute\-seq* opt  
+ *attribute-seq* :            /\* *attribute-seq*는 Microsoft 전용임 \*/  
+ *attribute attribute-seq* opt  
   
- *attribute*: 다음 중 하나      \/\* Microsoft 전용 \*\/  
+ *attribute* : 다음 중 하나      /* Microsoft 전용 \*/  
  ||||  
 |-|-|-|  
-|[\_\_asm](../assembler/inline/asm.md)|[\_\_clrcall](../cpp/clrcall.md)|[\_\_stdcall](../cpp/stdcall.md)|  
-|[\_\_based](../cpp/based-grammar.md)|[\_\_fastcall](../cpp/fastcall.md)|[\_\_thiscall](../cpp/thiscall.md)|  
-|[\_\_cdecl](../cpp/cdecl.md)|[\_\_inline](../misc/inline-inline-forceinline.md)|[\_\_vectorcall](../cpp/vectorcall.md)|  
+|[__asm](../assembler/inline/asm.md)|[__clrcall](../cpp/clrcall.md)|[__stdcall](../cpp/stdcall.md)|  
+|[__based](../cpp/based-grammar.md)|[__fastcall](../cpp/fastcall.md)|[__thiscall](../cpp/thiscall.md)|  
+|[__cdecl](../cpp/cdecl.md)|[__inline](../cpp/inline-functions-cpp.md)|[__vectorcall](../cpp/vectorcall.md)|  
   
- *init\-declarator\-list*:  
- *init\-declarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init\-declarator\-list*  **,**  *init\-declarator*  
+ *init-declarator-list*  **,**  *init-declarator*  
   
- *init\-declarator*:  
+ *init-declarator*:  
  *declarator*  
   
- *declarator*  **\=**  *initializer* \/\* 스칼라 초기화용 \*\/  
+ *declarator*  **=**  *initializer* /* 스칼라 초기화용 \*/  
   
- 저장소 클래스 지정자:  
+ *storage-class-specifier*:  
  **auto**  
   
  **register**  
@@ -61,11 +77,11 @@ caps.handback.revision: 11
   
  **extern**  
   
- **형식 정의**  
+ **typedef**  
   
- **\_\_declspec \(**  *extended\-decl\-modifier\-seq*  **\)** \/\* Microsoft 전용 \*\/  
+ **__declspec (**  *extended-decl-modifier-seq*  **)** /* Microsoft 전용 \*/  
   
- *type\-specifier*:  
+ *type-specifier*:  
  **void**  
   
  **char**  
@@ -74,13 +90,13 @@ caps.handback.revision: 11
   
  **int**  
   
- `__int8` \/\* Microsoft 전용 \*\/  
+ `__int8` /* Microsoft 전용 \*/  
   
- `__int16` \/\* Microsoft 전용 \*\/  
+ `__int16` /* Microsoft 전용 \*/  
   
- `__int32` \/\* Microsoft 전용 \*\/  
+ `__int32` /* Microsoft 전용 \*/  
   
- `__int64` \/\* Microsoft 전용 \*\/  
+ `__int64` /* Microsoft 전용 \*/  
   
  **long**  
   
@@ -92,144 +108,144 @@ caps.handback.revision: 11
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *type\-qualifier*:  
+ *type-qualifier*:  
  **const**  
   
  `volatile`  
   
  `declarator`:  
- `pointer` opt *direct\-declarator*  
+ `pointer`opt*direct-declarator*  
   
- *direct\-declarator*:  
- *식별자*  
+ *direct-declarator*:  
+ *identifier*  
   
- **\(**  *declarator*  **\)**  
+ **(**  *declarator*  **)**  
   
- *direct\-declarator*  **\[**  *constant\-expression*  opt **\]**  
+ *direct-declarator*  **[**  *constant-expression* opt**]**  
   
- *direct\-declarator*  **\(**  *parameter\-type\-list*  **\)** \/\* 새로운 스타일의 선언자 \*\/  
+ *direct-declarator*  **(**  *parameter-type-list*  **)** /* 새로운 스타일의 선언자 \*/  
   
- *direct\-declarator*  **\(**  *identifier\-list* opt **\)** \/\* 사용되지 않는 스타일의 선언자 \*\/  
+ *direct-declarator*  **(**  *identifier-list*opt**)** /* 사용되지 않는 스타일의 선언자 \*/  
   
  `pointer`:  
- **\*** *type\-qualifier\-list* opt  
+ **\*** *type-qualifier-list*opt  
   
- **\*** *type\-qualifier\-list* opt `pointer`  
+ **\*** *type-qualifier-list*opt`pointer`  
   
- *parameter\-type\-list*:                           \/\* 매개 변수 목록 \*\/  
- *parameter\-list*  
+ *parameter-type-list*:                           /\* 매개 변수 목록 \*/  
+ *parameter-list*  
   
- *parameter\-list* **, ...**  
+ *parameter-list* **, ...**  
   
- *parameter\-list*:  
- *parameter\-declaration*  
+ *parameter-list*:  
+ *parameter-declaration*  
   
- *parameter\-list*  **,**  *parameter\-declaration*  
+ *parameter-list*  **,**  *parameter-declaration*  
   
- *type\-qualifier\-list*:  
- *type\-qualifier*  
+ *type-qualifier-list*:  
+ *type-qualifier*  
   
- *type\-qualifier\-list type\-qualifier*  
+ *type-qualifier-list type-qualifier*  
   
- *enum\-specifier*:  
- **enum**  *identifier* opt **{** *enumerator\-list* **}**  
+ *enum-specifier*:  
+ **enum**  *identifier*opt**{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   
- *enumerator\-list*:  
+ *enumerator-list*:  
  *enumerator*  
   
- *enumerator\-list*  **,**  `enumerator`  
+ *enumerator-list*  **,**  `enumerator`  
   
  `enumerator`:  
- *enumeration\-constant*  
+ *enumeration-constant*  
   
- *enumeration\-constant*  **\=**  *constant\-expression*  
+ *enumeration-constant*  **=**  *constant-expression*  
   
- *enumeration\-constant*:  
- *식별자*  
+ *enumeration-constant*:  
+ *identifier*  
   
- *struct\-or\-union\-specifier*:  
- *struct\-or\-union identifier* opt **{** *struct\-declaration\-list* **}** *struct\-or\-union identifier*  
+ *struct-or-union-specifier*:  
+ *struct-or-union identifier*opt**{** *struct-declaration-list* **}** *struct-or-union identifier*  
   
- *struct\-or\-union*:  
- **struct**  
+ *struct-or-union*:  
+ **truct**  
   
  **union**  
   
- *struct\-declaration\-list*:  
- *struct\-declaration*  
+ *struct-declaration-list*:  
+ *struct-declaration*  
   
- *struct\-declaration\-list struct\-declaration*  
+ *struct-declaration-list struct-declaration*  
   
- *struct\-declaration*:  
- *specifier\-qualifier\-list struct\-declarator\-list*  **;**  
+ *struct-declaration*:  
+ *specifier-qualifier-list struct-declarator-list*  **;**  
   
- *specifier\-qualifier\-list*:  
- *type\-specifier specifier\-qualifier\-list* opt  
+ *specifier-qualifier-list*:  
+ *type-specifier specifier-qualifier-list*opt  
   
- *type\-qualifier specifier\-qualifier\-list* opt  
+ *type-qualifier specifier-qualifier-list*opt  
   
- *struct\-declarator\-list*:  
- *struct\-declarator struct\-declarator\-list*  **,**  *struct\-declarator*  
+ *struct-declarator-list*:  
+ *struct-declarator struct-declarator-list*  **,**  *struct-declarator*  
   
- *struct\-declarator*:  
+ *struct-declarator*:  
  *declarator*  
   
- *type\-specifier declarator* opt **:** *constant\-expression*  
+ *type-specifier declarator*opt**:** *constant-expression*  
   
- *parameter\-declaration*:  
- *declaration\-specifiers declarator* \/\* 명명된 선언자 \*\/  
+ *parameter-declaration*:  
+ *declaration-specifiers declarator* /* 명명된 선언자 \*/  
   
- *declaration\-specifiers abstract\-declarator* opt **\/\*** 익명 선언자 **\*\/**  
+ *declaration-specifiers abstract-declarator*opt**/\*** 익명 선언자 **\*/**  
   
- *identifier\-list*: **\/\*** 이전 스타일의 선언자용 **\* \/**  
- *식별자*  
+ *identifier-list*: **/\*** 이전 스타일의 선언자용 **\* /**  
+ *identifier*  
   
- *identifier\-list*  **,**  *identifier*  
+ *identifier-list*  **,**  *identifier*  
   
- *abstract\-declarator*: **\/\*** 익명 선언자와 함께 사용됨 **\*\/**  
- *포인터*  
+ *abstract-declarator*: **/\*** 익명 선언자와 함께 사용됨 **\*/**  
+ *pointer*  
   
- `pointer` opt *direct\-abstract\-declarator*  
+ `pointer`opt*direct-abstract-declarator*  
   
- *direct\-abstract\-declarator*:  
- **\(**  *abstract\-declarator*  **\)**  
+ *direct-abstract-declarator*:  
+ **(**  *abstract-declarator*  **)**  
   
- *direct\-abstract\-declarator* opt **\[** *constant\-expression* opt **\]**  
+ *direct-abstract-declarator*opt**[** *constant-expression*opt**]**  
   
- *direct\-abstract\-declarator* opt **\(** *parameter\-type\-list* opt **\)**  
+ *direct-abstract-declarator*opt**(** *parameter-type-list* opt**)**  
   
  *initializer*:  
- *인수 식*  
+ *assignment-expression*  
   
- **{**  *initializer\-list*  **}** \/\* 집합체 초기화용 \*\/  
+ **{**  *initializer-list*  **}** /* 집합체 초기화용 \*/  
   
- **{**  *initializer\-list*  **, }**  
+ **{**  *initializer-list*  **, }**  
   
- *initializer\-list*:  
+ *initializer-list*:  
  *initializer*  
   
- *initializer\-list*  **,**  *initializer*  
+ *initializer-list*  **,**  *initializer*  
   
- *type\-name*:  
- *specifier\-qualifier\-list abstract\-declarator* opt  
+ *type-name*:  
+ *specifier-qualifier-list abstract-declarator*opt  
   
- *typedef\-name*:  
- *식별자*  
+ *typedef-name*:  
+ *identifier*  
   
- *extended\-decl\-modifier\-seq*:\/\*    Microsoft 전용 \*\/  
- *extended\-decl\-modifier* opt  
+ *extended-decl-modifier-seq*:/\*    Microsoft 전용 \*/  
+ *extended-decl-modifier*opt  
   
- *extended\-decl\-modifier\-seq extended\-decl\-modifier*  
+ *extended-decl-modifier-seq extended-decl-modifier*  
   
- *extended\-decl\-modifier*:   \/\* Microsoft 전용 \*\/  
+ *extended-decl-modifier*:   /\* Microsoft 전용 \*/  
  **thread**  
   
  **naked**  
@@ -238,7 +254,7 @@ caps.handback.revision: 11
   
  `dllexport`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호출 규칙](../cpp/calling-conventions.md)   
  [구 구조 문법](../c-language/phrase-structure-grammar.md)   
  [사용되지 않는 호출 규칙](../cpp/obsolete-calling-conventions.md)

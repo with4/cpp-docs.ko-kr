@@ -1,46 +1,62 @@
 ---
 title: "런타임 오류 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "런타임 오류 검사"
-  - "런타임 오류, 확인"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- run-time error checking
+- run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 런타임 오류 검사
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
+ms.lasthandoff: 02/24/2017
 
-C 런타임 라이브러리는 런타임 오류 검사\(RTC\)를 지원하는 함수를 포함합니다.  런타임 오류 검사는 특정 유형의 런타임 오류가 보고 되는 프로그램을 작성할 수 있습니다.  오류가 보고 되는 방법과 어떤 종류의 오류를 보고되는지를 지정합니다.  자세한 내용은 [런타임 오류 검사](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md)를 참조하십시오.  
+---
+# <a name="run-time-error-checking"></a>런타임 오류 검사
+C 런타임 라이브러리에는 RTC(런타임 오류 검사)를 지원하는 함수가 포함되어 있습니다. 런타임 오류 검사를 사용하면 특정 런타임 오류 종류가 보고되도록 프로그램을 빌드할 수 있습니다. 오류가 보고되는 방법과 보고되는 오류 종류를 지정합니다. 자세한 내용은 [런타임 오류 검사](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1)를 참조하세요.  
   
- 런타임 오류 검사하는 방식을 사용자 지정 하려면 다음과 같은 함수를 사용합니다.  
+ 프로그램에서 런타임 오류 검사가 수행되는 방법을 사용자 지정하려면 다음 함수를 사용하십시오.  
   
-### 런타임 오류 검사를 사용합니다.  
+### <a name="run-time-error-checking-functions"></a>런타임 오류 검사 함수  
   
-|Function|기능|해당 .NET Framework|  
-|--------------|--------|-----------------------|  
-|[\_RTC\_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|런타임 오류 검사 형식에 대한 간단한 설명을 반환합니다.||  
-|[\_RTC\_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|런타임 오류 검사에서 발견된 오류 형식의 수를 반환합니다.||  
-|[\_RTC\_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|런타임 오류 검사의 보고에 대한 처리기 함수를 지정합니다.||  
-|[\_RTC\_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|형식을 사용한 런타임 오류 검사로 발견된 오류를 연관시킵니다.||  
+|함수|기능|.NET Framework의 해당 값|  
+|--------------|---------|-------------------------------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|런타임 오류 검사 형식에 대한 간단한 설명을 반환합니다.||  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|런타임 오류 검사에서 발견될 수 있는 총 오류 수를 반환합니다.||  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|런타임 오류 검사 보고를 위한 처리기로 함수를 지정합니다.||  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|런타임 오류 검사에서 발견된 오류를 형식에 연결합니다.||  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)   
- [\/RTC\(런타임 오류 검사\)](../build/reference/rtc-run-time-error-checks.md)   
- [runtime\_checks](../preprocessor/runtime-checks.md)   
- [RTC sample](http://msdn.microsoft.com/ko-kr/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
+ [/RTC(런타임 오류 검사)](../build/reference/rtc-run-time-error-checks.md)   
+ [runtime_checks](../preprocessor/runtime-checks.md)   
+ [RTC 샘플](http://msdn.microsoft.com/en-us/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
  [디버그 루틴](../c-runtime-library/debug-routines.md)
