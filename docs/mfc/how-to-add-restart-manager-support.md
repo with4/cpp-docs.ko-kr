@@ -1,0 +1,58 @@
+---
+title: "방법: 다시 시작 관리자 지원 추가 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "다시 시작 관리자"
+  - "C++, 응용 프로그램 충돌 지원"
+ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
+caps.latest.revision: 9
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 5
+---
+# 방법: 다시 시작 관리자 지원 추가
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+다시 시작 관리자는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]에 추가된 기능입니다. 다시 시작 관리자는 예기치 않게 닫히거나 다시 시작되는 경우 응용 프로그램에 대한 지원을 추가합니다. 다시 시작 관리자의 동작은 응용 프로그램의 유형에 따라 달라집니다. 응용 프로그램이 문서 편집기인 경우 다시 시작 관리자는 예기치 않게 닫힌 후 응용 프로그램에서 열려 있는 문서의 상태 및 내용을 자동으로 저장하도록 하고 응용 프로그램을 다시 시작합니다. 응용 프로그램이 문서 편집기가 아닌 경우 다시 시작 관리자는 응용 프로그램을 다시 시작하지만 기본적으로 응용 프로그램의 상태를 저장할 수 없습니다.  
+  
+ 다시 시작한 후 응용 프로그램이 유니코드이면 응용 프로그램에 작업 대화 상자가 표시됩니다. ANSI 응용 프로그램이면 Windows 메시지 상자가 응용 프로그램에 표시됩니다. 이때 사용자는 자동으로 저장된 문서를 복원할지 여부를 선택합니다. 사용자가 자동으로 저장된 문서를 복원하지 않으면 다시 시작 관리자는 임시 파일을 삭제합니다.  
+  
+> [!NOTE]
+>  데이터를 저장하고 응용 프로그램을 다시 시작하는 다시 시작 관리자의 기본 동작을 재정의할 수 있습니다.  
+  
+ 기본적으로 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에서 프로젝트 마법사를 사용하여 만든 MFC 응용 프로그램은 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]가 있는 컴퓨터에서 응용 프로그램이 실행되는 경우 다시 시작 관리자를 지원합니다. 응용 프로그램에서 다시 시작 관리자를 지원하지 않도록 하려면 새 프로젝트 마법사에서 다시 시작 관리자를 사용하지 않도록 설정할 수 있습니다.  
+  
+### 기존 응용 프로그램에 다시 시작 관리자에 대한 지원을 추가하려면  
+  
+1.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에서 기존 MFC 응용 프로그램을 엽니다.  
+  
+2.  주 응용 프로그램에 대한 원본 파일을 엽니다. 기본적으로 응용 프로그램과 동일한 이름을 사용하는 .cpp 파일입니다. 예를 들어 MyProject에 대한 주 응용 프로그램 원본 파일은 MyProject.cpp입니다.  
+  
+3.  주 응용 프로그램에 대한 생성자를 찾습니다. 예를 들어 프로젝트가 MyProject인 경우 생성자는 `CMyProjectApp::CMyProjectApp()`입니다.  
+  
+4.  생성자에 다음 코드 줄을 추가합니다.  
+  
+    ```  
+    m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
+    ```  
+  
+5.  응용 프로그램의 `InitInstance` 메서드가 부모 `InitInstance` 메서드인 [CWinApp::InitInstance](../Topic/CWinApp::InitInstance.md) 또는 `CWinAppEx::InitInstance`를 호출하는지 확인합니다.`InitInstance` 메서드는 `m_dwRestartManagerSupportFlags` 매개 변수를 확인합니다.  
+  
+6.  응용 프로그램을 컴파일하고 실행합니다.  
+  
+## 참고 항목  
+ [CDataRecoveryHandler Class](../mfc/reference/cdatarecoveryhandler-class.md)   
+ [CWinApp::m\_dwRestartManagerSupportFlags](../Topic/CWinApp::m_dwRestartManagerSupportFlags.md)   
+ [CWinApp Class](../mfc/reference/cwinapp-class.md)   
+ [CWinApp::m\_nAutosaveInterval](../Topic/CWinApp::m_nAutosaveInterval.md)   
+ [CDocument::OnDocumentEvent](../Topic/CDocument::OnDocumentEvent.md)

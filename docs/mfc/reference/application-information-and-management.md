@@ -1,0 +1,590 @@
+---
+title: "응용 프로그램 정보 및 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.macros
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC], managing
+ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
+caps.latest.revision: 17
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: cc9adde202f211d6e0a536e949b42772f0890ef6
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="application-information-and-management"></a>응용 프로그램 정보 및 관리
+단일 응용 프로그램을 작성할 때 만들어야 [CWinApp](../../mfc/reference/cwinapp-class.md)-파생 개체입니다. 때때로 외부에서이 개체에 대 한 정보를 가져오려면 할 수는 `CWinApp`-파생 개체입니다.  
+  
+ Microsoft Foundation Class 라이브러리는 이러한 작업을 수행할 수 있도록 다음 전역 함수를 제공 합니다.  
+  
+### <a name="application-information-and-management-functions"></a>응용 프로그램 정보 및 관리 기능  
+  
+|||  
+|-|-|  
+|[AfxBeginThread](#afxbeginthread)|새 스레드를 만듭니다.|  
+|[AfxEndThread](#afxendthread)|현재 스레드를 종료합니다.|  
+|[AfxFreeLibrary](#afxfreelibrary)|코딩 된 동적 연결 라이브러리 (DLL) 모듈의 참조 횟수를 감소 참조 횟수가&0;에 도달 하면 모듈 매핑되지 않았습니다.|  
+|[AfxGetApp](#afxgetapp)|응용 프로그램에 대 한 포인터의 단일 반환 `CWinApp` 개체입니다.|  
+|[AfxGetAppName](#afxgetappname)|응용 프로그램의 이름을 포함 하는 문자열을 반환 합니다.|  
+|[AfxGetInstanceHandle](#afxgetinstancehandle)|반환 된 `HINSTANCE` 응용 프로그램의이 인스턴스를 나타내는 합니다.|  
+|[AfxGetMainWnd](#afxgetmainwnd)|비 OLE 응용 프로그램의 현재 "main" 창 또는 서버 응용 프로그램의 내부 프레임 창에 대 한 포인터를 반환합니다.|  
+|[AfxGetPerUserRegistration](#afxgetperuserregistration)|이 함수를 사용 하 여 응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 확인 하는 **HKEY_CURRENT_USER** ( **HKCU**) 노드.|  
+|[AfxGetResourceHandle](#afxgetresourcehandle)|반환 된 `HINSTANCE` 응용 프로그램의 기본 리소스의 원본에 있습니다. 이 사용 하 여 응용 프로그램의 리소스에 직접 액세스할 수 있습니다.|  
+|[AfxGetThread](#afxgetthread)|현재에 대 한 포인터를 검색 [CWinThread](../../mfc/reference/cwinthread-class.md) 개체입니다.|  
+|[AfxInitRichEdit](#afxinitrichedit)|1.0 rich edit 컨트롤 응용 프로그램에 대 한 버전을 초기화 합니다.|  
+|[AfxInitRichEdit2](#afxinitrichedit2)|버전을 2.0 이상 서식 있는 편집 응용 프로그램에 대 한 제어를 초기화 합니다.|  
+|[AfxLoadLibrary](#afxloadlibrary)|DLL 모듈을 매핑하고 DLL 함수의 주소를 가져오는 데 사용할 수 있는 핸들을 반환 합니다.|  
+|[AfxRegisterClass](#afxregisterclass)|Dll에서 MFC를 사용 하는 창 클래스를 등록 합니다.|  
+|[AfxRegisterWndClass](#afxregisterwndclass)|MFC에서 자동으로 등록 하는 것을 보완 하기 위해 Windows 창 클래스를 등록 합니다.|  
+|[AfxSetPerUserRegistration](#afxsetperuserregistration)|응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 설정 하는 **HKEY_CURRENT_USER** ( **HKCU**) 노드.|  
+|[AfxSetResourceHandle](#afxsetresourcehandle)|설정의 `HINSTANCE` 핸들 응용 프로그램의 기본 리소스를 로드 하는 위치입니다.|  
+|[AfxSocketInit](#afxsocketinit)|호출 된 `CWinApp::InitInstance` Windows 소켓을 초기화 하는 재정의 합니다.|  
+|[AfxWinInit](#afxwininit)|MFC에서 제공 하 여 호출 `WinMain` 의 일부로 함수는 [CWinApp](../../mfc/reference/cwinapp-class.md) 초기화 하는 GUI 기반 응용 프로그램을 MFC를 초기화할 수 있습니다. MFC를 사용 하는 콘솔 응용 프로그램에 대 한 직접 호출 해야 합니다.|  
+  
+
+  
+##  <a name="a-nameafxbeginthreada--afxbeginthread"></a><a name="afxbeginthread"></a>AfxBeginThread  
+ 새 스레드를 만드는 데이 함수를 호출 합니다.  
+  
+```   
+CWinThread* AfxBeginThread(
+    AFX_THREADPROC pfnThreadProc,  
+    LPVOID pParam,  
+    int nPriority = THREAD_PRIORITY_NORMAL,  
+    UINT nStackSize = 0,  
+    DWORD dwCreateFlags = 0,  
+    LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL);
+
+CWinThread* AfxBeginThread(
+    CRuntimeClass* pThreadClass,  
+    int nPriority = THREAD_PRIORITY_NORMAL,  
+    UINT nStackSize = 0,  
+    DWORD dwCreateFlags = 0,  
+    LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL); 
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pfnThreadProc`  
+ 작업자 스레드에 대 한 제어 함수를 가리킵니다. 안 **NULL**합니다. 이 함수는 다음과 같이 선언 해야 합니다.  
+  
+ `UINT __cdecl MyControllingFunction( LPVOID pParam );`  
+  
+ *pThreadClass*  
+ 파생 된 개체의 RUNTIME_CLASS [CWinThread](../../mfc/reference/cwinthread-class.md)합니다.  
+  
+ *pParam*  
+ 함수 선언에 매개 변수에서와 같이 제어 함수에 전달할 매개 변수 `pfnThreadProc`합니다.  
+  
+ `nPriority`  
+ 스레드의 원하는 우선 순위입니다. 전체 목록과 설명은 사용할 수 있는 우선 순위에 대 한 참조 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+ `nStackSize`  
+ 새 스레드의 스택 바이트의 크기를 지정합니다. 0 인 경우, 만드는 스레드와 동일한 크기 스택을 스택 크기의 기본값입니다.  
+  
+ `dwCreateFlags`  
+ 스레드 생성을 제어 하는 추가 플래그를 지정 합니다. 이 플래그는 두 값 중 하나를 포함할 수 있습니다.  
+  
+- **CREATE_SUSPENDED** 스레드는 일시 중단 횟수가 하나를 시작 합니다. 사용 하 여 **CREATE_SUSPENDED** 의 모든 멤버 데이터를 초기화 하려는 경우는 `CWinThread` 와 같은 개체를 [m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete) 또는 스레드가 실행을 시작 하기 전에, 파생된 클래스의 멤버입니다. 사용 하 여 프로그램 초기화가 완료 되 면 [CWinThread::ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread) 실행 스레드를 시작 합니다. 스레드가 될 때까지 실행 되지 않는 `CWinThread::ResumeThread` 호출 됩니다.  
+  
+- **0** 을 만든 후 즉시 스레드를 시작 합니다.  
+  
+ `lpSecurityAttrs`  
+ 가리키는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 스레드에 대 한 보안 특성을 지정 하는 구조입니다. 경우 **NULL**를 사용할 수 있도록 만드는 스레드와 동일한 보안 특성입니다. 이 구조에 대 한 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 새로 만든된 스레드 개체에 대 한 포인터 또는 **NULL** 오류가 발생 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 첫 번째 형태 `AfxBeginThread` 작업자 스레드를 만듭니다. 두 번째 형태는 사용자 인터페이스 스레드 또는 작업자 스레드 수 역할을 하는 스레드를 만듭니다.  
+  
+ `AfxBeginThread`새로 만듭니다 `CWinThread` 개체, 호출의 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) 함수는 스레드 실행을 시작 하 고 스레드에 대 한 포인터를 반환 합니다. 검사가 되도록 모든 개체 할당 취소 된 제대로 만들기 작업의 일부로 모든 실패 하면 전체 프로시저에서 수행 됩니다. 호출 스레드를 끝내려면 [AfxEndThread](#afxendthread) 에서 내 스레드 또는 작업자 스레드의 제어 함수에서 반환 합니다.  
+  
+ 다중 스레딩 응용 프로그램에 의해 설정 되어야 합니다. 그렇지 않으면이 함수가 실패 합니다. 다중 스레딩을 사용에 대 한 자세한 내용은 참조 [/MD, /MT, /LD (런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md) 아래 *Visual c + + 컴파일러 옵션*합니다.  
+  
+ 대 한 자세한 내용은 `AfxBeginThread`, 문서를 참조 [다중 스레딩: 작업자 스레드 만들기](../../parallel/multithreading-creating-worker-threads.md) 및 [다중 스레딩: 사용자 인터페이스 스레드 만들기](../../parallel/multithreading-creating-user-interface-threads.md)합니다.  
+  
+### <a name="example"></a>예제  
+ 예를 참조 [CSocket::Attach](../../mfc/reference/csocket-class.md#attach)합니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxendthreada--afxendthread"></a><a name="afxendthread"></a>AfxEndThread  
+ 현재 실행 중인 스레드를 종료 하려면이 함수를 호출 합니다.  
+  
+```   
+void AFXAPI AfxEndThread(
+    UINT nExitCode,  
+    BOOL bDelete  = TRUE); 
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *nExitCode*  
+ 스레드 종료 코드를 지정합니다.  
+  
+ *b 삭제*  
+ 메모리에서 스레드 개체를 삭제합니다.  
+  
+### <a name="remarks"></a>주의  
+ 종료 스레드 내에서 호출 되어야 합니다.  
+  
+ 대 한 자세한 내용은 `AfxEndThread`를 문서를 참조 하십시오 [다중 스레딩: 스레드 종료](../../parallel/multithreading-terminating-threads.md)합니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxfreelibrarya--afxfreelibrary"></a><a name="afxfreelibrary"></a>AfxFreeLibrary  
+ `AfxFreeLibrary` 및 `AfxLoadLibrary`는 각 코딩된 라이브러리 모듈에 대한 참조 횟수를 유지 관리합니다.  
+  
+```   
+BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib); 
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *hInstLib*  
+ 로드된 라이브러리 모듈의 핸들입니다. [AfxLoadLibrary](#afxloadlibrary) 이 핸들을 반환 합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ **True 이면** 함수가 성공 하면 그렇지 **FALSE**합니다.  
+  
+### <a name="remarks"></a>주의  
+ `AfxFreeLibrary`는 로드된 DLL(동적 연결 라이브러리) 모듈의 참조 횟수를 감소시킵니다. 참조 횟수가&0;에 도달하면, 호출 프로세스의 주소 공간에서 모듈이 매핑 해제되고 핸들이 더 이상 유효하지 않습니다. 이 참조 카운트는 `AfxLoadLibrary`가 호출될 때마다 매번 증가합니다.  
+  
+ 라이브러리 모듈을 매핑 해제하기 전에 시스템은 DLL이 이를 사용하는 프로세스에서 분리할 수 있게 해줍니다. 이렇게 하면 DLL이 현재 프로세스를 대신해서 할당된 리소스를 정리할 수 있는 기회가 부여됩니다. 진입점 함수가 반환된 다음 라이브러리 모듈은 현재 프로세스의 주소 공간에서 제거됩니다.  
+  
+ `AfxLoadLibrary`를 사용해서 DLL 모듈을 매핑합니다.  
+  
+ 사용 해야 `AfxFreeLibrary` 및 `AfxLoadLibrary` (Win32 함수를 사용 하는 대신 **FreeLibrary** 및 **LoadLibrary**) 응용 프로그램에 여러 스레드가 사용 하는 경우. 사용 하 여 `AfxLoadLibrary` 및 `AfxFreeLibrary` 확장 DLL 로드 및 언로드되 전역 MFC 상태가 손상 되지 않는 경우 실행 하는 시작 및 종료 코드가 있는지 확인 합니다.  
+  
+### <a name="example"></a>예제  
+ 예를 참조 [AfxLoadLibrary](#afxloadlibrary)합니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxdll_.h  
+  
+##  <a name="a-nameafxgetappa--afxgetapp"></a><a name="afxgetapp"></a>AfxGetApp  
+ 맨 위에 있는 창 또는 주 메시지 디스패치 코드와 같은 응용 프로그램 정보에 액세스 하려면이 함수에 의해 반환 된 포인터를 사용할 수 있습니다.  
+  
+```   
+CWinApp* AFXAPI AfxGetApp(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 단일 패키지에 대 한 포인터 `CWinApp` 응용 프로그램에 대 한 개체입니다.  
+  
+### <a name="remarks"></a>주의  
+ NULL을 반환 하는이 메서드를 나타낼 수 있는 응용 프로그램 €™ s 주 창 되었는지 완벽 하 게 아직 초기화 되지 않았습니다. 또한 문제를 나타낼 수 있습니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&126;](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxgetappnamea--afxgetappname"></a><a name="afxgetappname"></a>AfxGetAppName  
+ 이 함수에 의해 반환 되는 문자열 수 루트 또는 진단 메시지에 대 한 이름에 사용할 임시 문자열입니다.  
+  
+```   
+LPCTSTR AFXAPI AfxGetAppName(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 응용 프로그램의 이름을 포함 하는 null로 끝나는 문자열입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing&127;](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxgetinstancehandlea--afxgetinstancehandle"></a><a name="afxgetinstancehandle"></a>AfxGetInstanceHandle  
+ 이 함수를 사용 하면 현재 응용 프로그램의 인스턴스 핸들을 가져올 수 있습니다.  
+  
+```   
+HINSTANCE  AFXAPI AfxGetInstanceHandle(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `HINSTANCE` 응용 프로그램의 현재 인스턴스에 있습니다. MFC의 USRDLL 버전에 연결 된 DLL 내에서 호출 된 경우는 `HINSTANCE` DLL에 반환 됩니다.  
+  
+### <a name="remarks"></a>주의  
+ `AfxGetInstanceHandle`항상 반환 된 `HINSTANCE` 실행 파일 (. EXE) 내에서 호출 하지 않으면 DLL 버전에 연결 된 USRDLL MFC의 합니다. 이 경우 반환 된 `HINSTANCE` DLL에 있습니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&128;](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxgetmainwnda--afxgetmainwnd"></a><a name="afxgetmainwnd"></a>AfxGetMainWnd  
+ OLE 서버 응용 프로그램을 사용 하는 경우 호출를 직접 참조 하는 대신 응용 프로그램의 활성 주 창에 대 한 포인터를 검색 하려면이 함수는 [m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd) application 개체의 멤버입니다.  
+  
+```   
+CWnd* AFXAPI AfxGetMainWnd(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 서버의 컨테이너 내에 내부 활성화된 개체가 있고 이 컨테이너가 활성 상태인 경우 이 함수는 내부 활성 문서가 포함된 프레임 창 개체에 대한 포인터를 반환합니다.  
+  
+ 컨테이너 내에 내부 활성화된 개체가 없거나 응용 프로그램이 OLE 서버가 아닌 경우 이 함수는 단순히 응용 프로그램 개체의 `m_pMainWnd`를 반환합니다.  
+  
+ 응용 프로그램의 기본 스레드에서 `AfxGetMainWnd`가 호출되는 경우 위의 규칙에 따라 응용 프로그램의 주 창이 반환됩니다. 함수가 응용 프로그램의 보조 스레드에서 호출되면 함수는 호출한 스레드에 연결된 주 창을 반환합니다.  
+  
+### <a name="remarks"></a>주의  
+ 응용 프로그램이 OLE 서버가 아닌 경우 이 함수의 호출은 응용 프로그램 개체의 `m_pMainWnd` 멤버를 직접 참조하는 것과 동일합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&129;](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxgetperuserregistrationa--afxgetperuserregistration"></a><a name="afxgetperuserregistration"></a>AfxGetPerUserRegistration  
+ 이 함수를 사용 하 여 응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 확인 하는 **HKEY_CURRENT_USER** ( **HKCU**) 노드.  
+  
+```  
+BOOL AFXAPI AfxGetPerUserRegistration();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `TRUE`나타냅니다 레지스트리 정보가 전송 되는 **HKCU** 노드. `FALSE` 나타냅니다 응용 프로그램 기본 노드를 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** ( **HKCR**).  
+  
+### <a name="remarks"></a>주의  
+ 프레임 워크에서 액세스 리디렉션합니다 레지스트리 리디렉션을 사용 하도록 설정 하면 **HKCR** 를 **HKEY_CURRENT_USER\Software\Classes**합니다. MFC 및 ATL 프레임 리디렉션의 영향을 받습니다.  
+  
+ 응용 프로그램이 레지스트리 액세스 리디렉션하는지 여부를 변경 하려면 [AfxSetPerUserRegistration](#afxsetperuserregistration)합니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxstat_.h    
+  
+##  <a name="a-nameafxgetresourcehandlea--afxgetresourcehandle"></a><a name="afxgetresourcehandle"></a>AfxGetResourceHandle  
+ 사용 하 여 `HINSTANCE` 응용 프로그램의 리소스에에서 액세스 하려면 직접, 예를 들어 Windows 함수 호출에이 함수에 의해 반환 된 핸들 **FindResource**합니다.  
+  
+```   
+extern HINSTANCE  AfxGetResourceHandle(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ `HINSTANCE` 핸들 응용 프로그램의 기본 리소스를 로드 하는 위치입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&130;](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxgetthreada--afxgetthread"></a><a name="afxgetthread"></a>AfxGetThread  
+ 에 대 한 포인터를 가져오려면이 함수를 호출 하 여 [CWinThread](../../mfc/reference/cwinthread-class.md) 현재 실행 중인 스레드를 나타내는 개체입니다.  
+  
+```   
+CWinThread* AfxGetThread(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 현재 실행 중인 스레드와;에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 원하는 인스턴스 내에서 호출 되어야 합니다.  
+  
+> [!NOTE]
+>  MFC 프로젝트 호출 프로그램을 이식 하는 경우 `AfxGetThread` Visual c + + 버전 4.2, 5.0 또는 6.0에서에서 `AfxGetThread` 호출 [AfxGetApp](#afxgetapp) 스레드가 없는 경우. Visual C+.NET 이상 버전에서는 `AfxGetThread` 반환 **NULL** 없는 스레드를 찾을 수 없으면 합니다. 호출 해야 응용 프로그램 스레드를 하려는 경우 `AfxGetApp`합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&132;](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxinitrichedita--afxinitrichedit"></a><a name="afxinitrichedit"></a>AfxInitRichEdit  
+ 응용 프로그램에 대 한 서식 있는 편집 컨트롤 (버전 1.0)을 초기화 하려면이 함수를 호출 합니다.  
+  
+```   
+BOOL AFXAPI AfxInitRichEdit(); 
+```  
+  
+### <a name="remarks"></a>주의  
+ 이 함수는 이전 버전과 호환성을 위해 제공 됩니다. Visual c + +.NET 및 나중에 사용할 수를 사용 하 여 만든 응용 프로그램 [AfxInitRichEdit2](#afxinitrichedit2)합니다.  
+  
+ `AfxInitRichEdit`RICHED32를 로드합니다. Rich edit 컨트롤의 버전 1.0을 초기화 하는 DLL입니다. 버전 2.0 및 3.0 RICHED20 서식 있는 편집 컨트롤의 사용 합니다. DLL 로드 해야 합니다. 이 작업을 호출 하 여 수행 됩니다 [AfxInitRichEdit2](#afxinitrichedit2)합니다. Visual c + +.NET 이전에 만든 서식 있는 편집 컨트롤에 있는 대화 상자 리소스를 있으면 서식 있는 편집 컨트롤은 자동으로 버전 1.0입니다. Visual c + +.NET 리소스 편집기를 사용 하 여 삽입 하는 Rich edit 컨트롤은 버전 2.0.  
+  
+ 기존 Visual c + + 응용 프로그램을 버전 2.0에서 서식 있는 편집 컨트롤을 업데이트 하려면 열고는 합니다. RC 파일을 텍스트로 "RichEdit20a"를 "RICHEDIT"에서 각 rich edit 컨트롤의 클래스 이름을 변경 합니다. 그런 다음에 대 한 호출을 대체 `AfxInitRichEdit` 와 `AfxInitRichEdit2`합니다.  
+  
+ 또한이 함수는 프로세스에 대 한 라이브러리 아직 초기화 되지 않은 경우 공용 컨트롤 라이브러리를 초기화 합니다. MFC 응용 프로그램에서 직접 서식 있는 편집 컨트롤을 사용 하는 경우 MFC 서식 있는 편집 컨트롤 런타임에 제대로 초기화가 수행 하기 위해이 함수를 호출 해야 합니다. Create 메서드를 호출 하는 경우 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)를 [CRichEditView](../../mfc/reference/cricheditview-class.md)를 또는 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), 일반적으로이 함수를 호출할 필요가 없습니다 하지만 경우에 따라 할 수 있습니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxinitrichedit2a--afxinitrichedit2"></a><a name="afxinitrichedit2"></a>AfxInitRichEdit2  
+ 응용 프로그램에 대 한 서식 있는 편집 컨트롤 (버전 2.0 이상)을 초기화 하려면이 함수를 호출 합니다.  
+  
+```   
+BOOL AFXAPI AfxInitRichEdit2(); 
+```  
+  
+### <a name="remarks"></a>주의  
+ 이 함수는 RICHED20 로드를 호출 합니다. DLL 및 초기화는 다양 한 버전 2.0에는 편집 컨트롤입니다. Create 메서드를 호출 하는 경우 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)를 [CRichEditView](../../mfc/reference/cricheditview-class.md)를 또는 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), 일반적으로이 함수를 호출할 필요가 없습니다 하지만 경우에 따라 할 수 있습니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxloadlibrarya--afxloadlibrary"></a><a name="afxloadlibrary"></a>AfxLoadLibrary  
+ `AfxLoadLibrary`를 사용해서 DLL 모듈을 매핑합니다.  
+  
+```   
+HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName); 
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *lpszModuleName*  
+ 모듈의 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다 (중 하나는입니다. DLL 또는 합니다. EXE 파일)입니다. 지정 된 이름은 모듈의 파일 이름입니다.  
+  
+ 문자열의 경로 지정 하 고 지정된 된 디렉터리에는 파일이 없는 경우 함수 실패 합니다.  
+  
+ 경로 지정 하 고 파일 이름 확장명을 생략 하면 기본 확장 프로그램입니다. DLL이 추가 됩니다. 그러나 파일 이름 문자열 모듈 이름에 확장명이 없는 있음을 나타내기 위해 후행 점 문자 (.)를 포함할 수 있습니다. 지정 된 경로가 함수를 다음 순서로 파일 검색.  
+  
+-   응용 프로그램 로드 하는 디렉터리입니다.  
+  
+-   현재 디렉터리입니다.  
+  
+- **Windows 95/98:** Windows 시스템 디렉터리입니다. **Windows NT:** 32 비트 Windows 시스템 디렉터리입니다. 이 디렉터리의 이름은 SYSTEM32입니다.  
+  
+- **Windows NT에만:** 는 16 비트 Windows 시스템 디렉터리입니다. 이 디렉터리의 경로 가져오는 Win32 함수는 있지만 검색 됩니다. 이 디렉터리의 이름은 시스템입니다.  
+  
+-   Windows 디렉터리입니다.  
+  
+-   PATH 환경 변수에 나열 된 디렉터리입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 함수가 성공 하면 반환 값은 모듈에 대 한 핸들입니다. 함수가 실패 한 경우 반환 값은 NULL입니다.  
+  
+### <a name="remarks"></a>주의  
+ 사용할 수 있는 핸들 반환 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) DLL 함수의 주소를 가져옵니다. `AfxLoadLibrary`다른 실행 모듈에 매핑할도 사용할 수 있습니다.  
+  
+ 각 프로세스는 각 코딩 된 라이브러리 모듈에 대 한 참조 횟수를 유지합니다. 이 참조 개수가 증가 될 때마다 `AfxLoadLibrary` 라고 하며 각 시간 감소는 `AfxFreeLibrary` 호출 됩니다. 참조 횟수가&0;에 도달하면, 호출 프로세스의 주소 공간에서 모듈이 매핑 해제되고 핸들이 더 이상 유효하지 않습니다.  
+  
+ 사용 해야 `AfxLoadLibrary` 및 `AfxFreeLibrary` (Win32 함수를 사용 하는 대신 **LoadLibrary** 및 **FreeLibrary**) 여러 스레드를 사용 하는 응용 프로그램 및 확장 DLL을 동적으로 로드 합니다. 사용 하 여 `AfxLoadLibrary` 및 `AfxFreeLibrary` 산정 확장 DLL이 로드 되거나 언로드될 때 실행 되는 시작 및 종료 코드에 전역 MFC 상태가 손상 되지 않습니다.  
+  
+ 사용 하 여 `AfxLoadLibrary` 에서는; MFC의 DLL 버전에 동적으로 연결 해야 응용 프로그램에서 헤더 파일에 대 한 `AfxLoadLibrary`, Afxdll_.h, 불과합니다 MFC DLL로 응용 프로그램에 연결 된 경우를 포함 합니다. 이것은 의도적인 사용 하거나 확장 Dll을 만들어야 하는 MFC의 DLL 버전에 연결 해야 하기 때문에 있습니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFC_DLLUser #&1;](../../mfc/reference/codesnippet/cpp/application-information-and-management_7.cpp)]  
+[!code-cpp[NVC_MFC_DLLUser #&2;](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]  
+[!code-cpp[NVC_MFC_DLLUser #&3;](../../mfc/reference/codesnippet/cpp/application-information-and-management_9.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxdll_.h  
+   
+  
+##  <a name="a-nameafxregisterclassa--afxregisterclass"></a><a name="afxregisterclass"></a>AfxRegisterClass  
+ MFC를 사용 하는 DLL에 창 클래스를 등록 하려면이 함수를 사용 합니다.  
+  
+```   
+BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass); 
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *lpWndClass*  
+ 에 대 한 포인터는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 창 클래스를 등록 하는 방법에 대 한 정보가 포함 된 구조입니다. 이 구조에 대 한 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+  
+### <a name="return-value"></a>반환 값  
+ **True 이면** 클래스가 있는 경우 성공적으로 등록 하 고 그렇지 않으면 **FALSE**합니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 함수를 사용 하는 경우 클래스는 DLL을 언로드할 때 자동으로 등록 된지 않습니다.  
+  
+ 비 DLL 빌드에는 `AfxRegisterClass` 식별자는 Windows 함수에 매핑되는 매크로로 정의 되어 **RegisterClass**이므로 응용 프로그램에 등록 하는 클래스는 자동으로 등록 되지 않습니다. 사용 하는 경우 `AfxRegisterClass` 대신 **RegisterClass**, DLL 및 응용 프로그램에서 모두 변경 없이 코드를 사용할 수 있습니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFC_DLL&#3;](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxregisterwndclassa--afxregisterwndclass"></a><a name="afxregisterwndclass"></a>AfxRegisterWndClass  
+ 사용자 지정 창 클래스를 등록할 수 있습니다.  
+  
+```  
+ 
+LPCTSTR AFXAPI AfxRegisterWndClass(
+    UINT nClassStyle,  
+    HCURSOR hCursor = 0,  
+    HBRUSH hbrBackground = 0,  
+    HICON hIcon = 0);  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *nClassStyle*  
+ Windows 클래스 스타일 또는 조합 스타일을 비트 OR를 사용 하 여 만든 지정 ( **|**) 창 클래스에 대 한 연산자입니다. 클래스 스타일의 목록에 대 한 참조는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 경우 **NULL**, 기본값을 다음과 같이 설정 됩니다.  
+  
+-   마우스 스타일 설정 하는 **CS_DBLCLKS**를 어떤 보냅니다 마우스를 두 번 클릭할 때 메시지 창 프로시저를 두 번 클릭 합니다.  
+  
+-   Windows 표준 화살표 커서 스타일 설정 **IDC_ARROW**합니다.  
+  
+-   배경 브러시 설정 하는 **NULL**이므로 창 배경을 지우지 것입니다.  
+  
+-   표준, 손 흔드는 플래그 Windows 로고 아이콘 아이콘을 설정 합니다.  
+  
+ `hCursor`  
+ 창 클래스에서 만든 각 창에 설치 되도록 커서 리소스에 대 한 핸들을 지정 합니다. 기본값을 사용 하는 경우 **0**, 표준 받습니다 **IDC_ARROW** 커서입니다.  
+  
+ *hbrBackground*  
+ 창 클래스에서 만든 각 창에 설치 되도록 브러시 리소스에 대 한 핸들을 지정 합니다. 기본값을 사용 하는 경우 **0**, 생깁니다는 **NULL** 처리 하는 동안 배경 지우지 배경 브러시 및 기본적으로 창이 표시 됩니다 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)합니다.  
+  
+ `hIcon`  
+ 창 클래스에서 만든 각 창에 설치 되어야 하는 아이콘 리소스에 대 한 핸들을 지정 합니다. 기본값을 사용 하는 경우 **0**를 표준, 손 흔드는 플래그 Windows 로고 아이콘을 얻게 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 클래스 이름을 포함 하는 null로 끝나는 문자열입니다. 이 클래스 이름을 전달할 수 있습니다는 **만들기** 멤버 함수에 `CWnd` 또는 기타 **CWnd-**창을 만들기 위해 클래스를 파생 합니다. Microsoft Foundation 클래스 라이브러리에서 이름이 생성 됩니다.  
+  
+> [!NOTE]
+>  반환 값은 정적 버퍼에 대 한 포인터입니다. 이 문자열을 저장 하려면에 할당 한 `CString` 변수입니다.  
+  
+### <a name="remarks"></a>주의  
+ Microsoft Foundation Class 라이브러리는 자동으로 사용자에 대 한 몇 가지 표준 창 클래스를 등록합니다. 사용자 지정 창 클래스 등록 하려는 경우이 함수를 호출 합니다.  
+  
+ 이름을 등록 하 여 클래스에 대 한 `AfxRegisterWndClass` 매개 변수를 전적으로 의존 합니다. 호출 하는 경우 `AfxRegisterWndClass` 여러 번 동일한 매개 변수를 가진만 등록 첫 번째 호출에서 클래스입니다. 에 대 한 후속 호출 `AfxRegisterWndClass` 동일한 매개 변수를 이미 등록 된 클래스를 반환 하면 됩니다.  
+  
+ 호출 하는 경우 `AfxRegisterWndClass` 각 클래스에 대 한 별도 창 클래스를 가져오는 대신 동일한 매개 변수를 가진 여러 CWnd에서 파생 된 클래스에 대 한 각 클래스는 동일한 창 클래스를 공유 합니다. 이런 경우 문제가 될 수는 **이 있는** 클래스 스타일이 사용 됩니다. 대신 다중 **이 있는** 창 클래스를 얻게 하 나와 **이 있는** 창 클래스와 같은 DC를 공유 하는 클래스를 사용 하는 모든 c + + 창입니다. 이 문제를 방지 하려면 호출 [AfxRegisterClass](#afxregisterclass) 여 클래스를 등록 합니다.  
+  
+ 기술 참고 가리키는 [TN001: 창 클래스 등록](../../mfc/tn001-window-class-registration.md) 창 클래스 등록에 대 한 자세한 내용은 및 `AfxRegisterWndClass` 함수입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&134;](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxsetperuserregistrationa--afxsetperuserregistration"></a><a name="afxsetperuserregistration"></a>AfxSetPerUserRegistration  
+ 응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 설정 하는 **HKEY_CURRENT_USER** ( **HKCU**) 노드.  
+  
+```  
+void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ [in] `bEnable`  
+ `TRUE`나타냅니다 레지스트리 정보가 전송 되는 **HKCU** 노드. `FALSE` 나타냅니다 응용 프로그램 기본 노드를 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** ( **HKCR**).  
+  
+### <a name="remarks"></a>주의  
+ 전에 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], 일반적으로 레지스트리를 액세스 하는 응용 프로그램 사용은 **HKEY_CLASSES_ROOT** 노드. 그러나 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]에 쓸 수 있는 승격 된 모드에서 응용 프로그램을 실행 해야 **HKCR**합니다.  
+  
+ 이 메서드를 사용 하면 응용 프로그램을 읽거나 쓰고 레지스트리에 레지스트리 액세스를 리디렉션하여 승격 된 모드에서 실행 하지 않고 **HKCR** 를 **HKCU**합니다. 자세한 내용은 참조 [링커 속성 페이지](../../ide/linker-property-pages.md)합니다.  
+  
+ 프레임 워크에서 액세스 리디렉션합니다 레지스트리 리디렉션을 사용 하도록 설정 하면 **HKCR** 를 **HKEY_CURRENT_USER\Software\Classes**합니다. MFC 및 ATL 프레임 리디렉션의 영향을 받습니다.  
+  
+ 기본 구현에서 레지스트리에 액세스 **HKCR**합니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxstat_.h    
+  
+##  <a name="a-nameafxsetresourcehandlea--afxsetresourcehandle"></a><a name="afxsetresourcehandle"></a>AfxSetResourceHandle  
+ 이 함수를 사용 하 여 설정 하 여 `HINSTANCE` 응용 프로그램의 기본 리소스를 로드 하는 위치를 결정 하는 핸들입니다.  
+  
+```  
+ 
+void  
+AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `hInstResource`  
+ 인스턴스 또는 모듈에 대 한 핸들은 합니다. 응용 프로그램의 리소스는 로드 된 EXE 또는 DLL 파일입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCWindowing #&135;](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+  
+##  <a name="a-nameafxsocketinita--afxsocketinit"></a><a name="afxsocketinit"></a>AfxSocketInit  
+ 이 함수를 호출 하면 `CWinApp::InitInstance` Windows 소켓을 초기화 하는 재정의 합니다.  
+  
+```  
+ 
+BOOL  
+AfxSocketInit(WSADATA* lpwsaData = NULL);  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `lpwsaData`  
+ 에 대 한 포인터는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조입니다. 경우 `lpwsaData` 과 같지 않은 `NULL`, 다음의 주소는 `WSADATA` 구조 호출에 의해 채워지는 `WSAStartup`합니다. 이 기능 또한 수 있도록 `WSACleanup` 응용 프로그램을 종료 하기 전에 사용자에 대해 호출 됩니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
+  
+### <a name="remarks"></a>주의  
+ 보조 스레드는 정적으로 연결 된 MFC 응용 프로그램에서 MFC 소켓을 사용 하는 경우 호출 해야 `AfxSocketInit` 소켓 라이브러리를 초기화할 수 소켓을 사용 하 여 각 스레드에서 합니다. 기본적으로 `AfxSocketInit` 기본 스레드에만 호출 됩니다.  
+  
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxsock.h  
+  
+##  <a name="a-nameafxwininita--afxwininit"></a><a name="afxwininit"></a>AfxWinInit  
+ MFC에서 제공 하 여이 함수를 호출 하는 `WinMain` 의 일부로 함수는 [CWinApp](../../mfc/reference/cwinapp-class.md) 초기화 하는 GUI 기반 응용 프로그램을 MFC를 초기화할 수 있습니다.  
+  
+```  
+ 
+BOOL AFXAPI AfxWinInit(
+    HINSTANCE hInstance,  
+    HINSTANCE hPrevInstance,  
+    LPTSTR lpCmdLine,  
+    int nCmdShow);  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `hInstance`  
+ 현재 실행 중인 모듈의 핸들입니다.  
+  
+ *hPrevInstance*  
+ 응용 프로그램의 이전 인스턴스에 대 한 핸들입니다. Win32 기반 응용 프로그램의 경우이 매개 변수는 항상 **NULL**합니다.  
+  
+ `lpCmdLine`  
+ 응용 프로그램에 대 한 명령줄을 지정 하는 null로 끝나는 문자열을 가리킵니다.  
+  
+ `nCmdShow`  
+ GUI 응용 프로그램의 주 창 표시 방법을 지정 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 콘솔 응용 프로그램의 경우는 사용 하지 않는 MFC에서 제공한 `WinMain` 호출 해야 함수를 `AfxWinInit` 직접 MFC를 초기화할 수 있습니다.  
+  
+ 호출 하는 경우 `AfxWinInit` 의 인스턴스를 선언 해야 사용자가 직접는 `CWinApp` 클래스입니다. 콘솔 응용 프로그램을 수 있습니다를 고유한 클래스를 파생 하지 `CWinApp` 인스턴스를 사용 하는 대신 및 `CWinApp` 직접. 이 방법은 구현에서 응용 프로그램에 대 한 모든 기능을 유지 하려는 경우에 적절 한 **주**합니다.  
+  
+> [!NOTE]
+>  어셈블리에 대 한 활성화 컨텍스트를 만들 때 MFC는 사용자 모듈에서 제공 되는 매니페스트 리소스를 사용 합니다. 활성화 컨텍스트는 `AfxWinInit`에서 만듭니다. 자세한 내용은 참조 [MFC 모듈 상태의 활성화 컨텍스트 지원](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFC_AfxWinInit #&1;](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]  
+
+### <a name="requirements"></a>요구 사항  
+  **헤더** afxwin.h  
+    
+## <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CWinApp 클래스](../../mfc/reference/cwinapp-class.md)
+

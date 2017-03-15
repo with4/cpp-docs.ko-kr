@@ -1,0 +1,353 @@
+---
+title: "CScrollView 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CScrollView
+dev_langs:
+- C++
+helpviewer_keywords:
+- CScrollView class
+- views, scrolling
+- scrolling views
+ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
+caps.latest.revision: 24
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 0dc937a9559306ff527779c45af9fdb62cf602df
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cscrollview-class"></a>CScrollView 클래스
+A [CView](../../mfc/reference/cview-class.md) 스크롤 기능이 있습니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+class CScrollView : public CView  
+```  
+  
+## <a name="members"></a>멤버  
+  
+### <a name="protected-constructors"></a>Protected 생성자  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CScrollView::CScrollView](#cscrollview)|`CScrollView` 개체를 생성합니다.|  
+  
+### <a name="public-methods"></a>Public 메서드  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|스크롤 보기 가로 및 세로 스크롤 막대가 있는지 여부를 나타냅니다.|  
+|[CScrollView::FillOutsideRect](#filloutsiderect)|뷰 스크롤 영역 외부의 영역을 채웁니다.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|장치 단위로 현재 스크롤 위치를 가져옵니다.|  
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|현재 매핑 모드, 전체 크기 및 스크롤할 수 있는 보기의 줄 및 페이지 크기를 가져옵니다. 크기는 장치 단위에서입니다.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|논리 단위에서 현재 스크롤 위치를 가져옵니다.|  
+|[CScrollView::GetTotalSize](#gettotalsize)|논리 단위에서 스크롤 보기의 총 크기를 가져옵니다.|  
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|프레임의 크기를 실현 하는 뷰의 크기를 하면 됩니다.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|논리 단위에 지정 된 특정된 지점에 대 한 뷰를 스크롤합니다.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|눈금에 맞춤 모드로 스크롤 보기를 설정 합니다.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|스크롤 보기의 매핑 모드, 총 크기 및 가로 및 세로 스크롤 금액을 설정합니다.|  
+  
+## <a name="remarks"></a>주의  
+ 파생 된 클래스에 자신을 스크롤 하는 표준 처리할 수 있는 `CView` 메시지 매핑된 재정의 하 여 [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) 및 [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) 멤버 함수입니다. 하지만 `CScrollView` 다음과 같은 기능을 추가 하는 해당 `CView` 기능:  
+  
+-   창과 뷰포트 크기 및 매핑 모드를 관리합니다.  
+  
+-   자동 스크롤 막대 메시지에 응답 중 스크롤됩니다.  
+  
+-   자동으로 메시지에 응답 하는 키보드, 스크롤할 수 없는 마우스 또는 IntelliMouse 휠 중 스크롤됩니다.  
+  
+ 키보드에서 메시지에 대 한 응답으로 자동 스크롤을 WM_KEYDOWN 메시지를 추가 하 고 VK_DOWN, VK_PREV 및 호출에 대 한 테스트 [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)합니다.  
+  
+ 마우스 휠 메시지 매핑된 재정의 하 여 스크롤 하는 사용자가 직접 처리할 수 있는 [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) 및 [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) 멤버 함수입니다. 와 `CScrollView`, 이러한 멤버 함수에 대 한 권장된 동작을 지원 [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), 휠 회전 메시지입니다.  
+  
+ 자동 스크롤을 이용 하려면 보기에서 파생 `CScrollView` 대신에서 `CView`합니다. 보기 처음 만들어질 때, 호출 문서의 크기를 기준으로 스크롤할 수 있는 보기의 크기를 계산 하려는 경우는 `SetScrollSizes` 의 재정의에서 멤버 함수 [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) 또는 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)합니다. (문서 크기를 쿼리 하는 사용자 고유의 코드를 작성 해야 합니다. 예를 들어 참조는 [Scribble 샘플](../../visual-cpp-samples.md).)  
+  
+ 에 대 한 호출에서 `SetScrollSizes` 보기의 매핑 모드, 스크롤 뷰 및 가로 또는 세로로 스크롤할 수 있는 메모리 양은 총 차원 멤버 함수를 설정 합니다. 모든 크기 논리 단위에서는입니다. 보기의 논리적 크기는 일반적으로 문서에 저장 된 데이터에서 계산 됩니다. 하지만 일부 경우에 가리키려는 고정된 크기를 지정 합니다. 두 방법의 예제를 보려면 [CScrollView::SetScrollSizes](#setscrollsizes)합니다.  
+  
+ 논리 단위에서 가로 및 세로로 스크롤하여 대량을 지정 합니다. 기본적으로 스크롤 상자 외부의 스크롤 막대 손잡이 클릭할 경우 `CScrollView` 스크롤합니다 "페이지"입니다. 스크롤 막대의 양쪽 끝 스크롤 화살표를 클릭 하면 `CScrollView` 스크롤합니다는 "선입니다." 기본적으로 페이지는 보기;의 총 크기의 1/10 줄은 페이지 크기의 1/10입니다. 사용자 지정 크기를 전달 하 여 이러한 기본값을 재정의 `SetScrollSizes` 멤버 함수입니다. 예를 들어 현재 글꼴로 줄의 높이를 세로 크기 및 전체 크기의 너비의 일부분을 가로 크기를 설정할 수 있습니다.  
+  
+ 스크롤 하는 대신 `CScrollView` 보기 현재 창 크기를 자동으로 확장할 수 있습니다. 이 모드에서는 보기에 스크롤 막대가 없는 및 논리 뷰가 늘어나거나 창의 클라이언트 영역을 정확 하 게 맞도록 줄어듭니다. 이 눈금에 맞춤 기능을 사용 하려면 호출 [CScrollView::SetScaleToFitSize](#setscaletofitsize)합니다. (중 하나를 호출 `SetScaleToFitSize` 또는 `SetScrollSizes`, 다르다는 것입니다.)  
+  
+ 전에 `OnDraw` 파생 된 뷰 클래스의 멤버 함수를 호출 하 고, `CScrollView` 뷰포트 원점에 대 한 자동으로 조정 하는 `CPaintDC` 디바이스 컨텍스트 개체를 전달 하는 `OnDraw`합니다.  
+  
+ 스크롤 창에 대 한 뷰포트 방향을 조정 하려면 `CScrollView` 재정의 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다. 이 조정은 대 한 자동는 `CPaintDC` 장치 컨텍스트는 `CScrollView` 를 전달 `OnDraw`, 호출 해야 하지만 **CScrollView::OnPrepareDC** 직접 다른 장치 컨텍스트를 사용 예:는 `CClientDC`. 재정의할 수 **CScrollView::OnPrepareDC** 펜, 배경색 및 기타 그리기 특성 이지만 크기 조정 작업을 수행 하는 기본 클래스를 호출 합니다.  
+  
+ 스크롤 막대는 다음과 같은 경우에 표시 된 것 처럼 뷰를 기준으로 다음 세 위치에 나타날 수 있습니다.  
+  
+-   보기를 사용 하 여 표준 창 스타일 스크롤 막대를 설정할 수는 **WS_HSCROLL** 및 **WS_VSCROLL**[창 스타일](../../mfc/reference/window-styles.md)합니다.  
+  
+-   스크롤 막대 컨트롤도 추가할 수 있는 경우 프레임 워크는 다음과 같이 전달 됩니다. 보기를 포함 하는 프레임 `WM_HSCROLL` 및 `WM_VSCROLL` 프레임 창에서 메시지는 현재 활성 보기를 합니다.  
+  
+-   프레임 워크 또한 전달 스크롤에서 메시지는 `CSplitterWnd` splitter 컨트롤을 현재 사용 중인 분할 창 (뷰). 에 배치 하는 경우는 [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) 공유 스크롤 막대가 있는 `CScrollView` 자체를 만들기 보다는 공유 된 개체를 사용 합니다.  
+  
+ 사용 하 여 대 한 자세한 내용은 `CScrollView`, 참조 [문서/뷰 아키텍처](../../mfc/document-view-architecture.md) 및 [파생 된 뷰 클래스에서에서 사용할 수 있는 MFC](../../mfc/derived-view-classes-available-in-mfc.md)합니다.  
+  
+## <a name="inheritance-hierarchy"></a>상속 계층  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
+  
+ [CView](../../mfc/reference/cview-class.md)  
+  
+ `CScrollView`  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxwin.h  
+  
+##  <a name="a-namecheckscrollbarsa--cscrollviewcheckscrollbars"></a><a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+ 스크롤 보기 가로 및 세로 막대에 있는지 확인 하려면이 멤버 함수를 호출 합니다.  
+  
+```  
+void CheckScrollBars(
+    BOOL& bHasHorzBar,  
+    BOOL& bHasVertBar) const;  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bHasHorzBar*  
+ 응용 프로그램에 가로 스크롤 막대를 나타냅니다.  
+  
+ *bHasVertBar*  
+ 응용 프로그램에 세로 스크롤 막대를 나타냅니다.  
+  
+##  <a name="a-namecscrollviewa--cscrollviewcscrollview"></a><a name="cscrollview"></a>CScrollView::CScrollView  
+ `CScrollView` 개체를 생성합니다.  
+  
+```  
+CScrollView();
+```  
+  
+### <a name="remarks"></a>주의  
+ 호출 해야 `SetScrollSizes` 또는 `SetScaleToFitSize` 스크롤 하기 전에 뷰를 사용할 수 있습니다.  
+  
+##  <a name="a-namefilloutsiderecta--cscrollviewfilloutsiderect"></a><a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+ 호출 `FillOutsideRect` 스크롤 영역 외부에 표시 되는 보기 영역을 채웁니다.  
+  
+```  
+void FillOutsideRect(
+    CDC* pDC,  
+    CBrush* pBrush);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pDC`  
+ 장치 컨텍스트를 채우기를 수행 해야 합니다.  
+  
+ `pBrush`  
+ 영역을 채울 된 브러시입니다.  
+  
+### <a name="remarks"></a>주의  
+ 사용 하 여 `FillOutsideRect` 스크롤 보기의 `OnEraseBkgnd` 과도 한 배경 다시 표시 하지 않으려면 처리기 함수입니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCDocView #&164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
+  
+##  <a name="a-namegetdevicescrollpositiona--cscrollviewgetdevicescrollposition"></a><a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+ 호출 `GetDeviceScrollPosition` 현재 가로 및 세로 스크롤 상자에에서 위치 스크롤 막대를 중지 해야 합니다.  
+  
+```  
+CPoint GetDeviceScrollPosition() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 가로 및 세로 위치 (장치 단위)으로 스크롤 상자는 `CPoint` 개체입니다.  
+  
+### <a name="remarks"></a>주의  
+ 좌표 쌍이 보기의 왼쪽 위 모서리 스크롤 된 문서에서 위치에 해당 합니다. 스크롤 보기 장치 위치로 마우스 장치 위치 오프셋 때 유용 합니다.  
+  
+ `GetDeviceScrollPosition`장치 단위로 값을 반환합니다. 사용 하 여 논리 단위를 하려는 경우 `GetScrollPosition` 대신 합니다.  
+  
+##  <a name="a-namegetdevicescrollsizesa--cscrollviewgetdevicescrollsizes"></a><a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes`현재 매핑 모드, 전체 크기 및 스크롤할 수 있는 보기의 줄 및 페이지 크기를 가져옵니다.  
+  
+```  
+void GetDeviceScrollSizes(
+    int& nMapMode,  
+    SIZE& sizeTotal,  
+    SIZE& sizePage,  
+    SIZE& sizeLine) const;  
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `nMapMode`  
+ 이 보기에 대 한 현재 매핑 모드를 반환합니다. 가능한 값 목록은 참조 하십시오. `SetScrollSizes`합니다.  
+  
+ `sizeTotal`  
+ 장치 단위로 스크롤 보기의 현재 총 크기를 반환합니다.  
+  
+ `sizePage`  
+ 스크롤 막대 손잡이 클릭 마우스에 대 한 응답의 각 방향에서 스크롤하여 현재 가로 및 세로 거리를 반환 합니다. **cx** 멤버 가로 크기를 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
+  
+ `sizeLine`  
+ 스크롤 화살표를 클릭 마우스에 대 한 응답의 각 방향에서 스크롤하여 현재 가로 및 세로 거리를 반환 합니다. **cx** 멤버 가로 크기를 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 크기는 장치 단위에서입니다. 이 멤버 함수를 호출 거의 없습니다.  
+  
+##  <a name="a-namegetscrollpositiona--cscrollviewgetscrollposition"></a><a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+ 호출 `GetScrollPosition` 현재 가로 및 세로 스크롤 상자에에서 위치 스크롤 막대를 중지 해야 합니다.  
+  
+```  
+CPoint GetScrollPosition() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 가로 및 세로 위치 (논리 단위)으로 스크롤 상자는 `CPoint` 개체입니다.  
+  
+### <a name="remarks"></a>주의  
+ 좌표 쌍이 보기의 왼쪽 위 모서리 스크롤 된 문서에서 위치에 해당 합니다.  
+  
+ `GetScrollPosition`논리 단위에서 값을 반환합니다. 장치 단위로 사용 `GetDeviceScrollPosition` 대신 합니다.  
+  
+##  <a name="a-namegettotalsizea--cscrollviewgettotalsize"></a><a name="gettotalsize"></a>CScrollView::GetTotalSize  
+ 호출 `GetTotalSize` 스크롤 보기의 현재 가로 및 세로 크기를 검색할 수 있습니다.  
+  
+```  
+CSize GetTotalSize() const;  
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 논리 단위에서 스크롤 보기의 총 크기입니다. 수평 크기는 **cx** 의 멤버는 `CSize` 값을 반환 합니다. 세로 크기는 **cy** 멤버입니다.  
+  
+##  <a name="a-nameresizeparenttofita--cscrollviewresizeparenttofit"></a><a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+ 호출 `ResizeParentToFit` 프레임 창 크기를 지정 하는 보기의 크기에 있도록 합니다.  
+  
+```  
+void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *bShrinkOnly*  
+ 수행 하는 크기 조정의 종류입니다. 기본 값, **TRUE**, 해당 하는 경우 프레임 창을 축소 합니다. 여전히 큰 뷰나 작은 프레임 창에 스크롤 막대가 나타납니다. 값이 **FALSE** 하면 보기 프레임 창의 크기를 정확 하 게 조정에 항상 있습니다. 다중 문서 MDI (인터페이스) 프레임 창 또는 화면 안에 맞도록 프레임 창 너무 커질 수 있으므로 다소 위험한 수 있습니다.  
+  
+### <a name="remarks"></a>주의  
+ MDI 자식 프레임 창에는 뷰에 대해서만이 좋습니다. 사용 하 여 `ResizeParentToFit` 에 `OnInitialUpdate` 처리기 함수가 파생 된 `CScrollView` 클래스입니다. 이 멤버 함수에 대 한 예제를 보려면 [CScrollView::SetScrollSizes](#setscrollsizes)합니다.  
+  
+ `ResizeParentToFit`뷰 창의 크기가 설정 되어 있는지를 가정 합니다. 경우 보기 창 크기 설정 되지 않은 경우 `ResizeParentToFit` 은 호출 어설션에서 발생 합니다. 이 문제가 발생 하지 되도록 걸기 다음 호출 하기 전에 `ResizeParentToFit`:  
+  
+ [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+  
+##  <a name="a-namescrolltopositiona--cscrollviewscrolltoposition"></a><a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+ 호출 `ScrollToPosition` 보기에서 지정된 된 지점으로 스크롤해야 합니다.  
+  
+```  
+void ScrollToPosition(POINT pt);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `pt`  
+ 논리 단위에서를 스크롤할 수 있는 점입니다. **x** 멤버 (보기의 전체 크기까지 0 이상) 양수 값 이어야 합니다. 같은 기준이 **y** 멤버 매핑 모드가 `MM_TEXT`합니다. **y** 멤버는 이외의 모드 매핑 음수 `MM_TEXT`합니다.  
+  
+### <a name="remarks"></a>주의  
+ 이 점은 창의 왼쪽 위 모퉁이에 있도록 보기를 스크롤할 수는 있습니다. 보기에 맞게 크기를 조정 하는 경우이 멤버 함수를 호출 되어야 합니다.  
+  
+##  <a name="a-namesetscaletofitsizea--cscrollviewsetscaletofitsize"></a><a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+ 호출 `SetScaleToFitSize` 뷰포트 크기를 현재 창 크기를 자동으로 조정 하려는 경우.  
+  
+```  
+void SetScaleToFitSize(SIZE sizeTotal);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `sizeTotal`  
+ 가로 및 세로 크기가 있는 뷰는 크기가 조정 되도록 합니다. 스크롤 보기의 크기는 논리 단위로 측정 됩니다. 가로 크기에 포함 된 **cx** 멤버입니다. 세로 크기에 포함 된 **cy** 멤버입니다. 둘 다 **cx** 및 **cy** 보다 크거나 0 이어야 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 스크롤 막대가 있는 언제 든 지 논리 보기의 일부만 표시 될 수 있습니다. 눈금에 맞춤 기능을 사용 하면 보기에 스크롤 막대가 없는 있고 논리 뷰가 늘어나거나 줄어듭니다 창의 클라이언트 영역을 정확 하 게 맞도록 합니다. 창 크기를 조정 하 고 보기 창의 크기에 따라 새 배율로 해당 데이터를 그립니다.  
+  
+ 에 대 한 호출을 일반적으로 저장 합니다 `SetScaleToFitSize` 보기의의 재정의에서 `OnInitialUpdate` 멤버 함수입니다. 원하지 않는 자동 크기 조정, 경우에 호출 된 `SetScrollSizes` 멤버 함수를 대신 합니다.  
+  
+ `SetScaleToFitSize`"확대/축소에 맞게" 작업을 구현 하려면 사용할 수 있습니다. 사용 하 여 `SetScrollSizes` 스크롤 다시 초기화 합니다.  
+  
+ `SetScaleToFitSize`뷰 창의 크기가 설정 되어 있는지를 가정 합니다. 경우 보기 창 크기 설정 되지 않은 경우 `SetScaleToFitSize` 은 호출 어설션에서 발생 합니다. 이 문제가 발생 하지 되도록 걸기 다음 호출 하기 전에 `SetScaleToFitSize`:  
+  
+ [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+  
+##  <a name="a-namesetscrollsizesa--cscrollviewsetscrollsizes"></a><a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+ 호출 `SetScrollSizes` 뷰를 업데이트할 때.  
+  
+```  
+void SetScrollSizes(
+    int nMapMode,  
+    SIZE sizeTotal,  
+    const SIZE& sizePage = sizeDefault,  
+    const SIZE& sizeLine = sizeDefault);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `nMapMode`  
+ 이 보기에 대해 설정 하는 매핑 모드입니다. 가능한 값은 다음과 같습니다.  
+  
+|매핑 모드|논리 단위|양의 y 축 확장...|  
+|------------------|------------------|---------------------------------|  
+|`MM_TEXT`|1 픽셀|아래쪽|  
+|`MM_HIMETRIC`|0.01 m m|위쪽으로|  
+|`MM_TWIPS`|1/1440에|위쪽으로|  
+|`MM_HIENGLISH`|0.001의|위쪽으로|  
+|`MM_LOMETRIC`|0.1 m m|위쪽으로|  
+|`MM_LOENGLISH`|0.01|위쪽으로|  
+  
+ 이러한 모드의 모든 Windows에 의해 정의 됩니다. 두 가지 표준 매핑 모드 `MM_ISOTROPIC` 및 `MM_ANISOTROPIC`, 사용 되지 않는 `CScrollView`합니다. 클래스 라이브러리에서 제공 된 `SetScaleToFitSize` 멤버 함수를 보기 창 크기를 조정 합니다. 위의 테이블에 열&3; 좌표 방향을 설명합니다.  
+  
+ `sizeTotal`  
+ 스크롤 보기의 총 크기입니다. **cx** 멤버 가로 범위에 포함 되어 있습니다. **cy** 멤버 세로 범위에 포함 되어 있습니다. 크기는 논리 단위에서입니다. 둘 다 **cx** 및 **cy** 보다 크거나 0 이어야 합니다.  
+  
+ `sizePage`  
+ 스크롤 막대 손잡이에 대 한 응답으로 마우스를 각 방향에서 스크롤하여 가로 및 세로 거리를 클릭 합니다. **cx** 멤버 가로 크기를 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
+  
+ `sizeLine`  
+ 마우스에 대 한 응답의 각 방향에서 스크롤하여 가로 및 세로 거리 스크롤 화살표를 클릭 합니다. **cx** 멤버 가로 크기를 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
+  
+### <a name="remarks"></a>주의  
+ 재정의에서 호출 된 `OnUpdate` 예를 들어 문서를 처음 표시할 때 또는 크기를 변경 하는 경우 스크롤 특성을 조정 하는 멤버 함수입니다.  
+  
+ 아마도 호출 하는 문서 멤버 함수를 호출 하 여 크기 정보 보기의 관련된 문서에서 일반적으로 얻을 수 있습니다 `GetMyDocSize`, 파생 된 문서 클래스와 함께 제공 합니다. 다음 코드에서는이 방법을 보여 줍니다.  
+  
+ [!code-cpp[NVC_MFCDocView #&166; 증가](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
+  
+ 또는 다음 코드와 같이 고정된 크기를 설정 하려면 경우에 따라 할 수 있습니다.  
+  
+ [!code-cpp[NVC_MFCDocView #&167;](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
+  
+ 제외한 Windows 매핑 모드 중 하나에 매핑 모드를 설정 해야 `MM_ISOTROPIC` 또는 `MM_ANISOTROPIC`합니다. 제한 되지 않은 매핑 모드를 사용 하는 경우 호출할는 `SetScaleToFitSize` 멤버 함수 대신 `SetScrollSizes`합니다.  
+  
+### <a name="example"></a>예제  
+ [!code-cpp[NVC_MFCDocView #&168;](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
+  
+ [!code-cpp[NVC_MFCDocView #&169;](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
+  
+## <a name="see-also"></a>참고 항목  
+ [MFC 샘플 DIBLOOK](../../visual-cpp-samples.md)   
+ [CView 클래스](../../mfc/reference/cview-class.md)   
+ [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+ [CView 클래스](../../mfc/reference/cview-class.md)   
+ [CSplitterWnd 클래스](../../mfc/reference/csplitterwnd-class.md)
+

@@ -1,0 +1,135 @@
+---
+title: "CGopherFile 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CGopherFile
+dev_langs:
+- C++
+helpviewer_keywords:
+- gopher protocol files
+- Internet, gopher
+- CGopherFile class
+ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
+caps.latest.revision: 23
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 40c1e385d0f58095c2aa79cc23168fc00f48ed9b
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cgopherfile-class"></a>CGopherFile 클래스
+Gopher 서버에서 파일을 찾고 읽는 기능을 제공합니다.  
+  
+> [!NOTE]
+>  클래스 `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` 및 해당 멤버 사용이 중단 된 Windows XP 플랫폼에서 작동 하지 않습니다 하지만 계속 이전 플랫폼에서 작동 합니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+class CGopherFile : public CInternetFile  
+```  
+  
+## <a name="members"></a>멤버  
+  
+### <a name="protected-constructors"></a>Protected 생성자  
+  
+|이름|설명|  
+|----------|-----------------|  
+|[CGopherFile::CGopherFile](#cgopherfile)|`CGopherFile` 개체를 생성합니다.|  
+  
+## <a name="remarks"></a>주의  
+ Gopher 서비스 사용자가이 서비스는 주로 인터페이스로 메뉴 기반 정보를 찾기 위한 함수 gopher 파일에 데이터를 쓸 수 없도록 합니다. `CGopherFile` 멤버 함수 **작성**, `WriteString`, 및 `Flush` 에 대 한 구현 되지 않은 `CGopherFile`합니다. 이러한 함수를 호출는 `CGopherFile` 개체를 반환 된 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
+  
+ 방법에 대 한 자세한 내용을 보려면 `CGopherFile` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
+  
+## <a name="inheritance-hierarchy"></a>상속 계층  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CFile](../../mfc/reference/cfile-class.md)  
+  
+ [CStdioFile](../../mfc/reference/cstdiofile-class.md)  
+  
+ [CInternetFile](../../mfc/reference/cinternetfile-class.md)  
+  
+ `CGopherFile`  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** afxinet.h  
+  
+##  <a name="a-namecgopherfilea--cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopherFile::CGopherFile  
+ 이 멤버 함수를 생성 하 라고는 `CGopherFile` 개체입니다.  
+  
+```  
+CGopherFile(
+    HINTERNET hFile,  
+    CGopherLocator& refLocator,  
+    CGopherConnection* pConnection);
+
+ 
+CGopherFile(
+    HINTERNET hFile,  
+    HINTERNET hSession,  
+    LPCTSTR pstrLocator,  
+    DWORD dwLocLen,  
+    DWORD_PTR dwContext);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `hFile`  
+ 에 대 한 핸들은 `HINTERNET` 파일입니다.  
+  
+ `refLocator`  
+ 에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
+  
+ `pConnection`  
+ 에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다.  
+  
+ `hSession`  
+ 현재 인터넷 세션에 대 한 핸들입니다.  
+  
+ `pstrLocator`  
+ Gopher 서버를 찾는 데 사용 하는 문자열에 대 한 포인터입니다. 참조 [Gopher 세션](https://msdn.microsoft.com/library/24wz8xze.aspx) gopher 로케이터에 대 한 자세한 내용은 합니다.  
+  
+ *dwLocLen*  
+ 바이트 수를 포함 하는 DWORD `pstrLocator`합니다.  
+  
+ `dwContext`  
+ 열려는 파일의 컨텍스트 식별자에 대 한 포인터입니다.  
+  
+### <a name="remarks"></a>주의  
+ 필요한는 `CGopherFile` gopher 인터넷 세션 중 파일에서 읽을 수 있는 개체입니다.  
+  
+ 만들 없도록는 `CGopherFile` 개체에 직접. 대신, 호출 [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) gopher 서버에서 파일을 엽니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [CInternetFile 클래스](../../mfc/reference/cinternetfile-class.md)   
+ [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+ [CInternetFile 클래스](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherLocator 클래스](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md)   
+ [CGopherConnection 클래스](../../mfc/reference/cgopherconnection-class.md)
+

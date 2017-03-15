@@ -1,0 +1,1434 @@
+---
+title: "bitset 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- bitset/std::bitset
+- std::bitset
+- std.bitset
+- bitset
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitset class
+ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
+caps.latest.revision: 21
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: 2e78e22c04bac149694a4c4f860074296c7b37fc
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="bitset-class"></a>bitset 클래스
+일련의 항목 또는 조건에 대한 플래그를 유지하는 간단한 방법을 제공하는 고정 비트 수로 구성된 시퀀스를 저장하는 개체의 유형에 대해 설명합니다. bitset 클래스에서는 비트 컬렉션을 포함하고 각 비트에 대한 constant-time 액세스 권한을 제공하는 형식 bitset의 개체에 대한 작업을 지원합니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+template <size_t N>  
+class bitset  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ *N*  
+ 컴파일 시 알아야 하는 형식 **size_t**의&0;이 아닌 정수를 사용하여 bitset 개체의 비트 수를 지정합니다.  
+  
+## <a name="remarks"></a>설명  
+ 유사한 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)와 달리 bitset 클래스는 반복기가 없으며 표준 템플릿 라이브러리 컨테이너가 아닙니다. 또한 **bitset\<N\>**이 선언되었을 때 템플릿 매개 변수 **N**으로 지정된 크기에 따라 컴파일 시 고정되어 있는 일부 특정 크기가 됨으로써 vector\<bool>과도 다릅니다.  
+  
+ 비트는 값이 1이면 설정되고, 값이 0이면 재설정 합니다. 비트를 대칭 이동하거나 반전한다는 것은 값을 1에서 0 또는 0에서 1로 변경하는 것입니다. bitset의 **N** 비트는 0에서 **N**-1 범위의 정수 값으로 인덱싱되며, 여기서 0은 첫 번째 비트 위치를 인덱싱하고 **N**-1은 최종 비트 위치를 인덱싱합니다.  
+  
+### <a name="constructors"></a>생성자  
+  
+|||  
+|-|-|  
+|[bitset](#bitset__bitset)|클래스 `bitset\<N>`의 개체를 생성하고 비트를&0;, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.|  
+  
+### <a name="typedefs"></a>Typedefs  
+  
+|||  
+|-|-|  
+|[element_type](#bitset__element_type)|데이터 형식 `bool`의 동의어이고 `bitset`에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.|  
+  
+### <a name="member-functions"></a>멤버 함수  
+  
+|||  
+|-|-|  
+|[all](#bitset__all)|이 `bitset`에 있는 모든 비트를 테스트하여 모두 `true`로 설정되었는지 여부를 확인합니다.|  
+|[any](#bitset__any)|멤버 함수는 시퀀스의 모든 비트가 1로 설정되었는지 여부를 테스트합니다.|  
+|[count](#bitset__count)|멤버 함수는 비트 시퀀스에 설정된 비트 수를 반환합니다.|  
+|[flip](#bitset__flip)|`bitset`에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.|  
+|[none](#bitset__none)|`bitset` 개체에서 1로 설정된 비트가 없는지 테스트합니다.|  
+|[reset](#bitset__reset)|`bitset`에 있는 모든 비트를 0으로 재설정하거나 지정된 위치의 비트를 0으로 재설정합니다.|  
+|[set](#bitset__set)|`bitset`에 있는 모든 비트를 1로 설정하거나 지정된 위치의 비트를 1로 설정합니다.|  
+|[size](#bitset__size)|`bitset` 개체의 비트 수를 반환합니다.|  
+|[test](#bitset__test)|`bitset`에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.|  
+|[to_string](#bitset__to_string)|`bitset` 개체를 문자열 표현으로 변환합니다.|  
+|[to_ullong](#bitset__to_ullong)|`bitset`에 있는 비트 값의 합을 `unsigned long long`로 반환합니다.|  
+|[to_ulong](#bitset__to_ulong)|`bitset` 개체를 `bitset`을 초기화하는 데 사용되는 경우 포함된 비트 시퀀스를 생성할 `unsigned long`로 변환합니다.|  
+  
+### <a name="member-classes"></a>멤버 클래스  
+  
+|||  
+|-|-|  
+|[reference](#bitset__reference)|`bitset`의 `operator[]`에 대한 도우미 클래스로서 개별 비트에 액세스하고 조작하는 데 사용되는 `bitset`에 포함된 비트를 참조하는 프록시 클래스입니다.|  
+  
+### <a name="operators"></a>연산자  
+  
+|||  
+|-|-|  
+|[operator!=](#bitset__operator_neq)|지정한 `bitset`와 다른지 알기 위해 대상 `bitset`을 테스트합니다.|  
+|[operator&=](#bitset__operator_and_eq)|논리적 `AND` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator<<](#bitset__operator_lshift)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
+|[operator<<=](#bitset__operator_lshift_eq)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
+|[operator==](#bitset__operator_eq_eq)|지정한 `bitset`와 같은지 알기 위해 대상 `bitset`을 테스트합니다.|  
+|[operator>>](#bitset__operator_rshift)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
+|[operator>>=](#bitset__operator_rshift_eq)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
+|[operator&#91;&#93;](#bitset__operator_at)|`bitset`을 수정할 수 있을 경우 `bitset`에서 지정된 위치의 비트에 대한 참조를 반환하고, 그렇지 않으면 해당 위치서 비트 값을 반환합니다.|  
+|[operator^=](#bitset__operator_xor_eq)|배타적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator&#124;=](#bitset__operator_or_eq')|포괄적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator~](#bitset__operator_dtor)|대상 `bitset`의 모든 비트를 반전하고 결과를 반환합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<bitset>  
+  
+ **네임스페이스:** std  
+  
+##  <a name="a-namebitsetalla--bitsetall"></a><a name="bitset__all"></a>  bitset::all  
+ 이 bitset의 모든 비트를 테스트하여 모두 true로 설정되었는지 확인합니다.  
+  
+```  
+bool all() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 이 집합의 모든 비트가 true이면 true를 반환합니다. 하나 이상의 비트가 false이면 **false**를 반환합니다.  
+  
+##  <a name="a-namebitsetanya--bitsetany"></a><a name="bitset__any"></a>  bitset::any  
+ 시퀀스의 모든 비트가 1로 설정되어 있는지를 테스트합니다.  
+  
+```  
+bool any() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ bitset의 비트가 1로 설정된 경우 **true**, 비트가 0인 경우 **false**입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_any.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 6 );  
+   bool b, rb;  
+  
+   cout << "The original bitset b1( 6 ) is: ( "<< b1 << " )"  
+        << endl;  
+  
+   b = b1.any ( );  
+  
+   if ( b )  
+      cout << "At least one of the bits in bitset is set to 1."  
+           << endl;  
+   else  
+      cout << "None of the bits in bitset are set to 1."  
+           << endl;  
+  
+   bitset<5> rb1;  
+   rb1 = b1.reset ( );  
+  
+   cout << "The reset bitset is: ( "<< b1 << " )"  
+        << endl;  
+  
+   rb = rb1.any ( );  
+  
+   if ( rb )  
+      cout << "At least one of the bits in the reset bitset "  
+           << "are set to 1." << endl;  
+   else  
+      cout << "None of the bits in bitset b1 are set to 1."  
+           << endl;  
+}  
+```  
+  
+```Output  
+The original bitset b1( 6 ) is: ( 00110 )  
+At least one of the bits in bitset is set to 1.  
+The reset bitset is: ( 00000 )  
+None of the bits in bitset b1 are set to 1.  
+```  
+  
+##  <a name="a-namebitsetbitseta--bitsetbitset"></a><a name="bitset__bitset"></a>  bitset::bitset  
+ 클래스 `bitset\<N>`의 개체를 생성하고 비트를&0;, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.  
+  
+```  
+bitset();
+
+bitset(
+    unsigned long long val);
+
+explicit bitset(
+    const char* _CStr);
+
+template <class CharType,   
+    class Traits,   
+    class Allocator>  
+explicit bitset(
+    const basic_string<CharType, Traits, Allocator>& str,  
+    typename basic_string<CharType, Traits, Allocator>::size_type _Pos = 0);
+
+template <class CharType,  
+    class Traits,  
+    class Allocator>  
+explicit bitset(
+    const basic_string<CharType, Traits, Allocator>& str,  
+    typename basic_string<CharType, Traits, Allocator>::size_type _Pos,  
+    typename basic_string<CharType, Traits, Allocator>::size_type count,  
+    CharType _Zero = CharType ('0'),   
+    CharType _One = CharType ('1'));
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `val`  
+ 생성 중인 bitset의 비트를 초기화하기 위해 두 개의 기본 표현이 사용되는 부호 없는 정수입니다.  
+  
+ `str`  
+ bitset 비트 값을 초기화하는 데 사용되는&0;과&1;의 문자열입니다.  
+  
+ `_CStr`  
+ bitset 비트 값을 초기화하는 데 사용되는&0;과&1;의 C 스타일 문자열입니다.  
+  
+ `_Pos`  
+ 문자열에서 문자의 위치이며,&0;에서 시작하고 왼쪽에서 오른쪽으로 계산되고 bitset의 첫 번째 비트를 초기화하는 데 사용됩니다.  
+  
+ `count`  
+ bitset의 비트에 초기 값을 제공하는 데 사용되는 문자열의 문자 수입니다.  
+  
+ `_Zero`  
+ 0을 나타내는 데 사용되는 문자입니다. 기본값은 ‘0’입니다.  
+  
+ `_One`  
+ 1을 나타내는 데 사용되는 문자입니다. 기본값은 ‘1’입니다.  
+  
+### <a name="remarks"></a>설명  
+ 세 가지 생성자를 사용하여 `bitset\<N>` 클래스의 개체를 생성할 수 있습니다.  
+  
+-   첫 번째 생성자는 매개 변수를 허용하지 않고, `bitset\<N>` 클래스의 개체를 생성하며, 모든 N 비트를 기본값&0;으로 초기화합니다.  
+  
+-   두 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하고 단일 `unsigned long long` 매개 변수를 사용하여 비트를 초기화합니다.  
+  
+-   세 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하여,&0;과&1;의 C 스타일 문자열로 제공된 문자에 해당하는 값으로 N 비트를 초기화합니다. 문자열을 `bitset<5> b5("01011");` 문자열 형식으로 전환하지 않고 생성자를 호출합니다.  
+  
+ 제공된 두 개의 생성자 템플릿이 있습니다.  
+  
+-   첫 번째 생성자 템플릿은 `bitset\<N>` 클래스의 개체를 구성하고&0;과&1;의 문자열로 제공된 문자에서 비트를 초기화합니다. 문자열에 0 또는 1이 아닌 문자가 있는 경우 생성자는 [잘못된 인수](../standard-library/invalid-argument-class.md) 클래스의 개체를 throw합니다. 지정된 위치(`_Pos`)가 문자열의 길이를 벗어나는 경우 생성자는 [out_of_range](../standard-library/out-of-range-class.md) 클래스의 개체를 throw합니다. 생성자는 `_Pos + j` 위치에 있는 문자열의 문자가 1인 bitset에서 *j* 위치에 있는 비트만 설정합니다. 기본적으로 `_Pos`는 0입니다.  
+  
+-   두 번째 생성자 템플릿은 첫 번째와 유사하지만, 초기화할 비트 수를 지정하는 데 사용되는 추가 매개 변수(`count`)를 포함합니다. 또한 `_Zero`와 `_One`이라는 두 개의 선택적 매개 변수를 가지고 있는데, 이는 `str`의 문자가 각각 0비트와 1비트를 의미하는 것으로 해석됨을 나타냅니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_bitset.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   // Using the default constructor  
+   using namespace std;  
+   bitset<2> b0;  
+   cout << "The set of bits in bitset<2> b0 is: ( "  
+        << b0 << " )." << endl;  
+  
+   // Using the second member function  
+   bitset<5> b1 ( 6 );  
+   cout << "The set of bits in bitset<5> b1( 6 ) is: ( "  
+        << b1 << " )." << endl;  
+  
+   // The template parameter N can be an expresssion  
+   bitset< 2 * sizeof ( int ) > b2;  
+   cout << "The set of bits in bitset<2 * sizeof ( int ) > b2 is: ( "  
+        << b2 << " )." << endl;  
+  
+   // The base two representation will be truncated  
+   // if its length exceeds the size of the bitset  
+   bitset<3> b3 ( 6 );  
+   cout << "The set of bits in bitset<3> b3( 6 ) is ( "  
+        << b3 << " )." << endl;  
+  
+   // Using a c-style string to initialize the bitset  
+    bitset<7> b3andahalf ( "1001001" );  
+    cout << "The set of bits in bitset<7> b3andahalf ( \"1001001\" )"  
+         << " is ( " << b3andahalf << " )." << endl;   
+  
+   // Using the fifth member function with the first parameter  
+   string bitval4 ( "10011" );  
+   bitset<5> b4 ( bitval4 );  
+   cout << "The set of bits in bitset<5> b4( bitval4 ) is ( "  
+        << b4 << " )." << endl;  
+  
+   // Only part of the string may be used for initialization  
+  
+   // Starting at position 3 for a length of 6 (100110)  
+   string bitval5 ("11110011011");  
+   bitset<6> b5 ( bitval5, 3, 6 );  
+   cout << "The set of bits in bitset<11> b5( bitval, 3, 6 ) is ( "  
+        << b5 << " )." << endl;  
+  
+   // The bits not initialized with part of the string  
+   // will default to zero  
+   bitset<11> b6 ( bitval5, 3, 5 );  
+   cout << "The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( "  
+        << b6 << " )." << endl;  
+  
+   // Starting at position 2 and continue to the end of the string  
+   bitset<9> b7 ( bitval5, 2 );  
+   cout << "The set of bits in bitset<9> b7( bitval, 2 ) is ( "  
+        << b7 << " )." << endl;  
+}  
+```  
+  
+```Output  
+The set of bits in bitset<2> b0 is: ( 00 ).  
+The set of bits in bitset<5> b1( 6 ) is: ( 00110 ).  
+The set of bits in bitset<2 * sizeof ( int ) > b2 is: ( 00000000 ).  
+The set of bits in bitset<3> b3( 6 ) is ( 110 ).  
+The set of bits in bitset<5> b4( bitval4 ) is ( 10011 ).  
+The set of bits in bitset<11> b5( bitval, 3, 6 ) is ( 100110 ).  
+The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).  
+The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
+```  
+  
+##  <a name="a-namebitsetcounta--bitsetcount"></a><a name="bitset__count"></a>  bitset::count  
+ 비트 시퀀스에 설정된 비트 수를 반환합니다.  
+  
+```  
+size_t count() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+  
+비트 시퀀스에 설정된 비트 수입니다.  
+  
+### <a name="example"></a>예제  
+  
+다음 예제에서는 bitset::count 멤버 함수를 사용하는 방법을 보여 줍니다.  
+  
+```cpp  
+// bitset_count.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+    using namespace std;  
+  
+    bitset<5> b1(4);  
+  
+    cout << "The collection of bits in the original bitset is: ( "  
+         << b1 << " )" << endl;  
+  
+    size_t i;  
+    i = b1.count();  
+    cout << "The number of bits in the bitset set to 1 is: "  
+         << i << "." << endl;  
+  
+    bitset<5> fb1;  
+    fb1 = b1.flip();  
+  
+    cout << "The collection of flipped bits in the modified bitset "  
+         << "is: ( " << b1 << " )" << endl;  
+  
+    size_t ii;  
+    ii = fb1.count();  
+    cout << "The number of bits in the bitset set to 1 is: "  
+         << ii << "." << endl;  
+}  
+```  
+  
+```Output  
+The collection of bits in the original bitset is: ( 00100 )  
+The number of bits in the bitset set to 1 is: 1.  
+The collection of flipped bits in the modified bitset is: ( 11011 )  
+The number of bits in the bitset set to 1 is: 4.  
+```  
+  
+##  <a name="a-namebitsetelementtypea--bitsetelementtype"></a><a name="bitset__element_type"></a>  bitset::element_type  
+ 데이터 형식 `bool`의 동의어이고 bitset에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.  
+  
+```  
+typedef bool element_type;  
+```  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_elem_type.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<3> b1 ( 2 );  
+   cout << "Original bitset b1(6) is: ( "<< b1 << " )"  
+        << endl;  
+  
+   //Compare two ways to reference bits in a bitset  
+   bool b;  
+   bitset<5>::element_type e;  
+  
+   b = b1.test ( 2 );  
+   if ( b )  
+      cout << "The bit at position 2 of bitset b1"  
+           << "has a value of 1." << endl;  
+   else  
+      cout << "The bit at position 2 of bitset b1"  
+           << "has a value of 0." << endl;  
+   b1[2] = 1;  
+   cout << "Bitset b1 modified by b1[2] = 1 is: ( "<< b1 << " )"  
+        << endl;  
+  
+   e = b1.test ( 2 );  
+   if ( e )  
+      cout << "The bit at position 2 of bitset b1"  
+           << "has a value of 1." << endl;  
+   else  
+      cout << "The bit at position 2 of bitset b1"  
+           << "has a value of 0." << endl;  
+}  
+```  
+  
+```Output  
+Original bitset b1(6) is: ( 010 )  
+The bit at position 2 of bitset b1has a value of 0.  
+Bitset b1 modified by b1[2] = 1 is: ( 110 )  
+The bit at position 2 of bitset b1has a value of 1.  
+```  
+  
+##  <a name="a-namebitsetflipa--bitsetflip"></a><a name="bitset__flip"></a>  bitset::flip  
+ bitset에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.  
+  
+```  
+bitset\<N>& flip();  
+bitset\<N>& flip(size_t _Pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ 값이 반전될 비트의 위치입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 멤버 함수가 호출된, 수정된 bitset의 복사본입니다.  
+  
+### <a name="remarks"></a>설명  
+ 비트가 반전된 **bitset\<***N***>**의 *N* 크기보다 매개 변수로 지정된 위치가 더 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_flip.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 6 );  
+  
+   cout << "The collection of bits in the original bitset is: ( "  
+        << b1 << " )" << endl;  
+  
+   bitset<5> fb1;  
+   fb1 = b1.flip ( );  
+  
+   cout << "After flipping all the bits, the bitset becomes: ( "  
+        << fb1 << " )" << endl;  
+  
+   bitset<5> f3b1;  
+   f3b1 = b1.flip ( 3 );  
+  
+   cout << "After flipping the fourth bit, the bitset becomes: ( "  
+        << f3b1 << " )" << endl << endl;  
+  
+   bitset<5> b2;  
+   int i;  
+   for ( i = 0 ; i <= 4 ; i++ )  
+   {  
+      b2.flip(i);  
+      cout << b2 << "  The bit flipped is in position "  
+           << i << ".\n";  
+   }  
+}  
+```  
+  
+```Output  
+The collection of bits in the original bitset is: ( 00110 )  
+After flipping all the bits, the bitset becomes: ( 11001 )  
+After flipping the fourth bit, the bitset becomes: ( 10001 )  
+  
+00001  The bit flipped is in position 0.  
+00011  The bit flipped is in position 1.  
+00111  The bit flipped is in position 2.  
+01111  The bit flipped is in position 3.  
+11111  The bit flipped is in position 4.  
+```  
+  
+##  <a name="a-namebitsetnonea--bitsetnone"></a><a name="bitset__none"></a>  bitset::none  
+ bitset 개체에서 1로 설정된 비트가 없는지 테스트합니다.  
+  
+```  
+bool none() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ bitset의 비트 중 1로 설정된 것이 없으면 **true**, 하나라도 1로 설정된 것이 있으면 **false**입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_none.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 6 );  
+   bool b, rb;  
+  
+   cout << "Original bitset b1(6) is: ( " << b1 << " )"  
+        << endl;  
+  
+   b = b1.none ( );  
+  
+   if ( b )  
+      cout << "None of the bits in bitset b1 are set to 1."  
+           << endl;  
+   else  
+      cout << "At least one of the bits in bitset b1 is set to 1."  
+           << endl;  
+  
+   bitset<5> rb1;  
+   rb1 = b1.reset ( );  
+   rb = rb1.none ( );  
+   if ( rb )  
+      cout << "None of the bits in bitset b1 are set to 1."  
+           << endl;  
+   else  
+      cout << "At least one of the bits in bitset b1 is set to 1."  
+           << endl;  
+}  
+```  
+  
+```Output  
+Original bitset b1(6) is: ( 00110 )  
+At least one of the bits in bitset b1 is set to 1.  
+None of the bits in bitset b1 are set to 1.  
+```  
+  
+##  <a name="a-namebitsetoperatorneqa--bitsetoperator"></a><a name="bitset__operator_neq"></a>  bitset::operator!=  
+ 대상 bitset가 지정된 bitset와 다른지를 테스트합니다.  
+  
+```  
+bool operator!=(const bitset\<N>& right) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `right`  
+ 대상 bitset와 다른지를 비교할 bitset입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ bitset가 다르면 **true**, 같으면 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ 멤버 연산자 함수로 다른지를 테스트하려면 두 bitset의 크기가 같아야 합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_NE.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2 ( 7 );  
+   bitset<5> b3 ( 2 );  
+   bitset<4> b4 ( 7 );  
+  
+   if ( b1 != b2 )  
+      cout << "Bitset b1 is different from bitset b2." << endl;  
+   else  
+      cout << "Bitset b1 is the same as bitset b2." << endl;  
+  
+   if ( b1 != b3 )  
+      cout << "Bitset b1 is different from bitset b3." << endl;  
+   else  
+      cout << "Bitset b1 is the same as bitset b3." << endl;  
+  
+   // This would cause an error because bitsets must have the  
+   // same size to be tested  
+   // if ( b1 != b4 )  
+   //   cout << "Bitset b1 is different from bitset b4." << endl;  
+   // else  
+   //   cout << "Bitset b1 is the same as bitset b4." << endl;  
+}  
+```  
+  
+```Output  
+Bitset b1 is the same as bitset b2.  
+Bitset b1 is different from bitset b3.  
+```  
+  
+##  <a name="a-namebitsetoperatorandeqa--bitsetoperatoramp"></a><a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
+ 논리적 **AND** 연산으로 bitset의 비트 조합을 수행합니다.  
+  
+```  
+bitset\<N>& operator&=(const bitset\<N>& right);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `right`  
+ 대상 bitset와 비트로 결합할 bitset입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 매개 변수로 지정된 bitset와 비트 **AND** 연산을 수행한 결과인 수정된 대상 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ **AND** 연산자로 결합된 두 비트는 각 비트가 참인 경우 **true**를 반환하고, 아닌 경우 **false**를 반환합니다.  
+  
+ 멤버 연산자 함수를 이용해 **AND** 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_bitwise.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2 ( 11 );  
+   bitset<4> b3 ( 7 );  
+  
+   cout << "The target bitset b1 is:    ( "<< b1 << " )." << endl;  
+   cout << "The parameter bitset b2 is: ( "<< b2 << " )." << endl;  
+   cout << endl;  
+  
+   b1 &= b2;  
+   cout << "After bitwise AND combination,\n"  
+        << " the target bitset b1 becomes:   ( "<< b1 << " )."   
+        << endl;  
+  
+   // Note that the parameter-specified bitset is unchanged  
+   cout << "The parameter bitset b2 remains: ( "<< b2 << " )."   
+        << endl;  
+  
+   // The following would cause an error because the bisets   
+   // must be of the same size to be combined  
+   // b1 &= b3;  
+}  
+```  
+  
+```Output  
+The target bitset b1 is:    ( 00111 ).  
+The parameter bitset b2 is: ( 01011 ).  
+  
+After bitwise AND combination,  
+ the target bitset b1 becomes:   ( 00011 ).  
+The parameter bitset b2 remains: ( 01011 ).  
+```  
+
+##  <a name="a-namebitsetoperatorlshifta-bitsetoperator"></a><a name="bitset__operator_lshift"></a> bitset::operator\<\<    
+  
+왼쪽의 bitset에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 bitset로 반환합니다.  
+  
+```  
+bitset\<N> operator<<(size_t _Pos) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ bitset에 있는 비트를 이동해야 할 왼쪽에 있는 위치의 수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 필요한 위치 수만큼 왼쪽으로 이동한 비트가 있는 수정된 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ 멤버 연산자 함수는 **bitset**( **\*this**) **<<= pos,**를 반환합니다. 여기서 [<<=](#bitset__operator_lshift_eq)는 bitset의 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상 bitset로 반환합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_LS.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 7 );  
+  
+   cout << "The bitset b1 is: ( "<< b1 << " )." << endl;  
+  
+   bitset<5> b2;  
+   b2 = b1 << 2;  
+  
+   cout << "After shifting the bits 2 positions to the left,\n"  
+        << " the bitset b2 is: ( "<< b2 << " )."  
+        << endl;  
+  
+   bitset<5> b3 = b2 >> 1;  
+  
+   cout << "After shifting the bits 1 position to the right,\n"  
+        << " the bitset b3 is: ( " << b3 << " )."  
+        << endl;  
+}  
+```  
+  
+##  <a name="a-namebitsetoperatorlshifteqa--bitsetoperatorltlt"></a><a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
+ bitset에 있는 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상으로 지정된 bitset로 반환합니다.  
+  
+```  
+bitset\<N>& operator<<=(size_t _Pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ bitset에 있는 비트를 이동해야 할 왼쪽에 있는 위치의 수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 필요한 위치 수만큼 비트가 왼쪽으로 이동하도록 수정된 대상 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ 위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_LSE.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 7 );  
+   cout << "The target bitset b1 is: ( "<< b1 << " )." << endl;  
+   b1 <<= 2;  
+   cout << "After shifting the bits 2 positions to the left,\n"  
+        << " the target bitset b1 becomes: ( "<< b1 << " )."   
+        << endl;  
+}  
+```  
+  
+```Output  
+The target bitset b1 is: ( 00111 ).  
+After shifting the bits 2 positions to the left,  
+ the target bitset b1 becomes: ( 11100 ).  
+```  
+  
+##  <a name="a-namebitsetoperatoreqeqa--bitsetoperator"></a><a name="bitset__operator_eq_eq"></a>  bitset::operator==  
+ 대상 bitset가 지정된 bitset와 같은지를 테스트합니다.  
+  
+```  
+bool operator==(const bitset\<N>& right) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 대상 bitset와 같은지를 비교할 bitset입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ bitset가 같으면 **true**, 다르면 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ 멤버 연산자 함수로 같은지를 테스트하려면 두 bitset의 크기가 같아야 합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_EQ.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2 ( 7 );  
+   bitset<5> b3 ( 2 );  
+   bitset<4> b4 ( 7 );  
+  
+   if ( b1 == b2 )  
+      cout << "Bitset b1 is the same as bitset b2." << endl;  
+   else  
+      cout << "Bitset b1 is different from bitset b2." << endl;  
+  
+   if ( b1 == b3 )  
+      cout << "Bitset b1 is the same as bitset b3." << endl;  
+   else  
+      cout << "Bitset b1 is different from bitset b3." << endl;  
+  
+   // This would cause an error because bitsets must have the   
+   // same size to be tested  
+   // if ( b1 == b4 )  
+   //   cout << "Bitset b1 is the same as bitset b4." << endl;  
+   // else  
+   //   cout << "Bitset b1 is different from bitset b4." << endl;  
+}  
+```  
+  
+```Output  
+Bitset b1 is the same as bitset b2.  
+Bitset b1 is different from bitset b3.  
+```  
+  
+##  <a name="a-namebitsetoperatorrshifta--bitsetoperatorgtgt"></a><a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
+ 오른쪽의 bitset에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 bitset로 반환합니다.  
+  
+```  
+bitset\<N> operator>>(size_t _Pos) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ bitset에 있는 비트를 이동해야 할 오른쪽에 있는 위치의 수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 대상 bitset를 기준으로 비트가 필요한 위치 수만큼 오른쪽으로 이동한 새 bitset입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_RS.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 7 );  
+   cout << "The bitset b1 is: ( "<< b1 << " )." << endl;  
+  
+   bitset<5> b2;  
+   b2 = b1 << 2;  
+  
+   cout << "After shifting the bits 2 positions to the left,\n"  
+        << " the bitset b2 is: ( "<< b2 << " )."  
+        << endl;  
+   bitset<5> b3 = b2 >> 1;  
+  
+   cout << "After shifting the bits 1 position to the right,\n"  
+        << " the bitset b3 is: ( " << b3 << " )."  
+        << endl;  
+}  
+```  
+  
+```Output  
+The bitset b1 is: ( 00111 ).  
+After shifting the bits 2 positions to the left,  
+ the bitset b2 is: ( 11100 ).  
+After shifting the bits 1 position to the right,  
+ the bitset b3 is: ( 01110 ).  
+```  
+  
+##  <a name="a-namebitsetoperatorrshifteqa--bitsetoperatorgtgt"></a><a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
+ bitset에 있는 비트를 지정된 위치 수만큼 오른쪽으로 이동하고 결과를 대상으로 지정된 bitset로 반환합니다.  
+  
+```  
+bitset\<N>& operator>>=(size_t _Pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ bitset에 있는 비트를 이동해야 할 오른쪽에 있는 위치의 수입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 필요한 위치 수만큼 비트가 오른쪽으로 이동하도록 수정된 대상 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ 위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_RSE.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 28 );  
+   cout << "The target bitset b1 is: ( "<< b1 << " )." << endl;  
+  
+   b1 >>= 2;  
+   cout << "After shifting the bits 2 positions to the right,\n"  
+        << " the target bitset b1 becomes: ( "<< b1 << " )."   
+        << endl;  
+}  
+```  
+  
+```Output  
+The target bitset b1 is: ( 11100 ).  
+After shifting the bits 2 positions to the right,  
+ the target bitset b1 becomes: ( 00111 ).  
+```  
+  
+##  <a name="a-namebitsetoperatorata--bitsetoperator"></a><a name="bitset__operator_at"></a>  bitset::operator[]  
+ bitset를 수정할 수 있는 경우 bitset 내 지정된 위치의 비트에 대한 참조를 반환하고, 수정할 수 없는 경우 해당 위치의 비트 값을 반환합니다.  
+  
+```  
+bool operator[](size_t _Pos) const;
+reference operator[](size_t _Pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ bitset 내에서 비트를 찾는 위치입니다.  
+  
+### <a name="remarks"></a>설명  
+빌드에서 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)을 1 또는 2로 지정하면 bitset 경계를 벗어난 요소에 액세스하려고 할 경우 실행 파일에 런타임 오류가 발생합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_REF.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bool b;  
+   bitset<5> b1 ( 6 );  
+   cout << "The initialized bitset<5> b1( 2 ) is: ( "<< b1 << " )."  
+        << endl;  
+  
+   int i;  
+   for ( i = 0 ; i <= 4 ; i++ )  
+   {  
+      b = b1[ i ];  
+      cout << "  The bit in position "  
+           << i << " is " << b << ".\n";  
+   }  
+}  
+```  
+  
+##  <a name="a-namebitsetoperatorxoreqa--bitsetoperator"></a><a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
+ 배타적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.  
+  
+```  
+bitset\<N>& operator^=(const bitset\<N>& right);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 대상 bitset와 비트로 결합할 bitset입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 매개 변수로 지정된 bitset와 배타적 비트 `OR` 연산을 수행한 결과인 수정된 대상 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ 비트 중 하나(둘 다는 아님)가 **true**인 경우 배타적 **OR** 연산자로 결합된 두 비트는 **true**를 반환합니다. 아닌 경우 **false**를 반환합니다.  
+  
+ 멤버 연산자 함수를 이용해 배타적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_bitwiseOR.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2 ( 11 );  
+   bitset<4> b3 ( 7 );  
+  
+   cout << "The target bitset b1 is:    ( "<< b1 << " )." << endl;  
+   cout << "The parameter bitset b2 is: ( "<< b2 << " )." << endl;  
+   cout << endl;  
+  
+   b1 ^= b2;  
+   cout << "After bitwise exclusive OR combination,\n"  
+        << " the target bitset b1 becomes:   ( "<< b1 << " )."   
+        << endl;  
+  
+   // Note that the parameter-specified bitset in unchanged  
+   cout << "The parameter bitset b2 remains: ( "<< b2 << " )."   
+        << endl;  
+  
+   // The following would cause an error because the bisets   
+   // must be of the same size to be combined  
+   // b1 |= b3;  
+}  
+```  
+  
+```Output  
+The target bitset b1 is:    ( 00111 ).  
+The parameter bitset b2 is: ( 01011 ).  
+  
+After bitwise exclusive OR combination,  
+ the target bitset b1 becomes:   ( 01100 ).  
+The parameter bitset b2 remains: ( 01011 ).  
+```  
+  
+##  <a name="a-namebitsetoperatororeqa--bitsetoperator124"></a><a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
+ 포괄적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.  
+  
+```  
+bitset\<N>& operator|=(const bitset\<N>& right);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ ` right`  
+ 대상 bitset와 비트로 결합할 bitset입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 매개 변수로 지정된 bitset와 포괄적 비트 `OR` 연산을 수행한 결과인 수정된 대상 bitset입니다.  
+  
+### <a name="remarks"></a>설명  
+ 비트 중 하나가 **true**인 경우 포괄적 `OR` 연산자로 결합된 두 비트는 **true**를 반환합니다. 두 비트 모두 **false**인 경우 **false**를 반환합니다.  
+  
+ 멤버 연산자 함수를 이용해 포괄적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_BIO.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2 ( 11 );  
+   bitset<4> b3 ( 7 );  
+  
+   cout << "The target bitset b1 is:    ( "<< b1 << " )." << endl;  
+   cout << "The parameter bitset b2 is: ( "<< b2 << " )." << endl;  
+   cout << endl;  
+  
+   b1 |= b2;  
+   cout << "After bitwise inclusive OR combination,\n"  
+        << " the target bitset b1 becomes:   ( "<< b1 << " )."   
+        << endl;  
+  
+   // Note that the parameter-specified bitset in unchanged  
+   cout << "The parameter bitset b2 remains: ( "<< b2 << " )."   
+        << endl;  
+  
+   // The following would cause an error because the bisets   
+   // must be of the same size to be combined  
+   // b1 |= b3;  
+}  
+```  
+  
+```Output  
+The target bitset b1 is:    ( 00111 ).  
+The parameter bitset b2 is: ( 01011 ).  
+  
+After bitwise inclusive OR combination,  
+ the target bitset b1 becomes:   ( 01111 ).  
+The parameter bitset b2 remains: ( 01011 ).  
+```  
+  
+##  <a name="a-namebitsetoperatordtora--bitsetoperator"></a><a name="bitset__operator_dtor"></a>  bitset::operator~  
+ 대상 bitset의 모든 비트를 반전하고 결과를 반환합니다.  
+  
+```  
+bitset\<N> operator~() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 대상 bitset에 대해 모든 비트가 반전된 bitset입니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_op_invert.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+#include <string>  
+#include <bitset>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 7 );  
+   bitset<5> b2;  
+   b2 = ~b1;  
+  
+   cout << "Bitset b1 is: ( "<< b1 << " )." << endl;  
+   cout << "Bitset b2 = ~b1 is: ( "<< b2 << " )." << endl;  
+  
+   // These bits could also be flipped using the flip member function  
+   bitset<5> b3;  
+   b3 = b1.flip( );  
+   cout << "Bitset b3 = b1.flip( ) is: ( "<< b2 << " )." << endl;  
+}  
+```  
+  
+```Output  
+Bitset b1 is: ( 00111 ).  
+Bitset b2 = ~b1 is: ( 11000 ).  
+Bitset b3 = b1.flip( ) is: ( 11000 ).  
+```  
+  
+##  <a name="a-namebitsetreferencea--bitsetreference"></a><a name="bitset__reference"></a>  bitset::reference  
+ bitset 클래스의 `operator[]`에 대한 도우미 클래스로서 개별 비트에 액세스하고 조작하는 데 사용되는 bitset에 포함된 비트를 참조하는 프록시 클래스입니다.  
+  
+```  
+class reference {  
+   friend class bitset\<N>;  
+public: 
+   reference& operator=(bool val);
+   reference& operator=(const reference& _Bitref);
+   bool operator~() const;
+   operator bool() const;
+   reference& flip();
+};  
+```    
+  
+### <a name="parameters"></a>매개 변수  
+ ` val`  
+ bitset의 비트에 할당할 `bool` 형식 개체의 값입니다.  
+  
+ `_Bitref`  
+ *x* bitset의 *i* 위치에 있는 비트에 대한 *x [ i ]* 형식의 참조입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 클래스 참조의 첫 번째, 두 번째 및 다섯 번째 멤버 함수에 대한 인수 위치로 지정된 bitset 내 비트에 대한 참조이며, 클래스 참조의 세 번째 및 네 번째 멤버 함수에 대한 bitset 내 수정된 비트의 값에 따라 **true** 또는 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ `reference` 클래스는 `operator[]` bitset에 대한 도우미 클래스로서만 존재합니다. 멤버 클래스는 bitset 내 개별 비트에 액세스할 수 있는 개체를 설명합니다. *b*는 `bool` 형식의 개체이고, *x* 및 *y* 개체는 **bitset\<***N***>** 형식이고, *i* 및 *j*는 그러한 개체 내 유효한 위치라고 가정하겠습니다. *x [i]* 표기법은 *x* bitset 내 *i* 위치에 있는 비트를 참조합니다. `reference` 클래스의 멤버 함수는 다음 연산을 차례로 제공합니다.  
+  
+|작업|정의|  
+|---------------|----------------|  
+|*x*[*i*] = *b*|`bool` 값 *b*를 *x* bitset 내 *i* 비트 위치에 저장합니다.|  
+|*x*[*i*] = *y*[*j*]|*y*[ *j*] 비트의 값을 *x* bitset 내 *i* 비트 위치에 저장합니다.|  
+|*b* = ~ *x*[*i*]|*x*[ *i*] 비트의 대칭 이동된 값을 `bool` *b*에 저장합니다.|  
+|*b* = *x*[*i*]|*x*[ *i*] 비트의 값을 `bool` *b*에 저장합니다.|  
+|*x*[*i*]. `flip`( )|*x*[ *i*] 비트의 대칭 이동된 값을 *x* 내 *i* 비트 위치에 다시 저장합니다.|  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_reference.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 2 );  
+   bitset<5> b2 ( 6 );  
+   cout << "The initialized bitset<5> b1( 2 ) is: ( "<< b1 << " )."  
+        << endl;  
+   cout << "The initialized bitset<5> b2( 6 ) is: ( "<< b2 << " )."  
+        << endl;  
+  
+   // Example of x [i] = b storing bool b at bit position i  
+   // in bitset x  
+   b1[ 0 ] = true;  
+   cout << "The bitset<5> b1 with the bit at position 0 set to 1"  
+        << " is: ( "<< b1 << " )" << endl;  
+  
+   // Example of x [i] = y [j] storing the bool value of the  
+   // bit at position j in bitset y at bit position i in bitset x  
+   b2 [4] = b1 [0];      // b1 [0] = true  
+   cout << "The bitset<5> b2 with the bit at position 4 set to the "  
+        << "value\n of the bit at position 0 of the bit in "  
+        << "bitset<5> b1 is: ( "<<  b2  << " )" << endl;  
+  
+   // Example of b = ~x [i] flipping the value of the bit at  
+   // position i of bitset x and storing the value in an   
+   // object b of type bool  
+   bool b = ~b2 [4];      // b2 [4] = false  
+   if ( b )  
+      cout << "The value of the object b = ~b2 [4] "  
+           << "of type bool is true." << endl;  
+   else  
+      cout << "The value of the object b = ~b2 [4] "  
+           << "of type bool is false." << endl;  
+  
+   // Example of b = x [i] storing the value of the bit at  
+   // position i of bitset x in the object b of type bool  
+   b = b2 [4];  
+   if ( b )  
+      cout << "The value of the object b = b2 [4] "  
+           << "of type bool is true." << endl;  
+   else  
+      cout << "The value of the object b = b2 [4] "  
+           << "of type bool is false." << endl;  
+  
+   // Example of x [i] . flip ( ) toggling the value of the bit at  
+   // position i of bitset x  
+   cout << "Before flipping the value of the bit at position 4 in "  
+        << "bitset b2,\n it is ( "<<  b2  << " )." << endl;  
+   b2 [4].flip( );  
+   cout << "After flipping the value of the bit at position 4 in "  
+        << "bitset b2,\n it becomes ( "<<  b2  << " )." << endl;  
+   bool c;  
+   c = b2 [4].flip( );  
+   cout << "After a second flip, the value of the position 4"  
+        << " bit in b2 is now: " << c << ".";  
+}  
+```  
+  
+```Output  
+The initialized bitset<5> b1( 2 ) is: ( 00010 ).  
+The initialized bitset<5> b2( 6 ) is: ( 00110 ).  
+The bitset<5> b1 with the bit at position 0 set to 1 is: ( 00011 )  
+The bitset<5> b2 with the bit at position 4 set to the value  
+ of the bit at position 0 of the bit in bitset<5> b1 is: ( 10110 )  
+The value of the object b = ~b2 [4] of type bool is false.  
+The value of the object b = b2 [4] of type bool is true.  
+Before flipping the value of the bit at position 4 in bitset b2,  
+ it is ( 10110 ).  
+After flipping the value of the bit at position 4 in bitset b2,  
+ it becomes ( 00110 ).  
+After a second flip, the value of the position 4 bit in b2 is now: 1.  
+```  
+  
+##  <a name="a-namebitsetreseta--bitsetreset"></a><a name="bitset__reset"></a>  bitset::reset  
+ bitset에 있는 모든 비트를 0으로 다시 설정하거나 지정된 위치의 비트를 0으로 다시 설정합니다.  
+  
+```  
+bitset\<N>& reset();  
+bitset\<N>& reset(size_t _Pos);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ 값을 0으로 다시 설정할 bitset 내 비트의 위치입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 멤버 함수가 호출된 bitset의 복사본입니다.  
+  
+### <a name="remarks"></a>설명  
+ 지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_reset.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 13 );  
+   cout << "The set of bits in bitset<5> b1(13) is: ( "<< b1 << " )"  
+        << endl;  
+  
+   bitset<5> b1r3;  
+   b1r3 = b1.reset( 2 );  
+   cout << "The collecion of bits obtained from resetting the\n"  
+        << " third bit of bitset b1 is: ( "<< b1r3 << " )"   
+        << endl;  
+  
+   bitset<5> b1r;  
+   b1r = b1.reset( );  
+   cout << "The collecion of bits obtained from resetting all\n"  
+        << " the elements of the bitset b1 is: ( "<< b1r << " )"  
+        << endl;  
+}  
+```  
+  
+```Output  
+The set of bits in bitset<5> b1(13) is: ( 01101 )  
+The collecion of bits obtained from resetting the  
+ third bit of bitset b1 is: ( 01001 )  
+The collecion of bits obtained from resetting all  
+ the elements of the bitset b1 is: ( 00000 )  
+```  
+  
+##  <a name="a-namebitsetseta--bitsetset"></a><a name="bitset__set"></a>  bitset::set  
+ bitset에 있는 모든 비트를 1로 설정하거나 지정된 위치의 비트를 1로 설정합니다.  
+  
+```   
+bitset\<N>& set();
+
+bitset\<N>& set(
+    size_t _Pos,   
+    bool val = true);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ 값을 할당하도록 설정할 bitset 내 비트의 위치입니다.  
+  
+ `val`  
+ 지정된 위치에 있는 비트에 할당할 값입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 멤버 함수가 호출된 bitset의 복사본입니다.  
+  
+### <a name="remarks"></a>설명  
+ 지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
+  
+### <a name="example"></a>예제  
+  
+```cpp  
+// bitset_set.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   bitset<5> b1 ( 6 );  
+   cout << "The set of bits in bitset<5> b1(6) is: ( "<< b1 << " )"  
+        << endl;  
+  
+   bitset<5> b1s0;  
+   b1s0 = b1.set( 0 );  
+   cout << "The collecion of bits obtained from setting the\n"  
+        << " zeroth bit of bitset b1 is: ( "<< b1s0 << " )"   
+        << endl;  
+  
+   bitset<5> bs1;  
+   bs1 = b1.set( );  
+   cout << "The collecion of bits obtained from setting all the\n"  
+        << " elements of the bitset b1 is: ( "<< bs1 << " )"  
+        << endl;  
+}  
+```  
+  
+```Output  
+The set of bits in bitset<5> b1(6) is: ( 00110 )  
+The collecion of bits obtained from setting the  
+ zeroth bit of bitset b1 is: ( 00111 )  
+The collecion of bits obtained from setting all the  
+ elements of the bitset b1 is: ( 11111 )  
+```  
+  
+##  <a name="a-namebitsetsizea--bitsetsize"></a><a name="bitset__size"></a>  bitset::size  
+ bitset 개체의 비트 수를 반환합니다.  
+  
+```  
+size_t size() const;
+```  
+  
+### <a name="return-value"></a>반환 값  
+ bitset\<N>의 비트 수 *N*입니다.  
+  
+### <a name="example"></a>예제  
+  다음 예제에서는 bitset::size 멤버 함수를 사용하는 방법을 보여 줍니다.  
+  
+```cpp  
+// bitset_size.cpp  
+// compile with: /EHsc  
+#include <bitset>  
+#include <iostream>  
+  
+int main()  
+{  
+    using namespace std;  
+  
+    bitset<5> b1(6);  
+    size_t i;  
+  
+    cout << "The set of bits in bitset<5> b1( 6 ) is: ( "<< b1 << " )"  
+         << endl;  
+  
+    i = b1.size();  
+  
+    cout << "The number of bits in bitset b1 is: " << i << "."  
+         << endl;  
+}  
+```  
+  
+```Output  
+The set of bits in bitset<5> b1( 6 ) is: ( 00110 )  
+The number of bits in bitset b1 is: 5.  
+```  
+  
+##  <a name="a-namebitsettesta--bitsettest"></a><a name="bitset__test"></a>  bitset::test  
+ bitset에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.  
+  
+```  
+bool test(size_t _Pos) const;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `_Pos`  
+ 값을 테스트할 bitset 내 비트의 위치입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 인수 위치로 지정된 비트가 1로 설정되는 경우 **true**, 아닌 경우 **false**입니다.  
+  
+### <a name="remarks"></a>설명  
+ 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md)를 throw합니다.
+
+

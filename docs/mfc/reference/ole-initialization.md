@@ -1,0 +1,79 @@
+---
+title: "OLE 초기화 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.macros.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE initialization
+ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
+caps.latest.revision: 13
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
+ms.openlocfilehash: 5c2d8a1552b8cd546b7e22683fe9f73bbc54df5c
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ole-initialization"></a>OLE 초기화
+응용 프로그램에서 OLE 시스템 서비스를 사용 하려면 먼저 계정은 OLE 시스템 Dll 초기화와 Dll은 올바른 버전 인지 확인 합니다. **AfxOleInit** 함수 OLE 시스템 Dll를 초기화 합니다.  
+  
+### <a name="ole-initialization"></a>OLE 초기화  
+  
+|||  
+|-|-|  
+|[AfxOleInit](#afxoleinit)|OLE 라이브러리를 초기화합니다.|  
+  
+##  <a name="a-nameafxoleinita--afxoleinit"></a><a name="afxoleinit"></a>AfxOleInit  
+ OLE 지원을 응용 프로그램에 대 한 초기화합니다.  
+  
+``` 
+BOOL AFXAPI AfxOleInit(); 
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 성공 하면 0이 아니고 초기화가 실패 하면 가능성이 있는 잘못 된 버전의 OLE 시스템 Dll이 설치 되어 있는 경우 0입니다.  
+  
+### <a name="remarks"></a>주의  
+ MFC 응용 프로그램에 대 한 OLE 지원을 초기화 하기 위해이 함수를 호출 합니다. 이 함수를 호출 하는 경우에 다음 작업이 수행 됩니다.  
+  
+-   호출 응용 프로그램의 현재 아파트에서 COM 라이브러리를 초기화합니다. 자세한 내용은 참조 [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)합니다.  
+  
+-   메시지 필터 개체를 구현 하는 [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) 인터페이스입니다. 이 메시지 필터를 호출 하 여 액세스할 수 [AfxOleGetMessageFilter](http://msdn.microsoft.com/library/36cca011-4775-4086-b471-5557a87b266c)합니다.  
+  
+> [!NOTE]
+>  경우 **AfxOleInit** 라고 MFC DLL은 호출이 실패 합니다. 오류 함수는 DLL에서 호출 되 면 OLE 시스템 이전에 의해 초기화 되는 호출 응용 프로그램을 가정 하기 때문에 발생 합니다.  
+  
+> [!NOTE]
+>  MFC 응용 프로그램은 단일 스레드 아파트 (STA)으로 초기화 되어야 합니다. 호출 하는 경우 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) 에 프로그램 `InitInstance` 재정의 지정 `COINIT_APARTMENTTHREADED` (대신 `COINIT_MULTITHREADED`). 자세한 내용은 참조 PRB: MFC 응용 프로그램이 다른 형식으로 다중 스레드 아파트 (828643)에서 응용 프로그램을 초기화 하는 경우 응답 하지 [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)합니다.  
+
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxdisp.h
+
+## <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+
