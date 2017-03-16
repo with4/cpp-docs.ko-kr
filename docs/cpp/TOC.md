@@ -399,7 +399,6 @@
 ## [비표준 동작](nonstandard-behavior.md)
 ### [컴파일러 한계](compiler-limits.md)
 # [C++의 진화(최신 C++)](welcome-back-to-cpp-modern-cpp.md)
-## [C++11-14-17 기능에 대한 지원(최신 C++)](support-for-cpp11-14-17-features-modern-cpp.md)
 ## [C++ 형식 시스템(최신 C++)](cpp-type-system-modern-cpp.md)
 ### [값 형식(최신 C++)](value-types-modern-cpp.md)
 ### [형식 변환 및 형식 안전성(최신 C++)](type-conversions-and-type-safety-modern-cpp.md)
