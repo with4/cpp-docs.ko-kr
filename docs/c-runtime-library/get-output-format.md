@@ -49,8 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e923c8f4dcfbf2a2392c6b70fee2c5dc423c34c6
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 23646d03e920ae187286885dbd24e1d312973048
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getoutputformat"></a>_get_output_format
@@ -83,12 +84,8 @@ unsigned int _get_output_format();
  해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
+[형식 사양 구문: printf 및 wprintf 함수](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)  
  [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [printf 형식 필드 문자](../c-runtime-library/printf-type-field-characters.md)   
- [_set_output_format](../c-runtime-library/set-output-format.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
+ [_set_output_format](../c-runtime-library/set-output-format.md)  
 
