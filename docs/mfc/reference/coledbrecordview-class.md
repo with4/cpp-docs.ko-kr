@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
+- AFXOLEDB/COleDBRecordView
+- AFXOLEDB/COleDBRecordView::COleDBRecordView
+- AFXOLEDB/COleDBRecordView::OnGetRowset
+- AFXOLEDB/COleDBRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxoledb.h  
   
-##  <a name="a-namecoledbrecordviewa--coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
  `COleDBRecordView` 개체를 생성합니다.  
   
 ```  
@@ -115,7 +119,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  파생된 클래스의 *해야* 자체 생성자를 제공 합니다. 생성자에는 생성자를 호출 `COleDBRecordView::COleDBRecordView`, 리소스 이름 또는 ID를 인수로 사용 합니다.  
   
-##  <a name="a-nameongetrowseta--coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
  에 대 한 핸들을 반환 된 **CRowset<> </> ** 레코드 보기와 연결 된 개체입니다.  
   
 ```  
@@ -137,7 +141,7 @@ virtual CRowset<>* OnGetRowset(Â) = 0;
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
   
-##  <a name="a-nameonmovea--coledbrecordviewonmove"></a><a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>COleDBRecordView::OnMove  
  해당 필드는 레코드의 컨트롤에 보기를 표시 및 행 집합에서 다른 레코드로 이동 합니다.  
   
 ```  

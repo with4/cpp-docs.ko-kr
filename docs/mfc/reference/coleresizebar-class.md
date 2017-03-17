@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
+- AFXOLE/COleResizeBar
+- AFXOLE/COleResizeBar::COleResizeBar
+- AFXOLE/COleResizeBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
  `COleResizeBar` 개체를 생성합니다.  
   
 ```  
@@ -98,7 +101,7 @@ COleResizeBar();
 ### <a name="remarks"></a>주의  
  호출 **만들기** 크기 조정 막대 개체를 만듭니다.  
   
-##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>COleResizeBar::Create  
  자식 창을 만듭니다와 연결 된 `COleResizeBar` 개체입니다.  
   
 ```  

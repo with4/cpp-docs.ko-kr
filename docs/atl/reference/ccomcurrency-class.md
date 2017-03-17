@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCurrency
-- ATL.CComCurrency
-- ATL::CComCurrency
+- ATLCUR/ATL::CComCurrency
+- ATLCUR/ATL::CComCurrency::CComCurrency
+- ATLCUR/ATL::CComCurrency::GetCurrencyPtr
+- ATLCUR/ATL::CComCurrency::GetFraction
+- ATLCUR/ATL::CComCurrency::GetInteger
+- ATLCUR/ATL::CComCurrency::Round
+- ATLCUR/ATL::CComCurrency::SetFraction
+- ATLCUR/ATL::CComCurrency::SetInteger
+- ATLCUR/ATL::CComCurrency::m_currency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +122,7 @@ class CComCurrency
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcur.h  
   
-##  <a name="a-nameccomcurrencya--ccomcurrencyccomcurrency"></a><a name="ccomcurrency"></a>CComCurrency::CComCurrency  
+##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
  생성자입니다.  
   
 ```
@@ -170,7 +177,7 @@ explicit CComCurrency(LPCSTR szSrc);
   
  부동 소수점 또는 double 값을 사용 하 여 값을 할당를 유의 **CComCurrency(10.50)** 같습니다 **CComCurrency(10,5000)** 아닌 **CComCurrency(10,50)**합니다.  
   
-##  <a name="a-namegetcurrencyptra--ccomcurrencygetcurrencyptr"></a><a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
+##  <a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
  `m_currency` 데이터 멤버의 주소를 반환합니다.  
   
 ```
@@ -180,7 +187,7 @@ CURRENCY* GetCurrencyPtr() throw();
 ### <a name="return-value"></a>반환 값  
  주소를 반환 하는 `m_currency` 데이터 멤버  
   
-##  <a name="a-namegetfractiona--ccomcurrencygetfraction"></a><a name="getfraction"></a>CComCurrency::GetFraction  
+##  <a name="getfraction"></a>CComCurrency::GetFraction  
  소수 부분이 반환 하려면이 메서드를 호출 하는 `CComCurrency` 개체입니다.  
   
 ```
@@ -196,7 +203,7 @@ SHORT GetFraction() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&50;](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]  
   
-##  <a name="a-namegetintegera--ccomcurrencygetinteger"></a><a name="getinteger"></a>CComCurrency::GetInteger  
+##  <a name="getinteger"></a>CComCurrency::GetInteger  
  정수 구성 요소를 가져오려면이 메서드를 호출 하는 `CComCurrency` 개체입니다.  
   
 ```
@@ -209,7 +216,7 @@ LONGLONG GetInteger() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&51;](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]  
   
-##  <a name="a-namemcurrencya--ccomcurrencymcurrency"></a><a name="m_currency"></a>CComCurrency::m_currency  
+##  <a name="m_currency"></a>CComCurrency::m_currency  
  **통화** 데이터 멤버입니다.  
   
 ```
@@ -219,7 +226,7 @@ CURRENCY m_currency;
 ### <a name="remarks"></a>주의  
  이 멤버에 액세스 하 고이 클래스의 메서드에 의해 조작 통화를 보유 합니다.  
   
-##  <a name="a-nameoperator-a--ccomcurrencyoperator--"></a><a name="operator_-"></a>CComCurrency::operator-  
+##  <a name="operator_-"></a>CComCurrency::operator-  
  이 연산자는 `CComCurrency` 개체에 대해 빼기를 수행하는 데 사용됩니다.  
   
 ```
@@ -237,7 +244,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&55;](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]  
   
-##  <a name="a-nameoperatorneqa--ccomcurrencyoperator-"></a><a name="operator_neq"></a>CComCurrency::operator! =  
+##  <a name="operator_neq"></a>CComCurrency::operator! =  
  이 연산자는 두 개체가 다른 지 비교합니다.  
   
 ```
@@ -254,7 +261,7 @@ bool operator!= (const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&56;](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorstara--ccomcurrencyoperator-"></a><a name="operator_star"></a>CComCurrency::operator *  
+##  <a name="operator_star"></a>CComCurrency::operator *  
  이 연산자는 `CComCurrency` 개체에 대해 곱하기를 수행하는 데 사용됩니다.  
   
 ```
@@ -275,7 +282,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&57;](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorstareqa--ccomcurrencyoperator-"></a><a name="operator_star_eq"></a>CComCurrency::operator * =  
+##  <a name="operator_star_eq"></a>CComCurrency::operator * =  
  이 연산자는 `CComCurrency` 개체에 대해 곱하기를 수행하고 결과를 할당하는 데 사용됩니다.  
   
 ```
@@ -296,7 +303,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&58;](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatordiva--ccomcurrencyoperator-"></a><a name="operator_div"></a>CComCurrency::operator /  
+##  <a name="operator_div"></a>CComCurrency::operator /  
  이 연산자는 `CComCurrency` 개체에 대해 나누기를 수행하는 데 사용됩니다.  
   
 ```
@@ -313,7 +320,7 @@ CComCurrency operator/(long nOperand) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&59;](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatordiveqa--ccomcurrencyoperator-"></a><a name="operator_div_eq"></a>CComCurrency::operator / =  
+##  <a name="operator_div_eq"></a>CComCurrency::operator / =  
  이 연산자는 `CComCurrency` 개체에 대해 나누기를 수행하고 결과를 할당하는 데 사용됩니다.  
   
 ```
@@ -330,7 +337,7 @@ const CComCurrency& operator/= (long nOperand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&60;](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatoradda--ccomcurrencyoperator-"></a><a name="operator_add"></a>CComCurrency::operator +  
+##  <a name="operator_add"></a>CComCurrency::operator +  
  이 연산자는 `CComCurrency` 개체에 대해 더하기를 수행하는 데 사용됩니다.  
   
 ```
@@ -347,7 +354,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&61;](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--ccomcurrencyoperator-"></a><a name="operator_add_eq"></a>CComCurrency::operator + =  
+##  <a name="operator_add_eq"></a>CComCurrency::operator + =  
  이 연산자는 `CComCurrency` 개체에 대해 더하기를 수행하고 결과를 현재 개체에 할당하는 데 사용됩니다.  
   
 ```
@@ -364,7 +371,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&62;](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]  
   
-##  <a name="a-nameoperatorlta--ccomcurrencyoperator-lt"></a><a name="operator_lt"></a>CComCurrency::operator&lt;  
+##  <a name="operator_lt"></a>CComCurrency::operator&lt;  
  이 연산자는 두 `CComCurrency` 개체를 비교하여 더 작은 값을 확인합니다.  
   
 ```
@@ -381,7 +388,7 @@ bool operator<(const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&63;](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]  
   
-##  <a name="a-nameoperatorlteqa--ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
  이 연산자는 두 `CComCurrency` 개체를 비교하여 더 작거나 같은 값을 확인합니다.  
   
 ```
@@ -398,7 +405,7 @@ bool operator<= (const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&64;](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]  
   
-##  <a name="a-nameoperatoreqa--ccomcurrencyoperator-"></a><a name="operator_eq"></a>CComCurrency::operator =  
+##  <a name="operator_eq"></a>CComCurrency::operator =  
  다음 연산자는 `CComCurrency` 개체에 새 값을 할당합니다.  
   
 ```
@@ -431,7 +438,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&65;](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]  
   
-##  <a name="a-nameoperator-eqa--ccomcurrencyoperator--"></a><a name="operator_-_eq"></a>-= CComCurrency::operator  
+##  <a name="operator_-_eq"></a>-= CComCurrency::operator  
  이 연산자는 `CComCurrency` 개체에 대해 빼기를 수행하고 결과를 할당하는 데 사용됩니다.  
   
 ```
@@ -448,7 +455,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&66;](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a>CComCurrency::operator = =  
+##  <a name="operator_eq_eq"></a>CComCurrency::operator = =  
  이 연산자는 두 `CComCurrency` 개체가 같은지 비교합니다.  
   
 ```
@@ -465,7 +472,7 @@ bool operator== (const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&67;](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]  
   
-##  <a name="a-nameoperatorgta--ccomcurrencyoperator-gt"></a><a name="operator_gt"></a>CComCurrency::operator&gt;  
+##  <a name="operator_gt"></a>CComCurrency::operator&gt;  
  이 연산자는 두 `CComCurrency` 개체를 비교하여 더 큰 값을 확인합니다.  
   
 ```
@@ -482,7 +489,7 @@ bool operator>(const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&68;](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]  
   
-##  <a name="a-nameoperatorgteqa--ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
  이 연산자는 두 `CComCurrency` 개체를 비교하여 더 크거나 같은 값을 확인합니다.  
   
 ```
@@ -499,7 +506,7 @@ bool operator>= (const CComCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&69;](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]  
   
-##  <a name="a-nameoperatorcurrencya--ccomcurrencyoperator-currency"></a><a name="operator_currency"></a>CComCurrency::operator 통화  
+##  <a name="operator_currency"></a>CComCurrency::operator 통화  
  이러한 연산자는 캐스팅 하는 데 사용 되는 `CComCurrency` 개체는 **통화** 데이터 형식입니다.  
   
 ```  
@@ -513,7 +520,7 @@ operator const CURRENCY&() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&70;](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]  
   
-##  <a name="a-namerounda--ccomcurrencyround"></a><a name="round"></a>CComCurrency::Round  
+##  <a name="round"></a>CComCurrency::Round  
  통화를 지정 된 소수 자릿수로 반올림 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -530,7 +537,7 @@ HRESULT Roundint nDecimals);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&52;](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]  
   
-##  <a name="a-namesetfractiona--ccomcurrencysetfraction"></a><a name="setfraction"></a>CComCurrency::SetFraction  
+##  <a name="setfraction"></a>CComCurrency::SetFraction  
  `CComCurrency` 개체의 소수 부분을 설정하려면 이 메서드를 호출합니다.  
   
 ```
@@ -547,7 +554,7 @@ HRESULT SetFraction(SHORT nFraction);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&53;](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]  
   
-##  <a name="a-namesetintegera--ccomcurrencysetinteger"></a><a name="setinteger"></a>CComCurrency::SetInteger  
+##  <a name="setinteger"></a>CComCurrency::SetInteger  
  `CComCurrency` 개체의 정수 부분을 설정하려면 이 메서드를 호출합니다.  
   
 ```

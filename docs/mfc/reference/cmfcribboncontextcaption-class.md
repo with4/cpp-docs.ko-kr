@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetColor
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetRightTabX
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +79,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonBar.h  
   
-##  <a name="a-namegetcolora--cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
  캡션의 배경색을 반환 합니다.  
   
 ```  
@@ -105,7 +108,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>주의  
  호출 하 여의 캡션 색을 설정할 수 있습니다 [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) 또는 [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)합니다.  
   
-##  <a name="a-namegetrighttabxa--cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
  범주의 리본 탭의 오른쪽 가장자리의 위치를 검색합니다.  
   
 ```  

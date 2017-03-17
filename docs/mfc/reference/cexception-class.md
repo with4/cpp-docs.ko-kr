@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CException
+- AFX/CException
+- AFX/CException::CException
+- AFX/CException::Delete
+- AFX/CException::ReportError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +117,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecexceptiona--cexceptioncexception"></a><a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>CException::CException  
  이 멤버 함수를 생성 한 `CException` 개체입니다.  
   
 ```  
@@ -127,7 +131,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>주의  
  되지 일반적으로이 생성자를 직접 호출 해야 합니다. 인스턴스를 만들어야 한다는 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식을 throw 하 합니다. 이 설명서는 완전성을 위해서만 제공 됩니다.  
   
-##  <a name="a-namedeletea--cexceptiondelete"></a><a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>CException::Delete  
  확인 하는 경우는이 함수는 **CException** 힙에서 개체가 만들어진 하 고 그럴 경우 호출 하는 **삭제** 개체에 연산자.  
   
 ```  
@@ -191,7 +195,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="a-namereporterrora--cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>CException::ReportError  
  사용자에 게 메시지 상자에 보고서 오류 텍스트에이 멤버 함수를 호출 합니다.  
   
 ```  

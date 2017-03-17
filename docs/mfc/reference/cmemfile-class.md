@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMemFile
+- AFX/CMemFile
+- AFX/CMemFile::CMemFile
+- AFX/CMemFile::Attach
+- AFX/CMemFile::Detach
+- AFX/CMemFile::Alloc
+- AFX/CMemFile::Free
+- AFX/CMemFile::GrowFile
+- AFX/CMemFile::Memcpy
+- AFX/CMemFile::Realloc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMemFile : public CFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namealloca--cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>CMemFile::Alloc  
  이 함수를 호출 하 `CMemFile` 멤버 함수입니다.  
   
 ```  
@@ -121,7 +130,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  런타임 라이브러리 함수를 사용 하는 기본 구현은 [malloc](../../c-runtime-library/reference/malloc.md) 메모리를 할당 합니다.  
   
-##  <a name="a-nameattacha--cmemfileattach"></a><a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>CMemFile::Attach  
  메모리 블록을 연결 하려면이 함수를 호출 `CMemFile`합니다.  
   
 ```  
@@ -150,7 +159,7 @@ void Attach(
   
  경우 `nGrowBytes` 0 보다 크면 `CMemFile` 부착 된 메모리 블록의 내용을 무시 합니다. 메모리 파일의 내용을 사용 하 여 스크래치에서 작성 해야 하는 것은 `CMemFile` 의 재정의 `CFile::Write`합니다. 파일의 끝을 지나서 작성 하거나 호출 하 여 파일을 확장 하려는 경우는 `CMemFile` 의 재정의 `CFile::SetLength`, `CMemFile` 메모리 할당 단위로 늘어납니다 `nGrowBytes`합니다. 메모리 블록에 전달 하는 경우에 실패 합니다 메모리 할당을 증가 하 고 **연결** 와 호환 되는 메서드를 사용 하 여 할당 되지 않은 [Alloc](#alloc)합니다. 기본 구현은와 호환 되도록 `Alloc`, 런타임 라이브러리 함수를 사용 하 여 메모리를 할당 해야 [malloc](../../c-runtime-library/reference/malloc.md) 또는 [calloc](../../c-runtime-library/reference/calloc.md)합니다.  
   
-##  <a name="a-namecmemfilea--cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>CMemFile::CMemFile  
  첫 번째 오버 로드는 빈 메모리 파일을 엽니다.  
   
 ```  
@@ -181,7 +190,7 @@ CMemFile(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&36;](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="a-namedetacha--cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>CMemFile::Detach  
  사용 중인 메모리 블록에 대 한 포인터를 가져오려면이 함수를 호출 `CMemFile`합니다.  
   
 ```  
@@ -194,7 +203,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>주의  
  이 함수를 닫습니다. 또한 호출의 `CMemFile`합니다. 메모리 블록을 다시 연결할 수 있습니다 `CMemFile` 를 호출 하 여 [연결](#attach)합니다. 파일을 다시 연결 하 고 그 안에 데이터를 사용 하려는 경우를 호출 해야 [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) 호출 하기 전에 파일의 길이를 가져오는 **분리**합니다. 메모리 블록을 연결 하는 경우 사용자에 게 유의 `CMemFile` 해당 데이터를 사용할 수 있도록 ( `nGrowBytes` = = 0), 메모리 파일이 증가할 수 없습니다.  
   
-##  <a name="a-namefreea--cmemfilefree"></a><a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>CMemFile::Free  
  이 함수를 호출 하 `CMemFile` 멤버 함수입니다.  
   
 ```  
@@ -208,7 +217,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>주의  
  사용자 지정 메모리 할당 해제를 구현 하려면이 함수를 재정의 합니다. 이 함수를 재정의 하는 경우 싶을 것 재정의할 [Alloc](#alloc) 및 [Realloc](#realloc) 도 합니다.  
   
-##  <a name="a-namegrowfilea--cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>CMemFile::GrowFile  
  몇 가지에 의해 호출 되는이 함수는 `CMemFile` 멤버 함수입니다.  
   
 ```  
@@ -222,7 +231,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>주의  
  변경 하려는 경우에 재정의할 수 방법을 `CMemFile` 의 파일 증가 합니다. 기본 구현 호출 하 여 [Realloc](#realloc) 기존 블록을 증가 (또는 [Alloc](#alloc) 메모리 블록을 만듭니다)의 배수로 메모리를 할당 하는 `nGrowBytes` 생성자에 지정 된 값 또는 [연결](#attach) 호출 합니다.  
   
-##  <a name="a-namememcpya--cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>CMemFile::Memcpy  
  이 함수를 호출 하는 `CMemFile` 의 재정의 [CFile::Read](../../mfc/reference/cfile-class.md#read) 및 [CFile::Write](../../mfc/reference/cfile-class.md#write) 하 고 메모리 파일에서 데이터를 전송 합니다.  
   
 ```  
@@ -248,7 +257,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>주의  
  방법을 변경 하려는 경우이 함수를 재정의 하는 `CMemFile` 이러한 메모리 복사본 않습니다.  
   
-##  <a name="a-namerealloca--cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>CMemFile::Realloc  
  이 함수를 호출 하 `CMemFile` 멤버 함수입니다.  
   
 ```  

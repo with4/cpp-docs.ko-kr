@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
-- ATL.CComMultiThreadModel
-- ATL::CComMultiThreadModel
+- ATLBASE/ATL::CComMultiThreadModel
+- ATLBASE/ATL::CComMultiThreadModel::AutoCriticalSection
+- ATLBASE/ATL::CComMultiThreadModel::CriticalSection
+- ATLBASE/ATL::CComMultiThreadModel::ThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModel::Decrement
+- ATLBASE/ATL::CComMultiThreadModel::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CComMultiThreadModel
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccommultithreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
  사용 하는 경우 `CComMultiThreadModel`, `typedef` 이름 `AutoCriticalSection` 클래스를 참조 [CComAutoCriticalSection](ccomautocriticalsection-class.md), 얻는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 하는 합니다.  
   
 ```
@@ -148,7 +152,7 @@ private:
 |`InternalAddRef`|증가값이 스레드로부터 안전 하지 않습니다.|증가값은 스레드로부터 안전 합니다.|  
 |`Lock`|없습니다. 중요 한 구역이 잠글 수 없기 때문입니다.|없습니다. 중요 한 구역이 잠글 수 없기 때문입니다.|  
   
-##  <a name="a-namecriticalsectiona--ccommultithreadmodelcriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
  사용 하는 경우 `CComMultiThreadModel`, `typedef` 이름 `CriticalSection` 클래스를 참조 [클래스](ccomcriticalsection-class.md), 얻는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 하는 합니다.  
   
 ```
@@ -169,7 +173,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>예제  
  참조 [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)합니다.  
   
-##  <a name="a-namedecrementa--ccommultithreadmodeldecrement"></a><a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
  Win32 함수를 호출 하는이 정적 함수 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)를 가리키는 변수의 값을 감소 시킵니다 `p`합니다.  
   
 ```
@@ -186,7 +190,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>주의  
  **InterlockedDecrement** 둘 이상의 스레드가 동시에이 변수를 사용 하는 것을 방지 합니다.  
   
-##  <a name="a-nameincrementa--ccommultithreadmodelincrement"></a><a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>CComMultiThreadModel::Increment  
  Win32 함수를 호출 하는이 정적 함수 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)를 가리키는 변수의 값이 증가 `p`합니다.  
   
 ```
@@ -203,7 +207,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>주의  
  **InterlockedIncrement** 둘 이상의 스레드가 동시에이 변수를 사용 하는 것을 방지 합니다.  
   
-##  <a name="a-namethreadmodelnocsa--ccommultithreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
  사용 하는 경우 `CComMultiThreadModel`, `typedef` 이름 `ThreadModelNoCS` 클래스를 참조 [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)합니다.  
   
 ```

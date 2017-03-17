@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
-- ATL::IDispEventSimpleImpl
-- ATL.IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl::Advise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventAdvise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventUnadvise
+- ATLCOM/ATL::IDispEventSimpleImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventSimpleImpl::Invoke
+- ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +120,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameadvisea--idispeventsimpleimpladvise"></a><a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
  이 메서드를 나타내는 이벤트 소스와 연결을 설정 *펑크*합니다.  
   
 ```
@@ -135,7 +142,7 @@ HRESULT Advise(IUnknown* pUnk);
   
  `Advise`연결 기준으로 개체의 기본 이벤트 원본의 IID를 가져옵니다 기본 이벤트 소스와 [AtlGetObjectSourceInterface](http://msdn.microsoft.com/library/a8528f45-fbfb-4e24-ad1a-1d69b2897155)합니다.  
   
-##  <a name="a-namedispeventadvisea--idispeventsimpleimpldispeventadvise"></a><a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
+##  <a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
  이 메서드를 나타내는 이벤트 소스와 연결을 설정 *펑크*합니다.  
   
 ```
@@ -160,7 +167,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`에 지정 된 이벤트 소스와 연결을 설정 `pdiid`합니다.  
   
-##  <a name="a-namedispeventunadvisea--idispeventsimpleimpldispeventunadvise"></a><a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
  가 나타내는 이벤트 소스와 연결을 끊는 *펑크*합니다.  
   
 ```
@@ -185,7 +192,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`에 지정 된 이벤트 소스와 설정 된 연결이 `pdiid`합니다.  
   
-##  <a name="a-namegetidsofnamesa--idispeventsimpleimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
  이 구현 **IDispatch::GetIDsOfNames** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -200,7 +207,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettypeinfoa--idispeventsimpleimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  이 구현 **IDispatch::GetTypeInfo** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -213,7 +220,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettypeinfocounta--idispeventsimpleimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  이 구현 **IDispatch::GetTypeInfoCount** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -223,7 +230,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinvokea--idispeventsimpleimplinvoke"></a><a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  이 구현 **idispatch:: Invoke** 이벤트 처리기 나열 이벤트 싱크 맵 호출 합니다.  
   
 ```
@@ -241,7 +248,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>주의  
  참조 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
   
-##  <a name="a-nameunadvisea--idispeventsimpleimplunadvise"></a><a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
  가 나타내는 이벤트 소스와 연결을 끊는 *펑크*합니다.  
   
 ```

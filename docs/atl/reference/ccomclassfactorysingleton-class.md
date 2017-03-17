@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactorySingleton
-- ATL.CComClassFactorySingleton<T>
-- ATL::CComClassFactorySingleton
-- ATL::CComClassFactorySingleton<T>
 - CComClassFactorySingleton
+- ATLCOM/ATL::CComClassFactorySingleton
+- ATLCOM/ATL::CComClassFactorySingleton::CreateInstance
+- ATLCOM/ATL::CComClassFactorySingleton::m_spObj
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +94,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorysingletoncreateinstance"></a><a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
  호출 `QueryInterface` 통해 [m_spObj](#m_spobj) 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -115,7 +114,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namemspobja--ccomclassfactorysingletonmspobj"></a><a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
+##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
  [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 하 여 생성 된 개체 `CComClassFactorySingleton`합니다.  
   
 ```

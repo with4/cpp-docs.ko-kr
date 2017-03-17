@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  연결 하려면이 메서드를 호출 하는 `CHandle` 개체 기존 핸들입니다.  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>주의  
  할당은 `CHandle` 개체는 `h` 처리 합니다. 디버그 빌드에서 ATLASSERT 발생 합니다 `h` 은 NULL입니다. 다른 검사가 핸들의 유효성이 수행 되지 않습니다.  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  생성자입니다.  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>주의  
  새로 만듭니다 `CHandle` 필요에 따라 기존 핸들을 사용 하 여 개체 또는 `CHandle` 개체입니다.  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>CHandle:: ~ CHandle  
  소멸자입니다.  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>주의  
  해제는 `CHandle` 개체를 호출 하 여 [CHandle::Close](#close)합니다.  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  닫으려면이 메서드를 호출 하는 `CHandle` 개체입니다.  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>주의  
  열려 있는 개체 핸들을 닫습니다. 핸들이 NULL 인 경우 될 경우 **닫기** 가 이미 호출 된 ATLASSERT 발생 합니다 디버그 빌드에 있습니다.  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  핸들을 분리 하려면이 메서드를 호출 하는 `CHandle` 개체입니다.  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>주의  
  핸들의 소유권을 해제합니다.  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  핸들을 저장 하는 멤버 변수입니다.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  대입 연산자입니다.  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>주의  
  하는 경우는 `CHandle` 개체에 대 한 핸들을 현재 포함, 닫힙니다. `CHandle` 개체에 전달 되는 핸들 대 한 참조를 NULL로 설정 합니다. 이렇게 하면 두 개의 `CHandle` 같은 활성 핸들이 포함 되지 않는 개체입니다.  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator 핸들  
+##  <a name="operator_handle"></a>CHandle::operator 핸들  
  저장 된 핸들의 값을 반환합니다.  
   
 ```  

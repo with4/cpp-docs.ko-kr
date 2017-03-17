@@ -10,8 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
-- CMDITabInfo.CMDITabInfo
-- CMDITabInfo::CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo::Serialize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bAutoColor
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bDocumentMenu
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bEnableTabSwap
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bFlatFrame
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCloseButton
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCustomTooltips
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabIcons
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_nTabBorderSize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_style
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_tabLocation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +105,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmdiclientareawnd.h  
   
-##  <a name="a-namembactivetabclosebuttona--cmditabinfombactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
  지정 여부는 **닫기** 단추가 활성 탭의 레이블에 표시 됩니다.  
   
 ```  
@@ -105,7 +115,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 활성 탭의 표시 될는 **닫기** 단추입니다. **닫기** 단추 탭 영역의 오른쪽 위 모서리에서 제거 됩니다. 활성 탭의 레이블이 표시 되지 것입니다 그렇지는 **닫기** 단추입니다. **닫기** 단추 탭 영역의 오른쪽 위 모서리에 표시 됩니다.  
   
-##  <a name="a-namembautocolora--cmditabinfombautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
  각 MDI 탭에는 자체 색 있는지 여부를 지정 합니다.  
   
 ```  
@@ -115,7 +125,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 각 탭에는 고유한 색이 됩니다. 색 집합은 MFC 라이브러리에서 관리 됩니다. 그렇지 않으면 탭 흰색으로 표시 됩니다. 기본값은 `FALSE`입니다.  
   
-##  <a name="a-namembdocumentmenua--cmditabinfombdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
  각 탭의 열린된 문서 탭 영역의 오른쪽 가장자리에 목록이 표시 되는 팝업 메뉴를 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -125,7 +135,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 각 탭 windows 탭 영역의 오른쪽 가장자리에 연 문서 목록을 보여 주는 팝업 메뉴가 표시 됩니다. 그렇지 않으면 탭 창 탭 영역의 오른쪽 모서리에 있는 스크롤 단추를 표시합니다. 기본값은 `FALSE`입니다.  
   
-##  <a name="a-namembenabletabswapa--cmditabinfombenabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
  사용자 탭의 위치를 끌어 교환할 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -135,14 +145,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 사용자는 탭을 끌어 탭 위치를 변경할 수 있습니다. 그렇지 않으면 사용자 탭 위치를 변경할 수 없습니다. 기본값은 `TRUE`입니다.  
   
-##  <a name="a-namembflatframea--cmditabinfombflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
  각 탭 창 프레임을 평면에 있는지 여부를 지정 합니다.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="a-namembtabclosebuttona--cmditabinfombtabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
  각 탭 창에 표시 되는지 여부를 지정 된 **닫기** 단추입니다.  
   
 ```  
@@ -152,7 +162,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 각 탭 창에 표시는 **닫기** 탭의 오른쪽 가장자리에 단추입니다. 그렇지 않은 경우는 **닫기** 단추가 표시 되지 않습니다. 기본값은 `TRUE`입니다.  
   
-##  <a name="a-namembtabcustomtooltipsa--cmditabinfombtabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
  탭에 도구 설명을 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -162,7 +172,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 응용 프로그램은 보냅니다는 `AFX_WM_ON_GET_TAB_TOOLTIP` 주 프레임에는 메시지입니다. 사용 하 여이 메시지를 처리할 수는 `ON_REGISTERED_MESSAGE` 매크로입니다.  
   
-##  <a name="a-namembtabiconsa--cmditabinfombtabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
  MDI 탭에 아이콘을 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -172,7 +182,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>주의  
  경우 `TRUE`, 아이콘은 각 MDI 탭에 표시 됩니다. 그렇지 않은 경우 아이콘이 탭에 표시 되지 않습니다. 기본값은 `FALSE`입니다.  
   
-##  <a name="a-namemntabbordersizea--cmditabinfomntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
  각 탭 창을 픽셀 단위로 테두리 크기를 지정합니다.  
   
 ```  
@@ -182,7 +192,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>주의  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) 기본 값을 반환 합니다.  
   
-##  <a name="a-namemstylea--cmditabinfomstyle"></a><a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>CMDITabInfo::m_style  
  탭 레이블 스타일을 지정합니다.  
   
 ```  
@@ -210,7 +220,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Round 탭 레이블이 지정 된&3;D 스타일입니다.  
   
-##  <a name="a-namemtablocationa--cmditabinfomtablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
  탭 레이블이 위쪽 또는 페이지의 아래에 있는지 여부를 지정 합니다.  
   
 ```  
@@ -224,7 +234,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   페이지의 맨 위에 LOCATION_TOP: 탭 레이블  
   
-##  <a name="a-nameserializea--cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>CMDITabInfo::Serialize  
  읽거나을 보관 또는 보관 파일에서이 개체를 씁니다.  
   
 ```  

@@ -10,6 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::ActivatePopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::AlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::AreAllCommandsShown
+- AFXPOPUPMENU/CMFCPopupMenu::CheckArea
+- AFXPOPUPMENU/CMFCPopupMenu::CloseMenu
+- AFXPOPUPMENU/CMFCPopupMenu::Create
+- AFXPOPUPMENU/CMFCPopupMenu::DefaultMouseClickOnClose
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuLogo
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::EnableResize
+- AFXPOPUPMENU/CMFCPopupMenu::EnableScrolling
+- AFXPOPUPMENU/CMFCPopupMenu::EnableVertResize
+- AFXPOPUPMENU/CMFCPopupMenu::FindSubItemByCommand
+- AFXPOPUPMENU/CMFCPopupMenu::GetActiveMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::GetDropDirection
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::GetHMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItem
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItemCount
+- AFXPOPUPMENU/CMFCPopupMenu::GetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentArea
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentButton
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentToolBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::GetSelItem
+- AFXPOPUPMENU/CMFCPopupMenu::HasBeenResized
+- AFXPOPUPMENU/CMFCPopupMenu::HideRarelyUsedCommands
+- AFXPOPUPMENU/CMFCPopupMenu::InCommand
+- AFXPOPUPMENU/CMFCPopupMenu::InsertItem
+- AFXPOPUPMENU/CMFCPopupMenu::InsertSeparator
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::IsCustomizePane
+- AFXPOPUPMENU/CMFCPopupMenu::IsEscClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsIdle
+- AFXPOPUPMENU/CMFCPopupMenu::IsMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::IsQuickCustomize
+- AFXPOPUPMENU/CMFCPopupMenu::IsResizeble
+- AFXPOPUPMENU/CMFCPopupMenu::IsRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::IsScrollable
+- AFXPOPUPMENU/CMFCPopupMenu::IsSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::IsShown
+- AFXPOPUPMENU/CMFCPopupMenu::MoveTo
+- AFXPOPUPMENU/CMFCPopupMenu::OnCmdMsg
+- AFXPOPUPMENU/CMFCPopupMenu::PostCommand
+- AFXPOPUPMENU/CMFCPopupMenu::PreTranslateMessage
+- AFXPOPUPMENU/CMFCPopupMenu::RecalcLayout
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveAllItems
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveItem
+- AFXPOPUPMENU/CMFCPopupMenu::SaveState
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::SetAutoDestroy
+- AFXPOPUPMENU/CMFCPopupMenu::SetDefaultItem
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::SetMaxWidth
+- AFXPOPUPMENU/CMFCPopupMenu::SetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::SetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickMode
+- AFXPOPUPMENU/CMFCPopupMenu::SetRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::SetSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::ShowAllCommands
+- AFXPOPUPMENU/CMFCPopupMenu::TriggerResize
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateAllShadows
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateShadow
+- AFXPOPUPMENU/CMFCPopupMenu::CreateTearOffBar
+- AFXPOPUPMENU/CMFCPopupMenu::OnChangeHot
+- AFXPOPUPMENU/CMFCPopupMenu::OnChooseItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +244,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpopupmenu.h  
   
-##  <a name="a-nameactivatepopupmenua--cmfcpopupmenuactivatepopupmenu"></a><a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
+##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -183,7 +261,7 @@ static BOOL __stdcall ActivatePopupMenu(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namealwaysshowemptytoolsentrya--cmfcpopupmenualwaysshowemptytoolsentry"></a><a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
+##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
  사용자 정의 형식에 대 한 빈 항목을 표시 하는 팝업 메뉴를 사용할 수 있는지 여부를 설정 합니다.  
   
 ```  
@@ -194,7 +272,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
  [in] `bShow`  
  `TRUE`팝업 메뉴; 빈 항목을 표시할 수 있으면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameareallcommandsshowna--cmfcpopupmenuareallcommandsshown"></a><a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
+##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +283,7 @@ BOOL AreAllCommandsShown() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecheckareaa--cmfcpopupmenucheckarea"></a><a name="checkarea"></a>CMFCPopupMenu::CheckArea  
+##  <a name="checkarea"></a>CMFCPopupMenu::CheckArea  
  팝업 메뉴를 기준으로 지점의 위치를 결정합니다.  
   
 ```  
@@ -234,7 +312,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   메뉴- `ptScreen` 명령을 끝났습니다.  
   
-##  <a name="a-nameclosemenua--cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
+##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -246,7 +324,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecmfcpopupmenua--cmfcpopupmenucmfcpopupmenu"></a><a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
  생성 된 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다.  
   
 ```  
@@ -265,7 +343,7 @@ CMFCPopupMenu(
 ### <a name="remarks"></a>주의  
  에 대 한 리소스를 할당 하는이 메서드는 `CMFCPopupMenu`합니다. 팝업 메뉴 항목을 만들려면 호출 [CMFCPopupMenu::Create](#create)합니다.  
   
-##  <a name="a-namecreatea--cmfcpopupmenucreate"></a><a name="create"></a>CMFCPopupMenu::Create  
+##  <a name="create"></a>CMFCPopupMenu::Create  
  팝업 메뉴를 만들고 연결 하는 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다.  
   
 ```  
@@ -308,7 +386,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CustomPages #&1;](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatetearoffbara--cmfcpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -327,7 +405,7 @@ virtual CPane* CreateTearOffBar(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedefaultmouseclickonclosea--cmfcpopupmenudefaultmouseclickonclose"></a><a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
+##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -338,7 +416,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablemenulogoa--cmfcpopupmenuenablemenulogo"></a><a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
+##  <a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
  팝업 메뉴에 대 한 로고를 초기화합니다.  
   
 ```  
@@ -359,7 +437,7 @@ void EnableMenuLogo(
   
  가능한 값은 `nLogoLocation` MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP, 및 MENU_LOGO_BOTTOM 됩니다.  
   
-##  <a name="a-nameenablemenusounda--cmfcpopupmenuenablemenusound"></a><a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
+##  <a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
  메뉴 소리를 수 있습니다.  
   
 ```  
@@ -373,7 +451,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>주의  
  프레임 워크를 호출 하는 소리를 사용 하도록 설정 된 [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) 메서드를 사용자가 팝업 메뉴를 열거나 메뉴 명령을 선택할 때. 기본적으로이 기능이 설정 되어 있습니다.  
   
-##  <a name="a-nameenableresizea--cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::EnableResize  
+##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -385,7 +463,7 @@ void EnableResize(CSize sizeMinResize);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablescrollinga--cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
+##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -397,7 +475,7 @@ void EnableScrolling(BOOL = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablevertresizea--cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
+##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -409,7 +487,7 @@ void EnableVertResize(int nMinResize);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namefindsubitembycommanda--cmfcpopupmenufindsubitembycommand"></a><a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -423,7 +501,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetactivemenua--cmfcpopupmenugetactivemenu"></a><a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
+##  <a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
  현재 활성 메뉴를 반환합니다.  
   
 ```  
@@ -436,7 +514,7 @@ static CMFCPopupMenu* GetActiveMenu();
 ### <a name="remarks"></a>주의  
  각 응용 프로그램에는 최대 하나의 활성 팝업 메뉴가 있을 수 있습니다.  
   
-##  <a name="a-namegetanimationspeeda--cmfcpopupmenugetanimationspeed"></a><a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
  팝업 메뉴에 대 한 애니메이션 속도 반환합니다.  
   
 ```  
@@ -449,7 +527,7 @@ static UINT GetAnimationSpeed();
 ### <a name="remarks"></a>주의  
  애니메이션 속도 전역 값입니다. 사용 하 여 [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) 팝업 메뉴에 대 한 애니메이션 속도 변경 합니다.  
   
-##  <a name="a-namegetanimationtypea--cmfcpopupmenugetanimationtype"></a><a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
  팝업 애니메이션의 현재 유형을 반환합니다.  
   
 ```  
@@ -480,7 +558,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  페이드  
  팝업 메뉴 먼저 투명 나타나고 solidifies 점진적으로.  
   
-##  <a name="a-namegetdropdirectiona--cmfcpopupmenugetdropdirection"></a><a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
+##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -491,7 +569,7 @@ DROP_DIRECTION GetDropDirection() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetforcemenufocusa--cmfcpopupmenugetforcemenufocus"></a><a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
+##  <a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
  메뉴 팝업 메뉴가 표시 되 면 모음에 포커스를 반환할지 여부를 나타냅니다.  
   
 ```  
@@ -504,7 +582,7 @@ static BOOL GetForceMenuFocus();
 ### <a name="remarks"></a>주의  
  기본적으로 응용 프로그램의 메뉴 모음을 사용 하는 포커스를 반환 하지 않습니다. 이 설정을 변경 하려면 사용 [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)합니다.  
   
-##  <a name="a-namegetforceshadowa--cmfcpopupmenugetforceshadow"></a><a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
+##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -515,14 +593,14 @@ static BOOL __stdcall GetForceShadow();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethmenua--cmfcpopupmenugethmenu"></a><a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
+##  <a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
  연결 된 메뉴 리소스에 대 한 핸들을 반환합니다.  
   
 ```  
 HMENU GetHMenu();
 ```  
   
-##  <a name="a-namegetmenubara--cmfcpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
  반환 된 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 팝업 메뉴 내에 포함 합니다.  
   
 ```  
@@ -535,7 +613,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>주의  
  팝업 메뉴에는 포함 된 `CMFCPopupMenuBar` 개체입니다. 포함 된 다른 클래스를 사용 하는 경우 파생된 클래스에서이 메서드를 재정의 해야 합니다.  
   
-##  <a name="a-namegetmenuitema--cmfcpopupmenugetmenuitem"></a><a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
+##  <a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
  지정된 된 인덱스에 있는 메뉴 항목에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -552,7 +630,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="remarks"></a>주의  
  메뉴 항목으로 표시 됩니다는 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)합니다. 이 메서드를 호출 하는 경우에 대 한 포인터를 적절 한 반환 `CMFCToolBarMenuButton`합니다.  
   
-##  <a name="a-namegetmenuitemcounta--cmfcpopupmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
  팝업 메뉴에서 항목의 수를 반환합니다.  
   
 ```  
@@ -562,7 +640,7 @@ int GetMenuItemCount() const;
 ### <a name="return-value"></a>반환 값  
  메뉴에 있는 항목의 수입니다.  
   
-##  <a name="a-namegetmessagewnda--cmfcpopupmenugetmessagewnd"></a><a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
+##  <a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
  프레임 워크의 팝업 메뉴 메시지가 라우트되는 창에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -575,7 +653,7 @@ CWnd* GetMessageWnd() const;
 ### <a name="remarks"></a>주의  
  메서드를 사용 하는 경우 [CMFCPopupMenu::Create](#create) 팝업 메뉴를 만들려면 메뉴 메시지를 수신 하는 창을 지정 합니다.  
   
-##  <a name="a-namegetparentareaa--cmfcpopupmenugetparentarea"></a><a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
+##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -589,7 +667,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetparentbuttona--cmfcpopupmenugetparentbutton"></a><a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
+##  <a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
  부모 도구 모음 단추에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -604,7 +682,7 @@ CMFCToolBarMenuButton* GetParentButton() const;
   
  팝업 메뉴 바로 가기 메뉴를 경우 부모 도구 모음 단추가 없습니다가 추가 됩니다.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcpopupmenugetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
  부모 팝업 메뉴에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -617,7 +695,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ### <a name="remarks"></a>주의  
  팝업 메뉴에 부모 `CMFCPopupMenu` 하위 메뉴가 경우에 개체입니다.  
   
-##  <a name="a-namegetparentribbonelementa--cmfcpopupmenugetparentribbonelement"></a><a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
+##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -628,7 +706,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetparenttoolbara--cmfcpopupmenugetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
  부모 도구 모음에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -641,7 +719,7 @@ CMFCToolBar* GetParentToolBar() const;
 ### <a name="remarks"></a>주의  
  하는 경우는 `CMFCPopupMenu` 없는 부모 도구 모음에 바로 가기 메뉴를가 있습니다.  
   
-##  <a name="a-namegetquickcustomizetypea--cmfcpopupmenugetquickcustomizetype"></a><a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -652,7 +730,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetselitema--cmfcpopupmenugetselitem"></a><a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
+##  <a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
  현재 선택 된 메뉴 명령에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -665,7 +743,7 @@ CMFCToolBarMenuButton* GetSelItem();
 ### <a name="remarks"></a>주의  
  팝업 메뉴에서 메뉴 명령을 통해 표현 됩니다는 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md), 또는 클래스에서 파생 된 `CMFCToolBarMenuButton`합니다.  
   
-##  <a name="a-namehasbeenresizeda--cmfcpopupmenuhasbeenresized"></a><a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
+##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -676,7 +754,7 @@ BOOL HasBeenResized() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehiderarelyusedcommandsa--cmfcpopupmenuhiderarelyusedcommands"></a><a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
  팝업 메뉴 드물게 사용 되는 명령을 숨길 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -689,7 +767,7 @@ BOOL HideRarelyUsedCommands() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 해당 구성을 사용 하는 경우에 하지만 팝업 메뉴를 숨길 수 있는지 여부를 거의 사용 되지 않는 명령을 지정 합니다. 팝업 메뉴가 부모 단추가 있고 부모 창에서 파생 된 경우 거의 사용된 되지 않는 명령을 숨길 수는 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md)합니다. 사용 하 여 [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) 이 기능을 사용 하도록 설정 하 고 [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) 이 기능은 현재 사용할 수 있는지 확인 하 합니다. 부모 창에 대 한 두이 방법 모두를 호출 해야 합니다.  
   
-##  <a name="a-nameincommanda--cmfcpopupmenuincommand"></a><a name="incommand"></a>CMFCPopupMenu::InCommand  
+##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -700,7 +778,7 @@ virtual BOOL InCommand();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameinsertitema--cmfcpopupmenuinsertitem"></a><a name="insertitem"></a>CMFCPopupMenu::InsertItem  
+##  <a name="insertitem"></a>CMFCPopupMenu::InsertItem  
  지정된 된 위치에 팝업 메뉴에 새 항목을 삽입합니다.  
   
 ```  
@@ -722,7 +800,7 @@ int InsertItem(
 ### <a name="remarks"></a>주의  
  에 잘못 된 값을 제공 하는 경우이 메서드는 사용할 `iInsertAt`, 팝업 메뉴에서 현재 항목 개수 보다 큰 정수 등입니다.  
   
-##  <a name="a-nameinsertseparatora--cmfcpopupmenuinsertseparator"></a><a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
+##  <a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
  지정된 된 위치에 팝업 메뉴에는 구분 기호를 삽입합니다.  
   
 ```  
@@ -741,7 +819,7 @@ int InsertSeparator(int iInsertAt = -1);
   
  이 메서드는 실패 하는 경우 `iInsertAt` 은 잘못 된 값입니다.  
   
-##  <a name="a-nameisalwaysclosea--cmfcpopupmenuisalwaysclose"></a><a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
+##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -752,7 +830,7 @@ virtual BOOL IsAlwaysClose() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisalwaysshowemptytoolsentrya--cmfcpopupmenuisalwaysshowemptytoolsentry"></a><a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
+##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -763,7 +841,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameiscustomizepanea--cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
+##  <a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
  팝업 메뉴는 작동 하는지 여부를 나타내는 **QuickCustomizePane**합니다.  
   
 ```  
@@ -778,7 +856,7 @@ BOOL IsCustomizePane();
   
  응용 프로그램 하는 동안이 메서드를 호출 해야 [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)합니다.  
   
-##  <a name="a-nameisescclosea--cmfcpopupmenuisescclose"></a><a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
+##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -789,7 +867,7 @@ BOOL IsEscClose();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisidlea--cmfcpopupmenuisidle"></a><a name="isidle"></a>CMFCPopupMenu::IsIdle  
+##  <a name="isidle"></a>CMFCPopupMenu::IsIdle  
  팝업 메뉴가 현재 유휴 상태 인지를 나타냅니다.  
   
 ```  
@@ -802,7 +880,7 @@ virtual BOOL IsIdle() const;
 ### <a name="remarks"></a>주의  
  기본적으로 팝업 메뉴가 표시 애니메이션이 완료 되 고 사용자가 팝업 메뉴를 스크롤 하지 유휴 모드 설정입니다.  
   
-##  <a name="a-nameismenusounda--cmfcpopupmenuismenusound"></a><a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
+##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -813,7 +891,7 @@ static UINT __stdcall IsMenuSound();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisquickcustomizea--cmfcpopupmenuisquickcustomize"></a><a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
+##  <a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
  결정 여부는 연결 된 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md) QuickCustomize 모드에 있습니다.  
   
 ```  
@@ -826,7 +904,7 @@ BOOL IsQuickCustomize();
 ### <a name="remarks"></a>주의  
  QuickCustomize 사용자 모드 단추를 직접 사용자 지정 하는 도구 모음에서 단추를 선택 합니다.  
   
-##  <a name="a-nameisresizeblea--cmfcpopupmenuisresizeble"></a><a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
+##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -837,7 +915,7 @@ BOOL IsResizeble() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisrightaligna--cmfcpopupmenuisrightalign"></a><a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
+##  <a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
  메뉴 왼쪽 맞춤 오른쪽에 맞출지 여부를 나타냅니다.  
   
 ```  
@@ -852,7 +930,7 @@ BOOL IsRightAlign() const;
   
  맞춤은 전역 설정 아니며 팝업 메뉴 간에 다를 수 있습니다.  
   
-##  <a name="a-nameisscrollablea--cmfcpopupmenuisscrollable"></a><a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
+##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -863,7 +941,7 @@ BOOL IsScrollable() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameissendmenuselectmsga--cmfcpopupmenuissendmenuselectmsg"></a><a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
+##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
  팝업 메뉴에서 명령을 선택 하면 프레임 워크에 부모 프레임을 알립니다 있는지 여부를 나타냅니다.  
   
 ```  
@@ -876,7 +954,7 @@ static BOOL IsSendMenuSelectMsg();
 ### <a name="remarks"></a>주의  
  프레임 워크에 전송 하 여 부모 프레임을 알립니다는 `WM_MENUSELECT` 메시지에 사용 되는 메뉴 명령을 선택 합니다.  
   
-##  <a name="a-nameisshowna--cmfcpopupmenuisshown"></a><a name="isshown"></a>CMFCPopupMenu::IsShown  
+##  <a name="isshown"></a>CMFCPopupMenu::IsShown  
  팝업 메뉴에 현재 표시 되는지 여부를 나타냅니다.  
   
 ```  
@@ -886,7 +964,7 @@ BOOL IsShown() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`팝업 메뉴가 표시 되 면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namemovetoa--cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::MoveTo  
+##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -898,7 +976,7 @@ void MoveTo(const CPoint& pt);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonchangehota--cmfcpopupmenuonchangehot"></a><a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
+##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -910,7 +988,7 @@ virtual void OnChangeHot(int nHot);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonchooseitema--cmfcpopupmenuonchooseitem"></a><a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
+##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +1000,7 @@ virtual void OnChooseItem(UINT uidCmdID);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoncmdmsga--cmfcpopupmenuoncmdmsg"></a><a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -943,7 +1021,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namepostcommanda--cmfcpopupmenupostcommand"></a><a name="postcommand"></a>CMFCPopupMenu::PostCommand  
+##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -957,7 +1035,7 @@ BOOL PostCommand(UINT uiCommandID);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namepretranslatemessagea--cmfcpopupmenupretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -971,7 +1049,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namerecalclayouta--cmfcpopupmenurecalclayout"></a><a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -983,14 +1061,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameremoveallitemsa--cmfcpopupmenuremoveallitems"></a><a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
+##  <a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
  팝업 메뉴에서 모든 항목을 지웁니다.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-##  <a name="a-nameremoveitema--cmfcpopupmenuremoveitem"></a><a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
+##  <a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
  팝업 메뉴에서 지정된 된 항목을 제거 합니다.  
   
 ```  
@@ -1007,7 +1085,7 @@ BOOL RemoveItem(int iIndex);
 ### <a name="remarks"></a>주의  
  이 메서드는 자동으로 영향을 받는 항목을 제거 하 여 구분 기호를 정렬 합니다. 프레임 워크에서 구분 기호를 재배열 하는 방법에 대 한 자세한 내용은 참조 [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)합니다.  
   
-##  <a name="a-namesavestatea--cmfcpopupmenusavestate"></a><a name="savestate"></a>CMFCPopupMenu::SaveState  
+##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1016,7 +1094,7 @@ virtual void SaveState();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetanimationspeeda--cmfcpopupmenusetanimationspeed"></a><a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
  팝업 메뉴에 대 한 애니메이션 속도 설정합니다.  
   
 ```  
@@ -1032,7 +1110,7 @@ static void SetAnimationSpeed(UINT nElapse);
   
  이 매개 변수는 기본적으로 30 밀리초로 설정 됩니다. 에 대 한 유효한 값의 범위 `nElapse` 는 0에서 200입니다.  
   
-##  <a name="a-namesetanimationtypea--cmfcpopupmenusetanimationtype"></a><a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
  이 팝업 메뉴에 대 한 애니메이션 형식을 설정합니다.  
   
 ```  
@@ -1046,7 +1124,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="remarks"></a>주의  
  참조 [CMFCPopupMenu::GetAnimationType](#getanimationtype) 에 유효한 값의 목록에 대 한 `type`합니다.  
   
-##  <a name="a-namesetautodestroya--cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1058,7 +1136,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetdefaultitema--cmfcpopupmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
  팝업 메뉴에 대 한 기본 명령을 설정합니다.  
   
 ```  
@@ -1072,7 +1150,7 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="remarks"></a>주의  
  팝업 메뉴에서 기본 명령에는 팝업 메뉴가 나타날 때 선택 하는 명령이입니다.  
   
-##  <a name="a-namesetforcemenufocusa--cmfcpopupmenusetforcemenufocus"></a><a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
+##  <a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
  메뉴 모음 팝업 메뉴가 표시 되 면 돌아갑니다 입력된 포커스를 강제로 수행 합니다.  
   
 ```  
@@ -1086,7 +1164,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ### <a name="remarks"></a>주의  
  이 메서드는 응용 프로그램에서 모든 팝업 메뉴에 대 한 전역 플래그를 설정 합니다. 기본적으로이 기능은 사용 되지 않습니다.  
   
-##  <a name="a-namesetforceshadowa--cmfcpopupmenusetforceshadow"></a><a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
+##  <a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
  주 프레임 외부 팝업 메뉴에 나타날 때 메뉴 그림자를 그리는 프레임 워크를 강제로 수행 합니다.  
   
 ```  
@@ -1100,7 +1178,7 @@ static void SetForceShadow(BOOL bValue);
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하면 응용 프로그램에서 전역 플래그를 설정 합니다. 이 플래그는 응용 프로그램에 팝업 메뉴를 모두 영향을 줍니다.  
   
-##  <a name="a-namesetmaxwidtha--cmfcpopupmenusetmaxwidth"></a><a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
+##  <a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
  팝업 메뉴에 대 한 최대 너비를 설정 합니다.  
   
 ```  
@@ -1114,7 +1192,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="remarks"></a>주의  
  메뉴 명령과 사용 하 여 연결 된 텍스트는 최대 너비를 넘으면 이름이 잘리고에 맞지 않는 파트&3; 개의 점으로 대체 됩니다.  
   
-##  <a name="a-namesetmessagewnda--cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
+##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1126,7 +1204,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetparentribbonelementa--cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
+##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1138,7 +1216,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetquickcustomizetypea--cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1150,7 +1228,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetquickmodea--cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
+##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1159,7 +1237,7 @@ void SetQuickMode();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetrightaligna--cmfcpopupmenusetrightalign"></a><a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
+##  <a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
  팝업 메뉴에 대 한 메뉴 맞춤을 설정합니다.  
   
 ```  
@@ -1173,7 +1251,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="remarks"></a>주의  
  기본적으로 팝업 메뉴를 모두 왼쪽 맞춤 됩니다.  
   
-##  <a name="a-namesetsendmenuselectmsga--cmfcpopupmenusetsendmenuselectmsg"></a><a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
+##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
  사용자가 명령을 선택할 때 팝업 메뉴에 부모 프레임을 알립니다 있는지 여부를 제어 하는 플래그를 설정 합니다.  
   
 ```  
@@ -1187,7 +1265,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ### <a name="remarks"></a>주의  
  응용 프로그램에서 모든 팝업 메뉴에 대 한 전역 옵션입니다. 팝업 메뉴를 송신할 활성화 되어 있는 경우는 `WM_MENUSELECT` 메시지는 사용자가 명령을 선택할 때 부모 프레임입니다.  
   
-##  <a name="a-nameshowallcommandsa--cmfcpopupmenushowallcommands"></a><a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
+##  <a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
  모든 명령을 표시 하 고 팝업 메뉴를 강제로 수행 합니다.  
   
 ```  
@@ -1197,7 +1275,7 @@ void ShowAllCommands();
 ### <a name="remarks"></a>주의  
  이 전역 설정 이며 현재 팝업 메뉴에 영향을 줍니다.  
   
-##  <a name="a-nametriggerresizea--cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
+##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1206,7 +1284,7 @@ void TriggerResize();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameupdateallshadowsa--cmfcpopupmenuupdateallshadows"></a><a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
+##  <a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
  모든 열린된 팝업 메뉴에 그림자를 업데이트합니다.  
   
 ```  
@@ -1220,7 +1298,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>주의  
  이 방법은 애니메이션된 컨트롤이 나 동적 콘텐츠가 있는 다른 창을 통해 팝업 메뉴가 표시 되는 경우에 유용 합니다.  
   
-##  <a name="a-nameupdateshadowa--cmfcpopupmenuupdateshadow"></a><a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
+##  <a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
  팝업 메뉴의 그림자를 업데이트합니다.  
   
 ```  

@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
+- AFXADV/CRecentFileList
+- AFXADV/CRecentFileList::CRecentFileList
+- AFXADV/CRecentFileList::Add
+- AFXADV/CRecentFileList::GetDisplayName
+- AFXADV/CRecentFileList::GetSize
+- AFXADV/CRecentFileList::ReadList
+- AFXADV/CRecentFileList::Remove
+- AFXADV/CRecentFileList::UpdateMenu
+- AFXADV/CRecentFileList::WriteList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class CRecentFileList
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxadv.h  
   
-##  <a name="a-nameadda--crecentfilelistadd"></a><a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>CRecentFileList::Add  
  가장 최근에 사용한 (MRU) 파일 목록에 파일을 추가 합니다.  
   
 ```  
@@ -135,7 +144,7 @@ void Add(
 ### <a name="remarks"></a>주의  
  파일 이름은 MRU 목록의 맨 위에 추가 됩니다. 파일 이름에 이미 있으면 MRU 목록의 맨 위로 이동 됩니다.  
   
-##  <a name="a-namecrecentfilelista--crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
  `CRecentFileList` 개체를 생성합니다.  
   
 ```  
@@ -166,7 +175,7 @@ CRecentFileList(
 ### <a name="remarks"></a>주의  
  형식 문자열에서 가리키는 `lpszEntryFormat` 각 최근에 사용한 항목의 인덱스를 대체에 사용할 "%d"를 포함 해야 합니다. 예를 들어 형식 문자열은 `"file%d"` 항목 이름은 다음 `file0`, `file1`등입니다.  
   
-##  <a name="a-namegetdisplaynamea--crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
  MRU 목록 메뉴 표시에 사용 하기 위해 최근에 사용한 파일 목록에서 파일에 대 한 표시 이름을 가져옵니다.  
   
 ```  
@@ -200,7 +209,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>주의  
  파일이 현재 디렉터리에는 함수는 디렉터리를 표시 하지 둡니다. 파일 이름이 너무 긴 경우에 디렉터리와 확장 제거 됩니다. 하지 않는 한 표시 이름을 빈 문자열로 설정 파일 이름이 여전히 너무 긴 경우 `bAtLeastName`&0;입니다.  
   
-##  <a name="a-namegetsizea--crecentfilelistgetsize"></a><a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>CRecentFileList::GetSize  
  최근에 사용한 파일 목록에 있는 파일의 수를 검색 합니다.  
   
 ```  
@@ -210,7 +219,7 @@ int GetSize() const;
 ### <a name="return-value"></a>반환 값  
  현재에서 파일 수 가장 최근에 사용 파일 목록 (MRU).  
   
-##  <a name="a-nameoperatorata--crecentfilelistoperator--"></a><a name="operator_at"></a>CRecentFileList::operator]  
+##  <a name="operator_at"></a>CRecentFileList::operator]  
  오버 로드 된 아래 첨자 ( `[]`) 연산자는 단일 반환 `CString` 인덱스는&0;부터 시작 하 여 지정 된 `nIndex`합니다.  
   
 ```  
@@ -221,14 +230,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  0부터 시작 인덱스는 `CString` 집합이 `CString`s.  
   
-##  <a name="a-namereadlista--crecentfilelistreadlist"></a><a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>CRecentFileList::ReadList  
  가장 최근에 사용 된 레지스트리 또는 응용 프로그램에서 파일 목록을 MRU ()를 읽습니다. INI 파일입니다.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="a-nameremovea--crecentfilelistremove"></a><a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>CRecentFileList::Remove  
  최근에 사용한 파일 목록에서 파일을 제거 합니다.  
   
 ```  
@@ -239,7 +248,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  가장 최근에 사용한 (MRU) 파일 목록에서 제거할 파일의&0;부터 시작 인덱스입니다.  
   
-##  <a name="a-nameupdatemenua--crecentfilelistupdatemenu"></a><a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
  최근에 사용한 파일 목록 메뉴 디스플레이 업데이트합니다.  
   
 ```  
@@ -250,7 +259,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  에 대 한 포인터는 [CCmdUI](../../mfc/reference/ccmdui-class.md) (MRU) 가장 최근에 사용한 파일 목록 메뉴에 대 한 개체입니다.  
   
-##  <a name="a-namewritelista--crecentfilelistwritelist"></a><a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>CRecentFileList::WriteList  
  가장 최근에 사용 된 파일 목록 (MRU) 레지스트리 또는 응용 프로그램의으로 씁니다. INI 파일입니다.  
   
 ```  

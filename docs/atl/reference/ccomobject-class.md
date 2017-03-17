@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObject<Base>
-- ATL::CComObject
-- ATL::CComObject<Base>
-- ATL.CComObject
 - CComObject
+- ATLCOM/ATL::CComObject
+- ATLCOM/ATL::CComObject::CComObject
+- ATLCOM/ATL::CComObject::AddRef
+- ATLCOM/ATL::CComObject::CreateInstance
+- ATLCOM/ATL::CComObject::QueryInterface
+- ATLCOM/ATL::CComObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectaddref"></a><a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>CComObject::AddRef  
  개체에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -98,7 +100,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  이 함수는 개체에 새 증가 참조 횟수를 반환합니다. 이 값은 진단 또는 테스트 유용할 수 있습니다.  
   
-##  <a name="a-nameccomobjecta--ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>CComObject::CComObject  
  생성자는 모듈 잠금 횟수를 증가 시킵니다.  
   
 ```
@@ -114,7 +116,7 @@ CComObject(void* = NULL);
   
  하는 경우는 `CComObject`-파생 된 개체를 사용 하 여 성공적으로 생성 되는 **새** 연산자, 초기 참조 횟수는 0입니다. 적절 한 값 (1)을 참조 횟수를 설정 하려면를 호출 하 여 [AddRef](#addref) 함수입니다.  
   
-##  <a name="a-namedtora--ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>CComObject:: ~ CComObject  
  소멸자입니다.  
   
 ```
@@ -125,7 +127,7 @@ CComObject();
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](ccomobjectrootex-class.md#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
 
   
-##  <a name="a-namecreateinstancea--ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>CComObject::CreateInstance  
  이 정적 함수를 사용 하면 새 **CComObject** `Base` ** > ** 오버 헤드 없이 개체 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
@@ -149,7 +151,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM&#39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="a-namequeryinterfacea--ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>CComObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -171,7 +173,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namereleasea--ccomobjectrelease"></a><a name="release"></a>CComObject::Release  
+##  <a name="release"></a>CComObject::Release  
  개체에 대 한 참조 횟수를 감소 시킵니다.  
   
 ```

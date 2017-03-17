@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CProgressCtrl
+- AFXCMN/CProgressCtrl
+- AFXCMN/CProgressCtrl::CProgressCtrl
+- AFXCMN/CProgressCtrl::Create
+- AFXCMN/CProgressCtrl::CreateEx
+- AFXCMN/CProgressCtrl::GetBarColor
+- AFXCMN/CProgressCtrl::GetBkColor
+- AFXCMN/CProgressCtrl::GetPos
+- AFXCMN/CProgressCtrl::GetRange
+- AFXCMN/CProgressCtrl::GetState
+- AFXCMN/CProgressCtrl::GetStep
+- AFXCMN/CProgressCtrl::OffsetPos
+- AFXCMN/CProgressCtrl::SetBarColor
+- AFXCMN/CProgressCtrl::SetBkColor
+- AFXCMN/CProgressCtrl::SetMarquee
+- AFXCMN/CProgressCtrl::SetPos
+- AFXCMN/CProgressCtrl::SetRange
+- AFXCMN/CProgressCtrl::SetState
+- AFXCMN/CProgressCtrl::SetStep
+- AFXCMN/CProgressCtrl::StepIt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +118,7 @@ class CProgressCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namecprogressctrla--cprogressctrlcprogressctrl"></a><a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
+##  <a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
  `CProgressCtrl` 개체를 생성합니다.  
   
 ```  
@@ -112,7 +131,7 @@ CProgressCtrl();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&1;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cprogressctrlcreate"></a><a name="create"></a>CProgressCtrl::Create  
+##  <a name="create"></a>CProgressCtrl::Create  
  진행률 표시줄 컨트롤을 만들고이에 연결 된 `CProgressCtrl` 개체입니다.  
   
 ```  
@@ -149,7 +168,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&2;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--cprogressctrlcreateex"></a><a name="createex"></a>CProgressCtrl::CreateEx  
+##  <a name="createex"></a>CProgressCtrl::CreateEx  
  컨트롤 (자식 창)와 연결 된 `CProgressCtrl` 개체입니다.  
   
 ```  
@@ -183,7 +202,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-namegetbarcolora--cprogressctrlgetbarcolor"></a><a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
+##  <a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
  현재 진행률 표시줄 컨트롤에 대 한 진행률 표시줄의 색을 가져옵니다.  
   
 ```  
@@ -196,7 +215,7 @@ COLORREF GetBarColor() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetbkcolora--cprogressctrlgetbkcolor"></a><a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
  현재 진행률 표시줄의 배경색을 가져옵니다.  
   
 ```  
@@ -209,7 +228,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetposa--cprogressctrlgetpos"></a><a name="getpos"></a>CProgressCtrl::GetPos  
+##  <a name="getpos"></a>CProgressCtrl::GetPos  
  진행률 표시줄의 현재 위치를 검색합니다.  
   
 ```  
@@ -225,7 +244,7 @@ int GetPos();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&3;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
   
-##  <a name="a-namegetrangea--cprogressctrlgetrange"></a><a name="getrange"></a>CProgressCtrl::GetRange  
+##  <a name="getrange"></a>CProgressCtrl::GetRange  
  현재 아래쪽 및 위쪽 제한 또는 진행률 표시줄 컨트롤의 범위를 가져옵니다.  
   
 ```  
@@ -247,7 +266,7 @@ void GetRange(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&4;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
   
-##  <a name="a-namegetstatea--cprogressctrlgetstate"></a><a name="getstate"></a>CProgressCtrl::GetState  
+##  <a name="getstate"></a>CProgressCtrl::GetState  
  현재 진행률 표시줄 컨트롤의 상태를 가져옵니다.  
   
 ```  
@@ -276,7 +295,7 @@ int GetState() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]  
   
-##  <a name="a-namegetstepa--cprogressctrlgetstep"></a><a name="getstep"></a>CProgressCtrl::GetStep  
+##  <a name="getstep"></a>CProgressCtrl::GetStep  
  현재 진행률 표시줄 컨트롤의 진행률 표시줄에 대 한 단계적 증가 값을 검색합니다.  
   
 ```  
@@ -301,7 +320,7 @@ int GetStep() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
-##  <a name="a-nameoffsetposa--cprogressctrloffsetpos"></a><a name="offsetpos"></a>CProgressCtrl::OffsetPos  
+##  <a name="offsetpos"></a>CProgressCtrl::OffsetPos  
  진행률 표시줄 컨트롤의 현재 위치를 앞으로 이동 하 여 지정 된 증분만큼 `nPos` 모음의 새 위치를 반영 하 고 다시 그립니다.  
   
 ```  
@@ -318,7 +337,7 @@ int OffsetPos(int nPos);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&5;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
-##  <a name="a-namesetbarcolora--cprogressctrlsetbarcolor"></a><a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
+##  <a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
  현재 진행률 표시줄 컨트롤의 진행률 표시줄의 색을 설정 합니다.  
   
 ```  
@@ -349,7 +368,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]  
   
-##  <a name="a-namesetbkcolora--cprogressctrlsetbkcolor"></a><a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
  진행률 표시줄의 배경색을 설정합니다.  
   
 ```  
@@ -366,7 +385,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&6;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
   
-##  <a name="a-namesetmarqueea--cprogressctrlsetmarquee"></a><a name="setmarquee"></a>CProgressCtrl::SetMarquee  
+##  <a name="setmarquee"></a>CProgressCtrl::SetMarquee  
  현재 진행률 표시줄 컨트롤에 대 한 움직이는 텍스트 모드 또는 해제를 설정합니다.  
   
 ```  
@@ -400,7 +419,7 @@ BOOL SetMarquee(
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
-##  <a name="a-namesetposa--cprogressctrlsetpos"></a><a name="setpos"></a>CProgressCtrl::SetPos  
+##  <a name="setpos"></a>CProgressCtrl::SetPos  
  진행률 표시줄 컨트롤의 현재 위치에 지정 된 대로 설정 `nPos` 모음의 새 위치를 반영 하 고 다시 그립니다.  
   
 ```  
@@ -420,7 +439,7 @@ int SetPos(int nPos);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&7;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
-##  <a name="a-namesetrangea--cprogressctrlsetrange"></a><a name="setrange"></a>CProgressCtrl::SetRange  
+##  <a name="setrange"></a>CProgressCtrl::SetRange  
  진행률 표시줄 컨트롤의 범위 최대값과 최소값을 설정 하 고 새 범위를 반영 하도록 모음을 다시 그립니다.  
   
 ```  
@@ -447,7 +466,7 @@ void SetRange32(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&8;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]  
   
-##  <a name="a-namesetstatea--cprogressctrlsetstate"></a><a name="setstate"></a>CProgressCtrl::SetState  
+##  <a name="setstate"></a>CProgressCtrl::SetState  
  현재 진행률 표시줄 컨트롤의 상태를 설정합니다.  
   
 ```  
@@ -476,7 +495,7 @@ int SetState(int iState);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]  
   
-##  <a name="a-namesetstepa--cprogressctrlsetstep"></a><a name="setstep"></a>CProgressCtrl::SetStep  
+##  <a name="setstep"></a>CProgressCtrl::SetStep  
  진행률 표시줄 컨트롤에 대 한 단계 증분 값을 지정 합니다.  
   
 ```  
@@ -498,7 +517,7 @@ int SetStep(int nStep);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CProgressCtrl #&9;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
-##  <a name="a-namestepita--cprogressctrlstepit"></a><a name="stepit"></a>CProgressCtrl::StepIt  
+##  <a name="stepit"></a>CProgressCtrl::StepIt  
  단계 증분만큼 진행률 표시줄 컨트롤에 대 한 현재 위치를 앞으로 이동 하 고 새 위치를 반영 하도록 막대를 다시 그립니다.  
   
 ```  

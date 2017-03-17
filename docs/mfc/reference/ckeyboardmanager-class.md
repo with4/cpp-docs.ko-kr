@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CleanUp
+- AFXKEYBOARDMANAGER/CKeyboardManager::FindDefaultAccelerator
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyHandled
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyPrintable
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::LoadState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ResetAll
+- AFXKEYBOARDMANAGER/CKeyboardManager::SaveState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::TranslateCharToUpper
+- AFXKEYBOARDMANAGER/CKeyboardManager::UpdateAccelTable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +105,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxkeyboardmanager.h  
   
-##  <a name="a-nameckeyboardmanagera--ckeyboardmanagerckeyboardmanager"></a><a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
  `CKeyboardManager` 개체를 생성합니다.  
   
 ```  
@@ -102,7 +115,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>주의  
  대부분의 경우에서 않아도 만들려는 `CKeyboardManager` 직접. 기본적으로 프레임 워크를 만듭니다. 에 대 한 포인터를 얻으려면는 `CKeyboardManager`, 호출 [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)합니다. 하나 수동으로 만드는 경우 메서드와 함께 초기화 해야 하면 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)합니다.  
   
-##  <a name="a-namecleanupa--ckeyboardmanagercleanup"></a><a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
  해제는 `CKeyboardManager` 리소스 모든 바로 가기 키 매핑을 지웁니다.  
   
 ```  
@@ -114,7 +127,7 @@ static void CleanUp();
   
  응용 프로그램 프레임 워크 중 응용 프로그램을 종료할 것을 자동으로 호출 하기 때문에 종료 될 때이 함수를 호출할 필요가 없습니다.  
   
-##  <a name="a-namefinddefaultacceleratora--ckeyboardmanagerfinddefaultaccelerator"></a><a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
  지정 된 명령 및 창에 대 한 기본 바로 가기 키를 검색합니다.  
   
 ```  
@@ -144,7 +157,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>주의  
  이 메서드를 지정 된 명령을 찾습니다 `uiCmd` 기본 바로 가기 키를 검색 합니다. 메서드는이 바로 가기 키와 연결 된 문자열을 사용 하 고 값을 씁니다는 `str` 매개 변수입니다.  
   
-##  <a name="a-nameiskeyhandleda--ckeyboardmanageriskeyhandled"></a><a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
  지정된 된 키를 처리할지 여부를 결정은 [CKeyboardManager 클래스](../../mfc/reference/ckeyboardmanager-class.md)합니다.  
   
 ```  
@@ -171,7 +184,7 @@ static BOOL __stdcall IsKeyHandled(
 ### <a name="remarks"></a>주의  
  입력된 매개 변수는 액셀러레이터 키 테이블에 모두에 대 한 항목과 일치 해야 함 `nKey` 및 `fVirt` 에서 바로 가기 키를 처리할지 여부를 확인 하려면 `pWndFrame`합니다.  
   
-##  <a name="a-nameiskeyprintablea--ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
  인쇄 가능한 문자 인지를 나타냅니다.  
   
 ```  
@@ -191,7 +204,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하는 경우는 실패 [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) 실패 합니다.  
   
-##  <a name="a-nameisshowallacceleratorsa--ckeyboardmanagerisshowallaccelerators"></a><a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
  메뉴 명령과 연결 된 모든 바로 가기 키 또는 기본 바로 가기 키만 메뉴가 표시 여부를 나타냅니다.  
   
 ```  
@@ -204,7 +217,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>주의  
  응용 프로그램의 메뉴 모음에서 메뉴 명령에 대 한 바로 가기 키를 나열합니다. 함수를 사용 하 여 [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) 응용 프로그램 나열 모든 바로 가기 키 또는 기본 바로 가기 키만이 여부를 제어할 수 있습니다.  
   
-##  <a name="a-nameloadstatea--ckeyboardmanagerloadstate"></a><a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>CKeyboardManager::LoadState  
  Windows 레지스트리에서 바로 가기 키 테이블을 로드합니다.  
   
 ```  
@@ -228,7 +241,7 @@ BOOL LoadState(
   
  기본 창을 지정 하지 않으면 응용 프로그램의 주 프레임 창 사용 됩니다.  
   
-##  <a name="a-nameresetalla--ckeyboardmanagerresetall"></a><a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>CKeyboardManager::ResetAll  
  응용 프로그램 리소스에서 바로 가기 키 테이블을 다시 로드합니다.  
   
 ```  
@@ -238,7 +251,7 @@ void ResetAll();
 ### <a name="remarks"></a>주의  
  이 함수에 저장 된 바로 가기를 지우는 `CKeyboardManager` 인스턴스. 그런 다음 응용 프로그램 리소스에서 키보드 관리자의 상태 다시 로드 됩니다.  
   
-##  <a name="a-namesavestatea--ckeyboardmanagersavestate"></a><a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>CKeyboardManager::SaveState  
  Windows 레지스트리를 바로 가기 키 테이블을 저장합니다.  
   
 ```  
@@ -262,7 +275,7 @@ BOOL SaveState(
   
  기본 창을 지정 하지 않으면 주 프레임 창의 기본 창으로 사용 됩니다.  
   
-##  <a name="a-nameshowallacceleratorsa--ckeyboardmanagershowallaccelerators"></a><a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
  메뉴 명령과 연결 된 모든 바로 가기 키를 보여 줍니다.  
   
 ```  
@@ -283,7 +296,7 @@ static void ShowAllAccelerators(
   
  메뉴 모음에 명령 옆에 있는 바로 가기 키에 나열 됩니다. 문자열에서 제공 하는 모든 바로 가기 키를 표시 되 면 `lpszDelimiter` 개별 바로 가기 키를 구분 합니다.  
   
-##  <a name="a-nametranslatechartouppera--ckeyboardmanagertranslatechartoupper"></a><a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
  문자를 해당 상위 레지스터를 변환 합니다.  
   
 ```  
@@ -297,7 +310,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="return-value"></a>반환 값  
  문자는 입력된 매개 변수의 상위 레지스터입니다.  
   
-##  <a name="a-nameupdateacceltablea--ckeyboardmanagerupdateacceltable"></a><a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
  새 바로 가기 키 테이블으로 바로 가기 키 테이블을 업데이트합니다.  
   
 ```  

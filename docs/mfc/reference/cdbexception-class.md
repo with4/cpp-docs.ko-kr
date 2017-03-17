@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBException
+- AFXDB/CDBException
+- AFXDB/CDBException::m_nRetCode
+- AFXDB/CDBException::m_strError
+- AFXDB/CDBException::m_strStateNativeOrigin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
   
-##  <a name="a-namemnretcodea--cdbexceptionmnretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  형식의 ODBC 오류 코드를 포함 **RETCODE** ODBC 응용 프로그래밍 인터페이스 (API) 함수에서 반환 합니다.  
   
 ### <a name="remarks"></a>주의  
@@ -134,13 +138,13 @@ class CDBException : public CException
   
  SQL 맨 앞에 나오는 코드는 ODBC에서 정의 됩니다. AFX 맨 앞에 나오는 코드는 AFXDB에서 정의 됩니다. H, MFC\INCLUDE에서 찾을 수 있습니다.  
   
-##  <a name="a-namemstrerrora--cdbexceptionmstrerror"></a><a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>CDBException::m_strError  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
 ### <a name="remarks"></a>주의  
  영숫자 측면에서 오류를 설명 하는 문자열입니다. 에 대 한 자세한 내용 및 예제 참조 **m_strStateNativeOrigin**합니다.  
   
-##  <a name="a-namemstrstatenativeorigina--cdbexceptionmstrstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
 ### <a name="remarks"></a>주의  

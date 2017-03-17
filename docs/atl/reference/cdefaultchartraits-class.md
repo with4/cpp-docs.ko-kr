@@ -10,10 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDefaultCharTraits
-- ATL::CDefaultCharTraits<T>
-- ATL.CDefaultCharTraits
-- ATL.CDefaultCharTraits<T>
-- ATL::CDefaultCharTraits
+- ATLCOLL/ATL::CDefaultCharTraits
+- ATLCOLL/ATL::CDefaultCharTraits::CharToLower
+- ATLCOLL/ATL::CDefaultCharTraits::CharToUpper
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -72,7 +71,7 @@ class CDefaultCharTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namechartolowera--cdefaultchartraitschartolower"></a><a name="chartolower"></a>CDefaultCharTraits::CharToLower  
+##  <a name="chartolower"></a>CDefaultCharTraits::CharToLower  
  문자를 소문자로 변환 하려면이 함수를 호출 합니다.  
   
 ```
@@ -87,7 +86,7 @@ static char CharToLower(char x);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&132;](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
-##  <a name="a-namechartouppera--cdefaultchartraitschartoupper"></a><a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
+##  <a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
  문자를 대문자로 변환 하려면이 함수를 호출 합니다.  
   
 ```

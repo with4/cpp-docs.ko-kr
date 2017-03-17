@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  이 클래스에 대 한 추가 요구 사항에 설명 되어 [빌드 요구 사항에 대 한 Windows Vista 공용 컨트롤](../../mfc/build-requirements-for-windows-vista-common-controls.md)합니다.  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  지정 된 스타일으로 분할 단추 컨트롤을 만들고 현재 연결 `CSplitButton` 개체입니다.  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  `CSplitButton` 개체를 생성합니다. 생성자의 매개 변수는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 하위 메뉴를 지정 합니다.  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>주의  
  사용 된 [CSplitButton::Create](#create) 분할 단추 컨트롤을 만들고에 연결 하는 메서드는 `CSplitButton` 개체입니다.  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  처리는 `BCN_DROPDOWN` 는 현재 분할 단추 컨트롤의 드롭다운 화살표를 클릭 하면 시스템에서 보내는 알림입니다.  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  현재는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 드롭다운 메뉴를 설정 합니다.  
   
 ```  

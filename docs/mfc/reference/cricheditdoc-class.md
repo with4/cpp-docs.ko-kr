@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditDoc
+- AFXRICH/CRichEditDoc
+- AFXRICH/CRichEditDoc::CreateClientItem
+- AFXRICH/CRichEditDoc::GetStreamFormat
+- AFXRICH/CRichEditDoc::GetView
+- AFXRICH/CRichEditDoc::m_bRTF
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrich.h  
   
-##  <a name="a-namecreateclientitema--cricheditdoccreateclientitem"></a><a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
+##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
  만들려면이 함수를 호출 하는 `CRichEditCntrItem` 이 문서에 추가 합니다.  
   
 ```  
@@ -114,7 +119,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
  자세한 내용은 참조는 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetstreamformata--cricheditdocgetstreamformat"></a><a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
+##  <a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
  서식 있는 편집 내용을 스트리밍에 대 한 텍스트 형식을 결정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -131,7 +136,7 @@ int GetStreamFormat() const;
 ### <a name="remarks"></a>주의  
  반환 값은 기준의 [m_bRTF](#m_brtf) 데이터 멤버입니다. 이 함수는 반환 `SF_RTF` 경우 `m_bRTF` 는 **TRUE**고, 그렇지 않으면 `SF_TEXT`합니다.  
   
-##  <a name="a-namegetviewa--cricheditdocgetview"></a><a name="getview"></a>CRichEditDoc::GetView  
+##  <a name="getview"></a>CRichEditDoc::GetView  
  에 액세스 하려면이 함수를 호출 하는 [CRichEditView](../../mfc/reference/cricheditview-class.md) 개체와 연결 된 `CRichEditDoc` 개체입니다.  
   
 ```  
@@ -144,7 +149,7 @@ virtual CRichEditView* GetView() const;
 ### <a name="remarks"></a>주의  
  텍스트 및 서식 지정 정보에 포함 된는 `CRichEditView` 개체입니다. `CRichEditDoc` 개체는 직렬화를 위한 OLE 항목을 유지 합니다. 하나만 있어야 `CRichEditView` 각 `CRichEditDoc`합니다.  
   
-##  <a name="a-namembrtfa--cricheditdocmbrtf"></a><a name="m_brtf"></a>CRichEditDoc::m_bRTF  
+##  <a name="m_brtf"></a>CRichEditDoc::m_bRTF  
  때 **TRUE**, 나타내는 [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) 및 [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) 단락 및 문자 서식 특성에 저장 해야 합니다.  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
+- AFXINET/CFtpFileFind
+- AFXINET/CFtpFileFind::CFtpFileFind
+- AFXINET/CFtpFileFind::FindFile
+- AFXINET/CFtpFileFind::FindNextFile
+- AFXINET/CFtpFileFind::GetFileURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecftpfilefinda--cftpfilefindcftpfilefind"></a><a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
  이 멤버 함수를 생성 하 라고는 `CFtpFileFind` 개체입니다.  
   
 ```  
@@ -109,7 +114,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>예제  
   이 항목의 앞부분에 나오는 클래스 개요에서 예제를 참조 하십시오.  
   
-##  <a name="a-namefindfilea--cftpfilefindfindfile"></a><a name="findfile"></a>Cftpfilefind:: Findfile  
+##  <a name="findfile"></a>Cftpfilefind:: Findfile  
  FTP 파일을 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -144,7 +149,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>예제  
   이 항목의 이전 예제를 참조 하십시오.  
   
-##  <a name="a-namefindnextfilea--cftpfilefindfindnextfile"></a><a name="findnextfile"></a>Cftpfilefind:: Findnextfile  
+##  <a name="findnextfile"></a>Cftpfilefind:: Findnextfile  
  에 대 한 호출을 시작한 파일 검색을 계속 하려면이 멤버 함수를 호출 하는 [FindFile](#findfile) 멤버 함수입니다.  
   
 ```  
@@ -162,7 +167,7 @@ virtual BOOL FindNextFile();
 ### <a name="example"></a>예제  
   이 항목의 앞부분에 나오는 예제를 참조 하십시오.  
   
-##  <a name="a-namegetfileurla--cftpfilefindgetfileurl"></a><a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
  지정된 된 파일의 URL을 가져오고이 멤버 함수를 호출 합니다.  
   
 ```  

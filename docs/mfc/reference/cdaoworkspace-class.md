@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoWorkspace
+- AFXDAO/CDaoWorkspace
+- AFXDAO/CDaoWorkspace::CDaoWorkspace
+- AFXDAO/CDaoWorkspace::Append
+- AFXDAO/CDaoWorkspace::BeginTrans
+- AFXDAO/CDaoWorkspace::Close
+- AFXDAO/CDaoWorkspace::CommitTrans
+- AFXDAO/CDaoWorkspace::CompactDatabase
+- AFXDAO/CDaoWorkspace::Create
+- AFXDAO/CDaoWorkspace::GetDatabaseCount
+- AFXDAO/CDaoWorkspace::GetDatabaseInfo
+- AFXDAO/CDaoWorkspace::GetIniPath
+- AFXDAO/CDaoWorkspace::GetIsolateODBCTrans
+- AFXDAO/CDaoWorkspace::GetLoginTimeout
+- AFXDAO/CDaoWorkspace::GetName
+- AFXDAO/CDaoWorkspace::GetUserName
+- AFXDAO/CDaoWorkspace::GetVersion
+- AFXDAO/CDaoWorkspace::GetWorkspaceCount
+- AFXDAO/CDaoWorkspace::GetWorkspaceInfo
+- AFXDAO/CDaoWorkspace::Idle
+- AFXDAO/CDaoWorkspace::IsOpen
+- AFXDAO/CDaoWorkspace::Open
+- AFXDAO/CDaoWorkspace::RepairDatabase
+- AFXDAO/CDaoWorkspace::Rollback
+- AFXDAO/CDaoWorkspace::SetDefaultPassword
+- AFXDAO/CDaoWorkspace::SetDefaultUser
+- AFXDAO/CDaoWorkspace::SetIniPath
+- AFXDAO/CDaoWorkspace::SetIsolateODBCTrans
+- AFXDAO/CDaoWorkspace::SetLoginTimeout
+- AFXDAO/CDaoWorkspace::m_pDAOWorkspace
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -173,7 +202,7 @@ class CDaoWorkspace : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-nameappenda--cdaoworkspaceappend"></a><a name="append"></a>CDaoWorkspace::Append  
+##  <a name="append"></a>CDaoWorkspace::Append  
  이 멤버 함수를 호출한 후에 호출 [만들기](#create)합니다.  
   
 ```  
@@ -187,7 +216,7 @@ virtual void Append();
   
  관련된 내용은 DAO 도움말의 "추가 방법" 항목을 참조 합니다.  
   
-##  <a name="a-namebegintransa--cdaoworkspacebegintrans"></a><a name="begintrans"></a>CDaoWorkspace::BeginTrans  
+##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans  
  트랜잭션을 시작 하도록이 함수를 호출 합니다.  
   
 ```  
@@ -205,7 +234,7 @@ void BeginTrans();
   
  다른 ODBC 데이터 원본에 있는 하나의 ODBC 데이터 원본에 대 한 트랜잭션을 격리 하는 경우 참조는 [SetIsolateODBCTrans](#setisolateodbctrans) 멤버 함수입니다.  
   
-##  <a name="a-namecdaoworkspacea--cdaoworkspacecdaoworkspace"></a><a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
+##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
  `CDaoWorkspace` 개체를 생성합니다.  
   
 ```  
@@ -223,7 +252,7 @@ CDaoWorkspace();
   
  작업 영역 및 포함 된 개체를 해제 하려면 workspace 개체 호출 [닫기](#close) 멤버 함수입니다.  
   
-##  <a name="a-nameclosea--cdaoworkspaceclose"></a><a name="close"></a>CDaoWorkspace::Close  
+##  <a name="close"></a>CDaoWorkspace::Close  
  이 작업 영역 개체를 닫는 함수를 호출 합니다.  
   
 ```  
@@ -240,7 +269,7 @@ virtual void Close();
   
  관련된 정보에 대 한 "Close 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namecommittransa--cdaoworkspacecommittrans"></a><a name="committrans"></a>CDaoWorkspace::CommitTrans  
+##  <a name="committrans"></a>CDaoWorkspace::CommitTrans  
  트랜잭션이 커밋되는이 함수를 호출-그룹을 편집 하 고 업데이트 작업 영역에서 하나 이상의 데이터베이스에 저장 합니다.  
   
 ```  
@@ -258,7 +287,7 @@ void CommitTrans();
 > [!NOTE]
 >  이&2; 단계 커밋 메커니즘이 아닙니다. 한 번의 업데이트 커밋에 실패 하는 경우 다른 여전히을 커밋합니다.  
   
-##  <a name="a-namecompactdatabasea--cdaoworkspacecompactdatabase"></a><a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
+##  <a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
  지정 된 Microsoft Jet를 압축 하려면이 멤버 함수 호출 (합니다. MDB) 데이터베이스입니다.  
   
 ```  
@@ -351,7 +380,7 @@ static void PASCAL CompactDatabase(
   
  데이터베이스를 압축 하는 방법에 대 한 자세한 내용은 DAO 도움말의 "CompactDatabase 메서드" 항목을 참조 합니다.  
   
-##  <a name="a-namecreatea--cdaoworkspacecreate"></a><a name="create"></a>CDaoWorkspace::Create  
+##  <a name="create"></a>CDaoWorkspace::Create  
  새 DAO workspace 개체를 만들고 MFC와 연결 하려면이 멤버 함수를 호출 `CDaoWorkspace` 개체입니다.  
   
 ```  
@@ -382,7 +411,7 @@ virtual void Create(
   
  이후에 **만들기** 호출 workspace 개체 열린 상태를 사용할 준비가 됩니다. 호출 하지 않으면 **열려** 후 **만들기**합니다. 호출 하지 않으면 **만들기** 작업 영역 Workspaces 컬렉션에 이미 있는 경우. **만들** 이미 응용 프로그램에 대 한 초기화 되지 않은 경우 데이터베이스 엔진을 초기화 합니다.  
   
-##  <a name="a-namegetdatabasecounta--cdaoworkspacegetdatabasecount"></a><a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
+##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
  작업 영역 데이터베이스 컬렉션에서 DAO 데이터베이스 개체의 수를 검색 하려면이 멤버 함수를 호출 합니다.-작업 영역에서 열려 있는 데이터베이스의 수입니다.  
   
 ```  
@@ -395,7 +424,7 @@ short GetDatabaseCount();
 ### <a name="remarks"></a>주의  
  `GetDatabaseCount`루프의 작업 영역 데이터베이스 컬렉션에 정의 된 모든 데이터베이스를 실행 하는 경우 유용 합니다. 컬렉션에서 지정된 된 데이터베이스에 대 한 정보를 얻으려면 참조 [GetDatabaseInfo](#getdatabaseinfo)합니다. 일반적인 사용법은 호출 `GetDatabaseCount` 열려 있는 데이터베이스 수에 대 한 다음 해당 번호를 사용으로 루프 인덱스에 대 한 반복된 호출 `GetDatabaseInfo`합니다.  
   
-##  <a name="a-namegetdatabaseinfoa--cdaoworkspacegetdatabaseinfo"></a><a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
+##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
  다양 한 종류의 작업 영역 데이터베이스를 열에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -435,7 +464,7 @@ void GetDatabaseInfo(
   
  반환 되는 정보에 대 한 `dbinfo`, 참조는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에서 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청도 모든 이전 수준에 대 한 정보를 얻을 수 있습니다.  
   
-##  <a name="a-namegetinipatha--cdaoworkspacegetinipath"></a><a name="getinipath"></a>CDaoWorkspace::GetIniPath  
+##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath  
  Windows 레지스트리에 엔진의 초기화 설정을 Microsoft Jet 데이터베이스의 위치를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -450,7 +479,7 @@ static CString PASCAL GetIniPath();
   
  관련된 정보에 대 한 "IniPath 속성" 및 "사용자 지정 Windows 레지스트리 설정에 대 한 데이터 액세스" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namegetisolateodbctransa--cdaoworkspacegetisolateodbctrans"></a><a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
+##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
  작업 영역에 대 한 DAO IsolateODBCTrans 속성의 현재 값을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -467,7 +496,7 @@ BOOL GetIsolateODBCTrans();
   
  관련된 내용은 DAO 도움말에서 "IsolateODBCTrans 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetlogintimeouta--cdaoworkspacegetlogintimeout"></a><a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
+##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
  작업 영역에 대 한 DAO LoginTimeout 속성의 현재 값을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -484,7 +513,7 @@ static short PASCAL GetLoginTimeout();
   
  관련된 내용은 DAO 도움말에서 "LoginTimeout 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetnamea--cdaoworkspacegetname"></a><a name="getname"></a>CDaoWorkspace::GetName  
+##  <a name="getname"></a>CDaoWorkspace::GetName  
  DAO 작업 영역 개체 내부의 사용자 정의 이름을 가져오려면이 함수를 호출의 `CDaoWorkspace` 개체입니다.  
   
 ```  
@@ -499,7 +528,7 @@ CString GetName();
   
  관련된 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetusernamea--cdaoworkspacegetusername"></a><a name="getusername"></a>CDaoWorkspace::GetUserName  
+##  <a name="getusername"></a>CDaoWorkspace::GetUserName  
  작업 영역의 소유자의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -514,7 +543,7 @@ CString GetUserName();
   
  DAO 호출 하는 방법에 대 한 정보에 대 한 참조를 직접 [기술 참고 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)합니다. 관련된 내용은 DAO 도움말의 "UserName 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetversiona--cdaoworkspacegetversion"></a><a name="getversion"></a>CDaoWorkspace::GetVersion  
+##  <a name="getversion"></a>CDaoWorkspace::GetVersion  
  사용 중인 Microsoft Jet 데이터베이스 엔진의 버전을 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -529,7 +558,7 @@ static CString PASCAL GetVersion();
   
  관련된 내용은 DAO 도움말의 "Version 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetworkspacecounta--cdaoworkspacegetworkspacecount"></a><a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
+##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
  DAO 데이터베이스 엔진의 작업 영역 컬렉션 작업 영역 개체의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -542,7 +571,7 @@ short GetWorkspaceCount();
 ### <a name="remarks"></a>주의  
  이 개수는 열린 작업 영역 컬렉션에 추가 되지 포함 되지 않습니다. `GetWorkspaceCount`작업 영역 컬렉션에 정의 된 모든 작업 영역을 반복 하는 경우 유용 합니다. 컬렉션에서 지정된 된 작업 영역에 대 한 정보를 얻으려면 참조 [GetWorkspaceInfo](#getworkspaceinfo)합니다. 일반적인 사용법은 호출 `GetWorkspaceCount` 열기 작업 영역 수에 대 한 다음 해당 번호를 사용으로 루프 인덱스에 대 한 반복된 호출 `GetWorkspaceInfo`합니다.  
   
-##  <a name="a-namegetworkspaceinfoa--cdaoworkspacegetworkspaceinfo"></a><a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
+##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
  다양 한 종류의 세션에서 작업 영역 열기에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -580,7 +609,7 @@ void GetWorkspaceInfo(
 ### <a name="remarks"></a>주의  
  반환 되는 정보에 대 한 `wkspcinfo`, 참조는 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에서 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청도 이전 수준에 대 한 정보를 얻을 수 있습니다.  
   
-##  <a name="a-nameidlea--cdaoworkspaceidle"></a><a name="idle"></a>CDaoWorkspace::Idle  
+##  <a name="idle"></a>CDaoWorkspace::Idle  
  호출 **Idle** 에 제공 하기 위해 데이터베이스 엔진 집중적인 데이터 처리로 인해 최신 상태가 아닐 수 있는 백그라운드 작업을 수행할 수 있습니다.  
   
 ```  
@@ -603,7 +632,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
   
  관련된 내용은 DAO 도움말의 "유휴 Method" 항목을 참조 합니다.  
   
-##  <a name="a-nameisopena--cdaoworkspaceisopen"></a><a name="isopen"></a>CDaoWorkspace::IsOpen  
+##  <a name="isopen"></a>CDaoWorkspace::IsOpen  
  확인 하려면이 함수를 호출 여부는 `CDaoWorkspace` 개체가 열려-즉, 여부 MFC 개체에 의해 초기화에 대 한 호출 [열고](#open) 호출이 나 [만들기](#create)합니다.  
   
 ```  
@@ -616,7 +645,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>주의  
  함수를 호출할 수는 멤버의 모든 열린 상태에 있는 작업 영역입니다.  
   
-##  <a name="a-namempdaoworkspacea--cdaoworkspacempdaoworkspace"></a><a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
+##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
  기본 DAO workspace 개체에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>주의  
@@ -624,7 +653,7 @@ BOOL IsOpen() const;
   
  DAO 개체에 직접 액세스 하는 방법에 대 한 정보를 참조 하십시오. [기술 참고 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)합니다.  
   
-##  <a name="a-nameopena--cdaoworkspaceopen"></a><a name="open"></a>CDaoWorkspace::Open  
+##  <a name="open"></a>CDaoWorkspace::Open  
  DAO의 기본 작업 영역과 관련 된 workspace 개체를 명시적으로 열립니다.  
   
 ```  
@@ -652,7 +681,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 |[GetIniPath](#getinipath)|[유휴 상태](#idle)|[SetIniPath](#setinipath)|  
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|  
   
-##  <a name="a-namerepairdatabasea--cdaoworkspacerepairdatabase"></a><a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
+##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
  Microsoft Jet 데이터베이스 엔진에 액세스 하는 손상된 된 데이터베이스 복구를 시도 하는 경우이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -673,7 +702,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
   
  데이터베이스를 복구 하는 방법에 대 한 자세한 내용은 DAO 도움말의 "방법 것 이었습니다" 항목을 참조 합니다.  
   
-##  <a name="a-namerollbacka--cdaoworkspacerollback"></a><a name="rollback"></a>CDaoWorkspace::Rollback  
+##  <a name="rollback"></a>CDaoWorkspace::Rollback  
  현재 트랜잭션을 종료 하 고 트랜잭션을 시작 하기 전에 해당 상태를 작업 영역에서 모든 데이터베이스를 복원 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -690,7 +719,7 @@ void Rollback();
 > [!NOTE]
 >  트랜잭션을 시작 하면 데이터베이스 엔진 워크스테이션에서 TEMP 환경 변수로 지정 된 디렉터리에 보관 파일에서 해당 작업을 기록 합니다. 임시 드라이브에 사용 가능한 저장소를 소모 하는 트랜잭션 로그 파일을 하는 경우 데이터베이스 엔진 MFC를 throw 하면는 `CDaoException` (DAO 오류 2004). 이 시점에서 호출 하는 경우 **CommitTrans**, 무제한 작업으로 커밋됩니다 하지만 나머지 완료 되지 않은 작업이 손실 되 고 작업에 다시 시작 해야 합니다. 호출 **롤백** 트랜잭션 로그를 해제 하 고 트랜잭션의 모든 작업이 롤백됩니다.  
   
-##  <a name="a-namesetdefaultpassworda--cdaoworkspacesetdefaultpassword"></a><a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
+##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
  특정 암호 없이 workspace 개체를 만들 때 데이터베이스 엔진에 사용 되는 기본 암호를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -716,7 +745,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  보안에 대 한 자세한 DAO 도움말의 "권한 속성" 항목을 참조 하십시오. 관련된 정보에 대 한 "해야 속성" 및 "DefaultUser 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namesetdefaultusera--cdaoworkspacesetdefaultuser"></a><a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
+##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
  특정 사용자 이름 없이 workspace 개체를 만들 때 데이터베이스 엔진에 사용 되는 기본 사용자 이름을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -742,7 +771,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  관련된 정보에 대 한 "DefaultUser" 속성과 "해야 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namesetinipatha--cdaoworkspacesetinipath"></a><a name="setinipath"></a>CDaoWorkspace::SetIniPath  
+##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath  
  Microsoft Jet 데이터베이스 엔진에 대 한 Windows 레지스트리 설정의 위치를 지정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -761,7 +790,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
   
  사용자가 제공한 레지스트리 설정을 사용 하 여 데이터베이스 엔진을 구성 하 여이 메커니즘을 사용할 수 있습니다. 이 특성의 범위는 응용 프로그램으로 제한 되며 응용 프로그램을 다시 시작 하지 않고 변경할 수 없습니다.  
   
-##  <a name="a-namesetisolateodbctransa--cdaoworkspacesetisolateodbctrans"></a><a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
+##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
  작업 영역에 대 한 DAO IsolateODBCTrans 속성의 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -777,7 +806,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
   
  Microsoft SQL Server와 같은 일부 ODBC 서버는 단일 연결에서 동시 트랜잭션을 허용 하지 않습니다. 이러한 데이터베이스에 대해 보류 중인 한 번에 둘 이상의 트랜잭션이 마련해 야 하는 경우 IsolateODBCTrans 속성을 설정 **TRUE** 열어야 하는 즉시 각 작업 영역에 있습니다. 이렇게 하면 각 작업 영역에 대 한 별도 ODBC 연결 됩니다.  
   
-##  <a name="a-namesetlogintimeouta--cdaoworkspacesetlogintimeout"></a><a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
  작업 영역에 대 한 DAO LoginTimeout 속성의 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

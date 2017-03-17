@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationValue
 - CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetVariable
+- AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationValue::m_value
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +106,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>CAnimationValue::AddTransition  
  값에 적용할에 전환을 추가 합니다.  
   
 ```  
@@ -113,7 +120,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>주의  
  애니메이션 변수를 적용할 수는 전환의 내부 목록에 전환을 추가 하려면이 함수를 호출 합니다. 전환에 추가 되지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우.  
   
-##  <a name="a-namecanimationvaluea--canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
  CAnimationValue 개체를 만듭니다.  
   
 ```  
@@ -143,7 +150,7 @@ CAnimationValue(
 ### <a name="remarks"></a>주의  
  기본 속성으로 CAnimationValue 개체를 생성 합니다: 기본 값, 그룹 ID 및 개체 ID는 0으로 설정 됩니다.  
   
-##  <a name="a-namegetanimationvariablelista--canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
  목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
   
 ```  
@@ -156,7 +163,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  함수가 반환 될 때 애니메이션된 값을 나타내는 CAnimationVariable에 대 한 포인터를 포함 합니다.  
   
-##  <a name="a-namegetvaluea--canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>CAnimationValue::GetValue  
  현재 값을 검색 합니다.  
   
 ```  
@@ -177,7 +184,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>주의  
  현재 값을 검색 하려면이 함수를 호출 합니다. 이 구현에서는 캡슐화 된 COM 개체를 호출 하 고 호출이 실패 한 경우이 메서드 또는 SetDefaultValue 생성자에서 이전에 설정 된 기본 값을 반환 합니다.  
   
-##  <a name="a-namegetvariablea--canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>CAnimationValue::GetVariable  
  캡슐화 된 애니메이션 변수에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -190,14 +197,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 캡슐화 된 애니메이션 변수에 액세스 합니다. CAnimationVariable에서 애니메이션 변수의 생성 되지 않은 경우 해당 포인터가 NULL이 될 수 기본 IUIAnimationVariable 개체에 액세스할 수 있게 합니다.  
   
-##  <a name="a-namemvaluea--canimationvaluemvalue"></a><a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>CAnimationValue::m_value  
  캡슐화 된 애니메이션 변수를 애니메이션 값을 나타냅니다.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="a-nameoperatordoublea--canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operator DOUBLE  
+##  <a name="operator_double"></a>CAnimationValue::operator DOUBLE  
  CAnimationValue 및 DOUBLE 간의 변환을 제공합니다.  
   
 ```  
@@ -210,7 +217,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>주의  
  CAnimationValue 및 DOUBLE 간의 변환을 제공합니다. 이 메서드는 내부적으로 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
   
-##  <a name="a-nameoperatorint32a--canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
  INT32 CAnimationValue 사이의 변환을 제공합니다.  
   
 ```  
@@ -223,7 +230,7 @@ operator INT32();
 ### <a name="remarks"></a>주의  
  INT32 CAnimationValue 사이의 변환을 제공합니다. 이 메서드는 내부적으로 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
   
-##  <a name="a-nameoperatoreqa--canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>CAnimationValue::operator =  
  CAnimationValue에 DOUBLE 값을 할당합니다.  
   
 ```  
@@ -241,7 +248,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>주의  
  CAnimationValue에 DOUBLE 값을 할당합니다. 이 값은 캡슐화 된 애니메이션 변수를 기본값으로 설정 됩니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
   
-##  <a name="a-namesetdefaultvaluea--canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
  기본값을 설정합니다.  
   
 ```  

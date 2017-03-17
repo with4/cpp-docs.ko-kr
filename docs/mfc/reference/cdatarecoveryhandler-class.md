@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveAllDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::CreateDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAllAutosavedFiles
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAutosavedFile
+- AFXDATARECOVERY/CDataRecoveryHandler::GenerateAutosaveFileName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::GetDocumentListName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetNormalDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRecoveredDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::GetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::Initialize
+- AFXDATARECOVERY/CDataRecoveryHandler::QueryRestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::ReadOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::RemoveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::ReopenPreviousDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::RestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::SaveOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::SetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::SetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::SetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::UpdateDocumentInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +148,7 @@ class CDataRecoveryHandler : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdatarecovery.h  
   
-##  <a name="a-nameautosavealldocumentinfoa--cdatarecoveryhandlerautosavealldocumentinfo"></a><a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
+##  <a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
  각 파일에 등록 하는 자동으로 저장 된 `CDataRecoveryHandler` 클래스입니다.  
   
 ```  
@@ -134,7 +163,7 @@ virtual BOOL AutosaveAllDocumentInfo();
   
  하거나이 메서드를 사용 하 여 `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` 또는 `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL` 에 설정 되어 있어야 `m_dwRestartManagerSupportFlags`합니다. 참조 [m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) 에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameautosavedocumentinfoa--cdatarecoveryhandlerautosavedocumentinfo"></a><a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
+##  <a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
  지정된 된 문서에 자동으로 저장 합니다.  
   
 ```  
@@ -164,7 +193,7 @@ virtual BOOL AutosaveDocumentInfo(
   
  하거나이 메서드를 사용 하 여 `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` 또는 `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` 에 설정 되어 있어야 `m_dwRestartManagerSupportFlags`합니다.   
   
-##  <a name="a-namecdatarecoveryhandlera--cdatarecoveryhandlercdatarecoveryhandler"></a><a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
+##  <a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
  `CDataRecoveryHandler` 개체를 생성합니다.  
   
 ```  
@@ -185,7 +214,7 @@ CDataRecoveryHandler(
  MFC 프레임 워크는 자동으로 만들고는 `CDataRecoveryHandler` 사용 하는 경우 응용 프로그램에 대 한 개체는 **새 프로젝트** 마법사. 데이터 복구 동작 또는 다시 시작 관리자를 사용자 지정 하려는 경우가 아니면 만들면 안 한 `CDataRecoveryHandler` 개체입니다.  
   
   
-##  <a name="a-namecreatedocumentinfoa--cdatarecoveryhandlercreatedocumentinfo"></a><a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
+##  <a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
  열려 있는 문서의 목록에 문서를 추가합니다.  
   
 ```  
@@ -207,7 +236,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
   
  하거나이 메서드를 사용 하 여 `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` 또는 `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` 에 설정 되어 있어야 `m_dwRestartManagerSupportFlags`합니다. 
   
-##  <a name="a-namedeleteallautosavedfilesa--cdatarecoveryhandlerdeleteallautosavedfiles"></a><a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
+##  <a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
  현재 자동 저장 된 파일을 모두 삭제 합니다.  
   
 ```  
@@ -217,7 +246,7 @@ virtual BOOL DeleteAllAutosavedFiles();
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 반환 `TRUE`합니다.  
   
-##  <a name="a-namedeleteautosavedfilea--cdatarecoveryhandlerdeleteautosavedfile"></a><a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
+##  <a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
  지정 된 자동 저장 된 파일을 삭제합니다.  
   
 ```  
@@ -237,7 +266,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 ### <a name="remarks"></a>주의  
  이 메서드는 자동 저장 된 파일을 삭제할 수 없으면 파일의 이름을 목록에 저장 합니다. 에 대 한 소멸자는 `CDataRecoveryHandler` 해당 목록에 지정 된 각 자동 저장 된 파일을 삭제 하려고 합니다.  
   
-##  <a name="a-namegenerateautosavefilenamea--cdatarecoveryhandlergenerateautosavefilename"></a><a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
+##  <a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
  제공 된 문서 파일 이름에 연결 된 자동 저장 파일 이름을 생성 합니다.  
   
 ```  
@@ -254,7 +283,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ### <a name="remarks"></a>주의  
  각 문서 이름에 자동 저장 파일 이름의 일대일 매핑이 있습니다.  
   
-##  <a name="a-namegetautosaveintervala--cdatarecoveryhandlergetautosaveinterval"></a><a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
+##  <a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
  자동 저장 시도 사이의 간격을 반환합니다.  
   
 ```  
@@ -264,7 +293,7 @@ virtual int GetAutosaveInterval() const;
 ### <a name="return-value"></a>반환 값  
  자동 저장 간격 (밀리초)의 수를 가져오려고 시도합니다.  
   
-##  <a name="a-namegetautosavepatha--cdatarecoveryhandlergetautosavepath"></a><a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
+##  <a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
  자동 저장 된 파일의 경로 반환합니다.  
   
 ```  
@@ -274,7 +303,7 @@ virtual CString GetAutosavePath() const;
 ### <a name="return-value"></a>반환 값  
  자동 저장 된 문서를 저장할 위치입니다.  
   
-##  <a name="a-namegetdocumentlistnamea--cdatarecoveryhandlergetdocumentlistname"></a><a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
+##  <a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
  문서 이름을 검색 한 `CDocument` 개체입니다.  
   
 ```  
@@ -294,7 +323,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 ### <a name="remarks"></a>주의  
  `CDataRecoveryHandler` 문서 이름을 키로 사용 하 여 `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, 및 `m_mapDocNameToRestoreBool`합니다. 이러한 매개 변수를 사용 하도록 설정 된 `CDataRecoveryHandler` 모니터링할 `CDocument` 개체, 자동 저장 파일 이름 및 자동 저장 설정 합니다.  
   
-##  <a name="a-namegetnormaldocumenttitlea--cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
+##  <a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
  지정된 된 문서에 대 한 일반 제목을 검색합니다.  
   
 ```  
@@ -314,7 +343,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 ### <a name="remarks"></a>주의  
  기본 문서 제목은 일반적으로 경로 없이 문서의 파일 이름입니다. 이 제목에는 **파일 이름** 필드는 **다른 이름으로 저장** 대화 상자.  
   
-##  <a name="a-namegetrecovereddocumenttitlea--cdatarecoveryhandlergetrecovereddocumenttitle"></a><a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
+##  <a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
  만들고 복구 된 문서의 제목을 반환 합니다.  
   
 ```  
@@ -331,7 +360,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ### <a name="remarks"></a>주의  
  기본적으로 복구 된 문서 제목은 일반적인 제목을 **[복구]** 추가 되어 있습니다. 사용자에 게 복구 된 제목이 표시 되는지 때는 `CDataRecoveryHandler` 자동 저장 된 문서를 복원 하려면 사용자를 쿼리 합니다.  
   
-##  <a name="a-namegetrestartidentifiera--cdatarecoveryhandlergetrestartidentifier"></a><a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
+##  <a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
  응용 프로그램에 대 한 다시 시작 고유 식별자를 검색합니다.  
   
 ```  
@@ -346,7 +375,7 @@ virtual CString GetRestartIdentifier() const;
   
  `CDataRecoveryHandler` 정보를 현재 열려 있는 문서에 대 한 레지스트리에 저장 합니다. 다시 시작 식별자를 제공 하면 응용 프로그램을 종료 하 고 다시 시작 하는 다시 시작 관리자를는 `CDataRecoveryHandler`합니다. `CDataRecoveryHandler` 다시 시작 식별자를 사용 하 여 이전에 열려 있는 문서의 목록을 검색할 수 있습니다. 이 통해는 `CDataRecoveryHandler` 찾기 및 자동 저장 된 파일을 복원 하려고 합니다.  
   
-##  <a name="a-namegetsavedocumentinfoonidlea--cdatarecoveryhandlergetsavedocumentinfoonidle"></a><a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
+##  <a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
  나타냅니다 여부는 `CDataRecoveryHandler` 현재 유휴 상태 루프에 대해 자동 저장을 수행 합니다.  
   
 ```  
@@ -356,7 +385,7 @@ virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`나타냅니다는 `CDataRecoveryHandler` 현재 유휴 상태 루프에 자동으로 저장 `FALSE` 없는 나타냅니다.  
   
-##  <a name="a-namegetshutdownbyrestartmanagera--cdatarecoveryhandlergetshutdownbyrestartmanager"></a><a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
+##  <a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
  다시 시작 관리자를 종료 하려면 응용 프로그램으로 인해 있는지 여부를 나타냅니다.  
   
 ```  
@@ -366,7 +395,7 @@ virtual BOOL GetShutdownByRestartManager() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`다시 시작 관리자를 종료 합니다; 응용 프로그램으로 인해 나타냅니다. `FALSE` 하지 않았을 나타냅니다.  
   
-##  <a name="a-nameinitializea--cdatarecoveryhandlerinitialize"></a><a name="initialize"></a>CDataRecoveryHandler::Initialize  
+##  <a name="initialize"></a>CDataRecoveryHandler::Initialize  
  `CDataRecoveryHandler` 을(를) 초기화합니다.  
   
 ```  
@@ -383,7 +412,7 @@ virtual BOOL Initialize();
   
  `Initialize` 메서드는 또한 다음 자동 저장을 수행 하는 경우를 모니터링할 타이머를 시작 합니다. 사용 하 여 [CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) 응용 프로그램 초기화 한 후 자동 저장 간격을 변경 하는 `CDataRecoveryHandler`합니다.  
   
-##  <a name="a-namequeryrestoreautosaveddocumentsa--cdatarecoveryhandlerqueryrestoreautosaveddocuments"></a><a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
+##  <a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
  대화 상자를 사용자에 게 표시 하는 각 문서는 `CDataRecoveryHandler` 자동 저장 합니다. 대화 상자 자동 저장 된 문서를 복원 하는 사용자가 있는지 여부를 결정 합니다.  
   
 ```  
@@ -395,7 +424,7 @@ virtual void QueryRestoreAutosavedDocuments();
   
  후 `QueryRestoreAutosavedDocuments` 모든 응답을 수집 하는 사용자의 멤버 변수에서 정보를 저장 `m_mapDocNameToRestoreBool`합니다. 이 메서드는 자동 저장 된 문서를 복원 하지 않습니다.  
   
-##  <a name="a-namereadopendocumentlista--cdatarecoveryhandlerreadopendocumentlist"></a><a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
+##  <a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
  레지스트리에서 열려 있는 문서 목록을 로드합니다.  
   
 ```  
@@ -410,7 +439,7 @@ virtual BOOL ReadOpenDocumentList();
   
  후 `ReadOpenDocumentList` 모든 데이터를 로드 레지스트리의 문서 정보를 삭제 합니다.  
   
-##  <a name="a-nameremovedocumentinfoa--cdatarecoveryhandlerremovedocumentinfo"></a><a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
+##  <a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
  열려 있는 문서 목록에서 제공된 된 문서를 제거합니다.  
   
 ```  
@@ -434,7 +463,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
   
  이 메서드를 사용 하 여 `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` 에 설정 되어 있어야 `m_dwRestartManagerSupportFlags`합니다.   
   
-##  <a name="a-namereopenpreviousdocumentsa--cdatarecoveryhandlerreopenpreviousdocuments"></a><a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
+##  <a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
  이전에 열려 있는 문서를 엽니다.  
   
 ```  
@@ -451,7 +480,7 @@ virtual BOOL ReopenPreviousDocuments();
   
  이전에 열려 있는 문서의 목록에 저장 된 문서가 없는 경우 `ReopenPreviousDocuments` 없으며 반환 `FALSE`합니다.  
   
-##  <a name="a-namerestoreautosaveddocumentsa--cdatarecoveryhandlerrestoreautosaveddocuments"></a><a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
+##  <a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
  사용자 입력에 따라 자동 저장 된 문서를 복원 합니다.  
   
 ```  
@@ -466,7 +495,7 @@ virtual BOOL RestoreAutosavedDocuments();
   
  하거나이 메서드를 사용 하 여 `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` 또는 `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES` 에 설정 되어 있어야 `m_dwRestartManagerSupportFlags`합니다.   
   
-##  <a name="a-namesaveopendocumentlista--cdatarecoveryhandlersaveopendocumentlist"></a><a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
+##  <a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
  열려 있는 문서의 현재 목록을 Windows 레지스트리에 저장합니다.  
   
 ```  
@@ -481,7 +510,7 @@ virtual BOOL SaveOpenDocumentList();
   
  이 메서드는 열려 있는 문서의 목록만 저장합니다. 메서드가 [CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo) 는 문서 자체를 저장 해야 합니다.  
   
-##  <a name="a-namesetautosaveintervala--cdatarecoveryhandlersetautosaveinterval"></a><a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
+##  <a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
  밀리초 단위로 자동 저장 주기 사이의 시간을 설정 합니다.  
   
 ```  
@@ -492,7 +521,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
  [in] `nAutosaveInterval`  
  자동 저장 간격 (밀리초) 새 값입니다.  
   
-##  <a name="a-namesetautosavepatha--cdatarecoveryhandlersetautosavepath"></a><a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
+##  <a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
  자동 저장 된 파일을 저장할 디렉터리를 설정 합니다.  
   
 ```  
@@ -509,7 +538,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 ### <a name="remarks"></a>주의  
  자동 저장 디렉터리를 변경 해도 현재 자동 저장 된 파일입니다.  
   
-##  <a name="a-namesetrestartidentifiera--cdatarecoveryhandlersetrestartidentifier"></a><a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
+##  <a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
  이 인스턴스에 대 한 다시 시작 고유 식별자를 설정 하는 `CDataRecoveryHandler`합니다.  
   
 ```  
@@ -526,7 +555,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 ### <a name="remarks"></a>주의  
  다시 시작 관리자 레지스트리에 열려 있는 문서에 대 한 정보를 기록합니다. 이 정보는 키로 다시 시작 고유 식별자와 함께 저장 됩니다. 다시 시작 식별자가 응용 프로그램의 각 인스턴스에 대해 고유 하므로 응용 프로그램의 여러 인스턴스가 예기치 않게 종료 될 수 있습니다 및 다시 시작 관리자는 각각의 복구할 수 있습니다.  
   
-##  <a name="a-namesetsavedocumentinfoonidlea--cdatarecoveryhandlersetsavedocumentinfoonidle"></a><a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
+##  <a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
  설정 여부는 `CDataRecoveryHandler` 현재 유휴 주기 동안 Windows 레지스트리에 열려 있는 문서 정보를 저장 합니다.  
   
 ```  
@@ -540,7 +569,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |매개 변수|설명|  
 |[in] `bSaveOnIdle`|`TRUE`현재 유휴 주기; 동안 문서 정보를 저장 하려면 `FALSE to not perform a save`.|  
   
-##  <a name="a-namesetshutdownbyrestartmanagera--cdatarecoveryhandlersetshutdownbyrestartmanager"></a><a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
+##  <a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
  다시 시작 관리자에 의해 발생 한 응용 프로그램의 이전 종료 여부를 설정 합니다.  
   
 ```  
@@ -557,7 +586,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 ### <a name="remarks"></a>주의  
  프레임 워크는 이전 종료 예기치 않은 여부 또는 다시 시작 관리자가 초기화 되었는지 여부에 따라 다르게 동작 합니다.  
   
-##  <a name="a-nameupdatedocumentinfoa--cdatarecoveryhandlerupdatedocumentinfo"></a><a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
+##  <a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
  사용자를 저장 하기 때문에 문서에 대 한 정보를 업데이트 합니다.  
   
 ```  

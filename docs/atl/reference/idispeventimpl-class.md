@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::GetFuncInfoFromId
+- ATLCOM/ATL::IDispEventImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +142,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetfuncinfofromida--idispeventimplgetfuncinfofromid"></a><a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
+##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
  지정된 된 디스패치 식별자에 대 한 함수 인덱스를 찾습니다.  
   
 ```
@@ -162,7 +169,7 @@ HRESULT GetFuncInfoFromId(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namegetidsofnamesa--idispeventimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
  단일 멤버와 선택적 인수 이름 집합에 대 한 후속 호출에 사용할 수 있는 Dispid 정수의 해당 집합에 매핑합니다 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
   
 ```
@@ -177,7 +184,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettypeinfoa--idispeventimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  인터페이스의 형식 정보를 가져오는 데 사용할 수 있는 개체의 형식 정보를 검색합니다.  
   
 ```
@@ -189,7 +196,7 @@ STDMETHOD(GetTypeInfo)(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettypeinfocounta--idispeventimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
  개체에서 제공하는 형식 정보 인터페이스의 수를 검색합니다(0 또는 1).  
   
 ```
@@ -199,7 +206,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetuserdefinedtypea--idispeventimplgetuserdefinedtype"></a><a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
+##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  사용자 정의 형식의 기본 형식을 검색합니다.  
   
 ```
@@ -221,14 +228,14 @@ VARTYPE GetUserDefinedType(
 ### <a name="remarks"></a>주의  
  참조 [ITypeInfo::GetRefTypeInfo](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00)합니다.  
   
-##  <a name="a-nameidispeventimpla--idispeventimplidispeventimpl"></a><a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
+##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
  생성자입니다. 클래스 템플릿 매개 변수 값을 저장 `plibid`, `pdiid`, `wMajor`, 및 `wMinor`합니다.  
   
 ```
 IDispEventImpl();
 ```  
   
-##  <a name="a-nametihclassa--idispeventimpltihclass"></a><a name="tihclass"></a>IDispEventImpl::tihclass  
+##  <a name="tihclass"></a>IDispEventImpl::tihclass  
  이 형식 정의 클래스 템플릿 매개 변수 인스턴스의 `tihclass`합니다.  
   
 ```

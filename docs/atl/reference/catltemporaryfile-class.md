@@ -10,8 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlTemporaryFile
-- ATL.CAtlTemporaryFile
-- ATL::CAtlTemporaryFile
+- ATLFILE/ATL::CAtlTemporaryFile
+- ATLFILE/ATL::CAtlTemporaryFile::CAtlTemporaryFile
+- ATLFILE/ATL::CAtlTemporaryFile::Close
+- ATLFILE/ATL::CAtlTemporaryFile::Create
+- ATLFILE/ATL::CAtlTemporaryFile::Flush
+- ATLFILE/ATL::CAtlTemporaryFile::GetPosition
+- ATLFILE/ATL::CAtlTemporaryFile::GetSize
+- ATLFILE/ATL::CAtlTemporaryFile::HandsOff
+- ATLFILE/ATL::CAtlTemporaryFile::HandsOn
+- ATLFILE/ATL::CAtlTemporaryFile::LockRange
+- ATLFILE/ATL::CAtlTemporaryFile::Read
+- ATLFILE/ATL::CAtlTemporaryFile::Seek
+- ATLFILE/ATL::CAtlTemporaryFile::SetSize
+- ATLFILE/ATL::CAtlTemporaryFile::TempFileName
+- ATLFILE/ATL::CAtlTemporaryFile::UnlockRange
+- ATLFILE/ATL::CAtlTemporaryFile::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +110,7 @@ class CAtlTemporaryFile
 ## <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-namecatltemporaryfilea--catltemporaryfilecatltemporaryfile"></a><a name="catltemporaryfile"></a>CAtlTemporaryFile::CAtlTemporaryFile  
+##  <a name="catltemporaryfile"></a>CAtlTemporaryFile::CAtlTemporaryFile  
  생성자입니다.  
   
 ```
@@ -109,7 +123,7 @@ CAtlTemporaryFile() throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&73;](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
   
-##  <a name="a-namedtora--catltemporaryfilecatltemporaryfile"></a><a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile  
+##  <a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile  
  소멸자입니다.  
   
 ```
@@ -119,7 +133,7 @@ CAtlTemporaryFile() throw();
 ### <a name="remarks"></a>주의  
  소멸자를 호출 하 여 [CAtlTemporaryFile::Close](#close)합니다.  
   
-##  <a name="a-nameclosea--catltemporaryfileclose"></a><a name="close"></a>CAtlTemporaryFile::Close  
+##  <a name="close"></a>CAtlTemporaryFile::Close  
  임시 파일을 닫으려면이 메서드를 호출 하 고 해당 내용을 삭제 하거나 또는 지정 된 파일 이름으로 저장 합니다.  
   
 ```
@@ -136,7 +150,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-namecreatea--catltemporaryfilecreate"></a><a name="create"></a>CAtlTemporaryFile::Create  
+##  <a name="create"></a>CAtlTemporaryFile::Create  
  임시 파일을 생성 하도록이 메서드를 호출 합니다.  
   
 ```
@@ -156,7 +170,7 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 ### <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-nameflusha--catltemporaryfileflush"></a><a name="flush"></a>CAtlTemporaryFile::Flush  
+##  <a name="flush"></a>CAtlTemporaryFile::Flush  
  임시 파일에 쓸 파일 버퍼에에서 남아 있는 모든 데이터를 적용 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -172,7 +186,7 @@ HRESULT Flush() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-namegetpositiona--catltemporaryfilegetposition"></a><a name="getposition"></a>CAtlTemporaryFile::GetPosition  
+##  <a name="getposition"></a>CAtlTemporaryFile::GetPosition  
  현재 파일 포인터 위치를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -189,7 +203,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>주의  
  파일 포인터 위치를 변경 하려면 사용 [CAtlTemporaryFile::Seek](#seek)합니다.  
   
-##  <a name="a-namegetsizea--catltemporaryfilegetsize"></a><a name="getsize"></a>CAtlTemporaryFile::GetSize  
+##  <a name="getsize"></a>CAtlTemporaryFile::GetSize  
  임시 파일의 바이트에서 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -203,7 +217,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 `S_OK` 성공 또는 오류에 `HRESULT` 실패 합니다.  
   
-##  <a name="a-namehandsoffa--catltemporaryfilehandsoff"></a><a name="handsoff"></a>CAtlTemporaryFile::HandsOff  
+##  <a name="handsoff"></a>CAtlTemporaryFile::HandsOff  
  파일에이 메서드를 호출 하는 `CAtlTemporaryFile` 개체입니다.  
   
 ```
@@ -216,7 +230,7 @@ HRESULT HandsOff() throw();
 ### <a name="remarks"></a>주의  
  `HandsOff`및 [CAtlTemporaryFile::HandsOn](#handson) 개체에서 파일 및 필요한 경우 다시 연결 하는 데 사용 됩니다. `HandsOff`임시 파일에 쓸 파일 버퍼에에서 남아 있는 모든 데이터를 강제로 되며 다음 파일을 닫습니다. 닫고 파일을 영구적으로 삭제 하려는 경우 또는 닫습니다 고 이름이 지정 된 파일의 내용을 보존을 사용 하려는 경우 [CAtlTemporaryFile::Close](#close)합니다.  
   
-##  <a name="a-namehandsona--catltemporaryfilehandson"></a><a name="handson"></a>CAtlTemporaryFile::HandsOn  
+##  <a name="handson"></a>CAtlTemporaryFile::HandsOn  
  기존 임시 파일을 열고 파일의 끝에 포인터를이 메서드를 호출 합니다.  
   
 ```
@@ -229,7 +243,7 @@ HRESULT HandsOn() throw();
 ### <a name="remarks"></a>주의  
  [CAtlTemporaryFile::HandsOff](#handsoff) 및 `HandsOn` 개체에서 파일 및 필요한 경우 다시 연결 하는 데 사용 됩니다.  
   
-##  <a name="a-namelockrangea--catltemporaryfilelockrange"></a><a name="lockrange"></a>CAtlTemporaryFile::LockRange  
+##  <a name="lockrange"></a>CAtlTemporaryFile::LockRange  
  다른 프로세스에 액세스 하지 않도록 하려면 임시 파일에 영역을 잠그려고이 메서드를 호출 합니다.  
   
 ```
@@ -249,14 +263,14 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>주의  
  파일의 바이트를 잠그면 다른 프로세스에서 해당 바이트에 액세스할 수 없습니다. 파일의 둘 이상의 영역을 잠글 수 있습니다 않지만 겹치는 영역이 없으면이 허용 됩니다. 성공적으로 잠금 해제는 영역을 사용 하 여 [CAtlTemporaryFile::UnlockRange](#unlockrange), 이전에 잠근 지역에 정확 하 게 해당 바이트 범위를 확인 합니다. `LockRange`인접 한 지역을 선택 합니다; 병합 하지 않습니다. 두 개의 잠긴된 영역을 인접 한 경우 잠금을 해제 해야 각각 개별적으로 합니다.  
   
-##  <a name="a-nameoperatorhandlea--catltemporaryfileoperator-handle"></a><a name="operator_handle"></a>CAtlTemporaryFile::operator 핸들  
+##  <a name="operator_handle"></a>CAtlTemporaryFile::operator 핸들  
  임시 파일에 대 한 핸들을 반환합니다.  
   
 ```  
 operator HANDLE() throw();
 ```  
   
-##  <a name="a-namereada--catltemporaryfileread"></a><a name="read"></a>CAtlTemporaryFile::Read  
+##  <a name="read"></a>CAtlTemporaryFile::Read  
  파일 포인터에 의해 지정 된 위치에서 시작 하 여 임시 파일에서 데이터를 읽는이 메서드를 호출 합니다.  
   
 ```
@@ -285,7 +299,7 @@ HRESULT Read(
 ### <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-nameseeka--catltemporaryfileseek"></a><a name="seek"></a>CAtlTemporaryFile::Seek  
+##  <a name="seek"></a>CAtlTemporaryFile::Seek  
  임시 파일의 파일 포인터를 이동 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -308,7 +322,7 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)합니다.  
   
-##  <a name="a-namesetsizea--catltemporaryfilesetsize"></a><a name="setsize"></a>CAtlTemporaryFile::SetSize  
+##  <a name="setsize"></a>CAtlTemporaryFile::SetSize  
  임시 파일의 크기를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -325,7 +339,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>주의  
  호출 [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize)합니다. 반환 시 파일 포인터가 파일의 끝에 배치 됩니다.  
   
-##  <a name="a-nametempfilenamea--catltemporaryfiletempfilename"></a><a name="tempfilename"></a>CAtlTemporaryFile::TempFileName  
+##  <a name="tempfilename"></a>CAtlTemporaryFile::TempFileName  
  임시 파일의 이름을 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -338,7 +352,7 @@ LPCTSTR TempFileName() throw();
 ### <a name="remarks"></a>주의  
  파일 이름을 생성 하는 [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) 를 호출 하 여는 [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991) [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 함수입니다. 파일 확장명은 항상 "TFR" 임시 파일에 대 한입니다.  
   
-##  <a name="a-nameunlockrangea--catltemporaryfileunlockrange"></a><a name="unlockrange"></a>CAtlTemporaryFile::UnlockRange  
+##  <a name="unlockrange"></a>CAtlTemporaryFile::UnlockRange  
  임시 파일의 영역을 잠금을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -358,7 +372,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>주의  
  호출 [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange)합니다.  
   
-##  <a name="a-namewritea--catltemporaryfilewrite"></a><a name="write"></a>CAtlTemporaryFile::Write  
+##  <a name="write"></a>CAtlTemporaryFile::Write  
  파일 포인터에 의해 지정 된 위치에서 시작 하 여 임시 파일에 데이터를 기록 하려면이 메서드를 호출 합니다.  
   
 ```

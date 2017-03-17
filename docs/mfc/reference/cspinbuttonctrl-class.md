@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::Create
+- AFXCMN/CSpinButtonCtrl::CreateEx
+- AFXCMN/CSpinButtonCtrl::GetAccel
+- AFXCMN/CSpinButtonCtrl::GetBase
+- AFXCMN/CSpinButtonCtrl::GetBuddy
+- AFXCMN/CSpinButtonCtrl::GetPos
+- AFXCMN/CSpinButtonCtrl::GetRange
+- AFXCMN/CSpinButtonCtrl::SetAccel
+- AFXCMN/CSpinButtonCtrl::SetBase
+- AFXCMN/CSpinButtonCtrl::SetBuddy
+- AFXCMN/CSpinButtonCtrl::SetPos
+- AFXCMN/CSpinButtonCtrl::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +116,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namecreatea--cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>CSpinButtonCtrl::Create  
  스핀 단추 컨트롤을 만들고에 연결 된 `CSpinButtonCtrl` 개체...  
   
 ```  
@@ -134,7 +148,7 @@ virtual BOOL Create(
   
  스핀 단추 컨트롤이 확장된 창 스타일을 만들려면 호출 [CSpinButtonCtrl::CreateEx](#createex) 대신 **만들기**합니다.  
   
-##  <a name="a-namecreateexa--cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  컨트롤 (자식 창)와 연결 된 `CSpinButtonCtrl` 개체입니다.  
   
 ```  
@@ -168,14 +182,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-namecspinbuttonctrla--cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  `CSpinButtonCtrl` 개체를 생성합니다.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
  스핀 단추 컨트롤에 대 한 가속 정보를 검색합니다.  
   
 ```  
@@ -194,7 +208,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>반환 값  
  엑셀 러 레이 터 구조 수 검색 합니다.  
   
-##  <a name="a-namegetbasea--cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
  스핀 단추 컨트롤에 대 한 현재 자료를 검색합니다.  
   
 ```  
@@ -204,7 +218,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>반환 값  
  현재 기준 값입니다.  
   
-##  <a name="a-namegetbuddya--cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
  현재 버디 창에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -214,7 +228,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>반환 값  
  현재 버디 창에 대 한 포인터입니다.  
   
-##  <a name="a-namegetposa--cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
  스핀 단추 컨트롤의 현재 위치를 검색합니다.  
   
 ```  

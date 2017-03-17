@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
+- AFXINET/CGopherLocator
+- AFXINET/CGopherLocator::CGopherLocator
+- AFXINET/CGopherLocator::GetLocatorType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecgopherlocatora--cgopherlocatorcgopherlocator"></a><a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
  이 멤버 함수를 호출 하 만들는 `CGopherLocator` 개체입니다.  
   
 ```  
@@ -104,7 +107,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>주의  
  만들 없도록는 `CGopherLocator` 개체에 직접. 대신, 호출 [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) 만들고에 대 한 포인터를 반환 하는 `CGopherLocator` 개체입니다.  
   
-##  <a name="a-namegetlocatortypea--cgopherlocatorgetlocatortype"></a><a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
  이 로케이터 형식을 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -148,7 +151,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Ask + 항목입니다.|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + 항목입니다.|  
   
-##  <a name="a-nameoperatorlpctstra--cgopherlocatoroperator-lpctstr"></a><a name="operator_lpctstr"></a>LPCTSTR CGopherLocator::operator  
+##  <a name="operator_lpctstr"></a>LPCTSTR CGopherLocator::operator  
  이 유용한 캐스팅 연산자에 포함 된 null로 끝나는 C 문자열에 액세스할 수 있는 효율적인 방법 제공는 `CGopherLocator` 개체입니다.  
   
 ```  

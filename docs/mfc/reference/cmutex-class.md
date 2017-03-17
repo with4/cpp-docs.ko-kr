@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- Mutex
 - CMutex
+- AFXMT/CMutex
+- AFXMT/CMutex::CMutex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CMutex : public CSyncObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-namecmutexa--cmutexcmutex"></a><a name="cmutex"></a>CMutex::CMutex  
+##  <a name="cmutex"></a>CMutex::CMutex  
  명명 되거나 명명 되지 않은에서는 `CMutex` 개체입니다.  
   
 ```  

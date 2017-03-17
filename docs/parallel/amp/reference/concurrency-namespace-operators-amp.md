@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==   
+##  <a name="operator_eq_eq"></a>  operator==   
  지정된 된 인수 같은지 여부를 결정 합니다.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>반환 값  
  `true`튜플을 동일 하면 그렇지 않으면 `false`합니다.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=   
+##  <a name="operator_neq"></a>  operator!=   
  지정된 된 인수가 같은지 여부를 결정 합니다.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>반환 값  
  `true`튜플을 같지 않으면; 그렇지 않으면 `false`합니다.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  지정된 된 인수의 component-wise 합을 계산 합니다.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>반환 값  
  지정된 된 인수의 component-wise 합입니다.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  지정된 된 인수 간의 component-wise 차이 계산 합니다.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>반환 값  
  지정된 된 인수 간의 component-wise 차이입니다.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  지정 된 인수가 component-wise 곱을 계산 합니다.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  지정된 된 인수의 component-wise 곱입니다.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  지정된 된 인수 component-wise 몫을 계산합니다.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>반환 값  
  지정된 된 인수의 component-wise 몫입니다.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%   
+##  <a name="operator_mod"></a>  operator%   
 
  두 번째는 지정 된 인수에 의해 지정된 된 첫 번째 인수의 모듈러스를 계산합니다.  
   

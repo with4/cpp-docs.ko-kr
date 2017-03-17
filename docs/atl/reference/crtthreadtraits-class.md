@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CRTThreadTraits
-- ATL.CRTThreadTraits
 - CRTThreadTraits
+- ATLBASE/ATL::CRTThreadTraits
+- ATLBASE/ATL::CRTThreadTraits::CreateThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +77,7 @@ class CRTThreadTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namecreatethreada--crtthreadtraitscreatethread"></a><a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
  CRT 함수를 사용할 수 있는 스레드를 만드는 데이 함수를 호출 합니다.  
   
 ```

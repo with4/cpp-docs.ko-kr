@@ -9,9 +9,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlServiceModuleT
-- ATL.CAtlServiceModuleT
 - CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT::CAtlServiceModuleT
+- ATLBASE/ATL::CAtlServiceModuleT::Handler
+- ATLBASE/ATL::CAtlServiceModuleT::InitializeSecurity
+- ATLBASE/ATL::CAtlServiceModuleT::Install
+- ATLBASE/ATL::CAtlServiceModuleT::IsInstalled
+- ATLBASE/ATL::CAtlServiceModuleT::LogEvent
+- ATLBASE/ATL::CAtlServiceModuleT::OnContinue
+- ATLBASE/ATL::CAtlServiceModuleT::OnInterrogate
+- ATLBASE/ATL::CAtlServiceModuleT::OnPause
+- ATLBASE/ATL::CAtlServiceModuleT::OnShutdown
+- ATLBASE/ATL::CAtlServiceModuleT::OnStop
+- ATLBASE/ATL::CAtlServiceModuleT::OnUnknownRequest
+- ATLBASE/ATL::CAtlServiceModuleT::ParseCommandLine
+- ATLBASE/ATL::CAtlServiceModuleT::PreMessageLoop
+- ATLBASE/ATL::CAtlServiceModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlServiceModuleT::Run
+- ATLBASE/ATL::CAtlServiceModuleT::ServiceMain
+- ATLBASE/ATL::CAtlServiceModuleT::SetServiceStatus
+- ATLBASE/ATL::CAtlServiceModuleT::Start
+- ATLBASE/ATL::CAtlServiceModuleT::Uninstall
+- ATLBASE/ATL::CAtlServiceModuleT::Unlock
+- ATLBASE/ATL::CAtlServiceModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlServiceModuleT::WinMain
+- ATLBASE/ATL::CAtlServiceModuleT::m_bService
+- ATLBASE/ATL::CAtlServiceModuleT::m_dwThreadID
+- ATLBASE/ATL::CAtlServiceModuleT::m_hServiceStatus
+- ATLBASE/ATL::CAtlServiceModuleT::m_status
+- ATLBASE/ATL::CAtlServiceModuleT::m_szServiceName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +152,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namecatlservicemoduleta--catlservicemoduletcatlservicemodulet"></a><a name="catlservicemodulet"></a>CAtlServiceModuleT::CAtlServiceModuleT  
+##  <a name="catlservicemodulet"></a>CAtlServiceModuleT::CAtlServiceModuleT  
  생성자입니다.  
   
 ```
@@ -135,7 +162,7 @@ CAtlServiceModuleT() throw();
 ### <a name="remarks"></a>주의  
  데이터 멤버를 초기화 하 고 초기 서비스 상태를 설정 합니다.  
   
-##  <a name="a-namehandlera--catlservicemodulethandler"></a><a name="handler"></a>CAtlServiceModuleT::Handler  
+##  <a name="handler"></a>CAtlServiceModuleT::Handler  
  서비스에 대 한 처리기 루틴입니다.  
   
 ```
@@ -161,7 +188,7 @@ void Handler(DWORD dwOpcode) throw();
   
  기본 ATL 생성 서비스 stop 명령이 처리 됩니다. SCM에 stop 명령이 통과 한 경우 서비스 지시 SCM 프로그램을 중지 하려고 합니다. 그런 다음 서비스에서 호출 `PostThreadMessage` 자신에 게 종료 메시지를 게시 하도록 합니다. 이 메시지 루프를 종료 하 고 서비스가 종료 됩니다.  
   
-##  <a name="a-nameinitializesecuritya--catlservicemoduletinitializesecurity"></a><a name="initializesecurity"></a>CAtlServiceModuleT::InitializeSecurity  
+##  <a name="initializesecurity"></a>CAtlServiceModuleT::InitializeSecurity  
  기본 서비스에 대 한 보안 설정을 제공합니다.  
   
 ```
@@ -184,7 +211,7 @@ HRESULT InitializeSecurity() throw();
   
  [!code-cpp[NVC_ATL_ServiceAttrib #&1;](../../atl/reference/codesnippet/cpp/catlservicemodulet-class_2.cpp)]  
   
-##  <a name="a-nameinstalla--catlservicemoduletinstall"></a><a name="install"></a>CAtlServiceModuleT::Install  
+##  <a name="install"></a>CAtlServiceModuleT::Install  
  설치 하 고 서비스를 만듭니다.  
   
 ```
@@ -197,7 +224,7 @@ BOOL Install() throw();
 ### <a name="remarks"></a>주의  
  서비스 제어 관리자 (SCM) 데이터베이스에 서비스를 설치 하 고를 서비스 개체를 만듭니다. 서비스를 만들 수는 메시지 상자가 표시 되 고 메서드에서 FALSE가 반환.  
   
-##  <a name="a-nameisinstalleda--catlservicemoduletisinstalled"></a><a name="isinstalled"></a>CAtlServiceModuleT::IsInstalled  
+##  <a name="isinstalled"></a>CAtlServiceModuleT::IsInstalled  
  서비스가 설치 되어 있는지 확인 합니다.  
   
 ```
@@ -207,7 +234,7 @@ BOOL IsInstalled() throw();
 ### <a name="return-value"></a>반환 값  
  하는 경우 서비스는 설치 됨, FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
-##  <a name="a-namelogeventa--catlservicemoduletlogevent"></a><a name="logevent"></a>CAtlServiceModuleT::LogEvent  
+##  <a name="logevent"></a>CAtlServiceModuleT::LogEvent  
  이벤트 로그에 씁니다.  
   
 ```
@@ -224,7 +251,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ### <a name="remarks"></a>주의  
  이 메서드 세부 정보를 작성 함수를 사용 하 여 이벤트 로그에 [ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679)합니다. 서비스가 실행 중인 경우에 콘솔에 문자열이 보내집니다.  
   
-##  <a name="a-namembservicea--catlservicemoduletmbservice"></a><a name="m_bservice"></a>CAtlServiceModuleT::m_bService  
+##  <a name="m_bservice"></a>CAtlServiceModuleT::m_bService  
  프로그램을 서비스로 실행 되 고 나타내는 플래그입니다.  
   
 ```
@@ -234,7 +261,7 @@ BOOL m_bService;
 ### <a name="remarks"></a>주의  
  응용 프로그램 EXE 서비스 EXE 구분 하기 위해 사용 합니다.  
   
-##  <a name="a-namemdwthreadida--catlservicemoduletmdwthreadid"></a><a name="m_dwthreadid"></a>CAtlServiceModuleT::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CAtlServiceModuleT::m_dwThreadID  
  서비스의 스레드 식별자를 저장 하는 멤버 변수입니다.  
   
 ```
@@ -244,7 +271,7 @@ DWORD m_dwThreadID;
 ### <a name="remarks"></a>주의  
  이 변수는 현재 스레드의 스레드 식별자를 저장합니다.  
   
-##  <a name="a-namemhservicestatusa--catlservicemoduletmhservicestatus"></a><a name="m_hservicestatus"></a>CAtlServiceModuleT::m_hServiceStatus  
+##  <a name="m_hservicestatus"></a>CAtlServiceModuleT::m_hServiceStatus  
  현재 서비스에 대 한 상태 정보 구조에 대 한 핸들을 저장 하는 멤버 변수입니다.  
   
 ```
@@ -254,7 +281,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ### <a name="remarks"></a>주의  
  [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) 구조는 서비스에 대 한 정보를 포함 합니다.  
   
-##  <a name="a-namemstatusa--catlservicemoduletmstatus"></a><a name="m_status"></a>CAtlServiceModuleT::m_status  
+##  <a name="m_status"></a>CAtlServiceModuleT::m_status  
  현재 서비스에 대 한 상태 정보 구조를 저장 하는 멤버 변수입니다.  
   
 ```
@@ -264,7 +291,7 @@ SERVICE_STATUS m_status;
 ### <a name="remarks"></a>주의  
  [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) 구조는 서비스에 대 한 정보를 포함 합니다.  
   
-##  <a name="a-namemszservicenamea--catlservicemoduletmszservicename"></a><a name="m_szservicename"></a>CAtlServiceModuleT::m_szServiceName  
+##  <a name="m_szservicename"></a>CAtlServiceModuleT::m_szServiceName  
  등록 되는 서비스의 이름입니다.  
   
 ```
@@ -274,42 +301,42 @@ TCHAR [256] m_szServiceName;
 ### <a name="remarks"></a>주의  
  서비스의 이름을 저장 하는 null로 끝나는 문자열입니다.  
   
-##  <a name="a-nameoncontinuea--catlservicemoduletoncontinue"></a><a name="oncontinue"></a>CAtlServiceModuleT::OnContinue  
+##  <a name="oncontinue"></a>CAtlServiceModuleT::OnContinue  
  서비스를 계속 하려면이 메서드를 재정의 합니다.  
   
 ```
 void OnContinue() throw();
 ```  
   
-##  <a name="a-nameoninterrogatea--catlservicemoduletoninterrogate"></a><a name="oninterrogate"></a>CAtlServiceModuleT::OnInterrogate  
+##  <a name="oninterrogate"></a>CAtlServiceModuleT::OnInterrogate  
  서비스를 확인 하려면이 메서드를 재정의 합니다.  
   
 ```
 void OnInterrogate() throw();
 ```  
   
-##  <a name="a-nameonpausea--catlservicemoduletonpause"></a><a name="onpause"></a>CAtlServiceModuleT::OnPause  
+##  <a name="onpause"></a>CAtlServiceModuleT::OnPause  
  서비스를 일시 중지 하려면이 메서드를 재정의 합니다.  
   
 ```
 void OnPause() throw();
 ```  
   
-##  <a name="a-nameonshutdowna--catlservicemoduletonshutdown"></a><a name="onshutdown"></a>CAtlServiceModuleT::OnShutdown  
+##  <a name="onshutdown"></a>CAtlServiceModuleT::OnShutdown  
  서비스를 종료 하려면이 메서드를 재정의 합니다.  
   
 ```
 void OnShutdown() throw();
 ```  
   
-##  <a name="a-nameonstopa--catlservicemoduletonstop"></a><a name="onstop"></a>CAtlServiceModuleT::OnStop  
+##  <a name="onstop"></a>CAtlServiceModuleT::OnStop  
  서비스를 중지 하려면이 메서드를 재정의 합니다.  
   
 ```
 void OnStop() throw();
 ```  
   
-##  <a name="a-nameonunknownrequesta--catlservicemoduletonunknownrequest"></a><a name="onunknownrequest"></a>CAtlServiceModuleT::OnUnknownRequest  
+##  <a name="onunknownrequest"></a>CAtlServiceModuleT::OnUnknownRequest  
  알 수 없는 서비스에 요청을 처리 하려면이 메서드를 재정의 합니다.  
   
 ```
@@ -320,7 +347,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
  */\*dwOpcode\*/*  
  예약됨.  
   
-##  <a name="a-nameparsecommandlinea--catlservicemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlServiceModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>CAtlServiceModuleT::ParseCommandLine  
  명령줄을 구문 분석 하 고 필요한 경우 등록을 수행 합니다.  
   
 ```
@@ -340,7 +367,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>주의  
  명령줄을 구문 분석 하 고 레지스터 또는 필요한 경우 제공된 된 RGS 파일의 등록을 취소 합니다. 이 메서드는 호출 [CAtlExeModuleT::ParseCommandLine](../../atl/reference/catlexemodulet-class.md#parsecommandline) 를 확인 하려면 **/RegServer** 및 **/UnregServer**합니다. 인수 추가 **-/ 서비스** 서비스를 등록 합니다.  
   
-##  <a name="a-namepremessageloopa--catlservicemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlServiceModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>CAtlServiceModuleT::PreMessageLoop  
  이 메서드는 메시지 루프에 들어가기 전에 바로 호출 됩니다.  
   
 ```
@@ -357,7 +384,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>주의  
  서비스에 대 한 사용자 지정 초기화 코드를 추가 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameregisterappida--catlservicemoduletregisterappid"></a><a name="registerappid"></a>CAtlServiceModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlServiceModuleT::RegisterAppId  
  레지스트리에 서비스를 등록합니다.  
   
 ```
@@ -371,7 +398,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-nameruna--catlservicemoduletrun"></a><a name="run"></a>CAtlServiceModuleT::Run  
+##  <a name="run"></a>CAtlServiceModuleT::Run  
  서비스를 실행 합니다.  
   
 ```
@@ -388,7 +415,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>주의  
  호출 된 후 **실행** 호출 [CAtlServiceModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop), 및 [CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop)합니다.  
   
-##  <a name="a-nameservicemaina--catlservicemoduletservicemain"></a><a name="servicemain"></a>CAtlServiceModuleT::ServiceMain  
+##  <a name="servicemain"></a>CAtlServiceModuleT::ServiceMain  
  이 메서드는 서비스 제어 관리자에 의해 호출 됩니다.  
   
 ```
@@ -407,7 +434,7 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
   
  SCM 후 호출 `ServiceMain`, 서비스의 SCM 처리기 함수를 지정 해야 합니다. 이 함수는 SCM을 (예: 일시 중지 또는 중지) 특정 지침을 전달 하 고 서비스의 상태를 가져올 수 있습니다. 그 이후에, [CAtlServiceModuleT::Run](#run) 서비스의 주요 작업을 수행 하기 위해 호출 됩니다. **실행** 서비스가 중지 될 때까지 계속 실행 합니다.  
   
-##  <a name="a-namesetservicestatusa--catlservicemoduletsetservicestatus"></a><a name="setservicestatus"></a>CAtlServiceModuleT::SetServiceStatus  
+##  <a name="setservicestatus"></a>CAtlServiceModuleT::SetServiceStatus  
  이 메서드는 서비스의 상태를 업데이트합니다.  
   
 ```
@@ -421,7 +448,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="remarks"></a>주의  
  서비스에 대 한 서비스 제어 관리자의 상태 정보를 업데이트합니다. 에 의해 호출 됩니다 [CAtlServiceModuleT::Run](#run), [CAtlServiceModuleT::ServiceMain](#servicemain) 및 다른 처리기 메서드. 상태도 멤버 변수에 저장 됩니다 [CAtlServiceModuleT::m_status](#m_status)합니다.  
   
-##  <a name="a-namestarta--catlservicemoduletstart"></a><a name="start"></a>CAtlServiceModuleT::Start  
+##  <a name="start"></a>CAtlServiceModuleT::Start  
  에 의해 호출 `CAtlServiceModuleT::WinMain` 서비스가 시작할 때입니다.  
   
 ```
@@ -438,7 +465,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="remarks"></a>주의  
  [CAtlServiceModuleT::WinMain](#winmain) 메서드 등록 및 설치를 모두 처리 뿐만 아니라 작업 관련 레지스트리 항목을 제거 하 고 모듈을 제거 합니다. 서비스를 실행 하는 경우 `WinMain` 호출 **시작**합니다.  
   
-##  <a name="a-nameuninstalla--catlservicemoduletuninstall"></a><a name="uninstall"></a>CAtlServiceModuleT::Uninstall  
+##  <a name="uninstall"></a>CAtlServiceModuleT::Uninstall  
  중지 하 고 서비스를 제거 합니다.  
   
 ```
@@ -451,7 +478,7 @@ BOOL Uninstall() throw();
 ### <a name="remarks"></a>주의  
  실행에서 서비스를 중지 하 고 서비스 제어 관리자 데이터베이스에서 제거 합니다.  
   
-##  <a name="a-nameunlocka--catlservicemoduletunlock"></a><a name="unlock"></a>CAtlServiceModuleT::Unlock  
+##  <a name="unlock"></a>CAtlServiceModuleT::Unlock  
  서비스의 잠금 횟수를 줄입니다.  
   
 ```
@@ -461,7 +488,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 하 고 디버깅 수 있는 잠금 수를 반환 합니다.  
   
-##  <a name="a-nameunregisterappida--catlservicemoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlServiceModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlServiceModuleT::UnregisterAppId  
  레지스트리에서 서비스를 제거합니다.  
   
 ```
@@ -471,7 +498,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namewinmaina--catlservicemoduletwinmain"></a><a name="winmain"></a>CAtlServiceModuleT::WinMain  
+##  <a name="winmain"></a>CAtlServiceModuleT::WinMain  
  이 메서드는 서비스를 시작 하는 데 필요한 코드를 구현 합니다.  
   
 ```

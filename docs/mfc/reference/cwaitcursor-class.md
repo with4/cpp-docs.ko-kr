@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
+- AFXWIN/CWaitCursor
+- AFXWIN/CWaitCursor::CWaitCursor
+- AFXWIN/CWaitCursor::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +95,7 @@ class CWaitCursor
 ## <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&62;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="a-namecwaitcursora--cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
  대기 커서를 표시 하려면 선언한는 `CWaitCursor` 시간이 오래 걸리는 작업을 수행 하는 코드 하기 전에 개체입니다.  
   
 ```  
@@ -112,7 +115,7 @@ CWaitCursor();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&63;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="a-namerestorea--cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>CWaitCursor::Restore  
  대기 커서를 복원 하려면 메시지 상자 또는 다른 커서에 대기 커서를 변경 될 수 있는 대화 상자를 표시 하는 등의 작업을 수행한 후이 함수를 호출 합니다.  
   
 ```  

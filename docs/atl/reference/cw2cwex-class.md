@@ -10,10 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
-- ATL::CW2CWEX
-- ATL.CW2CWEX
-- ATL.CW2CWEX<t_nBufferLength>
-- ATL::CW2CWEX<t_nBufferLength>
+- ATLCONV/ATL::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::m_psz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +103,7 @@ class CW2CWEX
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="a-namecw2cwexa--cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
  생성자입니다.  
   
 ```
@@ -122,7 +121,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
-##  <a name="a-namedtora--cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
  소멸자입니다.  
   
 ```
@@ -132,14 +131,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="a-namempsza--cw2cwexmpsz"></a><a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>CW2CWEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="a-nameoperatorlpcwstra--cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
  변환 연산자입니다.  
   
 ```  

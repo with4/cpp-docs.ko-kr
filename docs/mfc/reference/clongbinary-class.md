@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- BLOB
 - CLongBinary
+- AFXDB_/CLongBinary
+- AFXDB_/CLongBinary::CLongBinary
+- AFXDB_/CLongBinary::m_dwDataLength
+- AFXDB_/CLongBinary::m_hData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +89,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb_.h  
   
-##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  `CLongBinary` 개체를 생성합니다.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
  실제 크기 (바이트)에 저장 된 데이터의 저장 된 `HGLOBAL` 에 처리할 `m_hData`.  
   
 ```  
@@ -103,7 +106,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>주의  
  이 크기는 데이터에 할당 된 메모리 블록의 크기 보다 작을 수 있습니다. Win32 호출 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) 함수 할당 된 크기를 가져옵니다.  
   
-##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>CLongBinary::m_hData  
  Windows 저장 `HGLOBAL` 실제 이진 대형 개체 데이터에 대 한 핸들입니다.  
   
 ```  

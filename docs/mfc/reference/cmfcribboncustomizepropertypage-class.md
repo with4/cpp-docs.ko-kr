@@ -9,16 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonCustomizePropertyPage::CreateObject
 - CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage.GetThisClass
-- CMFCRibbonCustomizePropertyPage.CreateObject
-- ~CMFCRibbonCustomizePropertyPage
-- CreateObject
-- CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::GetThisClass
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::AddCustomCategory
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +102,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncustomizedialog.h  
   
-##  <a name="a-nameaddcustomcategorya--cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  사용자 지정 범주를 추가 하는 **명령을** 콤보 상자입니다.  
   
 ```  
@@ -127,7 +122,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>주의  
  이 메서드는 명명 된 범주를 추가 `lpszName` 에 **명령을** 콤보 상자입니다. 명령에 지정 된 수는 사용자가 범주를 선택 하는 경우 `lstIDS` 명령 목록에 표시 합니다.  
   
-##  <a name="a-namecmfcribboncustomizepropertypagea--cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` 개체를 생성합니다.  
   
 ```  
@@ -138,7 +133,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  리본 컨트롤에 대 한 포인터를 사용자 지정 하는 옵션입니다.  
   
-##  <a name="a-nameonoka--cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
  사용자가 클릭할 때 시스템에서 Calleld **확인** 에 **사용자 지정** 대화 상자입니다.  
   
 ```  

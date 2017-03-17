@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListView
+- AFXCVIEW/CListView
+- AFXCVIEW/CListView::CListView
+- AFXCVIEW/CListView::GetListCtrl
+- AFXCVIEW/CListView::RemoveImageList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +92,14 @@ class CListView : public CCtrlView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcview.h  
   
-##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>CListView::CListView  
  `CListView` 개체를 생성합니다.  
   
 ```  
 CListView();
 ```  
   
-##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>CListView::GetListCtrl  
  뷰와 연결 된 목록 컨트롤에 대 한 참조를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -108,7 +112,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCListView #&7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>CListView::RemoveImageList  
  지정 된 이미지 목록의 목록 보기에서 제거합니다.  
   
 ```  

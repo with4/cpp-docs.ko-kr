@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPropertyPage2Impl
+- ATLCTL/ATL::IPropertyPage2Impl
+- ATLCTL/ATL::IPropertyPage2Impl::EditProperty
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +87,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-nameeditpropertya--ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+##  <a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
  속성 페이지를 활성화할 때 어떤 속성 컨트롤에서 포커스를 받을지 지정 합니다.  
   
 ```

@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
+- AFXWIN/CDocTemplate
+- AFXWIN/CDocTemplate::CDocTemplate
+- AFXWIN/CDocTemplate::AddDocument
+- AFXWIN/CDocTemplate::CloseAllDocuments
+- AFXWIN/CDocTemplate::CreateNewDocument
+- AFXWIN/CDocTemplate::CreateNewFrame
+- AFXWIN/CDocTemplate::CreateOleFrame
+- AFXWIN/CDocTemplate::CreatePreviewFrame
+- AFXWIN/CDocTemplate::GetDocString
+- AFXWIN/CDocTemplate::GetFirstDocPosition
+- AFXWIN/CDocTemplate::GetNextDoc
+- AFXWIN/CDocTemplate::InitialUpdateFrame
+- AFXWIN/CDocTemplate::LoadTemplate
+- AFXWIN/CDocTemplate::MatchDocType
+- AFXWIN/CDocTemplate::OpenDocumentFile
+- AFXWIN/CDocTemplate::RemoveDocument
+- AFXWIN/CDocTemplate::SaveAllModified
+- AFXWIN/CDocTemplate::SetContainerInfo
+- AFXWIN/CDocTemplate::SetDefaultTitle
+- AFXWIN/CDocTemplate::SetPreviewInfo
+- AFXWIN/CDocTemplate::SetServerInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +136,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameadddocumenta--cdoctemplateadddocument"></a><a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>CDocTemplate::AddDocument  
  이 함수를 사용 하 여 문서 서식 파일에 추가 합니다.  
   
 ```  
@@ -129,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>주의  
  파생된 클래스 [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) 및 [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) 이 함수를 재정의 합니다. 직접 문서 템플릿 클래스를 파생 하는 경우 `CDocTemplate`, 파생된 클래스에서이 함수를 재정의 해야 합니다.  
   
-##  <a name="a-namecdoctemplatea--cdoctemplatecdoctemplate"></a><a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
  `CDocTemplate` 개체를 생성합니다.  
   
 ```  
@@ -170,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>주의  
  이 멤버 함수를 사용 하 여 생성 하는 `CDocTemplate` 개체입니다. 동적으로 할당 한 `CDocTemplate` 개체를 전달 [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) 에서 `InitInstance` 응용 프로그램 클래스의 멤버 함수입니다.  
   
-##  <a name="a-nameclosealldocumentsa--cdoctemplateclosealldocuments"></a><a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
  열린 문서 모두 닫기 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -186,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  사용자는 문서를 닫기 전에 특별 한 정리 작업 처리를 수행 하도록 하려는 경우이 함수를 재정의 합니다. 예를 들어, 문서 데이터베이스의 레코드를 나타내는 경우이 함수는 데이터베이스를 재정의 하는 것이 좋습니다.  
   
-##  <a name="a-namecreatenewdocumenta--cdoctemplatecreatenewdocument"></a><a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
  이 문서 서식 파일을 연결 된 유형의 새 문서를 작성 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -196,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>반환 값  
  새로 만든된 문서에 대 한 포인터 또는 **NULL** 오류가 발생 합니다.  
   
-##  <a name="a-namecreatenewframea--cdoctemplatecreatenewframe"></a><a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
  문서 및 보기를 포함 하는 새로운 프레임 창을 만듭니다.  
   
 ```  
@@ -220,7 +241,7 @@ virtual CFrameWnd* CreateNewFrame(
   
  `pOther` 매개 변수를 사용 하는 새 창 명령을 구현 합니다. 새로운 프레임 창을 모델링할 수 있는 프레임 창을 제공 합니다. 새로운 프레임 창은 대개 보이지 않는 만들어집니다. 새 파일 및 파일 열기 표준 프레임 워크 구현 외부 프레임 창을 만들려면이 함수를 호출 합니다.  
   
-##  <a name="a-namecreateoleframea--cdoctemplatecreateoleframe"></a><a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
  OLE 프레임 창을 만듭니다.  
   
 ```  
@@ -246,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>주의  
  경우 `bCreateView` 가&0; 이면 빈 프레임 만들어집니다.  
   
-##  <a name="a-namegetdocstringa--cdoctemplategetdocstring"></a><a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
  문서 형식과 연결 된 문자열을 검색 합니다.  
   
 ```  
@@ -284,7 +305,7 @@ virtual BOOL GetDocString(
   
  고유한 클래스를 파생 하는 경우에이 함수를 호출 `CDocTemplate`합니다.  
   
-##  <a name="a-namegetfirstdocpositiona--cdoctemplategetfirstdocposition"></a><a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
  이 템플릿에 연결 된 첫 번째 문서의 위치를 검색 합니다.  
   
 ```  
@@ -299,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) 및 [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) 이 순수 가상 함수 재정의 합니다. 모든 클래스에서 파생 `CDocTemplate` 도이 함수를 재정의 해야 합니다.  
   
-##  <a name="a-namegetnextdoca--cdoctemplategetnextdoc"></a><a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
  로 식별 되는 목록 요소를 검색 `rPos`, 다음 설정 `rPos` 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
@@ -320,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 올바르지 않을 경우 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다.  
   
-##  <a name="a-nameinitialupdateframea--cdoctemplateinitialupdateframe"></a><a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
  프레임 창을 초기화 하 고 필요에 따라 표시 되도록 합니다.  
   
 ```  
@@ -345,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  새 파일 및 파일 열기의 프레임 워크의 구현을 사용 하는 경우이 함수를 호출 하려면 필요는 없습니다.  
   
-##  <a name="a-nameloadtemplatea--cdoctemplateloadtemplate"></a><a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
  에 대 한 리소스를 로드는 지정 된 `CDocTemplate` 또는 클래스를 파생 합니다.  
   
 ```  
@@ -355,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>주의  
  이 멤버 함수에 대 한 리소스를 로드 하는 프레임 워크에서 호출 됩니다는 주어진 `CDocTemplate` 또는 클래스를 파생 합니다. 일반적으로 이라고 생성 하는 동안 제외 하 고 템플릿을 전역적으로 생성 되는 경우. 경우에 대 한 호출 `LoadTemplate` 때까지 지연 [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) 호출 됩니다.  
   
-##  <a name="a-namematchdoctypea--cdoctemplatematchdoctype"></a><a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
  문서 유형 및이 서식 파일 간의 일치에 대 한 신뢰도의 정도 결정합니다.  
   
 ```  
@@ -403,7 +424,7 @@ virtual Confidence MatchDocType(
   
  기본 구현은 반환 하지 않는 **CDocTemplate::maybeAttemptForeign** 또는 **CDocTemplate::maybeAttemptNative**합니다. 아마도에서 이러한 두 값을 사용 하 여 응용 프로그램에 적절 한 형식 일치 논리를 구현 하려면이 함수를 재정의 하는 **신뢰도** 열거 합니다.  
   
-##  <a name="a-nameopendocumentfilea--cdoctemplateopendocumentfile"></a><a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
  경로 의해 지정 된 파일을 엽니다.  
   
 ```  
@@ -427,7 +448,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>주의  
  해당 경로 지정 하 여 파일을 열고 `lpszPathName`합니다. 경우 `lpszPathName` 는 `NULL`,이 템플릿에 연결 된 형식의 문서를 포함 하는 새 파일이 생성 됩니다.  
   
-##  <a name="a-nameremovedocumenta--cdoctemplateremovedocument"></a><a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
  가 가리키는 문서 제거 `pDoc` 이 템플릿에 연결 된 문서의 목록에서.  
   
 ```  
@@ -441,7 +462,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>주의  
  파생된 클래스 `CMultiDocTemplate` 및 `CSingleDocTemplate` 이 함수를 재정의 합니다. 직접 문서 템플릿 클래스를 파생 하는 경우 `CDocTemplate`, 파생된 클래스에서이 함수를 재정의 해야 합니다.  
   
-##  <a name="a-namesaveallmodifieda--cdoctemplatesaveallmodified"></a><a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
  수정 된 모든 문서를 저장 합니다.  
   
 ```  
@@ -451,7 +472,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우 성공 그렇지 않으면 0입니다.  
   
-##  <a name="a-namesetcontainerinfoa--cdoctemplatesetcontainerinfo"></a><a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
  내부 OLE 항목을 편집 하는 경우 OLE 컨테이너에 대 한 리소스를 결정 합니다.  
   
 ```  
@@ -467,7 +488,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  연결 된 메뉴 `nIDOleInPlaceContainer` 컨테이너 응용 프로그램의 메뉴를 사용 하 여 병합 활성화 된 위치에서 항목의 메뉴를 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
   
-##  <a name="a-namesetdefaulttitlea--cdoctemplatesetdefaulttitle"></a><a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
  문서의 기본 제목을 로드 하 고 문서의 제목 표시줄에 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -481,7 +502,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>주의  
  기본 제목에 대 한 자세한 내용은 참조에 대 한 설명을 **CDocTemplate::docName** 에서 [CDocTemplate::GetDocString](#getdocstring)합니다.  
   
-##  <a name="a-namesetserverinfoa--cdoctemplatesetserverinfo"></a><a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
  서버 문서 포함 된 또는 전체를 편집할 때 리소스 및 클래스를 결정 합니다.  
   
 ```  
@@ -510,7 +531,7 @@ void SetServerInfo(
   
  연결 된 메뉴 `nIDOleInPlaceServer` 컨테이너의 메뉴를 사용 하 여 서버 메뉴 병합에 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
   
-##  <a name="a-namecreatepreviewframea--cdoctemplatecreatepreviewframe"></a><a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
  고급 미리 보기에 사용 되는 자식 프레임을 만듭니다.  
   
 ```  
@@ -531,7 +552,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpreviewinfoa--cdoctemplatesetpreviewinfo"></a><a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
  프로세스 미리 보기 처리기의 부재를 설정합니다.  
   
 ```  

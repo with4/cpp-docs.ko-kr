@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenPrivileges
 - CTokenPrivileges
-- ATL.CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::Add
+- ATLSECURITY/ATL::CTokenPrivileges::Delete
+- ATLSECURITY/ATL::CTokenPrivileges::DeleteAll
+- ATLSECURITY/ATL::CTokenPrivileges::GetCount
+- ATLSECURITY/ATL::CTokenPrivileges::GetDisplayNames
+- ATLSECURITY/ATL::CTokenPrivileges::GetLength
+- ATLSECURITY/ATL::CTokenPrivileges::GetLuidsAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
+- ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-nameadda--ctokenprivilegesadd"></a><a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>CTokenPrivileges::Add  
  하나 이상의 권한을 추가 하는 `CTokenPrivileges` 액세스 토큰 개체입니다.  
   
 ```
@@ -117,7 +127,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>반환 값  
  이 메서드의 첫 번째 형태 권한을 성공적으로 추가 되 면 false 그렇지 않은 경우 true를 반환 합니다.  
   
-##  <a name="a-namectokenprivilegesa--ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
  생성자입니다.  
   
 ```
@@ -136,7 +146,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>주의  
  `CTokenPrivileges` 를 사용 하 여 개체를 만들 수 있습니다는 **TOKEN_PRIVILEGES** 구조 또는 이전에 정의 된 `CTokenPrivileges` 개체입니다.  
   
-##  <a name="a-namedtora--ctokenprivilegesctokenprivileges"></a><a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
  소멸자입니다.  
   
 ```
@@ -146,7 +156,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>주의  
  소멸자는 할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="a-namedeletea--ctokenprivilegesdelete"></a><a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>CTokenPrivileges::Delete  
  권한을 삭제는 `CTokenPrivileges` 액세스 토큰 개체입니다.  
   
 ```
@@ -163,7 +173,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는 Windows 2000에서 제한 된 토큰을 만들기 위한 도구로 유용 합니다.  
   
-##  <a name="a-namedeletealla--ctokenprivilegesdeleteall"></a><a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  모든 권한을 삭제는 `CTokenPrivileges` 액세스 토큰 개체입니다.  
   
 ```
@@ -173,7 +183,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>주의  
  에 포함 된 모든 권한을 삭제는 `CTokenPrivileges` 액세스 토큰 개체입니다.  
   
-##  <a name="a-namegetdisplaynamesa--ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
  검색에 포함 된 권한 이름을 모두 표시는 `CTokenPrivileges` 액세스 토큰 개체입니다.  
   
 ```
@@ -189,7 +199,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  이 메서드는 한 표시 이름을 검색 합니다: 예를 들어 특성 이름이 SE_REMOTE_SHUTDOWN_NAME 인 경우 표시할 수 있는 이름은 "원격 시스템에서 강제 종료 합니다." 시스템 이름을 가져오려면 [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)합니다.  
   
-##  <a name="a-namegetcounta--ctokenprivilegesgetcount"></a><a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>CTokenPrivileges::GetCount  
  권한 항목 수를 반환 합니다.는 `CTokenPrivileges` 개체입니다.  
   
 ```
@@ -199,7 +209,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>반환 값  
  에 포함 된 권한 수를 반환 된 `CTokenPrivileges` 개체입니다.  
   
-##  <a name="a-namegetlengtha--ctokenprivilegesgetlength"></a><a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>CTokenPrivileges::GetLength  
  길이 반환 된 `CTokenPrivileges` 개체입니다.  
   
 ```
@@ -209,7 +219,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>반환 값  
  보유 하는 데 필요한 바이트 수를 반환는 **TOKEN_PRIVILEGES** 구조를 나타내는 `CTokenPrivileges` 개체를 포함 된 권한 항목을 모두 포함 합니다.  
   
-##  <a name="a-namegetluidsandattributesa--ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
  Locally unique identifier (Luid)와 특성 플래그에서 검색 된 `CTokenPrivileges` 개체입니다.  
   
 ```
@@ -228,7 +238,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>주의  
  이 메서드는 모든에 포함 된 권한을 열거 합니다는 `CTokenPrivileges` 토큰 개체를 액세스 하 고 배열 개체에 개별 Luid 및 특성 플래그 (옵션)를 배치 합니다.  
   
-##  <a name="a-namegetnamesandattributesa--ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
  검색의 이름 및 특성 플래그는 `CTokenPrivileges` 개체입니다.  
   
 ```
@@ -249,7 +259,7 @@ void GetNamesAndAttributes(
   
  이 메서드를 표시할 수 있는 이름 대신 특성 이름을 검색 합니다: 예를 들어 특성 이름은 SE_REMOTE_SHUTDOWN_NAME 시스템 이름 인지 "SeRemoteShutdownPrivilege." 표시 이름을 가져오려면 메서드를 사용 하 여 [CTokenPrivileges::GetDisplayNames](#getdisplaynames)합니다.  
   
-##  <a name="a-namegetptokenprivilegesa--ctokenprivilegesgetptokenprivileges"></a><a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  에 대 한 포인터를 반환 된 **TOKEN_PRIVILEGES** 구조입니다.  
   
 ```
@@ -259,7 +269,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 된 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) 구조입니다.  
   
-##  <a name="a-namelookupprivilegea--ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
  이란 특정된 이름과 연결 된 특성을 검색 합니다.  
   
 ```
@@ -278,7 +288,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 해당 특성은 false로 설정 성공적으로 검색 된 경우 true를 반환 합니다.  
   
-##  <a name="a-nameoperatoreqa--ctokenprivilegesoperator-"></a><a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
  대입 연산자입니다.  
   
 ```
@@ -296,7 +306,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CTokenPrivileges` 개체입니다.  
   
-##  <a name="a-nameoperatorconsttokenprivilegesstara--ctokenprivilegesoperator-const-tokenprivileges-"></a><a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  에 대 한 포인터 값에 캐스트는 **TOKEN_PRIVILEGES** 구조입니다.  
   
 ```  

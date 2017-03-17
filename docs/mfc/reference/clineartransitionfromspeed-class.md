@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CLinearTransitionFromSpeed
 - CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::Create
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblSpeed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitionfromspeeda--clineartransitionfromspeedclineartransitionfromspeed"></a><a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  선형 속도 전환을 개체를 생성 하 고 속도 최종 값으로 초기화 합니다.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  전환의 끝에 있는 애니메이션 변수의 값입니다.  
   
-##  <a name="a-namecreatea--clineartransitionfromspeedcreate"></a><a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionfromspeedmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
  전환의 끝에 있는 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblspeeda--clineartransitionfromspeedmdblspeed"></a><a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
  변수 속도의 절대 값입니다.  
   
 ```  

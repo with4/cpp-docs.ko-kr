@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
+- AFXCOLL/CMapStringToOb
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +118,7 @@ class CMapStringToOb : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="a-namecmapstringtooba--cmapstringtoobcmapstringtoob"></a><a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
+##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
  빈 생성 `CString`을 아래와 같이 `CObject*` 맵.  
   
 ```  
@@ -133,7 +148,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
   
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
   
-##  <a name="a-namegetcounta--cmapstringtoobgetcount"></a><a name="getcount"></a>CMapStringToOb::GetCount  
+##  <a name="getcount"></a>CMapStringToOb::GetCount  
  지도에 있는 요소의 수를 결정 합니다.  
   
 ```  
@@ -160,7 +175,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&64;](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
-##  <a name="a-namegethashtablesizea--cmapstringtoobgethashtablesize"></a><a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
  현재 해시 테이블의 요소 수를 결정합니다.  
   
 ```  
@@ -182,7 +197,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; UINT GetHashTableSize)**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; UINT GetHashTableSize)**|  
   
-##  <a name="a-namegetnextassoca--cmapstringtoobgetnextassoc"></a><a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
  에 지도 요소를 검색 *rNextPosition*, 그런 다음 업데이트 *rNextPosition* 맵에서 다음 요소를 참조 하 합니다.  
   
 ```  
@@ -239,7 +254,7 @@ void GetNextAssoc(
   
  `Bart : a CAge at $45D4 13`  
   
-##  <a name="a-namegetsizea--cmapstringtoobgetsize"></a><a name="getsize"></a>CMapStringToOb::GetSize  
+##  <a name="getsize"></a>CMapStringToOb::GetSize  
  지도 요소 수를 반환합니다.  
   
 ```  
@@ -266,7 +281,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&67;](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapstringtoobgetstartposition"></a><a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
+##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
  가 반환 하 여 지도 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 `GetNextAssoc` 를 호출 합니다.  
   
 ```  
@@ -293,7 +308,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>예제  
  예를 참조 [CMapStringToOb::GetNextAssoc](#getnextassoc)합니다.  
   
-##  <a name="a-namehashkeya--cmapstringtoobhashkey"></a><a name="hashkey"></a>CMapStringToOb::HashKey  
+##  <a name="hashkey"></a>CMapStringToOb::HashKey  
  지정된 된 키의 해시 값을 계산합니다.  
   
 ```  
@@ -319,7 +334,7 @@ UINT HashKey(LPCTSTR key) const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
   
-##  <a name="a-nameinithashtablea--cmapstringtoobinithashtable"></a><a name="inithashtable"></a>CMapStringToOb::InitHashTable  
+##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable  
  해시 테이블을 초기화합니다.  
   
 ```  
@@ -349,7 +364,7 @@ void InitHashTable(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
   
-##  <a name="a-nameisemptya--cmapstringtoobisempty"></a><a name="isempty"></a>CMapStringToOb::IsEmpty  
+##  <a name="isempty"></a>CMapStringToOb::IsEmpty  
  맵이 비어 있는지 여부를 결정 합니다.  
   
 ```  
@@ -374,7 +389,7 @@ BOOL IsEmpty() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; BOOL IsEmpty)**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; BOOL IsEmpty)**|  
   
-##  <a name="a-namelookupa--cmapstringtooblookup"></a><a name="lookup"></a>CMapStringToOb::Lookup  
+##  <a name="lookup"></a>CMapStringToOb::Lookup  
  반환 된 `CObject` 기반 포인터는 `CString` 값입니다.  
   
 ```  
@@ -412,7 +427,7 @@ BOOL Lookup(
   
  [!code-cpp[NVC_MFCCollections #&68;](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
-##  <a name="a-namelookupkeya--cmapstringtooblookupkey"></a><a name="lookupkey"></a>CMapStringToOb::LookupKey  
+##  <a name="lookupkey"></a>CMapStringToOb::LookupKey  
  지정 된 키 값과 연결 된 키에 대 한 참조를 반환 합니다.  
   
 ```  
@@ -441,7 +456,7 @@ BOOL LookupKey(
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR / /** `rKey` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR / /** `rKey` **) const;**|  
   
-##  <a name="a-nameoperatorata--cmapstringtooboperator--"></a><a name="operator_at"></a>CMapStringToOb::operator]  
+##  <a name="operator_at"></a>CMapStringToOb::operator]  
  에 대 한 편리한 대체는 `SetAt` 멤버 함수입니다.  
   
 ```  
@@ -480,7 +495,7 @@ CObject*& operator[ ](lpctstr key);
   
  `[Bart] = a CAge at $497E 13`  
   
-##  <a name="a-nameremovealla--cmapstringtoobremoveall"></a><a name="removeall"></a>CMapStringToOb::RemoveAll  
+##  <a name="removeall"></a>CMapStringToOb::RemoveAll  
  이 맵에서 모든 요소를 제거 하 고 삭제는 `CString` key 개체입니다.  
   
 ```  
@@ -508,7 +523,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&69;](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
-##  <a name="a-nameremovekeya--cmapstringtoobremovekey"></a><a name="removekey"></a>CMapStringToOb::RemoveKey  
+##  <a name="removekey"></a>CMapStringToOb::RemoveKey  
  제공 된 키에 해당 하는 맵 항목을 조회 그런 다음 키가 있는 경우 항목을 제거 합니다.  
   
 ```  
@@ -551,7 +566,7 @@ BOOL RemoveKey(LPCTSTR key);
   
  `[Bart] = a CAge at $4634 13`  
   
-##  <a name="a-namesetata--cmapstringtoobsetat"></a><a name="setat"></a>CMapStringToOb::SetAt  
+##  <a name="setat"></a>CMapStringToOb::SetAt  
  Map에서 요소를 삽입 하는 기본 의미 합니다.  
   
 ```  

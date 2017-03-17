@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
-- afxanimationcontroller/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_period
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -99,7 +103,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namecsinusoidaltransitionfromvelocitya--csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
+##  <a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
  전환 개체를 생성 합니다.  
   
 ```  
@@ -115,14 +119,14 @@ CSinusoidalTransitionFromVelocity(
  `period`  
  기간 (초)에서 사인 곡선 물결의 진동입니다.  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromvelocitymduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
  전환의 기간입니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromvelocitymperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
  기간 (초)에서 사인 곡선 물결의 진동입니다.  
   
 ```  

@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  모덜리스 대화 상자를 만듭니다.  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>주의  
  이 대화 상자에 자동으로 연결 되는 `CDialogImpl` 개체입니다. 모달 대화 상자를 만들려면 호출 [DoModal](#domodal)합니다. 위의 두 번째 재정의에 사용 됩니다 [CComControl](../../atl/reference/ccomcontrol-class.md)합니다.  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  모덜리스 대화 상자를 삭제합니다.  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>주의  
  반환 **TRUE** 대화 상자가 성공적으로 소멸 되 고, 그렇지 않으면 되었으면 **FALSE**합니다.  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  이 정적 함수에는 대화 상자 프로시저가 구현합니다.  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  재정의할 수 `DialogProc` 메시지를 처리 하기 위한 다른 메커니즘을 제공 합니다.  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  모달 대화 상자를 만듭니다.  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  모덜리스 대화 상자를 만들려면 호출 [만들기](#create)합니다.  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  모달 대화 상자를 삭제합니다.  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  호출 하지 마십시오 `EndDialog` 를 모덜리스 대화 상자를 제거 합니다. 호출 [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) 대신 합니다.  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  반환 `DialogProc`, 현재 대화 상자 프로시저가 있습니다.  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>주의  
  고유한 대화 프로시저 대체 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  화면에 지정된 된 사각형의 대화 상자 단위 (maps) 단위 (픽셀)를 변환합니다.  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>주의  
  지정 된 좌표를 대체 하는 함수 `RECT` 구조 만들기 대화 상자 또는 대화 상자 내에서 컨트롤을 배치 하는 데 사용할 수 있는 변환 된 좌표 구조체입니다.  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  마지막 메시지를 받은 후에 호출 (일반적으로 `WM_NCDESTROY`).  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>주의  
  창 소멸 시 개체를 자동으로 삭제 하려는 경우 수 호출할 수는 `delete this;` 여기 있습니다.  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  대화 상자에 전송 된 메시지를 처리 하는 첫 번째 메시지를 받을 때 한 번만 호출 합니다.  
   
 ```   

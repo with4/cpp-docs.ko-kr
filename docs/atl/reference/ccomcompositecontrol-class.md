@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
-- ATL::CComCompositeControl
-- ATL.CComCompositeControl<T>
-- ATL.CComCompositeControl
-- ATL::CComCompositeControl<T>
+- ATLCTL/ATL::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::AdviseSinkMap
+- ATLCTL/ATL::CComCompositeControl::CalcExtent
+- ATLCTL/ATL::CComCompositeControl::Create
+- ATLCTL/ATL::CComCompositeControl::CreateControlWindow
+- ATLCTL/ATL::CComCompositeControl::SetBackgroundColorFromAmbient
+- ATLCTL/ATL::CComCompositeControl::m_hbrBackground
+- ATLCTL/ATL::CComCompositeControl::m_hWndFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -117,7 +122,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-nameadvisesinkmapa--ccomcompositecontroladvisesinkmap"></a><a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
  Advise 하거나 unadvise 복합 컨트롤에 의해 호스팅되는 모든 컨트롤에이 메서드를 호출 합니다.  
   
 ```
@@ -150,7 +155,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>주의  
  이 메서드의 기본 구현을 싱크 맵을 이벤트에 항목을 통해 검색합니다. 그런 다음 실행 하거나 이벤트 싱크 맵 싱크 항목에서 설명 하는 COM 개체에 연결 지점을 unadvises. 이 멤버 메서드는 파생된 클래스의 인스턴스 하나에서 상속 되는 팩트에도 의존 `IDispEventImpl` 만드는 것이 좋습니다 또는 unadvised 될 싱크 맵에서 모든 컨트롤에 대 한 합니다.  
   
-##  <a name="a-namecalcextenta--ccomcompositecontrolcalcextent"></a><a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
  크기를 계산 하려면이 메서드를 호출 **HIMETRIC** 복합 컨트롤을 호스트 하는 데 사용 되는 대화 상자 리소스의 단위입니다.  
   
 ```
@@ -167,7 +172,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>주의  
  크기에 반환 되는 `size` 매개 변수입니다.  
   
-##  <a name="a-namecreatea--ccomcompositecontrolcreate"></a><a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>CComCompositeControl::Create  
  이 메서드는 복합 컨트롤에 대 한 컨트롤 창을 만들 수 있습니다.  
   
 ```
@@ -193,7 +198,7 @@ HWND Create(
 ### <a name="remarks"></a>주의  
  이 메서드는 일반적으로 컨트롤의 현재 위치에서 활성화 하는 동안 호출 됩니다.  
   
-##  <a name="a-nameccomcompositecontrola--ccomcompositecontrolccomcompositecontrol"></a><a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
  생성자입니다.  
   
 ```
@@ -203,7 +208,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>주의  
  초기화는 [CComCompositeControl::m_hbrBackground](#m_hbrbackground) 및 [CComCompositeControl::m_hWndFocus](#m_hwndfocus) NULL로 데이터 멤버입니다.  
   
-##  <a name="a-namedtora--ccomcompositecontrolccomcompositecontrol"></a><a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
  소멸자입니다.  
   
 ```
@@ -213,7 +218,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>주의  
  있는 경우 백그라운드 개체를 삭제 합니다.  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcompositecontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
  바꾼 컨트롤 창을 만들 모든 호스팅된 컨트롤에이 메서드를 호출 합니다.  
   
 ```
@@ -235,21 +240,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>주의  
  이 메서드는 호출 [CComCompositeControl::Create](#create) 및 [CComCompositeControl::AdviseSinkMap](#advisesinkmap)합니다.  
   
-##  <a name="a-namemhbrbackgrounda--ccomcompositecontrolmhbrbackground"></a><a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
  배경 브러시입니다.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="a-namemhwndfocusa--ccomcompositecontrolmhwndfocus"></a><a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
  현재 포커스가 있는 창 핸들입니다.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="a-namesetbackgroundcolorfromambienta--ccomcompositecontrolsetbackgroundcolorfromambient"></a><a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
  컨테이너의 배경색을 사용 하 여 복합 컨트롤의 배경색을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

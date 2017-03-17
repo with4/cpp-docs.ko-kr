@@ -9,8 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- atlpreviewctrlimpl/ATL::CAtlPreviewCtrlImpl
 - CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Create
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Destroy
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Focus
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::OnPaint
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Redraw
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetHost
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetPreviewVisuals
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetRect
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::DoPaint
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +127,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlpreviewctrlimpl.h  
   
-##  <a name="a-namecatlpreviewctrlimpla--catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  미리 보기 컨트롤 개체를 만듭니다.  
   
 ```
@@ -124,7 +137,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedtora--catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
  미리 보기 컨트롤 개체를 destructs 합니다.  
   
 ```
@@ -133,7 +146,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecreatea--catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
  Windows 창을 만들기 위해 고급 미리 보기 처리기가 호출 됩니다.  
   
 ```
@@ -152,7 +165,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedestroya--catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
  이 컨트롤을 파괴 하는 경우에 풍부한 미리 보기 처리기에 의해 호출 됩니다.  
   
 ```
@@ -161,7 +174,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedopainta--catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
  미리 보기를 렌더링 하는 프레임 워크에서 호출 됩니다.  
   
 ```
@@ -174,7 +187,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namefocusa--catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
  입력이 컨트롤에 포커스를 설정 합니다.  
   
 ```
@@ -183,7 +196,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemclrbacka--catlpreviewctrlimplmclrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
  미리 보기 창의 배경색입니다.  
   
 ```
@@ -192,7 +205,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemclrtexta--catlpreviewctrlimplmclrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
  미리 보기 창의 텍스트 색입니다.  
   
 ```
@@ -201,7 +214,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemplfa--catlpreviewctrlimplmplf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
  미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다.  
   
 ```
@@ -210,7 +223,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpainta--catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
  WM_PAINT 메시지를 처리합니다.  
   
 ```
@@ -239,7 +252,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameredrawa--catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
  이 컨트롤 다시 그리기를 알려 줍니다.  
   
 ```
@@ -248,7 +261,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesethosta--catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
  이 컨트롤에 대 한 새 부모를 설정합니다.  
   
 ```
@@ -261,7 +274,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpreviewvisualsa--catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
  호출 하는 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각 효과 설정 하는 경우 콘텐츠.  
   
 ```
@@ -283,7 +296,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetrecta--catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
  이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.  
   
 ```

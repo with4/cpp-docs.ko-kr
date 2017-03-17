@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiLock
+- AFXMT/CMultiLock
+- AFXMT/CMultiLock::CMultiLock
+- AFXMT/CMultiLock::IsLocked
+- AFXMT/CMultiLock::Lock
+- AFXMT/CMultiLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CMultiLock
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-namecmultilocka--cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
  생성 된 **CMultiLock** 개체입니다.  
   
 ```  
@@ -105,7 +110,7 @@ CMultiLock(
 ### <a name="remarks"></a>주의  
  이 함수는 대기 수를 동기화 개체의 배열을 만든 후 호출 됩니다. 일반적으로 하나의 동기화 개체를 사용할 수 있을 때까지 대기 해야 하는 스레드 내에서 호출 됩니다.  
   
-##  <a name="a-nameislockeda--cmultilockislocked"></a><a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>CMultiLock::IsLocked  
  지정된 된 개체를 신호 없음으로 인지 여부를 확인 (사용할 수 없음).  
   
 ```  
@@ -119,7 +124,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>반환 값  
  지정된 된 개체가 잠겨 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namelocka--cmultilocklock"></a><a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>CMultiLock::Lock  
  하나 이상의 제공 된 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 하 여 **CMultiLock** 생성자입니다.  
   
 ```  
@@ -163,7 +168,7 @@ DWORD Lock(
   
  경우 `Lock` 에 지정 된 시간 (밀리초)의 개수 보다 더 기다리는 즉시 반환할 수 없는 *dwTimeOut* 반환 하기 전에 매개 변수입니다. 경우 *dwTimeOut* 는 **무한**, `Lock` 개체에 대 한 액세스는 또는 구성 요소에 지정 된 조건이 될 때까지 반환 하지 것입니다 `dwWakeMask` 충족 합니다. 그렇지 않은 경우, `Lock` 된 동기화 개체를 획득할 수를 반환 합니다 성공적으로; 그렇지 않으면 오류를 반환 합니다.  
   
-##  <a name="a-nameunlocka--cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>CMultiLock::Unlock  
  가 소유 하는 동기화 개체를 해제 `CMultiLock`합니다.  
   
 ```  

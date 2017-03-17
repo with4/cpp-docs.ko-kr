@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::GetSelFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::Setup
+- AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +102,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxfontcombobox.h  
   
-##  <a name="a-namecmfcfontcomboboxa--cmfcfontcomboboxcmfcfontcombobox"></a><a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
  `CMFCFontComboBox` 개체를 생성합니다.  
   
 ```  
@@ -107,7 +113,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetselfonta--cmfcfontcomboboxgetselfont"></a><a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
  현재 선택 된 글꼴에 대 한 정보를 검색합니다.  
   
 ```  
@@ -119,7 +125,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namembdrawusingfonta--cmfcfontcomboboxmbdrawusingfont"></a><a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
  현재 글꼴 콤보 상자에서 항목 레이블을 그리는 데 사용할 글꼴을 프레임 워크를 나타냅니다.  
   
 ```  
@@ -129,7 +135,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 동일한 글꼴을 그리는 데 사용할 각 항목 레이블 프레임 워크를 보내도록 합니다. 이 멤버를 설정 `FALSE` 프레임 워크 이름이 레이블로 같습니다 글꼴을 사용 하 여 각 항목 레이블을 그리기에 지시 합니다. 이 멤버의 기본값은 `FALSE`합니다.  
   
-##  <a name="a-nameselectfonta--cmfcfontcomboboxselectfont"></a><a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
  글꼴 콤보 상자에서 지정된 된 조건과 일치 하는 글꼴을 선택 합니다.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls #&34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&35;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="a-namesetupa--cmfcfontcomboboxsetup"></a><a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>CMFCFontComboBox::Setup  
  글꼴 콤보 상자에 있는 항목의 목록을 초기화합니다.  
   
 ```  

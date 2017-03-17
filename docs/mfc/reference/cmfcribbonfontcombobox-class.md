@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::BuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetCharSet
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontDesc
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontType
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetPitchAndFamily
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::RebuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +104,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonComboBox.h  
   
-##  <a name="a-namebuildfontsa--cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
  글꼴을 사용 하 여 리본에서 콤보 상자를 채웁니다.  
   
 ```  
@@ -115,7 +124,7 @@ void BuildFonts(
  [in] `nPitchAndFamily`  
  폭 및 추가할 글꼴 패밀리를 지정 합니다.  
   
-##  <a name="a-namecmfcribbonfontcomboboxa--cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  생성 하 고 초기화는 [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) 개체입니다.  
   
 ```  
@@ -148,7 +157,7 @@ CMFCRibbonFontComboBox(
   
  에 할당 될 수 있는 올바른 문자 집합에 대 한 자세한 내용은 `nCharSet,` 및 유효한 값에 할당 될 수 있는 `nPitchAndFamily`, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 설명서에서.  
   
-##  <a name="a-namegetfontdesca--cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -162,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namerebuildfontsa--cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
  이전에 지정한 글꼴 종류, 문자 집합 및 피치 및 제품군의 글꼴을 사용 하 여 리본에서 콤보 상자를 채웁니다.  
   
 ```  
@@ -172,7 +181,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>주의  
  글꼴, 문자 집합을 지정할 수 있으며 폭 및 리본 글꼴 콤보에 포함할 글꼴 패밀리 상자에 [생성자](#cmfcribbonfontcombobox) 를 호출 하거나이 클래스에 대 한 [CMFCRibbonFontComboBox::BuildFonts](#buildfonts)합니다.  
   
-##  <a name="a-namesetfonta--cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  콤보 상자에서 지정된 글꼴을 선택합니다.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL SetFont(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcharseta--cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
  지정된 문자 집합을 반환합니다.  
   
 ```  
@@ -209,7 +218,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetfonttypea--cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
  콤보 상자에 표시할 글꼴 종류를 반환합니다. 유효한 옵션 DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE 또는 이러한 옵션의 비트 조합입니다.  
   
 ```  
@@ -221,7 +230,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpitchandfamilya--cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
  콤보 상자에 표시되는 글꼴의 피치 및 패밀리를 반환합니다.  
   
 ```  

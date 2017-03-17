@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlAutoThreadModuleT
-- ATL::CAtlAutoThreadModuleT
 - CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
  이 정적 함수는 동적으로 계산 하 고 프로세서의 수에 따라 EXE 모듈에 대 한 스레드의 최대 수를 반환 합니다.  
   
 ```

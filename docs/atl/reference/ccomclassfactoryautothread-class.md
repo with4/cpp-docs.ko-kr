@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactoryAutoThread
-- ATL.CComClassFactoryAutoThread
 - CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
+- ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>주의  
  모듈에서 파생 된 경우 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` 먼저 개체를 만드는 연결된 아파트에 스레드를 선택 합니다.  
   
-##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
 ```

@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
-- afxwin/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::Clear
+- AFXWIN/CMFCFilterChunkValueImpl::CopyChunk
+- AFXWIN/CMFCFilterChunkValueImpl::CopyFrom
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkGUID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkPID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkType
+- AFXWIN/CMFCFilterChunkValueImpl::GetString
+- AFXWIN/CMFCFilterChunkValueImpl::GetValue
+- AFXWIN/CMFCFilterChunkValueImpl::GetValueNoAlloc
+- AFXWIN/CMFCFilterChunkValueImpl::IsValid
+- AFXWIN/CMFCFilterChunkValueImpl::SetBoolValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetDwordValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetFileTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetInt64Value
+- AFXWIN/CMFCFilterChunkValueImpl::SetIntValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetLongValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetSystemTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetTextValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetChunk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +128,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecleara--cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
  ChunkValue를 지웁니다.  
   
 ```  
@@ -117,7 +137,7 @@ void Clear();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  개체를 생성합니다.  
   
 ```  
@@ -126,7 +146,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedtorcmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  개체를 destructs 합니다.  
   
 ```  
@@ -135,7 +155,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecopychunka--cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
  이 청크를 청크의 특징을 설명 하는 구조에 복사 합니다.  
   
 ```  
@@ -151,7 +171,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecopyfroma--cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
  다른 값에서 청크 값을이 초기화합니다.  
   
 ```  
@@ -164,7 +184,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetchunkguida--cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
  청크 GUID를 검색합니다.  
   
 ```  
@@ -176,7 +196,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetchunkpida--cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
  청크 PID (속성 ID)를 검색합니다.  
   
 ```  
@@ -188,7 +208,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetchunktypea--cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
  청크 유형을 검색합니다.  
   
 ```  
@@ -200,7 +220,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetstringa--cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
  문자열 값을 검색 합니다.  
   
 ```  
@@ -212,7 +232,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetvaluea--cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
  할당 된 propvariant으로 값을 검색합니다.  
   
 ```  
@@ -228,7 +248,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetvaluenoalloca--cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
  할당 되지 않은 (내부 값)을 반환합니다.  
   
 ```  
@@ -240,7 +260,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisvalida--cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
  이 속성 값이 유효한 지 여부를 확인 합니다.  
   
 ```  
@@ -252,7 +272,7 @@ BOOL IsValid() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetboolvaluea--cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
  오버로드됨. 부울으로 키가 속성을 설정합니다.  
   
 ```  
@@ -303,7 +323,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetchunka--cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
  청크의 공용 속성을 설정 하는 도우미 함수입니다.  
   
 ```  
@@ -340,7 +360,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetdwordvaluea--cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
  DWORD에 대 한 키 속성을 설정 합니다.  
   
 ```  
@@ -381,7 +401,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetfiletimevaluea--cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
  속성은 filetime 키로 설정 합니다.  
   
 ```  
@@ -422,7 +442,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetint64valuea--cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
  Int64 키로 속성을 설정 합니다.  
   
 ```  
@@ -463,7 +483,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetintvaluea--cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
  Int 키 속성을 설정 합니다.  
   
 ```  
@@ -504,7 +524,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetlongvaluea--cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
  LONG 키로 속성을 설정 합니다.  
   
 ```  
@@ -545,7 +565,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetsystemtimevaluea--cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
  속성을 SystemTime 키로 설정합니다.  
   
 ```  
@@ -586,7 +606,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettextvaluea--cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
  유니코드 문자열에 키가 속성을 설정합니다.  
   
 ```  

@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
+- AFXDISP/COleObjectFactory
+- AFXDISP/COleObjectFactory::COleObjectFactory
+- AFXDISP/COleObjectFactory::GetClassID
+- AFXDISP/COleObjectFactory::IsLicenseValid
+- AFXDISP/COleObjectFactory::IsRegistered
+- AFXDISP/COleObjectFactory::Register
+- AFXDISP/COleObjectFactory::RegisterAll
+- AFXDISP/COleObjectFactory::Revoke
+- AFXDISP/COleObjectFactory::RevokeAll
+- AFXDISP/COleObjectFactory::UnregisterAll
+- AFXDISP/COleObjectFactory::UpdateRegistry
+- AFXDISP/COleObjectFactory::UpdateRegistryAll
+- AFXDISP/COleObjectFactory::GetLicenseKey
+- AFXDISP/COleObjectFactory::OnCreateObject
+- AFXDISP/COleObjectFactory::VerifyLicenseKey
+- AFXDISP/COleObjectFactory::VerifyUserLicense
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +126,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namecoleobjectfactorya--coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
  생성 된 `COleObjectFactory` 팩터리의 목록에 추가 하는 개체를 등록 되지 않은 개체 팩터리로 초기화 합니다.  
   
 ```  
@@ -160,7 +176,7 @@ COleObjectFactory(
   
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetclassida--coleobjectfactorygetclassid"></a><a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
  이 팩터리를 나타내는 OLE 클래스 ID에 대 한 참조를 반환 합니다.  
   
 ```  
@@ -173,7 +189,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetlicensekeya--coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
  컨트롤의 DLL에서 고유한 라이선스 키를 요청 하 고에 저장 된 `BSTR` 가리키는 `pbstrKey`합니다.  
   
 ```  
@@ -195,7 +211,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>주의  
  이 함수의 기본 구현은 0을 반환 하 고 저장의 경우 nothing는 `BSTR`합니다. MFC ActiveX 컨트롤을 사용 하 여 프로젝트를 만드는 경우 컨트롤 컨트롤의 라이선스 키를 검색 하는 재정의 제공 합니다.  
   
-##  <a name="a-nameislicensevalida--coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
  컨트롤의 라이선스 유효 인지 여부를 확인 합니다.  
   
 ```  
@@ -205,7 +221,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 successul; 그렇지 않으면 false입니다.  
   
-##  <a name="a-nameisregistereda--coleobjectfactoryisregistered"></a><a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
  공장 OLE 시스템 Dll에 등록 되어 있으면&0;이 아닌 값을 반환 합니다.  
   
 ```  
@@ -215,7 +231,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>반환 값  
  공장 등록 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameoncreateobjecta--coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
  새 개체를 만드는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -228,7 +244,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>주의  
  이외의 다른 항목에서 개체를 만들려면이 함수를 재정의 하는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 생성자에 전달 합니다.  
   
-##  <a name="a-nameregistera--coleobjectfactoryregister"></a><a name="register"></a>COleObjectFactory::Register  
+##  <a name="register"></a>COleObjectFactory::Register  
  OLE 시스템 Dll이 개체 팩터리를 등록합니다.  
   
 ```  
@@ -241,7 +257,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>주의  
  이 함수는 일반적으로 호출한 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 응용 프로그램 시작 시.  
   
-##  <a name="a-nameregisteralla--coleobjectfactoryregisterall"></a><a name="registerall"></a>COleObjectFactory::RegisterAll  
+##  <a name="registerall"></a>COleObjectFactory::RegisterAll  
  OLE 시스템 Dll 모든 응용 프로그램의 개체 팩터리를 등록합니다.  
   
 ```  
@@ -254,7 +270,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>주의  
  이 함수는 일반적으로 호출한 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 응용 프로그램 시작 시.  
   
-##  <a name="a-namerevokea--coleobjectfactoryrevoke"></a><a name="revoke"></a>COleObjectFactory::Revoke  
+##  <a name="revoke"></a>COleObjectFactory::Revoke  
  이 개체 팩터리를 OLE 시스템 Dll 사용이 등록을 취소합니다.  
   
 ```  
@@ -264,7 +280,7 @@ void Revoke();
 ### <a name="remarks"></a>주의  
  응용 프로그램을 종료 하기 전에이 함수를 자동으로 호출 하는 프레임 워크입니다. 필요한 경우 재정의에서 호출할 [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance)합니다.  
   
-##  <a name="a-namerevokealla--coleobjectfactoryrevokeall"></a><a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
  모든 OLE 시스템 Dll에 있는 응용 프로그램의 개체 팩터리 등록 취소합니다.  
   
 ```  
@@ -274,7 +290,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>주의  
  응용 프로그램을 종료 하기 전에이 함수를 자동으로 호출 하는 프레임 워크입니다. 필요한 경우 재정의에서 호출할 [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance)합니다.  
   
-##  <a name="a-nameunregisteralla--coleobjectfactoryunregisterall"></a><a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
+##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
  모든 응용 프로그램의 개체 팩터리를 등록 취소합니다.  
   
 ```  
@@ -284,7 +300,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>반환 값  
  성공하면 TRUE이고, 실패하면 FALSE입니다.  
   
-##  <a name="a-nameupdateregistrya--coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
  OLE 시스템 레지스트리에 있는 모든 응용 프로그램의 개체 팩터리를 등록합니다.  
   
 ```  
@@ -308,7 +324,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      MFC ActiveX 컨트롤을 사용 하 여 프로젝트를 만드는 경우 컨트롤이 순수 가상 함수에 대 한 재정의 제공 합니다.  
   
-##  <a name="a-nameupdateregistryalla--coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll  
+##  <a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll  
  OLE 시스템 레지스트리에 있는 모든 응용 프로그램의 개체 팩터리를 등록합니다.  
   
 ```  
@@ -325,7 +341,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>주의  
  이 함수는 일반적으로 호출한 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 응용 프로그램 시작 시.  
   
-##  <a name="a-nameverifylicensekeya--coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
  컨테이너는 OLE 컨트롤을 사용 하 여 라이선스를 갖고 있는지 확인 합니다.  
   
 ```  
@@ -346,7 +362,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  함수 [VerifyUserLicense](#verifyuserlicense) 디자인 타임 라이선스를 확인 합니다.  
   
-##  <a name="a-nameverifyuserlicensea--coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
  OLE 컨트롤에 대 한 디자인 타임 라이선스를 확인합니다.  
   
 ```  

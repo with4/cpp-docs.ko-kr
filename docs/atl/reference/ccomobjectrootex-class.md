@@ -9,11 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectRootEx
-- ATL::CComObjectRootEx<ThreadModel>
 - CComObjectRootEx
-- ATL::CComObjectRootEx
-- ATL.CComObjectRootEx<ThreadModel>
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::InternalAddRef
+- ATLCOM/ATL::InternalRelease
+- ATLCOM/ATL::Lock
+- ATLCOM/ATL::Unlock
+- ATLCOM/ATL::FinalConstruct
+- ATLCOM/ATL::FinalRelease
+- ATLCOM/ATL::OuterAddRef
+- ATLCOM/ATL::OuterQueryInterface
+- ATLCOM/ATL::OuterRelease
+- ATLCOM/ATL::InternalQueryInterface
+- ATLCOM/ATL::ObjectMain
+- ATLCOM/ATL::m_dwRef
+- ATLCOM/ATL::m_pOuterUnknown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,14 +123,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameccomobjectrootexa--ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  생성자는 참조 개수를 0으로 초기화합니다.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="a-namefinalconstructa--ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
  개체에 필요한 초기화를 수행 하려면 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
 ```
@@ -159,7 +170,7 @@ HRESULT FinalConstruct();
   
 -   재정의 `FinalRelease` 해제 하는 **IUnknown** 포인터입니다.  
   
-##  <a name="a-namefinalreleasea--ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
  개체에 필요한 정리를 수행 하려면 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
 ```
@@ -171,7 +182,7 @@ void FinalRelease();
   
  에 정리를 수행 `FinalRelease` 는 시점에 개체가 완전히 생성 되므로 클래스의 소멸자에 코드를 추가 하는 것이 좋습니다 `FinalRelease` 라고 합니다. 이렇게 하면 가장 많이 파생 된 클래스에서 제공 하는 메서드를 안전 하 게 액세스할 수 있습니다. 이것은 집계 된 모든 개체를 삭제 하기 전에 해제에 대 한 특히 중요 합니다.  
   
-##  <a name="a-nameinternaladdrefa--ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
  집계 개체의 참조 횟수가 1 씩 늘립니다.  
   
 ```
@@ -184,7 +195,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>주의  
  스레드 모델 요소가 다중 스레드가 경우 **InterlockedIncrement** 둘 이상의 스레드가 동시에 참조 횟수를 변경 하지 못하도록 하는 데 사용 됩니다.  
   
-##  <a name="a-nameinternalqueryinterfacea--ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -214,7 +225,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>주의  
  `InternalQueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다. 개체를 집계 하는 경우 `InternalQueryInterface` 알 수 없는 외부를 위임 하지 않습니다. 인터페이스를 COM 맵 테이블에 매크로 입력할 수 있습니다 [COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00) 또는 해당 변형 중 하나입니다.  
   
-##  <a name="a-nameinternalreleasea--ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
  참조 횟수를 감소 집계 개체의 1입니다.  
   
 ```
@@ -227,7 +238,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>주의  
  스레드 모델 요소가 다중 스레드가 경우 **InterlockedDecrement** 둘 이상의 스레드가 동시에 참조 횟수를 변경 하지 못하도록 하는 데 사용 됩니다.  
   
-##  <a name="a-namelocka--ccomobjectrootexlock"></a><a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>CComObjectRootEx::Lock  
  스레드 모델 다중 스레드 이면이 메서드는 Win32 API 함수를 호출 하는 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), 전용 데이터 멤버를 통해 얻은 스레드가 임계 영역 개체의 소유권을 가져올 수 될 때까지 어떤 대기 합니다.  
   
 ```
@@ -239,7 +250,7 @@ void Lock();
   
  단일 스레드 스레드 모델 있으면이 메서드는 아무것도 수행 하지 않습니다.  
   
-##  <a name="a-namemdwrefa--ccomobjectrootexmdwref"></a><a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
  4 바이트의 메모리에 액세스 하는 공용 구조체의 일부입니다.  
   
 ```
@@ -261,7 +272,7 @@ long m_dwRef;
   
  개체가 집계 되지 않은 경우가 참조 횟수에 액세스할 `AddRef` 및 **릴리스** 에 저장 된 `m_dwRef`합니다. 개체를 집계 하는 경우 알 수 없는 외부에 대 한 포인터에 저장 됩니다 [m_pOuterUnknown](#m_pouterunknown)합니다.  
   
-##  <a name="a-namempouterunknowna--ccomobjectrootexmpouterunknown"></a><a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
  4 바이트의 메모리에 액세스 하는 공용 구조체의 일부입니다.  
   
 ```
@@ -284,7 +295,7 @@ IUnknown*
   
  개체를 집계 하는 경우 알 수 없는 외부에 대 한 포인터에 저장 됩니다 `m_pOuterUnknown`합니다. 개체가 집계 되지 않은 경우가 참조 횟수에 액세스할 `AddRef` 및 **릴리스** 에 저장 된 [m_dwRef](#m_dwref)합니다.  
   
-##  <a name="a-nameobjectmaina--ccomobjectrootexobjectmain"></a><a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
  에 나열 된 각 클래스에 대해는 [개체 맵의](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), 모듈을 초기화 하는 경우 한 후이 함수를 호출 및 종료 시간에 다시 합니다.  
   
 ```
@@ -303,7 +314,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM&#41;](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="a-nameouteraddrefa--ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  집계의 알 수 없는 외부의 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -313,7 +324,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 하 고 테스트 될 수 있는 값입니다.  
   
-##  <a name="a-nameouterqueryinterfacea--ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
  요청된 된 인터페이스에 대 한 간접 포인터를 검색합니다.  
   
 ```
@@ -330,7 +341,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>반환 값  
  하나는 표준 `HRESULT` 값입니다.  
   
-##  <a name="a-nameouterreleasea--ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
  집계의 알 수 없는 외부의 참조 횟수를 감소 시킵니다.  
   
 ```
@@ -340,7 +351,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>반환 값  
  비-디버그 빌드에서만에서 항상 0을 반환 합니다. 디버그 빌드에서 진단에 유용 하거나 테스트 될 수 있는 값을 반환 합니다.  
   
-##  <a name="a-nameunlocka--ccomobjectrootexunlock"></a><a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>CComObjectRootEx::Unlock  
  스레드 모델 다중 스레드 이면이 메서드는 Win32 API 함수를 호출 하는 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), 어떤 릴리스 소유권 임계 영역 개체의 전용 데이터 멤버를 통해 얻은 합니다.  
   
 ```

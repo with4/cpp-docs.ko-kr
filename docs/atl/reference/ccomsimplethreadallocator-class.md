@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSimpleThreadAllocator
-- ATL::CComSimpleThreadAllocator
-- ATL.CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator::GetThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,7 +67,7 @@ class CComSimpleThreadAllocator
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namegetthreada--ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
+##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
  시퀀스의 다음 스레드를 지정 하 여 스레드를 선택 합니다.  
   
 ```

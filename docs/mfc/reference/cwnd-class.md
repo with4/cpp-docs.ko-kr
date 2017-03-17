@@ -10,6 +10,413 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWnd
+- AFXWIN/CWnd
+- AFXWIN/CWnd::CWnd
+- AFXWIN/CWnd::accDoDefaultAction
+- AFXWIN/CWnd::accHitTest
+- AFXWIN/CWnd::accLocation
+- AFXWIN/CWnd::accNavigate
+- AFXWIN/CWnd::accSelect
+- AFXWIN/CWnd::AnimateWindow
+- AFXWIN/CWnd::ArrangeIconicWindows
+- AFXWIN/CWnd::Attach
+- AFXWIN/CWnd::BeginModalState
+- AFXWIN/CWnd::BeginPaint
+- AFXWIN/CWnd::BindDefaultProperty
+- AFXWIN/CWnd::BindProperty
+- AFXWIN/CWnd::BringWindowToTop
+- AFXWIN/CWnd::CalcWindowRect
+- AFXWIN/CWnd::CancelToolTips
+- AFXWIN/CWnd::CenterWindow
+- AFXWIN/CWnd::ChangeClipboardChain
+- AFXWIN/CWnd::CheckDlgButton
+- AFXWIN/CWnd::CheckRadioButton
+- AFXWIN/CWnd::ChildWindowFromPoint
+- AFXWIN/CWnd::ClientToScreen
+- AFXWIN/CWnd::CloseWindow
+- AFXWIN/CWnd::ContinueModal
+- AFXWIN/CWnd::Create
+- AFXWIN/CWnd::CreateAccessibleProxy
+- AFXWIN/CWnd::CreateCaret
+- AFXWIN/CWnd::CreateControl
+- AFXWIN/CWnd::CreateEx
+- AFXWIN/CWnd::CreateGrayCaret
+- AFXWIN/CWnd::CreateSolidCaret
+- AFXWIN/CWnd::DeleteTempMap
+- AFXWIN/CWnd::DestroyWindow
+- AFXWIN/CWnd::Detach
+- AFXWIN/CWnd::DlgDirList
+- AFXWIN/CWnd::DlgDirListComboBox
+- AFXWIN/CWnd::DlgDirSelect
+- AFXWIN/CWnd::DlgDirSelectComboBox
+- AFXWIN/CWnd::DragAcceptFiles
+- AFXWIN/CWnd::DragDetect
+- AFXWIN/CWnd::DrawAnimatedRects
+- AFXWIN/CWnd::DrawCaption
+- AFXWIN/CWnd::DrawMenuBar
+- AFXWIN/CWnd::EnableActiveAccessibility
+- AFXWIN/CWnd::EnableDynamicLayout
+- AFXWIN/CWnd::EnableD2DSupport
+- AFXWIN/CWnd::EnableScrollBar
+- AFXWIN/CWnd::EnableScrollBarCtrl
+- AFXWIN/CWnd::EnableToolTips
+- AFXWIN/CWnd::EnableTrackingToolTips
+- AFXWIN/CWnd::EnableWindow
+- AFXWIN/CWnd::EndModalLoop
+- AFXWIN/CWnd::EndModalState
+- AFXWIN/CWnd::EndPaint
+- AFXWIN/CWnd::ExecuteDlgInit
+- AFXWIN/CWnd::FilterToolTipMessage
+- AFXWIN/CWnd::FindWindow
+- AFXWIN/CWnd::FindWindowEx
+- AFXWIN/CWnd::FlashWindow
+- AFXWIN/CWnd::FlashWindowEx
+- AFXWIN/CWnd::FromHandle
+- AFXWIN/CWnd::FromHandlePermanent
+- AFXWIN/CWnd::get_accChild
+- AFXWIN/CWnd::get_accChildCount
+- AFXWIN/CWnd::get_accDefaultAction
+- AFXWIN/CWnd::get_accDescription
+- AFXWIN/CWnd::get_accFocus
+- AFXWIN/CWnd::get_accHelp
+- AFXWIN/CWnd::get_accHelpTopic
+- AFXWIN/CWnd::get_accKeyboardShortcut
+- AFXWIN/CWnd::get_accName
+- AFXWIN/CWnd::get_accParent
+- AFXWIN/CWnd::get_accRole
+- AFXWIN/CWnd::get_accSelection
+- AFXWIN/CWnd::get_accState
+- AFXWIN/CWnd::get_accValue
+- AFXWIN/CWnd::GetActiveWindow
+- AFXWIN/CWnd::GetAncestor
+- AFXWIN/CWnd::GetCapture
+- AFXWIN/CWnd::GetCaretPos
+- AFXWIN/CWnd::GetCheckedRadioButton
+- AFXWIN/CWnd::GetClientRect
+- AFXWIN/CWnd::GetClipboardOwner
+- AFXWIN/CWnd::GetClipboardViewer
+- AFXWIN/CWnd::GetControlUnknown
+- AFXWIN/CWnd::GetDC
+- AFXWIN/CWnd::GetDCEx
+- AFXWIN/CWnd::GetDCRenderTarget
+- AFXWIN/CWnd::GetDescendantWindow
+- AFXWIN/CWnd::GetDesktopWindow
+- AFXWIN/CWnd::GetDlgCtrlID
+- AFXWIN/CWnd::GetDlgItem
+- AFXWIN/CWnd::GetDlgItemInt
+- AFXWIN/CWnd::GetDlgItemText
+- AFXWIN/CWnd::GetDSCCursor
+- AFXWIN/CWnd::GetDynamicLayout
+- AFXWIN/CWnd::GetExStyle
+- AFXWIN/CWnd::GetFocus
+- AFXWIN/CWnd::GetFont
+- AFXWIN/CWnd::GetForegroundWindow
+- AFXWIN/CWnd::GetIcon
+- AFXWIN/CWnd::GetLastActivePopup
+- AFXWIN/CWnd::GetLayeredWindowAttributes
+- AFXWIN/CWnd::GetMenu
+- AFXWIN/CWnd::GetNextDlgGroupItem
+- AFXWIN/CWnd::GetNextDlgTabItem
+- AFXWIN/CWnd::GetNextWindow
+- AFXWIN/CWnd::GetOleControlSite
+- AFXWIN/CWnd::GetOpenClipboardWindow
+- AFXWIN/CWnd::GetOwner
+- AFXWIN/CWnd::GetParent
+- AFXWIN/CWnd::GetParentFrame
+- AFXWIN/CWnd::GetParentOwner
+- AFXWIN/CWnd::GetProperty
+- AFXWIN/CWnd::GetRenderTarget
+- AFXWIN/CWnd::GetSafeHwnd
+- AFXWIN/CWnd::GetSafeOwner
+- AFXWIN/CWnd::GetScrollBarCtrl
+- AFXWIN/CWnd::GetScrollBarInfo
+- AFXWIN/CWnd::GetScrollInfo
+- AFXWIN/CWnd::GetScrollLimit
+- AFXWIN/CWnd::GetScrollPos
+- AFXWIN/CWnd::GetScrollRange
+- AFXWIN/CWnd::GetStyle
+- AFXWIN/CWnd::GetSystemMenu
+- AFXWIN/CWnd::GetTitleBarInfo
+- AFXWIN/CWnd::GetTopLevelFrame
+- AFXWIN/CWnd::GetTopLevelOwner
+- AFXWIN/CWnd::GetTopLevelParent
+- AFXWIN/CWnd::GetTopWindow
+- AFXWIN/CWnd::GetUpdateRect
+- AFXWIN/CWnd::GetUpdateRgn
+- AFXWIN/CWnd::GetWindow
+- AFXWIN/CWnd::GetWindowContextHelpId
+- AFXWIN/CWnd::GetWindowDC
+- AFXWIN/CWnd::GetWindowedChildCount
+- AFXWIN/CWnd::GetWindowInfo
+- AFXWIN/CWnd::GetWindowlessChildCount
+- AFXWIN/CWnd::GetWindowPlacement
+- AFXWIN/CWnd::GetWindowRect
+- AFXWIN/CWnd::GetWindowRgn
+- AFXWIN/CWnd::GetWindowText
+- AFXWIN/CWnd::GetWindowTextLength
+- AFXWIN/CWnd::HideCaret
+- AFXWIN/CWnd::HiliteMenuItem
+- AFXWIN/CWnd::HtmlHelp
+- AFXWIN/CWnd::Invalidate
+- AFXWIN/CWnd::InvalidateRect
+- AFXWIN/CWnd::InvalidateRgn
+- AFXWIN/CWnd::InvokeHelper
+- AFXWIN/CWnd::IsChild
+- AFXWIN/CWnd::IsD2DSupportEnabled
+- AFXWIN/CWnd::IsDialogMessage
+- AFXWIN/CWnd::IsDlgButtonChecked
+- AFXWIN/CWnd::IsDynamicLayoutEnabled
+- AFXWIN/CWnd::IsIconic
+- AFXWIN/CWnd::IsTouchWindow
+- AFXWIN/CWnd::IsWindowEnabled
+- AFXWIN/CWnd::IsWindowVisible
+- AFXWIN/CWnd::IsZoomed
+- AFXWIN/CWnd::KillTimer
+- AFXWIN/CWnd::LockWindowUpdate
+- AFXWIN/CWnd::MapWindowPoints
+- AFXWIN/CWnd::MessageBox
+- AFXWIN/CWnd::ModifyStyle
+- AFXWIN/CWnd::ModifyStyleEx
+- AFXWIN/CWnd::MoveWindow
+- AFXWIN/CWnd::NotifyWinEvent
+- AFXWIN/CWnd::OnAmbientProperty
+- AFXWIN/CWnd::OnDrawIconicThumbnailOrLivePreview
+- AFXWIN/CWnd::OnHelp
+- AFXWIN/CWnd::OnHelpFinder
+- AFXWIN/CWnd::OnHelpIndex
+- AFXWIN/CWnd::OnHelpUsing
+- AFXWIN/CWnd::OnToolHitTest
+- AFXWIN/CWnd::OpenClipboard
+- AFXWIN/CWnd::PaintWindowlessControls
+- AFXWIN/CWnd::PostMessage
+- AFXWIN/CWnd::PreCreateWindow
+- AFXWIN/CWnd::PreSubclassWindow
+- AFXWIN/CWnd::PreTranslateMessage
+- AFXWIN/CWnd::Print
+- AFXWIN/CWnd::PrintClient
+- AFXWIN/CWnd::PrintWindow
+- AFXWIN/CWnd::RedrawWindow
+- AFXWIN/CWnd::RegisterTouchWindow
+- AFXWIN/CWnd::ReleaseDC
+- AFXWIN/CWnd::RepositionBars
+- AFXWIN/CWnd::RunModalLoop
+- AFXWIN/CWnd::ScreenToClient
+- AFXWIN/CWnd::ScrollWindow
+- AFXWIN/CWnd::ScrollWindowEx
+- AFXWIN/CWnd::SendChildNotifyLastMsg
+- AFXWIN/CWnd::SendDlgItemMessage
+- AFXWIN/CWnd::SendMessage
+- AFXWIN/CWnd::SendMessageToDescendants
+- AFXWIN/CWnd::SendNotifyMessage
+- AFXWIN/CWnd::SetActiveWindow
+- AFXWIN/CWnd::SetCapture
+- AFXWIN/CWnd::SetCaretPos
+- AFXWIN/CWnd::SetClipboardViewer
+- AFXWIN/CWnd::SetDlgCtrlID
+- AFXWIN/CWnd::SetDlgItemInt
+- AFXWIN/CWnd::SetDlgItemText
+- AFXWIN/CWnd::SetFocus
+- AFXWIN/CWnd::SetFont
+- AFXWIN/CWnd::SetForegroundWindow
+- AFXWIN/CWnd::SetIcon
+- AFXWIN/CWnd::SetLayeredWindowAttributes
+- AFXWIN/CWnd::SetMenu
+- AFXWIN/CWnd::SetOwner
+- AFXWIN/CWnd::SetParent
+- AFXWIN/CWnd::SetProperty
+- AFXWIN/CWnd::SetRedraw
+- AFXWIN/CWnd::SetScrollInfo
+- AFXWIN/CWnd::SetScrollPos
+- AFXWIN/CWnd::SetScrollRange
+- AFXWIN/CWnd::SetTimer
+- AFXWIN/CWnd::SetWindowContextHelpId
+- AFXWIN/CWnd::SetWindowPlacement
+- AFXWIN/CWnd::SetWindowPos
+- AFXWIN/CWnd::SetWindowRgn
+- AFXWIN/CWnd::SetWindowText
+- AFXWIN/CWnd::ShowCaret
+- AFXWIN/CWnd::ShowOwnedPopups
+- AFXWIN/CWnd::ShowScrollBar
+- AFXWIN/CWnd::ShowWindow
+- AFXWIN/CWnd::SubclassDlgItem
+- AFXWIN/CWnd::SubclassWindow
+- AFXWIN/CWnd::UnlockWindowUpdate
+- AFXWIN/CWnd::UnsubclassWindow
+- AFXWIN/CWnd::UpdateData
+- AFXWIN/CWnd::UpdateDialogControls
+- AFXWIN/CWnd::UpdateLayeredWindow
+- AFXWIN/CWnd::UpdateWindow
+- AFXWIN/CWnd::ValidateRect
+- AFXWIN/CWnd::ValidateRgn
+- AFXWIN/CWnd::WindowFromPoint
+- AFXWIN/CWnd::WinHelp
+- AFXWIN/CWnd::Default
+- AFXWIN/CWnd::DefWindowProc
+- AFXWIN/CWnd::DoDataExchange
+- AFXWIN/CWnd::GetCurrentMessage
+- AFXWIN/CWnd::InitDynamicLayout
+- AFXWIN/CWnd::LoadDynamicLayoutResource
+- AFXWIN/CWnd::OnActivate
+- AFXWIN/CWnd::OnActivateApp
+- AFXWIN/CWnd::OnAppCommand
+- AFXWIN/CWnd::OnAskCbFormatName
+- AFXWIN/CWnd::OnCancelMode
+- AFXWIN/CWnd::OnCaptureChanged
+- AFXWIN/CWnd::OnChangeCbChain
+- AFXWIN/CWnd::OnChangeUIState
+- AFXWIN/CWnd::OnChar
+- AFXWIN/CWnd::OnCharToItem
+- AFXWIN/CWnd::OnChildActivate
+- AFXWIN/CWnd::OnChildNotify
+- AFXWIN/CWnd::OnClipboardUpdate
+- AFXWIN/CWnd::OnClose
+- AFXWIN/CWnd::OnColorizationColorChanged
+- AFXWIN/CWnd::OnCommand
+- AFXWIN/CWnd::OnCompacting
+- AFXWIN/CWnd::OnCompareItem
+- AFXWIN/CWnd::OnCompositionChanged
+- AFXWIN/CWnd::OnContextMenu
+- AFXWIN/CWnd::OnCopyData
+- AFXWIN/CWnd::OnCreate
+- AFXWIN/CWnd::OnCtlColor
+- AFXWIN/CWnd::OnDeadChar
+- AFXWIN/CWnd::OnDeleteItem
+- AFXWIN/CWnd::OnDestroy
+- AFXWIN/CWnd::OnDestroyClipboard
+- AFXWIN/CWnd::OnDeviceChange
+- AFXWIN/CWnd::OnDevModeChange
+- AFXWIN/CWnd::OnDrawClipboard
+- AFXWIN/CWnd::OnDrawItem
+- AFXWIN/CWnd::OnDropFiles
+- AFXWIN/CWnd::OnEnable
+- AFXWIN/CWnd::OnEndSession
+- AFXWIN/CWnd::OnEnterIdle
+- AFXWIN/CWnd::OnEnterMenuLoop
+- AFXWIN/CWnd::OnEnterSizeMove
+- AFXWIN/CWnd::OnEraseBkgnd
+- AFXWIN/CWnd::OnExitMenuLoop
+- AFXWIN/CWnd::OnExitSizeMove
+- AFXWIN/CWnd::OnFontChange
+- AFXWIN/CWnd::OnGetDlgCode
+- AFXWIN/CWnd::OnGetMinMaxInfo
+- AFXWIN/CWnd::OnHelpInfo
+- AFXWIN/CWnd::OnHotKey
+- AFXWIN/CWnd::OnHScroll
+- AFXWIN/CWnd::OnHScrollClipboard
+- AFXWIN/CWnd::OnIconEraseBkgnd
+- AFXWIN/CWnd::OnInitMenu
+- AFXWIN/CWnd::OnInitMenuPopup
+- AFXWIN/CWnd::OnInputDeviceChange
+- AFXWIN/CWnd::OnInputLangChange
+- AFXWIN/CWnd::OnInputLangChangeRequest
+- AFXWIN/CWnd::OnKeyDown
+- AFXWIN/CWnd::OnKeyUp
+- AFXWIN/CWnd::OnKillFocus
+- AFXWIN/CWnd::OnLButtonDblClk
+- AFXWIN/CWnd::OnLButtonDown
+- AFXWIN/CWnd::OnLButtonUp
+- AFXWIN/CWnd::OnMButtonDblClk
+- AFXWIN/CWnd::OnMButtonDown
+- AFXWIN/CWnd::OnMButtonUp
+- AFXWIN/CWnd::OnMDIActivate
+- AFXWIN/CWnd::OnMeasureItem
+- AFXWIN/CWnd::OnMenuChar
+- AFXWIN/CWnd::OnMenuDrag
+- AFXWIN/CWnd::OnMenuGetObject
+- AFXWIN/CWnd::OnMenuRButtonUp
+- AFXWIN/CWnd::OnMenuSelect
+- AFXWIN/CWnd::OnMouseActivate
+- AFXWIN/CWnd::OnMouseHover
+- AFXWIN/CWnd::OnMouseHWheel
+- AFXWIN/CWnd::OnMouseLeave
+- AFXWIN/CWnd::OnMouseMove
+- AFXWIN/CWnd::OnMouseWheel
+- AFXWIN/CWnd::OnMove
+- AFXWIN/CWnd::OnMoving
+- AFXWIN/CWnd::OnNcActivate
+- AFXWIN/CWnd::OnNcCalcSize
+- AFXWIN/CWnd::OnNcCreate
+- AFXWIN/CWnd::OnNcDestroy
+- AFXWIN/CWnd::OnNcHitTest
+- AFXWIN/CWnd::OnNcLButtonDblClk
+- AFXWIN/CWnd::OnNcLButtonDown
+- AFXWIN/CWnd::OnNcLButtonUp
+- AFXWIN/CWnd::OnNcMButtonDblClk
+- AFXWIN/CWnd::OnNcMButtonDown
+- AFXWIN/CWnd::OnNcMButtonUp
+- AFXWIN/CWnd::OnNcMouseHover
+- AFXWIN/CWnd::OnNcMouseLeave
+- AFXWIN/CWnd::OnNcMouseMove
+- AFXWIN/CWnd::OnNcPaint
+- AFXWIN/CWnd::OnNcRButtonDblClk
+- AFXWIN/CWnd::OnNcRButtonDown
+- AFXWIN/CWnd::OnNcRButtonUp
+- AFXWIN/CWnd::OnNcRenderingChanged
+- AFXWIN/CWnd::OnNcXButtonDblClk
+- AFXWIN/CWnd::OnNcXButtonDown
+- AFXWIN/CWnd::OnNcXButtonUp
+- AFXWIN/CWnd::OnNextMenu
+- AFXWIN/CWnd::OnNotify
+- AFXWIN/CWnd::OnNotifyFormat
+- AFXWIN/CWnd::OnPaint
+- AFXWIN/CWnd::OnPaintClipboard
+- AFXWIN/CWnd::OnPaletteChanged
+- AFXWIN/CWnd::OnPaletteIsChanging
+- AFXWIN/CWnd::OnParentNotify
+- AFXWIN/CWnd::OnPowerBroadcast
+- AFXWIN/CWnd::OnQueryDragIcon
+- AFXWIN/CWnd::OnQueryEndSession
+- AFXWIN/CWnd::OnQueryNewPalette
+- AFXWIN/CWnd::OnQueryOpen
+- AFXWIN/CWnd::OnQueryUIState
+- AFXWIN/CWnd::OnRawInput
+- AFXWIN/CWnd::OnRButtonDblClk
+- AFXWIN/CWnd::OnRButtonDown
+- AFXWIN/CWnd::OnRButtonUp
+- AFXWIN/CWnd::OnRenderAllFormats
+- AFXWIN/CWnd::OnRenderFormat
+- AFXWIN/CWnd::OnSessionChange
+- AFXWIN/CWnd::OnSetCursor
+- AFXWIN/CWnd::OnSetFocus
+- AFXWIN/CWnd::OnSettingChange
+- AFXWIN/CWnd::OnShowWindow
+- AFXWIN/CWnd::OnSize
+- AFXWIN/CWnd::OnSizeClipboard
+- AFXWIN/CWnd::OnSizing
+- AFXWIN/CWnd::OnSpoolerStatus
+- AFXWIN/CWnd::OnStyleChanged
+- AFXWIN/CWnd::OnStyleChanging
+- AFXWIN/CWnd::OnSysChar
+- AFXWIN/CWnd::OnSysColorChange
+- AFXWIN/CWnd::OnSysCommand
+- AFXWIN/CWnd::OnSysDeadChar
+- AFXWIN/CWnd::OnSysKeyDown
+- AFXWIN/CWnd::OnSysKeyUp
+- AFXWIN/CWnd::OnTCard
+- AFXWIN/CWnd::OnTimeChange
+- AFXWIN/CWnd::OnTimer
+- AFXWIN/CWnd::OnTouchInput
+- AFXWIN/CWnd::OnTouchInputs
+- AFXWIN/CWnd::OnUniChar
+- AFXWIN/CWnd::OnUnInitMenuPopup
+- AFXWIN/CWnd::OnUpdateUIState
+- AFXWIN/CWnd::OnUserChanged
+- AFXWIN/CWnd::OnVKeyToItem
+- AFXWIN/CWnd::OnVScroll
+- AFXWIN/CWnd::OnVScrollClipboard
+- AFXWIN/CWnd::OnWindowPosChanged
+- AFXWIN/CWnd::OnWindowPosChanging
+- AFXWIN/CWnd::OnWinIniChange
+- AFXWIN/CWnd::OnWndMsg
+- AFXWIN/CWnd::OnXButtonDblClk
+- AFXWIN/CWnd::OnXButtonDown
+- AFXWIN/CWnd::OnXButtonUp
+- AFXWIN/CWnd::PostNcDestroy
+- AFXWIN/CWnd::ReflectChildNotify
+- AFXWIN/CWnd::ReflectLastMsg
+- AFXWIN/CWnd::ResizeDynamicLayout
+- AFXWIN/CWnd::WindowProc
+- AFXWIN/CWnd::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -511,7 +918,7 @@ class CWnd : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameaccdodefaultactiona--cwndaccdodefaultaction"></a><a name="accdodefaultaction"></a>CWnd::accDoDefaultAction  
+##  <a name="accdodefaultaction"></a>CWnd::accDoDefaultAction  
  개체의 기본 동작을 수행하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -530,7 +937,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
   
  이 함수를 재정의 하면 `CWnd`-개체의 기본 동작을 수행 하는 클래스를 파생 합니다. 자세한 내용은 참조 [의 상호](http://msdn.microsoft.com/library/windows/desktop/dd318470) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameacchittesta--cwndacchittest"></a><a name="acchittest"></a>CWnd::accHitTest  
+##  <a name="acchittest"></a>CWnd::accHitTest  
  화면의 지정된 지점에서 자식 요소나 자식 개체를 검색하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -560,7 +967,7 @@ virtual HRESULT accHitTest(
   
  자세한 내용은 참조 [IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameacclocationa--cwndacclocation"></a><a name="acclocation"></a>CWnd::accLocation  
+##  <a name="acclocation"></a>CWnd::accLocation  
  지정된 개체의 현재 화면 위치를 검색하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -596,7 +1003,7 @@ virtual HRESULT accLocation(
   
  자세한 내용은 참조 **IAccessible::accLocation** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameaccnavigatea--cwndaccnavigate"></a><a name="accnavigate"></a>CWnd::accNavigate  
+##  <a name="accnavigate"></a>CWnd::accNavigate  
  컨테이너 내에서 다른 사용자 인터페이스 요소로 트래버스하고 가능할 경우 개체를 검색하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -626,7 +1033,7 @@ virtual HRESULT accNavigate(
   
  자세한 내용은 참조 [IAccessible::accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameaccselecta--cwndaccselect"></a><a name="accselect"></a>CWnd::accSelect  
+##  <a name="accselect"></a>CWnd::accSelect  
  선택 영역을 수정하거나 지정된 개체의 키보드 포커스를 이동하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -652,7 +1059,7 @@ virtual HRESULT accSelect(
   
  자세한 내용은 참조 [IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameanimatewindowa--cwndanimatewindow"></a><a name="animatewindow"></a>CWnd::AnimateWindow  
+##  <a name="animatewindow"></a>CWnd::AnimateWindow  
  특수 효과 표시 또는 숨기기 windows 때 생성 됩니다.  
   
 ```  
@@ -674,7 +1081,7 @@ BOOL AnimateWindow(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 함수의 기능을 에뮬레이트합니다 [AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namearrangeiconicwindowsa--cwndarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
  모든 최소화된(아이콘) 자식 창을 정렬합니다.  
   
 ```  
@@ -692,7 +1099,7 @@ UINT ArrangeIconicWindows();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&66;](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
   
-##  <a name="a-nameattacha--cwndattach"></a><a name="attach"></a>CWnd::Attach  
+##  <a name="attach"></a>CWnd::Attach  
  연결에 Windows 창을 `CWnd` 개체입니다.  
   
 ```  
@@ -715,14 +1122,14 @@ BOOL Attach(HWND hWndNew);
   
  [!code-cpp[NVC_MFCWindowing #&69;](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]  
   
-##  <a name="a-namebeginmodalstatea--cwndbeginmodalstate"></a><a name="beginmodalstate"></a>CWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>CWnd::BeginModalState  
  프레임 창을 모달로 만들기 위해 이 멤버 함수를 호출합니다.  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="a-namebeginpainta--cwndbeginpaint"></a><a name="beginpaint"></a>CWnd::BeginPaint  
+##  <a name="beginpaint"></a>CWnd::BeginPaint  
  준비 `CWnd` 그리기 및 채우기는 `PAINTSTRUCT` 데이터 구조에서 그리기에 대 한 정보를 사용 합니다.  
   
 ```  
@@ -746,7 +1153,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&70;](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
   
-##  <a name="a-namebinddefaultpropertya--cwndbinddefaultproperty"></a><a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
  데이터 소스 컨트롤의 데이터 원본, 사용자 이름, 암호 및 SQL 속성에 의해 정의 된 기본 커서를 호출 하는 개체의 기본 간단한 바인딩된 속성을 (예:는 편집 컨트롤)로 표시 된 형식 라이브러리에 바인딩합니다.  
   
 ```  
@@ -780,7 +1187,7 @@ void BindDefaultProperty(
 [!code-cpp[NVC_MFC_AxDataBinding #&2;](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding #&3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="a-namebindpropertya--cwndbindproperty"></a><a name="bindproperty"></a>CWnd::BindProperty  
+##  <a name="bindproperty"></a>CWnd::BindProperty  
  데이터 바인딩된 컨트롤 (예: 표 형태 컨트롤) 커서 바인딩된 속성을 데이터 소스 컨트롤에 바인딩합니다 MFC 바인딩 관리자와 해당 관계를 등록 합니다.  
   
 ```  
@@ -806,7 +1213,7 @@ void BindProperty(
 [!code-cpp[NVC_MFC_AxDataBinding #&4;](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding #&3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="a-namebringwindowtotopa--cwndbringwindowtotop"></a><a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
  `CWnd`를 겹치는 창 스택의 맨 위로 이동합니다.  
   
 ```  
@@ -821,7 +1228,7 @@ void BringWindowToTop();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&71;](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
   
-##  <a name="a-namecalcwindowrecta--cwndcalcwindowrect"></a><a name="calcwindowrect"></a>CWnd::CalcWindowRect  
+##  <a name="calcwindowrect"></a>CWnd::CalcWindowRect  
  지정된 된 클라이언트 사각형을 포함할 수 있는 창 사각형을 계산 합니다.  
   
 ```  
@@ -845,7 +1252,7 @@ virtual void CalcWindowRect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&72;](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
   
-##  <a name="a-namecanceltooltipsa--cwndcanceltooltips"></a><a name="canceltooltips"></a>CWnd::CancelToolTips  
+##  <a name="canceltooltips"></a>CWnd::CancelToolTips  
  도구 설명이 표시 되 면 현재 화면에서 도구 팁을 제거 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -864,7 +1271,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&73;](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
   
-##  <a name="a-namecenterwindowa--cwndcenterwindow"></a><a name="centerwindow"></a>CWnd::CenterWindow  
+##  <a name="centerwindow"></a>CWnd::CenterWindow  
  부모를 기준으로 창을 가운데 맞춤합니다.  
   
 ```  
@@ -881,7 +1288,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&74;](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
   
-##  <a name="a-namechangeclipboardchaina--cwndchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
  제거 `CWnd` 로 지정 된 창 클립보드 뷰어 찾아 설정의 체인에서 `hWndNext` 의 하위 항목은 `CWnd` 체인에 상위입니다.  
   
 ```  
@@ -895,7 +1302,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-namecheckdlgbuttona--cwndcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
  (옆에 확인 표시를 한 곳에서)를 선택 하거나 취소 (제거에서 체크 표시가) 단추나 것 상태 단추의 상태를 변경 합니다.  
   
 ```  
@@ -917,7 +1324,7 @@ void CheckDlgButton(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&75;](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
   
-##  <a name="a-namecheckradiobuttona--cwndcheckradiobutton"></a><a name="checkradiobutton"></a>CWnd::CheckRadioButton  
+##  <a name="checkradiobutton"></a>CWnd::CheckRadioButton  
  선택 (확인 표시를 추가) 그룹에 지정 된 라디오 단추 및 취소 (제거에서 확인 표시) 다른 모든 라디오 단추 그룹에 있습니다.  
   
 ```  
@@ -943,7 +1350,7 @@ void CheckRadioButton(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&76;](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
   
-##  <a name="a-namechildwindowfrompointa--cwndchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
  결정에 속하는 자식 창의 있는 경우 `CWnd` 지정된 위치를 포함 합니다.  
   
 ```  
@@ -980,7 +1387,7 @@ CWnd* ChildWindowFromPoint(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&77;](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
   
-##  <a name="a-nameclienttoscreena--cwndclienttoscreen"></a><a name="clienttoscreen"></a>CWnd::ClientToScreen  
+##  <a name="clienttoscreen"></a>CWnd::ClientToScreen  
  디스플레이에서 지정된 점이나 사각형의 클라이언트 좌표를 화면 좌표로 변환합니다.  
   
 ```  
@@ -8838,7 +9245,7 @@ void ScreenToClient (LPPOINT lpPoint) const;  void ScreenToClient (LPRECT lpRect
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect)합니다.  
   
-##  <a name="a-namescrollwindowa--cwndscrollwindow"></a><a name="scrollwindow"></a>CWnd::ScrollWindow  
+##  <a name="scrollwindow"></a>CWnd::ScrollWindow  
  클라이언트 영역의 현재의 내용을 `CWnd` 개체입니다.  
   
 ```  
@@ -8871,7 +9278,7 @@ void ScrollWindow(
   
  경우 `lpRect` 없는 **NULL**, 자식 창의 위치 변경 및 잘못 된 영역에 없는 `CWnd` 하지 오프셋 됩니다. 방지 하기 위해 업데이트 문제가 발생 때 `lpRect` 없는 **NULL**, 호출의 `UpdateWindow` 멤버 함수를 자동으로 그려지도록 `CWnd` 호출 하기 전에 `ScrollWindow`합니다.  
   
-##  <a name="a-namescrollwindowexa--cwndscrollwindowex"></a><a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
  창의 클라이언트 영역 내용을 스크롤합니다.  
   
 ```  
@@ -8927,7 +9334,7 @@ int ScrollWindowEx(
   
  모든 입력 및 출력 좌표 (에 대 한 `lpRectScroll`, `lpRectClip`, `lpRectUpdate`, 및 *prgnUpdate*) 창의 있는지 여부에 관계 없이 클라이언트 좌표에 있는 것으로 간주 됩니다는 **CS_OWNDC** 또는 **이 있는** 클래스 스타일입니다. 사용 된 [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) 및 [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows 변환 하는 함수는 논리적 좌표에서 필요한 경우.  
   
-##  <a name="a-namesendchildnotifylastmsga--cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
+##  <a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
  이 멤버 함수는 자식 창 작업을 처리할 수 있으므로 부모 창에서 알림 메시지를 자식 창으로 제공 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -8946,7 +9353,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
   
  메시지 리플렉션에 대 한 자세한 내용은 참조 [리플렉션된 메시지 처리](../../mfc/handling-reflected-messages.md)합니다.  
   
-##  <a name="a-namesenddlgitemmessagea--cwndsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage  
  컨트롤에 메시지를 보냅니다.  
   
 ```  
@@ -8981,7 +9388,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&113;](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
   
-##  <a name="a-namesendmessagea--cwndsendmessage"></a><a name="sendmessage"></a>CWnd::SendMessage  
+##  <a name="sendmessage"></a>CWnd::SendMessage  
  이 창에 지정된 된 메시지를 보냅니다.  
   
 ```  
@@ -9010,7 +9417,7 @@ LRESULT SendMessage(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&101;](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="a-namesendmessagetodescendantsa--cwndsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants  
  모든 하위 항목 창에 지정된 된 Windows 메시지를 전송 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -9046,7 +9453,7 @@ void SendMessageToDescendants(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&114;](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
   
-##  <a name="a-namesendnotifymessagea--cwndsendnotifymessage"></a><a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
  창에 지정된 된 메시지를 보냅니다.  
   
 ```  
@@ -9072,7 +9479,7 @@ BOOL SendNotifyMessage(
 ### <a name="remarks"></a>주의  
  창을 호출 스레드에 의해 만들어진 경우 `SendNotifyMessage` 창의 창 프로시저를 호출 하 고 창 프로시저에서 메시지 처리 될 때까지 반환 하지 않습니다. 창을 다른 스레드에 의해 만들어진 경우 `SendNotifyMessage` 창 프로시저는 메시지를 전달 하 고 반환 즉시 메시지 처리를 완료 하 고 창 프로시저에 대 한 대기 하지 않습니다.  
   
-##  <a name="a-namesetactivewindowa--cwndsetactivewindow"></a><a name="setactivewindow"></a>CWnd::SetActiveWindow  
+##  <a name="setactivewindow"></a>CWnd::SetActiveWindow  
  사용 하면 `CWnd` 활성 창입니다.  
   
 ```  
@@ -9087,7 +9494,7 @@ CWnd* SetActiveWindow();
 ### <a name="remarks"></a>주의  
  `SetActiveWindow` 임의로 활성 창 및 입력된 포커스를 받는 응용 프로그램을 수 있으므로 주의 하 여 멤버 함수를 사용 해야 합니다. 일반적으로 Windows 정품 인증 모든 담당합니다.  
   
-##  <a name="a-namesetcapturea--cwndsetcapture"></a><a name="setcapture"></a>CWnd::SetCapture  
+##  <a name="setcapture"></a>CWnd::SetCapture  
  모든 후속 마우스 현재 보낼 입력 하면 `CWnd` 커서의 위치에 관계 없이 개체입니다.  
   
 ```  
@@ -9102,7 +9509,7 @@ CWnd* SetCapture();
   
  마우스 입력에서 캡처 하지만 없는 `WM_NCHITTEST` 또는 `WM_SETCURSOR` 활성 창에 메시지가 전송 됩니다.  
   
-##  <a name="a-namesetcaretposa--cwndsetcaretpos"></a><a name="setcaretpos"></a>CWnd::SetCaretPos  
+##  <a name="setcaretpos"></a>CWnd::SetCaretPos  
  캐럿의 위치를 설정합니다.  
   
 ```  
@@ -9121,7 +9528,7 @@ static void PASCAL SetCaretPos(POINT point);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&115;](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
   
-##  <a name="a-namesetclipboardviewera--cwndsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
  확실히 통보 받도록 하는 windows의 체인을이 창을 추가 (방법으로 `WM_DRAWCLIPBOARD` 메시지) 클립보드의 내용을 때마다 변경 됩니다.  
   
 ```  
@@ -9138,7 +9545,7 @@ HWND SetClipboardViewer();
   
  응용 프로그램 자체를 클립보드 뷰어 체인에서 제거 하려면 호출 해야는 [ChangeClipboardChain](#changeclipboardchain) 멤버 함수입니다.  
   
-##  <a name="a-namesetdlgctrlida--cwndsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
  창 ID 또는 컨트롤 ID는 창에 대 한 새 값으로 설정합니다.  
   
 ```  
@@ -9155,7 +9562,7 @@ int SetDlgCtrlID(int nID);
 ### <a name="remarks"></a>주의  
  창에는 모든 자식 창, 대화 상자에서 컨트롤 뿐만 아니라 될 수 있습니다. 창에는 최상위 창 일 수 없습니다.  
   
-##  <a name="a-namesetdlgiteminta--cwndsetdlgitemint"></a><a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
  지정된 된 정수 값의 문자열 표현으로 대화 상자에서 지정된 된 컨트롤의 텍스트를 설정합니다.  
   
 ```  
@@ -9181,7 +9588,7 @@ void SetDlgItemInt(
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::SetDlgItemText](#setdlgitemtext)합니다.  
   
-##  <a name="a-namesetdlgitemtexta--cwndsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
  캡션 또는 창 또는 대화 상자를 소유 하는 컨트롤의 텍스트를 설정 합니다.  
   
 ```  
@@ -9203,7 +9610,7 @@ void SetDlgItemText(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing&116;](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
   
-##  <a name="a-namesetforegroundwindowa--cwndsetforegroundwindow"></a><a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
+##  <a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
  창을 만든 스레드를 전경으로 전환하고 창을 활성화합니다.  
   
 ```  
@@ -9219,7 +9626,7 @@ BOOL SetForegroundWindow();
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::FindWindow](#findwindow)합니다.  
   
-##  <a name="a-namesetfocusa--cwndsetfocus"></a><a name="setfocus"></a>CWnd::SetFocus  
+##  <a name="setfocus"></a>CWnd::SetFocus  
  입력 포커스를 클레임합니다.  
   
 ```  
@@ -9236,7 +9643,7 @@ CWnd* SetFocus();
   
  현재 창 활성화 되어 있지만 포커스 없는 경우 (즉, 창이 포커스가 있는), 모든 키를 누른 상태 메시지가 생성 됩니다 [wm_syschar입니다](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown), 또는 [WM_SYSKEYUP](#onsyskeyup)합니다.  
   
-##  <a name="a-namesetfonta--cwndsetfont"></a><a name="setfont"></a>CWnd::SetFont  
+##  <a name="setfont"></a>CWnd::SetFont  
  전송의 `WM_SETFONT` 창에 메시지를 지정된 된 글꼴을 사용 하도록 합니다.  
   
 ```  
@@ -9255,7 +9662,7 @@ void SetFont(
 ### <a name="remarks"></a>주의  
  이 메서드는 아무 효과도 창을 처리 하지 않는 한는 `WM_SETFONT` 메시지입니다. 파생 되는 여러 MFC 클래스 `CWnd` 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 하기 때문에이 메시지를 처리는 `WM_SETFONT` 메시지입니다. 클래스에서 파생 되는이 방법을 사용 하려면 `CWnd` 메서드 처리기를 정의 해야는 `WM_SETFONT` 메시지입니다.  
   
-##  <a name="a-nameseticona--cwndseticon"></a><a name="seticon"></a>CWnd::SetIcon  
+##  <a name="seticon"></a>CWnd::SetIcon  
  특정 아이콘을 핸들을 설정 하려면이 멤버 함수를 호출 하 여로 식별 되 `hIcon`합니다.  
   
 ```  
@@ -9280,7 +9687,7 @@ HICON SetIcon(
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::GetSystemMenu](#getsystemmenu)합니다.  
   
-##  <a name="a-namesetlayeredwindowattributesa--cwndsetlayeredwindowattributes"></a><a name="setlayeredwindowattributes"></a>CWnd::SetLayeredWindowAttributes  
+##  <a name="setlayeredwindowattributes"></a>CWnd::SetLayeredWindowAttributes  
  계층적 창의 불투명도 및 투명도 색상 키를 설정합니다.  
   
 ```  
@@ -9306,7 +9713,7 @@ BOOL SetLayeredWindowAttributes(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 함수의 기능을 에뮬레이트합니다 [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetmenua--cwndsetmenu"></a><a name="setmenu"></a>CWnd::SetMenu  
+##  <a name="setmenu"></a>CWnd::SetMenu  
  지정 된 메뉴를 현재 메뉴를 설정합니다.  
   
 ```  
@@ -9328,7 +9735,7 @@ BOOL SetMenu(CMenu* pMenu);
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu)합니다.  
   
-##  <a name="a-namesetownera--cwndsetowner"></a><a name="setowner"></a>CWnd::SetOwner  
+##  <a name="setowner"></a>CWnd::SetOwner  
  지정 된 창 개체에 현재 창 소유자를 설정합니다.  
   
 ```  
@@ -9346,7 +9753,7 @@ void SetOwner(CWnd* pOwnerWnd);
   
  이 함수의 소유권 개념의 소유권 개념와에서 다르면 [GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515)합니다.  
   
-##  <a name="a-namesetparenta--cwndsetparent"></a><a name="setparent"></a>CWnd::SetParent  
+##  <a name="setparent"></a>CWnd::SetParent  
  자식 창을 부모 창을 변경합니다.  
   
 ```  
@@ -9363,7 +9770,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 ### <a name="remarks"></a>주의  
  자식 창을 표시 하지 않은 경우 Windows 적절 한 다시 그리기 및 다시 그리기를 수행 합니다.  
   
-##  <a name="a-namesetpropertya--cwndsetproperty"></a><a name="setproperty"></a>CWnd::SetProperty  
+##  <a name="setproperty"></a>CWnd::SetProperty  
  지정 된 OLE 컨트롤 속성을 설정 하려면이 함수를 호출 `dwDispID`합니다.  
   
 ```  
@@ -9389,7 +9796,7 @@ void AFX_CDECL SetProperty(
   
  OLE 컨트롤 컨테이너에이 멤버 함수를 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)합니다.  
   
-##  <a name="a-namesetredrawa--cwndsetredraw"></a><a name="setredraw"></a>CWnd::SetRedraw  
+##  <a name="setredraw"></a>CWnd::SetRedraw  
  응용 프로그램이 호출 `SetRedraw` 다시 그릴 하거나 변경 내용을 다시 그려지는 하지 못하도록 하려면 변경할 수 있도록 합니다.  
   
 ```  
@@ -9406,7 +9813,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&117;](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
   
-##  <a name="a-namesetscrollinfoa--cwndsetscrollinfo"></a><a name="setscrollinfo"></a>CWnd::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CWnd::SetScrollInfo  
  이 멤버 함수를 호출 하는 정보를 설정 된 `SCROLLINFO` 스크롤 막대에 대 한 구조를 유지 관리 합니다.  
   
 ```  
@@ -9443,7 +9850,7 @@ BOOL SetScrollInfo(
 > [!NOTE]
 > [CWnd::GetScrollInfo](#getscrollinfo) 응용 프로그램이 32 비트 스크롤 막대의 위치를 사용 하도록 합니다.  
   
-##  <a name="a-namesetscrollposa--cwndsetscrollpos"></a><a name="setscrollpos"></a>CWnd::SetScrollPos  
+##  <a name="setscrollpos"></a>CWnd::SetScrollPos  
  현재 스크롤 상자 위치를 설정 하 고 요청 된 경우에 스크롤 막대의 스크롤 상자 새 위치를 반영 하도록 다시 그립니다.  
   
 ```  
@@ -9473,7 +9880,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>주의  
  설정 `bRedraw` 를 **FALSE** 스크롤 막대를 다른 함수에 대 한 후속 호출에서 다시 그릴 때마다 유용 합니다.  
   
-##  <a name="a-namesetscrollrangea--cwndsetscrollrange"></a><a name="setscrollrange"></a>CWnd::SetScrollRange  
+##  <a name="setscrollrange"></a>CWnd::SetScrollRange  
  지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.  
   
 ```  
@@ -9510,7 +9917,7 @@ void SetScrollRange(
   
  표준 스크롤 막대의 기본 범위는 0부터 100입니다. 스크롤 막대 컨트롤의 기본 범위는 비어 (모두는 `nMinPos` 및 `nMaxPos` 값은 0). 지정 된 값 간의 차이 `nMinPos` 및 `nMaxPos` 보다 크지 않아야 **INT_MAX**합니다.  
   
-##  <a name="a-namesettimera--cwndsettimer"></a><a name="settimer"></a>CWnd::SetTimer  
+##  <a name="settimer"></a>CWnd::SetTimer  
  시스템 타이머를 설치합니다.  
   
 ```  
@@ -9554,7 +9961,7 @@ void CALLBACK TimerProc(
   
  [!code-cpp[NVC_MFCWindowing #&118;](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
   
-##  <a name="a-namesetwindowcontexthelpida--cwndsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
  지정된 된 창으로 도움말 컨텍스트 식별자를 연결 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -9574,7 +9981,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&119;](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
   
-##  <a name="a-namesetwindowplacementa--cwndsetwindowplacement"></a><a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
  창의 표시 상태와 일반(복원됨), 최소화 및 최대화 위치를 설정합니다.  
   
 ```  
@@ -9588,7 +9995,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-##  <a name="a-namesetwindowposa--cwndsetwindowpos"></a><a name="setwindowpos"></a>CWnd::SetWindowPos  
+##  <a name="setwindowpos"></a>CWnd::SetWindowPos  
  크기, 위치 및 자식 팝업, 최상위 창과의 Z 순서를 변경합니다.  
   
 ```  
@@ -9689,7 +10096,7 @@ BOOL SetWindowPos(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&120;](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
   
-##  <a name="a-namesetwindowrgna--cwndsetwindowrgn"></a><a name="setwindowrgn"></a>CWnd::SetWindowRgn  
+##  <a name="setwindowrgn"></a>CWnd::SetWindowRgn  
  창 영역을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -9713,7 +10120,7 @@ int SetWindowRgn(
   
  호출에 성공한 후 `SetWindowRgn`, 운영 체제 소유 영역 핸들에 의해 지정 된 지역 `hRgn`합니다. 운영 체제에는 지역의 복사본 수 없습니다., 따라서 안 더 이상이 영역 핸들을 사용 하 여 함수 호출 및이 영역 핸들을 닫지 마십시오.  
   
-##  <a name="a-namesetwindowtexta--cwndsetwindowtext"></a><a name="setwindowtext"></a>CWnd::SetWindowText  
+##  <a name="setwindowtext"></a>CWnd::SetWindowText  
  창의 제목이 지정 된 텍스트를 설정합니다.  
   
 ```  
@@ -9732,7 +10139,7 @@ void SetWindowText(LPCTSTR lpszString);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&121;](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
   
-##  <a name="a-nameshowcareta--cwndshowcaret"></a><a name="showcaret"></a>CWnd::ShowCaret  
+##  <a name="showcaret"></a>CWnd::ShowCaret  
  캐럿의 현재 위치에 화면에 표시 되는 캐럿을 보여 줍니다.  
   
 ```  
@@ -9751,7 +10158,7 @@ void ShowCaret();
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::CreateCaret](#createcaret)합니다.  
   
-##  <a name="a-nameshowownedpopupsa--cwndshowownedpopups"></a><a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
  표시 하거나이 창에서 소유 하는 모든 팝업 창을 숨깁니다.  
   
 ```  
@@ -9765,7 +10172,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::SetWindowPos](#setwindowpos)합니다.  
   
-##  <a name="a-nameshowscrollbara--cwndshowscrollbar"></a><a name="showscrollbar"></a>CWnd::ShowScrollBar  
+##  <a name="showscrollbar"></a>CWnd::ShowScrollBar  
  표시 하거나 스크롤 막대를 숨깁니다.  
   
 ```  
@@ -9790,7 +10197,7 @@ void ShowScrollBar(
 ### <a name="remarks"></a>주의  
  응용 프로그램을 호출 하지 않아야 `ShowScrollBar` 스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면 합니다.  
   
-##  <a name="a-nameshowwindowa--cwndshowwindow"></a><a name="showwindow"></a>CWnd::ShowWindow  
+##  <a name="showwindow"></a>CWnd::ShowWindow  
  창의 표시 여부 상태를 설정합니다.  
   
 ```  
@@ -9830,7 +10237,7 @@ BOOL ShowWindow(int nCmdShow);
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::CalcWindowRect](#calcwindowrect)합니다.  
   
-##  <a name="a-namesubclassdlgitema--cwndsubclassdlgitem"></a><a name="subclassdlgitem"></a>CWnd::SubclassDlgItem  
+##  <a name="subclassdlgitem"></a>CWnd::SubclassDlgItem  
  대화 상자 템플릿에서 만들어진 컨트롤 "동적으로 하위 클래스를 만들려면"이 멤버 함수를 호출 하 고이 연결 `CWnd` 개체입니다.  
   
 ```  
@@ -9857,7 +10264,7 @@ BOOL SubclassDlgItem(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&122;](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
   
-##  <a name="a-namesubclasswindowa--cwndsubclasswindow"></a><a name="subclasswindow"></a>CWnd::SubclassWindow  
+##  <a name="subclasswindow"></a>CWnd::SubclassWindow  
  창 "동적으로 하위 클래스를 만들려면"이 멤버 함수를 호출 하 고이 연결 `CWnd` 개체입니다.  
   
 ```  
@@ -9882,7 +10289,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&123;](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
-##  <a name="a-nameunlockwindowupdatea--cwndunlockwindowupdate"></a><a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
+##  <a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
  이 멤버 함수를 잠근 창 잠금 해제를 호출 `CWnd::LockWindowUpdate`합니다.  
   
 ```  
@@ -9892,7 +10299,7 @@ void UnlockWindowUpdate();
 ### <a name="remarks"></a>주의  
  사용 하 여 한 번에 하나의 창만 잠글 수 있는 `LockWindowUpdate`합니다. 참조 [CWnd::LockWindowUpdate](#lockwindowupdate) Win32 함수 또는 [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) windows 잠금에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameunsubclasswindowa--cwndunsubclasswindow"></a><a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
  설정 하려면이 함수를 호출 **WndProc** 원래 값으로 백업 하 고 분리로 식별 되는 창 `HWND` 에서 **CWnd** 개체입니다.  
   
 ```  
@@ -9905,7 +10312,7 @@ HWND UnsubclassWindow();
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::SubclassWindow](#subclasswindow)합니다.  
   
-##  <a name="a-nameupdatedataa--cwndupdatedata"></a><a name="updatedata"></a>CWnd::UpdateData  
+##  <a name="updatedata"></a>CWnd::UpdateData  
  대화 상자에서 데이터를 초기화 하거나 검색 하 고 대화 상자 데이터 유효성을 검사 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -9922,7 +10329,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ### <a name="remarks"></a>주의  
  프레임 워크는 자동으로 호출 `UpdateData` 와 `bSaveAndValidate` 로 설정 **FALSE** 의 기본 구현에서 모달 대화 상자를 만들 때 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다. 호출에는 대화 상자가 표시 되기 전에 발생 합니다. 기본 구현은 [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) 이 멤버 함수를 호출 `bSaveAndValidate` 로 설정 **TRUE** 데이터를 검색 하려면 성공 하는 경우 대화 상자를 닫습니다 됩니다. (대화 상자에서 취소 단추를 클릭 하는 경우 대화 상자가 닫힙니다 검색 된 데이터 없이.)  
   
-##  <a name="a-nameupdatedialogcontrolsa--cwndupdatedialogcontrols"></a><a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
+##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
  대화 상자 단추 및 대화 상자 또는 사용 하는 창에서 다른 컨트롤의 상태를 업데이트 하려면이 멤버 함수 호출의 [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) 콜백 메커니즘입니다.  
   
 ```  
@@ -9943,7 +10350,7 @@ void UpdateDialogControls(
   
  프레임 워크에서는이 멤버 함수 대화 상자 모음 또는 도구 모음 컨트롤에 대 한 응용 프로그램의 일부로 유휴 처리  
   
-##  <a name="a-nameupdatelayeredwindowa--cwndupdatelayeredwindow"></a><a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow  
+##  <a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow  
  계층적 창의 위치, 크기, 모양, 내용 및 투명도를 업데이트합니다.  
   
 ```  
@@ -9995,7 +10402,7 @@ BOOL UpdateLayeredWindow(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 함수의 기능을 에뮬레이트합니다 [UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameupdatewindowa--cwndupdatewindow"></a><a name="updatewindow"></a>CWnd::UpdateWindow  
+##  <a name="updatewindow"></a>CWnd::UpdateWindow  
  클라이언트 영역을 전송 하 여 업데이트를 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 업데이트 영역에 비어 있지 않을 경우 메시지입니다.  
   
 ```  
@@ -10008,7 +10415,7 @@ void UpdateWindow();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&124;](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
   
-##  <a name="a-namevalidaterecta--cwndvalidaterect"></a><a name="validaterect"></a>CWnd::ValidateRect  
+##  <a name="validaterect"></a>CWnd::ValidateRect  
  창의 업데이트 영역에서 사각형을 제거 하 여 지정 된 사각형 내 클라이언트 영역을 확인 합니다.  
   
 ```  
@@ -10024,7 +10431,7 @@ void ValidateRect(LPCRECT lpRect);
   
  Windows는 계속 생성 `WM_PAINT` 현재 업데이트 영역 유효성을 검사할 때까지 메시지입니다.  
   
-##  <a name="a-namevalidatergna--cwndvalidatergn"></a><a name="validatergn"></a>CWnd::ValidateRgn  
+##  <a name="validatergn"></a>CWnd::ValidateRgn  
  지역 창의 현재 업데이트 영역에서 제거 하 여 특정된 지역 내에서 클라이언트 영역을 확인 합니다.  
   
 ```  
@@ -10040,7 +10447,7 @@ void ValidateRgn(CRgn* pRgn);
   
  [BeginPaint](#beginpaint) 멤버 함수는 전체 클라이언트 영역에 자동으로 유효성을 검사 합니다. 모두는 [ValidateRect](#validaterect) 또는 `ValidateRgn` 후 다음의 업데이트 영역 일부 유효성을 검사 해야 하는 경우 멤버 함수를 호출 해야 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지가 생성 됩니다.  
   
-##  <a name="a-namewindowfrompointa--cwndwindowfrompoint"></a><a name="windowfrompoint"></a>CWnd::WindowFromPoint  
+##  <a name="windowfrompoint"></a>CWnd::WindowFromPoint  
  지정된 된 지점이 포함 된 창을 검색합니다 `point` 화면에는 포인터의 화면 좌표를 지정 해야 합니다.  
   
 ```  
@@ -10057,7 +10464,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="remarks"></a>주의  
  `WindowFromPoint`중요 한 점은 창 내에서 경우에 숨김 또는 비활성화 창을 검색 하지 않습니다. 응용 프로그램을 사용할지는 [ChildWindowFromPoint](#childwindowfrompoint) 제한적인 검색에 대 한 멤버 함수입니다.  
   
-##  <a name="a-namewindowproca--cwndwindowproc"></a><a name="windowproc"></a>CWnd::WindowProc  
+##  <a name="windowproc"></a>CWnd::WindowProc  
  Windows 절차를 제공 ( `WindowProc`)에 대 한 한 `CWnd` 개체입니다.  
   
 ```  
@@ -10083,7 +10490,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>주의  
  창의 메시지 맵을 통해 메시지를 발송 합니다.  
   
-##  <a name="a-namewinhelpa--cwndwinhelp"></a><a name="winhelp"></a>CWnd::WinHelp  
+##  <a name="winhelp"></a>CWnd::WinHelp  
  WinHelp 응용 프로그램을 시작하기 위해 호출됩니다.  
   
 ```  
@@ -10102,7 +10509,7 @@ virtual void WinHelp(
 ### <a name="remarks"></a>주의  
  참조 [CWinApp::WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameregistertouchwindowa--cwndregistertouchwindow"></a><a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
+##  <a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
  레지스터 또는 Windows 터치 지원의 등록을 취소 합니다.  
   
 ```  
@@ -10123,7 +10530,7 @@ BOOL RegisterTouchWindow(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameresizedynamiclayouta--cwndresizedynamiclayout"></a><a name="resizedynamiclayout"></a>Cwnd:: Resizedynamiclayout  
+##  <a name="resizedynamiclayout"></a>Cwnd:: Resizedynamiclayout  
  창에 대해 동적 레이아웃을 사용하도록 설정한 경우 창 크기가 변경되면 자식 창의 레이아웃을 조정하기 위해 프레임워크에서 호출됩니다.  
   
 ```  

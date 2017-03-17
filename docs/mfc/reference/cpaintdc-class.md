@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaintDC
+- AFXWIN/CPaintDC
+- AFXWIN/CPaintDC::CPaintDC
+- AFXWIN/CPaintDC::m_ps
+- AFXWIN/CPaintDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPaintDC : public CDC
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecpaintdca--cpaintdccpaintdc"></a><a name="cpaintdc"></a>CPaintDC::CPaintDC  
+##  <a name="cpaintdc"></a>CPaintDC::CPaintDC  
  생성 한 `CPaintDC` 개체를 응용 프로그램 창에 대 한 그리기를 준비 하 고 저장는 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 구조에서 [m_ps](#m_ps) 멤버 변수입니다.  
   
 ```  
@@ -104,7 +108,7 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&97;](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cpaintdcmhwnd"></a><a name="m_hwnd"></a>CPaintDC::m_hWnd  
+##  <a name="m_hwnd"></a>CPaintDC::m_hWnd  
  `HWND` 이 `CPaintDC` 개체를 연결 합니다.  
   
 ```  
@@ -117,7 +121,7 @@ HWND m_hWnd;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&98;](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
-##  <a name="a-namempsa--cpaintdcmps"></a><a name="m_ps"></a>CPaintDC::m_ps  
+##  <a name="m_ps"></a>CPaintDC::m_ps  
  `m_ps`형식의 공용 멤버 변수 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)합니다.  
   
 ```  

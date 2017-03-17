@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager::CreateToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::DeleteToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipParams
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipText
+- AFXTOOLTIPMANAGER/CTooltipManager::UpdateTooltips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +77,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtooltipmanager.h  
   
-##  <a name="a-namecreatetooltipa--ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
  도구 설명 컨트롤을 만듭니다.  
   
 ```  
@@ -115,7 +121,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|도구 모음입니다.|CMFCToolBar, CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|도구 상자입니다.|없음|  
   
-##  <a name="a-namedeletetooltipa--ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
  도구 설명 컨트롤을 삭제합니다.  
   
 ```  
@@ -129,7 +135,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>주의  
  각각에 대해이 메서드를 호출 [CToolTipCtrl 클래스](../../mfc/reference/ctooltipctrl-class.md) 하 여 만들어진 [CTooltipManager::CreateToolTip](#createtooltip)합니다. 부모 컨트롤에서이 메서드를 호출 해야 해당 `OnDestroy` 처리기입니다. 이 프레임 워크에서 도구 설명을 올바르게 제거 해야 합니다. 이 메서드는 설정 `pToolTip` 를 `NULL` 반환 합니다.  
   
-##  <a name="a-namesettooltipparamsa--ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
+##  <a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
  지정 된 Windows 컨트롤 형식에 대 한 도구 설명 컨트롤의 모양을 사용자 지정합니다.  
   
 ```  
@@ -161,7 +167,7 @@ void SetTooltipParams(
   
  [!code-cpp[NVC_MFC_DrawClient #&11;](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="a-namesettooltiptexta--ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
  텍스트를 설정 하는 도구 설명에 대 한 설명입니다.  
   
 ```  
@@ -192,7 +198,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>주의  
  값 `nType` 와 같은 값 이어야 합니다는 `nType` 의 매개 변수 [CTooltipManager::CreateToolTip](#createtooltip) 도구 설명을 만들 때.  
   
-##  <a name="a-nameupdatetooltipsa--ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

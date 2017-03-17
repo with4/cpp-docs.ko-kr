@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::ContextToSize
+- AFXCOLORBAR/CMFCColorBar::CreateControl
+- AFXCOLORBAR/CMFCColorBar::Create
+- AFXCOLORBAR/CMFCColorBar::EnableAutomaticButton
+- AFXCOLORBAR/CMFCColorBar::EnableOtherButton
+- AFXCOLORBAR/CMFCColorBar::GetColor
+- AFXCOLORBAR/CMFCColorBar::GetCommandID
+- AFXCOLORBAR/CMFCColorBar::GetHighlightedColor
+- AFXCOLORBAR/CMFCColorBar::GetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::GetVertMargin
+- AFXCOLORBAR/CMFCColorBar::IsTearOff
+- AFXCOLORBAR/CMFCColorBar::SetColor
+- AFXCOLORBAR/CMFCColorBar::SetColorName
+- AFXCOLORBAR/CMFCColorBar::SetCommandID
+- AFXCOLORBAR/CMFCColorBar::SetDocumentColors
+- AFXCOLORBAR/CMFCColorBar::SetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::SetVertMargin
+- AFXCOLORBAR/CMFCColorBar::AdjustLocations
+- AFXCOLORBAR/CMFCColorBar::AllowChangeTextLabels
+- AFXCOLORBAR/CMFCColorBar::AllowShowOnList
+- AFXCOLORBAR/CMFCColorBar::CalcSize
+- AFXCOLORBAR/CMFCColorBar::CreatePalette
+- AFXCOLORBAR/CMFCColorBar::GetColorGridSize
+- AFXCOLORBAR/CMFCColorBar::GetExtraHeight
+- AFXCOLORBAR/CMFCColorBar::InitColors
+- AFXCOLORBAR/CMFCColorBar::OnKey
+- AFXCOLORBAR/CMFCColorBar::OnSendCommand
+- AFXCOLORBAR/CMFCColorBar::OnUpdateCmdUI
+- AFXCOLORBAR/CMFCColorBar::OpenColorDialog
+- AFXCOLORBAR/CMFCColorBar::Rebuild
+- AFXCOLORBAR/CMFCColorBar::SelectPalette
+- AFXCOLORBAR/CMFCColorBar::SetPropList
+- AFXCOLORBAR/CMFCColorBar::ShowCommandMessageString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -211,7 +246,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolorbar.h  
   
-##  <a name="a-nameadjustlocationsa--cmfccolorbaradjustlocations"></a><a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
+##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
  색 컨트롤의 단추에는 색 막대의 위치를 조정합니다.  
   
 ```  
@@ -221,7 +256,7 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>주의  
  이 메서드는 프레임 워크 중 `WM_SIZE` 메시지를 처리 합니다.  
   
-##  <a name="a-nameallowchangetextlabelsa--cmfccolorbarallowchangetextlabels"></a><a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
  색 단추의 텍스트 레이블을 변경할 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -234,7 +269,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 항상 반환 `FALSE`, 즉 텍스트 레이블을 수정할 수 없습니다. 수정 하 고 텍스트 레이블을 사용 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameallowshowonlista--cmfccolorbarallowshowonlist"></a><a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
  사용자 지정 프로세스 중 색 막대 컨트롤 개체 도구 모음 목록에 표시 될 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -247,7 +282,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 항상 반환 `TRUE`, 프레임 워크를 의미 하는 과정에서 사용자 지정 색 막대 컨트롤을 표시할 수 있습니다. 다른 동작을 구현 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-namecalcsizea--cmfccolorbarcalcsize"></a><a name="calcsize"></a>CMFCColorBar::CalcSize  
+##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
  레이아웃 계산 프로세스의 일환으로 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -261,7 +296,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="return-value"></a>반환 값  
  색 막대 컨트롤의 색 단추는 배열의 크기입니다.  
   
-##  <a name="a-namecmfccolorbara--cmfccolorbarcmfccolorbar"></a><a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
+##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
  `CMFCColorBar` 개체를 생성합니다.  
   
 ```  
@@ -345,7 +380,7 @@ CMFCColorBar(
  [in] `uiCommandID`  
  명령 ID입니다.  
   
-##  <a name="a-namecontexttosizea--cmfccolorbarcontexttosize"></a><a name="contexttosize"></a>CMFCColorBar::ContextToSize  
+##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
  색 막대 컨트롤의 단추에 포함 해야 하며 해당 단추의 위치를 조정 하는 세로 및 가로 여백을 계산 합니다.  
   
 ```  
@@ -363,7 +398,7 @@ void ContextToSize(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecreatea--cmfccolorbarcreate"></a><a name="create"></a>CMFCColorBar::Create  
+##  <a name="create"></a>CMFCColorBar::Create  
  색 막대 컨트롤 창을 만들고이에 연결 된 `CMFCColorBar` 개체입니다.  
   
 ```  
@@ -405,7 +440,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>주의  
  생성 하는 `CMFCColorBar` 개체, 클래스 생성자는 다음이 메서드를 호출 합니다. `Create` 메서드는 Windows 컨트롤을 만들고 색 목록을 초기화 합니다.  
   
-##  <a name="a-namecreatecontrola--cmfccolorbarcreatecontrol"></a><a name="createcontrol"></a>CMFCColorBar::CreateControl  
+##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
  색 막대 컨트롤 창을 만듭니다에 연결 되는 `CMFCColorBar` 개체 지정된 된 색상표를 포함 하도록 컨트롤 창의 크기를 조정 합니다.  
   
 ```  
@@ -439,7 +474,7 @@ virtual BOOL CreateControl(
 ### <a name="remarks"></a>주의  
  이 메서드는 사용 된 `rect`, `nColumns`, 및 `pPalette` 적절 한 수 또는 행과 열 색 막대 컨트롤을 한 다음 호출을 계산 하는 매개 변수는 [CMFCColorBar::Create](#create) 메서드.  
   
-##  <a name="a-namecreatepalettea--cmfccolorbarcreatepalette"></a><a name="createpalette"></a>CMFCColorBar::CreatePalette  
+##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
  색의 지정된 된 배열에 색 팔레트를 초기화합니다.  
   
 ```  
@@ -458,7 +493,7 @@ static BOOL CreatePalette(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfccolorbarenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
  표시 하거나 자동 단추를 숨깁니다.  
   
 ```  
@@ -483,7 +518,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>주의  
  자동 단추의 텍스트 레이블을 삭제 되는 `lpszLabel` 매개 변수는 `NULL` 또는 `bEnable` 매개 변수는 `FALSE`합니다.  
   
-##  <a name="a-nameenableotherbuttona--cmfccolorbarenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
  사용 하거나 더 많은 색을 선택할 수 있도록 하는 대화 상자를 표시 하지 않도록 설정 합니다.  
   
 ```  
@@ -505,7 +540,7 @@ void EnableOtherButton(
  [in] `bEnable`  
  `TRUE`단추를 사용 하도록 설정 하려면 `FALSE` 단추를 비활성화 하려면. 기본값은 `TRUE`입니다.  
   
-##  <a name="a-namegetcolora--cmfccolorbargetcolor"></a><a name="getcolor"></a>CMFCColorBar::GetColor  
+##  <a name="getcolor"></a>CMFCColorBar::GetColor  
  현재 선택 된 색을 검색 합니다.  
   
 ```  
@@ -515,7 +550,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>반환 값  
  현재 선택 된 색입니다.  
   
-##  <a name="a-namegetcolorgridsizea--cmfccolorbargetcolorgridsize"></a><a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
+##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
  색 막대 컨트롤의 모눈의 행과 열 개수를 계산 합니다.  
   
 ```  
@@ -531,7 +566,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 ### <a name="return-value"></a>반환 값  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체 `cx` 열과 해당 수를 포함 하는 구성 요소 `cy` 구성 요소에는 행 수가 포함 되어 있습니다.  
   
-##  <a name="a-namegetcommandida--cmfccolorbargetcommandid"></a><a name="getcommandid"></a>CMFCColorBar::GetCommandID  
+##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
  현재 색 막대 컨트롤의 명령 ID를 검색합니다.  
   
 ```  
@@ -544,7 +579,7 @@ UINT GetCommandID() const;
 ### <a name="remarks"></a>주의  
  사용자가 새 색을 선택 하면 프레임 워크는 보냅니다 명령 ID는 `WM_COMMAND` 의 부모에 알리기 위해 메시지는 `CMFCColorBar` 개체입니다.  
   
-##  <a name="a-namegetextraheighta--cmfccolorbargetextraheight"></a><a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
+##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
  현재 색 막대와 같은 기타 사용자 인터페이스 요소를 표시 하는 데 필요한 추가 높이 계산 된 **다른** 단추 또는 문서 색입니다.  
   
 ```  
@@ -560,7 +595,7 @@ int GetExtraHeight(int nNumColumns) const;
 ### <a name="return-value"></a>반환 값  
  필요한 계산된 추가 높이입니다.  
   
-##  <a name="a-namegethighlightedcolora--cmfccolorbargethighlightedcolor"></a><a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
  색을 색 단추에는 포커스가 있는지 나타내는 검색 즉, 단추는 *핫*합니다.  
   
 ```  
@@ -572,7 +607,7 @@ COLORREF GetHighlightedColor() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethorzmargina--cmfccolorbargethorzmargin"></a><a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
+##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
  클라이언트 영역 경계 왼쪽 또는 오른쪽 색 셀 사이의 공간 가로 여백를 검색 합니다.  
   
 ```  
@@ -582,7 +617,7 @@ int GetHorzMargin();
 ### <a name="return-value"></a>반환 값  
  가로 여백입니다.  
   
-##  <a name="a-namegetvertmargina--cmfccolorbargetvertmargin"></a><a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
+##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
  세로 여백, 위쪽 또는 아래쪽 색 셀과 클라이언트 영역 경계 사이의 공간을 검색 합니다.  
   
 ```  
@@ -592,7 +627,7 @@ int GetVertMargin() const;
 ### <a name="return-value"></a>반환 값  
  세로 여백입니다.  
   
-##  <a name="a-nameinitcolorsa--cmfccolorbarinitcolors"></a><a name="initcolors"></a>CMFCColorBar::InitColors  
+##  <a name="initcolors"></a>CMFCColorBar::InitColors  
  지정 된 색상표에서 색 또는 시스템 기본 색상표 색의 배열을 초기화합니다.  
   
 ```  
@@ -611,7 +646,7 @@ static int InitColors(
 ### <a name="return-value"></a>반환 값  
  색 배열에 있는 요소의 수입니다.  
   
-##  <a name="a-nameistearoffa--cmfccolorbaristearoff"></a><a name="istearoff"></a>CMFCColorBar::IsTearOff  
+##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
  현재 색 막대 도킹 가능 여부를 나타냅니다.  
   
 ```  
@@ -624,7 +659,7 @@ BOOL IsTearOff() const;
 ### <a name="remarks"></a>주의  
  색 막대 컨트롤 도킹 가능한 경우, 컨트롤 막대를 분리 하 고 다른 위치에 도킹 될 수 있습니다.  
   
-##  <a name="a-nameonkeya--cmfccolorbaronkey"></a><a name="onkey"></a>CMFCColorBar::OnKey  
+##  <a name="onkey"></a>CMFCColorBar::OnKey  
  사용자가 키보드 단추를 누를 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -638,7 +673,7 @@ virtual BOOL OnKey(UINT nChar);
 ### <a name="return-value"></a>반환 값  
  `TRUE`이 메서드는 지정된 된 키를 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameonsendcommanda--cmfccolorbaronsendcommand"></a><a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
+##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
  프레임 워크에 닫으려면 팝업 컨트롤 계층에서 호출 됩니다.  
   
 ```  
@@ -654,7 +689,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="a-nameonupdatecmduia--cmfccolorbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
  프레임 워크는 항목 표시 되기 전에 색 막대 컨트롤의 사용자 인터페이스 항목을 사용할지에 의해 호출 됩니다.  
   
 ```  
@@ -673,7 +708,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>주의  
  항목으로 사용 하도록 설정 표시할 해야 하는지 여부를 알고 있어야 응용 프로그램의 사용자가 사용자 인터페이스 항목을 클릭할 때 또는 사용 하지 않도록 설정 합니다. 구현 하 여이 정보를 제공 하는 명령 메시지의 대상은 `ON_UPDATE_COMMAND_UI` 명령 처리기입니다. 이 메서드를 사용 하 여 명령을 처리 하는 데 도움이 됩니다. 자세한 내용은 참조 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)합니다.  
   
-##  <a name="a-nameopencolordialoga--cmfccolorbaropencolordialog"></a><a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
+##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
  색 대화 상자를 엽니다.  
   
 ```  
@@ -694,14 +729,14 @@ virtual BOOL OpenColorDialog(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namerebuilda--cmfccolorbarrebuild"></a><a name="rebuild"></a>CMFCColorBar::Rebuild  
+##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
  색 막대 컨트롤을 완전히 다시 그립니다.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="a-nameselectpalettea--cmfccolorbarselectpalette"></a><a name="selectpalette"></a>CMFCColorBar::SelectPalette  
+##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
  현재 색 막대 컨트롤의 부모 단추의 팔레트를 지정된 된 장치 컨텍스트에의 논리 색상표를 설정합니다.  
   
 ```  
@@ -717,7 +752,7 @@ CPalette* SelectPalette(CDC* pDC);
 ### <a name="return-value"></a>반환 값  
  현재 색 막대 컨트롤의 부모 단추의 색상표에 따라 대체 팔레트에 대 한 포인터입니다.  
   
-##  <a name="a-namesetcolora--cmfccolorbarsetcolor"></a><a name="setcolor"></a>CMFCColorBar::SetColor  
+##  <a name="setcolor"></a>CMFCColorBar::SetColor  
  현재 선택 된 색을 설정 합니다.  
   
 ```  
@@ -728,7 +763,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  RGB 색상 값입니다.  
   
-##  <a name="a-namesetcolornamea--cmfccolorbarsetcolorname"></a><a name="setcolorname"></a>CMFCColorBar::SetColorName  
+##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
  지정 된 색에 대 한 새 이름을 설정합니다.  
   
 ```  
@@ -747,7 +782,7 @@ static void SetColorName(
 ### <a name="remarks"></a>주의  
  이 메서드는 모든 페이지에서 지정된 된 색의 이름을 변경 `CMFCColorBar` 응용 프로그램의 개체입니다.  
   
-##  <a name="a-namesetcommandida--cmfccolorbarsetcommandid"></a><a name="setcommandid"></a>CMFCColorBar::SetCommandID  
+##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
  색 막대 컨트롤에 대 한 새 명령 ID를 설정합니다.  
   
 ```  
@@ -761,7 +796,7 @@ void SetCommandID(UINT nCommandID);
 ### <a name="remarks"></a>주의  
  색 막대 컨트롤의 명령 ID를 수정 하 고 ID가 변경 하는 컨트롤의 부모 창에 알리기 위해이 메서드를 호출 합니다.  
   
-##  <a name="a-namesetdocumentcolorsa--cmfccolorbarsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
  현재 문서에 사용 되는 색 목록을 설정 합니다.  
   
 ```  
@@ -784,7 +819,7 @@ void SetDocumentColors(
 ### <a name="remarks"></a>주의  
  *문서 색* 문서에서 현재 사용 되는 색입니다. 프레임 워크에는 자동으로 문서 색 목록을 유지 관리 하지만 목록을 수정 하려면이 메서드를 사용할 수 있습니다.  
   
-##  <a name="a-namesethorzmargina--cmfccolorbarsethorzmargin"></a><a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
+##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
  클라이언트 영역 경계 왼쪽 또는 오른쪽 색 셀 사이의 공간의 가로 여백을 설정 합니다.  
   
 ```  
@@ -798,7 +833,7 @@ void SetHorzMargin(int nHorzMargin);
 ### <a name="remarks"></a>주의  
  기본적으로는 [CMFCColorBar::CMFCColorBar](#cmfccolorbar) 생성자 가로 여백을 설정 하는 4 픽셀입니다.  
   
-##  <a name="a-namesetproplista--cmfccolorbarsetproplist"></a><a name="setproplist"></a>CMFCColorBar::SetPropList  
+##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
  설정의 `m_pWndPropList` 속성 표 컨트롤에 지정된 된 포인터에 대 한 데이터 멤버를 보호 합니다.  
   
 ```  
@@ -811,7 +846,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 |---------------|-----------------|  
 |[in] `pWndList`|속성 표 컨트롤 개체에 대 한 포인터입니다.|  
   
-##  <a name="a-namesetvertmargina--cmfccolorbarsetvertmargin"></a><a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
+##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
  세로 여백, 위쪽 또는 아래쪽 색 셀과 클라이언트 영역 경계 사이의 공간을 설정 합니다.  
   
 ```  
@@ -825,7 +860,7 @@ void SetVertMargin(int nVertMargin);
 ### <a name="remarks"></a>주의  
  기본적으로는 [CMFCColorBar::CMFCColorBar](#cmfccolorbar) 4 픽셀 수직 여백을 설정 하는 생성자입니다.  
   
-##  <a name="a-nameshowcommandmessagestringa--cmfccolorbarshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
  상태 표시줄에서 메시지 줄을 업데이트 하려면 색 막대 컨트롤을 소유 하는 프레임 창을 요청 합니다.  
   
 ```  

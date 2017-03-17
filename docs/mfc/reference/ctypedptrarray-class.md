@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
+- AFXTEMPL/CTypedPtrArray
+- AFXTEMPL/CTypedPtrArray::Add
+- AFXTEMPL/CTypedPtrArray::Append
+- AFXTEMPL/CTypedPtrArray::Copy
+- AFXTEMPL/CTypedPtrArray::ElementAt
+- AFXTEMPL/CTypedPtrArray::GetAt
+- AFXTEMPL/CTypedPtrArray::InsertAt
+- AFXTEMPL/CTypedPtrArray::SetAt
+- AFXTEMPL/CTypedPtrArray::SetAtGrow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +104,7 @@ class CTypedPtrArray : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="a-nameadda--ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>CTypedPtrArray::Add  
  이 멤버 함수를 호출 `BASE_CLASS` **:: 추가**합니다.  
   
 ```  
@@ -115,7 +124,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::Add](../../mfc/reference/cobarray-class.md#add)합니다.  
   
-##  <a name="a-nameappenda--ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>CTypedPtrArray::Append  
  이 멤버 함수를 호출 `BASE_CLASS` **:: Append**합니다.  
   
 ```  
@@ -138,7 +147,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::Append](../../mfc/reference/cobarray-class.md#append)합니다.  
   
-##  <a name="a-namecopya--ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>CTypedPtrArray::Copy  
  이 멤버 함수를 호출 `BASE_CLASS` **:: 복사**합니다.  
   
 ```  
@@ -158,7 +167,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)합니다.  
   
-##  <a name="a-nameelementata--ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
  이 인라인 함수를 호출 `BASE_CLASS` **:: ElementAt**합니다.  
   
 ```  
@@ -178,7 +187,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)합니다.  
   
-##  <a name="a-namegetata--ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>CTypedPtrArray::GetAt  
  이 인라인 함수를 호출 `BASE_CLASS` **:: GetAt**합니다.  
   
 ```  
@@ -198,7 +207,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="a-nameinsertata--ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: InsertAt**합니다.  
   
 ```  
@@ -238,7 +247,7 @@ void InsertAt(
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)합니다.  
   
-##  <a name="a-nameoperatorata--ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray::operator]  
+##  <a name="operator_at"></a>CTypedPtrArray::operator]  
  이러한 인라인 연산자 호출 `BASE_CLASS` **:: operator**합니다.  
   
 ```  
@@ -258,7 +267,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  라이브러리의 디버그 버전의 아래 첨자 (중 하나에 대입문의 왼쪽 또는 오른쪽) 범위를 벗어났습니다 하는 경우를 가정 합니다.  
   
-##  <a name="a-namesetata--ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>CTypedPtrArray::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  
@@ -280,7 +289,7 @@ void SetAt(
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)합니다.  
   
-##  <a name="a-namesetatgrowa--ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAtGrow**합니다.  
   
 ```  

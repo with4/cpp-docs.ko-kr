@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSize
+- ATLTYPES/ATL::CSize
+- ATLTYPES/ATL::CSize::CSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +88,7 @@ class CSize : public tagSIZE
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltypes.h  
   
-##  <a name="a-namecsizea--csizecsize"></a><a name="csize"></a>CSize::CSize  
+##  <a name="csize"></a>CSize::CSize  
  `CSize` 개체를 생성합니다.  
   
 ```  
@@ -119,7 +121,7 @@ CSize( DWORD dwSize) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&97;](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--csizeoperator-"></a><a name="operator_eq_eq"></a>CSize::operator = =  
+##  <a name="operator_eq_eq"></a>CSize::operator = =  
  두 크기가 같은지 확인 합니다.  
   
 ```   
@@ -132,7 +134,7 @@ BOOL operator==(SIZE size) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&98;](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]  
   
-##  <a name="a-nameoperatorneqa--csizeoperator-"></a><a name="operator_neq"></a>CSize::operator! =  
+##  <a name="operator_neq"></a>CSize::operator! =  
  두 크기가 다른 지 확인 합니다.  
   
 ```   
@@ -145,7 +147,7 @@ BOOL operator!=(SIZE size) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&99;](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--csizeoperator-"></a><a name="operator_add_eq"></a>CSize::operator + =  
+##  <a name="operator_add_eq"></a>CSize::operator + =  
  이 크기를 추가 하는 `CSize`합니다.  
   
 ```   
@@ -155,7 +157,7 @@ void operator+=(SIZE size) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&100;](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]  
   
-##  <a name="a-nameoperator-eqa--csizeoperator--"></a><a name="operator_-_eq"></a>-= CSize::operator  
+##  <a name="operator_-_eq"></a>-= CSize::operator  
  이 크기를 뺍니다 `CSize`합니다.  
   
 ```   
@@ -165,7 +167,7 @@ void operator-=(SIZE size) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&101;](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]  
   
-##  <a name="a-nameoperatoradda--csizeoperator-"></a><a name="operator_add"></a>CSize::operator +  
+##  <a name="operator_add"></a>CSize::operator +  
  이러한 연산자는이 추가 `CSize` 값 매개 변수 값입니다.  
   
 ```   
@@ -186,7 +188,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&102;](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
   
-##  <a name="a-nameoperator-a--csizeoperator--"></a><a name="operator_-"></a>CSize::operator-  
+##  <a name="operator_-"></a>CSize::operator-  
  이러한 연산자의 첫&3; 개 빼기이 `CSize` 값 매개 변수 값입니다.  
   
 ```   

@@ -10,9 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAcl
-- ATL::CAcl
-- ATLSECURITY/CAcl
-- ATL.CAcl
+- ATLSECURITY/ATL::CAcl
+- ATLSECURITY/ATL::CAcl::CAccessMaskArray
+- ATLSECURITY/ATL::CAcl::CAceFlagArray
+- ATLSECURITY/ATL::CAcl::CAceTypeArray
+- ATLSECURITY/ATL::CAcl::CAcl
+- ATLSECURITY/ATL::CAcl::GetAceCount
+- ATLSECURITY/ATL::CAcl::GetAclEntries
+- ATLSECURITY/ATL::CAcl::GetAclEntry
+- ATLSECURITY/ATL::CAcl::GetLength
+- ATLSECURITY/ATL::CAcl::GetPACL
+- ATLSECURITY/ATL::CAcl::IsEmpty
+- ATLSECURITY/ATL::CAcl::IsNull
+- ATLSECURITY/ATL::CAcl::RemoveAce
+- ATLSECURITY/ATL::CAcl::RemoveAces
+- ATLSECURITY/ATL::CAcl::SetEmpty
+- ATLSECURITY/ATL::CAcl::SetNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +127,7 @@ class CAcl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-namecaccessmaskarraya--caclcaccessmaskarray"></a><a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
+##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
  ACCESS_MASK 개체의 배열입니다.  
   
 ```
@@ -124,7 +137,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ### <a name="remarks"></a>주의  
  이 typedef 액세스 제어 항목 (Ace)에 사용 되는 액세스 권한을 저장 하는 사용할 수 있는 배열 형식을 지정 합니다.  
   
-##  <a name="a-namecaceflagarraya--caclcaceflagarray"></a><a name="caceflagarray"></a>CAcl::CAceFlagArray  
+##  <a name="caceflagarray"></a>CAcl::CAceFlagArray  
  바이트 배열입니다.  
   
 ```
@@ -134,7 +147,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ### <a name="remarks"></a>주의  
  이 형식 정의 액세스 제어 항목 (ACE) 유형별 제어 플래그를 정의 하는 데 배열 형식을 지정 합니다. 참조는 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 가능한 플래그의 전체 목록을 정의 합니다.  
   
-##  <a name="a-namecacetypearraya--caclcacetypearray"></a><a name="cacetypearray"></a>CAcl::CAceTypeArray  
+##  <a name="cacetypearray"></a>CAcl::CAceTypeArray  
  바이트 배열입니다.  
   
 ```
@@ -144,7 +157,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ### <a name="remarks"></a>주의  
  이 typedef ACCESS_ALLOWED_ACE_TYPE 또는 ACCESS_DENIED_ACE_TYPE 같은 액세스 제어 항목 (ACE) 개체의 특성을 정의 하는 데 배열 형식을 지정 합니다. 참조는 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 가능한 형식의 전체 목록을 정의 합니다.  
   
-##  <a name="a-namecacla--caclcacl"></a><a name="cacl"></a>CAcl::CAcl  
+##  <a name="cacl"></a>CAcl::CAcl  
  생성자입니다.  
   
 ```
@@ -159,7 +172,7 @@ CAcl(const CAcl& rhs) throw(...);
 ### <a name="remarks"></a>주의  
  `CAcl` 개체가 생성 될 수 필요에 따라 기존 `CAcl` 개체입니다.  
   
-##  <a name="a-namedtora--caclcacl"></a><a name="dtor"></a>CAcl:: ~ CAcl  
+##  <a name="dtor"></a>CAcl:: ~ CAcl  
  소멸자입니다.  
   
 ```
@@ -169,7 +182,7 @@ virtual ~CAcl() throw();
 ### <a name="remarks"></a>주의  
  소멸자는 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
-##  <a name="a-namegetacecounta--caclgetacecount"></a><a name="getacecount"></a>CAcl::GetAceCount  
+##  <a name="getacecount"></a>CAcl::GetAceCount  
  항목 (ACE) 개체 액세스 제어의 수를 반환합니다.  
   
 ```
@@ -179,7 +192,7 @@ virtual UINT GetAceCount() const throw() = 0;
 ### <a name="return-value"></a>반환 값  
  ACE 항목 수를 반환 합니다.는 `CAcl` 개체입니다.  
   
-##  <a name="a-namegetaclentriesa--caclgetaclentries"></a><a name="getaclentries"></a>CAcl::GetAclEntries  
+##  <a name="getaclentries"></a>CAcl::GetAclEntries  
  액세스 제어 목록 (ACL) 항목을 검색 된 `CAcl` 개체입니다.  
   
 ```
@@ -210,7 +223,7 @@ void GetAclEntries(
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 자세한 내용은 ACE 유형 및 플래그입니다.  
   
-##  <a name="a-namegetaclentrya--caclgetaclentry"></a><a name="getaclentry"></a>CAcl::GetAclEntry  
+##  <a name="getaclentry"></a>CAcl::GetAclEntry  
  모든 항목에는 액세스 제어 목록 (ACL)에 대 한 정보를 검색합니다.  
   
 ```
@@ -251,7 +264,7 @@ void GetAclEntry(
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 자세한 내용은 ACE 유형 및 플래그입니다.  
   
-##  <a name="a-namegetlengtha--caclgetlength"></a><a name="getlength"></a>CAcl::GetLength  
+##  <a name="getlength"></a>CAcl::GetLength  
  액세스 제어 목록 (ACL)의 길이 반환 합니다.  
   
 ```
@@ -261,7 +274,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>반환 값  
  필요한 길이 저장 하는 데 필요한 바이트 단위로 반환 된 **ACL** 구조입니다.  
   
-##  <a name="a-namegetpacla--caclgetpacl"></a><a name="getpacl"></a>CAcl::GetPACL  
+##  <a name="getpacl"></a>CAcl::GetPACL  
  액세스 제어 목록 (ACL)에 대 한 포인터를 반환합니다.  
   
 ```
@@ -271,7 +284,7 @@ const ACL* GetPACL() const throw(...);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 된 **ACL** 구조입니다.  
   
-##  <a name="a-nameisemptya--caclisempty"></a><a name="isempty"></a>CAcl::IsEmpty  
+##  <a name="isempty"></a>CAcl::IsEmpty  
  테스트는 `CAcl` 항목에 대 한 개체입니다.  
   
 ```
@@ -281,7 +294,7 @@ bool IsEmpty() const throw();
 ### <a name="remarks"></a>주의  
  반환 **true** 경우는 `CAcl` 개체가 NULL 이며에 항목이 없습니다. 반환 **false** 경우는 `CAcl` 개체가 NULL 이거나 또는 하나 이상의 항목을 포함 합니다.  
   
-##  <a name="a-nameisnulla--caclisnull"></a><a name="isnull"></a>CAcl::IsNull  
+##  <a name="isnull"></a>CAcl::IsNull  
  상태를 반환 하는 `CAcl` 개체입니다.  
   
 ```
@@ -291,7 +304,7 @@ bool IsNull() const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 경우는 `CAcl` 개체는 NULL이 고 **false** 그렇지 않은 경우.  
   
-##  <a name="a-nameoperatorconstaclstara--cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a>CAcl::operator const ACL *  
+##  <a name="operator_const_acl__star"></a>CAcl::operator const ACL *  
  캐스트는 `CAcl` 개체는 **ACL** (액세스 제어 목록) 구조입니다.  
   
 ```  
@@ -301,7 +314,7 @@ operator const ACL *() const throw(...);
 ### <a name="remarks"></a>주의  
  주소를 반환 하는 **ACL** 구조입니다.  
   
-##  <a name="a-nameoperatoreqa--cacloperator-"></a><a name="operator_eq"></a>CAcl::operator =  
+##  <a name="operator_eq"></a>CAcl::operator =  
  대입 연산자입니다.  
   
 ```
@@ -315,7 +328,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트에 대 한 참조를 반환 합니다. `CAcl` 개체입니다.  
   
-##  <a name="a-nameremoveacea--caclremoveace"></a><a name="removeace"></a>CAcl::RemoveAce  
+##  <a name="removeace"></a>CAcl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 **CAcl** 개체입니다.  
   
 ```
@@ -329,7 +342,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
-##  <a name="a-nameremoveacesa--caclremoveaces"></a><a name="removeaces"></a>CAcl::RemoveAces  
+##  <a name="removeaces"></a>CAcl::RemoveAces  
  Alls Ace (액세스 제어 항목)에서 제거 된 `CAcl` 에 적용 되는 주어진 `CSid`합니다.  
   
 ```
@@ -340,7 +353,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
  `rSid`  
  `CSid` 개체에 대한 참조입니다.  
   
-##  <a name="a-namesetemptya--caclsetempty"></a><a name="setempty"></a>CAcl::SetEmpty  
+##  <a name="setempty"></a>CAcl::SetEmpty  
  표시는 `CAcl` 빈 개체입니다.  
   
 ```
@@ -350,7 +363,7 @@ void SetEmpty() throw();
 ### <a name="remarks"></a>주의  
  `CAcl` 비어 또는 NULL로 설정할 수 있습니다: 두 가지 상태는 고유 합니다.  
   
-##  <a name="a-namesetnulla--caclsetnull"></a><a name="setnull"></a>CAcl::SetNull  
+##  <a name="setnull"></a>CAcl::SetNull  
  표시는 `CAcl` NULL로 개체입니다.  
   
 ```

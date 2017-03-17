@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
-- ATL::CElementTraitsBase
-- ATL.CElementTraitsBase<T>
-- ATL::CElementTraitsBase<T>
-- ATL.CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase::INARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::CopyElements
+- ATLCOLL/ATL::CElementTraitsBase::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namecopyelementsa--celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
  컬렉션 클래스 개체에 저장 된 요소를 복사 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -104,21 +105,21 @@ static void CopyElements(
 ### <a name="remarks"></a>주의  
  원본 및 대상 요소 겹치지 않아야 합니다.  
   
-##  <a name="a-nameinargtypea--celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  컬렉션에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
  컬렉션에서 요소를 검색에 사용할 데이터 형식입니다.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
  컬렉션 클래스 개체에 저장 된 요소의 위치를 다시 지정 하려면이 메서드를 호출 합니다.  
   
 ```

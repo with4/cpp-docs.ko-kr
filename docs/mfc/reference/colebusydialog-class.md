@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
+- AFXODLGS/COleBusyDialog
+- AFXODLGS/COleBusyDialog::COleBusyDialog
+- AFXODLGS/COleBusyDialog::DoModal
+- AFXODLGS/COleBusyDialog::GetSelectionType
+- AFXODLGS/COleBusyDialog::m_bz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-namecolebusydialoga--colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
  이 함수가 구성 된 `COleBusyDialog` 개체입니다.  
   
 ```  
@@ -134,7 +139,7 @@ explicit COleBusyDialog(
   
  자세한 내용은 참조는 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedomodala--colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>COleBusyDialog::DoModal  
  OLE 서버 작업 중 또는 서버가 응답 하지 않음 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -155,7 +160,7 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 구성원 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="a-namegetselectiontypea--colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
  서버 작업 중 대화 상자에서 사용자가 선택한 선택 형식을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -188,7 +193,7 @@ UINT GetSelectionType() const;
   
 - **COleBusyDialog::callUnblocked** 서버를 활성화 하려면 호출은 이제 차단 해제 합니다.  
   
-##  <a name="a-namembza--colebusydialogmbz"></a><a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>COleBusyDialog::m_bz  
  형식의 구조 **OLEUIBUSY** 서버 작업 중 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

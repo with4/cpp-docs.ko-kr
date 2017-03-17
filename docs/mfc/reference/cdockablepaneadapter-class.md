@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDockablePaneAdapter.h  
   
-##  <a name="a-namegetwrappedwnda--cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
  도킹 가능한 창 어댑터에 대 한 기본 창을 반환합니다.  
   
 ```  
@@ -87,7 +92,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>주의  
  래핑된 창에 액세스 하려면이 함수를 사용 합니다.  
   
-##  <a name="a-nameloadstatea--cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
  레지스트리에서 창 상태를 로드합니다.  
   
 ```  
@@ -111,7 +116,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesavestatea--cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
  레지스트리에 있는 창의 상태를 저장합니다.  
   
 ```  
@@ -135,7 +140,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetwrappedwnda--cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
  도킹 가능한 창 어댑터에 대 한 기본 창을 설정합니다.  
   
 ```  

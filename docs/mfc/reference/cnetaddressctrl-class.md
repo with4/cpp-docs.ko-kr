@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::Create
+- AFXCMN/CNetAddressCtrl::CreateEx
+- AFXCMN/CNetAddressCtrl::DisplayErrorTip
+- AFXCMN/CNetAddressCtrl::GetAddress
+- AFXCMN/CNetAddressCtrl::GetAllowType
+- AFXCMN/CNetAddressCtrl::SetAllowType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class CNetAddressCtrl : public CEdit
   
  이 클래스에 대 한 추가 요구 사항에 설명 되어 [빌드 요구 사항에 대 한 Windows Vista 공용 컨트롤](../../mfc/build-requirements-for-windows-vista-common-controls.md)합니다.  
   
-##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
  `CNetAddressCtrl` 개체를 생성합니다.  
   
 ```  
@@ -112,7 +122,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>주의  
  사용 된 [CNetAddressCtrl::Create](#create) 또는 [CNetAddressCtrl::CreateEx](#createex) 네트워크 컨트롤을 만들고에 연결 하는 메서드는 `CNetAddressCtrl` 개체입니다.  
   
-##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>CNetAddressCtrl::Create  
  지정 된 스타일으로 네트워크 주소 컨트롤을 만들고 현재 연결 `CNetAddressCtrl` 개체입니다.  
   
 ```  
@@ -135,7 +145,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
  확장된 스타일을 지정된 하 여 네트워크 주소 컨트롤을 만들고 현재 연결 `CNetAddressCtrl` 개체입니다.  
   
 ```  
@@ -160,7 +170,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
  현재 네트워크 주소 컨트롤에 연결 하 여 풍선 설명의 오류 메시지를 표시 합니다.  
   
 ```  
@@ -175,7 +185,7 @@ HRESULT DisplayErrorTip();
   
  호출 하는이 메시지는 [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) 에 설명 된 매크로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 해당 매크로 보냅니다는 `NCM_DISPLAYERRORTIP` 메시지입니다.  
   
-##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
  현재 네트워크 주소 컨트롤에 연관 된 네트워크 주소 유효성을 검사 하 고 구문 분석 된 표현을 검색 합니다.  
   
 ```  
@@ -198,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  이 메서드를 호출의 [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) 에 설명 된 매크로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 해당 매크로 보냅니다는 `NCM_GETADDRESS` 메시지입니다.  
   
-##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
  현재 네트워크 주소 컨트롤을 지원할 수 있는 네트워크 주소 유형을 검색 합니다.  
   
 ```  
@@ -211,7 +221,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>주의  
  호출 하는이 메시지는 [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) 에 설명 된 매크로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 해당 매크로 보냅니다는 `NCM_GETALLOWTYPE` 메시지입니다.  
   
-##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
  현재 네트워크 주소 컨트롤을 지원할 수 있는 네트워크 주소 유형을 설정 합니다.  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::GetControl
+- AFXWINFORMS/CWinFormsDialog::GetControlHandle
+- AFXWINFORMS/CWinFormsDialog::OnInitDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CWinFormsDialog :
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h  
   
-##  <a name="a-namecwinformsdialoga--cwinformsdialogcwinformsdialog"></a><a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
  `CWinFormsDialog` 개체를 생성합니다.  
   
 ```  
@@ -98,7 +103,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  대화 상자 템플릿 리소스의 ID를 포함 합니다. 대화 상자 편집기를 사용 하 여 대화 상자 템플릿을 만들고 응용 프로그램의 리소스 스크립트 파일에 저장 합니다. 대화 상자 템플릿에 대 한 자세한 내용은 참조 하십시오. [CDialog 클래스](../../mfc/reference/cdialog-class.md)합니다.  
   
-##  <a name="a-namegetcontrola--cwinformsdialoggetcontrol"></a><a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
  Windows Forms 사용자 정의 컨트롤에 대 한 참조를 검색합니다.  
   
 ```  
@@ -108,7 +113,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>반환 값  
  MFC 대화 상자에서 Windows Forms 컨트롤에 대 한 참조를 반환합니다.  
   
-##  <a name="a-namegetcontrolhandlea--cwinformsdialoggetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
  Windows Forms 사용자 정의 컨트롤에 대 한 창 핸들을 검색합니다.  
   
 ```  
@@ -118,7 +123,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>반환 값  
  Windows Forms 사용자 정의 컨트롤에 대 한 창 핸들을 반환합니다.  
   
-##  <a name="a-nameoninitdialoga--cwinformsdialogoninitdialog"></a><a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
  MFC 대화 상자를 만들고 호스팅하는 Windows Forms 사용자 정의 컨트롤에 의해 초기화 합니다.  
   
 ```  
@@ -133,7 +138,7 @@ virtual BOOL OnInitDialog();
   
  대화 상자 초기화 될 때 특수 한 처리를 수행 하는 경우이 멤버 함수를 재정의 합니다. 이 메서드 사용에 대 한 자세한 내용은 참조 하십시오. [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다.  
   
-##  <a name="a-nameoperator-gta--cwinformsdialogoperator--gt"></a><a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
  대체 [CWinFormsDialog::GetControl](#getcontrol) 식에 있습니다.  
   
 ```  
@@ -145,7 +150,7 @@ inline TManagedControl^  operator->() const throw();
   
  Windows Forms에 대 한 정보를 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameoperatortmanagedcontrolxora--cwinformsdialogoperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
  Windows Forms 사용자 정의 컨트롤에 대 한 참조로 형식을 캐스팅합니다.  
   
 ```  

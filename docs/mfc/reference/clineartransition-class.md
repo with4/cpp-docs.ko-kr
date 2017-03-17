@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
-- afxanimationcontroller/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::Create
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
  선형 전환을 개체를 생성 하 고 기간 및 최종 값으로 초기화 합니다.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransition(
  `dblFinalValue`  
  전환의 끝에 있는 애니메이션 변수의 값입니다.  
   
-##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>CLinearTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
  전환의 끝에 있는 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>CLinearTransition::m_duration  
  전환의 기간입니다.  
   
 ```  

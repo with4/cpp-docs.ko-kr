@@ -10,8 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
-- ATL.CSnapInItemImpl
-- ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::AddMenuItems
+- ATLSNAP/ATL::CSnapInItemImpl::Command
+- ATLSNAP/ATL::CSnapInItemImpl::CreatePropertyPages
+- ATLSNAP/ATL::CSnapInItemImpl::FillData
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultPaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultViewType
+- ATLSNAP/ATL::CSnapInItemImpl::GetScopePaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::Notify
+- ATLSNAP/ATL::CSnapInItemImpl::QueryPagesFor
+- ATLSNAP/ATL::CSnapInItemImpl::SetMenuInsertionFlags
+- ATLSNAP/ATL::CSnapInItemImpl::SetToolbarButtonInfo
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateMenuState
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateToolbarButton
+- ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
+- ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
+- ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +125,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsnap.h  
   
-##  <a name="a-nameaddmenuitemsa--csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
  이 메서드는 Win32 함수를 구현 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)합니다.  
   
 ```
@@ -145,7 +161,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="a-namecommanda--csnapinitemimplcommand"></a><a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>CSnapInItemImpl::Command  
  이 메서드는 Win32 함수를 구현 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)합니다.  
   
 ```
@@ -167,7 +183,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="a-namecreatepropertypagesa--csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
  이 메서드는 Win32 함수를 구현 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)합니다.  
   
 ```
@@ -199,14 +215,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="a-namecsnapinitemimpla--csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
  `CSnapInItemImpl` 개체를 생성합니다.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="a-namefilldataa--csnapinitemimplfilldata"></a><a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>CSnapInItemImpl::FillData  
  이 함수는 항목에 대 한 정보를 검색 하 라고 합니다.  
   
 ```
@@ -223,7 +239,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>주의  
  이 함수를 올바르게 구현 하려면 올바른 정보를 스트림으로 복사 합니다 ( `pStream`)로 표시 된 클립보드 형식에 따라 `cf`합니다.  
   
-##  <a name="a-namegetresultviewtypea--csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
  스냅인 개체의 결과 창에 대 한 보기의 유형을 검색 하려면이 함수를 호출 합니다.  
   
 ```
@@ -243,7 +259,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 수 있도록 기본 보기 옵션입니다.  
   
-##  <a name="a-namegetscopepaneinfoa--csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
  검색 하려면이 함수 호출의 **SCOPEDATAITEM** 스냅인의 구조입니다.  
   
 ```
@@ -254,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] 에 대 한 포인터는 **SCOPEDATAITEM** 의 구조는 `CSnapInItemImpl` 개체입니다.  
   
-##  <a name="a-namegetresultpaneinfoa--csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
  검색 하려면이 함수 호출의 **RESULTDATAITEM** 스냅인의 구조입니다.  
   
 ```
@@ -265,28 +281,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] 에 대 한 포인터는 **RESULTDATAITEM** 의 구조는 `CSnapInItemImpl` 개체입니다.  
   
-##  <a name="a-namembstrdisplaynamea--csnapinitemimplmbstrdisplayname"></a><a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
  노드 항목에 대해 표시 되는 문자열을 포함 합니다.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="a-namemscopedataitema--csnapinitemimplmscopedataitem"></a><a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM` 스냅인 데이터 개체의 구조입니다.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="a-namemresultdataitema--csnapinitemimplmresultdataitem"></a><a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) 스냅인 데이터 개체의 구조입니다.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="a-namenotifya--csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>CSnapInItemImpl::Notify  
  사용자가 대상이 되는 스냅인 개체 때 호출 됩니다.  
   
 ```
@@ -354,14 +370,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="a-namequerypagesfora--csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
  스냅인 노드 속성 페이지를 지원 하는지 확인 하려면 호출 됩니다.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="a-namesetmenuinsertionflagsa--csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
  지정 된 메뉴 삽입 플래그를 수정 하려면이 함수를 호출 `pInsertionAllowed`, 스냅인 개체에 대 한 합니다.  
   
 ```
@@ -390,7 +406,7 @@ void SetMenuInsertionFlags(
   
  비트를 설정 하지 않아야 `pInsertionAllowed` 원래 선택 취소입니다. 이후 버전의 MMC 현재 정의 되지 않은 비트를 변경 하지 않아야 하므로 현재 정의 된 비트를 사용할 수 있습니다.  
   
-##  <a name="a-namesettoolbarbuttoninfoa--csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
  도구 모음을 만들기 전에 스냅인 개체의 모든 도구 모음 단추 스타일을 수정 하려면이 함수를 호출 합니다.  
   
 ```
@@ -432,7 +448,7 @@ void SetToolbarButtonInfo(
   
 - `TBSTYLE_SEP`단추 그룹 간에 약간의 시간 차가 제공 하는 구분 기호를 만듭니다. 이 스타일에 있는 단추는 사용자 입력을 받지 않습니다.  
   
-##  <a name="a-nameupdatemenustatea--csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
  스냅인 개체의 상황에 맞는 메뉴에 삽입 되기 전에 메뉴 항목을 수정 하려면이 함수를 호출 합니다.  
   
 ```
@@ -480,7 +496,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** 및 **MF_UNCHECKED**합니다.  
   
-##  <a name="a-nameupdatetoolbarbuttona--csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
  표시 되기 전에 스냅인 개체의 도구 모음 단추를 수정 하려면이 함수를 호출 합니다.  
   
 ```

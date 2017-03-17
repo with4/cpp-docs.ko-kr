@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddDynamicElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddSeparator
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::Create
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::CreateEx
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindByID
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExtendedArea
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetSpace
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsBottomFrame
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsInformationMode
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RecalcLayout
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveAll
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::SetInformation
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::OnDrawInformation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +136,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribbonstatusbar.h  
   
-##  <a name="a-nameadddynamicelementa--cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
  리본 메뉴 상태 표시줄에 동적 요소를 추가 합니다.  
   
 ```  
@@ -127,7 +150,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>주의  
  일반 요소와는 달리 동적 요소를 사용자 지정할 수 없는 경우 및 사용자 지정 메뉴 상태 표시줄의 표시 하지는 않습니다.  
   
-##  <a name="a-nameaddelementa--cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
  리본 메뉴 상태 표시줄에 새 리본 요소를 추가합니다.  
   
 ```  
@@ -147,7 +170,7 @@ void AddElement(
  [in] `bIsVisible`  
  `TRUE`표시로 요소를 추가 하려는 경우 `FALSE` 으로 요소를 추가 하려는 경우 숨겨집니다.  
   
-##  <a name="a-nameaddextendedelementa--cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
  리본 메뉴 상태 표시줄의 확장된 된 영역에는 리본 요소를 추가합니다.  
   
 ```  
@@ -170,7 +193,7 @@ void AddExtendedElement(
 ### <a name="remarks"></a>주의  
  확장된 영역은 상태 표시줄 컨트롤의 오른쪽에 있습니다.  
   
-##  <a name="a-nameaddseparatora--cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
  리본 메뉴 상태 표시줄에는 구분 기호를 추가합니다.  
   
 ```  
@@ -180,7 +203,7 @@ void AddSeparator();
 ### <a name="remarks"></a>주의  
  메서드 뒤 구분 기호를 추가 하는 프레임 워크 [CMFCRibbonStatusBar::AddElement](#addelement)합니다. 마지막 요소를 삽입합니다.  
   
-##  <a name="a-namecreatea--cmfcribbonstatusbarcreate"></a><a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>CMFCRibbonStatusBar::Create  
  리본 메뉴 상태 표시줄을 만듭니다.  
   
 ```  
@@ -203,7 +226,7 @@ BOOL Create(
 ### <a name="return-value"></a>반환 값  
  `TRUE`상태 표시줄을 성공적으로 만들어지면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-namecreateexa--cmfcribbonstatusbarcreateex"></a><a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
  확장된 스타일을 가진 리본 메뉴 상태 표시줄을 만듭니다.  
   
 ```  
@@ -230,7 +253,7 @@ BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  `TRUE`상태 표시줄을 성공적으로 만들어지면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-namefindbyida--cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -245,7 +268,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namefindelementa--cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
  지정 된 명령 ID를 가진 요소에 대 한 포인터를 반환  
   
 ```  
@@ -259,7 +282,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ### <a name="return-value"></a>반환 값  
  지정 된 명령 ID를 가진 요소에 대 한 포인터 `NULL`이러한 요소가 없는 경우.  
   
-##  <a name="a-namegetcounta--cmfcribbonstatusbargetcount"></a><a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
  리본 메뉴 상태 표시줄의 주 영역에 있는 요소의 수를 반환 합니다.  
   
 ```  
@@ -269,7 +292,7 @@ int GetCount() const;
 ### <a name="return-value"></a>반환 값  
  리본 메뉴 상태 표시줄의 주 영역에 있는 요소의 수입니다.  
   
-##  <a name="a-namegetelementa--cmfcribbonstatusbargetelement"></a><a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
  지정된 된 인덱스에 있는 요소에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -285,7 +308,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetexcounta--cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
  리본 메뉴 상태 표시줄의 확장된 된 영역에 있는 요소의 수를 반환 합니다.  
   
 ```  
@@ -295,7 +318,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>반환 값  
  리본 메뉴 상태 표시줄의 확장된 된 영역에 있는 요소의 수입니다.  
   
-##  <a name="a-namegetexelementa--cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
  리본 메뉴 상태 표시줄에서 확장된 영역의 지정한 인덱스에 있는 요소에 대한 포인터를 반환합니다. 확장된 영역은 상태 표시줄 컨트롤의 오른쪽에 있습니다.  
   
 ```  
@@ -311,7 +334,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetextendedareaa--cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -325,7 +348,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetspacea--cmfcribbonstatusbargetspace"></a><a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -336,7 +359,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisbottomframea--cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -347,7 +370,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisextendedelementa--cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -361,7 +384,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisinformationmodea--cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
  리본 메뉴 상태 표시줄 정보 모드 사용 하는지 여부를 결정 합니다.  
   
 ```  
@@ -374,7 +397,7 @@ BOOL IsInformationMode() const;
 ### <a name="remarks"></a>주의  
  정보 모드에서 상태 표시줄은 모든 일반 창 숨깁니다 메시지 문자열을 표시 합니다.  
   
-##  <a name="a-nameondrawinformationa--cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
  리본 메뉴 상태 표시줄 정보 모드를 사용 하는 경우에 표시 되는 문자열을 표시 합니다.  
   
 ```  
@@ -397,7 +420,7 @@ virtual void OnDrawInformation(
 ### <a name="remarks"></a>주의  
  상태 표시줄에 정보 문자열의 모양을 사용자 지정 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다. 사용 하 여는 [CMFCRibbonStatusBar::SetInformation](#setinformation) 메서드를 상태 표시줄 정보 모드로 전환 합니다. 이 모드에서는 상태 표시줄 모든 창 숨겨지고로 지정 된 정보 문자열을 표시 `strInfo`합니다.  
   
-##  <a name="a-namerecalclayouta--cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -406,14 +429,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameremovealla--cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
  리본 메뉴 상태 표시줄에서 모든 요소를 제거합니다.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="a-nameremoveelementa--cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
  리본 메뉴 상태 표시줄에서 지정 된 명령 ID를 가진 요소를 제거 합니다.  
   
 ```  
@@ -427,7 +450,7 @@ BOOL RemoveElement(UINT uiID);
 ### <a name="return-value"></a>반환 값  
  `TRUE`지정 된 요소가 `uiID` 제거 됩니다. 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="a-namesetinformationa--cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
  사용 하거나 리본 메뉴 상태 표시줄에 대 한 정보 모드를 해제 합니다.  
   
 ```  

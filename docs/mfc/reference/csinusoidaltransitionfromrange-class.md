@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CSinusoidalTransitionFromRange
 - CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMaximumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMinimumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_period
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_slope
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +93,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -102,7 +109,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namecsinusoidaltransitionfromrangea--csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  전환 개체를 생성 합니다.  
   
 ```  
@@ -130,35 +137,35 @@ CSinusoidalTransitionFromRange(
  `slope`  
  전환의 시작 부분에 기울기입니다.  
   
-##  <a name="a-namemdblmaximumvaluea--csinusoidaltransitionfromrangemdblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
+##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
  사인 곡선 물결의 최고에서 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="a-namemdblminimumvaluea--csinusoidaltransitionfromrangemdblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
+##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
  사인 곡선 물결의 이러한에서 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromrangemduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
  전환의 기간입니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromrangemperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
  기간 (초)에서 사인 곡선 물결의 진동입니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="a-namemslopea--csinusoidaltransitionfromrangemslope"></a><a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
+##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
  전환의 시작 부분에 기울기입니다.  
   
 ```  

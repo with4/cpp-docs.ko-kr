@@ -10,7 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
-- afxwin/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::Create
+- AFXWIN/CMFCPreviewCtrlImpl::Destroy
+- AFXWIN/CMFCPreviewCtrlImpl::Focus
+- AFXWIN/CMFCPreviewCtrlImpl::GetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::Redraw
+- AFXWIN/CMFCPreviewCtrlImpl::SetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::SetHost
+- AFXWIN/CMFCPreviewCtrlImpl::SetPreviewVisuals
+- AFXWIN/CMFCPreviewCtrlImpl::SetRect
+- AFXWIN/CMFCPreviewCtrlImpl::DoPaint
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrBackColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_font
+- AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,13 +114,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="a-namecmfcpreviewctrlimpla-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 미리 보기 컨트롤 개체를 만듭니다.
 
 ### <a name="syntax"></a>구문
 CMFCPreviewCtrlImpl();  
 
-## <a name="a-namecreatea-cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a>CMFCPreviewCtrlImpl::Create
 오버로드됨. Windows 창을 만들기 위해 고급 미리 보기 처리기가 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -135,7 +150,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  `TRUE`만들기 성공 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-## <a name="a-namedestroya-cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 이 컨트롤을 파괴 하는 경우에 풍부한 미리 보기 처리기에 의해 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -144,7 +159,7 @@ virtual BOOL Create(
 virtual void Destroy();  
 ```  
   
-## <a name="a-namedopainta-cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
 미리 보기를 렌더링 하는 프레임 워크에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -160,7 +175,7 @@ virtual void DoPaint(
  그리기에 대 한 장치 컨텍스트 포인터입니다.  
 
 
-## <a name="a-namefocusa-cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
 입력이 컨트롤에 포커스를 설정 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -168,7 +183,7 @@ virtual void DoPaint(
 ```  
 virtual void Focus();  
 ```  
-## <a name="a-namegetdocumenta-cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 이 미리 보기 컨트롤에 연결 하는 문서를 반환 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -180,7 +195,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>반환 값  
  컨트롤에서 해당 콘텐츠를 미리 볼 문서에 대 한 포인터입니다.
 
-## <a name="a-namemclrbackcolora-cmfcpreviewctrlimplmclrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
 미리 보기 창의 배경색입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -189,7 +204,7 @@ ATL::IDocument* GetDocument();
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="a-namemclrtextcolora-cmfcpreviewctrlimplmclrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 미리 보기 창의 텍스트 색입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -197,14 +212,14 @@ COLORREF m_clrBackColor;
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="a-namemfonta-cmfcpreviewctrlimplmfont--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>미리 보기 창에 텍스트를 표시 하는 데 사용 되는 CMFCPreviewCtrlImpl::m_font 글꼴입니다.  
+## <a name="m_font"></a>미리 보기 창에 텍스트를 표시 하는 데 사용 되는 CMFCPreviewCtrlImpl::m_font 글꼴입니다.  
   
 ### <a name="syntax"></a>구문  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="a-namempdocumenta-cmfcpreviewctrlimplmpdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
 컨트롤에서 해당 콘텐츠를 미리 볼 문서에 대 한 포인터입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -213,7 +228,7 @@ CFont m_font;
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="a-nameredrawa-cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
 이 컨트롤 다시 그리기를 알려 줍니다.  
   
 ### <a name="syntax"></a>구문  
@@ -221,7 +236,7 @@ ATL::IDocument* m_pDocument;
 ```  
 virtual void Redraw();  
 ```  
-## <a name="a-namesetdocumenta-cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
 문서 구현 및 미리 보기 컨트롤 간의 관계를 만들려면 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -236,7 +251,7 @@ void SetDocument(
  `pDocument`  
  문서 구현에 대 한 포인터입니다.  
 
-## <a name="a-namesethosta-cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
 이 컨트롤에 대 한 새 부모를 설정합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -251,7 +266,7 @@ virtual void SetHost(
  `hWndParent`  
  새 부모 창에 대 한 핸들입니다.  
 
-## <a name="a-namesetpreviewvisualsa-cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
 호출 하는 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각 효과 설정 하는 경우 콘텐츠.  
   
 ### <a name="syntax"></a>구문  
@@ -274,7 +289,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다. 
 
-##  <a name="a-namesetrecta-cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
 이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -296,7 +311,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>주의  
  일반적으로 새로운 경계 사각형을 호스트 컨트롤의 크기를 조정할 때 설정 됩니다.  
 
-## <a name="a-namedtora-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 미리 보기 컨트롤 개체를 destructs 합니다.  
   
 ### <a name="syntax"></a>구문  

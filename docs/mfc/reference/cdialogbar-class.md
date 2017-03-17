@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogBar
+- AFXEXT/CDialogBar
+- AFXEXT/CDialogBar::CDialogBar
+- AFXEXT/CDialogBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +91,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-namecdialogbara--cdialogbarcdialogbar"></a><a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
  `CDialogBar` 개체를 생성합니다.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="a-namecreatea--cdialogbarcreate"></a><a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>CDialogBar::Create  
  지정 된 대화 상자 리소스 템플릿을 로드 `lpszTemplateName` 또는 `nIDTemplate`와 스타일을 설정 하는 연결 대화 상자 모음 창을 만듭니다는 `CDialogBar` 개체입니다.  
   
 ```  

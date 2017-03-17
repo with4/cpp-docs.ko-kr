@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx::OnDrawSplitter
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +85,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsplitterwndex.h  
   
-##  <a name="a-nameondrawsplittera--csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
  그릴 분할자 창 프레임 워크에 의해 호출 됩니다.  
   
 ```  

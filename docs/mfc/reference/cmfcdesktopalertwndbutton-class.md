@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCaptionButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCloseButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +104,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdesktopalertwnd.h  
   
-##  <a name="a-nameiscaptionbuttona--cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
  경고 대화 상자 캡션 영역에는 단추가 표시 되는지 여부를 결정 합니다.  
   
 ```  
@@ -111,7 +114,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>반환 값  
  단추 경고 대화 상자; 캡션 영역에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameisclosebuttona--cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
  단추 경고 대화 상자를 닫는 지 여부를 결정 합니다.  
   
 ```  

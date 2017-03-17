@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModule
 - CAtlModule
-- ATL.CAtlModule
+- ATLBASE/ATL::CAtlModule
+- ATLBASE/ATL::CAtlModule::CAtlModule
+- ATLBASE/ATL::CAtlModule::AddCommonRGSReplacements
+- ATLBASE/ATL::CAtlModule::AddTermFunc
+- ATLBASE/ATL::CAtlModule::GetGITPtr
+- ATLBASE/ATL::CAtlModule::GetLockCount
+- ATLBASE/ATL::CAtlModule::Lock
+- ATLBASE/ATL::CAtlModule::Term
+- ATLBASE/ATL::CAtlModule::Unlock
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceD
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceDHelper
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceS
+- ATLBASE/ATL::CAtlModule::m_libid
+- ATLBASE/ATL::CAtlModule::m_pGIT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +108,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameaddcommonrgsreplacementsa--catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
  ATL 레지스트리 구성 요소 (등록자) 대체 구조에 매개 변수를 추가 하려면이 메서드를 재정의 합니다.  
   
 ```
@@ -115,7 +127,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  항목을 참조 하십시오 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameaddtermfunca--catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
  종료 될 때 호출 되는 새 함수를 추가 합니다.  
   
 ```
@@ -132,7 +144,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namecatlmodulea--catlmodulecatlmodule"></a><a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
  생성자입니다.  
   
 ```
@@ -142,7 +154,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>주의  
  데이터 멤버를 초기화 하 고 모듈의 스레드 주위 중요 섹션을 시작 합니다.  
   
-##  <a name="a-namedtora--catlmodulecatlmodule"></a><a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
  소멸자입니다.  
   
 ```
@@ -152,7 +164,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>주의  
  모든 데이터 멤버를 해제합니다.  
   
-##  <a name="a-namegetgitptra--catlmodulegetgitptr"></a><a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
  전역 인터페이스 테이블에 대 한 포인터를 검색합니다.  
   
 ```
@@ -173,7 +185,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  참조 [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) 전역 인터페이스 테이블에 대 한 내용은 합니다.  
   
-##  <a name="a-namegetlockcounta--catlmodulegetlockcount"></a><a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
  잠금 수를 반환합니다.  
   
 ```
@@ -183,7 +195,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>반환 값  
  잠금 수를 반환합니다. 이 값은 진단에 대 한 유용한 디버깅 수 있습니다.  
   
-##  <a name="a-namelocka--catlmodulelock"></a><a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>CAtlModule::Lock  
  잠금 수를 증가 시킵니다.  
   
 ```
@@ -193,21 +205,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>반환 값  
  잠금 수를 증가 하 고 업데이트 된 값을 반환 합니다. 이 값은 진단에 대 한 유용한 디버깅 수 있습니다.  
   
-##  <a name="a-namemlibida--catlmodulemlibid"></a><a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>CAtlModule::m_libid  
  현재 모듈의 GUID를 포함 합니다.  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="a-namempgita--catlmodulempgit"></a><a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
  전역 인터페이스 테이블에 대 한 포인터입니다.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="a-nameterma--catlmoduleterm"></a><a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>CAtlModule::Term  
  모든 데이터 멤버를 해제합니다.  
   
 ```
@@ -217,7 +229,7 @@ void Term() throw();
 ### <a name="remarks"></a>주의  
  모든 데이터 멤버를 해제합니다. 이 메서드는 소멸자에 의해 호출 됩니다.  
   
-##  <a name="a-nameunlocka--catlmoduleunlock"></a><a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>CAtlModule::Unlock  
  잠금 횟수를 줄입니다.  
   
 ```
@@ -227,7 +239,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>반환 값  
  잠금 횟수를 감소 하 고 업데이트 된 값을 반환 합니다. 이 값은 진단에 대 한 유용한 디버깅 수 있습니다.  
   
-##  <a name="a-nameupdateregistryfromresourceda--catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
  지정된 된 리소스를 등록 하거나 개체를 등록 취소에 포함 된 스크립트를 실행 합니다.  
   
 ```
@@ -265,7 +277,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  이 메서드는 호출 [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) 및 [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister)합니다.  
   
-##  <a name="a-nameupdateregistryfromresourcedhelpera--catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
  이 메서드는 `UpdateRegistryFromResourceD` 레지스트리 업데이트를 수행 합니다.  
   
 ```
@@ -291,7 +303,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>주의  
  이 메서드는의 구현을 제공 [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)합니다.  
   
-##  <a name="a-nameupdateregistryfromresourcesa--catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
  지정된 된 리소스를 등록 하거나 개체를 등록 취소에 포함 된 스크립트를 실행 합니다. 이 메서드는 정적으로 ATL 레지스트리 구성 요소에 연결 합니다.  
   
 ```

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::GetMode
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetBitmap
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetColor
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +98,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afximagepaintarea.h  
   
-##  <a name="a-namecmfcimagepaintareaa--cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
  `CMFCImagePaintArea` 개체를 생성합니다.  
   
 ```  
@@ -106,7 +112,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |매개 변수|설명|  
 |[in] `pParentDlg`|이미지 편집기의 부모가 되는 대화 상자에 대 한 포인터입니다.|  
   
-##  <a name="a-namegetmodea--cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
  현재 그리기 모드를 검색합니다.  
   
 ```  
@@ -116,7 +122,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>반환 값  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 현재 그리기 모드를 지정 하는 값입니다.  
   
-##  <a name="a-namesetbitmapa--cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
  그림 영역에 대 한 비트맵 이미지를 설정합니다.  
   
 ```  
@@ -133,7 +139,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>주의  
  경우 `pBitmap` 는 `NULL`,이 메서드는 수정할 수 있는 그리기 영역의 크기를&0;으로 설정 합니다. 그렇지 않으면 제공 된 비트맵 이미지의 크기를 수정할 수 있는 그리기 영역의 크기를 설정합니다.  
   
-##  <a name="a-namesetcolora--cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
  현재 그리기 색을 설정합니다.  
   
 ```  
@@ -152,7 +158,7 @@ void SetColor(COLORREF color);
   
  그리기 색을 제외 하 고 모든 그리기 모드에 대 한 이미지 편집기 대화 상자에서 사용 됩니다 `IMAGE_EDIT_MODE_COLOR`합니다. 그리기 모드에 대 한 자세한 내용은 참조 [cmfcimagepaintarea:: Image_edit_mode 열거형](cmfcimagepaintarea-image-edit-mode-enumeration.md)합니다.  
   
-##  <a name="a-namesetmodea--cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
  현재 그리기 모드를 설정합니다.  
   
 ```  

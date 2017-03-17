@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolBar
+- AFXEXT/CToolBar
+- AFXEXT/CToolBar::CToolBar
+- AFXEXT/CToolBar::CommandToIndex
+- AFXEXT/CToolBar::Create
+- AFXEXT/CToolBar::CreateEx
+- AFXEXT/CToolBar::GetButtonInfo
+- AFXEXT/CToolBar::GetButtonStyle
+- AFXEXT/CToolBar::GetButtonText
+- AFXEXT/CToolBar::GetItemID
+- AFXEXT/CToolBar::GetItemRect
+- AFXEXT/CToolBar::GetToolBarCtrl
+- AFXEXT/CToolBar::LoadBitmap
+- AFXEXT/CToolBar::LoadToolBar
+- AFXEXT/CToolBar::SetBitmap
+- AFXEXT/CToolBar::SetButtonInfo
+- AFXEXT/CToolBar::SetButtons
+- AFXEXT/CToolBar::SetButtonStyle
+- AFXEXT/CToolBar::SetButtonText
+- AFXEXT/CToolBar::SetHeight
+- AFXEXT/CToolBar::SetSizes
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +169,7 @@ class CToolBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-namecommandtoindexa--ctoolbarcommandtoindex"></a><a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
  이 멤버 함수는 첫 번째 도구 모음 단추, 0 위치에서 시작 명령 ID가와 일치 인덱스를 반환 합니다. `nIDFind`합니다.  
   
 ```  
@@ -163,7 +183,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>반환 값  
  인덱스는 단추 이거나 없으면 없는 단추에 지정 된 명령 id입니다.  
   
-##  <a name="a-namecreatea--ctoolbarcreate"></a><a name="create"></a>CToolBar::Create  
+##  <a name="create"></a>CToolBar::Create  
  이 멤버 함수 Windows 도구 모음 (자식 창)을 만들고 사용 하 여 연결 된 `CToolBar` 개체입니다.  
   
 ```  
@@ -210,7 +230,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&179;](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--ctoolbarcreateex"></a><a name="createex"></a>CToolBar::CreateEx  
+##  <a name="createex"></a>CToolBar::CreateEx  
  Windows 도구 모음 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CToolBar` 개체입니다.  
   
 ```  
@@ -253,7 +273,7 @@ virtual BOOL CreateEx(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&180;](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="a-namectoolbara--ctoolbarctoolbar"></a><a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>CToolBar::CToolBar  
  이 멤버 함수를 생성 한 `CToolBar` 개체를 기본 크기를 설정 합니다.  
   
 ```  
@@ -263,7 +283,7 @@ CToolBar();
 ### <a name="remarks"></a>주의  
  호출 된 [만들기](#create) 멤버 함수를 만드는 도구 모음 창입니다.  
   
-##  <a name="a-namegetbuttoninfoa--ctoolbargetbuttoninfo"></a><a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
  이 멤버 함수는 컨트롤 ID, 스타일 및 도구 모음 단추 또는 지정 된 위치에 구분의 이미지 인덱스 검색 *nIndex 합니다.*  
   
 ```  
@@ -292,7 +312,7 @@ void GetButtonInfo(
   
  경우 `nIndex` 는 구분 기호를 지정 `iImage` 구분 기호 너비 (픽셀)로 설정 됩니다.  
   
-##  <a name="a-namegetbuttonstylea--ctoolbargetbuttonstyle"></a><a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
  단추 또는 도구 모음의 구분 기호 스타일을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -309,7 +329,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>주의  
  단추 스타일 단추가 표시 되는 방법 및 사용자 입력에 응답 하는 방법을 결정 합니다. 참조 [SetButtonStyle](#setbuttonstyle) 단추 스타일에 대 한 예제입니다.  
   
-##  <a name="a-namegetbuttontexta--ctoolbargetbuttontext"></a><a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
  단추에 표시 되는 텍스트를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -333,7 +353,7 @@ void GetButtonText(
 ### <a name="remarks"></a>주의  
  이 멤버에 두 번째 형태 채우기 함수는 `CString` 문자열 텍스트와 함께 개체입니다.  
   
-##  <a name="a-namegetitemida--ctoolbargetitemid"></a><a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>CToolBar::GetItemID  
  이 멤버 함수는 단추 또는 지정 된 구분 기호의 명령 ID를 반환 합니다. `nIndex`합니다.  
   
 ```  
@@ -350,7 +370,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>주의  
  구분 기호 반환 **ID_SEPARATOR**합니다.  
   
-##  <a name="a-namegetitemrecta--ctoolbargetitemrect"></a><a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>CToolBar::GetItemRect  
  이 멤버 함수는 채웁니다는 `RECT` 에 주소가 포함 된 구조 `lpRect` 단추 또는 지정 된 구분 기호의 좌표와 `nIndex`합니다.  
   
 ```  
@@ -374,7 +394,7 @@ virtual void GetItemRect(
 ### <a name="example"></a>예제  
   예를 참조 [CToolBar::SetSizes](#setsizes)합니다.  
   
-##  <a name="a-namegettoolbarctrla--ctoolbargettoolbarctrl"></a><a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
  이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할 수 있습니다.  
   
 ```  
@@ -392,7 +412,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocViewSDI #&15;](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="a-nameloadbitmapa--ctoolbarloadbitmap"></a><a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
  이 멤버 함수에 지정 된 비트맵을 로드를 호출 `lpszResourceName` 또는 `nIDResource`합니다.  
   
 ```  
@@ -416,7 +436,7 @@ BOOL LoadBitmap(UINT nIDResource);
 > [!WARNING]
 > `CToolBar`최대 16 개의 색의 비트맵을 지원합니다. 도구 모음 편집기에 이미지를 로드 Visual Studio가 자동으로 필요한 경우 16 색 비트맵 이미지를 변환 하 고 이미지 변환 된 경우 경고 메시지가 표시 됩니다. 이미지 (이미지를 편집 하려면 외부 편집기 사용) 하는 16 개 이상의 색을 사용 하면 응용 프로그램이 예기치 않게 동작할 수 있습니다.  
   
-##  <a name="a-nameloadtoolbara--ctoolbarloadtoolbar"></a><a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
  이 멤버 함수에 지정 된 도구 모음을 로드를 호출 `lpszResourceName` 또는 `nIDResource`합니다.  
   
 ```  
@@ -440,7 +460,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="example"></a>예제  
   예를 참조 [CToolBar::CreateEx](#createex)합니다.  
   
-##  <a name="a-namesetbitmapa--ctoolbarsetbitmap"></a><a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>CToolBar::SetBitmap  
  도구 모음에 대 한 비트맵 이미지를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -457,7 +477,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>주의  
  예를 들어 호출 `SetBitmap` 단추의 동작을 변경 하는 문서에 작업을 수행 하는 사용자 후 비트맵 이미지를 변경 합니다.  
   
-##  <a name="a-namesetbuttoninfoa--ctoolbarsetbuttoninfo"></a><a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
  단추의 명령 ID, 스타일 및 이미지 수를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -505,7 +525,7 @@ void SetButtonInfo(
   
  비트맵 이미지 및 단추에 대 한 자세한 내용은 참조는 [CToolBar](../../mfc/reference/ctoolbar-class.md) 개요 및 [CToolBar::LoadBitmap](#loadbitmap)합니다.  
   
-##  <a name="a-namesetbuttonsa--ctoolbarsetbuttons"></a><a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>CToolBar::SetButtons  
  이 멤버 함수는 배열의 해당 요소에 지정 된 값을 각 도구 모음 단추의 명령 ID를 설정 합니다. `lpIDArray`합니다.  
   
 ```  
@@ -531,7 +551,7 @@ BOOL SetButtons(
   
  경우 `lpIDArray` 는 **NULL**,이 함수에 지정 된 항목의 수에 대 한 공간 할당 `nIDCount`합니다. 사용 하 여 [SetButtonInfo](#setbuttoninfo) 각 항목의 특성을 설정 합니다.  
   
-##  <a name="a-namesetbuttonstylea--ctoolbarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
  단추 또는 구분 기호 또는 그룹 단추에 스타일을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -571,7 +591,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  단추 상태를 사용 하 여 설정할 수도 있습니다는 `nStyle` 매개 변수 이지만 단추 상태에 의해 제어 됩니다 때문에 [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) 사용 하 여 설정한 상태 처리기를 모든 `SetButtonStyle` 다음 유휴 처리 하는 동안 손실 됩니다. 참조 [사용자 인터페이스 개체 업데이트 하는 방법을](../../mfc/how-to-update-user-interface-objects.md) 및 [TN031: 컨트롤 막대](../../mfc/tn031-control-bars.md) 에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namesetbuttontexta--ctoolbarsetbuttontext"></a><a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
  단추 텍스트를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -593,7 +613,7 @@ BOOL SetButtonText(
 ### <a name="example"></a>예제  
   예를 참조 [CToolBar::GetToolBarCtrl](#gettoolbarctrl)합니다.  
   
-##  <a name="a-namesetheighta--ctoolbarsetheight"></a><a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>CToolBar::SetHeight  
  도구 모음의 높이 (픽셀 단위)에 지정 된 값으로 설정 하는이 멤버 함수 `cyHeight`합니다.  
   
 ```  
@@ -609,7 +629,7 @@ void SetHeight(int cyHeight);
   
  이 함수를 호출 하지 않으면 프레임 워크 도구 모음의 높이 결정 하는 단추의 크기를 사용 합니다.  
   
-##  <a name="a-namesetsizesa--ctoolbarsetsizes"></a><a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>CToolBar::SetSizes  
  크기 (픽셀)를 지정 하는 도구 모음 단추를 설정 하려면이 함수를 호출 *sizeButton*합니다.  
   
 ```  

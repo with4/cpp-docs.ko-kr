@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
+- AFXOLE/CMonikerFile
+- AFXOLE/CMonikerFile::CMonikerFile
+- AFXOLE/CMonikerFile::Close
+- AFXOLE/CMonikerFile::Detach
+- AFXOLE/CMonikerFile::GetMoniker
+- AFXOLE/CMonikerFile::Open
+- AFXOLE/CMonikerFile::CreateBindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +102,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-nameclosea--cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>CMonikerFile::Close  
  분리 및 스트림을 해제 하 고 모니커를 해제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -105,14 +112,14 @@ virtual void Close();
 ### <a name="remarks"></a>주의  
  열려 있지 않은 또는 이미 닫힌 스트림에서 호출할 수 있습니다.  
   
-##  <a name="a-namecmonikerfilea--cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  `CMonikerFile` 개체를 생성합니다.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="a-namecreatebindcontexta--cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
  초기화 하는 기본 바인딩 컨텍스트를 만들려면이 함수를 호출 합니다.  
   
 ```  
@@ -129,7 +136,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>주의  
  바인딩 컨텍스트는 특정 모니커 바인딩 작업에 대 한 정보를 저장 하는 개체입니다. 사용자 지정 바인딩 컨텍스트를 제공 하려면이 함수를 재정의할 수 있습니다.  
   
-##  <a name="a-namedetacha--cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>CMonikerFile::Detach  
  이 함수는 스트림의 닫을를 호출 합니다.  
   
 ```  
@@ -143,7 +150,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-namegetmonikera--cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
  현재 모니커에 대 한 포인터를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -156,7 +163,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>주의  
  이후 `CMonikerFile` 는 인터페이스에 없는 반환 된 포인터의 참조 횟수를 증가 하지 않습니다 (통해 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), 모니커를 눌렀다 때는 `CMonikerFile` 개체가 해제 되는 합니다. 모니커를 점유 하거나 직접 해제 하려는 경우, `AddRef` 것입니다.  
   
-##  <a name="a-nameopena--cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>CMonikerFile::Open  
  파일 또는 모니커 개체를이 멤버 함수를 호출 합니다.  
   
 ```  

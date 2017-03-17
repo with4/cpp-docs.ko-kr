@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CReversalTransition
 - CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::Create
+- AFXANIMATIONCONTROLLER/CReversalTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CReversalTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>CReversalTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -98,7 +101,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
  반전 전환 개체를 생성 하 고 기간을 초기화 합니다.  
   
 ```  
@@ -109,7 +112,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  전환의 기간입니다.  
   
-##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>CReversalTransition::m_duration  
  전환의 기간입니다.  
   
 ```  

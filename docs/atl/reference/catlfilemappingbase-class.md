@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlFileMappingBase
-- ATL::CAtlFileMappingBase
 - CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CopyFrom
+- ATLFILE/ATL::CAtlFileMappingBase::GetData
+- ATLFILE/ATL::CAtlFileMappingBase::GetHandle
+- ATLFILE/ATL::CAtlFileMappingBase::GetMappingSize
+- ATLFILE/ATL::CAtlFileMappingBase::MapFile
+- ATLFILE/ATL::CAtlFileMappingBase::MapSharedMem
+- ATLFILE/ATL::CAtlFileMappingBase::OpenMapping
+- ATLFILE/ATL::CAtlFileMappingBase::Unmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +97,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlfile.h  
   
-##  <a name="a-namecatlfilemappingbasea--catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
  생성자입니다.  
   
 ```
@@ -107,7 +115,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&71;](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="a-namedtora--catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  소멸자입니다.  
   
 ```
@@ -117,7 +125,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>주의  
  클래스 및 호출 하 여 할당 된 리소스를 해제는 [CAtlFileMappingBase::Unmap](#unmap) 메서드.  
   
-##  <a name="a-namecopyfroma--catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
  파일 매핑 개체에서 복사 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -131,7 +139,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>반환 값  
  반환 `S_OK` 성공 또는 오류에 `HRESULT` 실패 합니다.  
   
-##  <a name="a-namegetdataa--catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
  파일 매핑 개체에서 데이터를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -141,7 +149,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>반환 값  
  데이터에 대 한 포인터를 반환합니다.  
   
-##  <a name="a-namegethandlea--catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
  파일 매핑 개체에 대 한 핸들을 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -151,7 +159,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>반환 값  
  파일 매핑 개체에 대 한 핸들을 반환합니다.  
   
-##  <a name="a-namegetmappingsizea--catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
  파일 매핑 개체에서 매핑 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -164,7 +172,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)합니다.  
   
-##  <a name="a-namemapfilea--catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
  지정된 된 파일에 대 한 파일 매핑 개체를 만들거나 열에이 메서드를 호출 합니다.  
   
 ```
@@ -201,7 +209,7 @@ HRESULT MapFile(
 ### <a name="example"></a>예제  
  예를 참조 [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)합니다.  
   
-##  <a name="a-namemapsharedmema--catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
  모든 프로세스에 대 한 전체 액세스를 허용 하는 파일 매핑 개체를 생성 하도록이 메서드를 호출 합니다.  
   
 ```
@@ -239,7 +247,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>주의  
  **MapShareMem** 에서 만든 기존 파일 매핑 개체를 사용 하면 [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)를 프로세스 간에 공유할 수 있습니다.  
   
-##  <a name="a-nameopenmappinga--catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
  지정된 된 파일에 대 한 명명 된 파일 매핑 개체를이 메서드를 호출 합니다.  
   
 ```
@@ -269,7 +277,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>주의  
  디버그 빌드에서 입력된 매개 변수가 유효 하지 않으면 어설션 오류가 발생 합니다.  
   
-##  <a name="a-nameoperatoreqa--catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
  다른 파일 매핑 개체를 현재 파일 매핑 개체를 설정합니다.  
   
 ```
@@ -283,7 +291,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>반환 값  
  현재 개체에 대 한 참조를 반환합니다.  
   
-##  <a name="a-nameunmapa--catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
  파일 매핑 개체의 매핑을 해제 하려면이 메서드를 호출 합니다.  
   
 ```

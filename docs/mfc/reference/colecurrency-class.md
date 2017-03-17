@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CURRENCY
 - COleCurrency
+- AFXDISP/COleCurrency
+- AFXDISP/COleCurrency::COleCurrency
+- AFXDISP/COleCurrency::Format
+- AFXDISP/COleCurrency::GetStatus
+- AFXDISP/COleCurrency::ParseCurrency
+- AFXDISP/COleCurrency::SetCurrency
+- AFXDISP/COleCurrency::SetStatus
+- AFXDISP/COleCurrency::m_cur
+- AFXDISP/COleCurrency::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class COleCurrency
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namecolecurrencya--colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency::COleCurrency  
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
  생성 된 **COleCurrency** 개체입니다.  
   
 ```  
@@ -152,7 +160,7 @@ COleCurrency(
   
  [!code-cpp[NVC_MFCOleContainer #&10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="a-nameformata--colecurrencyformat"></a><a name="format"></a>COleCurrency::Format  
+##  <a name="format"></a>COleCurrency::Format  
  통화 값의 서식이 지정 된 표현을 만드는 데이 함수를 호출 합니다.  
   
 ```  
@@ -177,7 +185,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="a-namegetstatusa--colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency::GetStatus  
+##  <a name="getstatus"></a>COleCurrency::GetStatus  
  상태 (유효성)를 가져오려면이 함수를 호출는 주어진 **COleCurrency** 개체입니다.  
   
 ```  
@@ -235,7 +243,7 @@ CurrencyStatus GetStatus() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="a-namemcura--colecurrencymcur"></a><a name="m_cur"></a>COleCurrency::m_cur  
+##  <a name="m_cur"></a>COleCurrency::m_cur  
  내부 [통화](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) 이 대 한 구조 **COleCurrency** 개체입니다.  
   
 ### <a name="remarks"></a>주의  
@@ -245,7 +253,7 @@ CurrencyStatus GetStatus() const;
   
  자세한 내용은 참조는 [통화](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemstatusa--colecurrencymstatus"></a><a name="m_status"></a>COleCurrency::m_status  
+##  <a name="m_status"></a>COleCurrency::m_status  
  이 데이터 멤버의 형식은 열거 형식 `CurrencyStatus`, 내에서 정의 되는 **COleCurrency** 클래스입니다.  
   
 ```  
@@ -292,7 +300,7 @@ enum CurrencyStatus{
     > [!CAUTION]
     >  이 데이터 멤버는 고급 프로그래밍 시나리오입니다. 인라인 멤버 함수를 사용 해야 [GetStatus](#getstatus) 및 [SetStatus](#setstatus)합니다. 참조 `SetStatus` 이 데이터 멤버를 명시적으로 설정 하는 것에 대 한 추가 주의 사항에 대 한 합니다.  
   
-##  <a name="a-nameoperatoreqa--colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency::operator =  
+##  <a name="operator_eq"></a>COleCurrency::operator =  
  이러한 오버 로드 된 대입 연산자 복사할 원본 통화 값이 **COleCurrency** 개체입니다.  
   
 ```  
@@ -315,7 +323,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorplusminusa--colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency::operator +,-  
+##  <a name="operator_plus_minus"></a>COleCurrency::operator +,-  
  이러한 연산자를 추가 하 고 두 개의 빼기 사용 **COleCurrency** 값과의 부호를 변경 하 고 서로 **COleCurrency** 값입니다.  
   
 ```  
@@ -336,7 +344,7 @@ COleCurrency operator-() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorplusminuseqa--colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency::operator + =, =  
+##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator + =, =  
  더하기 및 빼기를 할 수는 **COleCurrency** 값이에서 **COleCurrency** 개체입니다.  
   
 ```  
@@ -356,7 +364,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatorstara--colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency::operator * 및 /  
+##  <a name="operator_star"></a>COleCurrency::operator * 및 /  
  확장할 수 있습니다는 **COleCurrency** 값으로 정수 값입니다.  
   
 ```  
@@ -376,7 +384,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatorstardiveqa--colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency::operator * =, / =  
+##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =, / =  
  이 크기를 조정할 수 있도록 **COleCurrency** 값으로 정수 값입니다.  
   
 ```  
@@ -396,7 +404,7 @@ const COleCurrency& operator/=(long nOperand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatorstreama--colecurrencyoperator-ltlt-gtgt"></a><a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
  보관 파일에 저장 하 고 진단 덤프를 지원 합니다.  
   
 ```  
@@ -416,7 +424,7 @@ friend CArchive& operator>>(
 ### <a name="remarks"></a>주의  
  추출 ( ** >> **) 연산자는 보관 파일에서 로드를 지원 합니다.  
   
-##  <a name="a-nameoperatorcurrencya--colecurrencyoperator-currency"></a><a name="operator_currency"></a>COleCurrency::operator 통화  
+##  <a name="operator_currency"></a>COleCurrency::operator 통화  
  반환 된 `CURRENCY` 구조 값이 복사 됩니다 **COleCurrency** 개체입니다.  
   
 ```  
@@ -425,7 +433,7 @@ operator CURRENCY() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameparsecurrencya--colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
  통화 값을 읽을 문자열을 구문 분석 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -467,7 +475,7 @@ throw(COleException*);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="a-namecolecurrencyrelationaloperatorsa--colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>COleCurrency 관계형 연산자  
+##  <a name="colecurrency_relational_operators"></a>COleCurrency 관계형 연산자  
  두 통화 값을 비교 하 고 조건이 참일 경우 0이 아닌 반환 그렇지 않으면 0입니다.  
   
 ```  
@@ -487,7 +495,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="a-namesetcurrencya--colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency::SetCurrency  
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
  단위 및 소수 부분의 설정 하려면이 함수를 호출 **COleCurrency** 개체입니다.  
   
 ```  
@@ -508,7 +516,7 @@ void SetCurrency(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="a-namesetstatusa--colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency::SetStatus  
+##  <a name="setstatus"></a>COleCurrency::SetStatus  
  이 작업의 상태 (유효성)를 설정 하려면이 함수를 호출 **COleCurrency** 개체입니다.  
   
 ```  

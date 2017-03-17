@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactory2<license>
 - CComClassFactory2
-- ATL.CComClassFactory2<license>
-- ATL::CComClassFactory2
-- ATL.CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2::CreateInstance
+- ATLCOM/ATL::CComClassFactory2::CreateInstanceLic
+- ATLCOM/ATL::CComClassFactory2::GetLicInfo
+- ATLCOM/ATL::CComClassFactory2::LockServer
+- ATLCOM/ATL::CComClassFactory2::RequestLicKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +106,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactory2createinstance"></a><a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -127,7 +129,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>주의  
  완벽 하 게 사용 허가 받아야 하는 컴퓨터가 필요 합니다. 전체 컴퓨터 라이선스 존재 하지 않는 경우에 호출 [CreateInstanceLic](#createinstancelic)합니다.  
   
-##  <a name="a-namecreateinstancelica--ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  유사한 [CreateInstance](#createinstance)점을 제외 하 고 `CreateInstanceLic` 라이선스 키가 필요 합니다.  
   
 ```
@@ -162,7 +164,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>주의  
  라이선스 키를 사용 하 여 가져올 수 있습니다 [RequestLicKey](#requestlickey)합니다. 허가 되지 않은 컴퓨터에서 개체를 만들기 위해를 호출 해야 `CreateInstanceLic`합니다.  
   
-##  <a name="a-namegetlicinfoa--ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
  채우기는 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) 클래스 팩터리를 설명 하는 정보가 포함 된 구조체의 기능 라이선스.  
   
 ```
@@ -179,7 +181,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>주의  
  `fRuntimeKeyAvail` 이 구조체의 멤버 수 있는지 여부를, 라이선스 키를 매개 변수로 받아 클래스 팩터리 개체를 허가 되지 않은 컴퓨터에서 만들 수를 나타냅니다. *fLicVerified* 멤버는 전체 컴퓨터 라이선스 있는지 여부를 나타냅니다.  
   
-##  <a name="a-namelockservera--ccomclassfactory2lockserver"></a><a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>CComClassFactory2::LockServer  
  증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
 ```
@@ -198,7 +200,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  호출 `LockServer` 클라이언트가 여러 개체를 신속 하 게 만들 수 있도록 클래스 팩터리를 점유 하는 데 사용 합니다.  
   
-##  <a name="a-namerequestlickeya--ccomclassfactory2requestlickey"></a><a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
  만들고 제공 하는 라이선스 키를 반환는 `fRuntimeKeyAvail` 의 멤버는 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) 구조는 **TRUE**합니다.  
   
 ```

@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
+- ATLWIN/ATL::CWndClassInfo
+- ATLWIN/ATL::Register
+- ATLWIN/ATL::m_atom
+- ATLWIN/ATL::m_bSystemCursor
+- ATLWIN/ATL::m_lpszCursorID
+- ATLWIN/ATL::m_lpszOrigName
+- ATLWIN/ATL::m_szAutoName
+- ATLWIN/ATL::m_wc
+- ATLWIN/ATL::pWndProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namematoma--cwndclassinfomatom"></a><a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  등록 된 창 클래스에 대 한 고유 식별자를 포함합니다.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="a-namembsystemcursora--cwndclassinfombsystemcursor"></a><a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
  경우 **TRUE**, 창 클래스를 등록 하는 경우 시스템 커서 리소스 로드 됩니다.  
   
 ```
@@ -112,7 +121,7 @@ BOOL m_bSystemCursor;
   
  `CWndClassInfo`사용 하 여 `m_bSystemCursor` 경우에만 [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) 매크로 지정 합니다. 이 경우 `m_bSystemCursor` 로 초기화 되며 **TRUE**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요.  
   
-##  <a name="a-namemlpszcursorida--cwndclassinfomlpszcursorid"></a><a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
  하위 단어 및 상위 단어에는&0;에서 커서 리소스의 이름 또는 리소스 식별자를 지정합니다.  
   
 ```
@@ -124,7 +133,7 @@ LPCTSTR m_lpszCursorID;
   
  `CWndClassInfo`사용 하 여 `m_lpszCursorID` 경우에만 [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) 매크로 지정 합니다. 이 경우 `m_lpszCursorID` 로 초기화 되며 **IDC_ARROW**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요.  
   
-##  <a name="a-namemlpszorignamea--cwndclassinfomlpszorigname"></a><a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
  기존 창 클래스의 이름을 포함합니다.  
   
 ```
@@ -134,7 +143,7 @@ LPCTSTR m_lpszOrigName;
 ### <a name="remarks"></a>주의  
  `CWndClassInfo`사용 하 여 `m_lpszOrigName` 만 포함 하는 경우는 [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 창 클래스에서 라는 클래스를 기반으로 레지스터 `m_lpszOrigName`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요.  
   
-##  <a name="a-namemszautonamea--cwndclassinfomszautoname"></a><a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
  창 클래스의 이름을 보유합니다.  
   
 ```
@@ -144,7 +153,7 @@ TCHAR m_szAutoName[13];
 ### <a name="remarks"></a>주의  
  `CWndClassInfo`사용 하 여 `m_szAutoName` 경우에만 **NULL** 전달 되는 `WndClassName` 매개 변수를 [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971), [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) 또는 [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)합니다. ATL 창 클래스를 등록 하는 경우 이름을 생성 합니다.  
   
-##  <a name="a-namemwca--cwndclassinfomwc"></a><a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  에 창 클래스 정보를 유지 관리는 [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) 구조입니다.  
   
 ```
@@ -156,7 +165,7 @@ WNDCLASSEX m_wc;
   
  지정한 경우에 [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) 매크로 `m_wc` 슈퍼 클래스에 대 한 정보를 포함 합니다.-기존 클래스를 기반으로 하지만 다른 창 프로시저를 사용 하는 창 클래스입니다. [m_lpszOrigName](#m_lpszorigname) 및 [pWndProc](#pwndproc) 기존 창 클래스 이름 및 창 프로시저를 각각 저장 합니다.  
   
-##  <a name="a-namepwndproca--cwndclassinfopwndproc"></a><a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
  기존 창 클래스의 창 프로시저를 가리킵니다.  
   
 ```
@@ -166,7 +175,7 @@ WNDPROC pWndProc;
 ### <a name="remarks"></a>주의  
  `CWndClassInfo`사용 하 여 `pWndProc` 만 포함 하는 경우는 [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 기존 클래스를 기반으로 하지만 다른 창 프로시저를 사용 하는 창 클래스 등록 합니다. 기존 창 클래스의 창 프로시저에 저장 된 `pWndProc`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요.  
   
-##  <a name="a-nameregistera--cwndclassinforegister"></a><a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>CWndClassInfo::Register  
  에 의해 호출 [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) 를 아직 등록 되지 않은 경우 창 클래스를 등록 합니다.  
   
 ```

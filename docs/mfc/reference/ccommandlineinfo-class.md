@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  이 생성자는 `CCommandLineInfo` 기본값을 사용 하는 개체입니다.  
   
 ```  
@@ -123,7 +135,7 @@ CCommandLineInfo();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
  나타내는 **/Automation** 플래그를 명령줄에서 찾을 수 있습니다.  
   
 ```  
@@ -133,7 +145,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>주의  
  경우 **TRUE**, 즉, OLE 자동화 서버 시작 합니다.  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
  나타내는 **포함/** 플래그를 명령줄에서 찾을 수 있습니다.  
   
 ```  
@@ -143,7 +155,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>주의  
  경우 **TRUE**, 즉, 포함된 된 OLE 항목 편집을 시작 합니다.  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  시작 화면을 표시 해야 함을 나타냅니다.  
   
 ```  
@@ -153,7 +165,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>주의  
  경우 **TRUE**, 즉, 시작 화면이 시작 하는 동안이 응용 프로그램을 표시 해야 합니다. 기본 구현은 [ParseParam](#parseparam) 이 데이터 멤버 설정 하는 **TRUE** 경우 [m_nShellCommand](#m_nshellcommand) 같으면 **CCommandLineInfo::FileNew**합니다.  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  응용 프로그램의이 인스턴스에 대 한 셸 명령을 나타냅니다.  
   
 ```  
@@ -208,7 +220,7 @@ m_nShellCommand;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  명령줄에서 세 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -218,7 +230,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>주의  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터 드라이버의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 **/pt** 플래그를 명령줄에서 찾을 수 있습니다.  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  명령줄에서 첫 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -228,7 +240,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>주의  
  이 매개 변수는 일반적으로 열 파일의 이름입니다.  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  명령줄에서 네 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -238,7 +250,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>주의  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터 포트의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 **/pt** 플래그를 명령줄에서 찾을 수 있습니다.  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  명령줄에서 두 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -248,7 +260,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>주의  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 **/pt** 플래그를 명령줄에서 찾을 수 있습니다.  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  고유 식별자를 명령줄에서을 다시 시작합니다.  
   
 ```  
@@ -260,7 +272,7 @@ CString m_strRestartIdentifier;
   
  다시 시작 관리자는 응용 프로그램을 종료 하 고 다시 시작 하도록 구성 되어, 다시 시작 관리자 실행 응용 프로그램 다시 시작 식별자를 사용 하 여 명령줄에서 선택적 매개 변수로 사용 합니다. 다시 시작 관리자를 다시 시작 식별자를 사용 하는 경우 응용 프로그램이 이전에 열려 있는 문서를 다시 열고를 업데이트 하 고 자동 저장 된 파일을 복구할 수 있습니다.  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  프레임 워크에는 명령줄에서 개별 매개 변수를 구문 분석/해석 하려면이 함수를 호출 합니다. 두 번째 버전에서 첫 번째 다른 유니코드 프로젝트에만 합니다.  
   
 ```  

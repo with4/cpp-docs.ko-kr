@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
+- AFXDISP/COleDispatchException
+- AFXDISP/COleDispatchException::m_dwHelpContext
+- AFXDISP/COleDispatchException::m_strDescription
+- AFXDISP/COleDispatchException::m_strHelpFile
+- AFXDISP/COleDispatchException::m_strSource
+- AFXDISP/COleDispatchException::m_wCode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +86,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namemdwhelpcontexta--coledispatchexceptionmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
  응용 프로그램의 도움말에서 도움말 컨텍스트를 식별 (합니다. HLP) 파일입니다.  
   
 ```  
@@ -93,7 +99,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>예제  
   예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="a-namemstrdescriptiona--coledispatchexceptionmstrdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
  "디스크가 꽉 찼습니다." 등의 일반 언어로 된 오류 설명을 포함합니다.  
   
 ```  
@@ -106,14 +112,14 @@ CString m_strDescription;
 ### <a name="example"></a>예제  
   예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="a-namemstrhelpfilea--coledispatchexceptionmstrhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
  프레임 워크는 응용 프로그램의 도움말 파일의 이름으로이 문자열을 채웁니다.  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="a-namemstrsourcea--coledispatchexceptionmstrsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
  프레임 워크 예외를 생성 하는 응용 프로그램의 이름으로이 문자열을 채웁니다.  
   
 ```  
@@ -123,7 +129,7 @@ CString m_strSource;
 ### <a name="example"></a>예제  
   예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="a-namemwcodea--coledispatchexceptionmwcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
  응용 프로그램에 특정 오류 코드를 포함 합니다.  
   
 ```  

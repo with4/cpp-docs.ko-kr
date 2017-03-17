@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
+- AFXOLE/COleStreamFile
+- AFXOLE/COleStreamFile::COleStreamFile
+- AFXOLE/COleStreamFile::Attach
+- AFXOLE/COleStreamFile::CreateMemoryStream
+- AFXOLE/COleStreamFile::CreateStream
+- AFXOLE/COleStreamFile::Detach
+- AFXOLE/COleStreamFile::GetStream
+- AFXOLE/COleStreamFile::OpenStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-nameattacha--colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>COleStreamFile::Attach  
  사용 하 여 제공 된 OLE 스트림을 연결의 `COleStreamFile` 개체입니다.  
   
 ```  
@@ -108,7 +116,7 @@ void Attach(LPSTREAM lpStream);
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecolestreamfilea--colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
  
           `COleStreamFile` 개체를 만듭니다.  
   
@@ -125,7 +133,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecreatememorystreama--colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
  안전 하 게 있는 경우 오류는 일반, 예상 된 조건이 전역 공유 메모리에서 새 스트림을 만듭니다.  
   
 ```  
@@ -144,7 +152,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  자세한 내용은 참조 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecreatestreama--colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
  여기서 오류는 정상적이 고 예상 된 조건이 제공 되는 저장소 개체에 새 스트림을 안전 하 게 만듭니다.  
   
 ```  
@@ -176,7 +184,7 @@ BOOL CreateStream(
   
  자세한 내용은 참조 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedetacha--colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>COleStreamFile::Detach  
  스트림을 닫지 않고 스트림을 개체에서 연결을 끊습니다.  
   
 ```  
@@ -191,7 +199,7 @@ LPSTREAM Detach();
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetstreama--colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
  현재 스트림에 대 한 포인터를 반환 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -201,7 +209,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>반환 값  
  현재 스트림 인터페이스에 대 한 포인터 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="a-nameopenstreama--colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
  기존 스트림을 엽니다.  
   
 ```  

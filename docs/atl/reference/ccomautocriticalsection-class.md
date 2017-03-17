@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAutoCriticalSection
-- ATL::CComAutoCriticalSection
 - CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +75,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameccomautocriticalsectiona--ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
  생성자입니다.  
   
 ```
@@ -85,7 +85,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>주의  
  Win32 함수를 호출 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)는 임계 영역 개체를 초기화 합니다.  
   
-##  <a name="a-namedtora--ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  소멸자입니다.  
   
 ```

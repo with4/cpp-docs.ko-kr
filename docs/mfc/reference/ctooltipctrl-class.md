@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolTipCtrl
+- AFXCMN/CToolTipCtrl
+- AFXCMN/CToolTipCtrl::CToolTipCtrl
+- AFXCMN/CToolTipCtrl::Activate
+- AFXCMN/CToolTipCtrl::AddTool
+- AFXCMN/CToolTipCtrl::AdjustRect
+- AFXCMN/CToolTipCtrl::Create
+- AFXCMN/CToolTipCtrl::CreateEx
+- AFXCMN/CToolTipCtrl::DelTool
+- AFXCMN/CToolTipCtrl::GetBubbleSize
+- AFXCMN/CToolTipCtrl::GetCurrentTool
+- AFXCMN/CToolTipCtrl::GetDelayTime
+- AFXCMN/CToolTipCtrl::GetMargin
+- AFXCMN/CToolTipCtrl::GetMaxTipWidth
+- AFXCMN/CToolTipCtrl::GetText
+- AFXCMN/CToolTipCtrl::GetTipBkColor
+- AFXCMN/CToolTipCtrl::GetTipTextColor
+- AFXCMN/CToolTipCtrl::GetTitle
+- AFXCMN/CToolTipCtrl::GetToolCount
+- AFXCMN/CToolTipCtrl::GetToolInfo
+- AFXCMN/CToolTipCtrl::HitTest
+- AFXCMN/CToolTipCtrl::Pop
+- AFXCMN/CToolTipCtrl::Popup
+- AFXCMN/CToolTipCtrl::RelayEvent
+- AFXCMN/CToolTipCtrl::SetDelayTime
+- AFXCMN/CToolTipCtrl::SetMargin
+- AFXCMN/CToolTipCtrl::SetMaxTipWidth
+- AFXCMN/CToolTipCtrl::SetTipBkColor
+- AFXCMN/CToolTipCtrl::SetTipTextColor
+- AFXCMN/CToolTipCtrl::SetTitle
+- AFXCMN/CToolTipCtrl::SetToolInfo
+- AFXCMN/CToolTipCtrl::SetToolRect
+- AFXCMN/CToolTipCtrl::SetWindowTheme
+- AFXCMN/CToolTipCtrl::Update
+- AFXCMN/CToolTipCtrl::UpdateTipText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +152,7 @@ class CToolTipCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-nameactivatea--ctooltipctrlactivate"></a><a name="activate"></a>CToolTipCtrl::Activate  
+##  <a name="activate"></a>CToolTipCtrl::Activate  
  활성화 또는 도구 설명 컨트롤을 비활성화 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -137,7 +171,7 @@ void Activate(BOOL bActivate);
 ### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="a-nameaddtoola--ctooltipctrladdtool"></a><a name="addtool"></a>CToolTipCtrl::AddTool  
+##  <a name="addtool"></a>CToolTipCtrl::AddTool  
  도구 설명 컨트롤을 도구를 등록합니다.  
   
 ```  
@@ -185,7 +219,7 @@ BOOL AddTool(
 ### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="a-nameadjustrecta--ctooltipctrladjustrect"></a><a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
+##  <a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
  도구 설명 컨트롤의 텍스트 사이 변환 사각형 및 해당 창의 사각형을 표시합니다.  
   
 ```  
@@ -209,7 +243,7 @@ BOOL AdjustRect(
   
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecreatea--ctooltipctrlcreate"></a><a name="create"></a>CToolTipCtrl::Create  
+##  <a name="create"></a>CToolTipCtrl::Create  
  도구 설명 컨트롤을 만들고 연결 하는 `CToolTipCtrl` 개체입니다.  
   
 ```  
@@ -243,7 +277,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="a-namecreateexa--ctooltipctrlcreateex"></a><a name="createex"></a>CToolTipCtrl::CreateEx  
+##  <a name="createex"></a>CToolTipCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고와 연결 된 `CToolTipCtrl` 개체입니다.  
   
 ```  
@@ -269,7 +303,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-namectooltipctrla--ctooltipctrlctooltipctrl"></a><a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
+##  <a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
  `CToolTipCtrl` 개체를 생성합니다.  
   
 ```  
@@ -282,7 +316,7 @@ CToolTipCtrl();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&74;](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
-##  <a name="a-namedeltoola--ctooltipctrldeltool"></a><a name="deltool"></a>CToolTipCtrl::DelTool  
+##  <a name="deltool"></a>CToolTipCtrl::DelTool  
  로 지정 된 도구를 제거 `pWnd` 및 `nIDTool` 도구 설명 컨트롤에서 지 원하는 도구가의 컬렉션입니다.  
   
 ```  
@@ -298,7 +332,7 @@ void DelTool(
  `nIDTool`  
  ID는 도구입니다.  
   
-##  <a name="a-namegetbubblesizea--ctooltipctrlgetbubblesize"></a><a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
+##  <a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
  도구 설명의 크기를 검색합니다.  
   
 ```  
@@ -315,7 +349,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetcurrenttoola--ctooltipctrlgetcurrenttool"></a><a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
+##  <a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
  크기, 위치 및 현재 도구 설명 컨트롤에 의해 표시 도구 설명 창의 텍스트와 같은 정보를 검색 합니다.  
   
 ```  
@@ -339,7 +373,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&6;](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
   
-##  <a name="a-namegetdelaytimea--ctooltipctrlgetdelaytime"></a><a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
+##  <a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
  팝업에서 초기를 검색 하 고 도구 설명 컨트롤에 대 한 현재 설정 하는 기간을 reshow 합니다.  
   
 ```  
@@ -362,7 +396,7 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetmargina--ctooltipctrlgetmargin"></a><a name="getmargin"></a>CToolTipCtrl::GetMargin  
+##  <a name="getmargin"></a>CToolTipCtrl::GetMargin  
  위쪽, 왼쪽, 아래쪽 및 오른쪽 여백이 설정에 대 한 도구 설명 창을 검색 합니다.  
   
 ```  
@@ -383,7 +417,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetmaxtipwidtha--ctooltipctrlgetmaxtipwidth"></a><a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
+##  <a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
  도구 설명 창이 대 한 최대 너비를 검색합니다.  
   
 ```  
@@ -396,7 +430,7 @@ int GetMaxTipWidth() const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettexta--ctooltipctrlgettext"></a><a name="gettext"></a>CToolTipCtrl::GetText  
+##  <a name="gettext"></a>CToolTipCtrl::GetText  
  도구 설명 컨트롤에 도구에 대 한 유지 관리 하는 텍스트를 검색 합니다.  
   
 ```  
@@ -419,7 +453,7 @@ void GetText(
 ### <a name="remarks"></a>주의  
  `pWnd` 및 `nIDTool` 매개 변수는 도구를 식별 합니다. 해당 도구에 이전에 등록 된 도구 설명 컨트롤에 대 한 이전 호출을 통해 경우 **CToolTipCtrl::AddTool**, 참조 하는 개체는 `str` 매개 변수는 도구의 텍스트를 지정 합니다.  
   
-##  <a name="a-namegettipbkcolora--ctooltipctrlgettipbkcolor"></a><a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
+##  <a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
  도구 설명 창이 배경색을 검색합니다.  
   
 ```  
@@ -432,7 +466,7 @@ COLORREF GetTipBkColor() const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettiptextcolora--ctooltipctrlgettiptextcolor"></a><a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
+##  <a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
  도구 설명 창의 텍스트 색을 검색합니다.  
   
 ```  
@@ -445,7 +479,7 @@ COLORREF GetTipTextColor() const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettitlea--ctooltipctrlgettitle"></a><a name="gettitle"></a>CToolTipCtrl::GetTitle  
+##  <a name="gettitle"></a>CToolTipCtrl::GetTitle  
  현재 도구 설명 컨트롤의 제목을 검색합니다.  
   
 ```  
@@ -461,7 +495,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettoolcounta--ctooltipctrlgettoolcount"></a><a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
+##  <a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
  도구 설명 컨트롤에 등록 된 도구 수를 검색 합니다.  
   
 ```  
@@ -471,7 +505,7 @@ int GetToolCount() const;
 ### <a name="return-value"></a>반환 값  
  도구 수가 도구 설명 컨트롤에 등록 합니다.  
   
-##  <a name="a-namegettoolinfoa--ctooltipctrlgettoolinfo"></a><a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
+##  <a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
  도구 설명 컨트롤을 유지 하는 도구에 대 한 정보를 검색 합니다.  
   
 ```  
@@ -497,7 +531,7 @@ BOOL GetToolInfo(
 ### <a name="remarks"></a>주의  
  **hwnd** 및 **uId** 의 멤버는 [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) 에서 참조 하는 구조 *CToolInfo* 도구를 식별 합니다. 도구 설명 컨트롤에 대 한 이전 호출을 통해 해당 도구에 등록 된 경우 `AddTool`, `TOOLINFO` 구조는 도구에 대 한 정보로 채워집니다.  
   
-##  <a name="a-namehittesta--ctooltipctrlhittest"></a><a name="hittest"></a>CToolTipCtrl::HitTest  
+##  <a name="hittest"></a>CToolTipCtrl::HitTest  
  지정 된 도구의 경계 사각형 내 인지 여부를 확인 하 고 그럴 경우이 도구에 대 한 정보를 검색 하는 지점을 테스트 합니다.  
   
 ```  
@@ -544,7 +578,7 @@ BOOL HitTest(
  **ti**  
  이 도구에 대 한 정보입니다. 에 대 한 자세한 내용은 `TOOLINFO` 구조체를 참조 하십시오. [CToolTipCtrl::GetToolInfo](#gettoolinfo)합니다.  
   
-##  <a name="a-namepopa--ctooltipctrlpop"></a><a name="pop"></a>CToolTipCtrl::Pop  
+##  <a name="pop"></a>CToolTipCtrl::Pop  
  표시 된 도구 설명 창이 보기에서 제거합니다.  
   
 ```  
@@ -554,7 +588,7 @@ void Pop();
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namepopupa--ctooltipctrlpopup"></a><a name="popup"></a>CToolTipCtrl::Popup  
+##  <a name="popup"></a>CToolTipCtrl::Popup  
  마지막 마우스 메시지의 좌표에 표시 하려면 현재 도구 설명 컨트롤을 하면 됩니다.  
   
 ```  
@@ -569,7 +603,7 @@ void Popup();
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&7;](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
   
-##  <a name="a-namerelayeventa--ctooltipctrlrelayevent"></a><a name="relayevent"></a>CToolTipCtrl::RelayEvent  
+##  <a name="relayevent"></a>CToolTipCtrl::RelayEvent  
  처리에 대 한 도구 설명 컨트롤에 마우스 메시지를 전달합니다.  
   
 ```  
@@ -592,7 +626,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="a-namesetdelaytimea--ctooltipctrlsetdelaytime"></a><a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
+##  <a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
  도구 설명 컨트롤에 대 한 지연 시간을 설정합니다.  
   
 ```  
@@ -617,7 +651,7 @@ void SetDelayTime(
 ### <a name="remarks"></a>주의  
  지연 시간은 도구 설명 창이 표시 될 때까지 커서 도구 켜져 있어야 하는 시간의 길이입니다. 기본 지연 시간은 500 밀리초입니다.  
   
-##  <a name="a-namesetmargina--ctooltipctrlsetmargin"></a><a name="setmargin"></a>CToolTipCtrl::SetMargin  
+##  <a name="setmargin"></a>CToolTipCtrl::SetMargin  
  위쪽, 왼쪽, 아래쪽 및 도구 설명 창이 오른쪽 여백을 설정합니다.  
   
 ```  
@@ -631,7 +665,7 @@ void SetMargin(LPRECT lprc);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetmaxtipwidtha--ctooltipctrlsetmaxtipwidth"></a><a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
+##  <a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
  도구 설명 창이 대 한 최대 너비를 설정합니다.  
   
 ```  
@@ -648,7 +682,7 @@ int SetMaxTipWidth(int iWidth);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettipbkcolora--ctooltipctrlsettipbkcolor"></a><a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
+##  <a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
  도구 설명 창이 배경색을 설정합니다.  
   
 ```  
@@ -662,7 +696,7 @@ void SetTipBkColor(COLORREF clr);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettiptextcolora--ctooltipctrlsettiptextcolor"></a><a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
+##  <a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
  도구 설명 창의 텍스트 색을 설정합니다.  
   
 ```  
@@ -676,7 +710,7 @@ void SetTipTextColor(COLORREF clr);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettitlea--ctooltipctrlsettitle"></a><a name="settitle"></a>CToolTipCtrl::SetTitle  
+##  <a name="settitle"></a>CToolTipCtrl::SetTitle  
  도구 설명에 표준 아이콘 및 제목을 문자열을 추가합니다.  
   
 ```  
@@ -698,7 +732,7 @@ BOOL SetTitle(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettoolinfoa--ctooltipctrlsettoolinfo"></a><a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
+##  <a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
  도구 설명 하는 도구에 대 한 유지 관리 되는 정보를 설정 합니다.  
   
 ```  
@@ -709,7 +743,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
  `lpToolInfo`  
  에 대 한 포인터는 [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) 설정에 대 한 정보를 지정 하는 구조입니다.  
   
-##  <a name="a-namesettoolrecta--ctooltipctrlsettoolrect"></a><a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
+##  <a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
  도구에 대 한 새로운 경계 사각형을 설정합니다.  
   
 ```  
@@ -729,7 +763,7 @@ void SetToolRect(
  `lpRect`  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 새 경계 사각형을 지정 하는 구조입니다.  
   
-##  <a name="a-namesetwindowthemea--ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
  도구 설명 창이의 비주얼 스타일을 설정합니다.  
   
 ```  
@@ -746,14 +780,14 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameupdatea--ctooltipctrlupdate"></a><a name="update"></a>CToolTipCtrl::Update  
+##  <a name="update"></a>CToolTipCtrl::Update  
  현재 도구를 다시 그리도록 되도록 합니다.  
   
 ```  
 void Update();
 ```  
   
-##  <a name="a-nameupdatetiptexta--ctooltipctrlupdatetiptext"></a><a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
+##  <a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
  이 컨트롤의이 도구에 대 한 도구 설명 텍스트를 업데이트합니다.  
   
 ```  

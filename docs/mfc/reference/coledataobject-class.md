@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IDataObject
 - COleDataObject
+- AFXOLE/COleDataObject
+- AFXOLE/COleDataObject::COleDataObject
+- AFXOLE/COleDataObject::Attach
+- AFXOLE/COleDataObject::AttachClipboard
+- AFXOLE/COleDataObject::BeginEnumFormats
+- AFXOLE/COleDataObject::Detach
+- AFXOLE/COleDataObject::GetData
+- AFXOLE/COleDataObject::GetFileData
+- AFXOLE/COleDataObject::GetGlobalData
+- AFXOLE/COleDataObject::GetNextFormat
+- AFXOLE/COleDataObject::IsDataAvailable
+- AFXOLE/COleDataObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +111,7 @@ class COleDataObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-nameattacha--coledataobjectattach"></a><a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>COleDataObject::Attach  
  연결 하려면이 함수를 호출 하는 `COleDataObject` 개체는 OLE 데이터 개체를 사용 합니다.  
   
 ```  
@@ -119,7 +130,7 @@ void Attach(
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameattachclipboarda--coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
  클립보드에 현재 있는 데이터 개체를 연결 하려면이 함수를 호출 하 여 `COleDataObject` 개체입니다.  
   
 ```  
@@ -134,7 +145,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  이 데이터 개체가 해제 될 때까지 클립보드를 잠급니다이 함수를 호출 합니다. 데이터 개체에 대 한 소멸자에서 해제 되 고 `COleDataObject`합니다. 자세한 내용은 참조 [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) 및 [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 설명서의 합니다.  
   
-##  <a name="a-namebeginenumformatsa--coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
  이 함수에 대 한 후속 호출에 대 한 준비를 호출 `GetNextFormat` 항목에서 데이터 형식의 목록을 검색 합니다.  
   
 ```  
@@ -148,7 +159,7 @@ void BeginEnumFormats();
   
  자세한 내용은 참조 [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecoledataobjecta--coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
  `COleDataObject` 개체를 생성합니다.  
   
 ```  
@@ -161,7 +172,7 @@ COleDataObject();
 > [!NOTE]
 >  에 대 한 포인터를 끌어서 놓기 처리기 매개 변수 중 하나 이므로 `COleDataObject`, 끌어서 놓기 지원 하기 위해이 생성자를 호출할 필요가 없습니다.  
   
-##  <a name="a-namedetacha--coledataobjectdetach"></a><a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>COleDataObject::Detach  
  이 함수를 분리를 호출 하는 `COleDataObject` 데이터 개체를 해제 하지 않고 연결된 된 OLE 데이터 개체에서 개체입니다.  
   
 ```  
@@ -173,7 +184,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetdataa--coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>COleDataObject::GetData  
  지정 된 형식의 항목에서 데이터를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -201,7 +212,7 @@ BOOL GetData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetfiledataa--coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>COleDataObject::GetFileData  
  만들려면이 함수를 호출 하는 `CFile` 또는 `CFile`-파생 개체에 지정 된 형식의 데이터를 검색 하 고는 `CFile` 포인터입니다.  
   
 ```  
@@ -230,7 +241,7 @@ CFile* GetFileData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetglobaldataa--coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
  전역 메모리 블록을 할당 하 고에 지정 된 형식의 데이터를 검색 하려면이 함수를 호출 하는 `HGLOBAL`합니다.  
   
 ```  
@@ -254,7 +265,7 @@ HGLOBAL GetGlobalData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetnextformata--coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
  반복 해 서 항목에서 데이터 검색에 사용할 수 있는 모든 형식을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -275,7 +286,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  자세한 내용은 참조 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisdataavailablea--coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
  OLE 항목에서 데이터 검색에 사용할 수 있는 특정 형식 인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -304,7 +315,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)합니다.  
   
-##  <a name="a-namereleasea--coledataobjectrelease"></a><a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>COleDataObject::Release  
  소유권을 해제 하려면이 함수를 호출 하는 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 이전에 연결 된 개체는 `COleDataObject` 개체입니다.  
   
 ```  

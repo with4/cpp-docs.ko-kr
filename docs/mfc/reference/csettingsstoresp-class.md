@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::Create
+- AFXSETTINGSSTORE/CSettingsStoreSP::SetRuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CSettingsStoreSP
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsettingsstore.h  
   
-##  <a name="a-namecreatea--csettingsstorespcreate"></a><a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>CSettingsStoreSP::Create  
  파생 된 개체의 새 인스턴스를 만듭니다는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
   
 ```  
@@ -119,7 +123,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp #&33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="a-namecsettingsstorespa--csettingsstorespcsettingsstoresp"></a><a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
  생성 된 [CSettingsStoreSP 클래스](../../mfc/reference/csettingsstoresp-class.md) 개체입니다.  
   
 ```  
@@ -133,7 +137,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>주의  
  `CSettingsStoreSP` 개체에서 데이터를 저장 `dwUserData` 보호 된 멤버 변수에 `m_dwUserData`합니다.  
   
-##  <a name="a-namesetruntimeclassa--csettingsstorespsetruntimeclass"></a><a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
  런타임 클래스를 가져오거나 설정 합니다. 메서드가 [CSettingsStoreSP::Create](#create) 런타임 클래스를 사용 하 여 만들 개체의 종류를 결정 합니다.  
   
 ```  

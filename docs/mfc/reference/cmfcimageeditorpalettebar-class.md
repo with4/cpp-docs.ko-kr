@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +86,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afximageeditordialog.h  
   
-##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
  도구 모음 단추의 높이 반환합니다.  
   
 ```  
@@ -93,7 +96,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>반환 값  
  도구 모음에서 각 단추의 높이입니다.  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  도구 모음 테두리 확장 단추를 표시할 수 있는지 여부를 결정 합니다.  
   
 ```  

@@ -10,6 +10,45 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleServerDoc
+- AFXOLE/COleServerDoc
+- AFXOLE/COleServerDoc::COleServerDoc
+- AFXOLE/COleServerDoc::ActivateDocObject
+- AFXOLE/COleServerDoc::ActivateInPlace
+- AFXOLE/COleServerDoc::DeactivateAndUndo
+- AFXOLE/COleServerDoc::DiscardUndoState
+- AFXOLE/COleServerDoc::GetClientSite
+- AFXOLE/COleServerDoc::GetEmbeddedItem
+- AFXOLE/COleServerDoc::GetItemClipRect
+- AFXOLE/COleServerDoc::GetItemPosition
+- AFXOLE/COleServerDoc::GetZoomFactor
+- AFXOLE/COleServerDoc::IsDocObject
+- AFXOLE/COleServerDoc::IsEmbedded
+- AFXOLE/COleServerDoc::IsInPlaceActive
+- AFXOLE/COleServerDoc::NotifyChanged
+- AFXOLE/COleServerDoc::NotifyClosed
+- AFXOLE/COleServerDoc::NotifyRename
+- AFXOLE/COleServerDoc::NotifySaved
+- AFXOLE/COleServerDoc::OnDeactivate
+- AFXOLE/COleServerDoc::OnDeactivateUI
+- AFXOLE/COleServerDoc::OnDocWindowActivate
+- AFXOLE/COleServerDoc::OnResizeBorder
+- AFXOLE/COleServerDoc::OnShowControlBars
+- AFXOLE/COleServerDoc::OnUpdateDocument
+- AFXOLE/COleServerDoc::RequestPositionChange
+- AFXOLE/COleServerDoc::SaveEmbedding
+- AFXOLE/COleServerDoc::ScrollContainerBy
+- AFXOLE/COleServerDoc::UpdateAllItems
+- AFXOLE/COleServerDoc::CreateInPlaceFrame
+- AFXOLE/COleServerDoc::DestroyInPlaceFrame
+- AFXOLE/COleServerDoc::GetDocObjectServer
+- AFXOLE/COleServerDoc::OnClose
+- AFXOLE/COleServerDoc::OnExecOleCmd
+- AFXOLE/COleServerDoc::OnFrameWindowActivate
+- AFXOLE/COleServerDoc::OnGetEmbeddedItem
+- AFXOLE/COleServerDoc::OnReactivateAndUndo
+- AFXOLE/COleServerDoc::OnSetHostNames
+- AFXOLE/COleServerDoc::OnSetItemRects
+- AFXOLE/COleServerDoc::OnShowDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -140,7 +179,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-nameactivatedocobjecta--coleserverdocactivatedocobject"></a><a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
+##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
  관련된 DocObject 문서를 활성화합니다.  
   
 ```  
@@ -150,7 +189,7 @@ void ActivateDocObject();
 ### <a name="remarks"></a>주의  
  기본적으로 `COleServerDoc` 액티브 문서 (DocObjects 라고도 함)를 지원 하지 않습니다. 이 지원을 사용 하려면 참조 [GetDocObjectServer](#getdocobjectserver) 및 클래스 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)합니다.  
   
-##  <a name="a-nameactivateinplacea--coleserverdocactivateinplace"></a><a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
+##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
  내부 편집에 대 한 항목을 활성화합니다.  
   
 ```  
@@ -165,7 +204,7 @@ BOOL ActivateInPlace();
   
  기본 구현에서이 함수를 호출 [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)합니다. 응용 프로그램 (예: 재생) 내부 활성화에 대 한 또 다른 동사를 지 원하는 경우이 함수를 호출 합니다.  
   
-##  <a name="a-namecoleserverdoca--coleserverdoccoleserverdoc"></a><a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
+##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
  생성 된 `COleServerDoc` OLE 시스템 Dll에 연결 하지 않고 개체입니다.  
   
 ```  
@@ -175,7 +214,7 @@ COleServerDoc();
 ### <a name="remarks"></a>주의  
  호출 해야 [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) 통신 OLE를 열려고 합니다. 사용 중인 경우 [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) 응용 프로그램에서 `COleLinkingDoc::Register` 에서 자동으로 호출 `COleLinkingDoc`의 구현의 `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
   
-##  <a name="a-namecreateinplaceframea--coleserverdoccreateinplaceframe"></a><a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
+##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
  프레임 워크 내부 편집에 대 한 프레임 창을 만들려면이 함수를 호출 합니다.  
   
 ```  
@@ -194,7 +233,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
   
  고급 재정의할 수 있습니다.  
   
-##  <a name="a-namedeactivateandundoa--coleserverdocdeactivateandundo"></a><a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
+##  <a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
  응용 프로그램에서 지원할 실행 취소 하 고 사용자가 항목을 활성화 한 후 하지만 편집 하기 전에 실행 취소를 선택 하는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -207,7 +246,7 @@ BOOL DeactivateAndUndo();
 ### <a name="remarks"></a>주의  
  컨테이너 응용 프로그램은 Microsoft Foundation Class 라이브러리를 사용 하 여를 작성 한 경우이 함수를 호출 하면 [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) 서버의 사용자 인터페이스를 비활성화를 호출할 수 있습니다.  
   
-##  <a name="a-namedestroyinplaceframea--coleserverdocdestroyinplaceframe"></a><a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
+##  <a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
  프레임 워크 내부 프레임 창을 삭제 하 고 서버 응용 프로그램의 문서 창 내부 활성화 하기 전에 해당 상태를 반환 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -221,7 +260,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ### <a name="remarks"></a>주의  
  고급 재정의할 수 있습니다.  
   
-##  <a name="a-namediscardundostatea--coleserverdocdiscardundostate"></a><a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
+##  <a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
  사용자 작업은 실행 취소할 수 없는 편집 작업을 수행 하는 경우 해당 실행 취소 상태 정보를 삭제 하려면 컨테이너 응용 프로그램에서이 함수를 호출 합니다.  
   
 ```  
@@ -234,7 +273,7 @@ BOOL DiscardUndoState();
 ### <a name="remarks"></a>주의  
  이 함수는 실행 취소를 지 원하는 서버에는 그렇지 않은 경우 사용할 수 없는 실행 취소 상태 정보에서 사용할 수 있는 리소스를 해제할 수 있도록 제공 됩니다.  
   
-##  <a name="a-namegetclientsitea--coleserverdocgetclientsite"></a><a name="getclientsite"></a>COleServerDoc::GetClientSite  
+##  <a name="getclientsite"></a>COleServerDoc::GetClientSite  
  기본에 대 한 포인터를 검색 `IOleClientSite` 인터페이스입니다.  
   
 ```  
@@ -244,7 +283,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ### <a name="return-value"></a>반환 값  
  기본에 대 한 포인터를 검색 [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) 인터페이스입니다.  
   
-##  <a name="a-namegetdocobjectservera--coleserverdocgetdocobjectserver"></a><a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
+##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
  이 함수를 만드는 새 재정의 `CDocObjectServer` 항목 및에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -265,7 +304,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
   
  [!code-cpp[NVC_MFCOleServer #&3;](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
-##  <a name="a-namegetembeddeditema--coleserverdocgetembeddeditem"></a><a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
+##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
  전체 문서를 나타내는 항목에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -278,7 +317,7 @@ COleServerItem* GetEmbeddedItem();
 ### <a name="remarks"></a>주의  
  호출 [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), 기본 구현 된 가상 함수입니다.  
   
-##  <a name="a-namegetitemcliprecta--coleserverdocgetitemcliprect"></a><a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
+##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
  호출 된 `GetItemClipRect` 위치에서 편집 중인 항목의 클리핑 사각형 좌표를 가져오려면 멤버 함수입니다.  
   
 ```  
@@ -294,7 +333,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
   
  그리기는 클리핑 사각형을 외부 발생 하지 않습니다. 일반적으로 드로잉 자동으로 제한 됩니다. 이 함수를 사용 하 여 문서에 보이는 부분 외부 사용자가 스크롤 여부를 확인 하려면 그렇다면 컨테이너 문서에 대 한 호출을 사용 하 여 필요에 따라 스크롤하여 [ScrollContainerBy](#scrollcontainerby)합니다.  
   
-##  <a name="a-namegetitempositiona--coleserverdocgetitemposition"></a><a name="getitemposition"></a>COleServerDoc::GetItemPosition  
+##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition  
  호출 된 `GetItemPosition` 멤버 함수를 현재 위치에서 편집 중인 항목의 좌표를 가져옵니다.  
   
 ```  
@@ -310,7 +349,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
   
  항목의 위치에 있는 항목은 표시 (또는 표시 되지 않습니다) 범위를 확인 하려면 현재 클리핑 사각형을 비교할 수 화면에 있습니다.  
   
-##  <a name="a-namegetzoomfactora--coleserverdocgetzoomfactor"></a><a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
+##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
  `GetZoomFactor` 멤버 함수 내부에서 편집을 위해 활성화 된 항목의 "확대/축소 비율"를 결정 합니다.  
   
 ```  
@@ -338,7 +377,7 @@ BOOL GetZoomFactor(
   
  분자와 분모의 해당 항목의 "확대/축소 비율입니다."를 처음 두 개의 인수를 설정 하는 함수 항목 위치에 편집 되 고 있지 않은, 함수 기본값은 100% (또는 1:1)에 이러한 인수를 설정 하 고 0을 반환 합니다. 자세한 내용은 기술 참고 40을 참조 하십시오. [MFC/OLE 내부 크기 조정 및 확대/축소](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)합니다.  
   
-##  <a name="a-nameisdocobjecta--coleserverdocisdocobject"></a><a name="isdocobject"></a>COleServerDoc::IsDocObject  
+##  <a name="isdocobject"></a>COleServerDoc::IsDocObject  
  문서 DocObject 인지 여부를 확인 합니다.  
   
 ```  
@@ -348,7 +387,7 @@ BOOL IsDocObject() const;
 ### <a name="return-value"></a>반환 값  
  **True 이면** 문서가 DocObject; 그렇지 않으면 **FALSE**합니다.  
   
-##  <a name="a-nameisembeddeda--coleserverdocisembedded"></a><a name="isembedded"></a>COleServerDoc::IsEmbedded  
+##  <a name="isembedded"></a>COleServerDoc::IsEmbedded  
  호출 된 `IsEmbedded` 멤버 함수를 문서 컨테이너에 포함 된 개체를 나타내는지 여부를 확인 합니다.  
   
 ```  
@@ -361,7 +400,7 @@ BOOL IsEmbedded() const;
 ### <a name="remarks"></a>주의  
  파일에서 로드 하는 문서에 대 한 링크는 컨테이너 응용 프로그램에 의해 조작 될 수 있지만 포함 되지 않습니다. 컨테이너 문서에 포함 된 문서를 포함할 수 간주 됩니다.  
   
-##  <a name="a-nameisinplaceactivea--coleserverdocisinplaceactive"></a><a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
  호출 된 `IsInPlaceActive` 멤버 함수를 현재 항목에는 내부 활성 상태에서 적용 되는지 확인 합니다.  
   
 ```  
@@ -371,7 +410,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="return-value"></a>반환 값  
  0이 아닌 값은 `COleServerDoc` 개체가 다음 위치에서 활성화 하 고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-namenotifychangeda--coleserverdocnotifychanged"></a><a name="notifychanged"></a>COleServerDoc::NotifyChanged  
+##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged  
  문서에서 변경 된 문서에 연결 된 모든 연결 된 항목에 알리기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -384,7 +423,7 @@ void NotifyChanged();
 > [!NOTE]
 >  이 함수는 OLE 1와의 호환성을 위해 포함 됩니다. 새 응용 프로그램 사용 해야 [UpdateAllItems](#updateallitems)합니다.  
   
-##  <a name="a-namenotifycloseda--coleserverdocnotifyclosed"></a><a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
+##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
  문서 닫 혔 컨테이너에 알리기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -394,7 +433,7 @@ void NotifyClosed();
 ### <a name="remarks"></a>주의  
  파일 메뉴에서 [닫기] 명령을 선택 하면 `NotifyClosed` 호출한 `COleServerDoc`의 구현의 [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) 멤버 함수입니다. Microsoft Foundation Class 라이브러리를 작성 하는 컨테이너 응용 프로그램에는 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 의 멤버 함수 `COleClientItem` 호출 됩니다.  
   
-##  <a name="a-namenotifyrenamea--coleserverdocnotifyrename"></a><a name="notifyrename"></a>COleServerDoc::NotifyRename  
+##  <a name="notifyrename"></a>COleServerDoc::NotifyRename  
  사용자의 서버 문서 이름을 후이 함수를 호출 합니다.  
   
 ```  
@@ -408,7 +447,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ### <a name="remarks"></a>주의  
  파일 메뉴에서 이름으로 저장 명령을 선택 하면 `NotifyRename` 호출한 `COleServerDoc`의 구현의 [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) 멤버 함수입니다. 이 함수는 OLE 시스템을 컨테이너에 알리는 하는 Dll에 알립니다. Microsoft Foundation Class 라이브러리를 작성 하는 컨테이너 응용 프로그램에는 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 의 멤버 함수 `COleClientItem` 호출 됩니다.  
   
-##  <a name="a-namenotifysaveda--coleserverdocnotifysaved"></a><a name="notifysaved"></a>COleServerDoc::NotifySaved  
+##  <a name="notifysaved"></a>COleServerDoc::NotifySaved  
  서버 문서를 저장 한 후이 함수를 호출 합니다.  
   
 ```  
@@ -418,7 +457,7 @@ void NotifySaved();
 ### <a name="remarks"></a>주의  
  파일 메뉴에서 저장 명령을 선택 하면 `NotifySaved` 에서 자동으로 호출 `COleServerDoc`의 구현의 [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument)합니다. 이 함수는 OLE 시스템을 컨테이너에 알리는 하는 Dll에 알립니다. Microsoft Foundation Class 라이브러리를 작성 하는 컨테이너 응용 프로그램에는 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 의 멤버 함수 `COleClientItem` 호출 됩니다.  
   
-##  <a name="a-nameonclosea--coleserverdoconclose"></a><a name="onclose"></a>COleServerDoc::OnClose  
+##  <a name="onclose"></a>COleServerDoc::OnClose  
  컨테이너에서 요청 하는 서버 문서 닫을 수 경우 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -440,7 +479,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
   
  자세한 내용과 추가 값에 대 한 참조 [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameondeactivatea--coleserverdocondeactivate"></a><a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
+##  <a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
  현재 위치에서 활성화 된 포함 또는 연결 된 항목을 비활성화 하는 사용자 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -454,7 +493,7 @@ virtual void OnDeactivate();
   
  자세한 내용은 문서를 참조 하십시오. [활성화](../../mfc/activation-cpp.md)...  
   
-##  <a name="a-nameondeactivateuia--coleserverdocondeactivateui"></a><a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
  사용자 위치에 활성화 된 항목을 비활성화 하면 호출 됩니다.  
   
 ```  
@@ -470,7 +509,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  프레임 워크는 항상 설정 `bUndoable` 를 **FALSE**합니다. 서버에서 실행 취소를 지원 하는 작업을 취소할 수 없는 경우와 기본 클래스 구현을 호출 `bUndoable` 로 설정 **TRUE**합니다.  
   
-##  <a name="a-nameondocwindowactivatea--coleserverdocondocwindowactivate"></a><a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
  프레임 워크를 활성화 하거나 비활성화 내부 편집에 대 한 문서 창을이 함수를 호출 합니다.  
   
 ```  
@@ -486,7 +525,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
   
  자세한 내용은 문서를 참조 하십시오. [활성화](../../mfc/activation-cpp.md)...  
   
-##  <a name="a-nameonexecolecmda--coleserverdoconexecolecmd"></a><a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
+##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
  프레임 워크는 지정 된 명령을 실행 하거나 명령에 대 한 도움말을 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -547,7 +586,7 @@ virtual HRESULT OnExecOleCmd(
   
  이 함수의 기본 클래스 구현을 안내는 **OLE_COMMAND_MAP** 명령 대상 및 적절 한 처리기를 명령에 디스패치할 때 시도와 관련 된 구조입니다. 기본 클래스 구현을 인수를 허용 하지 않거나 값을 반환 하는 명령 에서만 작동 합니다. 인수를 허용 또는 반환 값을 수행 하는 명령을 처리 해야 할 경우이 함수를 재정의 하 고 작업을 해야는 `pvarargIn` 및 `pvarargOut` 매개 변수에 직접.  
   
-##  <a name="a-nameonframewindowactivatea--coleserverdoconframewindowactivate"></a><a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
  컨테이너 응용 프로그램의 프레임 창을 활성화 되거나 비활성화 하는 경우이 함수를 호출 하는 프레임 워크입니다.  
   
 ```  
@@ -563,7 +602,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
   
  자세한 내용은 문서를 참조 하십시오. [활성화](../../mfc/activation-cpp.md)...  
   
-##  <a name="a-nameongetembeddeditema--coleserverdocongetembeddeditem"></a><a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem  
+##  <a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem  
  컨테이너 응용 프로그램을 만들거나 포함된 된 항목을 편집 하려면 서버 응용 프로그램을 호출할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -576,7 +615,7 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 ### <a name="remarks"></a>주의  
  기본 구현은 없습니다. 전체 문서를 나타내는 항목을 반환 하려면이 함수를 재정의 해야 합니다. 이 반환 값의 개체 여야 합니다.는 `COleServerItem`-클래스를 파생 합니다.  
   
-##  <a name="a-nameonreactivateandundoa--coleserverdoconreactivateandundo"></a><a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
+##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
  프레임 워크 내부에서 활성화, 변경 및 이후에 비활성화 된 항목에 변경 내용을 취소 하는 사용자가 선택 하는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -591,7 +630,7 @@ virtual BOOL OnReactivateAndUndo();
   
  응용 프로그램 실행 취소를 지 원하는 경우이 함수를 재정의 합니다. 실행 취소 작업을 수행한 다음 호출 하 여 항목을 활성화는 일반적으로 `ActivateInPlace`합니다. 컨테이너 응용 프로그램은 Microsoft Foundation Class 라이브러리를 작성 하는 경우 호출 `COleClientItem::ReactivateAndUndo` 하면이 함수를 호출할 수 있습니다.  
   
-##  <a name="a-nameonresizebordera--coleserverdoconresizeborder"></a><a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
+##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
  컨테이너 응용 프로그램의 프레임 창 크기를 변경 하는 경우이 함수를 호출 하는 프레임 워크입니다.  
   
 ```  
@@ -618,7 +657,7 @@ virtual void OnResizeBorder(
   
  고급 재정의할 수 있습니다.  
   
-##  <a name="a-nameonsethostnamesa--coleserverdoconsethostnames"></a><a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
+##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
  컨테이너를 설정 하거나이 문서에 대 한 호스트 이름을 변경 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -639,7 +678,7 @@ virtual void OnSetHostNames(
   
  응용 프로그램이 다른 메커니즘을 통해 제목을 설정 하는 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-nameonsetitemrectsa--coleserverdoconsetitemrects"></a><a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
+##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
  프레임 워크의 내부 편집 프레임 창의 컨테이너 응용 프로그램의 프레임 창 내에서 위치를이 함수를 호출 합니다.  
   
 ```  
@@ -660,7 +699,7 @@ virtual void OnSetItemRects(
   
  이 함수는 일반적으로 대 한 응답으로 호출 되는 `RequestPositionChange` 컨테이너 내부 항목에 대 한 위치 변경 요청에 의해 언제 든 지 호출할 수 있지만 호출 합니다.  
   
-##  <a name="a-nameonshowcontrolbarsa--coleserverdoconshowcontrolbars"></a><a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
  로 식별 되는 프레임 창에 연결 된 서버 응용 프로그램의 컨트롤 막대 표시 또는 숨기기를이 함수를 호출 하는 프레임 워크 `pFrameWnd`합니다.  
   
 ```  
@@ -679,7 +718,7 @@ virtual void OnShowControlBars(
 ### <a name="remarks"></a>주의  
  기본 구현에서는 해당 프레임 창을 소유 하는 모든 컨트롤 막대 열거 숨기 거 나 표시 합니다.  
   
-##  <a name="a-nameonshowdocumenta--coleserverdoconshowdocument"></a><a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
+##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
  프레임 워크 호출의 `OnShowDocument` 서버 문서 숨겨지거나 표시 될 때 작동 합니다.  
   
 ```  
@@ -693,7 +732,7 @@ virtual void OnShowDocument(BOOL bShow);
 ### <a name="remarks"></a>주의  
  경우 `bShow` 는 **TRUE**, 기본 구현에서는 필요한 경우 서버 응용 프로그램을 활성화 하 고 컨테이너 응용 프로그램 항목을 볼 수 있도록 해당 창을 스크롤하여 하도록 합니다. 경우 `bShow` 는 **FALSE**, 호출을 통해 항목을 비활성화 하는 기본 구현은 `OnDeactivate`, 다음 소멸 또는 첫 번째 문서에 대해 생성 된 모든 프레임 창을 숨깁니다. 표시 문서가 유지 하는 경우 기본 구현은 서버 응용 프로그램을 숨깁니다.  
   
-##  <a name="a-nameonupdatedocumenta--coleserverdoconupdatedocument"></a><a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
+##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
  복합 문서에 포함된 된 항목은 문서를 저장할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -706,7 +745,7 @@ virtual BOOL OnUpdateDocument();
 ### <a name="remarks"></a>주의  
  기본 구현 호출 하 여는 [COleServerDoc::NotifySaved](#notifysaved) 및 [COleServerDoc::SaveEmbedding](#saveembedding) 멤버 함수 이며 그런 다음 문서를 새로으로 표시 합니다. 특수 처리는 포함 된 항목을 업데이트할 때 수행 해야 할 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-namerequestpositionchangea--coleserverdocrequestpositionchange"></a><a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
+##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
  컨테이너 응용 프로그램을 해당 항목의 위치를 변경 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -720,7 +759,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="remarks"></a>주의  
  이 함수는 일반적으로 호출 (함께에서 `UpdateAllItems`) 내부 활성 항목에서 데이터가 변경 되었을 때. 이 호출은 다음 컨테이너 수 또는 변경 호출 하 여 수행할 수 없는 `OnSetItemRects`합니다. 결과 위치가 요청한 것과에서 다를 수 있습니다.  
   
-##  <a name="a-namesaveembeddinga--coleserverdocsaveembedding"></a><a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
+##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
  컨테이너 응용 프로그램에서 포함된 된 개체를 저장 하도록 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -730,7 +769,7 @@ void SaveEmbedding();
 ### <a name="remarks"></a>주의  
  이 함수를 자동으로 호출 `OnUpdateDocument`합니다. 이 함수는 일반적으로 특정 사용자 동작의 결과로 호출 되므로 디스크에 업데이트할 항목을 발생 시키는 참고 합니다.  
   
-##  <a name="a-namescrollcontainerbya--coleserverdocscrollcontainerby"></a><a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
+##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
  호출 된 `ScrollContainerBy` 로 표시 된 멤버 함수를 픽셀 단위로 양으로 컨테이너 문서를 스크롤합니다 `sizeScroll`합니다.  
   
 ```  
@@ -747,7 +786,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ### <a name="remarks"></a>주의  
  양수 값과 오른쪽 아래로 스크롤 나타냅니다. 음수 값을 위쪽과 왼쪽으로 스크롤 나타냅니다.  
   
-##  <a name="a-nameupdateallitemsa--coleserverdocupdateallitems"></a><a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
+##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
  문서에서 변경 된 문서에 연결 된 모든 연결 된 항목에 알리기 위해이 함수를 호출 합니다.  
   
 ```  

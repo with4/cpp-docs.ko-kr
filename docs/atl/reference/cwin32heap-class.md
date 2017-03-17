@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWin32Heap
-- ATL.CWin32Heap
 - CWin32Heap
+- ATLMEM/ATL::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::Allocate
+- ATLMEM/ATL::CWin32Heap::Attach
+- ATLMEM/ATL::CWin32Heap::Detach
+- ATLMEM/ATL::CWin32Heap::Free
+- ATLMEM/ATL::CWin32Heap::GetSize
+- ATLMEM/ATL::CWin32Heap::Reallocate
+- ATLMEM/ATL::CWin32Heap::m_bOwnHeap
+- ATLMEM/ATL::CWin32Heap::m_hHeap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlmem.h  
   
-##  <a name="a-nameallocatea--cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Allocate  
+##  <a name="allocate"></a>CWin32Heap::Allocate  
  힙 개체에서 메모리 블록을 할당합니다.  
   
 ```
@@ -113,7 +121,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)합니다.  
   
-##  <a name="a-nameattacha--cwin32heapattach"></a><a name="attach"></a>Cwin32heap:: Attach  
+##  <a name="attach"></a>Cwin32heap:: Attach  
  기존 힙에 힙 개체에 연결합니다.  
   
 ```
@@ -130,7 +138,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>주의  
  경우 `bTakeOwnership` 이 TRUE 이면는 `CWin32Heap` 개체는 힙 핸들을 삭제 해야 합니다.  
   
-##  <a name="a-namecwin32heapa--cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
  생성자입니다.  
   
 ```
@@ -172,7 +180,7 @@ CWin32Heap(
   
  세 번째 매개 변수의 기본값이 0으로 지정되어, 필요에 따라 힙을 증가시킬 수 있습니다. 참조 [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) 에 대 한 설명은 메모리 크기 및 플래그입니다.  
   
-##  <a name="a-namedtora--cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
  소멸자입니다.  
   
 ```
@@ -182,7 +190,7 @@ CWin32Heap(
 ### <a name="remarks"></a>주의  
  경우 힙 핸들을 소멸 시킵니다는 `CWin32Heap` 힙의 소유권을 가집니다.  
   
-##  <a name="a-namedetacha--cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>CWin32Heap::Detach  
  기존 힙에에서 힙 개체를 분리합니다.  
   
 ```
@@ -192,7 +200,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>반환 값  
  이전에 연결 된 개체를 힙에 핸들을 반환 합니다.  
   
-##  <a name="a-namefreea--cwin32heapfree"></a><a name="free"></a>CWin32Heap::Free  
+##  <a name="free"></a>CWin32Heap::Free  
  이전에 할당 하 여 힙에서 메모리를 해제 [CWin32Heap::Allocate](#allocate) 또는 [CWin32Heap::Reallocate](#reallocate)합니다.  
   
 ```
@@ -203,7 +211,7 @@ virtual void Free(void* p) throw();
  `p`  
  해제할 메모리를 블록에 대 한 포인터입니다. NULL은 유효한 값이 고는 아무 작업도 수행 합니다.  
   
-##  <a name="a-namegetsizea--cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>CWin32Heap::GetSize  
  힙 개체에서 할당 된 메모리 블록의 크기를 반환 합니다.  
   
 ```
@@ -217,14 +225,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>반환 값  
  할당 된 메모리 블록의 크기를 반환 합니다.  
   
-##  <a name="a-namembownheapa--cwin32heapmbownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
  에 저장 된 힙 핸들의 현재 소유권을 확인 하는 데 사용 하는 플래그 [m_hHeap](#m_hheap)합니다.  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="a-namemhheapa--cwin32heapmhheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
  힙 개체에 대 한 핸들입니다.  
   
 ```
@@ -234,7 +242,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>주의  
  힙 개체에 대 한 핸들을 저장 하는 데 사용 되는 변수입니다.  
   
-##  <a name="a-namereallocatea--cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Reallocate  
+##  <a name="reallocate"></a>CWin32Heap::Reallocate  
  힙 개체에서 메모리 블록을 다시 할당합니다.  
   
 ```

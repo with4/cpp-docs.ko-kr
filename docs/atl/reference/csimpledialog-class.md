@@ -9,10 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleDialog
-- CSimpleDialgo
 - CSimpleDialog
-- ATL.CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namedomodala--csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>CSimpleDialog::DoModal  
  모달 대화 상자를 호출 하 고 끝나면 대화 상자 결과 반환 합니다.  
   
 ```

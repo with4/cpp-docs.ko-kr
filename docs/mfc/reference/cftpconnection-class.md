@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
+- AFXINET/CFtpConnection
+- AFXINET/CFtpConnection::CFtpConnection
+- AFXINET/CFtpConnection::Command
+- AFXINET/CFtpConnection::CreateDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectoryAsURL
+- AFXINET/CFtpConnection::GetFile
+- AFXINET/CFtpConnection::OpenFile
+- AFXINET/CFtpConnection::PutFile
+- AFXINET/CFtpConnection::Remove
+- AFXINET/CFtpConnection::RemoveDirectory
+- AFXINET/CFtpConnection::Rename
+- AFXINET/CFtpConnection::SetCurrentDirectory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +108,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecftpconnectiona--cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
  이 멤버 함수를 생성 하 라고는 `CFtpConnection` 개체입니다.  
   
 ```  
@@ -151,7 +164,7 @@ CFtpConnection(
 ### <a name="remarks"></a>주의  
  만들 없도록는 `CFtpConnection` 개체에 직접. 대신, 호출 [cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), 작성 하는 **CFptConnection** 개체입니다.  
   
-##  <a name="a-namecommanda--cftpconnectioncommand"></a><a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>CFtpConnection::Command  
  FTP 서버에 직접 명령을 보냅니다.  
   
 ```  
@@ -187,7 +200,7 @@ CInternetFile* Command(
   
  오류가 발생 하는 경우 MFC 형식의 예외를 throw 하는 [CInternetException](../../mfc/reference/cinternetexception-class.md)합니다.  
   
-##  <a name="a-namecreatedirectorya--cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
  디렉터리를 만들려면 연결된 된 서버에서이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName` 매개 변수 수는 부분적으로 또는 정규화 된 파일 이름을 현재 디렉터리에 상대적입니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `CreateDirectory`사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-namegetcurrentdirectorya--cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>Cftpconnection:: Getcurrentdirectory  
+##  <a name="getcurrentdirectory"></a>Cftpconnection:: Getcurrentdirectory  
  현재 디렉터리의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -240,7 +253,7 @@ BOOL GetCurrentDirectory(
   
  매개 변수 `pstrDirName` 또는 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 하거나 부분적으로 정규화 된 파일 이름이 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectory`사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-namegetcurrentdirectoryasurla--cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>Cftpconnection:: Getcurrentdirectoryasurl  
+##  <a name="getcurrentdirectoryasurl"></a>Cftpconnection:: Getcurrentdirectoryasurl  
  URL 형식으로 현재 디렉터리의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -274,7 +287,7 @@ BOOL GetCurrentDirectoryAsURL(
   
  매개 변수 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 하거나 부분적으로 정규화 된 파일 이름이 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectoryAsURL`사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-namegetfilea--cftpconnectiongetfile"></a><a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>CFtpConnection::GetFile  
  FTP 서버에서 파일을 가져오고 로컬 컴퓨터에 저장 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -334,7 +347,7 @@ BOOL GetFile(
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 개체에서 만든 해당 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서를 참조 하십시오 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameopenfilea--cftpconnectionopenfile"></a><a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>CFtpConnection::OpenFile  
  읽거나 쓰기 위해 FTP 서버에 있는 파일을 열려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -380,7 +393,7 @@ CInternetFile* OpenFile(
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 개체에서 만든 해당 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서를 참조 하십시오 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameputfilea--cftpconnectionputfile"></a><a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>CFtpConnection::PutFile  
  FTP 서버에 파일을 저장 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -412,7 +425,7 @@ BOOL PutFile(
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 개체에서 만든 해당 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서를 참조 하십시오 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameremovea--cftpconnectionremove"></a><a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>CFtpConnection::Remove  
  연결된 된 서버에서 지정된 된 파일을 삭제 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -429,7 +442,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>주의  
  `pstrFileName` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름을 현재 디렉터리에 상대적인 또는 정규화 된 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. **제거** 함수는 사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-nameremovedirectorya--cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
  연결된 된 서버에서 지정된 된 디렉터리를 제거 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -448,7 +461,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName` 매개 변수는 현재 디렉터리를 기준으로 또는 부분적으로 정규화 된 파일 수입니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `RemoveDirectory`사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-namerenamea--cftpconnectionrename"></a><a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>CFtpConnection::Rename  
  연결된 된 서버에서 지정된 된 파일의 이름을 바꾸려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -470,7 +483,7 @@ BOOL Rename(
 ### <a name="remarks"></a>주의  
  `pstrExisting` 및 `pstrNew` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름을 현재 디렉터리에 상대적인 또는 정규화 된 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. **이름 바꾸기** 사용 하기 전에 디렉터리 이름을 구분 기호를 적절 한 문자를 변환 합니다.  
   
-##  <a name="a-namesetcurrentdirectorya--cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>Cftpconnection:: Setcurrentdirectory  
+##  <a name="setcurrentdirectory"></a>Cftpconnection:: Setcurrentdirectory  
  FTP 서버에서 다른 디렉터리를 변경 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

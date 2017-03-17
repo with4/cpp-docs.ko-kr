@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog::CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog::GetColor
+- AFXCOLORDIALOG/CMFCColorDialog::GetPalette
+- AFXCOLORDIALOG/CMFCColorDialog::RebuildPalette
+- AFXCOLORDIALOG/CMFCColorDialog::SetCurrentColor
+- AFXCOLORDIALOG/CMFCColorDialog::SetNewColor
+- AFXCOLORDIALOG/CMFCColorDialog::SetPageOne
+- AFXCOLORDIALOG/CMFCColorDialog::SetPageTwo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +135,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolordialog.h  
   
-##  <a name="a-namecmfccolordialoga--cmfccolordialogcmfccolordialog"></a><a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
  `CMFCColorDialog` 개체를 생성합니다.  
   
 ```  
@@ -154,7 +163,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcolora--cmfccolordialoggetcolor"></a><a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
  색 대화 상자에서 사용자가 선택한 색을 검색 합니다.  
   
 ```  
@@ -167,7 +176,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>주의  
  이 함수를 호출한 후에 호출 된 `DoModal` 메서드.  
   
-##  <a name="a-namegetpalettea--cmfccolordialoggetpalette"></a><a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
  현재 색 대화 상자에서 사용할 수 있는 색상표를 검색 합니다.  
   
 ```  
@@ -180,14 +189,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>주의  
  색상표에 사용자가 선택할 수는 색을 지정 합니다.  
   
-##  <a name="a-namerebuildpalettea--cmfccolordialogrebuildpalette"></a><a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
  색상표를 시스템으로 색상표에서 파생 됩니다.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="a-namesetcurrentcolora--cmfccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
  대화 상자에 현재 색을 설정합니다.  
   
 ```  
@@ -200,7 +209,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetnewcolora--cmfccolordialogsetnewcolor"></a><a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
  현재 색 가장 유사한 현재 색상표에서 색을 설정 합니다.  
   
 ```  
@@ -213,7 +222,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpageonea--cmfccolordialogsetpageone"></a><a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
  색 대화의 첫 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
   
 ```  
@@ -235,7 +244,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpagetwoa--cmfccolordialogsetpagetwo"></a><a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
  색 대화의 두 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
   
 ```  

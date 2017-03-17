@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCubicTransition
-- afxanimationcontroller/CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition::CCubicTransition
+- AFXANIMATIONCONTROLLER/CCubicTransition::Create
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalVelocity
+- AFXANIMATIONCONTROLLER/CCubicTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CCubicTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameccubictransitiona--ccubictransitionccubictransition"></a><a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
+##  <a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
  전환 개체를 생성 하 고 해당 매개 변수를 초기화 합니다.  
   
 ```  
@@ -104,7 +109,7 @@ CCubicTransition(
  `finalVelocity`  
  전환의 끝에 있는 변수의 속도입니다.  
   
-##  <a name="a-namecreatea--ccubictransitioncreate"></a><a name="create"></a>CCubicTransition::Create  
+##  <a name="create"></a>CCubicTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namemdblfinalvaluea--ccubictransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
  전환의 끝에 있는 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblfinalvelocitya--ccubictransitionmdblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
  전환의 끝에 있는 변수의 속도입니다.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-##  <a name="a-namemdurationa--ccubictransitionmduration"></a><a name="m_duration"></a>CCubicTransition::m_duration  
+##  <a name="m_duration"></a>CCubicTransition::m_duration  
  전환의 기간입니다.  
   
 ```  

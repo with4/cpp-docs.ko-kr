@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBar
+- AFXEXT/CReBar
+- AFXEXT/CReBar::AddBar
+- AFXEXT/CReBar::Create
+- AFXEXT/CReBar::GetReBarCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-nameaddbara--crebaraddbar"></a><a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>CReBar::AddBar  
  에 rebar 밴드를 추가 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -131,7 +135,7 @@ BOOL AddBar(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="a-namecreatea--crebarcreate"></a><a name="create"></a>CReBar::Create  
+##  <a name="create"></a>CReBar::Create  
  이 멤버 함수는 rebar 만들기를 호출 합니다.  
   
 ```  
@@ -161,7 +165,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
   예를 참조 [CReBar::AddBar](#addbar)합니다.  
   
-##  <a name="a-namegetrebarctrla--crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
  이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할 수 있습니다.  
   
 ```  

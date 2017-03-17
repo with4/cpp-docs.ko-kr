@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComUnkArray
-- ATL.CComUnkArray<nMaxSize>
-- ATL::CComUnkArray<nMaxSize>
-- ATL::CComUnkArray
 - CComUnkArray
+- ATLCOM/ATL::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::Add
+- ATLCOM/ATL::CComUnkArray::begin
+- ATLCOM/ATL::CComUnkArray::end
+- ATLCOM/ATL::CComUnkArray::GetCookie
+- ATLCOM/ATL::CComUnkArray::GetUnknown
+- ATLCOM/ATL::CComUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CComUnkArray
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameadda--ccomunkarrayadd"></a><a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>CComUnkArray::Add  
  추가 하려면이 메서드를 호출 하는 **IUnknown** 배열에 대 한 포인터입니다.  
   
 ```
@@ -104,7 +108,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>반환 값  
  배열에 새 포인터를 포함할 수 없는 경우 새로 추가 된 포인터 또는 0와 연결 된 쿠키를 반환 합니다.  
   
-##  <a name="a-namebegina--ccomunkarraybegin"></a><a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>CComUnkArray::begin  
  컬렉션의 시작 부분에 대 한 포인터를 반환 **IUnknown** 인터페이스 포인터입니다.  
   
 ```
@@ -120,7 +124,7 @@ IUnknown**
   
  사용 하기 전에 **IUnknown** 인터페이스를 확인 해야 아닌지 **NULL**합니다.  
   
-##  <a name="a-nameccomunkarraya--ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  생성자입니다.  
   
 ```
@@ -130,7 +134,7 @@ CComUnkArray();
 ### <a name="remarks"></a>주의  
  보관할 컬렉션 설정 `nMaxSize` **IUnknown** 포인터에 대 한 포인터를 초기화 하 고 **NULL**합니다.  
   
-##  <a name="a-nameenda--ccomunkarrayend"></a><a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>CComUnkArray::end  
  마지막 이전 하나에 대 한 포인터를 반환 **IUnknown** 컬렉션에 대 한 포인터입니다.  
   
 ```
@@ -146,7 +150,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="a-namegetcookiea--ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComUnkArray::GetCookie  
  와 관련 된 쿠키를 가져오려면이 메서드를 호출 하는 지정 된 **IUnknown** 포인터입니다.  
   
 ```
@@ -163,7 +167,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>주의  
  동일한 인스턴스가 여러 개 있는지 **IUnknown** 포인터를이 함수에 대 한 첫 번째 쿠키를 반환 합니다.  
   
-##  <a name="a-namegetunknowna--ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
  이 메서드를 호출 하는 **IUnknown** 주어진된 쿠키와 연결 된 포인터입니다.  
   
 ```
@@ -177,7 +181,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>반환 값  
  반환 된 **IUnknown** 포인터나 없는 일치 하는 쿠키를 찾을 수 없으면 NULL입니다.  
   
-##  <a name="a-nameremovea--ccomunkarrayremove"></a><a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>CComUnkArray::Remove  
  제거 하려면이 메서드를 호출 하는 **IUnknown** 배열에서 포인터입니다.  
   
 ```

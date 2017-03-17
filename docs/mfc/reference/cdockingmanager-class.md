@@ -10,6 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockingManager
+- AFXDOCKINGMANAGER/CDockingManager
+- AFXDOCKINGMANAGER/CDockingManager::AddDockSite
+- AFXDOCKINGMANAGER/CDockingManager::AddHiddenMDITabbedBar
+- AFXDOCKINGMANAGER/CDockingManager::AddMiniFrame
+- AFXDOCKINGMANAGER/CDockingManager::AddPane
+- AFXDOCKINGMANAGER/CDockingManager::AdjustDockingLayout
+- AFXDOCKINGMANAGER/CDockingManager::AdjustPaneFrames
+- AFXDOCKINGMANAGER/CDockingManager::AdjustRectToClientArea
+- AFXDOCKINGMANAGER/CDockingManager::AlignAutoHidePane
+- AFXDOCKINGMANAGER/CDockingManager::AutoHidePane
+- AFXDOCKINGMANAGER/CDockingManager::BringBarsToTop
+- AFXDOCKINGMANAGER/CDockingManager::BuildPanesMenu
+- AFXDOCKINGMANAGER/CDockingManager::CalcExpectedDockedRect
+- AFXDOCKINGMANAGER/CDockingManager::Create
+- AFXDOCKINGMANAGER/CDockingManager::DeterminePaneAndStatus
+- AFXDOCKINGMANAGER/CDockingManager::DisableRestoreDockState
+- AFXDOCKINGMANAGER/CDockingManager::DockPane
+- AFXDOCKINGMANAGER/CDockingManager::DockPaneLeftOf
+- AFXDOCKINGMANAGER/CDockingManager::EnableAutoHidePanes
+- AFXDOCKINGMANAGER/CDockingManager::EnableDocking
+- AFXDOCKINGMANAGER/CDockingManager::EnableDockSiteMenu
+- AFXDOCKINGMANAGER/CDockingManager::EnablePaneContextMenu
+- AFXDOCKINGMANAGER/CDockingManager::FindDockSite
+- AFXDOCKINGMANAGER/CDockingManager::FindDockSiteByPane
+- AFXDOCKINGMANAGER/CDockingManager::FindPaneByID
+- AFXDOCKINGMANAGER/CDockingManager::FixupVirtualRects
+- AFXDOCKINGMANAGER/CDockingManager::FrameFromPoint
+- AFXDOCKINGMANAGER/CDockingManager::GetClientAreaBounds
+- AFXDOCKINGMANAGER/CDockingManager::GetDockingMode
+- AFXDOCKINGMANAGER/CDockingManager::GetDockSiteFrameWnd
+- AFXDOCKINGMANAGER/CDockingManager::GetEnabledAutoHideAlignment
+- AFXDOCKINGMANAGER/CDockingManager::GetMiniFrames
+- AFXDOCKINGMANAGER/CDockingManager::GetOuterEdgeBounds
+- AFXDOCKINGMANAGER/CDockingManager::GetPaneList
+- AFXDOCKINGMANAGER/CDockingManager::GetSmartDockingManager
+- AFXDOCKINGMANAGER/CDockingManager::GetSmartDockingManagerPermanent
+- AFXDOCKINGMANAGER/CDockingManager::GetSmartDockingParams
+- AFXDOCKINGMANAGER/CDockingManager::GetSmartDockingTheme
+- AFXDOCKINGMANAGER/CDockingManager::HideAutoHidePanes
+- AFXDOCKINGMANAGER/CDockingManager::InsertDockSite
+- AFXDOCKINGMANAGER/CDockingManager::InsertPane
+- AFXDOCKINGMANAGER/CDockingManager::IsDockSiteMenu
+- AFXDOCKINGMANAGER/CDockingManager::IsInAdjustLayout
+- AFXDOCKINGMANAGER/CDockingManager::IsOLEContainerMode
+- AFXDOCKINGMANAGER/CDockingManager::IsPointNearDockSite
+- AFXDOCKINGMANAGER/CDockingManager::IsPrintPreviewValid
+- AFXDOCKINGMANAGER/CDockingManager::LoadState
+- AFXDOCKINGMANAGER/CDockingManager::LockUpdate
+- AFXDOCKINGMANAGER/CDockingManager::OnActivateFrame
+- AFXDOCKINGMANAGER/CDockingManager::OnClosePopupMenu
+- AFXDOCKINGMANAGER/CDockingManager::OnMoveMiniFrame
+- AFXDOCKINGMANAGER/CDockingManager::OnPaneContextMenu
+- AFXDOCKINGMANAGER/CDockingManager::PaneFromPoint
+- AFXDOCKINGMANAGER/CDockingManager::ProcessPaneContextMenuCommand
+- AFXDOCKINGMANAGER/CDockingManager::RecalcLayout
+- AFXDOCKINGMANAGER/CDockingManager::ReleaseEmptyPaneContainers
+- AFXDOCKINGMANAGER/CDockingManager::RemoveHiddenMDITabbedBar
+- AFXDOCKINGMANAGER/CDockingManager::RemoveMiniFrame
+- AFXDOCKINGMANAGER/CDockingManager::RemovePaneFromDockManager
+- AFXDOCKINGMANAGER/CDockingManager::ReplacePane
+- AFXDOCKINGMANAGER/CDockingManager::ResortMiniFramesForZOrder
+- AFXDOCKINGMANAGER/CDockingManager::SaveState
+- AFXDOCKINGMANAGER/CDockingManager::SendMessageToMiniFrames
+- AFXDOCKINGMANAGER/CDockingManager::Serialize
+- AFXDOCKINGMANAGER/CDockingManager::SetAutohideZOrder
+- AFXDOCKINGMANAGER/CDockingManager::SetDockingMode
+- AFXDOCKINGMANAGER/CDockingManager::SetDockState
+- AFXDOCKINGMANAGER/CDockingManager::SetPrintPreviewMode
+- AFXDOCKINGMANAGER/CDockingManager::SetSmartDockingParams
+- AFXDOCKINGMANAGER/CDockingManager::ShowDelayShowMiniFrames
+- AFXDOCKINGMANAGER/CDockingManager::ShowPanes
+- AFXDOCKINGMANAGER/CDockingManager::StartSDocking
+- AFXDOCKINGMANAGER/CDockingManager::StopSDocking
+- AFXDOCKINGMANAGER/CDockingManager::m_bHideDockingBarsInContainerMode
+- AFXDOCKINGMANAGER/CDockingManager::m_dockModeGlobal
+- AFXDOCKINGMANAGER/CDockingManager::m_nDockSensitivity
+- AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeDockingBarDock
+- AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeToolBarDock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -172,7 +250,7 @@ class CDockingManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDockingManager.h  
   
-##  <a name="a-nameadddocksitea--cdockingmanageradddocksite"></a><a name="adddocksite"></a>CDockingManager::AddDockSite  
+##  <a name="adddocksite"></a>CDockingManager::AddDockSite  
  도킹 창 만들고 컨트롤 막대의 목록에 추가 합니다.  
   
 ```  
@@ -191,7 +269,7 @@ BOOL AddDockSite(
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 창 성공적으로 만들어진 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameaddhiddenmditabbedbara--cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar  
+##  <a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar  
  모음에 대 한 핸들을 추가 숨겨진된 MDI 표시줄 창과 탭의 목록에는 창입니다.  
   
 ```  
@@ -202,7 +280,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
  [in] `pBar`  
  에 대 한 포인터를 막대로 창  
   
-##  <a name="a-nameaddpanea--cdockingmanageraddpane"></a><a name="addpane"></a>CDockingManager::AddPane  
+##  <a name="addpane"></a>CDockingManager::AddPane  
  창을 도킹 관리자에 등록합니다.  
   
 ```  
@@ -232,7 +310,7 @@ BOOL AddPane(
 ### <a name="remarks"></a>주의  
  비 부동, 크기 조정이 불가능 창 도킹 관리자와 등록 하려면이 메서드를 호출 합니다. 등록 하는 경우 수행 하지는 창이 올바르게 표시 되지 않을 도킹 관리자를 배치 하는 경우.  
   
-##  <a name="a-nameadjustdockinglayouta--cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout  
  다시 계산 하 고 프레임 창에서 모든 창 레이아웃을 조정 합니다.  
   
 ```  
@@ -245,7 +323,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddminiframea--cdockingmanageraddminiframe"></a><a name="addminiframe"></a>CDockingManager::AddMiniFrame  
+##  <a name="addminiframe"></a>CDockingManager::AddMiniFrame  
  프레임의 미니 프레임 목록에 추가합니다.  
   
 ```  
@@ -259,7 +337,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="return-value"></a>반환 값  
  `TRUE`미니 프레임의 목록에 없는 프레임과; 성공적으로 추가 하는 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameadjustpaneframesa--cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames  
  로 인해는 `WM_NCCALCSIZE` 모든 창에 보내야 하는 메시지 및 `CPaneFrameWnd` windows입니다.  
   
 ```  
@@ -268,7 +346,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameadjustrecttoclientareaa--cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea  
+##  <a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea  
  사각형의 맞춤을 조정합니다.  
   
 ```  
@@ -298,7 +376,7 @@ virtual BOOL AdjustRectToClientArea(
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="a-namealignautohidepanea--cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane  
+##  <a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane  
  전체 너비 걸리거나 주위 프레임의 클라이언트 영역 높이 도킹 사이트 도킹 창 자동 숨기기 모드로 크기를 조정 합니다.  
   
 ```  
@@ -314,7 +392,7 @@ void AlignAutoHidePane(
  [in] `bIsVisible`  
  `TRUE`도킹 창에 표시 되 면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameautohidepanea--cdockingmanagerautohidepane"></a><a name="autohidepane"></a>CDockingManager::AutoHidePane  
+##  <a name="autohidepane"></a>CDockingManager::AutoHidePane  
  자동 숨기기 도구 모음을 만듭니다.  
   
 ```  
@@ -333,7 +411,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 ### <a name="return-value"></a>반환 값  
  `NULL`자동 도구 모음 숨기기 만들어지지 않은 경우. 그렇지 않으면 새 도구 모음에 대 한 포인터입니다.  
   
-##  <a name="a-namebringbarstotopa--cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a>CDockingManager::BringBarsToTop  
+##  <a name="bringbarstotop"></a>CDockingManager::BringBarsToTop  
  지정 된 맞춤 맨 위에 있는 도킹 된 막대를 제공 합니다.  
   
 ```  
@@ -349,7 +427,7 @@ void BringBarsToTop(
  [in] `bExcludeDockedBars`  
  `TRUE`도킹 된 막대 위에;에서 제외 하려면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namebuildpanesmenua--cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu  
+##  <a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu  
  이름 도킹 창 및 도구 모음 메뉴에 추가합니다.  
   
 ```  
@@ -365,7 +443,7 @@ void BuildPanesMenu(
  [in] `bToolbarsOnly`  
  `TRUE`도구 모음 이름만; 메뉴에 추가 하려면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-namecalcexpecteddockedrecta--cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect  
  도킹된 된 창의 예상된 사각형을 계산합니다.  
   
 ```  
@@ -396,7 +474,7 @@ void CalcExpectedDockedRect(
 ### <a name="remarks"></a>주의  
  이 메서드는 사용자 지정 된 지점에 창을 끌어 경우 창이 차지 하는 사각형 계산 `ptMouse` 있습니다 도킹 것입니다.  
   
-##  <a name="a-namecreatea--cdockingmanagercreate"></a><a name="create"></a>CDockingManager::Create  
+##  <a name="create"></a>CDockingManager::Create  
  도킹 관리자를 만듭니다.  
   
 ```  
@@ -410,7 +488,7 @@ BOOL Create(CFrameWnd* pParentWnd);
 ### <a name="return-value"></a>반환 값  
  `TRUE`항상 있습니다.  
   
-##  <a name="a-namedeterminepaneandstatusa--cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus  
+##  <a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus  
  지정된 된 지점 및 도킹 상태를 포함 하는 창을 확인 합니다.  
   
 ```  
@@ -455,7 +533,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 |CS_DELAY_DOCK|도크 사이트 다른 도킹 창 또는 주 프레임의 가장자리를 가장 위에 포인터를 합니다.|  
 |CS_DELAY_DOCK_TO_TAB|포인터를 창에 탭된 창에 도킹할 수 있는 도킹 사이트 끝났습니다. 이 마우스 탭된 창의 탭 영역 위 또는 다른 도킹 창의 캡션을 위에 놓을 때 발생 합니다.|  
   
-##  <a name="a-namedisablerestoredockstatea--cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState  
+##  <a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState  
  레지스트리에서 도킹 레이아웃의 로드를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -469,7 +547,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ### <a name="remarks"></a>주의  
  응용 프로그램 상태를 로드할 때 현재 레이아웃 도킹 창 및 도구 모음을 유지 해야 하는 경우이 메서드를 호출 합니다.  
   
-##  <a name="a-namedockpanea--cdockingmanagerdockpane"></a><a name="dockpane"></a>CDockingManager::DockPane  
+##  <a name="dockpane"></a>CDockingManager::DockPane  
  창을 다른 창 또는 프레임 창에 도킹합니다.  
   
 ```  
@@ -489,7 +567,7 @@ void DockPane(
  [in] `lpRect`  
  대상 사각형입니다.  
   
-##  <a name="a-namedockpaneleftofa--cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf  
  창을 다른 창의 왼쪽에 도킹합니다.  
   
 ```  
@@ -508,7 +586,7 @@ BOOL DockPaneLeftOf(
 ### <a name="return-value"></a>반환 값  
  `TRUE`창에서 성공적으로 고정 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameenableautohidepanesa--cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes  
  주 프레임 창의 도킹을 사용 하는 도킹 창 만들고 컨트롤 막대의 목록에 추가 합니다.  
   
 ```  
@@ -522,7 +600,7 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 창 성공적으로 만들어진 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameenabledockinga--cdockingmanagerenabledocking"></a><a name="enabledocking"></a>CDockingManager::EnableDocking  
+##  <a name="enabledocking"></a>CDockingManager::EnableDocking  
  도킹 창 만들고를 주 프레임 창의 도킹을 사용 합니다.  
   
 ```  
@@ -536,7 +614,7 @@ BOOL EnableDocking(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 창 성공적으로 만들어진 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameenabledocksitemenua--cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu  
+##  <a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu  
  모든 도킹 창 캡션에 팝업 메뉴를 열고 하는 추가 단추를 표시 합니다.  
   
 ```  
@@ -560,7 +638,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
   
  이 메뉴는 기본적으로 표시 되지 않습니다.  
   
-##  <a name="a-nameenablepanecontextmenua--cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu  
+##  <a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu  
  사용자가 마우스 오른쪽 단추를 클릭 하 고 라이브러리는 WM_CONTEXTMENU 메시지를 처리 하는 경우 응용 프로그램 도구 모음 및 도킹 창 목록을 특수 한 상황에 맞는 메뉴를 표시 하도록 라이브러리를 알려 줍니다.  
   
 ```  
@@ -584,7 +662,7 @@ void EnablePaneContextMenu(
  [in] `bToolbarsOnly`  
  경우 `TRUE`, 메뉴 경우 응용 프로그램 도구 모음; 목록만 표시 `FALSE`, 라이브러리 도킹 창 응용 프로그램을이 목록에 추가 합니다.  
   
-##  <a name="a-namefinddocksitea--cdockingmanagerfinddocksite"></a><a name="finddocksite"></a>CDockingManager::FindDockSite  
+##  <a name="finddocksite"></a>CDockingManager::FindDockSite  
  막대를 검색 하는 지정된 된 위치에는 창 지정 된 맞춤 합니다.  
   
 ```  
@@ -603,7 +681,7 @@ virtual CDockSite* FindDockSite(
 ### <a name="return-value"></a>반환 값  
  지정 된 맞춤;에 있는 도킹 창 `NULL` 그렇지 않은 경우.  
   
-##  <a name="a-namefindpanebyida--cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a>CDockingManager::FindPaneByID  
+##  <a name="findpanebyid"></a>CDockingManager::FindPaneByID  
  창을 지정 된 컨트롤 id를 찾습니다.  
   
 ```  
@@ -624,7 +702,7 @@ virtual CBasePane* FindPaneByID(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namefinddocksitebypanea--cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane  
+##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane  
  막대를 반환 합니다. 대상 표시줄 창의 id가 있는 창입니다.  
   
 ```  
@@ -638,7 +716,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ### <a name="return-value"></a>반환 값  
  막대 대상 표시줄 창의; id가 있는 창 `NULL` 창 막대 없는 등가 있는 경우.  
   
-##  <a name="a-namefixupvirtualrectsa--cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects  
  현재 모든 도구 모음 위치를 가상 사각형에 커밋합니다.  
   
 ```  
@@ -648,7 +726,7 @@ virtual void FixupVirtualRects();
 ### <a name="remarks"></a>주의  
  응용 프로그램은 원래 위치에서 기억는 사용자가 끌어 도구 모음을 시작 하는 경우는 *가상 사각형*합니다. 도크 사이트의 전체 도구 모음을 이동 하면 도구 모음에는 다른 도구 모음 바뀔 수 있습니다. 다른 도구 모음의 원래 위치는 해당 가상 사각형에 저장 됩니다.  
   
-##  <a name="a-nameframefrompointa--cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a>CDockingManager::FrameFromPoint  
+##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint  
  지정 된 지점이 포함 된 프레임을 반환 합니다.  
   
 ```  
@@ -671,7 +749,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ### <a name="return-value"></a>반환 값  
  지정된 된 지점;가 포함 된 프레임 `NULL` 그렇지 않은 경우.  
   
-##  <a name="a-namegetclientareaboundsa--cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds  
+##  <a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds  
  클라이언트 영역 경계를 포함 하는 사각형을 가져옵니다.  
   
 ```  
@@ -687,7 +765,7 @@ void GetClientAreaBounds(CRect& rcClient);
 ### <a name="return-value"></a>반환 값  
  클라이언트 영역 경계를 포함 하는 사각형입니다.  
   
-##  <a name="a-namegetdockingmodea--cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a>CDockingManager::GetDockingMode  
+##  <a name="getdockingmode"></a>CDockingManager::GetDockingMode  
  현재 도킹 모드를 반환합니다.  
   
 ```  
@@ -706,7 +784,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 ### <a name="remarks"></a>주의  
  도킹 모드를 설정 하려면 호출 [CDockingManager::SetDockingMode](#setdockingmode)합니다.  
   
-##  <a name="a-namegetdocksiteframewnda--cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd  
  부모 창 프레임에 대 한 포인터를 가져옵니다.  
   
 ```  
@@ -716,7 +794,7 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 ### <a name="return-value"></a>반환 값  
  부모 창 프레임에 대 한 포인터입니다.  
   
-##  <a name="a-namegetenabledautohidealignmenta--cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment  
+##  <a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment  
  창을 활성화 된 맞춤을 반환 합니다.  
   
 ```  
@@ -729,7 +807,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 ### <a name="remarks"></a>주의  
  메서드 자동 숨기기 컨트롤 막대에 대 한 활성화 된 맞춤을 반환합니다. 자동 숨기기 막대를 사용 하도록 설정 하려면 호출 [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)합니다.  
   
-##  <a name="a-namegetminiframesa--cdockingmanagergetminiframes"></a><a name="getminiframes"></a>CDockingManager::GetMiniFrames  
+##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames  
  미니 컴퓨터의 목록을 가져옵니다.  
   
 ```  
@@ -739,7 +817,7 @@ const CObList& GetMiniFrames() const;
 ### <a name="return-value"></a>반환 값  
  도킹 관리자에 속해 있는 컨트롤 막대를 포함 하는 미니 컴퓨터의 목록이 됩니다.  
   
-##  <a name="a-namegetouteredgeboundsa--cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds  
+##  <a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds  
  프레임의 외부 가장자리를 포함 하는 사각형을 가져옵니다.  
   
 ```  
@@ -749,7 +827,7 @@ CRect GetOuterEdgeBounds() const;
 ### <a name="return-value"></a>반환 값  
  프레임의 외부 가장자리를 포함 하는 사각형입니다.  
   
-##  <a name="a-namegetpanelista--cdockingmanagergetpanelist"></a><a name="getpanelist"></a>CDockingManager::GetPaneList  
+##  <a name="getpanelist"></a>CDockingManager::GetPaneList  
  창 도킹 관리자에 속하는 목록을 반환 합니다. 여기에 모든 부동 창 포함 됩니다.  
   
 ```  
@@ -778,7 +856,7 @@ void GetPaneList(
   
  사용 하 여 `pRTCFilter` 창의 특정 클래스를 얻을 수 있습니다. 예를 들어이 값을 적절 하 게 설정 하 여 도구 모음만 얻을 수 있습니다.  
   
-##  <a name="a-namegetsmartdockingmanagera--cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager  
+##  <a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager  
  스마트 도킹 관리자에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -788,7 +866,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [스마트 도킹 관리자](http://msdn.microsoft.com/en-us/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)합니다.  
   
-##  <a name="a-namegetsmartdockingmanagerpermanenta--cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent  
+##  <a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent  
  스마트 도킹 관리자에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -798,7 +876,7 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ### <a name="return-value"></a>반환 값  
  스마트 도킹 관리자에 대 한 포인터입니다.  
   
-##  <a name="a-namegetsmartdockingparamsa--cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams  
+##  <a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams  
  도킹 관리자에 대 한 스마트 도킹 매개 변수를 반환 합니다.  
   
 ```  
@@ -810,7 +888,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehideautohidepanesa--cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes  
+##  <a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes  
  자동 숨기기 모드에 있는 창을 숨깁니다.  
   
 ```  
@@ -826,7 +904,7 @@ void HideAutoHidePanes(
  [in] `bImmediately`  
  `TRUE`즉시 창을 숨기려면 `FALSE` 자동 숨기기 효과 함께 창을 숨기려면 합니다.  
   
-##  <a name="a-nameinsertdocksitea--cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a>CDockingManager::InsertDockSite  
+##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite  
  도킹 창 만들고 컨트롤 막대의 목록에 삽입 합니다.  
   
 ```  
@@ -849,7 +927,7 @@ BOOL InsertDockSite(
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 창 성공적으로 만들어진 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameinsertpanea--cdockingmanagerinsertpane"></a><a name="insertpane"></a>CDockingManager::InsertPane  
+##  <a name="insertpane"></a>CDockingManager::InsertPane  
  컨트롤 창 컨트롤 모음 목록에 삽입합니다.  
   
 ```  
@@ -875,7 +953,7 @@ BOOL InsertPane(
 ### <a name="remarks"></a>주의  
  이 메서드는 대상 창의 컨트롤 막대의 목록에 없는 경우 또는 컨트롤 창 컨트롤 모음 목록에 이미 있으면 false를 반환 합니다.  
   
-##  <a name="a-nameisdocksitemenua--cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu  
+##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu  
  팝업 메뉴 알림의 모든 창에 표시 되는지 여부를 지정 합니다.  
   
 ```  
@@ -888,7 +966,7 @@ static BOOL IsDockSiteMenu();
 ### <a name="remarks"></a>주의  
  도킹 사이트 메뉴를 호출 하 여 설정할 수 있습니다 [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)합니다.  
   
-##  <a name="a-nameisinadjustlayouta--cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout  
+##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout  
  모든 창 레이아웃을 조정 하는 경우를 결정 합니다.  
   
 ```  
@@ -898,7 +976,7 @@ BOOL IsInAdjustLayout() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`모든 창 레이아웃은 조정 하는 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameisolecontainermodea--cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode  
+##  <a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode  
  OLE 컨테이너 모드 도킹 관리자 인지 여부를 지정 합니다.  
   
 ```  
@@ -911,7 +989,7 @@ BOOL IsOLEContainerMode() const;
 ### <a name="remarks"></a>주의  
  OLE 컨테이너 모드에서는 모든 도킹 창 및 응용 프로그램 도구 모음이 숨겨져 있습니다. 창이 숨겨집니다이 모드로 설정한 경우 [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) 를 `TRUE`합니다.  
   
-##  <a name="a-nameispointneardocksitea--cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite  
  도킹 사이트 근처에 지정된 된 지점 인지 확인 합니다.  
   
 ```  
@@ -934,7 +1012,7 @@ BOOL IsPointNearDockSite(
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 사이트; 근처 포인터가 있는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameisprintpreviewvalida--cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid  
+##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid  
  인쇄 미리 보기 모드가 설정 된 경우를 결정 합니다.  
   
 ```  
@@ -944,7 +1022,7 @@ BOOL IsPrintPreviewValid() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`인쇄 미리 보기 모드로 설정 됩니다. `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameloadstatea--cdockingmanagerloadstate"></a><a name="loadstate"></a>CDockingManager::LoadState  
+##  <a name="loadstate"></a>CDockingManager::LoadState  
  레지스트리에서 도킹 관리자의 상태를 로드합니다.  
   
 ```  
@@ -963,7 +1041,7 @@ virtual BOOL LoadState(
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 관리자 상태를 성공적으로 로드 한 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namelockupdatea--cdockingmanagerlockupdate"></a><a name="lockupdate"></a>CDockingManager::LockUpdate  
+##  <a name="lockupdate"></a>CDockingManager::LockUpdate  
  지정된 된 창을 잠급니다.  
   
 ```  
@@ -977,7 +1055,7 @@ void LockUpdate(BOOL bLock);
 ### <a name="remarks"></a>주의  
  창이 잠기면 이동할 수 없습니다 하 고 다시 그릴 수 없습니다.  
   
-##  <a name="a-namembhidedockingbarsincontainermodea--cdockingmanagermbhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode  
+##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode  
  OLE 컨테이너 모드의 창을 도킹 관리자에 숨기도록 있는지 여부를 지정 합니다.  
   
 ```  
@@ -987,7 +1065,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 ### <a name="remarks"></a>주의  
  이 값을 설정 `FALSE` 표시 주 프레임에 도킹 하는 모든 창 유지 하려는 경우 응용 프로그램이 모드일 때 OLE 컨테이너입니다. 기본적으로이 값은 `TRUE`합니다.  
   
-##  <a name="a-namemdockmodeglobala--cdockingmanagermdockmodeglobal"></a><a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal  
+##  <a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal  
  전역 도킹 모드를 지정합니다.  
   
 ```  
@@ -997,7 +1075,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 ### <a name="remarks"></a>주의  
  기본적으로 각 도킹 창 도킹이 모드를 사용 합니다. 이 필드를 설정할 수 있는 값에 대 한 자세한 내용은 참조 [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode)합니다.  
   
-##  <a name="a-namemndocksensitivitya--cdockingmanagermndocksensitivity"></a><a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity  
+##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity  
  도킹 민감도 지정합니다.  
   
 ```  
@@ -1007,7 +1085,7 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 ### <a name="remarks"></a>주의  
  도킹 민감도 정의 정도 부동 도킹 상태를 변경 하는 프레임 워크 전에 창 도킹 창, 도킹 사이트 또는 다른 창을 높일 수 있습니다.  
   
-##  <a name="a-namemntimeoutbeforedockingbardocka--cdockingmanagermntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock  
+##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock  
  즉시 도킹 모드에서 도킹 창을 도킹 전에 시간을 밀리초 단위로 지정 합니다.  
   
 ```  
@@ -1017,7 +1095,7 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 ### <a name="remarks"></a>주의  
  창을 도킹 되어 전에 프레임 워크에는 지정 된 기간 동안 대기 합니다. 이렇게 하면 창을에서 실수로 사용자가 끌지 여전히 동안 위치에 도킹 되지 않습니다.  
   
-##  <a name="a-namemntimeoutbeforetoolbardocka--cdockingmanagermntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock  
+##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock  
  주 프레임 창에는 도구 모음 도킹 전에 시간을 밀리초 단위로 지정 합니다.  
   
 ```  
@@ -1027,7 +1105,7 @@ static UINT m_nTimeOutBeforeToolBarDock;
 ### <a name="remarks"></a>주의  
  도구 모음, 도킹 전에 프레임 워크에는 지정 된 기간 동안 대기 합니다. 이렇게 하면 도구 모음을에서 실수로 사용자가 끌지 여전히 동안 위치에 도킹 되지 않습니다.  
   
-##  <a name="a-nameonactivateframea--cdockingmanageronactivateframe"></a><a name="onactivateframe"></a>CDockingManager::OnActivateFrame  
+##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame  
  프레임 창 활성화 또는 비활성화 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1038,7 +1116,7 @@ virtual void OnActivateFrame(BOOL bActivate);
  [in] `bActivate`  
  경우 `TRUE`, 프레임 창은 활성 상태가 됩니다 경우 `FALSE`, 프레임 창은 비활성화 됩니다.  
   
-##  <a name="a-nameonclosepopupmenua--cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu  
  활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -1048,7 +1126,7 @@ void OnClosePopupMenu();
 ### <a name="remarks"></a>주의  
  현재 기본 창을 닫으려면 하려고 하는 경우 프레임 워크 WM_DESTROY 메시지를 보냅니다. 알림을 처리 하도록이 메서드를 재정의 `CMFCPopupMenu` 프레임 창에 속하는 개체 때는 `CMFCPopupMenu` 프로세스 개체를 `WM_DESTROY` 메시지입니다.  
   
-##  <a name="a-nameonmoveminiframea--cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame  
  미니 프레임 창을 이동 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1062,7 +1140,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드가 성공 합니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameonpanecontextmenua--cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu  
+##  <a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu  
  창의 목록에 있는 메뉴를 빌드할 때에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1073,7 +1151,7 @@ void OnPaneContextMenu(CPoint point);
  [in] `point`  
  메뉴의 위치를 지정합니다.  
   
-##  <a name="a-namepanefrompointa--cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a>CDockingManager::PaneFromPoint  
+##  <a name="panefrompoint"></a>CDockingManager::PaneFromPoint  
  지정 된 지점이 포함 된 창을 반환 합니다.  
   
 ```  
@@ -1121,7 +1199,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>주의  
  함수 반환 하 고 창을 검색 하는 경우 `dwAlignment` 맞춤을 지정 된 위치를 포함 합니다. 예를 들어, 지점 창의 위쪽에 가장 가까운 되었으면 `dwAlignment` 로 설정 된 `CBRS_ALIGN_TOP`합니다.  
   
-##  <a name="a-nameprocesspanecontextmenucommanda--cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand  
+##  <a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand  
  프레임 워크를 선택 하거나 지정된 된 명령에 대 한 확인란의 선택을 취소 하 고 표시 된 창의 레이아웃을 다시 계산에 의해 호출 됩니다.  
   
 ```  
@@ -1148,7 +1226,7 @@ BOOL ProcessPaneContextMenuCommand(
 ### <a name="return-value"></a>반환 값  
  `TRUE`경우 `pEXtra` NULL이 아닌 및 `nCode` CN_UPDATE_COMMAND_UI, equals 또는 지정 된 컨트롤 막대 경우 `nID`합니다.  
   
-##  <a name="a-namerecalclayouta--cdockingmanagerrecalclayout"></a><a name="recalclayout"></a>CDockingManager::RecalcLayout  
+##  <a name="recalclayout"></a>CDockingManager::RecalcLayout  
  컨트롤의 목록에 있는 컨트롤의 내부 레이아웃을 다시 계산합니다.  
   
 ```  
@@ -1159,14 +1237,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
  [in] `bNotify`  
  이 매개 변수는 사용되지 않습니다.  
   
-##  <a name="a-namereleaseemptypanecontainersa--cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers  
+##  <a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers  
  빈 창 컨테이너를 해제합니다.  
   
 ```  
 void ReleaseEmptyPaneContainers();
 ```  
   
-##  <a name="a-nameremovehiddenmditabbedbara--cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar  
+##  <a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar  
  지정 된 창 막대 숨겨진를 제거 합니다.  
   
 ```  
@@ -1177,7 +1255,7 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
  [in] `pBar`  
  모음에 대 한 포인터를 제거 하는 창입니다.  
   
-##  <a name="a-nameremoveminiframea--cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame  
+##  <a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame  
  미니 프레임의 목록에서 지정된 된 프레임을 제거 합니다.  
   
 ```  
@@ -1191,7 +1269,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="return-value"></a>반환 값  
  `TRUE`지정된 된 프레임 제거 하는 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameremovepanefromdockmanagera--cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager  
  창을 등록을 취소 하 고 도킹 관리자의 목록에서 제거 합니다.  
   
 ```  
@@ -1219,7 +1297,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  제거 창을 대체 하는 창에 대 한 포인터입니다.  
   
-##  <a name="a-namereplacepanea--cdockingmanagerreplacepane"></a><a name="replacepane"></a>CDockingManager::ReplacePane  
+##  <a name="replacepane"></a>CDockingManager::ReplacePane  
  한 창을 다른 창으로 대체합니다.  
   
 ```  
@@ -1238,14 +1316,14 @@ BOOL ReplacePane(
 ### <a name="return-value"></a>반환 값  
  `TRUE`사용 하면 창에서 성공적으로; `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameresortminiframesforzordera--cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder  
+##  <a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder  
  미니 프레임의 목록에서 프레임을 써야 합니다.  
   
 ```  
 void ResortMiniFramesForZOrder();
 ```  
   
-##  <a name="a-namesavestatea--cdockingmanagersavestate"></a><a name="savestate"></a>CDockingManager::SaveState  
+##  <a name="savestate"></a>CDockingManager::SaveState  
  레지스트리에 도킹 관리자의 상태를 저장합니다.  
   
 ```  
@@ -1267,7 +1345,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>주의  
  도킹 관리자의 상태를 레지스트리에 저장 컨트롤 막대의 상태, 자동 숨기기 막대의 상태 및 도킹 관리자에 있는 미니 프레임의 상태를 저장 하는 것입니다.  
   
-##  <a name="a-namesendmessagetominiframesa--cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames  
+##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames  
  모든 미니 프레임에 지정된 된 메시지를 보냅니다.  
   
 ```  
@@ -1290,7 +1368,7 @@ BOOL SendMessageToMiniFrames(
 ### <a name="return-value"></a>반환 값  
  `TRUE`항상 있습니다.  
   
-##  <a name="a-nameserializea--cdockingmanagerserialize"></a><a name="serialize"></a>CDockingManager::Serialize  
+##  <a name="serialize"></a>CDockingManager::Serialize  
  아카이브를 도킹 관리자를 씁니다.  
   
 ```  
@@ -1304,7 +1382,7 @@ void Serialize(CArchive& ar);
 ### <a name="remarks"></a>주의  
  아카이브를 도킹 관리자를 쓰는 도킹 컨트롤 막대 및 슬라이더 및 컨트롤 막대, 미니 프레임, 자동 숨기기 막대 및 MDI 탭 막대 보관 파일에 쓰기 수를 확인 해야 합니다.  
   
-##  <a name="a-namesetautohidezordera--cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder  
+##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder  
  크기, 너비 및 지정 된 창의 컨트롤 막대의 높이 설정합니다.  
   
 ```  
@@ -1315,7 +1393,7 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
  [in] `pAHDockingBar`  
  도킹 가능한 창에 대 한 포인터입니다.  
   
-##  <a name="a-namesetdockingmodea--cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a>CDockingManager::SetDockingMode  
+##  <a name="setdockingmode"></a>CDockingManager::SetDockingMode  
  도킹 모드를 설정합니다.  
   
 ```  
@@ -1342,14 +1420,14 @@ static void SetDockingMode(
   
 - `DT_SMART`-Visual Studio 2005에서 구현 되는 도킹 모드를 스마트 합니다. 끌기 컨텍스트와 끈 창 및 스마트 표식이 표시 되는 창에서 도킹 될 수 있는 표시를 합니다.  
   
-##  <a name="a-namesetdockstatea--cdockingmanagersetdockstate"></a><a name="setdockstate"></a>CDockingManager::SetDockState  
+##  <a name="setdockstate"></a>CDockingManager::SetDockState  
  컨트롤 막대, 미니 프레임 및 자동 숨기기 막대의 도킹 상태를 설정합니다.  
   
 ```  
 virtual void SetDockState();
 ```  
   
-##  <a name="a-namesetprintpreviewmodea--cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode  
+##  <a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode  
  인쇄 미리 보기에 표시 되는 막대의 인쇄 미리 보기 모드를 설정 합니다.  
   
 ```  
@@ -1365,7 +1443,7 @@ void SetPrintPreviewMode(
  [in] `pState`  
  미리 보기 상태에 대 한 포인터입니다. 이 매개 변수는 사용되지 않습니다.  
   
-##  <a name="a-namesetsmartdockingparamsa--cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams  
+##  <a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams  
  스마트 도킹의 동작을 정의 하는 매개 변수를 설정 합니다.  
   
 ```  
@@ -1381,7 +1459,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
   
  스마트 도킹 표식에 대 한 기본 모양이 사용 하 여 초기화 되지 않은 인스턴스를 전달 [CSmartDockingInfo 클래스](../../mfc/reference/csmartdockinginfo-class.md) 를 `params`합니다.  
   
-##  <a name="a-nameshowdelayshowminiframesa--cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames  
+##  <a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames  
  표시 하거나 미니 프레임 창을 숨깁니다.  
   
 ```  
@@ -1392,7 +1470,7 @@ void ShowDelayShowMiniFrames(BOOL bshow);
  [in] `bShow`  
  `TRUE`표시 된 프레임의 창; 활성화 하려면 `FALSE to` 프레임 창을 숨깁니다.  
   
-##  <a name="a-nameshowpanesa--cdockingmanagershowpanes"></a><a name="showpanes"></a>CDockingManager::ShowPanes  
+##  <a name="showpanes"></a>CDockingManager::ShowPanes  
  표시 하거나 제어 및 자동 숨기기 표시줄의 창을 숨깁니다.  
   
 ```  
@@ -1406,7 +1484,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 ### <a name="return-value"></a>반환 값  
  항상 `FALSE`입니다.  
   
-##  <a name="a-namestartsdockinga--cdockingmanagerstartsdocking"></a><a name="startsdocking"></a>CDockingManager::StartSDocking  
+##  <a name="startsdocking"></a>CDockingManager::StartSDocking  
  스마트 도킹 관리자의 맞춤에 따라 지정 된 창의 스마트 도킹을 시작 합니다.  
   
 ```  
@@ -1417,14 +1495,14 @@ void StartSDocking(CWnd* pDockingWnd);
  [in] `pDockingWnd`  
  도킹 창에 대 한 포인터입니다.  
   
-##  <a name="a-namestopsdockinga--cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a>CDockingManager::StopSDocking  
+##  <a name="stopsdocking"></a>CDockingManager::StopSDocking  
  중지 스마트 도킹 합니다.  
   
 ```  
 void StopSDocking();
 ```  
   
-##  <a name="a-namegetsmartdockingthemea--cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme  
+##  <a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme  
  스마트 도킹 표식 표시 하는 데 사용 되는 테마를 반환 하는 정적 메서드.  
   
 ```  

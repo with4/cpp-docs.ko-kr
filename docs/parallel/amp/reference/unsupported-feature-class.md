@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::unsupported_feature
+- unsupported_feature
+- AMPRT/unsupported_feature
+- AMPRT/Concurrency::unsupported_feature
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +66,7 @@ class unsupported_feature : public runtime_exception;
   
  `unsupported_feature`  
   
-## <a name="a-nameunsupportedfeaturectora-unsupportedfeature"></a><a name="unsupported_feature__ctor"></a>unsupported_feature 
+## <a name="unsupported_feature__ctor"></a>unsupported_feature 
 
   Unsupported_feature 예외의 새 인스턴스를 생성합니다.  
   

@@ -10,8 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
-- ATL::CFirePropNotifyEvent
-- ATL.CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +75,7 @@ class CFirePropNotifyEvent
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namefireonchangeda--cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
  모든 알립니다 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성이 변경 되는 인터페이스입니다.  
   
 ```
@@ -94,7 +95,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>주의  
  이 함수는 안전 컨트롤 연결 포인트를 지원 하지 않는 경우에 호출 합니다.  
   
-##  <a name="a-namefireonrequestedita--cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
  모든 알립니다 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성 변경 되려고 하는 인터페이스입니다.  
   
 ```

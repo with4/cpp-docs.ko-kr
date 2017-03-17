@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl::EnableMarkSortedColumn
+- AFXLISTCTRL/CMFCListCtrl::EnableMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::GetHeaderCtrl
+- AFXLISTCTRL/CMFCListCtrl::IsMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::OnCompareItems
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellBkColor
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellFont
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellTextColor
+- AFXLISTCTRL/CMFCListCtrl::RemoveSortColumn
+- AFXLISTCTRL/CMFCListCtrl::SetSortColumn
+- AFXLISTCTRL/CMFCListCtrl::Sort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +101,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxlistctrl.h  
   
-##  <a name="a-nameenablemarksortedcolumna--cmfclistctrlenablemarksortedcolumn"></a><a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
  다른 배경색으로 정렬 된 열을 표시합니다.  
   
 ```  
@@ -108,7 +120,7 @@ void EnableMarkSortedColumn(
 ### <a name="remarks"></a>주의  
  `EnableMarkSortedColumn`메서드를 사용 하 여 `CDrawingManager::PixelAlpha` 정렬 된 열에 사용할 색을 계산 합니다. 선택한 색은 일반 배경색을 기반으로 합니다.  
   
-##  <a name="a-nameenablemultiplesorta--cmfclistctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
  여러 열 목록 컨트롤에서 데이터의 행을 정렬할 수 있습니다.  
   
 ```  
@@ -122,7 +134,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>주의  
  여러 열에 따라 정렬 사용 하도록 설정 하면 열 계층이 필요가 있습니다. 데이터 행을 기본 열에 의해 먼저 정렬 됩니다. 그런 다음 해당 하는 모든 값 우선 순위에 따라 각 후속 열 정렬 됩니다.  
   
-##  <a name="a-namegetheaderctrla--cmfclistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
  헤더 컨트롤에 대 한 참조를 반환합니다.  
   
 ```  
@@ -135,7 +147,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>주의  
  목록 컨트롤에 대 한 헤더 컨트롤에 열 제목을 포함 하는 창입니다. 일반적으로 열 바로 위에 배치 됩니다.  
   
-##  <a name="a-nameismultiplesorta--cmfclistctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
  목록 컨트롤의 현재에서 정렬을 지원 하는지를 여러 열에 대해 확인 합니다.  
   
 ```  
@@ -148,7 +160,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>주의  
  경우는 [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md) 여러 정렬을 지 원하는 사용자 여러 열 목록 컨트롤에서 데이터를 정렬할 수 있습니다. 여러 정렬 기능을 사용 하려면 호출 [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)합니다.  
   
-##  <a name="a-nameoncompareitemsa--cmfclistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
  프레임 워크는 두 개의 항목을 비교 하는 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -174,7 +186,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>주의  
  기본 구현에서는 항상 0을 반환합니다. 정렬 알고리즘을 제공 하려면이 함수를 재정의 해야 합니다.  
   
-##  <a name="a-nameongetcellbkcolora--cmfclistctrlongetcellbkcolor"></a><a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
  프레임 워크는 개별 셀의 배경색을 결정 해야 할 때이 메서드를 호출 합니다.  
   
 ```  
@@ -196,7 +208,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>주의  
  기본 구현은 `OnGetCellBkColor` 제공된 된 입력된 매개 변수를 사용 하지 않는 한 대신 호출 `GetBkColor`합니다. 따라서 기본적으로 전체 목록 컨트롤에는 동일한 배경색을 갖게 됩니다. 재정의할 수 `OnGetCellBkColor` 별도 배경색으로 개별 셀을 표시 하는 파생된 클래스에 있습니다.  
   
-##  <a name="a-nameongetcellfonta--cmfclistctrlongetcellfont"></a><a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
  프레임 워크는 개별 셀에 대 한 글꼴 얻을 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -222,7 +234,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 다음과 같이 반환 됩니다. `NULL`합니다. 목록 컨트롤의 셀 모두에 동일한 글꼴이 되어 있습니다. 다른 셀에 대 한 다양 한 글꼴을 제공 하기 위해이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameongetcelltextcolora--cmfclistctrlongetcelltextcolor"></a><a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
  프레임 워크는 개별 셀의 텍스트 색을 결정 해야 할 때이 메서드를 호출 합니다.  
   
 ```  
@@ -244,7 +256,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 다음과 같이 호출 됩니다. `GetTextColor` 에 관계 없이 입력된 매개 변수입니다. 전체 목록 컨트롤에는 동일한 텍스트 색을 갖게 됩니다. 재정의할 수 `OnGetCellTextColor` 개별 셀을 별도 텍스트 색을 표시 하는 파생된 클래스에 있습니다.  
   
-##  <a name="a-nameremovesortcolumna--cmfclistctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
  정렬 된 열 목록에서 정렬 열을 제거합니다.  
   
 ```  
@@ -258,7 +270,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>주의  
  이 메서드는 헤더 컨트롤에서 정렬 열을 제거합니다. 호출 [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)합니다.  
   
-##  <a name="a-namesetsortcolumna--cmfclistctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
  현재 정렬 된 열 및 정렬 순서를 설정합니다.  
   
 ```  
@@ -281,7 +293,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>주의  
  이 메서드는 메서드를 사용 하 여 헤더 컨트롤에 입력된 매개 변수를 전달 [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)합니다.  
   
-##  <a name="a-namesorta--cmfclistctrlsort"></a><a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>CMFCListCtrl::Sort  
  목록 컨트롤을 정렬합니다.  
   
 ```  

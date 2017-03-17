@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
+- AFXCOLL/CMapStringToString
+- AFXCOLL/CMapStringToString::CPair
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToString::PGetFirstAssoc
+- AFXCOLL/CMapStringToString::PGetNextAssoc
+- AFXCOLL/CMapStringToString::PLookup
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +135,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="a-namecpaira--cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>CMapStringToString::CPair  
  키 값과 연결 된 문자열 개체의 값을 포함합니다.  
   
 ### <a name="remarks"></a>주의  
@@ -133,7 +152,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>예제  
   사용의 예에 대 한 예제를 참조 하십시오. [CMapStringToString::PLookup](#plookup)합니다.  
   
-##  <a name="a-namepgetfirstassoca--cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
  Map 개체의 첫 번째 항목을 반환합니다.  
   
 ```  
@@ -151,7 +170,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&73;](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
  가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
   
 ```  
@@ -173,7 +192,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>예제  
   예를 참조 [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
-##  <a name="a-nameplookupa--cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>CMapStringToString::PLookup  
  지정된 된 키에 매핑된 값을 조회 합니다.  
   
 ```  

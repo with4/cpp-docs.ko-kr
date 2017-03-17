@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleException
+- AFXDISP/COleException
+- AFXDISP/COleException::Process
+- AFXDISP/COleException::m_sc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +83,7 @@ class COleException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namemsca--coleexceptionmsc"></a><a name="m_sc"></a>COleException::m_sc  
+##  <a name="m_sc"></a>COleException::m_sc  
  이 데이터 멤버는 예외에 대 한 이유를 나타내는 OLE 상태 코드를 보유 합니다.  
   
 ```  
@@ -95,7 +98,7 @@ SCODE m_sc;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&22;](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
-##  <a name="a-nameprocessa--coleexceptionprocess"></a><a name="process"></a>COleException::Process  
+##  <a name="process"></a>COleException::Process  
  호출 된 **프로세스** 멤버 함수를 변환 OLE 상태 코드에 예외가 발생 했습니다.  
   
 ```  

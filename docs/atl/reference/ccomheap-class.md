@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComHeap
-- ATL.CComHeap
-- ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap::Allocate
+- ATLCOMMEM/ATL::CComHeap::Free
+- ATLCOMMEM/ATL::CComHeap::GetSize
+- ATLCOMMEM/ATL::CComHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +81,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ATLComMem.h  
   
-##  <a name="a-nameallocatea--ccomheapallocate"></a><a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>CComHeap::Allocate  
  메모리 블록을 할당하려면 이 메서드를 호출합니다.  
   
 ```
@@ -97,7 +100,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)합니다.  
   
-##  <a name="a-namefreea--ccomheapfree"></a><a name="free"></a>CComHeap::Free  
+##  <a name="free"></a>CComHeap::Free  
  이 메모리 관리자가 할당 한 메모리 블록을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -111,7 +114,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)합니다.  
   
-##  <a name="a-namegetsizea--ccomheapgetsize"></a><a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>CComHeap::GetSize  
  이 메모리 관리자가 할당 된 메모리 블록의 할당된 된 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -128,7 +131,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)합니다.  
   
-##  <a name="a-namereallocatea--ccomheapreallocate"></a><a name="reallocate"></a>CComHeap::Reallocate  
+##  <a name="reallocate"></a>CComHeap::Reallocate  
  이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.  
   
 ```

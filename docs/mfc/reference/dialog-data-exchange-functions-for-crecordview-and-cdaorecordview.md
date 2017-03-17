@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDAO/DDX_FieldCBIndex
+- AFXDAO/DDX_FieldCBString
+- AFXDAO/DDX_FieldCBStringExact
+- AFXDAO/DDX_FieldCheck
+- AFXDAO/DDX_FieldLBIndex
+- AFXDAO/DDX_FieldLBString
+- AFXDAO/DDX_FieldLBStringExact
+- AFXDAO/DDX_FieldRadio
+- AFXDAO/DDX_FieldScroll
+- AFXDAO/DDX_FieldText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +74,7 @@ ms.lasthandoff: 02/24/2017
 |[DDX_FieldScroll](#ddx_fieldscroll)|스크롤 막대 컨트롤의 스크롤 위치를 가져오거나 설정 합니다.는 `CRecordView` 또는 `CDaoRecordView`합니다. 호출 하 여 [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) 함수입니다.|  
 |[DDX_FieldText](#ddx_fieldtext)|전송 하는 데 사용할 수 있는 오버 로드 된 버전이 `int`, **UINT**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **짧은**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), 및 [COleCurrency](../../mfc/reference/colecurrency-class.md) 레코드 집합 필드 데이터 멤버를 편집 하는 사이 데이터 상자에 `CRecordView` 또는 `CDaoRecordView`합니다.|  
   
-##  <a name="a-nameddxfieldcbindexa--ddxfieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
  `DDX_FieldCBIndex` 레코드 뷰에서의 콤보 상자 컨트롤의 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -108,7 +117,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
 
-##  <a name="a-nameddxfieldcbstringa--ddxfieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
  `DDX_FieldCBString` 함수 콘텐츠 전송을 관리 하며 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 사이 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -151,7 +160,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-## <a name="a-nameddxfieldcbstringexacta--ddxfieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact` 함수 콘텐츠 전송을 관리 하며 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 사이 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -194,7 +203,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldchecka--ddxfieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
  `DDX_FieldCheck` 함수 콘텐츠 전송을 관리 하며 `int` 대화 상자에서 확인란 컨트롤 사이 데이터 보기 또는 컨트롤 뷰 개체의 형태로 및 `int` 대화 상자, 폼 보기 또는 뷰 개체를 컨트롤의 데이터 멤버입니다.  
   
 ```  
@@ -232,7 +241,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldlbindexa--ddxfieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
  `DDX_FieldLBIndex` 레코드 뷰에 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -275,7 +284,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringa--ddxfieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
  `DDX_FieldLBString` 레코드 뷰를 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -318,7 +327,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringexacta--ddxfieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
  `DDX_FieldLBStringExact` 함수를 레코드 뷰에 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -361,7 +370,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldradioa--ddxfieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
  `DDX_FieldRadio` 함수는&0;부터 시작 연결 `int` 레코드 뷰에 라디오 단추 그룹에서 현재 선택 된 라디오 단추와 레코드 뷰의 레코드 집합의 멤버 변수입니다.  
   
 ```  
@@ -404,7 +413,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldscrolla--ddxfieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
  `DDX_FieldScroll` 레코드 뷰에서의 스크롤 막대 컨트롤의 스크롤 위치를 동기화 하는 함수 및 `int` 레코드 뷰 (또는 매핑하도록 선택 하면 어떤 정수 변수)과 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -447,7 +456,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="a-nameddxfieldtexta--ddxfieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>DDX_FieldText  
  `DDX_FieldText` 함수 콘텐츠 전송을 관리 하며 `int`, **짧은**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, 또는 **바이트** 편집 상자 컨트롤 및 레코드 집합의 필드 데이터 멤버 간에 데이터입니다.  
   
 ```  

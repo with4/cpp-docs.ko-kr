@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataExchange
+- AFXWIN/CDataExchange
+- AFXWIN/CDataExchange::CDataExchange
+- AFXWIN/CDataExchange::Fail
+- AFXWIN/CDataExchange::PrepareCtrl
+- AFXWIN/CDataExchange::PrepareEditCtrl
+- AFXWIN/CDataExchange::PrepareOleCtrl
+- AFXWIN/CDataExchange::m_bSaveAndValidate
+- AFXWIN/CDataExchange::m_pDlgWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecdataexchangea--cdataexchangecdataexchange"></a><a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
  생성 하려면이 멤버 함수를 호출 하는 `CDataExchange` 개체입니다.  
   
 ```  
@@ -119,7 +127,7 @@ CDataExchange(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&70;](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="a-namefaila--cdataexchangefail"></a><a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>CDataExchange::Fail  
  프레임 워크 대화 상자 데이터 유효성 검사 (DDV) 작업이 실패 하면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -133,7 +141,7 @@ void Fail();
   
  자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
-##  <a name="a-namembsaveandvalidatea--cdataexchangembsaveandvalidate"></a><a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
  이 플래그는 대화 상자 데이터 교환 (DDX) 작업의 방향을 나타냅니다.  
   
 ```  
@@ -147,7 +155,7 @@ BOOL m_bSaveAndValidate;
   
  자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
-##  <a name="a-namempdlgwnda--cdataexchangempdlgwnd"></a><a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
  에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 대화 상자에 대 한 DDX (데이터 교환) 또는 유효성 검사 (DDV) 수행 되는 개체입니다.  
   
 ```  
@@ -159,7 +167,7 @@ CWnd* m_pDlgWnd;
   
  자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
-##  <a name="a-namepreparectrla--cdataexchangepreparectrl"></a><a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
  프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정된 된 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -182,7 +190,7 @@ HWND PrepareCtrl(int nIDC);
   
  자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
-##  <a name="a-nameprepareeditctrla--cdataexchangeprepareeditctrl"></a><a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
  프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정 된 편집 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -205,7 +213,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
-##  <a name="a-nameprepareolectrla--cdataexchangeprepareolectrl"></a><a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
  프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정된 된 OLE 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

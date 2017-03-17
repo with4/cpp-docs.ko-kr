@@ -10,6 +10,46 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMenu
+- AFXWIN/CMenu
+- AFXWIN/CMenu::CMenu
+- AFXWIN/CMenu::AppendMenu
+- AFXWIN/CMenu::Attach
+- AFXWIN/CMenu::CheckMenuItem
+- AFXWIN/CMenu::CheckMenuRadioItem
+- AFXWIN/CMenu::CreateMenu
+- AFXWIN/CMenu::CreatePopupMenu
+- AFXWIN/CMenu::DeleteMenu
+- AFXWIN/CMenu::DeleteTempMap
+- AFXWIN/CMenu::DestroyMenu
+- AFXWIN/CMenu::Detach
+- AFXWIN/CMenu::DrawItem
+- AFXWIN/CMenu::EnableMenuItem
+- AFXWIN/CMenu::FromHandle
+- AFXWIN/CMenu::GetDefaultItem
+- AFXWIN/CMenu::GetMenuContextHelpId
+- AFXWIN/CMenu::GetMenuInfo
+- AFXWIN/CMenu::GetMenuItemCount
+- AFXWIN/CMenu::GetMenuItemID
+- AFXWIN/CMenu::GetMenuItemInfo
+- AFXWIN/CMenu::GetMenuState
+- AFXWIN/CMenu::GetMenuString
+- AFXWIN/CMenu::GetSafeHmenu
+- AFXWIN/CMenu::GetSubMenu
+- AFXWIN/CMenu::InsertMenu
+- AFXWIN/CMenu::InsertMenuItem
+- AFXWIN/CMenu::LoadMenu
+- AFXWIN/CMenu::LoadMenuIndirect
+- AFXWIN/CMenu::MeasureItem
+- AFXWIN/CMenu::ModifyMenu
+- AFXWIN/CMenu::RemoveMenu
+- AFXWIN/CMenu::SetDefaultItem
+- AFXWIN/CMenu::SetMenuContextHelpId
+- AFXWIN/CMenu::SetMenuInfo
+- AFXWIN/CMenu::SetMenuItemBitmaps
+- AFXWIN/CMenu::SetMenuItemInfo
+- AFXWIN/CMenu::TrackPopupMenu
+- AFXWIN/CMenu::TrackPopupMenuEx
+- AFXWIN/CMenu::m_hMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +172,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameappendmenua--cmenuappendmenu"></a><a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>CMenu::AppendMenu  
  메뉴의 끝에 새 항목을 추가 합니다.  
   
 ```  
@@ -212,7 +252,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="a-nameattacha--cmenuattach"></a><a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>CMenu::Attach  
  기존 Windows 메뉴에 연결 된 `CMenu` 개체입니다.  
   
 ```  
@@ -234,7 +274,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namecheckmenuitema--cmenucheckmenuitem"></a><a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
  확인 표시를 추가 하거나 팝업 메뉴에서 메뉴 항목에서 확인 표시를 지웁니다.  
   
 ```  
@@ -269,7 +309,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::GetMenuState](#getmenustate)합니다.  
   
-##  <a name="a-namecheckmenuradioitema--cmenucheckmenuradioitem"></a><a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
  지정 된 메뉴 항목을 확인 하 고 라디오 항목을 사용 하면 키를 누릅니다.  
   
 ```  
@@ -307,7 +347,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>예제  
   예를 참조 [ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0)합니다.  
   
-##  <a name="a-namecmenua--cmenucmenu"></a><a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>CMenu::CMenu  
  빈 메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -327,7 +367,7 @@ CMenu();
   
 - [Attach](#attach)  
   
-##  <a name="a-namecreatemenua--cmenucreatemenu"></a><a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>CMenu::CreateMenu  
  메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -347,7 +387,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&22;](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatepopupmenua--cmenucreatepopupmenu"></a><a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
  팝업 메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -367,7 +407,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="a-namedeletemenua--cmenudeletemenu"></a><a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>CMenu::DeleteMenu  
  메뉴에서 항목을 삭제 합니다.  
   
 ```  
@@ -399,7 +439,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)합니다.  
   
-##  <a name="a-namedeletetempmapa--cmenudeletetempmap"></a><a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
  자동으로 호출는 `CWinApp` 유휴 시간 처리기는 모든 임시 삭제 `CMenu` 가 만든 개체는 [FromHandle](#fromhandle) 멤버 함수입니다.  
   
 ```  
@@ -412,7 +452,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing&23;](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="a-namedestroymenua--cmenudestroymenu"></a><a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>CMenu::DestroyMenu  
  메뉴 및 사용 된 모든 Windows 리소스를 삭제 합니다.  
   
 ```  
@@ -428,7 +468,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="a-namedetacha--cmenudetach"></a><a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>CMenu::Detach  
  Windows 메뉴를 분리 한 `CMenu` 개체 핸들을 반환 합니다.  
   
 ```  
@@ -444,7 +484,7 @@ HMENU Detach();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namedrawitema--cmenudrawitem"></a><a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>CMenu::DrawItem  
  소유자가 그린 메뉴 변경의 시각적 측면이 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -465,7 +505,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing #&24;](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="a-nameenablemenuitema--cmenuenablemenuitem"></a><a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
  사용 하지 않도록 설정, 사용 하거나 메뉴 항목이 흐리게 표시 합니다.  
   
 ```  
@@ -504,7 +544,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&25;](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="a-namefromhandlea--cmenufromhandle"></a><a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>CMenu::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CMenu` 메뉴에 대 한 창 핸들을 지정 된 개체입니다.  
   
 ```  
@@ -526,7 +566,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="a-namegetdefaultitema--cmenugetdefaultitem"></a><a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
  지정 된 메뉴 항목이 기본 메뉴 항목을 결정합니다.  
   
 ```  
@@ -556,7 +596,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namegetmenucontexthelpida--cmenugetmenucontexthelpid"></a><a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
  ID와 관련 된 상황에 맞는 도움말 검색 `CMenu`합니다.  
   
 ```  
@@ -569,7 +609,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namegetmenuinfoa--cmenugetmenuinfo"></a><a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
  메뉴에 대 한 정보를 검색합니다.  
   
 ```  
@@ -586,7 +626,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>주의  
  메뉴에 대 한 정보를 검색 하려면이 함수를 호출 합니다.  
   
-##  <a name="a-namegetmenuitemcounta--cmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
  팝업 또는 최상위 메뉴에서 항목의 수를 결정 합니다.  
   
 ```  
@@ -599,7 +639,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)합니다.  
   
-##  <a name="a-namegetmenuitemida--cmenugetmenuitemid"></a><a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
  에 정의 된 위치에 있는 메뉴 항목에 대 한 메뉴 항목 식별자 `nPos`합니다.  
   
 ```  
@@ -616,7 +656,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namegetmenuiteminfoa--cmenugetmenuiteminfo"></a><a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
  메뉴 항목에 대 한 정보를 검색합니다.  
   
 ```  
@@ -645,7 +685,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&26;](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="a-namegetmenustatea--cmenugetmenustate"></a><a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>CMenu::GetMenuState  
  팝업 메뉴에서 항목의 수 또는 지정 된 메뉴 항목의 상태를 반환합니다.  
   
 ```  
@@ -687,7 +727,7 @@ UINT GetMenuState(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&27;](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="a-namegetmenustringa--cmenugetmenustring"></a><a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>CMenu::GetMenuString  
  지정 된 메뉴 항목의 레이블이 지정된 된 버퍼에 복사합니다.  
   
 ```  
@@ -733,7 +773,7 @@ int GetMenuString(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namegetsafehmenua--cmenugetsafehmenu"></a><a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
  반환 된 `HMENU` 이 래핑됩니다 `CMenu` 개체 또는 **NULL** `CMenu` 포인터.  
   
 ```  
@@ -743,7 +783,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::LoadMenu](#loadmenu)합니다.  
   
-##  <a name="a-namegetsubmenua--cmenugetsubmenu"></a><a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
  검색 된 `CMenu` 팝업 메뉴의 개체입니다.  
   
 ```  
@@ -760,7 +800,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::TrackPopupMenu](#trackpopupmenu)합니다.  
   
-##  <a name="a-nameinsertmenua--cmenuinsertmenu"></a><a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>CMenu::InsertMenu  
  에 지정 된 위치에 새 메뉴 항목을 삽입 `nPosition` 메뉴 다른 항목으로 이동 합니다.  
   
 ```  
@@ -820,7 +860,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&28;](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="a-nameinsertmenuitema--cmenuinsertmenuitem"></a><a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
  메뉴에 지정된 된 위치에 새 메뉴 항목을 삽입합니다.  
   
 ```  
@@ -843,7 +883,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>주의  
  이 함수는 [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)에서 설명 된 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameloadmenua--cmenuloadmenu"></a><a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>CMenu::LoadMenu  
  응용 프로그램의 실행 파일에서 메뉴 리소스를 로드 하 고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -867,7 +907,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&29;](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="a-nameloadmenuindirecta--cmenuloadmenuindirect"></a><a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
  메모리에 메뉴 서식 파일에서 리소스를 로드 하 고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -895,7 +935,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&30;](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="a-namemhmenua--cmenumhmenu"></a><a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>CMenu::m_hMenu  
  지정 된 `HMENU` 창 메뉴의 핸들에 연결 된는 `CMenu` 개체입니다.  
   
 ```  
@@ -905,7 +945,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::LoadMenu](#loadmenu)합니다.  
   
-##  <a name="a-namemeasureitema--cmenumeasureitem"></a><a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>CMenu::MeasureItem  
  소유자 그리기 스타일으로 메뉴 만들어질 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -926,7 +966,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing #&31;](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="a-namemodifymenua--cmenumodifymenu"></a><a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>CMenu::ModifyMenu  
  로 지정 된 위치에 있는 기존 메뉴 항목을 변경 `nPosition`합니다.  
   
 ```  
@@ -984,7 +1024,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-nameoperatorhmenua--cmenuoperator-hmenu"></a><a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
  이 연산자를 사용 하 여 핸들을 검색 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -997,7 +1037,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>주의  
  Windows Api를 직접 호출 하 여 핸들을 사용할 수 있습니다.  
   
-##  <a name="a-nameoperatorneqa--cmenuoperator-"></a><a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>CMenu::operator! =  
  두 개의 메뉴가 다릅니다 논리적으로 결정 합니다.  
   
 ```  
@@ -1011,7 +1051,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>주의  
  메뉴 개체를 왼쪽에서 오른쪽의 메뉴 개체와 같지 인지 테스트 합니다.  
   
-##  <a name="a-nameoperatoreqeqa--cmenuoperator-"></a><a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>CMenu::operator = =  
  두 개의 메뉴는 논리적으로 동일한 여부를 확인 합니다.  
   
 ```  
@@ -1025,7 +1065,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>주의  
  왼쪽 메뉴 개체와 같은지 여부를 테스트 (의 측면에서 `HMENU` 값) 오른쪽의 메뉴에 있습니다.  
   
-##  <a name="a-nameremovemenua--cmenuremovemenu"></a><a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>CMenu::RemoveMenu  
  메뉴에서 연결 된 팝업 메뉴는 메뉴 항목을 삭제합니다.  
   
 ```  
@@ -1057,7 +1097,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namesetdefaultitema--cmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
  지정 된 메뉴 항목이 기본 메뉴 항목을 설정합니다.  
   
 ```  
@@ -1082,7 +1122,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namesetmenucontexthelpida--cmenusetmenucontexthelpid"></a><a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
  와 도움말 컨텍스트 ID를 연결 `CMenu`합니다.  
   
 ```  
@@ -1102,7 +1142,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="a-namesetmenuinfoa--cmenusetmenuinfo"></a><a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
  메뉴에 대 한 정보를 설정합니다.  
   
 ```  
@@ -1119,7 +1159,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>주의  
  메뉴에 대 한 특정 정보를 설정 하려면이 함수를 호출 합니다.  
   
-##  <a name="a-namesetmenuitembitmapsa--cmenusetmenuitembitmaps"></a><a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
  지정한 비트맵 메뉴 항목과 연결합니다.  
   
 ```  
@@ -1165,7 +1205,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing #&33;](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="a-namesetmenuiteminfoa--cmenusetmenuiteminfo"></a><a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
  메뉴 항목에 대 한 정보를 변경합니다.  
   
 ```  
@@ -1188,7 +1228,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>주의  
  이 함수는 [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)에서 설명 된 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nametrackpopupmenua--cmenutrackpopupmenu"></a><a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
  지정된 된 위치에 부동 팝업 메뉴를 표시 하 고 팝업 메뉴에서 항목의 선택 집합을 추적 합니다.  
   
 ```  
@@ -1225,7 +1265,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing #&34;](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="a-nametrackpopupmenuexa--cmenutrackpopupmenuex"></a><a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
  지정된 된 위치에 부동 팝업 메뉴를 표시 하 고 팝업 메뉴에서 항목의 선택 집합을 추적 합니다.  
   
 ```  

@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComCriticalSection
 - CComCriticalSection
-- ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::Init
+- ATLCORE/ATL::CComCriticalSection::Lock
+- ATLCORE/ATL::CComCriticalSection::Term
+- ATLCORE/ATL::CComCriticalSection::Unlock
+- ATLCORE/ATL::CComCriticalSection::m_sec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CComCriticalSection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameccomcriticalsectiona--ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
  생성자입니다.  
   
 ```
@@ -94,7 +99,7 @@ CComCriticalSection() throw();
 ### <a name="remarks"></a>주의  
  설정의 [m_sec](#m_sec) 데이터 멤버를 NULL로 **합니다.**  
   
-##  <a name="a-nameinita--ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection::Init  
+##  <a name="init"></a>CComCriticalSection::Init  
  Win32 함수를 호출 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)에 포함 된 임계 영역 개체를 초기화 하는 [m_sec](#m_sec) 데이터 멤버입니다.  
   
 ```
@@ -104,7 +109,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>반환 값  
  반환 `S_OK` 성공 **E_OUTOFMEMORY** 또는 **E_FAIL** 실패 합니다.  
   
-##  <a name="a-namelocka--ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection::Lock  
+##  <a name="lock"></a>CComCriticalSection::Lock  
  Win32 함수를 호출 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), 스레드가에 포함 된 임계 영역 개체의 소유권을 가져올 수 될 때까지 어떤 대기는 [m_sec](#m_sec) 데이터 멤버입니다.  
   
 ```
@@ -117,14 +122,14 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>주의  
  임계 영역 개체를 호출 하 여 먼저 초기화 되어야는 [Init](#init) 메서드. 보호 되는 코드의 실행이 완료 스레드에서 호출 해야 [잠금 해제](#unlock) 중요 섹션의 소유권을 해제 하려면.  
   
-##  <a name="a-namemseca--ccomcriticalsectionmsec"></a><a name="m_sec"></a>CComCriticalSection::m_sec  
+##  <a name="m_sec"></a>CComCriticalSection::m_sec  
  모두에서 사용 되는 임계 영역 개체를 포함 `CComCriticalSection` 메서드.  
   
 ```
 CRITICAL_SECTION m_sec;
 ```  
   
-##  <a name="a-nameterma--ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection::Term  
+##  <a name="term"></a>CComCriticalSection::Term  
  Win32 함수를 호출 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)에 포함 된 임계 영역 개체에서 사용 하는 모든 리소스를 해제 하는 [m_sec](#m_sec) 데이터 멤버입니다.  
   
 ```
@@ -137,7 +142,7 @@ HRESULT Term() throw();
 ### <a name="remarks"></a>주의  
  한 번 `Term` 가 호출 된 중요 한 섹션 동기화에 더 이상 사용 될 수 없습니다.  
   
-##  <a name="a-nameunlocka--ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection::Unlock  
+##  <a name="unlock"></a>CComCriticalSection::Unlock  
  Win32 함수를 호출 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)에 포함 된 임계 영역 개체의 소유권을 해제 하는 [m_sec](#m_sec) 데이터 멤버입니다.  
   
 ```

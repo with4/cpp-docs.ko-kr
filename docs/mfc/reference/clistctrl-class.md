@@ -10,6 +10,136 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListCtrl
+- AFXCMN/CListCtrl
+- AFXCMN/CListCtrl::CListCtrl
+- AFXCMN/CListCtrl::ApproximateViewRect
+- AFXCMN/CListCtrl::Arrange
+- AFXCMN/CListCtrl::CancelEditLabel
+- AFXCMN/CListCtrl::Create
+- AFXCMN/CListCtrl::CreateDragImage
+- AFXCMN/CListCtrl::CreateEx
+- AFXCMN/CListCtrl::DeleteAllItems
+- AFXCMN/CListCtrl::DeleteColumn
+- AFXCMN/CListCtrl::DeleteItem
+- AFXCMN/CListCtrl::DrawItem
+- AFXCMN/CListCtrl::EditLabel
+- AFXCMN/CListCtrl::EnableGroupView
+- AFXCMN/CListCtrl::EnsureVisible
+- AFXCMN/CListCtrl::FindItem
+- AFXCMN/CListCtrl::GetBkColor
+- AFXCMN/CListCtrl::GetBkImage
+- AFXCMN/CListCtrl::GetCallbackMask
+- AFXCMN/CListCtrl::GetCheck
+- AFXCMN/CListCtrl::GetColumn
+- AFXCMN/CListCtrl::GetColumnOrderArray
+- AFXCMN/CListCtrl::GetColumnWidth
+- AFXCMN/CListCtrl::GetCountPerPage
+- AFXCMN/CListCtrl::GetEditControl
+- AFXCMN/CListCtrl::GetEmptyText
+- AFXCMN/CListCtrl::GetExtendedStyle
+- AFXCMN/CListCtrl::GetFirstSelectedItemPosition
+- AFXCMN/CListCtrl::GetFocusedGroup
+- AFXCMN/CListCtrl::GetGroupCount
+- AFXCMN/CListCtrl::GetGroupInfo
+- AFXCMN/CListCtrl::GetGroupInfoByIndex
+- AFXCMN/CListCtrl::GetGroupMetrics
+- AFXCMN/CListCtrl::GetGroupRect
+- AFXCMN/CListCtrl::GetGroupState
+- AFXCMN/CListCtrl::GetHeaderCtrl
+- AFXCMN/CListCtrl::GetHotCursor
+- AFXCMN/CListCtrl::GetHotItem
+- AFXCMN/CListCtrl::GetHoverTime
+- AFXCMN/CListCtrl::GetImageList
+- AFXCMN/CListCtrl::GetInsertMark
+- AFXCMN/CListCtrl::GetInsertMarkColor
+- AFXCMN/CListCtrl::GetInsertMarkRect
+- AFXCMN/CListCtrl::GetItem
+- AFXCMN/CListCtrl::GetItemCount
+- AFXCMN/CListCtrl::GetItemData
+- AFXCMN/CListCtrl::GetItemIndexRect
+- AFXCMN/CListCtrl::GetItemPosition
+- AFXCMN/CListCtrl::GetItemRect
+- AFXCMN/CListCtrl::GetItemSpacing
+- AFXCMN/CListCtrl::GetItemState
+- AFXCMN/CListCtrl::GetItemText
+- AFXCMN/CListCtrl::GetNextItem
+- AFXCMN/CListCtrl::GetNextItemIndex
+- AFXCMN/CListCtrl::GetNextSelectedItem
+- AFXCMN/CListCtrl::GetNumberOfWorkAreas
+- AFXCMN/CListCtrl::GetOrigin
+- AFXCMN/CListCtrl::GetOutlineColor
+- AFXCMN/CListCtrl::GetSelectedColumn
+- AFXCMN/CListCtrl::GetSelectedCount
+- AFXCMN/CListCtrl::GetSelectionMark
+- AFXCMN/CListCtrl::GetStringWidth
+- AFXCMN/CListCtrl::GetSubItemRect
+- AFXCMN/CListCtrl::GetTextBkColor
+- AFXCMN/CListCtrl::GetTextColor
+- AFXCMN/CListCtrl::GetTileInfo
+- AFXCMN/CListCtrl::GetTileViewInfo
+- AFXCMN/CListCtrl::GetToolTips
+- AFXCMN/CListCtrl::GetTopIndex
+- AFXCMN/CListCtrl::GetView
+- AFXCMN/CListCtrl::GetViewRect
+- AFXCMN/CListCtrl::GetWorkAreas
+- AFXCMN/CListCtrl::HasGroup
+- AFXCMN/CListCtrl::HitTest
+- AFXCMN/CListCtrl::InsertColumn
+- AFXCMN/CListCtrl::InsertGroup
+- AFXCMN/CListCtrl::InsertGroupSorted
+- AFXCMN/CListCtrl::InsertItem
+- AFXCMN/CListCtrl::InsertMarkHitTest
+- AFXCMN/CListCtrl::IsGroupViewEnabled
+- AFXCMN/CListCtrl::IsItemVisible
+- AFXCMN/CListCtrl::MapIDToIndex
+- AFXCMN/CListCtrl::MapIndexToID
+- AFXCMN/CListCtrl::MoveGroup
+- AFXCMN/CListCtrl::MoveItemToGroup
+- AFXCMN/CListCtrl::RedrawItems
+- AFXCMN/CListCtrl::RemoveAllGroups
+- AFXCMN/CListCtrl::RemoveGroup
+- AFXCMN/CListCtrl::Scroll
+- AFXCMN/CListCtrl::SetBkColor
+- AFXCMN/CListCtrl::SetBkImage
+- AFXCMN/CListCtrl::SetCallbackMask
+- AFXCMN/CListCtrl::SetCheck
+- AFXCMN/CListCtrl::SetColumn
+- AFXCMN/CListCtrl::SetColumnOrderArray
+- AFXCMN/CListCtrl::SetColumnWidth
+- AFXCMN/CListCtrl::SetExtendedStyle
+- AFXCMN/CListCtrl::SetGroupInfo
+- AFXCMN/CListCtrl::SetGroupMetrics
+- AFXCMN/CListCtrl::SetHotCursor
+- AFXCMN/CListCtrl::SetHotItem
+- AFXCMN/CListCtrl::SetHoverTime
+- AFXCMN/CListCtrl::SetIconSpacing
+- AFXCMN/CListCtrl::SetImageList
+- AFXCMN/CListCtrl::SetInfoTip
+- AFXCMN/CListCtrl::SetInsertMark
+- AFXCMN/CListCtrl::SetInsertMarkColor
+- AFXCMN/CListCtrl::SetItem
+- AFXCMN/CListCtrl::SetItemCount
+- AFXCMN/CListCtrl::SetItemCountEx
+- AFXCMN/CListCtrl::SetItemData
+- AFXCMN/CListCtrl::SetItemIndexState
+- AFXCMN/CListCtrl::SetItemPosition
+- AFXCMN/CListCtrl::SetItemState
+- AFXCMN/CListCtrl::SetItemText
+- AFXCMN/CListCtrl::SetOutlineColor
+- AFXCMN/CListCtrl::SetSelectedColumn
+- AFXCMN/CListCtrl::SetSelectionMark
+- AFXCMN/CListCtrl::SetTextBkColor
+- AFXCMN/CListCtrl::SetTextColor
+- AFXCMN/CListCtrl::SetTileInfo
+- AFXCMN/CListCtrl::SetTileViewInfo
+- AFXCMN/CListCtrl::SetToolTips
+- AFXCMN/CListCtrl::SetView
+- AFXCMN/CListCtrl::SetWorkAreas
+- AFXCMN/CListCtrl::SortGroups
+- AFXCMN/CListCtrl::SortItems
+- AFXCMN/CListCtrl::SortItemsEx
+- AFXCMN/CListCtrl::SubItemHitTest
+- AFXCMN/CListCtrl::Update
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -289,7 +419,7 @@ class CListCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-nameapproximateviewrecta--clistctrlapproximateviewrect"></a><a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
+##  <a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
  너비와 높이 목록 뷰 컨트롤의 항목을 표시 하는 데 필요한 결정 합니다.  
   
 ```  
@@ -312,7 +442,7 @@ CSize ApproximateViewRect(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 매크로의 동작을 구현 [ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)에 설명 된 대로 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namearrangea--clistctrlarrange"></a><a name="arrange"></a>CListCtrl::Arrange  
+##  <a name="arrange"></a>CListCtrl::Arrange  
  눈금에 정렬 되도록 아이콘 보기의 항목 위치를 변경 합니다.  
   
 ```  
@@ -346,7 +476,7 @@ BOOL Arrange(UINT nCode);
 ```
 
   
-##  <a name="a-namecanceleditlabela--clistctrlcanceleditlabel"></a><a name="canceleditlabel"></a>CListCtrl::CancelEditLabel  
+##  <a name="canceleditlabel"></a>CListCtrl::CancelEditLabel  
  항목 텍스트 편집 작업을 취소 합니다.  
   
 ```  
@@ -356,14 +486,14 @@ void CancelEditLabel();
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameclistctrla--clistctrlclistctrl"></a><a name="clistctrl"></a>CListCtrl::CListCtrl  
+##  <a name="clistctrl"></a>CListCtrl::CListCtrl  
  `CListCtrl` 개체를 생성합니다.  
   
 ```  
 CListCtrl();
 ```  
   
-##  <a name="a-namecreatea--clistctrlcreate"></a><a name="create"></a>CListCtrl::Create  
+##  <a name="create"></a>CListCtrl::Create  
  목록 컨트롤을 만들고에 연결 된 `CListCtrl` 개체입니다.  
   
 ```  
@@ -404,7 +534,7 @@ virtual BOOL Create(
 ```
 
   
-##  <a name="a-namecreateexa--clistctrlcreateex"></a><a name="createex"></a>CListCtrl::CreateEx  
+##  <a name="createex"></a>CListCtrl::CreateEx  
  컨트롤 (자식 창)와 연결 된 `CListCtrl` 개체입니다.  
   
 ```  
@@ -440,7 +570,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`지정 된 확장된 창 스타일을 사용 하 여 컨트롤을 만듭니다 `dwExStyle`합니다. 호출을 설정 하려면 확장된 스타일 특정 컨트롤에 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **LVS_EX_FULLROWSELECT**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [확장 목록 뷰 스타일](http://msdn.microsoft.com/library/windows/desktop/bb774732) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecreatedragimagea--clistctrlcreatedragimage"></a><a name="createdragimage"></a>CListCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>CListCtrl::CreateDragImage  
  지정 된 항목에 대 한 끌기 이미지 목록을 만듭니다 `nItem`합니다.  
   
 ```  
@@ -472,7 +602,7 @@ CImageList* CreateDragImage(
 ```
 
   
-##  <a name="a-namedeleteallitemsa--clistctrldeleteallitems"></a><a name="deleteallitems"></a>CListCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>CListCtrl::DeleteAllItems  
  List view 컨트롤에서 모든 항목을 삭제합니다.  
   
 ```  
@@ -491,7 +621,7 @@ BOOL DeleteAllItems();
 ```
 
   
-##  <a name="a-namedeletecolumna--clistctrldeletecolumn"></a><a name="deletecolumn"></a>CListCtrl::DeleteColumn  
+##  <a name="deletecolumn"></a>CListCtrl::DeleteColumn  
  List view 컨트롤에서 열을 삭제합니다.  
   
 ```  
@@ -518,7 +648,7 @@ BOOL DeleteColumn(int nCol);
 ```
 
   
-##  <a name="a-namedeleteitema--clistctrldeleteitem"></a><a name="deleteitem"></a>CListCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CListCtrl::DeleteItem  
  목록 뷰 컨트롤에서 항목을 삭제합니다.  
   
 ```  
@@ -544,7 +674,7 @@ BOOL DeleteItem(int nItem);
 ```
 
   
-##  <a name="a-namedrawitema--clistctrldrawitem"></a><a name="drawitem"></a>CListCtrl::DrawItem  
+##  <a name="drawitem"></a>CListCtrl::DrawItem  
  소유자 그리기 목록 보기 컨트롤의 시각적 측면이 될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -562,7 +692,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 인터페이스 (GDI) 개체를 복원 해야 `lpDrawItemStruct` 전에이 멤버 함수를 종료 합니다.  
   
-##  <a name="a-nameeditlabela--clistctrleditlabel"></a><a name="editlabel"></a>CListCtrl::EditLabel  
+##  <a name="editlabel"></a>CListCtrl::EditLabel  
  항목의 텍스트의 내부 편집을 시작 합니다.  
   
 ```  
@@ -593,7 +723,7 @@ CEdit* EditLabel(int nItem);
 ```
 
   
-##  <a name="a-nameenablegroupviewa--clistctrlenablegroupview"></a><a name="enablegroupview"></a>CListCtrl::EnableGroupView  
+##  <a name="enablegroupview"></a>CListCtrl::EnableGroupView  
  목록 뷰 컨트롤의 항목을 그룹으로 표시할지 여부를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -616,7 +746,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameensurevisiblea--clistctrlensurevisible"></a><a name="ensurevisible"></a>CListCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CListCtrl::EnsureVisible  
  목록 보기 항목을 부분적으로 표시 적어도 중인지 확인 합니다.  
   
 ```  
@@ -647,7 +777,7 @@ BOOL EnsureVisible(
 ```
 
   
-##  <a name="a-namefinditema--clistctrlfinditem"></a><a name="finditem"></a>CListCtrl::FindItem  
+##  <a name="finditem"></a>CListCtrl::FindItem  
  지정 된 특징을 가진 목록 보기 항목을 검색 합니다.  
   
 ```  
@@ -686,7 +816,7 @@ int FindItem(
 ```
 
   
-##  <a name="a-namegetbkcolora--clistctrlgetbkcolor"></a><a name="getbkcolor"></a>CListCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CListCtrl::GetBkColor  
  목록 뷰 컨트롤의 배경색을 검색합니다.  
   
 ```  
@@ -699,7 +829,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetBkColor](#setbkcolor)합니다.  
   
-##  <a name="a-namegetbkimagea--clistctrlgetbkimage"></a><a name="getbkimage"></a>CListCtrl::GetBkImage  
+##  <a name="getbkimage"></a>CListCtrl::GetBkImage  
  목록 뷰 컨트롤의 현재 배경 이미지를 검색합니다.  
   
 ```  
@@ -732,7 +862,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```
 
   
-##  <a name="a-namegetcallbackmaska--clistctrlgetcallbackmask"></a><a name="getcallbackmask"></a>CListCtrl::GetCallbackMask  
+##  <a name="getcallbackmask"></a>CListCtrl::GetCallbackMask  
  목록 뷰 컨트롤에 대 한 콜백 마스크를 검색합니다.  
   
 ```  
@@ -748,7 +878,7 @@ UINT GetCallbackMask() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetCallbackMask](#setcallbackmask)합니다.  
   
-##  <a name="a-namegetchecka--clistctrlgetcheck"></a><a name="getcheck"></a>CListCtrl::GetCheck  
+##  <a name="getcheck"></a>CListCtrl::GetCheck  
  항목과 연결 되는 상태 이미지의 현재 상태 표시를 검색 합니다.  
   
 ```  
@@ -768,7 +898,7 @@ BOOL GetCheck(int nItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetCheck](#setcheck)합니다.  
   
-##  <a name="a-namegetcolumna--clistctrlgetcolumn"></a><a name="getcolumn"></a>CListCtrl::GetColumn  
+##  <a name="getcolumn"></a>CListCtrl::GetColumn  
  목록 뷰 컨트롤의 열 특성을 검색 합니다.  
   
 ```  
@@ -806,7 +936,7 @@ BOOL GetColumn(
 ```
 
   
-##  <a name="a-namegetcolumnorderarraya--clistctrlgetcolumnorderarray"></a><a name="getcolumnorderarray"></a>CListCtrl::GetColumnOrderArray  
+##  <a name="getcolumnorderarray"></a>CListCtrl::GetColumnOrderArray  
  목록 뷰 컨트롤의 열 순서 (왼쪽에서 오른쪽)를 검색 합니다.  
   
 ```  
@@ -857,7 +987,7 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 ```
 
   
-##  <a name="a-namegetcolumnwidtha--clistctrlgetcolumnwidth"></a><a name="getcolumnwidth"></a>CListCtrl::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>CListCtrl::GetColumnWidth  
  보고서 보기 또는 목록 보기에서 열 너비를 검색합니다.  
   
 ```  
@@ -880,7 +1010,7 @@ int GetColumnWidth(int nCol) const;
 ```
 
   
-##  <a name="a-namegetcountperpagea--clistctrlgetcountperpage"></a><a name="getcountperpage"></a>CListCtrl::GetCountPerPage  
+##  <a name="getcountperpage"></a>CListCtrl::GetCountPerPage  
  목록 보기 또는 보고서 보기에는 목록 뷰 컨트롤의 표시 영역에 세로로 들어갈 수 있는 항목의 수를 계산 합니다.  
   
 ```  
@@ -893,7 +1023,7 @@ int GetCountPerPage() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetTopIndex](#gettopindex)합니다.  
   
-##  <a name="a-namegeteditcontrola--clistctrlgeteditcontrol"></a><a name="geteditcontrol"></a>CListCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>CListCtrl::GetEditControl  
  목록 보기 항목의 텍스트를 편집 하는 데 사용 하는 편집 컨트롤의 핸들을 검색 합니다.  
   
 ```  
@@ -919,7 +1049,7 @@ CEdit* GetEditControl() const;
 ```
 
   
-##  <a name="a-namegetemptytexta--clistctrlgetemptytext"></a><a name="getemptytext"></a>CListCtrl::GetEmptyText  
+##  <a name="getemptytext"></a>CListCtrl::GetEmptyText  
  현재 목록 뷰 컨트롤이 비어 있으면 표시할 문자열을 검색 합니다.  
   
 ```  
@@ -932,7 +1062,7 @@ CString GetEmptyText() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetextendedstylea--clistctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
  목록 뷰 컨트롤의 현재 확장된 스타일을 검색합니다.  
   
 ```  
@@ -948,7 +1078,7 @@ DWORD GetExtendedStyle();
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetExtendedStyle](#setextendedstyle)합니다.  
   
-##  <a name="a-namegetfirstselecteditempositiona--clistctrlgetfirstselecteditemposition"></a><a name="getfirstselecteditemposition"></a>CListCtrl::GetFirstSelectedItemPosition  
+##  <a name="getfirstselecteditemposition"></a>CListCtrl::GetFirstSelectedItemPosition  
  목록 뷰 컨트롤에서 선택된 된 첫 번째 항목의 위치를 가져옵니다.  
   
 ```  
@@ -980,7 +1110,7 @@ POSITION GetFirstSelectedItemPosition() const;
 ```
 
   
-##  <a name="a-namegetfocusedgroupa--clistctrlgetfocusedgroup"></a><a name="getfocusedgroup"></a>CListCtrl::GetFocusedGroup  
+##  <a name="getfocusedgroup"></a>CListCtrl::GetFocusedGroup  
  현재 목록 뷰 컨트롤에 키보드 포커스가 있는 그룹을 검색 합니다.  
   
 ```  
@@ -993,7 +1123,7 @@ int GetFocusedGroup() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다. 자세한 내용은 참조는 `LVGS_FOCUSED` 값은 `state` 의 멤버는 [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) 구조입니다.  
   
-##  <a name="a-namegetgroupcounta--clistctrlgetgroupcount"></a><a name="getgroupcount"></a>CListCtrl::GetGroupCount  
+##  <a name="getgroupcount"></a>CListCtrl::GetGroupCount  
  현재 목록 뷰 컨트롤의 그룹 수를 검색합니다.  
   
 ```  
@@ -1006,7 +1136,7 @@ int GetGroupCount()const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)] --> 합니다.  
   
-##  <a name="a-namegetgroupinfoa--clistctrlgetgroupinfo"></a><a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
+##  <a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
  지정된 된 그룹 목록 뷰 컨트롤에 대 한 정보를 가져옵니다.  
   
 ```  
@@ -1028,7 +1158,7 @@ int GetGroupInfo(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetgroupinfobyindexa--clistctrlgetgroupinfobyindex"></a><a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
+##  <a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
  현재 목록 뷰 컨트롤에서 지정된 된 그룹에 대 한 정보를 검색합니다.  
   
 ```  
@@ -1090,7 +1220,7 @@ public:
 ```
 
   
-##  <a name="a-namegetgroupmetricsa--clistctrlgetgroupmetrics"></a><a name="getgroupmetrics"></a>CListCtrl::GetGroupMetrics  
+##  <a name="getgroupmetrics"></a>CListCtrl::GetGroupMetrics  
  그룹의 메트릭을 검색합니다.  
   
 ```  
@@ -1104,7 +1234,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetgrouprecta--clistctrlgetgrouprect"></a><a name="getgrouprect"></a>CListCtrl::GetGroupRect  
+##  <a name="getgrouprect"></a>CListCtrl::GetGroupRect  
  현재 목록 뷰 컨트롤에서 지정된 된 그룹에 대 한 경계 사각형을 검색 합니다.  
   
 ```  
@@ -1158,7 +1288,7 @@ public:
 ```
 
   
-##  <a name="a-namegetgroupstatea--clistctrlgetgroupstate"></a><a name="getgroupstate"></a>CListCtrl::GetGroupState  
+##  <a name="getgroupstate"></a>CListCtrl::GetGroupState  
  현재 목록 뷰 컨트롤에서 지정된 된 그룹에 대 한 상태를 검색합니다.  
   
 ```  
@@ -1182,7 +1312,7 @@ UINT GetGroupState(
   
  이 메서드는 전송 된 [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다. 자세한 내용은 참조는 [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) 매크로입니다.  
   
-##  <a name="a-namegetheaderctrla--clistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CListCtrl::GetHeaderCtrl  
  목록 뷰 컨트롤의 헤더 컨트롤을 검색합니다.  
   
 ```  
@@ -1198,7 +1328,7 @@ CHeaderCtrl* GetHeaderCtrl();
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetColumnOrderArray](#getcolumnorderarray)합니다.  
   
-##  <a name="a-namegethotcursora--clistctrlgethotcursor"></a><a name="gethotcursor"></a>CListCtrl::GetHotCursor  
+##  <a name="gethotcursor"></a>CListCtrl::GetHotCursor  
  목록 뷰 컨트롤에 대해 핫 트래킹을 때 사용 되는 커서를 검색 합니다.  
   
 ```  
@@ -1221,7 +1351,7 @@ HCURSOR GetHotCursor();
 ```
 
   
-##  <a name="a-namegethotitema--clistctrlgethotitem"></a><a name="gethotitem"></a>CListCtrl::GetHotItem  
+##  <a name="gethotitem"></a>CListCtrl::GetHotItem  
  커서에서 현재 목록 보기 항목을 검색합니다.  
   
 ```  
@@ -1246,7 +1376,7 @@ int GetHotItem();
 ```
 
   
-##  <a name="a-namegethovertimea--clistctrlgethovertime"></a><a name="gethovertime"></a>CListCtrl::GetHoverTime  
+##  <a name="gethovertime"></a>CListCtrl::GetHoverTime  
  목록 뷰 컨트롤의 현재 호버 시간을 검색합니다.  
   
 ```  
@@ -1269,7 +1399,7 @@ DWORD GetHoverTime() const;
 ```
 
   
-##  <a name="a-namegetimagelista--clistctrlgetimagelist"></a><a name="getimagelist"></a>CListCtrl::GetImageList  
+##  <a name="getimagelist"></a>CListCtrl::GetImageList  
  그리기 항목 목록 보기에 사용 되는 이미지 목록의 핸들을 검색 합니다.  
   
 ```  
@@ -1298,7 +1428,7 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 ```
 
   
-##  <a name="a-namegetinsertmarka--clistctrlgetinsertmark"></a><a name="getinsertmark"></a>CListCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>CListCtrl::GetInsertMark  
  삽입 표시의 현재 위치를 검색합니다.  
   
 ```  
@@ -1315,7 +1445,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetinsertmarkcolora--clistctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
  삽입 표시의 현재 색을 검색 합니다.  
   
 ```  
@@ -1328,7 +1458,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetinsertmarkrecta--clistctrlgetinsertmarkrect"></a><a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
+##  <a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
  삽입점을 제한 하는 사각형을 검색 합니다.  
   
 ```  
@@ -1349,7 +1479,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetitema--clistctrlgetitem"></a><a name="getitem"></a>CListCtrl::GetItem  
+##  <a name="getitem"></a>CListCtrl::GetItem  
  목록 보기 항목을 특성의 일부 또는 전부를 검색합니다.  
   
 ```  
@@ -1366,7 +1496,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ### <a name="remarks"></a>주의  
  **LVITEM** 구조 지정 하거나 목록 보기 항목의 특성을 받습니다.  
   
-##  <a name="a-namegetitemcounta--clistctrlgetitemcount"></a><a name="getitemcount"></a>CListCtrl::GetItemCount  
+##  <a name="getitemcount"></a>CListCtrl::GetItemCount  
  목록 뷰 컨트롤의 항목 수를 검색합니다.  
   
 ```  
@@ -1379,7 +1509,7 @@ int GetItemCount() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::DeleteItem](#deleteitem)합니다.  
   
-##  <a name="a-namegetitemdataa--clistctrlgetitemdata"></a><a name="getitemdata"></a>CListCtrl::GetItemData  
+##  <a name="getitemdata"></a>CListCtrl::GetItemData  
  지정 된 항목과 연결 된 32 비트 응용 프로그램 관련 값을 검색 `nItem`합니다.  
   
 ```  
@@ -1410,7 +1540,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```
 
   
-##  <a name="a-namegetitemindexrecta--clistctrlgetitemindexrect"></a><a name="getitemindexrect"></a>CListCtrl::GetItemIndexRect  
+##  <a name="getitemindexrect"></a>CListCtrl::GetItemIndexRect  
  현재 목록 뷰 컨트롤의 하위 항목의 전체 또는 일부에 대 한 경계 사각형을 검색 합니다.  
   
 ```  
@@ -1464,7 +1594,7 @@ public:
 ```
 
   
-##  <a name="a-namegetitempositiona--clistctrlgetitemposition"></a><a name="getitemposition"></a>CListCtrl::GetItemPosition  
+##  <a name="getitemposition"></a>CListCtrl::GetItemPosition  
  목록 보기 항목의 위치를 검색 합니다.  
   
 ```  
@@ -1500,7 +1630,7 @@ BOOL GetItemPosition(
 ```
 
   
-##  <a name="a-namegetitemrecta--clistctrlgetitemrect"></a><a name="getitemrect"></a>CListCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CListCtrl::GetItemRect  
  현재 보기에서 항목의 전체 또는 일부에 대 한 경계 사각형을 검색 합니다.  
   
 ```  
@@ -1572,7 +1702,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="a-namegetitemspacinga--clistctrlgetitemspacing"></a><a name="getitemspacing"></a>CListCtrl::GetItemSpacing  
+##  <a name="getitemspacing"></a>CListCtrl::GetItemSpacing  
  현재 목록 뷰 컨트롤의 항목 사이의 간격을 계산합니다.  
   
 ```  
@@ -1596,7 +1726,7 @@ BOOL GetItemSpacing(
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetitemstatea--clistctrlgetitemstate"></a><a name="getitemstate"></a>CListCtrl::GetItemState  
+##  <a name="getitemstate"></a>CListCtrl::GetItemState  
  목록 보기 항목의 상태를 검색합니다.  
   
 ```  
@@ -1621,7 +1751,7 @@ UINT GetItemState(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetTopIndex](#gettopindex)합니다.  
   
-##  <a name="a-namegetitemtexta--clistctrlgetitemtext"></a><a name="getitemtext"></a>CListCtrl::GetItemText  
+##  <a name="getitemtext"></a>CListCtrl::GetItemText  
  목록 보기 항목 또는 하위 항목의 텍스트를 검색합니다.  
   
 ```  
@@ -1657,7 +1787,7 @@ CString GetItemText(
 ### <a name="remarks"></a>주의  
  경우 `nSubItem` 가&0; 인 경우이 함수에 항목 레이블; 검색 `nSubItem` 는&0;이 아닌 경우 텍스트를 검색 하위 항목의 합니다. 하위 항목 인수에 대 한 자세한 내용은 설명 부분을 참조 하십시오.는 [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) 구조에서 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetnextitema--clistctrlgetnextitem"></a><a name="getnextitem"></a>CListCtrl::GetNextItem  
+##  <a name="getnextitem"></a>CListCtrl::GetNextItem  
  목록에 대 한 검색 볼 항목 이동 하 고 지정 된 속성이 있는 특정된 항목에 지정된 된 관계를 갖습니다.  
   
 ```  
@@ -1696,7 +1826,7 @@ int GetNextItem(
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면-1 성공 하는 경우 다음 항목의 인덱스입니다.  
   
-##  <a name="a-namegetnextitemindexa--clistctrlgetnextitemindex"></a><a name="getnextitemindex"></a>CListCtrl::GetNextItemIndex  
+##  <a name="getnextitemindex"></a>CListCtrl::GetNextItemIndex  
  지정된 된 속성 집합이 있는 현재 목록 뷰 컨트롤에서 항목의 인덱스를 검색 합니다.  
   
 ```  
@@ -1720,7 +1850,7 @@ BOOL GetNextItemIndex(
   
  이 메서드는 전송 된 [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-##  <a name="a-namegetnextselecteditema--clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a>CListCtrl::GetNextSelectedItem  
+##  <a name="getnextselecteditem"></a>CListCtrl::GetNextSelectedItem  
  식별 되는 목록 항목의 인덱스를 가져옵니다 `pos`를 설정 하는 다음 *pos* 에 **위치** 값입니다.  
   
 ```  
@@ -1760,7 +1890,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 ```
 
   
-##  <a name="a-namegetnumberofworkareasa--clistctrlgetnumberofworkareas"></a><a name="getnumberofworkareas"></a>CListCtrl::GetNumberOfWorkAreas  
+##  <a name="getnumberofworkareas"></a>CListCtrl::GetNumberOfWorkAreas  
  현재는 목록 뷰 컨트롤에 대 한 작업 영역 수를 검색합니다.  
   
 ```  
@@ -1802,7 +1932,7 @@ UINT GetNumberOfWorkAreas() const;
 ```
 
   
-##  <a name="a-namegetoutlinecolora--clistctrlgetoutlinecolor"></a><a name="getoutlinecolor"></a>CListCtrl::GetOutlineColor  
+##  <a name="getoutlinecolor"></a>CListCtrl::GetOutlineColor  
  목록 뷰 컨트롤의 테두리 색을 검색 합니다.  
   
 ```  
@@ -1815,7 +1945,7 @@ COLORREF GetOutlineColor() const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetorigina--clistctrlgetorigin"></a><a name="getorigin"></a>CListCtrl::GetOrigin  
+##  <a name="getorigin"></a>CListCtrl::GetOrigin  
  목록 뷰 컨트롤에 대 한 현재 보기 원점을 검색합니다.  
   
 ```  
@@ -1829,7 +1959,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다. 그러나 컨트롤이 보고서 뷰에서 경우 반환 값은 항상&0;입니다.  
   
-##  <a name="a-namegetselectedcolumna--clistctrlgetselectedcolumn"></a><a name="getselectedcolumn"></a>CListCtrl::GetSelectedColumn  
+##  <a name="getselectedcolumn"></a>CListCtrl::GetSelectedColumn  
  목록 컨트롤에서 현재 선택 된 열의 인덱스를 검색합니다.  
   
 ```  
@@ -1842,7 +1972,7 @@ UINT GetSelectedColumn() const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetselectedcounta--clistctrlgetselectedcount"></a><a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
  List view 컨트롤에서 선택한 항목의 수를 가져옵니다.  
   
 ```  
@@ -1871,7 +2001,7 @@ UINT GetSelectedCount() const;
 ```
 
   
-##  <a name="a-namegetselectionmarka--clistctrlgetselectionmark"></a><a name="getselectionmark"></a>CListCtrl::GetSelectionMark  
+##  <a name="getselectionmark"></a>CListCtrl::GetSelectionMark  
  목록 뷰 컨트롤의 선택 표시를 검색합니다.  
   
 ```  
@@ -1894,7 +2024,7 @@ int GetSelectionMark();
 ```
 
   
-##  <a name="a-namegetstringwidtha--clistctrlgetstringwidth"></a><a name="getstringwidth"></a>CListCtrl::GetStringWidth  
+##  <a name="getstringwidth"></a>CListCtrl::GetStringWidth  
  지정된 된 문자열의 모든 표시 하는 데 필요한 최소 열 너비를 결정 합니다.  
   
 ```  
@@ -1928,7 +2058,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```
 
   
-##  <a name="a-namegetsubitemrecta--clistctrlgetsubitemrect"></a><a name="getsubitemrect"></a>CListCtrl::GetSubItemRect  
+##  <a name="getsubitemrect"></a>CListCtrl::GetSubItemRect  
  목록 뷰 컨트롤에 있는 항목의 경계 사각형을 검색 합니다.  
   
 ```  
@@ -1964,7 +2094,7 @@ BOOL GetSubItemRect(
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 매크로의 동작을 구현 [ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)에 설명 된 대로 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettextbkcolora--clistctrlgettextbkcolor"></a><a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
+##  <a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
  목록 뷰 컨트롤의 텍스트 배경 색을 검색합니다.  
   
 ```  
@@ -1977,7 +2107,7 @@ COLORREF GetTextBkColor() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetTextBkColor](#settextbkcolor)합니다.  
   
-##  <a name="a-namegettextcolora--clistctrlgettextcolor"></a><a name="gettextcolor"></a>CListCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CListCtrl::GetTextColor  
  목록 뷰 컨트롤의 텍스트 색을 검색합니다.  
   
 ```  
@@ -1990,7 +2120,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::SetTextColor](#settextcolor)합니다.  
   
-##  <a name="a-namegettileinfoa--clistctrlgettileinfo"></a><a name="gettileinfo"></a>CListCtrl::GetTileInfo  
+##  <a name="gettileinfo"></a>CListCtrl::GetTileInfo  
  목록 뷰 컨트롤에서 타일에 대 한 정보를 검색합니다.  
   
 ```  
@@ -2007,7 +2137,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettileviewinfoa--clistctrlgettileviewinfo"></a><a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
+##  <a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
  Tile 보기에는 목록 뷰 컨트롤에 대 한 정보를 검색합니다.  
   
 ```  
@@ -2024,7 +2154,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettooltipsa--clistctrlgettooltips"></a><a name="gettooltips"></a>CListCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CListCtrl::GetToolTips  
  목록 뷰 컨트롤에서 사용 하 여 도구 설명을 표시 하는 도구 설명 컨트롤을 검색 합니다.  
   
 ```  
@@ -2049,7 +2179,7 @@ CToolTipCtrl* GetToolTips() const;
 ```
 
   
-##  <a name="a-namegettopindexa--clistctrlgettopindex"></a><a name="gettopindex"></a>CListCtrl::GetTopIndex  
+##  <a name="gettopindex"></a>CListCtrl::GetTopIndex  
  목록 보기 또는 보고서에서 표시 되는 맨 위에 있는 항목의 인덱스를 검색 합니다.  
   
 ```  
@@ -2078,7 +2208,7 @@ int GetTopIndex() const;
 ```
 
   
-##  <a name="a-namegetviewa--clistctrlgetview"></a><a name="getview"></a>CListCtrl::GetView  
+##  <a name="getview"></a>CListCtrl::GetView  
  목록 뷰 컨트롤의 뷰를 가져옵니다.  
   
 ```  
@@ -2091,7 +2221,7 @@ DWORD GetView() const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetviewrecta--clistctrlgetviewrect"></a><a name="getviewrect"></a>CListCtrl::GetViewRect  
+##  <a name="getviewrect"></a>CListCtrl::GetViewRect  
  목록 뷰 컨트롤의 모든 항목의 경계 사각형을 검색합니다.  
   
 ```  
@@ -2108,7 +2238,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="remarks"></a>주의  
  목록 보기 보기 아이콘 또는 작은 아이콘 보기에 있어야 합니다.  
   
-##  <a name="a-namegetworkareasa--clistctrlgetworkareas"></a><a name="getworkareas"></a>CListCtrl::GetWorkAreas  
+##  <a name="getworkareas"></a>CListCtrl::GetWorkAreas  
  목록 뷰 컨트롤의 현재 작업 영역을 검색합니다.  
   
 ```  
@@ -2130,7 +2260,7 @@ void GetWorkAreas(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)합니다.  
   
-##  <a name="a-namehasgroupa--clistctrlhasgroup"></a><a name="hasgroup"></a>CListCtrl::HasGroup  
+##  <a name="hasgroup"></a>CListCtrl::HasGroup  
  목록 뷰 컨트롤에서 지정된 된 그룹에 있는지 확인 합니다.  
   
 ```  
@@ -2147,7 +2277,7 @@ BOOL HasGroup(int iGroupId) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namehittesta--clistctrlhittest"></a><a name="hittest"></a>CListCtrl::HitTest  
+##  <a name="hittest"></a>CListCtrl::HitTest  
  지정된 된 위치에 있는 경우 목록 보기 항목을 결정 합니다.  
   
 ```  
@@ -2199,7 +2329,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 ```
 
   
-##  <a name="a-nameinsertcolumna--clistctrlinsertcolumn"></a><a name="insertcolumn"></a>CListCtrl::InsertColumn  
+##  <a name="insertcolumn"></a>CListCtrl::InsertColumn  
  목록 뷰 컨트롤에 새 열을 삽입합니다.  
   
 ```  
@@ -2243,7 +2373,7 @@ int InsertColumn(
   
  [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) 구조 보고서 보기에 있는 열의 특성을 포함 합니다. 열에 대 한 정보를 받을 사용 됩니다. 이 구조에 설명 된 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinsertgroupa--clistctrlinsertgroup"></a><a name="insertgroup"></a>CListCtrl::InsertGroup  
+##  <a name="insertgroup"></a>CListCtrl::InsertGroup  
  그룹 목록 뷰 컨트롤에 삽입합니다.  
   
 ```  
@@ -2265,7 +2395,7 @@ LRESULT InsertGroup(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinsertgroupsorteda--clistctrlinsertgroupsorted"></a><a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
+##  <a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
  그룹의 정렬 된 목록에 지정된 된 그룹을 삽입합니다.  
   
 ```  
@@ -2282,7 +2412,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinsertitema--clistctrlinsertitem"></a><a name="insertitem"></a>CListCtrl::InsertItem  
+##  <a name="insertitem"></a>CListCtrl::InsertItem  
  목록 뷰 컨트롤에 항목을 삽입합니다.  
   
 ```  
@@ -2366,7 +2496,7 @@ int InsertItem(
 ```
 
   
-##  <a name="a-nameinsertmarkhittesta--clistctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CListCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>CListCtrl::InsertMarkHitTest  
  지정된 된 지점에 가장 가까운 삽입 포인터를 검색합니다.  
   
 ```  
@@ -2388,7 +2518,7 @@ int InsertMarkHitTest(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisgroupviewenableda--clistctrlisgroupviewenabled"></a><a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
+##  <a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
  그룹 보기는 목록 뷰 컨트롤에 대 한 사용 되는지 여부를 결정 합니다.  
   
 ```  
@@ -2401,7 +2531,7 @@ BOOL IsGroupViewEnabled() const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisitemvisiblea--clistctrlisitemvisible"></a><a name="isitemvisible"></a>CListCtrl::IsItemVisible  
+##  <a name="isitemvisible"></a>CListCtrl::IsItemVisible  
  현재 목록 뷰 컨트롤에서 지정된 된 항목 표시 여부를 나타냅니다.  
   
 ```  
@@ -2420,7 +2550,7 @@ BOOL IsItemVisible(int index) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemapidtoindexa--clistctrlmapidtoindex"></a><a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
+##  <a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
  인덱스를 현재 목록 뷰 컨트롤에 있는 항목의 고유 ID를 매핑합니다.  
   
 ```  
@@ -2443,7 +2573,7 @@ UINT MapIDToIndex(UINT id) const;
   
  이 메서드는 전송 된 [LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemapindextoida--clistctrlmapindextoid"></a><a name="mapindextoid"></a>CListCtrl::MapIndexToID  
+##  <a name="mapindextoid"></a>CListCtrl::MapIndexToID  
  고유 ID를 현재 목록 뷰 컨트롤에 있는 항목의 인덱스를 매핑합니다.  
   
 ```  
@@ -2506,7 +2636,7 @@ public:
 ```
 
   
-##  <a name="a-namemovegroupa--clistctrlmovegroup"></a><a name="movegroup"></a>CListCtrl::MoveGroup  
+##  <a name="movegroup"></a>CListCtrl::MoveGroup  
  지정 된 그룹에 지정 된 목록 뷰 컨트롤의&0; 기반된 인덱스를 이동 합니다.  
   
 ```  
@@ -2528,7 +2658,7 @@ LRESULT MoveGroup(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemoveitemtogroupa--clistctrlmoveitemtogroup"></a><a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
+##  <a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
  지정된 된 그룹에 지정된 된 항목을 이동합니다.  
   
 ```  
@@ -2551,7 +2681,7 @@ void MoveItemToGroup(
   
  기능을 에뮬레이션 하는이 메서드는 [LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameredrawitemsa--clistctrlredrawitems"></a><a name="redrawitems"></a>CListCtrl::RedrawItems  
+##  <a name="redrawitems"></a>CListCtrl::RedrawItems  
  항목의 범위를 다시 그려야 하는 목록 뷰 컨트롤을 강제로 수행 합니다.  
   
 ```  
@@ -2573,7 +2703,7 @@ BOOL RedrawItems(
 ### <a name="remarks"></a>주의  
  지정된 된 항목 목록 보기 창에는 수신 될 때까지 실제로 다시 하지는 `WM_PAINT` 메시지입니다. 즉시 다시 그리게 하는 Windows 호출 [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) 후이 함수를 사용 하는 함수입니다.  
   
-##  <a name="a-nameremoveallgroupsa--clistctrlremoveallgroups"></a><a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
+##  <a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
  목록 뷰 컨트롤에서 모든 그룹을 제거합니다.  
   
 ```  
@@ -2583,7 +2713,7 @@ void RemoveAllGroups();
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameremovegroupa--clistctrlremovegroup"></a><a name="removegroup"></a>CListCtrl::RemoveGroup  
+##  <a name="removegroup"></a>CListCtrl::RemoveGroup  
  List view 컨트롤에서 지정된 된 그룹을 제거합니다.  
   
 ```  
@@ -2600,7 +2730,7 @@ LRESULT RemoveGroup(int iGroupId);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namescrolla--clistctrlscroll"></a><a name="scroll"></a>CListCtrl::Scroll  
+##  <a name="scroll"></a>CListCtrl::Scroll  
  목록 뷰 컨트롤의 내용을 스크롤합니다.  
   
 ```  
@@ -2614,7 +2744,7 @@ BOOL Scroll(CSize size);
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namesetbkcolora--clistctrlsetbkcolor"></a><a name="setbkcolor"></a>CListCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CListCtrl::SetBkColor  
  목록 뷰 컨트롤의 배경색을 설정합니다.  
   
 ```  
@@ -2639,7 +2769,7 @@ BOOL SetBkColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesetbkimagea--clistctrlsetbkimage"></a><a name="setbkimage"></a>CListCtrl::SetBkImage  
+##  <a name="setbkimage"></a>CListCtrl::SetBkImage  
  목록 뷰 컨트롤의 배경 이미지를 설정합니다.  
   
 ```  
@@ -2688,7 +2818,7 @@ BOOL SetBkImage(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetBkImage](#getbkimage)합니다.  
   
-##  <a name="a-namesetcallbackmaska--clistctrlsetcallbackmask"></a><a name="setcallbackmask"></a>CListCtrl::SetCallbackMask  
+##  <a name="setcallbackmask"></a>CListCtrl::SetCallbackMask  
  목록 뷰 컨트롤에 대 한 콜백 마스크를 설정합니다.  
   
 ```  
@@ -2714,7 +2844,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```
 
 
-##  <a name="a-namesetchecka--clistctrlsetcheck"></a><a name="setcheck"></a>CListCtrl::SetCheck  
+##  <a name="setcheck"></a>CListCtrl::SetCheck  
  목록 컨트롤 항목의 상태 이미지가 표시 되는지를 결정 합니다.  
   
 ```  
@@ -2752,7 +2882,7 @@ BOOL SetCheck(
 ```
 
   
-##  <a name="a-namesetcolumna--clistctrlsetcolumn"></a><a name="setcolumn"></a>CListCtrl::SetColumn  
+##  <a name="setcolumn"></a>CListCtrl::SetColumn  
  목록 뷰 열 특성을 설정합니다.  
   
 ```  
@@ -2774,7 +2904,7 @@ BOOL SetColumn(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetColumn](#getcolumn)합니다.  
   
-##  <a name="a-namesetcolumnorderarraya--clistctrlsetcolumnorderarray"></a><a name="setcolumnorderarray"></a>CListCtrl::SetColumnOrderArray  
+##  <a name="setcolumnorderarray"></a>CListCtrl::SetColumnOrderArray  
  목록 뷰 컨트롤의 열 순서 (왼쪽에서 오른쪽)를 설정 합니다.  
   
 ```  
@@ -2799,7 +2929,7 @@ BOOL SetColumnOrderArray(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetColumnOrderArray](#getcolumnorderarray)합니다.  
   
-##  <a name="a-namesetcolumnwidtha--clistctrlsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListCtrl::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>CListCtrl::SetColumnWidth  
  보고서 보기 또는 목록 보기에서 열 너비를 변경합니다.  
   
 ```  
@@ -2818,7 +2948,7 @@ BOOL SetColumnWidth(
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namesetextendedstylea--clistctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CListCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CListCtrl::SetExtendedStyle  
  목록 뷰 컨트롤의 현재 확장된 스타일을 설정합니다.  
   
 ```  
@@ -2845,7 +2975,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```
 
   
-##  <a name="a-namesetgroupinfoa--clistctrlsetgroupinfo"></a><a name="setgroupinfo"></a>CListCtrl::SetGroupInfo  
+##  <a name="setgroupinfo"></a>CListCtrl::SetGroupInfo  
  현재 목록 뷰 컨트롤의 지정된 된 그룹을 설명 하는 정보를 설정 합니다.  
   
 ```  
@@ -2867,7 +2997,7 @@ int SetGroupInfo(
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetgroupmetricsa--clistctrlsetgroupmetrics"></a><a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
+##  <a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
  목록 뷰 컨트롤의 그룹 메트릭을 설정합니다.  
   
 ```  
@@ -2881,7 +3011,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesethotcursora--clistctrlsethotcursor"></a><a name="sethotcursor"></a>CListCtrl::SetHotCursor  
+##  <a name="sethotcursor"></a>CListCtrl::SetHotCursor  
  목록 뷰 컨트롤에 대해 핫 트래킹을 때 사용 되는 커서를 설정 합니다.  
   
 ```  
@@ -2903,7 +3033,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetHotCursor](#gethotcursor)합니다.  
   
-##  <a name="a-namesethotitema--clistctrlsethotitem"></a><a name="sethotitem"></a>CListCtrl::SetHotItem  
+##  <a name="sethotitem"></a>CListCtrl::SetHotItem  
  목록 뷰 컨트롤의 현재 활성 항목을 설정합니다.  
   
 ```  
@@ -2923,7 +3053,7 @@ int SetHotItem(int iIndex);
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetHotItem](#gethotitem)합니다.  
   
-##  <a name="a-namesethovertimea--clistctrlsethovertime"></a><a name="sethovertime"></a>CListCtrl::SetHoverTime  
+##  <a name="sethovertime"></a>CListCtrl::SetHoverTime  
  목록 뷰 컨트롤의 현재 호버 시간을 설정합니다.  
   
 ```  
@@ -2943,7 +3073,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetHoverTime](#gethovertime)합니다.  
   
-##  <a name="a-nameseticonspacinga--clistctrlseticonspacing"></a><a name="seticonspacing"></a>CListCtrl::SetIconSpacing  
+##  <a name="seticonspacing"></a>CListCtrl::SetIconSpacing  
  목록 뷰 컨트롤의 아이콘 사이의 간격을 설정 합니다.  
   
 ```  
@@ -2979,7 +3109,7 @@ CSize SetIconSpacing(CSize size);
 ```
 
   
-##  <a name="a-namesetimagelista--clistctrlsetimagelist"></a><a name="setimagelist"></a>CListCtrl::SetImageList  
+##  <a name="setimagelist"></a>CListCtrl::SetImageList  
  이미지 목록을 목록 뷰 컨트롤에 할당합니다.  
   
 ```  
@@ -3007,7 +3137,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetImageList](#getimagelist)합니다.  
   
-##  <a name="a-namesetinfotipa--clistctrlsetinfotip"></a><a name="setinfotip"></a>CListCtrl::SetInfoTip  
+##  <a name="setinfotip"></a>CListCtrl::SetInfoTip  
  도구 설명 텍스트를 설정합니다.  
   
 ```  
@@ -3024,7 +3154,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetinsertmarka--clistctrlsetinsertmark"></a><a name="setinsertmark"></a>CListCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>CListCtrl::SetInsertMark  
  정의 된 위치에 삽입 포인터를 설정합니다.  
   
 ```  
@@ -3041,7 +3171,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetinsertmarkcolora--clistctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
  삽입 포인터의 색을 설정 합니다.  
   
 ```  
@@ -3058,7 +3188,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetitema--clistctrlsetitem"></a><a name="setitem"></a>CListCtrl::SetItem  
+##  <a name="setitem"></a>CListCtrl::SetItem  
  일부 또는 전체 목록 보기 항목의 특성을 설정합니다.  
   
 ```  
@@ -3134,7 +3264,7 @@ BOOL SetItem(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::HitTest](#hittest)합니다.  
   
-##  <a name="a-namesetitemcounta--clistctrlsetitemcount"></a><a name="setitemcount"></a>CListCtrl::SetItemCount  
+##  <a name="setitemcount"></a>CListCtrl::SetItemCount  
  많은 수의 항목을 추가 하는 데는 목록 뷰 컨트롤을 준비 합니다.  
   
 ```  
@@ -3168,7 +3298,7 @@ void SetItemCount(int nItems);
 ```
 
   
-##  <a name="a-namesetitemcountexa--clistctrlsetitemcountex"></a><a name="setitemcountex"></a>CListCtrl::SetItemCountEx  
+##  <a name="setitemcountex"></a>CListCtrl::SetItemCountEx  
  가상 목록 뷰 컨트롤에 대 한 항목 수를 설정합니다.  
   
 ```  
@@ -3215,7 +3345,7 @@ BOOL SetItemCountEx(
 ```
 
   
-##  <a name="a-namesetitemdataa--clistctrlsetitemdata"></a><a name="setitemdata"></a>CListCtrl::SetItemData  
+##  <a name="setitemdata"></a>CListCtrl::SetItemData  
  지정 된 항목과 연결 된 32 비트 응용 프로그램 관련 값을 설정 `nItem`합니다.  
   
 ```  
@@ -3247,7 +3377,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```
 
   
-##  <a name="a-namesetitemindexstatea--clistctrlsetitemindexstate"></a><a name="setitemindexstate"></a>CListCtrl::SetItemIndexState  
+##  <a name="setitemindexstate"></a>CListCtrl::SetItemIndexState  
  현재 목록 뷰 컨트롤에서 항목의 상태를 설정합니다.  
   
 ```  
@@ -3275,7 +3405,7 @@ BOOL SetItemIndexState(
   
  이 메서드는 전송 된 [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) 에 설명 된 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetitempositiona--clistctrlsetitemposition"></a><a name="setitemposition"></a>CListCtrl::SetItemPosition  
+##  <a name="setitemposition"></a>CListCtrl::SetItemPosition  
  목록 뷰 컨트롤의 지정된 된 위치에 항목을 이동합니다.  
   
 ```  
@@ -3302,7 +3432,7 @@ BOOL SetItemPosition(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetItemPosition](#getitemposition)합니다.  
   
-##  <a name="a-namesetitemstatea--clistctrlsetitemstate"></a><a name="setitemstate"></a>CListCtrl::SetItemState  
+##  <a name="setitemstate"></a>CListCtrl::SetItemState  
  목록 뷰 컨트롤에 있는 항목의 상태를 변경합니다.  
   
 ```  
@@ -3339,7 +3469,7 @@ BOOL SetItemState(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetTopIndex](#gettopindex)합니다.  
   
-##  <a name="a-namesetitemtexta--clistctrlsetitemtext"></a><a name="setitemtext"></a>CListCtrl::SetItemText  
+##  <a name="setitemtext"></a>CListCtrl::SetItemText  
  목록 보기 항목 또는 하위 항목의 텍스트를 변경합니다.  
   
 ```  
@@ -3368,7 +3498,7 @@ BOOL SetItemText(
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::InsertItem](#insertitem)합니다.  
   
-##  <a name="a-namesetoutlinecolora--clistctrlsetoutlinecolor"></a><a name="setoutlinecolor"></a>CListCtrl::SetOutlineColor  
+##  <a name="setoutlinecolor"></a>CListCtrl::SetOutlineColor  
  목록 뷰 컨트롤의 테두리의 색을 설정 하는 경우는 [LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739) 확장된 창 스타일을 설정 합니다.  
   
 ```  
@@ -3385,7 +3515,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetselectedcolumna--clistctrlsetselectedcolumn"></a><a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
+##  <a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
  목록 뷰 컨트롤의 선택된 된 열을 설정합니다.  
   
 ```  
@@ -3402,7 +3532,7 @@ LRESULT SetSelectedColumn(int iCol);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetselectionmarka--clistctrlsetselectionmark"></a><a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
+##  <a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
  목록 뷰 컨트롤의 선택 표시를 설정합니다.  
   
 ```  
@@ -3422,7 +3552,7 @@ int SetSelectionMark(int iIndex);
 ### <a name="example"></a>예제  
   예를 참조 [CListCtrl::GetSelectionMark](#getselectionmark)합니다.  
   
-##  <a name="a-namesettextbkcolora--clistctrlsettextbkcolor"></a><a name="settextbkcolor"></a>CListCtrl::SetTextBkColor  
+##  <a name="settextbkcolor"></a>CListCtrl::SetTextBkColor  
  목록 뷰 컨트롤에서 텍스트의 배경색을 설정합니다.  
   
 ```  
@@ -3447,7 +3577,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesettextcolora--clistctrlsettextcolor"></a><a name="settextcolor"></a>CListCtrl::SetTextColor  
+##  <a name="settextcolor"></a>CListCtrl::SetTextColor  
  목록 뷰 컨트롤의 텍스트 색을 설정합니다.  
   
 ```  
@@ -3473,7 +3603,7 @@ BOOL SetTextColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesettileinfoa--clistctrlsettileinfo"></a><a name="settileinfo"></a>CListCtrl::SetTileInfo  
+##  <a name="settileinfo"></a>CListCtrl::SetTileInfo  
  목록 뷰 컨트롤의 타일에 대 한 정보를 설정합니다.  
   
 ```  
@@ -3490,7 +3620,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettileviewinfoa--clistctrlsettileviewinfo"></a><a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
+##  <a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
  Tile 보기에는 목록 뷰 컨트롤을 사용 하는 정보를 설정 합니다.  
   
 ```  
@@ -3507,7 +3637,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettooltipsa--clistctrlsettooltips"></a><a name="settooltips"></a>CListCtrl::SetToolTips  
+##  <a name="settooltips"></a>CListCtrl::SetToolTips  
  List view 컨트롤에서 도구 설명을 표시 하려면 사용할 도구 설명 컨트롤을 설정 합니다.  
   
 ```  
@@ -3526,7 +3656,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
   
  도구 설명을 사용 하지 않도록를 나타내는 `LVS_NOTOOLTIPS` 스타일을 만들 때의 `CListCtrl` 개체입니다.  
   
-##  <a name="a-namesetviewa--clistctrlsetview"></a><a name="setview"></a>CListCtrl::SetView  
+##  <a name="setview"></a>CListCtrl::SetView  
  목록 뷰 컨트롤의 뷰를 설정합니다.  
   
 ```  
@@ -3543,7 +3673,7 @@ DWORD SetView(int iView);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetworkareasa--clistctrlsetworkareas"></a><a name="setworkareas"></a>CListCtrl::SetWorkAreas  
+##  <a name="setworkareas"></a>CListCtrl::SetWorkAreas  
  목록 뷰 컨트롤의 아이콘 표시 될 수 있는 영역을 설정 합니다.  
   
 ```  
@@ -3571,7 +3701,7 @@ void SetWorkAreas(
 ```
 
   
-##  <a name="a-namesortgroupsa--clistctrlsortgroups"></a><a name="sortgroups"></a>CListCtrl::SortGroups  
+##  <a name="sortgroups"></a>CListCtrl::SortGroups  
  List view 컨트롤 내의 ID로 그룹을 정렬 하는 응용 프로그램 정의 된 비교 함수를 사용 합니다.  
   
 ```  
@@ -3593,7 +3723,7 @@ BOOL SortGroups(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesortitemsa--clistctrlsortitems"></a><a name="sortitems"></a>CListCtrl::SortItems  
+##  <a name="sortitems"></a>CListCtrl::SortItems  
  응용 프로그램 정의 된 비교 함수를 사용 하 여 목록 보기 항목을 정렬 합니다.  
   
 ```  
@@ -3651,7 +3781,7 @@ void CListCtrlDlg::Sort()
 }
 ```
   
-##  <a name="a-namesortitemsexa--clistctrlsortitemsex"></a><a name="sortitemsex"></a>CListCtrl::SortItemsEx  
+##  <a name="sortitemsex"></a>CListCtrl::SortItemsEx  
  응용 프로그램 정의 된 비교 함수를 사용 하 여 현재 목록 뷰 컨트롤의 항목을 정렬 합니다.  
   
 ```  
@@ -3734,7 +3864,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 ```
 
   
-##  <a name="a-namesubitemhittesta--clistctrlsubitemhittest"></a><a name="subitemhittest"></a>CListCtrl::SubItemHitTest  
+##  <a name="subitemhittest"></a>CListCtrl::SubItemHitTest  
  지정된 된 위치에 있는 경우 목록 보기 항목을 결정 합니다.  
   
 ```  
@@ -3772,7 +3902,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="a-nameupdatea--clistctrlupdate"></a><a name="update"></a>CListCtrl::Update  
+##  <a name="update"></a>CListCtrl::Update  
  목록 뷰 컨트롤에 지정 된 항목 자동으로 그려지도록 강제 `nItem`합니다.  
   
 ```  

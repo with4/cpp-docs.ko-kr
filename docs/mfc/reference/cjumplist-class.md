@@ -9,8 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxadv/CJumpList
 - CJumpList
+- AFXADV/CJumpList
+- AFXADV/CJumpList::CJumpList
+- AFXADV/CJumpList::AbortList
+- AFXADV/CJumpList::AddDestination
+- AFXADV/CJumpList::AddKnownCategory
+- AFXADV/CJumpList::AddTask
+- AFXADV/CJumpList::AddTasks
+- AFXADV/CJumpList::AddTaskSeparator
+- AFXADV/CJumpList::ClearAll
+- AFXADV/CJumpList::ClearAllDestinations
+- AFXADV/CJumpList::CommitList
+- AFXADV/CJumpList::GetDestinationList
+- AFXADV/CJumpList::GetMaxSlots
+- AFXADV/CJumpList::GetRemovedItems
+- AFXADV/CJumpList::InitializeList
+- AFXADV/CJumpList::SetAppID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,14 +96,14 @@ class CJumpList;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxadv.h  
   
-##  <a name="a-namedtorcjumplista--cjumplistcjumplist"></a><a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
+##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
  `CJumpList` 개체를 제거합니다.  
   
 ```  
 ~CJumpList();
 ```  
   
-##  <a name="a-nameabortlista--cjumplistabortlist"></a><a name="abortlist"></a>CJumpList::AbortList  
+##  <a name="abortlist"></a>CJumpList::AbortList  
  목록 작성 트랜잭션을 커밋하지 않고 중단 합니다.  
   
 ```  
@@ -98,7 +113,7 @@ void AbortList();
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하는 것과 동일한 효과가 소멸 `CJumpList` 호출 하지 않고 `CommitList`합니다.  
   
-##  <a name="a-nameadddestinationa--cjumplistadddestination"></a><a name="adddestination"></a>CJumpList::AddDestination  
+##  <a name="adddestination"></a>CJumpList::AddDestination  
  대상 목록에 추가합니다.  
   
 ```  
@@ -138,7 +153,7 @@ BOOL AddDestination(
 ### <a name="remarks"></a>주의  
  인스턴스의 `CJumpList` 내부적으로 추가 된 대상에 따라 누적 한 다음에 커밋합니다 `CommitList`합니다.  
   
-##  <a name="a-nameaddknowncategorya--cjumplistaddknowncategory"></a><a name="addknowncategory"></a>CJumpList::AddKnownCategory  
+##  <a name="addknowncategory"></a>CJumpList::AddKnownCategory  
  알려진 범주 목록에 추가합니다.  
   
 ```  
@@ -154,7 +169,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ### <a name="remarks"></a>주의  
  범주를 활용 하는 모든 응용 프로그램에 대 한 자동으로 계산 됩니다 하는 빈도 및 최근 범주는 알려진 `SHAddToRecentDocs` (또는 직접 사용 하지는 셸 응용 프로그램의 일부 시나리오에서는 대신 하 여 호출 됩니다).  
   
-##  <a name="a-nameaddtaska--cjumplistaddtask"></a><a name="addtask"></a>CJumpList::AddTask  
+##  <a name="addtask"></a>CJumpList::AddTask  
  정식 작업 범주에 항목을 추가합니다.  
   
 ```  
@@ -192,7 +207,7 @@ BOOL AddTask(IShellLink* pShellLink);
 ### <a name="remarks"></a>주의  
  인스턴스의 `CJumpList` 지정 된 작업에 따라 누적 하는 동안 대상 목록에 추가 합니다 `CommitList`합니다. 작업 항목은 응용 프로그램의 대상 메뉴 맨 아래에 범주에 표시 됩니다. 이 범주 UI에 채워진 후 다른 모든 범주 보다 우선 합니다.  
   
-##  <a name="a-nameaddtasksa--cjumplistaddtasks"></a><a name="addtasks"></a>CJumpList::AddTasks  
+##  <a name="addtasks"></a>CJumpList::AddTasks  
  정식 작업 범주에 항목을 추가합니다.  
   
 ```  
@@ -208,7 +223,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="remarks"></a>주의  
  CJumpList의 인스턴스를 지정 된 작업을 누적 하 하는 동안 대상 목록에 추가 `CommitList`합니다. 작업 항목은 응용 프로그램의 대상 메뉴 맨 아래에 범주에 표시 됩니다. 이 범주 UI에 채워진 후 다른 모든 범주 보다 우선 합니다.  
   
-##  <a name="a-nameaddtaskseparatora--cjumplistaddtaskseparator"></a><a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
+##  <a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
  작업 사이 구분 기호를 추가합니다.  
   
 ```  
@@ -218,7 +233,7 @@ BOOL AddTaskSeparator();
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아니고 있지 않으면 0입니다.  
   
-##  <a name="a-namecjumplista--cjumplistcjumplist"></a><a name="cjumplist"></a>CJumpList::CJumpList  
+##  <a name="cjumplist"></a>CJumpList::CJumpList  
  `CJumpList` 개체를 생성합니다.  
   
 ```  
@@ -229,7 +244,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
  `bAutoCommit`  
  이 매개 변수가 FALSE 이면 소멸자의 목록은 자동으로 커밋되지 않은 합니다.  
   
-##  <a name="a-nameclearalla--cjumplistclearall"></a><a name="clearall"></a>CJumpList::ClearAll  
+##  <a name="clearall"></a>CJumpList::ClearAll  
  모든 작업 및 대상의 현재 인스턴스에 추가 된 제거 `CJumpList` 지금까지 합니다.  
   
 ```  
@@ -239,7 +254,7 @@ void ClearAll();
 ### <a name="remarks"></a>주의  
  이 메서드를 지우고 모든 데이터와 내부 인터페이스를 해제 합니다.  
   
-##  <a name="a-nameclearalldestinationsa--cjumplistclearalldestinations"></a><a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
+##  <a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
  지금까지 CJumpList의 현재 인스턴스에 추가 된 모든 대상을 제거 합니다.  
   
 ```  
@@ -249,7 +264,7 @@ void ClearAllDestinations();
 ### <a name="remarks"></a>주의  
  대상 목록 건물의 현재 세션에서 지금까지 추가 되어 있어야 하며 다른 대상에 다시 추가 하는 모든 대상을 제거 해야 하는 경우이 함수를 호출 합니다. 경우 내부 `ICustomDestinationList` 되었습니다 초기화 것은 활성 상태로 남아 있습니다.  
   
-##  <a name="a-namecommitlista--cjumplistcommitlist"></a><a name="commitlist"></a>CJumpList::CommitList  
+##  <a name="commitlist"></a>CJumpList::CommitList  
  목록 건물에서 트랜잭션을 종료 하 고 연결 된 저장소 (이 경우 레지스트리)에 보고 된 목록을 커밋합니다.  
   
 ```  
@@ -261,7 +276,7 @@ BOOL CommitList();
 ### <a name="remarks"></a>주의  
  커밋 원자성입니다. 커밋에 실패 하면 오류가 반환 됩니다.  때 `CommitList` 라고, 현재 제거 된 항목 목록이 정리 됩니다. 활성 목록 건물 트랜잭션이 없는 있도록 개체를 다시 설정이 메서드를 호출 합니다. 목록을 업데이트 하려면 `BeginList` 다시 호출 해야 합니다.  
   
-##  <a name="a-namegetdestinationlista--cjumplistgetdestinationlist"></a><a name="getdestinationlist"></a>CJumpList::GetDestinationList  
+##  <a name="getdestinationlist"></a>CJumpList::GetDestinationList  
  대상 목록에 대 한 인터페이스 포인터를 검색합니다.  
   
 ```  
@@ -273,7 +288,7 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="remarks"></a>주의  
  점프 목록 초기화 되지 않은 또는 커밋 또는 중단, 값이 반환된 됩니다 `NULL`합니다.  
   
-##  <a name="a-namegetmaxslotsa--cjumplistgetmaxslots"></a><a name="getmaxslots"></a>CJumpList::GetMaxSlots  
+##  <a name="getmaxslots"></a>CJumpList::GetMaxSlots  
  호출 응용 프로그램의 대상 메뉴에 표시할 수 있는 범주 헤더를 포함 하는 항목의 최대 수를 검색 합니다.  
   
 ```  
@@ -285,7 +300,7 @@ UINT GetMaxSlots() const;
 ### <a name="remarks"></a>주의  
  응용 프로그램에는 다양 한 항목 및이 값 만큼 결합 하는 범주 헤더 보고할만 수 있습니다. 경우에 대 한 호출이 `AppendCategory`, `AppendKnownCategory`, 또는 `AddUserTasks` 이 수를 초과, 오류를 반환 합니다.  
   
-##  <a name="a-namegetremoveditemsa--cjumplistgetremoveditems"></a><a name="getremoveditems"></a>CJumpList::GetRemovedItems  
+##  <a name="getremoveditems"></a>CJumpList::GetRemovedItems  
  나타내는 항목의 배열을 반환 대상을 제거 합니다.  
   
 ```  
@@ -297,7 +312,7 @@ IObjectArray* GetRemovedItems();
 ### <a name="remarks"></a>주의  
  점프 목록 초기화 하는 동안 제거 된 대상은 검색 됩니다. 새 대상 목록을 생성 하는 경우 응용 프로그램은 제거 목록 열거자가 반환 하는 모든 항목에 대 한 추적 데이터를 지우는 제거 대상 목록에서 먼저 처리 해야 합니다. 응용 프로그램에 대 한 현재 호출 된다고 방금 제거 된 항목을 제공 하려고 할 경우 `BeginList` 시작 다시 해당 항목을 추가 하는 메서드 호출은 실패 합니다, 응용 프로그램은 제거 목록을 엔진 유지 되도록 합니다.  
   
-##  <a name="a-nameinitializelista--cjumplistinitializelist"></a><a name="initializelist"></a>CJumpList::InitializeList  
+##  <a name="initializelist"></a>CJumpList::InitializeList  
  목록 작성 트랜잭션을 시작합니다.  
   
 ```  
@@ -309,7 +324,7 @@ BOOL InitializeList();
 ### <a name="remarks"></a>주의  
  에 대 한 포인터를 검색 하려는 경우가 아니면이 메서드를 명시적으로 호출할 필요가 없습니다 `ICustomDestinationList` 를 사용 하 여 `GetDestinationList`를 사용 하 여 사용 가능한 슬롯 수가 `GetMaxSlots`, 또는 사용 하 여 제거 된 항목 목록을 `GetRemovedItems`합니다.  
   
-##  <a name="a-namesetappida--cjumplistsetappid"></a><a name="setappid"></a>CJumpList::SetAppID  
+##  <a name="setappid"></a>CJumpList::SetAppID  
  빌드되는 목록에 대 한 응용 프로그램 사용자 모델 ID를 설정 합니다.  
   
 ```  

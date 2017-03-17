@@ -10,8 +10,80 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComControlBase
-- ATL.CComControlBase
-- ATL::CComControlBase
+- ATLCTL/ATL::CComControlBase
+- ATLCTL/ATL::CComControlBase::AppearanceType
+- ATLCTL/ATL::CComControlBase::CComControlBase
+- ATLCTL/ATL::CComControlBase::ControlQueryInterface
+- ATLCTL/ATL::CComControlBase::DoesVerbActivate
+- ATLCTL/ATL::CComControlBase::DoesVerbUIActivate
+- ATLCTL/ATL::CComControlBase::DoVerbProperties
+- ATLCTL/ATL::CComControlBase::FireViewChange
+- ATLCTL/ATL::CComControlBase::GetAmbientAppearance
+- ATLCTL/ATL::CComControlBase::GetAmbientAutoClip
+- ATLCTL/ATL::CComControlBase::GetAmbientBackColor
+- ATLCTL/ATL::CComControlBase::GetAmbientCharSet
+- ATLCTL/ATL::CComControlBase::GetAmbientCodePage
+- ATLCTL/ATL::CComControlBase::GetAmbientDisplayAsDefault
+- ATLCTL/ATL::CComControlBase::GetAmbientDisplayName
+- ATLCTL/ATL::CComControlBase::GetAmbientFont
+- ATLCTL/ATL::CComControlBase::GetAmbientFontDisp
+- ATLCTL/ATL::CComControlBase::GetAmbientForeColor
+- ATLCTL/ATL::CComControlBase::GetAmbientLocaleID
+- ATLCTL/ATL::CComControlBase::GetAmbientMessageReflect
+- ATLCTL/ATL::CComControlBase::GetAmbientPalette
+- ATLCTL/ATL::CComControlBase::GetAmbientProperty
+- ATLCTL/ATL::CComControlBase::GetAmbientRightToLeft
+- ATLCTL/ATL::CComControlBase::GetAmbientScaleUnits
+- ATLCTL/ATL::CComControlBase::GetAmbientShowGrabHandles
+- ATLCTL/ATL::CComControlBase::GetAmbientShowHatching
+- ATLCTL/ATL::CComControlBase::GetAmbientSupportsMnemonics
+- ATLCTL/ATL::CComControlBase::GetAmbientTextAlign
+- ATLCTL/ATL::CComControlBase::GetAmbientTopToBottom
+- ATLCTL/ATL::CComControlBase::GetAmbientUIDead
+- ATLCTL/ATL::CComControlBase::GetAmbientUserMode
+- ATLCTL/ATL::CComControlBase::GetDirty
+- ATLCTL/ATL::CComControlBase::GetZoomInfo
+- ATLCTL/ATL::CComControlBase::InPlaceActivate
+- ATLCTL/ATL::CComControlBase::InternalGetSite
+- ATLCTL/ATL::CComControlBase::OnDraw
+- ATLCTL/ATL::CComControlBase::OnDrawAdvanced
+- ATLCTL/ATL::CComControlBase::OnKillFocus
+- ATLCTL/ATL::CComControlBase::OnMouseActivate
+- ATLCTL/ATL::CComControlBase::OnPaint
+- ATLCTL/ATL::CComControlBase::OnSetFocus
+- ATLCTL/ATL::CComControlBase::PreTranslateAccelerator
+- ATLCTL/ATL::CComControlBase::SendOnClose
+- ATLCTL/ATL::CComControlBase::SendOnDataChange
+- ATLCTL/ATL::CComControlBase::SendOnRename
+- ATLCTL/ATL::CComControlBase::SendOnSave
+- ATLCTL/ATL::CComControlBase::SendOnViewChange
+- ATLCTL/ATL::CComControlBase::SetControlFocus
+- ATLCTL/ATL::CComControlBase::SetDirty
+- ATLCTL/ATL::CComControlBase::m_bAutoSize
+- ATLCTL/ATL::CComControlBase::m_bDrawFromNatural
+- ATLCTL/ATL::CComControlBase::m_bDrawGetDataInHimetric
+- ATLCTL/ATL::CComControlBase::m_bInPlaceActive
+- ATLCTL/ATL::CComControlBase::m_bInPlaceSiteEx
+- ATLCTL/ATL::CComControlBase::m_bNegotiatedWnd
+- ATLCTL/ATL::CComControlBase::m_bRecomposeOnResize
+- ATLCTL/ATL::CComControlBase::m_bRequiresSave
+- ATLCTL/ATL::CComControlBase::m_bResizeNatural
+- ATLCTL/ATL::CComControlBase::m_bUIActive
+- ATLCTL/ATL::CComControlBase::m_bUsingWindowRgn
+- ATLCTL/ATL::CComControlBase::m_bWasOnceWindowless
+- ATLCTL/ATL::CComControlBase::m_bWindowOnly
+- ATLCTL/ATL::CComControlBase::m_bWndLess
+- ATLCTL/ATL::CComControlBase::m_hWndCD
+- ATLCTL/ATL::CComControlBase::m_nFreezeEvents
+- ATLCTL/ATL::CComControlBase::m_rcPos
+- ATLCTL/ATL::CComControlBase::m_sizeExtent
+- ATLCTL/ATL::CComControlBase::m_sizeNatural
+- ATLCTL/ATL::CComControlBase::m_spAdviseSink
+- ATLCTL/ATL::CComControlBase::m_spAmbientDispatch
+- ATLCTL/ATL::CComControlBase::m_spClientSite
+- ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
+- ATLCTL/ATL::CComControlBase::m_spInPlaceSite
+- ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -157,7 +229,7 @@ class ATL_NO_VTABLE CComControlBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-nameappearancetypea--ccomcontrolbaseappearancetype"></a><a name="appearancetype"></a>CComControlBase::AppearanceType  
+##  <a name="appearancetype"></a>CComControlBase::AppearanceType  
  필요한 경우 재정의할 프로그램 **m_nAppearance** 스톡 속성은 형식의 **짧은**합니다.  
   
 ```
@@ -167,7 +239,7 @@ typedef short AppearanceType;
 ### <a name="remarks"></a>주의  
  ATL 컨트롤 마법사 추가 **m_nAppearance** 스톡 짧은 형식의 속성입니다. 재정의 `AppearanceType` 다른 데이터 형식을 사용 하는 경우.  
   
-##  <a name="a-nameccomcontrolbasea--ccomcontrolbaseccomcontrolbase"></a><a name="ccomcontrolbase"></a>CComControlBase::CComControlBase  
+##  <a name="ccomcontrolbase"></a>CComControlBase::CComControlBase  
  생성자입니다.  
   
 ```
@@ -181,7 +253,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>주의  
  컨트롤 크기를 HIMETRIC 단위 5080 X 5080를 초기화 합니다 ("2" X 2)를 초기화 하 고는 `CComControlBase` 데이터 멤버 값을 **NULL** 또는 **FALSE**합니다.  
   
-##  <a name="a-namedtora--ccomcontrolbaseccomcontrolbase"></a><a name="dtor"></a>CComControlBase:: ~ CComControlBase  
+##  <a name="dtor"></a>CComControlBase:: ~ CComControlBase  
  소멸자입니다.  
   
 ```
@@ -191,7 +263,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>주의  
  컨트롤이 창 있는 경우 `~CComControlBase` 를 호출 하 여 소멸 [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)합니다.  
   
-##  <a name="a-namecontrolqueryinterfacea--ccomcontrolbasecontrolqueryinterface"></a><a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -212,7 +284,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM&#15;](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
-##  <a name="a-namedoesverbactivatea--ccomcontrolbasedoesverbactivate"></a><a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
+##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
  검사는 `iVerb` 매개 변수에서 사용 하는 `IOleObjectImpl::DoVerb` 컨트롤의 사용자 인터페이스를 활성화 하는 중 하나 ( `iVerb` equals `OLEIVERB_UIACTIVATE`), 컨트롤을 두 번 클릭할 때 수행할 동작을 정의 ( `iVerb` equals `OLEIVERB_PRIMARY`), 컨트롤을 표시 ( `iVerb` equals `OLEIVERB_SHOW`), 컨트롤을 활성화 하거나 ( `iVerb` equals **OLEIVERB_INPLACEACTIVATE**).  
   
 ```
@@ -229,7 +301,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 ### <a name="remarks"></a>주의  
  사용자 고유의 활성화 동사를 정의 하려면이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="a-namedoesverbuiactivatea--ccomcontrolbasedoesverbuiactivate"></a><a name="doesverbuiactivate"></a>CComControlBase::DoesVerbUIActivate  
+##  <a name="doesverbuiactivate"></a>CComControlBase::DoesVerbUIActivate  
  검사는 `iVerb` 매개 변수에서 사용 하는 `IOleObjectImpl::DoVerb` 컨트롤의 사용자 인터페이스를 활성화 하 고 반환 **TRUE**합니다.  
   
 ```
@@ -243,7 +315,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 경우 `iVerb` equals `OLEIVERB_UIACTIVATE`, `OLEIVERB_PRIMARY`, `OLEIVERB_SHOW`, 또는 **OLEIVERB_INPLACEACTIVATE**합니다. 그렇지 않으면 메서드가 반환 **FALSE**합니다.  
   
-##  <a name="a-namedoverbpropertiesa--ccomcontrolbasedoverbproperties"></a><a name="doverbproperties"></a>CComControlBase::DoVerbProperties  
+##  <a name="doverbproperties"></a>CComControlBase::DoVerbProperties  
  컨트롤의 속성 페이지를 표시합니다.  
   
 ```
@@ -265,7 +337,7 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
   
  [!code-cpp[NVC_ATL_COM&#20;](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
-##  <a name="a-namefireviewchangea--ccomcontrolbasefireviewchange"></a><a name="fireviewchange"></a>CComControlBase::FireViewChange  
+##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
  컨트롤의 뷰가 변경 되는 등록 된 advise 싱크 또는 컨테이너 컨트롤 다시 그리기를 구별 하는이 메서드를 호출 합니다.  
   
 ```
@@ -281,7 +353,7 @@ HRESULT FireViewChange();
 ### <a name="example"></a>예제  
  [!code-cpp[#21 NVC_ATL_COM](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
-##  <a name="a-namegetambientappearancea--ccomcontrolbasegetambientappearance"></a><a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
+##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
  검색 **DISPID_AMBIENT_APPEARANCE**, 컨트롤 설정 현재 모양을: 0 평면 음영 및 3D에 대 한 1입니다.  
   
 ```
@@ -298,7 +370,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 ### <a name="example"></a>예제  
  [!code-cpp[#22 NVC_ATL_COM](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
-##  <a name="a-namegetambientautoclipa--ccomcontrolbasegetambientautoclip"></a><a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
+##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
  검색 **DISPID_AMBIENT_AUTOCLIP**, 컨테이너 컨트롤 표시 영역의 자동 캡처를 지원 하는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -312,7 +384,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientbackcolora--ccomcontrolbasegetambientbackcolor"></a><a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor  
+##  <a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor  
  검색 **DISPID_AMBIENT_BACKCOLOR**, 컨테이너에 의해 정의 된 모든 컨트롤에 대 한 앰비언트 배경색입니다.  
   
 ```
@@ -326,7 +398,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientcharseta--ccomcontrolbasegetambientcharset"></a><a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet  
+##  <a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet  
  검색 **DISPID_AMBIENT_CHARSET**, 컨테이너에 의해 정의 된 모든 컨트롤에 대 한 앰비언트 문자 집합입니다.  
   
 ```
@@ -340,7 +412,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namegetambientcodepagea--ccomcontrolbasegetambientcodepage"></a><a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage  
+##  <a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage  
  검색 **DISPID_AMBIENT_CODEPAGE**, 컨테이너에 의해 정의 된 모든 컨트롤에 대 한 앰비언트 코드 페이지입니다.  
   
 ```
@@ -354,7 +426,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namegetambientdisplayasdefaulta--ccomcontrolbasegetambientdisplayasdefault"></a><a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
+##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
  검색 **DISPID_AMBIENT_DISPLAYASDEFAULT**를 하는 플래그 **TRUE** 경우 컨테이너는 컨트롤을 기본 단추로이 사이트에 표시 하 고 따라서 button 컨트롤을 그릴 자체 두꺼운 프레임이 합니다.  
   
 ```
@@ -368,7 +440,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientdisplaynamea--ccomcontrolbasegetambientdisplayname"></a><a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName  
+##  <a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName  
  검색 **DISPID_AMBIENT_DISPLAYNAME**, 컨테이너에 컨트롤에 제공 된 이름입니다.  
   
 ```
@@ -382,7 +454,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientfonta--ccomcontrolbasegetambientfont"></a><a name="getambientfont"></a>CComControlBase::GetAmbientFont  
+##  <a name="getambientfont"></a>CComControlBase::GetAmbientFont  
  검색 된 컨테이너에 대 한 포인터의 앰비언트 `IFont` 인터페이스입니다.  
   
 ```
@@ -399,7 +471,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 ### <a name="remarks"></a>주의  
  속성이 있으면 **NULL**, 포인터가 **NULL**합니다. 포인터가 없으면 **NULL**, 호출자는 포인터를 해제 해야 합니다.  
   
-##  <a name="a-namegetambientfontdispa--ccomcontrolbasegetambientfontdisp"></a><a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp  
+##  <a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp  
  검색 된 컨테이너에 대 한 포인터의 앰비언트 **IFontDisp** 디스패치 인터페이스입니다.  
   
 ```
@@ -416,7 +488,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="remarks"></a>주의  
  속성이 있으면 **NULL**, 포인터가 **NULL**합니다. 포인터가 없으면 **NULL**, 호출자는 포인터를 해제 해야 합니다.  
   
-##  <a name="a-namegetambientforecolora--ccomcontrolbasegetambientforecolor"></a><a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor  
+##  <a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor  
  검색 **DISPID_AMBIENT_FORECOLOR**, 컨테이너에 의해 정의 된 모든 컨트롤에 대 한 앰비언트 전경색입니다.  
   
 ```
@@ -430,7 +502,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientlocaleida--ccomcontrolbasegetambientlocaleid"></a><a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID  
+##  <a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID  
  검색 **DISPID_AMBIENT_LOCALEID**, 컨테이너에서 사용 되는 언어의 식별자입니다.  
   
 ```
@@ -447,7 +519,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 ### <a name="remarks"></a>주의  
  컨트롤이 다른 언어에 해당 사용자 인터페이스에 맞게이 식별자를 사용할 수 있습니다.  
   
-##  <a name="a-namegetambientmessagereflecta--ccomcontrolbasegetambientmessagereflect"></a><a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect  
+##  <a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect  
  검색 **DISPID_AMBIENT_MESSAGEREFLECT**, 컨테이너를 창 메시지를 수신 하려고 하는지 여부를 나타내는 플래그 (예: `WM_DRAWITEM`) 이벤트로 합니다.  
   
 ```
@@ -461,7 +533,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientpalettea--ccomcontrolbasegetambientpalette"></a><a name="getambientpalette"></a>CComControlBase::GetAmbientPalette  
+##  <a name="getambientpalette"></a>CComControlBase::GetAmbientPalette  
  검색 **DISPID_AMBIENT_PALETTE**계정에 컨테이너 액세스에 사용 되는 `HPALETTE`합니다.  
   
 ```
@@ -475,7 +547,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientpropertya--ccomcontrolbasegetambientproperty"></a><a name="getambientproperty"></a>CComControlBase::GetAmbientProperty  
+##  <a name="getambientproperty"></a>CComControlBase::GetAmbientProperty  
  지정 된 컨테이너 속성을 검색 `dispid`합니다.  
   
 ```
@@ -495,7 +567,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 ### <a name="remarks"></a>주의  
  ATL에서 예를 들어 특정 속성을 검색 하는 도우미 함수 집합이 제공 [CComControlBase::GetAmbientBackColor](#getambientbackcolor)합니다. 사용할 수 있는 적절 한 메서드가 없는 경우 사용 하 여 `GetAmbientProperty`합니다.  
   
-##  <a name="a-namegetambientrighttolefta--ccomcontrolbasegetambientrighttoleft"></a><a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft  
+##  <a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft  
  검색 **DISPID_AMBIENT_RIGHTTOLEFT**, 콘텐츠는 컨테이너에 의해 표시 되는 방향입니다.  
   
 ```
@@ -509,7 +581,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namegetambientscaleunitsa--ccomcontrolbasegetambientscaleunits"></a><a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits  
+##  <a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits  
  검색 **DISPID_AMBIENT_SCALEUNITS**, 컨테이너의 앰비언트 단위 (예: 인치 또는 센티미터로) 표시에 레이블을 지정 합니다.  
   
 ```
@@ -523,7 +595,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientshowgrabhandlesa--ccomcontrolbasegetambientshowgrabhandles"></a><a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles  
+##  <a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles  
  검색 **DISPID_AMBIENT_SHOWGRABHANDLES**, 컨테이너 활성화 된 경우 자신에 대 한 잡기 핸들을 표시 하도록 컨트롤을 허용 하는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -537,7 +609,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientshowhatchinga--ccomcontrolbasegetambientshowhatching"></a><a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching  
+##  <a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching  
  검색 **DISPID_AMBIENT_SHOWHATCHING**, 컨테이너 컨트롤의 사용자 인터페이스 활성화 되어 있을 때 교차 무늬 패턴으로 표시 하도록 컨트롤을 허용 하는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -551,7 +623,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambientsupportsmnemonicsa--ccomcontrolbasegetambientsupportsmnemonics"></a><a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics  
+##  <a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics  
  검색 **DISPID_AMBIENT_SUPPORTSMNEMONICS**, 컨테이너 키보드 니모닉을 지원 하는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -565,7 +637,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambienttextaligna--ccomcontrolbasegetambienttextalign"></a><a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
+##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
  검색 **DISPID_AMBIENT_TEXTALIGN**, 컨테이너에서 지 원하는 기본 텍스트 맞춤: 일반 맞춤 (번호 오른쪽으로 텍스트를 왼쪽)에 대 한 0, 1 왼쪽 맞춤, 가운데 맞춤에 대 한 2 및 3 오른쪽 맞춤에 대 한 합니다.  
   
 ```
@@ -579,7 +651,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetambienttoptobottoma--ccomcontrolbasegetambienttoptobottom"></a><a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom  
+##  <a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom  
  검색 **DISPID_AMBIENT_TOPTOBOTTOM**, 콘텐츠는 컨테이너에 의해 표시 되는 방향입니다.  
   
 ```
@@ -593,7 +665,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namegetambientuideada--ccomcontrolbasegetambientuidead"></a><a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead  
+##  <a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead  
  검색 **DISPID_AMBIENT_UIDEAD**, 컨테이너가 컨트롤을 사용자 인터페이스 작업에 응답 하는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -610,7 +682,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 ### <a name="remarks"></a>주의  
  경우 **TRUE**, 컨트롤이 응답 하지 않아야 합니다. 이 플래그에 관계 없이 적용 되는 **DISPID_AMBIENT_USERMODE** 플래그입니다. 참조 [CComControlBase::GetAmbientUserMode](#getambientusermode)합니다.  
   
-##  <a name="a-namegetambientusermodea--ccomcontrolbasegetambientusermode"></a><a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode  
+##  <a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode  
  검색 **DISPID_AMBIENT_USERMODE**, 컨테이너 실행 모드 인지 여부를 나타내는 플래그 ( **TRUE**) 또는 디자인 모드 ( **FALSE**).  
   
 ```
@@ -624,7 +696,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-namegetdirtya--ccomcontrolbasegetdirty"></a><a name="getdirty"></a>CComControlBase::GetDirty  
+##  <a name="getdirty"></a>CComControlBase::GetDirty  
  데이터 멤버의 값을 반환 `m_bRequiresSave`합니다.  
   
 ```
@@ -637,7 +709,7 @@ BOOL GetDirty();
 ### <a name="remarks"></a>주의  
  사용 하 여이 값은 설정 [CComControlBase::SetDirty](#setdirty)합니다.  
   
-##  <a name="a-namegetzoominfoa--ccomcontrolbasegetzoominfo"></a><a name="getzoominfo"></a>CComControlBase::GetZoomInfo  
+##  <a name="getzoominfo"></a>CComControlBase::GetZoomInfo  
  X 및 y 검색 분자와 분모의 확대/축소 비율의 값에 대 한 컨트롤이 활성화에 대 한 전체 편집 합니다.  
   
 ```
@@ -651,7 +723,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="remarks"></a>주의  
  확대/축소 비율은 현재 범위를 컨트롤의 기본 크기의 비율입니다.  
   
-##  <a name="a-nameinplaceactivatea--ccomcontrolbaseinplaceactivate"></a><a name="inplaceactivate"></a>CComControlBase::InPlaceActivate  
+##  <a name="inplaceactivate"></a>CComControlBase::InPlaceActivate  
  동사에 상태로 비활성 상태에서 전환 하면 컨트롤이 `iVerb` 나타냅니다.  
   
 ```
@@ -673,7 +745,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
   
  이 메서드는 또한 검색 된 `IOleInPlaceSite`, **IOleInPlaceSiteEx**, 또는 **IOleInPlaceSiteWindowless** 컨트롤에 대 한 인터페이스 포인터 컨트롤 클래스의 데이터 멤버에 저장 하 고 [CComControlBase::m_spInPlaceSite](#m_spinplacesite). 컨트롤 클래스 데이터 멤버 [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless), 및 [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) 적절 하 게 true로 설정 됩니다.  
   
-##  <a name="a-nameinternalgetsitea--ccomcontrolbaseinternalgetsite"></a><a name="internalgetsite"></a>CComControlBase::InternalGetSite  
+##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
  컨트롤 사이트에서 식별 된 인터페이스 포인터에 대 한 쿼리를이 메서드를 호출 합니다.  
   
 ```
@@ -693,7 +765,7 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 ### <a name="remarks"></a>주의  
  사이트에서 요청 된 인터페이스를 지 원하는 경우 `riid`, 방법으로 포인터가 반환 됩니다 `ppUnkSite`합니다. 그렇지 않으면 `ppUnkSite` NULL로 설정 됩니다.  
   
-##  <a name="a-namembautosizea--ccomcontrolbasembautosize"></a><a name="m_bautosize"></a>CComControlBase::m_bAutoSize  
+##  <a name="m_bautosize"></a>CComControlBase::m_bAutoSize  
  컨트롤에는 다른 크기 일 수 없습니다 나타내는 플래그입니다.  
   
 ```
@@ -708,7 +780,7 @@ unsigned m_bAutoSize:1;
   
  추가 하는 경우는 **자동 크기** 옵션에 [스톡 속성](../../atl/reference/stock-properties-atl-control-wizard.md) ATL 컨트롤 마법사, 마법사의 탭 자동으로 컨트롤 클래스에서이 데이터 멤버를 만들고, put 만들고 속성 및 지원에 대 한 get 메서드 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 는 속성이 변경 될 때 컨테이너를 자동으로 알릴 수 있습니다.  
   
-##  <a name="a-namembdrawfromnaturala--ccomcontrolbasembdrawfromnatural"></a><a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
+##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
  함을 나타내는 플래그 `IDataObjectImpl::GetData` 및 `CComControlBase::GetZoomInfo` 에서 컨트롤 크기를 설정 해야 `m_sizeNatural` 아닌 `m_sizeExtent`합니다.  
   
 ```
@@ -720,7 +792,7 @@ unsigned m_bDrawFromNatural:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembdrawgetdatainhimetrica--ccomcontrolbasembdrawgetdatainhimetric"></a><a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric  
+##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric  
  함을 나타내는 플래그 `IDataObjectImpl::GetData` 그릴 때 HIMETRIC 단위 및 픽셀이 아닌 사용 해야 합니다.  
   
 ```
@@ -733,7 +805,7 @@ unsigned m_bDrawGetDataInHimetric:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembinplaceactivea--ccomcontrolbasembinplaceactive"></a><a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive  
+##  <a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive  
  이 컨트롤의 내부 활성화를 나타내는 플래그입니다.  
   
 ```
@@ -746,7 +818,7 @@ unsigned m_bInPlaceActive:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembinplacesiteexa--ccomcontrolbasembinplacesiteex"></a><a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx  
+##  <a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx  
  컨테이너에서 지 원하는 나타내는 플래그는 **IOleInPlaceSiteEx** 인터페이스와 OCX96 및 깜박임 창 없는 컨트롤 등의 기능을 제어 합니다.  
   
 ```
@@ -762,7 +834,7 @@ unsigned m_bInPlaceSiteEx:1;
   
  경우 `m_bWndLess` 는 **FALSE** 및 `m_bInPlaceSiteEx` 는 **TRUE**, `m_spInPlaceSite` 는 **IOleInPlaceSiteEx** 인터페이스 포인터입니다. 참조 [m_spInPlaceSite](#m_spinplacesite) 이러한 세 가지 데이터 멤버 간의 관계를 보여 주는 표입니다.  
   
-##  <a name="a-namembnegotiatedwnda--ccomcontrolbasembnegotiatedwnd"></a><a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd  
+##  <a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd  
  컨트롤 (예: 깜박임 및 창 없는 컨트롤), OCX96 제어 기능에 대 한 지원에 대 한 컨테이너와 협상에 여부 및 기간 이동 또는 창 없는 컨트롤 인지를 나타내는 플래그입니다.  
   
 ```
@@ -776,7 +848,7 @@ unsigned m_bNegotiatedWnd:1;
   
  `m_bNegotiatedWnd` 플래그 여야 **TRUE** 에 대 한는 `m_spInPlaceSite` 유효에 대 한 포인터입니다.  
   
-##  <a name="a-namembrecomposeonresizea--ccomcontrolbasembrecomposeonresize"></a><a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize  
+##  <a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize  
  컨트롤 컨테이너 컨트롤의 표시 크기를 변경 하는 경우에 표시를 다시 구성 하기 위해가 나타내는 플래그입니다.  
   
 ```
@@ -790,7 +862,7 @@ unsigned m_bRecomposeOnResize:1;
   
  이 플래그는 확인자 [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) 하며, **TRUE**, `SetExtent` 변경 내용 보기의 컨테이너에 알립니다. 이 플래그를 설정 하는 경우는 **OLEMISC_RECOMPOSEONRESIZE** 에 비트는 [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) 열거형 설정 해야 합니다.  
   
-##  <a name="a-namembrequiressavea--ccomcontrolbasembrequiressave"></a><a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave  
+##  <a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave  
  컨트롤은 마지막으로 저장 된 이후 변경 되었음을 나타내는 플래그입니다.  
   
 ```
@@ -803,7 +875,7 @@ unsigned m_bRequiresSave:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembresizenaturala--ccomcontrolbasembresizenatural"></a><a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural  
+##  <a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural  
  컨트롤의 자연 스러운 범위가 (배율이 지정 되지 않은 실제 크기)의 크기를 조정 하려면가 나타내는 플래그 컨테이너 컨트롤의 표시 크기를 변경 하는 경우.  
   
 ```
@@ -818,7 +890,7 @@ unsigned m_bResizeNatural:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembuiactivea--ccomcontrolbasembuiactive"></a><a name="m_buiactive"></a>CComControlBase::m_bUIActive  
+##  <a name="m_buiactive"></a>CComControlBase::m_bUIActive  
  도구 모음, 메뉴 등의 컨트롤의 사용자 인터페이스를 나타내는 플래그는 활성 상태입니다.  
   
 ```
@@ -831,7 +903,7 @@ unsigned m_bUIActive:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembusingwindowrgna--ccomcontrolbasembusingwindowrgn"></a><a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn  
+##  <a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn  
  컨트롤 컨테이너 공급 창 영역을 사용 하는 나타내는 플래그입니다.  
   
 ```
@@ -843,7 +915,7 @@ unsigned m_bUsingWindowRgn:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembwasoncewindowlessa--ccomcontrolbasembwasoncewindowless"></a><a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless  
+##  <a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless  
  컨트롤, 창 없는 되었습니다 있지만 수 있거나 없을 수도 있습니다 창 없는 이제 나타내는 플래그입니다.  
   
 ```
@@ -855,7 +927,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembwindowonlya--ccomcontrolbasembwindowonly"></a><a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly  
+##  <a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly  
  컨테이너 창 없는 컨트롤을 지 원하는 경우에 컨트롤을 창 있는 되어야 여부를 나타내는 플래그입니다.  
   
 ```
@@ -867,7 +939,7 @@ unsigned m_bWindowOnly:1;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namembwndlessa--ccomcontrolbasembwndless"></a><a name="m_bwndless"></a>CComControlBase::m_bWndLess  
+##  <a name="m_bwndless"></a>CComControlBase::m_bWndLess  
  창 없는 컨트롤을 나타내는 플래그입니다.  
   
 ```
@@ -883,7 +955,7 @@ unsigned m_bWndLess:1;
   
  경우 `m_bWndLess` 는 **TRUE**, `m_spInPlaceSite` 는 **IOleInPlaceSiteWindowless** 인터페이스 포인터입니다. 참조 [CComControlBase::m_spInPlaceSite](#m_spinplacesite) 이러한 데이터 멤버의 전체 관계를 보여 주는 표입니다.  
   
-##  <a name="a-namemhwndcda--ccomcontrolbasemhwndcd"></a><a name="m_hwndcd"></a>CComControlBase::m_hWndCD  
+##  <a name="m_hwndcd"></a>CComControlBase::m_hWndCD  
  컨트롤과 연결 된 창 핸들에 대 한 참조를 포함 합니다.  
   
 ```
@@ -895,7 +967,7 @@ HWND& m_hWndCD;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemnfreezeeventsa--ccomcontrolbasemnfreezeevents"></a><a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents  
+##  <a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents  
  횟수 개수 컨테이너가 이벤트 (이벤트에 대 한 동의)의 중간는 재개 하지 않고 이벤트 (이벤트 수락을 거부 했습니다) 고정 합니다.  
   
 ```
@@ -907,7 +979,7 @@ short m_nFreezeEvents;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemrcposa--ccomcontrolbasemrcpos"></a><a name="m_rcpos"></a>CComControlBase::m_rcPos  
+##  <a name="m_rcpos"></a>CComControlBase::m_rcPos  
  컨테이너의 좌표로 표시 되는 컨트롤의 위치 (픽셀)에서입니다.  
   
 ```
@@ -919,7 +991,7 @@ RECT m_rcPos;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemsizeextenta--ccomcontrolbasemsizeextent"></a><a name="m_sizeextent"></a>CComControlBase::m_sizeExtent  
+##  <a name="m_sizeextent"></a>CComControlBase::m_sizeExtent  
  특정 디스플레이 대 한 HIMETRIC 단위 (각 단위는 0.01 밀리미터는) 컨트롤의 범위입니다.  
   
 ```
@@ -935,7 +1007,7 @@ SIZE m_sizeExtent;
   
  전역 함수로 픽셀 크기를 변환할 수 있습니다 [AtlHiMetricToPixel](http://msdn.microsoft.com/library/00c3af58-7298-4082-9a2e-5b68a8cec6fd)합니다.  
   
-##  <a name="a-namemsizenaturala--ccomcontrolbasemsizenatural"></a><a name="m_sizenatural"></a>CComControlBase::m_sizeNatural  
+##  <a name="m_sizenatural"></a>CComControlBase::m_sizeNatural  
  HIMETRIC 단위 (각 단위는 0.01 밀리미터는) 컨트롤의 실제 크기입니다.  
   
 ```
@@ -951,7 +1023,7 @@ SIZE m_sizeNatural;
   
  전역 함수로 픽셀 크기를 변환할 수 있습니다 [AtlHiMetricToPixel](http://msdn.microsoft.com/library/00c3af58-7298-4082-9a2e-5b68a8cec6fd)합니다.  
   
-##  <a name="a-namemspadvisesinka--ccomcontrolbasemspadvisesink"></a><a name="m_spadvisesink"></a>CComControlBase::m_spAdviseSink  
+##  <a name="m_spadvisesink"></a>CComControlBase::m_spAdviseSink  
  컨테이너에서 권장 하는 연결에 대 한 직접 포인터 (컨테이너의 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
   
 ```
@@ -964,7 +1036,7 @@ CComPtr<IAdviseSink>
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemspambientdispatcha--ccomcontrolbasemspambientdispatch"></a><a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch  
+##  <a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch  
  A `CComDispatchDriver` 를 검색 하 고 개체의 속성을 설정할 수 있는 개체는 `IDispatch` 포인터입니다.  
   
 ```
@@ -976,7 +1048,7 @@ CComDispatchDriver m_spAmbientDispatch;
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemspclientsitea--ccomcontrolbasemspclientsite"></a><a name="m_spclientsite"></a>CComControlBase::m_spClientSite  
+##  <a name="m_spclientsite"></a>CComControlBase::m_spClientSite  
  컨테이너 내의 컨트롤의 클라이언트 사이트에 대 한 포인터입니다.  
   
 ```
@@ -989,7 +1061,7 @@ CComPtr<IOleClientSite>
 > [!NOTE]
 >  컨트롤 클래스 내에서이 데이터 멤버를 사용 하려면 컨트롤 클래스의 데이터 멤버로 선언 해야 있습니다. 사용자 컨트롤 클래스 기본 클래스의 공용 구조체 내에서 선언 되기 때문에이 데이터 멤버 기본 클래스에서 상속 하지 않습니다.  
   
-##  <a name="a-namemspdataadviseholdera--ccomcontrolbasemspdataadviseholder"></a><a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder  
+##  <a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder  
  어드바이스 싱크 및 데이터 개체 간의 자문 연결을 유지 하는 표준 방법을 제공 합니다.  
   
 ```
@@ -1006,7 +1078,7 @@ CComPtr<IDataAdviseHolder>
   
  인터페이스 `m_spDataAdviseHolder` 구현 하는 [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) 및 [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) 메서드를 설정 하 고 컨테이너에 대 한 자문 연결을 삭제 합니다. 컨트롤의 컨테이너를 지원 하 여 advise 싱크를 구현 해야는 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) 인터페이스입니다.  
   
-##  <a name="a-namemspinplacesitea--ccomcontrolbasemspinplacesite"></a><a name="m_spinplacesite"></a>CComControlBase::m_spInPlaceSite  
+##  <a name="m_spinplacesite"></a>CComControlBase::m_spInPlaceSite  
  컨테이너의에 대 한 포인터 [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), 또는 [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) 인터페이스 포인터입니다.  
   
 ```
@@ -1029,7 +1101,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 |**IOleInPlaceSiteEx**|**FALSE**|**TRUE**|  
 |`IOleInPlaceSite`|**FALSE**|**FALSE**|  
   
-##  <a name="a-namemspoleadviseholdera--ccomcontrolbasemspoleadviseholder"></a><a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder  
+##  <a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder  
  자문 연결을 유지 하는 방법의 표준 구현을 제공 합니다.  
   
 ```
@@ -1044,7 +1116,7 @@ CComPtr<IOleAdviseHolder>
   
  인터페이스 `m_spOleAdviseHolder` 구현 하는 [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) 및 [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) 메서드를 설정 하 고 컨테이너에 대 한 자문 연결을 삭제 합니다. 컨트롤의 컨테이너를 지원 하 여 advise 싱크를 구현 해야는 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) 인터페이스입니다.  
   
-##  <a name="a-nameondrawa--ccomcontrolbaseondraw"></a><a name="ondraw"></a>CComControlBase::OnDraw  
+##  <a name="ondraw"></a>CComControlBase::OnDraw  
  컨트롤을 그리는 데이 메서드를 재정의 합니다.  
   
 ```
@@ -1066,7 +1138,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 ### <a name="example"></a>예제  
  예를 참조 [CComControlBase::GetAmbientAppearance](#getambientappearance)합니다.  
   
-##  <a name="a-nameondrawadvanceda--ccomcontrolbaseondrawadvanced"></a><a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced  
+##  <a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced  
  기본 `OnDrawAdvanced` 드로잉에 대 한 정규화 된 장치 컨텍스트를 준비 이면 호출 하는 컨트롤 클래스의 `OnDraw` 메서드.  
   
 ```
@@ -1085,7 +1157,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
   
  참조 [CComControlBase::OnDraw](#ondraw) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameonkillfocusa--ccomcontrolbaseonkillfocus"></a><a name="onkillfocus"></a>CComControlBase::OnKillFocus  
+##  <a name="onkillfocus"></a>CComControlBase::OnKillFocus  
  확인 컨트롤에 내부 활성화는 및 유효한 컨트롤 사이트가 한 다음 컨트롤에서 포커스를 잃었을 컨테이너에 게 알립니다.  
   
 ```
@@ -1111,7 +1183,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ### <a name="return-value"></a>반환 값  
  항상 1을 반환 합니다.  
   
-##  <a name="a-nameonmouseactivatea--ccomcontrolbaseonmouseactivate"></a><a name="onmouseactivate"></a>CComControlBase::OnMouseActivate  
+##  <a name="onmouseactivate"></a>CComControlBase::OnMouseActivate  
  UI 사용자 모드에 다음 컨트롤을 활성화를 확인 합니다.  
   
 ```
@@ -1137,7 +1209,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ### <a name="return-value"></a>반환 값  
  항상 1을 반환 합니다.  
   
-##  <a name="a-nameonpainta--ccomcontrolbaseonpaint"></a><a name="onpaint"></a>CComControlBase::OnPaint  
+##  <a name="onpaint"></a>CComControlBase::OnPaint  
  그리기에 대 한 컨테이너를 준비, 컨트롤의 클라이언트 영역을 가져온 다음 호출 하는 컨트롤 클래스의 `OnDrawAdvanced` 메서드.  
   
 ```
@@ -1166,7 +1238,7 @@ LRESULT OnPaint(UINT /* nMsg */,
 ### <a name="remarks"></a>주의  
  경우 `wParam` NULL이 아니면 `OnPaint` 가정 하는 유효한 HDC을 유지 하 고 대신 사용 하 여 [CComControlBase::m_hWndCD](#m_hwndcd)합니다.  
   
-##  <a name="a-nameonsetfocusa--ccomcontrolbaseonsetfocus"></a><a name="onsetfocus"></a>CComControlBase::OnSetFocus  
+##  <a name="onsetfocus"></a>CComControlBase::OnSetFocus  
  컨트롤에 내부 활성화는 유효한 컨트롤 사이트가 후 컨테이너 컨트롤에 알립니다 함을 확인에 포커스가 있습니다.  
   
 ```
@@ -1195,7 +1267,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ### <a name="remarks"></a>주의  
  컨트롤에서 포커스를 받았을 컨테이너에 알림을 보냅니다.  
   
-##  <a name="a-namepretranslateacceleratora--ccomcontrolbasepretranslateaccelerator"></a><a name="pretranslateaccelerator"></a>CComControlBase::PreTranslateAccelerator  
+##  <a name="pretranslateaccelerator"></a>CComControlBase::PreTranslateAccelerator  
  고유한 키보드 액셀러레이터 처리기를 제공 하려면이 메서드를 재정의 합니다.  
   
 ```
@@ -1213,7 +1285,7 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ### <a name="return-value"></a>반환 값  
  기본적으로 반환 **FALSE**합니다.  
   
-##  <a name="a-namesendonclosea--ccomcontrolbasesendonclose"></a><a name="sendonclose"></a>CComControlBase::SendOnClose  
+##  <a name="sendonclose"></a>CComControlBase::SendOnClose  
  모든 자문 싱크를 등록 된 컨트롤이 닫 혔 advise 소유자에 게 알립니다.  
   
 ```
@@ -1226,7 +1298,7 @@ HRESULT SendOnClose();
 ### <a name="remarks"></a>주의  
  컨트롤에 해당 자문 싱크를 닫았는지 알림을 보냅니다.  
   
-##  <a name="a-namesendondatachangea--ccomcontrolbasesendondatachange"></a><a name="sendondatachange"></a>CComControlBase::SendOnDataChange  
+##  <a name="sendondatachange"></a>CComControlBase::SendOnDataChange  
  모든 자문 싱크를 등록 된 컨트롤 데이터가 변경 되었음을 advise 소유자에 게 알립니다.  
   
 ```
@@ -1240,7 +1312,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namesendonrenamea--ccomcontrolbasesendonrename"></a><a name="sendonrename"></a>CComControlBase::SendOnRename  
+##  <a name="sendonrename"></a>CComControlBase::SendOnRename  
  모든 자문 싱크를 등록 된 컨트롤에는 새 모니커 advise 소유자에 게 알립니다.  
   
 ```
@@ -1257,7 +1329,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 ### <a name="remarks"></a>주의  
  컨트롤에 대 한 moniker 변경 되었음을 나타내는 알림을 보냅니다.  
   
-##  <a name="a-namesendonsavea--ccomcontrolbasesendonsave"></a><a name="sendonsave"></a>CComControlBase::SendOnSave  
+##  <a name="sendonsave"></a>CComControlBase::SendOnSave  
  모든 자문 싱크를 등록 된 컨트롤이 저장 된 advise 소유자에 게 알립니다.  
   
 ```
@@ -1270,7 +1342,7 @@ HRESULT SendOnSave();
 ### <a name="remarks"></a>주의  
  컨트롤의 데이터를 방금 저장에 알림을 보냅니다.  
   
-##  <a name="a-namesendonviewchangea--ccomcontrolbasesendonviewchange"></a><a name="sendonviewchange"></a>CComControlBase::SendOnViewChange  
+##  <a name="sendonviewchange"></a>CComControlBase::SendOnViewChange  
  등록 된 모든 자문 싱크에 컨트롤의 뷰 변경 되었음을 알립니다.  
   
 ```
@@ -1290,7 +1362,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 ### <a name="remarks"></a>주의  
  `SendOnViewChange`호출 [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)합니다. 유일한 값 *색인입니다.* 관심 전체 보기 인지 여부를 나타내는-1은 현재 지원 합니다.  
   
-##  <a name="a-namesetcontrolfocusa--ccomcontrolbasesetcontrolfocus"></a><a name="setcontrolfocus"></a>CComControlBase::SetControlFocus  
+##  <a name="setcontrolfocus"></a>CComControlBase::SetControlFocus  
  설정 하거나 컨트롤에서 키보드 포커스를 제거 합니다.  
   
 ```
@@ -1307,7 +1379,7 @@ BOOL SetControlFocus(BOOL bGrab);
 ### <a name="remarks"></a>주의  
  창 있는 컨트롤을 Windows API 함수에 대 한 [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) 호출 됩니다. 창 없는 컨트롤에 대 한 [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) 호출 됩니다. 이 호출을 통해 창 없는 컨트롤 키보드 포커스 및 창 메시지에 응답할 수 있습니다.  
   
-##  <a name="a-namesetdirtya--ccomcontrolbasesetdirty"></a><a name="setdirty"></a>CComControlBase::SetDirty  
+##  <a name="setdirty"></a>CComControlBase::SetDirty  
  데이터 멤버를 설정 `m_bRequiresSave` 값에 `bDirty`합니다.  
   
 ```

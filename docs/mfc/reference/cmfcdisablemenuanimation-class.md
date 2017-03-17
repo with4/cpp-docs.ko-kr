@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +93,7 @@ class CMFCDisableMenuAnimation
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpopupmenu.h  
   
-##  <a name="a-namerestorea--cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
  팝업 메뉴를 표시 하는 데는 프레임 워크는 이전 애니메이션을 복원 합니다.  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetCompactSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetIntermediateSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetRegularSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::IsDrawTooltipImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDraw
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawMenuImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawOnList
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncheckbox.h  
   
-##  <a name="a-namecmfcribboncheckboxa--cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  리본 확인란 개체의 생성자  
   
 ```  
@@ -115,7 +125,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp #&17;](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="a-namegetcompactsizea--cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
  재정의 된 경우, checkbox의 압축 크기를 가져옵니다.  
   
 ```  
@@ -132,7 +142,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>주의  
  재정의 되지 않는 경우이 확인란의 중간 크기를 반환 합니다.  
   
-##  <a name="a-namegetintermediatesizea--cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
  Checkbox의 중간 크기를 가져옵니다.  
   
 ```  
@@ -149,7 +159,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>주의  
  재정의 되지 않으면 기본 확인란 크기로 중간 크기를 계산 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 및 텍스트 크기 및 여백입니다.  
   
-##  <a name="a-namegetregularsizea--cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
  Checkbox의 일반적인 크기를 가져옵니다.  
   
 ```  
@@ -166,7 +176,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>주의  
  재정의 되지 않는 경우이 확인란의 중간 크기를 반환 합니다.  
   
-##  <a name="a-nameisdrawtooltipimagea--cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
  확인란과 관련 된 도구 설명 이미지를 여부를 나타냅니다.  
   
 ```  
@@ -178,7 +188,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawa--cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
  지정 된 장치 컨텍스트를 사용 하는 확인란을 그리는 데 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -191,7 +201,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
  확인란의 메뉴 이미지를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -211,7 +221,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>주의  
  재정의 되지 않으면 반환 `FALSE`합니다.  
   
-##  <a name="a-nameondrawonlista--cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
  명령 목록 상자에서 확인란을 그리는 데 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -245,7 +255,7 @@ virtual void OnDrawOnList(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetaccdataa--cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
  확인란에 대 한 내게 필요한 옵션 데이터를 설정합니다.  
   
 ```  

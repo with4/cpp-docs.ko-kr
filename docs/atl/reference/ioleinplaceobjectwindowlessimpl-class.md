@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetDropTarget
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::SetObjectRects
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::UIDeactivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -99,7 +108,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>주의  
  참조 [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetdroptargeta--ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -109,7 +118,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetwindowa--ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
  컨테이너는 컨트롤의 창 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```
@@ -121,7 +130,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  참조 [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinplacedeactivatea--ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  내부 활성 컨트롤을 비활성화 하려면 컨테이너에 의해 호출 됩니다.  
   
 ```
@@ -133,7 +142,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  참조 [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonwindowmessagea--ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  창 없는 컨트롤 내부에 활성화 된 컨테이너에서 메시지를 디스패치합니다.  
   
 ```
@@ -147,7 +156,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namereactivateandundoa--ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -157,7 +166,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetobjectrectsa--ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  컨테이너 컨트롤의 크기 및/또는 위치 변경 되었음을 알리는에 의해 호출 됩니다.  
   
 ```
@@ -169,7 +178,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  참조 [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameuideactivatea--ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  비활성화 하 고 내부 활성화를 지 원하는 컨트롤의 사용자 인터페이스를 제거 합니다.  
   
 ```

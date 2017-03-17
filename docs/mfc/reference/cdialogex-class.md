@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogEx
+- AFXDIALOGEX/CDialogEx
+- AFXDIALOGEX/CDialogEx::CDialogEx
+- AFXDIALOGEX/CDialogEx::SetBackgroundColor
+- AFXDIALOGEX/CDialogEx::SetBackgroundImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +90,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdialogex.h  
   
-##  <a name="a-namecdialogexa--cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
  `CDialogEx` 개체를 생성합니다.  
   
 ```  
@@ -117,7 +121,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetbackgroundcolora--cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
  대화 상자의 배경 색을 설정합니다.  
   
 ```  
@@ -135,7 +139,7 @@ void SetBackgroundColor(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetbackgroundimagea--cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
  대화 상자의 배경 이미지를 설정합니다.  
   
 ```  

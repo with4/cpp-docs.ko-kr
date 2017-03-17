@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFileFind
+- AFXINET/CGopherFileFind
+- AFXINET/CGopherFileFind::CGopherFileFind
+- AFXINET/CGopherFileFind::FindFile
+- AFXINET/CGopherFileFind::FindNextFile
+- AFXINET/CGopherFileFind::GetCreationTime
+- AFXINET/CGopherFileFind::GetLastAccessTime
+- AFXINET/CGopherFileFind::GetLastWriteTime
+- AFXINET/CGopherFileFind::GetLength
+- AFXINET/CGopherFileFind::GetLocator
+- AFXINET/CGopherFileFind::GetScreenName
+- AFXINET/CGopherFileFind::IsDots
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +117,7 @@ class CGopherFileFind : public CFileFind
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecgopherfilefinda--cgopherfilefindcgopherfilefind"></a><a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
  이 멤버 함수를 생성 하 라고는 `CGopherFileFind` 개체입니다.  
   
 ```  
@@ -125,7 +136,7 @@ explicit CGopherFileFind(
 ### <a name="remarks"></a>주의  
  기본값 `dwContext` MFC를 통해 보내집니다는 `CGopherFileFind` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CGopherFileFind` 개체입니다. 생성할 때는 `CGopherFileFind` 개체를 선택한 값으로 컨텍스트 식별자를 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자에 반환 됩니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체에 대 한 상태에 있습니다. 문서를 참조 하십시오 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namefindfilea--cgopherfilefindfindfile"></a><a name="findfile"></a>CGopherFileFind::FindFile  
+##  <a name="findfile"></a>CGopherFileFind::FindFile  
  Gopher 파일을 찾으려면이 함수를 호출 합니다.  
   
 ```  
@@ -164,7 +175,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>주의  
  호출한 후 **FindFile** 호출할 수 있는 첫 번째 gopher 개체를 검색 하려면 [FindNextFile](#findnextfile) 후속 gopher 파일을 검색 합니다.  
   
-##  <a name="a-namefindnextfilea--cgopherfilefindfindnextfile"></a><a name="findnextfile"></a>CGopherFileFind::FindNextFile  
+##  <a name="findnextfile"></a>CGopherFileFind::FindNextFile  
  이 멤버 함수를 호출 하 여 시작 파일 검색을 계속 하려면 호출 [CGopherFileFind::FindFile](#findfile)합니다.  
   
 ```  
@@ -174,7 +185,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>반환 값  
  더 많은 파일; 없으면&0;이 아닌 파일을 찾을 수는 디렉터리에 마지막 않거나 오류가 발생 한 경우&0;입니다. 가져오기 오류 정보를 확장 하려면 Win32 함수를 호출 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)합니다. 찾은 파일 디렉터리에 마지막 파일 이거나 일치 하는 경우에 파일을 찾을 수 있습니다, 경우는 `GetLastError` ERROR_NO_MORE_FILES 함수를 반환 합니다.  
   
-##  <a name="a-namegetcreationtimea--cgopherfilefindgetcreationtime"></a><a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
  현재 파일에 대 한 생성 시간을 가져옵니다.  
   
 ```  
@@ -198,7 +209,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  동일한 의미 체계를 사용 하 여이 함수에서 반환 하는 타임 스탬프를 구현 하는 모든 파일 시스템. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에서 반환 된 시간은 영역 로컬 컴퓨터에이 파일은 된 시간에서입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) 에 대 한 자세한 내용은 API입니다.  
   
-##  <a name="a-namegetlastaccesstimea--cgopherfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
  지정된 된 파일에 마지막으로 액세스 한 시간을 가져옵니다.  
   
 ```  
@@ -222,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  동일한 의미 체계를 사용 하 여이 함수에서 반환 하는 타임 스탬프를 구현 하는 모든 파일 시스템. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에서 반환 된 시간은 영역 로컬 컴퓨터에이 파일은 된 시간에서입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) 에 대 한 자세한 내용은 API입니다.  
   
-##  <a name="a-namegetlastwritetimea--cgopherfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
  파일을 변경한 마지막 시간을 가져옵니다.  
   
 ```  
@@ -246,7 +257,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  동일한 의미 체계를 사용 하 여이 함수에서 반환 하는 타임 스탬프를 구현 하는 모든 파일 시스템. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에서 반환 된 시간은 영역 로컬 컴퓨터에이 파일은 된 시간에서입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) 에 대 한 자세한 내용은 API입니다.  
   
-##  <a name="a-namegetlengtha--cgopherfilefindgetlength"></a><a name="getlength"></a>CGopherFileFind::GetLength  
+##  <a name="getlength"></a>CGopherFileFind::GetLength  
  검색된 된 파일의 바이트의 길이 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -265,7 +276,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (기본 클래스 구현).  
   
-##  <a name="a-namegetlocatora--cgopherfilefindgetlocator"></a><a name="getlocator"></a>CGopherFileFind::GetLocator  
+##  <a name="getlocator"></a>CGopherFileFind::GetLocator  
  멤버 가져오려면이 함수를 호출 하는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체를 [FindFile](#findfile) gopher 파일을 찾기 위해 사용 합니다.  
   
 ```  
@@ -275,7 +286,7 @@ CGopherLocator GetLocator() const;
 ### <a name="return-value"></a>반환 값  
  `CGopherLocator` 개체입니다.  
   
-##  <a name="a-namegetscreennamea--cgopherfilefindgetscreenname"></a><a name="getscreenname"></a>CGopherFileFind::GetScreenName  
+##  <a name="getscreenname"></a>CGopherFileFind::GetScreenName  
  Gopher 화면의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -285,7 +296,7 @@ CString GetScreenName() const;
 ### <a name="return-value"></a>반환 값  
  Gopher 화면의 이름입니다.  
   
-##  <a name="a-nameisdotsa--cgopherfilefindisdots"></a><a name="isdots"></a>CGopherFileFind::IsDots  
+##  <a name="isdots"></a>CGopherFileFind::IsDots  
  파일을 통해 반복 하는 동안 현재 디렉터리와 부모 디렉터리 표식에 대 한 테스트 합니다.  
   
 ```  

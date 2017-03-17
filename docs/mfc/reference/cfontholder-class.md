@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFontHolder
+- AFXCTL/CFontHolder
+- AFXCTL/CFontHolder::CFontHolder
+- AFXCTL/CFontHolder::GetDisplayString
+- AFXCTL/CFontHolder::GetFontDispatch
+- AFXCTL/CFontHolder::GetFontHandle
+- AFXCTL/CFontHolder::InitializeFont
+- AFXCTL/CFontHolder::QueryTextMetrics
+- AFXCTL/CFontHolder::ReleaseFont
+- AFXCTL/CFontHolder::Select
+- AFXCTL/CFontHolder::SetFont
+- AFXCTL/CFontHolder::m_pFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CFontHolder
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="a-namecfontholdera--cfontholdercfontholder"></a><a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
  `CFontHolder` 개체를 생성합니다.  
   
 ```  
@@ -102,7 +113,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>주의  
  호출 해야 `InitializeFont` 를 사용 하기 전에 결과 개체를 초기화 합니다.  
   
-##  <a name="a-namegetdisplaystringa--cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
  컨테이너의 속성 브라우저에 표시 될 수 있는 문자열을 검색 합니다.  
   
 ```  
@@ -116,7 +127,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>반환 값  
  문자열은 성공적으로 검색 합니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namegetfontdispatcha--cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
  글꼴의 dispatch 인터페이스에 대 한 포인터를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -129,7 +140,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>주의  
  호출 `InitializeFont` 호출 하기 전에 `GetFontDispatch`합니다.  
   
-##  <a name="a-namegetfonthandlea--cfontholdergetfonthandle"></a><a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
  Windows 글꼴에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -158,7 +169,7 @@ HFONT GetFontHandle(
   
  화면에 대 한 올바른 크기가 글꼴에 핸들을 반환 하는 매개 변수가 없는 버전입니다.  
   
-##  <a name="a-nameinitializefonta--cfontholderinitializefont"></a><a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>CFontHolder::InitializeFont  
  초기화는 `CFontHolder` 개체입니다.  
   
 ```  
@@ -181,14 +192,14 @@ void InitializeFont(
   
  이 함수를 생성 한 후에 호출을 `CFontHolder` 개체입니다.  
   
-##  <a name="a-namempfonta--cfontholdermpfont"></a><a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>CFontHolder::m_pFont  
  에 대 한 포인터는 `CFontHolder` 개체의 `IFont` 인터페이스입니다.  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="a-namequerytextmetricsa--cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
  가 나타내는 실제 글꼴에 대 한 정보를 검색 된 `CFontHolder` 개체입니다.  
   
 ```  
@@ -199,14 +210,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  에 대 한 포인터는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 에서 정보를 수신 하는 구조입니다.  
   
-##  <a name="a-namereleasefonta--cfontholderreleasefont"></a><a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
  연결을 끊습니다이 함수는 `CFontHolder` 개체에서 해당 `IFont` 인터페이스입니다.  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="a-nameselecta--cfontholderselect"></a><a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>CFontHolder::Select  
  지정 된 장치 컨텍스트에 컨트롤의 글꼴을 선택 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -232,7 +243,7 @@ CFont* Select(
 ### <a name="remarks"></a>주의  
  참조 [GetFontHandle](#getfonthandle) 대 한 설명은 `cyLogical` 및 `cyHimetric` 매개 변수입니다.  
   
-##  <a name="a-namesetfonta--cfontholdersetfont"></a><a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>CFontHolder::SetFont  
  모든 기존 글꼴을 해제 하 고 연결 하는 `CFontHolder` 개체는 `IFont` 인터페이스입니다.  
   
 ```  

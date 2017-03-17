@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWorkerThread<ThreadTraits>
-- ATL::CWorkerThread
-- ATL.CWorkerThread
-- ATL.CWorkerThread<ThreadTraits>
 - CWorkerThread
+- ATLUTIL/ATL::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::AddHandle
+- ATLUTIL/ATL::CWorkerThread::AddTimer
+- ATLUTIL/ATL::CWorkerThread::GetThreadHandle
+- ATLUTIL/ATL::CWorkerThread::GetThreadId
+- ATLUTIL/ATL::CWorkerThread::Initialize
+- ATLUTIL/ATL::CWorkerThread::RemoveHandle
+- ATLUTIL/ATL::CWorkerThread::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +115,7 @@ class CWorkerThread
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-nameaddhandlea--cworkerthreadaddhandle"></a><a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>CWorkerThread::AddHandle  
  작업자 스레드에 의해 유지 관리 하는 목록에 있는 대기 가능 개체의 핸들을 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -136,7 +141,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>주의  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출 됩니다 `pClient` 때 핸들을 `hObject`, 신호 됩니다.  
   
-##  <a name="a-nameaddtimera--cworkerthreadaddtimer"></a><a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>CWorkerThread::AddTimer  
  작업자 스레드에 의해 유지 관리 하는 목록에 정기적으로 대기 가능 타이머를 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -168,14 +173,14 @@ HRESULT AddTimer(
   
  타이머 핸들을 전달 `phTimer` 를 [CWorkerThread::RemoveHandle](#removehandle) 를 타이머를 닫습니다.  
   
-##  <a name="a-namecworkerthreada--cworkerthreadcworkerthread"></a><a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
  생성자입니다.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="a-namedtora--cworkerthreadcworkerthread"></a><a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
  소멸자입니다.  
   
 ```
@@ -185,7 +190,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>주의  
  호출 [CWorkerThread::Shutdown](#shutdown)합니다.  
   
-##  <a name="a-namegetthreadhandlea--cworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
  작업자 스레드의 스레드 핸들을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -195,7 +200,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>반환 값  
  작업자 스레드가 초기화 되지 않은 경우에 스레드 핸들 또는 NULL을 반환 합니다.  
   
-##  <a name="a-namegetthreadida--cworkerthreadgetthreadid"></a><a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
  작업자 스레드의 스레드 ID를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -205,7 +210,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>반환 값  
  작업자 스레드는 초기화 되지 않은 경우에 스레드 ID 또는 NULL을 반환 합니다.  
   
-##  <a name="a-nameinitializea--cworkerthreadinitialize"></a><a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>CWorkerThread::Initialize  
  작업자 스레드를 초기화 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -228,7 +233,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  참조 [CWorkerThread::Shutdown](#shutdown) 기존 개체에 대 한 포인터를 사용 하 여 초기화 될 때 해당 메서드의 동작이 변경 하는 방법에 대 한 내용은 합니다.  
   
-##  <a name="a-nameremovehandlea--cworkerthreadremovehandle"></a><a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
  핸들을 대기 가능 개체의 목록에서 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -245,7 +250,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>주의  
  핸들 제거 되 면 [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) 에 전달 된 연결된 된 개체에서 호출 되 [AddHandle](#addhandle)합니다. 이 호출이 실패 하면 `CWorkerThread` Windows 호출 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) 핸들에 대해 함수입니다.  
   
-##  <a name="a-nameshutdowna--cworkerthreadshutdown"></a><a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>CWorkerThread::Shutdown  
  작업자 스레드를 종료 하려면이 메서드를 호출 합니다.  
   
 ```

@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - Win32ThreadTraits
-- ATL::Win32ThreadTraits
-- ATL.Win32ThreadTraits
+- ATLBASE/ATL::Win32ThreadTraits
+- ATLBASE/ATL::Win32ThreadTraits::CreateThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +77,7 @@ class Win32ThreadTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namecreatethreada--win32threadtraitscreatethread"></a><a name="createthread"></a>Win32ThreadTraits::CreateThread  
+##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
  CRT 함수를 사용 해야 하는 스레드를 만드는 데이 함수를 호출 합니다.  
   
 ```

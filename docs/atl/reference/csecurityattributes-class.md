@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSecurityAttributes
-- ATL::CSecurityAttributes
 - CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +81,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
  생성자입니다.  
   
 ```
@@ -95,7 +96,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  새 프로세스가 만들어질 때 반환된 핸들의 상속 여부를 지정합니다. 이 멤버가 true이면 새 프로세스가 핸들을 상속합니다.  
   
-##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>CSecurityAttributes::Set  
  특성을 설정 하려면이 메서드를 호출 하는 `CSecurityAttributes` 개체입니다.  
   
 ```

@@ -10,6 +10,51 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEdit
+- AFXWIN/CEdit
+- AFXWIN/CEdit::CEdit
+- AFXWIN/CEdit::CanUndo
+- AFXWIN/CEdit::CharFromPos
+- AFXWIN/CEdit::Clear
+- AFXWIN/CEdit::Copy
+- AFXWIN/CEdit::Create
+- AFXWIN/CEdit::Cut
+- AFXWIN/CEdit::EmptyUndoBuffer
+- AFXWIN/CEdit::FmtLines
+- AFXWIN/CEdit::GetCueBanner
+- AFXWIN/CEdit::GetFirstVisibleLine
+- AFXWIN/CEdit::GetHandle
+- AFXWIN/CEdit::GetHighlight
+- AFXWIN/CEdit::GetLimitText
+- AFXWIN/CEdit::GetLine
+- AFXWIN/CEdit::GetLineCount
+- AFXWIN/CEdit::GetMargins
+- AFXWIN/CEdit::GetModify
+- AFXWIN/CEdit::GetPasswordChar
+- AFXWIN/CEdit::GetRect
+- AFXWIN/CEdit::GetSel
+- AFXWIN/CEdit::HideBalloonTip
+- AFXWIN/CEdit::LimitText
+- AFXWIN/CEdit::LineFromChar
+- AFXWIN/CEdit::LineIndex
+- AFXWIN/CEdit::LineLength
+- AFXWIN/CEdit::LineScroll
+- AFXWIN/CEdit::Paste
+- AFXWIN/CEdit::PosFromChar
+- AFXWIN/CEdit::ReplaceSel
+- AFXWIN/CEdit::SetCueBanner
+- AFXWIN/CEdit::SetHandle
+- AFXWIN/CEdit::SetHighlight
+- AFXWIN/CEdit::SetLimitText
+- AFXWIN/CEdit::SetMargins
+- AFXWIN/CEdit::SetModify
+- AFXWIN/CEdit::SetPasswordChar
+- AFXWIN/CEdit::SetReadOnly
+- AFXWIN/CEdit::SetRect
+- AFXWIN/CEdit::SetRectNP
+- AFXWIN/CEdit::SetSel
+- AFXWIN/CEdit::SetTabStops
+- AFXWIN/CEdit::ShowBalloonTip
+- AFXWIN/CEdit::Undo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -177,7 +222,7 @@ class CEdit : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecanundoa--ceditcanundo"></a><a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>CEdit::CanUndo  
  마지막 편집 작업을 될 수 있는 경우 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -193,7 +238,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::Undo](#undo)합니다.  
   
-##  <a name="a-namecedita--ceditcedit"></a><a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>CEdit::CEdit  
  `CEdit` 개체를 생성합니다.  
   
 ```  
@@ -206,7 +251,7 @@ CEdit();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&1;](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="a-namecharfromposa--ceditcharfrompos"></a><a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>CEdit::CharFromPos  
  0부터 시작 줄 및이 지정된 된 지점에 가장 가까운 문자의 문자 인덱스를 검색 하려면이 함수를 호출 `CEdit` 컨트롤  
   
 ```  
@@ -230,7 +275,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&3;](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="a-namecleara--ceditclear"></a><a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>CEdit::Clear  
  삭제 하려면 (clear) 현재 선택 영역 (있는 경우) 편집 컨트롤에서이 함수를 호출 합니다.  
   
 ```  
@@ -247,7 +292,7 @@ void Clear();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&4;](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="a-namecopya--ceditcopy"></a><a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>CEdit::Copy  
  이 함수를 호출 복사 현재 선택 영역 (있는 경우)를 클립보드에 edit 컨트롤의 **CF_TEXT** 형식입니다.  
   
 ```  
@@ -260,7 +305,7 @@ void Copy();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&5;](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="a-namecreatea--ceditcreate"></a><a name="create"></a>CEdit::Create  
+##  <a name="create"></a>CEdit::Create  
  Windows 편집 컨트롤을 만들고 연결 하는 `CEdit` 개체입니다.  
   
 ```  
@@ -309,7 +354,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&2;](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="a-namecuta--ceditcut"></a><a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>CEdit::Cut  
  편집 컨트롤에 현재 선택 영역 (있는 경우) (잘라내기)을 삭제 하려면이 함수를 호출 하 고 삭제 된 텍스트를 클립보드에 복사 **CF_TEXT** 형식입니다.  
   
 ```  
@@ -326,7 +371,7 @@ void Cut();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&6;](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="a-nameemptyundobuffera--ceditemptyundobuffer"></a><a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
  편집 컨트롤의 실행 취소 플래그 (투명)를 다시 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -343,7 +388,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&7;](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="a-namefmtlinesa--ceditfmtlines"></a><a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>CEdit::FmtLines  
  여러 줄 편집 컨트롤 내에서 소프트 줄 바꿈 문자를 포함 하는 설정 하거나 해제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -369,7 +414,7 @@ BOOL FmtLines(BOOL bAddEOL);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&8;](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="a-namegetcuebannera--ceditgetcuebanner"></a><a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
  텍스트 큐 또는 컨트롤 비어 있을 때 편집 컨트롤에서의 팁으로 표시 되는 텍스트를 검색 합니다.  
   
 ```  
@@ -395,7 +440,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 자세한 내용은 참조는 [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) 매크로입니다.  
   
-##  <a name="a-namegetfirstvisiblelinea--ceditgetfirstvisibleline"></a><a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
  편집 컨트롤에서 표시 되는 맨 위에 있는 줄을 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -411,7 +456,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&9;](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="a-namegethandlea--ceditgethandle"></a><a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>CEdit::GetHandle  
  여러 줄 편집 컨트롤에 대 한 현재 할당 된 메모리에 대 한 핸들을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -436,7 +481,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&10;](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="a-namegethighlighta--ceditgethighlight"></a><a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>CEdit::GetHighlight  
  현재 편집 컨트롤에서 강조 표시 된 텍스트의 범위에서 첫 번째 및 마지막 문자 인덱스를 가져옵니다.  
   
 ```  
@@ -458,7 +503,7 @@ BOOL GetHighlight(
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetlimittexta--ceditgetlimittext"></a><a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>CEdit::GetLimitText  
  이 멤버 함수를이 대 한 텍스트 제한을 가져올 호출 `CEdit` 개체입니다.  
   
 ```  
@@ -479,7 +524,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&11;](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="a-namegetlinea--ceditgetline"></a><a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>CEdit::GetLine  
  편집 컨트롤에서 텍스트 줄을 검색 하려면이 함수를 호출 하 고에 `lpszBuffer`합니다.  
   
 ```  
@@ -514,7 +559,7 @@ int GetLine(
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::GetLineCount](#getlinecount)합니다.  
   
-##  <a name="a-namegetlinecounta--ceditgetlinecount"></a><a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>CEdit::GetLineCount  
  여러 줄 편집 컨트롤의 줄 수를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -532,7 +577,7 @@ int GetLineCount() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&12;](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="a-namegetmarginsa--ceditgetmargins"></a><a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>CEdit::GetMargins  
  이 편집 컨트롤의 왼쪽 및 오른쪽 여백을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -553,7 +598,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
-##  <a name="a-namegetmodifya--ceditgetmodify"></a><a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>CEdit::GetModify  
  편집 컨트롤의 내용을 수정 된 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -571,7 +616,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&13;](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="a-namegetpasswordchara--ceditgetpasswordchar"></a><a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
  텍스트를 입력할 때 편집 컨트롤에 표시 되는 암호 문자를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -589,7 +634,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&14;](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="a-namegetrecta--ceditgetrect"></a><a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>CEdit::GetRect  
  편집 컨트롤의 서식 지정 영역을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -610,7 +655,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::LimitText](#limittext)합니다.  
   
-##  <a name="a-namegetsela--ceditgetsel"></a><a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>CEdit::GetSel  
  시작 및 끝의 반환 값 또는 매개 변수를 사용 하 여 편집 컨트롤에서 현재 선택 (있는 경우)의 문자 위치를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -637,7 +682,7 @@ void GetSel(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&15;](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="a-namehideballoontipa--cedithideballoontip"></a><a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
  현재 편집 컨트롤에 연결 된 모든 풍선 설명을 숨깁니다.  
   
 ```  
@@ -650,7 +695,7 @@ BOOL HideBalloonTip();
 ### <a name="remarks"></a>주의  
  이 함수는 [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namelimittexta--ceditlimittext"></a><a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>CEdit::LimitText  
  사용자는 편집 컨트롤에 입력할 수 있는 텍스트의 길이 제한 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -672,7 +717,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&17;](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="a-namelinefromchara--ceditlinefromchar"></a><a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>CEdit::LineFromChar  
  지정된 된 문자 인덱스를 포함 하는 줄의 줄 번호를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -696,7 +741,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&18;](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="a-namelineindexa--ceditlineindex"></a><a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>CEdit::LineIndex  
  여러 줄 편집 컨트롤 내에서 한 줄의 문자 인덱스를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -720,7 +765,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&19;](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="a-namelinelengtha--ceditlinelength"></a><a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>CEdit::LineLength  
  편집 컨트롤에서 줄의 길이 검색합니다.  
   
 ```  
@@ -748,7 +793,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::LineIndex](#lineindex)합니다.  
   
-##  <a name="a-namelinescrolla--ceditlinescroll"></a><a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>CEdit::LineScroll  
  여러 줄 편집 컨트롤의 텍스트를 스크롤할 수이 함수를 호출 합니다.  
   
 ```  
@@ -776,7 +821,7 @@ void LineScroll(
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::GetFirstVisibleLine](#getfirstvisibleline)합니다.  
   
-##  <a name="a-namepastea--ceditpaste"></a><a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>CEdit::Paste  
  클립보드에 데이터를 삽입 하려면이 함수를 호출 하는 `CEdit` 삽입 지점입니다.  
   
 ```  
@@ -791,7 +836,7 @@ void Paste();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&20;](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="a-nameposfromchara--ceditposfromchar"></a><a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>CEdit::PosFromChar  
  이 지정 된 문자 위치 (왼쪽 위 모퉁이)를 가져오려면이 함수를 호출 `CEdit` 개체입니다.  
   
 ```  
@@ -816,7 +861,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::LineFromChar](#linefromchar)합니다.  
   
-##  <a name="a-namereplacesela--ceditreplacesel"></a><a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>CEdit::ReplaceSel  
  이 함수를 지정 된 텍스트 편집 컨트롤에서 현재 선택한 바꿉니다 호출 `lpszNewText`합니다.  
   
 ```  
@@ -840,7 +885,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::LineIndex](#lineindex)합니다.  
   
-##  <a name="a-namesetcuebannera--ceditsetcuebanner"></a><a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
  텍스트 신호로 표시 또는 팁, 편집에서 컨트롤이 비어를 제어 하는 텍스트를 설정 합니다.  
   
 ```  
@@ -874,7 +919,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="a-namesethandlea--ceditsethandle"></a><a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>CEdit::SetHandle  
  여러 줄 편집 컨트롤에서 사용 될 로컬 메모리에 핸들을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -904,7 +949,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&22;](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="a-namesethighlighta--ceditsethighlight"></a><a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>CEdit::SetHighlight  
  현재에서 표시 되는 텍스트의 범위는 주요 내용 편집 컨트롤입니다.  
   
 ```  
@@ -923,7 +968,7 @@ void SetHighlight(
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetlimittexta--ceditsetlimittext"></a><a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>CEdit::SetLimitText  
  이 대 한 텍스트 제한을 설정 하려면이 함수를 호출 `CEdit` 개체입니다.  
   
 ```  
@@ -946,7 +991,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
-##  <a name="a-namesetmarginsa--ceditsetmargins"></a><a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>CEdit::SetMargins  
  이 편집 컨트롤의 왼쪽 및 오른쪽 여백을 설정 하려면이 메서드를 호출 합니다.  
   
 ```  
@@ -972,7 +1017,7 @@ void SetMargins(
 ### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
-##  <a name="a-namesetmodifya--ceditsetmodify"></a><a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>CEdit::SetModify  
  설정 하거나 편집 컨트롤에 대 한 수정된 된 플래그를 해제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -991,7 +1036,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::GetModify](#getmodify)합니다.  
   
-##  <a name="a-namesetpasswordchara--ceditsetpasswordchar"></a><a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
  설정 하거나 사용자가 텍스트를 입력할 때 편집 컨트롤에 표시 되는 암호 문자를 제거 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1016,7 +1061,7 @@ void SetPasswordChar(TCHAR ch);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&16;](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="a-namesetreadonlya--ceditsetreadonly"></a><a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>CEdit::SetReadOnly  
  편집 컨트롤의 읽기 전용 상태를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1038,7 +1083,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit&23;](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="a-namesetrecta--ceditsetrect"></a><a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>CEdit::SetRect  
  지정된 된 좌표를 사용 하 여 사각형의 크기를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1063,7 +1108,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit #&24;](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="a-namesetrectnpa--ceditsetrectnp"></a><a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>CEdit::SetRectNP  
  여러 줄 편집 컨트롤의 서식 지정 영역을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1090,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::SetRect](#setrect)합니다.  
   
-##  <a name="a-namesetsela--ceditsetsel"></a><a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>CEdit::SetSel  
  편집 컨트롤에서 문자 범위를 선택 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1124,7 +1169,7 @@ void SetSel(
 ### <a name="example"></a>예제  
   예를 참조 [CEdit::GetSel](#getsel)합니다.  
   
-##  <a name="a-namesettabstopsa--ceditsettabstops"></a><a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>CEdit::SetTabStops  
  여러 줄 편집 컨트롤의 탭 정지를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1164,7 +1209,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>예제  
   예를 참조 [CEditView::SetTabStops](ceditview-class.md#settabstops)합니다.  
   
-##  <a name="a-nameshowballoontipa--ceditshowballoontip"></a><a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
  현재 편집 컨트롤에 연관 된 풍선 설명을 표시 합니다.  
   
 ```  
@@ -1202,7 +1247,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="a-nameundoa--ceditundo"></a><a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>CEdit::Undo  
  마지막 편집 컨트롤 작업을 취소 하려면이 함수를 호출 합니다.  
   
 ```  

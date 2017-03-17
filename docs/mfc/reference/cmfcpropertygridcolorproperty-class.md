@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableAutomaticButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableOtherButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::GetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColumnsNumber
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetOriginalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertygridctrl.h  
   
-##  <a name="a-namecmfcpropertygridcolorpropertya--cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  `CMFCPropertyGridColorProperty` 개체를 생성합니다.  
   
 ```  
@@ -125,7 +133,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  정수 또는 속성에 연결된 된 기타 데이터에 대 한 포인터와 같은 응용 프로그램 관련 데이터입니다. 기본값은 0입니다.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
  수 있도록는 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추인 **자동**.)  
   
 ```  
@@ -147,7 +155,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenableotherbuttona--cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
  수 있도록는 *다른* 색 선택 대화 상자에서 단추입니다. (표준 다른 단추인 **다른 색... **.)  
   
 ```  
@@ -169,7 +177,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcolora--cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
  속성의 현재 색을 가져옵니다.  
   
 ```  
@@ -181,7 +189,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcolora--cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
  속성에 대한 새로운 색을 설정합니다.  
   
 ```  
@@ -194,7 +202,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcolumnsnumbera--cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
  현재 색 속성 표의 열 수를 지정합니다.  
   
 ```  
@@ -208,7 +216,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>주의  
  값을 설정 하는이 메서드는 `m_nColumnsNumber` 데이터 멤버를 보호 합니다.  
   
-##  <a name="a-namesetoriginalvaluea--cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>Cmfcpropertygridcolorproperty:: Setoriginalvalue  
+##  <a name="setoriginalvalue"></a>Cmfcpropertygridcolorproperty:: Setoriginalvalue  
  편집 가능한 속성의 원래 값을 설정합니다.  
   
 ```  

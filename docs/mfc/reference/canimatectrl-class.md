@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
+- AFXCMN/CAnimateCtrl
+- AFXCMN/CAnimateCtrl::CAnimateCtrl
+- AFXCMN/CAnimateCtrl::Close
+- AFXCMN/CAnimateCtrl::Create
+- AFXCMN/CAnimateCtrl::CreateEx
+- AFXCMN/CAnimateCtrl::IsPlaying
+- AFXCMN/CAnimateCtrl::Open
+- AFXCMN/CAnimateCtrl::Play
+- AFXCMN/CAnimateCtrl::Seek
+- AFXCMN/CAnimateCtrl::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +118,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namecanimatectrla--canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
  `CAnimateCtrl` 개체를 생성합니다.  
   
 ```  
@@ -121,7 +131,7 @@ CAnimateCtrl();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&56;](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="a-nameclosea--canimatectrlclose"></a><a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>CAnimateCtrl::Close  
  메모리에서 제거 합니다 (있는 경우)는 애니메이션 컨트롤에서 이전에 열었던 AVI 클립을 닫습니다.  
   
 ```  
@@ -134,7 +144,7 @@ BOOL Close();
 ### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="a-namecreatea--canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>CAnimateCtrl::Create  
  애니메이션 컨트롤을 만들고 연결 하는 `CAnimateCtrl` 개체입니다.  
   
 ```  
@@ -179,7 +189,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="a-namecreateexa--canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>CAnimateCtrl::CreateEx  
  컨트롤 (자식 창)와 연결 된 `CAnimateCtrl` 개체입니다.  
   
 ```  
@@ -213,7 +223,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-nameisplayinga--canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
  Audio-video Interleaved (AVI) 클립 재생 되 고 있는지 여부를 나타냅니다.  
   
 ```  
@@ -226,7 +236,7 @@ BOOL IsPlaying() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameopena--canimatectrlopen"></a><a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>CAnimateCtrl::Open  
  AVI 클립을 열고 첫 번째 프레임을 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -258,7 +268,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="a-nameplaya--canimatectrlplay"></a><a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>CAnimateCtrl::Play  
  애니메이션 컨트롤에서 AVI 클립을 재생 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -287,7 +297,7 @@ BOOL Play(
 ### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="a-nameseeka--canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>CAnimateCtrl::Seek  
  정적으로 AVI 클립의 단일 프레임을 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -307,7 +317,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="a-namestopa--canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>CAnimateCtrl::Stop  
  애니메이션 컨트롤의 AVI 클립을 재생을 중지 하려면이 함수를 호출 합니다.  
   
 ```  

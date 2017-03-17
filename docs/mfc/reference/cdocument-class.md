@@ -10,6 +10,64 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocument
+- AFXWIN/CDocument
+- AFXWIN/CDocument::CDocument
+- AFXWIN/CDocument::AddView
+- AFXWIN/CDocument::BeginReadChunks
+- AFXWIN/CDocument::CanCloseFrame
+- AFXWIN/CDocument::ClearChunkList
+- AFXWIN/CDocument::ClearPathName
+- AFXWIN/CDocument::DeleteContents
+- AFXWIN/CDocument::FindChunk
+- AFXWIN/CDocument::GetAdapter
+- AFXWIN/CDocument::GetDocTemplate
+- AFXWIN/CDocument::GetFile
+- AFXWIN/CDocument::GetFirstViewPosition
+- AFXWIN/CDocument::GetNextView
+- AFXWIN/CDocument::GetPathName
+- AFXWIN/CDocument::GetThumbnail
+- AFXWIN/CDocument::GetTitle
+- AFXWIN/CDocument::InitializeSearchContent
+- AFXWIN/CDocument::IsModified
+- AFXWIN/CDocument::IsSearchAndOrganizeHandler
+- AFXWIN/CDocument::LoadDocumentFromStream
+- AFXWIN/CDocument::OnBeforeRichPreviewFontChanged
+- AFXWIN/CDocument::OnChangedViewList
+- AFXWIN/CDocument::OnCloseDocument
+- AFXWIN/CDocument::OnCreatePreviewFrame
+- AFXWIN/CDocument::OnDocumentEvent
+- AFXWIN/CDocument::OnDrawThumbnail
+- AFXWIN/CDocument::OnLoadDocumentFromStream
+- AFXWIN/CDocument::OnNewDocument
+- AFXWIN/CDocument::OnOpenDocument
+- AFXWIN/CDocument::OnPreviewHandlerQueryFocus
+- AFXWIN/CDocument::OnPreviewHandlerTranslateAccelerator
+- AFXWIN/CDocument::OnRichPreviewBackColorChanged
+- AFXWIN/CDocument::OnRichPreviewFontChanged
+- AFXWIN/CDocument::OnRichPreviewSiteChanged
+- AFXWIN/CDocument::OnRichPreviewTextColorChanged
+- AFXWIN/CDocument::OnSaveDocument
+- AFXWIN/CDocument::OnUnloadHandler
+- AFXWIN/CDocument::PreCloseFrame
+- AFXWIN/CDocument::ReadNextChunkValue
+- AFXWIN/CDocument::ReleaseFile
+- AFXWIN/CDocument::RemoveChunk
+- AFXWIN/CDocument::RemoveView
+- AFXWIN/CDocument::ReportSaveLoadException
+- AFXWIN/CDocument::SaveModified
+- AFXWIN/CDocument::SetChunkValue
+- AFXWIN/CDocument::SetModifiedFlag
+- AFXWIN/CDocument::SetPathName
+- AFXWIN/CDocument::SetTitle
+- AFXWIN/CDocument::UpdateAllViews
+- AFXWIN/CDocument::OnFileSendMail
+- AFXWIN/CDocument::OnUpdateFileSendMail
+- AFXWIN/CDocument::m_bGetThumbnailMode
+- AFXWIN/CDocument::m_bPreviewHandlerMode
+- AFXWIN/CDocument::m_bSearchMode
+- AFXWIN/CDocument::m_clrRichPreviewBackColor
+- AFXWIN/CDocument::m_clrRichPreviewTextColor
+- AFXWIN/CDocument::m_lfRichPreviewFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -173,7 +231,7 @@ class CDocument : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameaddviewa--cdocumentaddview"></a><a name="addview"></a>CDocument::AddView  
+##  <a name="addview"></a>CDocument::AddView  
  문서에 뷰를 연결 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -192,7 +250,7 @@ void AddView(CView* pView);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocViewSDI #&12;](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
   
-##  <a name="a-namebeginreadchunksa--cdocumentbeginreadchunks"></a><a name="beginreadchunks"></a>CDocument::BeginReadChunks  
+##  <a name="beginreadchunks"></a>CDocument::BeginReadChunks  
  초기화 하는 읽기를 청크 합니다.  
   
 ```  
@@ -201,7 +259,7 @@ virtual void BeginReadChunks ();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecancloseframea--cdocumentcancloseframe"></a><a name="cancloseframe"></a>CDocument::CanCloseFrame  
+##  <a name="cancloseframe"></a>CDocument::CanCloseFrame  
  문서를 표시 하는 프레임 창을 닫기 전에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -218,7 +276,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ### <a name="remarks"></a>주의  
  기본 구현에서는 다른 문서를 표시 하는 프레임 창 되어 있는지 확인 합니다. 지정 된 프레임 창은 문서를 표시 하는 마지막 것 이면 함수 하 라는 메시지가 수정 된 경우 문서를 저장 합니다. 프레임 창의 닫을 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
   
-##  <a name="a-namecdocumenta--cdocumentcdocument"></a><a name="cdocument"></a>CDocument::CDocument  
+##  <a name="cdocument"></a>CDocument::CDocument  
  생성 된 **CDocument** 개체입니다.  
   
 ```  
@@ -228,7 +286,7 @@ CDocument();
 ### <a name="remarks"></a>주의  
  프레임 워크를 문서 생성을 처리 합니다. 재정의 [OnNewDocument](#onnewdocument) 문서별 별로 초기화를 수행 하는 멤버 함수 단일 문서 인터페이스 (SDI) 응용 프로그램에서 특히 중요 합니다.  
   
-##  <a name="a-nameclearchunklista--cdocumentclearchunklist"></a><a name="clearchunklist"></a>CDocument::ClearChunkList  
+##  <a name="clearchunklist"></a>CDocument::ClearChunkList  
  청크 목록을 지웁니다.  
   
 ```  
@@ -237,7 +295,7 @@ virtual void ClearChunkList ();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameclearpathnamea--cdocumentclearpathname"></a><a name="clearpathname"></a>CDocument::ClearPathName  
+##  <a name="clearpathname"></a>CDocument::ClearPathName  
  문서 개체의 경로 지웁니다.  
   
 ```  
@@ -247,7 +305,7 @@ virtual void ClearPathName();
 ### <a name="remarks"></a>주의  
  경로 지우면는 `CDocument` 개체는 응용 프로그램이 하도록 문서가 저장 된 다음 사용자를 표시 합니다. 이렇게 하면 한 **저장** 명령 처럼 작동 합니다.는 **이름으로 저장** 명령입니다.  
   
-##  <a name="a-namedeletecontentsa--cdocumentdeletecontents"></a><a name="deletecontents"></a>CDocument::DeleteContents  
+##  <a name="deletecontents"></a>CDocument::DeleteContents  
  데이터를 삭제 하는 문서를 삭제 하지 않고 프레임 워크에서 호출 된 **CDocument** 개체 자체입니다.  
   
 ```  
@@ -260,7 +318,7 @@ virtual void DeleteContents();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&57;](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
   
-##  <a name="a-namefindchunka--cdocumentfindchunk"></a><a name="findchunk"></a>CDocument::FindChunk  
+##  <a name="findchunk"></a>CDocument::FindChunk  
  지정 된 GUID 가진 청크를 찾습니다.  
   
 ```  
@@ -281,7 +339,7 @@ virtual POSITION FindChunk(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetadaptera--cdocumentgetadapter"></a><a name="getadapter"></a>CDocument::GetAdapter  
+##  <a name="getadapter"></a>CDocument::GetAdapter  
  구현 하는 개체에 대 한 포인터를 반환 된 `IDocument` 인터페이스입니다.  
   
 ```  
@@ -293,7 +351,7 @@ virtual ATL::IDocument* GetAdapter();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetdoctemplatea--cdocumentgetdoctemplate"></a><a name="getdoctemplate"></a>CDocument::GetDocTemplate  
+##  <a name="getdoctemplate"></a>CDocument::GetDocTemplate  
  이 문서 유형에 대 한 서식 파일에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -306,7 +364,7 @@ CDocTemplate* GetDocTemplate() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&58;](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
   
-##  <a name="a-namegetfilea--cdocumentgetfile"></a><a name="getfile"></a>CDocument::GetFile  
+##  <a name="getfile"></a>CDocument::GetFile  
  이 멤버 함수에 대 한 단서를 호출 하는 `CFile` 개체입니다.  
   
 ```  
@@ -329,7 +387,7 @@ virtual CFile* GetFile(
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CFile` 개체입니다.  
   
-##  <a name="a-namegetfirstviewpositiona--cdocumentgetfirstviewposition"></a><a name="getfirstviewposition"></a>CDocument::GetFirstViewPosition  
+##  <a name="getfirstviewposition"></a>CDocument::GetFirstViewPosition  
  뷰는 문서와 연결 된 목록에서 첫 번째 보기의 위치를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -342,7 +400,7 @@ virtual POSITION GetFirstViewPosition() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&59;](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="a-namegetnextviewa--cdocumentgetnextview"></a><a name="getnextview"></a>CDocument::GetNextView  
+##  <a name="getnextview"></a>CDocument::GetNextView  
  문서 보기의 모든 반복 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -362,7 +420,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&59;](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="a-namegetpathnamea--cdocumentgetpathname"></a><a name="getpathname"></a>CDocument::GetPathName  
+##  <a name="getpathname"></a>CDocument::GetPathName  
  문서의 디스크 파일의 정규화 된 경로 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -372,7 +430,7 @@ const CString& GetPathName() const;
 ### <a name="return-value"></a>반환 값  
  문서의 정규화 된 경로입니다. 이 문자열은 저장 되지 않은 문서나 연결 된 디스크 파일이 없는 경우 비어 있습니다.  
   
-##  <a name="a-namegetthumbnaila--cdocumentgetthumbnail"></a><a name="getthumbnail"></a>CDocument::GetThumbnail  
+##  <a name="getthumbnail"></a>CDocument::GetThumbnail  
  미리 보기를 표시 하는 축소판 그림 공급자에서 사용할 비트맵을 만듭니다.  
   
 ```  
@@ -397,7 +455,7 @@ virtual BOOL GetThumbnail(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettitlea--cdocumentgettitle"></a><a name="gettitle"></a>CDocument::GetTitle  
+##  <a name="gettitle"></a>CDocument::GetTitle  
  일반적으로 문서의 파일 이름에서 파생 된 문서의 제목을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -407,7 +465,7 @@ const CString& GetTitle() const;
 ### <a name="return-value"></a>반환 값  
  문서의 제목입니다.  
   
-##  <a name="a-nameinitializesearchcontenta--cdocumentinitializesearchcontent"></a><a name="initializesearchcontent"></a>CDocument::InitializeSearchContent  
+##  <a name="initializesearchcontent"></a>CDocument::InitializeSearchContent  
  검색 처리기에 대 한 콘텐츠 검색을 초기화 하기 위해 호출 합니다.  
   
 ```  
@@ -417,7 +475,7 @@ virtual void InitializeSearchContent ();
 ### <a name="remarks"></a>주의  
  콘텐츠 검색을 초기화 하려면 파생된 클래스에서이 메서드를 재정의 합니다. 콘텐츠 부분으로 구분 된 문자열 이어야 합니다 ";"입니다. 예를 들어 "지점을; 사각형입니다. ole 항목 "입니다.  
   
-##  <a name="a-nameismodifieda--cdocumentismodified"></a><a name="ismodified"></a>CDocument::IsModified  
+##  <a name="ismodified"></a>CDocument::IsModified  
  문서 마지막으로 저장 된 이후 수정 되었는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -427,7 +485,7 @@ virtual BOOL IsModified();
 ### <a name="return-value"></a>반환 값  
  마지막으로 저장 된; 이후 수정 되었는지 문서 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameissearchandorganizehandlera--cdocumentissearchandorganizehandler"></a><a name="issearchandorganizehandler"></a>CDocument::IsSearchAndOrganizeHandler  
+##  <a name="issearchandorganizehandler"></a>CDocument::IsSearchAndOrganizeHandler  
  지시 있는지 여부를이 인스턴스의 `CDocument` 검색 / / 구성 처리기에 대해 만들어진.  
   
 ```  
@@ -440,7 +498,7 @@ BOOL IsSearchAndOrganizeHandler() const;
 ### <a name="remarks"></a>주의  
  이 함수가 반환 하는 현재 `TRUE` 의 프로세스 서버에 구현 된 풍부한 미리 보기 처리기에 대해서만 합니다. 이 함수를 반환 하 여 응용 프로그램 수준 (m_bPreviewHandlerMode, m_bSearchMode, m_bGetThumbnailMode) 적절 한 플래그를 설정할 수 있습니다 `TRUE`합니다.  
   
-##  <a name="a-nameloaddocumentfromstreama--cdocumentloaddocumentfromstream"></a><a name="loaddocumentfromstream"></a>CDocument::LoadDocumentFromStream  
+##  <a name="loaddocumentfromstream"></a>CDocument::LoadDocumentFromStream  
  스트림에서 문서 데이터를 로드 하기 위해 호출 합니다.  
   
 ```  
@@ -462,7 +520,7 @@ virtual HRESULT LoadDocumentFromStream(
 ### <a name="remarks"></a>주의  
  스트림에서 데이터를 로드 하는 방법을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="a-namembgetthumbnailmodea--cdocumentmbgetthumbnailmode"></a><a name="m_bgetthumbnailmode"></a>CDocument::m_bGetThumbnailMode  
+##  <a name="m_bgetthumbnailmode"></a>CDocument::m_bGetThumbnailMode  
  지정 하는 `CDocument` dllhost 축소판 그림으로 개체가 생성 되었습니다. 체크 인 않아야 `CView::OnDraw`합니다.  
   
 ```  
@@ -472,7 +530,7 @@ BOOL m_bGetThumbnailMode;
 ### <a name="remarks"></a>주의  
  `TRUE`문서 dllhost 미리 보기에 대 한 하 여 작성 된 파일 인지를 나타냅니다.  
   
-##  <a name="a-namembpreviewhandlermodea--cdocumentmbpreviewhandlermode"></a><a name="m_bpreviewhandlermode"></a>CDocument::m_bPreviewHandlerMode  
+##  <a name="m_bpreviewhandlermode"></a>CDocument::m_bPreviewHandlerMode  
  지정 하는 `CDocument` 개체가 prevhost 풍부한 미리 보기. 체크 인 않아야 `CView::OnDraw`합니다.  
   
 ```  
@@ -482,7 +540,7 @@ BOOL m_bPreviewHandlerMode;
 ### <a name="remarks"></a>주의  
  `TRUE`고급 미리 보기에 대 한 prevhost 하 여 문서를 만든 것을 나타냅니다.  
   
-##  <a name="a-namembsearchmodea--cdocumentmbsearchmode"></a><a name="m_bsearchmode"></a>CDocument::m_bSearchMode  
+##  <a name="m_bsearchmode"></a>CDocument::m_bSearchMode  
  지정 하는 `CDocument` 인덱서 또는 다른 검색 응용 프로그램에서 개체가 생성 되었습니다.  
   
 ```  
@@ -492,7 +550,7 @@ BOOL m_bSearchMode;
 ### <a name="remarks"></a>주의  
  `TRUE`인덱서 또는 다른 검색 응용 프로그램에서 문서를 만든 것을 나타냅니다.  
   
-##  <a name="a-namemclrrichpreviewbackcolora--cdocumentmclrrichpreviewbackcolor"></a><a name="m_clrrichpreviewbackcolor"></a>CDocument::m_clrRichPreviewBackColor  
+##  <a name="m_clrrichpreviewbackcolor"></a>CDocument::m_clrRichPreviewBackColor  
  고급 미리 보기 창의 배경색을 지정합니다. 이 색은 호스트에 의해 설정 됩니다.  
   
 ```  
@@ -501,7 +559,7 @@ COLORREF m_clrRichPreviewBackColor;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemclrrichpreviewtextcolora--cdocumentmclrrichpreviewtextcolor"></a><a name="m_clrrichpreviewtextcolor"></a>CDocument::m_clrRichPreviewTextColor  
+##  <a name="m_clrrichpreviewtextcolor"></a>CDocument::m_clrRichPreviewTextColor  
  풍부한 미리 보기 창의 전경색을 지정합니다. 이 색은 호스트에 의해 설정 됩니다.  
   
 ```  
@@ -510,7 +568,7 @@ COLORREF m_clrRichPreviewTextColor;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemlfrichpreviewfonta--cdocumentmlfrichpreviewfont"></a><a name="m_lfrichpreviewfont"></a>CDocument::m_lfRichPreviewFont  
+##  <a name="m_lfrichpreviewfont"></a>CDocument::m_lfRichPreviewFont  
  고급 미리 보기 창에 대 한 텍스트 글꼴을 지정합니다. 이 글꼴 정보는 호스트에 의해 설정 됩니다.  
   
 ```  
@@ -519,7 +577,7 @@ CFont m_lfRichPreviewFont;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonbeforerichpreviewfontchangeda--cdocumentonbeforerichpreviewfontchanged"></a><a name="onbeforerichpreviewfontchanged"></a>CDocument::OnBeforeRichPreviewFontChanged  
+##  <a name="onbeforerichpreviewfontchanged"></a>CDocument::OnBeforeRichPreviewFontChanged  
  고급 미리 보기 글꼴을 변경 하기 전에 호출 합니다.  
   
 ```  
@@ -528,7 +586,7 @@ virtual void OnBeforeRichPreviewFontChanged();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonchangedviewlista--cdocumentonchangedviewlist"></a><a name="onchangedviewlist"></a>CDocument::OnChangedViewList  
+##  <a name="onchangedviewlist"></a>CDocument::OnChangedViewList  
  보기에 추가 하거나 문서에서 제거 된 후에 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -538,7 +596,7 @@ virtual void OnChangedViewList();
 ### <a name="remarks"></a>주의  
  이 함수의 기본 구현은 인지 확인 마지막 보기 제거 되 고, 그럴 경우 문서를 삭제 합니다. 프레임 워크를 추가 하거나 뷰를 제거 하는 경우에 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다. 예를 들어 문서에 연결 된 뷰가 없는 경우에 계속 열려를 원한다 면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameonclosedocumenta--cdocumentonclosedocument"></a><a name="onclosedocument"></a>CDocument::OnCloseDocument  
+##  <a name="onclosedocument"></a>CDocument::OnCloseDocument  
  문서를 닫을 때, 일반적으로 파일 닫기 명령의 일부로 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -550,7 +608,7 @@ virtual void OnCloseDocument();
   
  특별 한 정리 작업 프레임 워크는 문서를 닫을 때 처리를 수행 하려는 경우이 함수를 재정의 합니다. 예를 들어, 문서 데이터베이스의 레코드를 나타내는 경우이 함수는 데이터베이스를 재정의 하는 것이 좋습니다. 재정의에서이 함수의 기본 클래스 버전을 호출 해야 합니다.  
   
-##  <a name="a-nameoncreatepreviewframea--cdocumentoncreatepreviewframe"></a><a name="oncreatepreviewframe"></a>CDocument::OnCreatePreviewFrame  
+##  <a name="oncreatepreviewframe"></a>CDocument::OnCreatePreviewFrame  
  고급 미리 보기에 대 한 미리 보기 프레임을 만드는 데 필요한 때에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -562,7 +620,7 @@ virtual BOOL OnCreatePreviewFrame();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondocumenteventa--cdocumentondocumentevent"></a><a name="ondocumentevent"></a>CDocument::OnDocumentEvent  
+##  <a name="ondocumentevent"></a>CDocument::OnDocumentEvent  
  문서 이벤트에 대 한 응답으로 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -585,7 +643,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 |`onAfterSaveDocument`|문서를 저장 합니다.|  
 |`onAfterCloseDocument`|문서가 닫혔습니다.|  
   
-##  <a name="a-nameondrawthumbnaila--cdocumentondrawthumbnail"></a><a name="ondrawthumbnail"></a>CDocument::OnDrawThumbnail  
+##  <a name="ondrawthumbnail"></a>CDocument::OnDrawThumbnail  
  축소판 그림을 그릴 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ```  
@@ -603,7 +661,7 @@ virtual void OnDrawThumbnail(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonfilesendmaila--cdocumentonfilesendmail"></a><a name="onfilesendmail"></a>CDocument::OnFileSendMail  
+##  <a name="onfilesendmail"></a>CDocument::OnFileSendMail  
  상주 메일 호스트를 통해 메시지 (있는 경우) 문서와 첨부 보냅니다.  
   
 ```  
@@ -617,7 +675,7 @@ void OnFileSendMail();
   
  **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있으면 메일을 통해 문서를 보내는 기능을 지원 합니다. 문서를 참조 [MAPI 항목](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)합니다.  
   
-##  <a name="a-nameonloaddocumentfromstreama--cdocumentonloaddocumentfromstream"></a><a name="onloaddocumentfromstream"></a>CDocument::OnLoadDocumentFromStream  
+##  <a name="onloaddocumentfromstream"></a>CDocument::OnLoadDocumentFromStream  
  스트림에서 문서 데이터를 로드 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -638,7 +696,7 @@ virtual HRESULT OnLoadDocumentFromStream(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonnewdocumenta--cdocumentonnewdocument"></a><a name="onnewdocument"></a>CDocument::OnNewDocument  
+##  <a name="onnewdocument"></a>CDocument::OnNewDocument  
  새 파일 명령 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -664,7 +722,7 @@ virtual BOOL OnNewDocument();
   
  [!code-cpp[NVC_MFCDocView #&62;](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
-##  <a name="a-nameonopendocumenta--cdocumentonopendocument"></a><a name="onopendocument"></a>CDocument::OnOpenDocument  
+##  <a name="onopendocument"></a>CDocument::OnOpenDocument  
  파일 열기 명령의 일부로 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -694,7 +752,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
   
  [!code-cpp[NVC_MFCDocView #&63;](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
   
-##  <a name="a-nameonpreviewhandlerqueryfocusa--cdocumentonpreviewhandlerqueryfocus"></a><a name="onpreviewhandlerqueryfocus"></a>CDocument::OnPreviewHandlerQueryFocus  
+##  <a name="onpreviewhandlerqueryfocus"></a>CDocument::OnPreviewHandlerQueryFocus  
  호출에서 검색 된 HWND를 반환 하는 미리 보기 처리기에 전달 된 `GetFocus` 함수입니다.  
   
 ```  
@@ -710,7 +768,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpreviewhandlertranslateacceleratora--cdocumentonpreviewhandlertranslateaccelerator"></a><a name="onpreviewhandlertranslateaccelerator"></a>CDocument::OnPreviewHandlerTranslateAccelerator  
+##  <a name="onpreviewhandlertranslateaccelerator"></a>CDocument::OnPreviewHandlerTranslateAccelerator  
  미리 보기 처리기 실행 중인 프로세스의 메시지 펌프에서 쌓입니다 키 입력을 처리 하는 미리 보기 처리기를 전달 합니다.  
   
 ```  
@@ -726,7 +784,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonrichpreviewbackcolorchangeda--cdocumentonrichpreviewbackcolorchanged"></a><a name="onrichpreviewbackcolorchanged"></a>CDocument::OnRichPreviewBackColorChanged  
+##  <a name="onrichpreviewbackcolorchanged"></a>CDocument::OnRichPreviewBackColorChanged  
  고급 미리 보기 배경 색이 변경 되 면 호출 됩니다.  
   
 ```  
@@ -735,7 +793,7 @@ virtual void OnRichPreviewBackColorChanged();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonrichpreviewfontchangeda--cdocumentonrichpreviewfontchanged"></a><a name="onrichpreviewfontchanged"></a>CDocument::OnRichPreviewFontChanged  
+##  <a name="onrichpreviewfontchanged"></a>CDocument::OnRichPreviewFontChanged  
  고급 미리 보기 글꼴 변경 될 때 호출 됩니다.  
   
 ```  
@@ -744,7 +802,7 @@ virtual void OnRichPreviewFontChanged();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonrichpreviewsitechangeda--cdocumentonrichpreviewsitechanged"></a><a name="onrichpreviewsitechanged"></a>CDocument::OnRichPreviewSiteChanged  
+##  <a name="onrichpreviewsitechanged"></a>CDocument::OnRichPreviewSiteChanged  
  고급 미리 보기 사이트 변경 될 때 호출 됩니다.  
   
 ```  
@@ -753,7 +811,7 @@ virtual void OnRichPreviewSiteChanged();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonrichpreviewtextcolorchangeda--cdocumentonrichpreviewtextcolorchanged"></a><a name="onrichpreviewtextcolorchanged"></a>CDocument::OnRichPreviewTextColorChanged  
+##  <a name="onrichpreviewtextcolorchanged"></a>CDocument::OnRichPreviewTextColorChanged  
  고급 미리 보기 텍스트 색이 변경 되 면 호출 됩니다.  
   
 ```  
@@ -762,7 +820,7 @@ virtual void OnRichPreviewTextColorChanged();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsavedocumenta--cdocumentonsavedocument"></a><a name="onsavedocument"></a>CDocument::OnSaveDocument  
+##  <a name="onsavedocument"></a>CDocument::OnSaveDocument  
  파일 저장 또는 다른 이름으로 저장 명령의 일환으로 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -779,7 +837,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ### <a name="remarks"></a>주의  
  이 함수의 기본 구현은 호출은 지정된 된 파일을 엽니다 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) 문서의 데이터를 쓸 파일을을 선택한 다음 표시 문서도 정리 합니다. 프레임 워크는 문서를 저장할 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다. 예를 들어 위치 문서 별도 파일 보다는 데이터베이스의 레코드를 나타내며 응용 프로그램을 작성할 수 있습니다.  
   
-##  <a name="a-nameonunloadhandlera--cdocumentonunloadhandler"></a><a name="onunloadhandler"></a>CDocument::OnUnloadHandler  
+##  <a name="onunloadhandler"></a>CDocument::OnUnloadHandler  
  미리 보기 처리기 언로드될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -788,7 +846,7 @@ virtual void OnUnloadHandler();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonupdatefilesendmaila--cdocumentonupdatefilesendmail"></a><a name="onupdatefilesendmail"></a>CDocument::OnUpdateFileSendMail  
+##  <a name="onupdatefilesendmail"></a>CDocument::OnUpdateFileSendMail  
  수 있도록는 **ID_FILE_SEND_MAIL** 메일 지원 (MAPI) 되 면 명령입니다.  
   
 ```  
@@ -804,7 +862,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
   
  **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있으면 메일을 통해 문서를 보내는 기능을 지원 합니다. 문서를 참조 [MAPI 항목](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)합니다.  
   
-##  <a name="a-nameprecloseframea--cdocumentprecloseframe"></a><a name="precloseframe"></a>CDocument::PreCloseFrame  
+##  <a name="precloseframe"></a>CDocument::PreCloseFrame  
  이 멤버 함수는 프레임 창 소멸 되기 전에 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -820,7 +878,7 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
   
  기본값은 `PreCloseFrame` 는 아무 작업도 수행 **CDocument**합니다. **CDocument**-파생 된 클래스 [COleDocument](../../mfc/reference/coledocument-class.md) 및 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 이 멤버 함수를 사용 합니다.  
   
-##  <a name="a-namereadnextchunkvaluea--cdocumentreadnextchunkvalue"></a><a name="readnextchunkvalue"></a>CDocument::ReadNextChunkValue  
+##  <a name="readnextchunkvalue"></a>CDocument::ReadNextChunkValue  
  다음 청크 값을 읽습니다.  
   
 ```  
@@ -836,7 +894,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namereleasefilea--cdocumentreleasefile"></a><a name="releasefile"></a>CDocument::ReleaseFile  
+##  <a name="releasefile"></a>CDocument::ReleaseFile  
  이 멤버 함수는 다른 응용 프로그램에서 사용 하기 위해 사용할 수 있도록 파일을 해제 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -859,7 +917,7 @@ virtual void ReleaseFile(
   
  이 멤버 함수는 파일을 배포 하기 전에 사용자가 작업을 요구 하도록 재정의 합니다.  
   
-##  <a name="a-nameremovechunka--cdocumentremovechunk"></a><a name="removechunk"></a>CDocument::RemoveChunk  
+##  <a name="removechunk"></a>CDocument::RemoveChunk  
  지정된 된 GUID와 청크를 제거합니다.  
   
 ```  
@@ -877,7 +935,7 @@ virtual void RemoveChunk(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameremoveviewa--cdocumentremoveview"></a><a name="removeview"></a>CDocument::RemoveView  
+##  <a name="removeview"></a>CDocument::RemoveView  
  문서에서 보기를 분리 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -895,7 +953,7 @@ void RemoveView(CView* pView);
   
  예 [AddView](#addview) 샘플 구현에 대 한 합니다.  
   
-##  <a name="a-namereportsaveloadexceptiona--cdocumentreportsaveloadexception"></a><a name="reportsaveloadexception"></a>CDocument::ReportSaveLoadException  
+##  <a name="reportsaveloadexception"></a>CDocument::ReportSaveLoadException  
  예외가 발생 하는 경우 호출 (일반적으로 [CFileException](../../mfc/reference/cfileexception-class.md) 또는 [CArchiveException](../../mfc/reference/carchiveexception-class.md))을 저장 하거나 문서를 로드 합니다.  
   
 ```  
@@ -922,7 +980,7 @@ virtual void ReportSaveLoadException(
 ### <a name="remarks"></a>주의  
  기본 구현에서는 예외 개체를 검사 하 고 원인을 구체적으로 설명 하는 오류 메시지를 찾습니다. 특정 메시지 없거나 경우 *e* 는 **NULL**로 지정 된 일반 메시지는 `nIDPDefault` 매개 변수를 사용 합니다. 함수는 다음 오류 메시지가 포함 된 메시지 상자를 표시 합니다. 추가, 사용자 지정 된 오류 메시지를 제공 하려는 경우이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
   
-##  <a name="a-namesavemodifieda--cdocumentsavemodified"></a><a name="savemodified"></a>CDocument::SaveModified  
+##  <a name="savemodified"></a>CDocument::SaveModified  
  수정 된 문서를 닫을 수 있게 되기 전에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -935,7 +993,7 @@ virtual BOOL SaveModified();
 ### <a name="remarks"></a>주의  
  이 함수를 기본 구현에는 변경 되었으면 하는 경우 사용자는 문서에 변경 내용을 저장할 것인지 묻는 메시지 상자가 표시 됩니다. 프로그램에 필요한 다른 묻는 프로시저를 하는 경우이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
   
-##  <a name="a-namesetchunkvaluea--cdocumentsetchunkvalue"></a><a name="setchunkvalue"></a>CDocument::SetChunkValue  
+##  <a name="setchunkvalue"></a>CDocument::SetChunkValue  
  청크 값을 설정합니다.  
   
 ```  
@@ -951,7 +1009,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetmodifiedflaga--cdocumentsetmodifiedflag"></a><a name="setmodifiedflag"></a>CDocument::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>CDocument::SetModifiedFlag  
  문서의 모든 수정 사항은 수행한 후이 함수를 호출 합니다.  
   
 ```  
@@ -965,7 +1023,7 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>주의  
  이 함수를 일관 되 게 호출 하 여 프레임 워크는 문서를 닫기 전에 변경 내용을 저장 하 라는 있는지 확인 합니다. 기본값을 사용 하면 일반적으로 **TRUE** 에 대 한는 `bModified` 매개 변수입니다. 정리 문서 (수정 되지 않은)를 표시 하려면 값이 함수를 호출 **FALSE**합니다.  
   
-##  <a name="a-namesetpathnamea--cdocumentsetpathname"></a><a name="setpathname"></a>CDocument::SetPathName  
+##  <a name="setpathname"></a>CDocument::SetPathName  
  문서의 디스크 파일의 정규화 된 경로 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -984,7 +1042,7 @@ virtual void SetPathName(
 ### <a name="remarks"></a>주의  
  값에 따라 `bAddToMRU` 경로 추가 또는 응용 프로그램에서 관리 하는 최근에 사용한 목록에 추가 되지 않습니다. 참고 일부 문서는 디스크 파일에 관련 되지 않습니다. 프레임 워크에서 사용 되는 파일 열기 및 저장에 대 한 기본 구현을 재정의 하는 경우에이 함수를 호출 합니다.  
   
-##  <a name="a-namesettitlea--cdocumentsettitle"></a><a name="settitle"></a>CDocument::SetTitle  
+##  <a name="settitle"></a>CDocument::SetTitle  
  문서의 제목 (프레임 창의 제목 표시줄에 표시 되는 문자열)을 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -998,7 +1056,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ### <a name="remarks"></a>주의  
  이 함수를 호출 문서를 표시 하는 모든 프레임 창의 제목을 업데이트 합니다.  
   
-##  <a name="a-nameupdateallviewsa--cdocumentupdateallviews"></a><a name="updateallviews"></a>CDocument::UpdateAllViews  
+##  <a name="updateallviews"></a>CDocument::UpdateAllViews  
  문서 수정 된 후에이 함수를 호출 합니다.  
   
 ```  

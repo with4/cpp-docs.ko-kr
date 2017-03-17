@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileTimeSpan
-- ATL.CFileTimeSpan
-- ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::GetTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::SetTimeSpan
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +93,7 @@ class CFileTimeSpan
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltime.h  
   
-##  <a name="a-namecfiletimespana--cfiletimespancfiletimespan"></a><a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
+##  <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
  생성자입니다.  
   
 ```
@@ -110,7 +112,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 ### <a name="remarks"></a>주의  
  `CFileTimeSpan` 기존를 사용 하 여 개체를 만들 수 있습니다 `CFileTimeSpan` 개체, 또는 64 비트 값으로 표현 합니다. 기본 생성자는 0으로는 시간 범위를 설정합니다.  
   
-##  <a name="a-namegettimespana--cfiletimespangettimespan"></a><a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
  시간 범위를 검색 하려면이 메서드를 호출 하는 `CFileTimeSpan` 개체입니다.  
   
 ```
@@ -120,7 +122,7 @@ LONGLONG GetTimeSpan() const throw();
 ### <a name="return-value"></a>반환 값  
  밀리초의 시간 범위를 반환합니다.  
   
-##  <a name="a-nameoperator-a--cfiletimespanoperator--"></a><a name="operator_-"></a>CFileTimeSpan::operator-  
+##  <a name="operator_-"></a>CFileTimeSpan::operator-  
  뺄셈에 대해 수행 된 **CFileTimeSpan** 개체입니다.  
   
 ```
@@ -134,7 +136,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 된 `CFileTimeSpan` 두 시간 범위 간의 차이 결과 나타내는 개체입니다.  
   
-##  <a name="a-nameoperatorneqa--cfiletimespanoperator-"></a><a name="operator_neq"></a>CFileTimeSpan::operator! =  
+##  <a name="operator_neq"></a>CFileTimeSpan::operator! =  
  두 `CFileTimeSpan` 개체가 다른지 비교합니다.  
   
 ```
@@ -148,7 +150,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 비교 되는 항목에 같지 않은 경우는 `CFileTimeSpan` 개체입니다; 그렇지 않으면 **false**합니다.  
   
-##  <a name="a-nameoperatoradda--cfiletimespanoperator-"></a><a name="operator_add"></a>CFileTimeSpan::operator +  
+##  <a name="operator_add"></a>CFileTimeSpan::operator +  
  에 더하기를 수행 합니다.는 `CFileTimeSpan` 개체입니다.  
   
 ```
@@ -162,7 +164,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 된 `CFileTimeSpan` 걸쳐 있는 총 두 시간이 들어 있는 개체입니다.  
   
-##  <a name="a-nameoperatoraddeqa--cfiletimespanoperator-"></a><a name="operator_add_eq"></a>CFileTimeSpan::operator + =  
+##  <a name="operator_add_eq"></a>CFileTimeSpan::operator + =  
  에 더하기를 수행 합니다.는 `CFileTimeSpan` 개체를 현재 개체에 결과 할당 합니다.  
   
 ```
@@ -176,7 +178,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CFileTimeSpan` 걸쳐 있는 총 두 시간이 들어 있는 개체입니다.  
   
-##  <a name="a-nameoperatorlta--cfiletimespanoperator-lt"></a><a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
+##  <a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
  두 `CFileTimeSpan` 중 더 작은 값을 결정 하는 개체입니다.  
   
 ```
@@ -190,7 +192,7 @@ bool operator<(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 작으면 첫 번째 개체 (즉, 더 짧은 시간 동안 나타냅니다), 두 번째 인스턴스보다 그렇지 않으면 **false**합니다.  
   
-##  <a name="a-nameoperatorlteqa--cfiletimespanoperator-lt"></a><a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
  두 `CFileTimeSpan` 같음 또는 더 작은 값을 결정 하는 개체입니다.  
   
 ```
@@ -204,7 +206,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 첫 번째 개체 보다 작은 경우 (즉, 더 짧은 시간 동안 나타냄) 또는 그렇지 않으면 값이 고 두 번째 **false**합니다.  
   
-##  <a name="a-nameoperatoreqa--cfiletimespanoperator-"></a><a name="operator_eq"></a>CFileTimeSpan::operator =  
+##  <a name="operator_eq"></a>CFileTimeSpan::operator =  
  대입 연산자입니다.  
   
 ```
@@ -218,7 +220,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CFileTimeSpan` 개체입니다.  
   
-##  <a name="a-nameoperator-eqa--cfiletimespanoperator--"></a><a name="operator_-_eq"></a>-= CFileTimeSpan::operator  
+##  <a name="operator_-_eq"></a>-= CFileTimeSpan::operator  
  빼기를 수행 합니다.는 `CFileTimeSpan` 개체를 현재 개체에 결과 할당 합니다.  
   
 ```
@@ -232,7 +234,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CFileTimeSpan` 개체입니다.  
   
-##  <a name="a-nameoperatoreqeqa--cfiletimespanoperator-"></a><a name="operator_eq_eq"></a>CFileTimeSpan::operator = =  
+##  <a name="operator_eq_eq"></a>CFileTimeSpan::operator = =  
  두 `CFileTimeSpan` 개체가 같은지 비교합니다.  
   
 ```
@@ -246,7 +248,7 @@ bool operator==(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 같으면 개체, 그렇지 않으면 **false**합니다.  
   
-##  <a name="a-nameoperatorgta--cfiletimespanoperator-gt"></a><a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
+##  <a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
  두 `CFileTimeSpan` 더 큰 숫자를 확인 하는 개체입니다.  
   
 ```
@@ -260,7 +262,7 @@ bool operator>(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 첫 번째 개체 보다 큰 경우 (즉, 긴 시간 간격을 나타냅니다), 두 번째 인스턴스보다 그렇지 않으면 **false**합니다.  
   
-##  <a name="a-nameoperatorgteqa--cfiletimespanoperator-gt"></a><a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
  두 `CFileTimeSpan` 같음 또는 더 큰 숫자를 확인 하는 개체입니다.  
   
 ```
@@ -274,7 +276,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 첫 번째 개체 보다 큰 경우 (즉, 긴 시간 간격을 나타냅니다) 또는 그렇지 않으면 값이 고 두 번째 **false**합니다.  
   
-##  <a name="a-namesettimespana--cfiletimespansettimespan"></a><a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
+##  <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
  호출의 시간 범위를 설정 하려면이 메서드는 `CFileTimeSpan` 개체입니다.  
   
 ```

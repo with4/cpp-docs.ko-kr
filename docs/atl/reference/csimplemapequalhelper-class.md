@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ class CSimpleMapEqualHelper
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-##  <a name="a-nameisequalkeya--csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
+##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
  두 키가 같은지 테스트합니다.  
   
 ```
@@ -88,7 +91,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="return-value"></a>반환 값  
  키가 같으면 false 그렇지 않으면 true를 반환 합니다.  
   
-##  <a name="a-nameisequalvaluea--csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
+##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
  두 값이 같은지를 테스트합니다.  
   
 ```

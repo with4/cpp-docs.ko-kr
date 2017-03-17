@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdUI
+- AFXWIN/CCmdUI
+- AFXWIN/CCmdUI::ContinueRouting
+- AFXWIN/CCmdUI::Enable
+- AFXWIN/CCmdUI::SetCheck
+- AFXWIN/CCmdUI::SetRadio
+- AFXWIN/CCmdUI::SetText
+- AFXWIN/CCmdUI::m_nID
+- AFXWIN/CCmdUI::m_nIndex
+- AFXWIN/CCmdUI::m_pMenu
+- AFXWIN/CCmdUI::m_pOther
+- AFXWIN/CCmdUI::m_pSubMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +116,7 @@ class CCmdUI
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecontinueroutinga--ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
  현재 메시지의 처리기는 체인을 계속 하려면 명령 라우팅 메커니즘을 지시 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -115,7 +126,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>주의  
  와 함께에서 사용 해야 하는 고급 멤버 함수는 `ON_COMMAND_EX` 반환 하는 처리기 **FALSE**합니다. 자세한 내용은 참조 [기술 참고 6](../../mfc/tn006-message-maps.md)합니다.  
   
-##  <a name="a-nameenablea--ccmduienable"></a><a name="enable"></a>CCmdUI::Enable  
+##  <a name="enable"></a>CCmdUI::Enable  
  이 명령에 대 한 사용자 인터페이스 항목을 사용할지 여부를이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -131,21 +142,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView #&47;](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="a-namemnida--ccmduimnid"></a><a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>CCmdUI::m_nID  
  메뉴 항목, 도구 모음 단추 또는 나타내는 기타 사용자 인터페이스 개체의 ID는 `CCmdUI` 개체입니다.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namemnindexa--ccmduimnindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
  메뉴 항목, 도구 모음 단추 또는 나타내는 기타 사용자 인터페이스 개체의 인덱스는 `CCmdUI` 개체입니다.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="a-namempmenua--ccmduimpmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
  포인터 (의 `CMenu` 형식)으로 표시 되는 메뉴에는 `CCmdUI` 개체입니다.  
   
 ```  
@@ -155,7 +166,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>주의  
  **NULL** 메뉴 항목이 경우.  
   
-##  <a name="a-namempsubmenua--ccmduimpsubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
  포인터 (의 `CMenu` 형식)를 나타내는 포함 된 하위 메뉴는 `CCmdUI` 개체입니다.  
   
 ```  
@@ -165,7 +176,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>주의  
  **NULL** 메뉴 항목이 경우. 하위 메뉴에 팝업 경우 `m_nID` 팝업 메뉴의 첫 번째 항목의 ID를 포함 합니다. 자세한 내용은 참조 [기술 참고 21](../../mfc/tn021-command-and-message-routing.md)합니다.  
   
-##  <a name="a-namempothera--ccmduimpother"></a><a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>CCmdUI::m_pOther  
  포인터 (형식의 `CWnd`) 알림을 전송 하는 상태 또는 도구 모음과 같이 창 개체에 있습니다.  
   
 ```  
@@ -175,7 +186,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>주의  
  **NULL** 항목이 메뉴 또는 비-인지 `CWnd` 개체입니다.  
   
-##  <a name="a-namesetchecka--ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>CCmdUI::SetCheck  
  이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -189,7 +200,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 메뉴 항목 및 도구 모음 단추에 대해 작동합니다. 비활성화 상태 도구 모음 단추에만 적용 됩니다.  
   
-##  <a name="a-namesetradioa--ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>CCmdUI::SetRadio  
  이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -203,7 +214,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>주의  
  이 멤버 함수 작동 방식이 `SetCheck`점을 제외 하 고 사용자 인터페이스 항목 라디오 그룹의 일부로 역할에서 작동 합니다. 그룹의 다른 항목의 선택을 취소 하지 않으면 자동 자체 라디오 그룹 동작을 유지 합니다.  
   
-##  <a name="a-namesettexta--ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>CCmdUI::SetText  
  이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

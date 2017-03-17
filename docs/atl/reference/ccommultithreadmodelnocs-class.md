@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComMultiThreadModelNoCS
 - CComMultiThreadModelNoCS
-- ATL.CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::AutoCriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::CriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::ThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Decrement
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CComMultiThreadModelNoCS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
  사용 하는 경우 `CComMultiThreadModelNoCS`, `typedef` 이름 `AutoCriticalSection` 클래스를 참조 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)합니다.  
   
 ```
@@ -105,7 +109,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>예제  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
-##  <a name="a-namecriticalsectiona--ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
  사용 하는 경우 `CComMultiThreadModelNoCS`, `typedef` 이름 `CriticalSection` 클래스를 참조 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)합니다.  
   
 ```
@@ -128,7 +132,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>예제  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
-##  <a name="a-namedecrementa--ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
  Win32 함수를 호출 하는이 정적 함수 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)를 가리키는 변수의 값을 감소 시킵니다 `p`합니다.  
   
 ```
@@ -145,7 +149,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>주의  
  **InterlockedDecrement** 둘 이상의 스레드가 동시에이 변수를 사용 하는 것을 방지 합니다.  
   
-##  <a name="a-nameincrementa--ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
  Win32 함수를 호출 하는이 정적 함수 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)를 가리키는 변수의 값이 증가 `p`합니다.  
   
 ```
@@ -162,7 +166,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>주의  
  **InterlockedIncrement** 둘 이상의 스레드가 동시에이 변수를 사용 하는 것을 방지 합니다.  
   
-##  <a name="a-namethreadmodelnocsa--ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
  사용 하는 경우 `CComMultiThreadModelNoCS`, `typedef` 이름 `ThreadModelNoCS` 참조 `CComMultiThreadModelNoCS`합니다.  
   
 ```

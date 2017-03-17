@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispatchImpl
-- ATL.IDispatchImpl
-- ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfo
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispatchImpl::Invoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +120,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetidsofnamesa--idispatchimplgetidsofnames"></a><a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
  이름 집합을 해당하는 디스패치 식별자 집합에 매핑합니다.  
   
 ```
@@ -131,7 +135,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettypeinfoa--idispatchimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
  이중 인터페이스에 대 한 형식 정보를 검색 합니다.  
   
 ```
@@ -144,7 +148,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>주의  
  참조 [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegettypeinfocounta--idispatchimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
  이중 인터페이스에 대해 사용할 수 있는 형식 정보를 결정 합니다.  
   
 ```
@@ -154,14 +158,14 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>주의  
  See `IDispatch::GetTypeInfoCount` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameidispatchimpla--idispatchimplidispatchimpl"></a><a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
  생성자입니다. 호출 `AddRef` 이중 인터페이스에 대 한 형식 정보를 관리 하 고 보호 된 멤버 변수입니다. 소멸자를 호출 하 여 **릴리스**합니다.  
   
 ```
 IDispatchImpl();
 ```  
   
-##  <a name="a-nameinvokea--idispatchimplinvoke"></a><a name="invoke"></a>IDispatchImpl::Invoke  
+##  <a name="invoke"></a>IDispatchImpl::Invoke  
  메서드 및 이중 인터페이스에 의해 노출 되는 속성에 대 한 액세스를 제공 합니다.  
   
 ```

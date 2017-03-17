@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  열린 레지스트리 키를 닫습니다.  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는의 소멸자에서는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  레지스트리 키를 열거나 존재 하지 않는 경우이 만듭니다.  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>주의  
  `CreateKey`사용 하 여 `m_hKey` 레지스트리 질문의 루트 라고 합니다. 검색 `pszPath` 의 하위 키로 `m_hKey`합니다. 키가 없으면 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey`다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  
           `CSettngsStore` 개체를 만듭니다.  
   
@@ -135,7 +144,7 @@ CSettingsStore(
   
  에 대 한 소멸자 `CSettingsStore` 해제 `m_hKey` 자동으로 합니다.  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  레지스트리에서 키 및 모든 자식 노드를 삭제합니다.  
   
 ```  
@@ -159,7 +168,7 @@ virtual BOOL DeleteKey(
   
  경우 매개 변수 `bAdmin` 가&0; 이면 `DeleteKey` 검색에서 삭제 하는 키에 대 한 `HKEY_CURRENT_USER`합니다. 경우 `bAdmin` 이 값은&0; `DeleteKey` 검색에서 삭제 하는 키에 대 한 `HKEY_LOCAL_MACHINE`합니다.  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  값을 삭제 `m_hKey`합니다.  
   
 ```  
@@ -173,7 +182,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  레지스트리 키를 엽니다.  
   
 ```  
@@ -190,7 +199,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>주의  
  이 메서드는 지정 된 키 성공적으로 열리면 설정 `m_hKey` 이 키의 핸들입니다.  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  레지스트리 키에서 값을 읽습니다.  
   
 ```  
@@ -320,7 +329,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>주의  
  `Read`에 대 한 검사 `pszKey` 의 하위 키로 `m_hKey`합니다.  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  열기 키 아래의 레지스트리 값을 씁니다.  
   
 ```  

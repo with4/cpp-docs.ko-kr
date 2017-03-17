@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange::IsValidOperation
+- AFXDAO/CDaoFieldExchange::SetFieldType
+- AFXDAO/CDaoFieldExchange::m_nOperation
+- AFXDAO/CDaoFieldExchange::m_prs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +102,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-nameisvalidoperationa--cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
  사용자가 직접 DFX 함수를 작성 하는 경우 호출 `IsValidOperation` 의 특정 필드 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 결정 하는 함수 시작 부분에 (한 **CDaoFieldExchange::outputColumn** 또는 **CDaoFieldExchange::param**).  
   
 ```  
@@ -112,7 +117,7 @@ BOOL IsValidOperation();
   
  사용자 지정 DFX 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)합니다.  
   
-##  <a name="a-namemnoperationa--cdaofieldexchangemnoperation"></a><a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
  수행할 작업을 식별 하는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 필드 exchange 개체와 연결 된 개체입니다.  
   
 ### <a name="remarks"></a>주의  
@@ -141,12 +146,12 @@ BOOL IsValidOperation();
 |**DumpField**|필드의 내용을 (디버그에만 해당)를 덤프합니다.|  
 |**MaxDFXOperation**|입력 검사에 사용 합니다.|  
   
-##  <a name="a-namemprsa--cdaofieldexchangemprs"></a><a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
  에 대 한 포인터는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 연관 된 개체는 `CDaoFieldExchange` 개체입니다.  
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetfieldtypea--cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
  호출 `SetFieldType` 에 프로그램 `CDaoRecordset` 클래스의 `DoFieldExchange` 재정의 합니다.  
   
 ```  

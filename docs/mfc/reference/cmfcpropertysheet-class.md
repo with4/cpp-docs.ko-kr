@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertySheet
+- AFXPROPERTYSHEET/CMFCPropertySheet
+- AFXPROPERTYSHEET/CMFCPropertySheet::CMFCPropertySheet
+- AFXPROPERTYSHEET/CMFCPropertySheet::AddPage
+- AFXPROPERTYSHEET/CMFCPropertySheet::AddPageToTree
+- AFXPROPERTYSHEET/CMFCPropertySheet::AddTreeCategory
+- AFXPROPERTYSHEET/CMFCPropertySheet::EnablePageHeader
+- AFXPROPERTYSHEET/CMFCPropertySheet::GetHeaderHeight
+- AFXPROPERTYSHEET/CMFCPropertySheet::GetLook
+- AFXPROPERTYSHEET/CMFCPropertySheet::GetNavBarWidth
+- AFXPROPERTYSHEET/CMFCPropertySheet::GetTab
+- AFXPROPERTYSHEET/CMFCPropertySheet::InitNavigationControl
+- AFXPROPERTYSHEET/CMFCPropertySheet::OnActivatePage
+- AFXPROPERTYSHEET/CMFCPropertySheet::OnDrawPageHeader
+- AFXPROPERTYSHEET/CMFCPropertySheet::OnRemoveTreePage
+- AFXPROPERTYSHEET/CMFCPropertySheet::RemoveCategory
+- AFXPROPERTYSHEET/CMFCPropertySheet::RemovePage
+- AFXPROPERTYSHEET/CMFCPropertySheet::SetIconsList
+- AFXPROPERTYSHEET/CMFCPropertySheet::SetLook
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -127,7 +145,7 @@ class CMFCPropertySheet : public CPropertySheet
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertysheet.h  
   
-##  <a name="a-nameaddpagea--cmfcpropertysheetaddpage"></a><a name="addpage"></a>CMFCPropertySheet::AddPage  
+##  <a name="addpage"></a>CMFCPropertySheet::AddPage  
  속성 시트에 페이지를 추가합니다.  
   
 ```  
@@ -143,7 +161,7 @@ void AddPage(CPropertyPage* pPage);
   
  Microsoft Outlook의 스타일에서 속성 시트가 있는 경우 프레임 워크 속성 시트의 왼쪽 탐색 단추의 목록을 표시 합니다. 속성 페이지를 추가 하는이 메서드를 한 후 목록에 해당 하는 단추를 추가 합니다. 속성 페이지를 표시 하려면 해당 단추를 클릭 합니다. 속성 시트의 스타일에 대 한 자세한 내용은 참조 [CMFCPropertySheet::SetLook](#setlook)합니다.  
   
-##  <a name="a-nameaddpagetotreea--cmfcpropertysheetaddpagetotree"></a><a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
+##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
  트리 컨트롤에 새 속성 페이지를 추가합니다.  
   
 ```  
@@ -170,7 +188,7 @@ void AddPageToTree(
 ### <a name="remarks"></a>주의  
  이 메서드는 속성 페이지의 트리 컨트롤의 리프로 추가합니다. 속성 페이지를 추가 하려면 만듭니다는 `CMFCPropertySheet` 개체를 호출 하는 [CMFCPropertySheet::SetLook](#setlook) 메서드를는 `look` 매개 변수 설정 `CMFCPropertySheet::PropSheetLook_Tree`, 다음이 메서드를 사용 하 여 속성 페이지를 추가 합니다.  
   
-##  <a name="a-nameaddtreecategorya--cmfcpropertysheetaddtreecategory"></a><a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
+##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
  트리 컨트롤에 새 노드를 추가합니다.  
   
 ```  
@@ -202,7 +220,7 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
   
  이 메서드의 반환 값에 대 한 후속 호출에서 사용 하 여 [CMFCPropertySheet::AddPageToTree](#addpagetotree) 및 [CMFCPropertySheet::AddTreeCategory](#addtreecategory)합니다.  
   
-##  <a name="a-namecmfcpropertysheeta--cmfcpropertysheetcmfcpropertysheet"></a><a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
+##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
  `CMFCPropertySheet` 개체를 생성합니다.  
   
 ```  
@@ -233,7 +251,7 @@ CMFCPropertySheet(
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조에 대 한 매개 변수는 [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) 생성자입니다.  
   
-##  <a name="a-nameenablepageheadera--cmfcpropertysheetenablepageheader"></a><a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
+##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
  각 페이지 위쪽에서 사용자 지정 머리글을 그릴 공간을 예약합니다.  
   
 ```  
@@ -247,7 +265,7 @@ void EnablePageHeader(int nHeaderHeight);
 ### <a name="remarks"></a>주의  
  값을 사용 하는 `nHeaderHeight` 매개 변수를 사용자 지정 헤더를 그릴 재정의 [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) 메서드.  
   
-##  <a name="a-namegetheaderheighta--cmfcpropertysheetgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
+##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
  현재 머리글의 높이를 검색합니다.  
   
 ```  
@@ -260,7 +278,7 @@ int GetHeaderHeight() const;
 ### <a name="remarks"></a>주의  
  호출의 [CMFCPropertySheet::EnablePageHeader](#enablepageheader) 메서드 전에이 메서드를 호출 합니다.  
   
-##  <a name="a-namegetlooka--cmfcpropertysheetgetlook"></a><a name="getlook"></a>CMFCPropertySheet::GetLook  
+##  <a name="getlook"></a>CMFCPropertySheet::GetLook  
  현재 속성 시트의 모양을 지정하는 열거형 값을 검색합니다.  
   
 ```  
@@ -270,7 +288,7 @@ PropSheetLook GetLook() const;
 ### <a name="return-value"></a>반환 값  
  속성 시트의 모양을 지정 하는 열거형 값 중 하나입니다. 가능한 값 목록은의 설명 섹션에서 열거형 표를 참조 [CMFCPropertySheet::SetLook](#setlook)합니다.  
   
-##  <a name="a-namegetnavbarwidtha--cmfcpropertysheetgetnavbarwidth"></a><a name="getnavbarwidth"></a>Cmfcpropertysheet:: Getnavbarwidth  
+##  <a name="getnavbarwidth"></a>Cmfcpropertysheet:: Getnavbarwidth  
  탐색 모음의 너비를 가져옵니다.  
   
 ```  
@@ -280,7 +298,7 @@ int GetNavBarWidth() const;
 ### <a name="return-value"></a>반환 값  
  탐색 모음의 너비(픽셀)입니다.  
   
-##  <a name="a-namegettaba--cmfcpropertysheetgettab"></a><a name="gettab"></a>CMFCPropertySheet::GetTab  
+##  <a name="gettab"></a>CMFCPropertySheet::GetTab  
  현재 속성 시트 컨트롤을 지원하는 내부 탭 컨트롤 개체를 검색합니다.  
   
 ```  
@@ -297,7 +315,7 @@ CMFCTabCtrl& GetTab() const;
   
  속성 시트 컨트롤 Microsoft OneNote의 스타일에 표시 되도록 설정 되지 않은 경우이 메서드는 디버그 모드에서 어설션 합니다.  
   
-##  <a name="a-nameinitnavigationcontrola--cmfcpropertysheetinitnavigationcontrol"></a><a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
+##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
  현재 속성 시트 컨트롤의 모양을 초기화합니다.  
   
 ```  
@@ -310,7 +328,7 @@ virtual CWnd* InitNavigationControl();
 ### <a name="remarks"></a>주의  
  속성 시트 컨트롤 탭된 페이지, 트리 컨트롤, 탐색 단추의 목록을의 집합을 같은 여러 가지 다른 형태로 나타날 수 있습니다. 사용 된 [CMFCPropertySheet::SetLook](#setlook) 메서드 속성 시트 컨트롤의 모양을 지정할 수 있습니다.  
   
-##  <a name="a-nameonactivatepagea--cmfcpropertysheetonactivatepage"></a><a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
+##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
  속성 페이지를 사용하도록 설정한 경우 프레임워크에서 호출됩니다.  
   
 ```  
@@ -324,7 +342,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 enabled 속성 페이지 스크롤될 않도록 합니다. 현재 속성 시트의 스타일을 Microsoft Outlook 창 들어 있는 경우이 메서드는 해당 하는 Outlook 단추 선택된 상태를 설정 합니다.  
   
-##  <a name="a-nameondrawpageheadera--cmfcpropertysheetondrawpageheader"></a><a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
+##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
  사용자 지정 속성 페이지에 대 한 머리글을 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -347,7 +365,7 @@ virtual void OnDrawPageHeader(
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 아무 작업도 수행 합니다. 이 메서드를 재정의 하는 경우 호출 된 [CMFCPropertySheet::EnablePageHeader](#enablepageheader) 메서드 전에이 메서드를 호출 하는 프레임 워크입니다.  
   
-##  <a name="a-nameonremovetreepagea--cmfcpropertysheetonremovetreepage"></a><a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
+##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
  트리 컨트롤에서 속성 페이지를 제거하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -361,7 +379,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="a-nameremovecategorya--cmfcpropertysheetremovecategory"></a><a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
+##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
  트리 컨트롤에서 노드를 제거합니다.  
   
 ```  
@@ -375,7 +393,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ### <a name="remarks"></a>주의  
  또한 라고, 범주 트리 컨트롤에서 노드를 제거 하려면이 메서드를 사용 합니다. 사용 하는 [CMFCPropertySheet::AddTreeCategory](#addtreecategory) 트리 컨트롤 노드를 추가 하는 방법입니다.  
   
-##  <a name="a-nameremovepagea--cmfcpropertysheetremovepage"></a><a name="removepage"></a>CMFCPropertySheet::RemovePage  
+##  <a name="removepage"></a>CMFCPropertySheet::RemovePage  
  속성 시트에서 속성 페이지를 제거합니다.  
   
 ```  
@@ -393,7 +411,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>주의  
  이 메서드는 지정 된 속성 페이지를 제거 하 고 연결된 창을 삭제 합니다. 속성 페이지는 개체는 `pPage` 매개 변수 지정 될 때까지 제거 되지 않습니다는 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) 창이 닫혀 있습니다.  
   
-##  <a name="a-nameseticonslista--cmfcpropertysheetseticonslist"></a><a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
+##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
  Outlook 창의 탐색 컨트롤에서 사용되는 이미지 목록을 지정합니다.  
   
 ```  
@@ -425,7 +443,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  이 메서드를 지 원하는 방법에 대 한 자세한 내용은 참조 [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) 및 [CImageList::Add](../../mfc/reference/cimagelist-class.md#add)합니다. 속성 시트의 스타일을 설정 하는 방법에 대 한 자세한 내용은 참조 [CMFCPropertySheet::SetLook](#setlook)합니다.  
   
-##  <a name="a-namesetlooka--cmfcpropertysheetsetlook"></a><a name="setlook"></a>CMFCPropertySheet::SetLook  
+##  <a name="setlook"></a>CMFCPropertySheet::SetLook  
  속성 시트의 모양을 지정합니다.  
   
 ```  

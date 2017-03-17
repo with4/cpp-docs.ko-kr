@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::ISupportErrorInfoImpl<piid>
-- ATL::ISupportErrorInfoImpl
 - ISupportErrorInfoImpl
-- ATL.ISupportErrorInfoImpl<piid>
-- ATL.ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +84,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameinterfacesupportserrorinfoa--isupporterrorinfoimplinterfacesupportserrorinfo"></a><a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  인터페이스에서 식별 되는지를 나타냅니다 `riid` 지원는 [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) 인터페이스입니다.  
   
 ```
@@ -96,7 +94,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>주의  
  참조 [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  풀의 스레드 수를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -113,7 +111,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&134;](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  스레드 풀 스레드를 종료를 대기 하는 시간 (밀리초)에는 최대 시간을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -130,7 +128,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>예제  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  풀의 스레드 수를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -151,7 +149,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>예제  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  스레드 풀 스레드를 종료를 대기 하는 시간 (밀리초)에는 최대 시간을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

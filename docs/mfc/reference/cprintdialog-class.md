@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
+- AFXDLGS/CPrintDialog
+- AFXDLGS/CPrintDialog::CPrintDialog
+- AFXDLGS/CPrintDialog::CreatePrinterDC
+- AFXDLGS/CPrintDialog::DoModal
+- AFXDLGS/CPrintDialog::GetCopies
+- AFXDLGS/CPrintDialog::GetDefaults
+- AFXDLGS/CPrintDialog::GetDeviceName
+- AFXDLGS/CPrintDialog::GetDevMode
+- AFXDLGS/CPrintDialog::GetDriverName
+- AFXDLGS/CPrintDialog::GetFromPage
+- AFXDLGS/CPrintDialog::GetPortName
+- AFXDLGS/CPrintDialog::GetPrinterDC
+- AFXDLGS/CPrintDialog::GetToPage
+- AFXDLGS/CPrintDialog::PrintAll
+- AFXDLGS/CPrintDialog::PrintCollate
+- AFXDLGS/CPrintDialog::PrintRange
+- AFXDLGS/CPrintDialog::PrintSelection
+- AFXDLGS/CPrintDialog::m_pd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +150,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="a-namecprintdialoga--cprintdialogcprintdialog"></a><a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
  Windows 인쇄 하거나 인쇄 설정 대화 상자 개체를 생성합니다.  
   
 ```  
@@ -160,7 +178,7 @@ CPrintDialog(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&174;](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cprintdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
  프린터 장치 컨텍스트 (DC)에서 만듭니다는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 구조입니다.  
   
 ```  
@@ -176,7 +194,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&106;](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="a-namedomodala--cprintdialogdomodal"></a><a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>CPrintDialog::DoModal  
  Windows 공용 인쇄 대화 상자를 표시 하 고 페이지 범위 복사본의 수와 같은 다양 한 인쇄 옵션을 선택할 수 있도록 복사본 대조해 야 해야 하는지 여부 및 합니다.  
   
 ```  
@@ -198,7 +216,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::CreatePrinterDC](#createprinterdc)합니다.  
   
-##  <a name="a-namegetcopiesa--cprintdialoggetcopies"></a><a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>CPrintDialog::GetCopies  
  요청 된 복사본 수를 검색 합니다.  
   
 ```  
@@ -214,7 +232,7 @@ int GetCopies() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::PrintCollate](#printcollate)합니다.  
   
-##  <a name="a-namegetdefaultsa--cprintdialoggetdefaults"></a><a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
  대화 상자를 표시 하지 않고 기본 프린터의 장치 기본값을 검색 합니다.  
   
 ```  
@@ -236,7 +254,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView #&107;](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="a-namegetdevicenamea--cprintdialoggetdevicename"></a><a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
  현재 선택 된 프린터 장치의 이름을 검색합니다.  
   
 ```  
@@ -254,7 +272,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView #&108;](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="a-namegetdevmodea--cprintdialoggetdevmode"></a><a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
  검색 된 `DEVMODE` 구조입니다.  
   
 ```  
@@ -270,7 +288,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::PrintCollate](#printcollate)합니다.  
   
-##  <a name="a-namegetdrivernamea--cprintdialoggetdrivername"></a><a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
  현재 선택 된 프린터 드라이버의 이름을 검색합니다.  
   
 ```  
@@ -286,7 +304,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetDeviceName](#getdevicename)합니다.  
   
-##  <a name="a-namegetfrompagea--cprintdialoggetfrompage"></a><a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
  인쇄 범위의 시작 페이지를 검색합니다.  
   
 ```  
@@ -302,7 +320,7 @@ int GetFromPage() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
-##  <a name="a-namegetportnamea--cprintdialoggetportname"></a><a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>CPrintDialog::GetPortName  
  현재 선택 된 프린터 포트의 이름을 검색합니다.  
   
 ```  
@@ -318,7 +336,7 @@ CString GetPortName() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetDeviceName](#getdevicename)합니다.  
   
-##  <a name="a-namegetprinterdca--cprintdialoggetprinterdc"></a><a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
  프린터 장치 컨텍스트에 대 한 핸들을 검색합니다.  
   
 ```  
@@ -334,7 +352,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&109;](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="a-namegettopagea--cprintdialoggettopage"></a><a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>CPrintDialog::GetToPage  
  인쇄 범위 끝의 페이지를 검색합니다.  
   
 ```  
@@ -350,7 +368,7 @@ int GetToPage() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
-##  <a name="a-namempda--cprintdialogmpd"></a><a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>CPrintDialog::m_pd  
  대화 상자 개체의 특성을 저장 하는 구성원으로 포함 하는 구조입니다.  
   
 ```  
@@ -365,7 +383,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&111;](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="a-nameprintalla--cprintdialogprintall"></a><a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>CPrintDialog::PrintAll  
  문서 인쇄를 결정 합니다.  
   
 ```  
@@ -381,7 +399,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
-##  <a name="a-nameprintcollatea--cprintdialogprintcollate"></a><a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
  복사본 요청 된 데이터가 정렬 여부를 확인 합니다.  
   
 ```  
@@ -397,7 +415,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&110;](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="a-nameprintrangea--cprintdialogprintrange"></a><a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>CPrintDialog::PrintRange  
  지정된 된 범위의 페이지 인쇄할지 여부를 결정 합니다.  
   
 ```  
@@ -413,7 +431,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
-##  <a name="a-nameprintselectiona--cprintdialogprintselection"></a><a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>CPrintDialog::PrintSelection  
  현재 선택한 항목만 인쇄 여부를 결정 합니다.  
   
 ```  

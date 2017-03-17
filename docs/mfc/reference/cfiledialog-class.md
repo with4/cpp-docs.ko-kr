@@ -10,6 +10,70 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileDialog
+- AFXDLGS/CFileDialog
+- AFXDLGS/CFileDialog::CFileDialog
+- AFXDLGS/CFileDialog::AddCheckButton
+- AFXDLGS/CFileDialog::AddComboBox
+- AFXDLGS/CFileDialog::AddControlItem
+- AFXDLGS/CFileDialog::AddEditBox
+- AFXDLGS/CFileDialog::AddMenu
+- AFXDLGS/CFileDialog::AddPlace
+- AFXDLGS/CFileDialog::AddPushButton
+- AFXDLGS/CFileDialog::AddRadioButtonList
+- AFXDLGS/CFileDialog::AddSeparator
+- AFXDLGS/CFileDialog::AddText
+- AFXDLGS/CFileDialog::ApplyOFNToShellDialog
+- AFXDLGS/CFileDialog::DoModal
+- AFXDLGS/CFileDialog::EnableOpenDropDown
+- AFXDLGS/CFileDialog::EndVisualGroup
+- AFXDLGS/CFileDialog::GetCheckButtonState
+- AFXDLGS/CFileDialog::GetControlItemState
+- AFXDLGS/CFileDialog::GetControlState
+- AFXDLGS/CFileDialog::GetEditBoxText
+- AFXDLGS/CFileDialog::GetFileExt
+- AFXDLGS/CFileDialog::GetFileName
+- AFXDLGS/CFileDialog::GetFileTitle
+- AFXDLGS/CFileDialog::GetFolderPath
+- AFXDLGS/CFileDialog::GetIFileDialogCustomize
+- AFXDLGS/CFileDialog::GetIFileOpenDialog
+- AFXDLGS/CFileDialog::GetIFileSaveDialog
+- AFXDLGS/CFileDialog::GetNextPathName
+- AFXDLGS/CFileDialog::GetOFN
+- AFXDLGS/CFileDialog::GetPathName
+- AFXDLGS/CFileDialog::GetReadOnlyPref
+- AFXDLGS/CFileDialog::GetResult
+- AFXDLGS/CFileDialog::GetResults
+- AFXDLGS/CFileDialog::GetSelectedControlItem
+- AFXDLGS/CFileDialog::GetStartPosition
+- AFXDLGS/CFileDialog::HideControl
+- AFXDLGS/CFileDialog::IsPickFoldersMode
+- AFXDLGS/CFileDialog::MakeProminent
+- AFXDLGS/CFileDialog::RemoveControlItem
+- AFXDLGS/CFileDialog::SetCheckButtonState
+- AFXDLGS/CFileDialog::SetControlItemState
+- AFXDLGS/CFileDialog::SetControlItemText
+- AFXDLGS/CFileDialog::SetControlLabel
+- AFXDLGS/CFileDialog::SetControlState
+- AFXDLGS/CFileDialog::SetControlText
+- AFXDLGS/CFileDialog::SetDefExt
+- AFXDLGS/CFileDialog::SetEditBoxText
+- AFXDLGS/CFileDialog::SetProperties
+- AFXDLGS/CFileDialog::SetSelectedControlItem
+- AFXDLGS/CFileDialog::SetTemplate
+- AFXDLGS/CFileDialog::StartVisualGroup
+- AFXDLGS/CFileDialog::UpdateOFNFromShellDialog
+- AFXDLGS/CFileDialog::OnButtonClicked
+- AFXDLGS/CFileDialog::OnCheckButtonToggled
+- AFXDLGS/CFileDialog::OnControlActivating
+- AFXDLGS/CFileDialog::OnFileNameChange
+- AFXDLGS/CFileDialog::OnFileNameOK
+- AFXDLGS/CFileDialog::OnFolderChange
+- AFXDLGS/CFileDialog::OnInitDone
+- AFXDLGS/CFileDialog::OnItemSelected
+- AFXDLGS/CFileDialog::OnLBSelChangedNotify
+- AFXDLGS/CFileDialog::OnShareViolation
+- AFXDLGS/CFileDialog::OnTypeChange
+- AFXDLGS/CFileDialog::m_ofn
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -200,7 +264,7 @@ class CFileDialog : public CCommonDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="a-nameaddcheckbuttona--cfiledialogaddcheckbutton"></a><a name="addcheckbutton"></a>CFileDialog::AddCheckButton  
+##  <a name="addcheckbutton"></a>CFileDialog::AddCheckButton  
  대화 상자에 확인 단추를 추가합니다.  
   
 ```  
@@ -222,7 +286,7 @@ HRESULT AddCheckButton(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddcomboboxa--cfiledialogaddcombobox"></a><a name="addcombobox"></a>CFileDialog::AddComboBox  
+##  <a name="addcombobox"></a>CFileDialog::AddComboBox  
  대화 상자에 콤보 상자를 추가 합니다.  
   
 ```  
@@ -235,7 +299,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddcontrolitema--cfiledialogaddcontrolitem"></a><a name="addcontrolitem"></a>CFileDialog::AddControlItem  
+##  <a name="addcontrolitem"></a>CFileDialog::AddControlItem  
  대화 상자에서 컨테이너 컨트롤에 항목을 추가 합니다.  
   
 ```  
@@ -257,7 +321,7 @@ HRESULT AddControlItem(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddeditboxa--cfiledialogaddeditbox"></a><a name="addeditbox"></a>CFileDialog::AddEditBox  
+##  <a name="addeditbox"></a>CFileDialog::AddEditBox  
  대화 상자에 입력란을 추가합니다.  
   
 ```  
@@ -275,7 +339,7 @@ HRESULT AddEditBox(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddmenua--cfiledialogaddmenu"></a><a name="addmenu"></a>CFileDialog::AddMenu  
+##  <a name="addmenu"></a>CFileDialog::AddMenu  
  대화 상자에 메뉴를 추가합니다.  
   
 ```  
@@ -293,7 +357,7 @@ HRESULT AddMenu(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddplacea--cfiledialogaddplace"></a><a name="addplace"></a>CFileDialog::AddPlace  
+##  <a name="addplace"></a>CFileDialog::AddPlace  
  목록에 폴더를 열고 항목을 저장 하거나 사용자에 대해 사용할 수 있는 배치를 추가 합니다.  
   
 ```  
@@ -319,7 +383,7 @@ void AddPlace(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddpushbuttona--cfiledialogaddpushbutton"></a><a name="addpushbutton"></a>CFileDialog::AddPushButton  
+##  <a name="addpushbutton"></a>CFileDialog::AddPushButton  
  대화 상자에 단추를 추가 합니다.  
   
 ```  
@@ -337,7 +401,7 @@ HRESULT AddPushButton(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddradiobuttonlista--cfiledialogaddradiobuttonlist"></a><a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList  
+##  <a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList  
  대화 상자에 옵션 단추 (라디오 단추) 그룹을 추가합니다.  
   
 ```  
@@ -350,7 +414,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddseparatora--cfiledialogaddseparator"></a><a name="addseparator"></a>CFileDialog::AddSeparator  
+##  <a name="addseparator"></a>CFileDialog::AddSeparator  
  대화 상자에 구분 기호를 추가 합니다.  
   
 ```  
@@ -363,7 +427,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddtexta--cfiledialogaddtext"></a><a name="addtext"></a>CFileDialog::AddText  
+##  <a name="addtext"></a>CFileDialog::AddText  
  대화 상자에 텍스트를 추가합니다.  
   
 ```  
@@ -381,7 +445,7 @@ HRESULT AddText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameapplyofntoshelldialoga--cfiledialogapplyofntoshelldialog"></a><a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog  
+##  <a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog  
  현재 상태를 업데이트 하는 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 에 저장 된 값을 기반으로 `m_ofn` 데이터 구조입니다.  
   
 ```  
@@ -398,7 +462,7 @@ void ApplyOFNToShellDialog();
 ### <a name="example"></a>예제  
   예를 참조 [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)합니다.  
   
-##  <a name="a-namecfiledialoga--cfiledialogcfiledialog"></a><a name="cfiledialog"></a>CFileDialog::CFileDialog  
+##  <a name="cfiledialog"></a>CFileDialog::CFileDialog  
  표준 Windows 파일 대화 상자를 생성 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -466,7 +530,7 @@ explicit CFileDialog(
 ### <a name="example"></a>예제  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
-##  <a name="a-namedomodala--cfiledialogdomodal"></a><a name="domodal"></a>CFileDialog::DoModal  
+##  <a name="domodal"></a>CFileDialog::DoModal  
  Windows 공용 파일 대화 상자를 표시 하 고 사용자 파일 및 디렉터리를 검색 하 고 파일 이름을 입력 하도록 허용 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -490,7 +554,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&25;](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]  
   
-##  <a name="a-nameenableopendropdowna--cfiledialogenableopendropdown"></a><a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown  
+##  <a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown  
  드롭다운 목록을 열기 또는 저장 대화 상자에서 단추를 수 있습니다.  
   
 ```  
@@ -503,7 +567,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameendvisualgroupa--cfiledialogendvisualgroup"></a><a name="endvisualgroup"></a>CFileDialog::EndVisualGroup  
+##  <a name="endvisualgroup"></a>CFileDialog::EndVisualGroup  
  요소를 시각적 그룹 대화 상자에서 추가 중지합니다.  
   
 ```  
@@ -515,7 +579,7 @@ HRESULT EndVisualGroup();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcheckbuttonstatea--cfiledialoggetcheckbuttonstate"></a><a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState  
+##  <a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState  
  대화 상자에서 확인 단추 (확인란)의 현재 상태를 검색합니다.  
   
 ```  
@@ -533,7 +597,7 @@ HRESULT GetCheckButtonState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcontrolitemstatea--cfiledialoggetcontrolitemstate"></a><a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState  
+##  <a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState  
  대화 상자에는 컨테이너 컨트롤에 있는 항목의 현재 상태를 검색 합니다.  
   
 ```  
@@ -555,7 +619,7 @@ HRESULT GetControlItemState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcontrolstatea--cfiledialoggetcontrolstate"></a><a name="getcontrolstate"></a>CFileDialog::GetControlState  
+##  <a name="getcontrolstate"></a>CFileDialog::GetControlState  
  현재 표시 여부를 검색 하 고 지정된 된 컨트롤의 상태를 사용 하도록 설정 합니다.  
   
 ```  
@@ -573,7 +637,7 @@ HRESULT GetControlState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegeteditboxtexta--cfiledialoggeteditboxtext"></a><a name="geteditboxtext"></a>CFileDialog::GetEditBoxText  
+##  <a name="geteditboxtext"></a>CFileDialog::GetEditBoxText  
  편집 상자 컨트롤에서 현재 텍스트를 검색합니다.  
   
 ```  
@@ -591,7 +655,7 @@ HRESULT GetEditBoxText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetfileexta--cfiledialoggetfileext"></a><a name="getfileext"></a>CFileDialog::GetFileExt  
+##  <a name="getfileext"></a>CFileDialog::GetFileExt  
  대화 상자에 입력 한 파일 이름 확장명을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -606,7 +670,7 @@ CString GetFileExt() const;
   
  경우 `m_ofn.Flags` 에 `OFN_ALLOWMULTISELECT` 플래그가 설정,이 문자열에 포함 되는 null로 끝나는 문자열을 선택 하는 파일 그룹의 디렉터리 경로 되 고 첫 번째 문자열의 시퀀스가 포함 된 사용자가 선택한 모든 파일의 이름입니다. 파일 경로 검색 하려면는 [GetStartPosition](#getstartposition) 및 [GetNextPathName](#getnextpathname) 멤버 함수입니다.  
   
-##  <a name="a-namegetfilenamea--cfiledialoggetfilename"></a><a name="getfilename"></a>CFileDialog::GetFileName  
+##  <a name="getfilename"></a>CFileDialog::GetFileName  
  대화 상자에 입력 한 파일의 이름을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -621,7 +685,7 @@ CString GetFileName() const;
   
  경우 `m_ofn.Flags` 에 `OFN_ALLOWMULTISELECT` 플래그를 호출 해야 [GetStartPosition](#getstartposition) 및 [GetNextPathName](#getnextpathname) 파일 경로 검색 하 합니다.  
   
-##  <a name="a-namegetfiletitlea--cfiledialoggetfiletitle"></a><a name="getfiletitle"></a>CFileDialog::GetFileTitle  
+##  <a name="getfiletitle"></a>CFileDialog::GetFileTitle  
  대화 상자에 입력 한 파일의 제목을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -639,7 +703,7 @@ CString GetFileTitle() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
-##  <a name="a-namegetfolderpatha--cfiledialoggetfolderpath"></a><a name="getfolderpath"></a>CFileDialog::GetFolderPath  
+##  <a name="getfolderpath"></a>CFileDialog::GetFolderPath  
  현재 열려 있는 폴더 또는 탐색기 스타일 열기] 또는 [다른 이름으로 저장 일반 대화 상자에 대 한 디렉터리의 경로 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -654,7 +718,7 @@ CString GetFolderPath() const;
   
  대화 상자를 표시 하는 동안에이 메서드를 호출할 수 있습니다. 대화 상자가 닫힌 후이 함수를 더 이상 작동 하 고 메서드는 어설션을 함께 실패 합니다.  
   
-##  <a name="a-namegetifiledialogcustomizea--cfiledialoggetifiledialogcustomize"></a><a name="getifiledialogcustomize"></a>CFileDialog::GetIFileDialogCustomize  
+##  <a name="getifiledialogcustomize"></a>CFileDialog::GetIFileDialogCustomize  
  내부 COM 개체에 대 한 포인터를 검색 한 주어진 [CFileDialog](../../mfc/reference/cfiledialog-class.md)합니다.  
   
 ```  
@@ -674,7 +738,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
   
  [!code-cpp[NVC_MFC_CFileDialog #&4;](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]  
   
-##  <a name="a-namegetifileopendialoga--cfiledialoggetifileopendialog"></a><a name="getifileopendialog"></a>CFileDialog::GetIFileOpenDialog  
+##  <a name="getifileopendialog"></a>CFileDialog::GetIFileOpenDialog  
  내부 COM 개체에 대 한 포인터를 검색 한 주어진 `CFileDialog`합니다.  
   
 ```  
@@ -694,7 +758,7 @@ IFileOpenDialog* GetIFileOpenDialog();
   
  [!code-cpp[NVC_MFC_CFileDialog #&2;](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]  
   
-##  <a name="a-namegetifilesavedialoga--cfiledialoggetifilesavedialog"></a><a name="getifilesavedialog"></a>CFileDialog::GetIFileSaveDialog  
+##  <a name="getifilesavedialog"></a>CFileDialog::GetIFileSaveDialog  
  내부 COM 개체에 대 한 포인터를 검색 한 주어진 `CFileDialog`합니다.  
   
 ```  
@@ -714,7 +778,7 @@ IFileSaveDialog* GetIFileSaveDialog();
   
  [!code-cpp[NVC_MFC_CFileDialog #&3;](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]  
   
-##  <a name="a-namegetnextpathnamea--cfiledialoggetnextpathname"></a><a name="getnextpathname"></a>CFileDialog::GetNextPathName  
+##  <a name="getnextpathname"></a>CFileDialog::GetNextPathName  
  대화 상자에서 선택한 그룹에서 다음 파일 이름을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -733,7 +797,7 @@ CString GetNextPathName(POSITION& pos) const;
   
  선택 영역을 하나의 파일로 구성 된 경우 해당 파일 이름이 반환 됩니다.  
   
-##  <a name="a-namegetofna--cfiledialoggetofn"></a><a name="getofn"></a>CFileDialog::GetOFN  
+##  <a name="getofn"></a>CFileDialog::GetOFN  
  연결 된 검색 **OPENFILENAME** 구조입니다.  
   
 ```  
@@ -748,7 +812,7 @@ OPENFILENAME& GetOFN();
 ### <a name="remarks"></a>주의  
  이 함수의 두 번째 버전을 사용 하 여 모양의 초기화 하는 **파일 열기** 또는 **다른 이름으로 저장** 하지만으로 표시 되기 전에 생성 한 후 대화 상자는 `DoModal` 멤버 함수입니다. 예를 들어, 설정할 수는 **lpstrTitle** 소속 **m_ofn** 캡션을 하려면 대화 상자를 합니다.  
   
-##  <a name="a-namegetpathnamea--cfiledialoggetpathname"></a><a name="getpathname"></a>CFileDialog::GetPathName  
+##  <a name="getpathname"></a>CFileDialog::GetPathName  
  대화 상자에 입력 한 파일의 전체 경로 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -766,7 +830,7 @@ CString GetPathName() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
-##  <a name="a-namegetreadonlyprefa--cfiledialoggetreadonlypref"></a><a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref  
+##  <a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref  
  Windows 표준 파일 열기 및 파일 이름으로 저장 대화 상자에서 읽기 전용 확인란이 선택 되어 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -782,7 +846,7 @@ BOOL GetReadOnlyPref() const;
 > [!NOTE]
 > [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]스타일 `CFileDialog` 개체는이 함수를 지원 하지 않습니다. 이 함수에 사용 하려고 한 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 스타일 `CFileDialog` 를 발생 시킵니다 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.   
   
-##  <a name="a-namegetresulta--cfiledialoggetresult"></a><a name="getresult"></a>CFileDialog::GetResult  
+##  <a name="getresult"></a>CFileDialog::GetResult  
  사용자 대화 상자에서 수행 하는 항목을 검색 합니다.  
   
 ```  
@@ -794,7 +858,7 @@ IShellItem* GetResult() throw();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetresultsa--cfiledialoggetresults"></a><a name="getresults"></a>CFileDialog::GetResults  
+##  <a name="getresults"></a>CFileDialog::GetResults  
  다중 선택을 허용 하는 대화 상자에서 사용자의 선택 항목을 검색 합니다.  
   
 ```  
@@ -806,7 +870,7 @@ IShellItemArray* GetResults() throw();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetselectedcontrolitema--cfiledialoggetselectedcontrolitem"></a><a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem  
+##  <a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem  
  대화 상자에서 지정 된 컨테이너 컨트롤에서 특정 항목을 검색합니다.  
   
 ```  
@@ -824,7 +888,7 @@ HRESULT GetSelectedControlItem(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetstartpositiona--cfiledialoggetstartposition"></a><a name="getstartposition"></a>CFileDialog::GetStartPosition  
+##  <a name="getstartposition"></a>CFileDialog::GetStartPosition  
  목록에서 첫 번째 파일 경로 이름의 위치를 검색 하려면이 멤버 함수를 호출 하 여 경우 `m_ofn.Flags` 에 `OFN_ALLOWMULTISELECT` 플래그가 설정 합니다.  
   
 ```  
@@ -834,7 +898,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복;에 대해 사용할 수 있는 값 **NULL** 목록이 비어 있는 경우.  
   
-##  <a name="a-namehidecontrola--cfiledialoghidecontrol"></a><a name="hidecontrol"></a>CFileDialog::HideControl  
+##  <a name="hidecontrol"></a>CFileDialog::HideControl  
  탐색기 스타일 열기] 또는 [다른 이름으로 저장 공용 대화 상자에서 지정 된 컨트롤을 숨기려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -848,7 +912,7 @@ void HideControl(int nID);
 ### <a name="remarks"></a>주의  
  대화 상자와 생성 되어 있어야는 **OFN_EXPLORER** 스타일; 그렇지 함수는 어설션이 실패 합니다.  
   
-##  <a name="a-nameispickfoldersmodea--cfiledialogispickfoldersmode"></a><a name="ispickfoldersmode"></a>CFileDialog::IsPickFoldersMode  
+##  <a name="ispickfoldersmode"></a>CFileDialog::IsPickFoldersMode  
  현재 대화 상자에서 폴더 선택 모드 인지 확인 합니다.  
   
 ```  
@@ -860,7 +924,7 @@ BOOL IsPickFoldersMode() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemofna--cfiledialogmofn"></a><a name="m_ofn"></a>CFileDialog::m_ofn  
+##  <a name="m_ofn"></a>CFileDialog::m_ofn  
  `m_ofn`형식의 구조는 `OPENFILENAME`합니다. 이 구조에 있는 데이터의 현재 상태를 나타내는 `CFileDialog`합니다.  
   
 ### <a name="remarks"></a>주의  
@@ -910,7 +974,7 @@ BOOL IsPickFoldersMode() const;
   
  이 구조에 대 한 자세한 내용은 참조는 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemakeprominenta--cfiledialogmakeprominent"></a><a name="makeprominent"></a>CFileDialog::MakeProminent  
+##  <a name="makeprominent"></a>CFileDialog::MakeProminent  
  위치 대화 상자에서 컨트롤 구별 되도록에 비해 다른 컨트롤입니다.  
   
 ```  
@@ -923,7 +987,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonbuttonclickeda--cfiledialogonbuttonclicked"></a><a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked  
+##  <a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked  
  단추를 클릭할 때 호출 됩니다.  
   
 ```  
@@ -936,7 +1000,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoncheckbuttontoggleda--cfiledialogoncheckbuttontoggled"></a><a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled  
+##  <a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled  
  확인란을 선택 하거나 선택을 취소할 때 호출 됩니다.  
   
 ```  
@@ -954,7 +1018,7 @@ virtual void OnCheckButtonToggled(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoncontrolactivatinga--cfiledialogoncontrolactivating"></a><a name="oncontrolactivating"></a>CFileDialog::OnControlActivating  
+##  <a name="oncontrolactivating"></a>CFileDialog::OnControlActivating  
  컨트롤이 활성화 될 때 호출 됩니다.  
   
 ```  
@@ -967,7 +1031,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonfilenamechangea--cfiledialogonfilenamechange"></a><a name="onfilenamechange"></a>CFileDialog::OnFileNameChange  
+##  <a name="onfilenamechange"></a>CFileDialog::OnFileNameChange  
  이 메서드를 재정의 하 여 처리 하려는 경우는 `WM_NOTIFY``CDN_SELCHANGE` 메시지입니다.  
   
 ```  
@@ -979,7 +1043,7 @@ virtual void OnFileNameChange();
   
  시스템은 OFN_EXPLORER 플래그가 설정 되어 사용 하 여 대화 상자를 만든 경우에이 메시지를 보냅니다. 알림에 대 한 자세한 내용은 참조 [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865)합니다. OFN_EXPLORER 플래그에 대 한 내용은 참조는 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) 구조 및 [열기 및 저장으로 대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms646960)합니다.  
   
-##  <a name="a-nameonfilenameoka--cfiledialogonfilenameok"></a><a name="onfilenameok"></a>CFileDialog::OnFileNameOK  
+##  <a name="onfilenameok"></a>CFileDialog::OnFileNameOK  
  공용 파일 대화 상자에 입력 되는 파일 이름의 사용자 지정 유효성 검사를 제공 하려는 경우에이 함수를 재정의 합니다.  
   
 ```  
@@ -994,7 +1058,7 @@ virtual BOOL OnFileNameOK();
   
  1이 반환 되 면 대화 상자 사용자가 다른 파일 이름을 입력 하는 표시 된 상태로 유지 됩니다. 대화 상자 프로시저는 0을 반환 하는 경우 대화 상자를 해제 합니다. 다른&0;이 아닌 반환 값 현재 예약 되어 있으므로 사용 하지 않아야 합니다.  
   
-##  <a name="a-nameonfolderchangea--cfiledialogonfolderchange"></a><a name="onfolderchange"></a>CFileDialog::OnFolderChange  
+##  <a name="onfolderchange"></a>CFileDialog::OnFolderChange  
  처리 하려면이 함수를 재정의 하는 **WM_NOTIFYCDN_FOLDERCHANGE** 메시지입니다.  
   
 ```  
@@ -1006,7 +1070,7 @@ virtual void OnFolderChange();
   
  대화 상자 OFN_EXPLORER 스타일으로 만들어진 경우에 알림이 전송 됩니다. 알림에 대 한 자세한 내용은 참조 [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859)합니다. OFN_EXPLORER 스타일에 대 한 내용은 참조는 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) 구조 및 [열기 및 저장으로 대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms646960)합니다.  
   
-##  <a name="a-nameoninitdonea--cfiledialogoninitdone"></a><a name="oninitdone"></a>CFileDialog::OnInitDone  
+##  <a name="oninitdone"></a>CFileDialog::OnInitDone  
  처리 하려면이 함수를 재정의 하 여 `WM_NOTIFY``CDN_INITDONE` 메시지입니다.  
   
 ```  
@@ -1021,7 +1085,7 @@ virtual void OnInitDone();
 > [!NOTE]
 > [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]스타일 파일 대화 상자에서이 함수를 지원 하지 않습니다. 이 함수에 사용 하려고 한 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 스타일 파일 대화 상자를 발생 시킵니다 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다. 
   
-##  <a name="a-nameonitemselecteda--cfiledialogonitemselected"></a><a name="onitemselected"></a>CFileDialog::OnItemSelected  
+##  <a name="onitemselected"></a>CFileDialog::OnItemSelected  
  컨테이너 항목을 선택할 때 호출 됩니다.  
   
 ```  
@@ -1039,7 +1103,7 @@ virtual void OnItemSelected(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonlbselchangednotifya--cfiledialogonlbselchangednotify"></a><a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify  
+##  <a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify  
  이 함수는 목록 상자에서 현재 선택한 변경 될 때마다 호출 됩니다.  
   
 ```  
@@ -1070,7 +1134,7 @@ virtual void OnLBSelChangedNotify(
 ### <a name="remarks"></a>주의  
  목록 상자에서 선택이 변경 될 사용자 지정 처리를 제공 하려면이 함수를 재정의 합니다. 예를 들어이 함수를 사용 하 여 액세스 권한을 표시 하려면 또는 날짜-마지막으로 수정한 각 파일의 사용자가 선택 합니다.  
   
-##  <a name="a-nameonshareviolationa--cfiledialogonshareviolation"></a><a name="onshareviolation"></a>CFileDialog::OnShareViolation  
+##  <a name="onshareviolation"></a>CFileDialog::OnShareViolation  
  공유 위반의 사용자 지정 처리를 제공 하려면이 함수를 재정의 합니다.  
   
 ```  
@@ -1095,7 +1159,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
   
  공유 위반 검사가 사용 하지 않도록 설정 하려면 비트 OR 연산자를 사용 하 여 플래그를 결합 **OFN_SHAREAWARE** 와 `m_ofn.Flags`합니다.  
   
-##  <a name="a-nameontypechangea--cfiledialogontypechange"></a><a name="ontypechange"></a>CFileDialog::OnTypeChange  
+##  <a name="ontypechange"></a>CFileDialog::OnTypeChange  
  처리 하려면이 함수를 재정의 하는 **WM_NOTIFYCDN_TYPECHANGE** 메시지입니다.  
   
 ```  
@@ -1107,7 +1171,7 @@ virtual void OnTypeChange();
   
  대화 상자 OFN_EXPLORER 스타일으로 만들어진 경우에 알림이 전송 됩니다. 알림에 대 한 자세한 내용은 참조 [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868)합니다. OFN_EXPLORER 스타일에 대 한 내용은 참조는 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) 구조 및 [열기 및 저장으로 대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms646960)합니다.  
   
-##  <a name="a-nameremovecontrolitema--cfiledialogremovecontrolitem"></a><a name="removecontrolitem"></a>CFileDialog::RemoveControlItem  
+##  <a name="removecontrolitem"></a>CFileDialog::RemoveControlItem  
  대화 상자에서 컨테이너 컨트롤에서 항목을 제거 합니다.  
   
 ```  
@@ -1125,7 +1189,7 @@ HRESULT RemoveControlItem(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcheckbuttonstatea--cfiledialogsetcheckbuttonstate"></a><a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState  
+##  <a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState  
  대화 상자에서 확인 단추 (확인란)의 현재 상태를 설정합니다.  
   
 ```  
@@ -1143,7 +1207,7 @@ HRESULT SetCheckButtonState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcontrolitemstatea--cfiledialogsetcontrolitemstate"></a><a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState  
+##  <a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState  
  대화 상자에는 컨테이너 컨트롤에서 항목의 현재 상태를 설정 합니다.  
   
 ```  
@@ -1165,7 +1229,7 @@ HRESULT SetControlItemState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcontrolitemtexta--cfiledialogsetcontrolitemtext"></a><a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText  
+##  <a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText  
  컨트롤 항목의 텍스트를 설정합니다. 예를 들어, 라디오 단추 또는 메뉴에 항목을 함께 제공 되는 텍스트입니다.  
   
 ```  
@@ -1187,7 +1251,7 @@ HRESULT SetControlItemText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcontrollabela--cfiledialogsetcontrollabel"></a><a name="setcontrollabel"></a>CFileDialog::SetControlLabel  
+##  <a name="setcontrollabel"></a>CFileDialog::SetControlLabel  
  단추 텍스트는 편집 상자 레이블 등의 컨트롤에 연결 된 텍스트를 설정 합니다.  
   
 ```  
@@ -1205,7 +1269,7 @@ HRESULT SetControlLabel(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcontrolstatea--cfiledialogsetcontrolstate"></a><a name="setcontrolstate"></a>CFileDialog::SetControlState  
+##  <a name="setcontrolstate"></a>CFileDialog::SetControlState  
  현재 표시 여부를 설정 하 고 지정된 된 컨트롤의 상태를 사용 하도록 설정 합니다.  
   
 ```  
@@ -1223,7 +1287,7 @@ HRESULT SetControlState(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcontroltexta--cfiledialogsetcontroltext"></a><a name="setcontroltext"></a>CFileDialog::SetControlText  
+##  <a name="setcontroltext"></a>CFileDialog::SetControlText  
  탐색기 스타일에서 지정된 된 컨트롤에 대 한 텍스트를 설정 하려면이 메서드를 호출 **열려** 또는 **이름으로 저장** 대화 상자입니다.  
   
 ```  
@@ -1249,7 +1313,7 @@ void SetControlText(
   
  이 메서드를 사용 하려면 대화 상자 OFN_EXPLORER 스타일으로 만들어야 합니다. 그렇지 않은 경우 함수는 어설션이 실패 합니다.  
   
-##  <a name="a-namesetdefexta--cfiledialogsetdefext"></a><a name="setdefext"></a>CFileDialog::SetDefExt  
+##  <a name="setdefext"></a>CFileDialog::SetDefExt  
  탐색기 스타일 열기] 또는 [다른 이름으로 저장 일반 대화 상자에 대 한 기본 파일 이름 확장명을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1263,7 +1327,7 @@ void SetDefExt(LPCSTR lpsz);
 ### <a name="remarks"></a>주의  
  대화 상자와 생성 되어 있어야는 **OFN_EXPLORER** 스타일; 그렇지 함수는 어설션이 실패 합니다.  
   
-##  <a name="a-nameseteditboxtexta--cfiledialogseteditboxtext"></a><a name="seteditboxtext"></a>CFileDialog::SetEditBoxText  
+##  <a name="seteditboxtext"></a>CFileDialog::SetEditBoxText  
  편집 상자 컨트롤에서 현재 텍스트를 설정합니다.  
   
 ```  
@@ -1281,7 +1345,7 @@ HRESULT SetEditBoxText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpropertiesa--cfiledialogsetproperties"></a><a name="setproperties"></a>CFileDialog::SetProperties  
+##  <a name="setproperties"></a>CFileDialog::SetProperties  
  저장 중인 항목에 사용할 기본값을 정의하는 속성 저장소를 제공합니다.  
   
 ```  
@@ -1294,7 +1358,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetselectedcontrolitema--cfiledialogsetselectedcontrolitem"></a><a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem  
+##  <a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem  
  옵션 단추 그룹 또는 대화 상자에 콤보 상자에서 특정 항목의 선택된 된 상태를 설정 합니다.  
   
 ```  
@@ -1312,7 +1376,7 @@ HRESULT SetSelectedControlItem(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettemplatea--cfiledialogsettemplate"></a><a name="settemplate"></a>CFileDialog::SetTemplate  
+##  <a name="settemplate"></a>CFileDialog::SetTemplate  
  설정에 대 한 대화 상자 템플릿에 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 개체입니다.  
   
 ```  
@@ -1345,7 +1409,7 @@ void SetTemplate(
 > [!NOTE]
 > [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]스타일 파일 대화 상자에서이 함수를 지원 하지 않습니다. 이 함수에 사용 하려고 한 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 스타일 파일 대화 상자를 발생 시킵니다 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다. 대신은 사용자 지정된 대화 상자를 사용 하는 것입니다. 사용자 지정을 사용 하는 방법에 대 한 자세한 내용은 `CFileDialog`, 참조 [있게 해 주는 IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)합니다.  
   
-##  <a name="a-namestartvisualgroupa--cfiledialogstartvisualgroup"></a><a name="startvisualgroup"></a>CFileDialog::StartVisualGroup  
+##  <a name="startvisualgroup"></a>CFileDialog::StartVisualGroup  
  대화 상자에서 시각적 그룹을 선언합니다. 이 그룹에 이러한 요소를 추가 하는 이후에 "add" 메서드를 호출 합니다.  
   
 ```  
@@ -1363,7 +1427,7 @@ HRESULT StartVisualGroup(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameupdateofnfromshelldialoga--cfiledialogupdateofnfromshelldialog"></a><a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog  
+##  <a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog  
  업데이트는 `m_ofn` 의 데이터 구조는 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 내부 개체의 현재 상태에 기반 합니다.  
   
 ```  

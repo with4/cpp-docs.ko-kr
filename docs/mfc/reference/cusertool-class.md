@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CUserTool
+- AFXUSERTOOL/CUserTool
+- AFXUSERTOOL/CUserTool::CopyIconToClipboard
+- AFXUSERTOOL/CUserTool::DrawToolIcon
+- AFXUSERTOOL/CUserTool::GetCommand
+- AFXUSERTOOL/CUserTool::GetCommandId
+- AFXUSERTOOL/CUserTool::Invoke
+- AFXUSERTOOL/CUserTool::Serialize
+- AFXUSERTOOL/CUserTool::SetCommand
+- AFXUSERTOOL/CUserTool::SetToolIcon
+- AFXUSERTOOL/CUserTool::LoadDefaultIcon
+- AFXUSERTOOL/CUserTool::m_strArguments
+- AFXUSERTOOL/CUserTool::m_strInitialDirectory
+- AFXUSERTOOL/CUserTool::m_strLabel
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +106,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxusertool.h  
   
-##  <a name="a-namecopyicontoclipboarda--cusertoolcopyicontoclipboard"></a><a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -104,7 +117,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedrawtoolicona--cusertooldrawtoolicon"></a><a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
  지정된 된 사각형의 가운데에 사용자 도구 아이콘을 그립니다.  
   
 ```  
@@ -120,7 +133,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  아이콘을 표시 하는 영역의 좌표를 지정 합니다.  
   
-##  <a name="a-namegetcommanda--cusertoolgetcommand"></a><a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>CUserTool::GetCommand  
  사용자 도구와 관련 된 명령 텍스트를 포함 하는 문자열을 반환 합니다.  
   
 ```  
@@ -130,7 +143,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조 `CString` 사용자 도구와 관련 된 명령 텍스트를 포함 하는 개체입니다.  
   
-##  <a name="a-namegetcommandida--cusertoolgetcommandid"></a><a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>CUserTool::GetCommandId  
  사용자 도구의 명령 ID를 반환합니다.  
   
 ```  
@@ -140,7 +153,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>반환 값  
  이 사용자 도구의 명령 ID입니다.  
   
-##  <a name="a-nameinvokea--cusertoolinvoke"></a><a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>CUserTool::Invoke  
  사용자 도구와 관련 된 명령을 실행 합니다.  
   
 ```  
@@ -153,7 +166,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>주의  
  호출 [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) 사용자 도구와 관련 된 명령을 실행할 수 있습니다. 이 명령은 비어 있거나 경우 함수가 실패 하면 [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) 실패 합니다.  
   
-##  <a name="a-nameloaddefaulticona--cusertoolloaddefaulticon"></a><a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
  사용자 도구에 대 한 기본 아이콘을 로드합니다.  
   
 ```  
@@ -168,7 +181,7 @@ virtual HICON LoadDefaultIcon();
   
  사용자 고유의 기본 도구 아이콘을 제공 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-namemstrargumentsa--cusertoolmstrarguments"></a><a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
  사용자 도구에 대 한 명령줄 인수입니다.  
   
 ```  
@@ -178,7 +191,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>주의  
  호출할 때이 문자열은 도구에 전달 [CUserTool::Invoke](#invoke) 또는 클릭 한 경우이 도구와 관련 된 명령입니다.  
   
-##  <a name="a-namemstrinitialdirectorya--cusertoolmstrinitialdirectory"></a><a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
  사용자 도구에 대 한 초기 디렉터리를 지정합니다.  
   
 ```  
@@ -188,14 +201,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>주의  
  이 변수를 호출할 때이 도구에서 실행 하는 초기 디렉터리를 지정 합니다. [CUserTool::Invoke](#invoke) 또는 클릭 한 경우이 도구와 관련 된 명령입니다.  
   
-##  <a name="a-namemstrlabela--cusertoolmstrlabel"></a><a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
  이 도구에 대 한 메뉴 항목에 표시 되는 레이블.  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="a-nameserializea--cusertoolserialize"></a><a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +220,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcommanda--cusertoolsetcommand"></a><a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>CUserTool::SetCommand  
  사용자 도구를 실행 하는 응용 프로그램을 설정 합니다.  
   
 ```  
@@ -221,7 +234,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>주의  
  사용자 도구를 실행 하는 새 응용 프로그램을 설정 하려면이 메서드를 호출 합니다. 메서드는 이전 아이콘을 제거 하 고 지정된 된 응용 프로그램에서 새 아이콘을 로드 합니다. 응용 프로그램에서 아이콘을 로드할 수 없는 것, 경우에 사용자 도구에 대 한 기본 아이콘을 호출 하 여 로드 [CUserTool::LoadDefaultIcon](#loaddefaulticon)합니다.  
   
-##  <a name="a-namesettoolicona--cusertoolsettoolicon"></a><a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
  이 도구를 사용 하는 응용 프로그램에서 사용자 도구에 대 한 아이콘을 로드 합니다.  
   
 ```  

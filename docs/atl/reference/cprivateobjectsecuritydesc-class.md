@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrivateObjectSecurityDesc
-- ATL::CPrivateObjectSecurityDesc
 - CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::ConvertToAutoInherit
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-nameconverttoautoinherita--cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  보안 설명자 및 액세스 제어 목록 (Acl)를 상속 가능한 액세스 제어 항목 (Ace)의 자동 전파를 지원할 수 있는 형식으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -117,7 +121,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>주의  
  이 임의 액세스 제어의 Ace 목록 (DACL) 여부를 확인 하려고 하는 메서드 및 현재 보안 설명자의 시스템 액세스 제어 목록 (SACL) 부모 보안 설명자에서 상속 되었습니다. 호출 하 여 [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) 함수입니다.  
   
-##  <a name="a-namecprivateobjectsecuritydesca--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  생성자입니다.  
   
 ```
@@ -127,7 +131,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>주의  
  초기화는 `CPrivateObjectSecurityDesc` 개체입니다.  
   
-##  <a name="a-namedtora--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
  소멸자입니다.  
   
 ```
@@ -137,7 +141,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>주의  
  소멸자는 할당 된 모든 리소스를 해제 하 고 개인 개체의 보안 설명자를 삭제 합니다.  
   
-##  <a name="a-namecreatea--cprivateobjectsecuritydesccreate"></a><a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
  할당 및 자기 상대적 보안 설명자를 호출 하는 리소스 관리자에서 만든 개인 개체를 초기화 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -194,7 +198,7 @@ bool Create(
 > [!NOTE]
 >  자기 상대적 보안 설명자는 인접 한 메모리 블록에 모든 보안 정보를 저장 하는 보안 설명자가입니다.  
   
-##  <a name="a-namegeta--cprivateobjectsecuritydescget"></a><a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
  개인 개체의 보안 설명자에서 정보를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -216,7 +220,7 @@ bool Get(
 ### <a name="remarks"></a>주의  
  보안 설명자는 구조 및 보안 개체에 대 한 보안 정보를 포함 하는 연결 된 데이터.  
   
-##  <a name="a-nameoperatoreqa--cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
  대입 연산자입니다.  
   
 ```
@@ -230,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CPrivateObjectSecurityDesc` 개체입니다.  
   
-##  <a name="a-nameseta--cprivateobjectsecuritydescset"></a><a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
  전용 개체의 보안 설명자를 수정 하려면이 메서드를 호출 합니다.  
   
 ```

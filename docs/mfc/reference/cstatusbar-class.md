@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBar
+- AFXEXT/CStatusBar
+- AFXEXT/CStatusBar::CStatusBar
+- AFXEXT/CStatusBar::CommandToIndex
+- AFXEXT/CStatusBar::Create
+- AFXEXT/CStatusBar::CreateEx
+- AFXEXT/CStatusBar::DrawItem
+- AFXEXT/CStatusBar::GetItemID
+- AFXEXT/CStatusBar::GetItemRect
+- AFXEXT/CStatusBar::GetPaneInfo
+- AFXEXT/CStatusBar::GetPaneStyle
+- AFXEXT/CStatusBar::GetPaneText
+- AFXEXT/CStatusBar::GetStatusBarCtrl
+- AFXEXT/CStatusBar::SetIndicators
+- AFXEXT/CStatusBar::SetPaneInfo
+- AFXEXT/CStatusBar::SetPaneStyle
+- AFXEXT/CStatusBar::SetPaneText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +138,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-namecommandtoindexa--cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  지정 된 ID에 대 한 표시기 인덱스를 가져옵니다.  
   
 ```  
@@ -139,7 +155,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>주의  
  첫 번째 표시기의 인덱스는 0입니다.  
   
-##  <a name="a-namecreatea--cstatusbarcreate"></a><a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>CStatusBar::Create  
  상태 표시줄 (자식 창)을 만들고 사용 하 여 연결 된 `CStatusBar` 개체입니다.  
   
 ```  
@@ -171,7 +187,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>주의  
  또한 초기 글꼴을 설정 하 고 상태를 설정 기본값으로 막대의 높이입니다.  
   
-##  <a name="a-namecreateexa--cstatusbarcreateex"></a><a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>CStatusBar::CreateEx  
  상태 표시줄 (자식 창)을 만들어 사용 하 여 연결 하려면이 함수를 호출 하 여 `CStatusBar` 개체입니다.  
   
 ```  
@@ -209,14 +225,14 @@ virtual BOOL CreateEx(
   
  사용 하 여 `CreateEx`, 대신 [만들기](#create)특정 스타일을 포함 된 상태 표시줄 컨트롤을 만드는 동안 존재 해야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **SBT_TOOLTIPS** 상태 표시줄 개체에서 도구 설명을 표시 하려면.  
   
-##  <a name="a-namecstatusbara--cstatusbarcstatusbar"></a><a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
  생성 된 `CStatusBar` 개체 만듭니다 필요한 경우 기본 상태 표시줄 글꼴 및 글꼴 특성 값을 기본값으로 설정 합니다.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbardrawitem"></a><a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>CStatusBar::DrawItem  
  이 멤버 함수는 소유자가 그린 상태 표시줄 변경의 시각적 측면이 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -230,7 +246,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>주의  
  **itemAction** 의 멤버는 `DRAWITEMSTRUCT` 구조 수행 되는 그리기 작업을 정의 합니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CStatusBar` 개체입니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 인터페이스 (GDI) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수를 종료 하기 전에 합니다.  
   
-##  <a name="a-namegetitemida--cstatusbargetitemid"></a><a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>CStatusBar::GetItemID  
  지정 된 표시기의 ID를 반환 `nIndex`합니다.  
   
 ```  
@@ -244,7 +260,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  지정 된 표시기의 ID `nIndex`합니다.  
   
-##  <a name="a-namegetitemrecta--cstatusbargetitemrect"></a><a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
  복사 하 여 지정 된 표시기의 좌표 `nIndex` 구조를 가리키는 `lpRect`합니다.  
   
 ```  
@@ -263,7 +279,7 @@ void GetItemRect(
 ### <a name="remarks"></a>주의  
  좌표는 상태 표시줄의 왼쪽 위 모퉁이 기준으로 하는 픽셀입니다.  
   
-##  <a name="a-namegetpaneinfoa--cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
  집합 `nID`, `nStyle`, 및 `cxWidth` ID, 스타일 및 지정 된 위치에서 표시기 창의 너비를 `nIndex`합니다.  
   
 ```  
@@ -287,7 +303,7 @@ void GetPaneInfo(
  `cxWidth`  
  창의 너비를 설정 하는 정수에 대 한 참조입니다.  
   
-##  <a name="a-namegetpanestylea--cstatusbargetpanestyle"></a><a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
  상태 표시줄의 창 스타일을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -306,7 +322,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  상태 표시줄에 사용할 수 있는 스타일의 목록은 참조 하십시오. [만들기](#create)합니다.  
   
-##  <a name="a-namegetpanetexta--cstatusbargetpanetext"></a><a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
  상태 표시줄 창에 표시 되는 텍스트를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

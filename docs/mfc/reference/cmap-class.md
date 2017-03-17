@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMap
+- AFXTEMPL/CMap
+- AFXTEMPL/CMap::CPair
+- AFXTEMPL/CMap::CMap
+- AFXTEMPL/CMap::GetCount
+- AFXTEMPL/CMap::GetHashTableSize
+- AFXTEMPL/CMap::GetNextAssoc
+- AFXTEMPL/CMap::GetSize
+- AFXTEMPL/CMap::GetStartPosition
+- AFXTEMPL/CMap::InitHashTable
+- AFXTEMPL/CMap::IsEmpty
+- AFXTEMPL/CMap::Lookup
+- AFXTEMPL/CMap::PGetFirstAssoc
+- AFXTEMPL/CMap::PGetNextAssoc
+- AFXTEMPL/CMap::PLookup
+- AFXTEMPL/CMap::RemoveAll
+- AFXTEMPL/CMap::RemoveKey
+- AFXTEMPL/CMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +142,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="a-namecmapa--cmapcmap"></a><a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>CMap::CMap  
  빈 맵을 생성합니다.  
   
 ```  
@@ -142,7 +159,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&56;](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="a-namecpaira--cmapcpair"></a><a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>CMap::CPair  
  키 값과 연결된 된 개체의 값을 포함합니다.  
   
 ### <a name="remarks"></a>주의  
@@ -159,7 +176,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>예제  
  사용의 예에 대 한 예제를 참조 하십시오. [CMap::PLookup](#plookup)합니다.  
   
-##  <a name="a-namegetcounta--cmapgetcount"></a><a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>CMap::GetCount  
  Map의 요소 수를 검색 합니다.  
   
 ```  
@@ -172,7 +189,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>예제  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
-##  <a name="a-namegethashtablesizea--cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
  지도 대 한 해시 테이블에 있는 요소의 수를 결정합니다.  
   
 ```  
@@ -185,7 +202,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&57;](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="a-namegetnextassoca--cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
  에 지도 요소를 검색 `rNextPosition`, 그런 다음 업데이트 `rNextPosition` 맵에서 다음 요소를 참조 하 합니다.  
   
 ```  
@@ -219,7 +236,7 @@ void GetNextAssoc(
 ### <a name="example"></a>예제  
  예를 참조 [CMap::SetAt](#setat)합니다.  
   
-##  <a name="a-namegetsizea--cmapgetsize"></a><a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>CMap::GetSize  
  지도 요소 수를 반환합니다.  
   
 ```  
@@ -235,7 +252,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>CMap::GetStartPosition  
  가 반환 하 여 지도 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 `GetNextAssoc` 를 호출 합니다.  
   
 ```  
@@ -251,7 +268,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>예제  
  예를 참조 [CMap::SetAt](#setat)합니다.  
   
-##  <a name="a-nameinithashtablea--cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>CMap::InitHashTable  
  해시 테이블을 초기화합니다.  
   
 ```  
@@ -271,7 +288,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUEÂ);
 ### <a name="example"></a>예제  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
-##  <a name="a-nameisemptya--cmapisempty"></a><a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>CMap::IsEmpty  
  맵이 비어 있는지 여부를 결정 합니다.  
   
 ```  
@@ -284,7 +301,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>예제  
  예를 참조 [CMap::RemoveAll](#removeall)합니다.  
   
-##  <a name="a-namelookupa--cmaplookup"></a><a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>CMap::Lookup  
  지정된 된 키에 매핑된 값을 조회 합니다.  
   
 ```  
@@ -313,7 +330,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-nameoperatorata--cmapoperator--"></a><a name="operator_at"></a>CMap::operator]  
+##  <a name="operator_at"></a>CMap::operator]  
  에 대 한 편리한 대체는 `SetAt` 멤버 함수입니다.  
   
 ```  
@@ -338,7 +355,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>예제  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
-##  <a name="a-namepgetfirstassoca--cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
  Map 개체의 첫 번째 항목을 반환합니다.  
   
 ```  
@@ -354,7 +371,7 @@ const CPair* PGetFirstAssoc() const;Â CPair* PGetFirstAssoc();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&59;](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
  가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
   
 ```  
@@ -376,7 +393,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>예제  
  예를 참조 [CMap::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
-##  <a name="a-nameplookupa--cmapplookup"></a><a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>CMap::PLookup  
  지정된 된 키에 매핑된 값을 찾습니다.  
   
 ```  

@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePropertyPage
+- AFXCTL/COlePropertyPage
+- AFXCTL/COlePropertyPage::COlePropertyPage
+- AFXCTL/COlePropertyPage::GetControlStatus
+- AFXCTL/COlePropertyPage::GetObjectArray
+- AFXCTL/COlePropertyPage::GetPageSite
+- AFXCTL/COlePropertyPage::IgnoreApply
+- AFXCTL/COlePropertyPage::IsModified
+- AFXCTL/COlePropertyPage::OnEditProperty
+- AFXCTL/COlePropertyPage::OnHelp
+- AFXCTL/COlePropertyPage::OnInitDialog
+- AFXCTL/COlePropertyPage::OnObjectsChanged
+- AFXCTL/COlePropertyPage::OnSetPageSite
+- AFXCTL/COlePropertyPage::SetControlStatus
+- AFXCTL/COlePropertyPage::SetDialogResource
+- AFXCTL/COlePropertyPage::SetHelpInfo
+- AFXCTL/COlePropertyPage::SetModifiedFlag
+- AFXCTL/COlePropertyPage::SetPageName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +119,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="a-namecolepropertypagea--colepropertypagecolepropertypage"></a><a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
+##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
  `COlePropertyPage` 개체를 생성합니다.  
   
 ```  
@@ -121,7 +138,7 @@ COlePropertyPage(
 ### <a name="remarks"></a>주의  
  서브 클래스를 구현 하는 경우 `COlePropertyPage`, 하위 클래스의 생성자를 사용 해야는 `COlePropertyPage` 에 대화 상자 템플릿 리소스를 식별 하는 생성자의 속성 페이지의 기반을 둔 및 캡션을 포함 하는 문자열 리소스입니다.  
   
-##  <a name="a-namegetcontrolstatusa--colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
+##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
  지정 된 리소스 ID 가진 속성 페이지 컨트롤의 값이 수정 되었는지 여부를 결정 합니다.  
   
 ```  
@@ -135,7 +152,7 @@ BOOL GetControlStatus(UINT nID);
 ### <a name="return-value"></a>반환 값  
  **True 이면** 수정 하 고, 그렇지 않으면 컨트롤 값이 되었으면 **FALSE**합니다.  
   
-##  <a name="a-namegetobjectarraya--colepropertypagegetobjectarray"></a><a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
+##  <a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
  속성 페이지에서 편집 중인 개체의 배열을 반환 합니다.  
   
 ```  
@@ -152,7 +169,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ### <a name="remarks"></a>주의  
  각 속성 페이지 개체에 대 한 포인터의 배열을 유지는 `IDispatch` 페이지에서 편집 중인 개체의 인터페이스입니다. 이 함수는 설정의 `pnObjects` 해당 배열에 있는 요소의 수에 대 한 인수 배열의 첫 번째 요소에 대 한 포인터를 반환 합니다.  
   
-##  <a name="a-namegetpagesitea--colepropertypagegetpagesite"></a><a name="getpagesite"></a>COlePropertyPage::GetPageSite  
+##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
  속성 페이지에 대 한 포인터를 가져옵니다 `IPropertyPageSite` 인터페이스입니다.  
   
 ```  
@@ -165,7 +182,7 @@ LPPROPERTYPAGESITE GetPageSite();
 ### <a name="remarks"></a>주의  
  컨트롤과 컨테이너의 사용자가 찾아 컨트롤 속성을 편집할 수 있도록 협력 합니다. 제어 되는 각각 사용자 속성의 관련된 집합을 편집할 수 있도록 하는 OLE 개체의 속성 페이지를 제공 합니다. 컨테이너의 속성 페이지를 표시 하는 속성 프레임을 제공 합니다. 각 페이지에 대 한 속성 프레임 제공을 지원 하는 페이지 사이트는 `IPropertyPageSite` 인터페이스입니다.  
   
-##  <a name="a-nameignoreapplya--colepropertypageignoreapply"></a><a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
+##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
  컨트롤 [적용] 단추를 사용 하지 않는 것을 결정 합니다.  
   
 ```  
@@ -179,7 +196,7 @@ void IgnoreApply(UINT nID);
 ### <a name="remarks"></a>주의  
  속성 페이지의 적용 단추 속성 페이지 컨트롤의 값이 변경 되었으면 하는 경우에 활성화 됩니다. 적용 단추를 사용 하 여 해당 값을 변경 하지 않게 하는 컨트롤을 지정 하려면이 함수를 사용 합니다.  
   
-##  <a name="a-nameismodifieda--colepropertypageismodified"></a><a name="ismodified"></a>COlePropertyPage::IsModified  
+##  <a name="ismodified"></a>COlePropertyPage::IsModified  
  사용자 속성 페이지의 값이 모두 변경 되었는지 여부를 결정 합니다.  
   
 ```  
@@ -189,7 +206,7 @@ BOOL IsModified();
 ### <a name="return-value"></a>반환 값  
  **True 이면** 속성 페이지 수정 된 경우.  
   
-##  <a name="a-nameoneditpropertya--colepropertypageoneditproperty"></a><a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
+##  <a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
  프레임 워크는 특정 속성을 편집할 수는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -206,7 +223,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ### <a name="remarks"></a>주의  
  페이지에서 해당 컨트롤에 포커스를 설정 하도록 재정의할 수 있습니다. 기본 구현은 없으며 반환 **FALSE**합니다.  
   
-##  <a name="a-nameonhelpa--colepropertypageonhelp"></a><a name="onhelp"></a>COlePropertyPage::OnHelp  
+##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
  프레임 워크는 사용자가 온라인 도움말을 요청 하는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -223,7 +240,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="remarks"></a>주의  
  속성 페이지는 사용자가 도움말에 액세스할 때 특별 한 조치를 수행 해야 하는 경우 재정의 합니다. 기본 구현은 없으며 반환 **FALSE**, WinHelp를 호출 하는 프레임 워크에 지시 합니다.  
   
-##  <a name="a-nameoninitdialoga--colepropertypageoninitdialog"></a><a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
+##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
  프레임 워크는 속성 페이지 대화 상자 초기화 될 때이 함수를 호출 합니다.  
   
 ```  
@@ -236,7 +253,7 @@ virtual BOOL OnInitDialog();
 ### <a name="remarks"></a>주의  
  대화 상자 초기화 될 때 특별 한 조치가 필요한 경우 재정의 합니다. 기본 구현 호출 하 여 `CDialog::OnInitDialog` 반환 **FALSE**합니다.  
   
-##  <a name="a-nameonobjectschangeda--colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
+##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
  새 속성을 가진 다른 OLE 컨트롤을 선택 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -248,7 +265,7 @@ virtual void OnObjectsChanged();
   
  이 작업에 대 한 알림을 수신 하 고 특별 한 조치를 수행 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameonsetpagesitea--colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a>COlePropertyPage::OnSetPageSite  
+##  <a name="onsetpagesite"></a>COlePropertyPage::OnSetPageSite  
  프레임 워크 속성 프레임 속성 페이지의 페이지 사이트를 제공 하는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -258,7 +275,7 @@ virtual void OnSetPageSite();
 ### <a name="remarks"></a>주의  
  기본 구현에서는 페이지의 캡션을 로드 하 고 대화 상자 리소스에서 페이지의 크기를 결정 하려고 합니다. 속성 페이지 추가 작업;에서 필요로 하는 경우이 함수를 재정의 합니다. 재정의 시 기본 클래스 구현을 호출 해야 합니다.  
   
-##  <a name="a-namesetcontrolstatusa--colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
+##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
  속성 페이지 컨트롤의 상태를 변경 합니다.  
   
 ```  
@@ -280,7 +297,7 @@ BOOL SetControlStatus(
 ### <a name="remarks"></a>주의  
  적용 단추를 선택 하거나 속성 페이지를 닫을 때 속성 페이지 컨트롤의 상태가 변경 되었으면 컨트롤의 속성을 적절 한 값으로 업데이트 됩니다.  
   
-##  <a name="a-namesetdialogresourcea--colepropertypagesetdialogresource"></a><a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
+##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
  속성 페이지 대화 상자 리소스를 설정합니다.  
   
 ```  
@@ -291,7 +308,7 @@ void SetDialogResource(HGLOBAL hDialog);
  *hDialog*  
  속성 페이지 대화 상자 리소스에 대 한 핸들입니다.  
   
-##  <a name="a-namesethelpinfoa--colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
+##  <a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
  도구 설명 정보, 도움말 파일 이름 및 속성 페이지에 대 한 도움말 컨텍스트를 지정합니다.  
   
 ```  
@@ -311,7 +328,7 @@ void SetHelpInfo(
  *dwHelpContext*  
  속성 페이지에 대 한 도움말 컨텍스트입니다.  
   
-##  <a name="a-namesetmodifiedflaga--colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
  속성 페이지 수정 되었는지 여부를 나타냅니다.  
   
 ```  
@@ -322,7 +339,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
  `bModified`  
  속성 페이지의 수정 된 플래그에 대 한 새 값을 지정합니다.  
   
-##  <a name="a-namesetpagenamea--colepropertypagesetpagename"></a><a name="setpagename"></a>COlePropertyPage::SetPageName  
+##  <a name="setpagename"></a>COlePropertyPage::SetPageName  
  속성 프레임은 일반적으로 페이지의 탭에 표시 되는 속성 페이지의 이름을 설정 합니다.  
   
 ```  

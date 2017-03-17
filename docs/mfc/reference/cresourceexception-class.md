@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CResourceException
+- AFXWIN/CResourceException
+- AFXWIN/CResourceException::CResourceException
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CResourceException : public CSimpleException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecresourceexceptiona--cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>CResourceException::CResourceException  
+##  <a name="cresourceexception"></a>CResourceException::CResourceException  
  `CResourceException` 개체를 생성합니다.  
   
 ```  

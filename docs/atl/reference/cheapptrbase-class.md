@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrBase
-- ATL::CHeapPtrBase
 - CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase::AllocateBytes
+- ATLCORE/ATL::CHeapPtrBase::Attach
+- ATLCORE/ATL::CHeapPtrBase::Detach
+- ATLCORE/ATL::CHeapPtrBase::Free
+- ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
+- ATLCORE/ATL::CHeapPtrBase::m_pData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +105,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameallocatebytesa--cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
  메모리를 할당 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -117,7 +122,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>주의  
  디버그 빌드에서 어설션 오류는 경우에 [CHeapPtrBase::m_pData](#m_pdata) 멤버 변수는 현재 기존 값을 가리킵니다; 즉,가 아닌 NULL로 합니다.  
   
-##  <a name="a-nameattacha--cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>CHeapPtrBase::Attach  
  이 메서드는 기존 포인터의 소유권을 호출 합니다.  
   
 ```
@@ -133,7 +138,7 @@ void Attach(T* pData) throw();
   
  디버그 빌드에서 어설션 오류는 경우에 [CHeapPtrBase::m_pData](#m_pdata) 멤버 변수는 현재 기존 값을 가리킵니다; 즉,가 아닌 NULL로 합니다.  
   
-##  <a name="a-namedtora--cheapptrbasecheapptrbase"></a><a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
  소멸자입니다.  
   
 ```
@@ -143,7 +148,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="a-namedetacha--cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>CHeapPtrBase::Detach  
  포인터의 소유권을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -156,7 +161,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>주의  
  포인터의 소유권을 해제, 설정 된 [CHeapPtrBase::m_pData](#m_pdata) 멤버 변수를 NULL, 포인터의 복사본을 반환 합니다.  
   
-##  <a name="a-namefreea--cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>CHeapPtrBase::Free  
  가 가리키는 개체를 삭제 하려면이 메서드를 호출 하는 `CHeapPtrBase`합니다.  
   
 ```
@@ -166,7 +171,7 @@ void Free() throw();
 ### <a name="remarks"></a>주의  
  가 가리키는 개체는 `CHeapPtrBase` 해제 되 면 및 [CHeapPtrBase::m_pData](#m_pdata) 멤버 변수는 NULL로 설정 됩니다.  
   
-##  <a name="a-namempdataa--cheapptrbasempdata"></a><a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
  포인터 데이터 멤버 변수입니다.  
   
 ```
@@ -176,7 +181,7 @@ T* m_pData;
 ### <a name="remarks"></a>주의  
  이 멤버 변수는 포인터 정보를 보유합니다.  
   
-##  <a name="a-nameoperatorampa--cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
  연산자 < /.  
   
 ```
@@ -187,7 +192,7 @@ T** operator&() throw();
  가 가리키는 개체의 주소를 반환 하는 `CHeapPtrBase` 개체입니다.  
   
 
-##  <a name="a-nameoperatorptra--cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
 
  멤버 포인터 연산자입니다.  
   
@@ -201,7 +206,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>주의  
  이 연산자를 사용 하 여 가리키는 클래스에서 메서드를 호출 하는 `CHeapPtrBase` 개체입니다. 디버그 빌드에서 어설션 오류는 경우에 `CHeapPtrBase` NULL을 가리킵니다.  
   
-##  <a name="a-nameoperatortstara--cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
  캐스트 연산자입니다.  
   
 ```  
@@ -211,7 +216,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>주의  
  반환 [CHeapPtrBase::m_pData](#m_pdata)합니다.  
   
-##  <a name="a-namereallocatebytesa--cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
  메모리를 다시 할당 하려면이 메서드를 호출 합니다.  
   
 ```

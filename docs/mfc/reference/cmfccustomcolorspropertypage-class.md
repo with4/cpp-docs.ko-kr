@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCustomColorsPropertyPage
+- AFXCUSTOMCOLORSPROPERTYPAGE/CMFCCustomColorsPropertyPage
+- AFXCUSTOMCOLORSPROPERTYPAGE/CMFCCustomColorsPropertyPage::Setup
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcustomcolorspropertypage.h  
   
-##  <a name="a-namesetupa--cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
+##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
  속성 페이지의 색 구성 요소로 설정합니다.  
   
 ```  

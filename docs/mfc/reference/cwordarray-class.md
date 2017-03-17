@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWordArray
+- AFXCOLL/CWordArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +133,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>ICommandSource 인터페이스  
+##  <a name="icommandsource_interface"></a>ICommandSource 인터페이스  
  사용자 정의 컨트롤에 명령 원본 개체에서 보낸 명령만 관리 합니다.  
   
 ```  
@@ -128,7 +147,7 @@ interface class ICommandSource
   
  Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
  명령 원본 개체에 명령 처리기를 추가합니다.  
   
 ```  
@@ -149,7 +168,7 @@ void AddCommandHandler(
   
  참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `AddCommandHandler`합니다.  
   
-##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
  명령 원본 개체에 명령 처리기의 그룹을 추가합니다.  
   
 ```  
@@ -172,7 +191,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>주의  
  이 메서드는 단일 메시지 처리기를 명령 Id의 연속 된 범위에 매핑하 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 여러 단추 그룹을 처리 하기 위해 사용 됩니다.  
   
-##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
  명령 원본 개체에 사용자 인터페이스 명령 메시지 처리기의 그룹을 추가합니다.  
   
 ```  
@@ -195,7 +214,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>주의  
  이 메서드는 단일 사용자 인터페이스 명령 메시지 처리기를 명령 Id의 연속 된 범위를 매핑합니다 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 여러 단추 그룹을 처리 하기 위해 사용 됩니다.  
   
-##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
  명령 원본 개체에는 사용자 인터페이스 명령 메시지 처리기를 추가합니다.  
   
 ```  
@@ -214,7 +233,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>주의  
  이 메서드는 사용자 인터페이스 명령 메시지 처리기 추가 `cmdHandler` 명령 원본 개체에 매핑되고 처리기를 `cmdID`합니다.  
   
-##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>ICommandSource::PostCommand  
  처리 하기를 기다리지 않고 메시지를 게시 합니다.  
   
 ```  
@@ -228,7 +247,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>주의  
  이 메서드는 비동기적으로 메시지에 지정 된 ID에 매핑된 게시 `command`합니다. 호출 [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) 에 해당 창에서 메시지를 처리할 때까지 기다리지 않고 창의 메시지 큐와 돌아올에 메시지를 저장 합니다.  
   
-##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
  명령 원본 개체에서 명령 처리기를 제거합니다.  
   
 ```  
@@ -242,7 +261,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>주의  
  이 메서드는에 매핑된 명령 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
   
-##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
  명령 원본 개체에서 명령 처리기의 그룹을 제거합니다.  
   
 ```  
@@ -261,7 +280,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>주의  
  이 메서드는 메시지 처리기에서 명령 Id 지정에 매핑된 그룹 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 원본 개체에서.  
   
-##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
  명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기의 그룹을 제거합니다.  
   
 ```  
@@ -280,7 +299,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>주의  
  이 메서드는 사용자 인터페이스 명령 메시지 처리기에서 명령 Id 지정에 매핑된 그룹 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 소스 개체에서입니다.  
   
-##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
  명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기를 제거합니다.  
   
 ```  
@@ -294,7 +313,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>주의  
  이 메서드는에 매핑된 사용자 인터페이스 명령 메시지 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
   
-##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>ICommandSource::SendCommand  
  메시지를 보내고 반환 하기 전에 처리 하기를 기다립니다.  
   
 ```  
@@ -308,7 +327,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>주의  
  이 메서드는 동기적으로 메시지에 지정 된 ID에 매핑된 전송 `command`합니다. 호출 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 를 해당 창 프로시저에서 반환 하기 전에 메시지를 처리할 때 까지는 창의 메시지 큐와 대기에 메시지를 저장 합니다.  
   
-##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>ICommandTarget 인터페이스  
+##  <a name="icommandtarget_interface"></a>ICommandTarget 인터페이스  
  명령 원본 개체에서 명령을 수신 하도록 인터페이스와 함께 사용자 정의 컨트롤을 제공 합니다.  
   
 ```  
@@ -322,7 +341,7 @@ interface class ICommandTarget
   
  Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>ICommandTarget::Initialize  
  명령 대상 개체를 초기화합니다.  
   
 ```  
@@ -338,7 +357,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  이 메서드는 명령 대상 개체를 초기화 하 고 지정 된 명령 원본 개체와 연결 `cmdSource`합니다. 사용자 컨트롤 클래스 구현에서 호출 되어야 합니다. 초기화 시를 등록 해야 명령 처리기 명령 원본 개체를 호출 하 여 [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) 에 `Initialize` 구현 합니다. 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `Initialize` 에이 작업을 수행 합니다.  
   
-##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>ICommandUI 인터페이스  
+##  <a name="icommandui_interface"></a>ICommandUI 인터페이스  
  사용자 인터페이스 명령을 관리합니다.  
   
 ```  
@@ -356,7 +375,7 @@ interface class ICommandUI
   
  MFC의 사용자 인터페이스 명령을 관리 되는 방법에 대 한 자세한 내용은 참조 하십시오. [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)합니다.  
   
-##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>ICommandUI::Check  
  이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.  
   
 ```  
@@ -372,7 +391,7 @@ property UICheckState Check;
 |1|확인|  
 |2|비활성화 상태 설정|  
   
-##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
  현재 메시지의 처리기는 체인을 계속 하는 명령 라우팅 메커니즘을 알려줍니다.  
   
 ```  
@@ -382,7 +401,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>주의  
  와 함께에서 사용 해야 하는 고급 멤버 함수는 [ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e) 반환 하는 처리기 `FALSE`합니다. 자세한 내용은 기술 참고를 참조 하십시오. [TN006: 메시지 맵](../../mfc/tn006-message-maps.md)합니다.  
   
-##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>ICommandUI::Enabled  
  이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -392,7 +411,7 @@ property bool Enabled;
 ### <a name="remarks"></a>주의  
  이 속성 사용 하거나이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 합니다. 설정 `Enabled` 를 `TRUE` 해당 항목을 사용할 수 있도록 `FALSE` 사용 하지 않도록 합니다.  
   
-##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>ICommandUI::ID  
  가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다는 `ICommandUI` 개체입니다.  
   
 ```  
@@ -402,7 +421,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>주의  
  이 속성 도구 모음 단추, 메뉴 항목의 ID (핸들)를 가져옵니다 또는 기타 사용자 인터페이스 개체를 나타내는 `ICommandUI` 개체입니다.  
   
-##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>ICommandUI::Index  
  가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다는 `ICommandUI` 개체입니다.  
   
 ```  
@@ -412,7 +431,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>주의  
  이 속성 도구 모음 단추, 메뉴 항목의 인덱스 (핸들)를 가져옵니다 또는 기타 사용자 인터페이스 개체를 나타내는 `ICommandUI` 개체입니다.  
   
-##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>ICommandUI::Radio  
  이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.  
   
 ```  
@@ -422,7 +441,7 @@ property bool Radio;
 ### <a name="remarks"></a>주의  
  이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 설정 `Radio` 를 `TRUE` ; 항목을 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>ICommandUI::Text  
  이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정합니다.  
   
 ```  
@@ -432,7 +451,7 @@ property String^ Text;
 ### <a name="remarks"></a>주의  
  이 속성이이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다. 설정 `Text` 텍스트 문자열 핸들에 있습니다.  
   
-##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>IView 인터페이스  
+##  <a name="iview_interface"></a>IView 인터페이스  
  몇 가지 메서드를 구현 하는 [CWinFormsView](../../mfc/reference/cwinformsview-class.md) 사용 하 여 관리 되는 컨트롤에 알림을 보냅니다.  
   
 ```  
@@ -446,7 +465,7 @@ interface class IView
   
  Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>IView::OnActivateView  
  뷰 활성화 되거나 비활성화 때 MFC에서 호출 합니다.  
   
 ```  
@@ -457,14 +476,14 @@ void OnActivateView(bool activate);
  `activate`  
  보기를 새로 있는지 여부를 나타냅니다. 활성화 또는 비활성화 합니다.  
   
-##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
  프레임 워크에서 뷰를 먼저 문서에 연결한 후 전에 호출 처음 표시 되는 보기.  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>IView::OnUpdate  
  문서 보기의 수정 된 후에 MFC에서 호출 됩니다.  
   
 ```  

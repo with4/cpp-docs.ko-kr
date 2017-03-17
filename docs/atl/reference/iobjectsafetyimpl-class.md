@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +100,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namegetinterfacesafetyoptionsa--iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
  현재 개체에 설정 된 보안 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.  
   
 ```
@@ -114,14 +118,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  참조 [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemdwcurrentsafetya--iobjectsafetyimplmdwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  개체의 현재 보안 수준을 저장합니다.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="a-namesetinterfacesafetyoptionsa--iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
  개체에 설정 하 여 스크립팅 또는 초기화에 대 한 안전 하 게는 [m_dwCurrentSafety](#m_dwcurrentsafety) 적절 한 값으로 멤버입니다.  
   
 ```

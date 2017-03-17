@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
-- ATL.CRBMultiMap
-- ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::FindFirstWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextValueWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
+- ATLCOLL/ATL::CRBMultiMap::Insert
+- ATLCOLL/ATL::CRBMultiMap::RemoveKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +112,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namecrbmultimapa--crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
  생성자입니다.  
   
 ```
@@ -126,7 +131,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&85;](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
  소멸자입니다.  
   
 ```
@@ -138,7 +143,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="a-namefindfirstwithkeya--crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
  이 메서드 지정된 된 키를 사용 하 여 첫 번째 요소의 위치를 찾습니다.  
   
 ```
@@ -160,7 +165,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="a-namegetnextvaluewithkeya--crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
  지정된 된 키와 연결 된 값을 가져오려면이 메서드를 호출 하 고 위치 값을 업데이트 합니다.  
   
 ```
@@ -190,7 +195,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="a-namegetnextwithkeya--crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
  지정된 된 키와 연결 된 요소를 가져오는이 메서드를 호출 하 고 위치 값을 업데이트 합니다.  
   
 ```
@@ -217,7 +222,7 @@ CPair* GetNextWithKey(
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="a-nameinserta--crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>CRBMultiMap::Insert  
  지도에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -240,7 +245,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="a-nameremovekeya--crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
  지정된 된 키에 대 한 키/값 요소를 모두 제거 하려면이 메서드를 호출 합니다.  
   
 ```

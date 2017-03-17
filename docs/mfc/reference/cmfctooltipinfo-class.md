@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBalloonTooltip
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBoldLabel
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bRoundedCorners
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bVislManagerTheme
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrBorder
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFill
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFillGradient
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrText
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nGradientAngle
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nMaxDescrWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +102,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtooltipctrl.h  
   
-##  <a name="a-namembballoontooltipa--cmfctooltipinfombballoontooltip"></a><a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
  모든 도구 설명의 표시 스타일을 지정합니다.  
   
 ```  
@@ -98,7 +112,7 @@ BOOL m_bBalloonTooltip;
 ### <a name="remarks"></a>주의  
  `TRUE`도구 설명 풍선 스타일을 사용 함을 나타냅니다 `FALSE` 도구 설명 사각형 스타일을 사용 함을 나타냅니다.  
   
-##  <a name="a-namembboldlabela--cmfctooltipinfombboldlabel"></a><a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
  도구 설명 텍스트의 글꼴을 굵게 있는지 여부를 지정 합니다.  
   
 ```  
@@ -108,7 +122,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 도구 설명 텍스트를 굵은 글꼴로 표시 또는 `FALSE` 굵은 글꼴이 아닌 글꼴 도구 설명 레이블을 표시 합니다.  
   
-##  <a name="a-namembdrawdescriptiona--cmfctooltipinfombdrawdescription"></a><a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
  각 도구 설명을 설명 텍스트를 표시 하는지 여부를 지정 합니다.  
   
 ```  
@@ -118,7 +132,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 설명을 표시 하려면 또는 `FALSE` 숨기려면 설명 합니다. 호출 하 여 도구 설명에 대 한 설명을 지정할 수 있습니다 [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="a-namembdrawicona--cmfctooltipinfombdrawicon"></a><a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
  모든 도구 설명 아이콘을 표시 하는지 여부를 지정 합니다.  
   
 ```  
@@ -128,7 +142,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 각 도구 설명에 아이콘을 표시 하려면 또는 `FALSE` 아이콘이 없는 도구 설명을 표시 합니다.  
   
-##  <a name="a-namembdrawseparatora--cmfctooltipinfombdrawseparator"></a><a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
  각 도구 설명 레이블을 설명 사이 구분 기호에 있는지 여부를 지정 합니다.  
   
 ```  
@@ -138,7 +152,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 도구 설명 레이블 및 설명, 사이 구분 기호를 표시 하려면 또는 `FALSE` 구분 기호 없이 차례로 도구 설명을 표시 합니다.  
   
-##  <a name="a-namembroundedcornersa--cmfctooltipinfombroundedcorners"></a><a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
  모든 도구 설명 모퉁이가 둥근 여부를 지정 합니다.  
   
 ```  
@@ -148,14 +162,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 둥근된 모서리, 도구 설명에 표시 하려면 또는 `FALSE` 사각형 모서리 도구 설명에 표시 합니다.  
   
-##  <a name="a-namemclrbordera--cmfctooltipinfomclrborder"></a><a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
  모든 도구 설명에는 테두리의 색을 지정합니다.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="a-namemclrfilla--cmfctooltipinfomclrfill"></a><a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
  도구 설명 배경 색을 지정합니다.  
   
 ```  
@@ -165,7 +179,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>주의  
  경우 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) 은-1, 도구 설명 배경색은 `m_clrFill`합니다. 그렇지 않으면 `m_clrFill` 그라데이션의 시작 색을 지정 하 고 `m_clrFillGradient` 그라데이션의 끝 색을 지정 합니다. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) 그라데이션의 방향을 결정 합니다.  
   
-##  <a name="a-namemclrfillgradienta--cmfctooltipinfomclrfillgradient"></a><a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
  그라데이션 배경이 도구 설명에 대 한 마지막 색을 지정합니다.  
   
 ```  
@@ -175,14 +189,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>주의  
  경우 `m_clrFillGradient` 은-1는 그라데이션 없음. 그라데이션 색을 초기 붙습니다 그렇지 [CMFCToolTipInfo::m_clrFill](#m_clrfill) 완료 그라데이션 색은에서 지정 하 고 `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) 그라데이션의 방향을 결정 합니다.  
   
-##  <a name="a-namemclrtexta--cmfctooltipinfomclrtext"></a><a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
  모든 도구 설명의 텍스트 색을 지정합니다.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="a-namemngradientanglea--cmfctooltipinfomngradientangle"></a><a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
  도구 설명의 배경에 그라데이션을 그릴 각도 지정 합니다.  
   
 ```  
@@ -194,14 +208,14 @@ int m_nGradientAngle;
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` 그라데이션의 시작 색을 지정 하 고 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` 그라데이션의 끝 색을 지정 합니다. 경우 `m_clrFillGradient` 은-1는 그라데이션 없음.  
   
-##  <a name="a-namemnmaxdescrwidtha--cmfctooltipinfomnmaxdescrwidth"></a><a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
  각 도구 설명에는 표시 되는 설명의 최대 너비를 지정 합니다. 설명 너비 지정된 된 값을 초과 하면 텍스트가 래핑됩니다.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="a-namembvislmanagerthemea--cmfctooltipinfombvislmanagertheme"></a><a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
  응용 프로그램의 시각적 관리자에서 모든 도구 설명의 모양을 제어 하는지 여부를 지정 합니다.  
   
 ```  
@@ -211,7 +225,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>주의  
  경우 `m_bVislManagerTheme` 는 `TRUE`, 새 요청 하는 모든 도구 설명 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) , 화면에 나타나는 모양을 확인 하려면 해당 개체에 값을 사용 하기 전에 응용 프로그램의 시각적 관리자에서. 다른 구성원에 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) 무시 됩니다.  
   
-##  <a name="a-nameoperatoreqa--cmfctooltipinfooperator"></a><a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

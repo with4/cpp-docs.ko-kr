@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlBaseModule
-- ATL.CAtlBaseModule
 - CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::AddResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::GetHInstanceAt
+- ATLCORE/ATL::CAtlBaseModule::GetModuleInstance
+- ATLCORE/ATL::CAtlBaseModule::GetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +95,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameaddresourceinstancea--catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
  저장 된 핸들의 목록에 리소스 인스턴스를 추가합니다.  
   
 ```
@@ -102,7 +109,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>반환 값  
  True를 반환 하는 리소스를 성공적으로 하는 경우 추가 된 false 그렇지 않은 경우입니다.  
   
-##  <a name="a-namecatlbasemodulea--catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  생성자입니다.  
   
 ```
@@ -112,7 +119,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>주의  
  `CAtlBaseModule`를 만듭니다.  
   
-##  <a name="a-namegethinstanceata--catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
  지정 된 리소스 인스턴스에 대 한 핸들을 반환합니다.  
   
 ```
@@ -126,7 +133,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>반환 값  
  해당 리소스 인스턴스가 없는 경우 리소스 인스턴스 또는 NULL로 핸들을 반환 합니다.  
   
-##  <a name="a-namegetmoduleinstancea--catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
  모듈 인스턴스를 반환 된 `CAtlBaseModule` 개체입니다.  
   
 ```
@@ -136,7 +143,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>반환 값  
  모듈 인스턴스를 반환합니다.  
   
-##  <a name="a-namegetresourceinstancea--catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
  리소스 인스턴스를 반환합니다.  
   
 ```
@@ -146,7 +153,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>반환 값  
  리소스 인스턴스를 반환합니다.  
   
-##  <a name="a-namembinitfaileda--catlbasemodulembinitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
  모듈을 초기화 하지 못한 경우를 지정 하는 변수입니다.  
   
 ```
@@ -156,7 +163,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>주의  
  모듈 초기화 true, false 초기화에 실패 한 경우.  
   
-##  <a name="a-nameremoveresourceinstancea--catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
  저장 된 핸들의 목록에서 리소스 인스턴스를 제거합니다.  
   
 ```
@@ -170,7 +177,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 리소스를 제거 되 고, false 하면 true를 반환 합니다.  
   
-##  <a name="a-namesetresourceinstancea--catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
  리소스 인스턴스를 설정 된 `CAtlBaseModule` 개체입니다.  
   
 ```

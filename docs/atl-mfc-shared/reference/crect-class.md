@@ -10,6 +10,31 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRect
+- ATLTYPES/ATL::CRect
+- ATLTYPES/ATL::CRect::CRect
+- ATLTYPES/ATL::CRect::BottomRight
+- ATLTYPES/ATL::CRect::CenterPoint
+- ATLTYPES/ATL::CRect::CopyRect
+- ATLTYPES/ATL::CRect::DeflateRect
+- ATLTYPES/ATL::CRect::EqualRect
+- ATLTYPES/ATL::CRect::Height
+- ATLTYPES/ATL::CRect::InflateRect
+- ATLTYPES/ATL::CRect::IntersectRect
+- ATLTYPES/ATL::CRect::IsRectEmpty
+- ATLTYPES/ATL::CRect::IsRectNull
+- ATLTYPES/ATL::CRect::MoveToX
+- ATLTYPES/ATL::CRect::MoveToXY
+- ATLTYPES/ATL::CRect::MoveToY
+- ATLTYPES/ATL::CRect::NormalizeRect
+- ATLTYPES/ATL::CRect::OffsetRect
+- ATLTYPES/ATL::CRect::PtInRect
+- ATLTYPES/ATL::CRect::SetRect
+- ATLTYPES/ATL::CRect::SetRectEmpty
+- ATLTYPES/ATL::CRect::Size
+- ATLTYPES/ATL::CRect::SubtractRect
+- ATLTYPES/ATL::CRect::TopLeft
+- ATLTYPES/ATL::CRect::UnionRect
+- ATLTYPES/ATL::CRect::Width
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -129,7 +154,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltypes.h  
   
-##  <a name="a-namebottomrighta--crectbottomright"></a><a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>CRect::BottomRight  
  좌표에 대 한 참조로 반환 되는 [CPoint](cpoint-class.md) 개체에 포함 된 `CRect`합니다.  
   
 ```  
@@ -168,7 +193,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="a-namecenterpointa--crectcenterpoint"></a><a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>CRect::CenterPoint 
  계산의 중심점 `CRect` 왼쪽 및 오른쪽 값을 추가 하 고&2;로 하 고 위쪽 및 아래쪽 값을 추가 나누고&2;로 나눈 합니다.  
   
 ```  
@@ -229,7 +254,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="a-namecopyrecta--crectcopyrect"></a><a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>CRect::CopyRect  
  복사본은 `lpSrcRect` 사각형으로 `CRect`합니다.  
   
 ```  
@@ -262,7 +287,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="a-namecrecta--crectcrect"></a><a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>CRect::CRect  
  `CRect` 개체를 생성합니다.  
   
 ```  
@@ -348,7 +373,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="a-namedeflaterecta--crectdeflaterect"></a><a name="deflaterect"></a>CRect::DeflateRect  
+##  <a name="deflaterect"></a>CRect::DeflateRect  
  `DeflateRect`수축 `CRect` 의 측면의 중심을 향해 이동 하 여 합니다.  
   
 ```  
@@ -402,7 +427,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="a-nameequalrecta--crectequalrect"></a><a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>CRect::EqualRect  
  결정 여부 `CRect` 은 지정 된 사각형에과 같습니다.  
   
 ```  
@@ -437,7 +462,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="a-nameheighta--crectheight"></a><a name="height"></a>CRect::Height  
+##  <a name="height"></a>CRect::Height  
  높이 계산 `CRect` 아래쪽 값에서 맨 위에 있는 값을 빼서 합니다.  
   
 ```  
@@ -467,7 +492,7 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="a-nameinflaterecta--crectinflaterect"></a><a name="inflaterect"></a>CRect::InflateRect  
+##  <a name="inflaterect"></a>CRect::InflateRect  
  `InflateRect`팽창 `CRect` 중심 반대쪽의 측면을 이동 하 여 합니다.  
   
 ```  
@@ -516,7 +541,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="a-nameintersectrecta--crectintersectrect"></a><a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>CRect::IntersectRect  
  사용 하면는 `CRect` 두 개의 기존 사각형의 교차 부분으로 동일 합니다.  
   
 ```  
@@ -559,7 +584,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="a-nameisrectemptya--crectisrectempty"></a><a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>CRect::IsRectEmpty  
  결정 여부 `CRect` 비어 있습니다.  
   
 ```  
@@ -590,7 +615,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="a-nameisrectnulla--crectisrectnull"></a><a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>CRect::IsRectNull  
  위쪽, 왼쪽, 아래쪽 있는지 여부를 결정 및의 값이 여기 `CRect` 은 모두 0입니다.  
   
 ```  
@@ -619,7 +644,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="a-namemovetoxa--crectmovetox"></a><a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>CRect::MoveToX  
  사각형을 지정 하 여 절대 x-좌표 이동 하려면이 함수를 호출 *x*합니다.  
   
 ```  
@@ -643,7 +668,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="a-namemovetoxya--crectmovetoxy"></a><a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>CRect::MoveToXY  
  에 절대 x 및 y 좌표가 지정 된 사각형을 이동 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -674,7 +699,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="a-namemovetoya--crectmovetoy"></a><a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>CRect::MoveToY  
  사각형을 지정 하 여 절대 y-좌표 이동 하려면이 함수를 호출 *y*합니다.  
   
 ```  
@@ -698,7 +723,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="a-namenormalizerecta--crectnormalizerect"></a><a name="normalizerect"></a>Crect:: Normalizerect  
+##  <a name="normalizerect"></a>Crect:: Normalizerect  
  정규화 `CRect` 의 높이 너비는 양성 수 있도록 합니다.  
   
 ```  
@@ -724,7 +749,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="a-nameoffsetrecta--crectoffsetrect"></a><a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>CRect::OffsetRect  
  이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -763,7 +788,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="a-nameoperatorlpcrecta--crectoperator-lpcrect-converts-a-crect-to-an-lpcrectmfcreferencedata-types-mfcmd"></a><a name="operator_lpcrect"></a>CRect::operator LPCRECT 변환은 `CRect` 에 [LPCRECT](../../mfc/reference/data-types-mfc.md)합니다.  
+##  <a name="operator_lpcrect"></a>CRect::operator LPCRECT 변환은 `CRect` 에 [LPCRECT](../../mfc/reference/data-types-mfc.md)합니다.  
 
   
 ```  
@@ -774,7 +799,7 @@ operator LPCRECT() const throw();
  Address-of 않아도이 기능을 사용할 때 (**&**) 연산자. 전달 하는 경우이 연산자 자동으로 사용 된 `CRect` 필요로 하는 함수에는 개체는 **LPCRECT**합니다.  
   
 
-##  <a name="a-nameoperatorlprecta--crectoperator-lprect"></a><a name="operator_lprect"></a>LPRECT CRect::operator  
+##  <a name="operator_lprect"></a>LPRECT CRect::operator  
  변환 된 `CRect` 에 [LPRECT](../../mfc/reference/data-types-mfc.md)합니다.  
 
   
@@ -788,7 +813,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CRect::operator LPCRECT](#operator_lpcrect)합니다.  
   
-##  <a name="a-nameoperatoreqa--crectoperator-"></a><a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>CRect::operator =  
  할당 *srcRect* 를 `CRect`합니다.  
   
 ```  
@@ -813,7 +838,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="a-nameoperatoreqeqa--crectoperator-"></a><a name="operator_eq_eq"></a>CRect::operator = =  
+##  <a name="operator_eq_eq"></a>CRect::operator = =  
  결정 여부 `rect` 같으면 `CRect` 의 왼쪽 위 및 오른쪽 아래 모퉁이의 좌표를 비교 하 여 합니다.  
   
 ```  
@@ -855,7 +880,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="a-nameoperatorneqa--crectoperator-"></a><a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>CRect::operator! =  
  결정 여부 `rect` 과 같지 않은 `CRect` 의 왼쪽 위 및 오른쪽 아래 모퉁이의 좌표를 비교 하 여 합니다.  
   
 ```  
@@ -896,7 +921,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="a-nameoperatoraddeqa--crectoperator-"></a><a name="operator_add_eq"></a>CRect::operator + =  
+##  <a name="operator_add_eq"></a>CRect::operator + =  
  처음 두 개의 오버 로드가 이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -935,7 +960,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="a-nameoperator-eqa--crectoperator--"></a><a name="operator_-_eq"></a>-= CRect::operator  
+##  <a name="operator_-_eq"></a>-= CRect::operator  
  처음 두 개의 오버 로드가 이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -974,7 +999,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="a-nameoperatorampeqa--crectoperator-amp"></a><a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
  집합 `CRect` 의 교차점으로 같은 `CRect` 및 `rect`합니다.  
   
 ```  
@@ -994,7 +1019,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>예제  
  예를 참조 [CRect::IntersectRect](#intersectrect)합니다.  
   
-##  <a name="a-nameoperatororeqa--crectoperator-124"></a><a name="operator_or_eq"></a>CRect::operator | =  
+##  <a name="operator_or_eq"></a>CRect::operator | =  
  집합 `CRect` 의 합집합 같지 `CRect` 및 `rect`합니다.  
   
 ```  
@@ -1027,7 +1052,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="a-nameoperatoradda--crectoperator-"></a><a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>CRect::operator +  
  처음 두 개의 오버 로드 반환는 `CRect` 개체 같음 `CRect` 지정 된 오프셋에 의해 치환입니다.  
   
 ```  
@@ -1066,7 +1091,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="a-nameoperator-a--crectoperator--"></a><a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>CRect::operator-  
  처음 두 개의 오버 로드 반환는 `CRect` 개체 같음 `CRect` 지정 된 오프셋에 의해 치환입니다.  
   
 ```  
@@ -1105,7 +1130,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="a-nameoperatorampa--crectoperator-amp"></a><a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>CRect::operator&amp;  
  반환 된 `CRect` 의 교집합 즉 `CRect` 및 *rect2*.  
   
 ```  
@@ -1137,7 +1162,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="a-nameoperatorora--crectoperator-124"></a><a name="operator_or"></a>CRect::operator |  
+##  <a name="operator_or"></a>CRect::operator |  
  반환 된 `CRect` 의 합집합 즉 `CRect` 및 *rect2*합니다.  
   
 ```   
@@ -1175,7 +1200,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="a-nameptinrecta--crectptinrect"></a><a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>CRect::PtInRect  
  지정된 된 지점 내에 있는지 여부를 확인 `CRect`합니다.  
   
 ```   
@@ -1222,7 +1247,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="a-namesetrecta--crectsetrect"></a><a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>CRect::SetRect  
  크기를 설정 `CRect` 지정 된 좌표입니다.  
   
 ```   
@@ -1254,7 +1279,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="a-namesetrectemptya--crectsetrectempty"></a><a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>CRect::SetRectEmpty  
  사용 하면 `CRect` 모든 좌표를&0;으로 설정 하 여 null 사각형입니다.  
   
 ```  
@@ -1270,7 +1295,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="a-namesizea--crectsize"></a><a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>CRect::SIZE 
  `cx` 및 `cy` 멤버의 반환 값의 너비와 높이가 포함 `CRect`합니다.  
   
 ```  
@@ -1293,7 +1318,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="a-namesubtractrecta--crectsubtractrect"></a><a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>CRect::SubtractRect  
  크기를 사용 하면는 **CRect** 의 빼기 같음 `lpRectSrc2` 에서 `lpRectSrc1`합니다.  
   
 ```  
@@ -1355,7 +1380,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="a-nametoplefta--crecttopleft"></a><a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>CRect::TopLeft  
  좌표에 대 한 참조로 반환 되는 [CPoint](cpoint-class.md) 개체에 포함 된 `CRect`합니다.  
   
 ```  
@@ -1372,7 +1397,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CRect::CenterPoint](#centerpoint)합니다.  
   
-##  <a name="a-nameunionrecta--crectunionrect"></a><a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>CRect::UnionRect  
  크기를 사용 하면 `CRect` 같으면 두 소스 사각형의 합집합입니다.  
   
 ```  
@@ -1408,7 +1433,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="a-namewidtha--crectwidth"></a><a name="width"></a>CRect::Width  
+##  <a name="width"></a>CRect::Width  
  폼의 너비를 계산 `CRect` 값 오른쪽에서 왼쪽된 값을 빼서 합니다.  
   
 ```  

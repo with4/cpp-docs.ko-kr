@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonBar.h  
   
-##  <a name="a-namecmfcribbonapplicationbuttona--cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  생성 하 고 초기화는 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) 개체입니다.  
   
 ```  
@@ -101,7 +104,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>주의  
  리본 응용 프로그램 단추에는 응용 프로그램 창의 왼쪽 위 모퉁이에 있는 특수 단추가입니다. 사용자가이 단추를 클릭 하면 응용 프로그램이 일반적으로 일반적인를 포함 하는 메뉴가 열립니다 **파일** 와 같은 명령 **열려**, **저장**, 및 **종료**합니다.  
   
-##  <a name="a-namesetimagea--cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
  응용 프로그램 단추에 이미지를 할당합니다.  
   
 ```  

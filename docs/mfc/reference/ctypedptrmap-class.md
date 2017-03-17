@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  에 지도 요소를 검색 `rNextPosition`, 그런 다음 업데이트 `rNextPosition` 맵에서 다음 요소를 참조 하 합니다.  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  이 인라인 함수를 호출 `BASE_CLASS` **:: GetNextAssoc**합니다.  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`해시 알고리즘을 사용 하 여 정확히 일치 하는 키가 있는 지도 요소를 빠르게 찾을.  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>주의  
  이 인라인 함수를 호출 `BASE_CLASS` **:: 조회**합니다.  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>CTypedPtrMap::operator]  
  이 연산자 (l-value) 대입문의 왼쪽에만 사용할 수 있습니다.  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>주의  
  지정된 된 키와 지도 요소가 이면 새 요소가 만들어집니다. 경우 없습니다 "오른쪽" (r-value)이이 운영자에 해당 하는 지도에서 키를 찾을 수 있습니다 가능성이 있기 때문에 사용 하 여 `Lookup` 요소 검색을 위한 멤버 함수입니다.  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  이 멤버 함수를 호출 `BASE_CLASS` **:: RemoveKey**합니다.  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>주의  
  에 대 한 자세한 설명 부분 참조 [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)합니다.  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  

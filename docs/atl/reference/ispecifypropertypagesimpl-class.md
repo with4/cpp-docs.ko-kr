@@ -10,11 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
-- ATL.ISpecifyPropertyPagesImpl<T>
-- ATL::ISpecifyPropertyPagesImpl
-- ATL::ISpecifyPropertyPagesImpl<T>
-- ATL.ISpecifyPropertyPagesImpl
-- ISpecifyPropertyPagesImpl Class
+- ATLCOM/ATL::ISpecifyPropertyPagesImpl
+- ATLCOM/ATL::ISpecifyPropertyPagesImpl::GetPages
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +85,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetpagesa--ispecifypropertypagesimplgetpages"></a><a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
  배열을 채우는 [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) 개체의 속성 시트에 표시 될 수 있는 속성 페이지에 대 한 clsid가 포함 된 구조입니다.  
   
 ```

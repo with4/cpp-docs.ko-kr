@@ -10,10 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
-- ATL.CDefaultHashTraits<T>
-- ATL::CDefaultHashTraits<T>
-- ATL.CDefaultHashTraits
-- ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +71,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namehasha--cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>CDefaultHashTraits::Hash  
  지정된 된 요소에 대 한 해시 값을 계산 하려면이 함수를 호출 합니다.  
   
 ```

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
+- ATLBASE/ATL::CAutoPtr
+- ATLBASE/ATL::CAutoPtr::CAutoPtr
+- ATLBASE/ATL::CAutoPtr::Attach
+- ATLBASE/ATL::CAutoPtr::Detach
+- ATLBASE/ATL::CAutoPtr::Free
+- ATLBASE/ATL::CAutoPtr::m_p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +110,7 @@ class CAutoPtr
 ## <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&74;](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="a-nameattacha--cautoptrattach"></a><a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>CAutoPtr::Attach  
  이 메서드는 기존 포인터의 소유권을 호출 합니다.  
   
 ```
@@ -123,7 +129,7 @@ void Attach(T* p) throw();
 ### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="a-namecautoptra--cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
  생성자입니다.  
   
 ```
@@ -150,7 +156,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="a-namedtora--cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
  소멸자입니다.  
   
 ```
@@ -160,7 +166,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다. 호출 [CAutoPtr::Free](#free)합니다.  
   
-##  <a name="a-namedetacha--cautoptrdetach"></a><a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>CAutoPtr::Detach  
  포인터의 소유권을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -176,7 +182,7 @@ T* Detach() throw();
 ### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="a-namefreea--cautoptrfree"></a><a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>CAutoPtr::Free  
  가 가리키는 개체를 삭제 하려면이 메서드를 호출 하는 `CAutoPtr`합니다.  
   
 ```
@@ -186,7 +192,7 @@ void Free() throw();
 ### <a name="remarks"></a>주의  
  가 가리키는 개체는 `CAutoPtr` 해제 되 면 및 [CAutoPtr::m_p](#m_p) 데이터 멤버 변수는 NULL로 설정 됩니다.  
   
-##  <a name="a-namempa--cautoptrmp"></a><a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>CAutoPtr::m_p  
  포인터 데이터 멤버 변수입니다.  
   
 ```
@@ -196,7 +202,7 @@ T* m_p;
 ### <a name="remarks"></a>주의  
  이 멤버 변수는 포인터 정보를 보유합니다.  
   
-##  <a name="a-nameoperatoreqa--cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>CAutoPtr::operator =  
  대입 연산자입니다.  
   
 ```
@@ -223,7 +229,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="a-nameoperatorptra--cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
  멤버 포인터 연산자입니다.  
   
 ```
@@ -239,7 +245,7 @@ T* operator->() const throw();
 ### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="a-nameoperatortstara--cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
  캐스트 연산자입니다.  
   
 ```  

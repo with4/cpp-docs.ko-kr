@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::EnableMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetColumnState
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsAscending
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsDialogControl
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::RemoveSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::SetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawItem
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawSortArrow
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnFillBackground
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxheaderctrl.h  
   
-##  <a name="a-namecmfcheaderctrla--cmfcheaderctrlcmfcheaderctrl"></a><a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
  `CMFCHeaderCtrl` 개체를 생성합니다.  
   
 ```  
@@ -121,7 +134,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="a-nameenablemultiplesorta--cmfcheaderctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
  설정 하거나 해제 *여러 열을 정렬* 현재 헤더 컨트롤에 대 한 모드입니다.  
   
 ```  
@@ -135,7 +148,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>주의  
  여러 열 정렬 모드를 사용할지 여부를이 메서드를 사용 합니다. 헤더 컨트롤 여러 열 정렬 모드에 있으면 두 개 이상의 열 정렬에 참여할 수 있습니다.  
   
-##  <a name="a-namegetcolumnstatea--cmfcheaderctrlgetcolumnstate"></a><a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
  열, 정렬 되지 않은 오름차순 또는 내림차순 정렬 하는지 여부를 나타냅니다.  
   
 ```  
@@ -157,7 +170,7 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetsortcolumna--cmfcheaderctrlgetsortcolumn"></a><a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
  헤더 컨트롤에서 첫 번째 정렬 된 열의 인덱스를 검색합니다.  
   
 ```  
@@ -170,7 +183,7 @@ int GetSortColumn() const;
 ### <a name="remarks"></a>주의  
  헤더 컨트롤에 있으면 *여러 열을 정렬* 이 메서드는 어설션을 하 고 사용 하 여 제안 모드가 고 컴파일된 디버그 모드에서 응용 프로그램은 [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) 메서드 대신 합니다. 헤더 컨트롤은 여러 열 정렬 모드에 소매 모드에서 응용 프로그램을 컴파일한 경우이 메서드는-1을 반환 합니다.  
   
-##  <a name="a-nameisascendinga--cmfcheaderctrlisascending"></a><a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
  헤더 컨트롤의 모든 열을 오름차순 정렬 되었는지 여부를 나타냅니다.  
   
 ```  
@@ -183,7 +196,7 @@ BOOL IsAscending() const;
 ### <a name="remarks"></a>주의  
  헤더 컨트롤 항목에 적절 한 정렬 화살표를 표시 하려면이 메서드는 반환 값 사용 됩니다. 사용 하는 [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) 메서드 정렬 순서를 설정 합니다.  
   
-##  <a name="a-nameisdialogcontrola--cmfcheaderctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
  현재 헤더 컨트롤의 부모 창 대화 상자 여부를 나타냅니다.  
   
 ```  
@@ -193,7 +206,7 @@ BOOL IsDialogControl() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`현재 헤더 컨트롤의 부모 창은 대화 상자입니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameismultiplesorta--cmfcheaderctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
  현재 헤더 컨트롤 인지 여부를 나타냅니다 *여러 열을 정렬* 모드입니다.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) 메서드를 사용 하도록 설정 하거나 여러 열 정렬 모드를 사용 하지 않도록 합니다. 헤더 컨트롤 여러 열 정렬 모드에 있으면 두 개 이상의 열 정렬에 참여할 수 있습니다.  
   
-##  <a name="a-nameondrawitema--cmfcheaderctrlondrawitem"></a><a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
  헤더 컨트롤 열 그리기를 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -234,7 +247,7 @@ virtual void OnDrawItem(
  [in] `bIsHighlighted`  
  `TRUE`항목을 그리는 강조 표시 된 상태 이면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameondrawsortarrowa--cmfcheaderctrlondrawsortarrow"></a><a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
  정렬 화살표를 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -250,7 +263,7 @@ virtual void OnDrawSortArrow(
  [in] `rectArrow`  
  정렬 화살표의 경계 사각형입니다.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcheaderctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
  열 머리글 컨트롤의 배경을 채울 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -263,7 +276,7 @@ virtual void OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameremovesortcolumna--cmfcheaderctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
  정렬 열 목록에서 지정된 된 열을 제거합니다.  
   
 ```  
@@ -274,7 +287,7 @@ void RemoveSortColumn(int iColumn);
  [in] `iColumn`  
  제거할 열의&0;부터 시작 하는 인덱스입니다.  
   
-##  <a name="a-namesetsortcolumna--cmfcheaderctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
  헤더 컨트롤의 지정 된 열의 정렬 순서를 설정합니다.  
   
 ```  

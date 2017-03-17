@@ -10,6 +10,85 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTreeCtrl
+- AFXCMN/CTreeCtrl
+- AFXCMN/CTreeCtrl::CTreeCtrl
+- AFXCMN/CTreeCtrl::Create
+- AFXCMN/CTreeCtrl::CreateDragImage
+- AFXCMN/CTreeCtrl::CreateEx
+- AFXCMN/CTreeCtrl::DeleteAllItems
+- AFXCMN/CTreeCtrl::DeleteItem
+- AFXCMN/CTreeCtrl::EditLabel
+- AFXCMN/CTreeCtrl::EndEditLabelNow
+- AFXCMN/CTreeCtrl::EnsureVisible
+- AFXCMN/CTreeCtrl::Expand
+- AFXCMN/CTreeCtrl::GetBkColor
+- AFXCMN/CTreeCtrl::GetCheck
+- AFXCMN/CTreeCtrl::GetChildItem
+- AFXCMN/CTreeCtrl::GetCount
+- AFXCMN/CTreeCtrl::GetDropHilightItem
+- AFXCMN/CTreeCtrl::GetEditControl
+- AFXCMN/CTreeCtrl::GetExtendedStyle
+- AFXCMN/CTreeCtrl::GetFirstVisibleItem
+- AFXCMN/CTreeCtrl::GetImageList
+- AFXCMN/CTreeCtrl::GetIndent
+- AFXCMN/CTreeCtrl::GetInsertMarkColor
+- AFXCMN/CTreeCtrl::GetItem
+- AFXCMN/CTreeCtrl::GetItemData
+- AFXCMN/CTreeCtrl::GetItemExpandedImageIndex
+- AFXCMN/CTreeCtrl::GetItemHeight
+- AFXCMN/CTreeCtrl::GetItemImage
+- AFXCMN/CTreeCtrl::GetItemPartRect
+- AFXCMN/CTreeCtrl::GetItemRect
+- AFXCMN/CTreeCtrl::GetItemState
+- AFXCMN/CTreeCtrl::GetItemStateEx
+- AFXCMN/CTreeCtrl::GetItemText
+- AFXCMN/CTreeCtrl::GetLastVisibleItem
+- AFXCMN/CTreeCtrl::GetLineColor
+- AFXCMN/CTreeCtrl::GetNextItem
+- AFXCMN/CTreeCtrl::GetNextSiblingItem
+- AFXCMN/CTreeCtrl::GetNextVisibleItem
+- AFXCMN/CTreeCtrl::GetParentItem
+- AFXCMN/CTreeCtrl::GetPrevSiblingItem
+- AFXCMN/CTreeCtrl::GetPrevVisibleItem
+- AFXCMN/CTreeCtrl::GetRootItem
+- AFXCMN/CTreeCtrl::GetScrollTime
+- AFXCMN/CTreeCtrl::GetSelectedCount
+- AFXCMN/CTreeCtrl::GetSelectedItem
+- AFXCMN/CTreeCtrl::GetTextColor
+- AFXCMN/CTreeCtrl::GetToolTips
+- AFXCMN/CTreeCtrl::GetVisibleCount
+- AFXCMN/CTreeCtrl::HitTest
+- AFXCMN/CTreeCtrl::InsertItem
+- AFXCMN/CTreeCtrl::ItemHasChildren
+- AFXCMN/CTreeCtrl::MapAccIdToItem
+- AFXCMN/CTreeCtrl::MapItemToAccID
+- AFXCMN/CTreeCtrl::Select
+- AFXCMN/CTreeCtrl::SelectDropTarget
+- AFXCMN/CTreeCtrl::SelectItem
+- AFXCMN/CTreeCtrl::SelectSetFirstVisible
+- AFXCMN/CTreeCtrl::SetAutoscrollInfo
+- AFXCMN/CTreeCtrl::SetBkColor
+- AFXCMN/CTreeCtrl::SetCheck
+- AFXCMN/CTreeCtrl::SetExtendedStyle
+- AFXCMN/CTreeCtrl::SetImageList
+- AFXCMN/CTreeCtrl::SetIndent
+- AFXCMN/CTreeCtrl::SetInsertMark
+- AFXCMN/CTreeCtrl::SetInsertMarkColor
+- AFXCMN/CTreeCtrl::SetItem
+- AFXCMN/CTreeCtrl::SetItemData
+- AFXCMN/CTreeCtrl::SetItemExpandedImageIndex
+- AFXCMN/CTreeCtrl::SetItemHeight
+- AFXCMN/CTreeCtrl::SetItemImage
+- AFXCMN/CTreeCtrl::SetItemState
+- AFXCMN/CTreeCtrl::SetItemStateEx
+- AFXCMN/CTreeCtrl::SetItemText
+- AFXCMN/CTreeCtrl::SetLineColor
+- AFXCMN/CTreeCtrl::SetScrollTime
+- AFXCMN/CTreeCtrl::SetTextColor
+- AFXCMN/CTreeCtrl::SetToolTips
+- AFXCMN/CTreeCtrl::ShowInfoTip
+- AFXCMN/CTreeCtrl::SortChildren
+- AFXCMN/CTreeCtrl::SortChildrenCB
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -168,7 +247,7 @@ class CTreeCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namecreatea--ctreectrlcreate"></a><a name="create"></a>CTreeCtrl::Create  
+##  <a name="create"></a>CTreeCtrl::Create  
  트리 컨트롤을 대화 상자 템플릿에 지정 하는 경우 또는 사용 중인 경우 [CTreeView](../../mfc/reference/ctreeview-class.md), 대화 상자 또는 보기를 만들 때 트리 컨트롤이 자동으로 만들어집니다.  
   
 ```  
@@ -205,7 +284,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&1;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--ctreectrlcreateex"></a><a name="createex"></a>CTreeCtrl::CreateEx  
+##  <a name="createex"></a>CTreeCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CTreeCtrl` 개체입니다.  
   
 ```  
@@ -239,7 +318,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-namecreatedragimagea--ctreectrlcreatedragimage"></a><a name="createdragimage"></a>CTreeCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>CTreeCtrl::CreateDragImage  
  지정된 된 항목에 대 한 끌기 비트맵을 트리 뷰 컨트롤에는 비트맵에 대 한 이미지 목록 및 만든 비트맵 이미지 목록에 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -260,14 +339,14 @@ CImageList* CreateDragImage(HTREEITEM hItem);
   
  [!code-cpp[NVC_MFC_CTreeCtrl #&2;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]  
   
-##  <a name="a-namectreectrla--ctreectrlctreectrl"></a><a name="ctreectrl"></a>CTreeCtrl::CTreeCtrl  
+##  <a name="ctreectrl"></a>CTreeCtrl::CTreeCtrl  
  `CTreeCtrl` 개체를 생성합니다.  
   
 ```  
 CTreeCtrl();
 ```  
   
-##  <a name="a-namedeleteallitemsa--ctreectrldeleteallitems"></a><a name="deleteallitems"></a>CTreeCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>CTreeCtrl::DeleteAllItems  
  트리 뷰 컨트롤에서 모든 항목을 삭제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -280,7 +359,7 @@ BOOL DeleteAllItems();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&3;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]  
   
-##  <a name="a-namedeleteitema--ctreectrldeleteitem"></a><a name="deleteitem"></a>CTreeCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CTreeCtrl::DeleteItem  
  트리 뷰 컨트롤에서 항목을 삭제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -297,7 +376,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&4;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]  
   
-##  <a name="a-nameeditlabela--ctreectrleditlabel"></a><a name="editlabel"></a>CTreeCtrl::EditLabel  
+##  <a name="editlabel"></a>CTreeCtrl::EditLabel  
  지정된 된 항목 텍스트의 내부 편집을 시작 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -317,7 +396,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&5;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]  
   
-##  <a name="a-nameendeditlabelnowa--ctreectrlendeditlabelnow"></a><a name="endeditlabelnow"></a>CTreeCtrl::EndEditLabelNow  
+##  <a name="endeditlabelnow"></a>CTreeCtrl::EndEditLabelNow  
  현재 트리 뷰 컨트롤의 트리 보기 항목의 레이블에 대 한 편집 작업을 완료 했습니다.  
   
 ```  
@@ -336,7 +415,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TVM_ENDEDITLABELNOW](http://msdn.microsoft.com/library/windows/desktop/bb773564) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameensurevisiblea--ctreectrlensurevisible"></a><a name="ensurevisible"></a>CTreeCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CTreeCtrl::EnsureVisible  
  트리 뷰 항목을 표시 되어 있는지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -356,7 +435,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&6;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]  
   
-##  <a name="a-nameexpanda--ctreectrlexpand"></a><a name="expand"></a>CTreeCtrl::Expand  
+##  <a name="expand"></a>CTreeCtrl::Expand  
  지정 된 부모 항목과 연결 하는 경우 자식 항목의 목록을 확장 하거나 축소 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -386,7 +465,7 @@ BOOL Expand(
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::EnsureVisible](#ensurevisible)합니다.  
   
-##  <a name="a-namegetbkcolora--ctreectrlgetbkcolor"></a><a name="getbkcolor"></a>CTreeCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CTreeCtrl::GetBkColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773570)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -399,7 +478,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetTextColor](#settextcolor)합니다.  
   
-##  <a name="a-namegetchecka--ctreectrlgetcheck"></a><a name="getcheck"></a>CTreeCtrl::GetCheck  
+##  <a name="getcheck"></a>CTreeCtrl::GetCheck  
  항목의 선택 상태를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -416,7 +495,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetCheck](#setcheck)합니다.  
   
-##  <a name="a-namegetchilditema--ctreectrlgetchilditem"></a><a name="getchilditem"></a>CTreeCtrl::GetChildItem  
+##  <a name="getchilditem"></a>CTreeCtrl::GetChildItem  
  호출 트리를 검색 하려면이 함수는 항목 보기에 지정 된 항목의 자식인 `hItem`합니다.  
   
 ```  
@@ -433,7 +512,7 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&7;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]  
   
-##  <a name="a-namegetcounta--ctreectrlgetcount"></a><a name="getcount"></a>CTreeCtrl::GetCount  
+##  <a name="getcount"></a>CTreeCtrl::GetCount  
  트리 뷰 컨트롤에 있는 항목의 개수를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -446,7 +525,7 @@ UINT GetCount() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&8;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]  
   
-##  <a name="a-namegetdrophilightitema--ctreectrlgetdrophilightitem"></a><a name="getdrophilightitem"></a>CTreeCtrl::GetDropHilightItem  
+##  <a name="getdrophilightitem"></a>CTreeCtrl::GetDropHilightItem  
  끌어서 놓기 작업의 대상이 되는 항목을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -459,7 +538,7 @@ HTREEITEM GetDropHilightItem() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&9;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="a-namegeteditcontrola--ctreectrlgeteditcontrol"></a><a name="geteditcontrol"></a>CTreeCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>CTreeCtrl::GetEditControl  
  트리 보기 항목의 텍스트를 편집 하는 데 사용 되는 편집 컨트롤의 핸들을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -472,7 +551,7 @@ CEdit* GetEditControl() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&10;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]  
   
-##  <a name="a-namegetextendedstylea--ctreectrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTreeCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CTreeCtrl::GetExtendedStyle  
  현재 트리 뷰 컨트롤을 사용 하는 확장된 스타일을 검색 합니다.  
   
 ```  
@@ -485,7 +564,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TVM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773580) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetfirstvisibleitema--ctreectrlgetfirstvisibleitem"></a><a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem  
+##  <a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem  
  트리 뷰 컨트롤의 표시 되는 첫 번째 항목을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -498,7 +577,7 @@ HTREEITEM GetFirstVisibleItem() const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetCheck](#setcheck)합니다.  
   
-##  <a name="a-namegetimagelista--ctreectrlgetimagelist"></a><a name="getimagelist"></a>CTreeCtrl::GetImageList  
+##  <a name="getimagelist"></a>CTreeCtrl::GetImageList  
  트리 뷰 컨트롤과 연결 된 상태 이미지 목록 또는 보통의 핸들을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -524,7 +603,7 @@ CImageList* GetImageList(UINT nImageList) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&11;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]  
   
-##  <a name="a-namegetindenta--ctreectrlgetindent"></a><a name="getindent"></a>CTreeCtrl::GetIndent  
+##  <a name="getindent"></a>CTreeCtrl::GetIndent  
  크기를 픽셀 단위로 해당 자식 항목에 부모 항목을 기준으로 들여쓰기 됩니다를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -537,7 +616,7 @@ UINT GetIndent() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&12;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]  
   
-##  <a name="a-namegetinsertmarkcolora--ctreectrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773590)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -550,7 +629,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&13;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]  
   
-##  <a name="a-namegetitema--ctreectrlgetitem"></a><a name="getitem"></a>CTreeCtrl::GetItem  
+##  <a name="getitem"></a>CTreeCtrl::GetItem  
  지정 된 트리 뷰 항목의 특성을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -567,7 +646,7 @@ BOOL GetItem(TVITEM* pItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::DeleteItem](#deleteitem)합니다.  
   
-##  <a name="a-namegetitemdataa--ctreectrlgetitemdata"></a><a name="getitemdata"></a>CTreeCtrl::GetItemData  
+##  <a name="getitemdata"></a>CTreeCtrl::GetItemData  
  지정 된 항목과 연결 된 32 비트 응용 프로그램 특정 값을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -584,7 +663,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&14;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]  
   
-##  <a name="a-namegetitemexpandedimageindexa--ctreectrlgetitemexpandedimageindex"></a><a name="getitemexpandedimageindex"></a>CTreeCtrl::GetItemExpandedImageIndex  
+##  <a name="getitemexpandedimageindex"></a>CTreeCtrl::GetItemExpandedImageIndex  
  현재 트리 뷰 컨트롤의 지정된 된 항목 확장된 상태에 있을 때 표시할 이미지의 인덱스를 검색 합니다.  
   
 ```  
@@ -603,7 +682,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 하는 메시지는 [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) 구조는 트리 뷰 컨트롤 항목 및이 메서드를 설명 하는 검색에서 `iExpandedImage` 해당 구조에서 멤버입니다.  
   
-##  <a name="a-namegetitemheighta--ctreectrlgetitemheight"></a><a name="getitemheight"></a>CTreeCtrl::GetItemHeight  
+##  <a name="getitemheight"></a>CTreeCtrl::GetItemHeight  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_GETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773599)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -616,7 +695,7 @@ SHORT GetItemHeight() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&15;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_15.cpp)]  
   
-##  <a name="a-namegetitemimagea--ctreectrlgetitemimage"></a><a name="getitemimage"></a>CTreeCtrl::GetItemImage  
+##  <a name="getitemimage"></a>CTreeCtrl::GetItemImage  
  트리 뷰 컨트롤의 각 항목에는 한 쌍의 관련 된 비트맵 이미지 있을 수 있습니다.  
   
 ```  
@@ -647,7 +726,7 @@ BOOL GetItemImage(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&16;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]  
   
-##  <a name="a-namegetitempartrecta--ctreectrlgetitempartrect"></a><a name="getitempartrect"></a>CTreeCtrl::GetItemPartRect  
+##  <a name="getitempartrect"></a>CTreeCtrl::GetItemPartRect  
  현재 트리 뷰 컨트롤에서 지정된 된 항목의 지정된 된 부분에 대 한 경계 사각형을 검색 합니다.  
   
 ```  
@@ -683,7 +762,7 @@ BOOL GetItemPartRect(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="a-namegetitemrecta--ctreectrlgetitemrect"></a><a name="getitemrect"></a>CTreeCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CTreeCtrl::GetItemRect  
  에 대 한 경계 사각형을 검색 하려면이 함수를 호출 `hItem` 인지 확인 표시 여부 및 합니다.  
   
 ```  
@@ -709,7 +788,7 @@ BOOL GetItemRect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&17;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]  
   
-##  <a name="a-namegetitemstatea--ctreectrlgetitemstate"></a><a name="getitemstate"></a>CTreeCtrl::GetItemState  
+##  <a name="getitemstate"></a>CTreeCtrl::GetItemState  
  지정 된 항목의 상태를 반환 `hItem`합니다.  
   
 ```  
@@ -731,7 +810,7 @@ UINT GetItemState(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&18;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]  
   
-##  <a name="a-namegetitemstateexa--ctreectrlgetitemstateex"></a><a name="getitemstateex"></a>CTreeCtrl::GetItemStateEx  
+##  <a name="getitemstateex"></a>CTreeCtrl::GetItemStateEx  
  현재 트리 뷰 컨트롤에서 지정된 된 항목의 확장 된 상태를 검색합니다.  
   
 ```  
@@ -750,7 +829,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 하는 메시지는 [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) 구조는 트리 뷰 컨트롤 항목 및이 메서드를 설명 하는 검색에서 `uStateEx` 해당 구조에서 멤버입니다.  
   
-##  <a name="a-namegetitemtexta--ctreectrlgetitemtext"></a><a name="getitemtext"></a>CTreeCtrl::GetItemText  
+##  <a name="getitemtext"></a>CTreeCtrl::GetItemText  
  지정 된 항목의 텍스트를 반환 `hItem`합니다.  
   
 ```  
@@ -767,7 +846,7 @@ CString GetItemText(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetNextItem](#getnextitem)합니다.  
   
-##  <a name="a-namegetlastvisibleitema--ctreectrlgetlastvisibleitem"></a><a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisibleItem  
+##  <a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisibleItem  
  현재 트리 뷰 컨트롤에서 마지막 노드를 확장 되지 않은 항목을 검색합니다.  
   
 ```  
@@ -790,7 +869,7 @@ HTREEITEM GetLastVisibleItem() const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&6;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]  
   
-##  <a name="a-namegetlinecolora--ctreectrlgetlinecolor"></a><a name="getlinecolor"></a>CTreeCtrl::GetLineColor  
+##  <a name="getlinecolor"></a>CTreeCtrl::GetLineColor  
  이 멤버 함수는 win32 메시지의 동작을 구현 [TVM_GETLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773619)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -803,7 +882,7 @@ COLORREF GetLineColor() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&19;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]  
   
-##  <a name="a-namegetnextitema--ctreectrlgetnextitem"></a><a name="getnextitem"></a>CTreeCtrl::GetNextItem  
+##  <a name="getnextitem"></a>CTreeCtrl::GetNextItem  
  호출 트리를 검색 하려면이 함수는 항목 보기에 표시 하 여 지정된 된 관계는 `nCode` 매개 변수를 `hItem`합니다.  
   
 ```  
@@ -852,7 +931,7 @@ HTREEITEM GetNextItem(
   
  [!code-cpp[NVC_MFC_CTreeCtrl #&20;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]  
   
-##  <a name="a-namegetnextsiblingitema--ctreectrlgetnextsiblingitem"></a><a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSiblingItem  
+##  <a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSiblingItem  
  다음 형제를 검색 하려면이 함수를 호출 `hItem`합니다.  
   
 ```  
@@ -869,7 +948,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&21;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]  
   
-##  <a name="a-namegetnextvisibleitema--ctreectrlgetnextvisibleitem"></a><a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisibleItem  
+##  <a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisibleItem  
  표시 되는 다음 항목을 검색 하려면이 함수를 호출 `hItem`합니다.  
   
 ```  
@@ -886,7 +965,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetCheck](#setcheck)합니다.  
   
-##  <a name="a-namegetparentitema--ctreectrlgetparentitem"></a><a name="getparentitem"></a>CTreeCtrl::GetParentItem  
+##  <a name="getparentitem"></a>CTreeCtrl::GetParentItem  
  부모를 검색 하려면이 함수를 호출 `hItem`합니다.  
   
 ```  
@@ -906,7 +985,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::EnsureVisible](#ensurevisible)합니다.  
   
-##  <a name="a-namegetprevsiblingitema--ctreectrlgetprevsiblingitem"></a><a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSiblingItem  
+##  <a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSiblingItem  
  이전 형제를 검색 하려면이 함수를 호출 `hItem`합니다.  
   
 ```  
@@ -923,7 +1002,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&22;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]  
   
-##  <a name="a-namegetprevvisibleitema--ctreectrlgetprevvisibleitem"></a><a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevVisibleItem  
+##  <a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevVisibleItem  
  표시 되는 이전 항목을 검색 하려면이 함수를 호출 `hItem`합니다.  
   
 ```  
@@ -940,7 +1019,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl&23;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]  
   
-##  <a name="a-namegetrootitema--ctreectrlgetrootitem"></a><a name="getrootitem"></a>CTreeCtrl::GetRootItem  
+##  <a name="getrootitem"></a>CTreeCtrl::GetRootItem  
  트리 뷰 컨트롤의 루트 항목을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -953,7 +1032,7 @@ HTREEITEM GetRootItem() const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::EditLabel](#editlabel)합니다.  
   
-##  <a name="a-namegetscrolltimea--ctreectrlgetscrolltime"></a><a name="getscrolltime"></a>CTreeCtrl::GetScrollTime  
+##  <a name="getscrolltime"></a>CTreeCtrl::GetScrollTime  
  트리 뷰 컨트롤에 대 한 최대 스크롤 시간을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -966,7 +1045,7 @@ UINT GetScrollTime() const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 win32 메시지의 동작을 구현 [TVM_GETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773625)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetselectedcounta--ctreectrlgetselectedcount"></a><a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount  
  현재 트리 뷰 컨트롤에서 선택한 항목의 수를 가져옵니다.  
   
 ```  
@@ -979,7 +1058,7 @@ UINT GetSelectedCount();
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [TVM_GETSELECTEDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb773629) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetselecteditema--ctreectrlgetselecteditem"></a><a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem  
+##  <a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem  
  트리 뷰 컨트롤의 현재 선택 된 항목을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -992,7 +1071,7 @@ HTREEITEM GetSelectedItem() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&24;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]  
   
-##  <a name="a-namegettextcolora--ctreectrlgettextcolor"></a><a name="gettextcolor"></a>CTreeCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CTreeCtrl::GetTextColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773633)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1005,7 +1084,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetTextColor](#settextcolor)합니다.  
   
-##  <a name="a-namegettooltipsa--ctreectrlgettooltips"></a><a name="gettooltips"></a>CTreeCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CTreeCtrl::GetToolTips  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773729)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1021,7 +1100,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&25;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]  
   
-##  <a name="a-namegetvisiblecounta--ctreectrlgetvisiblecount"></a><a name="getvisiblecount"></a>CTreeCtrl::GetVisibleCount  
+##  <a name="getvisiblecount"></a>CTreeCtrl::GetVisibleCount  
  트리 뷰 컨트롤에 표시 되는 항목의 개수를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1034,7 +1113,7 @@ UINT GetVisibleCount() const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetCheck](#setcheck)합니다.  
   
-##  <a name="a-namehittesta--ctreectrlhittest"></a><a name="hittest"></a>CTreeCtrl::HitTest  
+##  <a name="hittest"></a>CTreeCtrl::HitTest  
  트리 뷰 컨트롤의 클라이언트 영역을 기준으로 지정된 된 지점의 위치를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1081,7 +1160,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&26;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="a-nameinsertitema--ctreectrlinsertitem"></a><a name="insertitem"></a>CTreeCtrl::InsertItem  
+##  <a name="insertitem"></a>CTreeCtrl::InsertItem  
  트리 뷰 컨트롤에 새 항목을 삽입 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1154,7 +1233,7 @@ HTREEITEM InsertItem(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&27;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]  
   
-##  <a name="a-nameitemhaschildrena--ctreectrlitemhaschildren"></a><a name="itemhaschildren"></a>CTreeCtrl::ItemHasChildren  
+##  <a name="itemhaschildren"></a>CTreeCtrl::ItemHasChildren  
  이 함수를 사용 하 여 트리 항목으로 지정 되었는지 여부를 확인 하려면 `hItem` 이 하위 항목입니다.  
   
 ```  
@@ -1174,7 +1253,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetSelectedItem](#getselecteditem)합니다.  
   
-##  <a name="a-namemapaccidtoitema--ctreectrlmapaccidtoitem"></a><a name="mapaccidtoitem"></a>CTreeCtrl::MapAccIdToItem  
+##  <a name="mapaccidtoitem"></a>CTreeCtrl::MapAccIdToItem  
  현재 트리 뷰 컨트롤의 트리 보기 항목의 핸들을 지정 된 내게 필요한 옵션 식별자를 매핑합니다.  
   
 ```  
@@ -1205,7 +1284,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="a-namemapitemtoaccida--ctreectrlmapitemtoaccid"></a><a name="mapitemtoaccid"></a>CTreeCtrl::MapItemToAccID  
+##  <a name="mapitemtoaccid"></a>CTreeCtrl::MapItemToAccID  
  현재 트리 뷰 컨트롤의 트리 보기 항목의 지정된 된 핸들을 내게 필요한 옵션 식별자에 매핑합니다.  
   
 ```  
@@ -1236,7 +1315,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]  
   
-##  <a name="a-nameselecta--ctreectrlselect"></a><a name="select"></a>CTreeCtrl::Select  
+##  <a name="select"></a>CTreeCtrl::Select  
  지정 된 트리 뷰 항목 선택, 항목 보기를 스크롤하여 하거나 끌어서 놓기 작업의 대상을 나타내는 데 사용 되는 스타일에 항목을 다시 그리게이 함수를 호출 합니다.  
   
 ```  
@@ -1267,7 +1346,7 @@ BOOL Select(
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::HitTest](#hittest)합니다.  
   
-##  <a name="a-nameselectdroptargeta--ctreectrlselectdroptarget"></a><a name="selectdroptarget"></a>CTreeCtrl::SelectDropTarget  
+##  <a name="selectdroptarget"></a>CTreeCtrl::SelectDropTarget  
  끌어서 놓기 작업의 대상을 나타내는 데 사용 되는 스타일에 항목을 다시 그리도록 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1284,7 +1363,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&9;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="a-nameselectitema--ctreectrlselectitem"></a><a name="selectitem"></a>CTreeCtrl::SelectItem  
+##  <a name="selectitem"></a>CTreeCtrl::SelectItem  
  지정 된 트리 뷰 항목을 선택 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1304,7 +1383,7 @@ BOOL SelectItem(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&26;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="a-nameselectsetfirstvisiblea--ctreectrlselectsetfirstvisible"></a><a name="selectsetfirstvisible"></a>CTreeCtrl::SelectSetFirstVisible  
+##  <a name="selectsetfirstvisible"></a>CTreeCtrl::SelectSetFirstVisible  
  이 함수는 지정된 된 항목이 표시 되는 첫 번째 항목 트리 뷰를 세로로 스크롤할를 호출 합니다.  
   
 ```  
@@ -1324,7 +1403,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&28;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]  
   
-##  <a name="a-namesetautoscrollinfoa--ctreectrlsetautoscrollinfo"></a><a name="setautoscrollinfo"></a>CTreeCtrl::SetAutoscrollInfo  
+##  <a name="setautoscrollinfo"></a>CTreeCtrl::SetAutoscrollInfo  
  현재 트리 뷰 컨트롤의 자동 스크롤 속도 설정합니다.  
   
 ```  
@@ -1358,7 +1437,7 @@ BOOL SetAutoscrollInfo(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]  
   
-##  <a name="a-namesetbkcolora--ctreectrlsetbkcolor"></a><a name="setbkcolor"></a>CTreeCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CTreeCtrl::SetBkColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773741)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1375,7 +1454,7 @@ COLORREF SetBkColor(COLORREF clr);
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::SetTextColor](#settextcolor)합니다.  
   
-##  <a name="a-namesetchecka--ctreectrlsetcheck"></a><a name="setcheck"></a>CTreeCtrl::SetCheck  
+##  <a name="setcheck"></a>CTreeCtrl::SetCheck  
  트리 컨트롤 항목의 선택 상태를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1405,7 +1484,7 @@ BOOL SetCheck(
   
  [!code-cpp[NVC_MFC_CTreeCtrl #&30;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]  
   
-##  <a name="a-namesetextendedstylea--ctreectrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTreeCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CTreeCtrl::SetExtendedStyle  
  현재 트리 뷰 컨트롤에 대 한 확장된 스타일을 설정합니다.  
   
 ```  
@@ -1439,7 +1518,7 @@ DWORD SetExtendedStyle(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]  
   
-##  <a name="a-namesetimagelista--ctreectrlsetimagelist"></a><a name="setimagelist"></a>CTreeCtrl::SetImageList  
+##  <a name="setimagelist"></a>CTreeCtrl::SetImageList  
  일반 설정 하려면이 함수를 호출 하거나 트리에 대 한 상태 이미지 목록 컨트롤을 보기 및 새 이미지를 사용 하 여 컨트롤을 다시 그리도록 합니다.  
   
 ```  
@@ -1465,7 +1544,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetImageList](#getimagelist)합니다.  
   
-##  <a name="a-namesetindenta--ctreectrlsetindent"></a><a name="setindent"></a>CTreeCtrl::SetIndent  
+##  <a name="setindent"></a>CTreeCtrl::SetIndent  
  트리 뷰 컨트롤에 대 한 들여쓰기의 너비를 설정 하 고 새 너비에 맞게 컨트롤을 다시 그리도록 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1479,7 +1558,7 @@ void SetIndent(UINT nIndent);
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetIndent](#getindent)합니다.  
   
-##  <a name="a-namesetinsertmarka--ctreectrlsetinsertmark"></a><a name="setinsertmark"></a>CTreeCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>CTreeCtrl::SetInsertMark  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb773753)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1501,7 +1580,7 @@ BOOL SetInsertMark(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&31;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]  
   
-##  <a name="a-namesetinsertmarkcolora--ctreectrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CTreeCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>CTreeCtrl::SetInsertMarkColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773755)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1518,7 +1597,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)합니다.  
   
-##  <a name="a-namesetitema--ctreectrlsetitem"></a><a name="setitem"></a>CTreeCtrl::SetItem  
+##  <a name="setitem"></a>CTreeCtrl::SetItem  
  지정 된 트리 뷰 항목의 특성을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1575,7 +1654,7 @@ BOOL SetItem(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&32;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]  
   
-##  <a name="a-namesetitemdataa--ctreectrlsetitemdata"></a><a name="setitemdata"></a>CTreeCtrl::SetItemData  
+##  <a name="setitemdata"></a>CTreeCtrl::SetItemData  
  지정 된 항목과 연결 된 32 비트 응용 프로그램 특정 값을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1597,7 +1676,7 @@ BOOL SetItemData(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&33;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]  
   
-##  <a name="a-namesetitemexpandedimageindexa--ctreectrlsetitemexpandedimageindex"></a><a name="setitemexpandedimageindex"></a>CTreeCtrl::SetItemExpandedImageIndex  
+##  <a name="setitemexpandedimageindex"></a>CTreeCtrl::SetItemExpandedImageIndex  
  현재 트리 뷰 컨트롤의 지정된 된 항목 확장된 상태에 있을 때 표시할 이미지의 인덱스를 설정 합니다.  
   
 ```  
@@ -1629,7 +1708,7 @@ BOOL SetItemExpandedImageIndex(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&8;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]  
   
-##  <a name="a-namesetitemheighta--ctreectrlsetitemheight"></a><a name="setitemheight"></a>CTreeCtrl::SetItemHeight  
+##  <a name="setitemheight"></a>CTreeCtrl::SetItemHeight  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773761)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1646,7 +1725,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetItemHeight](#getitemheight)합니다.  
   
-##  <a name="a-namesetitemimagea--ctreectrlsetitemimage"></a><a name="setitemimage"></a>CTreeCtrl::SetItemImage  
+##  <a name="setitemimage"></a>CTreeCtrl::SetItemImage  
  항목 이미지에 연결합니다.  
   
 ```  
@@ -1679,7 +1758,7 @@ BOOL SetItemImage(
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetItemImage](#getitemimage)합니다.  
   
-##  <a name="a-namesetitemstatea--ctreectrlsetitemstate"></a><a name="setitemstate"></a>CTreeCtrl::SetItemState  
+##  <a name="setitemstate"></a>CTreeCtrl::SetItemState  
  지정 된 항목의 상태를 설정 `hItem`합니다.  
   
 ```  
@@ -1708,7 +1787,7 @@ BOOL SetItemState(
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetItemState](#getitemstate)합니다.  
   
-##  <a name="a-namesetitemstateexa--ctreectrlsetitemstateex"></a><a name="setitemstateex"></a>CTreeCtrl::SetItemStateEx  
+##  <a name="setitemstateex"></a>CTreeCtrl::SetItemStateEx  
  현재 트리 뷰 컨트롤에서 지정된 된 항목의 확장 된 상태를 설정합니다.  
   
 ```  
@@ -1740,7 +1819,7 @@ BOOL SetItemStateEx(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s&#1;&7;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]  
   
-##  <a name="a-namesetitemtexta--ctreectrlsetitemtext"></a><a name="setitemtext"></a>CTreeCtrl::SetItemText  
+##  <a name="setitemtext"></a>CTreeCtrl::SetItemText  
  지정 된 항목의 텍스트를 설정 `hItem`합니다.  
   
 ```  
@@ -1762,7 +1841,7 @@ BOOL SetItemText(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&34;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_42.cpp)]  
   
-##  <a name="a-namesetlinecolora--ctreectrlsetlinecolor"></a><a name="setlinecolor"></a>CTreeCtrl::SetLineColor  
+##  <a name="setlinecolor"></a>CTreeCtrl::SetLineColor  
  트리 뷰 컨트롤에 대 한 현재 선 색을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1782,7 +1861,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&35;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]  
   
-##  <a name="a-namesetscrolltimea--ctreectrlsetscrolltime"></a><a name="setscrolltime"></a>CTreeCtrl::SetScrollTime  
+##  <a name="setscrolltime"></a>CTreeCtrl::SetScrollTime  
  트리 뷰 컨트롤에 대 한 최대 스크롤 시간을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1799,7 +1878,7 @@ UINT SetScrollTime(UINT uScrollTime);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 win32 메시지의 동작을 구현 [TVM_SETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773767)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesettextcolora--ctreectrlsettextcolor"></a><a name="settextcolor"></a>CTreeCtrl::SetTextColor  
+##  <a name="settextcolor"></a>CTreeCtrl::SetTextColor  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773769)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1816,7 +1895,7 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&36;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]  
   
-##  <a name="a-namesettooltipsa--ctreectrlsettooltips"></a><a name="settooltips"></a>CTreeCtrl::SetToolTips  
+##  <a name="settooltips"></a>CTreeCtrl::SetToolTips  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773772)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -1836,7 +1915,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="example"></a>예제  
   예를 참조 [CTreeCtrl::GetToolTips](#gettooltips)합니다.  
   
-##  <a name="a-nameshowinfotipa--ctreectrlshowinfotip"></a><a name="showinfotip"></a>CTreeCtrl::ShowInfoTip  
+##  <a name="showinfotip"></a>CTreeCtrl::ShowInfoTip  
  현재 트리 뷰 컨트롤에 지정된 된 항목에 대 한 정보 팁을 표시합니다.  
   
 ```  
@@ -1854,7 +1933,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
  이 메서드는 전송 된 [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesortchildrena--ctreectrlsortchildren"></a><a name="sortchildren"></a>CTreeCtrl::SortChildren  
+##  <a name="sortchildren"></a>CTreeCtrl::SortChildren  
  트리 뷰 컨트롤에서 지정 된 부모 항목의 자식 항목을 사전순으로 정렬 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1874,7 +1953,7 @@ BOOL SortChildren(HTREEITEM hItem);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTreeCtrl #&37;](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]  
   
-##  <a name="a-namesortchildrencba--ctreectrlsortchildrencb"></a><a name="sortchildrencb"></a>CTreeCtrl::SortChildrenCB  
+##  <a name="sortchildrencb"></a>CTreeCtrl::SortChildrenCB  
  항목을 비교 하는 응용 프로그램에서 정의 된 콜백 함수를 사용 하 여 트리 뷰 항목을 정렬 하려면이 함수를 호출 합니다.  
   
 ```  

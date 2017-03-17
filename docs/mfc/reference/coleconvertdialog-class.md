@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
+- AFXODLGS/COleConvertDialog
+- AFXODLGS/COleConvertDialog::COleConvertDialog
+- AFXODLGS/COleConvertDialog::DoConvert
+- AFXODLGS/COleConvertDialog::DoModal
+- AFXODLGS/COleConvertDialog::GetClassID
+- AFXODLGS/COleConvertDialog::GetDrawAspect
+- AFXODLGS/COleConvertDialog::GetIconicMetafile
+- AFXODLGS/COleConvertDialog::GetSelectionType
+- AFXODLGS/COleConvertDialog::m_cv
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class COleConvertDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-namecoleconvertdialoga--coleconvertdialogcoleconvertdialog"></a><a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
  만 생성 한 `COleConvertDialog` 개체입니다.  
   
 ```  
@@ -141,7 +150,7 @@ explicit COleConvertDialog (
   
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 및 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 구조입니다.  
   
-##  <a name="a-namedoconverta--coleconvertdialogdoconvert"></a><a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
  성공적으로 반환 된 후이 함수를 호출 [DoModal](#domodal)형식의 개체를 활성화 하거나 변환 해야 하거나, [활성화](../../mfc/reference/coleclientitem-class.md)합니다.  
   
 ```  
@@ -158,7 +167,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>주의  
  항목 또는 변환 변환 대화 상자에서 사용자가 선택한 정보에 따라 활성화 됩니다.  
   
-##  <a name="a-namedomodala--coleconvertdialogdomodal"></a><a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>COleConvertDialog::DoModal  
  OLE 변환 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -179,7 +188,7 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 구성원 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="a-namegetclassida--coleconvertdialoggetclassid"></a><a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
  가져오려면이 함수를 호출 하는 **CLSID** 변환 대화 상자에서 사용자가 선택한 항목으로 연결 합니다.  
   
 ```  
@@ -194,7 +203,7 @@ REFCLSID GetClassID() const;
   
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetdrawaspecta--coleconvertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
  사용자가 선택한 항목을 아이콘으로 표시 하려고 선택 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -213,7 +222,7 @@ DVASPECT GetDrawAspect() const;
   
  그리기 측면에 대 한 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegeticonicmetafilea--coleconvertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
  선택한 항목의 아이콘 모양을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -223,7 +232,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>반환 값  
  확인란 아이콘으로 표시 된 경우 선택된 된 항목의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들을 선택 하 여 대화 상자를 해제할 때 체크 **확인**고, 그렇지 않으면 **NULL**합니다.  
   
-##  <a name="a-namegetselectiontypea--coleconvertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
  변환 대화 상자에서 선택한 변환의 형식을 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -256,7 +265,7 @@ UINT GetSelectionType() const;
   
 - **COleConvertDialog::activateAs** 사용자를 활성화 하려면 다른 항목을 선택한 다른 이름으로 활성화 라디오 단추를 선택 하는 경우 반환 되 고 `DoModal` 반환 **IDOK**합니다.  
   
-##  <a name="a-namemcva--coleconvertdialogmcv"></a><a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>COleConvertDialog::m_cv  
  형식의 구조 **OLEUICONVERT** 변환 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

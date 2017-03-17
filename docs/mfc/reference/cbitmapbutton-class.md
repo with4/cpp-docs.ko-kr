@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
+- AFXEXT/CBitmapButton
+- AFXEXT/CBitmapButton::CBitmapButton
+- AFXEXT/CBitmapButton::AutoLoad
+- AFXEXT/CBitmapButton::LoadBitmaps
+- AFXEXT/CBitmapButton::SizeToContent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +133,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-nameautoloada--cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>CBitmapButton::AutoLoad  
  대화 상자의 단추에에서의 한 개체에 연결에서 `CBitmapButton` 클래스 이름으로는 bitmap(s)를 로드 하 고 단추 비트맵에 맞게 크기를 지정 합니다.  
   
 ```  
@@ -153,7 +158,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="a-namecbitmapbuttona--cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
  
           `CBitmapButton` 개체를 만듭니다.  
   
@@ -167,7 +172,7 @@ CBitmapButton();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="a-nameloadbitmapsa--cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
  사용할 수 없는 경우 또는 자원 이름 또는 ID 번호로 식별 하는 비트맵 이미지를 로드 하려는 경우이 함수를 사용 하 여는 `AutoLoad` 예를 들어 대화 상자에 속하지 않는 하는 비트맵 단추 만들어지기 때문에 작동 합니다.  
   
 ```  
@@ -216,7 +221,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog #&58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="a-namesizetocontenta--cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
  비트맵의 크기를 비트맵 단추 크기를 조정 하려면이 함수를 호출 합니다.  
   
 ```  

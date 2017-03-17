@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStdioFile
+- AFX/CStdioFile
+- AFX/CStdioFile::CStdioFile
+- AFX/CStdioFile::Open
+- AFX/CStdioFile::ReadString
+- AFX/CStdioFile::Seek
+- AFX/CStdioFile::WriteString
+- AFX/CStdioFile::m_pStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +101,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecstdiofilea--cstdiofilecstdiofile"></a><a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
  `CStdioFile` 개체를 생성하고 초기화합니다.  
   
 ```  
@@ -143,7 +150,7 @@ CStdioFile(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&37;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="a-namempstreama--cstdiofilempstream"></a><a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>CStdioFile::m_pStream  
  `m_pStream` C 런타임 함수에 의해 반환 된 데이터 멤버에 열려 있는 파일에 대 한 포인터는 `fopen`합니다.  
   
 ```  
@@ -153,7 +160,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>주의  
  **NULL** 파일이 열린 적이 있거나 닫혔습니다.  
   
-##  <a name="a-nameopena--cstdiofileopen"></a><a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>CStdioFile::Open  
  오버로드됨. 열기는 기본 용도로 설계 `CStdioFile` 생성자입니다.  
   
 ```  
@@ -188,7 +195,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namereadstringa--cstdiofilereadstring"></a><a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>CStdioFile::ReadString  
  텍스트 데이터의 제한 되는 버퍼에 읽어 `nMax`연결 된 파일에서-1 문자는 `CStdioFile` 개체입니다.  
   
 ```  
@@ -223,7 +230,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&38;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="a-nameseeka--cstdiofileseek"></a><a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>CStdioFile::Seek  
  이전에 연된 파일에는 포인터 위치를 변경 합니다.  
   
 ```  
@@ -260,7 +267,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles #&39;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="a-namewritestringa--cstdiofilewritestring"></a><a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>CStdioFile::WriteString  
  버퍼에서 데이터를 연결 된 파일에 작성 된 `CStdioFile` 개체입니다.  
   
 ```  

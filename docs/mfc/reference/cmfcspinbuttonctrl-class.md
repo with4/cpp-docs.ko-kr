@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCSpinButtonCtrl
+- AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl
+- AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl::OnDraw
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +87,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxspinbuttonctrl.h  
   
-##  <a name="a-nameondrawa--cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
  현재 스핀 단추 컨트롤을 다시 그립니다.  
   
 ```  

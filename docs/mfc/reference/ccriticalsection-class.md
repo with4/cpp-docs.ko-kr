@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
+- AFXMT/CCriticalSection
+- AFXMT/CCriticalSection::CCriticalSection
+- AFXMT/CCriticalSection::Lock
+- AFXMT/CCriticalSection::Unlock
+- AFXMT/CCriticalSection::m_sect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +111,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-nameccriticalsectiona--ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
  `CCriticalSection` 개체를 생성합니다.  
   
 ```  
@@ -121,7 +126,7 @@ CCriticalSection();
 ### <a name="example"></a>예제  
   예를 참조 [CCriticalSection::Lock](#lock)합니다.  
   
-##  <a name="a-namelocka--ccriticalsectionlock"></a><a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>CCriticalSection::Lock  
  임계 영역 개체에 액세스 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -148,14 +153,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities #&11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="a-namemsecta--ccriticalsectionmsect"></a><a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>CCriticalSection::m_sect  
  모두에서 사용 되는 임계 영역 개체를 포함 `CCriticalSection` 메서드.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="a-nameoperatorcriticalsectionstara--ccriticalsectionoperator-criticalsection"></a><a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
  검색 한 **CRITICAL_SECTION** 개체입니다.  
   
 ```  
@@ -165,7 +170,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>주의  
  내부에 대 한 포인터를 검색 하려면이 함수를 호출 **CRITICAL_SECTION** 개체입니다.  
   
-##  <a name="a-nameunlocka--ccriticalsectionunlock"></a><a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>CCriticalSection::Unlock  
  릴리스는 `CCriticalSection` 다른 스레드에서 사용 하기 위한 개체입니다.  
   
 ```  

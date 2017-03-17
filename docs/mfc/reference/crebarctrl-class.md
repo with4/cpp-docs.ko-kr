@@ -10,6 +10,53 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBarCtrl
+- AFXCMN/CReBarCtrl
+- AFXCMN/CReBarCtrl::CReBarCtrl
+- AFXCMN/CReBarCtrl::BeginDrag
+- AFXCMN/CReBarCtrl::Create
+- AFXCMN/CReBarCtrl::CreateEx
+- AFXCMN/CReBarCtrl::DeleteBand
+- AFXCMN/CReBarCtrl::DragMove
+- AFXCMN/CReBarCtrl::EndDrag
+- AFXCMN/CReBarCtrl::GetBandBorders
+- AFXCMN/CReBarCtrl::GetBandCount
+- AFXCMN/CReBarCtrl::GetBandInfo
+- AFXCMN/CReBarCtrl::GetBandMargins
+- AFXCMN/CReBarCtrl::GetBarHeight
+- AFXCMN/CReBarCtrl::GetBarInfo
+- AFXCMN/CReBarCtrl::GetBkColor
+- AFXCMN/CReBarCtrl::GetColorScheme
+- AFXCMN/CReBarCtrl::GetDropTarget
+- AFXCMN/CReBarCtrl::GetExtendedStyle
+- AFXCMN/CReBarCtrl::GetImageList
+- AFXCMN/CReBarCtrl::GetPalette
+- AFXCMN/CReBarCtrl::GetRect
+- AFXCMN/CReBarCtrl::GetRowCount
+- AFXCMN/CReBarCtrl::GetRowHeight
+- AFXCMN/CReBarCtrl::GetTextColor
+- AFXCMN/CReBarCtrl::GetToolTips
+- AFXCMN/CReBarCtrl::HitTest
+- AFXCMN/CReBarCtrl::IDToIndex
+- AFXCMN/CReBarCtrl::InsertBand
+- AFXCMN/CReBarCtrl::MaximizeBand
+- AFXCMN/CReBarCtrl::MinimizeBand
+- AFXCMN/CReBarCtrl::MoveBand
+- AFXCMN/CReBarCtrl::PushChevron
+- AFXCMN/CReBarCtrl::RestoreBand
+- AFXCMN/CReBarCtrl::SetBandInfo
+- AFXCMN/CReBarCtrl::SetBandWidth
+- AFXCMN/CReBarCtrl::SetBarInfo
+- AFXCMN/CReBarCtrl::SetBkColor
+- AFXCMN/CReBarCtrl::SetColorScheme
+- AFXCMN/CReBarCtrl::SetExtendedStyle
+- AFXCMN/CReBarCtrl::SetImageList
+- AFXCMN/CReBarCtrl::SetOwner
+- AFXCMN/CReBarCtrl::SetPalette
+- AFXCMN/CReBarCtrl::SetTextColor
+- AFXCMN/CReBarCtrl::SetToolTips
+- AFXCMN/CReBarCtrl::SetWindowTheme
+- AFXCMN/CReBarCtrl::ShowBand
+- AFXCMN/CReBarCtrl::SizeToRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,7 +197,7 @@ class CReBarCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namebegindraga--crebarctrlbegindrag"></a><a name="begindrag"></a>CReBarCtrl::BeginDrag  
+##  <a name="begindrag"></a>CReBarCtrl::BeginDrag  
  Win32 메시지의 동작을 구현 [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -166,7 +213,7 @@ void BeginDrag(
  `dwPos`  
  A `DWORD` 시작 마우스 좌표를 포함 하는 값입니다. 가로 좌표는 LOWORD에 포함 된 및 세로 좌표는 HIWORD에 포함 되어 있습니다. 전달 하는 경우 `(DWORD)-1`, rebar 컨트롤은 마지막으로 호출 하는 컨트롤의 스레드 마우스의 상대 위치를 사용 하는 **GetMessage** 또는 **PeekMessage**합니다.  
   
-##  <a name="a-namecreatea--crebarctrlcreate"></a><a name="create"></a>CReBarCtrl::Create  
+##  <a name="create"></a>CReBarCtrl::Create  
  Rebar 컨트롤을 만들고 연결 하는 `CReBarCtrl` 개체입니다.  
   
 ```  
@@ -205,7 +252,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&3;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--crebarctrlcreateex"></a><a name="createex"></a>CReBarCtrl::CreateEx  
+##  <a name="createex"></a>CReBarCtrl::CreateEx  
  컨트롤 (자식 창)와 연결 된 `CReBarCtrl` 개체입니다.  
   
 ```  
@@ -239,7 +286,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
   
-##  <a name="a-namecrebarctrla--crebarctrlcrebarctrl"></a><a name="crebarctrl"></a>CReBarCtrl::CReBarCtrl  
+##  <a name="crebarctrl"></a>CReBarCtrl::CReBarCtrl  
  
           `CReBarCtrl` 개체를 만듭니다.  
   
@@ -250,7 +297,7 @@ CReBarCtrl();
 ### <a name="example"></a>예제  
   예를 참조 [CReBarCtrl::Create](#create)합니다.  
   
-##  <a name="a-namedeletebanda--crebarctrldeleteband"></a><a name="deleteband"></a>CReBarCtrl::DeleteBand  
+##  <a name="deleteband"></a>CReBarCtrl::DeleteBand  
  Win32 메시지의 동작을 구현 [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -267,7 +314,7 @@ BOOL DeleteBand(UINT uBand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&4;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
-##  <a name="a-namedragmovea--crebarctrldragmove"></a><a name="dragmove"></a>CReBarCtrl::DragMove  
+##  <a name="dragmove"></a>CReBarCtrl::DragMove  
  Win32 메시지의 동작을 구현 [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -278,14 +325,14 @@ void DragMove(DWORD dwPos = (DWORD)-1);
  `dwPos`  
  A `DWORD` 새 마우스 좌표를 포함 하는 값입니다. 가로 좌표는 LOWORD에 포함 된 및 세로 좌표는 HIWORD에 포함 되어 있습니다. 전달 하는 경우 `(DWORD)-1`, rebar 컨트롤은 마지막으로 호출 하는 컨트롤의 스레드 마우스의 상대 위치를 사용 하는 **GetMessage** 또는 **PeekMessage**합니다.  
   
-##  <a name="a-nameenddraga--crebarctrlenddrag"></a><a name="enddrag"></a>CReBarCtrl::EndDrag  
+##  <a name="enddrag"></a>CReBarCtrl::EndDrag  
  Win32 메시지의 동작을 구현 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
 void EndDrag();
 ```  
   
-##  <a name="a-namegetbandbordersa--crebarctrlgetbandborders"></a><a name="getbandborders"></a>CReBarCtrl::GetBandBorders  
+##  <a name="getbandborders"></a>CReBarCtrl::GetBandBorders  
  Win32 메시지의 동작을 구현 [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -301,7 +348,7 @@ void GetBandBorders(
  `prc`  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조를 대역 외 테두리를 받게 됩니다. Rebar 컨트롤에는 **RBS_BANDBORDERS** 스타일을이 구조체의 각 멤버의 픽셀은 대역 외의 해당 쪽에 테두리를 구성 하는 번호를 받게 됩니다. Rebar 컨트롤에 없는 경우는 **RBS_BANDBORDERS** 스타일만이 구조체의 왼쪽된 멤버 올바른 정보를 받습니다. Rebar 컨트롤 스타일에 대 한 참조 [Rebar 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb774377) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetbandcounta--crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount  
+##  <a name="getbandcount"></a>CReBarCtrl::GetBandCount  
  Win32 메시지의 동작을 구현 [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -311,7 +358,7 @@ UINT GetBandCount() const;
 ### <a name="return-value"></a>반환 값  
  컨트롤에 할당 되는 밴드의 수입니다.  
   
-##  <a name="a-namegetbandinfoa--crebarctrlgetbandinfo"></a><a name="getbandinfo"></a>CReBarCtrl::GetBandInfo  
+##  <a name="getbandinfo"></a>CReBarCtrl::GetBandInfo  
  Win32 메시지의 동작을 구현 [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) 에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -330,7 +377,7 @@ BOOL GetBandInfo(
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namegetbandmarginsa--crebarctrlgetbandmargins"></a><a name="getbandmargins"></a>CReBarCtrl::GetBandMargins  
+##  <a name="getbandmargins"></a>CReBarCtrl::GetBandMargins  
  밴드의 여백을 검색합니다.  
   
 ```  
@@ -344,7 +391,7 @@ void GetBandMargins(PMARGINS pMargins);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetbarheighta--crebarctrlgetbarheight"></a><a name="getbarheight"></a>CReBarCtrl::GetBarHeight  
+##  <a name="getbarheight"></a>CReBarCtrl::GetBarHeight  
  Rebar 막대의 높이 검색합니다.  
   
 ```  
@@ -354,7 +401,7 @@ UINT GetBarHeight() const;
 ### <a name="return-value"></a>반환 값  
  높이 컨트롤의 크기를 픽셀 단위로 나타내는 값입니다.  
   
-##  <a name="a-namegetbarinfoa--crebarctrlgetbarinfo"></a><a name="getbarinfo"></a>CReBarCtrl::GetBarInfo  
+##  <a name="getbarinfo"></a>CReBarCtrl::GetBarInfo  
  Win32 메시지의 동작을 구현 [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -368,7 +415,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namegetbkcolora--crebarctrlgetbkcolor"></a><a name="getbkcolor"></a>CReBarCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CReBarCtrl::GetBkColor  
  Win32 메시지의 동작을 구현 [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -378,7 +425,7 @@ COLORREF GetBkColor() const;
 ### <a name="return-value"></a>반환 값  
  A **COLORREF** 현재 기본 배경색을 나타내는 값입니다.  
   
-##  <a name="a-namegetcolorschemea--crebarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CReBarCtrl::GetColorScheme  
+##  <a name="getcolorscheme"></a>CReBarCtrl::GetColorScheme  
  검색 된 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) rebar 컨트롤에 대 한 구조입니다.  
   
 ```  
@@ -395,7 +442,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ### <a name="remarks"></a>주의  
  **COLORSCHEME** 단추가 강조 표시 색과 단추 그림자 색 구조에 포함 됩니다.  
   
-##  <a name="a-namegetdroptargeta--crebarctrlgetdroptarget"></a><a name="getdroptarget"></a>CReBarCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CReBarCtrl::GetDropTarget  
  Win32 메시지의 동작을 구현 [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -405,7 +452,7 @@ IDropTarget* GetDropTarget() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 인터페이스입니다.  
   
-##  <a name="a-namegetextendedstylea--crebarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CReBarCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CReBarCtrl::GetExtendedStyle  
  현재 rebar 컨트롤의 확장된 스타일을 가져옵니다.  
   
 ```  
@@ -418,7 +465,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetimagelista--crebarctrlgetimagelist"></a><a name="getimagelist"></a>CReBarCtrl::GetImageList  
+##  <a name="getimagelist"></a>CReBarCtrl::GetImageList  
  가져옵니다는 `CImageList` rebar 컨트롤에 연결 된 개체입니다.  
   
 ```  
@@ -431,7 +478,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>주의  
  이 멤버 함수에 저장 된 크기와 마스크 정보를 사용 하는 [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) 구조체에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetpalettea--crebarctrlgetpalette"></a><a name="getpalette"></a>CReBarCtrl::GetPalette  
+##  <a name="getpalette"></a>CReBarCtrl::GetPalette  
  Rebar 컨트롤의 현재 팔레트를 검색합니다.  
   
 ```  
@@ -447,7 +494,7 @@ CPalette* GetPalette() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&5;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
   
-##  <a name="a-namegetrecta--crebarctrlgetrect"></a><a name="getrect"></a>CReBarCtrl::GetRect  
+##  <a name="getrect"></a>CReBarCtrl::GetRect  
  Win32 메시지의 동작을 구현 [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -469,7 +516,7 @@ BOOL GetRect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&6;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
   
-##  <a name="a-namegetrowcounta--crebarctrlgetrowcount"></a><a name="getrowcount"></a>CReBarCtrl::GetRowCount  
+##  <a name="getrowcount"></a>CReBarCtrl::GetRowCount  
  Win32 메시지의 동작을 구현 [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -482,7 +529,7 @@ UINT GetRowCount() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&7;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
   
-##  <a name="a-namegetrowheighta--crebarctrlgetrowheight"></a><a name="getrowheight"></a>CReBarCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>CReBarCtrl::GetRowHeight  
  Win32 메시지의 동작을 구현 [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -499,7 +546,7 @@ UINT GetRowHeight(UINT uRow) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&8;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
   
-##  <a name="a-namegettextcolora--crebarctrlgettextcolor"></a><a name="gettextcolor"></a>CReBarCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CReBarCtrl::GetTextColor  
  Win32 메시지의 동작을 구현 [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -509,7 +556,7 @@ COLORREF GetTextColor() const;
 ### <a name="return-value"></a>반환 값  
  A **COLORREF** 현재 기본 텍스트 색을 나타내는 값입니다.  
   
-##  <a name="a-namegettooltipsa--crebarctrlgettooltips"></a><a name="gettooltips"></a>CReBarCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CReBarCtrl::GetToolTips  
  Win32 메시지의 동작을 구현 [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -522,7 +569,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>주의  
  MFC 구현 `GetToolTips` 반환에 대 한 포인터는 `CToolTipCtrl`, 아닌 `HWND`.  
   
-##  <a name="a-namehittesta--crebarctrlhittest"></a><a name="hittest"></a>CReBarCtrl::HitTest  
+##  <a name="hittest"></a>CReBarCtrl::HitTest  
  Win32 메시지의 동작을 구현 [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -536,7 +583,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="return-value"></a>반환 값  
  지정된 된 지점 또는 지점에 없는 rebar 밴드 되었으면-1에서 대역 외의&0;부터 시작 하는 인덱스입니다.  
   
-##  <a name="a-nameidtoindexa--crebarctrlidtoindex"></a><a name="idtoindex"></a>CReBarCtrl::IDToIndex  
+##  <a name="idtoindex"></a>CReBarCtrl::IDToIndex  
  Win32 메시지의 동작을 구현 [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -550,7 +597,7 @@ int IDToIndex(UINT uBandID) const;
 ### <a name="return-value"></a>반환 값  
  성공 하면&0;부터 시작 밴드 인덱스 또는 그렇지 않으면-1입니다. 중복 된 대역 외 인덱스가 존재 하는 경우 첫 번째 반환 됩니다.  
   
-##  <a name="a-nameinsertbanda--crebarctrlinsertband"></a><a name="insertband"></a>CReBarCtrl::InsertBand  
+##  <a name="insertband"></a>CReBarCtrl::InsertBand  
  Win32 메시지의 동작을 구현 [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -572,7 +619,7 @@ BOOL InsertBand(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&9;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]  
   
-##  <a name="a-namemaximizebanda--crebarctrlmaximizeband"></a><a name="maximizeband"></a>CReBarCtrl::MaximizeBand  
+##  <a name="maximizeband"></a>CReBarCtrl::MaximizeBand  
  최대 크기로 rebar 컨트롤에서 밴드의 크기를 조정 합니다.  
   
 ```  
@@ -589,7 +636,7 @@ void MaximizeBand(UINT uBand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&10;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
   
-##  <a name="a-nameminimizebanda--crebarctrlminimizeband"></a><a name="minimizeband"></a>CReBarCtrl::MinimizeBand  
+##  <a name="minimizeband"></a>CReBarCtrl::MinimizeBand  
  가장 작은 크기로 rebar 컨트롤에서 밴드의 크기를 조정 합니다.  
   
 ```  
@@ -606,7 +653,7 @@ void MinimizeBand(UINT uBand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&11;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
   
-##  <a name="a-namemovebanda--crebarctrlmoveband"></a><a name="moveband"></a>CReBarCtrl::MoveBand  
+##  <a name="moveband"></a>CReBarCtrl::MoveBand  
  Win32 메시지의 동작을 구현 [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -625,7 +672,7 @@ BOOL MoveBand(
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namepushchevrona--crebarctrlpushchevron"></a><a name="pushchevron"></a>CReBarCtrl::PushChevron  
+##  <a name="pushchevron"></a>CReBarCtrl::PushChevron  
  Win32 메시지의 동작을 구현 [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -641,7 +688,7 @@ void PushChevron(
  `lAppValue`  
  응용 프로그램이 32 비트 값을 정의 합니다. 참조 `lAppValue` 에서 [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namerestorebanda--crebarctrlrestoreband"></a><a name="restoreband"></a>CReBarCtrl::RestoreBand  
+##  <a name="restoreband"></a>CReBarCtrl::RestoreBand  
  이상적인 크기로 rebar 컨트롤에서 밴드의 크기를 조정 합니다.  
   
 ```  
@@ -658,7 +705,7 @@ void RestoreBand(UINT uBand);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&12;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
   
-##  <a name="a-namesetbandinfoa--crebarctrlsetbandinfo"></a><a name="setbandinfo"></a>CReBarCtrl::SetBandInfo  
+##  <a name="setbandinfo"></a>CReBarCtrl::SetBandInfo  
  Win32 메시지의 동작을 구현 [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -680,7 +727,7 @@ BOOL SetBandInfo(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&13;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_11.cpp)]  
   
-##  <a name="a-namesetbandwidtha--crebarctrlsetbandwidth"></a><a name="setbandwidth"></a>CReBarCtrl::SetBandWidth  
+##  <a name="setbandwidth"></a>CReBarCtrl::SetBandWidth  
  현재는 rebar 컨트롤에서 지정 된 도킹 된 대역의 너비를 설정합니다.  
   
 ```  
@@ -712,7 +759,7 @@ BOOL SetBandWidth(
   
  [!code-cpp[NVC_MFC_CReBarCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
   
-##  <a name="a-namesetbarinfoa--crebarctrlsetbarinfo"></a><a name="setbarinfo"></a>CReBarCtrl::SetBarInfo  
+##  <a name="setbarinfo"></a>CReBarCtrl::SetBarInfo  
  Win32 메시지의 동작을 구현 [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -729,7 +776,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl #&14;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
   
-##  <a name="a-namesetbkcolora--crebarctrlsetbkcolor"></a><a name="setbkcolor"></a>CReBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CReBarCtrl::SetBkColor  
  Win32 메시지의 동작을 구현 [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -746,7 +793,7 @@ COLORREF SetBkColor(COLORREF clr);
 ### <a name="remarks"></a>주의  
  배경 색을 설정 하는 시기 및 기본값을 설정 하는 방법에 대 한 자세한 내용은이 항목을 참조 하십시오.  
   
-##  <a name="a-namesetcolorschemea--crebarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CReBarCtrl::SetColorScheme  
+##  <a name="setcolorscheme"></a>CReBarCtrl::SetColorScheme  
  Rebar 컨트롤에 단추에 대 한 색 구성표를 설정합니다.  
   
 ```  
@@ -760,7 +807,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 ### <a name="remarks"></a>주의  
  **COLORSCHEME** 단추가 강조 표시 색과 단추 그림자 색 구조에 포함 됩니다.  
   
-##  <a name="a-namesetextendedstylea--crebarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CReBarCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CReBarCtrl::SetExtendedStyle  
  현재는 rebar 컨트롤에 대 한 확장된 스타일을 설정합니다.  
   
 ```  
@@ -782,7 +829,7 @@ DWORD SetExtendedStyle(
 ### <a name="remarks"></a>주의  
  이 메서드는 전송 된 [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetimagelista--crebarctrlsetimagelist"></a><a name="setimagelist"></a>CReBarCtrl::SetImageList  
+##  <a name="setimagelist"></a>CReBarCtrl::SetImageList  
  이미지 목록을 rebar 컨트롤에 할당합니다.  
   
 ```  
@@ -796,7 +843,7 @@ BOOL SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namesetownera--crebarctrlsetowner"></a><a name="setowner"></a>CReBarCtrl::SetOwner  
+##  <a name="setowner"></a>CReBarCtrl::SetOwner  
  Win32 메시지의 동작을 구현 [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -816,7 +863,7 @@ CWnd* SetOwner(CWnd* pWnd);
 > [!NOTE]
 >  이 멤버 함수는 컨트롤이 만들어진; 때 설정 된 실제 부모 변경 되지 않습니다. 대신 지정한 창에 알림 메시지를 보냅니다.  
   
-##  <a name="a-namesetpalettea--crebarctrlsetpalette"></a><a name="setpalette"></a>CReBarCtrl::SetPalette  
+##  <a name="setpalette"></a>CReBarCtrl::SetPalette  
  Win32 메시지의 동작을 구현 [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -833,7 +880,7 @@ CPalette* SetPalette(HPALETTE hPal);
 ### <a name="remarks"></a>주의  
  이 멤버 함수를 사용 하 여 한 `CPalette` 개체의 반환 값으로 아닌 `HPALETTE`합니다.  
   
-##  <a name="a-namesettextcolora--crebarctrlsettextcolor"></a><a name="settextcolor"></a>CReBarCtrl::SetTextColor  
+##  <a name="settextcolor"></a>CReBarCtrl::SetTextColor  
  Win32 메시지의 동작을 구현 [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -850,7 +897,7 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="remarks"></a>주의  
  Rebar 컨트롤에서 텍스트 색 유연성을 지원 하기 위해 제공 됩니다.  
   
-##  <a name="a-namesettooltipsa--crebarctrlsettooltips"></a><a name="settooltips"></a>CReBarCtrl::SetToolTips  
+##  <a name="settooltips"></a>CReBarCtrl::SetToolTips  
  Rebar 컨트롤 도구 설명 컨트롤에 연결합니다.  
   
 ```  
@@ -864,7 +911,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 ### <a name="remarks"></a>주의  
  파기 해야는 `CToolTipCtrl` 완료 되 면 개체입니다.  
   
-##  <a name="a-namesetwindowthemea--crebarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CReBarCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CReBarCtrl::SetWindowTheme  
  Rebar 컨트롤의 비주얼 스타일을 설정합니다.  
   
 ```  
@@ -881,7 +928,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameshowbanda--crebarctrlshowband"></a><a name="showband"></a>CReBarCtrl::ShowBand  
+##  <a name="showband"></a>CReBarCtrl::ShowBand  
  Win32 메시지의 동작을 구현 [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  
@@ -900,7 +947,7 @@ BOOL ShowBand(
 ### <a name="return-value"></a>반환 값  
  성공하는 경우&0;이 아니고, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namesizetorecta--crebarctrlsizetorect"></a><a name="sizetorect"></a>CReBarCtrl::SizeToRect  
+##  <a name="sizetorect"></a>CReBarCtrl::SizeToRect  
  Win32 메시지의 동작을 구현 [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ```  

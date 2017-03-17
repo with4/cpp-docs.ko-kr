@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchiveException
+- AFX/CArchiveException
+- AFX/CArchiveException::CArchiveException
+- AFX/CArchiveException::m_cause
+- AFX/CArchiveException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecarchiveexceptiona--carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
  생성 한 `CArchiveException` 의 값을 저장 하는 개체를 `cause` 개체에 있습니다.  
   
 ```  
@@ -103,7 +107,7 @@ CArchiveException(
   
  이 생성자를 직접 사용 하지 마십시오 대신, 전역 함수를 호출 `AfxThrowArchiveException`합니다.  
   
-##  <a name="a-namemcausea--carchiveexceptionmcause"></a><a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>CArchiveException::m_cause  
  예외의 원인을 지정합니다.  
   
 ```  
@@ -135,7 +139,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic** 는 사용 되지 않습니다. 사용 하 여 **genericException** 대신 합니다. 경우 **제네릭** 응용 프로그램에서 사용 되 고 작성 /clr을 사용 하 여 생깁니다 구문 하지 않은 오류를 쉽게 이해할 수 있습니다.  
   
-##  <a name="a-namemstrfilenamea--carchiveexceptionmstrfilename"></a><a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
  이 예외 상태에 대 한 파일의 이름을 지정합니다.  
   
 ```  

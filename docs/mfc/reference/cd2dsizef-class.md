@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DSizeF
 - CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namecd2dsizefa--cd2dsizefcd2dsizef"></a><a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
+##  <a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
  CSize 개체에서 CD2DSizeF 개체를 만듭니다.  
   
 ```  
@@ -101,7 +103,7 @@ CD2DSizeF(
  `cy`  
  원본 높이  
   
-##  <a name="a-nameisnulla--cd2dsizefisnull"></a><a name="isnull"></a>CD2DSizeF::IsNull  
+##  <a name="isnull"></a>CD2DSizeF::IsNull  
  식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.  
   
 ```  
@@ -111,7 +113,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 너비와 높이 비어 있습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-nameoperatorcsizea--cd2dsizefoperator-csize"></a><a name="operator_csize"></a>CD2DSizeF::operator CSize  
+##  <a name="operator_csize"></a>CD2DSizeF::operator CSize  
  CD2DSizeF CSize 개체로 변환합니다.  
   
 ```  

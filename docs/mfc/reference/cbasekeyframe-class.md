@@ -10,7 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
-- afxanimationcontroller/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::GetAnimationKeyframe
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bIsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_keyframe
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +93,7 @@ class CBaseKeyFrame : public CObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
  스토리 보드에 키 프레임을 추가 합니다.  
   
 ```  
@@ -107,14 +115,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>주의  
  이 메서드는 키프레임을 스토리 보드에 추가 합니다.  
   
-##  <a name="a-namecbasekeyframea--cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
  키 프레임 개체를 만듭니다.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="a-namegetanimationkeyframea--cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
  내부 키프레임 값을 반환합니다.  
   
 ```  
@@ -127,7 +135,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>주의  
  내부 키프레임 값에 대 한 접근자입니다.  
   
-##  <a name="a-nameisaddeda--cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
  키 프레임 스토리 보드에 추가 되어 있는지 알려 줍니다.  
   
 ```  
@@ -140,7 +148,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>주의  
  기본 클래스에서 IsAdded 항상 TRUE를 반환 하지만 파생된 클래스에서 재정의 됩니다.  
   
-##  <a name="a-nameiskeyframeatoffseta--cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
  키 프레임을 오프셋으로 또는 전환 후 스토리 보드에 추가할지 여부를 지정 합니다.  
   
 ```  
@@ -153,21 +161,21 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>주의  
  키 프레임을 오프셋에서 스토리 보드에 추가할지 여부를 지정 합니다. 파생된 클래스에서 오프셋 또는 전환을 지정 해야 합니다.  
   
-##  <a name="a-namembaddeda--cbasekeyframembadded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
  이 키 프레임 스토리 보드에 추가 되어 있는지를 지정 합니다.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="a-namembiskeyframeatoffseta--cbasekeyframembiskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
  이 키 프레임을 일부 전환이 끝날 때 또는 다른 기존 키 프레임부터 오프셋에 스토리 보드에 추가할지 여부를 지정 합니다.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="a-namemkeyframea--cbasekeyframemkeyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
  Windows 애니메이션 API 키 프레임을 나타냅니다. 키 프레임 초기화 되지 않은 UI_ANIMATION_KEYFRAME_STORYBOARD_START 미리 정의 된 값으로 설정 됩니다.  
   
 ```  

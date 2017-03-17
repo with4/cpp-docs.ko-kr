@@ -10,6 +10,37 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
+- AFXDAO/CDaoQueryDef
+- AFXDAO/CDaoQueryDef::CDaoQueryDef
+- AFXDAO/CDaoQueryDef::Append
+- AFXDAO/CDaoQueryDef::CanUpdate
+- AFXDAO/CDaoQueryDef::Close
+- AFXDAO/CDaoQueryDef::Create
+- AFXDAO/CDaoQueryDef::Execute
+- AFXDAO/CDaoQueryDef::GetConnect
+- AFXDAO/CDaoQueryDef::GetDateCreated
+- AFXDAO/CDaoQueryDef::GetDateLastUpdated
+- AFXDAO/CDaoQueryDef::GetFieldCount
+- AFXDAO/CDaoQueryDef::GetFieldInfo
+- AFXDAO/CDaoQueryDef::GetName
+- AFXDAO/CDaoQueryDef::GetODBCTimeout
+- AFXDAO/CDaoQueryDef::GetParameterCount
+- AFXDAO/CDaoQueryDef::GetParameterInfo
+- AFXDAO/CDaoQueryDef::GetParamValue
+- AFXDAO/CDaoQueryDef::GetRecordsAffected
+- AFXDAO/CDaoQueryDef::GetReturnsRecords
+- AFXDAO/CDaoQueryDef::GetSQL
+- AFXDAO/CDaoQueryDef::GetType
+- AFXDAO/CDaoQueryDef::IsOpen
+- AFXDAO/CDaoQueryDef::Open
+- AFXDAO/CDaoQueryDef::SetConnect
+- AFXDAO/CDaoQueryDef::SetName
+- AFXDAO/CDaoQueryDef::SetODBCTimeout
+- AFXDAO/CDaoQueryDef::SetParamValue
+- AFXDAO/CDaoQueryDef::SetReturnsRecords
+- AFXDAO/CDaoQueryDef::SetSQL
+- AFXDAO/CDaoQueryDef::m_pDAOQueryDef
+- AFXDAO/CDaoQueryDef::m_pDatabase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -151,7 +182,7 @@ class CDaoQueryDef : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-nameappenda--cdaoquerydefappend"></a><a name="append"></a>CDaoQueryDef::Append  
+##  <a name="append"></a>CDaoQueryDef::Append  
  이 멤버 함수를 호출한 후에 호출 [만들기](#create) 새 쿼리 정의 개체를 만듭니다.  
   
 ```  
@@ -163,7 +194,7 @@ virtual void Append();
   
  MFC 형식의 예외를 throw 한 임시 쿼리 정의 개체를 추가 하려고 하면 [CDaoException](../../mfc/reference/cdaoexception-class.md)합니다.  
   
-##  <a name="a-namecanupdatea--cdaoquerydefcanupdate"></a><a name="canupdate"></a>CDaoQueryDef::CanUpdate  
+##  <a name="canupdate"></a>CDaoQueryDef::CanUpdate  
  쿼리 정의 수정할 수 있는지 여부를 확인 하려면이 함수를 호출-예: 이름 또는 SQL 문자열을 변경 합니다.  
   
 ```  
@@ -182,7 +213,7 @@ BOOL CanUpdate();
   
      이 보안 기능을 구현 하는지 여부에 따라 다릅니다. MFC 보안;에 대 한 지원을 제공 하지 않습니다. 구현 해야이 직접 DAO를 직접 호출 하거나 Microsoft Access를 사용 하 여. DAO 도움말의 "권한 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namecdaoquerydefa--cdaoquerydefcdaoquerydef"></a><a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
+##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
  생성 된 **CDaoQueryDef** 개체입니다.  
   
 ```  
@@ -206,7 +237,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
  쿼리 정의 개체를 완료 하면 호출의 [닫기](#close) 멤버 함수입니다. 사용 하 여 쿼리 정의에 대 한 포인터를 사용 하도록 설정한 경우는 **삭제** 연산자를 c + + 개체를 소멸 시킵니다.  
   
-##  <a name="a-nameclosea--cdaoquerydefclose"></a><a name="close"></a>CDaoQueryDef::Close  
+##  <a name="close"></a>CDaoQueryDef::Close  
  쿼리 정의 개체를 사용 하 여 완료 하면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -216,7 +247,7 @@ virtual void Close();
 ### <a name="remarks"></a>주의  
  쿼리 정의 닫으면 기본 DAO 개체를 해제 하지만 저장 된 DAO 쿼리 정의 개체 또는 c + + 소멸 시 키 지 않습니다 `CDaoQueryDef` 개체입니다. 이것이 동일 [CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef), DAO (없는 경우 임시 쿼리 정의)에서 데이터베이스의 QueryDefs 컬렉션에서 쿼리 정의 삭제 하 합니다.  
   
-##  <a name="a-namecreatea--cdaoquerydefcreate"></a><a name="create"></a>CDaoQueryDef::Create  
+##  <a name="create"></a>CDaoQueryDef::Create  
  이 새 저장 된 쿼리 또는 새 임시 쿼리를 만드는 함수를 호출 합니다.  
   
 ```  
@@ -237,7 +268,7 @@ virtual void Create(
   
  SQL 문을 제공 하지 않으면 `lpszSQL`를 사용 하 여 쿼리를 실행할 수 없습니다 **Execute** 하지만 레코드 집합을 만들려면 사용할 수 있습니다. 이 경우 MFC는 레코드 집합의 기본 SQL 문을 사용합니다.  
   
-##  <a name="a-nameexecutea--cdaoquerydefexecute"></a><a name="execute"></a>CDaoQueryDef::Execute  
+##  <a name="execute"></a>CDaoQueryDef::Execute  
  쿼리 정의 개체에 정의 된 쿼리를 실행 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -281,7 +312,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
  **실행** 레코드 집합을 반환 하지 않습니다. 사용 하 여 **Execute** 레코드를 선택 하는 쿼리를 사용 하면 형식의 예외를 throw 하는 MFC [CDaoException](../../mfc/reference/cdaoexception-class.md)합니다.  
   
-##  <a name="a-namegetconnecta--cdaoquerydefgetconnect"></a><a name="getconnect"></a>CDaoQueryDef::GetConnect  
+##  <a name="getconnect"></a>CDaoQueryDef::GetConnect  
  쿼리 정의 데이터 원본과 관련 된 연결 문자열을 가져오기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -299,7 +330,7 @@ CString GetConnect();
   
  연결 문자열에 대 한 내용은 DAO 도움말에서 "연결 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namegetdatecreateda--cdaoquerydefgetdatecreated"></a><a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
  쿼리 정의 개체를 만든 날짜를 가져오려는이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -312,7 +343,7 @@ COleDateTime GetDateCreated();
 ### <a name="remarks"></a>주의  
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetdatelastupdateda--cdaoquerydefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
  이 멤버 함수 개체를 가져와 날짜 쿼리 정의 마지막으로 업데이트 하는 호출-경우 해당 속성 중 하나라도 변경 된 해당 이름, 해당 SQL 문자열 또는 연결 문자열 등입니다.  
   
 ```  
@@ -325,7 +356,7 @@ COleDateTime GetDateLastUpdated();
 ### <a name="remarks"></a>주의  
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetfieldcounta--cdaoquerydefgetfieldcount"></a><a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
  쿼리의 필드의 개수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -338,7 +369,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>주의  
  `GetFieldCount`쿼리 정의의 모든 필드를 반복 하는 데 유용 합니다. 이 위해 사용 하 여 `GetFieldCount` 함께에서 [GetFieldInfo](#getfieldinfo)합니다.  
   
-##  <a name="a-namegetfieldinfoa--cdaoquerydefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
  다양 한 종류의 쿼리 정의에 정의 된 필드에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -376,7 +407,7 @@ void GetFieldInfo(
 ### <a name="remarks"></a>주의  
  반환 되는 정보에 대 한 `fieldinfo`, 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 이 구조는 아래 설명 된 정보에 해당 하는 멤버 `dwInfoOptions` 위에 있습니다. 한 수준의 정보를 요청 하는 경우 모든 이전 수준의 정보를 얻습니다.  
   
-##  <a name="a-namegetnamea--cdaoquerydefgetname"></a><a name="getname"></a>CDaoQueryDef::GetName  
+##  <a name="getname"></a>CDaoQueryDef::GetName  
  쿼리 정의 나타내는 쿼리의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -389,7 +420,7 @@ CString GetName();
 ### <a name="remarks"></a>주의  
  쿼리 정의 이름은 고유한 사용자 정의 이름입니다. 쿼리 정의 이름에 대 한 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namegetodbctimeouta--cdaoquerydefgetodbctimeout"></a><a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
+##  <a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
  ODBC 데이터 원본에 쿼리 시간이 초과 되기 전에 현재 제한 시간을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -405,7 +436,7 @@ short GetODBCTimeout();
 > [!TIP]
 >  ODBC 테이블 작업을 수행 하는 기본 방법은 Microsoft Jet에 연결 하는 (합니다. MDB) 데이터베이스입니다. 자세한 내용은 DAO 도움말의 "DAO와 외부 데이터베이스에 액세스" 항목을 참조 하십시오.  
   
-##  <a name="a-namegetparametercounta--cdaoquerydefgetparametercount"></a><a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
+##  <a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
  저장 된 쿼리에서 매개 변수 개수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -420,7 +451,7 @@ short GetParameterCount();
   
  관련된 정보에 대 한 "매개 변수 개체", "매개 변수 컬렉션" 및 "매개 변수 선언 ()"에서 SQL DAO 도움말 항목을 참조 합니다.  
   
-##  <a name="a-namegetparameterinfoa--cdaoquerydefgetparameterinfo"></a><a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
+##  <a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
  쿼리 정의에 정의 된 매개 변수 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -456,7 +487,7 @@ void GetParameterInfo(
   
  관련된 정보에 대 한 매개 변수 선언 ("SQL") DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namegetparamvaluea--cdaoquerydefgetparamvalue"></a><a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
+##  <a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
  쿼리 정의 매개 변수 컬렉션에 저장 된 지정된 된 매개 변수의 현재 값을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -479,7 +510,7 @@ virtual COleVariant GetParamValue(int nIndex);
   
  관련된 정보에 대 한 매개 변수 선언 ("SQL") DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namegetrecordsaffecteda--cdaoquerydefgetrecordsaffected"></a><a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
  마지막 호출에 의해 영향을 받은 레코드 수를 확인 하려면이 함수를 호출 [Execute](#execute)합니다.  
   
 ```  
@@ -494,7 +525,7 @@ long GetRecordsAffected();
   
  관련된 내용은 DAO 도움말에서 "RecordsAffected 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namegetreturnsrecordsa--cdaoquerydefgetreturnsrecords"></a><a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
+##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
  쿼리 정의 레코드를 반환 하는 쿼리 기반 인지 여부를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -509,7 +540,7 @@ BOOL GetReturnsRecords();
   
  관련된 내용은 DAO 도움말의 "ReturnsRecords 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetsqla--cdaoquerydefgetsql"></a><a name="getsql"></a>CDaoQueryDef::GetSQL  
+##  <a name="getsql"></a>CDaoQueryDef::GetSQL  
  쿼리 정의 기반이 되는 쿼리를 정의 하는 SQL 문을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -524,7 +555,7 @@ CString GetSQL();
   
  관련된 내용은 "SQL Property", "비교의 Microsoft Jet 데이터베이스 엔진 및 ANSI SQL" 및 "쿼리는 데이터베이스와 SQL에서 코드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namegettypea--cdaoquerydefgettype"></a><a name="gettype"></a>CDaoQueryDef::GetType  
+##  <a name="gettype"></a>CDaoQueryDef::GetType  
  쿼리 정의의 쿼리 유형을 결정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -564,7 +595,7 @@ short GetType();
   
  SQL 문자열에 대 한 정보를 참조 하십시오. [GetSQL](#getsql)합니다. 쿼리 형식에 대 한 정보를 참조 하십시오. [Execute](#execute)합니다.  
   
-##  <a name="a-nameisopena--cdaoquerydefisopen"></a><a name="isopen"></a>CDaoQueryDef::IsOpen  
+##  <a name="isopen"></a>CDaoQueryDef::IsOpen  
  확인 하려면이 함수를 호출 여부는 `CDaoQueryDef` 개체가 현재 열려 있습니다.  
   
 ```  
@@ -577,19 +608,19 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>주의  
  호출 하는 데 사용할 쿼리 정의 열린 상태에 있어야 [Execute](#execute) 하거나 만들 수는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체입니다. 모드로 쿼리 정의 열린 상태로 호출 하거나 [만들기](#create) (새 쿼리 정의)에 대 한 또는 [열고](#open) (기존는 쿼리 정의)에 대 한 합니다.  
   
-##  <a name="a-namempdatabasea--cdaoquerydefmpdatabase"></a><a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
  에 대 한 포인터는 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 쿼리 정의 개체와 연결 된 개체입니다.  
   
 ### <a name="remarks"></a>주의  
  이 포인터를 사용 하 여 데이터베이스에 직접 액세스 하는 경우-예를 들어를 다른 쿼리 정의 또는 레코드 집합에 대 한 포인터를 가져올 데이터베이스의 컬렉션의 개체입니다.  
   
-##  <a name="a-namempdaoquerydefa--cdaoquerydefmpdaoquerydef"></a><a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
+##  <a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
  기본 DAO 쿼리 정의 개체에 대 한 OLE 인터페이스에 대 한 포인터를 포함합니다.  
   
 ### <a name="remarks"></a>주의  
  이 포인터는 완전 하 고 다른 클래스와의 일관성을 위해 제공 됩니다. 그러나 MFC DAO 쿼리 정의 보다 완벽 하 게 캡슐화 하므로 가능성이 매우 낮으므로 꼭 필요할 것입니다. 이 옵션을 사용할 수행 하는 경우 이렇게 신중 하 게-있습니다 수행 하는 것을 알 수 없는 경우 포인터의 값을 변경 하지 않는 특히 합니다.  
   
-##  <a name="a-nameopena--cdaoquerydefopen"></a><a name="open"></a>CDaoQueryDef::Open  
+##  <a name="open"></a>CDaoQueryDef::Open  
  데이터베이스의 QueryDefs 컬렉션에 이미 저장 된 쿼리 정의 열려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -603,7 +634,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="remarks"></a>주의  
  쿼리 정의 연 후 호출할 수 있습니다 해당 [Execute](#execute) 멤버 함수 또는 사용 하 여 만들려는 쿼리 정의 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체입니다.  
   
-##  <a name="a-namesetconnecta--cdaoquerydefsetconnect"></a><a name="setconnect"></a>CDaoQueryDef::SetConnect  
+##  <a name="setconnect"></a>CDaoQueryDef::SetConnect  
  쿼리 정의 개체의 연결 문자열을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -624,7 +655,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  연결 문자열의 구조 및 연결 문자열 구성의 예에 대 한 자세한 내용은 DAO 도움말에서 "연결 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namesetnamea--cdaoquerydefsetname"></a><a name="setname"></a>CDaoQueryDef::SetName  
+##  <a name="setname"></a>CDaoQueryDef::SetName  
  임시 하지 않은 쿼리 정의의 이름을 변경 하려는 경우이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -638,7 +669,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>주의  
  쿼리 정의 이름은 고유한, 사용자 정의 이름입니다. 호출할 수 있습니다 `SetName` 쿼리 정의 하기 전에 개체 QueryDefs 컬렉션에 추가 됩니다.  
   
-##  <a name="a-namesetodbctimeouta--cdaoquerydefsetodbctimeout"></a><a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
+##  <a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
  ODBC 데이터 원본에 쿼리 시간 초과 되기 전의 제한 시간을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -654,7 +685,7 @@ void SetODBCTimeout(short nODBCTimeout);
   
  쿼리 시간 제한의 기본값은 60 초입니다.  
   
-##  <a name="a-namesetparamvaluea--cdaoquerydefsetparamvalue"></a><a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
+##  <a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
  런타임에 쿼리 정의에서 매개 변수의 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -683,7 +714,7 @@ virtual void SetParamValue(
   
  으로 설정 하려면 값을 지정 된 `COleVariant` 개체입니다. 원하는 값 및 형식에 설정 하는 방법에 대 한 내용은 프로그램 `COleVariant` 개체 클래스를 참조 하십시오. [COleVariant](../../mfc/reference/colevariant-class.md)합니다.  
   
-##  <a name="a-namesetreturnsrecordsa--cdaoquerydefsetreturnsrecords"></a><a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
+##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
  외부 데이터베이스에 SQL 통과 쿼리를 설정 하는 과정의 일부로이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -697,7 +728,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="remarks"></a>주의  
  이러한 경우에는 쿼리 정의 만들고 해야 다른를 사용 하 여 해당 속성을 설정할 `CDaoQueryDef` 멤버 함수입니다. 외부 데이터베이스에 대 한 참조 [SetConnect](#setconnect)합니다.  
   
-##  <a name="a-namesetsqla--cdaoquerydefsetsql"></a><a name="setsql"></a>CDaoQueryDef::SetSQL  
+##  <a name="setsql"></a>CDaoQueryDef::SetSQL  
  쿼리 정의 실행 하는 SQL 문을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

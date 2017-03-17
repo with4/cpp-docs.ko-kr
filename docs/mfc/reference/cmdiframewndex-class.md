@@ -9,9 +9,83 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMDIFrameWndEx.AddDockSite
 - CMDIFrameWndEx
-- CMDIFrameWndEx::AddDockSite
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::ActiveItemRecalcLayout
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::AddPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::AdjustClientArea
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::AdjustDockingLayout
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::AreMDITabs
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::CanCovertControlBarToMDIChild
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::ControlBarToTabbedDocument
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::CreateDocumentWindow
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::CreateNewWindow
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::DockPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::DockPaneLeftOf
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableAutoHidePanes
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableDocking
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableFullScreenMainMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableFullScreenMode
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableLoadDockState
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableMDITabbedGroups
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableMDITabs
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableMDITabsLastActiveActivation
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnablePaneMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::EnableWindowsDialog
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetActivePopup
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetDefaultResId
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetMDITabGroups
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetMDITabs
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetMenuBar
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetRibbonBar
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetTearOffBars
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::GetToolbarButtonToolTipText
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::InsertPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsFullScreen
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsMDITabbedGroup
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsMemberOfMDITabGroup
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsMenuBarAvailable
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsPointNearDockSite
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::IsPrintPreview
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::LoadFrame
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::LoadMDIState
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::MDITabMoveToNextGroup
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::MDITabNewGroup
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::NegotiateBorderSpace
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnCloseDockingPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnCloseMiniFrame
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnClosePopupMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnCmdMsg
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnDrawMenuImage
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnDrawMenuLogo
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnEraseMDIClientBackground
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnMenuButtonToolHitTest
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnMoveMiniFrame
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnSetPreviewMode
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnShowCustomizePane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnShowMDITabContextMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnShowPanes
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnShowPopupMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnSizeMDIClient
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnTearOffMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::OnUpdateFrameMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::PaneFromPoint
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::RecalcLayout
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::RemovePaneFromDockManager
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::SaveMDIState
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::SetPrintPreviewFrame
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::SetupToolbarMenu
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::ShowFullScreen
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::ShowPane
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::ShowWindowsDialog
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::TabbedDocumentToControlBar
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::UpdateCaption
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::UpdateMDITabbedBarsIcons
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::WinHelp
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
+- AFXMDIFRAMEWNDEX/CMDIFrameWndEx::m_bDisableSetRedraw
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,14 +240,14 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxMDIFrameWndEx.h  
   
-##  <a name="a-nameactiveitemrecalclayouta--cmdiframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
+##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
  현재 항목의 레이아웃을 다시 계산합니다.  
   
 ```  
 void ActiveItemRecalcLayout();
 ```  
   
-##  <a name="a-nameaddpanea--cmdiframewndexaddpane"></a><a name="addpane"></a>CMDIFrameWndEx::AddPane  
+##  <a name="addpane"></a>CMDIFrameWndEx::AddPane  
  창을 도킹 관리자에 등록합니다.  
   
 ```  
@@ -195,14 +269,14 @@ BOOL AddPane(
 ### <a name="remarks"></a>주의  
  각 창에 등록 해야는 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md) 전에 도킹 레이아웃의 일부로 걸릴 수 있습니다. 이 메서드를 사용 하 여 특정 창을 도킹 하려면 도킹 관리자에 게 알립니다. 해당 창 등록 되 면 정렬 설정 및 도킹 관리자에서 유지 관리 하는 창의 목록에서 위치에 따라 도킹 관리자 정렬 합니다.  
   
-##  <a name="a-nameadjustclientareaa--cmdiframewndexadjustclientarea"></a><a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea  
+##  <a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea  
  테두리에 대 한 허용 하도록 클라이언트 영역을 줄일 수 있습니다.  
   
 ```  
 virtual void AdjustClientArea();
 ```  
   
-##  <a name="a-nameadjustdockinglayouta--cmdiframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout  
  모든 도킹 된 창 레이아웃을 다시 계산합니다.  
   
 ```  
@@ -216,7 +290,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="remarks"></a>주의  
  프레임 창에 도킹 하는 모든 창 레이아웃을 다시 계산 하려면이 멤버 함수를 호출 합니다.  
   
-##  <a name="a-namearemditabsa--cmdiframewndexaremditabs"></a><a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs  
+##  <a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs  
  MDI 탭 기능 또는 MDI 탭된 그룹 기능을 사용할지 여부를 결정 합니다.  
   
 ```  
@@ -243,7 +317,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
   
  사용 하 여 [CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups) MDI 탭된 그룹 기능을 사용할지 여부를 합니다.  
   
-##  <a name="a-namecancovertcontrolbartomdichilda--cmdiframewndexcancovertcontrolbartomdichild"></a><a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild  
+##  <a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild  
  탭된 문서 프레임 창 도킹 창 변환할 수 있는지 여부를 결정 하는 프레임 워크에서 호출  
   
 ```  
@@ -256,7 +330,7 @@ virtual BOOL CanCovertControlBarToMDIChild();
 ### <a name="remarks"></a>주의  
  파생된 클래스에서이 메서드를 재정의 하 고 반환 `TRUE` 변환 탭 문서로 도킹 창도 사용할 수 있도록 합니다. 설정할 수 있습니다 [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) 를 `TRUE`합니다.  
   
-##  <a name="a-namecontrolbartotabbeddocumenta--cmdiframewndexcontrolbartotabbeddocument"></a><a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument  
+##  <a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument  
  지정 된 도킹 창 탭된 문서를 변환합니다.  
   
 ```  
@@ -273,7 +347,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ### <a name="remarks"></a>주의  
  이 메서드는 도킹 창 탭된 문서를 변환합니다. 이 메서드를 호출 하면 프레임 워크를 만들고는 [CMDIChildWndEx 클래스](../../mfc/reference/cmdichildwndex-class.md) 개체 도킹 창 도킹 관리자에서 제거 및 새 MDI 자식 창으로 도킹 창에 추가 합니다. MDI 자식 창에 전체 클라이언트 영역에 도킹 창 크기 조정  
   
-##  <a name="a-namecreatedocumentwindowa--cmdiframewndexcreatedocumentwindow"></a><a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow  
+##  <a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow  
  자식 문서 창을 만듭니다.  
   
 ```  
@@ -304,7 +378,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="a-namecreatenewwindowa--cmdiframewndexcreatenewwindow"></a><a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow  
+##  <a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow  
  새 창을 만들기 위해 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -323,7 +397,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ### <a name="return-value"></a>반환 값  
  새 창에 대 한 포인터입니다.  
   
-##  <a name="a-namedockpanea--cmdiframewndexdockpane"></a><a name="dockpane"></a>CMDIFrameWndEx::DockPane  
+##  <a name="dockpane"></a>CMDIFrameWndEx::DockPane  
  지정 된 창 프레임 창에 도킹합니다.  
   
 ```  
@@ -351,7 +425,7 @@ void DockPane(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&4;](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
   
-##  <a name="a-namedockpaneleftofa--cmdiframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CMDIFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CMDIFrameWndEx::DockPaneLeftOf  
  창을 다른 창의 왼쪽에 도킹합니다.  
   
 ```  
@@ -378,7 +452,7 @@ BOOL DockPaneLeftOf(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&5;](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
   
-##  <a name="a-nameenableautohidepanesa--cmdiframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes  
  수 있도록 자동 숨김 모드 창에 대 한 지정 된 주 프레임 창 옆쪽에 컨트롤이 도킹 된 경우.  
   
 ```  
@@ -407,7 +481,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenabledockinga--cmdiframewndexenabledocking"></a><a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking  
  활성화 MDI 프레임 창에 속하는 창을 도킹 합니다.  
   
 ```  
@@ -428,7 +502,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&7;](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
   
-##  <a name="a-nameenablefullscreenmainmenua--cmdiframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu  
+##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu  
  표시 하거나 전체 화면 모드에서 주 메뉴를 숨깁니다.  
   
 ```  
@@ -441,7 +515,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablefullscreenmodea--cmdiframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode  
+##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode  
  프레임 창에 대 한 전체 화면 모드를 활성화 합니다.  
   
 ```  
@@ -455,7 +529,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ### <a name="remarks"></a>주의  
  전체 화면 모드에서는 모든 도킹 컨트롤 막대, 도구 모음과 메뉴는 숨겨져 있으며, 활성 뷰가 전체 화면을 차지 하도록 크기가 조정 됩니다. 전체 화면 모드를 사용 하도록 설정 하거나 해제 하는 명령 ID를 지정 해야 합니다. 호출할 수 있습니다 `EnableFullScreenMode` 주 프레임에서 `OnCreate` 함수입니다. 프레임 워크는 지정 된 명령 ID를 가진 하나의 단추가 있는 부동 도구 모음을 만들고 프레임 창을 전체 화면 모드로 전환 되는 경우 화면에서 주 메뉴를 유지 하려는 경우에 호출 [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)합니다.  
   
-##  <a name="a-nameenableloaddockstatea--cmdiframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState  
+##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState  
  도킹 상태를 로드 하는 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -468,7 +542,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablemditabbedgroupsa--cmdiframewndexenablemditabbedgroups"></a><a name="enablemditabbedgroups"></a>CMDIFrameWndEx::EnableMDITabbedGroups  
+##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx::EnableMDITabbedGroups  
  프레임 창에 대해 MDI 탭된 그룹 기능을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -508,7 +582,7 @@ void EnableMDITabbedGroups(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&8;](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
   
-##  <a name="a-nameenablemditabsa--cmdiframewndexenablemditabs"></a><a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs  
+##  <a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs  
  MDI 프레임 창에 대해 MDI 탭 기능을 해제 하거나 사용 합니다. 설정, 각 MDI 자식 창에 대 한 탭 프레임 창에 표시 됩니다.  
   
 ```  
@@ -556,7 +630,7 @@ void EnableMDITabs(
   
  [!code-cpp[NVC_MFC_MDITabsDemo #&3;](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
   
-##  <a name="a-nameenablemditabslastactiveactivationa--cmdiframewndexenablemditabslastactiveactivation"></a><a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
+##  <a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
  사용자가 현재 탭을 닫을 때 마지막 활성 탭 열 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -578,7 +652,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
   
  사용 하 여 `EnableMDITabsLastActiveActivation` 탭 정품 인증의 두 번째 방법은 사용할 수 있도록 합니다. 창을 열면 MDI 자식 창의 방식의 에뮬레이션 합니다.  
   
-##  <a name="a-nameenablepanemenua--cmdiframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu  
  사용 하거나 응용 프로그램 창 목록을 표시 하는 팝업 창 메뉴의 자동 생성 및 관리를 사용 하지 않도록 설정 합니다.  
   
 ```  
@@ -618,7 +692,7 @@ void EnablePaneMenu(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&9;](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
   
-##  <a name="a-nameenablewindowsdialoga--cmdiframewndexenablewindowsdialog"></a><a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog  
+##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog  
  명령 ID를 호출 하는 메뉴 항목을 삽입 한 [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자입니다.  
   
 ```  
@@ -657,7 +731,7 @@ void EnableWindowsDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&10;](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
   
-##  <a name="a-namegetactivepopupa--cmdiframewndexgetactivepopup"></a><a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup  
  현재 표시된 팝업 메뉴에 대한 포인터를 반환합니다.  
   
 ```  
@@ -670,7 +744,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="remarks"></a>주의  
  에 대 한 포인터를 가져오려면이 함수를 사용 여 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 현재 표시 되는 개체입니다.  
   
-##  <a name="a-namegetdefaultresida--cmdiframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId  
  MDI 프레임 창의 공유 리소스의 ID를 반환 합니다.  
   
 ```  
@@ -683,7 +757,7 @@ UINT GetDefaultResId() const;
 ### <a name="remarks"></a>주의  
  이 메서드가 반환 하 여 MDI 프레임 창은 로드 될 때 지정 된 리소스 ID [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)합니다.  
   
-##  <a name="a-namegetmditabgroupsa--cmdiframewndexgetmditabgroups"></a><a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups  
+##  <a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups  
  목록이 MDI 탭 창에 반환 합니다.  
   
 ```  
@@ -696,7 +770,7 @@ const CObList& GetMDITabGroups() const;
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 탭 창 목록에 액세스 합니다. 변경 하거나 개별 탭 창 일부 매개 변수를 쿼리 하려는 경우 유용할 수 있습니다.  
   
-##  <a name="a-namegetmditabsa--cmdiframewndexgetmditabs"></a><a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs  
+##  <a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs  
  밑줄이 그어진된 탭된 창에 대 한 참조를 반환합니다.  
   
 ```  
@@ -706,7 +780,7 @@ CMFCTabCtrl& GetMDITabs();
 ### <a name="return-value"></a>반환 값  
  밑줄이 그어진된 탭된 창에 대 한 참조입니다.  
   
-##  <a name="a-namegetmditabscontextmenualloweditemsa--cmdiframewndexgetmditabscontextmenualloweditems"></a><a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
+##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
  어떤 작업은 MDI 탭 그룹 기능을 사용 하는 경우를 결정 하는 플래그의 조합을 반환 합니다.  
   
 ```  
@@ -735,7 +809,7 @@ DWORD GetMDITabsContextMenuAllowedItems();
   
  탭된 창에 둘 이상의 탭이 있는 경우에 다음 그룹에 탭을 이동할 수 있습니다.  
   
-##  <a name="a-namegetmenubara--cmdiframewndexgetmenubar"></a><a name="getmenubar"></a>CMDIFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>CMDIFrameWndEx::GetMenuBar  
  프레임 창에 연결 된 메뉴 모음 개체에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -745,7 +819,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="return-value"></a>반환 값  
  메뉴 모음 개체에 대 한 포인터입니다.  
   
-##  <a name="a-namegetpanea--cmdiframewndexgetpane"></a><a name="getpane"></a>CMDIFrameWndEx::GetPane  
+##  <a name="getpane"></a>CMDIFrameWndEx::GetPane  
  지정 된 컨트롤 ID를 가집니다. 창에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -759,7 +833,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>반환 값  
  에 지정 된 컨트롤 ID가 있는 경우 창에 대 한 포인터입니다. 그렇지 않으면 `NULL`입니다.  
   
-##  <a name="a-namegetribbonbara--cmdiframewndexgetribbonbar"></a><a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar  
+##  <a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar  
  프레임에 대해 리본 표시줄 컨트롤을 검색합니다.  
   
 ```  
@@ -771,7 +845,7 @@ CMFCRibbonBar* GetRibbonBar();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettearoffbarsa--cmdiframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars  
  분리 메뉴의 목록을 반환합니다.  
   
 ```  
@@ -784,7 +858,7 @@ const CObList& GetTearOffBars() const;
 ### <a name="remarks"></a>주의  
  `CMDIFrameWndEx`분리 메뉴의 컬렉션을 유지 합니다. 이 메서드를 사용 하 여이 목록에 대 한 참조를 검색 합니다.  
   
-##  <a name="a-namegettoolbarbuttontooltiptexta--cmdiframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText  
  응용 프로그램 도구 모음 단추에 대 한 도구 설명을 표시 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -805,7 +879,7 @@ virtual BOOL GetToolbarButtonToolTipText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameinsertpanea--cmdiframewndexinsertpane"></a><a name="insertpane"></a>CMDIFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>CMDIFrameWndEx::InsertPane  
  지정 된 창 도킹 관리자에 등록합니다.  
   
 ```  
@@ -831,7 +905,7 @@ BOOL InsertPane(
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 도킹 관리자에 의해 지정 된 창에 대 한 정보를 `pControlBar`합니다. 도킹 관리자는이 창 고 창 정렬 및 도킹 하는 관리자의 내부 목록에서 위치에 따라 정렬 됩니다.  
   
-##  <a name="a-nameisfullscreena--cmdiframewndexisfullscreen"></a><a name="isfullscreen"></a>CMDIFrameWndEx::IsFullScreen  
+##  <a name="isfullscreen"></a>CMDIFrameWndEx::IsFullScreen  
  프레임 창을 전체 화면 모드 인지 여부를 결정 합니다.  
   
 ```  
@@ -844,7 +918,7 @@ BOOL IsFullScreen() const;
 ### <a name="remarks"></a>주의  
  호출 하 여 전체 화면 모드를 설정할 수는 [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) 메서드.  
   
-##  <a name="a-nameismditabbedgroupa--cmdiframewndexismditabbedgroup"></a><a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup  
+##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup  
  MDI 탭 그룹 기능을 사용할 것인지를 지정 합니다.  
   
 ```  
@@ -857,7 +931,7 @@ BOOL IsMDITabbedGroup() const;
 ### <a name="remarks"></a>주의  
  일반 MDI 탭 또는 MDI 탭 그룹 기능을 사용할지 여부를 확인 하려면 [CMDIFrameWndEx::AreMDITabs](#aremditabs)합니다.  
   
-##  <a name="a-nameismemberofmditabgroupa--cmdiframewndexismemberofmditabgroup"></a><a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup  
+##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup  
  Windows MDI 탭 그룹에 있는 목록에 지정 된 탭된 창 인지 확인 합니다.  
   
 ```  
@@ -871,7 +945,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ### <a name="return-value"></a>반환 값  
  `TRUE`창이 있는 경우 지정 된 탭 MDI 탭 그룹을 형성 하는 탭 창 목록에 있습니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameismenubaravailablea--cmdiframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable  
  프레임 창 메뉴 모음에 있는지 여부를 결정 합니다.  
   
 ```  
@@ -881,7 +955,7 @@ BOOL IsMenuBarAvailable() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`메뉴 모음 개체에 대 한 포인터 없으면 `NULL`고, 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameispointneardocksitea--cmdiframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite  
  도킹 사이트 근처에 지정된 된 지점 인지 확인 합니다.  
   
 ```  
@@ -907,7 +981,7 @@ BOOL IsPointNearDockSite(
 ### <a name="remarks"></a>주의  
  요점은 도킹 사이트 근처의 민감도 도킹 관리자에서 설정 내에 없을 때입니다. 구분 기본값은 15 픽셀입니다.  
   
-##  <a name="a-nameisprintpreviewa--cmdiframewndexisprintpreview"></a><a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview  
+##  <a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview  
  프레임 창 인쇄 미리 보기 모드 인지 여부를 결정 합니다.  
   
 ```  
@@ -919,7 +993,7 @@ BOOL IsPrintPreview();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameloadframea--cmdiframewndexloadframe"></a><a name="loadframe"></a>CMDIFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>CMDIFrameWndEx::LoadFrame  
  리소스 정보에서 프레임 창을 만듭니다.  
   
 ```  
@@ -946,7 +1020,7 @@ virtual BOOL LoadFrame(
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드가 성공 하면, 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameloadmdistatea--cmdiframewndexloadmdistate"></a><a name="loadmdistate"></a>Cmdiframewndex:: Loadmdistate  
+##  <a name="loadmdistate"></a>Cmdiframewndex:: Loadmdistate  
  MDI 탭 그룹의 지정 된 레이아웃 및 이전에 연된 문서 목록을 로드합니다.  
   
 ```  
@@ -976,7 +1050,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&11;](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
   
-##  <a name="a-namemditabmovetonextgroupa--cmdiframewndexmditabmovetonextgroup"></a><a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup  
+##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup  
  현재 활성 탭된 창에서 활성 탭 다음 또는 이전 탭된 그룹으로 이동 합니다.  
   
 ```  
@@ -987,7 +1061,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
  [in] `bNext`  
  경우 `TRUE`, 다음 탭된 그룹 탭으로 이동 합니다. 경우 `FALSE`, 이전 탭된 그룹으로 이동 합니다.  
   
-##  <a name="a-namemditabnewgroupa--cmdiframewndexmditabnewgroup"></a><a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
+##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
  단일 창에 새 탭된 그룹을 만듭니다.  
   
 ```  
@@ -1006,7 +1080,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&12;](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
   
-##  <a name="a-namembcancovertcontrolbartomdichilda--cmdiframewndexmbcancovertcontrolbartomdichild"></a><a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
+##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
  도킹 창 MDI 자식 창을 변환할 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -1023,7 +1097,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="a-namembdisablesetredrawa--cmdiframewndexmbdisablesetredraw"></a><a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw  
+##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw  
  MDI 자식 창에 대 한 다시 그리기 최적화를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -1037,7 +1111,7 @@ AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
   
  이 플래그는 원치 않는 부작용 (예: 표시 되는 백그라운드 응용 프로그램)를 발생할 수 있습니다. 따라서 눈에 띄는 깜박임을 MDI 탭 활성화 하는 동안 발생 하는 경우에 기본값을 변경 하는 것이 좋습니다.  
   
-##  <a name="a-namenegotiateborderspacea--cmdiframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace  
  OLE 위치에서 활성화 하는 동안 테두리 프레임 창에는 공간을 협상합니다.  
   
 ```  
@@ -1065,7 +1139,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="remarks"></a>주의  
  이 방법은 OLE 테두리 공간 협상의 구현에 설명 합니다.  
   
-##  <a name="a-nameonclosedockingpanea--cmdiframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane  
  사용자가 클릭할 때 프레임 워크에 의해 호출 된 **닫기** 도킹 가능한 창에서 단추입니다.  
   
 ```  
@@ -1084,7 +1158,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
   
  기본 구현은 없으며 반환 `TRUE`합니다.  
   
-##  <a name="a-nameoncloseminiframea--cmdiframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame  
  사용자가 클릭할 때 프레임 워크에 의해 호출 된 **닫기** 부동 미니 프레임 창의 단추를 합니다.  
   
 ```  
@@ -1103,7 +1177,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
   
  기본 구현은 없으며 반환 `TRUE`합니다.  
   
-##  <a name="a-nameonclosepopupmenua--cmdiframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu  
  활성 팝업 메뉴를 처리할 때 프레임 워크에 의해 호출 된 `WM_DESTROY` 메시지입니다.  
   
 ```  
@@ -1117,7 +1191,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>주의  
  알림을 처리 하려는 경우이 메서드를 재정의 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 해당 개체를 처리 하는 경우 MDI 프레임 창에 속하는 개체 `WM_DESTROY` 메시지입니다.  
   
-##  <a name="a-nameoncmdmsga--cmdiframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CMDIFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CMDIFrameWndEx::OnCmdMsg  
  라우팅하고 명령 메시지를 발송 하 고 명령 사용자 인터페이스 개체를 업데이트 하려면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1144,7 +1218,7 @@ virtual BOOL OnCmdMsg(
 ### <a name="return-value"></a>반환 값  
  메시지가 처리 되는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameondrawmenuimagea--cmdiframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage  
  메뉴 항목과 연결된 이미지를 그릴 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -1170,7 +1244,7 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="remarks"></a>주의  
  가 소유 하 고 메뉴 모음에 속하는 메뉴 항목에 대 한 이미지 렌더링을 사용자 지정 하려는 경우이 메서드를 재정의 `CMDIFrameWndEx`-파생 개체입니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-nameondrawmenulogoa--cmdiframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo  
  프레임 워크 호출 때는 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)프로세스는 `WM_PAINT` 메시지입니다.  
   
 ```  
@@ -1183,7 +1257,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>주의  
  가 소유 하 고 메뉴 모음에 속하는 팝업 메뉴에 로고를 표시 하려면이 함수를 재정의 하는 `CMDIFrameWndEx`-파생 개체입니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-nameonerasemdiclientbackgrounda--cmdiframewndexonerasemdiclientbackground"></a><a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground  
+##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground  
  MDI 프레임 창 프로세스 때 프레임 워크에 의해 호출 된 `WM_ERASEBKGND` 메시지입니다.  
   
 ```  
@@ -1196,7 +1270,7 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 ### <a name="remarks"></a>주의  
  처리 하려는 경우이 멤버 함수를 재정의 `WM_ERASEBKGND` 메시지는 `CMDIFrameWndEx`-클래스를 파생 합니다.  
   
-##  <a name="a-nameonmenubuttontoolhittesta--cmdiframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest  
  프레임 워크 호출 때는 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)프로세스 개체를 `WM_NCHITTEST` 메시지입니다.  
   
 ```  
@@ -1218,7 +1292,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="remarks"></a>주의  
  도구 설명에 특정 메뉴 항목에 대 한 정보를 제공 하려는 경우이 메서드를 재정의 합니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-nameonmoveminiframea--cmdiframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame  
  미니 프레임 창을 이동 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1232,7 +1306,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드가 성공 하면, 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameonsetpreviewmodea--cmdiframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode  
  응용 프로그램의 주 프레임 창 인쇄 미리 보기 모드를 설정합니다.  
   
 ```  
@@ -1251,7 +1325,7 @@ virtual void OnSetPreviewMode(
 ### <a name="remarks"></a>주의  
  이 메서드를 재정의 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)합니다.  
   
-##  <a name="a-nameonshowcustomizepanea--cmdiframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane  
  빠른 사용자 지정 창이 활성화 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1275,7 +1349,7 @@ virtual BOOL OnShowCustomizePane(
   
  빠른 사용자 지정 창에서 변경할 수 있도록 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonshowmditabcontextmenua--cmdiframewndexonshowmditabcontextmenu"></a><a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu  
+##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu  
  탭 중 하나는 바로 가기 메뉴가 표시 되기 전에 프레임 워크에서 호출 합니다. 만 MDI 탭 그룹에 대해 유효 합니다.  
   
 ```  
@@ -1316,7 +1390,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&14;](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
   
-##  <a name="a-nameonshowpanesa--cmdiframewndexonshowpanes"></a><a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes  
  표시 하거나 숨기려면 창 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1335,7 +1409,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
  경우 [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) 는 `TRUE` (기본값) 이면 모든 도킹 창에 표시 되지 것입니다.  
   
-##  <a name="a-nameonshowpopupmenua--cmdiframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu  
  팝업 메뉴를 열었을 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1350,7 +1424,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
   
  기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-nameonsizemdiclienta--cmdiframewndexonsizemdiclient"></a><a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient  
+##  <a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient  
  클라이언트 MDI 창의 크기를 변경할 때에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1368,7 +1442,7 @@ virtual void OnSizeMDIClient(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameontearoffmenua--cmdiframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu  
  분리 막대가 있는 메뉴가 활성화될 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -1390,7 +1464,7 @@ virtual BOOL OnTearOffMenu(
 ### <a name="remarks"></a>주의  
  분리 표시줄에 대 한 특별 한 설치 프로그램을 구현 하려는 경우이 함수를 재정의 합니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-nameonupdateframemenua--cmdiframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu  
+##  <a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu  
  프레임 워크는 프레임 메뉴 업데이트에 의해 호출 됩니다.  
   
 ```  
@@ -1401,7 +1475,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
  [in] `hMenuAlt`  
  메뉴에 대 한 핸들입니다.  
   
-##  <a name="a-namepanefrompointa--cmdiframewndexpanefrompoint"></a><a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
  지정 된 위치를 포함 하는 도킹 창을 반환 합니다.  
   
 ```  
@@ -1440,7 +1514,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>주의  
  호출의 리디렉션는 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md)합니다. 참조 [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) 에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namerecalclayouta--cmdiframewndexrecalclayout"></a><a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout  
  프레임 창의 레이아웃을 다시 계산 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1454,7 +1528,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>주의  
  이 메서드를 재정의 [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)합니다.  
   
-##  <a name="a-nameremovepanefromdockmanagera--cmdiframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager  
  창을 등록을 취소 하 고 도킹 관리자에서 제거 합니다.  
   
 ```  
@@ -1487,7 +1561,7 @@ void RemovePaneFromDockManager(
   
  프레임 창의 도킹 레이아웃의 일부가 더 이상이 되 면이 메서드를 사용 합니다.  
   
-##  <a name="a-namesavemdistatea--cmdiframewndexsavemdistate"></a><a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState  
+##  <a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState  
  MDI 탭 그룹의 현재 레이아웃 및 이전에 연된 문서 목록을 저장합니다.  
   
 ```  
@@ -1521,7 +1595,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&15;](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
   
-##  <a name="a-namesetprintpreviewframea--cmdiframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame  
+##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame  
  인쇄 미리 보기 프레임 창을 설정입니다.  
   
 ```  
@@ -1534,7 +1608,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetuptoolbarmenua--cmdiframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu  
  사용자 지정 항목과 더미 항목을 대체 하 여 도구 모음 개체를 수정 합니다.  
   
 ```  
@@ -1554,7 +1628,7 @@ void SetupToolbarMenu(
  [in] `uiViewUserToolbarCmdLast`  
  마지막 사용자 지정 명령을 지정합니다.  
   
-##  <a name="a-nameshowfullscreena--cmdiframewndexshowfullscreen"></a><a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
+##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
  전체 화면 모드로 일반 모드에서 주 프레임을 전환합니다.  
   
 ```  
@@ -1563,7 +1637,7 @@ void ShowFullScreen();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameshowpanea--cmdiframewndexshowpane"></a><a name="showpane"></a>CMDIFrameWndEx::ShowPane  
+##  <a name="showpane"></a>CMDIFrameWndEx::ShowPane  
  표시 하거나 지정한 창을 숨깁니다.  
   
 ```  
@@ -1595,7 +1669,7 @@ void ShowPane(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&16;](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
   
-##  <a name="a-nameshowwindowsdialoga--cmdiframewndexshowwindowsdialog"></a><a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog  
+##  <a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog  
  만듭니다는 [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 상자를 엽니다.  
   
 ```  
@@ -1607,7 +1681,7 @@ void ShowWindowsDialog();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&18;](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
   
-##  <a name="a-nametabbeddocumenttocontrolbara--cmdiframewndextabbeddocumenttocontrolbar"></a><a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar  
+##  <a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar  
  도킹 창에 지정 된 탭된 문서를 변환합니다.  
   
 ```  
@@ -1629,7 +1703,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&19;](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
   
-##  <a name="a-nameupdatecaptiona--cmdiframewndexupdatecaption"></a><a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption  
+##  <a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption  
  창 프레임 캡션을 업데이트 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1638,14 +1712,14 @@ void UpdateCaption();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameupdatemditabbedbarsiconsa--cmdiframewndexupdatemditabbedbarsicons"></a><a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
+##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
  각 MDI 탭된 창에 대 한 아이콘을 설정합니다.  
   
 ```  
 void UpdateMDITabbedBarsIcons();
 ```  
   
-##  <a name="a-namewinhelpa--cmdiframewndexwinhelp"></a><a name="winhelp"></a>CMDIFrameWndEx::WinHelp  
+##  <a name="winhelp"></a>CMDIFrameWndEx::WinHelp  
  WinHelp 응용 프로그램 또는 상황에 맞는 도움말을 시작하기 위해 프레임워크에서 호출됩니다.  
   
 ```  

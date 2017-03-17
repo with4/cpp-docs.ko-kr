@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
+- AFXDB/CFieldExchange
+- AFXDB/CFieldExchange::IsFieldType
+- AFXDB/CFieldExchange::SetFieldType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFieldExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
   
-##  <a name="a-nameisfieldtypea--cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
  사용자가 직접 RFX 함수를 작성 하는 경우 호출 `IsFieldType` 는 특정 필드 또는 매개 변수 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 결정 하는 함수 맨 앞에 (한 **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, 또는 **CFieldExchange::inoutParam**).  
   
 ```  
@@ -106,7 +109,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>주의  
  RFX 함수 기존 모델을 따릅니다.  
   
-##  <a name="a-namesetfieldtypea--cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
  에 대 한 호출을 해야 `SetFieldType` 레코드 집합 클래스에서 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 또는 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 재정의 합니다.  
   
 ```  

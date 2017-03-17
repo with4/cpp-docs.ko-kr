@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IAxWinAmbientDispatchEx
 - IAxWinAmbientDispatchEx
-- ATL::IAxWinAmbientDispatchEx
+- No header/ATL::IAxWinAmbientDispatchEx
+- No header/ATL::SetAmbientDispatch
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |형식 라이브러리|ATL.dll|  
 |C++|atliface.h (ATLBase.h에도 포함)|  
   
-##  <a name="a-namesetambientdispatcha--iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
  이 메서드는 사용자 정의 인터페이스를 가진 기본 앰비언트 속성 인터페이스를 보완 하기 위해 호출 됩니다.  
   
 ```

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherConnection
+- AFXINET/CGopherConnection
+- AFXINET/CGopherConnection::CGopherConnection
+- AFXINET/CGopherConnection::CreateLocator
+- AFXINET/CGopherConnection::GetAttribute
+- AFXINET/CGopherConnection::OpenFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecgopherconnectiona--cgopherconnectioncgopherconnection"></a><a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
  이 멤버 함수를 생성 하 라고는 `CGopherConnection` 개체입니다.  
   
 ```  
@@ -147,7 +152,7 @@ CGopherConnection(
 ### <a name="remarks"></a>주의  
  만들 없도록는 `CGopherConnection` 직접. 대신, 호출 [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)를 작성 하는 `CGopherConnection` 개체 하 고 포인터를 반환 합니다.  
   
-##  <a name="a-namecreatelocatora--cgopherconnectioncreatelocator"></a><a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
  이를 찾거나 gopher 서버에서 파일을 식별할 gopher 로케이터를 만드는 함수를 호출 합니다.  
   
 ```  
@@ -194,7 +199,7 @@ static CGopherLocator CreateLocator(
   
  Gopher 서버에서 정보를 검색 하기 위해 응용 프로그램 gopher 로케이터를 먼저 가져온 해야 합니다. 불투명 토큰으로 응용 프로그램 로케이터를 후 처리 해야 합니다 (즉, 응용 프로그램 수 로케이터를 사용 하지만 직접 조작 하거나 비교). 응용 프로그램에 대 한 호출에 대 한 로케이터를 사용 하는 일반적으로 [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) 정보의 특정 부분을 검색 하려면 멤버 함수입니다.  
   
-##  <a name="a-namegetattributea--cgopherconnectiongetattribute"></a><a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
  Gopher 서버에서 항목에 대 한 특정 특성 정보를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -216,7 +221,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
-##  <a name="a-nameopenfilea--cgopherconnectionopenfile"></a><a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>CGopherConnection::OpenFile  
  Gopher 서버에서 파일을 열려면이 멤버 함수를 호출 합니다.  
   
 ```  

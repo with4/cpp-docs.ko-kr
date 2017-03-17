@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::m_Cache
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +100,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="a-nameccacheddatapathpropertya--ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
  `CCachedDataPathProperty` 개체를 생성합니다.  
   
 ```  
@@ -119,7 +122,7 @@ CCachedDataPathProperty(
 ### <a name="remarks"></a>주의  
  `COleControl` 가리키는 개체 `pControl` 에서 사용 하는 [열려](../../mfc/reference/cdatapathproperty-class.md#open) 파생된 클래스에 의해 검색 됩니다. 경우 `pControl` 는 **NULL**를 사용 하는 컨트롤 **열려** 로 설정 해야 [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)합니다. 경우 `lpszPath` 는 **NULL**를 통한 경로에 전달할 수 있습니다 **열려** 설정 또는 [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)합니다.  
   
-##  <a name="a-namemcachea--ccacheddatapathpropertymcache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
  데이터가 캐시 된 메모리 파일의 클래스 이름을 포함 합니다.  
   
 ```  

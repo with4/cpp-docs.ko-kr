@@ -10,8 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlException
-- ATL::CAtlException
-- ATL.CAtlException
+- ATLEXCEPT/ATL::CAtlException
+- ATLEXCEPT/ATL::CAtlException::CAtlException
+- ATLEXCEPT/ATL::CAtlException::m_hr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +79,7 @@ class CAtlException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlexcept.h  
   
-##  <a name="a-namecatlexceptiona--catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException  
+##  <a name="catlexception"></a>CAtlException::CAtlException  
  생성자입니다.  
   
 ```
@@ -90,14 +91,14 @@ CAtlException() throw();
  `hr`  
  `HRESULT` 오류 코드입니다.  
   
-##  <a name="a-nameoperatorhresulta--catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException::operator HRESULT 
+##  <a name="operator_hresult"></a>CAtlException::operator HRESULT 
  현재 개체를 HRESULT 값을 캐스팅합니다.  
   
 ```  
 operator HRESULT() const throw ();
 ```  
   
-##  <a name="a-namemhra--catlexceptionmhr"></a><a name="m_hr"></a>CAtlException::m_hr  
+##  <a name="m_hr"></a>CAtlException::m_hr  
  `HRESULT` 데이터 멤버입니다.  
   
 ```

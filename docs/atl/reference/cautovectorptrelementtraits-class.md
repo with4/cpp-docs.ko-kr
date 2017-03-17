@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoVectorPtrElementTraits<T>
-- ATL.CAutoVectorPtrElementTraits
-- ATL.CAutoVectorPtrElementTraits<T>
-- ATL::CAutoVectorPtrElementTraits
 - CAutoVectorPtrElementTraits
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,14 +86,14 @@ class CAutoVectorPtrElementTraits :
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
  컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.  
   
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
  컬렉션 클래스 개체에서 요소를 검색에 사용할 데이터 형식입니다.  
   
 ```

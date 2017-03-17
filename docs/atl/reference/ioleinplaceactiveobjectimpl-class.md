@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::EnableModeless
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ResizeBorder
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::TranslateAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +94,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceactiveobjectimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  상황에 맞는 도움말을 수 있습니다.  
   
 ```
@@ -99,7 +107,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>주의  
  참조 [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameenablemodelessa--ioleinplaceactiveobjectimplenablemodeless"></a><a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
  모덜리스 대화 상자를 사용 합니다.  
   
 ```
@@ -112,7 +120,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetwindowa--ioleinplaceactiveobjectimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
  컨테이너는 컨트롤의 창 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```
@@ -124,7 +132,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  참조 [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameondocwindowactivatea--ioleinplaceactiveobjectimplondocwindowactivate"></a><a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  컨테이너의 문서 창 활성화 되거나 비활성화 하는 경우 컨트롤을 알립니다.  
   
 ```
@@ -137,7 +145,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonframewindowactivatea--ioleinplaceactiveobjectimplonframewindowactivate"></a><a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  컨테이너의 최상위 프레임 창이 활성화 또는 비활성화 하는 경우 컨트롤을 알립니다.  
   
 ```
@@ -150,7 +158,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameresizebordera--ioleinplaceactiveobjectimplresizeborder"></a><a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
  테두리 크기를 조정 하는 데 필요한 컨트롤에 알립니다.  
   
 ```
@@ -166,7 +174,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>주의  
  참조 [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nametranslateacceleratora--ioleinplaceactiveobjectimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  컨테이너에서 메뉴 바로 가기 키 메시지를 처리합니다.  
   
 ```

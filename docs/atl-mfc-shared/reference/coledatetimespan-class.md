@@ -9,9 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.COleDateTimeSpan
 - COleDateTimeSpan
-- ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::Format
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_span
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +123,7 @@ class COleDateTimeSpan
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ATLComTime.h  
   
-##  <a name="a-namecoledatetimespanrelationaloperatorsa--coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan 관계형 연산자  
+##  <a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan 관계형 연산자  
  비교 연산자입니다.  
   
 ```
@@ -138,7 +152,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities #&26;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
-##  <a name="a-namecoledatetimespana--coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
+##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
  `COleDateTimeSpan` 개체를 생성합니다.  
   
 ```
@@ -170,7 +184,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&14;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
-##  <a name="a-nameformata--coledatetimespanformat"></a><a name="format"></a>COleDateTimeSpan::Format  
+##  <a name="format"></a>COleDateTimeSpan::Format  
  서식이 지정 된 문자열 표현을 생성 한 `COleDateTimeSpan` 개체입니다.  
   
 ```
@@ -214,7 +228,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&15;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
-##  <a name="a-namegetdaysa--coledatetimespangetdays"></a><a name="getdays"></a>COleDateTimeSpan::GetDays  
+##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
  이 날짜/시간 범위 값의 일 부분을 검색합니다.  
   
 ```
@@ -246,7 +260,7 @@ LONG GetDays() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&16;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
-##  <a name="a-namegethoursa--coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan::GetHours  
+##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
  이 날짜/시간 범위 값의 시간 부분을 검색합니다.  
   
 ```
@@ -278,7 +292,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&17;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
-##  <a name="a-namegetminutesa--coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
  이 날짜/시간 범위 값의 분 부분을 검색합니다.  
   
 ```
@@ -310,7 +324,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&18;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
-##  <a name="a-namegetsecondsa--coledatetimespangetseconds"></a><a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
  이 날짜/시간 범위 값의 두 번째 부분을 검색 합니다.  
   
 ```
@@ -342,7 +356,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&19;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
-##  <a name="a-namegetstatusa--coledatetimespangetstatus"></a><a name="getstatus"></a>COleDateTimeSpan::GetStatus  
+##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
  이 작업의 상태 (유효성)를 가져옵니다 `COleDateTimeSpan` 개체입니다.  
   
 ```
@@ -385,7 +399,7 @@ DateTimeSpanStatus GetStatus() const throw();
   
  에 대 한 범위에 대 한 자세한 내용은 `COleDateTimeSpan` 문서를 참조 하는 값을 [날짜 및 시간: 자동화 지원](../../atl-mfc-shared/date-and-time-automation-support.md)합니다.  
   
-##  <a name="a-namegettotaldaysa--coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
+##  <a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
  일 단위로이 날짜/시간 범위 값을 검색 합니다.  
   
 ```
@@ -417,7 +431,7 @@ double GetTotalDays() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&20;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
-##  <a name="a-namegettotalhoursa--coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
  시간 단위로이 날짜/시간 범위 값을 검색 합니다.  
   
 ```
@@ -449,7 +463,7 @@ double GetTotalHours() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetTotalDays](#gettotaldays)합니다.  
   
-##  <a name="a-namegettotalminutesa--coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
  분 단위로이 날짜/시간 범위 값을 검색 합니다.  
   
 ```
@@ -481,7 +495,7 @@ double GetTotalMinutes() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetTotalDays](#gettotaldays)합니다.  
   
-##  <a name="a-namegettotalsecondsa--coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
  초 단위로 표시 하는이 날짜/시간 범위 값을 검색 합니다.  
   
 ```
@@ -513,7 +527,7 @@ double GetTotalSeconds() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetTotalDays](#gettotaldays)합니다.  
   
-##  <a name="a-namemspana--coledatetimespanmspan"></a><a name="m_span"></a>COleDateTimeSpan::m_span  
+##  <a name="m_span"></a>COleDateTimeSpan::m_span  
  내부 **double** 값이 `COleDateTime` 개체입니다.  
   
 ```
@@ -526,7 +540,7 @@ double m_span;
 > [!CAUTION]
 >  값을 변경의 **double** 데이터 멤버의 값을 변경 `COleDateTimeSpan` 개체입니다. 이 상태는 변경 되지 않습니다 `COleDateTimeSpan` 개체입니다.  
   
-##  <a name="a-namemstatusa--coledatetimespanmstatus"></a><a name="m_status"></a>COleDateTimeSpan::m_status  
+##  <a name="m_status"></a>COleDateTimeSpan::m_status  
  이 데이터 멤버에 대 한 형식이 열거 형식이 **DateTimeSpanStatus**, 내에서 정의 되는 `COleDateTimeSpan` 클래스입니다.  
   
 ```
@@ -567,7 +581,7 @@ DateTimeSpanStatus m_status;
   
  에 대 한 범위에 대 한 자세한 내용은 `COleDateTimeSpan` 문서를 참조 하는 값을 [날짜 및 시간: 자동화 지원](../../atl-mfc-shared/date-and-time-automation-support.md)합니다.  
   
-##  <a name="a-nameoperatoreqa--coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDateTimeSpan::operator =  
+##  <a name="operator_eq"></a>COleDateTimeSpan::operator =  
  복사본을 `COleDateTimeSpan` 값입니다.  
   
 ```
@@ -577,7 +591,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ### <a name="remarks"></a>주의  
  이 오버 로드 된 대입 연산자 소스 날짜/시간 범위 값이이에 복사 `COleDateTimeSpan` 개체입니다.  
   
-##  <a name="a-nameoperatoradd-a--coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan::operator +,-  
+##  <a name="operator_add_-"></a>COleDateTimeSpan::operator +,-  
  추가, subtract, 및에 대 한 기호를 변경할 `COleDateTimeSpan` 값입니다.  
   
 ```
@@ -598,7 +612,7 @@ COleDateTimeSpan operator-() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities&23;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =, =  
+##  <a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =, =  
  더하기 및 빼기는 `COleDateTimeSpan` 값이 `COleDateTimeSpan` 값입니다.  
   
 ```
@@ -616,7 +630,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&24;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
-##  <a name="a-nameoperatordoublea--coledatetimespanoperator-double"></a><a name="operator_double"></a>Double COleDateTimeSpan::operator  
+##  <a name="operator_double"></a>Double COleDateTimeSpan::operator  
  이 변환 `COleDateTimeSpan` 값을 한 **이중**합니다.  
   
 ```
@@ -626,7 +640,7 @@ operator double() const throw();
 ### <a name="remarks"></a>주의  
  이 값을 반환 하는이 연산자 `COleDateTimeSpan` 일도 부동 소수점 숫자 값입니다.  
   
-##  <a name="a-namesetdatetimespana--coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
+##  <a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
  이 날짜/시간 범위 값의 값을 설정 합니다.  
   
 ```
@@ -659,7 +673,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&21;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
-##  <a name="a-namesetstatusa--coledatetimespansetstatus"></a><a name="setstatus"></a>COleDateTimeSpan::SetStatus  
+##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
  이 작업의 상태 (유효성) 설정 `COleDateTimeSpan` 개체입니다.  
   
 ```

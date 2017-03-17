@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::AddTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::AllowDestroyEmptyTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::ApplyRestoredTabInfo
+- AFXBASETABBEDPANE/CBaseTabbedPane::CanFloat
+- AFXBASETABBEDPANE/CBaseTabbedPane::CanSetCaptionTextToTabName
+- AFXBASETABBEDPANE/CBaseTabbedPane::ConvertToTabbedDocument
+- AFXBASETABBEDPANE/CBaseTabbedPane::DetachPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::EnableSetCaptionTextToTabName
+- AFXBASETABBEDPANE/CBaseTabbedPane::FillDefaultTabsOrderArray
+- AFXBASETABBEDPANE/CBaseTabbedPane::FindBarByTabNumber
+- AFXBASETABBEDPANE/CBaseTabbedPane::FindPaneByID
+- AFXBASETABBEDPANE/CBaseTabbedPane::FloatTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetDefaultTabsOrder
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetFirstVisibleTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetMinSize
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetPaneIcon
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetPaneList
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetTabArea
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetTabsNum
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetUnderlyingWindow
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetVisibleTabsNum
+- AFXBASETABBEDPANE/CBaseTabbedPane::HasAutoHideMode
+- AFXBASETABBEDPANE/CBaseTabbedPane::IsHideSingleTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::RecalcLayout
+- AFXBASETABBEDPANE/CBaseTabbedPane::RemovePane
+- AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoDestroy
+- AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoHideMode
+- AFXBASETABBEDPANE/CBaseTabbedPane::ShowTab
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +151,7 @@ class CBaseTabbedPane : public CDockablePane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxBaseTabbedPane.h  
   
-##  <a name="a-nameaddtaba--cbasetabbedpaneaddtab"></a><a name="addtab"></a>CBaseTabbedPane::AddTab  
+##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
  탭된 창에 새 탭을 추가합니다.  
   
 ```  
@@ -152,7 +181,7 @@ virtual BOOL AddTab(
 ### <a name="remarks"></a>주의  
  창 탭된 창에 새 탭으로 추가 하려면이 메서드를 호출 합니다. 경우 `pNewBar` 형식의 개체를 가리키는 `CBaseTabbedPane`, 모든 탭 탭된 창에 복사 됩니다 차례로 `pNewBar` 소멸 됩니다. 따라서 `pNewBar` 잘못 된 포인터를 되 고 사용할 수 없습니다.  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cbasetabbedpaneallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -165,7 +194,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ### <a name="remarks"></a>주의  
  가 빈 탭된 창을 소멸 되도록 허용 되지 않은 경우 프레임 워크 대신 창을 숨깁니다.  
   
-##  <a name="a-nameapplyrestoredtabinfoa--cbasetabbedpaneapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
  레지스트리에서 탭의 설정을 로드 하 고 탭된 창에 적용 합니다.  
   
 ```  
@@ -179,7 +208,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ### <a name="remarks"></a>주의  
  이 메서드는 레지스트리에서 도킹 상태 정보를 다시 로드 하는 경우 프레임 워크에 의해 호출 됩니다. 메서드는 탭 순서 및 탭된 창에 대 한 탭 이름에 대 한 정보를 가져옵니다.  
   
-##  <a name="a-namecanfloata--cbasetabbedpanecanfloat"></a><a name="canfloat"></a>CBaseTabbedPane::CanFloat  
+##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
  탭된 창 부동 상태로 있을 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -189,7 +218,7 @@ virtual BOOL CanFloat() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`경우 창에서 부동 상태로 있을 수 있습니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namecansetcaptiontexttotabnamea--cbasetabbedpanecansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
  탭된 창 캡션의 활성 탭으로 동일한 텍스트를 표시할지 여부를 결정 합니다.  
   
 ```  
@@ -202,7 +231,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ### <a name="remarks"></a>주의  
  텍스트에 표시할지 여부 탭된 창 캡션 중복 활성 탭의 레이블을 결정 하는 메서드를 사용 됩니다. 호출 하 여이 기능을 해제 하거나 설정할 수 있습니다 [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)합니다.  
   
-##  <a name="a-nameconverttotabbeddocumenta--cbasetabbedpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
  하나 이상의 도킹 가능한 창을 MDI 탭 문서로 변환합니다.  
   
 ```  
@@ -213,7 +242,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
  [in] `bActiveTabOnly`  
  탭된 창으로 변환 하면 지정 `TRUE` 활성 탭만 변환 합니다. 지정 `FALSE` 창의 모든 탭을 변환할 수 있습니다.  
   
-##  <a name="a-namedetachpanea--cbasetabbedpanedetachpane"></a><a name="detachpane"></a>CBaseTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
  창이 탭된 창에서 분리합니다.  
   
 ```  
@@ -235,7 +264,7 @@ virtual BOOL DetachPane(
 ### <a name="remarks"></a>주의  
  프레임 워크는 가능한 경우 분리 된 창을 배치 됩니다. 자세한 내용은 참조 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)합니다.  
   
-##  <a name="a-nameenablesetcaptiontexttotabnamea--cbasetabbedpaneenablesetcaptiontexttotabname"></a><a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
+##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
  활성 탭에 있는 레이블 텍스트 캡션 텍스트를 동기화 하는 탭된 창의 기능을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -246,7 +275,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
  [in] `bEnable`  
  `TRUE`활성 탭 캡션이; 탭된 창 캡션을 동기화 하려면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namefilldefaulttabsorderarraya--cbasetabbedpanefilldefaulttabsorderarray"></a><a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
+##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
  내부 탭 순서를 기본 상태로 복원합니다.  
   
 ```  
@@ -256,7 +285,7 @@ void FillDefaultTabsOrderArray();
 ### <a name="remarks"></a>주의  
  이 메서드는 프레임 워크를 초기 상태로 Outlook 표시줄을 복원 하는 경우 호출 됩니다.  
   
-##  <a name="a-namefindpanebyida--cbasetabbedpanefindpanebyid"></a><a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
+##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
  창 ID로 식별 되는 창을 반환합니다  
   
 ```  
@@ -273,7 +302,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ### <a name="remarks"></a>주의  
  창의 모든 탭을 비교 하 고로 지정 된 ID 가진 항목을 반환 하는이 메서드는 `uBarID` 매개 변수입니다.  
   
-##  <a name="a-namefindbarbytabnumbera--cbasetabbedpanefindbarbytabnumber"></a><a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
+##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
  탭에 있는 창을 반환 합니다.  
   
 ```  
@@ -295,7 +324,7 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하 여 지정 된 탭에 있는 창에서 검색할는 `nTabNum` 매개 변수입니다.  
   
-##  <a name="a-namefloattaba--cbasetabbedpanefloattab"></a><a name="floattab"></a>CBaseTabbedPane::FloatTab  
+##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
  창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다.  
   
 ```  
@@ -327,7 +356,7 @@ virtual BOOL FloatTab(
   
  창을 프로그래밍 방식으로 분리 하려면 지정 `DM_SHOW` 에 대 한는 `dockMethod` 매개 변수입니다. 이전에 떠 있는 동일한 위치에 있는 창 부동 소수점을 지정 하려는 경우 `DM_DBL_CLICK` 으로 `dockMethod` 매개 변수입니다.  
   
-##  <a name="a-namegetdefaulttabsordera--cbasetabbedpanegetdefaulttabsorder"></a><a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
+##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
  창에서 탭의 기본 순서를 반환합니다.  
   
 ```  
@@ -340,7 +369,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 ### <a name="remarks"></a>주의  
  Outlook 표시줄은 초기 상태로 다시 설정 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
   
-##  <a name="a-namegetfirstvisibletaba--cbasetabbedpanegetfirstvisibletab"></a><a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
  첫 번째 표시 된 탭에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -354,7 +383,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ### <a name="return-value"></a>반환 값  
  성공 하는 경우 첫 번째 표시 된 탭;에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
-##  <a name="a-namegetminsizea--cbasetabbedpanegetminsize"></a><a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
+##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
  창 크기에 허용 되는 최소값을 검색 합니다.  
   
 ```  
@@ -368,7 +397,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>주의  
  최소 창 크기의 일관 된 처리 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기에 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워지는 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
   
-##  <a name="a-namegetpaneicona--cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
+##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
  창 크기에 허용 되는 최소값을 검색 합니다.  
   
 ```  
@@ -382,7 +411,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>주의  
  최소 창 크기의 일관 된 처리 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기에 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워지는 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
   
-##  <a name="a-namegetpanelista--cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
+##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
  탭된 창에 포함 된 창 목록을 반환 합니다.  
   
 ```  
@@ -398,7 +427,7 @@ virtual void GetPaneList(
  [in] `pRTCFilter`  
  없는 경우 `NULL`, 반환된 된 목록에 지정된 된 런타임 클래스를 가지는 창이 합니다.  
   
-##  <a name="a-namegettabareaa--cbasetabbedpanegettabarea"></a><a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
  위쪽 및 아래쪽 탭 영역에 대 한 경계 사각형을 반환합니다.  
   
 ```  
@@ -417,7 +446,7 @@ virtual void GetTabArea(
 ### <a name="remarks"></a>주의  
  화면 좌표로 상한 및 하 한 탭 영역에 대 한 경계 사각형을 확인 하려면이 메서드를 호출 합니다.  
   
-##  <a name="a-namegettabsnuma--cbasetabbedpanegettabsnum"></a><a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
+##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
  탭 창의 탭의 수를 반환 합니다.  
   
 ```  
@@ -427,7 +456,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>반환 값  
  탭된 창에 탭의 수입니다.  
   
-##  <a name="a-namegetunderlyingwindowa--cbasetabbedpanegetunderlyingwindow"></a><a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
+##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
  기본 (래핑된) 탭 창을 가져옵니다.  
   
 ```  
@@ -437,7 +466,7 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ### <a name="return-value"></a>반환 값  
  기본 탭 창에 대 한 포인터입니다.  
   
-##  <a name="a-namegetvisibletabsnuma--cbasetabbedpanegetvisibletabsnum"></a><a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
  표시 탭의 수를 반환 합니다.  
   
 ```  
@@ -450,7 +479,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="remarks"></a>주의  
  탭된 창에 표시 탭 수를 확인 하려면이 메서드를 호출 합니다.  
   
-##  <a name="a-namehasautohidemodea--cbasetabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
  탭 창을 자동 숨기기 모드로 전환할 수 있는지 여부를 결정합니다.  
   
 ```  
@@ -463,7 +492,7 @@ virtual BOOL HasAutoHideMode() const;
 ### <a name="remarks"></a>주의  
  자동 숨기기 모드를 비활성화 한 경우 탭된 창 캡션에 없습니다 pin 단추가 표시 됩니다.  
   
-##  <a name="a-nameishidesingletaba--cbasetabbedpaneishidesingletab"></a><a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
  탭된 창에 탭이 표시 되는지 숨겨지는지 여부를 결정 합니다.  
   
 ```  
@@ -476,7 +505,7 @@ virtual BOOL IsHideSingleTab() const;
 ### <a name="remarks"></a>주의  
  창에서 탭 하나만 열려 있기 때문에 표시 되지 않으면 탭된 창 제대로 작동 하는지 확인 하려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="a-nameremovepanea--cbasetabbedpaneremovepane"></a><a name="removepane"></a>CBaseTabbedPane::RemovePane  
+##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
  창이 탭된 창에서 제거합니다.  
   
 ```  
@@ -493,7 +522,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 ### <a name="remarks"></a>주의  
  지정 된 창에서 제거 하려면이 메서드를 호출 하는 `pBar` 탭된 창에서 매개 변수입니다.  
   
-##  <a name="a-namesetautodestroya--cbasetabbedpanesetautodestroy"></a><a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
  탭된 컨트롤 막대를 자동으로 소멸 됩니다 여부를 결정 합니다.  
   
 ```  
@@ -507,7 +536,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ### <a name="remarks"></a>주의  
  설정의 자동 소멸 모드를 `TRUE` 탭된 창을 동적으로 만드는 고 하지는 수명을 제어 하는 경우. 하는 경우 자동 소멸 모드는 `TRUE`, 탭된 창 프레임 워크에 의해 자동으로 소멸 됩니다.  
   
-##  <a name="a-nameshowtaba--cbasetabbedpaneshowtab"></a><a name="showtab"></a>CBaseTabbedPane::ShowTab  
+##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
  표시 하거나 탭을 숨깁니다.  
   
 ```  
@@ -537,7 +566,7 @@ virtual BOOL ShowTab(
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하면 창을 표시 되거나 값에 따라 숨겨진는 `bShow` 매개 변수입니다. 탭을 숨기고 기본 탭 창의 마지막 표시 탭에는 탭된 창이 숨겨집니다. 표시 탭 이전에 경우에 탭을 표시 하는 경우에 탭된 창 표시 됩니다.  
   
-##  <a name="a-namerecalclayouta--cbasetabbedpanerecalclayout"></a><a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
+##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
  창에 대 한 레이아웃 정보를 다시 계산합니다.  
   
 ```  
@@ -549,7 +578,7 @@ virtual void RecalcLayout();
   
  창에서 고정 되어 있는 경우이 메서드는 아무 작업도 수행 하지 않습니다.  
   
-##  <a name="a-namesetautohidemodea--cbasetabbedpanesetautohidemode"></a><a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
  탭된 창에 분리 가능한 창에 대 한 자동 숨김 모드를 설정합니다.  
   
 ```  

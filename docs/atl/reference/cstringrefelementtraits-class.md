@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
-- ATL.CStringRefElementTraits
-- ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElements
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
+- ATLCOLL/ATL::CStringRefElementTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
  두 문자열 요소가 같은지 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -95,7 +97,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>반환 값  
  요소가 같은지, false 그렇지 않으면 true를 반환 합니다.  
   
-##  <a name="a-namecompareelementsordereda--cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
  두 문자열 요소를 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -112,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>반환 값  
  문자열이 동일 하면 0이 할당 < 0="" if=""> `str1` 는 보다 작은 `str2`, 또는 > 0 경우 `str1` 보다 크면 `str2`합니다. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) 메서드는 비교를 수행 하는 데 사용 됩니다.  
   
-##  <a name="a-namehasha--cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>CStringRefElementTraits::Hash  
  지정된 문자열 요소에 대 한 해시 값을 계산 하려면이 정적 함수를 호출 합니다.  
   
 ```

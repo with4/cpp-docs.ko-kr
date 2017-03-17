@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInterpolatorBase
 - CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CreateInstance
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDependencies
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetFinalValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateVelocity
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,14 +94,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecinterpolatorbasea--cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
  CInterpolatorBase 개체를 만듭니다.  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="a-namecreateinstancea--cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
  CInterpolatorBase의 인스턴스를 만들어 이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.  
   
 ```  
@@ -109,7 +119,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namegetdependenciesa--cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
  보간의 종속성을 가져옵니다.  
   
 ```  
@@ -132,7 +142,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetDependencies 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-namegetdurationa--cinterpolatorbasegetduration"></a><a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
  보간의 기간을 가져옵니다.  
   
 ```  
@@ -146,7 +156,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetDuration 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-namegetfinalvaluea--cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
  보간 잠재 고객의 최종 값을 가져옵니다.  
   
 ```  
@@ -160,7 +170,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetFinalValue 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-nameinterpolatevaluea--cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
  지정된 된 오프셋 위치에서 값을 보간합니다.  
   
 ```  
@@ -179,7 +189,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 InterpolateValue 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-nameinterpolatevelocitya--cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
  지정 된 오프셋 위치 속도를 보간합니다.  
   
 ```  
@@ -198,7 +208,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 InterpolateVelocity 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-namesetcustominterpolatora--cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
  이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.  
   
 ```  
@@ -209,7 +219,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  사용자 지정 보간 기에 대 한 포인터입니다.  
   
-##  <a name="a-namesetdurationa--cinterpolatorbasesetduration"></a><a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
  보간 기의 기간을 설정합니다.  
   
 ```  
@@ -223,7 +233,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 SetDuration 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
   
-##  <a name="a-namesetinitialvalueandvelocitya--cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
  보간의 초기 값과 개발 속도 설정합니다.  
   
 ```  

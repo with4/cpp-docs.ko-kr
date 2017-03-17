@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSacl
-- ATL::CSacl
 - CSacl
+- ATLSECURITY/ATL::CSacl
+- ATLSECURITY/ATL::CSacl::CSacl
+- ATLSECURITY/ATL::CSacl::AddAuditAce
+- ATLSECURITY/ATL::CSacl::GetAceCount
+- ATLSECURITY/ATL::CSacl::RemoveAce
+- ATLSECURITY/ATL::CSacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-nameaddauditacea--csacladdauditace"></a><a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>CSacl::AddAuditAce  
  감사 액세스 제어 항목 (ACE)에 추가 된 `CSacl` 개체입니다.  
   
 ```
@@ -145,7 +149,7 @@ bool AddAuditAce(
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에 설정 될 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
-##  <a name="a-namecsacla--csaclcsacl"></a><a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>CSacl::CSacl  
  생성자입니다.  
   
 ```
@@ -160,7 +164,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>주의  
  `CSacl` 개체가 생성 될 수 필요에 따라 기존를 사용 하 여 **ACL** 구조입니다. 이 매개 변수는 임의 액세스 제어 목록 (DACL) 및 시스템 액세스 제어 목록 (SACL) 인지 확인 합니다. 디버그 빌드에 DACL 제공 되는 경우에 어설션을 발생 합니다. 릴리스 빌드에서 DACL에서 모든 항목은 무시 됩니다.  
   
-##  <a name="a-namedtora--csaclcsacl"></a><a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>CSacl:: ~ CSacl  
  소멸자입니다.  
   
 ```
@@ -170,7 +174,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>주의  
  소멸자는 모든 액세스 제어 항목 (Ace)를 포함 하 여 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
-##  <a name="a-namegetacecounta--csaclgetacecount"></a><a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>CSacl::GetAceCount  
  액세스 제어 항목 (Ace)의 수를 반환 된 `CSacl` 개체입니다.  
   
 ```
@@ -180,7 +184,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>반환 값  
  에 포함 된 Ace의 수를 반환 된 `CSacl` 개체입니다.  
   
-##  <a name="a-nameoperatoreqa--csacloperator-"></a><a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>CSacl::operator =  
  대입 연산자입니다.  
   
 ```
@@ -194,7 +198,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트에 대 한 참조를 반환 합니다. `CSacl` 개체입니다. 확인 된 **ACL** 매개 변수는 실제로 시스템 액세스 제어 목록 (SACL)와 임의 액세스 제어 목록 (DACL). 어설션을 발생 하며 디버그 빌드 및 릴리스 빌드에서 **ACL** 매개 변수는 무시 됩니다.  
   
-##  <a name="a-nameremoveacea--csaclremoveace"></a><a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>CSacl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 **CSacl** 개체입니다.  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
-##  <a name="a-nameremoveallacesa--csaclremoveallaces"></a><a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
  에 포함 된 액세스 제어 항목 (Ace)를 모두 제거는 `CSacl` 개체입니다.  
   
 ```

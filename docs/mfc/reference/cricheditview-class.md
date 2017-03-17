@@ -10,6 +10,54 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditView
+- AFXRICH/CRichEditView
+- AFXRICH/CRichEditView::CRichEditView
+- AFXRICH/CRichEditView::AdjustDialogPosition
+- AFXRICH/CRichEditView::CanPaste
+- AFXRICH/CRichEditView::DoPaste
+- AFXRICH/CRichEditView::FindText
+- AFXRICH/CRichEditView::FindTextSimple
+- AFXRICH/CRichEditView::GetCharFormatSelection
+- AFXRICH/CRichEditView::GetDocument
+- AFXRICH/CRichEditView::GetInPlaceActiveItem
+- AFXRICH/CRichEditView::GetMargins
+- AFXRICH/CRichEditView::GetPageRect
+- AFXRICH/CRichEditView::GetPaperSize
+- AFXRICH/CRichEditView::GetParaFormatSelection
+- AFXRICH/CRichEditView::GetPrintRect
+- AFXRICH/CRichEditView::GetPrintWidth
+- AFXRICH/CRichEditView::GetRichEditCtrl
+- AFXRICH/CRichEditView::GetSelectedItem
+- AFXRICH/CRichEditView::GetTextLength
+- AFXRICH/CRichEditView::GetTextLengthEx
+- AFXRICH/CRichEditView::InsertFileAsObject
+- AFXRICH/CRichEditView::InsertItem
+- AFXRICH/CRichEditView::IsRichEditFormat
+- AFXRICH/CRichEditView::OnCharEffect
+- AFXRICH/CRichEditView::OnParaAlign
+- AFXRICH/CRichEditView::OnUpdateCharEffect
+- AFXRICH/CRichEditView::OnUpdateParaAlign
+- AFXRICH/CRichEditView::PrintInsideRect
+- AFXRICH/CRichEditView::PrintPage
+- AFXRICH/CRichEditView::SetCharFormat
+- AFXRICH/CRichEditView::SetMargins
+- AFXRICH/CRichEditView::SetPaperSize
+- AFXRICH/CRichEditView::SetParaFormat
+- AFXRICH/CRichEditView::TextNotFound
+- AFXRICH/CRichEditView::GetClipboardData
+- AFXRICH/CRichEditView::GetContextMenu
+- AFXRICH/CRichEditView::IsSelected
+- AFXRICH/CRichEditView::OnFindNext
+- AFXRICH/CRichEditView::OnInitialUpdate
+- AFXRICH/CRichEditView::OnPasteNativeObject
+- AFXRICH/CRichEditView::OnPrinterChanged
+- AFXRICH/CRichEditView::OnReplaceAll
+- AFXRICH/CRichEditView::OnReplaceSel
+- AFXRICH/CRichEditView::OnTextNotFound
+- AFXRICH/CRichEditView::QueryAcceptData
+- AFXRICH/CRichEditView::WrapChanged
+- AFXRICH/CRichEditView::m_nBulletIndent
+- AFXRICH/CRichEditView::m_nWordWrap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -145,7 +193,7 @@ class CRichEditView : public CCtrlView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrich.h  
   
-##  <a name="a-nameadjustdialogpositiona--cricheditviewadjustdialogposition"></a><a name="adjustdialogposition"></a>CRichEditView::AdjustDialogPosition  
+##  <a name="adjustdialogposition"></a>CRichEditView::AdjustDialogPosition  
  현재 선택 영역을 가리지 않습니다 되도록 지정된 대화 상자를 이동 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -156,7 +204,7 @@ void AdjustDialogPosition(CDialog* pDlg);
  *pDlg*  
  `CDialog` 개체에 대한 포인터입니다.  
   
-##  <a name="a-namecanpastea--cricheditviewcanpaste"></a><a name="canpaste"></a>CRichEditView::CanPaste  
+##  <a name="canpaste"></a>CRichEditView::CanPaste  
  이 서식 있는 편집 보기에 붙여 넣을 수 있는 정보를 클립보드에 포함 되어 있는지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -166,14 +214,14 @@ BOOL CanPaste() const;
 ### <a name="return-value"></a>반환 값  
  이 서식 있는 편집 보기를 사용할 수 있습니다; 되는 형식에서 데이터 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namecricheditviewa--cricheditviewcricheditview"></a><a name="cricheditview"></a>CRichEditView::CRichEditView  
+##  <a name="cricheditview"></a>CRichEditView::CRichEditView  
  이 함수를 만드는 호출을 `CRichEditView` 개체입니다.  
   
 ```  
 CRichEditView();
 ```  
   
-##  <a name="a-namedopastea--cricheditviewdopaste"></a><a name="dopaste"></a>CRichEditView::DoPaste  
+##  <a name="dopaste"></a>CRichEditView::DoPaste  
  OLE 항목에 붙여 넣는 데이 함수를 호출 `dataobj` 이 풍부한 문서/뷰를 편집 합니다.  
   
 ```  
@@ -198,7 +246,7 @@ void DoPaste(
   
  이 함수는 붙여넣기를 선택 하 여 붙여넣기 작업에 대 한 처리기의 결과에 따라 유형의 결정 합니다. 경우 `cf` 0 인 새 항목이 현재 근무 표현을 사용 합니다. 경우 `cf`&0;이 아닌 및 `hMetaPict` 없는 **NULL**를 사용 하 여 새 항목 `hMetaPict` 표현에 대 한 합니다.  
   
-##  <a name="a-namefindtexta--cricheditviewfindtext"></a><a name="findtext"></a>CRichEditView::FindText  
+##  <a name="findtext"></a>CRichEditView::FindText  
  지정된 된 텍스트 찾기 및 현재 선택 영역을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -231,7 +279,7 @@ BOOL FindText(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView 다각도](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]  
   
-##  <a name="a-namefindtextsimplea--cricheditviewfindtextsimple"></a><a name="findtextsimple"></a>CRichEditView::FindTextSimple  
+##  <a name="findtextsimple"></a>CRichEditView::FindTextSimple  
  지정된 된 텍스트 찾기 및 현재 선택 영역을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -261,7 +309,7 @@ BOOL FindTextSimple(
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
-##  <a name="a-namegetcharformatselectiona--cricheditviewgetcharformatselection"></a><a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection  
+##  <a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection  
  현재 선택 된 특성을 형식 지정 문자를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -277,7 +325,7 @@ CHARFORMAT2& GetCharFormatSelection();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&152;](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="a-namegetclipboarddataa--cricheditviewgetclipboarddata"></a><a name="getclipboarddata"></a>CRichEditView::GetClipboardData  
+##  <a name="getclipboarddata"></a>CRichEditView::GetClipboardData  
  처리의 일부로이 함수를 호출 하는 프레임 워크 [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)합니다.  
   
 ```  
@@ -321,7 +369,7 @@ virtual HRESULT GetClipboardData(
   
  자세한 내용은 참조 [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341), [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315), 및 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 참조 및 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 에 [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]합니다.  
   
-##  <a name="a-namegetcontextmenua--cricheditviewgetcontextmenu"></a><a name="getcontextmenu"></a>CRichEditView::GetContextMenu  
+##  <a name="getcontextmenu"></a>CRichEditView::GetContextMenu  
  처리의 일부로이 함수를 호출 하는 프레임 워크 [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317)합니다.  
   
 ```  
@@ -365,7 +413,7 @@ virtual HMENU GetContextMenu(
   
  대 한 자세한 내용은 **OLEOBJECT** 입력에서 OLE 데이터 구조 및 구조 할당 문서를 참조 하십시오는 *OLE 기술 자료*합니다.  
   
-##  <a name="a-namegetdocumenta--cricheditviewgetdocument"></a><a name="getdocument"></a>CRichEditView::GetDocument  
+##  <a name="getdocument"></a>CRichEditView::GetDocument  
  에 대 한 포인터를 가져오려면이 함수를 호출 하 여 `CRichEditDoc` 이 보기에 연결 된.  
   
 ```  
@@ -375,7 +423,7 @@ CRichEditDoc* GetDocument() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 개체와 관련 된 프로그램 `CRichEditView` 개체입니다.  
   
-##  <a name="a-namegetinplaceactiveitema--cricheditviewgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>CRichEditView::GetInPlaceActiveItem  
+##  <a name="getinplaceactiveitem"></a>CRichEditView::GetInPlaceActiveItem  
  호출 OLE를 가져오려면이 함수를 항목을이 위치에서 현재 활성화 된 `CRichEditView` 개체입니다.  
   
 ```  
@@ -385,7 +433,7 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 ### <a name="return-value"></a>반환 값  
  단일, 내부 활성화에 대 한 포인터 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 이 서식 있는 편집 뷰에 개체 **NULL** OLE 항목이 없는 현재 위치에서 활성 상태인 경우입니다.  
   
-##  <a name="a-namegetmarginsa--cricheditviewgetmargins"></a><a name="getmargins"></a>CRichEditView::GetMargins  
+##  <a name="getmargins"></a>CRichEditView::GetMargins  
  인쇄에 사용 되는 여백이 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -395,7 +443,7 @@ CRect GetMargins() const;
 ### <a name="return-value"></a>반환 값  
  인쇄에 사용 된 여백 단위로 `MM_TWIPS`합니다.  
   
-##  <a name="a-namegetpagerecta--cricheditviewgetpagerect"></a><a name="getpagerect"></a>CRichEditView::GetPageRect  
+##  <a name="getpagerect"></a>CRichEditView::GetPageRect  
  인쇄에 사용 되는 페이지의 크기를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -408,7 +456,7 @@ CRect GetPageRect() const;
 ### <a name="remarks"></a>주의  
  이 값은 용지 크기를 기반으로 합니다.  
   
-##  <a name="a-namegetpapersizea--cricheditviewgetpapersize"></a><a name="getpapersize"></a>CRichEditView::GetPaperSize  
+##  <a name="getpapersize"></a>CRichEditView::GetPaperSize  
  현재 용지 크기를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -421,7 +469,7 @@ CSize GetPaperSize() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&153;](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]  
   
-##  <a name="a-namegetparaformatselectiona--cricheditviewgetparaformatselection"></a><a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection  
+##  <a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection  
  단락 서식 현재 선택 된 특성을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -434,7 +482,7 @@ PARAFORMAT2& GetParaFormatSelection();
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) 메시지 및 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetprintrecta--cricheditviewgetprintrect"></a><a name="getprintrect"></a>CRichEditView::GetPrintRect  
+##  <a name="getprintrect"></a>CRichEditView::GetPrintRect  
  페이지 사각형 내에서 인쇄 영역의 범위를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -447,7 +495,7 @@ CRect GetPrintRect() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&154;](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]  
   
-##  <a name="a-namegetprintwidtha--cricheditviewgetprintwidth"></a><a name="getprintwidth"></a>CRichEditView::GetPrintWidth  
+##  <a name="getprintwidth"></a>CRichEditView::GetPrintWidth  
  인쇄 영역의 너비를 결정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -457,7 +505,7 @@ int GetPrintWidth() const;
 ### <a name="return-value"></a>반환 값  
  인쇄 영역 너비에 `MM_TWIPS`합니다.  
   
-##  <a name="a-namegetricheditctrla--cricheditviewgetricheditctrl"></a><a name="getricheditctrl"></a>CRichEditView::GetRichEditCtrl  
+##  <a name="getricheditctrl"></a>CRichEditView::GetRichEditCtrl  
  검색 하려면이 함수 호출의 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) 연관 된 개체는 `CRichEditView` 개체입니다.  
   
 ```  
@@ -470,7 +518,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
-##  <a name="a-namegetselecteditema--cricheditviewgetselecteditem"></a><a name="getselecteditem"></a>CRichEditView::GetSelectedItem  
+##  <a name="getselecteditem"></a>CRichEditView::GetSelectedItem  
  OLE 항목을 검색 하려면이 함수를 호출 (한 `CRichEditCntrItem` 개체)이 현재 선택 된 `CRichEditView` 개체입니다.  
   
 ```  
@@ -480,7 +528,7 @@ CRichEditCntrItem* GetSelectedItem() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 에서 선택한 개체는 `CRichEditView` 개체입니다. **NULL** 이 보기에서 선택 된 항목이 있는 경우.  
   
-##  <a name="a-namegettextlengtha--cricheditviewgettextlength"></a><a name="gettextlength"></a>CRichEditView::GetTextLength  
+##  <a name="gettextlength"></a>CRichEditView::GetTextLength  
  이 텍스트의 길이 검색 하려면이 함수를 호출 `CRichEditView` 개체입니다.  
   
 ```  
@@ -490,7 +538,7 @@ long GetTextLength() const;
 ### <a name="return-value"></a>반환 값  
  이 텍스트의 길이 `CRichEditView` 개체입니다.  
   
-##  <a name="a-namegettextlengthexa--cricheditviewgettextlengthex"></a><a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx  
  이 텍스트의 길이 계산 하려면이 함수를 호출 `CRichEditView` 개체입니다.  
   
 ```  
@@ -512,7 +560,7 @@ long GetTextLengthEx(
 ### <a name="remarks"></a>주의  
  `GetTextLengthEx`텍스트의 길이 결정 하는 추가 방법을 제공 합니다. 서식 있는 편집 2.0 기능을 지원합니다. 자세한 내용은 참조 [서식 있는 편집 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinsertfileasobjecta--cricheditviewinsertfileasobject"></a><a name="insertfileasobject"></a>CRichEditView::InsertFileAsObject  
+##  <a name="insertfileasobject"></a>CRichEditView::InsertFileAsObject  
  지정된 된 파일을 삽입 하려면이 함수 호출 (으로 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 개체)를 서식 있는 보기를 편집 합니다.  
   
 ```  
@@ -523,7 +571,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
  `lpszFileName`  
  삽입할 파일의 이름을 포함 하는 문자열입니다.  
   
-##  <a name="a-nameinsertitema--cricheditviewinsertitem"></a><a name="insertitem"></a>CRichEditView::InsertItem  
+##  <a name="insertitem"></a>CRichEditView::InsertItem  
  삽입 하려면이 함수를 호출 하는 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 를 서식 있는 편집 보기에는 개체입니다.  
   
 ```  
@@ -540,7 +588,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ### <a name="remarks"></a>주의  
  대 한 자세한 내용은 `HRESULT`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisricheditformata--cricheditviewisricheditformat"></a><a name="isricheditformat"></a>CRichEditView::IsRichEditFormat  
+##  <a name="isricheditformat"></a>CRichEditView::IsRichEditFormat  
  여부를 확인 하려면이 함수를 호출 `cf` 클립보드 형식이 텍스트, 서식 있는 텍스트 또는 서식 있는 텍스트 OLE 항목을 포함 합니다.  
   
 ```  
@@ -554,7 +602,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ### <a name="return-value"></a>반환 값  
  0이 아닌 값 `cf` 풍부한 편집 또는 텍스트 클립보드 형식입니다.  
   
-##  <a name="a-nameisselecteda--cricheditviewisselected"></a><a name="isselected"></a>CRichEditView::IsSelected  
+##  <a name="isselected"></a>CRichEditView::IsSelected  
  지정된 된 OLE 항목이이 보기에서 현재 선택 되어 있는지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -571,14 +619,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>주의  
  파생 된 뷰 클래스에 OLE 항목의 선택 집합을 처리 하기 위한 다른 방법을 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-namemnbulletindenta--cricheditviewmnbulletindent"></a><a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent  
+##  <a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent  
  글머리 기호 항목 목록이;에 대 한 들여쓰기 기본적으로 720 단위는 1/2 인치입니다.  
   
 ```  
 int m_nBulletIndent;  
 ```  
   
-##  <a name="a-namemnwordwrapa--cricheditviewmnwordwrap"></a><a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap  
+##  <a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap  
  이 서식 있는 편집 보기에 대 한 자동 줄 바꿈 형식을 나타냅니다.  
   
 ```  
@@ -597,7 +645,7 @@ int m_nWordWrap;
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::WrapChanged](#wrapchanged)합니다.  
   
-##  <a name="a-nameonchareffecta--cricheditviewonchareffect"></a><a name="onchareffect"></a>CRichEditView::OnCharEffect  
+##  <a name="onchareffect"></a>CRichEditView::OnCharEffect  
  현재 선택 영역에 대 한 효과 서식 문자를 전환 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -621,7 +669,7 @@ void OnCharEffect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&155;](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
   
-##  <a name="a-nameonfindnexta--cricheditviewonfindnext"></a><a name="onfindnext"></a>CRichEditView::OnFindNext  
+##  <a name="onfindnext"></a>CRichEditView::OnFindNext  
  찾기/바꾸기 대화 상자에서 명령을 처리 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -648,7 +696,7 @@ virtual void OnFindNext(
 ### <a name="remarks"></a>주의  
  내에서 텍스트를 찾으려면이 함수를 호출 하는 `CRichEditView`합니다. 파생 된 뷰 클래스에 대 한 검색 특성을 변경 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameoninitialupdatea--cricheditviewoninitialupdate"></a><a name="oninitialupdate"></a>CRichEditView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>CRichEditView::OnInitialUpdate  
  프레임 워크에서 뷰를 먼저 문서에 연결한 후 전에 호출 처음 표시 되는 보기.  
   
 ```  
@@ -661,7 +709,7 @@ virtual void OnInitialUpdate();
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::m_nWordWrap](#m_nwordwrap)합니다.  
   
-##  <a name="a-nameonpastenativeobjecta--cricheditviewonpastenativeobject"></a><a name="onpastenativeobject"></a>CRichEditView::OnPasteNativeObject  
+##  <a name="onpastenativeobject"></a>CRichEditView::OnPasteNativeObject  
  이 함수를 사용 하 여 포함된 된 항목에서 원시 데이터를 로드 합니다.  
   
 ```  
@@ -682,7 +730,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  자세한 내용은 참조 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonparaaligna--cricheditviewonparaalign"></a><a name="onparaalign"></a>CRichEditView::OnParaAlign  
+##  <a name="onparaalign"></a>CRichEditView::OnParaAlign  
  선택 된 단락에서 단락 맞춤을 변경 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -702,7 +750,7 @@ void OnParaAlign(WORD wAlign);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&156;](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]  
   
-##  <a name="a-nameonprinterchangeda--cricheditviewonprinterchanged"></a><a name="onprinterchanged"></a>CRichEditView::OnPrinterChanged  
+##  <a name="onprinterchanged"></a>CRichEditView::OnPrinterChanged  
  프린터를 변경할 때이 서식 있는 편집 보기에 대 한 특성을 변경 하려면이 함수를 재정의 합니다.  
   
 ```  
@@ -716,7 +764,7 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ### <a name="remarks"></a>주의  
  기본 구현에서는 실제 높이 및 너비 출력 장치 (프린터)에 대 한 용지 크기를 설정합니다. 장치 컨텍스트가 없는 연결 된 경우 `dcPrinter`, 8.5에 적용 하 여 11 인치로 용지 크기를 설정 하는 기본 구현입니다.  
   
-##  <a name="a-nameonreplacealla--cricheditviewonreplaceall"></a><a name="onreplaceall"></a>CRichEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CRichEditView::OnReplaceAll  
  바꾸기 대화 상자에서 모두 바꾸기 명령을 처리할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -746,7 +794,7 @@ virtual void OnReplaceAll(
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
-##  <a name="a-nameonreplacesela--cricheditviewonreplacesel"></a><a name="onreplacesel"></a>CRichEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CRichEditView::OnReplaceSel  
  바꾸기 대화 상자에서 바꾸기 명령을 처리할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -777,7 +825,7 @@ virtual void OnReplaceSel(
 ### <a name="remarks"></a>주의  
  일부 지정 된 텍스트의 한 위치를 다른 문자열로 바꾸려면이 함수를 호출 합니다. 이 보기에 대 한 검색 특성을 변경 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameontextnotfounda--cricheditviewontextnotfound"></a><a name="ontextnotfound"></a>CRichEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CRichEditView::OnTextNotFound  
  검색에 실패 될 때마다 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -796,7 +844,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&157;](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
   
-##  <a name="a-nameonupdatechareffecta--cricheditviewonupdatechareffect"></a><a name="onupdatechareffect"></a>CRichEditView::OnUpdateCharEffect  
+##  <a name="onupdatechareffect"></a>CRichEditView::OnUpdateCharEffect  
  프레임 워크에는 문자 효과 명령에 대 한 명령 UI를 업데이트 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -824,7 +872,7 @@ void OnUpdateCharEffect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&158;](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
   
-##  <a name="a-nameonupdateparaaligna--cricheditviewonupdateparaalign"></a><a name="onupdateparaalign"></a>CRichEditView::OnUpdateParaAlign  
+##  <a name="onupdateparaalign"></a>CRichEditView::OnUpdateParaAlign  
  프레임 워크는 단락 효과 명령에 대 한 명령 UI를 업데이트 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -849,7 +897,7 @@ void OnUpdateParaAlign(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&159;](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
-##  <a name="a-nameprintinsiderecta--cricheditviewprintinsiderect"></a><a name="printinsiderect"></a>CRichEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CRichEditView::PrintInsideRect  
  범위 내에 맞게 rich edit 컨트롤의 텍스트에 서식을 지정 하려면이 함수를 호출 *rectLayout* 로 지정 된 장치에 대 한 `pDC`합니다.  
   
 ```  
@@ -886,7 +934,7 @@ long PrintInsideRect(
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::GetPaperSize](#getpapersize)합니다.  
   
-##  <a name="a-nameprintpagea--cricheditviewprintpage"></a><a name="printpage"></a>CRichEditView::PrintPage  
+##  <a name="printpage"></a>CRichEditView::PrintPage  
  로 지정 된 출력 장치에 대 한 서식 있는 편집 컨트롤에서 텍스트의 범위에 서식을 지정 하려면이 함수를 호출 `pDC`합니다.  
   
 ```  
@@ -914,7 +962,7 @@ long PrintPage(
   
  여백은 물리적 페이지의 논리 페이지가 아닌를 기준으로 하는 참고 합니다. 따라서&0;의 여백 됩니다 많은 프린터 페이지에서 인쇄할 수 없는 영역에는 이후 텍스트를 클립 경우가 많습니다. 텍스트를 맞추는 방지 하려면를 호출 해야 [SetMargins](#setmargins) 인쇄 하기 전에 적절 한 여백을 설정 합니다.  
   
-##  <a name="a-namequeryacceptdataa--cricheditviewqueryacceptdata"></a><a name="queryacceptdata"></a>CRichEditView::QueryAcceptData  
+##  <a name="queryacceptdata"></a>CRichEditView::QueryAcceptData  
  서식 있는 편집 된 개체를 붙여 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -953,7 +1001,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&160;](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
   
-##  <a name="a-namesetcharformata--cricheditviewsetcharformat"></a><a name="setcharformat"></a>CRichEditView::SetCharFormat  
+##  <a name="setcharformat"></a>CRichEditView::SetCharFormat  
  서식 특성을이 새 텍스트 문자를 설정 하려면이 함수를 호출 `CRichEditView` 개체입니다.  
   
 ```  
@@ -972,7 +1020,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&152;](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="a-namesetmarginsa--cricheditviewsetmargins"></a><a name="setmargins"></a>CRichEditView::SetMargins  
+##  <a name="setmargins"></a>CRichEditView::SetMargins  
  이 서식 있는 편집 보기에 대 한 인쇄 여백을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -991,7 +1039,7 @@ void SetMargins(const CRect& rectMargin);
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::GetPaperSize](#getpapersize)합니다.  
   
-##  <a name="a-namesetpapersizea--cricheditviewsetpapersize"></a><a name="setpapersize"></a>CRichEditView::SetPaperSize  
+##  <a name="setpapersize"></a>CRichEditView::SetPaperSize  
  이 서식 있는 편집 보기를 인쇄에 대 한 용지 크기를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1008,7 +1056,7 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&161;](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]  
   
-##  <a name="a-namesetparaformata--cricheditviewsetparaformat"></a><a name="setparaformat"></a>CRichEditView::SetParaFormat  
+##  <a name="setparaformat"></a>CRichEditView::SetParaFormat  
  단락 서식이 현재 선택 영역에 대 한 특성을 설정 하려면이 함수를 호출 `CRichEditView` 개체입니다.  
   
 ```  
@@ -1030,7 +1078,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&162;](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  
   
-##  <a name="a-nametextnotfounda--cricheditviewtextnotfound"></a><a name="textnotfound"></a>CRichEditView::TextNotFound  
+##  <a name="textnotfound"></a>CRichEditView::TextNotFound  
  내부 검색 상태를 다시 설정 하려면이 함수를 호출 하는 [CRichEditView](../../mfc/reference/cricheditview-class.md) 실패 한 함수 호출 후에 제어 [FindText](#findtext)합니다.  
   
 ```  
@@ -1049,7 +1097,7 @@ void TextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>예제  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
-##  <a name="a-namewrapchangeda--cricheditviewwrapchanged"></a><a name="wrapchanged"></a>CRichEditView::WrapChanged  
+##  <a name="wrapchanged"></a>CRichEditView::WrapChanged  
  인쇄 특성 변경 된 경우이 함수를 호출 ( [SetMargins](#setmargins) 또는 [SetPaperSize](#setpapersize)).  
   
 ```  

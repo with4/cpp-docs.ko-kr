@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bAutoDestroyWindow
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bIsBold
+- AFXTASKSPANE/CMFCTasksPaneTask::m_dwUserData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_hwndTask
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nIcon
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nWindowHeight
+- AFXTASKSPANE/CMFCTasksPaneTask::m_pGroup
+- AFXTASKSPANE/CMFCTasksPaneTask::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTask::m_strName
+- AFXTASKSPANE/CMFCTasksPaneTask::m_uiCommandID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCTasksPaneTask : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaska--cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
  만들고 초기화는 `CMFCTasksPaneTask` 개체입니다.  
   
 ```  
@@ -136,7 +149,7 @@ CMFCTasksPaneTask(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namembautodestroywindowa--cmfctaskspanetaskmbautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
  작업 창이 자동으로 소멸 되 고 있는지 여부를 결정 합니다.  
   
 ```  
@@ -146,7 +159,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>주의  
  로 설정 `TRUE` 되도록 지정 하려면 작업 창 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 자동으로 고, 그렇지 않으면 제거 되어야 할지 `FALSE`합니다.  
   
-##  <a name="a-namembisbolda--cmfctaskspanetaskmbisbold"></a><a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
  굵은 텍스트로 작업 레이블 그릴지 여부를 결정 합니다.  
   
 ```  
@@ -156,7 +169,7 @@ BOOL m_bIsBold;
 ### <a name="remarks"></a>주의  
  이 멤버를 설정 `TRUE` 작업 레이블에 대 한 굵은 텍스트로 표시 합니다.  
   
-##  <a name="a-namemdwuserdataa--cmfctaskspanetaskmdwuserdata"></a><a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
  태스크와 연결 된 사용자 정의 데이터를 포함 합니다. 해당 작업과 관련 된 데이터가 없는 경우&0;으로 설정 합니다.  
   
 ```  
@@ -165,7 +178,7 @@ DWORD m_dwUserData;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemhwndtaska--cmfctaskspanetaskmhwndtask"></a><a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
  작업 창에 대 한 핸들입니다.  
   
 ```  
@@ -175,7 +188,7 @@ HWND m_hwndTask;
 ### <a name="remarks"></a>주의  
  작업 창에 추가 하려면 [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)합니다.  
   
-##  <a name="a-namemnicona--cmfctaskspanetaskmnicon"></a><a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
  지정된 된 작업 옆에 표시 되는 이미지를 식별 하는 이미지 목록에서 인덱스 위치입니다.  
   
 ```  
@@ -187,7 +200,7 @@ int m_nIcon;
   
  설정 `m_nIcon` 이미지 없는 작업을 표시 하려는 경우-1입니다.  
   
-##  <a name="a-namemnwindowheighta--cmfctaskspanetaskmnwindowheight"></a><a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
  작업 창의 높이입니다. 작업에 작업 창이 있는 경우이 값은&0;입니다.  
   
 ```  
@@ -196,7 +209,7 @@ int m_nWindowHeight;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namempgroupa--cmfctaskspanetaskmpgroup"></a><a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
  에 대 한 포인터는 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 이 작업이 속한 합니다.  
   
 ```  
@@ -206,7 +219,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ### <a name="remarks"></a>주의  
  모든 작업에는 상위 그룹이 있어야 합니다. 호출 하 여 작업창으로 그룹을 추가한 [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)합니다.  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskmrect"></a><a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
  작업의 경계 사각형을 지정합니다.  
   
 ```  
@@ -216,7 +229,7 @@ CRect m_rect;
 ### <a name="remarks"></a>주의  
  이 값은 작업을 그릴 때 프레임 워크에 의해 계산 됩니다.  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
  작업의 이름입니다.  
   
 ```  
@@ -225,7 +238,7 @@ CString m_strName;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemuicommandida--cmfctaskspanetaskmuicommandid"></a><a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
  작업을 마우스 오른쪽 단추로 클릭할 때 실행 되는 명령의 명령 ID를 지정 합니다. 이 값이 유효한 명령 ID가 아닐 경우 작업은 간단한 레이블로로 처리 됩니다.  
   
 ```  
@@ -234,7 +247,7 @@ UINT m_uiCommandID;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
  현재 작업에 대 한 내게 필요한 옵션 데이터를 결정합니다.  
   
 ```  
