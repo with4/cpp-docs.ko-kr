@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
@@ -58,9 +59,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 4.  [동시성 런타임 주요 변경 내용](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Visual C++ 2015 규칙 변경 내용  
+## <a name="VC_2015"></a> Visual C++ 2015 규칙 변경 내용  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> CRT(C 런타임 라이브러리)  
+###  <a name="BK_CRT"></a> CRT(C 런타임 라이브러리)  
   
 #### <a name="general-changes"></a>일반 변경 내용  
   
@@ -180,7 +181,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **%A 및 %a 정밀도** 이전 라이브러리 버전에서 %A 및 %a 서식 지정자의 기본 정밀도는 6이었습니다. 현재 기본 정밀도는 C 표준에 따라 13입니다.  
   
-     이는 %A 또는 %a와 함께 서식 문자열을 사용하는 함수 출력의 런타임 동작 변경입니다. 이전 동작에서 %A 지정자를 사용하는 출력은 "1.1A2B3Cp+111"일 수 있습니다. 현재 같은 값의 출력은 "1.1A2B3C4D5E6F7p+111"입니다. 이전 동작을 가져오려면 정밀도(예: %.6A)를 지정하면 됩니다. [전체 자릿수 사양](../c-runtime-library/precision-specification.md)을 참조하세요.  
+     이는 %A 또는 %a와 함께 서식 문자열을 사용하는 함수 출력의 런타임 동작 변경입니다. 이전 동작에서 %A 지정자를 사용하는 출력은 "1.1A2B3Cp+111"일 수 있습니다. 현재 같은 값의 출력은 "1.1A2B3C4D5E6F7p+111"입니다. 이전 동작을 가져오려면 정밀도(예: %.6A)를 지정하면 됩니다. [전체 자릿수 사양](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)을 참조하세요.  
   
 -   **%F 지정자** 현재 %F 서식/변환 지정자가 지원됩니다. 이는 무한대 및 NaN이 대문자로 서식 지정된다는 점을 제외하고 %f 서식 지정자와 일치하는 기능입니다.  
   
@@ -252,7 +253,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **CLOCKS_PER_SEC** 현재 CLOCKS_PER_SEC 매크로는 C 언어에 필요한 형식 clock_t의 정수로 확장됩니다.  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a> C++ 표준 라이브러리  
+####  <a name="BK_STL"></a> C++ 표준 라이브러리  
  새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전(예: Visual Studio 2013의 경우 1800)이 포함된 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
   
 -   **C++ 표준 라이브러리 포함 파일** C++ 표준 라이브러리 헤더의 include 구조체에 몇 가지 변경 내용이 적용되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]의 헤더 변경 내용 두 개 이상이 사용자 코드에 영향을 미칩니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째, \<tuple>은 현재 모든 \<array>를 포함하지 않고 std::array를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 현재 std::array를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.  
@@ -315,13 +316,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **launch::any 및 launch::sync 정책** The nonstandard launch::any 및 launch::sync 정책 were removed. 대신에 launch::any의 경우 launch:async &#124; launch:deferred를 사용합니다. launch::sync의 경우 launch::deferred를 사용합니다. [launch 열거형](../standard-library/future-enums.md#launch_enumeration)을 참조하세요.  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC 및 ATL  
+####  <a name="BK_MFC"></a> MFC 및 ATL  
   
 -   **MFC(Microsoft Foundation Classes)** 는 큰 크기로 인해 더 이상 Visual Studio의 "일반" 설치에 포함되지 않습니다. MFC를 설치하려면 Visual Studio 2015 설치 프로그램에서 사용자 지정 설치 옵션을 선택합니다. Visual Studio 2015가 설치되어 있으면 Visual Studio 설치 프로그램을 다시 실행하고 사용자 지정 설치 옵션을 선택하고 Microsoft Foundation Classes를 선택하여 MFC를 설치할 수 있습니다. 제어판, 프로그램 및 기능에서 또는 설치 미디어에서 Visual Studio 설치 프로그램을 다시 실행할 수 있습니다.  
   
      Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> 동시성 런타임  
+####  <a name="BK_ConcRT"></a> 동시성 런타임  
   
 -   **concurrency::Context::Yield와 충돌하는 Windows.h의 Yield 매크로입니다.** 이전 동시성 런타임은 Windows.h h에 정의된 Yield 매크로와 concurrency::Context::Yield 함수의 충돌을 피하려고 #undef를 사용하여 Yield 매크로의 정의를 해제했습니다. 이 #undef는 제거되었고 새로운 충돌하지 않는 동등한 API 호출 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) 이 추가되었습니다. Yield 충돌을 해결하려면 코드를 업데이트하여 대신 YieldExecution 함수를 호출하거나, 다음 예제와 같이 호출 쪽에서 Yield 함수 이름을 괄호로 묶습니다.  
   
@@ -346,7 +347,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   [업데이트 3의 규칙 향상](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
+###  <a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
   
 -   /Zc:forScope- 옵션  
   
@@ -861,7 +862,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
+###  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
   
 -   **개인 가상 기본 클래스 및 간접 상속**  
   
@@ -1408,7 +1409,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
+###  <a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
   
 -   **SFINAE 식에 대한 부분 지원으로 인해 추가 경고 및 오류가 발생할 수 있습니다.**  
   
@@ -1693,7 +1694,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      이러한 방식으로 작성된 코드를 수정하려면 연산자 정의를 헤더 파일에서 해당하는 소스 파일로 이동해야 합니다.  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
+###  <a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
   
 -   **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)  
   
@@ -2793,8 +2794,3 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 ## <a name="see-also"></a>참고 항목  
 [Visual Studio의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
