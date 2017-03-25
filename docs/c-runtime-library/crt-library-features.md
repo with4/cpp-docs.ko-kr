@@ -1,5 +1,5 @@
 ---
-title: "CRT 라이브러리 기능 | Microsoft 문서"
+title: "CRT 라이브러리 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: ab3c60c735fbca972ff544a31918698f4afffa0e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 라이브러리 기능
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="c-run-time-libraries-crt"></a>C 런타임 라이브러리(CRT)  
  CRT(C 런타임) 라이브러리는 ISO C99 표준 라이브러리를 통합하는 C++ 표준 라이브러리의 일부입니다. CRT를 구현하는 Visual C++ 라이브러리는 네이티브 코드 개발, 혼합된 네이티브와 관리 코드 및 .NET 개발을 위한 순수 관리 코드를 지원합니다. 모든 버전의 CRT는 다중스레드 개발을 지원합니다. 대부분의 라이브러리는 라이브러리를 코드에 직접 연결하는 정적 연결이나 코드에서 공용 DLL 파일을 사용할 수 있도록 하는 동적 연결을 모두 지원합니다.  
   
- Visual Studio 2015에서 CRT는 새로운 이진 파일로 리팩터링되었습니다. UCRT(유니버설 CRT)에는 표준 C99 CRT 라이브러리에서 내보낸 전역 변수 및 함수가 포함됩니다. UCRT는 이제 Windows 구성 요소이며 Windows 10의 일부로 제공됩니다. 이제 정적 라이브러리, DLL 가져오기 라이브러리 및 UCRT에 대한 헤더 파일이 Windows 10 SDK에 있습니다. Visual C++를 설치하면 Visual Studio 설치에서 UCRT를 사용하는 데 필요한 Windows 10 SDK의 하위 집합을 설치합니다. Visual Studio 2015에서 지원하는 모든 Windows 버전에는 UCRT를 사용할 수 있습니다. Windows 10이 아닌 지원되는 다른 버전의 Windows에 대해 vcredist를 사용하여 재배포할 수 있습니다. 자세한 내용은 [Visual C++ 파일 재배포](../ide/redistributing-visual-cpp-files.md)를 참조하세요.  
+ Visual Studio 2015부터 CRT는 새로운 이진 파일로 리팩터링되었습니다. UCRT(유니버설 CRT)에는 표준 C99 CRT 라이브러리에서 내보낸 전역 변수 및 함수가 포함됩니다. UCRT는 이제 Windows 구성 요소이며 Windows 10의 일부로 제공됩니다. 이제 정적 라이브러리, DLL 가져오기 라이브러리 및 UCRT에 대한 헤더 파일이 Windows 10 SDK에 있습니다. Visual C++를 설치하면 Visual Studio 설치에서 UCRT를 사용하는 데 필요한 Windows 10 SDK의 하위 집합을 설치합니다. Visual Studio 2015 이상 버전에서 지원하는 모든 Windows 버전에서 UCRT를 사용할 수 있습니다. Windows 10이 아닌 지원되는 다른 버전의 Windows에 대해 vcredist를 사용하여 재배포할 수 있습니다. 자세한 내용은 [Visual C++ 파일 재배포](../ide/redistributing-visual-cpp-files.md)를 참조하세요.  
   
  다음 표에는 UCRT를 구현하는 라이브러리가 나열되어 있습니다.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
  **/clr** 컴파일러 스위치를 사용하는 경우 코드가 정적 라이브러리인 msvcmrt.lib와 연결됩니다. 이 정적 라이브러리는 관리 코드와 네이티브 CRT 사이의 프록시를 제공합니다. 정적으로 연결된 CRT( **/MT** 또는 **/MTd** 옵션)를 **/clr**과 함께 사용할 수 없습니다. 대신 동적으로 연결된 라이브러리(**/MD** 또는 **/MDd**)를 사용하세요.  
   
- **/clr:pure** 컴파일러 스위치를 사용하는 경우 코드는 정적 라이브러리 msvcurt.lib와 연결됩니다. **/clr**과 마찬가지로 정적으로 연결된 라이브러리와 연결할 수 없습니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
+ **/clr:pure** 컴파일러 스위치를 사용하는 경우 코드는 정적 라이브러리 msvcurt.lib와 연결됩니다. **/clr**과 마찬가지로 정적으로 연결된 라이브러리와 연결할 수 없습니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015부터 더 이상 사용되지 않습니다.  
   
  **/clr**과 함께 CRT를 사용하는 방법에 대한 자세한 내용은 [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)를 참조하고, **/clr:pure**의 경우 [순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조하세요.  
   
