@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::default_scheduler_exists
+- default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4272c4658a6dbd85c838ccfd2586eb6a8ec08d81
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists 클래스
@@ -54,7 +56,7 @@ class default_scheduler_exists : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[default_scheduler_exists 생성자](#ctor)|오버로드됨. `default_scheduler_exists` 개체를 생성합니다.|  
+|[default_scheduler_exists](#ctor)|오버로드됨. `default_scheduler_exists` 개체를 생성합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
@@ -66,7 +68,7 @@ class default_scheduler_exists : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+##  <a name="ctor"></a>default_scheduler_exists 
 
  `default_scheduler_exists` 개체를 생성합니다.  
   
@@ -81,5 +83,5 @@ default_scheduler_exists() throw();
  오류 설명 메시지입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

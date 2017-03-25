@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 구조체
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iexecutionresource:: Currentsubscriptionlevel 메서드](#currentsubscriptionlevel)|활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.|  
-|[Iexecutionresource:: Getexecutionresourceid 메서드](#getexecutionresourceid)|이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.|  
-|[Iexecutionresource:: Getnodeid 메서드](#getnodeid)|이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.|  
-|[Iexecutionresource:: Remove 메서드](#remove)|이 실행 리소스를 리소스 관리자를 반환합니다.|  
+|[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.|  
+|[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.|  
+|[Iexecutionresource:: Getnodeid](#getnodeid)|이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.|  
+|[Iexecutionresource:: Remove](#remove)|이 실행 리소스를 리소스 관리자를 반환합니다.|  
   
 ## <a name="remarks"></a>주의  
  실행 리소스 취득 가능 또는 가상 프로세서 루트와 연결 합니다. 독립 실행형 실행 리소스는 응용 프로그램의 스레드는 스레드 구독을 만들 때 생성 됩니다. 메서드 [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) 및 [ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) 스레드 구독을 만들고 반환 된 `IExecutionResource` 구독을 나타내는 인터페이스입니다. 스레드 구독을 만드는 알리는 작업에 지정된 된 스레드가 참가할 리소스 관리자 리소스 관리자를 스케줄러에 할당 된 가상 프로세서 루트와 함께 스케줄러에 큐에 대기 됩니다. 리소스 관리자를 사용 클라우드 하드웨어 스레드를 방지 하려면 수 없는 정보입니다.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 메서드  
+##  <a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 메서드  
  활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  리소스 관리자는 스케줄러 간에 리소스를 이동 하는 시기를 결정 하는 방법 중 하나로 구독 수준 정보를 사용 합니다.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 메서드  
+##  <a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 메서드  
  이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>주의  
  각 하드웨어 스레드는 동시성 런타임에서 고유 식별자를 할당 됩니다. 연결 된 하드웨어는 여러 실행 리소스 경우 스레드를 갖게 됩니다 동일한 실행 리소스 식별자입니다.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>Iexecutionresource:: Getnodeid 메서드  
+##  <a name="getnodeid"></a>Iexecutionresource:: Getnodeid 메서드  
  이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  함수에서 노드 수를 얻을 수 있습니다 [GetProcessorNodeCount](concurrency-namespace-functions.md)합니다.  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>Iexecutionresource:: Remove 메서드  
+##  <a name="remove"></a>Iexecutionresource:: Remove 메서드  
  이 실행 리소스를 리소스 관리자를 반환합니다.  
   
 ```

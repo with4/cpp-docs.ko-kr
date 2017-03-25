@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::unorm
-- amp/Concurrency::graphics::unorm
+- unorm
+- AMP_SHORT_VECTORS/unorm
+- AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
@@ -34,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aae5de80bed3b2d3d5c15285c2d12f2f6771a251
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm-class"></a>unorm 클래스
@@ -60,14 +61,14 @@ class unorm;
   
 |이름|설명|  
 |----------|-----------------|  
-|unorm::operator-연산자||  
-|unorm::operator float 연산자|변환 연산자입니다. 변환 될 때 부동 소수점 값입니다.|  
-|unorm::operator * = 연산자||  
-|unorm::operator / = 연산자||  
-|unorm::operator + + 연산자||  
-|unorm::operator + = 연산자||  
-|unorm::operator = 연산자||  
-|unorm::operator-= 연산자||  
+|unorm::operator-||  
+|unorm::operator float|변환 연산자입니다. 변환 될 때 부동 소수점 값입니다.|  
+|unorm::operator * =||  
+|unorm::operator / =||  
+|unorm::operator + +||  
+|unorm::operator + =||  
+|unorm::operator =||  
+|-= unorm::operator||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `unorm`  
@@ -77,7 +78,7 @@ class unorm;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-unorm"></a><a name="ctor"></a>unorm 
+##  <a name="ctor"></a>unorm 
 
  기본 생성자입니다. 0.0f로 초기화합니다.  
   
@@ -125,5 +126,5 @@ inline explicit unorm(
  초기화하는 데 사용되는 일반 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_worker_creation_error
+- scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 클래스
@@ -54,7 +56,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |이름|설명|  
 |----------|-----------------|  
-|[scheduler_worker_creation_error 생성자](#ctor)|오버로드됨. `scheduler_worker_creation_error` 개체를 생성합니다.|  
+|[scheduler_worker_creation_error](#ctor)|오버로드됨. `scheduler_worker_creation_error` 개체를 생성합니다.|  
   
 ## <a name="remarks"></a>주의  
  이 예외는 일반적으로 동시성 런타임 내에서 실행 컨텍스트를 생성하기 위한 운영 체제 호출이 실패할 때 throw됩니다. 실행 컨텍스트는 동시성 런타임에서 작업을 실행하는 스레드입니다. Win32 메서드 `GetLastError`에 대한 호출에서 일반적으로 반환되는 오류 코드는 `HRESULT` 형식의 값으로 변환되므로 기본 클래스 메서드인 `get_error_code`를 사용하여 검색할 수 있습니다.  
@@ -71,7 +73,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a>scheduler_worker_creation_error 
 
  `scheduler_worker_creation_error` 개체를 생성합니다.  
   
@@ -92,5 +94,5 @@ explicit _CRTIMP scheduler_worker_creation_error(
  `HRESULT` 예외를 발생 시킨 오류 값입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

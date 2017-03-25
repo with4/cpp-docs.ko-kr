@@ -8,6 +8,18 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- texture_view
+- AMP_GRAPHICS/texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_alpha
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_blue
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_green
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_red
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::get
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
@@ -30,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d3206aea6a6f1e3033e157b3b99a6b3486cb2ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="textureview-class"></a>texture_view 클래스
@@ -41,23 +53,16 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template<typename value_type,int _Rank>  
 class texture_view;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view 
+   : public details::_Texture_base<value_type, _Rank>;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view<const value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view<const value_type, _Rank> 
+   : public details::_Texture_base<value_type, _Rank>;  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -88,27 +93,27 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 |이름|설명|  
 |----------|-----------------|  
-|[gather_alpha 메서드](#gather_alpha)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 알파 (w) 구성 요소를 반환 합니다.|  
-|[gather_blue 메서드](#gather_blue)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 파란색 (z) 구성 요소를 반환 합니다.|  
-|[gather_green 메서드](#gather_green)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 녹색 (y) 구성 요소를 반환 합니다.|  
-|[gather_red 메서드](#gather_red)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 빨간색 (x) 구성 요소를 반환 합니다.|  
-|[get 메서드](#get)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
-|[샘플 메서드](#sample)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정 된 좌표 및 세부 수준에서 텍스처를 샘플링 합니다.|  
-|[set 메서드](#set)|인덱스에서 요소 값을 설정합니다.|  
+|[gather_alpha](#gather_alpha)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 알파 (w) 구성 요소를 반환 합니다.|  
+|[gather_blue](#gather_blue)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 파란색 (z) 구성 요소를 반환 합니다.|  
+|[gather_green](#gather_green)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 녹색 (y) 구성 요소를 반환 합니다.|  
+|[gather_red](#gather_red)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 빨간색 (x) 구성 요소를 반환 합니다.|  
+|[get](#get)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
+|[샘플](#sample)|오버로드됨. 지정 된 샘플링 구성을 사용 하 여 지정 된 좌표 및 세부 수준에서 텍스처를 샘플링 합니다.|  
+|[set](#set)|인덱스에서 요소 값을 설정합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator () 연산자](#operator__)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
-|[operator] 연산자](#operator_at)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
-|[operator = 연산자](#operator_eq)|오버로드됨. 대입 연산자입니다.|  
+|[operator)](#operator_call)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
+|[operator]](#operator_at)|오버로드됨. 인덱스 별로 요소 값을 가져옵니다.|  
+|[operator=](#operator_eq)|오버로드됨. 대입 연산자입니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
 |이름|설명|  
 |----------|-----------------|  
-|[value_type 데이터 멤버](#value_type)|요소 값 형식의 `texture_view`합니다.|  
+|[value_type](#value_type)|요소 값 형식의 `texture_view`합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `_Texture_base`  
@@ -120,7 +125,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namedtora-textureview"></a><a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a>~ texture_view 
 
  소멸은 `texture_view` 인스턴스.  
   
@@ -128,7 +133,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="a-namectora-textureview"></a><a name="ctor"></a>texture_view 
+##  <a name="ctor"></a>texture_view 
 
  생성 된 `texture_view` 인스턴스.  
   
@@ -190,7 +195,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  통해 액세스할 수 있는 mip 맵 수준의 수는 `texture_view`합니다.  
   
-##  <a name="a-namegatherreda-gatherred"></a><a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a>gather_red 
 
  지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 빨간색 (x) 구성 요소를 반환 합니다.  
   
@@ -220,7 +225,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>반환 값  
  4의 빨간색 (x) 구성 요소가 포함 된 4 차원 short 벡터 텍셀 값을 샘플링 합니다.  
   
-##  <a name="a-namegathergreena-gathergreen"></a><a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a>gather_green 
 
  지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 녹색 (y) 구성 요소를 반환 합니다.  
   
@@ -250,7 +255,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>반환 값  
  4의 녹색 (y) 구성 요소가 포함 된 4 차원 short 벡터 텍셀 값을 샘플링 합니다.  
   
-##  <a name="a-namegatherbluea-gatherblue"></a><a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a>gather_blue 
 
  지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 파란색 (z) 구성 요소를 반환 합니다.  
   
@@ -280,7 +285,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>반환 값  
  4의 빨간색 (x) 구성 요소가 포함 된 4 차원 short 벡터 텍셀 값을 샘플링 합니다.  
   
-##  <a name="a-namegatheralphaa-gatheralpha"></a><a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a>gather_alpha 
 
  지정 된 샘플링 구성을 사용 하 여 지정된 된 좌표에 질감을 샘플링 하 고&4; 개의 샘플링된 텍셀의 알파 (w) 구성 요소를 반환 합니다.  
   
@@ -310,7 +315,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>반환 값  
  순위 4 짧은 벡터는 알파 버전 (w)는 4의 구성 요소 샘플링 텍셀 값을 포함 하 합니다.  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>가져오기 
+##  <a name="get"></a>가져오기 
 
  지정된 된 인덱스에 요소 값을 가져옵니다.  
   
@@ -334,7 +339,7 @@ value_type get(
 ### <a name="return-value"></a>반환 값  
  요소의 값입니다.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a>연산자 = 
 
  지정 된 동일한 텍스처 보기 할당 `texture_view` 이 `texture_view` 인스턴스.  
   
@@ -362,7 +367,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `texture_view` 인스턴스.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  인덱스에서 요소 값을 반환합니다.  
   
@@ -389,7 +394,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>반환 값  
  요소 값에 의해 인덱싱된 `_Index`합니다.  
   
-##  <a name="a-nameoperatora-operator"></a><a name="operator__"></a>operator) 
+##  <a name="operator_call"></a>operator) 
 
  인덱스에서 요소 값을 반환합니다.  
   
@@ -447,7 +452,7 @@ value_type operator() (
 ### <a name="return-value"></a>반환 값  
  요소 값에 의해 인덱싱된 `_Index`합니다.  
   
-##  <a name="a-namesamplea-sample"></a><a name="sample"></a>샘플 
+##  <a name="sample"></a>샘플 
 
  지정 된 샘플링 구성을 사용 하 여 지정 된 좌표 및 세부 수준에서 텍스처를 샘플링 합니다.  
   
@@ -486,7 +491,7 @@ value_type sample(
 ### <a name="return-value"></a>반환 값  
  보간된 샘플 값입니다.  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>설정 
+##  <a name="set"></a>설정 
 
  지정된 된 값으로 지정된 된 인덱스에 요소 값을 설정합니다.  
   
@@ -503,7 +508,7 @@ void set(
  `value`  
  요소를 설정 하는 값입니다.  
   
-##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+##  <a name="value_type"></a>value_type 
 
  값 형식에서 texture_view의 요소입니다.  
   
@@ -512,5 +517,5 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

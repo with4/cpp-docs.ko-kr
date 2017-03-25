@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 네임 스페이스 함수
 ||||  
 |-|-|-|  
-|[get_sampler 함수](#get_sampler)|[get_texture 함수](#get_texture)|[make_sampler 함수](#make_sampler)|  
-|[make_texture 함수](#make_texture)|[msad4 함수](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>get_sampler 함수  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  Get 주어진된 엑셀 러 레이 터는 D3D 샘플러 상태 인터페이스는이 나타내는 지정한 샘플러 개체를 봅니다.  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>반환 값  
  주어진된 샘플러를 나타내는 D3D 샘플러 상태에 해당 하는 IUnknown 인터페이스 포인터입니다.  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>get_texture 함수  
+##  <a name="get_texture"></a>get_texture  
  지정 된 원본으로 사용 하는 Direct3D 텍스처 인터페이스를 가져옵니다 [질감](texture-class.md) 개체입니다.  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>반환 값  
  해당 내부 텍스처는 Direct3D 질감 하 IUnknown 인터페이스 포인터입니다.  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>make_sampler 함수  
+##  <a name="make_sampler"></a>make_sampler  
  D3D 샘플러 상태 인터페이스 포인터에서는 샘플러를 만듭니다.  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  샘플러 제공된 D3D 샘플러 상태를 나타냅니다.  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>make_texture 함수  
+##  <a name="make_texture"></a>make_texture  
  만듭니다는 [질감](texture-class.md) 지정된 된 매개 변수를 사용 하 여 개체입니다.  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>반환 값  
  제공 된 D3D 텍스처를 사용 하는 질감입니다.  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>msad4 함수  
+##  <a name="msad4"></a>msad4  
  4 바이트 참조 값과 8 바이트 소스 값을 비교 하 고 4 합계의 벡터를 누적 합니다. 각 합계는 마스킹된 제곱의 합 절대의 서로 다른 바이트 정렬 참조 값과 원본 값에 해당합니다.  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>반환 값  
  4 합계의 벡터를 반환합니다. 각 합계는 마스킹된 제곱의 합 절대의 서로 다른 바이트 정렬 참조 값과 원본 값에 해당합니다.  
+
+## <a name="requirements"></a>요구 사항  
+ **헤더:** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>참고 항목  
- [Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)
+ [Concurrency::graphics::direct3d 네임스페이스](concurrency-graphics-direct3d-namespace.md)
 

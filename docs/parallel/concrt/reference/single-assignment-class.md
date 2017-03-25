@@ -9,7 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::single_assignment
+- single_assignment
+- AGENTS/concurrency::single_assignment
+- AGENTS/concurrency::single_assignment::single_assignment
+- AGENTS/concurrency::single_assignment::has_value
+- AGENTS/concurrency::single_assignment::value
+- AGENTS/concurrency::single_assignment::accept_message
+- AGENTS/concurrency::single_assignment::consume_message
+- AGENTS/concurrency::single_assignment::link_target_notification
+- AGENTS/concurrency::single_assignment::propagate_message
+- AGENTS/concurrency::single_assignment::propagate_to_any_targets
+- AGENTS/concurrency::single_assignment::release_message
+- AGENTS/concurrency::single_assignment::reserve_message
+- AGENTS/concurrency::single_assignment::resume_propagation
+- AGENTS/concurrency::single_assignment::send_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +47,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a2a500353b06219713c5d9f3e68f82b247c1604f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7bf9e5060a8a6ecb02440b5ff244667d6fd4ffa4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="singleassignment-class"></a>single_assignment 클래스
@@ -59,29 +72,29 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 |이름|설명|  
 |----------|-----------------|  
-|[single_assignment 생성자](#ctor)|오버로드됨. 생성 된 `single_assignment` 메시징 블록입니다.|  
+|[single_assignment](#ctor)|오버로드됨. 생성 된 `single_assignment` 메시징 블록입니다.|  
 |[~ single_assignment 소멸자](#dtor)|소멸은 `single_assignment` 메시징 블록입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[has_value 메서드](#has_value)|확인 여부를이 `single_assignment` 아직 메시징 블록 값으로 초기화 했습니다.|  
-|[값 메서드](#value)|현재 페이로드의에 저장 되는 메시지에 대 한 참조는 `single_assignment` 메시징 블록입니다.|  
+|[has_value](#has_value)|확인 여부를이 `single_assignment` 아직 메시징 블록 값으로 초기화 했습니다.|  
+|[value](#value)|현재 페이로드의에 저장 되는 메시지에 대 한 참조는 `single_assignment` 메시징 블록입니다.|  
   
 ### <a name="protected-methods"></a>Protected 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[accept_message 메서드](#accept_message)|이 제공 된 메시지를 수락 `single_assignment` 메시징 블록을 호출자에 게는 메시지의 복사본을 반환 합니다.|  
-|[consume_message 메서드](#consume_message)|이전에 제공한 메시지를 생성는 `single_assignment` 호출자에 게는 메시지의 복사본을 반환 하 여 대상에 의해 예약 되어 있습니다.|  
-|[link_target_notification 메서드](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `single_assignment` 메시징 블록입니다.|  
-|[propagate_message 메서드](#propagate_message)|메시지를 비동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.|  
-|[propagate_to_any_targets 메서드](#propagate_to_any_targets)|위치는 `message``_PMessage` 이 `single_assignment` 메시징 블록이 모든 연결 된 대상에 제공 합니다.|  
-|[release_message 메서드](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
-|[reserve_message 메서드](#reserve_message)|이전에 제공한이 메시지를 예약 `single_assignment` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation 메서드](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[send_message 메서드](#send_message)|메시지를 동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[accept_message](#accept_message)|이 제공 된 메시지를 수락 `single_assignment` 메시징 블록을 호출자에 게는 메시지의 복사본을 반환 합니다.|  
+|[consume_message](#consume_message)|이전에 제공한 메시지를 생성는 `single_assignment` 호출자에 게는 메시지의 복사본을 반환 하 여 대상에 의해 예약 되어 있습니다.|  
+|[link_target_notification](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `single_assignment` 메시징 블록입니다.|  
+|[propagate_message](#propagate_message)|메시지를 비동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|위치는 `message``_PMessage` 이 `single_assignment` 메시징 블록이 모든 연결 된 대상에 제공 합니다.|  
+|[release_message](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|이전에 제공한이 메시지를 예약 `single_assignment` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|메시지를 동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.|  
   
 ## <a name="remarks"></a>주의  
  A `single_assignment` 메시징 블록 복사본의 각 대상으로 메시지를 전파 합니다.  
@@ -104,7 +117,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  이 제공 된 메시지를 수락 `single_assignment` 메시징 블록을 호출자에 게는 메시지의 복사본을 반환 합니다.  
   
@@ -122,7 +135,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  `single_assignment` 현재 보유 한 메시지의 소유권을 전송 하는 대신 메시징 블록을 대상으로 메시지 복사본 반환 합니다.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  이전에 제공한 메시지를 생성는 `single_assignment` 호출자에 게는 메시지의 복사본을 반환 하 여 대상에 의해 예약 되어 있습니다.  
   
@@ -140,7 +153,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  비슷합니다 `accept`를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="a-namehasvaluea-hasvalue"></a><a name="has_value"></a>has_value 
+##  <a name="has_value"></a>has_value 
 
  확인 여부를이 `single_assignment` 아직 메시징 블록 값으로 초기화 했습니다.  
   
@@ -151,7 +164,7 @@ bool has_value() const;
 ### <a name="return-value"></a>반환 값  
  `true`블록은 값을 받은 경우 `false` 그렇지 않은 경우.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  새 대상에 연결 되어 있는 알리는 콜백입니다 `single_assignment` 메시징 블록입니다.  
   
@@ -163,7 +176,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  새로 연결 된 대상에 대 한 포인터입니다.  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  메시지를 비동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.  
   
@@ -183,7 +196,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  위치는 `message``_PMessage` 이 `single_assignment` 메시징 블록이 모든 연결 된 대상에 제공 합니다.  
   
@@ -195,7 +208,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
  `_PMessage`  
  에 대 한 포인터는 `message` 이 `single_assignment` 메시징 블록의 소유권을 수행 했습니다.  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  이전 메시지 예약을 해제합니다.  
   
@@ -207,7 +220,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  이전에 제공한이 메시지를 예약 `single_assignment` 메시징 블록입니다.  
   
@@ -225,7 +238,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  후 `reserve` 반환 하는 경우 라고 `true`를 `consume` 또는 `release` 얻거나 메시지의 소유권을 해제 하려면를 호출 해야 합니다.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  예약이 해제 된 후 전파를 다시 시작 합니다.  
   
@@ -233,7 +246,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  메시지를 동기적으로 전달 된 `ISource` 이 블록 `single_assignment` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.  
   
@@ -253,7 +266,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="a-namectora-singleassignment"></a><a name="ctor"></a>single_assignment 
+##  <a name="ctor"></a>single_assignment 
 
  생성 된 `single_assignment` 메시징 블록입니다.  
   
@@ -293,7 +306,7 @@ single_assignment(
   
  형식 `filter_method` 시그니처가 있는 함수는 `bool (T const &)` 이 호출 되는 `single_assignment` 메시징 블록에 제공된 된 메시지를 수락 해야 하는지 여부를 결정 합니다.  
   
-##  <a name="a-namedtora-singleassignment"></a><a name="dtor"></a>~ single_assignment 
+##  <a name="dtor"></a>~ single_assignment 
 
  소멸은 `single_assignment` 메시징 블록입니다.  
   
@@ -301,7 +314,7 @@ single_assignment(
 ~single_assignment();
 ```  
   
-##  <a name="a-namevaluea-value"></a><a name="value"></a>값 
+##  <a name="value"></a>값 
 
  현재 페이로드의에 저장 되는 메시지에 대 한 참조는 `single_assignment` 메시징 블록입니다.  
   
@@ -312,7 +325,7 @@ T const& value();
 ### <a name="return-value"></a>반환 값  
  저장된 된 메시지의 페이로드입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 메시지에 현재 저장 되어 있으면 메시지가 도착할 때까지 대기는 `single_assignment` 메시징 블록입니다.  
   
 ## <a name="see-also"></a>참고 항목  

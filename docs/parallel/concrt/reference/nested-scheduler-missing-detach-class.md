@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::nested_scheduler_missing_detach
+- nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 클래스
@@ -54,9 +56,9 @@ class nested_scheduler_missing_detach : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[nested_scheduler_missing_detach 생성자](#ctor)|오버로드됨. `nested_scheduler_missing_detach` 개체를 생성합니다.|  
+|[nested_scheduler_missing_detach](#ctor)|오버로드됨. `nested_scheduler_missing_detach` 개체를 생성합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 예외는 다른 스케줄러에서 이미 소유하고 있거나 다른 스케줄러에 연결된 컨텍스트에서 `Attach` 개체의 `Scheduler` 메서드를 호출함으로써 다른 컨텍스트 내에 한 스케줄러를 중첩할 때만 throw됩니다. 동시성 런타임 시나리오 문제를 찾기 위해 발견 하면 선택적이 예외를 throw 합니다. 호출을 무시 하는 모든 인스턴스가 `CurrentScheduler::Detach` 메서드는 항상이 예외를 throw 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -69,7 +71,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a>nested_scheduler_missing_detach 
 
  `nested_scheduler_missing_detach` 개체를 생성합니다.  
   

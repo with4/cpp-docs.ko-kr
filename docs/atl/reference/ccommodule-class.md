@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComModule
+- ATLBASE/ATL::CComModule
+- ATLBASE/ATL::CComModule::GetClassObject
+- ATLBASE/ATL::CComModule::GetModuleInstance
+- ATLBASE/ATL::CComModule::GetResourceInstance
+- ATLBASE/ATL::CComModule::GetTypeLibInstance
+- ATLBASE/ATL::CComModule::Init
+- ATLBASE/ATL::CComModule::RegisterClassHelper
+- ATLBASE/ATL::CComModule::RegisterClassObjects
+- ATLBASE/ATL::CComModule::RegisterServer
+- ATLBASE/ATL::CComModule::RegisterTypeLib
+- ATLBASE/ATL::CComModule::RevokeClassObjects
+- ATLBASE/ATL::CComModule::Term
+- ATLBASE/ATL::CComModule::UnregisterClassHelper
+- ATLBASE/ATL::CComModule::UnregisterServer
+- ATLBASE/ATL::CComModule::UpdateRegistryClass
+- ATLBASE/ATL::CComModule::UpdateRegistryFromResourceD
+- ATLBASE/ATL::CComModule::UpdateRegistryFromResourceS
+- ATLBASE/ATL::CComModule::m_csObjMap
+- ATLBASE/ATL::CComModule::m_csTypeInfoHolder
+- ATLBASE/ATL::CComModule::m_csWindowCreate
+- ATLBASE/ATL::CComModule::m_hInst
+- ATLBASE/ATL::CComModule::m_hInstResource
+- ATLBASE/ATL::CComModule::m_hInstTypeLib
+- ATLBASE/ATL::CComModule::m_pObjMap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +59,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d2bd7566a25cd135cb541c4d90f2700b5f0d47b2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d0d5f040d7c6fbe4a4d83da0d589e123588c6bb1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ccommodule-class"></a>CComModule 클래스
@@ -118,9 +142,9 @@ class CComModule : public _ATL_MODULE
  `CComModule`  
   
 ## <a name="requirements"></a>요구 사항  
- `Header:`atlbase.h  
+ **헤더:** atlbase.h  
   
-##  <a name="a-namegetclassobjecta--ccommodulegetclassobject"></a><a name="getclassobject"></a>CComModule::GetClassObject  
+##  <a name="getclassobject"></a>CComModule::GetClassObject  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -143,12 +167,12 @@ HRESULT GetClassObject(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
  `GetClassObject`Dll에 사용할 수만 있습니다.  
   
-##  <a name="a-namegetmoduleinstancea--ccommodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -161,7 +185,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="remarks"></a>주의  
  반환 된 [m_hInst](#m_hinst) 데이터 멤버입니다.  
   
-##  <a name="a-namegetresourceinstancea--ccommodulegetresourceinstance"></a><a name="getresourceinstance"></a>CComModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -174,7 +198,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="remarks"></a>주의  
  반환 된 [m_hInstResource](#m_hinstresource) 데이터 멤버입니다.  
   
-##  <a name="a-namegettypelibinstancea--ccommodulegettypelibinstance"></a><a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
+##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -184,10 +208,10 @@ HINSTANCE GetTypeLibInstance() const throw();
 ### <a name="return-value"></a>반환 값  
  `HINSTANCE`입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 된 [m_hInstTypeLib](#m_hinsttypelib) 데이터 멤버입니다.  
   
-##  <a name="a-nameinita--ccommoduleinit"></a><a name="init"></a>CComModule::Init  
+##  <a name="init"></a>CComModule::Init  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -210,10 +234,10 @@ HRESULT Init(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모든 데이터 멤버를 초기화합니다.  
   
-##  <a name="a-namemcsobjmapa--ccommodulemcsobjmap"></a><a name="m_csobjmap"></a>CComModule::m_csObjMap  
+##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -223,7 +247,7 @@ CRITICAL_SECTION m_csObjMap;
 ### <a name="remarks"></a>주의  
  개체 맵의에 대 한 동기화 된 액세스를 확인합니다.  
   
-##  <a name="a-namemcstypeinfoholdera--ccommodulemcstypeinfoholder"></a><a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
+##  <a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -233,17 +257,17 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 ### <a name="remarks"></a>주의  
  형식 라이브러리에 대 한 동기화 된 액세스를 확인합니다.  
   
-##  <a name="a-namemcswindowcreatea--ccommodulemcswindowcreate"></a><a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
+##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
 CRITICAL_SECTION m_csWindowCreate;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  창 클래스 정보를 창 만드는 동안 사용 되는 정적 데이터를 동기화 된 액세스를 확인 합니다.  
   
-##  <a name="a-namemhinsta--ccommodulemhinst"></a><a name="m_hinst"></a>CComModule::m_hInst  
+##  <a name="m_hinst"></a>CComModule::m_hInst  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -255,7 +279,7 @@ HINSTANCE m_hInst;
   
  [Init](#init) 메서드 집합 `m_hInst` 에 전달 된 핸들에 **DLLMain** 또는 `WinMain`합니다.  
   
-##  <a name="a-namemhinstresourcea--ccommodulemhinstresource"></a><a name="m_hinstresource"></a>CComModule::m_hInstResource  
+##  <a name="m_hinstresource"></a>CComModule::m_hInstResource  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -269,7 +293,7 @@ HINSTANCE m_hInstResource;
   
  [GetResourceInstance](#getresourceinstance) 에 저장 된 핸들을 반환 하는 메서드 `m_hInstResource`합니다.  
   
-##  <a name="a-namemhinsttypeliba--ccommodulemhinsttypelib"></a><a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
+##  <a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -283,7 +307,7 @@ HINSTANCE m_hInstTypeLib;
   
  [GetTypeLibInstance](#gettypelibinstance) 에 저장 된 핸들을 반환 하는 메서드 `m_hInstTypeLib`합니다.  
   
-##  <a name="a-namempobjmapa--ccommodulempobjmap"></a><a name="m_pobjmap"></a>CComModule::m_pObjMap  
+##  <a name="m_pobjmap"></a>CComModule::m_pObjMap  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -293,7 +317,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ### <a name="remarks"></a>주의  
  개체 맵의 모듈 인스턴스에 의해 유지 관리를 가리킵니다.  
   
-##  <a name="a-nameregisterclasshelpera--ccommoduleregisterclasshelper"></a><a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
+##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -324,12 +348,12 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 레지스트리에 있는 개체의 표준 클래스 등록을 입력합니다.  
   
  [UpdateRegistryClass](#updateregistryclass) 메서드 호출 `RegisterClassHelper`합니다.  
   
-##  <a name="a-nameregisterclassobjectsa--ccommoduleregisterclassobjects"></a><a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -346,10 +370,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다른 응용 프로그램 데이터베이스에 연결할 수 있도록 ole EXE 클래스 개체를 등록 합니다. 이 메서드는 Exe를 사용할 수만 있습니다.  
   
-##  <a name="a-nameregisterservera--ccommoduleregisterserver"></a><a name="registerserver"></a>CComModule::RegisterServer  
+##  <a name="registerserver"></a>CComModule::RegisterServer  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -377,7 +401,7 @@ HRESULT RegisterServer(
   
  `RegisterServer`자동으로 호출 됩니다 **DLLRegisterServer** dll 또는 `WinMain` 으로 실행 하는 EXE에 대 한는 **/RegServer** 명령줄 옵션입니다.  
   
-##  <a name="a-nameregistertypeliba--ccommoduleregistertypelib"></a><a name="registertypelib"></a>CComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>CComModule::RegisterTypeLib  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -392,12 +416,12 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 레지스트리를 형식 라이브러리에 대 한 정보를 추가합니다.  
   
  여러 개의 형식 라이브러리를 포함 하는 모듈 인스턴스를이 메서드의 두 번째 버전 사용 하 여 지정 된 형식 라이브러리를 사용 해야 합니다.  
   
-##  <a name="a-namerevokeclassobjectsa--ccommodulerevokeclassobjects"></a><a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -410,7 +434,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="remarks"></a>주의  
  클래스 개체를 제거합니다. 이 메서드는 Exe를 사용할 수만 있습니다.  
   
-##  <a name="a-nameterma--ccommoduleterm"></a><a name="term"></a>CComModule::Term  
+##  <a name="term"></a>CComModule::Term  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -420,7 +444,7 @@ void Term() throw();
 ### <a name="remarks"></a>주의  
  모든 데이터 멤버를 해제합니다.  
   
-##  <a name="a-nameunregisterclasshelpera--ccommoduleunregisterclasshelper"></a><a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
+##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -443,12 +467,12 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 레지스트리에서 개체의 표준 클래스 등록을 제거합니다.  
   
  [UpdateRegistryClass](#updateregistryclass) 메서드 호출 `UnregisterClassHelper`합니다.  
   
-##  <a name="a-nameunregisterservera--ccommoduleunregisterserver"></a><a name="unregisterserver"></a>CComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>CComModule::UnregisterServer  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -473,7 +497,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
   
  참조 [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) 개체 맵의에 항목을 추가 하는 방법에 대 한 내용은 합니다.  
   
-##  <a name="a-nameupdateregistryclassa--ccommoduleupdateregistryclass"></a><a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
+##  <a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -519,7 +543,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  경우 `bRegister` 는 **TRUE**,이 메서드는 개체의 표준 클래스 등록 시스템 레지스트리에 입력 합니다.  
   
  경우 `bRegister` 는 **FALSE**, 개체의 등록을 제거 합니다.  
@@ -528,7 +552,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
   
  지정 하 여는 [DECLARE_REGISTRY](http://msdn.microsoft.com/library/89b8949b-5c27-4a9c-8a51-ad276bba3a54) 매크로 `UpdateRegistryClass` 개체 맵의 처리 될 때 자동으로 호출 됩니다.  
   
-##  <a name="a-nameupdateregistryfromresourceda--ccommoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -574,7 +598,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
   
  대체 가능 매개 변수 및 스크립팅 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [ATL 레지스트리 구성 요소 (등록자)](../../atl/atl-registry-component-registrar.md)합니다.  
   
-##  <a name="a-nameupdateregistryfromresourcesa--ccommoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
  ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```

@@ -48,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 70c0c5b5897e1cf4aabfefd66ed5f9eef85813c7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2e5a153359b2696b281a25794a85b5c676f179ce
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace"></a>동시성 네임스페이스
@@ -84,7 +84,7 @@ namespace concurrency;
 |이름|설명|  
 |----------|-----------------|  
 |[affinity_partitioner 클래스](affinity-partitioner-class.md)|`affinity_partitioner` 클래스는 `static_partitioner` 클래스와 비슷하지만 하위 범위를 작업자 스레드로 매핑하는 선택을 통해 캐시 선호도를 향상시킵니다. 동일한 데이터 집합에서 루프를 다시 실행하고 데이터가 캐시에 맞는 경우 성능을 훨씬 향상시킬 수 있습니다. 데이터 집약성을 활용하려면 특정 데이터 집합에 대해 실행되는 병렬 루프의 후속 반복과 함께 동일한 `affinity_partitioner` 개체를 사용해야 합니다.|  
-|[에이전트 클래스](agent-class.md)|모든 독립 에이전트에 대한 기본 클래스로 사용되는 클래스입니다. 다른 에이전트로부터 상태를 숨기고 메시지 전달을 사용하여 상호 작용하는 데 사용됩니다.|  
+|[agent 클래스](agent-class.md)|모든 독립 에이전트에 대한 기본 클래스로 사용되는 클래스입니다. 다른 에이전트로부터 상태를 숨기고 메시지 전달을 사용하여 상호 작용하는 데 사용됩니다.|  
 |[auto_partitioner 클래스](auto-partitioner-class.md)|`auto_partitioner` 클래스는 `parallel_for`, `parallel_for_each` 및 `parallel_transform`이 반복하는 범위를 분할하는 데 사용하는 기본 방법을 나타냅니다. 이 분할 방법은 부하 분산을 위한 범위 가로채기 및 반복별 취소를 사용합니다.|  
 |[bad_target 클래스](bad-target-class.md)|이 클래스는 수행되는 작업에 잘못된 대상에 대한 포인터가 메시징 블록에 제공되는 경우 발생하는 예외를 설명합니다.|  
 |[call 클래스](call-class.md)|`call` 메시징 블록은 메시지를 받을 때 지정된 함수를 호출하는 순서가 지정된 다중 소스 `target_block`입니다.|  
@@ -106,7 +106,7 @@ namespace concurrency;
 |[critical_section 클래스](critical-section-class.md)|동시성 런타임을 명시적으로 인식하는 재진입성이 아닌 뮤텍스입니다.|  
 |[CurrentScheduler 클래스](currentscheduler-class.md)|호출 컨텍스트와 연결된 현재 스케줄러에 대한 추상화를 나타냅니다.|  
 |[default_scheduler_exists 클래스](default-scheduler-exists-class.md)|이 클래스는 프로세스 내에 기본 스케줄러가 이미 있을 때 `Scheduler::SetDefaultSchedulerPolicy` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.|  
-|[이벤트 클래스](event-class.md)|동시성 런타임을 명시적으로 인식하는 수동 다시 설정 이벤트입니다.|  
+|[event 클래스](event-class.md)|동시성 런타임을 명시적으로 인식하는 수동 다시 설정 이벤트입니다.|  
 |[improper_lock 클래스](improper-lock-class.md)|이 클래스는 부적절하게 잠금을 얻은 경우 발생하는 예외를 설명합니다.|  
 |[improper_scheduler_attach 클래스](improper-scheduler-attach-class.md)|이 클래스는 동일한 컨텍스트에 이미 연결된 `Scheduler` 개체에 대해 `Attach` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.|  
 |[improper_scheduler_detach 클래스](improper-scheduler-detach-class.md)|이 클래스는 `Scheduler` 개체의 `Attach` 메서드를 사용하여 스케줄러에 연결되지 않은 컨텍스트에 대해 `CurrentScheduler::Detach` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.|  
@@ -121,7 +121,7 @@ namespace concurrency;
 |[ISource 클래스](isource-class.md)|`ISource` 클래스는 모든 소스 블록에 대한 인터페이스입니다. 소스 블록은 `ITarget` 블록에 메시지를 전파합니다.|  
 |[ITarget 클래스](itarget-class.md)|`ITarget` 클래스는 모든 대상 블록에 대한 인터페이스입니다. 대상 블록은 `ISource` 블록에서 제공한 메시지를 사용합니다.|  
 |[join 클래스](join-class.md)|`join` 메시징 블록은 각 소스에서 `T` 형식의 메시지를 결합하는 순서가 지정된 단일 대상 다중 소스 `propagator_block`입니다.|  
-|[위치 클래스](location-class.md)|하드웨어의 실제 위치에 대한 추상화입니다.|  
+|[location 클래스](location-class.md)|하드웨어의 실제 위치에 대한 추상화입니다.|  
 |[message 클래스](message-class.md)|메시징 블록 간에 전달되는 데이터 페이로드를 포함하는 기본 메시지 봉투입니다.|  
 |[message_not_found 클래스](message-not-found-class.md)|이 클래스는 메시징 블록이 요청된 메시지를 찾을 수 없는 경우 발생하는 예외를 설명합니다.|  
 |[message_processor 클래스](message-processor-class.md)|`message_processor` 클래스는 `message` 개체 처리를 위한 추상 기본 클래스입니다. 메시지 순서에 대한 보장은 없습니다.|  
@@ -150,13 +150,13 @@ namespace concurrency;
 |[static_partitioner 클래스](static-partitioner-class.md)|`static_partitioner` 클래스는 `parallel_for`에서 반복하는 범위의 정적 분할을 나타냅니다. 파티셔너는 기본 스케줄러에서 사용할 수 있는 작업자 수만큼의 청크로 범위를 나눕니다.|  
 |[structured_task_group 클래스](structured-task-group-class.md)|`structured_task_group` 클래스는 구조화된 병렬 작업 컬렉션을 나타냅니다. `task_handle` 개체를 사용하여 개별 병렬 작업을 `structured_task_group`에 대기시킨 다음 완료되기를 기다리거나 실행이 완료되기 전에 작업 그룹을 취소합니다. 이 경우 실행이 시작되지 않은 작업이 모두 중단됩니다.|  
 |[target_block 클래스](target-block-class.md)|`target_block` 클래스는 대상 전용 블록에 대해 기본 링크 관리 기능 및 오류 검사를 제공하는 추상 기본 클래스입니다.|  
-|[작업 클래스 (동시성 런타임)](task-class.md)|PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속(`then`), 조인 (`when_all`) 및 선택(`when_any`) 패턴을 사용하여 다른 작업으로 구성될 수도 있습니다.|  
+|[task 클래스(동시성 런타임)](task-class.md)|PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속(`then`), 조인 (`when_all`) 및 선택(`when_any`) 패턴을 사용하여 다른 작업으로 구성될 수도 있습니다.|  
 |[task_canceled 클래스](task-canceled-class.md)|이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. 또한 의해 throw 되는 `get()` 메서드를 [작업](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), 취소 된 작업에 대 한 합니다.|  
 |[task_completion_event 클래스](task-completion-event-class.md)|`task_completion_event` 클래스를 사용하면 조건이 충족될 때까지 작업 실행을 지연하거나 외부 이벤트에 대한 응답으로 작업을 시작할 수 있습니다.|  
 |[task_continuation_context 클래스](task-continuation-context-class.md)|`task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. 이 클래스는 Windows 스토어 앱에서 사용할 때만 유용합니다. 그 외의 앱에서는 작업 연속 실행 컨텍스트가 런타임에 의해 결정되며 구성할 수 없습니다.|  
 |[task_group 클래스](task-group-class.md)|`task_group` 클래스는 대기하거나 취소할 수 있는 병렬 작업 컬렉션을 나타냅니다.|  
 |[task_handle 클래스](task-handle-class.md)|`task_handle` 클래스는 개별 병렬 작업 항목을 나타냅니다. 작업을 실행하는 데 필요한 지침 및 데이터를 캡슐화합니다.|  
-|[task_options 클래스 (동시성 런타임)](task-options-class-concurrency-runtime.md)|작업을 만드는 데 사용할 수 있는 옵션을 나타냅니다.|  
+|[task_options 클래스(동시성 런타임)](task-options-class-concurrency-runtime.md)|작업을 만드는 데 사용할 수 있는 옵션을 나타냅니다.|  
 |[timer 클래스](timer-class.md)|`timer` 메시징 블록은 지정된 기간이 경과한 후 또는 특정 간격마다 대상에 메시지를 보낼 수 있는 단일 대상 `source_block`입니다.|  
 |[transformer 클래스](transformer-class.md)|`transformer` 메시징 블록은 한 형식의 메시지를 수락하고 다른 형식의 메시지를 개수에 제한 없이 저장할 수 있는 순서가 지정된 단일 대상 다중 소스 `propagator_block`입니다.|  
 |[unbounded_buffer 클래스](unbounded-buffer-class.md)|`unbounded_buffer` 메시징 블록은 메시지를 개수에 제한 없이 저장할 수 있는, 순서가 지정된 다중 대상 다중 소스 `propagator_block`입니다.|  
@@ -181,26 +181,26 @@ namespace concurrency;
 |[IUMSUnblockNotification 구조체](iumsunblocknotification-structure.md)|차단되었으며 스케줄러의 지정된 일정 컨텍스트로의 반환을 트리거한 스레드 프록시가 차단 해제되고 예약할 준비가 되었다는 리소스 관리자의 알림을 나타냅니다. `GetContext` 메서드에서 반환된 스레드 프록시의 연결된 실행 컨텍스트가 다시 예약된 후에는 이 인터페이스가 유효하지 않습니다.|  
 |[IVirtualProcessorRoot 구조체](ivirtualprocessorroot-structure.md)|스레드 프록시가 실행될 수 있는 하드웨어 스레드의 추상화입니다.|  
 |[scheduler_interface 구조체](scheduler-interface-structure.md)|Scheduler 인터페이스|  
-|[scheduler_ptr 구조체 (동시성 런타임)](scheduler-ptr-structure-concurrency-runtime.md)|스케줄러에 대한 포인터를 나타냅니다. 이 클래스는 shared_ptr을 사용하는 공유 수명 또는 원시 포인터를 사용하는 일반 참조의 사양을 허용하기 위해 존재합니다.|  
+|[scheduler_ptr 구조체(동시성 런타임)](scheduler-ptr-structure-concurrency-runtime.md)|스케줄러에 대한 포인터를 나타냅니다. 이 클래스는 shared_ptr을 사용하는 공유 수명 또는 원시 포인터를 사용하는 일반 참조의 사양을 허용하기 위해 존재합니다.|  
   
 ### <a name="enumerations"></a>열거형  
   
 |이름|설명|  
 |----------|-----------------|  
-|[agent_status 열거형](concurrency-namespace-enums.md#agent_status)|`agent`에 유효한 상태입니다.|  
-|[Agents_EventType 열거형](concurrency-namespace-enums.md#agents_eventtype)|에이전트 라이브러리에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|  
-|[ConcRT_EventType 열거형](concurrency-namespace-enums.md#concrt_eventtype)|동시성 런타임에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|  
-|[Concrt_TraceFlags 열거형](concurrency-namespace-enums.md#concrt_traceflags)|이벤트 형식에 대한 추적 플래그입니다.|  
-|[CriticalRegionType 열거형](concurrency-namespace-enums.md#criticalregiontype)|컨텍스트가 있는 위험 영역의 형식입니다.|  
-|[DynamicProgressFeedbackType 열거형](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey 열거형](concurrency-namespace-enums.md#policyelementkey)합니다.|  
-|[join_type 열거형](concurrency-namespace-enums.md#join_type)|`join` 메시징 블록의 형식입니다.|  
-|[message_status 열거형](concurrency-namespace-enums.md#message_status)|블록에 대한 `message` 개체 제공에 유효한 응답입니다.|  
-|[PolicyElementKey 열거형](concurrency-namespace-enums.md#policyelementkey)|스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러에 스케줄러 정책 및 그 영향에 대 한 자세한 내용은 참조 [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.|  
-|[SchedulerType 열거형](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 정책에서 스케줄러가 기본 실행 컨텍스트에 활용해야 하는 스레드 형식을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey 열거형](concurrency-namespace-enums.md#policyelementkey)합니다.|  
-|[SchedulingProtocolType 열거형](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 정책에서 스케줄러에 활용되는 일정 알고리즘을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey 열거형](concurrency-namespace-enums.md#policyelementkey)합니다.|  
-|[SwitchingProxyState 열거형](concurrency-namespace-enums.md#switchingproxystate)|다른 스레드 프록시로의 협조적 컨텍스트 전환을 실행하는 경우 스레드 프록시의 현재 상태를 나타내는 데 사용됩니다.|  
-|[task_group_status 열거형](concurrency-namespace-enums.md#task_group_status)|`task_group` 또는 `structured_task_group` 개체의 실행 상태를 설명합니다. 이 형식의 값은 작업 그룹에 예약된 작업이 완료되기를 기다리는 수많은 메서드에 의해 반환됩니다.|  
-|[WinRTInitializationType 열거형](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` 정책에서 Windows 8 또는 그 이상 버전의 운영 체제에서 실행되는 응용 프로그램에 대한 스케줄러 스레드에서 Windows 런타임이 초기화될지 여부와 초기화되는 방법을 설명하는데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey 열거형](concurrency-namespace-enums.md#policyelementkey)합니다.|  
+|[agent_status](concurrency-namespace-enums.md#agent_status)|`agent`에 유효한 상태입니다.|  
+|[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|에이전트 라이브러리에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|  
+|[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|동시성 런타임에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|  
+|[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|이벤트 형식에 대한 추적 플래그입니다.|  
+|[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|컨텍스트가 있는 위험 영역의 형식입니다.|  
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
+|[조인 유형](concurrency-namespace-enums.md#join_type)|`join` 메시징 블록의 형식입니다.|  
+|[message_status](concurrency-namespace-enums.md#message_status)|블록에 대한 `message` 개체 제공에 유효한 응답입니다.|  
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러에 스케줄러 정책 및 그 영향에 대 한 자세한 내용은 참조 [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.|  
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 정책에서 스케줄러가 기본 실행 컨텍스트에 활용해야 하는 스레드 형식을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 정책에서 스케줄러에 활용되는 일정 알고리즘을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
+|[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|다른 스레드 프록시로의 협조적 컨텍스트 전환을 실행하는 경우 스레드 프록시의 현재 상태를 나타내는 데 사용됩니다.|  
+|[task_group_status](concurrency-namespace-enums.md#task_group_status)|`task_group` 또는 `structured_task_group` 개체의 실행 상태를 설명합니다. 이 형식의 값은 작업 그룹에 예약된 작업이 완료되기를 기다리는 수많은 메서드에 의해 반환됩니다.|  
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` 정책에서 Windows 8 또는 그 이상 버전의 운영 체제에서 실행되는 응용 프로그램에 대한 스케줄러 스레드에서 Windows 런타임이 초기화될지 여부와 초기화되는 방법을 설명하는데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
   
 ### <a name="functions"></a>함수  
   
@@ -253,37 +253,37 @@ namespace concurrency;
   
 |이름|설명|  
 |----------|-----------------| 
-|[연산자! = 연산자](concurrency-namespace-operators.md#operator_neq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같지 않은지 테스트합니다.|  
-|[연산자 && 연산자](concurrency-namespace-operators.md#operator_amp_amp)|오버로드됨. 인수로 제공된 두 작업이 모두 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|  
-|[연산자 | | 연산자](concurrency-namespace-operators.md#operator_lor)|오버로드됨. 인수로 제공된 작업 중 하나가 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|  
-|[연산자<>](concurrency-namespace-operators.md#operator_lt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작은지 테스트합니다.|  
-|[연산자<=></=>](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작거나 같은지 테스트합니다.|  
-|[연산자 = = 연산자](concurrency-namespace-operators.md#operator_eq_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같은지 테스트합니다.|  
-|[연산자 > 연산자](concurrency-namespace-operators.md#operator_gt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 큰지 테스트합니다.|  
-|[연산자 > = 연산자](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 크거나 같은지 테스트합니다.|  
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같지 않은지 테스트합니다.|  
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|오버로드됨. 인수로 제공된 두 작업이 모두 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|  
+|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|오버로드됨. 인수로 제공된 작업 중 하나가 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|  
+|[operator<](concurrency-namespace-operators.md#operator_lt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작은지 테스트합니다.|  
+|[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작거나 같은지 테스트합니다.|  
+|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같은지 테스트합니다.|  
+|[operator>](concurrency-namespace-operators.md#operator_gt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 큰지 테스트합니다.|  
+|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 크거나 같은지 테스트합니다.|  
   
 ### <a name="constants"></a>상수  
   
 |이름|설명|  
 |----------|-----------------|  
-|[AgentEventGuid 상수](concurrency-namespace-constants1.md#agenteventguid)|동시성 런타임의 에이전트 라이브러리에서 발생하는 ETW 이벤트를 설명하는 범주 GUID({B9B5B78C-0713-4898-A21A-C67949DCED07})입니다.|  
-|[ChoreEventGuid 상수](concurrency-namespace-constants1.md#choreeventguid)|작업 또는 작업와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[ConcRT_ProviderGuid 상수](concurrency-namespace-constants1.md#concrt_providerguid)|동시성 런타임에 대한 ETW 공급자 GUID입니다.|  
-|[CONCRT_RM_VERSION_1 상수](concurrency-namespace-constants1.md#concrt_rm_version_1)|Visual Studio 2010에서 정의된 리소스 관리자 인터페이스의 지원을 나타냅니다.|  
-|[ConcRTEventGuid 상수](concurrency-namespace-constants1.md#concrteventguid)|다른 범주에서 보다 구체적으로 설명되지 않은, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[ContextEventGuid 상수](concurrency-namespace-constants1.md#contexteventguid)|컨텍스트와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[COOPERATIVE_TIMEOUT_INFINITE 상수](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|대기 시간이 초과되지 않아야 함을 나타내는 값입니다.|  
-|[COOPERATIVE_WAIT_TIMEOUT 상수](concurrency-namespace-constants1.md#cooperative_wait_timeout)|대기 시간이 초과되었음을 나타내는 값입니다.|  
-|[INHERIT_THREAD_PRIORITY 상수](concurrency-namespace-constants1.md#inherit_thread_priority)|스케줄러의 모든 컨텍스트에 대한 스레드 우선순위가 스케줄러를 만든 스레드의 우선순위와 같아야 함을 나타내는 정책 키 `ContextPriority`에 대한 특수 값입니다.|  
-|[LockEventGuid 상수](concurrency-namespace-constants1.md#lockeventguid)|잠금과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[MaxExecutionResources 상수](concurrency-namespace-constants1.md#maxexecutionresources)|정책 키 `MinConcurrency` 및 `MaxConcurrency`에 대한 특수 값입니다. 기본값은 다른 제약 조건이 없는 경우 컴퓨터의 하드웨어 스레드 수입니다.|  
-|[PPLParallelForeachEventGuid 상수](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|`parallel_for_each` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[PPLParallelForEventGuid 상수](concurrency-namespace-constants1.md#pplparallelforeventguid)|`parallel_for` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[PPLParallelInvokeEventGuid 상수](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|`parallel_invoke` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[ResourceManagerEventGuid 상수](concurrency-namespace-constants1.md#resourcemanagereventguid)|리소스 관리자와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[ScheduleGroupEventGuid 상수](concurrency-namespace-constants1.md#schedulegroupeventguid)|일정 그룹과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[SchedulerEventGuid 상수](concurrency-namespace-constants1.md#schedulereventguid)|스케줄러 작업과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
-|[VirtualProcessorEventGuid 상수](concurrency-namespace-constants1.md#virtualprocessoreventguid)|가상 프로세서와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|동시성 런타임의 에이전트 라이브러리에서 발생하는 ETW 이벤트를 설명하는 범주 GUID({B9B5B78C-0713-4898-A21A-C67949DCED07})입니다.|  
+|[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|작업 또는 작업와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|동시성 런타임에 대한 ETW 공급자 GUID입니다.|  
+|[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|Visual Studio 2010에서 정의된 리소스 관리자 인터페이스의 지원을 나타냅니다.|  
+|[ConcRTEventGuid](concurrency-namespace-constants1.md#concrteventguid)|다른 범주에서 보다 구체적으로 설명되지 않은, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[ContextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|컨텍스트와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|대기 시간이 초과되지 않아야 함을 나타내는 값입니다.|  
+|[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|대기 시간이 초과되었음을 나타내는 값입니다.|  
+|[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|스케줄러의 모든 컨텍스트에 대한 스레드 우선순위가 스케줄러를 만든 스레드의 우선순위와 같아야 함을 나타내는 정책 키 `ContextPriority`에 대한 특수 값입니다.|  
+|[LockEventGuid](concurrency-namespace-constants1.md#lockeventguid)|잠금과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)|정책 키 `MinConcurrency` 및 `MaxConcurrency`에 대한 특수 값입니다. 기본값은 다른 제약 조건이 없는 경우 컴퓨터의 하드웨어 스레드 수입니다.|  
+|[PPLParallelForeachEventGuid](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|`parallel_for_each` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[PPLParallelForEventGuid](concurrency-namespace-constants1.md#pplparallelforeventguid)|`parallel_for` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[PPLParallelInvokeEventGuid](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|`parallel_invoke` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[ResourceManagerEventGuid](concurrency-namespace-constants1.md#resourcemanagereventguid)|리소스 관리자와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[ScheduleGroupEventGuid](concurrency-namespace-constants1.md#schedulegroupeventguid)|일정 그룹과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|스케줄러 작업과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
+|[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|가상 프로세서와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  

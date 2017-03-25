@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IScheduler
+- IScheduler
+- CONCRTRM/concurrency::IScheduler
+- CONCRTRM/concurrency::IScheduler::IScheduler::AddVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetId
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetPolicy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyBusy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
+- CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fd8733bdcf113497b82cb2559eaba5a6a4a15165
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 24305fbdded1709ec51270b3a29a239b345a5679
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischeduler-structure"></a>IScheduler 구조체
@@ -54,15 +62,15 @@ struct IScheduler;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Ischeduler:: Addvirtualprocessors 메서드](#addvirtualprocessors)|가상 프로세서 루트의 집합으로의 사용에 대 한 스케줄러를 제공합니다. 각 `IVirtualProcessorRoot` 인터페이스 스케줄러를 대신 하 여 작업을 수행할 수 있는 단일 스레드를 실행할 수 있는 권한을 나타냅니다.|  
-|[Ischeduler:: Getid 메서드](#getid)|스케줄러에 대 한 고유 식별자를 반환합니다.|  
-|[Ischeduler:: Getpolicy 메서드](#getpolicy)|스케줄러 정책의 복사본을 반환합니다. 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [SchedulerPolicy](schedulerpolicy-class.md)합니다.|  
-|[Ischeduler:: Notifyresourcesexternallybusy 메서드](#notifyresourcesexternallybusy)|배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 현재 사용 되 고 있습니다.|  
-|[Ischeduler:: Notifyresourcesexternallyidle 메서드](#notifyresourcesexternallyidle)|배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 사용 되지 않습니다.|  
-|[Ischeduler:: Removevirtualprocessors 메서드](#removevirtualprocessors)|이 스케줄러에 이전에 할당 된 가상 프로세서 루트의 제거를 시작 합니다.|  
-|[Ischeduler:: Statistics 메서드](#statistics)|큐 길이에 스케줄러에 대 한 변경 및 작업 도착과 완료 속도 관련 된 정보를 제공 합니다.|  
+|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|가상 프로세서 루트의 집합으로의 사용에 대 한 스케줄러를 제공합니다. 각 `IVirtualProcessorRoot` 인터페이스 스케줄러를 대신 하 여 작업을 수행할 수 있는 단일 스레드를 실행할 수 있는 권한을 나타냅니다.|  
+|[Ischeduler:: Getid](#getid)|스케줄러에 대 한 고유 식별자를 반환합니다.|  
+|[Ischeduler:: Getpolicy](#getpolicy)|스케줄러 정책의 복사본을 반환합니다. 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [SchedulerPolicy](schedulerpolicy-class.md)합니다.|  
+|[Ischeduler:: Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 현재 사용 되 고 있습니다.|  
+|[Ischeduler:: Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 사용 되지 않습니다.|  
+|[Ischeduler:: Removevirtualprocessors](#removevirtualprocessors)|이 스케줄러에 이전에 할당 된 가상 프로세서 루트의 제거를 시작 합니다.|  
+|[Ischeduler:: Statistics](#statistics)|큐 길이에 스케줄러에 대 한 변경 및 작업 도착과 완료 속도 관련 된 정보를 제공 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  리소스 관리자와 통신 하는 사용자 지정 스케줄러를 구현 하는 경우에의 구현을 제공 해야는 `IScheduler` 인터페이스입니다. 이 인터페이스는 양방향 채널을 스케줄러와 리소스 관리자 간의 통신의 한쪽 끝입니다. 다른 쪽 끝으로 표현 됩니다는 `IResourceManager` 및 `ISchedulerProxy` 리소스 관리자에서 구현 되는 인터페이스입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -73,7 +81,7 @@ struct IScheduler;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameaddvirtualprocessorsa--ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 메서드  
+##  <a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 메서드  
  가상 프로세서 루트의 집합으로의 사용에 대 한 스케줄러를 제공합니다. 각 `IVirtualProcessorRoot` 인터페이스 스케줄러를 대신 하 여 작업을 수행할 수 있는 단일 스레드를 실행할 수 있는 권한을 나타냅니다.  
   
 ```
@@ -89,10 +97,10 @@ virtual void AddVirtualProcessors(
  `count`  
  수가 `IVirtualProcessorRoot` 배열에 대 한 인터페이스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하는 리소스 관리자는 `AddVirtualProcessor` 메서드를 스케줄러에 가상 프로세서 루트의 초기 집합을 부여 합니다. 스케줄러 간에 리소스를 재정렬할 때 스케줄러에 가상 프로세서 루트를 추가 하도록 메서드를 호출할 수도 없습니다.  
   
-##  <a name="a-namegetida--ischedulergetid-method"></a><a name="getid"></a>Ischeduler:: Getid 메서드  
+##  <a name="getid"></a>Ischeduler:: Getid 메서드  
  스케줄러에 대 한 고유 식별자를 반환합니다.  
   
 ```
@@ -107,7 +115,7 @@ virtual unsigned int GetId() const = 0;
   
  다른 소스에서 가져온 식별자는 정의 되지 않은 동작이 발생할 수 있습니다.  
   
-##  <a name="a-namegetpolicya--ischedulergetpolicy-method"></a><a name="getpolicy"></a>Ischeduler:: Getpolicy 메서드  
+##  <a name="getpolicy"></a>Ischeduler:: Getpolicy 메서드  
  스케줄러 정책의 복사본을 반환합니다. 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [SchedulerPolicy](schedulerpolicy-class.md)합니다.  
   
 ```
@@ -117,7 +125,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>반환 값  
  스케줄러 정책의 복사본입니다.  
   
-##  <a name="a-namenotifyresourcesexternallybusya--ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 메서드  
+##  <a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 메서드  
  배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 현재 사용 되 고 있습니다.  
   
 ```
@@ -133,7 +141,7 @@ virtual void NotifyResourcesExternallyBusy(
  `count`  
  수가 `IVirtualProcessorRoot` 배열에 대 한 인터페이스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  특정 하드웨어 스레드를 동시에 여러 스케줄러에 할당할 수에 대 한 것 같습니다. 이 대 한 이유 중 하나는 리소스를 공유 하지 않고 모든 스케줄러에 대 한 최소 동시성을 충족 하기 위해 시스템에 충분 한 하드웨어 스레드가 많지 않은지 수 있습니다. 또 다른 원인은 해제 하 고 해당 하드웨어 스레드에서 모든 가상 프로세서 루트를 통해,를 소유 하는 스케줄러는 사용 하지 않을 때 리소스 다른 스케줄러에는 할당 일시적으로 됩니다.  
   
  하드웨어 스레드의 구독 수준 구독 된 스레드 수로 표시 됩니다 및 해당 하드웨어 스레드에 연결 된 가상 프로세서 루트를 활성화 합니다. 특정 스케줄러의 관점에서 하드웨어 스레드의 외부 구독 수준에는 다른 스케줄러에 기여 하는 구독의 부분입니다. 리소스가 외부적으로 사용 중 이라는 알림은 하드웨어 스레드에 대 한 외부 구독 수준이 양수는 영역을&0;에서 이동할 때 스케줄러에 전송 됩니다.  
@@ -142,7 +150,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  알림에 대 한 정하는 스케줄러는 집합을 가져옵니다 초기 알림를 만들 때만 할당 된 리소스는 외부에서 사용 중인지 또는 유휴 상태 여부를 알립니다.  
   
-##  <a name="a-namenotifyresourcesexternallyidlea--ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 메서드  
+##  <a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 메서드  
  배열에 있는 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 사용 되지 않습니다.  
   
 ```
@@ -158,7 +166,7 @@ virtual void NotifyResourcesExternallyIdle(
  `count`  
  수가 `IVirtualProcessorRoot` 배열에 대 한 인터페이스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  특정 하드웨어 스레드를 동시에 여러 스케줄러에 할당할 수에 대 한 것 같습니다. 이 대 한 이유 중 하나는 리소스를 공유 하지 않고 모든 스케줄러에 대 한 최소 동시성을 충족 하기 위해 시스템에 충분 한 하드웨어 스레드가 많지 않은지 수 있습니다. 또 다른 원인은 해제 하 고 해당 하드웨어 스레드에서 모든 가상 프로세서 루트를 통해,를 소유 하는 스케줄러는 사용 하지 않을 때 리소스 다른 스케줄러에는 할당 일시적으로 됩니다.  
   
  하드웨어 스레드의 구독 수준 구독 된 스레드 수로 표시 됩니다 및 해당 하드웨어 스레드에 연결 된 가상 프로세서 루트를 활성화 합니다. 특정 스케줄러의 관점에서 하드웨어 스레드의 외부 구독 수준에는 다른 스케줄러에 기여 하는 구독의 부분입니다. 리소스가 외부적으로 사용 중 이라는 알림은 하드웨어 스레드에 대 한 외부 구독 수준이 이전 양수 값에서&0;으로 떨어질 때 스케줄러에 전송 됩니다.  
@@ -167,7 +175,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  알림에 대 한 정하는 스케줄러는 집합을 가져옵니다 초기 알림를 만들 때만 할당 된 리소스는 외부에서 사용 중인지 또는 유휴 상태 여부를 알립니다.  
   
-##  <a name="a-nameremovevirtualprocessorsa--ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 메서드  
+##  <a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 메서드  
  이 스케줄러에 이전에 할당 된 가상 프로세서 루트의 제거를 시작 합니다.  
   
 ```
@@ -188,7 +196,7 @@ virtual void RemoveVirtualProcessors(
   
  매개 변수 `ppVirtualProcessorRoots` 인터페이스의 배열을 가리킵니다. 제거할 가상 프로세서 루트 집합 중에 활성화 되지 않은 루트 사용 하 여 즉시 반환 될 수는 `Remove` 메서드. 루트는 활성화 된 작업을 실행 중이거나 또는 비활성화 된 및 도착 하는 작업에 대 한 대기 중인 비동기적으로 반환 되어야 합니다. 스케줄러에는 가상 프로세서 루트를 가능한 한 빨리 제거 하려고 할 때마다 확인 해야 합니다. 가상 프로세서 루트의 제거를 지연 시키는 스케줄러 내에서 의도 하지 않은 초과 될 수 있습니다.  
   
-##  <a name="a-namestatisticsa--ischedulerstatistics-method"></a><a name="statistics"></a>Ischeduler:: Statistics 메서드  
+##  <a name="statistics"></a>Ischeduler:: Statistics 메서드  
  큐 길이에 스케줄러에 대 한 변경 및 작업 도착과 완료 속도 관련 된 정보를 제공 합니다.  
   
 ```
@@ -217,7 +225,7 @@ virtual void Statistics(
   
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
- [PolicyElementKey 열거형](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [SchedulerPolicy 클래스](schedulerpolicy-class.md)   
  [IExecutionContext 구조체](iexecutioncontext-structure.md)   
  [IThreadProxy 구조체](ithreadproxy-structure.md)   

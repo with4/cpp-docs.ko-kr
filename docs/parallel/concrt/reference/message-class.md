@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message
+- message
+- AGENTS/concurrency::message
+- AGENTS/concurrency::message::message
+- AGENTS/concurrency::message::add_ref
+- AGENTS/concurrency::message::msg_id
+- AGENTS/concurrency::message::remove_ref
+- AGENTS/concurrency::message::payload
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 08d67f2899f27a92250d6fedbf755a5413e01ebd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="message-class"></a>message 클래스
@@ -65,22 +71,22 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |이름|설명|  
 |----------|-----------------|  
-|[메시지 생성자](#ctor)|오버로드됨. `message` 개체를 생성합니다.|  
+|[message](#ctor)|오버로드됨. `message` 개체를 생성합니다.|  
 |[~ message 소멸자](#dtor)|소멸은 `message` 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[add_ref 메서드](#add_ref)|에 대 한 참조 횟수에 추가 된 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.|  
-|[msg_id 메서드](#msg_id)|ID를 반환 하는 `message` 개체입니다.|  
-|[remove_ref 메서드](#remove_ref)|에 대 한 참조 횟수를 빼고는 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.|  
+|[add_ref](#add_ref)|에 대 한 참조 횟수에 추가 된 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.|  
+|[msg_id](#msg_id)|ID를 반환 하는 `message` 개체입니다.|  
+|[remove_ref](#remove_ref)|에 대 한 참조 횟수를 빼고는 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
 |이름|설명|  
 |----------|-----------------|  
-|[페이로드 데이터 멤버](#payload)|페이로드는 `message` 개체입니다.|  
+|[페이로드](#payload)|페이로드는 `message` 개체입니다.|  
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
@@ -93,7 +99,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameaddrefa-addref"></a><a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a>add_ref 
 
  에 대 한 참조 횟수에 추가 된 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.  
   
@@ -104,7 +110,7 @@ long add_ref();
 ### <a name="return-value"></a>반환 값  
  참조 횟수의 새 값입니다.  
   
-##  <a name="a-namectora-message"></a><a name="ctor"></a>메시지 
+##  <a name="ctor"></a>메시지 
 
  `message` 개체를 생성합니다.  
   
@@ -136,7 +142,7 @@ message(
 ### <a name="remarks"></a>주의  
  에 대 한 포인터를 사용 하는 생성자는 `message` 인수 throw 개체는 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_Msg` 는 `NULL`합니다.  
   
-##  <a name="a-namedtora-message"></a><a name="dtor"></a>~ 메시지 
+##  <a name="dtor"></a>~ 메시지 
 
  소멸은 `message` 개체입니다.  
   
@@ -144,7 +150,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="a-namemsgida-msgid"></a><a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a>msg_id 
 
  ID를 반환 하는 `message` 개체입니다.  
   
@@ -155,7 +161,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>반환 값  
  `runtime_object_identity` 의 `message` 개체입니다.  
   
-##  <a name="a-namepayloada-payload"></a><a name="payload"></a>페이로드 
+##  <a name="payload"></a>페이로드 
 
  페이로드는 `message` 개체입니다.  
   
@@ -163,7 +169,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="a-nameremoverefa-removeref"></a><a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a>remove_ref 
 
  에 대 한 참조 횟수를 빼고는 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.  
   
@@ -175,5 +181,5 @@ long remove_ref();
  참조 횟수의 새 값입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::agent
+- agent
+- AGENTS/concurrency::agent
+- AGENTS/concurrency::agent::agent
+- AGENTS/concurrency::agent::cancel
+- AGENTS/concurrency::agent::start
+- AGENTS/concurrency::agent::status
+- AGENTS/concurrency::agent::status_port
+- AGENTS/concurrency::agent::wait
+- AGENTS/concurrency::agent::wait_for_all
+- AGENTS/concurrency::agent::wait_for_one
+- AGENTS/concurrency::agent::done
+- AGENTS/concurrency::agent::run
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 640e1d66a879e8eb73428b50339d6a325cfd7cb2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="agent-class"></a>에이전트 클래스
@@ -55,27 +66,27 @@ class agent;
   
 |이름|설명|  
 |----------|-----------------|  
-|[에이전트 생성자](#ctor)|오버로드됨. 에이전트를 생성 합니다.|  
+|[에이전트](#ctor)|오버로드됨. 에이전트를 생성 합니다.|  
 |[~ agent 소멸자](#dtor)|에이전트를 삭제합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[cancel 메서드](#cancel)|에이전트에서 이동 하는 `agent_created` 또는 `agent_runnable` 상태는 `agent_canceled` 상태입니다.|  
-|[start 메서드](#start)|에이전트에서 이동 된 `agent_created` 상태는 `agent_runnable` 상태 이며 실행을 예약 합니다.|  
-|[상태 메서드](#status)|에이전트에서 상태 정보의 동기 소스입니다.|  
-|[status_port 메서드](#status_port)|비동기 소스는 에이전트의 상태 정보입니다.|  
-|[wait 메서드](#wait)|에이전트 작업을 완료 하기를 기다립니다.|  
-|[wait_for_all 메서드](#wait_for_all)|모든 작업을 완료 하려면 지정 된 에이전트에 대 한 대기 합니다.|  
-|[wait_for_one 메서드](#wait_for_one)|작업을 완료 하기 지정한 에이전트 중 하나를 기다립니다.|  
+|[취소](#cancel)|에이전트에서 이동 하는 `agent_created` 또는 `agent_runnable` 상태는 `agent_canceled` 상태입니다.|  
+|[start](#start)|에이전트에서 이동 된 `agent_created` 상태는 `agent_runnable` 상태 이며 실행을 예약 합니다.|  
+|[status](#status)|동기 하는 원본 에이전트에서 상태 정보입니다.|  
+|[status_port](#status_port)|비동기 소스는 에이전트의 상태 정보입니다.|  
+|[대기](#wait)|에이전트 작업을 완료 하기를 기다립니다.|  
+|[wait_for_all](#wait_for_all)|모든 작업을 완료 하려면 지정 된 에이전트에 대 한 대기 합니다.|  
+|[wait_for_one](#wait_for_one)|작업을 완료 하기 지정한 에이전트 중 하나를 기다립니다.|  
   
 ### <a name="protected-methods"></a>Protected 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[done 메서드](#done)|이동에 에이전트는 `agent_done` 에이전트가 완료 되었음을 나타내는 상태입니다.|  
-|[run 메서드](#run)|에이전트의 주요 작업을 나타냅니다. `run`파생된 클래스에서 재정의 하 고 에이전트에서 수행 해야 할 작업을 지정 합니다. 이미 시작 되었습니다.|  
+|[작업 수행](#done)|이동에 에이전트는 `agent_done` 에이전트가 완료 되었음을 나타내는 상태입니다.|  
+|[run](#run)|에이전트의 주요 작업을 나타냅니다. `run`파생된 클래스에서 재정의 하 고 에이전트에서 수행 해야 할 작업을 지정 합니다. 이미 시작 되었습니다.|  
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [비동기 에이전트](../../../parallel/concrt/asynchronous-agents.md)합니다.  
@@ -88,7 +99,7 @@ class agent;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-agent"></a><a name="ctor"></a>에이전트 
+##  <a name="ctor"></a>에이전트 
 
  에이전트를 생성 합니다.  
   
@@ -110,7 +121,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>주의  
  런타임에서 지정 하지 않은 경우 기본 스케줄러를 사용 하 여 `_PScheduler` 또는 `_PGroup` 매개 변수입니다.  
   
-##  <a name="a-namedtora-agent"></a><a name="dtor"></a>~ 에이전트 
+##  <a name="dtor"></a>~ 에이전트 
 
  에이전트를 삭제합니다.  
   
@@ -121,7 +132,7 @@ virtual ~agent();
 ### <a name="remarks"></a>주의  
  오류가 발생 한 터미널 상태에 있지 않은 에이전트를 제거 (하거나 `agent_done` 또는 `agent_canceled`). 이 에이전트에서 상속 되는 클래스의 소멸자에 터미널 상태에 도달할 때까지 대기 하 여 방지할 수는 `agent` 클래스입니다.  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>취소 
+##  <a name="cancel"></a>취소 
 
  에이전트에서 이동 하는 `agent_created` 또는 `agent_runnable` 상태는 `agent_canceled` 상태입니다.  
   
@@ -132,7 +143,7 @@ bool cancel();
 ### <a name="return-value"></a>반환 값  
  `true`에이전트 취소 된 경우 `false` 그렇지 않은 경우. 이미 실행을 시작 하거나 이미 완료 된 경우 에이전트를 취소할 수 없습니다.  
   
-##  <a name="a-namedonea-done"></a><a name="done"></a>작업 수행 
+##  <a name="done"></a>작업 수행 
 
  이동에 에이전트는 `agent_done` 에이전트가 완료 되었음을 나타내는 상태입니다.  
   
@@ -146,7 +157,7 @@ bool done();
 ### <a name="remarks"></a>주의  
  끝에이 메서드를 호출 해야는 `run` 에이전트의 실행을 알고 있는 경우 메서드를 완료 합니다.  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>실행 
+##  <a name="run"></a>실행 
 
  에이전트의 주요 작업을 나타냅니다. `run`파생된 클래스에서 재정의 하 고 에이전트에서 수행 해야 할 작업을 지정 합니다. 이미 시작 되었습니다.  
   
@@ -154,10 +165,10 @@ bool done();
 virtual void run() = 0;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에이전트 상태가으로 변경 `agent_started` 이 메서드를 호출 하기 전에 오른쪽입니다. 메서드를 호출 해야 `done` 반환 하기 전에 적절 한 상태로 에이전트에서 하며 예외를 throw 하지 않을 수 있습니다.  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>시작 
+##  <a name="start"></a>시작 
 
  에이전트에서 이동 된 `agent_created` 상태는 `agent_runnable` 상태 이며 실행을 예약 합니다.  
   
@@ -168,9 +179,9 @@ bool start();
 ### <a name="return-value"></a>반환 값  
  `true`에이전트가 올바르게 시작 하는 경우 `false` 그렇지 않은 경우. 취소 된 에이전트를 시작할 수 없습니다.  
   
-##  <a name="a-namestatusa-status"></a><a name="status"></a>상태 
+##  <a name="status"></a>상태 
 
- 에이전트에서 상태 정보의 동기 소스입니다.  
+ 동기 하는 원본 에이전트에서 상태 정보입니다.  
   
 ```
 agent_status status();
@@ -179,7 +190,7 @@ agent_status status();
 ### <a name="return-value"></a>반환 값  
  에이전트의 현재 상태를 반환합니다. 이 반환 되는 상태 즉시 변경할 수 있습니다 반환 되는 참고 합니다.  
   
-##  <a name="a-namestatusporta-statusport"></a><a name="status_port"></a>status_port 
+##  <a name="status_port"></a>status_port 
 
  비동기 소스는 에이전트의 상태 정보입니다.  
   
@@ -190,7 +201,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>반환 값  
  에이전트의 현재 상태에 대 한 메시지를 보낼 수 있는 메시지 소스를 반환 합니다.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>대기 
+##  <a name="wait"></a>대기 
 
  에이전트 작업을 완료 하기를 기다립니다.  
   
@@ -210,12 +221,12 @@ static agent_status __cdecl wait(
 ### <a name="return-value"></a>반환 값  
  `agent_status` 대기가 완료 되 면 에이전트입니다. 이 수 `agent_canceled` 또는 `agent_done`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에이전트에 들어가면 에이전트 작업이 완료 되는 `agent_canceled` 또는 `agent_done` 상태입니다.  
   
  경우 매개 변수 `_Timeout` 상수 이외의 값이 `COOPERATIVE_TIMEOUT_INFINITE`, 예외 [operation_timed_out](operation-timed-out-class.md) 에이전트에서 해당 작업이 완료 되기 전에 특정된 기간 동안 만료 된 경우 throw 됩니다.  
   
-##  <a name="a-namewaitforalla-waitforall"></a><a name="wait_for_all"></a>wait_for_all 
+##  <a name="wait_for_all"></a>wait_for_all 
 
  모든 작업을 완료 하려면 지정 된 에이전트에 대 한 대기 합니다.  
   
@@ -245,7 +256,7 @@ static void __cdecl wait_for_all(
   
  경우 매개 변수 `_Timeout` 상수 이외의 값이 `COOPERATIVE_TIMEOUT_INFINITE`, 예외 [operation_timed_out](operation-timed-out-class.md) 에이전트에서 해당 작업이 완료 되기 전에 특정된 기간 동안 만료 된 경우 throw 됩니다.  
   
-##  <a name="a-namewaitforonea-waitforone"></a><a name="wait_for_one"></a>wait_for_one 
+##  <a name="wait_for_one"></a>wait_for_one 
 
  작업을 완료 하기 지정한 에이전트 중 하나를 기다립니다.  
   
@@ -280,5 +291,5 @@ static void __cdecl wait_for_one(
  경우 매개 변수 `_Timeout` 상수 이외의 값이 `COOPERATIVE_TIMEOUT_INFINITE`, 예외 [operation_timed_out](operation-timed-out-class.md) 에이전트에서 해당 작업이 완료 되기 전에 특정된 기간 동안 만료 된 경우 throw 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

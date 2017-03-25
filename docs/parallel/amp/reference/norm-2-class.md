@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ff9cb756ca17633aa90e2f35c6f6f02da6cc884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm2-class"></a>norm_2 클래스
@@ -88,31 +88,31 @@ class norm_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|norm_2::get_x 메서드||  
-|norm_2::get_xy 메서드||  
-|norm_2::get_y 메서드||  
-|norm_2::get_yx 메서드||  
-|norm_2::ref_g 메서드||  
-|norm_2::ref_r 메서드||  
-|norm_2::ref_x 메서드||  
-|norm_2::ref_y 메서드||  
-|norm_2::set_x 메서드||  
-|norm_2::set_xy 메서드||  
-|norm_2::set_y 메서드||  
-|norm_2::set_yx 메서드||  
+|norm_2::get_x||  
+|norm_2::get_xy||  
+|norm_2::get_y||  
+|norm_2::get_yx||  
+|norm_2::ref_g||  
+|norm_2::ref_r||  
+|norm_2::ref_x||  
+|norm_2::ref_y||  
+|norm_2::set_x||  
+|norm_2::set_xy||  
+|norm_2::set_y||  
+|norm_2::set_yx||  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|norm_2::operator 연산자||  
-|norm_2::operator-연산자||  
-|norm_2::operator * = 연산자||  
-|norm_2::operator / = 연산자||  
-|norm_2::operator + + 연산자||  
-|norm_2::operator + = 연산자||  
-|norm_2::operator = 연산자||  
-|norm_2::operator-= 연산자||  
+|norm_2::operator-||  
+|norm_2::operator-||  
+|norm_2::operator * =||  
+|norm_2::operator / =||  
+|norm_2::operator + +||  
+|norm_2::operator + =||  
+|norm_2::operator =||  
+|-= norm_2::operator||  
   
 ### <a name="public-constants"></a>공용 상수  
   
@@ -124,14 +124,14 @@ class norm_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|norm_2::g 데이터 멤버||  
-|norm_2::gr 데이터 멤버||  
-|norm_2::r 데이터 멤버||  
-|norm_2::rg 데이터 멤버||  
-|norm_2::x 데이터 멤버||  
-|norm_2::xy 데이터 멤버||  
-|norm_2::y 데이터 멤버||  
-|norm_2::yx 데이터 멤버||  
+|norm_2::g||  
+|norm_2::gr||  
+|norm_2::r||  
+|norm_2::rg||  
+|norm_2::x||  
+|norm_2::xy||  
+|norm_2::y||  
+|norm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `norm_2`  
@@ -141,7 +141,7 @@ class norm_2;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-norm2"></a><a name="ctor"></a>norm_2 
+##  <a name="ctor"></a>norm_2 
 
  기본 생성자를 0부터 모든 요소를 초기화 합니다.  
   
@@ -221,12 +221,12 @@ explicit inline norm_2(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="a-namenorm2sizea-size"></a><a name="norm_2__size"></a>크기 
+##  <a name="norm_2__size"></a>크기 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::progress_reporter
+- progress_reporter
+- PPLTASKS/concurrency::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::report
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c6b4dfee5b5f9df98a36fcdac116182ced4cbe30
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 98856e26c82d01433e6f8eb0d76110aff1535936
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="progressreporter-class"></a>progress_reporter 클래스
@@ -59,13 +62,13 @@ class progress_reporter;
   
 |이름|설명|  
 |----------|-----------------|  
-|[progress_reporter 생성자](#ctor)||  
+|[progress_reporter](#ctor)||  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[보고서 메서드](#report)|이 진행률 보고자가 바인딩된 비동기 작업이나 연산에 진행률 보고서를 보냅니다.|  
+|[보고서](#report)|이 진행률 보고자가 바인딩된 비동기 작업이나 연산에 진행률 보고서를 보냅니다.|  
   
 ## <a name="remarks"></a>주의  
  이 형식은 Windows 스토어 앱에만 사용할 수 있습니다.  
@@ -78,13 +81,13 @@ class progress_reporter;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-progressreporter"></a><a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a>progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="a-namereporta-report"></a><a name="report"></a>보고서 
+##  <a name="report"></a>보고서 
 
  이 진행률 보고자가 바인딩된 비동기 작업이나 연산에 진행률 보고서를 보냅니다.  
   
@@ -97,5 +100,5 @@ void report(const _ProgressType& val) const;
  진행률 알림을 통해 보고서에 대 한 페이로드입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

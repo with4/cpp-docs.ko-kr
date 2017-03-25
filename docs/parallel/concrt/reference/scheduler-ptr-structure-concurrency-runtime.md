@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplinterface/concurrency::scheduler_ptr
+- scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 dev_langs:
 - C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
@@ -32,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bef1995724d078c9702669806ff61d5563ac465
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 구조체
@@ -52,20 +56,20 @@ struct scheduler_ptr;
   
 |이름|설명|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr 생성자](#ctor)|오버로드됨. shared_ptr에서 스케줄러에 대한 스케줄러 포인터를 만듭니다.|  
+|[scheduler_ptr:: scheduler_ptr](#ctor)|오버로드됨. shared_ptr에서 스케줄러에 대한 스케줄러 포인터를 만듭니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[scheduler_ptr:: get 메서드](#get)|스케줄러에 대한 원시 포인터를 반환합니다.|  
+|[scheduler_ptr:: get](#get)|스케줄러에 대한 원시 포인터를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[scheduler_ptr:: operator bool 연산자](#operator_bool)|스케줄러 포인터가 null이 아닌지 여부를 테스트합니다.|  
-|[scheduler_ptr:: operator-&gt; 연산자](#operator_ptr)|포인터처럼 작동합니다.|  
+|[scheduler_ptr:: operator bool](#operator_bool)|스케줄러 포인터가 null이 아닌지 여부를 테스트합니다.|  
+|[scheduler_ptr:: operator-&gt;](#operator_ptr)|포인터처럼 작동합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `scheduler_ptr`  
@@ -75,7 +79,7 @@ struct scheduler_ptr;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>scheduler_ptr:: get 메서드  
+##  <a name="get"></a>scheduler_ptr:: get 메서드  
  스케줄러에 대한 원시 포인터를 반환합니다.  
   
 ```
@@ -84,7 +88,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr:: operator bool   
+##  <a name="operator_bool"></a>scheduler_ptr:: operator bool   
  스케줄러 포인터가 null이 아닌지 여부를 테스트합니다.  
   
 ' ' 연산자 bool() const;

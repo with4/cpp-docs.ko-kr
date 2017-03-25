@@ -6,65 +6,65 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- concrt/concurrency::operator!=
+- concrt/concurrency:[operator&amp;&amp
+- concrt/concurrency:[operator&amp;&amp
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 7fc7b500d882bb4e023904a147a7736996b5c5de
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-operators"></a>동시성 네임 스페이스 연산자
 ||||  
 |-|-|-|  
-|[연산자! = 연산자](#operator_neq)|[연산자&amp; &amp; 연산자](#operator_amp_amp)|[연산자&gt; 연산자](#operator_gt)|  
-|[연산자&gt;= 연산자](#operator_gt_eq)|[연산자&lt; 연산자](#operator_lt)|[연산자&lt;= 연산자](#operator_lt_eq)|  
-|[연산자 = = 연산자](#operator_eq_eq)|[operator|| Operator](#operator_lor)|  
+|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
+|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
+|[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="a-nameoperatorlora--operator124124-operator"></a><a name="operator_lor"></a>연산자 | | 연산자  
+##  <a name="operator_lor"></a>연산자 | | 연산자  
  인수로 제공된 작업 중 하나가 성공적으로 완료될 경우 완료되는 작업을 만듭니다.  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<_ReturnType>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<ReturnType> operator||(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>   operator||(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void> operator||(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `_ReturnType`  
+ `ReturnType`  
  반환되는 작업의 형식입니다.  
   
- `_Lhs`  
+ `lhs`  
  결과 작업으로 결합할 첫 번째 작업입니다.  
   
- `_Rhs`  
+ `rhs`  
  결과 작업으로 결합할 두 번째 작업입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -73,55 +73,47 @@ inline task<void>   operator||(
 ### <a name="remarks"></a>주의  
  두 작업이 모두 취소되거나 예외를 throw하는 경우 반환된 작업은 취소된 상태로 완료되고, 예외가 발생한 경우 예외 중 하나가 해당 작업에 대해 `get()` 또는 `wait()`를 호출할 때 throw됩니다.  
   
-##  <a name="a-nameoperatorampampa--operatorampamp-operator"></a><a name="operator_amp_amp"></a>연산자&amp; &amp; 연산자  
+##  <a name="operator_amp_amp"></a>연산자&amp; &amp; 연산자  
  인수로 제공된 두 작업이 모두 성공적으로 완료될 경우 완료되는 작업을 만듭니다.  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>    operator&&(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void>  operator&&(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `_ReturnType`  
+ `ReturnType`  
  반환되는 작업의 형식입니다.  
   
- `_Lhs`  
+ `lhs`  
  결과 작업으로 결합할 첫 번째 작업입니다.  
   
- `_Rhs`  
+ `rhs`  
  결과 작업으로 결합할 두 번째 작업입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -130,15 +122,11 @@ inline task<void>    operator&&(
 ### <a name="remarks"></a>주의  
  작업 중 하나를 취소하거나 예외를 throw하는 경우 반환된 작업을 취소된 상태에서 조기에 완료합니다. 그리고 해당 작업에서 `get()` 또는 `wait()`를 호출하는 경우 발견된 예외를 throw합니다.  
   
-##  <a name="a-nameoperatoreqeqa--operator-operator"></a><a name="operator_eq_eq"></a>연산자 = = 연산자  
+##  <a name="operator_eq_eq"></a>연산자 = = 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같은지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -152,7 +140,7 @@ inline bool operator== (
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -168,15 +156,11 @@ inline bool operator== (
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
-##  <a name="a-nameoperatorneqa--operator-operator"></a><a name="operator_neq"></a>연산자! = 연산자  
+##  <a name="operator_neq"></a>연산자! = 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같지 않은지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -190,7 +174,7 @@ inline bool operator!= (
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -206,15 +190,11 @@ inline bool operator!= (
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
-##  <a name="a-nameoperatorlta--operatorlt-operator"></a><a name="operator_lt"></a>연산자&lt; 연산자  
+##  <a name="operator_lt"></a>연산자&lt; 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작은지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -228,7 +208,7 @@ inline bool operator<(
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -239,20 +219,16 @@ inline bool operator<(
 ### <a name="return-value"></a>반환 값  
  `true`연산자의 좌 변에 있는 동시 벡터가 연산자 우변에 있는 동시 벡터 보다 작은 경우 그렇지 않으면 `false`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 연산자의 동작에 대 한 해당 하는 연산자와 같습니다는 `vector` 클래스에 `std` 네임 스페이스입니다.  
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt-operator"></a><a name="operator_lt_eq"></a>연산자&lt;= 연산자  
+##  <a name="operator_lt_eq"></a>연산자&lt;= 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작거나 같은지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -266,7 +242,7 @@ inline bool operator<= (
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -282,15 +258,11 @@ inline bool operator<= (
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
-##  <a name="a-nameoperatorgta--operatorgt-operator"></a><a name="operator_gt"></a>연산자&gt; 연산자  
+##  <a name="operator_gt"></a>연산자&gt; 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 큰지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -304,7 +276,7 @@ inline bool operator>(
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -320,15 +292,11 @@ inline bool operator>(
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
-##  <a name="a-nameoperatorgteqa--operatorgt-operator"></a><a name="operator_gt_eq"></a>연산자&gt;= 연산자  
+##  <a name="operator_gt_eq"></a>연산자&gt;= 연산자  
  연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 크거나 같은지 테스트합니다.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -342,7 +310,7 @@ inline bool operator>= (
  첫 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `A2`  
- 두 번째 할당자 형식을 `concurrent_vector` 개체입니다.  
+ 두 번째 할당자 유형 `concurrent_vector` 개체입니다.  
   
  `_A`  
  `concurrent_vector` 형식의 개체입니다.  
@@ -353,11 +321,11 @@ inline bool operator>= (
 ### <a name="return-value"></a>반환 값  
  `true`연산자의 좌 변에 있는 동시 벡터 보다 크거나 같음 연산자의 오른쪽에 있는 동시 벡터 경우 그렇지 않으면 `false`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 연산자의 동작에 대 한 해당 하는 연산자와 같습니다는 `vector` 클래스에 `std` 네임 스페이스입니다.  
   
  이 메서드는 동시 벡터를 수정할 수 있는 다른 메서드에 대해 동시성이 없습니다 `_A` 또는 `_B`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

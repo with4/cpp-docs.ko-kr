@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_scheduler_policy_key
+- invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: bc16ee5aceb8c81c7c745cf535a4cefb5d3b827e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key 클래스
@@ -54,7 +56,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_key 생성자](#ctor)|오버로드됨. `invalid_scheduler_policy_key` 개체를 생성합니다.|  
+|[invalid_scheduler_policy_key](#ctor)|오버로드됨. `invalid_scheduler_policy_key` 개체를 생성합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+##  <a name="ctor"></a>invalid_scheduler_policy_key 
 
  `invalid_scheduler_policy_key` 개체를 생성합니다.  
   

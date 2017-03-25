@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::transformer
+- transformer
+- AGENTS/concurrency::transformer
+- AGENTS/concurrency::transformer::transformer
+- AGENTS/concurrency::transformer::accept_message
+- AGENTS/concurrency::transformer::consume_message
+- AGENTS/concurrency::transformer::link_target_notification
+- AGENTS/concurrency::transformer::propagate_message
+- AGENTS/concurrency::transformer::propagate_to_any_targets
+- AGENTS/concurrency::transformer::release_message
+- AGENTS/concurrency::transformer::reserve_message
+- AGENTS/concurrency::transformer::resume_propagation
+- AGENTS/concurrency::transformer::send_message
+- AGENTS/concurrency::transformer::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a857a88e33c023ee10db338b658b6652ae0e1a0c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 994cfbaa79594389d8d3b8390bfc46a5aa75a525
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="transformer-class"></a>transformer 클래스
@@ -63,25 +75,25 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |이름|설명|  
 |----------|-----------------|  
-|[transformer 생성자](#ctor)|오버로드됨. 생성 된 `transformer` 메시징 블록입니다.|  
+|[변환기](#ctor)|오버로드됨. 생성 된 `transformer` 메시징 블록입니다.|  
 |[~ transformer 소멸자](#dtor)|소멸은 `transformer` 메시징 블록입니다.|  
   
 ### <a name="protected-methods"></a>Protected 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[accept_message 메서드](#accept_message)|이 제공 된 메시지를 수락 `transformer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.|  
-|[consume_message 메서드](#consume_message)|이전에 제공한 메시지를 생성는 `transformer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.|  
-|[link_target_notification 메서드](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `transformer` 메시징 블록입니다.|  
-|[propagate_message 메서드](#propagate_message)|메시지를 비동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.|  
-|[propagate_to_any_targets 메서드](#propagate_to_any_targets)|입력 메시지에 대해 변형기 함수를 실행합니다.|  
-|[release_message 메서드](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
-|[reserve_message 메서드](#reserve_message)|이전에 제공한이 메시지를 예약 `transformer` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation 메서드](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[send_message 메서드](#send_message)|메시지를 동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.|  
-|[supports_anonymous_source 메서드](#supports_anonymous_source)|`supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다. (재정의 [itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[accept_message](#accept_message)|이 제공 된 메시지를 수락 `transformer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.|  
+|[consume_message](#consume_message)|이전에 제공한 메시지를 생성는 `transformer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.|  
+|[link_target_notification](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `transformer` 메시징 블록입니다.|  
+|[propagate_message](#propagate_message)|메시지를 비동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|입력 메시지에 대해 변형기 함수를 실행합니다.|  
+|[release_message](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|이전에 제공한이 메시지를 예약 `transformer` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|메시지를 동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.|  
+|[supports_anonymous_source](#supports_anonymous_source)|`supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다. (재정의 [itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  자세한 내용은 참조 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -100,7 +112,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  이 제공 된 메시지를 수락 `transformer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.  
   
@@ -115,7 +127,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `message` 호출자에 이제 소유권을 가진 개체입니다.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  이전에 제공한 메시지를 생성는 `transformer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.  
   
@@ -133,7 +145,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  비슷합니다 `accept`를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  새 대상에 연결 되어 있는 알리는 콜백입니다 `transformer` 메시징 블록입니다.  
   
@@ -141,7 +153,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  메시지를 비동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `propagate` 메서드를 소스 블록에서 호출 하면 됩니다.  
   
@@ -161,7 +173,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  입력 메시지에 대해 변형기 함수를 실행합니다.  
   
@@ -169,7 +181,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  이전 메시지 예약을 해제합니다.  
   
@@ -181,7 +193,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  이전에 제공한이 메시지를 예약 `transformer` 메시징 블록입니다.  
   
@@ -199,7 +211,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  후 `reserve` 반환 하는 경우 라고 `true`를 `consume` 또는 `release` 얻거나 메시지의 소유권을 해제 하려면를 호출 해야 합니다.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  예약이 해제 된 후 전파를 다시 시작 합니다.  
   
@@ -207,7 +219,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  메시지를 동기적으로 전달 된 `ISource` 이 블록 `transformer` 메시징 블록입니다. 에 의해 호출 됩니다는 `send` 메서드를 소스 블록에서 호출 하면 됩니다.  
   
@@ -227,7 +239,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지 사용 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  `supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다.  
   
@@ -238,7 +250,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>반환 값  
  블록은 제공된 메시지를 연기하지 않기 때문에 `true`입니다.  
   
-##  <a name="a-namectora-transformer"></a><a name="ctor"></a>변환기 
+##  <a name="ctor"></a>변환기 
 
  생성 된 `transformer` 메시징 블록입니다.  
   
@@ -298,7 +310,7 @@ transformer(
   
  형식 `filter_method` 시그니처가 있는 함수는 `bool (_Input const &)` 이 호출 되는 `transformer` 메시징 블록에 제공된 된 메시지를 수락 해야 하는지 여부를 결정 합니다.  
   
-##  <a name="a-namedtora-transformer"></a><a name="dtor"></a>~ transformer 
+##  <a name="dtor"></a>~ transformer 
 
  소멸은 `transformer` 메시징 블록입니다.  
   

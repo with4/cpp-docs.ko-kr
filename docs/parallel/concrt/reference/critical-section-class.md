@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::critical_section
+- critical_section
+- CONCRT/concurrency::critical_section
+- CONCRT/concurrency::critical_section::critical_section::scoped_lock Class
+- CONCRT/concurrency::critical_section::critical_section
+- CONCRT/concurrency::critical_section::lock
+- CONCRT/concurrency::critical_section::native_handle
+- CONCRT/concurrency::critical_section::try_lock
+- CONCRT/concurrency::critical_section::try_lock_for
+- CONCRT/concurrency::critical_section::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 20a150c1aedbd9d78c84187bf29e6284a248fbc7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="criticalsection-class"></a>critical_section 클래스
@@ -66,18 +74,18 @@ class critical_section;
   
 |이름|설명|  
 |----------|-----------------|  
-|[critical_section 생성자](#ctor)|새 중요 섹션을 생성합니다.|  
+|[critical_section](#ctor)|새 중요 섹션을 생성합니다.|  
 |[~ critical_section 소멸자](#dtor)|임계 영역을 삭제합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[lock 메서드](#lock)|이 중요 섹션을 가져옵니다.|  
-|[native_handle 메서드](#native_handle)|있는 경우에 플랫폼 특정 네이티브 핸들을 반환 합니다.|  
-|[try_lock 메서드](#try_lock)|차단 하지 않고 잠금을 획득 하려고 시도 합니다.|  
-|[try_lock_for 메서드](#try_lock_for)|특정 기간(밀리초) 동안 차단하지 않고 잠금을 가져오려고 시도합니다.|  
-|[unlock 메서드](#unlock)|중요 섹션을 잠금 해제합니다.|  
+|[lock](#lock)|이 중요 섹션을 가져옵니다.|  
+|[native_handle](#native_handle)|있는 경우에 플랫폼 특정 네이티브 핸들을 반환 합니다.|  
+|[try_lock](#try_lock)|차단 하지 않고 잠금을 획득 하려고 시도 합니다.|  
+|[try_lock_for](#try_lock_for)|특정 기간(밀리초) 동안 차단하지 않고 잠금을 가져오려고 시도합니다.|  
+|[unlock](#unlock)|중요 섹션을 잠금 해제합니다.|  
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [동기화 데이터 구조](../../../parallel/concrt/synchronization-data-structures.md)합니다.  
@@ -90,7 +98,7 @@ class critical_section;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-criticalsection"></a><a name="ctor"></a>critical_section 
+##  <a name="ctor"></a>critical_section 
 
  새 중요 섹션을 생성합니다.  
   
@@ -98,7 +106,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="a-namedtora-criticalsection"></a><a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a>~ critical_section 
 
  임계 영역을 삭제합니다.  
   
@@ -106,10 +114,10 @@ critical_section();
 ~critical_section();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자가 실행 될 때 잠금이 더 이상 유지 될 것입니다. 여전히 유지를 소멸 잠금을 사용 하는 중요 섹션 허용 하면 정의 되지 않은 동작이 발생 합니다.  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>잠금 
+##  <a name="lock"></a>잠금 
 
  이 중요 섹션을 가져옵니다.  
   
@@ -122,7 +130,7 @@ void lock();
   
  호출 컨텍스트에 의해 잠금이 이미 유지 되는 경우는 [improper_lock](improper-lock-class.md) 예외가 throw 됩니다.  
   
-##  <a name="a-namenativehandlea-nativehandle"></a><a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a>native_handle 
 
  있는 경우에 플랫폼 특정 네이티브 핸들을 반환 합니다.  
   
@@ -136,14 +144,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>주의  
  A `critical_section` 개체는 Windows 운영 체제에 플랫폼 특정 네이티브 핸들에 연관 되지 않습니다. 메서드는 단순히 개체 자체에 대 한 참조를 반환합니다.  
   
-##  <a name="a-namecriticalsectionscopedlockclassa--criticalsectionscopedlock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock 클래스  
+##  <a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock 클래스  
  대 한 예외 안전 RAII 래퍼에 대 한는 `critical_section` 개체입니다.  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="a-namecriticalsectionscopedlockctora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
  생성 한 `scoped_lock` 개체를 가져와 `critical_section` 에 전달 된 개체는 `_Critical_section` 매개 변수입니다. 중요 섹션, 다른 스레드에 의해 저장 된 경우이 호출이 차단 됩니다.  
   
@@ -155,7 +163,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  임계 영역 잠금입니다.  
   
-##  <a name="a-namecriticalsectionscopedlockdtora-scopedlockscopedlock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
  삭제는 `scoped_lock` 개체를 해당 생성자에서 제공 하는 중요 섹션을 해제 합니다.  
   
@@ -163,7 +171,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  차단 하지 않고 잠금을 획득 하려고 시도 합니다.  
   
@@ -174,7 +182,7 @@ bool try_lock();
 ### <a name="return-value"></a>반환 값  
  잠금이 설정 된 경우 값 `true`고, 그렇지 않으면 값 `false`합니다.  
   
-##  <a name="a-nametrylockfora-trylockfor"></a><a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a>try_lock_for 
 
  특정 기간(밀리초) 동안 차단하지 않고 잠금을 가져오려고 시도합니다.  
   
@@ -189,7 +197,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>반환 값  
  잠금이 설정 된 경우 값 `true`고, 그렇지 않으면 값 `false`합니다.  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>잠금 해제 
+##  <a name="unlock"></a>잠금 해제 
 
  중요 섹션을 잠금 해제합니다.  
   

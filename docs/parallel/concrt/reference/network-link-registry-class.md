@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 클래스
@@ -68,11 +74,11 @@ class network_link_registry;
   
 |이름|설명|  
 |----------|-----------------|  
-|[메서드 추가](#add)|파생된 클래스에서 재정의 되 면 추가에 대 한 링크는 `network_link_registry` 개체입니다.|  
-|[begin 메서드](#begin)|파생된 클래스에서 재정의 되 면 첫 번째 요소에 반복기를 반환 된 `network_link_registry` 개체입니다.|  
-|[메서드를 포함합니다.](#contains)|파생된 클래스에서 재정의 되 면 검색 된 `network_link_registry` 지정된 된 블록에 대 한 개체입니다.|  
-|[count 메서드](#count)|파생된 클래스에서 재정의 되 면에 있는 항목의 수를 반환 된 `network_link_registry` 개체입니다.|  
-|[remove 메서드](#remove)|파생된 클래스에서 재정의 되 면 제거에서 지정된 된 블록은 `network_link_registry` 개체입니다.|  
+|[add](#add)|파생된 클래스에서 재정의 되 면 추가에 대 한 링크는 `network_link_registry` 개체입니다.|  
+|[begin](#begin)|파생된 클래스에서 재정의 되 면 첫 번째 요소에 반복기를 반환 된 `network_link_registry` 개체입니다.|  
+|[포함](#contains)|파생된 클래스에서 재정의 되 면 검색 된 `network_link_registry` 지정된 된 블록에 대 한 개체입니다.|  
+|[count](#count)|파생된 클래스에서 재정의 되 면에 있는 항목의 수를 반환 된 `network_link_registry` 개체입니다.|  
+|[remove](#remove)|파생된 클래스에서 재정의 되 면 제거에서 지정된 된 블록은 `network_link_registry` 개체입니다.|  
   
 ## <a name="remarks"></a>주의  
  `network link registry` 동시 액세스에 대 한 안전 하지 않습니다.  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>추가 
+##  <a name="add"></a>추가 
 
  파생된 클래스에서 재정의 되 면 추가에 대 한 링크는 `network_link_registry` 개체입니다.  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  추가할 블록에 대 한 포인터입니다.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>시작 
+##  <a name="begin"></a>시작 
 
  파생된 클래스에서 재정의 되 면 첫 번째 요소에 반복기를 반환 된 `network_link_registry` 개체입니다.  
   
@@ -111,7 +117,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>주의  
  반복기의 최종 상태도 표시 됩니다는 `NULL` 링크 합니다.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>포함 
+##  <a name="contains"></a>포함 
 
  파생된 클래스에서 재정의 되 면 검색 된 `network_link_registry` 지정된 된 블록에 대 한 개체입니다.  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>반환 값  
  `true`블록이 없으면 `false` 그렇지 않은 경우.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>개수 
+##  <a name="count"></a>개수 
 
  파생된 클래스에서 재정의 되 면에 있는 항목의 수를 반환 된 `network_link_registry` 개체입니다.  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>반환 값  
  항목 수는 `network_link_registry` 개체입니다.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>제거 
+##  <a name="remove"></a>제거 
 
  파생된 클래스에서 재정의 되 면 제거에서 지정된 된 블록은 `network_link_registry` 개체입니다.  
   

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::bad_target
+- bad_target
+- CONCRT/concurrency::bad_target
+- CONCRT/concurrency::bad_target::bad_target
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a22ebb69195dcea91799dc1c2e301a578dd227bc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 145aa17b4589fb572f3b6594360ec69db5e15287
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="badtarget-class"></a>bad_target 클래스
@@ -54,7 +56,7 @@ class bad_target : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[bad_target 생성자](#ctor)|오버로드됨. `bad_target` 개체를 생성합니다.|  
+|[bad_target](#ctor)|오버로드됨. `bad_target` 개체를 생성합니다.|  
   
 ## <a name="remarks"></a>주의  
  이 예외는 일반적으로 다른 대상에 대 한 예약 된 메시지를 배달 하려고 시도 하거나 보유 하지 않는 예약을 해제 하는 대상 등의 이유로 throw 됩니다.  
@@ -69,7 +71,7 @@ class bad_target : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-badtarget"></a><a name="ctor"></a>bad_target 
+##  <a name="ctor"></a>bad_target 
 
  `bad_target` 개체를 생성합니다.  
   

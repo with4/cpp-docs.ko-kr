@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token_source
+- cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 5c80977656308d3174f4141b131c27fd3c162bbe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 클래스
@@ -54,24 +59,24 @@ class cancellation_token_source;
   
 |이름|설명|  
 |----------|-----------------|  
-|[cancellation_token_source 생성자](#ctor)|오버로드됨. 새 `cancellation_token_source`를 생성합니다. 소스는 일부 취소할 수 있는 작업의 취소 플래그를 설정하는 데 사용할 수 있습니다.|  
+|[cancellation_token_source](#ctor)|오버로드됨. 새 `cancellation_token_source`를 생성합니다. 소스는 일부 취소할 수 있는 작업의 취소 플래그를 설정하는 데 사용할 수 있습니다.|  
 |[~ cancellation_token_source 소멸자](#dtor)||  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[cancel 메서드](#cancel)|토큰을 취소합니다. 토큰을 이용하는 `task_group`, `structured_task_group` 또는 `task`는 이 호출 시 취소되며 다음 중단점에서 예외를 throw합니다.|  
-|[create_linked_source 메서드](#create_linked_source)|오버로드됨. 제공된 토큰이 취소된 경우 취소되는 `cancellation_token_source`를 만듭니다.|  
-|[get_token 메서드](#get_token)|이 소스와 연결된 취소 토큰을 반환합니다. 반환된 토큰은 취소를 폴링하거나 취소가 발생할 경우 콜백을 제공할 수 있습니다.|  
+|[취소](#cancel)|토큰을 취소합니다. 토큰을 이용하는 `task_group`, `structured_task_group` 또는 `task`는 이 호출 시 취소되며 다음 중단점에서 예외를 throw합니다.|  
+|[create_linked_source](#create_linked_source)|오버로드됨. 제공된 토큰이 취소된 경우 취소되는 `cancellation_token_source`를 만듭니다.|  
+|[get_token](#get_token)|이 소스와 연결된 취소 토큰을 반환합니다. 반환된 토큰은 취소를 폴링하거나 취소가 발생할 경우 콜백을 제공할 수 있습니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[연산자! = 연산자](#operator_neq)||  
-|[operator = 연산자](#operator_eq)||  
-|[연산자 = = 연산자](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `cancellation_token_source`  
@@ -81,13 +86,13 @@ class cancellation_token_source;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namedtora-cancellationtokensource"></a><a name="dtor"></a>~ cancellation_token_source 
+##  <a name="dtor"></a>~ cancellation_token_source 
 
 ```
 ~cancellation_token_source();
 ```  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>취소 
+##  <a name="cancel"></a>취소 
 
  토큰을 취소합니다. 토큰을 이용하는 `task_group`, `structured_task_group` 또는 `task`는 이 호출 시 취소되며 다음 중단점에서 예외를 throw합니다.  
   
@@ -95,7 +100,7 @@ class cancellation_token_source;
 void cancel() const;
 ```  
   
-##  <a name="a-namectora-cancellationtokensource"></a><a name="ctor"></a>cancellation_token_source 
+##  <a name="ctor"></a>cancellation_token_source 
 
  새 `cancellation_token_source`를 생성합니다. 소스는 일부 취소할 수 있는 작업의 취소 플래그를 설정하는 데 사용할 수 있습니다.  
   
@@ -110,7 +115,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>매개 변수  
  `_Src`  
   
-##  <a name="a-namecreatelinkedsourcea-createlinkedsource"></a><a name="create_linked_source"></a>create_linked_source 
+##  <a name="create_linked_source"></a>create_linked_source 
 
  제공된 토큰이 취소된 경우 취소되는 `cancellation_token_source`를 만듭니다.  
   
@@ -136,7 +141,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="return-value"></a>반환 값  
  `cancellation_token_source` 매개 변수에서 제공된 토큰이 취소된 경우 취소되는 `_Src`입니다.  
   
-##  <a name="a-namegettokena-gettoken"></a><a name="get_token"></a>get_token 
+##  <a name="get_token"></a>get_token 
 
  이 소스와 연결된 취소 토큰을 반환합니다. 반환된 토큰은 취소를 폴링하거나 취소가 발생할 경우 콜백을 제공할 수 있습니다.  
   
@@ -147,7 +152,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>반환 값  
  이 소스와 연결된 취소 토큰입니다.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>연산자! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -158,7 +163,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a>연산자 = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -171,7 +176,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>연산자 = = 
+##  <a name="operator_eq_eq"></a>연산자 = = 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;
@@ -183,5 +188,5 @@ bool operator== (const cancellation_token_source& _Src) const;
 ### <a name="return-value"></a>반환 값  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 
