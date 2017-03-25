@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio의 Visual C++ | Microsoft 문서"
+title: "Visual Studio의 Visual C++ | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio의 Visual C++
@@ -65,6 +66,9 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 
  Visual Studio 2017의 C++ 규칙 향상에 대해 알아봅니다. 
 
+ [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)  
+ Visual C++의 기능별 규칙 상태 목록입니다.
+
  [Visual C++ 변경 기록 2003 - 2015](porting/visual-cpp-change-history-2003-2015.md)  
  이전 버전의 주요 변경 내용에 대해 알아봅니다.  
   
@@ -76,9 +80,6 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
   
  [Visual C++ 포팅 및 업그레이드 가이드](porting/visual-cpp-porting-and-upgrading-guide.md)  
  C++ 코드를 Windows 10 및 유니버설 Windows 플랫폼으로 포팅하는 작업을 포함하여 Visual Studio 2017에서 Visual C++로 코드를 포팅하고 프로젝트를 업그레이드하기 위한 지침입니다.  
-  
- [C++11/14/17 기능에 대한 지원(최신 C++)](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- Visual C++의 C++11 및 C++14 기능 지원에 대해 알아봅니다.  
   
  [Visual C++ 팀 블로그](http://blogs.msdn.com/b/vcblog/)  
  새로운 기능과 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]의 개발자가 제공하는 최신 정보를 더 자세히 알아봅니다.  
@@ -183,9 +184,4 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [C 언어 참조](c-language/c-language-reference.md)   
  [C 런타임 라이브러리 참조](c-runtime-library/c-run-time-library-reference.md)   
  [컴파일러 내장 및 어셈블리 언어](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio의 Visual C++에 대한 새로운 기능 | Microsoft 문서"
+title: "Visual Studio의 Visual C++에 대한 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 3/7/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,8 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 39648d170fc189168d5f199fff8b3c2012456b82
-ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
+ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
+ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]에는 Visual C++ 환경에 대한 많은 업데이트와 수정이 포함되어 있습니다. 컴파일러 및 도구에서 250개 이상의 버그와 보고된 문제가 해결되었으며, 그 중 상당수는 고객이 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect")를 통해 제출한 것들입니다. 버그를 알려 주셔서 감사합니다.  모든 Visual Studio의 새로운 기능에 대한 자세한 내용은 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 새로운 기능](https://go.microsoft.com/fwlink/?linkid=834481)을 참조하세요.
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 컴파일러 및 도구 버전 번호는 14.10.24629입니다. 
+<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
 
 ## <a name="c-compiler"></a>C++ 컴파일러
@@ -63,8 +64,9 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 - 루프의 코드 생성 향상: 상수 정수 나누기의 자동 벡터화를 지원하며, memset 패턴 식별 기능이 향상되었습니다.
 - 코드 보안 개선: 버퍼 오버런 컴파일러 진단의 내보내기가 개선되었으며, 이제는 /guard:cf가 점프 테이블을 생성하는 스위치 문을 보호합니다.
 - 버전 관리: 기본 제공 전처리기 매크로 _MSC_VER의 값이 이제 Visual C++ 도구 집합 업데이트 시마다 일정하게 업데이트됩니다. 자세한 내용은 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)(Visual C++ 컴파일러 버전)을 참조하세요.
-- 새 도구 집합 레이아웃: 개발 컴퓨터에서 컴파일러 및 관련된 빌드 도구의 위치 및 디렉터리 구조가 변경되었습니다. 새 레이아웃을 사용하면 여러 버전의 컴파일러를 병렬 설치할 수 있습니다. 자세한 내용은 [Compiler Tools Layout in Visual Studio “15”](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)(Visual Studio "15"의 컴파일러 도구 레이아웃)를 참조하세요.
-- 향상된 진단: 이제 출력 창에 오류가 발생하는 열이 표시됩니다. 자세한 내용은 [C++ compiler diagnostics improvements in VS “15” Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)(VS "15" Preview 5의 C++ 컴파일러 진단 향상)를 참조하세요.
+- 새 도구 집합 레이아웃: 개발 컴퓨터에서 컴파일러 및 관련된 빌드 도구의 위치 및 디렉터리 구조가 변경되었습니다. 새 레이아웃을 사용하면 여러 버전의 컴파일러를 병렬 설치할 수 있습니다. 자세한 내용은 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)(Visual Studio "15"의 컴파일러 도구 레이아웃)를 참조하세요.
+- 향상된 진단: 이제 출력 창에 오류가 발생하는 열이 표시됩니다. 자세한 내용은 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)(VS "15" Preview 5의 C++ 컴파일러 진단 향상)를 참조하세요.
+- 코루틴을 사용하는 경우 /await 스위치 아래에서 사용할 수 있었던 실험적 키워드 "yield"가 제거되었습니다. 대신 "co_yield"를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 Visual C++ 팀 블로그를 참조하세요. 
 
 ## <a name="c-libraries"></a>C++ 라이브러리
 
@@ -89,6 +91,7 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 * 컴파일러 처리량을 늘리기 위해 이제 C++ 표준 라이브러리 헤더는 불필요한 컴파일러 내장 함수에 대한 선언을 포함하지 않습니다.
 * 잘못된 bind() 호출에 대한 컴파일러 진단이 약간 개선되었습니다.
 * std::string/std::wstring의 이동 생성자 성능이 3배 넘게 향상됨
+* STL 개선의 전체 목록은 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)(VS 2017 RTM의 STL 수정 사항)을 참조하세요.
 
 ### <a name="open-source-library-support"></a>오픈 소스 라이브러리 지원  
 vcpkg는 오픈 소스 명령줄 도구로, Visual Studio에서 오픈 소스 C++ 정적 라이브러리와 DLL을 얻고 빌드하는 프로세스를 훨씬 간소화합니다. 자세한 내용은 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/)(vcpkg 업데이트: 이제 정적 연결을 사용할 수 있음)을 참조하세요.
@@ -102,7 +105,12 @@ C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되
 * atlstr.h에서 지역 정적 변수의 스레드 안전 초기화에 대한 올바른 경고 C4640 표시
 * [ATL 사용 및 DLL 빌드] 시 XP 도구 집합에서 지역 정적의 스레드 안전 초기화가 자동으로 꺼집니다. 물론 이에 해당하는 경우는 더 이상 없습니다. 스레드 안전 초기화 해제를 원하는 경우 프로젝트 설정에 /Zc:threadSafeInit-을 추가할 수 있습니다. 
 
+### <a name="visual-c-runtime"></a>Visual C++ 런타임
+* 제어 흐름 보호 기호에 대한 새 헤더 "cfguard.h". 
+
 ## <a name="c-ide"></a>C++ IDE
+
+* 이제 구성 변경 성능이 C++ 네이티브 프로젝트의 경우 향상되었고, C++/CLI 프로젝트의 경우 훨씬 더 향상되었습니다. 이제 처음으로 활성화될 때 솔루션 구성이 더 빠르고, 이 솔루션 구성의 모든 후속 활성화는 거의 즉시 이루어집니다.
 
 ### <a name="intellisense"></a>IntelliSense  
 * 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 정의로 이동(Go To Definitions), 모든 참조 찾기(Find All References) 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급(이전에는 ...C/C++ > 실험적에 있었음)으로 이동되었습니다.
@@ -123,29 +131,28 @@ C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되
 
 * 이제 모든 참조 찾기(Shift+F12)를 사용하여 복잡한 코드베이스에서도 쉽게 탐색할 수 있습니다. 고급 그룹화, 필터링, 정렬, 결과 내 검색 및 (일부 언어의 경우) 색 지정이 제공되므로 참조를 명확하게 이해할 수 있습니다. C++의 경우 새로운 UI에 변수에서 읽고 있는지 아니면 변수에 쓰고 있는지에 대한 정보가 포함되어 있습니다.
 
-* _**RC의 새 기능**_ IntelliSense 점-화살표 기능이 실험적에서 고급으로 옮겨졌고 이제 기본적으로 활성화됩니다. 편집기 기능인 범위 확장과 우선 순위 확장도 실험적에서 고급으로 옮겨졌습니다.
+* IntelliSense 점-화살표 기능이 실험적에서 고급으로 옮겨졌고 이제 기본적으로 사용됩니다. 편집기 기능인 범위 확장과 우선 순위 확장도 실험적에서 고급으로 옮겨졌습니다.
 
-* _**RC의 새 기능**_ 실험적 리팩터링 기능인 시그니처 변경과 함수 추출이 기본적으로 활성화됩니다.
+* 실험적 리팩터링 기능인 시그니처 변경과 함수 추출을 기본적으로 사용할 수 있습니다.
 
-* _**RC의 새 기능**_ C++ 프로젝트 ‘빠른 프로젝트 로드’를 위한 새로운 실험적 기능을 활성화했습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 다음에 프로젝트를 열 때는 더 빠르게 로드됩니다.
+* C++ 프로젝트 ‘빠른 프로젝트 로드’를 위한 새로운 실험적 기능을 사용할 수 있게 되었습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 다음에 프로젝트를 열 때는 더 빠르게 로드됩니다.
 
 이러한 기능 중 일부는 다른 언어에 공통적으로 적용되고, 일부는 C++에만 해당합니다. 이러한 새로운 기능에 대한 자세한 내용은 [Announcing Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)(Visual Studio “15” 발표)를 참조하세요. 
 
 ### <a name="support-for-non-msbuild-projects-with-open-folder"></a>폴더 열기를 사용한 비 MSBuild 프로젝트에 대한 지원
 Visual Studio 2017에서는 솔루션 또는 프로젝트를 만들 필요 없이 소스 코드가 포함된 폴더에서 코딩, 빌드 및 디버그할 수 있는 "폴더 열기" 기능이 도입되었습니다. 이렇게 하면 프로젝트가 MSBuild 기반 프로젝트가 아닌 경우에도 Visual Studio를 훨씬 간단하게 시작할 수 있습니다. "폴더 열기"를 사용하면 Visual Studio에서 MSBuild 프로젝트에 이미 제공하는 강력한 코드 이해, 편집, 빌드 및 디버깅 기능에 액세스할 수 있습니다. 자세한 내용은 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/)("폴더 열기"를 사용하여 C++ 코드베이스를 Visual Studio로 가져오기)를 참조하세요.
 
-* _**RC의 새 기능**_ 폴더 열기 환경을 개선했습니다.     
-다음 json 파일을 통해 환경을 사용자 지정할 수 있습니다.
+* 폴더 열기 환경이 개선되었습니다. 다음 json 파일을 통해 환경을 사용자 지정할 수 있습니다.
   -    IntelliSense 및 검색 환경을 사용자 지정할 수 있는 CppProperties.json.
   -    빌드 단계를 사용자 지정할 수 있는 Tasks.json. 
   -    디버깅 환경을 사용자 지정할 수 있는 Launch.json.
 
 ### <a name="cmake-support-via-open-folder"></a>폴더 열기를 사용한 CMake 지원
-Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하지 않고 CMake 프로젝트를 사용할 수 있는 지원이 도입되었습니다. 자세한 내용은 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)(Visual Studio의 CMake 지원)를 참조하세요. “폴더 열기”로 CMake 프로젝트를 여는 경우 C++ 편집, 빌드, 디버깅 환경이 자동으로 구성됩니다.
+Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하지 않고 CMake 프로젝트를 사용할 수 있는 지원이 도입되었습니다. 자세한 내용은 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)(Visual Studio의 CMake 지원) 및 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)(Visual Studio 2017의 CMake 지원 - RC.2 업데이트의 새로운 기능)를 참조하세요. “폴더 열기”로 CMake 프로젝트를 여는 경우 C++ 편집, 빌드, 디버깅 환경이 자동으로 구성됩니다.
 
-* _**RC의 새 기능**_ C++ IntelliSense가 루트 폴더에 CppProperties.json 파일을 만들지 않아도 작동합니다. 이와 함께 CMake 파일과 CppProperties.json 파일에서 제공하는 구성을 서로 쉽게 전환할 수 있도록 새 드롭다운을 추가했습니다.
+* C++ IntelliSense가 루트 폴더에 CppProperties.json 파일을 만들지 않아도 작동합니다. 이와 함께 CMake 파일과 CppProperties.json 파일에서 제공하는 구성을 서로 쉽게 전환할 수 있도록 새 드롭다운을 추가했습니다.
 
-* _**RC의 새 기능**_ CMakeLists.txt 파일과 같은 폴더에 있는 CMakeSettings.json 파일을 통해 추가 구성이 지원됩니다.
+* CMakeLists.txt 파일과 같은 폴더에 있는 CMakeSettings.json 파일을 통해 추가 구성이 지원됩니다.
 
   ![Cmake 폴더 열기](media/cmake_cpp.png "Cmake 폴더 열기")
 
@@ -153,7 +160,9 @@ Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하�
 ## <a name="c-installation-workloads"></a>C++ 설치 워크로드 
 
 ### <a name="windows-desktop-development-with-c"></a>C++을 사용한 Windows 데스크톱 개발:  
-이제 원래 C++ 워크로드에 대한 보다 세분화된 설치 환경이 제공됩니다. 필요한 도구만 설치할 수 있도록 선택 가능한 구성 요소가 추가되었습니다.  설치 관리자 UI에 나열된 구성 요소에 대해 표시된 설치 크기는 정확하지 않으며 전체 크기는 이보다 클 수 있습니다.  
+이제 원래 C++ 워크로드에 대한 보다 세분화된 설치 환경이 제공됩니다. 필요한 도구만 설치할 수 있도록 선택 가능한 구성 요소가 추가되었습니다.  설치 관리자 UI에 나열된 구성 요소에 대해 표시된 설치 크기는 정확하지 않으며 전체 크기는 이보다 클 수 있습니다.
+
+C++ 데스크톱 작업에서 Win32 프로젝트를 성공적으로 만들려면 도구 집합과 Windows SDK를 둘 다 설치해야 합니다. 권장된(선택된) 구성 요소 "VC++ 2017 v141 도구 집합(x86, x64)" 및 "Windows 10 SDK(10.0.14393)"를 설치하면 제대로 작동합니다. 필요한 도구가 설치되어 있지 않으면 프로젝트가 생성되지 않고 마법사가 중단됩니다.
 
 ### <a name="linux-development-with-c"></a>C++를 사용한 Linux 개발:  
 일반적으로 사용되는 확장인 [Linux 개발용 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)가 Visual Studio에 포함됩니다. 이 설치는 Linux 환경에서 실행되는 C++ 응용 프로그램을 개발 및 디버깅하는 데 필요한 모든 사항을 제공합니다.  
@@ -165,7 +174,7 @@ C++의 모든 기능을 사용하여 DirectX 또는 Cocos2d로 구동하는 전�
 이제 Visual Studio를 사용하여 Android 및 iOS를 대상으로 할 수 있는 모바일 앱을 만들고 디버깅할 수 있습니다.  
 
 ### <a name="universal-windows-apps"></a>유니버설 Windows 앱:  
-C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소로 제공됩니다.  
+C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소로 제공됩니다.  현재 C++ 프로젝트를 업그레이드하려면 수동으로 해야 합니다. Visual Studio 2017에서 v140을 대상으로 한 UWP 프로젝트를 열 때 Visual Studio 2015를 설치하지 않은 경우 프로젝트 속성 페이지에서 v141 플랫폼 도구 집합을 선택해야 합니다.
 
 ## <a name="new-options-for-c-on-universal-windows-platform"></a>유니버설 Windows 플랫폼의 C++에 대한 새로운 옵션
 이제 유니버설 Windows 플랫폼 및 Windows 스토어용 C++ 응용 프로그램을 작성하고 패키징하기 위한 새로운 옵션이 있습니다. Windows 스토어를 통해 배포하기 위해 데스크톱 앱 변환기를 사용하여 기존 데스크톱 응용 프로그램을 패키징할 수 있습니다. 자세한 내용은 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 및 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
@@ -230,8 +239,4 @@ Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를
 
 
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 
