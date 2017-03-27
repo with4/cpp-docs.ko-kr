@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ Visual Studio를 사용하여 Linux 프로젝트에 대해 다양한 옵션을 �
 ## <a name="copy-sources"></a>소스 복사
 빌드할 때 개발 PC의 소스 파일이 Linux 컴퓨터에 복사되어 해당 컴퓨터에서 컴파일됩니다.  기본적으로 Visual Studio 프로젝트의 모든 소스가 위의 설정에 지정된 위치에 복사됩니다.  그러나 추가 소스가 목록에 추가되거나, 소스 복사가 완전히 꺼질 수 있습니다(메이크파일 프로젝트에 대한 기본값).
 
-* **복사할 소스**가 원격 컴퓨터에 복사되는 소스를 결정합니다.  **@(SourcesToCopyRemotely)**의 기본값은 프로젝트의 모든 파일입니다.
+* **복사할 소스**가 원격 컴퓨터에 복사되는 소스를 결정합니다.  기본적으로 **@(SourcesToCopyRemotely)**는 프로젝트의 모든 소스 코드 파일로 설정되지만 이미지와 같은 자산/리소스 파일은 포함하지 않습니다.
 
 * **소스 복사**는 원격 컴퓨터에 소스 파일 복사를 사용하거나 사용하지 않기 위해 켜거나 끌 수 있습니다.
 
