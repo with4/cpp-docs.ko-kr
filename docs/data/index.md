@@ -2,9 +2,9 @@
 layout: LandingPage
 title: "Visual C++의 데이터 액세스"
 translationtype: Human Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: bcec6bba72b48c8fc766c2d74dc31d8e47a239f9
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 807cf772d632f66f74a210985ff611fc31ee594a
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++의 데이터 액세스
@@ -203,6 +203,7 @@ Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microso
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="https://www.microsoft.com/download/details.aspx?id=53339" title="Microsoft® ODBC Driver 13.1 for SQL Server® - Windows Download Page">ODBC Driver 13.1 for SQL Server</a></h3>
+                        <p>Microsoft ODBC Driver 13.1 for SQL Server는 네이티브 코드 API를 사용하여 Microsoft SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2016, Analytics Platform System, Azure SQL Database 및 Azure SQL Data Warehouse에 연결하는 응용 프로그램에 대한 런타임 지원을 포함하는 단일 DLL(동적 연결 라이브러리)입니다. 여기에서 드라이버를 다운로드하세요.</p>
                     </div>
                 </div>
             </div>
