@@ -91,7 +91,7 @@ Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microso
         </a>
     </li>
     <li>
-        <a href="/cpp/data/data-access-programming-mfc-atl">
+        <a href="data-access-programming-mfc-atl.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -110,7 +110,7 @@ Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microso
         </a>
     </li>
     <li>
-        <a href="/cpp/data/odbc/open-database-connectivity-odbc">
+        <a href="odbc/open-database-connectivity-odbc.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -129,7 +129,7 @@ Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microso
         </a>
     </li>
     <li>
-        <a href="/cpp/data/oledb/ole-db-programming">
+        <a href="oledb/ole-db-programming.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
