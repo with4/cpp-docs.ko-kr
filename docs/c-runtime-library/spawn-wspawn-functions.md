@@ -76,6 +76,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn 함수
@@ -156,7 +157,7 @@ ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
   
  인수의 개수를 미리 알고 있는 경우에는 `_spawnl`, `_spawnle`, `_spawnlp` 및 `_spawnlpe` 호출이 일반적으로 사용됩니다. `arg0` 인수는 일반적으로 `cmdname`에 대한 포인터입니다. `arg1` - `argn` 인수는 새 인수 목록을 구성하는 문자열에 대한 포인터입니다. `argn` 다음에는 인수 목록의 끝을 표시하는 `NULL` 포인터가 와야 합니다.  
   
- 새로운 프로세스에 대한 인수 개수가 가변적인 경우에는 `_spawnv`, `_spawnve`, `_spawnvp` 및 `_spawnvpe` 호출이 유용합니다. 인수에 대한 포인터는 `argv`* 배열로 전달됩니다.* 인수 `argv`[0]은 일반적으로 리얼 모드에서 경로를 가리키는 포인터이거나 보호 모드에서 프로그램 이름을 가리키는 포인터입니다. `argv`[1]부터 `argv`[`n`]은 새로운 인수 목록을 구성하는 문자열을 가리키는 포인터입니다. 인수 `argv`[`n` +1]은 인수 목록의 끝을 표시하는 `NULL` 포인터여야 합니다.  
+ 새로운 프로세스에 대한 인수 개수가 가변적인 경우에는 `_spawnv`, `_spawnve`, `_spawnvp` 및 `_spawnvpe` 호출이 유용합니다. 인수에 대한 포인터는 `argv`*배열로 전달됩니다.* 인수 `argv`[0]은 일반적으로 리얼 모드에서 경로를 가리키는 포인터이거나 보호 모드에서 프로그램 이름을 가리키는 포인터입니다. `argv`[1]부터 `argv`[`n`]은 새로운 인수 목록을 구성하는 문자열을 가리키는 포인터입니다. 인수 `argv`[`n` +1]은 인수 목록의 끝을 표시하는 `NULL` 포인터여야 합니다.  
   
 ## <a name="environment-of-the-spawned-process"></a>생성된 프로세스의 환경  
  `_spawn` 호출 실행 시 열려 있는 파일은 새로운 프로세스에서 열린 채로 유지됩니다. `_spawnl`, `_spawnlp`, `_spawnv` 및 `_spawnvp` 호출에서 새로운 프로세스는 호출 프로세스의 환경을 상속 받습니다. `_spawnle`, `_spawnlpe`, `_spawnve` 및 `_spawnvpe` 호출을 사용하면 `envp` 인수를 통해 환경 설정 목록을 전달하여 새로운 프로세스에 대한 환경을 변경할 수 있습니다. `envp` 인수는 문자 포인터 배열이며, 마지막 요소를 제외한 각 요소는 환경 변수를 정의하고 null로 종료되는 문자열을 가리킵니다. 이러한 문자열의 형식은 일반적으로 `NAME`=`value`입니다. 여기서 `NAME`은 환경 변수의 이름이고, `value`는 해당 변수가 설정된 문자열 값입니다. `value`는 큰따옴표로 묶지 않습니다. `envp` 배열의 마지막 요소는 `NULL`이어야 합니다. `envp` 자체가 `NULL`이면 생성된 프로세스가 부모 프로세스의 환경 설정을 상속 받습니다.  
@@ -268,8 +269,3 @@ from SPAWN!
  [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
  [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
