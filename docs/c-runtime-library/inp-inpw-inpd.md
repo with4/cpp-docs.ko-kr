@@ -58,12 +58,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 54325f60b0d1714cab68f17152609a8980bc2a60
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
-포트에서의 입력으로, 바이트(`_inp`), 워드(`_inpw`), 또는&2;배 워드(`_inpd`)입니다.  
+포트에서의 입력으로, 바이트(`_inp`), 워드(`_inpw`), 또는 2배 워드(`_inpd`)입니다.  
   
 > [!IMPORTANT]
 >  이러한 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.  
@@ -90,10 +91,10 @@ unsigned long _inpd(
  I/O 포트 번호입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 `port`에서 바이트, 워드 또는&2;배 워드를 반환합니다. 반환되는 오류가 없습니다.  
+ 함수가 `port`에서 바이트, 워드 또는 2배 워드를 반환합니다. 반환되는 오류가 없습니다.  
   
 ## <a name="remarks"></a>설명  
- `_inp`, `_inpw`및 `_inpd` 함수는 바이트, 워드 및&2;배 워드를 각각 지정된 된 입력 포트로부터 읽습니다. 입력 값은 0 - 65,535 범위의 부호 없는 정수(Short)입니다.  
+ `_inp`, `_inpw`및 `_inpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 된 입력 포트로부터 읽습니다. 입력 값은 0 - 65,535 범위의 부호 없는 정수(Short)입니다.  
   
  이러한 함수는 I/O 포트에서 직접 읽기 때문에 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003의 사용자 코드에서 사용할 수 없습니다.  
   
@@ -110,14 +111,6 @@ unsigned long _inpd(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
-  
 ## <a name="see-also"></a>참고 항목  
  [콘솔 및 포트 I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

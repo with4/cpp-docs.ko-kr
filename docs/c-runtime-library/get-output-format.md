@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 23646d03e920ae187286885dbd24e1d312973048
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 389704142fe6d6f5806542cd2bdf6cdd4482172b
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="getoutputformat"></a>_get_output_format
@@ -70,7 +70,7 @@ unsigned int _get_output_format();
  출력 형식 플래그의 현재 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 출력 형식 플래그는 형식이 지정된 I/O의 기능을 제어합니다. 현재 플래그는 두 가지 가능한 값인 0과 `_TWO_DIGIT_EXPONENT`를 사용합니다. `_TWO_DIGIT_EXPONENT` 가 설정된 경우 부동 소수점 숫자는 세 번째 숫자가 지수의 크기에 따라 필요한 경우가 아닌 한 지수에 두 자리 숫자로 인쇄됩니다. 플래그가&0;이면 부동 소수점 출력은 필요한 경우&0;을 사용하여 세 자리에 값을 채워 지수의 세 자리를 표시합니다.  
+ 출력 형식 플래그는 형식이 지정된 I/O의 기능을 제어합니다. 현재 플래그는 두 가지 가능한 값인 0과 `_TWO_DIGIT_EXPONENT`를 사용합니다. `_TWO_DIGIT_EXPONENT` 가 설정된 경우 부동 소수점 숫자는 세 번째 숫자가 지수의 크기에 따라 필요한 경우가 아닌 한 지수에 두 자리 숫자로 인쇄됩니다. 플래그가 0이면 부동 소수점 출력은 필요한 경우 0을 사용하여 세 자리에 값을 채워 지수의 세 자리를 표시합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -79,9 +79,6 @@ unsigned int _get_output_format();
 |`_get_output_format`|\<stdio.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [형식 사양 구문: printf 및 wprintf 함수](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)  
