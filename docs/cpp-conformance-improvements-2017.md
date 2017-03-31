@@ -27,16 +27,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: b26df320266a1465e214c70c29c7077d04ffb4b9
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 2d86588df2b20861dff5b940d2f0c7c3afd857fb
+ms.lasthandoff: 03/21/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 C++ 규칙 향상
 
 ## <a name="new-language-features"></a>새 언어 기능  
-컴파일러는 일반화된 constexpr을 지원하고 집계에 NSDMI를 사용할 수 있기 때문에 이제 C++14 표준에 추가된 기능을 완벽히 갖췄습니다. 하지만 아직까지 C++11 표준 기능과 C++98 표준 기능이 몇 가지 부족합니다.
+컴파일러는 일반화된 constexpr을 지원하고 집계에 NSDMI를 사용할 수 있기 때문에 이제 C++14 표준에 추가된 기능을 완벽히 갖췄습니다. 하지만 아직까지 C++11 표준 기능과 C++98 표준 기능이 몇 가지 부족합니다. 컴파일러의 현재 상태를 보여 주는 테이블은 [Visual C++ Language Conformance](visual-cpp-language-conformance.md)(Visual C++ 언어 규칙)를 참조하세요.
 
 ### <a name="c11"></a>C++11:
 **더 많은 라이브러리의 SFINAE 식 지원** Visual C++ 컴파일러는 decltype 및 constexpr 식이 템플릿 매개 변수로 나타날 수 있는 템플릿 인수 감소 및 대체에 필요한 SFINAE 식에 대한 지원을 계속 개선하고 있습니다. 자세한 내용은 [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)(Visual Studio 2017 RC의 SFINAE 식 향상)를 참조하세요. 
@@ -86,7 +86,7 @@ Visual Studio 2015에서 컴파일러는 일반 copy-initialization과 같은 �
 
 ```cpp  
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
-struct MyList {
+struct MyStore {
        explicit MyStore(int initialCapacity);
 };
 
@@ -273,6 +273,22 @@ constexpr bool test1 = IsCallable<int(), int>::value;
 static_assert(test1, "PASS1");
 constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
+```
+### <a name="classes-declared-in-anonymous-namespaces"></a>익명 네임스페이스에 선언된 클래스
+C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 링크가 있으므로 내보낼 수 없습니다. Visual Studio 2015 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. 다음 예제에서는 Visual Studio 2017에서 "오류 C2201: ' const `anonymous namespace'::S1::`vftable'': 가져오거나 내보내려면 외부 링크가 있어야 합니다." 오류를 발생시킵니다.
+
+```cpp
+namespace
+{
+    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+}
+```
+
+### <a name="classes-declared-in-anonymous-namespaces"></a>익명 네임스페이스에 선언된 클래스
+C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 링크가 있으므로 내보낼 수 없습니다. Visual Studio 2015 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. 다음 예제에서는 Visual Studio 2017에서 "오류 C2201: ' const `anonymous namespace'::S1::`vftable'': 가져오거나 내보내려면 외부 링크가 있어야 합니다." 오류를 발생시킵니다.
+
+```cpp
+struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>값 클래스 멤버에 대한 기본 이니셜라이저(C++/CLI)
