@@ -1020,7 +1020,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1033,7 +1033,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
