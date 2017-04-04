@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="a-nameistreamswapa--swap"></a><a name="istream_swap"></a>  swap  
+##  <a name="istream_swap"></a>  swap  
  두 stream 개체의 요소를 교환합니다.  
   
 ```  
@@ -38,13 +38,13 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  스트림입니다.  
   
- ` right`  
+ `right`  
  스트림입니다.  
   
-##  <a name="a-namewsa--ws"></a><a name="ws"></a>  ws  
+##  <a name="ws"></a>  ws  
  스트림의 공백을 건너뜁니다.  
   
 ```  

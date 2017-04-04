@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>반환 값  
  값은 **신뢰도** 다음과 같이 정의 된 열거:  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>주의  
  파일을 열기 위한 사용할 문서 서식 파일의 형식을 확인 하려면이 함수를 사용 합니다. 응용 프로그램이 지 원하는 경우 여러 파일 형식, 예를 들어 수이 함수를 사용 하면 중 사용 가능한 문서 서식 파일은 지정된 된 파일에 대 한 적절 한 호출 하 여 결정 `MatchDocType` 신뢰도 값에 따라 템플릿을 선택 하 고 다시의 각 템플릿에 대 한 반환 합니다.  

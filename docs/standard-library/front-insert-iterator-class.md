@@ -85,7 +85,7 @@ class front_insert_iterator;
   
  **네임스페이스:** std  
   
-##  <a name="a-namefrontinsertiteratorcontainertypea--frontinsertiteratorcontainertype"></a><a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
  전면 삽입 대상인 컨테이너를 나타내는 형식입니다.  
   
 ```  
@@ -125,7 +125,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorfrontinsertiteratora--frontinsertiteratorfrontinsertiterator"></a><a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.  
   
 ```  
@@ -185,7 +185,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatorstara--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
  주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.  
   
 ```  
@@ -243,7 +243,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoraddadda--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
  값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.  
   
 ```  
@@ -291,7 +291,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoreqa--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
  컨테이너의 앞에 값을 추가(푸시)합니다.  
   
 ```  
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` val`  
+ `val`  
  컨테이너에 할당할 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -349,7 +349,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorreferencea--frontinsertiteratorreference"></a><a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
  연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```  

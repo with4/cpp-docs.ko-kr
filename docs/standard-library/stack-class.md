@@ -101,7 +101,7 @@ class stack
   
  **네임스페이스:** std  
   
-##  <a name="a-namestackcontainertypea--stackcontainertype"></a><a name="stack__container_type"></a>  stack::container_type  
+##  <a name="stack__container_type"></a>  stack::container_type  
  조정할 기본 컨테이너를 제공하는 형식입니다.  
   
 ```  
@@ -116,7 +116,7 @@ typedef Container container_type;
 ### <a name="example"></a>예제  
   `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack__stack)의 예제를 참조하세요.  
   
-##  <a name="a-namestackemptya--stackempty"></a><a name="stack__empty"></a>  stack::empty  
+##  <a name="stack__empty"></a>  stack::empty  
  스택이 비어 있는지 테스트합니다.  
   
 ```  
@@ -159,7 +159,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="a-namestackpopa--stackpop"></a><a name="stack__pop"></a>  stack::pop  
+##  <a name="stack__pop"></a>  stack::pop  
  stack의 가장 윗부분의 요소를 제거합니다.  
   
 ```  
@@ -213,7 +213,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="a-namestackpusha--stackpush"></a><a name="stack__push"></a>  stack::push  
+##  <a name="stack__push"></a>  stack::push  
  스택 맨 위의 끝부분에 요소를 추가합니다.  
   
 ```  
@@ -221,7 +221,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` val`  
+ `val`  
  스택의 맨 위에 추가되는 요소입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -259,7 +259,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="a-namestacksizea--stacksize"></a><a name="stack__size"></a>  stack::size  
+##  <a name="stack__size"></a>  stack::size  
  스택의 요소 수를 반환합니다.  
   
 ```  
@@ -298,7 +298,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="a-namestacksizetypea--stacksizetype"></a><a name="stack__size_type"></a>  stack::size_type  
+##  <a name="stack__size_type"></a>  stack::size_type  
  스택에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>예제  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#stack__size)의 예제를 참조하세요.  
   
-##  <a name="a-namestackstacka--stackstack"></a><a name="stack__stack"></a>  stack::stack  
+##  <a name="stack__stack"></a>  stack::stack  
  비어 있거나 기본 컨테이너 개체의 복사본인 스택을 생성합니다.  
   
 ```  
@@ -321,7 +321,7 @@ explicit stack(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  생성된 스택이 복사본이 되는 컨테이너입니다.  
   
 ### <a name="example"></a>예제  
@@ -363,7 +363,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="a-namestacktopa--stacktop"></a><a name="stack__top"></a>  stack::top  
+##  <a name="stack__top"></a>  stack::top  
  stack의 가장 윗부분의 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -411,7 +411,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="a-namestackvaluetypea--stackvaluetype"></a><a name="stack__value_type"></a>  stack::value_type  
+##  <a name="stack__value_type"></a>  stack::value_type  
  스택에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
   
 ```  

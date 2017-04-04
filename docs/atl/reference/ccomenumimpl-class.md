@@ -172,17 +172,14 @@ HRESULT Init(
   
  `flags` 매개 변수를 사용 하는 열거자에 전달 된 배열 요소를 처리 해야 방법을 지정할 수 있습니다. `flags`값 중 하나를 수행할 수는 **CComEnumFlags** 아래에 표시 된 열거:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** 열거자가 배열의 수명 제어 되지 않는 것을 의미 합니다. 두 배열의 경우 정적 또는 식별 되는 개체 됩니다 *펑크* 더 이상 필요 없는 경우 배열 해제 해야 합니다.  
   

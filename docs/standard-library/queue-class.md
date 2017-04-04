@@ -103,7 +103,7 @@ class queue
   
  **네임스페이스:** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a>  queue::back  
+##  <a name="queue__back"></a>  queue::back  
  queue 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a>  queue::container_type  
+##  <a name="queue__container_type"></a>  queue::container_type  
  조정할 기본 컨테이너를 제공하는 형식입니다.  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>예제  
   `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue__queue)의 예제를 참조하세요.  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a>  queue::empty  
+##  <a name="queue__empty"></a>  queue::empty  
  queue가 비어 있는지 테스트합니다.  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a>  queue::front  
+##  <a name="queue__front"></a>  queue::front  
  queue 앞의 첫 번째 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a>  queue::pop  
+##  <a name="queue__pop"></a>  queue::pop  
  queue 앞에서 요소를 제거합니다.  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a>  queue::push  
+##  <a name="queue__push"></a>  queue::push  
  queue 뒤에 요소를 추가합니다.다.  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a>  queue::queue  
+##  <a name="queue__queue"></a>  queue::queue  
  비어 있거나 기본 컨테이너 개체의 복사본인 queue를 생성합니다.  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  생성된 queue가 복사본이 되는 **const** 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a>  queue::size  
+##  <a name="queue__size"></a>  queue::size  
  queue에 있는 요소 수를 반환합니다.  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a>  queue::size_type  
+##  <a name="queue__size_type"></a>  queue::size_type  
  queue에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>예제  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#queue__front)의 예제를 참조하세요.  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a>  queue::value_type  
+##  <a name="queue__value_type"></a>  queue::value_type  
  queue에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
   
 ```  

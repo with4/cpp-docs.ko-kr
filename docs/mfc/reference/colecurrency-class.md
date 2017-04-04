@@ -198,15 +198,13 @@ CurrencyStatus GetStatus() const;
 ### <a name="remarks"></a>주의  
  반환 값에 의해 정의 되는 `CurrencyStatus` 열거 내에 정의 된 형식의 **COleCurrency** 클래스입니다.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  에 대 한 간략 한 설명은이 상태 값을 다음 목록을 참조 합니다.  
   
@@ -530,15 +528,13 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="remarks"></a>주의  
  *상태* 으로 매개 변수 값이 정의 `CurrencyStatus` 열거 형식 내에 정의 된는 **COleCurrency** 클래스입니다.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  에 대 한 간략 한 설명은이 상태 값을 다음 목록을 참조 합니다.  
   

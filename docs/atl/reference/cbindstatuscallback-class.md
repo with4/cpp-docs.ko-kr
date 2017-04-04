@@ -275,15 +275,13 @@ ATL_PDATAAVAILABLE m_pFunc;
 ### <a name="remarks"></a>주의  
  함수에서 가리키는 `m_pFunc` 개체의 클래스의 멤버 이며은 다음 구문을 사용 합니다.  
   
- `void Function_Name(`  
-  
- `CBindStatusCallback<T>* pbsc,`  
-  
- `BYTE* pBytes,`  
-  
- `DWORD dwSize`  
-  
- `);`  
+```  
+void Function_Name(  
+   CBindStatusCallback<T>* pbsc,  
+   BYTE* pBytes,  
+   DWORD dwSize  
+   );  
+```  
   
 ##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  비동기 데이터 전송 요청 하는 개체에 대 한 포인터입니다.  

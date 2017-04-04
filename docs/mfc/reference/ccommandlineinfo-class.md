@@ -175,27 +175,19 @@ m_nShellCommand;
 ### <a name="remarks"></a>주의  
  이 데이터 멤버에 대 한 형식이에 정의 된 다음 열거 유형을 `CCommandLineInfo` 클래스입니다.  
   
- `enum{`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `AppRegister,`  
-  
- `AppUnregister,`  
-  
- `RestartByRestartManager,`  
-  
- `FileNothing = -1`  
-  
- `};`  
+```  
+enum {  
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE,
+    AppRegister,
+    AppUnregister,
+    RestartByRestartManager,
+    FileNothing = -1  
+    };  
+```  
   
  에 대 한 간략 한 설명은이 값을 다음 목록을 참조 합니다.  
   

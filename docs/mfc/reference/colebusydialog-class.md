@@ -173,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>주의  
  반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COleBusyDialog` 클래스입니다.  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  이러한 값에 대 한 간략 한 설명을 따르십시오.  
   
