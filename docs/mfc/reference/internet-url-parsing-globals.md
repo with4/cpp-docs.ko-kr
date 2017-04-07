@@ -1,7 +1,7 @@
 ---
-title: "인터넷 URL 전역 구문 분석 | Microsoft 문서"
+title: "인터넷 URL 전역 구문 분석 및 도우미 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -35,23 +35,29 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 3aec259acae2f5e9c9b65ac4e5c898ca57ff3d52
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 947ef992d58895e4638d9ffe77fca973cea8eada
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="internet-url-parsing-globals"></a>인터넷 URL 전역 구문 분석
-클라이언트가 인터넷 서버에는 쿼리를 보내, 클라이언트에 대 한 정보를 추출 하는 URL 전역 구문 분석 중 하나를 사용할 수 있습니다.  
+# <a name="internet-url-parsing-globals-and-helpers"></a>인터넷 URL 전역 구문 분석 및 도우미
+클라이언트가 인터넷 서버에는 쿼리 보내면 클라이언트에 대 한 정보를 추출 하는 URL 전역 구문 분석 중 하나를 사용할 수 있습니다. 도우미 함수는 다른 인터넷 기능을 제공합니다.
   
-### <a name="internet-url-parsing-globals"></a>인터넷 URL 전역 구문 분석  
+## <a name="internet-url-parsing-globals"></a>인터넷 URL 전역 구문 분석  
   
 |||  
 |-|-|  
-|[AfxParseURL](#afxparseurl)|URL 문자열을 구문 분석 하 고 서비스 및 해당 구성 요소의 종류를 반환 합니다.|  
-|[AfxParseURLEx](#afxparseurlex)|URL 문자열을 구문 분석 하 고 사용자 이름 및 암호 제공 뿐만 아니라 서비스 및 해당 구성 요소 유형을 반환 합니다.|  
+|[AfxParseURL](#afxparseurl)|URL 문자열을 구문 분석 하 고 서비스 및 해당 구성 요소의 형식을 반환 합니다.|  
+|[AfxParseURLEx](#afxparseurlex)|URL 문자열을 구문 분석 하 고 사용자 이름 및 암호를 제공 하 뿐만 아니라 서비스 및 해당 구성 요소 유형을 반환 합니다.|  
+
+## <a name="other-internet-helpers"></a>다른 인터넷 도우미
+|||
+|-|-|
+|[AfxThrowInternetException](#afxthrowinternetexception)|인터넷 연결 관련 예외를 throw 합니다.|
+|[AfxGetInternetHandleType](#afxgetinternethandletype)|인터넷 핸들의 형식을 결정합니다.|
   
-##  <a name="a-nameafxparseurla--afxparseurl"></a><a name="afxparseurl"></a>AfxParseURL  
- 이 전역는 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
+##  <a name="afxparseurl"></a>AfxParseURL  
+ 이 전역에 사용 되 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
   
 ```   
 BOOL AFXAPI AfxParseURL(
@@ -64,7 +70,7 @@ BOOL AFXAPI AfxParseURL(
   
 ### <a name="parameters"></a>매개 변수  
  *pstrURL*  
- 구문 분석할 수에 대 한 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ 구문 분석 될 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `dwServiceType`  
  인터넷 서비스의 유형을 나타냅니다. 다음과 같은 값을 사용할 수 있습니다.  
@@ -106,15 +112,15 @@ BOOL AFXAPI AfxParseURL(
  URL에서 참조 하는 개체 (비어 있을 수 있습니다).  
   
  `nPort`  
- 있는 경우 URL의 서버 또는 개체 부분에서 확인 했습니다.  
+ 있는 경우 URL의 일부 서버 또는 개체에서에서 확인 했습니다.  
   
 ### <a name="return-value"></a>반환 값  
- URL 구문 분석 했습니다. 0이 아닌 비어 있거나, 알려진된 인터넷 서비스 형식이 없는 경우, 그렇지 않으면 0입니다.  
+ URL 구문 분석 했습니다. 0이 아닌 비어 있거나 알려진된 인터넷 서비스 형식을 포함 하지 않는 경우, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
  URL 문자열을 구문 분석 하 고 서비스 및 해당 구성 요소의 형식을 반환 합니다.  
   
- 예를 들어 `AfxParseURL` 형식의 Url을 구문 분석 하 여 **service://server/dir/dir/object.ext:port** 다음과 같이 저장 된 해당 구성 요소를 반환 합니다.  
+ 예를 들어 `AfxParseURL` 형식의 Url을 구문 분석 **service://server/dir/dir/object.ext:port** 다음과 같이 저장 된 해당 구성 요소를 반환 합니다.  
   
  `strServer`"server" = =  
   
@@ -125,13 +131,13 @@ BOOL AFXAPI AfxParseURL(
  `dwServiceType`#service = =  
   
 > [!NOTE]
->  이 함수를 호출 하려면 프로젝트 AFXINET 포함 해야 합니다.&8;.  
+>  이 함수를 호출 하려면 프로젝트 AFXINET 포함 되어야 합니다. 8.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxinet.h  
   
-##  <a name="a-nameafxparseurlexa--afxparseurlex"></a><a name="afxparseurlex"></a>AfxParseURLEx  
- 이 전역 함수는 확장 된 버전의 [AfxParseURL](#afxparseurl) 을 사용 하는 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
+##  <a name="afxparseurlex"></a>AfxParseURLEx  
+ 이 전역 함수는 확장 된 버전의 [AfxParseURL](#afxparseurl) 에 사용 되 고 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
   
 ```   
 BOOL AFXAPI AfxParseURLEx(
@@ -147,7 +153,7 @@ BOOL AFXAPI AfxParseURLEx(
   
 ### <a name="parameters"></a>매개 변수  
  *pstrURL*  
- 구문 분석할 수에 대 한 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ 구문 분석 될 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `dwServiceType`  
  인터넷 서비스의 유형을 나타냅니다. 다음과 같은 값을 사용할 수 있습니다.  
@@ -189,39 +195,122 @@ BOOL AFXAPI AfxParseURLEx(
  URL에서 참조 하는 개체 (비어 있을 수 있습니다).  
   
  `nPort`  
- 있는 경우 URL의 서버 또는 개체 부분에서 확인 했습니다.  
+ 있는 경우 URL의 일부 서버 또는 개체에서에서 확인 했습니다.  
   
- *여 strUsername*  
+ *strUsername*  
  에 대 한 참조는 `CString` 사용자의 이름을 포함 하는 개체입니다.  
   
  `strPassword`  
  에 대 한 참조는 `CString` 사용자의 암호를 포함 하는 개체입니다.  
   
  `dwFlags`  
- URL 구문 분석 하는 방법을 제어 하는 플래그입니다. 다음 값의 조합일 수 있습니다.  
+ URL 구문 분석 하는 방법을 제어 하는 플래그입니다. 다음 값의 조합 될 수 있습니다.  
   
 |값|의미|  
 |-----------|-------------|  
 |**ICU_DECODE**|%XX 이스케이프 시퀀스를 문자로 변환 합니다.|  
-|**ICU_NO_ENCODE**|이스케이프 시퀀스를 안전 하지 않은 문자를 변환 하지 않습니다.|  
-|**ICU_NO_META**|메타 시퀀스 (예: "\."를 제거 하지 마십시오 및 "\...") URL입니다.|  
-|**ICU_ENCODE_SPACES_ONLY**|만 공간을 인코딩하십시오.|  
-|**ICU_BROWSER_MODE**|인코딩 또는 '#' 뒤에 문자를 디코딩할 안 함 또는 ', 후 후행 공백을 제거 하지 않는 '. 이 값을 지정 하지 않으면 전체 URL 인코딩 되 고 후행 공백이 제거 됩니다.|  
+|**ICU_NO_ENCODE**|안전 하지 않은 문자 이스케이프 시퀀스를 변환 하지 않습니다.|  
+|**ICU_NO_META**|메타 배열 순서 (예: "\"를 제거 하지 마십시오 및 "\...") URL입니다.|  
+|**ICU_ENCODE_SPACES_ONLY**|공간을 인코딩하십시오.|  
+|**ICU_BROWSER_MODE**|인코딩 또는 '#' 뒤에 문자를 해독 하지 않는 또는 ', 후 후행 공백만 제거 하지 마십시오 '. 이 값을 지정 하지 않으면 전체 URL은 인코딩되고 후행 공백은 제거 됩니다.|  
   
- 함수 변환 안전 하지 않은 문자와 메타 시퀀스는 플래그가 없는 MFC 기본값을 사용 하는 경우 (같은 \\., \..., 및 \\...)를 이스케이프 시퀀스를 합니다.  
+ 함수 변환 모든 안전 하지 않은 문자 및 메타 순서는 플래그가 없는 MFC 기본값을 사용 하는 경우 (같은 \\., \ \.., 및 \\...) 값이 되도록 이스케이프 시퀀스 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- URL 구문 분석 했습니다. 0이 아닌 비어 있거나, 알려진된 인터넷 서비스 형식이 없는 경우, 그렇지 않으면 0입니다.  
+ URL 구문 분석 했습니다. 0이 아닌 비어 있거나 알려진된 인터넷 서비스 형식을 포함 하지 않는 경우, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
- URL 문자열을 구문 분석 하 고 서비스 및 해당 구성 요소와 사용자의 이름 및 암호를 제공 하는 형식을 반환 합니다. 플래그는 어떻게 안전 하지 않은 문자를 나타냅니다 처리 됩니다.  
+ URL 문자열을 구문 분석 하 고 사용자의 이름 및 암호를 제공 하 뿐만 아니라 서비스 및 해당 구성 요소 유형을 반환 합니다. 플래그 나타냅니다 방법을 안전 하지 않은 문자를 처리 합니다.  
   
 > [!NOTE]
->  이 함수를 호출 하려면 프로젝트 AFXINET 포함 해야 합니다.&8;.  
+>  이 함수를 호출 하려면 프로젝트 AFXINET 포함 되어야 합니다. 8.  
 
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxinet.h  
     
 ## <a name="see-also"></a>참고 항목  
  [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+ 
+## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+이 전역 함수를 사용 하 여 인터넷 핸들의 형식을 결정 합니다.  
+   
+### <a name="syntax"></a>구문  
+  ```
+DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );  
+```
+### <a name="parameters"></a>매개 변수  
+ `hQuery`  
+ 인터넷 쿼리를 사용 하는 핸들입니다.  
+   
+### <a name="return-value"></a>반환 값  
+ 모든 인터넷 서비스 WININET에서 정의 된 형식입니다. 8. 이러한 인터넷 서비스의 목록은 설명 섹션을 참조 하십시오. 핸들 NULL 않거나 인식 되지 함수 AFX_INET_SERVICE_UNK를 반환 합니다.  
+   
+### <a name="remarks"></a>주의  
+ 다음 목록은에서 반환 하는 가능한 인터넷 형식은 `AfxGetInternetHandleType`합니다.  
+  
+-   INTERNET_HANDLE_TYPE_INTERNET  
+  
+-   INTERNET_HANDLE_TYPE_CONNECT_FTP  
+  
+-   INTERNET_HANDLE_TYPE_CONNECT_GOPHER  
+  
+-   INTERNET_HANDLE_TYPE_CONNECT_HTTP  
+  
+-   INTERNET_HANDLE_TYPE_FTP_FIND  
+  
+-   INTERNET_HANDLE_TYPE_FTP_FIND_HTML  
+  
+-   INTERNET_HANDLE_TYPE_FTP_FILE  
+  
+-   INTERNET_HANDLE_TYPE_FTP_FILE_HTML  
+  
+-   INTERNET_HANDLE_TYPE_GOPHER_FIND  
+  
+-   INTERNET_HANDLE_TYPE_GOPHER_FIND_HTML  
+  
+-   INTERNET_HANDLE_TYPE_GOPHER_FILE  
+  
+-   INTERNET_HANDLE_TYPE_GOPHER_FILE_HTML  
+  
+-   INTERNET_HANDLE_TYPE_HTTP_REQUEST  
+  
+> [!NOTE]
+>  이 함수를 호출 하려면 프로젝트 AFXINET 포함 되어야 합니다. 8.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxinet.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](mfc-macros-and-globals.md)   
+ [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
+ 
+## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+인터넷 예외가 throw 됩니다.  
+   
+### <a name="syntax"></a>구문    
+```
+   void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );  
+```
+### <a name="parameters"></a>매개 변수  
+ `dwContext`  
+ 오류를 발생 시킨 작업에 대 한 컨텍스트 식별자입니다. 기본값 `dwContext` 에 원래 지정 된 [CInternetSession](cinternetsession-class.md) 에 전달 되 고 [CInternetConnection](cinternetconnection-class.md)-및 [CInternetFile](cinternetfile-class.md)-파생 된 클래스입니다. 연결 또는 파일에 수행 하는 특정 작업에 대해 일반적으로 사용 하 여 기본적이 재정의 한 `dwContext` 자신만의 합니다. 그런 다음이 값에 반환 됩니다 [cinternetsession:: Onstatuscallback](cinternetsession-class.md#onstatuscallback) 특정 작업의 상태를 식별할 수 있습니다. 
+  
+ `dwError`  
+ 예외를 발생 시킨 오류입니다.  
+   
+### <a name="remarks"></a>주의  
+ 운영 체제 오류 코드에 따라 원인을 책임이 있습니다.  
+  
+> [!NOTE]
+>  이 함수를 호출 하려면 프로젝트 AFXINET 포함 되어야 합니다. 8.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxinet.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](mfc-macros-and-globals.md)   
+ [CInternetException 클래스](cinternetexception-class.md)   
+ [THROW](#throw)
+ 
+
 

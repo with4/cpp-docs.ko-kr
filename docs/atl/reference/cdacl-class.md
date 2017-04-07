@@ -1,5 +1,5 @@
 ---
-title: "CDacl 클래스 | Microsoft 문서"
+title: "CDacl 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: bb418919c26e3c0054a151b859cdf3f31c5d73a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdacl-class"></a>CDacl 클래스
@@ -72,7 +72,7 @@ class CDacl : public CAcl
 |이름|설명|  
 |----------|-----------------|  
 |[CDacl::AddAllowedAce](#addallowedace)|허용 되는 ACE (액세스 제어 항목)에 추가 된 `CDacl` 개체입니다.|  
-|[CDacl::AddDeniedAce](#adddeniedace)|추가 하도록 거부 ACE는 `CDacl` 개체입니다.|  
+|[CDacl::AddDeniedAce](#adddeniedace)|추가를 거부 ACE는 `CDacl` 개체입니다.|  
 |[CDacl::GetAceCount](#getacecount)|Ace (액세스 제어 항목)의 수를 반환 된 `CDacl` 개체입니다.|  
 |[CDacl::RemoveAce](#removeace)|특정 ACE (액세스 제어 항목)에서 제거 된 `CDacl` 개체입니다.|  
 |[CDacl::RemoveAllAces](#removeallaces)|에 포함 된 Ace를 모두 제거는 `CDacl` 개체입니다.|  
@@ -83,12 +83,12 @@ class CDacl : public CAcl
 |----------|-----------------|  
 |[CDacl::operator =](#operator_eq)|대입 연산자입니다.|  
   
-## <a name="remarks"></a>주의  
- 개체의 보안 설명자는 DACL을 포함할 수 있습니다. DACL에는&0; 개 이상의 Ace (액세스 제어 항목 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 포함 되어 있습니다. DACL 비어 있는 경우 (즉, 포함 된&0; Ace)에 액세스할 수 없는 명시적으로 허용 되 면 암시적으로 액세스할 수 있도록 합니다. 그러나 개체의 보안 설명자는 DACL이 없는 경우 개체 보호 되지 않음 및 모든 사용자에 대 한 전체 액세스 합니다.  
+## <a name="remarks"></a>설명  
+ 개체의 보안 설명자의 DACL을 포함할 수 있습니다. DACL에는 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 포함 되어 있습니다. DACL이 비어 있으면 (즉, 포함 된 0 Ace) 암시적으로 액세스할 수 있도록에 액세스할 수 없는, 명시적으로 부여 합니다. 그러나 개체의 보안 설명자의 DACL이 없는 경우 개체는 비보호 상태가 및 모든 사용자는 전체 액세스 합니다.  
   
- 개체의 소유자 이거나 READ_CONTROL 개체에 액세스할 수 있는 경우에 개체의 DACL을 검색 하려면 있습니다. 개체의 DACL을 변경 하려면 WRITE_DAC 개체에 액세스할 수 있어야 합니다.  
+ 개체의 DACL을 검색 하려면 개체의 소유자 여야 하거나 READ_CONTROL 개체에 대 한 액세스 권한이 있어야 합니다. 개체의 DACL을 변경 하려면 WRITE_DAC 개체에 액세스할 수 있어야 합니다.  
   
- 만들기, 추가, 제거 및 삭제에서 Ace를 제공 하는 클래스 메서드를 사용 하 여는 `CDacl` 개체입니다. 참고 항목 [AtlGetDacl](http://msdn.microsoft.com/library/a0973648-0d46-4c1a-914f-bda861fe5d19) 및 [AtlSetDacl](http://msdn.microsoft.com/library/eb88ccb6-1f1b-444d-b0c9-8d5cd0dd6c0b)합니다.  
+ 추가, 제거, 만들고 삭제 하에서 Ace가 제공 하는 클래스 메서드를 사용 하 여는 `CDacl` 개체입니다. 참고 항목 [AtlGetDacl](security-global-functions.md#atlgetdacl) 및 [AtlSetDacl](security-global-functions.md#atlsetdacl)합니다.  
   
  Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
@@ -122,10 +122,10 @@ bool AddAllowedAce(
  A [CSid](../../atl/reference/csid-class.md) 개체입니다.  
   
  `AccessMask`  
- 액세스 권한 허용 하는 마스크를 지정 지정 된 `CSid` 개체입니다.  
+ 권한을 부여할 액세스 권한의 마스크를 지정 지정 된 `CSid` 개체입니다.  
   
  `AceFlags`  
- ACE 상속을 제어 하는 비트 플래그 집합입니다.  
+ 집합 ACE 상속을 제어 하는 비트 플래그입니다.  
   
  `pObjectType`  
  개체 형식입니다.  
@@ -134,15 +134,15 @@ bool AddAllowedAce(
  상속 된 개체 유형입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **true** ACE에 추가 된 경우는 `CDacl` 개체 **false** 실패 합니다.  
+ 반환 **true** ACE에 추가 되 면는 `CDacl` 개체 **false** 실패 합니다.  
   
 ### <a name="remarks"></a>주의  
- A `CDacl`&0; 개 이상의 Ace (액세스 제어 항목 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 에 대 한 액세스를 허용 하는 ACE를 추가 하는이 메서드는 `CDacl` 개체입니다.  
+ A `CDacl` 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 이 메서드는 추가에 대 한 액세스를 허용 하는 ACE는 `CDacl` 개체입니다.  
   
 > [!NOTE]
->  두 번째 형태 `AddAllowedAce` Windows 2000에서 사용할 수 있으며 나중에 불과합니다.  
+>  두 번째 형식의 `AddAllowedAce` 이상 에서만 됩니다 Windows 2000에서 사용할 수 있습니다.  
   
- 참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에 설정 될 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
+ 참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에서 설정할 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
 ##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  거부 ACE (액세스 제어 항목)에 추가 된 `CDacl` 개체입니다.  
@@ -166,10 +166,10 @@ bool AddDeniedAce(
  `CSid` 개체입니다.  
   
  `AccessMask`  
- 액세스 권한 거부할의 마스크를 지정 지정 된 `CSid` 개체입니다.  
+ 거부할 사용 권한 마스크를 지정에 대 한 지정 된 `CSid` 개체입니다.  
   
  `AceFlags`  
- ACE 상속을 제어 하는 비트 플래그 집합입니다. 기본값은 메서드의 첫 번째 형태는 0입니다.  
+ 집합 ACE 상속을 제어 하는 비트 플래그입니다. 기본값은 메서드의 첫 번째 형태는 0입니다.  
   
  `pObjectType`  
  개체 형식입니다.  
@@ -178,15 +178,15 @@ bool AddDeniedAce(
  상속 된 개체 유형입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **true** ACE에 추가 된 경우는 `CDacl` 개체 **false** 실패 합니다.  
+ 반환 **true** ACE에 추가 되 면는 `CDacl` 개체 **false** 실패 합니다.  
   
 ### <a name="remarks"></a>주의  
- A `CDacl`&0; 개 이상의 Ace (액세스 제어 항목 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 에 대 한 액세스를 거부 하는 ACE를 추가 하는이 메서드는 `CDacl` 개체입니다.  
+ A `CDacl` 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 이 메서드는 추가에 대 한 액세스를 거부 하는 ACE는 `CDacl` 개체입니다.  
   
 > [!NOTE]
->  두 번째 형태 `AddDeniedAce` Windows 2000에서 사용할 수 있으며 나중에 불과합니다.  
+>  두 번째 형식의 `AddDeniedAce` 이상 에서만 됩니다 Windows 2000에서 사용할 수 있습니다.  
   
- 참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에 설정 될 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
+ 참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에서 설정할 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
 ##  <a name="cdacl"></a>CDacl::CDacl  
  생성자입니다.  
@@ -201,7 +201,7 @@ CDacl () throw();
  기존 **ACL** (액세스 제어 목록) 구조입니다.  
   
 ### <a name="remarks"></a>주의  
- `CDacl` 개체가 생성 될 수 필요에 따라 기존를 사용 하 여 **ACL** 구조입니다. DACL (임의 액세스 제어 목록)만 해야 하 고는 SACL (시스템 액세스 제어 목록)이이 매개 변수로 전달 해야 합니다. 디버그 빌드에는 SACL 전달 어설션을 발생 합니다. 릴리스 빌드에서 SACL을 전달 하면 Ace (액세스 제어 항목)는 acl에 무시할 수 및 오류가 발생 하지 것입니다.  
+ `CDacl` 개체 수 수 필요에 따라 사용 하 여 만든 기존 **ACL** 구조입니다. 만 DACL (임의 액세스 제어 목록)에 유의 해야 하 고는 SACL (시스템 액세스 제어 목록)이이 매개 변수로 전달 되어야 합니다. 디버그 빌드에 SACL 전달 어설션을 발생 합니다. 릴리스 빌드에서 SACL 전달 됩니다 Ace (액세스 제어 항목) 무시 되는 ACL에서 시키며, 오류가 발생 하지 것입니다.  
   
 ##  <a name="dtor"></a>CDacl:: ~ CDacl  
  소멸자입니다.  
@@ -211,7 +211,7 @@ CDacl () throw();
 ```  
   
 ### <a name="remarks"></a>주의  
- 소멸자를 사용 하 여 모든 Ace (액세스 제어 항목)를 포함 하 여 개체에 가져온 모든 리소스를 해제 [CDacl::RemoveAllAces](#removeallaces)합니다.  
+ 소멸자를 사용 하 여 모든 Ace (액세스 제어 항목)를 포함 하는 개체에 의해 획득 리소스 해제 [CDacl::RemoveAllAces](#removeallaces)합니다.  
   
 ##  <a name="getacecount"></a>CDacl::GetAceCount  
  Ace (액세스 제어 항목)의 수를 반환 된 `CDacl` 개체입니다.  
@@ -232,13 +232,13 @@ CDacl& operator= (const ACL& rhs) throw(...);
   
 ### <a name="parameters"></a>매개 변수  
  `rhs`  
- 기존 개체에 할당할 ACL (액세스 제어 목록).  
+ ACL (액세스 제어 목록)을 기존 개체에 할당 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 업데이트에 대 한 참조를 반환 합니다. `CDacl` 개체입니다.  
+ 업데이트 된에 대 한 참조를 반환 `CDacl` 개체입니다.  
   
 ### <a name="remarks"></a>주의  
- 이 함수는 DACL (임의 액세스 제어 목록)만 전달 해야 합니다. SACL (시스템 액세스 제어 목록)을 전달이 함수를 한 어설션을 디버그 빌드에서 되지만 릴리스 빌드에 없음 오류가 발생 합니다.  
+ DACL (임의 액세스 제어 목록)이이 함수에 전달만 확인 해야 합니다. SACL (시스템 액세스 제어 목록)를 전달 합니다.이 함수에이 ASSERT 디버그 빌드에서 하지만 릴리스 빌드에 없음 오류가 발생 합니다.  
   
 ##  <a name="removeace"></a>CDacl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 `CDacl` 개체입니다.  
@@ -249,7 +249,7 @@ void RemoveAce(UINT nIndex) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `nIndex`  
- 제거할 ACE 엔트리의 인덱스입니다.  
+ 제거 하려면 ACE 항목 인덱스입니다.  
   
 ### <a name="remarks"></a>주의  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
@@ -261,11 +261,11 @@ void RemoveAce(UINT nIndex) throw();
 void RemoveAllAces() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  제거 모든 **ACE** (액세스 제어 항목) 구조 (있는 경우)에 `CDacl` 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 샘플](../../visual-cpp-samples.md)   
+ [Security 샘플](../../visual-cpp-samples.md)   
  [CAcl 클래스](../../atl/reference/cacl-class.md)   
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   

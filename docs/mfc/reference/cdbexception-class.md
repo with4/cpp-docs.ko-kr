@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>잠금을 클래스
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** 데이터 원본에 연결 하지 못했습니다. 전달 하는 **NULL** `CDatabase` 레코드 집합 생성자 및 연결을 만드는 후속 시도에 대 한 포인터에 따라 `GetDefaultConnect` 실패 했습니다.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** 에 대 한 저장소를 제공 하는 것 보다 더 많은 데이터를 요청 합니다. 에 대 한 제공 된 데이터 저장소 증가에 대 한 내용은 `CString` 또는 `CByteArray` 데이터 형식을 참조는 `nMaxLength` 에 대 한 인수 [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) 및 [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) "매크로 및 전역"에서  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** 에 대 한 저장소를 제공 하는 것 보다 더 많은 데이터를 요청 합니다. 에 대 한 제공 된 데이터 저장소 증가에 대 한 내용은 `CString` 또는 `CByteArray` 데이터 형식을 참조는 `nMaxLength` 에 대 한 인수 [RFX_Text](record-field-exchange-functions.md#rfx_text) 및 [RFX_Binary](record-field-exchange-functions.md#rfx_binary) "매크로 및 전역"에서  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** 에 대 한 호출 `CRecordset::Open` 다이너셋 요청 하지 못했습니다. 다이너셋은 드라이버에서 지원 되지 않습니다.  
   
@@ -141,13 +141,13 @@ class CDBException : public CException
 ##  <a name="m_strerror"></a>CDBException::m_strError  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  영숫자 측면에서 오류를 설명 하는 문자열입니다. 자세한 내용 및 예제를 참조 하세요. **m_strStateNativeOrigin**합니다.  
   
 ##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  문자열은 서식 코드를에서 설명 하는 값으로 바뀌는 양식 "상태 %s, 네이티브 %ld, 원본 %s"입니다.:::  
   
 -   **SQLSTATE**에 반환 된 5 자의 오류 코드를 포함 하는 null로 끝나는 문자열의 *szSqlState* 매개 변수는 ODBC 함수의 **SQLError**합니다. **SQLSTATE** 값 부록 A에에서 나열 됩니다 [ODBC 오류 코드](https://msdn.microsoft.com/library/ms714687.aspx)에 *ODBC Programmer's Reference*합니다. 예: "S0022"입니다.  

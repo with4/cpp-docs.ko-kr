@@ -1,5 +1,5 @@
 ---
-title: "IObjectSafetyImpl 클래스 | Microsoft 문서"
+title: "IObjectSafetyImpl 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: cff5995555cd069855f9d7becb9eb8367e80c920
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 클래스
-이 클래스의 기본 구현을 제공는 `IObjectSafety` 인터페이스는 클라이언트를 검색 하 여 개체의 보안 수준을 설정할 수 있도록 합니다.  
+이 클래스의 기본 구현을 제공는 `IObjectSafety` 클라이언트가 검색 한 개체의 보안 수준을 설정 하는 인터페이스입니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -66,9 +66,9 @@ class IObjectSafetyImpl
  *dwSupportedSafety*  
  컨트롤에 대 한 지원 되는 보안 옵션을 지정합니다. 다음 값 중 하나입니다.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** 로 식별 되는 인터페이스는 [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) 매개 변수 `riid` 스크립팅을 안전 하 게 이루어져야 합니다.  
+- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** 로 식별 된 인터페이스는 [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) 매개 변수 `riid` 스크립트 수 있어야 합니다.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** 로 식별 되는 인터페이스는 `SetInterfaceSafetyOptions` 매개 변수 `riid` 이루어져야 신뢰할 수 없는 데이터에 대 한 안전 하 게 초기화 하는 동안.  
+- **INTERFACESAFE_FOR_UNTRUSTED_DATA** 로 식별 된 인터페이스는 `SetInterfaceSafetyOptions` 매개 변수 `riid` 해야 안전 하 게 사용할 신뢰할 수 없는 데이터에 대 한 초기화 하는 동안 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -76,8 +76,8 @@ class IObjectSafetyImpl
   
 |이름|설명|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|현재 개체에 설정 된 보안 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|개체 초기화 또는 스크립트에 대 한 안전 하 게 합니다.|  
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|현재 개체에 대해 설정 안전 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.|  
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|개체에 초기화 또는 스크립트에 대 한 안전 하 게 합니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -86,9 +86,9 @@ class IObjectSafetyImpl
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|개체의 현재 보안 수준을 저장합니다.|  
   
 ## <a name="remarks"></a>주의  
- 클래스 `IObjectSafetyImpl` 의 기본 구현을 제공 `IObjectSafety`합니다. `IObjectSafety` 인터페이스를 검색 하 여 개체의 보안 수준을 설정 하 여 클라이언트를 사용 합니다. 예를 들어, 웹 브라우저 호출할 수 **IObjectSafety::SetInterfaceSafetyOptions** 컨트롤을 만들려면 스크립트 또는 초기화에 안전 합니다.  
+ 클래스 `IObjectSafetyImpl` 의 기본 구현을 제공 `IObjectSafety`합니다. `IObjectSafety` 인터페이스 클라이언트가 검색 하 고 개체의 보안 수준을 설정할 수 있습니다. 예를 들어 웹 브라우저 호출할 수 **IObjectSafety::SetInterfaceSafetyOptions** 초기화 또는 스크립트 컨트롤을 조정 하려면.  
   
- 사용에서 [IMPLEMENTED_CATEGORY](http://msdn.microsoft.com/library/d898ef34-5684-4709-beb9-7114ddd96674) 사용 하 여 매크로 **CATID_SafeForScripting** 및 **CATID_SafeForInitializing** 구성 요소 범주 안전 하다는 구성 요소를 지정 하는 다른 방법을 제공 합니다.  
+ 사용는 [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) 사용 하 여 매크로 **CATID_SafeForScripting** 및 **CATID_SafeForInitializing** 구성 요소 범주 구성 요소는 안전 하 게 보호를 지정 하는 대체 방법을 설명 합니다.  
   
  **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
@@ -101,7 +101,7 @@ class IObjectSafetyImpl
  **헤더:** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
- 현재 개체에 설정 된 보안 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.  
+ 현재 개체에 대해 설정 안전 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.  
   
 ```
 HRESULT GetInterfaceSafetyOptions(  
@@ -111,10 +111,10 @@ HRESULT GetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>주의  
- 개체의 구현에 의해 지원 되는 모든 인터페이스에 대 한 적절 한 값을 반환 하는 구현 **IUnknown::QueryInterface**합니다.  
+ 개체의 구현에 의해 지원 되는 모든 인터페이스에 대 한 적절 한 값을 반환 하는 구현 **iunknown:: Queryinterface**합니다.  
   
 > [!IMPORTANT]
->  지 원하는 모든 개체 `IObjectSafety` 자체 보안 및 위임 하는 모든 개체에 대 한 책임이 있습니다. 프로그래머가 해야 사용자의 컨텍스트에서 코드를 실행에서 발생 하는 계정 문제를 고려해, 사이트 간 스크립팅 및 적합 한 영역 검사를 수행 합니다.  
+>  지 원하는 개체 `IObjectSafety` 자체 보안 요구 사항과 위임 하는 모든 개체에 대 한 책임이 있습니다. 프로그래머는 해야 사용자의 컨텍스트에서 코드를 실행할 수 있는 계정 문제를 고려, 사이트 간 스크립팅 및 적합 한 영역 확인을 수행 합니다.  
   
  참조 [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
@@ -126,7 +126,7 @@ DWORD m_dwCurrentSafety;
 ```  
   
 ##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
- 개체에 설정 하 여 스크립팅 또는 초기화에 대 한 안전 하 게는 [m_dwCurrentSafety](#m_dwcurrentsafety) 적절 한 값으로 멤버입니다.  
+ 개체에 초기화 또는 설정 하 여 스크립트에 대 한 안전 하 게는 [m_dwCurrentSafety](#m_dwcurrentsafety) 적절 한 값으로 멤버입니다.  
   
 ```
 HRESULT SetInterfaceSafetyOptions(  
@@ -136,10 +136,10 @@ HRESULT SetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>주의  
- 구현 된 경우 반환 **은 E_NOINTERFACE** 개체의 구현에 의해 지원 되지 않습니다 인터페이스에 대해 **IUnknown::QueryInterface**합니다.  
+ 구현은 반환 **E_NOINTERFACE** 개체의 구현에 의해 지원 되지 않습니다 인터페이스에 대해 **iunknown:: Queryinterface**합니다.  
   
 > [!IMPORTANT]
->  지 원하는 모든 개체 `IObjectSafety` 자체 보안 및 위임 하는 모든 개체에 대 한 책임이 있습니다. 프로그래머가 해야 사용자의 컨텍스트에서 코드를 실행에서 발생 하는 계정 문제를 고려해, 사이트 간 스크립팅 및 적합 한 영역 검사를 수행 합니다.  
+>  지 원하는 개체 `IObjectSafety` 자체 보안 요구 사항과 위임 하는 모든 개체에 대 한 책임이 있습니다. 프로그래머는 해야 사용자의 컨텍스트에서 코드를 실행할 수 있는 계정 문제를 고려, 사이트 간 스크립팅 및 적합 한 영역 확인을 수행 합니다.  
   
  참조 [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   

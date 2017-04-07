@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>AFX 메시지
@@ -108,7 +108,7 @@ ms.lasthandoff: 03/29/2017
 |-|-|-|-|-|  
 |메시지|설명|[in] `wParam`|`lParam`(모든 매개 변수는 [in] 언급이 없으면.)|반환 값|  
 |AFX_WM_ACCGETOBJECT|사용되지 않습니다.|사용되지 않습니다.|해당 사항 없음.|해당 사항 없음.|  
-|AFX_WM_ACCGETSTATE|내게 필요한 옵션 지원에 사용 됩니다. 이 메시지를 보내 `CMFCPopupMenu` 또는 `CMFCRibbonPanelMenu` 를 현재 요소의 상태를 검색 합니다.|메뉴 단추 또는 구분 될 수 있는 요소의 인덱스입니다.|사용되지 않습니다.|요소 상태입니다. 인덱스가 유효 하지 않을 경우에-1을은 메뉴 단추에 특수 특성이 없는 경우 0입니다. 그렇지 않으면 다음 플래그의 조합입니다.<br /><br /> TBBS_DISABLED \u2012 항목은 사용할 수 없습니다.<br /><br /> TBBS_CHECKED \u2012 옵션은 선택<br /><br /> TBBS_BUTTON \u2012 항목은 표준 누름<br /><br /> TBBS_PRESSED \u2012 단추를 누르면<br /><br /> TBBS_INDETERMINATE \u2012 정의 되지 않은 상태<br /><br /> TBBS_SEPARATOR-메뉴 단추가 아닌, 다른 메뉴 항목 간의 분리는이 요소 양식|  
+|AFX_WM_ACCGETSTATE|내게 필요한 옵션 지원에 사용 됩니다. 이 메시지를 보내 `CMFCPopupMenu` 또는 `CMFCRibbonPanelMenu` 를 현재 요소의 상태를 검색 합니다.|메뉴 단추 또는 구분 될 수 있는 요소의 인덱스입니다.|사용되지 않습니다.|요소 상태입니다. 인덱스가 유효 하지 않을 경우에-1을은 메뉴 단추에 특수 특성이 없는 경우 0입니다. 그렇지 않으면 다음 플래그의 조합입니다.<br /><br /> TBBS_DISABLED-항목은 사용할 수 없습니다.<br /><br /> 항목 체크 TBBS_CHECKED-<br /><br /> TBBS_BUTTON-해당 항목은 표준 누름<br /><br /> 단추를 누르면 TBBS_PRESSED-<br /><br /> TBBS_INDETERMINATE-정의 되지 않은 상태<br /><br /> TBBS_SEPARATOR-메뉴 단추가 아닌, 다른 메뉴 항목 간의 분리는이 요소 양식|  
 |AFX_WM_CHANGE_ACTIVE_TAB|프레임 워크는 크기 조정 가능한 컨트롤 막대 컨트롤에이 메시지를 보냅니다. 알림을 수신 하려면이 메시지를 처리 `CMFCTabCtrl` 사용자 활성 탭이 변경 될 때 개체입니다.|탭의 인덱스입니다.|사용되지 않습니다.|0이 아닙니다.|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|프레임 워크의 부모에이 메시지를 보냅니다 `CMFCShellListCtrl` 사용자가 현재 폴더를 변경 하는 경우.|사용되지 않습니다.|사용되지 않습니다.|사용되지 않습니다.|  
 |AFX_WM_CHANGEVISUALMANAGER|프레임 워크는 현재 비주얼 관리자를 변경할 때 모든 프레임 창에이 메시지를 보냅니다. 이 메시지에 대 한 응답으로 프레임 창을 해당 영역을 다시 계산 하 고 필요에 따라 다른 매개 변수를 조정 합니다. 이 이벤트에 대 한 알림이 표시 하는 경우 응용 프로그램에서 AFX_WM_CHANGEVISUALMANAGER 메시지를 처리할 수 있습니다. 기본 클래스 처리기를 호출 해야 합니다 (`OnChangeVisualManager`) 프레임 워크의 내부 되도록이 이벤트 처리는 수행 됩니다.|사용되지 않습니다.|사용되지 않습니다.|사용되지 않습니다.|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 03/29/2017
 |AFX_WM_ON_RENAME_TAB|편집 가능한 탭 이름을 바꾼 후에 탭된 창의 부모에 보냅니다.|이름이 바뀐된 탭의 0부터 시작 하는 인덱스입니다.|[out] 새 탭 이름을 포함 하는 문자열에 대 한 포인터입니다.|응용 프로그램;이 메시지를 처리 하는 경우 0이 아닌 프레임 워크에서 호출을 표시 하지 않을 `CMFCBaseTabCtrl::SetTabLabel`합니다.  그런 다음 0이 반환 되 면 `CMFCBaseTabCtrl::SetTabLabel` 프레임 워크에서 호출 됩니다.|  
 |AFX_WM_ON_RIBBON_CUSTOMIZE|사용자가 사용자 지정을 시작할 때 부모 프레임으로 보냅니다. 사용자 고유의 사용자 지정 대화 상자를 표시 하려는 경우이 메시지를 처리 합니다.|사용되지 않습니다.|사용자 지정할 수 리본 컨트롤에 대 한 포인터입니다.|응용 프로그램이이 메시지를 처리 하 고 자체 사용자 지정 대화 상자를 표시 하는 경우에 0이 아닙니다. 0을 반환 하는 응용 프로그램 프레임 워크에는 기본 제공 사용자 지정 대화 상자가 표시 됩니다.|  
 |AFX_WM_ON_TABGROUPMOUSEMOVE|내부 전용입니다.|해당 사항 없음.|해당 사항 없음.|해당 사항 없음.|  
-|AFX_WM_POSTSETPREVIEWFRAME|주 프레임에 사용자의 인쇄 미리 보기 모드 변경 되었음을 알리기 위해 전송|`TRUE`인쇄 미리 보기 모드가 설정 되어 있는지를 나타냅니다. `FALSE`해당 인쇄 미리 보기 모드를 해제 나타냅니다.|사용되지 않습니다.|사용되지 않습니다.|  
+|AFX_WM_POSTSETPREVIEWFRAME|주 프레임에 사용자의 인쇄 미리 보기 모드 변경 되었음을 알리기 위해 전송|`TRUE`인쇄 미리 보기 모드가 설정 되어 있는지를 나타냅니다. `FALSE`해당 인쇄 미리 보기 모드를 해제를 나타냅니다.|사용되지 않습니다.|사용되지 않습니다.|  
 |AFX_WM_PROPERTY_CHANGED|속성 표 컨트롤의 소유자에 게 보낸 (`CMFCPropertyGridCtrl`) 사용자는 선택한 속성의 값을 변경 하는 경우.|속성 목록의 컨트롤 ID입니다.|속성에 대 한 포인터 (`CMFCProp``ertyGridProperty`) 변경 합니다.|사용되지 않습니다.|  
 |AFX_WM_RESETCONTEXTMENU|사용자는 상황에 맞는 메뉴 사용자 지정 하는 동안 새로 고칠 때 주 프레임 창으로 보냅니다.|상황에 맞는 메뉴의 리소스 ID입니다.|현재 상황에 맞는 메뉴에 대 한 포인터 `CMFCPopupMenu`합니다.|사용되지 않습니다.|  
 |AFX_WM_RESETKEYBOARD|프레임 워크는 사용자 지정 하는 동안 모든 키보드 액셀러레이터를 재설정 하는 사용자는 주 프레임 창에이 메시지를 보냅니다.|사용되지 않습니다.|사용되지 않습니다.|사용되지 않습니다.|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 03/29/2017
 |AFX_WM_RESETPROMPT|프레임 워크는 사용자 지정 대화 상자 도구 모음에서 도구 모음을 사용자 재설정 하는 경우이 메시지를 보냅니다. 기본 처리기에는 사용자가 도구 모음 다시 설정 하려는 여부를 묻는 메시지 상자가 표시 됩니다.|사용되지 않습니다.|사용되지 않습니다.|사용되지 않습니다.|  
 |AFX_WM_RESETTOOLBAR|A `CMFCToolBar` 도구 모음이 복원 되 면 원래 상태로 즉, 리소스에서 로드 된 개체에서이 메시지를 보냅니다. 해당 클래스에서 파생 되는 도구 모음 단추 재진입이 메시지를 처리 `CMFCToolbarButton`합니다. 자세한 내용은 `CMFCToolbarComboBoxButton`을 참조하십시오.|상태가 복원 된 도구 모음 리소스 ID입니다.|사용되지 않습니다.|0입니다.|  
 |AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`개체는 일반 메뉴 단추를 클릭할 때 해당 소유자에 게이 메시지를 보냅니다. 사용 될 때마다가이 메시지를 처리 `CMFCToolbarMenuButton` 단추를 클릭할 때 팝업 메뉴를 표시 합니다.|메시지를 보내는 단추의 명령 ID입니다.|커서의 화면 좌표입니다. 하위 단어에 대 한 x-좌표를 지정합니다. 상위 단어에 대 한 y-좌표를 지정합니다.|사용되지 않습니다.|  
-|AFX_WM_TOOLBARMENU|클라이언트 또는 창의 비클라이언트 영역에서 마우스 포인터가 있는 동안 마우스 오른쪽 단추를 놓을 때 주 프레임 창으로 보냅니다.|사용되지 않습니다.|마우스 포인터의 화면 좌표입니다. 하위 단어에 대 한 x-좌표를 지정합니다. 상위 단어에 대 한 y-좌표를 지정합니다.|응용 프로그램;이 메시지를 처리 하는 경우 0 그렇지 않으면 0이 아닌 값입니다.|  
+|AFX_WM_TOOLBARMENU|마우스 포인터가 클라이언트 또는 창의 비클라이언트 영역에 있는 동안 마우스 오른쪽 단추를 놓을 때 주 프레임 창으로 보냅니다.|사용되지 않습니다.|마우스 포인터의 화면 좌표입니다. 하위 단어에 대 한 x-좌표를 지정합니다. 상위 단어에 대 한 y-좌표를 지정합니다.|응용 프로그램;이 메시지를 처리 하는 경우 0 그렇지 않으면 0이 아닌 값입니다.|  
 |AFX_WM_UPDATETOOLTIPS|전송 모든 도구 설명 소유자에 게 해당 도구 설명 컨트롤 다시 만들어야 합니다.|이 메시지를 처리 해야 하는 컨트롤의 형식입니다. 가능한 값 목록은이 항목의 뒷부분에 나오는 표를 참조 하세요.|사용되지 않습니다.|사용되지 않습니다.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`사용자가 부모 프레임에이 메시지를 보냅니다는 **도움말** 단추를 클릭 하 여 도움말 모드를 시작 또는 **도움말** 캡션 단추를 클릭 하거나 F1 키입니다.|사용되지 않습니다.|인스턴스에 대 한 포인터 `CMFCWindowsManagerDialog`합니다.|사용되지 않습니다.|  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 03/29/2017
 |SB_PAGELEFT|사용자는 창의 너비 만큼 왼쪽으로 스크롤합니다.|  
 |SB_PAGERIGHT|사용자 오른쪽 창의 너비 스크롤합니다.|  
 |SB_THUMBPOSITION|사용자가 끌어 스크롤 상자 (thumb) 하 고 마우스 단추를 해제 합니다. 상위 단어 끌기 작업의 끝에 있는 스크롤 상자 위치를 나타냅니다.|  
-|SB_THUMBTRACK|사용자가 스크롤 상자를 끌고 있습니다. AFX_WM_ON_HSCROLL 메시지는 사용자가 마우스 단추를 놓을 때까지 반복 해 서이 값으로 전송 됩니다. 상위 단어로 스크롤 상자 끌어 놓은 위치를 나타냅니다.|  
+|SB_THUMBTRACK|사용자가 스크롤 상자를 끌고 있습니다. AFX_WM_ON_HSCROLL 메시지 마우스 단추를 놓을 때까지 반복 해 서이 값으로 전송 됩니다. 상위 단어로 스크롤 상자 끌어 놓은 위치를 나타냅니다.|  
   
 > [!NOTE]
 >  상위 단어는 `lParam` 그렇지 않으면이 단어를 사용 하지는; 매개 변수는 하위 단어 SB_THUMBPOSITION 있느냐 SB_THUMBTRACK 스크롤 상자의 현재 위치를 지정 합니다.  

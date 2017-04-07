@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>CMap 클래스
@@ -117,9 +117,9 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|에 대 한 지도 \u2012 연산자 대체에 요소를 삽입 `SetAt`합니다.|  
+|[CMap::operator]](#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  지도에 키-값 쌍 (요소)를 삽입 하면 효율적으로 검색 하거나 액세스 키를 사용 하는 쌍을 삭제할 수 있습니다. Map의 모든 요소를 반복할 수도 있습니다.  
   
  형식의 변수 **위치** 항목에 대 한 대체 액세스에 사용 됩니다. 사용할 수는 **위치** 항목 "기억" 하 고 맵을 통해 반복 하 합니다. 이 반복은 키 값으로 순차적 이라고 생각할 수도 있습니다. 없습니다. 검색 된 요소의 순서는 결정 되지 않습니다.  
@@ -153,7 +153,7 @@ CMap(INT_PTR nBlockSize = 10);
  `nBlockSize`  
  지도 확장 하기 위한 메모리 할당 세분성을 지정 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  단위에서 메모리를 할당 지도 확장 되면서 `nBlockSize` 항목입니다.  
   
 ### <a name="example"></a>예제  
@@ -228,7 +228,7 @@ void GetNextAssoc(
  `rValue`  
  검색 된 요소의 반환 된 값을 지정합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 map의 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 참고 위치 시퀀스 아닌지 반드시 키 값 시퀀스와 동일 합니다.  
   
  검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` 로 설정 된 **NULL**합니다.  
@@ -347,7 +347,7 @@ VALUE& operator[](arg_key key);
  `key`  
  지도에서 값을 검색 하는 데 사용 하는 키입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  따라서 대입문 (l-value)의 왼쪽에만 사용할 수 있습니다. 지정된 된 키와 지도 요소가 경우 새 요소는 생성 됩니다.  
   
  없습니다 "오른쪽" (r-value)이이 운영자에 게 해당 되므로은 실패할 가능성이 있는 지도에서 키를 찾을 수 있습니다. 사용 하 여 `Lookup` 요소 검색에 대 한 멤버 함수입니다.  
@@ -409,7 +409,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="return-value"></a>반환 값  
  키 구조;에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 일치 없을 경우 `CMap::PLookup` 반환 `NULL`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
   
 ### <a name="example"></a>예제  
@@ -445,7 +445,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="return-value"></a>반환 값  
  항목을 찾아 제거 되었으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  **DestructElements** 도우미 함수를 사용 하는 항목을 제거 합니다.  
   
 ### <a name="example"></a>예제  

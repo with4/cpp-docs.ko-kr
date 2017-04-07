@@ -1,5 +1,5 @@
 ---
-title: "CMultiLock 클래스 | Microsoft 문서"
+title: "CMultiLock 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a58d59d8e4d7a1c542dee80295dd8eef6c8be338
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: bf70a1c56ebef194efa179cf8504770e94111cd8
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmultilock-class"></a>CMultiLock 클래스
@@ -66,20 +66,20 @@ class CMultiLock
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMultiLock::IsLocked](#islocked)|배열에 있는 특정 동기화 개체가 잠겨 있는지 확인 합니다.|  
+|[CMultiLock::IsLocked](#islocked)|배열의 특정 동기화 개체가 잠겨 있는지 확인 합니다.|  
 |[CMultiLock::Lock](#lock)|동기화 개체의 배열에 대 한 대기 합니다.|  
-|[CMultiLock::Unlock](#unlock)|소유 동기화 개체를 해제합니다.|  
+|[CMultiLock::Unlock](#unlock)|모든 소유 동기화 개체를 해제합니다.|  
   
 ## <a name="remarks"></a>주의  
  `CMultiLock`기본 클래스는 없습니다.  
   
- 동기화 클래스를 사용 하 여 [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), 및 [CEvent](../../mfc/reference/cevent-class.md)를 만들 수 있습니다는 **CMultiLock** 또는 [경우 CSingleLock](../../mfc/reference/csinglelock-class.md) 개체를 대기 하 고 동기화 개체를 해제 합니다. 사용 하 여 **CMultiLock** 특정 시간에 사용할 수 있는 여러 개체에 있는 경우. 사용 하 여 `CSingleLock` 필요한 경우 한 번에 하나의 개체에서 대기 합니다.  
+ 동기화 클래스 사용 [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), 및 [CEvent](../../mfc/reference/cevent-class.md)를 만들 수 있습니다는 **CMultiLock** 또는 [경우 CSingleLock](../../mfc/reference/csinglelock-class.md) 개체를 대기 하 고 동기화 개체를 해제 합니다. 사용 하 여 **CMultiLock** 때 특정 시간에 사용할 수 있는 개체가 여러 개 있습니다. 사용 하 여 `CSingleLock` 때 하기만 하면 한 번에 하나의 개체에 대해 기다려야 합니다.  
   
- 사용 하는 **CMultiLock** 개체, 먼저 대기할 하고자 하는 동기화 개체의 배열을 만듭니다. 그런 다음 호출 하는 **CMultiLock** 제어 된 리소스의 클래스에서 멤버 함수 내부 개체의 생성자입니다. 그런 다음 호출에서 [잠금](#lock) 멤버 함수는 리소스를 사용할 수 있는지를 (신호). 하나를 나머지 멤버 함수를 계속 합니다. 사용할 수 없는 경우 지정된 된 양의 출시 될 리소스에 대 한 시간 기다리거나 오류를 반환 합니다. 리소스의 사용 하 여 완료 된 후 호출 하거나는 [잠금 해제](#unlock) 작동 하는 경우는 **CMultiLock** 개체를 다시 사용 하거나 허용 하는 **CMultiLock** 개체가 소멸 될 예정입니다.  
+ 사용 하는 **CMultiLock** 개체, 먼저 때까지 기다렸다가 동기화 개체의 배열을 만듭니다. 그런 다음 호출 하 여 **CMultiLock** 제어 된 리소스의 클래스에서 멤버 함수 내 개체의 생성자입니다. 다음 호출에서 [잠금](#lock) 리소스에 사용할 수 있는지 확인 하려면 멤버 함수 (신호). 하나가 이면 나머지 멤버 함수를 계속 합니다. 사용할 수 없는 경우 해제 될 리소스에 대 한 지정된 된 기간에 대 한 대기 또는 실패를 반환 합니다. 리소스의 사용 하 여 완료 된 후 호출 하거나는 [잠금 해제](#unlock) 경우 함수는 **CMultiLock** 개체를 다시 사용 하거나 허용 하는 **CMultiLock** 개체 소멸 될 예정입니다.  
   
- **CMultiLock** 때 많은 수의 개체는 가장 유용한 `CEvent` 개체에 응답할 수 있습니다. 모든 포함 된 배열을 만듭니다는 `CEvent` 포인터 및 호출 `Lock`합니다. 이렇게 하면 스레드 이벤트 중 하나에 신호가 전달 될 때까지 기다려야 합니다.  
+ **CMultiLock** 때 많은 수의 개체는 가장 유용한 `CEvent` 개체에 응답할 수 있습니다. 모든 포함 된 배열을 만듭니다는 `CEvent` 포인터 및 호출 `Lock`합니다. 이렇게 하면 스레드를 신호를 받는 이벤트 중 하나가 될 때까지 대기 합니다.  
   
- 사용 하는 방법에 대 한 자세한 내용은 **CMultiLock** 개체, 문서를 참조 하십시오. [다중 스레딩: 동기화 클래스를 사용 하는 방법을](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 내용은 **CMultiLock** 개체, 문서를 참조 하십시오. [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CMultiLock`  
@@ -99,7 +99,7 @@ CMultiLock(
   
 ### <a name="parameters"></a>매개 변수  
  `ppObjects`  
- 동기화 개체를 대기한 수에 대 한 포인터의 배열입니다. 안 **NULL**합니다.  
+ 배열에서 대기한 동기화 개체에 대 한 포인터입니다. 야 **NULL**합니다.  
   
  `dwCount`  
  개체 수가 `ppObjects`합니다. 0보다 커야 합니다.  
@@ -108,10 +108,10 @@ CMultiLock(
  제공 된 개체에 액세스 하려고 처음 것인지 지정 합니다.  
   
 ### <a name="remarks"></a>주의  
- 이 함수는 대기 수를 동기화 개체의 배열을 만든 후 호출 됩니다. 일반적으로 하나의 동기화 개체를 사용할 수 있을 때까지 대기 해야 하는 스레드 내에서 호출 됩니다.  
+ 이 함수는 동기화 개체에서 대기한 배열을 만든 후 호출 됩니다. 일반적으로 사용 가능 해질 동기화 개체 중 하나에 대해 기다려야 하는 스레드 내에서 호출 됩니다.  
   
 ##  <a name="islocked"></a>CMultiLock::IsLocked  
- 지정된 된 개체를 신호 없음으로 인지 여부를 확인 (사용할 수 없음).  
+ 지정된 된 개체를 신호 없음으로 인지 여부를 확인 (사용 불가)입니다.  
   
 ```  
 BOOL IsLocked(DWORD dwItem);
@@ -119,13 +119,13 @@ BOOL IsLocked(DWORD dwItem);
   
 ### <a name="parameters"></a>매개 변수  
  *dwItem*  
- 쿼리 중인 상태의 개체에 해당 하는 개체의 배열 인덱스입니다.  
+ 해당 상태를 쿼리 하는 개체에 해당 하는 개체의 배열 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정된 된 개체가 잠겨 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
 ##  <a name="lock"></a>CMultiLock::Lock  
- 하나 이상의 제공 된 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 하 여 **CMultiLock** 생성자입니다.  
+ 하나 이상의에 제공 되는 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수 호출의 **CMultiLock** 생성자입니다.  
   
 ```  
 DWORD Lock(
@@ -136,37 +136,37 @@ DWORD Lock(
   
 ### <a name="parameters"></a>매개 변수  
  *dwTimeOut*  
- 사용할 수 있는 동기화 개체에 대 한 대기 시간을 지정 합니다 (신호). 경우 **무한**, `Lock` 반환 하기 전에 개체에 신호가 전달 될 때까지 기다립니다.  
+ 사용할 수 있는 동기화 개체에 대 한 대기 시간 지정 (신호). 경우 **무한**, `Lock` 반환 하기 전에 사용 하는 개체에서 신호를 보낼 때까지 기다립니다.  
   
  `bWaitForAll`  
- 대기한 모든 개체 반환 하기 전에 동시에 신호가 전달 해야 하는지 여부를 지정 합니다. 경우 **FALSE**, `Lock` 대기한 개체 중 하나에 신호가 전달 될 때 반환 됩니다.  
+ 대기한 모든 개체 반환 하기 전에 한 번에 신호가 되어야 하는지 여부를 지정 합니다. 경우 **FALSE**, `Lock` 대기한 개체 중 하나가 신호를 받을 때 반환 됩니다.  
   
  `dwWakeMask`  
- 허용 되는 대기를 중단 하는 다른 조건을 지정 합니다. 이 매개 변수에 대해 사용할 수 있는 옵션의 전체 목록은 참조 하십시오. [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 대기를 중단을 받을 수 있는 다른 조건을 지정 합니다. 이 매개 변수에 대해 사용할 수 있는 옵션의 전체 목록을 참조 하십시오. [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우 `Lock` 실패 하면 반환-1입니다. 성공 하면 다음 값 중 하나가 반환 됩니다.  
+ 경우 `Lock` 실패 하면 반환-1입니다. 성공 하면 다음 값 중 하나 반환 합니다.  
   
--   사이의 **WAIT_OBJECT_0** 및 **WAIT_OBJECT_0** + (1-개체의 수)  
+-   사이의 **WAIT_OBJECT_0** 및 **WAIT_OBJECT_0** + (개체-1의 개수)  
   
-     경우 `bWaitForAll` 는 **TRUE**, 모든 개체 (사용 가능) 신호입니다. 경우 `bWaitForAll` 는 **FALSE**, 반환 값 – **WAIT_OBJECT_0** 는 신호를 받는 개체의 개체의 배열에서 인덱스 (사용 가능).  
+     경우 `bWaitForAll` 은 **TRUE**, 모든 개체는 신호를 받기 (사용 가능). 경우 `bWaitForAll` 은 **FALSE**, 반환 값- **WAIT_OBJECT_0** 개체는 신호를 받는 개체의 배열에 있는 색인 (사용 가능)입니다.  
   
-- **WAIT_OBJECT_0** + (개체의 수)  
+- **WAIT_OBJECT_0** + (개체 개수)  
   
      에 지정 된 이벤트 `dwWakeMask` 스레드의 입력된 큐에서 사용할 수 있습니다.  
   
--   사이의 **WAIT_ABANDONED_0** 및 **WAIT_ABANDONED_0** + (1-개체의 수)  
+-   사이의 **WAIT_ABANDONED_0** 및 **WAIT_ABANDONED_0** + (개체-1의 개수)  
   
-     경우 `bWaitForAll` 는 **TRUE**, 신호는 모든 개체 및 개체 중 적어도 하나는 중단 된 뮤텍스 개체입니다. 경우 `bWaitForAll` 는 **FALSE**, 반환 값 – **WAIT_ABANDONED_0** 개체 대기를 만족 하는 중단 된 뮤텍스 개체의 배열에 있는 색인입니다.  
+     경우 `bWaitForAll` 은 **TRUE**, 모든 개체, 신호 및 중단 된 뮤텍스 개체는 개체 중 하나 이상 있습니다. 경우 `bWaitForAll` 은 **FALSE**, 반환 값- **WAIT_ABANDONED_0** 대기를 만족 중단 된 뮤텍스 개체의 개체의 배열에서 인덱스입니다.  
   
 - **WAIT_TIMEOUT**  
   
-     에 지정 된 시간 제한 간격 *dwTimeOut* 나중에 추가한 대기 하지 않고 만료 되었습니다.  
+     에 지정 된 시간 제한 간격 *dwTimeOut* 대기 했으나 만료 되었습니다.  
   
-### <a name="remarks"></a>주의  
- 경우 `bWaitForAll` 는 **TRUE**, `Lock` 동기화 개체를 모두 동시에 신호가 전달 되는 즉시 성공적으로 반환 합니다. 경우 `bWaitForAll` 는 **FALSE**, `Lock` 하나 이상의 동기화 개체가 신호를 받게 되는 즉시 반환 됩니다.  
+### <a name="remarks"></a>설명  
+ 경우 `bWaitForAll` 은 **TRUE**, `Lock` 동기화 개체를 모두 동시에 신호가 전달 되는 즉시 성공적으로 반환 됩니다. 경우 `bWaitForAll` 은 **FALSE**, `Lock` 하나 이상의 동기화 개체가 신호를 받게 되는 즉시 반환 됩니다.  
   
- 경우 `Lock` 에 지정 된 시간 (밀리초)의 개수 보다 더 기다리는 즉시 반환할 수 없는 *dwTimeOut* 반환 하기 전에 매개 변수입니다. 경우 *dwTimeOut* 는 **무한**, `Lock` 개체에 대 한 액세스는 또는 구성 요소에 지정 된 조건이 될 때까지 반환 하지 것입니다 `dwWakeMask` 충족 합니다. 그렇지 않은 경우, `Lock` 된 동기화 개체를 획득할 수를 반환 합니다 성공적으로; 그렇지 않으면 오류를 반환 합니다.  
+ 경우 `Lock` 에 지정 된 밀리초 수 이내로 기다리는 즉시 반환 수 없으면는 *dwTimeOut* 반환 하기 전에 매개 변수입니다. 경우 *dwTimeOut* 은 **무한**, `Lock` 개체에 대 한 액세스는 또는 구성 요소에 지정 된 조건이 될 때까지 반환 되지 것입니다 `dwWakeMask` 충족 했습니다. 그렇지 않은 경우, `Lock` 된 동기화 개체를 획득할 수를 반환 합니다 성공적으로; 그렇지 않으면 실패를 반환 합니다.  
   
 ##  <a name="unlock"></a>CMultiLock::Unlock  
  가 소유 하는 동기화 개체를 해제 `CMultiLock`합니다.  
@@ -182,7 +182,7 @@ BOOL Unlock(
   
 ### <a name="parameters"></a>매개 변수  
  `lCount`  
- 해제 하려면 참조 수를 계산 합니다. 0보다 커야 합니다. 최대값을 초과 하는 개체의 수로 인해 지정 된 크기, 수는 변경 되지 않습니다 고 함수가 반환 **FALSE**합니다.  
+ 해제 하기 위해 참조의 수를 계산 합니다. 0보다 커야 합니다. 지정 된 크기는 개체의 최대값을 초과 하는 횟수를 발생 시킬, 개수는 변경 되지 않습니다 및 함수 반환 **FALSE**합니다.  
   
  `lPrevCount`  
  동기화 개체에 대 한 이전 카운트를 수신 하는 변수를 가리킵니다. 경우 **NULL**, 이전 개수가 반환 되지 않습니다.  
@@ -190,10 +190,10 @@ BOOL Unlock(
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수를 호출 하 `CMultiLock`의 소멸자입니다.  
   
- 첫 번째 형태 `Unlock` 에서 관리 하는 동기화 개체의 잠금을 해제 하려고 `CMultiLock`합니다. 두 번째 형태 `Unlock` 잠금을 해제 하려고 시도 `CSemaphore` 가 소유한 개체 `CMultiLock`합니다. 경우 `CMultiLock` 소유 하지 않는 잠긴 `CSemaphore` 개체를 반환 하 고 **FALSE**고, 그렇지 않으면 반환 **TRUE**합니다. `lCount`및 `lpPrevCount` 동일의 매개 변수와 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)합니다. 두 번째 형태 `Unlock` 거의 multilock 상황에 적용 됩니다.  
+ 첫 번째 형태 `Unlock` 에서 관리 하는 동기화 개체의 잠금을 해제 하려고 `CMultiLock`합니다. 두 번째 형식의 `Unlock` 잠금을 해제 하려고는 `CSemaphore` 가 소유한 개체 `CMultiLock`합니다. 경우 `CMultiLock` 소유 하지 않는 잠긴 `CSemaphore` 개체를 반환 하 고 **FALSE**, 그렇지 않으면 반환 **TRUE**합니다. `lCount`및 `lpPrevCount` 은의 매개 변수와 동일 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)합니다. 두 번째 형식의 `Unlock` 거의 multilock 상황에 적용 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)
