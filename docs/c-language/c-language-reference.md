@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c140b9d49421e8a9f0082351f5e64608506b8ea
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f9eb30e905729d699668d85872ea8ba4c8572982
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="c-language-reference"></a>C 언어 참조
@@ -56,5 +56,5 @@ C++ 및 전처리기에 대한 추가 참조 자료는 다음을 참조하십시
 컴파일러 및 링커 옵션은 [C/C++ 빌드 참조](../build/reference/c-cpp-building-reference.md)에 설명되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[C/C++ 언어 및 표준 라이브러리](../cpp/c-cpp-language-and-standard-libraries.md)   
+[C++ 언어 참조](../cpp/cpp-language-reference.md)   
 
