@@ -1,5 +1,5 @@
 ---
-title: "ATL 개체 수 없도록 설정 만들기 | Microsoft 문서"
+title: "ATL 개체 Noncreatable 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,19 +35,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="making-an-atl-object-noncreatable"></a>ATL 개체 수 없도록 설정 만들기
-클라이언트 개체를 직접 만들 수 없습니다 있도록 ATL 기반 COM 개체의 특성을 변경할 수 있습니다. 이 경우 개체는 다른 개체의 메서드 호출을 통해 반환 되지 않고 됩니다 직접 만든.  
+클라이언트 개체를 직접 만들 수 없습니다 있도록 ATL 기반 COM 개체의 특성을 변경할 수 있습니다. 이 경우 개체는 될 다른 개체에 대 한 메서드 호출을 통해 반환 된 것이 아니라 직접 합니다.  
   
 ### <a name="to-make-an-object-noncreatable"></a>개체 수 없도록 설정 하려면  
   
-1.  제거는 [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) 개체입니다. 개체를 생성할 수 없는 아니라 등록할 컨트롤을 사용 하도록 하려는 경우 교체 된 OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1)합니다.  
+1.  제거는 [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) 개체에 대 한 합니다. 개체를 생성할 수 없는 아니라 등록할 수 있도록 컨트롤을 사용 하도록 하려는 경우 교체 된 OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)합니다.  
   
-2.  추가 된 [noncreatable](../../windows/noncreatable.md) .idl 파일에서 coclass 하는 특성입니다. 예:  
+2.  추가 [noncreatable](../../windows/noncreatable.md) .idl 파일의 coclass에 대 한 특성입니다. 예:  
   
  ```  
  [  

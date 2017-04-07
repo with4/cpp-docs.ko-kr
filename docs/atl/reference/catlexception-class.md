@@ -1,5 +1,5 @@
 ---
-title: "CAtlException 클래스 | Microsoft 문서"
+title: "CAtlException 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 30c9235f16581c86ab5612522909dc366b1ce17e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlexception-class"></a>CAtlException 클래스
@@ -69,12 +69,12 @@ class CAtlException
   
 |이름|설명|  
 |----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|형식 변수의 HRESULT 개체로 만든 및 오류 조건을 저장 하는 데 사용 합니다.|  
+|[CAtlException::m_hr](#m_hr)|형식의 변수 HRESULT 개체에 의해 생성 및 오류 조건을 저장 하는 데 사용 합니다.|  
   
 ## <a name="remarks"></a>주의  
- A `CAtlException` 개체 ATL 작업과 관련 된 예외 상태를 나타냅니다. `CAtlException` 클래스는 예외 및를 HRESULT를 마치는 예외를 처리할 수 있게 하는 캐스트 연산자에 대 한 이유를 나타내는 상태 코드를 저장 하는 공용 데이터 멤버를 포함 합니다.  
+ A `CAtlException` 개체 ATL 작업과 관련 된 예외 상태를 나타냅니다. `CAtlException` 클래스는 예외 및 예외를 HRESULT 값이 있는 것 처럼 처리할 수 있도록 하는 캐스트 연산자에 대 한 이유를 나타내는 상태 코드를 저장 하는 공용 데이터 멤버를 포함 합니다.  
   
- 일반적으로 호출 하면 `AtlThrow` 작성 하지 않고는 `CAtlException` 개체에 직접.  
+ 일반적으로 호출 합니다 `AtlThrow` 만드는 대신 한 `CAtlException` 개체를 직접 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlexcept.h  
@@ -106,9 +106,9 @@ HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>주의  
- 오류 조건을 저장 하는 데이터 멤버입니다. HRESULT 값이 생성자에 의해 설정 [CAtlException::CAtlException](#catlexception)합니다.  
+ 오류 조건이 저장 된 데이터 멤버입니다. HRESULT 값이 생성자에 의해 설정 [CAtlException::CAtlException](#catlexception)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [AtlThrow](http://msdn.microsoft.com/library/2bd111da-8170-488d-914a-c9bf6b6765f7)   
+ [Atlthrow 변형이](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [클래스 개요](../../atl/atl-class-overview.md)
 

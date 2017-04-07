@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 클래스
@@ -150,9 +150,9 @@ int CommandToIndex(UINT nIDFind) const;
  해당 인덱스가 검색 되는 표시기의 문자열 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 표시기의 인덱스 그렇지 않으면-1.  
+ 성공 하면 표시기의 인덱스 그렇지 않으면-1입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  첫 번째 표시기의 인덱스는 0입니다.  
   
 ##  <a name="create"></a>CStatusBar::Create  
@@ -184,7 +184,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  또한 초기 글꼴을 설정 하 고 설정 하는 상태 막대의 높이 기본값으로 합니다.  
   
 ##  <a name="createex"></a>CStatusBar::CreateEx  
@@ -220,8 +220,8 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
- 이 함수에서 또한 초기 글꼴을 설정 하 고 상태를 설정에 기본값을 막대의 높이입니다.  
+### <a name="remarks"></a>주의  
+ 이 함수에서도 초기 글꼴을 설정 하 고 상태를 설정 합니다. 기본값의 값으로 막대의 높이입니다.  
   
  사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 상태 표시줄 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **SBT_TOOLTIPS** 상태 표시줄 개체에서 도구 설명을 표시 하도록 합니다.  
   
@@ -241,9 +241,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>매개 변수  
  `lpDrawItemStruct`  
- 에 대 한 포인터는 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) 드로잉 필요한의 종류에 대 한 정보가 포함 된 구조체입니다.  
+ 에 대 한 포인터는 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) 그리기 필요한 유형에 대 한 정보가 포함 된 구조체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  **itemAction** 의 멤버는 `DRAWITEMSTRUCT` 구조 정의 그리기 작업을 수행 하는 것입니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CStatusBar` 개체입니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수 종료 전에 합니다.  
   
 ##  <a name="getitemid"></a>CStatusBar::GetItemID  
@@ -276,7 +276,7 @@ void GetItemRect(
  `lpRect`  
  가리키는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 표시기로 지정 된 좌표를 받게 될 개체입니다 `nIndex`합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  좌표는 픽셀 상태 표시줄의 왼쪽 위 모퉁이가 기준입니다.  
   
 ##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
@@ -317,7 +317,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  로 지정 된 상태 표시줄 창 스타일 `nIndex`합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  창의 스타일 창에서 표시 되는 방식을 결정 합니다.  
   
  상태 표시줄에서 사용할 수 있는 스타일의 목록이 참조 [만들기](#create)합니다.  
@@ -400,7 +400,7 @@ void SetPaneInfo(
  `cxWidth`  
  표시기 창에 대 한 새 너비입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다음과 같은 표시기 스타일 지원 됩니다.  
   
 - **SBPS_NOBORDERS** 창 주위에 3 차원 테두리 없음.  
@@ -457,7 +457,7 @@ BOOL SetPaneText(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출한 후 `SetPaneText`, 상태 표시줄에 새 텍스트를 표시 하려면 UI 업데이트 처리기를 추가 해야 합니다.  
   
 ### <a name="example"></a>예제  

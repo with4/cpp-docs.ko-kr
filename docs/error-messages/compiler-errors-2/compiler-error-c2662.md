@@ -1,40 +1,56 @@
 ---
 title: "컴파일러 오류 C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-'function' : 'this' 포인터를 'type1'에서 'type2'\(으\)로 변환할 수 없습니다.  
+---
+# <a name="compiler-error-c2662"></a>컴파일러 오류 C2662
+'function': 'type1'에서 'this'이 포인터를 'type2' (으)로 변환할 수 없습니다  
   
- 컴파일러가 `this` 포인터를 `type1`에서 `type2`로 변환할 수 없습니다.  
+ 컴파일러가 변환 하지 못했습니다 된 `this` 에서 포인터 `type1` 를 `type2`합니다.  
   
- 이 오류는 `const`가 아닌 멤버 함수를 `const` 개체에 대해 호출하는 경우에 발생할 수 있습니다.  다음과 같이 해결할 수 있습니다.  
+ 비-를 호출 하 여이 오류가 발생할 수 있습니다`const` 에 멤버 함수는 `const` 개체입니다.  가능한 해결 방법:  
   
--   개체 선언에서 `const`를 제거합니다.  
+-   제거는 `const` 개체 선언에서 합니다.  
   
--   멤버 함수에 `const`를 추가합니다.  
+-   추가 `const` 멤버 함수에 있습니다.  
   
- 다음 샘플에서는 C2662 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2662 오류가 생성 됩니다.  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- **\/clr**를 사용하여 컴파일하는 경우 정규화하여 관리되는 `const` 또는 `volatile` 형식에 대해 함수를 호출할 수 없습니다.  관리되는 클래스의 const 멤버 함수를 선언할 수 없으므로 관리되는 const 개체에 대해 메서드를 호출할 수 없습니다.  
+ 로 컴파일할 때 **/clr**에 함수를 호출할 수는 `const` 또는 `volatile` 관리 되는 형식을 한정 합니다. Const 관리 개체에서 메서드를 호출할 수 없습니다의 관리 되는 클래스는 const 멤버 함수를 선언할 수 없습니다.  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- 다음 샘플에서는 C2662 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2662 오류가 생성 됩니다.  
   
 ```  
 // C2662_c.cpp  
