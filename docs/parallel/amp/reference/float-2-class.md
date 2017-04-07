@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 05707bd43a8f9b89a93c0da0011c46d67361fc84
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bc5d2138d3ec8e9a0b173d2a60847e92bb8a3b9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float2-class"></a>float_2 클래스
@@ -88,31 +88,31 @@ class float_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|float_2::get_x 메서드||  
-|float_2::get_xy 메서드||  
-|float_2::get_y 메서드||  
-|float_2::get_yx 메서드||  
-|float_2::ref_g 메서드||  
-|float_2::ref_r 메서드||  
-|float_2::ref_x 메서드||  
-|float_2::ref_y 메서드||  
-|float_2::set_x 메서드||  
-|float_2::set_xy 메서드||  
-|float_2::set_y 메서드||  
-|float_2::set_yx 메서드||  
+|float_2::get_x||  
+|float_2::get_xy||  
+|float_2::get_y||  
+|float_2::get_yx||  
+|float_2::ref_g||  
+|float_2::ref_r||  
+|float_2::ref_x||  
+|float_2::ref_y||  
+|float_2::set_x||  
+|float_2::set_xy||  
+|float_2::set_y||  
+|float_2::set_yx||  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|float_2::operator 연산자||  
-|float_2::operator-연산자||  
-|float_2::operator * = 연산자||  
-|float_2::operator / = 연산자||  
-|float_2::operator + + 연산자||  
-|float_2::operator + = 연산자||  
-|float_2::operator = 연산자||  
-|float_2::operator-= 연산자||  
+|float_2::operator-||  
+|float_2::operator-||  
+|float_2::operator * =||  
+|float_2::operator / =||  
+|float_2::operator + +||  
+|float_2::operator + =||  
+|float_2::operator =||  
+|-= float_2::operator||  
   
 ### <a name="public-constants"></a>공용 상수  
   
@@ -124,14 +124,14 @@ class float_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|float_2::g 데이터 멤버||  
-|float_2::gr 데이터 멤버||  
-|float_2::r 데이터 멤버||  
-|float_2::rg 데이터 멤버||  
-|float_2::x 데이터 멤버||  
-|float_2::xy 데이터 멤버||  
-|float_2::y 데이터 멤버||  
-|float_2::yx 데이터 멤버||  
+|float_2::g||  
+|float_2::gr||  
+|float_2::r||  
+|float_2::rg||  
+|float_2::x||  
+|float_2::xy||  
+|float_2::y||  
+|float_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `float_2`  
@@ -141,7 +141,7 @@ class float_2;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-float2"></a><a name="ctor"></a>float_2 
+##  <a name="ctor"></a>float_2 
 
  기본 생성자를 0부터 모든 요소를 초기화 합니다.  
   
@@ -204,12 +204,12 @@ explicit inline float_2(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="a-namefloat2sizea-size"></a><a name="float_2__size"></a>크기 
+##  <a name="float_2__size"></a>크기 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

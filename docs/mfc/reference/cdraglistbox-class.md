@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  에 의해 호출 프레임 워크는 이벤트가 발생 하는 경우 마우스 왼쪽된 단추를 누르는 것과 같은 끌기 작업을 시작할 수 있습니다.  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>주의  
  끌기 작업이 시작 될 때의 결과 제어 하려는 경우이 함수를 재정의 합니다. 기본 구현에서 마우스를 캡처할 하 고 마우스 왼쪽 또는 오른쪽 단추를 클릭 하거나 끌어서 작업이 취소 되는 시점 esc 키를 누를 때까지 끌기 모드에서 제공 됩니다.  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  끌기 작업이 취소 된 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>주의  
  목록 상자 컨트롤에 대 한 특수 처리를 처리 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  `CDragListBox` 개체를 생성합니다.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  내에서 목록 상자 항목을 끌 때 프레임 워크에 의해 호출 된 `CDragListBox` 개체입니다.  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>주의  
  기본 동작을 반환 `DL_MOVECURSOR`합니다. 추가 기능을 제공 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  지정 된 인덱스에 있는 항목 앞에 삽입 안내선을 그리는 데 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>주의  
  값은-1 삽입 안내선을 지웁니다. 모양 또는 삽입이 가이드의 동작을 수정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  프레임 워크 내에서 항목을 삭제할 때 호출 된 `CDragListBox` 개체입니다.  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>주의  
  새 위치를 목록 상자 항목 및 해당 데이터를 복사 하 고 원래 항목을 삭제 하는 기본 동작입니다. 목록 내에서 다른 위치로 끌 수 있는 목록 상자 항목의 복사본을 사용할 수 있는 등의 기본 동작을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  에 있는 목록 상자 항목의&0;부터 시작 하는 인덱스를 검색 하려면이 함수 호출 `pt`합니다.  
   
 ```  

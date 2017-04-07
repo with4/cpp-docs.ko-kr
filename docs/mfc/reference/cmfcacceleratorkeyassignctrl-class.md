@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::GetAccel
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::IsFocused
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::IsKeyDefined
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::ResetKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,14 +97,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxacceleratorkeyassignctrl.h  
   
-##  <a name="a-namecmfcacceleratorkeyassignctrla--cmfcacceleratorkeyassignctrlcmfcacceleratorkeyassignctrl"></a><a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
+##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
  생성 된 [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) 개체입니다.  
   
 ```  
 CMFCAcceleratorKeyAssignCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cmfcacceleratorkeyassignctrlgetaccel"></a><a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
+##  <a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
  검색 된 `ACCEL` 의 바로 가기 키 누름에 대 한 구조는 [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) 개체입니다.  
   
 ```  
@@ -110,7 +117,7 @@ ACCEL const* GetAccel() const;
 ### <a name="remarks"></a>주의  
  이 함수를 사용 하 여 검색 하는 `ACCEL` 구조에 사용자가 입력 한 바로 가기 키에 대 한 프로그램 `CMFCAcceleratorKeyAssignCtrl` 개체입니다.  
   
-##  <a name="a-nameisfocuseda--cmfcacceleratorkeyassignctrlisfocused"></a><a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
+##  <a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -121,7 +128,7 @@ BOOL IsFocused() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameiskeydefineda--cmfcacceleratorkeyassignctrliskeydefined"></a><a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
+##  <a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
  바로 가기 키에 정의 되었는지 여부를 결정 하는 [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) 개체입니다.  
   
 ```  
@@ -134,7 +141,7 @@ BOOL IsKeyDefined() const;
 ### <a name="remarks"></a>주의  
  사용자의 유효한 바로 가기 키를 입력 하는지 여부를 확인 하려면이 함수를 사용 하 여 `CMFCAcceleratorKeyAssignCtrl` 개체입니다. 바로 가기 키가 있는 경우 사용할 수 있습니다 [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) 메서드는 `ACCEL` 이 바로 가기 키와 연결 된 구조입니다.  
   
-##  <a name="a-namepretranslatemessagea--cmfcacceleratorkeyassignctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -148,7 +155,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameresetkeya--cmfcacceleratorkeyassignctrlresetkey"></a><a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
+##  <a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
  바로 가기 키를 다시 설정합니다.  
   
 ```  

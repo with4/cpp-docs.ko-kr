@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CLocalHeap
-- ATL::CLocalHeap
 - CLocalHeap
+- ATLMEM/ATL::CLocalHeap
+- ATLMEM/ATL::CLocalHeap::Allocate
+- ATLMEM/ATL::CLocalHeap::Free
+- ATLMEM/ATL::CLocalHeap::GetSize
+- ATLMEM/ATL::CLocalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlmem.h  
   
-##  <a name="a-nameallocatea--clocalheapallocate"></a><a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>CLocalHeap::Allocate  
  메모리 블록을 할당하려면 이 메서드를 호출합니다.  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) 플래그 매개 변수 **LMEM_FIXED**합니다.  
   
-##  <a name="a-namefreea--clocalheapfree"></a><a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>CLocalHeap::Free  
  이 메모리 관리자가 할당 한 메모리 블록을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)합니다.  
   
-##  <a name="a-namegetsizea--clocalheapgetsize"></a><a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>CLocalHeap::GetSize  
  이 메모리 관리자가 할당 된 메모리 블록의 할당된 된 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)합니다.  
   
-##  <a name="a-namereallocatea--clocalheapreallocate"></a><a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>CLocalHeap::Reallocate  
  이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.  
   
 ```

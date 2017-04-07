@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::invalid_compute_domain
+- invalid_compute_domain
+- AMPRT/invalid_compute_domain
+- AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +73,7 @@ class invalid_compute_domain : public runtime_exception;
   
  **네임스페이스:** 동시성  
 
-## <a name="a-namectora-invalidcomputedomain"></a><a name="ctor"></a>invalid_compute_domain 
+## <a name="ctor"></a>invalid_compute_domain 
 
 클래스의 새 인스턴스를 초기화합니다.  
   

@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback::CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback::Download
+- ATLCTL/ATL::CBindStatusCallback::GetBindInfo
+- ATLCTL/ATL::CBindStatusCallback::GetPriority
+- ATLCTL/ATL::CBindStatusCallback::OnDataAvailable
+- ATLCTL/ATL::CBindStatusCallback::OnLowResource
+- ATLCTL/ATL::CBindStatusCallback::OnObjectAvailable
+- ATLCTL/ATL::CBindStatusCallback::OnProgress
+- ATLCTL/ATL::CBindStatusCallback::OnStartBinding
+- ATLCTL/ATL::CBindStatusCallback::OnStopBinding
+- ATLCTL/ATL::CBindStatusCallback::StartAsyncDownload
+- ATLCTL/ATL::CBindStatusCallback::m_dwAvailableToRead
+- ATLCTL/ATL::CBindStatusCallback::m_dwTotalRead
+- ATLCTL/ATL::CBindStatusCallback::m_pFunc
+- ATLCTL/ATL::CBindStatusCallback::m_pT
+- ATLCTL/ATL::CBindStatusCallback::m_spBindCtx
+- ATLCTL/ATL::CBindStatusCallback::m_spBinding
+- ATLCTL/ATL::CBindStatusCallback::m_spMoniker
+- ATLCTL/ATL::CBindStatusCallback::m_spStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,7 +143,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namecbindstatuscallbacka--cbindstatuscallbackcbindstatuscallback"></a><a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback  
+##  <a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback  
  생성자입니다.  
   
 ```
@@ -135,7 +155,7 @@ CBindStatusCallback();
   
  또한 생성자 [m_pT](#m_pt) 및 [m_pFunc](#m_pfunc) 를 **NULL**합니다.  
   
-##  <a name="a-namedtora--cbindstatuscallbackcbindstatuscallback"></a><a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback  
+##  <a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback  
  소멸자입니다.  
   
 ```
@@ -145,7 +165,7 @@ CBindStatusCallback();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="a-namedownloada--cbindstatuscallbackdownload"></a><a name="download"></a>CBindStatusCallback::Download  
+##  <a name="download"></a>CBindStatusCallback::Download  
  만듭니다는 `CBindStatusCallback` 개체와 호출 `StartAsyncDownload` 지정된 된 URL에서 데이터를 비동기적으로 다운로드를 시작 하도록 합니다.  
   
 ```
@@ -181,7 +201,7 @@ static HRESULT Download(
 ### <a name="remarks"></a>주의  
  통해 개체에 보낸 데이터를 사용할 때마다 `OnDataAvailable`합니다. `OnDataAvailable`데이터를 읽고에서 가리키는 함수 호출 *pFunc* (예: 데이터를 저장 하거나 화면에 인쇄 하 여).  
   
-##  <a name="a-namegetbindinfoa--cbindstatuscallbackgetbindinfo"></a><a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
+##  <a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
  모니커에 바인딩하는 방법을 설명 하기 위해 호출.  
   
 ```
@@ -211,7 +231,7 @@ STDMETHOD(GetBindInfo)(
 ### <a name="remarks"></a>주의  
  기본 구현은 바인딩을 비동기적 데이터 밀어넣기 모델을 사용 하도록 설정 합니다. 데이터 밀어넣기 모델에서 모니커 비동기 바인딩 작업을 구동 하 고 지속적으로 새 데이터를 사용할 때마다 클라이언트에 알립니다.  
   
-##  <a name="a-namegetprioritya--cbindstatuscallbackgetpriority"></a><a name="getpriority"></a>CBindStatusCallback::GetPriority  
+##  <a name="getpriority"></a>CBindStatusCallback::GetPriority  
  비동기 모니커 바인딩 작업의 우선 순위를 가져오려는 의해 호출 됩니다.  
   
 ```
@@ -225,7 +245,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
   
-##  <a name="a-namemdwavailabletoreada--cbindstatuscallbackmdwavailabletoread"></a><a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead  
+##  <a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead  
  읽을 수 있는 바이트 수를 사용할 수 있습니다.  
   
 ```
@@ -235,7 +255,7 @@ DWORD m_dwAvailableToRead;
 ### <a name="remarks"></a>주의  
  0으로 초기화 된 `StartAsyncDownload`합니다.  
   
-##  <a name="a-namemdwtotalreada--cbindstatuscallbackmdwtotalread"></a><a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
+##  <a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
  비동기 데이터 전송에 바이트의 누적 합계가 읽습니다.  
   
 ```
@@ -245,7 +265,7 @@ DWORD m_dwTotalRead;
 ### <a name="remarks"></a>주의  
  될 때마다 증가 `OnDataAvailable` 실제로 읽는 바이트 수에 의해 호출 됩니다. 0으로 초기화 된 `StartAsyncDownload`합니다.  
   
-##  <a name="a-namempfunca--cbindstatuscallbackmpfunc"></a><a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
+##  <a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
  가리키는 함수 `m_pFunc` 에 의해 호출 됩니다 `OnDataAvailable` 후 (예: 데이터를 저장 하거나 화면에 인쇄 하 여) 사용 가능한 데이터를 읽습니다.  
   
 ```
@@ -255,17 +275,15 @@ ATL_PDATAAVAILABLE m_pFunc;
 ### <a name="remarks"></a>주의  
  함수에서 가리키는 `m_pFunc` 개체의 클래스의 멤버 이며은 다음 구문을 사용 합니다.  
   
- `void Function_Name(`  
+```  
+void Function_Name(  
+   CBindStatusCallback<T>* pbsc,  
+   BYTE* pBytes,  
+   DWORD dwSize  
+   );  
+```  
   
- `CBindStatusCallback<T>* pbsc,`  
-  
- `BYTE* pBytes,`  
-  
- `DWORD dwSize`  
-  
- `);`  
-  
-##  <a name="a-namempta--cbindstatuscallbackmpt"></a><a name="m_pt"></a>CBindStatusCallback::m_pT  
+##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  비동기 데이터 전송 요청 하는 개체에 대 한 포인터입니다.  
   
 ```
@@ -275,7 +293,7 @@ T* m_pT;
 ### <a name="remarks"></a>주의  
  `CBindStatusCallback` 개체는이 개체의이 클래스에 템플릿 화 됩니다.  
   
-##  <a name="a-namemspbindctxa--cbindstatuscallbackmspbindctx"></a><a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
+##  <a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
  에 대 한 포인터는 [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) 바인딩 컨텍스트 (특정 모니커 바인딩 작업에 대 한 정보를 저장 하는 개체)에 대 한 액세스를 제공 하는 인터페이스입니다.  
   
 ```
@@ -285,7 +303,7 @@ CComPtr<IBindCtx> m_spBindCtx;
 ### <a name="remarks"></a>주의  
  초기화 된 `StartAsyncDownload`합니다.  
   
-##  <a name="a-namemspbindinga--cbindstatuscallbackmspbinding"></a><a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
+##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
  에 대 한 포인터는 `IBinding` 는 현재 바인딩 작업의 인터페이스입니다.  
   
 ```
@@ -295,7 +313,7 @@ CComPtr<IBinding> m_spBinding;
 ### <a name="remarks"></a>주의  
  초기화 된 `OnStartBinding` 에서 릴리스 `OnStopBinding`합니다.  
   
-##  <a name="a-namemspmonikera--cbindstatuscallbackmspmoniker"></a><a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
+##  <a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
  에 대 한 포인터는 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) 사용 하 여 URL에 대 한 인터페이스입니다.  
   
 ```
@@ -305,7 +323,7 @@ CComPtr<IMoniker> m_spMoniker;
 ### <a name="remarks"></a>주의  
  초기화 된 `StartAsyncDownload`합니다.  
   
-##  <a name="a-namemspstreama--cbindstatuscallbackmspstream"></a><a name="m_spstream"></a>CBindStatusCallback::m_spStream  
+##  <a name="m_spstream"></a>CBindStatusCallback::m_spStream  
  에 대 한 포인터는 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 는 현재 바인딩 작업의 인터페이스입니다.  
   
 ```
@@ -315,7 +333,7 @@ CComPtr<IStream> m_spStream;
 ### <a name="remarks"></a>주의  
  초기화 된 `OnDataAvailable` 에서 **STGMEDIUM** 때 구조는 **BCSF** 플래그는 **BCSF_FIRSTDATANOTIFICATION** 면이 해제 하 고는 **BCSF** 플래그는 **BCSF_LASTDATANOTIFICATION**합니다.  
   
-##  <a name="a-nameondataavailablea--cbindstatuscallbackondataavailable"></a><a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
+##  <a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
  비동기 모니커 시스템 제공 호출 `OnDataAvailable` 데이터를 제공 하기를 개체를 사용할 수 있도록 합니다.  
   
 ```
@@ -345,7 +363,7 @@ STDMETHOD(
 ### <a name="remarks"></a>주의  
  `OnDataAvailable`데이터를 읽고 (예: 데이터를 저장 하거나 화면에 인쇄 하 여) 개체의 클래스의 메서드를 호출 합니다. 참조 [CBindStatusCallback::StartAsyncDownload](#startasyncdownload) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameonlowresourcea--cbindstatuscallbackonlowresource"></a><a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
+##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
  리소스가 부족 한 때 호출 됩니다.  
   
 ```
@@ -359,7 +377,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="a-nameonobjectavailablea--cbindstatuscallbackonobjectavailable"></a><a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable  
+##  <a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable  
  응용 프로그램에 대 한 개체 인터페이스 포인터를 전달 하는 비동기 모니커에 의해 호출 됩니다.  
   
 ```
@@ -376,7 +394,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="a-nameonprogressa--cbindstatuscallbackonprogress"></a><a name="onprogress"></a>CBindStatusCallback::OnProgress  
+##  <a name="onprogress"></a>CBindStatusCallback::OnProgress  
  호출 하는 데이터 다운로드 프로세스의 진행률을 표시 합니다.  
   
 ```
@@ -403,7 +421,7 @@ STDMETHOD(OnProgress)(
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="a-nameonstartbindinga--cbindstatuscallbackonstartbinding"></a><a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding  
+##  <a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding  
  데이터 멤버를 설정 [m_spBinding](#m_spbinding) 에 `IBinding` 에서 포인터 `pBinding`합니다.  
   
 ```
@@ -417,7 +435,7 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
  `pBinding`  
  [in] 현재 IBinding 인터페이스의 주소 바인딩 작업 합니다. 이 NULL이 될 수 없습니다. 클라이언트는 바인딩 개체에 대 한 참조를 유지 하려면이 포인터에서 AddRef를 호출 해야 합니다.  
   
-##  <a name="a-nameonstopbindinga--cbindstatuscallbackonstopbinding"></a><a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding  
+##  <a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding  
  릴리스는 `IBinding` 데이터 멤버의 포인터 [m_spBinding](#m_spbinding)합니다.  
   
 ```
@@ -434,7 +452,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 ### <a name="remarks"></a>주의  
  시스템 제공 비동기 모니커 바인딩 작업의 끝을 나타내는 의해 호출 됩니다.  
   
-##  <a name="a-namestartasyncdownloada--cbindstatuscallbackstartasyncdownload"></a><a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload  
+##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload  
  지정된 된 URL에서 데이터를 비동기적으로 다운로드를 시작 합니다.  
   
 ```

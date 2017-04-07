@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDebugReportHook
 - CDebugReportHook
-- ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHookProc
+- ATLUTIL/ATL::CDebugReportHook::RemoveHook
+- ATLUTIL/ATL::CDebugReportHook::SetHook
+- ATLUTIL/ATL::CDebugReportHook::SetPipeName
+- ATLUTIL/ATL::CDebugReportHook::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +84,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-namecdebugreporthooka--cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
  호출 [SetPipeName](#setpipename), [SetTimeout](#settimeout), 및 [SetHook](#sethook)합니다.  
   
 ```
@@ -99,14 +104,14 @@ CDebugReportHook(
  `dwTimeout`  
  이 클래스는 명명 된 파이프 활성화를 기다릴 시간 (밀리초) 시간입니다.  
   
-##  <a name="a-namedtora--cdebugreporthookcdebugreporthook"></a><a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
  호출 [CDebugReportHook::RemoveHook](#removehook)합니다.  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="a-namecdebugreporthookproca--cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
  C 런타임 디버그 보고 프로세스에 연결 되는 사용자 지정 보고 함수입니다.  
   
 ```
@@ -134,7 +139,7 @@ static int __cdecl CDebugReportHookProc(
   
  이 함수에 코드 호출 스레드의 기본 보안 컨텍스트에서 실행 되 고, 가장이이 함수는 동안 즉, 사용할 수 없습니다.  
   
-##  <a name="a-nameremovehooka--cdebugreporthookremovehook"></a><a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
  명명된 된 파이프에 디버그 보고서를 전달 하지 않도록 하려면이 메서드를 호출 하 고 이전 보고서 후크를 복원 합니다.  
   
 ```
@@ -144,7 +149,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>주의  
  호출 [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) 복원할 이전 보고서 후크입니다.  
   
-##  <a name="a-namesethooka--cdebugreporthooksethook"></a><a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>CDebugReportHook::SetHook  
  명명된 된 파이프에 디버그 보고서를 보내기 시작 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -154,7 +159,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>주의  
  호출 [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) 디버그 보고서를 통해 라우팅되지가 [CDebugReportHookProc](#cdebugreporthookproc) 명명된 된 파이프에 있습니다. 이 클래스는 추적 하는 이전 보고서 후크 될 수 있도록 복원할 때 [RemoveHook](#removehook) 호출 됩니다.  
   
-##  <a name="a-namesetpipenamea--cdebugreporthooksetpipename"></a><a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
  컴퓨터 및 디버그 보고서를 보내는 파이프의 이름을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -173,7 +178,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>반환 값  
  성공 시 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="a-namesettimeouta--cdebugreporthooksettimeout"></a><a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
  이 클래스는 명명 된 파이프를 사용할 수 있을 기다릴 밀리초에서의 시간을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

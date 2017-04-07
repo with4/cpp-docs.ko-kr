@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  파생 된 형식의 개체를 만들 때 `CRecordView`, 두 가지 형식의 뷰 개체를 초기화 하 고 보기의 기반이 되는 대화 상자 리소스를 식별 하는 생성자를 호출 합니다.  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDatabase #&32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  현재 레코드가이 레코드 보기와 관련 된 레코드 집합 개체의 첫 번째 레코드 인지 확인 하기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  사용자가 첫 번째 레코드를 이동 하면 프레임 워크는 첫 번째 또는 이전 레코드를 이동에 대 한 모든 사용자 인터페이스 개체를 해제 합니다.  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  현재 레코드가이 레코드 보기와 관련 된 레코드 집합 개체에서 마지막 레코드 인지 확인 하기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  이 함수의 결과 신뢰할 수 있는 제외 하 고 전달 하는 사용자가 이동 될 때까지 뷰 레코드 집합의 끝을 검색할 수 없습니다. 사용자는 다음 또는 마지막 레코드로 이동 하는 것에 대 한 모든 사용자 인터페이스 개체를 사용 하지 않도록 설정 해야 하는 레코드 뷰 알 수 전에 마지막 레코드를 벗어나는 이동 해야 합니다. 사용자 마지막 레코드를 지나서 이동 하 고 다시 마지막 레코드로 이동 하는 경우 (또는 앞) 레코드 뷰 레코드 집합에서 사용자의 위치를 추적할 수 및 사용자 인터페이스 개체를 올바르게 사용 하지 않도록 설정 합니다. `IsOnLastRecord`안정적이 지도 구현 함수를 호출한 후 **OnRecordLast**를 처리 하는 `ID_RECORD_LAST` 명령, 또는 `CRecordset::MoveLast`합니다.  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  에 대 한 포인터를 반환 합니다.는 `CRecordset`-레코드 보기와 연결 된 개체를 파생 합니다.  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  레코드 집합의 다른 레코드를 이동 하 고 레코드 뷰 컨트롤에서 해당 필드를 표시 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

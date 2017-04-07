@@ -10,6 +10,57 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleControlSite
+- AFXOCC/COleControlSite
+- AFXOCC/COleControlSite::COleControlSite
+- AFXOCC/COleControlSite::BindDefaultProperty
+- AFXOCC/COleControlSite::BindProperty
+- AFXOCC/COleControlSite::CreateControl
+- AFXOCC/COleControlSite::DestroyControl
+- AFXOCC/COleControlSite::DoVerb
+- AFXOCC/COleControlSite::EnableDSC
+- AFXOCC/COleControlSite::EnableWindow
+- AFXOCC/COleControlSite::FreezeEvents
+- AFXOCC/COleControlSite::GetDefBtnCode
+- AFXOCC/COleControlSite::GetDlgCtrlID
+- AFXOCC/COleControlSite::GetEventIID
+- AFXOCC/COleControlSite::GetExStyle
+- AFXOCC/COleControlSite::GetProperty
+- AFXOCC/COleControlSite::GetStyle
+- AFXOCC/COleControlSite::GetWindowText
+- AFXOCC/COleControlSite::InvokeHelper
+- AFXOCC/COleControlSite::InvokeHelperV
+- AFXOCC/COleControlSite::IsDefaultButton
+- AFXOCC/COleControlSite::IsWindowEnabled
+- AFXOCC/COleControlSite::ModifyStyle
+- AFXOCC/COleControlSite::ModifyStyleEx
+- AFXOCC/COleControlSite::MoveWindow
+- AFXOCC/COleControlSite::QuickActivate
+- AFXOCC/COleControlSite::SafeSetProperty
+- AFXOCC/COleControlSite::SetDefaultButton
+- AFXOCC/COleControlSite::SetDlgCtrlID
+- AFXOCC/COleControlSite::SetFocus
+- AFXOCC/COleControlSite::SetProperty
+- AFXOCC/COleControlSite::SetPropertyV
+- AFXOCC/COleControlSite::SetWindowPos
+- AFXOCC/COleControlSite::SetWindowText
+- AFXOCC/COleControlSite::ShowWindow
+- AFXOCC/COleControlSite::GetControlInfo
+- AFXOCC/COleControlSite::m_bIsWindowless
+- AFXOCC/COleControlSite::m_ctlInfo
+- AFXOCC/COleControlSite::m_dwEventSink
+- AFXOCC/COleControlSite::m_dwMiscStatus
+- AFXOCC/COleControlSite::m_dwPropNotifySink
+- AFXOCC/COleControlSite::m_dwStyle
+- AFXOCC/COleControlSite::m_hWnd
+- AFXOCC/COleControlSite::m_iidEvents
+- AFXOCC/COleControlSite::m_nID
+- AFXOCC/COleControlSite::m_pActiveObject
+- AFXOCC/COleControlSite::m_pCtrlCont
+- AFXOCC/COleControlSite::m_pInPlaceObject
+- AFXOCC/COleControlSite::m_pObject
+- AFXOCC/COleControlSite::m_pWindowlessObject
+- AFXOCC/COleControlSite::m_pWndCtrl
+- AFXOCC/COleControlSite::m_rect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +186,7 @@ class COleControlSite : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxocc.h  
   
-##  <a name="a-namebinddefaultpropertya--colecontrolsitebinddefaultproperty"></a><a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
  데이터 소스 컨트롤의 데이터 원본, 사용자 이름, 암호 및 SQL 속성에 의해 정의 된 기본 커서를 호출 하는 개체의 기본 단순 바인딩된 속성에 형식 라이브러리에 표시 된 것으로 바인딩합니다.  
   
 ```  
@@ -162,7 +213,7 @@ virtual void BindDefaultProperty(
 ### <a name="remarks"></a>주의  
  `CWnd` 이 함수를 호출 하는 개체 데이터 바인딩 컨트롤 이어야 합니다.  
   
-##  <a name="a-namebindpropertya--colecontrolsitebindproperty"></a><a name="bindproperty"></a>COleControlSite::BindProperty  
+##  <a name="bindproperty"></a>COleControlSite::BindProperty  
  데이터 소스 컨트롤의 데이터 원본, 사용자 이름, 암호 및 SQL 속성에 의해 정의 된 기본 커서를 호출 하는 개체의 단순 바인딩된 속성에 형식 라이브러리에 표시 된 것으로 바인딩합니다.  
   
 ```  
@@ -181,7 +232,7 @@ virtual void BindProperty(
 ### <a name="remarks"></a>주의  
  `CWnd` 이 함수를 호출 하는 개체 데이터 바인딩 컨트롤 이어야 합니다.  
   
-##  <a name="a-namecolecontrolsitea--colecontrolsitecolecontrolsite"></a><a name="colecontrolsite"></a>COleControlSite::COleControlSite  
+##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
  새 `COleControlSite` 개체를 생성합니다.  
   
 ```  
@@ -195,7 +246,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ### <a name="remarks"></a>주의  
  이 함수를 호출 하는 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) 함수입니다. 컨테이너 만들기를 사용자 지정에 대 한 자세한 내용은 참조 하십시오. [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)합니다.  
   
-##  <a name="a-namecreatecontrola--colecontrolsitecreatecontrol"></a><a name="createcontrol"></a>COleControlSite::CreateControl  
+##  <a name="createcontrol"></a>COleControlSite::CreateControl  
  호스팅되는 ActiveX 컨트롤을 만듭니다는 `COleControlSite` 개체입니다.  
   
 ```  
@@ -276,7 +327,7 @@ virtual HRESULT CreateControl(
   
  두 번째 오버 로드를 사용 하 여 기본 크기의 컨트롤을 만듭니다.  
   
-##  <a name="a-namedestroycontrola--colecontrolsitedestroycontrol"></a><a name="destroycontrol"></a>COleControlSite::DestroyControl  
+##  <a name="destroycontrol"></a>COleControlSite::DestroyControl  
  소멸은 `COleControlSite` 개체입니다.  
   
 ```  
@@ -289,7 +340,7 @@ virtual BOOL DestroyControl();
 ### <a name="remarks"></a>주의  
  완료 되 면 개체는 메모리에서 해제 되 고 개체에 대 한 모든 포인터는 더 이상 유효 합니다.  
   
-##  <a name="a-namedoverba--colecontrolsitedoverb"></a><a name="doverb"></a>COleControlSite::DoVerb  
+##  <a name="doverb"></a>COleControlSite::DoVerb  
  지정된 된 동사를 실행합니다.  
   
 ```  
@@ -324,7 +375,7 @@ virtual HRESULT DoVerb(
   
  자세한 내용은 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameenabledsca--colecontrolsiteenabledsc"></a><a name="enabledsc"></a>COleControlSite::EnableDSC  
+##  <a name="enabledsc"></a>COleControlSite::EnableDSC  
  컨트롤 사이트에 대 한 원본을 지정 하는 데이터 수 있도록 합니다.  
   
 ```  
@@ -334,7 +385,7 @@ virtual void EnableDSC();
 ### <a name="remarks"></a>주의  
  컨트롤 사이트에 대 한 원본을 지정 하는 데이터를 초기화 하는 프레임 워크에서 호출 됩니다. 사용자 지정된 동작을 제공 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-nameenablewindowa--colecontrolsiteenablewindow"></a><a name="enablewindow"></a>COleControlSite::EnableWindow  
+##  <a name="enablewindow"></a>COleControlSite::EnableWindow  
  사용 하거나 마우스 및 키보드 컨트롤 사이트에 대 한 입력을 사용 하지 않도록 설정 합니다.  
   
 ```  
@@ -348,7 +399,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="return-value"></a>반환 값  
  창을 이전에 해제 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-##  <a name="a-namefreezeeventsa--colecontrolsitefreezeevents"></a><a name="freezeevents"></a>COleControlSite::FreezeEvents  
+##  <a name="freezeevents"></a>COleControlSite::FreezeEvents  
  컨트롤 사이트에서 무시 컨트롤에서 발생 하는 이벤트 처리 여부를 지정 합니다.  
   
 ```  
@@ -365,7 +416,7 @@ void FreezeEvents(BOOL bFreeze);
 > [!NOTE]
 >  컨트롤을 컨트롤 사이트에서 요청 하는 경우에 이벤트를 발생 시키고 중지 필요 하지 않습니다. 실행을 계속할 수 있지만 모든 후속 이벤트 컨트롤 사이트에서 무시 됩니다.  
   
-##  <a name="a-namegetcontrolinfoa--colecontrolsitegetcontrolinfo"></a><a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
+##  <a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
  컨트롤의 니모닉 키보드 및 키보드 동작에 대 한 정보를 검색합니다.  
   
 ```  
@@ -375,7 +426,7 @@ void GetControlInfo();
 ### <a name="remarks"></a>주의  
  정보에 저장 됩니다 [COleControlSite::m_ctlInfo](#m_ctlinfo)합니다.  
   
-##  <a name="a-namegetdefbtncodea--colecontrolsitegetdefbtncode"></a><a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
  컨트롤이 기본 누름 단추 인지를 결정 합니다.  
   
 ```  
@@ -391,7 +442,7 @@ DWORD GetDefBtnCode();
   
 - **0** 컨트롤이 단추가 아닙니다.  
   
-##  <a name="a-namegetdlgctrlida--colecontrolsitegetdlgctrlid"></a><a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
  컨트롤의 식별자를 검색합니다.  
   
 ```  
@@ -401,7 +452,7 @@ virtual int GetDlgCtrlID() const;
 ### <a name="return-value"></a>반환 값  
  컨트롤의 대화 상자 항목 식별자입니다.  
   
-##  <a name="a-namegeteventiida--colecontrolsitegeteventiid"></a><a name="geteventiid"></a>COleControlSite::GetEventIID  
+##  <a name="geteventiid"></a>COleControlSite::GetEventIID  
  컨트롤의 기본 이벤트 인터페이스에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -415,7 +466,7 @@ BOOL GetEventIID(IID* piid);
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아니고 그렇지 않으면 0입니다. 성공 하면 `piid` 컨트롤의 기본 이벤트 인터페이스에 대 한 인터페이스 ID를 포함 합니다.  
   
-##  <a name="a-namegetexstylea--colecontrolsitegetexstyle"></a><a name="getexstyle"></a>COleControlSite::GetExStyle  
+##  <a name="getexstyle"></a>COleControlSite::GetExStyle  
  창의 확장된 스타일을 검색합니다.  
   
 ```  
@@ -428,7 +479,7 @@ virtual DWORD GetExStyle() const;
 ### <a name="remarks"></a>주의  
  일반 스타일을 검색 하려면 [COleControlSite::GetStyle](#getstyle)합니다.  
   
-##  <a name="a-namegetpropertya--colecontrolsitegetproperty"></a><a name="getproperty"></a>COleControlSite::GetProperty  
+##  <a name="getproperty"></a>COleControlSite::GetProperty  
  지정 된 컨트롤 속성을 가져옵니다 `dwDispID`합니다.  
   
 ```  
@@ -451,7 +502,7 @@ virtual void GetProperty(
 ### <a name="remarks"></a>주의  
  값이를 통해 반환 됩니다 `pvProp`합니다.  
   
-##  <a name="a-namegetstylea--colecontrolsitegetstyle"></a><a name="getstyle"></a>COleControlSite::GetStyle  
+##  <a name="getstyle"></a>COleControlSite::GetStyle  
  컨트롤 사이트에서의 스타일을 검색합니다.  
   
 ```  
@@ -464,7 +515,7 @@ virtual DWORD GetStyle() const;
 ### <a name="remarks"></a>주의  
  가능한 값 목록은 참조 하십시오. [창 스타일](../../mfc/reference/window-styles.md)합니다. 컨트롤 사이트에서의 확장된 스타일을 검색 하려면 [COleControlSite::GetExStyle](#getexstyle)합니다.  
   
-##  <a name="a-namegetwindowtexta--colecontrolsitegetwindowtext"></a><a name="getwindowtext"></a>COleControlSite::GetWindowText  
+##  <a name="getwindowtext"></a>COleControlSite::GetWindowText  
  컨트롤의 현재 텍스트를 검색합니다.  
   
 ```  
@@ -478,7 +529,7 @@ virtual void GetWindowText(CString& str) const;
 ### <a name="remarks"></a>주의  
  컨트롤 캡션 스톡 속성을 지 원하는 경우이 값이 반환 됩니다. 캡션 스톡 속성 지원 되지 않는 경우 Text 속성에 대 한 값이 반환 됩니다.  
   
-##  <a name="a-nameinvokehelpera--colecontrolsiteinvokehelper"></a><a name="invokehelper"></a>COleControlSite::InvokeHelper  
+##  <a name="invokehelper"></a>COleControlSite::InvokeHelper  
  메서드를 호출 하 여 지정 된 속성 `dwDispID`, 지정 된 컨텍스트에서 `wFlags`합니다.  
   
 ```  
@@ -514,7 +565,7 @@ virtual void AFX_CDECL InvokeHelper(
   
  이 함수에 매개 변수 변환 **VARIANTARG** 값, 호출 후의 **idispatch:: Invoke** 컨트롤에서 메서드. 경우에 대 한 호출 **idispatch:: Invoke** 실패 하면이이 함수는 예외를 throw 합니다. 상태 코드를 반환 하는 경우 **idispatch:: Invoke** 는 `DISP_E_EXCEPTION`,이 함수는 **COleDispatchException** 개체, 그렇지 않으면 throw 한 `COleException`합니다.  
   
-##  <a name="a-nameinvokehelperva--colecontrolsiteinvokehelperv"></a><a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
+##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
  메서드를 호출 하 여 지정 된 속성 `dwDispID`, 지정 된 컨텍스트에서 `wFlags`합니다.  
   
 ```  
@@ -551,7 +602,7 @@ virtual void InvokeHelperV(
   
  이 함수를 호출 하는 일반적으로 `COleControlSite::InvokeHelper`합니다.  
   
-##  <a name="a-nameisdefaultbuttona--colecontrolsiteisdefaultbutton"></a><a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
+##  <a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
  컨트롤이 기본 단추 인지를 결정 합니다.  
   
 ```  
@@ -561,7 +612,7 @@ BOOL IsDefaultButton();
 ### <a name="return-value"></a>반환 값  
  이 컨트롤의 경우&0;이 아닌 창에서 기본 단추로 그렇지 않으면&0;입니다.  
   
-##  <a name="a-nameiswindowenableda--colecontrolsiteiswindowenabled"></a><a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
  컨트롤 사이트를 사용할 수 있는지 확인 합니다.  
   
 ```  
@@ -574,7 +625,7 @@ virtual BOOL IsWindowEnabled() const;
 ### <a name="remarks"></a>주의  
  값은 컨트롤의 Enabled 스톡 속성에서 검색 됩니다.  
   
-##  <a name="a-namembiswindowlessa--colecontrolsitembiswindowless"></a><a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
+##  <a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
  개체 창 없는 컨트롤 인지 여부를 확인 합니다.  
   
 ```  
@@ -584,7 +635,7 @@ BOOL m_bIsWindowless;
 ### <a name="remarks"></a>주의  
  0이 아닌 컨트롤에 창이 없습니다, 그렇지 않으면&0;입니다.  
   
-##  <a name="a-namemctlinfoa--colecontrolsitemctlinfo"></a><a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
+##  <a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
  키보드 입력 컨트롤에 의해 처리 되는 방법에 대 한 정보입니다.  
   
 ```  
@@ -594,14 +645,14 @@ CONTROLINFO m_ctlInfo;
 ### <a name="remarks"></a>주의  
  이 정보에 저장 되는 [한 채울 CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) 구조입니다.  
   
-##  <a name="a-namemdweventsinka--colecontrolsitemdweventsink"></a><a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
+##  <a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
  컨트롤의 이벤트 싱크 연결점의 쿠키를 포함합니다.  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
-##  <a name="a-namemdwmiscstatusa--colecontrolsitemdwmiscstatus"></a><a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
+##  <a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
  컨트롤에 대 한 기타 정보를 포함합니다.  
   
 ```  
@@ -611,91 +662,91 @@ DWORD m_dwMiscStatus;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemdwpropnotifysinka--colecontrolsitemdwpropnotifysink"></a><a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
+##  <a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
  포함 된 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 쿠키입니다.  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
-##  <a name="a-namemdwstylea--colecontrolsitemdwstyle"></a><a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
+##  <a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
  컨트롤의 창 스타일을 포함합니다.  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
-##  <a name="a-namemhwnda--colecontrolsitemhwnd"></a><a name="m_hwnd"></a>COleControlSite::m_hWnd  
+##  <a name="m_hwnd"></a>COleControlSite::m_hWnd  
  포함 된 `HWND` 컨트롤의 또는 **NULL** 컨트롤이 창 없는 경우.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-##  <a name="a-namemiideventsa--colecontrolsitemiidevents"></a><a name="m_iidevents"></a>COleControlSite::m_iidEvents  
+##  <a name="m_iidevents"></a>COleControlSite::m_iidEvents  
  컨트롤의 기본 이벤트 싱크 인터페이스의 인터페이스 ID를 포함합니다.  
   
 ```  
 IID m_iidEvents;  
 ```  
   
-##  <a name="a-namemnida--colecontrolsitemnid"></a><a name="m_nid"></a>COleControlSite::m_nID  
+##  <a name="m_nid"></a>COleControlSite::m_nID  
  컨트롤의 대화 항목 ID를 포함합니다.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namempactiveobjecta--colecontrolsitempactiveobject"></a><a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
+##  <a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
  포함 된 [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) 컨트롤의 인터페이스입니다.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
 ```  
   
-##  <a name="a-namempctrlconta--colecontrolsitempctrlcont"></a><a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
+##  <a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
  컨트롤의 컨테이너 (폼을 나타냄)를 포함 합니다.  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
 ```  
   
-##  <a name="a-namempinplaceobjecta--colecontrolsitempinplaceobject"></a><a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
+##  <a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
  포함 된 `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) 컨트롤의 인터페이스입니다.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
 ```  
   
-##  <a name="a-namempobjecta--colecontrolsitempobject"></a><a name="m_pobject"></a>COleControlSite::m_pObject  
+##  <a name="m_pobject"></a>COleControlSite::m_pObject  
  포함 된 **IOleObjectInterface** 컨트롤의 인터페이스입니다.  
   
 ```  
 LPOLEOBJECT m_pObject;  
 ```  
   
-##  <a name="a-namempwindowlessobjecta--colecontrolsitempwindowlessobject"></a><a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
+##  <a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
  포함 된 `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) 컨트롤의 인터페이스입니다.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
 ```  
   
-##  <a name="a-namempwndctrla--colecontrolsitempwndctrl"></a><a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
+##  <a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
  에 대 한 포인터는 `CWnd` 컨트롤 자체를 나타내는 개체입니다.  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
-##  <a name="a-namemrecta--colecontrolsitemrect"></a><a name="m_rect"></a>COleControlSite::m_rect  
+##  <a name="m_rect"></a>COleControlSite::m_rect  
  컨테이너의 창 기준으로 컨트롤의 범위를 포함 합니다.  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="a-namemodifystylea--colecontrolsitemodifystyle"></a><a name="modifystyle"></a>COleControlSite::ModifyStyle  
+##  <a name="modifystyle"></a>COleControlSite::ModifyStyle  
  컨트롤의 스타일을 수정합니다.  
   
 ```  
@@ -735,7 +786,7 @@ virtual BOOL ModifyStyle(
   
  스타일의 연장 창을 수정 하려면 호출 하 고, [ModifyStyleEx](#modifystyleex)합니다.  
   
-##  <a name="a-namemodifystyleexa--colecontrolsitemodifystyleex"></a><a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
+##  <a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
  컨트롤의 확장된 스타일을 수정합니다.  
   
 ```  
@@ -775,7 +826,7 @@ virtual BOOL ModifyStyleEx(
   
  스타일의 연장 창을 수정 하려면 호출 하 고, [ModifyStyle](#modifystyle)합니다.  
   
-##  <a name="a-namemovewindowa--colecontrolsitemovewindow"></a><a name="movewindow"></a>COleControlSite::MoveWindow  
+##  <a name="movewindow"></a>COleControlSite::MoveWindow  
  컨트롤의 위치를 변경합니다.  
   
 ```  
@@ -799,7 +850,7 @@ virtual void MoveWindow(
  `nHeight`  
  새 창의 높이입니다.  
   
-##  <a name="a-namequickactivatea--colecontrolsitequickactivate"></a><a name="quickactivate"></a>COleControlSite::QuickActivate  
+##  <a name="quickactivate"></a>COleControlSite::QuickActivate  
  빠른 포함 된 컨트롤을 활성화합니다.  
   
 ```  
@@ -814,7 +865,7 @@ virtual BOOL QuickActivate();
   
  `IPersist*::Load` 및 `IPersist*::InitNew` 신속 하 게 작동 발생 한 후 메서드를 호출 해야 합니다. 컨트롤 신속 하 게 작동 하는 동안 컨테이너의 싱크에 대 한 연결을 설정 해야 합니다. 그러나 이러한 연결 될 때까지 라이브 하지 않습니다 `IPersist*::Load` 또는 `IPersist*::InitNew` 가 호출 되었습니다.  
   
-##  <a name="a-namesafesetpropertya--colecontrolsitesafesetproperty"></a><a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
+##  <a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
  지정 된 컨트롤 속성 설정 `dwDispID`합니다.  
   
 ```  
@@ -841,7 +892,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 > [!NOTE]
 >  와 달리 `SetProperty` 및 `SetPropertyV`, (예: 존재 하지 않는 속성을 설정 하는 동안)는 오류가 발생 하는 경우 예외가 throw 되지 않습니다.  
   
-##  <a name="a-namesetdefaultbuttona--colecontrolsitesetdefaultbutton"></a><a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
  컨트롤을 기본 단추로 설정합니다.  
   
 ```  
@@ -857,7 +908,7 @@ void SetDefaultButton(BOOL bDefault);
 > [!NOTE]
 >  컨트롤이 있어야는 **OLEMISC_ACTSLIKEBUTTON** 상태 비트가 설정 합니다.  
   
-##  <a name="a-namesetdlgctrlida--colecontrolsitesetdlgctrlid"></a><a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
  컨트롤의 대화 항목 식별자의 값을 변경합니다.  
   
 ```  
@@ -873,7 +924,7 @@ virtual int SetDlgCtrlID(int nID);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetfocusa--colecontrolsitesetfocus"></a><a name="setfocus"></a>COleControlSite::SetFocus  
+##  <a name="setfocus"></a>COleControlSite::SetFocus  
  컨트롤에 포커스를 설정 합니다.  
   
 ```  
@@ -888,7 +939,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="return-value"></a>반환 값  
  이전에 포커스가 있던 창에 대 한 포인터입니다.  
   
-##  <a name="a-namesetpropertya--colecontrolsitesetproperty"></a><a name="setproperty"></a>COleControlSite::SetProperty  
+##  <a name="setproperty"></a>COleControlSite::SetProperty  
  지정 된 컨트롤 속성 설정 `dwDispID`합니다.  
   
 ```  
@@ -912,7 +963,7 @@ virtual void AFX_CDECL SetProperty(
   
  예외 형식에는 메서드나 속성을 설정 하려고 시도의 반환 값에 의해 결정 됩니다. 반환 값이 `DISP_E_EXCEPTION`, **COleDispatchExcpetion** throw 되 고, 그렇지 않으면는 `COleException`합니다.  
   
-##  <a name="a-namesetpropertyva--colecontrolsitesetpropertyv"></a><a name="setpropertyv"></a>COleControlSite::SetPropertyV  
+##  <a name="setpropertyv"></a>COleControlSite::SetPropertyV  
  지정 된 컨트롤 속성 설정 `dwDispID`합니다.  
   
 ```  
@@ -937,7 +988,7 @@ virtual void SetPropertyV(
   
  예외 형식에는 메서드나 속성을 설정 하려고 시도의 반환 값에 의해 결정 됩니다. 반환 값이 `DISP_E_EXCEPTION`, **COleDispatchExcpetion** throw 되 고, 그렇지 않으면는 `COleException`합니다.  
   
-##  <a name="a-namesetwindowposa--colecontrolsitesetwindowpos"></a><a name="setwindowpos"></a>COleControlSite::SetWindowPos  
+##  <a name="setwindowpos"></a>COleControlSite::SetWindowPos  
  크기, 위치 및 컨트롤 사이트에서의 Z 순서를 설정합니다.  
   
 ```  
@@ -972,7 +1023,7 @@ virtual BOOL SetWindowPos(
 ### <a name="return-value"></a>반환 값  
  0이 아니고 그렇지 않으면&0;을 성공 하는 경우.  
   
-##  <a name="a-namesetwindowtexta--colecontrolsitesetwindowtext"></a><a name="setwindowtext"></a>COleControlSite::SetWindowText  
+##  <a name="setwindowtext"></a>COleControlSite::SetWindowText  
  컨트롤 사이트에 대 한 텍스트를 설정합니다.  
   
 ```  
@@ -986,7 +1037,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ### <a name="remarks"></a>주의  
  이 함수는 먼저 Caption 스톡 속성을 설정 하려고 합니다. 캡션 스톡 속성 지원 되지 않는 경우 Text 속성 대신 설정 됩니다.  
   
-##  <a name="a-nameshowwindowa--colecontrolsiteshowwindow"></a><a name="showwindow"></a>COleControlSite::ShowWindow  
+##  <a name="showwindow"></a>COleControlSite::ShowWindow  
  창의 표시 상태를 설정합니다.  
   
 ```  

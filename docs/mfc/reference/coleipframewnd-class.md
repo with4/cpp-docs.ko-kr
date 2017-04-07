@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::OnCreateControlBars
+- AFXOLE/COleIPFrameWnd::RepositionFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecoleipframewnda--coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
  생성 된 `COleIPFrameWnd` 개체 및 형식의 구조에 저장 되 고 전체 상태 정보를 초기화 합니다. **OLEINPLACEFRAMEINFO**합니다.  
   
 ```  
@@ -95,7 +99,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameoncreatecontrolbarsa--coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
  프레임 워크 호출의 `OnCreateControlBars` 내부 편집에 대 한 항목이 활성화 될 때 작동 합니다.  
   
 ```  
@@ -122,7 +126,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>주의  
  기본 구현은 아무 작업도 수행하지 않습니다. 컨트롤 막대 만들어질 때 필요한 특별 한 처리를 수행 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-namerepositionframea--coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
  프레임 워크 호출의 `RepositionFrame` 컨트롤 막대 레이아웃과 표시 않으므로 모두 내부 편집 창의 위치를 변경 하는 멤버 함수입니다.  
   
 ```  

@@ -10,6 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCButton
+- AFXBUTTON/CMFCButton
+- AFXBUTTON/CMFCButton::CleanUp
+- AFXBUTTON/CMFCButton::EnableFullTextTooltip
+- AFXBUTTON/CMFCButton::EnableMenuFont
+- AFXBUTTON/CMFCButton::EnableWindowsTheming
+- AFXBUTTON/CMFCButton::GetToolTipCtrl
+- AFXBUTTON/CMFCButton::IsAutoCheck
+- AFXBUTTON/CMFCButton::IsAutorepeatCommandMode
+- AFXBUTTON/CMFCButton::IsCheckBox
+- AFXBUTTON/CMFCButton::IsChecked
+- AFXBUTTON/CMFCButton::IsHighlighted
+- AFXBUTTON/CMFCButton::IsPressed
+- AFXBUTTON/CMFCButton::IsPushed
+- AFXBUTTON/CMFCButton::IsRadioButton
+- AFXBUTTON/CMFCButton::IsWindowsThemingEnabled
+- AFXBUTTON/CMFCButton::SetAutorepeatMode
+- AFXBUTTON/CMFCButton::SetCheckedImage
+- AFXBUTTON/CMFCButton::SetFaceColor
+- AFXBUTTON/CMFCButton::SetImage
+- AFXBUTTON/CMFCButton::SetMouseCursor
+- AFXBUTTON/CMFCButton::SetMouseCursorHand
+- AFXBUTTON/CMFCButton::SetStdImage
+- AFXBUTTON/CMFCButton::SetTextColor
+- AFXBUTTON/CMFCButton::SetTextHotColor
+- AFXBUTTON/CMFCButton::SetTooltip
+- AFXBUTTON/CMFCButton::SizeToContent
+- AFXBUTTON/CMFCButton::OnDraw
+- AFXBUTTON/CMFCButton::OnDrawBorder
+- AFXBUTTON/CMFCButton::OnDrawFocusRect
+- AFXBUTTON/CMFCButton::OnDrawText
+- AFXBUTTON/CMFCButton::OnFillBackground
+- AFXBUTTON/CMFCButton::SelectFont
+- AFXBUTTON/CMFCButton::m_bDrawFocus
+- AFXBUTTON/CMFCButton::m_bHighlightChecked
+- AFXBUTTON/CMFCButton::m_bRightImage
+- AFXBUTTON/CMFCButton::m_bTransparent
+- AFXBUTTON/CMFCButton::m_nAlignStyle
+- AFXBUTTON/CMFCButton::m_nFlatStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,14 +188,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxbutton.h  
   
-##  <a name="a-namecleanupa--cmfcbuttoncleanup"></a><a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>CMFCButton::CleanUp  
  내부 변수를 다시 설정 하 고 이미지, 비트맵 및 아이콘 등의 할당 된 리소스를 해제 합니다.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="a-nameenablefulltexttooltipa--cmfcbuttonenablefulltexttooltip"></a><a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
  큰 도구 설명 창이 나 작은 도구 설명 창의 텍스트의 요약된 버전에 도구 설명의 전체 텍스트를 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -170,7 +208,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablemenufonta--cmfcbuttonenablemenufont"></a><a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
  단추 텍스트 글꼴을 응용 프로그램 메뉴 글꼴로 같은지 여부를 지정 합니다.  
   
 ```  
@@ -189,7 +227,7 @@ void EnableMenuFont(
 ### <a name="remarks"></a>주의  
  단추 텍스트 글꼴을 지정 하려면이 메서드를 사용 하지 않는 경우에 있는 글꼴을 지정할 수 있습니다는 [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) 메서드. 글꼴을 전혀 지정 하지 않으면 기본 글꼴을 설정 하는 프레임 워크입니다.  
   
-##  <a name="a-nameenablewindowstheminga--cmfcbuttonenablewindowstheming"></a><a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
  단추 테두리의 스타일은 현재 Windows 테마에 해당 하는지 여부를 지정 합니다.  
   
 ```  
@@ -203,7 +241,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>주의  
  이 메서드에서 파생 되는 응용 프로그램의 모든 단추에 영향을 줍니다는 `CMFCButton` 클래스입니다.  
   
-##  <a name="a-namegettooltipctrla--cmfcbuttongettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
  기본 도구 설명 컨트롤에 대 한 참조를 반환합니다.  
   
 ```  
@@ -215,7 +253,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisautochecka--cmfcbuttonisautocheck"></a><a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
  확인란 또는 라디오 단추는 자동 단추 인지를 나타냅니다.  
   
 ```  
@@ -227,7 +265,7 @@ BOOL IsAutoCheck() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisautorepeatcommandmodea--cmfcbuttonisautorepeatcommandmode"></a><a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
  단추 자동 반복 모드로 설정 되어 있는지 여부를 나타냅니다.  
   
 ```  
@@ -240,7 +278,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCButton::SetAutorepeatMode](#setautorepeatmode) 단추를 자동 반복 모드로 설정 하는 방법입니다.  
   
-##  <a name="a-nameischeckboxa--cmfcbuttonischeckbox"></a><a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
  단추 확인란 단추 인지를 나타냅니다.  
   
 ```  
@@ -252,7 +290,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameischeckeda--cmfcbuttonischecked"></a><a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>CMFCButton::IsChecked  
  현재 단추가 선택 되어 있는지를 나타냅니다.  
   
 ```  
@@ -265,7 +303,7 @@ BOOL IsChecked() const;
 ### <a name="remarks"></a>주의  
  프레임 워크에서는 다양 한 방법 다양 한 종류의 단추 체크 되었음을 나타냅니다. 예, 라디오 단추를 검사 점;이 포함 된 경우 포함 된 경우에 확인란이 선택 되어 있는 **X**합니다.  
   
-##  <a name="a-nameishighlighteda--cmfcbuttonishighlighted"></a><a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
  단추가 강조 표시 하는지 여부를 나타냅니다.  
   
 ```  
@@ -278,7 +316,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>주의  
  단추에는 단추 위로 마우스를 가져가면 강조 표시 됩니다.  
   
-##  <a name="a-nameispresseda--cmfcbuttonispressed"></a><a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>CMFCButton::IsPressed  
  단추 푸시되는 강조 표시 된 지를 나타냅니다.  
   
 ```  
@@ -290,7 +328,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameispusheda--cmfcbuttonispushed"></a><a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>CMFCButton::IsPushed  
  단추를 누를 있는지 여부를 나타냅니다.  
   
 ```  
@@ -302,7 +340,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisradiobuttona--cmfcbuttonisradiobutton"></a><a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
  단추는 라디오 단추 인지를 나타냅니다.  
   
 ```  
@@ -314,7 +352,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameiswindowsthemingenableda--cmfcbuttoniswindowsthemingenabled"></a><a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
  단추 테두리의 스타일은 현재 Windows 테마에 해당 하는지 여부를 나타냅니다.  
   
 ```  
@@ -324,7 +362,7 @@ static BOOL IsWindowsThemingEnabled();
 ### <a name="return-value"></a>반환 값  
  `TRUE`단추 테두리의 스타일은 현재 Windows 테마;에 해당 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namembdrawfocusa--cmfcbuttonmbdrawfocus"></a><a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
  단추 주위에 포커스 영역을 그릴 것인지를 나타냅니다.  
   
 ```  
@@ -336,7 +374,7 @@ BOOL m_bDrawFocus;
   
  `CMFCButton` 생성자에이 멤버를 초기화 합니다. `TRUE`합니다.  
   
-##  <a name="a-namembhighlightcheckeda--cmfcbuttonmbhighlightchecked"></a><a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
  커서를 위로 이동할 때 BS_CHECKBOX 스타일 단추를 강조 표시 여부를 나타냅니다.  
   
 ```  
@@ -346,7 +384,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>주의  
  설정의 `m_bHighlightChecked` 멤버를 `TRUE` 위로 마우스를 가져가면 프레임 워크 BS_CHECKBOX 스타일 단추가 강조 표시 되어 지정할 수 있습니다.  
   
-##  <a name="a-namembrightimagea--cmfcbuttonmbrightimage"></a><a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
  단추 오른쪽에 이미지를 표시할지 여부를 나타냅니다.  
   
 ```  
@@ -356,7 +394,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>주의  
  설정의 `m_bRightImage` 멤버를 `TRUE` 프레임 워크는 단추의 텍스트 레이블 오른쪽에는 단추 이미지에 표시 되도록 지정할에 있습니다.  
   
-##  <a name="a-namembtransparenta--cmfcbuttonmbtransparent"></a><a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
  단추 투명 한지 여부를 나타냅니다.  
   
 ```  
@@ -366,7 +404,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>주의  
  설정의 `m_bTransparent` 멤버를 `TRUE` 는 프레임 워크는 투명 하 게 단추를 지정 합니다. `CMFCButton` 생성자에이 멤버를 초기화 합니다. `FALSE`합니다.  
   
-##  <a name="a-namemnalignstylea--cmfcbuttonmnalignstyle"></a><a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
  단추 텍스트의 맞춤을 지정 합니다.  
   
 ```  
@@ -384,7 +422,7 @@ AlignStyle m_nAlignStyle;
   
  `CMFCButton` 생성자 ALIGN_CENTER에이 멤버를 초기화 합니다.  
   
-##  <a name="a-namemnflatstylea--cmfcbuttonmnflatstyle"></a><a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
  예: 여백, 플랫 형식의 세미콜론 평면 또는 3D 단추 스타일을 지정합니다.  
   
 ```  
@@ -409,7 +447,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&29;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="a-nameondrawa--cmfcbuttonondraw"></a><a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>CMFCButton::OnDraw  
  단추를 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -432,7 +470,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>주의  
  단추를 그리는 사용자 고유의 코드를 사용 하 여이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameondrawbordera--cmfcbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
  단추의 테두리를 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -455,7 +493,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>주의  
  테두리를 그리는 사용자 고유의 코드를 사용 하 여이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameondrawfocusrecta--cmfcbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
  단추에 대 한 포커스 사각형을 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -474,7 +512,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>주의  
  포커스 사각형을 그리는 사용자 고유의 코드를 사용 하 여이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameondrawtexta--cmfcbuttonondrawtext"></a><a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
  단추 텍스트를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -505,7 +543,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>주의  
  단추 텍스트를 그릴 사용자 고유의 코드를 사용 하 여이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
  단추 텍스트의 배경을 그리기 위한 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -524,7 +562,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>주의  
  단추의 배경을 그리기 위한 사용자 고유의 코드를 사용 하 여이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameselectfonta--cmfcbuttonselectfont"></a><a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>CMFCButton::SelectFont  
  지정된 된 장치 컨텍스트에 연결 되는 글꼴을 가져옵니다.  
   
 ```  
@@ -540,7 +578,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetautorepeatmodea--cmfcbuttonsetautorepeatmode"></a><a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
  단추 자동 반복 모드를 설정합니다.  
   
 ```  
@@ -554,7 +592,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하면 지속적으로 메시지를 보내는 WM_COMMAND 부모 창에 단추를 놓을 때까지 단추 또는 `nTimeDelay` 매개 변수는&0;으로 설정 됩니다.  
   
-##  <a name="a-namesetcheckedimagea--cmfcbuttonsetcheckedimage"></a><a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
  이미지 선택된 단추를 설정합니다.  
   
 ```  
@@ -619,7 +657,7 @@ void SetCheckedImage(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetfacecolora--cmfcbuttonsetfacecolor"></a><a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
  단추 텍스트의 배경색을 설정합니다.  
   
 ```  
@@ -638,7 +676,7 @@ void SetFaceColor(
 ### <a name="remarks"></a>주의  
  단추 배경 (면)에 대 한 새 채우기 색을 정의 하려면이 메서드를 사용 합니다. 백그라운드 하지 않습니다 채워진 경우는 [CMFCButton::m_bTransparent](#m_btransparent) 멤버 변수는 `TRUE`합니다.  
   
-##  <a name="a-namesetimagea--cmfcbuttonsetimage"></a><a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>CMFCButton::SetImage  
  단추에 대 한 이미지를 설정합니다.  
   
 ```  
@@ -709,7 +747,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="a-namesetmousecursora--cmfcbuttonsetmousecursor"></a><a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
  커서 이미지를 설정합니다.  
   
 ```  
@@ -729,7 +767,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&30;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="a-namesetmousecursorhanda--cmfcbuttonsetmousecursorhand"></a><a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
  손 모양 이미지에 커서를 설정합니다.  
   
 ```  
@@ -739,7 +777,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>주의  
  손 모양 커서 이미지 단추와 연결 하려면이 메서드를 사용 합니다. 커서는 응용 프로그램 리소스에서 로드 됩니다.  
   
-##  <a name="a-namesetstdimagea--cmfcbuttonsetstdimage"></a><a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
  사용 하 여 한 `CMenuImages` 단추 이미지를 설정 하는 개체입니다.  
   
 ```  
@@ -761,7 +799,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettextcolora--cmfcbuttonsettextcolor"></a><a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
  선택 되지 않은 단추에 대 한 단추 텍스트의 색을 설정 합니다.  
   
 ```  
@@ -774,7 +812,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettexthotcolora--cmfcbuttonsettexthotcolor"></a><a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
  선택 된 단추에 대 한 단추 텍스트의 색을 설정 합니다.  
   
 ```  
@@ -787,7 +825,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettooltipa--cmfcbuttonsettooltip"></a><a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>CMFCButton::SetTooltip  
  단추를 도구 설명에 연결합니다.  
   
 ```  
@@ -800,7 +838,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesizetocontenta--cmfcbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
  단추 텍스트와 이미지를 포함 하는 단추 크기가 조정 됩니다.  
   
 ```  

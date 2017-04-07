@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CThreadPool
-- ATL::CThreadPool
 - CThreadPool
+- ATLUTIL/ATL::CThreadPool
+- ATLUTIL/ATL::CThreadPool::CThreadPool
+- ATLUTIL/ATL::CThreadPool::AddRef
+- ATLUTIL/ATL::CThreadPool::GetNumThreads
+- ATLUTIL/ATL::CThreadPool::GetQueueHandle
+- ATLUTIL/ATL::CThreadPool::GetSize
+- ATLUTIL/ATL::CThreadPool::GetTimeout
+- ATLUTIL/ATL::CThreadPool::Initialize
+- ATLUTIL/ATL::CThreadPool::QueryInterface
+- ATLUTIL/ATL::CThreadPool::QueueRequest
+- ATLUTIL/ATL::CThreadPool::Release
+- ATLUTIL/ATL::CThreadPool::SetSize
+- ATLUTIL/ATL::CThreadPool::SetTimeout
+- ATLUTIL/ATL::CThreadPool::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +117,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-nameaddrefa--cthreadpooladdref"></a><a name="addref"></a>CThreadPool::AddRef  
+##  <a name="addref"></a>CThreadPool::AddRef  
  구현 `IUnknown::AddRef`합니다.  
   
 ```
@@ -118,7 +130,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 ### <a name="remarks"></a>주의  
  이 클래스는 참조 횟수를 사용 하 여 수명 제어를 구현 하지 않습니다.  
   
-##  <a name="a-namecthreadpoola--cthreadpoolcthreadpool"></a><a name="cthreadpool"></a>CThreadPool::CThreadPool  
+##  <a name="cthreadpool"></a>CThreadPool::CThreadPool  
  스레드 풀에 대 한 생성자입니다.  
   
 ```
@@ -128,7 +140,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>주의  
  제한 시간 값을 초기화 [ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT](http://msdn.microsoft.com/library/c1e660a7-d490-42af-bbe1-ded76e80cc10)합니다.  
   
-##  <a name="a-namedtora--cthreadpoolcthreadpool"></a><a name="dtor"></a>CThreadPool:: ~ CThreadPool  
+##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool  
  스레드 풀에 대 한 소멸자가 있습니다.  
   
 ```
@@ -138,7 +150,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>주의  
  호출 [CThreadPool::Shutdown](#shutdown)합니다.  
   
-##  <a name="a-namegetnumthreadsa--cthreadpoolgetnumthreads"></a><a name="getnumthreads"></a>CThreadPool::GetNumThreads  
+##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
  풀의 스레드 수를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -148,7 +160,7 @@ int GetNumThreads() throw();
 ### <a name="return-value"></a>반환 값  
  풀의 스레드 수를 반환합니다.  
   
-##  <a name="a-namegetqueuehandlea--cthreadpoolgetqueuehandle"></a><a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
+##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
  작업 항목 큐에 사용 되는 IO 완료 포트의 핸들을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -158,7 +170,7 @@ HANDLE GetQueueHandle() throw();
 ### <a name="return-value"></a>반환 값  
  스레드 풀이 초기화 되지 않은 경우 큐 핸들 또는 NULL을 반환 합니다.  
   
-##  <a name="a-namegetsizea--cthreadpoolgetsize"></a><a name="getsize"></a>CThreadPool::GetSize  
+##  <a name="getsize"></a>CThreadPool::GetSize  
  풀의 스레드 수를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -172,7 +184,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namegettimeouta--cthreadpoolgettimeout"></a><a name="gettimeout"></a>CThreadPool::GetTimeout  
+##  <a name="gettimeout"></a>CThreadPool::GetTimeout  
  스레드 풀 스레드를 종료를 대기 하는 시간 (밀리초)에는 최대 시간을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -189,7 +201,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="remarks"></a>주의  
  이 제한 시간 값에서 사용 됩니다 [CThreadPool::Shutdown](#shutdown) 를 해당 메서드에 변수에 다른 값이 없는 경우.  
   
-##  <a name="a-nameinitializea--cthreadpoolinitialize"></a><a name="initialize"></a>CThreadPool::Initialize  
+##  <a name="initialize"></a>CThreadPool::Initialize  
  스레드 풀을 초기화 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -220,7 +232,7 @@ HRESULT Initialize(
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="a-namequeryinterfacea--cthreadpoolqueryinterface"></a><a name="queryinterface"></a>CThreadPool::QueryInterface  
+##  <a name="queryinterface"></a>CThreadPool::QueryInterface  
  구현 **IUnknown::QueryInterface**합니다.  
   
 ```
@@ -230,7 +242,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 ### <a name="remarks"></a>주의  
  이 클래스의 개체에 대 한 성공적으로 쿼리할 수는 **IUnknown** 및 [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) 인터페이스입니다.  
   
-##  <a name="a-namequeuerequesta--cthreadpoolqueuerequest"></a><a name="queuerequest"></a>CThreadPool::QueueRequest  
+##  <a name="queuerequest"></a>CThreadPool::QueueRequest  
  풀의 스레드에 의해 처리 되는 작업 항목을 큐에이 메서드를 호출 합니다.  
   
 ```
@@ -247,7 +259,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는 큐에 작업 항목을 추가합니다. 풀의 스레드는 수신 된 순서 대로 큐에서 항목을 선택 합니다.  
   
-##  <a name="a-namereleasea--cthreadpoolrelease"></a><a name="release"></a>CThreadPool::Release  
+##  <a name="release"></a>CThreadPool::Release  
  구현 `IUnknown::Release`합니다.  
   
 ```
@@ -260,7 +272,7 @@ ULONG STDMETHODCALLTYPE Release() throw();
 ### <a name="remarks"></a>주의  
  이 클래스는 참조 횟수를 사용 하 여 수명 제어를 구현 하지 않습니다.  
   
-##  <a name="a-namesetsizea--cthreadpoolsetsize"></a><a name="setsize"></a>CThreadPool::SetSize  
+##  <a name="setsize"></a>CThreadPool::SetSize  
  풀의 스레드 수를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -281,7 +293,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="remarks"></a>주의  
  지정 된 스레드 수가 스레드 풀의 현재 개수 보다 작은 경우 개체 종료 메시지를 대기 중인 스레드에 의해 선택 하도록 큐에 넣습니다. 대기 중인 스레드는 큐 메시지를 끌어와서, 스레드 풀 알리고 스레드 절차를 종료 합니다. 풀의 스레드 수에 지정된 된 수에 도달할 때까지 또는 스레드가 없습니다에 지정 된 기간 내에서 종료 될 때까지이 프로세스가 반복 됩니다 [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout)합니다. 에 해당 하는 HRESULT 메서드는 반환 하는이 상황에서 **WAIT_TIMEOUT** 보류 중인 종료 메시지 취소 됩니다.  
   
-##  <a name="a-namesettimeouta--cthreadpoolsettimeout"></a><a name="settimeout"></a>CThreadPool::SetTimeout  
+##  <a name="settimeout"></a>CThreadPool::SetTimeout  
  스레드 풀 스레드를 종료를 대기 하는 시간 (밀리초)에는 최대 시간을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -300,7 +312,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
   
  `dwMaxWait` 종료 하는 단일 스레드 풀을 기다리는 시간입니다. 여러 스레드 풀에서 제거를 수행할 수 있는 최대 시간 수 있습니다. 보다 약간 `dwMaxWait` 스레드 수로 곱한 결과입니다.  
   
-##  <a name="a-nameshutdowna--cthreadpoolshutdown"></a><a name="shutdown"></a>CThreadPool::Shutdown  
+##  <a name="shutdown"></a>CThreadPool::Shutdown  
  스레드 풀을 종료 하려면이 메서드를 호출 합니다.  
   
 ```

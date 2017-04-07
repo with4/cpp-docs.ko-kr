@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IConnectionPointImpl
 - IConnectionPointImpl
-- ATL::IConnectionPointImpl
+- ATLCOM/ATL::IConnectionPointImpl
+- ATLCOM/ATL::IConnectionPointImpl::Advise
+- ATLCOM/ATL::IConnectionPointImpl::EnumConnections
+- ATLCOM/ATL::IConnectionPointImpl::GetConnectionInterface
+- ATLCOM/ATL::IConnectionPointImpl::GetConnectionPointContainer
+- ATLCOM/ATL::IConnectionPointImpl::Unadvise
+- ATLCOM/ATL::IConnectionPointImpl::m_vec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameadvisea--iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>IConnectionPointImpl::Advise  
  싱크 및 연결 지점 사이 연결을 만듭니다.  
   
 ```
@@ -109,7 +114,7 @@ STDMETHOD(Advise)(
   
  참조 [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameenumconnectionsa--iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
  연결 지점에 대 한 연결을 반복 하는 열거자를 만듭니다.  
   
 ```
@@ -119,7 +124,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>주의  
  참조 [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetconnectioninterfacea--iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
  연결 지점을 나타내는 인터페이스의 IID를 검색 합니다.  
   
 ```
@@ -129,7 +134,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>주의  
  참조 [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetconnectionpointcontainera--iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
  연결 가능 개체에 대 한 인터페이스 포인터를 검색합니다.  
   
 ```
@@ -139,7 +144,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>주의  
  참조 [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemveca--iconnectionpointimplmvec"></a><a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
  연결 지점 개체와 싱크 간의 연결을 관리 합니다.  
   
 ```
@@ -149,7 +154,7 @@ CDV m_vec;
 ### <a name="remarks"></a>주의  
  기본적으로 `m_vec` 형식의 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)합니다.  
   
-##  <a name="a-nameunadvisea--iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
  통해 이전에 설정 된 연결을 종료 [Advise](#advise)합니다.  
   
 ```

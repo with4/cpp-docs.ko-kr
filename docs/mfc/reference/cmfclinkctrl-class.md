@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl::SetURL
+- AFXLINKCTRL/CMFCLinkCtrl::SetURLPrefix
+- AFXLINKCTRL/CMFCLinkCtrl::SizeToContent
+- AFXLINKCTRL/CMFCLinkCtrl::OnDrawFocusRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxlinkctrl.h  
   
-##  <a name="a-nameondrawfocusrecta--cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
  포커스 사각형의 단추를 그리기 전에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -108,7 +113,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>주의  
  버튼의 포커스 사각형을 그리는 사용자 고유의 코드를 사용 하려는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameseturla--cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
  단추 텍스트와 지정된 된 URL을 표시합니다.  
   
 ```  
@@ -121,7 +126,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameseturlprefixa--cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
  암시적 프로토콜 설정 (예를 들어, "http:")의 URL입니다.  
   
 ```  
@@ -135,7 +140,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>주의  
  URL 접두사를 설정 하려면이 메서드를 사용 합니다. 접두사 단추의 얼굴에 표시 되지 않으면 있지만 URL의 대상으로 이동 하는 데 사용할 수 있습니다.  
   
-##  <a name="a-namesizetocontenta--cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
  단추 텍스트 또는 비트맵을 포함 하는 단추 크기가 조정 됩니다.  
   
 ```  

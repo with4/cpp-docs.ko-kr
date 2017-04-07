@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
+- AFXDLGS/CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CreatePrinterDC
+- AFXDLGS/CPageSetupDialog::DoModal
+- AFXDLGS/CPageSetupDialog::GetDeviceName
+- AFXDLGS/CPageSetupDialog::GetDevMode
+- AFXDLGS/CPageSetupDialog::GetDriverName
+- AFXDLGS/CPageSetupDialog::GetMargins
+- AFXDLGS/CPageSetupDialog::GetPaperSize
+- AFXDLGS/CPageSetupDialog::GetPortName
+- AFXDLGS/CPageSetupDialog::OnDrawPage
+- AFXDLGS/CPageSetupDialog::PreDrawPage
+- AFXDLGS/CPageSetupDialog::m_psd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +122,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="a-namecpagesetupdialoga--cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
  생성 하려면이 함수를 호출 하는 `CPageSetupDialog` 개체입니다.  
   
 ```  
@@ -167,7 +180,7 @@ CPageSetupDialog(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&94;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
  프린터 장치 컨텍스트를 만듭니다는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 구조입니다.  
   
 ```  
@@ -177,7 +190,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>반환 값  
  새로 만든된 프린터 장치 컨텍스트 (DC)에 대 한 핸들입니다.  
   
-##  <a name="a-namedomodala--cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>CPageSetupDialog::DoModal  
  Windows 일반 OLE 페이지 설정 대화 상자를 표시 하 고 사용자가 인쇄 여백, 크기 및 용지 방향을 대상 프린터와 같은 다양 한 인쇄 설정 옵션을 선택 하도록 허용 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -201,7 +214,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>예제  
   예를 참조 [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)합니다.  
   
-##  <a name="a-namegetdevicenamea--cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
  한 후이 함수를 호출 `DoModal` 현재 선택 된 프린터의 이름을 검색할 수 있습니다.  
   
 ```  
@@ -211,7 +224,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>반환 값  
  사용 하는 장치 이름은 **CPageSetupDialog** 개체입니다.  
   
-##  <a name="a-namegetdevmodea--cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
  이 함수를 호출한 후 호출 `DoModal` 의 프린터 장치 컨텍스트에 대 한 정보를 검색 하는 `CPageSetupDialog` 개체입니다.  
   
 ```  
@@ -221,7 +234,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>반환 값  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 장치 초기화 및 인쇄 드라이버의 환경에 대 한 정보가 포함 된 데이터 구조입니다. 이 구조는 windows에서 사용 되는 메모리를 잠금 해제 해야 [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) 에 설명 된 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetdrivernamea--cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
  이 함수를 호출한 후 호출 [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) 시스템에서 정의 된 프린터 장치 드라이버의 이름을 검색할 수 있습니다.  
   
 ```  
@@ -234,7 +247,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>주의  
  에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 `lpszDriverName` 에 대 한 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
-##  <a name="a-namegetmarginsa--cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
  호출한 후이 함수를 호출 `DoModal` 프린터 장치 드라이버의 여백을 검색할 수 있습니다.  
   
 ```  
@@ -250,7 +263,7 @@ void GetMargins(
  *lpRectMinMargins*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 현재 선택 된 프린터에 대 한 최소 인쇄 여백 (1/1000 인치 또는 1/100 m m)에서 설명 하는 개체입니다. 전달 **NULL** 이 사각형에 관심이 없는 경우이 매개 변수에 있습니다.  
   
-##  <a name="a-namegetpapersizea--cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
  인쇄 하기 위해 선택한 용지 크기를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -260,7 +273,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>반환 값  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) (1/1000 인치 또는 1/100 m m)에서 인쇄를 위해 선택한 용지 크기를 포함 하는 개체입니다.  
   
-##  <a name="a-namegetportnamea--cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
  이 함수를 호출한 후 호출 `DoModal` 현재 선택 된 프린터 포트의 이름을 검색할 수 있습니다.  
   
 ```  
@@ -270,7 +283,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>반환 값  
  현재 선택 된 프린터 포트의 이름입니다.  
   
-##  <a name="a-namempsda--cpagesetupdialogmpsd"></a><a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
  형식의 구조 **PAGESETUPDLG**, 대화 상자 개체의 특성을 저장 하는 구성원으로 포함 합니다.  
   
 ```  
@@ -286,7 +299,7 @@ PAGESETUPDLG m_psd;
   
  예를 참조 [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)합니다.  
   
-##  <a name="a-nameondrawpagea--cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
  인쇄 된 페이지의 화면 이미지를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -330,7 +343,7 @@ virtual UINT OnDrawPage(
   
  모든 사례를 처리할 필요가 없습니다 `nMessage`합니다. 이미지, 이미지, 또는 전체 영역이의 여러 구성 요소에의 한 구성 요소를 처리 하도록 선택할 수 있습니다.  
   
-##  <a name="a-namepredrawpagea--cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
  인쇄 된 페이지의 화면 이미지를 그리기 전에 프레임 워크에서 호출 됩니다.  
   
 ```  

@@ -50,8 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4d2f5694ad2f06bf78307783d8f24c34bb0849df
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c1a72c382d0df6d667ca97a45c6783c928f6ae98
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="heapadd"></a>_heapadd
@@ -92,9 +93,6 @@ int _heapadd(
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
-  
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../c-runtime-library/memory-allocation.md)   
  [free](../c-runtime-library/reference/free.md)   
@@ -104,8 +102,3 @@ int _heapadd(
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
  [malloc](../c-runtime-library/reference/malloc.md)   
  [realloc](../c-runtime-library/reference/realloc.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

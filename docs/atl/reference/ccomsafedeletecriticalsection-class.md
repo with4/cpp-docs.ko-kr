@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
-- ATL::CComSafeDeleteCriticalSection
-- ATL.CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Init
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Lock
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Term
+- ATLCORE/ATL::m_bInitialized
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameccomsafedeletecriticalsectiona--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  생성자입니다.  
   
 ```
@@ -98,7 +102,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>주의  
  설정의 [m_bInitialized](#m_binitialized) 데이터 멤버를 **false**합니다.  
   
-##  <a name="a-namedtora--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  소멸자입니다.  
   
 ```
@@ -108,7 +112,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>주의  
  내부 해제 **CRITICAL_SECTION** 경우 메모리에서 개체는 [m_bInitialized](#m_binitialized) 데이터 멤버가로 설정 된 **true**합니다.  
   
-##  <a name="a-nameinita--ccomsafedeletecriticalsectioninit"></a><a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
  기본 클래스 구현을 호출 [Init](/visualstudio/debugger/init) 설정 [m_bInitialized](#m_binitialized) 를 **true** 성공 하는 경우.  
   
 ```
@@ -118,7 +122,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>반환 값  
  결과 반환 [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)합니다.  
   
-##  <a name="a-namelocka--ccomsafedeletecriticalsectionlock"></a><a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
 기본 클래스 구현을 호출 [잠금](ccomcriticalsection-class.md#lock)합니다.  
 
   
@@ -134,7 +138,7 @@ HRESULT Lock();
   
  함수 동작에 자세한 내용은를 참조 [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)합니다.  
   
-##  <a name="a-namembinitializeda--ccomsafedeletecriticalsectionmbinitialized"></a><a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
  플래그 여부는 내부 **CRITICAL_SECTION** 개체가 초기화 되었습니다.  
   
 ```
@@ -144,7 +148,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>주의  
  **m_bInitialized** 데이터 멤버는 기본의 유효성을 추적 하는 데 **CRITICAL_SECTION** 연관 된 개체는 [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) 클래스입니다. 내부 **CRITICAL_SECTION** 개체는이 플래그 설정 하지 않으면 메모리에서 해제를 시도 되지 것입니다 **true**합니다.  
   
-##  <a name="a-nameterma--ccomsafedeletecriticalsectionterm"></a><a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
  기본 클래스 구현을 호출 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) 경우 내부 **CRITICAL_SECTION** 개체는 유효 합니다.  
   
 ```

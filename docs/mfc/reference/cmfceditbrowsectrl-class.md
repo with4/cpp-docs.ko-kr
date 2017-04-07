@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFileBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFolderBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::GetMode
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnAfterUpdate
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnBrowse
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnChangeLayout
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnDrawBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnIllegalFileName
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::SetBrowseButtonImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +139,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxeditbrowsectrl.h  
   
-##  <a name="a-nameenablebrowsebuttona--cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
  표시 하거나 찾아보기 단추를 현재 편집 찾아보기 컨트롤에 표시 되지 않습니다.  
   
 ```  
@@ -149,7 +160,7 @@ void EnableBrowseButton(
   
  하는 경우는 `bEnable` 매개 변수는 `TRUE`, 컨트롤의 찾아보기 모드 `BrowseMode_Default`고, 그렇지 않으면 찾아보기 모드 `BrowseMode_None`합니다. 찾아보기 모드에 대 한 자세한 내용은 참조는 [GetMode](#getmode) 메서드.  
   
-##  <a name="a-nameenablefilebrowsebuttona--cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
  현재 편집 찾아보기 컨트롤에 있는 찾아보기 단추를 표시 하 고에 컨트롤 배치 *파일 찾아보기* 모드입니다.  
   
 ```  
@@ -174,7 +185,7 @@ void EnableFileBrowseButton(
   
  사용 가능한 플래그의 전체 목록은 참조 하십시오. [OPENFILENAME 구조](https://msdn.microsoft.com/library/ms646839.aspx)합니다.  
   
-##  <a name="a-nameenablefolderbrowsebuttona--cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  현재 편집 찾아보기 컨트롤에 있는 찾아보기 단추를 표시 하 고에 컨트롤 배치 *폴더 찾아보기* 모드입니다.  
   
 ```  
@@ -184,7 +195,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>주의  
  폴더 찾아보기 모드에서 편집 찾아보기 컨트롤은 사용자가 찾아보기 단추를 클릭 하는 경우 컨트롤 표준 폴더 선택 대화 상자를 표시 합니다.  
   
-##  <a name="a-namegetmodea--cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
  찾아보기 모드의 현재 편집 찾아보기 컨트롤을 검색합니다.  
   
 ```  
@@ -206,7 +217,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>주의  
  기본적으로는 `CMFCEditBrowseCtrl` 개체도 초기화 됩니다 `BrowseMode_None` 모드입니다. 사용 하 여 찾아보기 모드를 수정 된 [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), 및 [CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton) 메서드.  
   
-##  <a name="a-nameonafterupdatea--cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
  편집 찾아보기 컨트롤 찾아보기 동작의 결과 함께 업데이트 되는 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -216,7 +227,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonbrowsea--cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
  사용자가 편집 찾아보기 컨트롤의 찾아보기 단추를 클릭 한 후에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -226,7 +237,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 편집 찾아보기 컨트롤의 찾아보기 단추를 클릭할 때 사용자 지정 코드를 실행 합니다. 고유한 클래스를 파생 시키는 `CMFCEditBrowseCtrl` 클래스 다이어그램과 해당 `OnBrowse` 메서드. 해당 메서드에 사용자 지정 찾아보기 동작을 구현 하 고 필요에 따라 편집 찾아보기 컨트롤의 텍스트 상자를 업데이트 합니다. 응용 프로그램에서 사용 하 여는 [EnableBrowseButton](#enablebrowsebutton) 편집 찾아보기 컨트롤 입력 하기 위한 방법은 *사용자 지정 찾아보기* 모드입니다.  
   
-##  <a name="a-nameonchangelayouta--cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
  현재 편집 찾아보기 컨트롤을 다시 그립니다.  
   
 ```  
@@ -236,7 +247,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>주의  
  프레임 워크는 찾아보기 모드 편집 찾아보기의 변경 내용을 제어 하는 경우이 메서드를 호출 합니다. 자세한 내용은 참조 [CMFCEditBrowseCtrl::GetMode](#getmode)합니다.  
   
-##  <a name="a-nameondrawbrowsebuttona--cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
  편집 찾아보기 컨트롤에 있는 찾아보기 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -263,7 +274,7 @@ virtual void OnDrawBrowseButton(
 ### <a name="remarks"></a>주의  
  찾아보기 단추 모양 사용자 지정 하려면 파생된 클래스에서이 함수를 재정의 합니다.  
   
-##  <a name="a-namesetbrowsebuttonimagea--cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
  편집 찾아보기 컨트롤의 찾아보기 단추를 사용자 지정 이미지를 설정합니다.  
   
 ```  
@@ -295,7 +306,7 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ### <a name="remarks"></a>주의  
  찾아보기 단추를 사용자 지정 이미지를 적용 하려면이 메서드를 사용 합니다. 기본적으로 프레임 워크 가져옵니다 표준 이미지 편집 찾아보기 컨트롤에 때 *파일 찾아보기* 또는 *폴더 찾아보기* 모드입니다.  
   
-##  <a name="a-nameonillegalfilenamea--cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
  편집 컨트롤에 잘못 된 파일 이름을 입력 한 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  

@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 구조체
@@ -54,21 +62,21 @@ struct IResourceManager;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iresourcemanager:: Osversion 열거형](#osversion)|운영 체제 버전을 나타내는 열거 형식입니다.|  
+|[Iresourcemanager:: Osversion](#osversion)|운영 체제 버전을 나타내는 열거 형식입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iresourcemanager:: Createnodetopology 메서드](#createnodetopology)|런타임의 현재 디버그에만 빌드,이 메서드는 구성과 일치 하는 실제 하드웨어를 요구 하지 않고 다양 한 하드웨어 토폴로지에서, 리소스 관리자의 테스트를 촉진 하도록 설계 된 테스트 후크입니다. 이 메서드는 런타임의 소매 빌드와 특별 한 조치를 수행 하지 않고 반환 합니다.|  
-|[Iresourcemanager:: Getavailablenodecount 메서드](#getavailablenodecount)|리소스 관리자에서 사용할 수 있는 노드의 수를 반환합니다.|  
-|[Iresourcemanager:: Getfirstnode 메서드](#getfirstnode)|리소스 관리자를 통해 정의된 열거 순서에서 첫 번째 노드를 반환합니다.|  
-|[Iresourcemanager:: Reference 메서드](#reference)|리소스 관리자 인스턴스에서 참조 횟수를 증가 시킵니다.|  
-|[Iresourcemanager:: Registerscheduler 메서드](#registerscheduler)|스케줄러를 리소스 관리자를 등록합니다. 사용 하 여 리소스 관리자와 통신 해야 스케줄러 등록 되 면는 `ISchedulerProxy` 반환 되는 인터페이스입니다.|  
-|[Iresourcemanager:: Release 메서드](#release)|리소스 관리자 인스턴스에 대 한 참조 횟수를 줄입니다. 참조 횟수가 되 면 리소스 관리자는 소멸 `0`합니다.|  
+|[Iresourcemanager:: Createnodetopology](#createnodetopology)|런타임의 현재 디버그에만 빌드,이 메서드는 구성과 일치 하는 실제 하드웨어를 요구 하지 않고 다양 한 하드웨어 토폴로지에서, 리소스 관리자의 테스트를 촉진 하도록 설계 된 테스트 후크입니다. 이 메서드는 런타임의 소매 빌드와 특별 한 조치를 수행 하지 않고 반환 합니다.|  
+|[Iresourcemanager:: Getavailablenodecount](#getavailablenodecount)|리소스 관리자에서 사용할 수 있는 노드의 수를 반환합니다.|  
+|[Iresourcemanager:: Getfirstnode](#getfirstnode)|리소스 관리자를 통해 정의된 열거 순서에서 첫 번째 노드를 반환합니다.|  
+|[Iresourcemanager:: Reference](#reference)|리소스 관리자 인스턴스에서 참조 횟수를 증가 시킵니다.|  
+|[Iresourcemanager:: Registerscheduler](#registerscheduler)|스케줄러를 리소스 관리자를 등록합니다. 사용 하 여 리소스 관리자와 통신 해야 스케줄러 등록 되 면는 `ISchedulerProxy` 반환 되는 인터페이스입니다.|  
+|[Iresourcemanager:: Release](#release)|리소스 관리자 인스턴스에 대 한 참조 횟수를 줄입니다. 참조 횟수가 되 면 리소스 관리자는 소멸 `0`합니다.|  
   
 ## <a name="remarks"></a>주의  
- 사용 하 여는 [CreateResourceManager](concurrency-namespace-functions.md) 함수는 단일 리소스 관리자 인스턴스에 인터페이스를 가져올 수 있습니다. 메서드는 리소스 관리자에 대 한 참조 횟수를 증가 시키고 호출 해야는 [iresourcemanager:: Release](#release) 메서드를 리소스 관리자와 함께 완료 되 면 참조를 해제 합니다. 일반적으로 만들면 각 스케줄러를 만드는 동안이 메서드를 호출 하 고 종료 한 후 리소스 관리자에 대 한 참조를 해제 합니다.  
+ 사용 하 여는 [CreateResourceManager](concurrency-namespace-functions.md) 함수는 단일 리소스 관리자 인스턴스에 인터페이스를 가져올 수 있습니다. 리소스 관리자에 대 한 참조 횟수를 증가 하는 메서드 및 호출 해야는 [iresourcemanager:: Release](#release) 리소스 관리자와 함께 완료 되 면에 대 한 참조를 해제 하는 방법입니다. 일반적으로 만들면 각 스케줄러를 만드는 동안이 메서드를 호출 하 고 종료 한 후 리소스 관리자에 대 한 참조를 해제 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `IResourceManager`  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>Iresourcemanager:: Createnodetopology 메서드  
+##  <a name="createnodetopology"></a>Iresourcemanager:: Createnodetopology 메서드  
  런타임의 현재 디버그에만 빌드,이 메서드는 구성과 일치 하는 실제 하드웨어를 요구 하지 않고 다양 한 하드웨어 토폴로지에서, 리소스 관리자의 테스트를 촉진 하도록 설계 된 테스트 후크입니다. 이 메서드는 런타임의 소매 빌드와 특별 한 조치를 수행 하지 않고 반환 합니다.  
   
 ```
@@ -107,7 +115,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) 다른 스케줄러는 프로세스에 존재 하는 동안이 메서드를 호출 하면 throw 됩니다.  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>Iresourcemanager:: Getavailablenodecount 메서드  
+##  <a name="getavailablenodecount"></a>Iresourcemanager:: Getavailablenodecount 메서드  
  리소스 관리자에서 사용할 수 있는 노드의 수를 반환합니다.  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>반환 값  
  리소스 관리자를 사용 하 여 사용할 수 있는 노드의 수입니다.  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>Iresourcemanager:: Getfirstnode 메서드  
+##  <a name="getfirstnode"></a>Iresourcemanager:: Getfirstnode 메서드  
  리소스 관리자를 통해 정의된 열거 순서에서 첫 번째 노드를 반환합니다.  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>반환 값  
  리소스 관리자에서 정의 된 열거 순서에서 첫 번째 노드.  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>Iresourcemanager:: Osversion 열거형  
+##  <a name="iresourcemanager__osversion"></a>Iresourcemanager:: Osversion 열거형  
  운영 체제 버전을 나타내는 열거 형식입니다.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>Iresourcemanager:: Reference 메서드  
+##  <a name="reference"></a>Iresourcemanager:: Reference 메서드  
  리소스 관리자 인스턴스에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>반환 값  
  결과 참조 횟수입니다.  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>Iresourcemanager:: Registerscheduler 메서드  
+##  <a name="registerscheduler"></a>Iresourcemanager:: Registerscheduler 메서드  
  스케줄러를 리소스 관리자를 등록합니다. 사용 하 여 리소스 관리자와 통신 해야 스케줄러 등록 되 면는 `ISchedulerProxy` 반환 되는 인터페이스입니다.  
   
 ```
@@ -164,11 +172,11 @@ virtual ISchedulerProxy *RegisterScheduler(
  `ISchedulerProxy` 리소스 관리자가 스케줄러와 연결 된 인터페이스입니다. 스케줄러에서 통신 하는 리소스 관리자와 함께이 지점에서이 인터페이스를 사용 해야 합니다.  
   
 ### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 리소스 관리자와 통신을 시작 합니다. 메서드는 연결 된 `IScheduler` 있는 스케줄러에 대 한 인터페이스는 `ISchedulerProxy` 인터페이스와 사용자에 게 전달 합니다. 사용자의 스케줄러에서 사용할 실행 리소스를 요청 하거나 리소스 관리자와 스레드를 구독 하려면 반환 된 인터페이스를 사용할 수 있습니다. 리소스 관리자에서 반환 되는 스케줄러 정책의 정책 요소를에서 사용 합니다는 [ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy) 스케줄러 스레드 형식을 결정 하는 메서드는 작업을 실행 해야 합니다. 경우에 `SchedulerKind` 정책 키에 값 `UmsThreadDefault` 값을 값으로 정책을 읽고 `UmsThreadDefault`, `IScheduler` 메서드에 전달 하는 인터페이스 여야는 `IUMSScheduler` 인터페이스.  
+ 이 메서드를 사용 하 여 리소스 관리자와 통신을 시작 합니다. 메서드는 연결의 `IScheduler` 있는 스케줄러에 대 한 인터페이스는 `ISchedulerProxy` 인터페이스와 사용자에 게 전달 합니다. 사용자의 스케줄러에서 사용할 실행 리소스를 요청 하거나 리소스 관리자와 스레드를 구독 하려면 반환 된 인터페이스를 사용할 수 있습니다. 리소스 관리자에서 반환 되는 스케줄러 정책의 정책 요소를에서 사용 합니다는 [ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy) 스케줄러 스레드 형식을 결정 하는 메서드는 작업을 실행 해야 합니다. 경우에 `SchedulerKind` 정책 키에 값 `UmsThreadDefault` 값을 값으로 정책을 읽고 `UmsThreadDefault`, `IScheduler` 메서드에 전달 하는 인터페이스 여야는 `IUMSScheduler` 인터페이스.  
   
  메서드에서 throw 한 `invalid_argument` 예외 경우 매개 변수 `pScheduler` 값 `NULL` 경우 또는 매개 변수 `version` 통신 인터페이스에 대 한 올바른 버전이 아닙니다.  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>Iresourcemanager:: Release 메서드  
+##  <a name="release"></a>Iresourcemanager:: Release 메서드  
  리소스 관리자 인스턴스에 대 한 참조 횟수를 줄입니다. 참조 횟수가 되 면 리소스 관리자는 소멸 `0`합니다.  
   
 ```

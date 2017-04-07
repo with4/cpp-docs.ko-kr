@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBrush
+- AFXWIN/CBrush
+- AFXWIN/CBrush::CBrush
+- AFXWIN/CBrush::CreateBrushIndirect
+- AFXWIN/CBrush::CreateDIBPatternBrush
+- AFXWIN/CBrush::CreateHatchBrush
+- AFXWIN/CBrush::CreatePatternBrush
+- AFXWIN/CBrush::CreateSolidBrush
+- AFXWIN/CBrush::CreateSysColorBrush
+- AFXWIN/CBrush::FromHandle
+- AFXWIN/CBrush::GetLogBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +103,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecbrusha--cbrushcbrush"></a><a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>CBrush::CBrush  
  `CBrush` 개체를 생성합니다.  
   
 ```  
@@ -139,7 +149,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="a-namecreatebrushindirecta--cbrushcreatebrushindirect"></a><a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
  스타일, 색 및 패턴에 지정 된 브러시를 초기화 한 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 구조입니다.  
   
 ```  
@@ -161,7 +171,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="a-namecreatedibpatternbrusha--cbrushcreatedibpatternbrush"></a><a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
  장치 독립적 비트맵 (DIB)로 지정 된 패턴으로는 브러시를 초기화 합니다.  
   
 ```  
@@ -216,7 +226,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView&23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="a-namecreatehatchbrusha--cbrushcreatehatchbrush"></a><a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
  지정 된 교차 무늬 패턴 및 색 브러시를 초기화합니다.  
   
 ```  
@@ -253,7 +263,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="a-namecreatepatternbrusha--cbrushcreatepatternbrush"></a><a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
  비트맵으로 지정 된 패턴으로는 브러시를 초기화 합니다.  
   
 ```  
@@ -281,7 +291,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="a-namecreatesolidbrusha--cbrushcreatesolidbrush"></a><a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
  지정 된 단색으로 브러시를 초기화합니다.  
   
 ```  
@@ -303,7 +313,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>예제  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
-##  <a name="a-namecreatesyscolorbrusha--cbrushcreatesyscolorbrush"></a><a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
  브러시 색을 초기화합니다.  
   
 ```  
@@ -325,7 +335,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="a-namefromhandlea--cbrushfromhandle"></a><a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>CBrush::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CBrush` Windows에 대 한 핸들을 지정 하는 경우 개체 [HBRUSH](#operator_hbrush) 개체입니다.  
   
 ```  
@@ -347,7 +357,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>예제  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
-##  <a name="a-namegetlogbrusha--cbrushgetlogbrush"></a><a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
  검색 하려면이 멤버 함수를 호출 하는 `LOGBRUSH` 구조입니다.  
   
 ```  
@@ -373,7 +383,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="a-nameoperatorhbrusha--cbrushoperator-hbrush"></a><a name="operator_hbrush"></a>HBRUSH CBrush::operator  
+##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CBrush` 개체입니다.  
   
 ```  

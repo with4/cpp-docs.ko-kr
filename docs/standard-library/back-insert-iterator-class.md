@@ -85,7 +85,7 @@ class back_insert_iterator;
   
  **네임스페이스:** std  
   
-##  <a name="a-namebackinsertiteratorbackinsertiteratora--backinsertiteratorbackinsertiterator"></a><a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
  컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.  
   
 ```   
@@ -147,7 +147,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratorcontainertypea--backinsertiteratorcontainertype"></a><a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
+##  <a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
  `back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.  
   
 ```   
@@ -199,7 +199,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatorstara--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
+##  <a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
  출력 반복기 식 \* *i* = *x*을 구현하는 데 사용되는 역참조 연산자입니다.  
   
 ```  
@@ -256,7 +256,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoraddadda--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
+##  <a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
  값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.  
   
 ```  
@@ -314,7 +314,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoreqa--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
+##  <a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
  컨테이너의 백 엔드에 값을 추가하거나 푸시합니다.  
   
 ```  
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` val`  
+ `val`  
  컨테이너에 삽입할 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -377,7 +377,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebackinsertiteratorreferencea--backinsertiteratorreference"></a><a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
+##  <a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
  `back_insert_iterator`에 대한 참조를 제공하는 형식입니다.  
   
 ```  

@@ -10,6 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleSafeArray
+- AFXDISP/COleSafeArray
+- AFXDISP/COleSafeArray::COleSafeArray
+- AFXDISP/COleSafeArray::AccessData
+- AFXDISP/COleSafeArray::AllocData
+- AFXDISP/COleSafeArray::AllocDescriptor
+- AFXDISP/COleSafeArray::Attach
+- AFXDISP/COleSafeArray::Clear
+- AFXDISP/COleSafeArray::Copy
+- AFXDISP/COleSafeArray::Create
+- AFXDISP/COleSafeArray::CreateOneDim
+- AFXDISP/COleSafeArray::Destroy
+- AFXDISP/COleSafeArray::DestroyData
+- AFXDISP/COleSafeArray::DestroyDescriptor
+- AFXDISP/COleSafeArray::Detach
+- AFXDISP/COleSafeArray::GetByteArray
+- AFXDISP/COleSafeArray::GetDim
+- AFXDISP/COleSafeArray::GetElement
+- AFXDISP/COleSafeArray::GetElemSize
+- AFXDISP/COleSafeArray::GetLBound
+- AFXDISP/COleSafeArray::GetOneDimSize
+- AFXDISP/COleSafeArray::GetUBound
+- AFXDISP/COleSafeArray::Lock
+- AFXDISP/COleSafeArray::PtrOfIndex
+- AFXDISP/COleSafeArray::PutElement
+- AFXDISP/COleSafeArray::Redim
+- AFXDISP/COleSafeArray::ResizeOneDim
+- AFXDISP/COleSafeArray::UnaccessData
+- AFXDISP/COleSafeArray::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +139,7 @@ class COleSafeArray : public tagVARIANT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-nameaccessdataa--colesafearrayaccessdata"></a><a name="accessdata"></a>COleSafeArray::AccessData  
+##  <a name="accessdata"></a>COleSafeArray::AccessData  
  배열 데이터에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -128,7 +156,7 @@ void AccessData(void** ppvData);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&26;](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
-##  <a name="a-nameallocdataa--colesafearrayallocdata"></a><a name="allocdata"></a>COleSafeArray::AllocData  
+##  <a name="allocdata"></a>COleSafeArray::AllocData  
  안전 배열에 대 한 메모리를 할당합니다.  
   
 ```  
@@ -138,7 +166,7 @@ void AllocData();
 ### <a name="remarks"></a>주의  
  함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-nameallocdescriptora--colesafearrayallocdescriptor"></a><a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
+##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
  안전 배열의 설명자에 대 한 메모리를 할당합니다.  
   
 ```  
@@ -152,7 +180,7 @@ void AllocDescriptor(DWORD dwDims);
 ### <a name="remarks"></a>주의  
  함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-nameattacha--colesafearrayattach"></a><a name="attach"></a>COleSafeArray::Attach  
+##  <a name="attach"></a>COleSafeArray::Attach  
  기존에 있는 데이터의 제어할 **VARIANT** 배열을 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -169,7 +197,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="example"></a>예제  
   예를 참조 [COleSafeArray::AccessData](#accessdata)합니다.  
   
-##  <a name="a-namecleara--colesafearrayclear"></a><a name="clear"></a>COleSafeArray::Clear  
+##  <a name="clear"></a>COleSafeArray::Clear  
  안전 배열을 지웁니다.  
   
 ```  
@@ -179,7 +207,7 @@ void Clear();
 ### <a name="remarks"></a>주의  
  함수는 안전 배열 설정 하 여 지웁니다는 `VARTYPE` 개체의 `VT_EMPTY`합니다. 현재 내용이 릴리스되고 배열 해제 됩니다.  
   
-##  <a name="a-namecolesafearraya--colesafearraycolesafearray"></a><a name="colesafearray"></a>COleSafeArray::COleSafeArray  
+##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
  `COleSafeArray` 개체를 생성합니다.  
   
 ```  
@@ -222,7 +250,7 @@ COleSafeArray(const COleVariant& varSrc);
   
  함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-namecopya--colesafearraycopy"></a><a name="copy"></a>COleSafeArray::Copy  
+##  <a name="copy"></a>COleSafeArray::Copy  
  기존 안전 배열의 복사본을 만듭니다.  
   
 ```  
@@ -236,7 +264,7 @@ void Copy(LPSAFEARRAY* ppsa);
 ### <a name="remarks"></a>주의  
  함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-namecreatea--colesafearraycreate"></a><a name="create"></a>COleSafeArray::Create  
+##  <a name="create"></a>COleSafeArray::Create  
  할당 하 고 배열에 대 한 데이터를 초기화 합니다.  
   
 ```  
@@ -271,7 +299,7 @@ void Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="a-namecreateonedima--colesafearraycreateonedim"></a><a name="createonedim"></a>COleSafeArray::CreateOneDim  
+##  <a name="createonedim"></a>COleSafeArray::CreateOneDim  
  에서는 새&1; 차원 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -303,7 +331,7 @@ void CreateOneDim(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&28;](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
-##  <a name="a-namedestroya--colesafearraydestroy"></a><a name="destroy"></a>COleSafeArray::Destroy  
+##  <a name="destroy"></a>COleSafeArray::Destroy  
  기존 배열 설명자와 배열에 있는 모든 데이터를 삭제합니다.  
   
 ```  
@@ -313,7 +341,7 @@ void Destroy();
 ### <a name="remarks"></a>주의  
  개체의 배열에 저장 되며, 각 개체 해제 됩니다. 함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-namedestroydataa--colesafearraydestroydata"></a><a name="destroydata"></a>COleSafeArray::DestroyData  
+##  <a name="destroydata"></a>COleSafeArray::DestroyData  
  안전 배열에 있는 모든 데이터를 삭제합니다.  
   
 ```  
@@ -323,7 +351,7 @@ void DestroyData();
 ### <a name="remarks"></a>주의  
  개체의 배열에 저장 되며, 각 개체 해제 됩니다. 함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-namedestroydescriptora--colesafearraydestroydescriptor"></a><a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
+##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
  안전 배열의 설명자를 삭제합니다.  
   
 ```  
@@ -333,7 +361,7 @@ void DestroyDescriptor();
 ### <a name="remarks"></a>주의  
  함수에서 오류를 throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 또는 [COleException](../../mfc/reference/coleexception-class.md)합니다.  
   
-##  <a name="a-namedetacha--colesafearraydetach"></a><a name="detach"></a>COleSafeArray::Detach  
+##  <a name="detach"></a>COleSafeArray::Detach  
  분리 된 **VARIANT** 에서 데이터는 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -351,7 +379,7 @@ VARIANT Detach();
 ### <a name="example"></a>예제  
   예를 참조 [COleSafeArray::PutElement](#putelement)합니다.  
   
-##  <a name="a-namegetbytearraya--colesafearraygetbytearray"></a><a name="getbytearray"></a>COleSafeArray::GetByteArray  
+##  <a name="getbytearray"></a>COleSafeArray::GetByteArray  
  안전 배열의 내용을 복사는 `CByteArray`합니다.  
   
 ```  
@@ -362,7 +390,7 @@ void GetByteArray(CByteArray& bytes);
  `bytes`  
  에 대 한 참조는 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
   
-##  <a name="a-namegetdima--colesafearraygetdim"></a><a name="getdim"></a>COleSafeArray::GetDim  
+##  <a name="getdim"></a>COleSafeArray::GetDim  
  차원 수를 반환 합니다.는 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -375,7 +403,7 @@ DWORD GetDim();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="a-namegetelementa--colesafearraygetelement"></a><a name="getelement"></a>COleSafeArray::GetElement  
+##  <a name="getelement"></a>COleSafeArray::GetElement  
  안전 배열의 단일 요소를 검색합니다.  
   
 ```  
@@ -399,7 +427,7 @@ void GetElement(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&29;](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
   
-##  <a name="a-namegetelemsizea--colesafearraygetelemsize"></a><a name="getelemsize"></a>COleSafeArray::GetElemSize  
+##  <a name="getelemsize"></a>COleSafeArray::GetElemSize  
  에 있는 요소의 크기를 검색 한 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -409,7 +437,7 @@ DWORD GetElemSize();
 ### <a name="return-value"></a>반환 값  
  안전 배열 요소를 바이트 단위로 크기입니다.  
   
-##  <a name="a-namegetlbounda--colesafearraygetlbound"></a><a name="getlbound"></a>COleSafeArray::GetLBound  
+##  <a name="getlbound"></a>COleSafeArray::GetLBound  
  모든 차원에 대 한 하 한을 반환 된 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -431,7 +459,7 @@ void GetLBound(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&30;](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
-##  <a name="a-namegetonedimsizea--colesafearraygetonedimsize"></a><a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
+##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
  1 차원 수의 요소를 반환 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -444,7 +472,7 @@ DWORD GetOneDimSize();
 ### <a name="example"></a>예제  
   예를 참조 [COleSafeArray::CreateOneDim](#createonedim)합니다.  
   
-##  <a name="a-namegetubounda--colesafearraygetubound"></a><a name="getubound"></a>COleSafeArray::GetUBound  
+##  <a name="getubound"></a>COleSafeArray::GetUBound  
  안전 배열의 모든 차원에 대 한 상한 값을 반환합니다.  
   
 ```  
@@ -466,7 +494,7 @@ void GetUBound(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer #&31;](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
-##  <a name="a-namelocka--colesafearraylock"></a><a name="lock"></a>COleSafeArray::Lock  
+##  <a name="lock"></a>COleSafeArray::Lock  
  배열 및 배열 설명자에서 배열 데이터에 대 한 포인터 위치의 잠금 수를 증가 시킵니다.  
   
 ```  
@@ -480,14 +508,14 @@ void Lock();
   
  잠겨 있는 동안에 배열을 삭제할 수 없습니다.  
   
-##  <a name="a-nameoperatorlpcvarianta--colesafearrayoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
  기본 액세스 하려면이 캐스팅 연산자 호출 **VARIANT** 이 대 한 구조 `COleSafeArray` 개체입니다.  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
-##  <a name="a-nameoperatorlpvarianta--colesafearrayoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
  기본 액세스 하려면이 캐스팅 연산자 호출 **VARIANT** 이 대 한 구조 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -497,7 +525,7 @@ operator LPVARIANT();
 ### <a name="remarks"></a>주의  
  값을 변경의 **VARIANT** 이 함수에 의해 반환 된 포인터에 액세스 하는 구조는이 값을 변경 합니다 `COleSafeArray` 개체입니다.  
   
-##  <a name="a-nameoperatoreqa--colesafearrayoperator-"></a><a name="operator_eq"></a>COleSafeArray::operator =  
+##  <a name="operator_eq"></a>COleSafeArray::operator =  
  이러한 오버 로드 된 대입 연산자 복사할 원본 값이 `COleSafeArray` 개체입니다.  
   
 ```  
@@ -516,7 +544,7 @@ COleSafeArray& operator=(const COleVariant& varSrc);
   
 - **연산자 = (** `pSrc` **)** 복사본은 **VARIANT** 배열 개체에서 액세스할 `pSrc` 이 개체에 있습니다.  
   
-##  <a name="a-nameoperatoreqeqa--colesafearrayoperator-"></a><a name="operator_eq_eq"></a>COleSafeArray::operator = =  
+##  <a name="operator_eq_eq"></a>COleSafeArray::operator = =  
  이 연산자는 두 배열을 비교 ( **SAFEARRAY**, **VARIANT**, `COleVariant`, 또는 `COleSafeArray` 배열); 그렇지 않으면 0 경우 0이 아닌 반환 합니다.  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
+- AFXOLE/COleDocObjectItem
+- AFXOLE/COleDocObjectItem::COleDocObjectItem
+- AFXOLE/COleDocObjectItem::DoDefaultPrinting
+- AFXOLE/COleDocObjectItem::ExecCommand
+- AFXOLE/COleDocObjectItem::GetActiveView
+- AFXOLE/COleDocObjectItem::GetPageCount
+- AFXOLE/COleDocObjectItem::OnPreparePrinting
+- AFXOLE/COleDocObjectItem::OnPrint
+- AFXOLE/COleDocObjectItem::QueryCommand
+- AFXOLE/COleDocObjectItem::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecoledocobjectitema--coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
  초기화 하려면이 멤버 함수를 호출 하는 `COleDocObjectItem` 개체입니다.  
   
 ```  
@@ -113,7 +123,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  에 대 한 포인터는 `COleDocument` 역할을 액티브 문서 컨테이너 개체입니다. 이 매개 변수 이어야 **NULL** 수 있도록 **IMPLEMENT_SERIALIZE**합니다. 비-를 사용 하 여 OLE 항목은 생성 하는 일반적으로 **NULL** 생성 됩니다.  
   
-##  <a name="a-namedodefaultprintinga--coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
  프레임 워크의 기본 설정을 사용 하는 문서에 의해 호출 됩니다.  
   
 ```  
@@ -129,7 +139,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  에 대 한 포인터는 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 인쇄 작업에 설명 하는 개체입니다.  
   
-##  <a name="a-nameexeccommanda--coledocobjectitemexeccommand"></a><a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
  사용자가 지정한 명령을 실행 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -166,7 +176,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>주의  
  `pguidCmdGroup` 및 `nCmdID` 함께 매개 변수를 호출 하는 명령을 고유 하 게 식별 합니다. `nCmdExecOpt` 매개 변수는 정확한 수행할 동작을 지정 합니다.  
   
-##  <a name="a-namegetactiveviewa--coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
  이 멤버 함수에 대 한 단서를 호출의 `IOleDocumentView` 현재 활성 뷰의 인터페이스입니다.  
   
 ```  
@@ -179,7 +189,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>주의  
  반환 된 참조 횟수 `IOleDocumentView` 포인터는이 함수에서 반환 되기 전에 증가 하지 않습니다.  
   
-##  <a name="a-namegetpagecounta--coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
  문서에는 페이지 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -198,7 +208,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameonprepareprintinga--coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
  이 멤버 함수는 문서 인쇄를 위해 준비 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -221,7 +231,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameonprinta--coledocobjectitemonprint"></a><a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
  이 멤버 함수는 문서를 인쇄 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -241,7 +251,7 @@ static void OnPrint(
  `bPrintAll`  
  전체 문서 인쇄할 수 있는지 여부를 지정 합니다.  
   
-##  <a name="a-namequerycommanda--coledocobjectitemquerycommand"></a><a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
  사용자 인터페이스 이벤트에 의해 생성되는 하나 이상 명령의 상태를 쿼리합니다.  
   
 ```  
@@ -271,7 +281,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 에 설명 된 대로 메서드는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namereleasea--coledocobjectitemrelease"></a><a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>COleDocObjectItem::Release  
  OLE 링크 된 항목에 대 한 연결을 해제 하 고 열려 있으면 닫습니다. 클라이언트 항목을 제거 하지 않습니다.  
   
 ```  

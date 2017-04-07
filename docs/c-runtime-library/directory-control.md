@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 49084f97470965f2b3d8fec627f0d0c92f4ec522
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 00a892376691f0d73b6ce0483cccf8bb063c43b4
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="directory-control"></a>디렉터리 제어
@@ -45,18 +45,18 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="directory-control-routines"></a>디렉터리 제어 루틴  
   
-|루틴|기능|.NET Framework의 해당 값|  
-|-------------|---------|-------------------------------|  
-|[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|현재 작업 디렉터리를 변경합니다.|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_chdrive](../c-runtime-library/reference/chdrive.md)|현재 드라이브를 변경합니다.|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getcwd, _wgetcwd](../c-runtime-library/reference/getcwd-wgetcwd.md)|기본 드라이브의 현재 작업 디렉터리를 가져옵니다.|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdcwd, _wgetdcwd](../c-runtime-library/reference/getdcwd-wgetdcwd.md)|지정된 드라이브의 현재 작업 디렉터리를 가져옵니다.|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdiskfree](../c-runtime-library/reference/getdiskfree.md)|디스크 드라이브에 대한 정보로 `_diskfree_t` 구조를 채웁니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
-|[_getdrive](../c-runtime-library/reference/getdrive.md)|현재(기본) 드라이브 가져오기|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdrives](../c-runtime-library/reference/getdrives.md)|현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크를 반환합니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
-|[_mkdir, _wmkdir](../c-runtime-library/reference/mkdir-wmkdir.md)|새 디렉터리를 만듭니다.|[System::IO::Directory::CreateDirectory](https://msdn.microsoft.com/en-us/library/system.io.directory.createdirectory.aspx), [System::IO::DirectoryInfo::CreateSubdirectory](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.createsubdirectory.aspx)|  
-|[_rmdir, _wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|디렉터리를 제거합니다.|[System::IO::Directory::Delete](https://msdn.microsoft.com/en-us/library/system.io.directory.delete.aspx)|  
-|[_searchenv, _wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md), [_searchenv_s, _wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|지정된 경로에서 지정된 파일을 검색합니다.|해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.|  
+|루틴|기능|  
+|-------------|---------|  
+|[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|현재 작업 디렉터리를 변경합니다.|  
+|[_chdrive](../c-runtime-library/reference/chdrive.md)|현재 드라이브를 변경합니다.|  
+|[_getcwd, _wgetcwd](../c-runtime-library/reference/getcwd-wgetcwd.md)|기본 드라이브의 현재 작업 디렉터리를 가져옵니다.|  
+|[_getdcwd, _wgetdcwd](../c-runtime-library/reference/getdcwd-wgetdcwd.md)|지정된 드라이브의 현재 작업 디렉터리를 가져옵니다.|  
+|[_getdiskfree](../c-runtime-library/reference/getdiskfree.md)|디스크 드라이브에 대한 정보로 `_diskfree_t` 구조를 채웁니다.|  
+|[_getdrive](../c-runtime-library/reference/getdrive.md)|현재(기본) 드라이브 가져오기|  
+|[_getdrives](../c-runtime-library/reference/getdrives.md)|현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크를 반환합니다.|  
+|[_mkdir, _wmkdir](../c-runtime-library/reference/mkdir-wmkdir.md)|새 디렉터리를 만듭니다.|  
+|[_rmdir, _wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|디렉터리를 제거합니다.|  
+|[_searchenv, _wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md), [_searchenv_s, _wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|지정된 경로에서 지정된 파일을 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)   

@@ -9,11 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComPtrBase
-- ATL::CComPtrBase<T>
-- ATL.CComPtrBase<T>
-- ATL::CComPtrBase
 - CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase::Advise
+- ATLCOMCLI/ATL::CComPtrBase::Attach
+- ATLCOMCLI/ATL::CComPtrBase::CoCreateInstance
+- ATLCOMCLI/ATL::CComPtrBase::CopyTo
+- ATLCOMCLI/ATL::CComPtrBase::Detach
+- ATLCOMCLI/ATL::CComPtrBase::IsEqualObject
+- ATLCOMCLI/ATL::CComPtrBase::QueryInterface
+- ATLCOMCLI/ATL::CComPtrBase::Release
+- ATLCOMCLI/ATL::CComPtrBase::SetSite
+- ATLCOMCLI/ATL::CComPtrBase::p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +110,7 @@ class CComPtrBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
   
-##  <a name="a-nameadvisea--ccomptrbaseadvise"></a><a name="advise"></a>CComPtrBase::Advise  
+##  <a name="advise"></a>CComPtrBase::Advise  
  간의 연결을 만들려면이 메서드를 호출 하 여 `CComPtrBase`의 연결 지점과 클라이언트의 싱크 합니다.  
   
 ```
@@ -129,7 +136,7 @@ HRESULT Advise(
 ### <a name="remarks"></a>주의  
  참조 [AtlAdvise](http://msdn.microsoft.com/library/625a2f03-6b7f-4761-be5d-d2871d1d3254) 에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameattacha--ccomptrbaseattach"></a><a name="attach"></a>CComPtrBase::Attach  
+##  <a name="attach"></a>CComPtrBase::Attach  
  이 메서드는 기존 포인터의 소유권을 호출 합니다.  
   
 ```
@@ -143,7 +150,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>주의  
  **연결** 호출 [CComPtrBase::Release](#release) 기존 [CComPtrBase::p](#p) 멤버 변수에 할당 한 다음 `p2` 를 `CComPtrBase::p`합니다. 경우는 `CComPtrBase` 개체 포인터의 소유권을 갖습니다, 자동으로 호출 합니다 `Release` 포인터 및 삭제 하는 포인터에 할당 된 데이터 개체의 참조 횟수가 0이 되는 경우.  
   
-##  <a name="a-namedtora--ccomptrbaseccomptrbase"></a><a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
+##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
  소멸자입니다.  
   
 ```
@@ -153,7 +160,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>주의  
  가 가리키는 인터페이스를 해제 `CComPtrBase`합니다.  
   
-##  <a name="a-namecocreateinstancea--ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
+##  <a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
  지정 된 클래스 ID 또는 프로그램 id입니다. 연결 된 클래스의 개체를 생성 하도록이 메서드를 호출 합니다.  
   
 ```
@@ -189,7 +196,7 @@ HRESULT CoCreateInstance(
   
  디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 [CComPtrBase::p](#p) NULL 같지 않습니다.  
   
-##  <a name="a-namecopytoa--ccomptrbasecopyto"></a><a name="copyto"></a>CComPtrBase::CopyTo  
+##  <a name="copyto"></a>CComPtrBase::CopyTo  
  복사 하려면이 메서드를 호출 하는 `CComPtrBase` 다른 포인터 변수에 대 한 포인터입니다.  
   
 ```
@@ -208,7 +215,7 @@ HRESULT CopyTo(T** ppT) throw();
   
  HRESULT 경우 반환 되는 오류 *ppT* NULL과 같습니다. 디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 *ppT* NULL과 같습니다.  
   
-##  <a name="a-namedetacha--ccomptrbasedetach"></a><a name="detach"></a>CComPtrBase::Detach  
+##  <a name="detach"></a>CComPtrBase::Detach  
  포인터의 소유권을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -221,7 +228,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>주의  
  포인터의 소유권을 해제, 설정 된 [CComPtrBase::p](#p) 데이터 멤버 변수를 NULL, 포인터의 복사본을 반환 합니다.  
   
-##  <a name="a-nameisequalobjecta--ccomptrbaseisequalobject"></a><a name="isequalobject"></a>CComPtrBase::IsEqualObject  
+##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
  경우를 확인 하려면이 메서드를 호출 합니다. 지정 된 **IUnknown** 와 관련 된 동일한 개체를 가리키는 `CComPtrBase` 개체입니다.  
   
 ```
@@ -235,7 +242,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 개체는 동일한 false로 설정 하는 경우 true를 반환 합니다.  
   
-##  <a name="a-nameoperatornota--ccomptrbaseoperator-"></a><a name="operator_not"></a>CComPtrBase::operator!  
+##  <a name="operator_not"></a>CComPtrBase::operator!  
  NOT 연산자입니다.  
   
 ```
@@ -245,7 +252,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>반환 값  
  경우 true를 반환은 `CComHeapPtr` 포인터가 NULL이 고 같으면 false 그렇지 않은 경우.  
   
-##  <a name="a-nameoperatorampa--ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>CComPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
  연산자 < /.  
   
 ```
@@ -255,7 +262,7 @@ T** operator&() throw();
 ### <a name="return-value"></a>반환 값  
  가 가리키는 개체의 주소를 반환 하는 `CComPtrBase` 개체입니다.  
   
-##  <a name="a-nameoperatorstara--ccomptrbaseoperator-"></a><a name="operator_star"></a>CComPtrBase::operator *  
+##  <a name="operator_star"></a>CComPtrBase::operator *  
  * 연산자입니다.  
   
 ```
@@ -267,7 +274,7 @@ T& operator*() const throw();
   
  디버그 빌드 경우 어설션 오류가 발생 합니다 [CComPtrBase::p](#p) NULL 같지 않습니다.  
   
-##  <a name="a-nameoperatoreqeqa--ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>CComPtrBase::operator = =  
+##  <a name="operator_eq_eq"></a>CComPtrBase::operator = =  
  같음 연산자입니다.  
   
 ```
@@ -281,7 +288,7 @@ bool operator== (T* pT) const throw();
 ### <a name="return-value"></a>반환 값  
  경우 true를 반환 `CComPtrBase` 및 *pT* 가리킨 동일한 개체를 false 그렇지 않은 경우.  
   
-##  <a name="a-nameoperatorptra--ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
 
  멤버 포인터 연산자입니다.  
   
@@ -295,7 +302,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="remarks"></a>주의  
  이 연산자를 사용 하 여 가리키는 클래스에서 메서드를 호출 하는 `CComPtrBase` 개체입니다. 디버그 빌드에서 경우 어설션 오류가 발생 합니다는 `CComPtrBase` 데이터 멤버는 NULL을 가리킵니다.  
   
-##  <a name="a-nameoperatorlta--ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>CComPtrBase::operator&lt;  
+##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
  작음-연산자입니다.  
   
 ```
@@ -309,7 +316,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>반환 값  
  현재 개체에서 포인터를 관리 하는 경우 true를 반환을 사용 하면 비교 되는 포인터 보다 작습니다.  
   
-##  <a name="a-nameoperatortstara--ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CComPtrBase::operator T *  
  캐스트 연산자입니다.  
   
 ```  
@@ -319,7 +326,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>주의  
  클래스 템플릿에 정의 된 개체 데이터 형식에 대 한 포인터를 반환 합니다.  
   
-##  <a name="a-namepa--ccomptrbasep"></a><a name="p"></a>CComPtrBase::p  
+##  <a name="p"></a>CComPtrBase::p  
  포인터 데이터 멤버 변수입니다.  
   
 ```
@@ -329,7 +336,7 @@ T* p;
 ### <a name="remarks"></a>주의  
  이 멤버 변수는 포인터 정보를 보유합니다.  
   
-##  <a name="a-namequeryinterfacea--ccomptrbasequeryinterface"></a><a name="queryinterface"></a>CComPtrBase::QueryInterface  
+##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
  지정된 된 인터페이스에 대 한 포인터를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -352,7 +359,7 @@ template <class Q> HRESULT QueryInterface(Q
   
  디버그 빌드에서 어설션 오류가 발생 하는 경우 발생 합니다 *pp* NULL 같지 않습니다.  
   
-##  <a name="a-namereleasea--ccomptrbaserelease"></a><a name="release"></a>CComPtrBase::Release  
+##  <a name="release"></a>CComPtrBase::Release  
  인터페이스를 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -362,7 +369,7 @@ void Release() throw();
 ### <a name="remarks"></a>주의  
  인터페이스는 해제 되 고 [CComPtrBase::p](#p) NULL로 설정 됩니다.  
   
-##  <a name="a-namesetsitea--ccomptrbasesetsite"></a><a name="setsite"></a>CComPtrBase::SetSite  
+##  <a name="setsite"></a>CComPtrBase::SetSite  
  사이트를 설정 하려면이 메서드를 호출 하는 `CComPtrBase` 개체는 **IUnknown** 부모 개체의 합니다.  
   
 ```

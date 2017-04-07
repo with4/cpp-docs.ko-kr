@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  메타 파일 장치 컨텍스트를 닫고 메타 파일을 사용 하 여 재생에 사용할 수 있는 Windows 메타 파일 핸들을 만듭니다는 [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) 멤버 함수입니다.  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  Windows를 호출 하 여 메타 파일 사용 후 삭제 [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) 함수입니다.  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  확장 메타 파일 장치 컨텍스트를 닫고 확장 형식 메타 파일을 식별 하는 핸들을 반환 합니다.  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  Win32 호출 하 여 핸들을 해제 해야 응용 프로그램이 더 이상 필요 없는 확장된 메타 파일 핸들 때 **DeleteEnhMetaFile** 함수입니다.  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  생성 한 `CMetaFileDC` 두 단계에서는 개체입니다.  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>주의  
  첫째, 호출 `CMetaFileDC`, 다음 호출 **만들기**, Windows 메타 파일 장치 컨텍스트를 만들고 연결 하는 `CMetaFileDC` 개체입니다.  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  생성 한 `CMetaFileDC` 두 단계에서는 개체입니다.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>주의  
  먼저 생성자를 호출 `CMetaFileDC`, 다음 호출 **만들기**, Windows 메타 파일 장치 컨텍스트를 만들고 연결 하는 `CMetaFileDC` 개체입니다.  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  향상 된 형식 메타 파일에 대 한 장치 컨텍스트를 만듭니다.  
   
 ```  

@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::timer
+- timer
+- AGENTS/concurrency::timer
+- AGENTS/concurrency::timer::timer
+- AGENTS/concurrency::timer::pause
+- AGENTS/concurrency::timer::start
+- AGENTS/concurrency::timer::stop
+- AGENTS/concurrency::timer::accept_message
+- AGENTS/concurrency::timer::consume_message
+- AGENTS/concurrency::timer::link_target_notification
+- AGENTS/concurrency::timer::propagate_to_any_targets
+- AGENTS/concurrency::timer::release_message
+- AGENTS/concurrency::timer::reserve_message
+- AGENTS/concurrency::timer::resume_propagation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 769ccd051c68f0a4d74511392f0f1a811e36e3e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d6dfdc1b03ac2d15aa575c16cbe86968f565c1c1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="timer-class"></a>timer 클래스
@@ -59,28 +71,28 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |이름|설명|  
 |----------|-----------------|  
-|[타이머 생성자](#ctor)|오버로드됨. 생성 된 `timer` 지정된 된 간격 후 지정된 된 메시지를 발생 시키는 메시징 블록입니다.|  
+|[타이머](#ctor)|오버로드됨. 생성 된 `timer` 지정된 된 간격 후 지정된 된 메시지를 발생 시키는 메시징 블록입니다.|  
 |[~ timer 소멸자](#dtor)|삭제는 `timer` 메시징 블록입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[pause 메서드](#pause)|중지 된 `timer` 메시징 블록입니다. 반복 되는 경우 `timer` 메시징 블록 것을 다시 시작할 수 이후의 `start()` 를 호출 합니다. -반복 되지 않는 타이머,이 것과 동일한 효과가 `stop` 를 호출 합니다.|  
-|[start 메서드](#start)|시작 된 `timer` 메시징 블록입니다. 지정된 된 수의 시간 (밀리초)가 호출 되 면 지정된 된 값을 전파 됩니다로 다운스트림는 `message`합니다.|  
-|[stop 메서드](#stop)|중지 된 `timer` 메시징 블록입니다.|  
+|[일시 중지](#pause)|중지 된 `timer` 메시징 블록입니다. 반복 되는 경우 `timer` 메시징 블록 것을 다시 시작할 수 이후의 `start()` 를 호출 합니다. -반복 되지 않는 타이머,이 것과 동일한 효과가 `stop` 를 호출 합니다.|  
+|[start](#start)|시작 된 `timer` 메시징 블록입니다. 지정된 된 수의 시간 (밀리초)가 호출 되 면 지정된 된 값을 전파 됩니다로 다운스트림는 `message`합니다.|  
+|[중지](#stop)|중지 된 `timer` 메시징 블록입니다.|  
   
 ### <a name="protected-methods"></a>Protected 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[accept_message 메서드](#accept_message)|이 제공 된 메시지를 수락 `timer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.|  
-|[consume_message 메서드](#consume_message)|이전에 제공한 메시지를 생성는 `timer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.|  
-|[link_target_notification 메서드](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `timer` 메시징 블록입니다.|  
-|[propagate_to_any_targets 메서드](#propagate_to_any_targets)|에 의해 생성 된 메시지를 제공 하도록 시도 `timer` 모든 연결 된 대상에는 블록입니다.|  
-|[release_message 메서드](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
-|[reserve_message 메서드](#reserve_message)|이전에 제공한이 메시지를 예약 `timer` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation 메서드](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|이 제공 된 메시지를 수락 `timer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.|  
+|[consume_message](#consume_message)|이전에 제공한 메시지를 생성는 `timer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.|  
+|[link_target_notification](#link_target_notification)|새 대상에 연결 되어 있는 알리는 콜백입니다 `timer` 메시징 블록입니다.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|에 의해 생성 된 메시지를 제공 하도록 시도 `timer` 모든 연결 된 대상에는 블록입니다.|  
+|[release_message](#release_message)|이전 메시지 예약을 해제합니다. (재정의 [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|이전에 제공한이 메시지를 예약 `timer` 메시징 블록입니다. (재정의 [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|예약이 해제 된 후 전파를 다시 시작 합니다. (재정의 [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
@@ -97,7 +109,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  이 제공 된 메시지를 수락 `timer` 메시징 블록을 호출자에 게 소유권을 전송 합니다.  
   
@@ -112,7 +124,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `message` 호출자에 이제 소유권을 가진 개체입니다.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  이전에 제공한 메시지를 생성는 `timer` 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 되어 있습니다.  
   
@@ -130,7 +142,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>주의  
  비슷합니다 `accept`를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  새 대상에 연결 되어 있는 알리는 콜백입니다 `timer` 메시징 블록입니다.  
   
@@ -142,7 +154,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  새로 연결 된 대상에 대 한 포인터입니다.  
   
-##  <a name="a-namepausea-pause"></a><a name="pause"></a>일시 중지 
+##  <a name="pause"></a>일시 중지 
 
  중지 된 `timer` 메시징 블록입니다. 반복 되는 경우 `timer` 메시징 블록 것을 다시 시작할 수 이후의 `start()` 를 호출 합니다. -반복 되지 않는 타이머,이 것과 동일한 효과가 `stop` 를 호출 합니다.  
   
@@ -150,7 +162,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  에 의해 생성 된 메시지를 제공 하도록 시도 `timer` 모든 연결 된 대상에는 블록입니다.  
   
@@ -158,7 +170,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  이전 메시지 예약을 해제합니다.  
   
@@ -170,7 +182,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  이전에 제공한이 메시지를 예약 `timer` 메시징 블록입니다.  
   
@@ -185,10 +197,10 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>반환 값  
  `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  후 `reserve` 반환 하는 경우 라고 `true`를 `consume` 또는 `release` 얻거나 메시지의 소유권을 해제 하려면를 호출 해야 합니다.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  예약이 해제 된 후 전파를 다시 시작 합니다.  
   
@@ -196,7 +208,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>시작 
+##  <a name="start"></a>시작 
 
  시작 된 `timer` 메시징 블록입니다. 지정된 된 수의 시간 (밀리초)가 호출 되 면 지정된 된 값을 전파 됩니다로 다운스트림는 `message`합니다.  
   
@@ -204,7 +216,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="a-namestopa-stop"></a><a name="stop"></a>중지 
+##  <a name="stop"></a>중지 
 
  중지 된 `timer` 메시징 블록입니다.  
   
@@ -212,7 +224,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="a-namectora-timer"></a><a name="ctor"></a>타이머 
+##  <a name="ctor"></a>타이머 
 
  생성 된 `timer` 지정된 된 간격 후 지정된 된 메시지를 발생 시키는 메시징 블록입니다.  
   
@@ -257,10 +269,10 @@ timer(
  `_ScheduleGroup`  
  `ScheduleGroup` 의 전파에 대 한 작업이 있는 개체는 `timer` 메시징 블록 예약 됩니다. 사용된 `Scheduler` 개체는 일정 그룹에서 암시됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  런타임에서 지정 하지 않은 경우 기본 스케줄러를 사용 하 여 `_Scheduler` 또는 `_ScheduleGroup` 매개 변수입니다.  
   
-##  <a name="a-namedtora-timer"></a><a name="dtor"></a>~ 타이머 
+##  <a name="dtor"></a>~ 타이머 
 
  삭제는 `timer` 메시징 블록입니다.  
   
@@ -269,5 +281,5 @@ timer(
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

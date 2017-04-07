@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
+- AFXDISP/CConnectionPoint
+- AFXDISP/CConnectionPoint::CConnectionPoint
+- AFXDISP/CConnectionPoint::GetConnections
+- AFXDISP/CConnectionPoint::GetContainer
+- AFXDISP/CConnectionPoint::GetIID
+- AFXDISP/CConnectionPoint::GetMaxConnections
+- AFXDISP/CConnectionPoint::GetNextConnection
+- AFXDISP/CConnectionPoint::GetStartPosition
+- AFXDISP/CConnectionPoint::OnAdvise
+- AFXDISP/CConnectionPoint::QuerySinkInterface
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +116,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namecconnectionpointa--cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
  `CConnectionPoint` 개체를 생성합니다.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="a-namegetconnectionsa--cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
  연결 지점에 대 한 모든 활성 연결을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -123,7 +133,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>반환 값  
  활성 연결 (싱크)의 배열에 대 한 포인터입니다. 배열에 대 한 포인터의 일부는 NULL 일 수 있습니다. 이 배열에 있는 각 NULL이 아닌 포인터 캐스트 연산자를 사용 하 여 싱크 인터페이스에 대 한 포인터를 안전 하 게 변환할 수 있습니다.  
   
-##  <a name="a-namegetcontainera--cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
  검색 하는 프레임 워크에서 호출의 **IConnectionPointContainer** 연결 지점에 있습니다.  
   
 ```  
@@ -136,7 +146,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>주의  
  이 함수는 일반적으로 구현 된 `BEGIN_CONNECTION_PART` 매크로입니다.  
   
-##  <a name="a-namegetiida--cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>CConnectionPoint::GetIID  
  연결 지점의 인터페이스 ID를 검색 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -149,7 +159,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>주의  
  이 연결점에 대 한 인터페이스 ID를 반환 하려면이 함수를 재정의 합니다.  
   
-##  <a name="a-namegetmaxconnectionsa--cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
  연결 지점에서 지원 되는 연결의 최대 수를 검색 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -164,7 +174,7 @@ virtual int GetMaxConnections();
   
  컨트롤에 연결할 수 있는 싱크의 수를 제한 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-namegetnextconnectiona--cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
+##  <a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
  에 있는 연결 요소에 대 한 포인터를 검색 `pos`합니다.  
   
 ```  
@@ -184,7 +194,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCConnectionPoints #&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
  가 반환 하 여 지도 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 [GetNextConnection](#getnextconnection) 를 호출 합니다.  
   
 ```  
@@ -200,7 +210,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>예제  
   예를 참조 [CConnectionPoint::GetNextConnection](#getnextconnection)합니다.  
   
-##  <a name="a-nameonadvisea--cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
  설정 되거나 끊어지면가 연결 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -216,7 +226,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  싱크에 연결 하거나 연결 지점에서 연결을 끊을 때 알림을 원하는 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-namequerysinkinterfacea--cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
  요청 된 싱크 인터페이스에 대 한 포인터를 검색합니다.  
   
 ```  

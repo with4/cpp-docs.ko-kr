@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
+- AFXWINFORMS/CWinFormsView
+- AFXWINFORMS/CWinFormsView::CWinFormsView
+- AFXWINFORMS/CWinFormsView::GetControl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +87,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h  
   
-##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
  `CWinFormsView` 개체를 생성합니다.  
   
 ```  
@@ -102,7 +105,7 @@ CWinFormsView(System::Type^ pManagedViewType);
   
  [!code-cpp[NVC_MFC_Managed #&2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>CWinFormsView::GetControl  
  Windows Forms 컨트롤에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -115,7 +118,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>주의  
  Windows Forms을 사용 하는 방법의 예제를 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>CWinFormsView::operator 컨트롤 ^  
+##  <a name="operator_control"></a>CWinFormsView::operator 컨트롤 ^  
  Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.  
   
 ```  

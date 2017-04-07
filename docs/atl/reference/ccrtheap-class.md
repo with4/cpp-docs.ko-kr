@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CCRTHeap
-- ATL.CCRTHeap
 - CCRTHeap
+- ATLMEM/ATL::CCRTHeap
+- ATLMEM/ATL::CCRTHeap::Allocate
+- ATLMEM/ATL::CCRTHeap::Free
+- ATLMEM/ATL::CCRTHeap::GetSize
+- ATLMEM/ATL::CCRTHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +78,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlmem.h  
   
-##  <a name="a-nameallocatea--ccrtheapallocate"></a><a name="allocate"></a>CCRTHeap::Allocate  
+##  <a name="allocate"></a>CCRTHeap::Allocate  
  메모리 블록을 할당하려면 이 메서드를 호출합니다.  
   
 ```
@@ -94,7 +97,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [malloc](../../c-runtime-library/reference/malloc.md)합니다.  
   
-##  <a name="a-namefreea--ccrtheapfree"></a><a name="free"></a>CCRTHeap::Free  
+##  <a name="free"></a>CCRTHeap::Free  
  이 메모리 관리자가 할당 한 메모리 블록을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -108,7 +111,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [무료](../../c-runtime-library/reference/free.md)합니다.  
   
-##  <a name="a-namegetsizea--ccrtheapgetsize"></a><a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>CCRTHeap::GetSize  
  이 메모리 관리자가 할당 된 메모리 블록의 할당된 된 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -125,7 +128,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>주의  
  사용 하 여 구현 [_msize](../../c-runtime-library/reference/msize.md)합니다.  
   
-##  <a name="a-namereallocatea--ccrtheapreallocate"></a><a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>CCRTHeap::Reallocate  
  이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.  
   
 ```

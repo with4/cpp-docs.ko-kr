@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleArrayEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper::IsEqual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,7 +69,7 @@ class CSimpleArrayEqualHelper
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-##  <a name="a-nameisequala--csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
+##  <a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
  두 `CSimpleArray` 개체 같음에 대 한 요소입니다.  
   
 ```

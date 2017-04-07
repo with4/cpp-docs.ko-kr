@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::DoModal
+- AFXODLGS/COlePropertiesDialog::OnApplyScale
+- AFXODLGS/COlePropertiesDialog::m_gp
+- AFXODLGS/COlePropertiesDialog::m_lp
+- AFXODLGS/COlePropertiesDialog::m_op
+- AFXODLGS/COlePropertiesDialog::m_psh
+- AFXODLGS/COlePropertiesDialog::m_vp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +114,7 @@ class COlePropertiesDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-namecolepropertiesdialoga--colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
+##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
  
           `COlePropertiesDialog` 개체를 만듭니다.  
   
@@ -149,7 +158,7 @@ COlePropertiesDialog(
   
  기본적으로 제공 하는 것 이상의 페이지를 추가 하려면 수정 하는 [m_psh](#m_psh) 의 생성자를 종료 하기 전에 멤버 변수 프로그램 `COlePropertiesDialog`-클래스를 파생 합니다. 이의 고급 구현을 `COlePropertiesDialog` 생성자입니다.  
   
-##  <a name="a-namedomodala--colepropertiesdialogdomodal"></a><a name="domodal"></a>COlePropertiesDialog::DoModal  
+##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
  Windows 공용 OLE 개체 속성 대화 상자를 표시 하 고 사용자가 보거나 문서 항목의 다양 한 속성을 변경 하도록 허용 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -161,7 +170,7 @@ virtual INT_PTR DoModal();
   
  경우 **IDCANCEL** 반환 되 면 Windows를 호출할 수 있습니다 [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) 함수 오류가 발생 한 것인지 확인 합니다.  
   
-##  <a name="a-namemgpa--colepropertiesdialogmgp"></a><a name="m_gp"></a>COlePropertiesDialog::m_gp  
+##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
  형식의 구조 [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)OLE 개체 속성 대화 상자의 일반 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -173,7 +182,7 @@ OLEUIGNRLPROPS m_gp;
   
  대 한 자세한 내용은 **OLEUIGNRLPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemlpa--colepropertiesdialogmlp"></a><a name="m_lp"></a>COlePropertiesDialog::m_lp  
+##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
  형식의 구조 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)OLE 개체 속성 대화 상자의 링크 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -185,7 +194,7 @@ OLEUILINKPROPS m_lp;
   
  대 한 자세한 내용은 **OLEUILINKPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemopa--colepropertiesdialogmop"></a><a name="m_op"></a>COlePropertiesDialog::m_op  
+##  <a name="m_op"></a>COlePropertiesDialog::m_op  
  형식의 구조 [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)공용 OLE 개체 속성 대화 상자를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -197,7 +206,7 @@ OLEUIOBJECTPROPS m_op;
   
  자세한 내용은 참조는 **OLEUIOBJECTPROPS** 및 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namempsha--colepropertiesdialogmpsh"></a><a name="m_psh"></a>COlePropertiesDialog::m_psh  
+##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
  형식의 구조 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), 대화 상자 개체의 특성을 저장 하는 구성원으로 포함 합니다.  
   
 ```  
@@ -211,7 +220,7 @@ PROPSHEETHEADER m_psh;
   
  대 한 자세한 내용은 **PROPSHEETHEADER** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemvpa--colepropertiesdialogmvp"></a><a name="m_vp"></a>COlePropertiesDialog::m_vp  
+##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
  형식의 구조 [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)OLE 개체 속성 대화 상자의 보기 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -223,7 +232,7 @@ OLEUIVIEWPROPS m_vp;
   
  대 한 자세한 내용은 **OLEUIVIEWPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonapplyscalea--colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
+##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
  크기 조정 값이 변경 되어 확인 또는 적용을 선택한 경우에 프레임 워크에서 호출 합니다.  
   
 ```  

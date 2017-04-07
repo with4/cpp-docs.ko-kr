@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSafeArrayBound
-- ATL::CComSafeArrayBound
 - CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::GetCount
+- ATLSAFE/ATL::GetLowerBound
+- ATLSAFE/ATL::GetUpperBound
+- ATLSAFE/ATL::SetCount
+- ATLSAFE/ATL::SetLowerBound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +82,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsafe.h  
   
-##  <a name="a-nameccomsafearraybounda--ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
+##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
  생성자입니다.  
   
 ```
@@ -94,7 +99,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ### <a name="remarks"></a>주의  
  배열이 Visual c + + 프로그램에서 액세스 해야 하는 경우 하한값 0으로 정의 하는 것이 좋습니다. 배열 크기가 Visual Basic과 같은 다른 언어와 함께 사용 될 경우 다른 하 한 값을 사용 하는 것이 좋습니다 수 있습니다.  
   
-##  <a name="a-namegetcounta--ccomsafearrayboundgetcount"></a><a name="getcount"></a>CComSafeArrayBound::GetCount  
+##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  요소의 수를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -107,7 +112,7 @@ ULONG GetCount() const throw();
 ### <a name="remarks"></a>주의  
  하는 경우 연결 된 `CComSafeArray` 개체가 나타내는 다차원 배열,이 메서드는 오른쪽에 있는 차원에서 요소의 총 수를 반환만 합니다. 사용 하 여 [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) 요소의 총 수를 얻을 수 있습니다.  
   
-##  <a name="a-namegetlowerbounda--ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
  하 한을 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -117,7 +122,7 @@ LONG GetLowerBound() const throw();
 ### <a name="return-value"></a>반환 값  
  하 한을 반환 된 `CComSafeArrayBound` 개체입니다.  
   
-##  <a name="a-namegetupperbounda--ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
  상한 값을 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -130,7 +135,7 @@ LONG GetUpperBound() const throw();
 ### <a name="remarks"></a>주의  
  상한 값은 요소 및 하 한 값의 수에 따라 달라 집니다. 예를 들어, 하 한은 0 이며 요소 수가 10, 상한 값은 9로 자동으로 설정 됩니다.  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayboundoperator-"></a><a name="operator_eq"></a>CComSafeArrayBound::operator =  
+##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  설정의 `CComSafeArrayBound` 을 새 값입니다.  
   
 ```
@@ -151,7 +156,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="remarks"></a>주의  
  `CComSafeArrayBound` 기존를 사용 하 여 개체를 할당할 수 `CComSafeArrayBound`, 하거나 기본적으로 한 경우 0으로 설정 된 요소 수를 제공 하 여 합니다.  
   
-##  <a name="a-namesetcounta--ccomsafearrayboundsetcount"></a><a name="setcount"></a>CComSafeArrayBound::SetCount  
+##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  요소의 수를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -165,7 +170,7 @@ ULONG SetCount(ULONG ulCount) throw();
 ### <a name="return-value"></a>반환 값  
  에 있는 요소의 수를 반환 합니다.는 `CComSafeArrayBound` 개체입니다.  
   
-##  <a name="a-namesetlowerbounda--ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
+##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
  하 한을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

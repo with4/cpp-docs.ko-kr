@@ -9,11 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlExeModuleT<T>
 - CAtlExeModuleT
-- ATL.CAtlExeModuleT<T>
-- ATL::CAtlExeModuleT
-- ATL.CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT::CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT::InitializeCom
+- ATLBASE/ATL::CAtlExeModuleT::ParseCommandLine
+- ATLBASE/ATL::CAtlExeModuleT::PostMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::PreMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::RegisterClassObjects
+- ATLBASE/ATL::CAtlExeModuleT::RevokeClassObjects
+- ATLBASE/ATL::CAtlExeModuleT::Run
+- ATLBASE/ATL::CAtlExeModuleT::RunMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::UninitializeCom
+- ATLBASE/ATL::CAtlExeModuleT::Unlock
+- ATLBASE/ATL::CAtlExeModuleT::WinMain
+- ATLBASE/ATL::CAtlExeModuleT::m_bDelayShutdown
+- ATLBASE/ATL::CAtlExeModuleT::m_dwPause
+- ATLBASE/ATL::CAtlExeModuleT::m_dwTimeOut
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +124,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namecatlexemoduleta--catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT  
+##  <a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT  
  생성자입니다.  
   
 ```
@@ -122,7 +134,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>주의  
  EXE 모듈을 초기화 하지 못했습니다, 있으면 WinMain 추가적인 처리 없이 즉시 반환 합니다.  
   
-##  <a name="a-namedtora--catlexemoduletcatlexemodulet"></a><a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT  
+##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT  
  소멸자입니다.  
   
 ```
@@ -132,7 +144,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="a-nameinitializecoma--catlexemoduletinitializecom"></a><a name="initializecom"></a>CAtlExeModuleT::InitializeCom  
+##  <a name="initializecom"></a>CAtlExeModuleT::InitializeCom  
  COM.를 초기화합니다.  
   
 ```
@@ -147,7 +159,7 @@ static HRESULT InitializeCom() throw();
   
  일반적으로이 메서드를 재정의 무시 해야 [CAtlExeModuleT::UninitializeCom](#uninitializecom)합니다.  
   
-##  <a name="a-namembdelayshutdowna--catlexemoduletmbdelayshutdown"></a><a name="m_bdelayshutdown"></a>CAtlExeModuleT::m_bDelayShutdown  
+##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT::m_bDelayShutdown  
  모듈을 종료 하는 지연 되어야 있는지 여부를 나타내는 플래그입니다.  
   
 ```
@@ -157,7 +169,7 @@ bool m_bDelayShutdown;
 ### <a name="remarks"></a>주의  
  참조는 [CAtlExeModuleT 개요](../../atl/reference/catlexemodulet-class.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namemdwpausea--catlexemoduletmdwpause"></a><a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause  
+##  <a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause  
  모든 개체는 종료 되기 전에 완료를 확인 하는 데 사용 하는 일시 중지 값입니다.  
   
 ```
@@ -167,7 +179,7 @@ DWORD m_dwPause;
 ### <a name="remarks"></a>주의  
  이 값을 호출한 후 변경 [CAtlExeModuleT::InitializeCom](#initializecom) 서버를 종료 하는 것에 대 한 일시 중지 값으로 사용 하는 시간 (밀리초)의 수를 설정 합니다. 기본값은 1000 밀리초입니다.  
   
-##  <a name="a-namemdwtimeouta--catlexemoduletmdwtimeout"></a><a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut  
+##  <a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut  
  모듈 언로드를 지연 하는 데 사용 되는 시간 제한 값입니다.  
   
 ```
@@ -177,7 +189,7 @@ DWORD m_dwTimeOut;
 ### <a name="remarks"></a>주의  
  이 값을 호출한 후 변경 [CAtlExeModuleT::InitializeCom](#initializecom) 서버를 종료 하는 것에 대 한 제한 시간 값으로 사용 하는 시간 (밀리초)의 수를 정의 합니다. 기본값은 5000밀리초입니다. 참조는 [CAtlExeModuleT 개요](../../atl/reference/catlexemodulet-class.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameparsecommandlinea--catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlExeModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>CAtlExeModuleT::ParseCommandLine  
  명령줄을 구문 분석 하 고 필요한 경우 등록을 수행 합니다.  
   
 ```
@@ -197,7 +209,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는 [CAtlExeModuleT::WinMain](#winmain) 명령줄 스위치를 처리 하는 재정의 될 수 있습니다. 기본 구현에 대 한 확인 **/RegServer** 및 **/UnRegServer** 명령줄 인수 하 고 등록 또는 등록 취소를 수행 합니다.  
   
-##  <a name="a-namepostmessageloopa--catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>CAtlExeModuleT::PostMessageLoop  
+##  <a name="postmessageloop"></a>CAtlExeModuleT::PostMessageLoop  
  이 메서드는 메시지 루프를 종료 한 후에 바로 호출 됩니다.  
   
 ```
@@ -210,7 +222,7 @@ HRESULT PostMessageLoop() throw();
 ### <a name="remarks"></a>주의  
  사용자 지정 응용 프로그램 정리를 수행 하도록이 메서드를 재정의 합니다. 기본 구현 호출 하 여 [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)합니다.  
   
-##  <a name="a-namepremessageloopa--catlexemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlExeModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>CAtlExeModuleT::PreMessageLoop  
  이 메서드는 메시지 루프에 들어가기 전에 바로 호출 됩니다.  
   
 ```
@@ -227,7 +239,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>주의  
  응용 프로그램에 대 한 사용자 지정 초기화 코드를 추가 하려면이 메서드를 재정의 합니다. 기본 구현은 클래스 개체를 등록합니다.  
   
-##  <a name="a-nameregisterclassobjectsa--catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects  
  다른 응용 프로그램 데이터베이스에 연결할 수 있도록 ole 클래스 개체를 등록 합니다.  
   
 ```
@@ -244,7 +256,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="return-value"></a>반환 값  
  성공, S_FALSE를 등록 하려면 클래스가 있는 경우 또는 실패 시 오류 HRESULT에 S_OK를 반환 합니다.  
   
-##  <a name="a-namerevokeclassobjectsa--catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects  
  클래스 개체를 제거합니다.  
   
 ```
@@ -254,7 +266,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="return-value"></a>반환 값  
  성공, S_FALSE를 등록 하려면 클래스가 있는 경우 또는 실패 시 오류 HRESULT에 S_OK를 반환 합니다.  
   
-##  <a name="a-nameruna--catlexemoduletrun"></a><a name="run"></a>CAtlExeModuleT::Run  
+##  <a name="run"></a>CAtlExeModuleT::Run  
  이 메서드는 초기화 메시지 루프를 실행 하는 EXE 모듈의 코드를 실행 하 고 정리 합니다.  
   
 ```
@@ -271,7 +283,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>주의  
  이 메서드를 재정의할 수 있습니다. 그러나 실제로 것 보다 잘 재정의 하려면 [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), 또는 [CAtlExeModuleT::PostMessageLoop](#postmessageloop) 대신 합니다.  
   
-##  <a name="a-namerunmessageloopa--catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop  
+##  <a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop  
  이 메서드는 메시지 루프를 실행합니다.  
   
 ```
@@ -281,7 +293,7 @@ void RunMessageLoop() throw();
 ### <a name="remarks"></a>주의  
  메시지 루프의 동작을 변경 하려면이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="a-nameuninitializecoma--catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom  
+##  <a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom  
  COM.를 초기화 하지 않습니다.  
   
 ```
@@ -291,7 +303,7 @@ static void UninitializeCom() throw();
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드 호출 [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) 소멸자에서 호출 됩니다. 이 메서드를 재정의 하는 경우 재정의 [CAtlExeModuleT::InitializeCom](#initializecom)합니다.  
   
-##  <a name="a-nameunlocka--catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeModuleT::Unlock  
+##  <a name="unlock"></a>CAtlExeModuleT::Unlock  
  모듈의 잠금 횟수를 줄입니다.  
   
 ```
@@ -301,7 +313,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 또는 테스트 값을 반환 합니다.  
   
-##  <a name="a-namewinmaina--catlexemoduletwinmain"></a><a name="winmain"></a>CAtlExeModuleT::WinMain  
+##  <a name="winmain"></a>CAtlExeModuleT::WinMain  
  이 메서드는 EXE를 실행 하는 데 필요한 코드를 구현 합니다.  
   
 ```

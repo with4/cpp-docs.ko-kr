@@ -9,9 +9,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CRBTree
 - CRBTree
-- ATL::CRBTree
+- ATLCOLL/ATL::CRBTree
+- ATLCOLL/ATL::CRBTree::KINARGTYPE
+- ATLCOLL/ATL::CRBTree::KOUTARGTYPE
+- ATLCOLL/ATL::CRBTree::VINARGTYPE
+- ATLCOLL/ATL::CRBTree::VOUTARGTYPE
+- ATLCOLL/ATL::CRBTree::FindFirstKeyAfter
+- ATLCOLL/ATL::CRBTree::GetAt
+- ATLCOLL/ATL::CRBTree::GetCount
+- ATLCOLL/ATL::CRBTree::GetHeadPosition
+- ATLCOLL/ATL::CRBTree::GetKeyAt
+- ATLCOLL/ATL::CRBTree::GetNext
+- ATLCOLL/ATL::CRBTree::GetNextAssoc
+- ATLCOLL/ATL::CRBTree::GetNextKey
+- ATLCOLL/ATL::CRBTree::GetNextValue
+- ATLCOLL/ATL::CRBTree::GetPrev
+- ATLCOLL/ATL::CRBTree::GetTailPosition
+- ATLCOLL/ATL::CRBTree::GetValueAt
+- ATLCOLL/ATL::CRBTree::IsEmpty
+- ATLCOLL/ATL::CRBTree::RemoveAll
+- ATLCOLL/ATL::CRBTree::RemoveAt
+- ATLCOLL/ATL::CRBTree::SetValueAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,7 +140,7 @@ class CRBTree
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namecpairclassa--crbtreecpair-class"></a><a name="cpair_class"></a>CRBTree::CPair 클래스  
+##  <a name="cpair_class"></a>CRBTree::CPair 클래스  
  키 및 값 요소를 포함 하는 클래스입니다.  
   
 ```
@@ -138,7 +157,7 @@ class CPair : public __POSITION
 |`m_key`|데이터 멤버를 핵심 요소를 저장 합니다.|  
 |`m_value`|값 요소를 저장 하는 데이터 멤버입니다.|  
   
-##  <a name="a-namedtora--crbtreecrbtree"></a><a name="dtor"></a>CRBTree:: ~ CRBTree  
+##  <a name="dtor"></a>CRBTree:: ~ CRBTree  
  소멸자입니다.  
   
 ```
@@ -148,7 +167,7 @@ class CPair : public __POSITION
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다. 호출 [CRBTree::RemoveAll](#removeall) 모든 요소를 삭제 합니다.  
   
-##  <a name="a-namefindfirstkeyaftera--crbtreefindfirstkeyafter"></a><a name="findfirstkeyafter"></a>CRBTree::FindFirstKeyAfter  
+##  <a name="findfirstkeyafter"></a>CRBTree::FindFirstKeyAfter  
  다음 사용 가능한 키를 사용 하는 요소의 위치를 찾으려면이 메서드를 호출 합니다.  
   
 ```
@@ -165,7 +184,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 ### <a name="remarks"></a>주의  
  이 방법을 통해 쉽게 위치 값을 미리 계산 하지 않고 트리를 트래버스할 수 있습니다.  
   
-##  <a name="a-namegetata--crbtreegetat"></a><a name="getat"></a>CRBTree::GetAt  
+##  <a name="getat"></a>CRBTree::GetAt  
  트리에 지정 된 위치의 요소를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -192,7 +211,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
   
  디버그 빌드에서 어설션 오류는 경우에 `pos` NULL과 같습니다.  
   
-##  <a name="a-namegetcounta--crbtreegetcount"></a><a name="getcount"></a>CRBTree::GetCount  
+##  <a name="getcount"></a>CRBTree::GetCount  
  트리에서 요소 수를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -202,7 +221,7 @@ size_t GetCount() const throw();
 ### <a name="return-value"></a>반환 값  
  (각 키/값 쌍 하나 이상의 요소가) 트리에 저장 된 요소 수를 반환 합니다.  
   
-##  <a name="a-namegetheadpositiona--crbtreegetheadposition"></a><a name="getheadposition"></a>CRBTree::GetHeadPosition  
+##  <a name="getheadposition"></a>CRBTree::GetHeadPosition  
  요소 트리의 시작 부분에 대 한 위치 값을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -215,7 +234,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="remarks"></a>주의  
  반환한 값 `GetHeadPosition` 와 같은 메서드와 함께 사용할 수 있습니다 [CRBTree::GetKeyAt](#getkeyat) 또는 [CRBTree::GetNext](#getnext) 트리를 탐색 하 여 값을 검색 합니다.  
   
-##  <a name="a-namegetkeyata--crbtreegetkeyat"></a><a name="getkeyat"></a>CRBTree::GetKeyAt  
+##  <a name="getkeyat"></a>CRBTree::GetKeyAt  
  트리의 지정된 된 위치에서 키를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -232,7 +251,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 ### <a name="remarks"></a>주의  
  경우 `pos` 올바른 위치 값이 아닌 결과 예측할 수 없습니다. 디버그 빌드에서 어설션 오류는 경우에 `pos` NULL과 같습니다.  
   
-##  <a name="a-namegetnexta--crbtreegetnext"></a><a name="getnext"></a>CRBTree::GetNext  
+##  <a name="getnext"></a>CRBTree::GetNext  
  에 저장 된 요소에 대 한 포인터를 가져오려면이 메서드를 호출 하는 `CRBTree` 개체를 위치를 다음 요소로 이동 합니다.  
   
 ```
@@ -250,7 +269,7 @@ CPair* GetNext(POSITION& pos) throw();
 ### <a name="remarks"></a>주의  
  `pos` 위치 카운터는 각 호출 후 업데이트 됩니다. 검색된 된 요소는 트리에서 마지막 경우 `pos` NULL로 설정 됩니다.  
   
-##  <a name="a-namegetnextassoca--crbtreegetnextassoc"></a><a name="getnextassoc"></a>CRBTree::GetNextAssoc  
+##  <a name="getnextassoc"></a>CRBTree::GetNextAssoc  
  키와 map에 저장 하는 요소의 값을 가져오려면이 메서드를 호출 하 고 위치를 다음 요소로 이동 합니다.  
   
 ```
@@ -273,7 +292,7 @@ void GetNextAssoc(
 ### <a name="remarks"></a>주의  
  `pos` 위치 카운터는 각 호출 후 업데이트 됩니다. 검색된 된 요소는 트리에서 마지막 경우 `pos` NULL로 설정 됩니다.  
   
-##  <a name="a-namegetnextkeya--crbtreegetnextkey"></a><a name="getnextkey"></a>CRBTree::GetNextKey  
+##  <a name="getnextkey"></a>CRBTree::GetNextKey  
  트리에 저장 되는 요소의 키를 얻기 위해이 메서드를 호출 하 고 위치를 다음 요소로 이동 합니다.  
   
 ```
@@ -290,7 +309,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 ### <a name="remarks"></a>주의  
  현재 위치 카운터를 업데이트 `pos`합니다. 트리에서 항목이 더 이상 없으면 위치 카운터가 NULL로 설정 됩니다.  
   
-##  <a name="a-namegetnextvaluea--crbtreegetnextvalue"></a><a name="getnextvalue"></a>CRBTree::GetNextValue  
+##  <a name="getnextvalue"></a>CRBTree::GetNextValue  
  트리에 저장 하 여 요소의 값을 가져오려면이 메서드를 호출 하 고 위치를 다음 요소로 이동 합니다.  
   
 ```
@@ -308,7 +327,7 @@ V& GetNextValue(POSITION& pos) throw();
 ### <a name="remarks"></a>주의  
  현재 위치 카운터를 업데이트 `pos`합니다. 트리에서 항목이 더 이상 없으면 위치 카운터가 NULL로 설정 됩니다.  
   
-##  <a name="a-namegetpreva--crbtreegetprev"></a><a name="getprev"></a>CRBTree::GetPrev  
+##  <a name="getprev"></a>CRBTree::GetPrev  
  에 저장 된 요소에 대 한 포인터를 가져오려면이 메서드를 호출 하는 `CRBTree` 개체를 이전 요소를 다음 위치를 업데이트 합니다.  
   
 ```
@@ -326,7 +345,7 @@ CPair* GetPrev(POSITION& pos) throw();
 ### <a name="remarks"></a>주의  
  현재 위치 카운터를 업데이트 `pos`합니다. 트리에서 항목이 더 이상 없으면 위치 카운터가 NULL로 설정 됩니다.  
   
-##  <a name="a-namegettailpositiona--crbtreegettailposition"></a><a name="gettailposition"></a>CRBTree::GetTailPosition  
+##  <a name="gettailposition"></a>CRBTree::GetTailPosition  
  트리 끝에 있는 요소에 대 한 위치 값을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -339,7 +358,7 @@ POSITION GetTailPosition() const throw();
 ### <a name="remarks"></a>주의  
  반환한 값 `GetTailPosition` 와 같은 메서드와 함께 사용할 수 있습니다 [CRBTree::GetKeyAt](#getkeyat) 또는 [CRBTree::GetPrev](#getprev) 트리를 탐색 하 여 값을 검색 합니다.  
   
-##  <a name="a-namegetvalueata--crbtreegetvalueat"></a><a name="getvalueat"></a>CRBTree::GetValueAt  
+##  <a name="getvalueat"></a>CRBTree::GetValueAt  
  지정된 된 위치에 저장 된 값을 검색 하려면이 메서드를 호출 하는 `CRBTree` 개체입니다.  
   
 ```
@@ -354,7 +373,7 @@ V& GetValueAt(POSITION pos) throw();
 ### <a name="return-value"></a>반환 값  
  지정된 된 위치에 저장 된 값에 대 한 참조를 반환 합니다.는 `CRBTree` 개체입니다.  
   
-##  <a name="a-nameisemptya--crbtreeisempty"></a><a name="isempty"></a>CRBTree::IsEmpty  
+##  <a name="isempty"></a>CRBTree::IsEmpty  
  이 메서드는 빈 트리 개체에 대 한 테스트를 호출 합니다.  
   
 ```
@@ -364,21 +383,21 @@ bool IsEmpty() const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 트리 비어 있는 경우 **false** 그렇지 않은 경우.  
   
-##  <a name="a-namekinargtypea--crbtreekinargtype"></a><a name="kinargtype"></a>CRBTree::KINARGTYPE  
+##  <a name="kinargtype"></a>CRBTree::KINARGTYPE  
  키를 입력 인수로 전달 될 때 사용 되는 형식입니다.  
   
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```  
   
-##  <a name="a-namekoutargtypea--crbtreekoutargtype"></a><a name="koutargtype"></a>CRBTree::KOUTARGTYPE  
+##  <a name="koutargtype"></a>CRBTree::KOUTARGTYPE  
  키 출력 인수로 반환 되는 경우 사용 되는 형식입니다.  
   
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```  
   
-##  <a name="a-nameremovealla--crbtreeremoveall"></a><a name="removeall"></a>CRBTree::RemoveAll  
+##  <a name="removeall"></a>CRBTree::RemoveAll  
  요소를 모두 제거 하려면이 메서드를 호출 하는 `CRBTree` 개체입니다.  
   
 ```
@@ -388,7 +407,7 @@ void RemoveAll() throw();
 ### <a name="remarks"></a>주의  
  지웁니다는 `CRBTree` 개체에 요소를 저장 하는 데 사용 된 메모리를 해제 합니다.  
   
-##  <a name="a-nameremoveata--crbtreeremoveat"></a><a name="removeat"></a>CRBTree::RemoveAt  
+##  <a name="removeat"></a>CRBTree::RemoveAt  
  지정된 된 위치에 요소를 제거 하려면이 메서드를 호출 하는 **CRBTree** 개체입니다.  
   
 ```
@@ -402,7 +421,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="remarks"></a>주의  
  지정된 된 위치에 저장 된 키/값 쌍을 제거 합니다. 요소를 저장 하는 데 메모리가 해제 됩니다. 위치에서 참조 `pos` 무효화 되 고 트리의 다른 요소의 위치 반드시 그럴 유효한 상태를 유지 하는 동안 동일한 순서를 유지 합니다.  
   
-##  <a name="a-namesetvalueata--crbtreesetvalueat"></a><a name="setvalueat"></a>CRBTree::SetValueAt  
+##  <a name="setvalueat"></a>CRBTree::SetValueAt  
  지정된 된 위치에 저장 된 값을 변경 하려면이 메서드를 호출 하는 `CRBTree` 개체입니다.  
   
 ```
@@ -419,14 +438,14 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 ### <a name="remarks"></a>주의  
  값 요소에 지정된 된 위치에 저장 된 변경의 `CRBTree` 개체입니다.  
   
-##  <a name="a-namevinargtypea--crbtreevinargtype"></a><a name="vinargtype"></a>CRBTree::VINARGTYPE  
+##  <a name="vinargtype"></a>CRBTree::VINARGTYPE  
  값을 입력 인수로 전달 될 때 사용 되는 형식입니다.  
   
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```  
   
-##  <a name="a-namevoutargtypea--crbtreevoutargtype"></a><a name="voutargtype"></a>CRBTree::VOUTARGTYPE  
+##  <a name="voutargtype"></a>CRBTree::VOUTARGTYPE  
  값을 출력 인수로 전달 될 때 사용 되는 형식입니다.  
   
 ```

@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CNoWorkerThread
-- ATL.CNoWorkerThread
 - CNoWorkerThread
+- ATLUTIL/ATL::CNoWorkerThread
+- ATLUTIL/ATL::CNoWorkerThread::AddHandle
+- ATLUTIL/ATL::CNoWorkerThread::AddTimer
+- ATLUTIL/ATL::CNoWorkerThread::GetThreadHandle
+- ATLUTIL/ATL::CNoWorkerThread::GetThreadId
+- ATLUTIL/ATL::CNoWorkerThread::Initialize
+- ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
+- ATLUTIL/ATL::CNoWorkerThread::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +81,7 @@ class CNoWorkerThread
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-nameaddhandlea--cnoworkerthreadaddhandle"></a><a name="addhandle"></a>CNoWorkerThread::AddHandle  
+##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
  작동 하지 않음 방식의 [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)합니다.  
   
 ```
@@ -93,7 +99,7 @@ HRESULT AddHandle(HANDLE /* hObject
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-nameaddtimera--cnoworkerthreadaddtimer"></a><a name="addtimer"></a>CNoWorkerThread::AddTimer  
+##  <a name="addtimer"></a>CNoWorkerThread::AddTimer  
  작동 하지 않음 방식의 [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer)합니다.  
   
 ```
@@ -113,7 +119,7 @@ HRESULT AddTimer(DWORD /* dwInterval
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-namegetthreadhandlea--cnoworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
  작동 하지 않음 방식의 [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle)합니다.  
   
 ```
@@ -126,7 +132,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-namegetthreadida--cnoworkerthreadgetthreadid"></a><a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
  작동 하지 않음 방식의 [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)합니다.  
   
 ```
@@ -139,7 +145,7 @@ DWORD GetThreadId() throw();
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-nameinitializea--cnoworkerthreadinitialize"></a><a name="initialize"></a>CNoWorkerThread::Initialize  
+##  <a name="initialize"></a>CNoWorkerThread::Initialize  
  작동 하지 않음 방식의 [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize)합니다.  
   
 ```
@@ -152,7 +158,7 @@ HRESULT Initialize() throw();
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-nameremovehandlea--cnoworkerthreadremovehandle"></a><a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
  작동 하지 않음 방식의 [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle)합니다.  
   
 ```
@@ -166,7 +172,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ### <a name="remarks"></a>주의  
  이 클래스에서 제공 하는 구현은 아무 작업도 수행 합니다.  
   
-##  <a name="a-nameshutdowna--cnoworkerthreadshutdown"></a><a name="shutdown"></a>CNoWorkerThread::Shutdown  
+##  <a name="shutdown"></a>CNoWorkerThread::Shutdown  
  작동 하지 않음 방식의 [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown)합니다.  
   
 ```

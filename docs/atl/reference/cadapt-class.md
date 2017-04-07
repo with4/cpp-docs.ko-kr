@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  생성자는 어댑터 개체를 생성, 조정 된 형식의 개체에서 복사 또는 다른 개체에서 복사한 기본 수를 허용 합니다.  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  포함 된 데이터를 복사 (또는 이동할) 새로 생성 된 개체에는 어댑터 개체입니다.  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  조정 되는 데이터를 보유 합니다.  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>주의  
  이 **공용** 데이터 멤버와에 직접 또는 간접적으로 액세스할 수 [연산자 const T / /](#operator_const_t_amp) 및 [연산자 T / /](#operator_t_amp)합니다.  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
  반환 된 **const** 에 대 한 참조는 [m_T](#m_t) 멤버, 어댑터 개체를 형식의 개체인 것 처럼 처리 하는 데 `T`합니다.  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>반환 값  
  A **const** 에 대 한 참조가 `m_T`합니다.  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  에 대 한 참조를 반환 된 [m_T](#m_t) 어댑터 개체를 형식의 개체인 것 처럼 처리 하는 데 멤버 `T`합니다.  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조 `m_T`합니다.  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  와 조정 된 형식의 개체를 비교 [m_T](#m_t)합니다.  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>반환 값  
  비교의 결과 `m_T` 및 `rSrc`합니다.  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  할당 연산자는 인수를 할당 `rSrc`, 데이터 멤버를 [m_T](#m_t) 현재 어댑터 개체를 반환 합니다.  
   
 ```
@@ -178,7 +177,7 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ### <a name="return-value"></a>반환 값  
  현재 개체에 대 한 참조입니다.  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator = =  
+##  <a name="operator_eq_eq"></a>CAdapt::operator = =  
  와 조정 된 형식의 개체를 비교 [m_T](#m_t)합니다.  
   
 ```

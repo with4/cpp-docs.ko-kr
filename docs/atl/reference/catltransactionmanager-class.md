@@ -10,7 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
-- atltransactionmanager/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::Close
+- ATLTRANSACTIONMANAGER/ATL::Commit
+- ATLTRANSACTIONMANAGER/ATL::Create
+- ATLTRANSACTIONMANAGER/ATL::CreateFile
+- ATLTRANSACTIONMANAGER/ATL::DeleteFile
+- ATLTRANSACTIONMANAGER/ATL::FindFirstFile
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributesEx
+- ATLTRANSACTIONMANAGER/ATL::GetHandle
+- ATLTRANSACTIONMANAGER/ATL::IsFallback
+- ATLTRANSACTIONMANAGER/ATL::MoveFile
+- ATLTRANSACTIONMANAGER/ATL::RegCreateKeyEx
+- ATLTRANSACTIONMANAGER/ATL::RegDeleteKey
+- ATLTRANSACTIONMANAGER/ATL::RegOpenKeyEx
+- ATLTRANSACTIONMANAGER/ATL::Rollback
+- ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::m_bFallback
+- ATLTRANSACTIONMANAGER/ATL::m_hTransaction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +116,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltransactionmanager.h  
   
-##  <a name="a-namedtora--catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>~ CAtlTransactionManager  
  CAtlTransactionManager 소멸자  
   
 ```
@@ -107,7 +126,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>주의  
  일반적인 처리에서 트랜잭션이 자동으로 적용 고 닫으십시오. 소멸자가 호출 되는 예외 해제 하는 동안, 트랜잭션이 롤백 되 고 닫힐 합니다.  
   
-##  <a name="a-namecatltransactionmanagera--catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
  CAtlTransactionManager 생성자입니다.  
   
 ```
@@ -123,7 +142,7 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameclosea--close"></a><a name="close"></a>닫기  
+##  <a name="close"></a>닫기  
  트랜잭션 핸들을 닫습니다.  
   
 ```
@@ -136,7 +155,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `CloseHandle` 함수입니다. 메서드는 소멸자가 자동으로 호출 됩니다.  
   
-##  <a name="a-namecommita--commit"></a><a name="commit"></a>커밋  
+##  <a name="commit"></a>커밋  
  트랜잭션이 커밋된 되도록 요청 합니다.  
   
 ```
@@ -149,7 +168,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `CommitTransaction` 함수입니다. 메서드는 소멸자가 자동으로 호출 됩니다.  
   
-##  <a name="a-namecreatea--create"></a><a name="create"></a>만들기  
+##  <a name="create"></a>만들기  
  트랜잭션 핸들을 만듭니다.  
   
 ```
@@ -162,7 +181,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `CreateTransaction` 함수입니다. 인지 확인  
   
-##  <a name="a-namecreatefilea--createfile"></a><a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>CreateFile  
  만들거나 파일, 파일 스트림 또는 트랜잭션된 작업 디렉터리를 엽니다.  
   
 ```
@@ -204,7 +223,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `CreateFileTransacted` 함수입니다.  
   
-##  <a name="a-namedeletefilea--deletefile"></a><a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>DeleteFile  
  트랜잭션된 작업으로 기존 파일을 삭제합니다.  
   
 ```
@@ -218,7 +237,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `DeleteFileTransacted` 함수입니다.  
   
-##  <a name="a-namefindfirstfilea--findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>FindFirstFile  
  트랜잭션된 작업으로 파일이 나 하위 디렉터리에 대 한 디렉터리를 검색합니다.  
   
 ```
@@ -240,7 +259,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `FindFirstFileTransacted` 함수입니다.  
   
-##  <a name="a-namegetfileattributesa--getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>GetFileAttributes  
  트랜잭션된 작업으로 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 검색합니다.  
   
 ```
@@ -254,7 +273,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `GetFileAttributesTransacted` 함수입니다.  
   
-##  <a name="a-namegetfileattributesexa--getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>GetFileAttributesEx  
  트랜잭션된 작업으로 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 검색합니다.  
   
 ```
@@ -277,7 +296,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `GetFileAttributesTransacted` 함수입니다.  
   
-##  <a name="a-namegethandlea--gethandle"></a><a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>GetHandle  
  트랜잭션 핸들을 반환합니다.  
   
 ```
@@ -289,7 +308,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisfallbacka--isfallback"></a><a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>IsFallback  
  대체 (fallback) 호출을 사용할지 여부를 결정 합니다.  
   
 ```
@@ -301,7 +320,7 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namembfallbacka--mbfallback"></a><a name="m_bfallback"></a>m_bFallback  
+##  <a name="m_bfallback"></a>m_bFallback  
  `TRUE`지원 되는 대체 하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ```
@@ -310,7 +329,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemhtransactiona--mhtransaction"></a><a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>m_hTransaction  
  트랜잭션 핸들입니다.  
   
 ```
@@ -319,7 +338,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemovefilea--movefile"></a><a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>MoveFile  
  기존 파일 또는 디렉터리에 자식을 포함 하 여 트랜잭션된 작업으로 이동 합니다.  
   
 ```
@@ -336,7 +355,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `MoveFileTransacted` 함수입니다.  
   
-##  <a name="a-nameregcreatekeyexa--regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
  지정된 된 레지스트리 키를 만들고 트랜잭션과 연결 합니다. 키가 이미 있는 경우 함수를 엽니다.  
   
 ```
@@ -386,7 +405,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `RegCreateKeyTransacted` 함수입니다.  
   
-##  <a name="a-nameregdeletekeya--regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>RegDeleteKey  
  트랜잭션된 작업으로 하는 레지스트리의 지정된 된 플랫폼 특정 보기에서 하위 키와 해당 값을 삭제합니다.  
   
 ```
@@ -406,7 +425,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `RegDeleteKeyTransacted` 함수입니다.  
   
-##  <a name="a-nameregopenkeyexa--regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>RegOpenKeyEx  
  지정된 된 레지스트리 키 열리고을 트랜잭션에 연결 됩니다.  
   
 ```
@@ -440,7 +459,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `RegOpenKeyTransacted` 함수입니다.  
   
-##  <a name="a-namerollbacka--rollback"></a><a name="rollback"></a>롤백  
+##  <a name="rollback"></a>롤백  
  트랜잭션을 롤백할 수 있는 요청 수입니다.  
   
 ```
@@ -453,7 +472,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>주의  
  이 래퍼 호출의 `RollbackTransaction` 함수입니다.  
   
-##  <a name="a-namesetfileattributesa--setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>SetFileAttributes  
  트랜잭션된 작업으로 파일이 나 디렉터리에 대 한 특성을 설정합니다.  
   
 ```

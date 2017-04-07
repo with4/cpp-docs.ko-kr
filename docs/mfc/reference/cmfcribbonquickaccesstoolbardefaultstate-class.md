@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::AddCommand
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribbonquickaccesstoolbar.h  
   
-##  <a name="a-nameaddcommanda--cmfcribbonquickaccesstoolbardefaultstateaddcommand"></a><a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
+##  <a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
  빠른 실행 도구 모음에 대 한 기본 상태는 명령을 추가합니다.  
   
 ```  
@@ -97,7 +102,7 @@ void AddCommand(
 ### <a name="remarks"></a>주의  
  세 개의 결과 다음는 CMFCRibbonQuickAccessToolBarDefaultState에 명령 추가 됩니다. 첫째, 추가 된 각 명령은 빠른 실행 도구 모음의 오른쪽에 있는 드롭다운에 나열 됩니다. 이러한 방식으로 사용자는 추가 하거나 빠른 실행 도구 모음에서 해당 명령을 제거 쉽게 수 있습니다. 둘째로, 나열 되어 있는 명령만 표시 되는 것에 표시할 기본 상태를 클릭할 때 빠른 실행 도구 모음 다시 설정 되는 **재설정** 단추는 **사용자 지정** 대화 상자입니다. 셋째, 호출 하지 않은 경우 [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), 빠른 실행 도구 모음 표시 되는 명령을 사용이 목록에서 기본 표시 명령으로 처음으로 사용자가 응용 프로그램을 실행 합니다. 원하는 모든 명령에 추가 하면, 호출 [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) 해당 리본 표시줄의 빠른 실행 도구 모음에 대 한 기본 상태도이 인스턴스를 설정 하려면.  
   
-##  <a name="a-namecopyfroma--cmfcribbonquickaccesstoolbardefaultstatecopyfrom"></a><a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
  다른 속성 하나 빠른 실행 도구 모음을 복사합니다.  
   
 ```  
@@ -111,7 +116,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ### <a name="remarks"></a>주의  
  이 메서드는 원본에서 각 명령 복사 `CMFCRibbonQuickAccessToolBarDefaultState` 개체를 사용 하 여이 개체는 [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) 메서드.  
   
-##  <a name="a-namecmfcribbonquickaccesstoolbardefaultstatea--cmfcribbonquickaccesstoolbardefaultstatecmfcribbonquickaccesstoolbardefaultstate"></a><a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
+##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
  빠른 실행 도구 모음 기본 상태 개체를 생성합니다.  
   
 ```  
@@ -121,7 +126,7 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 ### <a name="remarks"></a>주의  
  기본적으로는 명령의 목록은 하의 새 인스턴스 [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) 포함 비어 있습니다.  
   
-##  <a name="a-nameremovealla--cmfcribbonquickaccesstoolbardefaultstateremoveall"></a><a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
  빠른 실행 도구 모음에 있는 기본 명령 목록을 지웁니다.  
   
 ```  

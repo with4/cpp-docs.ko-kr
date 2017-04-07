@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="run-time-error-checking"></a>런타임 오류 검사
@@ -47,12 +47,12 @@ C 런타임 라이브러리에는 RTC(런타임 오류 검사)를 지원하는 �
   
 ### <a name="run-time-error-checking-functions"></a>런타임 오류 검사 함수  
   
-|함수|기능|.NET Framework의 해당 값|  
-|--------------|---------|-------------------------------|  
-|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|런타임 오류 검사 형식에 대한 간단한 설명을 반환합니다.||  
-|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|런타임 오류 검사에서 발견될 수 있는 총 오류 수를 반환합니다.||  
-|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|런타임 오류 검사 보고를 위한 처리기로 함수를 지정합니다.||  
-|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|런타임 오류 검사에서 발견된 오류를 형식에 연결합니다.||  
+|함수|기능|  
+|--------------|---------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|런타임 오류 검사 형식에 대한 간단한 설명을 반환합니다.|  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|런타임 오류 검사에서 발견될 수 있는 총 오류 수를 반환합니다.|  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|런타임 오류 검사 보고를 위한 처리기로 함수를 지정합니다.|  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|런타임 오류 검사에서 발견된 오류를 형식에 연결합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)   

@@ -9,12 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATLCONV/CA2WEX
-- ATL.CA2WEX
-- ATL.CA2WEX<t_nBufferLength>
-- ATL::CA2WEX
-- ATL::CA2WEX<t_nBufferLength>
 - CA2WEX
+- ATLCONV/ATL::CA2WEX
+- ATLCONV/ATL::CA2WEX::CA2WEX
+- ATLCONV/ATL::CA2WEX::m_psz
+- ATLCONV/ATL::CA2WEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +114,7 @@ class CA2WEX
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="a-nameca2wexa--ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX  
+##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
  생성자입니다.  
   
 ```
@@ -133,7 +132,7 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
-##  <a name="a-namedtora--ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
  소멸자입니다.  
   
 ```
@@ -143,21 +142,21 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="a-namempsza--ca2wexmpsz"></a><a name="m_psz"></a>CA2WEX::m_psz  
+##  <a name="m_psz"></a>CA2WEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--ca2wexmszbuffer"></a><a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
  변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpwstra--ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
  변환 연산자입니다.  
   
 ```  

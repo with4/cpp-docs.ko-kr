@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl::FreezeEvents
+- ATLCTL/ATL::IOleControlImpl::GetControlInfo
+- ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
+- ATLCTL/ATL::IOleControlImpl::OnMnemonic
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +85,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namefreezeeventsa--iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
  ATL의 구현에서 `FreezeEvents` 컨트롤 클래스를 증가 시킵니다 `m_nFreezeEvents` 데이터 멤버 경우 `bFreeze` 는 **TRUE**, 하 고 감소 `m_nFreezeEvents` 경우 `bFreeze` 는 **FALSE**합니다.  
   
 ```
@@ -92,7 +97,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
   
  참조 [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetcontrolinfoa--iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
  컨트롤의 키보드 동작에 대 한 정보를 채웁니다.  
   
 ```
@@ -105,7 +110,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
   
-##  <a name="a-nameonambientpropertychangea--iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
  컨테이너의 앰비언트 속성 중 하나 이상이 변경 된 컨트롤에 알립니다.  
   
 ```
@@ -118,7 +123,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>주의  
  참조 [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonmnemonica--iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
  사용자가 지정 된 키를 눌렀습니다 컨트롤에 알립니다.  
   
 ```

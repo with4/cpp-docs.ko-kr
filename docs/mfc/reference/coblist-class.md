@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObList
+- AFXCOLL/CObList
+- AFXCOLL/CObList::CObList
+- AFXCOLL/CObList::AddHead
+- AFXCOLL/CObList::AddTail
+- AFXCOLL/CObList::Find
+- AFXCOLL/CObList::FindIndex
+- AFXCOLL/CObList::GetAt
+- AFXCOLL/CObList::GetCount
+- AFXCOLL/CObList::GetHead
+- AFXCOLL/CObList::GetHeadPosition
+- AFXCOLL/CObList::GetNext
+- AFXCOLL/CObList::GetPrev
+- AFXCOLL/CObList::GetSize
+- AFXCOLL/CObList::GetTail
+- AFXCOLL/CObList::GetTailPosition
+- AFXCOLL/CObList::InsertAfter
+- AFXCOLL/CObList::InsertBefore
+- AFXCOLL/CObList::IsEmpty
+- AFXCOLL/CObList::RemoveAll
+- AFXCOLL/CObList::RemoveAt
+- AFXCOLL/CObList::RemoveHead
+- AFXCOLL/CObList::RemoveTail
+- AFXCOLL/CObList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +135,7 @@ class CObList : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="a-nameaddheada--coblistaddhead"></a><a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>CObList::AddHead  
  이 목록의 헤드에 새 요소 또는 요소 목록을 추가합니다.  
   
 ```  
@@ -153,7 +176,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="a-nameaddtaila--coblistaddtail"></a><a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>CObList::AddTail  
  이 목록의 꼬리에 요소 목록이 나 새 요소를 추가합니다.  
   
 ```  
@@ -194,7 +217,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="a-namecoblista--coblistcoblist"></a><a name="coblist"></a>CObList::CObList  
+##  <a name="coblist"></a>CObList::CObList  
  빈 생성 `CObject` 포인터 목록입니다.  
   
 ```  
@@ -224,7 +247,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections #&92;](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="a-namefinda--coblistfind"></a><a name="find"></a>CObList::Find  
+##  <a name="find"></a>CObList::Find  
  첫 번째 찾으려고 순차적으로 목록을 검색 하는 `CObject` 일치 하는 지정 된 포인터 `CObject` 포인터입니다.  
   
 ```  
@@ -258,7 +281,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections #&93;](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="a-namefindindexa--coblistfindindex"></a><a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>CObList::FindIndex  
  값을 사용 하 여 `nIndex` 목록의 인덱스입니다.  
   
 ```  
@@ -287,7 +310,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections #&94;](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="a-namegetata--coblistgetat"></a><a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>CObList::GetAt  
  형식의 변수 **위치** 목록에 대 한 키입니다.  
   
 ```  
@@ -317,7 +340,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>예제  
   예를 참조 [FindIndex](#findindex)합니다.  
   
-##  <a name="a-namegetcounta--coblistgetcount"></a><a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>CObList::GetCount  
  이 목록의 요소 수를 가져옵니다.  
   
 ```  
@@ -339,7 +362,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&95;](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="a-namegetheada--coblistgethead"></a><a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>CObList::GetHead  
  가져옵니다는 `CObject` 이 그룹의 head 요소를 나타내는 포인터입니다.  
   
 ```  
@@ -369,7 +392,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections #&96;](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="a-namegetheadpositiona--coblistgetheadposition"></a><a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>CObList::GetHeadPosition  
  이 그룹의 head 요소 위치를 가져옵니다.  
   
 ```  
@@ -391,7 +414,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections #&97;](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="a-namegetnexta--coblistgetnext"></a><a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>CObList::GetNext  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 `POSITION` 목록에서 다음 항목의 값입니다.  
   
 ```  
@@ -436,7 +459,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="a-namegetpreva--coblistgetprev"></a><a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>CObList::GetPrev  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 `POSITION` 목록에서 이전 항목의 값입니다.  
   
 ```  
@@ -479,7 +502,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="a-namegetsizea--coblistgetsize"></a><a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>CObList::GetSize  
  목록의 요소 수를 반환합니다.  
   
 ```  
@@ -504,7 +527,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections #&100;](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="a-namegettaila--coblistgettail"></a><a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>CObList::GetTail  
  가져옵니다는 `CObject` 이 목록의 꼬리 요소를 나타내는 포인터입니다.  
   
 ```  
@@ -530,7 +553,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections #&101;](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="a-namegettailpositiona--coblistgettailposition"></a><a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>CObList::GetTailPosition  
  이 목록의; 꼬리 요소 위치를 가져옵니다. **NULL** 목록이 비어 있는 경우.  
   
 ```  
@@ -552,7 +575,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections #&102;](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="a-nameinsertaftera--coblistinsertafter"></a><a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>CObList::InsertAfter  
  지정된 된 위치에 요소 뒤를이 목록에 요소를 추가 합니다.  
   
 ```  
@@ -593,7 +616,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="a-nameinsertbeforea--coblistinsertbefore"></a><a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>CObList::InsertBefore  
  이 목록에서 지정된 위치의 요소 앞에 요소를 추가합니다.  
   
 ```  
@@ -634,7 +657,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="a-nameisemptya--coblistisempty"></a><a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>CObList::IsEmpty  
  이 목록에 요소가 있는지 여부를 나타냅니다.  
   
 ```  
@@ -654,7 +677,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>예제  
   예를 참조 [RemoveAll](#removeall)합니다.  
   
-##  <a name="a-nameremovealla--coblistremoveall"></a><a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>CObList::RemoveAll  
  이 목록에서 모든 요소를 제거 하 고 연결 된 해제 `CObList` 메모리입니다.  
   
 ```  
@@ -678,7 +701,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&105;](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="a-nameremoveata--coblistremoveat"></a><a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>CObList::RemoveAt  
  이 목록에서 지정된 된 요소를 제거합니다.  
   
 ```  
@@ -716,7 +739,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="a-nameremoveheada--coblistremovehead"></a><a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>CObList::RemoveHead  
  목록의 시작에서 요소를 제거 하 고에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -741,7 +764,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections #&107;](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="a-nameremovetaila--coblistremovetail"></a><a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>CObList::RemoveTail  
  목록 꼬리에서 요소를 제거 하 고에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -766,7 +789,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections #&108;](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="a-namesetata--coblistsetat"></a><a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>CObList::SetAt  
  지정된 된 위치에 요소를 설정 합니다.  
   
 ```  

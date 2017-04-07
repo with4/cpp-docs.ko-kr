@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
+- AFXODLGS/COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-namecoleupdatedialoga--coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
  `COleUpdateDialog` 개체를 생성합니다.  
   
 ```  
@@ -117,7 +120,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>주의  
  이 함수가 구성만 `COleUpdateDialog` 개체입니다. 대화 상자를 표시 하려면 호출 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)합니다. 이 클래스를 대신 사용 해야 `COleLinksDialog` 기존 업데이트 하려는 경우 연결 항목 또는 포함 합니다.  
   
-##  <a name="a-namedomodala--coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>COleUpdateDialog::DoModal  
  링크 편집 대화 상자에 표시 모드를 업데이트 합니다.  
   
 ```  

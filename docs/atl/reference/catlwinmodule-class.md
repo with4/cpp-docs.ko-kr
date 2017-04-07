@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlWinModule
-- ATL.CAtlWinModule
 - CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::AddCreateWndData
+- ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +82,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameaddcreatewnddataa--catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
  이 메서드를 초기화 하 고 추가 하는 `_AtlCreateWndData` 구조입니다.  
   
 ```
@@ -97,7 +99,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>주의  
  이 메서드는 호출 [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) 어떤 초기화는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조입니다. 이 구조를 저장할는 **이** 포인터, 창 프로시저에서 클래스 인스턴스를 가져오는 데 사용 합니다.  
   
-##  <a name="a-namecatlwinmodulea--catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  생성자입니다.  
   
 ```
@@ -107,7 +109,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>주의  
  초기화에 실패 하면는 **EXCEPTION_NONCONTINUABLE** 예외가 발생 합니다.  
   
-##  <a name="a-namedtora--catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  소멸자입니다.  
   
 ```
@@ -117,7 +119,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="a-nameextractcreatewnddataa--catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
  이 메서드가 반환에 대 한 포인터는 `_AtlCreateWndData` 구조입니다.  
   
 ```

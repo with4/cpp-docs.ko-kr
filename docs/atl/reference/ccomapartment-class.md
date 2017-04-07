@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComApartment
 - CComApartment
-- ATL.CComApartment
+- ATLBASE/ATL::CComApartment
+- ATLBASE/ATL::CComApartment::CComApartment
+- ATLBASE/ATL::CComApartment::Apartment
+- ATLBASE/ATL::CComApartment::GetLockCount
+- ATLBASE/ATL::CComApartment::Lock
+- ATLBASE/ATL::CComApartment::Unlock
+- ATLBASE/ATL::CComApartment::m_dwThreadID
+- ATLBASE/ATL::CComApartment::m_hThread
+- ATLBASE/ATL::CComApartment::m_nLockCnt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +92,7 @@ class CComApartment
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>CComApartment::Apartment  
  스레드 시작 주소를 표시합니다.  
   
 ```
@@ -98,7 +105,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>주의  
  자동으로 설정 하는 동안 [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)합니다.  
   
-##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>CComApartment::CComApartment  
  생성자입니다.  
   
 ```
@@ -108,7 +115,7 @@ CComApartment();
 ### <a name="remarks"></a>주의  
  초기화는 `CComApartment` 데이터 멤버 [m_nLockCnt](#m_nlockcnt) 및 [m_hThread](#m_hthread)합니다.  
   
-##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>CComApartment::GetLockCount  
  스레드의 현재 잠금 수를 반환합니다.  
   
 ```
@@ -118,7 +125,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>반환 값  
  스레드의 잠금 카운트입니다.  
   
-##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>CComApartment::Lock  
  스레드의 잠금 수를 증가 시킵니다.  
   
 ```
@@ -133,28 +140,28 @@ LONG Lock();
   
  스레드에서 잠금 수 통계 용도로 사용 됩니다.  
   
-##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  스레드 식별자를 포함합니다.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>CComApartment::m_hThread  
  스레드 핸들을 포함 합니다.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
  스레드의 현재 잠금 수를 포함합니다.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>CComApartment::Unlock  
  스레드의 잠금 횟수를 줄입니다.  
   
 ```

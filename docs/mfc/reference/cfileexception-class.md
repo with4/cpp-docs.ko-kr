@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileException
+- AFX/CFileException
+- AFX/CFileException::CFileException
+- AFX/CFileException::ErrnoToException
+- AFX/CFileException::GetErrorMessage
+- AFX/CFileException::OsErrorToException
+- AFX/CFileException::ThrowErrno
+- AFX/CFileException::ThrowOsError
+- AFX/CFileException::m_cause
+- AFX/CFileException::m_lOsError
+- AFX/CFileException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ class CFileException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecfileexceptiona--cfileexceptioncfileexception"></a><a name="cfileexception"></a>CFileException::CFileException  
+##  <a name="cfileexception"></a>CFileException::CFileException  
  생성 된 `CFileException` 원인 코드와 운영 체제 코드 개체에 저장 하는 개체입니다.  
   
 ```  
@@ -117,7 +127,7 @@ CFileException(
 > [!NOTE]
 >  변수 `lOsError` 에 적용 됩니다 `CFile` 및 `CStdioFile` 개체입니다. `CMemFile` 클래스는이 오류 코드를 처리 하지 않습니다.  
   
-##  <a name="a-nameerrnotoexceptiona--cfileexceptionerrnotoexception"></a><a name="errnotoexception"></a>CFileException::ErrnoToException  
+##  <a name="errnotoexception"></a>CFileException::ErrnoToException  
  에 지정 된 런타임 라이브러리 오류 값으로 변환 된 `CFileException` 오류 값을 열거 합니다.  
   
 ```  
@@ -137,7 +147,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&26;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
   
-##  <a name="a-namegeterrormessagea--cfileexceptiongeterrormessage"></a><a name="geterrormessage"></a>CFileException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CFileException::GetErrorMessage  
  예외를 설명 하는 텍스트를 검색 합니다.  
   
 ```  
@@ -168,7 +178,7 @@ virtual BOOL GetErrorMessage(
   
  [!code-cpp[NVC_MFCExceptions #&22;](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
   
-##  <a name="a-namemcausea--cfileexceptionmcause"></a><a name="m_cause"></a>CFileException::m_cause  
+##  <a name="m_cause"></a>CFileException::m_cause  
  `CFileException` 열거형 형식으로 정의되는 값을 포함합니다.  
   
 ```  
@@ -217,7 +227,7 @@ int m_cause;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&30;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
   
-##  <a name="a-namemloserrora--cfileexceptionmloserror"></a><a name="m_loserror"></a>CFileException::m_lOsError  
+##  <a name="m_loserror"></a>CFileException::m_lOsError  
  이 예외에 대 한 운영 체제 오류 코드를 포함합니다.  
   
 ```  
@@ -227,14 +237,14 @@ LONG m_lOsError;
 ### <a name="remarks"></a>주의  
  오류 코드 목록에 대 한 운영 체제 기술 설명서를 참조 하십시오. 이 데이터 멤버는 형식의 공용 변수 **긴**합니다.  
   
-##  <a name="a-namemstrfilenamea--cfileexceptionmstrfilename"></a><a name="m_strfilename"></a>CFileException::m_strFileName  
+##  <a name="m_strfilename"></a>CFileException::m_strFileName  
  이 예외 상태에 대 한 파일의 이름을 포함합니다.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-##  <a name="a-nameoserrortoexceptiona--cfileexceptionoserrortoexception"></a><a name="oserrortoexception"></a>CFileException::OsErrorToException  
+##  <a name="oserrortoexception"></a>CFileException::OsErrorToException  
  에 해당 하는 열거자를 반환 된 특정 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 함수는 반환 **CFileException::generic**합니다.  
   
 ```  
@@ -251,7 +261,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&27;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
-##  <a name="a-namethrowerrnoa--cfileexceptionthrowerrno"></a><a name="throwerrno"></a>CFileException::ThrowErrno  
+##  <a name="throwerrno"></a>CFileException::ThrowErrno  
  생성 한 `CFileException` 개체에 해당 하는 지정 된 `nErrno` 값, 예외를 throw 합니다.  
   
 ```  
@@ -268,7 +278,7 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&28;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
-##  <a name="a-namethrowoserrora--cfileexceptionthrowoserror"></a><a name="throwoserror"></a>CFileException::ThrowOsError  
+##  <a name="throwoserror"></a>CFileException::ThrowOsError  
  Throw는 `CFileException` 에 해당 하는 지정 된 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 다음으로 코딩 된 예외를 throw 하는 함수 **CFileException::generic**합니다.  
   
 ```  

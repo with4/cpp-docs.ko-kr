@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::affinity_partitioner
+- affinity_partitioner
+- PPL/concurrency::affinity_partitioner
+- PPL/concurrency::affinity_partitioner::affinity_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 92da56fd5b84537c2fa01a252dfee202c729cc96
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 066557d522bc18237ccc484be8b59dc53b7e2905
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner 클래스
@@ -54,7 +56,7 @@ class affinity_partitioner;
   
 |이름|설명|  
 |----------|-----------------|  
-|[affinity_partitioner 생성자](#ctor)|`affinity_partitioner` 개체를 생성합니다.|  
+|[affinity_partitioner](#ctor)|`affinity_partitioner` 개체를 생성합니다.|  
 |[~ affinity_partitioner 소멸자](#dtor)|삭제는 `affinity_partitioner` 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -65,7 +67,7 @@ class affinity_partitioner;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namedtora-affinitypartitioner"></a><a name="dtor"></a>~ affinity_partitioner 
+##  <a name="dtor"></a>~ affinity_partitioner 
 
  삭제는 `affinity_partitioner` 개체입니다.  
   
@@ -73,7 +75,7 @@ class affinity_partitioner;
 ~affinity_partitioner();
 ```  
   
-##  <a name="a-namectora-affinitypartitioner"></a><a name="ctor"></a>affinity_partitioner 
+##  <a name="ctor"></a>affinity_partitioner 
 
  `affinity_partitioner` 개체를 생성합니다.  
   
@@ -82,5 +84,5 @@ affinity_partitioner();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

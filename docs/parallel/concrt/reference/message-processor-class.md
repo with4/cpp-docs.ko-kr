@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor 클래스
@@ -65,15 +70,15 @@ class message_processor;
   
 |이름|설명|  
 |----------|-----------------|  
-|[async_send 메서드](#async_send)|파생된 클래스에서 재정의 되 면 메시지를 비동기적으로 블록에 배치 합니다.|  
-|[sync_send 메서드](#sync_send)|파생된 클래스에서 재정의 되 면 메시지를 동기적으로 블록에 배치 합니다.|  
-|[wait 메서드](#wait)|파생된 클래스에서 재정의 되 면 모든 비동기 작업이 완료 될 때까지 기다립니다.|  
+|[async_send](#async_send)|파생된 클래스에서 재정의 되 면 메시지를 비동기적으로 블록에 배치 합니다.|  
+|[sync_send](#sync_send)|파생된 클래스에서 재정의 되 면 메시지를 동기적으로 블록에 배치 합니다.|  
+|[대기](#wait)|파생된 클래스에서 재정의 되 면 모든 비동기 작업이 완료 될 때까지 기다립니다.|  
   
 ### <a name="protected-methods"></a>Protected 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[process_incoming_message 메서드](#process_incoming_message)|파생된 클래스에서 재정의 되 면 블록으로 전달 메시지 처리를 수행 합니다. 새 메시지가 추가 되 고 큐가 비워 둘 수 발견 될 때마다 한 번씩 호출 합니다.|  
+|[process_incoming_message](#process_incoming_message)|파생된 클래스에서 재정의 되 면 블록으로 전달 메시지 처리를 수행 합니다. 새 메시지가 추가 되 고 큐가 비워 둘 수 발견 될 때마다 한 번씩 호출 합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  파생된 클래스에서 재정의 되 면 메시지를 비동기적으로 블록에 배치 합니다.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>주의  
  프로세서 구현에서는이 메서드를 재정의 해야 합니다.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  파생된 클래스에서 재정의 되 면 블록으로 전달 메시지 처리를 수행 합니다. 새 메시지가 추가 되 고 큐가 비워 둘 수 발견 될 때마다 한 번씩 호출 합니다.  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>주의  
  메시지 블록 구현은이 메서드를 재정의 해야 합니다.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  파생된 클래스에서 재정의 되 면 메시지를 동기적으로 블록에 배치 합니다.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>주의  
  프로세서 구현에서는이 메서드를 재정의 해야 합니다.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>대기 
+##  <a name="wait"></a>대기 
 
  파생된 클래스에서 재정의 되 면 모든 비동기 작업이 완료 될 때까지 기다립니다.  
   

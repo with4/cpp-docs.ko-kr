@@ -9,10 +9,43 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CString
 - CStringT
-- ATL::CStringT
-- ATL.CStringT
+- No header/ATL::CStringT
+- No header/ATL::CStringT::CStringT
+- No header/ATL::CStringT::AllocSysString
+- No header/ATL::CStringT::AnsiToOem
+- No header/ATL::CStringT::AppendFormat
+- No header/ATL::CStringT::Collate
+- No header/ATL::CStringT::CollateNoCase
+- No header/ATL::CStringT::Compare
+- No header/ATL::CStringT::CompareNoCase
+- No header/ATL::CStringT::Delete
+- No header/ATL::CStringT::Find
+- No header/ATL::CStringT::FindOneOf
+- No header/ATL::CStringT::Format
+- No header/ATL::CStringT::FormatMessage
+- No header/ATL::CStringT::FormatMessageV
+- No header/ATL::CStringT::FormatV
+- No header/ATL::CStringT::GetEnvironmentVariable
+- No header/ATL::CStringT::Insert
+- No header/ATL::CStringT::Left
+- No header/ATL::CStringT::LoadString
+- No header/ATL::CStringT::MakeLower
+- No header/ATL::CStringT::MakeReverse
+- No header/ATL::CStringT::MakeUpper
+- No header/ATL::CStringT::Mid
+- No header/ATL::CStringT::OemToAnsi
+- No header/ATL::CStringT::Remove
+- No header/ATL::CStringT::Replace
+- No header/ATL::CStringT::ReverseFind
+- No header/ATL::CStringT::Right
+- No header/ATL::CStringT::SetSysString
+- No header/ATL::CStringT::SpanExcluding
+- No header/ATL::CStringT::SpanIncluding
+- No header/ATL::CStringT::Tokenize
+- No header/ATL::CStringT::Trim
+- No header/ATL::CStringT::TrimLeft
+- No header/ATL::CStringT::TrimRight
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -231,7 +264,7 @@ public CSimpleStringT<BaseType,
 |cstringt.h|MFC 전용 string 개체|  
 |atlstr.h|비 MFC string 개체|  
   
-##  <a name="a-nameallocsysstringa--cstringtallocsysstring"></a><a name="allocsysstring"></a>CStringT::AllocSysString  
+##  <a name="allocsysstring"></a>CStringT::AllocSysString  
  자동화 호환 문자열 형식의 할당 `BSTR` 의 내용을 복사 하 고는 `CStringT` null 종결 문자를 포함 하 여 메서드를 개체입니다.  
   
 ```  
@@ -253,7 +286,7 @@ BSTR AllocSysString() const;
   
  [!code-cpp[NVC_ATLMFC_Utilities #&105;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
   
-##  <a name="a-nameansitooema--cstringtansitooem"></a><a name="ansitooem"></a>CStringT::AnsiToOem  
+##  <a name="ansitooem"></a>CStringT::AnsiToOem  
  이 모든 문자 변환 `CStringT` ANSI 문자 집합을 OEM 문자 집합에서에서 개체입니다.  
   
 ```  
@@ -266,7 +299,7 @@ void AnsiToOem();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&106;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
   
-##  <a name="a-nameappendformata--cstringtappendformat"></a><a name="appendformat"></a>CStringT::AppendFormat  
+##  <a name="appendformat"></a>CStringT::AppendFormat  
  서식이 지정 된 데이터를 기존 추가 `CStringT` 개체입니다.  
   
 ```  
@@ -290,7 +323,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&107;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
   
-##  <a name="a-namecollatea--cstringtcollate"></a><a name="collate"></a>CStringT::Collate  
+##  <a name="collate"></a>CStringT::Collate  
  제네릭 텍스트 함수를 사용 하 여 두 문자열을 비교 `_tcscoll`합니다.  
   
 ```  
@@ -307,7 +340,7 @@ int Collate(PCXSTR psz) const throw();
 ### <a name="remarks"></a>주의  
  제네릭 텍스트 함수인 `_tcscoll`, TCHAR에 정의 된 합니다. H, 중 하나에 매핑됩니다 `strcoll`, `wcscoll`, 또는 `_mbscoll`컴파일 타임에 정의 된 문자 집합에 따라 합니다. 각 함수 사용 있는 현재 코드 페이지에 따라 문자열의 대/소문자 구분 비교를 수행 합니다. 자세한 내용은 참조 [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)합니다.  
   
-##  <a name="a-namecollatenocasea--cstringtcollatenocase"></a><a name="collatenocase"></a>CStringT::CollateNoCase  
+##  <a name="collatenocase"></a>CStringT::CollateNoCase  
  제네릭 텍스트 함수를 사용 하 여 두 문자열을 비교 `_tcscoll`합니다.  
   
 ```  
@@ -327,7 +360,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&109;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
   
-##  <a name="a-namecomparea--cstringtcompare"></a><a name="compare"></a>CStringT::Compare  
+##  <a name="compare"></a>CStringT::Compare  
  두 문자열 (대/소문자 구분)을 비교 합니다.  
   
 ```  
@@ -351,7 +384,7 @@ int Compare(PCXSTR psz) const;
   
  [!code-cpp[NVC_ATLMFC_Utilities #&110;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
   
-##  <a name="a-namecomparenocasea--cstringtcomparenocase"></a><a name="comparenocase"></a>CStringT::CompareNoCase  
+##  <a name="comparenocase"></a>CStringT::CompareNoCase  
  두 문자열 (대/소문자 구분)을 비교 합니다.  
   
 ```  
@@ -371,7 +404,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&111;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
   
-##  <a name="a-namecstringta--cstringtcstringt"></a><a name="cstringt"></a>CStringT::CStringT  
+##  <a name="cstringt"></a>CStringT::CStringT  
  `CStringT` 개체를 생성합니다.  
   
 ```  
@@ -509,7 +542,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&112;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
   
-##  <a name="a-namedtorcstringta--cstringtcstringt"></a><a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
+##  <a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
  소멸은 `CStringT` 개체입니다.  
   
 ```  
@@ -519,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="remarks"></a>주의  
  소멸은 `CStringT` 개체입니다.  
   
-##  <a name="a-namedeletea--cstringtdelete"></a><a name="delete"></a>CStringT::Delete  
+##  <a name="delete"></a>CStringT::Delete  
  지정된 된 인덱스에서 문자로 시작 하는 문자열에서 문자 또는 문자를 삭제 합니다.  
   
 ```  
@@ -549,7 +582,7 @@ After: Soccer best,
     but hockey is quicker!  
 ```  
   
-##  <a name="a-namefinda--cstringtfind"></a><a name="find"></a>CStringT::Find  
+##  <a name="find"></a>CStringT::Find  
  문자 또는 부분 문자열의 첫 번째 일치 항목에 대 한이 문자열을 검색합니다.  
   
 ```  
@@ -576,7 +609,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&114;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
   
-##  <a name="a-namefindoneofa--cstringtfindoneof"></a><a name="findoneof"></a>CStringT::FindOneOf  
+##  <a name="findoneof"></a>CStringT::FindOneOf  
  이 문자열에 포함 된 모든 문자와 일치 하는 첫 번째 문자에 대 한 검색 `pszCharSet`합니다.  
   
 ```  
@@ -596,7 +629,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&115;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
-##  <a name="a-nameformata--cstringtformat"></a><a name="format"></a>CStringT::Format  
+##  <a name="format"></a>CStringT::Format  
  서식이 지정 된 데이터를 씁니다는 `CStringT` 동일한 방식으로 [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) C 스타일 문자 배열로 데이터의 형식을 지정 합니다.  
   
 ```  
@@ -626,7 +659,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&117;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
   
-##  <a name="a-nameformatmessagea--cstringtformatmessage"></a><a name="formatmessage"></a>CStringT::FormatMessage  
+##  <a name="formatmessage"></a>CStringT::FormatMessage  
  메시지 문자열의 형식을 지정합니다.  
   
 ```  
@@ -655,7 +688,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&118;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
   
-##  <a name="a-nameformatmessageva--cstringtformatmessagev"></a><a name="formatmessagev"></a>CStringT::FormatMessageV  
+##  <a name="formatmessagev"></a>CStringT::FormatMessageV  
  가변 인수 목록을 사용 하 여 메시지 문자열의 형식을 지정 합니다.  
   
 ```  
@@ -677,7 +710,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
   
  자세한 내용은 Windows를 참조 하십시오. [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameformatva--cstringtformatv"></a><a name="formatv"></a>CStringT::FormatV  
+##  <a name="formatv"></a>CStringT::FormatV  
  가변 인수 목록을 사용 하 여 메시지 문자열의 형식을 지정 합니다.  
   
 ```  
@@ -699,7 +732,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
   
  [!code-cpp[NVC_ATLMFC_Utilities #&120;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
-##  <a name="a-namegetenvironmentvariablea--cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
+##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
  지정한 환경 변수의 값을 문자열을 설정합니다.  
   
 ```  
@@ -719,7 +752,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&121;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
   
-##  <a name="a-nameinserta--cstringtinsert"></a><a name="insert"></a>CStringT::Insert  
+##  <a name="insert"></a>CStringT::Insert  
  문자열 내에서 지정된 된 인덱스에서 단일 문자 또는 부분 문자열을 삽입합니다.  
   
 ```  
@@ -746,7 +779,7 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&122;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
   
-##  <a name="a-namelefta--cstringtleft"></a><a name="left"></a>CStringT::Left  
+##  <a name="left"></a>CStringT::Left  
  이 `nCount` 개체에서 맨 왼쪽 `CStringT` 문자를 추출하고 추출된 부분 문자열의 복사본을 반환합니다.  
   
 ```  
@@ -768,7 +801,7 @@ CStringT Left(int nCount) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&123;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
   
-##  <a name="a-nameloadstringa--cstringtloadstring"></a><a name="loadstring"></a>CStringT::LoadString  
+##  <a name="loadstring"></a>CStringT::LoadString  
  로 식별 되는 Windows 문자열 리소스를 읽고 `nID`, 기존 `CStringT` 개체입니다.  
   
 ```  
@@ -796,7 +829,7 @@ BOOL LoadString(UINT nID);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&124;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
   
-##  <a name="a-namemakelowera--cstringtmakelower"></a><a name="makelower"></a>CStringT::MakeLower  
+##  <a name="makelower"></a>CStringT::MakeLower  
  변환 된 `CStringT` 개체 소문자 문자열입니다.  
   
 ```  
@@ -809,7 +842,7 @@ CStringT& MakeLower();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&125;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
   
-##  <a name="a-namemakereversea--cstringtmakereverse"></a><a name="makereverse"></a>CStringT::MakeReverse  
+##  <a name="makereverse"></a>CStringT::MakeReverse  
  문자 역순으로 `CStringT` 개체입니다.  
   
 ```  
@@ -822,7 +855,7 @@ CStringT& MakeReverse();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&126;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
   
-##  <a name="a-namemakeuppera--cstringtmakeupper"></a><a name="makeupper"></a>CStringT::MakeUpper  
+##  <a name="makeupper"></a>CStringT::MakeUpper  
  변환 된 `CStringT` 개체 대문자로 된 문자열입니다.  
   
 ```  
@@ -837,7 +870,7 @@ CStringT& MakeUpper();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities&127;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
   
-##  <a name="a-namemida--cstringtmid"></a><a name="mid"></a>CStringT::Mid  
+##  <a name="mid"></a>CStringT::Mid  
  길이의 부분 문자열을 추출 `nCount` 이 문자 `CStringT` 위치에서 시작 하는 개체 `iFirst` (0부터 시작)입니다.  
   
 ```  
@@ -863,7 +896,7 @@ CStringT Mid(int iFirst) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&128;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
   
-##  <a name="a-nameoemtoansia--cstringtoemtoansi"></a><a name="oemtoansi"></a>CStringT::OemToAnsi  
+##  <a name="oemtoansi"></a>CStringT::OemToAnsi  
  이 모든 문자 변환 `CStringT` OEM 문자 집합을 ANSI 문자 집합에서에서 개체입니다.  
   
 ```  
@@ -876,7 +909,7 @@ void OemToAnsi();
 ### <a name="example"></a>예제  
  예를 참조 [CStringT::AnsiToOem](#ansitooem)합니다.  
   
-##  <a name="a-nameoperatoradda--cstringtoperator-"></a><a name="operator_add"></a>CStringT::operator +  
+##  <a name="operator_add"></a>CStringT::operator +  
  두 문자열 또는 문자 및 문자열을 연결합니다.  
   
 ```  
@@ -917,7 +950,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&140;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--cstringtoperator-"></a><a name="operator_add_eq"></a>CStringT::operator + =  
+##  <a name="operator_add_eq"></a>CStringT::operator + =  
  문자열의 끝 문자를 연결합니다.  
   
 ```  
@@ -969,7 +1002,7 @@ CStringT& operator+=(const VARIANT& var);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&141;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--cstringtoperator-"></a><a name="operator_eq_eq"></a>CStringT::operator = =  
+##  <a name="operator_eq_eq"></a>CStringT::operator = =  
  두 문자열이 논리적으로 동일한 지를 결정 합니다.  
   
 ```  
@@ -1007,7 +1040,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&142;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
   
-##  <a name="a-nameoperatorneqa--cstringtoperator-"></a><a name="operator_neq"></a>CStringT::operator! =  
+##  <a name="operator_neq"></a>CStringT::operator! =  
  논리적으로 하지 두 문자열이 같은지를 결정 합니다.  
   
 ```  
@@ -1045,7 +1078,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&143;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
   
-##  <a name="a-nameoperatorlta--cstringtoperator-lt"></a><a name="operator_lt"></a>CStringT::operator&lt;  
+##  <a name="operator_lt"></a>CStringT::operator&lt;  
  문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 작은지 여부를 결정 합니다.  
   
 ```  
@@ -1079,7 +1112,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&144;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
   
-##  <a name="a-nameoperatorgta--cstringtoperator-gt"></a><a name="operator_gt"></a>CStringT::operator&gt;  
+##  <a name="operator_gt"></a>CStringT::operator&gt;  
  문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 큰지 여부를 결정 합니다.  
   
 ```  
@@ -1113,7 +1146,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&145;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
   
-##  <a name="a-nameoperatorlteqa--cstringtoperator-lt"></a><a name="operator_lt_eq"></a>CStringT::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CStringT::operator&lt;=  
  문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 작거나 인지 확인 합니다.  
   
 ```  
@@ -1147,7 +1180,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities 늘어나고](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
   
-##  <a name="a-nameoperatorgteqa--cstringtoperator-gt"></a><a name="operator_gt_eq"></a>CStringT::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CStringT::operator&gt;=  
  문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 크거나 같은 경우 인지 확인 합니다.  
   
 ```  
@@ -1181,7 +1214,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&147;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
   
-##  <a name="a-nameremovea--cstringtremove"></a><a name="remove"></a>CStringT::Remove  
+##  <a name="remove"></a>CStringT::Remove  
  문자열에서 지정 된 문자의 모든 인스턴스를 제거합니다.  
   
 ```  
@@ -1201,7 +1234,7 @@ int Remove(XCHAR chRemove);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&129;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
   
-##  <a name="a-namereplacea--cstringtreplace"></a><a name="replace"></a>CStringT::Replace  
+##  <a name="replace"></a>CStringT::Replace  
  두 가지 버전의 `Replace`합니다. 첫 번째 버전 다른 부분 문자열을 사용 하 여 하나 이상의 부분 문자열의 복사본을 대체 합니다. 두 부분 문자열은 null로 끝납니다. 두 번째 버전 다른 문자를 사용 하 여 하나 이상의 문자의 복사본을 대체 합니다. 두 버전 모두에 저장 하는 문자 데이터에서 작동 `CStringT`합니다.  
   
 ```  
@@ -1244,7 +1277,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&200;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
   
-##  <a name="a-namereversefinda--cstringtreversefind"></a><a name="reversefind"></a>CStringT::ReverseFind  
+##  <a name="reversefind"></a>CStringT::ReverseFind  
  이 검색 `CStringT` 문자의 마지막 일치 항목에 대 한 개체입니다.  
   
 ```  
@@ -1264,7 +1297,7 @@ int ReverseFind(XCHAR ch) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&130;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
   
-##  <a name="a-namerighta--cstringtright"></a><a name="right"></a>CStringT::Right  
+##  <a name="right"></a>CStringT::Right  
  마지막 추출 (즉, 가장 오른쪽) `nCount` 이 문자 `CStringT` 개체 추출된 된 부분 문자열의 복사본을 반환 합니다.  
   
 ```  
@@ -1286,7 +1319,7 @@ CStringT Right(int nCount) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&131;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
-##  <a name="a-namesetsysstringa--cstringtsetsysstring"></a><a name="setsysstring"></a>CStringT::SetSysString  
+##  <a name="setsysstring"></a>CStringT::SetSysString  
  다시 할당는 `BSTR` 가리키는 `pbstr` 의 내용을 복사 하 고는 `CStringT` 개체를 포함 하는 `NULL` 문자입니다.  
   
 ```  
@@ -1308,7 +1341,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&132;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
   
-##  <a name="a-namespanexcludinga--cstringtspanexcluding"></a><a name="spanexcluding"></a>CStringT::SpanExcluding  
+##  <a name="spanexcluding"></a>CStringT::SpanExcluding  
  로 식별 되는 문자 집합에 없는 첫 번째 문자부터 문자열에서 문자를 추출 `pszCharSet`합니다.  
   
 ```  
@@ -1328,7 +1361,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&133;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
   
-##  <a name="a-namespanincludinga--cstringtspanincluding"></a><a name="spanincluding"></a>CStringT::SpanIncluding  
+##  <a name="spanincluding"></a>CStringT::SpanIncluding  
  로 식별 되는 문자 집합에 있는 첫 번째 문자부터 문자열에서 문자를 추출 `pszCharSet`합니다.  
   
 ```  
@@ -1348,7 +1381,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&134;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
   
-##  <a name="a-nametokenizea--cstringttokenize"></a><a name="tokenize"></a>CStringT::Tokenize  
+##  <a name="tokenize"></a>CStringT::Tokenize  
  대상 문자열의 다음 토큰을 찾습니다.  
   
 ```  
@@ -1382,7 +1415,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
   
  `Resulting Token: Third`  
   
-##  <a name="a-nametrima--cstringttrim"></a><a name="trim"></a>CStringT::Trim  
+##  <a name="trim"></a>CStringT::Trim  
  선행 및 후행 문자열에서 문자를 삭제 합니다.  
   
 ```  
@@ -1420,7 +1453,7 @@ CStringT& Trim();
   
  `After : "Soccer is best, but liquor is quicker"`  
   
-##  <a name="a-nametrimlefta--cstringttrimleft"></a><a name="trimleft"></a>CStringT::TrimLeft  
+##  <a name="trimleft"></a>CStringT::TrimLeft  
  문자열에서 선행 문자를 삭제 합니다.  
   
 ```  
@@ -1451,7 +1484,7 @@ CStringT& TrimLeft();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&137;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
   
-##  <a name="a-nametrimrighta--cstringttrimright"></a><a name="trimright"></a>CStringT::TrimRight  
+##  <a name="trimright"></a>CStringT::TrimRight  
  문자열에서 후행 문자를 삭제 합니다.  
   
 ```  

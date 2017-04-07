@@ -10,6 +10,37 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionBar
+- AFXCAPTIONBAR/CMFCCaptionBar
+- AFXCAPTIONBAR/CMFCCaptionBar::Create
+- AFXCAPTIONBAR/CMFCCaptionBar::DoesAllowDynInsertBefore
+- AFXCAPTIONBAR/CMFCCaptionBar::EnableButton
+- AFXCAPTIONBAR/CMFCCaptionBar::GetAlignment
+- AFXCAPTIONBAR/CMFCCaptionBar::GetBorderSize
+- AFXCAPTIONBAR/CMFCCaptionBar::GetButtonRect
+- AFXCAPTIONBAR/CMFCCaptionBar::GetMargin
+- AFXCAPTIONBAR/CMFCCaptionBar::IsMessageBarMode
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveBitmap
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveButton
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveIcon
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveText
+- AFXCAPTIONBAR/CMFCCaptionBar::SetBitmap
+- AFXCAPTIONBAR/CMFCCaptionBar::SetBorderSize
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButton
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButtonPressed
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButtonToolTip
+- AFXCAPTIONBAR/CMFCCaptionBar::SetFlatBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::SetIcon
+- AFXCAPTIONBAR/CMFCCaptionBar::SetImageToolTip
+- AFXCAPTIONBAR/CMFCCaptionBar::SetMargin
+- AFXCAPTIONBAR/CMFCCaptionBar::SetText
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawBackground
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawButton
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawImage
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawText
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBackground
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -133,7 +164,7 @@ class CMFCCaptionBar : public CPane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcaptionbar.h  
   
-##  <a name="a-namecreatea--cmfccaptionbarcreate"></a><a name="create"></a>CMFCCaptionBar::Create  
+##  <a name="create"></a>CMFCCaptionBar::Create  
  캡션 표시줄 컨트롤을 만들고 연결 하는 `CMFCCaptionBar` 개체입니다.  
   
 ```  
@@ -167,7 +198,7 @@ BOOL Create(
 ### <a name="remarks"></a>주의  
  생성 한 `CMFCCaptionBar` 두 단계에서는 개체입니다. 먼저 생성자를 호출 하 고 호출 하는 다음의 `Create` Windows 컨트롤을 만들고에 연결 하는 메서드는 `CMFCCaptionBar` 개체입니다.  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfccaptionbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
  캡션 표시줄 및 부모 프레임 간에 다른 창을 동적으로 삽입할 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -179,7 +210,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenablebuttona--cmfccaptionbarenablebutton"></a><a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
+##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
  캡션 표시줄에 단추를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -190,7 +221,7 @@ void EnableButton(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`단추를 사용할 수 있도록 `FALSE` 단추를 비활성화 하려면.  
   
-##  <a name="a-namegetalignmenta--cmfccaptionbargetalignment"></a><a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
+##  <a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
  지정 된 요소의 맞춤을 반환 합니다.  
   
 ```  
@@ -215,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namegetbordersizea--cmfccaptionbargetbordersize"></a><a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
+##  <a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
  캡션 표시줄의 테두리 크기를 반환합니다.  
   
 ```  
@@ -225,7 +256,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>반환 값  
  테두리의 픽셀 크기입니다.  
   
-##  <a name="a-namegetbuttonrecta--cmfccaptionbargetbuttonrect"></a><a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
+##  <a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
  캡션 표시줄에 단추에 대 한 경계 사각형을 검색합니다.  
   
 ```  
@@ -235,7 +266,7 @@ CRect GetButtonRect() const;
 ### <a name="return-value"></a>반환 값  
  A `CRect` 의 캡션 표시줄에 단추는 경계 사각형의 좌표를 포함 하는 개체입니다.  
   
-##  <a name="a-namegetmargina--cmfccaptionbargetmargin"></a><a name="getmargin"></a>CMFCCaptionBar::GetMargin  
+##  <a name="getmargin"></a>CMFCCaptionBar::GetMargin  
  캡션 표시줄 요소의 가장자리와의 캡션 표시줄 컨트롤의 가장자리 사이의 거리를 반환 합니다.  
   
 ```  
@@ -245,7 +276,7 @@ int GetMargin() const;
 ### <a name="return-value"></a>반환 값  
  픽셀 단위로 캡션 표시줄 요소의 가장자리와의 캡션 표시줄 컨트롤의 가장자리 사이의 거리입니다.  
   
-##  <a name="a-nameismessagebarmodea--cmfccaptionbarismessagebarmode"></a><a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
+##  <a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
  캡션 표시줄 메시지 표시줄 모드 인지 여부를 지정 합니다.  
   
 ```  
@@ -258,28 +289,28 @@ BOOL IsMessageBarMode() const;
 ### <a name="remarks"></a>주의  
  메시지 표시줄 모드의 캡션 표시줄 도구 설명, 메시지 텍스트 및 단추를 사용 하 여 이미지를 표시합니다.  
   
-##  <a name="a-namemclrbarbackgrounda--cmfccaptionbarmclrbarbackground"></a><a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
+##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
  캡션 표시줄의 배경색입니다.  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
-##  <a name="a-namemclrbarbordera--cmfccaptionbarmclrbarborder"></a><a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
+##  <a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
  캡션 표시줄의 테두리 색입니다.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
-##  <a name="a-namemclrbartexta--cmfccaptionbarmclrbartext"></a><a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
+##  <a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
  캡션 표시줄 텍스트의 색입니다.  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
-##  <a name="a-nameondrawbackgrounda--cmfccaptionbarondrawbackground"></a><a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
+##  <a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
  캡션 표시줄의 배경을 채울 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -300,7 +331,7 @@ virtual void OnDrawBackground(
   
  이 메서드를 재정의 하는 `CMFCCaptionBar` 캡션 표시줄의 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
-##  <a name="a-nameondrawbordera--cmfccaptionbarondrawborder"></a><a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
  캡션 표시줄의 테두리를 그리는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -321,7 +352,7 @@ virtual void OnDrawBorder(
   
  이 메서드를 재정의 하는 `CMFCCaptionBar` 의 캡션 표시줄의 테두리 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
-##  <a name="a-nameondrawbuttona--cmfccaptionbarondrawbutton"></a><a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
+##  <a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
  캡션 표시줄 단추를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -348,7 +379,7 @@ virtual void OnDrawButton(
 ### <a name="remarks"></a>주의  
  이 메서드를 재정의 하는 `CMFCCaptionBar` 의 캡션 표시줄의 단추 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
-##  <a name="a-nameondrawimagea--cmfccaptionbarondrawimage"></a><a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
+##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
  캡션 표시줄 이미지를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -367,7 +398,7 @@ virtual void OnDrawImage(
 ### <a name="remarks"></a>주의  
  이 메서드를 재정의 하는 `CMFCCaptionBar` 이미지 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
-##  <a name="a-nameondrawtexta--cmfccaptionbarondrawtext"></a><a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
  캡션 표시줄 텍스트를 그릴 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -392,14 +423,14 @@ virtual void OnDrawText(
   
  이 메서드를 재정의 하는 `CMFCCaptionBar` 캡션 표시줄 텍스트의 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
-##  <a name="a-nameremovebitmapa--cmfccaptionbarremovebitmap"></a><a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
+##  <a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
  캡션 표시줄에서 비트맵 이미지를 제거합니다.  
   
 ```  
 void RemoveBitmap();
 ```  
   
-##  <a name="a-nameremovebuttona--cmfccaptionbarremovebutton"></a><a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
+##  <a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
  캡션 표시줄에서 단추를 제거합니다.  
   
 ```  
@@ -409,21 +440,21 @@ void RemoveButton();
 ### <a name="remarks"></a>주의  
  캡션 표시줄 요소의 레이아웃은 자동으로 조정 됩니다.  
   
-##  <a name="a-nameremoveicona--cmfccaptionbarremoveicon"></a><a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
+##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
  캡션 표시줄에서 아이콘을 제거 합니다.  
   
 ```  
 void RemoveIcon();
 ```  
   
-##  <a name="a-nameremovetexta--cmfccaptionbarremovetext"></a><a name="removetext"></a>CMFCCaptionBar::RemoveText  
+##  <a name="removetext"></a>CMFCCaptionBar::RemoveText  
  캡션 표시줄에서 텍스트 레이블을 제거합니다.  
   
 ```  
 void RemoveText();
 ```  
   
-##  <a name="a-namesetbitmapa--cmfccaptionbarsetbitmap"></a><a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
+##  <a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
  캡션 표시줄에 대 한 비트맵 이미지를 설정합니다.  
   
 ```  
@@ -469,7 +500,7 @@ void SetBitmap(
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namesetbordersizea--cmfccaptionbarsetbordersize"></a><a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
+##  <a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
  캡션 표시줄의 테두리 크기를 설정합니다.  
   
 ```  
@@ -480,7 +511,7 @@ void SetBorderSize(int nSize);
  [in] `nSize`  
  캡션 표시줄 테두리를 픽셀 단위로 새 크기입니다.  
   
-##  <a name="a-namesetbuttona--cmfccaptionbarsetbutton"></a><a name="setbutton"></a>CMFCCaptionBar::SetButton  
+##  <a name="setbutton"></a>CMFCCaptionBar::SetButton  
  캡션 표시줄에 대 한 단추를 설정합니다.  
   
 ```  
@@ -504,7 +535,7 @@ void SetButton(
  `bHasDropDownArrow`  
  `TRUE`단추는 드롭다운 화살표를 표시 하는 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-namesetbuttonpresseda--cmfccaptionbarsetbuttonpressed"></a><a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
+##  <a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
  단추 누름 유지 여부를 지정 합니다.  
   
 ```  
@@ -515,7 +546,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
  `bPresed`  
  `TRUE`단추를 누른된 상태로 유지 하는 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-namesetbuttontooltipa--cmfccaptionbarsetbuttontooltip"></a><a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
+##  <a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
  단추에 대 한 도구 설명을 설정 합니다.  
   
 ```  
@@ -531,7 +562,7 @@ void SetButtonToolTip(
  [in] `lpszDescription`  
  도구 설명에 대 한 설명입니다.  
   
-##  <a name="a-namesetflatbordera--cmfccaptionbarsetflatborder"></a><a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
+##  <a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
  캡션 표시줄의 테두리 스타일을 설정합니다.  
   
 ```  
@@ -542,7 +573,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
  [in] `bFlat`  
  `TRUE`캡션 표시줄의 테두리 플랫 경우 사용 됩니다. `FALSE`3D 테두리 경우.  
   
-##  <a name="a-nameseticona--cmfccaptionbarseticon"></a><a name="seticon"></a>CMFCCaptionBar::SetIcon  
+##  <a name="seticon"></a>CMFCCaptionBar::SetIcon  
  캡션 표시줄에 대 한 아이콘을 설정합니다.  
   
 ```  
@@ -571,7 +602,7 @@ void SetIcon(
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namesetimagetooltipa--cmfccaptionbarsetimagetooltip"></a><a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
+##  <a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
  캡션 표시줄에는 이미지에 대 한 도구 설명을 설정합니다.  
   
 ```  
@@ -587,7 +618,7 @@ void SetImageToolTip(
  [in] `lpszDescription`  
  도구 설명에 대 한 설명입니다.  
   
-##  <a name="a-namesetmargina--cmfccaptionbarsetmargin"></a><a name="setmargin"></a>CMFCCaptionBar::SetMargin  
+##  <a name="setmargin"></a>CMFCCaptionBar::SetMargin  
  캡션 표시줄 요소의 가장자리와의 캡션 표시줄 컨트롤의 가장자리 사이의 거리를 설정합니다.  
   
 ```  
@@ -598,7 +629,7 @@ void SetMargin(int nMargin);
  [in] `nMargin`  
  픽셀 단위로 캡션 표시줄 요소의 가장자리와의 캡션 표시줄 컨트롤의 가장자리 사이의 거리입니다.  
   
-##  <a name="a-namesettexta--cmfccaptionbarsettext"></a><a name="settext"></a>CMFCCaptionBar::SetText  
+##  <a name="settext"></a>CMFCCaptionBar::SetText  
  캡션 표시줄에 대 한 텍스트 레이블을 가져오거나 설정 합니다.  
   
 ```  

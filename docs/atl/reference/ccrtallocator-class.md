@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator::Allocate
+- ATLCORE/ATL::CCRTAllocator::Free
+- ATLCORE/ATL::CCRTAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +68,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="a-nameallocatea--ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Allocate  
+##  <a name="allocate"></a>CCRTAllocator::Allocate  
  메모리를 할당하려면 이 정적 함수를 호출합니다.  
   
 ```
@@ -81,7 +85,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>주의  
  메모리를 할당합니다. 참조 [malloc](../../c-runtime-library/reference/malloc.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namefreea--ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Free  
+##  <a name="free"></a>CCRTAllocator::Free  
  메모리를 정적이 함수를 호출 합니다.  
   
 ```
@@ -95,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>주의  
  할당된 된 메모리를 해제합니다. 참조 [무료](../../c-runtime-library/reference/free.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namereallocatea--ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  메모리를 다시 할당하려면 이 정적 함수를 호출합니다.  
   
 ```

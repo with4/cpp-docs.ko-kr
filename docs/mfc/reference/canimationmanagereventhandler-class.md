@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationManagerEventHandler
 - CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +82,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationmanagereventhandlera--canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
+##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  CAnimationManagerEventHandler 개체를 만듭니다.  
@@ -87,7 +91,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 CAnimationManagerEventHandler();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  CAnimationManagerEventHandler 개체의 인스턴스를 만듭니다.  
@@ -108,7 +112,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-nameonmanagerstatuschangeda--canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
+##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  애니메이션 관리자의 상태가 변경 될 때 호출 됩니다.  
@@ -129,7 +133,7 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ### <a name="return-value"></a>반환 값  
  현재 구현에서는 항상 S_OK;를 반환합니다.  
   
-##  <a name="a-namesetanimationcontrollera--canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  이벤트를 라우팅합니다 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.  

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrimitiveElementTraits<T>
 - CPrimitiveElementTraits
-- ATL.CPrimitiveElementTraits
-- ATL::CPrimitiveElementTraits<T>
-- ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
+- ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +84,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
  컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
  컬렉션 클래스 개체에서 요소를 검색에 사용할 데이터 형식입니다.  
   
 ```

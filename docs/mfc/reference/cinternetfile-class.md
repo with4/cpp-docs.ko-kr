@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetFile
+- AFXINET/CInternetFile
+- AFXINET/CInternetFile::CInternetFile
+- AFXINET/CInternetFile::Abort
+- AFXINET/CInternetFile::Close
+- AFXINET/CInternetFile::Flush
+- AFXINET/CInternetFile::GetLength
+- AFXINET/CInternetFile::Read
+- AFXINET/CInternetFile::ReadString
+- AFXINET/CInternetFile::Seek
+- AFXINET/CInternetFile::SetReadBufferSize
+- AFXINET/CInternetFile::SetWriteBufferSize
+- AFXINET/CInternetFile::Write
+- AFXINET/CInternetFile::WriteString
+- AFXINET/CInternetFile::m_hFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +119,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-nameaborta--cinternetfileabort"></a><a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>CInternetFile::Abort  
  이 개체와 연결 된 파일을 닫고 파일을 읽거나 쓰기 위해 사용할 수 없게 하 게 합니다.  
   
 ```  
@@ -117,7 +131,7 @@ virtual void Abort();
   
  예외를 처리 하는 경우 **중단** 에서 다른 [닫기](#close) 두 가지 중요 한 차이점이 있습니다. 첫째, 고 **중단** 함수는 예외를 throw 하지 오류에 오류를 무시 하기 때문에 있습니다. 둘째, **중단** 없는 **ASSERT** 파일이 열려 있지 않은 이전에 닫힌 경우.  
   
-##  <a name="a-namecinternetfilea--cinternetfilecinternetfile"></a><a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
  이 멤버 함수를 호출 하는 경우는 `CInternetFile` 개체가 만들어집니다.  
   
 ```  
@@ -162,7 +176,7 @@ CInternetFile(
 ### <a name="remarks"></a>주의  
  만들 없도록는 `CInternetFile` 개체에 직접. 대신, 호출 하 여 클래스의 파생된 클래스 중 하나의 개체를 만들 [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) 또는 [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)합니다. 또한 만들 수는 `CInternetFile` 개체를 호출 하 여 [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="a-nameclosea--cinternetfileclose"></a><a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>CInternetFile::Close  
  닫습니다는 `CInternetFile` 되 고 해당 리소스를 해제 합니다.  
   
 ```  
@@ -172,7 +186,7 @@ virtual void Close();
 ### <a name="remarks"></a>주의  
  쓰기 위해 파일을 연, 경우 암시적으로 호출 [플러시](#flush) 버퍼링 된 모든 데이터가 수행 하기 위해 호스트에 기록 됩니다. 호출 해야 **닫기** 파일을 사용 하 여 작업을 마쳤으면 합니다.  
   
-##  <a name="a-nameflusha--cinternetfileflush"></a><a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>CInternetFile::Flush  
  이 멤버 함수를 쓰기 버퍼의 내용을 플러시를 호출 합니다.  
   
 ```  
@@ -182,28 +196,28 @@ virtual void Flush();
 ### <a name="remarks"></a>주의  
  사용 하 여 `Flush` 대상 컴퓨터에 모든 데이터를 메모리에에서는 실제로 기록 되도록 하려면 한 호스트 컴퓨터와 사용자 트랜잭션이 완료 되도록 합니다. `Flush`에 유효 `CInternetFile` 쓰기용으로 열 개체입니다.  
   
-##  <a name="a-namegetlengtha--cinternetfilegetlength"></a><a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>CInternetFile::GetLength  
  파일의 크기를 반환합니다.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="a-namemhfilea--cinternetfilemhfile"></a><a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>CInternetFile::m_hFile  
  이 개체와 연결 된 파일에 대 한 핸들입니다.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="a-nameoperatorhinterneta--cinternetfileoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
  이 연산자를 사용 하 여 현재 인터넷 세션에 대 한 창 핸들을 가져옵니다.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="a-namereada--cinternetfileread"></a><a name="read"></a>CInternetFile::Read  
+##  <a name="read"></a>CInternetFile::Read  
  `lpvBuf`부터 시작하여 지정된 바이트 수 `nCount`를 지정된 메모리로 읽으려면 이 멤버 함수를 호출합니다.  
   
 ```  
@@ -227,7 +241,7 @@ virtual UINT Read(
   
  모든 데이터를 검색 하도록 응용 프로그램 계속 해야 호출의 **CInternetFile::Read** 메서드가&0;을 반환 될 때까지 메서드.  
   
-##  <a name="a-namereadstringa--cinternetfilereadstring"></a><a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>CInternetFile::ReadString  
  줄 바꿈 문자를 찾을 때까지 문자 스트림을 읽는 데이 함수를 호출 합니다.  
   
 ```  
@@ -259,7 +273,7 @@ virtual LPTSTR ReadString(
   
  호출 하는 경우 `ReadString` 먼저 호출 하지 않고 [SetReadBufferSize](#setreadbuffersize), 4, 096 바이트의 버퍼를 받게 됩니다.  
   
-##  <a name="a-nameseeka--cinternetfileseek"></a><a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>CInternetFile::Seek  
  이전에 연된 파일에서 포인터의 위치를 변경 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -297,7 +311,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>예제  
   기본 클래스 구현에 대 한 예제를 참조 하십시오 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="a-namesetreadbuffersizea--cinternetfilesetreadbuffersize"></a><a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
  사용 하는 임시 읽기 버퍼의 크기를 설정 하려면이 멤버 함수를 호출 하는 `CInternetFile`-파생 개체입니다.  
   
 ```  
@@ -318,7 +332,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  언제 든 지 버퍼 크기를 늘릴 수 있지만 버퍼 축소 해도 아무런 효과가 없습니다. 호출 하는 경우 [ReadString](#readstring) 먼저 호출 하지 않고 `SetReadBufferSize`, 4, 096 바이트의 버퍼를 받게 됩니다.  
   
-##  <a name="a-namesetwritebuffersizea--cinternetfilesetwritebuffersize"></a><a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
  사용 하는 임시 쓰기 버퍼의 크기를 설정 하려면이 멤버 함수를 호출 하는 `CInternetFile`-파생 개체입니다.  
   
 ```  
@@ -337,7 +351,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  기본적으로는 `CInternetFile` 개체 작성에 대 한 모든 버퍼링을 제공 하지 않습니다. 이 멤버 함수를 호출 하는 경우에 파일 쓰기 액세스를 위해 열렸음을 확인 해야 합니다. 언제 든 지 쓰기 버퍼의 크기를 변경할 수 있지만 암시적으로 호출 하면 [플러시](#flush)합니다.  
   
-##  <a name="a-namewritea--cinternetfilewrite"></a><a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>CInternetFile::Write  
  이 멤버 함수는 지정 된 메모리에 쓸 호출 `lpvBuf`, 바이트 수를 지정 된 `nCount`합니다.  
   
 ```  
@@ -356,7 +370,7 @@ virtual void Write(
 ### <a name="remarks"></a>주의  
  데이터를 작성 하는 동안 오류가 발생 하는 경우 함수에서 throw 한 [CInternetException](../../mfc/reference/cinternetexception-class.md) 오류를 설명 하는 개체입니다.  
   
-##  <a name="a-namewritestringa--cinternetfilewritestring"></a><a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>CInternetFile::WriteString  
  이 함수는 관련된 파일에는 null로 끝나는 문자열을 씁니다.  
   
 ```  

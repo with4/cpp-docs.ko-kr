@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::norm
+- norm
+- AMP_SHORT_VECTORS/norm
+- AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
@@ -33,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm-class"></a>norm 클래스
@@ -59,15 +61,15 @@ class norm;
   
 |이름|설명|  
 |----------|-----------------|  
-|norm::operator 연산자||  
-|norm::operator-연산자||  
-|norm::operator float 연산자|변환 연산자입니다. Norm 번호 변환 부동 소수점 값입니다.|  
-|norm::operator * = 연산자||  
-|norm::operator / = 연산자||  
-|norm::operator + + 연산자||  
-|norm::operator + = 연산자||  
-|norm::operator = 연산자||  
-|norm::operator-= 연산자||  
+|norm::operator-||  
+|norm::operator-||  
+|norm::operator float|변환 연산자입니다. Norm 번호 변환 부동 소수점 값입니다.|  
+|norm::operator * =||  
+|norm::operator / =||  
+|norm::operator + +||  
+|norm::operator + =||  
+|norm::operator =||  
+|-= norm::operator||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `norm`  
@@ -77,7 +79,7 @@ class norm;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-norm"></a><a name="ctor"></a>norm 
+##  <a name="ctor"></a>norm 
 
  기본 생성자입니다. 0.0f로 초기화합니다.  
   
@@ -125,5 +127,5 @@ norm(
  초기화 하는 데 사용 되는 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

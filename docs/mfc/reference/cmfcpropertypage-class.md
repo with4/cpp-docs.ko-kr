@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyPage
+- AFXPROPERTYPAGE/CMFCPropertyPage
+- AFXPROPERTYPAGE/CMFCPropertyPage::CMFCPropertyPage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertypage.h  
   
-##  <a name="a-namecmfcpropertypagea--cmfcpropertypagecmfcpropertypage"></a><a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
  `CMFCPropertyPage` 개체를 생성합니다.  
   
 ```  

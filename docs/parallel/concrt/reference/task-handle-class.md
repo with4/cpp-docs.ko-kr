@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>task_handle 클래스
@@ -61,16 +63,16 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |이름|설명|  
 |----------|-----------------|  
-|[task_handle 생성자](#ctor)|새 `task_handle` 개체를 생성합니다. 작업의 작업은 생성자에 매개 변수로 지정 된 함수를 호출 하 여 수행 됩니다.|  
+|[task_handle](#ctor)|새 `task_handle` 개체를 생성합니다. 작업의 작업은 생성자에 매개 변수로 지정 된 함수를 호출 하 여 수행 됩니다.|  
 |[~ task_handle 소멸자](#dtor)|소멸은 `task_handle` 개체입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator () 연산자](#task_handle__operator_call)|작업 핸들의 작업을 수행 하도록 런타임에 호출 하는 함수 호출 연산자.|  
+|[operator)](#task_handle__operator_call)|작업 핸들의 작업을 수행 하도록 런타임에 호출 하는 함수 호출 연산자.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `task_handle`개체와 함께에서 사용할 수는 `structured_task_group` 또는 더 일반적인 `task_group` 개체를 작업을 병렬 작업으로 분해 합니다. 자세한 내용은 참조 [작업 병렬 처리](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
   
  작성자는 `task_handle` 개체는 만들어진의 수명이 유지 관리를 담당 `task_handle` 동시성 런타임에서 더 이상 필요 될 때까지 개체입니다. 즉, 일반적으로 `task_handle` 될 때까지 개체가 소멸 되지 되어야는 `wait` 또는 `run_and_wait` 의 메서드는 `task_group` 또는 `structured_task_group` 대기 중인를 호출한 합니다.  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator) 
+##  <a name="task_handle__operator_call"></a>operator) 
 
  작업 핸들의 작업을 수행 하도록 런타임에 호출 하는 함수 호출 연산자.  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  새 `task_handle` 개체를 생성합니다. 작업의 작업은 생성자에 매개 변수로 지정 된 함수를 호출 하 여 수행 됩니다.  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>주의  
  런타임에서는 생성자에 전달 하는 작업 함수의 복사본을 만듭니다. 따라서 모든 변경 사항이 함수에서 발생 하는 개체에 전달 해야 하는 `task_handle` 개체가 해당 함수 개체의 복사본에 표시 되지 것입니다.  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  소멸은 `task_handle` 개체입니다.  
   

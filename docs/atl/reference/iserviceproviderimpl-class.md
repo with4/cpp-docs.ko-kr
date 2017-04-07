@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl
-- ATL::IServiceProviderImpl
 - IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl::QueryService
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
  만듭니다 또는 지정된 된 서비스에 액세스 하 고 서비스에 대 한 지정된 된 인터페이스에 대 한 인터페이스 포인터를 반환 합니다.  
   
 ```

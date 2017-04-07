@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_hIcon
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_nURLCmdID
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strText
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +98,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDesktopAlertDialog.h  
   
-##  <a name="a-nameoperatoreqa--cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -107,7 +112,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemhicona--cmfcdesktopalertwndinfomhicon"></a><a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
  표시 되는 아이콘에 대 한 핸들입니다.  
   
 ```  
@@ -116,7 +121,7 @@ HICON m_hIcon;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemnurlcmdida--cmfcdesktopalertwndinfomnurlcmdid"></a><a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
  바탕 화면 알림 창에서 링크와 관련 된 명령 ID입니다.  
   
 ```  
@@ -126,7 +131,7 @@ UINT m_nURLCmdID;
 ### <a name="remarks"></a>주의  
  명령 ID로 지정 된 링크를 클릭할 때 팝업 창의 소유자에 게 전송 됩니다 [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)합니다.  
   
-##  <a name="a-namemstrtexta--cmfcdesktopalertwndinfomstrtext"></a><a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
  바탕 화면 알림 창에 표시 되는 텍스트입니다.  
   
 ```  
@@ -135,7 +140,7 @@ CString m_strText;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemstrurla--cmfcdesktopalertwndinfomstrurl"></a><a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
  바탕 화면 알림 창에 표시 되는 링크입니다.  
   
 ```  

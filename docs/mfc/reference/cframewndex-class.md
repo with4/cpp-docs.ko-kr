@@ -10,6 +10,93 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFrameWndEx
+- AFXFRAMEWNDEX/CFrameWndEx
+- AFXFRAMEWNDEX/CFrameWndEx::ActiveItemRecalcLayout
+- AFXFRAMEWNDEX/CFrameWndEx::AddPane
+- AFXFRAMEWNDEX/CFrameWndEx::AdjustDockingLayout
+- AFXFRAMEWNDEX/CFrameWndEx::DelayUpdateFrameMenu
+- AFXFRAMEWNDEX/CFrameWndEx::DockPane
+- AFXFRAMEWNDEX/CFrameWndEx::DockPaneLeftOf
+- AFXFRAMEWNDEX/CFrameWndEx::EnableAutoHidePanes
+- AFXFRAMEWNDEX/CFrameWndEx::EnableDocking
+- AFXFRAMEWNDEX/CFrameWndEx::EnableFullScreenMainMenu
+- AFXFRAMEWNDEX/CFrameWndEx::EnableFullScreenMode
+- AFXFRAMEWNDEX/CFrameWndEx::EnableLoadDockState
+- AFXFRAMEWNDEX/CFrameWndEx::EnablePaneMenu
+- AFXFRAMEWNDEX/CFrameWndEx::GetActivePopup
+- AFXFRAMEWNDEX/CFrameWndEx::GetDefaultResId
+- AFXFRAMEWNDEX/CFrameWndEx::GetDockingManager
+- AFXFRAMEWNDEX/CFrameWndEx::GetMenuBar
+- AFXFRAMEWNDEX/CFrameWndEx::GetPane
+- AFXFRAMEWNDEX/CFrameWndEx::GetRibbonBar
+- AFXFRAMEWNDEX/CFrameWndEx::GetTearOffBars
+- AFXFRAMEWNDEX/CFrameWndEx::GetToolbarButtonToolTipText
+- AFXFRAMEWNDEX/CFrameWndEx::InsertPane
+- AFXFRAMEWNDEX/CFrameWndEx::IsFullScreen
+- AFXFRAMEWNDEX/CFrameWndEx::IsMenuBarAvailable
+- AFXFRAMEWNDEX/CFrameWndEx::IsPointNearDockSite
+- AFXFRAMEWNDEX/CFrameWndEx::IsPrintPreview
+- AFXFRAMEWNDEX/CFrameWndEx::LoadFrame
+- AFXFRAMEWNDEX/CFrameWndEx::NegotiateBorderSpace
+- AFXFRAMEWNDEX/CFrameWndEx::OnActivate
+- AFXFRAMEWNDEX/CFrameWndEx::OnActivateApp
+- AFXFRAMEWNDEX/CFrameWndEx::OnChangeVisualManager
+- AFXFRAMEWNDEX/CFrameWndEx::OnClose
+- AFXFRAMEWNDEX/CFrameWndEx::OnCloseDockingPane
+- AFXFRAMEWNDEX/CFrameWndEx::OnCloseMiniFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnClosePopupMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnCmdMsg
+- AFXFRAMEWNDEX/CFrameWndEx::OnContextHelp
+- AFXFRAMEWNDEX/CFrameWndEx::OnCreate
+- AFXFRAMEWNDEX/CFrameWndEx::OnDestroy
+- AFXFRAMEWNDEX/CFrameWndEx::OnDrawMenuImage
+- AFXFRAMEWNDEX/CFrameWndEx::OnDrawMenuLogo
+- AFXFRAMEWNDEX/CFrameWndEx::OnDWMCompositionChanged
+- AFXFRAMEWNDEX/CFrameWndEx::OnExitSizeMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnGetMinMaxInfo
+- AFXFRAMEWNDEX/CFrameWndEx::OnIdleUpdateCmdUI
+- AFXFRAMEWNDEX/CFrameWndEx::OnLButtonDown
+- AFXFRAMEWNDEX/CFrameWndEx::OnLButtonUp
+- AFXFRAMEWNDEX/CFrameWndEx::OnMenuButtonToolHitTest
+- AFXFRAMEWNDEX/CFrameWndEx::OnMenuChar
+- AFXFRAMEWNDEX/CFrameWndEx::OnMouseMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnMoveMiniFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcActivate
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcCalcSize
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcHitTest
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcMouseMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcPaint
+- AFXFRAMEWNDEX/CFrameWndEx::OnPaneCheck
+- AFXFRAMEWNDEX/CFrameWndEx::OnPostPreviewFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnPowerBroadcast
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetPreviewMode
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetText
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowCustomizePane
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowPanes
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowPopupMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnSize
+- AFXFRAMEWNDEX/CFrameWndEx::OnSizing
+- AFXFRAMEWNDEX/CFrameWndEx::OnSysColorChange
+- AFXFRAMEWNDEX/CFrameWndEx::OnTearOffMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarContextMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarCreateNew
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarDelete
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdateFrameMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdateFrameTitle
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdatePaneMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnWindowPosChanged
+- AFXFRAMEWNDEX/CFrameWndEx::PaneFromPoint
+- AFXFRAMEWNDEX/CFrameWndEx::PreTranslateMessage
+- AFXFRAMEWNDEX/CFrameWndEx::RecalcLayout
+- AFXFRAMEWNDEX/CFrameWndEx::RemovePaneFromDockManager
+- AFXFRAMEWNDEX/CFrameWndEx::SetDockState
+- AFXFRAMEWNDEX/CFrameWndEx::SetPrintPreviewFrame
+- AFXFRAMEWNDEX/CFrameWndEx::SetupToolbarMenu
+- AFXFRAMEWNDEX/CFrameWndEx::ShowFullScreen
+- AFXFRAMEWNDEX/CFrameWndEx::ShowPane
+- AFXFRAMEWNDEX/CFrameWndEx::UpdateCaption
+- AFXFRAMEWNDEX/CFrameWndEx::WinHelp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +249,7 @@ class CFrameWndEx : public CFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxframewndex.h  
   
-##  <a name="a-nameactiveitemrecalclayouta--cframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
+##  <a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
  레이아웃 OLE 클라이언트 항목 및 프레임의 클라이언트 영역을 조정합니다.  
   
 ```  
@@ -171,7 +258,7 @@ void ActiveItemRecalcLayout();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddpanea--cframewndexaddpane"></a><a name="addpane"></a>CFrameWndEx::AddPane  
+##  <a name="addpane"></a>CFrameWndEx::AddPane  
  관리자는 도킹 컨트롤 막대에 등록합니다.  
   
 ```  
@@ -190,7 +277,7 @@ BOOL AddPane(
 ### <a name="return-value"></a>반환 값  
  `TRUE`컨트롤 막대 성공적으로 등록 되었습니다. `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameadjustdockinglayouta--cframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
  프레임 창에 도킹 된 모든 창 레이아웃을 다시 계산 합니다.  
   
 ```  
@@ -204,7 +291,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="remarks"></a>주의  
  Hdwp 구조에 의해 초기화 됩니다는 [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) 메서드.  
   
-##  <a name="a-namedelayupdateframemenua--cframewndexdelayupdateframemenu"></a><a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
+##  <a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
  프레임 메뉴를 설정 하 고 명령 처리 유휴 상태일 때 업데이트 합니다.  
   
 ```  
@@ -217,7 +304,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedockpanea--cframewndexdockpane"></a><a name="dockpane"></a>CFrameWndEx::DockPane  
+##  <a name="dockpane"></a>CFrameWndEx::DockPane  
  지정 된 창 프레임 창에 도킹합니다.  
   
 ```  
@@ -248,7 +335,7 @@ void DockPane(
   
 -   AFX_IDW_DOCKBAR_RIGHT  
   
-##  <a name="a-namedockpaneleftofa--cframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
  지정한 창을 다른 창 왼쪽에 도킹합니다.  
   
 ```  
@@ -270,7 +357,7 @@ BOOL DockPaneLeftOf(
 ### <a name="remarks"></a>주의  
  메서드는 지정 된 도구 모음에서 `pBar` 매개 변수 및 도킹 하 여 지정 된 왼쪽 도구 모음에서 `pLeftOf` 매개 변수입니다.  
   
-##  <a name="a-nameenableautohidepanesa--cframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
  수 있도록 자동 숨김 모드는 창에 대 한 주 프레임 창의 지정된 된 측면에 도킹 되는 경우입니다.  
   
 ```  
@@ -295,7 +382,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT: 컨트롤 막대를 프레임 창의 클라이언트 영역 오른쪽에 도킹 될 수 있습니다.  
   
-##  <a name="a-nameenabledockinga--cframewndexenabledocking"></a><a name="enabledocking"></a>CFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>CFrameWndEx::EnableDocking  
  프레임 창의 창 도킹 수 있습니다.  
   
 ```  
@@ -320,7 +407,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="a-nameenablefullscreenmainmenua--cframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
+##  <a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
  표시 하거나 전체 화면 모드에서 주 메뉴를 숨깁니다.  
   
 ```  
@@ -331,7 +418,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
  [in] `bEnableMenu`  
  `TRUE`전체 화면 모드에서 주 메뉴를 표시 하려면 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameenablefullscreenmodea--cframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
+##  <a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
  프레임 창에 대 한 전체 화면 모드를 활성화 합니다.  
   
 ```  
@@ -349,7 +436,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
   
  화면에서 주 메뉴를 유지 하려는 경우에 호출 [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)합니다.  
   
-##  <a name="a-nameenableloaddockstatea--cframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
+##  <a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
  도킹 상태를 로드 하는 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -360,7 +447,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`도킹 상태 로드를 사용 하려면 `FALSE` 도킹 상태를 로드 하는 사용 하지 않으려면 합니다.  
   
-##  <a name="a-nameenablepanemenua--cframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
  창 메뉴의 자동 처리를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -392,7 +479,7 @@ void EnablePaneMenu(
  [in] `bViewMenuShowsToolbarsOnly`  
  경우 `TRUE`, 컨트롤 모음 메뉴에 있는 도구 모음 목록이 표시 됩니다. 경우 `FALSE`, 메뉴 도구 모음 및 도킹 막대 목록이 표시 됩니다.  
   
-##  <a name="a-namegetactivepopupa--cframewndexgetactivepopup"></a><a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
  현재 표시 된 팝업 메뉴에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -402,7 +489,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="return-value"></a>반환 값  
  현재 표시 된 팝업 메뉴;에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
-##  <a name="a-namegetdefaultresida--cframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
  프레임 워크는 프레임 창 로드 될 때 지정 된 리소스 ID를 반환 합니다.  
   
 ```  
@@ -412,7 +499,7 @@ UINT GetDefaultResId() const;
 ### <a name="return-value"></a>반환 값  
  사용자는 프레임 워크는 프레임 창을 로드 하는 경우 지정 된 리소스 ID 값입니다. 프레임 창 메뉴 모음을 사용 하지 않은 경우&0;입니다.  
   
-##  <a name="a-namegetdockingmanagera--cframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
  검색 된 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md) 프레임 창에 대 한 개체입니다.  
   
 ```  
@@ -425,7 +512,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>주의  
  프레임 창에서 만들고 사용 하는 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md) 자식 창을 도킹을 관리 하는 개체입니다.  
   
-##  <a name="a-namegetmenubara--cframewndexgetmenubar"></a><a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
  프레임 창에 연결된 메뉴 모음 개체에 대한 포인터를 반환합니다.  
   
 ```  
@@ -435,7 +522,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="return-value"></a>반환 값  
  프레임 창에 연결 하는 메뉴 모음 개체에 대 한 포인터입니다.  
   
-##  <a name="a-namegetpanea--cframewndexgetpane"></a><a name="getpane"></a>CFrameWndEx::GetPane  
+##  <a name="getpane"></a>CFrameWndEx::GetPane  
  지정 된 ID를 가집니다. 창에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -449,7 +536,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>반환 값  
  지정 된 id의 창에 대 한 포인터 `NULL`이러한 창 없는 있으면 됩니다.  
   
-##  <a name="a-namegetribbonbara--cframewndexgetribbonbar"></a><a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
+##  <a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
  프레임에 대해 리본 표시줄 컨트롤을 검색합니다.  
   
 ```  
@@ -461,7 +548,7 @@ CMFCRibbonBar* GetRibbonBar();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettearoffbarsa--cframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
  분리 상태에 있는 창 개체의 목록을 반환합니다.  
   
 ```  
@@ -471,7 +558,7 @@ const CObList& GetTearOffBars() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조 `CObList` 분리 상태에 있는 창 개체에 대 한 포인터 컬렉션을 포함 하는 개체입니다.  
   
-##  <a name="a-namegettoolbarbuttontooltiptexta--cframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
  응용 프로그램 도구 모음 단추에 대 한 도구 설명을 표시 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -493,7 +580,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 도구 모음 단추에 대 한 도구 설명을 표시 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameinsertpanea--cframewndexinsertpane"></a><a name="insertpane"></a>CFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>CFrameWndEx::InsertPane  
  컨트롤 막대 목록에 창을 삽입하고 도킹 관리자에 등록합니다.  
   
 ```  
@@ -519,7 +606,7 @@ BOOL InsertPane(
 ### <a name="remarks"></a>주의  
  각 컨트롤 막대를 사용 하 여 등록 해야는 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md) 도킹 레이아웃 참여 하도록 합니다.  
   
-##  <a name="a-nameisfullscreena--cframewndexisfullscreen"></a><a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
+##  <a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
  프레임 창을 전체 화면 모드 인지 여부를 결정 합니다.  
   
 ```  
@@ -532,7 +619,7 @@ BOOL IsFullScreen() const;
 ### <a name="remarks"></a>주의  
  호출 하 여 전체 화면 모드를 설정할 수는 [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) 메서드.  
   
-##  <a name="a-nameismenubaravailablea--cframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
  메뉴 모음 개체에 대 한 포인터 유효한 지 여부를 결정 합니다.  
   
 ```  
@@ -542,7 +629,7 @@ BOOL IsMenuBarAvailable() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`프레임 창에는 메뉴 모음입니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameispointneardocksitea--cframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
  지점 맞춤 영역에 있는지 여부를 결정 합니다.  
   
 ```  
@@ -580,7 +667,7 @@ BOOL IsPointNearDockSite(
  `CBRS_ALIGN_LEFT`  
  왼쪽에 맞춥니다.  
   
-##  <a name="a-nameisprintpreviewa--cframewndexisprintpreview"></a><a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
+##  <a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
  프레임 창 인쇄 미리 보기 모드 인지 여부를 결정 합니다.  
   
 ```  
@@ -592,7 +679,7 @@ BOOL IsPrintPreview();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameloadframea--cframewndexloadframe"></a><a name="loadframe"></a>CFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>CFrameWndEx::LoadFrame  
  이 메서드는 프레임 창을 만들고 해당 리소스를 로드 하는 생성 후 호출 됩니다.  
   
 ```  
@@ -621,7 +708,7 @@ virtual BOOL LoadFrame(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namenegotiateborderspacea--cframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
  구현 OLE 클라이언트 테두리 협상 합니다.  
   
 ```  
@@ -652,7 +739,7 @@ virtual BOOL NegotiateBorderSpace(
  `borderSet`  
  OLE 클라이언트 공간을 설정 합니다.  
   
-##  <a name="a-nameonactivatea--cframewndexonactivate"></a><a name="onactivate"></a>CFrameWndEx::OnActivate  
+##  <a name="onactivate"></a>CFrameWndEx::OnActivate  
  프레임 워크는 사용자 입력 하거나 프레임에서 전환 되 면이 메서드를 호출 합니다.  
   
 ```  
@@ -684,7 +771,7 @@ afx_msg void OnActivate(
  `WA_INACTIVE`  
  프레임을 선택 하지 않았습니다.  
   
-##  <a name="a-nameonactivateappa--cframewndexonactivateapp"></a><a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
+##  <a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
  응용 프로그램 선택 되거나 선택이 취소 될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -702,7 +789,7 @@ afx_msg void OnActivateApp(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonchangevisualmanagera--cframewndexonchangevisualmanager"></a><a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
  프레임에 대 한 변경 비주얼 관리자에 대 한 변경 해야 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -723,7 +810,7 @@ afx_msg LRESULT OnChangeVisualManager(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonclosea--cframewndexonclose"></a><a name="onclose"></a>CFrameWndEx::OnClose  
+##  <a name="onclose"></a>CFrameWndEx::OnClose  
  프레임 워크는 프레임을 닫아도이 메서드를 호출 합니다.  
   
 ```  
@@ -733,7 +820,7 @@ afx_msg void OnClose();
 ### <a name="remarks"></a>주의  
  인쇄 미리 보기;를 닫으려면 Windows 메시지를 보낼 프레임 인쇄 미리 보기 모드에 있으면 그렇지 않으면 프레임 OLE 클라이언트를 호스팅하는 경우 클라이언트 비활성화 됩니다.  
   
-##  <a name="a-nameonclosedockingpanea--cframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
  사용자가 클릭할 때 프레임 워크에 의해 호출 된 **닫기** 도킹 창에 단추입니다.  
   
 ```  
@@ -746,7 +833,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ### <a name="remarks"></a>주의  
  기본 구현 되지 않습니다. 도킹 모음 숨기기를 처리 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameoncloseminiframea--cframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
  사용자가 클릭할 때 프레임 워크에 의해 호출 된 **닫기** 부동 미니 프레임 창에 단추입니다.  
   
 ```  
@@ -759,7 +846,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="remarks"></a>주의  
  기본 구현은 아무 작업도 수행하지 않습니다. 부동 미니 프레임 창 숨기 처리 하려는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonclosepopupmenua--cframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
  활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -773,7 +860,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>주의  
  프레임 워크를 닫도록 되었을 때 WM_DESTROY 메시지를 보냅니다. 알림을 처리 하려는 경우이 메서드를 재정의 `CMFCPopupMenu` 프레임 창에 속하는 개체 때는 `CMFCPopupMenu` 개체 처리는 `WM_DESTROY` 창이 되 고 닫혀 있는 경우 프레임 워크에서 보낸 메시지입니다.  
   
-##  <a name="a-nameoncmdmsga--cframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
  디스패치 메시지 명령합니다.  
   
 ```  
@@ -802,7 +889,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoncontexthelpa--cframewndexoncontexthelp"></a><a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
+##  <a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
  상황에 맞는 관련 도움말을 표시 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -811,7 +898,7 @@ afx_msg void OnContextHelp();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoncreatea--cframewndexoncreate"></a><a name="oncreate"></a>CFrameWndEx::OnCreate  
+##  <a name="oncreate"></a>CFrameWndEx::OnCreate  
  프레임을 만든 후에 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -827,7 +914,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondestroya--cframewndexondestroy"></a><a name="ondestroy"></a>CFrameWndEx::OnDestroy  
+##  <a name="ondestroy"></a>CFrameWndEx::OnDestroy  
  프레임 소멸 되 면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -837,7 +924,7 @@ afx_msg void OnDestroy();
 ### <a name="remarks"></a>주의  
  액셀러레이터 키 테이블 및 모든 창을 소멸 됩니다.  
   
-##  <a name="a-nameondrawmenuimagea--cframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
  응용 프로그램 메뉴 항목과 연결 된 이미지를 그릴 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -863,7 +950,7 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="remarks"></a>주의  
  가 소유 하 고 메뉴 모음에 속하는 메뉴 항목에 대 한 이미지 렌더링을 사용자 지정 하려는 경우이 메서드를 재정의 하는 `CFrameWndEx` 파생 개체입니다.  
   
-##  <a name="a-nameondrawmenulogoa--cframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
  프레임 워크에서 호출 하면는 `CMFCPopupMenu` WM_PAINT 메시지를 처리 하는 개체입니다.  
   
 ```  
@@ -886,7 +973,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>주의  
  가 소유 하 고 메뉴 모음에 속하는 팝업 메뉴에 로고를 표시 하려는 경우이 함수를 재정의 `CFrameWndEx` 파생 개체입니다.  
   
-##  <a name="a-nameondwmcompositionchangeda--cframewndexondwmcompositionchanged"></a><a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
+##  <a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
  데스크톱 창 관리자 (DWM) 컴퍼지션 활성화 또는 비활성화 되었으므로 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -907,7 +994,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonexitsizemovea--cframewndexonexitsizemove"></a><a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
+##  <a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
  프레임 이동 하거나 크기 조정 중지 될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -928,7 +1015,7 @@ LRESULT OnExitSizeMove(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameongetminmaxinfoa--cframewndexongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
+##  <a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
  프레임 창 차원 제한을 설정 하는 크기가 조정 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -941,7 +1028,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonidleupdatecmduia--cframewndexonidleupdatecmdui"></a><a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
+##  <a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
  명령 처리 유휴 상태일 때 프레임 디스플레이 업데이트 하려면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -962,7 +1049,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonlbuttondowna--cframewndexonlbuttondown"></a><a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
+##  <a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
  프레임 워크는 사용자가 왼쪽된 마우스 단추를 누르면이 메서드를 호출 합니다.  
   
 ```  
@@ -980,7 +1067,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonlbuttonupa--cframewndexonlbuttonup"></a><a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
+##  <a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
  마우스 왼쪽된 단추를 놓을 때이 메서드를 호출 하는 프레임 워크입니다.  
   
 ```  
@@ -998,7 +1085,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonmenubuttontoolhittesta--cframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
  프레임 워크 호출 때는 `CMFCToolBarButton` 프로세스 개체를 `WM_NCHITTEST` 메시지입니다.  
   
 ```  
@@ -1020,7 +1107,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="remarks"></a>주의  
  특정 메뉴 항목에 대 한 도구 설명 정보를 제공 하려는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonmenuchara--cframewndexonmenuchar"></a><a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
+##  <a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
  메뉴가 표시 되 고 사용자 명령에 해당 하지 않는 키를 누를 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1054,7 +1141,7 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonmousemovea--cframewndexonmousemove"></a><a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
+##  <a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
  프레임 워크는 포인터를 이동 하면이 메서드를 호출 합니다.  
   
 ```  
@@ -1072,7 +1159,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonmoveminiframea--cframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
  창 창 이동 하면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1088,7 +1175,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonncactivatea--cframewndexonncactivate"></a><a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
+##  <a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
  프레임의 클라이언트 이외의 영역에서는 활성 상태의 변화를 나타내기 위해 그려야 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1104,7 +1191,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonnccalcsizea--cframewndexonnccalcsize"></a><a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
+##  <a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
  클라이언트 영역 위치와 크기를 계산 해야 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1122,7 +1209,7 @@ afx_msg void OnNcCalcSize(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonnchittesta--cframewndexonnchittest"></a><a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
+##  <a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
  포인터를 이동할 때 또는 마우스 단추를 누르거나 놓을 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1138,7 +1225,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonncmousemovea--cframewndexonncmousemove"></a><a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
+##  <a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
  비클라이언트 영역에서 포인터를 이동 하면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1156,7 +1243,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonncpainta--cframewndexonncpaint"></a><a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
+##  <a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
  비클라이언트 영역을 칠할 해야 하는 경우 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1165,7 +1252,7 @@ afx_msg void OnNcPaint();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpanechecka--cframewndexonpanecheck"></a><a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
+##  <a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
  창의 표시 유형을 제어 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1181,7 +1268,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpostpreviewframea--cframewndexonpostpreviewframe"></a><a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
+##  <a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
  사용자는 인쇄 미리 보기 모드를 변경할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1202,7 +1289,7 @@ afx_msg LRESULT OnPostPreviewFrame(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpowerbroadcasta--cframewndexonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
+##  <a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
  전원 관리 이벤트가 발생할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1223,7 +1310,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsetmenua--cframewndexonsetmenu"></a><a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
+##  <a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
  프레임 창 메뉴를 대체 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1251,7 +1338,7 @@ BOOL OnSetMenu(HMENU hmenu);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsetpreviewmodea--cframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
  프레임에 대 한 인쇄 미리 보기 모드를 설정 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1269,7 +1356,7 @@ virtual void OnSetPreviewMode(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsettexta--cframewndexonsettext"></a><a name="onsettext"></a>CFrameWndEx::OnSetText  
+##  <a name="onsettext"></a>CFrameWndEx::OnSetText  
  창의 텍스트를 설정 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1290,7 +1377,7 @@ afx_msg LRESULT OnSetText(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonshowcustomizepanea--cframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
  표시 될 때 프레임 워크에서 호출 된 `QuickCustomizePane`합니다.  
   
 ```  
@@ -1312,7 +1399,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="remarks"></a>주의  
  빠른 사용자 지정 도구 모음의 단추를 사용자 지정 클릭 하면 표시 되는 팝업 메뉴가 메뉴 인지  
   
-##  <a name="a-nameonshowpanesa--cframewndexonshowpanes"></a><a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
  표시 하거나 숨기려면 창 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1333,7 +1420,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
  프레임 워크를 표시 하거나 숨깁니다 창 때 사용자 지정 코드를 실행 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonshowpopupmenua--cframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
  팝업 메뉴를 표시 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1350,7 +1437,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ### <a name="remarks"></a>주의  
  프레임 워크 팝업 메뉴를 표시 하는 경우 사용자 지정 코드를 실행 하려면 파생된 클래스에서이 메서드를 재정의 합니다. 예를 들어, 팝업 메뉴의 명령의 배경색을 변경 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonsizea--cframewndexonsize"></a><a name="onsize"></a>CFrameWndEx::OnSize  
+##  <a name="onsize"></a>CFrameWndEx::OnSize  
  프레임의 크기 변경 된 후 프레임 워크에서 호출합니다.  
   
 ```  
@@ -1372,7 +1459,7 @@ afx_msg void OnSize(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsizinga--cframewndexonsizing"></a><a name="onsizing"></a>CFrameWndEx::OnSizing  
+##  <a name="onsizing"></a>CFrameWndEx::OnSizing  
  사용자가 프레임 크기 조정에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1390,7 +1477,7 @@ afx_msg void OnSizing(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonsyscolorchangea--cframewndexonsyscolorchange"></a><a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
  시스템 색이 변경 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1399,7 +1486,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameontearoffmenua--cframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
  응용 프로그램 표시줄이 있는 분리 메뉴를 표시 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1423,7 +1510,7 @@ virtual BOOL OnTearOffMenu(
   
  기본 구현은 없으며 반환 `TRUE`합니다.  
   
-##  <a name="a-nameontoolbarcontextmenua--cframewndexontoolbarcontextmenu"></a><a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
+##  <a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
  프레임 워크 빌드 도구 모음 팝업 메뉴에 의해 호출 됩니다.  
   
 ```  
@@ -1444,7 +1531,7 @@ afx_msg LRESULT OnToolbarContextMenu(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameontoolbarcreatenewa--cframewndexontoolbarcreatenew"></a><a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
+##  <a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
  프레임 워크에는 새 도구 모음을 만들도록이 메서드를 호출 합니다.  
   
 ```  
@@ -1465,7 +1552,7 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameontoolbardeletea--cframewndexontoolbardelete"></a><a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
+##  <a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
  도구 모음에서 삭제 되는 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1486,7 +1573,7 @@ afx_msg LRESULT OnToolbarDelete(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonupdateframemenua--cframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
+##  <a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
  프레임 메뉴를 설정 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1499,7 +1586,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonupdateframetitlea--cframewndexonupdateframetitle"></a><a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
  프레임 워크는 프레임 창의 제목 표시줄을 업데이트 하려면이 메서드를 호출 합니다.  
   
 ```  
@@ -1512,7 +1599,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonupdatepanemenua--cframewndexonupdatepanemenu"></a><a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
+##  <a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
  창 메뉴를 업데이트 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1525,7 +1612,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonwindowposchangeda--cframewndexonwindowposchanged"></a><a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
+##  <a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
  프레임 크기, 위치, 또는 z 창 관리 방법에 대 한 호출으로 인해 변경 된 경우에 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1538,7 +1625,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namepanefrompointa--cframewndexpanefrompoint"></a><a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
  지정된 된 지점에 대 한 각 창을 검색합니다.  
   
 ```  
@@ -1579,7 +1666,7 @@ CBasePane* PaneFromPoint(
   
  사용 하 여 `nSensitivity` 검색 영역의 크기를 늘려야 합니다. 사용 하 여 `pRTCBarType` 메서드를 검색 하는 컨트롤 막대의 형식을 제한 합니다.  
   
-##  <a name="a-namepretranslatemessagea--cframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
  디스패치 되기 전에 특정 창 메시지를 처리 합니다.  
   
 ```  
@@ -1595,7 +1682,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namerecalclayouta--cframewndexrecalclayout"></a><a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
  프레임 및 해당 자식 창의 레이아웃을 조정합니다.  
   
 ```  
@@ -1609,7 +1696,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>주의  
  이 메서드는 컨트롤 막대 표시 되거나 숨겨진 경우 또는 프레임 창의 크기가 변경 될 때 호출 됩니다.  
   
-##  <a name="a-nameremovepanefromdockmanagera--cframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
  창을 등록을 취소 하 고 도킹 관리자에서 제거 합니다.  
   
 ```  
@@ -1642,7 +1729,7 @@ void RemovePaneFromDockManager(
   
  [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md) 컨트롤 막대의 레이아웃을 처리 합니다. 도킹 관리자를 사용 하 여 등록 해야 각 컨트롤 막대는 [CFrameWndEx::AddPane](#addpane) 메서드 또는 [CFrameWndEx::InsertPane](#insertpane) 메서드.  
   
-##  <a name="a-namesetdockstatea--cframewndexsetdockstate"></a><a name="setdockstate"></a>CFrameWndEx::SetDockState  
+##  <a name="setdockstate"></a>CFrameWndEx::SetDockState  
  레지스트리에 저장 된 도킹 상태를 도킹 레이아웃을 복원 합니다.  
   
 ```  
@@ -1653,7 +1740,7 @@ void SetDockState(const CDockState& state);
  `state`  
  도킹 상태입니다. 이 매개 변수는 무시됩니다.  
   
-##  <a name="a-namesetprintpreviewframea--cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
+##  <a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
  인쇄 미리 보기 프레임 창을 설정입니다.  
   
 ```  
@@ -1666,7 +1753,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetuptoolbarmenua--cframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
  도구 모음 메뉴에 사용자 지정 명령을 삽입 합니다.  
   
 ```  
@@ -1689,14 +1776,14 @@ void SetupToolbarMenu(
 ### <a name="remarks"></a>주의  
  프레임 워크 목록에 사용자 지정 명령을 저장합니다. 사용 하 여 `uiViewUserToolbarCmdFirst` 및 `uiViewUserToolbarCmdList` 삽입할 수 있는 명령에 대 한 인덱스를 지정할 수 있습니다.  
   
-##  <a name="a-nameshowfullscreena--cframewndexshowfullscreen"></a><a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
+##  <a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
  주 프레임 전체 화면 모드와 일반 모드 사이 전환합니다.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-##  <a name="a-nameshowpanea--cframewndexshowpane"></a><a name="showpane"></a>CFrameWndEx::ShowPane  
+##  <a name="showpane"></a>CFrameWndEx::ShowPane  
  표시 하거나 지정한 창을 숨깁니다.  
   
 ```  
@@ -1720,7 +1807,7 @@ void ShowPane(
  [in] `bActivate`  
  경우 `TRUE`, 컨트롤 막대를 활성화 합니다. 그렇지 않으면 비활성 상태에서 컨트롤 막대를 표시 합니다.  
   
-##  <a name="a-nameupdatecaptiona--cframewndexupdatecaption"></a><a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
+##  <a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
  창 프레임 캡션을 업데이트 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1729,7 +1816,7 @@ void UpdateCaption();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namewinhelpa--cframewndexwinhelp"></a><a name="winhelp"></a>CFrameWndEx::WinHelp  
+##  <a name="winhelp"></a>CFrameWndEx::WinHelp  
  WinHelp 응용 프로그램 또는 상황에 맞는 호출 관련 도움말입니다.  
   
 ```  

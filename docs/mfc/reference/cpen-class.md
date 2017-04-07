@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- HPEN
 - CPen
+- AFXWIN/CPen
+- AFXWIN/CPen::CPen
+- AFXWIN/CPen::CreatePen
+- AFXWIN/CPen::CreatePenIndirect
+- AFXWIN/CPen::FromHandle
+- AFXWIN/CPen::GetExtLogPen
+- AFXWIN/CPen::GetLogPen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecpena--cpencpen"></a><a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>CPen::CPen  
  `CPen` 개체를 생성합니다.  
   
 ```  
@@ -182,7 +188,7 @@ CPen(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&99;](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="a-namecreatepena--cpencreatepen"></a><a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>CPen::CreatePen  
  지정 된 스타일, 두께 및 브러시 특성을 사용 하 여 논리 표면적인 또는 기하학적 펜을 만들고에 연결 된 `CPen` 개체입니다.  
   
 ```  
@@ -246,7 +252,7 @@ BOOL CreatePen(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&100;](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="a-namecreatepenindirecta--cpencreatepenindirect"></a><a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
  스타일, 두께 및 가리키는 구조에 지정 된 색이 있는 펜 초기화 `lpLogPen`합니다.  
   
 ```  
@@ -268,7 +274,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&101;](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="a-namefromhandlea--cpenfromhandle"></a><a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>CPen::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CPen` 개체는 Windows GDI pen 개체에 대 한 핸들을 지정 합니다.  
   
 ```  
@@ -288,7 +294,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&105;](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="a-namegetextlogpena--cpengetextlogpen"></a><a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
  가져옵니다는 **EXTLOGPEN** 기본 구조입니다.  
   
 ```  
@@ -320,7 +326,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView #&102;](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="a-namegetlogpena--cpengetlogpen"></a><a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>CPen::GetLogPen  
  가져옵니다는 `LOGPEN` 기본 구조입니다.  
   
 ```  
@@ -350,7 +356,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView #&103;](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="a-nameoperatorhpena--cpenoperator-hpen"></a><a name="operator_hpen"></a>HPEN CPen::operator  
+##  <a name="operator_hpen"></a>HPEN CPen::operator  
  연결 된 Windows GDI 핸들을 가져옵니다는 `CPen` 개체입니다.  
   
 ```  

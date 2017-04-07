@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
+- AFXTABBEDPANE/CTabbedPane
+- AFXTABBEDPANE/CTabbedPane::DetachPane
+- AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor
+- AFXTABBEDPANE/CTabbedPane::FloatTab
+- AFXTABBEDPANE/CTabbedPane::GetTabArea
+- AFXTABBEDPANE/CTabbedPane::GetTabWnd
+- AFXTABBEDPANE/CTabbedPane::HasAutoHideMode
+- AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom
+- AFXTABBEDPANE/CTabbedPane::ResetTabs
+- AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
+- AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
+- AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +171,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxTabbedPane.h  
   
-##  <a name="a-namedetachpanea--ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CTabbedPane::DetachPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL DetachPane(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenabletabautocolora--ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
  탭의 자동 색 지정을 사용하거나 사용하지 않도록 설정합니다.  
   
 ```  
@@ -194,7 +206,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  기본적으로이 옵션이 비활성화 됩니다.  
   
-##  <a name="a-namefloattaba--ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>CTabbedPane::FloatTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -215,7 +227,7 @@ virtual BOOL FloatTab(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettabareaa--ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
  탭된 창에 탭 영역의 위치와 크기를 반환합니다.  
   
 ```  
@@ -236,7 +248,7 @@ virtual void GetTabArea(
   
  이 메서드를 재정의 하는 `CTabbedPane`-이 동작을 변경 하는 클래스를 파생 합니다.  
   
-##  <a name="a-namegettabwnda--ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -247,7 +259,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehasautohidemodea--ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -258,7 +270,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameistablocationbottoma--ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
  탭이 창의 맨 아래에 있는지 여부를 결정합니다.  
   
 ```  
@@ -270,7 +282,7 @@ virtual BOOL IsTabLocationBottom() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namembtabsalwaystopa--ctabbedpanembtabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
  응용 프로그램에서 탭의 기본 위치입니다.  
   
 ```  
@@ -284,7 +296,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  기본값은 `FALSE`입니다.  
   
-##  <a name="a-namemptabwndrtca--ctabbedpanemptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
  사용자 지정 `CMFCTabCtrl` 파생 개체에 대한 런타임 클래스 정보입니다.  
   
 ```  
@@ -294,7 +306,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>주의  
  이 정적 멤버 변수의 런타임 클래스 정보에 대 한 포인터를 설정 하는 `CMFCTabCtrl`-탭된 창 내부에서 사용자 지정 탭된 창을 사용 하는 경우 파생 된 개체입니다.  
   
-##  <a name="a-nameresettabsa--ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
  모든 탭 창을 기본 상태로 다시 설정합니다.  
   
 ```  
@@ -304,7 +316,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>주의  
  기본 설정으로 모든 탭된 창으로 돌아가려면이 메서드를 호출 합니다. 호출 되 면이 메서드를 테두리 크기와의 모든 탭된 창 자동 색 상태 다시 설정 합니다.  
   
-##  <a name="a-namesettabautocolorsa--ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
  자동 색 기능을 사용할 때 사용 되는 사용자 지정 색 목록을 설정 합니다.  
   
 ```  

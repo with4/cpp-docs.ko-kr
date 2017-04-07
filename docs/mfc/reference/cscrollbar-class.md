@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollBar
+- AFXWIN/CScrollBar
+- AFXWIN/CScrollBar::CScrollBar
+- AFXWIN/CScrollBar::Create
+- AFXWIN/CScrollBar::EnableScrollBar
+- AFXWIN/CScrollBar::GetScrollBarInfo
+- AFXWIN/CScrollBar::GetScrollInfo
+- AFXWIN/CScrollBar::GetScrollLimit
+- AFXWIN/CScrollBar::GetScrollPos
+- AFXWIN/CScrollBar::GetScrollRange
+- AFXWIN/CScrollBar::SetScrollInfo
+- AFXWIN/CScrollBar::SetScrollPos
+- AFXWIN/CScrollBar::SetScrollRange
+- AFXWIN/CScrollBar::ShowScrollBar
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecreatea--cscrollbarcreate"></a><a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>CScrollBar::Create  
  Windows 스크롤 막대를 만들고 연결 하는 `CScrollBar` 개체입니다.  
   
 ```  
@@ -144,7 +157,7 @@ virtual BOOL Create(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CScrollBar #&1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="a-namecscrollbara--cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
  `CScrollBar` 개체를 생성합니다.  
   
 ```  
@@ -157,7 +170,7 @@ CScrollBar();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CScrollBar #&2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="a-nameenablescrollbara--cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
  스크롤 막대의 화살표 하나 또는 둘 다를 사용하거나 사용하지 않도록 설정합니다.  
   
 ```  
@@ -182,7 +195,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>예제  
   예를 참조 [CScrollBar::SetScrollRange](#setscrollrange)합니다.  
   
-##  <a name="a-namegetscrollbarinfoa--cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
  정보를 검색 하는 **SCROLLBARINFO** 스크롤 막대에 대 한 구조를 유지 관리 합니다.  
   
 ```  
@@ -199,7 +212,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>주의  
  기능을 에뮬레이션 하는이 멤버 함수는 [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetscrollinfoa--cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
  `SCROLLINFO` 구조체에서 스크롤 막대에 대해 유지 관리하는 정보를 검색합니다.  
   
 ```  
@@ -228,7 +241,7 @@ BOOL GetScrollInfo(
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
-##  <a name="a-namegetscrolllimita--cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
  스크롤 막대의 위치를 스크롤 하는 최대를 검색 합니다.  
   
 ```  
@@ -241,7 +254,7 @@ int GetScrollLimit();
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
-##  <a name="a-namegetscrollposa--cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
  스크롤 상자의 현재 위치를 검색합니다.  
   
 ```  
@@ -257,7 +270,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
-##  <a name="a-namegetscrollrangea--cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
  지정한 스크롤 막대에 대 한 현재 최소 및 최대 스크롤 막대 위치에 지정 된 위치에 복사 `lpMinPos` 및 `lpMaxPos`합니다.  
   
 ```  
@@ -279,7 +292,7 @@ void GetScrollRange(
 ### <a name="example"></a>예제  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
-##  <a name="a-namesetscrollinfoa--cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
  정보를 설정 하는 `SCROLLINFO` 스크롤 막대에 대 한 구조를 유지 관리 합니다.  
   
 ```  
@@ -306,7 +319,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CScrollBar #&3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="a-namesetscrollposa--cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
  스크롤 상자의 현재 위치에 지정 된 설정 `nPos` 고를 지정 하는 경우에 새 위치를 반영 하도록 스크롤 막대를 다시 그립니다.  
   
 ```  
@@ -331,7 +344,7 @@ int SetScrollPos(
 ### <a name="example"></a>예제  
   예를 참조 [CScrollBar::SetScrollRange](#setscrollrange)합니다.  
   
-##  <a name="a-namesetscrollrangea--cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
  지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.  
   
 ```  
@@ -363,7 +376,7 @@ void SetScrollRange(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CScrollBar #&4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="a-nameshowscrollbara--cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
  표시 하거나 스크롤 막대를 숨깁니다.  
   
 ```  

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CStringElementTraits<T>
-- ATL::CStringElementTraits<T>
 - CStringElementTraits
-- ATL.CStringElementTraits
-- ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits::INARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::OUTARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::CompareElements
+- CSTRINGT/ATL::CStringElementTraits::CompareElementsOrdered
+- CSTRINGT/ATL::CStringElementTraits::CopyElements
+- CSTRINGT/ATL::CStringElementTraits::Hash
+- CSTRINGT/ATL::CStringElementTraits::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** cstringt.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitscompareelements"></a><a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
  두 문자열 요소가 같은지 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -101,7 +105,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>반환 값  
  요소가 같은지, false 그렇지 않으면 true를 반환 합니다.  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
  두 문자열 요소를 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -119,7 +123,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  문자열이 동일 하면 0이 할당 < 0="" if=""> `str1` 는 보다 작은 `str2`, 또는 > 0 경우 `str1` 보다 크면 `str2`합니다. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) 메서드는 비교를 수행 하는 데 사용 됩니다.  
 
   
-##  <a name="a-namecopyelementsa--cstringelementtraitscopyelements"></a><a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
  이 정적 함수를 복사 하려면 호출 `CString` 컬렉션 클래스 개체에 저장 된 요소입니다.  
   
 ```
@@ -142,7 +146,7 @@ static void CopyElements(
 ### <a name="remarks"></a>주의  
  원본 및 대상 요소 겹치지 않아야 합니다.  
   
-##  <a name="a-namehasha--cstringelementtraitshash"></a><a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>CStringElementTraits::Hash  
  지정된 문자열 요소에 대 한 해시 값을 계산 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -156,21 +160,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>반환 값  
  문자열의 내용을 사용 하 여 계산 된 해시 값을 반환 합니다.  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsinargtype"></a><a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
  컬렉션 클래스 개체에 요소를 추가 하는 데 사용 하 여 데이터 형식입니다.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsoutargtype"></a><a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
  컬렉션 클래스 개체에서 요소를 검색에 사용할 데이터 형식입니다.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
  이 정적 함수를 재배치할 호출 `CString` 컬렉션 클래스 개체에 저장 된 요소입니다.  
   
 ```

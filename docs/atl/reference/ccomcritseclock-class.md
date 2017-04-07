@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCritSecLock
-- ATL.CComCritSecLock<TLock>
-- ATL::CComCritSecLock<TLock>
-- ATL.CComCritSecLock
 - CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::Lock
+- ATLBASE/ATL::CComCritSecLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +78,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
  생성자입니다.  
   
 ```
@@ -95,7 +95,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>주의  
  임계 영역 개체를 초기화합니다.  
   
-##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
  소멸자입니다.  
   
 ```
@@ -105,7 +105,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>주의  
  임계 영역 개체를 잠금 해제합니다.  
   
-##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>CComCritSecLock::Lock  
  임계 영역 개체를 잠그는이 메서드를 호출 합니다.  
   
 ```
@@ -118,7 +118,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>주의  
  개체를 이미 잠근 경우 디버그 빌드에 어설션 오류가 발생 합니다.  
   
-##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>CComCritSecLock::Unlock  
  임계 영역 개체의 잠금을 해제 하려면이 메서드를 호출 합니다.  
   
 ```

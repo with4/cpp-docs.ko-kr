@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMessageMap
-- ATL.CMessageMap
-- ATL::CMessageMap
+- ATLWIN/ATL::CMessageMap
+- ATLWIN/ATL::CMessageMap::ProcessWindowMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-nameprocesswindowmessagea--cmessagemapprocesswindowmessage"></a><a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
  로 식별 되는 메시지 맵 액세스 `dwMsgMapID` 에 `CMessageMap`-클래스를 파생 합니다.  
   
 ```

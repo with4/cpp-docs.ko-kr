@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSingleLock
+- AFXMT/CSingleLock
+- AFXMT/CSingleLock::CSingleLock
+- AFXMT/CSingleLock::IsLocked
+- AFXMT/CSingleLock::Lock
+- AFXMT/CSingleLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CSingleLock
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-namecsinglelocka--csinglelockcsinglelock"></a><a name="csinglelock"></a>CSingleLock::CSingleLock  
+##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
  `CSingleLock` 개체를 생성합니다.  
   
 ```  
@@ -104,7 +109,7 @@ explicit CSingleLock(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&19;](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="a-nameislockeda--csinglelockislocked"></a><a name="islocked"></a>CSingleLock::IsLocked  
+##  <a name="islocked"></a>CSingleLock::IsLocked  
  개체 관련 된 결정의 `CSingleLock` 개체를 신호 없음으로 (사용할 수 없음).  
   
 ```  
@@ -117,7 +122,7 @@ BOOL IsLocked();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&20;](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="a-namelocka--csinglelocklock"></a><a name="lock"></a>CSingleLock::Lock  
+##  <a name="lock"></a>CSingleLock::Lock  
  이 함수에 제공 된 동기화 개체에 의해 제어 되는 리소스에 액세스 하기를 호출 하 여 `CSingleLock` 생성자입니다.  
   
 ```  
@@ -137,7 +142,7 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="a-nameunlocka--csinglelockunlock"></a><a name="unlock"></a>CSingleLock::Unlock  
+##  <a name="unlock"></a>CSingleLock::Unlock  
  가 소유 하는 동기화 개체를 해제 `CSingleLock`합니다.  
   
 ```  

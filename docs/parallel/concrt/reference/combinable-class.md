@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>combinable 클래스
@@ -59,23 +65,23 @@ class combinable;
   
 |이름|설명|  
 |----------|-----------------|  
-|[함께 사용할 수 있는 생성자](#ctor)|오버로드됨. 새 `combinable` 개체를 생성합니다.|  
+|[함께 사용할 수 있는](#ctor)|오버로드됨. 새 `combinable` 개체를 생성합니다.|  
 |[~ combinable 소멸자](#dtor)|`combinable` 개체를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[clear 메서드](#clear)|이전 사용에서 중간 계산 결과 지웁니다.|  
-|[combine 메서드](#combine)|제공된 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.|  
-|[combine_each 메서드](#combine_each)|스레드 로컬 하위 계산에 한 번씩 제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다. 최종 결과 함수 개체에 의해 누적 됩니다.|  
-|[로컬 메서드](#local)|오버로드됨. 스레드 전용 하위 계산에 대 한 참조를 반환합니다.|  
+|[clear](#clear)|이전 사용에서 중간 계산 결과 지웁니다.|  
+|[combine](#combine)|제공된 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.|  
+|[combine_each](#combine_each)|스레드 로컬 하위 계산에 한 번씩 제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다. 최종 결과 함수 개체에 의해 누적 됩니다.|  
+|[로컬](#local)|오버로드됨. 스레드 전용 하위 계산에 대 한 참조를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator = 연산자](#operator_eq)|에 할당 한 `combinable` 개체에서 다른 `combinable` 개체입니다.|  
+|[operator=](#operator_eq)|에 할당 한 `combinable` 개체에서 다른 `combinable` 개체입니다.|  
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
@@ -88,7 +94,7 @@ class combinable;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>지우기 
+##  <a name="clear"></a>지우기 
 
  이전 사용에서 중간 계산 결과 지웁니다.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>함께 사용할 수 있는 
+##  <a name="ctor"></a>함께 사용할 수 있는 
 
  새 `combinable` 개체를 생성합니다.  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  세 번째 생성자는 복사 생성자입니다.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  `combinable` 개체를 제거합니다.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>결합 
+##  <a name="combine"></a>결합 
 
  제공된 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>반환 값  
  모든 스레드 전용 하위 계산을 결합 하 여 최종 결과입니다.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  스레드 로컬 하위 계산에 한 번씩 제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다. 최종 결과 함수 개체에 의해 누적 됩니다.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  하나의 하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 시그니처는 `void (T)` 또는 `void (const T&)`, 연관 및 누적 여야 합니다.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>로컬 
+##  <a name="local"></a>로컬 
 
  스레드 전용 하위 계산에 대 한 참조를 반환합니다.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>반환 값  
  스레드 전용 하위 계산에 대 한 참조입니다.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a>연산자 = 
 
  에 할당 한 `combinable` 개체에서 다른 `combinable` 개체입니다.  
   
@@ -202,5 +208,5 @@ combinable& operator= (const combinable& _Copy);
  이에 대 한 참조 `combinable` 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

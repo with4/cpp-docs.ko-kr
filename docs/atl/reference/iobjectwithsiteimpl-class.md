@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl<T>
 - IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl
-- ATL::IObjectWithSiteImpl<T>
+- ATLCOM/ATL::IObjectWithSiteImpl
+- ATLCOM/ATL::IObjectWithSiteImpl::GetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +90,7 @@ template <class T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetsitea--iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
  로 식별 되는 인터페이스에 대 한 포인터에 대 한 사이트를 쿼리하여 `riid`합니다.  
   
 ```
@@ -103,7 +104,7 @@ STDMETHOD(GetSite)(
   
  참조 [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemspunksitea--iobjectwithsiteimplmspunksite"></a><a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
  사이트의 관리 **IUnknown** 포인터입니다.  
   
 ```
@@ -113,7 +114,7 @@ CComPtr<IUnknown> m_spUnkSite;
 ### <a name="remarks"></a>주의  
  `m_spUnkSite`처음 호출을 통해이 포인터를 받는 [SetSite](#setsite)합니다.  
   
-##  <a name="a-namesetchildsitea--iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
  개체를 제공 하는 사이트와 **IUnknown** 포인터입니다.  
   
 ```
@@ -127,7 +128,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="a-namesetsitea--iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
  개체를 제공 하는 사이트와 **IUnknown** 포인터입니다.  
   
 ```

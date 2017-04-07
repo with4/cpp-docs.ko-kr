@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  연산자의 좌변에 있는 개체가 우변에 있는 개체와 같지 않은지 테스트합니다.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -68,7 +68,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  연산자의 좌변에 있는 개체가 우변에 있는 개체보다 작은지 테스트합니다.  
   
 ```  
@@ -76,10 +76,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -116,7 +116,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  연산자의 좌변에 있는 개체가 우변에 있는 개체보다 작거나 같은지 테스트합니다.  
   
 ```  
@@ -124,10 +124,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -164,7 +164,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 개체가 우변에 있는 개체와 같은지 테스트합니다.  
   
 ```  
@@ -172,10 +172,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -211,7 +211,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  연산자의 좌변에 있는 개체가 우변에 있는 개체보다 큰지 테스트합니다.  
   
 ```  
@@ -219,10 +219,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -260,7 +260,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  연산자의 좌변에 있는 개체가 우변에 있는 개체보다 크거나 같은지 테스트합니다.  
   
 ```  
@@ -268,10 +268,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **vector** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **vector** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  

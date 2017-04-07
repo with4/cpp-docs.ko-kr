@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
+- AFXOLE/COleLinkingDoc
+- AFXOLE/COleLinkingDoc::COleLinkingDoc
+- AFXOLE/COleLinkingDoc::Register
+- AFXOLE/COleLinkingDoc::Revoke
+- AFXOLE/COleLinkingDoc::OnFindEmbeddedItem
+- AFXOLE/COleLinkingDoc::OnGetLinkedItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +114,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecolelinkingdoca--colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
  생성 된 `COleLinkingDoc` OLE 시스템 Dll와의 통신을 시작 하지 않고 개체입니다.  
   
 ```  
@@ -118,7 +124,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>주의  
  호출 해야는 `Register` 문서를 열면 OLE를 알리기 위해 멤버 함수입니다.  
   
-##  <a name="a-nameonfindembeddeditema--colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
  문서에서 지정한 이름 가진 포함된 된 OLE 항목에 포함 되는지 여부를 결정 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -135,7 +141,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>주의  
  기본 구현 (이름 비교는 대/소문자 구분) 지정한 이름의 항목에 대 한 포함 된 항목의 목록을 검색 합니다. 사용자 고유의 메서드를 저장 하거나 포함 된 OLE 항목 이름을 지정 해야 하는 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-nameongetlinkeditema--colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
  지정 된 이름의 연결 된 서버 항목을 문서에 포함 되는지 여부를 확인 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -152,7 +158,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>주의  
  기본 `COleLinkingDoc` 구현은 항상 **NULL**합니다. 이 함수는 파생된 클래스에서 재정의 된 `COleServerDoc` (이름 비교는 대/소문자 구분) 지정한 이름의 연결된 된 항목에 대 한 OLE 서버 항목의 목록을 검색할 수 있습니다. 저장 하거나 연결 된 서버 항목을 검색 하는 사용자 고유의 메서드를 구현한 경우이 함수를 재정의 합니다.  
   
-##  <a name="a-nameregistera--colelinkingdocregister"></a><a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>COleLinkingDoc::Register  
  문서를 열면 OLE 시스템 Dll에 알립니다.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL Register(
   
  사용 중인 경우 `COleTemplateServer` 응용 프로그램에서 `Register` 에서 자동으로 호출 `COleLinkingDoc`의 구현의 `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
   
-##  <a name="a-namerevokea--colelinkingdocrevoke"></a><a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>COleLinkingDoc::Revoke  
  문서를 열면 더 이상 OLE 시스템 Dll에 알립니다.  
   
 ```  

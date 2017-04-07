@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::DoChangeIcon
+- AFXODLGS/COleChangeIconDialog::DoModal
+- AFXODLGS/COleChangeIconDialog::GetIconicMetafile
+- AFXODLGS/COleChangeIconDialog::m_ci
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-namecolechangeicondialoga--colechangeicondialogcolechangeicondialog"></a><a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
  이 함수가 구성만 `COleChangeIconDialog` 개체입니다.  
   
 ```  
@@ -134,7 +140,7 @@ explicit COleChangeIconDialog(
   
  자세한 내용은 참조는 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedochangeicona--colechangeicondialogdochangeicon"></a><a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
  한 후 대화 상자에서 선택한 항목을 나타내는 아이콘을 변경 하려면이 함수를 호출 [DoModal](#domodal) 반환 **IDOK**합니다.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>반환 값  
  변경에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namedomodala--colechangeicondialogdomodal"></a><a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
  OLE 아이콘 변경 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -169,7 +175,7 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 구성원 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="a-namegeticonicmetafilea--colechangeicondialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
  선택한 항목의 아이콘 모양을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -179,7 +185,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>반환 값  
  대화 상자를 선택 하 여 해제할 경우 새 아이콘의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들 **확인**고, 그렇지 않으면 대화 상자에 표시 된 것으로 아이콘 전과 합니다.  
   
-##  <a name="a-namemcia--colechangeicondialogmci"></a><a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
  형식의 구조 **OLEUICHANGEICON** 아이콘 변경 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

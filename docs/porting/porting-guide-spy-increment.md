@@ -32,6 +32,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
@@ -42,7 +43,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  이 사례가 특히 Visual C++ 6.0 이후 Visual C++의 각 릴리스로 업데이트되지 않은 오래된 프로젝트에 대해 MFC 및 Win32 API를 사용하는 Windows 데스크톱 응용 프로그램을 포팅하는 일반적인 경우라고 간주했습니다.  
   
-##  <a name="a-nameconvertprojectfilea-step-1-converting-the-project-file"></a><a name="convert_project_file"></a> 1단계. 프로젝트 파일 변환  
+##  <a name="convert_project_file"></a> 1단계. 프로젝트 파일 변환  
  프로젝트 파일인 Visual C++ 6.0의 이전 .dsw 파일 두 개는 추가로 주의가 필요한 문제없이 쉽게 변환되었습니다. 한 프로젝트는 Spy++ 응용 프로그램입니다. 다른 프로젝트는 지원 DLL인 C로 작성된 SpyHk입니다. 보다 복잡한 프로젝트는 [여기](../porting/visual-cpp-porting-and-upgrading-guide.md)서 설명한 것처럼 쉽게 업그레이드되지 않을 수도 있습니다.  
   
  두 프로젝트를 업그레이드한 후 솔루션은 다음과 같았습니다.  
@@ -51,7 +52,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  하나는 많은 C++ 파일을 포함하고 다른 하나는 C로 작성된 DLL을 포함하는 두 개의 프로젝트가 있습니다.  
   
-##  <a name="a-nameheaderfileproblemsa-step-2-header-file-problems"></a><a name="header_file_problems"></a> 2단계. 헤더 파일 문제  
+##  <a name="header_file_problems"></a> 2단계. 헤더 파일 문제  
  새로 변환된 프로젝트를 빌드할 때 첫 번째로 발견하는 사항 중 하나는 대체로 프로젝트에서 사용하는 헤더 파일이 없다는 것입니다.  
   
  Spy++에서 찾을 수 없는 파일 중 하나는 verstamp.h였습니다. 인터넷 검색을 통해 이 파일이 오래된 데이터 기술인 DAO SDK에서 제공된 것을 확인했습니다. 해당 헤더 파일에서 사용된 기호를 찾아 파일이 정말 필요한지 또는 해당 기호가 다른 곳에서 정의되었는지 확인하고 싶었으므로 헤더 파일 선언을 주석으로 처리하고 다시 컴파일했습니다. 필요한 기호는 VER_FILEFLAGSMASK 하나뿐이었습니다.  
@@ -62,7 +63,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  사용 가능한 포함 파일에서 기호를 찾는 가장 쉬운 방법은 파일에서 찾기(Ctrl+Shift+F)를 사용하고 **Visual C++ 포함 디렉터리**를 지정하는 것입니다. ntverp.h에서 해당 기호를 찾았습니다. verstamp.h 포함 파일을 ntverp.h로 바꾼 후 이 오류가 사라졌습니다.  
   
-##  <a name="a-namelinkeroutputsettingsa-step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> 3단계. 링커 OutputFile 설정  
+##  <a name="linker_output_settings"></a> 3단계. 링커 OutputFile 설정  
  이전 프로젝트는 업그레이드한 후 문제가 발생할 수 있는 위치에 파일이 배치된 경우가 있습니다. 이 경우 Visual Studio에서 프로젝트 폴더 중 하나가 아니라 여기에 배치된 일부 헤더 파일을 찾을 수 있도록 프로젝트 속성의 포함 경로에 $(SolutionDir)을 추가해야 합니다.  
   
  MSBuild에서 Link.OutputFile 속성이 TargetPath 및 TargetName 값과 일치하지 않는다고 보고하고 MSB8012를 실행합니다.  
@@ -75,7 +76,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
   
  이 경우 변환된 프로젝트의 **Link.OutputFile** 속성이 구성에 따라 Spy++ 프로젝트에 대한 .\Debug\Spyxx.exe 및 .\Release\Spyxx.exe로 설정되었습니다. 모든 구성에 대해 이러한 하드 코딩된 값을 $(TargetDir)$(TargetName)$(TargetExt)로 바꾸는 것이 가장 좋습니다. 이 방법이 효과가 없을 경우 여기서 사용자 지정하거나, 해당 값이 설정된 일반 섹션의 속성을 변경할 수 있습니다(속성은 **출력 디렉터리**, **대상 이름** 및 **대상 확장**임). 보려는 속성이 매크로를 사용하는 경우 드롭다운 목록에서 **편집**을 선택하여 매크로 대체가 수행된 최종 문자열을 보여 주는 대화 상자를 표시할 수 있습니다. **매크로** 단추를 선택하여 사용 가능한 모든 매크로 및 현재 값을 볼 수 있습니다.  
   
-##  <a name="a-nameupdatingwinvera-step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> 4단계. 대상 Windows 버전 업데이트  
+##  <a name="updating_winver"></a> 4단계. 대상 Windows 버전 업데이트  
  다음 오류는 WINVER 버전이 MFC에서 더 이상 지원되지 않음을 나타냅니다. Windows XP에 대한 WINVER은 0x0501입니다.  
   
 ```Output  
@@ -101,7 +102,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="a-namelinkererrorsa-step-5-linker-errors"></a><a name="linker_errors"></a> 5단계. 링커 오류  
+##  <a name="linker_errors"></a> 5단계. 링커 오류  
  이렇게 변경하면 SpyHk(DLL) 프로젝트가 빌드되지만 링커 오류가 발생합니다.  
   
 ```  
@@ -118,14 +119,14 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
  C DLL 프로젝트인 SpyHK.dll이 이제 오류 없이 빌드되고 연결됩니다.  
   
-##  <a name="a-nameoutdatedheaderfilesa-step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> 6단계. 더 오래된 헤더 파일  
+##  <a name="outdated_header_files"></a> 6단계. 더 오래된 헤더 파일  
  이 시점에서 기본 실행 파일 프로젝트인 Spyxx에서 작업을 시작합니다.  
   
  몇 개의 다른 포함 파일(ctl3d.h 및 penwin.h)을 찾을 수 없습니다. 인터넷을 검색하여 헤더에 포함된 항목을 식별하는 것이 유용할 수도 있지만 정보가 유용하지 않은 경우도 있습니다. ctl3d.h는 Exchange Development Kit의 일부이고 Windows 95에서 특정 스타일의 컨트롤에 대한 지원을 제공했으며, penwin.h는 사용되지 않는 API인 창 펜 컴퓨팅과 관련이 있는 것을 확인했습니다. 이 경우 #include 줄을 주석으로 처리하고, verstamp.h와 동일한 방식으로 정의되지 않은 기호를 처리합니다. 3D 컨트롤 또는 펜 컴퓨팅과 관련된 모든 항목이 프로젝트에서 제거되었습니다.  
   
  단계적으로 제거 중인 많은 컴파일 오류가 있는 프로젝트의 경우 #include 지시문을 제거할 때 바로 오래된 API의 모든 사용을 찾는 것은 비현실적입니다. 즉시 감지하지 못하고 나중에 WM_DLGBORDER이 정의되지 않았다는 오류가 발생했습니다. 이는 실제로 ctl3d.h에서 제공되는, 정의되지 않은 많은 기호 중 하나일 뿐입니다. 오래된 API와 관련이 있음을 확인한 후 코드에서 해당 참조를 모두 제거했습니다.  
   
-##  <a name="a-nameupdatingiostreamscodea-step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> 7단계. 이전 iostreams 코드 업데이트  
+##  <a name="updating_iostreams_code"></a> 7단계. 이전 iostreams 코드 업데이트  
  다음 오류는 iostreams를 사용하는 이전 C++ 코드에서 일반적으로 발생합니다.  
   
  mstream.h(40): 오류 C1083: 포함 파일을 열 수 없습니다 'iostream.h': 해당 파일 또는 디렉터리가 없습니다.  
@@ -278,7 +279,7 @@ mstream& operator<<(LPTSTR psz)
   
  이러한 형식의 변환은 덜 엄격한 이전 컴파일러에서 허용되었지만 최근의 규칙 변경에 따라 보다 올바른 코드가 필요합니다.  
   
-##  <a name="a-namestricterconversionsa-step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> 8단계. 컴파일러의 보다 엄격한 변환  
+##  <a name="stricter_conversions"></a> 8단계. 컴파일러의 보다 엄격한 변환  
  다음과 같은 많은 오류도 발생합니다.  
   
 ```  
@@ -289,10 +290,9 @@ error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::
   
 ```cpp  
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)  
-// other message omitted …  
+// other messages omitted...  
 ON_WM_NCHITTEST() // Error occurs on this line.  
 END_MESSAGE_MAP()  
-  
 ```  
   
  이 매크로의 정의로 이동하면 OnNcHitTest 함수를 참조하는 것을 확인할 수 있습니다.  
@@ -302,7 +302,6 @@ END_MESSAGE_MAP()
 { WM_NCHITTEST, 0, 0, 0, AfxSig_l_p, \  
 (AFX_PMSG)(AFX_PMSGW) \  
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },  
-  
 ```  
   
  문제는 멤버 함수 형식에 대한 포인터의 불일치와 관련이 있습니다. 클래스 형식인 CHotLinkCtrl에서 클래스 형식인 CWnd로의 변환은 유효한 파생 형식-기본 형식 변환이기 때문에 문제가 아닙니다. 문제는 반환 형식 UINT 및 LRESULT입니다. LRESULT는 대상 이진 형식에 따라 64비트 포인터 또는 32비트 포인터인 LONG_PTR로 확인되므로 UINT는 이 형식으로 변환되지 않습니다. 이 문제는 Visual Studio 2005에서 64비트 호환성 변경의 일부로 많은 메시지 맵 메서드의 반환 형식이 UINT에서 LRESULT로 변경되었기 때문에 2005 이전에 작성된 코드를 업그레이드하는 경우에 자주 발생합니다. 다음 코드에서 반환 형식을 UINT에서 LRESULT로 변경합니다.  
@@ -319,7 +318,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
  CWnd에서 파생된 서로 다른 클래스에 이 함수가 모두&10;개 정도 있기 때문에 편집기에서 해당 함수에 커서가 있을 때 **정의로 이동**(키보드: F12) 및 **선언으로 이동**(키보드: Ctrl+F12)을 사용하여 찾은 다음 **기호 찾기** 도구 창에서 함수로 이동하면 도움이 됩니다. 일반적으로 **정의로 이동**이 둘 중에서 더 유용합니다. **선언으로 이동**은 friend 클래스 선언이나 정방향 참조와 같은 정의하는 클래스 선언 이외의 선언을 찾습니다.  
   
-##  <a name="a-namemfcchangesa-step-9-mfc-changes"></a><a name="mfc_changes"></a> 9단계. MFC 변경  
+##  <a name="mfc_changes"></a> 9단계. MFC 변경  
  그다음 오류도 변경된 선언 형식과 관련이 있으며 매크로에서도 발생합니다.  
   
 ```Output  
@@ -340,7 +339,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
   
  이 시점에서 프로젝트를 컴파일할 수 있습니다. 그러나 작업할 몇 가지 경고가 있으며, MBCS에서 유니코드로 변환 또는 보안 CRT 함수를 사용한 보안 향상 등 업그레이드의 선택적 부분이 있습니다.  
   
-##  <a name="a-namecompilerwarningsa-step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> 10단계. 컴파일러 경고 처리  
+##  <a name="compiler_warnings"></a> 10단계. 컴파일러 경고 처리  
  경고의 전체 목록을 가져오려면 현재 컴파일의 경고 보고서만 가져오기 때문에 일반 빌드 대신 솔루션에 대해 **모두 다시 빌드**를 수행하여 이전에 컴파일된 모든 항목이 다시 컴파일되도록 해야 합니다. 다른 질문은 현재 경고 수준을 수락할지 또는 더 높은 경고 수준을 사용할지 여부입니다.  많은 코드, 특히 이전 코드를 포팅하는 경우 더 높은 경고 수준을 사용하는 것이 적합할 수 있습니다.  기본 경고 수준으로 시작한 후 경고 수준을 높여 모든 경고를 가져올 수도 있습니다. /Wall을 사용하는 경우 시스템 헤더 파일의 일부 경고를 가져오므로 대체로 /W4를 사용하여 시스템 헤더에 대한 경고를 가져오지 않고 코드에 대한 경고를 최대한 가져옵니다. 경고를 오류로 표시하려는 경우 /WX 옵션을 추가합니다. 이러한 설정은 프로젝트 속성 대화 상자의 C/C++ 섹션에 있습니다.  
   
  CSpyApp 클래스의 메서드 중 하나는 더 이상 지원되지 않는 함수에 대한 경고를 생성합니다.  
@@ -530,7 +529,7 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  변수가 처음에 `extern`으로 선언된 후 나중에 `static`으로 선언된 경우 문제가 발생합니다. 이러한 두 저장소 클래스 지정자의 의미는 양립할 수 없지만 Microsoft 확장으로 허용됩니다. 코드를 다른 컴파일러로 포팅할 수 있게 하거나 /Za(ANSI 호환성)를 사용하여 컴파일하려는 경우 일치하는 저장소 클래스 지정자를 포함하도록 선언을 변경합니다.  
   
-##  <a name="a-nameportingtounicodea-step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> 11단계. MBCS에서 유니코드로 포팅  
+##  <a name="porting_to_unicode"></a> 11단계. MBCS에서 유니코드로 포팅  
  Windows 환경에서 유니코드를 말할 때는 일반적으로 UTF-16을 의미합니다. Linux와 같은 다른 운영 체제는 UTF-8을 사용하지만 Windows는 일반적으로 사용하지 않습니다. 실제로 MBCS 코드를 UTF-16 유니코드로 포팅하는 단계를 수행하기 전에 다른 작업을 수행하거나 편리한 시간까지 포팅을 연기하기 위해 MBCS가 사용되지 않는다는 경고를 일시적으로 제거하는 것이 좋습니다. 현재 코드는 MBCS를 사용하며, 계속 MBCS를 사용하려면 MBCS 버전의 MFC를 다운로드해야 합니다.  다소 큰 이 라이브러리는 기본 Visual Studio 설치에서 제거되었으므로 별도로 다운로드해야 합니다. [MFC MBCS DLL 추가 기능](../mfc/mfc-mbcs-dll-add-on.md)을 참조하세요. 다운로드하고 Visual Studio를 다시 시작한 후 MBCS 버전의 MFC를 사용하여 컴파일 및 연결할 수 있지만, MBCS에 대한 경고를 제거하려면 프로젝트 속성의 전처리기 섹션에 있는 미리 정의된 매크로 목록이나 stdafx.h 헤더 파일 또는 기타 공용 헤더 파일의 시작 부분에 NO_WARN_MBCS_MFC_DEPRECATION도 추가해야 합니다.  
   
  이제 일부 링커 오류가 있습니다.  
@@ -649,7 +648,7 @@ strFace.ReleaseBuffer();
   
  이 Spy++ 솔루션을 작업할 때 평균적인 C++ 개발자가 코드를 유니코드로 변환하는 데 약&2;일이 걸렸습니다. 다시 테스트하는 시간은 여기에 포함되지 않았습니다.  
   
-##  <a name="a-nameportingtosecurecrta-step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> 12단계. 보안 CRT를 사용하도록 포팅  
+##  <a name="porting_to_secure_crt"></a> 12단계. 보안 CRT를 사용하도록 포팅  
  보안 버전(_s 접미사가 있는 버전)의 CRT 함수를 사용하도록 코드를 포팅하는 것이 다음 작업입니다. 이 경우 일반적인 전략은 함수를 _s 버전으로 바꾼 후 일반적으로 필요한 추가 버퍼 크기 매개 변수를 추가하는 것입니다. 대부분의 경우 크기가 알려져 있으므로 이 작업은 간단합니다. 크기가 즉시 제공되지 않는 경우에는 CRT 함수를 사용하는 함수에 매개 변수를 더 추가하거나 대상 버퍼의 사용을 검사하고 적절한 크기 제한을 확인해야 합니다.  
   
  Visual C++에서는 크기 매개 변수를 많이 추가하지 않고 쉽게 코드 보안을 설정하는 트릭을 제공하며, 템플릿 오버로드를 사용하여 수행됩니다. 이러한 오버로드는 템플릿이므로 C가 아니라 C++로 컴파일하는 경우에만 사용할 수 있습니다. Spyxxhk는 C 프로젝트이므로 트릭이 작동하지 않습니다.  그러나 Spyxx는 C 프로젝트가 아니므로 트릭을 사용할 수 있습니다. 트릭은 stdafx.h와 같은 프로젝트의 각 파일에서 컴파일되는 위치에 다음과 같은 줄을 추가하는 것입니다.  
@@ -666,7 +665,7 @@ strFace.ReleaseBuffer();
   
  이러한 기술을 통해 안전한 CRT 함수를 사용하도록 코드를 변환하는 데 약 반나절이 걸렸습니다. 템플릿 오버로드를 선택하지 않고 크기 매개 변수를 수동으로 추가하는 경우 두세 배의 시간이 걸릴 것입니다.  
   
-##  <a name="a-namedeprecatedforscopea-step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> 13단계. /Zc:forScope가 사용되지 않음  
+##  <a name="deprecated_forscope"></a> 13단계. /Zc:forScope가 사용되지 않음  
  Visual C++ 6.0 이후 컴파일러는 루프에서 선언된 변수의 범위를 루프 범위로 제한하는 현재 표준을 준수합니다. 컴파일러 옵션 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)(프로젝트 속성의 **루프 범위 강제 규칙**)는 이를 오류로 보고할지 여부를 제어합니다. 부합되도록 코드를 업데이트하고 루프 바깥쪽에 선언을 추가해야 합니다. 코드 변경을 방지하기 위해 C++ 프로젝트 속성의 언어 섹션에서 해당 설정을 **아니요(/Zc:forScope-)**로 변경할 수 있습니다. 그러나 Visual C++의 이후 릴리스에서 **/Zc:forScope-**가 제거될 수도 있으므로 결국 표준에 맞게 코드를 변경해야 합니다.  
   
  이러한 문제는 비교적 쉽게 해결되지만, 코드에 따라 많은 코드에 영향을 줄 수 있습니다. 다음은 일반적인 문제입니다.  
@@ -706,8 +705,3 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ## <a name="see-also"></a>참고 항목  
  [포팅 및 업그레이드: 예제 및 사례 연구](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [이전 사례 연구: COM Spy](../porting/porting-guide-com-spy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

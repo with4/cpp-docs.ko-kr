@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComPolyObject
-- ATL.CComPolyObject<contained>
-- ATL::CComPolyObject
-- ATL::CComPolyObject<contained>
-- ATL.CComPolyObject
+- ATLCOM/ATL::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::AddRef
+- ATLCOM/ATL::CComPolyObject::CreateInstance
+- ATLCOM/ATL::CComPolyObject::FinalConstruct
+- ATLCOM/ATL::CComPolyObject::FinalRelease
+- ATLCOM/ATL::CComPolyObject::QueryInterface
+- ATLCOM/ATL::CComPolyObject::Release
+- ATLCOM/ATL::CComPolyObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +116,7 @@ class CComPolyObject : public IUnknown,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccompolyobjectaddref"></a><a name="addref"></a>CComPolyObject::AddRef  
+##  <a name="addref"></a>CComPolyObject::AddRef  
  개체에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -121,7 +126,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 하거나 테스트 될 수 있는 값입니다.  
   
-##  <a name="a-nameccompolyobjecta--ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
+##  <a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
  생성자입니다.  
   
 ```
@@ -137,7 +142,7 @@ CComPolyObject(void* pv);
   
  모듈 잠금 횟수를 소멸자 줄입니다.  
   
-##  <a name="a-namedtora--ccompolyobjectccompolyobject"></a><a name="dtor"></a>CComPolyObject:: ~ CComPolyObject  
+##  <a name="dtor"></a>CComPolyObject:: ~ CComPolyObject  
  소멸자입니다.  
   
 ```
@@ -147,7 +152,7 @@ CComPolyObject(void* pv);
 ### <a name="remarks"></a>주의  
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
   
-##  <a name="a-namecreateinstancea--ccompolyobjectcreateinstance"></a><a name="createinstance"></a>CComPolyObject::CreateInstance  
+##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
  새로 만들 수 있습니다 **CComPolyObject** `contained` ** > ** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
@@ -168,7 +173,7 @@ static HRESULT WINAPI CreateInstance(
   
  개체에 대 한 액세스를 직접 필요 하지 않지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
   
-##  <a name="a-namefinalconstructa--ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
  개체 생성의 최종 단계 중에 호출을이 메서드는 최종 초기화에 대해 수행 된 [m_contained](#m_contained) 데이터 멤버입니다.  
   
 ```
@@ -178,14 +183,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namefinalreleasea--ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPolyObject::FinalRelease  
+##  <a name="finalrelease"></a>CComPolyObject::FinalRelease  
  이 메서드 해제 개체 소멸 하는 동안 호출 된 [m_contained](#m_contained) 데이터 멤버입니다.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccompolyobjectmcontained"></a><a name="m_contained"></a>CComPolyObject::m_contained  
+##  <a name="m_contained"></a>CComPolyObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 클래스에서 파생 된 개체입니다.  
   
 ```
@@ -199,7 +204,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>주의  
  **IUnknown** 을 통해 호출 `m_contained` 개체를 집계 하는 경우 또는 알 수 없는 외부에 위임 되며는 **IUnknown** 개체가 집계 되지 않은 경우이 개체의 합니다.  
   
-##  <a name="a-namequeryinterfacea--ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>CComPolyObject::QueryInterface  
+##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -227,7 +232,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="remarks"></a>주의  
  요청한 인터페이스가 있으면 집계 된 개체에 대 한 **IUnknown**, `QueryInterface` 집계 된 개체의 자체에 대 한 포인터를 반환 **IUnknown** 참조 횟수를 증가 시킵니다. 이 메서드를 통해 인터페이스에 대 한 쿼리 하는 그렇지 않은 경우는 `CComContainedObject` 데이터 멤버를 [m_contained](#m_contained)합니다.  
   
-##  <a name="a-namereleasea--ccompolyobjectrelease"></a><a name="release"></a>CComPolyObject::Release  
+##  <a name="release"></a>CComPolyObject::Release  
  개체에 대 한 참조 횟수를 감소 시킵니다.  
   
 ```

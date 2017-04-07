@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropSource
+- AFXOLE/COleDropSource
+- AFXOLE/COleDropSource::COleDropSource
+- AFXOLE/COleDropSource::GiveFeedback
+- AFXOLE/COleDropSource::OnBeginDrag
+- AFXOLE/COleDropSource::QueryContinueDrag
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecoledropsourcea--coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
  `COleDropSource` 개체를 생성합니다.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="a-namegivefeedbacka--coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
  호출한 후에 프레임 워크에서 호출 [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) 또는 [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)합니다.  
   
 ```  
@@ -122,7 +127,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  자세한 내용은 참조 [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), 및 [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonbegindraga--coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
  에 의해 호출 프레임 워크는 이벤트가 발생 하는 경우 마우스 왼쪽된 단추를 누르는 것과 같은 끌기 작업을 시작할 수 있습니다.  
   
 ```  
@@ -139,7 +144,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>주의  
  끌기 프로세스가 시작 되는 방식을 수정 하려는 경우이 함수를 재정의 합니다. 기본 구현에서 마우스를 캡처할 하 고 마우스 왼쪽 또는 오른쪽 단추를 클릭 하거나 esc 키, 마우스를 해제 되는 시간에 도달할 때까지 끌기 모드에서 제공 됩니다.  
   
-##  <a name="a-namequerycontinuedraga--coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
  끌기를 시작 된 후이 함수 반복적으로 호출 프레임 워크는 끌기 작업 취소 또는 완료 될 때까지 합니다.  
   
 ```  

@@ -10,11 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinTraits
-- CMDIChildWinTraits
-- ATL.CWinTraits
-- CFrameWinTraits
-- ATL::CWinTraits
-- CControlWinTraits
+- ATLWIN/ATL::CWinTraits
+- ATLWIN/ATL::CWinTraits::GetWndExStyle
+- ATLWIN/ATL::CWinTraits::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +95,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
  호출 하는 표준 스타일을 검색 하려면이 함수는 `CWinTraits` 개체입니다.  
   
 ```
@@ -111,7 +109,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  개체의 표준 창 스타일입니다.  
   
-##  <a name="a-namegetwndexstylea--cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
  호출의 확장된 스타일을 검색 하려면이 함수는 `CWinTraits` 개체입니다.  
   
 ```

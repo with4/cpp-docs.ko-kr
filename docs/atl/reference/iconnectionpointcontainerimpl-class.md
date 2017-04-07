@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl<T>
 - IConnectionPointContainerImpl
-- ATL::IConnectionPointContainerImpl<T>
+- ATLCOM/ATL::IConnectionPointContainerImpl
+- ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
+- ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameenumconnectionpointsa--iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
  연결 가능 개체에서 지원 되는 연결 지점을 통해 반복 하는 열거자를 만듭니다.  
   
 ```
@@ -96,7 +95,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>주의  
  참조 [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namefindconnectionpointa--iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
  지정한 IID를 지 원하는 연결 지점에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```

@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[access_type 열거형](#access_type)|[queuing_mode 열거형](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>access_type 열거형  
+##  <a name="access_type"></a>access_type 열거형  
  다양 한 유형의 데이터에 대 한 액세스를 나타내는 데 사용 되는 열거형 형식입니다.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|공유합니다. 할당은 액셀러레이터 키에 액세스할 수 이며 모두 읽고 쓸 수 있는 CPU에 있습니다.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>queuing_mode 열거형  
+##  <a name="queuing_mode"></a>queuing_mode 열거형  
  액셀러레이터에서 지원 되는 큐 모드를 지정 합니다.  
   
 ```  

@@ -10,8 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlFile
-- ATL::CAtlFile
-- ATL.CAtlFile
+- ATLFILE/ATL::CAtlFile
+- ATLFILE/ATL::CAtlFile::CAtlFile
+- ATLFILE/ATL::CAtlFile::Create
+- ATLFILE/ATL::CAtlFile::Flush
+- ATLFILE/ATL::CAtlFile::GetOverlappedResult
+- ATLFILE/ATL::CAtlFile::GetPosition
+- ATLFILE/ATL::CAtlFile::GetSize
+- ATLFILE/ATL::CAtlFile::LockRange
+- ATLFILE/ATL::CAtlFile::Read
+- ATLFILE/ATL::CAtlFile::Seek
+- ATLFILE/ATL::CAtlFile::SetSize
+- ATLFILE/ATL::CAtlFile::UnlockRange
+- ATLFILE/ATL::CAtlFile::Write
+- ATLFILE/ATL::CAtlFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +106,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlfile.h  
   
-##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>CAtlFile::CAtlFile  
  생성자입니다.  
   
 ```
@@ -117,7 +129,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>주의  
  원래에서 파일 핸들의 소유권을 전송 하는 복사 생성자 `CAtlFile` 개체를 새로 생성 된 개체입니다.  
   
-##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>CAtlFile::Create  
  이 메서드는 파일 만들기 또는 열기를 호출 합니다.  
   
 ```
@@ -159,7 +171,7 @@ HRESULT Create(
 ### <a name="remarks"></a>주의  
  호출 [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) 를 만들거나 파일을 엽니다.  
   
-##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>CAtlFile::Flush  
  파일에 대 한 버퍼를 지우고 버퍼링 된 모든 데이터가 파일에 쓸 수 있는이 메서드를 호출 합니다.  
   
 ```
@@ -172,7 +184,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>주의  
  호출 [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) 버퍼링 된 데이터 파일을 플러시할 수 있습니다.  
   
-##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
  파일에 대 한 중복 된 작업의 결과 얻기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -198,7 +210,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>주의  
  호출 [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) 파일에 대 한 중복 된 작업의 결과를 가져옵니다.  
   
-##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>CAtlFile::GetPosition  
  현재 파일 포인터 위치를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -215,7 +227,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>주의  
  호출 [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) 현재 파일 포인터 위치를 가져올 수 있습니다.  
   
-##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>CAtlFile::GetSize  
  파일의 바이트에서 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -232,7 +244,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>주의  
  호출 [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) 파일의 바이트의 크기를 가져올 수 있습니다.  
   
-##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>CAtlFile::LockRange  
  다른 프로세스에 액세스 하지 못하도록 파일에 영역을 잠그려고이 메서드를 호출 합니다.  
   
 ```
@@ -252,7 +264,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>주의  
  호출 [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) 파일의 영역을 잠그려고 합니다. 파일의 바이트를 잠그면 다른 프로세스에서 해당 바이트에 액세스할 수 없습니다. 파일의 둘 이상의 영역을 잠글 수 있습니다 않지만 겹치는 영역이 없으면이 허용 됩니다. 사용 하 여 영역의 잠금을 해제 하면 [CAtlFile::UnlockRange](#unlockrange), 바이트 범위 이전에 잠근 지역와 정확히 일치 해야 합니다. `LockRange`인접 한 지역을 선택 합니다; 병합 하지 않습니다. 두 개의 잠긴된 영역을 인접 한 경우 잠금을 해제 해야 각각 개별적으로 합니다.  
   
-##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>CAtlFile::m_pTM  
  `CAtlTransactionManager` 개체에 대한 포인터입니다.  
   
 ```
@@ -261,7 +273,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>CAtlFile::Read  
  파일 포인터에 의해 지정 된 위치부터 시작 하는 파일에서 데이터를 읽는이 메서드를 호출 합니다.  
   
 ```
@@ -308,7 +320,7 @@ HRESULT Read(
 ### <a name="remarks"></a>주의  
  처음 세 개의 폼 호출 [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)를 마지막 [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) 파일에서 데이터를 읽습니다. 사용 하 여 [CAtlFile::Seek](#seek) 파일 포인터를 이동 합니다.  
   
-##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>CAtlFile::Seek  
  파일의 파일 포인터를 이동 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -330,7 +342,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>주의  
  호출 [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) 파일 포인터를 이동 합니다.  
   
-##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>CAtlFile::SetSize  
  파일의 크기를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -347,7 +359,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>주의  
  호출 [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) 및 [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) 파일의 크기를 설정 합니다. 반환 시 파일 포인터가 파일의 끝에 배치 됩니다.  
   
-##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  영역 파일의 잠금을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -367,7 +379,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>주의  
  호출 [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) 영역 파일의 잠금을 해제 합니다.  
   
-##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>CAtlFile::Write  
  파일 포인터에 의해 지정 된 위치에서 시작 하 여 파일에 데이터를 기록 하려면이 메서드를 호출 합니다.  
   
 ```

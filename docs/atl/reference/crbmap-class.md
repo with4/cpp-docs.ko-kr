@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CRBMap
 - CRBMap
-- ATL::CRBMap
+- ATLCOLL/ATL::CRBMap
+- ATLCOLL/ATL::CRBMap::CRBMap
+- ATLCOLL/ATL::CRBMap::Lookup
+- ATLCOLL/ATL::CRBMap::RemoveKey
+- ATLCOLL/ATL::CRBMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +108,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-namecrbmapa--crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>CRBMap::CRBMap  
  생성자입니다.  
   
 ```
@@ -124,7 +127,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&81;](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmapcrbmap"></a><a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
  소멸자입니다.  
   
 ```
@@ -136,7 +139,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="a-namelookupa--crbmaplookup"></a><a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>CRBMap::Lookup  
  키 또는 값을 조회 하려면이 메서드를 호출 하는 `CRBMap` 개체입니다.  
   
 ```
@@ -161,7 +164,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&82;](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="a-nameremovekeya--crbmapremovekey"></a><a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>CRBMap::RemoveKey  
  요소를 제거 하려면이 메서드를 호출 하는 `CRBMap` 키가 지정 된 개체입니다.  
   
 ```
@@ -181,7 +184,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&83;](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="a-namesetata--crbmapsetat"></a><a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>CRBMap::SetAt  
  지도에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.  
   
 ```

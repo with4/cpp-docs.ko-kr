@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAllocator
-- ATL::CComAllocator
 - CComAllocator
+- ATLBASE/ATL::CComAllocator
+- ATLBASE/ATL::CComAllocator::Allocate
+- ATLBASE/ATL::CComAllocator::Free
+- ATLBASE/ATL::CComAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -66,7 +68,7 @@ class CComAllocator
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameallocatea--ccomallocatorallocate"></a><a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>CComAllocator::Allocate  
  메모리를 할당하려면 이 정적 함수를 호출합니다.  
   
 ```
@@ -83,7 +85,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>주의  
  메모리를 할당합니다. 참조 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namefreea--ccomallocatorfree"></a><a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>CComAllocator::Free  
  할당 된 메모리를 정적이 함수를 호출 합니다.  
   
 ```
@@ -97,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>주의  
  할당된 된 메모리를 해제합니다. 참조 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namereallocatea--ccomallocatorreallocate"></a><a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>CComAllocator::Reallocate  
  메모리를 다시 할당하려면 이 정적 함수를 호출합니다.  
   
 ```

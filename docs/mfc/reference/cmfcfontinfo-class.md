@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::GetFullName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nCharSet
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nPitchAndFamily
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nType
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strScript
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +92,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfcfontinfoa--cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
  `CMFCFontInfo` 개체를 생성합니다.  
   
 ```  
@@ -123,7 +130,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>주의  
  이 설명서는 용어를 사용 하 여 *문자 집합* 및 *스크립트* 서로 교환해 서입니다. A *스크립트*, 하며 라고도 쓰기 시스템의 문자 및 하나 이상의 언어에 해당 문자를 작성 하는 것에 대 한 규칙의 컬렉션입니다. 에 알파벳 및 스크립트에 사용 되는 문장 부호 문자 컬렉션에 포함 되어 있습니다. 예를 들어 라틴 스크립트는 미국에서 사용 되는 것과 a ~ Z 문자를 포함 하는 해당 알파벳 영어에 사용 됩니다. `lfCharSet` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조 문자 집합을 지정 합니다. 예를 들어, 값 `ANSI_CHARSET` 지정는 [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] 라틴어 스크립트의 알파벳을 포함 하는 문자 집합입니다.  
   
-##  <a name="a-namegetfullnamea--cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
  검색 글꼴과 문자의 연결 된 이름 (스크립트)을 설정합니다.  
   
 ```  
@@ -136,7 +143,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 글꼴의 전체 이름을 가져옵니다. 예를 들어 글꼴 이름을 경우 `Arial` 글꼴 스크립트는 `Cyrillic`,이 메서드는 "Arial (키릴 자모)"를 반환 합니다.  
   
-##  <a name="a-namemncharseta--cmfcfontinfomncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
  연결 된 문자 집합 (스크립트)을 지정 하는 값입니다.  
   
 ```  
@@ -146,7 +153,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 `nCharSet` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
-##  <a name="a-namemnpitchandfamilya--cmfcfontinfomnpitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
  피치 (포인트 크기) 및 글꼴의 제품군 (예: serif, 굴림, 및 고정 폭)을 지정 하는 값입니다.  
   
 ```  
@@ -156,7 +163,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 `nPitchAndFamily` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
-##  <a name="a-namemntypea--cmfcfontinfomntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
  글꼴의 유형을 지정 하는 값입니다.  
   
 ```  
@@ -166,7 +173,7 @@ const int m_nType;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 `nType` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
-##  <a name="a-namemstrnamea--cmfcfontinfomstrname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
  글꼴의 이름이: 예를 들어 **Arial**합니다.  
   
 ```  
@@ -176,7 +183,7 @@ const CString m_strName;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 `lpszName` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
-##  <a name="a-namemstrscripta--cmfcfontinfomstrscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
  연결 된 문자 집합 (스크립트)의 이름입니다.  
   
 ```  

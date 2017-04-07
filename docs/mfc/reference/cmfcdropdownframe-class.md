@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  
           `CMFCDropDownFrame` 개체를 만듭니다.  
   
@@ -128,7 +134,7 @@ virtual BOOL Create(
   
  `CMFCDropDownFrame` 클래스는 제공 된 복사본을 만듭니다 `CMFCDropDownToolBar` 매개 변수입니다. 단추 이미지와 단추 상태에서이 메서드는 복사는 `pWndOriginToolbar` 매개 변수는 `m_pWndOriginToolbar` 데이터 멤버입니다.  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  드롭 다운 프레임의 부모 메뉴 모음을 검색합니다.  
   
 ```  
@@ -141,7 +147,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 부모 단추를 클릭 하 여 부모 메뉴 모음을 검색합니다. 이 메서드는 반환 `NULL` 드롭 다운 프레임에 부모 단추가 되었거나 부모 단추에 부모 메뉴 모음에 없습니다.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  드롭 다운 프레임의 부모 팝업 메뉴를 검색합니다.  
   
 ```  
@@ -154,7 +160,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 부모 단추를 클릭 하 여 부모 메뉴를 검색합니다. 이 메서드는 반환 `NULL` 드롭 다운 프레임에 부모 단추가 또는 부모 단추에는 부모 메뉴에 없는 경우.  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  드롭 다운 프레임 위치를 변경합니다.  
   
 ```  
@@ -171,7 +177,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>주의  
  프레임 워크 드롭다운 프레임을 만들거나 부모 창의 크기를 조정할 때이 메서드를 호출 합니다. 이 메서드는 부모 창의 크기와 위치를 사용 하 여 드롭 다운 프레임의 크기와 위치를 계산 합니다.  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  자식 드롭다운 도구 모음 창이 자동으로 소멸 됩니다 있는지 여부를 설정 합니다.  
   
 ```  

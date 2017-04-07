@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringData
+- ATLSIMPSTR/ATL::CStringData
+- ATLSIMPSTR/ATL::AddRef
+- ATLSIMPSTR/ATL::data
+- ATLSIMPSTR/ATL::IsLocked
+- ATLSIMPSTR/ATL::IsShared
+- ATLSIMPSTR/ATL::Lock
+- ATLSIMPSTR/ATL::Release
+- ATLSIMPSTR/ATL::Unlock
+- ATLSIMPSTR/ATL::nAllocLength
+- ATLSIMPSTR/ATL::nDataLength
+- ATLSIMPSTR/ATL::nRefs
+- ATLSIMPSTR/ATL::pStringMgr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ struct CStringData
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpstr.h  
   
-##  <a name="a-nameaddrefa--cstringdataaddref"></a><a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>CStringData::AddRef  
  String 개체의 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -111,7 +123,7 @@ void AddRef() throw();
 > [!NOTE]
 >  문자열 버퍼 잠겨 음수 표시 되므로 음수 참조 횟수를 포함 된 문자열에서이 메서드를 호출 하지 마십시오.  
   
-##  <a name="a-namedataa--cstringdatadata"></a><a name="data"></a>CStringData::data  
+##  <a name="data"></a>CStringData::data  
  String 개체의 문자 버퍼에 대 한 포인터를 반환합니다.  
   
 ```
@@ -127,7 +139,7 @@ void* data() throw();
 > [!NOTE]
 >  이 버퍼에서 할당 되지 않은 `CStringData` 개체 있지만 필요할 때 문자열 관리자가 있습니다. 할당 된 버퍼 문자열 데이터 개체에 추가 됩니다.  
   
-##  <a name="a-nameislockeda--cstringdataislocked"></a><a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>CStringData::IsLocked  
  문자 버퍼 잠겨 있는지 확인 합니다.  
   
 ```
@@ -140,7 +152,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>주의  
  현재 string 개체의 문자 버퍼 잠겨 있는지 확인 하려면이 함수를 호출 합니다.  
   
-##  <a name="a-nameisshareda--cstringdataisshared"></a><a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>CStringData::IsShared  
  문자 버퍼는 공유 하는 경우를 결정 합니다.  
   
 ```
@@ -153,7 +165,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>주의  
  문자열 데이터 개체의 문자 버퍼 현재 여러 string 개체 간에 공유 되는지 확인 하려면이 함수를 호출 합니다.  
   
-##  <a name="a-namelocka--cstringdatalock"></a><a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>CStringData::Lock  
  연결 된 문자열 개체의 문자 버퍼를 잠급니다.  
   
 ```
@@ -166,7 +178,7 @@ void Lock() throw();
 > [!NOTE]
 >  문자 버퍼 버퍼 높은 string 개체 간에 공유 되지 않는 경우에 잠글 수 있습니다.  
   
-##  <a name="a-namenalloclengtha--cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>CStringData::nAllocLength  
  문자 할당 된 버퍼의 길이입니다.  
   
 ```
@@ -176,7 +188,7 @@ int nAllocLength;
 ### <a name="remarks"></a>주의  
  할당 된 데이터 버퍼의 길이 저장 `XCHAR`s (종료 null) 포함 되지 않습니다.  
   
-##  <a name="a-namendatalengtha--cstringdatandatalength"></a><a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>CStringData::nDataLength  
  String 개체의 현재 길이입니다.  
   
 ```
@@ -186,7 +198,7 @@ int nDataLength;
 ### <a name="remarks"></a>주의  
  현재 사용 되는 데이터의 길이 저장 `XCHAR`s (종료 null) 포함 되지 않습니다.  
   
-##  <a name="a-namenrefsa--cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>CStringData::nRefs  
  문자열 데이터 개체의 참조 횟수입니다.  
   
 ```
@@ -196,7 +208,7 @@ long nRefs;
 ### <a name="remarks"></a>주의  
  문자열 데이터 개체의 참조 횟수를 저장합니다. 이 수는 문자열 데이터 개체와 연관 된 높은 string 개체의 수를 나타냅니다. 음수 값을 현재 문자열 데이터 개체가 잠겨 있는지 나타냅니다.  
   
-##  <a name="a-namepstringmgra--cstringdatapstringmgr"></a><a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>CStringData::pStringMgr  
  연결 된 문자열 개체의 메모리 관리자입니다.  
   
 ```
@@ -206,7 +218,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>주의  
  연결 된 문자열 개체에 대 한 메모리 관리자를 저장합니다. 메모리 관리자와 문자열에 대 한 자세한 내용은 참조 하십시오. [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)합니다.  
   
-##  <a name="a-namereleasea--cstringdatarelease"></a><a name="release"></a>CStringData::Release  
+##  <a name="release"></a>CStringData::Release  
  문자열 데이터 개체의 참조 횟수를 감소 시킵니다.  
   
 ```
@@ -220,7 +232,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities #&104;](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="a-nameunlocka--cstringdataunlock"></a><a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>CStringData::Unlock  
  연결 된 문자열 개체의 문자 버퍼를 잠금 해제합니다.  
   
 ```

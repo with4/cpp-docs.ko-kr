@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCReBar
+- AFXREBAR/CMFCReBar
+- AFXREBAR/CMFCReBar::AddBar
+- AFXREBAR/CMFCReBar::CalcFixedLayout
+- AFXREBAR/CMFCReBar::CanFloat
+- AFXREBAR/CMFCReBar::Create
+- AFXREBAR/CMFCReBar::EnableDocking
+- AFXREBAR/CMFCReBar::GetReBarBandInfoSize
+- AFXREBAR/CMFCReBar::GetReBarCtrl
+- AFXREBAR/CMFCReBar::OnShowControlBarMenu
+- AFXREBAR/CMFCReBar::OnToolHitTest
+- AFXREBAR/CMFCReBar::OnUpdateCmdUI
+- AFXREBAR/CMFCReBar::SetPaneAlignment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +97,7 @@ class CMFCReBar : public CPane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRebar.h  
   
-##  <a name="a-nameaddbara--cmfcrebaraddbar"></a><a name="addbar"></a>CMFCReBar::AddBar  
+##  <a name="addbar"></a>CMFCReBar::AddBar  
  Rebar 밴드를 추가합니다.  
   
 ```  
@@ -125,7 +137,7 @@ BOOL AddBar(
 ### <a name="return-value"></a>반환 값  
  `TRUE`밴드 rebar;에 성공적으로 추가 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namecreatea--cmfcrebarcreate"></a><a name="create"></a>CMFCReBar::Create  
+##  <a name="create"></a>CMFCReBar::Create  
  Rebar 컨트롤을 만들고 연결 하는 [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) 개체입니다.  
   
 ```  
@@ -154,7 +166,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetrebarctrla--cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
  에 직접 액세스할 `CReBarCtrl` 에 대 한 기본 공용 컨트롤 `CMFCReBar` 개체입니다.  
   
 ```  
@@ -167,7 +179,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="remarks"></a>주의  
  프로그램 크기 조정 막대를 사용자 지정할 때 Windows rebar 공용 컨트롤 기능을 활용 하려면이 메서드를 호출 합니다.  
   
-##  <a name="a-namecalcfixedlayouta--cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -184,7 +196,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecanfloata--cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCReBar::CanFloat  
+##  <a name="canfloat"></a>CMFCReBar::CanFloat  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -195,7 +207,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenabledockinga--cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar::EnableDocking  
+##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +219,7 @@ void EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetrebarbandinfosizea--cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -218,7 +230,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonshowcontrolbarmenua--cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -232,7 +244,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameontoolhittesta--cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -249,7 +261,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonupdatecmduia--cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -264,7 +276,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpanealignmenta--cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

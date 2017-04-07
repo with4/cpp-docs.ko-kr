@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontcomboboxa--cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  생성 된 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) 개체입니다.  
   
 ```  
@@ -158,7 +162,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="a-namegetfontdesca--cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
  에 대 한 포인터를 반환 합니다.는 `CMFCFontInfo` 콤보 상자에서 지정된 된 인덱스에 대 한 개체입니다.  
   
 ```  
@@ -172,7 +176,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CMFCFontInfo` 개체입니다. 경우 `iIndex` 유효한 항목 인덱스를 지정 하지 않는 경우 반환 값은 `NULL`합니다.  
   
-##  <a name="a-namemnfontheighta--cmfctoolbarfontcomboboxmnfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
  콤보 상자에는 소유자 그리기 스타일에 글꼴 콤보 상자에 있는 문자의 픽셀 높이 지정 합니다.  
   
 ```  
@@ -182,7 +186,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>주의  
  하는 경우는 `m_nFontHeight` 변수는 0, 높이 콤보 상자의 기본 글꼴에 따라 자동으로 계산 됩니다. 높이의 기준선 위에 문자 기준선과 문자 기준선 아래 디센더 모두 포함 되어 있습니다.  
   
-##  <a name="a-namesetfonta--cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
  글꼴의 글꼴 이름 및 문자에 따라 글꼴 콤보 상자에서 집합을 선택 합니다. 매개 변수에서 지정 됩니다.  
   
 ```  

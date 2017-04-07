@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::Create
+- AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
+- AFXHTML/CHtmlEditCtrl::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,14 +87,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxhtml.h  
   
-##  <a name="a-namechtmleditctrla--chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
  `CHtmlEditCtrl` 개체를 생성합니다.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="a-namecreatea--chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>CHtmlEditCtrl::Create  
  WebBrowser ActiveX 컨트롤을 만들고에 연결 된 `CHtmlEditCtrl` 개체입니다. 이 함수에서 편집 모드를 WebBrowser ActiveX 컨트롤에서 기본 문서를 자동으로 탐색 하 고 다음에 배치 됩니다.  
   
 ```  
@@ -124,7 +129,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
  검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함 된 WebBrowser 컨트롤에 현재 로드 된 문서에 대 한 인터페이스  
   
 ```  
@@ -135,7 +140,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  문서 인터페이스입니다.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
  포함 된 WebBrowser 컨트롤에 로드 하는 기본 문서에 URL을 검색 합니다.  
   
 ```  

@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
@@ -58,9 +59,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 4.  [동시성 런타임 주요 변경 내용](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Visual C++ 2015 규칙 변경 내용  
+## <a name="VC_2015"></a> Visual C++ 2015 규칙 변경 내용  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> CRT(C 런타임 라이브러리)  
+###  <a name="BK_CRT"></a> CRT(C 런타임 라이브러리)  
   
 #### <a name="general-changes"></a>일반 변경 내용  
   
@@ -102,7 +103,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 #### <a name="new-and-newh"></a>\<new> 및 \<new.h>  
   
--   **new 및 delete** In previous versions of the library, the implementation-defined operator new 및 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 현재 이들 연산자 함수는 런타임 라이브러리 DLL을 사용할 때라도 항상 정적으로 이진 파일에 연결됩니다.  
+-   **new 및 delete** 이전 라이브러리 버전에서는 구현 시 정의된 연산자 new 및 delete 함수를 런타임 라이브러리 DLL(예: msvcr120.dll)에서 내보냈습니다. 현재 이들 연산자 함수는 런타임 라이브러리 DLL을 사용할 때라도 항상 정적으로 이진 파일에 연결됩니다.  
   
      이는 네이티브 또는 혼합 코드(/clr)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 /clr:pure로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 #include \<new> 또는 #include \<new.h>를 추가해야 할 수 있습니다. /clr:pure는 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.  
   
@@ -161,7 +162,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **부동 소수점 서식 지정 및 구문 분석** 정확성을 향상하고자 새로운 부동 소수점 서식 지정 및 구문 분석 알고리즘이 새로 추가되었습니다. 이 변경은 함수의 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 및 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 패밀리와 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 등의 함수에 영향을 미칩니다.  
   
-     이전 서식 지정 알고리즘에서는 제한된 자릿수만 생성되고 나머지 소수 자릿수는&0;으로 채워집니다. 일반적으로 다시 원래 부동 소수점 값으로 왕복할 문자열을 생성하려면 이것으로 충분하지만 정확한 값이나 가장 가까운&10;진수 표현이 필요한 경우에는 적절하지 않습니다. 새 서식 지정 알고리즘에서는 값을 표현하는 데 필요한 만큼 자릿수가 생성되거나 지정된 정밀도가 채워집니다. 향상의 예로&2;의 거듭제곱을 인쇄할 때 결과를 살펴보세요.  
+     이전 서식 지정 알고리즘에서는 제한된 자릿수만 생성되고 나머지 소수 자릿수는 0으로 채워집니다. 일반적으로 다시 원래 부동 소수점 값으로 왕복할 문자열을 생성하려면 이것으로 충분하지만 정확한 값이나 가장 가까운 10진수 표현이 필요한 경우에는 적절하지 않습니다. 새 서식 지정 알고리즘에서는 값을 표현하는 데 필요한 만큼 자릿수가 생성되거나 지정된 정밀도가 채워집니다. 향상의 예로 2의 거듭제곱을 인쇄할 때 결과를 살펴보세요.  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -174,19 +175,19 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      이전 구문 분석 알고리즘에서는 입력 문자열에서 최대 17자리만 고려되고 나머지 자릿수는 무시됩니다. 문자열로 표현되는 값의 매우 가까운 근사치를 생성하려면 이것으로 충분하고 결과는 대개 올바르게 반올림됨 결과에 매우 가깝습니다. 새 구현에서는 모든 제공된 자릿수를 고려하고 모든 입력에 대한 올바르게 반올림된 결과를 생성합니다(최대 768자리 길이). 또한 현재 이들 함수는 반올림 모드를 따릅니다(fesetround를 통해 제어 가능).  이들 함수가 다른 결과를 출력할 수 있으므로 이는 잠재적으로 중요한 동작 변경입니다. 새 결과는 항상 이전 결과보다 더 정확합니다.  
   
--   **16진수 및 무한대/NaN 부동 소수점 구문 분석** 부동 소수점 구문 분석 알고리즘은 현재&16;진수 부동 소수점 문자열(예: %a 및 %A printf 서식 지정자에서 생성된 항목) 및 위 설명대로 printf 함수에서 생성된 모든 무한대 및 NaN 문자열을 구문 분석합니다.  
+-   **16진수 및 무한대/NaN 부동 소수점 구문 분석** 부동 소수점 구문 분석 알고리즘은 현재 16진수 부동 소수점 문자열(예: %a 및 %A printf 서식 지정자에서 생성된 항목) 및 위 설명대로 printf 함수에서 생성된 모든 무한대 및 NaN 문자열을 구문 분석합니다.  
   
--   **%A 및 %a 영(0) 채우기** %a 및 %A 서식 지정자는 부동 소수점 수의 서식을&16;진수 가수 및 이진 지수로 지정합니다. 이전 버전에서 printf 함수는 문자열을 영(0)으로 올바르게 채우지 않습니다. 예를 들어 printf("%07.0a\n", 1.0)은 0x01p+0을 인쇄해야 하는데 00x1p+0을 인쇄합니다. 이 문제는 수정되었습니다.  
+-   **%A 및 %a 영(0) 채우기** %a 및 %A 서식 지정자는 부동 소수점 수의 서식을 16진수 가수 및 이진 지수로 지정합니다. 이전 버전에서 printf 함수는 문자열을 영(0)으로 올바르게 채우지 않습니다. 예를 들어 printf("%07.0a\n", 1.0)은 0x01p+0을 인쇄해야 하는데 00x1p+0을 인쇄합니다. 이 문제는 수정되었습니다.  
   
 -   **%A 및 %a 정밀도** 이전 라이브러리 버전에서 %A 및 %a 서식 지정자의 기본 정밀도는 6이었습니다. 현재 기본 정밀도는 C 표준에 따라 13입니다.  
   
-     이는 %A 또는 %a와 함께 서식 문자열을 사용하는 함수 출력의 런타임 동작 변경입니다. 이전 동작에서 %A 지정자를 사용하는 출력은 "1.1A2B3Cp+111"일 수 있습니다. 현재 같은 값의 출력은 "1.1A2B3C4D5E6F7p+111"입니다. 이전 동작을 가져오려면 정밀도(예: %.6A)를 지정하면 됩니다. [전체 자릿수 사양](../c-runtime-library/precision-specification.md)을 참조하세요.  
+     이는 %A 또는 %a와 함께 서식 문자열을 사용하는 함수 출력의 런타임 동작 변경입니다. 이전 동작에서 %A 지정자를 사용하는 출력은 "1.1A2B3Cp+111"일 수 있습니다. 현재 같은 값의 출력은 "1.1A2B3C4D5E6F7p+111"입니다. 이전 동작을 가져오려면 정밀도(예: %.6A)를 지정하면 됩니다. [전체 자릿수 사양](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)을 참조하세요.  
   
 -   **%F 지정자** 현재 %F 서식/변환 지정자가 지원됩니다. 이는 무한대 및 NaN이 대문자로 서식 지정된다는 점을 제외하고 %f 서식 지정자와 일치하는 기능입니다.  
   
      이전 버전에서는 F 및 N을 길이 수정자로 구문 분석하는 데 구현이 사용되었습니다. 이 동작은 분할된 주소 공간의 보존 기간부터 계속 존재했습니다. 이들 길이 수정자는 %Fp 또는 %Ns에서와 같이 각각 먼 포인터와 가까운 포인터를 나타내는 데 사용되었습니다. 이 동작이 제거되었습니다. %F가 나타나면 현재 이는 %F 서식 지정자로 처리되고, %N이 나타나면 현재 이는 잘못된 매개 변수로 처리됩니다.  
   
--   **지수 서식 지정** %e 및 %E 서식 지정자는 부동 소수점 수의 서식을&10;진수 가수 및 지수로 지정합니다. 경우에 따라 %g 및 %G 서식 지정자는 숫자 서식을 이 형식으로 지정합니다. 이전 버전에서 CRT는 항상&3;자리 지수가 포함된 문자열을 생성합니다. 예를 들어 printf("%e\n", 1.0)는 1.000000e+000을 인쇄합니다. 이 결과는 올바르지 않습니다. C에서는 지수가&1;자리 또는&2;자리로만 표현 가능할 경우&2;자리만 인쇄되어야 합니다.  
+-   **지수 서식 지정** %e 및 %E 서식 지정자는 부동 소수점 수의 서식을 10진수 가수 및 지수로 지정합니다. 경우에 따라 %g 및 %G 서식 지정자는 숫자 서식을 이 형식으로 지정합니다. 이전 버전에서 CRT는 항상 3자리 지수가 포함된 문자열을 생성합니다. 예를 들어 printf("%e\n", 1.0)는 1.000000e+000을 인쇄합니다. 이 결과는 올바르지 않습니다. C에서는 지수가 1자리 또는 2자리로만 표현 가능할 경우 2자리만 인쇄되어야 합니다.  
   
      Visual Studio 2005에서 전역 규칙 스위치 [_set_output_format](../c-runtime-library/set-output-format.md)이 추가되었습니다. 프로그램은 _TWO_DIGIT_EXPONENT 인수와 함께 이 함수를 호출하여 규칙 지수 인쇄가 가능하도록 설정합니다. 기본 동작이 표준 준수 지수 인쇄 모드로 변경되었습니다.  
   
@@ -216,7 +217,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **strtof 및 wcstof** The strtof 및 wcstof functions failed to set errno to ERANGE when the value was not representable as a float. 이 문제는 수정되었습니다. 이 오류는 이들 두 함수에만 발생했고 strtod, wcstod, strtold 및 wcstold 함수는 영향을 받지 않았습니다. 이는 런타임 관련 주요 변경 내용입니다.  
   
--   **맞춤 할당 함수** 이전 버전에서 맞춤 할당 함수(_aligned_malloc, _aligned_offset_malloc 등)는 정렬이 0인 블록에 대한 요청을 자동으로 수락했습니다. 요청된 맞춤은&0;이 아닌&2;의 거듭제곱이어야 합니다. 이 문제는 해결되었고 요청된 맞춤 0은 현재 잘못된 매개 변수로 처리됩니다. 이는 런타임 관련 주요 변경 내용입니다.  
+-   **맞춤 할당 함수** 이전 버전에서 맞춤 할당 함수(_aligned_malloc, _aligned_offset_malloc 등)는 정렬이 0인 블록에 대한 요청을 자동으로 수락했습니다. 요청된 맞춤은 0이 아닌 2의 거듭제곱이어야 합니다. 이 문제는 해결되었고 요청된 맞춤 0은 현재 잘못된 매개 변수로 처리됩니다. 이는 런타임 관련 주요 변경 내용입니다.  
   
 -   **힙 함수** _heapadd, _heapset 및 _heapused 함수가 제거되었습니다. Windows 힙을 사용하도록 CRT가 업데이트된 후에는 이들 함수가 작동하지 않았습니다.  
   
@@ -252,7 +253,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **CLOCKS_PER_SEC** 현재 CLOCKS_PER_SEC 매크로는 C 언어에 필요한 형식 clock_t의 정수로 확장됩니다.  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a> C++ 표준 라이브러리  
+####  <a name="BK_STL"></a> C++ 표준 라이브러리  
  새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전(예: Visual Studio 2013의 경우 1800)이 포함된 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
   
 -   **C++ 표준 라이브러리 포함 파일** C++ 표준 라이브러리 헤더의 include 구조체에 몇 가지 변경 내용이 적용되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]의 헤더 변경 내용 두 개 이상이 사용자 코드에 영향을 미칩니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째, \<tuple>은 현재 모든 \<array>를 포함하지 않고 std::array를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 현재 std::array를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.  
@@ -315,13 +316,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **launch::any 및 launch::sync 정책** The nonstandard launch::any 및 launch::sync 정책 were removed. 대신에 launch::any의 경우 launch:async &#124; launch:deferred를 사용합니다. launch::sync의 경우 launch::deferred를 사용합니다. [launch 열거형](../standard-library/future-enums.md#launch_enumeration)을 참조하세요.  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC 및 ATL  
+####  <a name="BK_MFC"></a> MFC 및 ATL  
   
 -   **MFC(Microsoft Foundation Classes)** 는 큰 크기로 인해 더 이상 Visual Studio의 "일반" 설치에 포함되지 않습니다. MFC를 설치하려면 Visual Studio 2015 설치 프로그램에서 사용자 지정 설치 옵션을 선택합니다. Visual Studio 2015가 설치되어 있으면 Visual Studio 설치 프로그램을 다시 실행하고 사용자 지정 설치 옵션을 선택하고 Microsoft Foundation Classes를 선택하여 MFC를 설치할 수 있습니다. 제어판, 프로그램 및 기능에서 또는 설치 미디어에서 Visual Studio 설치 프로그램을 다시 실행할 수 있습니다.  
   
      Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> 동시성 런타임  
+####  <a name="BK_ConcRT"></a> 동시성 런타임  
   
 -   **concurrency::Context::Yield와 충돌하는 Windows.h의 Yield 매크로입니다.** 이전 동시성 런타임은 Windows.h h에 정의된 Yield 매크로와 concurrency::Context::Yield 함수의 충돌을 피하려고 #undef를 사용하여 Yield 매크로의 정의를 해제했습니다. 이 #undef는 제거되었고 새로운 충돌하지 않는 동등한 API 호출 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) 이 추가되었습니다. Yield 충돌을 해결하려면 코드를 업데이트하여 대신 YieldExecution 함수를 호출하거나, 다음 예제와 같이 호출 쪽에서 Yield 함수 이름을 괄호로 묶습니다.  
   
@@ -346,7 +347,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   [업데이트 3의 규칙 향상](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
+###  <a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
   
 -   /Zc:forScope- 옵션  
   
@@ -861,7 +862,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
+###  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
   
 -   **개인 가상 기본 클래스 및 간접 상속**  
   
@@ -948,7 +949,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      또한 컴파일러가 특정 진단을 제공하지는 않지만, 인라인 operator new는 잘못된 형식으로 간주됩니다.  
   
--   **비클래스 형식에서 'operator *type*()'(사용자 정의 변환) 호출**  
+-   **비클래스 형식에서 'operator*type*()'(사용자 정의 변환) 호출**  
   
      이전 버전의 컴파일러에서는 'operator *type*()'을 자동으로 무시하면서 비클래스 형식에서 호출할 수 있었습니다. 이 이전 동작으로 잘못된 코드가 자동으로 생성되어 예기치 않은 런타임 동작이 발생하는 위험이 초래되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2228이 발생합니다.  
   
@@ -1387,11 +1388,10 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      예제(이후)  
@@ -1401,14 +1401,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
+###  <a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
   
 -   **SFINAE 식에 대한 부분 지원으로 인해 추가 경고 및 오류가 발생할 수 있습니다.**  
   
@@ -1693,7 +1692,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      이러한 방식으로 작성된 코드를 수정하려면 연산자 정의를 헤더 파일에서 해당하는 소스 파일로 이동해야 합니다.  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
+###  <a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
   
 -   **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)  
   
@@ -2552,7 +2551,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   \<algorithm> 헤더에서 checked_* and unchecked_\* 함수가 제거되었습니다. 또한 \<iterator>> 헤더에서 checked_iteratorclass가 제거되고 unchecked_array_iterator 클래스가 추가되었습니다.  
   
--   CComPtr::CComPtr(int) 생성자가 제거되었습니다. 해당 생성자는 NULL 매크로에서 CComPtr 개체를 생성할 수 있게 해주지만 불필요하고&0;이 아닌 정수에서 무의미한 생성을 허용했습니다.  
+-   CComPtr::CComPtr(int) 생성자가 제거되었습니다. 해당 생성자는 NULL 매크로에서 CComPtr 개체를 생성할 수 있게 해주지만 불필요하고 0이 아닌 정수에서 무의미한 생성을 허용했습니다.  
   
      0으로 정의된 NULL에서는 CComPtr을 계속 생성할 수 있지만 리터럴 0이 아닌 정수에서 생성할 경우 실패합니다. nullptr을 대신 사용합니다.  
   
@@ -2705,7 +2704,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   본질적으로 안전하지 않은 %n 형식 지정자는 함수의 printf 패밀리에서 더 이상 기본적으로 지원되지 않습니다. %n이 발견된 경우의 기본 동작은 잘못된 매개 변수 처리기를 호출하는 것입니다. %n 지원을 사용하려면 _set_printf_count_output(또는 see_get_printf_count_output)을 사용합니다.  
   
--   이제 sprintf가 부호 있는&0;의 음수 기호를 인쇄합니다.  
+-   이제 sprintf가 부호 있는 0의 음수 기호를 인쇄합니다.  
   
 -   swprintf가 표준을 준수하도록 변경되었습니다. 이제 크기 매개 변수가 필요합니다. 크기 매개 변수가 없는 swprintf 형태는 사용되지 않습니다.  
   
@@ -2793,8 +2792,3 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 ## <a name="see-also"></a>참고 항목  
 [Visual Studio의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

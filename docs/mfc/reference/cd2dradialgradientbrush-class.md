@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRadialGradientBrush
-- afxrendertarget/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Attach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Create
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Detach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Get
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +119,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
  소멸자입니다. D2D 방사형 그라데이션 브러시 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2DRadialGradientBrush::Attach  
+##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -121,7 +137,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  CD2DLinearGradientBrush 개체를 만듭니다.  
   
 ```  
@@ -161,7 +177,7 @@ CD2DRadialGradientBrush(
  `bAutoDestroy`  
  개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
   
-##  <a name="a-namecreatea--cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2DRadialGradientBrush::Create  
+##  <a name="create"></a>CD2DRadialGradientBrush::Create  
  CD2DRadialGradientBrush를 만듭니다.  
   
 ```  
@@ -175,14 +191,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
  CD2DRadialGradientBrush 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadialGradientBrush::Detach  
+##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -192,7 +208,7 @@ ID2D1RadialGradientBrush* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegeta--cd2dradialgradientbrushget"></a><a name="get"></a>CD2DRadialGradientBrush::Get  
+##  <a name="get"></a>CD2DRadialGradientBrush::Get  
  반환 ID2D1RadialGradientBrush 인터페이스  
   
 ```  
@@ -202,7 +218,7 @@ ID2D1RadialGradientBrush* Get();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1RadialGradientBrush 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegetcentera--cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
  그라데이션 타원의 중심을 검색합니다.  
   
 ```  
@@ -212,7 +228,7 @@ CD2DPointF GetCenter() const;
 ### <a name="return-value"></a>반환 값  
  그라데이션 타원의 중심입니다. 이 값은 브러시의 좌표 공간에서 표현 됩니다.  
   
-##  <a name="a-namegetgradientoriginoffseta--cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
  그라데이션 타원의 가운데를 기준으로 그라데이션 원점의 오프셋을 검색  
   
 ```  
@@ -222,7 +238,7 @@ CD2DPointF GetGradientOriginOffset() const;
 ### <a name="return-value"></a>반환 값  
  그라데이션 타원의 중심에서 그라데이션 원점의 오프셋입니다. 이 값은 브러시의 좌표 공간에서 표현 됩니다.  
   
-##  <a name="a-namegetradiusxa--cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
  그라데이션 타원의 x 반지름을 검색합니다.  
   
 ```  
@@ -232,7 +248,7 @@ FLOAT GetRadiusX() const;
 ### <a name="return-value"></a>반환 값  
  그라데이션 타원의 x 반지름입니다. 이 값은 브러시의 좌표 공간에서 표현 됩니다.  
   
-##  <a name="a-namegetradiusya--cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
  그라데이션 타원의 반지름 y를 검색합니다.  
   
 ```  
@@ -242,21 +258,21 @@ FLOAT GetRadiusY() const;
 ### <a name="return-value"></a>반환 값  
  그라데이션 타원의 y 반지름입니다. 이 값은 브러시의 좌표 공간에서 표현 됩니다.  
   
-##  <a name="a-namempradialgradientbrusha--cd2dradialgradientbrushmpradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
  ID2D1RadialGradientBrush에 대 한 포인터입니다.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="a-namemradialgradientbrushpropertiesa--cd2dradialgradientbrushmradialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
  센터, 그라데이션 원점 오프셋 및 radius x 및 y 반지름 브러시의 그라데이션의입니다.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="a-nameoperatorid2d1radialgradientbrushstara--cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
  반환 ID2D1RadialGradientBrush 인터페이스  
   
 ```  
@@ -266,7 +282,7 @@ operator ID2D1RadialGradientBrush*();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1RadialGradientBrush 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namesetcentera--cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
  브러시의 좌표 공간에서 그라데이션 타원의 중심을 지정합니다.  
   
 ```  
@@ -277,7 +293,7 @@ void SetCenter(CD2DPointF point);
  `point`  
  브러시의 좌표 공간에서 그라데이션 타원의 중심  
   
-##  <a name="a-namesetgradientoriginoffseta--cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
  그라데이션 타원의 가운데를 기준으로 그라데이션 원점의 오프셋을 지정  
   
 ```  
@@ -288,7 +304,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
  `gradientOriginOffset`  
  그라데이션 타원의 중심에서 그라데이션 원점에 대 한 오프셋  
   
-##  <a name="a-namesetradiusxa--cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
  브러시의 좌표 공간에서 그라데이션 타원의 x 반지름을 지정합니다.  
   
 ```  
@@ -299,7 +315,7 @@ void SetRadiusX(FLOAT radiusX);
  `radiusX`  
  그라데이션 타원의 x 반지름입니다. 브러시의 좌표 공간에서이 값은  
   
-##  <a name="a-namesetradiusya--cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
  브러시의 좌표 공간에서 그라데이션 타원의 y 반지름을 지정합니다.  
   
 ```  

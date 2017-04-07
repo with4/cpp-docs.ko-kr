@@ -9,9 +9,38 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlList
 - CAtlList
-- ATL::CAtlList
+- ATLCOLL/ATL::CAtlList
+- ATLCOLL/ATL::CAtlList::INARGTYPE
+- ATLCOLL/ATL::CAtlList::CAtlList
+- ATLCOLL/ATL::CAtlList::AddHead
+- ATLCOLL/ATL::CAtlList::AddHeadList
+- ATLCOLL/ATL::CAtlList::AddTail
+- ATLCOLL/ATL::CAtlList::AddTailList
+- ATLCOLL/ATL::CAtlList::AssertValid
+- ATLCOLL/ATL::CAtlList::Find
+- ATLCOLL/ATL::CAtlList::FindIndex
+- ATLCOLL/ATL::CAtlList::GetAt
+- ATLCOLL/ATL::CAtlList::GetCount
+- ATLCOLL/ATL::CAtlList::GetHead
+- ATLCOLL/ATL::CAtlList::GetHeadPosition
+- ATLCOLL/ATL::CAtlList::GetNext
+- ATLCOLL/ATL::CAtlList::GetPrev
+- ATLCOLL/ATL::CAtlList::GetTail
+- ATLCOLL/ATL::CAtlList::GetTailPosition
+- ATLCOLL/ATL::CAtlList::InsertAfter
+- ATLCOLL/ATL::CAtlList::InsertBefore
+- ATLCOLL/ATL::CAtlList::IsEmpty
+- ATLCOLL/ATL::CAtlList::MoveToHead
+- ATLCOLL/ATL::CAtlList::MoveToTail
+- ATLCOLL/ATL::CAtlList::RemoveAll
+- ATLCOLL/ATL::CAtlList::RemoveAt
+- ATLCOLL/ATL::CAtlList::RemoveHead
+- ATLCOLL/ATL::CAtlList::RemoveHeadNoReturn
+- ATLCOLL/ATL::CAtlList::RemoveTail
+- ATLCOLL/ATL::CAtlList::RemoveTailNoReturn
+- ATLCOLL/ATL::CAtlList::SetAt
+- ATLCOLL/ATL::CAtlList::SwapElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +145,7 @@ class CAtlList
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="a-nameaddheada--catllistaddhead"></a><a name="addhead"></a>CAtlList::AddHead  
+##  <a name="addhead"></a>CAtlList::AddHead  
  목록 헤드에 요소를 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -137,7 +166,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&13;](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
-##  <a name="a-nameaddheadlista--catllistaddheadlist"></a><a name="addheadlist"></a>CAtlList::AddHeadList  
+##  <a name="addheadlist"></a>CAtlList::AddHeadList  
  목록 헤드에 기존 목록에 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -154,7 +183,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&14;](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
-##  <a name="a-nameaddtaila--catllistaddtail"></a><a name="addtail"></a>CAtlList::AddTail  
+##  <a name="addtail"></a>CAtlList::AddTail  
  이 목록의 끝에 요소를 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -175,7 +204,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&15;](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
-##  <a name="a-nameaddtaillista--catllistaddtaillist"></a><a name="addtaillist"></a>CAtlList::AddTailList  
+##  <a name="addtaillist"></a>CAtlList::AddTailList  
  이 목록의 꼬리에 기존 목록을 추가 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -192,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&16;](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
-##  <a name="a-nameassertvalida--catllistassertvalid"></a><a name="assertvalid"></a>CAtlList::AssertValid  
+##  <a name="assertvalid"></a>CAtlList::AssertValid  
  유효한 목록을 확인 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -205,7 +234,7 @@ void AssertValid() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&17;](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
-##  <a name="a-namecatllista--catllistcatllist"></a><a name="catllist"></a>CAtlList::CAtlList  
+##  <a name="catllist"></a>CAtlList::CAtlList  
  생성자입니다.  
   
 ```
@@ -222,7 +251,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&18;](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
-##  <a name="a-namedtora--catllistcatllist"></a><a name="dtor"></a>CAtlList:: ~ CAtlList  
+##  <a name="dtor"></a>CAtlList:: ~ CAtlList  
  소멸자입니다.  
   
 ```
@@ -234,7 +263,7 @@ CAtlList(UINT nBlockSize = 10) throw();
   
  목록에 대 한 호출 후 여전히 몇 가지 요소를 포함 하는 경우 디버그 빌드에 어설션 오류가 발생 합니다 `RemoveAll`합니다.  
   
-##  <a name="a-namefinda--catllistfind"></a><a name="find"></a>CAtlList::Find  
+##  <a name="find"></a>CAtlList::Find  
  지정된 된 요소에 대 한 목록을 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -257,7 +286,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&19;](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
-##  <a name="a-namefindindexa--catllistfindindex"></a><a name="findindex"></a>CAtlList::FindIndex  
+##  <a name="findindex"></a>CAtlList::FindIndex  
  인덱스 값이 지정에 요소의 위치를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -279,7 +308,7 @@ POSITION FindIndex(size_t iElement) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&20;](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
-##  <a name="a-namegetata--catllistgetat"></a><a name="getat"></a>CAtlList::GetAt  
+##  <a name="getat"></a>CAtlList::GetAt  
  목록에서 지정된 된 위치에 있는 요소를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -304,7 +333,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::FindIndex](#findindex)합니다.  
   
-##  <a name="a-namegetcounta--catllistgetcount"></a><a name="getcount"></a>CAtlList::GetCount  
+##  <a name="getcount"></a>CAtlList::GetCount  
  목록에서 개체의 수를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -317,7 +346,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::Find](#find)합니다.  
   
-##  <a name="a-namegetheada--catllistgethead"></a><a name="gethead"></a>CAtlList::GetHead  
+##  <a name="gethead"></a>CAtlList::GetHead  
  목록 헤드에 있는 요소를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -338,7 +367,7 @@ const E& GetHead() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::AddHead](#addhead)합니다.  
   
-##  <a name="a-namegetheadpositiona--catllistgetheadposition"></a><a name="getheadposition"></a>CAtlList::GetHeadPosition  
+##  <a name="getheadposition"></a>CAtlList::GetHeadPosition  
  목록의 시작 위치를 가져오는이 메서드를 호출 합니다.  
   
 ```
@@ -354,7 +383,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&21;](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
-##  <a name="a-namegetnexta--catllistgetnext"></a><a name="getnext"></a>CAtlList::GetNext  
+##  <a name="getnext"></a>CAtlList::GetNext  
  목록에서 다음 요소를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -377,7 +406,7 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::GetHeadPosition](#getheadposition)합니다.  
   
-##  <a name="a-namegetpreva--catllistgetprev"></a><a name="getprev"></a>CAtlList::GetPrev  
+##  <a name="getprev"></a>CAtlList::GetPrev  
  목록에서 이전 요소를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -400,7 +429,7 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::GetTailPosition](#gettailposition)합니다.  
   
-##  <a name="a-namegettaila--catllistgettail"></a><a name="gettail"></a>CAtlList::GetTail  
+##  <a name="gettail"></a>CAtlList::GetTail  
  목록의 끝에 있는 요소를 반환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -421,7 +450,7 @@ const E& GetTail() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::AddTail](#addtail)합니다.  
   
-##  <a name="a-namegettailpositiona--catllistgettailposition"></a><a name="gettailposition"></a>CAtlList::GetTailPosition  
+##  <a name="gettailposition"></a>CAtlList::GetTailPosition  
  목록의 끝의 위치를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -437,14 +466,14 @@ POSITION GetTailPosition() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&22;](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
-##  <a name="a-nameinargtypea--catllistinargtype"></a><a name="inargtype"></a>CAtlList::INARGTYPE  
+##  <a name="inargtype"></a>CAtlList::INARGTYPE  
  요소는 입력 인수로 전달 될 때 사용 되는 형식입니다.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="a-nameinsertaftera--catllistinsertafter"></a><a name="insertafter"></a>CAtlList::InsertAfter  
+##  <a name="insertafter"></a>CAtlList::InsertAfter  
  지정된 된 위치 다음 목록에 새 요소를 삽입 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -467,7 +496,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities&23;](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
-##  <a name="a-nameinsertbeforea--catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList::InsertBefore  
+##  <a name="insertbefore"></a>CAtlList::InsertBefore  
  지정된 된 위치 앞의 목록에 새 요소를 삽입 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -490,7 +519,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&24;](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
-##  <a name="a-nameisemptya--catllistisempty"></a><a name="isempty"></a>CAtlList::IsEmpty  
+##  <a name="isempty"></a>CAtlList::IsEmpty  
  목록이 비어 있으면 확인 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -503,7 +532,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&25;](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
-##  <a name="a-namemovetoheada--catllistmovetohead"></a><a name="movetohead"></a>CAtlList::MoveToHead  
+##  <a name="movetohead"></a>CAtlList::MoveToHead  
  목록 헤드에 지정된 된 요소를 이동 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -520,7 +549,7 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&26;](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
-##  <a name="a-namemovetotaila--catllistmovetotail"></a><a name="movetotail"></a>CAtlList::MoveToTail  
+##  <a name="movetotail"></a>CAtlList::MoveToTail  
  목록의 끝에 지정된 된 요소를 이동 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -537,7 +566,7 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::MoveToHead](#movetohead)합니다.  
   
-##  <a name="a-nameremovealla--catllistremoveall"></a><a name="removeall"></a>CAtlList::RemoveAll  
+##  <a name="removeall"></a>CAtlList::RemoveAll  
  목록에서 모든 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -550,7 +579,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::IsEmpty](#isempty)합니다.  
   
-##  <a name="a-nameremoveata--catllistremoveat"></a><a name="removeat"></a>CAtlList::RemoveAt  
+##  <a name="removeat"></a>CAtlList::RemoveAt  
  목록에서 단일 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -569,7 +598,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&27;](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
-##  <a name="a-nameremoveheada--catllistremovehead"></a><a name="removehead"></a>CAtlList::RemoveHead  
+##  <a name="removehead"></a>CAtlList::RemoveHead  
  목록 헤드에 있는 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -585,7 +614,7 @@ E RemoveHead();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&28;](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
-##  <a name="a-nameremoveheadnoreturna--catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
+##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
  값을 반환 하지 않고 목록 헤드에 있는 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -598,7 +627,7 @@ void RemoveHeadNoReturn() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::IsEmpty](#isempty)합니다.  
   
-##  <a name="a-nameremovetaila--catllistremovetail"></a><a name="removetail"></a>CAtlList::RemoveTail  
+##  <a name="removetail"></a>CAtlList::RemoveTail  
  목록의 끝에 있는 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -614,7 +643,7 @@ E RemoveTail();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&29;](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
-##  <a name="a-nameremovetailnoreturna--catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
+##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
  값을 반환 하지 않고 목록의 끝에 있는 요소를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -627,7 +656,7 @@ void RemoveTailNoReturn() throw();
 ### <a name="example"></a>예제  
  예를 참조 [CAtlList::IsEmpty](#isempty)합니다.  
   
-##  <a name="a-namesetata--catllistsetat"></a><a name="setat"></a>CAtlList::SetAt  
+##  <a name="setat"></a>CAtlList::SetAt  
  목록에서 지정된 된 위치에 요소 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -647,7 +676,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities #&30;](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
-##  <a name="a-nameswapelementsa--catllistswapelements"></a><a name="swapelements"></a>CAtlList::SwapElements  
+##  <a name="swapelements"></a>CAtlList::SwapElements  
  목록에서 요소를 교체 하려면이 메서드를 호출 합니다.  
   
 ```

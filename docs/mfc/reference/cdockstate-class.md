@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockState
+- AFXADV/CDockState
+- AFXADV/CDockState::Clear
+- AFXADV/CDockState::GetVersion
+- AFXADV/CDockState::LoadState
+- AFXADV/CDockState::SaveState
+- AFXADV/CDockState::m_arrBarInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CDockState : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxadv.h  
   
-##  <a name="a-namecleara--cdockstateclear"></a><a name="clear"></a>CDockState::Clear  
+##  <a name="clear"></a>CDockState::Clear  
  이 함수에 저장 된 모든 도킹 정보를 호출 하는 `CDockState` 개체입니다.  
   
 ```  
@@ -99,7 +105,7 @@ void Clear();
 ### <a name="remarks"></a>주의  
  뿐만 아니라 막대 도킹 여부 막대의 크기와 위치를 제외한 여부 및 표시 여부 포함 됩니다.  
   
-##  <a name="a-namegetversiona--cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion  
+##  <a name="getversion"></a>CDockState::GetVersion  
  저장 된 버전 번호를 검색 하려면이 함수를 호출 합니다. 상태 표시줄입니다.  
   
 ```  
@@ -112,7 +118,7 @@ DWORD GetVersion();
 ### <a name="remarks"></a>주의  
  버전 지원을 통해 수정 된 막대를 새 영구 속성을 추가 하 고 계속 감지 하 여 막대의 이전 버전에서 만든 영구 상태를 로드할 수 있습니다.  
   
-##  <a name="a-nameloadstatea--cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState  
+##  <a name="loadstate"></a>CDockState::LoadState  
  레지스트리에서 상태 정보를 검색 하려면이 함수를 호출 하거나. INI 파일입니다.  
   
 ```  
@@ -126,14 +132,14 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="remarks"></a>주의  
  프로필 이름은 응용 프로그램의 섹션입니다. INI 파일 또는 레지스트리 막대의 상태 정보를 포함 합니다. 레지스트리를 제어 표시줄 상태 정보를 저장할 수 또는 합니다. INI 파일을 `SaveState`합니다.  
   
-##  <a name="a-namemarrbarinfoa--cdockstatemarrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
+##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
  A `CPtrArray` 가 상태 정보를 저장 하는 각 컨트롤 막대에 대 한 저장된 컨트롤 막대 정보에 대 한 포인터의 배열인 개체는 `CDockState` 개체입니다.  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="a-namesavestatea--cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState  
+##  <a name="savestate"></a>CDockState::SaveState  
  레지스트리에 상태 정보를 저장 하려면이 함수를 호출 하거나. INI 파일입니다.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  파생 된 형식의 개체를 만들 때 `CDaoRecordView`, 두 가지 형식의 뷰 개체를 초기화 하 고 보기의 기반이 되는 대화 상자 리소스를 식별 하는 생성자를 호출 합니다.  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase #&35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  현재 레코드가이 레코드 보기와 관련 된 레코드 집합 개체의 첫 번째 레코드 인지 확인 하기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  사용자가 첫 번째 레코드를 이동 하면 모든 사용자 인터페이스 개체 (예: 메뉴 항목, 도구 모음 단추) 프레임 워크 비활성화 해야는 첫 번째 또는 이전 레코드를 이동 하기 위한.  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  현재 레코드가이 레코드 보기와 관련 된 레코드 집합 개체에서 마지막 레코드 인지 확인 하기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  이 함수의 결과 신뢰할 수 있는 제외 하 고 보기를 전달 하는 사용자가 이동 될 때까지 레코드 집합의 끝을 검색할 수 수 있습니다. 사용자는 다음 또는 마지막 레코드로 이동 하는 것에 대 한 모든 사용자 인터페이스 개체를 사용 하지 않도록 설정 해야 하는 레코드 뷰 알 수 전에 마지막 레코드 보다 이동 해야 할 수 있습니다. 사용자 마지막 레코드를 지나서 이동 하 고 다시 마지막 레코드로 이동 하는 경우 (또는 앞) 레코드 뷰 레코드 집합에서 사용자의 위치를 추적할 수 및 사용자 인터페이스 개체를 올바르게 사용 하지 않도록 설정 합니다.  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  에 대 한 포인터를 반환 합니다.는 `CDaoRecordset`-레코드 보기와 연결 된 개체를 파생 합니다.  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  레코드 집합의 다른 레코드를 이동 하 고 레코드 뷰 컨트롤에서 해당 필드를 표시 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

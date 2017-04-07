@@ -150,7 +150,7 @@ public:
   
  **네임스페이스:** std  
   
-##  <a name="a-namefunctionassigna--functionassign"></a><a name="function__assign"></a>  function::assign  
+##  <a name="function__assign"></a>  function::assign  
  이 함수 개체에 호출 가능 개체를 할당합니다.  
   
 ```  
@@ -178,7 +178,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>설명  
  멤버 함수는 각각 `*this`에 의해 포함된 `callable object`를 `operand`로 전달된 호출 가능 개체로 바꿉니다. 두 멤버 함수 모두 할당자 개체 `Ax`를 사용하여 저장소를 할당합니다.  
   
-##  <a name="a-namefunctionfunctiona--functionfunction"></a><a name="function__function"></a>  function::function  
+##  <a name="function__function"></a>  function::function  
  비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.  
   
 ```  
@@ -201,7 +201,7 @@ template <class Fx, class Alloc>
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  복사할 함수 개체입니다.  
   
  `Fx`  
@@ -292,7 +292,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="a-namefunctionoperatorunspecifieda--functionoperator-unspecified"></a><a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
  저장된 호출 가능 개체가 있는지 테스트합니다.  
   
 ```  
@@ -332,7 +332,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="a-namefunctionoperatora--functionoperator"></a><a name="function__operator__"></a>  function::operator()  
+##  <a name="function__operator__"></a>  function::operator()  
  호출 가능 개체를 호출합니다.  
   
 ```  
@@ -380,7 +380,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionoperatoreqa--functionoperator"></a><a name="function__operator_eq"></a>  function::operator=  
+##  <a name="function__operator_eq"></a>  function::operator=  
  저장된 호출 가능 개체를 바꿉니다.  
   
 ```  
@@ -459,7 +459,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionresulttypea--functionresulttype"></a><a name="function__result_type"></a>  function::result_type  
+##  <a name="function__result_type"></a>  function::result_type  
  호출 가능 개체의 반환 형식입니다.  
   
 ```  
@@ -499,7 +499,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionswapa--functionswap"></a><a name="function__swap"></a>  function::swap  
+##  <a name="function__swap"></a>  function::swap  
  두 개의 호출 가능 개체를 바꿉니다.  
   
 ```  
@@ -555,7 +555,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctiontargeta--functiontarget"></a><a name="function__target"></a>  function::target  
+##  <a name="function__target"></a>  function::target  
  저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.  
   
 ```  
@@ -614,7 +614,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="a-namefunctiontargettypea--functiontargettype"></a><a name="function__target_type"></a>  function::target_type  
+##  <a name="function__target_type"></a>  function::target_type  
  호출 가능 개체에 대한 형식 정보를 가져옵니다.  
   
 ```  

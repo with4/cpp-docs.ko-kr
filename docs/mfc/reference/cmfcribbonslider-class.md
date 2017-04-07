@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider::CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetPos
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRangeMax
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRangeMin
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRegularSize
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetZoomIncrement
+- AFXRIBBONSLIDER/CMFCRibbonSlider::HasZoomButtons
+- AFXRIBBONSLIDER/CMFCRibbonSlider::OnDraw
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetPos
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetRange
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetZoomButtons
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetZoomIncrement
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribbonslider.h  
   
-##  <a name="a-namecmfcribbonslidera--cmfcribbonslidercmfcribbonslider"></a><a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
+##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
  리본 슬라이더를 생성 합니다.  
   
 ```  
@@ -113,7 +126,7 @@ CMFCRibbonSlider(
 ### <a name="remarks"></a>주의  
  생성 되는 리본 슬라이더 `nWidth` 픽셀로 슬라이더를 추가 하는 위치 패널 범주에 있습니다. 기본적으로 슬라이더를 가로로 표시 됩니다.  
   
-##  <a name="a-namegetposa--cmfcribbonslidergetpos"></a><a name="getpos"></a>CMFCRibbonSlider::GetPos  
+##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
  슬라이더 컨트롤의 현재 위치를 반환합니다.  
   
 ```  
@@ -123,7 +136,7 @@ int GetPos() const;
 ### <a name="return-value"></a>반환 값  
  슬라이더의 시작 부분에 상대적인 위치를 나타내는 슬라이더 컨트롤의 현재 위치입니다.  
   
-##  <a name="a-namegetrangemaxa--cmfcribbonslidergetrangemax"></a><a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
+##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
  슬라이더 컨트롤에 슬라이더를 이동할 수 있는 슬라이더의 최대 증가 가져옵니다.  
   
 ```  
@@ -133,7 +146,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>반환 값  
  슬라이더 컨트롤에 슬라이더를 이동할 수 있는 슬라이더의 최대 증가 합니다.  
   
-##  <a name="a-namegetrangemina--cmfcribbonslidergetrangemin"></a><a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
+##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
  슬라이더 컨트롤에 슬라이더를 이동할 수 있는 최소 증분을 반환 합니다.  
   
 ```  
@@ -143,7 +156,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>반환 값  
  최소 증가값을 슬라이더 컨트롤에 슬라이더를 이동할 수 있습니다.  
   
-##  <a name="a-namegetregularsizea--cmfcribbonslidergetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -157,7 +170,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetzoomincrementa--cmfcribbonslidergetzoomincrement"></a><a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
+##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
  확대/축소 슬라이더 컨트롤에 대 한 증가값을 가져옵니다.  
   
 ```  
@@ -167,7 +180,7 @@ int GetZoomIncrement() const;
 ### <a name="return-value"></a>반환 값  
  슬라이더 컨트롤에 대 한 확대/축소 증가 합니다.  
   
-##  <a name="a-namehaszoombuttonsa--cmfcribbonsliderhaszoombuttons"></a><a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
+##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
  슬라이더 확대/축소 단추에 있는지 여부를 지정 합니다.  
   
 ```  
@@ -177,7 +190,7 @@ BOOL HasZoomButtons() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`슬라이더에 확대/축소 단추가 있습니다. `FALSE` 그렇지 않은 경우.  
   
-##  <a name="a-nameondrawa--cmfcribbonsliderondraw"></a><a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -189,7 +202,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetposa--cmfcribbonslidersetpos"></a><a name="setpos"></a>CMFCRibbonSlider::SetPos  
+##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
  슬라이더 컨트롤의 현재 위치를 설정 합니다.  
   
 ```  
@@ -205,7 +218,7 @@ void SetPos(
  [in] `bRedraw`  
  경우 `TRUE`, 슬라이더 다시 그려집니다.  
   
-##  <a name="a-namesetrangea--cmfcribbonslidersetrange"></a><a name="setrange"></a>CMFCRibbonSlider::SetRange  
+##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
  슬라이더 컨트롤에 대 한 값의 범위를 설정 합니다.  
   
 ```  
@@ -224,7 +237,7 @@ void SetRange(
 ### <a name="remarks"></a>주의  
  최소값과 최대값을 설정 하 여 슬라이더 컨트롤에 대 한 값의 범위를 지정 합니다.  
   
-##  <a name="a-namesetzoombuttonsa--cmfcribbonslidersetzoombuttons"></a><a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
+##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
  표시 하거나 확대/축소 단추를 숨깁니다.  
   
 ```  
@@ -235,7 +248,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
  [in]. `bSet`  
  `TRUE`확대/축소 단추;를 표시 하려면 `FALSE` 아이콘을 숨기려면 합니다.  
   
-##  <a name="a-namesetzoomincrementa--cmfcribbonslidersetzoomincrement"></a><a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
+##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
  슬라이더 컨트롤에 대 한 확대/축소 증분을 설정 합니다.  
   
 ```  

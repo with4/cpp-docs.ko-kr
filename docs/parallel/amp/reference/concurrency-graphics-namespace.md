@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 네임스페이스
@@ -53,7 +52,7 @@ namespace graphics;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)|Direct3D interop에 대 한 기능을 제공합니다.|  
+|[Concurrency::graphics::direct3d 네임스페이스](concurrency-graphics-direct3d-namespace.md)|Direct3D interop에 대 한 기능을 제공합니다.|  
   
 ### <a name="typedefs"></a>형식 정의  
   
@@ -101,8 +100,8 @@ namespace graphics;
   
 |이름|설명|  
 |----------|-----------------|  
-|[copy 함수](concurrency-graphics-namespace-functions.md#copy)|오버로드됨. 원본 질감의 내용을 대상 호스트 버퍼에 복사합니다.|  
-|[copy_async 함수](concurrency-graphics-namespace-functions.md#copy_async)|오버로드됨. 대상 호스트 버퍼에 원본 질감의 콘텐츠를 비동기적으로 복사합니다.|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|오버로드됨. 원본 질감의 내용을 대상 호스트 버퍼에 복사합니다.|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|오버로드됨. 대상 호스트 버퍼에 원본 질감의 콘텐츠를 비동기적으로 복사합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **네임스페이스:** 동시성  
   
 ## <a name="see-also"></a>참고 항목  
- [동시성 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)
 

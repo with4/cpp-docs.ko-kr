@@ -8,6 +8,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CMFCDynamicLayout
+- AFXLAYOUT/CMFCDynamicLayout
+- AFXLAYOUT/CMFCDynamicLayout::AddItem
+- AFXLAYOUT/CMFCDynamicLayout::Adjust
+- AFXLAYOUT/CMFCDynamicLayout::Create
+- AFXLAYOUT/CMFCDynamicLayout::GetHostWnd
+- AFXLAYOUT/CMFCDynamicLayout::GetMinSize
+- AFXLAYOUT/CMFCDynamicLayout::GetWindowRect
+- AFXLAYOUT/CMFCDynamicLayout::HasItem
+- AFXLAYOUT/CMFCDynamicLayout::IsEmpty
+- AFXLAYOUT/CMFCDynamicLayout::LoadResource
+- AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
@@ -94,7 +107,7 @@ class CMFCDynamicLayout : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxlayout.h  
   
-##  <a name="a-nameadditema--cmfcdynamiclayoutadditem"></a><a name="additem"></a>Cmfcdynamiclayout:: Additem  
+##  <a name="additem"></a>Cmfcdynamiclayout:: Additem  
  자식 창(일반적으로 컨트롤)을 동적 레이아웃 관리자가 제어하는 창 목록에 추가합니다.  
   
 ```  
@@ -127,7 +140,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>주의  
  호스팅 창의 크기를 조정하면 자식 컨트롤의 위치 및 크기가 동적으로 변경됩니다.  
   
-##  <a name="a-nameadjusta--cmfcdynamiclayoutadjust"></a><a name="adjust"></a>Cmfcdynamiclayout:: Adjust  
+##  <a name="adjust"></a>Cmfcdynamiclayout:: Adjust  
  자식 창(일반적으로 컨트롤)을 동적 레이아웃 관리자가 제어하는 창 목록에 추가합니다.  
   
 ```  
@@ -137,7 +150,7 @@ void Adjust();
 ### <a name="remarks"></a>주의  
  호스팅 창의 크기를 조정하면 자식 컨트롤의 위치 및 크기가 동적으로 변경됩니다.  
   
-##  <a name="a-namecreatea--cmfcdynamiclayoutcreate"></a><a name="create"></a>Cmfcdynamiclayout:: Create  
+##  <a name="create"></a>Cmfcdynamiclayout:: Create  
  호스트 창을 저장하고 유효성을 검사합니다.  
   
 ```  
@@ -153,7 +166,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethostwnda--cmfcdynamiclayoutgethostwnd"></a><a name="gethostwnd"></a>Cmfcdynamiclayout:: Gethostwnd  
+##  <a name="gethostwnd"></a>Cmfcdynamiclayout:: Gethostwnd  
  호스트 창에 대한 포인터를 반환합니다.  
   
 ```  
@@ -166,7 +179,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>주의  
  기본적으로 모든 자식 컨트롤 위치가 이 창을 기준으로 다시 계산됩니다.  
   
-##  <a name="a-namegetminsizea--cmfcdynamiclayoutgetminsize"></a><a name="getminsize"></a>Cmfcdynamiclayout:: Getminsize  
+##  <a name="getminsize"></a>Cmfcdynamiclayout:: Getminsize  
  레이아웃이 그 이하로 조정되지 않는 창 크기를 반환합니다.  
   
 ```  
@@ -179,7 +192,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>주의  
  호스팅 창의 크기를 조정하면 자식 컨트롤의 위치 및 크기가 동적으로 변경되지만 레이아웃이 그 이하로 조정되지 않는 최소 크기가 있습니다. 사용자는 창의 크기를 더 작은 크기로 조정할 수 있지만 이렇게 하면 창 부분이 뷰에서 숨겨집니다.  
   
-##  <a name="a-namegetwindowrecta--cmfcdynamiclayoutgetwindowrect"></a><a name="getwindowrect"></a>Cmfcdynamiclayout:: Getwindowrect  
+##  <a name="getwindowrect"></a>Cmfcdynamiclayout:: Getwindowrect  
  창의 현재 클라이언트 영역에 대한 사각형을 검색합니다.  
   
 ```  
@@ -192,7 +205,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehasitema--cmfcdynamiclayouthasitem"></a><a name="hasitem"></a>Cmfcdynamiclayout:: Hasitem  
+##  <a name="hasitem"></a>Cmfcdynamiclayout:: Hasitem  
  자식 컨트롤이 동적 레이아웃에 추가되었는지 확인합니다.  
   
 ```  
@@ -208,7 +221,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisemptya--cmfcdynamiclayoutisempty"></a><a name="isempty"></a>Cmfcdynamiclayout:: Isempty  
+##  <a name="isempty"></a>Cmfcdynamiclayout:: Isempty  
  동적 레이아웃에 추가된 자식 창이 없는지 확인합니다.  
   
 ```  
@@ -220,7 +233,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameloadresourcea--cmfcdynamiclayoutloadresource"></a><a name="loadresource"></a>Cmfcdynamiclayout:: Loadresource  
+##  <a name="loadresource"></a>Cmfcdynamiclayout:: Loadresource  
  AFX_DIALOG_LAYOUT 리소스에서 동적 레이아웃을 읽고 레이아웃을 호스트 창에 적용합니다.  
   
 ```  
@@ -244,7 +257,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemovehorizontala--cmfcdynamiclayoutmovehorizontal"></a><a name="movehorizontal"></a>Cmfcdynamiclayout:: Movehorizontal  
+##  <a name="movehorizontal"></a>Cmfcdynamiclayout:: Movehorizontal  
  가져옵니다는 [MoveSettings](#movesettings_structure) 얼마나 많은 자식 컨트롤 가로로 이동 하는 사용자의 호스팅 창의 크기를 조정 하는 경우를 정의 하는 값입니다.  
   
 ```  
@@ -260,7 +273,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemovehorizontalandverticala--cmfcdynamiclayoutmovehorizontalandvertical"></a><a name="movehorizontalandvertical"></a>Cmfcdynamiclayout:: Movehorizontalandvertical  
+##  <a name="movehorizontalandvertical"></a>Cmfcdynamiclayout:: Movehorizontalandvertical  
  가져옵니다는 [MoveSettings](#movesettings_structure) 얼마나 많은 자식 컨트롤 가로로 이동 하는 사용자의 호스팅 창의 크기를 조정 하는 경우를 정의 하는 값입니다.  
   
 ```  
@@ -279,7 +292,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemovenonea--cmfcdynamiclayoutmovenone"></a><a name="movenone"></a>Cmfcdynamiclayout:: Movenone  
+##  <a name="movenone"></a>Cmfcdynamiclayout:: Movenone  
  가져옵니다는 [MoveSettings](#movesettings_structure) 세로 또는 가로 자식 컨트롤에 대 한 동작을 나타내는 값입니다.  
   
 ```  
@@ -291,7 +304,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namemovesettingsstructurea--cmfcdynamiclayoutmovesettings-structure"></a><a name="movesettings_structure"></a>Cmfcdynamiclayout:: Movesettings 구조체  
+##  <a name="movesettings_structure"></a>Cmfcdynamiclayout:: Movesettings 구조체  
  동적 레이아웃의 컨트롤에 대한 이동 데이터를 캡슐화합니다.  
   
 ```  
@@ -332,7 +345,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>반환 값  
  `MoveSettings` 개체가&0;이 아닌 세로 이동을 지정하면 TRUE입니다.  
 
-##  <a name="a-namemoveverticala--cmfcdynamiclayoutmovevertical"></a><a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
+##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
  가져옵니다는 [MoveSettings](#movesettings_structure) 사용자의 호스팅 창 크기를 조정 하는 경우 얼마나 많은 자식 컨트롤을 세로로 이동할 정의 하는 값입니다.  
   
 ```  
@@ -348,7 +361,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetminsizea--cmfcdynamiclayoutsetminsize"></a><a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
  레이아웃이 그 이하로 조정되지 않는 창 크기를 설정합니다.  
   
 ```  
@@ -362,7 +375,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>주의  
  호스팅 창의 크기를 조정하면 자식 컨트롤의 위치 및 크기가 동적으로 변경되지만 레이아웃이 그 이하로 조정되지 않는 최소 크기가 있습니다. 사용자는 창의 크기를 더 작은 크기로 조정할 수 있지만 이렇게 하면 창 부분이 뷰에서 숨겨집니다.  
   
-##  <a name="a-namesizehorizontala--cmfcdynamiclayoutsizehorizontal"></a><a name="sizehorizontal"></a>Cmfcdynamiclayout:: Sizehorizontal  
+##  <a name="sizehorizontal"></a>Cmfcdynamiclayout:: Sizehorizontal  
  가져옵니다는 [SizeSettings](#sizesettings_structure) 정도 자식 컨트롤의 크기가 조정 가로로 사용자가 해당 호스팅 창 크기 조정 정의 하는 값입니다.  
   
 ```  
@@ -378,7 +391,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesizehorizontalandverticala--cmfcdynamiclayoutsizehorizontalandvertical"></a><a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
+##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
  가져옵니다는 [SizeSettings](#sizesettings_structure) 정도 자식 컨트롤의 크기가 조정 가로로 사용자가 해당 호스팅 창 크기 조정 정의 하는 값입니다.  
   
 ```  
@@ -397,7 +410,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesizenonea--cmfcdynamiclayoutsizenone"></a><a name="sizenone"></a>Cmfcdynamiclayout:: Sizenone  
+##  <a name="sizenone"></a>Cmfcdynamiclayout:: Sizenone  
  가져옵니다는 [SizeSettings](#sizesettings_structure) 변하지 자식 컨트롤에 대 한 크기를 나타내는 값입니다.  
   
 ```  
@@ -409,7 +422,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesizesettingsstructurea--cmfcdynamiclayoutsizesettings-structure"></a><a name="sizesettings_structure"></a>Cmfcdynamiclayout:: Sizesettings 구조체  
+##  <a name="sizesettings_structure"></a>Cmfcdynamiclayout:: Sizesettings 구조체  
  동적 레이아웃의 컨트롤에 대한 크기 변경 데이터를 캡슐화합니다.  
   
 ```  
@@ -449,7 +462,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>반환 값  
  `SizeSettings` 개체가&0;이 아닌 세로 크기 조정을 지정하면 TRUE입니다.  
 
-##  <a name="a-namesizeverticala--cmfcdynamiclayoutsizevertical"></a><a name="sizevertical"></a>Cmfcdynamiclayout:: Sizevertical  
+##  <a name="sizevertical"></a>Cmfcdynamiclayout:: Sizevertical  
  가져옵니다는 [SizeSettings](#sizesettings_structure) 정도 자식 컨트롤의 크기가 조정 세로로 사용자가 해당 호스팅 창 크기 조정 정의 하는 값입니다.  
   
 ```  

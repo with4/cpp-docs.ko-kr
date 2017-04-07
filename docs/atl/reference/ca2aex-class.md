@@ -9,12 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CA2AEX<t_nBufferLength>
 - CA2AEX
-- ATL.CA2AEX<t_nBufferLength>
-- ATLCONV/CA2AEX
-- ATL.CA2AEX
-- ATL::CA2AEX
+- ATLCONV/ATL::CA2AEX
+- ATLCONV/ATL::CA2AEX::CA2AEX
+- ATLCONV/ATL::CA2AEX::m_psz
+- ATLCONV/ATL::CA2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +109,7 @@ class CA2AEX
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="a-nameca2aexa--ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX  
+##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
  생성자입니다.  
   
 ```
@@ -128,7 +127,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  번역에 필요한 버퍼를 만듭니다.  
   
-##  <a name="a-namedtora--ca2aexca2aex"></a><a name="dtor"></a>CA2AEX:: ~ CA2AEX  
+##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
  소멸자입니다.  
   
 ```
@@ -138,21 +137,21 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="a-namempsza--ca2aexmpsz"></a><a name="m_psz"></a>CA2AEX::m_psz  
+##  <a name="m_psz"></a>CA2AEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--ca2aexmszbuffer"></a><a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
  변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.  
   
 ```
 char m_szBuffer[ t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>LPSTR CA2AEX::operator  
+##  <a name="operator_lpstr"></a>LPSTR CA2AEX::operator  
  변환 연산자입니다.  
   
 ```

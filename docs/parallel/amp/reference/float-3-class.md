@@ -102,9 +102,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 9e1225c724d2c89dd2a6c4158446b6a4df195f6c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float3-class"></a>float_3 클래스
@@ -134,55 +134,55 @@ class float_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|float_3::get_x 메서드||  
-|float_3::get_xy 메서드||  
-|float_3::get_xyz 메서드||  
-|float_3::get_xz 메서드||  
-|float_3::get_xzy 메서드||  
-|float_3::get_y 메서드||  
-|float_3::get_yx 메서드||  
-|float_3::get_yxz 메서드||  
-|float_3::get_yz 메서드||  
-|float_3::get_yzx 메서드||  
-|float_3::get_z 메서드||  
-|float_3::get_zx 메서드||  
-|float_3::get_zxy 메서드||  
-|float_3::get_zy 메서드||  
-|float_3::get_zyx 메서드||  
-|float_3::ref_b 메서드||  
-|float_3::ref_g 메서드||  
-|float_3::ref_r 메서드||  
-|float_3::ref_x 메서드||  
-|float_3::ref_y 메서드||  
-|float_3::ref_z 메서드||  
-|float_3::set_x 메서드||  
-|float_3::set_xy 메서드||  
-|float_3::set_xyz 메서드||  
-|float_3::set_xz 메서드||  
-|float_3::set_xzy 메서드||  
-|float_3::set_y 메서드||  
-|float_3::set_yx 메서드||  
-|float_3::set_yxz 메서드||  
-|float_3::set_yz 메서드||  
-|float_3::set_yzx 메서드||  
-|float_3::set_z 메서드||  
-|float_3::set_zx 메서드||  
-|float_3::set_zxy 메서드||  
-|float_3::set_zy 메서드||  
-|float_3::set_zyx 메서드||  
+|float_3::get_x||  
+|float_3::get_xy||  
+|float_3::get_xyz||  
+|float_3::get_xz||  
+|float_3::get_xzy||  
+|float_3::get_y||  
+|float_3::get_yx||  
+|float_3::get_yxz||  
+|float_3::get_yz||  
+|float_3::get_yzx||  
+|float_3::get_z||  
+|float_3::get_zx||  
+|float_3::get_zxy||  
+|float_3::get_zy||  
+|float_3::get_zyx||  
+|float_3::ref_b||  
+|float_3::ref_g||  
+|float_3::ref_r||  
+|float_3::ref_x||  
+|float_3::ref_y||  
+|float_3::ref_z||  
+|float_3::set_x||  
+|float_3::set_xy||  
+|float_3::set_xyz||  
+|float_3::set_xz||  
+|float_3::set_xzy||  
+|float_3::set_y||  
+|float_3::set_yx||  
+|float_3::set_yxz||  
+|float_3::set_yz||  
+|float_3::set_yzx||  
+|float_3::set_z||  
+|float_3::set_zx||  
+|float_3::set_zxy||  
+|float_3::set_zy||  
+|float_3::set_zyx||  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|float_3::operator 연산자||  
-|float_3::operator-연산자||  
-|float_3::operator * = 연산자||  
-|float_3::operator / = 연산자||  
-|float_3::operator + + 연산자||  
-|float_3::operator + = 연산자||  
-|float_3::operator = 연산자||  
-|float_3::operator-= 연산자||  
+|float_3::operator-||  
+|float_3::operator-||  
+|float_3::operator * =||  
+|float_3::operator / =||  
+|float_3::operator + +||  
+|float_3::operator + =||  
+|float_3::operator =||  
+|-= float_3::operator||  
   
 ### <a name="public-constants"></a>공용 상수  
   
@@ -194,36 +194,36 @@ class float_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|float_3::b 데이터 멤버||  
-|float_3::bg 데이터 멤버||  
-|float_3::bgr 데이터 멤버||  
-|float_3::br 데이터 멤버||  
-|float_3::brg 데이터 멤버||  
-|float_3::g 데이터 멤버||  
-|float_3::gb 데이터 멤버||  
-|float_3::gbr 데이터 멤버||  
-|float_3::gr 데이터 멤버||  
-|float_3::grb 데이터 멤버||  
-|float_3::r 데이터 멤버||  
-|float_3::rb 데이터 멤버||  
-|float_3::rbg 데이터 멤버||  
-|float_3::rg 데이터 멤버||  
-|float_3::rgb 데이터 멤버||  
-|float_3::x 데이터 멤버||  
-|float_3::xy 데이터 멤버||  
-|float_3::xyz 데이터 멤버||  
-|float_3::xz 데이터 멤버||  
-|float_3::xzy 데이터 멤버||  
-|float_3::y 데이터 멤버||  
-|float_3::yx 데이터 멤버||  
-|float_3::yxz 데이터 멤버||  
-|float_3::yz 데이터 멤버||  
-|float_3::yzx 데이터 멤버||  
-|float_3::z 데이터 멤버||  
-|float_3::zx 데이터 멤버||  
-|float_3::zxy 데이터 멤버||  
-|float_3::zy 데이터 멤버||  
-|float_3::zyx 데이터 멤버||  
+|float_3::b||  
+|float_3::bg||  
+|float_3::bgr||  
+|float_3::br||  
+|float_3::brg||  
+|float_3::g||  
+|float_3::gb||  
+|float_3::gbr||  
+|float_3::gr||  
+|float_3::grb||  
+|float_3::r||  
+|float_3::rb||  
+|float_3::rbg||  
+|float_3::rg||  
+|float_3::rgb||  
+|float_3::x||  
+|float_3::xy||  
+|float_3::xyz||  
+|float_3::xz||  
+|float_3::xzy||  
+|float_3::y||  
+|float_3::yx||  
+|float_3::yxz||  
+|float_3::yz||  
+|float_3::yzx||  
+|float_3::z||  
+|float_3::zx||  
+|float_3::zxy||  
+|float_3::zy||  
+|float_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `float_3`  
@@ -233,7 +233,7 @@ class float_3;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-float3"></a><a name="ctor"></a>float_3 
+##  <a name="ctor"></a>float_3 
 
  기본 생성자를 0부터 모든 요소를 초기화 합니다.  
   
@@ -300,12 +300,12 @@ explicit inline float_3(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="a-namefloat3sizea-size"></a><a name="float_3__size"></a>크기 
+##  <a name="float_3__size"></a>크기 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

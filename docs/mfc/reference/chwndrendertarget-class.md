@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHwndRenderTarget
-- afxrendertarget/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::Attach
+- AFXRENDERTARGET/CHwndRenderTarget::CheckWindowState
+- AFXRENDERTARGET/CHwndRenderTarget::Create
+- AFXRENDERTARGET/CHwndRenderTarget::Detach
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwnd
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::ReCreate
+- AFXRENDERTARGET/CHwndRenderTarget::Resize
+- AFXRENDERTARGET/CHwndRenderTarget::m_pHwndRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +102,7 @@ class CHwndRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-nameattacha--chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Attach  
+##  <a name="attach"></a>CHwndRenderTarget::Attach  
  기존 연결 개체를 대상 인터페이스를 렌더링 합니다.  
   
 ```  
@@ -103,7 +113,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
  `pTarget`  
  기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecheckwindowstatea--chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
+##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
  이 렌더링 대상과 연결 된 HWND가 내포 되었는지 여부를 나타냅니다.  
   
 ```  
@@ -113,7 +123,7 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 ### <a name="return-value"></a>반환 값  
  와 연결 된 HWND 대상 렌더링 하는지 여부를 나타내는 값 폐색 됩니다.  
   
-##  <a name="a-namechwndrendertargeta--chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
+##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
  HWND에서 CHwndRenderTarget 개체를 만듭니다.  
   
 ```  
@@ -124,7 +134,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
  `hwnd`  
  와 연결 된 HWND 렌더링 대상  
   
-##  <a name="a-namecreatea--chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Create  
+##  <a name="create"></a>CHwndRenderTarget::Create  
  창에 연결 된 렌더링 대상을 만듭니다.  
   
 ```  
@@ -138,7 +148,7 @@ BOOL Create(HWND hWnd);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환  
   
-##  <a name="a-namedetacha--chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach  
+##  <a name="detach"></a>CHwndRenderTarget::Detach  
  렌더링 대상 인터페이스 개체에서 분리  
   
 ```  
@@ -148,7 +158,7 @@ ID2D1HwndRenderTarget* Detach();
 ### <a name="return-value"></a>반환 값  
  분리에 대 한 포인터는 대상 인터페이스를 렌더링 합니다.  
   
-##  <a name="a-namegethwnda--chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
+##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
  대상을 렌더링 하는이 연결 된 HWND를 반환 합니다.  
   
 ```  
@@ -158,7 +168,7 @@ HWND GetHwnd() const;
 ### <a name="return-value"></a>반환 값  
  와 연결 된 HWND 대상을 렌더링 합니다.  
   
-##  <a name="a-namegethwndrendertargeta--chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
+##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
  ID2D1HwndRenderTarget 인터페이스를 반환 합니다.  
   
 ```  
@@ -168,14 +178,14 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1HwndRenderTarget 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namemphwndrendertargeta--chwndrendertargetmphwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
+##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
  ID2D1HwndRenderTarget 개체에 대 한 포인터입니다.  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1hwndrendertargetstara--chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
  ID2D1HwndRenderTarget 인터페이스를 반환 합니다.  
   
 ```  
@@ -185,7 +195,7 @@ operator ID2D1HwndRenderTarget*();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1HwndRenderTarget 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namerecreatea--chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::ReCreate  
+##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
  창에 연결 된 렌더링 대상을 다시 만듭니다.  
   
 ```  
@@ -199,7 +209,7 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-nameresizea--chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Resize  
+##  <a name="resize"></a>CHwndRenderTarget::Resize  
  지정 된 픽셀 크기로 렌더링 대상의 크기를 변경합니다.  
   
 ```  

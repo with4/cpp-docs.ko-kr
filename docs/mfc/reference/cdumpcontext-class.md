@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDumpContext
+- AFX/CDumpContext
+- AFX/CDumpContext::CDumpContext
+- AFX/CDumpContext::DumpAsHex
+- AFX/CDumpContext::Flush
+- AFX/CDumpContext::GetDepth
+- AFX/CDumpContext::HexDump
+- AFX/CDumpContext::SetDepth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +112,7 @@ class CDumpContext
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecdumpcontexta--cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
  클래스의 개체를 생성 `CDumpContext`합니다.  
   
 ```  
@@ -124,7 +131,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="a-namedumpashexa--cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
  16 진수 숫자로 지정된 된 형식으로 덤프 합니다.  
   
 ```  
@@ -147,7 +154,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="a-nameflusha--cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>CDumpContext::Flush  
  강제로 파일에 쓰여지도록 버퍼에 남아 있는 모든 데이터 덤프 컨텍스트에 연결 합니다.  
   
 ```  
@@ -157,7 +164,7 @@ void Flush();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="a-namegetdeptha--cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>CDumpContext::GetDepth  
  프로세스의 전체 또는 단순 덤프 인지 확인 합니다.  
   
 ```  
@@ -170,7 +177,7 @@ int GetDepth() const;
 ### <a name="example"></a>예제  
   예를 참조 [SetDepth](#setdepth)합니다.  
   
-##  <a name="a-namehexdumpa--cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>CDumpContext::HexDump  
  덤프를&16; 진수로 서식이 지정 된 바이트 배열입니다.  
   
 ```  
@@ -200,7 +207,7 @@ void HexDump(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="a-nameoperatorltlta--cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
  덤프 컨텍스트를 지정된 된 데이터를 출력합니다.  
   
 ```  
@@ -238,7 +245,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities #&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="a-namesetdeptha--cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>CDumpContext::SetDepth  
  덤프에 대 한 깊이 가져오거나 설정 합니다.  
   
 ```  

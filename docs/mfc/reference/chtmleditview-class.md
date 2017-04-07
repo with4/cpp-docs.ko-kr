@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
+- AFXHTML/CHtmlEditView
+- AFXHTML/CHtmlEditView::CHtmlEditView
+- AFXHTML/CHtmlEditView::Create
+- AFXHTML/CHtmlEditView::GetDHtmlDocument
+- AFXHTML/CHtmlEditView::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxhtml.h  
   
-##  <a name="a-namechtmleditviewa--chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
  `CHtmlEditView` 개체를 생성합니다.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="a-namecreatea--chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>CHtmlEditView::Create  
  새 창 개체를 만듭니다.  
   
 ```  
@@ -132,7 +137,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>주의  
  이 메서드는 포함 된 WebBrowser 호출도 **Navigate** 기본 문서를 로드 하는 메서드 (참조 [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
  반환 된 **IHTMLDocument2** 현재 문서에 대 한 인터페이스입니다.  
   
 ```  
@@ -143,7 +148,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 인터페이스입니다.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
  이 보기에 대 한 기본 문서의 이름을 검색합니다.  
   
 ```  

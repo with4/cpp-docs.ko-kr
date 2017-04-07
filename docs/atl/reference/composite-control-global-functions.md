@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlhost.h  
 
-##  <a name="a-nameatlaxdialogboxa--atlaxdialogbox"></a><a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
  사용자가 제공한 대화 상자 템플릿에서 모달 대화 상자를 만듭니다.  
    
 ```
@@ -96,15 +96,16 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="remarks"></a>주의  
  사용 하 여 **AtlAxDialogBox** ActiveX 컨트롤을 포함 하는 대화 상자 템플릿을 사용 하 여 유효한 지정 **CLSID**, **APPID** 또는 URL 문자열을는 *텍스트* 필드는 **제어** "AtlAxWin80"와 함께 대화 상자 리소스의 섹션은 *클래스 이름* 동일한 섹션에서 필드. 다음은 어떤 유효한 **제어** 섹션은 다음과 유사할 수 있습니다.  
   
- `CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,`  
-  
- `"AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100`  
+```  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+```  
   
  리소스 스크립트 편집에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 리소스 스크립트 파일을 텍스트 형식으로 열기](../../windows/how-to-open-a-resource-script-file-in-text-format.md)합니다. 리소스 정의 제어문에 대 한 자세한 내용은 참조 하십시오. [공통 제어 매개 변수](http://msdn.microsoft.com/library/windows/desktop/aa380902) 아래 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *: SDK 도구*합니다.  
   
  일반적으로 대화 상자에 대 한 자세한 내용은 참조 [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) 및 [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameatlaxcreatedialoga--atlaxcreatedialog"></a><a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
  사용자가 제공한 대화 상자 템플릿에서 모덜리스 대화 상자를 만듭니다.  
   
 ```
@@ -140,7 +141,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  참조 [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) 및 [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameatlaxcreatecontrola--atlaxcreatecontrol"></a><a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
   
 
@@ -186,7 +187,7 @@ ATLAPI AtlAxCreateControl(
   
  사용이 허가 된 ActiveX 컨트롤을 만들려면 참조 [AtlAxCreateControlLic](#atlaxcreatecontrollic)합니다.  
   
-##  <a name="a-nameatlaxcreatecontrolexa--atlaxcreatecontrolex"></a><a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다. 새 컨트롤에 대한 인터페이스 포인터와 이벤트 싱크를 만들 수도 있습니다.  
   
 ```
@@ -243,7 +244,7 @@ ATLAPI AtlAxCreateControlEx(
   
  사용이 허가 된 ActiveX 컨트롤을 만들려면 참조 [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)합니다.  
   
-##  <a name="a-nameatlaxcreatecontrollica--atlaxcreatecontrollic"></a><a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
  사용 허가를 받은 ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
 
 ```
@@ -290,7 +291,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLic`합니다.  
   
-##  <a name="a-nameatlaxcreatecontrollicexa--atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
  사용 허가를 받은 ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다. 새 컨트롤에 대한 인터페이스 포인터와 이벤트 싱크를 만들 수도 있습니다.  
   
 ```
@@ -352,7 +353,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLicEx`합니다.  
   
-##  <a name="a-nameatlaxattachcontrola--atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
  지정한 창에 이전에 만든 컨트롤을 연결합니다.  
   
 ```
@@ -381,7 +382,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  연결 되는 컨트롤 개체를 호출 하기 전에 올바르게 초기화 해야 `AtlAxAttachControl`합니다.  
   
-##  <a name="a-nameatlaxgethosta--atlaxgethost"></a><a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>AtlAxGetHost  
  핸들이 제공되는 지정된 창(있는 경우)의 컨테이너에 직접 인터페이스 포인터를 가져옵니다.  
   
 ```
@@ -398,7 +399,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-nameatlaxgetcontrola--atlaxgetcontrol"></a><a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
  핸들이 제공되는 지정된 창 내에 포함된 컨트롤에 직접 인터페이스 포인터를 가져옵니다.  
   
 ```
@@ -415,7 +416,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="a-nameatlsetchildsitea--atlsetchildsite"></a><a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>AtlSetChildSite  
  자식 개체의 사이트를 설정 하려면이 함수를 호출 하는 **IUnknown** 부모 개체의 합니다.  
   
 ```
@@ -432,7 +433,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-##  <a name="a-nameatlaxwininita--atlaxwininit"></a><a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>AtlAxWinInit  
  호스팅 코드를 등록 하 여 ATL의 컨트롤을 초기화 하는이 함수는 **"AtlAxWin80"** 및 **"AtlAxWinLic80"** 창 클래스 사용자 지정 창 메시지 두 개 있습니다.  
   
 ```
@@ -445,7 +446,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>주의  
  ATL 컨트롤 호스팅 API를 사용 하기 전에이 함수를 호출 해야 합니다. 이 함수를 호출한 다음는 **"AtlAxWin"** 창 클래스에 대 한 호출에서 사용할 수 있습니다 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 또는 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
 
-##  <a name="a-nameatlaxwinterma--atlaxwinterm"></a><a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
  이 함수는 ATL의 컨트롤 호스팅 코드를 등록 취소 하 여 취소는 **"AtlAxWin80"** 및 **"AtlAxWinLic80"** 창 클래스입니다.  
   
 ```
@@ -460,7 +461,7 @@ inline BOOL AtlAxWinTerm();
   
  이 함수를 호출 하면 모든 기존 호스트 창을 소멸 된 후 정리를 수행 하려면 호출 [AtlAxWinInit](#atlaxwininit) 및 호스트 창을 만들 필요가 없습니다. 이 함수를 호출 하지 않으면, window 클래스는 등록 취소할 수 자동으로 프로세스가 종료 될 때입니다.  
   
-##  <a name="a-nameatlgetobjectsourceinterfacea--atlgetobjectsourceinterface"></a><a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
  개체의 기본 소스 인터페이스에 대한 정보를 검색하려면 이 함수를 호출합니다.  
   
 ```

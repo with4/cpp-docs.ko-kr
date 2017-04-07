@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSingleThreadModel
 - CComSingleThreadModel
-- ATL::CComSingleThreadModel
+- ATLBASE/ATL::CComSingleThreadModel
+- ATLBASE/ATL::CComSingleThreadModel::AutoCriticalSection
+- ATLBASE/ATL::CComSingleThreadModel::CriticalSection
+- ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
+- ATLBASE/ATL::CComSingleThreadModel::Decrement
+- ATLBASE/ATL::CComSingleThreadModel::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CComSingleThreadModel
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccomsinglethreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
  사용 하는 경우 `CComSingleThreadModel`, `typedef` 이름 `AutoCriticalSection` 클래스를 참조 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)합니다.  
   
 ```
@@ -110,7 +114,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>예제  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
-##  <a name="a-namecriticalsectiona--ccomsinglethreadmodelcriticalsection"></a><a name="criticalsection"></a>CComSingleThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>CComSingleThreadModel::CriticalSection  
  사용 하는 경우 `CComSingleThreadModel`, `typedef` 이름 `CriticalSection` 클래스를 참조 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)합니다.  
   
 ```
@@ -133,7 +137,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>예제  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
-##  <a name="a-namedecrementa--ccomsinglethreadmodeldecrement"></a><a name="decrement"></a>CComSingleThreadModel::Decrement  
+##  <a name="decrement"></a>CComSingleThreadModel::Decrement  
  이 정적 함수 감소는 변수 값을 가리키는 `p`합니다.  
   
 ```
@@ -147,7 +151,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="return-value"></a>반환 값  
  결과 감소입니다.  
   
-##  <a name="a-nameincrementa--ccomsinglethreadmodelincrement"></a><a name="increment"></a>CComSingleThreadModel::Increment  
+##  <a name="increment"></a>CComSingleThreadModel::Increment  
  이 정적 함수 감소는 변수 값을 가리키는 `p`합니다.  
   
 ```
@@ -161,7 +165,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="return-value"></a>반환 값  
  결과 증가값입니다.  
   
-##  <a name="a-namethreadmodelnocsa--ccomsinglethreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
  사용 하는 경우 `CComSingleThreadModel`, `typedef` 이름 `ThreadModelNoCS` 참조 `CComSingleThreadModel`합니다.  
   
 ```

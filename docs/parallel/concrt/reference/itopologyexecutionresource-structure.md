@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyExecutionResource
+- ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9671dbf84a1104bc3b6f3a6f9d383aac167759c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
@@ -54,8 +57,8 @@ struct ITopologyExecutionResource;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Itopologyexecutionresource:: Getid 메서드](#getid)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|  
-|[Itopologyexecutionresource:: Getnext 메서드](#getnext)|열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.|  
+|[Itopologyexecutionresource:: Getid](#getid)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|  
+|[Itopologyexecutionresource:: Getnext](#getnext)|열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.|  
   
 ## <a name="remarks"></a>주의  
  이 인터페이스는 일반적으로 리소스 관리자가 확인 되는 시스템의 토폴로지를 설명 하는 데 사용 됩니다.  
@@ -68,7 +71,7 @@ struct ITopologyExecutionResource;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namegetida--itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Itopologyexecutionresource:: Getid 메서드  
+##  <a name="getid"></a>Itopologyexecutionresource:: Getid 메서드  
  이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.  
   
 ```
@@ -78,7 +81,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>반환 값  
  이 실행 리소스에 대한 리소스 관리자의 고유 식별자입니다.  
   
-##  <a name="a-namegetnexta--itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Itopologyexecutionresource:: Getnext 메서드  
+##  <a name="getnext"></a>Itopologyexecutionresource:: Getnext 메서드  
  열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.  
   
 ```
@@ -89,5 +92,5 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
  열거 순서에서 다음 실행 리소스에 대한 인터페이스입니다. 이 실행 리소스가 속한 노드의 열거 순서에 노드가 더 이상 없을 경우 이 메서드는 `NULL` 값을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

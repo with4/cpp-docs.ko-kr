@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCoClass
-- ATL.CComCoClass
-- ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass::CreateInstance
+- ATLCOM/ATL::CComCoClass::Error
+- ATLCOM/ATL::CComCoClass::GetObjectCLSID
+- ATLCOM/ATL::CComCoClass::GetObjectDescription
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +89,7 @@ class CComCoClass
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>CComCoClass::CreateInstance  
  이 사용 하 여 `CreateInstance` 는 COM의 인스턴스를 만드는 함수 개체를 COM API를 사용 하지 않고 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -124,7 +127,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
   
  [!code-cpp[NVC_ATL_COM&#11;](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="a-nameerrora--ccomcoclasserror"></a><a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>CComCoClass::Error  
  설정 하는 정적이 함수는 `IErrorInfo` 인터페이스를 클라이언트에 오류 정보를 제공 합니다.  
   
 ```
@@ -197,7 +200,7 @@ static HRESULT Error(
   
  하는 경우는 `hRes` 매개 변수는 다음&0;이 아니면 `Error` 의 값을 반환 `hRes`합니다. 경우 `hRes` 가&0;이 아니면 처음&4; 개 버전의 `Error` 반환 `DISP_E_EXCEPTION`합니다. 매크로의 결과 반환 하는 마지막 두 버전 **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**합니다.  
   
-##  <a name="a-namegetobjectclsida--ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
  개체의 CLSID를 검색 하는 일관 된 방법을 제공 합니다.  
   
 ```
@@ -207,7 +210,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>반환 값  
  개체의 클래스 식별자입니다.  
   
-##  <a name="a-namegetobjectdescriptiona--ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
  이 정적 함수에는 클래스 개체에 대 한 텍스트 설명을 가져옵니다.  
   
 ```

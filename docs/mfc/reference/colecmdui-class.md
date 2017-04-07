@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  생성 된 `COleCmdUI` 특정 사용자 인터페이스 명령과 연결 된 개체입니다.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>주의  
  `COleCmdUI` 개체는 메뉴 항목, 컨트롤 막대 단추 등의 DocObject 사용자 인터페이스 개체를 업데이트 하기 위한 프로그래밍 인터페이스를 제공 합니다. 사용자 인터페이스 개체를 활성화, 비활성화,이 옵션을 선택 하거나 통해 선택이 취소 수 있습니다는 `COleCmdUI` 개체입니다.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  명령 플래그를 설정 하려면이 함수를 호출 하는 `COleCmdUI` 개체를 **OLECOMDF_ENABLED**를 가능 하 고, 활성화는 명령 인터페이스 알려줍니다 또는 명령 플래그를 지우려면.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  와 연결 된 명령이 있는지 여부를 나타내는 `COleCmdUI` 개체를 활성화 또는 비활성화 해야 합니다. 0이 아니면 명령을; 활성화 0 명령을 사용 하지 않도록 설정 합니다.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  켜기/끄기 전환의 상태를 설정 하려면이 함수를 호출 명령입니다.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|비활성화 상태의;에 명령을 설정합니다 모두를 켜고 관련 선택 영역에 있는 상태에서이 명령의 특성은 이므로 상태를 확인할 수 없습니다.|  
 |다른 모든 값|명령 off로 설정 합니다.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  명령에 대 한 텍스트 이름 또는 상태 문자열을 반환 하려면이 함수를 호출 합니다.  
   
 ```  

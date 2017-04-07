@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDacl
 - CDacl
-- ATL.CDacl
+- ATLSECURITY/ATL::CDacl
+- ATLSECURITY/ATL::CDacl::CDacl
+- ATLSECURITY/ATL::CDacl::AddAllowedAce
+- ATLSECURITY/ATL::CDacl::AddDeniedAce
+- ATLSECURITY/ATL::CDacl::GetAceCount
+- ATLSECURITY/ATL::CDacl::RemoveAce
+- ATLSECURITY/ATL::CDacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-nameaddallowedacea--cdacladdallowedace"></a><a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  허용 되는 ACE (액세스 제어 항목)에 추가 된 `CDacl` 개체입니다.  
   
 ```
@@ -139,7 +144,7 @@ bool AddAllowedAce(
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에 설정 될 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
-##  <a name="a-nameadddeniedacea--cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  거부 ACE (액세스 제어 항목)에 추가 된 `CDacl` 개체입니다.  
   
 ```
@@ -183,7 +188,7 @@ bool AddDeniedAce(
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에 설정 될 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
-##  <a name="a-namecdacla--cdaclcdacl"></a><a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>CDacl::CDacl  
  생성자입니다.  
   
 ```
@@ -198,7 +203,7 @@ CDacl () throw();
 ### <a name="remarks"></a>주의  
  `CDacl` 개체가 생성 될 수 필요에 따라 기존를 사용 하 여 **ACL** 구조입니다. DACL (임의 액세스 제어 목록)만 해야 하 고는 SACL (시스템 액세스 제어 목록)이이 매개 변수로 전달 해야 합니다. 디버그 빌드에는 SACL 전달 어설션을 발생 합니다. 릴리스 빌드에서 SACL을 전달 하면 Ace (액세스 제어 항목)는 acl에 무시할 수 및 오류가 발생 하지 것입니다.  
   
-##  <a name="a-namedtora--cdaclcdacl"></a><a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>CDacl:: ~ CDacl  
  소멸자입니다.  
   
 ```
@@ -208,7 +213,7 @@ CDacl () throw();
 ### <a name="remarks"></a>주의  
  소멸자를 사용 하 여 모든 Ace (액세스 제어 항목)를 포함 하 여 개체에 가져온 모든 리소스를 해제 [CDacl::RemoveAllAces](#removeallaces)합니다.  
   
-##  <a name="a-namegetacecounta--cdaclgetacecount"></a><a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>CDacl::GetAceCount  
  Ace (액세스 제어 항목)의 수를 반환 된 `CDacl` 개체입니다.  
   
 ```
@@ -218,7 +223,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>반환 값  
  에 포함 된 Ace의 수를 반환 된 `CDacl` 개체입니다.  
   
-##  <a name="a-nameoperatoreqa--cdacloperator-"></a><a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>CDacl::operator =  
  대입 연산자입니다.  
   
 ```
@@ -235,7 +240,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>주의  
  이 함수는 DACL (임의 액세스 제어 목록)만 전달 해야 합니다. SACL (시스템 액세스 제어 목록)을 전달이 함수를 한 어설션을 디버그 빌드에서 되지만 릴리스 빌드에 없음 오류가 발생 합니다.  
   
-##  <a name="a-nameremoveacea--cdaclremoveace"></a><a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>CDacl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 `CDacl` 개체입니다.  
   
 ```
@@ -249,7 +254,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>주의  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
-##  <a name="a-nameremoveallacesa--cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
  에 포함 된 Ace (액세스 제어 항목)를 모두 제거는 `CDacl` 개체입니다.  
   
 ```

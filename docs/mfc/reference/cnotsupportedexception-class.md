@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CNotSupportedException
+- AFX/CNotSupportedException
+- AFX/CNotSupportedException::CNotSupportedException
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +77,7 @@ class CNotSupportedException : public CSimpleException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecnotsupportedexceptiona--cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
+##  <a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
  `CNotSupportedException` 개체를 생성합니다.  
   
 ```  

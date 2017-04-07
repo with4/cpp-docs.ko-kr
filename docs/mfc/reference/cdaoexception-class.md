@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoException
+- AFXDAO/CDaoException
+- AFXDAO/CDaoException::CDaoException
+- AFXDAO/CDaoException::GetErrorCount
+- AFXDAO/CDaoException::GetErrorInfo
+- AFXDAO/CDaoException::m_nAfxDaoError
+- AFXDAO/CDaoException::m_pErrorInfo
+- AFXDAO/CDaoException::m_scode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +107,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-namecdaoexceptiona--cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>CDaoException::CDaoException  
  `CDaoException` 개체를 생성합니다.  
   
 ```  
@@ -128,7 +135,7 @@ CDaoException();
   
  MFC DAO 클래스에서 오류를 처리 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)합니다.  
   
-##  <a name="a-namegeterrorcounta--cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
  데이터베이스 엔진의 오류 컬렉션에 추가 DAO error 개체의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -144,7 +151,7 @@ short GetErrorCount();
 > [!NOTE]
 >  일반적으로 Errors 컬렉션에 하나의 오류 개체가 됩니다. 그러나 ODBC 데이터 원본으로 작업 하는 경우 있을 수 하나 이상 있습니다.  
   
-##  <a name="a-namegeterrorinfoa--cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
  오류 컬렉션에 있는 특정 오류 개체에 대 한 오류 정보를 반환합니다.  
   
 ```  
@@ -172,7 +179,7 @@ void GetErrorInfo(int nIndex);
   
  DAO 예외 및 예제 코드에 대 한 내용은 문서를 참조 하십시오. [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)합니다.  
   
-##  <a name="a-namemnafxdaoerrora--cdaoexceptionmnafxdaoerror"></a><a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
  오류 코드를 확장 하는 MFC에 포함 되어 있습니다.  
   
 ### <a name="remarks"></a>주의  
@@ -188,7 +195,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN** 쿼리 정의 또는 열린 상태에 포함 되지 않은 테이블 정의 개체를 기반으로 레코드 집합을 열려고 했습니다.  
   
-##  <a name="a-namemperrorinfoa--cdaoexceptionmperrorinfo"></a><a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
  에 대 한 포인터를 포함 한 `CDaoErrorInfo` DAO 오류 개체를 호출 하 여 마지막으로 검색에 대 한 정보를 제공 하는 구조 [GetErrorInfo](#geterrorinfo)합니다.  
   
 ### <a name="remarks"></a>주의  
@@ -204,7 +211,7 @@ void GetErrorInfo(int nIndex);
   
  에 포함 된 정보에 대 한 자세한 내용은 `CDaoErrorInfo` 개체, 참조는 [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) 구조입니다.  
   
-##  <a name="a-namemscodea--cdaoexceptionmscode"></a><a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>CDaoException::m_scode  
  형식의 값이 포함 된 `SCODE` 하는 오류를 설명 합니다.  
   
 ### <a name="remarks"></a>주의  

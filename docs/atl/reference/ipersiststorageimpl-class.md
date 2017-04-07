@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStorageImpl
-- ATL::IPersistStorageImpl<T>
-- ATL.IPersistStorageImpl<T>
 - IPersistStorageImpl
-- ATL.IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl::GetClassID
+- ATLCOM/ATL::IPersistStorageImpl::HandsOffStorage
+- ATLCOM/ATL::IPersistStorageImpl::InitNew
+- ATLCOM/ATL::IPersistStorageImpl::IsDirty
+- ATLCOM/ATL::IPersistStorageImpl::Load
+- ATLCOM/ATL::IPersistStorageImpl::Save
+- ATLCOM/ATL::IPersistStorageImpl::SaveCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststorageimplgetclassid"></a><a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
  개체의 CLSID를 검색합니다.  
   
 ```
@@ -100,7 +104,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>주의  
  참조 [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namehandsoffstoragea--ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
  모든 저장소 개체를 해제 하 고 HandsOff 모드로 전환 하는 개체에 지시 합니다.  
   
 ```
@@ -113,7 +117,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>주의  
  참조 [IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinitnewa--ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
  새 저장소를 초기화합니다.  
   
 ```
@@ -125,7 +129,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  참조 [IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisdirtya--ipersiststorageimplisdirty"></a><a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
  개체의 데이터를 마지막으로 저장 된 이후 변경 되었는지 여부를 확인 합니다.  
   
 ```
@@ -137,7 +141,7 @@ STDMETHOD(IsDirty)(void);
   
  참조 [IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameloada--ipersiststorageimplload"></a><a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>IPersistStorageImpl::Load  
  지정 된 저장소에서 해당 개체의 속성을 로드합니다.  
   
 ```
@@ -149,7 +153,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  참조 [IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesavea--ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>IPersistStorageImpl::Save  
  지정 된 저장소에 해당 개체의 속성을 저장합니다.  
   
 ```
@@ -161,7 +165,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  참조 [IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesavecompleteda--ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
  해당 저장소 개체에 쓸 수 있는 표준 모드를 반환할 수 있는 개체를 알립니다.  
   
 ```

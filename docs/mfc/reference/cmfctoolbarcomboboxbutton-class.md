@@ -10,6 +10,36 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::AddItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::AddSortedItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::Compare
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::CreateEdit
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::DeleteItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::FindItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetByCmd
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetComboBox
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCount
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCountAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCurSel
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCurSelAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetEditCtrl
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemData
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemDataAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemDataPtrAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetText
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetTextAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::IsCenterVert
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::IsFlatMode
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::RemoveAllItems
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SelectItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SelectItemAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetCenterVert
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetDropDownHeight
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetFlatMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +146,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="a-nameadditema--cmfctoolbarcomboboxbuttonadditem"></a><a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
+##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
  목록 상자에 고유한 항목을 추가합니다.  
   
 ```  
@@ -140,7 +170,7 @@ virtual INT_PTR AddItem(
   
  항목 텍스트의 목록 상자에 이미 있으면 새 데이터가 기존 항목과 함께 저장 됩니다. 항목에 대 한 검색은 대 소문자를 구분 합니다.  
   
-##  <a name="a-nameaddsorteditema--cmfctoolbarcomboboxbuttonaddsorteditem"></a><a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
+##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
  목록 상자에서 정의 된 순서에서에 항목을 추가 [비교](#compare) 메서드.  
   
 ```  
@@ -162,7 +192,7 @@ virtual INT_PTR AddSortedItem(
 ### <a name="remarks"></a>주의  
  이 함수를 사용 하 여 특정 순서에 따라 목록 상자에 항목을 추가 합니다.  
   
-##  <a name="a-namecanbestretcheda--cmfctoolbarcomboboxbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
  콤보 상자 단추 크기를 변경할 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -172,7 +202,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`를 반환합니다.  
   
-##  <a name="a-namecmfctoolbarcomboboxbuttona--cmfctoolbarcomboboxbuttoncmfctoolbarcomboboxbutton"></a><a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  생성 된 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체입니다.  
   
 ```  
@@ -201,7 +231,7 @@ CMFCToolBarComboBoxButton(
   
  도구 모음 단추 스타일의 목록에 대 한 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="a-namecleardataa--cmfctoolbarcomboboxbuttoncleardata"></a><a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
+##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
  사용자 정의 데이터를 삭제 합니다.  
   
 ```  
@@ -211,7 +241,7 @@ virtual void ClearData();
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 모든 사용자 정의 데이터를 삭제 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-namecomparea--cmfctoolbarcomboboxbuttoncompare"></a><a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
+##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
  두 문자열을 비교합니다.  
   
 ```  
@@ -243,7 +273,7 @@ virtual int Compare(
   
  에서만이 메서드는 [AddSortedItem](#addsorteditem) 메서드.  
   
-##  <a name="a-namecopyfroma--cmfctoolbarcomboboxbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
  지정 된 상태 복사 `CMFCToolBarComboBoxButton` 현재 개체입니다.  
   
 ```  
@@ -254,7 +284,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  [in] `src`  
  소스 `CMFCToolBarComboBoxButton` 개체입니다.  
   
-##  <a name="a-namecreatecomboa--cmfctoolbarcomboboxbuttoncreatecombo"></a><a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
+##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
  콤보 상자 단추에 대 한 새 콤보 상자를 만듭니다.  
   
 ```  
@@ -273,7 +303,7 @@ virtual CComboBox* CreateCombo(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 새 콤보 상자에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
-##  <a name="a-namecreateedita--cmfctoolbarcomboboxbuttoncreateedit"></a><a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
+##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
  콤보 상자 단추에 대 한 새 편집 상자를 만듭니다.  
   
 ```  
@@ -299,7 +329,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="remarks"></a>주의  
  프레임 워크는 콤보 상자 단추에 대 한 새 편집 상자를 만들 때이 메서드를 호출 합니다. 변경 하려면이 메서드를 재정의 방법을 [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) 만들어집니다.  
   
-##  <a name="a-namedeleteitema--cmfctoolbarcomboboxbuttondeleteitem"></a><a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
+##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
  목록 상자에서 지정된 된 항목을 삭제합니다.  
   
 ```  
@@ -323,7 +353,7 @@ BOOL DeleteItem(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameduplicatedataa--cmfctoolbarcomboboxbuttonduplicatedata"></a><a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
+##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
  중복 된 사용자 정의 데이터입니다.  
   
 ```  
@@ -333,7 +363,7 @@ virtual void DuplicateData();
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 모든 사용자 정의 데이터를 복사 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameenablewindowa--cmfctoolbarcomboboxbuttonenablewindow"></a><a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
+##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
  편집 및 콤보 상자를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -347,7 +377,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>주의  
  를 사용할 수 없을 때 활성화 될 수 없습니다 컨트롤과 사용자 입력을 받아들일 수 없습니다.  
   
-##  <a name="a-nameexporttomenubuttona--cmfctoolbarcomboboxbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
  복사 콤보 상자 단추 명령을 사용 하 여 지정 된 메뉴에 응용 프로그램 문자열 테이블에서 문자열 id입니다.  
   
 ```  
@@ -361,7 +391,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="return-value"></a>반환 값  
  항상 `TRUE`입니다.  
   
-##  <a name="a-namefinditema--cmfctoolbarcomboboxbuttonfinditem"></a><a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
+##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
  지정된 된 문자열을 포함 하는 목록 상자에서 첫 번째 항목의 인덱스를 반환 합니다.  
   
 ```  
@@ -377,7 +407,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetbycmda--cmfctoolbarcomboboxbuttongetbycmd"></a><a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
  지정 된 명령 id 콤보 상자 단추에 대 한 포인터를 가져옵니다.  
   
 ```  
@@ -398,7 +428,7 @@ static CMFCToolBarComboBoxButton* GetByCmd(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcomboboxa--cmfctoolbarcomboboxbuttongetcombobox"></a><a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
+##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
  포인터를 반환 콤보 상자에서 콤보 상자 단추입니다.  
   
 ```  
@@ -410,7 +440,7 @@ CComboBox* GetComboBox() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcontextmenuida--cmfctoolbarcomboboxbuttongetcontextmenuid"></a><a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
  콤보 상자 단추에 대 한 바로 가기 메뉴 리소스 ID를 가져옵니다.  
   
 ```  
@@ -420,7 +450,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>반환 값  
  바로 가기 메뉴 리소스 id입니다.  
   
-##  <a name="a-namegetcounta--cmfctoolbarcomboboxbuttongetcount"></a><a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
+##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
  목록 상자에서 항목의 수를 반환합니다.  
   
 ```  
@@ -432,7 +462,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcountalla--cmfctoolbarcomboboxbuttongetcountall"></a><a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
+##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
  지정한 명령 id 있는 콤보 상자 단추의 목록 상자에서 항목 수를 가져옵니다.  
   
 ```  
@@ -448,7 +478,7 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcursela--cmfctoolbarcomboboxbuttongetcursel"></a><a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
+##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
  목록 상자에서 현재 선택 된 항목의 인덱스를 가져옵니다.  
   
 ```  
@@ -461,7 +491,7 @@ int GetCurSel() const;
 ### <a name="remarks"></a>주의  
  목록 상자 인덱스는&0;부터 시작 합니다.  
   
-##  <a name="a-namegetcurselalla--cmfctoolbarcomboboxbuttongetcurselall"></a><a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
+##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
  지정 된 명령 id 상자 단추는 콤보 목록 상자에서 현재 선택 된 항목의 인덱스를 반환  
   
 ```  
@@ -478,7 +508,7 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="remarks"></a>주의  
  목록 상자 인덱스는&0;부터 시작 합니다.  
   
-##  <a name="a-namegeteditctrla--cmfctoolbarcomboboxbuttongeteditctrl"></a><a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
+##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
  포인터를 반환 편집 상자에서 콤보 상자 단추입니다.  
   
 ```  
@@ -490,7 +520,7 @@ virtual CEdit* GetEditCtrl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethwnda--cmfctoolbarcomboboxbuttongethwnd"></a><a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
  콤보 상자에 대 한 창 핸들을 반환합니다.  
   
 ```  
@@ -500,7 +530,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>반환 값  
  창 핸들 또는 `NULL` 콤보 상자는 창 개체와 연결 되지 않은 경우.  
   
-##  <a name="a-namegetitema--cmfctoolbarcomboboxbuttongetitem"></a><a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
+##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
  목록 상자에 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.  
   
 ```  
@@ -517,7 +547,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="remarks"></a>주의  
  -1 인덱스 매개 변수는 현재 선택 된 항목의 문자열을 반환 합니다.  
   
-##  <a name="a-namegetitemalla--cmfctoolbarcomboboxbuttongetitemall"></a><a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
+##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
  지정 된 명령 id 있는 콤보 상자 단추의 목록 상자에 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.  
   
 ```  
@@ -539,7 +569,7 @@ static LPCTSTR GetItemAll(
 ### <a name="remarks"></a>주의  
  현재 선택 된 항목의 문자열을 반환 하는 인덱스 값이-1입니다.  
   
-##  <a name="a-namegetitemdataa--cmfctoolbarcomboboxbuttongetitemdata"></a><a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
+##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
  목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다.  
   
 ```  
@@ -556,7 +586,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="remarks"></a>주의  
  -1 인덱스 매개 변수는 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
   
-##  <a name="a-namegetitemdataalla--cmfctoolbarcomboboxbuttongetitemdataall"></a><a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
+##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
  특정 명령 id 있는 콤보 상자 단추의 목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다.  
   
 ```  
@@ -578,7 +608,7 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="remarks"></a>주의  
  -1 인덱스 매개 변수는 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
   
-##  <a name="a-namegetitemdataptralla--cmfctoolbarcomboboxbuttongetitemdataptrall"></a><a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  특정 명령 id 있는 콤보 상자 단추의 목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다. 이 데이터는 포인터로 반환 됩니다.  
   
 ```  
@@ -599,7 +629,7 @@ static void* GetItemDataPtrAll(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetprompta--cmfctoolbarcomboboxbuttongetprompt"></a><a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
+##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
  콤보 상자 단추 프롬프트 문자열을 반환합니다.  
   
 ```  
@@ -612,7 +642,7 @@ virtual CString GetPrompt() const;
 ### <a name="remarks"></a>주의  
  이 메서드가 현재 구현 되지 않았습니다.  
   
-##  <a name="a-namegettexta--cmfctoolbarcomboboxbuttongettext"></a><a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
+##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
  편집 상자에 텍스트를 가져옵니다.  
   
 ```  
@@ -624,7 +654,7 @@ LPCTSTR GetText() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegettextalla--cmfctoolbarcomboboxbuttongettextall"></a><a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
+##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
  지정 된 명령 id 있는 콤보 상자 단추의 편집 상자에 텍스트를 가져옵니다.  
   
 ```  
@@ -640,7 +670,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehasfocusa--cmfctoolbarcomboboxbuttonhasfocus"></a><a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
+##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
  콤보 상자에서 현재 포커스를가지고 있는지 여부를 나타냅니다.  
   
 ```  
@@ -653,7 +683,7 @@ virtual BOOL HasFocus() const;
 ### <a name="remarks"></a>주의  
  또한이 메서드 반환 `TRUE` 콤보 상자의 모든 자식 창에 현재 포커스를가지고 있습니다.  
   
-##  <a name="a-nameiscenterverta--cmfctoolbarcomboboxbuttoniscentervert"></a><a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
+##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
  응용 프로그램에서 콤보 상자 단추의 세로 위치를 반환합니다.  
   
 ```  
@@ -665,7 +695,7 @@ static BOOL IsCenterVert();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisflatmodea--cmfctoolbarcomboboxbuttonisflatmode"></a><a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
  콤보 상자 단추의 평면 스타일 모양을 응용 프로그램에 반환합니다.  
   
 ```  
@@ -678,7 +708,7 @@ static BOOL IsFlatMode();
 ### <a name="remarks"></a>주의  
  콤보 상자 단추에 대 한 기본 플랫 스타일은`FALSE.`  
   
-##  <a name="a-nameisownerofa--cmfctoolbarcomboboxbuttonisownerof"></a><a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
+##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
  지정된 된 핸들과 연결 된 콤보 상자 단추 또는 해당 자식 중 여부를 나타냅니다.  
   
 ```  
@@ -692,7 +722,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ### <a name="return-value"></a>반환 값  
  `TRUE`핸들은 콤보 상자 단추 또는 해당 자식; 중 그리드의 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameisribbonbuttona--cmfctoolbarcomboboxbuttonisribbonbutton"></a><a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
+##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
  콤보 상자 단추 리본 패널에 있는지 여부를 나타냅니다.  
   
 ```  
@@ -705,7 +735,7 @@ BOOL IsRibbonButton() const;
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 항상 반환 `FALSE`를 의미 하는 콤보 상자 단추를 리본 패널에 표시 되지 않습니다.  
   
-##  <a name="a-nameiswindowvisiblea--cmfctoolbarcomboboxbuttoniswindowvisible"></a><a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
  상자 단추 콤보의 표시 여부 상태를 반환합니다.  
   
 ```  
@@ -715,7 +745,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="return-value"></a>반환 값  
  콤보 상자 단추의 표시 여부 상태입니다.  
   
-##  <a name="a-namenotifycommanda--cmfctoolbarcomboboxbuttonnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
  콤보 상자 단추 메시지를 처리 하는지 여부를 나타냅니다.  
   
 ```  
@@ -729,14 +759,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="return-value"></a>반환 값  
  여부 콤보 상자 단추는 메시지를 처리 합니다.  
   
-##  <a name="a-nameonaddtocustomizepagea--cmfctoolbarcomboboxbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자입니다.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="a-nameoncalculatesizea--cmfctoolbarcomboboxbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
  단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -759,7 +789,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="return-value"></a>반환 값  
  A `SIZE` 픽셀 단위로 콤보 상자 단추의 크기를 포함 하는 구조입니다.  
   
-##  <a name="a-nameonchangeparentwnda--cmfctoolbarcomboboxbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
  새 도구 모음에 콤보 상자 단추를 삽입 하면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -770,7 +800,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
  [in] `pWndParent`  
  새 부모 도구 모음에 대 한 포인터입니다.  
   
-##  <a name="a-nameonclicka--cmfctoolbarcomboboxbuttononclick"></a><a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
+##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
  콤보 상자 단추를 클릭할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -789,7 +819,7 @@ virtual BOOL OnClick(
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드는 이벤트를 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameonctlcolora--cmfctoolbarcomboboxbuttononctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
  사용자는 콤보 상자 단추 색을 설정 하려면 부모 도구 모음 색을 변경할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -811,7 +841,7 @@ virtual HBRUSH OnCtlColor(
 ### <a name="remarks"></a>주의  
  이 메서드는 또한 콤보 상자 단추의 텍스트 색을 설정합니다.  
   
-##  <a name="a-nameondrawa--cmfctoolbarcomboboxbuttonondraw"></a><a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
+##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
  지정 된 스타일 및 옵션을 사용 하 여 콤보 상자 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -851,7 +881,7 @@ virtual void OnDraw(
  [in] `bGrayDisabledButtons`  
  `TRUE`비활성화 된 단추가 흐리게 표시; 그리려면 `FALSE` 사용 안 함을 사용 하 여 이미지 컬렉션입니다.  
   
-##  <a name="a-nameondrawoncustomizelista--cmfctoolbarcomboboxbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  콤보 상자 단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다.  
   
 ```  
@@ -874,21 +904,21 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="return-value"></a>반환 값  
  콤보 상자 단추의 픽셀 너비입니다.  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbarcomboboxbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
  응용 프로그램 글꼴이 변경 될 때 콤보 상자 단추 글꼴을 설정 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="a-nameonmovea--cmfctoolbarcomboboxbuttononmove"></a><a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
+##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
  부모 도구 모음에서 이동할 때 콤보 상자 단추의 위치를 변경 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="a-nameonshowa--cmfctoolbarcomboboxbuttononshow"></a><a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
+##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
  콤보 상자 단추 숨기 거 나 표시 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -899,7 +929,7 @@ virtual void OnShow(BOOL bShow);
  [in] `bShow`  
  콤보 상자 단추를 표시 하거나 숨기려면 여부를 나타냅니다.  
   
-##  <a name="a-nameonsizea--cmfctoolbarcomboboxbuttononsize"></a><a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
+##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
  부모 도구 모음에서 크기를 변경 하는 경우 콤보 상자 단추의 크기를 변경 하려면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -910,7 +940,7 @@ virtual void OnSize(int iSize);
  [in] `iSize`  
  콤보 상자 단추의 새 너비입니다.  
   
-##  <a name="a-nameonupdatetooltipa--cmfctoolbarcomboboxbuttononupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
  콤보 상자 단추에 대 한 도구 설명, 사용자가 변경할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -937,7 +967,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드는 이벤트를 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameremoveallitemsa--cmfctoolbarcomboboxbuttonremoveallitems"></a><a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
+##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
  목록 및 편집 상자에서 모든 항목을 삭제합니다.  
   
 ```  
@@ -947,7 +977,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>주의  
  목록에서 항목을 모두 상자 및 콤보 상자 컨트롤을 편집할 제거 합니다.  
   
-##  <a name="a-nameselectitema--cmfctoolbarcomboboxbuttonselectitem"></a><a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
+##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
  목록 상자에서 항목을 선택합니다.  
   
 ```  
@@ -977,7 +1007,7 @@ BOOL SelectItem(LPCTSTR lpszText);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameselectitemalla--cmfctoolbarcomboboxbuttonselectitemall"></a><a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
+##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
  지정 된 명령 id 있는 콤보 상자 단추의 목록 상자에서 항목을 선택 합니다.  
   
 ```  
@@ -1014,7 +1044,7 @@ static BOOL SelectItemAll(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameserializea--cmfctoolbarcomboboxbuttonserialize"></a><a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
+##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
  이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다.  
   
 ```  
@@ -1028,7 +1058,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>주의  
  설정에는 `CArchive` 개체가이 메서드를 읽습니다 보관 파일에 기록 하는지 여부를 확인 합니다.  
   
-##  <a name="a-namesetaccdataa--cmfctoolbarcomboboxbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
+##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
  지정 된 채웁니다 `CAccessibilityData` 콤보 상자 단추에서 내게 필요한 옵션 데이터를 사용 하 여 개체입니다.  
   
 ```  
@@ -1047,7 +1077,7 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>반환 값  
  `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namesetcenterverta--cmfctoolbarcomboboxbuttonsetcentervert"></a><a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
+##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
  응용 프로그램에서 콤보 상자 단추의 세로 위치를 설정합니다.  
   
 ```  
@@ -1061,7 +1091,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ### <a name="remarks"></a>주의  
  기본적으로 콤보 상자 단추 위에 정렬 됩니다.  
   
-##  <a name="a-namesetcontextmenuida--cmfctoolbarcomboboxbuttonsetcontextmenuid"></a><a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
  콤보 상자 단추 바로 가기 메뉴 리소스 ID를 설정합니다.  
   
 ```  
@@ -1072,7 +1102,7 @@ void SetContextMenuID(UINT uiResID);
  [in] `uiResID`  
  바로 가기 메뉴 리소스 id입니다.  
   
-##  <a name="a-namesetdropdownheighta--cmfctoolbarcomboboxbuttonsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
  놓을 때 목록 상자의 높이 설정 합니다.  
   
 ```  
@@ -1086,7 +1116,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>주의  
  기본 높이 150 픽셀입니다.  
   
-##  <a name="a-namesetflatmodea--cmfctoolbarcomboboxbuttonsetflatmode"></a><a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
  응용 프로그램에서 콤보 상자 단추의 평면 스타일 모양을 설정합니다.  
   
 ```  
@@ -1100,7 +1130,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ### <a name="remarks"></a>주의  
  콤보 상자 단추에 대 한 기본 플랫 스타일은 `FALSE`합니다.  
   
-##  <a name="a-namesetstylea--cmfctoolbarcomboboxbuttonsetstyle"></a><a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
+##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
  콤보 상자 단추 지정된 된 스타일 설정 하 고 하지 않는 경우에 컨트롤을 다시 그립니다.  
   
 ```  
@@ -1114,7 +1144,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>주의  
  도구 모음 단추 스타일의 목록에 대 한 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="a-namesettexta--cmfctoolbarcomboboxbuttonsettext"></a><a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
+##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
  상자 단추 콤보의 편집 상자에 텍스트를 설정 합니다.  
   
 ```  

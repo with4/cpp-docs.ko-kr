@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObArray
+- AFXCOLL/CObArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +137,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="a-nameadda--cobarrayadd"></a><a name="add"></a>CObArray::Add  
+##  <a name="add"></a>CObArray::Add  
  배열 1 씩 증가 하 고 배열의 끝에 새 요소를 추가 합니다.  
   
 ```  
@@ -159,7 +178,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="a-nameappenda--cobarrayappend"></a><a name="append"></a>CObArray::Append  
+##  <a name="append"></a>CObArray::Append  
  다른 배열의 내용을 지정 된 배열의 끝에 추가 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -194,7 +213,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections #&76;](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="a-namecopya--cobarraycopy"></a><a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>CObArray::Copy  
  동일한 형식의 다른 배열의 요소와 지정 된 배열의 요소를 덮어쓰려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -224,7 +243,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections #&77;](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="a-namecobarraya--cobarraycobarray"></a><a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>CObArray::CObArray  
  빈 생성 `CObject` 포인터 배열입니다.  
   
 ```  
@@ -248,7 +267,7 @@ CObArray();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&78;](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--cobarrayelementat"></a><a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>CObArray::ElementAt  
  배열 내의 요소 포인터에 대한 임시 참조를 반환합니다.  
   
 ```  
@@ -279,7 +298,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>예제  
   예를 참조 [CObArray::GetSize](#getsize)합니다.  
   
-##  <a name="a-namefreeextraa--cobarrayfreeextra"></a><a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>CObArray::FreeExtra  
  배열 된 증가 하는 동안 할당 된 모든 추가 메모리를 해제 합니다.  
   
 ```  
@@ -303,7 +322,7 @@ void FreeExtra();
 ### <a name="example"></a>예제  
   예를 참조 [CObArray::GetData](#getdata)합니다.  
   
-##  <a name="a-namegetata--cobarraygetat"></a><a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>CObArray::GetAt  
  지정된 된 인덱스에 있는 배열 요소를 반환합니다.  
   
 ```  
@@ -338,7 +357,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections #&79;](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--cobarraygetcount"></a><a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>CObArray::GetCount  
  배열 요소의 수를 반환합니다.  
   
 ```  
@@ -367,7 +386,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&80;](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--cobarraygetdata"></a><a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>CObArray::GetData  
  이 멤버 함수를 사용 하 여 배열의 요소에 직접 액세스할 수 있습니다.  
   
 ```  
@@ -400,7 +419,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections #&81;](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--cobarraygetsize"></a><a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>CObArray::GetSize  
  배열의 크기를 반환합니다.  
   
 ```  
@@ -426,7 +445,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections #&82;](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--cobarraygetupperbound"></a><a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>CObArray::GetUpperBound  
  이 배열의 현재 상한 값을 반환합니다.  
   
 ```  
@@ -457,7 +476,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections #&83;](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="a-nameinsertata--cobarrayinsertat"></a><a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>CObArray::InsertAt  
  지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.  
   
 ```  
@@ -521,7 +540,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="a-nameisemptya--cobarrayisempty"></a><a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>CObArray::IsEmpty  
  배열이 비어 있는지를 확인합니다.  
   
 ```  
@@ -531,7 +550,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>반환 값  
  배열이 비어 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameoperatorata--cobarrayoperator--"></a><a name="operator_at"></a>CObArray::operator]  
+##  <a name="operator_at"></a>CObArray::operator]  
  이러한 첨자 연산자는 편리 하 게 대체는 `SetAt` 및 `GetAt` 함수입니다.  
   
 ```  
@@ -560,7 +579,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections #&88;](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="a-nameremovealla--cobarrayremoveall"></a><a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>CObArray::RemoveAll  
  이 배열에서 모든 포인터를 제거 하지만 실제로 삭제 하지 않습니다는 `CObject` 개체입니다.  
   
 ```  
@@ -588,7 +607,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&85;](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="a-nameremoveata--cobarrayremoveat"></a><a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>CObArray::RemoveAt  
  배열에서 지정 된 인덱스에서 시작 하는 하나 이상의 요소를 제거 합니다.  
   
 ```  
@@ -633,7 +652,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="a-namesetata--cobarraysetat"></a><a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>CObArray::SetAt  
  지정된 된 인덱스에 있는 배열 요소를 설정합니다.  
   
 ```  
@@ -678,7 +697,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="a-namesetatgrowa--cobarraysetatgrow"></a><a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>CObArray::SetAtGrow  
  지정된 된 인덱스에 있는 배열 요소를 설정합니다.  
   
 ```  
@@ -725,7 +744,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="a-namesetsizea--cobarraysetsize"></a><a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>CObArray::SetSize  
  비어 있거나 기존 배열;의 크기를 설정합니다. 필요한 경우 메모리를 할당 합니다.  
   
 ```  

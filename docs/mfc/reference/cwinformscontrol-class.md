@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
+- AFXWINFORMS/CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CreateManagedControl
+- AFXWINFORMS/CWinFormsControl::GetControl
+- AFXWINFORMS/CWinFormsControl::GetControlHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h  
   
-##  <a name="a-namecreatemanagedcontrola--cwinformscontrolcreatemanagedcontrol"></a><a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
  MFC 컨테이너에 있는 Windows Forms 컨트롤을 만듭니다.  
   
 ```  
@@ -160,7 +165,7 @@ inline BOOL CreateManagedControl(
   
  참조 [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md) 대 한 Windows Form을 사용 하 여 샘플을 제어 합니다.  
   
-##  <a name="a-namecwinformscontrola--cwinformscontrolcwinformscontrol"></a><a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
  MFC Windows Forms 컨트롤 래퍼 개체를 생성 합니다.  
   
 ```  
@@ -170,7 +175,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>주의  
  호출 하는 경우 Windows Forms 컨트롤을 인스턴스화하 [CWinFormsControl::CreateManagedControl](#createmanagedcontrol)합니다.  
   
-##  <a name="a-namegetcontrola--cwinformscontrolgetcontrol"></a><a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
  Windows Forms 컨트롤에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -183,7 +188,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>예제  
   참조 [CWinFormsControl::CreateManagedControl](#createmanagedcontrol)합니다.  
   
-##  <a name="a-namegetcontrolhandlea--cwinformscontrolgetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
  Windows Forms 컨트롤에 대 한 핸들을 검색합니다.  
   
 ```  
@@ -196,7 +201,7 @@ inline HWND GetControlHandle() const;
 ### <a name="remarks"></a>주의  
  `GetControlHandle`.NET Framework 컨트롤 속성에 저장 된 창 핸들을 반환 하는 도우미 메서드입니다. 창 핸들 값에 복사 됩니다 [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) 호출 하는 동안 [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)합니다.  
   
-##  <a name="a-nameoperator-gta--cwinformscontroloperator--gt"></a><a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
  대체 [CWinFormsControl::GetControl](#getcontrol) 식에 있습니다.  
   
 ```  
@@ -208,7 +213,7 @@ inline TManagedControl^  operator->() const;
   
  Windows Forms에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="a-nameoperatortmanagedcontrola--cwinformscontroloperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
  Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::message_not_found
+- message_not_found
+- CONCRT/concurrency::message_not_found
+- CONCRT/concurrency::message_not_found::message_not_found
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: dc9fe8db2e454581acdc1ef63c0915845f3ad90f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4dc29ff5a9836aa784efa15313efbf60569142d4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messagenotfound-class"></a>message_not_found 클래스
@@ -54,7 +56,7 @@ class message_not_found : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[message_not_found 생성자](#ctor)|오버로드됨. `message_not_found` 개체를 생성합니다.|  
+|[message_not_found](#ctor)|오버로드됨. `message_not_found` 개체를 생성합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
@@ -66,7 +68,7 @@ class message_not_found : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namectora-messagenotfound"></a><a name="ctor"></a>message_not_found 
+##  <a name="ctor"></a>message_not_found 
 
  `message_not_found` 개체를 생성합니다.  
   

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComAutoThreadModule
+- ATLBASE/ATL::CComAutoThreadModule
+- ATLBASE/ATL::CreateInstance
+- ATLBASE/ATL::GetDefaultThreads
+- ATLBASE/ATL::Init
+- ATLBASE/ATL::Lock
+- ATLBASE/ATL::Unlock
+- ATLBASE/ATL::dwThreadID
+- ATLBASE/ATL::m_Allocator
+- ATLBASE/ATL::m_nThreads
+- ATLBASE/ATL::m_pApartments
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +121,7 @@ class CComAutoThreadModule : public CComModule
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-namecreateinstancea--ccomautothreadmodulecreateinstance"></a><a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
+##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -137,7 +147,7 @@ HRESULT CreateInstance(
 ### <a name="remarks"></a>주의  
  스레드를 선택 하 고 연결된 아파트에 있는 개체를 만듭니다.  
   
-##  <a name="a-namedwthreadida--ccomautothreadmoduledwthreadid"></a><a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
+##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -147,7 +157,7 @@ DWORD dwThreadID;
 ### <a name="remarks"></a>주의  
  현재 스레드의 식별자를 포함 합니다.  
   
-##  <a name="a-namegetdefaultthreadsa--ccomautothreadmodulegetdefaultthreads"></a><a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -160,7 +170,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>주의  
  이 정적 함수는 동적으로 프로세서의 수에 따라 EXE 모듈에 대 한 스레드의 최대 수를 계산 합니다. 기본적으로이 반환 값에 전달 되는 [Init](#init) 메서드는 스레드를 만들 수 있습니다.  
   
-##  <a name="a-nameinita--ccomautothreadmoduleinit"></a><a name="init"></a>CComAutoThreadModule::Init  
+##  <a name="init"></a>CComAutoThreadModule::Init  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -187,7 +197,7 @@ HRESULT Init(
 ### <a name="remarks"></a>주의  
  데이터 멤버를 초기화 하 고 지정 된 스레드 수를 만듭니다 `nThreads`합니다.  
   
-##  <a name="a-namelocka--ccomautothreadmodulelock"></a><a name="lock"></a>CComAutoThreadModule::Lock  
+##  <a name="lock"></a>CComAutoThreadModule::Lock  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -200,7 +210,7 @@ LONG Lock();
 ### <a name="remarks"></a>주의  
  모듈에 대 한 현재 스레드에 대 한 잠금 수에 원자성 증가 수행합니다. `CComAutoThreadModule`모든 클라이언트는 모듈에 액세스 하는 여부를 확인 하려면 모듈 잠금 횟수를 사용 합니다. 현재 스레드에서 잠금 수 통계 용도로 사용 됩니다.  
   
-##  <a name="a-namemallocatora--ccomautothreadmodulemallocator"></a><a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
+##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -210,7 +220,7 @@ ThreadAllocator  m_Allocator;
 ### <a name="remarks"></a>주의  
  스레드 선택 영역을 관리 하는 개체입니다. 기본적으로는 `ThreadAllocator` 클래스 템플릿 매개 변수는 [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)합니다.  
   
-##  <a name="a-namemnthreadsa--ccomautothreadmodulemnthreads"></a><a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
+##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -220,7 +230,7 @@ int m_nThreads;
 ### <a name="remarks"></a>주의  
  EXE 모듈에서 스레드 수를 포함합니다. 때 [Init](#init) 이라고 `m_nThreads` 로 설정 되어는 `nThreads` 매개 변수 값입니다. 연결 된 각 스레드의 아파트에서 관리 되는 [CComApartment](../../atl/reference/ccomapartment-class.md) 개체입니다.  
   
-##  <a name="a-namempapartmentsa--ccomautothreadmodulempapartments"></a><a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
+##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```
@@ -230,7 +240,7 @@ CComApartment* m_pApartments;
 ### <a name="remarks"></a>주의  
  배열을 가리키는 [CComApartment](../../atl/reference/ccomapartment-class.md) 모듈에서 아파트를 관리 하는 개체입니다. 배열의 요소 수에 따라는 [m_nThreads](#m_nthreads) 멤버입니다.  
   
-##  <a name="a-nameunlocka--ccomautothreadmoduleunlock"></a><a name="unlock"></a>CComAutoThreadModule::Unlock  
+##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
  ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
   
 ```

@@ -8,6 +8,11 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- AFXWIN/AfxDrawGrayBitmap
+- AFXWIN/AfxGetGrayBitmap
+- AFXWIN/AfxDrawDitheredBitmap
+- AFXWIN/AfxGetDitheredBitmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -60,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|디더링된 배경을 사용하여 비트맵을 그립니다.|  
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|디더링된 배경을 사용하여 비트맵을 복사합니다.|  
   
-##  <a name="a-nameafxdrawgraybitmapa--afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
+##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
  비트맵의 회색 버전을 그립니다.  
   
 ```   
@@ -99,7 +104,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
 
-##  <a name="a-nameafxgetgraybitmapa--afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
+##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
  비트맵의 회색 버전을 복사합니다.  
   
 ```   
@@ -130,7 +135,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameafxdrawditheredbitmapa--afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
+##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
  배경 디더링된 (검사기) 패턴으로 대체 하는 비트맵을 그립니다.  
   
 ```   
@@ -174,7 +179,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  **헤더:** afxwin.h  
 
 
-##  <a name="a-nameafxgetditheredbitmapa--afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
+##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
  배경 디더링된 (검사기) 패턴으로 대체 하는 비트맵을 복사 합니다.  
   
 ```   

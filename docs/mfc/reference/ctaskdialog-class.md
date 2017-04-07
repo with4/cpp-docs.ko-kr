@@ -10,6 +10,62 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTaskDialog
+- AFXTASKDIALOG/CTaskDialog
+- AFXTASKDIALOG/CTaskDialog::CTaskDialog
+- AFXTASKDIALOG/CTaskDialog::AddCommandControl
+- AFXTASKDIALOG/CTaskDialog::AddRadioButton
+- AFXTASKDIALOG/CTaskDialog::ClickCommandControl
+- AFXTASKDIALOG/CTaskDialog::ClickRadioButton
+- AFXTASKDIALOG/CTaskDialog::DoModal
+- AFXTASKDIALOG/CTaskDialog::GetCommonButtonCount
+- AFXTASKDIALOG/CTaskDialog::GetCommonButtonFlag
+- AFXTASKDIALOG/CTaskDialog::GetCommonButtonId
+- AFXTASKDIALOG/CTaskDialog::GetOptions
+- AFXTASKDIALOG/CTaskDialog::GetSelectedCommandControlID
+- AFXTASKDIALOG/CTaskDialog::GetSelectedRadioButtonID
+- AFXTASKDIALOG/CTaskDialog::GetVerificationCheckboxState
+- AFXTASKDIALOG/CTaskDialog::IsCommandControlEnabled
+- AFXTASKDIALOG/CTaskDialog::IsRadioButtonEnabled
+- AFXTASKDIALOG/CTaskDialog::IsSupported
+- AFXTASKDIALOG/CTaskDialog::LoadCommandControls
+- AFXTASKDIALOG/CTaskDialog::LoadRadioButtons
+- AFXTASKDIALOG/CTaskDialog::NavigateTo
+- AFXTASKDIALOG/CTaskDialog::OnCommandControlClick
+- AFXTASKDIALOG/CTaskDialog::OnCreate
+- AFXTASKDIALOG/CTaskDialog::OnDestroy
+- AFXTASKDIALOG/CTaskDialog::OnExpandButtonClick
+- AFXTASKDIALOG/CTaskDialog::OnHelp
+- AFXTASKDIALOG/CTaskDialog::OnHyperlinkClick
+- AFXTASKDIALOG/CTaskDialog::OnInit
+- AFXTASKDIALOG/CTaskDialog::OnNavigatePage
+- AFXTASKDIALOG/CTaskDialog::OnRadioButtonClick
+- AFXTASKDIALOG/CTaskDialog::OnTimer
+- AFXTASKDIALOG/CTaskDialog::OnVerificationCheckboxClick
+- AFXTASKDIALOG/CTaskDialog::RemoveAllCommandControls
+- AFXTASKDIALOG/CTaskDialog::RemoveAllRadioButtons
+- AFXTASKDIALOG/CTaskDialog::SetCommandControlOptions
+- AFXTASKDIALOG/CTaskDialog::SetCommonButtonOptions
+- AFXTASKDIALOG/CTaskDialog::SetCommonButtons
+- AFXTASKDIALOG/CTaskDialog::SetContent
+- AFXTASKDIALOG/CTaskDialog::SetDefaultCommandControl
+- AFXTASKDIALOG/CTaskDialog::SetDefaultRadioButton
+- AFXTASKDIALOG/CTaskDialog::SetDialogWidth
+- AFXTASKDIALOG/CTaskDialog::SetExpansionArea
+- AFXTASKDIALOG/CTaskDialog::SetFooterIcon
+- AFXTASKDIALOG/CTaskDialog::SetFooterText
+- AFXTASKDIALOG/CTaskDialog::SetMainIcon
+- AFXTASKDIALOG/CTaskDialog::SetMainInstruction
+- AFXTASKDIALOG/CTaskDialog::SetOptions
+- AFXTASKDIALOG/CTaskDialog::SetProgressBarMarquee
+- AFXTASKDIALOG/CTaskDialog::SetProgressBarPosition
+- AFXTASKDIALOG/CTaskDialog::SetProgressBarRange
+- AFXTASKDIALOG/CTaskDialog::SetProgressBarState
+- AFXTASKDIALOG/CTaskDialog::SetRadioButtonOptions
+- AFXTASKDIALOG/CTaskDialog::SetVerificationCheckbox
+- AFXTASKDIALOG/CTaskDialog::SetVerificationCheckboxText
+- AFXTASKDIALOG/CTaskDialog::SetWindowTitle
+- AFXTASKDIALOG/CTaskDialog::ShowDialog
+- AFXTASKDIALOG/CTaskDialog::TaskDialogCallback
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -164,7 +220,7 @@ class CTaskDialog : public CObject
   
  **헤더:** afxtaskdialog.h  
   
-##  <a name="a-nameaddcommandcontrola--ctaskdialogaddcommandcontrol"></a><a name="addcommandcontrol"></a>CTaskDialog::AddCommandControl  
+##  <a name="addcommandcontrol"></a>CTaskDialog::AddCommandControl  
  새 명령 단추 컨트롤을 추가 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -196,7 +252,7 @@ void AddCommandControl(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-nameaddradiobuttona--ctaskdialogaddradiobutton"></a><a name="addradiobutton"></a>CTaskDialog::AddRadioButton  
+##  <a name="addradiobutton"></a>CTaskDialog::AddRadioButton  
  라디오 단추를 추가 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -224,7 +280,7 @@ void CTaskDialog::AddRadioButton(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-nameclickcommandcontrola--ctaskdialogclickcommandcontrol"></a><a name="clickcommandcontrol"></a>CTaskDialog::ClickCommandControl  
+##  <a name="clickcommandcontrol"></a>CTaskDialog::ClickCommandControl  
  프로그래밍 방식으로 명령 단추 컨트롤 또는 일반 단추를 클릭합니다.  
   
 ```  
@@ -239,7 +295,7 @@ void ClickCommandControl(int nCommandControlID) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 windows 메시지를 생성 `TDM_CLICK_BUTTON`합니다.  
   
-##  <a name="a-nameclickradiobuttona--ctaskdialogclickradiobutton"></a><a name="clickradiobutton"></a>CTaskDialog::ClickRadioButton  
+##  <a name="clickradiobutton"></a>CTaskDialog::ClickRadioButton  
  프로그래밍 방식으로 라디오 단추를 클릭합니다.  
   
 ```  
@@ -254,7 +310,7 @@ void ClickRadioButton(int nRadioButtonID) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 windows 메시지를 생성 `TDM_CLICK_RADIO_BUTTON`합니다.  
   
-##  <a name="a-namectaskdialoga--ctaskdialogctaskdialog"></a><a name="ctaskdialog"></a>CTaskDialog::CTaskDialog  
+##  <a name="ctaskdialog"></a>CTaskDialog::CTaskDialog  
  인스턴스를 만들고는 [CTaskDialog 클래스](../../mfc/reference/ctaskdialog-class.md)합니다.  
   
 ```  
@@ -313,7 +369,7 @@ CTaskDialog(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namedomodala--ctaskdialogdomodal"></a><a name="domodal"></a>CTaskDialog::DoModal  
+##  <a name="domodal"></a>CTaskDialog::DoModal  
  표시는 `CTaskDialog` 모달 것입니다.  
   
 ```  
@@ -335,7 +391,7 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namegetcommonbuttoncounta--ctaskdialoggetcommonbuttoncount"></a><a name="getcommonbuttoncount"></a>CTaskDialog::GetCommonButtonCount  
+##  <a name="getcommonbuttoncount"></a>CTaskDialog::GetCommonButtonCount  
  일반적인 단추 수를 검색합니다.  
   
 ```  
@@ -350,7 +406,7 @@ int GetCommonButtonCount() const;
   
  단추 목록이 열거 CommCtrl.h에 제공 됩니다.  
   
-##  <a name="a-namegetcommonbuttonflaga--ctaskdialoggetcommonbuttonflag"></a><a name="getcommonbuttonflag"></a>CTaskDialog::GetCommonButtonFlag  
+##  <a name="getcommonbuttonflag"></a>CTaskDialog::GetCommonButtonFlag  
  Windows 단추를 일반적인 단추 종류와 관련 된 표준 변환에서 [CTaskDialog 클래스](../../mfc/reference/ctaskdialog-class.md)합니다.  
   
 ```  
@@ -364,7 +420,7 @@ int GetCommonButtonFlag(int nButtonId) const;
 ### <a name="return-value"></a>반환 값  
  해당 값 `CTaskDialog` 공용 단추입니다. 해당 하는 일반적인 단추 없는 경우이 메서드는 0을 반환 합니다.  
   
-##  <a name="a-namegetcommonbuttonida--ctaskdialoggetcommonbuttonid"></a><a name="getcommonbuttonid"></a>CTaskDialog::GetCommonButtonId  
+##  <a name="getcommonbuttonid"></a>CTaskDialog::GetCommonButtonId  
  변환와 관련 된 일반적인 단추 형식 중 하나는 [CTaskDialog 클래스](../../mfc/reference/ctaskdialog-class.md) 표준 Windows 단추를 합니다.  
   
 ```  
@@ -378,7 +434,7 @@ int GetCommonButtonId(int nFlag);
 ### <a name="return-value"></a>반환 값  
  해당 표준 Windows 단추의 값입니다. 해당 Windows 단추 없는 경우 메서드가 0을 반환 합니다.  
   
-##  <a name="a-namegetoptionsa--ctaskdialoggetoptions"></a><a name="getoptions"></a>CTaskDialog::GetOptions  
+##  <a name="getoptions"></a>CTaskDialog::GetOptions  
  이 옵션 플래그를 반환 합니다. `CTaskDialog`합니다.  
   
 ```  
@@ -394,7 +450,7 @@ int GetOptions() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namegetselectedcommandcontrolida--ctaskdialoggetselectedcommandcontrolid"></a><a name="getselectedcommandcontrolid"></a>CTaskDialog::GetSelectedCommandControlID  
+##  <a name="getselectedcommandcontrolid"></a>CTaskDialog::GetSelectedCommandControlID  
  선택한 명령 단추 컨트롤을 반환합니다.  
   
 ```  
@@ -410,7 +466,7 @@ int GetSelectedCommandControlID() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-namegetselectedradiobuttonida--ctaskdialoggetselectedradiobuttonid"></a><a name="getselectedradiobuttonid"></a>CTaskDialog::GetSelectedRadioButtonID  
+##  <a name="getselectedradiobuttonid"></a>CTaskDialog::GetSelectedRadioButtonID  
  선택 된 라디오 단추를 반환합니다.  
   
 ```  
@@ -426,7 +482,7 @@ int GetSelectedRadioButtonID() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-namegetverificationcheckboxstatea--ctaskdialoggetverificationcheckboxstate"></a><a name="getverificationcheckboxstate"></a>CTaskDialog::GetVerificationCheckboxState  
+##  <a name="getverificationcheckboxstate"></a>CTaskDialog::GetVerificationCheckboxState  
  확인 확인란의 상태를 검색합니다.  
   
 ```  
@@ -439,7 +495,7 @@ BOOL GetVerificationCheckboxState() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&5;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="a-nameiscommandcontrolenableda--ctaskdialogiscommandcontrolenabled"></a><a name="iscommandcontrolenabled"></a>CTaskDialog::IsCommandControlEnabled  
+##  <a name="iscommandcontrolenabled"></a>CTaskDialog::IsCommandControlEnabled  
  명령 단추 컨트롤 또는 단추 사용 되는지 여부를 결정 합니다.  
   
 ```  
@@ -461,7 +517,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-nameisradiobuttonenableda--ctaskdialogisradiobuttonenabled"></a><a name="isradiobuttonenabled"></a>CTaskDialog::IsRadioButtonEnabled  
+##  <a name="isradiobuttonenabled"></a>CTaskDialog::IsRadioButtonEnabled  
  라디오 단추를 사용할 수 있는지 여부를 결정 합니다.  
   
 ```  
@@ -481,7 +537,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-nameissupporteda--ctaskdialogissupported"></a><a name="issupported"></a>CTaskDialog::IsSupported  
+##  <a name="issupported"></a>CTaskDialog::IsSupported  
  응용 프로그램을 실행 하는 컴퓨터를 지원 하는지 여부를 결정은 `CTaskDialog`합니다.  
   
 ```  
@@ -497,7 +553,7 @@ static BOOL IsSupported();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&1;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]  
   
-##  <a name="a-nameloadcommandcontrolsa--ctaskdialogloadcommandcontrols"></a><a name="loadcommandcontrols"></a>CTaskDialog::LoadCommandControls  
+##  <a name="loadcommandcontrols"></a>CTaskDialog::LoadCommandControls  
  문자열 테이블에서 데이터를 사용 하 여 명령 단추 컨트롤을 추가 합니다.  
   
 ```  
@@ -521,7 +577,7 @@ void LoadCommandControls(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-nameloadradiobuttonsa--ctaskdialogloadradiobuttons"></a><a name="loadradiobuttons"></a>CTaskDialog::LoadRadioButtons  
+##  <a name="loadradiobuttons"></a>CTaskDialog::LoadRadioButtons  
  문자열 테이블에서 데이터를 사용 하 여 라디오 단추 컨트롤을 추가 합니다.  
   
 ```  
@@ -545,7 +601,7 @@ void LoadRadioButtons(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-namenavigatetoa--ctaskdialognavigateto"></a><a name="navigateto"></a>CTaskDialog::NavigateTo  
+##  <a name="navigateto"></a>CTaskDialog::NavigateTo  
  포커스를 다른 전송 `CTaskDialog`합니다.  
   
 ```  
@@ -560,7 +616,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 현재 숨깁니다 `CTaskDialog` 표시 될 때의 `oTaskDialog`합니다. `oTaskDialog` 현재와 동일한 위치에 표시 됩니다 `CTaskDialog`합니다.  
   
-##  <a name="a-nameoncommandcontrolclicka--ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a>CTaskDialog::OnCommandControlClick  
+##  <a name="oncommandcontrolclick"></a>CTaskDialog::OnCommandControlClick  
  명령 단추 컨트롤을 마우스 오른쪽 단추로 클릭할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -577,7 +633,7 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameoncreatea--ctaskdialogoncreate"></a><a name="oncreate"></a>CTaskDialog::OnCreate  
+##  <a name="oncreate"></a>CTaskDialog::OnCreate  
  프레임 워크를 만든 후이 메서드는 호출 된 `CTaskDialog`합니다.  
   
 ```  
@@ -590,7 +646,7 @@ virtual HRESULT OnCreate();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameondestroya--ctaskdialogondestroy"></a><a name="ondestroy"></a>CTaskDialog::OnDestroy  
+##  <a name="ondestroy"></a>CTaskDialog::OnDestroy  
  프레임 워크는 즉시 삭제 하기 전에이 메서드를 호출의 `CTaskDialog`합니다.  
   
 ```  
@@ -603,7 +659,7 @@ virtual HRESULT OnDestroy();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonexpandbuttonclicka--ctaskdialogonexpandbuttonclick"></a><a name="onexpandbuttonclick"></a>CTaskDialog::OnExpandButtonClick  
+##  <a name="onexpandbuttonclick"></a>CTaskDialog::OnExpandButtonClick  
  확장 단추를 클릭할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -620,7 +676,7 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonhelpa--ctaskdialogonhelp"></a><a name="onhelp"></a>CTaskDialog::OnHelp  
+##  <a name="onhelp"></a>CTaskDialog::OnHelp  
  프레임 워크 사용자 도움말을 요청 하는 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -633,7 +689,7 @@ virtual HRESULT OnHelp();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonhyperlinkclicka--ctaskdialogonhyperlinkclick"></a><a name="onhyperlinkclick"></a>CTaskDialog::OnHyperlinkClick  
+##  <a name="onhyperlinkclick"></a>CTaskDialog::OnHyperlinkClick  
  프레임 워크는 사용자가 하이퍼링크를 클릭할 때이 메서드를 호출 합니다.  
   
 ```  
@@ -652,7 +708,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
   
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameoninita--ctaskdialogoninit"></a><a name="oninit"></a>CTaskDialog::OnInit  
+##  <a name="oninit"></a>CTaskDialog::OnInit  
  이 메서드를 호출 하는 프레임 워크는 경우는 `CTaskDialog` 초기화 됩니다.  
   
 ```  
@@ -665,7 +721,7 @@ virtual HRESULT OnInit();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonnavigatepagea--ctaskdialogonnavigatepage"></a><a name="onnavigatepage"></a>CTaskDialog::OnNavigatePage  
+##  <a name="onnavigatepage"></a>CTaskDialog::OnNavigatePage  
  에 대 한 응답에서이 메서드를 호출 하는 프레임 워크는 [CTaskDialog::NavigateTo](#navigateto) 메서드.  
   
 ```  
@@ -678,7 +734,7 @@ virtual HRESULT OnNavigatePage();
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonradiobuttonclicka--ctaskdialogonradiobuttonclick"></a><a name="onradiobuttonclick"></a>CTaskDialog::OnRadioButtonClick  
+##  <a name="onradiobuttonclick"></a>CTaskDialog::OnRadioButtonClick  
  프레임 워크는 사용자가 라디오 단추 컨트롤을 선택할 때이 메서드를 호출 합니다.  
   
 ```  
@@ -695,7 +751,7 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameontimera--ctaskdialogontimer"></a><a name="ontimer"></a>CTaskDialog::OnTimer  
+##  <a name="ontimer"></a>CTaskDialog::OnTimer  
  프레임 워크는 타이머가 만료 될 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -712,7 +768,7 @@ virtual HRESULT OnTimer(long lTime);
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonverificationcheckboxclicka--ctaskdialogonverificationcheckboxclick"></a><a name="onverificationcheckboxclick"></a>CTaskDialog::OnVerificationCheckboxClick  
+##  <a name="onverificationcheckboxclick"></a>CTaskDialog::OnVerificationCheckboxClick  
  확인 확인란을 두 번 클릭할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -729,7 +785,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ### <a name="remarks"></a>주의  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameremoveallcommandcontrolsa--ctaskdialogremoveallcommandcontrols"></a><a name="removeallcommandcontrols"></a>CTaskDialog::RemoveAllCommandControls  
+##  <a name="removeallcommandcontrols"></a>CTaskDialog::RemoveAllCommandControls  
  명령 단추 컨트롤을 모두 제거는 `CTaskDialog`합니다.  
   
 ```  
@@ -739,7 +795,7 @@ void RemoveAllCommandControls();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-nameremoveallradiobuttonsa--ctaskdialogremoveallradiobuttons"></a><a name="removeallradiobuttons"></a>CTaskDialog::RemoveAllRadioButtons  
+##  <a name="removeallradiobuttons"></a>CTaskDialog::RemoveAllRadioButtons  
  모든 라디오 단추를 제거는 `CTaskDialog`합니다.  
   
 ```  
@@ -749,7 +805,7 @@ void RemoveAllRadioButtons();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-namesetcommandcontroloptionsa--ctaskdialogsetcommandcontroloptions"></a><a name="setcommandcontroloptions"></a>CTaskDialog::SetCommandControlOptions  
+##  <a name="setcommandcontroloptions"></a>CTaskDialog::SetCommandControlOptions  
  명령 단추 컨트롤에 업데이트 된 `CTaskDialog`합니다.  
   
 ```  
@@ -775,7 +831,7 @@ void SetCommandControlOptions(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-namesetcommonbuttonoptionsa--ctaskdialogsetcommonbuttonoptions"></a><a name="setcommonbuttonoptions"></a>CTaskDialog::SetCommonButtonOptions  
+##  <a name="setcommonbuttonoptions"></a>CTaskDialog::SetCommonButtonOptions  
  사용 하도록 설정 하 고 UAC 권한 상승 필요를 자주 단추가의 하위 집합을 업데이트 합니다.  
   
 ```  
@@ -801,7 +857,7 @@ void SetCommonButtonOptions(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&6;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]  
   
-##  <a name="a-namesetcommonbuttonsa--ctaskdialogsetcommonbuttons"></a><a name="setcommonbuttons"></a>CTaskDialog::SetCommonButtons  
+##  <a name="setcommonbuttons"></a>CTaskDialog::SetCommonButtons  
  일반적인 단추를 추가 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -833,7 +889,7 @@ void SetCommonButtons(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&6;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]  
   
-##  <a name="a-namesetcontenta--ctaskdialogsetcontent"></a><a name="setcontent"></a>CTaskDialog::SetContent  
+##  <a name="setcontent"></a>CTaskDialog::SetContent  
  콘텐츠를 업데이트는 `CTaskDialog`합니다.  
   
 ```  
@@ -850,7 +906,7 @@ void SetContent(const CString& strContent);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetdefaultcommandcontrola--ctaskdialogsetdefaultcommandcontrol"></a><a name="setdefaultcommandcontrol"></a>CTaskDialog::SetDefaultCommandControl  
+##  <a name="setdefaultcommandcontrol"></a>CTaskDialog::SetDefaultCommandControl  
  기본 명령 단추 컨트롤을 지정합니다.  
   
 ```  
@@ -869,7 +925,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&2;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="a-namesetdefaultradiobuttona--ctaskdialogsetdefaultradiobutton"></a><a name="setdefaultradiobutton"></a>CTaskDialog::SetDefaultRadioButton  
+##  <a name="setdefaultradiobutton"></a>CTaskDialog::SetDefaultRadioButton  
  기본 라디오 단추를 지정합니다.  
   
 ```  
@@ -888,7 +944,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-namesetdialogwidtha--ctaskdialogsetdialogwidth"></a><a name="setdialogwidth"></a>CTaskDialog::SetDialogWidth  
+##  <a name="setdialogwidth"></a>CTaskDialog::SetDialogWidth  
  너비를 조정 된 `CTaskDialog`합니다.  
   
 ```  
@@ -907,7 +963,7 @@ void SetDialogWidth(int nWidth = 0);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetexpansionareaa--ctaskdialogsetexpansionarea"></a><a name="setexpansionarea"></a>CTaskDialog::SetExpansionArea  
+##  <a name="setexpansionarea"></a>CTaskDialog::SetExpansionArea  
  확장 영역을 업데이트 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -935,7 +991,7 @@ void SetExpansionArea(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetfootericona--ctaskdialogsetfootericon"></a><a name="setfootericon"></a>CTaskDialog::SetFooterIcon  
+##  <a name="setfootericon"></a>CTaskDialog::SetFooterIcon  
  업데이트의 바닥글 아이콘은 `CTaskDialog`합니다.  
   
 ```  
@@ -960,7 +1016,7 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetfootertexta--ctaskdialogsetfootertext"></a><a name="setfootertext"></a>CTaskDialog::SetFooterText  
+##  <a name="setfootertext"></a>CTaskDialog::SetFooterText  
  바닥글에 텍스트를 업데이트 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -977,7 +1033,7 @@ void SetFooterText(const CString& strFooterText);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetmainicona--ctaskdialogsetmainicon"></a><a name="setmainicon"></a>CTaskDialog::SetMainIcon  
+##  <a name="setmainicon"></a>CTaskDialog::SetMainIcon  
  업데이트의 기본 아이콘은 `CTaskDialog`합니다.  
   
 ```  
@@ -1000,7 +1056,7 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetmaininstructiona--ctaskdialogsetmaininstruction"></a><a name="setmaininstruction"></a>CTaskDialog::SetMainInstruction  
+##  <a name="setmaininstruction"></a>CTaskDialog::SetMainInstruction  
  기본 명령 업데이트는 `CTaskDialog`합니다.  
   
 ```  
@@ -1017,7 +1073,7 @@ void SetMainInstruction(const CString& strInstructions);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetoptionsa--ctaskdialogsetoptions"></a><a name="setoptions"></a>CTaskDialog::SetOptions  
+##  <a name="setoptions"></a>CTaskDialog::SetOptions  
  구성에 대 한 옵션은 `CTaskDialog`합니다.  
   
 ```  
@@ -1084,7 +1140,7 @@ void SetOptions(int nOptionFlag);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-namesetprogressbarmarqueea--ctaskdialogsetprogressbarmarquee"></a><a name="setprogressbarmarquee"></a>CTaskDialog::SetProgressBarMarquee  
+##  <a name="setprogressbarmarquee"></a>CTaskDialog::SetProgressBarMarquee  
  구성에 대 한 움직이는 텍스트 막대는 `CTaskDialog` 하 고 대화 상자에 추가 합니다.  
   
 ```  
@@ -1110,7 +1166,7 @@ void SetProgressBarMarquee(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&4;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="a-namesetprogressbarpositiona--ctaskdialogsetprogressbarposition"></a><a name="setprogressbarposition"></a>CTaskDialog::SetProgressBarPosition  
+##  <a name="setprogressbarposition"></a>CTaskDialog::SetProgressBarPosition  
  진행률 표시줄의 위치를 조정 합니다.  
   
 ```  
@@ -1127,7 +1183,7 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&4;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="a-namesetprogressbarrangea--ctaskdialogsetprogressbarrange"></a><a name="setprogressbarrange"></a>CTaskDialog::SetProgressBarRange  
+##  <a name="setprogressbarrange"></a>CTaskDialog::SetProgressBarRange  
  진행률 표시줄의 범위를 조정합니다.  
   
 ```  
@@ -1153,7 +1209,7 @@ void SetProgressBarRange(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&4;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="a-namesetprogressbarstatea--ctaskdialogsetprogressbarstate"></a><a name="setprogressbarstate"></a>CTaskDialog::SetProgressBarState  
+##  <a name="setprogressbarstate"></a>CTaskDialog::SetProgressBarState  
  진행률 표시줄의 상태를 설정 하 고에 표시 된 `CTaskDialog`합니다.  
   
 ```  
@@ -1183,7 +1239,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&4;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="a-namesetradiobuttonoptionsa--ctaskdialogsetradiobuttonoptions"></a><a name="setradiobuttonoptions"></a>CTaskDialog::SetRadioButtonOptions  
+##  <a name="setradiobuttonoptions"></a>CTaskDialog::SetRadioButtonOptions  
  라디오 단추를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -1205,7 +1261,7 @@ void SetRadioButtonOptions(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&3;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="a-namesetverificationcheckboxa--ctaskdialogsetverificationcheckbox"></a><a name="setverificationcheckbox"></a>CTaskDialog::SetVerificationCheckbox  
+##  <a name="setverificationcheckbox"></a>CTaskDialog::SetVerificationCheckbox  
  확인 확인란의 선택된 상태를 설정합니다.  
   
 ```  
@@ -1219,7 +1275,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&5;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="a-namesetverificationcheckboxtexta--ctaskdialogsetverificationcheckboxtext"></a><a name="setverificationcheckboxtext"></a>CTaskDialog::SetVerificationCheckboxText  
+##  <a name="setverificationcheckboxtext"></a>CTaskDialog::SetVerificationCheckboxText  
  확인 확인란 오른쪽에 표시 되는 텍스트를 설정 합니다.  
   
 ```  
@@ -1236,7 +1292,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&5;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="a-namesetwindowtitlea--ctaskdialogsetwindowtitle"></a><a name="setwindowtitle"></a>CTaskDialog::SetWindowTitle  
+##  <a name="setwindowtitle"></a>CTaskDialog::SetWindowTitle  
  제목을 설정 하는 `CTaskDialog`합니다.  
   
 ```  
@@ -1252,7 +1308,7 @@ void SetWindowTitle(CString& strWindowTitle);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&7;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="a-nameshowdialoga--ctaskdialogshowdialog"></a><a name="showdialog"></a>CTaskDialog::ShowDialog  
+##  <a name="showdialog"></a>CTaskDialog::ShowDialog  
  만들고 표시 한 `CTaskDialog`합니다.  
   
 ```  
@@ -1307,7 +1363,7 @@ static INT_PTR ShowDialog(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTaskDialog #&1;](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]  
   
-##  <a name="a-nametaskdialogcallbacka--ctaskdialogtaskdialogcallback"></a><a name="taskdialogcallback"></a>CTaskDialog::TaskDialogCallback  
+##  <a name="taskdialogcallback"></a>CTaskDialog::TaskDialogCallback  
  프레임 워크는 다양 한 Windows 메시지에 대 한 응답으로이 메서드를 호출합니다.  
   
 ```  

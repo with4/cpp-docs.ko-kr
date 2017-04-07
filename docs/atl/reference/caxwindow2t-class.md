@@ -9,12 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAxWindow2T<TBase>
-- ATL::CAxWindow2T
 - CAxWindow2T
-- ATL.CAxWindow2T<TBase>
-- ATL.CAxWindow2T
-- CAxWindow2
+- ATLWIN/ATL::CAxWindow2T
+- ATLWIN/ATL::CAxWindow2T::CAxWindow2T
+- ATLWIN/ATL::CAxWindow2T::Create
+- ATLWIN/ATL::CAxWindow2T::CreateControlLic
+- ATLWIN/ATL::CAxWindow2T::CreateControlLicEx
+- ATLWIN/ATL::CAxWindow2T::GetWndClassName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +108,7 @@ template <class TBase = CWindow>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namecaxwindow2ta--caxwindow2tcaxwindow2t"></a><a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T  
+##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T  
  `CAxWindow2T` 개체를 생성합니다.  
   
 ```
@@ -118,7 +119,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
  `hWnd`  
  기존 창의 핸들입니다.  
   
-##  <a name="a-namecreatea--caxwindow2tcreate"></a><a name="create"></a>CAxWindow2T::Create  
+##  <a name="create"></a>CAxWindow2T::Create  
  호스트 창을 만듭니다.  
   
 ```
@@ -142,7 +143,7 @@ HWND Create(
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CAxWindow2T::Create`합니다.  
   
-##  <a name="a-namecreatecontrollica--caxwindow2tcreatecontrollic"></a><a name="createcontrollic"></a>CAxWindow2T::CreateControlLic  
+##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic  
  사용 허가를 받은 ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
   
 ```
@@ -169,7 +170,7 @@ HRESULT CreateControlLic(
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CAxWindow2T::CreateControlLic`합니다.  
   
-##  <a name="a-namecreatecontrollicexa--caxwindow2tcreatecontrollicex"></a><a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx  
  사용이 허가 된 ActiveX 컨트롤을 만듭니다. 초기화 하며 지정한 창에 호스팅합니다 및 컨트롤에서 인터페이스 포인터 (또는 포인터)를 검색 합니다.  
   
 ```
@@ -202,7 +203,7 @@ HRESULT CreateControlLicEx(
 ### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CAxWindow2T::CreateControlLicEx`합니다.  
   
-##  <a name="a-namegetwndclassnamea--caxwindow2tgetwndclassname"></a><a name="getwndclassname"></a>CAxWindow2T::GetWndClassName  
+##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName  
  창 클래스의 이름을 검색합니다.  
   
 ```
@@ -212,7 +213,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>반환 값  
  창 클래스의 이름을 포함 하는 문자열에 대 한 포인터 ( **AtlAxWinLic80**) 라이센스가 없는 및 사용이 허가 된 ActiveX 컨트롤을 호스팅할 수입니다.  
   
-##  <a name="a-nameoperatoreqa--caxwindow2toperator-"></a><a name="operator_eq"></a>CAxWindow2T::operator =  
+##  <a name="operator_eq"></a>CAxWindow2T::operator =  
  할당 된 `HWND` 기존 `CAxWindow2T` 개체입니다.  
   
 ```

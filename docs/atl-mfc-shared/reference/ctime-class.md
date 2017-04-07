@@ -9,9 +9,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CTime
 - CTime
-- ATL::CTime
+- ATLTIME/ATL::CTime
+- ATLTIME/ATL::CTime::CTime
+- ATLTIME/ATL::CTime::Format
+- ATLTIME/ATL::CTime::FormatGmt
+- ATLTIME/ATL::CTime::GetAsDBTIMESTAMP
+- ATLTIME/ATL::CTime::GetAsSystemTime
+- ATLTIME/ATL::CTime::GetCurrentTime
+- ATLTIME/ATL::CTime::GetDay
+- ATLTIME/ATL::CTime::GetDayOfWeek
+- ATLTIME/ATL::CTime::GetGmtTm
+- ATLTIME/ATL::CTime::GetHour
+- ATLTIME/ATL::CTime::GetLocalTm
+- ATLTIME/ATL::CTime::GetMinute
+- ATLTIME/ATL::CTime::GetMonth
+- ATLTIME/ATL::CTime::GetSecond
+- ATLTIME/ATL::CTime::GetTime
+- ATLTIME/ATL::CTime::GetYear
+- ATLTIME/ATL::CTime::Serialize64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +127,7 @@ class CTime
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltime.h  
   
-##  <a name="a-namectimecomparisonoperatorsa--ctime-comparison-operators"></a><a name="ctime_comparison_operators"></a>CTime 비교 연산자  
+##  <a name="ctime_comparison_operators"></a>CTime 비교 연산자  
  비교 연산자입니다.  
   
 ```  
@@ -133,7 +149,7 @@ bool operator>=(CTime time) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&161;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
-##  <a name="a-namectimea--ctimectime"></a><a name="ctime"></a>CTime::CTime  
+##  <a name="ctime"></a>CTime::CTime  
  새로 만듭니다 `CTime` 지정된 된 시간을 사용 하 여 초기화 하는 개체입니다.  
   
 ```  
@@ -216,7 +232,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&148;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
-##  <a name="a-nameformata--ctimeformat"></a><a name="format"></a>CTime::Format  
+##  <a name="format"></a>CTime::Format  
  날짜 및 시간 값의 서식이 지정 된 표현을 만드는 데이 함수를 호출 합니다.  
   
 ```  
@@ -242,7 +258,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&149;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
-##  <a name="a-nameformatgmta--ctimeformatgmt"></a><a name="formatgmt"></a>CTime::FormatGmt  
+##  <a name="formatgmt"></a>CTime::FormatGmt  
  이에 해당 하는 형식이 지정 된 문자열을 생성 `CTime` 개체입니다.  
   
 ```  
@@ -268,7 +284,7 @@ CString FormatGmt(UINT nFormatID) const;
 ### <a name="example"></a>예제  
  예를 참조 [CTime::Format](#format)합니다.  
   
-##  <a name="a-namegetasdbtimestampa--ctimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
  에 저장 된 시간 정보를 변환 하려면이 멤버 함수를 호출 하는 `CTime` Win32 호환 DBTIMESTAMP 구조에는 개체입니다.  
   
 ```  
@@ -288,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&150;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
-##  <a name="a-namegetassystemtimea--ctimegetassystemtime"></a><a name="getassystemtime"></a>CTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
  에 저장 된 시간 정보를 변환 하려면이 멤버 함수를 호출 하는 `CTime` Win32 호환 개체 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) 구조입니다.  
   
 ```  
@@ -308,7 +324,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities 다각도](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
-##  <a name="a-namegetcurrenttimea--ctimegetcurrenttime"></a><a name="getcurrenttime"></a>CTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
  반환 된 `CTime` 현재 시간을 나타내는 개체입니다.  
   
 ```  
@@ -321,7 +337,7 @@ static CTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&152;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
-##  <a name="a-namegetdaya--ctimegetday"></a><a name="getday"></a>CTime::GetDay  
+##  <a name="getday"></a>CTime::GetDay  
  반환 하 여 하루 나타내기는 `CTime` 개체입니다.  
   
 ```  
@@ -337,7 +353,7 @@ int GetDay() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&153;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
-##  <a name="a-namegetdayofweeka--ctimegetdayofweek"></a><a name="getdayofweek"></a>CTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
  나타내는 주의 일을 반환 된 `CTime` 개체입니다.  
   
 ```  
@@ -353,7 +369,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&154;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
-##  <a name="a-namegetgmttma--ctimegetgmttm"></a><a name="getgmttm"></a>CTime::GetGmtTm  
+##  <a name="getgmttm"></a>CTime::GetGmtTm  
  가져옵니다는 **구조체 tm** 이에 포함 된 시간을 분해 하는 작업을 포함 하는 `CTime` 개체입니다.  
   
 ```  
@@ -375,7 +391,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&155;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
-##  <a name="a-namegethoura--ctimegethour"></a><a name="gethour"></a>CTime::GetHour  
+##  <a name="gethour"></a>CTime::GetHour  
  가 나타내는 시간을 반환 된 `CTime` 개체입니다.  
   
 ```  
@@ -391,7 +407,7 @@ int GetHour() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&156;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
-##  <a name="a-namegetlocaltma--ctimegetlocaltm"></a><a name="getlocaltm"></a>CTime::GetLocalTm  
+##  <a name="getlocaltm"></a>CTime::GetLocalTm  
  가져옵니다는 **구조체 tm** 이에 포함 된 시간의 분해 포함 된 `CTime` 개체입니다.  
   
 ```  
@@ -413,7 +429,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&157;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
-##  <a name="a-namegetminutea--ctimegetminute"></a><a name="getminute"></a>CTime::GetMinute  
+##  <a name="getminute"></a>CTime::GetMinute  
  가 나타내는 분 단위는 `CTime` 개체입니다.  
   
 ```  
@@ -429,7 +445,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetHour](#gethour)합니다.  
   
-##  <a name="a-namegetmontha--ctimegetmonth"></a><a name="getmonth"></a>CTime::GetMonth  
+##  <a name="getmonth"></a>CTime::GetMonth  
  가 나타내는 월을 반환 된 `CTime` 개체입니다.  
   
 ```  
@@ -445,7 +461,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetDay](#getday)합니다.  
   
-##  <a name="a-namegetseconda--ctimegetsecond"></a><a name="getsecond"></a>CTime::GetSecond  
+##  <a name="getsecond"></a>CTime::GetSecond  
  가 나타내는 두 번째 반환 된 `CTime` 개체입니다.  
   
 ```  
@@ -461,7 +477,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>예제  
  예를 참조 [GetHour](#gethour)합니다.  
   
-##  <a name="a-namegettimea--ctimegettime"></a><a name="gettime"></a>CTime::GetTime  
+##  <a name="gettime"></a>CTime::GetTime  
  반환은 **__time64_t** 에 대 한 값은 지정 된 `CTime` 개체입니다.  
   
 ```  
@@ -474,7 +490,7 @@ __time64_t GetTime() const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&158;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
-##  <a name="a-namegetyeara--ctimegetyear"></a><a name="getyear"></a>CTime::GetYear  
+##  <a name="getyear"></a>CTime::GetYear  
  가 나타내는 연도 반환 된 `CTime` 개체입니다.  
   
 ```  
@@ -490,7 +506,7 @@ int GetYear();
 ### <a name="example"></a>예제  
  예를 참조 [GetDay](#getday)합니다.  
   
-##  <a name="a-nameoperatoreqa--ctimeoperator-"></a><a name="operator_eq"></a>CTime::operator =  
+##  <a name="operator_eq"></a>CTime::operator =  
  대입 연산자입니다.  
   
 ```  
@@ -507,7 +523,7 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="remarks"></a>주의  
  이 소스 시간을 복사 하는이 오버 로드 된 대입 연산자 `CTime` 개체입니다. 내부 시간 저장소에는 `CTime` 개체는 표준 시간대와 무관 합니다. 표준 시간대 변환 할당 하는 동안 필요 하지 않습니다.  
   
-##  <a name="a-nameoperatoradd-a--ctimeoperator---"></a><a name="operator_add_-"></a>CTime::operator +,-  
+##  <a name="operator_add_-"></a>CTime::operator +,-  
  이러한 연산자는 더하기 및 빼기 `CTimeSpan` 및 `CTime` 개체입니다.  
   
 ```  
@@ -532,7 +548,7 @@ CTimeSpan operator-(CTime time) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&159;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--ctimeoperator---"></a><a name="operator_add_eq_-_eq"></a>CTime::operator + =, =  
+##  <a name="operator_add_eq_-_eq"></a>CTime::operator + =, =  
  이러한 연산자는 더하기 및 빼기는 `CTimeSpan` 개체와이 `CTime` 개체입니다.  
   
 ```  
@@ -553,7 +569,7 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&160;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
-##  <a name="a-nameserialize64a--ctimeserialize64"></a><a name="serialize64"></a>CTime::Serialize64  
+##  <a name="serialize64"></a>CTime::Serialize64  
   
 > [!NOTE]
 >  이 메서드는 MFC 프로젝트에서 사용할 수만 있습니다.  

@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComQIPtr
-- ATL::CComQIPtr
 - CComQIPtr
+- ATLCOMCLI/ATL::CComQIPtr
+- ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +85,7 @@ class CComQIPtr: public CComPtr<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
   
-##  <a name="a-nameccomqiptra--ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
  생성자입니다.  
   
 ```
@@ -105,7 +105,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  `piid`  
  에 대 한 포인터의 IID `T`합니다.  
   
-##  <a name="a-nameoperatoreqa--ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operator =  
+##  <a name="operator_eq"></a>CComQIPtr::operator =  
  대입 연산자입니다.  
   
 ```

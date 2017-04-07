@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleVariant
+- AFXDISP/COleVariant
+- AFXDISP/COleVariant::COleVariant
+- AFXDISP/COleVariant::Attach
+- AFXDISP/COleVariant::ChangeType
+- AFXDISP/COleVariant::Clear
+- AFXDISP/COleVariant::Detach
+- AFXDISP/COleVariant::GetByteArrayFromVariantArray
+- AFXDISP/COleVariant::SetString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +107,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-nameattacha--colevariantattach"></a><a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>COleVariant::Attach  
  연결 하려면이 함수를 호출 하는 지정 된 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 개체를 현재 `COleVariant` 개체입니다.  
   
 ```  
@@ -115,7 +123,7 @@ void Attach(VARIANT& varSrc);
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 및 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecolevarianta--colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>COleVariant::COleVariant  
  `COleVariant` 개체를 생성합니다.  
   
 ```  
@@ -213,7 +221,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  대 한 자세한 내용은 `SCODE`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namechangetypea--colevariantchangetype"></a><a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>COleVariant::ChangeType  
  이 variant 값의 형식을 변환 `COleVariant` 개체입니다.  
   
 ```  
@@ -230,7 +238,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), 및 [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecleara--colevariantclear"></a><a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>COleVariant::Clear  
  지웁니다는 **VARIANT**합니다.  
   
 ```  
@@ -242,7 +250,7 @@ void Clear();
   
  자세한 내용은 참조는 `VARIANT`, `VARTYPE`, 및 `VariantClear` 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedetacha--colevariantdetach"></a><a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>COleVariant::Detach  
  기본 분리 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 개체에서이 `COleVariant` 개체입니다.  
   
 ```  
@@ -257,7 +265,7 @@ VARIANT Detach();
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), 및 [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetbytearrayfromvariantarraya--colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
  기존 variant 배열에서 바이트 배열을 검색합니다  
   
 ```  
@@ -268,7 +276,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  기존에 대 한 참조 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
   
-##  <a name="a-nameoperatorlpcvarianta--colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
  이 캐스팅 연산자를 반환는 `VARIANT` 값이 복사 됩니다 구조 `COleVariant` 개체입니다.  
   
 ```  
@@ -277,7 +285,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameoperatorlpvarianta--colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
  기본 액세스 하려면이 캐스팅 연산자 호출 `VARIANT` 이 대 한 구조 `COleVariant` 개체입니다.  
   
 ```  
@@ -289,7 +297,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  값을 변경의 **VARIANT** 이 함수에 의해 반환 된 포인터에 액세스 하는 구조는이 값을 변경 합니다 `COleVariant` 개체입니다.  
   
-##  <a name="a-nameoperatoreqa--colevariantoperator-"></a><a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>COleVariant::operator =  
  이러한 오버 로드 된 대입 연산자 복사할 원본 값이 `COleVariant` 개체입니다.  
   
 ```  
@@ -338,7 +346,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 및 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) 항목에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameoperatoreqeqa--colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant::operator = =  
+##  <a name="operator_eq_eq"></a>COleVariant::operator = =  
  이 연산자는 두 variant 값을 비교 하 고 같으면; 0이 아닌 반환 그렇지 않으면 0입니다.  
   
 ```  
@@ -346,7 +354,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="a-nameoperatorltltgtgta--colevariantoperator-ltlt-gtgt"></a><a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
  출력을 `COleVariant` 값을 `CArchive` 또는 **CdumpContext** 입력 하 고는 `COleVariant` 에서 개체 `CArchive`합니다.  
   
 ```  
@@ -366,7 +374,7 @@ friend CArchive& AFXAPI operator>>(
 ### <a name="remarks"></a>주의  
  `COleVariant` 삽입 ( ** < \< **) 연산자를 지원 진단 덤프 및 보관 파일에 저장 합니다. 추출 ( ** >> **) 연산자는 보관 파일에서 로드를 지원 합니다.  
   
-##  <a name="a-namesetstringa--colevariantsetstring"></a><a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>COleVariant::SetString  
  특정 형식에는 문자열을 설정합니다.  
   
 ```  

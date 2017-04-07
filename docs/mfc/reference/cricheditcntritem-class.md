@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::SyncToRichEditObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrich.h  
   
-##  <a name="a-namecricheditcntritema--cricheditcntritemcricheditcntritem"></a><a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
  이 함수를 만드는 호출을 `CRichEditCntrItem` 컨테이너 문서에 추가 합니다.  
   
 ```  
@@ -109,7 +112,7 @@ CRichEditCntrItem(
   
  자세한 내용은 참조는 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesynctoricheditobjecta--cricheditcntritemsynctoricheditobject"></a><a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
  장치 측면을 동기화 하려면이 함수를 호출 [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318),이 **CRichEditCntrltem** 에 지정 된 *reo*합니다.  
   
 ```  

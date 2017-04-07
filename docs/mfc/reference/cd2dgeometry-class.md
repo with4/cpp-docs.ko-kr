@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
-- afxrendertarget/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::Attach
+- AFXRENDERTARGET/CD2DGeometry::CombineWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::CompareWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::ComputeArea
+- AFXRENDERTARGET/CD2DGeometry::ComputeLength
+- AFXRENDERTARGET/CD2DGeometry::ComputePointAtLength
+- AFXRENDERTARGET/CD2DGeometry::Destroy
+- AFXRENDERTARGET/CD2DGeometry::Detach
+- AFXRENDERTARGET/CD2DGeometry::FillContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Get
+- AFXRENDERTARGET/CD2DGeometry::GetBounds
+- AFXRENDERTARGET/CD2DGeometry::GetWidenedBounds
+- AFXRENDERTARGET/CD2DGeometry::IsValid
+- AFXRENDERTARGET/CD2DGeometry::Outline
+- AFXRENDERTARGET/CD2DGeometry::Simplify
+- AFXRENDERTARGET/CD2DGeometry::StrokeContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Tessellate
+- AFXRENDERTARGET/CD2DGeometry::Widen
+- AFXRENDERTARGET/CD2DGeometry::m_pGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +123,14 @@ class CD2DGeometry : public CD2DResource;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
  소멸자입니다. D2D 기 하 도형 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="a-nameattacha--cd2dgeometryattach"></a><a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>CD2DGeometry::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -121,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
  CD2DGeometry 개체를 만듭니다.  
   
 ```  
@@ -137,7 +157,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
   
-##  <a name="a-namecombinewithgeometrya--cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
  지정 된 geometry이 기 하이 도형 결합 하 고 결과 ID2D1SimplifiedGeometrySink 저장 합니다.  
   
 ```  
@@ -168,7 +188,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namecomparewithgeometrya--cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
  이 기 하이 도형 및 지정 된 geometry의 교차를 설명합니다. 지정한 평면화 허용 오차를 사용 하 여 비교 합니다.  
   
 ```  
@@ -191,7 +211,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namecomputeareaa--cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
  였 기 하 도형의 면적을 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
   
 ```  
@@ -214,7 +234,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namecomputelengtha--cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
  가 각 세그먼트를 선으로 롤백된 것 처럼 geometry의 길이 계산 합니다.  
   
 ```  
@@ -237,7 +257,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namecomputepointatlengtha--cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
  지정한 후 점과 탄젠트 벡터에 기 하 도형 따라 지정된 된 거리를 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
   
 ```  
@@ -268,14 +288,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dgeometrydestroy"></a><a name="destroy"></a>CD2DGeometry::Destroy  
+##  <a name="destroy"></a>CD2DGeometry::Destroy  
  CD2DGeometry 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dgeometrydetach"></a><a name="detach"></a>CD2DGeometry::Detach  
+##  <a name="detach"></a>CD2DGeometry::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -285,7 +305,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namefillcontainspointa--cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
  기 하 도형으로 채워진 영역은 지정된 된 지점을 지정한 평면화 허용 오차를 포함 하는지 여부를 나타냅니다.  
   
 ```  
@@ -312,7 +332,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namegeta--cd2dgeometryget"></a><a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>CD2DGeometry::Get  
  반환 ID2D1Geometry 인터페이스  
   
 ```  
@@ -322,7 +342,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Geometry 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegetboundsa--cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -336,7 +356,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namegetwidenedboundsa--cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
  지정 된 스트로크 너비 및 스타일에 의해 확장 된 고 지정된 된 매트릭스에 의해 변환 된 후에 기 하 도형의 경계를 가져옵니다.  
   
 ```  
@@ -367,7 +387,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-nameisvalida--cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>CD2DGeometry::IsValid  
  리소스 유효성 검사  
   
 ```  
@@ -377,14 +397,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namempgeometrya--cd2dgeometrympgeometry"></a><a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
  ID2D1Geometry에 대 한 포인터입니다.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="a-nameoperatorid2d1geometrystara--cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
  반환 ID2D1Geometry 인터페이스  
   
 ```  
@@ -394,7 +414,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Geometry 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-nameoutlinea--cd2dgeometryoutline"></a><a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>CD2DGeometry::Outline  
  기 하 도형의 개요를 계산 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 합니다.  
   
 ```  
@@ -417,7 +437,7 @@ BOOL Outline(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namesimplifya--cd2dgeometrysimplify"></a><a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>CD2DGeometry::Simplify  
  선 및 (선택적 요소) 입방 형&3; 차원 곡선을 포함 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 하는 기 하 도형의 단순화 된 버전을 만듭니다.  
   
 ```  
@@ -444,7 +464,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namestrokecontainspointa--cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
  기 하 도형의 스트로크에 지정된 된 지점을 지정 된 스트로크 두께, 스타일 및 변환을 포함 되는지 여부를 결정 합니다.  
   
 ```  
@@ -479,7 +499,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-nametessellatea--cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
  지정된 된 매트릭스를 사용 하 여 변환 된 기 하 도형을 포괄 하 고 지정된 된 허용 오차를 사용 하 여 결합 하는 시계 방향으로 돌아가는 삼각형의 집합을 만듭니다.  
   
 ```  
@@ -502,7 +522,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="a-namewidena--cd2dgeometrywiden"></a><a name="widen"></a>CD2DGeometry::Widen  
+##  <a name="widen"></a>CD2DGeometry::Widen  
  기 하 도형이 지정된 획에 따라 확장 하 고 한 후 결과 ID2D1SimplifiedGeometrySink에 기록 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
   
 ```  

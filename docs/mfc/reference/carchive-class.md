@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchive
+- AFX/CArchive
+- AFX/CArchive::CArchive
+- AFX/CArchive::Abort
+- AFX/CArchive::Close
+- AFX/CArchive::Flush
+- AFX/CArchive::GetFile
+- AFX/CArchive::GetObjectSchema
+- AFX/CArchive::IsBufferEmpty
+- AFX/CArchive::IsLoading
+- AFX/CArchive::IsStoring
+- AFX/CArchive::MapObject
+- AFX/CArchive::Read
+- AFX/CArchive::ReadClass
+- AFX/CArchive::ReadObject
+- AFX/CArchive::ReadString
+- AFX/CArchive::SerializeClass
+- AFX/CArchive::SetLoadParams
+- AFX/CArchive::SetObjectSchema
+- AFX/CArchive::SetStoreParams
+- AFX/CArchive::Write
+- AFX/CArchive::WriteClass
+- AFX/CArchive::WriteObject
+- AFX/CArchive::WriteString
+- AFX/CArchive::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,7 +147,7 @@ class CArchive
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-nameaborta--carchiveabort"></a><a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>CArchive::Abort  
  예외를 throw 하지 않고 보관 파일을 닫으려면이 함수를 호출 합니다.  
   
 ```  
@@ -140,7 +164,7 @@ void Abort ();
 ### <a name="example"></a>예제  
   예를 참조 [CArchive::WriteClass](#writeclass)합니다.  
   
-##  <a name="a-namecarchivea--carchivecarchive"></a><a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>CArchive::CArchive  
  생성 된 `CArchive` 개체를 로드 하거나 개체를 저장 하기 위해 사용할을 여부를 지정 합니다.  
   
 ```  
@@ -178,7 +202,7 @@ CArchive(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&12;](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="a-nameclosea--carchiveclose"></a><a name="close"></a>CArchive::Close  
+##  <a name="close"></a>CArchive::Close  
  버퍼에에서 남아 있는 모든 데이터를 플러시하고 보관 파일을 닫습니다 보관 파일에서 연결을 끊습니다.  
   
 ```  
@@ -193,7 +217,7 @@ void Close();
 ### <a name="example"></a>예제  
   예를 참조 [CArchive::WriteString](#writestring)합니다.  
   
-##  <a name="a-nameflusha--carchiveflush"></a><a name="flush"></a>CArchive::Flush  
+##  <a name="flush"></a>CArchive::Flush  
  파일에 쓰여지도록 보관 버퍼에에서 남아 있는 모든 데이터를 강제로 수행 합니다.  
   
 ```  
@@ -206,7 +230,7 @@ void Flush();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&13;](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="a-namegetfilea--carchivegetfile"></a><a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>CArchive::GetFile  
  가져옵니다는 `CFile` 이 보관 파일에 대 한 개체 포인터입니다.  
   
 ```  
@@ -222,7 +246,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&14;](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="a-namegetobjectschemaa--carchivegetobjectschema"></a><a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
  이 함수를 호출 하는 `Serialize` 현재 deserialize 되 고 있는 개체의 버전을 확인 하는 함수입니다.  
   
 ```  
@@ -240,7 +264,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&15;](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="a-nameisbufferemptya--carchiveisbufferempty"></a><a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
  보관 개체의 내부 버퍼가 비어 있는지 여부를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -257,7 +281,7 @@ BOOL IsBufferEmpty() const;
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="a-nameisloadinga--carchiveisloading"></a><a name="isloading"></a>CArchive::IsLoading  
+##  <a name="isloading"></a>CArchive::IsLoading  
  보관 된 데이터를 로드 하 고 있는지 여부를 결정 합니다.  
   
 ```  
@@ -273,7 +297,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&16;](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="a-nameisstoringa--carchiveisstoring"></a><a name="isstoring"></a>CArchive::IsStoring  
+##  <a name="isstoring"></a>CArchive::IsStoring  
  보관 파일에서 데이터를 저장 하는지 여부를 결정 합니다.  
   
 ```  
@@ -291,7 +315,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&17;](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="a-namemapobjecta--carchivemapobject"></a><a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>CArchive::MapObject  
  이 파일을 실제로 serialize 되지 않은 없지만 참조할 하위 개체에 사용할 수 있는 지도에 개체를 배치 하는 함수를 호출 합니다.  
   
 ```  
@@ -316,7 +340,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization #&21;](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="a-namempdocumenta--carchivempdocument"></a><a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>CArchive::m_pDocument  
  로 설정 **NULL** 기본적으로이에 대 한이 포인터는 **CDocument** 사용자 이외의 값으로 설정할 수는 `CArchive` 려 인스턴스.  
   
 ```  
@@ -331,7 +355,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&35;](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="a-nameoperatorltlta--carchiveoperator-ltlt"></a><a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
  표시 된 개체 또는 기본 형식 아카이브에 저장합니다.  
   
 ```  
@@ -401,7 +425,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[NVC_MFCSerialization #&32;](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="a-nameoperatorgtgta--carchiveoperator-gtgt"></a><a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
  표시 된 개체 또는 기본 형식 보관 파일에서 로드합니다.  
   
 ```  
@@ -483,7 +507,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization #&34;](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="a-namereada--carchiveread"></a><a name="read"></a>CArchive::Read  
+##  <a name="read"></a>CArchive::Read  
  보관 파일에서 지정한 수의 바이트를 읽습니다.  
   
 ```  
@@ -508,7 +532,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&24;](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="a-namereadclassa--carchivereadclass"></a><a name="readclass"></a>CArchive::ReadClass  
+##  <a name="readclass"></a>CArchive::ReadClass  
  이 멤버 함수를 함께 이전에 저장 하는 클래스에 대 한 참조를 읽을 호출 [WriteClass](#writeclass)합니다.  
   
 ```  
@@ -543,7 +567,7 @@ CRuntimeClass* ReadClass(
 ### <a name="example"></a>예제  
   예를 참조 [CArchive::WriteClass](#writeclass)합니다.  
   
-##  <a name="a-namereadobjecta--carchivereadobject"></a><a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>CArchive::ReadObject  
  보관 파일에서 개체 데이터를 읽고 적절 한 형식의 개체를 생성 합니다.  
   
 ```  
@@ -565,7 +589,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ### <a name="example"></a>예제  
   예를 참조 [CArchive::WriteObject](#writeobject)합니다.  
   
-##  <a name="a-namereadstringa--carchivereadstring"></a><a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>CArchive::ReadString  
  버퍼와 연결 된 파일에서 텍스트 데이터를 읽어올이 멤버 함수를 호출 하는 `CArchive` 개체입니다.  
   
 ```  
@@ -596,7 +620,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>예제  
   예를 참조 [CArchive::WriteString](#writestring)합니다.  
   
-##  <a name="a-nameserializeclassa--carchiveserializeclass"></a><a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>CArchive::SerializeClass  
  저장 하 고 기본 클래스의 버전 정보를 로드 하려는 경우이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -619,7 +643,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&25;](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="a-namesetloadparamsa--carchivesetloadparams"></a><a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>CArchive::SetLoadParams  
  호출 `SetLoadParams` 때 하려고 하면 많은 수의 읽을 `CObject`-보관에서 파생 되는 개체입니다.  
   
 ```  
@@ -638,7 +662,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namesetobjectschemaa--carchivesetobjectschema"></a><a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
  보관 개체에 저장 된 개체 스키마를 설정 하려면이 함수를 호출 `nSchema`합니다.  
   
 ```  
@@ -657,7 +681,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&27;](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="a-namesetstoreparamsa--carchivesetstoreparams"></a><a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
  사용 하 여 `SetStoreParams` 많은 수의 저장할 때 `CObject`-파생 개체를 보관에서 합니다.  
   
 ```  
@@ -679,7 +703,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namewritea--carchivewrite"></a><a name="write"></a>CArchive::Write  
+##  <a name="write"></a>CArchive::Write  
  보관 파일에 지정된 된 수의 바이트를 씁니다.  
   
 ```  
@@ -701,7 +725,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization&23;](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="a-namewriteclassa--carchivewriteclass"></a><a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>CArchive::WriteClass  
  사용 하 여 `WriteClass` 파생된 클래스의 serialization 동안 기본 클래스의 버전 및 클래스 정보를 저장 합니다.  
   
 ```  
@@ -724,7 +748,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSerialization #&28;](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="a-namewriteobjecta--carchivewriteobject"></a><a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>CArchive::WriteObject  
  지정 된 저장 `CObject` 보관 파일입니다.  
   
 ```  
@@ -750,7 +774,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization #&29;](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="a-namewritestringa--carchivewritestring"></a><a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>CArchive::WriteString  
  이 멤버 함수를 사용 하 여 연결 된 파일에는 버퍼에서 데이터를 기록 하는 `CArchive` 개체입니다.  
   
 ```  

@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SelectCellHexagon
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminanceBarWidth
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetOriginalColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetPalette
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetType
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::DrawCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +137,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolorpickerctrl.h  
   
-##  <a name="a-namecmfccolorpickerctrla--cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
  `CMFCColorPickerCtrl` 개체를 생성합니다.  
   
 ```  
@@ -130,7 +148,7 @@ CMFCColorPickerCtrl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedrawcursora--cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
+##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
  선택한 색을 가리키는 커서 표시 되기 전에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -149,7 +167,7 @@ virtual void DrawCursor(
 ### <a name="remarks"></a>주의  
  선택한 색을 가리키는 커서의 모양을 변경 해야 할 때이 메서드를 재정의 합니다.  
   
-##  <a name="a-namegetcolora--cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
+##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
  사용자가 선택한 색을 검색 합니다.  
   
 ```  
@@ -161,7 +179,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethlsa--cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
+##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
  사용자가 선택한 색의 색상, 광도 및 채도 값을 검색 합니다.  
   
 ```  
@@ -183,7 +201,7 @@ void GetHLS(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegethuea--cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
+##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
  사용자가 선택한 색의 색상을 나타내는 구성 요소를 검색 합니다.  
   
 ```  
@@ -195,7 +213,7 @@ double GetHue() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetluminancea--cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
+##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
  사용자가 선택한 색의 광도 구성 요소를 검색 합니다.  
   
 ```  
@@ -207,7 +225,7 @@ double GetLuminance() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetsaturationa--cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
+##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
  사용자가 선택한 색의 채도 값을 검색 합니다.  
   
 ```  
@@ -219,7 +237,7 @@ double GetSaturation() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameselectcellhexagona--cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
+##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
  지정된 된 RGB 색 구성 요소 또는 지정한 셀 양쪽 대괄호에 정의 된 색에 현재 색을 설정 합니다.  
   
 ```  
@@ -258,7 +276,7 @@ BOOL SelectCellHexagon(
   
  이 메서드의 두 번째 오버 로드를 가리키는 셀 양쪽 대괄호의 색을 지정한 커서 위치에 따라 현재 색을 설정 합니다.  
   
-##  <a name="a-namesetcolora--cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
+##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
  지정된 된 RGB 색상 값을 현재 색을 설정합니다.  
   
 ```  
@@ -271,7 +289,7 @@ void SetColor(COLORREF Color);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesethlsa--cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
+##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
  지정된 된 HLS 색 값을 현재 색을 설정합니다.  
   
 ```  
@@ -297,7 +315,7 @@ void SetHLS(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesethuea--cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
+##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
  현재 선택 된 색의 색상을 변경합니다.  
   
 ```  
@@ -310,7 +328,7 @@ void SetHue(double Hue);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetluminancea--cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
+##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
  현재 선택 된 색의 광도 변경합니다.  
   
 ```  
@@ -323,7 +341,7 @@ void SetLuminance(double Luminance);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetluminancebarwidtha--cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
+##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
  색 선택 컨트롤에서 광도 막대의 너비를 설정합니다.  
   
 ```  
@@ -337,7 +355,7 @@ void SetLuminanceBarWidth(int w);
 ### <a name="remarks"></a>주의  
  에 있는 광도 표시줄의 크기를 조정 하려면이 메서드를 사용 하는 **사용자 지정** 색 선택 컨트롤의 탭 합니다. `w` 매개 변수는 광도 막대의 새 너비를 지정 합니다. 3-4의 클라이언트 영역 너비를 초과 하는 경우에 너비 값은 무시 됩니다.  
   
-##  <a name="a-namesetoriginalcolora--cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
+##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
  초기 선택한 색을 설정합니다.  
   
 ```  
@@ -351,7 +369,7 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="remarks"></a>주의  
  색 선택 컨트롤 초기화 될 때이 메서드를 호출 합니다.  
   
-##  <a name="a-namesetpalettea--cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
+##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
  현재 색상표를 설정합니다.  
   
 ```  
@@ -365,7 +383,7 @@ void SetPalette(CPalette* pPalette);
 ### <a name="remarks"></a>주의  
  색상표의 색 선택 컨트롤에서 표시 되는 색 배열을 정의 합니다.  
   
-##  <a name="a-namesetsaturationa--cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
+##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
  현재 선택 된 색의 채도 변경합니다.  
   
 ```  
@@ -378,7 +396,7 @@ void SetSaturation(double Saturation);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesettypea--cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFCColorPickerCtrl::SetType  
+##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
  표시 하려면 색 선택 컨트롤의 형식을 설정 합니다.  
   
 ```  

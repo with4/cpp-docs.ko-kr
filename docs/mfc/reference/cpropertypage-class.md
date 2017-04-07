@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
+- AFXDLGS/CPropertyPage
+- AFXDLGS/CPropertyPage::CPropertyPage
+- AFXDLGS/CPropertyPage::CancelToClose
+- AFXDLGS/CPropertyPage::Construct
+- AFXDLGS/CPropertyPage::GetPSP
+- AFXDLGS/CPropertyPage::OnApply
+- AFXDLGS/CPropertyPage::OnCancel
+- AFXDLGS/CPropertyPage::OnKillActive
+- AFXDLGS/CPropertyPage::OnOK
+- AFXDLGS/CPropertyPage::OnQueryCancel
+- AFXDLGS/CPropertyPage::OnReset
+- AFXDLGS/CPropertyPage::OnSetActive
+- AFXDLGS/CPropertyPage::OnWizardBack
+- AFXDLGS/CPropertyPage::OnWizardFinish
+- AFXDLGS/CPropertyPage::OnWizardNext
+- AFXDLGS/CPropertyPage::QuerySiblings
+- AFXDLGS/CPropertyPage::SetModified
+- AFXDLGS/CPropertyPage::m_psp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +124,7 @@ class CPropertyPage : public CDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="a-namecanceltoclosea--cpropertypagecanceltoclose"></a><a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
  모달 속성 시트의 페이지에서 데이터를 복구할 수 없는 변경 되는 수행 된 후이 함수를 호출 합니다.  
   
 ```  
@@ -121,7 +139,7 @@ void CancelToClose();
 ### <a name="example"></a>예제  
   예를 참조 [CPropertyPage::QuerySiblings](#querysiblings)합니다.  
   
-##  <a name="a-nameconstructa--cpropertypageconstruct"></a><a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>CPropertyPage::Construct  
  생성 하려면이 멤버 함수를 호출 하는 `CPropertyPage` 개체입니다.  
   
 ```  
@@ -181,7 +199,7 @@ void Construct(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&112;](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="a-namecpropertypagea--cpropertypagecpropertypage"></a><a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
  `CPropertyPage` 개체를 생성합니다.  
   
 ```  
@@ -247,7 +265,7 @@ CPropertyPage(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&113;](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="a-namegetpspa--cpropertypagegetpsp"></a><a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>CPropertyPage::GetPSP  
  Windows 검색 [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) 와 연결 된 구조는 `CPropertyPage` 개체입니다.  
   
 ```  
@@ -259,7 +277,7 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조는 **PROPSHEETPAGE** 구조입니다.  
   
-##  <a name="a-namempspa--cpropertypagempsp"></a><a name="m_psp"></a>CPropertyPage::m_psp  
+##  <a name="m_psp"></a>CPropertyPage::m_psp  
  `m_psp`멤버의 특성을 저장 하는 구조 [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)합니다.  
   
 ```  
@@ -274,7 +292,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&128;](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="a-nameonapplya--cpropertypageonapply"></a><a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>CPropertyPage::OnApply  
  이 멤버 함수는 확인 이나 지금 적용 단추를 선택 하면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -296,7 +314,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>예제  
   예를 참조 [CPropertyPage::OnOK](#onok)합니다.  
   
-##  <a name="a-nameoncancela--cpropertypageoncancel"></a><a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>CPropertyPage::OnCancel  
  이 멤버 함수는 취소 단추를 선택할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -309,7 +327,7 @@ virtual void OnCancel();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&114;](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="a-nameonkillactivea--cpropertypageonkillactive"></a><a name="onkillactive"></a>CPropertyPage::OnKillActive  
+##  <a name="onkillactive"></a>CPropertyPage::OnKillActive  
  이 멤버 함수는 페이지를 더 이상 활성 페이지 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -329,7 +347,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&115;](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="a-nameonoka--cpropertypageonok"></a><a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>CPropertyPage::OnOK  
  이 멤버 함수는 프레임 워크 호출 바로 뒤에서 확인 또는 지금 적용 단추를 선택 하면 프레임 워크에 의해 호출 됩니다 [OnKillActive](#onkillactive)합니다.  
   
 ```  
@@ -346,7 +364,7 @@ virtual void OnOK();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView&116;](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="a-nameonquerycancela--cpropertypageonquerycancel"></a><a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
  이 멤버 함수는 사용자가 취소 단추를 클릭 하 고 취소 하기 전에 작업을 수행한 경우 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -364,7 +382,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&117;](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="a-nameonreseta--cpropertypageonreset"></a><a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>CPropertyPage::OnReset  
  이 멤버 함수는 사용자가 취소 단추를 선택 하는 경우 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -381,7 +399,7 @@ virtual void OnReset();
 ### <a name="example"></a>예제  
   예를 참조 [CPropertyPage::OnCancel](#oncancel)합니다.  
   
-##  <a name="a-nameonsetactivea--cpropertypageonsetactive"></a><a name="onsetactive"></a>CPropertyPage::OnSetActive  
+##  <a name="onsetactive"></a>CPropertyPage::OnSetActive  
  이 멤버 함수는 페이지는 사용자가 선택 되 고 활성 페이지가 됩니다 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -399,7 +417,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)합니다.  
   
-##  <a name="a-nameonwizardbacka--cpropertypageonwizardback"></a><a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
  이 멤버 함수는 사용자가 마법사에서 뒤로 단추를 클릭할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -417,7 +435,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&118;](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="a-nameonwizardfinisha--cpropertypageonwizardfinish"></a><a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
  이 멤버 함수는 사용자가 마법사에서 마침 단추를 클릭할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -445,7 +463,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView #&122;](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="a-nameonwizardnexta--cpropertypageonwizardnext"></a><a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
  이 멤버 함수는 사용자가 마법사에서 다음 단추를 클릭할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -463,7 +481,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&123;](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="a-namequerysiblingsa--cpropertypagequerysiblings"></a><a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
  속성 시트의 각 페이지에 메시지를 전달 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -492,7 +510,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView #&126;](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="a-namesetmodifieda--cpropertypagesetmodified"></a><a name="setmodified"></a>CPropertyPage::SetModified  
+##  <a name="setmodified"></a>CPropertyPage::SetModified  
  지금 적용 단추를 적절 한 외부 개체에 속성 페이지에서 설정을 적용 여부에 따라 사용 하지 않도록 설정 하거나 사용 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
+- AFXTEMPL/CTypedPtrList
+- AFXTEMPL/CTypedPtrList::AddHead
+- AFXTEMPL/CTypedPtrList::AddTail
+- AFXTEMPL/CTypedPtrList::GetAt
+- AFXTEMPL/CTypedPtrList::GetHead
+- AFXTEMPL/CTypedPtrList::GetNext
+- AFXTEMPL/CTypedPtrList::GetPrev
+- AFXTEMPL/CTypedPtrList::GetTail
+- AFXTEMPL/CTypedPtrList::RemoveHead
+- AFXTEMPL/CTypedPtrList::RemoveTail
+- AFXTEMPL/CTypedPtrList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +119,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="a-nameaddheada--ctypedptrlistaddhead"></a><a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>CTypedPtrList::AddHead  
  이 멤버 함수를 호출 `BASE_CLASS` **:: AddHead**합니다.  
   
 ```  
@@ -135,7 +146,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>주의  
  목록의 시작 하기 전에 새 요소를 추가 하는 첫 번째 버전입니다. 두 번째 버전에는 다른 머리 앞에 요소 목록을 추가합니다.  
   
-##  <a name="a-nameaddtaila--ctypedptrlistaddtail"></a><a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>CTypedPtrList::AddTail  
  이 멤버 함수를 호출 `BASE_CLASS` **:: AddTail**합니다.  
   
 ```  
@@ -162,7 +173,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>주의  
  첫 번째 버전 목록 꼬리 후 새 요소를 추가 합니다. 두 번째 버전 목록 꼬리 후 다른 목록 요소를 추가합니다.  
   
-##  <a name="a-namegetata--ctypedptrlistgetat"></a><a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>CTypedPtrList::GetAt  
  형식의 변수 **위치** 목록에 대 한 키입니다.  
   
 ```  
@@ -189,7 +200,7 @@ TYPE GetAt(POSITION position) const;
   
  이 인라인 함수를 호출 `BASE_CLASS` **:: GetAt**합니다.  
   
-##  <a name="a-namegetheada--ctypedptrlistgethead"></a><a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>CTypedPtrList::GetHead  
  이 그룹의 head 요소를 나타내는 포인터를 가져옵니다.  
   
 ```  
@@ -209,7 +220,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>주의  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
   
-##  <a name="a-namegetnexta--ctypedptrlistgetnext"></a><a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>CTypedPtrList::GetNext  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
@@ -238,7 +249,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  반복 하는 동안 요소를 제거 하는 것이 불가능 합니다. 예를 참조 [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)합니다.  
   
-##  <a name="a-namegetpreva--ctypedptrlistgetprev"></a><a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>CTypedPtrList::GetPrev  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 이전 항목의 값입니다.  
   
 ```  
@@ -265,7 +276,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  검색 된 요소가 있으면 목록에서 첫 번째 다음의 새 값 `rPosition` 로 설정 된 **NULL**합니다.  
   
-##  <a name="a-namegettaila--ctypedptrlistgettail"></a><a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>CTypedPtrList::GetTail  
  이 그룹의 head 요소를 나타내는 포인터를 가져옵니다.  
   
 ```  
@@ -285,7 +296,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>주의  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetTail`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
   
-##  <a name="a-nameremoveheada--ctypedptrlistremovehead"></a><a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
  목록의 시작에서 요소를 제거 하 고 반환 합니다.  
   
 ```  
@@ -302,7 +313,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>주의  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveHead`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
   
-##  <a name="a-nameremovetaila--ctypedptrlistremovetail"></a><a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
  목록 꼬리에서 요소를 제거 하 고 반환 합니다.  
   
 ```  
@@ -319,7 +330,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>주의  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveTail`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
   
-##  <a name="a-namesetata--ctypedptrlistsetat"></a><a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>CTypedPtrList::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  

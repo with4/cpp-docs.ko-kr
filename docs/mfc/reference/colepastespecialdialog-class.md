@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::AddFormat
+- AFXODLGS/COlePasteSpecialDialog::AddLinkEntry
+- AFXODLGS/COlePasteSpecialDialog::AddStandardFormats
+- AFXODLGS/COlePasteSpecialDialog::CreateItem
+- AFXODLGS/COlePasteSpecialDialog::DoModal
+- AFXODLGS/COlePasteSpecialDialog::GetDrawAspect
+- AFXODLGS/COlePasteSpecialDialog::GetIconicMetafile
+- AFXODLGS/COlePasteSpecialDialog::GetPasteIndex
+- AFXODLGS/COlePasteSpecialDialog::GetSelectionType
+- AFXODLGS/COlePasteSpecialDialog::m_ps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +116,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="a-nameaddformata--colepastespecialdialogaddformat"></a><a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
  응용 프로그램에서 선택 하 여 붙여넣기 작업을 지원할 수 형식 목록에 새 형식을 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -158,7 +170,7 @@ void AddFormat(
   
  자세한 내용은 참조는 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 열거 형식에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameaddlinkentrya--colepastespecialdialogaddlinkentry"></a><a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
  지원 되는 클립보드 형식 목록에 새 항목을 추가 합니다.  
   
 ```  
@@ -172,7 +184,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>반환 값  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 새 링크 항목에 대 한 정보가 포함 된 구조입니다.  
   
-##  <a name="a-nameaddstandardformatsa--colepastespecialdialogaddstandardformats"></a><a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
  응용 프로그램에서 선택 하 여 붙여넣기 작업을 지원할 수 형식 목록에 다음 클립보드 형식을 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -197,7 +209,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  이러한 형식은 포함 하 고 연결을 지 원하는 데 사용 됩니다.  
   
-##  <a name="a-namecolepastespecialdialoga--colepastespecialdialogcolepastespecialdialog"></a><a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
  `COlePasteSpecialDialog` 개체를 생성합니다.  
   
 ```  
@@ -230,7 +242,7 @@ COlePasteSpecialDialog(
   
  자세한 내용은 참조는 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 열거 형식에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecreateitema--colepastespecialdialogcreateitem"></a><a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
  선택 하 여 붙여넣기 대화 상자에서 선택 된 새 항목을 만듭니다.  
   
 ```  
@@ -247,7 +259,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>주의  
  후에이 함수를 호출 해야 [DoModal](#domodal) 반환 **IDOK**합니다.  
   
-##  <a name="a-namedomodala--colepastespecialdialogdomodal"></a><a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
  OLE 붙여넣기 대화 상자를 표시합니다.  
   
 ```  
@@ -268,7 +280,7 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 멤버 대화 상자에 설정 또는 사용자가 입력 한 정보를 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="a-namegetdrawaspecta--colepastespecialdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
  사용자를 아이콘으로 선택한 항목을 표시 하도록 선택 하는 경우를 결정 합니다.  
   
 ```  
@@ -287,7 +299,7 @@ DVASPECT GetDrawAspect() const;
   
  그리기 측면에 대 한 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegeticonicmetafilea--colepastespecialdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
  사용자가 선택한 항목에 연결 된 메타 파일을 가져옵니다.  
   
 ```  
@@ -297,7 +309,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>반환 값  
  대화 상자를 선택 하 여 해제할 때 아이콘으로 표시 확인란을 선택한 경우 선택한 항목의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들 **확인**고, 그렇지 않으면 **NULL**합니다.  
   
-##  <a name="a-namegetpasteindexa--colepastespecialdialoggetpasteindex"></a><a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
  가져옵니다 인덱스 값 항목과 연결 된 사용자가 선택한 합니다.  
   
 ```  
@@ -310,7 +322,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조는 [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetselectiontypea--colepastespecialdialoggetselectiontype"></a><a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
  선택한 사용자의 유형을 결정 합니다.  
   
 ```  
@@ -323,19 +335,14 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>주의  
  반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COlePasteSpecialDialog` 클래스입니다.  
   
- `enum Selection`  
-  
- `{`  
-  
- `pasteLink,`  
-  
- `pasteNormal,`  
-  
- `pasteOther,`  
-  
- `pasteStatic`  
-  
- `};`  
+```  
+enum Selection {
+    pasteLink,
+    pasteNormal,
+    pasteOther,
+    pasteStatic
+    };  
+```  
   
  이러한 값에 대 한 간략 한 desccriptions를 수행합니다.  
   
@@ -347,7 +354,7 @@ UINT GetSelectionType() const;
   
 - **COlePasteSpecialDialog::pasteStatic** 는 선택한 형식의 메타 파일을 했습니다.  
   
-##  <a name="a-namempsa--colepastespecialdialogmps"></a><a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
  형식의 구조 **OLEUIPASTESPECIAL** 하 여 붙여넣기 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

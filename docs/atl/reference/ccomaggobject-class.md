@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComAggObject<contained>
-- ATL.CComAggObject
-- ATL.CComAggObject<contained>
 - CComAggObject
-- ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject::CComAggObject
+- ATLCOM/ATL::CComAggObject::AddRef
+- ATLCOM/ATL::CComAggObject::CreateInstance
+- ATLCOM/ATL::CComAggObject::FinalConstruct
+- ATLCOM/ATL::CComAggObject::FinalRelease
+- ATLCOM/ATL::CComAggObject::QueryInterface
+- ATLCOM/ATL::CComAggObject::Release
+- ATLCOM/ATL::CComAggObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +108,7 @@ class CComAggObject : public IUnknown,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomaggobjectaddref"></a><a name="addref"></a>CComAggObject::AddRef  
+##  <a name="addref"></a>CComAggObject::AddRef  
  집계 개체에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -113,7 +118,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 하거나 테스트 될 수 있는 값입니다.  
   
-##  <a name="a-nameccomaggobjecta--ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComAggObject::CComAggObject  
+##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
  생성자입니다.  
   
 ```
@@ -129,7 +134,7 @@ CComAggObject(void* pv);
   
  모듈 잠금 횟수를 소멸자 줄입니다.  
   
-##  <a name="a-namedtora--ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAggObject:: ~ CComAggObject  
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject  
  소멸자입니다.  
   
 ```
@@ -139,7 +144,7 @@ CComAggObject(void* pv);
 ### <a name="remarks"></a>주의  
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
   
-##  <a name="a-namecreateinstancea--ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAggObject::CreateInstance  
+##  <a name="createinstance"></a>CComAggObject::CreateInstance  
  이 정적 함수를 사용 하면 새 **CComAggObject** `contained` ** > ** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
@@ -160,7 +165,7 @@ static HRESULT WINAPI CreateInstance(
   
  개체에 대 한 액세스도 직접 필요한 수행 하지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
   
-##  <a name="a-namefinalconstructa--ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAggObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
  개체 생성의 최종 단계 중에 호출을이 메서드는 최종 초기화에 대해 수행 된 [m_contained](#m_contained) 멤버입니다.  
   
 ```
@@ -170,14 +175,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namefinalreleasea--ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAggObject::FinalRelease  
+##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
  이 메서드 해제 개체 소멸 하는 동안 호출는 [m_contained](#m_contained) 멤버입니다.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccomaggobjectmcontained"></a><a name="m_contained"></a>CComAggObject::m_contained  
+##  <a name="m_contained"></a>CComAggObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 클래스에서 파생 된 개체입니다.  
   
 ```
@@ -191,7 +196,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>주의  
  모든 **IUnknown** 을 통해 호출 `m_contained` 알 수 없는 외부에 위임 됩니다.  
   
-##  <a name="a-namequeryinterfacea--ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAggObject::QueryInterface  
+##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -216,7 +221,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="remarks"></a>주의  
  요청한 인터페이스가 있으면 **IUnknown**, `QueryInterface` 집계 된 개체의 자체에 대 한 포인터를 반환 **IUnknown** 참조 횟수를 증가 시킵니다. 이 메서드를 통해 인터페이스에 대 한 쿼리 하는 그렇지 않은 경우는 `CComContainedObject` 멤버 [m_contained](#m_contained)합니다.  
   
-##  <a name="a-namereleasea--ccomaggobjectrelease"></a><a name="release"></a>CComAggObject::Release  
+##  <a name="release"></a>CComAggObject::Release  
  집계 된 개체의 참조 횟수를 감소 시킵니다.  
   
 ```

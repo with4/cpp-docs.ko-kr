@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DLayer
 - CD2DLayer
+- AFXRENDERTARGET/CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::Attach
+- AFXRENDERTARGET/CD2DLayer::Create
+- AFXRENDERTARGET/CD2DLayer::Destroy
+- AFXRENDERTARGET/CD2DLayer::Detach
+- AFXRENDERTARGET/CD2DLayer::Get
+- AFXRENDERTARGET/CD2DLayer::GetSize
+- AFXRENDERTARGET/CD2DLayer::IsValid
+- AFXRENDERTARGET/CD2DLayer::m_pLayer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DLayer : public CD2DResource;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
  소멸자입니다. D2D 계층 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>CD2DLayer::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
  CD2DLayer 개체를 만듭니다.  
   
 ```  
@@ -126,7 +135,7 @@ CD2DLayer(
  `bAutoDestroy`  
  개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
   
-##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+##  <a name="create"></a>CD2DLayer::Create  
  CD2DLayer를 만듭니다.  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+##  <a name="destroy"></a>CD2DLayer::Destroy  
  CD2DLayer 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>CD2DLayer::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>CD2DLayer::Get  
  반환 ID2D1Layer 인터페이스  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Layer 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>CD2DLayer::GetSize  
  장치 독립적 픽셀의 렌더링 대상의 크기를 반환합니다.  
   
 ```  
@@ -177,7 +186,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>반환 값  
  장치 독립적 픽셀의 렌더링 대상의 현재 크기  
   
-##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>CD2DLayer::IsValid  
  리소스 유효성 검사  
   
 ```  
@@ -187,14 +196,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>CD2DLayer::m_pLayer  
  ID2D1Layer 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
  반환 ID2D1Layer 인터페이스  
   
 ```  

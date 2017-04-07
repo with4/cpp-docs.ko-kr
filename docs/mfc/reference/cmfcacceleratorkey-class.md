@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::Format
+- AFXACCELERATORKEY/CMFCAcceleratorKey::SetAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxacceleratorkey.h  
   
-##  <a name="a-namecmfcacceleratorkeya--cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
  생성 된 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) 개체입니다.  
   
 ```  
@@ -96,7 +100,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>주의  
  만들 때 바로 가기 키를 제공 하지 않으면 한 `CMFCAccleratorKey`를 사용 하 여는 [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) 된 바로 가기 키를 연결 하는 방법이 프로그램 `CMFCAcceleratorKey` 개체입니다.  
   
-##  <a name="a-nameformata--cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>CMFCAcceleratorKey::Format  
  바로 가기 키 구조를 연결 된 문자열 값으로 변환합니다.  
   
 ```  
@@ -110,7 +114,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 관련 된 바로 가기 키의 문자열 형식을 검색합니다. 문자열 형식을 설정할 수는 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) 메서드 또는 생성자를 사용 하 여 [CMFCAcceleratorKey::SetAccelerator](#setaccelerator)합니다.  
   
-##  <a name="a-namesetacceleratora--cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
  바로 가기 키를 설정 하는 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) 개체입니다.  
   
 ```  

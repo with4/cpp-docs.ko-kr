@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CreateBitmap_32
+- AFXDRAWMANAGER/CDrawingManager::DrawAlpha
+- AFXDRAWMANAGER/CDrawingManager::DrawRotated
+- AFXDRAWMANAGER/CDrawingManager::DrawEllipse
+- AFXDRAWMANAGER/CDrawingManager::DrawGradientRing
+- AFXDRAWMANAGER/CDrawingManager::DrawRect
+- AFXDRAWMANAGER/CDrawingManager::DrawShadow
+- AFXDRAWMANAGER/CDrawingManager::Fill4ColorsGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient2
+- AFXDRAWMANAGER/CDrawingManager::GrayRect
+- AFXDRAWMANAGER/CDrawingManager::HighlightRect
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_ONE
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_TWO
+- AFXDRAWMANAGER/CDrawingManager::HSVtoRGB
+- AFXDRAWMANAGER/CDrawingManager::HuetoRGB
+- AFXDRAWMANAGER/CDrawingManager::MirrorRect
+- AFXDRAWMANAGER/CDrawingManager::PixelAlpha
+- AFXDRAWMANAGER/CDrawingManager::PrepareShadowMask
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSL
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSV
+- AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
+- AFXDRAWMANAGER/CDrawingManager::SetPixel
+- AFXDRAWMANAGER/CDrawingManager::SmartMixColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +123,7 @@ class CDrawingManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdrawmanager.h  
   
-##  <a name="a-namecdrawingmanagera--cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
  생성 된 [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) 개체입니다.  
   
 ```  
@@ -108,7 +134,7 @@ CDrawingManager(CDC& dc);
  [in] `dc`  
  장치 컨텍스트에 대 한 참조입니다. `CDrawingManager` 드로잉에 대 한이 컨텍스트를 사용 합니다.  
   
-##  <a name="a-namecreatebitmap32a--cdrawingmanagercreatebitmap32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
  응용 프로그램에 직접 쓸 수 있는 32 비트 장치 독립적 비트맵 DIB ()을 만듭니다.  
   
 ```  
@@ -137,7 +163,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 ### <a name="remarks"></a>주의  
  DIB 비트맵을 만들 수 있는 방법에 대 한 자세한 내용은 참조 [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)합니다.  
   
-##  <a name="a-namedrawalphaa--cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha  
+##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
  투명 하거나 반투명 픽셀로 있는 비트맵을 표시 합니다.  
   
 ```  
@@ -164,7 +190,7 @@ void DrawAlpha(
 ### <a name="remarks"></a>주의  
  이 메서드가 두 비트맵에 대 한 알파 혼합을 수행합니다. 알파 혼합 하는 방법에 대 한 자세한 내용은 참조 [해 서 AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) Windows SDK에 있습니다.  
   
-##  <a name="a-namedrawellipsea--cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse  
+##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
  제공 된 테두리 및 채우기 색으로 타원을 그립니다.  
   
 ```  
@@ -187,7 +213,7 @@ void DrawEllipse(
 ### <a name="remarks"></a>주의  
  이 메서드는 두 색은-1로 설정 하는 경우 타원 그리기 없이 반환 합니다. 경계 사각형의 높이가 0 이면 타원 그리기 없이 반환 합니다.  
   
-##  <a name="a-namedrawgradientringa--cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
+##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
  링 그리고 색 그라데이션을 사용 하 여 채웁니다.  
   
 ```  
@@ -229,7 +255,7 @@ BOOL DrawGradientRing(
 ### <a name="remarks"></a>주의  
  정의 된 사각형 `rect` 최소 5 픽셀을 광범위 하 고 5 픽셀 이상 이어야 합니다.  
   
-##  <a name="a-namedrawlinecdrawingmanagerdrawlineaa--cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine, CDrawingManager::DrawLineA  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine, CDrawingManager::DrawLineA  
  선을 그립니다.  
   
 ```  
@@ -262,7 +288,7 @@ void DrawLineA(
 ### <a name="remarks"></a>주의  
  이 메서드는 실패 하는 경우 `clrLine` 가-1입니다.  
   
-##  <a name="a-namedrawrecta--cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect  
+##  <a name="drawrect"></a>CDrawingManager::DrawRect  
  제공 된 테두리 및 채우기 색으로 사각형을 그립니다.  
   
 ```  
@@ -285,7 +311,7 @@ void DrawRect(
 ### <a name="remarks"></a>주의  
  이 메서드는 두 색은-1로 설정 하는 경우에 사각형을 그려 않고 반환 합니다. 경우 사각형의 크기는 0도 반환 합니다.  
   
-##  <a name="a-namedrawshadowa--cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow  
+##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
  사각형 영역에 대해 그림자를 그립니다.  
   
 ```  
@@ -340,7 +366,7 @@ BOOL DrawShadow(
   
  [!code-cpp[NVC_MFC_PropSheetDemo #&1;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="a-namefill4colorsgradienta--cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
  두 가지 색 그라데이션으로 사각형 영역을 채웁니다.  
   
 ```  
@@ -381,7 +407,7 @@ void Fill4ColorsGradient(
   
  이 메서드는 경우 어설션 실패 생성 `nPercentage` 가 0 보다 작거나 100 보다 더 합니다.  
   
-##  <a name="a-namefillgradienta--cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient  
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
  지정 된 색 그라데이션을 사용 하 여 사각형 영역을 채웁니다.  
   
 ```  
@@ -418,7 +444,7 @@ void FillGradient(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&12;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="a-namefillgradient2a--cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2  
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
  지정 된 색 그라데이션을 사용 하 여 사각형 영역을 채웁니다.  
   
 ```  
@@ -450,7 +476,7 @@ void FillGradient2 (
   
  [!code-cpp[NVC_MFC_NewControls #&37;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="a-namegrayrecta--cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect  
+##  <a name="grayrect"></a>CDrawingManager::GrayRect  
  지정 된 회색 색으로 사각형을 채웁니다.  
   
 ```  
@@ -482,7 +508,7 @@ BOOL GrayRect(
   
  에 대 한 최대값 `nPercentage` 는 200 개입니다. 200 보다 큰 값에는 사각형의 모양을 변경 되지 않습니다. 값이-1 이면이 메서드는 사용 `clrDisabled` 사각형의 채도 제한할 수 있습니다.  
   
-##  <a name="a-namehighlightrecta--cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect  
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
  사각형 영역을 강조 표시합니다.  
   
 ```  
@@ -518,7 +544,7 @@ BOOL HighlightRect(
   
  매개 변수를 사용 하는 메서드가 `nTolerance` 사각형 영역을 강조 표시 여부를 결정 합니다. 사각형, 응용 프로그램의 배경색 간의 차이 강조 표시 및 `clrTransparent` 이어야 합니다 미만 `nTolerance` (빨강, 녹색 및 파랑)에 각 색의 구성 요소에 있습니다.  
   
-##  <a name="a-namehlstorgbonea--cdrawingmanagerhlstorgbone"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
  HLS 표현에서 색을 RGB 표현으로 변환 합니다.  
   
 ```  
@@ -546,7 +572,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
   
  이 메서드는 및 `CDrawingManager::HLStoRGB_TWO` 메서드 같은 작업을 수행 하지만 서로 다른 값이 필요는 `H` 매개 변수입니다. 이 방법에서는 `H` 은 원의 백분율로 표시 됩니다. 에 `CDrawingManager::HLStoRGB_TWO` 메서드를 `H` 는 0과을 모두 나타내는 빨간색 360 사이의 각도 값입니다. 예를 들어, `HLStoRGB_ONE`에 대 한 0.25 `H` 와 90 값과 동일 `HLStoRGB_TWO`합니다.  
   
-##  <a name="a-namehlstorgbtwoa--cdrawingmanagerhlstorgbtwo"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
  HLS 표현에서 색을 RGB 표현으로 변환 합니다.  
   
 ```  
@@ -574,7 +600,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
   
  이 메서드는 및 [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) 메서드 같은 작업을 수행 하지만 서로 다른 값이 필요는 `H` 매개 변수입니다. 이 방법에서는 `H` 0과 360 나타내는 모두 빨간색 사이의 각도 값입니다. 에 [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) 메서드를 `H` 은 원의 백분율로 표시 됩니다. 예를 들어, `HLStoRGB_ONE`에 대 한 0.25 `H` 와 90 값과 동일 `HLStoRGB_TWO`합니다.  
   
-##  <a name="a-namehsvtorgba--cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
  HSV 표현에서 색을 RGB 표현으로 변환 합니다.  
   
 ```  
@@ -599,7 +625,7 @@ static COLORREF __stdcall HSVtoRGB(
 ### <a name="remarks"></a>주의  
  HSV (색상, 채도 및 값), (색상, 채도 및 밝기), HSL 또는 RGB (빨강, 녹색 및 파랑) 색을 나타낼 수 있습니다. 색의 서로 다른 표현에 대 한 자세한 내용은 참조 [색](http://go.microsoft.com/fwlink/linkid=119126)합니다.  
   
-##  <a name="a-namehuetorgba--cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB  
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  빨간색, 녹색 또는 파란색 구성 요소에 색상 값을 변환합니다.  
   
 ```  
@@ -648,7 +674,7 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="a-namemirrorrecta--cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect  
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
  사각형 영역을 대칭 이동합니다.  
   
 ```  
@@ -667,7 +693,7 @@ void MirrorRect(
 ### <a name="remarks"></a>주의  
  이 메서드는 소유한 장치 컨텍스트의 모든 영역 대칭 이동할 수는 `CDrawingManager` 클래스입니다. 경우 `bHorz` 로 설정 된 `TRUE`,이 메서드는 영역을 가로로 대칭 이동 합니다. 그렇지 않으면 것 상하 대칭 이동 하는 영역입니다.  
   
-##  <a name="a-namepixelalphaa--cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
+##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
  반투명 픽셀에 대 한 최종 색을 계산합니다.  
   
 ```  
@@ -714,7 +740,7 @@ static COLORREF __stdcall PixelAlpha(
   
  버전의 있는 메서드를 사용 하는 경우 `dstPixel`, 최종 색은의 조합 `dstPixel` 및 `srcPixel`합니다. `srcPixel` 색은 부분적으로 투명 한 색의 기본 색상을 통해 `dstPixel`합니다.  
   
-##  <a name="a-nameprepareshadowmaska--cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
+##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
  그림자로 사용할 수 있는 비트맵을 만듭니다.  
   
 ```  
@@ -744,7 +770,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="remarks"></a>주의  
  경우 `nDepth` 는이 메서드는 0으로 설정 끝내 고 반환 `NULL`합니다. 경우 `nDepth` 은 3 보다 작거나, 그림자의 높이 너비를 3 픽셀로 설정 됩니다.  
   
-##  <a name="a-namergbtohsla--cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
  색상, 채도 및 밝기 (HSL) 표현을 색 빨간색, 녹색 및 파란색 (RGB) 표현을 변환합니다.  
   
 ```  
@@ -770,7 +796,7 @@ static void __stdcall RGBtoHSL(
   
  반환된 된 값에 대 한 `H` 0에서 위치 0과 1을 모두 나타내며 빨간색 1 사이의 소수 값으로 표현 됩니다. 반환된 된 값에 대 한 `S` 및 `L` 는 0과 1 사이의 숫자입니다.  
   
-##  <a name="a-namergbtohsva--cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
  RGB 표현에서 색을 HSV 표현으로 변환 합니다.  
   
 ```  
@@ -799,7 +825,7 @@ static void __stdcall RGBtoHSV(
   
  반환된 된 값에 대 한 `H` 는 0과 360 사이의 숫자 0과 360 모두 여기서 빨강을 나타냅니다. 반환 값은 `S` 및 `V` 는 0과 1 사이의 숫자입니다.  
   
-##  <a name="a-namesetalphapixela--cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
  비트맵에서 투명 한 픽셀을 색이 됩니다.  
   
 ```  
@@ -844,7 +870,7 @@ static void __stdcall SetAlphaPixel(
   
  경우 `bIsRight` 로 설정 된 `TRUE`, 색에 있는 픽셀은 측정 `x` 의 오른쪽 가장자리에서 픽셀 `rect`합니다. 있으면 `FALSE`, 색에 있는 픽셀은 측정 `x` 의 왼쪽된 가장자리에서 픽셀 `rect`합니다.  
   
-##  <a name="a-namesetpixela--cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel  
+##  <a name="setpixel"></a>CDrawingManager::SetPixel  
  지정 된 색을 단일 비트맵의 픽셀을 변경합니다.  
   
 ```  
@@ -869,7 +895,7 @@ static void __stdcall SetPixel(
 |[in] `y`|변경 비트맵의 픽셀의 y 좌표입니다.|  
 |[in] `color`|입력 한 좌표로 식별 픽셀에 대 한 새 색입니다.|  
   
-##  <a name="a-namesmartmixcolorsa--cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
  가중치가 적용 된 비율에 따라 두 가지 색을 결합 합니다.  
   
 ```  
@@ -900,7 +926,7 @@ static COLORREF __stdcall SmartMixColors(
   
  다음 수식을 사용 하 여 가중치가 적용 된 비율이 계산 됩니다: (color1 * k1 + color2 \* k2) /(k1 + k2) 합니다. 가중치가 적용 된 비율을 확인 한 후 메서드 혼합된 색의 광도 계산 합니다. 으로 광도 곱한 다음 `dblLumRatio`합니다. 값 1.0 보다 크면 메서드 광도 혼합된 색에 대 한 새 값으로 설정 합니다. 그렇지 않으면 명도 1.0으로 설정 됩니다.  
   
-##  <a name="a-namedrawrotateda--cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated  
+##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
  지정 된 사각형 내부 DC 콘텐츠 원본으로 90도 회전 합니다.  
   
 ```  

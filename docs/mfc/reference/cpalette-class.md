@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPalette
-- HPALETTE
+- AFXWIN/CPalette
+- AFXWIN/CPalette::CPalette
+- AFXWIN/CPalette::AnimatePalette
+- AFXWIN/CPalette::CreateHalftonePalette
+- AFXWIN/CPalette::CreatePalette
+- AFXWIN/CPalette::FromHandle
+- AFXWIN/CPalette::GetEntryCount
+- AFXWIN/CPalette::GetNearestPaletteIndex
+- AFXWIN/CPalette::GetPaletteEntries
+- AFXWIN/CPalette::ResizePalette
+- AFXWIN/CPalette::SetPaletteEntries
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-nameanimatepalettea--cpaletteanimatepalette"></a><a name="animatepalette"></a>Cpalette:: Animatepalette  
+##  <a name="animatepalette"></a>Cpalette:: Animatepalette  
  항목에 연결 된 논리 팔레트에서 대체는 `CPalette` 개체입니다.  
   
 ```  
@@ -121,7 +131,7 @@ void AnimatePalette(
   
  `AnimatePalette` 함수는 사용 하 여 항목을 변경만 **PC_RESERVED** 플래그가 설정에 해당 **palPaletteEntry** 의 멤버는 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 구조에 연결 된는 `CPalette` 개체입니다. 참조 **LOGPALETTE** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 이 구조에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namecpalettea--cpalettecpalette"></a><a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>CPalette::CPalette  
  `CPalette` 개체를 생성합니다.  
   
 ```  
@@ -131,7 +141,7 @@ CPalette();
 ### <a name="remarks"></a>주의  
  호출 하기 전에 개체에 연결 된 색상표가 `CreatePalette` 를 하나에 연결 합니다.  
   
-##  <a name="a-namecreatehalftonepalettea--cpalettecreatehalftonepalette"></a><a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
  장치 컨텍스트에 대 한 하프톤 팔레트를 만듭니다.  
   
 ```  
@@ -150,7 +160,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 에 대 한 자세한 내용은 `CreateHalftonePalette` 및 **StretchDIBits**합니다.  
   
-##  <a name="a-namecreatepalettea--cpalettecreatepalette"></a><a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>CPalette::CreatePalette  
  초기화는 `CPalette` Windows 논리 색상표를 만들고 연결 하 여 개체는 `CPalette` 개체입니다.  
   
 ```  
@@ -167,7 +177,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>주의  
  참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 에 대 한 자세한 내용은 **LOGPALETTE** 구조입니다.  
   
-##  <a name="a-namefromhandlea--cpalettefromhandle"></a><a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>CPalette::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CPalette` Windows 색상표 개체에 대 한 핸들을 지정 되 면 개체입니다.  
   
 ```  
@@ -184,7 +194,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>주의  
  하는 경우는 `CPalette` 개체는 임시 Windows 색상표에 이미 연결 되지 않은 `CPalette` 개체를 만들어 연결 합니다. 이 임시 `CPalette` 개체는 다음에 응용 프로그램의 경우 이벤트 루프에서 유휴 시간에, 될 때까지 모든 임시 그래픽 그 개체가 삭제 되만 유효 합니다. 즉, 임시 개체는 하나의 창 메시지를 처리 하는 동안에 유효 합니다.  
   
-##  <a name="a-namegetentrycounta--cpalettegetentrycount"></a><a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>CPalette::GetEntryCount  
  지정 된 논리 색상표에 있는 항목의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -194,7 +204,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>반환 값  
  논리 색상표에 있는 항목의 수입니다.  
   
-##  <a name="a-namegetnearestpaletteindexa--cpalettegetnearestpaletteindex"></a><a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
  지정 된 색 값을 가장 잘 맞는 논리 팔레트에 있는 항목의 인덱스를 반환 합니다.  
   
 ```  
@@ -208,7 +218,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>반환 값  
  논리 색상표에 있는 항목의 인덱스입니다. 항목에 지정 된 색을 거의 대부분 동일한 색을 포함 합니다.  
   
-##  <a name="a-namegetpaletteentriesa--cpalettegetpaletteentries"></a><a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
  논리 색상표에서 표 항목의 범위를 검색합니다.  
   
 ```  
@@ -231,7 +241,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>반환 값  
  논리 팔레트;에서 검색 된 항목의 수 함수가 실패 하는 경우 0입니다.  
   
-##  <a name="a-nameoperatorhpalettea--cpaletteoperator-hpalette"></a><a name="operator_hpalette"></a>HPALETTE CPalette::operator  
+##  <a name="operator_hpalette"></a>HPALETTE CPalette::operator  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CPalette` 개체입니다.  
   
 ```  
@@ -246,7 +256,7 @@ operator HPALETTE() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameresizepalettea--cpaletteresizepalette"></a><a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>CPalette::ResizePalette  
  에 연결 된 논리 색상표의 크기를 변경 된 `CPalette` 개체에서 지정한 항목의 수를 `nNumEntries`합니다.  
   
 ```  
@@ -265,7 +275,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Windows API에 대 한 자세한 내용은 `ResizePalette`, 참조 [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetpaletteentriesa--cpalettesetpaletteentries"></a><a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
  논리 색상표에 있는 항목의 범위에서 RGB 색상 값 및 플래그를 설정합니다.  
   
 ```  

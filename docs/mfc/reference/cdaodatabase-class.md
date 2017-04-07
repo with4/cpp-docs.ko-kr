@@ -10,6 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoDatabase
+- AFXDAO/CDaoDatabase
+- AFXDAO/CDaoDatabase::CDaoDatabase
+- AFXDAO/CDaoDatabase::CanTransact
+- AFXDAO/CDaoDatabase::CanUpdate
+- AFXDAO/CDaoDatabase::Close
+- AFXDAO/CDaoDatabase::Create
+- AFXDAO/CDaoDatabase::CreateRelation
+- AFXDAO/CDaoDatabase::DeleteQueryDef
+- AFXDAO/CDaoDatabase::DeleteRelation
+- AFXDAO/CDaoDatabase::DeleteTableDef
+- AFXDAO/CDaoDatabase::Execute
+- AFXDAO/CDaoDatabase::GetConnect
+- AFXDAO/CDaoDatabase::GetName
+- AFXDAO/CDaoDatabase::GetQueryDefCount
+- AFXDAO/CDaoDatabase::GetQueryDefInfo
+- AFXDAO/CDaoDatabase::GetQueryTimeout
+- AFXDAO/CDaoDatabase::GetRecordsAffected
+- AFXDAO/CDaoDatabase::GetRelationCount
+- AFXDAO/CDaoDatabase::GetRelationInfo
+- AFXDAO/CDaoDatabase::GetTableDefCount
+- AFXDAO/CDaoDatabase::GetTableDefInfo
+- AFXDAO/CDaoDatabase::GetVersion
+- AFXDAO/CDaoDatabase::IsOpen
+- AFXDAO/CDaoDatabase::Open
+- AFXDAO/CDaoDatabase::SetQueryTimeout
+- AFXDAO/CDaoDatabase::m_pDAODatabase
+- AFXDAO/CDaoDatabase::m_pWorkspace
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -134,7 +161,7 @@ class CDaoDatabase : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="a-namecantransacta--cdaodatabasecantransact"></a><a name="cantransact"></a>CDaoDatabase::CanTransact  
+##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
  데이터베이스 트랜잭션을 허용 하는지 여부를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -147,7 +174,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>주의  
  트랜잭션은은 데이터베이스의 작업 영역에서 관리 됩니다.  
   
-##  <a name="a-namecanupdatea--cdaodatabasecanupdate"></a><a name="canupdate"></a>CDaoDatabase::CanUpdate  
+##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
  확인 하려면이 함수를 호출 여부는 `CDaoDatabase` 개체 업데이트를 허용 합니다.  
   
 ```  
@@ -160,7 +187,7 @@ BOOL CanUpdate();
 ### <a name="remarks"></a>주의  
  데이터베이스 업데이트 가능성에 대 한 내용은 DAO 도움말의 "업데이트할 수 있는 속성" 항목을 참조 하십시오.  
   
-##  <a name="a-namecdaodatabasea--cdaodatabasecdaodatabase"></a><a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
+##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
  `CDaoDatabase` 개체를 생성합니다.  
   
 ```  
@@ -181,7 +208,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 > [!NOTE]
 >  A `CDaoDatabase` 열면 개체도 암시적으로 생성 한 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체는 기존에 포인터를 전달 하지 않고 `CDaoDatabase` 개체입니다. 레코드 집합 개체를 닫을 때이 데이터베이스 개체가 닫혀 있습니다.  
   
-##  <a name="a-nameclosea--cdaodatabaseclose"></a><a name="close"></a>CDaoDatabase::Close  
+##  <a name="close"></a>CDaoDatabase::Close  
  데이터베이스에서 연결을 끊고 닫고 모든 열려 있는 레코드 집합이, 테이블 정의 데이터베이스에 연결 된 쿼리 정의 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -199,7 +226,7 @@ virtual void Close();
   
  데이터베이스 개체는 함수 범위 외부를 정의 하 고 닫지 않고 함수를 종료 하는 경우 데이터베이스 개체를 명시적으로 닫을 때까지 유지 됩니다 또는 이전에 정의 된 모듈 범위를 벗어납니다.  
   
-##  <a name="a-namecreatea--cdaodatabasecreate"></a><a name="create"></a>CDaoDatabase::Create  
+##  <a name="create"></a>CDaoDatabase::Create  
  만들려면 새 Microsoft Jet (합니다. MDB)를 생성 한 후이 함수를 호출, 데이터베이스는 `CDaoDatabase` 개체입니다.  
   
 ```  
@@ -270,7 +297,7 @@ virtual void Create(
 > [!NOTE]
 >  와 **만들기**, Microsoft Jet만 만들 수 있습니다 (합니다. MDB) 데이터베이스입니다. ODBC 데이터베이스 또는 ISAM 데이터베이스를 만들 수 없습니다.  
   
-##  <a name="a-namecreaterelationa--cdaodatabasecreaterelation"></a><a name="createrelation"></a>CDaoDatabase::CreateRelation  
+##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
  데이터베이스의 기본 테이블에 하나 이상의 필드와 하나 이상의 필드에 있는 외래 테이블 (데이터베이스에서 다른 테이블) 간의 관계를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -330,7 +357,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
  관련된 내용은 DAO 도움말의 "CreateRelation 메서드" 항목을 참조 합니다.  
   
-##  <a name="a-namedeletequerydefa--cdaodatabasedeletequerydef"></a><a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
+##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
  지정 된 쿼리 정의 삭제 하려면이 함수를 호출-쿼리 저장-에서 `CDaoDatabase` 개체의 QueryDefs 컬렉션입니다.  
   
 ```  
@@ -346,7 +373,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
   
  쿼리 정의 개체를 만드는 방법에 대 한 정보를 클래스 참조 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)합니다. 특정와 연결 하는 쿼리 정의 개체는 `CDaoDatabase` 생성 하는 경우 개체는 `CDaoQueryDef` 개체를 데이터베이스 개체에 대 한 포인터를 전달 합니다.  
   
-##  <a name="a-namedeleterelationa--cdaodatabasedeleterelation"></a><a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
+##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
  데이터베이스 개체의 관계 컬렉션에서 기존 관계를 삭제 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -362,7 +389,7 @@ void DeleteRelation(LPCTSTR lpszName);
   
  관련된 정보에 대 한 "Delete 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-namedeletetabledefa--cdaodatabasedeletetabledef"></a><a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
+##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
  지정된 된 테이블 및 모든 해당 데이터를 삭제 하려면이 멤버 함수를 호출 하는 `CDaoDatabase` 개체의 테이블 정의 컬렉션입니다.  
   
 ```  
@@ -383,7 +410,7 @@ void DeleteTableDef(LPCTSTR lpszName);
   
  관련된 정보에 대 한 "Delete 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="a-nameexecutea--cdaodatabaseexecute"></a><a name="execute"></a>CDaoDatabase::Execute  
+##  <a name="execute"></a>CDaoDatabase::Execute  
  실행 쿼리를 실행 하거나 데이터베이스에서 SQL 문을 실행 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -426,7 +453,7 @@ void Execute(
   
  **실행** 레코드 집합을 반환 하지 않습니다. 사용 하 여 **Execute** 레코드를 선택 하는 쿼리를 사용 하면 형식의 예외를 throw 하는 MFC `CDaoException`합니다. (없는 없는 `ExecuteSQL` 멤버 함수 비슷합니다 `CDatabase::ExecuteSQL`.)  
   
-##  <a name="a-namegetconnecta--cdaodatabasegetconnect"></a><a name="getconnect"></a>CDaoDatabase::GetConnect  
+##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
  이 멤버 함수를 연결 하는 데 사용 하 여 연결 문자열을 검색 호출는 `CDaoDatabase` ODBC 또는 ISAM 데이터베이스에 대 한 개체입니다.  
   
 ```  
@@ -447,7 +474,7 @@ CString GetConnect();
   
  참조는 [열려](#open) 멤버 함수에 대 한 연결 문자열의 인스턴스가 만들어지는 방법을 설명 합니다. 연결 문자열 설정 되 면는 **열려** 호출을 사용할 수 있습니다 나중 유형, 경로, 데이터베이스의 사용자 ID, 암호 또는 ODBC 데이터 원본을 확인 하려면 설정을 확인 하려면.  
   
-##  <a name="a-namegetnamea--cdaodatabasegetname"></a><a name="getname"></a>CDaoDatabase::GetName  
+##  <a name="getname"></a>CDaoDatabase::GetName  
  이 기존 데이터베이스 파일의 이름을 현재 열려 있는 데이터베이스의 이름 또는 등록 된 ODBC 데이터 원본의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -477,7 +504,7 @@ CString GetName();
   
  SQL Server와 Oracle 같은 ODBC 데이터베이스에 대 한 데이터베이스의 연결 문자열 ODBC에서 등록 된 데이터 원본 이름 (DSN)를 식별 합니다.  
   
-##  <a name="a-namegetquerydefcounta--cdaodatabasegetquerydefcount"></a><a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
+##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
  데이터베이스의 QueryDefs 컬렉션에 정의 된 쿼리의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -490,7 +517,7 @@ short GetQueryDefCount();
 ### <a name="remarks"></a>주의  
  `GetQueryDefCount`QueryDefs 컬렉션에서 모든 쿼리를 반복 하는 경우 유용 합니다. 컬렉션에서 지정 된 쿼리에 대 한 정보를 얻으려면 참조 [GetQueryDefInfo](#getquerydefinfo)합니다.  
   
-##  <a name="a-namegetquerydefinfoa--cdaodatabasegetquerydefinfo"></a><a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
+##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
  다양 한 종류의 데이터베이스에 정의 된 쿼리에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -530,7 +557,7 @@ void GetQueryDefInfo(
   
  반환 되는 정보에 대 한 *querydefinfo*, 참조는 [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에서 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준의 정보를 요청 하는 경우 모든 이전 수준의 정보를 얻습니다.  
   
-##  <a name="a-namegetquerytimeouta--cdaodatabasegetquerytimeout"></a><a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
+##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
  현재는 연결 된 데이터베이스에 대 한 후속 작업 시간이 초과 하기 전까지 허용 시간 (초) 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -547,7 +574,7 @@ short GetQueryTimeout();
   
  관련된 내용은 DAO 도움말의 "쿼리 제한 시간 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetrecordsaffecteda--cdaodatabasegetrecordsaffected"></a><a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
  가장 최근 호출에 의해 영향을 받는 레코드 수를 확인 하려면이 멤버 함수를 호출 하는 [Execute](#execute) 멤버 함수입니다.  
   
 ```  
@@ -562,7 +589,7 @@ long GetRecordsAffected();
   
  관련된 내용은 DAO 도움말에서 "RecordsAffected 속성" 항목을 참조 합니다.  
   
-##  <a name="a-namegetrelationcounta--cdaodatabasegetrelationcount"></a><a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
+##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
  데이터베이스의 테이블 간에 정의 된 관계의 수를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -577,7 +604,7 @@ short GetRelationCount();
   
  관계의 개념을 설명 하기 위해 공급 업체 테이블과 일 대 다 관계를 가질 수 있는 Products 테이블을 사용 하는 것이 좋습니다. 이 관계에서 공급자가 둘 이상의 제품을 제공할 수 있습니다. 다른 관계는 한 일 및 다 대 다입니다.  
   
-##  <a name="a-namegetrelationinfoa--cdaodatabasegetrelationinfo"></a><a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
+##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
  이 데이터베이스의 관계 컬렉션에 지정 된 관계에 대 한 정보를 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -618,7 +645,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  하위 작업을 활성화 하는 개체의 특성 관계를 설정 하는 경우 ( **dbRelationUpdateCascades** 또는 **dbRelationDeleteCascades**), Microsoft Jet 데이터베이스 엔진 자동으로 업데이트 하거나 레코드 하나를 삭제 또는 이상의 다른 테이블에 변경 사항이 있을 경우 관련 기본 키 테이블입니다. 예를 들어 Customers 테이블과 Orders 테이블 간의 cascade delete 관계를 설정 합니다. Customers 테이블에서 레코드를 삭제 하면 해당 고객에 대 한 관련 Orders 테이블의 레코드 삭제 됩니다. 또한 주문 테이블과 다른 테이블 간의 cascade delete 관계를 설정 하는 경우 Customers 테이블에서 레코드를 삭제 하면 해당 테이블의 레코드 삭제 자동으로 됩니다.  
   
-##  <a name="a-namegettabledefcounta--cdaodatabasegettabledefcount"></a><a name="gettabledefcount"></a>CDaoDatabase::GetTableDefCount  
+##  <a name="gettabledefcount"></a>CDaoDatabase::GetTableDefCount  
  데이터베이스에 정의 된 테이블의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -631,7 +658,7 @@ short GetTableDefCount();
 ### <a name="remarks"></a>주의  
  `GetTableDefCount`데이터베이스의 TableDefs 컬렉션의 모든 테이블 정의 통해 반복 해야 하는 경우 유용 합니다. 컬렉션에서 지정된 된 테이블에 대 한 정보를 얻으려면 참조 [GetTableDefInfo](#gettabledefinfo)합니다.  
   
-##  <a name="a-namegettabledefinfoa--cdaodatabasegettabledefinfo"></a><a name="gettabledefinfo"></a>CDaoDatabase::GetTableDefInfo  
+##  <a name="gettabledefinfo"></a>CDaoDatabase::GetTableDefInfo  
  다양 한 종류의 데이터베이스에 정의 된 테이블에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -674,7 +701,7 @@ void GetTableDefInfo(
 > [!NOTE]
 >  `AFX_DAO_ALL_INFO` 옵션은 느린를 가져올 수 있는 정보를 제공 합니다. 이 경우 테이블의 레코드 수를 계산 시간이 오래 걸릴 경우 많은 레코드 수 있습니다.  
   
-##  <a name="a-namegetversiona--cdaodatabasegetversion"></a><a name="getversion"></a>CDaoDatabase::GetVersion  
+##  <a name="getversion"></a>CDaoDatabase::GetVersion  
  Microsoft Jet 데이터베이스 파일의 버전을 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -689,7 +716,7 @@ CString GetVersion();
   
  관련된 내용은 DAO 도움말의 "Version 속성" 항목을 참조 합니다.  
   
-##  <a name="a-nameisopena--cdaodatabaseisopen"></a><a name="isopen"></a>CDaoDatabase::IsOpen  
+##  <a name="isopen"></a>CDaoDatabase::IsOpen  
  확인 하려면이 함수를 호출 여부는 `CDaoDatabase` 개체는 데이터베이스에 현재 열려 있습니다.  
   
 ```  
@@ -701,7 +728,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namempdaodatabasea--cdaodatabasempdaodatabase"></a><a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
+##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
  DAO 데이터베이스 개체 내부에 대 한 OLE 인터페이스에 대 한 포인터는 `CDaoDatabase` 개체입니다.  
   
 ### <a name="remarks"></a>주의  
@@ -709,13 +736,13 @@ BOOL IsOpen() const;
   
  DAO 호출 하는 방법에 대 한 정보에 대 한 참조를 직접 [기술 참고 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)합니다.  
   
-##  <a name="a-namempworkspacea--cdaodatabasempworkspace"></a><a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
+##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
  에 대 한 포인터는 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) 데이터베이스 개체를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>주의  
  이 포인터를 사용 하 여 작업 영역에 직접 액세스 하는 경우-예: 데이터베이스 데이터 정렬의 작업 영역에서 다른 데이터베이스 개체에 대 한 포인터를 얻을 수 있습니다.  
   
-##  <a name="a-nameopena--cdaodatabaseopen"></a><a name="open"></a>CDaoDatabase::Open  
+##  <a name="open"></a>CDaoDatabase::Open  
  이 멤버 함수는 새로 생성 된 초기화를 호출 해야 `CDaoDatabase` 기존 데이터베이스를 나타내는 개체입니다.  
   
 ```  
@@ -774,7 +801,7 @@ virtual void Open(
   
  여러 수준의 로그인 권한 부여에 대 한 연결 문자열을 사용할 수도 있습니다 (다른 작업에 대 한 각 `CDaoDatabase` 개체) 또는 다른 데이터베이스 관련 정보를 전달 합니다.  
   
-##  <a name="a-namesetquerytimeouta--cdaodatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
  후속 작업에 연결 된 데이터베이스 시간 초과 하기 전까지 허용 시간 (초) 기본값을 재정의 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

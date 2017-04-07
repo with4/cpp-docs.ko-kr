@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWindowDC
+- No header/CWindowDC
+- No header/CWindowDC::CWindowDC
+- No header/CWindowDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CWindowDC : public CDC
 ## <a name="requirements"></a>요구 사항  
  헤더: afxwin.h  
   
-##  <a name="a-namecwindowdca--cwindowdccwindowdc"></a><a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
  생성 된 `CWindowDC` 의 전체 화면 영역 (클라이언트 및 비클라이언트)에 액세스 하는 개체는 `CWnd` 가리키는 개체 `pWnd`합니다.  
   
 ```  
@@ -98,7 +101,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&188;](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cwindowdcmhwnd"></a><a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
  `HWND` 의 `CWnd` 포인터는 생성 하는 데 사용 되는 `CWindowDC` 개체입니다.  
   
 ```  

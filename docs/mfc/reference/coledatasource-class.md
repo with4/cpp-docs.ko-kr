@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDataSource
+- AFXOLE/COleDataSource
+- AFXOLE/COleDataSource::COleDataSource
+- AFXOLE/COleDataSource::CacheData
+- AFXOLE/COleDataSource::CacheGlobalData
+- AFXOLE/COleDataSource::DelayRenderData
+- AFXOLE/COleDataSource::DelayRenderFileData
+- AFXOLE/COleDataSource::DelaySetData
+- AFXOLE/COleDataSource::DoDragDrop
+- AFXOLE/COleDataSource::Empty
+- AFXOLE/COleDataSource::FlushClipboard
+- AFXOLE/COleDataSource::GetClipboardOwner
+- AFXOLE/COleDataSource::OnRenderData
+- AFXOLE/COleDataSource::OnRenderFileData
+- AFXOLE/COleDataSource::OnRenderGlobalData
+- AFXOLE/COleDataSource::OnSetData
+- AFXOLE/COleDataSource::SetClipboard
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +118,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="a-namecachedataa--coledatasourcecachedata"></a><a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>COleDataSource::CacheData  
  데이터는 제공 하는 동안 데이터 전송 작업의 형식을 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -135,7 +151,7 @@ void CacheData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecacheglobaldataa--coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
  데이터는 제공 하는 동안 데이터 전송 작업의 형식을 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -164,14 +180,14 @@ void CacheGlobalData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namecoledatasourcea--coledatasourcecoledatasource"></a><a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
  `COleDataSource` 개체를 생성합니다.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="a-namedelayrenderdataa--coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
  데이터는 제공 하는 동안 데이터 전송 작업의 형식을 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -198,7 +214,7 @@ void DelayRenderData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedelayrenderfiledataa--coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
  데이터는 제공 하는 동안 데이터 전송 작업의 형식을 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -225,7 +241,7 @@ void DelayRenderFileData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedelaysetdataa--coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
  데이터 원본의 내용의 변경을 지원 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -248,7 +264,7 @@ void DelaySetData(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedodragdropa--coledatasourcedodragdrop"></a><a name="dodragdrop"></a>COleDataSource::DoDragDrop  
+##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
  호출 된 `DoDragDrop` 멤버 함수에서 일반적으로이 데이터 원본에 대 한 끌어서 놓기 작업을 수행 하는 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) 처리기입니다.  
   
 ```  
@@ -294,7 +310,7 @@ DROPEFFECT DoDragDrop(
   
  자세한 내용은 문서를 참조 하십시오. [끌어서 놓기: 놓기 소스 구현](../../mfc/drag-and-drop-implementing-a-drop-source.md)합니다.  
   
-##  <a name="a-nameemptya--coledatasourceempty"></a><a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>COleDataSource::Empty  
  빈 상태로이 함수를 호출 하는 `COleDataSource` 데이터의 개체입니다.  
   
 ```  
@@ -306,7 +322,7 @@ void Empty();
   
  자세한 내용은 참조 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameflushclipboarda--coledatasourceflushclipboard"></a><a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
  클립보드에 사용 중이 고 다음 응용 프로그램이 종료 된 후 클립보드의에서 데이터를 붙여넣을 수 있는 데이터를 렌더링 합니다.  
   
 ```  
@@ -316,7 +332,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>주의  
  사용 하 여 [SetClipboard](#setclipboard) 클립보드에 데이터를 저장 합니다.  
   
-##  <a name="a-namegetclipboardownera--coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
  클립보드의 데이터 이후 변경 되었는지 여부를 결정 [SetClipboard](#setclipboard) 가 마지막으로 호출 하 고 그럴 경우 현재 소유자를 식별 합니다.  
   
 ```  
@@ -326,7 +342,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>반환 값  
  클립보드에 현재 데이터 원본 또는 **NULL** 클립보드 호출 응용 프로그램에서 소유 하지 않은 경우 또는 내용이 없는 경우 클립보드에 저장 합니다.  
   
-##  <a name="a-nameonrenderdataa--coledatasourceonrenderdata"></a><a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
  지정 된 형식의 데이터를 검색 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -354,7 +370,7 @@ virtual BOOL OnRenderData(
   
  자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [미디어 유형입니다.](http://msdn.microsoft.com/library/windows/desktop/ms691227) 열거형 형식 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *합니다.*  
   
-##  <a name="a-nameonrenderfiledataa--coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
  지정 된 저장 미디어 파일이 경우 지정된 된 형식으로 데이터를 검색 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -380,7 +396,7 @@ virtual BOOL OnRenderFileData(
   
  자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *합니다.*  
   
-##  <a name="a-nameonrenderglobaldataa--coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
  지정 된 저장 미디어에 전역 메모리가 때 지정된 된 형식으로 데이터를 검색 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -408,7 +424,7 @@ virtual BOOL OnRenderGlobalData(
   
  자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *합니다.*  
   
-##  <a name="a-nameonsetdataa--coledatasourceonsetdata"></a><a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>COleDataSource::OnSetData  
  설정 하거나 데이터를 바꾸기 위해 프레임 워크에서 호출 된 `COleDataSource` 지정 된 형식의 개체입니다.  
   
 ```  
@@ -438,7 +454,7 @@ virtual BOOL OnSetData(
   
  자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 가 작동 하는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *합니다.*  
   
-##  <a name="a-namesetclipboarda--coledatasourcesetclipboard"></a><a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
  에 포함 된 데이터는 `COleDataSource` 다음 함수 중 하나를 호출한 후 클립보드에 개체: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), 또는 [DelayRenderFileData](#delayrenderfiledata)합니다.  
   
 ```  

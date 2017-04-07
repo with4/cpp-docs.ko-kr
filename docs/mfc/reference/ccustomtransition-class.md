@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CCustomTransition
 - CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::Create
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialValueSpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialVelocitySpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +97,7 @@ class CCustomTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameccustomtransitiona--ccustomtransitionccustomtransition"></a><a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
  사용자 지정 전환을 개체를 만듭니다.  
   
 ```  
@@ -99,7 +108,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  사용자 지정 보간 기에 대 한 포인터입니다.  
   
-##  <a name="a-namecreatea--ccustomtransitioncreate"></a><a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>CCustomTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -117,42 +126,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>주의  
  또한이 메서드 초기 값과 관련 된이 전환 애니메이션 변수에 적용할 초기 속도 설정할 수 있습니다. 이 목적을 위해 프레임 워크 (CAnimationController::AnimateGroup를 호출할 때 발생) 캡슐화 된 전환 COM 개체를 만들기 전에 SetInitialValue 및 SetInitialVelocity를 호출 해야 합니다.  
   
-##  <a name="a-namembinitialvaluespecifieda--ccustomtransitionmbinitialvaluespecified"></a><a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
  SetInitialValue와 초기 값을 지정 했는지 여부를 지정 합니다.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="a-namembinitialvelocityspecifieda--ccustomtransitionmbinitialvelocityspecified"></a><a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
  초기 속도 SetInitialVelocity로 지정 되었는지 여부를 지정 합니다.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="a-nameminitialvaluea--ccustomtransitionminitialvalue"></a><a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
  초기 값을 저장합니다.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="a-nameminitialvelocitya--ccustomtransitionminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
  초기 속도 저장합니다.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="a-namempinterpolatora--ccustomtransitionmpinterpolator"></a><a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
  사용자 지정 보간 기에 대 한 포인터를 저장합니다.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="a-namesetinitialvaluea--ccustomtransitionsetinitialvalue"></a><a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
  이 전환과 관련 된 애니메이션 변수에 적용 될 초기 값을 설정 합니다.  
   
 ```  
@@ -162,7 +171,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>매개 변수  
  `initialValue`  
   
-##  <a name="a-namesetinitialvelocitya--ccustomtransitionsetinitialvelocity"></a><a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
  이 전환과 관련 된 애니메이션 변수에 적용 될 초기 속도 설정 합니다.  
   
 ```  

@@ -10,6 +10,79 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::accSelect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AddProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CloseColorPopup
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Create
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DeleteProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DrawControlBarColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnsureVisible
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ExpandAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::FindItemByData
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accChildCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accFocus
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelp
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelpTopic
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accKeyboardShortcut
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBkColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBoldFont
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetLeftColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetListRect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetRowHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetScrollBarCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetTextColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::HitTest
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::InitHeader
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsMarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::MarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::RemoveAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ResetOriginalValues
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetBoolLabels
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetListDelimiter
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::UpdateColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AdjustLayout
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CompareProps
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EndEditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Init
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnChangeSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnClickButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawBorder
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawDescription
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawList
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnPropertyChanged
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnSelectCombo
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ValidateItemData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +277,7 @@ class CMFCPropertyGridCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertygridctrl.h  
   
-##  <a name="a-nameaccselecta--cmfcpropertygridctrlaccselect"></a><a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -221,7 +294,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameaddpropertya--cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
  속성 표 컨트롤에 새 속성을 추가합니다.  
   
 ```  
@@ -247,7 +320,7 @@ int AddProperty(
 ### <a name="remarks"></a>주의  
  이 메서드는 속성 표 컨트롤에 속성의 목록 끝에 지정된 된 속성에 대 한 포인터를 추가합니다. 표 형태 컨트롤 소멸 되기 전에 범위를 벗어날 수 있도록 하거나 속성을 삭제 하지 마십시오. 속성 표 컨트롤을 마치면 호출 [CMFCPropertyGridCtrl::RemoveAll](#removeall) 에 추가 된 모든 속성을 삭제 합니다. AddProperty 메서드는 지정된 된 속성 목록에 이미 추가 된 경우 실패 합니다.  
   
-##  <a name="a-nameadjustlayouta--cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
  속성 표 컨트롤 및 해당 속성을 다시 그립니다.  
   
 ```  
@@ -257,7 +330,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>주의  
  이 메서드는 전체 속성 표 컨트롤 및 이미지, 글꼴 및 컨트롤을 포함 하 여 해당 속성을 그리는 방법을 다시 계산 합니다.  
   
-##  <a name="a-namealwaysshowusertooltipa--cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -269,7 +342,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameclosecolorpopupa--cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
  색 선택 대화 상자를 닫습니다.  
   
 ```  
@@ -279,7 +352,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>주의  
  색 선택 대화 상자에 대 한 자세한 내용은 참조 [CMFCPropertyGridColorProperty 클래스](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)합니다.  
   
-##  <a name="a-namecmfcpropertygridctrla--cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  `CMFCPropertyGridCtrl` 개체를 생성합니다.  
   
 ```  
@@ -290,7 +363,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecomparepropsa--cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
  속성을 정렬 하려면 속성 표 컨트롤에 의해 호출 됩니다.  
   
 ```  
@@ -317,7 +390,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>주의  
  이 메서드는 기본적으로 다음을 사용 합니다.는 [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) 비교 하는 메서드는 `CMFCPropertyGridProperty::m_strName` 의 지정된 된 매개 변수는 멤버입니다.  
   
-##  <a name="a-namecreatea--cmfcpropertygridctrlcreate"></a><a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
  속성 표 컨트롤을 만들고 속성 표 컨트롤 개체에 연결 합니다.  
   
 ```  
@@ -352,7 +425,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls #&15;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="a-namedeletepropertya--cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
  속성 표 컨트롤에서 지정된 된 속성을 삭제합니다.  
   
 ```  
@@ -378,7 +451,7 @@ BOOL DeleteProperty(
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 속성 표 컨트롤에서 속성 및 모든 하위 항목을 삭제 합니다.  
   
-##  <a name="a-namedrawcontrolbarcolorsa--cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -389,7 +462,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameedititema--cmfcpropertygridctrledititem"></a><a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
  속성을 수정 하는 사용자가 시작할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -410,7 +483,7 @@ virtual BOOL EditItem(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenabledescriptionareaa--cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
  속성 표 컨트롤에 속성의 목록 아래에 표시 되는 설명 영역을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -424,7 +497,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>주의  
  설명 영역 속성 표 컨트롤의 아래쪽에 표시 됩니다. 기본적으로 설명 영역은 비활성화 하 고 표시 되지 않습니다.  
   
-##  <a name="a-nameenableheaderctrla--cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
  속성 표 컨트롤 맨 위에 있는 헤더 컨트롤을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -444,7 +517,7 @@ void EnableHeaderCtrl(
  [in] `lpszRightColumn`  
  헤더 컨트롤의 오른쪽 열의 제목입니다. 기본값은 **값**합니다.  
   
-##  <a name="a-nameendedititema--cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
  사용자 속성 수정를 완료할 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -460,7 +533,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameensurevisiblea--cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
  속성 표 컨트롤을 스크롤하고 지정된 된 속성이 표시 될 때까지 속성 항목을 확장 합니다.  
   
 ```  
@@ -478,7 +551,7 @@ void EnsureVisible(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameexpandalla--cmfcpropertygridctrlexpandall"></a><a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
  확장 하거나 모든 속성 표 컨트롤 노드를 축소 합니다.  
   
 ```  
@@ -491,7 +564,7 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namefinditembydataa--cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
  연결 된 사용자 정의 속성을 검색 `DWORD` 값입니다.  
   
 ```  
@@ -513,7 +586,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>주의  
  사용 하는 [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) 생성자 또는 [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) 연결 하는 방법이 한 `DWORD` 속성을 사용 합니다.  
   
-##  <a name="a-namegetaccchildcounta--cmfcpropertygridctrlgetaccchildcount"></a><a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -527,7 +600,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetaccfocusa--cmfcpropertygridctrlgetaccfocus"></a><a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -541,7 +614,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetacchelpa--cmfcpropertygridctrlgetacchelp"></a><a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -558,7 +631,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetacchelptopica--cmfcpropertygridctrlgetacchelptopic"></a><a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -577,7 +650,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetacckeyboardshortcuta--cmfcpropertygridctrlgetacckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -594,7 +667,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetaccselectiona--cmfcpropertygridctrlgetaccselection"></a><a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -608,7 +681,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetbkcolora--cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
  현재 속성 표 컨트롤의 배경색을 검색합니다.  
   
 ```  
@@ -621,7 +694,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 프레임 워크를 사용 하 여 현재 속성 표 컨트롤의 배경을 그리기 색을 검색 합니다. [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) 메서드 전경 색을 검색 합니다.  
   
-##  <a name="a-namegetboldfonta--cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
  굵게 표시 된 스타일의 현재 속성 표 컨트롤에 텍스트를 그리는 데 사용 되는 Windows 글꼴을 가져옵니다.  
   
 ```  
@@ -631,7 +704,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조는 [CFont](../../mfc/reference/cfont-class.md) 굵은 글꼴의 특징을 설명 하는 개체입니다.  
   
-##  <a name="a-namegetcursela--cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
  현재 선택 된 속성을 검색합니다.  
   
 ```  
@@ -643,7 +716,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcustomcolorsa--cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
  속성 표 컨트롤 요소에 대해 현재 정의 된 사용자 지정 색을 검색 합니다.  
   
 ```  
@@ -682,7 +755,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) 메서드를 사용자 지정 색을 설정 합니다.  
   
-##  <a name="a-namegetdescriptionheighta--cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
  속성 표 컨트롤의 아래쪽에 있는 설명 영역의 높이 검색 합니다.  
   
 ```  
@@ -697,7 +770,7 @@ int GetDescriptionHeight() const;
   
  사용 하 여 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) 메서드 설명 영역을 표시 하거나 숨깁니다. 사용 하 여는 [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) 설명 영역을 표시 하거나 숨길 있는지 여부를 결정할 수 있습니다.  
   
-##  <a name="a-namegetdescriptionrowsa--cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
  현재 속성 표 컨트롤의 설명 영역에 있는 행의 수를 검색 합니다.  
   
 ```  
@@ -710,7 +783,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>주의  
  [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) 생성자 3 행에 설명 영역을 초기화 합니다.  
   
-##  <a name="a-namegetheaderctrla--cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
  내부 검색 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) 프레임 워크는 현재 속성 표 컨트롤 표시를 사용 하 여 개체입니다.  
   
 ```  
@@ -720,7 +793,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>반환 값  
  `CMFCHeaderCtrl` 개체에 대한 참조입니다.  
   
-##  <a name="a-namegetheaderheighta--cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
  속성 표 컨트롤의 머리글의 높이 검색합니다.  
   
 ```  
@@ -732,7 +805,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetleftcolumnwidtha--cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
  각 속성의 이름을 포함 하는 현재 속성 표 컨트롤의 왼쪽 열 너비를 검색 합니다.  
   
 ```  
@@ -745,7 +818,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤의 오른쪽 열에는 각 속성 값을 포함합니다.  
   
-##  <a name="a-namegetlistrecta--cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
  속성 표 컨트롤의 경계 사각형을 검색합니다.  
   
 ```  
@@ -757,7 +830,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpropertya--cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
  속성 표 컨트롤에 있는 항목의 지정된 된 인덱스에 해당 하는 속성 개체에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -775,7 +848,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpropertycolumnwidtha--cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  속성 값을 포함 하는 열의 현재 너비를 검색 합니다.  
   
 ```  
@@ -788,7 +861,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤의 오른쪽 열에 속성 값을 포함 합니다. 고객 값 열의 너비를 변경 하려면 속성 표 컨트롤의 분할 상자를 사용할 수 있습니다.  
   
-##  <a name="a-namegetpropertycounta--cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
  속성 표 컨트롤의 속성 수를 검색합니다.  
   
 ```  
@@ -800,7 +873,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetrowheighta--cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
  속성 표 컨트롤에 있는 행의 높이 검색합니다.  
   
 ```  
@@ -813,7 +886,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>주의  
  행의 높이 4 픽셀을 더한 현재 글꼴 높이 같습니다.  
   
-##  <a name="a-namegetscrollbarctrla--cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
  속성 표 컨트롤에 스크롤 막대 컨트롤에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -830,7 +903,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 세로 스크롤 막대 컨트롤에 직접 액세스할 수 있습니다.  
   
-##  <a name="a-namegettextcolora--cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
  현재 속성 표 컨트롤에 속성 항목의 텍스트를 그리는 데 사용 되는 색을 검색 합니다.  
   
 ```  
@@ -843,7 +916,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>주의  
  이 메서드는 현재 속성 표 컨트롤의 전경을 그리는 데 사용 하는 프레임 워크는 색을 검색 합니다. [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) 메서드 배경 색을 검색 합니다.  
   
-##  <a name="a-namehittesta--cmfcpropertygridctrlhittest"></a><a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
  요소가 있는 경우 지정 된 항목에는 속성 표 컨트롤 항목에 해당 하는 속성 개체에 대 한 포인터를 검색 합니다. 이 메서드는 또한 지점을 포함 하는 속성 표 컨트롤의 영역을 나타냅니다.  
   
 ```  
@@ -880,7 +953,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|속성 값입니다.|  
 |`CMFCPropertyGridProperty::ClickDescription`|속성 표 컨트롤 설명 영역입니다.|  
   
-##  <a name="a-nameinita--cmfcpropertygridctrlinit"></a><a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
  속성 표 컨트롤을 초기화 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -889,14 +962,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameinitheadera--cmfcpropertygridctrlinitheader"></a><a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
  초기화는 내부 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) 프레임 워크는 현재 속성 표 컨트롤 표시를 사용 하 여 개체입니다.  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="a-nameisalphabeticmodea--cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
  속성 표 컨트롤 알파벳 모드 인지 여부를 나타냅니다.  
   
 ```  
@@ -911,7 +984,7 @@ BOOL IsAlphabeticMode() const;
   
  사용 하는 [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) 메서드를 사용 하도록 설정 하거나 알파벳 모드를 사용 하지 않도록 합니다.  
   
-##  <a name="a-nameisalwaysshowusertooltipa--cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +995,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisdescriptionareaa--cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
  속성 표 컨트롤의 설명 영역을 표시할지 여부를 나타냅니다.  
   
 ```  
@@ -935,7 +1008,7 @@ BOOL IsDescriptionArea() const;
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) 메서드를 숨기 거 나 설명 영역을 표시 합니다.  
   
-##  <a name="a-nameisgroupnamefullwidtha--cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  각 속성 그룹 이름은 현재 속성 표 컨트롤의 너비에 가로로 표시 되는지 여부를 나타냅니다.  
   
 ```  
@@ -948,7 +1021,7 @@ BOOL IsGroupNameFullWidth() const;
 ### <a name="remarks"></a>주의  
  A *그룹* 은 속성 표 컨트롤에 관련 된 속성의 컬렉션입니다. 컨트롤을 계층적으로 표시 하는 경우는 *그룹 이름* 그룹 위에 행에서 범주 제목으로 표시 됩니다.  
   
-##  <a name="a-nameisheaderctrla--cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
  헤더 컨트롤의 표시 여부를 나타냅니다.  
   
 ```  
@@ -961,7 +1034,7 @@ BOOL IsHeaderCtrl() const;
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) 메서드를 숨기 거 나 헤더에 컨트롤을 표시 합니다.  
   
-##  <a name="a-nameismarkmodifiedpropertiesa--cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  속성 표 컨트롤에서 수정 된 속성을 표시 하는 방법을 나타냅니다.  
   
 ```  
@@ -973,7 +1046,7 @@ BOOL IsMarkModifiedProperties() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisshowdragcontexta--cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
  프레임 워크 그리는지를 현재 속성 표 컨트롤의 이름 및 값 열 사용자 열의 크기를 조정 하는 경우를 나타냅니다.  
   
 ```  
@@ -986,7 +1059,7 @@ BOOL IsShowDragContext() const;
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤의 이름 및 값 열은 열 사이 있는 분할 막대를 끌어 조정할 수 있습니다. 끌기 컨텍스트가 표시 되 면 사용자가 분할 막대를 끌면으로 이름 및 값 열 크기가 조정 됩니다. 그렇지 않으면 분할줄 이동 하지만 끌기 작업이 완료 될 때까지 열 그려집니다.  
   
-##  <a name="a-nameisvsdotnetlooka--cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
  Visual Studio.NET의 스타일에서 속성 표 컨트롤의 모양을 인지를 나타냅니다.  
   
 ```  
@@ -999,7 +1072,7 @@ BOOL IsVSDotNetLook() const;
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) 속성 표 컨트롤을 Visual Studio.NET의 스타일으로 설정 하는 방법입니다.  
   
-##  <a name="a-namemarkmodifiedpropertiesa--cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
  수정 된 속성을 표시 하는 방법을 지정 합니다.  
   
 ```  
@@ -1017,7 +1090,7 @@ void MarkModifiedProperties(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonchangeselectiona--cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
  현재 선택 영역이 변경 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1036,7 +1109,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>주의  
  이 메서드의 기본 구현은 아무 작업도 수행합니다.  
   
-##  <a name="a-nameonclickbuttona--cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
  속성 단추를 클릭할 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1050,7 +1123,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 현재 속성 값을 업데이트합니다.  
   
-##  <a name="a-nameondrawbordera--cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
  속성 표 컨트롤 주위에 테두리를 그리는 데 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1063,7 +1136,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawdescriptiona--cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
  설명 영역 그리고 설명 텍스트를 표시 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1082,7 +1155,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>주의  
  사용 된 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) 설명 영역을 표시 하는 방법입니다.  
   
-##  <a name="a-nameondrawlista--cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
  속성 표 컨트롤에서 속성의 목록을 표시 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1095,7 +1168,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawpropertya--cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
  속성을 표시 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1116,7 +1189,7 @@ virtual int OnDrawProperty(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameonpropertychangeda--cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
  속성의 값 변경 될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1130,7 +1203,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>주의  
  기본적으로이 메서드는 전송 된 [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) 속성 표 컨트롤의 소유자에 게는 메시지입니다.  
   
-##  <a name="a-nameonselectcomboa--cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
  콤보 상자 컨트롤을 포함 하는 속성을 선택 하는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1139,7 +1212,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameremovealla--cmfcpropertygridctrlremoveall"></a><a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
  속성 표 컨트롤에서 모든 속성 개체를 제거합니다.  
   
 ```  
@@ -1148,7 +1221,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameresetoriginalvaluesa--cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
  모든 속성의 원래 값을 복원합니다.  
   
 ```  
@@ -1161,7 +1234,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetalphabeticmodea--cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
  알파벳 모드를 다시 설정 하거나 설정 합니다.  
   
 ```  
@@ -1175,7 +1248,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤 알파벳 모드에 있을 때 컨트롤 속성 이름으로 포함 된 모든 속성을 정렬 합니다.  
   
-##  <a name="a-namesetboollabelsa--cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
  부울 레이블의 텍스트를 지정합니다.  
   
 ```  
@@ -1193,7 +1266,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcursela--cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
  속성 표 컨트롤에서 속성을 선택합니다.  
   
 ```  
@@ -1212,7 +1285,7 @@ void SetCurSel(
 ### <a name="remarks"></a>주의  
  이 메서드를 사용 하 여 속성 표 컨트롤의 현재 항목의 선택을 취소 한 다음 지정된 된 속성에 해당 하는 항목을 선택 합니다.  
   
-##  <a name="a-namesetcustomcolorsa--cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
  속성 표 컨트롤의 다양 한 요소에 대 한 사용자 지정 색을 지정합니다.  
   
 ```  
@@ -1253,7 +1326,7 @@ void SetCustomColors(
   
  모양을 특정 속성을 사용자 지정 하려면에서 클래스를 파생 된 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) 클래스 한 후 재정의 [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), 및 [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) 메서드.  
   
-##  <a name="a-namesetdescriptionrowsa--cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
  현재 속성 표 컨트롤의 설명 섹션에 표시할 행의 수를 지정 합니다.  
   
 ```  
@@ -1264,7 +1337,7 @@ void SetDescriptionRows(int nDescRows);
  [in] `nDescRows`  
  속성 설명에 표시할 행의 수입니다.  
   
-##  <a name="a-namesetgroupnamefullwidtha--cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  현재 속성 표 컨트롤에 속성의 그룹에 대 한 범주 이름의 전체 너비를 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -1285,7 +1358,7 @@ void SetGroupNameFullWidth(
   
  용어 *그룹 이름* 및 *범주 이름* 이 방법에서는 같은 의미로 사용 됩니다. 범주 이름은 관련된 속성 및 값의 집합을 게이트가 하는 행에 표시 됩니다. 이 메서드는 속성 이름 열의 너비가 표시 된 항목 이름 너비를 지정 하 있는지 여부를 지정 합니다.  
   
-##  <a name="a-namesetlistdelimitera--cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
  속성 값의 목록에서 구분 기호로 사용 되는 문자를 정의 합니다.  
   
 ```  
@@ -1301,7 +1374,7 @@ void SetListDelimiter(TCHAR c);
   
  기본적으로는 [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) 쉼표로 구분 기호 문자를 설정 하는 생성자 (',').  
   
-##  <a name="a-namesetshowdragcontexta--cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
  사용자 열의 크기를 조정 하는 경우 프레임 워크 현재 속성 표 컨트롤의 이름 및 값 열을 다시 있는지 여부를 지정 합니다.  
   
 ```  
@@ -1315,7 +1388,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤의 이름 및 값 열은 열 사이 있는 분할 막대를 끌어 조정할 수 있습니다. 끌기 컨텍스트가 표시 되 면 사용자가 분할 막대를 끌면으로 이름 및 값 열 크기가 조정 됩니다. 그렇지 않으면 분할줄 이동 하지만 끌기 작업이 완료 될 때까지 열 그려집니다.  
   
-##  <a name="a-namesetvsdotnetlooka--cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
  Visual Studio.NET에서 사용 되는 스타일 속성 표 컨트롤의 모양을 설정 합니다.  
   
 ```  
@@ -1328,7 +1401,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameupdatecolora--cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
  현재 선택 된 색 속성의 색 값을 설정합니다.  
   
 ```  
@@ -1342,7 +1415,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>주의  
  속성 표 컨트롤의 현재 선택 된 속성 color 속성이 없는 경우이 메서드는 디버그 모드에서 어설션 합니다.  
   
-##  <a name="a-namevalidateitemdataa--cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
  속성 데이터의 유효성을 검사 하는 프레임 워크에서 호출 됩니다.  
   
 ```  

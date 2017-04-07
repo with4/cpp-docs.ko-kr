@@ -6,23 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::fast_math::copy_async
+- amp_graphics/Concurrency::fast_math::copy
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c17becb6bc3fb9b243a65652bf019b7fad1b8cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 네임 스페이스 함수
 |||  
 |-|-|  
-|[copy 함수 (concurrency:: graphics Namespace)](#copy)|[copy_async 함수 (concurrency:: graphics Namespace)](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="a-namecopya--copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>copy 함수 (concurrency:: graphics Namespace)  
+##  <a name="copy"></a>copy 함수 (concurrency:: graphics Namespace)  
  원본 질감을 대상 버퍼에 복사 하거나 소스 버퍼를 대상 버퍼에 복사 합니다. 이 함수의 일반적인 형태 `copy(src, dest)`합니다.  
   
 ```  
@@ -168,7 +173,7 @@ void copy (
  `last`  
  소스 컨테이너에 사용 되는 끝 반복기입니다.  
   
-##  <a name="a-namecopyasynca--copyasync-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async 함수 (concurrency:: graphics Namespace)  
+##  <a name="copy_async"></a>copy_async 함수 (concurrency:: graphics Namespace)  
  대상 버퍼에 원본 질감을 비동기적으로 복사 하거나 소스 버퍼를 대상 버퍼에 복사 하 고 다음 반환을 [completion_future](completion-future-class.md) 대기한 수 있는 개체입니다. 액셀러레이터에서 코드를 실행 하는 경우 데이터를 복사할 수 없습니다. 이 함수의 일반적인 형태 `copy(src, dest)`합니다.  
   
 ```  
@@ -309,7 +314,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
  `last`  
  소스 컨테이너에 사용 되는 끝 반복기입니다.  
+
+## <a name="requirements"></a>요구 사항  
+ **헤더:** amp_graphics.h  
   
+ **Namespace:** concurrency:: graphics 
+
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

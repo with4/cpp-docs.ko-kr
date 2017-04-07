@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CW2AEX<t_nBufferLength>
 - CW2AEX
-- ATL.CW2AEX<t_nBufferLength>
-- ATL::CW2AEX
-- ATL.CW2AEX
+- ATLCONV/ATL::CW2AEX
+- ATLCONV/ATL::CW2AEX::CW2AEX
+- ATLCONV/ATL::CW2AEX::m_psz
+- ATLCONV/ATL::CW2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +113,7 @@ class CW2AEX
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="a-namecw2aexa--cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  생성자입니다.  
   
 ```
@@ -131,7 +131,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
-##  <a name="a-namedtora--cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
  소멸자입니다.  
   
 ```
@@ -141,21 +141,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="a-namempsza--cw2aexmpsz"></a><a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>CW2AEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--cw2aexmszbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
  변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>LPSTR CW2AEX::operator  
+##  <a name="operator_lpstr"></a>LPSTR CW2AEX::operator  
  변환 연산자입니다.  
   
 ```  

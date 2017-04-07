@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComEnumImpl
-- ATL::CComEnumImpl
 - CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::Clone
+- ATLCOM/ATL::CComEnumImpl::Init
+- ATLCOM/ATL::CComEnumImpl::Next
+- ATLCOM/ATL::CComEnumImpl::Reset
+- ATLCOM/ATL::CComEnumImpl::Skip
+- ATLCOM/ATL::CComEnumImpl::m_begin
+- ATLCOM/ATL::CComEnumImpl::m_dwFlags
+- ATLCOM/ATL::CComEnumImpl::m_end
+- ATLCOM/ATL::CComEnumImpl::m_iter
+- ATLCOM/ATL::CComEnumImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,21 +124,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  생성자입니다.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
  소멸자입니다.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>CComEnumImpl::Init  
  모든 클라이언트에 다시 열거자 인터페이스에 대 한 포인터를 전달 하기 전에이 메서드를 호출 해야 합니다.  
   
 ```
@@ -162,17 +172,14 @@ HRESULT Init(
   
  `flags` 매개 변수를 사용 하는 열거자에 전달 된 배열 요소를 처리 해야 방법을 지정할 수 있습니다. `flags`값 중 하나를 수행할 수는 **CComEnumFlags** 아래에 표시 된 열거:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** 열거자가 배열의 수명 제어 되지 않는 것을 의미 합니다. 두 배열의 경우 정적 또는 식별 되는 개체 됩니다 *펑크* 더 이상 필요 없는 경우 배열 해제 해야 합니다.  
   
@@ -183,7 +190,7 @@ HRESULT Init(
 > [!NOTE]
 >  유형으로 배열 요소를 지정 하는이 메서드의 프로토타입 **T**여기서 **T** 클래스에 템플릿 매개 변수로 정의 되었습니다. 이 COM 인터페이스 메서드를 사용 하 여 노출 되는 동일한 유형의 [CComEnumImpl::Next](#next)합니다. 이 방식은 세 가지는 달리 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md),이 클래스는 다른 저장소를 지원 하지 않습니다 및 데이터 형식을 노출 합니다. 배열에 있는 요소의 데이터 형식을 COM 인터페이스를 사용 하 여 노출 하는 데이터 형식으로 동일 해야 합니다.  
   
-##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>CComEnumImpl::Clone  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) 형식의 개체를 만들어 메서드 `CComEnum`, 동일한 배열 및 현재 개체에서 사용 하는 반복기를 사용 하 여 초기화 하 고 새로 만든된 개체에서 인터페이스를 반환 합니다.  
   
 ```
@@ -200,42 +207,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>주의  
  복제 된 열거자 하지 확인 자신의 원래 열거자가 사용 되는 데이터의 복사본 (또는 소유권 가져오기). 필요한 경우 복제 된 열거자 상태로 유지 합니다 원래 열거자 (COM 참조를 사용 하 여)으로 소요 되는 데이터에 사용할 수 있는 인지 확인 합니다.  
   
-##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
  이 스마트 포인터에 전달 된 개체에 대 한 참조를 유지 관리 [CComEnumImpl::Init](#init), 상태가 활성 상태로 열거자의 수명 동안 보장 합니다.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>CComEnumImpl::m_begin  
  열거할 항목을 포함 하는 배열의 마지막 요소 바로 뒤의 위치에 대 한 포인터입니다.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>CComEnumImpl::m_end  
  열거할 항목을 포함 하는 배열의 첫 번째 요소에 대 한 포인터입니다.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>CComEnumImpl::m_iter  
  열거할 항목을 포함 하는 배열의 현재 요소에 대 한 포인터입니다.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
  에 전달 되는 플래그 [CComEnumImpl::Init](#init)합니다.  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>CComEnumImpl::Next  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) 메서드.  
   
 ```
@@ -255,7 +262,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>CComEnumImpl::Reset  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) 메서드.  
   
 ```
@@ -265,7 +272,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>CComEnumImpl::Skip  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) 메서드.  
   
 ```

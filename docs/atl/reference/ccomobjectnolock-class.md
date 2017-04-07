@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectNoLock
-- ATL::CComObjectNoLock
-- ATL.CComObjectNoLock<Base>
 - CComObjectNoLock
-- ATL::CComObjectNoLock<Base>
+- ATLCOM/ATL::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::AddRef
+- ATLCOM/ATL::CComObjectNoLock::QueryInterface
+- ATLCOM/ATL::CComObjectNoLock::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +88,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectnolockaddref"></a><a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>CComObjectNoLock::AddRef  
  개체에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -97,7 +98,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  진단에 유용 하거나 테스트 될 수 있는 값입니다.  
   
-##  <a name="a-nameccomobjectnolocka--ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  생성자입니다. 와 달리 [CComObject](../../atl/reference/ccomobject-class.md), 모듈 잠금 횟수를 증가 하지 않습니다.  
   
 ```
@@ -108,7 +109,7 @@ CComObjectNoLock(void* = NULL);
  **void\***  
  [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 다른 대칭 있는 **CCom***XXX*`Object`*XXX* 생성자입니다.  
   
-##  <a name="a-namedtora--ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
  소멸자입니다.  
   
 ```
@@ -119,7 +120,7 @@ CComObjectNoLock(void* = NULL);
  할당 된 모든 리소스를 해제 하는 호출 [FinalRelease](ccomobjectrootex-class.md#finalrelease)합니다.  
 
   
-##  <a name="a-namequeryinterfacea--ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -136,7 +137,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="a-namereleasea--ccomobjectnolockrelease"></a><a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>CComObjectNoLock::Release  
  개체에 대 한 참조 횟수를 감소 시킵니다.  
   
 ```

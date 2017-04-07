@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IQuickActivateImpl
-- ATL::IQuickActivateImpl<T>
-- ATL.IQuickActivateImpl
-- ATL.IQuickActivateImpl<T>
 - IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl::GetContentExtent
+- ATLCTL/ATL::IQuickActivateImpl::QuickActivate
+- ATLCTL/ATL::IQuickActivateImpl::SetContentExtent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namegetcontentextenta--iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
  실행 중인 컨트롤에 대 한 현재 화면 크기를 검색합니다.  
   
 ```
@@ -98,7 +98,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  참조 [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namequickactivatea--iquickactivateimplquickactivate"></a><a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
  로드 되 고 컨트롤의 빠른 초기화를 수행 합니다.  
   
 ```
@@ -112,7 +112,7 @@ STDMETHOD(QuickActivate)(
   
  참조 [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetcontentextenta--iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
  컨테이너에 할당 된 디스플레이 공간의 양을 컨트롤을 알립니다.  
   
 ```

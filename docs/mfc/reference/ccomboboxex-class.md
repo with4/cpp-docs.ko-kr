@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
+- AFXCMN/CComboBoxEx
+- AFXCMN/CComboBoxEx::CComboBoxEx
+- AFXCMN/CComboBoxEx::Create
+- AFXCMN/CComboBoxEx::CreateEx
+- AFXCMN/CComboBoxEx::DeleteItem
+- AFXCMN/CComboBoxEx::GetComboBoxCtrl
+- AFXCMN/CComboBoxEx::GetEditCtrl
+- AFXCMN/CComboBoxEx::GetExtendedStyle
+- AFXCMN/CComboBoxEx::GetImageList
+- AFXCMN/CComboBoxEx::GetItem
+- AFXCMN/CComboBoxEx::HasEditChanged
+- AFXCMN/CComboBoxEx::InsertItem
+- AFXCMN/CComboBoxEx::SetExtendedStyle
+- AFXCMN/CComboBoxEx::SetImageList
+- AFXCMN/CComboBoxEx::SetItem
+- AFXCMN/CComboBoxEx::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,14 +134,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="a-nameccomboboxexa--ccomboboxexccomboboxex"></a><a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
  이 멤버 함수를 만드는 호출을 `CComboBoxEx` 개체입니다.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="a-namecreatea--ccomboboxexcreate"></a><a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>CComboBoxEx::Create  
  콤보 상자를 만들고 연결 하는 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -177,7 +193,7 @@ virtual BOOL Create(
   
  컨트롤 확장된 창 스타일을 사용 하는 경우 호출할 [CreateEx](#createex) 대신 **만들기**합니다.  
   
-##  <a name="a-namecreateexa--ccomboboxexcreateex"></a><a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>CComboBoxEx::CreateEx  
  확장된 된 콤보 상자 컨트롤 (자식 창)을 만들어 사용 하 여 연결 하려면이 함수를 호출 하 여 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -213,7 +229,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`지정 된 확장된 창 스타일을 사용 하 여 컨트롤을 만듭니다 `dwExStyle`합니다. 설정 해야 확장된 스타일 특정 사용 하 여 확장 된 콤보 상자 컨트롤 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **CBES_EX_CASESENSITIVE**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namedeleteitema--ccomboboxexdeleteitem"></a><a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
  항목을 제거는 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -230,7 +246,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. DeleteItem, 호출 하는 경우는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지를 **CBEN_DELETEITEM** 부모 창에 알림이 전송 됩니다.  
   
-##  <a name="a-namegetcomboboxctrla--ccomboboxexgetcomboboxctrl"></a><a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
  이 멤버 함수 내에서 콤보 상자 컨트롤에 대 한 단서를 호출 하는 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -245,7 +261,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox` 반환 값은가 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 중에 소멸 됩니다.  
   
-##  <a name="a-namegeteditctrla--ccomboboxexgeteditctrl"></a><a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
  콤보 상자에 대 한 편집 컨트롤에 대 한 포인터를 가져오려는이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -260,7 +276,7 @@ CEdit* GetEditCtrl();
   
  `CEdit` 반환 값은가 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 중에 소멸 됩니다.  
   
-##  <a name="a-namegetextendedstylea--ccomboboxexgetextendedstyle"></a><a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
  이 멤버 함수에 사용 되는 확장된 스타일을 가져오려는 호출는 `CComboBoxEx` 제어 합니다.  
   
 ```  
@@ -273,7 +289,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>주의  
  참조 [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 이러한 스타일에 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-namegetimagelista--ccomboboxexgetimagelist"></a><a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
  이 멤버 함수에서 사용 하는 이미지 목록에 대 한 단서를 호출 하는 `CComboBoxEx` 제어 합니다.  
   
 ```  
@@ -286,7 +302,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>주의  
  `CImageList` 반환 값은가 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 중에 소멸 됩니다.  
   
-##  <a name="a-namegetitema--ccomboboxexgetitem"></a><a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>CComboBoxEx::GetItem  
  검색 항목에 대 한 정보는 주어진 **ComboBoxEx** 항목입니다.  
   
 ```  
@@ -303,7 +319,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namehaseditchangeda--ccomboboxexhaseditchanged"></a><a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
  사용자의 내용을 변경 되었는지 여부 결정은 **ComboBoxEx** 입력 하 여 컨트롤을 편집 합니다.  
   
 ```  
@@ -316,7 +332,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinsertitema--ccomboboxexinsertitem"></a><a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
  새 항목을 삽입 한 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -333,7 +349,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>주의  
  호출 하는 경우 `InsertItem`, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지를 [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) 부모 창에 알림이 전송 됩니다.  
   
-##  <a name="a-namesetextendedstylea--ccomboboxexsetextendedstyle"></a><a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
  컨트롤 확장 된 콤보 상자에 사용 되는 확장된 스타일을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -357,7 +373,7 @@ DWORD SetExtendedStyle(
   
  확장된 창 스타일을 사용 하 여 제어를 확장 된 콤보 상자를 만들려면 사용 [CreateEx](#createex)합니다.  
   
-##  <a name="a-namesetimagelista--ccomboboxexsetimagelist"></a><a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
  이미지 목록에 대 한 설정 하는 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -376,7 +392,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList` 반환 값은가 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 중에 소멸 됩니다.  
   
-##  <a name="a-namesetitema--ccomboboxexsetitem"></a><a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>CComboBoxEx::SetItem  
  항목에 대해 특성을 설정 된 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -393,7 +409,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>주의  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesetwindowthemea--ccomboboxexsetwindowtheme"></a><a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
  비주얼 스타일을 확장 된 콤보 상자 컨트롤을 설정합니다.  
   
 ```  

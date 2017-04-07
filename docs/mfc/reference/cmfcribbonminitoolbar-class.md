@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsContextMenuMode
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonMiniToolBar.h  
   
-##  <a name="a-namesetcommandsa--cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
  도구 모음에 표시되는 명령의 목록을 설정합니다.  
   
 ```  
@@ -118,7 +124,7 @@ void SetCommands(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="a-nameshowa--cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
  지정된 화면 좌표에 미니 도구 모음을 표시합니다.  
   
 ```  
@@ -137,7 +143,7 @@ BOOL Show(
 ### <a name="return-value"></a>반환 값  
  `TRUE`미니 도구 모음이 성공적으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameshowwithcontextmenua--cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
  상황에 맞는 메뉴와 함께 미니 도구 모음을 표시합니다.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL ShowWithContextMenu(
 ### <a name="remarks"></a>주의  
  이 함수를 사용 하 여 상황에 맞는 메뉴에 있는 미니 도구 모음을 표시 합니다. 상황에 맞는 메뉴는 미니 도구 모음 아래 15 픽셀을 위치 지정된입니다.  
   
-##  <a name="a-nameiscontextmenumodea--cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -178,7 +184,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisribbonminitoolbara--cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

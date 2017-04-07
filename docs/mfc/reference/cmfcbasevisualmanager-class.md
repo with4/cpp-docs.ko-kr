@@ -10,9 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
-- CMFCBaseVisualManager.~CMFCBaseVisualManager
-- ~CMFCBaseVisualManager
-- CMFCBaseVisualManager::~CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawCheckBox
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboBorder
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboDropButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawPushButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawRadioButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawStatusBarProgress
+- AFXVISUALMANAGER/CMFCBaseVisualManager::FillReBarPane
+- AFXVISUALMANAGER/CMFCBaseVisualManager::GetStandardWindowsTheme
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CleanUpThemes
+- AFXVISUALMANAGER/CMFCBaseVisualManager::UpdateSystemColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxvisualmanager.h  
   
-##  <a name="a-namecleanupthemesa--cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
  호출 `CloseThemeData` 에서 얻은 모든 핸들에 대 한 `UpdateSystemColors`합니다.  
   
 ```  
@@ -112,14 +121,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>주의  
  내부 전용입니다.  
   
-##  <a name="a-namecmfcbasevisualmanagera--cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
  `CMFCBaseVisualManager` 개체를 생성하고 초기화합니다.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="a-namedrawcheckboxa--cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
  현재 Windows 테마를 사용 하 여 확인란 컨트롤을 그립니다.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="a-namedrawcombobordera--cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
  현재 Windows 테마를 사용 하 여 콤보 상자 테두리를 그립니다.  
   
 ```  
@@ -198,7 +207,7 @@ virtual BOOL DrawComboBorder(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namedrawcombodropbuttona--cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
  현재 Windows 테마를 사용 하 여 콤보 상자 드롭다운 단추를 그립니다.  
   
 ```  
@@ -223,7 +232,7 @@ virtual BOOL DrawComboDropButton(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namedrawpushbuttona--cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
  현재 Windows 테마를 사용 하 여 푸시 단추를 그립니다.  
   
 ```  
@@ -250,7 +259,7 @@ virtual BOOL DrawPushButton(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namedrawradiobuttona--cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
  현재 Windows 테마를 사용 하 여 라디오 단추 컨트롤을 그립니다.  
   
 ```  
@@ -285,7 +294,7 @@ virtual BOOL DrawRadioButton(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namedrawstatusbarprogressa--cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
  상태 표시줄 컨트롤에 진행률 표시줄을 그립니다 ( [CMFCStatusBar 클래스](../../mfc/reference/cmfcstatusbar-class.md))은 현재 Windows 테마를 사용 합니다.  
   
 ```  
@@ -332,7 +341,7 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namefillrebarpanea--cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
  Rebar 컨트롤의 배경을 현재 Windows 테마를 사용 하 여 채웁니다.  
   
 ```  
@@ -355,7 +364,7 @@ virtual void FillReBarPane(
 ### <a name="return-value"></a>반환 값  
  `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namegetstandardwindowsthemea--cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
  현재 Windows 테마를 가져옵니다.  
   
 ```  
@@ -375,7 +384,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
   
 - `WinXpTheme_Silver`-silver 테마입니다.  
   
-##  <a name="a-nameupdatesystemcolorsa--cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
  호출 `OpenThemeData` 다양 한 컨트롤 그리기에 대 한 핸들을 가져오는 데: 창, 도구 모음, 단추 및 등입니다.  
   
 ```  

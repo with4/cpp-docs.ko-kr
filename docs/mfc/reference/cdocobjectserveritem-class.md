@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnHide
+- AFXDOCOB/CDocObjectServerItem::OnShow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdocob.h  
   
-##  <a name="a-namecdocobjectserveritema--cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
  `CDocObjectServerItem` 개체를 생성합니다.  
   
 ```  
@@ -109,7 +114,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  에 대 한 링크가 해제 될 때 개체를 삭제할 수 있는지 여부를 나타냅니다. 인수를 설정 **FALSE** 경우는 `CDocObjectServerItem` 개체는 문서의 데이터의 필수적인 부분입니다. 로 설정 **TRUE** 개체가 프레임 워크에서 삭제할 수 있는 문서의 데이터의 범위를 식별 하는 데 사용 되는 보조 구조입니다.  
   
-##  <a name="a-namegetdocumenta--cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
  항목을 포함 하는 문서에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -122,7 +127,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>주의  
  그러면에 인수로 전달 되는 서버 문서에 액세스할 수는 [CDocObjectServerItem](#cdocobjectserveritem) 생성자입니다.  
   
-##  <a name="a-nameonhidea--cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
  항목을 숨기려면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -132,7 +137,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>주의  
  기본 구현은 항목이 DocObject 이면 예외가 throw 됩니다. 전체 뷰를 가져오므로 액티브 DocObject 항목을 숨길 수 없습니다. DocObject 항목 사라지게 할을 비활성화 해야 합니다. 기본 구현에서는 호출 하는 항목 DocObject 없으면 [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)합니다.  
   
-##  <a name="a-nameonshowa--cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
  서버 응용 프로그램의 DocObject 항목 위치를 지시 하는 프레임 워크에서 호출 활성화 합니다.  
   
 ```  

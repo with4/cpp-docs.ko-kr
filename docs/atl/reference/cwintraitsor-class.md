@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWinTraitsOR
-- ATL::CWinTraitsOR
 - CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR::GetWndExStyle
+- ATLWIN/ATL::CWinTraitsOR::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
  호출 하는 표준 스타일의 조합 (논리적 OR 연산자 사용)를 검색 하려면이 함수는 `CWinTraits` 개체와 지정 된 기본 스타일 `t_dwStyle`합니다.  
   
 ```
@@ -97,7 +98,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  에 전달 되는 스타일의 조합을 `dwStyle` 및 항목으로 지정 된 기본 `t_dwStyle`, 논리 OR 연산자를 사용 하 여 합니다.  
   
-##  <a name="a-namegetwndexstylea--cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
  호출의 확장된 스타일의 조합 (논리적 OR 연산자 사용)를 검색 하려면이 함수는 `CWinTraits` 개체와 지정 된 기본 스타일 `t_dwStyle`합니다.  
   
 ```

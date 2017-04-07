@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CList
+- AFXTEMPL/CList
+- AFXTEMPL/CList::CList
+- AFXTEMPL/CList::AddHead
+- AFXTEMPL/CList::AddTail
+- AFXTEMPL/CList::Find
+- AFXTEMPL/CList::FindIndex
+- AFXTEMPL/CList::GetAt
+- AFXTEMPL/CList::GetCount
+- AFXTEMPL/CList::GetHead
+- AFXTEMPL/CList::GetHeadPosition
+- AFXTEMPL/CList::GetNext
+- AFXTEMPL/CList::GetPrev
+- AFXTEMPL/CList::GetSize
+- AFXTEMPL/CList::GetTail
+- AFXTEMPL/CList::GetTailPosition
+- AFXTEMPL/CList::InsertAfter
+- AFXTEMPL/CList::InsertBefore
+- AFXTEMPL/CList::IsEmpty
+- AFXTEMPL/CList::RemoveAll
+- AFXTEMPL/CList::RemoveAt
+- AFXTEMPL/CList::RemoveHead
+- AFXTEMPL/CList::RemoveTail
+- AFXTEMPL/CList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +139,7 @@ class CList : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="a-nameaddheada--clistaddhead"></a><a name="addhead"></a>CList::AddHead  
+##  <a name="addhead"></a>CList::AddHead  
  이 목록의 헤드에 새 요소 또는 요소 목록을 추가합니다.  
   
 ```  
@@ -143,7 +166,7 @@ void AddHead(CList* pNewList);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&36;](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="a-nameaddtaila--clistaddtail"></a><a name="addtail"></a>CList::AddTail  
+##  <a name="addtail"></a>CList::AddTail  
  이 목록의 꼬리에 요소 목록이 나 새 요소를 추가합니다.  
   
 ```  
@@ -170,7 +193,7 @@ void AddTail(CList* pNewList);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&37;](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="a-nameclista--clistclist"></a><a name="clist"></a>CList::CList  
+##  <a name="clist"></a>CList::CList  
  정렬된 된 빈 목록을 생성합니다.  
   
 ```  
@@ -187,7 +210,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&38;](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="a-namefinda--clistfind"></a><a name="find"></a>CList::Find  
+##  <a name="find"></a>CList::Find  
  순차적으로 지정 된 일치 하는 첫 번째 요소를 찾으려고 목록을 검색 하는 `searchValue`합니다.  
   
 ```  
@@ -212,7 +235,7 @@ POSITION Find(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&39;](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="a-namefindindexa--clistfindindex"></a><a name="findindex"></a>CList::FindIndex  
+##  <a name="findindex"></a>CList::FindIndex  
  값을 사용 하 여 `nIndex` 목록의 인덱스입니다.  
   
 ```  
@@ -232,7 +255,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&40;](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="a-namegetata--clistgetat"></a><a name="getat"></a>CList::GetAt  
+##  <a name="getat"></a>CList::GetAt  
  지정된 된 위치에 있는 목록 요소를 가져옵니다.  
   
 ```  
@@ -258,7 +281,7 @@ const TYPE& GetAt(POSITION position) const;
 ### <a name="example"></a>예제  
   예를 참조 [CList::GetHeadPosition](#getheadposition)합니다.  
   
-##  <a name="a-namegetcounta--clistgetcount"></a><a name="getcount"></a>CList::GetCount  
+##  <a name="getcount"></a>CList::GetCount  
  이 목록의 요소 수를 가져옵니다.  
   
 ```  
@@ -274,7 +297,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>예제  
   예를 참조 [CList::RemoveHead](#removehead)합니다.  
   
-##  <a name="a-namegetheada--clistgethead"></a><a name="gethead"></a>CList::GetHead  
+##  <a name="gethead"></a>CList::GetHead  
  이 그룹의 head 요소 (또는 head 요소에 대 한 참조)를 가져옵니다.  
   
 ```  
@@ -298,7 +321,7 @@ TYPE& GetHead();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&41;](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="a-namegetheadpositiona--clistgetheadposition"></a><a name="getheadposition"></a>CList::GetHeadPosition  
+##  <a name="getheadposition"></a>CList::GetHeadPosition  
  이 그룹의 head 요소 위치를 가져옵니다.  
   
 ```  
@@ -311,7 +334,7 @@ POSITION GetHeadPosition() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&42;](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="a-namegetnexta--clistgetnext"></a><a name="getnext"></a>CList::GetNext  
+##  <a name="getnext"></a>CList::GetNext  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
@@ -341,7 +364,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&43;](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="a-namegetpreva--clistgetprev"></a><a name="getprev"></a>CList::GetPrev  
+##  <a name="getprev"></a>CList::GetPrev  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 이전 항목의 값입니다.  
   
 ```  
@@ -371,7 +394,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&44;](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="a-namegetsizea--clistgetsize"></a><a name="getsize"></a>CList::GetSize  
+##  <a name="getsize"></a>CList::GetSize  
  목록의 요소 수를 반환합니다.  
   
 ```  
@@ -387,7 +410,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&45;](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="a-namegettaila--clistgettail"></a><a name="gettail"></a>CList::GetTail  
+##  <a name="gettail"></a>CList::GetTail  
  가져옵니다는 `CObject` 이 목록의 꼬리 요소를 나타내는 포인터입니다.  
   
 ```  
@@ -408,7 +431,7 @@ const TYPE& GetTail() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&46;](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="a-namegettailpositiona--clistgettailposition"></a><a name="gettailposition"></a>CList::GetTailPosition  
+##  <a name="gettailposition"></a>CList::GetTailPosition  
  이 목록의; 꼬리 요소 위치를 가져옵니다. **NULL** 목록이 비어 있는 경우.  
   
 ```  
@@ -421,7 +444,7 @@ POSITION GetTailPosition() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&47;](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="a-nameinsertaftera--clistinsertafter"></a><a name="insertafter"></a>CList::InsertAfter  
+##  <a name="insertafter"></a>CList::InsertAfter  
  지정된 된 위치에 요소 뒤를이 목록에 요소를 추가 합니다.  
   
 ```  
@@ -444,7 +467,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&48;](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="a-nameinsertbeforea--clistinsertbefore"></a><a name="insertbefore"></a>CList::InsertBefore  
+##  <a name="insertbefore"></a>CList::InsertBefore  
  이 목록에서 지정된 위치의 요소 앞에 요소를 추가합니다.  
   
 ```  
@@ -470,7 +493,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&49;](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="a-nameisemptya--clistisempty"></a><a name="isempty"></a>CList::IsEmpty  
+##  <a name="isempty"></a>CList::IsEmpty  
  이 목록에 요소가 있는지 여부를 나타냅니다.  
   
 ```  
@@ -483,7 +506,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&50;](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="a-nameremovealla--clistremoveall"></a><a name="removeall"></a>CList::RemoveAll  
+##  <a name="removeall"></a>CList::RemoveAll  
  이 목록에서 모든 요소를 제거 하 고 연결 된 메모리를 해제 합니다.  
   
 ```  
@@ -496,7 +519,7 @@ void RemoveAll();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&51;](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="a-nameremoveata--clistremoveat"></a><a name="removeat"></a>CList::RemoveAt  
+##  <a name="removeat"></a>CList::RemoveAt  
  이 목록에서 지정된 된 요소를 제거합니다.  
   
 ```  
@@ -513,7 +536,7 @@ void RemoveAt(POSITION position);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&52;](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="a-nameremoveheada--clistremovehead"></a><a name="removehead"></a>CList::RemoveHead  
+##  <a name="removehead"></a>CList::RemoveHead  
  목록의 시작에서 요소를 제거 하 고에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -533,7 +556,7 @@ TYPE RemoveHead();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&53;](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="a-nameremovetaila--clistremovetail"></a><a name="removetail"></a>CList::RemoveTail  
+##  <a name="removetail"></a>CList::RemoveTail  
  목록 꼬리에서 요소를 제거 하 고에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -553,7 +576,7 @@ TYPE RemoveTail();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections #&54;](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="a-namesetata--clistsetat"></a><a name="setat"></a>CList::SetAt  
+##  <a name="setat"></a>CList::SetAt  
  형식의 변수 **위치** 목록에 대 한 키입니다.  
   
 ```  

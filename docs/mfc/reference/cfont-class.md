@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFont
+- AFXWIN/CFont
+- AFXWIN/CFont::CFont
+- AFXWIN/CFont::CreateFont
+- AFXWIN/CFont::CreateFontIndirect
+- AFXWIN/CFont::CreatePointFont
+- AFXWIN/CFont::CreatePointFontIndirect
+- AFXWIN/CFont::FromHandle
+- AFXWIN/CFont::GetLogFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecfonta--cfontcfont"></a><a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>CFont::CFont  
  `CFont` 개체를 생성합니다.  
   
 ```  
@@ -105,7 +113,7 @@ CFont();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&70;](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="a-namecreatefonta--cfontcreatefont"></a><a name="createfont"></a>CFont::CreateFont  
+##  <a name="createfont"></a>CFont::CreateFont  
  초기화는 `CFont` 지정한 특성을 가진 개체입니다.  
   
 ```  
@@ -194,7 +202,7 @@ BOOL CreateFont(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&71;](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="a-namecreatefontindirecta--cfontcreatefontindirect"></a><a name="createfontindirect"></a>Cfont:: Createfontindirect  
+##  <a name="createfontindirect"></a>Cfont:: Createfontindirect  
  초기화는 `CFont` 에 지정 된 특성을 가진 개체는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)구조입니다.  
   
 ```  
@@ -218,7 +226,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&72;](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="a-namecreatepointfonta--cfontcreatepointfont"></a><a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>CFont::CreatePointFont  
  이 함수는 지정 된 서체의 글꼴을 만들고 포인트 크기 하는 간단한 방법을 제공 합니다.  
   
 ```  
@@ -249,7 +257,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&73;](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="a-namecreatepointfontindirecta--cfontcreatepointfontindirect"></a><a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
  이 함수는 동일 [CreateFontIndirect](#createfontindirect) 점을 제외 하 고는 **lfHeight** 의 멤버는 `LOGFONT` 장치 보다는 포인트 단위의&1;/10 초에 해석 됩니다.  
   
 ```  
@@ -276,7 +284,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&74;](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="a-namefromhandlea--cfontfromhandle"></a><a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>CFont::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CFont` 지정 되 면 개체는 **HFONT** Windows GDI font 개체에 대 한 핸들입니다.  
   
 ```  
@@ -296,7 +304,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&75;](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="a-namegetlogfonta--cfontgetlogfont"></a><a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>CFont::GetLogFont  
  복사본을 검색 하려면이 함수를 호출 하는 `LOGFONT` 에 대 한 구조 `CFont`합니다.  
   
 ```  
@@ -313,7 +321,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&76;](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="a-nameoperatorhfonta--cfontoperator-hfont"></a><a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>HFONT CFont::operator  
  이 연산자를 사용 하 여에 연결 된 글꼴의 Windows GDI 핸들을 가져올 수는 `CFont` 개체입니다.  
   
 ```  

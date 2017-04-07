@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  제공 된 이름으로는 동기화 개체를 생성합니다.  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  개체의 이름입니다. 경우 **NULL**, *pstrName* null이 됩니다.  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>주의  
  동기화 개체가 신호를 받으면 `Lock` 성공적으로 반환 하 고 스레드 개체를 소유 하 게 합니다. 동기화 개체가 신호 없음으로 (사용 불가) `Lock` 신호를 받을 수에 지정 된 시간 (밀리초)까지 동기화 개체에 대 한 대기는 *dwTimeOut* 매개 변수입니다. 동기화 개체는 지정 된 기간에 신호가 전송 되 되지 않은 경우 `Lock` 실패를 반환 합니다.  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  기본 동기화 개체에 대 한 핸들입니다.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator 핸들  
+##  <a name="operator_handle"></a>CSyncObject::operator 핸들  
  이 연산자를 사용 하 여의 핸들을 가져올 수는 `CSyncObject` 개체입니다.  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>주의  
  Windows Api를 직접 호출 하 여 핸들을 사용할 수 있습니다.  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  선언 `Unlock` 매개 변수 없이 순수 가상 함수가 고에서 파생 되는 모든 클래스에서 재정의 되어야 `CSyncObject`합니다.  
   
 ```  

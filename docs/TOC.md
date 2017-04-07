@@ -13,7 +13,7 @@
 # [C++/CLI를 사용한 .NET 개발](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Visual C++의 클라우드 및 웹 프로그래밍](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [병렬 프로그래밍](parallel/parallel-programming-in-visual-cpp.md)
-# [데이터 액세스](data/index.md)
+# [데이터 액세스](data/data-access-in-cpp.md)
 # [텍스트 및 문자열](text/text-and-strings-in-visual-cpp.md)
 # [C++용 Visual Studio IDE 사용](ide/ide-and-tools-for-visual-cpp-development.md)
 # [컴파일러 및 빌드 도구](build/building-c-cpp-programs.md)

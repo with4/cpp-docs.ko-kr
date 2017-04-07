@@ -1,84 +1,233 @@
 ---
 title: "형식 사양 구문: printf 및 wprintf 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wprintf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "플래그 지시문 printf 함수"
-  - "printf 함수의 형식 사양 필드"
-  - "전체 자릿수 필드"
-  - "인쇄 플래그 지시문"
-  - "printf 함수, 형식 사양 필드"
-  - "printf 함수, 전체 자릿수"
-  - "형식 필드"
-  - "형식 필드, printf 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr90.dll
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr80.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- wprintf
+dev_langs:
+- C++
+helpviewer_keywords:
+- format specification fields for printf function
+- print flag directives
+- printf function, precision
+- type fields, printf function
+- precision fields
+- printf function, format specification fields
+- flag directives printf function
+- type fields
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 형식 사양 구문: printf 및 wprintf 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 985fde9eacbdb8e0953aa576c45dfa0a9e173d95
+ms.lasthandoff: 03/07/2017
 
-`printf`, `wprintf` 및 관련 함수에 대한 문자열 인수 형식에 대한 구문을 설명합니다.  이러한 함수의 더 안전한 버전을 사용할 수 있습니다. 자세한 내용은 [CRT의 보안 기능](../c-runtime-library/security-features-in-the-crt.md)을 참조하세요.  개별 함수에 대한 정보는 해당 함수에 대한 설명서를 참조하세요.  이러한 함수의 목록을 보려면 [스트림 I\/O](../c-runtime-library/stream-i-o.md)를 참조하세요.  
+---
+# <a name="format-specification-syntax-printf-and-wprintf-functions"></a>형식 사양 구문: printf 및 wprintf 함수
+다양한 `printf` 함수는 형식 문자열 및 선택적 인수를 사용하고 출력에 대해 형식이 지정된 시퀀스를 생성합니다. 형식 문자열에는 출력용 리터럴 문자이거나 출력에서 인수에 형식을 지정하는 방법을 설명하는 인코드된 *변환 사양*인 *지시문*이 없거나 하나 이상 포함되어 있습니다. 이 항목에서는 형식 문자열에서 변환 사양을 인코드하는 데 사용되는 구문을 설명합니다. 이러한 함수의 목록을 보려면 [스트림 I/O](../c-runtime-library/stream-i-o.md)를 참조하세요.  
   
- 필수 및 선택적 필드를 구성하는 형식 지정의 형식은 다음과 같습니다.  
+다음 양식에서 변환 사양은 선택적 필드 및 필수 필드로 이루어져 있습니다.  
   
- `%`\[[flags](../c-runtime-library/flag-directives.md)\] \[[width](../c-runtime-library/printf-width-specification.md)\] \[**.**[precision](../c-runtime-library/precision-specification.md)\] \[{`h` &#124; `l` &#124; `ll` &#124; `w` &#124; `I` &#124; `I32` &#124; `I64`}\] [type](../c-runtime-library/printf-type-field-characters.md)  
+**%**[[*flags*](#flags)][[*width*](#width)][.[*precision*](#precision)][[*size*](#size)][*type*](#type)  
   
- 각 형식 지정 필드는 특정 형식 옵션 또는 변환 지정자를 의미하는 문자와 숫자입니다.  필수 `type` 문자는 인수에 적용되는 변환 종류를 지정합니다.  선택적 `flags`, `width` 및 `precision` 필드는 추가 형식 요소를 제어합니다.  기본 형식 지정에는 백분율 기호 및 `type` 문자만 포함됩니다. 예를 들어 `%s`는 문자열 변환을 지정합니다.  안전한 버전의 함수에서는 백분율 기호 뒤에 형식 필드로서의 의미가 없는 문자가 나오는 경우 잘못된 매개 변수 처리기가 호출됩니다.  자세한 내용은 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)를 참조하세요.  안전하지 않은 버전에서는 문자가 변경되지 않은 채로 출력에 복사됩니다.  백분율 기호를 인쇄하려면 `%%`를 사용합니다.  
+각 변환 사양 필드는 특정 형식 옵션 또는 변환 지정자를 의미하는 문자 또는 숫자입니다. 필수 *type* 필드는 인수에 적용될 변환 종류를 지정합니다. 선택적 *flags*, *width* 및 *precision* 필드는 선행 공백 또는&0;, 양쪽 맞춤 및 표시되는 전체 자릿수와 같은 추가 형식 요소를 제어합니다. *size* 필드는 사용되고 변환되는 인수의 크기를 지정합니다.  
   
- 형식 지정 필드는 인수 변환과 형식 지정의 다음과 같은 측면을 제어합니다.  
-  
- `type`  
- 관련된 `argument`가 문자, 문자열, 정수 또는 부동 소수점 숫자로 변환되는지 여부를 결정하는 필수 변환 지정자 문자입니다.  자세한 내용은 [printf 형식 필드 문자](../c-runtime-library/printf-type-field-characters.md)를 참조하세요.  
-  
- `flags`  
- 선택적 문자나 출력 양쪽 맞춤 및 기호 출력, 공백, 선행 0, 소수점 및 8진수 및 16진수 접두사의 출력을 제어하는 문자입니다.  자세한 내용은 [플래그 지시문](../c-runtime-library/flag-directives.md)를 참조하세요.  둘 이상의 플래그가 형식 지정에 나타날 수 있고 플래그는 임의의 순서로 나타날 수 있습니다.  
-  
- `width`  
- 출력된 문자의 최소 개수를 지정하는 선택적 10진수 숫자입니다.  자세한 내용은 [printf 너비 사양](../c-runtime-library/printf-width-specification.md)을 참조하세요.  
-  
- `precision`  
- 문자열, 유효 자릿수 또는 부동 소수점 값의 소수점 뒷자리수에 대해 인쇄되는 최대 자릿수 또는 정수 값에 대해 인쇄되는 최소 자릿수를 지정하는 선택적 10진수 숫자입니다.  자세한 내용은 [전체 자릿수 사양](../c-runtime-library/precision-specification.md)의 "정밀도 값이 형식에 영향을 미치는 방법"을 참조하세요.  
-  
- `h` &#124; `l` &#124; `ll` &#124; `w` &#124; `I` &#124; `I32` &#124; `I64`  
- 해당 인수의 크기를 지정하는 `type`에 대한 선택적 접두사입니다.  자세한 내용은 [크기 사양](../c-runtime-library/size-specification.md)의 "크기 접두사"를 참조하세요.  
+기본 변환 사양에는 백분율 기호와 *형식* 문자만 포함됩니다. 예를 들어 `%s`는 문자열 변환을 지정합니다. 백분율 기호를 인쇄하려면 `%%`를 사용합니다. 백분율 기호 뒤에 형식 필드로서 의미가 없는 문자가 나오는 경우 잘못된 매개 변수 처리기가 호출됩니다. 자세한 내용은 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)를 참조하세요.  
   
 > [!IMPORTANT]
->  형식 지정 문자열이 사용자 정의 문자열이 아닌지 확인합니다.  예를 들어 프로그램에서 사용자에게 이름을 입력하라는 메시지를 표시하고 `name`이라는 문자열 변수에 입력을 저장할 수 있습니다.  `name`을 인쇄하려면 다음을 수행하지 마세요.  
+>  보안 및 안정성을 위해 변환 사양 문자열이 사용자 정의되어 있지 않은지 확인하세요. 예를 들어 프로그램에서 사용자에게 이름을 입력하라는 메시지를 표시하고 `user_name`이라는 문자열 변수에 입력을 저장할 수 있습니다. `user_name`을 인쇄하려면 다음을 수행하지 마세요.  
 >   
->  `printf( name ); /* Danger!  If name contains "%s", program will crash */`  
+>  `printf( user_name ); /* Danger!  If user_name contains "%s", program will crash */`  
 >   
 >  대신 이 작업을 수행하세요.  
 >   
->  `printf( "%s", name );`  
+>  `printf( "%s", user_name );`  
   
-## 참고 항목  
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [printf\_p 위치 매개 변수](../c-runtime-library/printf-p-positional-parameters.md)   
- [플래그 지시문](../c-runtime-library/flag-directives.md)   
- [printf 너비 사양](../c-runtime-library/printf-width-specification.md)   
- [전체 자릿수 사양](../c-runtime-library/precision-specification.md)   
- [크기 사양](../c-runtime-library/size-specification.md)   
- [printf 형식 필드 문자](../c-runtime-library/printf-type-field-characters.md)
+## <a name="type"></a> 형식 변환 지정자
+*type* 변환 지정자 문자는 문자, 문자열, 포인터, 정수 또는 부동 소수점 숫자와 같은 해당 인수를 해석하는지 여부를 지정합니다. *형식* 문자는 유일하게 요구되는 변환 사양 필드이며 선택적 필드 뒤에 표시됩니다.  
+  
+형식 문자열 뒤에 나오는 인수는 해당 *type* 문자 및 선택적인 [size](#size) 접두사에 따라 해석됩니다. 문자 형식 `char` 및 `wchar_t`에 대한 변환은 **c** 또는 **C**를 사용하여 지정되고, 싱글바이트/멀티바이트 또는 와이드 문자의 문자열은 사용 중인 형식 지정 함수에 따라 **s** 또는 **S**를 사용하여 지정됩니다. **c** 및 **s**를 사용하여 지정된 문자 및 문자열 인수는 `printf` 패밀리 함수에서는 `char` 및 `char*`로 해석되고 `wprintf` 패밀리 함수에서는 `wchar_t` 및 `wchar_t*`로 해석됩니다. **C** 및 **S**를 사용하여 지정된 문자 및 문자열 인수는 `printf` 패밀리 함수에서는 `wchar_t` 및 `wchar_t*`로 해석되고 `wprintf` 패밀리 함수에서는 `char` 및 `char*`로 해석됩니다. 이 동작은 Microsoft 전용입니다.  
+  
+`short`, `int`, `long`, `long long` 등의 정수 형식 및 그 `unsigned` 변형은 **d**, **i**, **o**, **u**, **x** 및 **X**를 사용하여 지정됩니다. `float`, `double`, `long double` 등의 부동 소수점 형식은 **a**, **A**, **e**, **E**, **f**, **F**, **g** 및 **G**를 사용하여 지정됩니다. *size* 접두사에 의해 수정되지 않는 한, 기본적으로 정수 인수는 `int` 형식으로 강제 변환되고 부동 소수점 인수는 `double`로 강제 변환됩니다. 64비트 시스템에서, `int`는 32비트 값이므로 **ll** 또는 **I64**의 *size* 접두사가 사용되지 않는 경우 64비트 정수는 출력을 위해 형식이 지정될 때 잘립니다. **p**로 지정되는 포인터 형식은 플랫폼에 대해 기본 포인터 크기를 사용합니다.  
+  
+> [!NOTE]
+>  **Z** 형식 문자와 **c**, **C**, **s** 및 **S** 형식 문자가 `printf` 및 `wprintf` 함수와 함께 사용될 때의 동작은 Microsoft 확장입니다. ISO C 표준에서는 모든 형식 지정 함수에서 반각 문자 및 문자열에 대해 일관되게 **c** 및 **s**를 사용하고 와이드 문자 및 문자열에 대해 **C** 및 **S**를 사용합니다.   
+  
+### <a name="type-field-characters"></a>형식 필드 문자  
+  
+|형식 문자|인수|출력 형식|  
+|--------------------|--------------|-------------------|  
+|**c**|문자|`printf` 함수와 함께 사용될 때 단일 바이트 문자를 지정하고, `wprintf` 함수와 함께 사용될 때 와이드 문자를 지정합니다.|  
+|**C**|문자|`printf` 함수와 함께 사용될 때 와이드 문자를 지정하고, `wprintf` 함수와 함께 사용될 때 단일 바이트 문자를 지정합니다.|  
+|**d**|정수|부호 있는&10;진수 정수입니다.|  
+|**i**|정수|부호 있는&10;진수 정수입니다.|  
+|**o**|정수|부호 없는&8;진수 정수입니다.|  
+|**u**|정수|부호 없는&10;진수 정수.|  
+|**x**|정수|부호 없는&16;진수 정수이며 "abcdef"를 사용합니다.|  
+|**X**|정수|부호 없는&16;진수 정수이며 "ABCDEF"를 사용합니다.|  
+|**e**|부동 소수점|부호 있는 값으로서 형식은 [–]*d.dddd*__e±__*dd*[*d*]입니다. 여기서 *d*는 하나의&10;진수이고 *dddd*는 지정된 전체 자릿수에 따라 하나 이상의&10;진수이거나 기본적으로&6; 자릿수입니다. *dd*[*d*]는 [출력 형식](../c-runtime-library/set-output-format.md) 및 지수 크기에 따라 두 개 또는 세 개의&10;진수입니다.|  
+|**E**|부동 소수점|**e**가 아니라 **E**가 지수를 도입한다는 점을 제외하고는 **e** 형식과 동일합니다.|  
+|**f**|부동 소수점|형식이 [–]*dddd*__.__*dddd*인 부호 있는 값입니다. 여기서 *dddd*는 하나 이상의&10;진수입니다. 소수점 앞의 자릿수는 수의 크기에 따라 다르며, 소수점 뒤의 자릿수는 요청된 전체 자릿수에 따라 다릅니다. 기본 자릿수는&6;입니다.|  
+|**F**|부동 소수점|무한대 및 NAN 출력이 대문자로 표시되는 점을 제외하고 **f** 형식과 동일합니다.|  
+|**g**|부동 소수점|**f** 또는 **e** 형식으로 표시되는 부호 있는 값으로서, 두 형식 중 주어진 값 및 전체 자릿수에 대해 더 간단한 형식이 사용됩니다. **e** 형식은 값의 지수가 –4보다 작거나 *precision* 인수보다 크거나 같을 때만 사용됩니다. 뒤에 나오는&0;은 잘리고, 소수점은 뒤에 하나 이상의 수가 나오는 경우에만 나타납니다.|  
+|**G**|부동 소수점|**e**가 아니라 **E**가 지수를 도입(해당하는 경우)한다는 점을 제외하고는 **g** 형식과 동일합니다.|  
+|**a**|부동 소수점|형식이 [−]0x*h.hhhh*__p±__*dd*인 부호 있는&16;진수 배정밀도 부동 소수점 값입니다. 여기서 *h.hhhh*는 가수의&16;진수(소문자 사용)이며 *dd*는 지수의 하나 이상의 숫자입니다. 정밀도는 소수점 뒤의 자릿수를 지정합니다.|  
+|**A**|부동 소수점|형식이 [−]0X*h.hhhh*__P±__*dd*인 부호 있는&16;진수 배정밀도 부동 소수점 값입니다. 여기서 *h.hhhh*는 가수의&16;진수(대문자 사용)이며 *dd*는 지수의 하나 이상의 숫자입니다. 정밀도는 소수점 뒤의 자릿수를 지정합니다.|  
+|**n**|정수 포인터|지금까지 성공적으로 스트림 또는 버퍼에 쓴 문자의 수입니다. 이 값은 주소가 인수로 지정된 정수에 저장됩니다. 가리키는 대상의 정수 크기는 인수 크기 사양 접두사로 제어할 수 있습니다. **n** 지정자는 기본적으로 사용되지 않습니다. 자세한 내용은 중요 보안 정보를 참조하세요.|  
+|**p**|포인터 유형|인수를&16;진수로 된 주소로 표시합니다.|  
+|**s**|문자열|`printf` 함수와 함께 사용될 때 단일 바이트 또는 멀티바이트 문자열을 지정하고, `wprintf` 함수와 함께 사용될 때는 와이드 문자열을 지정합니다. 첫 번째 null 문자 직전까지 또는 *precision* 값에 도달할 때까지 문자가 표시됩니다.|  
+|**S**|문자열|`printf` 함수와 함께 사용될 때 와이드 문자열을 지정하고, `wprintf` 함수와 함께 사용될 때는 단일 바이트 또는 멀티바이트 문자열을 지정합니다. 첫 번째 null 문자 직전까지 또는 *precision* 값에 도달할 때까지 문자가 표시됩니다.|  
+|**Z**|`ANSI_STRING` 또는 `UNICODE_STRING` 구조체|[ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) 또는 [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 구조체의 주소가 인수로 전달될 때 구조체의 `Buffer` 필드에서 가리키는 버퍼에 포함되는 문자열을 표시합니다. **w**의 *size* 한정자 접두사를 사용하여 `UNICODE_STRING` 인수를 지정합니다(예: `%wZ`). 구조체의 `Length` 필드를 문자열의 길이(바이트 단위)로 설정해야 합니다. 구조체의 `MaximumLength` 필드를 버퍼의 길이(바이트 단위)로 설정해야 합니다.<br /><br /> 일반적으로 **Z** 형식 문자는 `dbgPrint` 및 `kdPrint` 등의 변환 사양을 사용하는 드라이버 디버깅 함수에서만 사용됩니다.|  
+  
+Visual Studio 2015부터 부동 소수점 변환 지정자(**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**)에 해당하는 인수가 제한 없음, 무한 또는 NAN인 경우 형식이 지정된 출력은 C99 표준을 따릅니다. 이 표에는 형식이 지정된 출력이 나와 있습니다.  
+  
+|값|출력|  
+|-----------|------------|  
+|infinity|`inf`|  
+|자동 NaN|`nan`|  
+|신호 NAN|`nan(snan)`|  
+|무한 NAN|`nan(ind)`|  
+  
+이러한 값 앞에 부호가 추가될 수 있습니다. 부동 소수점 *type* 변환 지정자 문자가 대문자인 경우 출력도 대문자로 형식이 지정됩니다. 예를 들어 형식 지정자가 `%f` 대신 `%F`이면 무한대는 `inf` 대신 `INF`로 형식이 지정됩니다. 또한 `scanf` 함수는 이러한 문자열을 구문 분석할 수 있으므로 이러한 값은 `printf` 및 `scanf` 함수를 왕복할 수 있습니다.
+  
+Visual Studio 2015 이전에는 CRT에서 제한 없음, 무한 및 NAN 값의 출력에 대해 다른 비표준 형식을 사용했습니다.  
+  
+|값|출력|  
+|-----------|------------|  
+|+ 무한대|`1.#INF` *random-digits*|  
+|– 무한대|`–1.#INF` *random-digits*|  
+|무한(자동 NaN과 같음)|*digit* `.#IND` *random-digits*|  
+|NaN|*digit* `.#NAN` *random-digits*|  
+  
+이러한 문자열 앞에 부호가 추가될 수 있고, 때때로 비정상적인 효과와 함께 필드 너비 및 전체 자릿수에 따라 형식이 약간 다르게 지정되었을 수 있습니다. 예를 들어 #INF는 2 자릿수로 "반올림"되기 때문에 `printf("%.2f\n", INFINITY)`는 `1.#J`를 인쇄합니다.
+
+> [!NOTE]
+>  `%s` 또는 `%S`에 해당하는 인수나 `%Z`에 해당하는 인수의 `Buffer` 필드가 null 포인터인 경우 "(null)"이 표시됩니다.  
+  
+> [!NOTE]
+>  모든 지수 형식에서 표시할 지수의 최소 자릿수는&2;입니다. 필요한 경우에만&3;을 사용합니다. [_set_output_format](../c-runtime-library/set-output-format.md) 함수를 사용하여, Visual Studio 2013 이하용으로 작성된 코드와의 호환성을 위해 표시되는 자릿수를 3으로 설정할 수 있습니다.  
+  
+> [!IMPORTANT]
+>  `%n` 형식은 본질적으로 안전하지 않기 때문에 기본적으로 사용되지 않습니다. 형식 문자열에서 `%n`이 발견되는 경우 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. `%n` 지원을 사용하도록 설정하려면 [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md)을 참조하세요.  
+  
+## <a name="flags"></a> 플래그 지시문
+변환 사양의 첫 번째 선택적 필드에는 출력 양쪽 맞춤을 지정하고 기호, 공백, 선행&0;, 소수점,&8;진수 및&16;진수 접두사의 출력을 제어하는 플래그 문자가&0;개 이상인 *플래그 지시문*이 포함됩니다. 하나 이상의 플래그 지시문이 변환 사양에 표시될 수 있으며, 플래그 문자는 어떠한 순서로든 표시될 수 있습니다.  
+  
+### <a name="flag-characters"></a>플래그 문자  
+  
+|플래그|의미|기본|  
+|----------|-------------|-------------|  
+|**-**|지정한 필드 너비 내에서 결과를 왼쪽에 맞춰 표시합니다.|오른쪽에 맞춰 표시합니다.|  
+|**+**|부호 있는 형식에는 기호(+ 또는 –)를 사용하여 출력 값에 접두사를 추가합니다.|부호 있는 음수 값(-)에 대해서만 기호가 표시됩니다.|  
+|**0**|*width*에 **0**이 접두사로 붙은 경우, 최소 너비에 도달할 때까지 선행&0;이 추가됩니다. **0**과 **-**가 둘 다 표시되는 경우 **0**은 무시됩니다. **0**이 정수 형식(**i**, **u**, **x**, **X**, **o**, **d**)에 대해 지정되고 전체 자릿수 사양도 있는 경우(예: `%04.d`) **0**은 무시됩니다. **0**이 **a** 또는 **A** 부동 소수점 형식에 대해 지정된 경우, 선행&0;은 `0x` 또는 `0X` 접두사 뒤의 가수 앞에 붙습니다.|패딩이 없습니다.|  
+|**blank** (' ')|부호 있는 양수 출력 값에는 공백을 접두사로 추가합니다. 공백과 + 플래그가 모두 표시되는 경우 공백은 무시됩니다.|공백이 표시되지 않습니다.|  
+|**#**|**#** 플래그가 **o**, **x** 또는 **X** 형식과 함께 사용되는 경우 이 플래그는 0, 0x 또는 0X를 각각 사용하여 0이 아닌 모든 출력 값에 접두사를 추가합니다.|공백이 표시되지 않습니다.|  
+||**e**, **E**, **f**, **F**, **a** 또는 **A** 형식과 함께 사용하는 경우 **#** 플래그는 출력 값에 소수점을 강제로 포함시킵니다.|소수점 뒤에 숫자가 있는 경우에만 소수점이 표시됩니다.|  
+||**#** 플래그를 **g** 또는 **G** 형식과 함께 사용하는 경우 이 플래그는 출력 값이 소수점을 강제로 포함하도록 하고 후행&0;이 잘리지 않도록 합니다.<br /><br /> **c**, **d**, **i**, **u** 또는 **s**와 함께 사용하는 경우 무시됩니다.|소수점 뒤에 숫자가 있는 경우에만 소수점이 표시됩니다. 후행&0;이 잘립니다.|  
+  
+## <a name="width"></a> 너비 사양
+변환 사양에서 선택적인 너비 사양 필드는 *flags* 문자 뒤에 표시됩니다. *width* 인수는 출력 문자의 최소 개수를 제어하는 음수가 아닌&10;진수 정수입니다. 출력 값의 문자 수가 지정된 너비보다 작은 경우 왼쪽 정렬 플래그(**-**)가 지정되었는지의 여부에 따라 최소 너비 값에 도달할 때까지 값의 왼쪽 또는 오른쪽에 공백이 추가됩니다. *width*가 0으로 시작하는 경우 변환이 무한대 또는 NAN인 경우를 제외하고 최소 너비에 도달할 때까지 정수 또는 부동 소수점 변환에 선행 0이 추가됩니다.  
+  
+ 너비 지정은 값을 자르지 않습니다. 출력 값의 문자 수가 지정된 너비보다 크거나 *width*가 지정되지 않은 경우 *precision* 사양에 따라 값의 모든 문자가 출력됩니다.  
+  
+ 너비 지정이 별표(`*`)인 경우 인수 목록의 `int` 인수가 값을 제공합니다. 아래 예제와 같이 *width* 인수는 반드시 인수 목록에서 형식이 지정되는 값 앞에 와야 합니다.  
+  
+ `printf("%0*f", 5, 3);  /* 00003 is output */`  
+  
+ 변환 사양에서 *width* 값이 작거나 누락된 경우 출력 값이 잘리지 않습니다. 변환의 결과가 *width* 값보다 더 큰 경우 변환 결과를 포함하기 위해 필드가 확장됩니다.  
+  
+## <a name="precision"></a> 전체 자릿수 사양
+변환 사양에서 세 번째 선택적 필드는 전체 자릿수 사양입니다. 이 필드의 내용은 마침표(.) 뒤에 음수가 아닌&10;진수 정수가 붙는 형식으로 구성됩니다. 이 정수는 변환 유형에 따라 문자열 문자의 수, 소수점의 수 또는 출력할 유효 자릿수의 수를 지정합니다.  
+  
+ 너비 사양과 달리 전체 자릿수 사양을 사용하는 경우에는 출력 값이 잘리거나 부동 소수점 값이 반올림될 수 있습니다. *precision*을 0으로 지정하는 경우 변환하려는 값이 0이면 아래 예제에 나와 있는 바와 같이 결과에 문자가 출력되지 않습니다.  
+  
+ `printf( "%.0d", 0 );      /* No characters output */`  
+  
+ 전체 자릿수 사양이 별표(\*)인 경우 인수 목록의 `int` 인수가 값을 제공합니다. 인수 목록에서 *precision* 인수는 아래 예제에 나와 있는 것처럼 형식이 지정되는 값 앞에 와야 합니다.  
+  
+ `printf( "%.*f", 3, 3.14159265 );  /* 3.142 output */`  
+  
+ 다음 표에 표시된 것처럼 *type* 문자에 따라 *precision* 또는 기본 전체 자릿수(*precision*을 생략하는 경우)의 해석이 결정됩니다.  
+  
+### <a name="how-precision-values-affect-type"></a>전체 자릿수 값이 형식에 영향을 주는 방식  
+  
+|형식|의미|기본|  
+|----------|-------------|-------------|  
+|**a**, **A**|정밀도는 소수점 뒤의 자릿수를 지정합니다.|기본 전체 자릿수는 13입니다. 전체 자릿수가 0인 경우 **#** 플래그를 사용하지 않으면 소수점이 인쇄되지 않습니다.|  
+|**c**, **C**|전체 자릿수가 적용되지 않습니다.|문자가 출력됩니다.|  
+|**d**, **i**, **o**, **u**, **x**, **X**|전체 자릿수가 인쇄할 최소 자릿수를 지정합니다. 인수의 자릿수가 *precision* 미만이면 출력 값 왼쪽에&0;이 채워집니다. 자릿수가 *precision*을 초과해도 값은 잘리지 않습니다.|기본 전체 자릿수는 1입니다.|  
+|**e**, **E**|전체 자릿수가 소수점 뒤에 인쇄할 자릿수를 지정합니다. 마지막으로 인쇄되는 숫자는 반올림됩니다.|기본 전체 자릿수는 6입니다. *precision*이 0이거나 마침표(.)가 표시되고 그 뒤에 숫자가 없으면 소수점은 인쇄되지 않습니다.|  
+|**f**, **F**|전체 자릿수 값이 소수점 뒤의 자릿수를 지정합니다. 소수점이 표시되는 경우에는 소수점 앞에 숫자가 하나 이상 표시됩니다. 값은 적절한 자릿수로 반올림됩니다.|기본 전체 자릿수는 6입니다. *precision*이 0이거나 마침표(.)가 표시되고 그 뒤에 숫자가 없으면 소수점은 인쇄되지 않습니다.|  
+|**g**, **G**|전체 자릿수가 인쇄되는 유효 자릿수의 최대 수를 지정합니다.|유효 자릿수&6;개가 인쇄되며 후행&0;은 잘립니다.|  
+|**s**, **S**|전체 자릿수가 인쇄할 최대 문자 수를 지정합니다. *precision*을 초과하는 문자는 인쇄되지 않습니다.|null 문자가 나타날 때까지 문자가 인쇄됩니다.|  
+  
+## <a name="size"></a> 인수 크기 사양
+변환 사양에서 *크기* 필드는 *형식* 변환 지정자에 대한 인수 길이 한정자입니다. *type* 필드에 대한 *size* 필드 접두사(**hh**, **h**, **j**, **l**(소문자 L), **L**, **ll**, **t**, **w**, **z**, **I**(대문자 i), **I32** 및 **I64**)는 수정하는 변환 지정자에 따라 해당 인수의 "크기"(길거나 짧음, 32비트 또는 64비트, 싱글바이트 문자 또는 와이드 문자)를 지정합니다. 다음 표에 표시된 것처럼 이러한 크기 접두사는 `printf` 및 `wprintf` 함수 패밀리에 *type* 문자와 함께 사용되어 인수 크기 해석을 지정합니다. 일부 인수 형식의 경우 *size* 필드는 선택 사항입니다. 크기 접두사가 지정되지 않으면 포맷터가 정수 인수(예: 부호 있는 또는 부호 없는 `char`, `short`, `int`, `long` 및 열거형 형식)를 32비트 `int` 형식으로 사용하고 `float`, `double` 및 `long double` 부동 소수점 인수를 64비트 `double` 형식으로 사용합니다. 가변 인수 목록의 기본 인수 승격 규칙과 일치합니다. 인수 승격에 대한 자세한 내용은 [후위 식](../cpp/postfix-expressions.md)의 줄임표 및 기본 인수를 참조하세요. 32비트 및 64비트 시스템 모두에서 **ll** 또는 **I64** 크기 접두사가 64비트 정수 인수의 변환 사양에 포함되어야 합니다. 그렇지 않으면 포맷터 동작이 정의되지 않습니다.  
+  
+일부 형식은 32비트 및 64비트 코드에서 크기가 다릅니다. 예를 들어 `size_t`는 x86용으로 컴파일된 코드에서는 32비트 길이이며 x64용으로 컴파일된 코드에서는 64비트입니다. 가변 너비 형식에 대해 플랫폼 제약 없는 형식 지정 코드를 만들려면 가변 너비 인수 크기 한정자를 사용할 수 있습니다. 또는 64비트 인수 크기 한정자를 사용하여 명시적으로 가변 너비 인수 형식을 64비트로 승격합니다. Microsoft 전용 **I**(대문자 i) 인수 크기 한정자는 가변 너비 정수 인수를 처리하지만, 이식성을 위해 형식별 **j**, **t** 및 **z** 한정자를 사용하는 것이 좋습니다.  
+  
+### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Printf 및 wprintf 서식 형식 지정자에 대한 크기 접두사  
+  
+|지정할 함수|접두사 사용|형식 지정자 사용|  
+|----------------|----------------|-------------------------|  
+|`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`short int`<br />`short unsigned int`|**h**|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`intmax_t`<br />`uintmax_t`|**j** 또는 **I**(대문자 i)|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`long double`|**l**(소문자 L) 또는 **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g** 또는 **G**|  
+|`long int`<br />`long unsigned int`|**l**(소문자 L)|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`long long int`<br />`unsigned long long int`|**ll**(소문자 LL)|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`ptrdiff_t`|**t** 또는 **I**(대문자 i)|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|`size_t`|**z** 또는 **I**(대문자 i)|**d**, **i**, **o**, **u**, **x** 또는 **X**|  
+|싱글바이트 문자|**h**|**c** 또는 **C**|  
+|와이드 문자|**l**(소문자 L) 또는 **w**|**c** 또는 **C**|  
+|싱글바이트 문자열|**h**|**s**, **S** 또는 **Z**|  
+|와이드 문자열|**l**(소문자 L) 또는 **w**|**s**, **S** 또는 **Z**|  
+  
+`intmax_t`, `uintmax_t`, `ptrdiff_t` 및 `size_t` 형식은 32비트 플랫폼에서는 `__int32` 또는 `unsigned __int32`이며 64비트 플랫폼에서는 `__int64` 또는 `unsigned __int64`입니다. **I**(대문자 i), **j**, **t** 및 **z** 크기 접두사는 플랫폼에 대해 올바른 인수를 사용합니다.  
+  
+Visual C++에서 `long double`은 고유한 형식이지만 내부 표현은 `double`과 동일합니다.  
+  
+**hc** 또는 **hC** 형식 지정자는 `printf` 함수의 **c** 및 `wprintf` 함수의 **C**와 같습니다. **lc**, **lC**, **wc** 또는 **wC** 형식 지정자는 `printf` 함수의 **C** 및 `wprintf` 함수의 **c**와 같습니다. **hs** 또는 **hS** 형식 지정자는 `printf` 함수의 **s** 및 `wprintf` 함수의 **S**와 같습니다. **ls**, **lS**, **ws** 또는 **wS** 형식 지정자는 `printf` 함수의 **S** 및 `wprintf` 함수의 **s**와 같습니다.  
+  
+> [!NOTE]
+>  **I**(대문자 i), **I32**, **I64** 및 **w** 인수 크기 한정자 접두사는 Microsoft 확장이며 ISO C와 호환되지 않습니다. `char` 형식의 데이터와 함께 사용되는 **h** 접두사 및 `double` 형식의 데이터와 함께 사용되는 **l** 접두사는 Microsoft 확장입니다.  
+  
+
+## <a name="see-also"></a>참고 항목  
+ [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [printf_p 위치 매개 변수](../c-runtime-library/printf-p-positional-parameters.md)   
+

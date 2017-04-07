@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCtrlView
+- AFXWIN/CCtrlView
+- AFXWIN/CCtrlView::CCtrlView
+- AFXWIN/CCtrlView::OnDraw
+- AFXWIN/CCtrlView::PreCreateWindow
+- AFXWIN/CCtrlView::m_dwDefaultStyle
+- AFXWIN/CCtrlView::m_strClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecctrlviewa--cctrlviewcctrlview"></a><a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
  `CCtrlView` 개체를 생성합니다.  
   
 ```  
@@ -108,14 +114,14 @@ CCtrlView(
 ### <a name="remarks"></a>주의  
  새로운 프레임 창을 만들거나 창이 분할 되어 때 생성자를 호출 하는 프레임 워크. 재정의 [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) 문서를 연결한 후에 뷰를 초기화할 수 있습니다. 호출 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 또는 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Windows 개체를 만듭니다.  
   
-##  <a name="a-namemstrclassa--cctrlviewmstrclass"></a><a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>CCtrlView::m_strClass  
  뷰 클래스에 대 한 Windows 클래스 이름을 포함합니다.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="a-namemdwdefaultstylea--cctrlviewmdwdefaultstyle"></a><a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
  뷰 클래스에 대 한 기본 스타일을 포함합니다.  
   
 ```  
@@ -125,7 +131,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>주의  
  이 스타일 창을 만들 때 적용 됩니다.  
   
-##  <a name="a-nameondrawa--cctrlviewondraw"></a><a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>CCtrlView::OnDraw  
  내용을 그리는 데 프레임 워크에서 호출 된 `CCtrlView` 지정 된 장치 컨텍스트를 사용 하 여 개체입니다.  
   
 ```  
@@ -139,7 +145,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>주의  
  `OnDraw`일반적으로 지정 된 화면 장치 컨텍스트를 전달 하는 화면 표시에 대 한 호출 `pDC`합니다.  
   
-##  <a name="a-nameprecreatewindowa--cctrlviewprecreatewindow"></a><a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
  이 `CWnd` 개체에 연결된 Windows 창을 만들기 전에 호출됩니다.  
   
 ```  

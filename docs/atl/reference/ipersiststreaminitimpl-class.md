@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStreamInitImpl
-- ATL::IPersistStreamInitImpl<T>
-- ATL.IPersistStreamInitImpl<T>
 - IPersistStreamInitImpl
-- ATL.IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl::GetClassID
+- ATLCOM/ATL::IPersistStreamInitImpl::GetSizeMax
+- ATLCOM/ATL::IPersistStreamInitImpl::InitNew
+- ATLCOM/ATL::IPersistStreamInitImpl::IsDirty
+- ATLCOM/ATL::IPersistStreamInitImpl::Load
+- ATLCOM/ATL::IPersistStreamInitImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
  개체의 CLSID를 검색합니다.  
   
 ```
@@ -99,7 +102,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>주의  
  참조 [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetsizemaxa--ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
  개체의 데이터를 저장 하는 데 필요한 스트림의 크기를 검색 합니다.  
   
 ```
@@ -112,7 +115,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>주의  
  참조 [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinitnewa--ipersiststreaminitimplinitnew"></a><a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
  새로 만든된 개체를 초기화합니다.  
   
 ```
@@ -122,7 +125,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>주의  
  참조 [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameisdirtya--ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
  개체의 데이터를 마지막으로 저장 된 이후 변경 되었는지 여부를 확인 합니다.  
   
 ```
@@ -132,7 +135,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>주의  
  참조 [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameloada--ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>IPersistStreamInitImpl::Load  
  지정 된 스트림에서 해당 개체의 속성을 로드합니다.  
   
 ```
@@ -144,7 +147,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  참조 [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesavea--ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>IPersistStreamInitImpl::Save  
  지정 된 스트림에 개체의 속성을 저장합니다.  
   
 ```

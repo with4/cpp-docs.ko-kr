@@ -9,12 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CA2CAEX
-- ATL.CA2CAEX<t_nBufferLength>
-- ATLCONV/CA2CAEX
-- ATL::CA2CAEX<t_nBufferLength>
-- ATL::CA2CAEX
 - CA2CAEX
+- ATLCONV/ATL::CA2CAEX
+- ATLCONV/ATL::CA2CAEX::CA2CAEX
+- ATLCONV/ATL::CA2CAEX::m_psz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +103,7 @@ class CA2CAEX
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
  생성자입니다.  
   
 ```
@@ -123,7 +121,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  번역에 필요한 버퍼를 만듭니다.  
   
-##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
  소멸자입니다.  
   
 ```
@@ -133,14 +131,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>주의  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>CA2CAEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+##  <a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
  변환 연산자입니다.  
   
 ```  

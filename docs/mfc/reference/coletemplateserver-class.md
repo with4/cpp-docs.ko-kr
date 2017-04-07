@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
+- AFXDISP/COleTemplateServer
+- AFXDISP/COleTemplateServer::COleTemplateServer
+- AFXDISP/COleTemplateServer::ConnectTemplate
+- AFXDISP/COleTemplateServer::Unregister
+- AFXDISP/COleTemplateServer::UpdateRegistry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +95,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="a-namecoletemplateservera--coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
  `COleTemplateServer` 개체를 생성합니다.  
   
 ```  
@@ -100,7 +105,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>주의  
  에 대 한 간략 한 설명은의 사용은 `COleTemplateServer` 클래스를 참조는 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) 클래스 개요.  
   
-##  <a name="a-nameconnecttemplatea--coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
  가 가리키는 문서 서식 파일을 연결 `pDocTemplate` 기본 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) 개체입니다.  
   
 ```  
@@ -123,7 +128,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>주의  
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameunregistera--coletemplateserverunregister"></a><a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>COleTemplateServer::Unregister  
  관련된 문서 서식 파일을 등록 취소합니다.  
   
 ```  
@@ -136,7 +141,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>주의  
  EnterRemarks  
   
-##  <a name="a-nameupdateregistrya--coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
  문서 템플릿 문자열에서 파일 형식 정보를 로드 하 고 OLE 시스템 레지스트리에 해당 정보를 배치 합니다.  
   
 ```  

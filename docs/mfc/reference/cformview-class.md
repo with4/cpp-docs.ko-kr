@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFormView
+- AFXEXT/CFormView
+- AFXEXT/CFormView::CFormView
+- AFXEXT/CFormView::IsInitDlgCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFormView : public CScrollView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-namecformviewa--cformviewcformview"></a><a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>CFormView::CFormView  
  `CFormView` 개체를 생성합니다.  
   
 ```  
@@ -117,7 +120,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView #&91;](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="a-nameisinitdlgcompleteda--cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>Cformview:: Isinitdlgcompleted  
+##  <a name="isinitdlgcompleted"></a>Cformview:: Isinitdlgcompleted  
  MFC에서 다른 작업을 수행하기 전에 초기화가 완료되었는지 확인하는 데 사용됩니다.  
   
 ```  

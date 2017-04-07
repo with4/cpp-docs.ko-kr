@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DMesh
 - CD2DMesh
+- AFXRENDERTARGET/CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::Attach
+- AFXRENDERTARGET/CD2DMesh::Create
+- AFXRENDERTARGET/CD2DMesh::Destroy
+- AFXRENDERTARGET/CD2DMesh::Detach
+- AFXRENDERTARGET/CD2DMesh::Get
+- AFXRENDERTARGET/CD2DMesh::IsValid
+- AFXRENDERTARGET/CD2DMesh::Open
+- AFXRENDERTARGET/CD2DMesh::m_pMesh
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DMesh : public CD2DResource;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dmesha--cd2dmeshcd2dmesh"></a><a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
+##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
  소멸자입니다. D2D 메시 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="a-nameattacha--cd2dmeshattach"></a><a name="attach"></a>CD2DMesh::Attach  
+##  <a name="attach"></a>CD2DMesh::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Mesh* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecd2dmesha--cd2dmeshcd2dmesh"></a><a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
+##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
  CD2DMesh 개체를 만듭니다.  
   
 ```  
@@ -126,7 +135,7 @@ CD2DMesh(
  `bAutoDestroy`  
  개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
   
-##  <a name="a-namecreatea--cd2dmeshcreate"></a><a name="create"></a>CD2DMesh::Create  
+##  <a name="create"></a>CD2DMesh::Create  
  CD2DMesh를 만듭니다.  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dmeshdestroy"></a><a name="destroy"></a>CD2DMesh::Destroy  
+##  <a name="destroy"></a>CD2DMesh::Destroy  
  CD2DMesh 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dmeshdetach"></a><a name="detach"></a>CD2DMesh::Detach  
+##  <a name="detach"></a>CD2DMesh::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Mesh* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegeta--cd2dmeshget"></a><a name="get"></a>CD2DMesh::Get  
+##  <a name="get"></a>CD2DMesh::Get  
  반환 ID2D1Mesh 인터페이스  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Mesh* Get();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Mesh 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-nameisvalida--cd2dmeshisvalid"></a><a name="isvalid"></a>CD2DMesh::IsValid  
+##  <a name="isvalid"></a>CD2DMesh::IsValid  
  리소스 유효성 검사  
   
 ```  
@@ -177,14 +186,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namempmesha--cd2dmeshmpmesh"></a><a name="m_pmesh"></a>CD2DMesh::m_pMesh  
+##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
  ID2D1Mesh에 대 한 포인터입니다.  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="a-nameopena--cd2dmeshopen"></a><a name="open"></a>CD2DMesh::Open  
+##  <a name="open"></a>CD2DMesh::Open  
  모집단에 대 한 메시를 엽니다.  
   
 ```  
@@ -194,7 +203,7 @@ ID2D1TessellationSink* Open();
 ### <a name="return-value"></a>반환 값  
  메시를 채우는 데 사용 되는 ID2D1TessellationSink에 대 한 포인터입니다.  
   
-##  <a name="a-nameoperatorid2d1meshstara--cd2dmeshoperator-id2d1mesh"></a><a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
+##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
  반환 ID2D1Mesh 인터페이스  
   
 ```  

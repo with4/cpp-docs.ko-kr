@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  새 [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) 개체입니다.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  팝업 메뉴를 나타내는 부울 멤버 변수는 프레임 워크를 표시 합니다.  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>주의  
  경우 `m_bOSMenu` 는 `TRUE`, 프레임 워크 호출의 상속 된 `TrackPopupMenu` 이 개체에 대 한 메서드. 그렇지 않으면 프레임 워크 호출 [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)합니다.  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  팝업 메뉴의 위치를 나타내는 부울 멤버 변수입니다.  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>주의  
  사용자가 메뉴 단추를 누르면 응용 프로그램이 팝업 메뉴에 표시 됩니다. 프레임 워크 단추 아래 또는 단추 오른쪽에 팝업 메뉴에 표시 됩니다. 이 단추는 팝업 메뉴가 표시 되는 위치를 나타내는 작은 화살표를 있습니다. 경우 `m_bRightArrow` 는 `TRUE`, 프레임 워크가 단추의 오른쪽에 팝업 메뉴를 표시 합니다. 그렇지 않은 경우 단추 아래에 있는 팝업 메뉴를 표시합니다.  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  사용자가 팝업 메뉴에서 항목을 선택 하는 동안 메뉴 단추가 표시 되는지를 나타내는 부울 멤버 변수를 눌렀습니다.  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  하는 경우는 `m_bStayPressed` 멤버는 `TRUE`, 단추를 클릭할 때 메뉴 단추 누름 됩니다. 사용자 선택 하거나 취소 하 여 팝업 메뉴를 닫은 후 될 때까지 누른 유지 합니다.  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  연결 된 메뉴에 대 한 핸들입니다.  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>주의  
  프레임 워크 메뉴 단추를 클릭할 때이 멤버 변수에서 표시 된 메뉴를 표시 합니다.  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  어떤 항목을 나타내는 정수 사용자가 팝업 메뉴에서 선택 합니다.  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>주의  
  사용자가 메뉴를 선택 하지 않고 취소 또는 오류가 발생 하는 경우이 멤버 변수의 값은&0;입니다.  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  디스패치 되기 전에 창 메시지를 변환 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  텍스트 크기와 이미지 크기에 따라 단추 크기를 변경합니다.  
   
 ```  

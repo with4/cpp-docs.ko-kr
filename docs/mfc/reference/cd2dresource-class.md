@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DResource
 - CD2DResource
+- AFXRENDERTARGET/CD2DResource
+- AFXRENDERTARGET/CD2DResource::CD2DResource
+- AFXRENDERTARGET/CD2DResource::Create
+- AFXRENDERTARGET/CD2DResource::Destroy
+- AFXRENDERTARGET/CD2DResource::IsValid
+- AFXRENDERTARGET/CD2DResource::IsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::ReCreate
+- AFXRENDERTARGET/CD2DResource::m_bIsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::m_pParentTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +96,14 @@ class CD2DResource : public CObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dresourcea--cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
  소멸자입니다. D2D 리소스 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="a-namecd2dresourcea--cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
  CD2DResource 개체를 만듭니다.  
   
 ```  
@@ -111,7 +119,7 @@ CD2DResource(
  `bAutoDestroy`  
  개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
   
-##  <a name="a-namecreatea--cd2dresourcecreate"></a><a name="create"></a>CD2DResource::Create  
+##  <a name="create"></a>CD2DResource::Create  
  CD2DResource를 만듭니다.  
   
 ```  
@@ -125,14 +133,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dresourcedestroy"></a><a name="destroy"></a>CD2DResource::Destroy  
+##  <a name="destroy"></a>CD2DResource::Destroy  
  CD2DResource 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="a-nameisautodestroya--cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
  확인 자동 소멸 플래그입니다.  
   
 ```  
@@ -142,7 +150,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>반환 값  
  개체의 소유자;에 의해 소멸 되 면 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-nameisvalida--cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>CD2DResource::IsValid  
  리소스 유효성 검사  
   
 ```  
@@ -152,21 +160,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-namembisautodestroya--cd2dresourcembisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
  리소스는 소유자 (CRenderTarget)에 의해 파괴 됩니다.  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="a-namempparenttargeta--cd2dresourcempparenttarget"></a><a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
  CRenderTarget 부모에 대 한 포인터)  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="a-namerecreatea--cd2dresourcerecreate"></a><a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>CD2DResource::ReCreate  
  CD2DResource를 다시 만듭니다.  
   
 ```  

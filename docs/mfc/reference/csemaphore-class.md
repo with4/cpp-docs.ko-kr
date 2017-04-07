@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSemaphore
+- AFXMT/CSemaphore
+- AFXMT/CSemaphore::CSemaphore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +83,7 @@ class CSemaphore : public CSyncObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="a-namecsemaphorea--csemaphorecsemaphore"></a><a name="csemaphore"></a>CSemaphore::CSemaphore  
+##  <a name="csemaphore"></a>CSemaphore::CSemaphore  
  명명 되거나 명명 되지 않은에서는 `CSemaphore` 개체입니다.  
   
 ```  

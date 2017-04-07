@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IWorkerThreadClient
-- ATL::IWorkerThreadClient
 - IWorkerThreadClient
+- ATLUTIL/ATL::IWorkerThreadClient
+- ATLUTIL/ATL::CloseHandle
+- ATLUTIL/ATL::Execute
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -68,7 +69,7 @@ __interface IWorkerThreadClient
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-nameclosehandlea--iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
  이 개체와 연결 된 핸들을이 메서드를 구현 합니다.  
   
 ```
@@ -90,7 +91,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
  [!code-cpp[NVC_ATL_Utilities #&135;](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="a-nameexecutea--iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>IWorkerThreadClient::Execute  
  이 개체와 연결 된 핸들에 신호가 전달 하는 경우 코드를 실행 하려면이 메서드를 구현 합니다.  
   
 ```

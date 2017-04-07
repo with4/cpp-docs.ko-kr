@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
-- ATL.IPersistPropertyBagImpl<T>
-- ATL::IPersistPropertyBagImpl
-- ATL::IPersistPropertyBagImpl<T>
-- ATL.IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl::GetClassID
+- ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
+- ATLCOM/ATL::IPersistPropertyBagImpl::Load
+- ATLCOM/ATL::IPersistPropertyBagImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +87,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersistpropertybagimplgetclassid"></a><a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  개체의 CLSID를 검색합니다.  
   
 ```
@@ -96,7 +97,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>주의  
  참조 [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameinitnewa--ipersistpropertybagimplinitnew"></a><a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  새로 만든된 개체를 초기화합니다.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>주의  
  참조 [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameloada--ipersistpropertybagimplload"></a><a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  클라이언트에서 제공한 propertybag에서 해당 개체의 속성을 로드합니다.  
   
 ```
@@ -121,7 +122,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  참조 [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namesavea--ipersistpropertybagimplsave"></a><a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  클라이언트에서 제공한 속성 모음에 해당 개체의 속성을 저장합니다.  
   
 ```

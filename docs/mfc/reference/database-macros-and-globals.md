@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDB/AFX_ODBC_CALL
+- AFXDB/AFX_SQL_ASYNC
+- AFXDB/AFX_SQL_SYNC
+- AFXDB/AfxGetHENV
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[AfxGetHENV](#afxgethenv)|MFC에서 사용 중인 ODBC 환경에 대 한 핸들을 검색합니다. 직접 ODBC 호출에서이 핸들을 사용할 수 있습니다.|  
   
-##  <a name="a-nameafxodbccalla--afxodbccall"></a><a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
  이 매크로 사용 하 여 반환할 수 있는 모든 ODBC API 함수를 호출 하려면 `SQL_STILL_EXECUTING`합니다.  
   
 ```  
@@ -89,7 +92,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
 
-##  <a name="a-nameafxsqlasynca--afxsqlasync"></a><a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
  이 매크로의 구현은 MFC 4.2에서 변경되었습니다.  
   
 ```   
@@ -112,7 +115,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdb.h  
   
-##  <a name="a-nameafxsqlsynca--afxsqlsync"></a><a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
  `AFX_SQL_SYNC` 매크로 함수를 호출 하면 `SQLFunc`합니다.  
   
 ```   
@@ -139,7 +142,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdb.h  
   
-##  <a name="a-nameafxgethenva--afxgethenv"></a><a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>AfxGetHENV  
  직접 ODBC 호출에서 반환된 된 핸들을 사용할 수 있지만 핸들 또는 핸들 이라고 가정 여전히 유효 하 고 사용할 수 있는 모든 기존 해야 `CDatabase`-또는 `CRecordset`-파생 된 개체가 소멸 되었다고 합니다.  
   
 ```   

@@ -9,10 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IProvideClassInfo2
-- ATL.IProvideClassInfo2Impl
 - IProvideClassInfo2Impl
-- ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetClassInfo
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetGUID
+- ATLCOM/ATL::IProvideClassInfo2Impl::_tih
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +113,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-namegetclassinfoa--iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
  검색 한 `ITypeInfo` coclass' 형식 정보에 대 한 포인터입니다.  
   
 ```
@@ -121,7 +123,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>주의  
  참조 [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetguida--iprovideclassinfo2implgetguid"></a><a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
  개체의 나가는 dispinterface에 대 한 GUID를 검색합니다.  
   
 ```
@@ -133,7 +135,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>주의  
  참조 [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameiprovideclassinfo2impla--iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  생성자입니다.  
   
 ```
@@ -143,7 +145,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>주의  
  호출 `AddRef` 에 [_tih](#_tih) 멤버입니다. 소멸자를 호출 하 여 **릴리스**합니다.  
   
-##  <a name="a-nametiha--iprovideclassinfo2impltih"></a><a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
  이 정적 데이터 멤버는 클래스 템플릿 매개 변수 인스턴스의 `tihclass`, 기본적으로는 `CComTypeInfoHolder`합니다.  
   
 ```

@@ -9,8 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CCustomInterpolator
 - CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetDependencies
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetDuration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetFinalValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::Init
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::InterpolateValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::InterpolateVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::SetDuration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::SetInitialValueAndVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_currentValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_currentVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_duration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_finalValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +105,7 @@ class CCustomInterpolator;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameccustominterpolatora--ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
+##  <a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
  사용자 지정 보간 기 개체를 생성 하 고 기본값은 0에 있는 모든 값을 설정 합니다.  
   
 ```  
@@ -111,7 +126,7 @@ CCustomInterpolator(
 ### <a name="remarks"></a>주의  
  CCustomInterpolator::Init를 사용 하 여 기간과 코드 뒷부분에서 마지막 값을 초기화 합니다.  
   
-##  <a name="a-namegetdependenciesa--ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
+##  <a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
  보간의 종속성을 가져옵니다.  
   
 ```  
@@ -134,7 +149,7 @@ virtual BOOL GetDependencies(
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-namegetdurationa--ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustomInterpolator::GetDuration  
+##  <a name="getduration"></a>CCustomInterpolator::GetDuration  
  보간의 기간을 가져옵니다.  
   
 ```  
@@ -148,7 +163,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-namegetfinalvaluea--ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
+##  <a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
  보간 잠재 고객의 최종 값을 가져옵니다.  
   
 ```  
@@ -162,7 +177,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-nameinita--ccustominterpolatorinit"></a><a name="init"></a>CCustomInterpolator::Init  
+##  <a name="init"></a>CCustomInterpolator::Init  
  기간 및 최종 값을 초기화합니다.  
   
 ```  
@@ -178,7 +193,7 @@ void Init(
  `finalValue`  
  전환의 끝에는 변수의 최종 값입니다.  
   
-##  <a name="a-nameinterpolatevaluea--ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
+##  <a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
  지정된 된 오프셋 위치에서 값을 보간합니다.  
   
 ```  
@@ -194,7 +209,7 @@ virtual BOOL InterpolateValue(
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-nameinterpolatevelocitya--ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
  지정 된 오프셋 위치 속도를 보간합니다.  
   
 ```  
@@ -210,49 +225,49 @@ virtual BOOL InterpolateVelocity(
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-namemcurrentvaluea--ccustominterpolatormcurrentvalue"></a><a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
+##  <a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
  보간된 값입니다.  
   
 ```  
 DOUBLE m_currentValue;  
 ```  
   
-##  <a name="a-namemcurrentvelocitya--ccustominterpolatormcurrentvelocity"></a><a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
+##  <a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
  보간된 속도입니다.  
   
 ```  
 DOUBLE m_currentVelocity;  
 ```  
   
-##  <a name="a-namemdurationa--ccustominterpolatormduration"></a><a name="m_duration"></a>CCustomInterpolator::m_duration  
+##  <a name="m_duration"></a>CCustomInterpolator::m_duration  
  전환의 기간입니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemfinalvaluea--ccustominterpolatormfinalvalue"></a><a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
+##  <a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
  전환의 끝에는 변수의 최종 값입니다.  
   
 ```  
 DOUBLE m_finalValue;  
 ```  
   
-##  <a name="a-nameminitialvaluea--ccustominterpolatorminitialvalue"></a><a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
+##  <a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
  전환의 시작에 있는 변수의 값입니다.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="a-nameminitialvelocitya--ccustominterpolatorminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
  전환의 시작에 있는 변수의 속도입니다.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="a-namesetdurationa--ccustominterpolatorsetduration"></a><a name="setduration"></a>CCustomInterpolator::SetDuration  
+##  <a name="setduration"></a>CCustomInterpolator::SetDuration  
  보간 기의 기간을 설정합니다.  
   
 ```  
@@ -266,7 +281,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>반환 값  
  기본 구현에서는 항상 TRUE를 반환합니다. 에서 FALSE를 반환 재정의 된 구현 하려면 이벤트가 실패 합니다.  
   
-##  <a name="a-namesetinitialvalueandvelocitya--ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
  보간의 초기 값과 개발 속도 설정합니다.  
   
 ```  

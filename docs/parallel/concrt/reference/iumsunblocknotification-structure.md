@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSUnblockNotification
+- IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetContext
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetNextUnblockNotification
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 6fba6c36987107e2e8100c8b296c279592220682
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ee9c1ada7718b948e5a038852bfa5514127324b1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 구조체
@@ -54,8 +57,8 @@ struct IUMSUnblockNotification;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iumsunblocknotification:: Getcontext 메서드](#getcontext)|반환 된 `IExecutionContext` 차단 된 스레드 프록시와 연결 된 실행 컨텍스트에 대 한 인터페이스입니다. 이 메서드가 반환 하 고 기본 실행 컨텍스트를 호출 하 여 다시 예약 되는 `IThreadProxy::SwitchTo` 메서드를이 인터페이스는 더 이상 유효 합니다.|  
-|[Iumsunblocknotification:: Getnextunblocknotification 메서드](#getnextunblocknotification)|다음 반환 `IUMSUnblockNotification` 인터페이스 메서드에서 반환 되는 체인에 `IUMSCompletionList::GetUnblockNotifications`합니다.|  
+|[Iumsunblocknotification:: Getcontext](#getcontext)|반환 된 `IExecutionContext` 차단 된 스레드 프록시와 연결 된 실행 컨텍스트에 대 한 인터페이스입니다. 이 메서드가 반환 하 고 기본 실행 컨텍스트를 호출 하 여 다시 예약 되는 `IThreadProxy::SwitchTo` 메서드를이 인터페이스는 더 이상 유효 합니다.|  
+|[Iumsunblocknotification:: Getnextunblocknotification](#getnextunblocknotification)|다음 반환 `IUMSUnblockNotification` 인터페이스 메서드에서 반환 되는 체인에 `IUMSCompletionList::GetUnblockNotifications`합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `IUMSUnblockNotification`  
@@ -65,7 +68,7 @@ struct IUMSUnblockNotification;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namegetcontexta--iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>Iumsunblocknotification:: Getcontext 메서드  
+##  <a name="getcontext"></a>Iumsunblocknotification:: Getcontext 메서드  
  반환 된 `IExecutionContext` 차단 된 스레드 프록시와 연결 된 실행 컨텍스트에 대 한 인터페이스입니다. 이 메서드가 반환 하 고 기본 실행 컨텍스트를 호출 하 여 다시 예약 되는 `IThreadProxy::SwitchTo` 메서드를이 인터페이스는 더 이상 유효 합니다.  
   
 ```
@@ -75,7 +78,7 @@ virtual IExecutionContext* GetContext() = 0;
 ### <a name="return-value"></a>반환 값  
  `IExecutionContext` 실행 컨텍스트를 차단 된 스레드 프록시에 대 한 인터페이스입니다.  
   
-##  <a name="a-namegetnextunblocknotificationa--iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>Iumsunblocknotification:: Getnextunblocknotification 메서드  
+##  <a name="getnextunblocknotification"></a>Iumsunblocknotification:: Getnextunblocknotification 메서드  
  다음 반환 `IUMSUnblockNotification` 인터페이스 메서드에서 반환 되는 체인에 `IUMSCompletionList::GetUnblockNotifications`합니다.  
   
 ```

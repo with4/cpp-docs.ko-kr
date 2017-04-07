@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropExchange
+- AFXCTL/CPropExchange
+- AFXCTL/CPropExchange::ExchangeBlobProp
+- AFXCTL/CPropExchange::ExchangeFontProp
+- AFXCTL/CPropExchange::ExchangePersistentProp
+- AFXCTL/CPropExchange::ExchangeProp
+- AFXCTL/CPropExchange::ExchangeVersion
+- AFXCTL/CPropExchange::GetVersion
+- AFXCTL/CPropExchange::IsAsynchronous
+- AFXCTL/CPropExchange::IsLoading
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +95,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="a-nameexchangeblobpropa--cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
  이진 대형 개체 (BLOB) 데이터를 저장 하는 속성을 serialize 합니다.  
   
 ```  
@@ -114,7 +123,7 @@ virtual BOOL ExchangeBlobProp(
   
  함수 **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, 및 **CPropsetPropExchange::ExchangeBlobProp** 이 순수 가상 함수를 재정의 합니다.  
   
-##  <a name="a-nameexchangefontpropa--cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
  저장소 매체와 컨트롤 간의 font 속성을 교환합니다.  
   
 ```  
@@ -146,7 +155,7 @@ virtual BOOL ExchangeFontProp(
   
  함수 **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, 및 **CPropsetPropExchange::ExchangeFontProp** 이 순수 가상 함수를 재정의 합니다.  
   
-##  <a name="a-nameexchangepersistentpropa--cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
  컨트롤 및 파일 간의 속성을 교환합니다.  
   
 ```  
@@ -178,7 +187,7 @@ virtual BOOL ExchangePersistentProp(
   
  함수 **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, 및 **CPropsetPropExchange::ExchangePersistentProp** 이 순수 가상 함수를 재정의 합니다.  
   
-##  <a name="a-nameexchangepropa--cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
  속성 저장소 매체와 컨트롤 사이 교환합니다.  
   
 ```  
@@ -220,7 +229,7 @@ virtual BOOL ExchangeProp(
   
  함수 **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, 및 **CPropsetPropExchange::ExchangeProp** 이 순수 가상 함수를 재정의 합니다.  
   
-##  <a name="a-nameexchangeversiona--cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
  버전 번호의 지 속성을 처리 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -243,7 +252,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-##  <a name="a-namegetversiona--cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>CPropExchange::GetVersion  
  컨트롤의 버전 번호를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -253,7 +262,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>반환 값  
  컨트롤의 버전 번호입니다.  
   
-##  <a name="a-nameisasynchronousa--cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
  속성 교환은 비동기적으로 수행 하는 경우를 결정 합니다.  
   
 ```  
@@ -263,7 +272,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>반환 값  
  속성이 있으면 TRUE를 반환 교환 비동기적으로, 그렇지 않으면 FALSE입니다.  
   
-##  <a name="a-nameisloadinga--cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>CPropExchange::IsLoading  
  속성은 되 고 있는지 여부를 확인 하려면이 함수를 호출 컨트롤에 로드 하거나이를 저장 합니다.  
   
 ```  

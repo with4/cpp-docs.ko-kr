@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- Picture
 - CPictureHolder
+- AFXCTL/CPictureHolder
+- AFXCTL/CPictureHolder::CPictureHolder
+- AFXCTL/CPictureHolder::CreateEmpty
+- AFXCTL/CPictureHolder::CreateFromBitmap
+- AFXCTL/CPictureHolder::CreateFromIcon
+- AFXCTL/CPictureHolder::CreateFromMetafile
+- AFXCTL/CPictureHolder::GetDisplayString
+- AFXCTL/CPictureHolder::GetPictureDispatch
+- AFXCTL/CPictureHolder::GetType
+- AFXCTL/CPictureHolder::Render
+- AFXCTL/CPictureHolder::SetPictureDispatch
+- AFXCTL/CPictureHolder::m_pPict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +104,14 @@ class CPictureHolder
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="a-namecpictureholdera--cpictureholdercpictureholder"></a><a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
  `CPictureHolder` 개체를 생성합니다.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="a-namecreateemptya--cpictureholdercreateempty"></a><a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
  빈 만듭니다 `CPictureHolder` 개체를 연결 하는 `IPicture` 인터페이스입니다.  
   
 ```  
@@ -110,7 +121,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>반환 값  
  개체가 성공적으로 만들어지면; 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namecreatefrombitmapa--cpictureholdercreatefrombitmap"></a><a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
  비트맵을 사용 하 여에서 그림 개체를 초기화 하는 `CPictureHolder`합니다.  
   
 ```  
@@ -155,7 +166,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>주의  
  경우 `bTransferOwnership` 는 **TRUE**호출자에 게 비트맵을 사용 하지 않아야, 또는이 호출 후에 어떤 방식으로든에서 색상표 개체를 반환 합니다. 경우 `bTransferOwnership` 는 **FALSE**, 호출자는 비트맵 및 색상표 개체 그림 개체의 수명 동안 유효한 상태로 유지 하는 일을 담당 합니다.  
   
-##  <a name="a-namecreatefromicona--cpictureholdercreatefromicon"></a><a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
  아이콘을 사용 하 여 그림 개체에서 초기화 하는 `CPictureHolder`합니다.  
   
 ```  
@@ -184,7 +195,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>주의  
  경우 `bTransferOwnership` 는 **TRUE**,이 호출이 반환 된 후 호출자에 게 어떤 식으로든에서 하지 아이콘 개체 사용 해야 합니다. 경우 `bTransferOwnership` 는 **FALSE**, 호출자는 icon 개체 유효한 상태로 유지 된다고 그림 개체의 수명 동안 보장을 담당 합니다.  
   
-##  <a name="a-namecreatefrommetafilea--cpictureholdercreatefrommetafile"></a><a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
  메타 파일을 사용 하 여에서 그림 개체를 초기화 하는 `CPictureHolder`합니다.  
   
 ```  
@@ -214,7 +225,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>주의  
  경우 `bTransferOwnership` 는 **TRUE**,이 호출이 반환 된 후 호출자에 게 어떤 식으로든에서 하지 메타 파일 개체 사용 해야 합니다. 경우 `bTransferOwnership` 는 **FALSE**, 호출자가 메타 파일 개체 유효한 상태로 유지 된다고 그림 개체의 수명 동안 보장을 담당 합니다.  
   
-##  <a name="a-namegetdisplaystringa--cpictureholdergetdisplaystring"></a><a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
  컨테이너의 속성 브라우저에 표시 되는 문자열을 검색 합니다.  
   
 ```  
@@ -228,7 +239,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>반환 값  
  문자열은 성공적으로 검색 합니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-namegetpicturedispatcha--cpictureholdergetpicturedispatch"></a><a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
  에 대 한 포인터를 반환 하는이 함수는 `CPictureHolder` 개체의 `IPictureDisp` 인터페이스입니다.  
   
 ```  
@@ -241,7 +252,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>주의  
  호출자가 호출 해야 **릴리스** 사용이 끝나면이 포인터에 있습니다.  
   
-##  <a name="a-namegettypea--cpictureholdergettype"></a><a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>CPictureHolder::GetType  
  비트맵, 메타 파일 또는 아이콘 그림 인지를 나타냅니다.  
   
 ```  
@@ -259,14 +270,14 @@ short GetType();
 |**PICTYPE_METAFILE**|그림이 메타 파일입니다.|  
 |**PICTYPE_ICON**|그림이 아이콘입니다.|  
   
-##  <a name="a-namemppicta--cpictureholdermppict"></a><a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
  에 대 한 포인터는 `CPictureHolder` 개체의 `IPicture` 인터페이스입니다.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="a-namerendera--cpictureholderrender"></a><a name="render"></a>CPictureHolder::Render  
+##  <a name="render"></a>CPictureHolder::Render  
  참조 하는 사각형에 그림을 렌더링 `rcRender`합니다.  
   
 ```  
@@ -286,7 +297,7 @@ void Render(
  *rcWBounds*  
  그림을 렌더링 하는 개체의 경계 사각형을 나타내는 사각형입니다. 이 사각형은 컨트롤의 경우는 `rcBounds` 의 재정의에 전달 된 매개 변수 [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)합니다.  
   
-##  <a name="a-namesetpicturedispatcha--cpictureholdersetpicturedispatch"></a><a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
  연결 된 `CPictureHolder` 개체는 `IPictureDisp` 인터페이스입니다.  
   
 ```  

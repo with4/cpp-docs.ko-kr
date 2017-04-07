@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 클래스
@@ -60,10 +65,10 @@ class ScheduleGroup;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Id 메서드](#id)|그룹이 속해 있는 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.|  
-|[Reference 메서드](#reference)|일정 그룹 참조 횟수를 증가시킵니다.|  
-|[Release 메서드](#release)|일정 그룹 참조 횟수를 감소시킵니다.|  
-|[ScheduleTask 메서드](#scheduletask)|일정 그룹 내에서 간단한 작업을 예약합니다.|  
+|[Id](#id)|그룹이 속해 있는 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.|  
+|[참조](#reference)|일정 그룹 참조 횟수를 증가시킵니다.|  
+|[릴리스](#release)|일정 그룹 참조 횟수를 감소시킵니다.|  
+|[ScheduleTask](#scheduletask)|일정 그룹 내에서 간단한 작업을 예약합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id 
+##  <a name="id"></a>Id 
 
  그룹이 속해 있는 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>반환 값  
  그룹이 속해 있는 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자입니다.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>delete 연산자 
+##  <a name="operator_delete"></a>delete 연산자 
 
  A `ScheduleGroup` 개체가 소멸 내부적으로 런타임에 의해 모든 외부 참조가 릴리스될 때. 개체를 명시적으로 삭제할 수 없습니다.  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  삭제할 개체에 대 한 포인터입니다.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>참조 
+##  <a name="reference"></a>참조 
 
  일정 그룹 참조 횟수를 증가시킵니다.  
   
@@ -117,7 +122,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>주의  
  이 구성에 대 한 일정 그룹의 수명을 관리 하려면 일반적으로 사용 됩니다. 일정 그룹의 참조 횟수가&0;으로, 일정 그룹 런타임에 의해 삭제 됩니다. 일정 그룹 중 하나를 사용 하 여 만든는 [currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup) 메서드 또는 [scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup) 메서드 참조 횟수가&1;로 시작 합니다.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>릴리스 
+##  <a name="release"></a>릴리스 
 
  일정 그룹 참조 횟수를 감소시킵니다.  
   
@@ -133,13 +138,13 @@ virtual unsigned int Release() = 0;
   
  일정 그룹은 특정 스케줄러 인스턴스와 연결 합니다. 스케줄러에 대한 모든 참조는 스케줄러에서 소멸될 수 있기 때문에 스케줄러에 대한 모든 참조가 해제되기 전에 일정 그룹에 대한 모든 참조가 해제되었는지 확인해야 합니다. 그렇지 않으면 결과가 정의 되지 않은 동작을 수행합니다.  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  일정 그룹 내에서 간단한 작업을 예약합니다.  
   
@@ -156,7 +161,7 @@ virtual void ScheduleTask(
  `_Data`  
  작업의 본문에 매개 변수로 전달 되는 데이터에는 void 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 된 `ScheduleTask` 메서드 작업이 실행 된 후 적절 한 시간에 런타임에 의해 제거 되는 일정 그룹에 대 한 참조 횟수를 암시적으로 배치 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

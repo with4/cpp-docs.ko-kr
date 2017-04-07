@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileFind
+- AFX/CFileFind
+- AFX/CFileFind::CFileFind
+- AFX/CFileFind::Close
+- AFX/CFileFind::FindFile
+- AFX/CFileFind::FindNextFile
+- AFX/CFileFind::GetCreationTime
+- AFX/CFileFind::GetFileName
+- AFX/CFileFind::GetFilePath
+- AFX/CFileFind::GetFileTitle
+- AFX/CFileFind::GetFileURL
+- AFX/CFileFind::GetLastAccessTime
+- AFX/CFileFind::GetLastWriteTime
+- AFX/CFileFind::GetLength
+- AFX/CFileFind::GetRoot
+- AFX/CFileFind::IsArchived
+- AFX/CFileFind::IsCompressed
+- AFX/CFileFind::IsDirectory
+- AFX/CFileFind::IsDots
+- AFX/CFileFind::IsHidden
+- AFX/CFileFind::IsNormal
+- AFX/CFileFind::IsReadOnly
+- AFX/CFileFind::IsSystem
+- AFX/CFileFind::IsTemporary
+- AFX/CFileFind::MatchesMask
+- AFX/CFileFind::CloseContext
+- AFX/CFileFind::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,7 +147,7 @@ class CFileFind : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="a-namecfilefinda--cfilefindcfilefind"></a><a name="cfilefind"></a>CFileFind::CFileFind  
+##  <a name="cfilefind"></a>CFileFind::CFileFind  
  이 멤버 함수를 호출 하는 경우는 `CFileFind` 개체가 생성 됩니다.  
   
 ```  
@@ -136,7 +162,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-nameclosea--cfilefindclose"></a><a name="close"></a>CFileFind::Close  
+##  <a name="close"></a>CFileFind::Close  
  검색을 종료 하는 컨텍스트를 다시 설정 하 고 모든 리소스를 해제 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -149,7 +175,7 @@ void Close();
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-nameclosecontexta--cfilefindclosecontext"></a><a name="closecontext"></a>CFileFind::CloseContext  
+##  <a name="closecontext"></a>CFileFind::CloseContext  
  현재 검색 핸들에 의해 지정 된 파일을 닫습니다.  
   
 ```  
@@ -161,7 +187,7 @@ virtual void CloseContext();
   
  호출 해야는 [FindFile](#findfile) 또는 [FindNextFile](#findnextfile) 함수를 한 번 이상 유효한 검색 핸들을 가져올 수 있습니다. **FindFile** 및 `FindNextFile` 함수 이름이 지정 된 이름과 일치 하는 파일을 찾는 검색 핸들을 사용 합니다.  
   
-##  <a name="a-namefindfilea--cfilefindfindfile"></a><a name="findfile"></a>CFileFind::FindFile  
+##  <a name="findfile"></a>CFileFind::FindFile  
  파일 검색을 열려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -224,7 +250,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
-##  <a name="a-namefindnextfilea--cfilefindfindnextfile"></a><a name="findnextfile"></a>CFileFind::FindNextFile  
+##  <a name="findnextfile"></a>CFileFind::FindNextFile  
  이 멤버 함수에 대 한 이전 호출에서 파일 검색을 계속 하려면 호출 [FindFile](#findfile)합니다.  
   
 ```  
@@ -280,7 +306,7 @@ virtual BOOL FindNextFile();
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
-##  <a name="a-namegetcreationtimea--cfilefindgetcreationtime"></a><a name="getcreationtime"></a>CFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CFileFind::GetCreationTime  
  지정 된 파일을 만든 시간을 얻을이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -307,7 +333,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-namegetfilenamea--cfilefindgetfilename"></a><a name="getfilename"></a>CFileFind::GetFileName  
+##  <a name="getfilename"></a>CFileFind::GetFileName  
  검색된 된 파일의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -331,7 +357,7 @@ virtual CString GetFileName() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&32;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]  
   
-##  <a name="a-namegetfilepatha--cfilefindgetfilepath"></a><a name="getfilepath"></a>CFileFind::GetFilePath  
+##  <a name="getfilepath"></a>CFileFind::GetFilePath  
  지정된 된 파일의 전체 경로를 가져오지이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -355,7 +381,7 @@ virtual CString GetFilePath() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-namegetfiletitlea--cfilefindgetfiletitle"></a><a name="getfiletitle"></a>CFileFind::GetFileTitle  
+##  <a name="getfiletitle"></a>CFileFind::GetFileTitle  
  검색된 된 파일의 제목이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -379,7 +405,7 @@ virtual CString GetFileTitle() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-namegetfileurla--cfilefindgetfileurl"></a><a name="getfileurl"></a>CFileFind::GetFileURL  
+##  <a name="getfileurl"></a>CFileFind::GetFileURL  
  지정된 된 URL을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -397,7 +423,7 @@ virtual CString GetFileURL() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-namegetlastaccesstimea--cfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CFileFind::GetLastAccessTime  
  지정된 된 파일에 마지막으로 액세스 하는 시간을 얻을이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -424,7 +450,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-namegetlastwritetimea--cfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CFileFind::GetLastWriteTime  
  이 파일을 변경한 마지막 시간을 얻을 함수를 호출 합니다.  
   
 ```  
@@ -451,7 +477,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-namegetlengtha--cfilefindgetlength"></a><a name="getlength"></a>CFileFind::GetLength  
+##  <a name="getlength"></a>CFileFind::GetLength  
  이 바이트에서 찾은 파일의 길이를 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -472,7 +498,7 @@ ULONGLONG GetLength() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles #&33;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]  
   
-##  <a name="a-namegetroota--cfilefindgetroot"></a><a name="getroot"></a>CFileFind::GetRoot  
+##  <a name="getroot"></a>CFileFind::GetRoot  
  검색된 된 파일의 루트를 가져올이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -490,7 +516,7 @@ virtual CString GetRoot() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
-##  <a name="a-nameisarchiveda--cfilefindisarchived"></a><a name="isarchived"></a>CFileFind::IsArchived  
+##  <a name="isarchived"></a>CFileFind::IsArchived  
  찾은 파일을 보관 하는 경우를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -510,7 +536,7 @@ BOOL IsArchived() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameiscompresseda--cfilefindiscompressed"></a><a name="iscompressed"></a>CFileFind::IsCompressed  
+##  <a name="iscompressed"></a>CFileFind::IsCompressed  
  찾은 파일은 압축 하는 경우를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -530,7 +556,7 @@ BOOL IsCompressed() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameisdirectorya--cfilefindisdirectory"></a><a name="isdirectory"></a>CFileFind::IsDirectory  
+##  <a name="isdirectory"></a>CFileFind::IsDirectory  
  검색된 된 파일 디렉터리 인지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -552,7 +578,7 @@ BOOL IsDirectory() const;
   
  [!code-cpp[NVC_MFCFiles #&34;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]  
   
-##  <a name="a-nameisdotsa--cfilefindisdots"></a><a name="isdots"></a>CFileFind::IsDots  
+##  <a name="isdots"></a>CFileFind::IsDots  
  파일을 통해 반복 하는 동안 현재 디렉터리와 부모 디렉터리 표식에 대 한 테스트 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -568,7 +594,7 @@ virtual BOOL IsDots() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
-##  <a name="a-nameishiddena--cfilefindishidden"></a><a name="ishidden"></a>CFileFind::IsHidden  
+##  <a name="ishidden"></a>CFileFind::IsHidden  
  찾은 파일 숨겨져 있는지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -588,7 +614,7 @@ BOOL IsHidden() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameisnormala--cfilefindisnormal"></a><a name="isnormal"></a>CFileFind::IsNormal  
+##  <a name="isnormal"></a>CFileFind::IsNormal  
  검색된 된 파일에 일반 파일 인지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -608,7 +634,7 @@ BOOL IsNormal() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameisreadonlya--cfilefindisreadonly"></a><a name="isreadonly"></a>CFileFind::IsReadOnly  
+##  <a name="isreadonly"></a>CFileFind::IsReadOnly  
  읽기 전용으로 검색된 된 파일 인지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -628,7 +654,7 @@ BOOL IsReadOnly() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameissystema--cfilefindissystem"></a><a name="issystem"></a>CFileFind::IsSystem  
+##  <a name="issystem"></a>CFileFind::IsSystem  
  검색된 된 파일 시스템 파일 인지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -648,7 +674,7 @@ BOOL IsSystem() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-nameistemporarya--cfilefindistemporary"></a><a name="istemporary"></a>CFileFind::IsTemporary  
+##  <a name="istemporary"></a>CFileFind::IsTemporary  
  검색된 된 파일에 임시 파일 인지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -668,7 +694,7 @@ BOOL IsTemporary() const;
 ### <a name="example"></a>예제  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
-##  <a name="a-namemptma--cfilefindmptm"></a><a name="m_ptm"></a>CFileFind::m_pTM  
+##  <a name="m_ptm"></a>CFileFind::m_pTM  
  `CAtlTransactionManager` 개체에 대한 포인터입니다.  
   
 ```  
@@ -677,7 +703,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namematchesmaska--cfilefindmatchesmask"></a><a name="matchesmask"></a>CFileFind::MatchesMask  
+##  <a name="matchesmask"></a>CFileFind::MatchesMask  
  검색된 된 파일의 파일 특성을 테스트 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

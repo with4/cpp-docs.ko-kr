@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPoint
+- ATLTYPES/ATL::CPoint
+- ATLTYPES/ATL::CPoint::CPoint
+- ATLTYPES/ATL::CPoint::Offset
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +97,7 @@ class CPoint : public tagPOINT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltypes.h  
   
-##  <a name="a-namecpointa--cpointcpoint"></a><a name="cpoint"></a>CPoint::CPoint
+##  <a name="cpoint"></a>CPoint::CPoint
  `CPoint` 개체를 생성합니다.  
   
 ```  
@@ -151,7 +154,7 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
-##  <a name="a-nameoffseta--cpointoffset"></a><a name="offset"></a>CPoint::Offset  
+##  <a name="offset"></a>CPoint::Offset  
  값을 추가 하는 **x** 및 **y** 의 멤버는 `CPoint`합니다.  
   
 ```  
@@ -176,7 +179,7 @@ void Offset(SIZE size) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&28;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--cpointoperator-"></a><a name="operator_eq_eq"></a>CPoint::operator = =  
+##  <a name="operator_eq_eq"></a>CPoint::operator = =  
  두 점 사이의 같은지 확인 합니다.  
   
 ```  
@@ -193,7 +196,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&29;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
-##  <a name="a-nameoperatorneqa--cpointoperator-"></a><a name="operator_neq"></a>CPoint::operator! =  
+##  <a name="operator_neq"></a>CPoint::operator! =  
  두 점 사이의 다른 지 확인 합니다.  
   
 ```  
@@ -210,7 +213,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&30;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--cpointoperator-"></a><a name="operator_add_eq"></a>CPoint::operator + =  
+##  <a name="operator_add_eq"></a>CPoint::operator + =  
  크기를 추가 하는 첫 번째 오버 로드는 `CPoint`합니다.  
   
 ```  
@@ -235,7 +238,7 @@ void operator+=(POINT point) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&31;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
-##  <a name="a-nameoperator-eqa--cpointoperator--"></a><a name="operator_-_eq"></a>-= CPoint::operator  
+##  <a name="operator_-_eq"></a>-= CPoint::operator  
  첫 번째 오버 로드에서 크기를 뺍니다는 `CPoint`합니다.  
   
 ```  
@@ -260,7 +263,7 @@ void operator-=(POINT point) throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&32;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
-##  <a name="a-nameoperatoradda--cpointoperator-"></a><a name="operator_add"></a>CPoint::operator +  
+##  <a name="operator_add"></a>CPoint::operator +  
  이 연산자를 사용 하 여 오프셋 `CPoint` 하 여는 `CPoint` 또는 `CSize` 개체 또는 오프셋 하는 `CRect` 하 여는 `CPoint`합니다.  
   
 ```  
@@ -290,7 +293,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities #&33;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
-##  <a name="a-nameoperator-a--cpointoperator--"></a><a name="operator_-"></a>CPoint::operator-  
+##  <a name="operator_-"></a>CPoint::operator-  
  사용 하는 처음 두 개의 오버 로드 중 하나는 `CPoint` 또는 `CSize` 에서 개체 `CPoint`합니다.  
   
 ```  

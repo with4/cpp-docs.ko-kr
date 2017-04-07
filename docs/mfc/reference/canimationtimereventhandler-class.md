@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationTimerEventHandler
 - CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPostUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-namecreateinstancea--canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
  CAnimationTimerEventHandler 콜백의 인스턴스를 만듭니다.  
   
 ```  
@@ -92,7 +97,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-nameonpostupdatea--canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
  애니메이션 업데이트가 완료 된 후 발생 하는 이벤트를 처리 합니다.  
   
 ```  
@@ -102,7 +107,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.  
   
-##  <a name="a-nameonpreupdatea--canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
  애니메이션 업데이트가 시작 되기 전에 발생 하는 이벤트를 처리 합니다.  
   
 ```  
@@ -112,7 +117,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.  
   
-##  <a name="a-nameonrenderingtooslowa--canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
  애니메이션에 대 한 렌더링 프레임 속도가 원하는 최소 프레임 속도 이하일 때 발생 하는 이벤트를 처리 합니다.  
   
 ```  
@@ -125,7 +130,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.  
   
-##  <a name="a-namesetanimationcontrollera--canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
  이벤트를 라우팅합니다 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.  
   
 ```  

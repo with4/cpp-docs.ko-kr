@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEditView
+- AFXEXT/CEditView
+- AFXEXT/CEditView::CEditView
+- AFXEXT/CEditView::FindText
+- AFXEXT/CEditView::GetBufferLength
+- AFXEXT/CEditView::GetEditCtrl
+- AFXEXT/CEditView::GetPrinterFont
+- AFXEXT/CEditView::GetSelectedText
+- AFXEXT/CEditView::LockBuffer
+- AFXEXT/CEditView::PrintInsideRect
+- AFXEXT/CEditView::SerializeRaw
+- AFXEXT/CEditView::SetPrinterFont
+- AFXEXT/CEditView::SetTabStops
+- AFXEXT/CEditView::UnlockBuffer
+- AFXEXT/CEditView::OnFindNext
+- AFXEXT/CEditView::OnReplaceAll
+- AFXEXT/CEditView::OnReplaceSel
+- AFXEXT/CEditView::OnTextNotFound
+- AFXEXT/CEditView::dwStyleDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +156,7 @@ class CEditView : public CCtrlView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="a-nameceditviewa--ceditviewceditview"></a><a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>CEditView::CEditView  
  `CEditView` 형식의 개체를 생성합니다.  
   
 ```  
@@ -148,7 +166,7 @@ CEditView();
 ### <a name="remarks"></a>주의  
  호출 해야 개체를 생성 한 후의 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 편집 컨트롤을 사용 하기 전에 작동 합니다. 클래스를 파생 하는 경우 `CEditView` 를 사용 하 여 서식 파일에 추가 `CWinApp::AddDocTemplate`, 모두이 생성자를 호출 하는 프레임 워크 및 **만들기** 함수입니다.  
   
-##  <a name="a-namedwstyledefaulta--ceditviewdwstyledefault"></a><a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
  기본 스타일이 포함 된 `CEditView` 개체입니다.  
   
 ```  
@@ -158,7 +176,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>주의  
  전달로이 정적 멤버는 `dwStyle` 의 매개 변수는 **만들기** 함수에 대 한 기본 스타일을 얻을 수는 `CEditView` 개체입니다.  
   
-##  <a name="a-namefindtexta--ceditviewfindtext"></a><a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>CEditView::FindText  
  호출의 `FindText` 검색 하는 함수는 `CEditView` 개체의 텍스트 버퍼입니다.  
   
 ```  
@@ -186,7 +204,7 @@ BOOL FindText(
   
  일반적으로 필요가 없습니다를 호출 하는 `FindText` 함수를 재정의 하지 않으면 `OnFindNext`를 호출 하 `FindText`합니다.  
   
-##  <a name="a-namegetbufferlengtha--ceditviewgetbufferlength"></a><a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
  편집 컨트롤의 버퍼에 null 종결자를 포함 하지 않고 현재에 문자 수를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -196,7 +214,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>반환 값  
  버퍼에 있는 문자열의 길이입니다.  
   
-##  <a name="a-namegeteditctrla--ceditviewgeteditctrl"></a><a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
  호출 `GetEditCtrl` 편집 보기에서 사용 하는 편집 컨트롤에 대 한 참조를 얻으려고 합니다.  
   
 ```  
@@ -215,7 +233,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&66;](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="a-namegetprinterfonta--ceditviewgetprinterfont"></a><a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
  호출 `GetPrinterFont` 에 포인터를 얻으려면는 [CFont](../../mfc/reference/cfont-class.md) 현재 프린터 글꼴을 설명 하는 개체입니다.  
   
 ```  
@@ -230,7 +248,7 @@ CFont* GetPrinterFont() const;
   
  이 함수를 사용 하 여 현재 프린터 글꼴을 결정 합니다. 사용 하 여 원하는 프린터 글꼴 없으면 [CEditView::SetPrinterFont](#setprinterfont) 변경 해야 합니다.  
   
-##  <a name="a-namegetselectedtexta--ceditviewgetselectedtext"></a><a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
  호출 `GetSelectedText` 에서 선택한 텍스트를 복사 하는 `CString` 선택 또는 선택 영역에서 첫 번째 캐리지 리턴 문자 앞에 있는 문자 끝까지 개체입니다.  
   
 ```  
@@ -241,7 +259,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  에 대 한 참조는 `CString` 선택한 텍스트를 수신 하는 개체입니다.  
   
-##  <a name="a-namelockbuffera--ceditviewlockbuffer"></a><a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>CEditView::LockBuffer  
  버퍼에 대 한 포인터를 가져오려면이 함수를 호출 합니다. 버퍼를 수정 하지 않아야 합니다.  
   
 ```  
@@ -251,7 +269,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>반환 값  
  편집 컨트롤의 버퍼에 대 한 포인터입니다.  
   
-##  <a name="a-nameonfindnexta--ceditviewonfindnext"></a><a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>CEditView::OnFindNext  
  지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 `lpszFind`, 하 여 지정 된 방향을 `bNext`로 지정 된 대/소문자와 `bCase`합니다.  
   
 ```  
@@ -276,7 +294,7 @@ virtual void OnFindNext(
   
  재정의 `OnFindNext` 는 방식을 변경 하는 `CEditView`-텍스트를 검색 하는 파생 된 개체입니다. `CEditView`호출 `OnFindNext` 표준 찾기 대화 상자에서 다음 찾기 단추를 선택 하면 됩니다.  
   
-##  <a name="a-nameonreplacealla--ceditviewonreplaceall"></a><a name="onreplaceall"></a>CEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
  `CEditView`호출 `OnReplaceAll` 사용자가 모두 바꾸기 단추는 표준 바꾸기 대화 상자에서 선택 합니다.  
   
 ```  
@@ -303,7 +321,7 @@ virtual void OnReplaceAll(
   
  재정의 `OnReplaceAll` 는 방식을 변경 하는 `CEditView`-파생 된 개체는 텍스트 문자열로 바꿉니다.  
   
-##  <a name="a-nameonreplacesela--ceditviewonreplacesel"></a><a name="onreplacesel"></a>CEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
  `CEditView`호출 `OnReplaceSel` 표준 바꾸기 대화 상자에서 바꾸기 단추를 선택 하면 됩니다.  
   
 ```  
@@ -332,7 +350,7 @@ virtual void OnReplaceSel(
   
  재정의 `OnReplaceSel` 는 방식을 변경 하는 `CEditView`-선택한 텍스트를 대체 하는 파생 된 개체입니다.  
   
-##  <a name="a-nameontextnotfounda--ceditviewontextnotfound"></a><a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
  Windows 함수를 호출 하는 기본 구현을 변경 하려면이 함수를 재정의할 **MessageBeep**합니다.  
   
 ```  
@@ -343,7 +361,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  텍스트를 찾을 수입니다.  
   
-##  <a name="a-nameprintinsiderecta--ceditviewprintinsiderect"></a><a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
  호출 `PrintInsideRect` 로 지정 된 사각형에 텍스트를 인쇄 하려면 *rectLayout*합니다.  
   
 ```  
@@ -375,7 +393,7 @@ UINT PrintInsideRect(
   
  **rect.bottom** 의 요소는 *rectLayout* 개체가 텍스트 차지 하는 원래 사각형의 부분을 정의 하는 사각형의 크기를 변경 합니다.  
   
-##  <a name="a-nameserializerawa--ceditviewserializeraw"></a><a name="serializeraw"></a>CEditView::SerializeRaw  
+##  <a name="serializeraw"></a>CEditView::SerializeRaw  
  호출 `SerializeRaw` 있어야는 `CArchive` 텍스트 쓰기 또는 읽기 개체는 `CEditView` 텍스트 파일에는 개체입니다.  
   
 ```  
@@ -389,7 +407,7 @@ void SerializeRaw(CArchive& ar);
 ### <a name="remarks"></a>주의  
  `SerializeRaw`다른 `CEditView`의의 내부 구현 `Serialize` 한다는 점에서 읽고 없이 개체 설명 데이터 앞에 텍스트를 씁니다.  
   
-##  <a name="a-namesetprinterfonta--ceditviewsetprinterfont"></a><a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
  호출 `SetPrinterFont` 프린터 글꼴에 지정 된 글꼴을 설정 하려면 `pFont`합니다.  
   
 ```  
@@ -403,7 +421,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>주의  
  항상 인쇄를 위한 특정 글꼴을 사용 하 여 보기를 하려는 경우에 호출을 포함할 `SetPrinterFont` 클래스의 `OnPreparePrinting` 함수입니다. 인쇄 발생 하기 전에이 가상 함수가 호출 됩니다 글꼴 변경 되기 전에 발생 보기의 내용을 인쇄 됩니다.  
   
-##  <a name="a-namesettabstopsa--ceditviewsettabstops"></a><a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>CEditView::SetTabStops  
  디스플레이 및 인쇄에 사용 되는 탭 정지를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -424,7 +442,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView #&67;](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="a-nameunlockbuffera--ceditviewunlockbuffer"></a><a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
  버퍼의 잠금을 해제 하려면이 멤버 함수를 호출 합니다.  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IView
+- No header/IView
+- No header/IView::OnActivateView
+- No header/IView::OnInitialUpdate
+- No header/IView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +75,7 @@ interface class IView
 ## <a name="requirements"></a>요구 사항  
  헤더: afxwinforms.h (atlmfc\lib\mfcmifc80.dll 어셈블리에에서 정의 됨)  
 
-## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a>IView::OnActivateView  
 뷰 활성화 되거나 비활성화 때 MFC에서 호출 합니다.
 ```
 void OnActivateView(bool activate);
@@ -80,13 +84,13 @@ void OnActivateView(bool activate);
 `activate`  
 보기를 새로 있는지 여부를 나타냅니다. 활성화 또는 비활성화 합니다.  
 
-## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView::OnInitialUpdate
 프레임 워크에서 뷰를 먼저 문서에 연결한 후 전에 호출 처음 표시 되는 보기.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a>IView::OnUpdate 
 문서 보기의 수정 된 후에 MFC에서 호출 됩니다.  
 ```
 void OnUpdate();

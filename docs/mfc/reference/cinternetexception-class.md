@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetException
+- AFXINET/CInternetException
+- AFXINET/CInternetException::CInternetException
+- AFXINET/CInternetException::m_dwContext
+- AFXINET/CInternetException::m_dwError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +84,7 @@ class CInternetException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="a-namecinternetexceptiona--cinternetexceptioncinternetexception"></a><a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>CInternetException::CInternetException  
  이 멤버 함수를 호출 하는 경우는 `CInternetException` 개체가 만들어집니다.  
   
 ```  
@@ -94,7 +98,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>주의  
  CInternetException를 throw 하려면 MFC 전역 함수를 호출 [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)합니다.  
   
-##  <a name="a-namemdwcontexta--cinternetexceptionmdwcontext"></a><a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
  인터넷 작업과 관련 된 연결 된 컨텍스트 값입니다.  
   
 ```  
@@ -104,7 +108,7 @@ DWORD_PTR m_dwContext;
 ### <a name="remarks"></a>주의  
  컨텍스트 식별자에 원래 지정 된 [CInternetSession](../../mfc/reference/cinternetsession-class.md) MFC로 전달 하 고 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-및 [CInternetFile](../../mfc/reference/cinternetfile-class.md)-클래스를 파생 합니다. 이 기본값을 재정의 하 고 할당 `dwContext` 매개 변수 값을 선택 합니다. `dwContext`지정된 된 개체의 모든 작업과 연결 됩니다. `dwContext`반환 된 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다.  
   
-##  <a name="a-namemdwerrora--cinternetexceptionmdwerror"></a><a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  예외를 발생 시킨 오류입니다.  
   
 ```  

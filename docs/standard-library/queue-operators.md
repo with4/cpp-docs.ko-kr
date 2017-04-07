@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  연산자의 좌변에 있는 큐 개체가 우변에 있는 큐 개체와 같지 않은지 테스트합니다.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -84,7 +84,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  연산자의 좌변에 있는 큐 개체가 우변에 있는 큐 개체보다 작은지 테스트합니다.  
   
 ```  
@@ -92,10 +92,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -143,7 +143,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  연산자의 좌변에 있는 큐 개체가 우변에 있는 큐 개체보다 작거나 같은지 테스트합니다.  
   
 ```  
@@ -151,10 +151,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -204,7 +204,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 queue 개체가 우변에 있는 queue 개체와 같은지 테스트합니다.  
   
 ```  
@@ -212,10 +212,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -266,7 +266,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  연산자의 좌변에 있는 큐 개체가 우변에 있는 큐 개체보다 큰지 테스트합니다.  
   
 ```  
@@ -274,10 +274,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -328,7 +328,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  연산자의 좌변에 있는 큐 개체가 우변에 있는 큐 개체보다 크거나 같은지 테스트합니다.  
   
 ```  
@@ -336,10 +336,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **queue** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **queue** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  

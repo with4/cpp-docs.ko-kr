@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DSolidColorBrush
-- afxrendertarget/CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush::CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush::Attach
+- AFXRENDERTARGET/CD2DSolidColorBrush::Create
+- AFXRENDERTARGET/CD2DSolidColorBrush::Destroy
+- AFXRENDERTARGET/CD2DSolidColorBrush::Detach
+- AFXRENDERTARGET/CD2DSolidColorBrush::Get
+- AFXRENDERTARGET/CD2DSolidColorBrush::GetColor
+- AFXRENDERTARGET/CD2DSolidColorBrush::SetColor
+- AFXRENDERTARGET/CD2DSolidColorBrush::m_colorSolid
+- AFXRENDERTARGET/CD2DSolidColorBrush::m_pSolidColorBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,14 +105,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
  소멸자입니다. D2D 단색 브러시 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dsolidcolorbrushattach"></a><a name="attach"></a>CD2DSolidColorBrush::Attach  
+##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -113,7 +123,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="a-namecd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
+##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
  CD2DSolidColorBrush 개체를 만듭니다.  
   
 ```  
@@ -148,7 +158,7 @@ CD2DSolidColorBrush(
  `nAlpha`  
  브러시의 색의 불투명도입니다.  
   
-##  <a name="a-namecreatea--cd2dsolidcolorbrushcreate"></a><a name="create"></a>CD2DSolidColorBrush::Create  
+##  <a name="create"></a>CD2DSolidColorBrush::Create  
  CD2DSolidColorBrush를 만듭니다.  
   
 ```  
@@ -162,14 +172,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="a-namedestroya--cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a>CD2DSolidColorBrush::Destroy  
+##  <a name="destroy"></a>CD2DSolidColorBrush::Destroy  
  CD2DSolidColorBrush 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dsolidcolorbrushdetach"></a><a name="detach"></a>CD2DSolidColorBrush::Detach  
+##  <a name="detach"></a>CD2DSolidColorBrush::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -179,7 +189,7 @@ ID2D1SolidColorBrush* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegeta--cd2dsolidcolorbrushget"></a><a name="get"></a>CD2DSolidColorBrush::Get  
+##  <a name="get"></a>CD2DSolidColorBrush::Get  
  반환 ID2D1SolidColorBrush 인터페이스  
   
 ```  
@@ -189,7 +199,7 @@ ID2D1SolidColorBrush* Get();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1SolidColorBrush 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namegetcolora--cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
+##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
  단색 브러시의 색을 검색  
   
 ```  
@@ -199,21 +209,21 @@ D2D1_COLOR_F GetColor() const;
 ### <a name="return-value"></a>반환 값  
  이 단색 브러시의 색  
   
-##  <a name="a-namemcolorsolida--cd2dsolidcolorbrushmcolorsolid"></a><a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
+##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
  단색 브러시입니다.  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="a-namempsolidcolorbrusha--cd2dsolidcolorbrushmpsolidcolorbrush"></a><a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
+##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
  ID2D1SolidColorBrush 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="a-nameoperatorid2d1solidcolorbrushstara--cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
  반환 ID2D1SolidColorBrush 인터페이스  
   
 ```  
@@ -223,7 +233,7 @@ operator ID2D1SolidColorBrush*();
 ### <a name="return-value"></a>반환 값  
  개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1SolidColorBrush 인터페이스에 대 한 포인터입니다.  
   
-##  <a name="a-namesetcolora--cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
+##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
  이 단색 브러시의 색을 지정합니다.  
   
 ```  

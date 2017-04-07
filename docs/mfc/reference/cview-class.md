@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CView
+- AFXWIN/CView
+- AFXWIN/CView::CView
+- AFXWIN/CView::DoPreparePrinting
+- AFXWIN/CView::GetDocument
+- AFXWIN/CView::IsSelected
+- AFXWIN/CView::OnDragEnter
+- AFXWIN/CView::OnDragLeave
+- AFXWIN/CView::OnDragOver
+- AFXWIN/CView::OnDragScroll
+- AFXWIN/CView::OnDrop
+- AFXWIN/CView::OnDropEx
+- AFXWIN/CView::OnInitialUpdate
+- AFXWIN/CView::OnPrepareDC
+- AFXWIN/CView::OnScroll
+- AFXWIN/CView::OnScrollBy
+- AFXWIN/CView::OnActivateFrame
+- AFXWIN/CView::OnActivateView
+- AFXWIN/CView::OnBeginPrinting
+- AFXWIN/CView::OnDraw
+- AFXWIN/CView::OnEndPrinting
+- AFXWIN/CView::OnEndPrintPreview
+- AFXWIN/CView::OnPreparePrinting
+- AFXWIN/CView::OnPrint
+- AFXWIN/CView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +173,7 @@ class AFX_NOVTABLE CView : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecviewa--cviewcview"></a><a name="cview"></a>CView::CView  
+##  <a name="cview"></a>CView::CView  
  `CView` 개체를 생성합니다.  
   
 ```  
@@ -159,7 +183,7 @@ CView();
 ### <a name="remarks"></a>주의  
  새로운 프레임 창을 만들거나 창이 분할 되어 때 생성자를 호출 하는 프레임 워크. 재정의 [OnInitialUpdate](#oninitialupdate) 멤버 함수를 문서에 연결 된 후에 뷰를 초기화 합니다.  
   
-##  <a name="a-namedoprepareprintinga--cviewdoprepareprinting"></a><a name="doprepareprinting"></a>CView::DoPreparePrinting  
+##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
  재정의에서이 함수를 호출 [OnPreparePrinting](#onprepareprinting) 인쇄 대화 상자를 호출 하 여 프린터 장치 컨텍스트를 만듭니다.  
   
 ```  
@@ -178,7 +202,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
   
  이 함수를 현재 프린터 설정을;를 사용 하 여 프린터 장치 컨텍스트에 만듭니다 파일은 미리 보는 경우 이 장치 컨텍스트는 미리 보기 중에 프린터를 시뮬레이션 하는 데 사용 됩니다.  
   
-##  <a name="a-namegetdocumenta--cviewgetdocument"></a><a name="getdocument"></a>CView::GetDocument  
+##  <a name="getdocument"></a>CView::GetDocument  
  보기의 문서에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -191,7 +215,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>주의  
  이 문서의 멤버 함수를 호출할 수 있습니다.  
   
-##  <a name="a-nameisselecteda--cviewisselected"></a><a name="isselected"></a>CView::IsSelected  
+##  <a name="isselected"></a>CView::IsSelected  
  지정된 된 문서 항목 선택 되어 있는지 확인 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -208,7 +232,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>주의  
  기본 구현에서는이 함수의 반환 **FALSE**합니다. 이 함수를 사용 하 여 선택을 구현 하는 경우 재정의 [CDocItem](../../mfc/reference/cdocitem-class.md) 개체입니다. 보기 OLE 항목을 포함 하는 경우이 함수를 재정의 해야 합니다.  
   
-##  <a name="a-nameonactivateframea--cviewonactivateframe"></a><a name="onactivateframe"></a>CView::OnActivateFrame  
+##  <a name="onactivateframe"></a>CView::OnActivateFrame  
  프레임 창 보기를 포함 하는 활성화 또는 비활성화 하는 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -233,7 +257,7 @@ virtual void OnActivateFrame(
 ### <a name="remarks"></a>주의  
  프레임 창 보기와 관련 된 활성화 되거나 비활성화 될 때 특수 처리를 수행 하려는 경우이 멤버 함수를 재정의 합니다. 예를 들어 [CFormView](../../mfc/reference/cformview-class.md) 저장 하 고 포커스가 있는 컨트롤을 복원 하는 경우이 재정의 수행 합니다.  
   
-##  <a name="a-nameonactivateviewa--cviewonactivateview"></a><a name="onactivateview"></a>CView::OnActivateView  
+##  <a name="onactivateview"></a>CView::OnActivateView  
  뷰는 활성화 또는 비활성화 하는 경우 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -260,7 +284,7 @@ virtual void OnActivateView(
   
  이러한 매개 변수 다를 때 [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) 어떤 다른 보기를 사용 하 여 호출 됩니다 [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) 를 반환 합니다. 이 분할 창에서 가장 자주 발생합니다.  
   
-##  <a name="a-nameonbeginprintinga--cviewonbeginprinting"></a><a name="onbeginprinting"></a>CView::OnBeginPrinting  
+##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
  `OnPreparePrinting` 이 호출된 후 인쇄 또는 인쇄 미리 보기 작업을 시작할 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -281,7 +305,7 @@ virtual void OnBeginPrinting(
   
  또한 이 함수를 사용하여 프린터 장치 컨텍스트의 속성에 따라 초기화를 수행할 수 있습니다. 예를 들어 문서를 인쇄하는 데 필요한 페이지 수는 사용자가 인쇄 대화 상자에서 지정한 설정(예: 페이지 길이)에 따라 다를 수 있습니다. 이러한 상황에서 문서 길이 지정할 수 없습니다는 [OnPreparePrinting](#onprepareprinting) 멤버 함수에 있는 경우 일반적으로 필요 하 고 프린터 장치 컨텍스트의 만든 대화 상자 설정에 따라 될 때까지 대기 해야 합니다. [OnBeginPrinting](#onbeginprinting) 가 제공 하는 첫 번째 재정의 가능 함수에 대 한 액세스는 [CDC](../../mfc/reference/cdc-class.md) 이 함수에서 문서 길이 설정할 수 있는 프린터 장치 컨텍스트를 나타내는 개체입니다. 이때까지 문서 길이를 지정하지 않으면 인쇄 미리 보기 중에 스크롤 막대가 표시되지 않습니다.  
   
-##  <a name="a-nameondragentera--cviewondragenter"></a><a name="ondragenter"></a>CView::OnDragEnter  
+##  <a name="ondragenter"></a>CView::OnDragEnter  
  마우스 놓기 대상 창의 스크롤할 수 없는 영역을 처음 실행 하는 경우 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -319,7 +343,7 @@ virtual DROPEFFECT OnDragEnter(
   
  재정의에 대 한 이후 호출을 준비 하려면이 함수는 [OnDragOver](#ondragover) 멤버 함수입니다. 이 이번에는 나중에 사용할 수 있는 데이터 개체에서 필요한 모든 데이터를 검색할는 `OnDragOver` 멤버 함수입니다. 보기는 사용자 시각적 피드백을 제공할이 이번에도 업데이트 되어야 합니다. 자세한 내용은 문서를 참조 하십시오. [끌어서 놓기: 놓기 대상 구현](../../mfc/drag-and-drop-implementing-a-drop-target.md)합니다.  
   
-##  <a name="a-nameondragleavea--cviewondragleave"></a><a name="ondragleave"></a>CView::OnDragLeave  
+##  <a name="ondragleave"></a>CView::OnDragLeave  
  해당 창에 대 한 유효한 놓기 영역 밖으로 마우스를 이동할 때 프레임 워크에서 끌기 작업 중 호출 합니다.  
   
 ```  
@@ -329,7 +353,7 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>주의  
  현재 보기 중 수행 된 모든 작업을 정리 해야 할 경우이 함수를 재정의 [OnDragEnter](#ondragenter) 또는 [OnDragOver](#ondragover) 개체를 끌어서 놓을 때 시각적 사용자 피드백을 제거 하는 등 호출 합니다.  
   
-##  <a name="a-nameondragovera--cviewondragover"></a><a name="ondragover"></a>CView::OnDragOver  
+##  <a name="ondragover"></a>CView::OnDragOver  
  놓기 대상 창 위로 마우스를 이동할 때 프레임 워크에서 끌기 작업 중 호출.  
   
 ```  
@@ -367,7 +391,7 @@ virtual DROPEFFECT OnDragOver(
   
  끌기 작업 중 사용자 시각적 피드백을 제공 하려면이 함수를 재정의 합니다. 이 함수는 계속 해 서 호출 됩니다, 이후 내에 포함 된 모든 코드 최적화 해야 최대한 많이 있습니다. 자세한 내용은 문서를 참조 하십시오. [끌어서 놓기: 놓기 대상 구현](../../mfc/drag-and-drop-implementing-a-drop-target.md)합니다.  
   
-##  <a name="a-nameondragscrolla--cviewondragscroll"></a><a name="ondragscroll"></a>CView::OnDragScroll  
+##  <a name="ondragscroll"></a>CView::OnDragScroll  
  호출 하기 전에 프레임 워크에서 호출 [OnDragEnter](#ondragenter) 또는 [OnDragOver](#ondragover) 스크롤 영역에는 지점 인지 여부를 확인 합니다.  
   
 ```  
@@ -401,7 +425,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>주의  
  이 이벤트에 대 한 특별 한 동작을 제공 하려는 경우이 함수를 재정의 합니다. 기본 구현에서는 커서의 각 창 테두리 내부에 기본 스크롤 영역 안으로 끌 때 자동으로 windows를 스크롤합니다. 자세한 내용은 문서를 참조 하십시오. [끌어서 놓기: 놓기 대상 구현](../../mfc/drag-and-drop-implementing-a-drop-target.md)합니다.  
   
-##  <a name="a-nameondrawa--cviewondraw"></a><a name="ondraw"></a>Cview:: Ondraw  
+##  <a name="ondraw"></a>Cview:: Ondraw  
  문서의 이미지를 렌더링 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -419,7 +443,7 @@ virtual void OnDraw(CDC* pDC) = 0;
   
  호출 그리기를 최적화 하는 [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) 지정 된 사각형을 그릴 것인지 여부를 확인 하려면 장치 컨텍스트의 멤버 함수입니다. 일반적인 화면 표시 및 인쇄를 구분 해야 하는 경우 호출 된 [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) 장치 컨텍스트의 멤버 함수입니다.  
   
-##  <a name="a-nameondropa--cviewondrop"></a><a name="ondrop"></a>CView::OnDrop  
+##  <a name="ondrop"></a>CView::OnDrop  
  유효한 놓기 대상 위에 데이터 개체를 놓을 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -456,7 +480,7 @@ virtual BOOL OnDrop(
 > [!NOTE]
 >  프레임 워크를 재정의 하는 경우이 함수를 호출 하지 않습니다 [OnDropEx](#ondropex) 이 뷰 클래스에 있습니다.  
   
-##  <a name="a-nameondropexa--cviewondropex"></a><a name="ondropex"></a>CView::OnDropEx  
+##  <a name="ondropex"></a>CView::OnDropEx  
  유효한 놓기 대상 위에 데이터 개체를 놓을 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -516,7 +540,7 @@ virtual DROPEFFECT OnDropEx(
   
  기본 메뉴 명령을 설정에 대 한 자세한 내용은 참조 하십시오. [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 및 [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) 이 볼륨에 있습니다.  
   
-##  <a name="a-nameonendprintinga--cviewonendprinting"></a><a name="onendprinting"></a>CView::OnEndPrinting  
+##  <a name="onendprinting"></a>CView::OnEndPrinting  
  문서 인쇄 했거나 미리 후 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -535,7 +559,7 @@ virtual void OnEndPrinting(
 ### <a name="remarks"></a>주의  
  이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 에 할당 된 GDI 리소스를 해제 하려면이 함수를 재정의 하는 [OnBeginPrinting](#onbeginprinting) 멤버 함수입니다.  
   
-##  <a name="a-nameonendprintpreviewa--cviewonendprintpreview"></a><a name="onendprintpreview"></a>CView::OnEndPrintPreview  
+##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
  사용자가 인쇄 미리 보기 모드를 벗어나면 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -564,7 +588,7 @@ virtual void OnEndPrintPreview(
   
  항상 기본 클래스 버전을 호출한 `OnEndPrintPreview` 에서 함수의 끝에서 일반적으로 재정의 합니다.  
   
-##  <a name="a-nameoninitialupdatea--cviewoninitialupdate"></a><a name="oninitialupdate"></a>Cview:: Oninitialupdate  
+##  <a name="oninitialupdate"></a>Cview:: Oninitialupdate  
  프레임 워크에서 뷰를 먼저 문서에 연결한 후 전에 호출 처음 표시 되는 보기.  
   
 ```  
@@ -574,7 +598,7 @@ virtual void OnInitialUpdate();
 ### <a name="remarks"></a>주의  
  이 함수의 기본 구현에서는 호출 하는 [OnUpdate](#onupdate) 힌트 정보가 없는 멤버 함수 (즉, 0에 대 한 기본값을 사용 하는 `lHint` 매개 변수 및 **NULL** 에 대 한는 `pHint` 매개 변수). 문서에 대 한 정보를 필요로 하는 일회 초기화를 수행 하려면이 함수를 재정의 합니다. 예를 들어 응용 프로그램에 고정 크기의 문서 경우 보기의 스크롤 제한 되는 문서 크기에 따라 초기화 하이 함수를 사용할 수 있습니다. 사용 하 여 응용 프로그램에서 가변 크기의 문서를 지 원하는 경우 [OnUpdate](#onupdate) 스크롤 업데이트할 경우 때마다 문서 변경 합니다.  
   
-##  <a name="a-nameonpreparedca--cviewonpreparedc"></a><a name="onpreparedc"></a>CView::OnPrepareDC  
+##  <a name="onpreparedc"></a>CView::OnPrepareDC  
  이전 프레임 워크에서 호출는 [OnDraw](#ondraw) 전에 및 화면 디스플레이 대 한 멤버 함수를 호출는 [OnPrint](#onprint) 인쇄 또는 인쇄 미리 보기 중에 각 페이지에 대 한 멤버 함수를 호출 합니다.  
   
 ```  
@@ -608,7 +632,7 @@ virtual void OnPrepareDC(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&183;](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="a-nameonprepareprintinga--cviewonprepareprinting"></a><a name="onprepareprinting"></a>CView::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>CView::OnPreparePrinting  
  문서는 인쇄 하거나 미리 보기 전에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -642,7 +666,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  [!code-cpp[NVC_MFCDocView #&185;](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="a-nameonprinta--cviewonprint"></a><a name="onprint"></a>CView::OnPrint  
+##  <a name="onprint"></a>CView::OnPrint  
  인쇄 문서 페이지를 미리 하거나 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -682,7 +706,7 @@ virtual void OnPrint(
   
  또 다른 예제를 보려면 [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)합니다.  
   
-##  <a name="a-nameonscrolla--cviewonscroll"></a><a name="onscroll"></a>CView::OnScroll  
+##  <a name="onscroll"></a>CView::OnScroll  
  스크롤 여부를 확인 하려면 프레임 워크에서 호출 되었을 수 있습니다.  
   
 ```  
@@ -722,7 +746,7 @@ virtual BOOL OnScroll(
 ### <a name="remarks"></a>주의  
  한 가지 경우에 사용 하는 프레임 워크에서이 함수를 호출 `bDoScroll` 로 설정 **TRUE** 보기 scrollbar 메시지를 수신 하는 경우. 이 경우 보기를 스크롤하여 실제로 채워야 합니다. 다른 경우에서이 함수를 호출 `bDoScroll` 로 설정 **FALSE** 때 OLE 항목을 처음 끄는 놓기 대상의 자동 스크롤 영역으로 스크롤 실제로 발생 하기 전에 합니다. 이 경우 하지 실제로 스크롤하여 채워야 보기.  
   
-##  <a name="a-nameonscrollbya--cviewonscrollby"></a><a name="onscrollby"></a>CView::OnScrollBy  
+##  <a name="onscrollby"></a>CView::OnScrollBy  
  사용자 보기의 현재 테두리에 대해 OLE 항목을 끌어 또는 세로 또는 가로 스크롤 막대를 조작 하 여 문서의 현재 보기 이외의 영역을 볼 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -748,7 +772,7 @@ virtual BOOL OnScrollBy(
   
  문서 너비 또는 높이 32767 픽셀을 초과 하는 경우 32767 스크롤할 못하여 `OnScrollBy` 잘못 된 라고 `sizeScroll` 인수입니다.  
   
-##  <a name="a-nameonupdatea--cviewonupdate"></a><a name="onupdate"></a>CView::OnUpdate  
+##  <a name="onupdate"></a>CView::OnUpdate  
  보기의 문서가 수정 되었습니다; 한 후에 프레임 워크에서 호출 합니다. 이 함수를 호출 하 [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) 이러한 수정 사항을 반영 하도록 표시를 업데이트 보기를 허용 합니다.  
   
 ```  

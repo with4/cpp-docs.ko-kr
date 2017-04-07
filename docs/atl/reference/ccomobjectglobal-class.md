@@ -10,10 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
-- ATL::CComObjectGlobal<Base>
-- ATL::CComObjectGlobal
-- ATL.CComObjectGlobal
-- ATL.CComObjectGlobal<Base>
+- ATLCOM/ATL::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::AddRef
+- ATLCOM/ATL::CComObjectGlobal::QueryInterface
+- ATLCOM/ATL::CComObjectGlobal::Release
+- ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>CComObjectGlobal::AddRef  
  개체의 참조 횟수가 1 씩 늘립니다.  
   
 ```
@@ -106,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>주의  
  기본적으로 `AddRef` 호출 **_Module::Lock**여기서 **_Module** 의 인스턴스인 전역 [CComModule](../../atl/reference/ccommodule-class.md) 에서 파생 된 클래스 또는 합니다.  
   
-##  <a name="a-nameccomobjectglobala--ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
  생성자입니다. 호출 `FinalConstruct` 다음 설정 [m_hResFinalConstruct](#m_hresfinalconstruct) 에 `HRESULT` 반환한 `FinalConstruct`합니다.  
   
 ```
@@ -116,7 +118,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>주의  
  기본 클래스를 파생 하지 경우 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)를 직접 제공 해야 `FinalConstruct` 메서드. 이 소멸자는 `FinalRelease`을 호출합니다.  
   
-##  <a name="a-namedtora--ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  소멸자입니다.  
   
 ```
@@ -126,14 +128,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>주의  
  할당 된 모든 리소스를 해제 하는 호출 [FinalRelease](ccomobjectrootex-class.md#finalrelease)합니다.  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectglobalmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
  포함 된 `HRESULT` 호출에서 `FinalConstruct` 생성 중는 `CComObjectGlobal` 개체입니다.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
  요청 된 인터페이스 포인터에 대 한 포인터를 검색합니다.  
   
 ```
@@ -153,7 +155,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>주의  
  `QueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다.  
   
-##  <a name="a-namereleasea--ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>CComObjectGlobal::Release  
  1에서 개체의 참조 횟수를 감소 시킵니다.  
   
 ```

@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoRevertImpersonation
 - CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Attach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Detach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::GetAccessToken
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +80,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="a-nameattacha--cautorevertimpersonationattach"></a><a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
  자동화는 가장 액세스 토큰의 버전을 변경 합니다.  
   
 ```
@@ -90,7 +94,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>주의  
  경우에이 메서드를 사용 해야는 [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) null 개체를 만든 `CAccessToken` 포인터 경우 [분리](#detach) 이미 호출 되었습니다. 간단한 경우에이 메서드를 사용 하는 데 필요한있지 않습니다.  
   
-##  <a name="a-namecautorevertimpersonationa--cautorevertimpersonationcautorevertimpersonation"></a><a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
  `CAutoRevertImpersonation` 개체를 생성합니다.  
   
 ```
@@ -104,7 +108,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>주의  
  액세스 토큰의 실제 가장 별도로 수행 해야 및 가급적 이면 작성 하기 전에 `CAutoRevertImpersonation` 개체입니다. 이 가장이 자동으로 되돌려집니다 때는 `CAutoRevertImpersonation` 개체가 범위를 벗어난 있습니다.  
   
-##  <a name="a-namedtora--cautorevertimpersonationcautorevertimpersonation"></a><a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  개체를 제거 하 고 액세스 토큰 가장을 되돌립니다.  
   
 ```
@@ -114,7 +118,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>주의  
  에 적용 된 모든 가장 현재 되돌립니다는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 통해 또는 생성 시 제공 된 개체는 [연결](#attach) 메서드. 없으면 `CAccessToken` 은 연결 된 소멸자가 영향을 주지 않습니다.  
   
-##  <a name="a-namedetacha--cautorevertimpersonationdetach"></a><a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
  자동 가장 되돌리기를 취소합니다.  
   
 ```
@@ -127,7 +131,7 @@ const CAccessToken* Detach() throw();
 ### <a name="remarks"></a>주의  
  호출 **분리** 방지는 `CAutoRevertImpersonation` 개체에 적용 된 모든 가장 현재으로 되돌릴는 [CAccessToken](../../atl/reference/caccesstoken-class.md) 이 개체와 연결 된 개체입니다. `CAutoRevertImpersonation`그런 다음 영향을 주지 소멸 하거나 같은 또는 다른에 다시 연결 될 `CAccessToken` 개체를 사용 하 여 [연결](#attach)합니다.  
   
-##  <a name="a-namegetaccesstokena--cautorevertimpersonationgetaccesstoken"></a><a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
  이 개체와 연결 된 액세스 토큰 현재를 검색 합니다.  
   
 ```

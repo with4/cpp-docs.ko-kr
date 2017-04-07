@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CNonStatelessWorker<Worker>
-- ATL::CNonStatelessWorker
-- ATL.CNonStatelessWorker
 - CNonStatelessWorker
-- ATL::CNonStatelessWorker<Worker>
+- ATLUTIL/ATL::CNonStatelessWorker
+- ATLUTIL/ATL::CNonStatelessWorker::RequestType
+- ATLUTIL/ATL::CNonStatelessWorker::Execute
+- ATLUTIL/ATL::CNonStatelessWorker::Initialize
+- ATLUTIL/ATL::CNonStatelessWorker::Terminate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +85,7 @@ class CNonStatelessWorker
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="a-nameexecutea--cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>CNonStatelessWorker::Execute  
  구현 [WorkerArchetype::Execute](worker-archetype.md#execute)합니다.  
 
   
@@ -99,7 +100,7 @@ void Execute(
  인스턴스를 만들고이 메서드는 *작업자* 스택 및 호출에서 클래스 [초기화](worker-archetype.md#initialize) 해당 개체에 합니다. 성공적으로 초기화 하는 경우이 메서드 호출 [Execute](worker-archetype.md#execute) 및 [Terminate](worker-archetype.md#terminate) 같은 개체에 있습니다.  
 
   
-##  <a name="a-nameinitializea--cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
  구현 [WorkerArchetype::Initialize](worker-archetype.md#initialize)합니다.  
   
 ```
@@ -112,7 +113,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>주의  
  이 클래스 초기화를 수행 하지 않습니다 `Initialize`합니다.  
   
-##  <a name="a-namerequesttypea--cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
  구현 [WorkerArchetype::RequestType](worker-archetype.md#requesttype)합니다.  
   
 ```
@@ -122,7 +123,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>주의  
  에 사용 되는 클래스와 동일한 형식의 작업 항목을 처리 하는이 클래스는 *작업자* 템플릿 매개 변수입니다. 참조 [CNonStatelessWorker 개요](../../atl/reference/cnonstatelessworker-class.md) 대 한 자세한 내용은 합니다.  
   
-##  <a name="a-nameterminatea--cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
  구현 [WorkerArchetype::Terminate](worker-archetype.md#terminate)합니다.  
   
 ```

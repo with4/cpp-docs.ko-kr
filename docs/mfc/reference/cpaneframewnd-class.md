@@ -9,13 +9,71 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CPaneFrameWnd.Serialize
-- CPaneFrameWnd.PreTranslateMessage
 - CPaneFrameWnd
-- CPaneFrameWnd::Serialize
-- PreTranslateMessage
-- CPaneFrameWnd::PreTranslateMessage
-- Serialize
+- AFXPANEFRAMEWND/CPaneFrameWnd
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddRemovePaneFromGlobalList
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustPaneFrames
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcBorderSize
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcExpectedDockedRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeAttached
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeDockedToPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::CheckGripperVisibility
+- AFXPANEFRAMEWND/CPaneFrameWnd::ConvertToTabbedDocument
+- AFXPANEFRAMEWND/CPaneFrameWnd::Create
+- AFXPANEFRAMEWND/CPaneFrameWnd::CreateEx
+- AFXPANEFRAMEWND/CPaneFrameWnd::DockPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::FindFloatingPaneByID
+- AFXPANEFRAMEWND/CPaneFrameWnd::FrameFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionHeight
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionText
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingMode
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetFirstVisiblePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetParent
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPinState
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetRecentFloatingRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetVisiblePaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::HitTest
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsCaptured
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollDown
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollUp
+- AFXPANEFRAMEWND/CPaneFrameWnd::KillDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::LoadState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnBeforeDock
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDockToRecentPos
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnKillRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnMovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnPaneRecalcLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnSetRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnShowPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::PaneFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::Pin
+- AFXPANEFRAMEWND/CPaneFrameWnd::RedrawAll
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemoveNonValidPanes
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::ReplacePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::SaveState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetCaptionButtons
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetPreDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SizeToContent
+- AFXPANEFRAMEWND/CPaneFrameWnd::StartTearOff
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentDockSiteInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentTabRelatedInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnCheckRollState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDrawBorder
+- AFXPANEFRAMEWND/CPaneFrameWnd::m_bUseSaveBits
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +220,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxPaneFrameWnd.h  
   
-##  <a name="a-nameaddpanea--cpaneframewndaddpane"></a><a name="addpane"></a>CPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>CPaneFrameWnd::AddPane  
  창을 추가합니다.  
   
 ```  
@@ -173,7 +231,7 @@ virtual void AddPane(CBasePane* pWnd);
  [in] `pWnd`  
  추가할 창입니다.  
   
-##  <a name="a-nameaddremovepanefromgloballista--cpaneframewndaddremovepanefromgloballist"></a><a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
+##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
  전역 목록에서 창을 추가하거나 제거합니다.  
   
 ```  
@@ -192,14 +250,14 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="a-nameadjustlayouta--cpaneframewndadjustlayout"></a><a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
  미니 프레임 창의 레이아웃을 조정합니다.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-##  <a name="a-nameadjustpaneframesa--cpaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -208,7 +266,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namecalcbordersizea--cpaneframewndcalcbordersize"></a><a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
+##  <a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
  미니 프레임 창에 대 한 테두리의 크기를 계산 합니다.  
   
 ```  
@@ -222,7 +280,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 미니 프레임 창의 테두리의 크기를 계산 하는 프레임 워크에서 호출 됩니다. 또는 미니 프레임 창 도구 모음을 포함 하는 인지에 따라 달라 집니다 반환 되는 크기 [CDockablePane](../../mfc/reference/cdockablepane-class.md)합니다.  
   
-##  <a name="a-namecalcexpecteddockedrecta--cpaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
  도킹된 창의 예상 사각형을 계산합니다.  
   
 ```  
@@ -253,7 +311,7 @@ virtual void CalcExpectedDockedRect(
 ### <a name="remarks"></a>주의  
  이 메서드는 사용자 지정 된 지점에 창을 끌어 경우 창이 차지 하는 사각형 계산 `ptMouse` 있습니다 도킹 것입니다.  
   
-##  <a name="a-namecanbeattacheda--cpaneframewndcanbeattached"></a><a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
  현재 창을 다른 창이나 프레임 창에 도킹할 수 있는지 여부를 결정합니다.  
   
 ```  
@@ -263,7 +321,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`창에서 다른 창이 나 프레임 창에 도킹할 수 있는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namecanbedockedtopanea--cpaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
  미니 프레임 창을 창에 도킹할 수 있는지 여부를 결정합니다.  
   
 ```  
@@ -277,7 +335,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ### <a name="return-value"></a>반환 값  
  미니 프레임에 도킹할 수 있는 경우 0이 아닌 `pDockingBar`그렇지 않으면 0입니다.  
   
-##  <a name="a-namecheckgrippervisibilitya--cpaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -286,14 +344,14 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameconverttotabbeddocumenta--cpaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
  창을 탭된 문서로 변환합니다.  
   
 ```  
 virtual void ConvertToTabbedDocument();
 ```  
   
-##  <a name="a-namecreatea--cpaneframewndcreate"></a><a name="create"></a>CPaneFrameWnd::Create  
+##  <a name="create"></a>CPaneFrameWnd::Create  
  미니 프레임 창을 만들고에 연결 된 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
   
 ```  
@@ -327,7 +385,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>주의  
  미니 프레임 창의 두 단계에서 만들어집니다. 첫째, 프레임 워크를 만들고는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
   
-##  <a name="a-namecreateexa--cpaneframewndcreateex"></a><a name="createex"></a>CPaneFrameWnd::CreateEx  
+##  <a name="createex"></a>CPaneFrameWnd::CreateEx  
  미니 프레임 창을 만들고에 연결 된 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) 개체입니다.  
   
 ```  
@@ -365,7 +423,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>주의  
  미니 프레임 창의 두 단계에서 만들어집니다. 첫째, 프레임 워크를 만들고는 `CPaneFrameWnd` 개체입니다. 둘째, 호출 `Create` Windows 미니 프레임 창을 만들고에 연결 하는 `CPaneFrameWnd` 개체입니다.  
   
-##  <a name="a-namedockpanea--cpaneframewnddockpane"></a><a name="dockpane"></a>CPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>CPaneFrameWnd::DockPane  
  창을 도킹합니다.  
   
 ```  
@@ -379,7 +437,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ### <a name="return-value"></a>반환 값  
  작업이 성공한 경우의 `CDockablePane` 하 고, 그렇지 않으면 창 도킹 되어는 `NULL`합니다.  
   
-##  <a name="a-namefindfloatingpanebyida--cpaneframewndfindfloatingpanebyid"></a><a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
+##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
  부동 창의 전역 목록에서 지정된 컨트롤 ID를 가진 창을 찾습니다.  
   
 ```  
@@ -393,7 +451,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="return-value"></a>반환 값  
  지정 된 컨트롤 ID; 인 창 그렇지 않으면 `NULL`는 지정 된 컨트롤 ID를 포함 하는 없는 창  
   
-##  <a name="a-nameframefrompointa--cpaneframewndframefrompoint"></a><a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
+##  <a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
  지정된 된 점이 포함 된 미니 프레임 창을 찾습니다.  
   
 ```  
@@ -420,7 +478,7 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ### <a name="return-value"></a>반환 값  
  포함 된 미니 프레임 창에 대 한 포인터 `pt`고, 그렇지 않으면 `NULL`합니다.  
   
-##  <a name="a-namegetcaptionheighta--cpaneframewndgetcaptionheight"></a><a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
  미니 프레임 창 캡션의 높이를 반환합니다.  
   
 ```  
@@ -433,7 +491,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>주의  
  미니 프레임 창의 높이 확인 하려면이 메서드를 호출 합니다. 기본적으로 높이 설정 `SM_CYSMCAPTION`합니다. 자세한 내용은 참조 [GetSystemMetrics 함수](http://msdn.microsoft.com/library/windows/desktop/ms724385)합니다.  
   
-##  <a name="a-namegetcaptionrecta--cpaneframewndgetcaptionrect"></a><a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
+##  <a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
  미니 프레임 창 캡션의 경계 사각형을 계산합니다.  
   
 ```  
@@ -447,7 +505,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ### <a name="remarks"></a>주의  
  이 메서드는 미니 프레임 창의 캡션의 경계 사각형을 계산 하는 프레임 워크에서 호출 됩니다.  
   
-##  <a name="a-namegetcaptiontexta--cpaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
  캡션 텍스트를 반환합니다.  
   
 ```  
@@ -460,7 +518,7 @@ virtual CString GetCaptionText();
 ### <a name="remarks"></a>주의  
  캡션 텍스트를 표시 하는 경우이 메서드는 프레임 워크에 의해 호출 됩니다.  
   
-##  <a name="a-namegetdockingmanagera--cpaneframewndgetdockingmanager"></a><a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
+##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -471,7 +529,7 @@ CDockingManager* GetDockingManager() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetdockingmodea--cpaneframewndgetdockingmode"></a><a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
+##  <a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
  도킹 모드를 반환합니다.  
   
 ```  
@@ -487,7 +545,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
 - `DT_SMART`  
   
-##  <a name="a-namegetfirstvisiblepanea--cpaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
  미니 프레임 창에 포함된 첫 번째 표시 창을 반환합니다.  
   
 ```  
@@ -497,7 +555,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="return-value"></a>반환 값  
  미니 프레임 창의 첫 번째 창 또는 `NULL` 미니 프레임 창에 창이 없는 경우.  
   
-##  <a name="a-namegethotpointa--cpaneframewndgethotpoint"></a><a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
+##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -508,7 +566,7 @@ CPoint GetHotPoint() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpanea--cpaneframewndgetpane"></a><a name="getpane"></a>CPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>CPaneFrameWnd::GetPane  
  미니 프레임 창에 포함된 창을 반환합니다.  
   
 ```  
@@ -520,7 +578,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpanecounta--cpaneframewndgetpanecount"></a><a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
  미니 프레임 창에 포함된 창 수를 반환합니다.  
   
 ```  
@@ -532,7 +590,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetparenta--cpaneframewndgetparent"></a><a name="getparent"></a>CPaneFrameWnd::GetParent  
+##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -543,7 +601,7 @@ CWnd* GetParent();
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpinstatea--cpaneframewndgetpinstate"></a><a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
+##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -554,7 +612,7 @@ BOOL GetPinState() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetrecentfloatingrecta--cpaneframewndgetrecentfloatingrect"></a><a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
+##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -565,7 +623,7 @@ CRect GetRecentFloatingRect() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetvisiblepanecounta--cpaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
  미니 프레임 창에 포함된 표시 창 수를 반환합니다.  
   
 ```  
@@ -577,7 +635,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namehittesta--cpaneframewndhittest"></a><a name="hittest"></a>CPaneFrameWnd::HitTest  
+##  <a name="hittest"></a>CPaneFrameWnd::HitTest  
  미니 프레임 창의 어떤 부분이 지정된 지점에 있는지 결정합니다.  
   
 ```  
@@ -610,7 +668,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMLEFT`|점은 왼쪽 아래에 있습니다.|  
 |`HTBOTTOMRIGHT`|점은 오른쪽 아래에 있습니다.|  
   
-##  <a name="a-nameiscaptureda--cpaneframewndiscaptured"></a><a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
+##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -621,7 +679,7 @@ BOOL IsCaptured() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisdelayshowa--cpaneframewndisdelayshow"></a><a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
+##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -632,7 +690,7 @@ BOOL IsDelayShow() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisrolldowna--cpaneframewndisrolldown"></a><a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
+##  <a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
  미니 프레임 창이 롤다운되어야 하는지 여부를 결정합니다.  
   
 ```  
@@ -647,7 +705,7 @@ virtual BOOL IsRollDown() const;
   
  기본적으로 프레임 워크는 마우스 포인터가 창의 아래로 롤백할 수 있는지 여부를 결정 하는 미니 프레임 창 경계 사각형 안에 있는지 여부를 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
   
-##  <a name="a-nameisrollupa--cpaneframewndisrollup"></a><a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
+##  <a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
  미니 프레임 창이 롤업되어야 하는지 여부를 결정합니다.  
   
 ```  
@@ -662,14 +720,14 @@ virtual BOOL IsRollUp() const;
   
  기본적으로 프레임 워크는 마우스 포인터가 창 롤업할 수 있는지 여부를 확인 하기 위해 미니 프레임 창 경계 사각형 안에 있는지 여부를 확인 합니다. 파생된 클래스에서이 동작을 재정의할 수 있습니다.  
   
-##  <a name="a-namekilldockingtimera--cpaneframewndkilldockingtimer"></a><a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
+##  <a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
  도킹 타이머를 중지합니다.  
   
 ```  
 void KillDockingTimer();
 ```  
   
-##  <a name="a-nameloadstatea--cpaneframewndloadstate"></a><a name="loadstate"></a>CPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>CPaneFrameWnd::LoadState  
  레지스트리에서 창의 상태를 로드합니다.  
   
 ```  
@@ -688,7 +746,7 @@ virtual BOOL LoadState(
 ### <a name="return-value"></a>반환 값  
  `TRUE`창 상태를 성공적으로 로드 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namembusesavebitsa--cpaneframewndmbusesavebits"></a><a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
+##  <a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
  가 있는 창 클래스 등록 여부를 지정 된 `CS_SAVEBITS` 클래스 스타일입니다.  
   
 ```  
@@ -698,7 +756,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ### <a name="remarks"></a>주의  
  이 정적 멤버를 설정 `TRUE` 된 미니 프레임 창 클래스를 등록 하는 `CS_SAVEBITS` 스타일입니다. 사용자가 미니 프레임 창을 끌 때 깜박임을 줄일 하는 데 도움이 됩니다.  
   
-##  <a name="a-nameonbeforedocka--cpaneframewndonbeforedock"></a><a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
+##  <a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
  도킹 가능한지 여부를 결정합니다.  
   
 ```  
@@ -708,7 +766,7 @@ virtual BOOL OnBeforeDock();
 ### <a name="return-value"></a>반환 값  
  `TRUE`도킹 하는 것이 가능 합니다. 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-nameoncheckrollstatea--cpaneframewndoncheckrollstate"></a><a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
+##  <a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
  미니 프레임 창이 롤업 또는 롤다운되어야 하는지를 결정합니다.  
   
 ```  
@@ -720,14 +778,14 @@ virtual void OnCheckRollState();
   
  기본적으로 프레임 워크 호출 [CPaneFrameWnd::IsRollUp](#isrollup) 및 [CPaneFrameWnd::IsRollDown](#isrolldown) 및 방금 확장 또는 미니 프레임 창을 복원 합니다. 서로 다른 시각 효과 사용 하 여 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="a-nameondocktorecentposa--cpaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
  가장 최근 위치에 미니 프레임 창을 도킹합니다.  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
-##  <a name="a-nameondrawbordera--cpaneframewndondrawborder"></a><a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
+##  <a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
  미니 프레임 창의 테두리를 그립니다.  
   
 ```  
@@ -741,14 +799,14 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="remarks"></a>주의  
  이 메서드는 미니 프레임 창의 테두리를 그리는 프레임 워크에 의해 호출 됩니다.  
   
-##  <a name="a-nameonkillrolluptimera--cpaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
  롤업 타이머를 중지합니다.  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
-##  <a name="a-nameonmovepanea--cpaneframewndonmovepane"></a><a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
+##  <a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
  지정된 오프셋만큼 미니 프레임 창을 이동합니다.  
   
 ```  
@@ -764,7 +822,7 @@ virtual void OnMovePane(
  [in] `ptOffset`  
  창을 이동에 사용 되는 오프셋입니다.  
   
-##  <a name="a-nameonpanerecalclayouta--cpaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
  미니 프레임 창 내의 창 레이아웃을 조정합니다.  
   
 ```  
@@ -776,14 +834,14 @@ virtual void OnPaneRecalcLayout();
   
  기본적으로 창 미니 프레임 창의 전체 클라이언트 영역에 배치 됩니다.  
   
-##  <a name="a-nameonsetrolluptimera--cpaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
  롤업 타이머를 설정합니다.  
   
 ```  
 virtual void OnSetRollUpTimer();
 ```  
   
-##  <a name="a-nameonshowpanea--cpaneframewndonshowpane"></a><a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
  미니 프레임 창의 창이 숨겨지거나 표시될 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -802,7 +860,7 @@ virtual void OnShowPane(
 ### <a name="remarks"></a>주의  
  미니 프레임 창의 창을 표시 하거나 숨길 때 프레임 워크에 의해 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="a-namepina--cpaneframewndpin"></a><a name="pin"></a>CPaneFrameWnd::Pin  
+##  <a name="pin"></a>CPaneFrameWnd::Pin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -814,7 +872,7 @@ void Pin(BOOL bPin = TRUE);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namepanefrompointa--cpaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
  미니 프레임 창 안에 사용자가 제공한 지점을 포함하는 경우 창을 반환합니다.  
   
 ```  
@@ -840,7 +898,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>주의  
  지정 된 지점을 포함 하는 창을 가져오려면이 메서드를 호출 합니다.  
   
-##  <a name="a-nameredrawalla--cpaneframewndredrawall"></a><a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
+##  <a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
  모든 미니 프레임 창을 다시 그립니다.  
   
 ```  
@@ -850,14 +908,14 @@ static void RedrawAll();
 ### <a name="remarks"></a>주의  
  이 메서드를 호출 하 여 모든 미니 프레임 창을 업데이트 [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) 각 창에 대 한 합니다.  
   
-##  <a name="a-nameremovenonvalidpanesa--cpaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
  잘못된 창을 제거하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
-##  <a name="a-nameremovepanea--cpaneframewndremovepane"></a><a name="removepane"></a>CPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>CPaneFrameWnd::RemovePane  
  미니 프레임 창에서 창을 제거합니다.  
   
 ```  
@@ -880,7 +938,7 @@ virtual void RemovePane(
 ### <a name="remarks"></a>주의  
  프레임 워크는 즉시 또는 특정 지연 후 미니 프레임 창을 소멸 시킬 수 있습니다. 미니 프레임 창의 소멸을 연기 하려는 경우 전달 `FALSE` 에 `bNoDelayedDestroy` 매개 변수입니다. 지연 된 소멸이 프레임 워크를 처리할 때 발생 하는 `AFX_WM_CHECKEMPTYMINIFRAME` 메시지입니다.  
   
-##  <a name="a-namereplacepanea--cpaneframewndreplacepane"></a><a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
  한 창을 다른 창으로 대체합니다.  
   
 ```  
@@ -896,7 +954,7 @@ virtual void ReplacePane(
  [in] `pBarReplaceWith`  
  원래 창을 대체 하는 창에 대 한 포인터입니다.  
   
-##  <a name="a-namesavestatea--cpaneframewndsavestate"></a><a name="savestate"></a>CPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>CPaneFrameWnd::SaveState  
  레지스트리에 창의 상태를 저장합니다.  
   
 ```  
@@ -915,7 +973,7 @@ virtual BOOL SaveState(
 ### <a name="return-value"></a>반환 값  
  `TRUE`창 상태를 성공적으로 저장 한 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namesetcaptionbuttonsa--cpaneframewndsetcaptionbuttons"></a><a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
+##  <a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
  캡션 단추를 설정합니다.  
   
 ```  
@@ -934,7 +992,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
-##  <a name="a-namesetdelayshowa--cpaneframewndsetdelayshow"></a><a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
+##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -946,7 +1004,7 @@ void SetDelayShow(BOOL bDelayShow);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetdockingmanagera--cpaneframewndsetdockingmanager"></a><a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
+##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -958,7 +1016,7 @@ void SetDockingManager(CDockingManager* pManager);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetdockingtimera--cpaneframewndsetdockingtimer"></a><a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
+##  <a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
  도킹 타이머를 설정합니다.  
   
 ```  
@@ -969,7 +1027,7 @@ void SetDockingTimer(UINT nTimeOut);
  [in] `nTimeOut`  
  제한 시간 값 (밀리초)입니다.  
   
-##  <a name="a-namesetdockstatea--cpaneframewndsetdockstate"></a><a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
  도킹 상태를 설정합니다.  
   
 ```  
@@ -980,7 +1038,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
  [in] `pDockManager`  
  도킹 관리자에 대 한 포인터입니다.  
   
-##  <a name="a-namesethotpointa--cpaneframewndsethotpoint"></a><a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
+##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -992,7 +1050,7 @@ void SetHotPoint(CPoint& ptNew);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetpredockstatea--cpaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
  사전 도킹 상태를 설정하기 위해 프레임워크에서 호출됩니다.  
   
 ```  
@@ -1021,7 +1079,7 @@ virtual BOOL SetPreDockState(
 ### <a name="return-value"></a>반환 값  
  `TRUE`미니 프레임 창을 도킹; 없는 경우 `FALSE` 고정 되어 있는 경우.  
   
-##  <a name="a-namesizetocontenta--cpaneframewndsizetocontent"></a><a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
+##  <a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
  포함 된 창에 해당 하는 미니 프레임 창의 크기를 조정 합니다.  
   
 ```  
@@ -1031,7 +1089,7 @@ virtual void SizeToContent();
 ### <a name="remarks"></a>주의  
  포함 된 창의 크기를 미니 프레임 창의 크기를 조정 하려면이 메서드를 호출 합니다.  
   
-##  <a name="a-namestarttearoffa--cpaneframewndstarttearoff"></a><a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
+##  <a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
  메뉴를 분리합니다.  
   
 ```  
@@ -1045,7 +1103,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공했으면 `TRUE`이고, 실패했으면 `FALSE`입니다.  
   
-##  <a name="a-namestorerecentdocksiteinfoa--cpaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1057,7 +1115,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namestorerecenttabrelatedinfoa--cpaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
@@ -44,7 +45,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
 -   [업데이트 3의 규칙 향상](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
+##  <a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
   
 -   /Zc:forScope- 옵션  
   
@@ -527,7 +528,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
      [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
+##  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
   
 -   **개인 가상 기본 클래스 및 간접 상속**  
   
@@ -605,7 +606,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
      또한 컴파일러가 특정 진단을 제공하지는 않지만, 인라인 operator new는 잘못된 형식으로 간주됩니다.  
   
--   **비클래스 형식에서 'operator *type*()'(사용자 정의 변환) 호출**  
+-   **비클래스 형식에서 'operator*type*()'(사용자 정의 변환) 호출**  
   
      이전 버전의 컴파일러에서는 'operator *type*()'을 자동으로 무시하면서 비클래스 형식에서 호출할 수 있었습니다. 이 이전 동작으로 잘못된 코드가 자동으로 생성되어 예기치 않은 런타임 동작이 발생하는 위험이 초래되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2228이 발생합니다.  
   
@@ -1019,7 +1020,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1032,13 +1033,13 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
+##  <a name="VS_Update2"></a> 업데이트 2의 규칙 향상  
   
 -   **SFINAE 식에 대한 부분 지원으로 인해 추가 경고 및 오류가 발생할 수 있습니다.**  
   
@@ -1303,7 +1304,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
      이러한 방식으로 작성된 코드를 수정하려면 연산자 정의를 헤더 파일에서 해당하는 소스 파일로 이동해야 합니다.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
+##  <a name="VS_Update3"></a> 업데이트 3의 규칙 향상  
   
 -   **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)  
   
@@ -1542,8 +1543,3 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

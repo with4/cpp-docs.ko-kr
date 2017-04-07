@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -72,56 +81,56 @@ class CMFCToolBarInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbar.h  
   
-##  <a name="a-namemuicoldresida--cmfctoolbarinfomuicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
+##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
  도구 모음의 모든 일반 단추 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="a-namemuidisabledresida--cmfctoolbarinfomuidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
+##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
  도구 모음 단추를 사용할 수 없는 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="a-namemuihotresida--cmfctoolbarinfomuihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
+##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
  도구 모음의 모든 강조 표시 된 단추 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="a-namemuilargecoldresida--cmfctoolbarinfomuilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
+##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
  도구 모음의 모든 큰 일반 단추 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="a-namemuilargedisabledresida--cmfctoolbarinfomuilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
+##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
  도구 모음의 모든 큰 비활성화 된 단추 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="a-namemuilargehotresida--cmfctoolbarinfomuilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
+##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
  도구 모음의 모든 큰 강조 표시 된 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="a-namemuimenudisabledresida--cmfctoolbarinfomuimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
+##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
  도구 모음 명령을 사용할 수 없는 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="a-namemuimenuresida--cmfctoolbarinfomuimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
+##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
  도구 모음의 모든 일반적인 메뉴 항목 이미지에 대 한 리소스 ID를 지정합니다.  
   
 ```  

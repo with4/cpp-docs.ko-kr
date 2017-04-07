@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ce64e15c062f04df6c9f7671bd820ee188af0111
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 14c85a46b8026878c3b5502931f937e2cf6196cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm3-class"></a>unorm_3 클래스
@@ -132,54 +132,54 @@ class unorm_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|unorm_3::get_x 메서드||  
-|unorm_3::get_xy 메서드||  
-|unorm_3::get_xyz 메서드||  
-|unorm_3::get_xz 메서드||  
-|unorm_3::get_xzy 메서드||  
-|unorm_3::get_y 메서드||  
-|unorm_3::get_yx 메서드||  
-|unorm_3::get_yxz 메서드||  
-|unorm_3::get_yz 메서드||  
-|unorm_3::get_yzx 메서드||  
-|unorm_3::get_z 메서드||  
-|unorm_3::get_zx 메서드||  
-|unorm_3::get_zxy 메서드||  
-|unorm_3::get_zy 메서드||  
-|unorm_3::get_zyx 메서드||  
-|Unorm_3::ref_b 메서드||  
-|Unorm_3::ref_g 메서드||  
-|Unorm_3::ref_r 메서드||  
-|Unorm_3::ref_x 메서드||  
-|Unorm_3::ref_y 메서드||  
-|Unorm_3::ref_z 메서드||  
-|unorm_3::set_x 메서드||  
-|unorm_3::set_xy 메서드||  
-|unorm_3::set_xyz 메서드||  
-|unorm_3::set_xz 메서드||  
-|unorm_3::set_xzy 메서드||  
-|unorm_3::set_y 메서드||  
-|unorm_3::set_yx 메서드||  
-|unorm_3::set_yxz 메서드||  
-|unorm_3::set_yz 메서드||  
-|unorm_3::set_yzx 메서드||  
-|unorm_3::set_z 메서드||  
-|unorm_3::set_zx 메서드||  
-|unorm_3::set_zxy 메서드||  
-|unorm_3::set_zy 메서드||  
-|unorm_3::set_zyx 메서드||  
+|unorm_3::get_x||  
+|unorm_3::get_xy||  
+|unorm_3::get_xyz||  
+|unorm_3::get_xz||  
+|unorm_3::get_xzy||  
+|unorm_3::get_y||  
+|unorm_3::get_yx||  
+|unorm_3::get_yxz||  
+|unorm_3::get_yz||  
+|unorm_3::get_yzx||  
+|unorm_3::get_z||  
+|unorm_3::get_zx||  
+|unorm_3::get_zxy||  
+|unorm_3::get_zy||  
+|unorm_3::get_zyx||  
+|Unorm_3::ref_b||  
+|Unorm_3::ref_g||  
+|Unorm_3::ref_r||  
+|Unorm_3::ref_x||  
+|Unorm_3::ref_y||  
+|Unorm_3::ref_z||  
+|unorm_3::set_x||  
+|unorm_3::set_xy||  
+|unorm_3::set_xyz||  
+|unorm_3::set_xz||  
+|unorm_3::set_xzy||  
+|unorm_3::set_y||  
+|unorm_3::set_yx||  
+|unorm_3::set_yxz||  
+|unorm_3::set_yz||  
+|unorm_3::set_yzx||  
+|unorm_3::set_z||  
+|unorm_3::set_zx||  
+|unorm_3::set_zxy||  
+|unorm_3::set_zy||  
+|unorm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|unorm_3::operator-연산자||  
-|unorm_3::operator * = 연산자||  
-|unorm_3::operator / = 연산자||  
-|unorm_3::operator + + 연산자||  
-|unorm_3::operator + = 연산자||  
-|unorm_3::operator = 연산자||  
-|unorm_3::operator-= 연산자||  
+|unorm_3::operator-||  
+|unorm_3::operator * =||  
+|unorm_3::operator / =||  
+|unorm_3::operator + +||  
+|unorm_3::operator + =||  
+|unorm_3::operator =||  
+|-= unorm_3::operator||  
   
 ### <a name="public-constants"></a>공용 상수  
   
@@ -191,36 +191,36 @@ class unorm_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|unorm_3::b 데이터 멤버||  
-|unorm_3::bg 데이터 멤버||  
-|unorm_3::bgr 데이터 멤버||  
-|unorm_3::br 데이터 멤버||  
-|unorm_3::brg 데이터 멤버||  
-|unorm_3::g 데이터 멤버||  
-|unorm_3::gb 데이터 멤버||  
-|unorm_3::gbr 데이터 멤버||  
-|unorm_3::gr 데이터 멤버||  
-|unorm_3::grb 데이터 멤버||  
-|unorm_3::r 데이터 멤버||  
-|unorm_3::rb 데이터 멤버||  
-|unorm_3::rbg 데이터 멤버||  
-|unorm_3::rg 데이터 멤버||  
-|unorm_3::rgb 데이터 멤버||  
-|unorm_3::x 데이터 멤버||  
-|unorm_3::xy 데이터 멤버||  
-|unorm_3::xyz 데이터 멤버||  
-|unorm_3::xz 데이터 멤버||  
-|unorm_3::xzy 데이터 멤버||  
-|unorm_3::y 데이터 멤버||  
-|unorm_3::yx 데이터 멤버||  
-|unorm_3::yxz 데이터 멤버||  
-|unorm_3::yz 데이터 멤버||  
-|unorm_3::yzx 데이터 멤버||  
-|unorm_3::z 데이터 멤버||  
-|unorm_3::zx 데이터 멤버||  
-|unorm_3::zxy 데이터 멤버||  
-|unorm_3::zy 데이터 멤버||  
-|unorm_3::zyx 데이터 멤버||  
+|unorm_3::b||  
+|unorm_3::bg||  
+|unorm_3::bgr||  
+|unorm_3::br||  
+|unorm_3::brg||  
+|unorm_3::g||  
+|unorm_3::gb||  
+|unorm_3::gbr||  
+|unorm_3::gr||  
+|unorm_3::grb||  
+|unorm_3::r||  
+|unorm_3::rb||  
+|unorm_3::rbg||  
+|unorm_3::rg||  
+|unorm_3::rgb||  
+|unorm_3::x||  
+|unorm_3::xy||  
+|unorm_3::xyz||  
+|unorm_3::xz||  
+|unorm_3::xzy||  
+|unorm_3::y||  
+|unorm_3::yx||  
+|unorm_3::yxz||  
+|unorm_3::yz||  
+|unorm_3::yzx||  
+|unorm_3::z||  
+|unorm_3::zx||  
+|unorm_3::zxy||  
+|unorm_3::zy||  
+|unorm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `unorm_3`  
@@ -230,7 +230,7 @@ class unorm_3;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-unorm3"></a><a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a>unorm_3 
 
  기본 생성자를 0부터 모든 요소를 초기화 합니다.  
   
@@ -309,12 +309,12 @@ explicit inline unorm_3(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="a-nameunorm3sizea-size"></a><a name="unorm_3__size"></a>크기 
+##  <a name="unorm_3__size"></a>크기 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
 

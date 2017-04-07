@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::location
+- location
+- CONCRT/concurrency::location
+- CONCRT/concurrency::location::location
+- CONCRT/concurrency::location::current
+- CONCRT/concurrency::location::from_numa_node
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="location-class"></a>위치 클래스
@@ -54,23 +58,23 @@ class location;
   
 |이름|설명|  
 |----------|-----------------|  
-|[위치 생성자](#ctor)|오버로드됨. `location` 개체를 생성합니다.|  
+|[위치](#ctor)|오버로드됨. `location` 개체를 생성합니다.|  
 |[~ location 소멸자](#dtor)|`location` 개체를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[현재 메서드](#current)|호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.|  
-|[from_numa_node 메서드](#from_numa_node)|지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.|  
+|[현재](#current)|호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.|  
+|[from_numa_node](#from_numa_node)|지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[연산자! = 연산자](#operator_neq)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|  
-|[operator = 연산자](#operator_eq)|다른 `location` 개체의 내용을 여기에 할당합니다.|  
-|[연산자 = = 연산자](#operator_eq_eq)|두 결정 `location` 개체는 같은 위치를 나타냅니다.|  
+|[operator!=](#operator_neq)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|  
+|[operator=](#operator_eq)|다른 `location` 개체의 내용을 여기에 할당합니다.|  
+|[operator==](#operator_eq_eq)|두 결정 `location` 개체는 같은 위치를 나타냅니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `location`  
@@ -80,7 +84,7 @@ class location;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ 위치 
+##  <a name="dtor"></a>~ 위치 
 
  `location` 개체를 제거합니다.  
   
@@ -88,7 +92,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="a-namecurrenta-current"></a><a name="current"></a>현재 
+##  <a name="current"></a>현재 
 
  호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.  
   
@@ -99,7 +103,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>반환 값  
  호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 위치입니다.  
   
-##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a>from_numa_node 
 
  지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.  
   
@@ -114,7 +118,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>반환 값  
  `_NumaNodeNumber` 매개 변수로 지정된 NUMA 노드를 나타내는 위치입니다.  
   
-##  <a name="a-namectora-location"></a><a name="ctor"></a>위치 
+##  <a name="ctor"></a>위치 
 
  `location` 개체를 생성합니다.  
   
@@ -141,7 +145,7 @@ location(
 ### <a name="remarks"></a>주의  
  기본적으로 생성되는 위치는 시스템 전체를 나타냅니다.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>연산자! = 
 
  두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.  
   
@@ -155,7 +159,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>반환 값  
  두 위치가 다르면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a>연산자 = 
 
  다른 `location` 개체의 내용을 여기에 할당합니다.  
   
@@ -169,7 +173,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>연산자 = = 
+##  <a name="operator_eq_eq"></a>연산자 = = 
 
  두 결정 `location` 개체는 같은 위치를 나타냅니다.  
   
@@ -184,5 +188,5 @@ bool operator== (const location& _Rhs) const;
  `true`두 위치가 동일 하면 및 `false` 그렇지 않은 경우.  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
+ [concurrency 네임스페이스](concurrency-namespace.md)
 

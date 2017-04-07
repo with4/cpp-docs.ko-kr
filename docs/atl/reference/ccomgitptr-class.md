@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComGITPtr<T>
 - CComGITPtr
-- ATL.CComGITPtr
-- ATL.CComGITPtr<T>
-- ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::Attach
+- ATLBASE/ATL::CComGITPtr::CopyTo
+- ATLBASE/ATL::CComGITPtr::Detach
+- ATLBASE/ATL::CComGITPtr::GetCookie
+- ATLBASE/ATL::CComGITPtr::Revoke
+- ATLBASE/ATL::CComGITPtr::m_dwCookie
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +102,7 @@ class CComGITPtr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="a-nameattacha--ccomgitptrattach"></a><a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>CComGITPtr::Attach  
  전역 인터페이스 테이블 (GIT)에 대 한 인터페이스 포인터를 등록 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -120,7 +124,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>주의  
  디버그 빌드에서 GIT 유효 하지 않거나 또는 쿠키 NULL과 같으면 어설션 오류가 발생 합니다.  
   
-##  <a name="a-nameccomgitptra--ccomgitptrccomgitptr"></a><a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  생성자입니다.  
   
 ```
@@ -149,7 +153,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  활용 하 여 생성자 `rv` 는 이동 생성자입니다. 원본에서 데이터를 이동 `rv`, 차례로 `rv` 의 선택을 취소 합니다.  
   
-##  <a name="a-namedtora--ccomgitptrccomgitptr"></a><a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
  소멸자입니다.  
   
 ```
@@ -159,7 +163,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>주의  
  전역 인터페이스 테이블 (GIT)에서 제거 하는 인터페이스를 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
   
-##  <a name="a-namecopytoa--ccomgitptrcopyto"></a><a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>CComGITPtr::CopyTo  
  전달 된 포인터에 전역 인터페이스 테이블 (GIT)에서 인터페이스를 복사 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -176,7 +180,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>주의  
  GIT에서 인터페이스는 전달 된 포인터에 복사 됩니다. 포인터는 더 이상 필요 하면 호출자가 해제 되어야 합니다.  
   
-##  <a name="a-namedetacha--ccomgitptrdetach"></a><a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>CComGITPtr::Detach  
  이 메서드는 인터페이스를 연결 해제를 호출 하는 `CComGITPtr` 개체입니다.  
   
 ```
@@ -189,7 +193,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>주의  
  호출자가 GIT에서 인터페이스를 제거 하는 것은 사용 하 여 [CComGITPtr::Revoke](#revoke)합니다.  
   
-##  <a name="a-namegetcookiea--ccomgitptrgetcookie"></a><a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>CComGITPtr::GetCookie  
  호출에서 쿠키를 반환 하려면이 메서드는 `CComGITPtr` 개체입니다.  
   
 ```
@@ -202,7 +206,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>주의  
  쿠키는 인터페이스와 해당 위치를 식별 하는 데 사용 하는 변수입니다.  
   
-##  <a name="a-namemdwcookiea--ccomgitptrmdwcookie"></a><a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
  쿠키입니다.  
   
 ```
@@ -212,7 +216,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>주의  
  쿠키는 인터페이스와 해당 위치를 식별 하는 데는 멤버 변수입니다.  
   
-##  <a name="a-nameoperatoreqa--ccomgitptroperator-"></a><a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>CComGITPtr::operator =  
  대입 연산자입니다.  
   
 ```
@@ -241,7 +245,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>주의  
  에 새 값을 할당 한 `CComGITPtr` 전역 인터페이스 테이블에 대 한 참조 또는 기존 개체에서 개체입니다.  
   
-##  <a name="a-nameoperatordworda--ccomgitptroperator-dword"></a><a name="operator_dword"></a>DWORD CComGITPtr::operator  
+##  <a name="operator_dword"></a>DWORD CComGITPtr::operator  
  와 관련 된 쿠키를 반환 된 `CComGITPtr` 개체입니다.  
   
 ```  
@@ -251,7 +255,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>주의  
  쿠키는 인터페이스와 해당 위치를 식별 하는 데 사용 하는 변수입니다.  
   
-##  <a name="a-namerevokea--ccomgitptrrevoke"></a><a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>CComGITPtr::Revoke  
  전역 인터페이스 테이블 (GIT)에서 현재 인터페이스를 제거 하려면이 메서드를 호출 합니다.  
   
 ```

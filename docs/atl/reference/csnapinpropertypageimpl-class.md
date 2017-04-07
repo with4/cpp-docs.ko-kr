@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::CancelToClose
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::Create
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnApply
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnHelp
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnKillActive
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnQueryCancel
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnReset
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnSetActive
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardBack
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardFinish
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardNext
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +113,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsnap.h  
   
-##  <a name="a-namecanceltoclosea--csnapinpropertypageimplcanceltoclose"></a><a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
  모달 속성 시트의 페이지에서 데이터를 복구할 수 없는 변경 되는 수행 된 후이 함수를 호출 합니다.  
   
 ```
@@ -109,7 +125,7 @@ void CancelToClose();
   
  `CancelToClose` 모덜리스 속성 시트에 없기 때문에 멤버 함수는 모덜리스 속성 시트의 경우 nothing을 **취소** 기본적으로는 단추입니다.  
   
-##  <a name="a-namecsnapinpropertypageimpla--csnapinpropertypageimplcsnapinpropertypageimpl"></a><a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  `CSnapInPropertyPageImpl` 개체를 생성합니다.  
   
 ```
@@ -123,7 +139,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>주의  
  기본 구조를 초기화 하려면 호출 [CSnapInPropertyPageImpl::Create](#create)합니다.  
   
-##  <a name="a-namecreatea--csnapinpropertypageimplcreate"></a><a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
  속성 페이지의 기본 구조를 초기화 하려면이 함수를 호출 합니다.  
   
 ```
@@ -136,7 +152,7 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>주의  
  먼저 호출 해야 [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) 이 함수를 호출 하기 전에 합니다.  
   
-##  <a name="a-namempspa--csnapinpropertypageimplmpsp"></a><a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
+##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
  `m_psp`멤버의 특성을 저장 하는 구조 **PROPSHEETPAGE**합니다.  
   
 ```
@@ -148,7 +164,7 @@ PROPSHEETPAGE m_psp;
   
  해당 멤버의 목록을 포함 하 여이 구조에 대 한 자세한 내용은 참조 [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-nameonapplya--csnapinpropertypageimplonapply"></a><a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  이 멤버 함수를 클릭할 때 호출의 **확인** 또는 **지금 적용** 단추입니다.  
   
 ```
@@ -165,7 +181,7 @@ BOOL OnApply();
   
  기본 구현은 `OnApply` 반환 **TRUE**합니다.  
   
-##  <a name="a-nameonhelpa--csnapinpropertypageimplonhelp"></a><a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
  이 멤버 함수를 클릭할 때 호출의 **도움말** 속성 페이지에 대 한 단추입니다.  
   
 ```
@@ -175,7 +191,7 @@ void OnHelp();
 ### <a name="remarks"></a>주의  
  속성 페이지에 대 한 도움말을 표시 하려면이 멤버 함수를 재정의 합니다.  
   
-##  <a name="a-nameonkillactivea--csnapinpropertypageimplonkillactive"></a><a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
  이 멤버 함수는 페이지가 더 이상 활성 페이지가 있을 때 호출 됩니다.  
   
 ```
@@ -188,7 +204,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>주의  
  특수 한 데이터 유효성 검사 작업을 수행 하려면이 멤버 함수를 재정의 합니다.  
   
-##  <a name="a-nameonquerycancela--csnapinpropertypageimplonquerycancel"></a><a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
  이 멤버 함수를 클릭할 때 호출는 **취소** 단추를 취소 하기 전에 작업이 수행 되어 있습니다.  
   
 ```
@@ -203,7 +219,7 @@ BOOL OnQueryCancel();
   
  기본 구현은 `OnQueryCancel` 반환 **TRUE**합니다.  
   
-##  <a name="a-nameonreseta--csnapinpropertypageimplonreset"></a><a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
  이 멤버 함수를 클릭할 때 호출의 **취소** 단추입니다.  
   
 ```
@@ -215,7 +231,7 @@ void OnReset();
   
  프로그램은 사용자가 클릭 동작을 지정 하려면이 멤버 함수 재정의 **취소** 단추입니다.  
   
-##  <a name="a-nameonsetactivea--csnapinpropertypageimplonsetactive"></a><a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
  이 멤버 함수는 페이지는 사용자가 선택한를 활성 페이지 될 때 호출 됩니다.  
   
 ```
@@ -230,7 +246,7 @@ BOOL OnSetActive();
   
  기본 구현에서는 반환 **TRUE**합니다.  
   
-##  <a name="a-nameonwizardbacka--csnapinpropertypageimplonwizardback"></a><a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
  이 멤버 함수를 클릭할 때 호출는 **다시** 마법사의 단추입니다.  
   
 ```
@@ -248,7 +264,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>주의  
  사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 **다시** 단추를 클릭 합니다.  
   
-##  <a name="a-nameonwizardfinisha--csnapinpropertypageimplonwizardfinish"></a><a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
  이 멤버 함수를 클릭할 때 호출는 **완료** 마법사의 단추입니다.  
   
 ```
@@ -261,7 +277,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>주의  
  사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 **마침** 단추를 클릭 합니다.  
   
-##  <a name="a-nameonwizardnexta--csnapinpropertypageimplonwizardnext"></a><a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
  이 멤버 함수를 클릭할 때 호출는 `Next` 마법사의 단추입니다.  
   
 ```
@@ -279,7 +295,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>주의  
  사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 `Next` 단추를 클릭 합니다.  
   
-##  <a name="a-namequerysiblingsa--csnapinpropertypageimplquerysiblings"></a><a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
  속성 시트의 각 페이지에 메시지를 전달 하려면이 멤버 함수를 호출 합니다.  
   
 ```
@@ -299,7 +315,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>주의  
  속성 시트는 페이지에서&0;이 아닌 값을 반환 하는 경우 후속 페이지에 메시지를 보내지 않습니다.  
   
-##  <a name="a-namesetmodifieda--csnapinpropertypageimplsetmodified"></a><a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
  활성화 또는 비활성화 하려면이 멤버 함수 호출의 **지금 적용** 단추를 적절 한 외부 개체에 속성 페이지에서 설정을 적용 여부에 따라 합니다.  
   
 ```

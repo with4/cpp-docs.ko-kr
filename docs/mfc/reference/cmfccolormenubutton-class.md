@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorMenuButton
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::CMFCColorMenuButton
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::EnableAutomaticButton
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::EnableDocumentColors
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::EnableOtherButton
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::EnableTearOff
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::GetAutomaticColor
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::GetColor
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::GetColorByCmdID
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnChangeParentWnd
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::OpenColorDialog
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::SetColor
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::SetColorByCmdID
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::SetColorName
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::SetColumnsNumber
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::CopyFrom
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::CreatePopupMenu
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::IsEmptyMenuAllowed
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDraw
+- AFXCOLORMENUBUTTON/CMFCColorMenuButton::OnDrawOnCustomizeList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +127,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolormenubutton.h  
   
-##  <a name="a-namecmfccolormenubuttona--cmfccolormenubuttoncmfccolormenubutton"></a><a name="cmfccolormenubutton"></a>CMFCColorMenuButton::CMFCColorMenuButton  
+##  <a name="cmfccolormenubutton"></a>CMFCColorMenuButton::CMFCColorMenuButton  
  `CMFCColorMenuButton` 개체를 생성합니다.  
   
 ```  
@@ -137,7 +157,7 @@ CMFCColorMenuButton(
   
  두 번째 생성자는 지정 된 명령 ID에 해당 하는 색 단추를 초기화 합니다.  
   
-##  <a name="a-namecopyfroma--cmfccolormenubuttoncopyfrom"></a><a name="copyfrom"></a>CMFCColorMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCColorMenuButton::CopyFrom  
  하나를 복사 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)-다른 파생 개체입니다.  
   
 ```  
@@ -151,7 +171,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>주의  
  파생 된 개체를 복사 하려면이 메서드를 재정의 `CMFCColorMenuButton` 개체입니다.  
   
-##  <a name="a-namecreatepopupmenua--cmfccolormenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>CMFCColorMenuButton::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>CMFCColorMenuButton::CreatePopupMenu  
  색 선택 대화 상자를 만듭니다.  
   
 ```  
@@ -164,7 +184,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="remarks"></a>주의  
  이 메서드는 사용자가 색 메뉴 단추를 누를 때 프레임 워크에 의해 호출 됩니다.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfccolormenubuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorMenuButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCColorMenuButton::EnableAutomaticButton  
  있으며 일반 색 단추 위에 배치 되는 "자동" 단추를 사용 하지 않도록 설정 합니다. (표준 시스템 자동 단추인 **자동**.)  
   
 ```  
@@ -187,7 +207,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>주의  
  자동 단추는 현재 기본 색을 적용합니다.  
   
-##  <a name="a-nameenabledocumentcolorsa--cmfccolormenubuttonenabledocumentcolors"></a><a name="enabledocumentcolors"></a>CMFCColorMenuButton::EnableDocumentColors  
+##  <a name="enabledocumentcolors"></a>CMFCColorMenuButton::EnableDocumentColors  
  문서 관련 색 시스템 색 대신 표시할 수 있습니다.  
   
 ```  
@@ -206,7 +226,7 @@ void EnableDocumentColors(
 ### <a name="remarks"></a>주의  
  색 메뉴 단추를 클릭할 때 현재 문서 색 또는 시스템 색상표 색을 표시 하려면이 메서드를 사용 합니다.  
   
-##  <a name="a-nameenableotherbuttona--cmfccolormenubuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorMenuButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCColorMenuButton::EnableOtherButton  
  있으며 일반 색 단추 아래에 배치 되는 "기타" 단추를 사용 하지 않도록 설정 합니다. ("기타" 단추인 표준 시스템 **다른 색... **.)  
   
 ```  
@@ -228,7 +248,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameenabletearoffa--cmfccolormenubuttonenabletearoff"></a><a name="enabletearoff"></a>CMFCColorMenuButton::EnableTearOff  
+##  <a name="enabletearoff"></a>CMFCColorMenuButton::EnableTearOff  
  색 창 분리 하는 기능을 사용 합니다.  
   
 ```  
@@ -251,7 +271,7 @@ void EnableTearOff(
 ### <a name="remarks"></a>주의  
  때 팝업 되는 색 창에 대 한 "분리" 기능을 사용 하려면이 메서드를 호출 하는 `CMFCColorMenuButton` 단추를 누르면 됩니다.  
   
-##  <a name="a-namegetautomaticcolora--cmfccolormenubuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFCColorMenuButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>CMFCColorMenuButton::GetAutomaticColor  
  현재 자동 색을 검색합니다.  
   
 ```  
@@ -264,7 +284,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>주의  
  로 설정 된 자동 색을 가져오려면이 메서드를 호출 [CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)합니다.  
   
-##  <a name="a-namegetcolora--cmfccolormenubuttongetcolor"></a><a name="getcolor"></a>CMFCColorMenuButton::GetColor  
+##  <a name="getcolor"></a>CMFCColorMenuButton::GetColor  
  현재 단추의 색을 검색합니다.  
   
 ```  
@@ -276,7 +296,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetcolorbycmdida--cmfccolormenubuttongetcolorbycmdid"></a><a name="getcolorbycmdid"></a>CMFCColorMenuButton::GetColorByCmdID  
+##  <a name="getcolorbycmdid"></a>CMFCColorMenuButton::GetColorByCmdID  
  지정 된 명령 ID에 해당 하는 색을 검색 합니다.  
   
 ```  
@@ -293,7 +313,7 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ### <a name="remarks"></a>주의  
  응용 프로그램에서 여러 색 단추를 사용 해야 하는 경우이 메서드를 사용 합니다. 단추 색 단추를 클릭할 때의 명령 ID를 전달는 `WM_COMMAND` 메시지 부모입니다. `GetColorByCmdID` 메서드 명령 ID를 사용 하 여 해당 색을 검색 합니다.  
   
-##  <a name="a-nameisemptymenualloweda--cmfccolormenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>CMFCColorMenuButton::IsEmptyMenuAllowed  
+##  <a name="isemptymenuallowed"></a>CMFCColorMenuButton::IsEmptyMenuAllowed  
  빈 메뉴를 지원 하는지 여부를 나타냅니다.  
   
 ```  
@@ -306,7 +326,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="remarks"></a>주의  
  빈 메뉴는 기본적으로 지원 됩니다. 파생된 클래스에서이 동작을 변경 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="a-nameonchangeparentwnda--cmfccolormenubuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCColorMenuButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCColorMenuButton::OnChangeParentWnd  
  부모 창에서는 변경 될 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -319,7 +339,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawa--cmfccolormenubuttonondraw"></a><a name="ondraw"></a>CMFCColorMenuButton::OnDraw  
+##  <a name="ondraw"></a>CMFCColorMenuButton::OnDraw  
  단추에 이미지를 표시 하는 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -361,7 +381,7 @@ virtual void OnDraw(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameondrawoncustomizelista--cmfccolormenubuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCColorMenuButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>CMFCColorMenuButton::OnDrawOnCustomizeList  
  이전 프레임 워크에서 호출을 `CMFCColorMenuButton` 개체의 도구 모음 사용자 지정 대화 상자의 목록에 표시 됩니다.  
   
 ```  
@@ -387,7 +407,7 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="remarks"></a>주의  
  프레임 워크에서이 메서드는 때를 `CMFCColorMenuButton` 개체가 도구 모음 사용자 지정 프로세스 중에 목록 상자에 표시 됩니다.  
   
-##  <a name="a-nameopencolordialoga--cmfccolormenubuttonopencolordialog"></a><a name="opencolordialog"></a>CMFCColorMenuButton::OpenColorDialog  
+##  <a name="opencolordialog"></a>CMFCColorMenuButton::OpenColorDialog  
  색 선택 대화 상자를 엽니다.  
   
 ```  
@@ -409,7 +429,7 @@ virtual BOOL OpenColorDialog(
 ### <a name="remarks"></a>주의  
  메뉴 단추를 클릭할 때 색 대화 상자를 열려면이 메서드를 호출 합니다. 사용자가 선택한 색은에 저장 된 반환 값이&0;이 아닌 경우는 `colorRes` 매개 변수입니다. 사용 하는 [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) 표준 색 대화 상자 사이 전환 하는 메서드 및 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md) 대화 상자입니다.  
   
-##  <a name="a-namesetcolora--cmfccolormenubuttonsetcolor"></a><a name="setcolor"></a>CMFCColorMenuButton::SetColor  
+##  <a name="setcolor"></a>CMFCColorMenuButton::SetColor  
  현재 색 단추의 색을 설정 합니다.  
   
 ```  
@@ -428,7 +448,7 @@ virtual void SetColor(
 ### <a name="remarks"></a>주의  
  현재 색 단추의 색을 변경 하려면이 메서드를 호출 합니다. 하는 경우는 `bNotify` 매개 변수는&0;이 아닌, 연결 된 팝업 메뉴 또는 도구 모음에는 해당 단추의 색은 지정 된 색으로 변경 된 `clr` 매개 변수입니다.  
   
-##  <a name="a-namesetcolorbycmdida--cmfccolormenubuttonsetcolorbycmdid"></a><a name="setcolorbycmdid"></a>CMFCColorMenuButton::SetColorByCmdID  
+##  <a name="setcolorbycmdid"></a>CMFCColorMenuButton::SetColorByCmdID  
  지정 된 색 메뉴 단추의 색을 설정 합니다.  
   
 ```  
@@ -444,7 +464,7 @@ static void SetColorByCmdID(
  [in] `color`  
  RGB 색상 값입니다.  
   
-##  <a name="a-namesetcolornamea--cmfccolormenubuttonsetcolorname"></a><a name="setcolorname"></a>CMFCColorMenuButton::SetColorName  
+##  <a name="setcolorname"></a>CMFCColorMenuButton::SetColorName  
  지정 된 색에 대 한 새 이름을 설정합니다.  
   
 ```  
@@ -462,7 +482,7 @@ static void SetColorName(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetcolumnsnumbera--cmfccolormenubuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCColorMenuButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCColorMenuButton::SetColumnsNumber  
  색 선택 컨트롤에 표시할 열의 수를 설정 ( [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) 개체).  
   
 ```  

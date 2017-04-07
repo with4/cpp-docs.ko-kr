@@ -10,6 +10,71 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPane
+- AFXPANE/CPane
+- AFXPANE/CPane::AdjustSizeImmediate
+- AFXPANE/CPane::AllocElements
+- AFXPANE/CPane::AllowShowOnPaneMenu
+- AFXPANE/CPane::CalcAvailableSize
+- AFXPANE/CPane::CalcInsideRect
+- AFXPANE/CPane::CalcRecentDockedRect
+- AFXPANE/CPane::CalcSize
+- AFXPANE/CPane::CanBeDocked
+- AFXPANE/CPane::CanBeTabbedDocument
+- AFXPANE/CPane::ConvertToTabbedDocument
+- AFXPANE/CPane::CopyState
+- AFXPANE/CPane::Create
+- AFXPANE/CPane::CreateDefaultMiniframe
+- AFXPANE/CPane::CreateEx
+- AFXPANE/CPane::DockByMouse
+- AFXPANE/CPane::DockPane
+- AFXPANE/CPane::DockPaneStandard
+- AFXPANE/CPane::DockToFrameWindow
+- AFXPANE/CPane::DoesAllowSiblingBars
+- AFXPANE/CPane::FloatPane
+- AFXPANE/CPane::GetAvailableExpandSize
+- AFXPANE/CPane::GetAvailableStretchSize
+- AFXPANE/CPane::GetBorders
+- AFXPANE/CPane::GetClientHotSpot
+- AFXPANE/CPane::GetDockSiteRow
+- AFXPANE/CPane::GetExclusiveRowMode
+- AFXPANE/CPane::GetHotSpot
+- AFXPANE/CPane::GetMinSize
+- AFXPANE/CPane::GetPaneName
+- AFXPANE/CPane::GetVirtualRect
+- AFXPANE/CPane::IsChangeState
+- AFXPANE/CPane::IsDragMode
+- AFXPANE/CPane::IsInFloatingMultiPaneFrameWnd
+- AFXPANE/CPane::IsLeftOf
+- AFXPANE/CPane::IsResizable
+- AFXPANE/CPane::IsTabbed
+- AFXPANE/CPane::LoadState
+- AFXPANE/CPane::MoveByAlignment
+- AFXPANE/CPane::MovePane
+- AFXPANE/CPane::OnAfterChangeParent
+- AFXPANE/CPane::OnBeforeChangeParent
+- AFXPANE/CPane::OnPressCloseButton
+- AFXPANE/CPane::OnShowControlBarMenu
+- AFXPANE/CPane::OnShowControlBarMenu
+- AFXPANE/CPane::RecalcLayout
+- AFXPANE/CPane::SaveState
+- AFXPANE/CPane::SetActiveInGroup
+- AFXPANE/CPane::SetBorders
+- AFXPANE/CPane::SetClientHotSpot
+- AFXPANE/CPane::SetDockState
+- AFXPANE/CPane::SetExclusiveRowMode
+- AFXPANE/CPane::SetMiniFrameRTC
+- AFXPANE/CPane::SetMinSize
+- AFXPANE/CPane::SetVirtualRect
+- AFXPANE/CPane::StretchPaneDeferWndPos
+- AFXPANE/CPane::ToggleAutoHide
+- AFXPANE/CPane::UndockPane
+- AFXPANE/CPane::UpdateVirtualRect
+- AFXPANE/CPane::OnAfterDock
+- AFXPANE/CPane::OnAfterFloat
+- AFXPANE/CPane::OnBeforeDock
+- AFXPANE/CPane::OnBeforeFloat
+- AFXPANE/CPane::m_bHandleMinSize
+- AFXPANE/CPane::m_recentDockInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +224,7 @@ class CPane : public CBasePane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxPane.h  
   
-##  <a name="a-nameadjustsizeimmediatea--cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate  
  즉시 창의 레이아웃을 다시 계산 합니다.  
   
 ```  
@@ -173,7 +238,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="remarks"></a>주의  
  창 레이아웃을 동적으로 변경 하는 경우이 메서드를 호출 합니다. 예를 들어 다음 도구 모음 단추를 표시 하거나 숨기는 경우이 메서드를 호출 하는 것이 좋습니다.  
   
-##  <a name="a-nameallocelementsa--cpaneallocelements"></a><a name="allocelements"></a>CPane::AllocElements  
+##  <a name="allocelements"></a>CPane::AllocElements  
  내부 사용에 대 한 저장소를 할당합니다.  
   
 ```  
@@ -192,7 +257,7 @@ BOOL AllocElements(
 ### <a name="return-value"></a>반환 값  
  `FALSE`메모리 할당에 실패 하면; 그렇지 않으면 `TRUE`합니다.  
   
-##  <a name="a-nameallowshowonpanemenua--cpaneallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu  
  창에서 응용 프로그램 창의 런타임에 생성 된 목록에 나열 되는지 지정 합니다.  
   
 ```  
@@ -205,7 +270,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>주의  
  응용 프로그램 마법사에서 생성 된 응용 프로그램에 포함 된 창에 나열 된 메뉴 옵션을 포함 합니다. 이 메서드는 창에서이 목록에 표시 되는지를 결정 합니다.  
   
-##  <a name="a-namecalcavailablesizea--cpanecalcavailablesize"></a><a name="calcavailablesize"></a>CPane::CalcAvailableSize  
+##  <a name="calcavailablesize"></a>CPane::CalcAvailableSize  
  지정된 된 사각형의 현재 창 사각형 사이의 크기 차이 계산합니다.  
   
 ```  
@@ -219,7 +284,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="return-value"></a>반환 값  
  너비와 높이 간 차이 `rectRequired` 및 현재 창 영역입니다.  
   
-##  <a name="a-namecalcinsiderecta--cpanecalcinsiderect"></a><a name="calcinsiderect"></a>CPane::CalcInsideRect  
+##  <a name="calcinsiderect"></a>CPane::CalcInsideRect  
  내부 계산 하는 사각형의 테두리 및 위치 조정 막대를 포함 하는 창입니다.  
   
 ```  
@@ -238,7 +303,7 @@ void CalcInsideRect(
 ### <a name="remarks"></a>주의  
  이 메서드는는 창에 대 한 레이아웃을 다시 계산 해야 할 때 프레임 워크에 의해 호출 됩니다. `rect` 매개 변수 크기와 오프셋 창의 클라이언트 영역으로 채워집니다. 테두리와 위치 조정 막대 포함 됩니다.  
   
-##  <a name="a-namecalcrecentdockedrecta--cpanecalcrecentdockedrect"></a><a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect  
+##  <a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect  
  최근에 도킹 된 사각형을 계산합니다.  
   
 ```  
@@ -248,7 +313,7 @@ void CalcRecentDockedRect();
 ### <a name="remarks"></a>주의  
  이 메서드를 업데이트 [CPane::m_recentDockInfo](#m_recentdockinfo)합니다.  
   
-##  <a name="a-namecalcsizea--cpanecalcsize"></a><a name="calcsize"></a>CPane::CalcSize  
+##  <a name="calcsize"></a>CPane::CalcSize  
  창의 크기를 계산합니다.  
   
 ```  
@@ -265,7 +330,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="remarks"></a>주의  
  파생된 클래스는이 메서드를 재정의 해야 합니다.  
   
-##  <a name="a-namecanbedockeda--cpanecanbedocked"></a><a name="canbedocked"></a>CPane::CanBeDocked  
+##  <a name="canbedocked"></a>CPane::CanBeDocked  
  창에서 지정 된 기본 창에 도킹할 수 있는 경우를 결정 합니다.  
   
 ```  
@@ -284,7 +349,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
   
  호출 하 여 프레임 창의 다양 한 측면에 도킹을 사용 하면 [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)합니다.  
   
-##  <a name="a-namecanbetabbeddocumenta--cpanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument  
+##  <a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument  
  창에서 탭된 문서를 변환할 수 있는지 확인 합니다.  
   
 ```  
@@ -297,7 +362,7 @@ virtual BOOL CanBeTabbedDocument() const;
 ### <a name="remarks"></a>주의  
  파생된 클래스에서이 메서드를 재정의 하 고 반환 `FALSE` 창이 탭된 문서를 변환할 대상 하지 못하도록 하려는 경우. 탭된 문서 창 위치 메뉴에 나열 되지 않습니다.  
   
-##  <a name="a-nameconverttotabbeddocumenta--cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument  
  도킹 가능한 창 탭된 문서를 변환합니다.  
   
 ```  
@@ -311,7 +376,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="remarks"></a>주의  
  도킹 가능한 창과 탭된 문서를 변환할 수 있습니다. 내용은 [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)합니다.  
   
-##  <a name="a-namecopystatea--cpanecopystate"></a><a name="copystate"></a>CPane::CopyState  
+##  <a name="copystate"></a>CPane::CopyState  
  창의 상태를 복사합니다.  
   
 ```  
@@ -325,7 +390,7 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="remarks"></a>주의  
  이 메서드는 상태 복사 `pOrgBar` 현재 창에 있습니다.  
   
-##  <a name="a-namecreatea--cpanecreate"></a><a name="create"></a>CPane::Create  
+##  <a name="create"></a>CPane::Create  
  컨트롤 막대를 만들고 연결 하는 [CPane](../../mfc/reference/cpane-class.md) 개체입니다.  
   
 ```  
@@ -369,7 +434,7 @@ virtual BOOL Create(
   
  명시적으로 초기화 되지 경우 [CPane::m_recentDockInfo](#m_recentdockinfo) 를 호출 하기 전에 `Create`, 매개 변수 `rect` 부동 창에서 도킹 또는 사각형으로 사용 됩니다.  
   
-##  <a name="a-namecreatedefaultminiframea--cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe  
  부동 창에 대 한 미니 프레임 창을 만듭니다.  
   
 ```  
@@ -388,7 +453,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
  미니 프레임 창에 대 한 런타임 클래스 정보에 저장 되는 `CPane::m_pMiniFrameRTC` 멤버입니다. 사용자 지정 된 미니 프레임 창을 만드는 하기로 한 경우이 멤버를 설정 하는 파생된 클래스를 사용할 수 있습니다.  
   
-##  <a name="a-namecreateexa--cpanecreateex"></a><a name="createex"></a>CPane::CreateEx  
+##  <a name="createex"></a>CPane::CreateEx  
  컨트롤 막대를 만들고 연결 하는 [CPane](../../mfc/reference/cpane-class.md) 개체입니다.  
   
 ```  
@@ -436,7 +501,7 @@ virtual BOOL CreateEx(
   
  명시적으로 초기화 되지 경우 [CPane::m_recentDockInfo](#m_recentdockinfo) 를 호출 하기 전에 `CreateEx`, 매개 변수 `rect` 부동 창에서 도킹 또는 사각형으로 사용 됩니다.  
   
-##  <a name="a-namedockbymousea--cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::DockByMouse  
+##  <a name="dockbymouse"></a>CPane::DockByMouse  
  마우스를 사용 하 여 창을 도킹 합니다.  
   
 ```  
@@ -450,7 +515,7 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="return-value"></a>반환 값  
  `TRUE`창에서 성공적으로 고정 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="a-namedockpanea--cpanedockpane"></a><a name="dockpane"></a>CPane::DockPane  
+##  <a name="dockpane"></a>CPane::DockPane  
  부동 창의 기본 창으로 도킹합니다.  
   
 ```  
@@ -485,7 +550,7 @@ virtual BOOL DockPane(
 ### <a name="remarks"></a>주의  
  이 메서드를 응용 프로그램에 지정 된 기본 창에는 창 도킹는 `pDockBar` 매개 변수입니다. 호출 하 여 도킹 활성화 해야 [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)합니다.  
   
-##  <a name="a-namedockpanestandarda--cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::DockPaneStandard  
+##  <a name="dockpanestandard"></a>CPane::DockPaneStandard  
  개요 (표준) 도킹을 사용 하 여 창을 도킹 합니다.  
   
 ```  
@@ -502,7 +567,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="remarks"></a>주의  
  파생 된 창에 대해서만이 메서드는 사용 된 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다. 자세한 내용은 참조 [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard)합니다.  
   
-##  <a name="a-namedocktoframewindowa--cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::DockToFrameWindow  
+##  <a name="docktoframewindow"></a>CPane::DockToFrameWindow  
  도킹 가능한 창 프레임을 도킹합니다.  
   
 ```  
@@ -539,7 +604,7 @@ virtual BOOL DockToFrameWindow(
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namedoesallowsiblingbarsa--cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars  
+##  <a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars  
  현재 창 도킹 위치에서 같은 행에 다른 창에 도킹할 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -554,7 +619,7 @@ virtual BOOL DoesAllowSiblingBars() const;
   
  기본적으로 도구 모음 사용 하지 않도록 설정 하는 배타 행 모드 있고 메뉴 모음에 배타 행 모드를 사용 합니다.  
   
-##  <a name="a-namefloatpanea--cpanefloatpane"></a><a name="floatpane"></a>CPane::FloatPane  
+##  <a name="floatpane"></a>CPane::FloatPane  
  창에 배치 됩니다.  
   
 ```  
@@ -580,7 +645,7 @@ virtual BOOL FloatPane(
 ### <a name="remarks"></a>주의  
  창에 지정 된 위치에 배치 하려면이 메서드를 호출 하는 `rectFloat` 매개 변수입니다. 이 메서드는 자동으로 창에 대 한 부모 미니 프레임 창을 만듭니다.  
   
-##  <a name="a-namegetavailableexpandsizea--cpanegetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize  
+##  <a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize  
  창에서 확장할 수 있는 픽셀 단위로 크기를 반환 합니다.  
   
 ```  
@@ -592,7 +657,7 @@ virtual int GetAvailableExpandSize() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetavailablestretchsizea--cpanegetavailablestretchsize"></a><a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize  
+##  <a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize  
  창 축소할 수는 픽셀 크기를 반환 합니다.  
   
 ```  
@@ -605,7 +670,7 @@ virtual int GetAvailableStretchSize() const;
 ### <a name="remarks"></a>주의  
  사용 가능한 확장 크기의 창 크기에 허용 되는 최소값을 뺀 값으로 계산 됩니다 ( [CPane::GetMinSize](#getminsize))에서 현재 크기 ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).  
   
-##  <a name="a-namegetbordersa--cpanegetborders"></a><a name="getborders"></a>CPane::GetBorders  
+##  <a name="getborders"></a>CPane::GetBorders  
  창 테두리의 두께 반환 합니다.  
   
 ```  
@@ -618,7 +683,7 @@ CRect GetBorders() const;
 ### <a name="remarks"></a>주의  
  테두리의 크기를 설정 하려면 호출 [CPane::SetBorders](#setborders)합니다.  
   
-##  <a name="a-namegetclienthotspota--cpanegetclienthotspot"></a><a name="getclienthotspot"></a>CPane::GetClientHotSpot  
+##  <a name="getclienthotspot"></a>CPane::GetClientHotSpot  
  반환 된 *핫 스폿을* 는 창에 대 한 합니다.  
   
 ```  
@@ -630,7 +695,7 @@ CPoint GetClientHotSpot() const;
 ### <a name="remarks"></a>주의  
  *핫 스폿을* 사용자 선택 하 고 창을 이동 하려면 보유 하는 창에는 지점입니다. 핫 스폿 창 도킹된 위치에서 이동 하는 경우 부드러운 애니메이션에 사용 됩니다.  
   
-##  <a name="a-namegetdocksiterowa--cpanegetdocksiterow"></a><a name="getdocksiterow"></a>CPane::GetDockSiteRow  
+##  <a name="getdocksiterow"></a>CPane::GetDockSiteRow  
  도킹 행을 반환 ( [CDockingPanesRow 클래스](../../mfc/reference/cdockingpanesrow-class.md))에 창이 도킹 되어 있습니다.  
   
 ```  
@@ -640,7 +705,7 @@ CDockingPanesRow* GetDockSiteRow() const;
 ### <a name="return-value"></a>반환 값  
  A `CDockingPanesRow`* 창에서 도킹 된 도킹 행을 가리키는 또는 `NULL` 창에서 잠기지 않은 경우.  
   
-##  <a name="a-namegetexclusiverowmodea--cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode  
+##  <a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode  
  창에서 단독 행 모드에서 인지 여부를 확인 합니다.  
   
 ```  
@@ -653,7 +718,7 @@ virtual BOOL GetExclusiveRowMode() const;
 ### <a name="remarks"></a>주의  
  배타 행 모드에 대 한 자세한 내용은 참조 [CPane::SetExclusiveRowMode](#setexclusiverowmode)합니다.  
   
-##  <a name="a-namegethotspota--cpanegethotspot"></a><a name="gethotspot"></a>CPane::GetHotSpot  
+##  <a name="gethotspot"></a>CPane::GetHotSpot  
  내부에 저장 된 핫 스폿을 반환 `CMFCDragFrameImpl` 개체입니다.  
   
 ```  
@@ -665,7 +730,7 @@ CPoint GetHotSpot() const;
 ### <a name="remarks"></a>주의  
  `CPane` 클래스를 포함 한 `CMFCDragFrameImpl` 개체 `m_dragFrameImpl`, 즉 표준 도킹 모드에서 창을 이동할 때 나타나는 사각형을 그립니다. 핫 스폿 창에서 이동할 때 마우스의 현재 위치를 기준으로 사각형을 그리는 데 사용 됩니다.  
   
-##  <a name="a-namegetminsizea--cpanegetminsize"></a><a name="getminsize"></a>CPane::GetMinSize  
+##  <a name="getminsize"></a>CPane::GetMinSize  
  창 크기에 허용 되는 최소값을 검색 합니다.  
   
 ```  
@@ -678,7 +743,7 @@ virtual void GetMinSize(CSize& size) const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namegetpanenamea--cpanegetpanename"></a><a name="getpanename"></a>CPane::GetPaneName  
+##  <a name="getpanename"></a>CPane::GetPaneName  
  창의 제목을 검색합니다.  
   
 ```  
@@ -692,7 +757,7 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="remarks"></a>주의  
  창 제목 도킹 또는 부동 창이 되 면 캡션 영역에 표시 됩니다. 창에서 탭된 그룹의 일부 이면 제목 탭 영역에 표시 됩니다. 제목에 표시 됩니다 창 자동 숨기기 모드에 있으면는 `CMFCAutoHideButton`합니다.  
   
-##  <a name="a-namegetvirtualrecta--cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane::GetVirtualRect  
+##  <a name="getvirtualrect"></a>CPane::GetVirtualRect  
  검색 된 *가상 사각형* 창입니다.  
   
 ```  
@@ -708,7 +773,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
   
  창을 프로그래밍 방식으로 이동 하는 경우가 아니면 가상 사각형에 관련 된 메서드를 호출 하지 마십시오.  
   
-##  <a name="a-nameischangestatea--cpaneischangestate"></a><a name="ischangestate"></a>CPane::IsChangeState  
+##  <a name="ischangestate"></a>CPane::IsChangeState  
  창에서 이동 하는이 메서드가 다른 창, 도킹 행 및 미니 프레임 창을 기준으로 한 위치를 분석 하 고 적절 한 반환 `AFX_CS_STATUS` 값입니다.  
   
 ```  
@@ -734,7 +799,7 @@ virtual AFX_CS_STATUS IsChangeState(
 |`CS_DELAY_DOCK`|창 도킹 된 사이트에 다른 도킹 창 또는 주 프레임의 가장자리입니다. 프레임 워크 이동을 놓을 때의 창을 도킹 합니다.|  
 |`CS_DELAY_DOCK_TO_TAB`|도크 사이트를 창에 탭된 창에 도킹할 수 있는 창이입니다. 이 창은 다른 도킹 창의 캡션 또는 탭된 창 탭 영역 위로 때 발생 합니다. 프레임 워크 이동을 놓을 때의 창을 도킹 합니다.|  
   
-##  <a name="a-nameisdragmodea--cpaneisdragmode"></a><a name="isdragmode"></a>CPane::IsDragMode  
+##  <a name="isdragmode"></a>CPane::IsDragMode  
  창에서 이동 되 고 있는지 여부를 지정 합니다.  
   
 ```  
@@ -746,7 +811,7 @@ virtual BOOL IsDragMode() const;
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-nameisinfloatingmultipaneframewnda--cpaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd  
  다중 창 프레임 창에는 창 인지를 지정 ( [CMultiPaneFrameWnd 클래스](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
@@ -759,7 +824,7 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ### <a name="remarks"></a>주의  
  도킹 가능한 창과 다중 창 프레임 창에서 부동 상태로 있을 수 있습니다. 따라서 `CPane::IsInFloatingMultiPaneFrameWnd` 항상 반환 `FALSE`합니다.  
   
-##  <a name="a-nameisleftofa--cpaneisleftof"></a><a name="isleftof"></a>CPane::IsLeftOf  
+##  <a name="isleftof"></a>CPane::IsLeftOf  
  창 왼쪽의 (또는 위에)를 결정 합니다. 지정된 된 사각형입니다.  
   
 ```  
@@ -780,7 +845,7 @@ bool IsLeftOf(
 ### <a name="remarks"></a>주의  
  이 메서드는의 위치는 왼쪽 있는지 여부를 확인 하는 창의 가로 방향으로 고정 되어 있는 경우 `rect`합니다. 이 메서드는 위에 위치 인지 확인 그렇지 `rect`합니다.  
   
-##  <a name="a-nameisresizablea--cpaneisresizable"></a><a name="isresizable"></a>CPane::IsResizable  
+##  <a name="isresizable"></a>CPane::IsResizable  
  창 크기를 조정할 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -797,7 +862,7 @@ virtual BOOL IsResizable() const;
   
  비-크기 조정 가능한 창 도킹 컨테이너에 있을 수 없습니다.  
   
-##  <a name="a-nameistabbeda--cpaneistabbed"></a><a name="istabbed"></a>CPane::IsTabbed  
+##  <a name="istabbed"></a>CPane::IsTabbed  
  창에서 탭 컨트롤의 탭된 창에 삽입 되었는지 여부를 결정 합니다.  
   
 ```  
@@ -810,7 +875,7 @@ virtual BOOL IsTabbed() const;
 ### <a name="remarks"></a>주의  
  탭된 상태 부동에서 별도로 처리 됩니다, 도킹 및 자동 숨김 상태입니다.  
   
-##  <a name="a-nameloadstatea--cpaneloadstate"></a><a name="loadstate"></a>CPane::LoadState  
+##  <a name="loadstate"></a>CPane::LoadState  
  레지스트리에서 창 상태를 로드합니다.  
   
 ```  
@@ -838,7 +903,7 @@ virtual BOOL LoadState(
   
  이 메서드를 재정의 하는 경우 또한 기본 메서드를 호출 하 고 반환 `FALSE` 기본 메서드에서 반환 하는 경우 `FALSE`합니다.  
   
-##  <a name="a-namembhandleminsizea--cpanembhandleminsize"></a><a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize  
+##  <a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize  
  최소 창 크기의 일관 된 처리할 수 있습니다.  
   
 ```  
@@ -850,7 +915,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
   
  이 값 설정 하는 경우 `TRUE`, 늘어나지의 최소 크기 아래로 크기를 줄여야 하는 모든 창은 잘립니다. 프레임 워크 창 영역 창 크기 조정에 대 한 목적을 사용 하므로이 값 설정 하는 경우에 도킹 창에 대 한 창 영역의 크기를 변경 하지 마십시오 `TRUE`합니다.  
   
-##  <a name="a-namemrecentdockinfoa--cpanemrecentdockinfo"></a><a name="m_recentdockinfo"></a>CPane::m_recentDockInfo  
+##  <a name="m_recentdockinfo"></a>CPane::m_recentDockInfo  
  최근 도킹 정보가 포함 됩니다.  
   
 ```  
@@ -860,7 +925,7 @@ CRecentDockSiteInfo m_recentDockInfo;
 ### <a name="remarks"></a>주의  
  이 멤버에는 창에 대 한 최신 도킹 상태 정보를 저장 하는 프레임 워크입니다.  
   
-##  <a name="a-namemovebyalignmenta--cpanemovebyalignment"></a><a name="movebyalignment"></a>CPane::MoveByAlignment  
+##  <a name="movebyalignment"></a>CPane::MoveByAlignment  
  지정 된 크기의 창 및 가상 사각형을 이동합니다.  
   
 ```  
@@ -891,7 +956,7 @@ BOOL MoveByAlignment(
   
  경우 `dwAlignment` 포함는 `CBRS_ALIGN_LEFT` 또는 `CBRS_ALIGN_RIGHT` 플래그, 창 및 가상 사각형 이동 가로로 고, 그렇지 않으면 `dwAlignment` 포함는 `CBRS_ALIGN_TOP` 또는 `CBRS_ALIGN_BOTTOM` 플래그, 창 및 가상 사각형 세로 방향으로 이동 합니다.  
   
-##  <a name="a-namemovepanea--cpanemovepane"></a><a name="movepane"></a>CPane::MovePane  
+##  <a name="movepane"></a>CPane::MovePane  
  지정된 된 사각형 창을 이동 합니다.  
   
 ```  
@@ -917,7 +982,7 @@ virtual CSize MovePane(
 ### <a name="remarks"></a>주의  
  이 메서드는 도킹 가능한 창에 대해서만 사용 됩니다.  
   
-##  <a name="a-nameonafterchangeparenta--cpaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CPane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>CPane::OnAfterChangeParent  
  부모 창에 변경 된 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -931,7 +996,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="remarks"></a>주의  
  부모 창의 도킹 또는 부동 소수점 작업으로 인해 변경 될 때이 메서드는 프레임 워크에 의해 호출 됩니다.  
   
-##  <a name="a-nameonafterdocka--cpaneonafterdock"></a><a name="onafterdock"></a>CPane::OnAfterDock  
+##  <a name="onafterdock"></a>CPane::OnAfterDock  
  창을 도킹 되어 때 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -951,7 +1016,7 @@ virtual void OnAfterDock(
  [in] `dockMethod`  
  이 매개 변수는 사용되지 않습니다.  
   
-##  <a name="a-nameonafterfloata--cpaneonafterfloat"></a><a name="onafterfloat"></a>CPane::OnAfterFloat  
+##  <a name="onafterfloat"></a>CPane::OnAfterFloat  
  창을 부동 후 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -961,7 +1026,7 @@ virtual void OnAfterFloat();
 ### <a name="remarks"></a>주의  
  창을 표시 한 후 처리를 수행 하려는 경우이 메서드는 파생된 클래스에서 재정의할 수 있습니다.  
   
-##  <a name="a-nameonbeforechangeparenta--cpaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent  
  부모 창의 변경 되려고 할 때에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -982,7 +1047,7 @@ virtual void OnBeforeChangeParent(
   
  기본적으로 창 등록이 취소 도킹 창으로 호출 하 여 `CDockSite::RemovePane`합니다.  
   
-##  <a name="a-nameonbeforedocka--cpaneonbeforedock"></a><a name="onbeforedock"></a>CPane::OnBeforeDock  
+##  <a name="onbeforedock"></a>CPane::OnBeforeDock  
  창 도킹 되려고 할 때에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -1008,7 +1073,7 @@ virtual BOOL OnBeforeDock(
 ### <a name="remarks"></a>주의  
  창을 도킹할 수 되려고 할 때이 메서드는 프레임 워크에 의해 호출 됩니다. 창을 도킹 마지막 전에 처리를 수행 하려는 경우이 메서드는 파생된 클래스에서 재정의할 수 있습니다.  
   
-##  <a name="a-nameonbeforefloata--cpaneonbeforefloat"></a><a name="onbeforefloat"></a>CPane::OnBeforeFloat  
+##  <a name="onbeforefloat"></a>CPane::OnBeforeFloat  
  Float로에 대 한이 되 면 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -1030,7 +1095,7 @@ virtual BOOL OnBeforeFloat(
 ### <a name="remarks"></a>주의  
  이 메서드는 float로에 대 한이 되 면 프레임 워크에 의해 호출 됩니다. 창에서 마지막으로 표시 되기 전에 처리를 수행 하려는 경우이 메서드는 파생된 클래스에서 재정의할 수 있습니다.  
   
-##  <a name="a-nameonpressclosebuttona--cpaneonpressclosebutton"></a><a name="onpressclosebutton"></a>CPane::OnPressCloseButton  
+##  <a name="onpressclosebutton"></a>CPane::OnPressCloseButton  
  프레임 워크는 창에 대 한 캡션을 닫기 단추를 누를 때 호출 합니다.  
   
 ```  
@@ -1040,7 +1105,7 @@ virtual void OnPressCloseButton();
 ### <a name="remarks"></a>주의  
  이 메서드는 프레임 워크를 누를 때는 **닫기** 창의 캡션 단추입니다. 에 대 한 알림을 받을 수는 **닫기** 이벤트의 경우 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="a-nameonshowcontrolbarmenua--cpaneonshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu  
  특수 창 메뉴를 표시하려고 할 때 프레임워크에서 호출됩니다.  
   
 ```  
@@ -1057,7 +1122,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ### <a name="remarks"></a>주의  
  즉 창의 동작을 지정할 수 있도록 하는 몇 가지 항목을 포함 하는 메뉴: **부동**, **도킹**, **자동 숨기기**, 및 **숨기기**합니다. 호출 하 여 모든 창에 대 한이 메뉴를 사용 하도록 설정할 수 [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)합니다.  
   
-##  <a name="a-namerecalclayouta--cpanerecalclayout"></a><a name="recalclayout"></a>CPane::RecalcLayout  
+##  <a name="recalclayout"></a>CPane::RecalcLayout  
  창에 대 한 레이아웃 정보를 다시 계산합니다.  
   
 ```  
@@ -1069,7 +1134,7 @@ virtual void RecalcLayout();
   
  창 부동 창인 경우이 메서드는 미니 프레임의 크기에 창 크기를 조정 하려면 부모 미니 프레임을 알립니다. 프레임 워크를 사용 하면 미니 프레임 창의 크기를 허용 되는 최소 이상 인지 ( [CPane::GetMinSize](#getminsize)) 필요한 경우 미니 프레임 크기를 조정 합니다.  
   
-##  <a name="a-namesavestatea--cpanesavestate"></a><a name="savestate"></a>CPane::SaveState  
+##  <a name="savestate"></a>CPane::SaveState  
  레지스트리에 있는 창의 상태를 저장합니다.  
   
 ```  
@@ -1097,7 +1162,7 @@ virtual BOOL SaveState(
   
  이 메서드를 재정의 하는 경우 또한 기본 메서드를 호출 하 고 반환 `FALSE` 기본 메서드에서 반환 하는 경우 `FALSE`합니다.  
   
-##  <a name="a-namesetactiveingroupa--cpanesetactiveingroup"></a><a name="setactiveingroup"></a>CPane::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>CPane::SetActiveInGroup  
  활성 창에 플래그를 지정 합니다.  
   
 ```  
@@ -1115,7 +1180,7 @@ virtual void SetActiveInGroup(BOOL bActive);
   
  경우 `CMFCAutoHideButton::m_bOverlappingTabs` 는 `FALSE`, 아이콘 및 레이블 프레임 워크가 관련된 자동 숨기기 단추 표시 창에서 그룹에 없는 경우, 또는.  
   
-##  <a name="a-namesetbordersa--cpanesetborders"></a><a name="setborders"></a>CPane::SetBorders  
+##  <a name="setborders"></a>CPane::SetBorders  
  창 테두리 값을 설정합니다.  
   
 ```  
@@ -1147,7 +1212,7 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="remarks"></a>주의  
  창 테두리의 크기를 설정 하려면이 함수를 호출 합니다.  
   
-##  <a name="a-namesetclienthotspota--cpanesetclienthotspot"></a><a name="setclienthotspot"></a>CPane::SetClientHotSpot  
+##  <a name="setclienthotspot"></a>CPane::SetClientHotSpot  
  설정의 *핫 스폿을* 창.  
   
 ```  
@@ -1161,7 +1226,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="remarks"></a>주의  
  *핫 스폿을* 사용자 선택 하 고 창을 이동 하려면 보유 하는 창에는 지점입니다. 핫 스폿 창 도킹된 위치에서 끌 때 부드러운 애니메이션에 사용 됩니다.  
   
-##  <a name="a-namesetdockstatea--cpanesetdockstate"></a><a name="setdockstate"></a>CPane::SetDockState  
+##  <a name="setdockstate"></a>CPane::SetDockState  
  도킹 된 창에 대 한 상태 정보를 복원 합니다.  
   
 ```  
@@ -1177,7 +1242,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
   
  외부 소스에서 창 정보를 로드할 때 도킹 상태를 설정 하려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="a-namesetexclusiverowmodea--cpanesetexclusiverowmode"></a><a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode  
+##  <a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode  
  사용 하거나 단독 행 모드를 해제 합니다.  
   
 ```  
@@ -1193,7 +1258,7 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
   
  기본적으로 모든 도구 모음 사용 하지 않도록 설정 하는 배타 행 모드 있고 메뉴 모음에 배타 행 모드를 사용 합니다.  
   
-##  <a name="a-namesetminsizea--cpanesetminsize"></a><a name="setminsize"></a>CPane::SetMinSize  
+##  <a name="setminsize"></a>CPane::SetMinSize  
  창 크기에 허용 되는 최소값을 설정 합니다.  
   
 ```  
@@ -1206,7 +1271,7 @@ void SetMinSize(const CSize& size);
   
 ### <a name="remarks"></a>주의  
   
-##  <a name="a-namesetvirtualrecta--cpanesetvirtualrect"></a><a name="setvirtualrect"></a>CPane::SetVirtualRect  
+##  <a name="setvirtualrect"></a>CPane::SetVirtualRect  
  설정의 *가상 사각형* 창입니다.  
   
 ```  
@@ -1227,7 +1292,7 @@ void SetVirtualRect(
   
  창을 프로그래밍 방식으로 이동 하는 경우가 아니면 가상 사각형에 관련 된 메서드를 호출 하지 마십시오.  
   
-##  <a name="a-namesetminiframertca--cpanesetminiframertc"></a><a name="setminiframertc"></a>CPane::SetMiniFrameRTC  
+##  <a name="setminiframertc"></a>CPane::SetMiniFrameRTC  
  기본 미니 프레임 창에 대 한 런타임 클래스 정보를 설정합니다.  
   
 ```  
@@ -1241,7 +1306,7 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ### <a name="remarks"></a>주의  
  창, 움직이는 배치 됩니다는 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (미니 프레임) 창입니다. 사용자 지정을 제공할 수 있습니다 `CPaneFrameWnd`-될 클래스를 파생 때 사용 되는 [CPane::CreateDefaultMiniframe](#createdefaultminiframe) 호출 됩니다.  
   
-##  <a name="a-namestretchpanedeferwndposa--cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos  
+##  <a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos  
  창 도킹 스타일에 따라 가로 또는 세로로 확장 됩니다.  
   
 ```  
@@ -1263,7 +1328,7 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="remarks"></a>주의  
  필요에 따라이 수정 `nStretchSize` 하는 창 크기 제한을 초과 하지 않는지 확인 합니다. 이러한 한도 호출 하 여 가져온 [CPane::GetAvailableStretchSize](#getavailablestretchsize) 및 [CPane::GetAvailableExpandSize](#getavailableexpandsize)합니다.  
   
-##  <a name="a-nametoggleautohidea--cpanetoggleautohide"></a><a name="toggleautohide"></a>CPane::ToggleAutoHide  
+##  <a name="toggleautohide"></a>CPane::ToggleAutoHide  
  자동 숨김 모드 설정/해제 합니다.  
   
 ```  
@@ -1273,7 +1338,7 @@ virtual void ToggleAutoHide();
 ### <a name="remarks"></a>주의  
  자동 숨김 모드로 전환 하려면이 메서드를 호출 합니다. 창 자동 숨김 모드로 전환 하기 위해 주 프레임 창에 도킹할 수 해야 합니다.  
   
-##  <a name="a-nameundockpanea--cpaneundockpane"></a><a name="undockpane"></a>CPane::UndockPane  
+##  <a name="undockpane"></a>CPane::UndockPane  
  창에서 도킹 사이트, 기본 슬라이더 또는 미니 프레임 창의 현재 도킹 된 위치에서 제거 합니다.  
   
 ```  
@@ -1287,7 +1352,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="remarks"></a>주의  
  프로그래밍 방식으로 창을 도킹 해제 하려면이 메서드를 사용 합니다.  
   
-##  <a name="a-nameupdatevirtualrecta--cpaneupdatevirtualrect"></a><a name="updatevirtualrect"></a>CPane::UpdateVirtualRect  
+##  <a name="updatevirtualrect"></a>CPane::UpdateVirtualRect  
  가상 사각형을 업데이트합니다.  
   
 ```  

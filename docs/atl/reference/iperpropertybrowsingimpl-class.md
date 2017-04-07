@@ -9,12 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IPerPropertyBrowsingImpl
-- IPerPropertyBrowsing
-- ATL::IPerPropertyBrowsingImpl
-- ATL::IPerPropertyBrowsingImpl<T>
 - IPerPropertyBrowsingImpl
-- ATL.IPerPropertyBrowsingImpl<T>
+- ATLCTL/ATL::IPerPropertyBrowsingImpl
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetDisplayString
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedStrings
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedValue
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::MapPropertyToPage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="a-namegetdisplaystringa--iperpropertybrowsingimplgetdisplaystring"></a><a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
+##  <a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
  지정된 된 속성을 설명 하는 문자열을 검색 합니다.  
   
 ```
@@ -104,7 +104,7 @@ STDMETHOD(GetDisplayString)(
 ### <a name="remarks"></a>주의  
  참조 [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetpredefinedstringsa--iperpropertybrowsingimplgetpredefinedstrings"></a><a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
+##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
  각&0; 항목 배열을 채웁니다.  
   
 ```
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedStrings)(
 ### <a name="remarks"></a>주의  
  참조 [IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namegetpredefinedvaluea--iperpropertybrowsingimplgetpredefinedvalue"></a><a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
+##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
  검색는 **VARIANT** 주어진된 DISPID로 식별 되는 속성의 값이 들어 있습니다. 검색 한 문자열 이름을 연결 된 dispid가 `GetPredefinedStrings`합니다.  
   
 ```
@@ -138,7 +138,7 @@ STDMETHOD(GetPredefinedValue)(
   
  참조 [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-##  <a name="a-namemappropertytopagea--iperpropertybrowsingimplmappropertytopage"></a><a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
+##  <a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
  지정 된 속성과 연결 된 속성 페이지의 CLSID를 검색 합니다.  
   
 ```

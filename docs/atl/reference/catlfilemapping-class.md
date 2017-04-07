@@ -9,11 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlFileMapping<T>
-- ATL.CAtlFileMapping
-- ATL::CAtlFileMapping
 - CAtlFileMapping
-- ATL.CAtlFileMapping<T>
+- atlfile/ATL::CAtlFileMapping
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +76,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlfile.h  
   
-##  <a name="a-nameoperatortstara--catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping::operator T *  
+##  <a name="operator_t_star"></a>CAtlFileMapping::operator T *  
  간의 암시적인 변환이 가능 `CAtlFileMapping` 개체를 `T` ** \* **합니다.  
   
 ```  

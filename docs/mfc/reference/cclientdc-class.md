@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CClientDC
+- AFXWIN/CClientDC
+- AFXWIN/CClientDC::CClientDC
+- AFXWIN/CClientDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +83,7 @@ class CClientDC : public CDC
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="a-namecclientdca--cclientdccclientdc"></a><a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>CClientDC::CClientDC  
  생성 된 `CClientDC` 의 클라이언트 영역에 액세스 하는 개체는 [CWnd](../../mfc/reference/cwnd-class.md) 가리키는 `pWnd`합니다.  
   
 ```  
@@ -99,7 +102,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView #&42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cclientdcmhwnd"></a><a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
  `HWND` 의 `CWnd` 포인터를 생성 하는 데는 `CClientDC` 개체입니다.  
   
 ```  

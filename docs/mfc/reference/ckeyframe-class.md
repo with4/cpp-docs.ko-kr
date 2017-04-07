@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CKeyFrame
 - CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAfterTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAtOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetExistingKeyframe
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
  스토리 보드에 키 프레임을 추가합니다.  
   
 ```  
@@ -111,7 +121,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>주의  
  이 메서드는 키프레임을 스토리 보드에 추가 합니다. 다른 키프레임 또는 전환에 따라 다릅니다 bDeepAdd TRUE 인 경우이 메서드를 재귀적으로 추가 하려고 시도 합니다.  
   
-##  <a name="a-nameaddtostoryboardaftertransitiona--ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
  전환 후 스토리 보드에 키 프레임을 추가 합니다.  
   
 ```  
@@ -133,7 +143,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>주의  
  이 함수는 키프레임을 전환 후 스토리 보드에 추가 하는 프레임 워크에서 호출 됩니다.  
   
-##  <a name="a-nameaddtostoryboardatoffseta--ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
  오프셋에서 스토리 보드에 키 프레임을 추가 합니다.  
   
 ```  
@@ -155,7 +165,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>주의  
  이 함수는 키프레임을 오프셋에서 스토리 보드에 추가 하는 프레임 워크에서 호출 됩니다.  
   
-##  <a name="a-nameckeyframea--ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
  전환에 의존 하는 키 프레임을 생성 합니다.  
   
 ```  
@@ -180,7 +190,7 @@ CKeyFrame(
 ### <a name="remarks"></a>주의  
  생성 된 키 프레임은 지정한 전환이 끝날 때 시점을 storyboard 내에 나타냅니다.  
   
-##  <a name="a-namegetexistingkeyframea--ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
  이 키 프레임에 따라 다릅니다. 키 프레임에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -193,7 +203,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>주의  
  이 키 프레임에 따라 다릅니다. 키 프레임에 대 한 접근자입니다.  
   
-##  <a name="a-namegetoffseta--ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>CKeyFrame::GetOffset  
  다른 키 프레임에서 오프셋을 반환합니다.  
   
 ```  
@@ -206,7 +216,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>주의  
  다른 키 프레임에서 시간 (초)에 있는 오프셋을 확인 하려면이 메서드를 호출 해야 합니다.  
   
-##  <a name="a-namegettransitiona--ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>CKeyFrame::GetTransition  
  이 키 프레임에 의존 변환에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -219,21 +229,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>주의  
  이 키 프레임에 따라 달라 집니다 전환에 대 한 접근자입니다.  
   
-##  <a name="a-namemoffseta--ckeyframemoffset"></a><a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>CKeyFrame::m_offset  
  M_pExistingKeyFrame에 저장 된 키 프레임에서이 키 프레임의 오프셋을 지정 합니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="a-namempexistingkeyframea--ckeyframempexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
  기존 키프레임에 대에 대 한 포인터를 저장합니다. 이 키 프레임은 기존 키 프레임에 대 한 m_offset이 있는 스토리 보드에 추가 됩니다.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="a-namemptransitiona--ckeyframemptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
  이 키 프레임에서 시작 하는 전환에 대 한 포인터를 저장 합니다.  
   
 ```  
