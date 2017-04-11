@@ -1,37 +1,54 @@
 ---
 title: "MFC 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램[MFC]"
-  - "MFC[C++], 응용 프로그램 만들기"
-  - "MFC 응용 프로그램"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC]
+- MFC [C++], creating applications
+- MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MFC 응용 프로그램 만들기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d900cc7c81907fa755ab44b23af3e3ec5fab56b
+ms.lasthandoff: 04/01/2017
 
-MFC 응용 프로그램은 MFC\(Microsoft Foundation Class\) 라이브러리를 기반으로 하는 실행 가능한 Windows용 응용 프로그램입니다.  MFC 응용 프로그램을 만드는 가장 쉬운 방법은 MFC 응용 프로그램 마법사를 사용하는 것입니다.  
+---
+# <a name="creating-an-mfc-application"></a>MFC 응용 프로그램 만들기
+MFC 응용 프로그램은 MFC(Microsoft Foundation Class) 라이브러리를 기반으로 하는 실행 가능한 Windows용 응용 프로그램입니다. MFC 응용 프로그램을 만드는 가장 쉬운 방법은 MFC 응용 프로그램 마법사를 사용하는 것입니다.  
   
 > [!IMPORTANT]
 >  Visual Studio Express 버전에서는 MFC 프로젝트가 지원되지 않습니다.  
   
- MFC 실행 파일은 일반적으로 Windows 표준 응용 프로그램, 대화 상자 기반 응용 프로그램, 폼 기반 응용 프로그램, Explorer 스타일 응용 프로그램, 웹 브라우저 스타일 응용 프로그램 등의 다섯 가지 형식으로 나뉩니다.  자세한 내용은 다음을 참조하십시오.  
+ 다섯 가지 유형으로 대개 MFC 실행 파일: 표준 Windows 응용 프로그램, 대화 상자, 폼 기반 응용 프로그램, Explorer 스타일 응용 프로그램 및 웹 브라우저 스타일 응용 프로그램입니다. 자세한 내용은 다음을 참조하세요.  
   
--   [클래스를 사용하여 Windows 응용 프로그램 작성](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
+-   [클래스를 사용 하 여 Windows 응용 프로그램 작성](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
 -   [대화 상자 만들기 및 표시](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
@@ -43,23 +60,25 @@ MFC 응용 프로그램은 MFC\(Microsoft Foundation Class\) 라이브러리를 
   
  MFC 응용 프로그램 마법사에서는 선택하는 옵션에 따라 위의 다섯 가지 응용 프로그램 형식 모두에 적합한 클래스와 파일을 생성합니다.  
   
-### MFC 응용 프로그램 마법사를 사용하여 MFC 응용 프로그램을 만들려면  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>MFC 응용 프로그램 마법사를 사용하여 MFC 응용 프로그램을 만들려면  
   
-1.  [Visual C\+\+ 응용 프로그램 마법사로 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md) 도움말 항목에 설명되어 있는 지침을 따릅니다.  
+1.  도움말 항목의 지침에 따라 [Visual c + + 응용 프로그램 마법사로 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)합니다.  
   
-2.  **새 프로젝트** 대화 상자의 템플릿 창에서 **MFC 응용 프로그램**을 선택하여 마법사를 엽니다.  
+2.  에 **새 프로젝트** 대화 상자에서 **MFC 응용 프로그램** 마법사를 열려면 템플릿 창에서.  
   
-3.  [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)를 사용하여 응용 프로그램 설정을 정의합니다.  
+3.  사용 하 여 응용 프로그램 설정을 정의 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)합니다.  
   
     > [!NOTE]
     >  마법사의 기본 설정을 그대로 유지하려면 이 단계를 건너 뜁니다.  
   
-4.  **마침**을 클릭하여 마법사를 닫고 새 프로젝트를 개발 환경에서 엽니다.  
+4.  클릭 **마침** 는 마법사를 닫고 개발 환경에서 새 프로젝트를 엽니다.  
   
- 프로젝트를 만든 후 **솔루션 탐색기**에서 프로젝트 관련 파일을 볼 수 있습니다.  마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하십시오.  파일 형식에 대한 자세한 내용은 [Visual C\+\+ 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)을 참조하십시오.  
+ 프로젝트를 만든 후에 생성 된 파일을 볼 수 있습니다 **솔루션 탐색기**합니다. 마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하세요. 파일 형식에 대 한 자세한 내용은 참조 [Visual c + + 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)합니다.  
   
-## 참고 항목  
- [Debugging Preparation: Visual C\+\+ Windows Applications](http://msdn.microsoft.com/ko-kr/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+## <a name="see-also"></a>참고 항목  
+ [디버깅 준비: Visual c + + Windows 응용 프로그램](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [속성 페이지](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/ko-kr/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

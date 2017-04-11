@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 클래스
@@ -91,7 +91,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetPos](#setpos)|컨트롤에 대 한 현재 위치를 설정합니다.|  
 |[CSpinButtonCtrl::SetRange](#setrange)|스핀 단추 컨트롤에 대 한 상한 및 하 한 제한 (범위)를 설정합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  "스핀 단추 컨트롤" (up-down 컨트롤이 라고도 함)는 사용자를 증가 또는 감소 스크롤 위치 또는 도우미 컨트롤에 표시 되는 번호와 같은 값을 클릭할 수 있는 화살표 단추 쌍입니다. 스핀 단추 컨트롤에 연관 된 값의 현재 위치를 라고 합니다. 스핀 단추 컨트롤은 컨트롤과 함께, "버디 창입니다." 이라는 자주 사용 됩니다.  
   
  이 컨트롤 (및 따라서는 `CSpinButtonCtrl` 클래스) 이상 Windows 95/98 및 Windows NT 버전 3.51에서 실행 중인 프로그램에만 사용할 수는 있습니다.  
@@ -179,7 +179,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
   
 ##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
@@ -244,7 +244,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
  두 번째 버전은 32 비트 위치를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 되는 값을 처리할 때 컨트롤의 버디 창의 캡션을에 따라 현재 위치를 업데이트 합니다. 컨트롤의 버디 창이 없습니다 또는 캡션을 잘못 되었거나 범위를 벗어난 값을 지정 하는 경우 오류가 반환 됩니다.  
   
 ##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
@@ -325,7 +325,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="return-value"></a>반환 값  
  이전 버디 창에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Spin 컨트롤 예: 일부 콘텐츠를 표시 하는 편집 컨트롤의 다른 창와 거의 항상 관련이 있습니다. 이 다른 창은 spin 컨트롤의 "버디" 라고 합니다.  
   
 ##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
@@ -338,7 +338,7 @@ int SetPos32(int nPos);
   
 ### <a name="parameters"></a>매개 변수  
  `nPos`  
- 컨트롤에 대 한 새 위치입니다. 이 값은 컨트롤에 대 한 상한 및 하 한 제한으로 지정 된 범위에 있어야 합니다.  
+ 컨트롤에 대 한 새 위치입니다. 이 값이 컨트롤에 대 한 상한 및 하 한 제한으로 지정 된 범위에 있어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전 위치 (16 비트 전체 자릿수를 `SetPos`, 32 비트에 대 한 전체 자릿수 `SetPos32`).  
@@ -361,7 +361,7 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLower`및`nUpper`  
+ `nLower` 및 `nUpper`  
  컨트롤에 대 한 상한 및 하 한 제한입니다. 에 대 한 `SetRange`, 모두 제한 보다 클 수 **UD_MAXVAL** 또는 미만 **UD_MINVAL**; 또한의 차이 두 가지 제한 초과할 수 없습니다 **UD_MAXVAL**합니다. `SetRange32`제한;에 제한을 두지합니다 모든 정수를 사용 합니다.  
   
 ### <a name="remarks"></a>주의  

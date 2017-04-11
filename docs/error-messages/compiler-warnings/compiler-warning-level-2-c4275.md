@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 경고 (수준 2) c 4275 | Microsoft 문서"
+title: "컴파일러 경고 (수준 2) C4275 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,33 +34,33 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 873a96d4595b75ff6b9567500723c32d7ba5bd2b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f9ecbe931c14cfde1d48438bdb76f70452e324d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-2-c4275"></a>컴파일러 경고(수준 2) C4275
-비-DLL 인터페이스 classkey 'identifier' 기준으로 사용에 대 한 DLL 인터페이스 classkey 'identifier'  
+비-DLL 인터페이스 classkey 'identifier' 기준으로 사용 DLL 인터페이스 classkey 'identifier'  
   
- 내보낸된 클래스가 내보내지 않은 클래스에서 파생 되었습니다.  
+ 내보낸된 클래스 내보내지 않은 클래스에서 파생 되었습니다.  
   
- 사용 하는 클래스를 내보낼 때 데이터 손상의 가능성을 최소화 하기 위해 [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), 되어 있는지 확인 합니다.  
+ 사용 하는 클래스를 내보낼 때 데이터 손상 가능성을 최소화 하려면 [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), 되어 있는지 확인 합니다.  
   
--   모든 정적 데이터는 DLL에서 내보낸 함수를 통해 액세스 됩니다.  
+-   모든 정적 데이터 DLL에서 내보낸 함수를 통해 액세스 됩니다.  
   
--   클래스의 인라인된 메서드가 정적 데이터를 수정할 수 있습니다.  
+-   클래스의 메서드가 없는 인라인된 정적 데이터를 수정할 수 있습니다.  
   
 -   클래스의 인라인된 메서드가 없는 CRT 함수를 사용 하거나 다른 라이브러리 함수는 정적 데이터를 사용 합니다.  
   
--   인라인된 클래스 함수가 없는, 예를 들어에 액세스할 수 있는 정적 데이터 CRT 함수 또는 다른 라이브러리 함수를 사용 합니다.  
+-   인라인된 클래스 함수가 없습니다 정적 데이터를 액세스 예를 들어, where, CRT 함수 또는 다른 라이브러리 함수에 사용 합니다.  
   
--   클래스의 메서드가 없음 (에 관계 없이 인라이닝) 인스턴스화 EXE 및 DLL의 정적 데이터 차이점을 갖는 형식을 사용할 수 있습니다.  
+-   클래스의 메서드가 없는 (에 관계 없이 인라이닝) 인스턴스화 EXE 및 DLL에는 정적 데이터 차이점이 형식을 사용할 수 있습니다.  
   
- 함수 및 가상 함수를 사용 하 여 클래스를 정의 하는 DLL 인스턴스화하기 위해 호출할 수를 정의 하 고 형식의 개체를 삭제 하 여 클래스를 내보낼 방지할 수 있습니다.  그런 다음 가상 함수 형식에만 호출할 수 있습니다.  
+ 함수 및 가상 함수를 사용 하 여 클래스를 정의 하는 DLL 인스턴스화하기 위해 호출할 수를 정의 하 고 유형의 개체를 삭제 하면 클래스를 내보내지 방지할 수 있습니다.  그런 다음 가상 함수 형식에만 호출할 수 있습니다.  
   
- 템플릿 내보내기에 대 한 자세한 내용은 참조 하십시오. [하십시오. EN-US;&16895;8](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)합니다.  
+ 서식 파일을 내보내는 방법에 대 한 자세한 내용은 참조 하십시오. [하십시오. EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)합니다.  
   
- 디버그 릴리스를 컴파일하면 c + + 표준 라이브러리의 형식에서 파생 하는 경우 Visual c + +에서 c&4275;를 무시할 수 있습니다 (**/MTd**) 및 컴파일러 오류 메시지 _Container_base를 참조 하는 위치입니다.  
+ 디버그 릴리스를 컴파일하면 c + + 표준 라이브러리의 형식에서 파생 하는 경우 Visual c + +에서 c 4275를 무시할 수 있습니다 (**/MTd**) 하 고 _Container_base 컴파일러 오류 메시지는 위치입니다.  
   
 ```  
 // C4275.cpp  

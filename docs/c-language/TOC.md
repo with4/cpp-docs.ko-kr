@@ -21,7 +21,7 @@
 ##### [문자 형식](character-types.md)
 ##### [실행 문자 집합](execution-character-set.md)
 ##### [이스케이프 시퀀스](escape-sequences.md)
-##### [8진 및&16;진 문자 사양](octal-and-hexadecimal-character-specifications.md)
+##### [8진 및 16진 문자 사양](octal-and-hexadecimal-character-specifications.md)
 ### [C 문자열 리터럴](c-string-literals.md)
 #### [문자열 리터럴의 형식](type-for-string-literals.md)
 #### [문자열 리터럴 저장소](storage-of-string-literals.md)
@@ -265,7 +265,7 @@
 #### [추가 모드의 파일 위치](file-position-in-append-mode.md)
 #### [텍스트 파일 잘라내기](truncation-of-text-files.md)
 #### [파일 버퍼링](file-buffering.md)
-#### [길이가&0;인 파일](zero-length-files.md)
+#### [길이가 0인 파일](zero-length-files.md)
 #### [파일 이름](filenames.md)
 #### [파일 액세스 제한](file-access-limits.md)
 #### [열려 있는 파일 삭제](deleting-open-files.md)
@@ -282,8 +282,3 @@
 #### [strerror 함수](strerror-function.md)
 #### [표준 시간대](time-zone.md)
 #### [clock 함수 (C)](clock-function-c.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

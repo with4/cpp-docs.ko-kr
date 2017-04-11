@@ -225,6 +225,7 @@
 ## [집계 및 클래스 팩터리 매크로](aggregation-and-class-factory-macros.md)
 ## [범주 매크로](category-macros.md)
 ## [COM 맵 매크로](com-map-macros.md)
+## [COM 인터페이스 항목 매크로](com-interface-entry-macros.md)
 ## [컴파일러 옵션 매크로](compiler-options-macros.md)
 ## [복합 컨트롤 매크로](composite-control-macros.md)
 ## [연결 지점 매크로](connection-point-macros.md)

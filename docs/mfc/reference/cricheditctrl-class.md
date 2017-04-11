@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 클래스
@@ -209,10 +209,10 @@ class CRichEditCtrl : public CWnd
 |[CRichEditCtrl::StreamOut](#streamout)|이 텍스트 저장 `CRichEditCtrl` 출력 스트림으로 개체입니다.|  
 |[CRichEditCtrl::Undo](#undo)|마지막 편집 작업을 취소합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  "Rich edit 컨트롤"는 사용자 입력 수 있으며 텍스트를 편집 하는 창입니다. 텍스트 문자 및 단락 서식을 할당할 수 있으며 포함 된 OLE 개체를 포함할 수 있습니다. Rich edit 컨트롤 텍스트의 서식을 지정 하기 위한 프로그래밍 인터페이스를 제공 합니다. 그러나 응용 프로그램 사용자에 게 형식 지정 작업을 제공 하는 데 필요한 사용자 인터페이스 구성 요소를 구현 해야 합니다.  
   
- 이 Windows 공용 컨트롤 (및 따라서는 `CRichEditCtrl` 클래스) 이상 Windows 95/98 및 Windows NT 버전 3.51에서 실행 되는 프로그램에만 사용할 수는 있습니다. `CRichEditCtrl` 클래스의 버전 2.0 / 3.0 지원는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] rich edit 컨트롤입니다.  
+ 이 Windows 공용 컨트롤 (및 따라서는 `CRichEditCtrl` 클래스)은 이상 버전과 Windows 95/98 및 Windows NT 버전 3.51에서 실행 되는 프로그램 에서만 사용할 수 있습니다. `CRichEditCtrl` 클래스의 버전 2.0 / 3.0 지원는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] rich edit 컨트롤입니다.  
   
 > [!CAUTION]
 >  Rich edit 컨트롤을 사용 하는 대화 상자에서 하는 경우 (응용 프로그램은 MDI SDI 여부에 관계 없이 대화 상자 기반 또는)를 호출 해야 [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit) 대화 상자가 표시 되 면 합니다. 이 함수를 호출할 수 있는 일반적인 위치는 프로그램의 `InitInstance` 멤버 함수입니다. 대화 상자를 처음 사용할 때만 표시 하는 각 시간에 대해 호출할 필요가 없습니다. 호출할 필요가 없습니다 `AfxInitRichEdit` 사용 하는 경우 `CRichEditView`합니다.  
@@ -253,7 +253,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="return-value"></a>반환 값  
  클립보드 형식을 붙여넣을 수 있습니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  경우 `nFormat` 은 0으로, `CanPaste` 현재 클립보드에 모든 형식 시도 합니다.  
   
  자세한 내용은 참조 [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) 메시지 및 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -318,7 +318,7 @@ int CharFromPos(CPoint pt) const;
 void Clear();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  수행한 삭제 **지우기** 호출 하 여 실행 취소 될 수는 [실행 취소](#undo) 멤버 함수입니다.  
   
  현재 선택 영역을 삭제 하 고 삭제 된 내용을 클립보드에 배치 하려면 호출는 [잘라내기](#cut) 멤버 함수입니다.  
@@ -335,7 +335,7 @@ void Clear();
 void Copy();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ### <a name="example"></a>예제  
@@ -435,7 +435,7 @@ virtual BOOL CreateEx(
 CRichEditCtrl();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용 하 여 [만들기](#create) rich edit 컨트롤 창을 생성 하 합니다.  
   
 ### <a name="example"></a>예제  
@@ -448,7 +448,7 @@ CRichEditCtrl();
 void Cut();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  수행한 삭제 **잘라내기** 호출 하 여 실행 취소 될 수는 [실행 취소](#undo) 멤버 함수입니다.  
   
  삭제 된 텍스트를 클립보드에 배치 하지 않고 현재 선택 영역을 삭제 하려면 호출는 [지우기](#clear) 멤버 함수입니다.  
@@ -543,7 +543,7 @@ DWORD FindWordBreak(
 ### <a name="return-value"></a>반환 값  
  매개 변수에 따라 `nCode`합니다. 자세한 내용은 참조 [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 멤버 함수는 지정 된 위치의 문자에 대 한 정보를 검색에 사용할 수 있습니다.  
   
 ##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
@@ -565,7 +565,7 @@ long FormatRange(
 ### <a name="return-value"></a>반환 값  
  1을 더한 지역 내에 포함 된 마지막 문자의 인덱스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  일반적으로이 호출에 대 한 호출 뒤 [DisplayBand](#displayband)합니다.  
   
  자세한 내용은 참조 [EM_FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb788020) 메시지 및 [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -608,7 +608,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ### <a name="return-value"></a>반환 값  
  **dwMask** 데이터 멤버의 `cf`합니다. 것의 기본 문자 특성 서식으로 지정 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조는 **EM_GETCHARFORMAT** 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ### <a name="example"></a>예제  
@@ -761,7 +761,7 @@ UINT GetOptions() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 옵션 플래그 값의 조합입니다. 이러한 값의 목록에 대 한 참조는 *fOptions* 에서 매개 변수는 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) 메시지에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 현재 옵션 플래그 값의 조합입니다. 이러한 값의 목록에 대 한 참조는 *fOptions* 에서 매개 변수는 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
  단락 특성의 현재 선택 영역 서식 가져옵니다.  
@@ -779,7 +779,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="return-value"></a>반환 값  
  **dwMask** 데이터 멤버의 `pf`합니다. 단락 서식 현재 선택 영역 전체에 걸쳐 일관적인 특성을 지정 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  여러 단락을 선택 하면 `pf` 선택한 첫 번째 단락의 특성을 받습니다. 반환 값은 선택 영역 전체에 걸쳐 일관성 있는 특성을 지정 합니다.  
   
  자세한 내용은 참조는 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) 메시지 및 **PARAFORMAT** 및 **PARAFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -818,7 +818,7 @@ void GetRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>매개 변수  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는에 대 한 포인터는 [RECT](../../mfc/reference/rect-structure1.md) 이 서식 지정 영역을 받으려는 `CRichEditCtrl` 개체입니다.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) 에 대 한 포인터 또는 [RECT](../../mfc/reference/rect-structure1.md) 이 서식 지정 영역을 받으려는 `CRichEditCtrl` 개체입니다.  
   
 ### <a name="remarks"></a>주의  
  서식 지정 영역에는 텍스트에 대 한 경계 사각형이입니다. 이 값은의 크기에 관계 없이 `CRichEditCtrl` 개체입니다.  
@@ -838,7 +838,7 @@ UNDONAMEID GetRedoName() const;
 ### <a name="return-value"></a>반환 값  
  성공 하면 `GetRedoName` 반환 된 [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) 컨트롤의 redo queue의 다음 작업의 형식을 나타내는 열거형입니다. Redo queue는 비어 있는 경우 또는 큐에 다시 실행 동작을 알 수 없는 유형의 경우 `GetRedoName` 0을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  실행 취소 하거나 다시 실행할 수 있는 동작의 유형을 입력, delete, 끌어서 놓기, 잘라내기, 포함 및 붙여넣기 작업 합니다. 이 정보는 redoable 동작의 드롭다운 목록 상자와 같은 실행 취소 및 다시 실행 작업에 대 한 확장된 된 사용자 인터페이스를 제공 하는 응용 프로그램에 유용할 수 있습니다.  
   
 ##  <a name="getsel"></a>CRichEditCtrl::GetSel  
@@ -892,7 +892,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="return-value"></a>반환 값  
  **dwMask** 데이터 멤버의 `cf`합니다. 현재 선택 영역 전체에 걸쳐 일관적인 특성을 형식 지정 문자를 지정 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  `cf` 매개 변수는 현재 선택한 항목의 첫 번째 문자 특성을 받습니다. 반환 값은 선택 영역 전체에 걸쳐 일관성 있는 특성을 지정 합니다.  
   
  자세한 내용은 참조는 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -982,12 +982,12 @@ long GetTextLengthEx(
  텍스트 길이 결정 하는 데 사용할 방법을 지정 하는 값입니다. 이 구성원 하나일 수 있습니다 또는 플래그 소속에 나열 된 값 [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) 에 설명 된는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
  `uCodePage`  
- 번역 (1200 유니코드에 대 한 ANSI 코드 페이지에 대 한 CP_ACP)에 대 한 코드 페이지입니다.  
+ 번역 (ANSI 코드 페이지, 유니코드에 대 한 1200 CP_ACP)에 대 한 코드 페이지입니다.  
   
 ### <a name="return-value"></a>반환 값  
  문자 또는 편집 컨트롤의 바이트 수입니다. 호환 되지 않는 플래그 설정 된 경우 `dwFlags`를이 멤버 함수는 반환 `E_INVALIDARG`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `GetTextLengthEx`텍스트의 길이 결정 하는 추가 방법을 제공 합니다. Rich Edit 2.0 기능을 지원합니다. 참조 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]자세한 정보에 대 한 합니다.  
   
 ##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
@@ -1089,7 +1089,7 @@ void LimitText(long nChars = 0);
  `nChars`  
  입력할 수 있는 텍스트의 바이트 단위로 지정 합니다. 이 매개 변수가 0 (기본값) 이면 텍스트 길이 64kb로 설정 됩니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  입력할 수 있는 텍스트에만 제한 텍스트 제한을 변경 합니다. 편집 컨트롤에 이미 모든 텍스트 없습니다 영향을 주지도 않습니다 것 영향을 복사 하 여 편집 컨트롤에서 텍스트의 길이 [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) 멤버 함수에 `CWnd`합니다. 응용 프로그램에서 사용 하는 경우는 `SetWindowText` 함수에 대 한 호출에서 지정 된 편집 컨트롤에 많은 텍스트를 배치 하려면 `LimitText`, 사용자에 편집 컨트롤에서 텍스트를 삭제할 수 있습니다. 그러나 텍스트 제한 기존 텍스트를 새 텍스트로 대체에서 사용자를 하지 것입니다, 그리고 현재 선택 영역을 삭제 하지 않는 한 문자 제한에는 텍스트입니다.  
   
 > [!NOTE]
@@ -1112,10 +1112,10 @@ long LineFromChar(long nIndex) const;
  편집 컨트롤의 텍스트에 원하는 문자에 대 한 0부터 시작 인덱스 값을 포함 하거나-1을 포함 합니다. 경우 `nIndex` 은-1, 캐럿을 포함 하는 줄, 현재 줄을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 로 지정 된 문자 인덱스를 포함 하는 줄의 0부터 시작 줄 번호 `nIndex`합니다. 경우 `nIndex` – 1이 선택 항목의 첫 번째 문자를 포함 하는 줄 번호 반환 됩니다. 선택 영역이 없는 경우 현재 줄 번호 반환 됩니다.  
+ 로 지정 된 문자 인덱스를 포함 하는 줄의 0부터 시작 줄 번호 `nIndex`합니다. 경우 `nIndex` 은-1, 선택 항목의 첫 번째 문자를 포함 하는 줄 번호 반환 됩니다. 선택 영역이 없는 경우 현재 줄 번호 반환 됩니다.  
   
-### <a name="remarks"></a>주의  
- 문자 인덱스가 rich edit 컨트롤의 처음부터 문자의 수입니다. 문자 계산 된 OLE 항목을 단일 문자로 계산 됩니다.  
+### <a name="remarks"></a>설명  
+ 문자 인덱스가 rich edit 컨트롤의 처음부터 문자의 수입니다. 문자 개수를 OLE 항목을 단일 문자로 계산 됩니다.  
   
  자세한 내용은 참조 [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
@@ -1134,7 +1134,7 @@ int LineIndex(int nLine = -1) const;
  원하는 줄 편집 컨트롤의 텍스트에 대 한 인덱스 값을 포함 하거나-1을 포함 합니다. 경우 `nLine` 은-1, 캐럿을 포함 하는 줄, 현재 줄을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 지정 된 줄의 문자 인덱스 `nLine` 하거나 지정된 된 줄 번호 큰 경우-1입니다. 다음 편집 컨트롤에는 줄 수 있습니다.  
+ 에 지정 된 줄의 문자 인덱스 `nLine` 하거나 지정된 된 줄 번호 큰 경우-1 다음 편집 컨트롤에는 줄 수 있습니다.  
   
 ### <a name="remarks"></a>주의  
  문자 인덱스에 지정된 된 줄에 서식 있는 편집 컨트롤의 처음부터 문자의 수입니다.  
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>매개 변수  
  `nLine`  
- 검색할 길이가 줄의 문자는 문자 인덱스를 지정 합니다. 이 매개 변수가-1 인 경우 문자열의 길이 포함 하지 않고 선택한 텍스트 줄, 현재 줄 (캐럿을 포함 하는 줄)의 길이 반환 됩니다. 때 `LineLength` 라고 단일 행 편집 컨트롤의 경우이 매개 변수가 무시 됩니다.  
+ 검색할 길이가 줄의 문자는 문자 인덱스를 지정 합니다. 이 매개 변수가-1 인 경우 문자열의 길이 포함 하지 않고 선택한 텍스트를 줄, 현재 줄 (캐럿을 포함 하는 줄)의 길이가 반환 됩니다. 때 `LineLength` 라고 단일 행 편집 컨트롤의 경우이 매개 변수가 무시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  때 `LineLength` 호출 되는 여러 줄 편집 컨트롤에 대 한 반환 값은 길이 (바이트)로 지정 된 줄의 `nLine`합니다. 때 `LineLength` 라고 단일 행 편집 컨트롤에 대 한 반환 값은 길이 (바이트) 편집 컨트롤의 텍스트입니다.  
@@ -1183,7 +1183,7 @@ void LineScroll(
  가 가로로 스크롤하도록 문자 위치의 수를 지정 합니다. Rich edit 컨트롤 중 하나에 있으면이 값은 무시 됩니다는 **ES_RIGHT** 또는 **ES_CENTER** 스타일입니다. [편집 스타일](../../mfc/reference/edit-styles.md) 에 지정 된 [만들기](#create)합니다.  
   
 ### <a name="remarks"></a>설명  
- 편집 컨트롤의에서 텍스트의 마지막 줄을 지 나 편집 컨트롤이 세로로 스크롤되지 않습니다. 현재 줄로 지정 된 줄 수를 더한 경우 `nLines` 편집 컨트롤의 마지막 줄 편집 컨트롤 창의 맨 스크롤할 수 있도록 조정 되는 값, 줄 편집 컨트롤의 총 수를 초과 합니다.  
+ 편집 컨트롤의에서 텍스트의 마지막 줄을 지 나 편집 컨트롤이 세로로 스크롤되지 않습니다. 현재 줄로 지정 된 줄 수를 더한 경우 `nLines` 줄 편집 컨트롤의 총 수를 초과 하면, 마지막 줄 편집 컨트롤의 편집 컨트롤 창의 위쪽 스크롤할 수 있도록 조정 되는 값입니다.  
   
  `LineScroll`용도 모든 줄의 마지막 문자를 지난 사이 이동 합니다.  
   
@@ -1199,7 +1199,7 @@ void LineScroll(
 void Paste();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  데이터가는 클립보드 인식할 수 있는 형식이 데이터를 포함 하는 경우에 삽입 됩니다.  
   
  자세한 내용은 참조 [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -1249,7 +1249,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="return-value"></a>반환 값  
  문자, (x, y)의 위치입니다. 단일 행 편집 컨트롤에 대 한 y-좌표는 항상 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  자세한 내용은 참조 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ##  <a name="redo"></a>CRichEditCtrl::Redo  
@@ -1286,7 +1286,7 @@ void ReplaceSel(
   
  현재 선택 없으면 바꿀 텍스트 삽입 지점, 즉, 현재 캐럿 위치에 삽입 됩니다.  
   
- 이 함수는 기존 문자 서식으로 삽입 된 텍스트 서식을 지정 합니다. 텍스트의 전체 범위를 바꿀 때 (호출 하 여 `SetSel`(0,-1) 호출 하기 전에 `ReplaceSel`), 단락 되는 문자 이전 단락 서식 지정을 유지 하는 새로 삽입 된 텍스트에 상속의 끝이 있습니다.  
+ 이 함수는 기존 문자 서식으로 삽입 된 텍스트 서식을 지정 합니다. 텍스트의 전체 범위를 바꿀 때 (호출 하 여 `SetSel`(0,-1) 호출 하기 전에 `ReplaceSel`), 문자의 단락 이전 단락 서식 지정을 유지 하는 새로 삽입 된 텍스트로 상속에 끝이 있습니다.  
   
  자세한 내용은 참조 [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
@@ -1300,7 +1300,7 @@ void ReplaceSel(
 void RequestResize();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 기능은 유용 [CWnd::OnSize](../../mfc/reference/cwnd-class.md#onsize) 는 바닥 없음에 대 한 처리 `CRichEditCtrl` 개체입니다.  
   
  자세한 내용은 참조는 [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) 메시지 및 **바닥 없는 Rich Edit 컨트롤** 섹션 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -1323,7 +1323,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  설정 된 경우 서식 있는 편집 컨트롤은 표준 URL 형식에 맞는지 확인 하기 위해 텍스트를 검사 합니다. 목록이 이러한 URL 형식에 대 한 참조 [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 > [!NOTE]
->  설정 하지 않으면 `SetAutoURLDetect` 를 **TRUE** edit 컨트롤이 사용 하는 경우는 **CFE_LINK** Url 외의 텍스트에 대 한 효과입니다. `SetAutoURLDetect`Url에 대 한이 효과 사용 하도록 설정 하 고 다른 모든 텍스트에 사용 하지 않도록 설정 합니다. 참조 [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) 에 대 한 자세한 내용은 **CFE_LINK** 효과입니다.  
+>  설정 하지 마십시오 `SetAutoURLDetect` 를 **TRUE** edit 컨트롤이 사용 하는 경우는 **CFE_LINK** Url 외의 텍스트에 대 한 효과입니다. `SetAutoURLDetect`Url에 대 한이 효과 사용 하도록 설정 하 고 다른 모든 텍스트에 사용 하지 않도록 설정 합니다. 참조 [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) 에 대 한 자세한 내용은 **CFE_LINK** 효과입니다.  
   
 ##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
  이 대 한 배경색을 설정 `CRichEditCtrl` 개체입니다.  
@@ -1432,8 +1432,8 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
- 이 `CRichEditCtrl` 개체 호출 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379) 로 지정 된 COM 개체에 대 한 사용 개수를 증가 시킬 `pCallback`합니다.  
+### <a name="remarks"></a>주의  
+ 이 `CRichEditCtrl` 개체 호출 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379) 로 지정 된 COM 개체에 대 한 사용 개수를 증가 시키는 `pCallback`합니다.  
   
  자세한 내용은 참조 [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) 메시지 및 [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) 인터페이스는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
@@ -1461,7 +1461,7 @@ void SetOptions(
  `dwFlags`  
  서식 있는 편집 옵션입니다. 플래그 값은 설명 섹션에 나열 됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  옵션은 다음 값의 조합 될 수 있습니다.  
   
 - `ECO_AUTOWORDSELECTION`단어 단위로 선택을에 두 번 클릭 합니다.  
@@ -1470,13 +1470,13 @@ void SetOptions(
   
 - `ECO_AUTOHSCROLL`마지막 줄에서 ENTER 키를 누를 때 텍스트를 한 페이지 위로 자동으로 스크롤됩니다.  
   
-- `ECO_NOHIDESEL`편집 컨트롤에 대 한 기본 동작을 부정합니다. 컨트롤이 입력된 포커스를 잃 및 컨트롤이 입력된 포커스를 받을 때 선택한을 표시 하는 경우 기본 동작 선택 영역을 숨깁니다. 지정 하는 경우 `ECO_NOHIDESEL`, 선택한 텍스트 컨트롤에 포커스가 없는 경우에 반대로 됩니다.  
+- `ECO_NOHIDESEL`편집 컨트롤에 대 한 기본 동작을 부정합니다. 컨트롤이 입력된 포커스를 잃고 컨트롤이 입력된 포커스를 받을 때 선택한 표시 하는 경우 기본 동작 선택 영역을 숨깁니다. 지정 하는 경우 `ECO_NOHIDESEL`, 선택한 텍스트 컨트롤에 포커스가 없는 경우에 반대로 됩니다.  
   
 - `ECO_READONLY`사용자를가 입력 하거나 편집 컨트롤의 텍스트를 편집할 수 없습니다.  
   
-- `ECO_WANTRETURN`대화 상자에서 여러 줄 rich edit 컨트롤에 텍스트를 입력 하는 동안 사용자가 ENTER 키를 누를 때 캐리지 리턴 삽입할 수를 지정 합니다. 이 스타일을 지정 하지 않으면 ENTER 키를 부모 창의 기본 단추 (예를 들어 대화 상자에서 확인 단추)를 클릭 하면 유사한 rich edit 컨트롤의 부모 창에 명령을 보냅니다. 이 스타일에 편집 컨트롤을 단일 줄에 적용 되지 않습니다.  
+- `ECO_WANTRETURN`대화 상자에서 여러 줄 서식 있는 편집 컨트롤에 텍스트를 입력 하는 동안 사용자가 ENTER 키를 누를 때 캐리지 리턴 삽입할 수를 지정 합니다. 이 스타일을 지정 하지 않으면 ENTER 키를 부모 창의 기본 단추 (예를 들어 대화 상자에서 확인 단추)를 클릭 하면 유사한 rich edit 컨트롤의 부모 창에 명령을 보냅니다. 이 스타일에 편집 컨트롤을 단일 줄에 적용 되지 않습니다.  
   
-- `ECO_SAVESEL`컨트롤이 포커스를 잃을 때 선택 항목을 유지 합니다. 기본적으로 포커스를 회복 될 때 컨트롤의 전체 내용은 선택 됩니다.  
+- `ECO_SAVESEL`컨트롤이 포커스를 잃으면 선택 영역을 유지 합니다. 기본적으로 포커스를 회복 될 때 컨트롤의 전체 내용은 선택 됩니다.  
   
 - `ECO_VERTICAL`세로 방향으로 텍스트 및 개체를 그립니다. 아시아 언어에만 사용할 수 있습니다.  
   
@@ -1529,7 +1529,7 @@ BOOL SetPunctuation(
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 멤버 함수는 운영 체제의 버전에만 아시아 언어에 사용할 수 있습니다.  
   
 ##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
@@ -1546,7 +1546,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 옵션의 간략 한 설명을 참조 하십시오. [SetOptions](#setoptions)합니다. 이 함수를 사용 하 여이 대 한 모든 옵션을 설정 하려면 `CRichEditCtrl` 개체입니다.  
   
  자세한 내용은 참조 [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -1627,7 +1627,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  로 지정 된 특성에만 **dwMask** 소속 `cf` 이 기능으로 변경 합니다.  
   
  자세한 내용은 참조는 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
@@ -1782,7 +1782,7 @@ long StreamIn(
 ### <a name="remarks"></a>주의  
  값 `nFormat` 다음 중 하나 여야 합니다.  
   
-- `SF_TEXT`텍스트를 읽기 전용를 나타냅니다.  
+- `SF_TEXT`텍스트를 읽는 나타냅니다.  
   
 - `SF_RTF`읽는 텍스트 및 서식 지정을 나타냅니다.  
   
@@ -1848,7 +1848,7 @@ BOOL Undo();
 ### <a name="return-value"></a>반환 값  
  실행 취소 작업에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  실행 취소 작업 또한 취소할 수 없습니다. 예를 들어 첫 번째 호출로 삭제 된 텍스트를 복원할 수 있습니다 **실행 취소**합니다. 두 번째 호출으로 다시 사용 하 여 텍스트를 제거할 수 중간 편집 작업이 없는 상태로 **실행 취소**합니다.  
   
  자세한 내용은 참조 [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  

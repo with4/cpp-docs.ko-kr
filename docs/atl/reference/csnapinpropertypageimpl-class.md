@@ -1,5 +1,5 @@
 ---
-title: "CSnapInPropertyPageImpl 클래스 | Microsoft 문서"
+title: "CSnapInPropertyPageImpl 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f5db4d0742a423e9574db2a4268a9376491b2ed2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 클래스
@@ -84,17 +84,17 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|상태를 변경 하는 **확인** 및 **취소** 단추입니다.|  
 |[CSnapInPropertyPageImpl::Create](#create)|새로 만든 초기화 `CSnapInPropertyPageImpl` 개체입니다.|  
-|[CSnapInPropertyPageImpl::OnApply](#onapply)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 **지금 적용** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
-|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 **도움말** 마법사 형식의 속성 시트를 사용 하는 동안 단추.|  
-|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|현재 페이지의 더 이상 활성 상태가 때 프레임 워크에 의해 호출 됩니다.|  
-|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 **취소** 단추는 취소 작업이 수행 하기 전에 합니다.|  
-|[CSnapInPropertyPageImpl::OnReset](#onreset)|사용자가 클릭할 때 프레임 워크에서 호출의 **재설정** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
-|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|현재 페이지 활성화 되는 프레임 워크에서 호출 합니다.|  
-|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 **다시** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
-|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 **마침** 마법사 형식의 속성 시트를 사용 하는 동안 단추.|  
-|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|사용자가 클릭할 때 프레임 워크에 의해 호출 된 `Next` 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
-|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|속성 시트의 모든 페이지에 있는 현재 메시지를 전달합니다.|  
-|[CSnapInPropertyPageImpl::SetModified](#setmodified)|호출을 활성화 또는 비활성화는 **지금 적용** 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnApply](#onapply)|사용자가 클릭할 때 프레임 워크에서 호출 된 **지금 적용** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|사용자가 클릭할 때 프레임 워크에서 호출 된 **도움말** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|현재 페이지가 더 이상 활성 상태가 프레임 워크에서 호출 됩니다.|  
+|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|사용자가 클릭할 때 프레임 워크에서 호출 된 **취소** 단추는 취소 작업이 수행 되기 전에 합니다.|  
+|[CSnapInPropertyPageImpl::OnReset](#onreset)|사용자가 클릭할 때 프레임 워크에서 호출 된 **다시 설정** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|현재 페이지 활성화 될 때 프레임 워크에서 호출 됩니다.|  
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|사용자가 클릭할 때 프레임 워크에서 호출 된 **다시** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|사용자가 클릭할 때 프레임 워크에서 호출 된 **마침** 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|사용자가 클릭할 때 프레임 워크에서 호출 된 `Next` 마법사 형식의 속성 시트를 사용 하는 동안 단추입니다.|  
+|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|속성 시트의 모든 페이지에 현재 메시지를 전달합니다.|  
+|[CSnapInPropertyPageImpl::SetModified](#setmodified)|활성화 하거나 비활성화 하는 호출 된 **지금 적용** 단추입니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -103,7 +103,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE** 에서 사용 하는 구조는 `CSnapInPropertyPageImpl` 개체입니다.|  
   
 ## <a name="remarks"></a>주의  
- `CSnapInPropertyPageImpl`스냅인 속성 페이지 개체에 대 한 기본 구현을 제공합니다. 스냅인 속성 페이지의 기본 기능 몇 가지 다른 인터페이스를 사용 하 여 구현 됩니다 및 형식을 매핑합니다.  
+ `CSnapInPropertyPageImpl`스냅인 속성 page 개체에 대 한 기본 구현을 제공합니다. 스냅인 속성 페이지의 기본 기능 몇 가지 다른 인터페이스를 사용 하 여 구현 됩니다 및 형식을 매핑합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CDialogImplBase`  
@@ -114,16 +114,16 @@ CSnapInPropertyPageImpl : public CDialogImplBase
  **헤더:** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
- 모달 속성 시트의 페이지에서 데이터를 복구할 수 없는 변경 되는 수행 된 후이 함수를 호출 합니다.  
+ 모달 속성 시트의 페이지의 데이터를 복구할 수 없는 변경 수행 된 후이 함수를 호출 합니다.  
   
 ```
 void CancelToClose();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 변경의 **확인** 단추를 **닫기** 사용 하지 않도록 설정 하 고는 **취소** 단추입니다. 이 변경 알림 사용자 변경 내용을 영구적 이며 수정 작업을 취소할 수 없습니다.  
+### <a name="remarks"></a>설명  
+ 이 함수는 변경의 **확인** 단추를 **닫기** 사용 하지 않도록 설정 하 고는 **취소** 단추입니다. 이렇게 하면 변경 알림을 영구적 및 수정 내용을 변경이 하다 사용자를 취소할 수 없습니다.  
   
- `CancelToClose` 모덜리스 속성 시트에 없기 때문에 멤버 함수는 모덜리스 속성 시트의 경우 nothing을 **취소** 기본적으로는 단추입니다.  
+ `CancelToClose` 모덜리스 속성 시트에 없기 때문에 멤버 함수는 모덜리스 속성 시트의 경우 nothing는 **취소** 기본적으로는 단추입니다.  
   
 ##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  `CSnapInPropertyPageImpl` 개체를 생성합니다.  
@@ -149,8 +149,8 @@ HPROPSHEETPAGE Create();
 ### <a name="return-value"></a>반환 값  
  에 대 한 핸들을 **PROPSHEETPAGE** 새로 만든된 속성 시트의 특성을 포함 하는 구조입니다.  
   
-### <a name="remarks"></a>주의  
- 먼저 호출 해야 [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) 이 함수를 호출 하기 전에 합니다.  
+### <a name="remarks"></a>설명  
+ 먼저 호출 해야 [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) 이 함수를 호출 하기 전에.  
   
 ##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
  `m_psp`멤버의 특성을 저장 하는 구조 **PROPSHEETPAGE**합니다.  
@@ -165,7 +165,7 @@ PROPSHEETPAGE m_psp;
  해당 멤버의 목록을 포함 하 여이 구조에 대 한 자세한 내용은 참조 [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
- 이 멤버 함수를 클릭할 때 호출의 **확인** 또는 **지금 적용** 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **확인** 또는 **지금 적용** 단추입니다.  
   
 ```
 BOOL OnApply();
@@ -174,15 +174,15 @@ BOOL OnApply();
 ### <a name="return-value"></a>반환 값  
  변경 내용을 허용 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 전에 `OnApply` 호출할 수 호출 했어야는 프레임 워크에 의해 `SetModified` 해당 매개 변수를 설정 하 고 **TRUE**합니다. 그러면 활성화 됩니다는 **지금 적용** 속성 페이지에는 사용자가 변경할 즉시 단추입니다.  
+### <a name="remarks"></a>설명  
+ 하기 전에 `OnApply` 호출할 수는 프레임 워크에서 호출 해야 `SetModified` 해당 매개 변수를 설정 하 고 **TRUE**합니다. 그러면 활성화 됩니다는 **지금 적용** 속성 페이지에서 사용자가을 변경 하는 즉시 단추입니다.  
   
- 프로그램은 사용자가 클릭 동작을 지정 하려면이 멤버 함수 재정의 **지금 적용** 단추입니다. 함수를 재정의할 때 반환 해야 **TRUE** 변경 내용을 적용할 및 **FALSE** 변경 내용이 적용 되지 않게 합니다.  
+ 프로그램은 사용자가 클릭 동작을 지정 하려면이 멤버 함수 재정의 **지금 적용** 단추입니다. 함수를 재정의할 때 반환 해야 **TRUE** 변경 내용을 적용할 수 및 **FALSE** 변경 내용이 적용 되지 않게 하려면.  
   
  기본 구현은 `OnApply` 반환 **TRUE**합니다.  
   
 ##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
- 이 멤버 함수를 클릭할 때 호출의 **도움말** 속성 페이지에 대 한 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **도움말** 속성 페이지에 대 한 단추입니다.  
   
 ```
 void OnHelp();
@@ -199,55 +199,55 @@ BOOL OnKillActive();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 데이터를 업데이트 했습니다. 0이 아닌 그렇지 않으면 0입니다.  
+ 데이터를 성공적으로 업데이트 한 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
- 특수 한 데이터 유효성 검사 작업을 수행 하려면이 멤버 함수를 재정의 합니다.  
+ 특별 한 데이터 유효성 검사 작업을 수행 하려면이 멤버 함수를 재정의 합니다.  
   
 ##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
- 이 멤버 함수를 클릭할 때 호출는 **취소** 단추를 취소 하기 전에 작업이 수행 되어 있습니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **취소** 단추를 취소 하기 전에 작업이 수행 되어 있습니다.  
   
 ```
 BOOL OnQueryCancel();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 취소 작업에서 허용 하는 0이 아닌 그렇지 않으면 0입니다.  
+ 취소 작업이; 허용 하려면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
- 프로그램은 사용자가 클릭 하는 동작을 지정 하려면이 멤버 함수 재정의 **취소** 단추입니다.  
+ 재정의 하는 프로그램은 사용자가 클릭 한 작업을 지정 하려면이 함수는 **취소** 단추입니다.  
   
  기본 구현은 `OnQueryCancel` 반환 **TRUE**합니다.  
   
 ##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
- 이 멤버 함수를 클릭할 때 호출의 **취소** 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **취소** 단추입니다.  
   
 ```
 void OnReset();
 ```  
   
 ### <a name="remarks"></a>주의  
- 이 함수를 호출할 때 변경 이전에 클릭 하면 사용자가 만든 모든 속성 페이지에는 **지금 적용** 단추는 무시 되 고 포커스를 유지 하는 속성 시트입니다.  
+ 이 함수를 호출할 때 변경 이전에 클릭 하면 사용자가 만든 모든 속성 페이지에는 **지금 적용** 단추는 무시 되 고 속성 시트 포커스를 유지 합니다.  
   
- 프로그램은 사용자가 클릭 동작을 지정 하려면이 멤버 함수 재정의 **취소** 단추입니다.  
+ 재정의 하는 프로그램은 사용자가 클릭 동작을 지정 하려면이 함수는 **취소** 단추입니다.  
   
 ##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
- 이 멤버 함수는 페이지는 사용자가 선택한를 활성 페이지 될 때 호출 됩니다.  
+ 이 멤버 함수는 페이지는 사용자가 선택 되 고 활성 페이지가 됩니다 때 호출 됩니다.  
   
 ```
 BOOL OnSetActive();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 페이지가 성공적으로 활성화 설정 되었으면 0이 아닌 그렇지 않으면 0입니다.  
+ 페이지를 성공적으로 활성화를 설정한 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
  페이지가 활성화 될 때 작업을 수행 하려면이 멤버 함수를 재정의 합니다. 이 멤버 함수 재정의 다른 처리를 수행 하기 전에 기본 버전을 호출 해야 합니다.  
   
- 기본 구현에서는 반환 **TRUE**합니다.  
+ 기본 구현은 반환 **TRUE**합니다.  
   
 ##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
- 이 멤버 함수를 클릭할 때 호출는 **다시** 마법사의 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **다시** 는 마법사에서 단추입니다.  
   
 ```
 BOOL OnWizardBack();
@@ -255,30 +255,30 @@ BOOL OnWizardBack();
   
 ### <a name="return-value"></a>반환 값  
   
--   자동으로 이전 페이지로 이동 하는&0;입니다.  
+-   자동으로 이전 페이지로 이동 하는 0입니다.  
   
--   페이지를 변경 하지 않도록 하려면-1입니다.  
+-   변경할 수 없도록 하려면 페이지-1입니다.  
   
- 다음 중이 아닌 페이지를 이동, 대화 상자를 표시할 수의 식별자를 반환 합니다.  
+ 다음 중이 아닌 페이지를 이동 하려면 대화 상자를 표시할 수의 식별자를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
- 사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 **다시** 단추를 클릭 합니다.  
+### <a name="remarks"></a>설명  
+ 재정의 될 때 수행 되어야 하는 몇 가지 동작을 지정 하려면이 함수는 **다시** 단추를 클릭 합니다.  
   
 ##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
- 이 멤버 함수를 클릭할 때 호출는 **완료** 마법사의 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 **마침** 는 마법사에서 단추입니다.  
   
 ```
 BOOL OnWizardFinish();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 속성 시트는 마법사를 완료 합니다; 손상 된 경우&0;이 아닌 그렇지 않으면&0;입니다.  
+ 마법사를 완료 합니다; 속성 시트 손상 된 경우 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 **마침** 단추를 클릭 합니다.  
+### <a name="remarks"></a>설명  
+ 재정의 될 때 수행 되어야 하는 몇 가지 동작을 지정 하려면이 함수는 **마침** 단추를 클릭 합니다.  
   
 ##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
- 이 멤버 함수를 클릭할 때 호출는 `Next` 마법사의 단추입니다.  
+ 이 멤버 함수는 사용자가 클릭할 때 호출 됩니다는 `Next` 는 마법사에서 단추입니다.  
   
 ```
 BOOL OnWizardNext();
@@ -286,14 +286,14 @@ BOOL OnWizardNext();
   
 ### <a name="return-value"></a>반환 값  
   
--   다음 페이지에 자동으로 이동 하는&0;입니다.  
+-   다음 페이지를 자동으로 이동 하는 0입니다.  
   
--   페이지를 변경 하지 않도록 하려면-1입니다.  
+-   변경할 수 없도록 하려면 페이지-1입니다.  
   
- 다음 중이 아닌 페이지를 이동, 대화 상자를 표시할 수의 식별자를 반환 합니다.  
+ 다음 중이 아닌 페이지를 이동 하려면 대화 상자를 표시할 수의 식별자를 반환 합니다.  
   
 ### <a name="remarks"></a>주의  
- 사용자 경우에 수행 해야 하는 몇 가지 동작을 지정 하려면이 멤버 함수 재정의 `Next` 단추를 클릭 합니다.  
+ 재정의 될 때 수행 되어야 하는 몇 가지 동작을 지정 하려면이 함수는 `Next` 단추를 클릭 합니다.  
   
 ##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
  속성 시트의 각 페이지에 메시지를 전달 하려면이 멤버 함수를 호출 합니다.  
@@ -310,13 +310,13 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
  [in] 추가 메시지 종속 정보를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 다음 속성 페이지에 메시지를 전달할 수 해야 하면&0;이 아니고 그렇지 않으면&0;입니다.  
+ 다음 속성 페이지로; 메시지가 전달 되지 않아야 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
- 속성 시트는 페이지에서&0;이 아닌 값을 반환 하는 경우 후속 페이지에 메시지를 보내지 않습니다.  
+ 속성 시트는 페이지에서 0이 아닌 값을 반환 하는 경우 후속 페이지에 메시지가 보내지 않습니다.  
   
 ##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
- 활성화 또는 비활성화 하려면이 멤버 함수 호출의 **지금 적용** 단추를 적절 한 외부 개체에 속성 페이지에서 설정을 적용 여부에 따라 합니다.  
+ 사용 하지 않도록 설정 하거나 설정 하려면이 함수를 호출는 **지금 적용** 적절 한 외부 개체의 속성 페이지에서 설정을 적용 여부에 따라 단추입니다.  
   
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -324,10 +324,10 @@ void SetModified(BOOL bChanged = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  `bChanged`  
- [in] **TRUE** 속성 페이지 설정; 적용 된 마지막 시간 이후 수정 된 것을 나타내려면 **FALSE** 되었음을 나타내려면 속성 페이지 설정이 적용 된 무시 해야 합니다.  
+ [in] **TRUE** 속성 페이지 설정; 적용 된 마지막 시간 이후 수정 된 것을 나타내기 위해 **FALSE** 속성 페이지 설정을 적용 하지 또는 무시할지를 나타내는입니다.  
   
 ### <a name="remarks"></a>주의  
- 속성 시트 유지 트랙의 페이지는 "더티" 즉, 속성 페이지를 호출한 **SetModified (TRUE)**합니다. **지금 적용** 단추 호출 하는 경우에 항상 사용할 수 **SetModified (TRUE)** 페이지 중 하나에 대 한 합니다. **지금 적용** 를 호출 하면 단추가 비활성화 되며 **SetModified (FALSE)** 만 하는 경우 다른 페이지는 "더티". 하지만 페이지 중 하나에 대 한  
+ 속성 시트 유지 트랙의 페이지는 "더티" 즉, 속성 페이지를 호출한 **SetModified (TRUE)**합니다. **지금 적용** 호출 하는 경우 단추가 활성화 되어 항상 **SetModified (TRUE)** 페이지 중 하나에 대 한 합니다. **지금 적용** 호출 하는 경우 단추가 비활성화 됩니다 **SetModified (FALSE)** 만 하는 경우 다른 페이지는 "더티"입니다. 하지만 페이지 중 하나에 대 한  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

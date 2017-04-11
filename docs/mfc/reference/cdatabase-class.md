@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase 클래스
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|"트랜잭션" \u2012 일련의 가역 호출을 시작는 `AddNew`, **편집**, **삭제**, 및 **업데이트** 클래스의 멤버 함수 `CRecordset` \u2012 연결된 된 데이터 원본에 있습니다. 데이터 원본에 대 한 트랜잭션을 지원 해야 **BeginTrans** 을 적용 합니다.|  
+|[CDatabase::BeginTrans](#begintrans)|"트랜잭션" 시작-일련의 가역 호출을는 `AddNew`, **편집**, **삭제**, 및 **업데이트** 클래스의 멤버 함수 `CRecordset` -연결 된 데이터 원본에 있습니다. 데이터 원본에 대 한 트랜잭션을 지원 해야 **BeginTrans** 을 적용 합니다.|  
 |[CDatabase::BindParameters](#bindparameters)|호출 하기 전에 매개 변수를 바인딩할 수 있도록 `CDatabase::ExecuteSQL`합니다.|  
 |[CDatabase::Cancel](#cancel)|비동기 작업 또는 두 번째 스레드가 프로세스를 취소합니다.|  
 |[CDatabase::CanTransact](#cantransact)|데이터 소스에서 트랜잭션을 지원 하면 0이 아닌 값을 반환 합니다.|  
@@ -113,9 +113,9 @@ class CDatabase : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDatabase::m_hdbc](#m_hdbc)|데이터 원본에 대 한 데이터베이스 연결 (ODBC) 연결 핸들을 엽니다. 유형 **HDBC**합니다.|  
+|[CDatabase::m_hdbc](#m_hdbc)|데이터 원본에 대 한 데이터베이스 연결 (ODBC) 연결 핸들을 엽니다. 형식 **HDBC**합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  데이터 소스는 일부 데이터베이스 관리 시스템 (DBMS)에서 호스트 되는 데이터의 특정 인스턴스입니다. Microsoft SQL Server, Microsoft Access, Borland dBASE 및 xBASE을 예로 들 수 있습니다. 하나 이상 포함할 수도 있습니다 `CDatabase` 응용 프로그램에서 한 번에 활성 개체입니다.  
   
 > [!NOTE]
@@ -176,7 +176,7 @@ virtual void BindParameters(HSTMT hstmt);
  `hstmt`  
  매개 변수를 바인딩하고 하려는 ODBC 문 핸들입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 접근 방식은 결과 필요 하지 않은 경우에 유용 저장된 프로시저에서 설정 합니다.  
   
  재정의 시, 호출 **SQLBindParameters** 및 관련 ODBC 함수를 매개 변수를 바인딩합니다. 호출 하 여 하기 전에 재정의 호출 하는 MFC `ExecuteSQL`합니다. 호출할 필요가 없습니다 **SQLPrepare**; `ExecuteSQL` 호출 **SQLExecDirect** 되 고 소멸는 **hstmt**, 한 번만 사용 되는 합니다.  
@@ -201,7 +201,7 @@ BOOL CanTransact() const;
 ### <a name="return-value"></a>반환 값  
  0이 아닌 값이 사용 하 여 레코드 집합 `CDatabase` 개체 트랜잭션을 허용 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  트랜잭션에 대 한 정보에 대 한 문서를 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
 ##  <a name="canupdate"></a>CDatabase::CanUpdate  
@@ -224,7 +224,7 @@ BOOL CanUpdate() const;
 CDatabase();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  호출 해야 개체를 생성 한 후 해당 `OpenEx` 또는 **열려** 멤버 함수를 지정된 된 데이터 원본에 대 한 연결을 설정 합니다.  
   
  포함을 편리 하 게 찾을 수 있습니다 있습니다는 `CDatabase` 문서 클래스의 개체입니다.  
@@ -261,7 +261,7 @@ BOOL CommitTrans();
 ### <a name="return-value"></a>반환 값  
  업데이트가 성공적으로 커밋된; 0이 아닌 그렇지 않으면 0입니다. 경우 **CommitTrans** 실패 하면 데이터 원본의 상태가 정의 되지 않습니다. 상태를 확인 하기 위해 데이터를 확인 해야 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  트랜잭션이 구성 된 일련의 호출을는 `AddNew`, **편집**, **삭제**, 및 **업데이트** 의 멤버 함수는 `CRecordset` 개체에 대 한 호출으로 시작 하는 [BeginTrans](#begintrans) 멤버 함수입니다. **CommitTrans** 트랜잭션을 커밋합니다. 기본적으로 업데이트는 커밋될 즉시; 호출 **BeginTrans** 될 때까지 지연 될 업데이트의 기여를 사용 하면 **CommitTrans** 호출 됩니다.  
   
  호출할 때까지 **CommitTrans** 트랜잭션을 종료를 호출 하면는 [롤백](#rollback) 멤버 함수는 원래 상태로 데이터 소스를 트랜잭션을 중단 하 고 있습니다. 새 트랜잭션을 시작 하려면 호출 **BeginTrans** 다시 합니다.  
@@ -282,10 +282,10 @@ void ExecuteSQL(LPCTSTR lpszSQL);
  `lpszSQL`  
  실행 하는 유효한 SQL 명령이 포함 된 null로 끝나는 문자열에 대 한 포인터입니다. 전달할 수는 [CString](../../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  null로 끝나는 문자열로 명령을 만듭니다. `ExecuteSQL`데이터 레코드를 반환 하지 않습니다. 레코드에 작동 하려면 recordset 개체를 대신 사용 합니다.  
   
- 대부분의 데이터 원본에 대 한 명령 데이터 선택, 새 레코드 삽입, 레코드 및 레코드 편집에 대 한 명령을 지 원하는 레코드 집합 개체를 통해 발급 됩니다. 그러나 일부 ODBC 기능은 직접 지원 데이터베이스 클래스에서 사용 하 여 직접 SQL 호출 때때로 수도 있습니다 `ExecuteSQL`합니다.  
+ 대부분의 데이터 원본에 대 한 명령 데이터 선택, 새 레코드 삽입, 레코드 및 레코드 편집에 대 한 명령을 지 원하는 레코드 집합 개체를 통해 발급 됩니다. 그러나 일부 ODBC 기능은 직접 지원 데이터베이스 클래스에서 사용 하 여 직접 SQL 호출 때때로 해야 하므로 `ExecuteSQL`합니다.  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDatabase # 13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
@@ -373,7 +373,7 @@ int GetCursorRollbackBehavior() const;
  이 반환 값에 대 한 자세한 내용은 ODBC API 함수를 참조 하십시오. **SQLGetInfo** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 트랜잭션에 대 한 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
 ##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
- 이 멤버 함수를 검색 하는 현재 연결 된 데이터베이스의 이름 (제공 데이터 원본 정의 "데이터베이스" 라는 명명된 된 개체)를 호출 합니다.  
+ (제공 하는 "데이터베이스" 라는 명명 된 개체를 정의 하는 데이터 원본) 현재 연결 된 데이터베이스의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 CString GetDatabaseName() const;  
@@ -382,7 +382,7 @@ CString GetDatabaseName() const;
 ### <a name="return-value"></a>반환 값  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 고, 그렇지 않으면 성공 하는 경우 데이터베이스 이름이 포함 된, 비어 있는 `CString`합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이것이에 지정 된 데이터 원본 이름 (DSN)와 동일 하지는 `OpenEx` 또는 **열려** 호출 합니다. 어떤 `GetDatabaseName` 반환 ODBC에 따라 달라 집니다. 일반적으로 데이터베이스는 테이블의 컬렉션입니다. 이 엔터티는 이름이 경우 `GetDatabaseName` 반환 합니다.  
   
  예를 들어 제목에는이 이름이 표시 하려면 될 수 있습니다. ODBC에서 이름을 검색 하는 동안 오류가 발생 한 경우 `GetDatabaseName` 빈 반환 **Cstring**합니다.  
@@ -398,12 +398,12 @@ BOOL IsOpen() const;
  0이 아닌 경우에는 `CDatabase` 개체가 현재 연결 되어 있습니다; 그렇지 않으면 0입니다.  
   
 ##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- ODBC 데이터 원본 연결 \u2012 "연결 핸들입니다."에 대 한 공용 핸들을 포함  
+ ODBC 데이터 원본 연결에 대 한 공용 핸들 포함-"연결 핸들"입니다.  
   
 ### <a name="remarks"></a>주의  
  일반적으로이 멤버 변수를 직접 액세스할 필요가 없는 해야 합니다. 호출 하는 경우 프레임 워크는 핸들을 할당 하는 대신, `OpenEx` 또는 **열려**합니다. 프레임 워크를 호출 하는 경우 핸들 할당 취소는 **삭제** 연산자에는 `CDatabase` 개체입니다. **닫기** 멤버 함수에 핸들 할당 해제 하지 않습니다.  
   
- 그러나 상황에 따라 핸들을 직접 사용 하도록 할 수 있습니다. 예를 들어, 클래스를 통해가 대신 직접 ODBC API 함수를 호출 하는 경우 `CDatabase`를 매개 변수로 전달 하 여 연결 핸들을 할 수 있습니다. 아래 코드 예제를 참조 하십시오.  
+ 그러나 상황에 따라 직접 핸들을 사용 하도록 할 수 있습니다. 예를 들어, 클래스를 통해가 대신 직접 ODBC API 함수를 호출 하는 경우 `CDatabase`를 매개 변수로 전달 하 여 연결 핸들을 할 수 있습니다. 아래 코드 예제를 참조 하십시오.  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDatabase # 15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
@@ -425,7 +425,7 @@ virtual void OnSetOptions(HSTMT hstmt);
  `OnSetOptions`로그인 제한 시간 값을 설정합니다. 에 대 한 이전 호출 된 경우에 `SetQueryTimeout` 와 멤버 함수를 `OnSetOptions` ; 현재 값을 반영 합니다. 그렇지 않은 경우 기본값을 설정 합니다.  
   
 > [!NOTE]
->  MFC 4.2 이전 `OnSetOptions` 어느 snychronous 또는 비동기 처리 모드를 설정할 수도 있습니다. MFC 4.2 부터는 모든 작업은 동기입니다. 비동기 작업을 수행 하려면 ODBC API 함수 직접 호출을 수행 해야 **SQLSetPos**합니다.  
+>  MFC 4.2 이전 `OnSetOptions` 어느 snychronous / 비동기 처리 모드를 설정할 수도 있습니다. MFC 4.2 부터는 모든 작업은 동기입니다. 비동기 작업을 수행 하려면 ODBC API 함수를 직접 호출 해야 **SQLSetPos**합니다.  
   
  재정의할 필요가 없습니다 `OnSetOptions` 제한 시간 값을 변경 합니다. 대신, 쿼리 제한 시간 값을 사용자 지정 하려면 호출 `SetQueryTimeout` ; 레코드 집합을 만들기 전에 `OnSetOptions` 새 값이 사용 됩니다. 설정 된 모든 레코드 집합 또는 직접 SQL 호출에 대 한 후속 작업에 적용 됩니다.  
   
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>매개 변수  
  `lpszDSN`  
- ODBC 관리자 프로그램을 통해 ODBC로 이름이 등록 하는 데이터 원본 이름 \u2012를 지정 합니다. DSN 값에 지정 된 경우 `lpszConnect` (형태로 "DSN =\<데이터 소스 >")를 다시 지정 하지 해야 `lpszDSN`합니다. 이 경우 `lpszDSN` 해야 **NULL**합니다. 그렇지 않으면 전달할 수 있습니다 **NULL** 사용자는 사용자가 데이터 소스를 선택할 수 있는 데이터 원본 대화 상자를 표시 하려는 경우. 자세한 내용은 설명 부분을 참조 합니다.  
+ 데이터 원본 이름을 지정-이름이 ODBC 관리자 프로그램을 통해 ODBC로 등록 합니다. DSN 값에 지정 된 경우 `lpszConnect` (형태로 "DSN =\<데이터 소스 >")를 다시 지정 하지 해야 `lpszDSN`합니다. 이 경우 `lpszDSN` 해야 **NULL**합니다. 그렇지 않으면 전달할 수 있습니다 **NULL** 사용자는 사용자가 데이터 소스를 선택할 수 있는 데이터 원본 대화 상자를 표시 하려는 경우. 자세한 내용은 설명 부분을 참조 합니다.  
   
  `bExclusive`  
  클래스 라이브러리의이 버전에서 지원 되지 않습니다. 이 매개 변수가 어설션이 실패 하는 현재 **TRUE**합니다. (제외 하지) 공유 데이터 원본이 항상 열립니다.  
@@ -454,7 +454,7 @@ virtual BOOL Open(
  **True 이면** 연결을 읽기 전용 및 데이터 원본에 대 한 업데이트를 하지 못하도록 하려는 경우. 종속 된 모든 레코드는이 특성을 상속합니다. 기본값은 **FALSE**합니다.  
   
  `lpszConnect`  
- 연결 문자열을 지정합니다. 연결 문자열 정보를 데이터 원본 이름, 데이터 원본, 사용자 인증 문자열로 (암호, 데이터 원본 하나 필요로 하는 경우) 및 기타 정보에 올바른 사용자 ID를 포함 하 여 연결 합니다. 문자열 "ODBC"; 연결 문자열 전체가 붙어야 (대문자 또는 소문자). "ODBC"; ODBC 데이터 원본에 연결 되어 있음을 나타내려면 문자열이 사용 됩니다 이 있으면 위쪽 호환성에 대 한 클래스 라이브러리의 이후 버전 비 ODBC 데이터 소스를 지원할 수 있습니다.  
+ 연결 문자열을 지정합니다. 연결 문자열 정보를 데이터 원본 이름, 데이터 원본, 사용자 인증 문자열 (데이터 원본 하나 필요로 하는 경우 암호) 및 기타 정보에 올바른 사용자 ID를 포함 하 여 연결 합니다. 연결 문자열 전체가 "ODBC"; 문자열에 의해 앞 (대문자 또는 소문자). "ODBC"; ODBC 데이터 원본에 연결 되어 있음을 나타내려면 문자열이 사용 됩니다 이 있으면 위쪽의 호환성을 위해 클래스 라이브러리의 이후 버전 비 ODBC 데이터 소스를 지원할 수 있습니다.  
   
  `bUseCursorLib`  
  **True 이면** ODBC 커서 라이브러리 DLL을 로드 하려는 경우. 커서 라이브러리 (드라이버가 지 원하는) 경우에 효과적으로 다이너셋 사용 하지 못하게 기본 ODBC 드라이버의 일부 기능을 마스크 합니다. 커서 라이브러리가 로드 하는 경우 지원 전용 커서는 정적 스냅숏 및 정방향 전용 커서입니다. 기본값은 **TRUE**합니다. 레코드 집합 개체를 직접 만들려는 경우 `CRecordset` 없이 파생 되지 커서 라이브러리를 로드 해야 합니다.  
@@ -462,7 +462,7 @@ virtual BOOL Open(
 ### <a name="return-value"></a>반환 값  
  성공적으로 연결 됩니다. 0이 아닌 그렇지 않으면 0는 사용자가 선택 하는 경우 더 많은 연결 정보를 묻는 대화 상자가 나타나면 취소 합니다. 다른 모든 경우에는 프레임 워크는 예외가 throw 됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  레코드 집합 개체를 생성 하는 사용 하기 전에 데이터베이스 개체를 초기화 합니다.  
   
 > [!NOTE]
@@ -543,7 +543,7 @@ BOOL Rollback();
   문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- 이 멤버 함수 \u2012를 호출 하기 전에 호출 `OpenEx` 또는 **열려** \u2012 기본값을 재정의 하는 데이터 되기 전에 허용 되는 시간 (초). 원본 연결 시간이 초과 합니다.  
+ 이 함수를 호출-호출 하기 전에 `OpenEx` 또는 **열려** -시도한 데이터 되기 전에 허용 되는 시간 (초) 기본값을 재정의 하려면 원본 연결 시간이 초과 합니다.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);
@@ -553,10 +553,10 @@ void SetLoginTimeout(DWORD dwSeconds);
  `dwSeconds`  
  연결 시도 하기 전까지 허용 시간 (초)의 수 제한 시간이 초과 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  예를 들어 DBMS 사용할 수 없으면 연결 시도가 시간 초과 수 있습니다. 호출 **SetLoginTimeout** 는 초기화 되지 않은 생성 한 후 `CDatabase` 개체 하지만 호출 하기 전에 `OpenEx` 또는 **열려**합니다.  
   
- 로그인 시간 제한의 기본값은 15 초입니다. 일부 데이터 원본 로그인 제한 시간 값을 지정 하는 기능을 지원 합니다. 데이터 원본의 제한 시간을 지원 하지 않으면 추적 출력을 만들지만 되지 않는 예외 가져옵니다. 값이 0 이면 "무제한".  
+ 로그인 시간 제한의 기본값은 15 초입니다. 일부 데이터 원본은 로그인 제한 시간 값을 지정 하는 기능을 지원 합니다. 데이터 원본의 제한 시간을 지원 하지 않으면 추적 출력을 만들지만 되지 않는 예외 가져옵니다. 값이 0 이면 "무제한".  
   
 ##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
  후속 작업에 연결 된 데이터 원본 시간 초과 하기 전까지 허용 시간 (초) 기본값을 재정의 하려면이 함수를 호출 합니다.  
@@ -569,7 +569,7 @@ void SetQueryTimeout(DWORD dwSeconds);
  `dwSeconds`  
  쿼리 시도 하기 전까지 허용 시간 (초)의 수 제한 시간이 초과 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  네트워크 액세스 문제, 과도 한 쿼리 처리 시간 및 등으로 인해 작업 시간이 초과 될 수 있습니다. 호출 `SetQueryTimeout` 레코드 집합을 열기 전에 또는 레코드 집합의이 호출 되기 전에 `AddNew`, **업데이트** 또는 **삭제** 쿼리 제한 시간 값을 변경 하려는 경우 멤버 함수입니다. 설정은 모든 후속 **열려**, `AddNew`, **업데이트**, 및 **삭제** 와 연결 된 모든 레코드 집합에 대 한 호출 `CDatabase` 개체입니다. 연 후 레코드 집합에 대 한 쿼리 제한 시간 값을 변경 하는 경우에 레코드 집합에 대 한 값을 변경 되지 않습니다. 예를 들어, 후속 **이동** 작업 새 값을 사용 하지 않습니다.  
   
  쿼리 시간 제한의 기본값은 15 초입니다. 일부 데이터 원본은 쿼리 제한 시간 값을 설정 하는 기능을 지원 합니다. 쿼리 제한 시간 값이 0 설정 하는 경우 시간 제한 없이 발생 합니다. 데이터 소스와의 통신 응답 하지 않을 수 있습니다. 개발 하는 동안이 동작이 유용할 수 있습니다. 데이터 원본의 제한 시간을 지원 하지 않으면 추적 출력을 만들지만 되지 않는 예외 가져옵니다.  

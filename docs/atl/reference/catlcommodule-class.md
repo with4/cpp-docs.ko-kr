@@ -1,5 +1,5 @@
 ---
-title: "CAtlComModule 클래스 | Microsoft 문서"
+title: "CAtlComModule 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 6b933b5388fccc2dc0e31d035aa7eb56de3b1866
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 클래스
@@ -73,9 +73,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|형식 라이브러리 등록을 취소 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>주의  
- `CAtlComModule`모듈의 구성 요소에 액세스 하는 클라이언트는 COM 서버 모듈을 구현 합니다.  
+ `CAtlComModule`COM 서버 모듈의 경우, 클라이언트가 모듈의 구성 요소에 액세스할 수 있도록 구현 합니다.  
   
- 이 클래스는 사용 되지 않는 대신 [CComModule](../../atl/reference/ccommodule-class.md) ATL.의 이전 버전에서 사용 되는 클래스 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 대 한 자세한 내용은 합니다.  
+ 이 클래스는 사용 되지 않는 대신 [CComModule](../../atl/reference/ccommodule-class.md) ATL.의 이전 버전에서 사용 되는 클래스 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 내용을 확인 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
@@ -114,16 +114,16 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
   
 ### <a name="parameters"></a>매개 변수  
  `bRegTypeLib`  
- 형식 라이브러리를 등록 하면 TRUE입니다. 기본값은 FALSE입니다.  
+ TRUE 이면 형식 라이브러리를 등록 해야입니다. 기본값은 FALSE입니다.  
   
  `pCLSID`  
- 등록할 개체의 CLSID 가리킵니다. NULL (기본값), 개체 맵의 모든 개체를 등록할 경우.  
+ 등록할 개체의 CLSID 가리킵니다. 개체 맵의 모든 개체 NULL (기본값) 하는 경우 등록 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>주의  
- 전역 함수를 호출 [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b)합니다.  
+ 전역 함수를 호출 [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)합니다.  
   
 ##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  형식 라이브러리를 등록 하려면이 메서드를 호출 합니다.  
@@ -135,13 +135,13 @@ HRESULT RegisterTypeLib();
   
 ### <a name="parameters"></a>매개 변수  
  `lpszIndex`  
- 형식에서 문자열 "\\\N", 여기서 N은 정수 인덱스 형식 라이브러리 리소스입니다.  
+ 형식에서 문자열 "\\\N", 여기서 N은 TYPELIB 리소스의 정수 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>주의  
- 시스템 레지스트리를 형식 라이브러리에 대 한 정보를 추가합니다. 여러 개의 형식 라이브러리를 포함 하는 모듈 인스턴스를이 메서드의 첫 번째 버전 사용 하 여 지정 된 형식 라이브러리를 사용 해야 합니다.  
+ 시스템 레지스트리를 형식 라이브러리에 대 한 정보를 추가합니다. 모듈 인스턴스에 여러 개의 형식 라이브러리가 있으면 상위 형식 라이브러리를 사용할지 지정 하려면이 메서드의 첫 번째 버전을 사용 합니다.  
   
 ##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  개체 맵의 각 개체의 등록을 취소 하려면이 메서드를 호출 합니다.  
@@ -154,16 +154,16 @@ HRESULT UnregisterServer(
   
 ### <a name="parameters"></a>매개 변수  
  `bRegTypeLib`  
- TRUE 이면 등록 취소할 형식 라이브러리입니다. 기본값은 FALSE입니다.  
+ TRUE 이면 형식 라이브러리 등록을 취소할입니다. 기본값은 FALSE입니다.  
   
  `pCLSID`  
- 등록 취소할 개체의 CLSID 가리킵니다. NULL (기본값), 개체 맵의 모든 개체는가 등록 됩니다.  
+ 등록을 취소할 개체의 CLSID 가리킵니다. 경우 NULL (기본값), 개체 맵의 모든 개체를 등록 취소 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
- 전역 함수를 호출 [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5)합니다.  
+### <a name="remarks"></a>설명  
+ 전역 함수를 호출 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)합니다.  
   
 ##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  형식 라이브러리 등록을 취소 하려면이 메서드를 호출 합니다.  
@@ -175,10 +175,10 @@ HRESULT UnRegisterTypeLib();
   
 ### <a name="parameters"></a>매개 변수  
  `lpszIndex`  
- 형식에서 문자열 "\\\N", 여기서 N은 정수 인덱스 형식 라이브러리 리소스입니다.  
+ 형식에서 문자열 "\\\N", 여기서 N은 TYPELIB 리소스의 정수 인덱스입니다.  
   
-### <a name="remarks"></a>주의  
- 시스템 레지스트리에서 형식 라이브러리에 대 한 정보를 제거합니다. 여러 개의 형식 라이브러리를 포함 하는 모듈 인스턴스를이 메서드의 첫 번째 버전 사용 하 여 지정 된 형식 라이브러리를 사용 해야 합니다.  
+### <a name="remarks"></a>설명  
+ 시스템 레지스트리에서 형식 라이브러리에 대 한 정보를 제거합니다. 모듈 인스턴스에 여러 개의 형식 라이브러리가 있으면 상위 형식 라이브러리를 사용할지 지정 하려면이 메서드의 첫 번째 버전을 사용 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  

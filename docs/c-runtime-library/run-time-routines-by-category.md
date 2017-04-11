@@ -1,35 +1,49 @@
 ---
-title: "범주별 런타임 루틴 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "범주, 런타임 함수"
-  - "함수[CRT]"
-  - "함수[CRT], 런타임"
-  - "루틴, 런타임"
+title: "범주별 런타임 루틴 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- routines, run-time
+- functions [CRT], run-time
+- categories, run-time functions
+- functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 범주별 런타임 루틴
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/30/2017
 
-이 섹션은 Microsoft 런타임 라이브러리 루틴을 범주별으로 나열하고 설명 합니다.  참조의 편의를 위해 일부 루틴은 여러 범주에 나열 됩니다.  멀티 바이트 루틴과 와이드 문자 루틴은 존재하는 1 바이트를 사용하여 그룹화 됩니다.  
-  
- 또한 이 섹션에서는 사용할 수 있는 .NET Framework의 해당하는 메서드나 클래스를 제공합니다.  
+---
+# <a name="run-time-routines-by-category"></a>범주별 런타임 루틴
+이 단원에서는 Microsoft 런타임 라이브러리 루틴을 범주별로 나열하고 설명합니다. 참조상의 편의를 위해 일부 루틴은 둘 이상의 범주에 나열됩니다. 멀티바이트 문자 루틴 및 와이드 문자 루틴은 이들이 존재하는 싱글바이트 문자 상응 항목과 함께 그룹화됩니다.  
   
  Microsoft 런타임 라이브러리 루틴의 주요 범주는 다음과 같습니다.  
   
@@ -47,5 +61,5 @@ caps.handback.revision: 11
 |[검색 및 정렬](../c-runtime-library/searching-and-sorting.md)|[문자열 조작](../c-runtime-library/string-manipulation-crt.md)|  
 |[시스템 호출](../c-runtime-library/system-calls.md)|[시간 관리](../c-runtime-library/time-management.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)

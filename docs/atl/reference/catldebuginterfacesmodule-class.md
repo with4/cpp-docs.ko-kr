@@ -1,5 +1,5 @@
 ---
-title: "CAtlDebugInterfacesModule 클래스 | Microsoft 문서"
+title: "CAtlDebugInterfacesModule 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: aae76ec5df3fc8d7541cf967cb4a9bb9cd3484a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 3b6f4264a65a824a57b6cffa201424a1a61cf5e6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule 클래스
@@ -51,7 +51,7 @@ class CAtlDebugInterfacesModule
 ```  
   
 ## <a name="remarks"></a>주의  
- `CAtlDebugInterfacesModule`디버깅 인터페이스에 필요한 지원을 제공 합니다. 기호를 정의 하는 프로젝트에 포함 된 [_ATL_DEBUG_QI](http://msdn.microsoft.com/library/4f1feddf-1469-42ad-a2f7-5a816d1c0bc5)합니다.  
+ `CAtlDebugInterfacesModule`디버깅 인터페이스에 필요한 지원을 제공 합니다. 기호를 정의 하는 모든 프로젝트에 포함 된 [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  

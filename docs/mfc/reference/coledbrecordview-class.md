@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 클래스
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  클래스를 사용 하 여 OLE DB 소비자 템플릿 클래스 아닌 개체 DAO (Data Access) 클래스와 함께 작업 하는 경우 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 대신 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
   
- `COleDBRecordView`레코드 뷰 사용자 인터페이스를 업데이트할 수 있도록 행 집합에서 사용자의 위치는 추적 합니다. 때와 동일한 방향에서 사용자 이동 행 집합, 메뉴 항목과 같은 레코드 뷰 사용 하지 않도록 설정 사용자 인터페이스 개체 \u2012 또는 이동 하기 위한 도구 모음 단추 \u2012의 한쪽 끝에 추가합니다.  
+ `COleDBRecordView`레코드 뷰 사용자 인터페이스를 업데이트할 수 있도록 행 집합에서 사용자의 위치는 추적 합니다. 레코드 뷰 사용자 인터페이스 개체는 사용자가 행 집합의 한쪽 끝을 이동 하는 경우 비활성화-예: 메뉴 항목 또는 도구 모음 단추-이동 하기 위한 같은 방향으로 추가 합니다.  
   
  행 집합 클래스에 대 한 자세한 내용은 참조는 [를 사용 하 여 OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md) 문서.  
   
@@ -130,8 +130,8 @@ virtual CRowset<>* OnGetRowset() = 0;
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>설명  
- 생성 또는 행 집합 개체를 가져오고,에 대 한 핸들을 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 행 집합 핸들을 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 행 집합 개체를 생성 하지 하는 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 핸들을 반환 합니다.  
+### <a name="remarks"></a>주의  
+ 생성 또는 행 집합 개체를 가져오고,에 대 한 핸들을 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 행 집합 핸들을 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 행 집합 개체를 생성 그렇지 않은 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 핸들을 반환 합니다.  
   
 > [!NOTE]
 >  MFC 7.0 이전의 `OnGetRowset` 에 대 한 포인터를 반환 `CRowset`합니다. 호출 하는 코드가 있는 경우 `OnGetRowset`, 템플릿 화 클래스에 반환 형식을 변경 해야 할 **CRowset<>**합니다.  
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  표준 명령 ID 값이 다음 중 하나입니다.  
   
-- `ID_RECORD_FIRST`\u2012는 레코드 집합의 첫 번째 레코드로 이동 합니다.  
+- `ID_RECORD_FIRST`-레코드 집합의 첫 번째 레코드로 이동 합니다.  
   
-- `ID_RECORD_LAST`\u2012 이동 레코드 집합의 마지막 레코드입니다.  
+- `ID_RECORD_LAST`-마지막으로 이동 레코드가 레코드 집합의 합니다.  
   
-- `ID_RECORD_NEXT`\u2012는 레코드 집합의 다음 레코드로 이동 합니다.  
+- `ID_RECORD_NEXT`-레코드 집합의 다음 레코드로 이동 합니다.  
   
-- `ID_RECORD_PREV`\u2012는 레코드 집합의 이전 레코드로 이동 합니다.  
+- `ID_RECORD_PREV`-레코드 집합의 이전 레코드로 이동 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이동에 성공 하면 0이 아닌 그렇지 않은 경우 0 이동 요청이 거부 되었습니다.  

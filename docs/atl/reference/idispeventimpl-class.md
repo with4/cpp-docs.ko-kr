@@ -1,5 +1,5 @@
 ---
-title: "IDispEventImpl 클래스 | Microsoft 문서"
+title: "IDispEventImpl 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 235955f8573ae7e430be3de2a96efdd7496d15de
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 클래스
@@ -66,16 +66,16 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
 #### <a name="parameters"></a>매개 변수  
  `nID`  
- 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventImpl` 는 기본 클래스에서 복합 컨트롤에 대 한이 매개 변수에 포함된 된 원하는 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
+ 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventImpl` 의 기본 클래스 복합 컨트롤에 대 한이 매개 변수에 대 한 원하는 포함 된 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
   
  `T`  
  사용자의 클래스에서 파생 된 `IDispEventImpl`합니다.  
   
  `pdiid`  
- 이 클래스에서 구현 하는 이벤트 인터페이스의 IID에 대 한 포인터입니다. 이 인터페이스를 가리키는 형식 라이브러리에 정의 되어 있어야 `plibid`, `wMajor`, 및 `wMinor`합니다.  
+ 이 클래스에서 구현 하는 이벤트 인터페이스의 IID에 대 한 포인터입니다. 이 인터페이스를 가리키는 형식 라이브러리에 정의 되어야 합니다 `plibid`, `wMajor`, 및 `wMinor`합니다.  
   
  `plibid`  
- Dispatch 인터페이스를 정의 하는 형식 라이브러리에 대 한 포인터를 가리키고 `pdiid`합니다. 경우 **GUID_NULL / /**, 형식 라이브러리는 이벤트 원본을 지정 하는 개체에서 로드 됩니다.  
+ 디스패치 인터페이스를 정의 하는 형식 라이브러리에 대 한 포인터에서 가리키는 `pdiid`합니다. 경우 **GUID_NULL / /**, 이벤트 소싱 개체에서 형식 라이브러리를 로드 됩니다.  
   
  `wMajor`  
  형식 라이브러리의 주 버전입니다. 기본값은 0입니다.  
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  형식 라이브러리의 부 버전입니다. 기본값은 0입니다.  
   
  `tihclass`  
- 클래스의 형식 정보를 관리 하는 데 `T`합니다. 기본값은 형식의 클래스 `CComTypeInfoHolder`; 그러나 아닌 다른 형식의 클래스를 제공 하 여이 템플릿 매개 변수를 재정의할 수 있습니다 `CComTypeInfoHolder`합니다.  
+ 클래스의 형식 정보를 관리 하는 데 `T`합니다. 기본값은 형식의 클래스 `CComTypeInfoHolder`소비량이 적어지지만 아닌 다른 형식의 클래스를 제공 하 여이 템플릿 매개 변수를 재정의할 수 있습니다 `CComTypeInfoHolder`합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -105,28 +105,28 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 |이름|설명|  
 |----------|-----------------|  
 |[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|지정된 된 디스패치 식별자에 대 한 함수 인덱스를 찾습니다.|  
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|단일 멤버와 선택적 인수 이름 집합을 해당 집합이 Dispid 정수에 매핑됩니다.|  
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|단일 멤버와 선택적 인수 이름 집합 Dispid 정수의 해당 집합에 매핑합니다.|  
 |[IDispEventImpl::GetTypeInfo](#gettypeinfo)|개체에 대 한 형식 정보를 검색 합니다.|  
 |[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|형식 정보 인터페이스의 수를 검색합니다.|  
 |[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|사용자 정의 형식의 기본 형식을 검색합니다.|  
   
-## <a name="remarks"></a>주의  
- `IDispEventImpl`해당 인터페이스에서 모든 메서드/이벤트에 대 한 구현 코드를 제공할 필요 없이 이벤트 인터페이스를 구현 방법을 제공 합니다. `IDispEventImpl`구현을 제공 하는 `IDispatch` 메서드. 처리에 관심이 이벤트에 대 한 구현을 제공 해야 합니다.  
+## <a name="remarks"></a>설명  
+ `IDispEventImpl`해당 인터페이스의 모든 메서드/이벤트에 대 한 구현 코드 제공할 필요 없이 이벤트 인터페이스를 구현 방법을 제공 합니다. `IDispEventImpl`구현을 제공는 `IDispatch` 메서드. 처리에 관심이 있는 이벤트에 대 한 구현을 제공 하기만 하면 됩니다.  
   
- `IDispEventImpl`와 함께 작동는 [이벤트 싱크 맵](http://msdn.microsoft.com/library/32542b3d-ac43-4139-8ac4-41c48481744f) 경로 이벤트를 적절 한 처리기 함수를 클래스에 있습니다. 이 클래스를 사용 합니다.  
+ `IDispEventImpl`적절 한 처리기 함수에 경로 이벤트 하려면 클래스에서 이벤트 싱크 맵와 함께 작동 합니다. 이 클래스를 사용 합니다.  
   
 
- 추가 [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5) 또는 [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac) 매크로를 처리 하는 각 개체의 각 이벤트에 대 한 이벤트 싱크 맵. 사용 하는 경우 `IDispEventImpl` 합성 컨트롤의 기본 클래스를 호출할 수 있습니다 [AtlAdviseSinkMap](http://msdn.microsoft.com/library/0757a6af-3de3-4179-8b4f-ccd137d919b4) 를 설정 하 고 모든 항목에 지도 이벤트 싱크에 대 한 이벤트 소스와의 연결을 끊고 있습니다. 다른 경우 또는 추가적인 제어를 위한 호출 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 소스 개체와 기본 클래스 간의 연결을 설정 합니다. 호출 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) 연결을 끊습니다.  
+ 추가 [SINK_ENTRY](composite-control-macros.md#sink_entry) 또는 [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) 매크로를 처리 하려면 각 개체의 각 이벤트에 대 한 이벤트 싱크 맵. 사용 하는 경우 `IDispEventImpl` 합성 컨트롤의 기본 클래스를 호출할 수 있습니다 [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) 을 설정 하 고 모든 항목 지도 싱크 이벤트에 대 한 이벤트 소스와의 연결을 중단 합니다. 다른 경우 또는 추가적인 제어를 위한 호출 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 소스 개체와 기본 클래스 간의 연결을 설정 합니다. 호출 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) 연결을 끊습니다.  
 
   
- 파생 해야 `IDispEventImpl` (에 대 한 고유한 값을 사용 하 여 `nID`) 이벤트를 처리 해야 하는 각 개체에 대 한 합니다. 다른 원본 개체에 대해 다음 라는 하나의 원본 개체에 대해 바이 하 여 기본 클래스를 다시 사용할 수 있지만 한 번에 하나의 개체에 의해 처리 될 수 있는 소스 개체의 최대 수의 수로 제한 됩니다 `IDispEventImpl` 기본 클래스입니다.  
+ 파생 해야 `IDispEventImpl` (고유 값을 사용 하 여 `nID`) 이벤트를 처리 해야 하는 각 개체에 대 한 합니다. 다른 원본 개체에 대해 다음 라는 하나의 원본 개체에 대해 바이 하 여 기본 클래스를 다시 사용할 수 있지만 한 번에 단일 개체로 처리 될 수 있는 소스 개체의 최대 수의 수로 제한 됩니다 `IDispEventImpl` 기본 클래스입니다.  
   
- `IDispEventImpl`와 동일한 기능을 제공 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)에 대 한 포인터로 제공 된 것 보다는 형식 라이브러리에서 인터페이스에 대 한 형식 정보를 가져와서 제외 하 고는 [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) 구조입니다. 사용 하 여 `IDispEventSimpleImpl` 때 또는 하지 않는 이벤트 인터페이스를 설명 하는 형식 라이브러리 형식 라이브러리를 사용 하 여 연관 된 오버 헤드를 방지 해야 합니다.  
+ `IDispEventImpl`와 동일한 기능을 제공 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)것에 대 한 포인터를 제공 하지 않고 형식 라이브러리에서 인터페이스에 대 한 형식 정보를 가져옵니다 점을 제외 하 고는 [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) 구조입니다. 사용 하 여 `IDispEventSimpleImpl` 때 또는 하지 않는 이벤트 인터페이스를 설명 하는 형식 라이브러리 형식 라이브러리를 사용 하 여 연관 된 오버 헤드를 방지 하려면.  
   
 > [!NOTE]
-> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **IUnknown::QueryInterface** 각 활성화 `IDispEventImpl` 및 `IDispEventSimpleImpl` 기본 클래스에 기본 COM 개체의 클래스 멤버에 대 한 직접 액세스를 허용 하는 동안 역할을 별도 COM id입니다.  
+> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 및 `IDispEventSimpleImpl` 기본 클래스 기본 COM 개체의 클래스 멤버에 대 한 직접 액세스를 허용 하면서 별도 COM id 역할을 합니다.  
   
- ActiveX 이벤트 싱크만 지 원하는 형식의 반환 값 HRESULT 또는 이벤트 처리기 메서드에서; void CE ATL 구현 다른 모든 반환 값 지원 되지 않으며 해당 동작이 정의 되지 않습니다.  
+ ActiveX 이벤트 싱크만 지원 형식의 반환 값 HRESULT 또는 이벤트 처리기 메서드에서; void CE ATL 구현 다른 모든 반환 값 지원 되지 않으며 해당 동작이 정의 되지 않습니다.  
   
  자세한 내용은 참조 [지원 IDispEventImpl](../../atl/supporting-idispeventimpl.md)합니다.  
   
@@ -158,7 +158,7 @@ HRESULT GetFuncInfoFromId(
  [in] 함수의 ID에 대 한 참조입니다.  
   
  *dispidMember*  
- [in] 디스패치 ID는 함수입니다.  
+ [in] 함수의 디스패치 ID입니다.  
   
  `lcid`  
  [in] 로캘 컨텍스트의 함수 id입니다.  
@@ -170,7 +170,7 @@ HRESULT GetFuncInfoFromId(
  표준 `HRESULT` 값입니다.  
   
 ##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
- 단일 멤버와 선택적 인수 이름 집합에 대 한 후속 호출에 사용할 수 있는 Dispid 정수의 해당 집합에 매핑합니다 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
+ 단일 멤버 및 선택적 인수 이름 집합 해당 집합이 Dispid 후속 호출에서 사용할 수 있는 정수를 매핑합니다 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
   
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -181,7 +181,7 @@ STDMETHOD(GetIDsOfNames)(
     DISPID* rgdispid);
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
@@ -194,7 +194,7 @@ STDMETHOD(GetTypeInfo)(
     ITypeInfo** pptinfo);
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
   
 ##  <a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
  개체에서 제공하는 형식 정보 인터페이스의 수를 검색합니다(0 또는 1).  
@@ -225,7 +225,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="return-value"></a>반환 값  
  Variant의 형식입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [ITypeInfo::GetRefTypeInfo](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00)합니다.  
   
 ##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
@@ -236,7 +236,7 @@ IDispEventImpl();
 ```  
   
 ##  <a name="tihclass"></a>IDispEventImpl::tihclass  
- 이 형식 정의 클래스 템플릿 매개 변수 인스턴스의 `tihclass`합니다.  
+ 이 typedef는 템플릿 매개 변수 클래스의 인스턴스 `tihclass`합니다.  
   
 ```
 typedef tihclass _tihclass;
@@ -249,7 +249,7 @@ typedef tihclass _tihclass;
  [_ATL_FUNC_INFO 구조](../../atl/reference/atl-func-info-structure.md)   
  [IDispatchImpl 클래스](../../atl/reference/idispatchimpl-class.md)   
  [IDispEventSimpleImpl 클래스](../../atl/reference/idispeventsimpleimpl-class.md)   
- [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5)   
- [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac)   
- [SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7)   
+ [SINK_ENTRY](composite-control-macros.md#sink_entry)   
+ [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
+ [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [클래스 개요](../../atl/atl-class-overview.md)

@@ -1,40 +1,56 @@
 ---
 title: "명령줄 경고 D9027 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9027"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9027"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- D9027
+dev_langs:
+- C++
+helpviewer_keywords:
+- D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 명령줄 경고 D9027
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7d569243a6d0d1669a8964ab9c419cb0e7428ba9
+ms.lasthandoff: 04/04/2017
 
-\<filename\> 소스 파일을 무시합니다.  
+---
+# <a name="command-line-warning-d9027"></a>명령줄 경고 D9027
+소스 파일 '\<파일 이름 > ' 무시  
   
- CL.exe가 입력 소스 파일을 무시합니다.  
+ CL.exe 입력된 소스 파일을 무시 합니다.  
   
- 이 경고는 \/Fo 옵션과 \/c 옵션을 포함하는 명령줄의 출력 파일 이름 사이에 공백이 있는 경우에 발생할 수 있습니다.  예를 들면 다음과 같습니다.  
+ 이 경고는 /Fo 옵션과 /c 옵션을 사용 하 여 명령줄에서 출력 파일 이름 사이 공백을 원인일 수 있습니다. 예:  
   
 ```  
 cl /c /Fo output.obj input.c   
 ```  
   
- \/Fo와 `output.obj,` 사이에 공백이 있으므로 CL.exe는 `output.obj`를 입력 파일의 이름으로 가져옵니다.  이 문제를 해결하려면 다음과 같이 공백을 제거하십시오.  
+ /Fo 사이 공백이 있기 때문에 및 `output.obj`, CL.exe에서는 `output.obj` 입력된 파일의 이름으로 합니다. 이 문제를 해결 하려면 공간을 제거 합니다.  
   
 ```  
 cl /c /Fooutput.obj input.c   

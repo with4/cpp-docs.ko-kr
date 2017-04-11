@@ -1,5 +1,5 @@
 ---
-title: "CComAggObject 클래스 | Microsoft 문서"
+title: "CComAggObject 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -45,13 +45,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 386ab09418c879c0de0d82d729a3de1b2e270016
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 2f580a33b5b92f44e40a3da2e1f7111cbb8ede88
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 클래스
-이 클래스를 구현 하는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 개체에 대 한 인터페이스입니다. 정의 따르면 집합체 외부 개체에 포함 됩니다. `CComAggObject` 클래스는 비슷합니다는 [CComObject 클래스](../../atl/reference/ccomobject-class.md)점을 제외 하 고 외부 클라이언트에 직접 액세스할 수 있는 인터페이스를 노출 합니다.  
+이 클래스가 구현 하는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 개체에 대 한 인터페이스입니다. 정의 따르면 집계 개체는 외부 개체 안에 포함 됩니다. `CComAggObject` 클래스는 비슷합니다는 [CComObject 클래스](../../atl/reference/ccomobject-class.md)제외 하 고 외부 클라이언트에 직접 액세스할 수 있는 인터페이스를 노출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
   
 #### <a name="parameters"></a>매개 변수  
  `contained`  
- 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)개체에서 지원 하려는 다른 인터페이스와도 같이 합니다.  
+ 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), 개체에서 지원할 하려는 다른 인터페이스와도 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -79,22 +79,22 @@ class CComAggObject : public IUnknown,
 |이름|설명|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|집계 개체에서 참조 횟수를 증가 시킵니다.|  
-|[CComAggObject::CreateInstance](#createinstance)|이 정적 함수를 사용 하면 새 **CComAggObject** `contained` ** > ** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.|  
+|[CComAggObject::CreateInstance](#createinstance)|이 정적 함수를 사용 하면 새 **CComAggObject** `contained` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|최종 초기화를 수행 `m_contained`합니다.|  
 |[CComAggObject::FinalRelease](#finalrelease)|최종 소멸 수행 `m_contained`합니다.|  
 |[CComAggObject::QueryInterface](#queryinterface)|요청된 인터페이스에 대한 포인터를 검색합니다.|  
-|[CComAggObject::Release](#release)|집계 된 개체의 참조 횟수를 감소 시킵니다.|  
+|[CComAggObject::Release](#release)|집계 개체에 대 한 참조 횟수를 줄입니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComAggObject::m_contained](#m_contained)|대리자 `IUnknown` 알 수 없는 외부에 대 한 호출 합니다.|  
+|[CComAggObject::m_contained](#m_contained)|대리자 `IUnknown` 알 수 없는 외부에 대 한 호출입니다.|  
   
 ## <a name="remarks"></a>주의  
- `CComAggObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 된 개체입니다. `CComAggObject`에 자체 **IUnknown** 인터페이스를 별도의 외부 개체의 **IUnknown** 인터페이스를 하 고 참조 횟수를 유지 관리 합니다.  
+ `CComAggObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 개체에 대 한 합니다. `CComAggObject`에 자체 **IUnknown** 인터페이스를 외부 개체의 별도로 **IUnknown** , 인터페이스 및 참조 횟수를 유지 관리 합니다.  
   
- 집계에 대 한 자세한 내용은 문서를 참조 하십시오. [ATL COM 개체의 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)합니다.  
+ 집계에 대 한 자세한 내용은 문서 참조 [ATL COM 개체 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CComObjectRootBase`  
@@ -116,7 +116,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 진단에 유용 하거나 테스트 될 수 있는 값입니다.  
+ 진단에 대 한 유용한 또는 테스트 수 있는 값입니다.  
   
 ##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
  생성자입니다.  
@@ -130,7 +130,7 @@ CComAggObject(void* pv);
  [in] 외부 알 수 없습니다.  
   
 ### <a name="remarks"></a>주의  
- 초기화는 `CComContainedObject` 멤버 [m_contained](#m_contained), 모듈 잠금 횟수를 증가 시킵니다.  
+ 초기화는 `CComContainedObject` 멤버 [m_contained](#m_contained), 모듈의 잠금 횟수를 증가 시킵니다.  
   
  모듈 잠금 횟수를 소멸자 줄입니다.  
   
@@ -145,7 +145,7 @@ CComAggObject(void* pv);
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
   
 ##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- 이 정적 함수를 사용 하면 새 **CComAggObject** `contained` ** > ** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
+ 이 정적 함수를 사용 하면 새 **CComAggObject** `contained` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -155,18 +155,18 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>매개 변수  
  `pp`  
- [out] 에 대 한 포인터는 **CComAggObject\<***포함 된* ** > ** 포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
+ [out] 에 대 한 포인터는 **CComAggObject\<***포함* **>** 포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>주의  
- 반환 된 개체 참조 개수가&0;, 라고 `AddRef` 사용 하 여 즉시 **릴리스** 를 마치면 개체 포인터에 대 한 참조를 해제 합니다.  
+ 반환 되는 개체에는 참조 횟수가 0, 없으므로 호출 `AddRef` 즉시을 사용 하 여 **릴리스** 를 마치면 개체 포인터에 대 한 참조를 해제 합니다.  
   
- 개체에 대 한 액세스도 직접 필요한 수행 하지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
+ 직접 필요 않는 개체에 액세스할 수 있지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
   
 ##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
- 개체 생성의 최종 단계 중에 호출을이 메서드는 최종 초기화에 대해 수행 된 [m_contained](#m_contained) 멤버입니다.  
+ 개체 생성의 최종 단계 중 호출이 메서드는 최종 초기화에 대해 수행 된 [m_contained](#m_contained) 멤버입니다.  
   
 ```
 HRESULT FinalConstruct();
@@ -176,7 +176,7 @@ HRESULT FinalConstruct();
  표준 `HRESULT` 값입니다.  
   
 ##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
- 이 메서드 해제 개체 소멸 하는 동안 호출는 [m_contained](#m_contained) 멤버입니다.  
+ 이 메서드 해제 개체 소멸 하는 동안 호출 된 [m_contained](#m_contained) 멤버입니다.  
   
 ```
 void FinalRelease();
@@ -191,10 +191,10 @@ CComContainedObject<contained> m_contained;
   
 ### <a name="parameters"></a>매개 변수  
  `contained`  
- [in] 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)개체에서 지원 하려는 다른 인터페이스와도 같이 합니다.  
+ [in] 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), 개체에서 지원할 하려는 다른 인터페이스와도 합니다.  
   
 ### <a name="remarks"></a>주의  
- 모든 **IUnknown** 을 통해 호출 `m_contained` 알 수 없는 외부에 위임 됩니다.  
+ 모든 **IUnknown** 통해 호출 `m_contained` 알 수 없는 외부으로 위임 됩니다.  
   
 ##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
@@ -210,32 +210,32 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
  [in] 요청 된 인터페이스의 식별자입니다.  
   
  `ppvObject`  
- [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 `iid`합니다. 개체는이 인터페이스를 지원 하지 않는 경우 `ppvObject` 로 설정 된 **NULL**합니다.  
+ [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 `iid`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `ppvObject` 로 설정 된 **NULL**합니다.  
   
  `pp`  
- [out] 형식으로 식별 되는 인터페이스 포인터에 대 한 포인터 `Q`합니다. 개체는이 인터페이스를 지원 하지 않는 경우 `pp` 로 설정 된 **NULL**합니다.  
+ [out] 형식으로 식별 된 인터페이스 포인터에 대 한 포인터 `Q`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `pp` 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>주의  
- 요청한 인터페이스가 있으면 **IUnknown**, `QueryInterface` 집계 된 개체의 자체에 대 한 포인터를 반환 **IUnknown** 참조 횟수를 증가 시킵니다. 이 메서드를 통해 인터페이스에 대 한 쿼리 하는 그렇지 않은 경우는 `CComContainedObject` 멤버 [m_contained](#m_contained)합니다.  
+ 요청한 인터페이스가 **IUnknown**, `QueryInterface` 집계 된 개체의 자체에 대 한 포인터를 반환 **IUnknown** 참조 횟수를 증가 시킵니다. 그렇지 않으면이 메서드를 통해 인터페이스에 대 한 쿼리는 `CComContainedObject` 멤버 [m_contained](#m_contained)합니다.  
   
 ##  <a name="release"></a>CComAggObject::Release  
- 집계 된 개체의 참조 횟수를 감소 시킵니다.  
+ 집계 개체에 대 한 참조 횟수를 줄입니다.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 디버그 빌드에서 **릴리스** 진단에 유용 하거나 테스트 될 수 있는 값을 반환 합니다. 비-디버그 빌드에서만에서 **릴리스** 항상 0을 반환 합니다.  
+ 디버그 빌드에서 **릴리스** 진단에 대 한 유용한 또는 테스트 수 있는 값을 반환 합니다. 디버그가 아닌 빌드에서 **릴리스** 항상 0을 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CComObject 클래스](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 클래스](../../atl/reference/ccompolyobject-class.md)   
- [DECLARE_AGGREGATABLE](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)   
- [DECLARE_ONLY_AGGREGATABLE](http://msdn.microsoft.com/library/a54220df-4330-4e4d-b7fb-8b63dd62d337)   
- [DECLARE_NOT_AGGREGATABLE](http://msdn.microsoft.com/library/2a116c7c-bab8-4f2a-a9ad-03d7aba0f762)   
+ [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
+ [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
+ [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [클래스 개요](../../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonFontComboBox 클래스 | Microsoft 문서"
+title: "CMFCRibbonFontComboBox 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 851ef15013ca62012931fd92baf277d5db96033d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9bf968571f9a1bcdbce57c3559b3d70e7692ebe0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 클래스
@@ -81,12 +81,12 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|콤보 상자에 표시할 글꼴 종류를 반환합니다. 유효한 옵션 DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE 또는 이러한 옵션의 비트 조합입니다.|  
 |[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|콤보 상자에 표시되는 글꼴의 피치 및 패밀리를 반환합니다.|  
-|`CMFCRibbonFontComboBox::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
+|`CMFCRibbonFontComboBox::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에서는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|이전에 지정한 글꼴 종류, 문자 집합, 피치 및 패밀리의 글꼴로 리본 글꼴 콤보 상자를 채웁니다.|  
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|콤보 상자에서 지정된 글꼴을 선택합니다.|  
   
-## <a name="remarks"></a>주의  
- 만든 후는 `CMFCRibbonFontComboBox` 개체를 호출 하 여 리본 패널에 추가 [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)합니다.  
+## <a name="remarks"></a>설명  
+ 만든 후는 `CMFCRibbonFontComboBox` 개체를 호출 하 여 리본 패널에 추가 [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
  **헤더:** afxRibbonComboBox.h  
   
 ##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
- 글꼴을 사용 하 여 리본에서 콤보 상자를 채웁니다.  
+ 글꼴로 리본 메뉴의 콤보 상자를 채웁니다.  
   
 ```  
 void BuildFonts(
@@ -119,10 +119,10 @@ void BuildFonts(
  추가할 글꼴의 글꼴 종류를 지정 합니다.  
   
  [in] `nCharSet`  
- 추가 하는 글꼴의 문자 집합을 지정 합니다.  
+ 추가할 글꼴의 문자 집합을 지정 합니다.  
   
  [in] `nPitchAndFamily`  
- 폭 및 추가할 글꼴 패밀리를 지정 합니다.  
+ 피치 및 패밀리를 추가 하려면 글꼴을 지정 합니다.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  생성 하 고 초기화는 [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) 개체입니다.  
@@ -141,21 +141,21 @@ CMFCRibbonFontComboBox(
  사용자가 콤보 상자에서 항목을 선택할 때 실행 되는 명령의 명령 ID입니다.  
   
  [in] `nFontType`  
- 글꼴 콤보 상자에 표시할 형식을 지정 합니다. 유효한 옵션은 **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, 및 **TRUETYPE_FONTTYPE**, 또는 둘의 비트 조합을 합니다.  
+ 글꼴 콤보 상자에 표시할 유형을 지정 합니다. 유효한 옵션은 **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, 및 **또는 이러한 옵션의**, 또는 둘의 비트 조합을 합니다.  
   
  [in] `nCharSet`  
- 지정 된 문자 집합에 포함 된 콤보 상자에 있는 글꼴 필터링...  
+ 지정된 된 문자 집합에 속하는 것 콤보 상자에 있는 글꼴 필터링...  
   
  [in] `nPitchAndFamily`  
- 피치 및 콤보 상자에 표시 되는 글꼴의 제품군을 지정 합니다.  
+ 피치 및 콤보 상자에 표시 되는 글꼴 패밀리를 지정 합니다.  
   
  [in] `nWidth`  
- 콤보 상자의 픽셀 너비를 지정합니다.  
+ 콤보 상자의 픽셀 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>주의  
- 가능한에 대 한 자세한 내용은 `nFontType` 매개 변수 값을 참조 하십시오. [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 설명서에서.  
+ 가능한에 대 한 자세한 내용은 `nFontType` 매개 변수 값을 참조 하세요. [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 설명서에서입니다.  
   
- 에 할당 될 수 있는 올바른 문자 집합에 대 한 자세한 내용은 `nCharSet,` 및 유효한 값에 할당 될 수 있는 `nPitchAndFamily`, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 설명서에서.  
+ 에 할당 될 수 있는 유효한 문자 집합에 대 한 자세한 내용은 `nCharSet`, 및 유효한 값을 지정할 수 있는 `nPitchAndFamily`, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 설명서에서입니다.  
   
 ##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -172,14 +172,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
- 이전에 지정한 글꼴 종류, 문자 집합 및 피치 및 제품군의 글꼴을 사용 하 여 리본에서 콤보 상자를 채웁니다.  
+ 이전에 지정한 글꼴 종류, 문자 집합 및 피치 및 패밀리 글꼴로 리본 메뉴의 콤보 상자를 채웁니다.  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>주의  
- 글꼴, 문자 집합을 지정할 수 있으며 폭 및 리본 글꼴 콤보에 포함할 글꼴 패밀리 상자에 [생성자](#cmfcribbonfontcombobox) 를 호출 하거나이 클래스에 대 한 [CMFCRibbonFontComboBox::BuildFonts](#buildfonts)합니다.  
+ 글꼴 종류, 문자 집합을 지정할 수 있으며 피치 및 패밀리 리본 글꼴 콤보에 포함할 글꼴의 상자에 [생성자](#cmfcribbonfontcombobox) 이 클래스 또는 호출 하 여 [CMFCRibbonFontComboBox::BuildFonts](#buildfonts)합니다.  
   
 ##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  콤보 상자에서 지정된 글꼴을 선택합니다.  
@@ -196,13 +196,13 @@ BOOL SetFont(
  선택 하는 글꼴의 이름을 지정 합니다.  
   
  `nCharSet`  
- 선택한 글꼴에 대해 설정 하는 문자를 지정 합니다.  
+ 문자 집합 선택한 글꼴을 지정 합니다.  
   
  `bExact`  
- `TRUE`문자 집합; 글꼴을 선택할 때와 일치 해야 함을 지정 하려면 `FALSE` 지정 글꼴을 선택 하는 경우에 문자 집합을 무시할 수 있습니다.  
+ `TRUE`문자 집합; 글꼴을 선택할 때와 일치 해야 함을 지정 하려면 `FALSE` 지정할 글꼴을 선택 하는 경우에 문자 집합을 무시할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정된 된 글꼴을 찾아 선택 된 경우&0;이 아닌 그렇지 않으면&0;입니다.  
+ 지정된 된 글꼴을 찾아 선택한; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>주의  
   
@@ -214,7 +214,7 @@ BYTE GetCharSet() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 문자 집합 (Windows SDK 설명서에서 LOGFONT 참조).  
+ 문자 집합 (LOGFONT Windows SDK 설명서에서 참조).  
   
 ### <a name="remarks"></a>주의  
   
@@ -226,7 +226,7 @@ int GetFontType() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 글꼴 종류 (Windows SDK 설명서에서 EnumFontFamProc 참조).  
+ 글꼴 종류를 (EnumFontFamProc Windows SDK 설명서에서 참조).  
   
 ### <a name="remarks"></a>주의  
   
@@ -238,9 +238,9 @@ BYTE GetPitchAndFamily() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 피치 및 제품군 (Windows SDK 설명서에서 LOGFONT 참조).  
+ 피치 및 패밀리 (LOGFONT Windows SDK 설명서에서 참조).  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

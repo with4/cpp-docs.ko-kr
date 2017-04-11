@@ -237,7 +237,7 @@ ms.lasthandoff: 03/07/2017
   
 #### <a name="timeh"></a>\<time.h>  
   
--   **clock** 이전 버전에서 [clock[ 함수는 Windows API ](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx)GetSystemTimeAsFileTime](../c-runtime-library/reference/clock.md)을 사용하여 구현되었습니다. 이 구현을 통해 clock 함수는 시스템 시간에 따라 달라지므로 단조일 필요가 없었습니다. clock 함수는 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) (영문)를 기준으로 다시 구현되었으며 현재는 단조입니다.  
+-   **clock** 이전 버전에서 [clock](../c-runtime-library/reference/clock.md) 함수는 Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx)을 사용하여 구현되었습니다. 이 구현을 통해 clock 함수는 시스템 시간에 따라 달라지므로 단조일 필요가 없었습니다. clock 함수는 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) (영문)를 기준으로 다시 구현되었으며 현재는 단조입니다.  
   
 -   **fstat 및 _utime** 이전 버전에서 [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 및 [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 함수는 일광 절약 시간제를 잘못 처리합니다. Visual Studio 2013 이전에는 이들 함수가 모두 표준시 시간을 일광 절약 시간인 것처럼 잘못 조정했습니다.  
   

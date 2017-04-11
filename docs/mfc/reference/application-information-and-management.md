@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 89f2d1365929b8f5e153ac2bb33adc5e9adb2aaf
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 5d7b6a0c31a8c4ff63b3cfc1fa58c08879e37f58
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="application-information-and-management"></a>응용 프로그램 정보 및 관리
-단일 응용 프로그램을 작성할 때 만들어야 [CWinApp](../../mfc/reference/cwinapp-class.md)-파생 된 개체입니다. 때때로 외부에서이 개체에 대 한 정보를 가져오는 경우가 `CWinApp`-파생 된 개체입니다.  
+단일 응용 프로그램을 작성할 때 만들어야 [CWinApp](../../mfc/reference/cwinapp-class.md)-파생 된 개체입니다. 때때로 외부에서이 개체에 대 한 정보를 가져오는 경우가 `CWinApp`-파생 된 개체입니다. 또는 다른 전역 "mananger" 개체에 대 한 액세스를 할 수 있습니다.
   
  Microsoft Foundation Class 라이브러리는 이러한 작업을 수행할 수 있도록 다음과 같은 전역 함수를 제공 합니다.  
   
@@ -49,7 +49,9 @@ ms.lasthandoff: 03/29/2017
 |||  
 |-|-|  
 |[AfxBeginThread](#afxbeginthread)|새 스레드를 만듭니다.|  
+|[AfxContextMenuManager](#afxcontextmenumanager)|전역에 대 한 포인터 [상황에 맞는 메뉴 관리자](ccontextmenumanager-class.md)합니다.|
 |[AfxEndThread](#afxendthread)|현재 스레드가 종료 됩니다.|  
+|[AfxFindResourceHandle](#afxfindresourcehandle)|에서는 리소스 체인에 설명 하 고 특정 리소스에서 리소스 ID와 리소스 종류를 찾습니다. |
 |[AfxFreeLibrary](#afxfreelibrary)|코딩 된 동적 연결 라이브러리 (DLL) 모듈;의 참조 횟수를 감소 참조 횟수가 0에 도달 하면 모듈이 않았습니다.|  
 |[AfxGetApp](#afxgetapp)|응용 프로그램에 대 한 포인터의 단일 반환 `CWinApp` 개체입니다.|  
 |[AfxGetAppName](#afxgetappname)|응용 프로그램의 이름을 포함 하는 문자열을 반환 합니다.|  
@@ -59,13 +61,20 @@ ms.lasthandoff: 03/29/2017
 |[AfxGetResourceHandle](#afxgetresourcehandle)|반환 된 `HINSTANCE` 응용 프로그램의 기본 리소스의 소스입니다. 이 사용 하 여 응용 프로그램의 리소스에 직접 액세스할 수 있습니다.|  
 |[AfxGetThread](#afxgetthread)|현재에 대 한 포인터를 검색 [CWinThread](../../mfc/reference/cwinthread-class.md) 개체입니다.|  
 |[AfxInitRichEdit](#afxinitrichedit)|버전을 1.0 서식 있는 편집 응용 프로그램에 대 한 제어를 초기화 합니다.|  
-|[AfxInitRichEdit2](#afxinitrichedit2)|버전을 2.0 이상 서식 있는 편집 응용 프로그램에 대 한 제어를 초기화 합니다.|  
+|[AfxInitRichEdit2](#afxinitrichedit2)|버전을 2.0 이상 서식 있는 편집 응용 프로그램에 대 한 제어를 초기화 합니다.| 
+|[AfxIsExtendedFrameClass](#afxisextendedframeclass)|지정된 창이 확장된 프레임 개체인지 여부를 확인합니다.|
+|[AfxIsMFCToolBar](#afxismfctoolbar)|지정된 된 창 도구 모음 개체 인지 확인 합니다.|
+|[AfxKeyboardManager](#afxkeyboardmanager)|전역에 대 한 포인터 [키보드 관리자](ckeyboardmanager-class.md)합니다.|
 |[AfxLoadLibrary](#afxloadlibrary)|DLL 모듈을 매핑하고 DLL 함수의 주소를 가져오는 데 사용할 수 있는 핸들을 반환 합니다.|  
+|[AfxMenuTearOffManager](#afxmenutearoffmanager)|전역에 대 한 포인터 [맞춤 메뉴 관리자](cmenutearoffmanager-class.md)합니다.|
+|[AfxMouseManager](#afxmousemanager)|전역에 대 한 포인터 [마우스 관리자](cmousemanager-class.md)합니다.|
 |[AfxRegisterClass](#afxregisterclass)|MFC를 사용 하는 DLL의 창 클래스를 등록 합니다.|  
 |[AfxRegisterWndClass](#afxregisterwndclass)|MFC에서 자동으로 등록 하는 것을 보완 하기 위해 Windows 창 클래스를 등록 합니다.|  
 |[AfxSetPerUserRegistration](#afxsetperuserregistration)|응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 설정 하는 **HKEY_CURRENT_USER** ( **HKCU**) 노드.|  
 |[AfxSetResourceHandle](#afxsetresourcehandle)|설정의 `HINSTANCE` 핸들 응용 프로그램의 기본 리소스 로드 됩니다.|  
+|[AfxShellManager](#afxshellmanager)|전역에 대 한 포인터 [셸 관리자](cshellmanager-class.md)합니다. |
 |[AfxSocketInit](#afxsocketinit)|호출 된 `CWinApp::InitInstance` Windows 소켓을 초기화 하는 재정의 합니다.|  
+|[AfxUserToolsManager](#afxusertoolsmanager)|전역에 대 한 포인터 [사용자 도구 관리자](cusertoolsmanager-class.md)합니다.|
 |[AfxWinInit](#afxwininit)|MFC에서 제공한에 의해 호출 `WinMain` 의 일부로 함수는 [CWinApp](../../mfc/reference/cwinapp-class.md) 초기화 하는 GUI 기반 응용 프로그램을 MFC를 초기화 합니다. MFC를 사용 하는 콘솔 응용 프로그램에 대 한 직접 호출 되어야 합니다.|  
   
 
@@ -103,7 +112,7 @@ CWinThread* AfxBeginThread(
  에 있는 함수 선언이 매개 변수에서와 같이 제어 함수에 전달할 매개 변수 `pfnThreadProc`합니다.  
   
  `nPriority`  
- 스레드의 원하는 우선 순위입니다. 전체 목록과 설명은 사용할 수 있는 우선 순위에 대 한 참조 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 스레드의 원하는 우선 순위입니다. 전체 목록과 설명은 사용할 수 있는 우선 순위에 대 한 참조 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows sdk에서입니다.  
   
  `nStackSize`  
  새 스레드의 스택 바이트 단위로 크기를 지정합니다. 0 인 경우, 만드는 스레드와 동일한 크기 스택을 스택 크기의 기본값입니다.  
@@ -116,7 +125,7 @@ CWinThread* AfxBeginThread(
 - **0** 을 만든 후 즉시 스레드를 시작 합니다.  
   
  `lpSecurityAttrs`  
- 가리키는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 스레드에 대 한 보안 특성을 지정 하는 구조입니다. 경우 **NULL**, 동일한 보안 속성 다음과 같이 작성 사용 됩니다. 이 구조에 대 한 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 가리키는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 스레드에 대 한 보안 특성을 지정 하는 구조입니다. 경우 **NULL**, 동일한 보안 속성 다음과 같이 작성 사용 됩니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
  새로 만든된 스레드 개체에 대 한 포인터 또는 **NULL** 오류가 발생 합니다.  
@@ -124,7 +133,7 @@ CWinThread* AfxBeginThread(
 ### <a name="remarks"></a>주의  
  첫 번째 형태 `AfxBeginThread` 작업자 스레드를 만듭니다. 두 번째 형태 사용자 인터페이스 스레드 또는 작업자 스레드가 사용 될 수 있는 스레드를 만듭니다.  
   
- `AfxBeginThread`새 `CWinThread` 개체, 호출의 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) 함수는 스레드 실행을 시작 하 고 스레드에 대 한 포인터를 반환 합니다. 모든 개체가 제대로 할당 해제 생성 부분이 실패 해야 되도록 전체 프로시저에서 검사가 수행 됩니다. 호출 스레드를 종료 하려면 [AfxEndThread](#afxendthread) 에서 내에서 스레드 또는 작업자 스레드의 제어 함수에서 반환 합니다.  
+ `AfxBeginThread`원본 또는 `CWinThread` 개체, 호출의 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) 함수는 스레드 실행을 시작 하 고 스레드에 대 한 포인터를 반환 합니다. 모든 개체가 제대로 할당 해제 생성 부분이 실패 해야 되도록 전체 프로시저에서 검사가 수행 됩니다. 호출 스레드를 종료 하려면 [AfxEndThread](#afxendthread) 에서 내에서 스레드 또는 작업자 스레드의 제어 함수에서 반환 합니다.  
   
  다중 스레딩 응용 프로그램으로 사용 하도록 설정 해야 합니다. 그렇지 않으면이 함수가 실패 합니다. 다중 스레딩을 사용에 대 한 자세한 내용은 참조 [/MD, /MT, /LD (런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md) 아래 *Visual c + + 컴파일러 옵션*합니다.  
   
@@ -135,6 +144,20 @@ CWinThread* AfxBeginThread(
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
+
+## <a name="afxcontextmenumanager"></a>AfxContextMenuManager
+전역에 대 한 포인터 [상황에 맞는 메뉴 관리자](ccontextmenumanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+CContextMenuManager* afxContextMenuManager;  
+```     
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxcontextmenumanager.h     
+
+### <a name="see-also"></a>참고 항목   
+ [CContextMenuManager 클래스](ccontextmenumanager-class.md)
+
   
 ##  <a name="afxendthread"></a>AfxEndThread  
  현재 실행 중인 스레드를 종료 하려면이 함수를 호출 합니다.  
@@ -159,6 +182,43 @@ void AFXAPI AfxEndThread(
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
+
+  ## <a name="afxfindresourcehandle"></a>AfxFindResourceHandle
+사용 하 여 `AfxFindResourceHandle` 을 리소스 체인을 탐색 하 고 특정 리소스에서 리소스 ID와 리소스 형식의 찾을 합니다.  
+   
+### <a name="syntax"></a>구문    
+```
+HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );  
+```
+### <a name="parameters"></a>매개 변수  
+ `lpszName`  
+ 리소스 ID를 포함 하는 문자열에 대 한 포인터    
+ *lpszType*  
+ 리소스 형식에 대 한 포인터입니다. 목록이 리소스 종류에 대 한 참조 [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) Windows sdk에서입니다.  
+   
+### <a name="return-value"></a>반환 값  
+ 리소스를 포함 하는 모듈에 대 한 핸들입니다.  
+   
+### <a name="remarks"></a>주의  
+ `AfxFindResourceHandle`특정 리소스를 찾아 리소스가 포함 된 모듈에 대 한 핸들을 반환 합니다. 리소스는 DLL 로드 한 모든 확장 될 수 있습니다. `AfxFindResourceHandle`한 리소스에 알려 줍니다.  
+  
+ 모듈은이 순서 대로 검색 됩니다.  
+  
+1.  주 모듈 (확장 DLL 경우).  
+  
+2.  비 시스템 모듈입니다.  
+  
+3.  언어별 모듈입니다.  
+  
+4.  주 모듈 (시스템 DLL 경우).  
+  
+5.  시스템 모듈입니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxwin.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](mfc-macros-and-globals.md)   
   
 ##  <a name="afxfreelibrary"></a>AfxFreeLibrary  
  `AfxFreeLibrary` 및 `AfxLoadLibrary`는 각 코딩된 라이브러리 모듈에 대한 참조 횟수를 유지 관리합니다.  
@@ -190,7 +250,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
   **헤더** afxdll_.h  
   
 ##  <a name="afxgetapp"></a>AfxGetApp  
- 주 메시지 디스패치 코드나 맨 위 창 등 응용 프로그램 정보에 액세스 하려면이 함수에서 반환 된 포인터를 사용할 수입니다.  
+ 이 함수에서 반환 된 포인터 주 메시지 디스패치 코드나 맨 위 창 등 응용 프로그램 정보에 액세스 데 사용할 수 있습니다.  
   
 ```   
 CWinApp* AFXAPI AfxGetApp(); 
@@ -257,7 +317,7 @@ CWnd* AFXAPI AfxGetMainWnd();
   
  응용 프로그램의 기본 스레드에서 `AfxGetMainWnd`가 호출되는 경우 위의 규칙에 따라 응용 프로그램의 주 창이 반환됩니다. 함수가 응용 프로그램의 보조 스레드에서 호출되면 함수는 호출한 스레드에 연결된 주 창을 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  응용 프로그램이 OLE 서버가 아닌 경우 이 함수의 호출은 응용 프로그램 개체의 `m_pMainWnd` 멤버를 직접 참조하는 것과 동일합니다.  
   
 ### <a name="example"></a>예제  
@@ -276,7 +336,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 ### <a name="return-value"></a>반환 값  
  `TRUE`레지스트리 정보가 지정은 나타냅니다는 **HKCU** 노드 `FALSE` 나타냅니다 응용 프로그램에 기본 노드 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  프레임 워크에 대 한 액세스 리디렉션합니다 레지스트리 리디렉션이 사용 하도록 설정 하면 **HKCR** 를 **HKEY_CURRENT_USER\Software\Classes**합니다. MFC 및 ATL frameworks 리디렉션의 영향을 받습니다.  
   
  응용 프로그램이 레지스트리 액세스 리디렉션하는지 여부를 변경 하려면 [AfxSetPerUserRegistration](#afxsetperuserregistration)합니다.  
@@ -353,7 +413,84 @@ BOOL AFXAPI AfxInitRichEdit2();
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
+
+  ## <a name="afxisextendedframeclass"></a>AfxIsExtendedFrameClass
+지정된 창이 확장된 프레임 개체인지 여부를 확인합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
+```
+### <a name="parameters"></a>매개 변수  
+ [in] `pWnd`  
+ `CWnd`에서 파생된 개체에 대한 포인터입니다.  
+   
+### <a name="return-value"></a>반환 값  
+ `TRUE`제공 된 창이 확장 된 프레임 개체; 이면 그렇지 않으면 `FALSE`합니다.  
+   
+### <a name="remarks"></a>주의  
+ 이 메서드는 `TRUE` 가 다음 클래스 중 하나에서 파생되는 경우 `pWnd` 를 반환합니다.  
   
+-   `CFrameWndEx`  
+  
+-   `CMDIFrameWndEx`  
+  
+-   `COleIPFrameWndEx`  
+  
+-   `COleDocIPFrameWndEx`  
+  
+-   `CMDIChildWndEx`  
+  
+ 이 메서드는 함수 또는 메서드 매개 변수가 확장된 프레임 창인지 확인해야 하는 경우에 유용합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxpriv.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [CWnd 클래스](cwnd-class.md)   
+ [CFrameWndEx 클래스](cframewndex-class.md)   
+
+## <a name="afxismfctoolbar"></a>AfxIsMFCToolBar
+지정된 된 창 도구 모음 개체 인지 확인 합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
+```
+### <a name="parameters"></a>매개 변수  
+ [in] `pWnd`  
+ `CWnd`에서 파생된 개체에 대한 포인터입니다.  
+   
+### <a name="return-value"></a>반환 값  
+ `TRUE`제공 된 창이 도구 모음 개체; 이면 그렇지 않으면 `FALSE`합니다.  
+   
+### <a name="remarks"></a>주의  
+ 이 메서드가 반환 `TRUE` 경우 `pWnd` 에서 파생 `CMFCToolBar`합니다. 이 메서드는 함수 또는 메서드 매개 변수 인지 확인 해야 할 경우에 유용는 `CMFCToolBar` 개체입니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxpriv.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [CWnd 클래스](cwnd-class.md)   
+ [CMFCToolBar 클래스](cmfctoolbar-class.md)
+
+ 
+## <a name="afxkeyboardmanager"></a>AfxKeyboardManager
+전역에 대 한 포인터 [키보드 관리자](ckeyboardmanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+CKeyboardManager* afxKeyboardManager;  
+```  
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxkeyboardmanager.h  
+   
+### <a name="see-also"></a>참고 항목  
+
+ [매크로, 전역 함수 및 전역 변수](mfc-macros-and-globals.md)   
+ [CKeyboardManager 클래스](ckeyboardmanager-class.md)
+
+
 ##  <a name="afxloadlibrary"></a>AfxLoadLibrary  
  `AfxLoadLibrary`를 사용해서 DLL 모듈을 매핑합니다.  
   
@@ -384,7 +521,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 반환 값은 모듈에 대 한 핸들입니다. 함수가 실패 하면 반환 값은 NULL입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용할 수 있는 핸들을 반환 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) DLL 함수의 주소를 가져옵니다. `AfxLoadLibrary`다른 실행 모듈을 매핑할 사용할 수도 있습니다.  
   
  각 프로세스는 각 코딩 된 라이브러리 모듈에 대 한 참조 횟수를 유지합니다. 이 참조 개수가 증가 될 때마다 `AfxLoadLibrary` 호출 되 고는 감소 될 때마다 `AfxFreeLibrary` 호출 됩니다. 참조 횟수가 0에 도달하면, 호출 프로세스의 주소 공간에서 모듈이 매핑 해제되고 핸들이 더 이상 유효하지 않습니다.  
@@ -401,6 +538,33 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdll_.h  
    
+## <a name="afxmenutearoffmanager"></a>AfxMenuTearOffManager
+전역에 대 한 포인터 [맞춤 메뉴 관리자](cmenutearoffmanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+CMenuTearOffManager* g_pTearOffMenuManager;  
+```  
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxmenutearoffmanager.h  
+   
+### <a name="see-also"></a>참고 항목     
+ [CMenuTearOffManager 클래스](cmenutearoffmanager-class.md)
+ 
+## <a name="afxmousemanager"></a>AfxMouseManager
+전역에 대 한 포인터 [마우스 관리자](cmousemanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문  
+  ```  
+CMouseManager* afxMouseManager;  
+```  
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxmousemanager.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [CMouseManager 클래스](cmousemanager-class.md)
+ 
+
   
 ##  <a name="afxregisterclass"></a>AfxRegisterClass  
  이 함수를 사용 하 여 MFC를 사용 하는 DLL에 창 클래스를 등록 합니다.  
@@ -411,7 +575,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>매개 변수  
  *lpWndClass*  
- 에 대 한 포인터는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 창 클래스를 등록 해야 하는 방법에 대 한 정보가 포함 된 구조입니다. 이 구조에 대 한 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 에 대 한 포인터는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 창 클래스를 등록 해야 하는 방법에 대 한 정보가 포함 된 구조입니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
  **True 이면** 클래스가 있는 경우 성공적으로 등록, 그렇지 않으면 **FALSE**합니다.  
@@ -431,7 +595,6 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
  사용자 지정 창 클래스를 등록할 수 있습니다.  
   
 ```  
- 
 LPCTSTR AFXAPI AfxRegisterWndClass(
     UINT nClassStyle,  
     HCURSOR hCursor = 0,  
@@ -441,7 +604,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>매개 변수  
  *nClassStyle*  
- Windows 클래스 스타일 또는 비트 OR를 사용 하 여 만든 스타일의 조합을 지정 ( **|**) 창 클래스에 대 한 연산자입니다. 목록이 클래스 스타일에 대 한 참조는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 경우 **NULL**, 기본값을 다음과 같이 설정 됩니다.  
+ Windows 클래스 스타일 또는 비트 OR를 사용 하 여 만든 스타일의 조합을 지정 ( **|**) 창 클래스에 대 한 연산자입니다. 목록이 클래스 스타일에 대 한 참조는 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK에는 구조입니다. 경우 **NULL**, 기본값을 다음과 같이 설정 됩니다.  
   
 -   마우스 스타일 설정 하는 **CS_DBLCLKS**, 어떤 보냅니다 마우스를 두 번 클릭할 때 메시지 창 프로시저를 두 번 클릭 합니다.  
   
@@ -466,7 +629,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 > [!NOTE]
 >  반환 값은 정적 버퍼에 대 한 포인터입니다. 이 문자열을 저장 하려면에 할당 한 `CString` 변수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  Microsoft Foundation Class 라이브러리는 자동으로 사용자에 대 한 몇 가지 표준 창 클래스를 등록합니다. 사용자 지정 창 클래스 등록 하려는 경우이 함수를 호출 합니다.  
   
  클래스에 대해 등록 된 이름 `AfxRegisterWndClass` 매개 변수를 전적으로 의존 합니다. 호출 하는 경우 `AfxRegisterWndClass` 여러 번 동일한 매개 변수를 가진 것만 클래스 등록의 첫 번째 호출입니다. 에 대 한 후속 호출 `AfxRegisterWndClass` 동일한 매개 변수를 이미 등록 된 classname 작업만 반환 합니다.  
@@ -508,9 +671,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
  이 함수를 사용 하 여 설정 하 여 `HINSTANCE` 응용 프로그램의 기본 리소스를 로드 하는 위치를 결정 하는 핸들입니다.  
   
 ```  
- 
-void  
-AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);  
+void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
@@ -522,14 +683,26 @@ AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
+
+## <a name="afxshellmanager"></a>AfxShellManager
+전역에 대 한 포인터 [셸 관리자](cshellmanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+CShellManager* afxShellManager;  
+```  
+
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxshellmanager.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [CShellManager 클래스](cshellmanager-class.md)
   
 ##  <a name="afxsocketinit"></a>AfxSocketInit  
  이 함수를 호출 하면 `CWinApp::InitInstance` Windows 소켓을 초기화 하는 재정의 합니다.  
   
 ```  
- 
-BOOL  
-AfxSocketInit(WSADATA* lpwsaData = NULL);  
+BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
@@ -539,17 +712,31 @@ AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  정적으로 연결 된 MFC 응용 프로그램에서 보조 스레드에서 MFC 소켓을 사용 하는 경우 호출 해야 `AfxSocketInit` 소켓을 사용 하 여 소켓 라이브러리를 초기화 하는 각 스레드에 있습니다. 기본적으로 `AfxSocketInit` 기본 스레드에서만에서 호출 됩니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxsock.h  
+
+## <a name="afxusertoolsmanager"></a>AfxUserToolsManager
+전역에 대 한 포인터 [사용자 도구 관리자](cusertoolsmanager-class.md)합니다.  
+   
+### <a name="syntax"></a>구문    
+```  
+CUserToolsManager* afxUserToolsManager;  
+```  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxusertoolsmanager.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [CUserToolsManager 클래스](cusertoolsmanager-class.md)
+ 
   
 ##  <a name="afxwininit"></a>AfxWinInit  
  MFC에서 제공 하 여이 함수는 호출 `WinMain` 의 일부로 함수는 [CWinApp](../../mfc/reference/cwinapp-class.md) 초기화 하는 GUI 기반 응용 프로그램을 MFC를 초기화 합니다.  
   
 ```  
- 
 BOOL AFXAPI AfxWinInit(
     HINSTANCE hInstance,  
     HINSTANCE hPrevInstance,  

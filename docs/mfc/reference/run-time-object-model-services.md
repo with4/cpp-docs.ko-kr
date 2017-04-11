@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 0cc29b21aa2279e51ba666d7447d913c4cc777d4
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="run-time-object-model-services"></a>런타임 개체 모델 서비스
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/29/2017
   
  Serialization은 프로세스를 작성 하거나 또는 개체의 내용을 읽는 파일에서입니다. 응용 프로그램이 종료 후에 개체의 내용을 저장 하 serialization을 사용할 수 있습니다. 응용 프로그램 다시 시작 되 면에 다음 개체 파일에서 읽을 수 있습니다. 이러한 데이터 개체를 "영구." 라고 합니다.  
   
- 동적 개체 만들기를 사용 하면 런타임 시 지정된 된 클래스의 개체를 만들 수 있습니다. 예를 들어, 문서, 뷰 및 프레임 개체 지원 해야 동적 만들기 프레임 워크 동적으로 만들어야 하기 때문에 합니다.  
+ 동적 개체 만들기를 사용 하면 런타임 시 지정된 된 클래스의 개체를 만들 수 있습니다. 예를 들어, 문서, 뷰 및 프레임 개체 지원 해야 동적 생성 프레임 워크 동적으로 만들어야 하기 때문에 합니다.  
   
  다음 표에서 런타임 클래스 정보, serialization 및 동적 생성을 지 원하는 MFC 매크로 나열 합니다.  
   
@@ -54,6 +54,8 @@ ms.lasthandoff: 03/29/2017
   
 ### <a name="run-time-object-model-services-macros"></a>런타임 개체 모델 서비스 매크로  
   
+
+
 |||  
 |-|-|  
 |[DECLARE_DYNAMIC](#declare_dynamic)|(클래스 선언에 사용 해야 합니다) 런타임 클래스 정보에 액세스할 수 있도록 합니다.|  
@@ -70,12 +72,69 @@ ms.lasthandoff: 03/29/2017
  Microsoft Foundation Class 라이브러리를 OLE 특정 두 매크로 제공합니다.  
   
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE 개체의 동적 만들기  
-  
+
+ 
+
+
+
+
+
+
 |||  
 |-|-|  
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.|
 |[DECLARE_OLECREATE](#declare_olecreate)|개체를를 OLE 자동화를 통해 만들 수 있습니다.|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|선언 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|OLE 컨트롤에는 해당 속성을 표시 하도록 이러한 속성 페이지 목록이 선언 합니다.|
 |[IMPLEMENT_OLECREATE](#implement_olecreate)|개체를를 OLE 시스템에서 만들 수 있습니다.|  
-  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|구현 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE](#implement_olecreate) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다. |
+
+## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.  
+   
+### <a name="syntax"></a>구문  
+  ```  
+AFX_COMCTL32_IF_EXISTS(  proc );  
+```
+### <a name="parameters"></a>매개 변수  
+ `proc`  
+ 함수 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 함수의 서 수 값을 지정 합니다. 하위 단어;에 있어야 하는 경우이 매개 변수는 서 수 값을 상위 단어에는 0 이어야 합니다. 이 매개 변수는 유니코드 여야 합니다.  
+   
+### <a name="remarks"></a>주의  
+ 이 매크로 사용 하 여 지정 되었는지 여부를 공용 컨트롤 라이브러리 함수에서 결정 `proc` (호출 하는 대신 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ afxcomctl32.h, afxcomctl32.inl  
+   
+### <a name="see-also"></a>참고 항목  
+ [MFC 일반 격리 제어 라이브러리](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+ 
+## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다. (이 유니코드 버전을 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
+   
+### <a name="syntax"></a>구문    
+```  
+AFX_COMCTL32_IF_EXISTS2( proc );  
+```
+### <a name="parameters"></a>매개 변수  
+ `proc`  
+ 함수 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 함수의 서 수 값을 지정 합니다. 하위 단어;에 있어야 하는 경우이 매개 변수는 서 수 값을 상위 단어에는 0 이어야 합니다. 이 매개 변수는 유니코드 여야 합니다.  
+   
+### <a name="remarks"></a>주의  
+ 이 매크로 사용 하 여 지정 되었는지 여부를 공용 컨트롤 라이브러리 함수에서 결정 `proc` (호출 하는 대신 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)합니다. 이 매크로 유니코드 버전을 `AFX_COMCTL32_IF_EXISTS`합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ afxcomctl32.h, afxcomctl32.inl  
+   
+### <a name="see-also"></a>참고 항목  
+ [MFC 일반 격리 제어 라이브러리](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+
+
+
 ##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
  클래스를 파생 하는 경우 개체의 클래스에 대 한 런타임 정보에 액세스할 수 있는 기능을 추가 `CObject`합니다.  
   
@@ -114,7 +173,7 @@ DECLARE_DYNCREATE(class_name)
  클래스의 실제 이름입니다.  
   
 ### <a name="remarks"></a>주의  
- 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만듭니다. 예를 들어 새 보기 새 문서를 열 때 생성 됩니다. 문서, 뷰 및 프레임 클래스는 프레임 워크 동적으로 만들어야 하기 때문에 동적 만들기를 지원 해야 합니다.  
+ 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만듭니다. 예를 들어 새 보기 새 문서를 열 때 생성 됩니다. 문서, 뷰 및 프레임 클래스를 동적으로 만드는 프레임 워크 해야 하기 때문에 동적 만들기를 지원 해야 합니다.  
   
  추가 된 `DECLARE_DYNCREATE` 매크로 클래스에 대 한.h 모듈에서이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈이 포함 됩니다.  
   
@@ -130,6 +189,51 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h 
+
+ 
+## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+선언 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.  
+   
+### <a name="syntax"></a>구문    
+```
+DECLARE_OLECTLTYPE( class_name )  
+```
+### <a name="parameters"></a>매개 변수  
+ *class_name*  
+ 컨트롤 클래스의 이름입니다.  
+   
+### <a name="remarks"></a>주의  
+ **GetUserTypeNameID** 및 `GetMiscStatus` 에 선언 된 순수 가상 함수는 `COleControl`합니다. 이러한 함수는 순수 이므로 가상, 이러한 재정의 되어야 컨트롤 클래스에 있습니다. 외에 **DECLARE_OLECTLTYPE**, 추가 해야 합니다는 `IMPLEMENT_OLECTLTYPE` 컨트롤 클래스 선언에는 매크로입니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxctl.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
+ 
+
+## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+OLE 컨트롤에는 해당 속성을 표시 하도록 이러한 속성 페이지 목록이 선언 합니다.  
+   
+### <a name="syntax"></a>구문    
+```
+DECLARE_PROPPAGEIDS( class_name )  
+```
+### <a name="parameters"></a>매개 변수  
+ *class_name*  
+ 속성 페이지를 소유 하는 컨트롤 클래스의 이름입니다.  
+   
+### <a name="remarks"></a>설명  
+ 사용 하 여는 `DECLARE_PROPPAGEIDS` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_PROPPAGEIDS` 매크로, 각 컨트롤의 속성 페이지에 대해 매크로 항목 및 `END_PROPPAGEIDS` 속성 페이지 목록의 끝을 선언 하는 매크로입니다.  
+  
+ 속성 페이지에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 속성 페이지](../mfc-activex-controls-property-pages.md)합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxctl.h  
+   
+### <a name="see-also"></a>참고 항목   
+ [BEGIN_PROPPAGEIDS](#begin_proppageids)   
+ [END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>DECLARE_SERIAL  
  C + + 헤더는 데 필요한 코드를 생성 한 `CObject`-serialize 할 수 있는 클래스를 파생 합니다.  
@@ -221,6 +325,83 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h 
 
+## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE](#implement_olecreate) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다.  
+   
+### <a name="syntax"></a>구문    
+```
+IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
+    l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
+  
+```
+### <a name="parameters"></a>매개 변수  
+ *class_name*  
+ 클래스의 실제 이름입니다.  
+  
+ *external_name*  
+ (따옴표에 포함) 다른 응용 프로그램에 노출 되는 개체 이름입니다.  
+  
+ `nFlags`  
+ 다음과 같은 플래그 중 하나 이상을 포함 되어 있습니다.  
+  
+-   `afxRegInsertable`OLE 개체에 대 한 개체 삽입 대화 상자에 표시를 제어할 수 있습니다.    
+-   `afxRegApartmentThreading`ThreadingModel 레지스트리에서 설정 하는 스레딩 모델이 아파트 = 합니다.    
+-   **afxRegFreeThreading** ThreadingModel 레지스트리에서 스레딩 모델을 설정 합니다. 무료 = 합니다.  
+  
+     두 플래그를 결합할 수 있습니다 `afxRegApartmentThreading` 및 `afxRegFreeThreading` ThreadingModel 설정할 = Both입니다. 참조 [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) 스레딩 모델 등록에 대 한 자세한 내용은 Windows sdk입니다.    
+ *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ 클래스의의 구성 요소 **CLSID**합니다.  
+   
+### <a name="remarks"></a>설명  
+  
+> [!NOTE]
+>  사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다. 사용 하 여 단일 스레딩 모델만 지원 하려는 경우 `IMPLEMENT_OLECREATE`합니다.  
+  
+ 외부 이름에는 다른 응용 프로그램에 노출 된 식별자입니다. 자동화 서버에서이 클래스의 개체를 요청 하려면 외부 이름을 사용 하는 클라이언트 응용 프로그램.  
+  
+ OLE 클래스 ID가 개체에 대 한 고유 128 비트 식별자입니다. 하나 이루어져 **긴**, 두 개의 **단어**s 및 8 **바이트**s에 의해 표시 된 대로 *l*, *w1*, *w2*, 및 *b1* 통해 *b8* 구문 설명에 있습니다. 응용 프로그램 마법사 및 코드 마법사를 필요에 따라 고유한 OLE 클래스 Id를 만듭니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxdisp.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](mfc-macros-and-globals.md)   
+ [DECLARE_OLECREATE](#declare_olecreate)   
+ [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+
+
+## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+구현 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.  
+   
+### <a name="syntax"></a>구문    
+```
+DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
+```
+### <a name="parameters"></a>매개 변수  
+ *class_name*  
+ 컨트롤 클래스의 이름입니다.  
+  
+ *idsUserTypeName*  
+ 컨트롤의 외부 이름을 포함 하는 문자열의 리소스 ID입니다.  
+  
+ *dwOleMisc*  
+ 하나 이상의 플래그를 포함 하는 열거형입니다. 이 열거형에 대 한 자세한 내용은 참조 하십시오. [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows sdk에서입니다.  
+   
+### <a name="remarks"></a>주의  
+ 외에 `IMPLEMENT_OLECTLTYPE`를 추가 해야 합니다는 **DECLARE_OLECTLTYPE** 컨트롤 클래스 선언에는 매크로입니다.  
+  
+ **GetUserTypeNameID** 멤버 함수가 컨트롤 클래스를 식별 하는 리소스 문자열을 반환 합니다. `GetMiscStatus`반환 된 **OLEMISC** 컨트롤에 대 한 비트입니다. 이 열거형에는 컨트롤의 기타 특징을 설명 하는 설정의 컬렉션을 지정 합니다. 에 대 한 전체 설명은 **OLEMISC** 설정을 참조 [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows sdk에서입니다.  
+  
+> [!NOTE]
+>  ActiveX 컨트롤에서 사용 하는 기본 설정이: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, 및 **OLEMISC_RECOMPOSEONRESIZE**합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxctl.h  
+   
+### <a name="see-also"></a>참고 항목  
+ [매크로 및 전역](mfc-macros-and-globals.md)   
+ [DECLARE_OLECTLTYPE](#declare_olectltype)
+
 ##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
  동적에 필요한 c + + 코드를 생성 `CObject`-클래스 이름 및 계층 구조 내에서 위치에 대 한 런타임 액세스를 사용 하 여 클래스를 파생 합니다.  
   
@@ -286,7 +467,7 @@ DECLARE_OLECREATE(class_name)
  *class_name*  
  클래스의 실제 이름입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 다른 OLE 지원 응용 프로그램을이 형식의 개체를 만들 수 있습니다.  
   
  추가 된 `DECLARE_OLECREATE` 매크로 클래스에 대 한.h 모듈에서 한 후이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈을 포함 합니다.  
@@ -313,18 +494,19 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
  클래스의의 구성 요소 **CLSID**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
   
 > [!NOTE]
 >  사용 하는 경우 `IMPLEMENT_OLECREATE`, 단일 스레딩 모델 기본적으로 지원 합니다. 사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다.  
   
  외부 이름에는 다른 응용 프로그램에 노출 된 식별자입니다. 자동화 서버에서이 클래스의 개체를 요청 하려면 외부 이름을 사용 하는 클라이언트 응용 프로그램.  
   
- OLE 클래스 ID가 개체에 대 한 고유 128 비트 식별자입니다. 하나의 구성 **긴**, 두 개의 **단어**s 및 8 **바이트**s에 의해 표시 된 대로 *l*, *w1*, *w2*, 및 *b1* 통해 *b8* 구문 설명에 합니다. 응용 프로그램 마법사 및 코드 마법사를 필요에 따라 고유한 OLE 클래스 Id를 만듭니다.  
+ OLE 클래스 ID가 개체에 대 한 고유 128 비트 식별자입니다. 하나 이루어져 **긴**, 두 개의 **단어**s 및 8 **바이트**s에 의해 표시 된 대로 *l*, *w1*, *w2*, 및 *b1* 통해 *b8* 구문 설명에 있습니다. 응용 프로그램 마법사 및 코드 마법사를 필요에 따라 고유한 OLE 클래스 Id를 만듭니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더**: afxdisp.h 
 
 ## <a name="see-also"></a>참고 항목  
  [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+
 

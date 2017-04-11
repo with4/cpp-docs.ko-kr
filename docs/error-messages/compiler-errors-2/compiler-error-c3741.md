@@ -1,34 +1,50 @@
 ---
 title: "컴파일러 오류 C3741 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3741"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3741"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3741
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3741
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e7744a62cce2fddf27026ea453643063da9d9757
+ms.lasthandoff: 04/04/2017
 
-'class': event\_receiver의 'layout\_dependent' 매개 변수가 true인 경우 coclass이어야 합니다.  
+---
+# <a name="compiler-error-c3741"></a>컴파일러 오류 C3741
+'class': coclass 이어야 합니다. 때 event_receiver의 'layout_dependent' 매개 변수 = true  
   
- [event\_receiver](../../windows/event-receiver.md) 클래스에 대해 `layout_dependent=true`인 경우 클래스는 [coclass](../../windows/coclass.md) 특성을 사용해야 합니다.  
+ 때 `layout_dependent=true` 에 대 한 프로그램 [event_receiver](../../windows/event-receiver.md) 있어야 클래스, 다음 클래스는 [coclass](../../windows/coclass.md) 특성입니다.  
   
- 다음 샘플에서는 C3741 경고가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3741  
   
 ```  
 // C3741.cpp  
