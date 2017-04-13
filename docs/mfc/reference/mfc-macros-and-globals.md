@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 매크로 및 전역
-Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나눌 수 있습니다. (1)는 MFC 클래스 및 (2) 매크로 및 전역 합니다. 함수 또는 변수가 없으면 클래스의 멤버인 경우 전역 함수 또는 변수입니다.  
+Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나눌 수 있습니다. (1)는 MFC 클래스 및 (2) 매크로 및 전역 합니다. 함수 또는 변수는 클래스의 구성원이 아니므로, 경우 전역 함수 또는 변수입니다.  
   
  MFC 라이브러리와 액티브 템플릿 라이브러리 (ATL) 문자열 변환 매크로 공유합니다. 자세한 내용은 참조 [문자열 변환 매크로](../../atl/reference/string-conversion-macros.md) ATL 설명서에 있습니다.  
   
@@ -124,7 +124,7 @@ Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나
   
 -   [디스패치 맵](dispatch-maps.md)  
   
- MFC에서 호출 하는 함수를 제공 하는 또한 [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) 는 사용 되는 모든 OLE 컨테이너 완벽 하 게 지원 MFC 4.0을 사용 하 여 개발 OLE 컨트롤을 포함 합니다.  
+ MFC에서 호출 하는 함수를 제공 하는 또한 [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) 는 사용 되는 모든 OLE 컨테이너 완벽 하 게 지원 MFC 4.0을 사용 하 여 개발 OLE 컨트롤을 포함 합니다.  
   
 ## <a name="ole-controls"></a>OLE 컨트롤  
   

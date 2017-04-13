@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>문자열 변환 매크로
 이러한 매크로 문자열 변환 기능을 제공합니다.  
   
-|||  
-|-|-|  
-|[ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)|문자열 형식으로 변환 하는 매크로의 집합입니다.|  
-|[DEVMODE 및 TEXTMETRIC 문자열 변환 매크로](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|집합 내에서 문자열 변환 매크로의 `DEVMODE` 및 `TEXTMETRIC` 구조입니다.|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL 및 MFC 문자열 변환 매크로  
  이 항목에서 설명하는 문자열 변환 매크로는 ATL과 MFC에 모두 사용 가능합니다. MFC 문자열 변환에 대 한 자세한 내용은 참조 하십시오. [TN059: MFC MBCS/유니코드 변환 매크로 사용 하 여](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) 및 [MFC 매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)합니다.  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**_UNICODE** 및 **OLE2ANSI**|**W**|**A**|  
   
  다음 표에 `DEVMODE` 및 `TEXTMETRIC` 문자열 변환 매크로입니다.  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE 및 TEXTMETRIC 문자열 변환 매크로  
   
 |||  
 |-|-|  

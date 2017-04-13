@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>메시지 맵 매크로(MFC)
@@ -55,6 +55,7 @@ MFC는 메시지 맵을 지원 하기 위해 다음 매크로 제공 합니다.
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|메시지 맵 (클래스 선언에 사용 해야 합니다) 함수에 메시지를 매핑할 수는 클래스에 사용될지를 선언 합니다.|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|메시지 맵 (클래스 구현에 사용 해야 합니다)의 정의 시작 합니다.|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|단일 템플릿 인수를 포함 하는 클래스 형식의 메시지 맵 정의 시작 합니다. |
 |[END_MESSAGE_MAP](#end_message_map)|메시지 맵 (클래스 구현에 사용 해야 합니다)의 정의 종료 합니다.|  
   
 ### <a name="message-mapping-macros"></a>메시지 매핑 매크로  
@@ -81,34 +82,6 @@ MFC는 메시지 맵을 지원 하기 위해 다음 매크로 제공 합니다.
   
  메시지 맵, 메시지 맵 선언 및 구분 매크로 및 메시지 매핑 매크로에 대 한 자세한 내용은 참조 하십시오. [메시지 맵](../../mfc/reference/message-maps-mfc.md) 및 [메시지 처리 및 매핑 항목](../../mfc/message-handling-and-mapping.md)합니다. 메시지 맵 범위에 대 한 자세한 내용은 참조 [메시지 맵 범위에 대 한 처리기](../../mfc/handlers-for-message-map-ranges.md)합니다.  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- 클래스는 메시지 맵을 정의 함을 선언 합니다. 각 `CCmdTarget`-프로그램의 파생된 클래스는 메시지를 처리 한 메시지 맵을 제공 해야 합니다.  
-  
-### <a name="syntax"></a>구문  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>주의  
- 사용 하 여는 `DECLARE_MESSAGE_MAP` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_MESSAGE_MAP` 매크로, 메시지-처리기 함수의 각각에 대해 매크로 항목 및 `END_MESSAGE_MAP` 매크로입니다.  
-  
-> [!NOTE]
->  후 멤버를 선언 하는 경우 `DECLARE_MESSAGE_MAP`, 새 액세스 유형을 지정 해야 합니다 (**공용**, `private`, 또는 `protected`)에 있습니다.  
-  
- 메시지에 대 한 자세한 내용은 맵 및 `DECLARE_MESSAGE_MAP` 매크로 참조 [메시지 처리 및 매핑 항목](../../mfc/message-handling-and-mapping.md)합니다.  
-  
-### <a name="example"></a>예제  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 메시지 맵의 정의 시작합니다.  
@@ -141,6 +114,61 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h 
 
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+단일 템플릿 인수를 포함 하는 클래스 형식의 메시지 맵 정의 시작 합니다.  
+   
+### <a name="syntax"></a>구문  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>매개 변수  
+ `theClass`  
+ 이 있는 메시지가 매핑할 클래스의 이름을 지정 합니다.    
+ `type_name`  
+ 클래스에 대해 지정 된 템플릿 매개 변수의 이름입니다.    
+ `baseClass`  
+ `theClass`의 기본 클래스 이름을 지정합니다.  
+   
+### <a name="remarks"></a>설명  
+ 이 매크로 비슷합니다는 [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) 매크로입니다; 그러나이이 매크로 사용할 단일 템플릿 인수를 포함 하는 클래스입니다.  
+  
+ 클래스의 메서드 implementation 섹션에서 시작 된 메시지 맵을 **BEGIN_TEMPLATE_MESSAGE_MAP** 매크로; 다음 표준 메시지 지도 마찬가지로 메시지-처리기 메서드는 각각에 대해 매크로 항목을 추가 합니다. 과 마찬가지로 **BEGIN_MESSAGE_MAP** 매크로와 템플릿 메시지 맵을 완료는 [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) 매크로입니다.  
+  
+ 템플릿 클래스에 대 한 메시지 맵을 구현에 대 한 자세한 내용은 참조 [하는 방법: 템플릿 클래스에 대 한 메시지 맵을 만들](../how-to-create-a-message-map-for-a-template-class.md)합니다.  
+   
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ 클래스는 메시지 맵을 정의 함을 선언 합니다. 각 `CCmdTarget`-프로그램의 파생된 클래스는 메시지를 처리 한 메시지 맵을 제공 해야 합니다.  
+  
+### <a name="syntax"></a>구문  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>주의  
+ 사용 하 여는 `DECLARE_MESSAGE_MAP` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_MESSAGE_MAP` 매크로, 메시지-처리기 함수의 각각에 대해 매크로 항목 및 `END_MESSAGE_MAP` 매크로입니다.  
+  
+> [!NOTE]
+>  후 멤버를 선언 하는 경우 `DECLARE_MESSAGE_MAP`, 새 액세스 유형을 지정 해야 합니다 (**공용**, `private`, 또는 `protected`)에 있습니다.  
+  
+ 메시지에 대 한 자세한 내용은 맵 및 `DECLARE_MESSAGE_MAP` 매크로 참조 [메시지 처리 및 매핑 항목](../../mfc/message-handling-and-mapping.md)합니다.  
+  
+### <a name="example"></a>예제  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>요구 사항  
+ **헤더:** afxwin.h  
+
+
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 메시지 맵의 정의 종료합니다.  
   
@@ -150,7 +178,7 @@ END_MESSAGE_MAP()
 END_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  메시지에 대 한 자세한 내용은 맵 및 `END_MESSAGE_MAP` 매크로 참조 [메시지 처리 및 매핑 항목](../../mfc/message-handling-and-mapping.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -172,7 +200,7 @@ ON_COMMAND( id, memberFxn )
  `memberFxn`  
  명령이 매핑되는 메시지-처리기 함수의 이름입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  함수에서 메뉴 항목이 나 도구 모음 단추와 같은 명령 사용자 인터페이스 개체의 명령 메시지를 처리할지 나타냅니다.  
   
  명령 대상 개체는 Windows를 받을 때 **WM_COMMAND** 지정한 ID 가진 메시지 `ON_COMMAND` 멤버 함수를 호출 `memberFxn` 메시지를 처리 하기.  
@@ -250,7 +278,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
  `memberFxn`  
  명령이 매핑되는 메시지-처리기 함수의 이름입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤 알림 메시지는 컨트롤에서 해당 부모 창에 전송 합니다.  
   
  하나씩 있어야 `ON_CONTROL` 메시지-처리기 함수의에 매핑해야 하는 모든 컨트롤 알림 메시지에 대 한 메시지 맵 매크로 문입니다.  
@@ -333,10 +361,10 @@ ON_OLECMD( pguid, olecmdid, id )
  `id`  
  메뉴 ID, 도구 모음 ID, 단추 ID 또는 기타 ID 리소스 또는 명령을 실행 하는 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `IOleCommandTarget`DocObject의 사용자 인터페이스에서 생성 되는 명령을 수신 하기 위한 컨테이너를 컨테이너에서 동일한 명령을 보낼 수 있도록 (새로 만들기, 열기, 저장 및 인쇄 파일 메뉴와 같은 복사 및 붙여넣기, 조각과 편집 메뉴에서 취소)는 DocObject에 있습니다.  
   
- `IOleCommandTarget`OLE 자동화의 보다 간단 `IDispatch`합니다. `IOleCommandTarget`명령의 표준 집합을 전적으로 의존 거의 하는 인수를 한 형식 정보가 없는 과정이 진행 중 (형식 안전성도 명령 인수에 대 한 감소 됨). 사용 하 여 인수를 사용 하 여 명령을 디스패치를 위해 수행 해야 할 경우 [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)합니다.  
+ `IOleCommandTarget`OLE 자동화의 보다 간단 `IDispatch`합니다. `IOleCommandTarget`명령의 표준 집합을 전적으로 의존 인수, 즉 해야 하며 형식 정보가 없는 관련 된 (형식 안전성도 명령 인수에 대 한 감소 됨). 사용 하 여 인수를 사용 하 여 명령을 디스패치를 위해 수행 해야 할 경우 [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)합니다.  
   
  `IOleCommandTarget` 표준 메뉴 명령을 다음 매크로에서 MFC에서 구현 되었습니다.  
   
@@ -571,7 +599,7 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
  `memberFxn`  
  명령이 매핑되는 메시지-처리기 함수의 이름입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  Id 범위 시작 `id1` 끝나는 `id2`합니다.  
   
  사용 하 여 `ON_COMMAND_RANGE` 명령 Id의 범위를 한 멤버 함수에 매핑할 수 있습니다. 사용 하 여 [ON_COMMAND](#on_command) 단일 명령 멤버 함수에 매핑할 수 있습니다. 하나의 메시지-맵 항목에는 지정한 명령 id입니다. 일치 시킬 수 있습니다. 즉, 명령을 둘 이상의 처리기에 매핑할 수 없습니다. 매핑 메시지 범위에 대 한 자세한 내용은 참조 하십시오. [메시지 맵 범위에 대 한 처리기](../../mfc/handlers-for-message-map-ranges.md)합니다.  
@@ -651,7 +679,7 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
  `memberFxn`  
  컨트롤 매핑되는 메시지-처리기 함수의 이름입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  Id 범위 시작 `id1` 끝나는 `id2`합니다. 매핑된 컨트롤 중 하나에서 가져온 지정 된 알림에 대 한 처리기가 호출 됩니다.  
   
  지원은 없습니다 자동 메시지 맵 범위에 대 한 하므로 매크로 직접 배치 해야 합니다.  

@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>진단 서비스
@@ -85,7 +85,7 @@ MFC 라이브러리는 프로그램을 더 쉽게 디버그할 수 있는 많은
 |[확인 및 ENSURE_VALID](#ensure)|데이터 정확성의 유효성을 검사 하려면 사용 합니다.|
 |[THIS_FILE](#this_file)|컴파일되는 파일의 이름으로 확장 됩니다.|
 |[TRACE](#trace)|제공 `printf`-라이브러리의 디버그 버전에서 기능을 선택 합니다.|  
-|[확인](#verify)|비슷한 **ASSERT** 있지만 디버그 버전에 라이브러리의 릴리스 버전의 식을 계산 합니다.|  
+|[확인](#verify)|비슷한 **ASSERT** 디버그 버전 에서도 라이브러리의 릴리스 버전에서 식을 계산 합니다.|  
   
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC 일반 진단 변수 및 함수  
   
@@ -149,7 +149,7 @@ pRichEdit->GetSelText(sz);
 void AfxDebugBreak( );    
 ```  
    
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  `AfxDebugBreak`MFC 응용 프로그램의 릴리스 버전에서는 아무 효과가 제거 해야 합니다. 이 함수는 MFC 응용 프로그램에만 사용 해야 합니다. Win32 API 버전을 사용 하 여 **DebugBreak**, 비 MFC 응용 프로그램에서 중단이 발생할 수 있습니다.  
    
 ### <a name="requirements"></a>요구 사항  
@@ -166,7 +166,7 @@ ASSERT(booleanExpression)
  `booleanExpression`  
  0이 아닌 값 또는 0으로 계산 되는 식 (포인터 값 포함)를 지정 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  결과가 0 인 경우 매크로가 진단 메시지를 출력 하 고 프로그램을 중단 합니다. 0이 아니면 조건이 이면 아무 작업도 수행 하지 않습니다.  
   
  진단 메시지의 형식은 다음과 같습니다.  
@@ -175,7 +175,7 @@ ASSERT(booleanExpression)
   
  여기서 *이름* 소스 파일의 이름 및 *num* 는 소스 파일에서 실패 한 어설션의 줄 번호입니다.  
   
- MFC의 릴리스 버전에서 **ASSERT** 는 식을 평가 하지 않습니다 및 따라서 프로그램은 중단 되지 것입니다. 사용 하 여 환경에 관계 없이 식은 반드시 평가 되어야 하는 경우는 **확인** 대신에 매크로 **ASSERT**합니다.  
+ MFC의 릴리스 버전에서 **ASSERT** 는 식을 평가 하지 않습니다 및 따라서 프로그램은 중단 되지 것입니다. 사용 하 여 환경에 관계 없이 식은 반드시 평가 되어야 하는 경우는 **VERIFY** 대신에 매크로 **어설션**합니다.  
   
 > [!NOTE]
 >  이 기능은 MFC의 디버그 버전 에서만 사용할 수 있습니다.  
@@ -200,7 +200,7 @@ ASSERT_KINDOF(classname, pobject)
  *pobject*  
  클래스 개체에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  *pobject* 매개 변수 개체에 대 한 포인터 이어야 하며 수 **const**합니다. 개체를 가리키는 및 클래스를 지원 해야 합니다 `CObject` 런타임 클래스 정보입니다. 예를 들어 되도록 `pDocument` 의 개체에 대 한 포인터는 `CMyDoc` 클래스 또는 해당 파생 항목 중 하나를 코딩할 수 있습니다.  
   
  [!code-cpp[NVC_MFCDocView # 194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]  
@@ -231,7 +231,7 @@ ASSERT_VALID(pObject)
 ### <a name="remarks"></a>설명  
  `ASSERT_VALID`호출 된 `AssertValid` 개체의 멤버 함수는 인수로 전달 합니다.  
   
- MFC의 릴리스 버전에서 `ASSERT_VALID` 는 아무 작업도 수행 합니다. 디버그 버전에서 확인 하 고 포인터에 대 한 검사 **NULL**, 호출 개체의 고유 `AssertValid` 멤버 함수입니다. 경고 메시지와 같은 방식으로 표시 됩니다 테스트 실패에 이러한 경우 [ASSERT](#assert)합니다.  
+ MFC의 릴리스 버전에서 `ASSERT_VALID` 는 아무 작업도 수행 합니다. 디버그 버전에서 확인 하 고 포인터에 대 한 검사 **NULL**, 호출 개체의 고유 `AssertValid` 멤버 함수입니다. 경고 메시지와 같은 방식으로 표시 됩니다 테스트 실패에 이러한 경우 [어설션](#assert)합니다.  
   
 > [!NOTE]
 >  이 기능은 MFC의 디버그 버전 에서만 사용할 수 있습니다.  
@@ -251,7 +251,7 @@ ASSERT_VALID(pObject)
 #define  new DEBUG_NEW   
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용할 수 있습니다 `DEBUG_NEW` 일반적으로 사용 하는 프로그램의 모든 위치에서 **새** 힙 저장소를 할당 하는 연산자입니다.  
   
  디버그 모드에서 (때는 **_DEBUG** 기호가 정의), `DEBUG_NEW` 할당 된 각 개체에 대 한 파일 이름과 줄 번호는 추적 합니다. 그런 다음 사용 하는 경우는 [cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) 멤버 함수를 사용 하 여 할당 된 각 개체 `DEBUG_NEW` 할당 된 파일 이름과 줄 번호와 함께 표시 됩니다.  
@@ -301,13 +301,13 @@ ENSURE_VALID( booleanExpression  )
 ### <a name="remarks"></a>주의  
  이러한 매크로의 목적은 매개 변수의 유효성 검사를 개선 하기 위해입니다. 매크로 코드에 잘못 된 매개 변수 추가 처리를 방지 합니다. 달리는 **ASSERT** 매크로 **확인** 매크로 어설션을 생성 하는 것 외에도 예외를 throw 합니다.  
   
- 매크로는 프로젝트 구성에 따라 두 가지 방법으로 작동합니다. 매크로 호출이 **ASSERT** 어설션이 실패 하는 경우 다음 예외를 throw 합니다. 디버그 구성에 따라서 (즉, **_DEBUG** 정의)는 어설션 및 릴리스 구성에 있는 동안 예외 매크로 생성, 매크로 예외를 생성 (**ASSERT** 릴리스 구성에 대 한 식을 평가 하지 않습니다).  
+ 매크로는 프로젝트 구성에 따라 두 가지 방법으로 작동합니다. 매크로 호출이 **어설션** 어설션 오류가 발생 하는 경우 다음 예외를 throw 합니다. 디버그 구성에 따라서 (즉, **_DEBUG** 정의) 어설션 및 릴리스 구성에 있는 동안 예외 매크로 생성, 매크로 예외를 생성 (**어설션** 릴리스 구성에 대 한 식을 평가 하지 않습니다).  
   
  매크로 **ENSURE_ARG** 처럼 동작은 **확인** 매크로입니다.  
   
  **ENSURE_VALID** 호출의 `ASSERT_VALID` 매크로 (디버그 빌드에서만에서 효과가). 또한 **ENSURE_VALID** 포인터가 NULL 이면 예외가 발생 합니다. NULL 테스트 모두 디버그 및 릴리스 구성에서 수행 됩니다.  
   
- 경고 메시지와 같은 방식으로 표시 됩니다 테스트 실패에 이러한 경우 **ASSERT**합니다. 매크로 필요에 따라 잘못 된 인수 예외를 throw 합니다.  
+ 경고 메시지와 같은 방식으로 표시 됩니다 테스트 실패에 이러한 경우 **어설션**합니다. 매크로 필요에 따라 잘못 된 인수 예외를 throw 합니다.  
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
    
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>설명  
- 참조 [ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986) 에 대 한 설명은 **추적**합니다. **추적** 및 `ATLTRACE2` 동일 하 게 동작 합니다.  
+ 참조 [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) 에 대 한 설명은 **추적**합니다. **추적** 및 `ATLTRACE2` 동일 하 게 동작 합니다.  
   
  MFC의 디버그 버전에서이 매크로 현재 응용 프로그램의 디버거를 지정된 된 문자열을 보냅니다. 릴리스 빌드에서이 매크로 (코드 없이 전혀 생성) nothing으로 컴파일합니다.  
   
@@ -376,7 +376,7 @@ VERIFY(booleanExpression)
  `booleanExpression`  
  0이 아닌 값 또는 0으로 계산 되는 식 (포인터 값 포함)를 지정 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  결과가 0 인 경우 매크로가 진단 메시지를 출력 하 고 프로그램을 중단 합니다. 0이 아니면 조건이 이면 아무 작업도 수행 하지 않습니다.  
   
  진단 메시지의 형식은 다음과 같습니다.  
@@ -445,7 +445,7 @@ void AfxDump(const CObject* pOb);
 int  afxMemDF;  
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  `afxMemDF`열거형에 지정 된 대로 다음 값을 가질 수 `afxMemDF`:  
   
 - **allocMemDF** 디버깅 할당자 (디버그 라이브러리의 기본 설정)을 설정 합니다.  
@@ -461,7 +461,7 @@ int  afxMemDF;
  **헤더:** afx.h
 
 ##  <a name="afxcheckerror"></a>AfxCheckError  
- 이 함수는 전달 된 테스트 **SCODE** 를 오류가 있는지 확인 하십시오.  
+ 이 함수는 전달 된 테스트 **SCODE** 에 오류가 있는지 확인 하십시오.  
   
 ```   
 void AFXAPI AfxCheckError(SCODE sc);
@@ -469,10 +469,10 @@ throw CMemoryException*
 throw COleException*  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  오류가 있으면 함수는 예외가 throw 됩니다. 경우 전달 된 `SCODE` 은 **E_OUTOFMEMORY**, throw 한 [CMemoryException](../../mfc/reference/cmemoryexception-class.md) 호출 하 여 [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)합니다. 그렇지 않으면 함수가 throw 한 [COleException](../../mfc/reference/coleexception-class.md) 호출 하 여 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)합니다.  
   
- 응용 프로그램에서 OLE 함수 호출의 반환 값을 확인 하려면이 함수를 사용할 수 있습니다. 응용 프로그램에서이 함수의 반환 값을 테스트 함으로써 제대로 최소한의 코드만 사용 하 여 오류 조건을에 반응할 수 있습니다.  
+ 이 함수는 응용 프로그램에서 OLE 함수 호출의 반환 값을 확인 데 사용할 수 있습니다. 응용 프로그램에서이 함수의 반환 값을 테스트 함으로써 제대로에 최소한의 코드만 사용 하 여 오류 조건을 반응할 수 있습니다.  
   
 > [!NOTE]
 >  이 함수는 디버그에서 같습니다 및 디버그가 아닌 빌드합니다.  
@@ -493,7 +493,7 @@ BOOL  AfxCheckMemory();
 ### <a name="return-value"></a>반환 값  
  메모리 오류가 없거나; 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  함수에서 메모리 손상이 없는지를 발견 하면 아무 것도 표시 됩니다.  
   
  힙에 현재 할당 된 모든 메모리 블록에 의해 할당 하는 것을 포함 하 여 확인 되므로 **새** 는 없음와 같은 기본 메모리 할당자를 직접 호출 하 여 할당 된는 `malloc` 함수 또는 **GlobalAlloc** Windows 함수입니다. 손상 된 것으로 발견 되는 블록 디버거 출력에 메시지가 인쇄 됩니다.  
@@ -526,7 +526,7 @@ void AfxDump(const CObject* pOb);
  `pOb`  
  파생 된 클래스의 개체에 대 한 포인터 `CObject`합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  **AfxDump** 개체의 호출 `Dump` 멤버 함수와 보냅니다에 의해 지정 된 위치에 대 한 정보는 `afxDump` 변수입니다. **AfxDump** MFC의 디버그 버전 에서만 사용할 수 있습니다.  
   
  프로그램 코드를 호출 해서는 안 **AfxDump**를 대신 호출 해야 하지만 `Dump` 적절 한 개체의 멤버 함수입니다.  
@@ -550,7 +550,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
  *dwTarget*  
  덤프 출력의 대상을 나타냅니다. 비트 OR를 사용 하 여 결합할 수 있는 가능한 값 ( **|**) 연산자는 다음과 같습니다.  
   
-- **AFX_STACK_DUMP_TARGET_TRACE** 방법으로 출력 보냅니다는 [추적](#trace) 매크로입니다. **추적** 디버그 빌드에서 출력을 생성 하는 매크로, 릴리스 빌드에 없는 출력을 생성 합니다. 또한 **추적** 디버거 외에도 다른 대상으로 리디렉션할 수 있습니다.  
+- **AFX_STACK_DUMP_TARGET_TRACE** 방법으로 출력 보냅니다는 [추적](#trace) 매크로입니다. **추적** 디버그 빌드에서 출력을 생성 하는 매크로, 릴리스 빌드에 없음 출력을 생성 합니다. 또한 **추적** 디버거 외에도 다른 대상으로 리디렉션할 수 있습니다.  
   
 - **AFX_STACK_DUMP_TARGET_DEFAULT** 보냅니다 덤프 기본 대상에 출력 합니다. 디버그 빌드에 대 한 출력 되는지는 **추적** 매크로입니다. 릴리스 빌드에서 출력 클립보드로 이동합니다.  
   
@@ -560,7 +560,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
 - **AFX_STACK_DUMP_TARGET_ODS** Win32 함수를 사용 하 여 디버거에 직접 출력을 보내는 **OutputDebugString()**합니다. 이 옵션은 디버그에서 디버거 출력을 생성 하 고 릴리스 빌드 프로세스에 디버거를 연결 합니다. **AFX_STACK_DUMP_TARGET_ODS** 항상 (연결) 하는 경우 디버거 큐에 도달 하 고 리디렉션할 수 없습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다음 예제에서는 호출에서 생성 된 출력을 전혀 반영 `AfxDumpStack` MFC 대화 상자 응용 프로그램의 단추 처리기에서:  
   
  `=== begin AfxDumpStack output ===`  
@@ -642,7 +642,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ### <a name="return-value"></a>반환 값  
  이 플래그에 대한 이전 값입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  응용 프로그램이 MFC 라이브러리를 언로드하면 MFC 라이브러리는 메모리 누수를 확인합니다. 메모리 누수를 모두를 통해 사용자에 게 보고 되는 시점에서 **디버그** 의 창 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]합니다.  
   
  응용 프로그램이 MFC 라이브러리 전에 다른 라이브러리를 로드하는 경우, 해당 라이브러리의 일부 메모리 할당이 메모리 누수로 잘못 보고됩니다. 거짓 메모리 누수가 발생하면 MFC 라이브러리에서 이를 보고하므로 응용 프로그램이 느리게 종료될 수 있습니다. 이 경우 메모리 누수 덤프를 사용하지 않으려면 `AfxEnableMemoryLeakDump` 를 사용합니다.  
@@ -667,7 +667,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ### <a name="return-value"></a>반환 값  
  추적 기능을 사용 하도록 플래그의 이전 설정입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 블록을 올바르게 할당은 사용자가 알고 있는 코드의 섹션에서 추적을 사용 하지 않도록 설정 합니다.  
   
  대 한 자세한 내용은 `AfxEnableMemoryTracking`, 참조 [MFC 응용 프로그램 디버깅](/visualstudio/debugger/mfc-debugging-techniques)합니다.  
@@ -704,7 +704,7 @@ BOOL AfxIsMemoryBlock(
 ### <a name="return-value"></a>반환 값  
  메모리 블록은 현재 할당 된이 고 길이 올바른; 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  또한 원래 할당 된 크기에 대해 지정된 된 크기를 확인합니다. 함수가 0이 아닌 값을 반환 하는 경우에 할당 순서 번호가 반환 `plRequestNumber`합니다. 이 숫자는 블록은 다른 모든를 기준으로 할당 된 순서를 나타내는 **새** 할당 합니다.  
   
 ### <a name="example"></a>예제  
@@ -748,7 +748,7 @@ BOOL AfxIsValidAddress(
  **헤더:** afx.h 
 
 ##  <a name="afxisvalidstring"></a>AfxIsValidString  
- 문자열에 대 한 포인터 올바른지 여부를 확인 하려면이 함수를 사용 합니다.  
+ 문자열에 대 한 포인터가 유효한 지를 확인 하려면이 함수를 사용 합니다.  
   
 ```   
 BOOL  AfxIsValidString(
@@ -854,7 +854,7 @@ void AfxDoForAllObjects(
  `pContext`  
  반복 함수에 호출자에 게 제공할 수 있는 데이터를 가리킵니다. 이 포인터 수 **NULL**합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  전역, 스택 또는 포함 된 개체가 열거 되지 않습니다. 에 전달 된 포인터 `AfxDoForAllObjects` 에 `pContext` 가 호출 될 때마다 지정 된 반복 함수에 전달 됩니다.  
   
 > [!NOTE]

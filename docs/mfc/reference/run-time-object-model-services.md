@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>런타임 개체 모델 서비스
@@ -123,7 +123,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  `proc`  
  함수 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 함수의 서 수 값을 지정 합니다. 하위 단어;에 있어야 하는 경우이 매개 변수는 서 수 값을 상위 단어에는 0 이어야 합니다. 이 매개 변수는 유니코드 여야 합니다.  
    
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 지정 되었는지 여부를 공용 컨트롤 라이브러리 함수에서 결정 `proc` (호출 하는 대신 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)합니다. 이 매크로 유니코드 버전을 `AFX_COMCTL32_IF_EXISTS`합니다.  
    
 ### <a name="requirements"></a>요구 사항  
@@ -173,7 +173,7 @@ DECLARE_DYNCREATE(class_name)
  클래스의 실제 이름입니다.  
   
 ### <a name="remarks"></a>주의  
- 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만듭니다. 예를 들어 새 보기 새 문서를 열 때 생성 됩니다. 문서, 뷰 및 프레임 클래스를 동적으로 만드는 프레임 워크 해야 하기 때문에 동적 만들기를 지원 해야 합니다.  
+ 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만듭니다. 예를 들어 새 보기 새 문서를 열 때 생성 됩니다. 문서, 뷰 및 프레임 클래스는 프레임 워크 동적으로 만들어야 하기 때문에 동적 만들기를 지원 해야 합니다.  
   
  추가 된 `DECLARE_DYNCREATE` 매크로 클래스에 대 한.h 모듈에서이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈이 포함 됩니다.  
   
@@ -202,8 +202,8 @@ DECLARE_OLECTLTYPE( class_name )
  *class_name*  
  컨트롤 클래스의 이름입니다.  
    
-### <a name="remarks"></a>주의  
- **GetUserTypeNameID** 및 `GetMiscStatus` 에 선언 된 순수 가상 함수는 `COleControl`합니다. 이러한 함수는 순수 이므로 가상, 이러한 재정의 되어야 컨트롤 클래스에 있습니다. 외에 **DECLARE_OLECTLTYPE**, 추가 해야 합니다는 `IMPLEMENT_OLECTLTYPE` 컨트롤 클래스 선언에는 매크로입니다.  
+### <a name="remarks"></a>설명  
+ **GetUserTypeNameID** 및 `GetMiscStatus` 에 선언 된 순수 가상 함수는 `COleControl`합니다. 이러한 함수는 순수 이므로 가상, 이러한 재정의 되어야 컨트롤 클래스에 있습니다. 외에 **DECLARE_OLECTLTYPE**를 추가 해야 합니다는 `IMPLEMENT_OLECTLTYPE` 컨트롤 클래스 선언에는 매크로입니다.  
    
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
@@ -223,7 +223,7 @@ DECLARE_PROPPAGEIDS( class_name )
  *class_name*  
  속성 페이지를 소유 하는 컨트롤 클래스의 이름입니다.  
    
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  사용 하 여는 `DECLARE_PROPPAGEIDS` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_PROPPAGEIDS` 매크로, 각 컨트롤의 속성 페이지에 대해 매크로 항목 및 `END_PROPPAGEIDS` 속성 페이지 목록의 끝을 선언 하는 매크로입니다.  
   
  속성 페이지에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 속성 페이지](../mfc-activex-controls-property-pages.md)합니다.  
@@ -246,7 +246,7 @@ DECLARE_SERIAL(class_name)
  *class_name*  
  클래스의 실제 이름입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Serialization은 프로세스 작성 하거나 하 고 개체의 내용의 읽을 파일에서입니다.  
   
  사용 하 여는 `DECLARE_SERIAL` .h 모듈에서는 매크로 한 후이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈을 포함 합니다.  
@@ -282,7 +282,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  기본 클래스의 이름입니다.  
   
 ### <a name="remarks"></a>주의  
- 사용 하 여는 `IMPLEMENT_DYNAMIC` 는.cpp 모듈과 다음 링크는 결과 개체를 한 번만 코드에 매크로입니다.  
+ 사용 하 여는 `IMPLEMENT_DYNAMIC` .cpp 모듈 및 다음 링크는 결과 개체를 한 번만 코드는 매크로입니다.  
   
  자세한 내용은 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
   
@@ -352,7 +352,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
  클래스의의 구성 요소 **CLSID**합니다.  
    
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
   
 > [!NOTE]
 >  사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다. 사용 하 여 단일 스레딩 모델만 지원 하려는 경우 `IMPLEMENT_OLECREATE`합니다.  
@@ -445,7 +445,7 @@ RUNTIME_CLASS(class_name)
  *class_name*  
  (인용 부호로 묶지) 클래스의 실제 이름입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `RUNTIME_CLASS`에 대 한 포인터를 반환 합니다.는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 에서 지정 된 클래스에 대 한 구조 *class_name*합니다. 만 `CObject`-파생 된 클래스를 사용 하 여 선언 `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, 또는 `DECLARE_SERIAL` 에 대 한 포인터를 반환 합니다는 `CRuntimeClass` 구조입니다.  
   
  자세한 내용은 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
@@ -478,7 +478,7 @@ DECLARE_OLECREATE(class_name)
  **헤더**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- 이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다.  
+ 이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
@@ -494,7 +494,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
  클래스의의 구성 요소 **CLSID**합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
   
 > [!NOTE]
 >  사용 하는 경우 `IMPLEMENT_OLECREATE`, 단일 스레딩 모델 기본적으로 지원 합니다. 사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다.  
