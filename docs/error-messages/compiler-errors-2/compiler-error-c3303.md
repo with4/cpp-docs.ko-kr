@@ -1,29 +1,46 @@
 ---
 title: "컴파일러 오류 C3303 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3303"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3303"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3303
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3303
 ms.assetid: c6f6ea3d-f6b7-4401-8bbb-f283a2c05540
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3303
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 4538b81e1952a7ee960f46942bf9598aa44e3eb6
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c3303"></a>컴파일러 오류 C3303
 'attribute': 특성은 'usage'에서만 사용될 수 있습니다.  
   
  사용할 수 없는 위치에서 특성을 사용하려고 했습니다.

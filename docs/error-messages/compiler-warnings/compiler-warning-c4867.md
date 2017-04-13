@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 경고 C4867 | Microsoft 문서"
+title: "컴파일러 경고 C4867 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 86437fca7bfeef662bef9fe8311fb746a661264d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>컴파일러 경고 C4867
 'function': 함수 호출 인수 목록이 없습니다. '호출'을 사용 하 여 멤버에 대 한 포인터를 만들려면  
   
- 멤버 함수에 대 한 포인터를 잘못 초기화 되었습니다.  
+ 멤버 함수에 대 한 포인터를 올바르게 초기화 되었습니다.  
   
- 이 경고는 Visual c + + 2005에 대해 수행 된 컴파일러 규칙의 결과로 발생할 수 있습니다: 멤버 포인터 규칙이 향상 되었습니다.  Visual c + + 2005 이전에 컴파일된 코드를 생성할 c 4867이 발생 합니다.  
+ 이 경고는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 됩니다: 멤버 포인터 규칙이 향상 되었습니다.  Visual c + + 2005 이전에 컴파일된 코드는 현재 C4867를 생성 합니다.  
   
- 이 경고는 항상 오류로 발생 합니다. 사용 하는 [경고](../../preprocessor/warning.md) pragma를 사용 하지 않도록이 경고를 설정 합니다. MFC/ATL 및 c&4867;이 발생 하는 방법에 대 한 자세한 내용은 참조 [_ATL_ENABLE_PTM_WARNING](http://msdn.microsoft.com/Library/00b9ff5c-9834-4c40-911e-ee88d512c4af)합니다.  
+ 항상이 경고는 오류로 발생 됩니다. 사용 하 여는 [경고](../../preprocessor/warning.md) pragma를이 경고를 비활성화 합니다. C4867 및 MFC/ATL에 대 한 자세한 내용은 참조 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 c4867 오류가 발생 합니다.  

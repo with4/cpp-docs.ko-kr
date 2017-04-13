@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3917 | Microsoft 문서"
+title: "컴파일러 오류 C3917 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>컴파일러 오류 C3917
-'property': 되지 않는 구문이 선언 스타일  
+'*속성*': 사용 되지 않는 선언 스타일 구문  
   
-이전 버전에서 속성 또는 이벤트 정의 사용 하십시오.  
+Visual Studio 2005 이전 버전에서 속성 또는 이벤트 정의 사용 하십시오.  
   
 자세한 내용은 참조 [속성](../../windows/property-cpp-component-extensions.md)합니다.  
   
 ## <a name="example"></a>예제  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  
