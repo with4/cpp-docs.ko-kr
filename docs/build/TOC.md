@@ -111,7 +111,7 @@
 # [명령줄 빌드](building-on-the-command-line.md)
 ## [연습: 명령줄에서 네이티브 C++ 프로그램 컴파일](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [연습: 명령줄에서 C 프로그램 컴파일](walkthrough-compile-a-c-program-on-the-command-line.md)
-## [연습: 명령줄에서 C++-CLI 프로그램 컴파일](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)
+## [연습: 명령줄에서 C++/CLI 프로그램 컴파일](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)
 ## [연습: 명령줄에서 C++-CX 프로그램 컴파일](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)
 ## [명령줄 빌드에 맞는 경로 및 환경 변수 설정](setting-the-path-and-environment-variables-for-command-line-builds.md)
 ## [NMAKE 참조](nmake-reference.md)

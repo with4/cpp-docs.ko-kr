@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 유틸리티 함수
@@ -67,9 +67,9 @@ inline BOOL AtlCanonicalizeUrl(
 - `ATL_URL_NO_META`메타 시퀀스는 제거 되지 않습니다 (같은 "."및"..") URL에서 합니다. 
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 반환 **TRUE** 성공할 경우 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  현재 버전 처럼 작동 하며 [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) WinInet 또는 Internet Explorer를 설치 하지 않아도 되지만 합니다.  
   
 ### <a name="see-also"></a>참고 항목  
@@ -101,12 +101,12 @@ inline BOOL AtlCombineUrl(
  문자 길이 포함 하는 변수에 대 한 포인터 `szBuffer`합니다. 함수가 성공 하면 변수는 null 종결 문자를 제외 하는 버퍼에 쓴 문자의 수를 받습니다. 함수가 실패 하면 변수는 null 종결 문자에 대 한 공간을 포함 하는 버퍼의 바이트에 필요한 길이 받습니다.  
   
  `dwFlags`  
- 이 함수의 동작을 제어 하는 플래그입니다. 참조 [ATL_URL 플래그](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7)합니다.  
+ 이 함수의 동작을 제어 하는 플래그입니다. 참조 [AtlCanonicalizeUrl](#atlcanonicalizeurl)합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 반환 **TRUE** 성공할 경우 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  현재 버전 처럼 작동 하며 [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) WinInet 또는 Internet Explorer를 설치 하지 않아도 되지만 합니다.  
   
 ## <a name="atlescapeurl"></a>AtlEscapeUrl
@@ -145,7 +145,7 @@ inline BOOL AtlEscapeUrl(
  이 함수의 동작을 제어 ATL_URL 플래그입니다. 참조 [ATLCanonicalizeUrl](#atlcanonicalizeurl) 가능한 값에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 반환 **TRUE** 성공할 경우 **FALSE** 실패 합니다.  
   
 ## <a name="atlgetdefaulturlport"></a> 
  특정 인터넷 프로토콜 또는 체계와 관련된 기본 포트 번호를 가져오려면 이 함수를 호출합니다.  
@@ -159,7 +159,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
  [ATL_URL_SCHEME](atl-url-scheme-enum.md) 구성표 포트 번호를 가져올를 식별 하는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- [ATL_URL_PORT](atl-typedefs.md#atl_url_port) 체계 인식 되지 않으면 지정 된 체계 또는 ATL_URL_INVALID_PORT_NUMBER 연관 됩니다.  
+ [ATL_URL_PORT](atl-typedefs.md#atl_url_port) 체계 인식 되지 않으면 ATL_URL_INVALID_PORT_NUMBER에 지정 된 체계와 연결 합니다.  
 
 ## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
  URL에서 문자를 안전하게 사용할 수 있는지 확인하려면 이 함수를 호출합니다.  
@@ -209,9 +209,9 @@ inline BOOL AtlUnescapeUrl(
  버퍼의 크기 `lpszStringOut`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 반환 **TRUE** 성공할 경우 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  적용 하 여 변환 프로세스를 반대로 [AtlEscapeUrl](#atlescapeurl)합니다.  
   
 ## <a name="rgbtohtml"></a>RGBToHtml
@@ -235,7 +235,7 @@ bool inline RGBToHtml(
  (Null 종결자를 위한 공간이 포함) 버퍼의 바이트 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 반환 **TRUE** 성공할 경우 **FALSE** 실패 합니다.  
   
 ### <a name="remarks"></a>주의  
  HTML 색 값은 2 자리를 사용 하 여 각 색의 빨강, 녹색 및 파랑 구성 요소에는 6 자리 16 진수 값 뒤에 파운드 기호 (예를 들어 #FFFFFF는 흰색).  

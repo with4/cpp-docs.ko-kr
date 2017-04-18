@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML 이벤트 맵
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>주의  
  DHTML 이벤트 맵 정보를 제공 하는 클래스에 추가 **CDHtmlDialog** HTML 요소 또는 ActiveX 컨트롤 클래스의 처리기 함수를 웹 페이지에 의해 발생 하는 경로 이벤트를 사용할 수 있는 합니다.  
   
- 위치는 `BEGIN_DHTML_EVENT_MAP` 클래스의 정의 (.h) 파일에는 매크로 뒤 `DHTML_EVENT` 매크로 이벤트에 대 한 클래스 처리 하기 위한 것 (예를 들어 `DHTML_EVENT_ONMOUSEOVER` mouseover 이벤트에 대 한). 사용 하 여는 [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) 이벤트 맵의 끝을 표시 하는 매크로입니다. 이러한 매크로 다음 함수를 구현 합니다.  
+ 위치는 `BEGIN_DHTML_EVENT_MAP` 클래스의 정의 (.h) 파일에는 매크로 뒤 `DHTML_EVENT` 매크로 이벤트에 대 한 클래스 처리 하기 위한 것 (예를 들어 `DHTML_EVENT_ONMOUSEOVER` mouseover 이벤트에 대 한). 사용 하 여는 [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) 이벤트 맵의 끝을 표시 하는 매크로입니다. 이러한 매크로 다음 함수를 구현 합니다.  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -179,7 +179,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
  처리할 이벤트의 경우 DISPID 합니다.  
   
  `elemName`  
- `LPCWSTR` 보유 이벤트 소싱 HTML 요소의 ID 또는 **NULL** 문서 이벤트를 처리 합니다.  
+ `LPCWSTR` 이벤트 소싱 HTML 요소의 ID를 보유 하거나 **NULL** 문서 이벤트를 처리 합니다.  
   
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
@@ -207,7 +207,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -230,7 +230,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -317,7 +317,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -397,7 +397,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -418,7 +418,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -438,7 +438,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -458,7 +458,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -545,7 +545,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -567,7 +567,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -589,7 +589,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -677,7 +677,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -699,7 +699,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -721,7 +721,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -743,7 +743,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -765,7 +765,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -787,7 +787,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
  `memberFxn`  
  이벤트에 대 한 처리기 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 항목을 추가 하는 [DHTML 이벤트 맵](#begin_dhtml_event_map_inline) 클래스에 있습니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -859,7 +859,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
  
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  배치 `BEGIN_DHTML_URL_EVENT_MAP` 의 구현 파일에서 프로그램 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-클래스를 파생 합니다. 사용 하 여 수행 [DHTML 이벤트 맵 포함](#begin_embed_dhtml_event_map) 및 [URL 항목](#begin_url_entries), 한 다음 사용 하 여 닫습니다 [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)합니다. 포함 된 [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) 클래스 정의 내 매크로입니다.  
   
 ### <a name="example"></a>예제  
@@ -883,8 +883,8 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
  *맵 이름*  
  이벤트를 매핑하려면이 페이지를 지정 합니다. 일치 *맵 이름* 에 [URL_EVENT_ENTRY](#url_event_entry) 매크로 실제로 URL 또는 HTML 리소스를 정의 합니다.  
   
-### <a name="remarks"></a>주의  
- DHTML 이벤트를 발생 시킬 수 있으며 각, 여러 HTML 페이지, 다중 페이지 DHTML 대화 상자 구성 때문에 포함 된 이벤트 맵 페이지 별로 처리기에 이벤트를 매핑할 사용 됩니다.  
+### <a name="remarks"></a>설명  
+ DHTML 이벤트를 발생 시킬 수 있으며 각, 여러 HTML 페이지, 다중 페이지 DHTML 대화 상자 구성 때문에 포함 된 이벤트 맵 페이지 별로 대 한 처리기에 이벤트를 매핑할 사용 됩니다.  
   
  DHTML 및 URL 이벤트 맵 내 임베디드 이벤트 맵 이루어져는 `BEGIN_EMBED_DHTML_EVENT_MAP` 매크로 뒤 [DHTML_EVENT](#dhtml_event) 매크로 및 [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) 매크로입니다.  
   
@@ -908,7 +908,7 @@ BEGIN_URL_ENTRIES(className)
  `className`  
  URL 이벤트 항목 맵을 포함하는 클래스의 이름입니다. 이 클래스에서 직접 또는 간접적으로 파생 해야 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)합니다. URL 이벤트 항목 맵은 내부에 있어야 합니다.는 [DHTML 및 URL 이벤트 맵](#begin_dhtml_url_event_map)).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  다중 페이지 DHTML 대화 상자는 여러 HTML 페이지로 구성 됩니다, 때문에 URL 이벤트 항목은 매핑하는 데 사용 Url 또는 HTML 리소스를 해당 [DHTML 이벤트 맵 포함](#begin_embed_dhtml_event_map)합니다. 배치 `URL_EVENT_ENTRY` 간에 매크로 `BEGIN_URL_ENTRIES` 및 [END_URL_ENTRIES](#end_url_entries) 매크로입니다.  
   
 ### <a name="example"></a>예제  
@@ -996,7 +996,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
  *맵 이름*  
  URL이 페이지를 지정 *url*합니다. 일치 *맵 이름* 에 [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) 이 페이지에서 이벤트를 매핑하는 매크로입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  HTML 리소스 페이지인 경우 *url* 리소스의 ID 번호 (즉, "123", 하지 123 또는 ID_HTMLRES1)의 문자열 표현 이어야 합니다.  
   
  페이지 식별자 *맵 이름*는 연결 하는 데 사용 되는 임의의 기호 DHTML 이벤트 맵 URL 이벤트 항목 맵에 포함 된 합니다. 이 작업은 DHTML 및 URL 이벤트 맵으로 범위가 제한 됩니다.  
@@ -1016,7 +1016,7 @@ DHTML 이벤트 맵의 끝을 표시 합니다.
 END_DHTML_EVENT_MAP_INLINE( )    
 ```  
    
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  와 함께에서 사용 해야 [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)합니다.  
    
 ### <a name="requirements"></a>요구 사항  

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>컴파일러 오류 C2440
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>예제  
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-2017 및 이후 버전의 visual Studio에는 올바르게 Visual Studio 2015에서 하지 되었으나 및 충돌 될 수는 이니셜라이저 목록을 사용 하 여 개체 만들기와 관련 된 컴파일러 오류가 발생 하거나 런타임 동작을 정의 되지 않았습니다. N4594 13.3.1.7p1에 따라 copy-list-initialization에서 컴파일러는 오버로드 확인을 위해 명시적 생성자를 고려해야 하지만 실제로 오버로드가 선택되면 오류를 발생시켜야 합니다.
-다음 두 가지 예제는 Visual Studio 2015에서 컴파일되지만 Visual Studio 2017에서 컴파일되지 않습니다.
+2017 및 이후 버전의 visual Studio에는 올바르게 Visual Studio 2015에서 하지 되었으나 및 충돌 될 수는 이니셜라이저 목록을 사용 하 여 개체 만들기와 관련 된 컴파일러 오류가 발생 하거나 런타임 동작을 정의 되지 않았습니다. C + + 17 복사 목록-초기화, 컴파일러는 오버 로드 확인에 대 한 명시적 생성자를 고려해 야 하는 데 필요 하지만 오버 로드 하는 실제로 선택 하는 경우 오류가 발생 합니다.
 
-```
+다음 예제에서는 Visual Studio 2017 있지만 Visual Studio 2015에 컴파일합니다.
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+오류를 수정하려면 직접 초기화를 사용합니다.  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-오류를 수정하려면 직접 초기화를 사용합니다.
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>예제
 ### <a name="cv-qualifiers-in-class-construction"></a>클래스 생성의 cv 한정자
 
 Visual Studio 2015에서는 컴파일러가 생성자 호출을 통해 클래스 개체를 생성할 때 cv 한정자를 잘못 무시하는 경우가 있습니다. 이로 인해 잠재적으로 크래시 또는 예기치 않은 런타임 동작이 발생할 수 있습니다. 다음 예제에서는 Visual Studio 2015에서 컴파일하지만 이상 Visual Studio 2017에서 컴파일러 오류를 발생 시킵니다.
 
-```
+```cpp
 struct S 
 {
     S(int);

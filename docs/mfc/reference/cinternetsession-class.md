@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 클래스
@@ -94,12 +94,12 @@ class CInternetSession : public CObject
 |----------|-----------------|  
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|현재 인터넷 세션에 대 한 핸들입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  인터넷 연결 응용 프로그램의 기간에 대 한 존재 해야 하는 경우 만들 수 있습니다는 `CInternetSession` 클래스의 멤버 [CWinApp](../../mfc/reference/cwinapp-class.md)합니다.  
   
  호출할 수 인터넷 세션을 설정 하 고 나면 [OpenURL](#openurl)합니다. `CInternetSession`다음 전역 함수를 호출 하 여 사용자에 대 한 URL을 구문 분석 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)합니다. 해당 프로토콜 종류에 관계 없이 `CInternetSession` URL을 해석 하 고를 관리 합니다. 지정 된 "file://" URL 리소스를 식별 하는 로컬 파일에 대 한 요청을 처리할 수입니다. `OpenURL`에 대 한 포인터를 반환 합니다는 [CStdioFile](../../mfc/reference/cstdiofile-class.md) 개체를 전달 하는 경우 이름을 로컬 파일입니다.  
   
- 사용 하 여 인터넷 서버에서 URL을 열면 `OpenURL`, 사이트에서 정보를 읽을 수 있습니다. 서버에 있는 파일에서 (예: HTTP, FTP, 또는 gopher) 용 서비스 관련 작업을 수행 하려는 경우 해당 서버에서 적절 한 연결을 설정 해야 합니다. 특정 종류의 특정 서비스에 직접 연결을 열려면 다음 멤버 함수 중 하나를 사용 합니다.  
+ 사용 하 여 인터넷 서버에는 URL을 열 경우 `OpenURL`, 사이트에서 정보를 읽을 수 있습니다. 서버에 있는 파일에서 (예: HTTP, FTP, 또는 gopher) 용 서비스 관련 작업을 수행 하려는 경우 해당 서버에서 적절 한 연결을 설정 해야 합니다. 특정 종류의 특정 서비스에 직접 연결을 열려면 다음 멤버 함수 중 하나를 사용 합니다.  
   
 - [GetGopherConnection](#getgopherconnection) gopher 서비스에 연결 합니다.  
   
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>주의  
  **CInternetSession** 함수인는 첫 번째 인터넷 응용 프로그램에서 호출 합니다. 내부 데이터 구조를 초기화 하 고 응용 프로그램의 이후 호출에 대해 준비 합니다.  
   
- 인터넷 연결을 열 수 있는, `CInternetSession` throw 한 [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)합니다.  
+ 인터넷 연결을 열 수 있는, `CInternetSession` throw 한 [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)합니다.  
   
 ### <a name="example"></a>예제  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  상태 콜백이 처리할 때는 응용 프로그램의 상태 표시줄에 (예: 이름 확인, 서버 및 기타 등등에 연결) 작업의 진행률에 대 한 상태를 제공할 수 있습니다. 장기 작업 하는 동안 작업 상태 표시는 특히이 좋습니다.  
   
  콜백을 요청의 처리 중에 발생 하기 때문에 응용 프로그램 네트워크에 데이터 처리량의 성능 저하를 방지 하기 위해 콜백에서 가능한 최소한의 시간을 할애 해야 합니다. 예를 들어 콜백에서 대화 상자를 배치 이러한 긴 작업 서버 종료 요청을 수 있습니다.  
@@ -219,8 +219,8 @@ DWORD_PTR GetContext() const;
 ### <a name="return-value"></a>반환 값  
  응용 프로그램 정의 컨텍스트 식별자입니다.  
   
-### <a name="remarks"></a>주의  
- [OnStatusCallback](#onstatuscallback) 에서 반환 된 컨텍스트 ID를 사용 하 여 **GetContext** 특정 응용 프로그램의 상태를 보고 합니다. 예를 들어, 사용자 상태 정보를 반환 하는 인터넷 요청을 활성화할 때 상태 콜백이 해당 특정 요청에서 상태 보고 컨텍스트 ID를 사용 합니다. 사용자가 두 개의 별도 활성화 하는 경우 인터넷 요청 상태 정보를 반환 둘 다 포함 `OnStatusCallback` 컨텍스트 식별자를 사용 하 여 해당 요청에 대 한 상태를 반환 합니다. 따라서 모든 상태 콜백 작업에 대 한 컨텍스트 식별자를 사용 하 고 세션은 세션이 종료 될 때까지 연관 된 합니다.  
+### <a name="remarks"></a>설명  
+ [OnStatusCallback](#onstatuscallback) 에서 반환 된 컨텍스트 ID를 사용 하 여 **GetContext** 특정 응용 프로그램의 상태를 보고 합니다. 예를 들어, 사용자 상태 정보를 반환 하는 인터넷 요청을 활성화할 때 상태 콜백 해당 특정 요청에서 상태 보고 컨텍스트 ID를 사용 합니다. 사용자가 두 개의 별도 활성화 하는 경우 인터넷 요청 상태 정보를 반환 둘 다 포함 `OnStatusCallback` 컨텍스트 식별자를 사용 하 여 해당 요청에 대 한 상태를 반환 합니다. 따라서 모든 상태 콜백 작업에 대 한 컨텍스트 식별자를 사용 하 고 세션은 세션이 종료 될 때까지 연관 된 합니다.  
   
  비동기 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다.  
   
@@ -259,7 +259,7 @@ static BOOL GetCookie(
   
 - **ERROR_NO_MORE_ITEMS** 지정된 된 URL에 대 한 쿠키가 없는 모든 부모입니다.  
   
-- **ERROR_INSUFFICIENT_BUFFER** 전달 된 값 `dwBufLen` 모든 쿠키 데이터를 복사 하기에 부족 합니다. 반환 된 값 `dwBufLen` 버퍼의 크기를 모든 데이터를 사용 하는 데 필요한입니다.  
+- **ERROR_INSUFFICIENT_BUFFER** 전달 된 값 `dwBufLen` 모든 쿠키 데이터를 복사 하기에 부족 합니다. 반환 된 값 `dwBufLen` 모든 데이터를 가져와야 하는 버퍼의 크기는 합니다.  
   
 ### <a name="remarks"></a>주의  
  두 번째 오버 로드에서 MFC에 제공 된 쿠키 데이터를 검색 `CString` 개체입니다.  
@@ -324,7 +324,7 @@ CFtpConnection* GetFtpConnection(
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  `GetFtpConnection`FTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 **CFTPConnection** 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 파일에 쓰거나 읽을 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 FTP 연결 작업을 수행 합니다.  
   
 ### <a name="example"></a>예제  
@@ -425,7 +425,7 @@ virtual void OnStatusCallback(
  `dwStatusInformationLength`  
  `lpvStatusInformation`의 크기입니다.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  호출 해야 [EnableStatusCallback](#enablestatuscallback) 상태 콜백 기능을 활용할 수 있습니다.  
   
  `dwInternetStatus` 매개 변수 수행 되는 작업을 나타내며의 내용을 결정 `lpvStatusInformation` 됩니다. `dwStatusInformationLength`에 포함 된 데이터의 길이 나타냅니다 `lpvStatusInformation`합니다. 다음 상태에 대 한 값 `dwInternetStatus` ´ ï ´ ù.  
@@ -448,7 +448,7 @@ virtual void OnStatusCallback(
  상태 콜백 루틴을 수행 하기 전에 특별 한 조치를 요구 하려면이 멤버 함수를 재정의 합니다.  
   
 > [!NOTE]
->  상태 콜백이 스레드 상태 보호가 필요 합니다. MFC 공유 라이브러리를 사용 하는 경우 재정의의 시작 부분에 다음 줄을 추가 합니다.  
+>  상태 콜백 스레드 상태 보호가 필요 합니다. MFC 공유 라이브러리를 사용 하는 경우 재정의의 시작 부분에 다음 줄을 추가 합니다.  
   
  [!code-cpp[NVC_MFCHtmlHttp # 8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
   
@@ -508,7 +508,7 @@ CStdioFile* OpenURL(
 |gopher://|**CGopherFile\***|  
 |ftp: / /|**CInternetFile\***|  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  매개 변수 `dwFlags` 하나를 포함 해야 **INTERNET_FLAG_TRANSFER_ASCII** 또는 **INTERNET_FLAG_TRANSFER_BINARY**, 둘 중 하나입니다. 나머지 플래그 비트와 결합할 수 있습니다 `OR` 연산자 ( **|**).  
   
  `OpenURL`Win32 함수를 래핑하는 **InternetOpenURL**만 다운로드, 검색 및 인터넷 서버에서 데이터 읽기를 허용 합니다. `OpenURL`no 필요 없는 파일 조작 원격 위치에서 허용 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 개체입니다.  
@@ -545,7 +545,7 @@ static BOOL SetCookie(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 하면 또는 **FALSE** 그렇지 않은 경우. 특정 오류 코드를 가져오려면 호출 **GetLastError 합니다.**  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>주의  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
   
 ##  <a name="setoption"></a>CInternetSession::SetOption  

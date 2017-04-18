@@ -1,49 +1,66 @@
 ---
 title: "컴파일러 오류 C2084 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2084"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2084"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2084
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2084
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 653dc7a4a5d330efc89942fbe4ddd07bff81f770
+ms.lasthandoff: 04/12/2017
 
-'function' 함수에 이미 본문이 있습니다.  
+---
+# <a name="compiler-error-c2084"></a>컴파일러 오류 C2084
+함수 '*함수*' 이미 본문이  
   
- 함수가 이미 정의되었습니다.  
+ 함수가 이미 정의 되었습니다.  
   
- 이전 버전의 Visual C\+\+에서는  
+ 버전의 Visual Studio 2002 년 이전 Visual c + +  
   
--   추가 정의를 사용할 수 없는 경우에도 컴파일러에서 실제로는 형식이 같은 복수 템플릿 특수화를 허용했습니다.  이제는 컴파일러에서 이러한 복수 정의를 발견할 수 있습니다.  
+-   하지만 추가 정의 사용할 수 없는 컴파일러는 동일한 실제 형식으로 확인 하는 여러 템플릿 특수화를 수락 합니다. 이제 컴파일러는 이러한 여러 정의 검색 합니다.  
   
--   \_\_int32와 int가 별도의 형식으로 간주되었습니다.  이제는 컴파일러에서 \_\_int32를 int의 동의어로 간주합니다.  따라서 함수가 \_\_int32와 int 둘 다에 대해 오버로드된 경우에는 컴파일러에서 복수 정의를 발견하고 오류를 발생시킵니다.  
+-   `__int32`및 `int` 별도 형식으로 간주 되었습니다. 컴파일러가 이제 처리 `__int32` 동의어로 `int`합니다. 즉, 컴파일러는 함수는 모두에 대해 오버 로드 하는 경우 정의가 여러 개 검색 하는지 `__int32` 및 `int` 오류가 발생 합니다.  
   
- 다음 샘플에서는 C2084 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2084 오류가 생성 됩니다.  
   
-```  
+```cpp  
 // C2084.cpp  
 void Func(int);  
 void Func(int) {}   // define function  
 void Func(int) {}   // C2084 second definition  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+이 오류를 해결 하려면 중복 정의 제거 합니다.  
   
 ```  
 // C2084b.cpp  
