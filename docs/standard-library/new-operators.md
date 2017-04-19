@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::operator delete
+- new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
@@ -21,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[operator delete](#operator_delete)|[operator delete[]](#operator_delete_arr)|[operator new](#operator_new)|  
 |[operator new[]](#operator_new_arr)|  
   
-##  <a name="a-nameoperatordeletea--operator-delete"></a><a name="operator_delete"></a>  operator delete  
+##  <a name="operator_delete"></a>  operator delete  
  개별 개체에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.  
   
 ```
@@ -50,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>예제  
   `operator delete`를 사용하는 예제는 [operator new](../standard-library/new-operators.md#operator_new)를 참조하세요.  
   
-##  <a name="a-nameoperatordeletearra--operator-delete"></a><a name="operator_delete_arr"></a>  operator delete[]  
+##  <a name="operator_delete_arr"></a>  operator delete[]  
  개체 배열에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.  
   
 ```
@@ -77,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>예제  
   `operator delete[]` 사용 방법의 예제는 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)를 참조하세요.  
   
-##  <a name="a-nameoperatornewa--operator-new"></a><a name="operator_new"></a>  operator new  
+##  <a name="operator_new"></a>  operator new  
  개별 개체에 대해 저장소를 할당하기 위해 new 식에서 호출되는 함수입니다.  
   
 ```
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatornewarra--operator-new"></a><a name="operator_new_arr"></a>  operator new[]  
+##  <a name="operator_new_arr"></a>  operator new[]  
  개체 배열에 대해 저장소를 할당하기 위해 new 식에서 호출되는 할당 함수입니다.  
   
 ```

@@ -10,24 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - weak_ptr
-- std::weak_ptr
 - memory/std::weak_ptr
-- std::weak_ptr::element_type
 - memory/std::weak_ptr::element_type
-- std::weak_ptr::expired
 - memory/std::weak_ptr::expired
-- std::weak_ptr::lock
 - memory/std::weak_ptr::lock
-- std::weak_ptr::owner_before
 - memory/std::weak_ptr::owner_before
-- std::weak_ptr::reset
 - memory/std::weak_ptr::reset
-- std::weak_ptr::swap
 - memory/std::weak_ptr::swap
-- std::weak_ptr::use_count
 - memory/std::weak_ptr::use_count
-- std::weak_ptr::operator=
 - memory/std::weak_ptr::operator=
+- memory/std::weak_ptr::element_type
+- memory/std::weak_ptr::expired
+- memory/std::weak_ptr::lock
+- memory/std::weak_ptr::owner_before
+- memory/std::weak_ptr::reset
+- memory/std::weak_ptr::swap
+- memory/std::weak_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +126,7 @@ public:
   
  **네임스페이스:** std  
   
-##  <a name="a-nameweakptrelementtypea--elementtype"></a><a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="weak_ptr__element_type"></a>  element_type  
  요소의 형식입니다.  
   
 ```  
@@ -163,7 +161,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="a-nameweakptrexpireda--expired"></a><a name="weak_ptr__expired"></a>  expired  
+##  <a name="weak_ptr__expired"></a>  expired  
  소유권이 만료되었는지 테스트합니다.  
   
 ```  
@@ -219,7 +217,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptrlocka--lock"></a><a name="weak_ptr__lock"></a>  lock  
+##  <a name="weak_ptr__lock"></a>  lock  
  리소스의 단독 소유권을 가져옵니다.  
   
 ```  
@@ -275,7 +273,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptroperatoreqa--operator"></a><a name="weak_ptr__operator_eq"></a>  operator=  
+##  <a name="weak_ptr__operator_eq"></a>  operator=  
  소유하는 리소스를 대체합니다.  
   
 ```  
@@ -334,7 +332,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="a-nameweakptrownerbeforea--ownerbefore"></a><a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="weak_ptr__owner_before"></a>  owner_before  
  이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.  
   
 ```  
@@ -352,7 +350,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>설명  
  템플릿 구성원 함수는 `*this`가 `ordered before``ptr`이면 `true`를 반환합니다.  
   
-##  <a name="a-nameweakptrreseta--reset"></a><a name="weak_ptr__reset"></a>  reset  
+##  <a name="weak_ptr__reset"></a>  reset  
  소유하는 리소스를 해제합니다.  
   
 ```  
@@ -393,7 +391,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="a-nameweakptrswapa--swap"></a><a name="weak_ptr__swap"></a>  swap  
+##  <a name="weak_ptr__swap"></a>  swap  
  두 `weak_ptr` 개체를 교환합니다.  
   
 ```  
@@ -461,7 +459,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameweakptrusecounta--usecount"></a><a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="weak_ptr__use_count"></a>  use_count  
  지정된 `shared_ptr` 개체 수를 계산합니다.  
   
 ```  
@@ -500,7 +498,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="a-nameweakptrweakptra--weakptr"></a><a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
  `weak_ptr`를 생성합니다.  
   
 ```  

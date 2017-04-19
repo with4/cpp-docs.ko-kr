@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::nothrow
+- new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="a-namenothrowa--nothrow"></a><a name="nothrow"></a>  nothrow  
+##  <a name="nothrow"></a>  nothrow  
  **new** 및 **delete**의 `nothrow` 버전에 대한 인수로 사용할 개체를 제공합니다.  
   
 ```  
@@ -33,7 +36,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="example"></a>예제  
   `std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#operator_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)를 참조하세요.  
   
-##  <a name="a-namesetnewhandlera--setnewhandler"></a><a name="set_new_handler"></a>  set_new_handler  
+##  <a name="set_new_handler"></a>  set_new_handler  
  `operator new`가 메모리 할당 시도에 실패할 때 호출되는 사용자 함수를 설치합니다.  
   
 ```  

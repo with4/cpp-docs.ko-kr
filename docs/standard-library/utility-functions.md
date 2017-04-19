@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get 함수 &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a>  exchange  
+##  <a name="exchange"></a>  exchange  
  **(C++14)** 개체에 새 값을 할당하고 이전 값을 반환합니다.  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  인수가 rvalue 또는 rvalue 참조인 경우 rvalue 참조에 대한 해당 인수를 조건적으로 캐스팅합니다. 그러면 인수의 rvalue 특성이 전달 함수로 복원되어 완벽하게 전달됩니다.  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  오버로드 해결을 수행하기 위해 인수의 원래 값의 rvalue 특성을 복원하는 것을 *완벽한 전달*이라고 합니다. 완벽한 전달을 사용하면 템플릿 함수에서 참조 형식의 인수를 허용하고 올바른 오버로드 해결을 위해 필요할 때 rvalue 특성을 복원할 수 있습니다. 완벽한 전달을 수행하면 rvalue에 대해 이동 의미 체계를 보존하고 인수의 참조 형식만 다른 함수의 오버로드를 제공하지 않아도 됩니다.  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>  get  
+##  <a name="get"></a>  get  
  인덱스 위치 또는 형식을 기준으로 `pair` 개체에서 요소를 가져옵니다.  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  `pair` 형식의 개체를 만드는 데 사용할 수 있는 템플릿 함수. 여기서 구성 요소 형식은 매개 변수로 전달된 데이터 형식을 기준으로 자동 선택됩니다.  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>예제  
   도우미 함수 `make_pair`를 사용하여 쌍을 선언하고 초기화하는 방법을 알아보려면 [pair 구조체](../standard-library/pair-structure.md)를 참조하세요.  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  무조건 인수를 rvalue 참조로 캐스트합니다. 따라서 형식이 이동 가능할 경우 이동 가능하다는 신호를 줍니다.  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  `Arg`에 전달된 값이 lvalue인 경우, 즉 이름이 있거나 주소를 가져올 수 있는 경우, 이동이 발생하면 무효화됩니다. 이동 이후에는 이름 또는 주소로 `Arg`에 전달된 값을 참조하지 마세요.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  두 [pair 구조체](../standard-library/pair-structure.md) 개체의 요소를 교환합니다.  
   
 ```

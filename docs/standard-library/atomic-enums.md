@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 caps.latest.revision: 11
 manager: ghogen
@@ -17,7 +18,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; enums
   
-##  <a name="a-namememoryorderenuma--memoryorder-enum"></a><a name="memory_order_enum"></a>  memory_order Enum  
+##  <a name="memory_order_enum"></a>  memory_order Enum  
  메모리 위치에서 동기화 연산에 대한 기호 이름을 제공합니다. 이러한 연산은 하나의 스레드의 할당이 다른 스레드에 표시될 방법에 영향을 미칩니다.  
   
 ```

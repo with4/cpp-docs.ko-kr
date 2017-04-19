@@ -11,8 +11,10 @@ ms.topic: article
 f1_keywords:
 - iterator/checked_array_iterator
 - checked_array_iterator
-- std::checked_array_iterator
-- std.checked_array_iterator
+- iterator/stdext::checked_array_iterator::difference_type
+- iterator/stdext::checked_array_iterator::pointer
+- iterator/stdext::checked_array_iterator::reference
+- iterator/stdext::checked_array_iterator::base
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +206,7 @@ int main()
   
  **네임스페이스:** stdext  
   
-##  <a name="a-namecheckedarrayiteratorbasea--checkedarrayiteratorbase"></a><a name="checked_array_iterator__base"></a>  checked_array_iterator::base  
+##  <a name="checked_array_iterator__base"></a>  checked_array_iterator::base  
  `checked_array_iterator`에서 기본 반복기를 복구합니다.  
   
 ```
@@ -245,7 +247,7 @@ The iterator underlying rpos is bpos & it points to: 1.
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratorcheckedarrayiteratora--checkedarrayiteratorcheckedarrayiterator"></a><a name="checked_array_iterator__checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator  
+##  <a name="checked_array_iterator__checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator  
  기본 반복기에서 기본 `checked_array_iterator` 또는 `checked_array _iterator`를 생성합니다.  
   
 ```
@@ -306,7 +308,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratordifferencetypea--checkedarrayiteratordifferencetype"></a><a name="checked_array_iterator__difference_type"></a>  checked_array_iterator::difference_type  
+##  <a name="checked_array_iterator__difference_type"></a>  checked_array_iterator::difference_type  
  동일한 컨테이너 안에서 요소를 참조하는 두 `checked_array_iterator` 사이의 차이를 제공하는 형식입니다.  
   
 ```
@@ -320,7 +322,7 @@ typedef typename iterator_traits<_Iterator>::difference_type difference_type;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratoroperatoreqeqa--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_eq_eq"></a>  checked_array_iterator::operator==  
+##  <a name="checked_array_iterator__operator_eq_eq"></a>  checked_array_iterator::operator==  
  두 `checked_array_iterator`가 같은지 테스트합니다.  
   
 ```
@@ -373,7 +375,7 @@ checked_array_iterators are not equal
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatorneqa--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_neq"></a>  checked_array_iterator::operator!=  
+##  <a name="checked_array_iterator__operator_neq"></a>  checked_array_iterator::operator!=  
  두 `checked_array_iterator`가 다른지 테스트합니다.  
   
 ```
@@ -426,7 +428,7 @@ checked_array_iterators are not equal
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatorlta--checkedarrayiteratoroperatorlt"></a><a name="checked_array_iterator__operator_lt_"></a>  checked_array_iterator::operator&lt;  
+##  <a name="checked_array_iterator__operator_lt_"></a>  checked_array_iterator::operator&lt;  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 작은지 테스트합니다.  
   
 ```
@@ -479,7 +481,7 @@ checked_output_iterator2 is less than checked_output_iterator
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatorgta--checkedarrayiteratoroperatorgt"></a><a name="checked_array_iterator__operator_gt_"></a>  checked_array_iterator::operator&gt;  
+##  <a name="checked_array_iterator__operator_gt_"></a>  checked_array_iterator::operator&gt;  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 큰지 테스트합니다.  
   
 ```
@@ -495,7 +497,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratoroperatorlteqa--checkedarrayiteratoroperatorlt"></a><a name="checked_array_iterator__operator_lt__eq"></a>  checked_array_iterator::operator&lt;=  
+##  <a name="checked_array_iterator__operator_lt__eq"></a>  checked_array_iterator::operator&lt;=  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 작거나 같은지 테스트합니다.  
   
 ```
@@ -511,7 +513,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratoroperatorgteqa--checkedarrayiteratoroperatorgt"></a><a name="checked_array_iterator__operator_gt__eq"></a>  checked_array_iterator::operator&gt;=  
+##  <a name="checked_array_iterator__operator_gt__eq"></a>  checked_array_iterator::operator&gt;=  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 크거나 같은지 테스트합니다.  
   
 ```
@@ -564,7 +566,7 @@ checked_output_iterator2 is less than checked_output_iterator
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatorstara--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_star"></a>  checked_array_iterator::operator*  
+##  <a name="checked_array_iterator__operator_star"></a>  checked_array_iterator::operator*  
  `checked_array_iterator`가 주소 지정하는 요소를 반환합니다.  
   
 ```
@@ -622,7 +624,7 @@ c[0].first = 10
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperator-gta--checkedarrayiteratoroperator-gt"></a><a name="checked_array_iterator__operator-_gt_"></a>  checked_array_iterator::operator-&gt;  
+##  <a name="checked_array_iterator__operator-_gt_"></a>  checked_array_iterator::operator-&gt;  
  `checked_array_iterator`가 주소 지정하는 요소로 포인터를 반환합니다.  
   
 ```
@@ -637,7 +639,7 @@ pointer operator->() const;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratoroperatoraddadda--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_add_add"></a>  checked_array_iterator::operator++  
+##  <a name="checked_array_iterator__operator_add_add"></a>  checked_array_iterator::operator++  
  `checked_array_iterator`를 다음 요소로 증가시킵니다.  
   
 ```
@@ -682,7 +684,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperator--a--checkedarrayiteratoroperator--"></a><a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--  
+##  <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--  
  `checked_array_iterator`를 이전 요소로 감소시킵니다.  
   
 ```
@@ -727,7 +729,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatoraddeqa--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_add_eq"></a>  checked_array_iterator::operator+=  
+##  <a name="checked_array_iterator__operator_add_eq"></a>  checked_array_iterator::operator+=  
  `checked_array_iterator`에 지정된 오프셋을 추가합니다.  
   
 ```
@@ -771,7 +773,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperatoradda--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_add"></a>  checked_array_iterator::operator+  
+##  <a name="checked_array_iterator__operator_add"></a>  checked_array_iterator::operator+  
  반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소를 주소 지정하는 새 `checked_array_iterator`를 반환합니다.  
   
 ```
@@ -815,7 +817,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperator-eqa--checkedarrayiteratoroperator-"></a><a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=  
+##  <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=  
  `checked_array_iterator`에서 지정된 오프셋을 감소시킵니다.  
   
 ```
@@ -860,7 +862,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratoroperator-a--checkedarrayiteratoroperator-"></a><a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-  
+##  <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-  
  반복기에서 오프셋을 감소시키고 새로운 오프셋 위치에서 삽입된 요소를 주소 지정하는 새로운 `checked_array_iterator`를 반환합니다.  
   
 ```
@@ -881,7 +883,7 @@ difference_type operator-(const checked_array_iterator& right) const;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratoroperatorata--checkedarrayiteratoroperator"></a><a name="checked_array_iterator__operator_at"></a>  checked_array_iterator::operator[]  
+##  <a name="checked_array_iterator__operator_at"></a>  checked_array_iterator::operator[]  
  `checked_array_iterator`에서 주소 지정하는 요소의 요소 오프셋으로 지정된 위치 수만큼 참조를 반환합니다.  
   
 ```
@@ -927,7 +929,7 @@ int main() {
 *\  
 ```  
   
-##  <a name="a-namecheckedarrayiteratorpointera--checkedarrayiteratorpointer"></a><a name="checked_array_iterator__pointer"></a>  checked_array_iterator::pointer  
+##  <a name="checked_array_iterator__pointer"></a>  checked_array_iterator::pointer  
  `checked_array_iterator`로 주소를 지정하는 요소에 포인터를 제공하는 형식입니다.  
   
 ```
@@ -939,7 +941,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
   
  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-##  <a name="a-namecheckedarrayiteratorreferencea--checkedarrayiteratorreference"></a><a name="checked_array_iterator__reference"></a>  checked_array_iterator::reference  
+##  <a name="checked_array_iterator__reference"></a>  checked_array_iterator::reference  
  `checked_array_iterator`로 주소를 지정하는 요소에 참조를 제공하는 형식입니다.  
   
 ```

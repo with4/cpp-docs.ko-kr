@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- exception/std::current_exception
+- exception/std::get_terminate
+- exception/std::get_unexpected
+- exception/std::make_exception_ptr
+- exception/std::rethrow_exception
+- exception/std::set_terminate
+- exception/std::set_unexpected
+- exception/std::terminate
+- exception/std::uncaught_exception
+- exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
 caps.latest.revision: 12
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|  
 |[unexpected](#unexpected)|  
   
-##  <a name="a-namecurrentexceptiona--currentexception"></a><a name="current_exception"></a>  current_exception  
+##  <a name="current_exception"></a>  current_exception  
  현재 예외에 대한 스마트 포인터를 가져옵니다.  
   
 ```cpp  
@@ -42,7 +53,7 @@ exception_ptr current_exception();
   
  `current_exception` 수식에 대한 연속 호출은 현재 예외 건의 다른 복사본을 뜻하는 `exception_ptr` 개체를 반환합니다. 따라서 개체는 복사본에 같은 이진 값이 있더라도 다른 복사본을 참조하기 때문에 같지 않은 것으로 비교합니다.  
   
-##  <a name="a-namemakeexceptionptra--makeexceptionptr"></a><a name="make_exception_ptr"></a>  make_exception_ptr  
+##  <a name="make_exception_ptr"></a>  make_exception_ptr  
  예외 복사본이 들어 있는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 개체를 생성합니다.  
   
 ```cpp  
@@ -62,7 +73,7 @@ exception_ptr make_exception_ptr(E Except);
   
  응용 프로그램에는 일반적으로 `make_exception_ptr` 함수가 필요하지 않으며 이 함수를 사용하지 않는 것이 좋습니다.  
   
-##  <a name="a-namerethrowexceptiona--rethrowexception"></a><a name="rethrow_exception"></a>  rethrow_exception  
+##  <a name="rethrow_exception"></a>  rethrow_exception  
  매개 변수로 전달되는 예외를 throw합니다.  
   
 ```cpp  
@@ -76,14 +87,14 @@ void rethrow_exception(exception_ptr P);
 ### <a name="remarks"></a>설명  
  `exception_ptr` 개체에서 catch된 예외를 저장한 후 기본 스레드에서 개체를 처리할 수 있습니다. 기본 스레드에서 `rethrow_exception` 개체와 함께 작동하는 `exception_ptr` 함수를 호출합니다. `rethrow_exception` 함수는 `exception_ptr` 개체에서 예외를 추출하고, 주 스레드의 컨텍스트에서 예외를 throw합니다.  
   
-##  <a name="a-namegetterminatea--getterminate"></a><a name="get_terminate"></a>  get_terminate  
+##  <a name="get_terminate"></a>  get_terminate  
  현재 `terminate_handler` 함수를 가져옵니다.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
-##  <a name="a-namesetterminatea--setterminate"></a><a name="set_terminate"></a>  set_terminate  
+##  <a name="set_terminate"></a>  set_terminate  
  프로그램을 종료할 때 호출할 새 `terminate_handler`를 설정합니다.  
   
 ```  
@@ -129,14 +140,14 @@ int main()
   
 ```  
   
-##  <a name="a-namegetunexpecteda--getunexpected"></a><a name="get_unexpected"></a>  get_unexpected  
+##  <a name="get_unexpected"></a>  get_unexpected  
  현재 `unexpected_handler` 함수를 가져옵니다.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
-##  <a name="a-namesetunexpecteda--setunexpected"></a><a name="set_unexpected"></a>  set_unexpected  
+##  <a name="set_unexpected"></a>  set_unexpected  
  예기치 않은 예외가 발생할 경우를 위해 새 `unexpected_handler`를 설정합니다.  
   
 ```  
@@ -181,7 +192,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameterminatea--terminate"></a><a name="terminate"></a>  terminate  
+##  <a name="terminate"></a>  terminate  
  종료 처리기를 호출합니다.  
   
 ```  
@@ -196,7 +207,7 @@ void terminate();
 ### <a name="example"></a>예제  
   **terminate** 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
   
-##  <a name="a-nameuncaughtexceptiona--uncaughtexception"></a><a name="uncaught_exception"></a>  uncaught_exception  
+##  <a name="uncaught_exception"></a>  uncaught_exception  
  throw된 예외가 현재 처리 중인 경우에만 `true`를 반환합니다.  
   
 ```  
@@ -259,7 +270,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0  
 ```  
   
-##  <a name="a-nameunexpecteda--unexpected"></a><a name="unexpected"></a>  unexpected  
+##  <a name="unexpected"></a>  unexpected  
  unexpected 처리기를 호출합니다.  
   
 ```  

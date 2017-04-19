@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - match_results
-- std::match_results
 - regex/std::match_results
 dev_langs:
 - C++
@@ -97,7 +96,7 @@ class match_results {
   
  **네임스페이스:** std  
   
-##  <a name="a-namematchresultsallocatortypea--matchresultsallocatortype"></a><a name="match_results__allocator_type"></a>  match_results::allocator_type  
+##  <a name="match_results__allocator_type"></a>  match_results::allocator_type  
  저장소 관리를 위한 할당자의 형식입니다.  
   
 ```  
@@ -216,7 +215,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsbegina--matchresultsbegin"></a><a name="match_results__begin"></a>  match_results::begin  
+##  <a name="match_results__begin"></a>  match_results::begin  
  부분 일치 시퀀스의 시작을 지정합니다.  
   
 ```  
@@ -335,7 +334,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultschartypea--matchresultschartype"></a><a name="match_results__char_type"></a>  match_results::char_type  
+##  <a name="match_results__char_type"></a>  match_results::char_type  
  요소의 형식입니다.  
   
 ```  
@@ -454,7 +453,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsconstiteratora--matchresultsconstiterator"></a><a name="match_results__const_iterator"></a>  match_results::const_iterator  
+##  <a name="match_results__const_iterator"></a>  match_results::const_iterator  
  부분 일치에 대한 상수 반복기 형식입니다.  
   
 ```  
@@ -573,7 +572,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsconstreferencea--matchresultsconstreference"></a><a name="match_results__const_reference"></a>  match_results::const_reference  
+##  <a name="match_results__const_reference"></a>  match_results::const_reference  
  요소 const 참조의 형식입니다.  
   
 ```  
@@ -692,7 +691,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsdifferencetypea--matchresultsdifferencetype"></a><a name="match_results__difference_type"></a>  match_results::difference_type  
+##  <a name="match_results__difference_type"></a>  match_results::difference_type  
  반복기 차이의 형식입니다.  
   
 ```  
@@ -811,7 +810,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsemptya--matchresultsempty"></a><a name="match_results__empty"></a>  match_results::empty  
+##  <a name="match_results__empty"></a>  match_results::empty  
  부분 일치가 없는지 테스트합니다.  
   
 ```  
@@ -930,7 +929,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsenda--matchresultsend"></a><a name="match_results__end"></a>  match_results::end  
+##  <a name="match_results__end"></a>  match_results::end  
  부분 일치 시퀀스의 끝을 지정합니다.  
   
 ```  
@@ -1049,7 +1048,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsformata--matchresultsformat"></a><a name="match_results__format"></a>  match_results::format  
+##  <a name="match_results__format"></a>  match_results::format  
  부분 일치의 서식을 지정합니다.  
   
 ```  
@@ -1188,7 +1187,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsgetallocatora--matchresultsgetallocator"></a><a name="match_results__get_allocator"></a>  match_results::get_allocator  
+##  <a name="match_results__get_allocator"></a>  match_results::get_allocator  
  저장된 할당자를 반환합니다.  
   
 ```  
@@ -1307,7 +1306,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsiteratora--matchresultsiterator"></a><a name="match_results__iterator"></a>  match_results::iterator  
+##  <a name="match_results__iterator"></a>  match_results::iterator  
  부분 일치에 대한 반복기 형식입니다.  
   
 ```  
@@ -1426,7 +1425,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultslengtha--matchresultslength"></a><a name="match_results__length"></a>  match_results::length  
+##  <a name="match_results__length"></a>  match_results::length  
  부분 일치의 길이를 반환합니다.  
   
 ```  
@@ -1549,7 +1548,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsmatchresultsa--matchresultsmatchresults"></a><a name="match_results__match_results"></a>  match_results::match_results  
+##  <a name="match_results__match_results"></a>  match_results::match_results  
  개체를 생성합니다.  
   
 ```  
@@ -1677,7 +1676,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsmaxsizea--matchresultsmaxsize"></a><a name="match_results__max_size"></a>  match_results::max_size  
+##  <a name="match_results__max_size"></a>  match_results::max_size  
  부분 일치의 최대 수를 가져옵니다.  
   
 ```  
@@ -1796,7 +1795,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsoperatoreqa--matchresultsoperator"></a><a name="match_results__operator_eq"></a>  match_results::operator=  
+##  <a name="match_results__operator_eq"></a>  match_results::operator=  
  match_results 개체를 복사합니다.  
   
 ```  
@@ -1919,7 +1918,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsoperatorata--matchresultsoperator"></a><a name="match_results__operator_at"></a>  match_results::operator[]  
+##  <a name="match_results__operator_at"></a>  match_results::operator[]  
  하위 개체에 액세스합니다.  
   
 ```  
@@ -2042,7 +2041,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultspositiona--matchresultsposition"></a><a name="match_results__position"></a>  match_results::position  
+##  <a name="match_results__position"></a>  match_results::position  
  하위 그룹의 시작 오프셋을 가져옵니다.  
   
 ```  
@@ -2165,7 +2164,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsprefixa--matchresultsprefix"></a><a name="match_results__prefix"></a>  match_results::prefix  
+##  <a name="match_results__prefix"></a>  match_results::prefix  
  첫 번째 부분 일치 전의 시퀀스를 가져옵니다.  
   
 ```  
@@ -2284,7 +2283,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsreferencea--matchresultsreference"></a><a name="match_results__reference"></a>  match_results::reference  
+##  <a name="match_results__reference"></a>  match_results::reference  
  요소 참조의 형식입니다.  
   
 ```  
@@ -2403,7 +2402,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssizea--matchresultssize"></a><a name="match_results__size"></a>  match_results::size  
+##  <a name="match_results__size"></a>  match_results::size  
  부분 일치 수를 계산합니다.  
   
 ```  
@@ -2522,7 +2521,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssizetypea--matchresultssizetype"></a><a name="match_results__size_type"></a>  match_results::size_type  
+##  <a name="match_results__size_type"></a>  match_results::size_type  
  부분 일치 수의 형식입니다.  
   
 ```  
@@ -2641,7 +2640,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsstra--matchresultsstr"></a><a name="match_results__str"></a>  match_results::str  
+##  <a name="match_results__str"></a>  match_results::str  
  부분 일치 항목을 반환합니다.  
   
 ```  
@@ -2764,7 +2763,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsstringtypea--matchresultsstringtype"></a><a name="match_results__string_type"></a>  match_results::string_type  
+##  <a name="match_results__string_type"></a>  match_results::string_type  
  문자열의 형식입니다.  
   
 ```  
@@ -2883,7 +2882,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssuffixa--matchresultssuffix"></a><a name="match_results__suffix"></a>  match_results::suffix  
+##  <a name="match_results__suffix"></a>  match_results::suffix  
  마지막 부분 일치 후 시퀀스를 가져옵니다.  
   
 ```  
@@ -3002,7 +3001,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsswapa--matchresultsswap"></a><a name="match_results__swap"></a>  match_results::swap  
+##  <a name="match_results__swap"></a>  match_results::swap  
  두 match_results 개체를 바꿉니다.  
   
 ```  
@@ -3125,7 +3124,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsvaluetypea--matchresultsvaluetype"></a><a name="match_results__value_type"></a>  match_results::value_type  
+##  <a name="match_results__value_type"></a>  match_results::value_type  
  부분 일치의 형식입니다.  
   
 ```  

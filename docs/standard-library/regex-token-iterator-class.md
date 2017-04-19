@@ -10,31 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_token_iterator
-- std::regex_token_iterator
 - regex/std::regex_token_iterator
-- std::regex_token_iterator::regex_type
 - regex/std::regex_token_iterator::regex_type
-- std::regex_token_iterator::value_type
 - regex/std::regex_token_iterator::value_type
-- std::regex_token_iterator::iterator_category
 - regex/std::regex_token_iterator::iterator_category
-- std::regex_token_iterator::difference_type
 - regex/std::regex_token_iterator::difference_type
-- std::regex_token_iterator::pointer
 - regex/std::regex_token_iterator::pointer
-- std::regex_token_iterator::reference
 - regex/std::regex_token_iterator::reference
-- std::regex_token_iterator::operator==
 - regex/std::regex_token_iterator::operator==
-- std::regex_token_iterator::operator!=
 - regex/std::regex_token_iterator::operator!=
-- std::regex_token_iterator::operator*
 - regex/std::regex_token_iterator::operator*
-- std::regex_token_iterator::operator->
 - regex/std::regex_token_iterator::operator->
-- std::regex_token_iterator::operator++
 - regex/std::regex_token_iterator::operator++
-- std::regex_token_iterator::operator!=
 - regex/std::regex_token_iterator::operator!=
 dev_langs:
 - C++
@@ -127,7 +114,7 @@ private:
   
  **네임스페이스:** std  
   
-##  <a name="a-nameregextokeniteratordifferencetypea--regextokeniteratordifferencetype"></a><a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
+##  <a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
  반복기 차이의 형식입니다.  
   
 ```  
@@ -233,7 +220,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="a-nameregextokeniteratoriteratorcategorya--regextokeniteratoriteratorcategory"></a><a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
+##  <a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
  반복기 범주의 형식입니다.  
   
 ```  
@@ -343,7 +330,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatorneqa--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
+##  <a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
  반복기가 같지 않은지 비교합니다.  
   
 ```  
@@ -457,7 +444,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatorstara--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
+##  <a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
  지정된 부분 일치에 액세스합니다.  
   
 ```  
@@ -567,7 +554,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatoraddadda--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
+##  <a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
  반복기를 증가시킵니다.  
   
 ```  
@@ -681,7 +668,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatoreqeqa--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
+##  <a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
  반복기가 같은지 비교합니다.  
   
 ```  
@@ -795,7 +782,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperator-gta--regextokeniteratoroperator-gt"></a><a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
  지정된 부분 일치에 액세스합니다.  
   
 ```  
@@ -905,7 +892,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorpointera--regextokeniteratorpointer"></a><a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
+##  <a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
  일치 항목에 대한 포인터의 형식입니다.  
   
 ```  
@@ -1015,7 +1002,7 @@ match == z
 ### <a name="remarks"></a>설명  
  이 형식은 `sub_match<BidIt>*`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.  
   
-##  <a name="a-nameregextokeniteratorreferencea--regextokeniteratorreference"></a><a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
+##  <a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
  부분 일치에 대한 참조의 형식입니다.  
   
 ```  
@@ -1125,7 +1112,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorregextokeniteratora--regextokeniteratorregextokeniterator"></a><a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
  반복기를 생성합니다.  
   
 ```  
@@ -1267,7 +1254,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorregextypea--regextokeniteratorregextype"></a><a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
+##  <a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
  일치 항목을 찾을 정규식의 형식입니다.  
   
 ```  
@@ -1377,7 +1364,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorvaluetypea--regextokeniteratorvaluetype"></a><a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
+##  <a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
  부분 일치의 형식입니다.  
   
 ```  
