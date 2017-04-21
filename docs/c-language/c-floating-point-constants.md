@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>C 부동 소수점 상수
-"부동 소수점 상수"는 부호 있는 실수를 나타내는&10;진수 숫자입니다. 부호 있는 실수 표현에는 정수 부분, 분수 부분 및 지수가 포함됩니다. 부동 소수점 상수를 사용하여 변경할 수 없는 부동 소수점 값을 나타냅니다.  
+"부동 소수점 상수"는 부호 있는 실수를 나타내는 10진수 숫자입니다. 부호 있는 실수 표현에는 정수 부분, 분수 부분 및 지수가 포함됩니다. 부동 소수점 상수를 사용하여 변경할 수 없는 부동 소수점 값을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
  *floating-point-constant*:  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/24/2017
  &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign*: 다음 중 하나  
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence*:  
  &nbsp;&nbsp; *digit*  
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/24/2017
 25E-4     /* =  0.0025 */  
 ```  
   
- 부동 소수점 상수는 빼기 기호(**–**)가 앞에 없는 경우 양수입니다. 이 경우 빼기 기호는 단항 산술 부정 연산자로 처리됩니다. 부동 소수점 상수의 형식은 `float`, `double` 또는 `long double`입니다.  
+ 부동 소수점 상수는 빼기 기호(**-**)가 앞에 없는 경우 양수입니다. 이 경우 빼기 기호는 단항 산술 부정 연산자로 처리됩니다. 부동 소수점 상수의 형식은 `float`, `double` 또는 `long double`입니다.  
   
  **f**, **F**, **l** 또는 **L** 접미사가 없는 부동 소수점 상수는 `double` 형식입니다. 문자 **f** 또는 **F**가 접미사이면 상수 형식은 `float`입니다. 그 뒤에 문자 **l** 또는 **L**이 오는 경우 형식은 `long double`입니다. 예:  
   

@@ -1,99 +1,127 @@
 ---
-title: "_outp, _outpw, _outpd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_outpd"
-  - "_outp"
-  - "_outpw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr100.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_outpw"
-  - "_outpd"
-  - "_outp"
-  - "outpd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_outp 함수"
-  - "_outpd 함수"
-  - "_outpw 함수"
-  - "바이트, 포트에 쓰기"
-  - "2배 워드"
-  - "2배 워드, 포트에 쓰기"
-  - "outp 함수"
-  - "outpd 함수"
-  - "outpw 함수"
-  - "포트, 바이트 쓰기"
-  - "워드"
-  - "워드, 포트에 쓰기"
+title: _outp, _outpw, _outpd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _outpd
+- _outp
+- _outpw
+apilocation:
+- msvcrt.dll
+- msvcr100.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr110_clr0400.dll
+- msvcr110.dll
+- msvcr80.dll
+apitype: DLLExport
+f1_keywords:
+- _outpw
+- _outpd
+- _outp
+- outpd
+dev_langs:
+- C++
+helpviewer_keywords:
+- outpw function
+- words
+- _outpd function
+- outpd function
+- outp function
+- ports, writing bytes at
+- bytes, writing to ports
+- words, writing to ports
+- double words
+- double words, writing to ports
+- _outpw function
+- _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _outp, _outpw, _outpd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3411f2f902a3a7d4dc47a0d9fb00b5e970a1a876
+ms.lasthandoff: 04/01/2017
 
-포트에서 바이트\(`_outp`\), 워드\(`_outpw`\) 또는 2배 워드\(`_outpd`\)를 출력합니다.  
+---
+# <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
+포트에서 바이트(`_outp`), 워드(`_outpw`) 또는 2배 워드(`_outpd`)를 출력합니다.  
   
 > [!IMPORTANT]
 >  이러한 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-int _outp(unsigned short port,int databyte);unsigned short _outpw(unsigned short port,unsigned short dataword);unsigned long _outpd(unsigned short port,unsigned long dataword);  
+      int _outp(  
+unsigned short port,  
+int databyte   
+);  
+unsigned short _outpw(  
+unsigned short port,  
+unsigned short dataword   
+);  
+unsigned long _outpd(  
+unsigned short port,  
+unsigned long dataword   
+);  
 ```  
   
-#### 매개 변수  
- *포트*  
+#### <a name="parameters"></a>매개 변수  
+ *port*  
  포트 번호입니다.  
   
  *databyte, dataword*  
  출력 값입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  함수는 데이터 출력을 반환합니다. 반환되는 오류가 없습니다.  
   
-## 설명  
- `_outp`, `_outpw` 및 `_outpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 출력 포트에 씁니다.*port* 인수는 0\-65,535 범위에 속한 임의의 부호 없는 정수일 수 있고 *databyte*는 0–255 범위에 속한 임의의 정수일 수 있으며 *dataword*는 각각 정수, 부호 없는 정수\(Short\) 및 부호 없는 정수\(Long\) 범위에 속한 임의의 값일 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `_outp`, `_outpw`및 `_outpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 출력 포트에 씁니다. *port* 인수는 0-65,535 범위에 속한 임의의 부호 없는 정수일 수 있고 *databyte*는 0–255 범위에 속한 임의의 정수일 수 있으며 *dataword*는 각각 정수, 부호 없는 정수(Short) 및 부호 없는 정수(Long) 범위에 속한 임의의 값일 수 있습니다.  
   
- 이러한 함수는 I\/O 포트에 직접 쓰기 때문에 해당 함수를 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003의 사용자 코드에 사용할 수 없습니다. 이러한 운영 체제에서 I\/O 포트를 사용하는 방법에 대한 자세한 내용을 보려면 MSDN에서 "Win32의 직렬 통신"을 검색하십시오.  
+ 이러한 함수는 I/O 포트에 직접 쓰기 때문에 해당 함수를 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003의 사용자 코드에 사용할 수 없습니다. 이러한 운영 체제에서 I/O 포트를 사용하는 방법에 대한 자세한 내용을 보려면 MSDN에서 "Win32의 직렬 통신"을 검색하십시오.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_outp`|\<conio.h\>|  
-|`_outpw`|\<conio.h\>|  
-|`_outpd`|\<conio.h\>|  
+|-------------|---------------------|  
+|`_outp`|\<conio.h>|  
+|`_outpw`|\<conio.h>|  
+|`_outpd`|\<conio.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../c-runtime-library/crt-library-features.md)입니다.  
   
-## 참고 항목  
- [콘솔 및 포트 I\/O](../c-runtime-library/console-and-port-i-o.md)   
- [\_inp, \_inpw, \_inpd](../c-runtime-library/inp-inpw-inpd.md)
+## <a name="see-also"></a>참고 항목  
+ [콘솔 및 포트 I/O](../c-runtime-library/console-and-port-i-o.md)   
+ [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

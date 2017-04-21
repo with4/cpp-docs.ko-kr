@@ -1,41 +1,57 @@
 ---
 title: "변환 모드 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_O_BINARY"
-  - "_O_TEXT"
-  - "_O_RAW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_O_BINARY 상수"
-  - "_O_RAW 상수"
-  - "_O_TEXT 상수"
-  - "O_BINARY 상수"
-  - "O_RAW 상수"
-  - "O_TEXT 상수"
-  - "변환 상수"
-  - "변환 모드(파일 I/O)"
-  - "변환, 상수"
-  - "변환, 모드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _O_BINARY
+- _O_TEXT
+- _O_RAW
+dev_langs:
+- C++
+helpviewer_keywords:
+- O_BINARY constant
+- O_TEXT constant
+- O_RAW constant
+- _O_TEXT constant
+- _O_RAW constant
+- translation constants
+- _O_BINARY constant
+- translation, constants
+- translation, modes
+- translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 변환 모드 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2522ccf3c35a52141d3164bd2a35535a4068893e
+ms.lasthandoff: 04/01/2017
 
-## 구문  
+---
+# <a name="translation-mode-constants"></a>변환 모드 상수
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,25 +59,25 @@ caps.handback.revision: 6
   
 ```  
   
-## 설명  
- `_O_BINARY` 와 `_O_TEXT` 매니페스트 상수들은 파일들\(`_open` 과 `_sopen`\) 에 대한 좌표 이동 모드 또는 스트림들\(`_setmode`\)에 대한 좌표 이동 모드를 결정합니다.  
+## <a name="remarks"></a>주의  
+ `_O_BINARY` 및 `_O_TEXT` 매니페스트 상수는 파일(`_open` 및 `_sopen`)에 대한 변환 모드 또는 스트림(`_setmode`)에 대한 변환 모드를 결정합니다.  
   
  허용되는 값은 다음과 같습니다.  
   
  `_O_TEXT`  
- \(변환된\)텍스트 모드에서 파일을 엽니다.  캐리지 리턴\-줄바꿈\(CR\-LF\) 결합은 입력에서 단일 줄 바꿈\(LF\)으로 변환됩니다.  줄 바꿈된 문자는 출력에서 CR\-LF 조합으로 변환됩니다.  또한, CTRL \+ Z는 입력에서 파일 끝 문자로 해석 됩니다.  읽기\/쓰기와 읽기를 위해 파일을 열 때, `fopen` 는 가능하다면 파일의 끝에서 CTRL\+Z에 대해 검사하고 이것을 제거합니다.  `fseek` 및 `ftell`을 사용하여 Ctrl\+Z로 끝나는 파일 내에서 이동하면 파일의 끝 부분에서 `fseek`가 제대로 동작하지 않을 수 있으므로 이 작업을 수행합니다.  
+ 파일을 텍스트(변환됨) 모드에서 엽니다. 캐리지 리턴-줄 바꿈(CR-LF) 조합은 입력 시 단일 줄 바꿈(LF)으로 변환됩니다. 줄 바꿈 문자는 출력 시 CR-LF 조합으로 변환됩니다. 또한 CTRL+Z는 입력 시 파일 끝 문자로 변환됩니다. 읽기용 및 읽기/쓰기용으로 열려 있는 파일에서 `fopen`는 파일 끝에 CTRL+Z가 있는지 확인하고 가능한 경우 이를 제거합니다. 이렇게 처리되는 이유는 `fseek` 및 `ftell` 함수를 사용하여 CTRL+Z로 끝나는 파일 내에서 이동하면 `fseek`가 파일 끝 부분에서 제대로 동작하지 않을 수 있기 때문입니다.  
   
  `_O_BINARY`  
- 이진 \(변환 되지 않은\) 모드에서 파일을 엽니다.  위의 변환이 억제됩니다.  
+ 파일을 이진(변환되지 않음) 모드에서 엽니다. 위 변환은 표시되지 않습니다.  
   
  `_O_RAW`  
- `_O_BINARY`와 동일합니다.  C 2.0 호환성을 위해 지원됩니다.  
+ `_O_BINARY`와 동일합니다. C 2.0 호환성을 지원합니다.  
   
- 보다 자세한 내용은 [텍스트와 이진 모드 파일 입출력](../c-runtime-library/text-and-binary-mode-file-i-o.md) 및 [파일 좌표 이동](../c-runtime-library/file-translation-constants.md) 을 참고하세요.  
+ 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md) 및 [파일 변환](../c-runtime-library/file-translation-constants.md)을 참조하세요.  
   
-## 참고 항목  
- [\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)   
- [\_pipe](../c-runtime-library/reference/pipe.md)   
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [\_setmode](../c-runtime-library/reference/setmode.md)   
+## <a name="see-also"></a>참고 항목  
+ [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
+ [_pipe](../c-runtime-library/reference/pipe.md)   
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+ [_setmode](../c-runtime-library/reference/setmode.md)   
  [전역 상수](../c-runtime-library/global-constants.md)
