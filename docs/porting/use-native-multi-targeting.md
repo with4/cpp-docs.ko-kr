@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드  
@@ -54,7 +54,7 @@ Visual Studio 2008 프로젝트를 대상으로 지정할 수도 있지만 변�
   
 최신 버전의 Visual Studio에서는 프로젝트의 네이티브 멀티 타기팅 및 라운드트립을 지원합니다. 네이티브 멀티 타기팅은 이전 버전의 Visual Studio에서 설치된 도구 집합을 사용하여 빌드되는 최신 IDE의 기능입니다. 라운드트립은 프로젝트를 변경하지 않고 이전 IDE 버전에서 만들어진 프로젝트를 로드하는 최신 IDE의 기능입니다. 기존 버전과 함께 최신 버전의 Visual Studio를 단계별로 설치할 경우 기존 버전의 컴파일러 및 도구와 함께 새 버전의 IDE를 사용하여 프로젝트를 빌드할 수 있습니다. 팀의 다른 구성원이 이전 버전의 Visual Studio에서 프로젝트를 계속 사용할 수 있습니다.  
   
-이전 도구 집합을 사용할 경우 대부분의 최신 IDE 기능을 이용할 수 있지만 C++ 컴파일러, 라이브러리 및 빌드 도구의 최신 고급 기능을 이용할 수 없습니다. 예를 들어 새 언어 규칙 향상, 새 디버깅 및 코드 분석 기능을 사용하거나 최신 도구 집합의 더 빠른 빌드 처리량을 얻을 수 없습니다. 이전 도구 집합과 호환되지 않는 몇몇 IDE 기능도 있습니다. 예를 들어 메모리 프로파일러에 형식 정보가 없을 수 있고, 리팩터링 작업 "원시 문자열 리터럴로 변환"에서는 Visual Studio 2012 또는 이전 도구 집합을 사용할 경우 컴파일되지 않는 C++11 규격 코드를 생성합니다.
+이전 도구 집합을 사용할 경우 대부분의 최신 IDE 기능을 이용할 수 있지만 C++ 컴파일러, 라이브러리 및 빌드 도구의 최신 고급 기능을 이용할 수 없습니다. 예를 들어 새 언어 규칙 향상, 새 디버깅 및 코드 분석 기능을 사용하거나 최신 도구 집합의 더 빠른 빌드 처리량을 얻을 수 없습니다. 이전 도구 집합과 호환되지 않는 몇몇 IDE 기능도 있습니다. 예를 들어 메모리 프로파일러에 형식 정보가 없을 수 있고, 리팩터링 작업 **원시 문자열 리터럴로 변환**에서는 Visual Studio 2012 또는 이전 도구 집합을 사용할 경우 컴파일되지 않는 C++11 규격 코드를 생성합니다.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Visual Studio에서 네이티브 멀티 타기팅을 사용하는 방법
 이전 버전과 함께 Visual Studio를 단계별로 설치한 후 새 버전의 Visual Studio에서 기존 프로젝트를 엽니다. 프로젝트가 로드되면 최신 C++ 컴파일러 및 라이브러리를 사용하도록 프로젝트를 업그레이드할지 묻는 메시지가 표시됩니다. 프로젝트에서 이전 컴파일러 및 라이브러리를 유지하고자 하므로 **취소** 단추를 선택합니다.  
