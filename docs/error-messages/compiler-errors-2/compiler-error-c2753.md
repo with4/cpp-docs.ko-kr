@@ -1,37 +1,55 @@
 ---
 title: "컴파일러 오류 C2753 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2753"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2753"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2753
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2753
 ms.assetid: 92bfeeac-524a-4a8e-9a4f-fb8269055826
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2753
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7d77c7fa0c8035f8bb3a9ef732880bce4253c25b
+ms.lasthandoff: 04/24/2017
 
-'class' : 템플릿 클래스가 이미 정의되었습니다.  
+---
+# <a name="compiler-error-c2753"></a>컴파일러 오류 C2753
+'*템플릿*': 부분 특수화는 기본 서식 파일에 대 한 인수 목록을 일치할 수 없습니다.  
   
- 템플릿 인수 목록이 매개 변수 목록과 일치하면 컴파일러에서 이를 같은 템플릿으로 간주합니다.  같은 템플릿을 두 번 정의할 수는 없습니다.  
+ 템플릿 인수 목록에 매개 변수 목록과 일치 하는 경우 컴파일러는 동일한 템플릿으로 간주 됩니다. 같은 서식 파일을 두 번 정의 허용 되지 않습니다.  
   
- 다음 샘플에서는 C2753 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제
+ 다음 샘플에서는 C2753 오류가 발생 하 고 해결 하는 방법을 보여줍니다.  
   
-```  
+```cpp  
 // C2753.cpp  
+// compile with: cl /c C2753.cpp
 template<class T>  
 struct A {};  
   
