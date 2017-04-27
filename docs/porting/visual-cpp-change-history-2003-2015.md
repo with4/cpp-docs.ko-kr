@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
+이 문서에서는 Visual C++ 2015에서 Visual Studio 2003까지 모든 주요 변경 내용을 설명하며, 이 문서에서 사용된 “새 동작" 또는 “현재"라는 용어는 Visual Studio 2015 이상 버전을 가리킵니다. "이전 동작" 및 "이전"은 Visual Studio 2013 이하 릴리스를 나타냅니다. 
+ 
+ Visual Studio 2017에 대한 자세한 내용은 [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 Visual C++에서 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요. 
+ > [!NOTE]
+ > Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
+
 새 버전의 Visual C++ 컴파일러로 업그레이드하는 경우 이전에 컴파일하고 올바르게 실행된 코드에서 컴파일 및/또는 런타임 오류가 발생할 수 있습니다. 그러한 문제가 발생하는 새 버전의 변경 사항은 *주요 변경 사항*이라고 하고 일반적으로 C++ 언어 표준, 함수 서명 또는 메모리의 레이아웃 개체 수정에 필요합니다.  
   
  검색 및 진단하기 어려운 런타임 오류를 방지하려면 다양한 버전의 컴파일러를 사용하여 컴파일된 바이너리에 정적으로 연결하지 않는 것이 좋습니다. 또한 EXE 또는 DLL 프로젝트를 업그레이드하는 경우 연결되는 라이브러리를 업그레이드해야 합니다. CRT(C 런타임) 형식 또는 C++ 표준 라이브러리(C++ 표준 라이브러리) 형식을 사용하는 경우, 다양한 버전의 컴파일러를 사용하여 컴파일된 바이너리(DLL 포함) 간에 이 두 형식을 전달하지 마세요. 자세한 내용은 [DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)를 참조하세요.  
@@ -47,9 +53,6 @@ ms.lasthandoff: 03/07/2017
   
  또한 컴파일러 규칙 개선 작업이 진행 중이므로 컴파일러에서 기존 소스 코드를 인식하는 방식이 변경될 수 있습니다. 이로 인해 빌드 중 새로운 오류 또는 다른 오류가 발생하거나, 이전에 빌드되어 올바르게 실행되는 것처럼 보이는 코드가 다르게 동작할 수도 있습니다. 이 문서에 설명된 것과 같은 주요 변경 내용은 아니지만 이러한 문제를 해결하기 위해 소스 코드를 변경해야 할 수도 있습니다.  
   
- 이 문서에서는 Visual C++ 2015에서 Visual Studio 2003까지 모든 주요 변경 내용을 설명하며, 이 문서에서 사용된 “새 동작" 또는 “현재"라는 용어는 Visual Studio 2015 이상 버전을 가리킵니다. "이전 동작" 및 "이전"은 Visual Studio 2013 이하 릴리스를 나타냅니다. 
- 
- Visual Studio 2017에 대한 자세한 내용은 [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 Visual C++에서 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요.
   
 1.  [CRT(C 런타임) 라이브러리 주요 변경 내용](#BK_CRT)  
   
@@ -949,7 +952,7 @@ ms.lasthandoff: 03/07/2017
   
      또한 컴파일러가 특정 진단을 제공하지는 않지만, 인라인 operator new는 잘못된 형식으로 간주됩니다.  
   
--   **비클래스 형식에서 'operator*type*()'(사용자 정의 변환) 호출**  
+-   ***비클래스 형식에서 'operator*type**()'(사용자 정의 변환) 호출  
   
      이전 버전의 컴파일러에서는 'operator *type*()'을 자동으로 무시하면서 비클래스 형식에서 호출할 수 있었습니다. 이 이전 동작으로 잘못된 코드가 자동으로 생성되어 예기치 않은 런타임 동작이 발생하는 위험이 초래되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2228이 발생합니다.  
   

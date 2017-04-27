@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|-|  
 |[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|[operator!=](#operator_neq_multimap)|[operator==](#operator_eq_eq_multimap)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.  
   
 ```
@@ -81,7 +82,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.  
   
 ```
@@ -142,7 +143,7 @@ int main( )
   
  `um2 == um3: false`  
   
-##  <a name="a-nameoperatorneqmultimapa--operator"></a><a name="operator_neq_multimap"></a>  operator!=  
+##  <a name="operator_neq_multimap"></a>  operator!=  
  연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.  
   
 ```
@@ -204,7 +205,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="a-nameoperatoreqeqmultimapa--operator"></a><a name="operator_eq_eq_multimap"></a>  operator==  
+##  <a name="operator_eq_eq_multimap"></a>  operator==  
  연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.  
   
 ```

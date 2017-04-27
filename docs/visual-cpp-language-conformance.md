@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 언어 규칙 
 이 항목에서는 Visual Studio 2017 및 이전 버전의 Visual C++용 컴파일러 기능 및 STL(표준 라이브러리) 기능에 대한 ISO C++03, C++11, C++14 및 초안 C++17 언어 표준 규칙을 요약해서 설명합니다. 각 컴파일러 및 STL 기능 이름은 기능을 설명하는 ISO C++ 표준 제안 문서(게시 시 사용 가능한 경우)에 연결됩니다. [지원됨] 열에는 기능에 대한 지원이 먼저 표시되는 Visual Studio 버전이 나열됩니다.  
   
 Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 및 [Visual Studio 2017의 Visual C++에 대한 새로운 기능 ](what-s-new-for-visual-cpp-in-visual-studio.md)을 참조하세요. 이전 버전의 규칙 변경 내용에 대해서는 [Visual C++ change history](porting/visual-cpp-change-history-2003-2015.md)(Visual C++ 주요 변경 내용) 및 [2003~ 2015 Visual C++ 주요 변경 내용](porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요. C++ 팀의 최신 뉴스를 보려면 [Visual C++ 팀 블로그](http://blogs.msdn.microsoft.com/vcblog/)를 방문하세요.  
+
+ > [!NOTE]
+ > Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
   
 ## <a name="compiler-features"></a>컴파일러 기능  
   

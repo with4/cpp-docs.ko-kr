@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- set/std::swap (map)
+- set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap(map)](#swap)|[swap (multiset)](#swap_multiset)|  
   
-##  <a name="a-nameswapa--swap--map"></a><a name="swap"></a>  swap  (map)
+##  <a name="swap"></a>  swap  (map)
  두 set의 요소를 교환합니다.  
   
 ```
@@ -45,7 +48,7 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 ### <a name="example"></a>예제  
   `swap`의 템플릿 버전 사용 예제를 보려면 구성원 클래스 [set::swap](../standard-library/set-class.md#set__swap)에 대한 코드 예제를 참조하세요.  
   
-##  <a name="a-nameswapmultiseta--swap--multiset"></a><a name="swap_multiset"></a>  swap  (multiset)
+##  <a name="swap_multiset"></a>  swap  (multiset)
  두 multiset의 요소를 교환합니다.  
   
 ```

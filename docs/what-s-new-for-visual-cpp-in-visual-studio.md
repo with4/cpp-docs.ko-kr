@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/07/2017
 - 버전 관리: 기본 제공 전처리기 매크로 _MSC_VER의 값이 이제 Visual C++ 도구 집합 업데이트 시마다 일정하게 업데이트됩니다. 자세한 내용은 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)(Visual C++ 컴파일러 버전)을 참조하세요.
 - 새 도구 집합 레이아웃: 개발 컴퓨터에서 컴파일러 및 관련된 빌드 도구의 위치 및 디렉터리 구조가 변경되었습니다. 새 레이아웃을 사용하면 여러 버전의 컴파일러를 병렬 설치할 수 있습니다. 자세한 내용은 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)(Visual Studio "15"의 컴파일러 도구 레이아웃)를 참조하세요.
 - 향상된 진단: 이제 출력 창에 오류가 발생하는 열이 표시됩니다. 자세한 내용은 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)(VS "15" Preview 5의 C++ 컴파일러 진단 향상)를 참조하세요.
-- 코루틴을 사용하는 경우 /await 스위치 아래에서 사용할 수 있었던 실험적 키워드 "yield"가 제거되었습니다. 대신 "co_yield"를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 Visual C++ 팀 블로그를 참조하세요. 
+- 코루틴을 사용하는 경우 /await 스위치 아래에서 사용할 수 있었던 실험적 키워드 "yield"가 제거되었습니다. 대신 ‘‘co_yield’’를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 Visual C++ 팀 블로그를 참조하세요. 
 
 ## <a name="c-libraries"></a>C++ 라이브러리
 

@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- allocators/std::ALLOCATOR_DECL
+- allocators/std::CACHE_CHUNKLIST
+- allocators/std::CACHE_FREELIST
+- allocators/std::CACHE_SUBALLOC
+- allocators/std::SYNC_DEFAULT
 ms.assetid: 9cb5ee07-1ff9-4594-ae32-3c8c6efb511a
 caps.latest.revision: 12
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|  
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|  
   
-##  <a name="a-nameallocatordecla--allocatordecl"></a><a name="allocator_decl"></a>  ALLOCATOR_DECL  
+##  <a name="allocator_decl"></a>  ALLOCATOR_DECL  
  할당자 템플릿 클래스를 생성합니다.  
   
 ```
@@ -57,7 +63,7 @@ public:
 };
 ```  
   
-##  <a name="a-namecachechunklista--cachechunklist"></a><a name="cache_chunklist"></a>  CACHE_CHUNKLIST  
+##  <a name="cache_chunklist"></a>  CACHE_CHUNKLIST  
  `stdext::allocators::cache_chunklist<sizeof(Type)>`을 생성합니다.  
   
 ```
@@ -66,7 +72,7 @@ public:
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-namecachefreelista--cachefreelist"></a><a name="cache_freelist"></a>  CACHE_FREELIST  
+##  <a name="cache_freelist"></a>  CACHE_FREELIST  
  `stdext::allocators::cache_freelist<sizeof(Type), max>`를 생성합니다.  
   
 ```
@@ -75,7 +81,7 @@ public:
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-namecachesuballoca--cachesuballoc"></a><a name="cache_suballoc"></a>  CACHE_SUBALLOC  
+##  <a name="cache_suballoc"></a>  CACHE_SUBALLOC  
  `stdext::allocators::cache_suballoc<sizeof(Type)>`을 생성합니다.  
   
 ```
@@ -84,7 +90,7 @@ public:
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-namesyncdefaulta--syncdefault"></a><a name="sync_default"></a>  SYNC_DEFAULT  
+##  <a name="sync_default"></a>  SYNC_DEFAULT  
  동기화 필터를 생성합니다.  
   
 ```

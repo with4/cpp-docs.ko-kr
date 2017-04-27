@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
@@ -47,7 +48,7 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
   
 2.  정적 라이브러리를 다시 빌드할 수 없거나 다시 빌드하지 않으려는 경우 legacy_stdio_definitions.lib에 연결을 시도할 수 있습니다. 정적 라이브러리의 링크 타임 종속성을 충족하는 경우 이진에서 사용 시 정적 라이브러리를 철저히 테스트하여 [유니버설 CRT에 대한 동작 변경 내용](visual-cpp-change-history-2003-2015.md#BK_CRT)의 영향을 받지 않는지 확인하는 것이 좋습니다.  
   
-3.  legacy_stdio_definitions.lib가 정적 라이브러리의 종속성을 충족하지 않거나 앞에서 언급한 동작 변경 내용으로 인해 라이브러리가 유니버설 CRT에서 작동하지 않는 경우 정적 라이브러리를 DLL로 캡슐화하고 이 DLL을 올바른 버전의 Microsoft C 런타임에 연결하는 것이 좋습니다. 예를 들어 정적 라이브러리가 Visual C++ 2013을 사용하여 빌드된 경우 Visual C++ 2013과 Visual C++ 2013 라이브러리를 사용하여 이 DLL을 빌드하는 것이 좋습니다. 라이브러리를 DLL로 빌드하면 특정 버전의 Microsoft C 런타임에 종속성이 있는 구현 세부 정보가 캡슐화됩니다. DLL 경계를 넘어 FILE*을 반환하는 경우나 malloc 할당된 포인터를 반환하고 호출자가 해제할 것으로 기대하는 경우와 같이 DLL 인터페이스에서 사용하는 C 런타임의 세부 정보가 "누출"되지 않도록 주의하세요.  
+3.  legacy_stdio_definitions.lib가 정적 라이브러리의 종속성을 충족하지 않거나 앞에서 언급한 동작 변경 내용으로 인해 라이브러리가 유니버설 CRT에서 작동하지 않는 경우 정적 라이브러리를 DLL로 캡슐화하고 이 DLL을 올바른 버전의 Microsoft C 런타임에 연결하는 것이 좋습니다. 예를 들어 정적 라이브러리가 Visual C++ 2013을 사용하여 빌드된 경우 Visual C++ 2013과 Visual C++ 2013 라이브러리를 사용하여 이 DLL을 빌드하는 것이 좋습니다. 라이브러리를 DLL로 빌드하면 특정 버전의 Microsoft C 런타임에 종속성이 있는 구현 세부 정보가 캡슐화됩니다. DLL 경계를 넘어 FILE*을 반환하는 경우나 malloc 할당된 포인터를 반환하고 호출자가 해제할 것으로 기대하는 경우와 같이 DLL 인터페이스에서 사용하는 C 런타임의 세부 정보가 누출되지 않도록 주의하세요.  
   
  단일 프로세스에서 여러 CRT를 사용하는 것 자체는 문제가 없습니다. 실제로 대부분의 프로세스는 여러 CRT DLL을 로드하게 됩니다. 예를 들어 Windows 운영 체제 구성 요소는 msvcrt.dll을 사용하고 CLR은 고유한 개인 CRT를 사용합니다. 여러 CRT의 상태를 혼합하면 문제가 발생합니다. 예를 들어 msvcr110.dll!malloc를 사용하여 메모리를 할당하고 msvcr120.dll!free를 사용하여 해당 메모리 할당을 취소해서는 안 되며, msvcr110!fopen을 사용하여 FILE을 열고 msvcr120!fread을 사용하여 해당 FILE에서 읽기를 시도하면 안 됩니다. 여러 CRT의 상태를 혼합하지 않는 한 단일 프로세스에서 여러 CRT를 안전하게 로드할 수 있습니다.  
   
@@ -66,13 +67,13 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
 ### <a name="lnk2019-unresolved-external"></a>LNK2019: 확인할 수 없는 외부 참조  
  확인할 수 없는 기호의 경우 프로젝트 설정을 수정해야 할 수 있습니다.  
   
--   •   소스 파일이 기본이 아닌 위치에 있는 경우 프로젝트의 Include 디렉터리에 대한 경로를 추가했나요?  
+-   소스 파일이 기본이 아닌 위치에 있는 경우 프로젝트의 Include 디렉터리에 대한 경로를 추가했나요?  
   
--   •   외부 참조가 .lib 파일에서 정의된 경우 프로젝트 속성에서 lib 경로를 지정했으며 실제로 해당 위치에 올바른 버전의 .lib 파일이 있나요?  
+-   외부 참조가 .lib 파일에서 정의된 경우 프로젝트 속성에서 lib 경로를 지정했으며 실제로 해당 위치에 올바른 버전의 .lib 파일이 있나요?  
   
--   •   다른 버전의 Visual Studio를 사용하여 컴파일된 .lib 파일에 연결하려고 하나요? 그렇다면 라이브러리 및 도구 집합 종속성에 대한 이전 섹션을 참조하세요.  
+-   다른 버전의 Visual Studio를 사용하여 컴파일된 .lib 파일에 연결하려고 하나요? 그렇다면 라이브러리 및 도구 집합 종속성에 대한 이전 섹션을 참조하세요.  
   
--   •   호출 사이트의 인수 형식이 함수의 기존 오버로드와 실제로 일치하나요? 함수의 시그니처와 해당 함수를 호출하는 코드에서 typedef의 기본 형식이 예상과 같은지 확인합니다.  
+-   호출 사이트의 인수 형식이 함수의 기존 오버로드와 실제로 일치하나요? 함수의 시그니처와 해당 함수를 호출하는 코드에서 typedef의 기본 형식이 예상과 같은지 확인합니다.  
   
  확인되지 않은 기호 오류를 해결하려면 dumpbin.exe를 사용하여 이진 파일에 정의된 기호를 검사해 볼 수 있습니다. 다음 명령줄을 실행하여 라이브러리에 정의된 기호를 확인해 보세요.  
   
@@ -114,9 +115,9 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  오류가 C2371이고 stdint 형식이 관련된 경우 해당 형식이 코드 또는 타사 lib 파일의 헤더에서 정의된 것입니다.  업그레이드 시 \<stdint.h> 형식의 사용자 지정 정의를 모두 제거해야 하지만 먼저 사용자 지정 정의를 현재 표준 정의와 비교하여 새로운 문제가 도입되지 않도록 해야 합니다.  
   
- F12 키, "정의로 이동"을 눌러 해당 형식이 정의된 위치를 확인할 수 있습니다.  
+ F12 키, **정의로 이동**을 눌러 해당 형식이 정의된 위치를 확인할 수 있습니다.  
   
- 여기서는 [/showIncludes](../build/reference/showincludes-list-include-files.md) 컴파일러 옵션이 유용할 수 있습니다. 프로젝트에 대한 속성 페이지 대화 상자에서 **C/C++**, **고급** 페이지를 열고 **포함 표시**를 "예"로 설정합니다. 그런 다음 프로젝트를 다시 빌드하고 출력 창에서 #includes 목록을 확인합니다.  각 헤더는 포함하는 헤더 아래에 들여쓰기됩니다.  
+ 여기서는 [/showIncludes](../build/reference/showincludes-list-include-files.md) 컴파일러 옵션이 유용할 수 있습니다. 프로젝트에 대한 속성 페이지 대화 상자에서 **C/C++**, **고급** 페이지를 열고 **포함 표시**를 **예**로 설정합니다. 그런 다음 프로젝트를 다시 빌드하고 출력 창에서 #includes 목록을 확인합니다.  각 헤더는 포함하는 헤더 아래에 들여쓰기됩니다.  
   
 ## <a name="errors-involving-crt-functions"></a>CRT 함수와 관련된 오류  
  지난 몇 년 동안 C 런타임에서 많은 변화가 있었습니다. 함수의 보안 버전이 많이 추가되었으며 일부는 제거되었습니다. 또한 이 문서의 앞부분에서 설명한 대로, Microsoft의 CRT 구현이 Visual Studio 2015에서 새로운 이진 파일 및 관련 .lib 파일에 리팩터링되었습니다.  
@@ -149,7 +150,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  자세한 내용은 [대상 Windows 버전 업데이트](porting-guide-spy-increment.md#updating_winver) 및 [더 오래된 헤더 파일](porting-guide-spy-increment.md#outdated_header_files)을 참조하세요.  
   
 ## <a name="atl--mfc"></a>ATL/MFC  
- ATL 및 MFC는 비교적 안정된 API이지만 때때로 변경됩니다. 자세한 내용은 [Visual C++ 변경 기록 2003 – 2015](visual-cpp-change-history-2003-2015.md)과 [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요.  
+ ATL 및 MFC는 비교적 안정된 API이지만 때때로 변경됩니다. 자세한 내용은 [Visual C++ 변경 기록 2003 – 2015](visual-cpp-change-history-2003-2015.md), [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요.  
   
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12가 MSVCRTD.lib에 이미 정의되어 있습니다.  
  이 오류는 MFC 응용 프로그램에서 발생할 수 있습니다. CRT 라이브러리와 MFC 라이브러리 간의 순서 지정 문제를 나타냅니다. MFC에서 new 및 delete 연산자를 제공하도록 연결해야 합니다. 오류를 해결하려면 /NODEFAULTLIB 스위치를 사용하여 기본 라이브러리 MSVCRTD.lib 및 mfcs140d.lib를 무시합니다. 그런 다음 동일한 라이브러리를 추가 종속성으로 추가합니다.  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>참고 항목  
  [이전 버전의 Visual C++에서 프로젝트 업그레이드](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

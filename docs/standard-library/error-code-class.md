@@ -10,9 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - error_code
-- std.error_code
-- std::error_code
 - system_error/std::error_code
+- system_error/std::error_code::value_type
+- system_error/std::error_code::assign
+- system_error/std::error_code::category
+- system_error/std::error_code::clear
+- system_error/std::error_code::default_error_condition
+- system_error/std::error_code::message
+- system_error/std::error_code::operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class error_code;
   
  **네임스페이스:** std  
   
-##  <a name="a-nameerrorcodeassigna--errorcodeassign"></a><a name="error_code__assign"></a>  error_code::assign  
+##  <a name="error_code__assign"></a>  error_code::assign  
  오류 코드 값과 범주를 오류 코드에 할당합니다.  
   
 ```
@@ -108,7 +113,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>설명  
  멤버 함수는 `val`을 오류 코드 값 및 `_Cat`에 대한 포인터로 저장합니다.  
   
-##  <a name="a-nameerrorcodecategorya--errorcodecategory"></a><a name="error_code__category"></a>  error_code::category  
+##  <a name="error_code__category"></a>  error_code::category  
  오류 범주를 반환합니다.  
   
 ```
@@ -117,7 +122,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameerrorcodecleara--errorcodeclear"></a><a name="error_code__clear"></a>  error_code::clear  
+##  <a name="error_code__clear"></a>  error_code::clear  
  오류 코드 값과 범주를 지웁니다.  
   
 ```
@@ -127,7 +132,7 @@ clear();
 ### <a name="remarks"></a>설명  
  멤버 함수는&0; 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category) 개체에 대한 포인터를 저장합니다.  
   
-##  <a name="a-nameerrorcodedefaulterrorconditiona--errorcodedefaulterrorcondition"></a><a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
+##  <a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
  기본 오류 조건을 반환합니다.  
   
 ```
@@ -140,7 +145,7 @@ error_condition default_error_condition() const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 `category().default_error_condition(value())`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeerrorcodea--errorcodeerrorcode"></a><a name="error_code__error_code"></a>  error_code::error_code  
+##  <a name="error_code__error_code"></a>  error_code::error_code  
  `error_code` 형식의 개체를 생성합니다.  
   
 ```
@@ -169,7 +174,7 @@ error_code(_Enum _Errcode,
   
  세 번째 생성자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다.  
   
-##  <a name="a-nameerrorcodemessagea--errorcodemessage"></a><a name="error_code__message"></a>  error_code::message  
+##  <a name="error_code__message"></a>  error_code::message  
  오류 코드의 이름을 반환합니다.  
   
 ```
@@ -182,7 +187,7 @@ string message() const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 `category().message(value())`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeoperatoreqeqa--errorcodeoperator"></a><a name="error_code__operator_eq_eq"></a>  error_code::operator==  
+##  <a name="error_code__operator_eq_eq"></a>  error_code::operator==  
  `error_code` 개체가 같은지 테스트합니다.  
   
 ```
@@ -201,7 +206,7 @@ bool operator==(const error_code& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `category() == right.category() && value == right.value()`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeoperatorneqa--errorcodeoperator"></a><a name="error_code__operator_neq"></a>  error_code::operator!=  
+##  <a name="error_code__operator_neq"></a>  error_code::operator!=  
  `error_code` 개체가 같지 않은지 테스트합니다.  
   
 ```
@@ -220,7 +225,7 @@ bool operator!=(const error_code& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `!(*this == right)`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeoperatorlta--errorcodeoperatorlt"></a><a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
+##  <a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
  [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.  
   
 ```
@@ -239,7 +244,7 @@ bool operator<(const error_code& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `category() < right.category() || category() == right.category() && value < right.value()`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeoperatoreqa--errorcodeoperator"></a><a name="error_code__operator_eq"></a>  error_code::operator=  
+##  <a name="error_code__operator_eq"></a>  error_code::operator=  
  새 열거형 값을 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체에 할당합니다.  
   
 ```
@@ -261,7 +266,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다. `*this`를 반환합니다.  
   
-##  <a name="a-nameerrorcodeoperatorboola--errorcodeoperator-bool"></a><a name="error_code__operator_bool"></a>  error_code::operator bool  
+##  <a name="error_code__operator_bool"></a>  error_code::operator bool  
  형식 `error_code`의 변수를 캐스트합니다.  
   
 ```
@@ -274,7 +279,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>설명  
  연산자는 [value](#error_code__value)가&0;과 같지 않을 경우에만 `true`로 변환할 수 있는 값을 반환합니다. 반환 형식은 `bool`로만 변환할 수 있고, `void *` 또는 기타 알려진 스칼라 형식으로 변환할 수 없습니다.  
   
-##  <a name="a-nameerrorcodevaluea--errorcodevalue"></a><a name="error_code__value"></a>  error_code::value  
+##  <a name="error_code__value"></a>  error_code::value  
  저장된 오류 코드 값을 반환합니다.  
   
 ```
@@ -286,7 +291,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameerrorcodevaluetypea--errorcodevaluetype"></a><a name="error_code__value_type"></a>  error_code::value_type  
+##  <a name="error_code__value_type"></a>  error_code::value_type  
  저장된 오류 코드 값을 나타내는 형식입니다.  
   
 ```

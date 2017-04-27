@@ -10,9 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istreambuf_iterator
-- std.istreambuf_iterator
-- std::istreambuf_iterator
 - streambuf/std::istreambuf_iterator
+- iterator/std::istreambuf_iterator::char_type
+- iterator/std::istreambuf_iterator::int_type
+- iterator/std::istreambuf_iterator::istream_type
+- iterator/std::istreambuf_iterator::streambuf_type
+- iterator/std::istreambuf_iterator::traits_type
+- iterator/std::istreambuf_iterator::equal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +104,7 @@ class istreambuf_iterator
   
  **네임스페이스:** std  
   
-##  <a name="a-nameistreambufiteratorchartypea--istreambufiteratorchartype"></a><a name="istreambuf_iterator__char_type"></a>  istreambuf_iterator::char_type  
+##  <a name="istreambuf_iterator__char_type"></a>  istreambuf_iterator::char_type  
  `ostreambuf_iterator`의 문자 형식을 허용하는 형식입니다.  
   
 ```
@@ -143,7 +147,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratorequala--istreambufiteratorequal"></a><a name="istreambuf_iterator__equal"></a>  istreambuf_iterator::equal  
+##  <a name="istreambuf_iterator__equal"></a>  istreambuf_iterator::equal  
  두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.  
   
 ```
@@ -188,7 +192,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratorinttypea--istreambufiteratorinttype"></a><a name="istreambuf_iterator__int_type"></a>  istreambuf_iterator::int_type  
+##  <a name="istreambuf_iterator__int_type"></a>  istreambuf_iterator::int_type  
  `istreambuf_iterator`의 정수 형식을 허용하는 형식입니다.  
   
 ```
@@ -217,7 +221,7 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="a-nameistreambufiteratoristreamtypea--istreambufiteratoristreamtype"></a><a name="istreambuf_iterator__istream_type"></a>  istreambuf_iterator::istream_type  
+##  <a name="istreambuf_iterator__istream_type"></a>  istreambuf_iterator::istream_type  
  `istreambuf_iterator`의 스트림 형식을 허용하는 형식입니다.  
   
 ```
@@ -230,7 +234,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>예제  
   `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)를 참조하세요.  
   
-##  <a name="a-nameistreambufiteratoristreambufiteratora--istreambufiteratoristreambufiterator"></a><a name="istreambuf_iterator__istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
+##  <a name="istreambuf_iterator__istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
  입력 스트림에서 문자를 읽을 수 있도록 초기화된 istreambuf_iterator를 생성합니다.  
   
 ```
@@ -280,7 +284,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperatorstara--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_star"></a>  istreambuf_iterator::operator*  
+##  <a name="istreambuf_iterator__operator_star"></a>  istreambuf_iterator::operator*  
  역참조 연산자가 스트림의 다음 문자를 반환합니다.  
   
 ```
@@ -318,7 +322,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperatoraddadda--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_add_add"></a>  istreambuf_iterator::operator++  
+##  <a name="istreambuf_iterator__operator_add_add"></a>  istreambuf_iterator::operator++  
  입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.  
   
 ```
@@ -360,7 +364,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperator-gta--istreambufiteratoroperator-gt"></a><a name="istreambuf_iterator__operator-_gt_"></a>  istreambuf_iterator::operator-&gt;  
+##  <a name="istreambuf_iterator__operator-_gt_"></a>  istreambuf_iterator::operator-&gt;  
  멤버의 값을 반환합니다(있는 경우).  
   
 ```
@@ -370,7 +374,7 @@ const Elem* operator->() const;
 ### <a name="return-value"></a>반환 값  
  이 연산자는 **&\*\*this**를 반환합니다.  
   
-##  <a name="a-nameistreambufiteratorstreambuftypea--istreambufiteratorstreambuftype"></a><a name="istreambuf_iterator__streambuf_type"></a>  istreambuf_iterator::streambuf_type  
+##  <a name="istreambuf_iterator__streambuf_type"></a>  istreambuf_iterator::streambuf_type  
  istreambuf_iterator의 스트림 형식을 제공하는 형식입니다.  
   
 ```
@@ -383,7 +387,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 ### <a name="example"></a>예제  
   **istreambuf_type**을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)를 참조하세요.  
   
-##  <a name="a-nameistreambufiteratortraitstypea--istreambufiteratortraitstype"></a><a name="istreambuf_iterator__traits_type"></a>  istreambuf_iterator::traits_type  
+##  <a name="istreambuf_iterator__traits_type"></a>  istreambuf_iterator::traits_type  
  `istream_iterator`의 특성 형식을 허용하는 형식입니다.  
   
 ```

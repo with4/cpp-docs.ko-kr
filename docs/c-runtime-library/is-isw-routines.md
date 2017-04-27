@@ -1,179 +1,195 @@
 ---
 title: "is, isw 루틴 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "isw"
-  - "is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is 루틴"
-  - "isw 루틴"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- isw
+- is
+dev_langs:
+- C++
+helpviewer_keywords:
+- is routines
+- isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# is, isw 루틴
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d4f4902c29b64be4c2e032571face5f583c62734
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="is-isw-routines"></a>is, isw 루틴
 |||  
 |-|-|  
-|[isalnum, iswalnum, \_isalnum\_l, \_iswalnum\_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, \_isgraph\_l, \_iswgraph\_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
-|[isalpha, iswalpha, \_isalpha\_l, \_iswalpha\_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, \_isleadbyte\_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
-|[isascii, \_\_isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, \_islower\_l, \_iswlower\_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
-|[isblank, iswblank, \_isblank\_l, \_iswblank\_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, \_isprint\_l, \_iswprint\_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
-|[iscntrl, iswcntrl, \_iscntrl\_l, \_iswcntrl\_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, \_ispunct\_l, \_iswpunct\_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
-|[iscsym, iscsymf, \_\_iscsym, \_\_iswcsym, \_\_iscsymf, \_\_iswcsymf, \_iscsym\_l, \_iswcsym\_l, \_iscsymf\_l, \_iswcsymf\_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, \_isspace\_l, \_iswspace\_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
-|[\_isctype, iswctype, \_isctype\_l, \_iswctype\_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, \_isupper\_l, iswupper, \_iswupper\_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
-|[isdigit, iswdigit, \_isdigit\_l, \_iswdigit\_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, \_isxdigit\_l, \_iswxdigit\_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
+|[isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, _isgraph_l, _iswgraph_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
+|[isalpha, iswalpha, _isalpha_l, _iswalpha_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
+|[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
+|[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
+|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
+|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
+|[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
-## 설명  
- 이러한 루틴은 지정된 조건에 대해 문자를 테스트합니다.  
+## <a name="remarks"></a>주의  
+ 이러한 루틴은 지정한 조건에 대해 문자를 테스트합니다.  
   
- **is** 는 \-1\(`EOF`\) 부터 **UCHAR\_MAX** \(0xFF\) 까지 모두 포함하여 정수 인자에 대해 의미있는 결과를 생산합니다.  정상적인 인수 형식은 `int` 입니다.  
+ **is** 루틴은 -1(`EOF`)에서 **UCHAR_MAX**(0xFF)(포함)까지 정수 인수에 대해 의미 있는 결과를 생성합니다. 필요한 인수 형식은 `int`입니다.  
   
 > [!CAUTION]
->  **is** 루틴의 경우 `char` 형식의 인자를 전달 할 경우 예기치 못한 결과가 발생할 수 있습니다.  0x7F 보다 큰 값의 `char` 형식의 SBCS나 MBCS 싱글 바이트 문자는 음수입니다.  만약 `char` 가 전달되면 컴파일러가 값을 signed `int` 또는 signed **long** 으로 변환할 수 있습니다.  이 값은 예기치 못한 결과로 컴파일러에 의해 부호 확장 될 수있습니다.  
+>  **is** 루틴의 경우 `char` 형식의 인수를 전달하면 예기치 않은 결과가 발생할 수 있습니다. 값이 0x7F보다 큰 `char` 형식의 SBCS 또는 MBCS 싱글바이트 문자는 음수입니다. `char`이 전달되면 컴파일러는 값을 부호 있는 `int` 또는 부호 있는 **long**으로 변환할 수 있습니다. 이 값은 컴파일러에서 부호 확장될 수 있으며 예기치 않은 결과가 발생할 수 있습니다.  
   
- **isw** 루틴은 \-1\(**WEOF**\) 부터 0xFFFF 까지 모두 포함하여 어떤 정수 값에 대해서도 의미있는 결과를 생성합니다.   **wint\_t** 데이터 타입은 **unsigned short** 으로 WCHAR.H 내에 지정 되어 있으며, 와이드 문자나 wide\-character end\-of\-file\(**WEOF**\) 값을 보유 할 수있습니다.  
+ **isw** 루틴은 - 1(**WEOF**)에서 0xFFFF(포함)까지 정수 값에 대해 의미 있는 결과를 생성합니다. **wint_t** 데이터 형식은 **unsigned short**로 WCHAR.H에 정의됩니다. 와이드 문자 또는 와이드 문자 파일 끝(**WEOF**) 값을 가질 수 있습니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하십시오.  이 **\_l** 접미사가 없는 이러한 함수의 버전은 해당 로캘 종속 동작에 현재 로캘을 사용합니다. **\_l** 접미사가 있는 버전은 대신 전달 된 로캘 매개 변수를 사용하는 경우을 제외하고는 동일합니다.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.  
   
  "C" 로캘에서 **is** 루틴에 대한 테스트 조건은 다음과 같습니다.  
   
  `isalnum`  
- 영숫자 \(A – Z, a – z, or 0 – 9\).  
+ 영숫자(A-Z, a-z 또는 0-9)  
   
  `isalpha`  
- 알파벳 \(A – Z or a – z\).  
+ 알파벳(A-Z 또는 a-z)  
   
  `__isascii`  
- ASCII 문자 \(0x00 – 0x7F\).  
+ ASCII 문자(0x00-0x7F)  
   
  `isblank`  
- 가로 탭 또는 공백 문자 \(0x09 or 0x20\).  
+ 가로 탭 또는 공백 문자(0x09 또는 0x20)  
   
  `iscntrl`  
- Control character \(0x00 – 0x1F or 0x7F\).  
+ 제어 문자(0x00 - 0x1F 또는 0x7F)  
   
  `__iscsym`  
- Letter, underscore, or digit.  
+ 문자, 밑줄 또는 숫자  
   
  `__iscsymf`  
- Letter or underscore.  
+ 문자 또는 밑줄  
   
  **isdigit**  
- 10진수 \(0 – 9\).  
+ 10진수(0-9)  
   
  `isgraph`  
- Printable character except space \( \).  
+ 공백을 제외한 인쇄 가능한 문자()  
   
  `islower`  
- 소문자 \(a – z\).  
+ 소문자(a ~ z)  
   
  `isprint`  
- Printable character including space \(0x20 – 0x7E\).  
+ 공백을 포함한 인쇄 가능한 문자(0x20-0x7E)  
   
  `ispunct`  
- Punctuation character.  
+ 문장 부호 문자  
   
  `isspace`  
- 공백 문자 \(0x09 – 0x0D or 0x20\).  
+ 공백 문자(0x09-0x0D 또는 0x20)  
   
  `isupper`  
- 대문자 \(A – Z\).  
+ 대문자(A ~ Z)  
   
  `isxdigit`  
- 16진수 \(A – F, a – f, or 0 – 9\).  
+ 16진수(A-F, a-f 또는 0-9)  
   
- **isw** 루틴에 대해 지정된 조건에서의 테스트 결과는 로캘과 무관합니다.   **isw** 함수에 대한 테스트 조건은 다음과 같습니다.  
+ **isw** 루틴의 경우 지정된 조건의 테스트 결과는 로캘과 무관합니다. **isw** 함수에 대한 테스트 조건은 다음과 같습니다.  
   
  `iswalnum`  
  `iswalpha` 또는 `iswdigit`  
   
  `iswalpha`  
- `iswcntrl`, `iswdigit`, `iswpunct`, 또는 `iswspace` 에 대한 것이 아닌 구현이 정의 된 설정 중의 하나인 어떠한 와이드문자도 0이 아닙니다.  `iswalpha` 는 `iswupper` 또는 `iswlower` 가 0이 아닌 와이드 문자에 대해서만 0이 아닌 값을 반환합니다.  
+ `iswcntrl`, `iswdigit`, `iswpunct`, `iswspace`가 모두 0인 구현 시 정의된 집합 중 하나인 와이드 문자. `iswalpha`는 `iswupper` 또는 `iswlower`가 0이 아닌 와이드 문자에 대해서는 0이 아닌 값을 반환합니다.  
   
  `iswascii`  
- Wide\-character representation of ASCII character \(0x0000 – 0x007F\).  
+ ASCII 문자의 와이드 문자 표현(0x0000-0x007F)  
   
  `iswblank`  
- 표준 공백 문자에 해당하거나 `iswalnum` 에 대한 와이드 문자의 구현이 정의된 설정 중 하나인 와이드 문자는 false입니다.  표준 공백 문자는 공백 \(L' '\) 및 가로 탭 \('\\t' L\) 입니다.  
+ 표준 공백 문자에 해당하거나 `iswalnum`이 false인 경우 구현 시 정의된 와이드 문자 집합 중 하나인 와이드 문자. 표준 공백 문자는 공백(L' ') 및 가로 탭(L'\t')입니다.  
   
  `iswcntrl`  
- 와이드 문자를 제어 합니다.  
+ 제어 와이드 문자  
   
- **\_\_iswcsym**  
- Any wide character for which **isalnum** is true, or the '\_' character.  
+ **__iswcsym**  
+ **isalnum**이 true인 경우 와이드 문자 또는 '_' 문자  
   
- **\_\_iswcsymf**  
- Any wide character for which `iswalpha` is true, or the '\_' character.  
+ **__iswcsymf**  
+ `iswalpha`가 true인 경우 와이드 문자 또는 '_' 문자  
   
  `iswctype`  
- 문자는 `desc` 인수에 의해 지정된 속성을 가지고 있습니다.  아래의 테이블이 보여주는 것처럼 `iswctype` 의 `desc` 인수의 유효한 각 값에 대해 동등한 유형의 루틴이 존재합니다.  
+ 문자에 `desc` 인수에 의해 지정된 속성이 있습니다. 다음 표에 표시된 것처럼, `iswctype`의 `desc` 인수에 유효한 각 값에 대해 해당하는 와이드 문자 분류 루틴이 있습니다.  
   
- **Equivalence of iswctype\(**   
- ***c, desc* \) to Other isw Testing Routines**  
+ **기타 isw 테스트 루틴에 대한 iswctype(**   
+ ***c, desc*) 동등성**  
   
-|*desc* 인수 값|iswctype\( *c, desc* \) equivalent|  
-|-----------------|----------------------------------------|  
-|**\_ALPHA**|**iswalpha\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT**|**iswalnum\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_CONTROL**|**iswcntrl\(** `c` **\)**|  
-|**\_DIGIT**|**iswdigit\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswgraph\(** `c` **\)**|  
-|**\_LOWER**|**iswlower\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_BLANK** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswprint\(** `c` **\)**|  
-|**\_PUNCT**|**iswpunct\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_SPACE**|**iswspace\(** `c` **\)**|  
-|**\_UPPER**|**iswupper\(** `c` **\)**|  
-|**\_HEX**|**iswxdigit\(** `c` **\)**|  
+|*desc* 인수 값|해당 iswctype( *c, desc* )|  
+|------------------------------|----------------------------------------|  
+|**_ALPHA**|**iswalpha(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_CONTROL**|**iswcntrl(** `c` **)**|  
+|**_DIGIT**|**iswdigit(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|  
+|**_LOWER**|**iswlower(** `c` **)**|  
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|  
+|**_PUNCT**|**iswpunct(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_SPACE**|**iswspace(** `c` **)**|  
+|**_UPPER**|**iswupper(** `c` **)**|  
+|**_HEX**|**iswxdigit(** `c` **)**|  
   
  `iswdigit`  
- 10진수 문자에 해당하는 와이드 문자입니다.  
+ 10진수 문자에 해당하는 와이드 문자  
   
  `iswgraph`  
- 공백 와이드 문자를 제외하고 인쇄할 수 있는 와이드 문자 \(L' '\).  
+ 공백 와이드 문자(L' ')를 제외한 인쇄 가능한 와이드 문자  
   
  `iswlower`  
- 소문자 또는 `iswcntrl`, `iswdigit`, `iswpunct`, 또는 `iswspace` 에 대한 것이 아닌 와이드 문자의 구현이 정의된 설정 중의 하나는 0이 아닙니다.  `iswlower` 는 소문자에 해당하는 와이드 문자에 대해서만 0이 아닌 값을 반환합니다.  
+ 소문자이거나 `iswcntrl`, `iswdigit`, `iswpunct`, `iswspace`가 모두 0인 구현 시 정의된 와이드 문자 집합 중 하나. `iswlower`는 소문자에 해당하는 와이드 문자에 대해서만 0이 아닌 값을 반환합니다.  
   
  `iswprint`  
- 공백 와이드 문자를 포함하고 인쇄할 수 있는 와이드 문자 \(L' '\).  
+ 공백 와이드 문자(L' ')를 포함한 인쇄 가능한 와이드 문자  
   
  `iswpunct`  
- 공백 와이드 문자 \(L' '\) 도 아니고 와이드 문자에 대해 `iswalnum` 가 0이 아닌 인쇄 할 수 있는 와이드 문자  
+ `iswalnum`이 0이 아닌 와이드 문자도 공백 와이드 문자(L' ')도 아닌 인쇄 가능한 와이드 문자  
   
  `iswspace`  
- 표준 공백 문자에 대응하거나 `iswalnum` 에 대한 와이드 문자의 구현이 정의된 설정 중 하나인 와이드 문자는 false입니다.  표준 공백 문자 : 공백\(L' '\), 폼 피드\(L '\\f'\), 줄 바꿈 \('\\n' L\), 캐리지 리턴 \('\\r' L\), 가로 탭\(L '\\t'\), 세로 탭 \(L '\\v'\).  
+ 표준 공백 문자에 해당하거나 `iswalnum`이 false인 경우 구현 시 정의된 와이드 문자 집합 중 하나인 와이드 문자. 표준 공백 문자: 공백(L' '), 용지 공급(L'\f'), 줄 바꿈(L'\n'), 캐리지 리턴(L'\r'), 가로 탭(L'\t'), 세로 탭(L'\v')  
   
  `iswupper`  
- 대문자 이거나 `iswcntrl`, `iswdigit`, `iswpunct`, 또는 `iswspace` 에 대한 것이 아닌 와이드 문자의 구현이 정의된 설정 중에 하나인 와이드 문자는 0이 아닙니다.  `iswupper` 는 대문자에 해당하는 와이드 문자에 대해서만 0이 아닌 값을 반환합니다.  
+ 대문자이거나 `iswcntrl`, `iswdigit`, `iswpunct`, `iswspace`가 모두 0인 구현 시 정의된 와이드 문자 집합 중 하나인 와이드 문자. `iswupper`는 대문자에 해당하는 와이드 문자에 대해서만 0이 아닌 값을 반환합니다.  
   
  `iswxdigit`  
  16진수 문자에 해당하는 와이드 문자  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_isfam.c  
@@ -211,7 +227,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 00            AS  C                              .  
@@ -344,9 +360,9 @@ int main( void )
 7f            AS  C                              .  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [문자 분류](../c-runtime-library/character-classification.md)   
  [로캘](../c-runtime-library/locale.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [멀티바이트 문자 시퀀스 해석](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [to 함수](../c-runtime-library/to-functions.md)

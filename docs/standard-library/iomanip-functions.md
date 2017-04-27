@@ -6,6 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iomanip/std::get_money
+- iomanip/std::get_time
+- iomanip/std::put_money
+- iomanip/std::put_time
+- iomanip/std::quoted
+- iomanip/std::resetiosflags
+- iomanip/std::setbase
+- iomanip/std::setfill
+- iomanip/std::setiosflags
+- iomanip/std::setprecision
+- iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
@@ -23,7 +35,7 @@ ms.lasthandoff: 02/24/2017
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|  
 |[setprecision](#setprecision)|[setw](#setw)|  
   
-##  <a name="a-nameiomanipgetmoneya--getmoney"></a><a name="iomanip_get_money"></a>  get_money  
+##  <a name="iomanip_get_money"></a>  get_money  
  원하는 형식을 사용하여 스트림에서 통화 값을 추출하고 매개 변수에서 값을 반환합니다.  
   
 ```  
@@ -43,7 +55,7 @@ T7 get_money(Money& _Amount, bool _Intl);
   
  `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.  
   
-##  <a name="a-nameiomanipgettimea--gettime"></a><a name="iomanip_get_time"></a>  get_time  
+##  <a name="iomanip_get_time"></a>  get_time  
  원하는 형식을 사용하여 스트림에서 시간 값을 추출합니다. 매개 변수의 값을 시간 구조로 반환합니다.  
   
 ```  
@@ -61,7 +73,7 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ### <a name="remarks"></a>설명  
  조작자는 `str` 스트림에서 추출될 경우 `formatted input function`처럼 동작하는 개체를 반환합니다. 이 입력 함수는 `str`과 연결된 로캘 패싯 `time_get`에 대해 멤버 함수 `get`을 호출하며, `tptr`을 사용하여 시간 구조를 나타내고 `fmt`를 사용하여 null로 끝나는 형식 문자열의 시작을 나타냅니다. 성공하면 추출된 시간 필드와 연결된 값을 시간 구조에 저장합니다. 그런 다음 조작자는 `str`을 반환합니다.  
   
-##  <a name="a-nameiomanipputmoneya--putmoney"></a><a name="iomanip_put_money"></a>  put_money  
+##  <a name="iomanip_put_money"></a>  put_money  
  원하는 형식을 사용하여 스트림에 금액을 삽입합니다.  
   
 ```  
@@ -84,7 +96,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
   
  `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.  
   
-##  <a name="a-nameiomanipputtimea--puttime"></a><a name="iomanip_put_time"></a>  put_time  
+##  <a name="iomanip_put_time"></a>  put_time  
  지정된 형식을 사용하여 시간 구조에서 스트림으로 시간 값을 씁니다.  
   
 ```  
@@ -102,7 +114,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>설명  
  조작자는 `str` 스트림에 삽입될 경우 `formatted output function`처럼 동작하는 개체를 반환합니다. 출력 함수는 `str`과 연결된 로캘 패킷 `time_put`에 대해 멤버 함수 `put`을 호출합니다. 출력 함수는 `_Tptr`을 사용하여 시간 구조를 나타내고 `_Fmt`를 사용하여 NUL로 끝나는 형식 문자열의 시작을 나타냅니다. 성공하면 형식 문자열에서 리터럴 텍스트를 삽입하고 시간 구조에서 변환된 값을 삽입합니다. 그런 다음 조작자는 `str`을 반환합니다.  
   
-##  <a name="a-namequoteda--quoted"></a><a name="quoted"></a>  quoted  
+##  <a name="quoted"></a>  quoted  
  **(C++14의 새로운 기능)** >> 및 << 연산자를 사용하여 스트림에 대한 문자열의 편리한 왕복을 가능하게 하는 iostream 조작자입니다.  
   
 ```  
@@ -265,7 +277,7 @@ Press Enter to exit
   
 ```  
   
-##  <a name="a-nameresetiosflagsa--resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags  
+##  <a name="resetiosflags"></a>  resetiosflags  
  지정된 플래그를 지웁니다.  
   
 ```  
@@ -282,7 +294,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>예제  
   `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
-##  <a name="a-namesetbasea--setbase"></a><a name="setbase"></a>  setbase  
+##  <a name="setbase"></a>  setbase  
  정수의 밑을 설정합니다.  
   
 ```  
@@ -307,7 +319,7 @@ T3 setbase(int _Base);
 ### <a name="example"></a>예제  
   `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
-##  <a name="a-namesetfilla--setfill"></a><a name="setfill"></a>  setfill  
+##  <a name="setfill"></a>  setfill  
  오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자를 설정합니다.  
   
 ```  
@@ -325,7 +337,7 @@ T4 setfill(Elem Ch);
 ### <a name="example"></a>예제  
   `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
-##  <a name="a-namesetiosflagsa--setiosflags"></a><a name="setiosflags"></a>  setiosflags  
+##  <a name="setiosflags"></a>  setiosflags  
  지정된 플래그를 설정합니다.  
   
 ```  
@@ -342,7 +354,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>예제  
   `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
-##  <a name="a-namesetprecisiona--setprecision"></a><a name="setprecision"></a>  setprecision  
+##  <a name="setprecision"></a>  setprecision  
  부동 소수점 값의 전체 자릿수를 설정합니다.  
   
 ```  
@@ -359,7 +371,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="example"></a>예제  
   `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
-##  <a name="a-namesetwa--setw"></a><a name="setw"></a>  setw  
+##  <a name="setw"></a>  setw  
  스트림에서 다음 요소에 대한 표시 필드의 너비를 지정합니다.  
   
 ```  

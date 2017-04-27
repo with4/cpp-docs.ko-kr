@@ -11,32 +11,26 @@ ms.topic: article
 f1_keywords:
 - copy_options
 - filesystem::copy_options
-- std::filesystem::copy_options
 - filesystem/std::filesystem::copy_options
 - experimental::filesystem::copy_options
-- std::experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
 - directory_options
 - filesystem::directory_options
-- std::filesystem::directory_options
 - filesystem/std::filesystem::directory_options
 - experimental::filesystem::directory_options
-- std::experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
 - file_type
 - filesystem::file_type
-- std::filesystem::file_type
 - filesystem/std::filesystem::file_type
 - experimental::filesystem::file_type
-- std::experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
 - perms
 - filesystem::perms
-- std::filesystem::perms
 - filesystem/std::filesystem::perms
 - experimental::filesystem::perms
-- std::experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
+dev_langs:
+- C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 caps.latest.revision: 3
 author: corob-msft
@@ -56,7 +50,7 @@ ms.lasthandoff: 02/24/2017
   
  **네임스페이스:** std::experimental::filesystem  
 
-##  <a name="a-namefilesystemcopyoptionsa--copyoptions"></a><a name="filesystem__copy_options"></a>  copy_options
+##  <a name="filesystem__copy_options"></a>  copy_options
 동작을 지정하기 위해 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 및 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 함수와 함께 사용되는 비트 마스크 값의 열거형입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -91,7 +85,7 @@ enum class copy_options {
 |`create_hard_links`|파일을 복사하지 않고 하드 링크를 만듭니다.|  
   
 
-##  <a name="a-namefilesystemdirectoryoptionsa-directoryoptions"></a><a name="filesystem__directory_options"></a> directory_options
+##  <a name="filesystem__directory_options"></a> directory_options
 디렉터리에 대한 기호화된 링크를 따를지, 아니면 무시할지 지정합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -109,7 +103,7 @@ enum class directory_options {
 |`none`|기본 동작: 디렉터리에 대한 기호 링크를 무시합니다. 사용 권한이 거부됨은 오류입니다.|  
 |`follow_directory_symlink`|디렉터리에 대한 기호화된 링크를 실제 디렉터리로 처리합니다.|  
   
-##  <a name="a-namefilesystemfiletypea--filetype"></a><a name="filesystem__file_type"></a>  file_type
+##  <a name="filesystem__file_type"></a>  file_type
 파일 형식에 대한 열거형입니다. 지원되는 값은 regular와 directory, not_found 및 unknown입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -143,7 +137,7 @@ enum class file_type {
 |`socket`|7|UNIX 기반 시스템의 소켓을 나타냅니다. (지원 안 됨)|  
 |`unknown`|8|해당 상태를 확인할 수 없는 파일을 나타냅니다.|  
   
-##  <a name="a-namefilesystempermsa--perms"></a><a name="filesystem__perms"></a>  perms
+##  <a name="filesystem__perms"></a>  perms
 파일 사용 권한에 대한 플래그입니다. 지원되는 값은 기본적으로 "읽기 전용"과 모두입니다. 읽기 전용 파일의 경우 *_write 비트가 설정되지 않습니다. 그렇지 않은 경우에는 `all` 비트(0x0777)가 설정됩니다.  
   
 ### <a name="syntax"></a>구문  

@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::insert_iterator
 - iterator/std::insert_iterator
-- std.insert_iterator
 - insert_iterator
+- iterator/std::insert_iterator::container_type
+- iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class insert_iterator;
   
  **네임스페이스:** std  
   
-##  <a name="a-nameinsertiteratorcontainertypea--insertiteratorcontainertype"></a><a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+##  <a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
  일반 삽입 대상인 컨테이너를 나타내는 형식입니다.  
   
 ```
@@ -126,7 +126,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorinsertiteratora--insertiteratorinsertiterator"></a><a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+##  <a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
  컨테이너의 지정된 위치에 요소를 삽입하는 `insert_iterator`를 만듭니다.  
   
 ```
@@ -189,7 +189,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatorstara--insertiteratoroperator"></a><a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+##  <a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
  주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.  
   
 ```
@@ -246,7 +246,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoraddadda--insertiteratoroperator"></a><a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+##  <a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
  값을 저장할 수 있는 다음 위치로 **insert_iterator**를 증가시킵니다.  
   
 ```
@@ -307,7 +307,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoreqa--insertiteratoroperator"></a><a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+##  <a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
  컨테이너에 값을 삽입하고 새 요소를 가리키도록 업데이트된 반복기를 반환합니다.  
   
 ```
@@ -386,7 +386,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorreferencea--insertiteratorreference"></a><a name="insert_iterator__reference"></a>  insert_iterator::reference  
+##  <a name="insert_iterator__reference"></a>  insert_iterator::reference  
  연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```

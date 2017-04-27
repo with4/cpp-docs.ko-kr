@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator&lt;](#operator_lt_)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 개체가 우변에 있는 개체와 같은지 테스트합니다.  
   
 ```
@@ -44,7 +45,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>설명  
  함수는 `left.category() == right.category() && left.value() == right.value()`를 반환합니다.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  연산자의 좌변에 있는 개체가 우변에 있는 개체와 같지 않은지 테스트합니다.  
   
 ```
@@ -68,7 +69,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>설명  
  함수는 `!(left == right)`를 반환합니다.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  개체가 비교를 위해 전달된 개체보다 작은지 여부를 테스트합니다.  
   
 ```

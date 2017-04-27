@@ -6,6 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- locale/std::has_facet
+- locale/std::isalnum
+- locale/std::isalpha
+- locale/std::iscntrl
+- locale/std::isdigit
+- locale/std::isgraph
+- locale/std::islower
+- locale/std::isprint
+- locale/std::ispunct
+- locale/std::isspace
+- locale/std::isupper
+- locale/std::isxdigit
+- locale/std::tolower
+- locale/std::toupper
+- locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="a-namehasfaceta--hasfacet"></a><a name="has_facet"></a>  has_facet  
+##  <a name="has_facet"></a>  has_facet  
  특정 패싯이 지정된 로캘에 저장되었는지를 테스트합니다.  
   
 ```  
@@ -63,7 +79,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-nameisalnuma--isalnum"></a><a name="isalnum"></a>  isalnum  
+##  <a name="isalnum"></a>  isalnum  
  로캘의 요소가 알파벳인지 또는 숫자인지를 테스트합니다.  
   
 ```  
@@ -127,7 +143,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="a-nameisalphaa--isalpha"></a><a name="isalpha"></a>  isalpha  
+##  <a name="isalpha"></a>  isalpha  
  로캘의 요소가 영문자인지를 테스트합니다.  
   
 ```  
@@ -188,7 +204,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameiscntrla--iscntrl"></a><a name="iscntrl"></a>  iscntrl  
+##  <a name="iscntrl"></a>  iscntrl  
  로캘의 요소가 제어 문자인지를 테스트합니다.  
   
 ```  
@@ -249,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisdigita--isdigit"></a><a name="isdigit"></a>  isdigit  
+##  <a name="isdigit"></a>  isdigit  
  로캘의 요소가 숫자인지를 테스트합니다.  
   
 ```  
@@ -310,7 +326,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisgrapha--isgraph"></a><a name="isgraph"></a>  isgraph  
+##  <a name="isgraph"></a>  isgraph  
  로캘의 요소가 영숫자인지 문장 부호인지를 테스트합니다.  
   
 ```  
@@ -371,7 +387,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameislowera--islower"></a><a name="islower"></a>  islower  
+##  <a name="islower"></a>  islower  
  로캘의 요소가 소문자인지를 테스트합니다.  
   
 ```  
@@ -432,7 +448,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisprinta--isprint"></a><a name="isprint"></a>  isprint  
+##  <a name="isprint"></a>  isprint  
  로캘의 요소가 인쇄 가능한 문자인지를 테스트합니다.  
   
 ```  
@@ -492,7 +508,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameispuncta--ispunct"></a><a name="ispunct"></a>  ispunct  
+##  <a name="ispunct"></a>  ispunct  
  로캘의 요소가 문장 부호 문자인지를 테스트합니다.  
   
 ```  
@@ -553,7 +569,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisspacea--isspace"></a><a name="isspace"></a>  isspace  
+##  <a name="isspace"></a>  isspace  
  로캘의 요소가 공백 문자인지를 테스트합니다.  
   
 ```  
@@ -614,7 +630,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisuppera--isupper"></a><a name="isupper"></a>  isupper  
+##  <a name="isupper"></a>  isupper  
  로캘의 요소가 대문자인지를 테스트합니다.  
   
 ```  
@@ -675,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisxdigita--isxdigit"></a><a name="isxdigit"></a>  isxdigit  
+##  <a name="isxdigit"></a>  isxdigit  
  로캘의 요소가&16;자 숫자를 나타내는 데 사용되는 문자인지를 테스트합니다.  
   
 ```  
@@ -738,7 +754,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametolowera--tolower"></a><a name="tolower"></a>  tolower  
+##  <a name="tolower"></a>  tolower  
  문자를 소문자로 변환합니다.  
   
 ```  
@@ -783,7 +799,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametouppera--toupper"></a><a name="toupper"></a>  toupper  
+##  <a name="toupper"></a>  toupper  
  문자를 대문자로 변환합니다.  
   
 ```  
@@ -828,7 +844,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameusefaceta--usefacet"></a><a name="use_facet"></a>  use_facet  
+##  <a name="use_facet"></a>  use_facet  
  로캘에 저장된 지정된 형식의 패싯에 대한 참조를 반환합니다.  
   
 ```  
