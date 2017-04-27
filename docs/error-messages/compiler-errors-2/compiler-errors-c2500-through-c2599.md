@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2500 C2599 통해 | Microsoft 문서"
+title: "컴파일러 오류 C2500 C2599 통해 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,56 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C2501
+- C2508
+- C2515
+- C2519
+- C2520
+- C2522
+- C2525
+- C2527
+- C2536
+- C2538
+- C2539
+- C2546
+- C2547
+- C2559
+- C2560
+- C2564
+- C2565
+- C2576
+- C2578
+- C2580
+- C2590
+- C2591
+- C2595
+- C2596
+helpviewer_keywords:
+- C2501
+- C2508
+- C2515
+- C2519
+- C2520
+- C2522
+- C2525
+- C2527
+- C2536
+- C2538
+- C2539
+- C2546
+- C2547
+- C2559
+- C2560
+- C2564
+- C2565
+- C2576
+- C2578
+- C2580
+- C2590
+- C2591
+- C2595
+- C2596
 dev_langs:
 - C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
@@ -30,152 +80,117 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: bdce46b08d44226c3dedef076528d7e46d39365c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.lasthandoff: 04/24/2017
 
 ---
-# <a name="compiler-errors-c2500-through-c2599"></a>컴파일러 오류 C2500 C2599 통해
+# <a name="compiler-errors-c2500-through-c2599"></a>컴파일러 오류 C2500 c 2599 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
- [컴파일러 오류 C2500](../../error-messages/compiler-errors-2/compiler-error-c2500.md)  
-  
- [컴파일러 오류 C2502](../../error-messages/compiler-errors-2/compiler-error-c2502.md)  
-  
- [컴파일러 오류 C2503](../../error-messages/compiler-errors-2/compiler-error-c2503.md)  
-  
- [컴파일러 오류 C2504](../../error-messages/compiler-errors-2/compiler-error-c2504.md)  
-  
- [컴파일러 오류 C2505](../../error-messages/compiler-errors-2/compiler-error-c2505.md)  
-  
- [컴파일러 오류 C2506](../../error-messages/compiler-errors-2/compiler-error-c2506.md)  
-  
- [컴파일러 오류 C2507](../../error-messages/compiler-errors-2/compiler-error-c2507.md)  
-  
- [컴파일러 오류 C2509](../../error-messages/compiler-errors-2/compiler-error-c2509.md)  
-  
- [컴파일러 오류 C2511](../../error-messages/compiler-errors-2/compiler-error-c2511.md)  
-  
- [컴파일러 오류 C2512](../../error-messages/compiler-errors-2/compiler-error-c2512.md)  
-  
- [컴파일러 오류 C2513](../../error-messages/compiler-errors-2/compiler-error-c2513.md)  
-  
- [컴파일러 오류 C2514](../../error-messages/compiler-errors-2/compiler-error-c2514.md)  
-  
- [컴파일러 오류 C2516](../../error-messages/compiler-errors-2/compiler-error-c2516.md)  
-  
- [컴파일러 오류 C2517](../../error-messages/compiler-errors-2/compiler-error-c2517.md)  
-  
- [컴파일러 오류 C2518](../../error-messages/compiler-errors-2/compiler-error-c2518.md)  
-  
- [컴파일러 오류 C2521](../../error-messages/compiler-errors-2/compiler-error-c2521.md)  
-  
- [컴파일러 오류 C2523](../../error-messages/compiler-errors-2/compiler-error-c2523.md)  
-  
- [컴파일러 오류 C2524](../../error-messages/compiler-errors-2/compiler-error-c2524.md)  
-  
- [컴파일러 오류 C2526](../../error-messages/compiler-errors-2/compiler-error-c2526.md)  
-  
- [컴파일러 오류 C2528](../../error-messages/compiler-errors-2/compiler-error-c2528.md)  
-  
- [컴파일러 오류 C2529](../../error-messages/compiler-errors-2/compiler-error-c2529.md)  
-  
- [컴파일러 오류 C2530](../../error-messages/compiler-errors-2/compiler-error-c2530.md)  
-  
- [컴파일러 오류 C2531](../../error-messages/compiler-errors-2/compiler-error-c2531.md)  
-  
- [컴파일러 오류 C2532](../../error-messages/compiler-errors-2/compiler-error-c2532.md)  
-  
- [컴파일러 오류 C2533](../../error-messages/compiler-errors-2/compiler-error-c2533.md)  
-  
- [컴파일러 오류 C2534](../../error-messages/compiler-errors-2/compiler-error-c2534.md)  
-  
- [컴파일러 오류 C2535](../../error-messages/compiler-errors-2/compiler-error-c2535.md)  
-  
- [컴파일러 오류 C2537](../../error-messages/compiler-errors-2/compiler-error-c2537.md)  
-  
- [컴파일러 오류 C2540](../../error-messages/compiler-errors-2/compiler-error-c2540.md)  
-  
- [컴파일러 오류 C2541](../../error-messages/compiler-errors-2/compiler-error-c2541.md)  
-  
- [컴파일러 오류 C2542](../../error-messages/compiler-errors-2/compiler-error-c2542.md)  
-  
- [컴파일러 오류 C2543](../../error-messages/compiler-errors-2/compiler-error-c2543.md)  
-  
- [컴파일러 오류 C2544](../../error-messages/compiler-errors-2/compiler-error-c2544.md)  
-  
- [컴파일러 오류 C2545](../../error-messages/compiler-errors-2/compiler-error-c2545.md)  
-  
- [컴파일러 오류 C2548](../../error-messages/compiler-errors-2/compiler-error-c2548.md)  
-  
- [컴파일러 오류 C2549](../../error-messages/compiler-errors-2/compiler-error-c2549.md)  
-  
- [컴파일러 오류 C2550](../../error-messages/compiler-errors-2/compiler-error-c2550.md)  
-  
- [컴파일러 오류 c&2552;](../../error-messages/compiler-errors-2/compiler-error-c2552.md)  
-  
- [컴파일러 오류 C2553](../../error-messages/compiler-errors-2/compiler-error-c2553.md)  
-  
- [컴파일러 오류 C2555](../../error-messages/compiler-errors-2/compiler-error-c2555.md)  
-  
- [컴파일러 오류 C2556](../../error-messages/compiler-errors-2/compiler-error-c2556.md)  
-  
- [컴파일러 오류 C2558](../../error-messages/compiler-errors-2/compiler-error-c2558.md)  
-  
- [컴파일러 오류 C2561](../../error-messages/compiler-errors-2/compiler-error-c2561.md)  
-  
- [컴파일러 오류 C2562](../../error-messages/compiler-errors-2/compiler-error-c2562.md)  
-  
- [컴파일러 오류 C2563](../../error-messages/compiler-errors-2/compiler-error-c2563.md)  
-  
- [컴파일러 오류 C2566](../../error-messages/compiler-errors-2/compiler-error-c2566.md)  
-  
- [컴파일러 오류 C2567](../../error-messages/compiler-errors-2/compiler-error-c2567.md)  
-  
- [컴파일러 오류 C2568](../../error-messages/compiler-errors-2/compiler-error-c2568.md)  
-  
- [컴파일러 오류 C2569](../../error-messages/compiler-errors-2/compiler-error-c2569.md)  
-  
- [컴파일러 오류 C2570](../../error-messages/compiler-errors-2/compiler-error-c2570.md)  
-  
- [컴파일러 오류 C2571](../../error-messages/compiler-errors-2/compiler-error-c2571.md)  
-  
- [컴파일러 오류 C2572](../../error-messages/compiler-errors-2/compiler-error-c2572.md)  
-  
- [컴파일러 오류 C2574](../../error-messages/compiler-errors-2/compiler-error-c2574.md)  
-  
- [컴파일러 오류 C2575](../../error-messages/compiler-errors-2/compiler-error-c2575.md)  
-  
- [컴파일러 오류 C2577](../../error-messages/compiler-errors-2/compiler-error-c2577.md)  
-  
- [컴파일러 오류 C2579](../../error-messages/compiler-errors-2/compiler-error-c2579.md)  
-  
- [컴파일러 오류 C2581](../../error-messages/compiler-errors-2/compiler-error-c2581.md)  
-  
- [컴파일러 오류 C2582](../../error-messages/compiler-errors-2/compiler-error-c2582.md)  
-  
- [컴파일러 오류 C2583](../../error-messages/compiler-errors-2/compiler-error-c2583.md)  
-  
- [컴파일러 오류 C2584](../../error-messages/compiler-errors-2/compiler-error-c2584.md)  
-  
- [컴파일러 오류 C2585](../../error-messages/compiler-errors-2/compiler-error-c2585.md)  
-  
- [컴파일러 오류 C2586](../../error-messages/compiler-errors-2/compiler-error-c2586.md)  
-  
- [컴파일러 오류 C2587](../../error-messages/compiler-errors-2/compiler-error-c2587.md)  
-  
- [컴파일러 오류 C2588](../../error-messages/compiler-errors-2/compiler-error-c2588.md)  
-  
- [컴파일러 오류 C2589](../../error-messages/compiler-errors-2/compiler-error-c2589.md)  
-  
- [컴파일러 오류 C2592](../../error-messages/compiler-errors-2/compiler-error-c2592.md)  
-  
- [컴파일러 오류 C2593](../../error-messages/compiler-errors-2/compiler-error-c2593.md)  
-  
- [컴파일러 오류 C2594](../../error-messages/compiler-errors-2/compiler-error-c2594.md)  
-  
- [컴파일러 오류 C2597](../../error-messages/compiler-errors-2/compiler-error-c2597.md)  
-  
- [컴파일러 오류 C2598](../../error-messages/compiler-errors-2/compiler-error-c2598.md)  
-  
- [컴파일러 오류 C2599](../../error-messages/compiler-errors-2/compiler-error-c2599.md)
+> [!NOTE]
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+  
+ MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
+  
+|오류|메시지|  
+|-----------|-------------|  
+|[컴파일러 오류 C2500](compiler-error-C2500.md)|'*identifier1*': '*identifier2*'가 이미 직접 기본 클래스|  
+|컴파일러 오류 C2501|'*식별자*': ' __declspec (*지정자*)' 구조체, 공용 구조체, 클래스 또는 부호 없는 비트 필드 멤버에만 적용할 수|  
+|[컴파일러 오류 C2502](compiler-error-C2502.md)|'*식별자*': 기본 클래스에 너무 많은 액세스 한정자|  
+|[컴파일러 오류 C2503](compiler-error-C2503.md)|'*클래스*': 기본 클래스에는 크기가 0 인 배열을 포함할 수 없습니다|  
+|[컴파일러 오류 C2504](compiler-error-C2504.md)|'*클래스*': 기본 정의 되지 않은 클래스|  
+|[컴파일러 오류 C2505](compiler-error-C2505.md)|'*기호*': ' __declspec (*지정자*)' 선언 또는 전역 개체 또는 정적 데이터 멤버의 정의에 적용할 수|  
+|[컴파일러 오류 C2506](compiler-error-C2506.md)|'*멤버*': ' __declspec (*지정자*)'이 기호에 적용할 수 없습니다|  
+|[컴파일러 오류 C2507](compiler-error-C2507.md)|'*식별자*': 기본 클래스에 가상 한정자가 너무 많은|  
+|컴파일러 오류 C2508|'*식별자*': '\_\_declspec (*specifier1*)' 함께 사용할 수 없는 '\_\_declspec (*specifier2*)'|  
+|[컴파일러 오류 C2509](compiler-error-C2509.md)|'*식별자*': 멤버 함수에서 선언 되지 '*클래스*'|  
+|[컴파일러 오류 C2510](compiler-error-C2510.md)|'*식별자*': 왼쪽은 ':: '은 클래스/구조체/공용 이어야 합니다|  
+|[컴파일러 오류 C2511](compiler-error-C2511.md)|'*식별자*': 오버 로드 된 멤버 함수에서 찾을 수 없습니다 '*클래스*'|  
+|[컴파일러 오류 C2512](compiler-error-C2512.md)|'*식별자*': 사용할 수 있는 적절 한 기본 생성자 없음|  
+|[컴파일러 오류 C2513](compiler-error-C2513.md)|' * 유형 ': '=' 앞에 선언 된 변수가 없음을|  
+|[컴파일러 오류 C2514](compiler-error-C2514.md)|'*클래스*': 클래스에 생성자가 없습니다|  
+|컴파일러 오류 C2515|'*식별자*': 'vtguard' 클래스 선언 또는 정의에 적용 될 수 있습니다|  
+|[컴파일러 오류 C2516](compiler-error-C2516.md)|'*클래스*': 올바른 기본 클래스가 아닙니다.|  
+|[컴파일러 오류 C2517](compiler-error-C2517.md)|'*식별자*': 오른쪽에 ':: ' 정의 되지 않습니다|  
+|[컴파일러 오류 C2518](compiler-error-C2518.md)|키워드 '*키워드*' 기본 클래스 목록에 잘못 된; 무시|  
+|컴파일러 오류 C2519|'*식별자*': WinRT 특성은 public 필드만 포함할 수 있습니다|  
+|컴파일러 오류 C2520|'*클래스*': 비 명시적 생성자가 암시적으로 변환에 사용할 수 없습니다|  
+|[컴파일러 오류 C2521](compiler-error-C2521.md)|소멸자/종료자는 인수를 사용 하지 않습니다.|  
+|컴파일러 오류 C2522|'*식별자*': 오버 로드 식별자에 사용할 수 없습니다 '*identifier1*에 이미 지정 되어' 있는 그대로'*identifier2*'|  
+|[컴파일러 오류 C2523](compiler-error-C2523.md)|'*클래스*:: ~*식별자*': 소멸자/종료자 태그 일치 하지 않습니다.|  
+|[컴파일러 오류 C2524](compiler-error-C2524.md)|'*식별자*': 소멸자/종료자에는 'void' 매개 변수 목록이 있어야 합니다.|  
+|컴파일러 오류 C2525|'*식별자*': 매개 변수 '*identifier1*'라는'*identifier2*' 자료에 대해 작동 하 고 게시 된 구현에서 일치 해야 합니다|  
+|[컴파일러 오류 C2526](compiler-error-C2526.md)|'*identifier1*': C 링크 함수는 c + + 클래스를 반환할 수 없습니다*identifier2*'|  
+|컴파일러 오류 C2527|'*식별자*': DefaultOverload는 둘 다에 지정할 수 없습니다 '*function1*'및'*function2*'. 하나를 제거 하거나 구현 중 함수 이름을 바꾸십시오.|  
+|[컴파일러 오류 C2528](compiler-error-C2528.md)|'*식별자*': 참조에 대 한 포인터 올바르지 않습니다.|  
+|[컴파일러 오류 C2529](compiler-error-C2529.md)|'*식별자*': 참조에 대 한 참조가 잘못 되었습니다.|  
+|[컴파일러 오류 C2530](compiler-error-C2530.md)|'*식별자*': 참조를 초기화 합니다|  
+|[컴파일러 오류 C2531](compiler-error-C2531.md)|'*식별자*': 비트 필드 잘못에 대 한 참조|  
+|[컴파일러 오류 C2532](compiler-error-C2532.md)|'*식별자*': 참조에 대 한 한정자가 잘못 되었습니다|  
+|[컴파일러 오류 C2533](compiler-error-C2533.md)|'*식별자*': 생성자는 반환 형식을 사용할 수 없습니다|  
+|[컴파일러 오류 C2534](compiler-error-C2534.md)|'*식별자*': 생성자는 값을 반환할 수 없습니다|  
+|[컴파일러 오류 C2535](compiler-error-C2535.md)|'*식별자*': 이미 정의 된 또는 선언 된 멤버 함수|  
+|컴파일러 오류 C2536|사용되지 않습니다.|  
+|[컴파일러 오류 C2537](compiler-error-C2537.md)|'*지정자*': 링크 사양이 올바르지 않습니다|  
+|컴파일러 오류 C2538|사용되지 않습니다.|  
+|컴파일러 오류 C2539|사용되지 않습니다.|
+|[컴파일러 오류 C2540](compiler-error-C2540.md)|배열 범위가 상수 식이 아닙니다.|  
+|[컴파일러 오류 C2541](compiler-error-C2541.md)|'*식별자*': 포인터 없는 개체를 삭제할 수 없습니다|  
+|[컴파일러 오류 C2542](compiler-error-C2542.md)|'*식별자*': 클래스 개체의 초기화에 대 한 생성자가 없습니다|  
+|[컴파일러 오류 C2543](compiler-error-C2543.md)|예상 ']' 연산자 ' '에 대 한|  
+|[컴파일러 오류 C2544](compiler-error-C2544.md)|'()' 연산자에 ')'가 필요합니다.|  
+|[컴파일러 오류 C2545](compiler-error-C2545.md)|'*연산자*': 오버 로드 된 찾기 연산자 수 없습니다.|  
+|컴파일러 오류 C2546|'*식별자*': 형식이 PIA와 NO-PIA PIA를 먼저 참조 해야 정의 된 경우|  
+|컴파일러 오류 C2547|'*식별자*': 선언에 게시 된 메서드의 모든 매개 변수를 명시적으로 명명 합니다|  
+|[컴파일러 오류 C2548](compiler-error-C2548.md)|'*함수*': 매개 변수에 대 한 기본 매개 변수 누락 *매개 변수*|  
+|[컴파일러 오류 C2549](compiler-error-C2549.md)|사용자 정의 변환에서 반환 형식을 지정할 수 없습니다.|  
+|[컴파일러 오류 C2550](compiler-error-C2550.md)|'*식별자*': 생성자 이니셜라이저 목록은 생성자 정의에 사용할 수|  
+|[컴파일러 오류 C2551](compiler-error-C2551.md)|'void *' 형식의 경우 명시적 캐스트가 필요합니다.|  
+|[컴파일러 오류 C2552](compiler-error-C2552.md)|'*식별자*': 이니셜라이저 목록을 사용 하 여 비 집합체를 초기화할 수 없습니다|  
+|[컴파일러 오류 C2553](compiler-error-C2553.md)|'*형식* *derived_class*::*함수*': 재정의 가상 함수에서 반환 형식이 다른 '*형식* *base_class*::*함수*'|  
+|[컴파일러 오류 C2555](compiler-error-C2555.md)|'*derived_class*::*함수*': 재정의 가상 함수의 반환 형식 다르며에서 공변있지 않습니다 '*base_class*::*함수*'|  
+|[컴파일러 오류 C2556](compiler-error-C2556.md)|'*type1* *클래스*::*함수*': 오버 로드 된 함수에서 반환 형식을 점만 다른 '*type2* *클래스*::*함수*'|  
+|[컴파일러 오류 C2557](compiler-error-C2557.md)|'*식별자*': 전용 및 보호 된 멤버는 생성자 없이 초기화할 수 없습니다|  
+|[컴파일러 오류 C2558](compiler-error-C2558.md)|클래스의*클래스*': 복사 생성자를 사용할 수 없거나 복사 생성자 'explicit' 선언|  
+|컴파일러 오류 C2559|'*식별자*': ref 한정자는 멤버 함수와 함께 ref 한정자 없이 멤버 함수를 오버 로드할 수 없습니다|  
+|컴파일러 오류 C2560|'*식별자*': ref 한정자 없이 멤버 함수를 멤버 함수를 오버 로드할 수 없습니다|  
+|[컴파일러 오류 C2561](compiler-error-C2561.md)|'*함수*': 함수는 값을 반환 해야 합니다|  
+|[컴파일러 오류 C2562](compiler-error-C2562.md)|'*함수*': 값을 반환 하는 'void' 함수|  
+|[컴파일러 오류 C2563](compiler-error-C2563.md)|정식 매개 변수 목록과 일치하지 않는 항목이 있습니다.|  
+|컴파일러 오류 C2564|사용되지 않습니다.|  
+|컴파일러 오류 C2565|'*식별자*': ref-qualifier가 생성자/소멸자에 적합 하지|  
+|[컴파일러 오류 C2566](compiler-error-C2566.md)|조건식에 오버로드된 함수가 있습니다.|  
+|[컴파일러 오류 C2567](compiler-error-C2567.md)|메타 데이터를 열 수 없습니다. '*filename*', *possible_reason*|  
+|[컴파일러 오류 C2568](compiler-error-C2568.md)|'*식별자*': 함수 오버 로드를 확인할 수 없습니다.|  
+|[컴파일러 오류 C2569](compiler-error-C2569.md)|'*식별자*': 열거형/공용 구조체를 기본 클래스로 사용할 수 없습니다|  
+|[컴파일러 오류 C2570](compiler-error-C2570.md)|'*식별자*': 공용 구조체는 기본 클래스를 사용할 수 없습니다|  
+|[컴파일러 오류 C2571](compiler-error-C2571.md)|'*식별자*': 가상 함수는 공용 구조체에 있을 수 없습니다 '*union*'|  
+|[컴파일러 오류 C2572](compiler-error-C2572.md)|'*함수*': 기본 인수의 재정의: 매개 변수 *번호*|  
+|[컴파일러 오류 C2573](compiler-error-C2573.md)|'*클래스*':이 형식의; 개체에 대 한 포인터를 삭제할 수 없습니다 클래스에 'operator delete'에 대 한 비배치 오버 로드가 없습니다. 사용:: 삭제 하거나 '연산자 delete(void*)' 클래스에 추가|  
+|[컴파일러 오류 C2574](compiler-error-C2574.md)|'*소멸자*': 정적으로 선언할 수 없습니다.|  
+|[컴파일러 오류 C2575](compiler-error-C2575.md)|'*식별자*': 멤버 함수와 기본 가상 일 수 있습니다|  
+|컴파일러 오류 C2576|'*식별자*': 'public'으로 새 가상 메서드를 정의할 수 없습니다. 액세스 가능성을 'internal' 또는 'protected private' 변경 또는 비 가상 메서드를 만드는 것이 좋습니다|  
+|[컴파일러 오류 C2577](compiler-error-C2577.md)|'*식별자*': 소멸자/종료자는 반환 형식을 가질 수 없습니다|  
+|컴파일러 오류 C2578|'*클래스*': 형식은 사용할 수 없습니다 'protected' 또는 'protected public' 생성자|  
+|[컴파일러 오류 C2579](compiler-error-C2579.md)|형식을 확인할 수 없습니다 *형식* (*오프셋*). 에 필요 *파일 이름*|  
+|컴파일러 오류 C2580|'*식별자*': 여러 버전의 기본값으로 설정 된 특수 멤버 함수는 사용할 수 없습니다|  
+|[컴파일러 오류 C2581](compiler-error-C2581.md)|'*형식*': 정적 ' operator =' 함수가 잘못 되었습니다.|  
+|[컴파일러 오류 C2582](compiler-error-C2582.md)|' 연산자 *연산자*'함수를 사용할 수 없습니다.'*형식*'|  
+|[컴파일러 오류 C2583](compiler-error-C2583.md)|'*식별자*': ' const/volatile ' 'this'이 포인터는 생성자/소멸자에 적합 하지 않습니다|  
+|[컴파일러 오류 C2584](compiler-error-C2584.md)|'*클래스*': 직접 기본 '*base_class2*'; 액세스할 수 없는의 기본 이미 '*base_class1*'|  
+|[컴파일러 오류 C2585](compiler-error-C2585.md)|으로 명시적으로 변환 '*형식*' 모호 합니다.|  
+|[컴파일러 오류 C2586](compiler-error-C2586.md)|사용자 정의 변환 구문이 잘못되었습니다. 간접 참조가 잘못되었습니다.|  
+|[컴파일러 오류 C2587](compiler-error-C2587.md)|'*식별자*': 기본 매개 변수로 잘못 된 지역 변수 사용|  
+|[컴파일러 오류 C2588](compiler-error-C2588.md)|':: ~*식별자*': 잘못 된 글로벌 소멸자/종료자|  
+|[컴파일러 오류 C2589](compiler-error-C2589.md)|'*식별자*': 오른쪽에 잘못 된 토큰 ':: '|  
+|컴파일러 오류 C2590|'*식별자*': 생성자는 기본/멤버 이니셜라이저 목록을 포함할 수 있습니다|  
+|컴파일러 오류 C2591|ExclusiveTo 사용할 수 없습니다 '*형식*' 인수로 합니다. 만 'ref 클래스'는 유효한 인수|  
+|[컴파일러 오류 C2592](compiler-error-C2592.md)|'*클래스*': '*base_class2*'에서 상속 된'*base_class1*' 매개 변수와 다시 지정할 수 없습니다|  
+|[컴파일러 오류 C2593](compiler-error-C2593.md)|' 연산자 *식별자*' 모호 합니다.|  
+|[컴파일러 오류 C2594](compiler-error-C2594.md)|'*연산자*': 모호한 변환에서 '*type1*'to'*type2*'|  
+|컴파일러 오류 C2595|'*식별자*' A WinRT 특성 유형은 sealed 여야|  
+|컴파일러 오류 C2596|'*식별자*' A WinRT 특성 필드에는 'public enum class', 'int', 'unsigned int', 'bool', 'platform:: type', 'platform:: string' 또는 ' Windows:: Foundation:: HResult' 수만 있습니다|  
+|[컴파일러 오류 C2597](compiler-error-C2597.md)|비정적 멤버에 대 한 잘못 된 참조 '*식별자*'|  
+|[컴파일러 오류 C2598](compiler-error-C2598.md)|링크 사양은 전역 범위에 있어야 합니다.|  
+|[컴파일러 오류 C2599](compiler-error-C2599.md)|'*식별자*': 관리 되 는/WinRT 열거형의 정방향 선언은 사용할 수 없습니다|  

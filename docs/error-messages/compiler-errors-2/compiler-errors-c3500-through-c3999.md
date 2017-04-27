@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3500 C3999 통해 | Microsoft 문서"
+title: "컴파일러 오류 C3500 C3999 통해 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,251 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C3502
+- C3503
+- C3504
+- C3511
+- C3512
+- C3513
+- C3514
+- C3515
+- C3516
+- C3517
+- C3518
+- C3520
+- C3521
+- C3522
+- C3523
+- C3524
+- C3525
+- C3526
+- C3527
+- C3528
+- C3529
+- C3534
+- C3542
+- C3543
+- C3544
+- C3545
+- C3546
+- C3547
+- C3548
+- C3549
+- C3557
+- C3558
+- C3559
+- C3560
+- C3561
+- C3562
+- C3563
+- C3564
+- C3565
+- C3566
+- C3567
+- C3568
+- C3569
+- C3570
+- C3571
+- C3572
+- C3573
+- C3574
+- C3575
+- C3576
+- C3577
+- C3578
+- C3579
+- C3580
+- C3581
+- C3582
+- C3583
+- C3584
+- C3585
+- C3586
+- C3587
+- C3588
+- C3589
+- C3590
+- C3591
+- C3592
+- C3593
+- C3594
+- C3595
+- C3596
+- C3597
+- C3598
+- C3599
+- C3600
+- C3601
+- C3602
+- C3604
+- C3605
+- C3613
+- C3614
+- C3615
+- C3616
+- C3620
+- C3621
+- C3635
+- C3636
+- C3649
+- C3658
+- C3659
+- C3660
+- C3663
+- C3664
+- C3667
+- C3674
+- C3676
+- C3677
+- C3678
+- C3679
+- C3680
+- C3681
+- C3682
+- C3683
+- C3684
+- C3685
+- C3686
+- C3687
+- C3688
+- C3689
+- C3690
+- C3691
+- C3696
+- C3716
+- C3720
+- C3725
+- C3726
+- C3729
+- C3730
+- C3735
+- C3742
+- C3746
+- C3750
+- C3751
+- C3756
+- C3757
+- C3758
+- C3759
+- C3760
+- C3770
+- C3773
+- C3774
+- C3775
+- C3776
+- C3777
+- C3778
+- C3779
+- C3780
+- C3781
+- C3782
+- C3783
+- C3784
+- C3785
+- C3786
+- C3787
+- C3801
+- C3802
+- C3806
+- C3811
+- C3814
+- C3819
+- C3822
+- C3823
+- C3826
+- C3827
+- C3829
+- C3837
+- C3840
+- C3841
+- C3843
+- C3844
+- C3845
+- C3863
+- C3870
+- C3871
+- C3875
+- C3879
+- C3881
+- C3882
+- C3884
+- C3885
+- C3897
+- C3905
+- C3906
+- C3916
+- C3921
+- C3924
+- C3925
+- C3926
+- C3927
+- C3928
+- C3930
+- C3931
+- C3932
+- C3933
+- C3934
+- C3935
+- C3936
+- C3937
+- C3938
+- C3939
+- C3940
+- C3941
+- C3945
+- C3946
+- C3947
+- C3948
+- C3949
+- C3950
+- C3951
+- C3952
+- C3953
+- C3954
+- C3955
+- C3956
+- C3957
+- C3958
+- C3959
+- C3960
+- C3961
+- C3962
+- C3963
+- C3964
+- C3965
+- C3966
+- C3967
+- C3968
+- C3969
+- C3970
+- C3971
+- C3972
+- C3975
+- C3976
+- C3977
+- C3978
+- C3979
+- C3980
+- C3981
+- C3982
+- C3983
+- C3984
+- C3985
+- C3986
+- C3987
+- C3988
+- C3989
+- C3990
+- C3991
+- C3992
+- C3993
+- C3994
+- C3995
+- C3996
+- C3997
+- C3998
+- C3999
 dev_langs:
 - C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
@@ -31,427 +276,518 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 1c6e5e54541d5cdcb7e2cde7c12117266d45b514
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>컴파일러 오류 C3500 C3999 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
- [컴파일러 오류 C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
-  
- [컴파일러 오류 C3501](../../error-messages/compiler-errors-2/compiler-error-c3501.md)  
-  
- [컴파일러 오류 C3505](../../error-messages/compiler-errors-2/compiler-error-c3505.md)  
-  
- [컴파일러 오류 C3506](../../error-messages/compiler-errors-2/compiler-error-c3506.md)  
-  
- [컴파일러 오류 C3507](../../error-messages/compiler-errors-2/compiler-error-c3507.md)  
-  
- [컴파일러 오류 C3508](../../error-messages/compiler-errors-2/compiler-error-c3508.md)  
-  
- [컴파일러 오류 C3509](../../error-messages/compiler-errors-2/compiler-error-c3509.md)  
-  
- [컴파일러 오류 C3510](../../error-messages/compiler-errors-2/compiler-error-c3510.md)  
-  
- [컴파일러 오류 C3519](../../error-messages/compiler-errors-2/compiler-error-c3519.md)  
-  
- [컴파일러 오류 C3530](../../error-messages/compiler-errors-2/compiler-error-c3530.md)  
-  
- [컴파일러 오류 C3531](../../error-messages/compiler-errors-2/compiler-error-c3531.md)  
-  
- [컴파일러 오류 C3532](../../error-messages/compiler-errors-2/compiler-error-c3532.md)  
-  
- [컴파일러 오류 C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
-  
- [컴파일러 오류 C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
-  
- [컴파일러 오류 C3536](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
-  
- [컴파일러 오류 C3537](../../error-messages/compiler-errors-2/compiler-error-c3537.md)  
-  
- [컴파일러 오류 C3538](../../error-messages/compiler-errors-2/compiler-error-c3538.md)  
-  
- [컴파일러 오류 C3539](../../error-messages/compiler-errors-2/compiler-error-c3539.md)  
-  
- [컴파일러 오류 C3540](../../error-messages/compiler-errors-2/compiler-error-c3540.md)  
-  
- [컴파일러 오류 C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
-  
- [컴파일러 오류 C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
-  
- [컴파일러 오류 C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
-  
- [컴파일러 오류 C3609](../../error-messages/compiler-errors-2/compiler-error-c3609.md)  
-  
- [컴파일러 오류 C3610](../../error-messages/compiler-errors-2/compiler-error-c3610.md)  
-  
- [컴파일러 오류 C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
-  
- [컴파일러 오류 C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [컴파일러 오류 C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
-  
- [컴파일러 오류 C3619](../../error-messages/compiler-errors-2/compiler-error-c3619.md)  
-  
- [컴파일러 오류 C3622](../../error-messages/compiler-errors-2/compiler-error-c3622.md)  
-  
- [컴파일러 오류 C3623](../../error-messages/compiler-errors-2/compiler-error-c3623.md)  
-  
- [컴파일러 오류 C3624](../../error-messages/compiler-errors-2/compiler-error-c3624.md)  
-  
- [컴파일러 오류 C3625](../../error-messages/compiler-errors-2/compiler-error-c3625.md)  
-  
- [컴파일러 오류 C3626](../../error-messages/compiler-errors-2/compiler-error-c3626.md)  
-  
- [컴파일러 오류 C3627](../../error-messages/compiler-errors-2/compiler-error-c3627.md)  
-  
- [컴파일러 오류 C3628](../../error-messages/compiler-errors-2/compiler-error-c3628.md)  
-  
- [컴파일러 오류 C3630](../../error-messages/compiler-errors-2/compiler-error-c3630.md)  
-  
- [컴파일러 오류 C3631](../../error-messages/compiler-errors-2/compiler-error-c3631.md)  
-  
- [컴파일러 오류 C3632](../../error-messages/compiler-errors-2/compiler-error-c3632.md)  
-  
- [컴파일러 오류 C3633](../../error-messages/compiler-errors-2/compiler-error-c3633.md)  
-  
- [컴파일러 오류 C3634](../../error-messages/compiler-errors-2/compiler-error-c3634.md)  
-  
- [컴파일러 오류 C3637](../../error-messages/compiler-errors-2/compiler-error-c3637.md)  
-  
- [컴파일러 오류 C3638](../../error-messages/compiler-errors-2/compiler-error-c3638.md)  
-  
- [컴파일러 오류 C3640](../../error-messages/compiler-errors-2/compiler-error-c3640.md)  
-  
- [컴파일러 오류 C3641](../../error-messages/compiler-errors-2/compiler-error-c3641.md)  
-  
- [컴파일러 오류 C3642](../../error-messages/compiler-errors-2/compiler-error-c3642.md)  
-  
- [컴파일러 오류 C3644](../../error-messages/compiler-errors-2/compiler-error-c3644.md)  
-  
- [컴파일러 오류 C3645](../../error-messages/compiler-errors-2/compiler-error-c3645.md)  
-  
- [컴파일러 오류 C3646](../../error-messages/compiler-errors-2/compiler-error-c3646.md)  
-  
- [컴파일러 오류 C3648](../../error-messages/compiler-errors-2/compiler-error-c3648.md)  
-  
- [컴파일러 오류 C3650](../../error-messages/compiler-errors-2/compiler-error-c3650.md)  
-  
- [컴파일러 오류 C3651](../../error-messages/compiler-errors-2/compiler-error-c3651.md)  
-  
- [컴파일러 오류 C3652](../../error-messages/compiler-errors-2/compiler-error-c3652.md)  
-  
- [컴파일러 오류 C3653](../../error-messages/compiler-errors-2/compiler-error-c3653.md)  
-  
- [컴파일러 오류 C3654](../../error-messages/compiler-errors-2/compiler-error-c3654.md)  
-  
- [컴파일러 오류 C3655](../../error-messages/compiler-errors-2/compiler-error-c3655.md)  
-  
- [컴파일러 오류 C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
-  
- [컴파일러 오류 C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
-  
- [컴파일러 오류 C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
-  
- [컴파일러 오류 C3662](../../error-messages/compiler-errors-2/compiler-error-c3662.md)  
-  
- [컴파일러 오류 C3665](../../error-messages/compiler-errors-2/compiler-error-c3665.md)  
-  
- [컴파일러 오류 C3666](../../error-messages/compiler-errors-2/compiler-error-c3666.md)  
-  
- [컴파일러 오류 C3668](../../error-messages/compiler-errors-2/compiler-error-c3668.md)  
-  
- [컴파일러 오류 C3669](../../error-messages/compiler-errors-2/compiler-error-c3669.md)  
-  
- [컴파일러 오류 C3670](../../error-messages/compiler-errors-2/compiler-error-c3670.md)  
-  
- [컴파일러 오류 C3671](../../error-messages/compiler-errors-2/compiler-error-c3671.md)  
-  
- [컴파일러 오류 C3672](../../error-messages/compiler-errors-2/compiler-error-c3672.md)  
-  
- [컴파일러 오류 C3673](../../error-messages/compiler-errors-2/compiler-error-c3673.md)  
-  
- [컴파일러 오류 C3675](../../error-messages/compiler-errors-2/compiler-error-c3675.md)  
-  
- [컴파일러 오류 C3697](../../error-messages/compiler-errors-2/compiler-error-c3697.md)  
-  
- [컴파일러 오류 C3698](../../error-messages/compiler-errors-2/compiler-error-c3698.md)  
-  
- [컴파일러 오류 C3699](../../error-messages/compiler-errors-2/compiler-error-c3699.md)  
-  
- [컴파일러 오류 C3701](../../error-messages/compiler-errors-2/compiler-error-c3701.md)  
-  
- [컴파일러 오류 C3702](../../error-messages/compiler-errors-2/compiler-error-c3702.md)  
-  
- [컴파일러 오류 C3703](../../error-messages/compiler-errors-2/compiler-error-c3703.md)  
-  
- [컴파일러 오류 C3704](../../error-messages/compiler-errors-2/compiler-error-c3704.md)  
-  
- [컴파일러 오류 C3705](../../error-messages/compiler-errors-2/compiler-error-c3705.md)  
-  
- [컴파일러 오류 C3706](../../error-messages/compiler-errors-2/compiler-error-c3706.md)  
-  
- [컴파일러 오류 C3707](../../error-messages/compiler-errors-2/compiler-error-c3707.md)  
-  
- [컴파일러 오류 C3708](../../error-messages/compiler-errors-2/compiler-error-c3708.md)  
-  
- [컴파일러 오류 C3709](../../error-messages/compiler-errors-2/compiler-error-c3709.md)  
-  
- [컴파일러 오류 C3710](../../error-messages/compiler-errors-2/compiler-error-c3710.md)  
-  
- [컴파일러 오류 C3711](../../error-messages/compiler-errors-2/compiler-error-c3711.md)  
-  
- [컴파일러 오류 C3712](../../error-messages/compiler-errors-2/compiler-error-c3712.md)  
-  
- [컴파일러 오류 C3713](../../error-messages/compiler-errors-2/compiler-error-c3713.md)  
-  
- [컴파일러 오류 C3714](../../error-messages/compiler-errors-2/compiler-error-c3714.md)  
-  
- [컴파일러 오류 C3715](../../error-messages/compiler-errors-2/compiler-error-c3715.md)  
-  
- [컴파일러 오류 C3717](../../error-messages/compiler-errors-2/compiler-error-c3717.md)  
-  
- [컴파일러 오류 C3718](../../error-messages/compiler-errors-2/compiler-error-c3718.md)  
-  
- [컴파일러 오류 C3719](../../error-messages/compiler-errors-2/compiler-error-c3719.md)  
-  
- [컴파일러 오류 C3721](../../error-messages/compiler-errors-2/compiler-error-c3721.md)  
-  
- [컴파일러 오류 C3722](../../error-messages/compiler-errors-2/compiler-error-c3722.md)  
-  
- [컴파일러 오류 C3723](../../error-messages/compiler-errors-2/compiler-error-c3723.md)  
-  
- [컴파일러 오류 C3724](../../error-messages/compiler-errors-2/compiler-error-c3724.md)  
-  
- [컴파일러 오류 C3727](../../error-messages/compiler-errors-2/compiler-error-c3727.md)  
-  
- [컴파일러 오류 C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
-  
- [컴파일러 오류 C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
-  
- [컴파일러 오류 C3732](../../error-messages/compiler-errors-2/compiler-error-c3732.md)  
-  
- [컴파일러 오류 C3733](../../error-messages/compiler-errors-2/compiler-error-c3733.md)  
-  
- [컴파일러 오류 C3734](../../error-messages/compiler-errors-2/compiler-error-c3734.md)  
-  
- [컴파일러 오류 C3736](../../error-messages/compiler-errors-2/compiler-error-c3736.md)  
-  
- [컴파일러 오류 C3737](../../error-messages/compiler-errors-2/compiler-error-c3737.md)  
-  
- [컴파일러 오류 C3738](../../error-messages/compiler-errors-2/compiler-error-c3738.md)  
-  
- [컴파일러 오류 C3739](../../error-messages/compiler-errors-2/compiler-error-c3739.md)  
-  
- [컴파일러 오류 C3740](../../error-messages/compiler-errors-2/compiler-error-c3740.md)  
-  
- [컴파일러 오류 C3741](../../error-messages/compiler-errors-2/compiler-error-c3741.md)  
-  
- [컴파일러 오류 C3743](../../error-messages/compiler-errors-2/compiler-error-c3743.md)  
-  
- [컴파일러 오류 C3744](../../error-messages/compiler-errors-2/compiler-error-c3744.md)  
-  
- [컴파일러 오류 C3745](../../error-messages/compiler-errors-2/compiler-error-c3745.md)  
-  
- [컴파일러 오류 C3747](../../error-messages/compiler-errors-2/compiler-error-c3747.md)  
-  
- [컴파일러 오류 C3748](../../error-messages/compiler-errors-2/compiler-error-c3748.md)  
-  
- [컴파일러 오류 C3749](../../error-messages/compiler-errors-2/compiler-error-c3749.md)  
-  
- [컴파일러 오류 C3752](../../error-messages/compiler-errors-2/compiler-error-c3752.md)  
-  
- [컴파일러 오류 C3753](../../error-messages/compiler-errors-2/compiler-error-c3753.md)  
-  
- [컴파일러 오류 C3754](../../error-messages/compiler-errors-2/compiler-error-c3754.md)  
-  
- [컴파일러 오류 C3755](../../error-messages/compiler-errors-2/compiler-error-c3755.md)  
-  
- [컴파일러 오류 C3761](../../error-messages/compiler-errors-2/compiler-error-c3761.md)  
-  
- [컴파일러 오류 C3762](../../error-messages/compiler-errors-2/compiler-error-c3762.md)  
-  
- [컴파일러 오류 C3763](../../error-messages/compiler-errors-2/compiler-error-c3763.md)  
-  
- [컴파일러 오류 C3764](../../error-messages/compiler-errors-2/compiler-error-c3764.md)  
-  
- [컴파일러 오류 C3765](../../error-messages/compiler-errors-2/compiler-error-c3765.md)  
-  
- [컴파일러 오류 C3766](../../error-messages/compiler-errors-2/compiler-error-c3766.md)  
-  
- [컴파일러 오류 c&3767;](../../error-messages/compiler-errors-2/compiler-error-c3767.md)  
-  
- [컴파일러 오류 C3768](../../error-messages/compiler-errors-2/compiler-error-c3768.md)  
-  
- [컴파일러 오류 C3769](../../error-messages/compiler-errors-2/compiler-error-c3769.md)  
-  
- [컴파일러 오류 C3797](../../error-messages/compiler-errors-2/compiler-error-c3797.md)  
-  
- [컴파일러 오류 C3798](../../error-messages/compiler-errors-2/compiler-error-c3798.md)  
-  
- [컴파일러 오류 C3799](../../error-messages/compiler-errors-2/compiler-error-c3799.md)  
-  
- [컴파일러 오류 C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
-  
- [컴파일러 오류 C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
-  
- [컴파일러 오류 C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
-  
- [컴파일러 오류 C3805](../../error-messages/compiler-errors-2/compiler-error-c3805.md)  
-  
- [컴파일러 오류 C3807](../../error-messages/compiler-errors-2/compiler-error-c3807.md)  
-  
- [컴파일러 오류 C3808](../../error-messages/compiler-errors-2/compiler-error-c3808.md)  
-  
- [컴파일러 오류 C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
-  
- [컴파일러 오류 C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
-  
- [컴파일러 오류 C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [컴파일러 오류 C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
-  
- [컴파일러 오류 C3816](../../error-messages/compiler-errors-2/compiler-error-c3816.md)  
-  
- [컴파일러 오류 C3817](../../error-messages/compiler-errors-2/compiler-error-c3817.md)  
-  
- [컴파일러 오류 C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
-  
- [컴파일러 오류 C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [컴파일러 오류 C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
-  
- [컴파일러 오류 C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
-  
- [컴파일러 오류 C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
-  
- [컴파일러 오류 C3830](../../error-messages/compiler-errors-2/compiler-error-c3830.md)  
-  
- [컴파일러 오류 C3831](../../error-messages/compiler-errors-2/compiler-error-c3831.md)  
-  
- [컴파일러 오류 C3832](../../error-messages/compiler-errors-2/compiler-error-c3832.md)  
-  
- [컴파일러 오류 C3833](../../error-messages/compiler-errors-2/compiler-error-c3833.md)  
-  
- [컴파일러 오류 C3834](../../error-messages/compiler-errors-2/compiler-error-c3834.md)  
-  
- [컴파일러 오류 C3836](../../error-messages/compiler-errors-2/compiler-error-c3836.md)  
-  
- [컴파일러 오류 C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
-  
- [컴파일러 오류 C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
-  
- [컴파일러 오류 C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
-  
- [컴파일러 오류 C3846](../../error-messages/compiler-errors-2/compiler-error-c3846.md)  
-  
- [컴파일러 오류 C3848](../../error-messages/compiler-errors-2/compiler-error-c3848.md)  
-  
- [컴파일러 오류 C3849](../../error-messages/compiler-errors-2/compiler-error-c3849.md)  
-  
- [컴파일러 오류 C3850](../../error-messages/compiler-errors-2/compiler-error-c3850.md)  
-  
- [컴파일러 오류 C3851](../../error-messages/compiler-errors-2/compiler-error-c3851.md)  
-  
- [컴파일러 오류 C3852](../../error-messages/compiler-errors-2/compiler-error-c3852.md)  
-  
- [컴파일러 오류 C3853](../../error-messages/compiler-errors-2/compiler-error-c3853.md)  
-  
- [컴파일러 오류 C3854](../../error-messages/compiler-errors-2/compiler-error-c3854.md)  
-  
- [컴파일러 오류 C3855](../../error-messages/compiler-errors-2/compiler-error-c3855.md)  
-  
- [컴파일러 오류 C3856](../../error-messages/compiler-errors-2/compiler-error-c3856.md)  
-  
- [컴파일러 오류 C3857](../../error-messages/compiler-errors-2/compiler-error-c3857.md)  
-  
- [컴파일러 오류 C3858](../../error-messages/compiler-errors-2/compiler-error-c3858.md)  
-  
- [컴파일러 오류 C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)  
-  
- [컴파일러 오류 C3860](../../error-messages/compiler-errors-2/compiler-error-c3860.md)  
-  
- [컴파일러 오류 C3861](../../error-messages/compiler-errors-2/compiler-error-c3861.md)  
-  
- [컴파일러 오류 C3862](../../error-messages/compiler-errors-2/compiler-error-c3862.md)  
-  
- [컴파일러 오류 C3865](../../error-messages/compiler-errors-2/compiler-error-c3865.md)  
-  
- [컴파일러 오류 C3866](../../error-messages/compiler-errors-2/compiler-error-c3866.md)  
-  
- [컴파일러 오류 C3867](../../error-messages/compiler-errors-2/compiler-error-c3867.md)  
-  
- [컴파일러 오류 C3868](../../error-messages/compiler-errors-2/compiler-error-c3868.md)  
-  
- [컴파일러 오류 C3869](../../error-messages/compiler-errors-2/compiler-error-c3869.md)  
-  
- [컴파일러 오류 C3872](../../error-messages/compiler-errors-2/compiler-error-c3872.md)  
-  
- [컴파일러 오류 C3873](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
-  
- [컴파일러 오류 C3874](../../error-messages/compiler-errors-2/compiler-error-c3874.md)  
-  
- [컴파일러 오류 C3880](../../error-messages/compiler-errors-2/compiler-error-c3880.md)  
-  
- [컴파일러 오류 C3883](../../error-messages/compiler-errors-2/compiler-error-c3883.md)  
-  
- [컴파일러 오류 C3886](../../error-messages/compiler-errors-2/compiler-error-c3886.md)  
-  
- [컴파일러 오류 C3887](../../error-messages/compiler-errors-2/compiler-error-c3887.md)  
-  
- [컴파일러 오류 C3890](../../error-messages/compiler-errors-2/compiler-error-c3890.md)  
-  
- [컴파일러 오류 C3891](../../error-messages/compiler-errors-2/compiler-error-c3891.md)  
-  
- [컴파일러 오류 C3892](../../error-messages/compiler-errors-2/compiler-error-c3892.md)  
-  
- [컴파일러 오류 C3893](../../error-messages/compiler-errors-2/compiler-error-c3893.md)  
-  
- [컴파일러 오류 C3894](../../error-messages/compiler-errors-2/compiler-error-c3894.md)  
-  
- [컴파일러 오류 C3895](../../error-messages/compiler-errors-2/compiler-error-c3895.md)  
-  
- [컴파일러 오류 C3896](../../error-messages/compiler-errors-2/compiler-error-c3896.md)  
-  
- [컴파일러 오류 C3898](../../error-messages/compiler-errors-2/compiler-error-c3898.md)  
-  
- [컴파일러 오류 C3899](../../error-messages/compiler-errors-2/compiler-error-c3899.md)  
-  
- [컴파일러 오류 C3900](../../error-messages/compiler-errors-2/compiler-error-c3900.md)  
-  
- [컴파일러 오류 C3901](../../error-messages/compiler-errors-2/compiler-error-c3901.md)  
-  
- [컴파일러 오류 C3902](../../error-messages/compiler-errors-2/compiler-error-c3902.md)  
-  
- [컴파일러 오류 C3903](../../error-messages/compiler-errors-2/compiler-error-c3903.md)  
-  
- [컴파일러 오류 C3904](../../error-messages/compiler-errors-2/compiler-error-c3904.md)  
-  
- [컴파일러 오류 C3908](../../error-messages/compiler-errors-2/compiler-error-c3908.md)  
-  
- [컴파일러 오류 C3909](../../error-messages/compiler-errors-2/compiler-error-c3909.md)  
-  
- [컴파일러 오류 C3910](../../error-messages/compiler-errors-2/compiler-error-c3910.md)  
-  
- [컴파일러 오류 C3911](../../error-messages/compiler-errors-2/compiler-error-c3911.md)  
-  
- [컴파일러 오류 C3912](../../error-messages/compiler-errors-2/compiler-error-c3912.md)  
-  
- [컴파일러 오류 C3913](../../error-messages/compiler-errors-2/compiler-error-c3913.md)  
-  
- [컴파일러 오류 C3914](../../error-messages/compiler-errors-2/compiler-error-c3914.md)  
-  
- [컴파일러 오류 C3915](../../error-messages/compiler-errors-2/compiler-error-c3915.md)  
-  
- [컴파일러 오류 C3917](../../error-messages/compiler-errors-2/compiler-error-c3917.md)  
-  
- [컴파일러 오류 C3918](../../error-messages/compiler-errors-2/compiler-error-c3918.md)  
-  
- [컴파일러 오류 C3919](../../error-messages/compiler-errors-2/compiler-error-c3919.md)  
-  
- [컴파일러 오류 C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
-  
- [컴파일러 오류 C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
+> [!NOTE]
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+  
+ MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
+  
+|오류|메시지|  
+|-----------|-------------|  
+|[컴파일러 오류 C3500](compiler-error-c3500.md)|잘못 된 ProgID '*progid*'|  
+|[컴파일러 오류 C3501](compiler-error-c3501.md)|typelib가 없습니다. ProgID에 대해 등록 된 '*progid*'|  
+|컴파일러 오류 C3502|ProgID에 대 한 LIBID를 가져올 수 없습니다 '*progid*'|  
+|컴파일러 오류 C3503|문자 ' 0 x*값*'에서 허용 되지 않는 원시 문자열 리터럴|  
+|컴파일러 오류 C3504|문자열에서 GUID를 만들 수 없습니다 '*문자열*'|  
+|[컴파일러 오류 C3505](compiler-error-c3505.md)|형식 라이브러리를 로드할 수 없습니다 '*라이브러리*'|  
+|[컴파일러 오류 C3506](compiler-error-c3506.md)|typelib가 없습니다. LIBID에 대해 등록 된 '*라이브러리*'|  
+|[컴파일러 오류 C3507](compiler-error-c3507.md)|ProgID는 39 개 이하의 문자를 포함할 수*progid*';와 별개로 문장 부호를 포함 합니다. '.'; 숫자로 시작할 수도 없습니다|  
+|[컴파일러 오류 C3508](compiler-error-c3508.md)|'*형식*': 올바른 자동화 형식이 아닙니다|  
+|[컴파일러 오류 C3509](compiler-error-c3509.md)|'*형식*': 반환 형식은 'void', 'HRESULT' 또는 'SCODE' 이어야 합니다는 매개 변수 'retval'으로 표시 되 면; 자동화 반환 형식이 잘못 되었습니다.|  
+|[컴파일러 오류 C3510](compiler-error-c3510.md)|종속 형식 라이브러리를 찾을 수 없습니다 *라이브러리*|  
+|컴파일러 오류 C3511|'*식별자*': 위임 생성자를 호출 하는 유일한 멤버 이니셜라이저를 해야 합니다.|  
+|컴파일러 오류 C3512|행 문자열 리터럴의 구문 문자 시퀀스에 16개 이내의 문자가 있어야 합니다.|  
+|컴파일러 오류 C3513|'*문자열*': 원시 문자열 리터럴 구분 기호 문자 지원 되지 않습니다.|  
+|컴파일러 오류 C3514|'*문자*' (*값*): 원시 문자열 리터럴 구분 기호 문자 지원 되지 않습니다.|  
+|컴파일러 오류 C3515|클래스 템플릿 부분 특수화에 대한 인수는 마지막 인수가 될 팩 확장입니다.|  
+|컴파일러 오류 C3516|예기치 않은 끝 파일의 원시 문자열 리터럴을; 처리 하는 동안 발견 구분 기호 시퀀스 '*문자열*'가 일치 하지 않는|  
+|컴파일러 오류 C3517|'*식별자*' 별칭-선언은 'auto' 포함 하는 형식을 사용할 수 없습니다|  
+|컴파일러 오류 C3518|'*식별자*': 직접 목록 초기화 컨텍스트에서 형식에 대 한 '*형식*' 단일 이니셜라이저 식에서 에서만 추론할 수|  
+|[컴파일러 오류 C3519](compiler-error-c3519.md)|'*매개 변수*': embedded_idl 특성에 잘못 된 매개 변수|  
+|컴파일러 오류 C3520|'*식별자*':이 컨텍스트에서 매개 변수 팩을 확장 해야 합니다|  
+|컴파일러 오류 C3521|'*식별자*' 매개 변수 팩이 아니면|  
+|컴파일러 오류 C3522|'*형식*':이 컨텍스트에서 매개 변수 팩을 확장할 수 없습니다|  
+|컴파일러 오류 C3523|' sizeof...' 확장 되지 않은 매개 변수 팩이 인수로 필요|  
+|컴파일러 오류 C3524|'*식별자*': 'sizeof' 매개 변수 팩에 적용할 수 없습니다. 'Sizeof...'를 사용 하 시겠습니까?|  
+|컴파일러 오류 C3525|'*매개 변수*': 클래스 템플릿에 템플릿 매개 변수 목록의 끝에 나타나야 하는 템플릿 매개 변수 팩 하는 경우|  
+|컴파일러 오류 C3526|'...' 't h i s'에 적용할 수 없습니다.|  
+|컴파일러 오류 C3527|'*식별자*' 'sizeof...'의 올바른 피연산자 아닙니다. 'Sizeof'를 사용 하 시겠습니까?|  
+|컴파일러 오류 C3528|'*identifier1*':이 팩 확장의 요소 수의 요소 수가 일치 하지 않는 '*identifier2*'|  
+|컴파일러 오류 C3529|'*매개 변수*': 템플릿 매개 변수 팩 기본 인수를 가질 수 없습니다|  
+|[컴파일러 오류 C3530](compiler-error-c3530.md)|'*형식*' 다른 형식 지정자와 함께 사용할 수 없습니다|  
+|[컴파일러 오류 C3531](compiler-error-c3531.md)|'*식별자*': 포함 된 형식의 기호 '*형식*'는 이니셜라이저가 있어야|  
+|[컴파일러 오류 C3532](compiler-error-c3532.md)|배열의 요소 형식을 포함 하는 형식을 일 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3533](compiler-error-c3533.md)|매개 변수를 포함 하는 형식을 사용할 수 없습니다 '*형식*'|  
+|컴파일러 오류 C3534|사용되지 않습니다.|  
+|[컴파일러 오류 C3535](compiler-error-c3535.md)|에 대 한 형식을 추론할 수 없습니다 '*type1*'from'*type2*'|  
+|[컴파일러 오류 C3536](compiler-error-c3536.md)|'*식별자*': 초기화 되기 전에 사용할 수 없습니다|  
+|[컴파일러 오류 C3537](compiler-error-c3537.md)|포함 하는 형식으로 캐스팅할 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3538](compiler-error-c3538.md)|선언 자 목록에서 '*형식*' 항상 동일한 형식으로 추론 되어야 합니다|  
+|[컴파일러 오류 C3539](compiler-error-c3539.md)|템플릿 인수를 포함 하는 형식일 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3540](compiler-error-c3540.md)|포함 하는 형식에 sizeof를 적용할 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3541](compiler-error-c3541.md)|포함 하는 형식에 typeid를 적용할 수 없습니다 '*형식*'|  
+|컴파일러 오류 C3542|'*식별자*': 가상 멤버 함수는 포함 하는 반환 형식을 가질 수 없습니다 '*형식*'|  
+|컴파일러 오류 C3543|'*형식*': 매개 변수 팩에 포함 되어 있지 않습니다|  
+|컴파일러 오류 C3544|'*매개 변수*': 매개 변수 팩에 형식 템플릿 인수가 필요|  
+|컴파일러 오류 C3545|'*매개 변수*': 매개 변수 팩에 비형식 템플릿 인수가 필요|  
+|컴파일러 오류 C3546|'...': 확장할 수 있는 매개 변수 팩이 없습니다.|  
+|컴파일러 오류 C3547|템플릿 매개 변수 '*매개 변수*'사용할 수 없습니다을의 함수 매개 변수에서 추론할 수 없는 템플릿 매개 변수 팩을 따르며'*함수*'|  
+|컴파일러 오류 C3548|'*식별자*':이 컨텍스트에서 매개 변수 팩을 사용할 수 없습니다|  
+|컴파일러 오류 C3549|'*값*': 함수 매개 변수 팩 기본 인수를 가질 수 없습니다|  
+|[컴파일러 오류 C3550](compiler-error-c3550.md)|이 컨텍스트에 일반 'decltype(auto)'만 사용할 수 있습니다.|  
+|[컴파일러 오류 C3551](compiler-error-c3551.md)|후행 반환 형식이 사용 된 경우 선행 반환 형식은 단일 형식 지정자 'auto' 여야 합니다. (하지 '*형식*')|  
+|[컴파일러 오류 C3552](compiler-error-c3552.md)|'decltype(auto)'이 필요합니다.|  
+|[컴파일러 오류 C3553](compiler-error-c3553.md)|decltype에 형식이 아니라 식이 필요합니다.|  
+|[컴파일러 오류 C3554](compiler-error-c3554.md)|'*형식*' 다른 형식 지정자와 함께 사용할 수 없습니다|  
+|[컴파일러 오류 C3555](compiler-error-c3555.md)|'decltype'의 인수가 잘못되었습니다.|  
+|[컴파일러 오류 C3556](compiler-error-c3556.md)|'*식*': 'decltype' 인수가 잘못 되었습니다.|  
+|컴파일러 오류 C3557|사용되지 않습니다.|  
+|컴파일러 오류 C3558|사용되지 않습니다.|  
+|컴파일러 오류 C3559|재귀 호출을 '*함수*': parallel_for_each에 대해 호출 그래프를 컴파일하는 경우 재귀가 발견 되었습니다. '*함수*'|  
+|컴파일러 오류 C3560|'*함수*': parallel_for_each에 대해 호출 그래프를 컴파일하는 경우 IL을 사용할 수 없습니다: '*함수*'|  
+|컴파일러 오류 C3561|타일 장벽 작업을 제어 흐름에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우 타일 비균일 없는에서 발견: '*함수*'|  
+|컴파일러 오류 C3562|내장 함수 '*함수*'에 제한 되어 이상 *번호* 매개 변수|  
+|컴파일러 오류 C3563|무한 루프에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우를 발견 했습니다: '*함수*'|  
+|컴파일러 오류 C3564|concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우 초기화 되지 않은 값을 읽는: '*함수*'|  
+|컴파일러 오류 C3565|총 tile_static 메모리 양을 (*번호* 바이트)의 제한을 초과 *번호* 바이트는 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우|  
+|컴파일러 오류 C3566|파생 작업이 있는 블록이 너무 많이 중첩 때 호출 그래프를 컴파일하에서 concurrency:: parallel_for_each에 대해: '*함수*'|  
+|컴파일러 오류 C3567|나누기 또는 나머지 연산이에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우를 검색 하는 0으로: '*함수*'|  
+|컴파일러 오류 C3568|레지스터 합계가 제한인 *번호* 는 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우. 프로그램을 단순화 하십시오.|  
+|컴파일러 오류 C3569|경합에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우를 검색 했습니다. 상태: '*함수*'|  
+|컴파일러 오류 C3570|/clr을 지정하여 컴파일할 때 AMP 제한 범위를 잘못 사용했습니다.|  
+|컴파일러 오류 C3571|'*형식*': 잘못 된 계산 도메인 인수가;는 클래스 형식|  
+|컴파일러 오류 C3572|'*형식*': 잘못 된 계산 도메인 인수가; 공용 멤버가 없습니다: 'static const int rank' 또는 차수 값이 양수가 아닙니다|  
+|컴파일러 오류 C3573|Concurrency:: parallel_for_each에 전달 된 concurrency::graphics::sampler의 인스턴스 수를 초과할 수 없습니다 *번호*|  
+|컴파일러 오류 C3574|'*형식*': 타일 범위가 잘못 되었습니다: 양수 여야 (1) Z < = *번호*; (2) Z*Y*X <= *number*|  
+|컴파일러 오류 C3575|'*형식*': 잘못 된 계산 도메인 인수가; 공용 멤버가 없습니다: ' concurrency::index <*번호*> _map_index (const concurrency::index <*번호*> & a) restrict (amp) '|  
+|컴파일러 오류 C3576|'*형식*': _parallel_for_each 인수 #*번호* 에 지원 되지 않는 형식|  
+|컴파일러 오류 C3577|concurrency:: parallel_for_each 커널 인수가 유효 하지 않은: 멤버에 대 한 호출을 확인할 수 없습니다 ' void operator () (*형식*) restrict (amp) '|  
+|컴파일러 오류 C3578|Concurrency:: parallel_for_each에 전달 된 함수 개체의 크기를 초과할 수 없습니다 *번호* 바이트|  
+|컴파일러 오류 C3579|Concurrency::array 및 concurrency:: parallel_for_each에 전달 되는 concurrency:: graphics의 읽기 전용 인스턴스 수를 초과할 수 없습니다 *번호*|  
+|컴파일러 오류 C3580|Concurrency::array 및 concurrency:: parallel_for_each에 전달 되는 concurrency:: graphics의 쓰기 가능한 인스턴스 수를 초과할 수 없습니다 *번호*|  
+|컴파일러 오류 C3581|'*형식*': 지원 되지 않는 형식에서 amp 제한 코드|  
+|컴파일러 오류 C3582|사용되지 않습니다.|  
+|컴파일러 오류 C3583|'*식별자*': 변수의 크기 (*번호* 바이트)의 최대 크기 보다 큰 (*번호* 바이트) amp 제한 코드에서 지원|  
+|컴파일러 오류 C3584|tile_static 사용법입니다.에서 지원 되지 않는 '*식별자*'|  
+|컴파일러 오류 C3585|'*식별자*' amp에서 지원 되지 않는 저장소 클래스가 제한 된 코드|  
+|컴파일러 오류 C3586|'*식별자*': amp 제한 코드에서는 전역 또는 정적 변수를 사용 하 여 지원 되지 않습니다|  
+|컴파일러 오류 C3587|AMP 제한 코드에서는 dynamic_cast가 지원되지 않습니다.|  
+|컴파일러 오류 C3588|캐스팅 '*type1*'to'*type2*' amp 제한 코드에서 지원 되지 않습니다|  
+|컴파일러 오류 C3589|'*문자열*': amp의 문자열 리터럴에서 지원 되지 않는 사용 제한 코드|  
+|컴파일러 오류 C3590|'*토큰*': 참조 방식 캡처 또는 'this'이 캡처가 지원 되지 않습니다 람다가 amp 제한 하는 경우|  
+|컴파일러 오류 C3591|AMP 제한 코드에서는 typeid 연산자가 지원되지 않습니다.|  
+|컴파일러 오류 C3592|AMP 제한 코드에서는 인라인 네이티브 어셈블리('__asm')가 지원되지 않습니다.|  
+|컴파일러 오류 C3593|AMP 제한 코드에서는 'goto'가 지원되지 않습니다.|  
+|컴파일러 오류 C3594|AMP 제한 코드에서는 예외 처리(try, catch, throw 등)가 지원되지 않습니다.|  
+|컴파일러 오류 C3595|AMP 제한 코드에서 상수 값이 지원되는 범위를 벗어납니다.|  
+|컴파일러 오류 C3596|'*매개 변수*' ('*형식*'): 람다로 캡처된 변수에 amp 제한 코드에서는 형식으로 지원 되지 않습니다.|  
+|컴파일러 오류 C3597|'*매개 변수*': '*식별자*' 람다가 amp 제한 하는 경우 값으로 캡처할 수 없습니다|  
+|컴파일러 오류 C3598|AMP 제한 코드에서는 레이블 문이 지원되지 않습니다.|  
+|컴파일러 오류 C3599|'*연산자*': amp 제한 코드에서는 bool에 대 한 포인터에서 포인터 산술 연산을 수행할 수 없습니다|  
+|컴파일러 오류 C3600|'*함수*': 타일을 사용 하 여\_아닌 concurrency::parallel에 대 한 호출 그래프를 컴파일하는 경우를 검색 하는 정적 메모리\_에서 for_each: '*함수*'|  
+|컴파일러 오류 C3601|'*형식*': amp 진단 함수에 대 한 잘못 된 인수 형식이 '*함수*'|  
+|컴파일러 오류 C3602|제어 흐름에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우 검색을 지원 하지 않는: '*함수*'|  
+|[컴파일러 오류 C3603](compiler-error-c3603.md)|'*기호*': 형식을 '*형식*' 아직 지원 하지 않습니다|  
+|컴파일러 오류 C3604|'*식별자*': gc 힙에 관리 되는 개체를 만들 수|  
+|컴파일러 오류 C3605|전체 샘플러 수 (*번호* 캡처된 및 *번호* 미리 정의 된)를 초과 *번호* 에서 concurrency:: parallel_for_each에 대해 호출 그래프를 컴파일하는 경우: '*함수*'|  
+|컴파일러 오류 C3606|사용되지 않습니다.|  
+|컴파일러 오류 C3607|사용되지 않습니다.|  
+|컴파일러 오류 C3608|사용되지 않습니다.|  
+|[컴파일러 오류 C3609](compiler-error-c3609.md)|'*식별자*': ' 봉인/final ' 함수는 가상 메서드여야 합니다.|  
+|[컴파일러 오류 C3610](compiler-error-c3610.md)|'*식별자*': 값 형식 해야 수 'boxed' 메서드 전에 '*메서드*' 호출할 수 있습니다|  
+|[컴파일러 오류 C3611](compiler-error-c3611.md)|'*식별자*': 봉인된 함수는 순수 지정자를 사용할 수 없습니다|  
+|[컴파일러 오류 C3612](compiler-error-c3612.md)|'*식별자*': 클래스는 봉인된 클래스는 순수 가상 메서드가 사용할 수 없습니다|  
+|컴파일러 오류 C3613|'->' 후 반환 형식이 없습니다('int'로 간주됨).|  
+|컴파일러 오류 C3614|동일한 클래스 내에서 팩 크기에 대 한 여러 값 이전은 '*값*', 새 값이 '*값*'|  
+|컴파일러 오류 C3615|constexpr 함수 '*함수*' 상수 식이 될 수 없습니다|  
+|컴파일러 오류 C3616|사용되지 않습니다.|  
+|컴파일러 오류 C3617|사용되지 않습니다.|  
+|[컴파일러 오류 C3618](compiler-error-c3618.md)|'*선언*': DllImport로 표시 된 메서드를 정의할 수 없습니다|  
+|[컴파일러 오류 C3619](compiler-error-c3619.md)|서식 파일을 관리 되 는/WinRT 형식 내에서 선언할 수 없습니다.|  
+|컴파일러 오류 C3620|'*형식*': WinRT 형식에 대해서는 맞춤 설정은 허용 되지 않습니다|  
+|컴파일러 오류 C3621|'*형식*': 기본 압축 값 (*번호*) WinRT 형식에 허용 됩니다|  
+|[컴파일러 오류 C3622] (컴파일러-오류-c3622.md*형식*': 클래스로 선언 된 '*키워드*' 인스턴스화할 수 없습니다.|  
+|[컴파일러 오류 C3623](compiler-error-c3623.md)|'*식별자*': 비트 필드는 관리 되 는/WinRT 형식에서 지원 되지 않습니다|  
+|[컴파일러 오류 C3624](compiler-error-c3624.md)|'*형식*':이 형식 사용 하 여 필요한 어셈블리/모듈에 대 한 참조가 '*식별자*'|  
+|[컴파일러 오류 C3625](compiler-error-c3625.md)|'*클래스*': 네이티브 형식은 관리 되 는/WinRT 형식에서 파생 될 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3626](compiler-error-c3626.md)|'*식별자*': '*키워드*' 키워드는 COM 인터페이스, 멤버 함수 및 대리자에 대 한 포인터는 데이터 멤버에만 사용할 수 있습니다|  
+|[컴파일러 오류 C3627](compiler-error-c3627.md)|값 형식만 boxed 형식이 될 수 있습니다.|  
+|[컴파일러 오류 C3628](compiler-error-c3628.md)|'*클래스*': 관리 되 는/WinRT 클래스에는 공용 상속만 지원|  
+|컴파일러 오류 C3629|'*토큰*': 캡처 기본값 람다 캡처 목록의 시작 부분 에서만 사용할 수 있으며|  
+|[컴파일러 오류 C3630](compiler-error-c3630.md)|토큰을 처리 하는 동안 오류가 발생 했습니다. '*토큰*'|  
+|[컴파일러 오류 C3631](compiler-error-c3631.md)|'*이벤트*': 관리 되 는/WinRT 이벤트를 오버 로드할 수 없습니다|  
+|[컴파일러 오류 C3632](compiler-error-c3632.md)|'*이벤트*': 잘못 된 스타일에 대 한 이벤트의 *생성*|  
+|[컴파일러 오류 C3633](compiler-error-c3633.md)|정의할 수 없습니다 '*식별자*의 멤버인 관리 되 는' 있는 그대로'*클래스*'|  
+|[컴파일러 오류 C3634](compiler-error-c3634.md)|'*멤버*': 관리 되 는/WinRT 클래스의 추상 메서드를 정의할 수 없습니다|  
+|컴파일러 오류 C3635|'*식별자*': 관리 되 는/WinRT 클래스에 적용할 수 없습니다 (사용 하 여 '*식별자*' 대신)|  
+|컴파일러 오류 C3636|'*식별자*':이 형식에 적용할 수 없습니다|  
+|[컴파일러 오류 C3637](compiler-error-c3637.md)|'*함수*': friend 함수 정의 함수 템플릿/제네릭의 특수화 일 수 없습니다|  
+|[컴파일러 오류 C3638](compiler-error-c3638.md)|'*연산자*': 기본 boxing 및 unboxing 변환 연산자를 재정의할 수 없습니다|  
+|컴파일러 오류 C3639|사용되지 않습니다.|  
+|[컴파일러 오류 C3640](compiler-error-c3640.md)|'*멤버*': 지역 클래스는 참조 또는 가상 멤버 함수를 정의 해야 합니다|  
+|[컴파일러 오류 C3641](compiler-error-c3641.md)|'*함수*': 잘못 된 호출 규칙 '*규칙*' /clr을 사용 하 여 컴파일된 함수에 대 한: pure 또는 /clr: safe|  
+|[컴파일러 오류 C3642](compiler-error-c3642.md)|'*함수*': __clrcall 호출 규칙이 네이티브 코드에서 사용 하는 함수를 호출할 수 없습니다|  
+|컴파일러 오류 C3643|사용되지 않습니다.|  
+|[컴파일러 오류 C3644](compiler-error-c3644.md)|'*함수*': 관리 코드를 생성 하는 함수를 컴파일할 수 없습니다|  
+|[컴파일러 오류 C3645](compiler-error-c3645.md)|'*함수*': __clrcall을 네이티브 코드로 컴파일된 함수에서 사용할 수 없습니다|  
+|[컴파일러 오류 C3646](compiler-error-c3646.md)|'*식별자*': 알 수 없는 재정의 지정자|  
+|컴파일러 오류 C3647|사용되지 않습니다.|  
+|[컴파일러 오류 C3648](compiler-error-c3648.md)|이 명시적 재정의 구문은 관리되는 형식에 대해 지원되지 않습니다.|  
+|컴파일러 오류 C3649|이 명시적 재정의 구문은 /ZW에 허용되지 않습니다.|  
+|[컴파일러 오류 C3650](compiler-error-c3650.md)|'*멤버*': 명시적 재정의로 사용할 수 없습니다, 기본 클래스의 가상 멤버 함수 여야 합니다|  
+|[컴파일러 오류 C3651](compiler-error-c3651.md)|'*멤버*': 명시적 재정의로 사용할 수 없습니다, 기본 클래스의 멤버 여야 합니다|  
+|[컴파일러 오류 C3652](compiler-error-c3652.md)|'*멤버*': 명시적으로 재정의 하는 함수는 가상 메서드여야 합니다.|  
+|[컴파일러 오류 C3653](compiler-error-c3653.md)|'*식별자*': 명명된 된 재정의로 사용할 수 없습니다: 있으면; 재정의 되는 함수가 하 였는 함수 a:를 사용 하 여 명시적으로 이름을: 연산자?|  
+|[컴파일러 오류 C3654](compiler-error-c3654.md)|'*토큰*': 명시적 재정의에 구문 오류|  
+|[컴파일러 오류 C3655](compiler-error-c3655.md)|'*멤버*': 함수가 이미 명시적으로 재정의 되었습니다|  
+|[컴파일러 오류 C3656](compiler-error-c3656.md)|'*키워드*': 재정의 지정자를 반복할 수 없습니다.|  
+|[컴파일러 오류 C3657](compiler-error-c3657.md)|소멸자/종료자를 재정의할 수 없습니다. 명시적으로 또는 명시적으로 재정의 될|  
+|컴파일러 오류 C3658|사용되지 않습니다.|  
+|컴파일러 오류 C3659|'*멤버*': 재정의 지정자 '*키워드*' 지원 되지 않습니다|  
+|컴파일러 오류 C3660|'*member1*': 상속 된 멤버를 숨깁니다 '*member2*'|  
+|[컴파일러 오류 C3661](compiler-error-c3661.md)|명시적인 재정의 목록에서 재정의할 메서드를 찾지 못했습니다.|  
+|[컴파일러 오류 C3662](compiler-error-c3662.md)|'*멤버*': 재정의 지정자 '*키워드*' managed/WinRT 클래스의 멤버 함수에만 사용할 수|  
+|컴파일러 오류 C3663|사용되지 않습니다.|  
+|컴파일러 오류 C3664|'*멤버*': 명시적 재정의로 사용할 수 없습니다, 'public' 또는 'protected' 액세스 가능성이 있어야 합니다.|  
+|[컴파일러 오류 C3665](compiler-error-c3665.md)|'*멤버*': 재정의 지정자 '*키워드*' 소멸자/종료자에 사용할 수 없습니다|  
+|[컴파일러 오류 C3666](compiler-error-c3666.md)|'*생성자*': 재정의 지정자 '*키워드*' 생성자에 사용할 수 없습니다|  
+|컴파일러 오류 C3667|'*특성*': 특성이 팩 확장을 지원 하지 않습니다|  
+|[컴파일러 오류 C3668](compiler-error-c3668.md)|'*멤버*': 재정의 지정자 'override' 메서드는 기본 클래스 메서드를 재정의 하지 않았습니다|  
+|[컴파일러 오류 C3669](compiler-error-c3669.md)|'*멤버*': 재정의 지정자 'override' 정적 멤버 함수 또는 생성자에 사용할 수 없습니다|  
+|[컴파일러 오류 C3670](compiler-error-c3670.md)|'*멤버*': 액세스할 수 없는 기본 클래스 메서드를 재정의할 수 없습니다 '*멤버*'|  
+|[컴파일러 오류 C3671](compiler-error-c3671.md)|'*멤버*': 함수가 재정의 하지 않습니다 '*멤버*'|  
+|[컴파일러 오류 C3672](compiler-error-c3672.md)|의사(pseudo) 소멸자 식은 함수 호출의 일부로만 사용할 수 있습니다.|  
+|[컴파일러 오류 C3673](compiler-error-c3673.md)|'*클래스*': 클래스에는 복사 생성자가 없습니다|  
+|컴파일러 오류 C3674|표준 라이브러리 모듈을 찾을 수 없습니다 '*모듈*'|  
+|[컴파일러 오류 C3675](compiler-error-c3675.md)|'*함수*': 되어 서 예약 되었습니다 '*속성*' 정의|  
+|컴파일러 오류 C3676|'*클래스*': ref 클래스 및 기본 클래스의 특성이 호환 되지 않는 ' [*특성*]'|  
+|컴파일러 오류 C3677|'연산자' 다음의 문자열 리터럴은 인코딩 접두사를 가질 수 없습니다.|  
+|컴파일러 오류 C3678|'operator'에 빈 문자열 이어야 합니다. 다음의 문자열 리터럴은 ' "" "'|  
+|컴파일러 오류 C3679|후 리터럴 접미사 식별자가 필요 합니다. ' 연산자 "" "'|  
+|컴파일러 오류 C3680|일치하지 않는 리터럴 접미사 식별자로 사용자 지정된 문자열 리터럴을 연결할 수 없습니다.|  
+|컴파일러 오류 C3681|'fallthrough': 특성 바깥쪽 switch 문에서 나타날 수 있습니다|  
+|컴파일러 오류 C3682|' 연산자 *식별자*': 리터럴 연산자와 리터럴 연산자 템플릿에 ' C 링크 '를 선언할 수 없습니다.|  
+|컴파일러 오류 C3683|같은 리터럴 접미사 식별자로 원시 리터럴 연산자와 리터럴 연산자 템플릿을 정의할 수 없습니다.|  
+|컴파일러 오류 C3684|' 연산자 *식별자*': 리터럴 연산자 선언에 잘못 된 매개 변수 목록|  
+|컴파일러 오류 C3685|' 연산자 *식별자*': 리터럴 연산자 템플릿에 함수 매개 변수를 가질 수 없습니다|  
+|컴파일러 오류 C3686|' 연산자 *식별자*': 리터럴 연산자 템플릿에 매개 변수 팩에 있는 템플릿 매개 변수를 하나만 있어야 합니다.|  
+|컴파일러 오류 C3687|' 연산자 *식별자*': 리터럴 연산자 템플릿에 'char' 형식의 비형식 템플릿 매개 변수가 있어야 합니다.|  
+|컴파일러 오류 C3688|잘못 된 리터럴 접미사 '*접미사*' 리터럴, 연산자 또는 리터럴 연산자 템플릿 ' 연산자 *식별자*' 찾을 수 없습니다|  
+|컴파일러 오류 C3689|' 연산자 *식별자*': 리터럴 연산자와 리터럴 연산자 템플릿에 전역 또는 네임 스페이스 범위에 있어야 합니다.|  
+|컴파일러 오류 C3690|문자열 리터럴을 예상했지만 사용자 지정된 문자열 리터럴을 대신 찾았습니다.|  
+|컴파일러 오류 C3691|잘못 된 리터럴 접두사 '*접두사*'|  
+|컴파일러 오류 C3692|사용되지 않습니다.|  
+|컴파일러 오류 C3693|사용되지 않습니다.|  
+|컴파일러 오류 C3694|사용되지 않습니다.|  
+|컴파일러 오류 C3695|사용되지 않습니다.|  
+|컴파일러 오류 C3696|'*키워드*': '%'에서이 한정자를 사용할 수 없습니다|  
+|[컴파일러 오류 C3697](compiler-error-c3697.md)|'*키워드*':에이 한정자를 사용할 수 없습니다 ' ^'|  
+|[컴파일러 오류 C3698](compiler-error-c3698.md)|'*형식*': 함수의 인수로이 형식을 사용할 수 없습니다 '*연산자*'|  
+|[컴파일러 오류 C3699](compiler-error-c3699.md)|'*연산자*': 형식에이 간접 참조를 사용할 수 없습니다 '*형식*'|  
+|컴파일러 오류 C3700|사용되지 않습니다.|  
+|[컴파일러 오류 C3701](compiler-error-c3701.md)|'*함수*': 이벤트 소스에 이벤트가 없습니다|  
+|[컴파일러 오류 C3702](compiler-error-c3702.md)|COM 이벤트에는 ATL이 있어야 합니다.|  
+|[컴파일러 오류 C3703](compiler-error-c3703.md)|'*event_handler*': 이벤트 처리기 메서드는 원본으로 같은 저장소 클래스 있어야 '*이벤트*'|  
+|[컴파일러 오류 C3704](compiler-error-c3704.md)|'*멤버*': vararg 메서드 이벤트를 발생 시킬 수 없습니다|  
+|[컴파일러 오류 C3705](compiler-error-c3705.md)|'*함수*': 이벤트 인터페이스를 찾을 수 없습니다|  
+|[컴파일러 오류 C3706](compiler-error-c3706.md)|'*함수*': COM 이벤트를 발생 시키려면 COM 인터페이스 이어야 합니다|  
+|[컴파일러 오류 C3707](compiler-error-c3707.md)|'*멤버*': dispinterface 메서드에 dispid가 있어야 합니다.|  
+|[컴파일러 오류 C3708](compiler-error-c3708.md)|'*함수*': 잘못 사용 하면 '*키워드*'; 호환 가능한 이벤트 소스의 멤버 여야 합니다|  
+|[컴파일러 오류 C3709](compiler-error-c3709.md)|'*함수*': __hook/__unhook의 이벤트 지정 구문이 잘못 되었습니다|  
+|[컴파일러 오류 C3710](compiler-error-c3710.md)|'*함수*': __hook/__unhook의 이벤트 처리기 지정 구문이 잘못|  
+|[컴파일러 오류 C3711](compiler-error-c3711.md)|'*이벤트*': 관리 되지 않는 이벤트 소스 메서드는 void 또는 정수 계열 형식을 반환 해야 합니다|  
+|[컴파일러 오류 C3712](compiler-error-c3712.md)|'*event_handler*': 이벤트 처리기 메서드는 원본으로 동일한 형식을 반환 해야 '*이벤트*'|  
+|[컴파일러 오류 C3713](compiler-error-c3713.md)|'*event_handler*': 이벤트 처리기 메서드는 원본으로 같은 함수 매개 변수 있어야 '*이벤트*'|  
+|[컴파일러 오류 C3714](compiler-error-c3714.md)|'*event_handler*': 이벤트 처리기 메서드는 소스와 같은 호출 규칙 해야 '*이벤트*'|  
+|[컴파일러 오류 C3715](compiler-error-c3715.md)|'*포인터*':에 대 한 포인터 여야 합니다 '*형식*'|  
+|컴파일러 오류 C3716|사용되지 않습니다.|  
+|[컴파일러 오류 C3717](compiler-error-c3717.md)|'*멤버*': 이벤트를 발생 시키는 메서드를 정의할 수 없습니다|  
+|[컴파일러 오류 C3718](compiler-error-c3718.md)|만 호출할 수 있는 ' __*키워드*' 컨텍스트에서 받는 클래스의 멤버 함수|  
+|[컴파일러 오류 C3719](compiler-error-c3719.md)|'*멤버*': COM 이벤트 인터페이스 기반된 이벤트 소스 에서만 사용할 수 있습니다|  
+|컴파일러 오류 C3720|'*형식*': dual 또는 dispinterface에만 IDispatch를 구현할 수 있습니다|  
+|[컴파일러 오류 C3721](compiler-error-c3721.md)|'*서명*': 이벤트에 대 한 호환 되지 않는 서명|  
+|[컴파일러 오류 C3722](compiler-error-c3722.md)|제네릭 이벤트는 사용할 수 없습니다.|  
+|[컴파일러 오류 C3723](compiler-error-c3723.md)|'*함수*': 이벤트를 확인할 수 없습니다.|  
+|[컴파일러 오류 C3724](compiler-error-c3724.md)|이벤트에 다중 스레딩을 사용하려면 #include <windows.h>를 사용해야 합니다.|  
+|컴파일러 오류 C3725|사용되지 않습니다.|  
+|컴파일러 오류 C3726|사용되지 않습니다.|  
+|[컴파일러 오류 C3727](compiler-error-c3727.md)|'*이벤트*': 관리 되는 이벤트 멤버 함수 또는 데이터 멤버를 대리자에 대 한 포인터 여야 합니다|  
+|[컴파일러 오류 C3728](compiler-error-c3728.md)|'*이벤트*': 이벤트에 raise 메서드가 없는|  
+|컴파일러 오류 C3729|사용되지 않습니다.|  
+|컴파일러 오류 C3730|사용되지 않습니다.|  
+|[컴파일러 오류 C3731](compiler-error-c3731.md)|호환 되지 않는 이벤트 '*이벤트*'및 이벤트 처리기'*event_handler*'; 이벤트 소스와 이벤트 처리기에는 동일한 이벤트 형식이 있어야 합니다|  
+|[컴파일러 오류 C3732](compiler-error-c3732.md)|'*인터페이스*': COM 이벤트를 발생 시키는 사용자 지정 인터페이스는 IDispatch에서 상속할 수 없습니다|  
+|[컴파일러 오류 C3733](compiler-error-c3733.md)|'*이벤트*': COM 이벤트를 지정 하기 위한 구문이 잘못 되었습니다 '__interface'가 있습니까?|  
+|[컴파일러 오류 C3734](compiler-error-c3734.md)|'*클래스*': 관리 되는 WinRT 클래스는 coclass를 사용할 수 없습니다|  
+|컴파일러 오류 C3735|사용되지 않습니다.|  
+|[컴파일러 오류 C3736](compiler-error-c3736.md)|'*멤버*': 메서드여야 또는 관리 되는 이벤트의 경우 데이터 멤버|  
+|[컴파일러 오류 C3737](compiler-error-c3737.md)|'*식별자*': 대리자에서 명시적 호출 규칙을 사용할 수 없습니다|  
+|[컴파일러 오류 C3738](compiler-error-c3738.md)|'*규칙*': 명시적 인스턴스화의 호출 규칙 인스턴스화할 서식 파일의 이름과 일치 해야 합니다|  
+|[컴파일러 오류 C3739](compiler-error-c3739.md)|'*클래스*': 구문은 실행할 수는 ' 레이아웃\_종속 ' 인 매개 변수가 true|  
+|[컴파일러 오류 C3740](compiler-error-c3740.md)|'*템플릿*': 서식 파일 원본 또는 이벤트를 받을 수 없습니다|  
+|[컴파일러 오류 C3741](compiler-error-c3741.md)|'*클래스*': coclass 이어야 합니다. 때는 ' 레이아웃\_종속 ' 인 매개 변수가 true|  
+|컴파일러 오류 C3742|'*token1*': 특성 인수에 있는 토큰 시퀀스의 짝이 맞지 않습니다 '*특성*', 예상'*token2*'|  
+|[컴파일러 오류 C3743](compiler-error-c3743.md)|event_receiver의 'layout_dependent' 매개 변수가 true인 경우에만 전체 인터페이스를 후크/언후크할 수 있습니다.|  
+|[컴파일러 오류 C3744](compiler-error-c3744.md)|관리되는 이벤트의 경우 __unhook를 사용하려면 인수가 적어도 3개는 있어야 합니다.|  
+|[컴파일러 오류 C3745](compiler-error-c3745.md)|'*함수*':만 이벤트가 발생할 수 있는' '|  
+|컴파일러 오류 C3746|표준 특성 '*식별자*' 특성 목록에 한 번 이하로 나타날 수 있습니다|  
+|[컴파일러 오류 C3747](compiler-error-c3747.md)|기본 템플릿/제네릭 매개 변수 누락: 매개 변수 *번호*|  
+|[컴파일러 오류 C3748](compiler-error-c3748.md)|'*인터페이스*': 관리 되지 않는 인터페이스는 이벤트를 발생 하지 않습니다|  
+|[컴파일러 오류 C3749](compiler-error-c3749.md)|'*특성*': 사용자 지정 특성은 함수 안에서 사용할 수 없습니다|  
+|컴파일러 오류 C3750|'*토큰*': 특성 목록에 예기치 않은 토큰|  
+|컴파일러 오류 C3751|'*식별자*': 특성 목록에 예기치 않은 식별자|  
+|[컴파일러 오류 C3752](compiler-error-c3752.md)|'*특성*': 특성; 분류할 수 없습니다 '*키워드*'이 컨텍스트에서 사용할 수 없습니다|  
+|[컴파일러 오류 C3753](compiler-error-c3753.md)|제네릭 속성은 허용되지 않습니다.|  
+|[컴파일러 오류 C3754](compiler-error-c3754.md)|대리 생성자: 멤버 함수 '*멤버*'형식의 인스턴스로에서 호출할 수 없습니다'*형식*'|  
+|[컴파일러 오류 C3755](compiler-error-c3755.md)|'*식별자*': 대리자를 정의할 수 없습니다.|  
+|컴파일러 오류 C3756|사용되지 않습니다.|  
+|컴파일러 오류 C3757|'*형식*': 형식을 'constexpr' 함수에 대 한 사용할 수 없습니다|  
+|컴파일러 오류 C3758|'*멤버*': 가상 함수를 선언할 수 없습니다. 'constexpr'|  
+|컴파일러 오류 C3759|'*멤버*': 리터럴 형식이 아닌 멤버 함수 'constexpr'로 선언할 수 없습니다|  
+|컴파일러 오류 C3760|하십시오 __property 키워드를 사용 하 여 관리 되는 WinRT에서 속성을 선언할 '*클래스*'|  
+|[컴파일러 오류 C3761](compiler-error-c3761.md)|'*함수*': 'retval' 함수의 마지막 인수에만 나타날 수 있습니다|  
+|[컴파일러 오류 C3762](compiler-error-c3762.md)|특성을 처리할 수 없습니다. '*특성*'|  
+|[컴파일러 오류 C3763](compiler-error-c3763.md)|'*형식*': 'retval' 및 'out' 데이터 포인터 형식에만 나타날 수 있습니다|  
+|[컴파일러 오류 C3764](compiler-error-c3764.md)|'*멤버*': 기본 클래스 메서드를 재정의할 수 없습니다 '*멤버*'|  
+|[컴파일러 오류 C3765](compiler-error-c3765.md)|'*이벤트*': 클래스/구조체에는 이벤트를 정의할 수 없습니다 '*형식*' event_receiver로 표시|  
+|[컴파일러 오류 C3766](compiler-error-c3766.md)|'*형식*'인터페이스 메서드에 대 한 구현을 제공 해야'*함수*'|  
+|[컴파일러 오류 C3767](compiler-error-c3767.md)|'*함수*': 후보 함수에 액세스할 수 없습니다.|  
+|[컴파일러 오류 C3768](compiler-error-c3768.md)|순수 관리 코드에서는 가상 vararg 함수의 주소를 가져올 수 없습니다.|  
+|[컴파일러 오류 C3769](compiler-error-c3769.md)|'*식별자*': 중첩 된 클래스에는 바로 바깥쪽 클래스와 동일한 이름을 가질 수 없습니다|  
+|컴파일러 오류 C3770|'*형식*': 유효한 기본 클래스가 아닙니다.|  
+|[컴파일러 오류 C3771](compiler-error-c3771.md)|'*식별자*': 가장 가까운 네임 스페이스 범위에서 friend 선언을 찾을 수 없습니다|  
+|[컴파일러 오류 C3772](compiler-error-c3772.md)|'*식별자*': 잘못 된 friend 템플릿 선언이|  
+|컴파일러 오류 C3773|하십시오 사용 /await 컴파일러 스위치 코 루틴을 사용 하도록 설정 하려면|  
+|컴파일러 오류 C3774|찾을 수 없습니다 '*범위*::*식별자*': 포함 시키세요 *헤더* 헤더|  
+|컴파일러 오류 C3775|반환 형식 '*함수*'되지 않아야'*형식*'|  
+|컴파일러 오류 C3776|void가 아닌 최종 반환 형식이 있는 코 루틴에서 void 형식의 식을 반환할 수 없습니다.|  
+|컴파일러 오류 C3777|'*함수*': 코 루틴에는 가변 인수 목록을 가져올 수 없습니다.|  
+|컴파일러 오류 C3778|alloca: 코 루틴에서 사용할 수 없습니다|  
+|컴파일러 오류 C3779|'*함수*': 반환 하는 함수 '*형식*' 정의 되기 전에 사용할 수 없습니다|  
+|컴파일러 오류 C3780|'*함수*': 변환을 사용 하는 함수 반환*형식*' 정의 되기 전에 사용할 수 없습니다|  
+|컴파일러 오류 C3781|'*키워드*': 형식의 코 루틴에서 사용할 수 없는 '*형식*'. 어느 *키워드* 또는 *키워드* 연결 된 promise_type에 있어야|  
+|컴파일러 오류 C3782|*형식*: 코 루틴의 프라미스 모두 포함할 수 없습니다 *키워드* 및 *키워드*|  
+|컴파일러 오류 C3783|'*식별자*': 코 루틴 일 수 없습니다|  
+|컴파일러 오류 C3784|*키워드* 식은이 컨텍스트에서 표시할 수 없습니다|  
+|컴파일러 오류 C3785|'std::integer_sequence'의 첫 번째 템플릿 인수는 정수 형식 이어야 합니다.|  
+|컴파일러 오류 C3786|'std::make_integer_sequence' 두 번째 템플릿 인수는 0 보다 크거나 같은 경우에 정수 상수 여야 합니다.|  
+|컴파일러 오류 C3787|이 코 루틴의 반환 형식을 추론할 수 없습니다.|  
+|컴파일러 오류 C3788|사용되지 않습니다.|  
+|컴파일러 오류 C3789|사용되지 않습니다.|  
+|컴파일러 오류 C3790|사용되지 않습니다.|  
+|컴파일러 오류 C3791|사용되지 않습니다.|  
+|컴파일러 오류 C3792|사용되지 않습니다.|  
+|컴파일러 오류 C3793|사용되지 않습니다.|  
+|컴파일러 오류 C3794|사용되지 않습니다.|  
+|컴파일러 오류 C3795|사용되지 않습니다.|  
+|컴파일러 오류 C3796|사용되지 않습니다.|  
+|[컴파일러 오류 C3797](compiler-error-c3797.md)|'*키워드*': 이벤트 선언 (에 배치 해야 이벤트 추가/remove/raise 메서드에 대신) 하는 재정의 지정자를 사용할 수 없습니다|  
+|[컴파일러 오류 C3798](compiler-error-c3798.md)|'*키워드*': 속성 선언 (속성 get/set 메서드 대신에 배치 해야) 재정의 지정자를 사용할 수 없습니다|  
+|[컴파일러 오류 C3799](compiler-error-c3799.md)|인덱싱된 속성은 빈 매개 변수 목록을 가질 수 없습니다.|  
+|[컴파일러 오류 C3800](compiler-error-c3800.md)|'*선언*': 속성 및 이벤트를 혼합할 수 없습니다.|  
+|컴파일러 오류 C3801|'*특성*': 특성 인수 절을 사용할 수 없습니다|  
+|컴파일러 오류 C3802|사용되지 않습니다.|  
+|[컴파일러 오류 C3803](compiler-error-c3803.md)|'*속성*': 속성에 해당 접근자 중 하 나와 호환 되지 않는 형식이*접근자*'|  
+|[컴파일러 오류 C3804](compiler-error-c3804.md)|'*멤버*': 접근자 메서드에 속성 수행 해야 할 해서는 모두 static 이거나 모두 static|  
+|[컴파일러 오류 C3805](compiler-error-c3805.md)|*토큰*': 예기치 않은 토큰이 역시 예상 '을 (를) '또는','|  
+|컴파일러 오류 C3806|'*토큰*': 예기치 않은 토큰이 필요 합니다. 하나는 ' {' 또는 member-initializer|  
+|[컴파일러 오류 C3807](compiler-error-c3807.md)|'*형식*': ComImport 특성이 있는 클래스에서 파생 될 수 없습니다 '*형식*', 인터페이스 구현만 허용 됩니다|  
+|[컴파일러 오류 C3808](compiler-error-c3808.md)|'*형식*': ComImport 특성이 있는 클래스 멤버를 정의할 수 없습니다 '*멤버*'만 abstract 또는 dllimport 함수를 사용할 수|  
+|[컴파일러 오류 C3809](compiler-error-c3809.md)|'*형식*': 관리 되 는/WinRT 형식의 friend 함수/클래스/인터페이스를 사용할 수 없습니다|  
+|컴파일러 오류 C3810|사용되지 않습니다.|  
+|컴파일러 오류 C3811|사용되지 않습니다.|  
+|[컴파일러 오류 C3812](compiler-error-c3812.md)|'__property'가 속성 선언의 첫째 토큰이어야 합니다.|  
+|[컴파일러 오류 C3813](compiler-error-c3813.md)|속성 선언 관리 되 는/WinRT 형식의 정의 안에서 나타날 수 있습니다.|  
+|컴파일러 오류 C3814|사용되지 않습니다.|  
+|[컴파일러 오류 C3815](compiler-error-c3815.md)|메서드의 반환 형식이 '*멤버*' setter의 마지막 매개 변수 형식과 일치 해야 합니다|  
+|[컴파일러 오류 C3816](compiler-error-c3816.md)|' 클래스/구조체 *멤버*' 이전에 선언 되거나 다른 관리 되 는/WinRT 한정자로 정의 합니다.|  
+|[컴파일러 오류 C3817](compiler-error-c3817.md)|'*선언*': 속성 함수에만 적용 될 수 있습니다|  
+|[컴파일러 오류 C3818](compiler-error-c3818.md)|배열 속성 선언이 '*속성*'오버 로드 하지 않습니다는 index 속성'*속성*'|  
+|컴파일러 오류 C3819|사용되지 않습니다.|  
+|[컴파일러 오류 C3820](compiler-error-c3820.md)|'*식별자*': 이니셜라이저는 관리 되어야 합니다|  
+|[컴파일러 오류 C3821](compiler-error-c3821.md)|'*함수*': 관리 되지 않는 함수에 관리 되는 형식 또는 함수를 사용할 수 없습니다|  
+|컴파일러 오류 C3822|사용되지 않습니다.|  
+|컴파일러 오류 C3823|사용되지 않습니다.|  
+|[컴파일러 오류 C3824](compiler-error-c3824.md)|'*형식*':이 형식은이 컨텍스트 (함수 매개 변수, 반환 형식 또는 정적 멤버)에 나타날 수 없습니다|  
+|[컴파일러 오류 C3825](compiler-error-c3825.md)|'*형식*': 관리 되 는/WinRT 클래스 managed WinRT 이벤트만 지원할 수 있습니다|  
+|컴파일러 오류 C3826|사용되지 않습니다.|  
+|컴파일러 오류 C3827|표준 특성 'e d'는 인수가 없거나 이유를 설명 하는 리터럴 문자열에 있을 수 있습니다.|  
+|[컴파일러 오류 C3828](compiler-error-c3828.md)|에 대해 배치 인수를 지정할 수는 '*키워드*'형식에 대 한 expression'*형식*'|  
+|컴파일러 오류 C3829|표준 특성 'noreturn' 함수에만 적용 될 수 있습니다.|  
+|[컴파일러 오류 C3830](compiler-error-c3830.md)|'*type1*':에서 상속할 수 없습니다 '*type2*', 값 형식 인터페이스 클래스에서 에서만 상속할 수 있습니다|  
+|[컴파일러 오류 C3831](compiler-error-c3831.md)|'*식별자*': '*형식*' 고정 된 데이터 멤버 또는 고정 포인터를 반환 하는 멤버 함수를 사용할 수 없습니다|  
+|[컴파일러 오류 C3832](compiler-error-c3832.md)|'*typelib*': 형식 라이브러리는 32 비트 포인터 용으로 작성 된 경우 처럼 'ptrsize' 한정자 변경 하십시오|  
+|[컴파일러 오류 C3833](compiler-error-c3833.md)|'*형식*': 잘못 된 대상 형식에 대 한 *식별자*|  
+|[컴파일러 오류 C3834](compiler-error-c3834.md)|고정 포인터로 명시적으로 잘못 캐스팅했습니다. 대신 고정된 지역 변수를 사용하십시오.|  
+|컴파일러 오류 C3835|사용되지 않습니다.|  
+|[컴파일러 오류 C3836](compiler-error-c3836.md)|정적 생성자에는 멤버 이니셜라이저 목록을 사용할 수 없습니다.|  
+|컴파일러 오류 C3837|이 컨텍스트에서 특성이 허용 되지 않습니다.|  
+|[컴파일러 오류 C3838](compiler-error-c3838.md)|상속할 수 없습니다 '*형식*'|  
+|[컴파일러 오류 C3839](compiler-error-c3839.md)|관리 되 는/WinRT 형식의 맞춤 방식을 변경할 수 없습니다.|  
+|컴파일러 오류 C3840|사용되지 않습니다.|  
+|컴파일러 오류 C3841|사용되지 않습니다.|  
+|[컴파일러 오류 C3842](compiler-error-c3842.md)|'*식별자*': 관리 되 는/WinRT 형식의 멤버 함수에 'const' 및 'volatile' 한정자는 지원 되지 않습니다|  
+|컴파일러 오류 C3843|'*식별자*': 관리 되는 WinRT 형식의 멤버 함수에서 ref-qualifier는 지원 되지 않습니다|  
+|컴파일러 오류 C3844|'*식별자*': 기호를 가져올 수 없습니다 '*소스*': '*식별자*' 현재 범위에 이미 있습니다|  
+|컴파일러 오류 C3845|사용되지 않습니다.|  
+|[컴파일러 오류 C3846](compiler-error-c3846.md)|'*식별자*': 기호를 가져올 수 없습니다 '*소스*': '*식별자*'이미 가져온 다른 어셈블리에서 '*어셈블리*'|  
+|컴파일러 오류 C3847|사용되지 않습니다.|  
+|[컴파일러 오류 C3848](compiler-error-c3848.md)|식 형식을 가진 '*형식*'를 호출 하기 위해서는 일부 const-volatile 한정자를 하지 않게'*식별자*'|  
+|[컴파일러 오류 C3849](compiler-error-c3849.md)|형식의 식에서 함수 형식을 호출할 '*형식*' 모든 const 및/또는 volatile 한정자가 손실는 *번호* 사용 가능한 연산자 오버 로드|  
+|[컴파일러 오류 C3850](compiler-error-c3850.md)|'*토큰*': 유니버설 문자 이름에 잘못 된 문자를 지정 합니다.|  
+|[컴파일러 오류 C3851](compiler-error-c3851.md)|'*토큰*': 유니버설 문자 이름에는 기본 문자 집합의에서 문자를 지정할 수 없습니다.|  
+|[컴파일러 오류 C3852](compiler-error-c3852.md)|'*멤버*'형식을 가진'*형식*': 집합체 초기화에서이 멤버를 초기화할 수 없습니다|  
+|[컴파일러 오류 C3853](compiler-error-c3853.md)|'=': 함수 참조를 통해 참조를 다시 초기화하거나 할당할 수 없습니다.|  
+|[컴파일러 오류 C3854](compiler-error-c3854.md)|함수에 '='의 왼쪽으로 식을 평가합니다. (한 함수는 l 값이 아님) 함수에 할당할 수 없습니다.|  
+|[컴파일러 오류 C3855](compiler-error-c3855.md)|'*함수*': 템플릿/제네릭 매개 변수 '*식별자*' 선언과 호환 되지 않습니다|  
+|[컴파일러 오류 C3856](compiler-error-c3856.md)|'*클래스*': 클래스 템플릿/제네릭 클래스가 아닙니다|  
+|[컴파일러 오류 C3857](compiler-error-c3857.md)|'*템플릿*': 여러 템플릿/제네릭 매개 변수 목록을 사용할 수 없습니다|  
+|[컴파일러 오류 C3858](compiler-error-c3858.md)|'*식별자*': 현재 범위에서 다시 선언할 수 없습니다.|  
+|[컴파일러 오류 C3859](compiler-error-c3859.md)|가상 메모리 범위를 초과 했습니다; PCH에 대 한 명령줄 옵션으로 다시 컴파일 하세요. '-Zm*번호*' 이상|  
+|[컴파일러 오류 C3860](compiler-error-c3860.md)|클래스 템플릿/제네릭 이름 뒤에 따라오는 템플릿/제네릭 인수 목록 템플릿/제네릭 매개 변수 목록에 사용 되는 순서에 대 한 매개 변수를 나열 해야 합니다.|  
+|[컴파일러 오류 C3861](compiler-error-c3861.md)|'*식별자*': 식별자를 찾을 수 없습니다|  
+|[컴파일러 오류 C3862](compiler-error-c3862.md)|'*함수*': /clr으로 관리 되지 않은 함수를 컴파일할 수 없습니다: pure 또는 /clr: safe|  
+|컴파일러 오류 C3863|배열 형식 '*형식*' 할당할 수 없으면|  
+|컴파일러 오류 C3864|사용되지 않습니다.|  
+|[컴파일러 오류 C3865](compiler-error-c3865.md)|'*키워드*': 네이티브 멤버 함수에만 사용할 수|  
+|[컴파일러 오류 C3866](compiler-error-c3866.md)|소멸자/종료 자가 호출에 인수 목록이 없습니다|  
+|[컴파일러 오류 C3867](compiler-error-c3867.md)|'*함수*': 비표준 구문 사용. '&' 멤버에 대 한 포인터를 만들려면|  
+|[컴파일러 오류 C3868](compiler-error-c3868.md)|'*형식*': 제네릭 매개 변수에 제약 조건을 '*매개 변수*' 선언에 다 다|  
+|[컴파일러 오류 C3869](compiler-error-c3869.md)|gcnew 제약 조건에 빈 매개 변수 목록 '()'가 없습니다.|  
+|컴파일러 오류 C3870|'*매개 변수*': ' __declspec (*지정자*)' 매개 변수에 정수 계열 형식에 적용할 수 있습니다|  
+|컴파일러 오류 C3871|'*매개 변수*': '__declspec(guard(overflow))' 함수의 매개 변수 처음 64 에서만 지원 됩니다|  
+|[컴파일러 오류 C3872](compiler-error-c3872.md)|' 0 x*값*':이 문자는 식별자에 사용할 수 없습니다|  
+|[컴파일러 오류 C3873](compiler-error-c3873.md)|' 0 x*값*':이 문자는 식별자의 첫 번째 문자로 사용할 수 없습니다|  
+|[컴파일러 오류 C3874](compiler-error-c3874.md)|반환 형식 '*식별자*'이어야 합니다.'*type1*' 대신의 '*type2*'|  
+|컴파일러 오류 C3875|비정적 멤버 함수 호출에서 인수 목록이 누락되었습니다.|  
+|컴파일러 오류 C3876|사용되지 않습니다.|  
+|컴파일러 오류 C3877|사용되지 않습니다.|  
+|컴파일러 오류 C3878|사용되지 않습니다.|  
+|컴파일러 오류 C3879|'*멤버*': initonly 데이터 멤버가 될 수 없습니다|  
+|[컴파일러 오류 C3880](compiler-error-c3880.md)|'*멤버*': 리터럴 데이터 멤버가 될 수 없습니다|  
+|컴파일러 오류 C3881|직접 기본 형식에서 생성자 상속만 가능합니다.|  
+|컴파일러 오류 C3882|'*클래스*': 생성자에서 상속 된 이미 '*클래스*'|  
+|컴파일러 오류 C3883|'*멤버*': initonly 정적 데이터 멤버를 초기화 합니다|  
+|컴파일러 오류 C3884|'*형식*': 알 수 없는 크기의 배열 값을 초기화할 수 없습니다|  
+|컴파일러 오류 C3885|'*형식*': 크기를 알 수 없는 배열은 비어 있는 이니셜라이저 목록으로 초기화할 수 없습니다|  
+|[컴파일러 오류 C3886](compiler-error-c3886.md)|'*멤버*': 리터럴 데이터 멤버를 초기화 합니다|  
+|[컴파일러 오류 C3887](compiler-error-c3887.md)|'*멤버*': 리터럴 데이터 멤버에 대 한 이니셜라이저는 상수 식 이어야 합니다.|  
+|[컴파일러 오류 C3888](compiler-error-c3888.md)|'*멤버*':이 리터럴 데이터 멤버와 연관 된 const 식은 C +에서 지원 하지 않는 + CLI|  
+|컴파일러 오류 C3889|사용되지 않습니다.|  
+|[컴파일러 오류 C3890](compiler-error-c3890.md)|'*멤버*': 리터럴 데이터 멤버의 주소를 가져올 수 없습니다|  
+|[컴파일러 오류 C3891](compiler-error-c3891.md)|'*멤버*': 리터럴 데이터 멤버는 l-value로 사용할 수 없습니다|  
+|[컴파일러 오류 C3892](compiler-error-c3892.md)|'*변수*': const 변수에 할당할 수 없습니다|  
+|[컴파일러 오류 C3893](compiler-error-c3893.md)|'*멤버*': 클래스의 인스턴스 생성자 에서만 initonly 데이터 멤버의 l 값 사용할 수는*클래스*'|  
+|[컴파일러 오류 C3894](compiler-error-c3894.md)|'*멤버*': 클래스의 클래스 생성자 에서만 initonly 정적 데이터 멤버의 l 값 사용할 수는*클래스*'|  
+|[컴파일러 오류 C3895](compiler-error-c3895.md)|'*멤버*': *형식* 데이터 멤버 'volatile' 수 없습니다.|  
+|[컴파일러 오류 C3896](compiler-error-c3896.md)|'*멤버*': 잘못 된 이니셜라이저:이 리터럴 데이터 멤버는 'nullptr'로 초기화할 수 있습니다|  
+|컴파일러 오류 C3897|사용되지 않습니다.|  
+|[컴파일러 오류 C3898](compiler-error-c3898.md)|'*멤버*': *형식* 데이터 멤버 관리 되는 형식의 멤버만 될 수 있습니다|  
+|[컴파일러 오류 C3899](compiler-error-c3899.md)|'*멤버*': 클래스에서 병렬 영역 내부에서는 직접 initonly 데이터 멤버의 l 값 사용은 사용할 수 없습니다*클래스*'|  
+|[컴파일러 오류 C3900](compiler-error-c3900.md)|'*멤버*': 현재 범위에 사용할 수 없습니다|  
+|[컴파일러 오류 C3901](compiler-error-c3901.md)|'*함수*': 반환 형식이 있어야 '*형식*'|  
+|[컴파일러 오류 C3902](compiler-error-c3902.md)|'*함수*': 마지막 매개 변수 형식의 해야 '*형식*'|  
+|[컴파일러 오류 C3903](compiler-error-c3903.md)|'*속성*': 않습니다 하지 set 또는 get 메서드|  
+|[컴파일러 오류 C3904](compiler-error-c3904.md)|'*속성*':를 지정 해야 *번호* 매개 변수|  
+|컴파일러 오류 C3905|내장 형식에 대 한 정렬 되지 않은 액세스가 지원 되지 않습니다 '*형식*'|  
+|컴파일러 오류 C3906|내장 형식 '*형식*' vararg 또는 프로토타입화 되지 않은 함수에 대 한 지원 되는 반환 또는 인수 유형이 아닙니다|  
+|컴파일러 오류 C3907|사용되지 않습니다.|  
+|[컴파일러 오류 C3908](compiler-error-c3908.md)|액세스 수준 보다 덜 제한적인 '*식별자*'|  
+|[컴파일러 오류 C3909](compiler-error-c3909.md)|관리 되는 WinRT 이벤트 선언 managed WinRT 형식에 있어야 합니다.|  
+|[컴파일러 오류 C3910](compiler-error-c3910.md)|'*이벤트*': 멤버를 정의 해야 '*멤버*'|  
+|[컴파일러 오류 C3911](compiler-error-c3911.md)|'*멤버*': 함수 형식이 있어야 합니다. '*형식*'|  
+|[컴파일러 오류 C3912](compiler-error-c3912.md)|'*이벤트*': 형식 이벤트의 대리자 형식 이어야 합니다.|  
+|[컴파일러 오류 C3913](compiler-error-c3913.md)|기본 속성은 인덱싱되어야 합니다.|  
+|[컴파일러 오류 C3914](compiler-error-c3914.md)|기본 속성은 정적일 수 없습니다.|  
+|[컴파일러 오류 C3915](compiler-error-c3915.md)|'*식별자*'에 기본값이 없으면 인덱싱된 속성 (클래스 인덱서)|  
+|컴파일러 오류 C3916|사용되지 않습니다.|  
+|[컴파일러 오류 C3917](compiler-error-c3917.md)|'*토큰*': 사용 되지 않는 *생성* 선언 스타일 (=을 사용 하 여 ' [' ']' 대신?)|  
+|[컴파일러 오류 C3918](compiler-error-c3918.md)|사용 현황 필요 '*식별자*'에 데이터 멤버|  
+|[컴파일러 오류 C3919](compiler-error-c3919.md)|'*함수*': 함수 형식이 있어야 합니다. '*return_type* (*형식*)'|  
+|[컴파일러 오류 C3920](compiler-error-c3920.md)|'*연산자*': 후 위 증가/감소 후 위를 호출 하는 CLR/WinRT 연산자를 정의할 수 없습니다 CLR/WinRT 연산자는 해당 접두사의 CLR/WinRT 호출 연산자 (op_Increment/op_decrement)가 후 위 의미 체계와|  
+|컴파일러 오류 C3921|사용되지 않습니다.|  
+|컴파일러 오류 C3922|사용되지 않습니다.|  
+|[컴파일러 오류 C3923](compiler-error-c3923.md)|'*멤버*': 관리 되 는/WinRT 클래스의 멤버 함수에는 지역 클래스, 구조체 또는 공용 구조체 정의 사용할 수 없습니다|  
+|컴파일러 오류 C3924|인수에 오류가 #*번호* 대리 생성자 호출의 '*생성자*':|  
+|컴파일러 오류 C3925|루프 예상 (, 왔으며, 또는 수행) 다음 '*지시문*' 지시문|  
+|컴파일러 오류 C3926|'parallel' 지시문에 잘못된 상수가 있습니다.|  
+|컴파일러 오류 C3927|'->': 후행 반환 형식은 비함수 선언자 뒤에 올 수 없습니다.|  
+|컴파일러 오류 C3928|'->': 후행 반환 형식은 괄호로 묶인 선언자 뒤에 올 수 없습니다.|  
+|컴파일러 오류 C3929|사용되지 않습니다.|  
+|컴파일러 오류 C3930|'*함수*': 오버 로드 된 함수는 앰비언트 컨텍스트와 호환 되는 제한 지정 자가 '*컨텍스트*'|  
+|컴파일러 오류 C3931|'*형식*': 앰비언트 컨텍스트와 호환 되지 않는 제한 지정 자가 있는 함수를 호출할 수 없습니다|  
+|컴파일러 오류 C3932|사용되지 않습니다.|  
+|컴파일러 오류 C3933|'*클래스*': 소멸자의 제한 지정 자가 모든 생성자에 대 한 제한의 합집합을 처리 해야 합니다|  
+|컴파일러 오류 C3934|'main' 형식의 함수에는 restrict(cpu) 이외의 제한 지정자가 있을 수 없습니다.|  
+|컴파일러 오류 C3935|'*식별자*': 재정의; 제한 지정 자가 겹칩니다|  
+|컴파일러 오류 C3936|'*식별자*': 인식할 수 없는 제한 지정자|  
+|컴파일러 오류 C3937|빈 제한 지정자는 허용되지 않습니다.|  
+|컴파일러 오류 C3938|'*식별자*': extern \042C\042 함수에서 여러 제한 지정 자가 지원 되지 않습니다|  
+|컴파일러 오류 C3939|'*식별자*': 멤버 함수는 함수 포인터에 대 한 포인터 'amp' 제한 지정자를 사용 하는 함수에 대 한 참조가 허용 되지 않습니다|  
+|컴파일러 오류 C3940|'*식별자*': 식별자 찾을 수 없음-컴파일러 및 라이브러리 버전 간의 가능한 일치 하지 않습니다. Vccorlib.h/.lib, vccorlib120.dll 및 c1xx.dll 일치를 확인 하십시오.|  
+|컴파일러 오류 C3941|'*조건*': 필요 ' / clr' 명령줄 옵션|  
+|컴파일러 오류 C3942|사용되지 않습니다.|  
+|컴파일러 오류 C3943|사용되지 않습니다.|  
+|컴파일러 오류 C3944|사용되지 않습니다.|  
+|컴파일러 오류 C3945|'*형식*': throw 또는 platform:: exception에서 파생 되지 않는 winrt 개체를 catch 할 수 없습니다.|  
+|컴파일러 오류 C3946|'*형식*':이 형식에 typeid를 적용할 수 없습니다|  
+|컴파일러 오류 C3947|'*typeid*': typeid를 팩 확장에 적용할 수 없습니다|  
+|컴파일러 오류 C3948|'*키워드*': 팩 확장은이 컨텍스트에서 나타날 수 없습니다|  
+|컴파일러 오류 C3949|팩 확장 '...'는 괄호로 둘러싸인 추상 선언자에 나타날 수 없습니다.|  
+|컴파일러 오류 C3950|사용되지 않습니다.|  
+|컴파일러 오류 C3951|예상된 WinRT 형식에 멤버 포인터를 사용할 수 없습니다 '*형식*'. 대리자를 대신 사용 합니다.|  
+|컴파일러 오류 C3952|'*형식*': WinRT ' in/out' 배열을 지원 하지 않습니다. 사용 하 여 ' const 배열을<T>^'에 'in' 및 ' WriteOnlyArray<T>' 또는 ' 배열<T>^ *' 'out' 공용 Api에 대 한|  
+|컴파일러 오류 C3953|관리 되는 클래스를 사용할 수 없습니다*형식*' WinRT 모듈에 있습니다.|  
+|컴파일러 오류 C3954|'*형식*': WinRT 형식의 게시 된 메서드에서 반환 된 배열에는 양식을 사용 해야 합니다 ' 배열<T>^'|  
+|컴파일러 오류 C3955|'*형식*': public 생성자는 'out' 매개 변수를 포함할 수 없습니다 또는 ' WriteOnlyArray<T>'|  
+|컴파일러 오류 C3956|'*형식*': 형식이 단독으로 표시 되어 '*형식*'및의 기본으로 사용할 수 없습니다'*derived_type*'|  
+|컴파일러 오류 C3957|'*형식*': 사용할 수 없습니다 'n e w'는 WinRT에서 입력 않으므로 'ref n'을 대신 사용 합니다.|  
+|컴파일러 오류 C3958|'*형식*': WinRT에서 'gcnew'를 사용할 수 없습니다 입력 않으므로 'ref n'을 대신 사용 합니다.|  
+|컴파일러 오류 C3959|'ref new'는 WinRT 형식의 개체를 만드는 데만 사용할 수 있습니다.|  
+|컴파일러 오류 C3960|사용되지 않습니다.|  
+|컴파일러 오류 C3961|정적 생성자는 지원되지 않습니다.|  
+|컴파일러 오류 C3962|제네릭 클래스는 지원되지 않습니다.|  
+|컴파일러 오류 C3963|다차원 배열은 지원되지 않습니다.|  
+|컴파일러 오류 C3964|가변 배열은 지원되지 않습니다.|  
+|컴파일러 오류 C3965|매개 변수 배열은 지원되지 않습니다.|  
+|컴파일러 오류 C3966|'*함수*': 제네릭 함수는 지원 되지 않습니다|  
+|컴파일러 오류 C3967|가져오기 오류 '*식별자*모듈' 에서'*모듈*'|  
+|컴파일러 오류 C3968|토큰 '*토큰*' 모듈 이름 구분;로 유효 하지 않은 마침표 ('. ') 대신|  
+|컴파일러 오류 C3969|일관성 없는 모듈 이름: '*module1*'및'*module1*'|  
+|컴파일러 오류 C3970|'*식별자*': '*키워드*' 'ref class' 또는 'ref 구조체' 전역 범위 또는 네임 스페이스 범위에만 적용할 수|  
+|컴파일러 오류 C3971|'*형식*': 부분 정의 전체 정의 다음 나타날 수 없습니다|  
+|컴파일러 오류 C3972|'*형식*': 'partial'은 클래스 선언 또는 정의에 적용만 수|  
+|컴파일러 오류 C3973|사용되지 않습니다.|  
+|컴파일러 오류 C3974|사용되지 않습니다.|  
+|컴파일러 오류 C3975|' 클래스/구조체 *식별자*' 이전에 선언 되거나 다른 한정자를 사용 하 여 정의|  
+|컴파일러 오류 C3976|'*identifier1*'해야 public으로 선언' '를 사용 하려면'*identifier2*'|  
+|컴파일러 오류 C3977|정의 하는 어셈블리에 대 한 참조가 필요 '*식별자*'|  
+|컴파일러 오류 C3978|'*식별자*': 정적 속성은 WinRT 인터페이스 또는 값 형식의 멤버로 사용할 수 없습니다|  
+|컴파일러 오류 C3979|'*형식*': 특성을 사용 하 여 '*특성*' 대신의 '*값*'|  
+|컴파일러 오류 C3980|'*형식*' 메타 데이터로 내보낼 수 없습니다.|  
+|컴파일러 오류 C3981|'*형식*': 값 형식이 모든 정적 데이터 멤버를 가질 수*식별자*'|  
+|컴파일러 오류 C3982|'*형식*': 값 형식이 public이 아닌 데이터 멤버를 가질 수*식별자*'|  
+|컴파일러 오류 C3983|'*형식*': 값 형식에 public 비 데이터 멤버의 가질 수 없습니다*식별자*'|  
+|컴파일러 오류 C3984|'*형식*': 값이 아닌 형식이 public 데이터 멤버를 가질 수*식별자*'|  
+|컴파일러 오류 C3985|'*식별자*': public 멤버의 시그니처에 전용 형식 '*멤버*'|  
+|컴파일러 오류 c 3986|'*식별자*': public 멤버의 시그니처에 네이티브 형식 '*멤버*'|  
+|컴파일러 오류 C3987|'*식별자*': public 멤버의 시그니처에 네이티브 형식 '*형식*'|  
+|컴파일러 오류 C3988|'*형식*': 네이티브 형식은 public 일 수 없습니다|  
+|컴파일러 오류 C3989|'*형식*': 중첩된 형식은 public 일 수 없습니다|  
+|컴파일러 오류 C3990|'*형식*': 특성 '*특성*' 전용 또는 중첩 일 수 없습니다|  
+|컴파일러 오류 C3991|'*형식*': public이 아닌 또는 중첩 된 인터페이스를 구현할 수 없습니다 '*인터페이스*'|  
+|컴파일러 오류 C3992|'*식별자*': public 멤버의 시그니처에 잘못 된 형식 '*형식*'|  
+|컴파일러 오류 C3993|'*형식*': 값 형식에 공용 필드가 하나 이상 있어야 합니다.|  
+|컴파일러 오류 C3994|'*형식*': 값 형식 인터페이스를 구현 하거나 가상 함수를 가질 수 없습니다|  
+|컴파일러 오류 C3995|'*형식*': 값 형식이 이벤트 멤버를 가질 수*식별자*'|  
+|컴파일러 오류 C3996|사용되지 않습니다.|  
+|컴파일러 오류 C3998|' c + +*버전*': 지원 되지 않는 c + + 버전; 기본값인 ' c + +*버전*'|  
+|컴파일러 오류 C3999|알 수 없는 오류 하십시오 Visual c + + 도움말 메뉴에서 [기술 지원] 명령을 선택 하거나 기술 지원 도움말 파일에 대 한 자세한 내용은|  
 
