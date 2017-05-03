@@ -16,13 +16,13 @@ manager: "ghogen"
 caps.handback.revision: 27
 ---
 # Visual C++ 언어 참조(C++-CX)
-[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)]\([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\)은 최신 C\+\+와 가능한 가까운 형식의 Windows 앱 및 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소를 만드는 데 사용되는 C\+\+ 언어의 확장 집합입니다.[!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]를 사용하여 Visual C\#, Visual Basic, JavaScript 및 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]을 지원하는 다른 언어와 쉽게 상호 작용하는 네이티브 코드로 Windows 앱 및 구성 요소를 작성할 수 있습니다. 드물지만 원시 COM 인터페이스 또는 예외가 없는 코드에 직접 액세스해야 하는 경우 [Windows 런타임 C\+\+ 템플릿 라이브러리\(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)를 사용할 수 있습니다.  
+[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)]\([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\)은 최신 C\+\+와 가능한 가까운 형식의 Windows 앱 및 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소를 만드는 데 사용되는 C\+\+ 언어의 확장 집합입니다.[!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]를 사용하여 Visual C\#, Visual Basic, JavaScript 및 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]을 지원하는 다른 언어와 쉽게 상호 작용하는 네이티브 코드로 Windows 앱 및 구성 요소를 작성할 수 있습니다. 드물지만 원시 COM 인터페이스 또는 예외가 없는 코드에 직접 액세스해야 하는 경우 [Windows 런타임 C\+\+ 템플릿 라이브러리\(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)를 사용할 수 있습니다.  
   
  새 모델은 차세대 Windows 네이티브 C\+\+ 프로그래밍을 나타냅니다. 이를 통해 다음을 만들 수 있습니다.  
   
 -   사용자 인터페이스를 정의하고 네이티브 스택을 사용하는 XAML을 사용하는 C\+\+ Windows 앱. 자세한 내용은 [C\+\+에서 "hello world" 앱 만들기\(Windows 10\)](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx)를 참조하세요.  
   
--   JavaScript 기반 Windows 앱에서 사용할 수 있는 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소. 자세한 내용은 [C\+\+에서 Windows 런타임 구성 요소 만들기](http://msdn.microsoft.com/library/hh441569.aspx)[C\+\+로 Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)를 참조하세요.  
+-   JavaScript 기반 Windows 앱에서 사용할 수 있는 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소. 자세한 내용은 [C\+\+에서 Windows 런타임 구성 요소 만들기](http://msdn.microsoft.com/library/hh441569.aspx)[C\+\+로 Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)를 참조하세요.  
   
 -   Windows DirectX 게임 및 그래픽 위주 앱. 자세한 내용은 [DirectX로 간단한 범용 Windows 플랫폼\(UWP\) 게임 만들기](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx)를 참조하세요.  
   

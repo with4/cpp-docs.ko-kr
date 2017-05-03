@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type 클래스
-특정 형식에 대한 런타임 정보\(문자열 이름 및 형식 코드\)를 포함합니다. 임의의 개체에 대해 [Object::GetType 메서드](../cppcx/object-gettype-method.md)를 호출하거나 클래스 또는 구조체 이름에 대해 [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) 연산자를 사용하여 가져옵니다.  
+특정 형식에 대한 런타임 정보\(문자열 이름 및 형식 코드\)를 포함합니다. 임의의 개체에 대해 [Object::GetType 메서드](../cppcx/object-gettype-method.md)를 호출하거나 클래스 또는 구조체 이름에 대해 [typeid](~/windows/typeid-cpp-component-extensions.md) 연산자를 사용하여 가져옵니다.  
   
 ## 구문  
   

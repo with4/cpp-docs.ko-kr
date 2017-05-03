@@ -19,9 +19,9 @@ caps.handback.revision: 14
 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]는 표준 C\+\+ `public enum class`과 유사한 `scoped  enum` 키워드를 지원합니다.`public enum class` 키워드를 사용하여 선언된 열거자를 사용할 경우 열거형 식별자를 사용하여 각 열거자 값의 범위를 지정해야 합니다.  
   
 ## 설명  
- `public enum class`과 같은 액세스 지정자가 없는 `public`는 표준 C\+\+ [범위 지정 열거형](../Topic/Enumerations%20\(C++\).md)으로 처리됩니다.  
+ `public enum class`과 같은 액세스 지정자가 없는 `public`는 표준 C\+\+ [범위 지정 열거형](~/cpp/enumerations-cpp.md)으로 처리됩니다.  
   
- `public enum class` 자체에서는 플래그 열거형 형식이 int32 또는 uint32여야 하지만 `public enum struct` 또는 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 선언은 내부 형식이 모든 정수 계열 형식일 수 있습니다. 다음 구문에서는 `public enum class` 또는 `public enum struct` 부분을 설명합니다. 자세한 내용은 [enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md)을 참조하세요.  
+ `public enum class` 자체에서는 플래그 열거형 형식이 int32 또는 uint32여야 하지만 `public enum struct` 또는 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 선언은 내부 형식이 모든 정수 계열 형식일 수 있습니다. 다음 구문에서는 `public enum class` 또는 `public enum struct` 부분을 설명합니다. 자세한 내용은 [enum class](~/windows/enum-class-cpp-component-extensions.md)을 참조하세요.  
   
  이 예제에서는 public enum 클래스를 정의하는 방법을 보여 줍니다.  
   

@@ -52,7 +52,7 @@ Map(
  두 요소 값을 정렬 키로 비교하여 맵에서 해당 상대 순서를 확인할 수 있는 함수 개체를 제공하는 형식입니다.  
   
  `m`  
- 현재 Map을 초기화하는 데 사용되는 [Lvalue 및 Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)에 대한 참조 또는 [map 클래스](../standard-library/map-class.md)입니다.  
+ 현재 Map을 초기화하는 데 사용되는 [Lvalue 및 Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md)에 대한 참조 또는 [map 클래스](../standard-library/map-class.md)입니다.  
   
  `first`  
  현재 Map를 초기화하는 데 사용되는 요소 범위에서 첫 번째 요소의 입력 반복기입니다.  

@@ -34,7 +34,7 @@ public class Enum
  Enum 클래스는 [Platform::Object 클래스](../cppcx/platform-object-class.md)의 Equals\(\), GetHashCode\(\) 및 ToString\(\) 메서드를 상속합니다.  
   
 ## 설명  
- [public enum 클래스](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md) 키워드를 사용하여 열거형을 만듭니다. Platform::Enum 형식을 명시적으로 사용하지 마세요. 자세한 내용은 [열거형](../cppcx/enums-c-cx.md)을 참조하세요.  
+ [public enum 클래스](~/windows/enum-class-cpp-component-extensions.md) 키워드를 사용하여 열거형을 만듭니다. Platform::Enum 형식을 명시적으로 사용하지 마세요. 자세한 내용은 [열거형](../cppcx/enums-c-cx.md)을 참조하세요.  
   
 ## 요구 사항  
  **지원되는 최소 클라이언트:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

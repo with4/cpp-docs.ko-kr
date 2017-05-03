@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # JavaScript 통합(C++/CX)
-[Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components.md)을 참조하세요.  
+[Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)을 참조하세요.  
   
 ## 참고 항목  
  [다른 언어와의 상호 운용](../cppcx/interoperating-with-other-languages-c-cx.md)

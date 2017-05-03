@@ -100,4 +100,4 @@ ref class Map sealed;
  [Platform::Collections::Map 클래스](../cppcx/platform-collections-map-class.md)   
  [Platform::Collections::UnorderedMapView 클래스](../cppcx/platform-collections-unorderedmapview-class.md)   
  [컬렉션](../cppcx/collections-c-cx.md)   
- [C\+\+로 Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [C\+\+로 Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

@@ -50,4 +50,4 @@ namespace Windows {
  **네임스페이스:** Windows::Foundation::Collections  
   
 ## 참고 항목  
- [Windows::Foundation 네임스페이스](../Topic/Windows::Foundation%20Namespace.md)
+ [Windows::Foundation 네임스페이스](~/windows/windows-foundation-namespace.md)

@@ -30,7 +30,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
  맵의 첫 번째 요소를 지정하는 반복기입니다.  
   
 ## 설명  
- First\(\)에서 반환된 반복기를 보유하는 편리한 방법은 [auto](../Topic/auto%20\(C++\).md) 형식 추론 키워드로 선언된 변수에 반환 값을 할당하는 것입니다. 예를 들어, `auto x = myUnorderedMap->First();`을 입력합니다.  
+ First\(\)에서 반환된 반복기를 보유하는 편리한 방법은 [auto](~/cpp/auto-cpp.md) 형식 추론 키워드로 선언된 변수에 반환 값을 할당하는 것입니다. 예를 들어, `auto x = myUnorderedMap->First();`을 입력합니다.  
   
 ## 요구 사항  
  **헤더:** collection.h  

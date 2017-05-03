@@ -32,7 +32,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ```  
   
 ## 설명  
- 이 예외가 발생하면 응용 프로그램의 패키지 매니페스트에 적절한 기능을 요청했고 필요한 선언을 만들었는지 확인하세요. 자세한 내용은 [매니페스트 디자이너를 사용하여 Windows 8.1 앱 패키지 구성](../Topic/Configure%20a%20Windows%208.1%20app%20package%20by%20using%20the%20manifest%20designer.md) 및 [COMException](../cppcx/platform-comexception-class.md) 클래스를 참조하세요.  
+ 이 예외가 발생하면 응용 프로그램의 패키지 매니페스트에 적절한 기능을 요청했고 필요한 선언을 만들었는지 확인하세요. 자세한 내용은 [매니페스트 디자이너를 사용하여 Windows 8.1 앱 패키지 구성](http://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d) 및 [COMException](../cppcx/platform-comexception-class.md) 클래스를 참조하세요.  
   
 ## 요구 사항  
  **지원되는 최소 클라이언트:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

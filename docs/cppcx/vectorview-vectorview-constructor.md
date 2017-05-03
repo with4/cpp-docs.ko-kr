@@ -93,7 +93,7 @@ VectorView(
  현재 VectorView의 각 요소를 초기화하는 데 사용되는 값입니다.  
   
  `v`  
- 현재 VectorView를 초기화하는 데 사용되는 [::std::vector](../Topic/vector%20Class%201.md)에 대한 [Lvalue 및 Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)입니다.  
+ 현재 VectorView를 초기화하는 데 사용되는 [::std::vector](../Topic/vector%20Class%201.md)에 대한 [Lvalue 및 Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md)입니다.  
   
  `ptr`  
  현재 VectorView를 초기화하는 데 사용되는 `std::vector`에 대한 포인터입니다.  
@@ -105,10 +105,10 @@ VectorView(
  현재 VectorView를 초기화하는 데 사용되는 [std::array](../Topic/vector%20Class%201.md) 개체입니다.  
   
  `first`  
- 현재 VectorView를 초기화하는 데 사용되는 개체 시퀀스의 첫 번째 요소입니다.`first` 형식은 *완벽한 전달*을 통해 전달됩니다. 자세한 내용은 [Rvalue 참조 선언자: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)을 참조하세요.  
+ 현재 VectorView를 초기화하는 데 사용되는 개체 시퀀스의 첫 번째 요소입니다.`first` 형식은 *완벽한 전달*을 통해 전달됩니다. 자세한 내용은 [Rvalue 참조 선언자: &&](~/cpp/rvalue-reference-declarator-amp-amp.md)을 참조하세요.  
   
  `last`  
- 현재 VectorView를 초기화하는 데 사용되는 개체 시퀀스의 마지막 요소입니다.`last` 형식은 *완벽한 전달*을 통해 전달됩니다. 자세한 내용은 [Rvalue 참조 선언자: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)을 참조하세요.  
+ 현재 VectorView를 초기화하는 데 사용되는 개체 시퀀스의 마지막 요소입니다.`last` 형식은 *완벽한 전달*을 통해 전달됩니다. 자세한 내용은 [Rvalue 참조 선언자: &&](~/cpp/rvalue-reference-declarator-amp-amp.md)을 참조하세요.  
   
 ## 요구 사항  
  **헤더:** collection.h  

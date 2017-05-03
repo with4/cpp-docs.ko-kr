@@ -106,7 +106,7 @@ UnorderedMap();
  키에 대한 해시 값을 생성하는 함수 개체입니다. 해당 클래스에 의해 지원되는 키 형식의 경우 이 매개 변수의 기본값은 [hash 클래스](../Topic/hash%20Class%201.md)입니다.  
   
  `m`  
- 현재 UnorderedMap을 초기화하는 데 사용되는 [std::unordered\_map](../standard-library/unordered-map-class.md)에 대한 참조 또는 [Lvalue 및 Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)입니다.  
+ 현재 UnorderedMap을 초기화하는 데 사용되는 [std::unordered\_map](../standard-library/unordered-map-class.md)에 대한 참조 또는 [Lvalue 및 Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md)입니다.  
   
  il  
  맵을 초기화하는 데 사용될 [std::pair](../standard-library/initializer-list-class.md) 개체의 [std::initializer\_list](../standard-library/pair-structure.md)입니다.  

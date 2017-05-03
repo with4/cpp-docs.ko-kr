@@ -136,7 +136,7 @@ caps.handback.revision: 28
  자세한 내용은 [대리자](../cppcx/delegates-c-cx.md)을 참조하십시오.  
   
 ### 예외  
- C\+\+\/CX에서는 사용자 지정 예외 형식, [std::exception](../Topic/exception%20Class1.md) 형식 및 [Platform::Exception](../cppcx/platform-exception-class.md) 형식을 catch할 수 있습니다.  
+ C\+\+\/CX에서는 사용자 지정 예외 형식, [std::exception](~/standard-library/exception-class.md) 형식 및 [Platform::Exception](../cppcx/platform-exception-class.md) 형식을 catch할 수 있습니다.  
   
  자세한 내용은 [예외](../cppcx/exceptions-c-cx.md)을 참조하십시오.  
   
@@ -146,7 +146,7 @@ caps.handback.revision: 28
  자세한 내용은 [이벤트](../cppcx/events-c-cx.md)을 참조하십시오.  
   
 ### 캐스팅  
- C\+\+\/CX에서는 표준 C\+\+ 캐스트 연산자인 [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) 및 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)와 C\+\+\/CX에서만 사용되는 [safe\_cast](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md) 연산자도 지원됩니다.  
+ C\+\+\/CX에서는 표준 C\+\+ 캐스트 연산자인 [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) 및 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)와 C\+\+\/CX에서만 사용되는 [safe\_cast](~/windows/safe-cast-cpp-component-extensions.md) 연산자도 지원됩니다.  
   
  자세한 내용은 [캐스팅](../cppcx/casting-c-cx.md)을 참조하십시오.  
   

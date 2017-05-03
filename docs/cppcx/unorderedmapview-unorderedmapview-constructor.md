@@ -100,7 +100,7 @@ UnorderedMapView(
  같은지 확인하기 위해 두 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다. 기본값은 [std::equal\_to\<K\>](../standard-library/equal-to-struct.md)입니다.  
   
  `m`  
- UnorderedMapView를 초기화하는 데 사용되는 [std::unordered\_map](../standard-library/unordered-map-class.md)에 대한 참조 또는 [Lvalue 및 Rvalue](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)입니다.  
+ UnorderedMapView를 초기화하는 데 사용되는 [std::unordered\_map](../standard-library/unordered-map-class.md)에 대한 참조 또는 [Lvalue 및 Rvalue](~/cpp/lvalues-and-rvalues-visual-cpp.md)입니다.  
   
  `first`  
  UnorderedMapView를 초기화하는 데 사용되는 요소 범위에서 첫 번째 요소의 입력 반복기입니다.  

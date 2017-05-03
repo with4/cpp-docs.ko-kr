@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 22
 ---
 # 문자열(C++/CX)
-[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]의 텍스트는 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]를 사용하여 [Platform::String 클래스](../cppcx/platform-string-class.md)에 표시됩니다.`Platform::String Class` 클래스의 메서드 간에 문자열을 전달하거나 ABI\(응용 프로그램 이진 인터페이스\) 경계를 넘은 다른 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소와 상호 작용하는 경우 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]를 사용하세요.`Platform::String Class`는 몇 가지 일반적인 문자열 작업에 대한 메서드를 제공하지만 완전한 기능의 문자열 클래스로 설계되지 않았습니다. C\+\+ 모듈에서는 중요한 텍스트 처리에 [wstring](../Topic/wstring.md)과 같은 표준 C\+\+ 문자열 형식을 사용한 다음 최종 결과를 공용 인터페이스로 전달하거나 공용 인터페이스로부터 전달받기 전에 [Platform::String^](../cppcx/platform-string-class.md)으로 변환합니다.`wstring` 또는 `wchar_t*`와 `Platform::String` 간의 변환은 쉽고 효율적입니다.  
+[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]의 텍스트는 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]를 사용하여 [Platform::String 클래스](../cppcx/platform-string-class.md)에 표시됩니다.`Platform::String Class` 클래스의 메서드 간에 문자열을 전달하거나 ABI\(응용 프로그램 이진 인터페이스\) 경계를 넘은 다른 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소와 상호 작용하는 경우 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]를 사용하세요.`Platform::String Class`는 몇 가지 일반적인 문자열 작업에 대한 메서드를 제공하지만 완전한 기능의 문자열 클래스로 설계되지 않았습니다. C\+\+ 모듈에서는 중요한 텍스트 처리에 [wstring](http://msdn.microsoft.com/library/77953dd7-ee2f-4f6c-90e7-27da549ca631)과 같은 표준 C\+\+ 문자열 형식을 사용한 다음 최종 결과를 공용 인터페이스로 전달하거나 공용 인터페이스로부터 전달받기 전에 [Platform::String^](../cppcx/platform-string-class.md)으로 변환합니다.`wstring` 또는 `wchar_t*`와 `Platform::String` 간의 변환은 쉽고 효율적입니다.  
   
  **빠른 전달**  
   
@@ -39,9 +39,9 @@ caps.handback.revision: 22
  [!code-cpp[cx_strings#03](../snippets/cpp/VS_Snippets_Misc/cx_strings/cpp/class1.cpp#03)]  
   
 ## 문자열 변환  
- `Platform::String`에는 `char16` 문자 또는 `NULL` 문자만 포함될 수 있습니다. 응용 프로그램이 8비트 문자로 작업해야 하는 경우 [String::Data 메서드](../cppcx/string-data-method.md)를 사용하여 텍스트를 `const wchar_t*`로 추출합니다. 그런 다음 적절한 Windows 함수 또는 표준 라이브러리 함수를 사용하여 데이터에 대해 작업을 수행하고 다시 `wchar_t*` 또는 [wstring](../Topic/wstring.md)으로 변환하여 새로운 `Platform::String`을 생성하는 데 사용할 수 있습니다.  
+ `Platform::String`에는 `char16` 문자 또는 `NULL` 문자만 포함될 수 있습니다. 응용 프로그램이 8비트 문자로 작업해야 하는 경우 [String::Data 메서드](../cppcx/string-data-method.md)를 사용하여 텍스트를 `const wchar_t*`로 추출합니다. 그런 다음 적절한 Windows 함수 또는 표준 라이브러리 함수를 사용하여 데이터에 대해 작업을 수행하고 다시 `wchar_t*` 또는 [wstring](http://msdn.microsoft.com/library/77953dd7-ee2f-4f6c-90e7-27da549ca631)으로 변환하여 새로운 `Platform::String`을 생성하는 데 사용할 수 있습니다.  
   
- 다음 코드 조각에서는 `String^` 변수와 `wstring` 변수 간에 변환하는 방법을 보여 줍니다. 이 예제에서 사용하는 문자열 조작에 대한 자세한 내용은 [basic\_string::replace](../Topic/basic_string::replace.md)를 참조하세요.  
+ 다음 코드 조각에서는 `String^` 변수와 `wstring` 변수 간에 변환하는 방법을 보여 줍니다. 이 예제에서 사용하는 문자열 조작에 대한 자세한 내용은 [basic\_string::replace](http://msdn.microsoft.com/library/16d81b9d-9724-458a-9179-556748034507)를 참조하세요.  
   
  [!code-cpp[cx_strings#04](../snippets/cpp/VS_Snippets_Misc/cx_strings/cpp/class1.cpp#04)]  
   

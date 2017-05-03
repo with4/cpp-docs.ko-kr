@@ -21,7 +21,7 @@ Visual Studio를 사용하여 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 응�
 ## [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소 DLL  
  거의 모든 경우에 [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)] 응용 프로그램에서 사용할 DLL을 만들려면 해당 이름의 프로젝트 이름을 사용하여 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소로 만듭니다. 공용 또는 전용 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 형식이 있는 DLL에 대한 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소 프로젝트를 만들 수 있습니다.[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소는 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 호환 언어로 작성된 응용 프로그램에서 액세스할 수 있습니다. 기본적으로 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소 프로젝트의 컴파일러 설정은 **\/ZW** 스위치를 사용합니다. .winmd 파일은 루트 네임스페이스와 이름이 같아야 합니다. 예를 들어 이름이 A.B.C.MyClass인 클래스는 이름이 A.winmd, A.B.winmd 또는 A.B.C.winmd인 메타데이터 파일에 정의된 경우에만 인스턴스화될 수 있습니다. DLL의 이름은 .winmd 파일 이름과 일치하지 않아도 됩니다.  
   
- 자세한 내용은 [C\+\+로 Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)을 참조하세요.  
+ 자세한 내용은 [C\+\+로 Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)을 참조하세요.  
   
 #### 프로젝트에서 타사 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소 이진 파일을 참조하려면  
   

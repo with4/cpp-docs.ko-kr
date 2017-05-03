@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  Vector의 첫 번째 요소를 가리키는 반복기입니다.  
   
 ## 설명  
- First\(\)에서 반환된 반복기를 보유하는 편리한 방법은 [auto](../Topic/auto%20\(C++\).md) 형식 추론 키워드로 선언된 변수에 반환 값을 할당하는 것입니다. 예를 들어, `auto x = myVector->First();`을 입력합니다. 이 반복기는 컬렉션의 길이를 알고 있습니다.  
+ First\(\)에서 반환된 반복기를 보유하는 편리한 방법은 [auto](~/cpp/auto-cpp.md) 형식 추론 키워드로 선언된 변수에 반환 값을 할당하는 것입니다. 예를 들어, `auto x = myVector->First();`을 입력합니다. 이 반복기는 컬렉션의 길이를 알고 있습니다.  
   
  STL 함수에 전달되는 반복기 쌍이 필요한 경우 free 함수 [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) 및 [Windows::Foundation::Collections::end](../cppcx/end-function.md)를 사용합니다.  
   

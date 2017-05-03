@@ -34,7 +34,7 @@ public delegate void delegate_name();
  Delegate 클래스에는 [Platform::Object 클래스](../cppcx/platform-object-class.md)에서 파생된 Equals\(\), GetHashCode\(\) 및 ToString\(\) 메서드가 있습니다.  
   
 ## 설명  
- [delegate](../Topic/delegate%20%20\(C++%20Component%20Extensions\).md) 키워드를 사용하여 대리자를 만듭니다. Platform::Delegate를 명시적으로 사용하지 마세요. 자세한 내용은 [대리자](../cppcx/delegates-c-cx.md)을 참조하세요. 대리자를 만들고 사용하는 방법에 대한 예제는 [C\+\+로 Windows Runtime 구성 요소 만들기](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)를 참조하세요.  
+ [delegate](~/windows/delegate-cpp-component-extensions.md) 키워드를 사용하여 대리자를 만듭니다. Platform::Delegate를 명시적으로 사용하지 마세요. 자세한 내용은 [대리자](../cppcx/delegates-c-cx.md)을 참조하세요. 대리자를 만들고 사용하는 방법에 대한 예제는 [C\+\+로 Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)를 참조하세요.  
   
 ## 요구 사항  
  **지원되는 최소 클라이언트:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
