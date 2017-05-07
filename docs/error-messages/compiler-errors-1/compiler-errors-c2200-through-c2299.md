@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>컴파일러 오류 C2200 C2299 통해
@@ -177,7 +175,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2277](compiler-error-c2277.md)|'*함수*':이 멤버 함수의 주소를 가져올 수 없습니다|  
 |컴파일러 오류 C2278|사용되지 않습니다.|  
 |[컴파일러 오류 C2279](compiler-error-c2279.md)|형식 정의에는 예외 사양이 나타날 수 없습니다.|  
-|컴파일러 오류 c 2280|'*클래스*::*함수*': 삭제 된 함수를 참조 하려고 합니다.|  
+|[컴파일러 오류 c 2280](compiler-error-c2280.md)|'*클래스*::*함수*': 삭제 된 함수를 참조 하려고 합니다.|  
 |컴파일러 오류 C2281|'*클래스*::*함수*': 함수는 첫 번째 선언에만 삭제할 수 있습니다|  
 |컴파일러 오류 C2282|'*function1*'를 재정의할 수 없습니다'*function2*'|  
 |[컴파일러 오류 C2283](compiler-error-c2283.md)|'*식별자*': 순수 지정자 또는 추상 재정의 지정자는 명명 되지 않은 클래스/구조체에 사용할 수 없습니다|  

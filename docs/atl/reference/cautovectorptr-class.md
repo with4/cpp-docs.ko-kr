@@ -1,5 +1,5 @@
 ---
-title: "CAutoVectorPtr 클래스 | Microsoft 문서"
+title: "CAutoVectorPtr 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: bb4bbd110552d1e3cf604add44de7e428d2703ee
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 클래스
@@ -77,7 +77,7 @@ class CAutoVectorPtr
 |이름|설명|  
 |----------|-----------------|  
 |[CAutoVectorPtr::Allocate](#allocate)|가 가리키는 개체의 배열에 필요한 메모리를 할당 하려면이 메서드를 호출 `CAutoVectorPtr`합니다.|  
-|[CAutoVectorPtr::Attach](#attach)|이 메서드는 기존 포인터의 소유권을 호출 합니다.|  
+|[CAutoVectorPtr::Attach](#attach)|기존 포인터의 소유권을 갖도록이 메서드를 호출 합니다.|  
 |[CAutoVectorPtr::Detach](#detach)|포인터의 소유권을 해제 하려면이 메서드를 호출 합니다.|  
 |[CAutoVectorPtr::Free](#free)|가 가리키는 개체를 삭제 하려면이 메서드를 호출 하는 `CAutoVectorPtr`합니다.|  
   
@@ -94,11 +94,11 @@ class CAutoVectorPtr
 |----------|-----------------|  
 |[CAutoVectorPtr::m_p](#m_p)|포인터 데이터 멤버 변수입니다.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스를 만들고 범위에서 벗어나면 자동으로 리소스를 해제 하 여 메모리 누수를 방지 하는 데 도움이 되는 스마트 포인터를 관리 하기 위한 메서드를 제공 합니다. `CAutoVectorPtr`비슷합니다 `CAutoPtr`, 유일한 차이점은는 `CAutoVectorPtr` 사용 하 여 [벡터 new](../../standard-library/new-operators.md#operator_new_arr) 및 [벡터 delete](../../standard-library/new-operators.md#operator_delete_arr) c + +는 대신 메모리 할당과 해제를 **새** 및 **삭제** 연산자입니다. 참조 [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) 경우 컬렉션 클래스의 `CAutoVectorPtr` 필요 합니다.  
+## <a name="remarks"></a>설명  
+ 이 클래스는 만들고 범위에서 벗어나면 자동으로 리소스를 해제 하 여 메모리 누수를 방지 하는 데 도움이 됩니다는 스마트 포인터를 관리 하기 위한 메서드를 제공 합니다. `CAutoVectorPtr`유사한 `CAutoPtr`, 유일한 차이점은 하 `CAutoVectorPtr` 사용 하 여 [벡터 new &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) 및 [삭제 &#91; &#93; 벡터](../../standard-library/new-operators.md#op_delete_arr) 대신 c + + 메모리 할당과 해제를 **새** 및 **삭제** 연산자. 참조 [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) 경우의 컬렉션 클래스 `CAutoVectorPtr` 필요 합니다.  
 
   
- 참조 [CAutoPtr](../../atl/reference/cautoptr-class.md) 스마트 포인터 클래스를 사용 하 여의 예입니다.  
+ 참조 [CAutoPtr](../../atl/reference/cautoptr-class.md) 스마트 포인터 클래스를 사용 하는 예제에 대 한 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
@@ -115,13 +115,13 @@ bool Allocate(size_t nElements) throw();
  배열의 요소 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- True를 반환 하는 메모리는 성공적으로 할당 실패 한 경우 false.  
+ True를 반환 했습니다. 메모리가 할당 실패 하면 false를 합니다.  
   
-### <a name="remarks"></a>주의  
- 디버그 빌드에서 어설션 오류는 경우에 [CAutoVectorPtr::m_p](#m_p) 멤버 변수는 현재 기존 값을 가리킵니다; 즉,가 아닌 NULL로 합니다.  
+### <a name="remarks"></a>설명  
+ 디버그 빌드에서 경우 어설션 오류가 발생 합니다는 [CAutoVectorPtr::m_p](#m_p) 멤버 변수는 현재 기존 값을 가리킵니다; NULL과 같음는 즉, 합니다.  
   
 ##  <a name="attach"></a>CAutoVectorPtr::Attach  
- 이 메서드는 기존 포인터의 소유권을 호출 합니다.  
+ 기존 포인터의 소유권을 갖도록이 메서드를 호출 합니다.  
   
 ```
 void Attach(T* p) throw();
@@ -131,10 +131,10 @@ void Attach(T* p) throw();
  `p`  
  `CAutoVectorPtr` 개체는이 포인터의 소유권을 갖게 됩니다.  
   
-### <a name="remarks"></a>주의  
- 때는 `CAutoVectorPtr` 자동으로 삭제 하는 포인터 할당 된 모든 데이터 범위를 벗어나면, 개체 포인터의 소유권을 갖습니다. 경우 [CAutoVectorPtr::Detach](#detach) 은 호출 프로그래머가 다시 모든 해제에 대 한 책임 지정 된 리소스가 할당 됩니다.  
+### <a name="remarks"></a>설명  
+ 경우는 `CAutoVectorPtr` 자동으로 삭제지 것입니다는 포인터가 되 고 할당 된 모든 데이터 범위를 벗어나면, 개체 포인터의 소유권을 갖습니다. 경우 [CAutoVectorPtr::Detach](#detach) 은 호출 프로그래머가 다시 모든 해제에 대 한 책임 지정 된 리소스가 할당 됩니다.  
   
- 디버그 빌드에서 어설션 오류는 경우에 [CAutoVectorPtr::m_p](#m_p) 멤버 변수는 현재 기존 값을 가리킵니다; 즉,가 아닌 NULL로 합니다.  
+ 디버그 빌드에서 경우 어설션 오류가 발생 합니다는 [CAutoVectorPtr::m_p](#m_p) 멤버 변수는 현재 기존 값을 가리킵니다; NULL과 같음는 즉, 합니다.  
   
 ##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
  생성자입니다.  
@@ -149,8 +149,8 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
  `p`  
  기존 포인터입니다.  
   
-### <a name="remarks"></a>주의  
- `CAutoVectorPtr` 는 기존 포인터를 사용 하 여 개체를 만들 수 있습니다,이 경우에 포인터 소유권 전송 합니다.  
+### <a name="remarks"></a>설명  
+ `CAutoVectorPtr` 경우 포인터의 소유권을 전송 하기, 기존 포인터를 사용 하 여 개체를 만들 수 있습니다.  
   
 ##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
  소멸자입니다.  
@@ -159,7 +159,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ~CAutoVectorPtr() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다. 호출 [CAutoVectorPtr::Free](#free)합니다.  
   
 ##  <a name="detach"></a>CAutoVectorPtr::Detach  
@@ -172,8 +172,8 @@ T* Detach() throw();
 ### <a name="return-value"></a>반환 값  
  포인터의 복사본을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
- 포인터의 소유권을 해제, 설정 된 [CAutoVectorPtr::m_p](#m_p) 멤버 변수를 NULL, 포인터의 복사본을 반환 합니다. 호출한 후 **분리**를 해제 하 여 프로그래머의 몫 리소스가 할당 됩니다 매길는 `CAutoVectorPtr` 개체 수 이전에 독자를 대상으로 해야 합니다.  
+### <a name="remarks"></a>설명  
+ 포인터의 소유권을 해제, 설정 된 [CAutoVectorPtr::m_p](#m_p) 멤버 변수를 NULL 포인터의 복사본을 반환 합니다. 호출한 후 **분리**, 것은 해제 하는 프로그래머까지 리소스가 할당 하는 `CAutoVectorPtr` 개체 수 이전에 독자를 대상으로 해야 합니다.  
   
 ##  <a name="free"></a>CAutoVectorPtr::Free  
  가 가리키는 개체를 삭제 하려면이 메서드를 호출 하는 `CAutoVectorPtr`합니다.  
@@ -182,8 +182,8 @@ T* Detach() throw();
 void Free() throw();
 ```  
   
-### <a name="remarks"></a>주의  
- 가 가리키는 개체는 `CAutoVectorPtr` 해제 되 면 및 [CAutoVectorPtr::m_p](#m_p) 멤버 변수는 NULL로 설정 됩니다.  
+### <a name="remarks"></a>설명  
+ 가 가리키는 개체는 `CAutoVectorPtr` 해제 되 면 및 [CAutoVectorPtr::m_p](#m_p) 멤버 변수를 NULL로 설정 합니다.  
   
 ##  <a name="m_p"></a>CAutoVectorPtr::m_p  
  포인터 데이터 멤버 변수입니다.  
@@ -192,7 +192,7 @@ void Free() throw();
 T* m_p;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 멤버 변수는 포인터 정보를 보유합니다.  
   
 ##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
@@ -204,13 +204,13 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `p`  
- 포인터입니다.  
+ 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 참조를 반환 합니다.는 **CAutoVectorPtr\< T >**합니다.  
   
-### <a name="remarks"></a>주의  
- 대입 연산자를 분리는 `CAutoVectorPtr` 개체에서 모든 현재 포인터 새 포인터를 연결 하 고 `p`, 그 자리에 있습니다.  
+### <a name="remarks"></a>설명  
+ 대입 연산자 분리는 `CAutoVectorPtr` 개체에서 모든 현재 포인터 새 포인터를 연결 합니다. `p`, 그 자리에 합니다.  
   
 ##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
  캐스트 연산자입니다.  
@@ -219,7 +219,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 operator T*() const throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  클래스 템플릿에 정의 된 개체 데이터 형식에 대 한 포인터를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
