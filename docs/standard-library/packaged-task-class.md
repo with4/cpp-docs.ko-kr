@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::packaged_task
+- future/std::packaged_task::packaged_task
+- future/std::packaged_task::get_future
+- future/std::packaged_task::make_ready_at_thread_exit
+- future/std::packaged_task::reset
+- future/std::packaged_task::swap
+- future/std::packaged_task::valid
+- future/std::packaged_task::operator()
+- future/std::packaged_task::operator bool
 dev_langs:
 - C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
@@ -31,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: a54b1c9788ef60f63aafafc9125b09c449fde1b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="packagedtask-class"></a>packaged_task 클래스
@@ -53,33 +62,33 @@ class packaged_task;
   
 |이름|설명|  
 |----------|-----------------|  
-|[packaged_task::packaged_task 생성자](#packaged_task__packaged_task_constructor)|`packaged_task` 개체를 생성합니다.|  
-|[packaged_task::~packaged_task 소멸자](#packaged_task___dtorpackaged_task_destructor)|`packaged_task` 개체를 제거합니다.|  
+|[packaged_task](#packaged_task)|`packaged_task` 개체를 생성합니다.|  
+|[packaged_task::~packaged_task 소멸자](#dtorpackaged_task_destructor)|`packaged_task` 개체를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[packaged_task::get_future](#packaged_task__get_future_method)|동일한 연결된 비동기 상태가 있는 [future](../standard-library/future-class.md) 개체를 반환합니다.|  
-|[packaged_task::make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)|연결된 비동기 상태에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장합니다.|  
-|[packaged_task::reset](#packaged_task__reset_method)|연결된 비동기 상태를 대체합니다.|  
-|[packaged_task::swap](#packaged_task__swap_method)|연결된 비동기 상태를 지정한 개체의 연결된 비동기 상태와 교환합니다.|  
-|[packaged_task::valid](#packaged_task__valid_method)|개체에 연결된 비동기 상태가 있는지를 지정합니다.|  
+|[get_future](#get_future)|동일한 연결된 비동기 상태가 있는 [future](../standard-library/future-class.md) 개체를 반환합니다.|  
+|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|연결된 비동기 상태에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장합니다.|  
+|[reset](#reset)|연결된 비동기 상태를 대체합니다.|  
+|[swap](#swap)|연결된 비동기 상태를 지정한 개체의 연결된 비동기 상태와 교환합니다.|  
+|[유효한](#valid)|개체에 연결된 비동기 상태가 있는지를 지정합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[packaged_task::operator=](#packaged_task__operator_eq)|지정된 개체에서 연결된 비동기 상태를 전송합니다.|  
-|[packaged_task::operator()](#packaged_task__operator__)|연결된 비동기 상태에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장한 후에 상태를 *ready*로 설정합니다.|  
-|[packaged_task::operator bool](#packaged_task__operator_bool)|개체에 연결된 비동기 상태가 있는지를 지정합니다.|  
+|[packaged_task::operator=](#op_eq)|지정된 개체에서 연결된 비동기 상태를 전송합니다.|  
+|[packaged_task::operator()](#op_call)|연결된 비동기 상태에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장한 후에 상태를 *ready*로 설정합니다.|  
+|[packaged_task::operator bool](#op_bool)|개체에 연결된 비동기 상태가 있는지를 지정합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** future  
+ **헤더:** \<이후 >  
   
  **네임스페이스:** std  
   
-##  <a name="a-namepackagedtaskgetfuturemethoda--packagedtaskgetfuture"></a><a name="packaged_task__get_future_method"></a>  packaged_task::get_future  
+##  <a name="get_future"></a>  packaged_task::get_future  
  동일한 *연결된 비동기 상태*가 있는 `future<Ty>` 형식의 개체를 반환합니다.  
   
 ```
@@ -91,7 +100,7 @@ future<Ty> get_future();
   
  이 메서드는 연결된 비동기 상태가 동일한 `packaged_task` 개체에 대해 이미 호출된 경우 오류 코드가 `future_already_retrieved`인 `future_error`를 thorw합니다.  
   
-##  <a name="a-namepackagedtaskmakereadyatthreadexitmethoda--packagedtaskmakereadyatthreadexit"></a><a name="packaged_task__make_ready_at_thread_exit_method"></a>  packaged_task::make_ready_at_thread_exit  
+##  <a name="make_ready_at_thread_exit"></a>  packaged_task::make_ready_at_thread_exit  
  *연결된 비동기 상태*에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장합니다.  
   
 ```
@@ -101,13 +110,13 @@ void make_ready_at_thread_exit(ArgTypes... args);
 ### <a name="remarks"></a>설명  
  `packaged_task` 개체에 연결된 비동기 상태가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
   
- 이 메서드 또는 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)가 동일한 연관 비동기 상태의 `packaged_task` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+ 이 메서드 또는 [make_ready_at_thread_exit](#make_ready_at_thread_exit)가 동일한 연관 비동기 상태의 `packaged_task` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
   
  그렇지 않으면 이 연산자는 `INVOKE(fn, args..., Ty)`를 호출합니다. 여기서 *fn*은 연결된 비동기 상태에 저장되어 있는 호출 가능 개체입니다. 반환된 모든 값은 연결된 비동기 상태에서 반환된 결과로 원자 단위로 저장됩니다.  
   
- [packaged_task::operator()](#packaged_task__operator__)와 달리 호출 스레드에서 모든 스레드 로컬 개체가 제거될 때까지는 연결된 비동기 상태가 `ready`로 설정되지 않습니다. 일반적으로 연결된 비동기 상태에서 차단된 스레드는 호출 스레드가 종료될 때까지 차단 해제되지 않습니다.  
+ [packaged_task::operator()](#op_call)와 달리 호출 스레드에서 모든 스레드 로컬 개체가 제거될 때까지는 연결된 비동기 상태가 `ready`로 설정되지 않습니다. 일반적으로 연결된 비동기 상태에서 차단된 스레드는 호출 스레드가 종료될 때까지 차단 해제되지 않습니다.  
   
-##  <a name="a-namepackagedtaskoperatoreqa--packagedtaskoperator"></a><a name="packaged_task__operator_eq"></a>  packaged_task::operator=  
+##  <a name="op_eq"></a>  packaged_task::operator=  
  지정된 개체에서 *연결된 비동기 상태*를 전송합니다.  
   
 ```
@@ -124,7 +133,7 @@ packaged_task& operator=(packaged_task&& Right);
 ### <a name="remarks"></a>설명  
  작업 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.  
   
-##  <a name="a-namepackagedtaskoperatora--packagedtaskoperator"></a><a name="packaged_task__operator__"></a>  packaged_task::operator()  
+##  <a name="op_call"></a>  packaged_task::operator()  
  *연결된 비동기 상태*에 저장되어 있는 호출 가능 개체를 호출하고 반환된 값을 원자 단위로 저장한 후에 상태를 *ready*로 설정합니다.  
   
 ```
@@ -134,11 +143,11 @@ void operator()(ArgTypes... args);
 ### <a name="remarks"></a>설명  
  `packaged_task` 개체에 연결된 비동기 상태가 없는 경우 이 메서드는 오류 코드가 `no_state`인 [future_error](../standard-library/future-error-class.md)를 throw합니다.  
   
- 이 메서드 또는 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)가 동일한 연관 비동기 상태의 `packaged_task` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
+ 이 메서드 또는 [make_ready_at_thread_exit](#make_ready_at_thread_exit)가 동일한 연관 비동기 상태의 `packaged_task` 개체에 대해 이미 호출된 경우 이 메서드는 오류 코드가 `promise_already_satisfied`인 `future_error`를 throw합니다.  
   
  그렇지 않으면 이 연산자는 `INVOKE(fn, args..., Ty)`를 호출합니다. 여기서 *fn*은 연결된 비동기 상태에 저장되어 있는 호출 가능 개체입니다. 반환된 모든 값은 연결된 비동기 상태에서 반환된 결과로 원자 단위로 저장되며 상태는 ready로 설정됩니다. 그 결과로 연결된 비동기 상태에서 차단된 모든 스레드의 차단은 해제됩니다.  
   
-##  <a name="a-namepackagedtaskoperatorboola--packagedtaskoperator-bool"></a><a name="packaged_task__operator_bool"></a>  packaged_task::operator bool  
+##  <a name="op_bool"></a>  packaged_task::operator bool  
  개체에 `associated asynchronous state`가 있는지를 지정합니다.  
   
 ```
@@ -148,7 +157,7 @@ operator bool() const noexcept;
 ### <a name="return-value"></a>반환 값  
  개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-namepackagedtaskpackagedtaskconstructora--packagedtaskpackagedtask-constructor"></a><a name="packaged_task__packaged_task_constructor"></a>  packaged_task::packaged_task 생성자  
+##  <a name="packaged_task"></a>  packaged_task::packaged_task 생성자  
  `packaged_task` 개체를 생성합니다.  
   
 ```
@@ -181,7 +190,7 @@ template <class Fn, class Alloc>
   
  네 번째 생성자는 비동기적 연결 상태로 저장된 `packaged_task`의 복사본이 있는 `fn` 개체를 생성하고, 메모리 할당을 위해 `alloc`을 사용합니다.  
   
-##  <a name="a-namepackagedtaskdtorpackagedtaskdestructora--packagedtaskpackagedtask-destructor"></a><a name="packaged_task___dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 소멸자  
+##  <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 소멸자  
  `packaged_task` 개체를 제거합니다.  
   
 ```
@@ -191,7 +200,7 @@ template <class Fn, class Alloc>
 ### <a name="remarks"></a>설명  
  *연결된 비동기 상태*가 *ready* 상태가 아니면 소멸자는 오류 코드가 `broken_promise`인 [future_error](../standard-library/future-error-class.md) 예외를 연결된 비동기 상태에 결과로 저장하며, 연결된 비동기 상태에서 차단되었던 모든 스레드의 차단은 해제됩니다.  
   
-##  <a name="a-namepackagedtaskresetmethoda--packagedtaskreset"></a><a name="packaged_task__reset_method"></a>  packaged_task::reset  
+##  <a name="reset"></a>  packaged_task::reset  
  기존의 *연결된 비동기 상태*를 교체할 새 연결된 비동기 상태를 만듭니다.  
   
 ```
@@ -199,9 +208,9 @@ void reset();
 ```  
   
 ### <a name="remarks"></a>설명  
- 실제로 이 메서드는 `*this = packaged_task(move(fn))`를 실행합니다. 여기서 *fn*은 이 개체에 대한 연결된 비동기 상태에 저장되는 함수 개체입니다. 따라서 개체의 상태는 지워지며 새로 생성한 개체에 대해 호출하는 것처럼 [get_future](#packaged_task__get_future_method), [operator()](#packaged_task__operator__) 및 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)를 호출할 수 있습니다.  
+ 실제로 이 메서드는 `*this = packaged_task(move(fn))`를 실행합니다. 여기서 *fn*은 이 개체에 대한 연결된 비동기 상태에 저장되는 함수 개체입니다. 따라서 개체의 상태는 지워지며 새로 생성한 개체에 대해 호출하는 것처럼 [get_future](#get_future), [operator()](#op_call) 및 [make_ready_at_thread_exit](#make_ready_at_thread_exit)를 호출할 수 있습니다.  
   
-##  <a name="a-namepackagedtaskswapmethoda--packagedtaskswap"></a><a name="packaged_task__swap_method"></a>  packaged_task::swap  
+##  <a name="swap"></a>  packaged_task::swap  
  연결된 비동기 상태를 지정한 개체의 연결된 비동기 상태와 교환합니다.  
   
 ```
@@ -212,7 +221,7 @@ void swap(packaged_task& Right) noexcept;
  `Right`  
  `packaged_task` 개체입니다.  
   
-##  <a name="a-namepackagedtaskvalidmethoda--packagedtaskvalid"></a><a name="packaged_task__valid_method"></a>  packaged_task::valid  
+##  <a name="valid"></a>  packaged_task::valid  
  개체에 `associated asynchronous state`가 있는지를 지정합니다.  
   
 ```

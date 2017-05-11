@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="quick-tips"></a>유용한 팁  
  다음은 `<random>` 사용 시 염두에 둬야 할 몇 가지 팁입니다.  
   
--   대부분의 경우 URNG는 분포에 따라 셰이핑되어야 하는 원시 비트를 생성합니다. 이에 대한 눈에 띄는 예외는 URNG를 직접 사용하는 [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle)입니다.  
+-   대부분의 경우 URNG는 분포에 따라 셰이핑되어야 하는 원시 비트를 생성합니다. 이에 대한 눈에 띄는 예외는 URNG를 직접 사용하는 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)입니다.  
   
 -   URNG 또는 분포를 실행하는 것은 수정 작업이므로 URNG 또는 분포의 단일 인스턴스화를 동시에 안전하게 호출할 수 없습니다. 자세한 내용은 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)을 참조하세요.  
   
@@ -74,8 +75,8 @@ ms.lasthandoff: 02/24/2017
   
  `<random>`에서 선택할 수 있는 여러 옵션이 있으며 오래된 C 런타임 함수 `rand()`보다는 이 중 하나를 사용하는 것이 좋습니다. `rand()`의 문제와 `<random>`에서 이러한 문제를 해결하는 방법에 대한 자세한 내용은 [이 비디오](http://go.microsoft.com/fwlink/LinkId=397615)를 참조하세요.  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> 예제  
- 다음 코드 예제에서는 명확하지 않은 시드로 만든 생성기를 사용하여 난수 몇 개(여기서는&5;개)를 생성하는 방법을 보여 줍니다.  
+##  <a name="code"></a> 예제  
+ 다음 코드 예제에서는 명확하지 않은 시드로 만든 생성기를 사용하여 난수 몇 개(여기서는 5개)를 생성하는 방법을 보여 줍니다.  
   
 ```cpp  
 #include <random>  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 이 코드에서는 테스트 템플릿 함수를 사용하여 두 가지 다른 불규칙화 즉, 정수 벡터의 불규칙화 및 인덱싱된 데이터 배열의 순서 섞기를 보여 줍니다. 테스트 함수에 대한 첫 번째 호출에서는 안전하게 암호화되고 불명확하며 시드 불가능하고 반복 불가능한 URNG `random_device`를 사용합니다. 두 번째 테스트 실행에서는 결과가 반복 가능함을 의미하는 명확한 32비트 상수 시드와 함께 `mersenne_twister_engine`을 URNG로 사용합니다. 세 번째 테스트 실행은 `mersenne_twister_engine`의 불명확한 32비트 결과와 함께 `random_device`을 시드합니다. 네 번째 테스트 실행은 `random_device` 결과로 채워진 [시드 시퀀스](../standard-library/seed-seq-class.md)를 사용하여 확장됩니다. 이는 불명확한 32비트 이상 임의성(여전히 안전하게 암호화되지 않음)을 효율적으로 제공합니다. 자세한 내용을 보려면 계속 읽어보세요.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> 범주화된 목록  
+##  <a name="listing"></a> 범주화된 목록  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> 균등 난수 생성기  
+###  <a name="urngs"></a> 균등 난수 생성기  
  URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.  
   
 1. **기간의 길이**: 생성된 숫자 시퀀스를 반복하는 데 걸리는 반복 횟수입니다. 길수록 좋습니다.  
@@ -241,13 +242,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  다음 섹션에서는 `<random>`에서 제공되는 URNG(균등 난수 생성기)를 나열합니다.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> 불명확한 생성기  
+####  <a name="rd"></a> 불명확한 생성기  
   
 |||  
 |-|-|  
 |[random_device 클래스](../standard-library/random-device-class.md)|외부 장치를 사용하여 불명확하고 암호로 보호되는 임의 시퀀스를 생성합니다. 일반적으로 엔진을 시드하는 데 사용됩니다. 성능은 낮지만 품질은 매우 높습니다. 자세한 내용은 [설명](#comments)을 참조하세요.|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> 매개 변수가 미리 정의된 엔진 형식 정의  
+####  <a name="typedefs"></a> 매개 변수가 미리 정의된 엔진 형식 정의  
  엔진 및 엔진 어댑터를 인스턴스화하는 데 사용됩니다. 자세한 내용은 [엔진 및 분포](#engdist)를 참조하세요.  
   
 - `default_random_engine` 기본 엔진입니다.   
@@ -280,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `ranlux48_base` `ranlux48`에 대한 기준으로 사용됩니다.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> 엔진 템플릿  
+####  <a name="eng"></a> 엔진 템플릿  
  엔진 템플릿은 독립형 URNG 또는 [엔진 어댑터](#engadapt)에 전달되는 기본 엔진으로 사용됩니다. 일반적으로 엔진 템플릿은 [미리 정의된 형식 정의](#typedefs)를 사용하여 인스턴스화되고 [분포](#distributions)로 전달됩니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.  
   
 |||  
@@ -289,7 +290,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[mersenne_twister_engine 클래스](../standard-library/mersenne-twister-engine-class.md)|메르센 트위스터 알고리즘을 사용하여 임의 시퀀스를 생성합니다. 가장 복잡하지만 품질이 가장 뛰어납니다(random_device 클래스 제외). 성능이 매우 빠릅니다.|  
 |[subtract_with_carry_engine 클래스](../standard-library/subtract-with-carry-engine-class.md)|subtract-with-carry 알고리즘을 사용하여 임의 시퀀스를 생성합니다. `linear_congruential_engine`을 개선한 엔진이나 `mersenne_twister_engine`보다 품질 및 성능이 훨씬 떨어집니다.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> 엔진 어댑터 템플릿  
+####  <a name="engadapt"></a> 엔진 어댑터 템플릿  
  엔진 어댑터는 다른 기본 엔진을 조정하는 템플릿입니다. 일반적으로 엔진 템플릿은 [미리 정의된 형식 정의](#typedefs)를 사용하여 인스턴스화되고 [분포](#distributions)로 전달됩니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.  
   
 |||  
@@ -300,7 +301,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  [[엔진 템플릿](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> 난수 분포  
+###  <a name="distributions"></a> 난수 분포  
  다음 섹션에서는 `<random>` 헤더에서 제공되는 분포를 나열합니다. 분포는 후처리 메커니즘으로 일반적으로 URNG 출력을 입력으로 사용하여 정의된 통계적 확률 밀도 함수를 통해 출력을 분포시킵니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.  
   
 #### <a name="uniform-distributions"></a>균등 분포  
@@ -330,7 +331,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|  
 |[cauchy_distribution 클래스](../standard-library/cauchy-distribution-class.md)|실수(부동 소수점) 값의 코시 분포를 생성합니다.|  
 |[chi_squared_distribution 클래스](../standard-library/chi-squared-distribution-class.md)|실수(부동 소수점) 값의 카이 제곱 분포를 생성합니다.|  
-|[fisher_f_distribution 클래스](../standard-library/fisher-f-distribution-class.md)|실수(부동 소수점) 값의 F 분포(스네데카의 F 분포 또는 피셔-스네데카 분포라고도 함)를 생성합니다.|  
+|[fisher_f_distribution 클래스](../standard-library/fisher-f-distribution-class.md)|F 분포 (Snedecor의 F 분포 또는 Fisher-snedecor 분포 라고도 함)의 실수 (부동 소수점) 값을 생성합니다.|  
 |[lognormal_distribution 클래스](../standard-library/lognormal-distribution-class.md)|실수(부동 소수점) 값의 대수 정규 분포를 생성합니다.|  
 |[normal_distribution 클래스](../standard-library/normal-distribution-class.md)|실수(부동 소수점) 값의 정규(가우스) 분포를 생성합니다.|  
 |[student_t_distribution 클래스](../standard-library/student-t-distribution-class.md)|실수값(부동 소수점)의 Student *t* 분포를 생성합니다.|  
@@ -376,7 +377,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |`operator<<`|스트림에 상태 정보를 씁니다.|  
 |`operator>>`|스트림에 상태 정보를 추출합니다.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> 엔진 및 분포  
+##  <a name="engdist"></a> 엔진 및 분포  
  `<random>`에 정의된 이러한 각 템플릿 클래스 범주에 대한 자세한 내용은 다음 섹션을 참조하세요. 이러한 템플릿 클래스 범주 둘 다는 형식을 인수로 가져와 공유 템플릿 매개 변수 이름을 사용하여 다음과 같이 실제 인수 형식으로 허용되는 형식 속성을 설명합니다.  
   
 - `IntType` `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` 또는 `unsigned long long`을 나타냅니다.  
@@ -459,7 +460,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  자세한 내용은 이 문서의 앞에서 링크되어 있는, 이 섹션의 바로 아래 하위 항목을 참조하세요.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> 설명  
+##  <a name="comments"></a> 설명  
  아래 비교 테이블에 표시된 것처럼 Visual Studio에는 `mt19937` 및 `random_device`라는 매우 유용한 URNG가 있습니다.  
   
 |URNG|Fast|암호로 보호|시드 가능|명확함|  

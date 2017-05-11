@@ -51,10 +51,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 38381578b8a8bd66c857d26d12a775f2af702611
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 44d9ecb713c0fa85f11c3d01b5a15707b0bfaf57
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
@@ -91,21 +92,21 @@ errno_t wmemcpy_s(
  복사할 문자 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 시&0;이고, 실패 시 오류 코드입니다.  
+ 성공 시 0이고, 실패 시 오류 코드입니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
 |`dest`|`destSize`|`src`|`count`|반환 값|`dest`의 내용|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|모두|모두|0|0|수정 안 됨|  
+|any|any|모두|0|0|수정 안 됨|  
 |`NULL`|모두|모두|0이 아닌 값|`EINVAL`|수정 안 됨|  
-|모두|모두|`NULL`|0이 아닌 값|`EINVAL`|`dest`가&0;이 됨|  
-|모두|< `count`|모두|0이 아닌 값|`ERANGE`|`dest`가&0;이 됨|  
+|모두|모두|`NULL`|0이 아닌 값|`EINVAL`|`dest`가 0이 됨|  
+|모두|< `count`|모두|0이 아닌 값|`ERANGE`|`dest`가 0이 됨|  
   
 ## <a name="remarks"></a>설명  
  `memcpy_s`는 `count`에서 `src`로 `dest` 바이트를 복사하고 `wmemcpy_s`는 `count` 와이드 문자(2바이트)를 복사합니다. 소스와 대상이 겹치는 경우 `memcpy_s`의 동작이 정의되지 않습니다. `memmove_s`를 사용하면 겹치는 영역을 처리할 수 있습니다.  
   
- 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `count`가&0;이 아니고 `dest` 또는 `src`가 null 포인터이거나 `destSize`가 `count`보다 작은 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `EINVAL` 또는 `ERANGE`를 반환하거나 `errno`를 반환 값으로 설정합니다.  
+ 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `count`가 0이 아니고 `dest` 또는 `src`가 null 포인터이거나 `destSize`가 `count`보다 작은 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `EINVAL` 또는 `ERANGE`를 반환하거나 `errno`를 반환 값으로 설정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -155,9 +156,6 @@ int main()
 ```Output  
 0 1 4 9 16 25 36 49 64 81   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)   

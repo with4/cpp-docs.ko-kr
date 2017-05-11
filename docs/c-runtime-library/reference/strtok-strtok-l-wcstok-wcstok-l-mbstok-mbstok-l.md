@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  이러한 함수는 버퍼 오버런 문제로 인해 발생하는 잠재적인 위협을 일으킵니다. 버퍼 오버런 문제는 자주 사용되는 시스템 공격 방법으로, 불필요한 권한 상승을 초래합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
- 첫 번째 `strtok` 호출에서 함수는 선행 구분 기호를 건너뛰고 `strToken`의 첫 번째 토큰에 대한 포인터를 반환하여 null 문자로 토큰을 종료합니다. `strtok`에 대한 일련의 호출을 통해 나머지 `strToken`에서 더 많은 토큰을 분할할 수 있습니다. `strtok`를 호출할 때마다 해당 호출에서 반환된 `token` 뒤에 null 문자를 삽입하여 `strToken`을 수정합니다. `strToken`에서 다음 토큰을 읽으려면 `strToken` 인수에 `NULL` 값을 사용하여 `strtok`를 호출합니다. `NULL` `strToken` 인수를 사용하면 `strtok`가 수정된 `strToken`에서 다음 토큰을 검색합니다. `strDelimit` 인수는 구분 기호 집합이 달라질 수 있도록 호출 간에 어떤 값이든 가져올 수 있습니다.  
+ 첫 번째 `strtok` 호출에서 함수는 선행 구분 기호를 건너뛰고 `strToken`의 첫 번째 토큰에 대한 포인터를 반환하여 null 문자로 토큰을 종료합니다. `strtok`에 대한 일련의 호출을 통해 나머지 `strToken`에서 더 많은 토큰을 분할할 수 있습니다. 호출할 때마다 `strtok` 수정 `strToken` 다음 null 문자를 삽입 하 여는 `token` 해당 호출에서 반환 합니다. `strToken`에서 다음 토큰을 읽으려면 `strToken` 인수에 `NULL` 값을 사용하여 `strtok`를 호출합니다. `NULL` `strToken` 인수를 사용하면 `strtok`가 수정된 `strToken`에서 다음 토큰을 검색합니다. `strDelimit` 인수는 구분 기호 집합이 달라질 수 있도록 호출 간에 어떤 값이든 가져올 수 있습니다.  
   
  출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

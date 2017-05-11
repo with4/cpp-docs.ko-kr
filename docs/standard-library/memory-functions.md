@@ -7,61 +7,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::addressof
 - memory/std::addressof
-- std::align
 - memory/std::align
-- std::allocate_shared
 - memory/std::allocate_shared
-- std::const_pointer_cast
 - memory/std::const_pointer_cast
-- std::declare_no_pointers
 - memory/std::declare_no_pointers
-- std::declare_reachable
 - memory/std::declare_reachable
-- std::default_delete
 - memory/std::default_delete
-- std::dynamic_pointer_cast
 - memory/std::dynamic_pointer_cast
-- std::get_deleter_function
-- memory/std::get_deleter_function
-- std::get_pointer_safety
+- memory/std::get_deleter
 - memory/std::get_pointer_safety
-- std::get_temporary_buffer
 - memory/std::get_temporary_buffer
-- std::make_shared
 - memory/std::make_shared
-- std::make_unique
 - memory/std::make_unique
-- std::owner_less
 - memory/std::owner_less
-- std::return_temporary_buffer
 - memory/std::return_temporary_buffer
-- std::static_pointer_cast
 - memory/std::static_pointer_cast
-- std::swap
 - memory/std::swap
-- std::undeclare_no_pointers
 - memory/std::undeclare_no_pointers
-- std::undeclare_reachable
 - memory/std::undeclare_reachable
-- std::uninitialized_copy
 - memory/std::uninitialized_copy
-- std::uninitialized_copy_n
 - memory/std::uninitialized_copy_n
-- std::uninitialized_fill
 - memory/std::uninitialized_fill
-- std::uninitialized_fill_n
 - memory/std::uninitialized_fill_n
+- memory/std::addressof
+- memory/std::align
+- memory/std::allocate_shared
+- memory/std::const_pointer_cast
+- memory/std::declare_no_pointers
+- memory/std::declare_reachable
+- memory/std::default_delete
+- memory/std::dynamic_pointer_cast
+- memory/std::get_deleter
+- memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
+- memory/std::make_shared
+- memory/std::make_unique
+- memory/std::owner_less
+- memory/std::return_temporary_buffer
+- memory/std::static_pointer_cast
+- memory/std::undeclare_no_pointers
+- memory/std::undeclare_reachable
+- memory/std::uninitialized_copy
+- memory/std::uninitialized_copy_n
+- memory/std::uninitialized_fill
+- memory/std::uninitialized_fill_n
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bab363d16555ca66ce0b57aad4ac8f3d9aaad21b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4d6d010f7f910a89565ef8cd7c07ddbb2f054759
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 함수
@@ -69,14 +71,14 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter 함수](#get_deleter_function)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap(C++ 표준 라이브러리)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="a-nameaddressofa--addressof"></a><a name="addressof"></a>  addressof  
+##  <a name="addressof"></a>  addressof  
  개체의 실제 주소를 가져옵니다.  
   
 ```  
@@ -93,7 +95,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-namealigna--align"></a><a name="align"></a>  align  
+##  <a name="align"></a>  align  
  지정된 크기의 저장소(지정된 정렬 사양을 기준으로 정렬됨)를 지정된 저장소의 첫 번째 가능한 주소에 정렬합니다.  
   
 ```  
@@ -150,7 +152,7 @@ while (alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="a-nameallocateshareda--allocateshared"></a><a name="allocate_shared"></a>  allocate_shared  
+##  <a name="allocate_shared"></a>  allocate_shared  
  지정된 할당자를 사용하여 지정된 형식에 대해 할당되고 생성되는 개체에 대한 `shared_ptr`을 만듭니다. `shared_ptr`를 반환합니다.  
   
 ```  
@@ -164,12 +166,12 @@ allocate_shared(Allocator Alloc, Types&&... Args);
  개체를 만드는 데 사용된 할당자입니다.  
   
  `Args`  
- 개체가 되는&0;개 이상의 인수입니다.  
+ 개체가 되는 0개 이상의 인수입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 `Alloc`에 의해 할당되고 생성된 대로 `Type(``Args``...)`에 대한 포인터인 `shared_ptr``<Type>` 개체를 만듭니다.  
   
-##  <a name="a-nameconstpointercasta--constpointercast"></a><a name="const_pointer_cast"></a>  const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  shared_ptr로 const_cast를 수행합니다.  
   
 ```  
@@ -217,7 +219,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="a-namedeclarenopointersa--declarenopointers"></a><a name="declare_no_pointers"></a>  declare_no_pointers  
+##  <a name="declare_no_pointers"></a>  declare_no_pointers  
  기본 주소 포인터와 블록 크기로 정의된 메모리 블록에 있는 문자에 추적 가능한 포인터가 포함될 수 없음을 가비지 수집기에 알립니다.  
   
 ```  
@@ -230,13 +232,13 @@ void declare_no_pointers(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` ptr`|추적 가능한 포인터를 더 이상 포함하지 않는 첫 번째 문자의 주소입니다.|  
-|`_Size`|추적 가능한 포인터를 포함하지 않는, ` ptr`에서 시작하는 블록의 크기입니다.|  
+|`ptr`|추적 가능한 포인터를 더 이상 포함하지 않는 첫 번째 문자의 주소입니다.|  
+|`_Size`|추적 가능한 포인터를 포함하지 않는, `ptr`에서 시작하는 블록의 크기입니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 `[`` ptr``,` ` ptr` `+` `_Size``)` 주소의 범위에 추적 가능한 포인터가 더 이상 포함되지 않음을 `garbage collector`에 알립니다. 할당된 저장소에 대한 모든 포인터는 `reachable`로 설정되지 않으면 역참조해서는 안 됩니다.  
+ 모든 함수 알립니다 `garbage collector` 하는 주소 범위 `[ ptr, ptr + _Size)` 추적이 가능한 포인터를 포함 하지 않도록 합니다. 할당된 저장소에 대한 모든 포인터는 `reachable`로 설정되지 않으면 역참조해서는 안 됩니다.  
   
-##  <a name="a-namedeclarereachablea--declarereachable"></a><a name="declare_reachable"></a>  declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  지정된 주소가 할당된 저장소 대한 것이며 접근할 수 있음을 가비지 컬렉션에 알립니다.  
   
 ```  
@@ -244,13 +246,13 @@ void declare_reachable(void* ptr);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` ptr`  
+ `ptr`  
  연결할 수 있는 할당된 유효한 저장소 영역에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- ` ptr`이 null이 아니면 함수는 이제부터 ` ptr`에 연결할 수 있고 할당된 유효한 저장소를 가리킴을 가비지 수집기에 알립니다.  
+ `ptr`이 null이 아니면 함수는 이제부터 `ptr`에 연결할 수 있고 할당된 유효한 저장소를 가리킴을 가비지 수집기에 알립니다.  
   
-##  <a name="a-namedefaultdeletea--defaultdelete"></a><a name="default_delete"></a>  default_delete  
+##  <a name="default_delete"></a>  default_delete  
  `operator new`를 사용하여 할당된 개체를 삭제합니다. `unique_ptr`에 사용하는 데 적합합니다.  
 ```  
 struct default_delete {
@@ -269,7 +271,7 @@ struct default_delete {
 ### <a name="remarks"></a>설명  
  템플릿 클래스는 `operator new`를 사용하여 할당된 스칼라 개체를 삭제하는 `deleter`를 설명하며 템플릿 클래스 `unique_ptr`와 함께 사용하기에 적합합니다. 이 템플릿 클래스에는 명시적 특수화 `default_delete<Type[]>`도 있습니다.  
   
-##  <a name="a-namedynamicpointercasta--dynamicpointercast"></a><a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  shared_ptr로 동적 캐스팅합니다.  
   
 ```  
@@ -331,7 +333,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-namegetdeleterfunctiona--getdeleter-function"></a><a name="get_deleter_function"></a>  get_deleter 함수  
+##  <a name="get_deleter"></a>get_deleter
  shared_ptr에서 삭제자를 가져옵니다.  
   
 ```  
@@ -397,7 +399,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="a-namegetpointersafetya--getpointersafety"></a><a name="get_pointer_safety"></a>  get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  모든 가비지 수집기에서 간주된 포인터 안전 형식을 반환합니다.  
   
 ```  
@@ -407,7 +409,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>설명  
  이 함수는 자동 `garbage collector`에서 가정한 포인터 안전의 형식을 반환합니다.  
   
-##  <a name="a-namegettemporarybuffera--gettemporarybuffer"></a><a name="get_temporary_buffer"></a>  get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  지정된 수의 요소를 초과하지 않는 요소의 시퀀스를 위한 임시 저장소를 할당합니다.  
   
 ```  
@@ -416,14 +418,14 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` count`  
+ `count`  
  메모리를 할당하도록 요청한 최대 요소 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 구성 요소는 할당된 메모리에 대한 포인터이고, 두 번째 구성 요소는 저장할 수 있는 요소의 최대 수를 나타내는 버퍼의 크기를 제공하는 `pair`입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 메모리에 대한 요청을 만들며 성공하지 못할 수 있습니다. 버퍼가 할당되지 않은 경우 함수는 두 번째 구성 요소는&0;이고 첫 번째 구성 요소는 null 포인터인 쌍을 반환합니다.  
+ 이 함수는 메모리에 대한 요청을 만들며 성공하지 못할 수 있습니다. 버퍼가 할당되지 않은 경우 함수는 두 번째 구성 요소는 0이고 첫 번째 구성 요소는 null 포인터인 쌍을 반환합니다.  
   
  이 함수는 일시적인 메모리에만 사용해야 합니다.  
   
@@ -460,7 +462,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="a-namemakeshareda--makeshared"></a><a name="make_shared"></a>  make_shared  
+##  <a name="make_shared"></a>  make_shared  
  기본 할당자를 사용하여 하나 이상의 인수에서 작성된 할당된 개체를 가리키는 `shared_ptr`를 만들고 반환합니다. 지정된 형식의 개체와 `shared_ptr`을 모두 할당 및 생성하여 개체의 공유 소유권을 관리하고 `shared_ptr`을 반환합니다.  
   
 ```  
@@ -554,7 +556,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="a-namemakeuniquea--makeunique"></a><a name="make_unique"></a>  make_unique  
+##  <a name="make_unique"></a>  make_unique  
  지정된 인수를 사용하여 생성되는, 지정된 형식의 개체에 대한 [unique_ptr](../standard-library/unique-ptr-class.md)을 만들고 반환합니다.  
   
 ```scr  
@@ -608,7 +610,7 @@ typename enable_if<extent<T>::value != 0,
   
   `unique_ptr`과 관련하여 오류 C2280이 표시되는 경우 대부분 삭제된 함수인 해당 복사 생성자를 호출하려고 했기 때문입니다.  
   
-##  <a name="a-nameownerlessa--ownerless"></a><a name="owner_less"></a>  owner_less  
+##  <a name="owner_less"></a>  owner_less  
  공유된 포인터와 약한 포인트에 대한 소유권 기반의 혼합된 비교를 허용합니다. 멤버 함수 `owner_before`에 의해 왼쪽 매개 변수가 오른쪽 매개 변수보다 먼저 순서 지정된 경우 `true`를 반환합니다.  
   
 ```  
@@ -652,13 +654,13 @@ struct owner_less<weak_ptr<Type>>
  `_left`  
  공유 또는 약한 포인터입니다.  
   
- ` right`  
+ `right`  
  공유 또는 약한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 템플릿 클래스는 모든 멤버 연산자를 ` left``.owner_before(`` right``)`를 반환하는 것으로 정의합니다.  
+ 템플릿 클래스는 모든 멤버 연산자를 `left``.owner_before(``right``)`를 반환하는 것으로 정의합니다.  
   
-##  <a name="a-namereturntemporarybuffera--returntemporarybuffer"></a><a name="return_temporary_buffer"></a>  return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  `get_temporary_buffer` 템플릿 함수를 사용하여 할당된 임시 메모리를 취소합니다.  
   
 ```  
@@ -711,7 +713,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="a-namestaticpointercasta--staticpointercast"></a><a name="static_pointer_cast"></a>  static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  shared_ptr로 정적 캐스팅합니다.  
   
 ```  
@@ -769,7 +771,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-nameswapa--swap-c-standard-library"></a><a name="swap"></a>  swap(C++ 표준 라이브러리)  
+##  <a name="swap"></a>  swap(C++ 표준 라이브러리)  
  두 shared_ptr 또는 weak_ptr 개체를 교환합니다.  
   
 ```  
@@ -850,7 +852,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameundeclarenopointersa--undeclarenopointers"></a><a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  기본 주소 포인터와 블록 크기로 정의된 메모리 블록에 있는 문자는 이제 추적이 가능한 포인터를 포함할 수 있음을 가비지 수집기에 알립니다.  
   
 ```  
@@ -860,9 +862,9 @@ void undeclare_no_pointers(
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 `[`` ptr``,` ` ptr` `+` `_Size``)` 주소의 범위에 `traceable pointers`가 포함될 수 있음을 `garbage collector`에 알립니다.  
+ 모든 함수 알립니다 `garbage collector` 하는 주소 범위 `[ptr, ptr + _Size)` 이제를 포함할 수 `traceable pointers`합니다.  
   
-##  <a name="a-nameundeclarereachablea--undeclarereachable"></a><a name="undeclare_reachable"></a>  undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  지정된 메모리 위치에 접근할 수 없음을 `garbage_collector`에 알립니다.  
   
 ```  
@@ -874,12 +876,12 @@ Type *undeclare_reachable(Type* ptr);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` ptr`|연결할 수 없는 것으로 선언할 메모리 주소에 대한 포인터입니다.|  
+|`ptr`|연결할 수 없는 것으로 선언할 메모리 주소에 대한 포인터입니다.|  
   
 ### <a name="remarks"></a>설명  
- ` ptr`이 `null`이 아닌 경우 이 함수는 이제부터 ` ptr`이 `reachable`이 아님을 `garbage collector`에 알립니다. 비교 시 ` ptr`과 같은 `safely derived`포인터를 반환합니다.  
+ `ptr`이 `null`이 아닌 경우 이 함수는 이제부터 `ptr`이 `reachable`이 아님을 `garbage collector`에 알립니다. 비교 시 `ptr`과 같은 `safely derived`포인터를 반환합니다.  
   
-##  <a name="a-nameuninitializedcopya--uninitializedcopy"></a><a name="uninitialized_copy"></a>  uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  지정된 소스 범위에서 초기화되지 않은 대상 범위로 개체를 복사합니다.  
   
 ```  
@@ -888,17 +890,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  소스 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.  
   
- ` last`  
+ `last`  
  소스 범위에 있는 마지막 요소를 주소 지정하는 입력 반복기입니다.  
   
- ` dest`  
+ `dest`  
  대상 범위에 있는 첫 번째 요소를 주소 지정하는 정방향 반복기입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 소스 범위가 비어 있고 반복기가 *first*의 주소를 지정하지 않는 경우, 대상 범위 밖 첫 번째 위치의 주소 지정하는 정방향 반복기입니다.  
+ 소스 범위는 빈 아닌 경우에 대상 범위를 벗어나는 첫 번째 위치를 주소 지정 하는 정방향 반복기 및 반복기 주소 * first.*  
   
 ### <a name="remarks"></a>설명  
  이 알고리즘을 사용하면 개체 생성에서 메모리 할당을 분리할 수 있습니다.  
@@ -980,7 +982,7 @@ int main()
 }
 ```  
   
-##  <a name="a-nameuninitializedcopyna--uninitializedcopyn"></a><a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  입력 반복기에서 지정된 수의 요소의 복사본을 만듭니다. 복사본은 정방향 반복기에 배치됩니다.  
   
 ```  
@@ -992,32 +994,30 @@ ForwardIterator uninitialized_copy_n(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  복사할 개체를 참조하는 입력 반복기입니다.  
   
- ` count`  
+ `count`  
  개체를 반복할 횟수를 지정하는 부호 있는 또는 부호 없는 정수 형식입니다.  
   
- ` dest`  
+ `dest`  
  새 복사본의 위치를 참조하는 정방향 반복기입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 대상을 벗어나는 첫 번째 위치를 주소 지정하는 정방향 반복기입니다. 소스 범위가 비어 있는 경우 반복기는 ` first`*의 주소를 지정합니다.*  
+ 대상을 벗어나는 첫 번째 위치를 주소 지정하는 정방향 반복기입니다. 소스 범위는 비어 있으면 반복기 주소 `first`합니다.  
   
 ### <a name="remarks"></a>설명  
  템플릿 함수는 다음을 효과적으로 실행합니다.  
   
- `for (; 0 < count; -- count)`  
-  
- `new ((void *)&*` ` dest` `++)`  
-  
- `iterator_traits<InputIterator>::value_type(*` ` first` `++);`  
-  
- `return dest;`  
+```cpp  
+    for (; 0 < count; --count)  
+        new ((void *)&* dest++) iterator_traits<InputIterator>::value_type(*first++);  
+    return dest;  
+```  
   
  코드에서 예외를 throw하지 않는 경우 이 경우 생성된 모든 개체가 제거되고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameuninitializedfilla--uninitializedfill"></a><a name="uninitialized_fill"></a>  uninitialized_fill  
+##  <a name="uninitialized_fill"></a>  uninitialized_fill  
  지정된 값의 개체를 초기화되지 않은 대상 범위로 복사합니다.  
   
 ```  
@@ -1026,13 +1026,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  시작할 대상 범위에 있는 첫 번째 요소의 주소를 지정하는 정방향 반복기입니다.  
   
- ` last`  
+ `last`  
  시작할 대상 범위에 있는 마지막 요소의 주소를 지정하는 정방향 반복기입니다.  
   
- ` val`  
+ `val`  
  대상 범위를 초기화하는 데 사용할 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1086,7 +1086,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="a-nameuninitializedfillna--uninitializedfilln"></a><a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  지정된 값의 개체를 초기화되지 않은 대상 범위의 지정된 수의 요소로 복사합니다.  
   
 ```  
@@ -1095,13 +1095,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  초기화할 대상 범위에 있는 첫 번째 요소를 주소 지정하는 정방향 반복기입니다.  
   
- ` count`  
+ `count`  
  초기화할 요소의 수입니다.  
   
- ` val`  
+ `val`  
  대상 범위를 초기화하는 데 사용할 값입니다.  
   
 ### <a name="remarks"></a>설명  

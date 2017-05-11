@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - piecewise_constant_distribution
-- std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution
-- std::piecewise_constant_distribution::reset
 - random/std::piecewise_constant_distribution::reset
-- std::piecewise_constant_distribution::intervals
 - random/std::piecewise_constant_distribution::intervals
-- std::piecewise_constant_distribution::densities
 - random/std::piecewise_constant_distribution::densities
-- std::piecewise_constant_distribution::param
 - random/std::piecewise_constant_distribution::param
-- std::piecewise_constant_distribution::min
 - random/std::piecewise_constant_distribution::min
-- std::piecewise_constant_distribution::max
 - random/std::piecewise_constant_distribution::max
-- std::piecewise_constant_distribution::operator()
 - random/std::piecewise_constant_distribution::operator()
-- std::piecewise_constant_distribution::param_type
 - random/std::piecewise_constant_distribution::param_type
-- std::piecewise_constant_distribution::param_type::intervals
 - random/std::piecewise_constant_distribution::param_type::intervals
-- std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::densities
-- std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator==
-- std::piecewise_constant_distribution::param_type::operator!=
 - random/std::piecewise_constant_distribution::param_type::operator!=
+- random/std::piecewise_constant_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 51fe6674bd7d538a3d3948f000497f70105de8d7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fecb32f7916b79d631ed7a6ccf4cb55b89448fa0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 클래스
@@ -119,8 +108,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[piecewise_constant_distribution::piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[piecewise_constant_distribution::param_type](#piecewise_constant_distribution__param_type)|  
+|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
+|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
 속성 함수 `intervals()`는 저장된 분포 간격 집합과 함께 `vector<result_type>`을 반환합니다.  
   
@@ -246,7 +235,7 @@ Distribution for 100 samples:
   
  **네임스페이스:** std  
   
-##  <a name="a-namepiecewiseconstantdistributionpiecewiseconstantdistributiona--piecewiseconstantdistributionpiecewiseconstantdistribution"></a><a name="piecewise_constant_distribution__piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
+##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
 분포를 생성합니다.  
   
 ```  
@@ -340,7 +329,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
   
 `parm`을 사용하여 생성 개체를 저장된 매개 변수 구조로 생성합니다.  
   
-##  <a name="a-namepiecewiseconstantdistributionparamtypea--piecewiseconstantdistributionparamtype"></a><a name="piecewise_constant_distribution__param_type"></a>  piecewise_constant_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
 분포의 모든 매개 변수를 저장합니다.  
   
 ```    
@@ -360,7 +349,7 @@ struct param_type {
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-[piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution)에 대한 생성자 매개 변수를 참조하세요.  
+[piecewise_constant_distribution](#piecewise_constant_distribution)에 대한 생성자 매개 변수를 참조하세요.  
   
 ### <a name="remarks"></a>설명  
  **사전 조건:** `xmin < xmax`  

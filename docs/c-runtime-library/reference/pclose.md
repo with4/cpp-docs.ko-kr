@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  이전 `_popen`호출의 반환 값입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 종료 명령 프로세서의 종료 상태를 반환하거나, 오류가 발생하는 경우에는 -1을 반환합니다. 반환 값의 형식은 하위 바이트와 상위 바이트가 전환된다는 점을 제외하면 `_cwait`의 형식과 같습니다. 스트림이 **NULL**이면 `_pclose`는 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
+ 오류가 발생 한 경우에 종료 명령 처리기 또는-1의 종료 상태를 반환 합니다. 반환 값의 형식은 하위 바이트와 상위 바이트가 전환된다는 점을 제외하면 `_cwait`의 형식과 같습니다. 스트림이 **NULL**이면 `_pclose`는 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
   
  이러한 오류 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

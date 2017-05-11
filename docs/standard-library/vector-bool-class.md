@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 088bf359fefd09bf4ea71ffceacd9139fbdbfba2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
@@ -63,40 +64,40 @@ class vector<bool, Allocator>
   
 |||  
 |-|-|  
-|[const_pointer](#vector_lt_bool_gt___const_pointer)|`const_iterator`의 부울 요소에 대한 상수 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|  
-|[const_reference](#vector_lt_bool_gt___const_reference)|`bool`에 대한 typedef입니다. 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|  
-|[pointer](#vector_lt_bool_gt___pointer)|`iterator`의 부울 요소에 대한 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|  
+|[const_pointer](#const_pointer)|`const_iterator`의 부울 요소에 대한 상수 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|  
+|[const_reference](#const_reference)|`bool`에 대한 typedef입니다. 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|  
+|[pointer](#pointer)|`iterator`의 부울 요소에 대한 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[flip](#vector_lt_bool_gt___flip)|`vector<bool>`의 모든 비트를 반대로 바꿉니다.|  
-|[swap](#vector_lt_bool_gt___swap)|두 `vector<bool>`의 요소를 교환합니다.|  
-|[operator&#91;&#93;](#vector_lt_bool_gt___operator_at)|지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.|  
-|`at`|프록시 클래스 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::at 함수와 동일하게 작동합니다. [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)도 참조하세요.|  
-|`front`|프록시 클래스 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::front 함수와 동일하게 작동합니다. [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)도 참조하세요.|  
-|`back`|프록시 클래스 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::back 함수와 동일하게 작동합니다. [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)도 참조하세요.|  
+|[flip](#flip)|`vector<bool>`의 모든 비트를 반대로 바꿉니다.|  
+|[swap](#swap)|두 `vector<bool>`의 요소를 교환합니다.|  
+|[operator&#91;&#93;](#op_at)|지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.|  
+|`at`|프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::at 함수와 동일하게 작동합니다. [operator&#91;&#93;](#op_at)도 참조하세요.|  
+|`front`|프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::front 함수와 동일하게 작동합니다. [operator&#91;&#93;](#op_at)도 참조하세요.|  
+|`back`|프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::back 함수와 동일하게 작동합니다. [operator&#91;&#93;](#op_at)도 참조하세요.|  
   
 ### <a name="proxy-class"></a>프록시 클래스  
   
 |||  
 |-|-|  
-|[vector\<bool> reference 클래스](#vector_lt_bool_gt___reference_class)|`bool&` 동작을 시뮬레이션하기 위해 프록시 역할을 하며, 해당 개체가 `vector<bool>` 개체 내 요소(단일 비트)에 대한 참조를 제공할 수 있는 클래스입니다.|  
+|[vector\<bool> reference 클래스](#reference_class)|`bool&` 동작을 시뮬레이션하기 위해 프록시 역할을 하며, 해당 개체가 `vector<bool>` 개체 내 요소(단일 비트)에 대한 참조를 제공할 수 있는 클래스입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더**: \<vector>  
   
  **네임스페이스:** std  
   
-##  <a name="vector_lt_bool_gt___const_pointer"></a>  vector\<bool>::const_pointer  
+##  <a name="const_pointer"></a>  vector\<bool>::const_pointer  
  `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.  
   
 ```  
 typedef const_iterator const_pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___const_reference"></a>  vector\<bool>::const_reference  
+##  <a name="const_reference"></a>  vector\<bool>::const_reference  
  `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 참조로 사용할 수 있는 개체를 설명하는 형식입니다.  
   
 ```  
@@ -104,9 +105,9 @@ typedef bool const_reference;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용과 코드 예제는 [vector&lt;bool&gt;::reference::operator=](#vector_lt_bool_gt___reference_operator_eq)를 참조하세요.  
+ 자세한 내용과 코드 예제는 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)를 참조하세요.  
   
-##  <a name="vector_lt_bool_gt___flip"></a>  vector\<bool>::flip  
+##  <a name="flip"></a>  vector\<bool>::flip  
  `vector<bool>`의 모든 비트를 반대로 바꿉니다.  
   
 ```  
@@ -144,7 +145,7 @@ int main()
   
 ```  
   
-##  <a name="vector_lt_bool_gt___operator_at"></a>  vector\<bool>::operator[]  
+##  <a name="op_at"></a>  vector\<bool>::operator[]  
  지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.  
   
 ```  
@@ -161,7 +162,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |`Pos`|`vector<bool>` 요소의 위치입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- 인덱싱된 요소의 값이 포함된 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class) 또는 [vector\<bool>::const_reference](#vector_lt_bool_gt___const_reference) 개체입니다.  
+ 인덱싱된 요소의 값이 포함된 [vector\<bool>::reference](#reference_class) 또는 [vector\<bool>::const_reference](#const_reference) 개체입니다.  
   
  지정된 위치가 컨테이너의 크기보다 크거나 같을 경우 결과가 정의되지 않습니다.  
   
@@ -198,18 +199,18 @@ int main()
 }  
 ```  
   
-##  <a name="vector_lt_bool_gt___pointer"></a>  vector\<bool>::pointer  
+##  <a name="pointer"></a>  vector\<bool>::pointer  
  `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.  
   
 ```  
 typedef iterator pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___reference_class"></a>  vector\<bool>::reference 클래스  
+##  <a name="reference_class"></a>  vector\<bool>::reference 클래스  
  `vector<bool>::reference` 클래스는 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)에서 `bool&`을 시뮬레이션하도록 제공되는 프록시 클래스입니다.  
   
 ### <a name="remarks"></a>설명  
- C++는 기본적으로 비트에 직접 참조를 허용하지 않으므로 시뮬레이션된 참조가 필요하지 않습니다. `vector<bool>`는 요소당&1;비트만 사용하며, 이 프록시 클래스만 사용하여 참조할 수 있습니다. 하지만, 특정 할당은 유효하지 않으므로 참조 시뮬레이션이 완전하지 않습니다. 예를 들어 `vector<bool>::reference` 개체의 주소를 확인할 수 없으므로 [vector\<bool>::operator&#91;&#93;](#vector_lt_bool_gt___operator_at)를 사용하는 다음 코드는 올바르지 않습니다.  
+ C++는 기본적으로 비트에 직접 참조를 허용하지 않으므로 시뮬레이션된 참조가 필요하지 않습니다. `vector<bool>`는 요소당 1비트만 사용하며, 이 프록시 클래스만 사용하여 참조할 수 있습니다. 하지만, 특정 할당은 유효하지 않으므로 참조 시뮬레이션이 완전하지 않습니다. 예를 들어 `vector<bool>::reference` 개체의 주소를 확인할 수 없으므로 [vector\<bool>::operator&#91;&#93;](#op_at)를 사용하는 다음 코드는 올바르지 않습니다.  
   
 ```cpp  
 vector<bool> vb;  
@@ -218,7 +219,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_flip"></a>  vector\<bool>::reference::flip  
+###  <a name="reference_flip"></a>  vector\<bool>::reference::flip  
  참조된 [vector\<bool>](../standard-library/vector-bool-class.md) 요소의 부울 값을 반전합니다.  
   
 ```  
@@ -264,7 +265,7 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
+###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
  `vector<bool>::reference`을 `bool`로 묵시적으로 변환합니다.  
   
 ```  
@@ -277,7 +278,7 @@ operator bool() const;
 #### <a name="remarks"></a>설명  
  `vector<bool>` 개체는 이 연산자로 수정할 수 없습니다.  
   
-###  <a name="vector_lt_bool_gt___reference_operator_eq"></a>  vector\<bool>::reference::operator=  
+###  <a name="reference_operator_eq"></a>  vector\<bool>::reference::operator=  
  비트에 부울 값을 할당하거나 참조된 요소에 저장된 값을 비트에 할당합니다.  
   
 ```  
@@ -363,8 +364,8 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-##  <a name="vector_lt_bool_gt___swap"></a>  vector\<bool>::swap  
- 프록시 클래스 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)를 사용하여 부울 벡터(`vector<bool>`)의 두 요소를 교환하는 정적 구성원 함수입니다.  
+##  <a name="swap"></a>  vector\<bool>::swap  
+ 프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용하여 부울 벡터(`vector<bool>`)의 두 요소를 교환하는 정적 구성원 함수입니다.  
   
 ```  
 static void swap(

@@ -100,10 +100,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
-ms.openlocfilehash: 9330a5c4e1b487880f405478dd7e8838af739c44
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regexconstants-class"></a>regex_constants 클래스
@@ -127,7 +128,7 @@ namespace regex_constants {
   
  **네임스페이스:** std  
   
-##  <a name="regex_constants__error_type"></a>  regex_constants::error_type  
+##  <a name="error_type"></a>  regex_constants::error_type  
  정규식 구문 오류 보고에 대한 플래그입니다.  
   
 ```  
@@ -186,7 +187,7 @@ enum error_type
   
  `error_backref` -- 식에 잘못된 역참조가 포함되었습니다.  
   
-##  <a name="regex_constants__match_flag_type"></a>  regex_constants::match_flag_type  
+##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
  정규식 일치 옵션에 대한 플래그입니다.  
   
 ```  
@@ -242,7 +243,7 @@ enum match_flag_type
   
  `format_first_only` -- 첫 번째 일치 항목 뒤에서 일치 항목을 검색하지 않습니다.  
   
-##  <a name="regex_constants__syntax_option_type"></a>  regex_constants::syntax_option_type  
+##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
  구문 옵션을 선택하기 위한 플래그입니다.  
   
 ```  

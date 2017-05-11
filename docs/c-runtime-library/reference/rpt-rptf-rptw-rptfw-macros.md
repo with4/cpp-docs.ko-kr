@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW 매크로
@@ -162,7 +163,7 @@ _RPTFWn(
  `format`에서 사용하는 대체 인수입니다.  
   
 ## <a name="remarks"></a>설명  
- 이러한 모든 매크로는 `reportType` 및 `format`매개 변수를 사용합니다. 또한 매크로 이름에 추가된 번호로 표시되는 추가 인수도&4;개까지 사용할 수 있습니다. 예를 들어 `_RPT0` 및 `_RPTF0`은 추가 인수를 사용하지 않고, `_RPT1` 및 `_RPTF1`은 `arg1`, `_RPT2`를 사용하며, `_RPTF2`는 `arg1` 및 `arg2`를 사용하는 식입니다.  
+ 이러한 모든 매크로는 `reportType` 및 `format` 매개 변수입니다. 또한 매크로 이름에 추가된 번호로 표시되는 추가 인수도 4개까지 사용할 수 있습니다. 예를 들어 `_RPT0` 및 `_RPTF0`은 추가 인수를 사용하지 않고, `_RPT1` 및 `_RPTF1`은 `arg1`, `_RPT2`를 사용하며, `_RPTF2`는 `arg1` 및 `arg2`를 사용하는 식입니다.  
   
  `_RPT` 및 `_RPTF` 매크로는 디버깅 프로세스 중에 응용 프로그램의 진행률을 추적하는 데 사용할 수 있으므로 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 함수와 비슷합니다. 그러나 이들 매크로는 응용 프로그램의 정품 빌드 시 호출되지 않도록 `#ifdef` 문에 포함할 필요가 없으므로 `printf`에 비해 매우 유연합니다. 이처럼 매크로가 유연한 것은 [_DEBUG](../../c-runtime-library/debug.md) 매크로를 사용하기 때문입니다. `_RPT` 및 `_RPTF` 매크로는 `_DEBUG` 플래그를 정의할 때만 사용할 수 있습니다. `_DEBUG` 가 정의되지 않으면 이러한 매크로 호출이 전처리 중에 제거됩니다.  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>예제  
  [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 항목의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)

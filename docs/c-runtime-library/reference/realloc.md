@@ -60,10 +60,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a3612dfc9906b23bd3581729fd1de53212fb4b1a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="realloc"></a>realloc
@@ -90,7 +91,7 @@ void *realloc(
   
  블록을 지정된 크기로 확장하는 데 사용할 수 있는 충분한 메모리가 없으면 원래 블록은 변경되지 않고 그대로 유지되며 `NULL`이 반환됩니다.  
   
- `size`가&0;이면 `memblock`에서 가리키는 블록이 해제됩니다. 반환 값은 `NULL`이며, `memblock`은 해제된 블록을 가리키는 상태로 유지됩니다.  
+ `size`가 0이면 `memblock`에서 가리키는 블록이 해제됩니다. 반환 값은 `NULL`이며, `memblock`은 해제된 블록을 가리키는 상태로 유지됩니다.  
   
  반환 값은 모든 형식의 개체 저장을 위해 적절하게 맞도록 보장되어 있는 저장소 공간을 가리킵니다. `void`가 아닌 형식의 포인터를 가져오려면 반환 값에 형식 캐스팅을 사용합니다.  
   
@@ -167,9 +168,6 @@ int main( void )
 Size of block after malloc of 1000 longs: 4000  
 Size of block after realloc of 1000 more longs: 8000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   

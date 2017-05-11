@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0402f647be21541222fe215760715eea1dee39d9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dee742e53a8ac9243503011b827a008879af6428
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
@@ -149,7 +150,7 @@ const unsigned char *_mbsstr_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `str`에서 처음 나오는 `strSearch`에 대한 포인터를 반환하거나, `str`에 `strSearch`가 없으면 `NULL`을 반환합니다. `strSearch`가 길이가&0;인 문자열을 가리키면 함수는 `str`을 반환합니다.  
+ `str`에서 처음 나오는 `strSearch`에 대한 포인터를 반환하거나, `str`에 `strSearch`가 없으면 `NULL`을 반환합니다. `strSearch`가 길이가 0인 문자열을 가리키면 함수는 `str`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `strstr` 함수는 `str`에서 처음 나오는 `strSearch`에 대한 포인터를 반환합니다. 종료 null 문자는 검색에 포함되지 않습니다. `wcsstr`은 `strstr`의 와이드 문자 버전이고 `_mbsstr`은 멀티바이트 버전입니다. `wcsstr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsstr`의 인수와 반환 값은 멀티바이트 문자열입니다. `_mbsstr`은 매개 변수의 유효성을 검사합니다. `str` 또는 `strSearch`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `_mbsstr`은 `errno`를 `EINVAL`로 설정하고 0을 반환합니다. `strstr` 및 `wcsstr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
@@ -180,9 +181,8 @@ const unsigned char *_mbsstr_l(
   
 ## <a name="example"></a>예제  
   
-```  
-  
-      // crt_strstr.c  
+```C  
+// crt_strstr.c  
   
 #include <string.h>  
 #include <stdio.h>  
@@ -216,9 +216,6 @@ String to be searched:
 lazy found at position 36  
 ```  
   
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
-  
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
  [로캘](../../c-runtime-library/locale.md)   
@@ -228,4 +225,5 @@ lazy found at position 36
  [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
  [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic_string::find](http://msdn.microsoft.com/Library/e8254589-ae65-4414-b28f-54ba8f544656)
+ [basic_string::find](../../standard-library/basic-string-class.md#find)  
+

@@ -1,50 +1,67 @@
 ---
-title: "memmove, wmemmove | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memmove"
-  - "wmemmove"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memmove"
-  - "wmemmove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memmove 함수"
-  - "wmemmove 함수"
+title: "memmove, wmemmove | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memmove
+- wmemmove
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memmove
+- wmemmove
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemmove function
+- memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# memmove, wmemmove
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2f8c6199d65c5865110774dcd0d2e5623d515467
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-다른 하나의 버퍼를 이동합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [memmove\_s, wmemmove\_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md)를 참조하십시오.  
+---
+# <a name="memmove-wmemmove"></a>memmove, wmemmove
+한 버퍼를 다른 버퍼로 이동합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [memmove_s, wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void *memmove(  
@@ -59,25 +76,25 @@ wchar_t *wmemmove(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `dest`  
  대상 개체입니다.  
   
  `src`  
- 개체 소스  
+ 소스 개체입니다.  
   
  `count`  
- 복사할 바이트 수 \(`memmove`\) 또는 문자 \(`wmemmove`\) 입니다.  
+ 복사할 바이트(`memmove`) 또는 문자 (`wmemmove`) 수입니다.  
   
-## 반환 값  
- `dest` *.*의 값입니다.  
+## <a name="return-value"></a>반환 값  
+ `dest`의 값  
   
-## 설명  
- `count` 바이트 \(`memmove`\) 또는 문자를\(`wmemmove`\) `src` 에서 `dest`*.*로 복사합니다. 원본 영역과 대상의 일부 영역이 겹치는 경우 두 함수는 모두 겹치는 영역에서 원본 소스 바이트가 덮어쓰기 전에 복사 되는지 확인합니다.  
+## <a name="remarks"></a>설명  
+ 복사본 `count` 바이트 (`memmove`) 또는 문자 (`wmemmove`)에서 `src` 를 `dest`합니다. 소스 영역과 대상의 일부 영역이 겹치는 경우 두 함수는 모두 겹치는 영역에서 원래 소스 바이트가 덮어쓰기 전에 복사되도록 합니다.  
   
- **보안 정보** 는 원본 버퍼보다 크거나 같은 크기의 대상 버퍼인지 확인합니다.  자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하십시오.  
+ **보안 정보** 대상 버퍼의 크기가 소스 버퍼의 크기보다 크거나 같아야 합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
- `_CRT_SECURE_DEPRECATE_MEMORY` 상수가 아래 예제 처럼 함수를 사용하기 않기 위해 포함 문 이전에 정의되지 않는 경우, `memmove` 및 `wmemmove` 함수는 사용 되지 않습니다.  
+ `memmove` 상수가 아래 예제처럼 함수를 사용하지 않기 위해 포함 문 이전에 정의되는 경우에만 `wmemmove` 및 `_CRT_SECURE_DEPRECATE_MEMORY` 함수가 사용되지 않습니다.  
   
 ```  
 #define _CRT_SECURE_DEPRECATE_MEMORY  
@@ -87,16 +104,16 @@ or
 #include <wchar.h>  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`memmove`|\<string.h\>|  
-|`wmemmove`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memmove`|\<string.h>|  
+|`wmemmove`|\<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_memcpy.c  
@@ -125,16 +142,16 @@ int main( void )
 }  
 ```  
   
-  **The string: aabbcc**  
-**New string: aaaabb**  
-**The string: aabbcc**  
-**New string: aaaabb**   
-## 해당 .NET Framework 항목  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
+```Output  
+The string: aabbcc  
+New string: aaaabb  
+The string: aabbcc  
+New string: aaaabb  
+```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)

@@ -8,31 +8,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_match
-- std::regex_match
 - regex/std::regex_match
 - regex_replace
-- std::regex_replace
 - regex/std::regex_replace
 - regex_search
-- std::regex_search
 - regex/std::regex_search
 - regex/std::swap
+- regex/std::swap
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28fdbf1c00c44711538b7c163053eeca5a0c47e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 함수
 ||||  
 |-|-|-|  
-|[regex_match 함수](#regex_match_function)|[regex_replace 함수](#regex_replace_function)|[regex_search 함수](#regex_search_function)|  
-|[swap 함수](#swap_function)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
+|[swap](#swap)|  
   
-##  <a name="a-nameregexmatchfunctiona--regexmatch-function"></a><a name="regex_match_function"></a>  regex_match 함수  
+##  <a name="regex_match"></a>regex_match
  정규식이 전체 대상 문자열과 일치하는지 여부를 테스트합니다.  
   
 ```  
@@ -121,7 +122,7 @@ bool regex_match(
  일치하는 시퀀스의 끝입니다.  
   
  `match`  
- 일치 결과입니다. string의 경우 [smatch](../standard-library/regex-typedefs.md#smatch_typedef), wstring의 경우 [wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef), char*의 경우 [cmatch](../standard-library/regex-typedefs.md#cmatch_typedef), wchar_t\*의 경우 [wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef) Elem 형식에 해당합니다.  
+ 일치 결과입니다. string의 경우 [smatch](../standard-library/regex-typedefs.md#smatch), wstring의 경우 [wsmatch](../standard-library/regex-typedefs.md#wsmatch), char*의 경우 [cmatch](../standard-library/regex-typedefs.md#cmatch), wchar_t\*의 경우 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) Elem 형식에 해당합니다.  
   
  `ptr`  
  일치하는 시퀀스의 시작에 대한 포인터입니다. ptr이 char*이면 cmatch 및 regex를 사용합니다. ptr이 wchar_t\*이면 wcmatch 및 wregex를 사용합니다.  
@@ -133,7 +134,7 @@ bool regex_match(
  일치하는 문자열입니다. Elem 형식에 해당합니다.  
   
 ### <a name="remarks"></a>설명  
- 각 템플릿 함수는 전체 피연산자 시퀀스 `str`이 정규식 인수 `re`와 정확하게 일치하는 경우에만 true를 반환합니다. 여러 일치 항목을 찾으려면 [regex_search](../standard-library/regex-functions.md#regex_search_function)를 사용하여 대상 시퀀스 내의 하위 문자열과 regex_iterator를 일치시킵니다. `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.  
+ 각 템플릿 함수는 전체 피연산자 시퀀스 `str`이 정규식 인수 `re`와 정확하게 일치하는 경우에만 true를 반환합니다. 여러 일치 항목을 찾으려면 [regex_search](../standard-library/regex-functions.md#regex_search)를 사용하여 대상 시퀀스 내의 하위 문자열과 regex_iterator를 일치시킵니다. `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.  
   
  `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.  
   
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="a-nameregexreplacefunctiona--regexreplace-function"></a><a name="regex_replace_function"></a>  regex_replace 함수  
+##  <a name="regex_replace"></a>regex_replace
  일치하는 정규식을 바꿉니다.  
   
 ```  
@@ -251,7 +252,7 @@ basic_string<Elem> regex_replace(
  일치하는 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 함수는 [regex_iterator 클래스](../standard-library/regex-iterator-class.md) 개체 `iter(first, last, re, flags)`을 생성하며 이 개체를 사용하여 입력 범위 `[first, last)`를 일련의 후속 항목`T0M0T1M1...TN-1MN-1TN`으로 분할합니다. 여기서 `Mn`은 반복기가 검색한 `nth` 일치 항목입니다. 일치하는 항목이 없으면 `T0`은 전체 입력 범위이고 `N`은&0;입니다. `(flags & format_first_only) != 0`이면 첫 번째 일치 항목만 사용되고 `T1`은 일치 항목 뒤에 오는 모든 입력 텍스트이며 `N`은 1입니다. 범위 `[0, N)`의 각 `i`에 대해 `(flags & format_no_copy) == 0`이면 범위 `Ti`의 텍스트를 반복기 `out`에 복사합니다. 그런 다음 `m.format(out, fmt, flags)`을 호출합니다. 여기서 `m`은 후속 항목 `Mi`에 대해 반복기 개체 `iter`이 반환한 `match_results` 개체입니다. 마지막으로 `(flags & format_no_copy) == 0`이면 범위 `TN`의 텍스트를 반복기 `out`에 복사합니다. 함수에서 `out`을 반환합니다.  
+ 첫 번째 함수는 [regex_iterator 클래스](../standard-library/regex-iterator-class.md) 개체 `iter(first, last, re, flags)`을 생성하며 이 개체를 사용하여 입력 범위 `[first, last)`를 일련의 후속 항목`T0M0T1M1...TN-1MN-1TN`으로 분할합니다. 여기서 `Mn`은 반복기가 검색한 `nth` 일치 항목입니다. 일치하는 항목이 없으면 `T0`은 전체 입력 범위이고 `N`은 0입니다. `(flags & format_first_only) != 0`이면 첫 번째 일치 항목만 사용되고 `T1`은 일치 항목 뒤에 오는 모든 입력 텍스트이며 `N`은 1입니다. 범위 `[0, N)`의 각 `i`에 대해 `(flags & format_no_copy) == 0`이면 범위 `Ti`의 텍스트를 반복기 `out`에 복사합니다. 그런 다음 `m.format(out, fmt, flags)`을 호출합니다. 여기서 `m`은 후속 항목 `Mi`에 대해 반복기 개체 `iter`이 반환한 `match_results` 개체입니다. 마지막으로 `(flags & format_no_copy) == 0`이면 범위 `TN`의 텍스트를 반복기 `out`에 복사합니다. 함수에서 `out`을 반환합니다.  
   
  두 번째 함수는 형식 `basic_string<charT>`의 지역 변수 `result`를 생성하고 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`를 호출합니다. `result`를 반환합니다.  
   
@@ -298,7 +299,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="a-nameregexsearchfunctiona--regexsearch-function"></a><a name="regex_search_function"></a>  regex_search 함수  
+##  <a name="regex_search"></a>regex_search
  정규식 일치 항목을 검색합니다.  
   
 ```  
@@ -447,7 +448,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap-function"></a><a name="swap_function"></a>  swap 함수  
+##  <a name="swap"></a>  swap
  두 basic_regex 또는 match_results 개체를 교환합니다.  
   
 ```  
