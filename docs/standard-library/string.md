@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|두 문자열 개체를 연결합니다.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같은지 테스트합니다.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작은지 테스트합니다.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작거나 같은지 테스트합니다.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|문자열을 출력 스트림에 삽입하는 템플릿 함수입니다.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 큰지 테스트합니다.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 크거나 같은지 테스트합니다.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|입력 스트림에서 문자열을 추출하는 템플릿 함수입니다.|  
+|[operator+](../standard-library/string-operators.md#op_add)|두 문자열 개체를 연결합니다.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같은지 테스트합니다.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작은지 테스트합니다.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작거나 같은지 테스트합니다.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|문자열을 출력 스트림에 삽입하는 템플릿 함수입니다.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 큰지 테스트합니다.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 크거나 같은지 테스트합니다.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|입력 스트림에서 문자열을 추출하는 템플릿 함수입니다.|  
   
 ### <a name="specialized-template-functions"></a>특별 템플릿 함수  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[getline 템플릿 함수](../standard-library/string-functions.md#getline)|입력 스트림에서 문자열을 한 줄씩 추출합니다.|  
+|[getline 템플릿](../standard-library/string-functions.md#getline)|입력 스트림에서 문자열을 한 줄씩 추출합니다.|  
   
 ### <a name="classes"></a>클래스  
   

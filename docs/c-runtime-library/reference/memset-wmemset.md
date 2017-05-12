@@ -1,51 +1,68 @@
 ---
-title: "memset, wmemset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wmemset"
-  - "memset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memset"
-  - "wmemset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memset 함수"
-  - "wmemset 함수"
+title: "memset, wmemset | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wmemset
+- memset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- memset
+- wmemset
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemset function
+- memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# memset, wmemset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a305da5b415b6db38f3d5b4e155b31133e1ac980
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-지정된 문자로 버퍼를 설정합니다.  
+---
+# <a name="memset-wmemset"></a>memset, wmemset
+버퍼를 지정된 문자로 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -61,37 +78,37 @@ wchar_t *wmemset(
 );  
 ```  
   
-#### 매개 변수  
- *대상*  
+#### <a name="parameters"></a>매개 변수  
+ *dest*  
  대상에 대한 포인터입니다.  
   
  `c`  
  설정할 문자입니다.  
   
  *count*  
- 문자들의 수.  
+ 문자 수입니다.  
   
-## 반환 값  
- `dest`의 값입니다.  
+## <a name="return-value"></a>반환 값  
+ `dest`의 값  
   
-## 설명  
- `dest` 의 첫번째 `count` 문자를 문자 `c` 로 설정합니다.  
+## <a name="remarks"></a>설명  
+ `dest`의 처음 `count` 문자를 `c` 문자로 설정합니다.  
   
- **보안 정보** 대상 버퍼에 적어도 `count` 문자 만큼 충분한 공간이 있는지 확인합니다.  자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하십시오.  
+ **보안 정보** 대상 버퍼에 `count` 문자 이상을 포함할 충분한 공간이 있어야 합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`memset`|\<memory.h\> 또는 \<string.h\>|  
-|`wmemset`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memset`|\<memory.h> 또는 \<string.h>|  
+|`wmemset`|\<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_memset.c  
@@ -112,14 +129,14 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Before: This is a test of the memset function  
 After:  **** is a test of the memset function  
 ```  
   
- Wmemset의 사용 예는 다음과 같습니다.  
+ 다음은 wmemset 사용에 대한 예제입니다.  
   
 ```  
 // crt_wmemset.c  
@@ -140,20 +157,17 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Before: This is a test of the wmemset function  
 After:  **** is a test of the wmemset function  
 ```  
   
-## 해당 .NET Framework 항목  
- [System::Buffer::SetByte](https://msdn.microsoft.com/en-us/library/system.buffer.setbyte.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [\_strnset, \_strnset\_l, \_wcsnset, \_wcsnset\_l, \_mbsnset, \_mbsnset\_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+ [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

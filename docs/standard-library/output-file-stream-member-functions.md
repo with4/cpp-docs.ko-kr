@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Output File Stream Member 함수
@@ -43,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="the-open-function-for-output-streams"></a>출력 스트림에 대한 open 함수  
  출력 파일 스트림([ofstream](../standard-library/basic-ofstream-class.md))을 사용하려면 생성자 또는 **open** 함수에서 특정 디스크 파일과 해당 스트림을 연결해야 합니다. **open** 함수를 사용하는 경우 일련의 파일에 대해 같은 스트림 개체를 다시 사용할 수 있습니다. 어떤 경우든 파일을 설명하는 인수는 동일합니다.  
   
- 출력 스트림과 연결된 파일을 열 때는 대개 **open_mode** 플래그를 지정합니다. `ios` 클래스에서 열거자로 정의되는 이러한 플래그는 비트 OR(&#124;) 연산자를 사용하여 결합할 수 있습니다. 열거자 목록은 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode)를 참조하세요.  
+ 출력 스트림과 연결된 파일을 열 때는 대개 **open_mode** 플래그를 지정합니다. `ios` 클래스에서 열거자로 정의되는 이러한 플래그는 비트 OR(&#124;) 연산자를 사용하여 결합할 수 있습니다. 열거자 목록은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.  
   
  흔히 볼 수 있는 세 가지 출력 스트림에서는 모드 옵션이 사용됩니다.  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>put 함수  
+## <a name="the-put"></a>put
  **put** 함수는 출력 스트림에 문자 하나를 씁니다. 다음의 두 문은 기본적으로 동일하지만 두 번째 문에는 스트림의 형식 인수가 적용됩니다.  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>write 함수  
+## <a name="the-write"></a>쓰기
  **write** 함수는 출력 파일 스트림에 메모리 블록을 씁니다. 길이 인수가 기록되는 바이트 수를 지정합니다. 이 예에서는 출력 파일 스트림을 만들고 `Date` 구조체의 이진 값을 해당 스트림에 씁니다.  
   
 ```  
@@ -123,13 +125,13 @@ int main( )
   
  출력 스트림 소멸자는 생성자 또는 **open** 구성원 함수가 스트림의 파일을 연 경우에만 해당 파일을 닫습니다. 이미 열린 파일에 대해 생성자에 파일 설명자를 전달하거나 **attach** 구성원 함수를 사용하는 경우에는 파일을 명시적으로 닫아야 합니다.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> 오류 처리 함수  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 오류 처리 함수  
  스트림에 쓰는 중에 오류를 테스트하려면 다음 구성원 함수를 사용합니다.  
   
 |함수|반환 값|  
 |--------------|------------------|  
 |[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|복구할 수 없는 오류가 발생하는 경우 **true**를 반환합니다.|  
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|복구할 수 없는 오류 또는 "정상" 상황(예: 변환 오류)이 발생하거나 파일을 찾을 수 없는 경우 **true**를 반환합니다. 인수로&0;을 사용하여 **clear**를 호출하고 나면 처리가 다시 시작되는 경우가 많습니다.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|복구할 수 없는 오류 또는 "정상" 상황(예: 변환 오류)이 발생하거나 파일을 찾을 수 없는 경우 **true**를 반환합니다. 인수로 0을 사용하여 **clear**를 호출하고 나면 처리가 다시 시작되는 경우가 많습니다.|  
 |[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|복구 가능 여부와 관계없이 오류 조건이 없으며 파일 끝 플래그가 설정되어 있지 않은 경우 **true**를 반환합니다.|  
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|파일 끝 조건에서 **true**를 반환합니다.|  
 |[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|내부 오류 상태를 설정합니다. 기본 인수를 사용하여 호출된 경우에는 모든 오류 비트를 지웁니다.|  

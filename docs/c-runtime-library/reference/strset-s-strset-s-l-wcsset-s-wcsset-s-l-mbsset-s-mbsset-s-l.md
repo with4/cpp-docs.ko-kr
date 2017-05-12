@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bf90cc3bd9935a3070581d7c74fa2b65054f93bc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4af054c5f91c30c254696c5349052961c4fe149b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
@@ -148,7 +149,7 @@ errno_t _mbsset_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되는 경우&0;이고 그렇지 않으면 오류 코드입니다.  
+ 정상적으로 실행되는 경우 0이고 그렇지 않으면 오류 코드입니다.  
   
  이러한 함수는 해당 인수의 유효성을 검사합니다. `str`이 null 포인터이거나, `numberOfElements` 인수가 0보다 작거나 같거나, 전달된 블록이 null로 종료되지 않으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `EINVAL`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -199,9 +200,6 @@ int main( void )
 Before: Fill the string with something.  
 After:  *******************************  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

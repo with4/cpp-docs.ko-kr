@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::lock
+- mutex/std::recursive_timed_mutex::try_lock
+- mutex/std::recursive_timed_mutex::try_lock_for
+- mutex/std::recursive_timed_mutex::try_lock_until
+- mutex/std::recursive_timed_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: 59cc2d5c-ed80-45f3-a0a8-05652a8ead7e
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a28e9521455f0380f412fc2aa81aecd713f9535a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 898661756cd21f362dc9d83dee6dab9b0c16fb8f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 클래스
@@ -52,25 +59,25 @@ class recursive_timed_mutex;
   
 |이름|설명|  
 |----------|-----------------|  
-|[recursive_timed_mutex 생성자](#recursive_timed_mutex__recursive_timed_mutex_constructor)|잠기지 않은 `recursive_timed_mutex` 개체를 생성합니다.|  
-|[~recursive_timed_mutex 소멸자](#recursive_timed_mutex___dtorrecursive_timed_mutex_destructor)|`recursive_timed_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|  
+|[recursive_timed_mutex](#recursive_timed_mutex)|잠기지 않은 `recursive_timed_mutex` 개체를 생성합니다.|  
+|[~recursive_timed_mutex 소멸자](#dtorrecursive_timed_mutex_destructor)|`recursive_timed_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[lock](#recursive_timed_mutex__lock_method)|스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|  
-|[try_lock](#recursive_timed_mutex__try_lock_method)|차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.|  
-|[try_lock_for](#recursive_timed_mutex__try_lock_for_method)|지정된 시간 간격으로 `mutex`의 소유권 가져오기를 시도합니다.|  
-|[try_lock_until](#recursive_timed_mutex__try_lock_until_method)|지정된 시간까지 `mutex`의 소유권 가져오기를 시도합니다.|  
-|[unlock](#recursive_timed_mutex__unlock_method)|`mutex`의 소유권을 해제합니다.|  
+|[lock](#lock)|스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|  
+|[try_lock](#try_lock)|차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.|  
+|[try_lock_for](#try_lock_for)|지정된 시간 간격으로 `mutex`의 소유권 가져오기를 시도합니다.|  
+|[try_lock_until](#try_lock_until)|지정된 시간까지 `mutex`의 소유권 가져오기를 시도합니다.|  
+|[unlock](#unlock)|`mutex`의 소유권을 해제합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** mutex  
+ **헤더:** \<뮤텍스 >  
   
  **네임스페이스:** std  
   
-##  <a name="a-namerecursivetimedmutexlockmethoda--lock"></a><a name="recursive_timed_mutex__lock_method"></a>  lock  
+##  <a name="lock"></a>  lock  
  스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.  
   
 ```cpp  
@@ -80,14 +87,14 @@ void lock();
 ### <a name="remarks"></a>설명  
  호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 결과를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
   
-##  <a name="a-namerecursivetimedmutexrecursivetimedmutexconstructora--recursivetimedmutex-constructor"></a><a name="recursive_timed_mutex__recursive_timed_mutex_constructor"></a>  recursive_timed_mutex 생성자  
+##  <a name="recursive_timed_mutex"></a>  recursive_timed_mutex 생성자  
  잠기지 않은 `recursive_timed_mutex` 개체를 생성합니다.  
   
 ```cpp  
 recursive_timed_mutex();
 ```  
   
-##  <a name="a-namerecursivetimedmutexdtorrecursivetimedmutexdestructora--recursivetimedmutex-destructor"></a><a name="recursive_timed_mutex___dtorrecursive_timed_mutex_destructor"></a>  ~recursive_timed_mutex 소멸자  
+##  <a name="dtorrecursive_timed_mutex_destructor"></a>  ~recursive_timed_mutex 소멸자  
  `recursive_timed_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.  
   
 ```cpp  
@@ -97,7 +104,7 @@ recursive_timed_mutex();
 ### <a name="remarks"></a>설명  
  소멸자가 실행될 때 개체가 잠겨 있는 경우, 이 동작은 정의되지 않습니다.  
   
-##  <a name="a-namerecursivetimedmutextrylockmethoda--trylock"></a><a name="recursive_timed_mutex__try_lock_method"></a>  try_lock  
+##  <a name="try_lock"></a>  try_lock  
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -110,7 +117,7 @@ bool try_lock() noexcept;
 ### <a name="remarks"></a>설명  
  호출 스레드가 `mutex`를 이미 소유하고 있으면 함수는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
   
-##  <a name="a-namerecursivetimedmutextrylockformethoda--trylockfor"></a><a name="recursive_timed_mutex__try_lock_for_method"></a>  try_lock_for  
+##  <a name="try_lock_for"></a>  try_lock_for  
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -128,7 +135,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>설명  
  호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
   
-##  <a name="a-namerecursivetimedmutextrylockuntilmethoda--trylockuntil"></a><a name="recursive_timed_mutex__try_lock_until_method"></a>  try_lock_until  
+##  <a name="try_lock_until"></a>  try_lock_until  
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -148,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>설명  
  호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
   
-##  <a name="a-namerecursivetimedmutexunlockmethoda--unlock"></a><a name="recursive_timed_mutex__unlock_method"></a>  unlock  
+##  <a name="unlock"></a>  unlock  
  `mutex`의 소유권을 해제합니다.  
   
 ```cpp  
@@ -156,7 +163,7 @@ void unlock();
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 `recursive_timed_mutex` 개체에 대해 [lock](#recursive_timed_mutex__lock_method), [try_lock](#recursive_timed_mutex__try_lock_method), [try_lock_for](#recursive_timed_mutex__try_lock_for_method) 및 [try_lock_until](#recursive_timed_mutex__try_lock_until_method)이 정상적으로 호출된 횟수만큼 호출된 후에만 `mutex`의 소유권을 해제합니다.  
+ 이 메서드는 `recursive_timed_mutex` 개체에 대해 [lock](#lock), [try_lock](#try_lock), [try_lock_for](#try_lock_for) 및 [try_lock_until](#try_lock_until)이 정상적으로 호출된 횟수만큼 호출된 후에만 `mutex`의 소유권을 해제합니다.  
   
  호출 스레드가 `mutex`를 소유하지 않은 경우, 이 동작은 정의되지 않습니다.  
   

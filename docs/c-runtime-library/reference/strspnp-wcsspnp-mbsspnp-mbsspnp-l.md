@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_strspnp`, `_wcsspnp` 및 `_mbsspnp`는 `charset`*의 문자 집합에 속하지 않는 `str`의 첫 번째 문자에 대한 포인터를 반환합니다.* 이러한 각 함수는 `str`이 `charset`*의 문자만으로 구성되어 있으면 `NULL`을 반환합니다.* 각 이러한 루틴에 대해 오류를 나타내기 위한 반환 값은 예약되지 않습니다.  
+ `_strspnp``_wcsspnp`, 및 `_mbsspnp` 첫 번째 문자에 대 한 포인터를 반환할 `str` 의 문자 집합에 속하지 않는 `charset`합니다. 이러한 각 함수 반환 `NULL` 경우 `str` 전체가에서 문자로 이루어진 `charset`합니다. 각 이러한 루틴에 대해 오류를 나타내기 위한 반환 값은 예약되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbsspnp` 함수는 `charset`의 문자 집합에 속하지 않는 `str`의 첫 번째 문자인 멀티바이트 문자에 대한 포인터를 반환합니다. `_mbsspnp`는 현재 사용 중인 [멀티바이트 코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티바이트 문자 시퀀스를 인식합니다. 종료 null 문자는 검색에 포함되지 않습니다.  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

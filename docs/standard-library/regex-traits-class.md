@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b41e9b019477fe86645a212ee9f345e0fe8685f7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b7a7b0cfe5614cb87d82634e6d17643f5509ae13
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextraits-class"></a>regex_traits 클래스
@@ -102,7 +103,7 @@ public:
   
  **네임스페이스:** std  
   
-##  <a name="regex_traits__char_class_type"></a>  regex_traits::char_class_type  
+##  <a name="char_class_type"></a>  regex_traits::char_class_type  
  문자 클래스 지정자의 형식입니다.  
   
 ```  
@@ -183,7 +184,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__char_type"></a>  regex_traits::char_type  
+##  <a name="char_type"></a>  regex_traits::char_type  
  요소의 형식입니다.  
   
 ```  
@@ -264,7 +265,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__getloc"></a>  regex_traits::getloc  
+##  <a name="getloc"></a>  regex_traits::getloc  
  저장된 로캘 개체를 반환합니다.  
   
 ```  
@@ -345,7 +346,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__imbue"></a>  regex_traits::imbue  
+##  <a name="imbue"></a>  regex_traits::imbue  
  저장된 로캘 개체를 변경합니다.  
   
 ```  
@@ -430,7 +431,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__isctype"></a>  regex_traits::isctype  
+##  <a name="isctype"></a>  regex_traits::isctype  
  클래스 멤버 자격을 테스트합니다.  
   
 ```  
@@ -518,7 +519,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__length"></a>  regex_traits::length  
+##  <a name="length"></a>  regex_traits::length  
  nul로 끝나는 시퀀스의 길이를 반환합니다.  
   
 ```  
@@ -603,7 +604,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__locale_type"></a>  regex_traits::locale_type  
+##  <a name="locale_type"></a>  regex_traits::locale_type  
  저장된 로캘 개체의 형식입니다.  
   
 ```  
@@ -684,7 +685,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_classname"></a>  regex_traits::lookup_classname  
+##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
  시퀀스를 문자 클래스에 매핑합니다.  
   
 ```  
@@ -777,7 +778,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_collatename"></a>  regex_traits::lookup_collatename  
+##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
  데이터 정렬 요소에 시퀀스를 매핑합니다.  
   
 ```  
@@ -866,7 +867,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__regex_traits"></a>  regex_traits::regex_traits  
+##  <a name="regex_traits"></a>  regex_traits::regex_traits  
  개체를 생성합니다.  
   
 ```  
@@ -947,7 +948,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__size_type"></a>  regex_traits::size_type  
+##  <a name="size_type"></a>  regex_traits::size_type  
  시퀀스 길이의 형식입니다.  
   
 ```  
@@ -1030,7 +1031,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__string_type"></a>  regex_traits::string_type  
+##  <a name="string_type"></a>  regex_traits::string_type  
  요소 문자열의 형식입니다.  
   
 ```  
@@ -1111,7 +1112,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform"></a>  regex_traits::transform  
+##  <a name="transform"></a>  regex_traits::transform  
  정렬된 해당 시퀀스로 변환합니다.  
   
 ```  
@@ -1200,7 +1201,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform_primary"></a>  regex_traits::transform_primary  
+##  <a name="transform_primary"></a>  regex_traits::transform_primary  
  정렬된 해당 caseless 시퀀스로 변환합니다.  
   
 ```  
@@ -1289,7 +1290,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate"></a>  regex_traits::translate  
+##  <a name="translate"></a>  regex_traits::translate  
  일치하는 해당 요소로 변환합니다.  
   
 ```  
@@ -1374,7 +1375,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate_nocase"></a>  regex_traits::translate_nocase  
+##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
  해당 caseless 일치하는 요소로 변환합니다.  
   
 ```  
@@ -1459,7 +1460,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__value"></a>  regex_traits::value  
+##  <a name="value"></a>  regex_traits::value  
  요소를 숫자 값으로 변환합니다.  
   
 ```  

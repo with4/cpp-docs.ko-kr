@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ ms.lasthandoff: 02/24/2017
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|지정된 주소가 할당된 저장소 대한 것이며 접근할 수 있음을 가비지 컬렉션에 알립니다.|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|`operator new`를 사용하여 할당된 개체를 삭제합니다. `unique_ptr`에 사용하는 데 적합합니다.|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|`shared_ptr`로 dynamic_cast를 수행합니다.|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|`shared_ptr`에서 Deleter 가져오기|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|`shared_ptr`에서 Deleter 가져오기|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|모든 가비지 수집기에서 간주된 포인터 안전 형식을 반환합니다.|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|지정된 수의 요소를 초과하지 않는 요소의 시퀀스를 위한 임시 저장소를 할당합니다.|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|기본 할당자를 사용하여 하나 이상의 인수에서 작성된 할당된 개체를 가리키는 `shared_ptr`를 만들고 반환합니다.|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|0개 이상의 인수에서 생성된 할당된 개체를 가리키는 [unique_ptr](../standard-library/unique-ptr-class.md)을 만들고 반환합니다.|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|공유된 포인터와 약한 포인트에 대한 소유권 기반의 혼합된 비교를 허용합니다.|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|`get_pointer_safety`에 대한 모든 가능한 반환 값의 열거형입니다.|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|`get_pointer_safety`에 대한 모든 가능한 반환 값의 열거형입니다.|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|`get_temporary_buffer` 템플릿 함수를 사용하여 할당된 임시 메모리를 취소합니다.|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|`shared_ptr`에 대한 정적 캐스팅입니다.|  
 |[swap](../standard-library/memory-functions.md#swap)|두 `shared_ptr` 또는 `weak_ptr` 개체를 바꿉니다.|  
@@ -87,13 +88,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#operator_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
-|[operator==](../standard-library/memory-operators.md#operator_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
-|[operator>=](../standard-library/memory-operators.md#operator_gt__eq)|하나의 할당자 개체에 대한 테스트는 지정된 클래스의 두 번째 할당자 개체보다 크거나 같습니다.|  
-|[operator<](../standard-library/memory-operators.md#operator_lt_)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 적습니다.|  
-|[operator\<=](../standard-library/memory-operators.md#operator_lt__eq)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 적거나 같습니다.|  
-|[operator>](../standard-library/memory-operators.md#operator_gt_)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 큽니다.|  
-|[operator<<](../standard-library/memory-operators.md#operator_lt__lt_)|`shared_ptr` inserter.|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|하나의 할당자 개체에 대한 테스트는 지정된 클래스의 두 번째 할당자 개체보다 크거나 같습니다.|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 적습니다.|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 적거나 같습니다.|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|하나의 개체에 대한 테스트는 지정된 클래스의 두 번째 개체보다 큽니다.|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` inserter.|  
   
 ### <a name="classes"></a>클래스  
   

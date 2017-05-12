@@ -1,72 +1,90 @@
 ---
-title: "strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcscoll"
-  - "_mbscoll"
-  - "_mbscoll_l"
-  - "strcoll"
-  - "_strcoll_l"
-  - "_wcscoll_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcscoll"
-  - "_mbscoll"
-  - "_tcscoll"
-  - "_ftcscoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "코드 페이지, 문자열 비교에 사용"
-  - "mbscoll 함수"
-  - "wcscoll_l 함수"
-  - "ftcscoll 함수"
-  - "wcscoll 함수"
-  - "_strcoll_l 함수"
-  - "tcscoll 함수"
-  - "_ftcscoll 함수"
-  - "_tcscoll 함수"
-  - "_wcscoll_l 함수"
-  - "_mbscoll 함수"
-  - "strcoll_l 함수"
-  - "strcoll 함수"
-  - "문자열[C++], 코드 페이지로 비교"
+title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcscoll
+- _mbscoll
+- _mbscoll_l
+- strcoll
+- _strcoll_l
+- _wcscoll_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcscoll
+- _mbscoll
+- _tcscoll
+- _ftcscoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- mbscoll function
+- wcscoll_l function
+- ftcscoll function
+- wcscoll function
+- _strcoll_l function
+- tcscoll function
+- _ftcscoll function
+- _tcscoll function
+- _wcscoll_l function
+- _mbscoll function
+- strcoll_l function
+- strcoll functions
+- strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 43953fbd9473f491d628fd7389c4b9a62294e2b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-현재 로캘 또는 지정한 LC\_COLLATE 변환 상태 범주를 사용하여 문자열을 비교합니다.  
+---
+# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
+현재 로캘 또는 지정된 LC_COLLAT 변환 상태 범주를 사용하여 문자열을 비교합니다.  
   
 > [!IMPORTANT]
->  `_mbscoll` 와 `_mbscoll_l` 는 Windows 런타임에서 실행되는 어플리케이션에서는 사용될 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbscoll` 및 `_mbscoll_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int strcoll(  
@@ -98,61 +116,58 @@ int _mbscoll_l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `string1`, `string2`  
  비교할 Null 종료 문자열입니다.  
   
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 각 이러한 함수들은 다음과 같이 `string2`*,* 로 `string1` 의 관계가 나태나는 값을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 이러한 각 함수 개체 사이의 관계를 나타내는 값을 반환 `string1` 를 `string2`다음과 같이 합니다.  
   
 |반환 값|문자열 1과 문자열 2의 관계|  
-|----------|----------------------|  
-|\< 0|`string1` \< `string2`|  
-|0|`string1` \= `string2`|  
-|\> 0|`string1` \> `string2`|  
+|------------------|----------------------------------------|  
+|< 0|`string1`이 `string2`보다 짧음|  
+|0|`string1` = `string2`|  
+|> 0|`string1` > `string2`|  
   
- 이러한 각 함수는 오류의 `_NLSCMPERROR` 를 반환합니다.  이 `_NLSCMPERROR`를 사용하여, STRING.H 혹은 MBSTRING.H 어느 쪽을 포함합니다.  `wcscoll` 은 `string1` 혹은 `string2` 이 NULL 이거나 어느쪽은 대조하는 시퀀스의 도메인 외부의 와이드 문자 코드를 포함합니다.  오류가 발생하면, `wcscoll` 은 `errno` 을 `EINVAL` 으로 설정할 수 있습니다.  이 `wcscoll` 의 호출에서 오류를 확인하려면, `wcscoll` 을 호출한 후 `errno` 을 검사하고 `errno` 로 설정합니다.  
+ 이러한 각 함수는 오류 시 `_NLSCMPERROR`를 반환합니다. `_NLSCMPERROR`를 사용하려면 STRING.H 또는 MBSTRING.H를 포함합니다. `string1` 또는 `string2`가 NULL이거나 정렬 순서 도메인을 벗어나는 와이드 문자 코드를 포함하는 경우 `wcscoll`이 실패할 수 있습니다. 오류가 발생하면 `wcscoll`에서 `errno`를 `EINVAL`로 설정할 수 있습니다. `wcscoll`에 대한 호출 시 오류가 있는지 확인하려면 `errno`를 0으로 설정한 다음 `wcscoll` 호출 후 `errno`를 검사합니다.  
   
-## 설명  
- 각 함수는 `string1` 대\/소문자 구분 비교와 현재 사용중인 코드 페이지에 따라 `string2` 으로 수행합니다.  문자 사이는 차이점이 현재 코드 페이지에 순서와 lexicographic 문자 순서 설정 및 문자열 비교에 대한 관심의 차이가 있는 경우에 이러한 함수를 사용해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 `string1`과 `string2`를 대/소문자를 구분하며 비교합니다. 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용해야 합니다.  
   
- 이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다.  하나 `string1` 또는 `string2` 는 널 포인터 경우, 또는 `count` 는보다 큰 `INT_MAX`, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 로 설명된데로 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `_NLSCMPERROR`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
+ 이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `string1` 또는 `string2`가 null 포인터이거나 `count`가 `INT_MAX`보다 큰 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `_NLSCMPERROR`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
- 비교할 두 문자열의 로캘 종속 작업이므로 각 로케일의 문자 순서에 대한 규칙입니다.  이 `_l` 접미사없이 이러한 기능의 버전이 로캘에 의존하는 행동에 대한 현재 스레드의 로캘을 사용합니다; `_l` 접미사 버전은 현재 로케일 대신의 매개 변수로 전달된 로캘을 사용하는 것을 제외하고는 접하지 않고 해당 기능과 동일합니다.  자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하십시오.  
+ 두 문자열의 비교는 로캘 종속 작업입니다. 각 로캘에서 문자의 순서를 지정하는 규칙은 서로 다르기 때문입니다. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 스레드의 로캘을 사용합니다. `_l` 접미사가 있는 버전은 현재 로캘 대신 매개 변수로 전달된 로캘을 사용한다는 점을 제외하면 접미사가 없는 해당 함수와 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscoll`|`strcoll`|`_mbscoll`|`wcscoll`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`strcoll`|\<string.h\>|  
-|`wcscoll`|\<wchar.h\>, \<string.h\>|  
-|`_mbscoll`, `_mbscoll_l`|\<mbstring.h\>|  
-|`_strcoll_l`|\<string.h\>|  
-|`_wcscoll_l`|\<wchar.h\>, \<string.h\>|  
+|-------------|---------------------|  
+|`strcoll`|\<string.h>|  
+|`wcscoll`|\<wchar.h>, \<string.h>|  
+|`_mbscoll`, `_mbscoll_l`|\<mbstring.h>|  
+|`_strcoll_l`|\<string.h>|  
+|`_wcscoll_l`|\<wchar.h>, \<string.h>|  
   
- 추가 호환성 정보는 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 해당 .NET Framework 항목  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로캘](../../c-runtime-library/locale.md)   
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 함수](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

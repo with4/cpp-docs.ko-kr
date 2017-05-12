@@ -46,10 +46,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 55da414f0a743fab278cb47441efe04e82ac3279
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 38a34e2957b3fb4cf2713d61ac3633691b04b03c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator 클래스
@@ -114,7 +115,7 @@ private:
   
  **네임스페이스:** std  
   
-##  <a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
+##  <a name="difference_type"></a>  regex_token_iterator::difference_type  
  반복기 차이의 형식입니다.  
   
 ```  
@@ -220,7 +221,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
+##  <a name="iterator_category"></a>  regex_token_iterator::iterator_category  
  반복기 범주의 형식입니다.  
   
 ```  
@@ -330,7 +331,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
+##  <a name="op_neq"></a>  regex_token_iterator::operator!=  
  반복기가 같지 않은지 비교합니다.  
   
 ```  
@@ -444,7 +445,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
+##  <a name="op_star"></a>  regex_token_iterator::operator*  
  지정된 부분 일치에 액세스합니다.  
   
 ```  
@@ -554,7 +555,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
+##  <a name="op_add_add"></a>  regex_token_iterator::operator++  
  반복기를 증가시킵니다.  
   
 ```  
@@ -564,7 +565,7 @@ regex_token_iterator& operator++(int);
 ```  
   
 ### <a name="remarks"></a>설명  
- 저장된 반복기 `it`가 시퀀스의 끝 반복기인 경우 첫 번째 연산자는 저장된 값 `pos`를 `subs.size()`의 값으로 설정하여 시퀀스의 끝 반복기를 만듭니다. 그렇지 않은 경우 연산자는 저장된 값 `pos`를 증가시킵니다. 결과가 `subs.size()` 값과 같으면 저장된 값 `pos`를&0;으로 설정하고 저장된 반복기 `it`를 증가시킵니다. 저장된 반복기의 증분 결과가 시퀀스의 끝 반복기와 같지 않은 경우 연산자가 추가 작업을 수행하지 않습니다. 이전 일치 항목의 끝이 문자 시퀀스의 끝에 있는 경우 연산자가 `pos`의 저장된 값을 `subs.size()`로 설정합니다. 또는 `pos == subs.size()` 또는 `subs[pos] == -1`까지 연산자가 저장된 값 `pos`를 반복적으로 증가시켜 인덱스 값 중 하나가 -1이면 반복기의 다음 역참조에서 문자 시퀀스의 테일이 반환되도록 합니다. 모든 경우에서 연산자는 개체를 반환합니다.  
+ 저장된 반복기 `it`가 시퀀스의 끝 반복기인 경우 첫 번째 연산자는 저장된 값 `pos`를 `subs.size()`의 값으로 설정하여 시퀀스의 끝 반복기를 만듭니다. 그렇지 않은 경우 연산자는 저장된 값 `pos`를 증가시킵니다. 결과가 `subs.size()` 값과 같으면 저장된 값 `pos`를 0으로 설정하고 저장된 반복기 `it`를 증가시킵니다. 저장된 반복기의 증분 결과가 시퀀스의 끝 반복기와 같지 않은 경우 연산자가 추가 작업을 수행하지 않습니다. 이전 일치 항목의 끝이 문자 시퀀스의 끝에 있는 경우 연산자가 `pos`의 저장된 값을 `subs.size()`로 설정합니다. 또는 `pos == subs.size()` 또는 `subs[pos] == -1`까지 연산자가 저장된 값 `pos`를 반복적으로 증가시켜 인덱스 값 중 하나가 -1이면 반복기의 다음 역참조에서 문자 시퀀스의 테일이 반환되도록 합니다. 모든 경우에서 연산자는 개체를 반환합니다.  
   
  두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.  
   
@@ -668,7 +669,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
+##  <a name="op_eq_eq"></a>  regex_token_iterator::operator==  
  반복기가 같은지 비교합니다.  
   
 ```  
@@ -782,7 +783,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt"></a>  regex_token_iterator::operator-&gt;  
  지정된 부분 일치에 액세스합니다.  
   
 ```  
@@ -892,7 +893,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
+##  <a name="pointer"></a>  regex_token_iterator::pointer  
  일치 항목에 대한 포인터의 형식입니다.  
   
 ```  
@@ -1002,7 +1003,7 @@ match == z
 ### <a name="remarks"></a>설명  
  이 형식은 `sub_match<BidIt>*`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.  
   
-##  <a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
+##  <a name="reference"></a>  regex_token_iterator::reference  
  부분 일치에 대한 참조의 형식입니다.  
   
 ```  
@@ -1112,7 +1113,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
  반복기를 생성합니다.  
   
 ```  
@@ -1148,11 +1149,11 @@ regex_token_iterator(BidIt first, BidIt last,
 ### <a name="remarks"></a>설명  
  첫 번째 생성자는 시퀀스의 끝 반복기를 생성합니다.  
   
- 두 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 `submatch`값과 함께 정확히 하나의 정수를 보유하며, 저장된 값 `pos` 는&0;인 개체를 생성합니다. 참고: 결과 개체는 성공한 각 정규식 일치에 대해 인덱스 값 `submatch` 로 식별되는 부분 일치를 추출합니다.  
+ 두 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 `submatch`값과 함께 정확히 하나의 정수를 보유하며, 저장된 값 `pos` 는 0인 개체를 생성합니다. 참고: 결과 개체는 성공한 각 정규식 일치에 대해 인덱스 값 `submatch` 로 식별되는 부분 일치를 추출합니다.  
   
- 세 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 생성자 인수 `submatches`의 복사본을 보유하며, 저장된 값 `pos` 는&0;인 개체를 생성합니다.  
+ 세 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 생성자 인수 `submatches`의 복사본을 보유하며, 저장된 값 `pos` 는 0인 개체를 생성합니다.  
   
- 네 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 생성자 인수 `N` 가 가리키는 `submatches`값을 보유하며, 저장된 값 `pos` 는&0;인 개체를 생성합니다.  
+ 네 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 생성자 인수 `N` 가 가리키는 `submatches`값을 보유하며, 저장된 값 `pos` 는 0인 개체를 생성합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1254,7 +1255,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
+##  <a name="regex_type"></a>  regex_token_iterator::regex_type  
  일치 항목을 찾을 정규식의 형식입니다.  
   
 ```  
@@ -1364,7 +1365,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
+##  <a name="value_type"></a>  regex_token_iterator::value_type  
  부분 일치의 형식입니다.  
   
 ```  

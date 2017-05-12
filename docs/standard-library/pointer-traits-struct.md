@@ -19,6 +19,7 @@ f1_keywords:
 - xmemory0/std::pointer_traits
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
+- memory/std::pointer_traits::pointer_to
 dev_langs:
 - C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
@@ -40,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a5633fa4c9f45629d655edf922d40b02b68aaca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="pointertraits-struct"></a>pointer_traits 구조체
@@ -88,14 +90,14 @@ struct Ptr
   
 |이름|설명|  
 |----------|-----------------|  
-|[pointer_to](#pointer_traits__pointer_to_method)|클래스 `Ptr`의 개체에 대한 임의 참조를 변환합니다.|  
+|[pointer_to](#pointer_to)|클래스 `Ptr`의 개체에 대한 임의 참조를 변환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<memory>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namepointertraitspointertomethoda--pointerto"></a><a name="pointer_traits__pointer_to_method"></a>  pointer_to  
+##  <a name="pointer_to"></a>  pointer_to  
  해당 함수가 있는 경우 `Ptr::pointer_to(obj)`를 반환하는 정적 메서드입니다. 그렇지 않으면 클래스 `Ptr`의 개체에 대한 임의 참조를 변환할 수 없습니다. `Ptr`이 원시 포인터이면 이 메서드는 `addressof(obj)`를 반환합니다.  
   
 ```cpp  

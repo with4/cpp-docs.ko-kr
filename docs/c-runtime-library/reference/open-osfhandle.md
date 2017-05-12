@@ -1,50 +1,68 @@
 ---
-title: "_open_osfhandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_open_osfhandle"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_open_osfhandle"
-  - "open_osfhandle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "open_osfhandle 함수"
-  - "파일 핸들[C++], 연결"
-  - "_open_osfhandle 함수"
+title: _open_osfhandle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _open_osfhandle
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _open_osfhandle
+- open_osfhandle
+dev_langs:
+- C++
+helpviewer_keywords:
+- open_osfhandle function
+- file handles [C++], associating
+- _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _open_osfhandle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a201fa08f48198069df26c5c61944c99db73edf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
-기존 운영 체제 파일 핸들을 사용하는 C 런타임 파일 기술자 연합  
+---
+# <a name="openosfhandle"></a>_open_osfhandle
+C 런타임 파일 설명자를 기존 운영 체제 파일 핸들에 연결합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -54,48 +72,45 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `osfhandle`  
  운영 체제 파일 핸들입니다.  
   
  `flags`  
- 허용 된 작업의 유형입니다.  
+ 허용되는 연산의 유형입니다.  
   
-## 반환 값  
- 성공 하면, `_open_osfhandle` 는 C 런타임 파일 설명자를 반환 합니다.  그렇지 않으면 \-1이 반환됩니다.  
+## <a name="return-value"></a>반환 값  
+ 정상적으로 실행되면 `_open_osfhandle`은 C 런타임 파일 설명자를 반환합니다. 그렇지 않으면-1을 반환 합니다.  
   
-## 설명  
- `_open_osfhandle`  함수는 C 런타임 파일 설명자를 할당 하고  `osfhandle`  가 지정하는 운영 체제 파일 핸들을 사용하여 연걸합니다.  `flags` 인수는 Fcntl.h에 정의 된 매니페스트 상수 중 하나 이상에서 형성 하는 정수 식입니다.  둘 이상의 매니페스트 상수가 `flags` 인자를 형성하기 위해 사용될 때, 상수는 비트 단위 OR 연산자 \( 와 결합합니다.  **&#124;** \).  
+## <a name="remarks"></a>설명  
+ `_open_osfhandle` 함수는 C 런타임 파일 설명자를 할당하고 `osfhandle`에서 지정한 운영 체제 파일 핸들에 연결합니다. `flags` 인수는 Fcntl.h에 정의된 매니페스트 상수 중 하나 이상으로 구성된 정수 식입니다. 매니페스트 상수를 두 개 이상 사용하여 `flags` 인수를 구성하면 해당 상수는 비트 OR 연산자를 사용하여 결합됩니다(**&#124;**).  
   
- Fcntl.h 은 다음 매니페스트 상수를 정의합니다.  
+ Fcntl.h는 다음 매니페스트 상수를 정의합니다.  
   
- **\_O\_APPEND**  
- 매번 쓰기 작업을 하기 전에 파일의 끝에 파일 포인터를 설정합니다.  
+ **_O_APPEND**  
+ 모든 쓰기 작업 전에 파일 포인터를 파일 끝에 배치합니다.  
   
- **\_O\_RDONLY**  
- 파일을 읽기 전용으로 엽니다.  
+ **_O_RDONLY**  
+ 읽기 전용으로 파일을 엽니다.  
   
- **\_O\_TEXT**  
- 텍스트\(변환됨\) 모드에서 파일을 엽니다.  
+ **_O_TEXT**  
+ 파일을 텍스트(변환됨) 모드에서 엽니다.  
   
- **\_O\_WTEXT**  
- Unicode \(UTF\-16 으로 변환됨\) 모드에서 파일을 엽니다.  
+ **_O_WTEXT**  
+ 파일을 유니코드(변환된 UTF-16) 모드에서 엽니다.  
   
- `_open_osfhandle` 을 사용하여 열린 파일을 닫으려면 `_close` 을 호출하십시오.  기본 핸들도 `_close` 에 대한 호출로 닫힙니다. 따라서 원래 핸들에 대해 Win32 함수 `CloseHandle` 를 호출할 필요가 없습니다.  
+ `_open_osfhandle`을 사용하여 열린 파일을 닫으려면 `_close`를 호출합니다. 기본 핸들도 `_close`에 대한 호출에 의해 닫히므로 원래 핸들에 대해 Win32 함수 `CloseHandle`을 호출할 필요가 없습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_open_osfhandle`|\<io.h\>|  
+|-------------|---------------------|  
+|`_open_osfhandle`|\<io.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 해당 .NET Framework 항목  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)

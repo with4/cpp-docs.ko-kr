@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>매개 변수  
  `start`  
- 소스 문자열에 있는 모든 문자에 대한 포인터이거나 `_mbsdec` 및_`mbsdec_l`의 경우 모든 멀티바이트 문자의 첫 번째 바이트입니다. 소스 문자열에서는 `start`가 `current` 앞에 와야 합니다.  
+ 모든 문자에 대 한 포인터 (또는 `_mbsdec` 및 `_mbsdec_l`, 모든 멀티 바이트 문자의 첫 번째 바이트) 소스 문자열;의 `start` 앞에 야 `current` 소스 문자열의 합니다.  
   
  `current`  
- 소스 문자열에 있는 모든 문자에 대한 포인터이거나 `_mbsdec` 및_`mbsdec_l`의 경우 모든 멀티바이트 문자의 첫 번째 바이트입니다. 소스 문자열에서는 `current`가 `start` 뒤에 와야 합니다.  
+ 모든 문자에 대 한 포인터 (또는 `_mbsdec` 및 `_mbsdec_l`, 모든 멀티 바이트 문자의 첫 번째 바이트) 소스 문자열;의 `current` 따라야 `start` 소스 문자열의 합니다.  
   
  `locale`  
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_mbsdec`, _`mbsdec_l`, `_strdec` 및 `_wcsdec`는 각각 `current` 바로 앞에 오는 문자에 대한 포인터를 반환합니다. `start`의 값이 `current`의 값보다 크거나 같으면 `_mbsdec`는 `NULL`을 반환합니다. `_tcsdec`는 이러한 함수 중 하나에 매핑되며 해당 반환 값은 매핑에 따라 달라집니다.  
+ `_mbsdec``_mbsdec_l`, `_strdec`, 및 `_wcsdec` 바로 앞에 있는 문자에 대 한 포인터를 반환할 각 `current`; `_mbsdec` 반환 `NULL` 경우의 값 `start` 보다 크거나 같은 `current`합니다. `_tcsdec`는 이러한 함수 중 하나에 매핑되며 해당 반환 값은 매핑에 따라 달라집니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbsdec` 및 `_mbsdec_l` 함수는 `start`가 포함된 문자열에서 `current` 바로 앞에 있는 멀티바이트 문자의 첫 번째 바이트에 대한 포인터를 반환합니다.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

@@ -86,10 +86,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33fbfa70740b7a179aaf817ad61579d752d351ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9db9c684f27f2cae103cf3071332a5d7fa90e8d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
@@ -146,7 +147,7 @@ unsigned char *_mbsset_l(
 ## <a name="remarks"></a>설명  
  `_strset` 함수는 종료 null 문자를 제외한 `str`의 모든 문자를 `char`로 변환된 `c`로 설정합니다. `_wcsset` 및 `_mbsset_l`은 `_strset`의 와이드 문자 및 멀티바이트 문자 버전이며, 인수 및 반환 값의 데이터 형식은 버전에 따라 다릅니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.  
   
- `_mbsset`는 매개 변수의 유효성을 검사합니다. `str`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `_mbsset`는 `NULL`을 반환하고 `errno`를 `EINVAL`로 설정합니다. `_strset` 및 `_wcsset`는 매개 변수의 유효성을 검사하지 않습니다.  
+ `_mbsset`는 매개 변수의 유효성을 검사합니다. `str`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `_mbsset`는 `NULL`를 반환하고 `errno`를 `EINVAL`로 설정합니다. `_strset` 및 `_wcsset`는 매개 변수의 유효성을 검사하지 않습니다.  
   
  출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 로캘을 사용하고 `_l` 접미사가 있는 함수는 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고 이러한 함수의 버전은 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -195,9 +196,6 @@ int main( void )
 Before: Fill the string with something.  
 After:  *******************************  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

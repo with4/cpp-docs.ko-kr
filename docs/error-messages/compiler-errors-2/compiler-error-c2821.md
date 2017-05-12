@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2821 | Microsoft 문서"
+title: "컴파일러 오류 C2821 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 5a8000d7867ec7a18730a5d95538f21ffb3a0b2e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 774c191bb3da3c5382c4aff7d48c8d6ae5ca7e68
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2821"></a>컴파일러 오류 C2821
-첫 번째 형식 매개 변수 'new 연산자'를 '부호 없는 int' 여야 합니다.  
+'operator new' 첫 번째 형식 매개 변수 'unsigned int' 이어야 합니다.  
   
-첫 번째 형식 매개 변수는 [new 연산자](../../standard-library/new-operators.md#operator_new) 서명 되지 않은 여야 `int`합니다.  
+첫 번째 형식 매개 변수는 [new 연산자](../../standard-library/new-operators.md#op_new) 서명 되지 않은 여야 `int`합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C2821 오류가 생성 됩니다.  

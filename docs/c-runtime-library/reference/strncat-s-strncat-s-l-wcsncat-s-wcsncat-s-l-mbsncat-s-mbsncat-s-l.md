@@ -1,76 +1,93 @@
 ---
-title: "strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsncat_s_l"
-  - "wcsncat_s"
-  - "_mbsncat_s_l"
-  - "_mbsncat_s"
-  - "strncat_s"
-  - "_strncat_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strncat_s_l"
-  - "_mbsncat_s_l"
-  - "_tcsncat_s"
-  - "wcsncat_s"
-  - "wcsncat_s_l"
-  - "strncat_s"
-  - "_mbsncat_s"
-  - "_tcsncat_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsncat_s 함수"
-  - "_mbsncat_s_l 함수"
-  - "_tcsncat_s 함수"
-  - "_tcsncat_s_l 함수"
-  - "문자열 추가"
-  - "문자열 연결"
-  - "mbsncat_s 함수"
-  - "mbsncat_s_l 함수"
-  - "문자열 연결[C++]"
-  - "문자열[C++], 추가"
-  - "strncat_s 함수"
-  - "strncat_s_l 함수"
-  - "wcsncat_s 함수"
-  - "wcsncat_s_l 함수"
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsncat_s_l
+- wcsncat_s
+- _mbsncat_s_l
+- _mbsncat_s
+- strncat_s
+- _strncat_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strncat_s_l
+- _mbsncat_s_l
+- _tcsncat_s
+- wcsncat_s
+- wcsncat_s_l
+- strncat_s
+- _mbsncat_s
+- _tcsncat_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- _mbsncat_s function
+- mbsncat_s_l function
+- _tcsncat_s function
+- _mbsncat_s_l function
+- strncat_s function
+- strings [C++], appending
+- strncat_s_l function
+- string concatenation [C++]
+- _tcsncat_s_l function
+- wcsncat_s function
+- appending strings
+- wcsncat_s_l function
+- mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
 caps.latest.revision: 42
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 42
----
-# strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 18f40484e5af5033d8a9093dd18137a884c6d531
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-문자열에 문자를 추가합니다.  이러한 버전의 [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 향상 기능이 포함됩니다.  
+---
+# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
+문자열에 문자를 추가합니다. 이러한 버전의 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
   
 > [!IMPORTANT]
->  `_mbsncat_s` 와 `_mbsncat_s_l` 는 Windows 런타임에서 실행되는 어플리케이션에서는 사용될 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbsncat_s` 및 `_mbsncat_s_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 errno_t strncat_s(  
@@ -153,37 +170,37 @@ errno_t _mbsncat_s_l(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
- \[out\] `strDest`  
- Null\-종료된 대상 문자열.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `strDest`  
+ Null 종료 대상 문자열입니다.  
   
- \[in\]`numberOfElements`  
+ [in]`numberOfElements`  
  대상 버퍼의 크기입니다.  
   
- \[in\]`strSource`  
+ [in]`strSource`  
  Null 종료 소스 문자열입니다.  
   
- \[in\]`count`  
- 추가 혹은 [\_TRUNCATE](../../c-runtime-library/truncate.md) 할 문자 수입니다.  
+ [in]`count`  
+ 추가할 문자 수 또는 [_TRUNCATE](../../c-runtime-library/truncate.md)입니다.  
   
- \[in\] `locale`  
+ [in] `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 성공 시 0을 반환하고, 실패 시 오류 코드입니다.  
+## <a name="return-value"></a>반환 값  
+ 정상적으로 실행되는 경우 0을 반환하고 오류 시에는 오류 코드를 반환합니다.  
   
-### 오류 조건  
+### <a name="error-conditions"></a>오류 조건  
   
-|`strDestination`|`numberOfElements`|`strSource`|반환 값|`strDestination`의 내용입니다.|  
-|----------------------|------------------------|-----------------|----------|------------------------------|  
-|`NULL` 나 종료 되지 않은|any|any|`EINVAL`|수정 안 됨|  
-|any|any|`NULL`|`EINVAL`|수정 안 됨|  
-|any|0 또는 너무 작습니다.|any|`ERANGE`|수정 안 됨|  
+|`strDestination`|`numberOfElements`|`strSource`|반환 값|`strDestination`의 내용|  
+|----------------------|------------------------|-----------------|------------------|----------------------------------|  
+|`NULL` 또는 종료되지 않음|any|모두|`EINVAL`|수정 안 됨|  
+|any|모두|`NULL`|`EINVAL`|수정 안 됨|  
+|any|0 또는 너무 작음|모두|`ERANGE`|수정 안 됨|  
   
-## 설명  
- 이러한 함수는, `D` 이 `count` 과 `strSource` 길이 보더 더 적은 곳에 있는 , `strDest` 의 끝에 있는 `strSource` 의 첫 `D` 문자를 추가를 시도합니다.  그 `D` 문자가 \( `numberOfElements`로 크기가 지정된\) `strDest` 내부에 꽉 맞거나 null 종료 공간에서 여전히 떠날 수 있는 경우, 그러면 그 문자는 추가되고, `strDest`의 원래 null 종료로 시작하고, 새로운 종료 nul은 추가됩니다; 그렇지 않으면, `strDest`\[0\]은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)로 설명한데로 null문자와 유효하지 않는 매개 변수 처리기를 추가되고 설정합니다.  
+## <a name="remarks"></a>설명  
+ 이러한 함수는 `strSource`의 처음 `D`자를 `strDest`의 끝에 추가하려고 합니다. 여기서 `D`는 `count`와 `strSource`의 길이 중 더 작은 값입니다. 이 `D`자를 `strDest`(해당 크기는 `numberOfElements`로 제공됨) 내에 추가한 후에도 null 종결자를 위한 공간이 남으면 `strDest`의 원래 종료 null에서부터 해당 문자가 추가되며 새 종료 null이 추가됩니다. 그렇지 않으면 `strDest`[0]은 null 문자로 설정되고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  
   
- 위의 단락에 예외가 있습니다.  만약 `count` 이 [\_TRUNCATE](../../c-runtime-library/truncate.md) 인 경우 종료 null 이 추가되는 공간을 여전히 남겨둔 체 그러면 맞춤에 `strSource` 가 `strDest` 가 추가되는 것이 많습니다.  
+ 위 단락의 설명에는 예외가 적용됩니다. `count`가 [_TRUNCATE](../../c-runtime-library/truncate.md)이면 `strDest`에 추가할 수 있는 만큼의 `strSource`가 추가되며 종료 null을 위한 공간을 남겨 둡니다.  
   
  예를 들면 다음과 같습니다.  
   
@@ -193,9 +210,9 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", 3);`  
   
- 다섯 문자의 길이 버퍼안의 두 문자에서 세 문자로 추가된 `strncat_s` 의미합니다; 이는 null 종결자의 공간 없이 떠날 수 없으므로, `strncat_s` 0은 문자열을 출력하고 잘못된 매개 변수 처리기를 호출합니다.  
+ 위의 코드는 5바이트 길이의 버퍼에 있는 2자에 3자를 추가하도록 `strncat_s`에 명령함을 의미합니다. 이렇게 하면 null 종결자를 위한 공간이 남지 않으므로, `strncat_s`는 문자열을 0으로 설정하고 잘못된 매개 변수 처리기를 호출합니다.  
   
- 잘라내기 동작이 필요한 경우, `_TRUNCATE` 을 사용하거나 `size` 매개 변수가 덧붙여져 조정합니다 :  
+ 잘라내기 동작이 필요한 경우 `_TRUNCATE`를 사용하거나 `size` 매개 변수를 적절하게 조정합니다.  
   
  `strncat_s(dst, _countof(dst), "34567", _TRUNCATE);`  
   
@@ -203,38 +220,38 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);`  
   
- 모든 경우에서, 결과 문자열은 null 문자로 종료 됩니다.  중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
+ 모든 경우 결과 문자열은 null 문자로 종료됩니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
   
- 이 `strSource` 혹은 `strDest` 이 `NULL` 이거나 `numberOfElements` 이 0인 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  실행이 계속 허용되지 않는 경우, 함수는 매개 변수가 수정됨이 없이 `EINVAL` 을 반환합니다.  
+ `strSource` 또는 `strDest`가 `NULL`이거나 `numberOfElements`가 0인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 함수는 매개 변수를 수정하지 않고 `EINVAL`을 반환합니다.  
   
- `wcsncat_s` 및 `_mbsncat_s` 는 와이드 문자 및 `strncat_s`의 멀티 바이트 문자 버전입니다.  이 `wcsncat_s` 의 인수 및 반환 값은 와이드 문자열이며, `_mbsncat_s` 는 멀티바이트 문자열입니다.  그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
+ `wcsncat_s` 및 `_mbsncat_s`는 `strncat_s`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcsncat_s`의 문자열 인수 및 반환 값은 와이드 문자열이며 `_mbsncat_s`의 문자열 인수와 반환 값은 멀티바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하십시오.  `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.  자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하십시오.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
- C\+\+에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며\(크기 인수를 지정할 필요가 없어짐\), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다.  자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)을 참조하십시오.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
- 이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다.  이 동작을 사용하지 않으려면 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하십시오.  
+ 이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncat_s`|`strncat_s`|`_mbsnbcat_s`|`wcsncat_s`|  
 |`_tcsncat_s_l`|`_strncat_s_l`|`_mbsnbcat_s_l`|`_wcsncat_s_l`|  
   
- `_strncat_s_l` 및 `_wcsncat_s_l` 은 로캘 의존성이 없습니다; 이들은 `_tcsncat_s_l` 만 제공됩니다.  
+ `_strncat_s_l` 및 `_wcsncat_s_l`은 로캘에 종속되지 않으며 `_tcsncat_s_l`용으로만 제공됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`strncat_s`|\<string.h\>|  
-|`wcsncat_s`|\<string.h\> 또는 \<wchar.h\>|  
-|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncat_s`|\<string.h>|  
+|`wcsncat_s`|\<string.h> 또는 \<wchar.h>|  
+|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
   
- 추가 호환성 정보는 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_strncat_s.cpp  
@@ -334,46 +351,54 @@ int main( void )
 }  
 ```  
   
-  **'그'의 4 자를 10 바이트 버퍼를 대상에 추가**  
- **대상의 이전 내용: 'hi '**  
- **대상의 새로운 내용: 'hi ther'**  
-**'그'의 5 자를 10 바이트 버퍼를 대상에 추가**  
- **대상의 이전 내용: 'hi '**  
- **대상의 새로운 내용: 'hi there'**  
-**'그'의 6 자를 10 바이트 버퍼를 대상에 추가**  
- **대상의 이전 내용: 'hi '**  
- **대상의 새로운 내용: 'hi there'**  
-**대상 버퍼가 너무 작습니다.**  
-**'그'의 4 자를 10 바이트 버퍼를 대상에 추가**  
- **대상의 이전 내용: 'hello '**  
-**잘못 된 매개 변수 처리기를 호출 합니다. \(L "버퍼가 너무 작습니다" && 0\)**  
- **대상의 새로운 내용: "**  
-**잘라내기의 예제:**  
-**잘림 기능을 사용하여 10 바이트 버퍼 dest에 '존재' 추가**  
- **대상의 이전 내용: 'hello '**  
- **대상의 새로운 내용: 'hello the'**  
- **잘림이 발생 했습니다**  
-**잘림 기능을 사용하여 10 바이트 버퍼 dest에 '\!' 추가**  
- **대상의 이전 내용: 'hello '**  
- **대상의 새로운 내용: 'hello \!'**  
- **잘림이 발생하지 않았습니다.**  
-**오버 로드 템플릿 보호 예제:**  
-**잘못 된 매개 변수 처리기를 호출 합니다. \(L "버퍼가 너무 작습니다" && 0\)**  
- **대상의 새로운 내용: "**   
-## 해당 .NET Framework 항목  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
+```Output  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi ther'  
   
-## 참고 항목  
+Appending 5 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Appending 6 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Destination buffer too small:  
+  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hello '  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+Appending 'there' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello the'  
+    truncation did occur  
+  
+Appending '!' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello !'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
  [로캘](../../c-runtime-library/locale.md)   
  [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

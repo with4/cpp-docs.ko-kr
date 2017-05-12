@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7cba068af7ec6f14970d174d2b3e9b4121d7c40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  이러한 각 함수는 null 종결 문자를 제외하고 `str`에 있는 문자의 수를 반환합니다. 그러나 `strnlen` 및 `strnlen_s`는 싱글바이트 문자열로 문자열을 해석하므로 문자열에 멀티바이트 문자가 포함되어 있더라도 반환 값은 항상 바이트 수와 동일합니다. `wcsnlen` 및 `wcsnlen_s`는 각각 `strnlen`과 `strnlen_s`의 와이드 문자 버전입니다.`wcsnlen` 및 `wcsnlen_s`의 인수는 와이드 문자열이고 문자 수는 와이드 문자 단위로 표시됩니다. 그렇지 않으면 `wcsnlen`과 `strnlen`은 `strnlen_s` 및 `wcsnlen_s`와 동일하게 작동합니다.  
   
- `strnlen`, `wcsnlen,` 및 `_mbsnlen`은 자신의 매개 변수에 대한 유효성을 검사하지 않습니다. `str`이 `NULL`인 경우 액세스 위반이 발생합니다.  
+ `strnlen``wcsnlen`, 및 `_mbsnlen` 매개 변수를 확인 하지 않습니다. `str`이 `NULL`인 경우 액세스 위반이 발생합니다.  
   
  `strnlen_s` 및 `wcsnlen_s`는 자신의 매개 변수에 대한 유효성을 검사합니다. `str`이 `NULL`인 경우 함수는 0을 반환합니다.  
   
@@ -188,9 +189,8 @@ size_t _mbstrnlen_l(
   
 ## <a name="example"></a>예제  
   
-```  
-  
-      // crt_strnlen.c  
+```C  
+// crt_strnlen.c  
   
 #include <string.h>  
   
@@ -224,9 +224,6 @@ than the maximum size specified, the maximum size is
 returned rather than the actual size of the string.  
  Length: 100   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

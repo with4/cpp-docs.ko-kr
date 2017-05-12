@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이러한 각 함수는 `str`*에서 다음 문자의 정수값을 반환합니다.*  
+ 다음 문자가의 정수 값을 반환 이러한 각 함수 `str`합니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbsnextc` 함수는 문자열 포인터를 이동하지 않고 `str`에서 다음 멀티바이트 문자의 정수값을 반환합니다. `_mbsnextc`는 현재 사용 중인 [멀티바이트 코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티바이트 문자 시퀀스를 인식합니다.  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` 및 `_wcsnextc`는 `_mbsnextc`의 싱글바이트 문자열 및 와이드 문자열 버전입니다. `_wcsnextc`는 `string`에 있는 다음 와이드 문자의 정수값을 반환하고 `_strnextc`는 `string`에 있는 다음 싱글바이트 문자의 정수값을 반환합니다. `_strnextc` 및 `_wcsnextc`는 이러한 매핑을 위해서만 제공되고 그 외에는 사용하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
+ `_strnextc`및 `_wcsnextc` 단일 바이트 문자 문자열 및 버전의 와이드 문자 문자열 `_mbsnextc`합니다. `_wcsnextc`는 `string`에 있는 다음 와이드 문자의 정수값을 반환하고 `_strnextc`는 `string`에 있는 다음 싱글바이트 문자의 정수값을 반환합니다. `_strnextc` 및 `_wcsnextc`는 이러한 매핑을 위해서만 제공되고 그 외에는 사용하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
   
  `_mbsnextc_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -139,9 +140,6 @@ unsigned int _mbsnextc_l(
 |`_wcsnextc`|\<tchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

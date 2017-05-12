@@ -10,12 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - reference_wrapper
-- std::reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
 - type_traits/std::reference_wrapper::get
 - type_traits/std::reference_wrapper::operator()
+- functional/std::reference_wrapper::result_type
+- functional/std::reference_wrapper::type
+- functional/std::reference_wrapper::get
+- functional/std::reference_wrapper::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
-ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 클래스
@@ -76,39 +80,39 @@ private:
   
 `Ty` 형식은 개체 형식 또는 함수 형식이어야 하며, 그렇지 않으면 컴파일 시간에 정적 어설션이 실패합니다.  
   
-도우미 함수 [std::ref](functional-functions.md#ref_function) 및 [std::cref](functional-functions.md#cref_function)를 사용하여 `reference_wrapper` 개체를 만들 수 있습니다.  
+도우미 함수 [std::ref](functional-functions.md#ref) 및 [std::cref](functional-functions.md#cref)를 사용하여 `reference_wrapper` 개체를 만들 수 있습니다.  
   
 ### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[reference_wrapper::reference_wrapper](#reference_wrapper)|`reference_wrapper`를 생성합니다.|  
+|[reference_wrapper](#reference_wrapper)|`reference_wrapper`를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[reference_wrapper::result_type](#result_type)|래핑된 참조의 약한 결과 형식입니다.|  
-|[reference_wrapper::type](#type)|래핑된 참조 형식입니다.|  
+|[result_type](#result_type)|래핑된 참조의 약한 결과 형식입니다.|  
+|[형식](#type)|래핑된 참조 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[reference_wrapper::get](#get)|래핑된 참조를 가져옵니다.|  
+|[get](#get)|래핑된 참조를 가져옵니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|래핑된 참조에 대한 포인터를 가져옵니다.|  
-|[reference_wrapper::operator()](#operator_call)|래핑된 참조를 호출합니다.|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|래핑된 참조에 대한 포인터를 가져옵니다.|  
+|[reference_wrapper::operator()](#op_call)|래핑된 참조를 호출합니다.|  
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a>  reference_wrapper::get  
+##  <a name="get"></a>  reference_wrapper::get  
  래핑된 참조를 가져옵니다.  
   
 ```  
@@ -145,7 +149,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a>  reference_wrapper::operator Ty&amp;  
+##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
  래핑된 참조를 가져옵니다.  
   
 ```  
@@ -179,7 +183,7 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a>  reference_wrapper::operator()  
+##  <a name="op_call"></a>  reference_wrapper::operator()  
  래핑된 참조를 호출합니다.  
   
 ```  
@@ -222,7 +226,7 @@ int main() {
 rwi(3) = -3  
 ```  
   
-##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
+##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
  `reference_wrapper`를 생성합니다.  
   
 ```  
@@ -270,7 +274,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a>  reference_wrapper::result_type  
+##  <a name="result_type"></a>  reference_wrapper::result_type  
  래핑된 참조의 약한 결과 형식입니다.  
   
 ```  
@@ -307,7 +311,7 @@ int main() {
 val = -3  
 ```  
   
-##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a>  reference_wrapper::type  
+##  <a name="type"></a>  reference_wrapper::type  
  래핑된 참조 형식입니다.  
   
 ```  
@@ -348,7 +352,7 @@ rwi = 1
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [cref 함수](../standard-library/functional-functions.md#cref_function)   
- [ref 함수](../standard-library/functional-functions.md#ref_function)
+ [cref](../standard-library/functional-functions.md#cref)   
+ [ref](../standard-library/functional-functions.md#ref)
 
 
