@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2218210801bff38094d06d96736a7f05f7be29cf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9814916e32878a1e1a11f534fce64aeaf2f6a57e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
@@ -108,9 +109,9 @@ wchar_t *_wgetcwd_dbg(
  자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- `_getcwd_dbg`이 첫 번째 매개 변수로 전달된 경우 _`_wgetcwd_dbg`가 정의되면 이러한 함수가 `_getcwd` 및 `_wgetcwd`의 디버그 버전을 사용하여 메모리를 할당한다는 점을 제외하면 `DEBUG` 및 `malloc` 함수는 `_malloc_dbg` 및 `NULL`와 동일합니다. 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
+ `_getcwd_dbg` 및 `_wgetcwd_dbg` 함수는 동일 `_getcwd` 및 `_wgetcwd` 점을 제외 하 고, `_DEBUG` 는 디버그 버전의를 사용 하 여 이러한 함수를 정의 `malloc` 및 `_malloc_dbg` 메모리를 할당 하는 경우 `NULL` 첫 번째 매개 변수로 전달 됩니다. 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
   
- 대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`를 정의하면 `_getcwd` 및 `_wgetcwd`에 대한 호출이 각각 `_getcwd_dbg` 및 `_wgetcwd_dbg`로 매핑되고 `blockType`이 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
+ 대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`을 정의하면 `_getcwd` 및 `_wgetcwd`에 대한 호출이 각각 `_getcwd_dbg` 및 `_wgetcwd_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
 ## <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -126,9 +127,6 @@ wchar_t *_wgetcwd_dbg(
 |`_wgetcwd_dbg`|\<crtdbg.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- <xref:System.Environment.CurrentDirectory%2A>  
   
 ## <a name="see-also"></a>참고 항목  
  [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

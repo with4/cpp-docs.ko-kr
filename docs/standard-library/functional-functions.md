@@ -9,41 +9,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::bind
 - functional/std::bind
-- std::bind1st
 - functional/std::bind1st
-- std::bind2nd
 - functional/std::bind2nd
-- std::bit_and
 - functional/std::bit_and
-- std::bit_not
 - functional/std::bit_not
-- std::bit_or
 - functional/std::bit_or
-- std::bit_xor
 - functional/std::bit_xor
-- std::cref
 - functional/std::cref
 - type_traits/std::cref
-- std::mem_fn
 - functional/std::mem_fn
-- std::mem_fun
 - functional/std::mem_fun
-- std::mem_fun_ref
 - functional/std::mem_fun_ref
-- std::not1
 - functional/std::not1
-- std::not2
 - functional/std::not2
-- std::ptr_fun
 - functional/std::ptr_fun
-- std::ref
 - functional/std::ref
 - type_traits/std::ref
-- std::swap
 - functional/std::swap
 - type_traits/std::swap
+- functional/std::bind
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
+- functional/std::cref
+- functional/std::mem_fn
+- functional/std::mem_fun
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::ptr_fun
+- functional/std::ref
+- functional/std::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -53,23 +53,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9437109e3e03f2b8bfb39bf2b4ca75e520b59c80
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 함수
 ||||  
 |-|-|-|  
-|[bind](#bind_function)|[bind1st](#bind1st_function)|[bind2nd](#bind2nd_function)|  
-|[bit_and](#bit_and_function)|[bit_not](#bit_not_function)|[bit_or](#bit_or_function)|  
-|[bit_xor](#bit_xor_function)|[cref](#cref_function)|[mem_fn](#mem_fn_function)|  
-|[mem_fun](#mem_fun_function)|[mem_fun_ref](#mem_fun_ref_function)|[not1](#not1_function)|  
-|[not2](#not2_function)|[ptr_fun](#ptr_fun_function)|[ref](#ref_function)|  
-|[swap](#swap_function)|  
+|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
+|[swap](#swap)|  
   
-##  <a name="a-namebindfunctiona--bind"></a><a name="bind_function"></a>  bind  
+##  <a name="bind"></a>  bind  
  호출 가능 개체에 인수를 바인딩합니다.  
   
 ```  
@@ -96,7 +97,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ### <a name="remarks"></a>설명  
  `Fty, T1, T2, ..., TN` 형식은 복사를 통해 생성할 수 있어야 하고 `INVOKE(fn, t1, ..., tN)`은 일부 값 `w1, w2, ..., wN`에 대한 유효한 식이어야 합니다.  
   
- 첫 번째 템플릿 함수는 약한 결과 형식이 포함된 전달 호출 래퍼 `g`를 반환합니다. `g(u1, u2, ..., uM)`의 결과는 `INVOKE(f, v1, v2, ..., vN,` [result_of](../standard-library/result-of-class.md)`<Fty` `cv` `(V1, V2, ..., VN)>::type)`입니다. 여기서 `cv`는 `g`의 cv 한정자이고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정된 대로 결정됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록이 포함된 호출 가능 개체가 생성됩니다.  
+ 첫 번째 템플릿 함수는 약한 결과 형식이 포함된 전달 호출 래퍼 `g`를 반환합니다. 효과 `g(u1, u2, ..., uM)` 은 `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`여기서 `cv` 의 cv 한정자는 `g` 바인딩된 인수 형식 및 값 `v1, v2, ..., vN` 아래 지정 된 대로 결정 됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록이 포함된 호출 가능 개체가 생성됩니다.  
   
  두 번째 템플릿 함수는 `Ret`의 동의어인 중첩된 형식 `result_type`이 포함된 전달 호출 래퍼 `g`를 반환합니다. `g(u1, u2, ..., uM)`의 결과는 `INVOKE(f, v1, v2, ..., vN, Ret)`입니다. 여기서 `cv`는 `g`의 cv 한정자이고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정된 대로 결정됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록 및 지정된 반환 형식이 포함된 호출 가능 개체가 생성됩니다.  
   
@@ -106,7 +107,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
   
  `std::is_bind_expression<Ti>::value` 값이 `true`인 경우 `vi` 인수의 값은 `ti(u1, u2, ..., uM)`이고 해당 형식 `Vi`의 값은 `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`입니다.  
   
- `std::is_placeholder<Ti>::value`의 `j` 값이&0;이 아닌 경우 `vi` 인수의 값은 `uj`이고 해당 형식 `Vi`의 값은 `Uj&`입니다.  
+ `std::is_placeholder<Ti>::value`의 `j` 값이 0이 아닌 경우 `vi` 인수의 값은 `uj`이고 해당 형식 `Vi`의 값은 `Uj&`입니다.  
   
  이외의 경우에는 `vi` 인수의 값은 `ti`이고 해당 형식 `Vi`의 값은 `Ti` `cv` `&`입니다.  
   
@@ -168,7 +169,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="a-namebind1stfunctiona--bind1st"></a><a name="bind1st_function"></a>  bind1st  
+##  <a name="bind1st"></a>  bind1st  
  이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.  
   
 ```  
@@ -180,11 +181,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
  `func`  
  단항 함수 개체로 변환할 이항 함수 개체입니다.  
   
- ` left`  
+ `left`  
  이항 함수 개체의 첫 번째 인수가 바인딩되는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이항 함수 개체의 첫 번째 인수를 ` left.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.  
+ 이진 함수 개체의 첫 번째 인수는 값에 바인딩할 결과인 개체를 단항 함수 `left`합니다.  
   
 ### <a name="remarks"></a>설명  
  함수 바인더는 일종의 함수 어댑터이고, 함수 개체를 반환할 경우 특정 형식의 함수 컴퍼지션에서 더 복잡하고 강력한 식을 생성하는 데 사용될 수 있습니다.  
@@ -258,7 +259,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebind2ndfunctiona--bind2nd"></a><a name="bind2nd_function"></a>  bind2nd  
+##  <a name="bind2nd"></a>  bind2nd  
  이항 함수의 두 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.  
   
 ```  
@@ -270,11 +271,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
  `func`  
  단항 함수 개체로 변환할 이항 함수 개체입니다.  
   
- ` right`  
+ `right`  
  이항 함수 개체의 두 번째 인수가 바인딩되는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이항 함수 개체의 두 번째 인수를 ` right.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.  
+ 이항 함수 개체의 두 번째 인수는 값에 바인딩할 결과인 단항 함수 개체로 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
  함수 바인더는 일종의 함수 어댑터이고, 함수 개체를 반환할 경우 특정 형식의 함수 컴퍼지션에서 더 복잡하고 강력한 식을 생성하는 데 사용될 수 있습니다.  
@@ -348,7 +349,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebitandfunctiona--bitand"></a><a name="bit_and_function"></a>  bit_and  
+##  <a name="bit_and"></a>  bit_and  
  인수에 대해 비트 AND 연산(이항 `operator&`)을 수행하는 사전 정의된 함수 개체입니다.  
   
 ```  
@@ -370,14 +371,14 @@ struct bit_and<void>
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  지정되었거나 유추된 형식의 피연산자를 가져오는 `operator&`를 지원하는 모든 형식입니다.  
   
  `Left`  
- 비트 AND 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 AND 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
  `Right`  
- 비트 AND 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 AND 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `Left``&``Right`의 결과입니다. 특수화된 템플릿은 `operator&`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
@@ -385,7 +386,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>설명  
  `bit_and` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator&`를 구현하는 사용자 정의 형식으로 제한됩니다.  
   
-##  <a name="a-namebitnotfunctiona--bitnot"></a><a name="bit_not_function"></a>  bit_not  
+##  <a name="bit_not"></a>  bit_not  
  인수에 대해 비트 보수(NOT) 연산(이항 `operator~`)을 수행하는 사전 정의된 함수 개체입니다.  
   
 ```  
@@ -417,7 +418,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>설명  
  `bit_not` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator~`를 구현하는 사용자 정의 형식으로 제한됩니다.  
   
-##  <a name="a-namebitorfunctiona--bitor"></a><a name="bit_or_function"></a>  bit_or  
+##  <a name="bit_or"></a>  bit_or  
  인수에 대해 비트 OR 연산(`operator|`)을 수행하는 사전 정의된 함수 개체입니다.  
   
 ```  
@@ -439,14 +440,14 @@ struct bit_or<void>
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  지정되었거나 유추된 형식의 피연산자를 가져오는 `operator|`를 지원하는 모든 형식입니다.  
   
  `Left`  
- 비트 OR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 OR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
  `Right`  
- 비트 OR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 OR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `Left``|``Right`의 결과입니다. 특수화된 템플릿은 `operator|`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
@@ -454,7 +455,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>설명  
  `bit_or` 함수는 기본 데이터 형식에 대한 필수 형식이나 `operator|`를 구현하는 사용자 정의 형식으로 제한됩니다.  
   
-##  <a name="a-namebitxorfunctiona--bitxor"></a><a name="bit_xor_function"></a>  bit_xor  
+##  <a name="bit_xor"></a>  bit_xor  
  인수에 대해 비트 XOR 연산(이항 `operator^`)을 수행하는 사전 정의된 함수 개체입니다.  
   
 ```  
@@ -476,14 +477,14 @@ struct bit_xor<void>
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  지정되었거나 유추된 형식의 피연산자를 가져오는 `operator^`를 지원하는 모든 형식입니다.  
   
  `Left`  
- 비트 XOR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 XOR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
  `Right`  
- 비트 XOR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 ` U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ 비트 XOR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `Left``^``Right`의 결과입니다. 특수화된 템플릿은 `operator^`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
@@ -491,7 +492,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>설명  
  `bit_xor` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator^`를 구현하는 사용자 정의 형식으로 제한됩니다.  
   
-##  <a name="a-namecreffunctiona--cref"></a><a name="cref_function"></a>  cref  
+##  <a name="cref"></a>  cref  
  인수에서 const `reference_wrapper`를 생성합니다.  
   
 ```  
@@ -545,7 +546,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="a-namememfnfunctiona--memfn"></a><a name="mem_fn_function"></a>  mem_fn  
+##  <a name="mem_fn"></a>  mem_fn  
  단순 호출 래퍼를 생성합니다.  
   
 ```  
@@ -606,7 +607,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="a-namememfunfunctiona--memfun"></a><a name="mem_fun_function"></a>  mem_fun  
+##  <a name="mem_fun"></a>  mem_fun  
  포인터 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.  
   
 ```  
@@ -690,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namememfunreffunctiona--memfunref"></a><a name="mem_fun_ref_function"></a>  mem_fun_ref  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  참조 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.  
   
 ```  
@@ -792,7 +793,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="a-namenot1functiona--not1"></a><a name="not1_function"></a>  not1  
+##  <a name="not1"></a>  not1  
  단항 조건자의 보수를 반환합니다.  
   
 ```  
@@ -801,7 +802,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` pred`  
+ `pred`  
  부정할 단항 조건자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -860,7 +861,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="a-namenot2functiona--not2"></a><a name="not2_function"></a>  not2  
+##  <a name="not2"></a>  not2  
  이항 조건자의 보수를 반환합니다.  
   
 ```  
@@ -932,7 +933,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="a-nameptrfunfunctiona--ptrfun"></a><a name="ptr_fun_function"></a>  ptr_fun  
+##  <a name="ptr_fun"></a>  ptr_fun  
  단항 및 이항 함수 포인터를 각각 조정 가능한 단항 및 이항 함수로 변환하는 데 사용되는 도우미 템플릿 함수입니다.  
   
 ```  
@@ -958,7 +959,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>예제  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="a-namereffunctiona--ref"></a><a name="ref_function"></a>  ref  
+##  <a name="ref"></a>  ref  
  인수에서 `reference_wrapper` 를 생성합니다.  
   
 ```  
@@ -1047,7 +1048,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  두 `function` 개체를 교환합니다.  
   
 ```  

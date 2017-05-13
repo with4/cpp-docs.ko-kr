@@ -6,13 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ostream/std::swap
+- ostream/std::endl
+- ostream/std::ends
+- ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
 caps.latest.revision: 15
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 44708461657101b1ddad7db76f1c3c8d4df07f3a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 89eebd013c08f52175e5e4038b501d4ce572e55a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 함수
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[swap](#swap)|[endl](#endl)|[ends](#ends)|  
 |[flush](#flush)|  
   
-##  <a name="a-nameendla--endl"></a><a name="endl"></a>  endl  
+##  <a name="endl"></a>  endl  
  줄을 종료하고 버퍼를 플러시합니다.  
   
 ```  
@@ -42,7 +48,7 @@ template class<Elem, Tr> basic_ostream<Elem, Tr>& endl(basic_ostream<Elem, Tr>& 
  `basic_ostream` 형식의 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#basic_ios__widen)( **'\n'**))을 호출한 다음 `Ostr`**.** [flush](../standard-library/basic-ostream-class.md#basic_ostream__flush)를 호출하고 `Ostr`를 반환합니다.  
+ 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**))을 호출한 다음 `Ostr`**.** [flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -62,7 +68,7 @@ int main( )
 testing  
 ```  
   
-##  <a name="a-nameendsa--ends"></a><a name="ends"></a>  ends  
+##  <a name="ends"></a>  ends  
  문자열을 종료합니다.  
   
 ```  
@@ -83,7 +89,7 @@ template class<Elem, Tr> basic_ostream<Elem, Tr>& ends(basic_ostream<Elem, Tr>& 
  `basic_ostream` 형식의 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `Elem`( **'\0'**))을 호출하고 `Ostr.`을 반환합니다.  
+ 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**))을 호출하고 `Ostr.`을 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -105,7 +111,7 @@ int main( )
 ab c  
 ```  
   
-##  <a name="a-nameflusha--flush"></a><a name="flush"></a>  flush  
+##  <a name="flush"></a>  flush  
  버퍼를 플러시합니다.  
   
 ```  
@@ -126,7 +132,7 @@ template class<Elem, Tr> basic_ostream<Elem, Tr>& flush(basic_ostream<Elem, Tr>&
  `basic_ostream` 형식의 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#basic_ostream__flush)를 호출하고 `Ostr`를 반환합니다.  
+ 조작자는 `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -146,7 +152,7 @@ int main( )
 testing  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  두 `basic_ostream` 개체의 값을 교환합니다.  
   
 ```  
@@ -157,14 +163,14 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  `basic_ostream` 개체에 대한 lvalue 참조입니다.  
   
- ` right`  
+ `right`  
  `basic_ostream` 개체에 대한 lvalue 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 템플릿 함수 `swap`은 ` left.swap(`` right``)`을 실행합니다.  
+ 템플릿 함수 `swap`은 `left.swap(right)`을 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [\<ostream>](../standard-library/ostream.md)

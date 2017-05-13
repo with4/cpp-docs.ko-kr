@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
@@ -109,9 +110,9 @@ wchar_t *_wfullpath_dbg(
  각 함수는 절대 경로 이름(`absPath`)이 포함된 버퍼에 대한 포인터를 반환합니다. 오류가 있는 경우(예: `relPath`에서 전달된 값에 잘못되었거나 찾을 수 없는 드라이브 문자가 포함된 경우 또는 작성된 절대 경로 이름(`absPath`)의 길이가 `maxLength`보다 큰 경우) 함수는 `NULL`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- NULL이 첫 번째 매개 변수로 전달된 경우 **_**`DEBUG`가 정의되면 이러한 함수가 , `malloc`, `_malloc_dbg`의 디버그 버전을 사용하여 메모리를 할당한다는 점을 제외하면 `_fullpath_dbg` 및 `_wfullpath_dbg` 함수는 `_fullpath` 및 `_wfullpath`와 동일합니다. `_malloc_dbg`의 디버깅 기능에 대한 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
+ `_fullpath_dbg` 및 `_wfullpath_dbg` 함수는 동일 `_fullpath` 및 `_wfullpath` 점을 제외 하 고, `_DEBUG` 은의 디버그 버전을 사용 하 여 이러한 함수를 정의 `malloc`, `_malloc_dbg`, NULL은 첫 번째 매개 변수로 전달 되 면 메모리를 할당할 수 있습니다. `_malloc_dbg`의 디버깅 기능에 대한 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
   
- 대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`를 정의하면 `_fullpath` 및 `_wfullpath`에 대한 호출이 각각 `_fullpath_dbg` 및 `_wfullpath_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
+ 대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`을 정의하면 `_fullpath` 및 `_wfullpath`에 대한 호출이 각각 `_fullpath_dbg` 및 `_wfullpath_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -127,9 +128,6 @@ wchar_t *_wfullpath_dbg(
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- <xref:System.IO.File.Create%2A>  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

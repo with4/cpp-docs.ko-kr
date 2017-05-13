@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -72,7 +73,7 @@ int _resetstkoflw ( void );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 성공하면&0;이 아닌 값이고, 실패하면&0;입니다.  
+ 함수가 성공하면 0이 아닌 값이고, 실패하면 0입니다.  
   
 ## <a name="remarks"></a>설명  
  `_resetstkoflw` 함수는 스택 오버플로 조건으로부터 복구하여 프로그램이 예외 오류와 함께 실패하는 대신 계속 실행되도록 합니다. `_resetstkoflw` 함수를 호출하지 않으면 이전 예외 다음에 가드 페이지가 없습니다. 다음번에 스택 오버플로가 발생하는 경우에는 예외가 전혀 발생하지 않으며 프로세스는 경고 없이 종료됩니다.  
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  **__except** 블록 내에서와같이 올바른 위치에서 사용되는 경우에도 **_resetstkoflw**가 실패할 수 있는 상황이 있습니다. 스택을 해제한 이후에도 스택의 마지막 페이지에 쓰지 않고 **_resetstkoflw**를 실행할 수 있는 남은 스택 공간이 계속 부족한 경우 **_resetstkoflw**는 스택의 마지막 페이지를 가드 페이지로 다시 설정하고 실패를 나타내는 0을 반환합니다. 따라서 이 함수의 안전한 사용에는 스택을 사용하는 것이 안전하다는 가정 대신 반환 값을 확인하는 것이 포함되어야 합니다.  
   
- 구조적된 예외 처리를 catch 하지 않기를 `STATUS_STACK_OVERFLOW` 예외와 응용 프로그램이 컴파일될 때 `/clr` (참조 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)).  
+ 구조적된 예외 처리는 검색 되지 것입니다는 `STATUS_STACK_OVERFLOW` 응용 프로그램은으로 컴파일된 경우에 예외 `/clr` (참조 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_alloca](../../c-runtime-library/reference/alloca.md)

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>future 클래스
@@ -57,31 +65,31 @@ class future;
   
 |이름|설명|  
 |----------|-----------------|  
-|[future::future 생성자](#future__future_constructor)|`future` 개체를 생성합니다.|  
+|[future](#future)|`future` 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|연결된 비동기 상태에 저장된 결과를 검색합니다.|  
-|[future::share](#future__share_method)|개체를 `shared_future`로 변환합니다.|  
-|[future::valid](#future__valid_method)|개체가 비어 있지 않은지 여부를 지정합니다.|  
-|[future::wait](#future__wait_method)|연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.|  
-|[future::wait_for](#future__wait_for_method)|연결된 비동기 상태가 준비로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.|  
-|[future::wait_until](#future__wait_until_method)|연결된 비동기 상태가 준비로 설정되거나 지정된 시점이 될 때까지 차단합니다.|  
+|[get](#get)|연결된 비동기 상태에 저장된 결과를 검색합니다.|  
+|[공유](#share)|개체를 `shared_future`로 변환합니다.|  
+|[유효한](#valid)|개체가 비어 있지 않은지를 지정합니다.|  
+|[대기](#wait)|연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.|  
+|[wait_for](#wait_for)|연결된 비동기 상태가 준비로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.|  
+|[wait_until](#wait_until)|연결된 비동기 상태가 준비로 설정되거나 지정된 시점이 될 때까지 차단합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|지정된 개체에서 연결된 비동기 상태를 전송합니다.|  
+|[future::operator=](#op_eq)|지정된 개체에서 연결된 비동기 상태를 전송합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** future  
+ **헤더:** \<이후 >  
   
  **네임스페이스:** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>  future::future 생성자  
+##  <a name="future"></a>  future::future 생성자  
  `future` 개체를 생성합니다.  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  두 번째 생성자는 `future` 개체를 생성하며 `Other`로부터 연결된 비동기 상태를 전송합니다. `Other`에는 더 이상 연결된 비동기 상태가 없습니다.  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>  future::get  
+##  <a name="get"></a>  future::get  
  연결된 비동기 상태에 저장된 결과를 검색합니다.  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  다른 특수화에서 메서드는 저장된 값에서 반환 값을 이동합니다. 따라서 이 메서드를 한 번만 호출합니다.  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>  future::operator=  
+##  <a name="op_eq"></a>  future::operator=  
  지정된 개체에서 연결된 비동기 상태를 전송합니다.  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>설명  
  전송 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>  future::share  
+##  <a name="share"></a>  future::share  
  개체를 [shared_future](../standard-library/shared-future-class.md) 개체로 변환합니다.  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>반환 값  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>  future::valid  
+##  <a name="valid"></a>  future::valid  
  개체에 연결된 비동기 상태가 있는지 여부를 지정합니다.  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>반환 값  
  개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>  future::wait  
+##  <a name="wait"></a>  future::wait  
  연결된 비동기 상태가 *준비*로 설정될 때까지 현재 스레드를 차단합니다.  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>설명  
  연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 *준비*입니다.  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>  future::wait_for  
+##  <a name="wait_for"></a>  future::wait_for  
  연결된 비동기 상태가 *준비*로 설정되거나 지정된 시간 간격이 경과할 때까지 현재 스레드를 차단합니다.  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  스레드가 차단되는 최대 시간 간격을 지정하는 [chrono::duration](../standard-library/duration-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status_enumeration)입니다.  
+ 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status)입니다.  
   
 ### <a name="remarks"></a>설명  
  연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 준비입니다.  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>  future::wait_until  
+##  <a name="wait_until"></a>  future::wait_until  
  연결된 비동기 상태가 *준비*가 되거나 지정된 시점이 지날 때까지 현재 스레드를 차단합니다.  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  스레드 차단을 해제할 수 있는 시간을 지정하는 [chrono::time_point](../standard-library/time-point-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status_enumeration)입니다.  
+ 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status)입니다.  
   
 ### <a name="remarks"></a>설명  
  연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 *준비*입니다.  

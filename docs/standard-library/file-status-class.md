@@ -35,14 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 954da8df11c2382887717baa61070acc0b6070b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="filestatus-class"></a>file_status 클래스
-[file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) 및 파일 [perms](../standard-library/filesystem-enumerations.md#filesystem__perms)를 래핑합니다.  
+[file_type](../standard-library/filesystem-enumerations.md#file_type) 및 파일 [perms](../standard-library/filesystem-enumerations.md#perms)를 래핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,23 +85,23 @@ void type(file_type ftype) noexcept
   
 ## <a name="permissions"></a>permissions  
   
-``cpp  
+```cpp  
 perms permissions() const noexcept  
 void permissions(perms mask) noexcept   
 ```  
   
- Gets or sets the file permissions.  
+ 파일 사용 권한을 가져오거나 설정합니다.  
   
- Use the setter to make a file readonly or remove the readonly attribute.  
+ setter를 사용하여 파일을 읽기 전용으로 만들거나 읽기 전용 특성을 제거합니다.  
   
-## Requirements  
- **Header:** \<filesystem>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<파일 시스템 >  
   
  **Namespace:** std::experimental::filesystem, std::experimental::filesystem::v1  
   
-## See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [path Class](../standard-library/path-class.md)   
+## <a name="see-also"></a>참고 항목  
+ [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+ [path 클래스](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 
 

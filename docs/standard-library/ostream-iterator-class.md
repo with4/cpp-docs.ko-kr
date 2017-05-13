@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ostream_iterator
-- std.ostream_iterator
-- std::ostream_iterator
 - iterator/std::ostream_iterator
+- iterator/std::ostream_iterator::char_type
+- iterator/std::ostream_iterator::ostream_type
+- iterator/std::ostream_iterator::traits_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 3542d4a47abc3616c00360f9885761d08de5e884
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 390bde9ea36b7a05cf7f248b83e70b5de3337f19
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 클래스
@@ -57,7 +59,7 @@ class ostream_iterator
  출력 스트림에 삽입될 개체의 형식입니다.  
   
  `CharType`  
- `ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char`입니다*.*  
+ `ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char`입니다.  
   
  `Traits`  
  `ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*  
@@ -68,30 +70,30 @@ class ostream_iterator
   
 |||  
 |-|-|  
-|[ostream_iterator](#ostream_iterator__ostream_iterator)|출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.|  
+|[ostream_iterator](#ostream_iterator)|출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#ostream_iterator__char_type)|`ostream_iterator`의 문자 형식을 허용하는 형식입니다.|  
-|[ostream_type](#ostream_iterator__ostream_type)|`ostream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
-|[traits_type](#ostream_iterator__traits_type)|`ostream_iterator`의 특성 형식을 허용하는 형식입니다.|  
+|[char_type](#char_type)|`ostream_iterator`의 문자 형식을 허용하는 형식입니다.|  
+|[ostream_type](#ostream_type)|`ostream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
+|[traits_type](#traits_type)|`ostream_iterator`의 특성 형식을 허용하는 형식입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator*](#ostream_iterator__operator_star)|출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 역참조 연산자.|  
-|[operator++](#ostream_iterator__operator_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|  
-|[operator=](#ostream_iterator__operator_eq)|출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자.|  
+|[operator*](#op_star)|출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 역참조 연산자.|  
+|[operator++](#op_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|  
+|[operator=](#op_eq)|출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<iterator>  
   
  **네임스페이스:** std  
   
-##  <a name="a-nameostreamiteratorchartypea--ostreamiteratorchartype"></a><a name="ostream_iterator__char_type"></a>  ostream_iterator::char_type  
+##  <a name="char_type"></a>  ostream_iterator::char_type  
  반복기의 문자 형식을 제공하는 형식입니다.  
   
 ```
@@ -138,7 +140,7 @@ by intOut are:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatorstara--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_star"></a>  ostream_iterator::operator*  
+##  <a name="op_star"></a>  ostream_iterator::operator*  
  출력 반복기 식 \* *ii* = *x*를 구현하는 데 사용된 역참조 연산자.  
   
 ```
@@ -184,7 +186,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatoraddadda--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_add_add"></a>  ostream_iterator::operator++  
+##  <a name="op_add_add"></a>  ostream_iterator::operator++  
  연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.  
   
 ```
@@ -231,7 +233,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatoreqa--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_eq"></a>  ostream_iterator::operator=  
+##  <a name="op_eq"></a>  ostream_iterator::operator=  
  출력 스트림을 작성하기 위해 출력 반복기 식 * `i` = `x`을 구현하는 데 사용된 할당 연산자입니다.  
   
 ```
@@ -243,7 +245,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
  출력 스트림에 삽입될 `Type` 형식의 개체 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 연산자는 개체와 연결된 출력 스트림에 `val`을 삽입하고 [ostream_iterator constructor](#ostream_iterator__ostream_iterator)에 지정된 구분 기호(있는 경우)를 그 뒤에 붙인 다음 `ostream_iterator`에 대한 참조를 반환합니다.  
+ 연산자는 개체와 연결된 출력 스트림에 `val`을 삽입하고 [ostream_iterator constructor](#ostream_iterator)에 지정된 구분 기호(있는 경우)를 그 뒤에 붙인 다음 `ostream_iterator`에 대한 참조를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
  `ostream_iterator`가 충족해야 하는 출력 반복기에 대한 요구 사항은 * `ii` = `t` 식만 유효해야 한다는 것과 해당 반복기 자체는 operator 또는 operator=에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구성원 연산자는 `*this`를 반환합니다.  
@@ -281,7 +283,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratorostreamiteratora--ostreamiteratorostreamiterator"></a><a name="ostream_iterator__ostream_iterator"></a>  ostream_iterator::ostream_iterator  
+##  <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator  
  출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.  
   
 ```
@@ -295,7 +297,7 @@ ostream_iterator(
   
 ### <a name="parameters"></a>매개 변수  
  `_Ostr`  
- 반복할 [ostream_iterator::ostream_type](#ostream_iterator__ostream_type) 형식의 출력 스트림입니다.  
+ 반복할 [ostream_iterator::ostream_type](#ostream_type) 형식의 출력 스트림입니다.  
   
  `_Delimiter`  
  출력 스트림에서 값 사이에 삽입되는 구분 기호입니다.  
@@ -352,7 +354,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratorostreamtypea--ostreamiteratorostreamtype"></a><a name="ostream_iterator__ostream_type"></a>  ostream_iterator::ostream_type  
+##  <a name="ostream_type"></a>  ostream_iterator::ostream_type  
  반복기의 스트림 형식을 제공하는 형식입니다.  
   
 ```
@@ -363,9 +365,9 @@ typedef basic_ostream<CharType, Traits> ostream_type;
  이 형식은 쓰기에 사용할 수 있는 개체를 정의하는 iostream 계층의 스트림 클래스인 [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>와 동일한 의미입니다.  
   
 ### <a name="example"></a>예제  
-  `ostream_type`을 선언하고 사용하는 방법의 예제는 [ostream_iterator](#ostream_iterator__ostream_iterator)를 참조하세요.  
+  `ostream_type`을 선언하고 사용하는 방법의 예제는 [ostream_iterator](#ostream_iterator)를 참조하세요.  
   
-##  <a name="a-nameostreamiteratortraitstypea--ostreamiteratortraitstype"></a><a name="ostream_iterator__traits_type"></a>  ostream_iterator::traits_type  
+##  <a name="traits_type"></a>  ostream_iterator::traits_type  
  반복기의 특성 형식을 제공하는 형식입니다.  
   
 ```

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2ac3e7fa456e5d3ff04bc5d974c87a9cbb055fea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 542a13de6e8b97f736ea2cfcdf8956c2f261c1e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="initializerlist-class"></a>initializer_list 클래스
@@ -70,7 +71,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[initializer_list](../standard-library/forward-list-class.md#forward_list__forward_list)|`initializer_list` 형식의 개체를 생성합니다.|  
+|[initializer_list](../standard-library/forward-list-class.md#forward_list)|`initializer_list` 형식의 개체를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -87,16 +88,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[begin](#initializer_list__begin)|`initializer_list`의 첫 번째 요소에 대한 포인터를 반환합니다.|  
-|[end](#initializer_list__end)|`initializer_list`의 마지막 요소를 지난 다음 요소에 대한 포인터를 반환합니다.|  
-|[size](#initializer_list__size)|`initializer_list`에 있는 요소 수를 반환합니다.|  
+|[begin](#begin)|`initializer_list`의 첫 번째 요소에 대한 포인터를 반환합니다.|  
+|[end](#end)|`initializer_list`의 마지막 요소를 지난 다음 요소에 대한 포인터를 반환합니다.|  
+|[size](#size)|`initializer_list`에 있는 요소 수를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<initializer_list>  
   
  **네임스페이스:** std  
   
-##  <a name="initializer_list__begin"></a>  initializer_list::begin  
+##  <a name="begin"></a>  initializer_list::begin  
  `initializer_list`의 첫 번째 요소에 대한 포인터를 반환합니다.  
   
 ```  
@@ -108,7 +109,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="initializer_list__end"></a>  initializer_list::end  
+##  <a name="end"></a>  initializer_list::end  
  `initializer list`의 마지막 요소를 지난 다음 요소에 대한 포인터를 반환합니다.  
   
 ```  
@@ -118,7 +119,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>반환 값  
  목록의 마지막 요소를 지난 다음 요소에 대한 포인터입니다. 목록이 비어 있는 경우 목록의 첫 번째 요소에 대한 포인터와 동일합니다.  
   
-##  <a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
+##  <a name="initializer_list"></a>  initializer_list::initializer_list  
  `initializer_list` 형식의 개체를 생성합니다.  
   
 ```  
@@ -199,7 +200,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="initializer_list__size"></a>  initializer_list::size  
+##  <a name="size"></a>  initializer_list::size  
  목록에 있는 요소 수를 반환합니다.  
   
 ```  

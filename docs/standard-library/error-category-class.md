@@ -39,10 +39,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 7700ffce8b04f9caad33c08f03f0585c29a43efd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8a2a37464e5edb5a5fde1def70d2f0728524fad2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="errorcategory-class"></a>error_category 클래스
@@ -61,31 +62,31 @@ class error_category;
   
 |||  
 |-|-|  
-|[value_type](#error_category__value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|  
+|[value_type](#value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[default_error_condition](#error_category__default_error_condition)|오류 조건 개체에 대한 오류 코드 값을 저장합니다.|  
-|[equivalent](#error_category__equivalent)|오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.|  
-|[message](#error_category__message)|지정된 오류 코드의 이름을 반환합니다.|  
-|[name](#error_category__name)|범주 이름을 반환합니다.|  
+|[default_error_condition](#default_error_condition)|오류 조건 개체에 대한 오류 코드 값을 저장합니다.|  
+|[equivalent](#equivalent)|오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.|  
+|[message](#message)|지정된 오류 코드의 이름을 반환합니다.|  
+|[name](#name)|범주 이름을 반환합니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator==](#error_category__operator_eq_eq)|`error_category` 개체가 같은지 테스트합니다.|  
-|[operator!=](#error_category__operator_neq)|`error_category` 개체가 같지 않은지 테스트합니다.|  
-|[operator<](#error_category__operator_lt_)|[error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.|  
+|[operator==](#op_eq_eq)|`error_category` 개체가 같은지 테스트합니다.|  
+|[operator!=](#op_neq)|`error_category` 개체가 같지 않은지 테스트합니다.|  
+|[operator<](#op_lt)|[error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<system_error>  
   
  **네임스페이스:** std  
   
-##  <a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+##  <a name="default_error_condition"></a>  error_category::default_error_condition  
  오류 조건 개체에 대한 오류 코드 값을 저장합니다.  
   
 ```
@@ -103,7 +104,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="error_category__equivalent"></a>  error_category::equivalent  
+##  <a name="equivalent"></a>  error_category::equivalent  
  오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.  
   
 ```
@@ -130,7 +131,7 @@ virtual bool equivalent(const error_code& _Code,
   
  두 번째 멤버 함수는 `*this == _Code.category() && _Code.value() == _Errval`을 반환합니다.  
   
-##  <a name="error_category__message"></a>  error_category::message  
+##  <a name="message"></a>  error_category::message  
  지정된 오류 코드의 이름을 반환합니다.  
   
 ```
@@ -148,7 +149,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="error_category__name"></a>  error_category::name  
+##  <a name="name"></a>  error_category::name  
  범주 이름을 반환합니다.  
   
 ```
@@ -160,7 +161,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+##  <a name="op_eq_eq"></a>  error_category::operator==  
  `error_category` 개체가 같은지 테스트합니다.  
   
 ```
@@ -179,7 +180,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>설명  
  이 멤버 연산자는 `this == &right`를 반환합니다.  
   
-##  <a name="error_category__operator_neq"></a>  error_category::operator!=  
+##  <a name="op_neq"></a>  error_category::operator!=  
  `error_category` 개체가 같지 않은지 테스트합니다.  
   
 ```
@@ -198,7 +199,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `(!*this == right)`를 반환합니다.  
   
-##  <a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+##  <a name="op_lt"></a>  error_category::operator&lt;  
  [error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.  
   
 ```
@@ -217,7 +218,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `this < &right`를 반환합니다.  
   
-##  <a name="error_category__value_type"></a>  error_category::value_type  
+##  <a name="value_type"></a>  error_category::value_type  
  저장된 오류 코드 값을 나타내는 형식입니다.  
   
 ```

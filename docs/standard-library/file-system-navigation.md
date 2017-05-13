@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>파일 시스템 탐색
-\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)` 는 Windows에서 항상 `false` 를 반환합니다. 헤더는 Visual Studio 2015 RTM 당시 C++17 표준으로 투표되지 않은 초안 기술 사양을 기반으로 합니다. 해당 멤버는 `std::experimental::filesystem::v1`에서 인라인된 `std::experimental::filesystem` 네임스페이스에 있습니다.  
+\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)` 는 Windows에서 항상 `false` 를 반환합니다.   
   
 ## <a name="overview"></a>개요  
 \<filesystem> API는 다음과 같은 작업에 사용합니다.  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 이 코드를 실행하려면 위의 전체 예제에서 `main` 앞에 붙여넣고 main에서 호출하는 줄의 주석 처리를 제거합니다.  
   
 ### <a name="converting-between-path-and-string-types"></a>경로와 문자열 형식 간 변환  
-`path` 개체를 `std::wstring` 또는 `std::string`으로 암시적으로 변환할 수 있습니다. 즉, 다음 예제와 같이 [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open) 등의 함수에 경로를 전달할 수 있습니다.  
+`path` 개체를 `std::wstring` 또는 `std::string`으로 암시적으로 변환할 수 있습니다. 즉, 다음 예제와 같이 [wofstream::open](../standard-library/basic-ofstream-class.md#open) 등의 함수에 경로를 전달할 수 있습니다.  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

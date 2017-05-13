@@ -11,19 +11,20 @@ f1_keywords:
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c2ea4241ef1db4989caf8cdc6a16044d9c9381f6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a58daf9d43392ffa89872ab0a76e680b63dbb977
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 연산자
 ||||  
 |-|-|-|  
-|[modulo 연산자](#operator_modulo)|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|  
-|[operator&gt;=](#operator_gt__eq)|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[modulo 연산자](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
+|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="operator-"></a>  operator-  
  [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체의 빼기 또는 부정 연산자입니다.  
@@ -69,7 +70,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  세 번째 함수는 `Left`와 `Right` 사이의 시간 간격을 나타내는 `duration` 개체를 반환합니다.  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체에 대한 같지 않음 연산자입니다.  
   
 ```  
@@ -95,8 +96,8 @@ constexpr bool operator!=(
 ### <a name="return-value"></a>반환 값  
  각 함수는 `!(Left == Right)`를 반환합니다.  
   
-##  <a name="operator_star"></a>  operator*  
- [duration](../standard-library/chrono-operators.md#operator_star) 개체에 대한 곱하기 연산자입니다.  
+##  <a name="op_star"></a>  operator*  
+ [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 곱하기 연산자입니다.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -128,8 +129,8 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
   
  `is_convertible<Rep1, common_type<Rep1, Rep2>>`가 *true*가 아닌 한 두 번째 함수는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
   
-##  <a name="operator_"></a>  operator/  
- [duration](../standard-library/chrono-operators.md#operator_star) 개체에 대한 나누기 연산자입니다.  
+##  <a name="op_div"></a>  operator/  
+ [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 나누기 연산자입니다.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -166,7 +167,7 @@ constexpr typename common_type<Rep1, Rep2>::type
   
  `is_convertible<Rep2, common_type<Rep1, Rep2>>`가 *true*이고 `Rep2`가 `duration`의 인스턴스화가 아닌 경우 외에는 첫 번째 연산자가 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
   
-##  <a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체를 추가합니다.  
   
 ```  
@@ -209,7 +210,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  두 번째 및 세 번째 함수는 시점 `Time`에서 간격 `Dur`로 대체되는 시점을 나타내는 `time_point` 개체를 반환합니다.  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작은지 여부를 확인합니다.  
   
 ```  
@@ -237,7 +238,7 @@ constexpr bool operator<(
   
  두 번째 함수는 `Left`가 `Right`보다 앞에 오면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작거나 같은지 여부를 확인합니다.  
   
 ```  
@@ -262,7 +263,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>반환 값  
  각 함수는 `!(Right < Left)`를 반환합니다.  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  두 `duration` 개체가 길이가 동일한 시간 간격을 나타내는지 여부 또는 두 `time_point` 개체가 동일한 시점을 나타내는지 여부를 확인합니다.  
   
 ```  
@@ -289,7 +290,7 @@ constexpr bool operator==(
   
  두 번째 함수는 `Left`와 `Right`가 동일한 시점을 나타내면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 큰지 여부를 확인합니다.  
   
 ```  
@@ -314,7 +315,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>반환 값  
  각 함수는 `Right < Left`를 반환합니다.  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 크거나 같은지 여부를 확인합니다.  
   
 ```  
@@ -339,7 +340,7 @@ constexpr bool operator>=(
 ### <a name="return-value"></a>반환 값  
  각 함수는 `!(Left < Right)`를 반환합니다.  
   
-##  <a name="operator_modulo"></a>  modulo 연산자  
+##  <a name="op_modulo"></a>  modulo 연산자  
  [duration](../standard-library/duration-class.md) 개체에 대한 모듈로 연산용 연산자입니다.  
   
 ```  

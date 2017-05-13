@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  `malloc`에 대한 새 처리기 모드입니다. 유효한 값은 0 또는 1입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `malloc`에 대해 설정된 이전 처리기 모드를 반환합니다. 반환 값이 1이면 메모리 할당이 실패하는 경우 `malloc`가 이전에 새 처리기 루틴을 호출했음을 나타내며, 반환 값이 0이면 해당 루틴을 호출하지 않았음을 나타냅니다. `newhandlermode` 인수가 0이나 1이 아니면 -1이 반환됩니다.  
+ `malloc`에 대해 설정된 이전 처리기 모드를 반환합니다. 반환 값이 1이면 메모리 할당이 실패하는 경우 `malloc`가 이전에 새 처리기 루틴을 호출했음을 나타내며, 반환 값이 0이면 해당 루틴을 호출하지 않았음을 나타냅니다. 경우는 `newhandlermode` 인수는 0 또는 1을 같지 않음,-1을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  C++ `_set_new_mode` 함수는 [malloc](../../c-runtime-library/reference/malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 `malloc`가 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `malloc`가 메모리 할당에 실패한 경우 `malloc`가 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md) 연산자를 참조하세요. 기본값을 재정의하려면 다음을  
@@ -93,9 +94,6 @@ _set_new_mode(1)
 |`_set_new_mode`|\<new.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   

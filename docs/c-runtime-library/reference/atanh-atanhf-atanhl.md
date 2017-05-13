@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  부동 소수점 값입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `atanh` 함수는 `x`의 역쌍곡 탄젠트를 반환합니다. `x`가 1보다 크거나 –1 보다 작은 경우 `errno`는 `EDOM`으로 설정되고 결과는 Quiet NaN입니다. `x`가 1 또는 -1인 경우에는 양 또는 음의 무한대가 각각 반환되고 `errno`는 `ERANGE`로 설정됩니다.  
+ `atanh` 함수는 `x`의 역쌍곡 탄젠트를 반환합니다. 경우 `x` 1 또는-1 보다 작은 보다 크면 `errno` 로 설정 된 `EDOM` 결과 quiet NaN입니다. `x`가 1 또는 -1인 경우에는 양 또는 음의 무한대가 각각 반환되고 `errno`는 `ERANGE`로 설정됩니다.  
   
 |입력|SEH 예외|`Matherr` 예외|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

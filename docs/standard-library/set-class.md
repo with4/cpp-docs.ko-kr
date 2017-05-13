@@ -9,10 +9,48 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::set
 - set
 - set/std::set
-- std.set
+- set/std::set::allocator_type
+- set/std::set::const_iterator
+- set/std::set::const_pointer
+- set/std::set::const_reference
+- set/std::set::const_reverse_iterator
+- set/std::set::difference_type
+- set/std::set::iterator
+- set/std::set::key_compare
+- set/std::set::key_type
+- set/std::set::pointer
+- set/std::set::reference
+- set/std::set::reverse_iterator
+- set/std::set::size_type
+- set/std::set::value_compare
+- set/std::set::value_type
+- set/std::set::begin
+- set/std::set::cbegin
+- set/std::set::cend
+- set/std::set::clear
+- set/std::set::count
+- set/std::set::crbegin
+- set/std::set::crend
+- set/std::set::emplace
+- set/std::set::emplace_hint
+- set/std::set::empty
+- set/std::set::end
+- set/std::set::equal_range
+- set/std::set::erase
+- set/std::set::find
+- set/std::set::get_allocator
+- set/std::set::insert
+- set/std::set::key_comp
+- set/std::set::lower_bound
+- set/std::set::max_size
+- set/std::set::rbegin
+- set/std::set::rend
+- set/std::set::size
+- set/std::set::swap
+- set/std::set::upper_bound
+- set/std::set::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b779d47cdcf8d383b415b0412dcc77d8cdc78d7b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 43eeea7d80f332e180342bd18460f1750c1b4b44
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="set-class"></a>set 클래스
@@ -83,80 +122,80 @@ class set
   
  응용 프로그램에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 set입니다. set의 요소는 고유하며 자체 정렬 키로 사용됩니다. 이 형식의 구조에 대한 모델은 정렬된 목록입니다. 예를 들어, 단어 내의 단어는 한 번만 나타날 수 있습니다. 단어의 여러 번 중복이 허용된 경우는 multiset이 적절한 컨테이너 구조입니다. 고유 키 단어 목록에 값이 연결된 경우 이 데이터를 포함하기 위한 적절한 구조는 map입니다. 대신 Key가 고유하지 않은 경우 multimap이 적절한 컨테이너입니다.  
   
- set는 [key_compare](#set__key_compare) 형식의 저장된 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#set__key_comp) 구성원 함수를 호출하여 액세스할 수 있는 비교 함수입니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*( *x,y*)는 두 인수 개체 *x* 및 *y* 및 반환 값 **true** 또는 **false**가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 set에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서 *f*( *x,y*) 및 *f*( *y,x*)가 모두 false인 경우 *x* 및 *y* 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.  
+ set는 [key_compare](#key_compare) 형식의 저장된 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 구성원 함수를 호출하여 액세스할 수 있는 비교 함수입니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*( *x,y*)는 두 인수 개체 *x* 및 *y* 및 반환 값 **true** 또는 **false**가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 set에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서 *f*( *x,y*) 및 *f*( *y,x*)가 모두 false인 경우 *x* 및 *y* 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.  
   
  C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater<>` 조건자를 지정하여 유형이 다른 조회를 사용하도록 설정할 수 있습니다. 자세한 내용은 [연관 컨테이너의 유형이 다른 조회](../standard-library/stl-containers.md#sequence_containers)를 참조하세요.  
   
- multiset 클래스에서 제공하는 반복기는 양방향 반복기이지만, [insert](#set__insert) 및 [set](#set__set) 클래스 구성원 함수의 버전은 기능 요구 사항이 양방향 반복기 클래스에서 보장하는 것보다 최소화된 약한 입력 반복기를 템플릿 매개 변수로 사용합니다. 다른 반복기 개념은 관련된 상세 기능별로 범주를 구성합니다. 각 반복기 개념은 고유한 요구 사항이 있으며 이러한 요구 사항을 적용하는 알고리즘은 해당 반복기 형식이 제공하는 요구 사항으로 가정을 제한해야 합니다. 입력 반복기를 역참조하여 몇 가지 개체를 참조하고 시퀀스의 다음 반복기로 증가되는 경우를 가정할 수 있습니다. 이는 최소한의 기능 모음이지만, 클래스 구성원 함수의 맥락에서 반복기 범위[ `First`, `Last`)에 대해 설명하는 데에는 충분합니다.  
+ multiset 클래스에서 제공하는 반복기는 양방향 반복기이지만, [insert](#insert) 및 [set](#set) 클래스 구성원 함수의 버전은 기능 요구 사항이 양방향 반복기 클래스에서 보장하는 것보다 최소화된 약한 입력 반복기를 템플릿 매개 변수로 사용합니다. 다른 반복기 개념은 관련된 상세 기능별로 범주를 구성합니다. 각 반복기 개념은 고유한 요구 사항이 있으며 이러한 요구 사항을 적용하는 알고리즘은 해당 반복기 형식이 제공하는 요구 사항으로 가정을 제한해야 합니다. 입력 반복기를 역참조하여 몇 가지 개체를 참조하고 시퀀스의 다음 반복기로 증가되는 경우를 가정할 수 있습니다. 이는 최소한의 기능 모음이지만, 클래스 구성원 함수의 맥락에서 반복기 범위[ `First`, `Last`)에 대해 설명하는 데에는 충분합니다.  
   
 ### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[set](#set__set)|비어 있거나 모든 복사본이거나 또는 일부 다른 집합 부분인 집합을 생성합니다.|  
+|[set](#set)|비어 있거나 모든 복사본이거나 또는 일부 다른 집합 부분인 집합을 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#set__allocator_type)|set 개체의 `allocator` 클래스를 나타내는 형식입니다.|  
-|[const_iterator](#set__const_iterator)|set에 있는 모든 `const` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[const_pointer](#set__const_pointer)|set에서 `const` 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[const_reference](#set__const_reference)|`const` 작업을 읽고 수행하기 위해 set에 저장된 `const` 요소에 대한 참조를 제공하는 형식입니다.|  
-|[const_reverse_iterator](#set__const_reverse_iterator)|set에 있는 모든 `const` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[difference_type](#set__difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 set의 요소의 개수를 표현하는 데 사용할 수 있습니다.|  
-|[iterator](#set__iterator)|set에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[key_compare](#set__key_compare)|set의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|  
-|[key_type](#set__key_type)|해당 용량 내 set 요소로 저장된 개체를 정렬 키로 설명하는 형식입니다.|  
-|[pointer](#set__pointer)|set에서 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#set__reference)|set에 저장된 요소에 대한 참조를 제공하는 형식입니다.|  
-|[reverse_iterator](#set__reverse_iterator)|역순 set의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[size_type](#set__size_type)|set에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_compare](#set__value_compare)|두 요소를 비교하여 set에서 상대적인 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.|  
-|[value_type](#set__value_type)|해당 용량 내 set 요소로 저장된 개체를 값으로 설명하는 형식입니다.|  
+|[allocator_type](#allocator_type)|set 개체의 `allocator` 클래스를 나타내는 형식입니다.|  
+|[const_iterator](#const_iterator)|set에 있는 모든 `const` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
+|[const_pointer](#const_pointer)|set에서 `const` 요소에 대한 포인터를 제공하는 형식입니다.|  
+|[const_reference](#const_reference)|`const` 작업을 읽고 수행하기 위해 set에 저장된 `const` 요소에 대한 참조를 제공하는 형식입니다.|  
+|[const_reverse_iterator](#const_reverse_iterator)|set에 있는 모든 `const` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
+|[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 set의 요소의 개수를 표현하는 데 사용할 수 있습니다.|  
+|[iterator](#iterator)|set에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
+|[key_compare](#key_compare)|set의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|  
+|[key_type](#key_type)|해당 용량 내 set 요소로 저장된 개체를 정렬 키로 설명하는 형식입니다.|  
+|[pointer](#pointer)|set에서 요소에 대한 포인터를 제공하는 형식입니다.|  
+|[reference](#reference)|set에 저장된 요소에 대한 참조를 제공하는 형식입니다.|  
+|[reverse_iterator](#reverse_iterator)|역순 set의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
+|[size_type](#size_type)|set에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
+|[value_compare](#value_compare)|두 요소를 비교하여 set에서 상대적인 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.|  
+|[value_type](#value_type)|해당 용량 내 set 요소로 저장된 개체를 값으로 설명하는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[begin](#set__begin)|set의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|  
-|[cbegin](#set__cbegin)|set의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[cend](#set__cend)|set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[clear](#set__clear)|set의 모든 요소를 지웁니다.|  
-|[count](#set__count)|키가 매개 변수로 지정된 키와 일치하는 set의 요소 수를 반환합니다.|  
-|[crbegin](#set__rbegin)|역순 set에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[crend](#set__rend)|역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[emplace](#set__emplace)|생성된 요소를 set에 삽입합니다.|  
-|[emplace_hint](#set__emplace_hint)|배치 힌트를 사용하여 생성된 요소를 set에 삽입합니다.|  
-|[empty](#set__empty)|set가 비어 있는지 여부를 테스트합니다.|  
-|[end](#set__end)|set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
-|[equal_range](#set__equal_range)|지정된 키보다 더 큰 키를 가진 set의 첫 번째 요소와 지정된 키보다 더 크거나 같은 키를 가진 set의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.|  
-|[erase](#set__erase)|지정된 위치에서 set의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.|  
-|[find](#set__find)|지정된 키와 같은 키를 가진 set 내 요소의 위치를 가리키는 반복기를 반환합니다.|  
-|[get_allocator](#set__get_allocator)|set를 생성하는 데 사용된 `allocator` 개체의 복사본을 반환합니다.|  
-|[insert](#set__insert)|set에 요소 또는 요소의 범위를 삽입합니다.|  
-|[key_comp](#set__key_comp)|set에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.|  
-|[lower_bound](#set__lower_bound)|set에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.|  
-|[max_size](#set__max_size)|set의 최대 길이를 반환합니다.|  
-|[rbegin](#set__rbegin)|역순 set에서 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|  
-|[rend](#set__rend)|역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
-|[size](#set__size)|집합에 있는 요소 수를 반환합니다.|  
-|[swap](#set__swap)|두 set의 요소를 교환합니다.|  
-|[upper_bound](#set__upper_bound)|set에 지정된 키보다 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.|  
-|[value_comp](#set__value_comp)|set에서 요소 값의 정렬에 사용되는 비교 개체의 복사본을 검색합니다.|  
+|[begin](#begin)|set의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|  
+|[cbegin](#cbegin)|set의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
+|[cend](#cend)|set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
+|[clear](#clear)|set의 모든 요소를 지웁니다.|  
+|[count](#count)|키가 매개 변수로 지정된 키와 일치하는 set의 요소 수를 반환합니다.|  
+|[crbegin](#rbegin)|역순 set에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
+|[crend](#rend)|역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
+|[emplace](#emplace)|생성된 요소를 set에 삽입합니다.|  
+|[emplace_hint](#emplace_hint)|배치 힌트를 사용하여 생성된 요소를 set에 삽입합니다.|  
+|[empty](#empty)|set가 비어 있는지 여부를 테스트합니다.|  
+|[end](#end)|set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
+|[equal_range](#equal_range)|지정된 키보다 더 큰 키를 가진 set의 첫 번째 요소와 지정된 키보다 더 크거나 같은 키를 가진 set의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.|  
+|[erase](#erase)|지정된 위치에서 set의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.|  
+|[find](#find)|지정된 키와 같은 키를 가진 set 내 요소의 위치를 가리키는 반복기를 반환합니다.|  
+|[get_allocator](#get_allocator)|set를 생성하는 데 사용된 `allocator` 개체의 복사본을 반환합니다.|  
+|[insert](#insert)|set에 요소 또는 요소의 범위를 삽입합니다.|  
+|[key_comp](#key_comp)|set에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.|  
+|[lower_bound](#lower_bound)|set에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.|  
+|[max_size](#max_size)|set의 최대 길이를 반환합니다.|  
+|[rbegin](#rbegin)|역순 set에서 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|  
+|[rend](#rend)|역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
+|[size](#size)|집합에 있는 요소 수를 반환합니다.|  
+|[swap](#swap)|두 set의 요소를 교환합니다.|  
+|[upper_bound](#upper_bound)|set에 지정된 키보다 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.|  
+|[value_comp](#value_comp)|set에서 요소 값의 정렬에 사용되는 비교 개체의 복사본을 검색합니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator=](#set__operator_eq)|set의 요소를 다른 set의 복사본으로 대체합니다.|  
+|[operator=](#op_eq)|set의 요소를 다른 set의 복사본으로 대체합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<set>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namesetallocatortypea--setallocatortype"></a><a name="set__allocator_type"></a>  set::allocator_type  
+##  <a name="allocator_type"></a>  set::allocator_type  
  set 개체의 할당자 클래스를 나타내는 형식입니다.  
   
 ```  
@@ -171,9 +210,9 @@ typedef Allocator allocator_type;
  `Allocator`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목의 설명 섹션을 참조하세요.  
   
 ### <a name="example"></a>예제  
-  `allocator_type`을 사용하는 예제는 [get_allocator](#set__get_allocator)의 예제를 참조하세요.  
+  `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
   
-##  <a name="a-namesetbegina--setbegin"></a><a name="set__begin"></a>  set::begin  
+##  <a name="begin"></a>  set::begin  
  set의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -227,7 +266,7 @@ The first element of s1 is 1
 The first element of s1 is now 2  
 ```  
   
-##  <a name="a-namesetcbegina--setcbegin"></a><a name="set__cbegin"></a>  set::cbegin  
+##  <a name="cbegin"></a>  set::cbegin  
  범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -250,7 +289,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namesetcenda--setcend"></a><a name="set__cend"></a>  set::cend  
+##  <a name="cend"></a>  set::cend  
  범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -275,7 +314,7 @@ auto i2 = Container.cend();
   
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-##  <a name="a-namesetcleara--setclear"></a><a name="set__clear"></a>  set::clear  
+##  <a name="clear"></a>  set::clear  
  set의 모든 요소를 지웁니다.  
   
 ```  
@@ -312,7 +351,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.  
 ```  
   
-##  <a name="a-namesetconstiteratora--setconstiterator"></a><a name="set__const_iterator"></a>  set::const_iterator  
+##  <a name="const_iterator"></a>  set::const_iterator  
  목록의 **const** 요소 하나를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.  
   
 ```  
@@ -323,9 +362,9 @@ typedef implementation-defined const_iterator;
  `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
 ### <a name="example"></a>예제  
-  `const_iterator`를 사용하는 예제는 [begin](#set__begin)의 예제를 참조하세요.  
+  `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.  
   
-##  <a name="a-namesetconstpointera--setconstpointer"></a><a name="set__const_pointer"></a>  set::const_pointer  
+##  <a name="const_pointer"></a>  set::const_pointer  
  set에서 **const** 요소에 대한 포인터를 제공하는 형식입니다.  
   
 ```  
@@ -335,9 +374,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 ### <a name="remarks"></a>설명  
  `const_pointer` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
- 대부분의 경우에는 [const_iterator](#set__const_iterator)를 사용하여 const set 개체의 요소에 액세스해야 합니다.  
+ 대부분의 경우에는 [const_iterator](#const_iterator)를 사용하여 const set 개체의 요소에 액세스해야 합니다.  
   
-##  <a name="a-namesetconstreferencea--setconstreference"></a><a name="set__const_reference"></a>  set::const_reference  
+##  <a name="const_reference"></a>  set::const_reference  
  **const** 작업을 읽고 수행하기 위해 set에 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```  
@@ -377,7 +416,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="a-namesetconstreverseiteratora--setconstreverseiterator"></a><a name="set__const_reverse_iterator"></a>  set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  set::const_reverse_iterator  
  set의 모든 **const** 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.  
   
 ```  
@@ -388,9 +427,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  `const_reverse_iterator` 형식은 요소값을 수정할 수 없으며 set를 역방향으로 반복하는 데 사용됩니다.  
   
 ### <a name="example"></a>예제  
-  `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#set__rend)의 예제를 참조하세요.  
+  `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
   
-##  <a name="a-namesetcounta--setcount"></a><a name="set__count"></a>  set::count  
+##  <a name="count"></a>  set::count  
  키가 매개 변수로 지정된 키와 일치하는 set의 요소 수를 반환합니다.  
   
 ```  
@@ -398,11 +437,11 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` key`  
+ `key`  
  set에서 일치하는지 확인할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- set에 정렬 키가 매개 변수 키와 일치하는 요소가 포함되어 있는 경우&1;입니다. set에 일치하는 키가 있는 요소가 포함되지 않은 경우&0;입니다.  
+ set에 정렬 키가 매개 변수 키와 일치하는 요소가 포함되어 있는 경우 1입니다. set에 일치하는 키가 있는 요소가 포함되지 않은 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
  멤버 함수가 다음 범위에 있는 요소의 수를 반환합니다.  
@@ -443,7 +482,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="a-namesetcrbegina--setcrbegin"></a><a name="set__crbegin"></a>  set::crbegin  
+##  <a name="crbegin"></a>  set::crbegin  
  역순 set에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.  
   
 ```  
@@ -454,7 +493,7 @@ const_reverse_iterator crbegin() const;
  역방향 set에서 첫 번째 요소 또는 정방향 set에서 마지막 요소의 주소를 지정하는 const 역방향 양방향 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `crbegin`은 set에서 [begin](#set__begin)이 사용되는 것처럼 역방향 set에 사용됩니다.  
+ `crbegin`은 set에서 [begin](#begin)이 사용되는 것처럼 역방향 set에 사용됩니다.  
   
  반환 값이 `crbegin`이면 set 개체를 수정할 수 없습니다.  
   
@@ -486,7 +525,7 @@ int main( )
 The first element in the reversed set is 30.  
 ```  
   
-##  <a name="a-namesetcrenda--setcrend"></a><a name="set__crend"></a>  set::crend  
+##  <a name="crend"></a>  set::crend  
  역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.  
   
 ```  
@@ -497,7 +536,7 @@ const_reverse_iterator crend() const;
  역방향 set에서 마지막 요소 다음의 위치(정방향 set의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 양방향 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `crend`은 set에서 [end](#set__end)가 사용되는 것처럼 역방향 set에 사용됩니다.  
+ `crend`은 set에서 [end](#end)가 사용되는 것처럼 역방향 set에 사용됩니다.  
   
  반환 값이 `crend`이면 set 개체를 수정할 수 없습니다. `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
@@ -527,7 +566,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetdifferencetypea--setdifferencetype"></a><a name="set__difference_type"></a>  set::difference_type  
+##  <a name="difference_type"></a>  set::difference_type  
  부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 set의 요소의 개수를 표현하는 데 사용할 수 있습니다.  
   
 ```  
@@ -535,7 +574,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- `difference_type`은 컨테이너의 반복기를 빼거나 더할 때 반환되는 형식입니다. `difference_type`은 일반적으로 ` first` 및 ` last` 반복기 사이의 *[ first,  last)* 범위 내 요소 수를 나타내는 데 사용됩니다. 여기에는 ` first`가 가리키는 요소에서 ` last`가 가리키는 요소까지의 요소 범위가 포함됩니다(마지막 요소는 포함되지 않음).  
+ `difference_type`은 컨테이너의 반복기를 빼거나 더할 때 반환되는 형식입니다. `difference_type`은 일반적으로 `first` 및 `last` 반복기 사이의 *[ first,  last)* 범위 내 요소 수를 나타내는 데 사용됩니다. 여기에는 `first`가 가리키는 요소에서 `last`가 가리키는 요소까지의 요소 범위가 포함됩니다(마지막 요소는 포함되지 않음).  
   
  입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.  
   
@@ -598,7 +637,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.  
 ```  
   
-##  <a name="a-namesetemplacea--setemplace"></a><a name="set__emplace"></a>  set::emplace  
+##  <a name="emplace"></a>  set::emplace  
  생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -678,7 +717,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetemplacehinta--setemplacehint"></a><a name="set__emplace_hint"></a>  set::emplace_hint  
+##  <a name="emplace_hint"></a>  set::emplace_hint  
  배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -751,7 +790,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetemptya--setempty"></a><a name="set__empty"></a>  set::empty  
+##  <a name="empty"></a>  set::empty  
  set가 비어 있는지 여부를 테스트합니다.  
   
 ```  
@@ -792,7 +831,7 @@ The set s1 is not empty.
 The set s2 is empty.  
 ```  
   
-##  <a name="a-namesetenda--setend"></a><a name="set__end"></a>  set::end  
+##  <a name="end"></a>  set::end  
  마지막 바로 다음 반복기를 반환합니다.  
   
 ```  
@@ -811,9 +850,9 @@ iterator end();
   
  **end**에서 반환한 값을 역참조해서는 안 됩니다.  
   
- 코드 예제를 보려면 [set::find](#set__find)를 참조하세요.  
+ 코드 예제를 보려면 [set::find](#find)를 참조하세요.  
   
-##  <a name="a-namesetequalrangea--setequalrange"></a><a name="set__equal_range"></a>  set::equal_range  
+##  <a name="equal_range"></a>  set::equal_range  
  지정된 키보다 더 크거나 같은 키를 가진 set의 첫 번째 요소와 지정된 키보다 더 큰 키를 가진 set의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.  
   
 ```  
@@ -823,11 +862,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` key`  
+ `key`  
  검색 중인 set에서 요소의 정렬 키와 비교할 인수 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반복기 쌍. 여기서 첫 번째 반복기는 키의 [lower_bound](#set__lower_bound)이고 두 번째 반복기는 키의 [upper_bound](#set__upper_bound)입니다.  
+ 반복기 쌍. 여기서 첫 번째 반복기는 키의 [lower_bound](#lower_bound)이고 두 번째 반복기는 키의 [upper_bound](#upper_bound)입니다.  
   
  구성원 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **first**를 사용하고 하한 반복기를 역참조하려면 \*( `pr`. **first**)를 사용합니다. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **second**를 사용하고 상한 반복기를 역참조하려면 \*( `pr`. **second**)를 사용합니다.  
   
@@ -889,7 +928,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-nameseterasea--seterase"></a><a name="set__erase"></a>  set::erase  
+##  <a name="erase"></a>  set::erase  
  지정된 위치에서 set의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.  
   
 ```  
@@ -1003,7 +1042,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetfinda--setfind"></a><a name="set__find"></a>  set::find  
+##  <a name="find"></a>  set::find  
  지정된 키와 같은 키를 포함하는 집합 내 요소의 위치를 가리키는 반복기를 반환합니다.  
   
 ```  
@@ -1087,7 +1126,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetgetallocatora--setgetallocator"></a><a name="set__get_allocator"></a>  set::get_allocator  
+##  <a name="get_allocator"></a>  set::get_allocator  
  set를 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.  
   
 ```  
@@ -1158,7 +1197,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetinserta--setinsert"></a><a name="set__insert"></a>  set::insert  
+##  <a name="insert"></a>  set::insert  
  set에 요소 또는 요소의 범위를 삽입합니다.  
   
 ```  
@@ -1207,10 +1246,10 @@ IList);
 |매개 변수|설명|  
 |`Val`|값이 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 set에 삽입되는 요소의 값입니다.|  
 |`Where`|올바른 삽입 지점 검색을 시작할 위치입니다. 이 지점이 `Where` 바로 앞에 오면 로그 시간 대신 분할된 시간에 삽입할 수 있습니다.|  
-|`ValTy`|set가 [value_type](../standard-library/map-class.md#map__value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
+|`ValTy`|set가 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
 |`First`|복사할 첫 번째 요소의 위치입니다.|  
 |`Last`|복사할 마지막 요소 바로 다음 위치입니다.|  
-|`InputIterator`|[value_type](../standard-library/map-class.md#map__value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
+|`InputIterator`|[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
 |`IList`|요소를 복사할 원본 [initializer_list](../standard-library/initializer-list.md)입니다.|  
   
 ### <a name="return-value"></a>반환 값  
@@ -1225,13 +1264,13 @@ IList);
   
  단일 요소 구성원 함수에서 반환한 `pair``pr`의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 반환된 쌍 내에서 반복기를 역참조하려면 `*pr.first`를 사용하여 요소를 제공합니다. `bool` 구성 요소에 액세스하려면 `pr.second`를 사용합니다. 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.  
   
- 컨테이너의 [value_type](../standard-library/map-class.md#map__value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `set<V>::value_type`은 `const V` 형식입니다.  
+ 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `set<V>::value_type`은 `const V` 형식입니다.  
   
  범위 멤버 함수 (5)는 `[First, Last)` 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 set에 요소 값의 시퀀스를 입력하므로 `Last`는 삽입되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.  
   
  이니셜라이저 목록 구성원 함수 (6)은 [initializer_list](../standard-library/initializer-list.md)를 사용하여 요소를 set로 복사합니다.  
   
- 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [set::emplace](#set__emplace) 및 [set::emplace_hint](#set__emplace_hint)를 참조하세요.  
+ 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [set::emplace](#emplace) 및 [set::emplace_hint](#emplace_hint)를 참조하세요.  
   
 ### <a name="example"></a>예제  
   
@@ -1332,7 +1371,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetiteratora--setiterator"></a><a name="set__iterator"></a>  set::iterator  
+##  <a name="iterator"></a>  set::iterator  
  set의 모든 요소를 읽을 수 있는 상수 [양방향 반복기](../standard-library/bidirectional-iterator-tag-struct.md)를 제공하는 형식입니다.  
   
 ```  
@@ -1340,9 +1379,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>예제  
-  **반복기**를 선언하고 사용하는 방법의 예제는 [begin](#set__begin)의 예제를 참조하세요.  
+  **반복기**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
   
-##  <a name="a-namesetkeycompa--setkeycomp"></a><a name="set__key_comp"></a>  set::key_comp  
+##  <a name="key_comp"></a>  set::key_comp  
  set에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.  
   
 ```  
@@ -1361,7 +1400,7 @@ key_compare key_comp() const;
   
  을 정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.  
   
- [key_compare](#set__key_compare)와 [value_compare](#set__value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ [key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1414,7 +1453,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.  
 ```  
   
-##  <a name="a-namesetkeycomparea--setkeycompare"></a><a name="set__key_compare"></a>  set::key_compare  
+##  <a name="key_compare"></a>  set::key_compare  
  set의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.  
   
 ```  
@@ -1426,12 +1465,12 @@ typedef Traits key_compare;
   
  `Traits`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목을 참조하세요.  
   
- `key_compare` 및 [value_compare](#set__value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ `key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
-  `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#set__key_comp)의 예제를 참조하세요.  
+  `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
   
-##  <a name="a-namesetkeytypea--setkeytype"></a><a name="set__key_type"></a>  set::key_type  
+##  <a name="key_type"></a>  set::key_type  
  해당 용량 내에서 set의 요소로 저장된 개체를 정렬 키로 설명하는 형식입니다.  
   
 ```  
@@ -1443,12 +1482,12 @@ typedef Key key_type;
   
  `Key`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목의 설명 섹션을 참조하세요.  
   
- `key_type` 및 [value_type](#set__value_type)은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ `key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
-  `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#set__value_type)의 예제를 참조하세요.  
+  `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
-##  <a name="a-namesetlowerbounda--setlowerbound"></a><a name="set__lower_bound"></a>  set::lower_bound  
+##  <a name="lower_bound"></a>  set::lower_bound  
  set에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.  
   
 ```  
@@ -1458,7 +1497,7 @@ iterator lower_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` key`  
+ `key`  
  검색 중인 set에서 요소의 정렬 키와 비교할 인수 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1513,7 +1552,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namesetmaxsizea--setmaxsize"></a><a name="set__max_size"></a>  set::max_size  
+##  <a name="max_size"></a>  set::max_size  
  set의 최대 길이를 반환합니다.  
   
 ```  
@@ -1543,7 +1582,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetoperatoreqa--setoperator"></a><a name="set__operator_eq"></a>  set::operator=  
+##  <a name="op_eq"></a>  set::operator=  
  다른 `set`의 요소를 사용하여 이 `set`의 요소를 대체합니다.  
   
 ```  
@@ -1557,12 +1596,12 @@ set& operator=(set&& right);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|` right`|이 `set`에 할당할 새 요소를 제공하는 `set`입니다.|  
+|`right`|이 `set`에 할당할 새 요소를 제공하는 `set`입니다.|  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 `operator=` 버전은 ` right`에 대한 [lvalue 참조](../cpp/lvalue-reference-declarator-amp.md)를 사용하여 ` right`에서 이 `set`로 요소를 복사합니다.  
+ 첫 번째 `operator=` 버전은 `right`에 대한 [lvalue 참조](../cpp/lvalue-reference-declarator-amp.md)를 사용하여 `right`에서 이 `set`로 요소를 복사합니다.  
   
- 두 번째 버전은 right에 대해 [rvalue 참조](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용하여 ` right`에서 이 `set`로 요소를 이동합니다.  
+ 두 번째 버전은 right에 대해 [rvalue 참조](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용하여 `right`에서 이 `set`로 요소를 이동합니다.  
   
  연산자 함수가 실행되기 전에 이 `set`에 있었던 모든 요소는 삭제됩니다.  
   
@@ -1603,7 +1642,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-namesetpointera--setpointer"></a><a name="set__pointer"></a>  set::pointer  
+##  <a name="pointer"></a>  set::pointer  
  set에서 요소에 대한 포인터를 제공하는 형식입니다.  
   
 ```  
@@ -1613,9 +1652,9 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>설명  
  형식 **pointer**는 요소값을 수정할 때 사용할 수 있습니다.  
   
- 대부분의 경우 [iterator](#set__iterator)를 사용하여 set 개체의 요소에 액세스해야 합니다.  
+ 대부분의 경우 [iterator](#iterator)를 사용하여 set 개체의 요소에 액세스해야 합니다.  
   
-##  <a name="a-namesetrbegina--setrbegin"></a><a name="set__rbegin"></a>  set::rbegin  
+##  <a name="rbegin"></a>  set::rbegin  
  역순 set에서 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -1628,7 +1667,7 @@ reverse_iterator rbegin();
  역방향 set에서 첫 번째 요소 또는 정방향 set에서 마지막 요소의 주소를 지정하는 역방향 양방향 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `rbegin`은 set에서 [begin](#set__begin)이 사용되는 것처럼 역방향 set에 사용됩니다.  
+ `rbegin`은 set에서 [begin](#begin)이 사용되는 것처럼 역방향 set에 사용됩니다.  
   
  `rbegin`의 반환 값이 `const_reverse_iterator`에 할당되는 경우 set 개체를 수정할 수 없습니다. `rbegin`의 반환 값이 `reverse_iterator`에 할당되는 경우에는 set 개체를 수정할 수 있습니다.  
   
@@ -1688,7 +1727,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.  
 ```  
   
-##  <a name="a-namesetreferencea--setreference"></a><a name="set__reference"></a>  set::reference  
+##  <a name="reference"></a>  set::reference  
  set에 저장된 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```  
@@ -1723,7 +1762,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="a-namesetrenda--setrend"></a><a name="set__rend"></a>  set::rend  
+##  <a name="rend"></a>  set::rend  
  역순 set에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -1736,7 +1775,7 @@ reverse_iterator rend();
  역방향 set에서 마지막 요소 다음의 위치(정방향 set의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 양방향 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `rend`는 set에서 [end](#set__end)가 사용되는 것처럼 역방향 set에 사용됩니다.  
+ `rend`는 set에서 [end](#end)가 사용되는 것처럼 역방향 set에 사용됩니다.  
   
  `rend`의 반환 값이 `const_reverse_iterator`에 할당되는 경우 set 개체를 수정할 수 없습니다. `rend`의 반환 값이 `reverse_iterator`에 할당되는 경우에는 set 개체를 수정할 수 있습니다. `rend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
@@ -1791,7 +1830,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetreverseiteratora--setreverseiterator"></a><a name="set__reverse_iterator"></a>  set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  set::reverse_iterator  
  역순 set의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.  
   
 ```  
@@ -1802,9 +1841,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  `reverse_iterator` 형식은 set를 역방향으로 반복하는 데 사용됩니다.  
   
 ### <a name="example"></a>예제  
-  `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#set__rbegin)의 예제를 참조하세요.  
+  `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
   
-##  <a name="a-namesetseta--setset"></a><a name="set__set"></a>  set::set  
+##  <a name="set"></a>  set::set  
  비어 있거나 모든 복사본이거나 또는 일부 다른 집합 부분인 집합을 생성합니다.  
   
 ```  
@@ -1868,19 +1907,19 @@ set(
 |`IList`|요소를 복사해올 initializer_list입니다.|  
   
 ### <a name="remarks"></a>설명  
- 모든 생성자는 set의 메모리 저장소를 관리하며 나중에 [get_allocator](#set__get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. allocator 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.  
+ 모든 생성자는 set의 메모리 저장소를 관리하며 나중에 [get_allocator](#get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. allocator 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.  
   
  모든 생성자는 해당 set를 초기화합니다.  
   
- 모든 생성자는 set의 키 간 순서를 설정하는 데 사용되며 나중에 [key_comp](#set__key_comp)를 호출하여 반환할 수 있는 **Traits** 형식의 함수 개체를 저장합니다.  
+ 모든 생성자는 set의 키 간 순서를 설정하는 데 사용되며 나중에 [key_comp](#key_comp)를 호출하여 반환할 수 있는 **Traits** 형식의 함수 개체를 저장합니다.  
   
- 처음&3;개 생성자 중 첫 번째 생성자는 빈 초기 set를 정의하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수( `comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식( `al`)을 명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.  
+ 처음 3개 생성자 중 첫 번째 생성자는 빈 초기 set를 정의하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수( `comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식( `al`)을 명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.  
   
  네 번째 생성자는 `right` set의 복사본을 지정합니다.  
   
- 그 다음&3;개 생성자는 initializer_list를 사용하여 요소를 지정합니다.  
+ 그 다음 3개 생성자는 initializer_list를 사용하여 요소를 지정합니다.  
   
- 다음&3;개 생성자는 set의 범위 [ `first`, `last`)를 지정하며, 범위 내에서 클래스 **Traits** 및 **Allocator**의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.  
+ 다음 3개 생성자는 set의 범위 [ `first`, `last`)를 지정하며, 범위 내에서 클래스 **Traits** 및 **Allocator**의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.  
   
  여덟 번째 생성자는 `right`를 이동하여 set의 복사본을 지정합니다.  
   
@@ -1997,7 +2036,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40  
 ```  
   
-##  <a name="a-namesetsizea--setsize"></a><a name="set__size"></a>  set::size  
+##  <a name="size"></a>  set::size  
  집합에 있는 요소 수를 반환합니다.  
   
 ```  
@@ -2036,7 +2075,7 @@ The set length is 1.
 The set length is now 2.  
 ```  
   
-##  <a name="a-namesetsizetypea--setsizetype"></a><a name="set__size_type"></a>  set::size_type  
+##  <a name="size_type"></a>  set::size_type  
  set에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -2044,9 +2083,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#set__size)의 예제를 참조하세요.  
+  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
-##  <a name="a-namesetswapa--setswap"></a><a name="set__swap"></a>  set::swap  
+##  <a name="swap"></a>  set::swap  
  두 set의 요소를 교환합니다.  
   
 ```  
@@ -2055,7 +2094,7 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  대상 set와 교환할 요소를 제공하는 인수 집합입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2111,7 +2150,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.  
 ```  
   
-##  <a name="a-namesetupperbounda--setupperbound"></a><a name="set__upper_bound"></a>  set::upper_bound  
+##  <a name="upper_bound"></a>  set::upper_bound  
  set에서 지정된 키보다 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.  
   
 ```  
@@ -2121,7 +2160,7 @@ iterator upper_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` key`  
+ `key`  
  검색 중인 set에서 요소의 정렬 키와 비교할 인수 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2176,7 +2215,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.  
 ```  
   
-##  <a name="a-namesetvaluecompa--setvaluecomp"></a><a name="set__value_comp"></a>  set::value_comp  
+##  <a name="value_comp"></a>  set::value_comp  
  set에서 요소 값의 정렬에 사용되는 비교 개체의 복사본을 검색합니다.  
   
 ```  
@@ -2195,7 +2234,7 @@ value_compare value_comp() const;
   
  를 정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.  
   
- [value_compare](#set__value_compare)와 [key_compare](#set__key_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ [value_compare](#value_compare)와 [key_compare](#key_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
   
@@ -2248,7 +2287,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.  
 ```  
   
-##  <a name="a-namesetvaluecomparea--setvaluecompare"></a><a name="set__value_compare"></a>  set::value_compare  
+##  <a name="value_compare"></a>  set::value_compare  
  두 요소값을 비교하여 set에서 상대적인 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.  
   
 ```  
@@ -2260,12 +2299,12 @@ typedef key_compare value_compare;
   
  `Traits`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목을 참조하세요.  
   
- [key_compare](#set__key_compare)와 **value_compare**는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ [key_compare](#key_compare)와 **value_compare**는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
-  `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#set__value_comp)의 예제를 참조하세요.  
+  `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.  
   
-##  <a name="a-namesetvaluetypea--setvaluetype"></a><a name="set__value_type"></a>  set::value_type  
+##  <a name="value_type"></a>  set::value_type  
  해당 용량 내에서 set의 요소로 저장된 개체를 값으로 설명하는 형식입니다.  
   
 ```  
@@ -2277,7 +2316,7 @@ typedef Key value_type;
   
  `Key`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목의 설명 섹션을 참조하세요.  
   
- [key_type](#set__key_type) 및 `value_type`은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ [key_type](#key_type) 및 `value_type`은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
 ### <a name="example"></a>예제  
   

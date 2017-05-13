@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 반복기는 C++ 프로그램에서 다른 데이터 구조가 동일한 방식으로 작동하도록 하여 포인터의 일반화, 요구 사항의 추상화를 구현합니다. 반복기는 컨테이너와 일반 알고리즘 사이에서 중개자 역할을 합니다. 알고리즘은 특정 데이터 형식에서 작동하는 대신, 반복기의 형식으로 지정된 범위에서 작동하도록 정의됩니다. 그런 다음 반복기의 요구 사항을 충족하는 모든 데이터 구조는 알고리즘에 의해 운영될 수 있습니다. 반복기의 범주는&5;가지이며, 각각 고유한 요구 사항과 결과적 기능이 있습니다.  
+ 반복기는 C++ 프로그램에서 다른 데이터 구조가 동일한 방식으로 작동하도록 하여 포인터의 일반화, 요구 사항의 추상화를 구현합니다. 반복기는 컨테이너와 일반 알고리즘 사이에서 중개자 역할을 합니다. 알고리즘은 특정 데이터 형식에서 작동하는 대신, 반복기의 형식으로 지정된 범위에서 작동하도록 정의됩니다. 그런 다음 반복기의 요구 사항을 충족하는 모든 데이터 구조는 알고리즘에 의해 운영될 수 있습니다. 반복기의 범주는 5가지이며, 각각 고유한 요구 사항과 결과적 기능이 있습니다.  
   
 -   출력: 앞으로 나아가는 것. ostream 및 inserter가 제공한 가치를 보관할 수 있지만 검색할 수는 없습니다.  
   
@@ -92,13 +93,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#operator_neq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 다른지를 테스트합니다.|  
-|[operator==](../standard-library/iterator-operators.md#operator_eq_eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.|  
-|[operator<](../standard-library/iterator-operators.md#operator_lt_)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작은지를 테스트합니다.|  
-|[operator\<=](../standard-library/iterator-operators.md#operator_lt__eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.|  
-|[operator>](../standard-library/iterator-operators.md#operator_gt_)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 큰지를 테스트합니다.|  
-|[operator>=](../standard-library/iterator-operators.md#operator_gt__eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.|  
-|[operator+](../standard-library/iterator-operators.md#operator_add)|반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소를 주소 지정하는 새 `reverse_iterator`를 반환합니다.|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 다른지를 테스트합니다.|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작은지를 테스트합니다.|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 큰지를 테스트합니다.|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소를 주소 지정하는 새 `reverse_iterator`를 반환합니다.|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|다른 반복기에서 하나의 반복기를 빼고 차이를 반환합니다.|  
   
 ### <a name="classes"></a>클래스  

@@ -118,10 +118,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7d0417e6533124cc49e909687d7bc232523c302
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: baf853db4fe1a23ee726423a052604a0db8764c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
@@ -188,7 +189,7 @@ intptr_t _wfindfirst64i32(
  파일 정보 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 `_findfirst`는 [_findnext](../../c-runtime-library/reference/findnext-functions.md) 또는 `_findclose`에 대한 후속 호출에서 사용될 수 있는 `filespec` 사양과 일치하는 파일 또는 파일 그룹을 식별하는 고유 검색 핸들을 반환합니다. 그렇지 않으면 `_findfirst`는 –1을 반환하고 `errno`를 다음 값 중 하나로 설정합니다.  
+ 성공할 경우 `_findfirst`는 [_findnext](../../c-runtime-library/reference/findnext-functions.md) 또는 `_findclose`에 대한 후속 호출에서 사용될 수 있는 `filespec` 사양과 일치하는 파일 또는 파일 그룹을 식별하는 고유 검색 핸들을 반환합니다. 그렇지 않으면 `_findfirst` -1을 반환 하 고 설정 `errno` 를 다음 값 중 하나입니다.  
   
  `EINVAL`  
  잘못된 매개 변수: `filespec` 또는 `fileinfo`가 `NULL`이었습니다. 또는 운영 체제에서 예기치 않은 오류를 반환했습니다.  
@@ -261,9 +262,6 @@ intptr_t _wfindfirst64i32(
 |`_wfindfirst64i32`|\<io.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::IO::DirectoryInfo::GetFiles](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.getfiles.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 호출](../../c-runtime-library/system-calls.md)   

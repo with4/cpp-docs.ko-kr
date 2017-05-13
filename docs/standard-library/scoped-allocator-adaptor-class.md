@@ -9,10 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.scoped_allocator_adaptor
 - scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor
-- std::scoped_allocator_adaptor
+- scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
+- scoped_allocator/std::scoped_allocator_adaptor::allocate
+- scoped_allocator/std::scoped_allocator_adaptor::construct
+- scoped_allocator/std::scoped_allocator_adaptor::deallocate
+- scoped_allocator/std::scoped_allocator_adaptor::destroy
+- scoped_allocator/std::scoped_allocator_adaptor::inner_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::max_size
+- scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: f4c343592c2c767d52a66091ecca5b1bd4ae9e88
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fa8c1304da253183c7f201811238f14d0da3193
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 클래스
@@ -77,7 +85,7 @@ class scoped_allocator_adaptor;
   
 |이름|설명|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::scoped_allocator_adaptor 생성자](#scoped_allocator_adaptor__scoped_allocator_adaptor_constructor)|`scoped_allocator_adaptor` 개체를 생성합니다.|  
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|`scoped_allocator_adaptor` 개체를 생성합니다.|  
   
 ### <a name="typedefs"></a>형식 정의  
   
@@ -100,27 +108,27 @@ class scoped_allocator_adaptor;
   
 |이름|설명|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::rebind 구조체](#scoped_allocator_adaptor__rebind_struct)|`Outer::rebind\<Other>::other` 형식을 `scoped_allocator_adaptor\<Other, Inner...>`와 동일한 의미로 정의합니다.|  
+|[scoped_allocator_adaptor::rebind 구조체](#rebind_struct)|`Outer::rebind\<Other>::other` 형식을 `scoped_allocator_adaptor\<Other, Inner...>`와 동일한 의미로 정의합니다.|  
   
 ### <a name="methods"></a>메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::allocate 메서드](#scoped_allocator_adaptor__allocate_method)|`Outer` 할당자를 사용하여 메모리를 할당합니다.|  
-|[scoped_allocator_adaptor::construct 메서드](#scoped_allocator_adaptor__construct_method)|개체를 생성합니다.|  
-|[scoped_allocator_adaptor::deallocate 메서드](#scoped_allocator_adaptor__deallocate_method)|외부 할당자를 사용하여 개체의 할당을 취소합니다.|  
-|[scoped_allocator_adaptor::destroy 메서드](#scoped_allocator_adaptor__destroy_method)|지정된 개체를 제거합니다.|  
-|[scoped_allocator_adaptor::inner_allocator 메서드](#scoped_allocator_adaptor__inner_allocator_method)|`inner_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.|  
-|[scoped_allocator_adaptor::max_size 메서드](#scoped_allocator_adaptor__max_size_method)|외부 할당자를 통해 할당할 수 있는 개체의 최대 수를 결정합니다.|  
-|[scoped_allocator_adaptor::outer_allocator 메서드](#scoped_allocator_adaptor__outer_allocator_method)|`outer_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.|  
-|[scoped_allocator_adaptor::select_on_container_copy_construction 메서드](#scoped_allocator_adaptor__select_on_container_copy_construction_method)|해당하는 각 할당자에 대해 `select_on_container_copy_construction`을 호출하여 초기화되는 저장된 각각의 allocator 개체를 포함하는 새 `scoped_allocator_adaptor` 개체를 만듭니다.|  
+|[allocate](#allocate)|`Outer` 할당자를 사용하여 메모리를 할당합니다.|  
+|[construct](#construct)|개체를 생성합니다.|  
+|[deallocate](#deallocate)|외부 할당자를 사용하여 개체의 할당을 취소합니다.|  
+|[destroy](#destroy)|지정된 개체를 제거합니다.|  
+|[inner_allocator](#inner_allocator)|`inner_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.|  
+|[max_size](#max_size)|외부 할당자를 통해 할당할 수 있는 개체의 최대 수를 결정합니다.|  
+|[outer_allocator](#outer_allocator)|`outer_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|해당하는 각 할당자에 대해 `select_on_container_copy_construction`을 호출하여 초기화되는 저장된 각각의 allocator 개체를 포함하는 새 `scoped_allocator_adaptor` 개체를 만듭니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<scoped_allocator>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namescopedallocatoradaptorallocatemethoda--scopedallocatoradaptorallocate-method"></a><a name="scoped_allocator_adaptor__allocate_method"></a>  scoped_allocator_adaptor::allocate 메서드  
+##  <a name="allocate"></a>scoped_allocator_adaptor:: allocate
  `Outer` 할당자를 사용하여 메모리를 할당합니다.  
   
 ```cpp  
@@ -137,7 +145,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>반환 값  
  첫 번째 구성원 함수는 `Outer_traits::allocate(outer_allocator(), count)`를 반환합니다. 두 번째 구성원 함수는 `Outer_traits::allocate(outer_allocator(), count, hint)`를 반환합니다.  
   
-##  <a name="a-namescopedallocatoradaptorconstructmethoda--scopedallocatoradaptorconstruct-method"></a><a name="scoped_allocator_adaptor__construct_method"></a>  scoped_allocator_adaptor::construct 메서드  
+##  <a name="construct"></a>scoped_allocator_adaptor:: construct
  개체를 생성합니다.  
   
 ```cpp  
@@ -198,7 +206,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  여섯 번째 메서드는 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`와 동일하게 동작합니다.  
   
-##  <a name="a-namescopedallocatoradaptordeallocatemethoda--scopedallocatoradaptordeallocate-method"></a><a name="scoped_allocator_adaptor__deallocate_method"></a>  scoped_allocator_adaptor::deallocate 메서드  
+##  <a name="deallocate"></a>scoped_allocator_adaptor:: deallocate
  외부 할당자를 사용하여 개체의 할당을 취소합니다.  
   
 ```cpp  
@@ -212,7 +220,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  할당을 취소할 개체의 수입니다.  
   
-##  <a name="a-namescopedallocatoradaptordestroymethoda--scopedallocatoradaptordestroy-method"></a><a name="scoped_allocator_adaptor__destroy_method"></a>  scoped_allocator_adaptor::destroy 메서드  
+##  <a name="destroy"></a>scoped_allocator_adaptor:: destroy
  지정된 개체를 제거합니다.  
   
 ```cpp  
@@ -227,7 +235,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>반환 값  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="a-namescopedallocatoradaptorinnerallocatormethoda--scopedallocatoradaptorinnerallocator-method"></a><a name="scoped_allocator_adaptor__inner_allocator_method"></a>  scoped_allocator_adaptor::inner_allocator 메서드  
+##  <a name="inner_allocator"></a>scoped_allocator_adaptor:: inner_allocator
  `inner_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.  
   
 ```cpp  
@@ -238,7 +246,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>반환 값  
  `inner_allocator_type` 형식의 저장된 개체에 대한 참조입니다.  
   
-##  <a name="a-namescopedallocatoradaptormaxsizemethoda--scopedallocatoradaptormaxsize-method"></a><a name="scoped_allocator_adaptor__max_size_method"></a>  scoped_allocator_adaptor::max_size 메서드  
+##  <a name="max_size"></a>scoped_allocator_adaptor:: max_size
  외부 할당자를 통해 할당할 수 있는 개체의 최대 수를 결정합니다.  
   
 ```cpp  
@@ -248,7 +256,7 @@ size_type max_size();
 ### <a name="return-value"></a>반환 값  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="a-namescopedallocatoradaptorouterallocatormethoda--scopedallocatoradaptorouterallocator-method"></a><a name="scoped_allocator_adaptor__outer_allocator_method"></a>  scoped_allocator_adaptor::outer_allocator 메서드  
+##  <a name="outer_allocator"></a>scoped_allocator_adaptor:: outer_allocator
  `outer_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.  
   
 ```cpp  
@@ -259,7 +267,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 ### <a name="return-value"></a>반환 값  
  `outer_allocator_type` 형식의 저장된 개체에 대한 참조입니다.  
   
-##  <a name="a-namescopedallocatoradaptorrebindstructa--scopedallocatoradaptorrebind-struct"></a><a name="scoped_allocator_adaptor__rebind_struct"></a>  scoped_allocator_adaptor::rebind 구조체  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind 구조체  
  `Outer::rebind\<Other>::other` 형식을 `scoped_allocator_adaptor\<Other, Inner...>`와 동일한 의미로 정의합니다.  
   
 struct rebind{  
@@ -268,7 +276,7 @@ struct rebind{
    typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other;  
    };  
   
-##  <a name="a-namescopedallocatoradaptorscopedallocatoradaptorconstructora--scopedallocatoradaptorscopedallocatoradaptor-constructor"></a><a name="scoped_allocator_adaptor__scoped_allocator_adaptor_constructor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 생성자  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 생성자  
  `scoped_allocator_adaptor` 개체를 생성합니다.  
   
 ```cpp  
@@ -297,9 +305,9 @@ scoped_allocator_adaptor(Outer2&& al,
  내부 할당자로 사용할 할당자의 목록입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 생성자는 기본적으로 저장된 allocator 개체를 생성합니다. 다음&3;개 생성자는 각각 `right`의 해당 개체에서 저장된 allocator 개체를 생성합니다. 마지막 생성자는 인수 목록의 해당 인수에서 저장된 allocator 개체를 생성합니다.  
+ 첫 번째 생성자는 기본적으로 저장된 allocator 개체를 생성합니다. 다음 3개 생성자는 각각 `right`의 해당 개체에서 저장된 allocator 개체를 생성합니다. 마지막 생성자는 인수 목록의 해당 인수에서 저장된 allocator 개체를 생성합니다.  
   
-##  <a name="a-namescopedallocatoradaptorselectoncontainercopyconstructionmethoda--scopedallocatoradaptorselectoncontainercopyconstruction-method"></a><a name="scoped_allocator_adaptor__select_on_container_copy_construction_method"></a>  scoped_allocator_adaptor::select_on_container_copy_construction 메서드  
+##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor:: select_on_container_copy_construction
  해당하는 각 할당자에 대해 `select_on_container_copy_construction`을 호출하여 초기화되는 저장된 각각의 allocator 개체를 포함하는 새 `scoped_allocator_adaptor` 개체를 만듭니다.  
   
 ```cpp  

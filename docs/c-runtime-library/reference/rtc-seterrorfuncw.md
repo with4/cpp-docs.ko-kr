@@ -52,10 +52,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d71962eca033e5d3994c82e666102f44c62e82be
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
@@ -78,15 +79,15 @@ RTC(런타임 오류 검사) 보고를 위한 처리기로 함수를 지정합�
  이전에 정의된 오류 함수 또는 이전에 정의된 함수가 없는 경우 `NULL`입니다.  
   
 ## <a name="remarks"></a>설명  
- 새 코드에서는 `_RTC_SetErrorFuncW`만 사용합니다. `_RTC_SetErrorFunc`는 이전 버전과의 호환성을 위해서만 라이브러리에 포함되었습니다.  
+ 새 코드에서는 `_RTC_SetErrorFuncW`만 사용합니다. `_RTC_SetErrorFunc` 는 이전 버전과의 호환성을 위해서만 라이브러리에 포함되었습니다.  
   
  `_RTC_SetErrorFuncW` 콜백은 연결된 구성 요소에만 적용되고 전체적으로 적용되지 않습니다.  
   
- `_RTC_SetErrorFuncW`에 전달하는 주소가 유효한 오류 처리 함수의 주소인지 확인합니다.  
+ `_RTC_SetErrorFuncW` 에 전달하는 주소가 유효한 오류 처리 함수의 주소인지 확인합니다.  
   
- [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md)을 사용하여 오류에 -1의 한 형식을 할당한 경우 오류 처리 함수가 호출되지 않습니다.  
+ 경우 오류가 여 할당 된-1의 형식을 사용 하 여 [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), 오류 처리 함수가 호출 되지 않습니다.  
   
- 이 함수를 호출하려면 먼저 런타임 오류 검사 초기화 함수 중 하나를 호출해야 합니다. 자세한 내용은 [C 런타임 라이브러리 없이 런타임 검사 사용](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)을 참조하세요.  
+ 이 함수를 호출하려면 먼저 런타임 오류 검사 초기화 함수 중 하나를 호출해야 합니다. 자세한 내용은 [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)을 참조하십시오.  
   
  **_RTC_error_fnW**는 다음과 같이 정의됩니다.  
   
@@ -101,7 +102,7 @@ RTC(런타임 오류 검사) 보고를 위한 처리기로 함수를 지정합�
  오류가 발생한 원본 파일 또는 디버그 정보를 사용할 수 없는 경우 null입니다.  
   
  *linenumber*  
- 오류가 발생한 *filename*의 줄 또는 디버그 정보를 사용할 수 없는 경우 0입니다.  
+ 오류가 발생한 *filename* 의 줄 또는 디버그 정보를 사용할 수 없는 경우 0입니다.  
   
  `moduleName`  
  오류가 발생한 DLL 또는 실행 파일 이름입니다.  
@@ -121,9 +122,6 @@ RTC(런타임 오류 검사) 보고를 위한 처리기로 함수를 지정합�
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   

@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da5f95812b750da5f337eb459cf136b7eb827c5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 78f056e65523a39477bf138e6bd1664e0945a899
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
@@ -71,10 +72,10 @@ RTC(런타임 오류 검사)에서 발견된 오류를 형식에 연결합니다
   
 #### <a name="parameters"></a>매개 변수  
  *errnum*  
- 0과 [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)에서 반환한 값에서&1;을 뺀 수 사이의 숫자입니다.  
+ 0과 [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)에서 반환한 값에서 1을 뺀 수 사이의 숫자를 반환합니다.  
   
  *ErrType*  
- 이 *errnum*에 할당할 값입니다. 예를 들어 **_CRT_ERROR**를 사용할 수 있습니다. `_CrtDbgReport`를 오류 처리기로 사용 중인 경우 *ErrType*은 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)에서 정의된 기호 중 하나여야 합니다. 고유한 오류 처리기([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md))가 있는 경우 *errnum*의 개수만큼 *ErrType*을 사용할 수 있습니다.  
+ 이 *errnum*에 할당할 값입니다. 예를 들어 **_CRT_ERROR**를 사용할 수 있습니다. `_CrtDbgReport` 를 오류 처리기로 사용 중인 경우 *ErrType* 은 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)에서 정의된 기호 중 하나일 수만 있습니다. 사용자 고유의 오류 처리기([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md))가 있는 경우 *errnum*개수만큼 *ErrType*을 사용할 수 있습니다.  
   
  *ErrType* _RTC_ERRTYPE_IGNORE에는 `_CrtSetReportMode`에 대한 특별한 의미가 있습니다. 오류가 무시됩니다.  
   
@@ -96,9 +97,6 @@ RTC(런타임 오류 검사)에서 발견된 오류를 형식에 연결합니다
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   

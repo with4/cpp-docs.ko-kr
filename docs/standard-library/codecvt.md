@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 119af430ef2d333780587ce72fb5be65faf43892
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 75f527ca1e0742a1958076b49446b257793c69a5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/24/2017
   
 -   UCS-2는 프로그램 내에서 16비트 정수로 인코드된 유니코드입니다.  
   
--   UTF-16은 프로그램 내에서&1;개 정수로 인코드된 유니코드입니다.  
+-   UTF-16은 프로그램 내에서 1개 정수로 인코드된 유니코드입니다.  
   
 -   UTF-16은 프로그램 내에서 하나 또는 두 개의 16비트 정수로 인코드된 유니코드입니다. (표준 C 또는 표준 C++에 대한 유효한 와이드 문자 인코딩의 모든 요구 사항을 충족하지는 않습니다. 그럼에도 불구하고 매우 광범위하게 사용됩니다.)  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/24/2017
   
 -   UTF-8은 인코드된 유니코드입니다.  
   
--   UTF-8은 바이트 스트림 내에서 결정적 바이트 순서를 가진 하나 이상의&8;비트 바이트로 인코드된 유니코드입니다.  
+-   UTF-8은 바이트 스트림 내에서 결정적 바이트 순서를 가진 하나 이상의 8비트 바이트로 인코드된 유니코드입니다.  
   
 -   UTF-16LE는 인코드된 유니코드입니다.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode_enumeration)|로캘 패싯에 대한 구성 정보를 지정합니다.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|로캘 패싯에 대한 구성 정보를 지정합니다.|  
   
 ### <a name="classes"></a>클래스  
   

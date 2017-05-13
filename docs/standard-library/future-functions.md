@@ -6,22 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- future/std::async
+- future/std::future_category
+- future/std::make_error_code
+- future/std::make_error_condition
+- future/std::swap
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 57a9e0ba45c363d126ef44dc80eeb13d72b3733d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: c542e696e0e5ddef350d40b45fe16f4c3a77882d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 함수
 ||||  
 |-|-|-|  
-|[async](#async_function)|[future_category](#future_category_function)|[make_error_code](#make_error_code_function)|  
-|[make_error_condition](#make_error_condition_function)|[swap](#swap_function)|  
+|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|  
+|[make_error_condition](#make_error_condition)|[swap](#swap)|  
   
-##  <a name="a-nameasyncfunctiona--async"></a><a name="async_function"></a>  async  
+##  <a name="async"></a>  async  
  *비동기 공급자*를 나타냅니다.  
   
 ```
@@ -36,7 +43,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
   
 ### <a name="parameters"></a>매개 변수  
  `policy`  
- [launch](../standard-library/future-enums.md#launch_enumeration) 값입니다.  
+ [launch](../standard-library/future-enums.md#launch) 값입니다.  
   
 ### <a name="remarks"></a>설명  
  약어의 정의:  
@@ -44,10 +51,10 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 |||  
 |-|-|  
 |*dfn*|호출하는 `decay_copy(forward<Fn>(fn))`의 결과입니다.|  
-|*dargs*|`decay_copy(forward<ArgsTypes>(args…))` 호출의 결과입니다.|  
-|*Ty*|`result_of<Fn(ArgTypes…)>::type` 형식|  
+|*dargs*|`decay_copy(forward<ArgsTypes>(args...))` 호출의 결과입니다.|  
+|*Ty*|`result_of<Fn(ArgTypes...)>::type` 형식|  
   
- 첫 번째 템플릿 함수는 `async(launch::any, fn, args…)`를 반환합니다.  
+ 첫 번째 템플릿 함수는 `async(launch::any, fn, args...)`를 반환합니다.  
   
  두 번째 함수는 *연결된 비동기 상태*에 *dfn* 및 *dargs*의 값과 결과를 갖는 `future<Ty>` 개체와, 개별 스레드 실행을 관리하는 스레드 개체를 반환합니다.  
   
@@ -59,21 +66,21 @@ future<typename result_of<Fn(ArgTypes...)>::type>
   
  `policy`가 `launch::deferred`일 경우 연결된 비동기 상태에 *지연된 함수*가 있는 것으로 표시하고 반환합니다. 연결된 비동기 상태가 유효해지기를 기다리는 non-timed 함수의 첫 번째 호출은 `INVOKE(dfn, dargs..., Ty)`를 평가함으로써 지연된 함수를 호출합니다.  
   
- 어떤 경우에도 `future` 개체의 연결된 비동기 상태는 예외를 throw하거나 정상적으로 반환함으로써 `INVOKE(dfn, dargs…, Ty)`의 계산이 완료될 때까지 *준비*로 설정되지 않습니다. 예외가 throw되거나 계산에서 값이 반환된 경우 연결된 비동기 상태의 결과는 예외입니다.  
+ 어떤 경우에도 `future` 개체의 연결된 비동기 상태는 예외를 throw하거나 정상적으로 반환함으로써 `INVOKE(dfn, dargs..., Ty)`의 계산이 완료될 때까지 *준비*로 설정되지 않습니다. 예외가 throw되거나 계산에서 값이 반환된 경우 연결된 비동기 상태의 결과는 예외입니다.  
   
 > [!NOTE]
 >  `std::async`로 시작하는 작업에 연결된 `future` 또는 마지막 [shared_future](../standard-library/shared-future-class.md)의 경우 작업이 완료되지 않은 경우 소멸자가 차단됩니다. 즉 이 스레드가 `.get()` 또는 `.wait()`를 아직 호출하지 않은 경우 소멸자를 차단하고 작업을 계속 실행합니다. `future`에서 가져온 `std::async`가 로컬 범위 밖으로 이동되는 경우 해당 future를 사용하는 다른 코드는 공유 상태 준비를 위해 소멸자가 차단될 것을 알고 있어야 합니다.  
   
  의사 함수 `INVOKE`는 [\<functional>](../standard-library/functional.md)에 정의되어 있습니다.  
   
-##  <a name="a-namefuturecategoryfunctiona--futurecategory"></a><a name="future_category_function"></a>  future_category  
+##  <a name="future_category"></a>  future_category  
  `future` 개체와 연결된 오류의 특징을 결정하는 [error_category](../standard-library/error-category-class.md) 개체에 대한 참조를 반환합니다.  
   
 ```
 const error_category& future_category() noexcept;
 ```  
   
-##  <a name="a-namemakeerrorcodefunctiona--makeerrorcode"></a><a name="make_error_code_function"></a>  make_error_code  
+##  <a name="make_error_code"></a>  make_error_code  
  [future](../standard-library/future-class.md) 오류의 특징을 결정하는 [error_category](../standard-library/error-category-class.md) 개체와 함께 [error_code](../standard-library/error-code-class.md)를 만듭니다.  
   
 ```
@@ -82,12 +89,12 @@ inline error_code make_error_code(future_errc Errno) noexcept;
   
 ### <a name="parameters"></a>매개 변수  
  `Errno`  
- 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc_enumeration) 값입니다.  
+ 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc) 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `error_code(static_cast<int>(Errno), future_category());`  
   
-##  <a name="a-namemakeerrorconditionfunctiona--makeerrorcondition"></a><a name="make_error_condition_function"></a>  make_error_condition  
+##  <a name="make_error_condition"></a>  make_error_condition  
  [future](../standard-library/future-class.md) 오류의 특정을 결정하는 [error_category](../standard-library/error-category-class.md) 개체와 함께 [error_condition](../standard-library/error-condition-class.md)을 만듭니다.  
   
 ```
@@ -96,12 +103,12 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
   
 ### <a name="parameters"></a>매개 변수  
  `Errno`  
- 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc_enumeration) 값입니다.  
+ 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc) 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  `promise` 개체 하나의 *연결된 비동기 상태*를 다른 개체의 상태와 교환합니다.  
   
 ```
