@@ -398,7 +398,7 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 ### [방법: 여러 개의 PGO 프로필을 단일 프로필로 병합](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-# [컴파일러 오류 C2001 ~ C2499](../../error-messages/compiler-errors-1/TOC.md)
+# [컴파일러 오류 C999 ~ C2499](../../error-messages/compiler-errors-1/TOC.md)
 # [컴파일러 오류 C2500 ~ C3999](../../error-messages/compiler-errors-2/TOC.md)
 # [컴파일러 경고](../../error-messages/compiler-warnings/TOC.md)
 # [도구 오류](../../error-messages/tool-errors/TOC.md)

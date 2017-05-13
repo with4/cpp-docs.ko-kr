@@ -21,6 +21,8 @@
 ### [도움말 파일(HTML 도움말)](help-files-html-help.md)
 ### [도움말 파일(WinHelp)](help-files-winhelp.md)
 ### [힌트 파일](hint-files.md)
+### [속성 페이지 XML 파일](property-page-xml-files.md)
+### [.vcxproj 및 .props 파일 구조](vcxproj-file-structure.md)
 ## [응용 프로그램 마법사를 사용하여 데스크톱 프로젝트 만들기](creating-desktop-projects-by-using-application-wizards.md)
 ### [다른 언어에 대한 마법사 지원](wizard-support-for-other-languages.md)
 ### [사용자 지정 마법사 만들기](creating-a-custom-wizard.md)
