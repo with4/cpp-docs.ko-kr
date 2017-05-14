@@ -1,55 +1,72 @@
 ---
-title: "floor, floorf, floorl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "floorf"
-  - "floorl"
-  - "floor"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "floor"
-  - "floorl"
-  - "_floorl"
-  - "floorf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "바닥 값 계산"
-  - "floor 함수"
-  - "floorf 함수"
-  - "floorl 함수"
+title: "floor, floorf, floorl | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- floorf
+- floorl
+- floor
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- floor
+- floorl
+- _floorl
+- floorf
+dev_langs:
+- C++
+helpviewer_keywords:
+- floor function
+- floorf function
+- calculating floors of values
+- floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# floor, floorf, floorl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-값의 층을 계산합니다.  
+---
+# <a name="floor-floorf-floorl"></a>floor, floorf, floorl
+값의 하한을 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double floor(  
@@ -69,31 +86,31 @@ long double floorl(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `x`  
- 부동 소수점 값.  
+ 부동 소수점 값입니다.  
   
-## 반환 값  
- 이 `floor` 함수는 `x` 이 같거나 더 적은 더 큰 정수를 표현하는 부동 소수점 값을 반환합니다.  반환되는 오류가 없습니다.  
+## <a name="return-value"></a>반환 값  
+ `floor` 함수는 `x`보다 작거나 같은 가장 큰 정수를 나타내는 부동 소수점 값을 반환합니다. 반환되는 오류가 없습니다.  
   
 |입력|SEH 예외|Matherr 예외|  
-|--------|------------|----------------|  
-|± QNAN,IND|없음|\_DOMAIN|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|없음|_DOMAIN|  
   
- `floor` 스트리밍 SIMD 확장 2 \(SSE2\)을 사용하여구현을 했습니다.  정보 및 SSE2 구현을 사용하는 방법에 대한 제한 사항을 참조 하십시오. [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `floor`에는 SSE2(스트리밍 SIMD 확장 2)를 사용하는 구현이 포함됩니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)을 참조하세요.  
   
-## 설명  
- C\+\+는 오버로드를 허용하기 때문에 `float` 및 `long double` 값을 사용하고 반환하는 `floor` 의 오버로드를 호출할 수 있습니다.  C 프로그램에서 `floor`는 항상 `double`을 사용하고 반환합니다.  
+## <a name="remarks"></a>설명  
+ C++에서는 오버로드를 허용하므로 `float` 및 `long double` 값을 사용 및 반환하는 `floor`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `floor`는 항상 `double`을 사용 및 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|Function|필수 헤더|  
-|--------------|-----------|  
-|`floor`, `floorf`, `floorl`|\<math.h\>|  
+|함수|필수 헤더|  
+|--------------|---------------------|  
+|`floor`, `floorf`, `floorl`|\<math.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_floor.c  
@@ -121,14 +138,14 @@ int main( void )
 }  
 ```  
   
-  **2.8의 최소는 2.000000 입니다.**  
-**\-2.8의 최소는 \-3.000000 입니다.**  
-**2.8의 ceil은 3.000000 입니다.**  
-**\-2.8의 ceil은 \-2.000000 입니다.**   
-## 해당 .NET Framework 항목  
- [System::Math::Floor](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)  
+```Output  
+The floor of 2.8 is 2.000000  
+The floor of -2.8 is -3.000000  
+The ceil of 2.8 is 3.000000  
+The ceil of -2.8 is -2.000000  
+```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   
