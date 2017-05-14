@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 61ceb0f31f41e129eb0047ba8c0de1c44c43f1b1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1828b9316cf29d953a6db8f8a6c11b5a3a08c346
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ferror"></a>ferror
@@ -72,7 +73,7 @@ int ferror(
  `FILE` 구조체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `stream`에서 오류가 발생하지 않는 경우 `ferror`는 0을 반환합니다. 그렇지 않으면&0;이 아닌 값을 반환합니다. 스트림이 `NULL`인 경우 `ferror`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL` 로 설정하고 0을 반환합니다.  
+ `stream`에서 오류가 발생하지 않는 경우 `ferror`는 0을 반환합니다. 그렇지 않으면 0이 아닌 값을 반환합니다. 스트림이 `NULL`인 경우 `ferror`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL` 로 설정하고 0을 반환합니다.  
   
  이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
@@ -89,9 +90,6 @@ int ferror(
   
 ## <a name="example"></a>예제  
  [feof](../../c-runtime-library/reference/feof.md)의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 처리](../../c-runtime-library/error-handling-crt.md)   

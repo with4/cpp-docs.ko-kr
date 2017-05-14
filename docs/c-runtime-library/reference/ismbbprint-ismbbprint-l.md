@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 64d619e9826e896633aaa35d64d0148bede7879b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
@@ -84,13 +85,13 @@ int _ismbbprint_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 식이 다음과 같을 경우 `_ismbbprint`는&0;이 아닌 값을 반환합니다.  
+ 식이 다음과 같을 경우 `_ismbbprint`는 0이 아닌 값을 반환합니다.  
   
 ```  
 isprint || _ismbbkprint  
 ```  
   
- `c`에 대해 0이 아니며, 그렇지 않은 경우 0입니다. `_ismbbprint`는 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbprint_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `c`에 대해 0이 아니며, 그렇지 않은 경우 0입니다. `_ismbbprint` 은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbprint_l` 은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -100,9 +101,6 @@ isprint || _ismbbkprint
 |`_ismbbprint_l`|\<mbctype.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [바이트 분류](../../c-runtime-library/byte-classification.md)   

@@ -1,47 +1,64 @@
 ---
-title: "vfscanf, vfwscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vfwscanf"
-  - "vfscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vfwscanf"
-  - "_vftscanf"
-  - "vfscanf"
-dev_langs: 
-  - "C++"
+title: vfscanf, vfwscanf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vfwscanf
+- vfscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vfwscanf
+- _vftscanf
+- vfscanf
+dev_langs:
+- C++
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vfscanf, vfwscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 43fa7fbd1251df25a7b6f87a3c009603febd2eed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-스트림에서 형식 데이터를 읽습니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [vfscanf\_s, vfwscanf\_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)를 참조하십시오.  
+---
+# <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
+스트림에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [vfscanf_s, vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int vfscanf(   
@@ -56,7 +73,7 @@ int vfwscanf(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `stream`  
  `FILE` 구조체에 대한 포인터입니다.  
   
@@ -64,36 +81,36 @@ int vfwscanf(
  형식 컨트롤 문자열입니다.  
   
  `arglist`  
- 가변 길이 인수 목록.  
+ 가변 인수 목록입니다.  
   
-## 반환 값  
- 해당 함수는 각각 성공적으로 변환, 배정된 필드 수를 반환합니다. 이때 읽기는 되지만 지정되지 않은 필드는 반환 값에 포함되지 않습니다.  반환 값 0은 어떤 필드도 할당되지 않았음을 나타냅니다.  오류가 발생하거나 첫 번째 변환 전에 파일 스트림의 끝에 도달할 경우 `vfscanf` 및 `vfwscanf`에 대한 반환 값은 `EOF`입니다.  
+## <a name="return-value"></a>반환 값  
+ 이러한 각 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생하거나 첫 번째 변환 전에 파일 스트림의 끝에 도달할 경우 반환 값은 `vfscanf` 및 `vfwscanf`에 대한 `EOF`입니다.  
   
- 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다.  [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 `stream` 또는 `format`이 null 포인터인 경우 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `EOF`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
+ 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `stream` 또는 `format`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `EOF`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
-## 설명  
- `vfscanf` 함수는 `stream`의 현재 위치에서 `arglist` 인수 목록에서 지정된 위치로 데이터를 읽습니다.  목록의 각 인수는 `format`에서 형식 지정자와 일치하는 특정 형식의 변수에 대한 포인터가 되어야 합니다.  `format`는 입력 필드의 해석을 컨트롤하고, `scanf`에 대한 `format` 인수와 동일한 양식과 함수를 가집니다. `format`에 대한 자세한 내용은 [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ `vfscanf` 함수는 `stream`의 현재 위치에서 `arglist` 인수 목록에 의해 지정된 위치로 데이터를 읽습니다. 목록의 각 인수는 `format`의 형식 지정자에 해당되는 형식의 변수에 대한 포인터여야 합니다. `format`은 입력 필드의 해석을 제어하며, 형식과 기능은 `scanf`의 `format` 인수와 동일합니다. `format`에 대한 설명은 [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)를 참조하세요.  
   
- `vfwscanf`는 `vfscanf`의 와이드 문자 버전이며, `vfwscanf`의 format 인수는 와이드 문자 문자열입니다.  이러한 함수는 ANSI 모드에서 스트림이 열린 경우 동일하게 동작합니다.  `vfscanf`는 UNICODE 스트림의 입력을 지원하지 않습니다.  
+ `vfwscanf`는 `vfscanf`의 와이드 문자 버전이며, `vfwscanf`에 대한 format 인수는 와이드 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 이러한 함수는 동일하게 작동합니다. `vfscanf`는 UNICODE 스트림에서의 입력을 지원하지 않습니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vftscanf`|`vfscanf`|`vfscanf`|`vfwscanf`|  
   
- 자세한 내용은 [형식 사양 필드: scanf 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)을 참조하십시오.  
+ 자세한 내용은 [서식 지정 필드: scanf 함수 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)를 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|Function|필수 헤더|  
-|--------------|-----------|  
-|`vfscanf`|\<stdio.h\>|  
-|`vfwscanf`|\<stdio.h\> 또는 \<wchar.h\>|  
+|함수|필수 헤더|  
+|--------------|---------------------|  
+|`vfscanf`|\<stdio.h>|  
+|`vfwscanf`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_vfscanf.c  
@@ -154,18 +171,18 @@ int main(void)
   
 ```  
   
-  **문자열**  
-**65000**  
-**3.141590**  
-**x**   
-## 해당 .NET Framework 항목  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). `Parse` 메서드\(예: [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)\)도 참조하십시오.  
+```Output  
+a-string  
+65000  
+3.141590  
+x  
+```  
   
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
- [vfscanf\_s, vfwscanf\_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [vfscanf_s, vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)

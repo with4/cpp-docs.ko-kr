@@ -84,10 +84,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: eeeab09167f3330ab06dc664fd0163206b6b6ff8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 602b5d1f3cd490213f3f849200eb155456627694
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
@@ -153,10 +154,10 @@ int _ismbcspace_l(
   
 |루틴|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
-|`_ismbcgraph`|그래픽|`c`가 공백 ( )을 제외하고 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만&0;이 아닌 값을 반환합니다.|  
-|`_ismbcprint`|인쇄 가능|`c`가 공백 ( )을 포함하여 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만&0;이 아닌 값을 반환합니다.|  
-|`_ismbcpunct`|문장 부호|`c`가 모든 ASCII 또는 가타카나 문장 부호 문자의 싱글바이트 표현인 경우에만&0;이 아닌 값을 반환합니다.|  
-|`_ismbcblank`|공백 또는 가로 탭|`c`가 공백 또는 가로 탭 문자(`c`=0x20 또는 `c`=0x09)인 경우에만&0;이 아닌 값을 반환합니다.|  
+|`_ismbcgraph`|그래픽|`c`가 공백 ( )을 제외하고 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
+|`_ismbcprint`|인쇄 가능|`c`가 공백 ( )을 포함하여 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
+|`_ismbcpunct`|문장 부호|`c`가 모든 ASCII 또는 가타카나 문장 부호 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
+|`_ismbcblank`|공백 또는 가로 탭|`c`가 공백 또는 가로 탭 문자(`c`=0x20 또는 `c`=0x09)인 경우에만 0이 아닌 값을 반환합니다.|  
 |`_ismbcspace`|공백|`c`가 공백 문자(`c`=0x20 또는 0x09<=`c`<=0x0D)인 경우에만 0이 아닌 값을 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -178,14 +179,6 @@ int _ismbcspace_l(
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
-  
--   [System::Char::IsPunctuation](https://msdn.microsoft.com/en-us/library/system.char.ispunctuation.aspx)  
-  
--   [System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)  
-  
--   `_ismbcgraph` 및 `_ismbcprint`의 경우: 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자 분류](../../c-runtime-library/character-classification.md)   

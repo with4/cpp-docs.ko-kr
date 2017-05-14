@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -93,7 +94,7 @@ errno_t _localtime64_s(
  저장된 시간에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우&0;입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 이러한 오류의 목록은 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 성공할 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 이러한 오류의 목록은 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  구조체 형식 [tm](../../c-runtime-library/standard-types.md)의 필드는 다음 값을 저장하며, 각 값은 `int`입니다.  
   
  `tm_sec`  
- 분 이후의 초(0 ~ 59).  
+ 초 후 1 분 (0-59).  
   
  `tm_min`  
- 시간 이후의 분(0 ~ 59).  
+ 분 후에 시간 (0-59).  
   
  `tm_hour`  
- 자정 이후의 시간(0 ~ 23).  
+ 자정 이후의 시간 (0-23).  
   
  `tm_mday`  
- 일(한 달 기준)(1 ~ 31).  
+ 날짜 (1-31)입니다.  
   
  `tm_mon`  
- 월(0 ~ 11, 1월 = 0).  
+ 월 (0-11; 1 월 = 0).  
   
  `tm_year`  
  연도(현재 연도 - 1900).  
   
  `tm_wday`  
- 요일(0 ~ 6, 일요일 = 0).  
+ 요일 (0-6; 일요일 = 0).  
   
  `tm_yday`  
- 일(한 해 기준)(0 ~ 365, 1월 1일 = 0).  
+ 연간 일자 (0-365; 1 월 1 일 = 0).  
   
  `tm_isdst`  
  일광 절약 시간이 적용되면 양수, 일광 절약 시간이 적용되지 않으면 0, 일광 절약 시간의 상태를 알 수 없으면 음수입니다. `TZ` 환경 변수가 설정된 경우 C 런타임 라이브러리에서는 DST(일광 절약 시간) 계산을 구현하기 위해 미국에 적절한 규칙이 사용된다고 가정합니다.  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

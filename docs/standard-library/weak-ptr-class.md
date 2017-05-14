@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>weak_ptr 클래스
@@ -89,11 +90,11 @@ public:
 ## <a name="remarks"></a>설명  
  이 템플릿 클래스는 하나 이상의 [shared_ptr Class](../standard-library/shared-ptr-class.md) 개체에 의해 관리되는 리소스를 가리키는 개체를 설명합니다. 리소스를 가리키는 `weak_ptr` 개체는 리소스의 참조 횟수에 영향을 주지 않습니다. 따라서 해당 리소스를 관리하는 마지막 `shared_ptr` 개체가 삭제되면 해당 리소스를 가리키는 `weak_ptr` 개체가 있는 경우에도 리소스가 해제됩니다. 이는 데이터 구조에서 순환을 방지하는 데 필요합니다.  
   
- `weak_ptr` 개체는 리소스를 소유하는 `shared_ptr` 개체에서 생성된 경우, 리소스를 가리키는 `weak_ptr` 개체에서 생성된 경우 또는 [operator=](#weak_ptr__operator_eq)를 사용하여 리소스가 할당된 경우 해당 리소스를 가리킵니다. `weak_ptr` 개체는 가리키는 리소스에 대한 직접 액세스를 제공하지 않습니다. 리소스를 사용해야 하는 코드는 구성원 함수 [lock](#weak_ptr__lock)을 호출하여 만든, 해당 리소스를 소유하는 `shared_ptr` 개체를 통해 사용합니다. 리소스를 소유하는 모든 `shared_ptr` 개체가 삭제되어 `weak_ptr` 개체가 가리키는 리소스가 해제된 경우 개체가 만료되었습니다. 만료된 `weak_ptr` 개체에 대해 `lock`을 호출하면 빈 shared_ptr 개체가 생성됩니다.  
+ `weak_ptr` 개체는 리소스를 소유하는 `shared_ptr` 개체에서 생성된 경우, 리소스를 가리키는 `weak_ptr` 개체에서 생성된 경우 또는 [operator=](#op_eq)를 사용하여 리소스가 할당된 경우 해당 리소스를 가리킵니다. `weak_ptr` 개체는 가리키는 리소스에 대한 직접 액세스를 제공하지 않습니다. 리소스를 사용해야 하는 코드는 구성원 함수 [lock](#lock)을 호출하여 만든, 해당 리소스를 소유하는 `shared_ptr` 개체를 통해 사용합니다. 리소스를 소유하는 모든 `shared_ptr` 개체가 삭제되어 `weak_ptr` 개체가 가리키는 리소스가 해제된 경우 개체가 만료되었습니다. 만료된 `weak_ptr` 개체에 대해 `lock`을 호출하면 빈 shared_ptr 개체가 생성됩니다.  
   
  빈 weak_ptr 개체는 리소스를 가리키지 않으며 제어 블록이 없습니다. 멤버 함수 `lock`은 빈 shared_ptr 개체를 반환합니다.  
   
- `shared_ptr` 개체가 제어하는 둘 이상의 리소스가 상호 참조하는 `shared_ptr` 개체를 보유한 경우 순환이 발생합니다. 예를 들어 요소 세 개가 포함된 순환 연결된 목록에 헤드 노드 `N0`가 있습니다. 해당 노드는 다음 노드 `N1`을 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다음 노드 `N2`를 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다시 헤드 노드 `N0`을 소유하는 `shared_ptr` 개체를 보유하여 순환을 닫습니다. 이 경우 참조 횟수는 결코&0;이 되지 않으며 순환의 노드가 해제되지 않습니다. 순환을 제거하려면 마지막 노드 `N2`가 `shared_ptr` 개체 대신 `N0`을 가리키는 `weak_ptr` 개체를 보유해야 합니다. `weak_ptr` 개체는 `N0`을 소유하지 않으므로 `N0`의 참조 횟수에 영향을 주지 않으며, 헤드 노드에 대한 프로그램의 마지막 참조가 삭제되면 목록의 노드도 삭제됩니다.  
+ `shared_ptr` 개체가 제어하는 둘 이상의 리소스가 상호 참조하는 `shared_ptr` 개체를 보유한 경우 순환이 발생합니다. 예를 들어 요소 세 개가 포함된 순환 연결된 목록에 헤드 노드 `N0`가 있습니다. 해당 노드는 다음 노드 `N1`을 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다음 노드 `N2`를 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다시 헤드 노드 `N0`을 소유하는 `shared_ptr` 개체를 보유하여 순환을 닫습니다. 이 경우 참조 횟수는 결코 0이 되지 않으며 순환의 노드가 해제되지 않습니다. 순환을 제거하려면 마지막 노드 `N2`가 `shared_ptr` 개체 대신 `N0`을 가리키는 `weak_ptr` 개체를 보유해야 합니다. `weak_ptr` 개체는 `N0`을 소유하지 않으므로 `N0`의 참조 횟수에 영향을 주지 않으며, 헤드 노드에 대한 프로그램의 마지막 참조가 삭제되면 목록의 노드도 삭제됩니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|`weak_ptr`를 생성합니다.|  
+|[weak_ptr](#weak_ptr)|`weak_ptr`를 생성합니다.|  
   
 ### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|요소의 형식입니다.|  
-|[expired](#weak_ptr__expired)|소유권이 만료되었는지 테스트합니다.|  
-|[lock](#weak_ptr__lock)|리소스의 단독 소유권을 가져옵니다.|  
-|[owner_before](#weak_ptr__owner_before)|이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.|  
-|[reset](#weak_ptr__reset)|소유하는 리소스를 해제합니다.|  
-|[swap](#weak_ptr__swap)|두 `weak_ptr` 개체를 교환합니다.|  
-|[use_count](#weak_ptr__use_count)|지정된 `shared_ptr` 개체 수를 계산합니다.|  
+|[element_type](#element_type)|요소의 형식입니다.|  
+|[expired](#expired)|소유권이 만료되었는지 테스트합니다.|  
+|[lock](#lock)|리소스의 단독 소유권을 가져옵니다.|  
+|[owner_before](#owner_before)|이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.|  
+|[reset](#reset)|소유하는 리소스를 해제합니다.|  
+|[swap](#swap)|두 `weak_ptr` 개체를 교환합니다.|  
+|[use_count](#use_count)|지정된 `shared_ptr` 개체 수를 계산합니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator=](#weak_ptr__operator_eq)|소유하는 리소스를 대체합니다.|  
+|[operator=](#op_eq)|소유하는 리소스를 대체합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<memory>  
   
  **네임스페이스:** std  
   
-##  <a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  요소의 형식입니다.  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a>  expired  
+##  <a name="expired"></a>  expired  
  소유권이 만료되었는지 테스트합니다.  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a>  lock  
+##  <a name="lock"></a>  lock  
  리소스의 단독 소유권을 가져옵니다.  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a>  operator=  
+##  <a name="op_eq"></a>  operator=  
  소유하는 리소스를 대체합니다.  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="owner_before"></a>  owner_before  
  이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>설명  
  템플릿 구성원 함수는 `*this`가 `ordered before``ptr`이면 `true`를 반환합니다.  
   
-##  <a name="weak_ptr__reset"></a>  reset  
+##  <a name="reset"></a>  reset  
  소유하는 리소스를 해제합니다.  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  두 `weak_ptr` 개체를 교환합니다.  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="use_count"></a>  use_count  
  지정된 `shared_ptr` 개체 수를 계산합니다.  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr"></a>  weak_ptr  
  `weak_ptr`를 생성합니다.  
   
 ```  

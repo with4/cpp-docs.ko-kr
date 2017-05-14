@@ -1,64 +1,81 @@
 ---
-title: "atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atan2f"
-  - "atan2l"
-  - "atan2"
-  - "atanf"
-  - "atan"
-  - "atanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atan"
-  - "atan2l"
-  - "atan2"
-  - "atanl"
-  - "atanf"
-  - "atan2f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "아크탄젠트 함수"
-  - "atan 함수"
-  - "atan2 함수"
-  - "atan2f 함수"
-  - "atan2l 함수"
-  - "atanf 함수"
-  - "atanl 함수"
-  - "삼각 함수"
+title: "atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atan2f
+- atan2l
+- atan2
+- atanf
+- atan
+- atanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- atan
+- atan2l
+- atan2
+- atanl
+- atanf
+- atan2f
+dev_langs:
+- C++
+helpviewer_keywords:
+- atan function
+- atanf function
+- atanl function
+- atan2 function
+- atan2l function
+- arctangent function
+- trigonometric functions
+- atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# atan, atanf, atanl, atan2, atan2f, atan2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
-아크탄젠트인 `x` \(`atan`, `atanf`, 및 `atanl`\) 또는 아크탄젠트인 `y`\/`x` \(`atan2`, `atan2f`, 및 `atan2l`\).를 계산합니다.  
+---
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
+`x`(`atan`, `atanf` 및 `atanl`) 또는 `y`/`x`(`atan2`, `atan2f` 및 `atan2l`)의 아크탄젠트를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double atan(   
@@ -98,33 +115,33 @@ long double atan2l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `x`, `y`  
- 모든 숫자.  
+ 임의의 숫자입니다.  
   
-## 반환 값  
- `atan` 아크탄젠트 값을 `x` π\/2 라디안 범위 –π\/2에서 반환합니다.  `atan2` 아크탄젠트 값을 `y/x` π\/2 라디안 범위 –π\/2에서 반환합니다.  `x` 가 0인경우, `atan` 는 0을 반환합니다.  두 매개변수인 `atan2` 가 0인 경우, 함수는 0을 반환 합니다.  모든 결과 라디안입니다.  
+## <a name="return-value"></a>반환 값  
+ `atan`아크탄젠트를 반환 `x` π/2 라디안으로 범위-π/2에서입니다. `atan2`아크탄젠트를 반환 `y/x` π 라디안으로 범위 π에 있습니다. `x`가 0이면 `atan`은 0을 반환합니다. `atan2`의 두 매개 변수가 0이면 함수는 0을 반환합니다. 모든 결과는 라디안 단위입니다.  
   
- `atan2` 사분면의 반환 값을 확인 하려면 두 매개 변수의 기호를 사용 합니다.  
+ `atan2`는 두 매개 변수의 기호를 사용하여 반환 값의 사분면을 결정합니다.  
   
 |입력|SEH 예외|Matherr 예외|  
-|--------|------------|----------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|없음|`_DOMAIN`|  
   
-## 설명  
- `atan` \(역 탄젠트 함수\)의 아크탄젠트를 계산 하는 함수 `x` 입니다.  `atan2` 아크탄젠트인 `y`\/`x` 를 계산합니다. \( `x` 0 인경우 `atan2` π\/2를 반환합니다. `y` 가 양수인 경우, \-π\/2를 반환합니다. `y` 가 음수인 경우, 또는 `y` 가 0인 경우.\)  
+## <a name="remarks"></a>설명  
+ `atan` 함수는 `x`의 아크탄젠트(역 탄젠트 함수)를 계산합니다. `atan2`는 `y`/`x`의 아크탄젠트를 계산합니다(`x`가 0과 같은 경우, `y`가 양수이면 `atan2`는 π/2, `y`가 음수이면 -π/2, `y`가 0이면 0을 반환).  
   
- `atan` 스트리밍 SIMD 확장 2 \(SSE2\)을 사용하여구현을 했습니다.  정보 및 SSE2 구현을 사용하는 방법에 대한 제한 사항을 참조 하십시오. [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `atan`에는 SSE2(스트리밍 SIMD 확장 2)를 사용하는 구현이 포함됩니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)을 참조하세요.  
   
- C \+ \+ 오버 로딩을 허용하기 때문에 오버 로드인 `atan` 및 `atan2`을 호출할 수 있습니다.  C 프로그램에서 `atan` 및 `atan2` 는 항상 사용하고 반환합니다.  
+ C++에서는 오버로드를 허용하므로 `atan` 및 `atan2`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `atan` 및 `atan2`는 항상 Double을 사용하고 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h\>|  
+|-------------|---------------------|  
+|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_atan.c  
@@ -150,21 +167,18 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **5.000000: 1.373401의 아크탄젠트 값**  
-**5.000000: 1.373401의 아크탄젠트 값**   
-## 해당 .NET Framework 항목  
+```Output  
+Arctangent of 5.000000: 1.373401  
+Arctangent of 0.500000 / 5.000000: 0.099669  
+```  
   
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIatan](../../c-runtime-library/ciatan.md)   
- [\_CIatan2](../../c-runtime-library/ciatan2.md)
+ [_CIatan](../../c-runtime-library/ciatan.md)   
+ [_CIatan2](../../c-runtime-library/ciatan2.md)

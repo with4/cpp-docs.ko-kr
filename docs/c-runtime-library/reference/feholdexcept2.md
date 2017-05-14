@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ ms.lasthandoff: 02/24/2017
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -73,10 +73,10 @@ int feholdexcept(
  부동 소수점 환경의 복사본을 포함할 `fenv_t` 개체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 무중단 부동 소수점 예외 처리를 성공적으로 켤 수 있는 경우에만&0;을 반환합니다.  
+ 경우에 함수를 성공적으로 중단 없이 부동 소수점 예외 처리를 설정할 수는 0을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- `feholdexcept` 함수는 현재 부동 소수점 환경의 상태를 `penv`가 가리키는 `fenv_t` 개체에 저장하고 해당 환경이 부동 소수점 예외에 대한 실행을 중단하지 않도록 설정하는 데 사용됩니다. 이를 무중단 모드라고 합니다.  이 모드는 [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) 또는 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)를 통해 환경이 복원될 때까지 계속됩니다.  
+ `feholdexcept` 함수는 현재 부동 소수점 환경의 상태를 `penv`가 가리키는 `fenv_t` 개체에 저장하고 해당 환경이 부동 소수점 예외에 대한 실행을 중단하지 않도록 설정하는 데 사용됩니다. 이를 무중단 모드라고 합니다.  이 모드는 [fesetenv](fesetenv1.md) 또는 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)를 통해 환경이 복원될 때까지 계속됩니다.  
   
  호출자로부터 하나 이상의 부동 소수점 예외를 숨겨야 하는 하위 루틴의 시작 부분에서 이 함수를 사용할 수 있습니다. 예외를 보고하기 위해 간단히 [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)를 사용하여 원하지 않는 예외를 지우고 `feupdateenv`를 호출하여 무중단 모드를 종료할 수 있습니다.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

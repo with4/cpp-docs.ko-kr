@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::binder1st
-- std::binder1st
 - binder1st
-- std.binder1st
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder1st-class"></a>binder1st 클래스
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>설명  
  템플릿 클래스는 이항 함수 개체 `Func`의 복사본을 **op**에, `left`의 복사본을 **value**에 저장합니다. 그리고 **op**( **value**, `right`)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.  
   
- `Func`가 **Operation** 형식의 개체이고 `c`가 상수이면 [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` )는 `binder1st` 클래스 생성자 `binder1st`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
+ `Func`가 **Operation** 형식의 개체이고 `c`가 상수이면 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` )는 `binder1st` 클래스 생성자 `binder1st`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
   
 ## <a name="example"></a>예제  
   

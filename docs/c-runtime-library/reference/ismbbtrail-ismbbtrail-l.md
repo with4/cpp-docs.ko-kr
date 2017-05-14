@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c1fd2480778998784e7f82717194f0306f7e4da0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 125b35ecc01c58808fab939649f9b71f5c4ca85f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
@@ -84,10 +85,10 @@ int _ismbbtrail_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_ismbbtrail`은 `c` 정수가 멀티바이트 문자의 두 번째 바이트이면&0;이 아닌 값을 반환합니다. 예를 들어 코드 페이지 932에 한해 유효 범위는 0x40-0x7E 및 0x80-0xFC입니다.  
+ `_ismbbtrail`은 `c` 정수가 멀티바이트 문자의 두 번째 바이트이면 0이 아닌 값을 반환합니다. 예를 들어 코드 페이지 932에 한해 유효 범위는 0x40-0x7E 및 0x80-0xFC입니다.  
   
 ## <a name="remarks"></a>설명  
- `_ismbbtrail`은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbtrail_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_ismbbtrail`은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbtrail_l` 은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -99,9 +100,6 @@ int _ismbbtrail_l(
  \* 테스트 조건에 대한 매니페스트 상수에 해당합니다.  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [바이트 분류](../../c-runtime-library/byte-classification.md)   

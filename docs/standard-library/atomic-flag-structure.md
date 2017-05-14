@@ -1,51 +1,101 @@
 ---
-title: "atomic_flag 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic/std::atomic_flag"
-dev_langs: 
-  - "C++"
+title: "atomic_flag 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic/std::atomic_flag
+- atomic/std::atomic_flag::clear
+- atomic/std::atomic_flag::test_and_set
+dev_langs:
+- C++
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# atomic_flag 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9fe3617331c7019956af5d64789624e299c17242
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
-설명 원자 단위로 설정하고 `bool` 플레그를 해제합니다.  원자 플래그에 대한 작업은 항상 잠금 해제 합니다.  
+---
+# <a name="atomicflag-structure"></a>atomic_flag 구조체
+`bool` 플래그를 원자 단위로 설정하고 지우는 개체를 설명합니다. 원자 플래그에 대한 작업은 항상 잠금 해제입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+struct atomic_flag;
 ```  
-struct atomic_flag;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[atomic\_flag::clear 메서드](../Topic/atomic_flag::clear%20Method.md)|저장된 `false` 플래그를 로 설정합니다.|  
-|[atomic\_flag::test\_and\_set 메서드](../Topic/atomic_flag::test_and_set%20Method.md)|저장된 플래그 `true` 설정하고, 초기 플래그 값을 반환 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[clear](#clear)|저장된 플래그를 `false`로 설정합니다.|  
+|[test_and_set](#test_and_set)|저장된 플래그를 `true`로 설정하고 초기 플래그 값을 반환합니다.|  
   
-## 설명  
- `atomic_flag` 개체는 [atomic\_flag\_clear](../Topic/atomic_flag_clear%20Function.md), [atomic\_flag\_clear\_explicit](../Topic/atomic_flag_clear_explicit%20Function.md), [atomic\_flag\_test\_and\_set](../Topic/atomic_flag_test_and_set%20Function.md), 및 [atomic\_flag\_test\_and\_set\_explicit](../Topic/atomic_flag_test_and_set_explicit%20Function.md) non\-맴버 함수에 전달할 수 있습니다.  이 `ATOMIC_FLAG_INIT` 값을 사용하여 초기화할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `atomic_flag` 개체는 멤버가 아닌 [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set) 및 [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit) 함수로 전달할 수 있습니다. `ATOMIC_FLAG_INIT` 값을 사용하여 초기화할 수 있습니다.  
   
-## 요구 사항  
- **헤더:** atomic  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<원자성 >  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [\<atomic\>](../standard-library/atomic.md)
+##  <a name="clear"></a>atomic_flag:: clear
+ 지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `*this`에 저장된 `bool` 플래그를 `false`로 설정합니다.  
+  
+```
+void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
+void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Order`  
+ [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
+  
+##  <a name="test_and_set"></a>atomic_flag:: test_and_set
+ 지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `*this`에 저장된 `bool` 플래그를 `true`로 설정합니다.  
+  
+```
+bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
+bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexcept;
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Order`  
+ [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
+  
+### <a name="return-value"></a>반환 값  
+ `*this`에 저장된 플래그의 초기 값입니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [\<atomic>](../standard-library/atomic.md)
+
+
+
+

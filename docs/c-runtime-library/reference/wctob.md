@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,10 +73,10 @@ int wctob(
  변환할 값입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `wctob`는 와이드 문자를 올바르게 변환하는 경우 멀티바이트 문자의 길이가 정확히&1;바이트여야 멀티바이트 문자 표현을 반환합니다. `wctob`는 멀티바이트 문자로 변환할 수 없는 와이드 문자가 있거나 멀티바이트 문자의 길이가 정확히&1;바이트가 아니면 -1을 반환합니다.  
+ `wctob`는 와이드 문자를 올바르게 변환하는 경우 멀티바이트 문자의 길이가 정확히 1바이트여야 멀티바이트 문자 표현을 반환합니다. 경우 `wctob` 발생할 멀티 바이트 문자 또는 멀티 바이트 문자 변환 될 수 없는 와이드 문자는 1 바이트 길이가-1이 반환 정확 하 게 합니다.  
   
 ## <a name="remarks"></a>설명  
- `wctob` 함수는 멀티바이트 문자의 길이가 정확히&1;바이트이면 `wchar`에 포함된 와이드 문자를 반환 `int` 값에서 전달된 해당 멀티바이트 문자로 변환합니다.  
+ `wctob` 함수는 멀티바이트 문자의 길이가 정확히 1바이트이면 `wchar`에 포함된 와이드 문자를 반환 `int` 값에서 전달된 해당 멀티바이트 문자로 변환합니다.  
   
  `wctob`가 정상적으로 실행되지 않았으며 해당하는 멀티바이트 문자가 없으면 함수는 `errno`를 `EILSEQ`로 설정하고 -1을 반환합니다.  
   
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

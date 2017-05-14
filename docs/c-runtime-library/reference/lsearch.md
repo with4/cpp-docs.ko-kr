@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 05248645487edfc46b8adc5754bf99e46ee6911f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 86dd9925775d50a8e1c79f677f3e5b1d9ad3ae37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="lsearch"></a>_lsearch
@@ -100,7 +101,7 @@ void *_lsearch(
   
  `compare` 인수는 두 배열 요소를 비교하여 해당 관계를 지정하는 값을 반환하는 사용자가 제공한 루틴에 대한 포인터입니다. `_lsearch`는 검색 중에 `compare` 루틴을 한 번 이상 호출하며 각 호출에서 두 배열 요소에 대한 포인터를 전달합니다. `compare`는 요소를 비교하고 0이 아닌 값(요소가 다르다는 의미) 또는 0(요소가 동일하다는 의미)을 반환합니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다. `compare`, `key` 또는 `num`이 `NULL`인 경우, `base`가 NULL이고 *`num`이&0;이 아닌 경우 또는 `width`가&0;보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `compare`, `key` 또는 `num`이 `NULL`인 경우, `base`가 NULL이고 *`num`이 0이 아닌 경우 또는 `width`가 0보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -151,9 +152,6 @@ int compare(const void *arg1, const void *arg2 )
 wordlist before _lsearch: hello thanks bye  
 wordlist after _lsearch: hello thanks bye extra  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)   

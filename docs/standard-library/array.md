@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|배열 비교, 같음|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|배열 비교, 같지 않음|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|배열 비교, 보다 작음|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|배열 비교, 보다 크거나 같음|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|배열 비교, 보다 큼|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|배열 비교, 보다 작거나 같음|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|배열 비교, 같음|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|배열 비교, 같지 않음|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|배열 비교, 보다 작음|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|배열 비교, 보다 크거나 같음|  
+|[operator>](../standard-library/array-operators.md#op_gt)|배열 비교, 보다 큼|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|배열 비교, 보다 작거나 같음|  
   
 ### <a name="functions"></a>함수  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|지정된 배열 요소를 가져옵니다.|  
-|[swap](../standard-library/array-functions.md#swap_function)|한 배열의 내용을 다른 배열의 내용과 교환합니다.|  
+|[get](../standard-library/array-functions.md#get)|지정된 배열 요소를 가져옵니다.|  
+|[swap](../standard-library/array-functions.md#swap)|한 배열의 내용을 다른 배열의 내용과 교환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [\<tuple>](../standard-library/tuple.md)   

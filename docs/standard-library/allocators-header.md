@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 536e39fdb795580a770c6bee474d3bc03614879c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- \<allocators> 헤더는 노드 기반 컨테이너에 대한 메모리 관리 전략을 선택하는 데 사용할 수 있는&6;개의 할당자 템플릿을 제공합니다. 이러한 템플릿과 함께 사용하도록, 메모리 관리 전략을 다양한 다중 스레딩 스키마(none 포함)에 맞게 조정할 수 있는 몇 가지 서로 다른 동기화 필터도 제공합니다. 메모리 관리 전략을 특정 응용 프로그램의 알려진 메모리 사용 패턴 및 동기화 요구 사항과 일치시키면 종종 응용 프로그램의 속도를 높이거나 전체 메모리 요구 사항을 줄일 수 있습니다.  
+ \<allocators> 헤더는 노드 기반 컨테이너에 대한 메모리 관리 전략을 선택하는 데 사용할 수 있는 6개의 할당자 템플릿을 제공합니다. 이러한 템플릿과 함께 사용하도록, 메모리 관리 전략을 다양한 다중 스레딩 스키마(none 포함)에 맞게 조정할 수 있는 몇 가지 서로 다른 동기화 필터도 제공합니다. 메모리 관리 전략을 특정 응용 프로그램의 알려진 메모리 사용 패턴 및 동기화 요구 사항과 일치시키면 종종 응용 프로그램의 속도를 높이거나 전체 메모리 요구 사항을 줄일 수 있습니다.  
   
  할당자 템플릿은 추가 메모리 관리 전략을 제공하기 위해 사용자 지정하거나 대체할 수 있는 재사용 가능한 구성 요소로 구현됩니다.  
   
@@ -158,8 +159,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
-|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|  
   
 ### <a name="classes"></a>클래스  
   

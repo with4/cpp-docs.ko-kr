@@ -1,66 +1,84 @@
 ---
-title: "atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoi"
-  - "_wtoi_l"
-  - "atoi"
-  - "_atoi_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoi"
-  - "_wtoi"
-  - "_ttoi"
-  - "atoi"
-  - "_atoi_l"
-  - "_wtoi_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoi_l 함수"
-  - "ttoi 함수"
-  - "atoi_l 함수"
-  - "문자열 변환, 정수로"
-  - "_wtoi 함수"
-  - "wtoi_l 함수"
-  - "tstoi 함수"
-  - "_ttoi 함수"
-  - "_tstoi 함수"
-  - "_wtoi_l 함수"
-  - "atoi 함수"
-  - "wtoi 함수"
+title: "atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoi
+- _wtoi_l
+- atoi
+- _atoi_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoi
+- _wtoi
+- _ttoi
+- atoi
+- _atoi_l
+- _wtoi_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _atoi_l function
+- ttoi function
+- atoi_l function
+- string conversion, to integers
+- _wtoi function
+- wtoi_l function
+- tstoi function
+- _ttoi function
+- _tstoi function
+- _wtoi_l function
+- atoi function
+- wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# atoi, _atoi_l, _wtoi, _wtoi_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-문자열에서 정수로 변환합니다.  
+---
+# <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
+문자열을 정수로 변환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int atoi(  
@@ -79,45 +97,45 @@ int _wtoi_l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `str`  
  변환할 문자열입니다.  
   
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 각 함수는 입력 문자를 숫자로 해석하여 생성된 `int` 값을 반환합니다.  입력을 해당 형식의 값으로 변환할 수 없을 경우, 반환값은 `atoi`  와 `_wtoi` 에 대해 0 입니다.  
+## <a name="return-value"></a>반환 값  
+ 각 함수는 입력 문자를 숫자로 해석하여 생성된 `int` 값을 반환합니다. 입력을 해당 형식의 값으로 변환될 수 없는 경우 반환 값은 `atoi` 및 `_wtoi`에 대해 0입니다.  
   
- 큰 음수 정수 값들을 사용하여 오버플로가 발생 하는 경우, `LONG_MIN` 가 반환 됩니다.  이러한 조건에서 `atoi` 와 `_wtoi` 은 `INT_MAX` 와 `INT_MIN` 를 반환합니다.  범위를 벗어난 모든 경우 `errno`는 `ERANGE`로 설정됩니다.  전달된 매개 변수가 `NULL`이 되는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명과 같이 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno`를 `EINVAL`로 설정하고 0을 반환합니다.  
+ 큰 음의 정수 값을 사용하는 오버플로의 경우 `LONG_MIN`이 반환됩니다. 이러한 조건에서 `atoi` 및 `_wtoi`는 `INT_MAX` 및 `INT_MIN`을 반환합니다. 범위를 벗어난 모든 경우 `errno`는 `ERANGE`로 설정됩니다. 전달된 매개 변수가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno`를 `EINVAL`로 설정하고 0을 반환합니다.  
   
-## 설명  
- 이러한 함수는 문자열을 정수값\(`atoi` 와 `_wtoi`\)으로 변환합니다.  입력 문자열은 지정한 형식의 숫자 값으로 해석될 수 있는 문자 시퀀스입니다.  함수는 숫자 부분으로 인식할 수 없는 첫 번째 문자에서 입력 문자열 읽기를 중단합니다.  이 문자는 문자열을 종결하는 null 문자\('\\0' 또는 L'\\0'\)일 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이러한 함수는 문자열을 정수 값(`atoi` 및 `_wtoi`)으로 변환합니다. 입력 문자열은 지정된 형식의 숫자 값으로 해석될 수 있는 문자 시퀀스입니다. 함수는 숫자의 일부로 인식할 수 없는 첫 번째 문자에서 입력 문자열 읽기를 중지합니다. 이 문자는 문자열을 종결하는 null 문자('\0' 또는 L'\0')일 수 있습니다.  
   
- `str` 인수는 `atoi`  ``  와 `_wtoi` 로 다음과 같은 형식을 가집니다.  
+ `atoi` 및 `_wtoi`에 대한 `str` 인수의 형식은 다음과 같습니다.  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\]\]  
+ [`whitespace`] [`sign`] [`digits`]]  
   
- `whitespace`는 무시되는 공백이나 탭 문자로 구성되며 `sign`은 더하기\(\+\) 또는 빼기\(–\)이며 `digits`는 하나 이상의 숫자입니다.  
+ A `whitespace` ; 무시 되는 공백 또는 탭 문자로 구성 되어 `sign` 는 더하기 (+) 또는 빼기 (-); 및 `digits` 하나 이상의 숫자가 됩니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하십시오.  
+ `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE &및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|---------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstoi`|`atoi`|`atoi`|`_wtoi`|  
 |`_ttoi`|`atoi`|`atoi`|`_wtoi`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`atoi`|\<stdlib.h\>|  
-|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h\> 또는 \<wchar.h\>|  
+|--------------|---------------------|  
+|`atoi`|\<stdlib.h>|  
+|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> 또는 \<wchar.h>|  
   
-## 예제  
- 이 프로그램은 `atoi` 함수를 사용하여 문자로 저장된 수가 숫자 값으로 변환되는 것을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 이 프로그램은 `atoi` 함수를 사용하여 문자열로 저장된 수가 숫자 값으로 변환되는 방법을 보여 줍니다.  
   
 ```  
 // crt_atoi.c  
@@ -156,22 +174,19 @@ int main( void )
 }  
 ```  
   
-  **함수: atoi\( "  \-2309 " \) \= \-2309**  
-**함수: atoi\( "31412764" \) \= 31412764**  
-**함수: atoi\( "3336402735171707160320" \) \= 2147483647**  
-**오버플로 조건이 발생했습니다.**   
-## 해당 .NET Framework 항목  
+```Output  
+Function: atoi( "  -2309 " ) = -2309  
+Function: atoi( "31412764" ) = 31412764  
+Function: atoi( "3336402735171707160320" ) = 2147483647  
+Overflow condition occurred.  
+```  
   
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
  [로캘](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

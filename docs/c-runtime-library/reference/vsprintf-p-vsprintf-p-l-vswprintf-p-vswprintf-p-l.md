@@ -1,66 +1,83 @@
 ---
-title: "_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vsprintf_p"
-  - "_vswprintf_p"
-  - "_vsprintf_p_l"
-  - "_vswprintf_p_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vsprintf_p"
-  - "_vswprintf_p"
-  - "_vstprintf_p"
-  - "vswprintf_p"
-  - "_vsprintf_p"
-  - "vstprintf_p"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vsprintf_p 함수"
-  - "_vsprintf_p_l 함수"
-  - "_vstprintf_p 함수"
-  - "_vstprintf_p_l 함수"
-  - "_vswprintf_p 함수"
-  - "_vswprintf_p_l 함수"
-  - "서식 있는 텍스트[C++]"
-  - "vsprintf_p 함수"
-  - "vsprintf_p_l 함수"
-  - "vstprintf_p 함수"
-  - "vstprintf_p_l 함수"
-  - "vswprintf_p 함수"
-  - "vswprintf_p_l 함수"
+title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vsprintf_p
+- _vswprintf_p
+- _vsprintf_p_l
+- _vswprintf_p_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vsprintf_p
+- _vswprintf_p
+- _vstprintf_p
+- vswprintf_p
+- _vsprintf_p
+- vstprintf_p
+dev_langs:
+- C++
+helpviewer_keywords:
+- vstprintf_p_l function
+- _vsprintf_p_l function
+- _vstprintf_p function
+- vsprintf_p_l function
+- _vswprintf_p function
+- vswprintf_p function
+- vsprintf_p function
+- vswprintf_p_l function
+- _vswprintf_p_l function
+- vstprintf_p function
+- formatted text [C++]
+- _vsprintf_p function
+- _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2a0503bc20cb5d176374b910c7798511535864f5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-사용 되는 인수의 순서를 지정하는 기능과 함께 인수 목록에 대한 포인터를 사용하여 형식이 지정 된 출력을 작성합니다.  
+---
+# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+인수가 사용되는 순서를 지정하는 기능과 함께 인수 목록에 대한 포인터를 사용하여 형식이 지정된 출력을 작성합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int _vsprintf_p(  
@@ -91,15 +108,15 @@ int _vswprintf_p_l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `buffer`  
  출력을 위한 저장소 위치입니다.  
   
  `sizeInBytes`  
- 문자에서의 `buffer` 크기 입니다.  
+ `buffer`의 크기(문자)입니다.  
   
  `count`  
- 이 함수의 유니코드 버전을 저장하는 문자의 최대 수.  
+ 이 함수의 유니코드 버전에 저장할 최대 문자 수입니다.  
   
  `format`  
  형식 사양입니다.  
@@ -110,37 +127,37 @@ int _vswprintf_p_l(
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- `_vsprintf_p` 및 `_vswprintf_p` 은 NULL 문자로 끝나거나 오류가 발생한 경우의 네이티브 값을 제외한 작성된 문자의 수를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ `_vsprintf_p` 및 `_vswprintf_p`는 null 종결 문자를 포함하지 않고 작성된 문자 수를 반환하거나, 출력 오류가 발생하는 경우 음수 값을 반환합니다.  
   
-## 설명  
- 이러한 함수의 각각은 인수 목록에 대한 포인터를 가지며, 서식을 지정하고 지정된 데이터를 `buffer` 가 가르키는 메모리에 작성합니다.  
+## <a name="remarks"></a>설명  
+ 이러한 함수는 각각 인수 목록에 대한 포인터를 가져오며 `buffer`가 가리키는 메모리에 지정된 데이터를 씁니다.  
   
- 이러한 함수는 `vsprintf_s` 및 `vswprintf_s` 와 해당 위치 매개 변수를 지원하는 것 만 다릅니다.  자세한 내용은 [printf\_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)을 참조하십시오.  
+ 이러한 함수는 `vsprintf_s` 및 `vswprintf_s`와 해당 위치 매개 변수를 지원하는 것만 다릅니다. 자세한 내용은 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)를 참조하세요.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
- `buffer` 또는 `format` 매개 변수가 NULL 포인터인 경우, count가 0 인 경우, 형식 문자열이 잘못된 서식 문자열을 포함하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명된 대로 잘못된 매개 변수 처리기가 호출 됩니다.  계속해서 실행하도록 허용된 경우, 함수는 \-1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ `buffer` 또는 `format` 매개 변수가 NULL 포인터이거나 개수가 0이거나 형식 문자열이 잘못된 형식 지정 문자열을 포함하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수가 -1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf_p`|`_vsprintf_p`|`_vsprintf_p`|`_vswprintf_p`|  
 |`_vstprintf_p_l`|`_vsprintf_p_l`|`_vsprintf_p_l`|`_vswprintf_p_l`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|선택적 헤더|  
-|--------|-----------|------------|  
-|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h\> 과 \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h\> 또는 \<wchar.h\>, 및 \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h> 및 \<stdarg.h>|\<varargs.h>*|  
+|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h> 또는 \<wchar.h> 및 \<stdarg.h>|\<varargs.h>*|  
   
- \*는 UNIX V 호환성을 위해 필요합니다.  
+ \* UNIX V 호환성을 위해 필요합니다.  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt__vsprintf_p.c  
@@ -171,6 +188,7 @@ void example( char * format, ... )
         puts( buffer );  
         free( buffer );  
     }  
+    va_end( args );
 }  
   
 int main( void )  
@@ -183,16 +201,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**This is a string**   
-## 해당 .NET Framework 항목  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 함수](../../c-runtime-library/vprintf-functions.md)   
  [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.binder2nd
 - binder2nd
 - xfunctional/std::binder2nd
-- std::binder2nd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder2nd-class"></a>binder2nd 클래스
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>설명  
  템플릿 클래스는 이항 함수 개체 _ *Func*의 복사본을 **op**에, `right`의 복사본을 **value**에 저장합니다. 그리고 **op**( `left`, **value**)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.  
   
- `Func`가 **Operation** 형식의 개체이고 c가 상수이면 [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` )는 `binder2nd` 클래스 생성자 `binder2nd`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
+ `Func`가 **Operation** 형식의 개체이고 c가 상수이면 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` )는 `binder2nd` 클래스 생성자 `binder2nd`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
   
 ## <a name="example"></a>예제  
   

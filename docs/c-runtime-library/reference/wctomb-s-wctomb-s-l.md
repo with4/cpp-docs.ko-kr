@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ac97c0bc957c28d8d0837199157d52d4ac0536e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
@@ -100,7 +101,7 @@ errno_t _wctomb_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공시&0;, 실패시 오류 코드.  
+ 성공시 0, 실패시 오류 코드.  
   
  오류 조건  
   
@@ -115,7 +116,7 @@ errno_t _wctomb_s_l(
 ## <a name="remarks"></a>설명  
  `wctomb_s` 함수는 `wchar` 인수를 해당 멀티바이트 문자로 변환하고 결과를 `mbchar`에 저장합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다.  
   
- `wctomb_s`는 와이드 문자를 멀티바이트 문자로 변환하는 경우 와이드 문자의 바이트 수(항상 `MB_CUR_MAX`보다 크지 않음)를 `pRetValue`가 가리키는 정수에 추가합니다. `wchar`이 와이드 문자 null 문자(L'\0')이면 `wctomb_s`는 `pRetValue`를 1로 채웁니다. 대상 포인터 `mbchar`이 NULL이면 `wctomb_s`는 `pRetValue`에 0을 추가합니다. 현재 로캘에서 변환이 불가능하면 `wctomb_s`는 `pRetValue`에 -1을 추가합니다.  
+ `wctomb_s`는 와이드 문자를 멀티바이트 문자로 변환하는 경우 와이드 문자의 바이트 수(항상 `MB_CUR_MAX`보다 크지 않음)를 `pRetValue`가 가리키는 정수에 추가합니다. `wchar`이 와이드 문자 null 문자(L'\0')이면 `wctomb_s`는 `pRetValue`를 1로 채웁니다. 대상 포인터 `mbchar`이 NULL이면 `wctomb_s`는 `pRetValue`에 0을 추가합니다. 현재 로케일에 해당 변환이 불가능 한 경우 `wctomb_s` -1에 저장 `pRetValue`.  
   
  `wctomb_s`는 로캘 종속 정보가 필요한 경우 현재 로캘을 사용합니다. `_wctomb_s_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -154,9 +155,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

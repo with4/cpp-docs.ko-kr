@@ -1,55 +1,72 @@
 ---
-title: "log1p, log1pf, log1pl2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-  - "math/log1p"
-  - "math/log1pf"
-  - "math/log1pl"
-helpviewer_keywords: 
-  - "log1p 함수"
-  - "log1pf 함수"
-  - "log1pl 함수"
+title: "log1p, log1pf, log1pl2 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log1p
+- log1pf
+- log1pl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- log1p
+- log1pf
+- log1pl
+- math/log1p
+- math/log1pf
+- math/log1pl
+helpviewer_keywords:
+- log1p function
+- log1pf function
+- log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# log1p, log1pf, log1pl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
-1을 더한 지정된 된 값의 자연 로그를 계산합니다.  
+---
+# <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
+1을 더한 지정된 값의 자연 로그를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double log1p(  
@@ -74,44 +91,44 @@ long double log1pl(
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `x`  
  부동 소수점 인수입니다.  
   
-## 반환 값  
- 성공 하는 경우의 자연 \(밑이 e 인\) 로그를 반환 \(`x`\+ 1\).  
+## <a name="return-value"></a>반환 값  
+ 성공하면 (`x`+1)의 자연 로그(밑 e)를 반환합니다.  
   
- 그렇지 않은 경우 반환할 수 있습니다 다음 값 중 하나:  
+ 그렇지 않으면 다음 값 중 하나를 반환할 수 있습니다.  
   
 |입력|결과|SEH 예외|errno|  
-|--------|--------|------------|-----------|  
-|\+ inf|\+ inf|||  
-|Denormals|입력과 동일|언더플로||  
-|±0|입력과 동일|||  
-|\-1|\-inf|DIVBYZERO|ERANGE|  
-|\< \-1|nan|잘못 되었습니다.|EDOM|  
-|\-inf|nan|잘못 되었습니다.|EDOM|  
-|±SNaN|입력과 동일|잘못 되었습니다.||  
-|무한 ±QNaN|입력과 동일|||  
+|-----------|------------|-------------------|-----------|  
+|+inf|+inf|||  
+|Denormals|입력과 동일함|UNDERFLOW||  
+|±0|입력과 동일함|||  
+|-1|-inf|DIVBYZERO|ERANGE|  
+|< -1|nan|INVALID|EDOM|  
+|-inf|nan|INVALID|EDOM|  
+|±SNaN|입력과 동일함|INVALID||  
+|±QNaN, 무한|입력과 동일함|||  
   
- `errno` 값이를 erange로 설정 하는 경우 `x` \=\-1입니다.`errno` 경우 EDOM에 값이 설정 `x` \<에서 1입니다.  
+ `x` = -1이면 `errno` 값은 ERANGE로 설정됩니다. `errno` 값으로 설정 되어 EDOM `x` <-1입니다.  
   
-## 설명  
- `log1p` 함수는 로그를 사용 하 여 보다 정확한 수 있습니다 \(`x`\+ 1\) 0에 가까우면 x 표시 되는 경우.  
+## <a name="remarks"></a>설명  
+ x가 0에 가까우면 `log1p` 함수는 log(`x`+1)를 사용할 때보다 더 정확할 수 있습니다.  
   
- C \+ \+에서는 오버 로드를 허용 하므로의 오버 로드를 호출할 수 있습니다 `log1p` 및 float 및 long double 형식을 반환 하 합니다. C 프로그램에서 `log1p` 항상 걸리고 double 값을 반환 합니다.  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `log1p`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `log1p`는 항상 Double을 사용하고 반환합니다.  
   
- 경우 `x` 는 자연 숫자의 계승값의 로그를 반환 하는이 함수 \(`x`\-1\).  
+ `x`가 자연수인 경우 이 함수는 (`x`-1)의 계승의 로그를 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|함수|C 헤더|C\+\+ 헤더|  
-|--------|----------|--------------|  
-|`log1p`, `log1pf`,  `log1pl`|\<math.h\>|\<cmath\>|  
+|함수|C 헤더|C++ 헤더|  
+|--------------|--------------|------------------|  
+|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

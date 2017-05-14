@@ -53,10 +53,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 99698cf158118a876a3bb78edaaa52f2b9177d0a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a0d8c456f20fc048bab91ec5bc9e1639b93adb6d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로
@@ -86,11 +87,11 @@ _ASSERTE(
  보고서 일부로 표시할 전각 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
- `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 매크로는 디버깅 프로세스 중에 가정을 확인하기 위한 간단 명료한 메커니즘을 응용 프로그램에 제공합니다. 이들 매크로는 응용 프로그램의 정품 빌드 시 호출되지 않도록 `#ifdef` 문에 포함할 필요가 없으므로 매우 유연합니다. 이 유연성을 얻으려면 [_DEBUG](../../c-runtime-library/debug.md) 매크로를 사용합니다. `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE`는 컴파일 시간에 `_DEBUG`가 정의될 때만 사용할 수 있습니다. `_DEBUG` 가 정의되지 않으면 이러한 매크로 호출이 전처리 중에 제거됩니다.  
+ `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 매크로는 디버깅 프로세스 중에 가정을 확인하기 위한 간단 명료한 메커니즘을 응용 프로그램에 제공합니다. 이들 매크로는 응용 프로그램의 정품 빌드 시 호출되지 않도록 `#ifdef` 문에 포함할 필요가 없으므로 매우 유연합니다. 이 유연성을 얻으려면 [_DEBUG](../../c-runtime-library/debug.md) 매크로를 사용합니다. `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 는 `_DEBUG` 가 컴파일 시간에 정의될 때만 사용할 수 있습니다. `_DEBUG` 가 정의되지 않으면 이러한 매크로 호출이 전처리 중에 제거됩니다.  
   
- `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE`는 `booleanExpression` 인수를 계산하고 결과가 `false`(0)이면 진단 메시지를 출력하고 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)를 호출하여 디버그 보고서를 생성합니다. `_ASSERT` 매크로는 간단한 진단 메시지를 출력하고,  `_ASSERTE` 는 실패한 식의 문자열 표시를 메시지에 포함하고, `_ASSERT_EXPR` 은 `message` 문자열을 진단 메시지에 포함합니다. `booleanExpression` 이&0;이 아닌 값으로 계산되면 이들 매크로는 아무것도 하지 않습니다.  
+ `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 는 `booleanExpression` 인수를 계산하고 결과가 `false` (0)이면 진단 메시지를 출력하고 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 를 호출하여 디버그 보고서를 생성합니다. `_ASSERT` 매크로는 간단한 진단 메시지를 출력하고,  `_ASSERTE` 는 실패한 식의 문자열 표시를 메시지에 포함하고, `_ASSERT_EXPR` 은 `message` 문자열을 진단 메시지에 포함합니다. `booleanExpression` 이 0이 아닌 값으로 계산되면 이들 매크로는 아무것도 하지 않습니다.  
   
- `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE`는 모든 출력을 전각 문자로 제공하는 `_CrtDbgReportW`를 호출합니다. `_ASSERTE`는 `booleanExpression`에서 유니코드 문자를 제대로 출력하고 `_ASSERT_EXPR`은 `message`에서 유니코드 문자를 출력합니다.  
+ `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 는 모든 출력을 전각 문자로 제공하는 `_CrtDbgReportW`를 호출합니다. `_ASSERTE` 는 `booleanExpression` 에서 유니코드 문자를 제대로 출력하고 `_ASSERT_EXPR` 은 `message`에서 유니코드 문자를 출력합니다.  
   
  `_ASSERTE` 매크로는 실패한 식을 지정하고 생성된 보고서에서 `_ASSERT_EXPR` 을 통해 메시지를 지정할 수 있으므로 이들 매크로를 사용하면 사용자가 응용 프로그램 소스 코드를 참조하지 않아도 문제를 식별할 수 있습니다. 그러나 `message` 을 통해 출력된 모든 `_ASSERT_EXPR` 와 `_ASSERTE` 를 통해 계산된 모든 식이 응용 프로그램 출력(디버그 버전) 파일에 문자열 상수로 포함된다는 단점이 있습니다. 따라서 `_ASSERT_EXPR` 또는 `_ASSERTE`가 너무 많이 호출되면 이러한 식 때문에 출력 파일 크기가 매우 증가할 수 있습니다.  
   
@@ -98,7 +99,7 @@ _ASSERTE(
   
 `_CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);`  
   
- `_CrtDbgReportW`는 디버그 보고서를 생성하고 현재 보고서 모드나 `_CRT_ASSERT` 보고서 종류에 대해 정의된 모드 및 파일을 기반으로 대상을 결정합니다. 기본적으로 어설션 실패 및 오류는 디버그 메시지 창에 전달됩니다. [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수는 각 보고서 종류의 대상을 정의하는 데 사용됩니다.  
+ `_CrtDbgReportW` 는 디버그 보고서를 생성하고 현재 보고서 모드나 `_CRT_ASSERT` 보고서 종류에 대해 정의된 모드 및 파일을 기반으로 대상을 결정합니다. 기본적으로 어설션 실패 및 오류는 디버그 메시지 창에 전달됩니다. [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수는 각 보고서 종류의 대상을 정의하는 데 사용됩니다.  
   
  대상이 디버그 메시지 창이고 사용자가 **다시 시도** 단추를 클릭하면 `_CrtDbgReportW` 가 1을 반환하고, 이에 따라 JIT(Just-In-Time) 디버깅이 사용하도록 설정된 경우 `_ASSERT_EXPR`, `_ASSERT` 및 `_ASSERTE` 매크로가 디버거를 시작합니다.  
   
@@ -188,9 +189,6 @@ crt_ASSERT_macro.c(58) :
 crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2  
 'I am p1' != 'I am p2'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)   

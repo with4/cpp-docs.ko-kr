@@ -73,10 +73,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7168310388689cc8b76ec38a5ab9c4be5f2fa33e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b8e39939471e6f1761b6936a215bb8a1e4e13d8c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
@@ -134,7 +135,7 @@ int _ismbcdigit_l
   
 |루틴|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만&0;이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`의 예제를 참조하십시오.|  
+|`_ismbcalnum,_ismbcalnum_l`|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`의 예제를 참조하십시오.|  
 |`_ismbcalpha,_ismbcalpha_l`|Alphabetic|`c`가 ASCII 영어 문자(0x41=`c`=0x5A 또는 0x61<=`c`<=0x7A) 또는 가타카나 문자(0xA6<=`c`)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
 |`_ismbcdigit,_ismbcdigit`|숫자|`c`가 ASCII 숫자(0x30<=`c`<=0x39)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
   
@@ -147,14 +148,6 @@ int _ismbcdigit_l
 |`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
-  
--   [System::Char::IsLetter](https://msdn.microsoft.com/en-us/library/system.char.isletter.aspx)  
-  
--   [System::Char::IsDigit](https://msdn.microsoft.com/en-us/library/system.char.isdigit.aspx)  
-  
--   `_ismbcalnum`의 경우: 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자 분류](../../c-runtime-library/character-classification.md)   

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - basic_regex
-- std::basic_regex
 - regex/std::basic_regex
 dev_langs:
 - C++
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7b3665d0193f1d1fd658942d6e45b7a6229c9b32
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7b9afbe09fe010596a40f37eba9b0679a38268c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicregex-class"></a>basic_regex 클래스
@@ -107,7 +107,7 @@ class basic_regex {
  요소에 대한 특성 클래스입니다.  
   
 ## <a name="remarks"></a>설명  
- 템플릿 클래스는 정규식을 포함하는 개체에 대해 설명합니다. 이 템플릿 클래스의 개체는 적절한 텍스트 문자열 인수와 함께 텍스트 함수 [regex_match 함수](../standard-library/regex-functions.md#regex_match_function), [regex_search 함수](../standard-library/regex-functions.md#regex_search_function) 및 [regex_replace 함수](../standard-library/regex-functions.md#regex_replace_function)로 전달하여 정규식과 일치하는 텍스트를 검색할 수 있습니다. 이 템플릿 클래스는 두 가지 특수화를 사용합니다. 즉, `char` 형식의 요소는 [regex](../standard-library/regex-typedefs.md#regex_typedef) 형식 정의, `wchar_t` 형식의 요소는 [wregex](../standard-library/regex-typedefs.md#wregex_typedef)를 적용합니다.  
+ 템플릿 클래스는 정규식을 포함하는 개체에 대해 설명합니다. 이 템플릿 클래스의 개체는 템플릿 함수에 전달 될 수 [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), 및 [regex_replace](../standard-library/regex-functions.md#regex_replace), 정규식과 일치 하는 텍스트를 검색 하려면 적합 한 텍스트 문자열 인수와 함께 텍스트입니다. 이 템플릿 클래스는 두 가지 특수화를 사용합니다. 즉, `char` 형식의 요소는 [regex](../standard-library/regex-typedefs.md#regex) 형식 정의, `wchar_t` 형식의 요소는 [wregex](../standard-library/regex-typedefs.md#wregex)를 적용합니다.  
   
  템플릿 인수 `RXtraits`는 템플릿 클래스가 지원하는 정규식 구문에 대해 다양하고 중요한 속성을 설명합니다. 이러한 정규식 특성을 지정하는 클래스는 템플릿 클래스 [regex_traits 클래스](../standard-library/regex-traits-class.md)의 개체와 외부 인터페이스가 동일해야 합니다.  
   
@@ -130,7 +130,7 @@ class basic_regex {
   
  **네임스페이스:** std  
   
-##  <a name="a-namebasicregexassigna--basicregexassign"></a><a name="basic_regex__assign"></a>  basic_regex::assign  
+##  <a name="assign"></a>  basic_regex::assign  
  정규식 개체에 값을 할당합니다.  
   
 ```  
@@ -280,7 +280,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc") == true  
 ```  
   
-##  <a name="a-namebasicregexbasicregexa--basicregexbasicregex"></a><a name="basic_regex__basic_regex"></a>  basic_regex::basic_regex  
+##  <a name="basic_regex"></a>  basic_regex::basic_regex  
  Regular Expression 개체를 생성합니다.  
   
 ```  
@@ -353,7 +353,7 @@ explicit basic_regex(
   
  첫 번째 생성자는 빈 `basic_regex` 개체를 생성합니다. 다른 생성자는 피연산자 시퀀스에서 설명하는 정규식을 보유하는 `basic_regex` 개체를 생성합니다.  
   
- 빈 `basic_regex` 개체는 [regex_match 함수](../standard-library/regex-functions.md#regex_match_function), [regex_search 함수](../standard-library/regex-functions.md#regex_search_function) 또는 [regex_replace 함수](../standard-library/regex-functions.md#regex_replace_function)로 전달될 때 문자 시퀀스와 일치하지 않습니다.  
+ 빈 `basic_regex` 개체가에 전달 될 때 모든 문자 시퀀스와 일치 하지 않는 [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), 또는 [regex_replace](../standard-library/regex-functions.md#regex_replace)합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -437,7 +437,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc", "abc") == true  
 ```  
   
-##  <a name="a-namebasicregexflagtypea--basicregexflagtype"></a><a name="basic_regex__flag_type"></a>  basic_regex::flag_type  
+##  <a name="flag_type"></a>  basic_regex::flag_type  
  구문 옵션 플래그의 형식입니다.  
   
 ```  
@@ -445,7 +445,7 @@ typedef regex_constants::syntax_option_type flag_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#regex_constants__syntax_option_type)의 동의어입니다.  
+ 이 형식은 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type)의 동의어입니다.  
   
 ### <a name="example"></a>예제  
   
@@ -532,7 +532,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexflagsa--basicregexflags"></a><a name="basic_regex__flags"></a>  basic_regex::flags  
+##  <a name="flags"></a>  basic_regex::flags  
  구문 옵션 플래그를 반환합니다.  
   
 ```  
@@ -540,7 +540,7 @@ flag_type flags() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 [basic_regex::assign](#basic_regex__assign) 멤버 함수 중 하나에 대한 최근 호출에 전달된 `flag_type` 인수의 값을 반환하거나, 이러한 호출이 수행되지 않은 경우 생성자에 전달된 값을 반환합니다.  
+ 멤버 함수는 [basic_regex::assign](#assign) 멤버 함수 중 하나에 대한 최근 호출에 전달된 `flag_type` 인수의 값을 반환하거나, 이러한 호출이 수행되지 않은 경우 생성자에 전달된 값을 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -627,7 +627,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexgetloca--basicregexgetloc"></a><a name="basic_regex__getloc"></a>  basic_regex::getloc  
+##  <a name="getloc"></a>  basic_regex::getloc  
  저장된 로캘 개체를 반환합니다.  
   
 ```  
@@ -635,7 +635,7 @@ locale_type getloc() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#regex_traits__getloc)`()`을 반환합니다.  
+ 멤버 함수는 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`을 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -722,7 +722,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregeximbuea--basicregeximbue"></a><a name="basic_regex__imbue"></a>  basic_regex::imbue  
+##  <a name="imbue"></a>  basic_regex::imbue  
  저장된 로캘 개체를 변경합니다.  
   
 ```  
@@ -734,7 +734,7 @@ locale_type imbue(locale_type loc);
  저장할 로캘 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `*this`를 비우고 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#regex_traits__imbue)`(loc)`를 반환합니다.  
+ 멤버 함수는 `*this`를 비우고 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -821,7 +821,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexlocaletypea--basicregexlocaletype"></a><a name="basic_regex__locale_type"></a>  basic_regex::locale_type  
+##  <a name="locale_type"></a>  basic_regex::locale_type  
  저장된 로캘 개체의 형식입니다.  
   
 ```  
@@ -829,7 +829,7 @@ typedef typename RXtraits::locale_type locale_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 [regex_traits::locale_type](../standard-library/regex-traits-class.md#regex_traits__locale_type)의 동의어입니다.  
+ 이 형식은 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type)의 동의어입니다.  
   
 ### <a name="example"></a>예제  
   
@@ -916,7 +916,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexmarkcounta--basicregexmarkcount"></a><a name="basic_regex__mark_count"></a>  basic_regex::mark_count  
+##  <a name="mark_count"></a>  basic_regex::mark_count  
  일치하는 하위 식의 수를 반환합니다.  
   
 ```  
@@ -1011,7 +1011,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexoperatoreqa--basicregexoperator"></a><a name="basic_regex__operator_eq"></a>  basic_regex::operator=  
+##  <a name="op_eq"></a>  basic_regex::operator=  
  정규식 개체에 값을 할당합니다.  
   
 ```  
@@ -1124,7 +1124,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexswapa--basicregexswap"></a><a name="basic_regex__swap"></a>  basic_regex::swap  
+##  <a name="swap"></a>  basic_regex::swap  
  두 정규식 개체를 바꿉니다.  
   
 ```  
@@ -1223,7 +1223,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexvaluetypea--basicregexvaluetype"></a><a name="basic_regex__value_type"></a>  basic_regex::value_type  
+##  <a name="value_type"></a>  basic_regex::value_type  
  요소 형식입니다.  
   
 ```  
@@ -1320,11 +1320,11 @@ getloc == imbued == true
   
 ## <a name="see-also"></a>참고 항목  
  [\<regex>](../standard-library/regex.md)   
- [regex_match 함수](../standard-library/regex-functions.md#regex_match_function)   
- [regex_search 함수](../standard-library/regex-functions.md#regex_search_function)   
- [regex_replace 함수](../standard-library/regex-functions.md#regex_replace_function)   
- [regex](../standard-library/regex-typedefs.md#regex_typedef)   
- [wregex](../standard-library/regex-typedefs.md#wregex_typedef)   
+ [regex_match](../standard-library/regex-functions.md#regex_match)   
+ [regex_search](../standard-library/regex-functions.md#regex_search)   
+ [regex_replace](../standard-library/regex-functions.md#regex_replace)   
+ [regex](../standard-library/regex-typedefs.md#regex)   
+ [wregex](../standard-library/regex-typedefs.md#wregex)   
  [regex_traits 클래스](../standard-library/regex-traits-class.md)
 
 

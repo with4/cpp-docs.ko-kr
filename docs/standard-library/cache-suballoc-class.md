@@ -1,68 +1,134 @@
 ---
-title: "cache_suballoc 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cache_suballoc"
-  - "allocators/stdext::cache_suballoc"
-  - "stdext::cache_suballoc"
-  - "cache_suballoc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache_suballoc 클래스"
+title: "cache_suballoc 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocators/stdext::cache_suballoc
+- stdext::cache_suballoc
+- cache_suballoc
+- allocators/stdext::cache_suballoc::allocate
+- allocators/stdext::cache_suballoc::deallocate
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache_suballoc class
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# cache_suballoc 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa98856bc7e55ca78effb64c806a95cab60a68a5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
-정의 [할당자 차단](../standard-library/allocators-header.md) 할당 하 고 단일 크기의 메모리 블록의 할당을 취소 합니다.  
+---
+# <a name="cachesuballoc-class"></a>cache_suballoc 클래스
+단일 크기의 메모리 블록을 할당하고 할당 취소하는 [블록 할당자](../standard-library/allocators-header.md)를 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <std::size_t Sz, size_t Nelts = 20>  
+class cache_suballoc
 ```  
-template <std::size_t Sz, size_t Nelts = 20> class cache_suballoc  
-```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
-|-----------|--------|  
-|`Sz`|에 할당할 배열의 요소 수입니다.|  
+|---------------|-----------------|  
+|`Sz`|할당할 배열의 요소 수입니다.|  
   
-## 설명  
- 바인딩되지 않은 길이와 사용 가능한 목록에 할당 취소 된 메모리 블록을 저장 하는 cache\_suballoc 템플릿 클래스를 사용 하 여 `freelist<sizeof(Type), max_unbounded>`, 메모리 블록을 사용 하 여 할당 보다 큰 청크에서 suballocates 및 `operator new` 가능한 목록이 비어 있을 때.  
+## <a name="remarks"></a>설명  
+ cache_suballoc 템플릿 클래스는 `freelist<sizeof(Type), max_unbounded>`를 사용하여 제한 없는 길이의 사용 가능한 목록에 할당 취소된 메모리 블록을 저장하고, 사용 가능한 목록이 비어 있는 경우 `operator new`를 사용하여 할당되어 있는 보다 큰 청크의 메모리 블록을 하위 할당합니다.  
   
- 각 청크를 보유 `Sz * Nelts` 사용 가능한 메모리와 데이터의 바이트를 `operator new` 및 `operator delete` 필요 합니다. 할당 된 청크 해제 되지 않습니다.  
+ 각 청크는 `operator new`와 `operator delete`에서 필요로 하는 `Sz * Nelts`바이트의 사용 가능한 메모리 및 데이터를 포함합니다. 할당된 청크는 해제되지 않습니다.  
   
-### 생성자  
-  
-|||  
-|-|-|  
-|[cache\_suballoc](../Topic/cache_suballoc::cache_suballoc.md)|`cache_suballoc` 형식의 개체를 생성합니다.|  
-  
-### 멤버 함수  
+### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[할당](../Topic/cache_suballoc::allocate.md)|메모리 블록을 할당합니다.|  
-|[deallocate](../Topic/cache_suballoc::deallocate.md)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
+|[cache_suballoc](#cache_suballoc)|`cache_suballoc` 형식의 개체를 생성합니다.|  
   
-## 요구 사항  
- **헤더:** \<allocators\>  
+### <a name="member-functions"></a>멤버 함수  
+  
+|||  
+|-|-|  
+|[allocate](#allocate)|메모리 블록을 할당합니다.|  
+|[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<allocators>  
   
  **네임스페이스:** stdext  
   
-## 참고 항목  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="allocate"></a>  cache_suballoc::allocate  
+ 메모리 블록을 할당합니다.  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|`count`|할당할 배열의 요소 수입니다.|  
+  
+### <a name="return-value"></a>반환 값  
+ 할당된 개체에 대한 포인터입니다.  
+  
+### <a name="remarks"></a>설명  
+  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+ `cache_suballoc` 형식의 개체를 생성합니다.  
+  
+```
+cache_suballoc();
+```  
+  
+### <a name="remarks"></a>설명  
+  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
+ 지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|  
+|`count`|저장소에서 할당을 취소할 개체의 수입니다.|  
+  
+### <a name="remarks"></a>설명  
+  
+## <a name="see-also"></a>참고 항목  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

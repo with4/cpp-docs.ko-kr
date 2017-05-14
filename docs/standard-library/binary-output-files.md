@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8968a47f9d957aa0873b5db78909a6b4ad66ea75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="binary-output-files"></a>이진 출력 파일
-스트림은 원래 텍스트용으로 설계되었으므로 기본 출력 모드는 텍스트입니다. 텍스트 모드에서 줄 바꿈 문자(16진수 10)는 캐리지 리턴-줄 바꿈(16비트 전용)으로 확장됩니다. 확장에는 다음과 같은 문제가 수반될 수 있습니다.  
+스트림은 원래 텍스트용으로 설계되었으므로 기본 출력 모드는 텍스트입니다. 텍스트 모드에서 줄 바꿈 문자 (16 진수 10)는 캐리지 리턴-줄 바꿈 (16 비트에만 해당)를 확장합니다. 확장에는 다음과 같은 문제가 수반될 수 있습니다.  
   
 ```  
 // binary_output_files.cpp  
@@ -55,7 +56,7 @@ int main( )
 }  
 ```  
   
- 사용자는 이 프로그램이 바이트 시퀀스 {99, 0, 10, 0}을 출력할 것으로 예상할 수 있지만, 대신 {99, 0, 13, 10, 0}이 출력되므로 이진 입력을 예상하는 프로그램에 문제가 발생합니다. 문자가 번역되지 않은 상태로 작성되는 진정한 이진 출력이 필요한 경우 [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream) 생성자 openmode 인수를 사용하여 이진 출력을 지정할 수 있습니다.  
+ 사용자는 이 프로그램이 바이트 시퀀스 {99, 0, 10, 0}을 출력할 것으로 예상할 수 있지만, 대신 {99, 0, 13, 10, 0}이 출력되므로 이진 입력을 예상하는 프로그램에 문제가 발생합니다. 문자가 번역되지 않은 상태로 작성되는 진정한 이진 출력이 필요한 경우 [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) 생성자 openmode 인수를 사용하여 이진 출력을 지정할 수 있습니다.  
   
 ```  
 // binary_output_files2.cpp  

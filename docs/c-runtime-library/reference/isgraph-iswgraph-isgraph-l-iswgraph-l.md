@@ -64,10 +64,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a583f0b870f4395c80a384914d6fdd8b39e85a4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 90f55b90498908ce0c806ae1d253e07d8672df17
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
@@ -97,7 +98,7 @@ int _iswgraph_l(
  테스트할 정수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 공백이 아닌 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은&0;이 아닌 값을 반환합니다. `c`가 공백이 아닌 인쇄 가능한 문자인 경우 `isgraph`는&0;이 아닌 값을 반환합니다. `c`가 와이드 문자 공백이 아닌 인쇄 가능한 와이드 문자인 경우 `iswgraph`는&0;이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 공백이 아닌 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `c`가 공백이 아닌 인쇄 가능한 문자인 경우 `isgraph`는 0이 아닌 값을 반환합니다. `c`가 와이드 문자 공백이 아닌 인쇄 가능한 와이드 문자인 경우 `iswgraph`는 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -120,9 +121,6 @@ int _iswgraph_l(
 |`_iswgraph_l`|\<ctype.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자 분류](../../c-runtime-library/character-classification.md)   

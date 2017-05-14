@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -90,10 +91,10 @@ ms.lasthandoff: 02/24/2017
 #include <atomic>  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  사용 하 여 컴파일되는 코드에서 **/clr**,이 헤더는 차단 됩니다.  
+>  사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.  
   
  원자 연산에는 뮤텍스 잠금을 사용하지 않은 채 여러 스레드를 사용하여 개체를 올바르게 조작하는 데 도움이 되는 두 가지 주요 속성이 있습니다.  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="integral-specializations"></a>정수 계열 특수화  
  `atomic<integral>` 특수화는 모든 정수 형식에 적용되며, 기본 템플릿을 통해 사용할 수 없는 추가 작업을 제공합니다.  
   
- 각 `atomic<integral>` 형식에는 컴파일 시간에 해당 형식에 대한 연산이 잠금 해제인지를 확인하기 위해 `if directive`에서 사용할 수 있는 해당 매크로가 있습니다. 매크로의 값이&0;이면 해당 형식의 연산은 잠금 해제가 아닙니다. 값이 1이면 연산은 잠금 해제일 수 있으며, 런타임 확인이 필요합니다. 값이 2이면 연산은 잠금 해제입니다. 형식에 대한 연산이 잠금 해제인지를 런타임 시 확인하려면 `atomic_is_lock_free` 함수를 사용할 수 있습니다.  
+ 각 `atomic<integral>` 형식에는 컴파일 시간에 해당 형식에 대한 연산이 잠금 해제인지를 확인하기 위해 `if directive`에서 사용할 수 있는 해당 매크로가 있습니다. 매크로의 값이 0이면 해당 형식의 연산은 잠금 해제가 아닙니다. 값이 1이면 연산은 잠금 해제일 수 있으며, 런타임 확인이 필요합니다. 값이 2이면 연산은 잠금 해제입니다. 형식에 대한 연산이 잠금 해제인지를 런타임 시 확인하려면 `atomic_is_lock_free` 함수를 사용할 수 있습니다.  
   
  각 정수 형식에는 해당 정수 형식의 개체를 관리하는 명명된 해당 원자성 형식이 있습니다. 각 `atomic_integral` 형식에는 `atomic<T>`의 해당 인스턴스화와 동일한 멤버 함수 집합이 있으며, 이 형식은 비 멤버 원자성 함수 중 하나로 전달될 수 있습니다.  
   
@@ -191,35 +192,35 @@ ms.lasthandoff: 02/24/2017
   
 |이름|설명|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong 함수](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|*원자 비교 및 교환* 작업을 수행합니다.|  
-|[atomic_compare_exchange_strong_explicit 함수](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|*원자 비교 및 교환* 작업을 수행합니다.|  
-|[atomic_compare_exchange_weak 함수](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|*약한 원자 비교 및 교환* 작업을 수행합니다.|  
-|[atomic_compare_exchange_weak_explicit 함수](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|*약한 원자 비교 및 교환* 작업을 수행합니다.|  
-|[atomic_exchange 함수](../standard-library/atomic-functions.md#atomic_exchange_function)|저장된 값을 대체합니다.|  
-|[atomic_exchange_explicit 함수](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|저장된 값을 대체합니다.|  
-|[atomic_fetch_add 함수](../standard-library/atomic-functions.md#atomic_fetch_add_function)|기존의 저장된 값에 지정된 값을 더합니다.|  
-|[atomic_fetch_add_explicit 함수](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|기존의 저장된 값에 지정된 값을 더합니다.|  
-|[atomic_fetch_and 함수](../standard-library/atomic-functions.md#atomic_fetch_and_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `and`를 수행합니다.|  
-|[atomic_fetch_and_explicit 함수](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `and`를 수행합니다.|  
-|[atomic_fetch_or 함수](../standard-library/atomic-functions.md#atomic_fetch_or_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `or`를 수행합니다.|  
-|[atomic_fetch_or_explicit 함수](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `or`를 수행합니다.|  
-|[atomic_fetch_sub 함수](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|기존의 저장된 값에서 지정된 값을 뺍니다.|  
-|[atomic_fetch_sub_explicit 함수](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|기존의 저장된 값에서 지정된 값을 뺍니다.|  
-|[atomic_fetch_xor 함수](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|  
-|[atomic_fetch_xor_explicit 함수](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|  
-|[atomic_flag_clear 함수](../standard-library/atomic-functions.md#atomic_flag_clear_function)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|  
-|[atomic_flag_clear_explicit 함수](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|  
-|[atomic_flag_test_and_set 함수](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|  
-|[atomic_flag_test_and_set_explicit 함수](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|  
-|[atomic_init 함수](../standard-library/atomic-functions.md#atomic_init_function)|`atomic` 개체에서 저장된 값을 설정합니다.|  
-|[atomic_is_lock_free 함수](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|지정된 개체에 대한 원자 연산이 잠금 해제인지를 지정합니다.|  
-|[atomic_load 함수](../standard-library/atomic-functions.md#atomic_load_function)|값을 원자 단위로 검색합니다.|  
-|[atomic_load_explicit 함수](../standard-library/atomic-functions.md#atomic_load_explicit_function)|값을 원자 단위로 검색합니다.|  
-|[atomic_signal_fence 함수](../standard-library/atomic-functions.md#atomic_signal_fence_function)|동일한 스레드에서 실행되는 신호 처리기가 있는 호출 스레드에서 fence 간 메모리 순서 요구 사항을 설정하는 *fence* 역할을 수행합니다.|  
-|[atomic_store 함수](../standard-library/atomic-functions.md#atomic_store_function)|값을 원자 단위로 저장합니다.|  
-|[atomic_store_explicit 함수](../standard-library/atomic-functions.md#atomic_store_explicit_function)|값을 원자 단위로 저장합니다.|  
-|[atomic_thread_fence 함수](../standard-library/atomic-functions.md#atomic_thread_fence_function)|다른 fence와 관련하여 메모리 순서 요구 사항을 설정하는 *fence* 역할을 수행합니다.|  
-|[kill_dependency 함수](../standard-library/atomic-functions.md#kill_dependency_function)|가능한 종속성 체인을 중단합니다.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|*원자 비교 및 교환* 작업을 수행합니다.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|*원자 비교 및 교환* 작업을 수행합니다.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|*약한 원자 비교 및 교환* 작업을 수행합니다.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|*약한 원자 비교 및 교환* 작업을 수행합니다.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|저장된 값을 대체합니다.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|저장된 값을 대체합니다.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|기존의 저장된 값에 지정된 값을 더합니다.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|기존의 저장된 값에 지정된 값을 더합니다.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|지정된 값 및 기존의 저장된 값에 대해 비트 `and`를 수행합니다.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|지정된 값 및 기존의 저장된 값에 대해 비트 `and`를 수행합니다.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|지정된 값 및 기존의 저장된 값에 대해 비트 `or`를 수행합니다.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|지정된 값 및 기존의 저장된 값에 대해 비트 `or`를 수행합니다.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|기존의 저장된 값에서 지정된 값을 뺍니다.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|기존의 저장된 값에서 지정된 값을 뺍니다.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|지정된 값 및 기존의 저장된 값에 대해 비트 `exclusive or`를 수행합니다.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|`atomic_flag` 개체의 플래그를 `false`로 설정합니다.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|`atomic_flag` 개체의 플래그를 `true`로 설정합니다.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|`atomic` 개체에서 저장된 값을 설정합니다.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|지정된 개체에 대한 원자 연산이 잠금 해제인지를 지정합니다.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|값을 원자 단위로 검색합니다.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|값을 원자 단위로 검색합니다.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|동일한 스레드에서 실행되는 신호 처리기가 있는 호출 스레드에서 fence 간 메모리 순서 요구 사항을 설정하는 *fence* 역할을 수행합니다.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|값을 원자 단위로 저장합니다.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|값을 원자 단위로 저장합니다.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|다른 fence와 관련하여 메모리 순서 요구 사항을 설정하는 *fence* 역할을 수행합니다.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|가능한 종속성 체인을 중단합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   

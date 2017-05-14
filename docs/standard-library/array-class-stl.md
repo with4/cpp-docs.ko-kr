@@ -10,70 +10,67 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - array
-- std::array
 - array/std::array
-- std::array::const_iterator
 - array/std::array::const_iterator
-- std::array::const_pointer
 - array/std::array::const_pointer
-- std::array::const_reference
 - array/std::array::const_reference
-- std::array::const_reverse_iterator
 - array/std::array::const_reverse_iterator
-- std::array::difference_type
 - array/std::array::difference_type
-- std::array::iterator
 - array/std::array::iterator
-- std::array::pointer
 - array/std::array::pointer
-- std::array::reference
 - array/std::array::reference
-- std::array::reverse_iterator
 - array/std::array::reverse_iterator
-- std::array::size_type
 - array/std::array::size_type
-- std::array::value_type
 - array/std::array::value_type
-- std::array::assign
 - array/std::array::assign
-- std::array::at
 - array/std::array::at
-- std::array::back
 - array/std::array::back
-- std::array::begin
 - array/std::array::begin
-- std::array::cbegin
 - array/std::array::cbegin
-- std::array::cend
 - array/std::array::cend
-- std::array::crbegin
 - array/std::array::crbegin
-- std::array::crend
 - array/std::array::crend
-- std::array::data
 - array/std::array::data
-- std::array::empty
 - array/std::array::empty
-- std::array::end
 - array/std::array::end
-- std::array::fill
 - array/std::array::fill
-- std::array::front
 - array/std::array::front
-- std::array::max_size
 - array/std::array::max_size
-- std::array::rbegin
 - array/std::array::rbegin
-- std::array::rend
 - array/std::array::rend
-- std::array::size
 - array/std::array::size
-- std::array::swap
 - array/std::array::swap
-- std::array::operator=
 - array/std::array::operator=
-- std::array::operator[]
 - array/std::array::operator[]
+- array/std::array::const_iterator
+- array/std::array::const_pointer
+- array/std::array::const_reference
+- array/std::array::const_reverse_iterator
+- array/std::array::difference_type
+- array/std::array::iterator
+- array/std::array::pointer
+- array/std::array::reference
+- array/std::array::reverse_iterator
+- array/std::array::size_type
+- array/std::array::value_type
+- array/std::array::assign
+- array/std::array::at
+- array/std::array::back
+- array/std::array::begin
+- array/std::array::cbegin
+- array/std::array::cend
+- array/std::array::crbegin
+- array/std::array::crend
+- array/std::array::data
+- array/std::array::empty
+- array/std::array::end
+- array/std::array::fill
+- array/std::array::front
+- array/std::array::max_size
+- array/std::array::rbegin
+- array/std::array::rend
+- array/std::array::size
+- array/std::array::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,10 +94,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e5e79e423d268da61ac9062edd099330f742b59
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9ac4c0becd32ca50e4f56fb38218b4c69cc4d0bd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
@@ -126,46 +124,46 @@ class array;
 |||  
 |-|-|  
 |형식 정의|설명|  
-|[array::const_iterator](#array__const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
-|[array::const_pointer](#array__const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
-|[array::const_reference](#array__const_reference)|요소에 대한 상수 참조의 형식입니다.|  
-|[array::const_reverse_iterator](#array__const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|  
-|[array::difference_type](#array__difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
-|[array::iterator](#array__iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
-|[array::pointer](#array__pointer)|요소에 대한 포인터의 형식입니다.|  
-|[array::reference](#array__reference)|요소에 대한 참조의 형식입니다.|  
-|[array::reverse_iterator](#array__reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|  
-|[array::size_type](#array__size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
-|[array::value_type](#array__value_type)|요소의 형식입니다.|  
+|[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
+|[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
+|[const_reference](#const_reference)|요소에 대한 상수 참조의 형식입니다.|  
+|[const_reverse_iterator](#const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|  
+|[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
+|[iterator](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
+|[pointer](#pointer)|요소에 대한 포인터의 형식입니다.|  
+|[reference](#reference)|요소에 대한 참조의 형식입니다.|  
+|[reverse_iterator](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|  
+|[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
+|[value_type](#value_type)|요소의 형식입니다.|  
   
 |||  
 |-|-|  
 |멤버 함수|설명|  
-|[array::array](#array__array)|배열 개체를 생성합니다.|  
-|[array::assign](#array__assign)|모든 요소를 바꿉니다.|  
-|[array::at](#array__at)|지정된 위치에 있는 요소에 액세스합니다.|  
-|[array::back](#array__back)|마지막 요소에 액세스합니다.|  
-|[array::begin](#array__begin)|제어되는 시퀀스의 시작을 지정합니다.|  
-|[array::cbegin](#array__cbegin)|배열의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|  
-|[array::cend](#array__cend)|배열 끝의 바로 다음을 가리키는 임의 액세스 const 반복기를 반환합니다.|  
-|[array::crbegin](#array__crbegin)|역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.|  
-|[array::crend](#array__crend)|역방향 배열 끝에 대해 const 반복기를 반환합니다.|  
-|[array::data](#array__data)|첫 번째 요소의 주소를 가져옵니다.|  
-|[array::empty](#array__empty)|요소가 있는지 테스트합니다.|  
-|[array::end](#array__end)|제어되는 시퀀스의 끝을 지정합니다.|  
-|[array::fill](#array__fill)|지정된 값을 가진 모든 요소를 바꿉니다.|  
-|[array::front](#array__front)|첫 번째 요소에 액세스합니다.|  
-|[array::max_size](#array__max_size)|요소 수를 계산합니다.|  
-|[array::rbegin](#array__rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|  
-|[array::rend](#array__rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|  
-|[array::size](#array__size)|요소 수를 계산합니다.|  
-|[array::swap](#array__swap)|두 컨테이너의 내용을 바꿉니다.|  
+|[array](#array)|배열 개체를 생성합니다.|  
+|[assign](#assign)|모든 요소를 바꿉니다.|  
+|[at](#at)|지정된 위치에 있는 요소에 액세스합니다.|  
+|[back](#back)|마지막 요소에 액세스합니다.|  
+|[begin](#begin)|제어되는 시퀀스의 시작을 지정합니다.|  
+|[cbegin](#cbegin)|배열의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|  
+|[cend](#cend)|배열 끝의 바로 다음을 가리키는 임의 액세스 const 반복기를 반환합니다.|  
+|[crbegin](#crbegin)|역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.|  
+|[crend](#crend)|역방향 배열 끝에 대해 const 반복기를 반환합니다.|  
+|[data](#data)|첫 번째 요소의 주소를 가져옵니다.|  
+|[empty](#empty)|요소가 있는지 테스트합니다.|  
+|[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|  
+|[fill](#fill)|지정된 값을 가진 모든 요소를 바꿉니다.|  
+|[front](#front)|첫 번째 요소에 액세스합니다.|  
+|[max_size](#max_size)|요소 수를 계산합니다.|  
+|[rbegin](#rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|  
+|[rend](#rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|  
+|[size](#size)|요소 수를 계산합니다.|  
+|[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|  
   
 |||  
 |-|-|  
 |연산자|설명|  
-|[array::operator=](#array__operator_eq)|제어되는 시퀀스를 바꿉니다.|  
-|[array::operator[]](#array__operator_at)|지정된 위치에 있는 요소에 액세스합니다.|  
+|[array::operator=](#op_eq)|제어되는 시퀀스를 바꿉니다.|  
+|[array::operator[]](#op_at)|지정된 위치에 있는 요소에 액세스합니다.|  
   
 ## <a name="remarks"></a>설명  
  형식에 기본 생성자 `array()`와 기본 대입 연산자 `operator=`가 있고 `aggregate`에 대한 요구 사항을 충족합니다. 따라서 집계 이니셜라이저를 사용하여 `array<Ty, N>` 형식의 개체를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -181,7 +179,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **네임스페이스:** std  
   
-##  <a name="array__array"></a>  array::array  
+##  <a name="array"></a>  array::array  
  배열 개체를 생성합니다.  
   
 ```  
@@ -236,8 +234,8 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__assign"></a>  array::assign  
-C++11에서는 사용되지 않으며, [fill](#array__fill)로 대체되었습니다. 모든 요소를 바꿉니다.  
+##  <a name="assign"></a>  array::assign  
+C++11에서는 사용되지 않으며, [fill](#fill)로 대체되었습니다. 모든 요소를 바꿉니다.  
   
 ```  
 void assign(const Ty& val);
@@ -288,7 +286,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="array__at"></a>  array::at  
+##  <a name="at"></a>  array::at  
  지정된 위치에 있는 요소에 액세스합니다.  
   
 ```  
@@ -333,7 +331,7 @@ int main()
   
 ```  
   
-##  <a name="array__back"></a>  array::back  
+##  <a name="back"></a>  array::back  
  마지막 요소에 액세스합니다.  
   
 ```  
@@ -378,7 +376,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__begin"></a>  array::begin  
+##  <a name="begin"></a>  array::begin  
  제어되는 시퀀스의 시작을 지정합니다.  
   
 ```  
@@ -423,7 +421,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__cbegin"></a>  array::cbegin  
+##  <a name="cbegin"></a>  array::cbegin  
  범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -446,7 +444,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="array__cend"></a>  array::cend  
+##  <a name="cend"></a>  array::cend  
  범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -471,7 +469,7 @@ auto i2 = Container.cend();
   
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-##  <a name="array__const_iterator"></a>  array::const_iterator  
+##  <a name="const_iterator"></a>  array::const_iterator  
  제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
   
 ```  
@@ -522,7 +520,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__const_pointer"></a>  array::const_pointer  
+##  <a name="const_pointer"></a>  array::const_pointer  
  요소에 대한 상수 포인터의 형식입니다.  
   
 ```  
@@ -566,7 +564,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reference"></a>  array::const_reference  
+##  <a name="const_reference"></a>  array::const_reference  
  요소에 대한 상수 참조의 형식입니다.  
   
 ```  
@@ -610,7 +608,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  array::const_reverse_iterator  
  제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.  
   
 ```  
@@ -654,7 +652,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__crbegin"></a>  array::crbegin  
+##  <a name="crbegin"></a>  array::crbegin  
  역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.  
   
 ```  
@@ -697,7 +695,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="array__crend"></a>  array::crend  
+##  <a name="crend"></a>  array::crend  
  역방향 배열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.  
   
 ```  
@@ -708,7 +706,7 @@ const_reverse_iterator crend() const noexcept;
  역방향 배열에서 마지막 요소 다음의 위치(역방향이 해제된 배열의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `crend`는 배열에서 [array::cend](#array__cend)가 사용되는 것처럼 역방향 배열에 사용됩니다.  
+ `crend`는 배열에서 [array::cend](#cend)가 사용되는 것처럼 역방향 배열에 사용됩니다.  
   
  반환 값이 `crend`(적절하게 감소)인 배열 개체는 수정할 수 없습니다.  
   
@@ -740,7 +738,7 @@ int main( )
 1  
 ```  
   
-##  <a name="array__data"></a>  array::data  
+##  <a name="data"></a>  array::data  
  첫 번째 요소의 주소를 가져옵니다.  
   
 ```  
@@ -786,7 +784,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__difference_type"></a>  array::difference_type  
+##  <a name="difference_type"></a>  array::difference_type  
  두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
 ```  
@@ -830,7 +828,7 @@ int main()
 -4  
 ```  
   
-##  <a name="array__empty"></a>  array::empty  
+##  <a name="empty"></a>  array::empty  
  요소가 있는지 여부를 테스트합니다.  
   
 ```  
@@ -880,7 +878,7 @@ false
 true  
 ```  
   
-##  <a name="array__end"></a>  array::end  
+##  <a name="end"></a>  array::end  
  제어되는 시퀀스의 끝을 지정합니다.  
   
 ```  
@@ -926,7 +924,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__fill"></a>  array::fill  
+##  <a name="fill"></a>  array::fill  
  배열을 삭제하고 지정된 요소를 빈 배열에 복사합니다.  
   
 ```  
@@ -970,7 +968,7 @@ int main( )
 }  
 ```  
   
-##  <a name="array__front"></a>  array::front  
+##  <a name="front"></a>  array::front  
  첫 번째 요소에 액세스합니다.  
   
 ```  
@@ -1015,7 +1013,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__iterator"></a>  array::iterator  
+##  <a name="iterator"></a>  array::iterator  
  제어되는 시퀀스에 대한 반복기의 형식입니다.  
   
 ```  
@@ -1066,7 +1064,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__max_size"></a>  array::max_size  
+##  <a name="max_size"></a>  array::max_size  
  요소 수를 계산합니다.  
   
 ```  
@@ -1109,7 +1107,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__operator_at"></a>  array::operator[]  
+##  <a name="op_at"></a>  array::operator[]  
  지정된 위치에 있는 요소에 액세스합니다.  
   
 ```  
@@ -1125,7 +1123,7 @@ constexpr const_reference operator[](size_type off) const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 위치 `off`에서 제어되는 시퀀스의 요소에 대한 참조를 반환합니다. 해당 위치가 유효하지 않을 경우 동작이 정의되지 않습니다.  
   
-`array`의 요소에 대한 참조를 가져오는 데 사용할 수 있는 비 멤버 [get](array-functions.md#get_function) 함수도 있습니다.  
+`array`의 요소에 대한 참조를 가져오는 데 사용할 수 있는 비 멤버 [get](array-functions.md#get) 함수도 있습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1161,7 +1159,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="array__operator_eq"></a>  array::operator=  
+##  <a name="op_eq"></a>  array::operator=  
  제어되는 시퀀스를 바꿉니다.  
   
 ```  
@@ -1213,7 +1211,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__pointer"></a>  array::pointer  
+##  <a name="pointer"></a>  array::pointer  
  요소에 대한 포인터의 형식입니다.  
   
 ```  
@@ -1257,7 +1255,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rbegin"></a>  array::rbegin  
+##  <a name="rbegin"></a>  array::rbegin  
  제어되는 역방향 시퀀스의 시작을 지정합니다.  
   
 ```  
@@ -1302,7 +1300,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__reference"></a>  array::reference  
+##  <a name="reference"></a>  array::reference  
  요소에 대한 참조의 형식입니다.  
   
 ```  
@@ -1346,7 +1344,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rend"></a>  array::rend  
+##  <a name="rend"></a>  array::rend  
  제어되는 역방향 시퀀스의 끝을 지정합니다.  
   
 ```  
@@ -1391,7 +1389,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__reverse_iterator"></a>  array::reverse_iterator  
+##  <a name="reverse_iterator"></a>  array::reverse_iterator  
  제어되는 시퀀스에 대한 반대 반복기의 형식입니다.  
   
 ```  
@@ -1435,7 +1433,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__size"></a>  array::size  
+##  <a name="size"></a>  array::size  
  요소 수를 계산합니다.  
   
 ```  
@@ -1478,7 +1476,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__size_type"></a>  array::size_type  
+##  <a name="size_type"></a>  array::size_type  
  두 요소 사이의 부호가 없는 거리의 형식입니다.  
   
 ```  
@@ -1522,7 +1520,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__swap"></a>  array::swap  
+##  <a name="swap"></a>  array::swap  
 이 배열의 내용을 다른 배열과 교환합니다.  
   
 ```  
@@ -1536,7 +1534,7 @@ void swap(array& right);
 ### <a name="remarks"></a>설명  
 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. `N`에 비례하여 많은 요소 할당과 생성자 호출을 수행합니다.  
 
-두 개의 `array` 인스턴스를 교환하는 데 사용할 수 있는 비 멤버 [swap](array-functions.md#swap_function) 함수도 있습니다.  
+두 개의 `array` 인스턴스를 교환하는 데 사용할 수 있는 비 멤버 [swap](array-functions.md#swap) 함수도 있습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1585,7 +1583,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__value_type"></a>  array::value_type  
+##  <a name="value_type"></a>  array::value_type  
  요소의 형식입니다.  
   
 ```  

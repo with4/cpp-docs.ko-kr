@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>설명  
  `_freea` 함수는 [_malloca](../../c-runtime-library/reference/malloca.md)를 호출하여 이전에 할당된 메모리 블록(`memblock`)을 할당 해제합니다. `_freea`는 힙 또는 스택에서 메모리가 할당되었는지 확인합니다. 스택에서 할당된 경우 `_freea`는 아무 작업도 수행하지 않습니다. 힙에서 할당된 경우 해제된 바이트 수는 블록이 할당될 때 요청된 바이트 수와 일치합니다. `memblock`이 `NULL`이면 포인터가 무시되고 `_freea`가 즉시 반환됩니다. 잘못된 포인터(`_malloca`를 통해 할당되지 않은 메모리 블록 포인터)를 해제하려고 하면 후속 할당 요청에 영향을 미치고 오류가 발생할 수 있습니다.  
   
- _`freea`는 힙에서 메모리가 할당된 것을 발견하면 내부적으로 `free`를 호출합니다. 메모리가 힙 또는 스택에 있는지 여부는 할당된 메모리 바로 앞 주소의 메모리에 배치된 표식에 의해 결정됩니다.  
+ `_freea`호출 `free` 메모리가 힙에 할당은 발견 되 면 내부적으로 합니다. 메모리가 힙 또는 스택에 있는지 여부는 할당된 메모리 바로 앞 주소의 메모리에 배치된 표식에 의해 결정됩니다.  
   
  메모리 해제 중 오류가 발생하면 운영 체제에서 제공하는 실패 특성에 대한 정보를 바탕으로 `errno`가 설정됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>예제  
  [_malloca](../../c-runtime-library/reference/malloca.md)의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   

@@ -66,10 +66,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 77f03f71842dda7f56ff81b8cd3e369b21d110e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f54fd258fac9ecf82c80943dc4f531ffe950f80c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
@@ -157,7 +158,7 @@ int _vsnwprintf_s(
   
  데이터와 종결 null을 저장하는 데 필요한 저장소가 `sizeOfBuffer`를 초과하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 단, `count`가 [_TRUNCATE](../../c-runtime-library/truncate.md)인 경우에는 `buffer`에 포함될 수 있는 수만큼의 문자열이 작성되며 -1이 반환됩니다. 잘못된 매개 변수 처리기가 호출된 후에 실행을 계속하면 이러한 함수는 `buffer`를 빈 문자열로 설정하고 `errno`를 `ERANGE`로 설정한 후에 -1을 반환합니다.  
   
- `buffer` 또는 `format`이 `NULL` 포인터이거나 `count`가&0;보다 작거나 같으면 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno`를 `EINVAL` 로 설정하고 -1을 반환합니다.  
+ `buffer` 또는 `format`이 `NULL` 포인터이거나 `count`가 0보다 작거나 같으면 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno`를 `EINVAL` 로 설정하고 -1을 반환합니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -189,9 +190,6 @@ int _vsnwprintf_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsntprintf_s`|`_vsnprintf_s`|`_vsnprintf_s`|`_vsnwprintf_s`|  
 |`_vsntprintf_s_l`|`_vsnprintf_s_l`|`_vsnprintf_s_l`|`_vsnwprintf_s_l`|  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
