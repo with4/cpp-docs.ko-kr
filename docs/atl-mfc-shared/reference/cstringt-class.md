@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 클래스
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  String 클래스 경우 런타임은 CRT (C) 라이브러리 지원 및 문자열 리소스를 찾는 필요를 결정 합니다. 다음 중 하나일 수 있습니다.  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      클래스에 지정 된 모듈에서 리소스 문자열을 검색 하 고 CRT 지원에 필요한 `m_hInstResource` (응용 프로그램의 모듈 클래스의 멤버).  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      클래스는 CRT 지원 및 리소스 문자열에 지정 된 모듈에 대해 검색 필요 하지 `m_hInstResource` (응용 프로그램의 모듈 클래스의 멤버).  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      클래스에는 CRT 지원 및 표준 MFC 검색 알고리즘을 사용 하 여 리소스 문자열을 검색 합니다.  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      클래스에는 CRT 지원 및 표준 MFC 검색 알고리즘을 사용 하 여 리소스 문자열을 검색 필요 하지 않습니다.  
   
@@ -148,7 +149,7 @@ public CSimpleStringT<BaseType,
 |[CStringT::FormatMessage](#formatmessage)|메시지 문자열의 형식을 지정 합니다.|  
 |[CStringT::FormatMessageV](#formatmessagev)|가변 인수 목록을 사용 하 여 메시지 문자열의 형식을 지정 합니다.|  
 |[CStringT::FormatV](#formatv)|가변 인수 목록을 사용 하 여 문자열의 형식을 지정 합니다.|  
-|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|문자열의 지정한 환경 변수 값으로 설정합니다.|  
+|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|지정한 환경 변수의 값을 문자열을 설정 합니다.|  
 |[CStringT::Insert](#insert)|문자열 내에서 지정된 된 인덱스에서 단일 문자 또는 부분 문자열을 삽입합니다.|  
 |[CStringT::Left](#left)|문자열의 왼쪽된 부분을 추출합니다.|  
 |[CStringT::LoadString](#loadstring)|기존 로드 `CStringT` Windows 리소스에서 개체입니다.|  
@@ -183,7 +184,7 @@ public CSimpleStringT<BaseType,
 |[CStringT::operator&lt;=](#operator_lt_eq)|문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 작거나 인지 여부를 확인 합니다.|  
 |[CStringT::operator&gt;=](#operator_gt_eq)|문자열 연산자의 왼쪽에서 오른쪽에 문자열 보다 크거나 인지 여부를 확인 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CStringT`상속 [CSimpleStringT 클래스](../../atl-mfc-shared/reference/csimplestringt-class.md)합니다. 순서 지정 및 검색, 문자 조작 같은 고급 기능을 구현 `CStringT`합니다.  
   
 > [!NOTE]
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString``CStringA`, 및 `CStringW` (MFC90 MFC DLL에서 내보낸. DLL), 사용자 Dll에서 하지 않습니다. 이렇게 하지 않으려면 `CStringT` 에서 여러 번 정의 되 고 있습니다.  
   
 > [!NOTE]
->  내보낼 때 링커 오류가 발생 한 경우는 `CString`-MFC 확장 DLL Visual c + +.NET 2002에서에서 클래스를 파생 하 고 해결 방법을 적용 한 Visual c + +.NET 2003에서 수정 되었습니다 때문에 문제 해결 코드 "연결 오류 때 있습니다 가져오기 CString-Derived Classes" (Q309801) 기술 자료 문서에 설명 된 대로 제거 해야 합니다. MSDN Library CD-ROM 또는 기술 자료 문서를 찾을 수 [http://support.microsoft.com/support](http://support.microsoft.com/support)합니다.  
+>  내보낼 때 링커 오류가 발생 한 경우는 `CString`-MFC 확장 DLL Visual c + +.NET 2002에서에서 클래스를 파생 하 고 해결 방법을 적용 한 Visual c + +.NET 2003에서 수정 되었습니다 때문에 문제 해결 코드 "연결 오류 때 있습니다 가져오기 CString-Derived Classes" (Q309801) 기술 자료 문서에 설명 된 대로 제거 해야 합니다. 기술 자료 문서를 찾을 수 [http://support.microsoft.com/support](http://support.microsoft.com/support)합니다.  
   
  다음 문자열 유형은 MFC 기반 응용 프로그램 내에서 사용할 수 있습니다.  
   
@@ -216,7 +217,7 @@ public CSimpleStringT<BaseType,
 |CStringT 유형|선언|  
 |-------------------|-----------------|  
 |**CAtlStringA**|ANSI 문자 CRT 지원 하지 않는 문자열을 입력 합니다.|  
-|**CAtlStringW**|유니코드 문자 CRT 지원 하지 않는 문자열을 입력 합니다.|  
+|**CAtlStringW**|유니코드 문자는 CRT 지원 하지 않는 문자열을 입력 합니다.|  
 |**CAtlString**|CRT 지원 하지 않는 ANSI 및 유니코드 문자 형식입니다.|  
   
  다음 문자열에 사용할 수 있는 유형은 프로젝트 위치 **ATL_CSTRING_NO_CRT** 정의 되어 있지 않습니다.  
@@ -231,7 +232,7 @@ public CSimpleStringT<BaseType,
   
 - `CStringT`개체는 연결 작업의 결과로 증가할 수 있습니다.  
   
-- `CStringT`개체는 준수 "의미 체계를 값입니다." 에 참여 한 `CStringT` 실제 문자열로, 문자열에 대 한 포인터가 아니라 개체입니다.  
+- `CStringT`개체는 준수 "의미 체계를 값입니다." 에 참여 한 `CStringT` 개체는 문자열에 대 한 포인터 아닌 실제 문자열으로 합니다.  
   
 -   대신 자유롭게 사용할 수 있습니다 `CStringT` 개체에 대 한 `PCXSTR` 함수 인수입니다.  
   
@@ -265,7 +266,7 @@ public CSimpleStringT<BaseType,
 |atlstr.h|비 MFC 문자열 개체|  
   
 ##  <a name="allocsysstring"></a>CStringT::AllocSysString  
- 자동화 호환 문자열 형식의 할당 `BSTR` 의 내용을 복사 하 고는 `CStringT` null 종결 문자를 포함 하 여 메서드를 개체입니다.  
+ 자동화 호환 문자열 형식의 할당 `BSTR` 의 내용을 복사 하 고는 `CStringT` null 종결 문자를 포함 하 여 메서드를 개체.  
   
 ```  
 BSTR AllocSysString() const;  
@@ -293,7 +294,7 @@ BSTR AllocSysString() const;
 void AnsiToOem();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  함수를 사용할 수 없는 경우 `_UNICODE` 정의 됩니다.  
   
 ### <a name="example"></a>예제  
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  다른 문자열 비교에 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자열이 동일 하면 0이 < 0="" if="" this=""> `CStringT` 개체는 보다 작은 `psz`, 또는 > 0이 `CStringT` 개체가 보다 큰지 `psz`합니다.  
+ <이 경우 0, 0 문자열이 동일한 경우 `CStringT` 개체는 보다 작은 `psz`, 또는 > 0이 `CStringT` 개체 보다 크면 `psz`합니다.  
   
 ### <a name="remarks"></a>설명  
  제네릭 텍스트 함수인 `_tcscoll`, TCHAR에 정의 된 합니다. H, 하거나 매핑됩니다 `strcoll`, `wcscoll`, 또는 `_mbscoll`컴파일 타임에 정의 된 문자 집합에 따라 합니다. 각 함수에 따라 사용 중인 코드 페이지에 따라 문자열의 대/소문자 구분 비교를 수행 하는 현재 합니다. 자세한 내용은 참조 [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)합니다.  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  다른 문자열 비교에 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자열이 동일한 경우 0 (대/소문자 무시) < 0="" if="" this=""> `CStringT` 개체는 보다 작은 `psz` (대/소문자 무시) 또는 > 0이 `CStringT` 개체가 보다 큰지 `psz` (대/소문자 무시).  
+ 문자열이 없으면 0 동일한 (대/소문자 무시), < 0이 `CStringT` 개체는 보다 작은 `psz` (대/소문자 무시) 또는 > 0이 `CStringT` 개체 보다 크면 `psz` (대/소문자 무시).  
   
 ### <a name="remarks"></a>설명  
  제네릭 텍스트 함수인 `_tcscoll`, TCHAR에 정의 된 합니다. H, 하거나 매핑됩니다 `stricoll`, `wcsicoll`, 또는 `_mbsicoll`컴파일 타임에 정의 된 문자 집합에 따라 합니다. 각 함수에서 현재 사용 중인 코드 페이지에 따라는 문자열의 대/소문자 구분 비교를 수행 합니다. 자세한 내용은 참조 [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)합니다.  
@@ -372,9 +373,9 @@ int Compare(PCXSTR psz) const;
  다른 문자열 비교에 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자열이 동일 하면 0이 < 0="" if="" this=""> `CStringT` 개체는 보다 작은 `psz`, 또는 > 0이 `CStringT` 개체가 보다 큰지 `psz`합니다.  
+ <이 경우 0, 0 문자열이 동일한 경우 `CStringT` 개체는 보다 작은 `psz`, 또는 > 0이 `CStringT` 개체 보다 크면 `psz`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  제네릭 텍스트 함수인 `_tcscmp`, TCHAR에 정의 된 합니다. H, 하거나 매핑됩니다 `strcmp`, `wcscmp`, 또는 `_mbscmp`컴파일 타임에 정의 된 문자 집합에 따라 합니다. 각 함수는 문자열의 대/소문자 구분 비교를 수행 하 고 로캘에 의해 영향을 받지 않습니다. 자세한 내용은 참조 [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)합니다.  
   
  문자열에 내장된 된 null이 있으면 비교의 목적을 위해 문자열 포함 된 첫 번째 null 문자에서 잘린 것으로 간주 됩니다.  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  다른 문자열 비교에 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자열이 동일한 경우 0 (대/소문자 무시) <0 if="" this=""></0> `CStringT` 개체는 보다 작은 `psz` (대/소문자 무시) 또는 > 0이 `CStringT` 개체가 보다 큰지 `psz` (대/소문자 무시).  
+ 문자열이 동일한 경우 0 (대/소문자 무시), < 0이 `CStringT` 개체는 보다 작은 `psz` (대/소문자 무시) 또는 > 0이 `CStringT` 개체 보다 크면 `psz` (대/소문자 무시).  
   
 ### <a name="remarks"></a>설명  
  제네릭 텍스트 함수인 `_tcsicmp`, TCHAR에 정의 된 합니다. H, 하거나 매핑됩니다 `_stricmp`, `_wcsicmp` 또는 `_mbsicmp`컴파일 타임에 정의 된 문자 집합에 따라 합니다. 각 함수는 문자열의 대/소문자 구분 비교를 수행합니다. 비교에 따라 달라 집니다는 `LC_CTYPE` 로캘의 측면 아닌 `LC_COLLATE`합니다. 자세한 내용은 참조 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)합니다.  
@@ -515,12 +516,12 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  프로젝트는 MFC DLL (TRUE) 인지 여부를 지정 하는 부울 값 (FALSE)입니다.  
   
  `SystemString`  
- 있어야 `System::String`, 및 /clr을 사용한 프로젝트를 컴파일해야 합니다.  
+ 해야 `System::String`, 및 /clr을 사용한 프로젝트를 컴파일해야 합니다.  
   
  `pString`  
  에 대 한 핸들을 `CStringT` 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  알고 있어야 새 할당 된 저장소에 입력된 데이터를 복사 하는 생성자를 때문에 메모리 예외가 발생할 수 있습니다. 이러한 생성자 중 일부는 역할 변환 함수를 참고 합니다. 예를 들어, 대체할 수 있습니다는 `LPTSTR` 여기서는 `CStringT` 개체가 필요 합니다.  
   
 - `CStringT`( `LPCSTR` `lpsz` ): 유니코드 생성 `CStringT` ANSI 문자열에서 합니다. 또한 다음 예제에서와 같이 문자열 리소스를 로드이 생성자를 사용할 수 있습니다.  
@@ -532,7 +533,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 > [!NOTE]
 >  정의 **_CSTRING_DISABLE_NARROW_WIDE_CONVERSION** 간의 암시적 문자열 변환 하지 않으려면 매크로 [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] 및 [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 문자열입니다. 매크로는 변환을 지 원하는 컴파일 생성자에서 제외 합니다.  
   
- `strSrc` 매개 변수 수는 `CStringT` 또는 `CThisSimpleString` 개체입니다. 에 대 한 `CStringT`, 기본 인스턴스와 중 하나를 사용 하 여 ( `CString`, `CStringA`, 또는 `CStringW`);에 대 한 `CThisSimpleString`를 사용 하 여는 `this` 포인터입니다. `CThisSimpleString`인스턴스를 선언에서 [CSimpleStringT 클래스](../../atl-mfc-shared/reference/csimplestringt-class.md), 보다 작은 기본 제공 기능으로는 더 작은 문자열 클래스인는 `CStringT` 클래스입니다.  
+ `strSrc` 매개 변수 수는 `CStringT` 또는 `CThisSimpleString` 개체. 에 대 한 `CStringT`, 기본 인스턴스와 중 하나를 사용 하 여 ( `CString`, `CStringA`, 또는 `CStringW`);에 대 한 `CThisSimpleString`를 사용 하 여는 `this` 포인터입니다. `CThisSimpleString`인스턴스를 선언 된 [CSimpleStringT 클래스](../../atl-mfc-shared/reference/csimplestringt-class.md), 보다 작은 기본 제공 기능으로는 더 작은 문자열 클래스인는 `CStringT` 클래스입니다.  
   
  연산자를 오버 로드 `CSimpleStringT<>&()` 생성 한 `CStringT` 에서 개체는 `CSimpleStringT` 선언 합니다.  
   
@@ -549,7 +550,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ~CStringT() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸 된 `CStringT` 개체입니다.  
   
 ##  <a name="delete"></a>CStringT::Delete  
@@ -569,7 +570,7 @@ int Delete(int iIndex, int nCount = 1);
 ### <a name="return-value"></a>반환 값  
  변경 된 문자열의 길이입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  경우 `nCount` 문자열의 나머지 문자열이 제거 되므로 보다 깁니다.  
   
 ### <a name="example"></a>예제  
@@ -623,14 +624,14 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="return-value"></a>반환 값  
  또한이 문자열의 첫 번째 문자의 0부터 시작 인덱스 `pszCharSet`; 일치 하는 경우-1입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 문자의 첫 번째 항목을 찾습니다 `pszCharSet`합니다.  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities # 115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
 ##  <a name="format"></a>CStringT::Format  
- 서식이 지정 된 데이터를 씁니다는 `CStringT` 같은 방식으로 [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) C 스타일 문자 배열에 데이터의 형식을 지정 합니다.  
+ 서식이 지정 된 데이터를 씁니다는 `CStringT` 동일한 방식으로 [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) C 스타일 문자 배열에 데이터의 형식을 지정 합니다.  
   
 ```  
 void __cdecl Format(UINT nFormatID, [, argument]...);
@@ -647,7 +648,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
  `argument`  
  선택적 인수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  포맷 하 고 일련의 문자 및 값을 저장 하는이 함수는 `CStringT`합니다. 각 선택적 인수 (있는 경우) 변환 되어 해당 형식 사양에 따라 출력 `pszFormat` 또는 식별 되는 문자열 리소스에서 `nFormatID`합니다.  
   
  문자열 개체 자체에 대 한 매개 변수로 제공 되는 호출이 실패 `Format`합니다. 예를 들어 다음 코드를 사용 하면 예기치 않은 결과:  
@@ -677,7 +678,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  `argument`  
  선택적 인수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  함수는 입력으로 메시지 정의 필요 합니다. 메시지 정의 의해 결정 됩니다 `pszFormat` 또는 식별 되는 문자열 리소스에서 `nFormatID`합니다. 서식이 지정 된 메시지 텍스트를 복사 하는 함수는 `CStringT` 처리 포함 된 모든 개체를 요청 하는 경우 시퀀스를 삽입 합니다.  
   
 > [!NOTE]
@@ -702,7 +703,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
  `pArgList`  
  인수 목록에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  함수를 입력으로 메시지 정의 필요에 따른 `pszFormat`합니다. 서식이 지정 된 메시지 텍스트와 변수를 인수 목록에서 함수는 복사는 `CStringT` 처리 포함 된 모든 개체를 요청 하는 경우 시퀀스를 삽입 합니다.  
   
 > [!NOTE]
@@ -724,7 +725,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
  `args`  
  인수 목록에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  서식이 지정 된 문자열과에 인수의 변수 목록 작성는 `CStringT` 문자열 같은 방식으로 `vsprintf_s` C 스타일 문자 배열에 데이터의 형식을 지정 합니다.  
   
 ### <a name="example"></a>예제  
@@ -733,7 +734,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
  [!code-cpp[NVC_ATLMFC_Utilities # 120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
 ##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
- 문자열의 지정한 환경 변수 값으로 설정합니다.  
+ 지정한 환경 변수의 값을 문자열을 설정 합니다.  
   
 ```  
 BOOL GetEnvironmentVariable(PCXSTR pszVar);
@@ -773,8 +774,8 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="return-value"></a>반환 값  
  변경 된 문자열의 길이입니다.  
   
-### <a name="remarks"></a>주의  
- `iIndex` 매개 변수는 첫 번째 문자는 문자 또는 부분 문자열에 대 한 공간을 만들기 위해 이동할 수를 식별 합니다. 경우 `nIndex` 가 0 이면 삽입 하는 전체 문자열 하기 전에 발생 합니다. 경우 `nIndex` 함수 문자열의 길이 현재 문자열을 연결 하 고 새 자료 하나 제공 하는 보다 높은 `ch` 또는 `psz`합니다.  
+### <a name="remarks"></a>설명  
+ `iIndex` 매개 변수는 첫 번째 문자는 문자 또는 부분 문자열에 대 한 공간을 만들기 위해 이동할 수를 식별 합니다. 경우 `nIndex` 가 0 이면 삽입 하는 전체 문자열 하기 전에 발생 합니다. 경우 `nIndex` 함수 문자열의 길이 현재 문자열을 연결 하 고 새 자료 제공 하거나 보다 높은 `ch` 또는 `psz`합니다.  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities # 122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
@@ -865,7 +866,7 @@ CStringT& MakeUpper();
 ### <a name="return-value"></a>반환 값  
  결과 대문자 문자열입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities # 127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
@@ -903,7 +904,7 @@ CStringT Mid(int iFirst) const;
 void OemToAnsi();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수를 사용할 수 없는 경우 `_UNICODE` 정의 됩니다.  
   
 ### <a name="example"></a>예제  
@@ -941,7 +942,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
  `psz2`  
  문자열 또는 문자와 연결할 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  7 개의 오버 로드에는 유형이 있는데는 `CStringT::operator+` 함수입니다. 첫 번째 버전을 두 개의 기존 연결 `CStringT` 개체입니다. 다음 두 concatenate는 `CStringT` 개체 및 null로 끝나는 문자열. 다음 두 concatenate는 `CStringT` 개체 및 ANSI 문자입니다. 마지막 두 concatenate는 `CStringT` 개체 및 유니코드 문자입니다.  
   
 > [!NOTE]
@@ -1003,7 +1004,7 @@ CStringT& operator+=(const VARIANT& var);
  [!code-cpp[NVC_ATLMFC_Utilities # 141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>CStringT::operator = =  
- 두 문자열이 논리적으로 동일한 지를 결정 합니다.  
+ 두 문자열 논리적으로 동일한 지 확인 합니다.  
   
 ```  
 friend bool operator==(const CStringT& str1, const CStringT& str2) throw();
@@ -1034,7 +1035,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
  `psz2`  
  비교에 대 한 null로 끝나는 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  여부를 테스트 하는 문자열 또는 왼쪽에 문자가 문자열 또는 문자를 오른쪽에 따라 TRUE 또는 FALSE를 반환 합니다.  
   
 ### <a name="example"></a>예제  
@@ -1072,7 +1073,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
  `psz2`  
  비교에 대 한 null로 끝나는 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  문자열 또는 왼쪽에 문자를 문자열 또는 오른쪽에는 문자와 같지 않은지 테스트 합니다.  
   
 ### <a name="example"></a>예제  
@@ -1134,7 +1135,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
  `psz2`  
  비교에 대 한 null로 끝나는 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  될 때까지 문자는 문자열 간에 사전순으로 비교 합니다.  
   
 -   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
@@ -1168,7 +1169,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
  `psz2`  
  비교에 대 한 null로 끝나는 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  될 때까지 문자는 문자열 간에 사전순으로 비교 합니다.  
   
 -   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
@@ -1202,7 +1203,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
  `psz2`  
  비교에 대 한 문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  될 때까지 문자는 문자열 간에 사전순으로 비교 합니다.  
   
 -   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
@@ -1228,7 +1229,7 @@ int Remove(XCHAR chRemove);
 ### <a name="return-value"></a>반환 값  
  문자열에서 제거 하는 문자 수를 지정 합니다. 문자열이 변경 되지 않은 경우 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  문자에 대 한 비교는 대/소문자 구분.  
   
 ### <a name="example"></a>예제  
@@ -1292,7 +1293,7 @@ int ReverseFind(XCHAR ch) const throw();
  이 마지막 문자의 0부터 시작 인덱스 `CStringT` 문자를 찾을 수 없는 경우 요청 된 문자 또는-1을 일치 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 함수는 런타임에 함수와 비슷하지만 `strrchr`합니다.  
+ 함수는 실행 시간 함수와 비슷합니다 `strrchr`합니다.  
   
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities # 130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
@@ -1311,7 +1312,7 @@ CStringT Right(int nCount) const;
 ### <a name="return-value"></a>반환 값  
  지정된 문자 범위의 복사본을 포함하는 `CStringT` 개체입니다. 반환 된 `CStringT` 개체는 비어 있을 수 있습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `nCount`가 문자열 길이를 초과하는 경우 전체 문자열이 추출됩니다. `Right`기본 비슷합니다 `Right` (제외 작동 basic에서 인덱스는 0부터 시작)입니다.  
   
  멀티 바이트 문자 집합 (MBCS)에 대 한 `nCount` 멀티 바이트 문자는 두 개의 문자로 계산 하나에 각 8 비트 문자, 즉, 한 겹치는 기간 및 후행 바이트를 가리킵니다.  
@@ -1333,7 +1334,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="return-value"></a>반환 값  
  새 문자열입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  콘텐츠에 따라는 `CStringT` 값, 개체는 `BSTR` 에서 참조 `pbstr` 변경할 수 있습니다. 함수에서 throw 한 `CMemoryException` 메모리가 부족 하 여 있는 경우.  
   
  이 함수는 자동화에 대 한 참조로 전달 되는 문자열 값을 변경 하려면 일반적으로 사용 됩니다.  
@@ -1353,9 +1354,9 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
  문자열의 문자 집합으로 해석 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 속하지 않은 문자열의 문자를 포함 하는 부분 문자열 `pszCharSet`문자열의 첫 번째 문자부터 시작 하 고 또한 문자열에서 찾은 첫 번째 문자로 끝나는 `pszCharSet` (즉, 문자열에서 및 자정 까지이며 발견 된 문자열의 첫 번째 문자를 제외 하 고 첫 번째 문자부터 `pszCharSet`). 경우에 없는 문자에는 전체 문자열을 반환 `pszCharSet` 문자열에 있습니다.  
+ 에 속하지 않은 문자열의 문자를 포함 하는 부분 문자열 `pszCharSet`문자열의 첫 번째 문자부터 시작 하 고 또한 문자열에서 찾은 첫 번째 문자로 끝나는 `pszCharSet` (즉, 문자열에서 및 자정 까지이며 발견 된 문자열의 첫 번째 문자를 제외 하 고 첫 번째 문자부터 `pszCharSet`). 경우에 없는 문자에는 전체 문자열을 반환 `pszCharSet` 는 문자열에 있습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `SpanExcluding`추출 하 고 앞에 있는 문자를 맨 처음 발견 되는 모든 문자를 반환 `pszCharSet` (즉,에서 문자 `pszCharSet` 및 문자열에 따라 모든 문자는 반환 되지 않습니다). 문자가 경우 `pszCharSet` 다음 문자열에 있으면 `SpanExcluding` 전체 문자열을 반환 합니다.  
   
 ### <a name="example"></a>예제  
@@ -1375,7 +1376,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="return-value"></a>반환 값  
  에 있는 문자열에 문자를 포함 하는 하위 문자열 `pszCharSet`, 문자열에서 첫 번째 문자부터 시작 및 끝 문자에 속하지 않은 문자열에서 발견 되 면 `pszCharSet`합니다. `SpanIncluding`문자열의 첫 번째 문자가 집합에 없는 경우 빈 부분 문자열을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  문자열의 첫 번째 문자에에서 없는 경우 문자 집합을 다음 `SpanIncluding` 빈 문자열을 반환 합니다. 그렇지 않으면 집합에 있는 연속 된 문자 시퀀스를 반환 합니다.  
   
 ### <a name="example"></a>예제  
@@ -1398,7 +1399,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ### <a name="return-value"></a>반환 값  
  A `CStringT` 현재 토큰 값을 포함 하는 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `Tokenize` 함수는 대상 문자열에서 다음 토큰을 찾습니다. 문자 집합이 `pszTokens` 찾을 토큰의 사용 가능한 구분 기호를 지정 합니다. 호출할 때마다 `Tokenize` 함수에서 시작 `iStart`선행 구분 기호 생략 하 고, 반환 된 `CStringT` 다음 구분 기호 문자까지 문자의 문자열이 현재 토큰을 포함 하는 개체입니다. 값 `iStart` 문자열의 끝에 도달한 경우 끝 구분 기호 또는-1을 다음 위치로 업데이트 됩니다. 일련의 호출을으로 대상 문자열의 나머지 부분에서 더 많은 토큰 나누어질 수 `Tokenize`를 사용 하 여 `iStart` 읽어야 하는 다음 토큰 문자열의 위치를 추적 하기 위해. 더 이상 토큰이 없는 경우 함수는 빈 문자열을 반환 하 고 `iStart` -1로 설정 됩니다.  
   
  CRT 달리와 같은 함수를 토큰화 [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` 대상 문자열을 수정 하지는 않습니다.  
@@ -1416,7 +1417,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
  `Resulting Token: Third`  
   
 ##  <a name="trim"></a>CStringT::Trim  
- 선행 및 후행 문자열에서 문자를 삭제 합니다.  
+ 선행 및 후행 문자가 문자열에서 삭제 합니다.  
   
 ```  
 CStringT& Trim(XCHAR chTarget);
@@ -1434,7 +1435,7 @@ CStringT& Trim();
 ### <a name="return-value"></a>반환 값  
  잘라낸된 문자열을 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다음 중 하나를의 선행 항목과 후행 항목이 모두 제거합니다.  
   
 -   로 지정 된 문자`chTarget.`  
@@ -1446,7 +1447,7 @@ CStringT& Trim();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities # 136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 예제에서 출력은 다음과 같습니다.  
   
  `Before: "******Soccer is best, but liquor is quicker!!!!!"`  
@@ -1472,7 +1473,7 @@ CStringT& TrimLeft();
 ### <a name="return-value"></a>반환 값  
  결과 잘라낸된 문자열입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다음 중 하나를의 선행 항목과 후행 항목이 모두 제거합니다.  
   
 -   로 지정 된 문자`chTarget.`  
@@ -1503,7 +1504,7 @@ CStringT& TrimRight();
 ### <a name="return-value"></a>반환 값  
  반환 된 `CStringT` 잘라낸된 문자열을 포함 하는 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  후행 횟수는 다음 중 하나를 제거 합니다.  
   
 -   로 지정 된 문자`chTarget.`  
@@ -1512,7 +1513,7 @@ CStringT& TrimRight();
   
 -   공백입니다.  
   
- `CStringT& TrimRight(XCHAR chTarget)` 문자에 대 한 매개 변수를 하나를 적용 하 고의 끝에서 해당 문자의 모든 복사본을 제거 하는 버전 `CStringT` 문자열 데이터입니다. 문자열의 끝에서 시작 하 고 앞 부분 작동 합니다. 다른 문자를 발견 하면 때나 중지 `CSTringT` 문자 데이터가 부족 합니다.  
+ `CStringT& TrimRight(XCHAR chTarget)` 문자에 대 한 매개 변수를 하나를 적용 하 고의 끝에서 해당 문자의 모든 복사본을 제거 하는 버전 `CStringT` 문자열 데이터입니다. 문자열의 끝에서 시작 하 고 앞 부분 작동 합니다. 에 다른 문자를 발견 하면 때나 중지 `CSTringT` 문자 데이터가 부족 합니다.  
   
  `CStringT& TrimRight(PCXSTR pszTargets)` 버전을 찾으려고 다른 모든 문자를 포함 하는 null로 끝나는 문자열을 수락 합니다. 해당 문자가 복사본을 모두 제거는 `CStringT` 개체입니다. 문자열의 끝에서 시작 하 고 앞 부분 작동 합니다. 대상 문자열에 없는 문자를 발견 하면 때나 중지 `CStringT` 문자 데이터가 부족 합니다. 전체 대상 문자열의 끝에 부분 문자열에 일치 하도록 시도 하지 않습니다 `CStringT`합니다.  
   

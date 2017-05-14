@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 267963b8f9344cef67788726bd2c6f082c7953ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cad572e3b312ad29878486c9f40dafc2e96917f9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
@@ -105,7 +106,7 @@ errno_t _cgetws_s(
  실제로 읽은 문자 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 반환 값은&0;이고, 그렇지 않고 오류가 발생할 경우 오류 코드를 반환합니다.  
+ 성공할 경우 반환 값은 0이고, 그렇지 않고 오류가 발생할 경우 오류 코드를 반환합니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -136,9 +137,6 @@ errno_t _cgetws_s(
 |`_cgetws_s`|\<conio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)   

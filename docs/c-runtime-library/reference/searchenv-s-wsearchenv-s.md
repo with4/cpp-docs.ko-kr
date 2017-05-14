@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c70908d3c884eed962560e0a5284c66c3c234a7e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
@@ -115,10 +116,10 @@ errno_t _wsearchenv_s(
  전체 경로를 저장할 버퍼입니다.  
   
  [in] `numberOfElements`  
- `pathname` 버퍼의 크기입니다.  
+ 크기는 `pathname` 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 시&0;이고, 실패 시 오류 코드입니다.  
+ 성공 시 0이고, 실패 시 오류 코드입니다.  
   
  `filename`이 빈 문자열이면 반환 값은 `ENOENT`입니다.  
   
@@ -133,7 +134,7 @@ errno_t _wsearchenv_s(
  이러한 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외가 발생합니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_searchenv_s` 루틴은 지정된 도메인에서 대상 파일을 검색합니다. `varname` 변수는 디렉터리 경로 목록을 지정하는 모든 환경 변수 또는 사용자 정의 변수(예: `PATH`, `LIB` 또는 `INCLUDE`)일 수 있습니다. `_searchenv_s`에서 대/소문자를 구분하므로 `varname`은 환경 변수의 대/소문자와 일치해야 합니다. `varname`이 프로세스의 환경에 정의된 환경 변수의 이름과 일치하지 않으면 함수는&0;을 반환하며 `pathname` 변수는 변경되지 않습니다.  
+ `_searchenv_s` 루틴은 지정된 도메인에서 대상 파일을 검색합니다. `varname` 변수는 디렉터리 경로 목록을 지정하는 모든 환경 변수 또는 사용자 정의 변수(예: `PATH`, `LIB` 또는 `INCLUDE`)일 수 있습니다. `_searchenv_s`에서 대/소문자를 구분하므로 `varname`은 환경 변수의 대/소문자와 일치해야 합니다. `varname`이 프로세스의 환경에 정의된 환경 변수의 이름과 일치하지 않으면 함수는 0을 반환하며 `pathname` 변수는 변경되지 않습니다.  
   
  루틴은 먼저 현재 작업 디렉터리에서 파일을 검색합니다. 파일을 찾을 수 없는 경우 다음 위치로 환경 변수에 지정된 디렉터리를 확인합니다. 대상 파일이 이러한 디렉터리 중 하나에 있는 경우 새로 만든 경로가 `pathname`에 복사됩니다. `filename` 파일을 찾을 수 없는 경우 `pathname`에 빈 null 종료 문자열이 포함됩니다.  
   
@@ -193,9 +194,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디렉터리 제어](../../c-runtime-library/directory-control.md)   

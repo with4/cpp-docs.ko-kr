@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 구조체
@@ -120,7 +121,7 @@ struct AFX_GLOBAL_DATA
 |[Afx_global_data:: m_ndragframethicknessdock](#m_ndragframethicknessdock)|도킹된 상태를 전달하는 데 사용되는 끌기 프레임의 두께를 지정합니다.|  
 |[Afx_global_data:: m_ndragframethicknessfloat](#m_ndragframethicknessfloat)|부동 상태를 전달하는 데 사용되는 끌기 프레임의 두께를 지정합니다.|  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `AFX_GLOBAL_DATA` 구조에서 대부분의 데이터는 응용 프로그램 시작 시 초기화됩니다.  
   
 ### <a name="inheritance-hierarchy"></a>상속 계층  
@@ -142,7 +143,7 @@ struct AFX_GLOBAL_DATA
 BOOL  bIsOSAlphaBlendingSupport;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `TRUE`알파 혼합은 지원; 나타냅니다. 그렇지 않으면 `FALSE`합니다.  
   
 
@@ -169,7 +170,7 @@ HRESULT D2D1MakeRotateMatrix(
  시계 방향으로 회전 각도도 합니다.  
   
  `center`  
- 회전 하는 점입니다.  
+ 회전할에 대 한 점입니다.  
   
  `matrix`  
  이 메서드가 반환 될 때 새 회전 변환을 포함 되어 있습니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
@@ -277,14 +278,14 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  [in] `bEnable`  
 내게 필요한 옵션 지원을 활성화하려면  `TRUE`로 설정하고 비활성화하려면 `FALSE`로 설정합니다. 기본값은 `TRUE`입니다.  
   
-### <a name="remarks"></a>주의  
- Active Accessibility는 프로그램의 방식을 향상시키는 COM 기반의 기술이고 Windows 운영 체제는 보조 기술 제품과 함께 작동합니다. 이는 사용자 인터페이스 요소에 대한 정보를 노출하기 위한 신뢰할 수 있는 메서드를 제공합니다. 그러나 이제부터 Microsoft UI 자동화라고 하는 새로운 내게 필요한 옵션 모델을 사용할 수 있습니다. 두 기술을 비교를 참조 하십시오. [UI 자동화 및 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)합니다.  
+### <a name="remarks"></a>설명  
+ Active Accessibility는 프로그램의 방식을 향상시키는 COM 기반의 기술이고 Windows 운영 체제는 보조 기술 제품과 함께 작동합니다. 이는 사용자 인터페이스 요소에 대한 정보를 노출하기 위한 신뢰할 수 있는 메서드를 제공합니다. 그러나 이제부터 Microsoft UI 자동화라고 하는 새로운 내게 필요한 옵션 모델을 사용할 수 있습니다. 두 기술을 비교를 참조 하십시오. [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)합니다.  
   
  사용 하 여는 [afx_global_data:: isaccessibilitysupport](#isaccessibilitysupport) 메서드를 Microsoft Active Accessibility를 지원 설정 되어 있는지 확인 합니다.  
   
  
 ### <a name="see-also"></a>참고 항목  
- [UI 자동화 및 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [Afx_global_data:: isaccessibilitysupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>Afx_global_data:: excludetag
@@ -315,10 +316,10 @@ BOOL ExcludeTag(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  XML 태그 쌍 태그 및 닫는 태그를 시작 및 실행 하는 지정 된 버퍼에서 텍스트의 끝을 나타내는 이름이 구성 됩니다. `strBuffer` 는 버퍼를 지정 하는 매개 변수 및 `lpszTag` 매개 변수 XML 태그의 이름을 지정 합니다.  
   
- 다음 표에 지정 된 버퍼에서 이스케이프 문자 집합을 인코딩할 기호를 사용 합니다. 지정 `TRUE` 에 대 한는 `bIsCharsList` 의 기호를 변환 하는 매개 변수는 `strTag` 실제 이스케이프 문자에 대 한 매개 변수입니다. 다음 표에서 사용 하 여는 [_T()](../../c-runtime-library/data-type-mappings.md) 기호를 지정 하 고 문자열을 이스케이프 하는 매크로입니다.  
+ 다음 표에 지정 된 버퍼에서 이스케이프 문자 집합을 인코딩할 기호를 사용 합니다. 지정 `TRUE` 에 대 한는 `bIsCharsList` 의 기호를 변환 하는 매개 변수는 `strTag` 실제 이스케이프 문자에 대 한 매개 변수. 다음 표에서 사용 하 여는 [_T()](../../c-runtime-library/data-type-mappings.md) 매크로를 기호를 지정 하 고 문자열을 이스케이프 합니다.  
   
 |기호|이스케이프 문자|  
 |------------|----------------------|  
@@ -363,7 +364,7 @@ ID2D1Factory* GetDirect2dFactory();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 공장 만들기 성공 하거나 생성 하지 못한 경우 NULL 경우 ID2D1Factory 인터페이스 또는 현재 운영 체제에 대 한 포인터 D2D 지원이 필요는 없습니다.  
+ 팩터리 생성에 성공 하면 또는 생성 하지 못한 경우 NULL 경우 ID2D1Factory 인터페이스 또는 현재 운영 체제에 대 한 포인터 D2D 지원이 필요는 없습니다.  
   
 ## <a name="gethandcursor"></a>Afx_global_data:: gethandcursor
 식별자가 `IDC_HAND`인 손 모양의 미리 정의된 커서를 검색합니다.  
@@ -411,7 +412,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
  해당 디센더를 해당 어센더에서 측정 된 현재 글꼴의 높이입니다.  
   
 ## <a name="getwicfactory"></a>AFX_GLOBAL_DATA::GetWICFactory
-글로벌 데이터에 저장 된 IWICImagingFactory 인터페이스에 대 한 포인터를 반환 합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.  
+글로벌 데이터에 저장 되어 있는 IWICImagingFactory 인터페이스에 대 한 포인터를 반환 합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.  
   
   
 ```  
@@ -465,8 +466,8 @@ BOOL Is32BitIcons() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`32 비트를 미리 정의 된 아이콘 사용할 수 있습니다. 그렇지 않으면 `FALSE`합니다.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 `TRUE` 프레임 워크 지원 아이콘을 기본 제공 하는 32 비트, 및 16 비트 / 픽셀 이상의 운영 체제에서 지원 되는 경우 않으며 고대비에서 이미지가 표시 되지 않는 경우.  
+### <a name="remarks"></a>설명  
+ 이 메서드가 반환 `TRUE` 프레임 워크 지원 아이콘을 기본 제공 하는 32 비트, 및 16 비트 / 픽셀 이상의 운영 체제에서 지원 되는 경우 않으며 고대비에 이미지가 표시 되지 않는 경우.  
   
 ## <a name="isaccessibilitysupport"></a>Afx_global_data:: isaccessibilitysupport
 Microsoft Active Accessibility 지원이 활성화되어 있는지 여부를 나타냅니다.  
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>참고 항목  
- [UI 자동화 및 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  D2D 초기화 되었는지 여부를 결정 합니다.  
@@ -537,7 +538,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ### <a name="return-value"></a>반환 값  
  `TRUE`계층된 창을 지원 되 면 그렇지 않으면 `FALSE`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  계층된 창을 지 원하는 경우 *스마트 도킹* 표식 계층된 창을 사용 합니다.  
   
 ## <a name="m_busebuiltin32biticons"></a>Afx_global_data:: m_busebuiltin32biticons
@@ -548,7 +549,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 BOOL  m_bUseBuiltIn32BitIcons;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `TRUE`프레임 워크; 32 비트 색 아이콘을 사용 하도록 지정 `FALSE` 더 낮은 해상도 아이콘을 지정 합니다. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자에는이 멤버를 초기화 합니다. `TRUE`합니다.  
   
  이 멤버는 응용 프로그램 시작 시 설정 되어야 합니다.  
@@ -561,7 +562,7 @@ BOOL  m_bUseBuiltIn32BitIcons;
 BOOL m_bUseSystemFont;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `TRUE`시스템 글꼴;을 사용 하도록 지정 그렇지 않으면 `FALSE`합니다. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자에는이 멤버를 초기화 합니다. `FALSE`합니다.  
   
  사용 하는 유일한 방법은 글꼴을 결정 하기 위해 프레임 워크에 대 한 않습니다이 멤버를 테스트 합니다. `AFX_GLOBAL_DATA::UpdateFonts` 메서드는 또한 기본 및 대체 글꼴을 메뉴, 도구 모음 및 리본에 적용할 수는 어떤 비주얼 스타일을 결정을 테스트 합니다.  
@@ -605,7 +606,7 @@ HICON m_hiconTool;
 int  m_nAutoHideToolBarMargin;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 4 픽셀에이 멤버를 초기화 합니다.  
   
 ## <a name="m_nautohidetoolbarspacing"></a>Afx_global_data:: m_nautohidetoolbarspacing
@@ -616,7 +617,7 @@ int  m_nAutoHideToolBarMargin;
 int   m_nAutoHideToolBarSpacing;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 14 픽셀이 멤버를 초기화 합니다.  
   
 ## <a name="m_ndragframethicknessdock"></a>Afx_global_data:: m_ndragframethicknessdock
@@ -628,7 +629,7 @@ int   m_nAutoHideToolBarSpacing;
 int  m_nDragFrameThicknessDock;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자를 3 픽셀로이 멤버를 초기화 합니다.  
   
 ## <a name="m_ndragframethicknessfloat"></a>Afx_global_data:: m_ndragframethicknessfloat
@@ -639,7 +640,7 @@ int  m_nDragFrameThicknessDock;
 int  m_nDragFrameThicknessFloat;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 4 픽셀에이 멤버를 초기화 합니다.  
   
 ## <a name="onsettingchange"></a>Afx_global_data:: onsettingchange
@@ -650,7 +651,7 @@ int  m_nDragFrameThicknessFloat;
 void OnSettingChange();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 사용자의 데스크톱의 특정 한 특성의 상태에 프레임 워크 변수를 설정합니다. 이 메서드는 작업 자동 숨기기 기능 표시줄, 메뉴 페이드 메뉴 애니메이션의 현재 상태를 검색 합니다.  
   
 ## <a name="registerwindowclass"></a>Afx_global_data:: registerwindowclass
@@ -668,7 +669,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공 하면 등록 된 클래스의 정규화 된 이름 그렇지 않은 경우는 [리소스 예외](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 값은 콜론으로 구분 된 목록입니다는 `lpszClassNamePrefix` 매개 변수 문자열 및 현재 응용 프로그램 인스턴스의; 핸들의 16 진수 텍스트로 표시 됩니다. 응용 프로그램 커서 식별자가 IDC_ARROW; 및 배경 브러시 화살표 커서를 합니다. MFC 창 클래스 등록 하는 방법에 대 한 자세한 내용은 참조 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)합니다.  
   
 ### <a name="see-also"></a>참고 항목    
@@ -686,7 +687,7 @@ BOOL Resume();
 ### <a name="return-value"></a>반환 값  
  `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다. 디버그 모드에서이 메서드는이 메서드는 성공 하는 경우 어설션 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 프레임 워크 받을 때 호출 됩니다는 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) 메시지입니다.  
   
 ## <a name="setlayeredattrib"></a>Afx_global_data:: setlayeredattrib
@@ -741,7 +742,7 @@ BOOL SetMenuFont(
 ### <a name="return-value"></a>반환 값  
  `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다. 디버그 모드에서이 메서드는이 메서드는 성공 하는 경우 어설션 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 가로 일반 글꼴는 밑줄이 그어진된 글꼴 만들고 굵은 글꼴을 사용 되는 기본 메뉴 항목 합니다. 이 메서드는 필요에 따라 정기적인 세로 방향 글꼴을 만듭니다. 논리 글꼴에 대 한 자세한 내용은 참조 [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)합니다.  
   
 ## <a name="updatefonts"></a>Afx_global_data:: updatefonts
@@ -752,7 +753,7 @@ BOOL SetMenuFont(
 void UpdateFonts();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  논리 글꼴에 대 한 자세한 내용은 참조 하십시오. `CFont::CreateFontIndirect`합니다.  
   
 ## <a name="updatesyscolors"></a>Afx_global_data:: updatesyscolors

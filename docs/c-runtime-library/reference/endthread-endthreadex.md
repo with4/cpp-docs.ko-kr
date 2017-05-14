@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-스레드를 종료합니다. `_endthread` 는 `_beginthread` 로 만든 스레드를 종료하고  `_endthreadex` 는`_beginthreadex`로 만든 스레드를 종료합니다.  
+스레드를 종료합니다. `_endthread` 는 `_beginthread` 로 만든 스레드를 종료하고  `_endthreadex` 는 `_beginthreadex`로 만든 스레드를 종료합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +84,7 @@ void _endthreadex(
  `_endthread` 또는 `_endthreadex` 를 명시적으로 호출하여 스레드를 종료할 수 있지만 스레드가 `_endthread` 또는 `_endthreadex` 에 매개 변수로 전달된 루틴에서 반환되면 `_beginthread` 또는 `_beginthreadex`는 자동으로 호출됩니다. `endthread` 또는 `_endthreadex` 에 대한 호출로 스레드를 종료하면 스레드에 할당된 리소스의 적절한 복구를 보장하는 데 도움이 됩니다.  
   
 > [!NOTE]
->  Libcmt.lib로 연결된 실행 파일의 경우 런타임 시스템이 할당된 리소스를 회수하지 않도록 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API를 호출하지 마세요. `_endthread` 및 `_endthreadex`는 할당된 스레드 리소스를 회수한 다음 `ExitThread`를 호출합니다.  
+>  Libcmt.lib로 연결된 실행 파일의 경우 런타임 시스템이 할당된 리소스를 회수하지 않도록 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API를 호출하지 마세요. `_endthread` 및 `_endthreadex` 는 할당된 스레드 리소스를 회수한 다음 `ExitThread`를 호출합니다.  
   
  `_endthread`는 스레드 핸들을 자동으로 닫습니다. 이 동작은 Win32 `ExitThread` API와 다릅니다. 따라서 `_beginthread` 및 `_endthread`를 사용할 때는 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API를 호출해서 스레드 핸들을 명시적으로 닫지 마세요.  
   
@@ -106,9 +107,6 @@ void _endthreadex(
   
 ## <a name="example"></a>예제  
  [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)에 대한 예를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

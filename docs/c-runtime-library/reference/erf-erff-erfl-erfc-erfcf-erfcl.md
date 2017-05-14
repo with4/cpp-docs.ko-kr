@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![x의 오차 함수](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- 가우스 보상 오차 함수는 1 - erf(x)로 정의됩니다. `erf` 함수는 -1.0~1.0 범위의 값을 반환합니다. 반환되는 오류가 없습니다. `erfc` 함수는 0~2 범위의 값을 반환합니다. `x`가 `erfc`에 대해 너무 크면 `errno` 변수가 `ERANGE`로 설정되어 있습니다.  
+ 가우스 보상 오차 함수는-1로 정의 된 erf (x). `erf` 함수는 -1.0~1.0 범위의 값을 반환합니다. 반환되는 오류가 없습니다. `erfc` 함수는 0~2 범위의 값을 반환합니다. `x`가 `erfc`에 대해 너무 크면 `errno` 변수가 `ERANGE`로 설정되어 있습니다.  
   
  C++에서는 오버로드를 허용하므로 `erf` 및 `erfc` 형식을 사용 및 반환하는 `float` 및 `long double`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `erf` 및 `erfc`는 항상 `double`을 사용하고 반환합니다.  
   
@@ -121,9 +122,6 @@ long double erfcl(
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)

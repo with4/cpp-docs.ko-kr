@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f58035cc3e3159dc8bb54860e3c8e7454f35b51
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8d5cfdb53b5aab8e6b0404b84de87ba24ee57597
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cwait"></a>_cwait
@@ -82,7 +83,7 @@ intptr_t _cwait(
  NULL: Windows 운영 체제 응용 프로그램에서 무시합니다. 다른 응용 프로그램의 경우: `procHandle`에 대해 수행할 작업 코드입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 지정된 프로세스가 성공적으로 완료되면 지정된 프로세스의 핸들을 반환하고 `termstat`를 지정한 프로세스에서 반환한 결과 코드로 설정합니다. 그렇지 않으면 –1을 반환하고 다음과 같이 `errno`를 설정합니다.  
+ 지정된 프로세스가 성공적으로 완료되면 지정된 프로세스의 핸들을 반환하고 `termstat`를 지정한 프로세스에서 반환한 결과 코드로 설정합니다. 그렇지 않으면-1을 반환 하 고 설정 `errno` 다음과 같습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -110,13 +111,12 @@ intptr_t _cwait(
   
 ## <a name="example"></a>예제  
   
-```  
-  
-      // crt_cwait.c  
+```C  
+// crt_cwait.c  
 // compile with: /c  
 // This program launches several processes and waits  
 // for a specified process to finish.  
-//  
+  
 #define _CRT_RAND_S  
   
 #include <windows.h>  
@@ -142,13 +142,13 @@ int main( int argc, char *argv[] )
    srand( (unsigned)time( NULL ) );    // Seed randomizer  
   
    // If no arguments, this is the calling process  
-   if( argc == 1 )  
+   if ( argc == 1 )  
    {  
       // Spawn processes in numeric order  
-      for( c = 0; c < 4; c++ ){  
+      for ( c = 0; c < 4; c++ ) {  
          _flushall();  
          process[c].nPid = _spawnl( _P_NOWAIT, argv[0], argv[0],   
-                             process[c].name, NULL );  
+                                    process[c].name, NULL );  
       }  
   
       // Wait for randomly specified process, and respond when done   
@@ -176,9 +176,6 @@ Hi, Dad. It's Beth.
 Hi, Dad. It's Carl.  
 Hi, Dad. It's Dave.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

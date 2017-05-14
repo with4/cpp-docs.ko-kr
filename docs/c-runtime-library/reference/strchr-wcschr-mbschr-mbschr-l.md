@@ -1,69 +1,86 @@
 ---
-title: "strchr, wcschr, _mbschr, _mbschr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strchr"
-  - "wcschr"
-  - "_mbschr_l"
-  - "_mbschr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftcschr"
-  - "strchr"
-  - "wcschr"
-  - "_tcschr"
-  - "_mbschr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcschr 함수"
-  - "_mbschr 함수"
-  - "_mbschr_l 함수"
-  - "_tcschr 함수"
-  - "문자[C++], 문자열에서 찾기"
-  - "ftcschr 함수"
-  - "mbschr 함수"
-  - "mbschr_l 함수"
-  - "strchr 함수"
-  - "문자열[C++], 검색"
-  - "tcschr 함수"
-  - "wcschr 함수"
+title: strchr, wcschr, _mbschr, _mbschr_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strchr
+- wcschr
+- _mbschr_l
+- _mbschr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftcschr
+- strchr
+- wcschr
+- _tcschr
+- _mbschr
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], searching
+- mbschr function
+- _ftcschr function
+- _mbschr function
+- characters [C++], finding in strings
+- _mbschr_l function
+- ftcschr function
+- wcschr function
+- strchr function
+- _tcschr function
+- tcschr function
+- mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# strchr, wcschr, _mbschr, _mbschr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 471339844a38aed1f84e13649e49714c45ec8178
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-현재 로캘 또는 지정한 LC\_CTYPE 변환 상태 범주를 사용 하 여 문자열의 문자를 찾습니다.  
+---
+# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하여 문자열에서 문자를 찾습니다.  
   
 > [!IMPORTANT]
->  `_mbschr` 와 `_mbschr_l` 는 Windows 런타임에서 실행되는 어플리케이션에서는 사용될 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbschr` 및 `_mbschr_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 char *strchr(  
@@ -119,46 +136,46 @@ const unsigned char *_mbschr_l(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `str`  
  Null 종료 소스 문자열입니다.  
   
  `c`  
- 쓰여질 문자입니다.  
+ 찾을 문자입니다.  
   
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 첫 번째 항목에 대 한 포인터를 반환 각이 함수 `c` 에서 `str`, 또는 `NULL` 경우 `c` 찾을 수 없습니다.  
+## <a name="return-value"></a>반환 값  
+ 이러한 각 함수는 `str` 내에서 처음으로 나오는 `c`에 대한 포인터를 반환하거나, `c`가 없으면 `NULL`을 반환합니다.  
   
-## 설명  
- `strchr` 함수의 첫 번째 항목을 찾습니다. `c` 에서 `str`, 반환 또는 `NULL` 경우 `c` 찾을 수 없습니다.  Null 종료 문자는 검색에 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ `strchr` 함수는 `str` 내에서 처음으로 나오는 `c`를 찾거나, `c`가 없으면 `NULL`을 반환합니다. null 종료 문자는 검색에 포함됩니다.  
   
- `wcschr` , `_mbschr` 및 `_mbschr_l` 은 와이드 문자이고 `strchr`.의 멀티 바이트 문자 버전입니다.  `wcschr`의 인수 및 반환 값은 와이드 문자열이며, `_mbschr`는 멀티바이트 문자열입니다.  `_mbschr` 멀티 바이트 문자 시퀀스를 인식합니다.  이 `_mbschr` 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 함수는 잘못된 매개 변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우, `_mbschr` 은 `NULL` 를 반환하고, `errno` 에 `EINVAL`를 설정합니다.  `strchr` 와 `wcschr` 는 매개 변수를 확인하지 않습니다.  그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
+ `wcschr`, `_mbschr` 및 `_mbschr_l`은 `strchr`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcschr`의 인수 및 반환 값은 와이드 문자열이며 `_mbschr`의 인수와 반환 값은 멀티바이트 문자열입니다. `_mbschr`은 멀티바이트 문자 시퀀스를 인식합니다. 또한 문자열이 null 포인터이면 `_mbschr`은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 `_mbschr`는 `NULL`를 반환하고 `errno`를 `EINVAL`로 설정합니다. `strchr` 및 `wcschr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
   
- 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 을 참조하십시오.  `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.  자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하십시오.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
- C에서 이러한 함수는 첫 번째 인수에 대한 `const` 포인터를 갖습니다.  C\+\+에서는 두 오버로드를 모두 사용할 수 있습니다.  `const`에 대한 포인터를 갖는 오버로드는 `const`에 대한 포인터를 반환합니다. 비`const`에 대한 포인터를 갖는 버전은 비`const`에 대한 포인터를 반환합니다.  이러한 함수의 `const` 및 비`const` 버전을 모두 사용할 수 있는 경우 매크로 \_CONST\_CORRECT\_OVERLOADS가 정의됩니다.  두 C\+\+ 오버로드에 대한 비`const` 동작이 필요한 경우 기호 \_CONST\_RETURN을 정의합니다.  
+ C에서 이러한 함수는 첫 번째 인수에 대한 `const` 포인터를 갖습니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. `const`에 대한 포인터를 갖는 오버로드는 `const`에 대한 포인터를 반환합니다. 비`const`에 대한 포인터를 갖는 버전은 비`const`에 대한 포인터를 반환합니다. 이러한 함수의 `const` 및 비`const` 버전을 모두 사용할 수 있는 경우 매크로 _CONST_CORRECT_OVERLOADS가 정의됩니다. 두 C++ 오버로드에 대한 비`const` 동작이 필요한 경우 기호 _CONST_RETURN을 정의합니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcschr`|`strchr`|`_mbschr`|`wcschr`|  
-|**N\/A**|**해당 없음**|`_mbschr_l`|**해당 없음**|  
+|**_n/a**|**n/a**|`_mbschr_l`|**n/a**|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`strchr`|\<string.h\>|  
-|`wcschr`|\<string.h\> 또는 \<wchar.h\>|  
-|`_mbschr`, `_mbschr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strchr`|\<string.h>|  
+|`wcschr`|\<string.h> 또는 \<wchar.h>|  
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_strchr.c  
@@ -204,25 +221,26 @@ int main( void )
 }  
 ```  
   
-  **변경할 문자열입니다.**  
- **빠르고 교활한 여우가 게으른 갈색 개를 뛰어 넘었습니다.**  
- **1         2         3         4         5**  
- **12345678901234567890123456789012345678901234567890**  
-**문자 검색: r**  
-**결과: 첫 번째 r 12 위치에서 발견**  
-**결과: 마지막 r 30 위치에서 발견**   
-## 해당 .NET Framework 항목  
- [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
+```Output  
+String to be searched:  
+      The quick brown dog jumps over the lazy fox  
+               1         2         3         4         5  
+      12345678901234567890123456789012345678901234567890  
   
-## 참고 항목  
+Search char:   r  
+Result:   first r found at position 12  
+Result:   last r found at position 30  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
  [로캘](../../c-runtime-library/locale.md)   
  [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strpbrk, wcspbrk, \_mbspbrk, \_mbspbrk\_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strstr, wcsstr, \_mbsstr, \_mbsstr\_l](../../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strstr, wcsstr, _mbsstr, _mbsstr_l](../../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)

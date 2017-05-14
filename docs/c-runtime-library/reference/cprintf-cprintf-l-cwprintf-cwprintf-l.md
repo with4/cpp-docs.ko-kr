@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ ms.lasthandoff: 02/24/2017
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  형식 컨트롤 문자열입니다.  
   
- `argument`  
- 선택적 매개 변수입니다.  
+ `argument_list`  
+ 형식 문자열에 대 한 선택적 매개 변수입니다.  
   
  `locale`  
  사용할 로캘입니다.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  출력된 문자 수입니다.  
   
 ## <a name="remarks"></a>설명  
- 이러한 함수는 문자를 출력하는 데 `_putch` 함수(`_cwprintf`의 경우 `_putwch`)를 사용하여 일련의 문자 및 값의 형식을 지정하고 콘솔에 직접 출력합니다. 각 `argument` (있는 경우)가 `format`의 해당 형식 사양에 따라 변환되어 출력됩니다. 이 형식은 [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 함수에 대한 `format` 매개 변수와 동일한 형식과 기능을 가집니다. `fprintf`, `printf` 및 `sprintf` 함수와 달리 `_cprintf` 또는 `_cwprintf`는 출력할 때 줄 바꿈 문자를 캐리지 리턴 줄 바꿈(CR-LF) 조합으로 변환하지 않습니다.  
+ 이러한 함수는 문자를 출력하는 데 `_putch` 함수(`_cwprintf`의 경우 `_putwch`)를 사용하여 일련의 문자 및 값의 형식을 지정하고 콘솔에 직접 출력합니다. 각 인수에 `argument_list` (있는 경우)이 변환 되 고 해당 형식 사양에 따라 출력 `format`합니다. `format` 인수를 사용 하 여 [형식 사양 구문 printf 및 wprintf 함수에 대 한](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다. 와 달리는 `fprintf`, `printf`, 및 `sprintf` 함수도 `_cprintf` 또는 `_cwprintf` 줄 바꿈 문자를 캐리지 리턴-줄 바꿈 (CR-LF) 조합으로 변환 출력 시.  
   
- 중요한 차이점은 `_cwprintf`가 Windows NT에서 사용될 때 유니코드 문자를 표시한다는 것입니다. `_cprintf`와 달리 `_cwprintf`는 현재 콘솔 로캘 설정을 사용합니다.  
+ 중요 한 차이점은 `_cwprintf` Windows에서 사용 될 때 유니코드 문자를 표시 합니다. `_cprintf`와 달리 `_cwprintf`는 현재 콘솔 로캘 설정을 사용합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)   

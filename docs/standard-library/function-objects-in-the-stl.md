@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 표준 라이브러리의 함수 개체
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- `remove_if` 에 대한 마지막 인수는 부울 값을 반환하는 개체 함수( *predicate*)입니다. 함수 개체의 결과가 `true`인 경우 반복기 ` first` 및 ` last`가 액세스하고 있는 컨테이너에서 요소가 제거됩니다. 인수 ` pred`에 대한 [\<functional>](../standard-library/functional.md) 헤더에 선언된 함수 개체를 사용하거나 직접 만들 수 있습니다.  
+ `remove_if` 에 대한 마지막 인수는 부울 값을 반환하는 개체 함수( *predicate*)입니다. 함수 개체의 결과가 `true`인 경우 반복기 `first` 및 `last`가 액세스하고 있는 컨테이너에서 요소가 제거됩니다. 인수 `pred`에 대한 [\<functional>](../standard-library/functional.md) 헤더에 선언된 함수 개체를 사용하거나 직접 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

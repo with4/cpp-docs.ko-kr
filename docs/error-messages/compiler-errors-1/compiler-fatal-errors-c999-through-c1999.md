@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>심각한 컴파일러 오류(C999~C1999)
@@ -219,7 +220,7 @@ ms.lasthandoff: 04/24/2017
 |심각한 오류 C1012|짝이 맞지 않는 괄호: 누락 된 '*문자*"|  
 |심각한 오류 C1013|컴파일러 한계: 여는 괄호가 너무 많습니다.|  
 |심각한 오류 C1014|포함 파일이 너무 많습니다: 수준 = *번호*|  
-|심각한 오류 C1016|#ifdef / #ifndef에 식별자가 필요|  
+|심각한 오류 C1016|#ifdef/#ifndef에 식별자가 필요합니다.|  
 |[심각한 오류 C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|정수 계열 상수 식이 잘못되었습니다.|  
 |심각한 오류 C1018|예기치 않은 #elif입니다.|  
 |심각한 오류 C1019|예기치 않은 #else입니다.|  
@@ -241,6 +242,7 @@ ms.lasthandoff: 04/24/2017
 |심각한 오류 C1048|알 수 없는 옵션 '*문자열*'에서'*옵션*'|  
 |심각한 오류 C1049|숫자 인수가 잘못 되었습니다 '*값*'|  
 |[심각한 오류 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|프로그램 데이터베이스 파일 '*파일*', 삭제 하 고 다시 컴파일해야 사용 되지 않는 형식이 있습니다.|  
+|[심각한 오류 C1052](fatal-error-c1052.md)|프로그램 데이터베이스 파일 '*filename*', /debug: fastlink;를 사용 하 여 링커에 의해 생성 된 컴파일러 없습니다 이러한 PDB 파일을 업데이트할; 하십시오 삭제 하거나 /Fd를 사용 하 여 다른 PDB 파일 이름 지정|  
 |심각한 오류 C1053|'*함수*': 함수가 너무 큽니다.|  
 |[심각한 오류 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|컴파일러 한계: 이니셜라이저가 너무 많이 중첩되었습니다.|  
 |[심각한 오류 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|컴파일러 한계: 키가 부족합니다.|  
@@ -290,16 +292,16 @@ ms.lasthandoff: 04/24/2017
 |심각한 오류 C1110|템플릿/제네릭 정의가 너무 많이 중첩되었습니다.|  
 |심각한 오류 C1111|템플릿/제네릭 매개 변수가 너무 많습니다.|  
 |심각한 오류 C1112|컴파일러 한계: `'number`' 너무 많은 매크로 인수의 *번호* 허용|  
-|[심각한 오류 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#실패를 사용 하 여 '*파일*'|  
+|[심각한 오류 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using에서 실패 '*파일*'|  
 |심각한 오류 C1114|'*파일*': WinRT 지원 하지 않는 #using 관리 되는 어셈블리의|  
 |[심각한 오류 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|실패에 대 한 GetProcAddress 호출이 '*함수*'|  
 |[심각한 오류 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|CryptoAPI에 대한 호출이 실패했습니다.|  
 |[심각한 오류 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|자동 할당이 초과 *크기*|  
 |[심각한 오류 C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|섹션 수가 개체 파일 형식 한도를 초과했습니다. /bigobj를 사용하여 컴파일하세요.|  
-|[심각한 오류 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#오류: *메시지*|  
+|[심각한 오류 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *메시지*|  
 |심각한 오류 C1190|관리되는 대상 코드에는 '/clr' 옵션을 사용해야 합니다.|  
 |[심각한 오류 C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*파일*' 전역 범위 에서만 가져올 수 있습니다.|  
-|[심각한 오류 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#실패를 사용 하 여 '*파일*'|  
+|[심각한 오류 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using에서 실패 '*파일*'|  
 |심각한 오류 C1193|예상 오류 *파일*(*줄*)에 도달 하지|  
 |심각한 오류 C1195|같은 명령줄에서 /Yu 및 /Yc를 사용하면 /clr 옵션과 호환되지 않습니다.|  
 |심각한 오류 C1196|'*식별자*': 형식 라이브러리 '*typelib*'는 올바른 c + + 식별자가 아닙니다|  

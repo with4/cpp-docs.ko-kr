@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a7712c311c5007b2d50578d78452d6c989a7ad1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 7061018f217aec8a758b63697f3ef45dfbbdfa82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="gettzname"></a>_get_tzname
@@ -85,9 +86,9 @@ errno_t _get_tzname(
  검색할 두 표준 시간대 이름 중 하나의 인덱스입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;이고, 실패하면 `errno` 형식 값입니다.  
+ 성공하면 0이고, 실패하면 `errno` 형식 값입니다.  
   
- `timeZoneName`이 `NULL`이거나 `sizeInBytes`가&0;보다 작거나 같으면(한 조건에만 해당) [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
+ `timeZoneName`이 `NULL`이거나 `sizeInBytes`가 0보다 작거나 같으면(한 조건에만 해당) [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -100,7 +101,7 @@ errno_t _get_tzname(
 |수정 안 됨|any|> 0|> 1|`EINVAL`|수정 안 됨|  
   
 ## <a name="remarks"></a>설명  
- `_get_tzname` 함수는 표준 시간대 이름 또는 일광 표준 시간대 이름(DST)의 문자열 표현을 인덱스 값에 따른 `timeZoneName`의 주소로 검색하고 `pReturnValue`에서 문자열 크기를 검색합니다. `timeZoneName`이 `NULL`이고 `sizeInBytes`가&0;이면 한쪽 표준 시간대의 문자열 크기(바이트)만 `pReturnValue`에서 반환됩니다. 인덱스 값은 표준 시간대인 경우 0, 일광 표준 시간대인 경우 1입니다. 다른 모든 인덱스 값에는 결정되지 않은 결과가 포함됩니다.  
+ `_get_tzname` 함수는 표준 시간대 이름 또는 일광 표준 시간대 이름(DST)의 문자열 표현을 인덱스 값에 따른 `timeZoneName`의 주소로 검색하고 `pReturnValue`에서 문자열 크기를 검색합니다. `timeZoneName`이 `NULL`이고 `sizeInBytes`가 0이면 한쪽 표준 시간대의 문자열 크기(바이트)만 `pReturnValue`에서 반환됩니다. 인덱스 값은 표준 시간대인 경우 0, 일광 표준 시간대인 경우 1입니다. 다른 모든 인덱스 값에는 결정되지 않은 결과가 포함됩니다.  
   
 ### <a name="index-values"></a>인덱스 값  
   
@@ -119,9 +120,6 @@ errno_t _get_tzname(
 |`_get_tzname`|\<time.h>|  
   
  자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

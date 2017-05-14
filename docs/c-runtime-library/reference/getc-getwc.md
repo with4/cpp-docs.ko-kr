@@ -1,58 +1,75 @@
 ---
-title: "getc, getwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getwc"
-  - "getc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gettc"
-  - "getwc"
-  - "_gettchar"
-  - "getc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_gettc 함수"
-  - "문자, 읽기"
-  - "getc 함수"
-  - "gettc 함수"
-  - "getwc 함수"
-  - "getwchar 함수"
-  - "스트림에서 문자 읽기"
-  - "스트림, 문자 읽기"
+title: "getc, getwc | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getwc
+- getc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gettc
+- getwc
+- _gettchar
+- getc
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, reading
+- _gettc function
+- getwchar function
+- streams, reading characters from
+- reading characters from streams
+- getc function
+- getwc function
+- gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# getc, getwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c49c803ade49a5434599690902856fd1f76d742
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="getc-getwc"></a>getc, getwc
 스트림에서 문자를 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int getc(   
@@ -63,43 +80,43 @@ wint_t getwc(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `stream`  
- 입력 스트림  
+ 입력 스트림입니다.  
   
-## 반환 값  
- 읽은 문자를 반환합니다.  읽기 오류 또는 파일 끝 조건을 나타내기 위해 `getc` 는 `EOF` 를 반환하고, `getwc` 는 `WEOF`을 반환합니다.  `getc`에 대해 `ferror` 또는 `feof` 을 사용하여 오류 또는 파일의 끝을 확인하세요.  `stream` 가 `NULL` 인 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 `getc` 및 `getwc` 은 잘못된 매개 변수 처기리를 호출합니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `EOF` 를 반환하고 `errno` \(또는 `getwc` 에 대한 `WEOF`\) 를 `EINVAL`로 설정합니다.  
+## <a name="return-value"></a>반환 값  
+ 읽은 문자를 반환합니다. 읽기 오류 또는 파일 끝 조건을 표시하기 위해 `getc`는 `EOF`를 반환하고 `getwc`는 `WEOF`를 반환합니다. `getc`의 경우 `ferror` 또는 `feof`를 사용하여 오류 또는 파일 끝이 있는지 확인합니다. `stream`이 `NULL`인 경우 `getc` 및 `getwc`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속 허용 된 경우 이러한 함수가 반환 `EOF` (또는 `WEOF` 에 대 한 `getwc`) 설정 `errno` 를 `EINVAL`합니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [\_doserrno, errno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+ 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
-## 설명  
- 각 루틴은 현재 위치에서 파일의 단일 문자를 읽고 다음 문자에 대해 관련된 파일 포인터\(정의 된 경우\) 를 증가시킵니다.  `stream`과 연결된 파일입니다.  
+## <a name="remarks"></a>설명  
+ 각 루틴은 파일에서 현재 위치의 단일 문자를 읽고 다음 문자를 가리킬 연결된 파일 포인터(정의된 경우)를 늘립니다. 파일은 `stream`과 연결됩니다.  
   
- 이러한 함수는 호출 스레드를 잠그고, 그러므로 안전 스레드가 됩니다.  비잠금 버전을 위해 [\_getc\_nolock, \_getwc\_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md)을 참조하세요.  
+ 이러한 함수는 호출 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_getc_nolock, _getwc_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md)을 참조하세요.  
   
- 루틴 별 설명은 다음과 같습니다.  
+ 이어서 루틴별 설명이 제공됩니다.  
   
 |루틴|설명|  
-|--------|--------|  
-|`getc`|`fgetc` 고 동일하지만 함수와 매크로로 구현 합니다.|  
-|`getwc`|`getc` 의 와이드 문자 버전입니다.  `stream` 가 텍스트 모드 또는 이진 모드에 열렸는지에 따라 와이드 문자 또는 멀티 바이트 문자를 읽습니다.|  
+|-------------|-------------|  
+|`getc`|`fgetc`와 같지만 함수 및 매크로로 구현됩니다.|  
+|`getwc`|와이드 문자 버전의 `getc`입니다. `stream`이 텍스트 모드 또는 이진 모드로 열리는지에 따라 멀티바이트 문자 또는 와이드 문자를 읽습니다.|  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_gettc`|`getc`|`getc`|`getwc`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`getc`|\<stdio.h\>|  
-|`getwc`|\<stdio.h\> 또는 \<wchar.h\>|  
+|-------------|---------------------|  
+|`getc`|\<stdio.h>|  
+|`getwc`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_getc.c  
@@ -136,28 +153,22 @@ int main()
 }  
 ```  
   
-## Input: crt\_getc.txt  
+## <a name="input-crtgetctxt"></a>입력: crt_getc.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 Input was: Line one.  
 ```  
   
-## 해당 .NET Framework 항목  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx).  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

@@ -1,53 +1,70 @@
 ---
-title: "fseek, _fseeki64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fseeki64"
-  - "fseek"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fseek"
-  - "_fseeki64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fseeki64 함수"
-  - "파일 포인터[C++]"
-  - "파일 포인터[C++], 이동"
-  - "fseek 함수"
-  - "fseeki64 함수"
-  - "파일 찾기 포인터"
+title: "fseek, _fseeki64 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fseeki64
+- fseek
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fseek
+- _fseeki64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fseeki64 function
+- fseeki64 function
+- fseek function
+- file pointers [C++], moving
+- file pointers [C++]
+- seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# fseek, _fseeki64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-지정된 된 위치에 파일 포인터를 이동합니다.  
+---
+# <a name="fseek-fseeki64"></a>fseek, _fseeki64
+파일 포인터를 지정된 위치로 이동합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int fseek(   
@@ -62,57 +79,57 @@ int _fseeki64(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `stream`  
  `FILE` 구조체에 대한 포인터입니다.  
   
  `offset`  
- `origin` 에서의 바이트의 수  
+ `origin`부터의 바이트 수입니다.  
   
  `origin`  
  초기 위치입니다.  
   
-## 반환 값  
- 성공적인 `fseek` 와 `_fseeki64` 는 0을 반환합니다.  그렇지 않으면 0이 아닌 값을 반환 합니다.  장치 검색을 할 수 없는 것에 대하여, 반환 값은 정의되지 않습니다.  만일 `stream` 가 null 포인터인 경우, 또는 만일 `origin` 이 아래 허용 되는 값 중 하나가 아닌 경우, `fseek` 및 `_fseeki64` 는 잘못된 매개변수 처리기를 호출합니다. 이는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명되어 있습니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno`를 `EINVAL` 로 설정하고 \-1을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 `fseek` 및 `_fseeki64`가 0을 반환합니다. 그렇지 않으면 0이 아닌 값을 반환합니다. 검색을 수행할 수 없는 장치에서는 반환 값이 정의되지 않습니다. `stream`이 null 포인터이거나 `origin`이 아래 설명된 허용된 값 중 하나가 아니면 `fseek` 및 `_fseeki64`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 -1을 반환합니다.  
   
-## 설명  
- 이 `fseek` 와 `_fseeki64` 함수는 파일 포인터를 이동시킵니다. \(만일 모든\) 이 파일 포인터는 `stream` 과 연관되어 있습니다. 이는 새로운 위치인 `offset` 바이트인 `origin`로 부터입니다. 다음 작업은 스트림에서 새 위치에 이루어집니다.  스트림에 업데이트에 대한 열기, 읽기 또는 쓰기 다음 작업을 할 수 있습니다.  원점 인수는 STDIO.H에 정의된 다음 상수들 중 하나여야 합니다.  
+## <a name="remarks"></a>설명  
+ `fseek` 및 `_fseeki64` 파일 포인터 (있는 경우)와 관련 된 이동 함수 `stream` 중인 새 위치에 `offset` 바이트 `origin`합니다. 스트림에 대한 다음 작업은 새 위치에서 수행됩니다. 업데이트를 위해 열린 스트림에 대한 다음 작업은 읽기 또는 쓰기일 수 있습니다. origin 인수는 STDIO.H에 정의된 다음 상수 중 하나여야 합니다.  
   
  `SEEK_CUR`  
- 파일 포인터의 현재 위치.  
+ 파일 포인터의 현재 위치  
   
  `SEEK_END`  
- 파일의 끝입니다.  
+ 파일 끝  
   
  `SEEK_SET`  
- 파일의 시작 부분.  
+ 파일 시작  
   
- 파일에서 포인터를 어디든지 위치변경 하기 위해 `fseek` 와 `_fseeki64` 를 사용할 수 있습니다.  포인터가 파일의 끝을 넘어도 배치할 수 있습니다.  `fseek` 및 `_fseeki64`는 파일 끝 표시기를 명백히 하고, `stream` 에 대한 모든 사전의 `ungetc` 호출 영향을 무효화힙니다.  
+ `fseek` 및 `_fseeki64`를 사용하여 파일 내에서 포인터의 위치를 변경합니다. 포인터는 파일 끝을 지나서 배치될 수도 있습니다. `fseek`및 `_fseeki64` 파일 끝 표시기를 지우고 모든 사전의 결과가 무시 `ungetc` 에 대해 호출 `stream`합니다.  
   
- 데이터 추가에 대해 파일을 열때, 현재 파일 위치는 다음 쓰기가 발생할 때가 아닌 마지막 I\/O 작업으로 결정됩니다.  파일이 추가용으로 열리기 전에 I\/O 작업이 없는 경우, 파일 위치는 파일의 시작이 됩니다.  
+ 데이터를 추가하기 위해 파일이 열리면 현재 파일 위치는 다음 쓰기가 수행되는 위치가 아니라 마지막 I/O 작업에 의해 결정됩니다. 추가를 위해 열린 파일에서 I/O 작업이 아직 수행되지 않은 경우 파일 위치는 파일의 시작입니다.  
   
- 텍스트 모드에서 연 스트림에 대한 `fseek` 및 `_fseeki64`는 사용이 제한되어 왔습니다, 왜냐하면 캐리지\-라인피드 좌표이동은 `fseek` 를 야기시키고 `_fseeki64`를 예기치 않은 결과가 발생할 수 있는 것을 야기시킬 수 있습니다.  텍스트 모드에서 열수있는 스트림을 작업하는것을 보장하는 유일한 `fseek` 와 `_fseeki64` 작업은 존재합니다.  
+ 텍스트 모드에서 열린 스트림의 `fseek` 및 `_fseeki64` 제한적으로 사용 캐리지 리턴-줄 바꿈 번역 될 수 있기 때문 `fseek` 및 `_fseeki64` 예기치 않은 결과를 생성 합니다. 유일한 `fseek` 및 `_fseeki64` 텍스트 모드에서 열린 스트림의에서 작동 하는 작업은:  
   
--   원본 값을 기준으로 0의 오프셋을 검색 합니다.  
+-   원점 값을 기준으로 한 0 오프셋을 사용하여 검색  
   
--   오프셋 값으로 파일의 시작을 찾는 것은 `ftell` 에 대한 호출을 반환합니다. `fseek`또는 `_ftelli64`을 사용할 경우,`_fseeki64`을 사용할 경우입니다.  
+-   에 대 한 호출에서 반환 되는 오프셋된 값을 사용 하 여 파일의 시작 부분에서 찾기를 `ftell` 사용 하는 경우 `fseek` 또는 `_ftelli64` 사용 하는 경우 `_fseeki64`합니다.  
   
- 또한, 텍스트 모드에서, CTRL \+ Z는 입력에서의 파일의 마지막 특성으로 해석됩니다.  파일이 읽기\/쓰기 용으로 열린 경우, `fopen` 와 관련된 루틴은 파일의 끝에서 CTRL\+Z 에 대해 확인하고 가능하면 제거합니다.  완료됬습니다. 이는 `fseek` 와 `ftell` 또는`_fseeki64` 및 `_ftelli64` 의 결합을 사용하기 때문입니다. CTRL\+Z로 끝나는 파일을 이동시키기는 것은 `fseek` 또는 `_fseeki64` 가 적절하지 않은 파일의 끝에서 작업하는 것을 야기시킵니다.  
+ 또한 텍스트 모드에서 Ctrl+Z는 입력 시 파일 끝 문자로 해석됩니다. 읽기/쓰기를 위해 열린 파일에서 `fopen` 및 모든 관련 루틴은 파일 끝에 CTRL+Z가 있는지 확인하고 가능하면 이를 제거합니다. 이렇게 처리되는 이유는 `fseek` 및 `ftell`의 조합이나 `_fseeki64` 및 `_ftelli64`의 조합을 사용하여 CTRL+Z로 끝나는 파일 내에서 이동하면 `fseek` 또는 `_fseeki64`가 파일 끝 가까이에서 제대로 동작하지 않을 수 있기 때문입니다.  
   
- CRT가 바이트 순서 마크\(BOM\)으로 시작하는 파일을 열 경우, 파일 포인터는 BOM 후\(즉, 파일의 실제 내용이 시작될 때,\)에 위치됩니다.  만일 `fseek`를 파일이 시작할 때 가질 경우, `ftell` 를 처음 위치를 얻기 위해 이용하고, 위치가 0이라기보다 `fseek` 일 경우를 사용합니다.  
+ CRT가 BOM(바이트 순서 표시)으로 시작되는 파일을 열면 파일 포인터는 BOM 뒤(파일 실제 콘텐츠의 시작)에 배치됩니다. 파일의 시작에 대해 `fseek`를 수행해야 할 경우 `ftell`을 사용하여 최초 위치를 가져오고 위치 0이 아니라 최초 위치에 대해 `fseek`를 수행합니다.  
   
- 실행중에 이러한 함수는 다른 스레드를 잠그고 그러므로 스레드로부터 안전하게 됩니다.  비잠금 버전을 위해 [\_fseek\_nolock, \_fseeki64\_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)을 참조하세요.  
+ 이 함수는 실행 중에 다른 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_fseek_nolock, _fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)을 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|Function|필수 헤더|  
-|--------------|-----------|  
-|`fseek`|\<stdio.h\>|  
-|`_fseeki64`|\<stdio.h\>|  
+|함수|필수 헤더|  
+|--------------|---------------------|  
+|`fseek`|\<stdio.h>|  
+|`_fseeki64`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_fseek.c  
@@ -147,17 +164,14 @@ int main( void )
 }  
 ```  
   
-  **파일 포인터는 첫 줄의 중간에 설정 됩니다.**  
-**'Fseek.out' 파일입니다.**   
-## 해당 .NET Framework 항목  
+```Output  
+File pointer is set to middle of first line.  
+This is the file 'fseek.out'.  
+```  
   
--   [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
--   [System::IO::FileStream::Seek](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)  
-  
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
  [rewind](../../c-runtime-library/reference/rewind.md)

@@ -1,54 +1,71 @@
 ---
-title: "_gcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt 함수"
-  - "변환, 부동 소수점을 문자열로"
-  - "CVTBUFSIZE"
-  - "부동 소수점 함수, 숫자를 문자열로 변환"
-  - "gcvt 함수"
-  - "숫자, 문자열로 변환"
-  - "문자열[C++], 부동 소수점에서 변환"
+title: "_gcvt | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt function
+- _CVTBUFSIZE
+- gcvt function
+- floating-point functions, converting number to string
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _gcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 055d1e6d996a076ca7f1a49e21abf3771fa543fb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-부동 소수점 값을 버퍼에 저장되는 문자열로 변환합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)를 참조하십시오.  
+---
+# <a name="gcvt"></a>_gcvt
+부동 소수점 값을 버퍼에 저장되는 문자열로 변환합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 char *_gcvt(   
@@ -58,35 +75,35 @@ char *_gcvt(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `value`  
- 변환될 값입니다.  
+ 변환할 값입니다.  
   
  `digits`  
  저장된 유효 자릿수입니다.  
   
  `buffer`  
- 결과에 대한 저장소 위치입니다.  
+ 결과의 저장소 위치입니다.  
   
-## 반환 값  
- `_gcvt`는 문자열의 자릿수에 대한 포인터를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ `_gcvt`는 숫자 문자열에 대한 포인터를 반환합니다.  
   
-## 설명  
- `_gcvt` 함수는 부동 소수점 `value` 을 문자열로 변환하고 \(10진수 및 부호 가능한 바이트 포함\) `buffer` 에 문자열을 저장합니다.  `buffer`는 변환된 값과 자동으로 추가되는 종료 null 문자를 수용하기에 충분히 커야 합니다.  `digits`의 버퍼 크기 \+ 1이 사용되면, 함수는 버퍼의 끝을 덮어씁니다.  변환된 문자열은 소수점을 포함하며 부호와 지수 정보를 포함할 수 있기 때문입니다.  오버플로우에 대한 규정이 없습니다.  `_gcvt`는 10 진수 형식으로 `digits`를 생성하려고 시도합니다.  할수 없는 경우, 지수 형식의 `digits` 숫자를 생성합니다.  따라오는 0들은 변환에서 무시될 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `_gcvt` 함수는 부동 소수점 `value`를 문자열(소수점 및 가능한 부호 바이트를 포함함)로 변환하고 문자열을 `buffer`에 저장합니다. `buffer`는 변환된 값과 자동으로 추가되는 null 종결 문자를 포함할 만큼 충분히 커야 합니다. `digits` + 1의 버퍼 크기를 사용할 경우 함수는 버퍼 끝을 덮어씁니다. 이는 변환된 문자열에 소수점이 포함되어 있고 부호 및 지수 정보가 포함될 수 있기 때문입니다. 오버플로에 대한 프로비전이 없습니다. `_gcvt`는 `digits` 숫자를 10진수 형식으로 생성하려고 합니다. 생성할 수 없는 경우 `digits` 숫자를 지수 형식으로 생성합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.  
   
- `_CVTBUFSIZE` 길이의 `buffer`는 모든 부동 소수점 값에 대해 충분합니다.  
+ 모두 부동 소수점 값에는 `_CVTBUFSIZE` 길이의 `buffer`로 충분합니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.  `buffer`이 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다.  계속해서 실행하도록 허용된 경우, 함수는 `errno` 를 `EINVAL` 에 설정하고 `NULL`을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. `buffer`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `NULL`을 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_gcvt`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_gcvt`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_gcvt.c  
@@ -129,21 +146,22 @@ int main( void )
 }  
 ```  
   
-  **The following numbers were converted by \_gcvt\(value,12,buffer\):**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-123456789012' \(13 chars\)**  
-**buffer: '\-1.23456789012e\+012' \(19 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-1234567890.12' \(14 chars\)**  
-**buffer: '\-0.123456789012' \(15 chars\)**  
-**buffer: '\-1.23456789012e\-002' \(19 chars\)**   
-## 해당 .NET Framework 항목  
- [System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+The following numbers were converted by _gcvt(value,12,buffer):  
+buffer: '-1234567890.12' (14 chars)  
+buffer: '-12345678901.2' (14 chars)  
+buffer: '-123456789012' (13 chars)  
+buffer: '-1.23456789012e+012' (19 chars)  
   
-## 참고 항목  
+buffer: '-12.3456789012' (14 chars)  
+buffer: '-1.23456789012' (14 chars)  
+buffer: '-0.123456789012' (15 chars)  
+buffer: '-1.23456789012e-002' (19 chars)  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - condition_variable/std::condition_variable_any
+- condition_variable/std::condition_variable_any::condition_variable_any
+- condition_variable/std::condition_variable_any::notify_all
+- condition_variable/std::condition_variable_any::notify_one
+- condition_variable/std::condition_variable_any::wait
+- condition_variable/std::condition_variable_any::wait_for
+- condition_variable/std::condition_variable_any::wait_until
 dev_langs:
 - C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 클래스
@@ -52,24 +59,24 @@ class condition_variable_any;
   
 |이름|설명|  
 |----------|-----------------|  
-|[condition_variable_any::condition_variable_any 생성자](#condition_variable_any__condition_variable_any_constructor)|`condition_variable_any` 개체를 생성합니다.|  
+|[condition_variable_any](#condition_variable_any)|`condition_variable_any` 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|`condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.|  
-|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|`condition_variable_any` 개체를 대기 중인 스레드 중 하나를 차단 해제합니다.|  
-|[condition_variable_any::wait](#condition_variable_any__wait_method)|스레드를 차단합니다.|  
-|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|  
-|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|  
+|[notify_all](#notify_all)|`condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.|  
+|[notify_one](#notify_one)|`condition_variable_any` 개체를 대기 중인 스레드 중 하나를 차단 해제합니다.|  
+|[대기](#wait)|스레드를 차단합니다.|  
+|[wait_for](#wait_for)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|  
+|[wait_until](#wait_until)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** condition_variable  
+ **헤더:** \<condition_variable >  
   
  **네임스페이스:** std  
   
-##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a>  condition_variable_any::condition_variable_any 생성자  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any 생성자  
  `condition_variable_any` 개체를 생성합니다.  
   
 ```
@@ -79,21 +86,21 @@ condition_variable_any();
 ### <a name="remarks"></a>설명  
  메모리가 부족한 경우 생성자에서 `not_enough_memory` 오류 코드가 있는 [system_error](../standard-library/system-error-class.md) 개체를 throw합니다. 몇 가지 다른 리소스를 사용할 수 없기 때문에 개체를 생성할 수 없는 경우 생성자에서 `resource_unavailable_try_again` 오류 코드가 있는 `system_error` 개체를 throw합니다.  
   
-##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  `condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  `condition_variable_any` 개체를 기다리는 스레드 중 하나를 차단 해제합니다.  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  스레드를 차단합니다.  
   
 ```
@@ -112,7 +119,7 @@ void wait(Lock& Lck, Predicate Pred);
  `true` 또는 `false`를 반환하는 모든 식입니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 또는 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method)에 대한 호출을 통해 신호를 받을 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+ 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
   
  두 번째 메서드는 실제로 다음 코드를 실행합니다.  
   
@@ -121,7 +128,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.  
   
 ```
@@ -148,7 +155,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
  두 번째 메서드는 `Pred`의 값을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 또는 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method)에 대한 호출을 통해 신호를 받을 때까지 또는 `Rel_time` 시간 간격이 경과될 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+ 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Rel_time` 시간 간격이 경과될 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
   
  두 번째 메서드는 실제로 다음 코드를 실행합니다.  
   
@@ -160,7 +167,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.  
   
 ```
@@ -199,7 +206,7 @@ void wait_until(
  `bool`을 반환하는 메서드는 `Pred`의 값을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable` 개체에서 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 또는 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method)에 대한 호출을 통해 신호를 받을 때까지 또는 `Abs_time`까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+ 첫 번째 메서드는 `condition_variable` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Abs_time`까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
   
  두 번째 메서드는 실제로 다음 코드를 실행합니다.  
   

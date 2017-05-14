@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -70,12 +71,12 @@ int _heapmin( void );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 `_heapmin` 에서 0을 반환합니다. 그렇지 않으면 함수에서 –1을 반환하고 `errno` 를 `ENOSYS`로 설정합니다.  
+ 성공하면 `_heapmin`에서 0을 반환합니다. 그렇지 않으면 함수에서 –1을 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
   
  이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- `_heapmin` 함수는 사용되지 않은 힙 메모리를 운영 체제로 해제하여 힙을 최소화합니다. 운영 체제가 `_heapmin`(예: Windows 98)을 지원하지 않는 경우 함수에서 -1을 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
+ `_heapmin` 함수는 사용되지 않은 힙 메모리를 운영 체제로 해제하여 힙을 최소화합니다. 운영 체제를 지원 하지 않는 경우 `_heapmin`함수 (예: Windows 98)-1을 반환 하 고 설정 `errno` 를 `ENOSYS`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -84,9 +85,6 @@ int _heapmin( void );
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   

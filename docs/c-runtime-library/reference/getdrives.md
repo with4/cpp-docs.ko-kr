@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8052d82a223402849b6ba48ce5f6621a7d27ed9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 314c8633ce43a154533873efadc7f3a0006a1aff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="getdrives"></a>_getdrives
@@ -70,7 +71,7 @@ unsigned long _getdrives( void );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 성공하는 경우 반환 값은 현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크입니다. 비트 위치 0(최하위 비트)은 드라이브 A, 비트 위치 1은 드라이브 B, 비트 위치 2는 드라이브 C 등입니다. 함수가 실패하면 반환 값은&0;입니다. 확장 오류 정보를 가져오려면 `GetLastError`를 호출합니다.  
+ 함수가 성공하는 경우 반환 값은 현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크입니다. 비트 위치 0(최하위 비트)은 드라이브 A, 비트 위치 1은 드라이브 B, 비트 위치 2는 드라이브 C 등입니다. 함수가 실패하면 반환 값은 0입니다. 확장 오류 정보를 가져오려면 `GetLastError`를 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -82,9 +83,8 @@ unsigned long _getdrives( void );
   
 ## <a name="example"></a>예제  
   
-```  
-  
-      // crt_getdrives.c  
+```C  
+// crt_getdrives.c  
 // This program retrives and lists out  
 // all the logical drives that are   
 // currently mounted on the machine.  
@@ -126,9 +126,6 @@ C:
 D:  
 E:  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디렉터리 제어](../../c-runtime-library/directory-control.md)

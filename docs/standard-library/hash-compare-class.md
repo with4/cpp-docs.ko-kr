@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: e493529a2511d92b9c99f820bd05b8f911ef9280
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 56b02a7bcafebebfb9fbb5569ad28eb2d52cf879
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="hashcompare-class"></a>hash_compare 클래스
@@ -56,12 +57,12 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
   
 -   정수 상수 **bucket_size**는 컨테이너가 초과하지 않도록 해야 하는 "버킷당"(해시 테이블 항목) 평균 요소 수를 지정합니다. 0보다 커야 합니다. hash_compare에서 제공하는 값은 4입니다.  
   
--   정수 상수 **min_buckets**는 해시 테이블에서 유지할 최소 버킷 수를 지정합니다. 0보다 큰&2;의 거듭제곱이어야 합니다. hash_compare에서 제공하는 값은 8입니다.  
+-   정수 상수 **min_buckets**는 해시 테이블에서 유지할 최소 버킷 수를 지정합니다. 0보다 큰 2의 거듭제곱이어야 합니다. hash_compare에서 제공하는 값은 8입니다.  
   
  Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- hash_compare를 선언 및 사용하는 방법의 예제는 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map__hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap__hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set__hash_set) 및 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset__hash_multiset)에 대한 예제를 참조하세요.  
+ hash_compare를 선언 및 사용하는 방법의 예제는 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) 및 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset)에 대한 예제를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<hash_map>  

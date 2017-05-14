@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path 클래스
@@ -160,7 +161,7 @@ path extension() const;
 path filename() const;
 ```  
   
- myname의 루트 디렉터리 구성 요소(구체적으로는 `empty()  path() : *--end()`)를 반환합니다. 구성 요소는 비어 있을 수 있습니다.  
+ myname의 루트 디렉터리 구성 요소, 특히 `empty()  path() : *--end()`을 참조하세요. 구성 요소는 비어 있을 수 있습니다.  
   
 ## <a name="pathgenericstring"></a>path::generic_string  
   
@@ -174,7 +175,7 @@ template <class Elem,
 string generic_string() const;
 ```  
   
- 슬래시로 변환된 백슬래시와 함께 `this->string<Elem, Traits, Alloc>(al)`를 반환합니다(Windows).  
+ 슬래시로 변환된 백슬래시와 함께 `this->string<Elem, Traits, Alloc>(al)` 를 반환합니다(Windows).  
   
 ## <a name="pathgenericu16string"></a>path::generic_u16string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  mypath에 저장된 시퀀스를 wchar_t 시퀀스에 대해 호스트 시스템에서 선호하는 인코딩으로 변환하고 wstring 형식의 개체에 저장된 대로 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** filesystem  
+ **헤더:** \<파일 시스템 >  
   
  **네임스페이스:** std::experimental::filesystem
   
