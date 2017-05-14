@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 4a90e1c2db038980309e98aed5fb0802dcb5a594
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
@@ -59,12 +60,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.|  
-|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|두 map을 바꿉니다.|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.|  
-|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|두 multimap을 바꿉니다.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.|  
+|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap)|두 map을 바꿉니다.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.|  
+|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap)|두 multimap을 바꿉니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)   

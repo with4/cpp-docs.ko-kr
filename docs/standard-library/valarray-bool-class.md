@@ -1,45 +1,58 @@
 ---
 title: "valarray&lt;bool&gt; 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "valarray<bool>"
-  - "valarray/std::valarray<bool>"
-  - "std::valarray<bool>"
-  - "std.valarray<bool>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "valarray<bool> 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray<bool>
+- valarray/std::valarray<bool>
+dev_langs:
+- C++
+helpviewer_keywords:
+- valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# valarray&lt;bool&gt; 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 717f6acf58738643767555f5473a99cb7c3f44c3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
-A specialized version of the template class **valarray\<Type\>** to elements of type `bool`.  
+---
+# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 클래스
+`bool` 형식의 요소에 대한 템플릿 클래스 **valarray\<Type>**의 특수 버전입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 class valarray<bool>  
-  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // valarray_bool.cpp  
 // compile with: /EHsc  
 #include <valarray>  
@@ -76,17 +89,21 @@ int main( )
       cout << vaBool [ i ] << " ";  
    cout << ")." << endl;  
 }  
+\* Output:   
+The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).  
+The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).  
+The result of the less-than comparison test is the  
+ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).  
+*\  
 ```  
   
-  **The initial Left valarray is: \( 0 1 \-2 3 \-4 5 \-6 7 \-8 9 \).**  
-**The initial Right valarray is: \( 0 1 2 3 4 5 6 7 8 9 \).**  
-**The result of the less\-than comparison test is the**  
- **valarray\<bool\>: \( 0 0 1 0 1 0 1 0 1 0 \).**   
-## 요구 사항  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<valarray>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [valarray 클래스](../standard-library/valarray-class.md)   
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

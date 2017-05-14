@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d421a3b0fb69b98b4b3664b52cea216d6ea6bc5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a8bace6262d978242e2383a78a23fe71bd1e1cf7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
@@ -119,14 +120,14 @@ errno_t _mbsnbset_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;이고, 그렇지 않으면 오류 코드입니다.  
+ 성공하면 0이고, 그렇지 않으면 오류 코드입니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbsnbset_s` 및 `_mbsnbset_s_l` 함수는 최대한 `str`의 처음 `count`바이트를 `c`로 설정합니다. `count`가 `str`의 길이보다 큰 경우 `str`의 길이가 `count` 대신 사용됩니다. `c`가 멀티바이트 문자이고 `count`에 지정된 마지막 바이트에 전체가 들어맞지 않는 경우 마지막 바이트는 빈 문자로 채워집니다. `_mbsnbset_s` 및 `_mbsnbset_s_l`은 `str` 끝에 null 종결 문자를 배치하지 않습니다.  
   
  `_mbsnbset_s` 및 `_mbsnbset_s_l`은 `c`의 `count` 문자가 아니라 `count`바이트를 설정한다는 점을 제외하고는 `_mbsnset`와 유사합니다.  
   
- `str`이 `NULL`이거나 `count`가&0;인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 또한 `c`가 유효한 멀티바이트 문자가 아닌 경우 `errno`는 `EINVAL`로 설정되고 대신 공백이 사용됩니다.  
+ `str`이 `NULL`이거나 `count`가 0인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 또한 `c`가 유효한 멀티바이트 문자가 아닌 경우 `errno`는 `EINVAL`로 설정되고 대신 공백이 사용됩니다.  
   
  출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbset_s` 버전의 이 함수 이 로캘 종속 동작의 현재 로캘을 사용하고 `_mbsnbset_s_l` 버전은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -173,9 +174,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

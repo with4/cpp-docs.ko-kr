@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unary_negate
-- std::unary_negate
-- std.unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="unarynegate-class"></a>unary_negate 클래스
@@ -71,7 +70,7 @@ public:
 ## <a name="remarks"></a>설명  
  템플릿 클래스는 단항 함수 개체 function object _ *Func*의 복사본을 저장합니다. 그리고 **!**\_를 반환하도록 해당 구성원 함수 `operator()`를 정의합니다. *Func(left).*  
   
- `unary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. 도우미 함수 [not1](../standard-library/functional-functions.md#not1_function)을 사용하면 **unary_negator** 어댑터 조건자를 보다 쉽게 선언하고 사용할 수 있습니다.  
+ `unary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. 도우미 함수 [not1](../standard-library/functional-functions.md#not1)을 사용하면 **unary_negator** 어댑터 조건자를 보다 쉽게 선언하고 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   

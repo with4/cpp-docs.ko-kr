@@ -1,47 +1,51 @@
 ---
 title: "type_index 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "typeindex/std::type_index"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "type_index 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- typeindex/std::type_index
+dev_langs:
+- C++
+helpviewer_keywords:
+- type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# type_index 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: ca921a28653cf83cd76f4d8e826af277f1f574e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
-The `type_index` class wraps a pointer to [type\_info 클래스](../cpp/type-info-class.md) to assist in indexing by such objects.  
+---
+# <a name="typeindex-class"></a>type_index 클래스
+`type_index` 클래스는 [type_info 클래스](../cpp/type-info-class.md)에 포인터를 래핑하여 해당 개체에 의한 인덱싱을 지원합니다.  
   
-```  
-class type_index {  
-public:  
-    type_index(const type_info& tinfo);  
-    const char *name() const;  
-    size_t hash_code() const;  
-    bool operator==(const type_info& right) const;  
-    bool operator!=(const type_info& right) const;  
-    bool operator<(const type_info& right) const;  
-    bool operator<=(const type_info& right) const;  
-    bool operator>(const type_info& right) const;  
-    bool operator>=(const type_info& right) const;  
-};  
-```  
+class type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- The constructor initializes `ptr` to `&tinfo`.  
+ 생성자는 `ptr`을 `&tinfo`로 초기화합니다.  
   
  `name`가 `ptr->name()`를 반환하는 경우  
   
@@ -55,10 +59,14 @@ public:
   
  `operator<=`은 `!(right < *this).`를 반환합니다.  
   
- `operator>`  `` returns `right < *this`.  
+ `operator>`가 `right < *this`를 반환하는 경우  
   
  `operator>=`가 `!(*this < right)`를 반환하는 경우  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [런타임 형식 정보](../cpp/run-time-type-information.md)   
- [\<typeindex\>](../standard-library/typeindex.md)
+ [\<typeindex>](../standard-library/typeindex.md)
+
+
+
+

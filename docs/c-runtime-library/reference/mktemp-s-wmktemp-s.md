@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0497919857206342c75e998c7ee714f89bc066e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6231031dd0bbc5b455e3555731f711ee7de971e7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
@@ -96,7 +97,7 @@ errno_t _wmktemp_s(
  `_mktemp_s`에 있는 싱글바이트 문자 및 `_wmktemp_s`에 있는 와이드 문자의 버퍼 크기입니다(null 종결자 포함).  
   
 ## <a name="return-value"></a>반환 값  
- 이 두 함수는 모두 정상적으로 실행되면&0;을 반환하고 실행 시 오류가 발생하면 오류 코드를 반환합니다.  
+ 이 두 함수는 모두 정상적으로 실행되면 0을 반환하고 실행 시 오류가 발생하면 오류 코드를 반환합니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -117,7 +118,7 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp_s`|`_mktemp_s`|`_mktemp_s`|`_wmktemp_s`|  
   
- `template` 인수의 형식은 `baseXXXXXX`입니다. 여기서 `base`는 지정하는 새 파일 이름에 속하며 각 X는 `_mktemp_s`에서 제공하는 문자열에 대한 자리 표시자입니다. `template`의 각 자리 표시자 문자는 대문자 X여야 합니다. `_mktemp_s`는 `base`를 유지하고 첫 번째 후행 X를 영문자로 바꿉니다. `_mktemp_s`는 다음 후행 X를&5;자리 숫자 값으로 바꿉니다. 이 값은 호출 프로세스를 식별하는 고유한 번호 또는 다중 스레드 프로그램의 호출 스레드입니다.  
+ `template` 인수의 형식은 `baseXXXXXX`입니다. 여기서 `base`는 지정하는 새 파일 이름에 속하며 각 X는 `_mktemp_s`에서 제공하는 문자열에 대한 자리 표시자입니다. `template`의 각 자리 표시자 문자는 대문자 X여야 합니다. `_mktemp_s`는 `base`를 유지하고 첫 번째 후행 X를 영문자로 바꿉니다. `_mktemp_s`는 다음 후행 X를 5자리 숫자 값으로 바꿉니다. 이 값은 호출 프로세스를 식별하는 고유한 번호 또는 다중 스레드 프로그램의 호출 스레드입니다.  
   
  `_mktemp_s`에 대한 호출에 성공할 때마다 `template`이 수정됩니다. 동일한 `template` 인수를 사용하는 동일한 프로세스 또는 스레드로부터의 각 후속 호출에서 `_mktemp_s`는 이전 호출에서 `_mktemp_s`가 반환한 이름과 일치하는 파일 이름을 검사합니다. 지정된 이름에 대한 파일이 없는 경우 `_mktemp_s`는 해당 이름을 반환합니다. 이전에 반환된 이름에 대한 파일이 존재하는 경우 `_mktemp_s`는 이전에 반환된 이름에서 사용한 영문자를 다음에 사용할 수 있는 소문자('a'에서 'z'로의 순서)로 대체하여 새 이름을 만듭니다. 예를 들어 `base`가 다음과 같고  
   
@@ -209,9 +210,6 @@ Unique filename is fnc03188
 Unique filename is fnd03188  
 Unique filename is fne03188  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

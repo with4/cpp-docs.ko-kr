@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c78d1dda2a61a85bde238167b75eace09af598b6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 464759b2da6de2af311184cfb0066d56be2c3557
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 연산자
 |||||  
 |-|-|-|-|  
-|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|[operator!=](#operator_neq_multimap)|[operator==](#operator_eq_eq_multimap)|  
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.  
   
 ```
@@ -82,7 +83,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.  
   
 ```
@@ -143,7 +144,7 @@ int main( )
   
  `um2 == um3: false`  
   
-##  <a name="operator_neq_multimap"></a>  operator!=  
+##  <a name="op_neq_multimap"></a>  operator!=  
  연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.  
   
 ```
@@ -205,7 +206,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="operator_eq_eq_multimap"></a>  operator==  
+##  <a name="op_eq_eq_multimap"></a>  operator==  
  연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.  
   
 ```

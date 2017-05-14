@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_mbclen`은 멀티바이트 문자 `c`의 길이가 1바이트인지 2바이트인지에 따라 1 또는 2를 반환합니다. `_mbclen`에 대해 반환되는 오류가 없습니다. `mbstr`이 `NULL`이 아닌 경우 `mblen`은 멀티바이트 문자의 길이(바이트)를 반환합니다. `mbstr`이 `NULL`이거나 와이드 문자 null 문자를 가리키는 경우 `mblen`은 0을 반환합니다. `mbstr`이 가리키는 개체가 처음 `count` 문자 내에서 유효한 멀티바이트 문자를 구성하지 않는 경우 `mblen`은 –1을 반환합니다.  
+ `_mbclen`은 멀티바이트 문자 `c`의 길이가 1바이트인지 2바이트인지에 따라 1 또는 2를 반환합니다. `_mbclen`에 대해 반환되는 오류가 없습니다. `mbstr`이 `NULL`이 아닌 경우 `mblen`은 멀티바이트 문자의 길이(바이트)를 반환합니다. `mbstr`이 `NULL`이거나 와이드 문자 null 문자를 가리키는 경우 `mblen`은 0을 반환합니다. 경우 개체는 `mbstr` 가리키는 첫 번째 내에서 유효한 멀티 바이트 문자를 형성 하지 않습니다 `count` 문자인 `mblen` -1을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbclen` 함수는 멀티바이트 문자 `c`의 길이(바이트)를 반환합니다. `c`가 `_ismbblead`의 암시적 호출에 의해 결정된 멀티바이트 문자의 선행 바이트를 가리키지 않는 경우 `_mbclen`의 결과를 예측할 수 없습니다.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자 분류](../../c-runtime-library/character-classification.md)   

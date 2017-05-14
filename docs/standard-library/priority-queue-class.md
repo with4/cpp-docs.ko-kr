@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.priority_queue
 - priority_queue
-- std::priority_queue
+- queue/std::priority_queue::container_type
+- queue/std::priority_queue::size_type
+- queue/std::priority_queue::value_type
+- queue/std::priority_queue::empty
+- queue/std::priority_queue::pop
+- queue/std::priority_queue::push
+- queue/std::priority_queue::size
+- queue/std::priority_queue::top
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 493cc5b28bb4cfa682b06ed904c3b0c0aa46220c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 31191f5109242dc239ac0237a2eab6ff459fe41b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="priorityqueue-class"></a>priority_queue 클래스
@@ -62,7 +69,7 @@ class priority_queue
  두 요소값을 정렬 키로 비교하여 priority_queue에서 상대적인 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다. 이 인수는 선택적이며 이진 조건자 **less***\<***typename** *Container***::value_type***>*이 기본값입니다.  
   
 ## <a name="remarks"></a>설명  
- 스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#priority_queue__value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
+ 스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
   
  priority_queue는 **Traits** 클래스의 저장된 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다.  
   
@@ -82,32 +89,32 @@ class priority_queue
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue__priority_queue)|비어 있거나 기본 컨테이너 개체 또는 다른 `priority_queue` 범위의 복사본인 `priority_queue`를 생성합니다.|  
+|[priority_queue](#priority_queue)|비어 있거나 기본 컨테이너 개체 또는 다른 `priority_queue` 범위의 복사본인 `priority_queue`를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#priority_queue__container_type)|`priority_queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
-|[size_type](#priority_queue__size_type)|`priority_queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#priority_queue__value_type)|`priority_queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
+|[container_type](#container_type)|`priority_queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
+|[size_type](#size_type)|`priority_queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
+|[value_type](#value_type)|`priority_queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[empty](#priority_queue__empty)|`priority_queue`이 비어 있는지를 테스트합니다.|  
-|[pop](#priority_queue__pop)|`priority_queue`의 가장 큰 요소를 최상위 위치에서 제거합니다.|  
-|[push](#priority_queue__push)|operator<의 요소 우선 순위에 따라 priority_queue에 요소를 추가합니다.|  
-|[size](#priority_queue__size)|`priority_queue`에 있는 요소 수를 반환합니다.|  
-|[top](#priority_queue__top)|`priority_queue`의 최상위 위치에 있는 가장 큰 요소에 대한 const 참조를 반환합니다.|  
+|[empty](#empty)|`priority_queue`이 비어 있는지를 테스트합니다.|  
+|[pop](#pop)|`priority_queue`의 가장 큰 요소를 최상위 위치에서 제거합니다.|  
+|[push](#push)|operator<의 요소 우선 순위에 따라 priority_queue에 요소를 추가합니다.|  
+|[size](#size)|`priority_queue`에 있는 요소 수를 반환합니다.|  
+|[top](#top)|`priority_queue`의 최상위 위치에 있는 가장 큰 요소에 대한 const 참조를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<queue>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namepriorityqueuecontainertypea--priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a>  priority_queue::container_type  
+##  <a name="container_type"></a>  priority_queue::container_type  
  조정할 기본 컨테이너를 제공하는 형식입니다.  
   
 ```  
@@ -120,9 +127,9 @@ typedef Container container_type;
  `Container`에 대한 자세한 내용은 [priority_queue 클래스](../standard-library/priority-queue-class.md) 항목의 설명 섹션을 참조하세요.  
   
 ### <a name="example"></a>예제  
-  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [priority_queue](#priority_queue__priority_queue)의 예제를 참조하세요.  
+  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [priority_queue](#priority_queue)의 예제를 참조하세요.  
   
-##  <a name="a-namepriorityqueueemptya--priorityqueueempty"></a><a name="priority_queue__empty"></a>  priority_queue::empty  
+##  <a name="empty"></a>  priority_queue::empty  
  priority_queue가 비어 있는지 테스트합니다.  
   
 ```  
@@ -166,7 +173,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="a-namepriorityqueuepopa--priorityqueuepop"></a><a name="priority_queue__pop"></a>  priority_queue::pop  
+##  <a name="pop"></a>  priority_queue::pop  
  priority_queue의 가장 큰 요소를 최상위 위치에서 제거합니다.  
   
 ```  
@@ -220,7 +227,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="a-namepriorityqueuepriorityqueuea--priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a>  priority_queue::priority_queue  
+##  <a name="priority_queue"></a>  priority_queue::priority_queue  
  비어 있거나 기본 컨테이너 개체 또는 다른 priority_queue 범위의 복사본인 priority_queue를 생성합니다.  
   
 ```  
@@ -249,21 +256,21 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
  `_Cont`  
  생성된 priority_queue가 복사본이 되는 기본 컨테이너입니다.  
   
- ` right`  
+ `right`  
  생성된 set가 복사본으로 지정될 priority_queue입니다.  
   
- ` first`  
+ `first`  
  복사할 요소의 범위에서 첫 번째 요소의 위치입니다.  
   
- ` last`  
+ `last`  
  복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 처음&3;개 생성자는 각각 빈 초기 priority_queue를 정의합니다. 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수( ` comp`)의 형식도 지정하며, 세 번째 생성자는 사용할 `container_type`( `_Cont`)을 명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.  
+ 처음 3개 생성자는 각각 빈 초기 priority_queue를 정의합니다. 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수( `comp`)의 형식도 지정하며, 세 번째 생성자는 사용할 `container_type`( `_Cont`)을 명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.  
   
- 네 번째 생성자는 priority_queue ` right`의 복사본을 지정합니다.  
+ 네 번째 생성자는 priority_queue `right`의 복사본을 지정합니다.  
   
- 마지막&3;개 생성자는 일부 컨테이너의 [ * first,  last*) 범위를 복사하고 해당 값을 사용하여 priority_queue를 초기화합니다. 이때 클래스 **Traits** 및 `container_type`의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.  
+ 범위를 복사 하는 마지막 세 명의 생성자 [* 첫 번째, 마지막 *) 일부 컨테이너의 값을 사용 하는 클래스의 비교 함수의 유형을 지정 하는 명시적인의 증가 따라 priority_queue 초기화 **특성** 및 `container_type`합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -376,7 +383,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namepriorityqueuepusha--priorityqueuepush"></a><a name="priority_queue__push"></a>  priority_queue::push  
+##  <a name="push"></a>  priority_queue::push  
  operator<의 요소 우선 순위에 따라 priority_queue에 요소를 추가합니다.  
   
 ```  
@@ -384,7 +391,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` val`  
+ `val`  
  priority_queue의 맨 위에 추가되는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -422,7 +429,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuesizea--priorityqueuesize"></a><a name="priority_queue__size"></a>  priority_queue::size  
+##  <a name="size"></a>  priority_queue::size  
  priority_queue에 있는 요소의 수를 반환합니다.  
   
 ```  
@@ -461,7 +468,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="a-namepriorityqueuesizetypea--priorityqueuesizetype"></a><a name="priority_queue__size_type"></a>  priority_queue::size_type  
+##  <a name="size_type"></a>  priority_queue::size_type  
  priority_queue에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -472,9 +479,9 @@ typedef typename Container::size_type size_type;
  이 형식은 priority_queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
   
 ### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#priority_queue__size)의 예제를 참조하세요.  
+  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
-##  <a name="a-namepriorityqueuetopa--priorityqueuetop"></a><a name="priority_queue__top"></a>  priority_queue::top  
+##  <a name="top"></a>  priority_queue::top  
  가장 큰 요소에 대한 const 참조를 priority_queue 위쪽에 반환합니다.  
   
 ```  
@@ -519,7 +526,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuevaluetypea--priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a>  priority_queue::value_type  
+##  <a name="value_type"></a>  priority_queue::value_type  
  priority_queue에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
   
 ```  

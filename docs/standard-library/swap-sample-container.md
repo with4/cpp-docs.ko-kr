@@ -35,17 +35,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 8e9bced8766b9e856dbb10a0e5931a6640850fa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2caa31718c21b08dd4e008fce9c92e12ab5b93b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="swap-ltsample-containergt"></a>swap(&lt;sample container&gt;)
 > [!NOTE]
 >  이 항목은 C++ 표준 라이브러리에서 사용되는 작동하지 않는 컨테이너 예제로 Visual C++ 설명서에 포함되어 있습니다. 자세한 내용은 [C++ 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)를 참조하세요.  
   
- ` left.`[swap](../standard-library/container-class-swap.md)(_*Right*)을 실행합니다.  
+ Executes `left.`[swap](../standard-library/container-class-swap.md)`(right)`.  
   
 ## <a name="syntax"></a>구문  
   

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
@@ -85,12 +86,12 @@ wint_t ungetwc(
  `FILE` 구조체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이러한 각 함수는 정상적으로 실행되면 문자 인수 `c`*를 반환합니다.* `c`를 다시 푸시할 수 없거나 읽은 문자가 없는 경우에는 입력 스트림이 변경되지 않으며 `ungetc`는 `EOF`를 반환하고 `ungetwc`는 `WEOF`를 반환합니다. `stream`이 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `EOF` 또는 `WEOF`가 반환되고 `errno`는 `EINVAL`로 설정됩니다.  
+ 성공 하면 이러한 각 함수 반환 문자 인수 `c`합니다. `c`를 다시 푸시할 수 없거나 읽은 문자가 없는 경우에는 입력 스트림이 변경되지 않으며 `ungetc`는 `EOF`를 반환하고 `ungetwc`는 `WEOF`를 반환합니다. `stream`이 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `EOF` 또는 `WEOF`가 반환되고 `errno`는 `EINVAL`로 설정됩니다.  
   
  이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- `ungetc` 함수는 `c` 문자를 `stream`에 다시 푸시하고 파일 끝 표시기를 지웁니다. 이때 스트림이 읽기를 위해 열려 있어야 합니다. `stream`에 대한 후속 읽기 작업은 `c`*로 시작됩니다.* `ungetc`를 사용하여 스트림에 `EOF`를 푸시하려는 시도는 무시됩니다.  
+ `ungetc` 함수는 `c` 문자를 `stream`에 다시 푸시하고 파일 끝 표시기를 지웁니다. 이때 스트림이 읽기를 위해 열려 있어야 합니다. 후속 작업에서 읽기 `stream` 로 시작 `c`합니다. `ungetc`를 사용하여 스트림에 `EOF`를 푸시하려는 시도는 무시됩니다.  
   
  `ungetc`에 의해 스트림에 배치되는 문자는 스트림에서 해당 문자를 읽기 전에 `fflush`, `fseek`, `fsetpos` 또는 `rewind`를 호출하는 경우 지워질 수 있습니다. 파일 위치 표시기에는 문자가 다시 푸시되기 전의 값이 지정됩니다. 스트림에 해당하는 외부 저장소는 변경되지 않습니다. 텍스트 스트림에 대해 `ungetc`가 정상적으로 호출되어도 다시 푸시된 모든 문자를 읽거나 삭제할 때까지 파일 위치 표시기는 지정되지 않습니다. 이진 스트림에 대해 각 `ungetc`를 정상적으로 호출하면 파일 위치 표시기가 감소합니다. 호출 전에 표시기의 값이 0이었다면 호출 후에는 값이 정의되지 않습니다.  
   
@@ -148,9 +149,6 @@ int main( void )
       521aNumber = 521  
 Next character in stream = 'a'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스트림 I/O](../../c-runtime-library/stream-i-o.md)   

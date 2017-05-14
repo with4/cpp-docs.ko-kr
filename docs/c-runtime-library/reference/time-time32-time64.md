@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -93,7 +94,7 @@ __time64_t _time64(
 ## <a name="remarks"></a>설명  
  `time` 함수는 시스템 클록에 따라 1970년 1월 1일 자정(00:00:00), UTC(협정 세계시) 이후 경과된 시간(초)을 반환합니다. 반환 값은 `timer`로 제공된 위치에 저장됩니다. 이 매개 변수는 `NULL`일 수 있으며, 이 경우 반환 값은 저장되지 않습니다.  
   
- `time`은 `_time64`의 래퍼이며 `time_t`는 기본적으로 `__time64_t`와 동일합니다. 컴파일러에서 `time_t`를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 2038년 1월 18일 후 응용 프로그램이 실행되지 않을 수 있으므로 이 방법은 권장되지 않습니다. 이 매크로의 사용은 64비트 플랫폼에서 허용되지 않습니다.  
+ `time` 은 `_time64` 의 래퍼이며 `time_t` 는 기본적으로 `__time64_t`와 동일합니다. 컴파일러에서 `time_t` 를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 2038년 1월 18일 후 응용 프로그램이 실행되지 않을 수 있으므로 이 방법은 권장되지 않습니다. 이 매크로의 사용은 64비트 플랫폼에서 허용되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

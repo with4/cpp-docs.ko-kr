@@ -1,56 +1,74 @@
 ---
-title: "puts, _putws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putws"
-  - "puts"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putts"
-  - "_putws"
-  - "puts"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putts 함수"
-  - "_putws 함수"
-  - "puts 함수"
-  - "putts 함수"
-  - "putws 함수"
-  - "표준 출력, 쓰기"
-  - "문자열[C++], 작성"
+title: puts, _putws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putws
+- puts
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putts
+- _putws
+- puts
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], writing
+- _putts function
+- standard output, writing to
+- putws function
+- puts function
+- putts function
+- _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# puts, _putws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 458fab534fa8bf6c92771d8f4fb42377ece4300e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-**표준**문자열을 씁니다.  
+---
+# <a name="puts-putws"></a>puts, _putws
+**stdout**에 문자열을 씁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -62,41 +80,41 @@ int _putws(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `str`  
- 출력 문자열  
+ 출력 문자열입니다.  
   
-## 반환 값  
- 성공 하면 음수가 아닌 값을 반환 합니다.  `puts` 가 실패할 경우, `EOF`를 반환합니다; `_putws` 가 실패할 경우, **WEOF**를 반환합니다.  `str` 이 null 포인터인 경우, 설명된 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 대로 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 `EOF` 또는 **WEOF**을 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 정상적으로 실행되면 음수가 아닌 값을 반환합니다. `puts`가 실패하면 `EOF`를 반환하고 `_putws`가 실패하면 **WEOF**를 반환합니다. `str`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EOF` 또는 **WEOF**.를 반환합니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [\_doserrno, errno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+ 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## 설명  
- `puts` 쓰기 작동 `str` 표준 출력 스트림에 **stdout**, 출력 스트림에 줄 바꿈 문자 \('\\n'\)를 사용 하 여 null 문자 \('\\0'\) 종료의 문자열을 대체 합니다.  
+## <a name="remarks"></a>설명  
+ `puts` 함수는 `str`을 표준 출력 스트림 **stdout**에 쓰고 출력 스트림에서 문자열의 종료 null 문자('\0')를 새 줄 문자('\n')로 바꿉니다.  
   
- `_putws` 는 와이드 문자 버전인 `puts`입니다.; 마치 동일한 스트림에서 ANSI 모드에서 열리는 경우입니다.  `puts` 는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
+ `_putws`는 `puts`의 와이드 문자 버전이며, 이 두 함수는 스트림이 ANSI 모드에서 열리는 경우 동일하게 작동합니다. `puts`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
   
- Windows 2000에서와 나중에 **\_putwch** 현재 콘솔 로케일 설정을 사용 하 여 유니코드 문자를 씁니다.  
+ Windows 2000 이상 버전에서 **_putwch**는 현재 CONSOLE LOCALE 설정을 사용하여 유니코드 문자를 씁니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_putts`|`puts`|`puts`|`_putws`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`puts`|\<stdio.h\>|  
-|`_putws`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`puts`|\<stdio.h>|  
+|`_putws`|\<stdio.h>|  
   
- 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다.  콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다.  추가 호환성 정보는 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_puts.c  
@@ -111,16 +129,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Hello world from puts!  
 ```  
   
-## 해당 .NET Framework 항목  
- [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
  [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)

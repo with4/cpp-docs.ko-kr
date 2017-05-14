@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,11 +105,11 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset`는 변경된 문자열에 대한 포인터를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbsnbset` 및 `_mbsnbset_l` 함수는 최대한 `str`의 처음 `count`바이트를 `c`로 설정합니다. `count`가 `str`의 길이보다 큰 경우 `str`의 길이가 `count` 대신 사용됩니다. `c`가 멀티바이트 문자이고 `count`에 지정된 마지막 바이트로만 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. `_mbsnbset` 및 `_mbsnbset_l`은 `str` 끝에 null 종결 문자를 배치하지 않습니다.  
+ `_mbsnbset` 및 `_mbsnbset_l` 함수는 최대한 `str`의 처음 `count`바이트를 `c`로 설정합니다. `count`가 `str`의 길이보다 큰 경우 `str`의 길이가 `count` 대신 사용됩니다. `c`가 멀티바이트 문자이고 `count`에 지정된 마지막 바이트로만 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. `_mbsnbset`및 `_mbsnbset_l` 종료 두지 않는의 끝에 null `str`합니다.  
   
- `_mbsnbset` 및 `_mbsnbset_l`은 `c`의 `count` 문자가 아니라 `count` 바이트를 설정한다는 점을 제외하고 `_mbsnset`와 유사합니다.  
+ `_mbsnbset`및 `_mbsnbset_l` 비슷합니다 `_mbsnset`설정 한다는 점을 제외 하 고, `count` 바이트 보다는 `count` 자의 `c`합니다.  
   
- `str`이 `NULL`이거나 `count`가&0;인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 또한 `c`가 유효한 멀티바이트 문자가 아닌 경우 `errno`는 `EINVAL`로 설정되고 대신 공백이 사용됩니다.  
+ `str`이 `NULL`이거나 `count`가 0인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 또한 `c`가 유효한 멀티바이트 문자가 아닌 경우 `errno`는 `EINVAL`로 설정되고 대신 공백이 사용됩니다.  
   
  출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbset` 버전의 이 함수는 이 로캘 종속 동작에 현재 로캘을 사용하고 `_mbsnbset_l` 버전은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

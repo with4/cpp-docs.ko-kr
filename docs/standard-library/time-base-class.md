@@ -1,64 +1,87 @@
 ---
 title: "time_base 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.time_base"
-  - "std::time_base"
-  - "time_base"
-  - "locale/std::time_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "time_base 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- time_base
+- locale/std::time_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# time_base 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 86e27eec232094c1e57120f6f811c96b4e4a4871
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
-The class serves as a base class for facets of template class time\_get, defining just the enumerated type **dateorder** and several constants of this type.  
+---
+# <a name="timebase-class"></a>time_base 클래스
+이 클래스는 템플릿 클래스 time_get의 패싯에 대한 기본 클래스로 사용되며 열거형 **dateorder**와 이 형식의 여러 상수만 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class time_base : public locale::facet {
+public:
+    enum dateorder {no_order,
+    dmy,
+ mdy,
+    ymd,
+ ydm};
+    time_base(
+ size_t _Refs = 0)
+ ~time_base();
+
+};
 ```  
-class time_base : public locale::facet {  
-public:  
-    enum dateorder {no_order, dmy, mdy, ymd, ydm};  
-    time_base(  
-        size_t _Refs = 0  
-    )  
-    ~time_base();  
-};  
-```  
   
-## 설명  
- Each constant characterizes a different way to order the components of a date.  The constants are:  
+## <a name="remarks"></a>설명  
+ 각 상수는 날짜의 구성 요소 순서를 지정하는 다른 방식을 지정합니다. 상수는 다음과 같습니다.  
   
--   **no\_order** specifies no particular order.  
+- **no_order**: 특정 순서를 지정하지 않습니다.  
   
--   **dmy** specifies the order day, month, then year, as in 2 December 1979.  
+- **dmy**: 2/12/1979와 같이 일, 월, 년 순서를 지정합니다.  
   
--   **mdy** specifies the order month, day, then year, as in December 2, 1979.  
+- **mdy**: 12/2/1979와 같이 월, 일, 년 순서를 지정합니다.  
   
--   **ymd** specifies the order year, month, then day, as in 1979\/12\/2.  
+- **ymd**: 1979/12/2와 같이 년, 월, 일 순서를 지정합니다.  
   
--   **ydm** specifies the order year, day, then month, as in 1979: 2 Dec.  
+- **ydm**: 1979: 2/12와 같이 년, 일, 월 순서를 지정합니다.  
   
-## 요구 사항  
- **Header:** \<locale\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<locale>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

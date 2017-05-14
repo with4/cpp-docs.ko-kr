@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b6b5f2f059084e1f5dd66d75b5f5af5f2ade2473
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1e56ba6f238c62a220966701e7b1ced1dd2ec4ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
@@ -104,7 +105,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
   
- `template` 인수의 형식은 `base`XXXXXX입니다. 여기서 `base`는 지정하는 새 파일 이름에 속하며 각 X는 `_mktemp`에서 제공하는 문자열에 대한 자리 표시자입니다. `template`의 각 자리 표시자 문자는 대문자 X여야 합니다. `_mktemp`는 `base`를 유지하고 첫 번째 후행 X를 영문자로 바꿉니다. `_mktemp`는 다음 후행 X를&5;자리 숫자 값으로 바꿉니다. 이 값은 호출 프로세스를 식별하는 고유한 번호 또는 다중 스레드 프로그램의 호출 스레드입니다.  
+ `template` 인수에는 양식 `base` *XXXXXX*여기서 `base` 는 사용자가 제공한 새 파일 이름의 일부가 속하며 각 X는에서 제공 하는 문자에 대 한 자리 표시자 `_mktemp`합니다. `template`의 각 자리 표시자 문자는 대문자 X여야 합니다. `_mktemp`는 `base`를 유지하고 첫 번째 후행 X를 영문자로 바꿉니다. `_mktemp`는 다음 후행 X를 5자리 숫자 값으로 바꿉니다. 이 값은 호출 프로세스를 식별하는 고유한 번호 또는 다중 스레드 프로그램의 호출 스레드입니다.  
   
  `_mktemp`에 대한 호출에 성공할 때마다 `template`이 수정됩니다. 동일한 `template` 인수를 사용하는 동일한 프로세스 또는 스레드로부터의 각 후속 호출에서 `_mktemp`는 이전 호출에서 `_mktemp`가 반환한 이름과 일치하는 파일 이름을 검사합니다. 지정된 이름에 대한 파일이 없는 경우 `_mktemp`는 해당 이름을 반환합니다. 이전에 반환된 이름에 대한 파일이 존재하는 경우 `_mktemp`는 이전에 반환된 이름에서 사용한 영문자를 다음에 사용할 수 있는 소문자('a'에서 'z'로의 순서)로 대체하여 새 이름을 만듭니다. 예를 들어 `base`가 다음과 같고  
   
@@ -230,9 +231,6 @@ Unique filename is fnz03912
 Problem creating the template.  
 Out of unique filenames.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

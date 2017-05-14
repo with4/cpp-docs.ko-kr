@@ -1,68 +1,85 @@
 ---
-title: "sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "sinl"
-  - "sinf"
-  - "sinhf"
-  - "sinh"
-  - "sin"
-  - "sinhl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sinl"
-  - "sinf"
-  - "sinhl"
-  - "sinl"
-  - "sin"
-  - "sinhf"
-  - "_sinhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sinhl 함수"
-  - "_sinl 함수"
-  - "사인 계산"
-  - "하이퍼볼릭 함수"
-  - "sin 함수"
-  - "sinf 함수"
-  - "sinh 함수"
-  - "sinhf 함수"
-  - "sinhl 함수"
-  - "sinl 함수"
-  - "삼각 함수"
+title: sin, sinf, sinl, sinh, sinhf, sinhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- sinl
+- sinf
+- sinhf
+- sinh
+- sin
+- sinhl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _sinl
+- sinf
+- sinhl
+- sinl
+- sin
+- sinhf
+- _sinhl
+dev_langs:
+- C++
+helpviewer_keywords:
+- sinh function
+- _sinl function
+- _sinhl function
+- sinhf function
+- sinl function
+- calculating sines
+- sin function
+- trigonometric functions
+- sinf function
+- sinhl function
+- hyperbolic functions
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# sin, sinf, sinl, sinh, sinhf, sinhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8f33398820df9df9de21e7d24cc35f76f131bd43
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
-사인과 하이퍼볼릭 사인을 계산합니다.  
+---
+# <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
+사인 및 쌍곡선 사인을 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double sin(  
@@ -77,8 +94,7 @@ long double sin(
 float sinf(  
    float x   
 );  
-long double sinl(  
-   long double x  
+long double sinl(   long double x  
 );  
 double sinh(  
    double x   
@@ -97,35 +113,35 @@ long double sinhl(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `x`  
- 라디안에서 단위의 각도입니다.  
+ 각도(라디안)입니다.  
   
-## 반환 값  
- `sin` 함수는  `x` 의 사인 값을 반환합니다.   `x` 가 263와 같거나 클 경우 또는 –263와 같거나 작을 경우, 결과에 중요한 손실 발생합니다.  
+## <a name="return-value"></a>반환 값  
+ `sin` 함수는 `x`의 사인을 반환합니다. 경우 `x` 보다 큰 또는 263 같거나 작은 보다 크거나-263, 결과에 중요 한 손실이 발생 합니다.  
   
- `sinh` 함수는  `x` 의 쌍곡선 사인을 반환합니다.  기본적으로 결과가 너무 큰 경우  `sinh` 는  `errno`  을  `ERANGE` 으로 설정하고 ±`HUGE_VAL`을 반환합니다.  
+ `sinh` 함수는 `x`의 쌍곡선 사인을 반환합니다. 기본적으로 결과가 너무 크면 `sinh`는 `errno`를 `ERANGE`로 설정하고 ±`HUGE_VAL`을 반환합니다.  
   
 |입력|SEH 예외|Matherr 예외|  
-|--------|------------|----------------|  
-|± QNAN,IND|없음|\_DOMAIN|  
-|± ∞ \(sin, sinf, sinl\)|잘못된|\_DOMAIN|  
-|&#124;x&#124; ≥ 7.104760e\+002 \(sinh, sinhf, sinhl\)|OVERFLOW\+INEXACT|오버플로가 발생했습니다.|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|없음|_DOMAIN|  
+|±∞(sin, sinf, sinl)|INVALID|_DOMAIN|  
+|&#124;x&#124; ≥ 7.104760e+002(sinh, sinhf, sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
- 반환 코드에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하십시오.  
+ 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## 설명  
- C\+\+가 오버로딩을 허용하기 때문에 `float` 혹은 `long double` 값을 사용하고 반환하는 `sin` 과 `sinh` 의 오버로드를 호출할 수 있습니다.  C 프로그램에서 `sin` 및 `sinh`는 항상 `double`을 사용하고 반환합니다.  
+## <a name="remarks"></a>설명  
+ C++는 오버로딩을 허용하기 때문에 `sin` 또는 `sinh` 값을 사용하고 반환하는 `float` 및 `long double`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `sin` 및 `sinh`는 항상 `double`을 사용하고 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h\>|  
+|-------------|---------------------|  
+|`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_sincos.c  
@@ -153,21 +169,18 @@ int main( void )
 }  
 ```  
   
-  **sin\( 1.570796 \) \= 1.000000**  
-**sinh\( 1.570796 \) \= 2.301299**  
-**cos\( 1.570796 \) \= 0.000000**  
-**cosh\( 1.570796 \) \= 2.509178**   
-## 해당 .NET Framework 항목  
+```Output  
+sin( 1.570796 ) = 1.000000  
+sinh( 1.570796 ) = 2.301299  
+cos( 1.570796 ) = 0.000000  
+cosh( 1.570796 ) = 2.509178  
+```  
   
--   [System::Math::Sin](https://msdn.microsoft.com/en-us/library/system.math.sin.aspx)  
-  
--   [System::Math::Sinh](https://msdn.microsoft.com/en-us/library/system.math.sinh.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIsin](../../c-runtime-library/cisin.md)
+ [_CIsin](../../c-runtime-library/cisin.md)

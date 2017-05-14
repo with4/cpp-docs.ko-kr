@@ -6,13 +6,32 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- valarray/std::abs
+- valarray/std::acos
+- valarray/std::asin
+- valarray/std::atan
+- valarray/std::atan2
+- valarray/std::cos
+- valarray/std::cosh
+- valarray/std::exp
+- valarray/std::log
+- valarray/std::log10
+- valarray/std::pow
+- valarray/std::sin
+- valarray/std::sinh
+- valarray/std::sqrt
+- valarray/std::swap
+- valarray/std::tan
+- valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5f3a65a4c4ea8c1c4bd6c5b689863b34e7d41da3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 함수
@@ -25,7 +44,7 @@ ms.lasthandoff: 02/24/2017
 |[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|  
 |[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="a-nameabsa--abs"></a><a name="abs"></a>  abs  
+##  <a name="abs"></a>  abs  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 절대값과 같은 valarray를 반환합니다.  
   
 ```  
@@ -34,7 +53,7 @@ valarray<Type> abs(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -77,7 +96,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="a-nameacosa--acos"></a><a name="acos"></a>  acos  
+##  <a name="acos"></a>  acos  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크코사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -86,7 +105,7 @@ valarray<Type> acos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -146,7 +165,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees  
 ```  
   
-##  <a name="a-nameasina--asin"></a><a name="asin"></a>  asin  
+##  <a name="asin"></a>  asin  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -155,7 +174,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -164,7 +183,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  반환되는 요소의 단위는 라디안입니다.  
   
- 반환 값은 사인값 입력과 일치하는 +pi/2와 –pi/2 사이의 주요 값입니다.  
+ 반환 값은 보안 주체 사이 + pi/2와-pi/2 사인 일치 하는 값 입력 합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -215,7 +234,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees  
 ```  
   
-##  <a name="a-nameatana--atan"></a><a name="atan"></a>  atan  
+##  <a name="atan"></a>  atan  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크탄젠트 주요 값과 같은 valarray를 반환합니다.  
   
 ```  
@@ -224,7 +243,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -233,7 +252,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  반환되는 요소의 단위는 라디안입니다.  
   
- 반환 값은 탄젠트 값 입력과 일치하는 +pi/2와 –pi/2 사이의 주요 값입니다.  
+ 반환 값은 보안 주체 사이 + pi/2와-pi/2 탄젠트 일치 하는 값 입력 합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -287,7 +306,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees  
 ```  
   
-##  <a name="a-nameatan2a--atan2"></a><a name="atan2"></a>  atan2  
+##  <a name="atan2"></a>  atan2  
  요소가 valarray의 요소 및 상수 조합에 의해 지정된 데카르트 구성 요소의 아크탄젠트와 같은 valarray를 반환합니다.  
   
 ```  
@@ -302,27 +321,27 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  해당 요소가 아크탄젠트 인수의 y좌표 값을 제공하는 입력 valarray 또는 상수 숫자 데이터 형식  
   
- ` right`  
+ `right`  
  해당 요소가 아크탄젠트 인수의 x좌표 값을 제공하는 입력 valarray 또는 상수 숫자 데이터 형식  
   
 ### <a name="return-value"></a>반환 값  
  해당 요소 `I`가 다음의 아크탄젠트와 같은 valarray  
   
-- 첫 번째 템플릿 함수의 경우 ` left` [ *I* ] / *_Righ*t [ *I* ]  
+- 첫 번째 템플릿 함수의 경우 `left` [ *I* ] / *_Righ*t [ *I* ]  
   
-- 두 번째 템플릿 함수의 경우 ` left` [ *I* ] / ` right`  
+- 두 번째 템플릿 함수의 경우 `left` [ *I* ] / `right`  
   
-- 세 번째 템플릿 함수의 경우 ` left` / ` right` [ *I* ]  
+- 세 번째 템플릿 함수의 경우 `left` / `right` [ *I* ]  
   
 ### <a name="remarks"></a>설명  
  반환되는 요소의 단위는 라디안입니다.  
   
- 이 함수는 표준 탄젠트 함수에 의해 손실되는 인수의 구성 요소 부호에 대한 정보를 유지합니다. 이 사분면에 대한 정보를 통해 반환 값에 +pi와 -pi 사이의 고유한 각도를 할당할 수 있습니다.  
+ 이 함수는 표준 탄젠트 함수로 손실 되는 인수에 있는 구성 요소는 기호에 대 한 정보를 유지 하 고이 정보는 사분면의 반환 값을 할당할 수 사이의 고유한 각도 + pi 있으며-pi를 활성화 합니다.  
   
- ` left` 및 ` right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
+ `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -377,7 +396,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees  
 ```  
   
-##  <a name="a-namecosa--cos"></a><a name="cos"></a>  cos  
+##  <a name="cos"></a>  cos  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 코사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -386,7 +405,7 @@ valarray<Type> cos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -451,7 +470,7 @@ The cosine of the initial valarray is:
 -1  
 ```  
   
-##  <a name="a-namecosha--cosh"></a><a name="cosh"></a>  cosh  
+##  <a name="cosh"></a>  cosh  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 코사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -460,7 +479,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -530,7 +549,7 @@ The hyperbolic cosine of the initial valarray is:
 11.592  
 ```  
   
-##  <a name="a-nameexpa--exp"></a><a name="exp"></a>  exp  
+##  <a name="exp"></a>  exp  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 자연 지수와 같은 valarray를 반환합니다.  
   
 ```  
@@ -539,7 +558,7 @@ valarray<Type> exp(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -590,7 +609,7 @@ The natural exponential of the initial valarray is:
 22026.5  
 ```  
   
-##  <a name="a-nameloga--log"></a><a name="log"></a>  log  
+##  <a name="log"></a>  log  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 자연 로그와 같은 valarray를 반환합니다.  
   
 ```  
@@ -599,7 +618,7 @@ valarray<Type> log(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -650,7 +669,7 @@ The natural logarithm of the initial valarray is:
 4.38203  
 ```  
   
-##  <a name="a-namelog10a--log10"></a><a name="log10"></a>  log10  
+##  <a name="log10"></a>  log10  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 base 10 또는 상용 로그와 같은 valarray를 반환합니다.  
   
 ```  
@@ -659,7 +678,7 @@ valarray<Type> log10(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -712,7 +731,7 @@ The common logarithm of the initial valarray is:
 2  
 ```  
   
-##  <a name="a-namepowa--pow"></a><a name="pow"></a>  pow  
+##  <a name="pow"></a>  pow  
  입력 valarray 및 상수의 요소에서 작동하고 요소가 입력 valarray의 요소로 지정된 밑수 또는 입력 valarray 또는 상수의 요소로 지정된 지수의 상수 거듭제곱과 같은 valarray를 반환합니다.  
   
 ```  
@@ -736,23 +755,23 @@ pow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  해당 요소가 지수화할 각 요소의 밑을 제공하는 입력 valarray  
   
- ` right`  
+ `right`  
  해당 요소가 지수화할 각 요소의 거듭제곱을 제공하는 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
  해당 요소 `I`가 다음 항목과 같은 valarray  
   
-- 첫 번째 템플릿 함수의 경우 거듭제곱 ` right` [ *I* ]로 증가된 ` left` [ *I* ]  
+- 첫 번째 템플릿 함수의 경우 거듭제곱 `right` [ *I* ]로 증가된 `left` [ *I* ]  
   
-- 두 번째 템플릿 함수의 경우 거듭제곱 ` right`로 증가된 ` left` [ *I* ]  
+- 두 번째 템플릿 함수의 경우 거듭제곱 `right`로 증가된 `left` [ *I* ]  
   
-- 세 번째 템플릿 함수의 경우 거듭제곱 ` right` [ *I* ]로 증가된 ` left`  
+- 세 번째 템플릿 함수의 경우 거듭제곱 `right` [ *I* ]로 증가된 `left`  
   
 ### <a name="remarks"></a>설명  
- ` left` 및 ` right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
+ `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -805,7 +824,7 @@ n = 4   gives 256
 n = 5   gives 1024  
 ```  
   
-##  <a name="a-namesina--sin"></a><a name="sin"></a>  sin  
+##  <a name="sin"></a>  sin  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -814,7 +833,7 @@ valarray<Type> sin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -879,7 +898,7 @@ The sine of the initial valarray is:
 -2.06823e-013  
 ```  
   
-##  <a name="a-namesinha--sinh"></a><a name="sinh"></a>  sinh  
+##  <a name="sinh"></a>  sinh  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 사인과 같은 valarray를 반환합니다.  
   
 ```  
@@ -888,7 +907,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -897,7 +916,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  지수 함수로 쌍곡선 사인을 정의하는 ID입니다.  
   
- sinh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / 2  
+ sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
 ### <a name="example"></a>예제  
   
@@ -958,7 +977,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487  
 ```  
   
-##  <a name="a-namesqrta--sqrt"></a><a name="sqrt"></a>  sqrt  
+##  <a name="sqrt"></a>  sqrt  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 제곱근과 같은 valarray를 반환합니다.  
   
 ```  
@@ -967,7 +986,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -1009,7 +1028,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  두 valarray의 요소를 교환합니다.  
   
 ```  
@@ -1023,13 +1042,13 @@ void swap(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` left`|`valarray` 형식의 개체입니다.|  
-|` right`|`valarray` 형식의 개체입니다.|  
+|`left`|`valarray` 형식의 개체입니다.|  
+|`right`|`valarray` 형식의 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 ` left.swap( right)`를 실행합니다.  
   
-##  <a name="a-nametana--tan"></a><a name="tan"></a>  tan  
+##  <a name="tan"></a>  tan  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 탄젠트와 같은 valarray를 반환합니다.  
   
 ```  
@@ -1038,7 +1057,7 @@ valarray<Type> tan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -1103,7 +1122,7 @@ The tangent of the initial valarray is:
 -9.6701e+012  
 ```  
   
-##  <a name="a-nametanha--tanh"></a><a name="tanh"></a>  tanh  
+##  <a name="tanh"></a>  tanh  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 탄젠트와 같은 valarray를 반환합니다.  
   
 ```  
@@ -1112,7 +1131,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
   
 ### <a name="return-value"></a>반환 값  
@@ -1121,7 +1140,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  지수 함수로 쌍곡선 탄젠트를 정의하는 ID입니다.  
   
- tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
+ tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
 ### <a name="example"></a>예제  
   

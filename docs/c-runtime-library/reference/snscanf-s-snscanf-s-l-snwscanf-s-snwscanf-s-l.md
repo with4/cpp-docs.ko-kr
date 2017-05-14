@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2b0922e779adad4492bf23a8d192d43792d0b445
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 83efee54bf81c7159e3d6ce520724d8850f2edfe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
@@ -90,28 +91,24 @@ ms.lasthandoff: 02/24/2017
 int __cdecl _snscanf_s(  
    const char * input,  
    size_t length,  
-   const char * format,  
-   ...  
+   const char * format [, argument_list]  
 );  
 int __cdecl _snscanf_s_l(  
    const char * input,  
    size_t length,  
    const char * format,  
-   locale_t locale,  
-   ...  
+   locale_t locale [, argument_list]
 );  
 int __cdecl _snwscanf_s(  
    const wchar_t * input,  
    size_t length,  
-   const wchar_t * format,  
-   ...  
+   const wchar_t * format [, argument_list]
 );  
 int __cdecl _snwscanf_s_l(  
    const wchar_t * input,  
    size_t length,  
    const wchar_t * format,  
-   locale_t locale,  
-   …  
+   locale_t locale [, argument_list]
 );  
 ```  
   
@@ -130,6 +127,9 @@ int __cdecl _snwscanf_s_l(
   
  `locale`  
  사용할 로캘입니다.  
+  
+ `argument_list`  
+ 형식 문자열에 따라 할당할 선택적 인수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이러한 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생하거나 첫 번째 변환 전에 문자열의 끝에 도달할 경우 반환 값은 `EOF`입니다. 자세한 내용은 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)을 참조하세요.  
@@ -159,7 +159,7 @@ int __cdecl _snwscanf_s_l(
   
 |루틴|필수 헤더|  
 |-------------|---------------------|  
-|`_snscanf_s`, _`snscanf_s_l`|\<stdio.h>|  
+|`_snscanf_s`, `_snscanf_s_l`|\<stdio.h>|  
 |`_snwscanf_s`, `_snwscanf_s_l`|\<stdio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
@@ -198,9 +198,6 @@ int main( )
 _snscanf_s converted 2 fields: 15 and 12.000000  
 _snwscanf_s converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)

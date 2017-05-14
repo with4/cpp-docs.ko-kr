@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat`는 대상 문자열에 대한 포인터를 반환합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbsnbcat` 함수는 `src`의 처음 `count` 바이트 이하를 `dest`에 추가합니다. `dest`에서 null 문자 바로 앞에 오는 바이트가 선행 바이트인 경우 `src`의 초기 바이트가 이 선행 바이트를 덮어씁니다. 그렇지 않으면 `src`의 초기 바이트가 `dest`의 null 종결 문자를 덮어씁니다. `count` 바이트가 추가되기 전에 `src`에 null 바이트가 나타나는 경우 _`mbsnbcat`는 `src`의 모든 바이트를 null 문자까지 추가합니다. `count`가 `src`의 길이보다 크면 `src`의 길이가 `count` 대신 사용됩니다. 결과 문자열은 null 문자로 끝납니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
+ `_mbsnbcat` 함수는 `src`의 처음 `count` 바이트 이하를 `dest`에 추가합니다. `dest`에서 null 문자 바로 앞에 오는 바이트가 선행 바이트인 경우 `src`의 초기 바이트가 이 선행 바이트를 덮어씁니다. 그렇지 않으면 `src`의 초기 바이트가 `dest`의 null 종결 문자를 덮어씁니다. `src` 바이트가 추가되기 전에 `count`에 null 바이트가 나타나는 경우 _`_mbsnbcat`는 `src`의 모든 바이트를 null 바이트까지 추가합니다. `count`가 `src`의 길이보다 크면 `src`의 길이가 `count` 대신 사용됩니다. 결과 문자열은 null 문자로 끝납니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
   
  출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbcat` 버전의 함수는 이 로캘 종속 동작에 현재 로캘을 사용하고 `_mbsnbcat_l` 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

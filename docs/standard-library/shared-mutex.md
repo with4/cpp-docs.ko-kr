@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/24/2017
   
 |함수|설명|  
 |---------------|-----------------|  
-|[swap 함수](../standard-library/shared-mutex.md#function_swap)|함수 매개 변수에서 참조하는 공유 뮤텍스 개체의 콘텐츠를 교환합니다.|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|함수 매개 변수에서 참조하는 공유 뮤텍스 개체의 콘텐츠를 교환합니다.|  
   
 ## <a name="syntax"></a>구문  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  `shared_lock` 템플릿 클래스는 소유권 전송 및 시간이 지정된 잠금 지원을 공유 뮤텍스로 확장합니다. 뮤텍스의 소유권은 생성 시나 생성 후에 가져와서 다른 `shared_lock` 개체로 전송할 수 있습니다. `shared_lock` 형식의 개체는 이동할 수는 있지만 복사할 수는 없습니다.  
   
 > [!WARNING]
->  Visual Studio 2015의 C++ 표준 라이브러리 동기화 형식은 Windows 동기화 기본 형식을 따르고 더 이상 ConcRT를 사용하지 않습니다(대상 플랫폼이 Windows XP인 경우 제외). <shared_mutex>에 정의된 형식은 모든 ConcRT 형식 및 함수와 함께 사용하면 안 됩니다.  
+>  Visual Studio 2015부터, c + + 표준 라이브러리 동기화 형식은 Windows 동기화 기본 형식을 기반으로 따르고 더 이상 ConcRT를 사용 하 여 (경우 제외 대상 플랫폼이 Windows XP). <shared_mutex>에 정의된 형식은 모든 ConcRT 형식 및 함수와 함께 사용하면 안 됩니다.  
   
 ## <a name="classes"></a>클래스  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a> shared_mutex 클래스  
+###  <a name="class_shared_mutex"></a> shared_mutex 클래스  
  `shared_mutex` 클래스는 공유 소유권 의미 체계를 사용한 비재귀적 뮤텍스를 구현합니다.  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a> shared_timed_mutex 클래스  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex 클래스  
  `shared_timed_mutex` 클래스는 시간이 지정된 뮤텍스 형식의 요구 사항을 충족하는 공유 소유권 의미 체계를 사용하여 비재귀적 뮤텍스를 구현합니다.  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a> shared_lock 클래스  
+###  <a name="class_shared_lock"></a> shared_lock 클래스  
  `shared_lock` 템플릿 클래스는 범위 내 공유 뮤텍스 개체의 공유 소유권을 제어합니다. 템플릿 매개 변수는 공유 뮤텍스 형식이어야 합니다.  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>함수  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a> swap 함수  
+###  <a name="function_swap"></a>스왑
  `shared_lock` 개체를 교환합니다.  
   
 ```cpp  

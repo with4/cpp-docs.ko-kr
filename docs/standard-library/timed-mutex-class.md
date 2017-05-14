@@ -1,59 +1,174 @@
 ---
 title: "timed_mutex 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::timed_mutex"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::timed_mutex
+- mutex/std::timed_mutex::timed_mutex
+- mutex/std::timed_mutex::lock
+- mutex/std::timed_mutex::try_lock
+- mutex/std::timed_mutex::try_lock_for
+- mutex/std::timed_mutex::try_lock_until
+- mutex/std::timed_mutex::unlock
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# timed_mutex 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 40622e83235c4df32ec9afd25905ffdde2b97be7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
-Represents a *timed mutex type*.  Objects of this type are used to enforce mutual exclusion through time\-limited blocking within a program.  
+---
+# <a name="timedmutex-class"></a>timed_mutex 클래스
+*시간이 지정된 뮤텍스 형식*을 나타냅니다. 이러한 형식의 개체를 사용하면 프로그램 내에서 시간이 제한된 차단을 통해 상호 배제를 강제로 수행할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+class timed_mutex;
 ```  
-class timed_mutex;  
-```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[timed\_mutex::timed\_mutex 생성자](../Topic/timed_mutex::timed_mutex%20Constructor.md)|Constructs a `timed_mutex` object that's not locked.|  
-|[timed\_mutex::~timed\_mutex 소멸자](../Topic/timed_mutex::~timed_mutex%20Destructor.md)|Releases any resources that are used by the `timed_mutex` object.|  
+|이름|설명|  
+|----------|-----------------|  
+|[timed_mutex](#timed_mutex)|잠기지 않은 `timed_mutex` 개체를 생성합니다.|  
+|[timed_mutex::~timed_mutex 소멸자](#dtortimed_mutex_destructor)|`timed_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[timed\_mutex::lock 메서드](../Topic/timed_mutex::lock%20Method.md)|스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|  
-|[timed\_mutex::try\_lock 메서드](../Topic/timed_mutex::try_lock%20Method.md)|차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.|  
-|[timed\_mutex::try\_lock\_for 메서드](../Topic/timed_mutex::try_lock_for%20Method.md)|Attempts to obtain ownership of the `mutex` for a specified time interval.|  
-|[timed\_mutex::try\_lock\_until 메서드](../Topic/timed_mutex::try_lock_until%20Method.md)|Attempts to obtain ownership of the `mutex` until a specified time.|  
-|[timed\_mutex::unlock 메서드](../Topic/timed_mutex::unlock%20Method.md)|`mutex`의 소유권을 해제합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[lock](#lock)|스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|  
+|[try_lock](#try_lock)|차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.|  
+|[try_lock_for](#try_lock_for)|지정된 시간 간격으로 `mutex`의 소유권 가져오기를 시도합니다.|  
+|[try_lock_until](#try_lock_until)|지정된 시간까지 `mutex`의 소유권 가져오기를 시도합니다.|  
+|[unlock](#unlock)|`mutex`의 소유권을 해제합니다.|  
   
-## 요구 사항  
- **헤더:** mutex  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<뮤텍스 >  
   
  **네임스페이스:** std  
   
-## 참고 항목  
+##  <a name="lock"></a>timed_mutex:: lock
+ 스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.  
+  
+```cpp  
+void lock();
+```  
+  
+### <a name="remarks"></a>설명  
+ 호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
+  
+##  <a name="timed_mutex"></a>  timed_mutex::timed_mutex 생성자  
+ 잠기지 않은 `timed_mutex` 개체를 생성합니다.  
+  
+```cpp  
+timed_mutex();
+```  
+  
+##  <a name="dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex 소멸자  
+ `mutex` 개체에서 사용하는 리소스를 모두 해제합니다.  
+  
+```cpp  
+~timed_mutex();
+```  
+  
+### <a name="remarks"></a>설명  
+ 소멸자가 실행될 때 개체가 잠겨 있는 경우, 이 동작은 정의되지 않습니다.  
+  
+##  <a name="try_lock"></a>timed_mutex:: try_lock
+ 차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
+  
+```cpp  
+bool try_lock();
+```  
+  
+### <a name="return-value"></a>반환 값  
+ 메서드가 성공적으로 `true`의 소유권을 가져오면 `mutex`이고, 그렇지 않으면 `false`입니다.  
+  
+### <a name="remarks"></a>설명  
+ 호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
+  
+##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
+ 차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
+  
+```cpp  
+template <class Rep, class Period>
+bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Rel_time`  
+ 메서드가 `mutex`의 소유권을 가져오려고 시도하는 최대 시간을 지정하는 [chrono::duration](../standard-library/duration-class.md) 개체입니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 메서드가 성공적으로 `true`의 소유권을 가져오면 `mutex`이고, 그렇지 않으면 `false`입니다.  
+  
+### <a name="remarks"></a>설명  
+ 호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
+  
+##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
+ 차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
+  
+```cpp  
+template <class Clock, class Duration>
+bool try_lock_for(const chrono::time_point<Clock, Duration>& Abs_time);
+
+bool try_lock_until(const xtime* Abs_time);
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ `Abs_time`  
+ 임계값을 지정하는 특정 시점으로, 이 시간 경과 후에는 메서드가 더 이상 `mutex`의 소유권을 가져오려고 시도하지 않습니다.  
+  
+### <a name="return-value"></a>반환 값  
+ 메서드가 성공적으로 `true`의 소유권을 가져오면 `mutex`이고, 그렇지 않으면 `false`입니다.  
+  
+### <a name="remarks"></a>설명  
+ 호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
+  
+##  <a name="unlock"></a>timed_mutex:: unlock
+ `mutex`의 소유권을 해제합니다.  
+  
+```cpp  
+void unlock();
+```  
+  
+### <a name="remarks"></a>설명  
+ 호출 스레드가 `mutex`를 소유하지 않은 경우, 이 동작은 정의되지 않습니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>shared_ptr 클래스
@@ -105,7 +101,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   해당 리소스를 가리키는 [weak_ptr 클래스](../standard-library/weak-ptr-class.md) 개체에서 생성된 경우 또는  
   
--   해당 리소스의 소유권이 [shared_ptr::operator=](#shared_ptr__operator_eq)를 사용하여 또는 구성원 함수 [shared_ptr::reset](#shared_ptr__reset)을 호출하여 할당된 경우  
+-   해당 리소스의 소유권이 [shared_ptr::operator=](#op_eq)를 사용하여 또는 구성원 함수 [shared_ptr::reset](#reset)을 호출하여 할당된 경우  
   
  리소스를 소유하는 `shared_ptr` 개체는 제어 블록을 공유합니다. 제어 블록은 다음을 보유합니다.  
   
@@ -119,7 +115,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
  null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블록이 있고 비어 있지 않습니다. `shared_ptr` 개체가 리소스를 해제한 후에는 더 이상 해당 리소스를 소유하지 않습니다. `weak_ptr` 개체가 리소스를 해제한 후에는 더 이상 해당 리소스를 가리키지 않습니다.  
   
- 리소스를 소유하는 `shared_ptr` 개체 수가&0;이 되면 리소스의 소유권이 원래 생성된 방식에 따라 개체를 삭제하거나 개체 주소를 삭제자에 전달하여 리소스가 해제됩니다. 리소스를 소유하는 `shared_ptr` 개체 수가&0;이고 해당 리소스를 가리키는 `weak_ptr` 개체 수가&0;이면 제어 블록에 대한 사용자 지정 할당자를 사용하여(있는 경우) 제어 블록이 해제됩니다.  
+ 리소스를 소유하는 `shared_ptr` 개체 수가 0이 되면 리소스의 소유권이 원래 생성된 방식에 따라 개체를 삭제하거나 개체 주소를 삭제자에 전달하여 리소스가 해제됩니다. 리소스를 소유하는 `shared_ptr` 개체 수가 0이고 해당 리소스를 가리키는 `weak_ptr` 개체 수가 0이면 제어 블록에 대한 사용자 지정 할당자를 사용하여(있는 경우) 제어 블록이 해제됩니다.  
   
  빈 `shared_ptr` 개체는 리소스를 소유하지 않으며 제어 블록이 없습니다.  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|`shared_ptr`를 생성합니다.|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|`shared_ptr`을 삭제합니다.|  
+|[shared_ptr](#shared_ptr)|`shared_ptr`를 생성합니다.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|`shared_ptr`을 삭제합니다.|  
   
 ### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|요소의 형식입니다.|  
-|[shared_ptr::get](#shared_ptr__get)|소유하는 리소스의 주소를 가져옵니다.|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|`shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.|  
-|[shared_ptr::reset](#shared_ptr__reset)|소유하는 리소스를 대체합니다.|  
-|[shared_ptr::swap](#shared_ptr__swap)|두 `shared_ptr` 개체를 교환합니다.|  
-|[shared_ptr::unique](#shared_ptr__unique)|소유하는 리소스가 고유한지 테스트합니다.|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|리소스 소유자 수를 계산합니다.|  
+|[element_type](#element_type)|요소의 형식입니다.|  
+|[get](#get)|소유하는 리소스의 주소를 가져옵니다.|  
+|[owner_before](#owner_before)|`shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.|  
+|[reset](#reset)|소유하는 리소스를 대체합니다.|  
+|[swap](#swap)|두 `shared_ptr` 개체를 교환합니다.|  
+|[unique](#unique)|소유하는 리소스가 고유한지 테스트합니다.|  
+|[use_count](#use_count)|리소스 소유자 수를 계산합니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|소유하는 리소스가 있는지 테스트합니다.|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|지정된 값을 가져옵니다.|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|소유하는 리소스를 대체합니다.|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|지정된 값으로 포인터를 가져옵니다.|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|소유하는 리소스가 있는지 테스트합니다.|  
+|[shared_ptr::operator*](#op_star)|지정된 값을 가져옵니다.|  
+|[shared_ptr::operator=](#op_eq)|소유하는 리소스를 대체합니다.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|지정된 값으로 포인터를 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<memory>  
   
  **네임스페이스:** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a>  shared_ptr::element_type  
+##  <a name="element_type"></a>  shared_ptr::element_type  
  요소의 형식입니다.  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a>  shared_ptr::get  
+##  <a name="get"></a>  shared_ptr::get  
  소유하는 리소스의 주소를 가져옵니다.  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
  소유하는 리소스가 있는지 테스트합니다.  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a>  shared_ptr::operator*  
+##  <a name="op_star"></a>  shared_ptr::operator*  
  지정된 값을 가져옵니다.  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a>  shared_ptr::operator=  
+##  <a name="op_eq"></a>  shared_ptr::operator=  
  소유하는 리소스를 대체합니다.  
   
 ```  
@@ -353,7 +349,7 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
  복사할 자동 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가&0;으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
+ 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a>  shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
  지정된 값으로 포인터를 가져옵니다.  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a>  shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  `shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>설명  
  템플릿 구성원 함수는 `*this`가 `ordered before``ptr`이면 true를 반환합니다.  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a>  shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  소유하는 리소스를 대체합니다.  
   
 ```  
@@ -475,7 +471,7 @@ void reset(Other *ptr, D dtor, A alloc);
  복사할 할당자입니다.  
   
 ### <a name="remarks"></a>설명  
- 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가&0;으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
+ 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
   
 ### <a name="example"></a>예제  
   
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a>  shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  `shared_ptr`를 생성합니다.  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
  `shared_ptr`을 삭제합니다.  
   
 ```  
@@ -665,7 +661,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>설명  
- 소멸자는 현재 `*this`가 소유한 리소스의 참조 수를 줄입니다. 참조 수가&0;으로 감소하면 리소스가 해제됩니다.  
+ 소멸자는 현재 `*this`가 소유한 리소스의 참조 수를 줄입니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다.  
   
 ### <a name="example"></a>예제  
   
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a>  shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  두 `shared_ptr` 개체를 교환합니다.  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a>  shared_ptr::unique  
+##  <a name="unique"></a>  shared_ptr::unique  
  소유하는 리소스가 고유한지 테스트합니다.  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a>  shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  리소스 소유자 수를 계산합니다.  
   
 ```  

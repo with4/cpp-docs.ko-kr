@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
@@ -93,7 +94,7 @@ wchar_t *_wtempnam_dbg(
  `_tempnam`에서 반환하는 이름 앞에 추가되는 문자열입니다.  
   
  `blockType`  
- 메모리 블록의 요청된 형식(`_CLIENT_BLOCK` 또는 `_NORMAL_BLOCK`)입니다.  
+ 요청된 메모리 블록 형식으로 `_CLIENT_BLOCK` 또는 `_NORMAL_BLOCK`입니다.  
   
  `filename`  
  할당 작업 또는 `NULL`을 요청한 소스 파일의 이름에 대한 포인터입니다.  
@@ -108,7 +109,7 @@ wchar_t *_wtempnam_dbg(
 >  `free`(또는 `free_dbg`)는 `_tempnam_dbg` 및 `_wtempnam_dbg`가 할당한 포인터에 대해 호출할 필요가 없습니다.  
   
 ## <a name="remarks"></a>설명  
- `_tempnam_dbg` 및 `_wtempnam_dbg` 함수는 `_tempnam` 및 `_wtempnam`과 동일합니다. 단, `NULL`이 첫 번째 매개 변수로 전달된 경우 _`_DEBUG`가 정의되어 있으면 이러한 함수는 `malloc` 및 `_malloc_dbg`의 디버그 버전을 사용합니다. 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
+ `_tempnam_dbg` 및 `_wtempnam_dbg` 함수는 동일 `_tempnam` 및 `_wtempnam` 점을 제외 하 고, `_DEBUG` 는 디버그 버전의를 사용 하 여 이러한 함수를 정의 `malloc` 및 `_malloc_dbg`메모리를 할당 하는 경우, `NULL` 첫 번째 매개 변수로 전달 됩니다. 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
   
  대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`을 정의하면 `_tempnam` 및 `_wtempnam`에 대한 호출이 각각 `_tempnam_dbg` 및 `_wtempnam_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
@@ -124,10 +125,7 @@ wchar_t *_wtempnam_dbg(
 |-------------|---------------------|  
 |`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   

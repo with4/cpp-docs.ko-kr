@@ -10,9 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unique_ptr
-- std.unique_ptr
-- std::unique_ptr
 - memory/std::unique_ptr
+- memory/std::unique_ptr::deleter_type
+- memory/std::unique_ptr::element_type
+- memory/std::unique_ptr::pointer
+- memory/std::unique_ptr::get
+- memory/std::unique_ptr::get_deleter
+- memory/std::unique_ptr::release
+- memory/std::unique_ptr::reset
+- memory/std::unique_ptr::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 581766663067a026f73fc14893b52203a6c69294
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ff78ad0f8bb0d3a8dfb844a7379d6b73948d8d1a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 클래스
@@ -126,7 +133,7 @@ public:
   
  `unique_ptr`은 리소스를 고유하게 관리합니다. 각 `unique_ptr` 개체는 null 포인터를 소유 또는 저장하는 개체에 대해 포인터를 저장합니다. 리소스는 둘 이상의 `unique_ptr` 개체가 소유할 수 없으며, 특정 리소스를 소유하는 `unique_ptr` 개체가 제거되면 리소스가 해제됩니다. `unique_ptr` 개체는 이동할 수 있지만 복사할 수는 없습니다. 자세한 내용은 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.  
   
- 리소스는 특정 `deleter`에 대해 리소스가 할당된 방식을 알고 있는 `Del` 형식의 저장된 `unique_ptr` 개체를 호출하여 해제됩니다. 기본 `deleter``default_delete``<T>`는 `new`를 사용하여 ` ptr`에서 가리키는 리소스를 할당하며 `delete _``Ptr`을 호출하여 해제할 수 있다고 가정합니다. 부분 특수화 `unique_ptr<T[]>`는 `new[]`로 할당된 배열 개체를 관리하며, delete[] ` ptr`을 호출하도록 특수화된 기본 `deleter``default_delete<T[]>`를 포함합니다.  
+ 리소스는 특정 `deleter`에 대해 리소스가 할당된 방식을 알고 있는 `Del` 형식의 저장된 `unique_ptr` 개체를 호출하여 해제됩니다. 기본 `deleter``default_delete``<T>`는 `new`를 사용하여 `ptr`에서 가리키는 리소스를 할당하며 `delete _``Ptr`을 호출하여 해제할 수 있다고 가정합니다. 부분 특수화 `unique_ptr<T[]>`는 `new[]`로 할당된 배열 개체를 관리하며, delete[] `ptr`을 호출하도록 특수화된 기본 `deleter``default_delete<T[]>`를 포함합니다.  
   
  소유한 리소스에 대한 저장된 포인터, `stored_ptr`에는 `pointer`가 있습니다. 정의된 경우 `Del::pointer`이고, 정의되지 않은 경우 `T *`입니다. `deleter`가 상태 비저장일 경우 저장된 `stored_deleter` 개체 `deleter`는 개체에서 공간을 차지하지 않습니다. `Del`는 참조 형식이 될 수 있습니다.  
   
@@ -136,7 +143,7 @@ public:
   
 |||  
 |-|-|  
-|[unique_ptr::unique_ptr](#unique_ptr__unique_ptr)|`unique_ptr`의&8;가지 생성자가 있습니다.|  
+|[unique_ptr](#unique_ptr)|`unique_ptr`의 8가지 생성자가 있습니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -150,11 +157,11 @@ public:
   
 |||  
 |-|-|  
-|[unique_ptr::get](#unique_ptr__get)|`stored_ptr`를 반환합니다.|  
-|[unique_ptr::get_deleter](#unique_ptr__get_deleter)|`stored_deleter`에 대한 참조를 반환합니다.|  
-|[unique_ptr::release](#unique_ptr__release)|`pointer()`에 `stored_ptr`를 반환하고 이전 내용을 반환합니다.|  
-|[unique_ptr::reset](#unique_ptr__reset)|현재 소유한 리소스를 해제하고 새 리소스를 허용합니다.|  
-|[unique_ptr::swap](#unique_ptr__swap)|리소스를 교환하고 `deleter`를 제공된 `unique_ptr`로 교환합니다.|  
+|[get](#get)|`stored_ptr`를 반환합니다.|  
+|[get_deleter](#get_deleter)|`stored_deleter`에 대한 참조를 반환합니다.|  
+|[release](#release)|`pointer()`에 `stored_ptr`를 반환하고 이전 내용을 반환합니다.|  
+|[reset](#reset)|현재 소유한 리소스를 해제하고 새 리소스를 허용합니다.|  
+|[swap](#swap)|리소스를 교환하고 `deleter`를 제공된 `unique_ptr`로 교환합니다.|  
   
 ### <a name="operators"></a>연산자  
   
@@ -170,7 +177,7 @@ public:
   
  **네임스페이스:** std  
   
-##  <a name="a-namedeletertypea--deletertype"></a><a name="deleter_type"></a>  deleter_type  
+##  <a name="deleter_type"></a>  deleter_type  
  이 형식은 템플릿 매개 변수 `Del`의 동의어입니다.  
   
 ```  
@@ -180,7 +187,7 @@ typedef Del deleter_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Del`의 동의어입니다.  
   
-##  <a name="a-nameelementtypea--elementtype"></a><a name="element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.  
   
 ```  
@@ -190,7 +197,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.  
   
-##  <a name="a-nameuniqueptrgeta--uniqueptrget"></a><a name="unique_ptr__get"></a>  unique_ptr::get  
+##  <a name="get"></a>  unique_ptr::get  
  `stored_ptr`를 반환합니다.  
   
 ```  
@@ -200,7 +207,7 @@ pointer get() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 `stored_ptr`를 반환합니다.  
   
-##  <a name="a-nameuniqueptrgetdeletera--uniqueptrgetdeleter"></a><a name="unique_ptr__get_deleter"></a>  unique_ptr::get_deleter  
+##  <a name="get_deleter"></a>  unique_ptr::get_deleter  
  `stored_deleter`에 대한 참조를 반환합니다.  
   
 ```  
@@ -212,7 +219,7 @@ const Del& get_deleter() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 `stored_deleter`에 대한 참조를 반환합니다.  
   
-##  <a name="a-nameuniqueptroperatoreqa--uniqueptr-operator"></a><a name="unique_ptr_operator_eq"></a>  unique_ptr operator=  
+##  <a name="unique_ptr_operator_eq"></a>  unique_ptr operator=  
  제공된 `unique_ptr`의 주소를 현재 항목에 할당합니다.  
   
 ```  
@@ -226,9 +233,9 @@ unique_ptr& operator=(pointer-type);
  현재 `unique_ptr`의 값을 할당하는 데 사용된 `unique_ptr` 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 `reset(`` right``.release())`를 호출하고 ` right``.stored_deleter`를 `stored_deleter`로 이동한 다음 `*this`를 반환합니다.  
+ 구성원 함수는 `reset(``right``.release())`를 호출하고 `right``.stored_deleter`를 `stored_deleter`로 이동한 다음 `*this`를 반환합니다.  
   
-##  <a name="a-namepointera--pointer"></a><a name="pointer"></a>  pointer  
+##  <a name="pointer"></a>  pointer  
  `Del::pointer`의 동의어(정의된 경우)이며 그렇지 않은 경우 `Type *`.  
   
 ```  
@@ -238,7 +245,7 @@ typedef T1 pointer;
 ### <a name="remarks"></a>설명  
  형식은 `Del::pointer`의 동의어(정의된 경우)이며 그렇지 않은 경우 `Type *`입니다.  
   
-##  <a name="a-nameuniqueptrreleasea--uniqueptrrelease"></a><a name="unique_ptr__release"></a>  unique_ptr::release  
+##  <a name="release"></a>  unique_ptr::release  
  호출자에 대해 저장된 포인터가 반환되면 소유권을 해제하고 저장된 포인터 값을 `nullptr`로 설정합니다.  
   
 ```  
@@ -298,7 +305,7 @@ Deleting Sample(3)
   
 ```  
   
-##  <a name="a-nameuniqueptrreseta--uniqueptrreset"></a><a name="unique_ptr__reset"></a>  unique_ptr::reset  
+##  <a name="reset"></a>  unique_ptr::reset  
  포인터 매개 변수의 소유권을 가져온 후 원래 저장된 포인터를 삭제합니다. 새 포인터가 원래 저장된 포인터와 동일한 경우 `reset`은 포인터를 삭제하고 저장된 포인터를 `nullptr`로 설정합니다.  
   
 ```  
@@ -313,11 +320,11 @@ void reset(nullptr_t ptr);
 |`ptr`|소유권을 가져올 리소스에 대한 포인터입니다.|  
   
 ### <a name="remarks"></a>설명  
- `reset`을 사용하여 `unique_ptr`이 소유하는 저장된 [pointer](#pointer)를 `ptr`로 변경한 다음 원래 저장된 포인터를 삭제합니다. `unique_ptr`이 비어 있지 않으면 `reset`은 원래 저장된 포인터에서 [get_deleter](#unique_ptr__get_deleter)가 반환하는 deleter 함수를 호출합니다.  
+ `reset`을 사용하여 `unique_ptr`이 소유하는 저장된 [pointer](#pointer)를 `ptr`로 변경한 다음 원래 저장된 포인터를 삭제합니다. `unique_ptr`이 비어 있지 않으면 `reset`은 원래 저장된 포인터에서 [get_deleter](#get_deleter)가 반환하는 deleter 함수를 호출합니다.  
   
  `reset`은 먼저 새 포인터 `ptr`을 저장한 다음 원래 저장된 포인터를 삭제하므로 원래 저장된 포인터와 같은 경우 `reset`에서 `ptr`을 즉시 삭제할 수 있습니다.  
   
-##  <a name="a-nameuniqueptrswapa--uniqueptrswap"></a><a name="unique_ptr__swap"></a>  unique_ptr::swap  
+##  <a name="swap"></a>  unique_ptr::swap  
  두 `unique_ptr` 개체 간에 포인터를 교환합니다.  
   
 ```  
@@ -325,14 +332,14 @@ void swap(unique_ptr& right);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  포인터를 교환하는 데 사용되는 `unique_ptr`입니다.  
   
 ### <a name="remarks"></a>설명  
  멤버 함수는 `stored_ptr`을 `right.stored_ptr`로 교환하고 `stored_deleter`를 `right.stored_deleter`로 교환합니다.  
   
-##  <a name="a-nameuniqueptruniqueptra--uniqueptruniqueptr"></a><a name="unique_ptr__unique_ptr"></a>  unique_ptr::unique_ptr  
- `unique_ptr`의&8;가지 생성자가 있습니다.  
+##  <a name="unique_ptr"></a>  unique_ptr::unique_ptr  
+ `unique_ptr`의 8가지 생성자가 있습니다.  
   
 ```  
 unique_ptr();
@@ -357,16 +364,16 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` ptr`|`unique_ptr.`에 할당할 리소스에 대한 포인터입니다.|  
+|`ptr`|`unique_ptr.`에 할당할 리소스에 대한 포인터입니다.|  
 |`_Deleter`|`unique_ptr`에 할당할 `deleter`입니다.|  
-|` right`|`unique_ptr` 필드가 새로 생성된 `unique_ptr`에 이동 할당되는 `unique_ptr`에 대한 `rvalue reference`입니다.|  
+|`right`|`unique_ptr` 필드가 새로 생성된 `unique_ptr`에 이동 할당되는 `unique_ptr`에 대한 `rvalue reference`입니다.|  
   
 ### <a name="remarks"></a>설명  
  처음 두 생성자가 리소스를 관리하지 않는 개체를 생성합니다. 세 번째 생성자는 `ptr`을 `stored_ptr`에 저장합니다. 네 번째 생성자는 `ptr`을 `stored_ptr`에 저장하고 `deleter`을 `stored_deleter`에 저장합니다.  
   
  다섯 번째 생성자는 `ptr`을 `stored_ptr`에 저장하고 `deleter`을 `stored_deleter`로 이동합니다. 여섯 번째와 일곱 번째 생성자는 `right.reset()`을 `stored_ptr`에 저장하고 `right.get_deleter()`을 `stored_deleter`로 이동합니다.  
   
-##  <a name="a-nameuniqueptrdtoruniqueptra--uniqueptr-uniqueptr"></a><a name="unique_ptr__dtorunique_ptr"></a>  unique_ptr ~unique_ptr  
+##  <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr  
  `unique_ptr`에 대한 소멸자는 `unique_ptr` 개체를 삭제합니다.  
   
 ```  

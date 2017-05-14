@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  `FILE` 구조체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이러한 각 함수는 정상적으로 실행되면 문자 인수 `c`*를 반환합니다.* `c`를 다시 푸시할 수 없거나 읽은 문자가 없는 경우에는 입력 스트림이 변경되지 않으며 `_ungetc_nolock`는 `EOF`를 반환하고 `_ungetwc_nolock`는 `WEOF`를 반환합니다. `stream`이 `NULL`이면 `EOF` 또는 `WEOF`가 반환되고 `errno`가 `EINVAL`로 설정됩니다.  
+ 성공 하면 이러한 각 함수 반환 문자 인수 `c`합니다. `c`를 다시 푸시할 수 없거나 읽은 문자가 없는 경우에는 입력 스트림이 변경되지 않으며 `_ungetc_nolock`는 `EOF`를 반환하고 `_ungetwc_nolock`는 `WEOF`를 반환합니다. `stream`이 `NULL`이면 `EOF` 또는 `WEOF`가 반환되고 `errno`가 `EINVAL`로 설정됩니다.  
   
  이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
@@ -109,10 +110,7 @@ wint_t _ungetwc_nolock(
 |`_ungetc_nolock`|\<stdio.h>|  
 |`_ungetwc_nolock`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [스트림 I/O](../../c-runtime-library/stream-i-o.md)   

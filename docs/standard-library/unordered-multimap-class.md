@@ -10,96 +10,93 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_multimap
-- std::unordered_multimap
 - unordered_map/std::unordered_multimap
-- std::unordered_multimap::allocator_type
 - unordered_map/std::unordered_multimap::allocator_type
-- std::unordered_multimap::const_iterator
 - unordered_map/std::unordered_multimap::const_iterator
-- std::unordered_multimap::const_local_iterator
 - unordered_map/std::unordered_multimap::const_local_iterator
-- std::unordered_multimap::const_pointer
 - unordered_map/std::unordered_multimap::const_pointer
-- std::unordered_multimap::const_reference
 - unordered_map/std::unordered_multimap::const_reference
-- std::unordered_multimap::difference_type
 - unordered_map/std::unordered_multimap::difference_type
-- std::unordered_multimap::hasher
 - unordered_map/std::unordered_multimap::hasher
-- std::unordered_multimap::iterator
 - unordered_map/std::unordered_multimap::iterator
-- std::unordered_multimap::key_equal
 - unordered_map/std::unordered_multimap::key_equal
-- std::unordered_multimap::key_type
 - unordered_map/std::unordered_multimap::key_type
-- std::unordered_multimap::local_iterator
 - unordered_map/std::unordered_multimap::local_iterator
-- std::unordered_multimap::mapped_type
 - unordered_map/std::unordered_multimap::mapped_type
-- std::unordered_multimap::pointer
 - unordered_map/std::unordered_multimap::pointer
-- std::unordered_multimap::reference
 - unordered_map/std::unordered_multimap::reference
-- std::unordered_multimap::size_type
 - unordered_map/std::unordered_multimap::size_type
-- std::unordered_multimap::value_type
 - unordered_map/std::unordered_multimap::value_type
-- std::unordered_multimap::begin
 - unordered_map/std::unordered_multimap::begin
-- std::unordered_multimap::bucket
 - unordered_map/std::unordered_multimap::bucket
-- std::unordered_multimap::bucket_count
 - unordered_map/std::unordered_multimap::bucket_count
-- std::unordered_multimap::bucket_size
 - unordered_map/std::unordered_multimap::bucket_size
-- std::unordered_multimap::cbegin
 - unordered_map/std::unordered_multimap::cbegin
-- std::unordered_multimap::cend
 - unordered_map/std::unordered_multimap::cend
-- std::unordered_multimap::clear
 - unordered_map/std::unordered_multimap::clear
-- std::unordered_multimap::count
 - unordered_map/std::unordered_multimap::count
-- std::unordered_multimap::emplace
 - unordered_map/std::unordered_multimap::emplace
-- std::unordered_multimap::emplace_hint
 - unordered_map/std::unordered_multimap::emplace_hint
-- std::unordered_multimap::empty
 - unordered_map/std::unordered_multimap::empty
-- std::unordered_multimap::end
 - unordered_map/std::unordered_multimap::end
-- std::unordered_multimap::equal_range
 - unordered_map/std::unordered_multimap::equal_range
-- std::unordered_multimap::erase
 - unordered_map/std::unordered_multimap::erase
-- std::unordered_multimap::find
 - unordered_map/std::unordered_multimap::find
-- std::unordered_multimap::get_allocator
 - unordered_map/std::unordered_multimap::get_allocator
-- std::unordered_multimap::hash_function
-- unordered_map/std::unordered_multimap::hash_function
-- std::unordered_multimap::insert
+- unordered_map/std::unordered_multimap::hash
 - unordered_map/std::unordered_multimap::insert
-- std::unordered_multimap::key_eq
 - unordered_map/std::unordered_multimap::key_eq
-- std::unordered_multimap::load_factor
 - unordered_map/std::unordered_multimap::load_factor
-- std::unordered_multimap::max_bucket_count
 - unordered_map/std::unordered_multimap::max_bucket_count
-- std::unordered_multimap::max_load_factor
 - unordered_map/std::unordered_multimap::max_load_factor
-- std::unordered_multimap::max_size
 - unordered_map/std::unordered_multimap::max_size
-- std::unordered_multimap::rehash
 - unordered_map/std::unordered_multimap::rehash
-- std::unordered_multimap::size
 - unordered_map/std::unordered_multimap::size
-- std::unordered_multimap::swap
 - unordered_map/std::unordered_multimap::swap
-- std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::unordered_multimap
-- std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::operator=
+- unordered_map/std::unordered_multimap::allocator_type
+- unordered_map/std::unordered_multimap::const_iterator
+- unordered_map/std::unordered_multimap::const_local_iterator
+- unordered_map/std::unordered_multimap::const_pointer
+- unordered_map/std::unordered_multimap::const_reference
+- unordered_map/std::unordered_multimap::difference_type
+- unordered_map/std::unordered_multimap::hasher
+- unordered_map/std::unordered_multimap::iterator
+- unordered_map/std::unordered_multimap::key_equal
+- unordered_map/std::unordered_multimap::key_type
+- unordered_map/std::unordered_multimap::local_iterator
+- unordered_map/std::unordered_multimap::mapped_type
+- unordered_map/std::unordered_multimap::pointer
+- unordered_map/std::unordered_multimap::reference
+- unordered_map/std::unordered_multimap::size_type
+- unordered_map/std::unordered_multimap::value_type
+- unordered_map/std::unordered_multimap::begin
+- unordered_map/std::unordered_multimap::bucket
+- unordered_map/std::unordered_multimap::bucket_count
+- unordered_map/std::unordered_multimap::bucket_size
+- unordered_map/std::unordered_multimap::cbegin
+- unordered_map/std::unordered_multimap::cend
+- unordered_map/std::unordered_multimap::clear
+- unordered_map/std::unordered_multimap::count
+- unordered_map/std::unordered_multimap::emplace
+- unordered_map/std::unordered_multimap::emplace_hint
+- unordered_map/std::unordered_multimap::empty
+- unordered_map/std::unordered_multimap::end
+- unordered_map/std::unordered_multimap::equal_range
+- unordered_map/std::unordered_multimap::erase
+- unordered_map/std::unordered_multimap::find
+- unordered_map/std::unordered_multimap::get_allocator
+- unordered_map/std::unordered_multimap::hash_function
+- unordered_map/std::unordered_multimap::insert
+- unordered_map/std::unordered_multimap::key_eq
+- unordered_map/std::unordered_multimap::load_factor
+- unordered_map/std::unordered_multimap::max_bucket_count
+- unordered_map/std::unordered_multimap::max_load_factor
+- unordered_map/std::unordered_multimap::max_size
+- unordered_map/std::unordered_multimap::rehash
+- unordered_map/std::unordered_multimap::size
+- unordered_map/std::unordered_multimap::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,10 +120,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8c27a26f0e65066405694652be9d46937642043f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f268454a196fe0eca5e7c3972db74342bbb96904
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 클래스
@@ -159,74 +157,74 @@ class unordered_multimap;
 |||  
 |-|-|  
 |형식 정의|설명|  
-|[unordered_multimap::allocator_type](#unordered_multimap__allocator_type)|저장소 관리를 위한 할당자의 형식입니다.|  
-|[unordered_multimap::const_iterator](#unordered_multimap__const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
-|[unordered_multimap::const_local_iterator](#unordered_multimap__const_local_iterator)|제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.|  
-|[unordered_multimap::const_pointer](#unordered_multimap__const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
-|[unordered_multimap::const_reference](#unordered_multimap__const_reference)|요소에 대한 상수 참조의 형식입니다.|  
-|[unordered_multimap::difference_type](#unordered_multimap__difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
-|[unordered_multimap::hasher](#unordered_multimap__hasher)|해시 함수의 형식입니다.|  
-|[unordered_multimap::iterator](#unordered_multimap__iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
-|[unordered_multimap::key_equal](#unordered_multimap__key_equal)|비교 함수의 형식입니다.|  
-|[unordered_multimap::key_type](#unordered_multimap__key_type)|정렬 키의 형식입니다.|  
-|[unordered_multimap::local_iterator](#unordered_multimap__local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|  
-|[unordered_multimap::mapped_type](#unordered_multimap__mapped_type)|각 키와 연결된 매핑된 값의 형식입니다.|  
-|[unordered_multimap::pointer](#unordered_multimap__pointer)|요소에 대한 포인터의 형식입니다.|  
-|[unordered_multimap::reference](#unordered_multimap__reference)|요소에 대한 참조의 형식입니다.|  
-|[unordered_multimap::size_type](#unordered_multimap__size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
-|[unordered_multimap::value_type](#unordered_multimap__value_type)|요소의 형식입니다.|  
+|[allocator_type](#allocator_type)|저장소 관리를 위한 할당자의 형식입니다.|  
+|[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
+|[const_local_iterator](#const_local_iterator)|제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.|  
+|[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
+|[const_reference](#const_reference)|요소에 대한 상수 참조의 형식입니다.|  
+|[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
+|[hasher](#hasher)|해시 함수의 형식입니다.|  
+|[iterator](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
+|[key_equal](#key_equal)|비교 함수의 형식입니다.|  
+|[key_type](#key_type)|정렬 키의 형식입니다.|  
+|[local_iterator](#local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|  
+|[mapped_type](#mapped_type)|각 키와 연결된 매핑된 값의 형식입니다.|  
+|[pointer](#pointer)|요소에 대한 포인터의 형식입니다.|  
+|[reference](#reference)|요소에 대한 참조의 형식입니다.|  
+|[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
+|[value_type](#value_type)|요소의 형식입니다.|  
   
 |||  
 |-|-|  
 |멤버 함수|설명|  
-|[unordered_multimap::begin](#unordered_multimap__begin)|제어되는 시퀀스의 시작을 지정합니다.|  
-|[unordered_multimap::bucket](#unordered_multimap__bucket)|키 값에 대한 버킷 개수를 가져옵니다.|  
-|[unordered_multimap::bucket_count](#unordered_multimap__bucket_count)|버킷 개수를 가져옵니다.|  
-|[unordered_multimap::bucket_size](#unordered_multimap__bucket_size)|버킷의 크기를 가져옵니다.|  
-|[unordered_multimap::cbegin](#unordered_multimap__cbegin)|제어되는 시퀀스의 시작을 지정합니다.|  
-|[unordered_multimap::cend](#unordered_multimap__cend)|제어되는 시퀀스의 끝을 지정합니다.|  
-|[unordered_multimap::clear](#unordered_multimap__clear)|모든 요소를 제거합니다.|  
-|[unordered_multimap::count](#unordered_multimap__count)|지정한 키와 일치하는 요소의 수를 찾습니다.|  
-|[unordered_multimap::emplace](#unordered_multimap__emplace)|생성된 요소를 추가합니다.|  
-|[unordered_multimap::emplace_hint](#unordered_multimap__emplace_hint)|힌트와 함께 생성된 요소를 추가합니다.|  
-|[unordered_multimap::empty](#unordered_multimap__empty)|요소가 있는지 여부를 테스트합니다.|  
-|[unordered_multimap::end](#unordered_multimap__end)|제어되는 시퀀스의 끝을 지정합니다.|  
-|[unordered_multimap::equal_range](#unordered_multimap__equal_range)|지정된 키와 일치하는 범위를 찾습니다.|  
-|[unordered_multimap::erase](#unordered_multimap__erase)|지정된 위치에 있는 요소를 제거합니다.|  
-|[unordered_multimap::find](#unordered_multimap__find)|지정된 키와 일치하는 요소를 찾습니다.|  
-|[unordered_multimap::get_allocator](#unordered_multimap__get_allocator)|저장된 할당자 개체를 가져옵니다.|  
-|[unordered_multimap::hash_function](#unordered_multimap__hash_function)|저장된 해시 함수 개체를 가져옵니다.|  
-|[unordered_multimap::insert](#unordered_multimap__insert)|요소를 추가합니다.|  
-|[unordered_multimap::key_eq](#unordered_multimap__key_eq)|저장된 비교 함수 개체를 가져옵니다.|  
-|[unordered_multimap::load_factor](#unordered_multimap__load_factor)|버킷당 평균 요소 수를 계산합니다.|  
-|[unordered_multimap::max_bucket_count](#unordered_multimap__max_bucket_count)|최대 버킷 개수를 가져옵니다.|  
-|[unordered_multimap::max_load_factor](#unordered_multimap__max_load_factor)|버킷당 최대 요소 수를 가져오거나 설정합니다.|  
-|[unordered_multimap::max_size](#unordered_multimap__max_size)|제어되는 시퀀스의 최대 크기를 가져옵니다.|  
-|[unordered_multimap::rehash](#unordered_multimap__rehash)|해시 테이블을 다시 빌드합니다.|  
-|[unordered_multimap::size](#unordered_multimap__size)|요소 수를 계산합니다.|  
-|[unordered_multimap::swap](#unordered_multimap__swap)|두 컨테이너의 내용을 바꿉니다.|  
-|[unordered_multimap::unordered_multimap](#unordered_multimap__unordered_multimap)|컨테이너 개체를 만듭니다.|  
+|[begin](#begin)|제어되는 시퀀스의 시작을 지정합니다.|  
+|[버킷](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|  
+|[bucket_count](#bucket_count)|버킷 개수를 가져옵니다.|  
+|[bucket_size](#bucket_size)|버킷의 크기를 가져옵니다.|  
+|[cbegin](#cbegin)|제어되는 시퀀스의 시작을 지정합니다.|  
+|[cend](#cend)|제어되는 시퀀스의 끝을 지정합니다.|  
+|[clear](#clear)|모든 요소를 제거합니다.|  
+|[count](#count)|지정한 키와 일치하는 요소의 수를 찾습니다.|  
+|[emplace](#emplace)|생성된 요소를 추가합니다.|  
+|[emplace_hint](#emplace_hint)|힌트와 함께 생성된 요소를 추가합니다.|  
+|[empty](#empty)|요소가 있는지 여부를 테스트합니다.|  
+|[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|  
+|[equal_range](#equal_range)|지정된 키와 일치하는 범위를 찾습니다.|  
+|[erase](#erase)|지정된 위치에 있는 요소를 제거합니다.|  
+|[find](#find)|지정된 키와 일치하는 요소를 찾습니다.|  
+|[get_allocator](#get_allocator)|저장된 할당자 개체를 가져옵니다.|  
+|[hash_function](#hash)|저장된 해시 함수 개체를 가져옵니다.|  
+|[insert](#insert)|요소를 추가합니다.|  
+|[key_eq](#key_eq)|저장된 비교 함수 개체를 가져옵니다.|  
+|[load_factor](#load_factor)|버킷당 평균 요소 수를 계산합니다.|  
+|[max_bucket_count](#max_bucket_count)|최대 버킷 개수를 가져옵니다.|  
+|[max_load_factor](#max_load_factor)|버킷당 최대 요소 수를 가져오거나 설정합니다.|  
+|[max_size](#max_size)|제어되는 시퀀스의 최대 크기를 가져옵니다.|  
+|[rehash](#rehash)|해시 테이블을 다시 빌드합니다.|  
+|[size](#size)|요소 수를 계산합니다.|  
+|[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|  
+|[unordered_multimap](#unordered_multimap)|컨테이너 개체를 만듭니다.|  
   
 |||  
 |-|-|  
 |연산자|설명|  
-|[unordered_multimap::operator=](#unordered_multimap__operator_eq)|해시 테이블을 복사합니다.|  
+|[unordered_multimap::operator=](#op_eq)|해시 테이블을 복사합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체는 저장된 두 개체, [unordered_multimap::key_equal](#unordered_multimap__key_equal) 형식의 비교 함수 개체, [unordered_multimap::hasher](#unordered_multimap__hasher) 형식의 해시 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 첫 번째 저장된 개체는 구성원 함수 [unordered_multimap::key_eq](#unordered_multimap__key_eq)`()`를 호출하여 액세스하며, 두 번째 저장된 개체는 구성원 함수 [unordered_multimap::hash_function](#unordered_multimap__hash_function)`()`을 호출하여 액세스합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 템플릿 클래스 [unordered_map 클래스](../standard-library/unordered-map-class.md)와 달리, 템플릿 클래스 `unordered_multimap`의 개체는 `key_eq()(X, Y)`가 제어된 시퀀스의 두 요소에 대해 항상 false라는 점에 대해 보장하지 않습니다. (키는 고유할 필요가 없습니다.)  
+ 개체는 저장된 두 개체, [unordered_multimap::key_equal](#key_equal) 형식의 비교 함수 개체, [unordered_multimap::hasher](#hasher) 형식의 해시 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 첫 번째 저장된 개체는 구성원 함수 [unordered_multimap::key_eq](#key_eq)`()`를 호출하여 액세스하며, 두 번째 저장된 개체는 구성원 함수 [unordered_multimap::hash_function](#hash)`()`을 호출하여 액세스합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 템플릿 클래스 [unordered_map 클래스](../standard-library/unordered-map-class.md)와 달리, 템플릿 클래스 `unordered_multimap`의 개체는 `key_eq()(X, Y)`가 제어된 시퀀스의 두 요소에 대해 항상 false라는 점에 대해 보장하지 않습니다. (키는 고유할 필요가 없습니다.)  
   
- 개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입할 때 [unordered_multimap::load_factor](#unordered_multimap__load_factor)`()`에서 최대 로드 비율이 초과될 경우 컨테이너는 버킷 수를 증가시키고 필요에 따라 해시 테이블을 다시 빌드합니다.  
+ 개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입할 때 [unordered_multimap::load_factor](#load_factor)`()`에서 최대 로드 비율이 초과될 경우 컨테이너는 버킷 수를 증가시키고 필요에 따라 해시 테이블을 다시 빌드합니다.  
   
  제어된 시퀀스의 실제 요소 순서는 해시 함수, 비교 함수, 삽입 순서, 최대 로드 비율, 현재 버킷 수에 따라 달라집니다. 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 하지만 동일하게 정렬된 요소의 하위 집합은 제어된 시퀀스에서 항상 인접해 있습니다.  
   
- 개체는 [unordered_multimap::allocator_type](#unordered_multimap__allocator_type) 형식의 저장된 할당자 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당하고 해제합니다. 그러한 할당자 개체는 템플릿 클래스 `allocator`의 개체와 같은 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.  
+ 개체는 [unordered_multimap::allocator_type](#allocator_type) 형식의 저장된 할당자 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당하고 해제합니다. 그러한 할당자 개체는 템플릿 클래스 `allocator`의 개체와 같은 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<unordered_map>  
   
  **네임스페이스:** std  
   
-##  <a name="a-nameunorderedmultimapallocatortypea--unorderedmultimapallocatortype"></a><a name="unordered_multimap__allocator_type"></a>  unordered_multimap::allocator_type  
+##  <a name="allocator_type"></a>  unordered_multimap::allocator_type  
  저장소 관리를 위한 할당자의 형식입니다.  
   
 ```  
@@ -263,7 +261,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultimapbegina--unorderedmultimapbegin"></a><a name="unordered_multimap__begin"></a>  unordered_multimap::begin  
+##  <a name="begin"></a>  unordered_multimap::begin  
  제어되는 시퀀스 또는 버킷의 시작을 지정합니다.  
   
 ```  
@@ -332,7 +330,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketa--unorderedmultimapbucket"></a><a name="unordered_multimap__bucket"></a>  unordered_multimap::bucket  
+##  <a name="bucket"></a>  unordered_multimap::bucket  
  키 값에 대한 버킷 개수를 가져옵니다.  
   
 ```  
@@ -386,7 +384,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketcounta--unorderedmultimapbucketcount"></a><a name="unordered_multimap__bucket_count"></a>  unordered_multimap::bucket_count  
+##  <a name="bucket_count"></a>  unordered_multimap::bucket_count  
  버킷 개수를 가져옵니다.  
   
 ```  
@@ -472,7 +470,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketsizea--unorderedmultimapbucketsize"></a><a name="unordered_multimap__bucket_size"></a>  unordered_multimap::bucket_size  
+##  <a name="bucket_size"></a>  unordered_multimap::bucket_size  
  버킷의 크기를 가져옵니다.  
   
 ```  
@@ -526,7 +524,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultimapcbegina--unorderedmultimapcbegin"></a><a name="unordered_multimap__cbegin"></a>  unordered_multimap::cbegin  
+##  <a name="cbegin"></a>  unordered_multimap::cbegin  
  범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -549,7 +547,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmultimapcenda--unorderedmultimapcend"></a><a name="unordered_multimap__cend"></a>  unordered_multimap::cend  
+##  <a name="cend"></a>  unordered_multimap::cend  
  범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -574,7 +572,7 @@ auto i2 = Container.cend();
   
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-##  <a name="a-nameunorderedmultimapcleara--unorderedmultimapclear"></a><a name="unordered_multimap__clear"></a>  unordered_multimap::clear  
+##  <a name="clear"></a>  unordered_multimap::clear  
  모든 요소를 제거합니다.  
   
 ```  
@@ -582,7 +580,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multimap::erase](#unordered_multimap__erase)`(` [unordered_multimap::begin](#unordered_multimap__begin)`(),` [unordered_multimap::end](#unordered_multimap__end)`())`를 호출합니다.  
+ 구성원 함수는 [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`를 호출합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -640,7 +638,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstiteratora--unorderedmultimapconstiterator"></a><a name="unordered_multimap__const_iterator"></a>  unordered_multimap::const_iterator  
+##  <a name="const_iterator"></a>  unordered_multimap::const_iterator  
  제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
   
 ```  
@@ -682,7 +680,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstlocaliteratora--unorderedmultimapconstlocaliterator"></a><a name="unordered_multimap__const_local_iterator"></a>  unordered_multimap::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_multimap::const_local_iterator  
  제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.  
   
 ```  
@@ -729,7 +727,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstpointera--unorderedmultimapconstpointer"></a><a name="unordered_multimap__const_pointer"></a>  unordered_multimap::const_pointer  
+##  <a name="const_pointer"></a>  unordered_multimap::const_pointer  
  요소에 대한 상수 포인터의 형식입니다.  
   
 ```  
@@ -774,7 +772,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstreferencea--unorderedmultimapconstreference"></a><a name="unordered_multimap__const_reference"></a>  unordered_multimap::const_reference  
+##  <a name="const_reference"></a>  unordered_multimap::const_reference  
  요소에 대한 상수 참조의 형식입니다.  
   
 ```  
@@ -819,7 +817,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapcounta--unorderedmultimapcount"></a><a name="unordered_multimap__count"></a>  unordered_multimap::count  
+##  <a name="count"></a>  unordered_multimap::count  
  지정한 키와 일치하는 요소의 수를 찾습니다.  
   
 ```  
@@ -831,7 +829,7 @@ size_type count(const Key& keyval) const;
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multimap::equal_range](#unordered_multimap__equal_range)`(keyval)`로 구분된 범위의 요소 수를 반환합니다.  
+ 구성원 함수는 [unordered_multimap::equal_range](#equal_range)`(keyval)`로 구분된 범위의 요소 수를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -872,7 +870,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmultimapdifferencetypea--unorderedmultimapdifferencetype"></a><a name="unordered_multimap__difference_type"></a>  unordered_multimap::difference_type  
+##  <a name="difference_type"></a>  unordered_multimap::difference_type  
  두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
 ```  
@@ -930,7 +928,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmultimapemplacea--unorderedmultimapemplace"></a><a name="unordered_multimap__emplace"></a>  unordered_multimap::emplace  
+##  <a name="emplace"></a>  unordered_multimap::emplace  
  배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -951,13 +949,13 @@ iterator emplace(Args&&... args);
 ### <a name="remarks"></a>설명  
  이 함수는 컨테이너 요소에 대한 참조는 무효화하지 않지만 컨테이너에 대한 모든 반복기는 무효화할 수 있습니다.  
   
- 요소의 [value_type](../standard-library/map-class.md#map__value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+ 요소의 [value_type](../standard-library/map-class.md#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
   
  삽입 중에 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다.  
   
- 코드 예제를 보려면 [multimap::emplace](../standard-library/multimap-class.md#multimap__emplace)를 참조하세요.  
+ 코드 예제를 보려면 [multimap::emplace](../standard-library/multimap-class.md#emplace)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultimapemplacehinta--unorderedmultimapemplacehint"></a><a name="unordered_multimap__emplace_hint"></a>  unordered_multimap::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_multimap::emplace_hint  
  배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -983,11 +981,11 @@ iterator emplace_hint(
   
  삽입 중에 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다.  
   
- 요소의 [value_type](../standard-library/map-class.md#map__value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+ 요소의 [value_type](../standard-library/map-class.md#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
   
- 코드 예제를 보려면 [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint)를 참조하세요.  
+ 코드 예제를 보려면 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultimapemptya--unorderedmultimapempty"></a><a name="unordered_multimap__empty"></a>  unordered_multimap::empty  
+##  <a name="empty"></a>  unordered_multimap::empty  
  요소가 있는지 여부를 테스트합니다.  
   
 ```  
@@ -1053,7 +1051,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapenda--unorderedmultimapend"></a><a name="unordered_multimap__end"></a>  unordered_multimap::end  
+##  <a name="end"></a>  unordered_multimap::end  
  제어되는 시퀀스의 끝을 지정합니다.  
   
 ```  
@@ -1124,7 +1122,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapequalrangea--unorderedmultimapequalrange"></a><a name="unordered_multimap__equal_range"></a>  unordered_multimap::equal_range  
+##  <a name="equal_range"></a>  unordered_multimap::equal_range  
  지정된 키와 일치하는 범위를 찾습니다.  
   
 ```  
@@ -1193,7 +1191,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmultimaperasea--unorderedmultimaperase"></a><a name="unordered_multimap__erase"></a>  unordered_multimap::erase  
+##  <a name="erase"></a>  unordered_multimap::erase  
  지정된 위치에서 unordered_multimap의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.  
   
 ```  
@@ -1227,9 +1225,9 @@ size_type erase(
  세 번째 구성원 함수의 경우 unordered_multimap에서 제거된 요소의 수를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 코드 예제를 보려면 [map::erase](../standard-library/map-class.md#map__erase)를 참조하세요.  
+ 코드 예제를 보려면 [map::erase](../standard-library/map-class.md#erase)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultimapfinda--unorderedmultimapfind"></a><a name="unordered_multimap__find"></a>  unordered_multimap::find  
+##  <a name="find"></a>  unordered_multimap::find  
  지정된 키와 일치하는 요소를 찾습니다.  
   
 ```  
@@ -1241,7 +1239,7 @@ const_iterator find(const Key& keyval) const;
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multimap::equal_range](#unordered_multimap__equal_range)`(keyval).first`를 반환합니다.  
+ 구성원 함수는 [unordered_multimap::equal_range](#equal_range)`(keyval).first`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1287,7 +1285,7 @@ find('A') == false
 find('b') == true: [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmultimapgetallocatora--unorderedmultimapgetallocator"></a><a name="unordered_multimap__get_allocator"></a>  unordered_multimap::get_allocator  
+##  <a name="get_allocator"></a>  unordered_multimap::get_allocator  
  저장된 할당자 개체를 가져옵니다.  
   
 ```  
@@ -1324,7 +1322,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultimaphashfunctiona--unorderedmultimaphashfunction"></a><a name="unordered_multimap__hash_function"></a>  unordered_multimap::hash_function  
+##  <a name="hash"></a>  unordered_multimap::hash_function  
  저장된 해시 함수 개체를 가져옵니다.  
   
 ```  
@@ -1361,7 +1359,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultimaphashera--unorderedmultimaphasher"></a><a name="unordered_multimap__hasher"></a>  unordered_multimap::hasher  
+##  <a name="hasher"></a>  unordered_multimap::hasher  
  해시 함수의 형식입니다.  
   
 ```  
@@ -1398,7 +1396,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultimapinserta--unorderedmultimapinsert"></a><a name="unordered_multimap__insert"></a>  unordered_multimap::insert  
+##  <a name="insert"></a>  unordered_multimap::insert  
  unordered_multimap에 요소 또는 요소의 범위를 삽입합니다.  
   
 ```  
@@ -1447,10 +1445,10 @@ IList);
 |매개 변수|설명|  
 |`Val`|unordered_multimap에 삽입할 요소의 값입니다.|  
 |`Where`|올바른 삽입 지점 검색을 시작할 위치입니다.|  
-|`ValTy`|unordered_multimap이 [value_type](../standard-library/map-class.md#map__value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
+|`ValTy`|unordered_multimap이 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
 |`First`|복사할 첫 번째 요소의 위치입니다.|  
 |`Last`|복사할 마지막 요소 바로 다음 위치입니다.|  
-|`InputIterator`|[value_type](../standard-library/map-class.md#map__value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
+|`InputIterator`|[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
 |`IList`|요소를 복사할 원본 [initializer_list](../standard-library/initializer-list.md)입니다.|  
   
 ### <a name="return-value"></a>반환 값  
@@ -1463,17 +1461,17 @@ IList);
   
  요소를 하나만 삽입하는 중 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너의 상태가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다. 여러 요소를 삽입하는 중 예외가 throw되면 컨테이너는 지정되지 않았으나 유효한 상태로 남아 있습니다.  
   
- 컨테이너의 [value_type](../standard-library/map-class.md#map__value_type)은 컨테이너에 속한 형식 정의이고 map의 경우 `map<K, V>::value_type`은 `pair<const K, V>`입니다. 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소는 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+ 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 typedef이고 map의 경우 `map<K, V>::value_type`은 `pair<const K, V>`입니다. 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소는 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
   
  범위 멤버 함수 (5)는 `[First, Last)` 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 요소 값 시퀀스를 unordered_multimap에 삽입합니다. 따라서 `Last`는 삽입되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `m.insert(v.begin(), v.end());` 문은 `v`의 모든 요소를 `m`에 삽입합니다.  
   
  이니셜라이저 목록 구성원 함수 (6)은 [initializer_list](../standard-library/initializer-list.md)를 사용하여 요소를 unordered_multimap으로 복사합니다.  
   
- 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [unordered_multimap::emplace](#unordered_multimap__emplace) 및 [unordered_multimap::emplace_hint](#unordered_multimap__emplace_hint)를 참조하세요.  
+ 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [unordered_multimap::emplace](#emplace) 및 [unordered_multimap::emplace_hint](#emplace_hint)를 참조하세요.  
   
- 코드 예제를 보려면 [multimap::insert](../standard-library/multiset-class.md#multiset__insert)를 참조하세요.  
+ 코드 예제를 보려면 [multimap::insert](../standard-library/multiset-class.md#insert)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultimapiteratora--unorderedmultimapiterator"></a><a name="unordered_multimap__iterator"></a>  unordered_multimap::iterator  
+##  <a name="iterator"></a>  unordered_multimap::iterator  
  제어되는 시퀀스에 대한 반복기의 형식입니다.  
   
 ```  
@@ -1515,7 +1513,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeyeqa--unorderedmultimapkeyeq"></a><a name="unordered_multimap__key_eq"></a>  unordered_multimap::key_eq  
+##  <a name="key_eq"></a>  unordered_multimap::key_eq  
  저장된 비교 함수 개체를 가져옵니다.  
   
 ```  
@@ -1554,7 +1552,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeyequala--unorderedmultimapkeyequal"></a><a name="unordered_multimap__key_equal"></a>  unordered_multimap::key_equal  
+##  <a name="key_equal"></a>  unordered_multimap::key_equal  
  비교 함수의 형식입니다.  
   
 ```  
@@ -1593,7 +1591,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeytypea--unorderedmultimapkeytype"></a><a name="unordered_multimap__key_type"></a>  unordered_multimap::key_type  
+##  <a name="key_type"></a>  unordered_multimap::key_type  
  정렬 키의 형식입니다.  
   
 ```  
@@ -1647,7 +1645,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimaploadfactora--unorderedmultimaploadfactor"></a><a name="unordered_multimap__load_factor"></a>  unordered_multimap::load_factor  
+##  <a name="load_factor"></a>  unordered_multimap::load_factor  
  버킷당 평균 요소 수를 계산합니다.  
   
 ```  
@@ -1655,7 +1653,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 `(float)`[unordered_multimap::size](#unordered_multimap__size)`() / (float)`[unordered_multimap::bucket_count](#unordered_multimap__bucket_count)`()`(버킷당 평균 요소 수)를 반환합니다.  
+ 구성원 함수는 `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`(버킷당 평균 요소 수)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1714,7 +1712,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameunorderedmultimaplocaliteratora--unorderedmultimaplocaliterator"></a><a name="unordered_multimap__local_iterator"></a>  unordered_multimap::local_iterator  
+##  <a name="local_iterator"></a>  unordered_multimap::local_iterator  
  버킷 반복기의 형식입니다.  
   
 ```  
@@ -1761,7 +1759,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapmappedtypea--unorderedmultimapmappedtype"></a><a name="unordered_multimap__mapped_type"></a>  unordered_multimap::mapped_type  
+##  <a name="mapped_type"></a>  unordered_multimap::mapped_type  
  각 키와 연결된 매핑된 값의 형식입니다.  
   
 ```  
@@ -1815,7 +1813,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxbucketcounta--unorderedmultimapmaxbucketcount"></a><a name="unordered_multimap__max_bucket_count"></a>  unordered_multimap::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_multimap::max_bucket_count  
  최대 버킷 개수를 가져옵니다.  
   
 ```  
@@ -1901,7 +1899,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxloadfactora--unorderedmultimapmaxloadfactor"></a><a name="unordered_multimap__max_load_factor"></a>  unordered_multimap::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_multimap::max_load_factor  
  버킷당 최대 요소 수를 가져오거나 설정합니다.  
   
 ```  
@@ -1994,7 +1992,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxsizea--unorderedmultimapmaxsize"></a><a name="unordered_multimap__max_size"></a>  unordered_multimap::max_size  
+##  <a name="max_size"></a>  unordered_multimap::max_size  
  제어되는 시퀀스의 최대 크기를 가져옵니다.  
   
 ```  
@@ -2028,7 +2026,7 @@ int main()
 max_size() == 536870911  
 ```  
   
-##  <a name="a-nameunorderedmultimapoperatoreqa--unorderedmultimapoperator"></a><a name="unordered_multimap__operator_eq"></a>  unordered_multimap::operator=  
+##  <a name="op_eq"></a>  unordered_multimap::operator=  
  해시 테이블을 복사합니다.  
   
 ```  
@@ -2042,10 +2040,10 @@ unordered_multimap& operator=(unordered_multimap&& right);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|` right`|unordered_multimap에 복사되는 unordered_multimap입니다.|  
+|`right`|unordered_multimap에 복사되는 unordered_multimap입니다.|  
   
 ### <a name="remarks"></a>설명  
- unordered_multimap의 기존 요소를 지운 후에 `operator=`는 ` right`의 내용을 순서가 지정되지 않은 unordered_multimap으로 복사하거나 이동합니다.  
+ unordered_multimap의 기존 요소를 지운 후에 `operator=`는 `right`의 내용을 순서가 지정되지 않은 unordered_multimap으로 복사하거나 이동합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -2084,7 +2082,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmultimappointera--unorderedmultimappointer"></a><a name="unordered_multimap__pointer"></a>  unordered_multimap::pointer  
+##  <a name="pointer"></a>  unordered_multimap::pointer  
  요소에 대한 포인터의 형식입니다.  
   
 ```  
@@ -2129,7 +2127,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapreferencea--unorderedmultimapreference"></a><a name="unordered_multimap__reference"></a>  unordered_multimap::reference  
+##  <a name="reference"></a>  unordered_multimap::reference  
  요소에 대한 참조의 형식입니다.  
   
 ```  
@@ -2174,7 +2172,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimaprehasha--unorderedmultimaprehash"></a><a name="unordered_multimap__rehash"></a>  unordered_multimap::rehash  
+##  <a name="rehash"></a>  unordered_multimap::rehash  
  해시 테이블을 다시 빌드합니다.  
   
 ```  
@@ -2250,7 +2248,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmultimapsizea--unorderedmultimapsize"></a><a name="unordered_multimap__size"></a>  unordered_multimap::size  
+##  <a name="size"></a>  unordered_multimap::size  
  요소 수를 계산합니다.  
   
 ```  
@@ -2316,7 +2314,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapsizetypea--unorderedmultimapsizetype"></a><a name="unordered_multimap__size_type"></a>  unordered_multimap::size_type  
+##  <a name="size_type"></a>  unordered_multimap::size_type  
  두 요소 사이의 부호가 없는 거리의 형식입니다.  
   
 ```  
@@ -2351,7 +2349,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmultimapswapa--unorderedmultimapswap"></a><a name="unordered_multimap__swap"></a>  unordered_multimap::swap  
+##  <a name="swap"></a>  unordered_multimap::swap  
  두 컨테이너의 내용을 바꿉니다.  
   
 ```  
@@ -2363,7 +2361,7 @@ void swap(unordered_multimap& right);
  교환할 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. [unordered_multimap::get_allocator](#unordered_multimap__get_allocator)`() == right.get_allocator()`인 경우 일정 시간에 이 작업을 수행하고 `Tr` 형식의 저장된 특성 개체를 복사한 결과로만 예외를 throw하며 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
+ 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`인 경우 일정 시간에 이 작업을 수행하고 `Tr` 형식의 저장된 특성 개체를 복사한 결과로만 예외를 throw하며 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -2421,7 +2419,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapunorderedmultimapa--unorderedmultimapunorderedmultimap"></a><a name="unordered_multimap__unordered_multimap"></a>  unordered_multimap::unordered_multimap  
+##  <a name="unordered_multimap"></a>  unordered_multimap::unordered_multimap  
  컨테이너 개체를 만듭니다.  
   
 ```  
@@ -2621,7 +2619,7 @@ int main()
  [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapvaluetypea--unorderedmultimapvaluetype"></a><a name="unordered_multimap__value_type"></a>  unordered_multimap::value_type  
+##  <a name="value_type"></a>  unordered_multimap::value_type  
  요소의 형식입니다.  
   
 ```  

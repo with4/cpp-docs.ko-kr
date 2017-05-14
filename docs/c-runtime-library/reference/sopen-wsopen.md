@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c8b8418394c4ebcc5ff13d97e2b7b28929982c79
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
@@ -176,7 +177,7 @@ int _wsopen(
  파일을 텍스트(변환됨) 모드에서 엽니다. 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 및 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)을 참조하세요.  
   
  `_O_TRUNC`  
- 파일을 열고 길이가&0;이 되도록 자릅니다. 이 파일에는 쓰기 권한이 있어야 합니다. `_O_RDONLY`와 함께 지정할 수 없습니다. `_O_TRUNC`와 함께 `_O_CREAT`를 사용하면 기존 파일을 열거나 파일을 만듭니다.  
+ 파일을 열고 길이가 0이 되도록 자릅니다. 이 파일에는 쓰기 권한이 있어야 합니다. `_O_RDONLY`와 함께 지정할 수 없습니다. `_O_TRUNC`와 함께 `_O_CREAT`를 사용하면 기존 파일을 열거나 파일을 만듭니다.  
   
 > [!NOTE]
 >  
@@ -242,9 +243,6 @@ int _wsopen(
   
 ## <a name="example"></a>예제  
  [_locking](../../c-runtime-library/reference/locking.md)의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)   
