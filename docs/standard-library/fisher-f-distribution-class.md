@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - fisher_f_distribution
-- std::fisher_f_distribution
 - random/std::fisher_f_distribution
-- std::fisher_f_distribution::reset
 - random/std::fisher_f_distribution::reset
-- std::fisher_f_distribution::m
 - random/std::fisher_f_distribution::m
-- std::fisher_f_distribution::n
 - random/std::fisher_f_distribution::n
-- std::fisher_f_distribution::param
 - random/std::fisher_f_distribution::param
-- std::fisher_f_distribution::min
 - random/std::fisher_f_distribution::min
-- std::fisher_f_distribution::max
 - random/std::fisher_f_distribution::max
-- std::fisher_f_distribution::operator()
 - random/std::fisher_f_distribution::operator()
-- std::fisher_f_distribution::param_type
 - random/std::fisher_f_distribution::param_type
-- std::fisher_f_distribution::param_type::m
 - random/std::fisher_f_distribution::param_type::m
-- std::fisher_f_distribution::param_type::n
 - random/std::fisher_f_distribution::param_type::n
-- std::fisher_f_distribution::param_type::operator==
 - random/std::fisher_f_distribution::param_type::operator==
-- std::fisher_f_distribution::param_type::operator!=
 - random/std::fisher_f_distribution::param_type::operator!=
+- random/std::fisher_f_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 3a0fc233334909249f75978ba095cb3f31af90dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 98a51009b6aaccf9e7799fa4bb124ec001ccca0f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 클래스
@@ -107,8 +96,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[fisher_f_distribution::fisher_f_distribution](#fisher_f_distribution__fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher_f_distribution::param_type](#fisher_f_distribution__param_type)|  
+|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
  속성 함수 `m()` 및 `n()`은 저장된 분포 매개 변수인 `m` 및 `n` 각각에 대한 값을 반환합니다.  
   
@@ -262,7 +251,7 @@ Distribution for 10 samples:
   
  **네임스페이스:** std  
   
-##  <a name="a-namefisherfdistributionfisherfdistributiona--fisherfdistributionfisherfdistribution"></a><a name="fisher_f_distribution__fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
+##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
  분포를 생성합니다.  
   
 ```  
@@ -287,7 +276,7 @@ explicit fisher_f_distribution(const param_type& parm);
   
  두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-namefisherfdistributionparamtypea--fisherfdistributionparamtype"></a><a name="fisher_f_distribution__param_type"></a>  fisher_f_distribution::param_type  
+##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  분포의 매개 변수를 저장합니다.  
   
 ```cpp  

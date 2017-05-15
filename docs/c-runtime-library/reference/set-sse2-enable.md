@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 158ce2d16db5a37870ea55c548796d975065f422
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6dcc32b981c73cda13152f82139a307e4739fe5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
@@ -74,7 +75,7 @@ int _set_SSE2_enable(
  SSE2 구현을 사용하려면 1, SSE2 구현을 사용하지 않으려면 0입니다. 기본적으로 SSE2 구현은 지원하는 프로세서에서 사용할 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
- SSE2 구현을 사용할 수 있는 경우&0;이 아닌 값이고, SSE2 구현을 사용할 수 없는 경우&0;입니다.  
+ SSE2 구현을 사용할 수 있는 경우 0이 아닌 값이고, SSE2 구현을 사용할 수 없는 경우 0입니다.  
   
 ## <a name="remarks"></a>설명  
  다음 함수는 `_set_SSE2_enable`을 사용하여 활성화될 수 있는 SSE2 구현을 포함합니다.  
@@ -132,9 +133,6 @@ int main()
  **출력**  
   
  `SSE2 enabled.`  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)

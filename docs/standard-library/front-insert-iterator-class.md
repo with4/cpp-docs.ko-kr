@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 클래스
@@ -63,29 +64,29 @@ class front_insert_iterator;
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator__front_insert_iterator)|지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.|  
+|[front_insert_iterator](#front_insert_iterator)|지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#front_insert_iterator__container_type)|전면 삽입 대상인 컨테이너를 나타내는 형식입니다.|  
-|[reference](#front_insert_iterator__reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|  
+|[container_type](#container_type)|전면 삽입 대상인 컨테이너를 나타내는 형식입니다.|  
+|[reference](#reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator*](#front_insert_iterator__operator_star)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 역참조 연산자 * `i` = `x`|  
-|[operator++](#front_insert_iterator__operator_add_add)|값을 저장할 다음 위치에 `front_insert_iterator`를 증가시킵니다.|  
-|[operator=](#front_insert_iterator__operator_eq)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 할당 연산자 * `i` = `x`|  
+|[operator*](#op_star)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 역참조 연산자 * `i` = `x`|  
+|[operator++](#op_add_add)|값을 저장할 다음 위치에 `front_insert_iterator`를 증가시킵니다.|  
+|[operator=](#op_eq)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 할당 연산자 * `i` = `x`|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더**: \<iterator>  
   
  **네임스페이스:** std  
   
-##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="container_type"></a>  front_insert_iterator::container_type  
  전면 삽입 대상인 컨테이너를 나타내는 형식입니다.  
   
 ```  
@@ -125,7 +126,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.  
   
 ```  
@@ -185,7 +186,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="op_star"></a>  front_insert_iterator::operator*  
  주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.  
   
 ```  
@@ -243,7 +244,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  front_insert_iterator::operator++  
  값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.  
   
 ```  
@@ -291,7 +292,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="op_eq"></a>  front_insert_iterator::operator=  
  컨테이너의 앞에 값을 추가(푸시)합니다.  
   
 ```  
@@ -349,7 +350,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="reference"></a>  front_insert_iterator::reference  
  연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```  

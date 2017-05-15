@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>컴파일러 오류s C2100 through C2199
@@ -99,7 +98,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2127|'*식별자*': 비상수 식으로 'constexpr' 엔터티 초기화가 잘못 되었습니다|  
 |[컴파일러 오류 C2128](compiler-error-c2128.md)|'*함수*': alloc_text/same_seg는 C 링크가 있는 함수에만 적용|  
 |[컴파일러 오류 C2129](compiler-error-c2129.md)|정적 함수 '*식별자*' 선언 되었지만 정의 되지 않았습니다|  
-|[컴파일러 오류 C2130](compiler-error-c2130.md)|#줄에 파일 이름을 포함 하는 문자열이 있어야 하는데 '*토큰*'|  
+|[컴파일러 오류 C2130](compiler-error-c2130.md)|#line에 파일 이름을 포함 하는 문자열이 있어야 하는데 '*토큰*'|  
 |컴파일러 오류 C2131|식이 상수로 계산되지 않았습니다.|  
 |[컴파일러 오류 C2132](compiler-error-c2132.md)|구문 오류: 예기치 않은 식별자입니다.|  
 |[컴파일러 오류 C2133](compiler-error-c2133.md)|'*식별자*': 알 수 없는 크기|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2175](compiler-error-c2175.md)|'*로캘*': 잘못 된 로캘|  
 |컴파일러 오류 C2176|return 문은 생성자와 연결된 function-try-block의 처리기에 나타날 수 없습니다.|  
 |[컴파일러 오류 C2177](compiler-error-c2177.md)|상수가 너무 큽니다.|  
-|컴파일러 오류 C2178|'*식별자*'로 선언할 수 없습니다'*지정자*' 지정자|  
+|[컴파일러 오류 C2178](compiler-error-c2178.md)|'*식별자*'로 선언할 수 없습니다'*지정자*' 지정자|  
 |[컴파일러 오류 C2179](compiler-error-c2179.md)|'*형식*': 특성 인수에서 형식 매개 변수를 사용할 수 없습니다|  
 |[컴파일러 오류 C2180](compiler-error-c2180.md)|제어 식의 형식이 '*형식*'|  
 |[컴파일러 오류 C2181](compiler-error-c2181.md)|if와 짝을 이루지 않는 잘못된 else문입니다.|  

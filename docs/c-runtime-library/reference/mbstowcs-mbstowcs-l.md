@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `mbstowcs`가 소스 문자열을 성공적으로 변환하는 경우 변환된 멀티바이트 문자 수를 반환합니다. `wcstr` 인수가 `NULL`인 경우 이 함수는 대상 문자열에 필요한 크기(와이드 문자)를 반환합니다. `mbstowcs`가 잘못된 멀티바이트 문자를 발견하는 경우 –1을 반환합니다. 반환 값이 `count`이면 와이드 문자열이 null로 끝나지 않습니다.  
+ `mbstowcs`가 소스 문자열을 성공적으로 변환하는 경우 변환된 멀티바이트 문자 수를 반환합니다. `wcstr` 인수가 `NULL`인 경우 이 함수는 대상 문자열에 필요한 크기(와이드 문자)를 반환합니다. 경우 `mbstowcs` 잘못 된 멀티 바이트 문자가 발견-1을 반환 합니다. 반환 값이 `count`이면 와이드 문자열이 null로 끝나지 않습니다.  
   
 > [!IMPORTANT]
 >  `wcstr` 및 `mbstr`이 겹치지 않고 `count`가 변환할 멀티바이트 문자 수를 정확하게 반영하도록 합니다.  
   
 ## <a name="remarks"></a>설명  
- `mbstowcs` 함수는 `mbstr`이 가리키는 `count` 멀티바이트 문자의 최대 수를 현재 로캘에 따라 결정된 해당 와이드 문자의 문자열로 변환합니다. 이 함수는 결과 와이드 문자열을 `wcstr`*에 표시된 주소에 저장합니다.* 결과는 일련의 `mbtowc` 호출과 유사합니다. `count`가 나타나기 전이나 나타났을 때 `mbstowcs`가 싱글바이트 null 문자('\0')를 발견하면 null 문자를 와이드 문자 null 문자(L'\0')로 변환하고 중지됩니다. 따라서 `wcstr`의 와이드 문자열은 변환 중에 null 문자가 발견되는 경우에만 null로 끝납니다. `wcstr` 및 `mbstr`이 가리키는 시퀀스가 겹치는 경우 동작이 정의되지 않습니다.  
+ `mbstowcs` 함수는 `mbstr`이 가리키는 `count` 멀티바이트 문자의 최대 수를 현재 로캘에 따라 결정된 해당 와이드 문자의 문자열로 변환합니다. 가 나타내는 주소에서 결과 와이드 문자 문자열이 저장 `wcstr`합니다. 결과는 일련의 `mbtowc` 호출과 유사합니다. `count`가 나타나기 전이나 나타났을 때 `mbstowcs`가 싱글바이트 null 문자('\0')를 발견하면 null 문자를 와이드 문자 null 문자(L'\0')로 변환하고 중지됩니다. 따라서 `wcstr`의 와이드 문자열은 변환 중에 null 문자가 발견되는 경우에만 null로 끝납니다. `wcstr` 및 `mbstr`이 가리키는 시퀀스가 겹치는 경우 동작이 정의되지 않습니다.  
   
  `wcstr` 인수가 `NULL`이면 `mbstowcs`는 변환되는 와이드 문자 수를 반환하며 null 종결자를 포함하지 않습니다. 올바른 값을 반환하려면 소스 문자열이 null로 끝나야 합니다. 결과 와이드 문자열이 null로 끝나야 하는 경우 반환된 값에 추가하세요.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

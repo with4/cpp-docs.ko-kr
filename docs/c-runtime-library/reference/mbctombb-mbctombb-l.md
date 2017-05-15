@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 `_mbctombb` 및 `_mbctombb_l`은 `c`에 해당하는 싱글바이트 문자를 반환하고, 그렇지 않으면 `c`를 반환합니다.  
+ 성공 하면 `_mbctombb` 및 `_mbctombb_l` 에 해당 하는 단일 바이트 문자를 반환 `c`; 그렇지 않으면 반환 `c`합니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbctombb` 및 `_mbctombb_l` 함수는 지정된 멀티바이트 문자를 해당 싱글바이트 멀티바이트 문자로 변환합니다. 문자는 변환하려면 0x20 – 0x7E 또는 0xA1 – 0xDF 범위 내에 있는 싱글바이트 문자여야 합니다.  
+ `_mbctombb` 및 `_mbctombb_l` 함수는 주어진된 멀티 바이트 문자를 해당 싱글바이트 멀티 바이트 문자로 변환 합니다. 문자 변환 될 0xDF 범위 0x20-0x7E 또는 0xA1-내의 단일 바이트 문자를 일치 해야 합니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
- 이전 버전에서는 `_mbctombb`를 `zentohan`이라고 했습니다. 대신 _`mbctombb`를 사용하세요.  
+ 이전 버전에서는 `_mbctombb`를 `zentohan`이라고 했습니다. 대신 `_mbctombb` 를 사용하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

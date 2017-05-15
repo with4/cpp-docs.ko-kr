@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  바이트 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 `_write`는 실제로 쓴 바이트 수를 반환합니다. 디스크에 남아 있는 실제 공간이 함수가 디스크에 쓰려는 버퍼 크기보다 작으면 `_write`에 실패하고 버퍼의 어떤 내용도 디스크로 플러시하지 않습니다. 반환 값 –1은 오류를 나타냅니다. 잘못된 매개 변수가 전달되면 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 함수는 -1을 반환하고 `errno`는 다음&3;개 값 중 하나로 설정됩니다. `EBADF`는 파일 설명자가 잘못되었거나 파일이 쓸 수 있도록 열리지 않았음을 나타내고, `ENOSPC`는 장치에 작업을 실행하는 데 충분한 공간이 없음을 나타내고, `EINVAL`은 `buffer`가 null 포인터이거나 `count`의 홀수 바이트가 유니코드 모드에서 파일에 쓰도록 전달되었음을 나타냅니다.  
+ 성공하면 `_write`는 실제로 쓴 바이트 수를 반환합니다. 디스크에 남아 있는 실제 공간이 함수가 디스크에 쓰려는 버퍼 크기보다 작으면 `_write`에 실패하고 버퍼의 어떤 내용도 디스크로 플러시하지 않습니다. 반환 값-1의 오류를 나타냅니다. 잘못된 매개 변수가 전달되면 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 함수는 -1을 반환하고 `errno`는 다음 3개 값 중 하나로 설정됩니다. `EBADF`는 파일 설명자가 잘못되었거나 파일이 쓸 수 있도록 열리지 않았음을 나타내고, `ENOSPC`는 장치에 작업을 실행하는 데 충분한 공간이 없음을 나타내고, `EINVAL`은 `buffer`가 null 포인터이거나 `count`의 홀수 바이트가 유니코드 모드에서 파일에 쓰도록 전달되었음을 나타냅니다.  
   
  이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
- 파일이 텍스트 모드에서 열리면 각 줄 바꿈 문자는 출력에서 캐리지 리턴 - 줄 바꿈 쌍으로 바뀝니다. 바뀌더라도 반환 값에는 영향을 미치지 않습니다.  
+ 텍스트 모드에서의 파일을 열면 각 줄 바꿈 문자는 캐리지 리턴-줄 바꿈 쌍 출력에서으로 바뀝니다. 바뀌더라도 반환 값에는 영향을 미치지 않습니다.  
   
  파일이 유니코드 변환 모드에서 열리는 경우(예: `_O_WTEXT`, `_O_U16TEXT`, `_O_U8TEXT`가 포함된 모드 매개 변수와 `_open` 또는 `_sopen`을 사용하여 `fd`를 연 경우, `ccs=UNICODE`, `ccs=UTF-16LE`, `ccs=UTF-8`이 포함된 모드 매개 변수와 `fopen`을 사용하여 연 경우나 `_setmode`를 사용하여 모드를 유니코드 변환 모드로 변경한 경우) `buffer`는 **UTF-16** 데이터가 포함된 `wchar_t`의 배열에 대한 포인터로 해석됩니다. 이 모드에서 홀수 바이트를 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다.  
   

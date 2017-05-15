@@ -6,32 +6,63 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- atomic/std::atomic_compare_exchange_strong
+- atomic/std::atomic_compare_exchange_strong_explicit
+- atomic/std::atomic_compare_exchange_weak
+- atomic/std::atomic_compare_exchange_weak_explicit
+- atomic/std::atomic_exchange
+- atomic/std::atomic_exchange_explicit
+- atomic/std::atomic_fetch_add
+- atomic/std::atomic_fetch_add_explicit
+- atomic/std::atomic_fetch_and
+- atomic/std::atomic_fetch_and_explicit
+- atomic/std::atomic_fetch_or
+- atomic/std::atomic_fetch_or_explicit
+- atomic/std::atomic_fetch_sub
+- atomic/std::atomic_fetch_sub_explicit
+- atomic/std::atomic_fetch_xor
+- atomic/std::atomic_fetch_xor_explicit
+- atomic/std::atomic_flag_clear
+- atomic/std::atomic_flag_clear_explicit
+- atomic/std::atomic_flag_test_and_set
+- atomic/std::atomic_flag_test_and_set_explicit
+- atomic/std::atomic_init
+- atomic/std::atomic_is_lock_free
+- atomic/std::atomic_load
+- atomic/std::atomic_load_explicit
+- atomic/std::atomic_signal_fence
+- atomic/std::atomic_store
+- atomic/std::atomic_store_explicit
+- atomic/std::atomic_thread_fence
+- atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
 caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b10205d490f9ac7a4f69ef01fc0da30fe7012ed
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9915c89415594b1cc3475a458ec3a1fbdcfdf290
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 함수
 ||||  
 |-|-|-|  
-|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong_function)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit_function)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak_function)|  
-|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit_function)|[atomic_exchange](#atomic_exchange_function)|[atomic_exchange_explicit](#atomic_exchange_explicit_function)|  
-|[atomic_fetch_add](#atomic_fetch_add_function)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit_function)|[atomic_fetch_and](#atomic_fetch_and_function)|  
-|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit_function)|[atomic_fetch_or](#atomic_fetch_or_function)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit_function)|  
-|[atomic_fetch_sub](#atomic_fetch_sub_function)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit_function)|[atomic_fetch_xor](#atomic_fetch_xor_function)|  
-|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit_function)|[atomic_flag_clear](#atomic_flag_clear_function)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit_function)|  
-|[atomic_flag_test_and_set](#atomic_flag_test_and_set_function)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit_function)|[atomic_init](#atomic_init_function)|  
-|[atomic_is_lock_free](#atomic_is_lock_free_function)|[atomic_load](#atomic_load_function)|[atomic_load_explicit](#atomic_load_explicit_function)|  
-|[atomic_signal_fence](#atomic_signal_fence_function)|[atomic_store](#atomic_store_function)|[atomic_store_explicit](#atomic_store_explicit_function)|  
-|[atomic_thread_fence](#atomic_thread_fence_function)|[kill_dependency](#kill_dependency_function)|  
+|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)|  
+|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)|[atomic_exchange](#atomic_exchange)|[atomic_exchange_explicit](#atomic_exchange_explicit)|  
+|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and](#atomic_fetch_and)|  
+|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)|[atomic_fetch_or](#atomic_fetch_or)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)|  
+|[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|  
+|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|  
+|[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|  
+|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|  
+|[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|  
+|[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|  
   
-##  <a name="a-nameatomiccompareexchangestrongfunctiona--atomiccompareexchangestrong"></a><a name="atomic_compare_exchange_strong_function"></a>  atomic_compare_exchange_strong  
+##  <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong  
  원자 비교 및 교환 작업을 수행합니다.  
   
 ```
@@ -62,9 +93,9 @@ inline bool atomic_compare_exchange_strong(
  값 비교 결과를 나타내는 `bool`입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 암시적 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 인수를 사용하여 원자 비교 및 교환 작업을 수행합니다. 자세한 내용은 [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)를 참조하세요.  
+ 이 메서드는 암시적 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 인수를 사용하여 원자 비교 및 교환 작업을 수행합니다. 자세한 내용은 [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)를 참조하세요.  
   
-##  <a name="a-nameatomiccompareexchangestrongexplicitfunctiona--atomiccompareexchangestrongexplicit"></a><a name="atomic_compare_exchange_strong_explicit_function"></a>  atomic_compare_exchange_strong_explicit  
+##  <a name="atomic_compare_exchange_strong_explicit"></a>  atomic_compare_exchange_strong_explicit  
  *원자 비교 및 교환* 작업을 수행합니다.  
   
 ```
@@ -107,7 +138,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 ### <a name="remarks"></a>설명  
  *원자 비교 및 교환 작업*은 `Atom`에서 가리키는 개체에 저장된 값을 `Exp`에서 가리키는 값과 비교합니다. 값이 같으면 `read-modify-write` 연산을 사용하고 `Order1`에 의해 지정된 메모리 순서 제약 조건을 적용하여, `atom`에서 가리키는 개체에 저장된 값이 `Val`로 대체됩니다. 값이 같지 않으면 연산은 `Exp`가 가리키는 값을 `Atom`이 가리키는 개체에 저장된 값으로 대체하고, `Order2`에 의해 지정된 메모리 순서 제약 조건을 적용합니다.  
   
-##  <a name="a-nameatomiccompareexchangeweakfunctiona--atomiccompareexchangeweak"></a><a name="atomic_compare_exchange_weak_function"></a>  atomic_compare_exchange_weak  
+##  <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak  
  *약한 원자 비교 및 교환* 작업을 수행합니다.  
   
 ```
@@ -138,9 +169,9 @@ inline bool atomic_compare_exchange_strong(
  값 비교 결과를 나타내는 `bool`입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 암시적 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 인수를 갖는 *약한 원자 비교 및 교환 작업*을 수행합니다. 자세한 내용은 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)를 참조하세요.  
+ 이 메서드는 암시적 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 인수를 갖는 *약한 원자 비교 및 교환 작업*을 수행합니다. 자세한 내용은 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)를 참조하세요.  
   
-##  <a name="a-nameatomiccompareexchangeweakexplicitfunctiona--atomiccompareexchangeweakexplicit"></a><a name="atomic_compare_exchange_weak_explicit_function"></a>  atomic_compare_exchange_weak_explicit  
+##  <a name="atomic_compare_exchange_weak_explicit"></a>  atomic_compare_exchange_weak_explicit  
  *약한 원자 비교 및 교환* 작업을 수행합니다.  
   
 ```
@@ -185,7 +216,7 @@ inline bool atomic_compare_exchange_weak_explicit(
   
  *약한* 원자 비교 및 교환 작업은 비교된 값이 같은 경우 교환을 수행합니다. 그러나 값이 같지 않으면 연산이 교환을 수행할지가 보장되지 않습니다.  
   
-##  <a name="a-nameatomicexchangefunctiona--atomicexchange"></a><a name="atomic_exchange_function"></a>  atomic_exchange  
+##  <a name="atomic_exchange"></a>  atomic_exchange  
  `Atom`의 저장된 값을 바꾸기 위해 `Value`를 사용합니다.  
   
 ```
@@ -209,7 +240,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_exchange` 함수는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)를 사용하여 `Atom`에 저장된 값을 `Value`와 교환하기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicexchangeexplicitfunctiona--atomicexchangeexplicit"></a><a name="atomic_exchange_explicit_function"></a>  atomic_exchange_explicit  
+##  <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit  
  `Atom`의 저장된 값을 `Value`와 바꿉니다.  
   
 ```
@@ -242,7 +273,7 @@ inline Ty atomic_exchange_explicit(
 ### <a name="remarks"></a>설명  
  `atomic_exchange_explicit` 함수는 `Order`에 지정된 메모리 제약 조건 내에서 `Atom`에 저장된 값을 `Value`와 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchaddfunctiona--atomicfetchadd"></a><a name="atomic_fetch_add_function"></a>  atomic_fetch_add  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add  
  값을 `atomic` 개체에 저장된 기존의 값에 더합니다.  
   
 ```
@@ -275,7 +306,7 @@ integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchaddexplicitfunctiona--atomicfetchaddexplicit"></a><a name="atomic_fetch_add_explicit_function"></a>  atomic_fetch_add_explicit  
+##  <a name="atomic_fetch_add_explicit"></a>  atomic_fetch_add_explicit  
  값을 `atomic` 개체에 저장된 기존의 값에 더합니다.  
   
 ```
@@ -321,7 +352,7 @@ integral atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchandfunctiona--atomicfetchand"></a><a name="atomic_fetch_and_function"></a>  atomic_fetch_and  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and  
  `atomic` 개체에 저장된 기존 값 및 특정 값에 대해 비트 `and`를 수행합니다.  
   
 ```
@@ -344,7 +375,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_fetch_and` 함수는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건을 사용하여 `Atom`의 저장된 값을 `Value`의 비트 `and` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchandexplicitfunctiona--atomicfetchandexplicit"></a><a name="atomic_fetch_and_explicit_function"></a>  atomic_fetch_and_explicit  
+##  <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit  
  `atomic` 개체에 저장된 기존 값 및 특정 값의 비트 `and`를 수행합니다.  
   
 ```
@@ -377,7 +408,7 @@ inline T atomic_fetch_and_explicit(
 ### <a name="remarks"></a>설명  
  `atomic_fetch_and_explicit` 함수는 `Order`로 지정한 메모리 제약 조건 내에서 `Atom`의 저장된 값을 `Value`의 비트 `and` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchorfunctiona--atomicfetchor"></a><a name="atomic_fetch_or_function"></a>  atomic_fetch_or  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or  
  `atomic` 개체에 저장된 기존 값 및 특정 값에 대해 비트 `or`를 수행합니다.  
   
 ```
@@ -400,7 +431,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_fetch_or` 함수는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)를 사용하여 `Atom`의 저장된 값을 `Value`의 비트 `or` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchorexplicitfunctiona--atomicfetchorexplicit"></a><a name="atomic_fetch_or_explicit_function"></a>  atomic_fetch_or_explicit  
+##  <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit  
  `atomic` 개체에 저장된 기존 값 및 특정 값에 대해 비트 `or`를 수행합니다.  
   
 ```
@@ -433,7 +464,7 @@ inline T atomic_fetch_or_explicit(
 ### <a name="remarks"></a>설명  
  `atomic_fetch_or_explicit` 함수는 `Order`로 지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `Atom`의 저장된 값을 `Value`의 비트 `or` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchsubfunctiona--atomicfetchsub"></a><a name="atomic_fetch_sub_function"></a>  atomic_fetch_sub  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub  
  값을 `atomic` 개체에 저장된 기존의 값에서 뺍니다.  
   
 ```
@@ -470,7 +501,7 @@ integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchsubexplicitfunctiona--atomicfetchsubexplicit"></a><a name="atomic_fetch_sub_explicit_function"></a>  atomic_fetch_sub_explicit  
+##  <a name="atomic_fetch_sub_explicit"></a>  atomic_fetch_sub_explicit  
  값을 `atomic` 개체에 저장된 기존의 값에서 뺍니다.  
   
 ```
@@ -515,7 +546,7 @@ integral atomic_fetch_sub_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchxorfunctiona--atomicfetchxor"></a><a name="atomic_fetch_xor_function"></a>  atomic_fetch_xor  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor  
  `atomic` 개체에 저장된 기존 값 및 특정 값에 대해 비트 `exclusive or`를 수행합니다.  
   
 ```
@@ -539,7 +570,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_fetch_xor` 함수는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)를 사용하여 `Atom`의 저장된 값을 `Value`의 비트 `exclusive or` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicfetchxorexplicitfunctiona--atomicfetchxorexplicit"></a><a name="atomic_fetch_xor_explicit_function"></a>  atomic_fetch_xor_explicit  
+##  <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit  
  `atomic` 개체에 저장된 기존 값 및 특정 값에 대해 비트 `exclusive or`를 수행합니다.  
   
 ```
@@ -572,7 +603,7 @@ inline T atomic_fetch_xor_explicit(
 ### <a name="remarks"></a>설명  
  `atomic_fetch_xor_explicit` 함수는 `Order`로 지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `Atom`의 저장된 값을 `Value`의 비트 `exclusive or` 및 `Atom`에 저장된 현재 값으로 바꾸기 위해 `read-modify-write` 연산을 수행합니다.  
   
-##  <a name="a-nameatomicflagclearfunctiona--atomicflagclear"></a><a name="atomic_flag_clear_function"></a>  atomic_flag_clear  
+##  <a name="atomic_flag_clear"></a>  atomic_flag_clear  
  `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 내에서 [atomic_flag](../standard-library/atomic-flag-structure.md) 개체의 `bool` 플래그를 `false`로 설정합니다.  
   
 ```
@@ -584,7 +615,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
  `Flag`  
  `atomic_flag` 개체에 대한 포인터입니다.  
   
-##  <a name="a-nameatomicflagclearexplicitfunctiona--atomicflagclearexplicit"></a><a name="atomic_flag_clear_explicit_function"></a>  atomic_flag_clear_explicit  
+##  <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit  
  지정된 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 [atomic_flag](../standard-library/atomic-flag-structure.md) 개체의 `bool` 플래그를 `false`로 설정합니다.  
   
 ```
@@ -599,7 +630,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
  `Order`  
  [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="a-nameatomicflagtestandsetfunctiona--atomicflagtestandset"></a><a name="atomic_flag_test_and_set_function"></a>  atomic_flag_test_and_set  
+##  <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set  
  `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)의 제약 조건 내에서 [atomic_flag](../standard-library/atomic-flag-structure.md) 개체의 `bool` 플래그를 `true`로 설정합니다.  
   
 ```
@@ -614,7 +645,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ### <a name="return-value"></a>반환 값  
  `Flag`의 초기 값입니다.  
   
-##  <a name="a-nameatomicflagtestandsetexplicitfunctiona--atomicflagtestandsetexplicit"></a><a name="atomic_flag_test_and_set_explicit_function"></a>  atomic_flag_test_and_set_explicit  
+##  <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit  
  지정된 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 [atomic_flag](../standard-library/atomic-flag-structure.md) 개체의 `bool` 플래그를 `true`로 설정합니다.  
   
 ```
@@ -632,7 +663,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 ### <a name="return-value"></a>반환 값  
  `Flag`의 초기 값입니다.  
   
-##  <a name="a-nameatomicinitfunctiona--atomicinit"></a><a name="atomic_init_function"></a>  atomic_init  
+##  <a name="atomic_init"></a>  atomic_init  
  `atomic` 개체에서 저장된 값을 설정합니다.  
   
 ```
@@ -652,7 +683,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_init`는 원자 연산이 아닙니다. 스레드로부터 안전하지 않습니다.  
   
-##  <a name="a-nameatomicislockfreefunctiona--atomicislockfree"></a><a name="atomic_is_lock_free_function"></a>  atomic_is_lock_free  
+##  <a name="atomic_is_lock_free"></a>  atomic_is_lock_free  
  `atomic` 개체의 원자 연산이 *잠금 해제*인지를 지정합니다.  
   
 ```
@@ -672,7 +703,7 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 ### <a name="remarks"></a>설명  
  하나의 원자 형식에 대해 어떠한 원자 작업도 잠금을 사용하지 않는 경우, 해당 원자 형식은 잠금 없음이라고 합니다. 이 함수가 true를 반환하는 경우 신호 처리기에서 형식을 안전하게 사용할 수 있습니다.  
   
-##  <a name="a-nameatomicloadfunctiona--atomicload"></a><a name="atomic_load_function"></a>  atomic_load  
+##  <a name="atomic_load"></a>  atomic_load  
  `atomic` 개체에서 저장된 값을 검색합니다.  
   
 ```
@@ -692,7 +723,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_load`는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)를 암시적으로 사용합니다.  
   
-##  <a name="a-nameatomicloadexplicitfunctiona--atomicloadexplicit"></a><a name="atomic_load_explicit_function"></a>  atomic_load_explicit  
+##  <a name="atomic_load_explicit"></a>  atomic_load_explicit  
  지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 내에서 `atomic` 개체에 저장된 값을 검색합니다.  
   
 ```
@@ -712,7 +743,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 ### <a name="return-value"></a>반환 값  
  `Atom`에 저장된 검색된 값입니다.  
   
-##  <a name="a-nameatomicsignalfencefunctiona--atomicsignalfence"></a><a name="atomic_signal_fence_function"></a>  atomic_signal_fence  
+##  <a name="atomic_signal_fence"></a>  atomic_signal_fence  
  동일한 스레드에서 실행되는 신호 처리기가 있는 호출 스레드에서 다른 fence 간, 로드/저장 작업 간에 순서를 적용하는 메모리 동기화 기본 형식인 *fence* 역할을 수행합니다.  
   
 ```
@@ -735,7 +766,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|fence가 acquire fence이면서 동시에 release fence입니다.|  
 |`memory_order_seq_cst`|fence가 acquire fence이면서 동시에 release fence이고, 일관된 순서로 되어 있습니다.|  
   
-##  <a name="a-nameatomicstorefunctiona--atomicstore"></a><a name="atomic_store_function"></a>  atomic_store  
+##  <a name="atomic_store"></a>  atomic_store  
  값을 원자 단위로 원자 개체에 저장합니다.  
   
 ```
@@ -755,7 +786,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>설명  
  `atomic_store`는 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `Atom`이 가리키는 개체에 `Value`를 저장합니다.  
   
-##  <a name="a-nameatomicstoreexplicitfunctiona--atomicstoreexplicit"></a><a name="atomic_store_explicit_function"></a>  atomic_store_explicit  
+##  <a name="atomic_store_explicit"></a>  atomic_store_explicit  
  값을 원자 단위로 원자 개체에 저장합니다.  
   
 ```
@@ -785,7 +816,7 @@ inline Ty atomic_store_explicit(
 ### <a name="remarks"></a>설명  
  `atomic_store`는 `Order`에 지정된 `memory_order` 내에서 `Atom`이 가리키는 개체에 `Value`를 저장합니다.  
   
-##  <a name="a-nameatomicthreadfencefunctiona--atomicthreadfence"></a><a name="atomic_thread_fence_function"></a>  atomic_thread_fence  
+##  <a name="atomic_thread_fence"></a>  atomic_thread_fence  
  연결된 원자 연산 없이 로드/저장 작업 간에 순서를 적용하는 메모리 동기화 기본 형식인 *fence* 역할을 수행합니다.  
   
 ```
@@ -808,7 +839,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|fence가 acquire fence이면서 동시에 release fence입니다.|  
 |`memory_order_seq_cst`|fence가 acquire fence이면서 동시에 release fence이고, 일관된 순서로 되어 있습니다.|  
   
-##  <a name="a-namekilldependencyfunctiona--killdependency"></a><a name="kill_dependency_function"></a>  kill_dependency  
+##  <a name="kill_dependency"></a>  kill_dependency  
  종속성을 제거합니다.  
   
 ```

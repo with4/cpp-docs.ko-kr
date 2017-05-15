@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
@@ -91,7 +92,7 @@ int _mbtowc_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **mbchar**이 **NULL**이 아닌 경우 및 `mbchar`이 가리키는 개체가 유효한 멀티바이트 문자를 가리키는 경우 `mbtowc`는 멀티바이트 문자의 길이(바이트)를 반환합니다. `mbchar`이 **NULL**이거나 가리키는 개체가 와이드 문자 null 문자(L'\0')인 경우 함수는 0을 반환합니다. `mbchar`이 가리키는 개체가 처음 *count* 문자 내에서 유효한 멀티바이트 문자를 구성하지 않는 경우 -1을 반환합니다.  
+ **mbchar**이 **NULL**이 아닌 경우 및 `mbchar`이 가리키는 개체가 유효한 멀티바이트 문자를 가리키는 경우 `mbtowc`는 멀티바이트 문자의 길이(바이트)를 반환합니다. `mbchar`이 **NULL**이거나 가리키는 개체가 와이드 문자 null 문자(L'\0')인 경우 함수는 0을 반환합니다. 경우 개체는 `mbchar` 가리키는 첫 번째 내에서 유효한 멀티 바이트 문자를 형성 하지 않습니다 *count* 문자를-1을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  `mbtowc` 함수는 `mbchar`이 **NULL**이 아닌 경우 `mbchar`이 가리키는 *count* 이하 바이트를 해당 와이드 문자로 변환합니다. `mbtowc`는 *wchar*이 **NULL**이 아닌 경우 *wchar*에 결과 와이드 문자를 저장합니다. `mbtowc`는 `MB_CUR_MAX` 바이트 이상을 검사하지 않습니다. `mbtowc`는 로캘 종속 동작의 현재 로캘을 사용하고 `_mbtowc_l`은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

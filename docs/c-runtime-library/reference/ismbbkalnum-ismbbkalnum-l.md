@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c5cfa13a8ee46df3344145fb8fe790746d8b63de
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c3e3333fd5cfc0445a4ee95a2cd16f8913b25e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
@@ -84,7 +85,7 @@ int _ismbbkalnum_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_ismbbkalnum`은 `c` 정수가 문장 부호 이외의 ASCII가 아닌 텍스트 기호이면 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `_ismbbkalnum`는 로캘 종속 문자 정보에 대한 현재 로캘을 사용합니다. `_ismbbkalnum_l`은 로캘을 매개 변수로 사용한다는 점을 제외하고 `_ismbbkalnum`과 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_ismbbkalnum`은 `c` 정수가 문장 부호 이외의 ASCII가 아닌 텍스트 기호이면 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `_ismbbkalnum` 는 로캘 종속 문자 정보에 대한 현재 로캘을 사용합니다. `_ismbbkalnum_l` 은 로캘을 매개 변수로 사용한다는 점을 제외하고 `_ismbbkalnum` 과 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -94,9 +95,6 @@ int _ismbbkalnum_l(
 |`_ismbbkalnum_l`|\<mbctype.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [바이트 분류](../../c-runtime-library/byte-classification.md)   

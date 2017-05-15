@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bd2ab4ac1c6772a06a2da6ac15f7f4b29f83c120
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 20ed6b9111e7dc3a25462ea9d8b79b8e9e842ed0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="matherr"></a>_matherr
@@ -72,7 +73,7 @@ ms.lasthandoff: 02/24/2017
  오류 정보를 포함하는 구조에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- _**matherr**은 오류를 나타내기 위해 0을 반환하거나 성공을 나타내기 위해 0이 아닌 값을 반환합니다. \_**matherr**이 0을 반환하면 오류 메시지가 표시될 수 있으며 `errno`가 적절한 오류 값으로 설정됩니다. \_**matherr**이&0;이 아닌 값을 반환하면 오류 메시지가 표시되지 않으며 `errno`가 변경되지 않습니다.  
+ _**matherr**은 오류를 나타내기 위해 0을 반환하거나 성공을 나타내기 위해 0이 아닌 값을 반환합니다. \_**matherr**이 0을 반환하면 오류 메시지가 표시될 수 있으며 `errno`가 적절한 오류 값으로 설정됩니다. \_**matherr**이 0이 아닌 값을 반환하면 오류 메시지가 표시되지 않으며 `errno`가 변경되지 않습니다.  
   
  반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
@@ -193,9 +194,6 @@ Special: using absolute value: log10: _DOMAIN error
 log10( -5.0 ) = 6.989700e-001  
 Normal: log( 0.0 ) = -1.#INF00e+000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

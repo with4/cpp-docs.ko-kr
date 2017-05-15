@@ -1,41 +1,63 @@
 ---
-title: "is_error_code_enum 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "future/std::is_error_code_enum"
-dev_langs: 
-  - "C++"
+title: "is_error_code_enum 구조체 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- future/std::is_error_code_enum
+dev_langs:
+- C++
 ms.assetid: 84ae4b99-66d2-41ba-9b50-645fcbe14630
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# is_error_code_enum 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: f9b576e6d69cc499aa05cbd857b3cd35f99a8adc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
-Specialization that indicates that [future\_errc](../Topic/future_errc%20Enumeration.md) is suitable for storing an [error\_code](../standard-library/error-code-class.md).  
+---
+# <a name="iserrorcodeenum-structure"></a>is_error_code_enum 구조체
+[future_errc](../standard-library/future-enums.md#future_errc)가 [error_code](../standard-library/error-code-class.md)를 저장하는 데 적합함을 나타내는 특수화입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <>
+struct is_error_code_enum<Future_errc> : public true_type;
 ```  
-template<>  
-struct is_error_code_enum<Future_errc> : public true_type;  
-```  
   
-## 요구 사항  
- **헤더:** future  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<이후 >  
   
  **네임스페이스:** std  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [\<future\>](../standard-library/future.md)
+ [\<future>](../standard-library/future.md)
+
+
+
+

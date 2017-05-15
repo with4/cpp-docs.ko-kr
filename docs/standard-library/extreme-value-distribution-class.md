@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - extreme_value_distribution
-- std::extreme_value_distribution
 - random/std::extreme_value_distribution
-- std::extreme_value_distribution::reset
 - random/std::extreme_value_distribution::reset
-- std::extreme_value_distribution::a
 - random/std::extreme_value_distribution::a
-- std::extreme_value_distribution::b
 - random/std::extreme_value_distribution::b
-- std::extreme_value_distribution::param
 - random/std::extreme_value_distribution::param
-- std::extreme_value_distribution::min
 - random/std::extreme_value_distribution::min
-- std::extreme_value_distribution::max
 - random/std::extreme_value_distribution::max
-- std::extreme_value_distribution::operator()
 - random/std::extreme_value_distribution::operator()
-- std::extreme_value_distribution::param_type
 - random/std::extreme_value_distribution::param_type
-- std::extreme_value_distribution::param_type::a
 - random/std::extreme_value_distribution::param_type::a
-- std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::b
-- std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator==
-- std::extreme_value_distribution::param_type::operator!=
 - random/std::extreme_value_distribution::param_type::operator!=
+- random/std::extreme_value_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 8d7cab089d2fbffa447e1060188b605b6ebfdb65
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 146a9b5efeda58af066af1c9c5ce6f652b07bacc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 클래스
@@ -109,8 +98,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[extreme_value_distribution::extreme_value_distribution](#extreme_value_distribution__extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[extreme_value_distribution::param_type](#extreme_value_distribution__param_type)|  
+|[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
+|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|  
   
  속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 `a` 및 `b` 각각에 대한 값을 반환합니다.  
   
@@ -206,7 +195,7 @@ Distribution for 10 samples:
   
  **네임스페이스:** std  
   
-##  <a name="a-nameextremevaluedistributionextremevaluedistributiona--extremevaluedistributionextremevaluedistribution"></a><a name="extreme_value_distribution__extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution  
+##  <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution  
  분포를 생성합니다.  
   
 ```  
@@ -231,7 +220,7 @@ explicit extreme_value_distribution(const param_type& parm);
   
  두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-nameextremevaluedistributionparamtypea--extremevaluedistributionparamtype"></a><a name="extreme_value_distribution__param_type"></a>  extreme_value_distribution::param_type  
+##  <a name="param_type"></a>  extreme_value_distribution::param_type  
 분포의 매개 변수를 저장합니다.  
   
 ```cpp  

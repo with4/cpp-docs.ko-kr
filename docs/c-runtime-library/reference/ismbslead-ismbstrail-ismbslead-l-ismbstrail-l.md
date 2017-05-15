@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c74c39a90896f9c04bfc945b420238795b11b74
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
@@ -113,7 +114,7 @@ int _ismbstrail_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 문자가 선행 바이트인 경우 `_ismbslead`가 -1을 반환하고 문자가 후행 바이트인 경우 `_ismbstrail`이 -1을 반환합니다. 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는&0;을 반환합니다. 한 인수가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ `_ismbslead`문자가 선행 바이트 이면-1을 반환 하 고 `_ismbstrail` 문자가 후행 바이트 이면-1을 반환 합니다. 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는 0을 반환합니다. 한 인수가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  `_ismbslead` 및 `_ismbstrail`은 문자열 컨텍스트를 고려하기 때문에 `_ismbblead` 및 `_ismbbtrail` 버전보다 느립니다.  
@@ -132,9 +133,6 @@ int _ismbstrail_l(
  \* 테스트 조건에 대한 매니페스트 상수에 해당합니다.  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자 분류](../../c-runtime-library/character-classification.md)   

@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  x87 a및 SSE2 부동 소수점 프로세서가 둘 다 포함되어 있는 Pentium IV 등의 칩에 `_statusfp2`를 사용하는 것이 좋습니다. `_statusfp2`의 경우에는 x87 또는 SSE2 부동 소수점 프로세서 둘 다에 대해 부동 소수점 상태 단어를 사용하여 주소를 채웁니다. x87 및 SSE2 부동 소수점 프로세서를 지원하는 칩에서는 `_statusfp` 또는 `_controlfp`를 사용하며 작업이 x87 또는 SSE2 부동 소수점 상태 단어를 참조할 수 있으므로 모호한 경우 EM_AMBIGUOUS가 1로 설정됩니다. `_statusfp2` 함수는 x86 플랫폼에서만 지원됩니다.  
   
- 이러한 함수에 대 한 유용 하지 않은 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 공용 언어 런타임 (CLR)에 기본 부동 소수점 정밀도만 지원 하기 때문입니다.  
+ 이러한 함수에 대 한 유용 하지 않은 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 공용 언어 런타임 (CLR)에 기본 부동 소수점 정밀도만 지원 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

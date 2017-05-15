@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - bernoulli_distribution
-- std::bernoulli_distribution
 - random/std::bernoulli_distribution
-- std::bernoulli_distribution::reset
 - random/std::bernoulli_distribution::reset
-- std::bernoulli_distribution::p
 - random/std::bernoulli_distribution::p
-- std::bernoulli_distribution::param
 - random/std::bernoulli_distribution::param
-- std::bernoulli_distribution::min
 - random/std::bernoulli_distribution::min
-- std::bernoulli_distribution::max
 - random/std::bernoulli_distribution::max
-- std::bernoulli_distribution::operator()
 - random/std::bernoulli_distribution::operator()
-- std::bernoulli_distribution::param_type
 - random/std::bernoulli_distribution::param_type
-- std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::p
-- std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator==
-- std::bernoulli_distribution::param_type::operator!=
 - random/std::bernoulli_distribution::param_type::operator!=
+- random/std::bernoulli_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: d8805d79029d30a374e80e85ba319581c3804d24
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6711efe0bf60bc9320e1d97c83de50dcc3020971
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 클래스
@@ -103,8 +94,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[bernoulli_distribution::bernoulli_distribution](#bernoulli_distribution__bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
-|`bernoulli_distribution::operator()`||[bernoulli_distribution::param_type](#bernoulli_distribution__param_type)|  
+|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
+|`bernoulli_distribution::operator()`||[param_type](#param_type)|  
   
 속성 멤버 `p()`는 저장된 분포 매개 변수 값 `p`를 반환합니다.  
   
@@ -185,7 +176,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   
 **네임스페이스:** std  
   
-##  <a name="a-namebernoullidistributionbernoullidistributiona--bernoullidistributionbernoullidistribution"></a><a name="bernoulli_distribution__bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
+##  <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
 분포를 생성합니다.  
   
 ```  
@@ -207,7 +198,7 @@ explicit bernoulli_distribution(const param_type& parm);
   
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-namebernoullidistributionparamtypea--bernoullidistributionparamtype"></a><a name="bernoulli_distribution__param_type"></a>  bernoulli_distribution::param_type  
+##  <a name="param_type"></a>  bernoulli_distribution::param_type  
 분포의 매개 변수를 포함합니다.  
   
 struct param_type {  

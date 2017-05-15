@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 657cdcf271d894763b5fbdb3a2c75721f5287d73
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c9e64bb96f606504aab48b46177b73e5e1c3bc98
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
@@ -119,7 +120,7 @@ errno_t _mbsnbcpy_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공한 경우에는&0;이고, 잘못된 매개 변수가 전달된 경우에는 `EINVAL`입니다.  
+ 성공한 경우에는 0이고, 잘못된 매개 변수가 전달된 경우에는 `EINVAL`입니다.  
   
 ## <a name="remarks"></a>설명  
  `_mbsnbcpy_s` 함수는 `strSource`에서 `strDest`로 `count`바이트를 복사합니다. `count`가 `strDest`의 크기를 초과하거나, 입력 문자열 중 하나가 null 포인터이거나, `sizeInBytes` 또는 `count`가 0이면 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 함수는 `EINVAL`을 반환합니다. 소스 문자열과 대상 문자열이 겹치는 경우 `_mbsnbcpy_s`의 동작이 정의되지 않습니다.  
@@ -148,9 +149,6 @@ errno_t _mbsnbcpy_s_l(
 |`_mbsnbcpy_s_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

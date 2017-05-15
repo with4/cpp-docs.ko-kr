@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>stack 클래스
@@ -66,7 +67,7 @@ class stack
  스택을 구현하는 데 사용된 기본 컨테이너의 형식입니다. 기본값은 클래스 `deque`*\<Type>*입니다.  
   
 ## <a name="remarks"></a>설명  
- stack 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type**의 요소는 [value_type](#stack__value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
+ stack 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type**의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
   
  스택에 적합한 기본 컨테이너 클래스에는 **back**, `push_back` 및 `pop_back`의 작업을 지원하는 [deque](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md) 및 [vector 클래스](../standard-library/vector-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|  
+|[stack](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|`stack`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
-|[size_type](#stack__size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#stack__value_type)|`stack`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
+|[container_type](#container_type)|`stack`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
+|[size_type](#size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
+|[value_type](#value_type)|`stack`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|`stack`이 비어 있는지를 테스트합니다.|  
-|[pop](#stack__pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|  
-|[push](#stack__push)|`stack`의 맨 위에 요소를 추가합니다.|  
-|[size](#stack__size)|`stack`에 있는 요소 수를 반환합니다.|  
-|[top](#stack__top)|`stack`의 맨 위에 있는 요소에 대한 참조를 반환합니다.|  
+|[empty](#empty)|`stack`이 비어 있는지를 테스트합니다.|  
+|[pop](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|  
+|[push](#push)|`stack`의 맨 위에 요소를 추가합니다.|  
+|[size](#size)|`stack`에 있는 요소 수를 반환합니다.|  
+|[top](#top)|`stack`의 맨 위에 있는 요소에 대한 참조를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<stack>  
   
  **네임스페이스:** std  
   
-##  <a name="stack__container_type"></a>  stack::container_type  
+##  <a name="container_type"></a>  stack::container_type  
  조정할 기본 컨테이너를 제공하는 형식입니다.  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  `Container`에 대한 자세한 내용은 [stack 클래스](../standard-library/stack-class.md) 항목의 설명 섹션을 참조하세요.  
   
 ### <a name="example"></a>예제  
-  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack__stack)의 예제를 참조하세요.  
+  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack)의 예제를 참조하세요.  
   
-##  <a name="stack__empty"></a>  stack::empty  
+##  <a name="empty"></a>  stack::empty  
  스택이 비어 있는지 테스트합니다.  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a>  stack::pop  
+##  <a name="pop"></a>  stack::pop  
  stack의 가장 윗부분의 요소를 제거합니다.  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a>  stack::push  
+##  <a name="push"></a>  stack::push  
  스택 맨 위의 끝부분에 요소를 추가합니다.  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a>  stack::size  
+##  <a name="size"></a>  stack::size  
  스택의 요소 수를 반환합니다.  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a>  stack::size_type  
+##  <a name="size_type"></a>  stack::size_type  
  스택에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  이 형식은 스택에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
   
 ### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#stack__size)의 예제를 참조하세요.  
+  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
-##  <a name="stack__stack"></a>  stack::stack  
+##  <a name="stack"></a>  stack::stack  
  비어 있거나 기본 컨테이너 개체의 복사본인 스택을 생성합니다.  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a>  stack::top  
+##  <a name="top"></a>  stack::top  
  stack의 가장 윗부분의 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a>  stack::value_type  
+##  <a name="value_type"></a>  stack::value_type  
  스택에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
   
 ```  

@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
@@ -88,12 +89,12 @@ int _ismbblead_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c` 정수가 멀티바이트 문자의 첫 번째 바이트이면&0;이 아닌 값을 반환합니다.  
+ `c` 정수가 멀티바이트 문자의 첫 번째 바이트이면 0이 아닌 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 멀티바이트 문자는 선행 바이트와 그 뒤에 오는 후행 바이트로 구성됩니다. 선행 바이트는 지정된 문자 집합에 대한 특정 범위에 있는 것으로 구분됩니다. 예를 들어 코드 페이지 932에서만 선행 바이트의 범위는 0x81 – 0x9F에서 0xE0 – 0xFC 사이입니다.  
+ 멀티바이트 문자는 선행 바이트와 그 뒤에 오는 후행 바이트로 구성됩니다. 선행 바이트는 지정된 문자 집합에 대한 특정 범위에 있는 것으로 구분됩니다. 예를 들어 코드 페이지 932 에서만 선행 바이트의 범위는 0x81-0x9F 및 0xE0-에서 0xFC.  
   
- `_ismbblead`은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbblead_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_ismbblead` 은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbblead_l` 은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
@@ -111,9 +112,6 @@ int _ismbblead_l(
  \* 테스트 조건에 대한 매니페스트 상수에 해당합니다.  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [바이트 분류](../../c-runtime-library/byte-classification.md)   

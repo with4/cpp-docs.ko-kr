@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: adb8837820dd316ebc5a33ab0aa6e3f8ea99b492
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c88a88d5307c83dad50e465b130b253ac21b37f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="geterrno"></a>_get_errno
@@ -72,7 +73,7 @@ errno_t _get_errno(
  `errno` 변수의 현재 값으로 채워지는 정수에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하는 경우&0;을 반환하고, 실패하는 경우 오류 코드를 반환합니다. `pValue`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
+ 성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. `pValue`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `errno`의 가능한 값은 Errno.h에 정의되어 있습니다. 또한 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요.  
@@ -110,9 +111,6 @@ fyi, ENOENT = 2
 |`_get_errno`|\<stdlib.h>|\<errno.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_set_errno](../../c-runtime-library/reference/set-errno.md)   

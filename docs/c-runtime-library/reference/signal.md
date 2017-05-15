@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1f05c16dff5bd490866a58fcd36ae28cba862fdd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b124479c62a62ef7795498b6c4a96191e2ecb6e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="signal"></a>신호
@@ -100,7 +101,7 @@ void (__cdecl *signal(
 > [!NOTE]
 >  `SIGINT`는 Win32 응용 프로그램에 대해 지원되지 않습니다. Ctrl+C 인터럽트가 발생할 때 Win32 운영 체제는 특히 해당 인터럽트를 처리하기 위해 새 스레드를 생성합니다. 이렇게 하면 UNIX에서와 같은 단일 스레드 응용 프로그램이 다중 스레드가 되며 예기치 않은 동작을 발생시킵니다.  
   
- `func` 인수는 사용자가 작성하는 신호 처리기에 대한 주소 또는 SIGNAL.H에도 정의된 미리 정의된 `SIG_DFL` 또는 `SIG_IGN` 상수 중 하나입니다. `func`가 함수인 경우 이 함수는 주어진 신호에 대한 신호 처리기로 설치됩니다. 신호 처리기의 프로토타입에는 `sig` 형식의 형식 인수 `int`가 하나 필요합니다. 운영 체제에서는 인터럽트가 발생할 때 `sig`를 통해 실제 인수를 제공합니다. 이 인수는 인터럽트를 생성한 신호입니다. 따라서 앞의 표에 나열된&6;개의 매니페스트 상수를 신호 처리기에서 사용하여 인터럽트가 발생했는지 여부를 확인하고 적절한 조치를 취할 수 있습니다. 예를 들어 `signal`을 두 번 호출하여 동일한 처리기 또는 두 개의 서로 다른 신호를 할당한 다음 처리기에서 `sig` 인수를 테스트하여 수신 신호에 따라 서로 다른 조치를 취할 수 있습니다.  
+ `func` 인수는 사용자가 작성하는 신호 처리기에 대한 주소 또는 SIGNAL.H에도 정의된 미리 정의된 `SIG_DFL` 또는 `SIG_IGN` 상수 중 하나입니다. `func`가 함수인 경우 이 함수는 주어진 신호에 대한 신호 처리기로 설치됩니다. 신호 처리기의 프로토타입에는 `sig` 형식의 형식 인수 `int`가 하나 필요합니다. 운영 체제에서는 인터럽트가 발생할 때 `sig`를 통해 실제 인수를 제공합니다. 이 인수는 인터럽트를 생성한 신호입니다. 따라서 앞의 표에 나열된 6개의 매니페스트 상수를 신호 처리기에서 사용하여 인터럽트가 발생했는지 여부를 확인하고 적절한 조치를 취할 수 있습니다. 예를 들어 `signal`을 두 번 호출하여 동일한 처리기 또는 두 개의 서로 다른 신호를 할당한 다음 처리기에서 `sig` 인수를 테스트하여 수신 신호에 따라 서로 다른 조치를 취할 수 있습니다.  
   
  부동 소수점 예외(`SIGFPE`)를 테스트하는 경우 `func`는 FLOAT.H에 정의된 `FPE_xxx` 형식의 여러 매니페스트 상수 중 하나인 선택적 두 번째 인수를 사용하는 함수를 가리킵니다. `SIGFPE` 신호가 발생할 때 두 번째 인수의 값을 테스트하여 부동 소수점 예외의 유형을 확인하고 적절한 조치를 취할 수 있습니다. 이 인수 및 가능한 값은 Microsoft 확장입니다.  
   
@@ -122,7 +123,7 @@ void (__cdecl *signal(
   
 -   오버레이 루틴을 사용하지 마십시오.  
   
- 함수를 사용하여 `SIGFPE` 예외를 트래핑할 경우 함수는 부동 소수점 코드를 포함해야 합니다. 프로그램에 부동 소수점 코드가 없으며 런타임 라이브러리의 신호 처리 코드가 필요한 경우 volatile double을 선언하고&0;으로 초기화합니다.  
+ 함수를 사용하여 `SIGFPE` 예외를 트래핑할 경우 함수는 부동 소수점 코드를 포함해야 합니다. 프로그램에 부동 소수점 코드가 없으며 런타임 라이브러리의 신호 처리 코드가 필요한 경우 volatile double을 선언하고 0으로 초기화합니다.  
   
 `volatile double d = 0.0f;`  
   
@@ -173,9 +174,6 @@ int main()
 This application has requested the Runtime to terminate it in an unusual way.  
 Please contact the application's support team for more information.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

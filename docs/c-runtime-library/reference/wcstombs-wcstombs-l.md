@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,16 +109,16 @@ size_t _wcstombs_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `wcstombs`는 멀티바이트 문자열을 올바르게 변환하는 경우 종결 `NULL`(있는 경우)을 제외하고 멀티바이트 출력 문자열에 기록된 바이트 수를 반환합니다. `mbstr` 인수가 `NULL`이면 `wcstombs`는 대상 문자열에 필요한 바이트 크기를 반환합니다. `wcstombs`는 멀티바이트 문자로 변환할 수 없는 와이드 문자가 있으면 형식 `size_t`에 대한 -1 캐스팅을 반환하고 `errno`를 `EILSEQ`로 설정합니다.  
+ `wcstombs`는 멀티바이트 문자열을 올바르게 변환하는 경우 종결 `NULL`(있는 경우)을 제외하고 멀티바이트 출력 문자열에 기록된 바이트 수를 반환합니다. `mbstr` 인수가 `NULL`이면 `wcstombs`는 대상 문자열에 필요한 바이트 크기를 반환합니다. 경우 `wcstombs` 멀티 바이트 문자 변환 될 수 없는 와이드 문자를 만나면 형식으로 캐스팅 하는-1이 반환 `size_t` 설정 `errno` 를 `EILSEQ`합니다.  
   
 ## <a name="remarks"></a>설명  
- `wcstombs` 함수는 `wcstr`이 가리키는 와이드 문자열을 해당하는 멀티바이트 문자로 변환하고 결과를 `mbstr` 배열에 저장합니다. `count` 매개 변수는 멀티바이트 출력 문자열에 저장할 수 있는 최대 바이트 수(`mbstr`의 크기)를 나타냅니다. 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서&1;바이트만 사용하면 되면 되는 와이드 문자도 있고&2;바이트를 사용해야 하는 문자도 있습니다. 입력 문자열의 모든 와이드 문자(`NULL` 와이드 문자 포함)에 대해 멀티바이트 출력 문자열에&2;바이트가 있으면 변환 성공이 보장됩니다.  
+ `wcstombs` 함수는 `wcstr`이 가리키는 와이드 문자열을 해당하는 멀티바이트 문자로 변환하고 결과를 `mbstr` 배열에 저장합니다. `count` 매개 변수는 멀티바이트 출력 문자열에 저장할 수 있는 최대 바이트 수(`mbstr`의 크기)를 나타냅니다. 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서 1바이트만 사용하면 되면 되는 와이드 문자도 있고 2바이트를 사용해야 하는 문자도 있습니다. 입력 문자열의 모든 와이드 문자(`NULL` 와이드 문자 포함)에 대해 멀티바이트 출력 문자열에 2바이트가 있으면 변환 성공이 보장됩니다.  
   
  `wcstombs`는 `count`가 나올 때나 그 전에 와이드 문자 null 문자(L'\0')를 발견하면 해당 문자를 8비트 0으로 변환한 후 실행을 중지합니다. 따라서 `mbstr`의 멀티바이트 문자열은 `wcstombs`가 변환 중에 와이드 문자 null 문자를 발견하는 경우에만 null로 종결됩니다. `wcstr`이 가리키는 시퀀스와 `mbstr`이 가리키는 시퀀스가 겹치는 경우 `wcstombs`의 동작이 정의되지 않습니다.  
   
  `mbstr` 인수가 `NULL`이면 `wcstombs`는 대상 문자열에 필요한 바이트 크기를 반환합니다.  
   
- `wcstombs`는 매개 변수의 유효성을 검사합니다. `wcstr`이 `NULL`이거나 `count`가 `INT_MAX`보다 크면 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다 . 계속해서 실행하도록 허용된 경우 함수가 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
+ `wcstombs`은 매개 변수의 유효성을 검사합니다. 경우 `wcstr` 은 `NULL`, if 또는 `count` 보다 크면 `INT_MAX`의 설명 대로 잘못 된 매개 변수 처리기를 호출 하는이 함수 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 계속해서 실행하도록 허용된 경우 함수가 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
   
  `wcstombs`는 로캘 종속 동작을 수행해야 하는 경우 현재 로캘을 사용합니다. `_wcstombs_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

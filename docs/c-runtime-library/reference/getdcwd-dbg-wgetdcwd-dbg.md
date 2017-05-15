@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c4f63690395398698624fd75d1450ef4bcb7287
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
@@ -95,7 +96,7 @@ wchar_t *_wgetdcwd_dbg(
  경로의 저장소 위치입니다.  
   
  `maxlen`  
- 경로의 최대 길이(문자 수)로 `_getdcwd_dbg`의 경우 `char`자, `_wgetdcwd_dbg`의 경우 `wchar_t`자입니다.  
+ 경로의 최대 길이(문자 수)로 `char`의 경우 `_getdcwd_dbg`자, `wchar_t`의 경우 `_wgetdcwd_dbg`자입니다.  
   
  `blockType`  
  요청된 메모리 블록 형식으로 `_CLIENT_BLOCK` 또는 `_NORMAL_BLOCK`입니다.  
@@ -128,9 +129,6 @@ wchar_t *_wgetdcwd_dbg(
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- <xref:System.Environment.CurrentDirectory%2A?displayProperty=fullName>  
   
 ## <a name="see-also"></a>참고 항목  
  [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

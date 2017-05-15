@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f45a13d9911e82b2b624689fa6b9e5eb4b20d97
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -70,7 +71,7 @@ int _get_printf_count_output();
  `%n`이 지원되는 경우 0이 아니고 `%n`이 지원되지 않는 경우 0입니다.  
   
 ## <a name="remarks"></a>설명  
- `%n`이 지원되지 않는 경우(기본값) `printf` 함수의 형식 문자열에서 `%n`이 나타나면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. `%n`이 지원되는 경우([_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md) 참조) `%n`은 [printf 형식 필드 문자](../../c-runtime-library/printf-type-field-characters.md)에 설명된 대로 작동합니다.  
+ `%n`이 지원되지 않는 경우(기본값) `printf` 함수의 형식 문자열에서 `%n`이 나타나면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 경우 `%n` 지원이 활성화 된 (참조 [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 다음 `%n` 에 설명 된 대로 동작 [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -83,5 +84,6 @@ int _get_printf_count_output();
 ## <a name="example"></a>예제  
  [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)의 예제를 참조하세요.  
   
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.
+## <a name="see-also"></a>참고 항목  
+[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+

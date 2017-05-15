@@ -45,10 +45,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2ac04f1efef14b0a86a24eed2ebef8b92bffaf01
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: a9e24e349b829d9547037bba31c940f9af25f80c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="ismbb-routines"></a>_ismbb 루틴
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/01/2017
 |루틴|바이트 테스트 조건|  
 |-------------|-------------------------|  
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
-|[_ismbbalpha](http://msdn.microsoft.com/en-us/8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
+|[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbblank](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|`isblank`|  
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|`_ismbbprint`와 같지만 `_ismbbgraph` 에는 공백 문자(0x20)가 포함되지 않습니다.|  
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|문장 부호 이외에 ASCII가 아닌 텍스트 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkalnum` 은 가타카나 영숫자를 테스트합니다.|  

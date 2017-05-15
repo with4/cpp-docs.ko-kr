@@ -10,20 +10,21 @@ f1_keywords: []
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7e849e8585b372b5b423a6c960aa926ac7d5cfec
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04b9f1a76c637f7bca9f230092e51246da0c6075
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  하나의 `thread::id` 개체가 다른 개체보다 크거나 같은지를 확인합니다.  
   
 ```cpp  
@@ -45,7 +46,7 @@ bool operator>= (
 ### <a name="remarks"></a>설명  
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  하나의 `thread::id` 개체가 다른 개체보다 큰지를 확인합니다.  
   
 ```cpp  
@@ -67,7 +68,7 @@ bool operator> (
 ### <a name="remarks"></a>설명  
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  하나의 `thread::id` 개체가 다른 개체보다 작거나 같은지를 확인합니다.  
   
 ```cpp  
@@ -89,7 +90,7 @@ bool operator<= (
 ### <a name="remarks"></a>설명  
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  하나의 `thread::id` 개체가 다른 개체보다 작은지를 확인합니다.  
   
 ```cpp  
@@ -113,7 +114,7 @@ bool operator<(
   
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  두 `thread::id` 개체가 다른지 비교합니다.  
   
 ```cpp  
@@ -135,7 +136,7 @@ bool operator!= (
 ### <a name="remarks"></a>설명  
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  두 `thread::id` 개체가 같은지 비교합니다.  
   
 ```cpp  
@@ -157,7 +158,7 @@ bool operator== (
 ### <a name="remarks"></a>설명  
  이 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  `thread::id` 개체의 텍스트 표현을 스트림에 삽입합니다.  
   
 ```cpp  

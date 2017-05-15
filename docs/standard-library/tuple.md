@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|`tuple` 개체 비교, 같음|  
-|[operator!=](../standard-library/tuple-operators.md#operator_neq)|`tuple` 개체 비교, 같지 않음|  
-|[operator<](../standard-library/tuple-operators.md#operator_lt_)|`tuple` 개체 비교, 더 작음|  
-|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|`tuple` 개체 비교, 작거나 같음|  
-|[operator>](../standard-library/tuple-operators.md#operator_gt_)|`tuple` 개체 비교, 더 큼|  
-|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|`tuple` 개체 비교, 크거나 같음|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|`tuple` 개체 비교, 같음|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|`tuple` 개체 비교, 같지 않음|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|`tuple` 개체 비교, 더 작음|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|`tuple` 개체 비교, 작거나 같음|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|`tuple` 개체 비교, 더 큼|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|`tuple` 개체 비교, 크거나 같음|  
   
 ### <a name="functions"></a>함수  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|`tuple` 개체에서 요소를 가져옵니다.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|요소 값에서 `tuple`을 만듭니다.|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|요소 선언에서 `tuple`을 만듭니다.|  
+|[get](../standard-library/tuple-functions.md#get)|`tuple` 개체에서 요소를 가져옵니다.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|요소 값에서 `tuple`을 만듭니다.|  
+|[tie](../standard-library/tuple-functions.md#tie)|요소 선언에서 `tuple`을 만듭니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [\<array>](../standard-library/array.md)

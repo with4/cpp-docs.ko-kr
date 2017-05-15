@@ -1,55 +1,72 @@
 ---
-title: "_gcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt_s"
-  - "gcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt_s 함수"
-  - "변환, 부동 소수점을 문자열로"
-  - "CVTBUFSIZE"
-  - "부동 소수점 함수, 숫자를 문자열로 변환"
-  - "gcvt_s 함수"
-  - "숫자, 문자열로 변환"
-  - "문자열[C++], 부동 소수점에서 변환"
+title: "_gcvt_s | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt_s
+- gcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt_s function
+- _CVTBUFSIZE
+- floating-point functions, converting number to string
+- gcvt_s function
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _gcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cc1f34eae067f0d2cc0781c9001af550b291006f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-부동 소수점 값을 문자열로 변환합니다.  [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md) 에 설명된 대로 이 버전은 보안 향상 기능이 포함된 [\_gcvt](../../c-runtime-library/reference/gcvt.md) 버전입니다.  
+---
+# <a name="gcvts"></a>_gcvt_s
+부동 소수점 값을 문자열로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [_gcvt](../../c-runtime-library/reference/gcvt.md) 버전입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 errno_t _gcvt_s(   
@@ -66,50 +83,50 @@ errno_t _gcvt_s(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
- \[out\] `buffer`  
- 변환의 결과를 저장 하는 버퍼입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `buffer`  
+ 변환 결과를 저장할 버퍼입니다.  
   
- \[in\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  버퍼의 크기입니다.  
   
- \[in\] `value`  
- 변환될 값입니다.  
+ [in] `value`  
+ 변환할 값입니다.  
   
- \[in\] `digits`  
+ [in] `digits`  
  저장된 유효 자릿수입니다.  
   
-## 반환 값  
- 성공 하면 0이 됩니다.  잘못 된 매개 변수 때문에 실패 한 경우 \(잘못 된 값에 대해 다음 표 참조\) [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다.  실행을 계속 하도록 허용된 경우, 에러 코드가 반환됩니다.  오류 코드는 Errno.h에서 정의 됩니다.  이러한 오류의 목록을 보려면, 다음 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+## <a name="return-value"></a>반환 값  
+ 성공할 경우 0입니다. 잘못된 매개 변수로 인해 실패할 경우(잘못된 값은 다음 표 참조) [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 오류 코드가 반환됩니다. 오류 코드는 Errno.h에서 정의됩니다. 이러한 오류 목록은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
-### 오류 조건  
+### <a name="error-conditions"></a>오류 조건  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|반환|`buffer` 의 값입니다.|  
-|--------------|-------------------|-------------|--------------|--------|----------------------|  
-|`NULL`|any|any|any|`EINVAL`|수정 되지 않음|  
-|`NULL` 이 아닙니다 \(유효한 메모리 포인트\)|0|any|any|`EINVAL`|수정 되지 않음|  
-|`NULL` 이 아닙니다 \(유효한 메모리 포인트\)|any|any|\>\= `sizeInBytes`|`EINVAL`|수정 되지 않음|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|반환|`buffer`의 값|  
+|--------------|-------------------|-------------|--------------|------------|-----------------------|  
+|`NULL`|모두|모두|모두|`EINVAL`|수정되지 않습니다.|  
+|`NULL` 아님(유효한 메모리를 가리킴)|0|any|모두|`EINVAL`|수정되지 않습니다.|  
+|`NULL` 아님(유효한 메모리를 가리킴)|any|모두|>= `sizeInBytes`|`EINVAL`|수정되지 않습니다.|  
   
  **보안 문제**  
   
- `buffer` 가 올바른 메모리를 가르키지 않고 `NULL` 이 아닌 경우, `_gcvt_s` 는 액세스 위반을 발생할 수 있습니다.  
+ `buffer`가 유효한 메모리를 가리키지 않고 `NULL`이 아닐 경우 `_gcvt_s`가 액세스 위반을 생성할 수 있습니다.  
   
-## 설명  
- `_gcvt_s` 함수는 부동 소수점 `value` 을 문자열로 변환하고 \(10진수 및 부호 가능한 바이트 포함\) `buffer` 에 문자열을 저장합니다.  `buffer` 는 변환된 된 값을 더한 자동으로 추가 되는 종료 null 문자를 수용 하기에 충분 해야 합니다.  `_CVTBUFSIZE` 길이의 버퍼는 부동 소수점 값에 대해 충분해야 합니다.  `digits` \+1 의 버퍼 사이즈가 사용 되는 경우, 함수는 버퍼의 끝을 덮어 쓰지 않습니다. 그러므로 해당 작업에 대해 충분한 버퍼를 제공해야 합니다.  `_gcvt_s` 는 10 진수 형식으로 `digits` 숫자를 생성하려고 시도합니다.  할수 없는 경우, 지수 형식의 `digits` 숫자를 생성합니다.  트레일링 제로가 변환에서 억제 될 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `_gcvt_s` 함수는 부동 소수점 `value`를 문자열(소수점 및 가능한 부호 바이트를 포함함)로 변환하고 문자열을 `buffer`에 저장합니다. `buffer`는 변환된 값과 자동으로 추가되는 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 모든 부동 소수점 값에는 `_CVTBUFSIZE` 길이의 버퍼로 충분합니다. `digits` + 1의 버퍼 크기를 사용할 경우 함수는 버퍼 끝을 덮어쓰므로 이 작업에 충분한 버퍼를 제공해야 합니다. `_gcvt_s`는 `digits` 숫자를 10진수 형식으로 생성하려고 합니다. 생성할 수 없는 경우 `digits` 숫자를 지수 형식으로 생성합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.  
   
- C\+\+에서 이 함수를 사용하는 것은 템플릿 오버로드에 의해 단순화됩니다; 오버로드는 자동으로 버퍼의 길이를 추정할수 있고, 크기 인수를 지정할 필요가 없습니다.  자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)을 참조하십시오.  
+ C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
- 이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다.  이 동작을 사용하지 않으려면 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하십시오.  
+ 이 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|선택적 헤더|  
-|--------|-----------|------------|  
-|`_gcvt_s`|\<stdlib.h\>|\<error.h\>|  
+|-------------|---------------------|---------------------|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_gcvt_s.c  
@@ -137,14 +154,14 @@ int main()
 }  
 ```  
   
-  **Converted value: 1.2**   
-## 해당 .NET Framework 항목  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 1.2  
+```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

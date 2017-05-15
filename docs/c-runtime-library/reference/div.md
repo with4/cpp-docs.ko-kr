@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  `div` 형식의 인수를 사용하여 호출된 `int`는 몫과 나머지로 구성된 `div_t` 형식의 구조체를 반환합니다. `long` 형식의 인수를 사용하는 오버로드의 반환 값은 `ldiv_t`입니다. `div_t` 및 `ldiv_t` 모두 STDLIB.H.에서 정의됩니다.  
   
 ## <a name="remarks"></a>설명  
- `div` 함수는 `numer`를 `denom`으로 나눠서 몫과 나머지를 계산합니다. [div_t](../../c-runtime-library/standard-types.md) 구조체에는 목인 `int``quot` 및 나머지인 `int``rem`이 포함됩니다. 몫의 부호는 수학적 몫의 부호와 같습니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.  
+ `div` 함수는 `numer`를 `denom`으로 나눠서 몫과 나머지를 계산합니다. [div_t](../../c-runtime-library/standard-types.md) 구조체에는 목인 `int quot` 및 나머지인 `int rem`이 포함됩니다. 몫의 부호는 수학적 몫의 부호와 같습니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.  
   
- `long` 또는 `long long` 형식의 인수를 받는 오버로드는 C++ 코드에서만 사용할 수 있습니다. 반환 형식 [ldiv_t](../../c-runtime-library/standard-types.md)에는 멤버 `long``quot` 및 `long``rem`이 포함되고, 반환 형식 [lldiv_t](../../c-runtime-library/standard-types.md)에는 `div_t`의 멤버와 같은 의미를 가지는 멤버 `long long quot` 및 `long long rem`이 포함됩니다.  
+ `long` 또는 `long long` 형식의 인수를 받는 오버로드는 C++ 코드에서만 사용할 수 있습니다. 반환 형식 [ldiv_t](../../c-runtime-library/standard-types.md)에는 멤버 `long quot` 및 `long rem`이 포함되고, 반환 형식 [lldiv_t](../../c-runtime-library/standard-types.md)에는 `div_t`의 멤버와 같은 의미를 가지는 멤버 `long long quot` 및 `long long rem`이 포함됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

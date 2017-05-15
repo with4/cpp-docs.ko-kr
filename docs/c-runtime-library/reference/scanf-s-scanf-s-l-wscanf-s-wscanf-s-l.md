@@ -1,68 +1,85 @@
 ---
-title: "scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wscanf_s"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_scanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wscanf_s"
-  - "_tscanf_s_l"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_tscanf_s"
-  - "_scanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 [c + +] 입력 스트림에서 읽기"
-  - "버퍼[C++], 버퍼 오버런"
-  - "_scanf_s_l 함수"
-  - "_wscanf_s_l 함수"
-  - "tscanf_s_l 함수"
-  - "tscanf_s 함수"
-  - "scanf_s 함수"
-  - "입력 스트림에서 읽기 데이터 [c + +]"
-  - "wscanf_s 함수"
-  - "_tscanf_s_l 함수"
-  - "_tscanf_s 함수"
-  - "scanf_s_l 함수"
-  - "입력 스트림에서 형식이 지정 된 데이터 [c + +]"
-  - "wscanf_s_l 함수"
-  - "버퍼[C++], 오버런 방지"
+title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wscanf_s
+- _wscanf_s_l
+- scanf_s
+- _scanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wscanf_s
+- _tscanf_s_l
+- _wscanf_s_l
+- scanf_s
+- _tscanf_s
+- _scanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- buffers [C++], buffer overruns
+- _scanf_s_l function
+- _wscanf_s_l function
+- tscanf_s_l function
+- tscanf_s function
+- scanf_s function
+- data [C++], reading from input stream
+- wscanf_s function
+- _tscanf_s_l function
+- _tscanf_s function
+- scanf_s_l function
+- formatted data [C++], from input streams
+- wscanf_s_l function
+- buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
 caps.latest.revision: 33
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 33
----
-# scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f0fe562e732764eff13741450abadb7ae6d52932
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-표준 입력 스트림에서 형식이 지정된 데이터를 읽습니다. 이러한 버전의 [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 에 설명 된 대로 향상 된 보안 기능을 한 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)합니다.  
+---
+# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
+표준 입력 스트림에서 형식이 지정된 데이터를 읽습니다. 이러한 버전의 [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int scanf_s(  
@@ -85,7 +102,7 @@ int _wscanf_s_l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `format`  
  형식 컨트롤 문자열입니다.  
   
@@ -95,15 +112,15 @@ int _wscanf_s_l(
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생했거나 문자를 읽는 첫 번째 시도에서 파일 끝 문자 또는 문자열 끝 문자가 발생한 경우 반환 값은 `EOF`입니다. 경우 `format` 는 `NULL` 에 설명 된 대로 포인터, 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용한 경우 `scanf_s` 및 `wscanf_s`은 `EOF`를 반환하며 `errno`는 `EINVAL`로 설정됩니다.  
+## <a name="return-value"></a>반환 값  
+ 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생했거나 문자를 읽는 첫 번째 시도에서 파일 끝 문자 또는 문자열 끝 문자가 발생한 경우 반환 값은 `EOF`입니다. `format`이 `NULL` 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `scanf_s` 및 `wscanf_s`은 `EOF`를 반환하며 `errno`는 `EINVAL`로 설정됩니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [errno, \_doserrno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `scanf_s` 함수는 표준 입력 스트림 `stdin`에서 데이터를 읽고 `argument`에서 지정된 위치에 해당 데이터를 씁니다. 각 `argument`는 `format`의 형식 지정자에 해당되는 형식의 변수에 대한 포인터여야 합니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
   
- `wscanf_s`은 `scanf_s`의 와이드 문자 버전이며, `format`에 대한 `wscanf_s` 인수는 와이드 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 `wscanf_s` 및 `scanf_s`가 동일하게 작동합니다.`scanf_s`는 현재 UNICODE 스트림에서의 입력을 지원하지 않습니다.  
+ `wscanf_s`은 `scanf_s`의 와이드 문자 버전이며, `format`에 대한 `wscanf_s` 인수는 와이드 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 `wscanf_s` 및 `scanf_s`가 동일하게 작동합니다. `scanf_s`는 현재 UNICODE 스트림에서의 입력을 지원하지 않습니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용한다는 점만 제외하고 모두 동일합니다.  
   
@@ -116,9 +133,9 @@ int _wscanf_s_l(
  버퍼 크기에는 종료 null이 포함되어 있습니다. 너비 지정 필드를 사용하면 읽은 토큰이 버퍼에 맞는지 확인할 수 있습니다. 너비 지정 필드가 사용되지 않으며 읽은 토큰이 너무 커서 버퍼에 맞지 않는 경우 버퍼에는 아무것도 기록되지 않습니다.  
   
 > [!NOTE]
->  크기 매개 변수는 `size_t`가 아니라 `unsigned` 형식입니다. 정적 캐스트를 사용 하 여 변환 하는 `size_t` 값을 `unsigned` 64 비트에 대 한 모든 빌드 구성 합니다.  
+>  크기 매개 변수는 `size_t`가 아니라 `unsigned` 형식입니다. 64비트 빌드 구성에 대해 정적 캐스트를 사용하여 `size_t` 값을 `unsigned`로 변환합니다.  
   
- 다음 예제에서는 버퍼 크기 매개 변수가 바이트가 아닌 문자의 최대 수를 설명한다는 사실을 보여 줍니다.`wscanf_s`에 대한 호출에서 버퍼 형식에 의해 지정되는 문자 너비는 형식 지정자에 의해 지정되는 문자 너비와 일치하지 않습니다.  
+ 다음 예제에서는 버퍼 크기 매개 변수가 바이트가 아닌 문자의 최대 수를 설명한다는 사실을 보여 줍니다. `wscanf_s`에 대한 호출에서 버퍼 형식에 의해 지정되는 문자 너비는 형식 지정자에 의해 지정되는 문자 너비와 일치하지 않습니다.  
   
 ```  
 wchar_t ws[10];  
@@ -139,27 +156,27 @@ wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
   
  `scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- 자세한 내용은 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하십시오.  
+ 자세한 내용은 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tscanf_s`|`scanf_s`|`scanf_s`|`wscanf_s`|  
 |`_tscanf_s_l`|`_scanf_s_l`|`_scanf_s_l`|`_wscanf_s_l`|  
   
- 자세한 내용은 [형식 사양 필드: scanf 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)을 참조하세요.  
+ 자세한 내용은 [서식 지정 필드: scanf 함수 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)를 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`scanf_s`, `_scanf_s_l`|\<stdio.h\>|  
-|`wscanf_s`, `_wscanf_s_l`|\<stdio.h\> 또는 \<wchar.h\>|  
+|-------------|---------------------|  
+|`scanf_s`, `_scanf_s_l`|\<stdio.h>|  
+|`wscanf_s`, `_wscanf_s_l`|\<stdio.h> 또는 \<wchar.h>|  
   
- 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_scanf_s.c  
@@ -199,22 +216,17 @@ int main( void )
  `36 92.3 y n Wide characters`  
   
 ```Output  
-이 필드 입력의 숫자는 내용이 6: 71 98.599998 h z 바이트 문자 입력 필드 수는 6 내용이: 36 92.300003 y n 와이드 문자  
+The number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
 ```  
   
-## 해당 .NET Framework 항목  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
--   [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
-  
--   참고 항목 `Parse` 메서드를 같은 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)합니다.  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [로캘](../../c-runtime-library/locale.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

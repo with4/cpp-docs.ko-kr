@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a5c84be1336d762289705102c1f2213f04642ea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
@@ -117,7 +118,7 @@ errno_t _mbstowcs_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공시&0;, 실패시 오류 코드.  
+ 성공시 0, 실패시 오류 코드.  
   
 |오류 조건|반환 값 및 `errno`|  
 |---------------------|------------------------------|  
@@ -161,10 +162,7 @@ errno_t _mbstowcs_s_l(
 |`mbstowcs_s`|\<stdlib.h>|  
 |`_mbstowcs_s_l`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
@@ -89,9 +90,9 @@ int _wputenv(
  환경 문자열 정의입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되면 0을 반환하고 오류 발생 시에는 -1을 반환합니다.  
+ 성공 하면 0 또는 오류 발생 시도-1을 반환 합니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `_putenv` 함수는 새 환경 변수를 추가하거나 기존 환경 변수의 값을 수정합니다. 환경 변수는 프로세스가 실행되는 환경을 정의합니다(예: 프로그램에 연결할 라이브러리의 기본 검색 경로). `_wputenv`은 `_putenv`의 와이드 문자 버전이며, `envstring`에 대한 `_wputenv` 인수는 와이드 문자열입니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
@@ -106,7 +107,7 @@ int _wputenv(
   
  환경 항목은 직접 변경하는 대신 `_putenv` 또는 `_wputenv`를 사용하여 변경하세요. 특히 `_environ[]` 전역 배열의 요소를 직접 해제하면 잘못된 메모리가 처리될 수 있습니다.  
   
- `getenv` 및 `_putenv`는 전역 변수 `_environ`을 사용하여 환경 테이블에 액세스하고, `_wgetenv` 및 `_wputenv`는 `_wenviron`을 사용합니다. `_putenv` 및 `_wputenv`는 `_environ` 및 `_wenviron`의 값을 변경하여 argument to `main`에 대한 `_envp` 인수 및 `wmain`에 대한 _`wenvp` 인수를 무효화할 수 있습니다. 따라서 `_environ` 또는 `_wenviron`을 사용하여 환경 정보에 액세스하는 것이 더 안전합니다. `_putenv` 및 `_wputenv`와 전역 변수의 관계에 대한 자세한 내용은 [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md)을 참조하세요.  
+ `getenv` 및 `_putenv`는 전역 변수 `_environ`을 사용하여 환경 테이블에 액세스하고, `_wgetenv` 및 `_wputenv`는 `_wenviron`을 사용합니다. `_putenv`및 `_wputenv` 의 값이 변경 `_environ` 및 `_wenviron`, 따라서 무효화는 `_envp` 인수를 `main` 및 `_wenvp` 인수를 `wmain`합니다. 따라서 `_environ` 또는 `_wenviron`을 사용하여 환경 정보에 액세스하는 것이 더 안전합니다. `_putenv` 및 `_wputenv`와 전역 변수의 관계에 대한 자세한 내용은 [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md)을 참조하세요.  
   
 > [!NOTE]
 >  함수의 `_putenv` 및 `_getenv` 패밀리는 스레드로부터 안전하지 않습니다. `_getenv`는 `_putenv`가 문자열을 수정하는 동안 문자열 포인터를 반환할 수 있으므로 임의의 오류를 발생시킵니다. 이러한 함수에 대한 호출은 동기화해야 합니다.  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>예제  
  `_putenv` 사용 방법에 대한 샘플은 [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

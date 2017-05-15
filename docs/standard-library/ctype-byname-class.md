@@ -1,61 +1,81 @@
 ---
-title: "ctype_byname 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocale/std::ctype_byname"
-  - "std::ctype_byname"
-  - "ctype_byname"
-  - "std.ctype_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ctype_byname 클래스"
+title: "ctype_byname 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocale/std::ctype_byname
+- ctype_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# ctype_byname 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 584163c58608f1d30dccf452ce2f68283ecd3ce0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
-The derived template class describes an object that can serve as a ctype facet of a given locale, enabling the classification of characters and conversion of characters between case and native and locale specified character sets.  
+---
+# <a name="ctypebyname-class"></a>ctype_byname 클래스
+이 파생 템플릿 클래스는 지정된 로캘의 ctype 패싯으로 사용할 수 있는 개체를 설명합니다. 이 클래스를 사용하여 문자를 분류하고 대/소문자와 네이티브 및 로캘 지정 문자 집합 사이에서 문자를 변환할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
+```
+template <class _Elem>
+class ctype_byname : public ctype<_Elem>
+{
+public:
+    explicit ctype_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
+
+    explicit ctype_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual __CLR_OR_THIS_CALL ~ctype_byname();
+
+};
 ```  
-template<class _Elem>  
-class ctype_byname : public ctype<_Elem>  
-{  
-public:  
-    explicit ctype_byname(  
-        const char *_Locname,  
-        size_t _Refs = 0  
-    );  
-    explicit ctype_byname(  
-        const string& _Locname,  
-        size_t _Refs = 0  
-    );  
-protected:  
-    virtual __CLR_OR_THIS_CALL ~ctype_byname();  
-};  
-```  
   
-## 설명  
- Its behavior is determined by the named locale `_Locname`.  Each constructor initializes its base object with [ctype](../standard-library/ctype-class.md)\<CharType\>\(`_Refs`\) or the equivalent for base class `ctype<char>`.  
+## <a name="remarks"></a>설명  
+ 해당 동작은 명명된 로캘 `_Locname`에 따라 결정됩니다. 각 생성자는 [ctype](../standard-library/ctype-class.md)\<CharType>(`_Refs`)의 기본 개체 또는 기본 클래스 `ctype<char>`와 동등한 개체를 초기화합니다.  
   
-## 요구 사항  
- **Header:** \<locale\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<locale>  
   
  **네임스페이스:** std  
   
-## 참고 항목  
- [C\+\+ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

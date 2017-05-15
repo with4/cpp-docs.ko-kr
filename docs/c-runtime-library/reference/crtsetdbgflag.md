@@ -77,10 +77,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d6ed7ff3e28028e3e4b46055e51c32037b0b5a15
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ef1773e534c08a15f10fe2048a5036a957c6a1f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
@@ -119,7 +120,7 @@ ms.lasthandoff: 02/24/2017
   
  `malloc`, `realloc`, **free** 및 `_msize` 호출 횟수를 기반으로 하여 C 런타임 라이브러리가 디버그 힙(`_CrtCheckMemory`)에 대한 유효성 검사를 수행하는 빈도를 지정할 수 있습니다.  
   
- 그런 다음 `_CrtSetDbgFlag` 함수는 값의 `newFlag` 매개 변수에 대해 상위 16비트를 검사합니다. 지정된 값은 `_CrtCheckMemory` 호출 사이의 `malloc`, `realloc`, **free**및 `_msize` 호출 횟수입니다. 이러한 용도로 미리 정의된 매크로&4;개가 제공됩니다.  
+ 그런 다음 `_CrtSetDbgFlag` 함수는 값의 `newFlag` 매개 변수에 대해 상위 16비트를 검사합니다. 지정된 값은 `_CrtCheckMemory` 호출 사이의 `malloc`, `realloc`, **free**및 `_msize` 호출 횟수입니다. 이러한 용도로 미리 정의된 매크로 4개가 제공됩니다.  
   
 |매크로|_CrtCheckMemory 호출 사이의 malloc, realloc, free 및 _msize 호출 횟수|  
 |-----------|------------------------------------------------------------------------------------------|  
@@ -276,9 +277,6 @@ int main( )
         p1 = malloc( 10 );  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)   

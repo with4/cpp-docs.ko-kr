@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 0db56597dd5d5ce8b68a45a5b53ce1af370134ee
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="queue-class"></a>queue 클래스
@@ -66,7 +67,7 @@ class queue
  큐를 구현하는 데 사용된 기본 컨테이너의 형식입니다.  
   
 ## <a name="remarks"></a>설명  
- 스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#queue__value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
+ 스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
   
  스택에 적합한 기본 컨테이너 클래스에는 `front`, **back**, `push_back` 및 `pop_front`의 작업을 지원하는 [deque](../standard-library/deque-class.md) 및 [list](../standard-library/list-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.  
   
@@ -84,33 +85,33 @@ class queue
   
 |||  
 |-|-|  
-|[queue](#queue__queue)|비어 있거나 기본 컨테이너 개체의 복사본인 `queue`을 생성합니다.|  
+|[queue](#queue)|비어 있거나 기본 컨테이너 개체의 복사본인 `queue`을 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#queue__container_type)|`queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
-|[size_type](#queue__size_type)|`queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#queue__value_type)|`queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
+|[container_type](#container_type)|`queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
+|[size_type](#size_type)|`queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
+|[value_type](#value_type)|`queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[back](#queue__back)|`queue` 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.|  
-|[empty](#queue__empty)|`queue`이 비어 있는지를 테스트합니다.|  
-|[front](#queue__front)|`queue` 앞의 첫 번째 요소에 대한 참조를 반환합니다.|  
-|[pop](#queue__pop)|`queue` 앞에서 요소를 제거합니다.|  
-|[push](#queue__push)|`queue` 뒤에 요소를 추가합니다.다.|  
-|[size](#queue__size)|`queue`에 있는 요소 수를 반환합니다.|  
+|[back](#back)|`queue` 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.|  
+|[empty](#empty)|`queue`이 비어 있는지를 테스트합니다.|  
+|[front](#front)|`queue` 앞의 첫 번째 요소에 대한 참조를 반환합니다.|  
+|[pop](#pop)|`queue` 앞에서 요소를 제거합니다.|  
+|[push](#push)|`queue` 뒤에 요소를 추가합니다.다.|  
+|[size](#size)|`queue`에 있는 요소 수를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<queue>  
   
  **네임스페이스:** std  
   
-##  <a name="queue__back"></a>  queue::back  
+##  <a name="back"></a>  queue::back  
  queue 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -153,7 +154,7 @@ int main( )
 }  
 ```  
   
-##  <a name="queue__container_type"></a>  queue::container_type  
+##  <a name="container_type"></a>  queue::container_type  
  조정할 기본 컨테이너를 제공하는 형식입니다.  
   
 ```  
@@ -166,9 +167,9 @@ typedef Container container_type;
  `Container`에 대한 자세한 내용은 [queue 클래스](../standard-library/queue-class.md) 항목의 설명 섹션을 참조하세요.  
   
 ### <a name="example"></a>예제  
-  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue__queue)의 예제를 참조하세요.  
+  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue)의 예제를 참조하세요.  
   
-##  <a name="queue__empty"></a>  queue::empty  
+##  <a name="empty"></a>  queue::empty  
  queue가 비어 있는지 테스트합니다.  
   
 ```  
@@ -212,7 +213,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="queue__front"></a>  queue::front  
+##  <a name="front"></a>  queue::front  
  queue 앞의 첫 번째 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -261,7 +262,7 @@ int main() {
 }  
 ```  
   
-##  <a name="queue__pop"></a>  queue::pop  
+##  <a name="pop"></a>  queue::pop  
  queue 앞에서 요소를 제거합니다.  
   
 ```  
@@ -315,7 +316,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="queue__push"></a>  queue::push  
+##  <a name="push"></a>  queue::push  
  queue 뒤에 요소를 추가합니다.다.  
   
 ```  
@@ -361,7 +362,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue__queue"></a>  queue::queue  
+##  <a name="queue"></a>  queue::queue  
  비어 있거나 기본 컨테이너 개체의 복사본인 queue를 생성합니다.  
   
 ```  
@@ -425,7 +426,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="queue__size"></a>  queue::size  
+##  <a name="size"></a>  queue::size  
  queue에 있는 요소 수를 반환합니다.  
   
 ```  
@@ -464,7 +465,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="queue__size_type"></a>  queue::size_type  
+##  <a name="size_type"></a>  queue::size_type  
  queue에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
   
 ```  
@@ -475,9 +476,9 @@ typedef typename Container::size_type size_type;
  이 형식은 queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
   
 ### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#queue__front)의 예제를 참조하세요.  
+  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#front)의 예제를 참조하세요.  
   
-##  <a name="queue__value_type"></a>  queue::value_type  
+##  <a name="value_type"></a>  queue::value_type  
  queue에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
   
 ```  

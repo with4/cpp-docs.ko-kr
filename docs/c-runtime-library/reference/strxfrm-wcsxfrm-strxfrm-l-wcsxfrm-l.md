@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92144dbdc043d68d9280d2721a0aaeac3a9e3f1a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
@@ -106,7 +107,7 @@ size_t wcsxfrm_l(
  소스 문자열입니다.  
   
  `count`  
- `strDest`*에 배치할 최대 문자 수입니다.*  
+ 에 문자 수가 최대 `strDest`합니다.  
   
  `locale`  
  사용할 로캘입니다.  
@@ -121,7 +122,7 @@ size_t wcsxfrm_l(
   
  `wcsxfrm`은 `strxfrm`의 와이드 문자 버전이며, `wcsxfrm`의 문자열 인수는 와이드 문자 포인터입니다. `wcsxfrm`의 경우 문자열 변환 이후 변형된 문자열 두 개를 사용하여 `wcscmp`를 호출할 경우 두 원본 문자열에 적용된 `wcscoll`의 호출과 동일한 결과가 발생합니다. 그렇지 않으면 `wcsxfrm`과 `strxfrm`이 동일하게 작동합니다. `wcsxfrm`은 로캘 종속적인 동작에 현재 로캘을 사용합니다. `_wcsxfrm_l`은 현재 로캘 대신에 전달된 로캘을 사용합니다.  
   
- 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `strSource`가 null 포인터이거나, `strDest`가 NULL 포인터이거나(count가&0;이 아닌 경우), `count`가 `INT_MAX`보다 큰 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `INT_MAX`을 반환합니다.  
+ 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `strSource`가 null 포인터이거나, `strDest`가 NULL 포인터이거나(count가 0이 아닌 경우), `count`가 `INT_MAX`보다 큰 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `INT_MAX`을 반환합니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -158,10 +159,7 @@ return( strlen( _string1 ) );
 |`_strxfrm_l`|\<string.h>|  
 |`_wcsxfrm_l`|\<string.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

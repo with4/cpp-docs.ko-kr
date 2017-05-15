@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::duration
+- chrono/std::chrono::duration::duration
+- chrono/std::chrono::duration::count
+- chrono/std::chrono::duration::max
+- chrono/std::chrono::duration::min
+- chrono/std::chrono::duration::zero
 dev_langs:
 - C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 843e4954b3a5b20d504dd5c8bf582dc56d4cbcbd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="duration-class"></a>duration 클래스
@@ -67,37 +73,37 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[duration::duration Constructor](#duration__duration_constructor)|`duration` 개체를 생성합니다.|  
+|[기간](#duration)|`duration` 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[duration::count](#duration__count_method)|시간 간격의 클록 틱 수를 반환합니다.|  
-|[duration::max](#duration__max_method)|정적. 템플릿 매개 변수 `Ref`의 최대 허용 값을 반환합니다.|  
-|[duration::min](#duration__min_method)|정적. 템플릿 매개 변수 `Ref`의 최저 허용 값을 반환합니다.|  
-|[duration::zero](#duration__zero_method)|정적. 실제로 `Rep`(0)를 반환합니다.|  
+|[count](#count)|시간 간격의 클록 틱 수를 반환합니다.|  
+|[max](#max)|정적. 템플릿 매개 변수 `Ref`의 최대 허용 값을 반환합니다.|  
+|[min](#min)|정적. 템플릿 매개 변수 `Ref`의 최저 허용 값을 반환합니다.|  
+|[0](#zero)|정적. 실제로 `Rep`(0)를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[duration::operator-](#duration__operator-)|`duration` 개체의 복사본을 부정 틱 개수와 함께 반환합니다.|  
-|[duration::operator--](#duration__operator--)|저장된 틱 개수를 줄입니다.|  
-|[duration::operator=](#duration__operator_eq)|저장된 틱 개수 모듈로를 지정된 값으로 줄입니다.|  
-|[duration::operator*=](#duration__operator_star_eq)|저장된 틱 개수에 지정된 값을 곱합니다.|  
-|[duration::operator/=](#duration__operator__eq)|저장된 틱 개수를 지정된 `duration` 개체의 틱 개수로 나눕니다.|  
-|[duration::operator+](#duration__operator_add)|`*this`를 반환합니다.|  
-|[duration::operator++](#duration__operator_add_add)|저장된 틱 개수를 늘립니다.|  
-|[duration::operator+=](#duration__operator_add_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에 더합니다.|  
-|[duration::operator-=](#duration__operator-_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에서 뺍니다.|  
+|[duration::operator-](#operator-)|`duration` 개체의 복사본을 부정 틱 개수와 함께 반환합니다.|  
+|[duration::operator--](#operator--)|저장된 틱 개수를 줄입니다.|  
+|[duration::operator=](#op_eq)|저장된 틱 개수 모듈로를 지정된 값으로 줄입니다.|  
+|[duration::operator*=](#op_star_eq)|저장된 틱 개수에 지정된 값을 곱합니다.|  
+|[duration::operator/=](#op_div_eq)|저장된 틱 개수를 지정된 `duration` 개체의 틱 개수로 나눕니다.|  
+|[duration::operator+](#op_add)|`*this`를 반환합니다.|  
+|[duration::operator++](#op_add_add)|저장된 틱 개수를 늘립니다.|  
+|[duration::operator+=](#op_add_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에 더합니다.|  
+|[duration::operator-=](#operator-_eq)|지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에서 뺍니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** chrono  
+ **헤더:** \<c h >  
   
  **네임스페이스:** std::chrono  
   
-##  <a name="a-namedurationcountmethoda--durationcount"></a><a name="duration__count_method"></a>  duration::count  
+##  <a name="count"></a>  duration::count  
  시간 간격의 클록 틱 수를 검색합니다.  
   
 ```  
@@ -107,7 +113,7 @@ constexpr Rep count() const;
 ### <a name="return-value"></a>반환 값  
  시간 간격의 클록 틱 수입니다.  
   
-##  <a name="a-namedurationdurationconstructora--durationduration-constructor"></a><a name="duration__duration_constructor"></a>  duration::duration Constructor  
+##  <a name="duration"></a>  duration::duration Constructor  
  `duration` 개체를 생성합니다.  
   
 ```  
@@ -135,7 +141,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
  `Period2`로 지정되는 기간의 틱 수입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 생성자는 초기화되지 않은 개체를 생성합니다. 빈 중괄호를 사용한 값 초기화는&0; 클록 틱의 시간 간격을 나타내는 개체를 초기화합니다.  
+ 기본 생성자는 초기화되지 않은 개체를 생성합니다. 빈 중괄호를 사용한 값 초기화는 0 클록 틱의 시간 간격을 나타내는 개체를 초기화합니다.  
   
  두 번째 하나의 템플릿 인수 생성자는 `std::ratio<1>`의 기본 기간을 사용하여 `R` 클록 팁의 시간 간격을 나타내는 개체를 생성합니다. 틱 개수 반올림을 방지하려는 경우, `duration::rep`를 부동 소수점 형식으로 처리할 수 없을 때 부동 소수점 형식으로 처리 가능한 표현 형식`Rep2`에서 기간 개체를 생성하는 것은 오류입니다.  
   
@@ -147,7 +153,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
   
  오버플로가 변환에서 유도되고 `treat_as_floating_point<rep>`*가 true를 포함*하거나, `ratio_divide<Period2, period>::den`가 1과 같고 `treat_as_floating_point<Rep2>`*가 false를 포함*할 경우 세 번째 생성자는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
   
-##  <a name="a-namedurationmaxmethoda--durationmax"></a><a name="duration__max_method"></a>  duration::max  
+##  <a name="max"></a>  duration::max  
  템플릿 매개 변수 형식 `Ref`의 값에 대한 상한을 반환하는 정적 메서드입니다.  
   
 ```  
@@ -157,7 +163,7 @@ static constexpr duration max();
 ### <a name="return-value"></a>반환 값  
  실제로 `duration(duration_values<rep>::max())`를 반환합니다.  
   
-##  <a name="a-namedurationminmethoda--durationmin"></a><a name="duration__min_method"></a>  duration::min  
+##  <a name="min"></a>  duration::min  
  템플릿 매개 변수 형식 `Ref`의 값에 대한 하한을 반환하는 정적 메서드입니다.  
   
 ```  
@@ -167,14 +173,14 @@ static constexpr duration min();
 ### <a name="return-value"></a>반환 값  
  실제로 `duration(duration_values<rep>::min())`를 반환합니다.  
   
-##  <a name="a-namedurationoperator-a--durationoperator-"></a><a name="duration__operator-"></a>  duration::operator-  
+##  <a name="duration__operator-"></a>  duration::operator-  
  `duration` 개체의 복사본을 부정 틱 개수와 함께 반환합니다.  
   
 ```  
 constexpr duration operator-() const;
 ```  
   
-##  <a name="a-namedurationoperator--a--durationoperator--"></a><a name="duration__operator--"></a>  duration::operator--  
+##  <a name="duration__operator--"></a>  duration::operator--  
  저장된 틱 개수를 줄입니다.  
   
 ```  
@@ -188,7 +194,7 @@ duration operator--(int);
   
  두 번째 메서드는 감소 전에 만들어진 `*this`의 복사본을 반환합니다.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator_eq"></a>  duration::operator=  
+##  <a name="op_eq"></a>  duration::operator=  
  저장된 틱 개수 모듈로를 지정된 값으로 줄입니다.  
   
 ```  
@@ -204,7 +210,7 @@ duration& operator%=(const duration& Div);
 ### <a name="return-value"></a>반환 값  
  모듈로 연산이 수행된 후의 `duration` 개체입니다.  
   
-##  <a name="a-namedurationoperatorstareqa--durationoperator"></a><a name="duration__operator_star_eq"></a>  duration::operator*=  
+##  <a name="op_star_eq"></a>  duration::operator*=  
  저장된 틱 개수에 지정된 값을 곱합니다.  
   
 ```  
@@ -218,7 +224,7 @@ duration& operator*=(const rep& Mult);
 ### <a name="return-value"></a>반환 값  
  곱하기가 수행된 후의 `duration` 개체입니다.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator__eq"></a>  duration::operator/=  
+##  <a name="op_div_eq"></a>  duration::operator/=  
  저장된 틱 개수를 지정된 값으로 나눕니다.  
   
 ```  
@@ -232,14 +238,14 @@ duration& operator/=(const rep& Div);
 ### <a name="return-value"></a>반환 값  
  나누기가 수행된 후의 `duration` 개체입니다.  
   
-##  <a name="a-namedurationoperatoradda--durationoperator"></a><a name="duration__operator_add"></a>  duration::operator+  
+##  <a name="op_add"></a>  duration::operator+  
  `*this`를 반환합니다.  
   
 ```  
 constexpr duration operator+() const;
 ```  
   
-##  <a name="a-namedurationoperatoraddadda--durationoperator"></a><a name="duration__operator_add_add"></a>  duration::operator++  
+##  <a name="op_add_add"></a>  duration::operator++  
  저장된 틱 개수를 늘립니다.  
   
 ```  
@@ -253,7 +259,7 @@ duration operator++(int);
   
  두 번째 메서드는 증가 전에 만들어진 `*this`의 복사본을 반환합니다.  
   
-##  <a name="a-namedurationoperatoraddeqa--durationoperator"></a><a name="duration__operator_add_eq"></a>  duration::operator+=  
+##  <a name="op_add_eq"></a>  duration::operator+=  
  지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에 더합니다.  
   
 ```  
@@ -267,7 +273,7 @@ duration& operator+=(const duration& Dur);
 ### <a name="return-value"></a>반환 값  
  더하기가 수행된 후의 `duration` 개체입니다.  
   
-##  <a name="a-namedurationoperator-eqa--durationoperator-"></a><a name="duration__operator-_eq"></a>  duration::operator-=  
+##  <a name="duration__operator-_eq"></a>  duration::operator-=  
  지정된 `duration` 개체의 틱 개수를 저장된 틱 개수에서 뺍니다.  
   
 ```  
@@ -281,14 +287,14 @@ duration& operator-=(const duration& Dur);
 ### <a name="return-value"></a>반환 값  
  빼기가 수행된 후의 `duration` 개체입니다.  
   
-##  <a name="a-namedurationzeromethoda--durationzero"></a><a name="duration__zero_method"></a>  duration::zero  
+##  <a name="zero"></a>  duration::zero  
  `duration(duration_values<rep>::zero())`를 반환합니다.  
   
 ```  
 static constexpr duration zero();
 ```  
   
-##  <a name="a-namedurationoperatormodeqa--durationoperator-mod"></a><a name="duration__operator_mod_eq"></a>  duration::operator mod=  
+##  <a name="op_mod_eq"></a>  duration::operator mod=  
  저장된 틱 수 모듈로 Div 또는 Div.count()를 줄입니다.  
   
 ```  

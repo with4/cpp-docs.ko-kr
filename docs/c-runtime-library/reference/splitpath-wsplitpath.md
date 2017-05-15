@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: af46452d23eb6194a0562dc37bbe082a56762a2b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bbd6a163df9daf8e699f3ecf52325786fe89d8ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
@@ -105,7 +106,7 @@ void _wsplitpath(
  선행 마침표(`.`)를 포함한 파일 이름 확장명입니다. 파일 이름 확장명이 필요하지 않은 경우 이 매개 변수에 대해 `NULL`을 전달할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- `_splitpath` 함수는 경로를&4;개 구성 요소로 분해합니다. `_splitpath`는 현재 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wsplitpath`는 `_splitpath`의 와이드 문자 버전이며, `_wsplitpath`에 대한 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.  
+ `_splitpath` 함수는 경로를 4개 구성 요소로 분해합니다. `_splitpath`는 현재 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wsplitpath`는 `_splitpath`의 와이드 문자 버전이며, `_wsplitpath`에 대한 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.  
   
  **보안 정보** 이러한 함수는 버퍼 오버런 문제로 인해 발생하는 잠재적인 위협을 일으킵니다. 버퍼 오버런 문제는 자주 사용되는 시스템 공격 방법으로, 불필요한 권한 상승을 초래합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)를 참조하세요.  
   
@@ -145,9 +146,6 @@ void _wsplitpath(
   
 ## <a name="example"></a>예제  
  [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

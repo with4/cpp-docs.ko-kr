@@ -6,13 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iterator/std::advance
+- iterator/std::back_inserter
+- iterator/std::begin
+- iterator/std::cbegin
+- iterator/std::cend
+- iterator/std::distance
+- iterator/std::end
+- iterator/std::front_inserter
+- iterator/std::inserter
+- iterator/std::make_checked_array_iterator
+- iterator/std::make_move_iterator
+- iterator/std::make_unchecked_array_iterator
+- iterator/std::next
+- iterator/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fb4f0f27496db45c7bbb7b609e0f945eb007154
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 함수
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|  
 |[next](#next)|[prev](#prev)|  
   
-##  <a name="a-nameadvancea--advance"></a><a name="advance"></a>  advance  
+##  <a name="advance"></a>  advance  
  지정된 위치 수만큼 반복기를 증가시킵니다.  
   
 ```  
@@ -95,7 +111,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.  
 ```  
   
-##  <a name="a-namebackinsertera--backinserter"></a><a name="back_inserter"></a>  back_inserter  
+##  <a name="back_inserter"></a>  back_inserter  
  지정된 컨테이너 뒤에 요소를 삽입할 수 있는 반복기를 만듭니다.  
   
 ```  
@@ -162,7 +178,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="a-namebegina--begin"></a><a name="begin"></a>  begin  
+##  <a name="begin"></a>  begin  
  지정된 컨테이너의 첫 번째 요소에 대한 반복기를 검색합니다.  
   
 ```  
@@ -262,7 +278,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
-##  <a name="a-namecbegina--cbegin"></a><a name="cbegin"></a>  cbegin  
+##  <a name="cbegin"></a>  cbegin  
  지정된 컨테이너의 첫 번째 요소에 대한 상수 반복기를 검색합니다.  
   
 ```  
@@ -291,7 +307,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namecenda--cend"></a><a name="cend"></a>  cend  
+##  <a name="cend"></a>  cend  
  지정된 컨테이너에서 마지막 요소 다음에 있는 요소에 대한 상수 반복기를 검색합니다.  
   
 ```  
@@ -320,7 +336,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namedistancea--distance"></a><a name="distance"></a>  distance  
+##  <a name="distance"></a>  distance  
  두 반복기에 의해 주소가 지정된 위치 사이의 간격의 수를 결정합니다.  
   
 ```  
@@ -329,14 +345,14 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  두 번째로부터의 거리를 결정해야 하는 첫 번째 반복기입니다.  
   
- ` last`  
+ `last`  
  첫 번째로부터의 거리를 결정해야 하는 두 번째 반복기입니다.  
   
 ### <a name="return-value"></a>반환 값  
- ` first`가 ` last`가 될 때까지 증가되어야 하는 횟수입니다.  
+ `first`가 `last`가 될 때까지 증가되어야 하는 횟수입니다.  
   
 ### <a name="remarks"></a>설명  
  distance 함수는 **InputIterator**가 임의 액세스 반복기의 요구 사항을 충족할 경우 고정적 복잡성이 있습니다. 그렇지 않으면 선형 복잡성이 있으며 비용도 잠재적으로 높을 수 있습니다.  
@@ -389,7 +405,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.  
 ```  
   
-##  <a name="a-nameenda--end"></a><a name="end"></a>  end  
+##  <a name="end"></a>  end  
  지정된 컨테이너에서 마지막 요소 다음의 요소에 대한 반복기를 검색합니다.  
   
 ```  
@@ -420,7 +436,7 @@ Ty *end(Ty (& array)[Size]);
 ### <a name="remarks"></a>설명  
  코드 예제는 [begin](../standard-library/iterator-functions.md#begin)을 참조하세요.  
   
-##  <a name="a-namefrontinsertera--frontinserter"></a><a name="front_inserter"></a>  front_inserter  
+##  <a name="front_inserter"></a>  front_inserter  
  지정된 컨테이너 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.  
   
 ```  
@@ -436,7 +452,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
  컨테이너 개체 `_Cont`와 연결된 `front_insert_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- front_insert_iterator 클래스의 멤버 함수 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator__front_insert_iterator)를 사용할 수도 있습니다.  
+ front_insert_iterator 클래스의 멤버 함수 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator)를 사용할 수도 있습니다.  
   
  C++ 표준 라이브러리 내에서 인수는 `push_back` 멤버 함수가 있는 두 가지 시퀀스 컨테이너 [deque 클래스](../standard-library/deque-class.md) 또는 "list 클래스" 중 하나를 참조해야 합니다.  
   
@@ -487,8 +503,8 @@ After the front insertions, the list L is:
  ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).  
 ```  
   
-##  <a name="a-nameinsertera--inserter"></a><a name="inserter"></a>  inserter  
- `insert_iterator<Container>(``_Cont`, `_Where``)` 대신 `inserter(``_Cont``,``_Where``)`를 사용할 수 있도록 하는 도우미 템플릿 함수입니다.  
+##  <a name="inserter"></a>  inserter  
+ 사용 하는 도우미 템플릿 함수 `inserter(_Cont, _Where)` 대신 `insert_iterator<Container>(_Cont, _Where)`합니다.  
   
 ```  
 template <class Container>  
@@ -506,7 +522,7 @@ inserter(
  삽입 지점을 찾고 있는 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator__insert_iterator)`<Container>(``_Cont``,` `_Where``)`를 반환합니다.  
+ 템플릿 함수를 반환 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -555,7 +571,7 @@ After the insertions, the list L is:
  ( 1 20 30 40 500 ).  
 ```  
   
-##  <a name="a-namemakecheckedarrayiteratora--makecheckedarrayiterator"></a><a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
+##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
  다른 알고리즘에서 사용할 수 있는 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)를 만듭니다.  
   
 > [!NOTE]
@@ -645,7 +661,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemakemoveiteratora--makemoveiterator"></a><a name="make_move_iterator"></a>  make_move_iterator  
+##  <a name="make_move_iterator"></a>  make_move_iterator  
  제공된 반복기를 `stored` 반복기로 포함하는 `move iterator`를 만듭니다.  
   
 ```  
@@ -661,7 +677,7 @@ make_move_iterator(const Iterator& _It);
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `move_iterator``<Iterator>(``_It``)`를 반환합니다.  
   
-##  <a name="a-namemakeuncheckedarrayiteratora--makeuncheckedarrayiterator"></a><a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
+##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
  다른 알고리즘에서 사용할 수 있는 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)를 만듭니다.  
   
 > [!NOTE]
@@ -736,7 +752,7 @@ int main()
   
 ```  
   
-##  <a name="a-namenexta--next"></a><a name="next"></a>  next  
+##  <a name="next"></a>  next  
  지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.  
   
 ```  
@@ -747,7 +763,7 @@ InputIterator next(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  현재 위치입니다.  
   
  `_Off`  
@@ -759,7 +775,7 @@ InputIterator next(
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 `_Off`번 증가된 `next`를 반환합니다.  
   
-##  <a name="a-namepreva--prev"></a><a name="prev"></a>  prev  
+##  <a name="prev"></a>  prev  
  역순으로 지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.  
   
 ```  
@@ -770,7 +786,7 @@ BidirectionalIterator prev(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` first`  
+ `first`  
  현재 위치입니다.  
   
  `_Off`  

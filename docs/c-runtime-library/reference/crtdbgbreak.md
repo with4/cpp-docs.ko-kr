@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 105b86a3c06c17bd9d24ff6cedb213abf06dadcd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fd68d614e0c676d63bc8b5227eab95c3eae76258
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
@@ -71,9 +72,6 @@ void _CrtDbgBreak( void );
  `_CrtDbgBreak` 함수는 함수가 상주하는 코드의 특정 줄에 디버그 중단점을 설정합니다. 이 함수는 디버그 모드에서만 사용되고 이전에 정의된 `_DEBUG`에 따라 달라집니다.  
   
  다른 후크 가능 런타임 함수를 사용하고 고유한 클라이언트 정의 후크 함수를 작성하는 방법에 대한 자세한 내용은 [고유한 디버그 후크 함수 작성](/visualstudio/debugger/debug-hook-function-writing)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a8904000ae9175f0f6d43b70bc8c6af5e5b572dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5bdd1bacddfa22bb9a7fe7b3d6e11b06c5a969b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="clearerrs"></a>clearerr_s
@@ -72,7 +73,7 @@ errno_t clearerr_s(
  `FILE` 구조체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;을 반환합니다. `stream`이 NULL이면 `EINVAL`을 반환합니다.  
+ 성공하면 0을 반환합니다. `stream`이 NULL이면 `EINVAL`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `clearerr_s` 함수는 `stream`에 대한 오류 표시기 및 파일 끝 표시기를 다시 설정합니다. 오류 표시기는 자동으로 취소되지 않습니다. 지정된 스트림에 대한 오류 표시기가 설정되면 `clearerr_s`, `clearerr`, `fseek`, `fsetpos` 또는 `rewind`가 호출될 때까지 해당 스트림의 작업은 오류 값을 계속 반환합니다.  
@@ -140,9 +141,6 @@ n
       nWrite error: Bad file descriptor  
 Will input cause an error? n  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 처리](../../c-runtime-library/error-handling-crt.md)   

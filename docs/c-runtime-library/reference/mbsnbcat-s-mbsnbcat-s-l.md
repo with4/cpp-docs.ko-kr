@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 143471aaa443e57e4c3bb52a8c24e0ea4d749949
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b07123a1c31e9531ddfc9314582a221b3c9c78d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
@@ -119,7 +120,7 @@ errno_t _mbsnbcat_s_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;이고, 그렇지 않으면 오류 코드입니다.  
+ 성공하면 0이고, 그렇지 않으면 오류 코드입니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -155,9 +156,6 @@ errno_t _mbsnbcat_s_l(
 |`_mbsnbcat_s_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   

@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 연산자
 ||  
 |-|  
-|[operator&lt;&lt;](#operator_lt__lt_)|  
+|[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  스트림에 다양한 형식을 씁니다.  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  스트림입니다.  
   
 ### <a name="remarks"></a>설명  
- `basic_ostream` 클래스도 여러 가지 삽입 연산자를 정의합니다. 자세한 내용은 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_)를 참조하세요.  
+ `basic_ostream` 클래스도 여러 가지 삽입 연산자를 정의합니다. 자세한 내용은 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)를 참조하세요.  
   
  다음 템플릿 함수는  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- `str`에서 시작되는 시퀀스의 길이 N = `traits_type::`[length](../standard-library/char-traits-struct.md#char_traits__length)( `str`)를 결정하고 시퀀스를 삽입합니다. N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width)인 경우 함수는 `_Ostr.``width` - N 채우기 문자의 반복도 삽입합니다. ( `_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)인 경우 반복은 시퀀스 앞에 옵니다. 그렇지 않은 경우에는 반복이 시퀀스 뒤에 옵니다. 함수에서 `_Ostr`을 반환합니다.  
+ `str`에서 시작되는 시퀀스의 길이 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)를 결정하고 시퀀스를 삽입합니다. N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)인 경우 함수는 `_Ostr.``width` - N 채우기 문자의 반복도 삽입합니다. ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)인 경우 반복은 시퀀스 앞에 옵니다. 그렇지 않은 경우에는 반복이 시퀀스 뒤에 옵니다. 함수에서 `_Ostr`을 반환합니다.  
   
  다음 템플릿 함수는  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 단, `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)( `_Ch`))을 호출하여 `str`에서 시작되는 시퀀스의 각 `_Ch` 요소를 `Elem` 형식의 개체로 변환합니다.  
+ 단, `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`))을 호출하여 `str`에서 시작되는 시퀀스의 각 `_Ch` 요소를 `Elem` 형식의 개체로 변환합니다.  
   
  다음 템플릿 함수는  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ 다음 코드와 동일하게 동작합니다.  
   
 ```cpp  
 template <class _Elem, class _Tr>

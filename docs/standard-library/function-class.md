@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>function 클래스
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.|  
+|[function](#function)|비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|호출 가능 개체의 반환 형식입니다.|  
+|[result_type](#result_type)|호출 가능 개체의 반환 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|이 함수 개체에 호출 가능 개체를 할당합니다.|  
-|[function::swap](#function__swap)|두 개의 호출 가능 개체를 바꿉니다.|  
-|[function::target](#function__target)|저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.|  
-|[function::target_type](#function__target_type)|호출 가능 개체에 대한 형식 정보를 가져옵니다.|  
+|[assign](#assign)|이 함수 개체에 호출 가능 개체를 할당합니다.|  
+|[swap](#swap)|두 개의 호출 가능 개체를 바꿉니다.|  
+|[대상](#target)|저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.|  
+|[target_type](#target_type)|호출 가능 개체에 대한 형식 정보를 가져옵니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|저장된 호출 가능 개체가 있는지 테스트합니다.|  
-|[function::operator()](#function__operator__)|호출 가능 개체를 호출합니다.|  
-|[function::operator=](#function__operator_eq)|저장된 호출 가능 개체를 바꿉니다.|  
+|[function::operator unspecified](#op_unspecified)|저장된 호출 가능 개체가 있는지 테스트합니다.|  
+|[function::operator()](#op_call)|호출 가능 개체를 호출합니다.|  
+|[function::operator=](#op_eq)|저장된 호출 가능 개체를 바꿉니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<functional>  
   
  **네임스페이스:** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  이 함수 개체에 호출 가능 개체를 할당합니다.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>설명  
  멤버 함수는 각각 `*this`에 의해 포함된 `callable object`를 `operand`로 전달된 호출 가능 개체로 바꿉니다. 두 멤버 함수 모두 할당자 개체 `Ax`를 사용하여 저장소를 할당합니다.  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="op_unspecified"></a>  function::operator unspecified  
  저장된 호출 가능 개체가 있는지 테스트합니다.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  호출 가능 개체를 호출합니다.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  저장된 호출 가능 개체를 바꿉니다.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  호출 가능 개체의 반환 형식입니다.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  두 개의 호출 가능 개체를 바꿉니다.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  호출 가능 개체에 대한 형식 정보를 가져옵니다.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [mem_fn 함수](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper 클래스](../standard-library/reference-wrapper-class.md)
 

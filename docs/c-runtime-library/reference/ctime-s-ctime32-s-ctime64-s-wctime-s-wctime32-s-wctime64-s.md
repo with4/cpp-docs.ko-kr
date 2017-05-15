@@ -1,77 +1,94 @@
 ---
-title: "ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ctime64_s"
-  - "_wctime32_s"
-  - "ctime_s"
-  - "_wctime64_s"
-  - "_ctime32_s"
-  - "_wctime_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ctime64_s"
-  - "_ctime32_s"
-  - "_tctime32_s"
-  - "_ctime64_s"
-  - "_wctime_s"
-  - "_tctime_s"
-  - "_tctime64_s"
-  - "ctime_s"
-  - "ctime32_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wctime32_s 함수"
-  - "ctime64_s 함수"
-  - "_tctime64_s 함수"
-  - "_wctime_s 함수"
-  - "tctime_s 함수"
-  - "_wctime64_s 함수"
-  - "ctime_s 함수"
-  - "ctime32_s 함수"
-  - "_ctime64_s 함수"
-  - "tctime64_s 함수"
-  - "wctime64_s 함수"
-  - "wctime_s 함수"
-  - "_tctime_s 함수"
-  - "tctime32_s 함수"
-  - "wctime32_s 함수"
-  - "시간, 변환"
-  - "_ctime32_s 함수"
-  - "_tctime32_s 함수"
+title: "ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ctime64_s
+- _wctime32_s
+- ctime_s
+- _wctime64_s
+- _ctime32_s
+- _wctime_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ctime64_s
+- _ctime32_s
+- _tctime32_s
+- _ctime64_s
+- _wctime_s
+- _tctime_s
+- _tctime64_s
+- ctime_s
+- ctime32_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wctime32_s function
+- ctime64_s function
+- _tctime64_s function
+- _wctime_s function
+- tctime_s function
+- _wctime64_s function
+- ctime_s function
+- ctime32_s function
+- _ctime64_s function
+- tctime64_s function
+- wctime64_s function
+- wctime_s function
+- _tctime_s function
+- tctime32_s function
+- wctime32_s function
+- time, converting
+- _ctime32_s function
+- _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-시간 값을 문자열로 변환 하 고 현지 표준 시간대 설정에 대 한 조정 합니다. 이 버전의 [ctime, \_ctime64, \_wctime, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) 에 설명 된 대로 보안이 강화 된 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)합니다.  
+---
+# <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
+시간 값을 문자열로 변환하고 현지 표준 시간대 설정에 맞게 조정합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)의 버전입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 errno_t ctime_s(   
@@ -126,75 +143,75 @@ errno_t _wctime64_s(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
- \[out\] `buffer`  
- 26 개 문자를 포함 하기에 충분 해야 합니다. 문자 문자열 결과에 대 한 포인터 또는 `NULL`경우:  
+#### <a name="parameters"></a>매개 변수  
+ [out] `buffer`  
+ 26자를 포함할 만큼 충분히 커야 합니다. 문자 문자열 결과에 대 한 포인터 또는 `NULL` 경우:  
   
--   `time` 1970 년 1 월 1 일 자정 UTC 이전의 날짜를 나타냅니다.  
+-   `time`은 1970년 1월 1일(UTC) 자정 이전의 날짜를 나타냅니다.  
   
--   사용 하는 경우 `_ctime32_s` 또는 `_wctime32_s` 및 `time` 23시 59분: 59 2038 년 1 월 18 일 UTC 이후 날짜를 나타냅니다.  
+-   `_ctime32_s` 또는 `_wctime32_s`를 사용하는 경우 `time`은 2038년 1월 18일(UTC) 23:59:59 이후 날짜를 나타냅니다.  
   
--   사용 하는 경우 `_ctime64_s` 또는 `_wctime64_s` 및 `time` 23시 59분: 59 3000 년 12 월 31 일 UTC 이후 날짜를 나타냅니다.  
+-   `_ctime64_s` 또는 `_wctime64_s`를 사용하는 경우 `time`은 3000년 12월 31일(UTC) 23:59:59 이후 날짜를 나타냅니다.  
   
--   사용 하는 경우 `_ctime_s` 또는 `_wctime_s`, 이러한 함수는 이전 함수에 대 한 래퍼입니다. 설명 부분을 참조하세요.  
+-   `_ctime_s` 또는 `_wctime_s`를 사용하는 경우 이러한 함수는 이전 함수에 대한 래퍼입니다. 설명 부분을 참조하세요.  
   
- \[in\] `numberOfElements`  
+ [in] `numberOfElements`  
  버퍼의 크기입니다.  
   
- \[in\] t`ime`  
- 저장 된 시간에 대 한 포인터입니다.  
+ [in] `time`  
+ 저장된 시간에 대한 포인터입니다.  
   
-## 반환 값  
- 성공 하면 0입니다. 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 잘못 된 매개 변수가 인 한 오류 이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 되는 경우에 오류 코드가 반환 됩니다. 오류 코드는 ERRNO에 정의 됩니다. H. 이러한 오류의 목록을 보려면 [errno](../../c-runtime-library/errno-constants.md)합니다. 각 오류 조건에 대해 발생 하는 실제 오류 코드는 다음 표에 표시 됩니다.  
+## <a name="return-value"></a>반환 값  
+ 성공할 경우 0입니다. 잘못된 매개 변수로 인해 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 오류 코드가 반환됩니다. 오류 코드는 ERRNO.H에 정의됩니다. 이러한 오류의 목록을 보려면 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 throw되는 실제 오류 코드가 다음 표에 나와 있습니다.  
   
-## 오류 조건  
+## <a name="error-conditions"></a>오류 조건  
   
-|`buffer`|`numberOfElements`|`time`|반환|값 `buffer`|  
-|--------------|------------------------|------------|--------|----------------|  
-|`NULL`|any|any|`EINVAL`|수정 안 됨|  
-|하지 `NULL` \(올바른 메모리 포인트\)|0|any|`EINVAL`|수정 안 됨|  
-|Not `NULL`|0 \< \< 26 크기 조정|any|`EINVAL`|빈 문자열|  
-|Not `NULL`|\>\= 26|NULL|`EINVAL`|빈 문자열|  
-|Not `NULL`|\>\= 26|\< 0|`EINVAL`|빈 문자열|  
+|`buffer`|`numberOfElements`|`time`|반환|`buffer`의 값|  
+|--------------|------------------------|------------|------------|-----------------------|  
+|`NULL`|모두|모두|`EINVAL`|수정 안 됨|  
+|`NULL` 아님(유효한 메모리를 가리킴)|0|모두|`EINVAL`|수정 안 됨|  
+|`NULL` 아님|0< 크기 < 26|모두|`EINVAL`|빈 문자열|  
+|`NULL` 아님|>= 26|NULL|`EINVAL`|빈 문자열|  
+|`NULL` 아님|>= 26|< 0|`EINVAL`|빈 문자열|  
   
-## 설명  
- `ctime_s` 함수 변환으로 저장 하는 시간 값을 [time\_t](../../c-runtime-library/standard-types.md) 문자열로 구조입니다.`time` 값에 대 한 호출에서 가져온 일반적으로 [시간](../../c-runtime-library/reference/time-time32-time64.md), 를 자정 이후 경과 된 초 수를 반환 \(00: 00:00\), 1970 년 1 월 1 일 협정 세계시 \(UTC\)입니다. 반환 값 문자열 정확 하 게 26 개 문자를 포함 하며는 형식을 갖습니다.  
+## <a name="remarks"></a>설명  
+ `ctime_s` 함수는 [time_t](../../c-runtime-library/standard-types.md) 구조체로 저장된 시간 값을 문자열로 변환합니다. `time` 값은 일반적으로 UTC(협정 세계시) 기준 1970년 1월 1일 자정(00:00:00) 이후에 경과된 시간(초)을 반환하는 [time](../../c-runtime-library/reference/time-time32-time64.md)을 호출하여 가져옵니다. 반환 값 문자열은 정확히 26자를 포함하며 그 형식은 다음과 같습니다.  
   
 ```  
 Wed Jan 02 02:03:55 1980\n\0  
 ```  
   
- 24 시간제 사용 됩니다. 모든 필드는 상수는 너비가 있습니다. 줄 바꿈 문자 \('\\n'\) 및 null 문자 \('\\0'\)는 문자열의 마지막 두 자리를 차지 합니다.  
+ 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자('\n') 및 null 문자('\0')는 문자열의 마지막 두 자리를 차지합니다.  
   
- 변환 된 문자열은 현지 표준 시간대 설정에 따라 조정할 수 있습니다. 참조는 `time`, [\_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), 및 [localtime32\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) 의 현지 시간을 구성 하는 방법에 대 한 정보에 대 한 함수 및 [\_tzset](../../c-runtime-library/reference/tzset.md) 시간대 환경 및 전역 변수를 정의 하는 방법에 대 한 정보에 대 한 함수입니다.  
+ 또한 변환된 문자열은 현지 표준 시간대 설정에 따라 조정됩니다. 현지 시간을 구성하는 방법에 대한 자세한 내용은 `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 및 [localtime32_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) 함수를 참조하고, 표준 시간대 환경 및 전역 변수를 정의하는 방법에 대한 자세한 내용은 [_tzset](../../c-runtime-library/reference/tzset.md) 함수를 참조하세요.  
   
- `_wctime32_s` 및 `_wctime64_s` 의 와이드 문자 버전은 `_ctime32_s` 및 `_ctime64_s`; 와이드 문자 문자열에 대 한 포인터를 반환 합니다. 그렇지 않으면 `_ctime64_s`, `_wctime32_s`, 및 `_wctime64_s` 동일 하 게 작동 `_ctime32_s`합니다.  
+ `_wctime32_s` 및 `_wctime64_s`는 `_ctime32_s` 및 `_ctime64_s`의 와이드 문자 버전이며, 와이드 문자 문자열에 대한 포인터를 반환합니다. 그 외에는 `_ctime64_s`, `_wctime32_s` 및 `_wctime64_s`가 `_ctime32_s`와 동일하게 작동합니다.  
   
- `ctime_s` 계산 되는 인라인 함수 이며 `_ctime64_s` 및 `time_t` 같습니다 `__time64_t`합니다. 컴파일러에서 `time_t`를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이렇게 하면이로 인해 `ctime_s` 로 계산 `_ctime32_s`합니다. 응용 프로그램 2038 년 1 월 18 일 후 실패 하 고 64 비트 플랫폼에서 허용 되지 않으므로 때문에이 권장 되지 않습니다.  
+ `ctime_s`는 `_ctime64_s`로 계산되는 인라인 함수이며 `time_t`는 `__time64_t`와 동일합니다. 컴파일러에서 `time_t`를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이렇게 하면 `ctime_s`가 `_ctime32_s`로 계산됩니다. 2038년 1월 18일 이후에는 응용 프로그램에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.  
   
- C \+ \+에서 이러한 함수를 사용 하 여 단순화 되어 템플릿 오버 로드 합니다. 오버 로드는 버퍼 길이 자동으로 유추할 수, 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
+ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tctime_s`|`ctime_s`|`ctime_s`|`_wctime_s`|  
 |`_tctime32_s`|`_ctime32_s`|`_ctime32_s`|`_wctime32_s`|  
 |`_tctime64_s`|`_ctime64_s`|`_ctime64_s`|`_wctime64_s`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`ctime_s,`<br /><br /> `_ctime32_s,`<br /><br /> `_ctime64_s`|\<time.h\>|  
-|`_wctime_s,`<br /><br /> `_wctime32_s,`<br /><br /> `_wctime64_s`|\<. h \> 또는 \< wchar.h \>|  
+|-------------|---------------------|  
+|`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
+|`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 라이브러리  
+## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_wctime_s.c  
@@ -225,27 +242,17 @@ int main( void )
 }  
 ```  
   
-## 샘플 출력  
+## <a name="sample-output"></a>샘플 출력  
   
 ```  
 The time is Fri Apr 25 13:03:39 2003  
 ```  
   
-## 해당 .NET Framework 항목  
-  
--   [System::DateTime::GetDateTimeFormats](https://msdn.microsoft.com/en-us/library/system.datetime.getdatetimeformats.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

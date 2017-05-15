@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7947bb8de34b5e80321ddacf03e4606a53b5dc90
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1ad2bb0cd27d24d7051f782b4ed72a1014fb5ec6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
@@ -74,7 +75,7 @@ int _setmaxstdio(
  `stdio` 수준에서 동시에 열리는 파일 수의 새 최대값입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되면 `newmax`를 반환하고 그렇지 않으면 -1을 반환합니다.  
+ 반환 `newmax` 성공 하면 그렇지 않으면-1입니다.  
   
  `newmax`가 `_IOB_ENTRIES`보다 작거나 운영 체제에서 사용 가능한 최대 핸들 수보다 많으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이 함수는 -1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -100,9 +101,6 @@ int _setmaxstdio(
   
 ## <a name="example"></a>예제  
  `_setmaxstdio`를 사용하는 예제는 [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md)를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스트림 I/O](../../c-runtime-library/stream-i-o.md)

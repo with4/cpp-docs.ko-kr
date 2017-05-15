@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  선택을 취소할 플래그입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+ 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
 ### <a name="example"></a>예제  
   `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  숫자 밑입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags))를 호출하는 개체를 반환한 다음 **str**을 반환합니다. 여기서 **mask**는 다음과 같이 결정됩니다.  
+ 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags))를 호출하는 개체를 반환한 다음 **str**을 반환합니다. 여기서 **mask**는 다음과 같이 결정됩니다.  
   
 -   _ *Base*가 8이면 **mask**는 `ios_base::`[oct](../standard-library/ios-functions.md#oct)입니다.  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   _ *Base*가 16이면 **mask**는 `ios_base::`[hex](../standard-library/ios-functions.md#hex)입니다.  
   
--   _ *Base*가 다른 모든 값이면 mask는 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0)입니다.  
+-   _ *Base*가 다른 모든 값이면 mask는 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)입니다.  
   
 ### <a name="example"></a>예제  
   `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 템플릿 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다. **Elem** 형식은 **str** 스트림에 대한 요소 형식과 동일해야 합니다.  
+ 템플릿 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다. **Elem** 형식은 **str** 스트림에 대한 요소 형식과 동일해야 합니다.  
   
 ### <a name="example"></a>예제  
   `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  설정할 플래그입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+ 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
 ### <a name="example"></a>예제  
   `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  부동 소수점 값의 전체 자릿수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+ 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
 ### <a name="example"></a>예제  
   `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  표시 필드의 너비입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+ 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
  setw는 스트림에서 다음 요소에 대한 너비만 설정하며 너비를 지정하려는 각 요소 앞에 삽입되어야 합니다.  

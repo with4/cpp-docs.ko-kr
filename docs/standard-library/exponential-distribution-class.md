@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - exponential_distribution
-- std::exponential_distribution
 - random/std::exponential_distribution
-- std::exponential_distribution::reset
 - random/std::exponential_distribution::reset
-- std::exponential_distribution::lambda
 - random/std::exponential_distribution::lambda
-- std::exponential_distribution::param
 - random/std::exponential_distribution::param
-- std::exponential_distribution::min
 - random/std::exponential_distribution::min
-- std::exponential_distribution::max
 - random/std::exponential_distribution::max
-- std::exponential_distribution::operator()
 - random/std::exponential_distribution::operator()
-- std::exponential_distribution::param_type
 - random/std::exponential_distribution::param_type
-- std::exponential_distribution::param_type::lambda
 - random/std::exponential_distribution::param_type::lambda
-- std::exponential_distribution::param_type::operator==
 - random/std::exponential_distribution::param_type::operator==
-- std::exponential_distribution::param_type::operator!=
 - random/std::exponential_distribution::param_type::operator!=
+- random/std::exponential_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 6681447dd9e5dda7515d04b4bdedfd9de9c62983
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: eaf28ef7a02d358422d7e655688f5f4bf7cccc7d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 클래스
@@ -106,8 +97,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[exponential_distribution::exponential_distribution](#exponential_distribution__exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
-|`exponential_distribution::operator()`||[exponential_distribution::param_type](#exponential_distribution__param_type)|  
+|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
+|`exponential_distribution::operator()`||[param_type](#param_type)|  
   
 속성 멤버 함수 `lambda()`는 저장된 분포 매개 변수 `lambda`의 값을 반환합니다.  
   
@@ -198,7 +189,7 @@ Distribution for 10 samples:
   
  **네임스페이스:** std  
   
-##  <a name="a-nameexponentialdistributionexponentialdistributiona--exponentialdistributionexponentialdistribution"></a><a name="exponential_distribution__exponential_distribution"></a>  exponential_distribution::exponential_distribution  
+##  <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution  
  분포를 생성합니다.  
   
 ```  
@@ -220,7 +211,7 @@ explicit exponential_distribution(const param_type& parm);
   
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-nameexponentialdistributionparamtypea--exponentialdistributionparamtype"></a><a name="exponential_distribution__param_type"></a>  exponential_distribution::param_type  
+##  <a name="param_type"></a>  exponential_distribution::param_type  
 분포의 매개 변수를 저장합니다.  
   
 ```

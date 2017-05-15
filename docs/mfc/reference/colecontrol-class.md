@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>COleControl 클래스
@@ -401,7 +402,7 @@ class COleControl : public CWnd
 |[COleControl::SetInitialDataFormats](#setinitialdataformats)|컨트롤에서 지 원하는 데이터 형식 목록을 초기화 하기 위해 프레임 워크에서 호출 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- 파생 된 `CWnd`, Windows의 창 개체의 모든 기능 및 특정 기능을 추가 OLE, 이벤트 발생과 메서드 및 속성을 지 원하는 기능이 등이 클래스를 상속 합니다.  
+ 파생 된 `CWnd`, Windows의 창 개체의 모든 기능 및 특정 기능을 추가 OLE, 이벤트 발생 메서드와 속성을 지원 하기 위해 기능 등이 클래스를 상속 합니다.  
   
  OLE 컨트롤 OLE 컨테이너 응용 프로그램에 삽입할 수와 양방향 시스템 이벤트 발생 및 노출을 메서드와 컨테이너에는 속성을 사용 하 여 컨테이너와 통신 합니다. 표준 OLE 컨테이너에만 OLE 컨트롤의 기본 기능 지원 참고 합니다. OLE 컨트롤의 확장된 기능을 지원할 수 없는 합니다. 이벤트 발생 컨트롤에서 발생 하는 특정 작업의 결과로 컨테이너에 이벤트를 보낼 경우에 발생 합니다. 다시 컨테이너 노출 된 일련의 메서드와 속성에서 멤버 함수에 유사한와 c + + 클래스의 데이터 멤버를 사용 하 여 컨트롤와 통신 합니다. 이 방법을 통해 개발자가 컨트롤의 모양을 제어 하 고 특정 작업이 발생 하면 컨테이너에 알리는 수 있습니다.  
   
@@ -472,7 +473,7 @@ LPFONTDISP AmbientFont();
 ### <a name="return-value"></a>반환 값  
  컨테이너의 앰비언트 글꼴 디스패치 인터페이스에 대 한 포인터입니다. 기본값은 **NULL**합니다. 반환 되는 같지 않은 경우 **NULL**를 호출 하 여 글꼴을 해제 해야 해당 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) 멤버 함수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  앰비언트 글꼴 속성이 고 컨테이너에 의해 정의 되 고 모든 컨트롤에 사용할 수입니다. Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor  
@@ -485,7 +486,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="return-value"></a>반환 값  
  컨테이너의 앰비언트 전경색 속성에 있는 경우의 현재 값입니다. 지원 되지 않는 경우이 함수는 Windows 시스템에서 정의한 텍스트 색을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  앰비언트 전경색 속성 모든 컨트롤에 사용할 수 있으며 컨테이너에 의해 정의 됩니다. Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambientlocaleid"></a>COleControl::AmbientLocaleID  
@@ -498,7 +499,7 @@ LCID AmbientLocaleID();
 ### <a name="return-value"></a>반환 값  
  있는 경우 컨테이너의 LocaleID 속성의 값입니다. 이 속성이 지원 되지 않는 경우이 함수는 0을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤 특정 로캘에 대 한 해당 사용자 인터페이스에 맞게 LocaleID를 사용할 수 있습니다. Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
@@ -515,7 +516,7 @@ short AmbientAppearance();
   
 - **1** 3D 모양  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  현재 값을 검색 하려면이 함수를 호출 하는 **DISPID_AMBIENT_APPEARANCE** 컨트롤에 대 한 속성입니다.  
   
 ##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
@@ -529,7 +530,7 @@ CString AmbientScaleUnits();
  컨테이너의 앰비언트 ScaleUnits를 포함 하는 문자열입니다. 이 속성이 지원 되지 않는 경우이 함수는 길이가 0 인 문자열을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 위치 또는 트윕 또는 센티미터 선택한 단위도 레이블이 지정 된 크기를 표시 하는 컨테이너의 앰비언트 ScaleUnits 속성을 사용할 수 있습니다. Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
+ 위치 또는 선택한 단위 트윕 또는 센티미터도 레이블이 지정 된 크기를 표시 하는 컨테이너의 앰비언트 ScaleUnits 속성을 사용할 수 있습니다. Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
  컨테이너 자체 활성화 된 경우에 대 한 잡기 핸들을 표시 하도록 컨트롤을 허용 하는지 여부를 결정 합니다.  
@@ -541,7 +542,7 @@ BOOL AmbientShowGrabHandles();
 ### <a name="return-value"></a>반환 값  
  잡기 핸들을 표시 해야 하면 0이 아닌 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0이 아닌 값을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
@@ -552,9 +553,9 @@ BOOL AmbientShowHatching();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 빗살 무늬로 요소가 표시 되 면 0이 아닌 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0이 아닌 값을 반환 합니다.  
+ 교차 무늬 패턴 요소가 표시 되 면 0이 아닌 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0이 아닌 값을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Note 컨테이너에이 속성을 지원할 필요가 없습니다.  
   
 ##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
@@ -602,7 +603,7 @@ BOOL AmbientUserMode();
 ### <a name="return-value"></a>반환 값  
  컨테이너 사용자 모드에 있으면 0이 아닌 그렇지 않으면 0 (디자인 모드에서)입니다. 이 속성이 지원 되지 않는 경우이 함수는 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  예를 들어 한 컨테이너를 설정할 수 있습니다이 **FALSE** 디자인 모드에서.  
   
 ##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
@@ -634,7 +635,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
  변경 될 수 있습니다. 0이 아닌 그렇지 않으면 0입니다. 기본값은 0이 아닌 합니다.  
   
 ### <a name="remarks"></a>설명  
- 권한이 거부 되 면 컨트롤 속성 변경의 값을 수 해야 합니다. 구분 하거나 속성 값을 변경 하려고 하는 작업에 실패 하 여이 작업을 수행할 수 있습니다.  
+ 권한이 거부 되 면 컨트롤의 속성 변경 하는 값을 수 해야 합니다. 구분 하거나 속성 값을 변경 하려고 하는 작업에 실패 하 여이 작업을 수행할 수 있습니다.  
   
 ##  <a name="clienttoparent"></a>COleControl::ClientToParent  
  변환의 좌표 `pPoint` 부모 좌표에 있습니다.  
@@ -652,7 +653,7 @@ virtual void ClientToParent(
  `pPoint`  
  부모 (컨테이너)의 좌표로 변환 하는 OLE 클라이언트 영역 지점에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  입력에 `pPoint` (컨트롤 클라이언트 영역의 왼쪽된 위 모퉁이) OLE 컨트롤 클라이언트 영역의 원점을 기준으로 합니다. 출력에서 `pPoint` 부모 (컨테이너의 왼쪽된 위 모서리)의 시작에 상대적입니다.  
   
 ##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect  
@@ -697,7 +698,7 @@ void ControlInfoChanged();
  새로운 집합이 니모닉 호출 하 여 컨트롤의 컨테이너가이 알림을 받으면 가져옵니다 [IOleControl::GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730)합니다. 컨테이너를이 알림에 응답 하는 데 필요 없는 참고 합니다.  
   
 ##  <a name="displayerror"></a>COleControl::DisplayError  
- (없는 경우 이벤트 처리기에 오류가 표시 되는 표시 않았습니다.) 스톡 오류 이벤트가 처리 된 후 프레임 워크에서 호출 됩니다.  
+ (없는 경우 이벤트 처리기에 오류가 표시 되는 억제에) 스톡 오류 이벤트가 처리 된 후 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void DisplayError(
@@ -722,9 +723,9 @@ virtual void DisplayError(
  오류에 대 한 설명을 포함 하는 도움말 파일의 이름입니다.  
   
  `nHelpID`  
- 도움말 컨텍스트 ID 보고 된 오류입니다.  
+ 도움말 컨텍스트 ID 보고 되 고 오류가 발생 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 포함 된 오류 설명을 포함 하는 메시지 상자를 표시 하는 기본 동작 `lpszDescription`합니다.  
   
  오류가 표시 되는 방식을 사용자 지정 하려면이 함수를 재정의 합니다.  
@@ -736,7 +737,7 @@ virtual void DisplayError(
 void DoClick();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  재정의 가능한 `COleControl::OnClick` 멤버 함수를 호출할지 재고 이벤트가 발생 합니다, 컨트롤에서 지원 되는 경우 클릭 합니다.  
   
  이 함수에서 지원 되는 `COleControl` 라는 DoClick 스톡 방법으로 기본 클래스입니다. 자세한 내용은 문서 참조 [ActiveX 컨트롤: 메서드](../../mfc/mfc-activex-controls-methods.md)합니다.  
@@ -752,7 +753,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
  `pPX`  
  에 대 한 포인터는 `CPropExchange` 개체입니다. 프레임 워크는 해당 방향을 포함 해 서 속성 교환의 컨텍스트를 설정 하기 위해이 개체를 제공 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 일반적으로을 호출 하 여 **PX_** 를 로드 하거나 OLE 컨트롤의 특정 사용자 정의 속성을 저장 하는 함수 패밀리입니다.  
   
  이 함수의 재정의 된 버전에서 지 원하는 스톡 속성을 serialize 컨트롤 마법사가 사용 되지 않은 경우 OLE 컨트롤 프로젝트를 만들려면 `COleControl` 기본 클래스 함수를 호출 하 여 `COleControl::DoPropExchange`합니다. OLE 컨트롤에 사용자 정의 속성을 추가 하려면 새 속성을 직렬화 하는 데이 함수를 수정 해야 합니다. Serialization 중에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 직렬화](../../mfc/mfc-activex-controls-serializing.md)합니다.  
@@ -773,7 +774,7 @@ void DoSuperclassPaint(
  `rcBounds`  
  그릴 컨트롤은 영역입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  비활성 OLE 컨트롤의 그리기를 올바르게 처리 하려면이 함수를 호출 합니다. OLE 하위 클래스는 Windows 컨트롤을 제어 하 고 호출 해야 하는 경우에이 함수를 사용 해야는 `OnDraw` 컨트롤의 기능입니다.  
   
  이 함수와 Windows 컨트롤 서브클래싱에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: Windows 컨트롤 서브클래싱](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)합니다.  
@@ -794,7 +795,7 @@ void DrawContent(
  `rc`  
  에 그릴 사각형 영역입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수 직접 호출 하는 재정의 가능한 `OnDraw` 함수입니다.  
   
 ##  <a name="drawmetafile"></a>COleControl::DrawMetafile  
@@ -820,8 +821,8 @@ void DrawMetafile(
 void EnableSimpleFrame();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 특성에는 다른 컨트롤의 시각적 포함 하지만 그렇지 않습니다 OLE 포함을 지원 하도록 제어할 수 있습니다. 내 여러 컨트롤이 포함 된 그룹 상자 예로 들 수 있습니다. 이러한 컨트롤에 포함 된 OLE 되지 않습니다. 하지만 동일한 그룹 상자도 표시 됩니다.  
+### <a name="remarks"></a>설명  
+ 이 특성에는 다른 컨트롤의 시각적 포함 하지만 그렇지 않습니다 OLE 포함을 지원 하도록 제어할 수 있습니다. 내 여러 컨트롤이 포함 된 그룹 상자 예로 들 수 있습니다. 이러한 컨트롤은 OLE, 포함 하지 않는 동일한 그룹 상자에서 합니다.  
   
 ##  <a name="exchangeextent"></a>COleControl::ExchangeExtent  
  직렬화 또는 컨트롤의 범위의 상태를 초기화 합니다 (해당 차원에서 **HIMETRIC** 단위)입니다.  
@@ -837,7 +838,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 일반적으로의 기본 구현에서 호출 `COleControl::DoPropExchange`합니다.  
   
 ##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
@@ -851,7 +852,7 @@ void ExchangeStockProps(CPropExchange* pPX);
  `pPX`  
  에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체입니다. 프레임 워크는 해당 방향을 포함 해 서 속성 교환의 컨텍스트를 설정 하기 위해이 개체를 제공 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 일반적으로의 기본 구현에서 호출 `COleControl::DoPropExchange`합니다.  
   
 ##  <a name="exchangeversion"></a>COleControl::ExchangeVersion  
@@ -877,7 +878,7 @@ BOOL ExchangeVersion(
 ### <a name="return-value"></a>반환 값  
  Nonzero 성공 함수 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  일반적으로 첫 번째 함수는 컨트롤의 재정의 의해 호출 됩니다 `COleControl::DoPropExchange`합니다. 를 로드할 때이 함수는 영구 데이터의 버전 번호 읽고의 version 특성 설정는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체를 적절 하 게 합니다. 를 저장할 때이 함수는 영구 데이터의 버전 번호를 씁니다.  
   
  지 속성 및 버전 관리에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 직렬화](../../mfc/mfc-activex-controls-serializing.md)합니다.  
@@ -889,7 +890,7 @@ BOOL ExchangeVersion(
 void FireClick();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  클릭 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 지도 있어야 재고 클릭 이벤트를 정의 합니다.  
@@ -901,10 +902,10 @@ void FireClick();
 void FireDblClick();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
- 컨트롤의 이벤트 맵 매크로나 이벤트를 발생의 자동 시작에 정의 된 스톡 매크로나 이벤트가 있어야 합니다.  
+ 매크로나 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 매크로나 이벤트를 있어야 합니다.  
   
 ##  <a name="fireerror"></a>COleControl::FireError  
  스톡 오류 이벤트를 발생 시킵니다.  
@@ -926,7 +927,7 @@ void FireError(
  `nHelpID`  
  보고 된 오류 도움말 ID입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 오류가 사용자 컨트롤 내에서 발생 했습니다 사용자 코드에서 적절 한 위치에 신호 하는 방법을 제공 합니다. 클릭 이나 MouseMove, 같은 다른 스톡 이벤트와 달리 프레임 워크에서 오류 발생 하지 않습니다.  
   
  속성 get 함수, 속성 집합 함수 또는 자동화 메서드 작업 중 발생 하는 오류를 보고 하려면 호출 [COleControl::ThrowError](#throwerror)합니다.  
@@ -999,7 +1000,7 @@ void FireKeyDown(
   
 - **ALT_MASK** 작업 중의 ALT 키를 눌렀습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  KeyDown 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 KeyDown 이벤트를 있어야 합니다.  
@@ -1015,7 +1016,7 @@ void FireKeyPress(USHORT* pnChar);
  `pnChar`  
  누른 키의 문자 값에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  이벤트의 받는 사람을 수정할 수 있습니다 `pnChar`, 예를 들어 모든 소문자를 대문자로 변환 합니다. 수정 된 문자를 검사 하려는 경우 재정의 `OnKeyPressEvent`합니다.  
@@ -1044,7 +1045,7 @@ void FireKeyUp(
   
 - **ALT_MASK** 작업 중의 ALT 키를 눌렀습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  KeyUp 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 KeyUp 이벤트를 있어야 합니다.  
@@ -1085,7 +1086,7 @@ void FireMouseDown(
  *y*  
  마우스 단추를 누를 때 커서의 y 좌표입니다. 컨트롤 창의 왼쪽 위 모퉁이 기준으로 시작 하는 좌표가입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  MouseDown 이벤트 적용 되려면의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 MouseDown 이벤트를 있어야 합니다.  
@@ -1126,7 +1127,7 @@ void FireMouseMove(
  *y*  
  커서의 y 좌표입니다. 컨트롤 창의 왼쪽 위 모퉁이 기준으로 시작 하는 좌표가입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
  MouseMove 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 MouseMove 이벤트를 있어야 합니다.  
@@ -1167,10 +1168,10 @@ void FireMouseUp(
  *y*  
  마우스 단추를 놓았음을 때 커서의 y 좌표입니다. 컨트롤 창의 왼쪽 위 모퉁이 기준으로 시작 하는 좌표가입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 이벤트는 사용자 지정 이벤트로 정의 된 경우 이벤트가 발생 하는 시기를 결정 합니다.  
   
- 컨트롤의 이벤트 맵 MouseUp 이벤트를 발생의 자동 시작에 정의 된 스톡 MouseUp 이벤트가 있어야 합니다.  
+ MouseUp 이벤트를 발생의 자동 시작을 위한 컨트롤의 이벤트 맵에 정의 된 스톡 MouseUp 이벤트를 있어야 합니다.  
   
 ##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
  컨트롤의 준비 상태의 현재 값을 사용 하 여 이벤트를 발생 시킵니다.  
@@ -1179,7 +1180,7 @@ void FireMouseUp(
 void FireReadyStateChange();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  준비 상태는 다음 값 중 하나일 수 있습니다.  
   
  **READYSTATE_UNINITIALIZED**  
@@ -1220,7 +1221,7 @@ virtual DWORD GetActivationPolicy();
  **POINTERINACTIVE_ACTIVATEONDRAG**  
  개체 준비 끄는 동안 마우스 위로 끌 때 활성화 되어야 하 고 작업을 삭제 해야 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  경우는 `IPointerInactive` 인터페이스를 사용 하면 컨테이너를 위임 하 게 `WM_SETCURSOR` 및 `WM_MOUSEMOVE` 또한 메시지를 합니다. `COleControl`이 인터페이스의 구현을 조정 마우스 좌표를 적절히 후 컨트롤의 메시지 맵을 통해 이러한 메시지를 전달 하는 합니다.  
   
  컨테이너가 받는 때마다는 `WM_SETCURSOR` 또는 `WM_MOUSEMOVE` 메시지 지 원하는 비활성 개체 위에 마우스 포인터를 `IPointerInactive`, 호출 해야 `GetActivationPolicy` 인터페이스와 반환 플래그에서는 **POINTERINACTIVE** 열거 합니다.  
@@ -1279,7 +1280,7 @@ BOOL GetAmbientProperty(
 ### <a name="return-value"></a>반환 값  
  앰비언트 속성이 지원 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용 하는 경우 `GetAmbientProperty` 앰비언트 DisplayName 및 ScaleUnits 속성을 검색 하려면 설정 `vtProp` 를 `VT_BSTR` 및 `pvProp` 를 **CString\***합니다. 앰비언트 글꼴 속성을 검색 하는 경우 설정 `vtProp` 를 **VT_FONT** 및 `pvProp` 를 **LPFONTDISP\***합니다.  
   
  함수가 이미 제공 일반적인 앰비언트 속성에 대 한 같은 참고 [AmbientBackColor](#ambientbackcolor) 및 [AmbientFont](#ambientfont)합니다.  
@@ -1292,7 +1293,7 @@ short GetAppearance ();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 값으로 현재 모양을 설정을 지정는 **짧은** ( `VT_I2`) 값을 성공 하는 경우. 컨트롤의 모양을 플랫과 1 경우에 컨트롤의 모양을 3D 하는 경우이 값은 0입니다.  
+ 반환 값으로 현재 모양 설정을 지정는 **짧은** ( `VT_I2`) 값을 성공 하는 경우. 컨트롤의 모양을 플랫과 1 경우에 컨트롤의 모양을 3D 하는 경우이 값은 0입니다.  
   
 ##  <a name="getbackcolor"></a>COleControl::GetBackColor  
  컨트롤의 스톡 BackColor 속성의 Get 함수를 구현합니다.  
@@ -1326,7 +1327,7 @@ CWnd* GetCapture();
   
  그렇지 않으면 반환 된 `CWnd` 마우스 캡처가 있는 개체 (동일 `CWnd::GetCapture`).  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  활성화 된 창 없는 컨트롤이 마우스를 받을 때 캡처 [SetCapture](#setcapture) 호출 됩니다.  
   
 ##  <a name="getclassid"></a>COleControl::GetClassID  
@@ -1384,7 +1385,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="return-value"></a>반환 값  
  해당 컨테이너에서 컨트롤의 현재 클라이언트 사이트에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환된 된 포인터의 인스턴스를 가리키는 `IOleClientSite`합니다. `IOleClientSite` 컨테이너에 의해 구현 된 인터페이스는 해당 컨텍스트 개체의 보기: 문서에서 해당 저장소, 사용자 인터페이스 및 기타 리소스를 가져오는 위치에 고정 되어 있기 때문입니다.  
   
 ##  <a name="getcontrolflags"></a>COleControl::GetControlFlags  
@@ -1447,7 +1448,7 @@ void GetControlSize(
  *pcy*  
  컨트롤의 높이 픽셀 단위로 지정 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  제어 창에 대 한 모든 좌표는 컨트롤의 왼쪽 위 모퉁이 기준으로 하는 참고 합니다.  
   
 ##  <a name="getdc"></a>COleControl::GetDC  
@@ -1470,12 +1471,12 @@ CDC* GetDC(
   
 - **OLEDC_PAINTBKGND** 컨테이너 DC를 반환 하기 전에 배경을 칠하는 요청 합니다. 개체는 투명 한 배경으로 영역을 다시 그리기 위한 DC가 요청 하는 경우이 플래그를 사용 해야 합니다.  
   
-- **OLEDC_OFFSCREEN** 개체 하지 않고자 한다면 다음 화면으로 복사 해야 하는 화면에서 벗어난 비트맵으로 렌더링 하는 컨테이너에 알립니다. 개체는 그리기 작업을 수행 하려고 하는 많은 깜빡임을 생성할 때이 플래그를 사용 해야 합니다. 컨테이너는 여부이 요청을 처리할 수 있습니다. 그러나이 플래그를 설정 하지 않으면 컨테이너 합니다 다시 전달할는 화면 DC입니다. 이렇게 하면 선택 영역을 보여 주는 같은 직접 화면 연산을 수행 하는 개체 (통해는 **XOR** 작업).  
+- **OLEDC_OFFSCREEN** 개체 하지 않고자 한다면 다음 화면으로 복사 해야 하는 화면에서 벗어난 비트맵으로 렌더링 하는 컨테이너에 알립니다. 개체는 그리기 작업을 수행 하려고 하는 많은 깜빡임을 생성할 때이 플래그를 사용 해야 합니다. 컨테이너는 여부이 요청을 처리할 수 있습니다. 그러나이 플래그를 설정 하지 않으면 컨테이너 해야 다시 전달할는 화면 DC입니다. 이렇게 하면 선택 영역을 보여 주는 같은 직접 화면 연산을 수행 하는 개체 (통해는 **XOR** 작업).  
   
 ### <a name="return-value"></a>반환 값  
  컨테이너에 대 한 디스플레이 장치 컨텍스트에 대 한 포인터 `CWnd` 클라이언트 영역 경우 성공이 고; 그렇지 않으면, 반환 값은 **NULL**합니다. 디스플레이 장치 컨텍스트를 컨테이너의 창의 클라이언트 영역에 그릴 이후의 GDI 함수에서 사용할 수 있습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  [ReleaseDC](#releasedc) 그리기 후 컨텍스트를 해제 하기 위해 멤버 함수를 호출 해야 합니다. 호출할 때 `GetDC`, 개체에 자신의 클라이언트 좌표에서 그리기를 만들려는 사각형을 전달 합니다. `GetDC`이러한 컨테이너 클라이언트 영역 좌표로 변환합니다. 개체 크기를 검색할 수 있습니다 클라이언트 영역 직사각형 자체 보다 큰 원하는 그리기 사각형을 요청 하지 해야 [GetClientRect](#getclientrect)합니다. 이 위치에 의도 하지 않은 실수로 그리기에서 개체 수 없습니다.  
   
 ##  <a name="getenabled"></a>COleControl::GetEnabled  
@@ -1504,7 +1505,7 @@ LPDISPATCH GetExtendedControl();
  이 함수를 호출 하는 함수는 개체와 함께 완료 되 면 포인터를 해제 하는 일을 담당 합니다. Note 컨테이너에이 개체를 지원할 필요가 없습니다.  
   
 ##  <a name="getfocus"></a>COleControl::GetFocus  
- 결정 여부는 `COleControl` 포커스가 개체입니다.  
+ 결정 여부는 `COleControl` 개체에 포커스가 있습니다.  
   
 ```  
 CWnd* GetFocus();
@@ -1515,7 +1516,7 @@ CWnd* GetFocus();
   
  그렇지 않으면 반환 된 `CWnd` 포커스가 있는 개체 (동일 `CWnd::GetFocus`) 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  활성화 된 창 없는 컨트롤의 포커스를 받을 때 [SetFocus](#setfocus) 호출 됩니다.  
   
 ##  <a name="getfont"></a>COleControl::GetFont  
@@ -1528,7 +1529,7 @@ LPFONTDISP GetFont();
 ### <a name="return-value"></a>반환 값  
  컨트롤의 스톡 글꼴 속성의 글꼴 디스패치 인터페이스에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참고 호출자가 완료 되 면 개체를 해제 해야 합니다. 컨트롤의 구현 내에서 사용 하 여 `InternalGetFont` 컨트롤의 스톡 글꼴 개체에 액세스 합니다. 컨트롤의 글꼴을 사용 하 여에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: ActiveX 컨트롤의 글꼴을 사용 하 여](../../mfc/mfc-activex-controls-using-fonts.md)합니다.  
   
 ##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
@@ -1588,7 +1589,7 @@ virtual void GetMessageString(
  `rMessage`  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체를 통해 문자열로 반환 됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  메뉴 항목을 강조 표시 된 동안에 상태 표시줄에 표시 하기 위해 메시지를 가져오는 데 수 수 있습니다. 로 식별 되는 문자열 리소스를 로드 하려고 할 기본 구현은 `nID`합니다.  
   
 ##  <a name="getnotsupported"></a>COleControl::GetNotSupported  
@@ -1598,7 +1599,7 @@ virtual void GetMessageString(
 void GetNotSupported();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤의 사용자가 속성의 검색 프로그램이 지원 되지 않는 모든 속성의 Get 함수 대신이 함수를 호출 합니다. 한 가지 예는 쓰기 전용 속성 것입니다.  
   
 ##  <a name="getreadystate"></a>COleControl::GetReadyState  
@@ -1626,7 +1627,7 @@ long GetReadyState();
  `READYSTATE_COMPLETE`  
  컨트롤에 모든 데이터  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  대부분의 단순 컨트롤 구분할 필요가 없는 **LOADED** 및 `INTERACTIVE`합니다. 그러나 데이터 경로 속성을 지 원하는 컨트롤을 최소한 일부 데이터를 비동기적으로 받을 때까지 대화형 ´ ï 수 있습니다. 컨트롤은 가능한 한 빨리 대화형 되도록 시도해 야 합니다.  
   
 ##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer  
@@ -1657,7 +1658,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  에 대 한 포인터는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `GetStockTextMetrics` 함수 초기화는 `TEXTMETRIC` 가리키는 구조 `lptm` 성공 하면 유효한 메트릭 정보 또는 채우기 성공 하지 않은 경우에 0이 포함 된 구조입니다. 대신이 함수를 사용 하 여 [GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941) 때 컨트롤에 포함 된 모든 OLE 개체와 같은 수 있기 때문에 컨트롤을 그리기 하는 데 필요한을 메타 파일로 렌더링 합니다.  
   
  `TEXTMETRIC` 기본 글꼴에 대 한 구조 새로 고칠 때는 `SelectStockFont` 함수를 호출 합니다. 제공 된 정보를 보장 하기 스톡 글꼴을 선택 하는 유효한 후에이 함수를 호출 해야 합니다.  
@@ -1688,8 +1689,8 @@ virtual IDropTarget* GetWindowlessDropTarget();
 ### <a name="return-value"></a>반환 값  
  개체의에 대 한 포인터 `IDropTarget` 인터페이스입니다. 창 없는 개체를 등록할 수 없습니다.가 창이 되어 있지 않은 한 `IDropTarget` 인터페이스입니다. 그러나 끌어서 놓기 참여할 수 있도록 창 없는 개체도 및 수행할 수 인터페이스를 구현에서 반환 `GetWindowlessDropTarget`합니다.  
   
-### <a name="remarks"></a>주의  
- 일반적으로 이를 위해서는 컨트롤의 창이 놓기 대상으로 등록되어야 합니다. 하지만 컨트롤에는 고유의 창이, 없으므로 컨테이너가 사용할 고유 창을 놓기 대상으로 합니다. 컨트롤의 구현을 제공 해야 단순히는 `IDropTarget` 인터페이스를 컨테이너 호출을 위임할 수 적절 한 시간입니다. 예:  
+### <a name="remarks"></a>설명  
+ 일반적으로 이를 위해서는 컨트롤의 창이 놓기 대상으로 등록되어야 합니다. 하지만 컨트롤에는 고유의 창이, 없으므로 컨테이너가 사용할 고유 창을 놓기 대상으로 합니다. 컨트롤의 구현을 제공 해야 단순히는 `IDropTarget` 인터페이스를 컨테이너 호출을 위임할 수 적절 한 시간입니다. 예를 들면 다음과 같습니다.  
   
  [!code-cpp[NVC_MFCAxCtl # 2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
@@ -1709,7 +1710,7 @@ void InitializeIIDs(
  *piidEvents*  
  컨트롤의 이벤트 인터페이스의 인터페이스 ID에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤을 사용 하는 Id 인터페이스의 기본 클래스를 알리기 위해 컨트롤의 생성자에서이 함수를 호출 합니다.  
   
 ##  <a name="internalgetfont"></a>COleControl::InternalGetFont  
@@ -1758,7 +1759,7 @@ void InternalSetReadyState(long lNewReadyState);
  `READYSTATE_COMPLETE`  
  컨트롤에 모든 데이터  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  대부분의 단순 컨트롤 구분할 필요가 없는 **LOADED** 및 `INTERACTIVE`합니다. 그러나 데이터 경로 속성을 지 원하는 컨트롤을 최소한 일부 데이터를 비동기적으로 받을 때까지 대화형 ´ ï 수 있습니다. 컨트롤은 가능한 한 빨리 대화형 되도록 시도해 야 합니다.  
   
 ##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl  
@@ -1777,7 +1778,7 @@ void InvalidateControl(
  `bErase`  
  업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 지울 수 있는지 여부를 지정 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  경우 `lpRect` 에 **NULL** 값, 전체 컨트롤 다시 그려집니다. 경우 `lpRect` 않습니다 **NULL**,이 컨트롤의 사각형을 무효화할 수에 부분을 나타냅니다. 컨트롤에 창이 없습니다 또는 현재 활성 상태가 아니거나, 사각형은 무시 됩니다 한 경우 클라이언트 사이트의 호출 [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337) 멤버 함수입니다. 대신이 함수를 사용 하 여 `CWnd::InvalidateRect` 또는 `InvalidateRect`합니다.  
   
 ##  <a name="invalidatergn"></a>COleControl::InvalidateRgn  
@@ -1794,7 +1795,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
  `bErase`  
  무효화 된 영역 내에서 배경 지울 수 있는지 여부를 지정 합니다. 경우 **TRUE**, 백그라운드 삭제 됩니다. 경우 **FALSE**, 백그라운드 그대로 유지 됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨테이너 내에서 창 없는 컨트롤을 다시 그릴 데 될 수 있습니다. 업데이트 영역에 다른 모든 영역 함께 무효화 된 영역을 그려야 하는 경우 표시 되어 다음 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지가 전송 됩니다.  
   
  경우 `bErase` 은 **TRUE** 일부나 업데이트 영역에 대 한 특정된 부분에 뿐 아니라 전체 지역에 배경 지워집니다.  
@@ -1832,8 +1833,8 @@ BOOL IsInvokeAllowed(DISPID dispid);
 ### <a name="return-value"></a>반환 값  
  컨트롤이 초기화 된; 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크의 구현 **idispatch:: Invoke** 호출 **IsInvokeAllowed** 지정된 함수 인지 확인 하려면 (으로 식별 `dispid`) 호출 될 수 있습니다. OLE 컨트롤에 대 한 기본 동작은 자동화 메서드 컨트롤이 초기화 된; 경우에 호출할 수 있도록 하는 것 그러나 **IsInvokeAllowed** 가상 함수가 고 (예를 들어 때 컨트롤이 자동화 서버로 사용 되 고) 필요한 경우 재정의 된 수 있습니다. 자세한 내용은 Q166472, 기술 자료 문서를 참조 하십시오. "방법: 자동화 서버로 OLE 컨트롤을 사용 합니다." 기술 자료 문서 또는 MSDN Library Visual Studio 설명서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
+### <a name="remarks"></a>설명  
+ 프레임 워크의 구현 **idispatch:: Invoke** 호출 **IsInvokeAllowed** 지정된 함수 인지 확인 하려면 (으로 식별 `dispid`) 호출 될 수 있습니다. OLE 컨트롤에 대 한 기본 동작은 자동화 메서드 컨트롤이 초기화 된; 경우에 호출할 수 있도록 하는 것 그러나 **IsInvokeAllowed** 가상 함수가 고 (예를 들어 때 컨트롤이 자동화 서버로 사용 되 고) 필요한 경우 재정의 된 수 있습니다. 자세한 내용은 Q166472, 기술 자료 문서를 참조 하십시오. "방법: 자동화 서버로 OLE 컨트롤을 사용 합니다." 기술 자료 문서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  컨트롤의 상태가 수정 되었음을 확인 합니다.  
@@ -1845,7 +1846,7 @@ BOOL IsModified();
 ### <a name="return-value"></a>반환 값  
  컨트롤의 상태가 마지막으로 저장 된; 이후 수정 된 경우 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤의 상태는 속성 값이 변경 될 때 수정 됩니다.  
   
 ##  <a name="isoptimizeddraw"></a>Colecontrol:: Isoptimizeddraw  
@@ -1858,7 +1859,7 @@ BOOL IsOptimizedDraw();
 ### <a name="return-value"></a>반환 값  
  **True 이면** 고, 그렇지 않으면 현재 그리기 작업에 대 한 그리기 최적화 된 컨테이너에서 지 원하는 경우 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  최적화 된 그리기 지원 되 면 다음 컨트롤 선택할 필요는 없습니다 (예: 펜, 브러시, 글꼴, 등)에 이전 개체 장치 컨텍스트로 그리기 완료 되 면 합니다.  
   
 ##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
@@ -1871,7 +1872,7 @@ virtual BOOL IsSubclassedControl();
 ### <a name="return-value"></a>반환 값  
  서브클래싱된 컨트롤; 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수를 재정의 하 고 반환 해야 **TRUE** 프로그램 OLE Windows 컨트롤 하위 클래스를 제어 합니다.  
   
 ##  <a name="load"></a>COleControl::Load  
@@ -1897,7 +1898,7 @@ BOOL LockInPlaceActive(BOOL bLock);
   
 ### <a name="parameters"></a>매개 변수  
  `bLock`  
- **True 이면** 잠글; 컨트롤의 내부 활성 상태입니다 **FALSE** 경우 잠금이 해제 되도록 합니다.  
+ **True 이면** 잠글; 컨트롤의 내부 활성 상태입니다 **FALSE** 잠금 해제 하는 경우.  
   
 ### <a name="return-value"></a>반환 값  
  잠금에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
@@ -1923,7 +1924,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
 virtual void OnAppearanceChanged ();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성이 변경 된 후 알림 하려는 경우이 함수를 재정의 합니다. 기본 구현 호출 `InvalidateControl`합니다.  
   
 ##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
@@ -1933,7 +1934,7 @@ virtual void OnAppearanceChanged ();
 virtual void OnBackColorChanged();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성이 변경 된 후 알림 하려는 경우이 함수를 재정의 합니다. 기본 구현 호출 `InvalidateControl`합니다.  
   
 ##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
@@ -1943,7 +1944,7 @@ virtual void OnBackColorChanged();
 virtual void OnBorderStyleChanged();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현 호출 `InvalidateControl`합니다.  
   
  이 속성이 변경 된 후 알림 하려는 경우이 함수를 재정의 합니다.  
@@ -1965,7 +1966,7 @@ virtual void OnClick(USHORT iButton);
   
 - **RIGHT_BUTTON** 마우스 오른쪽 단추를 클릭 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현 호출 `COleControl::FireClick`합니다.  
   
  수정 하거나 기본 처리를 확장 하려면이 멤버 함수를 재정의 합니다.  
@@ -1987,7 +1988,7 @@ virtual void OnClose(DWORD dwSaveOption);
   
 - `OLECLOSE_PROMPTSAVE`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본적으로 `OnClose` 가 수정 된 경우 컨트롤 개체를 저장 하 고 `dwSaveOption` 있거나 `OLECLOSE_SAVEIFDIRTY` 또는 `OLECLOSE_PROMPTSAVE`합니다.  
   
 ##  <a name="ondoverb"></a>COleControl::OnDoVerb  
@@ -2017,7 +2018,7 @@ virtual BOOL OnDoVerb(
 ### <a name="return-value"></a>반환 값  
  호출에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현에서는 사용 된 `ON_OLEVERB` 및 `ON_STDOLEVERB` 메시지를 호출 하 여 적절 한 함수를 확인 하려면 맵 항목입니다.  
   
  동사의 기본 처리를 변경 하려면이 함수를 재정의 합니다.  
@@ -2061,7 +2062,7 @@ virtual void OnDrawMetafile(
  `rcBounds`  
  테두리를 포함 하는 컨트롤의 사각형 영역입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현 호출은 [OnDraw](#ondraw) 함수입니다.  
   
 ##  <a name="onedit"></a>COleControl::OnEdit  
@@ -2082,7 +2083,7 @@ virtual BOOL OnEdit(
  컨트롤의 부모 창에 대 한 핸들입니다.  
   
  `lpRect`  
- 컨테이너의 컨트롤에서 사용 하는 사각형에 대 한 포인터입니다.  
+ 사각형 컨테이너의 컨트롤에서 사용에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  호출에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
@@ -2090,7 +2091,7 @@ virtual BOOL OnEdit(
 ### <a name="remarks"></a>설명  
  컨트롤의 호출 것과 동일한 결과가 `OLEIVERB_UIACTIVATE` 동사입니다.  
   
- 이 함수에 대 한 처리기 함수로 일반적으로 사용 하는 `ON_OLEVERB` 메시지 맵 항목입니다. 이렇게 하면 컨트롤의 "개체" 메뉴에서 사용할 수 있는 "편집" 동사가 있습니다. 예:  
+ 이 함수에 대 한 처리기 함수로 일반적으로 사용 하는 `ON_OLEVERB` 메시지 맵 항목입니다. 이렇게 하면 컨트롤의 "개체" 메뉴에서 사용할 수 있는 "편집" 동사가 있습니다. 예를 들면 다음과 같습니다.  
   
  [!code-cpp[NVC_MFCAxCtl # 5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
@@ -2101,7 +2102,7 @@ virtual BOOL OnEdit(
 virtual void OnEnabledChanged();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성이 변경 된 후 알림 하려는 경우이 함수를 재정의 합니다. 기본 구현 호출 [InvalidateControl](#invalidatecontrol)합니다.  
   
 ##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
@@ -2118,7 +2119,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="return-value"></a>반환 값  
  동사는 사용할 수 있습니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현은 열거는 `ON_OLEVERB` 메시지 맵에 있습니다.  
   
  동사를 열거 하는 기본 방법을 변경 하려면이 함수를 재정의 합니다.  
@@ -2141,8 +2142,8 @@ virtual void OnEventAdvise(BOOL bAdvise);
 virtual void OnFontChanged();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 구현 호출 `COleControl::InvalidateControl`합니다. 경우 컨트롤이 Windows 컨트롤 서브클래싱은, 기본 구현도 보냅니다는 **WM_SETFONT** 메시지를 컨트롤의 창.  
+### <a name="remarks"></a>설명  
+ 기본 구현 호출 `COleControl::InvalidateControl`합니다. 기본 구현은 보냅니다 컨트롤이 Windows 컨트롤 서브클래싱은, 하는 경우는 **WM_SETFONT** 메시지를 컨트롤의 창.  
   
  이 속성이 변경 된 후 알림 하려는 경우이 함수를 재정의 합니다.  
   
@@ -2172,7 +2173,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
  `bFreeze`  
  **True 이면** 경우 컨트롤의 이벤트 처리 고정 되지 않았으면 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현은 아무 작업도 수행하지 않습니다.  
   
  이벤트 처리를 고정 하거나 고정 해제 하는 경우 추가 동작을 원하는 경우이 함수를 재정의 합니다.  
@@ -2216,7 +2217,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
  `pControlInfo`  
  에 대 한 포인터는 [한 채울 CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) 구조를 입력 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 정보는 컨트롤의 니모닉 키에 대 한 설명을 주로 이루어져 있습니다. 기본 구현 채우기 `pControlInfo` 기본 정보로 합니다.  
   
  사용자 컨트롤이 니모닉 키를 처리 해야 하는 경우이 함수를 재정의 합니다.  
@@ -2240,7 +2241,7 @@ virtual BOOL OnGetDisplayString(
 ### <a name="return-value"></a>반환 값  
  문자열에서 반환 되었습니다. 0이 아닌 *strValue;* 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤에 속성 값을 문자열로 바로 변환할 수 없습니다 및 컨테이너 공급 속성 브라우저에 표시 되는 속성의 값을 원하는 경우이 함수를 재정의 합니다.  
   
 ##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
@@ -2253,7 +2254,7 @@ virtual HMENU OnGetInPlaceMenu();
 ### <a name="return-value"></a>반환 값  
  컨트롤의 메뉴, 핸들 또는 **NULL** 컨트롤에 있는 경우 none입니다. 기본 구현은 반환 **NULL**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  / / OLE 리소스 병합에 대 한 자세한 내용은 문서 참조 [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
   
 ##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
@@ -2280,7 +2281,7 @@ virtual BOOL OnGetNaturalExtent(
  가리키는 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) 구조 개체의 크기를 반환할 대상 장치를 정의 합니다.  
   
  `hicTargetDev`  
- 가리키는 대상 장치에 대 한 컨텍스트 정보를 지정 된 `ptd` 개체가 장치 메트릭을 추출 수 및 장치 기능을 테스트 하는 매개 변수입니다. 경우 `ptd` 은 **NULL**, 해당 개체의 값을 무시 해야는 `hicTargetDev` 매개 변수입니다.  
+ 가리키는 대상 장치에 대 한 컨텍스트 정보를 지정는 `ptd` 개체가 장치 메트릭을 추출 수 및 장치 기능을 테스트 하는 매개 변수입니다. 경우 `ptd` 은 **NULL**, 해당 개체의 값을 무시 해야는 `hicTargetDev` 매개 변수입니다.  
   
  *pExtentInfo*  
  가리키는 **DVEXTENTINFO** 크기 조정 데이터를 지정 하는 구조입니다. **DVEXTENTINFO** 구조는:  
@@ -2336,7 +2337,7 @@ virtual BOOL OnGetPredefinedStrings(
  요소에 추가 된 경우 0이 아닌 `pStringArray` 및 `pCookieArray`합니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤 문자열로 나타낼 수 있는 가능한 값의 집합을 사용 하 여 속성에이 함수를 재정의 합니다. 에 추가 된 각 요소에 대 한 `pStringArray`, 해당 "쿠키" 요소를 추가 해야 *pCookieArray 합니다.* 이러한 "쿠키" 값에 프레임 워크에 의해 나중에 전달 될 수는 `COleControl::OnGetPredefinedValue` 함수입니다.  
+ 컨트롤에 문자열로 나타낼 수 있는 가능한 값의 집합을 가진 속성이 경우이 함수를 재정의 합니다. 에 추가 된 각 요소에 대 한 `pStringArray`, 해당 "쿠키" 요소를 추가 해야 *pCookieArray 합니다.* 이러한 "쿠키" 값에 프레임 워크에 의해 나중에 전달 될 수는 `COleControl::OnGetPredefinedValue` 함수입니다.  
   
 ##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
  미리 정의 된 재정의 하 여 이전에 반환 된 문자열 중 하나에 해당 하는 값을 얻기 위해 프레임 워크에서 호출 `COleControl::OnGetPredefinedStrings`합니다.  
@@ -2402,7 +2403,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
  `dwAspect`  
  `DWORD`폼 또는 측면을 설명 하는 개체의 표시 하는 합니다. 유효한 값은 열거형에서 가져온 [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) 또는 **DVASPECT2**:  
   
-- `DVASPECT_CONTENT`전체 개체의 경계 사각형입니다. 개체의 원점과 크기 같은에서 반환 되는 범위 내에서 왼쪽 위 모서리 **GetViewExtent***합니다.*  
+- `DVASPECT_CONTENT`전체 개체의 경계 사각형입니다. 개체의 원점과 크기가 같으면에서 반환 되는 범위 내에서 왼쪽 위 모서리 **GetViewExtent***합니다.*  
   
 - **DVASPECT_OPAQUE** 불투명 사각형 영역을 사용 하 여 개체 해당 사각형을 반환 합니다. 나머지는 실패 합니다.  
   
@@ -2476,7 +2477,7 @@ virtual void OnInactiveMouseMove(
  `dwKeyState`  
  키보드에서 키보드 보조 키의 현재 상태를 식별합니다. 유효한 값 플래그의 조합일 수 있으며 **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_BUTTON**, **MK_LBUTTON**, **MK_MBUTTON**, 및 **MK_RBUTTON**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Note 창의 클라이언트 좌표 (픽셀) 마우스 커서 위치를 전달 하 사용 됩니다. 이 가능도 동일한 좌표계에서 개체의 경계 사각형을 전달 하 여 합니다.  
   
 ##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
@@ -2535,7 +2536,7 @@ virtual void OnKeyDownEvent(
   
 - **ALT_MASK** 작업 중의 ALT 키를 눌렀습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이벤트는 발생 한 후 키 정보에 액세스 해야 하는 제어 하는 경우이 함수를 재정의 합니다.  
   
 ##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
@@ -2634,12 +2635,12 @@ virtual BOOL OnProperties(
  컨트롤의 부모 창에 대 한 핸들입니다.  
   
  `lpRect`  
- 컨테이너의 컨트롤에서 사용 하는 사각형에 대 한 포인터입니다.  
+ 사각형 컨테이너의 컨트롤에서 사용에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  호출에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현은 모달 속성 대화 상자를 표시 합니다.  
   
  또한 컨트롤의 속성 페이지의 표시 되도록이 함수를 사용할 수 있습니다. 호출 하는 `OnProperties` 컨트롤의 부모에 대 한 핸들을 전달 함수는 `hWndParent` 매개 변수입니다. 이 경우의 값은 `lpMsg` 및 `lpRect` 매개 변수가 무시 됩니다.  
@@ -2681,9 +2682,9 @@ virtual BOOL OnQueryHitPoint(
 - **HITRESULT_HIT** `ptlLoc` 내 개체의 이미지입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 적중 횟수 결과 성공적으로 반환 하는 경우 0이 아닌 그렇지 않으면 0입니다. 적중 횟수는 OLE 컨트롤의 표시 영역으로 겹쳐진 부분입니다.  
+ 적중된 결과 성공적으로 반환 하는 경우 0이 아닌 그렇지 않으면 0입니다. 적중은 OLE 컨트롤의 표시 영역으로 겹쳐진 부분입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  지정 된 개체의 표시 사각형에 겹치는 지 여부를 쿼리 (지점에 도달). `QueryHitPoint`사각형이 아닌 개체에 대 한 적중 테스트를 재정의할 수 있습니다.  
   
 ##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
@@ -2719,7 +2720,7 @@ virtual BOOL OnQueryHitRect(
 - **HITRESULT_HIT** 사각형에 하나 이상의 점에 개체에 적중 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 적중 횟수 결과 성공적으로 반환 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+ 적중된 결과 성공적으로 반환 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  개체의 표시 사각형 (사각형에 도달) 지정된 된 사각형의 한 지점 겹치는 지 여부를 쿼리 합니다. `QueryHitRect`사각형이 아닌 개체에 대 한 적중 테스트를 재정의할 수 있습니다.  
@@ -2743,10 +2744,10 @@ virtual BOOL OnRenderData(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  지정 된 형식을 사용 하 여 컨트롤 개체에 이전에 배치 하나는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 또는 [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) 지연 된 렌더링에 대 한 멤버 함수입니다. 이 함수의 기본 구현을 호출 `OnRenderFileData` 또는 `OnRenderGlobalData`각각 제공 되는 저장소 미디어로 파일 또는 메모리 경우. 요청 된 형식이 `CF_METAFILEPICT` 또는 영구 속성 형식, 기본 구현은 적절 한 데이터를 렌더링 하 고 0이 아닌 값을 반환 합니다. 그렇지 않으면 0을 반환 하는 아무 작업도 수행 합니다.  
   
- 경우 *tymed-> lpStgMedium* 은 **TYMED_NULL**, **STGMEDIUM** 할당 되 고에 지정 된 대로 입력 해야 *tymed-> lpFormatEtc*합니다. 그렇지 않은 경우 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
+ 경우 *lpStgMedium tymed->* 은 **TYMED_NULL**, **STGMEDIUM** 할당 되 고에 지정 된 대로 입력 해야 *lpFormatEtc tymed->*합니다. 그렇지 않은 경우 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
   
  요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 데이터가 작고 크기가 고정 되어 있으면 재정의 `OnRenderGlobalData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
   
@@ -2771,8 +2772,8 @@ virtual BOOL OnRenderFileData(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식을 사용 하 여 컨트롤 개체에 이전에 배치 하나는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>설명  
+ 지정 된 형식을 사용 하 여 컨트롤 개체에 이전에 배치 이란는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수가 있습니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
   
  요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수는 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 재정의 `OnRenderData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
   
@@ -2797,8 +2798,8 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식을 사용 하 여 컨트롤 개체에 이전에 배치 하나는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>설명  
+ 지정 된 형식을 사용 하 여 컨트롤 개체에 이전에 배치 이란는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수가 있습니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
   
  경우 `phGlobal` 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 `phGlobal`합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 `phGlobal` 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
   
@@ -2813,7 +2814,7 @@ virtual BOOL OnRenderGlobalData(
 virtual void OnResetState();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현 호출 [DoPropExchange](#dopropexchange)전달 하는 `CPropExchange` 속성을 해당 기본값으로 설정 해야 하는 개체입니다.  
   
  컨트롤 작성기가 OLE 컨트롤에 대 한 초기화 코드를 삽입할 수 재정의할 수 있습니다. 이 함수는 호출 될 때 [IPersistStream::Load](http://msdn.microsoft.com/library/windows/desktop/ms680568) 또는 [IPersistStorage::Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) 실패 또는 [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) 또는 [IPersistStorage::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) 첫 번째 호출 하지 않고 호출 되었으며 **IPersistStream::Load** 또는 **IPersistStorage::Load**합니다.  
@@ -2845,7 +2846,7 @@ virtual BOOL OnSetData(
  에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 데이터의 형식을 지정 합니다.  
   
  `lpStgMedium`  
- 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조에서 멤버의 데이터입니다.  
+ 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조에서 데이터를 저장 합니다.  
   
  `bRelease`  
  **True 이면** 컨트롤 저장 매체; 해제 해야 하는 경우 **FALSE** 컨트롤 저장 매체를 해제 하면 안 되는 경우.  
@@ -2853,7 +2854,7 @@ virtual BOOL OnSetData(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  데이터가 영구 속성에 설정 된 형식, 기본 구현은 컨트롤의 상태가 적절 하 게 수정 합니다. 그렇지 않으면 기본 구현은 아무 작업도 수행합니다. 경우 `bRelease` 은 **TRUE**를를 호출 합니다 **ReleaseStgMedium** 변경 됩니다; 그렇지 않으면 not 합니다.  
   
  지정된 된 데이터와 컨트롤의 데이터를 대체 하려면이 함수를 재정의 합니다.  
@@ -2910,7 +2911,7 @@ virtual BOOL OnSetObjectRects(
 virtual void OnShowToolBars();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현은 아무 작업도 수행하지 않습니다.  
   
 ##  <a name="ontextchanged"></a>COleControl::OnTextChanged  
@@ -2955,7 +2956,7 @@ virtual BOOL OnWindowlessMessage(
 ### <a name="remarks"></a>설명  
  창 없는 컨트롤에 대 한 창 메시지를 처리합니다. `COleControl``OnWindowlessMessage` 메시지 마우스 및 키보드 메시지 이외의 창 메시지에 사용 해야 합니다. `COleControl`제공 [SetCapture](#setcapture) 및 [SetFocus](#setfocus) 특히 가져오려는 마우스 캡처 및 키보드 포커스 창 없는 OLE 개체에 대 한 합니다.  
   
- 창 없는 개체에는 창이 없으므로 컨테이너가 디스패치 메시지를 사용 하는 메커니즘을 해야 합니다. 창 없는 OLE 개체를 해당 컨테이너를 통해 메시지를 가져옵니다는 `OnWindowMessage` 에서 메서드는 `IOleInPlaceObjectWindowless` 인터페이스 (의 확장 [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) 창 없는 지원에 대 한). `OnWindowMessage`사용 하지 않는 한 `HWND` 매개 변수입니다.  
+ 창 없는 개체에는 창이 없으므로 컨테이너가 디스패치 메시지를 사용 하는 메커니즘을 해야 합니다. 창 없는 OLE 개체를 해당 컨테이너를 통해 메시지를 가져옵니다는 `OnWindowMessage` 에서 메서드는 `IOleInPlaceObjectWindowless` 인터페이스 (의 확장 [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) 창 없는 지원에 대 한). `OnWindowMessage`사용 하지 않는 `HWND` 매개 변수입니다.  
   
 ##  <a name="parenttoclient"></a>COleControl::ParentToClient  
  변환의 좌표 `pPoint` 를 클라이언트 좌표로 합니다.  
@@ -3042,7 +3043,7 @@ void PostModalDialog(HWND hWndParent = NULL);
  `hWndParent`  
  모달 대화 상자의 부모 창에 대 한 핸들입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모달 대화 상자를 표시 한 후이 함수를 호출 합니다. 컨테이너에는 모든 최상위 창으로 비활성화 되어 사용 하도록 설정할 수 있도록이 함수를 호출 해야 `PreModalDialog`합니다. 이 함수에 대 한 호출을 이루어야 `PreModalDialog`합니다.  
   
 ##  <a name="premodaldialog"></a>COleControl::PreModalDialog  
@@ -3056,7 +3057,7 @@ void PreModalDialog(HWND hWndParent = NULL);
  `hWndParent`  
  모달 대화 상자의 부모 창에 대 한 핸들입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모달 대화 상자를 표시 하기 전에이 함수를 호출 합니다. 컨테이너는 모든 최상위 창 사용 하지 않도록 설정할 수 있도록이 함수를 호출 해야 합니다. 다음 호출 해야 모달 대화 상자가 표시 된 후 `PostModalDialog`합니다.  
   
 ##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
@@ -3066,7 +3067,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 void RecreateControlWindow();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 창의 스타일 비트를 변경 해야 할 경우 필요할 수 있습니다.  
   
 ##  <a name="refresh"></a>COleControl::Refresh  
@@ -3089,7 +3090,7 @@ BOOL ReleaseCapture();
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  현재 컨트롤에 마우스 캡처가 캡처 해제 됩니다. 그렇지 않은 경우이 함수는 효과가 없습니다.  
   
 ##  <a name="releasedc"></a>COleControl::ReleaseDC  
@@ -3106,7 +3107,7 @@ int ReleaseDC(CDC* pDC);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하는 응용 프로그램 `ReleaseDC` 호출에 대해 각각 [GetDC](#getdc)합니다.  
   
 ##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
@@ -3125,7 +3126,7 @@ virtual void ReparentControlWindow(
  `hWndParent`  
  새 부모 창의 핸들입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤 창의 부모를 다시 설정 하려면이 함수를 호출 합니다.  
   
 ##  <a name="resetstockprops"></a>COleControl::ResetStockProps  
@@ -3135,7 +3136,7 @@ virtual void ReparentControlWindow(
 void ResetStockProps();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  속성은: 모양, BackColor, BorderStyle, 캡션, Enabled, 글꼴, ForeColor, hWnd 및 텍스트입니다. 스톡 속성에 대 한 참조 [ActiveX 컨트롤: 스톡 속성 추가](../../mfc/mfc-activex-controls-adding-stock-properties.md)합니다.  
   
  사용 하 여 컨트롤의 이진 초기화 성능을 향상 시킬 수 있습니다 `ResetStockProps` 및 `ResetVersion` 재정의할 `COleControl::OnResetState`합니다. 아래 예제를 참조하십시오. 초기화 최적화 대 한 자세한 내용은 참조 하십시오. [ActiveX 컨트롤: 최적화](../../mfc/mfc-activex-controls-optimization.md)합니다.  
@@ -3154,7 +3155,7 @@ void ResetVersion(DWORD dwVersionDefault);
  `dwVersionDefault`  
  컨트롤에 할당할 버전 번호입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용 하 여 컨트롤의 이진 초기화 성능을 향상 시킬 수 있습니다 `ResetVersion` 및 `ResetStockProps` 재정의할 `COleControl::OnResetState`합니다. 예제를 참조 [ResetStockProps](#resetstockprops)합니다. 초기화 최적화 대 한 자세한 내용은 참조 하십시오. [ActiveX 컨트롤: 최적화](../../mfc/mfc-activex-controls-optimization.md)합니다.  
   
 ##  <a name="scrollwindow"></a>COleControl::ScrollWindow  
@@ -3176,7 +3177,7 @@ void ScrollWindow(
  세로 스크롤 장치 단위로 크기를 지정합니다. 이 매개 변수는 음수 값을 위로 스크롤 이어야 합니다.  
   
  `lpRect`  
- 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 RECT 구조체 윈도우의 클라이언트 좌표에서 스크롤을 OLE 개체의 클라이언트 영역 부분을 지정 합니다. 경우 `lpRect` 은 **NULL**, 전체 OLE 개체의 클라이언트 영역 스크롤됩니다.  
+ 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체나 RECT 구조체 윈도우의 클라이언트 좌표에서 스크롤을 OLE 개체의 클라이언트 영역 부분을 지정 합니다. 경우 `lpRect` 은 **NULL**, 전체 OLE 개체의 클라이언트 영역 스크롤됩니다.  
   
  `lpClipRect`  
  가리키는 `CRect` 개체 또는 `RECT` 클립 사각형을 지정 하는 구조입니다. 사각형 안에 픽셀만 스크롤됩니다. Bits 영역 밖에 있는 경우에 영향을 받지 않습니다는 `lpRect` 사각형입니다. 경우 `lpClipRect` 은 **NULL**, 스크롤 사각형 오려낸 없습니다 수행 됩니다.  
@@ -3242,7 +3243,7 @@ void SerializeStockProps(CArchive& ar);
  `ar`  
  A `CArchive` 를 serialize 할 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  스톡 속성에 대 한 참조 [ActiveX 컨트롤: 스톡 속성 추가](../../mfc/mfc-activex-controls-adding-stock-properties.md)합니다.  
   
  사용 하 여 컨트롤의 이진 지 속성 성능은 향상 시킬 수 있습니다 `SerializeStockProps`, `SerializeExtent`, 및 `SerializeVersion` 재정의할 **COleControl::Serialize**합니다. 예를 들어에서 코드 참조 [SerializeExtent](#serializeextent)합니다. 초기화 최적화 대 한 자세한 내용은 참조 하십시오. [ActiveX 컨트롤: 최적화](../../mfc/mfc-activex-controls-optimization.md)합니다.  
@@ -3270,7 +3271,7 @@ DWORD SerializeVersion(
 ### <a name="return-value"></a>반환 값  
  컨트롤의 버전 번호입니다. 지정 된 보관 파일을 로드 하는 경우 `SerializeVersion` 해당 보관 파일에서 로드 된 버전을 반환 합니다. 그렇지 않으면 현재 로드 된 버전을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용 하 여 컨트롤의 이진 지 속성 성능은 향상 시킬 수 있습니다 `SerializeVersion`, `SerializeExtent`, 및 `SerializeStockProps` 재정의할 **COleControl::Serialize**합니다. 예를 들어에서 코드 참조 [SerializeExtent](#serializeextent)합니다. 초기화 최적화 대 한 자세한 내용은 참조 하십시오. [ActiveX 컨트롤: 최적화](../../mfc/mfc-activex-controls-optimization.md)합니다.  
   
 ##  <a name="setappearance"></a>COleControl::SetAppearance  
@@ -3282,9 +3283,9 @@ void SetAppearance (short sAppearance);
   
 ### <a name="parameters"></a>매개 변수  
  *sAppearance*  
- A **짧은** ( `VT_I2`) 값을 컨트롤의 모양을 위해 사용할 수 있습니다. 기본 컨트롤의 모양을 설정 하는 값이 0 및 3d 컨트롤의 모양을 설정 하는 값이 1입니다.  
+ A **짧은** ( `VT_I2`) 값을 컨트롤의 모양을 위해 사용할 수 있습니다. 값이 0 기본 컨트롤의 모양을 설정 하 고 3d 컨트롤의 모양을 설정 하는 값이 1 키를 누릅니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  스톡 속성에 대 한 자세한 내용은 [ActiveX 컨트롤: 속성](../../mfc/mfc-activex-controls-properties.md)합니다.  
   
 ##  <a name="setbackcolor"></a>COleControl::SetBackColor  
@@ -3298,7 +3299,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
  *dwBackColor*  
  **OLE_COLOR** 그리기 컨트롤의 배경색을 사용 하는 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성 및 기타 사용에 대 한 자세한 내용은 관련 속성에 대 한 문서를 참조 하십시오. [ActiveX 컨트롤: 속성](../../mfc/mfc-activex-controls-properties.md)합니다.  
   
 ##  <a name="setborderstyle"></a>COleControl::SetBorderStyle  
@@ -3325,7 +3326,7 @@ CWnd* SetCapture();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 **CWnd** 마우스 입력을 이전에 받은 window 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  정품 인증 하 고 창 없는 컨트롤이 이면이 함수를 사용 하면 컨트롤의를 대신 하 여 마우스 캡처의 소유를 적용 하려면 컨트롤의 컨테이너 창 됩니다. 그렇지 않은 경우이 함수 컨트롤이 마우스 캡처를 소유한 되려면 자체 (동일 `CWnd::SetCapture`).  
   
 ##  <a name="setcontrolsize"></a>COleControl::SetControlSize  
@@ -3345,7 +3346,7 @@ BOOL SetControlSize(int cx, int cy);
 ### <a name="return-value"></a>반환 값  
  호출에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 컨트롤의 생성자에서 사용 되지 않습니다.  
   
  제어 창에 대 한 모든 좌표는 컨트롤의 왼쪽 위 모퉁이 기준으로 하는 참고 합니다.  
@@ -3361,7 +3362,7 @@ void SetEnabled(BOOL bEnabled);
  `bEnabled`  
  **True 이면** 컨트롤을 설정 해야 할 경우 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성을 설정한 후 **OnEnabledChange** 호출 됩니다.  
   
 ##  <a name="setfocus"></a>COleControl::SetFocus  
@@ -3374,7 +3375,7 @@ CWnd* SetFocus();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 **CWnd** 이전에 입력된 포커스가 있던 window 개체 또는 **NULL** 창인지 없는 경우.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  정품 인증 하 고 창 없는 컨트롤이 이면이 함수를 사용 하면 컨트롤의를 대신 하 여 입력된 포커스를 소유한 되려면 컨트롤의 컨테이너 창 됩니다. 입력된 포커스를 컨테이너의 창으로 키보드 입력을 지시 및 컨테이너에는 모든 후속 키보드 메시지를 호출 하는 OLE 개체에 디스패치 `SetFocus`합니다. 이전에 입력된 포커스가 있는 창이 것 손실 됩니다.  
   
  창 없는 컨트롤이 없는 경우이 함수 컨트롤이 입력된 포커스를 소유한 되려면 자체 (동일 `CWnd::SetFocus`).  
@@ -3401,7 +3402,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
  *dwForeColor*  
  **OLE_COLOR** 전경 컨트롤의 그리기에 사용할 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성 및 기타 사용에 대 한 자세한 내용은 관련 속성에 대 한 문서를 참조 하십시오. [ActiveX 컨트롤: 속성](../../mfc/mfc-activex-controls-properties.md)합니다.  
   
 ##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
@@ -3411,7 +3412,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 virtual void SetInitialDataFormats();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본 구현은 두 가지 형식 지정: `CF_METAFILEPICT` 및 영구 속성을 설정 합니다.  
   
 ##  <a name="setinitialsize"></a>COleControl::SetInitialSize  
@@ -3444,7 +3445,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
  `bModified`  
  컨트롤에 대 한 새 값의 플래그를 수정 합니다. **TRUE** 컨트롤의 상태가 수정 되었다는 사실을; 나타냅니다. **FALSE** 컨트롤의 상태가 방금 저장 되지 않았음을 나타냅니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하는 변경이 발생할 때마다이 함수에는 컨트롤의 영구 상태에 영향을 주므로입니다. 예를 들어 영구적인 속성의 값이 변경 하는 경우 사용 하 여이 함수를 호출 `bModified` **TRUE**합니다.  
   
 ##  <a name="setnotpermitted"></a>COleControl::SetNotPermitted  
@@ -3454,7 +3455,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 void SetNotPermitted();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수를 호출할 때 `BoundPropertyRequestEdit` 실패 합니다. 이 함수 형식의 예외를 throw **COleDispScodeException** 를 나타내는 설정 작업이 허용 되지 않았습니다.  
   
 ##  <a name="setnotsupported"></a>COleControl::SetNotSupported  
@@ -3464,7 +3465,7 @@ void SetNotPermitted();
 void SetNotSupported();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤의 사용자가 속성 값의 수정이 지원 되지 않습니다 속성의 Set 함수 대신이 함수를 호출 합니다. 한 가지 예는 속성은 읽기 전용을 것입니다.  
   
 ##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer  
@@ -3481,7 +3482,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 ### <a name="return-value"></a>반환 값  
  호출에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  열려 있는 컨트롤이 없으면 크기가 조정 됩니다. 그렇지 않은 경우 컨테이너의 **OnPosRectChanged** 함수를 호출 합니다.  
   
 ##  <a name="settext"></a>COleControl::SetText  
@@ -3495,7 +3496,7 @@ void SetText(LPCTSTR pszText);
  `pszText`  
  문자열에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  Note 스톡 캡션 및 텍스트 속성 모두에 매핑되는 동일한 값입니다. 즉, 두 속성 중 하나를 변경한 속성을 모두 자동으로 변경 됩니다. 일반적으로 컨트롤에 스톡 캡션 또는 Text 속성 중 하나만 지원 해야 합니다.  
   
 ##  <a name="throwerror"></a>COleControl::ThrowError  
@@ -3580,7 +3581,7 @@ COLORREF TranslateColor(
 ### <a name="return-value"></a>반환 값  
  RGB (빨강, 녹색, 파랑) 32 비트 색상 값 솔리드를 정의 하는 색에 가장 가까운는 `clrColor` 장치를 나타낼 수 있는 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수는 주식 ForeColor 및 BackColor 속성을 변환 하는 데 유용 **COLORREF** 사용 되는 형식을 [CDC](../../mfc/reference/cdc-class.md) 멤버 함수입니다.  
   
 ##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
@@ -3593,8 +3594,8 @@ BOOL WillAmbientsBeValidDuringLoad();
 ### <a name="return-value"></a>반환 값  
  Nonzero 나타냅니다 앰비언트 속성이 잘못 되었습니다. 그렇지 않으면 앰비언트 속성은 유효한 되지 않습니다.  
   
-### <a name="remarks"></a>주의  
- 일부 컨테이너에서 컨트롤 액세스할 수 없는 앰비언트 속성에 초기 호출의 재정의 하는 동안 `COleControl::DoPropExchange`합니다. 컨테이너를 호출 하는 경우이 대/소문자 [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) 또는 [IPersistStorage::Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) 호출 하기 전에 [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) (즉, 인식 하지 않는 경우는 **OLEMISC_SETCLIENTSITEFIRST** 상태 비트)입니다.  
+### <a name="remarks"></a>설명  
+ 일부 컨테이너에서 컨트롤 액세스할 수 없는 앰비언트 속성에 초기 호출의 재정의 하는 동안 `COleControl::DoPropExchange`합니다. 컨테이너를 호출 하는 경우이 대/소문자 [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) 또는 [IPersistStorage::Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) 호출 하기 전에 [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) (즉, 인식 하지 않는 경우는 **OLEMISC_SETCLIENTSITEFIRST** 상태 비트).  
   
 ##  <a name="windowproc"></a>COleControl::WindowProc  
  에 대 한 Windows 절차를 제공는 `COleControl` 개체입니다.  
@@ -3619,7 +3620,7 @@ virtual LRESULT WindowProc(
 ### <a name="return-value"></a>반환 값  
  발송 된 메시지의 반환 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  컨트롤의 메시지 맵을 통해 특정 메시지를 디스패치 하려면이 함수를 호출 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

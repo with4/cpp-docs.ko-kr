@@ -57,10 +57,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bfe2abe691a3f82b261f36f7581c4284aa1f6624
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b478e11cb4b3b04d92a693fca85cd6257b594514
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
@@ -108,7 +109,7 @@ errno_t _wdupenv_s_dbg(
  소스 파일의 줄 번호 또는 `NULL`입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 시&0;, 실패 시 오류 코드가 나타납니다.  
+ 성공 시 0, 실패 시 오류 코드가 나타납니다.  
   
  이러한 함수는 자신의 매개 변수에 대한 유효성을 검사합니다. 그러나 `buffer` 또는 `varname`이 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에서 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
@@ -164,9 +165,6 @@ int main( void )
 pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
 nonexistentvariable = (null)  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

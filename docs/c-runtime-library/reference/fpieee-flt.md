@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c2e9f909f3e7e778845d8fefebe5d8b1604af489
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
@@ -95,7 +96,7 @@ int _fpieee_flt(
 |`unsigned int RoundingMode`, `unsigned int Precision`|이러한 필드는 예외가 발생했을 때 부동 소수점 환경에 대한 정보를 포함합니다.|  
 |`unsigned int Operation`|트랩을 발생시킨 작업의 형식을 나타냅니다. 해당 형식이 비교(`_FpCodeCompare`)인 경우 `_FPIEEE_COMPARE_RESULT` 필드에 특수 `Result.Value` 값(Fpieee.h에 정의됨) 중 하나를 제공할 수 있습니다. 변환 형식(`_FpCodeConvert`)은 부동 소수점 변환 작업을 수행하는 동안 트랩이 발생했음을 나타냅니다. `Operand1` 및`Result` 형식을 살펴보면 시도되는 변환 형식을 확인할 수 있습니다.|  
 |`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|이러한 구조체는 제안된 결과 및 피연산자의 형식 및 값을 나타냅니다.<br /><br /> `OperandValid` 응답 값이 올바른지 여부를 나타내는 플래그입니다.<br /><br /> `Format` 해당 값의 데이터 형식입니다. 해당 값이 잘못되어도 형식 유형이 반환될 수 있습니다.<br /><br /> `Value` 결과 또는 피연산자 데이터 값입니다.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS는 부동 소수점 예외의 형식당&1;비트 필드를 포함합니다.<br /><br /> 이러한 필드와 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)에 제공된 예외를 마스크하는 데 사용하는 인수 간에 대응 관계가 있습니다.<br /><br /> 각 비트의 정확한 의미는 컨텍스트에 따라 달라집니다.<br /><br /> `Cause`각 설정 비트는 발생된 특정 예외를 나타냅니다.<br /><br /> `Enable`각 설정 비트는 특정 예외가 현재 마스크되지 않음을 나타냅니다.<br /><br /> `Status`각 설정 비트는 특정 예외가 현재 보류 중임을 나타냅니다. 이는 `_controlfp`에 의해 마스크되었기 때문에 발생하지 못한 예외를 포함합니다.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS는 부동 소수점 예외의 형식당 1비트 필드를 포함합니다.<br /><br /> 이러한 필드와 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)에 제공된 예외를 마스크하는 데 사용하는 인수 간에 대응 관계가 있습니다.<br /><br /> 각 비트의 정확한 의미는 컨텍스트에 따라 달라집니다.<br /><br /> `Cause`각 설정 비트는 발생된 특정 예외를 나타냅니다.<br /><br /> `Enable`각 설정 비트는 특정 예외가 현재 마스크되지 않음을 나타냅니다.<br /><br /> `Status`각 설정 비트는 특정 예외가 현재 보류 중임을 나타냅니다. 이는 `_controlfp`에 의해 마스크되었기 때문에 발생하지 못한 예외를 포함합니다.|  
   
  사용할 수 없는 보류 중 예외는 해당 예외를 사용할 때 발생합니다. `_fpieee_flt`를 예외 필터로 사용할 때 이는 정의되지 않은 동작을 발생시킵니다. 부동 소수점 예외를 사용하도록 설정하기 전에 항상 [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)를 호출합니다.  
   
@@ -173,9 +174,6 @@ int main( void )
    // ...  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

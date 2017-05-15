@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 77314d99a34f109e556b8583b06ce51acce288bc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: e8573fab6f0d1a1ad43a9be2e3be1ddd8f556748
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="spaceinfo-structure"></a>space_info 구조체
@@ -61,14 +62,14 @@ struct space_info    {
 |`unsigned long long free`|볼륨의 데이터를 나타내는 데 사용되지 않는 바이트 수를 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** filesystem  
+ **헤더:** \<파일 시스템 >  
   
  **네임스페이스:** std::experimental::filesystem  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [space 함수](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
+ [공간](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
  [파일 시스템 탐색(C++)](../standard-library/file-system-navigation.md)
 
 

@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  열려 있는 파일을 참조하는 파일 설명자입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_eof`는 현재 위치가 파일의 끝인 경우 1을 반환하고, 아닌 경우 0을 반환합니다. 반환 값 –1은 오류를 나타냅니다. 이 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 잘못된 파일 설명자를 나타내는 `EBADF`로 설정됩니다.  
+ `_eof`는 현재 위치가 파일의 끝인 경우 1을 반환하고, 아닌 경우 0을 반환합니다. 반환 값이-1은 오류;를 나타냅니다. 이 경우에 잘못 된 매개 변수 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용된 경우 `errno`는 잘못된 파일 설명자를 나타내는 `EBADF`로 설정됩니다.  
   
 ## <a name="remarks"></a>설명  
  `_eof` 함수는 `fd`와 관련된 파일의 끝에 도달했는지 여부를 확인합니다.  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 처리](../../c-runtime-library/error-handling-crt.md)   

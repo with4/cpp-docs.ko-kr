@@ -85,10 +85,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
@@ -131,7 +132,7 @@ int _wutime64(
  저장된 시간 값에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 파일 수정 시간을 변경한 경우 이러한 각 함수는 0을 반환합니다. 반환 값 –1은 오류를 나타냅니다. 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수가 -1을 반환하고 `errno`를 다음 값 중 하나로 설정합니다.  
+ 파일 수정 시간을 변경한 경우 이러한 각 함수는 0을 반환합니다. 반환 값-1의 오류를 나타냅니다. 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수가 -1을 반환하고 `errno`를 다음 값 중 하나로 설정합니다.  
   
  `EACCES`  
  경로가 디렉터리 또는 읽기 전용 파일을 지정함  
@@ -253,9 +254,6 @@ File time modified
                1 File(s)            935 bytes  
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

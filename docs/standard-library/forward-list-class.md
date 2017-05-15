@@ -9,10 +9,45 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::forward_list
 - forward_list
 - forward_list/std::forward_list
-- std.forward_list
+- forward_list/std::forward_list::allocator_type
+- forward_list/std::forward_list::const_iterator
+- forward_list/std::forward_list::const_pointer
+- forward_list/std::forward_list::const_reference
+- forward_list/std::forward_list::difference_type
+- forward_list/std::forward_list::iterator
+- forward_list/std::forward_list::pointer
+- forward_list/std::forward_list::reference
+- forward_list/std::forward_list::size_type
+- forward_list/std::forward_list::value_type
+- forward_list/std::forward_list::assign
+- forward_list/std::forward_list::before_begin
+- forward_list/std::forward_list::begin
+- forward_list/std::forward_list::cbefore_begin
+- forward_list/std::forward_list::cbegin
+- forward_list/std::forward_list::cend
+- forward_list/std::forward_list::clear
+- forward_list/std::forward_list::emplace_after
+- forward_list/std::forward_list::emplace_front
+- forward_list/std::forward_list::empty
+- forward_list/std::forward_list::end
+- forward_list/std::forward_list::erase_after
+- forward_list/std::forward_list::front
+- forward_list/std::forward_list::get_allocator
+- forward_list/std::forward_list::insert_after
+- forward_list/std::forward_list::max_size
+- forward_list/std::forward_list::merge
+- forward_list/std::forward_list::pop_front
+- forward_list/std::forward_list::push_front
+- forward_list/std::forward_list::remove
+- forward_list/std::forward_list::remove_if
+- forward_list/std::forward_list::resize
+- forward_list/std::forward_list::reverse
+- forward_list/std::forward_list::sort
+- forward_list/std::forward_list::splice_after
+- forward_list/std::forward_list::swap
+- forward_list/std::forward_list::unique
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 198522429f7337a4ee3e5d5cb29ab408950618d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cde111871667e754f629fd69562a6aa4aeb07b94
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="forwardlist-class"></a>forward_list 클래스
@@ -68,73 +104,73 @@ class forward_list
   
  `forward_list`를 통해 제어되는 시퀀스의 요소를 지울 경우 반복기, 포인터 및 참조가 무효화될 수도 있습니다. `forward_list`를 통해 제어되는 시퀀스에서 수행되는 삽입 및 스플라이스는 반복기를 무효화하지 않습니다.  
   
- 제어되는 시퀀스에 대한 추가는 `Type(const  T&)` 생성자를 호출하는 유일한 멤버 함수인 [forward_list::insert_after](#forward_list__insert_after)를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생하면 템플릿 클래스 `forward_list`의 개체가 알려진 상태로 유지됩니다.  
+ 제어되는 시퀀스에 대한 추가는 `Type(const  T&)` 생성자를 호출하는 유일한 멤버 함수인 [forward_list::insert_after](#insert_after)를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생하면 템플릿 클래스 `forward_list`의 개체가 알려진 상태로 유지됩니다.  
   
 ### <a name="constructors"></a>생성자  
   
 |||  
 |-|-|  
-|[forward_list](#forward_list__forward_list)|`forward_list` 형식의 개체를 생성합니다.|  
+|[forward_list](#forward_list)|`forward_list` 형식의 개체를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#forward_list__allocator_type)|정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.|  
-|[const_iterator](#forward_list__const_iterator)|정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.|  
-|[const_pointer](#forward_list__const_pointer)|정방향 목록의 `const` 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[const_reference](#forward_list__const_reference)|정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.|  
-|[difference_type](#forward_list__difference_type)|반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.|  
-|[iterator](#forward_list__iterator)|정방향 목록에 대한 반복기를 제공하는 형식입니다.|  
-|[pointer](#forward_list__pointer)|정방향 목록의 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#forward_list__reference)|정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.|  
-|[size_type](#forward_list__size_type)|두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.|  
-|[value_type](#forward_list__value_type)|정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.|  
+|[allocator_type](#allocator_type)|정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.|  
+|[const_iterator](#const_iterator)|정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.|  
+|[const_pointer](#const_pointer)|정방향 목록의 `const` 요소에 대한 포인터를 제공하는 형식입니다.|  
+|[const_reference](#const_reference)|정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.|  
+|[difference_type](#difference_type)|반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.|  
+|[iterator](#iterator)|정방향 목록에 대한 반복기를 제공하는 형식입니다.|  
+|[pointer](#pointer)|정방향 목록의 요소에 대한 포인터를 제공하는 형식입니다.|  
+|[reference](#reference)|정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.|  
+|[size_type](#size_type)|두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.|  
+|[value_type](#value_type)|정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[assign](#forward_list__assign)|정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.|  
-|[before_begin](#forward_list__before_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.|  
-|[begin](#forward_list__begin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.|  
-|[cbefore_begin](#forward_list__cbefore_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.|  
-|[cbegin](#forward_list__cbegin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 const 반복기를 반환합니다.|  
-|[cend](#forward_list__cend)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 const 반복기를 반환합니다.|  
-|[clear](#forward_list__clear)|정방향 목록의 모든 요소를 지웁니다.|  
-|[emplace_after](#forward_list__emplace_after)|이동 후 지정된 위치 뒤에 새 요소를 생성합니다.|  
-|[emplace_front](#forward_list__emplace_front)|생성된 요소를 목록 시작 부분에 추가합니다.|  
-|[empty](#forward_list__empty)|정방향 목록이 비어 있는지 테스트합니다.|  
-|[end](#forward_list__end)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.|  
-|[erase_after](#forward_list__erase_after)|정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.|  
-|[front](#forward_list__front)|정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.|  
-|[get_allocator](#forward_list__get_allocator)|정방향 목록을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.|  
-|[insert_after](#forward_list__insert_after)|정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.|  
-|[max_size](#forward_list__max_size)|정방향 목록의 최대 길이를 반환합니다.|  
-|[merge](#forward_list__merge)|요소를 인수 목록에서 제거하고 대상 정방향 목록에 삽입한 다음 새로 조합된 요소 집합을 오름차순 또는 기타 지정된 순서로 정렬합니다.|  
-|[pop_front](#forward_list__pop_front)|정방향 목록의 시작 부분에 있는 요소를 삭제합니다.|  
-|[push_front](#forward_list__push_front)|정방향 목록의 시작 부분에 요소를 추가합니다.|  
-|[remove](#forward_list__remove)|정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.|  
-|[remove_if](#forward_list__remove_if)|지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.|  
-|[resize](#forward_list__resize)|정방향 목록의 새 크기를 지정합니다.|  
-|[reverse](#forward_list__reverse)|정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.|  
-|[sort](#forward_list__sort)|오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.|  
-|[splice_after](#forward_list__splice_after)|노드 간의 연결을 다시 붙입니다.|  
-|[swap](#forward_list__swap)|두 정방향 목록의 요소를 교환합니다.|  
-|[unique](#forward_list__unique)|지정된 테스트를 통과하는 인접 요소를 제거합니다.|  
+|[assign](#assign)|정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.|  
+|[before_begin](#before_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.|  
+|[begin](#begin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.|  
+|[cbefore_begin](#cbefore_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.|  
+|[cbegin](#cbegin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 const 반복기를 반환합니다.|  
+|[cend](#cend)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 const 반복기를 반환합니다.|  
+|[clear](#clear)|정방향 목록의 모든 요소를 지웁니다.|  
+|[emplace_after](#emplace_after)|이동 후 지정된 위치 뒤에 새 요소를 생성합니다.|  
+|[emplace_front](#emplace_front)|생성된 요소를 목록 시작 부분에 추가합니다.|  
+|[empty](#empty)|정방향 목록이 비어 있는지 테스트합니다.|  
+|[end](#end)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.|  
+|[erase_after](#erase_after)|정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.|  
+|[front](#front)|정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.|  
+|[get_allocator](#get_allocator)|정방향 목록을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.|  
+|[insert_after](#insert_after)|정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.|  
+|[max_size](#max_size)|정방향 목록의 최대 길이를 반환합니다.|  
+|[merge](#merge)|요소를 인수 목록에서 제거하고 대상 정방향 목록에 삽입한 다음 새로 조합된 요소 집합을 오름차순 또는 기타 지정된 순서로 정렬합니다.|  
+|[pop_front](#pop_front)|정방향 목록의 시작 부분에 있는 요소를 삭제합니다.|  
+|[push_front](#push_front)|정방향 목록의 시작 부분에 요소를 추가합니다.|  
+|[remove](#remove)|정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.|  
+|[remove_if](#remove_if)|지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.|  
+|[resize](#resize)|정방향 목록의 새 크기를 지정합니다.|  
+|[reverse](#reverse)|정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.|  
+|[sort](#sort)|오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.|  
+|[splice_after](#splice_after)|노드 간의 연결을 다시 붙입니다.|  
+|[swap](#swap)|두 정방향 목록의 요소를 교환합니다.|  
+|[unique](#unique)|지정된 테스트를 통과하는 인접 요소를 제거합니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator=](#forward_list__operator_eq)|정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.|  
+|[operator=](#op_eq)|정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<forward_list>  
   
  **네임스페이스:** std  
   
-##  <a name="a-nameforwardlistallocatortypea--forwardlistallocatortype"></a><a name="forward_list__allocator_type"></a>  forward_list::allocator_type  
+##  <a name="allocator_type"></a>  forward_list::allocator_type  
  정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.  
   
 ```  
@@ -144,16 +180,17 @@ typedef Allocator allocator_type;
 ### <a name="remarks"></a>설명  
  `allocator_type`은 템플릿 매개 변수 Allocator의 동의어입니다.  
   
-##  <a name="a-nameforwardlistassigna--forwardlistassign"></a><a name="forward_list__assign"></a>  forward_list::assign  
+##  <a name="assign"></a>  forward_list::assign  
  정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.  
   
 ```  
- 
 void assign(
     size_type Count,   
     const Type& Val);
+
 void assign(
     initializer_list<Type> IList);
+
 template <class InputIterator>  
 void assign(InputIterator First, InputIterator Last);
 ```  
@@ -162,10 +199,10 @@ void assign(InputIterator First, InputIterator Last);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` first`|대체 범위의 시작입니다.|  
-|` last`|대체 범위의 끝입니다.|  
-|` count`|할당할 요소 수입니다.|  
-|` val`|각 요소에 할당할 값입니다.|  
+|`first`|대체 범위의 시작입니다.|  
+|`last`|대체 범위의 끝입니다.|  
+|`count`|할당할 요소 수입니다.|  
+|`val`|각 요소에 할당할 값입니다.|  
 |`Type`|값의 형식입니다.|  
 |`IList`|복사할 initializer_list입니다.|  
   
@@ -176,7 +213,7 @@ void assign(InputIterator First, InputIterator Last);
   
  세 번째 멤버 함수는 initializer_list의 요소를 forward_list로 복사합니다.  
   
-##  <a name="a-nameforwardlistbeforebegina--forwardlistbeforebegin"></a><a name="forward_list__before_begin"></a>  forward_list::before_begin  
+##  <a name="before_begin"></a>  forward_list::before_begin  
  정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -189,7 +226,7 @@ iterator before_begin();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistbegina--forwardlistbegin"></a><a name="forward_list__begin"></a>  forward_list::begin  
+##  <a name="begin"></a>  forward_list::begin  
  정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -202,7 +239,7 @@ iterator begin();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistcbeforebegina--forwardlistcbeforebegin"></a><a name="forward_list__cbefore_begin"></a>  forward_list::cbefore_begin  
+##  <a name="cbefore_begin"></a>  forward_list::cbefore_begin  
  정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.  
   
 ```  
@@ -214,7 +251,7 @@ const_iterator cbefore_begin() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistcbegina--forwardlistcbegin"></a><a name="forward_list__cbegin"></a>  forward_list::cbegin  
+##  <a name="cbegin"></a>  forward_list::cbegin  
  범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -236,7 +273,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameforwardlistcenda--forwardlistcend"></a><a name="forward_list__cend"></a>  forward_list::cend  
+##  <a name="cend"></a>  forward_list::cend  
  범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -261,7 +298,7 @@ auto i2 = Container.cend();
   
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-##  <a name="a-nameforwardlistcleara--forwardlistclear"></a><a name="forward_list__clear"></a>  forward_list::clear  
+##  <a name="clear"></a>  forward_list::clear  
  정방향 목록의 모든 요소를 지웁니다.  
   
 ```  
@@ -271,7 +308,7 @@ void clear();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 `erase_after(before_begin(), end()).`를 호출합니다.  
   
-##  <a name="a-nameforwardlistconstiteratora--forwardlistconstiterator"></a><a name="forward_list__const_iterator"></a>  forward_list::const_iterator  
+##  <a name="const_iterator"></a>  forward_list::const_iterator  
  정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.  
   
 ```  
@@ -281,7 +318,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>설명  
  `const_iterator`는 제어되는 시퀀스의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.  
   
-##  <a name="a-nameforwardlistconstpointera--forwardlistconstpointer"></a><a name="forward_list__const_pointer"></a>  forward_list::const_pointer  
+##  <a name="const_pointer"></a>  forward_list::const_pointer  
  정방향 목록의 `const` 요소에 대한 포인터를 제공하는 형식입니다.  
   
 ```  
@@ -291,7 +328,7 @@ typedef typename Allocator::const_pointer
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistconstreferencea--forwardlistconstreference"></a><a name="forward_list__const_reference"></a>  forward_list::const_reference  
+##  <a name="const_reference"></a>  forward_list::const_reference  
  정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.  
   
 ```  
@@ -300,7 +337,7 @@ typedef typename Allocator::const_reference const_reference;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistdifferencetypea--forwardlistdifferencetype"></a><a name="forward_list__difference_type"></a>  forward_list::difference_type  
+##  <a name="difference_type"></a>  forward_list::difference_type  
  반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.  
   
 ```  
@@ -310,7 +347,7 @@ typedef typename Allocator::difference_type difference_type;
 ### <a name="remarks"></a>설명  
  `difference_type`은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.  
   
-##  <a name="a-nameforwardlistemplaceaftera--forwardlistemplaceafter"></a><a name="forward_list__emplace_after"></a>  forward_list::emplace_after  
+##  <a name="emplace_after"></a>  forward_list::emplace_after  
  이동 후 지정된 위치 뒤에 새 요소를 생성합니다.  
   
 ```  
@@ -323,15 +360,15 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`Where`|대상 정방향 목록에서 새 요소가 생성된 위치입니다.|  
-|` val`|생성자 인수입니다.|  
+|`val`|생성자 인수입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  새로 삽입된 요소를 지정하는 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 제어되는 시퀀스에서 `Where`가 가리키는 요소 바로 뒤에 생성자 인수 ` val`이 있는 요소를 삽입합니다. 그렇지 않으면 해당 동작은 [forward_list::insert_after](#forward_list__insert_after)와 동일합니다.  
+ 이 멤버 함수는 제어되는 시퀀스에서 `Where`가 가리키는 요소 바로 뒤에 생성자 인수 `val`이 있는 요소를 삽입합니다. 그렇지 않으면 해당 동작은 [forward_list::insert_after](#insert_after)와 동일합니다.  
   
-##  <a name="a-nameforwardlistemplacefronta--forwardlistemplacefront"></a><a name="forward_list__emplace_front"></a>  forward_list::emplace_front  
+##  <a name="emplace_front"></a>  forward_list::emplace_front  
  생성된 요소를 목록 시작 부분에 추가합니다.  
   
 ```  
@@ -343,14 +380,14 @@ void emplace_front(Type&& val);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` val`|정방향 목록의 시작에 추가된 요소입니다.|  
+|`val`|정방향 목록의 시작에 추가된 요소입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 제어되는 시퀀스의 끝에 생성자 인수 `_ val`이 있는 요소를 삽입합니다.  
   
  예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistemptya--forwardlistempty"></a><a name="forward_list__empty"></a>  forward_list::empty  
+##  <a name="empty"></a>  forward_list::empty  
  정방향 목록이 비어 있는지 테스트합니다.  
   
 ```  
@@ -360,7 +397,7 @@ bool empty() const;
 ### <a name="return-value"></a>반환 값  
  정방향 목록이 비어 있으면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="a-nameforwardlistenda--forwardlistend"></a><a name="forward_list__end"></a>  forward_list::end  
+##  <a name="end"></a>  forward_list::end  
  정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.  
   
 ```  
@@ -371,7 +408,7 @@ iterator end();
 ### <a name="return-value"></a>반환 값  
  시퀀스의 끝 바로 다음을 가리키는 정방향 반복기입니다.  
   
-##  <a name="a-nameforwardlisteraseaftera--forwardlisteraseafter"></a><a name="forward_list__erase_after"></a>  forward_list::erase_after  
+##  <a name="erase_after"></a>  forward_list::erase_after  
  정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.  
   
 ```  
@@ -384,11 +421,11 @@ iterator erase_after(const_iterator first, const_iterator last);
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`Where`|대상 정방향 목록에서 요소가 지워진 위치입니다.|  
-|` first`|지울 범위의 시작입니다.|  
-|` last`|지울 범위의 끝입니다.|  
+|`first`|지울 범위의 시작입니다.|  
+|`last`|지울 범위의 끝입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#forward_list__end)입니다.  
+ 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#end)입니다.  
   
 ### <a name="remarks"></a>설명  
  첫 번째 멤버 함수는 `Where` 바로 뒤에 있는 제어되는 시퀀스의 요소를 제거합니다.  
@@ -399,7 +436,7 @@ iterator erase_after(const_iterator first, const_iterator last);
   
  멤버 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="a-nameforwardlistforwardlista--forwardlistforwardlist"></a><a name="forward_list__forward_list"></a>  forward_list::forward_list  
+##  <a name="forward_list"></a>  forward_list::forward_list  
  `forward_list` 형식의 개체를 생성합니다.  
   
 ```  
@@ -446,7 +483,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
   
  마지막 생성자는 `initializer_list<Type>` 클래스의 개체를 사용하여 초기 제어되는 시퀀스를 지정합니다.  
   
-##  <a name="a-nameforwardlistfronta--forwardlistfront"></a><a name="forward_list__front"></a>  forward_list::front  
+##  <a name="front"></a>  forward_list::front  
  정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.  
   
 ```  
@@ -457,7 +494,7 @@ const_reference front() const;
 ### <a name="return-value"></a>반환 값  
  비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조입니다.  
   
-##  <a name="a-nameforwardlistgetallocatora--forwardlistgetallocator"></a><a name="forward_list__get_allocator"></a>  forward_list::get_allocator  
+##  <a name="get_allocator"></a>  forward_list::get_allocator  
  정방향 목록을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.  
   
 ```  
@@ -467,7 +504,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>반환 값  
  저장된 [할당자](../standard-library/allocator-class.md) 개체입니다.  
   
-##  <a name="a-nameforwardlistinsertaftera--forwardlistinsertafter"></a><a name="forward_list__insert_after"></a>  forward_list::insert_after  
+##  <a name="insert_after"></a>  forward_list::insert_after  
  정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.  
   
 ```  
@@ -510,7 +547,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
   
  하나 이상의 요소를 삽입하는 동안 예외가 throw되면 컨테이너는 변경되지 않고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistiteratora--forwardlistiterator"></a><a name="forward_list__iterator"></a>  forward_list::iterator  
+##  <a name="iterator"></a>  forward_list::iterator  
  정방향 목록에 대한 반복기를 제공하는 형식입니다.  
   
 ```  
@@ -520,7 +557,7 @@ typedef implementation-defined iterator;
 ### <a name="remarks"></a>설명  
  `iterator`는 제어되는 시퀀스의 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.  
   
-##  <a name="a-nameforwardlistmaxsizea--forwardlistmaxsize"></a><a name="forward_list__max_size"></a>  forward_list::max_size  
+##  <a name="max_size"></a>  forward_list::max_size  
  정방향 목록의 최대 길이를 반환합니다.  
   
 ```  
@@ -532,7 +569,7 @@ size_type max_size() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistmergea--forwardlistmerge"></a><a name="forward_list__merge"></a>  forward_list::merge  
+##  <a name="merge"></a>  forward_list::merge  
  두 개의 정렬된 시퀀스를 선형 시간의 단일 정렬된 시퀀스로 결합합니다. 인수 목록에서 요소를 제거하고 이 `forward_list`에 삽입합니다. `merge`를 호출하기 전에 같은 비교 함수 개체별로 두 목록을 정렬해야 합니다. 결합된 목록은 해당 비교 함수 개체별로 정렬됩니다.  
   
 ```  
@@ -545,19 +582,19 @@ void merge(forward_list& right, Predicate comp);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` right`|병합할 소스 정방향 목록입니다.|  
-|` comp`|요소를 정렬하는 데 사용되는 비교 함수 개체입니다.|  
+|`right`|병합할 소스 정방향 목록입니다.|  
+|`comp`|요소를 정렬하는 데 사용되는 비교 함수 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
- `forward_list::merge`는 `forward_list`` right``,`에서 요소를 제거하고 이 `forward_list`에 삽입합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.  
+ `forward_list::merge`는 `forward_list``right``,`에서 요소를 제거하고 이 `forward_list`에 삽입합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.  
   
  위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서로 정렬됩니다. 두 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `! comp(*Pj, *Pi)`를 적용합니다.  
   
- 원래 제어되는 시퀀스의 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 결과 제어되는 시퀀스의 요소 쌍이 같은 것으로 확인되면(`!(*Pi < *Pj) && !(*Pj < *Pi)`) 원래 제어되는 시퀀스의 요소가 ` right`에서 제어되는 시퀀스의 요소 앞에 나타납니다.  
+ 원래 제어되는 시퀀스의 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 결과 제어되는 시퀀스의 요소 쌍이 같은 것으로 확인되면(`!(*Pi < *Pj) && !(*Pj < *Pi)`) 원래 제어되는 시퀀스의 요소가 `right`에서 제어되는 시퀀스의 요소 앞에 나타납니다.  
   
- ` comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
+ `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistoperatoreqa--forwardlistoperator"></a><a name="forward_list__operator_eq"></a>  forward_list::operator=  
+##  <a name="op_eq"></a>  forward_list::operator=  
  정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.  
   
 ```  
@@ -570,17 +607,17 @@ forward_list& operator=(forward_list&& right);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` right`|정방향 목록으로 복사되는 정방향 목록입니다.|  
+|`right`|정방향 목록으로 복사되는 정방향 목록입니다.|  
 |`IList`|`Type` 형식 요소의 시퀀스처럼 동작하는 중괄호로 묶인 이니셜라이저 목록입니다.|  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 멤버 연산자는 제어되는 시퀀스를 ` right`로 제어되는 시퀀스 복사본으로 바꿉니다.  
+ 첫 번째 멤버 연산자는 제어되는 시퀀스를 `right`로 제어되는 시퀀스 복사본으로 바꿉니다.  
   
  두 번째 멤버 연산자는 `initializer_list<Type>` 클래스 개체의 제어되는 시퀀스를 대체합니다.  
   
  세 번째 멤버 연산자는 첫 번째 멤버 연산자와 동일하지만 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 참조를 포함합니다.  
   
-##  <a name="a-nameforwardlistpointera--forwardlistpointer"></a><a name="forward_list__pointer"></a>  forward_list::pointer  
+##  <a name="pointer"></a>  forward_list::pointer  
  정방향 목록의 요소에 대한 포인터를 제공하는 형식입니다.  
   
 ```  
@@ -589,7 +626,7 @@ typedef typename Allocator::pointer pointer;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistpopfronta--forwardlistpopfront"></a><a name="forward_list__pop_front"></a>  forward_list::pop_front  
+##  <a name="pop_front"></a>  forward_list::pop_front  
  정방향 목록의 시작 부분에 있는 요소를 삭제합니다.  
   
 ```  
@@ -601,7 +638,7 @@ void pop_front();
   
  멤버 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="a-nameforwardlistpushfronta--forwardlistpushfront"></a><a name="forward_list__push_front"></a>  forward_list::push_front  
+##  <a name="push_front"></a>  forward_list::push_front  
  정방향 목록의 시작 부분에 요소를 추가합니다.  
   
 ```  
@@ -613,12 +650,12 @@ void push_front(Type&& val);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` val`|정방향 목록의 시작에 추가된 요소입니다.|  
+|`val`|정방향 목록의 시작에 추가된 요소입니다.|  
   
 ### <a name="remarks"></a>설명  
  예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistreferencea--forwardlistreference"></a><a name="forward_list__reference"></a>  forward_list::reference  
+##  <a name="reference"></a>  forward_list::reference  
  정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.  
   
 ```  
@@ -627,7 +664,7 @@ typedef typename Allocator::reference reference;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistremovea--forwardlistremove"></a><a name="forward_list__remove"></a>  forward_list::remove  
+##  <a name="remove"></a>  forward_list::remove  
  정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.  
   
 ```  
@@ -638,14 +675,14 @@ void remove(const Type& val);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` val`|요소에 값이 있는 경우 목록에서 해당 요소가 제거됩니다.|  
+|`val`|요소에 값이 있는 경우 목록에서 해당 요소가 제거됩니다.|  
   
 ### <a name="remarks"></a>설명  
  멤버 함수는 `*P ==  val`인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.  
   
  멤버 함수는 예외를 throw하지 않습니다.  
   
-##  <a name="a-nameforwardlistremoveifa--forwardlistremoveif"></a><a name="forward_list__remove_if"></a>  forward_list::remove_if  
+##  <a name="remove_if"></a>  forward_list::remove_if  
  지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.  
   
 ```  
@@ -657,14 +694,14 @@ void remove_if(Predicate pred);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` pred`|요소로 충족된 경우 목록에서 요소가 삭제되는 단항 조건자입니다.|  
+|`pred`|요소로 충족된 경우 목록에서 요소가 삭제되는 단항 조건자입니다.|  
   
 ### <a name="remarks"></a>설명  
  멤버 함수는 ` pred(*P)`가 true인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.  
   
- ` pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
+ `pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistresizea--forwardlistresize"></a><a name="forward_list__resize"></a>  forward_list::resize  
+##  <a name="resize"></a>  forward_list::resize  
  정방향 목록의 새 크기를 지정합니다.  
   
 ```  
@@ -677,12 +714,12 @@ void resize(size_type _Newsize, const Type& val);
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`_Newsize`|크기 조정된 정방향 목록의 요소 수입니다.|  
-|` val`|안쪽 여백에 사용할 값입니다.|  
+|`val`|안쪽 여백에 사용할 값입니다.|  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 둘 다 목록의 요소 수가 `_Newsize`인지 확인합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `Type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 ` val`인 요소를 추가합니다. 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.  
+ 멤버 함수는 둘 다 목록의 요소 수가 `_Newsize`인지 확인합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `Type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 `val`인 요소를 추가합니다. 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.  
   
-##  <a name="a-nameforwardlistreversea--forwardlistreverse"></a><a name="forward_list__reverse"></a>  forward_list::reverse  
+##  <a name="reverse"></a>  forward_list::reverse  
  정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.  
   
 ```  
@@ -691,7 +728,7 @@ void reverse();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="a-nameforwardlistsizetypea--forwardlistsizetype"></a><a name="forward_list__size_type"></a>  forward_list::size_type  
+##  <a name="size_type"></a>  forward_list::size_type  
  두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.  
   
 ```  
@@ -701,7 +738,7 @@ typedef typename Allocator::size_type size_type;
 ### <a name="remarks"></a>설명  
  부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다.  
   
-##  <a name="a-nameforwardlistsorta--forwardlistsort"></a><a name="forward_list__sort"></a>  forward_list::sort  
+##  <a name="sort"></a>  forward_list::sort  
  오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.  
   
 ```  
@@ -714,16 +751,16 @@ void sort(Predicate pred);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` pred`|순서 지정 조건자입니다.|  
+|`pred`|순서 지정 조건자입니다.|  
   
 ### <a name="remarks"></a>설명  
  두 멤버 함수는 모두 제어되는 시퀀스에서 요소의 순서를 아래 설명된 조건자별로 지정합니다.  
   
  위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서로 정렬됩니다. 멤버 템플릿 함수는 `i < j`가 실행될 때마다 순서 `! pred(*Pj, *Pi)`를 적용합니다. 원래 제어되는 시퀀스의 순서가 지정된 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 정렬이 안정적입니다.  
   
- ` pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
+ `pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistspliceaftera--forwardlistspliceafter"></a><a name="forward_list__splice_after"></a>  forward_list::splice_after  
+##  <a name="splice_after"></a>  forward_list::splice_after  
  요소를 원본 forward_list에서 제거한 다음 대상 forward_list에 삽입합니다.  
   
 ```  
@@ -772,7 +809,7 @@ void splice_after(
   
  멤버 함수의 세 번째 쌍(범위가 지정된 스플라이스)은 `(First, Last)`로 제어되는 시퀀스에서 `Source`로 가리키는 요소 바로 뒤에 `Where`로 지정된 하위 범위를 삽입합니다. 또한 `Source`로 제어되는 시퀀스에서 원래 하위 범위를 제거합니다. `&Source == this`인 경우 `(First, Last)` 범위는 `Where`가 가리키는 요소를 제외해야 합니다.  
   
- 범위가 지정된 스플라이스가 `N`개 요소 및 `&Source != this`를 삽입하면 [iterator](#forward_list__iterator) 클래스의 개체가 `N`배 증분됩니다.  
+ 범위가 지정된 스플라이스가 `N`개 요소 및 `&Source != this`를 삽입하면 [iterator](#iterator) 클래스의 개체가 `N`배 증분됩니다.  
   
  스플라이스된 요소를 지정하는 어떤 반복기, 포인터 또는 참조도 잘못되지 않습니다.  
   
@@ -850,7 +887,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)  
 ```  
   
-##  <a name="a-nameforwardlistswapa--forwardlistswap"></a><a name="forward_list__swap"></a>  forward_list::swap  
+##  <a name="swap"></a>  forward_list::swap  
  두 정방향 목록의 요소를 교환합니다.  
   
 ```  
@@ -861,12 +898,12 @@ void swap(forward_list& right);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` right`|교환할 요소를 제공하는 정방향 목록입니다.|  
+|`right`|교환할 요소를 제공하는 정방향 목록입니다.|  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `*this`와 ` right` 간에 제어된 시퀀스를 교환합니다. `get_allocator() ==  right.get_allocator()`인 경우 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
+ 멤버 함수는 `*this`와 `right` 간에 제어된 시퀀스를 교환합니다. `get_allocator() ==  right.get_allocator()`인 경우 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
   
-##  <a name="a-nameforwardlistuniquea--forwardlistunique"></a><a name="forward_list__unique"></a>  forward_list::unique  
+##  <a name="unique"></a>  forward_list::unique  
  동일한 요소의 모든 연속 그룹에서 첫 번째 요소를 제외하고 모두 제거합니다.  
   
 ```  
@@ -879,7 +916,7 @@ void unique(BinaryPredicate comp);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|` comp`|연속 요소를 비교하는 데 사용되는 이진 조건자입니다.|  
+|`comp`|연속 요소를 비교하는 데 사용되는 이진 조건자입니다.|  
   
 ### <a name="remarks"></a>설명  
  각 고유 요소의 첫 번째 요소를 유지하고 나머지를 제거합니다. 목록에서 동일한 값의 요소가 인접하도록 요소를 정렬해야 합니다.  
@@ -888,9 +925,9 @@ void unique(BinaryPredicate comp);
   
  길이가 `N`(> 0)인 제어되는 시퀀스의 경우 조건자 ` comp(*Pi, *Pj)`는 `N - 1`번 평가됩니다.  
   
- ` comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
+ `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
   
-##  <a name="a-nameforwardlistvaluetypea--forwardlistvaluetype"></a><a name="forward_list__value_type"></a>  forward_list::value_type  
+##  <a name="value_type"></a>  forward_list::value_type  
  정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.  
   
 ```  

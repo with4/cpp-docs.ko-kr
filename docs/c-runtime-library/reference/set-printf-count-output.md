@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfb86b7d6e52168fda5ec28bd66edc29b24432e4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
@@ -76,7 +77,7 @@ int _set_printf_count_output(
  이 함수를 호출하기 전의 `%n` 지원 상태입니다. `%n` 지원이 사용되면 0이 아닌 값이고, 해당 지원이 사용되지 않으면 0입니다.  
   
 ## <a name="remarks"></a>설명  
- 보안상의 이유로 `%n` 형식 지정자에 대한 지원은 기본적으로 `printf` 및 모든 해당 변형 항목에서 사용되지 않습니다. `%n`이 `printf` 형식 사양에서 발견되는 경우 기본 동작은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출하는 것입니다. 0이 아닌 인수를 사용하여 `_set_printf_count_output`을 호출하면 [printf 형식 필드 문자](../../c-runtime-library/printf-type-field-characters.md)에 설명된 대로 `printf` 패밀리 함수가 `%n`을 해석하게 됩니다.  
+ 보안상의 이유로 `%n` 형식 지정자에 대한 지원은 기본적으로 `printf` 및 모든 해당 변형 항목에서 사용되지 않습니다. `%n`이 `printf` 형식 사양에서 발견되는 경우 기본 동작은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출하는 것입니다. 호출 `_set_printf_count_output` 0이 아닌 인수를 사용 하면 `printf`-해석 패밀리 함수 `%n` 에 설명 된 대로 [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -88,7 +89,7 @@ int _set_printf_count_output(
   
 ## <a name="example"></a>예제  
   
-```  
+```C  
 // crt_set_printf_count_output.c  
 #include <stdio.h>  
   
@@ -106,17 +107,12 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>출력  
-  
-```  
+```Output  
 %n support was disabled.  
 %n support is now enabled.  
 123456789  
 i = 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

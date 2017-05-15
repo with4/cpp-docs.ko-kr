@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  `_control87`과 `_controlfp_s` 간의 차이는 `DENORMAL` 값을 처리하는 방법에 있습니다. Intel(x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 및 ARM 플랫폼의 경우 `_control87`에서 DENORMAL OPERAND 예외 마스크를 설정하고 지울 수 있습니다. `_controlfp_s`는 DENORMAL OPERAND 예외 마스크를 수정하지 않습니다. 이 예제에서는 다음과 같은 차이를 보여 줍니다.  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -107,11 +108,11 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.  
 ```  
   
- 마스크 상수(`mask`)의 가능한 값 및 새 제어 값(`newControl`)은 아래의&16;진수 값 테이블에 표시되어 있습니다. 16진수 값을 명시적으로 제공하는 대신 아래에 나열된 이식 가능 상수(`_MCW_EM`, `_EM_INVALID` 등)를 이러한 함수의 인수로 사용하세요.  
+ 마스크 상수(`mask`)의 가능한 값 및 새 제어 값(`newControl`)은 아래의 16진수 값 테이블에 표시되어 있습니다. 16진수 값을 명시적으로 제공하는 대신 아래에 나열된 이식 가능 상수(`_MCW_EM`, `_EM_INVALID` 등)를 이러한 함수의 인수로 사용하세요.  
   
- Intel(x86) 파생 플랫폼에서는 하드웨어의 DENORMAL 입력 및 출력 값을 지원합니다. x86 동작은 DENORMAL 값을 유지하는 것입니다. SSE2를 지원하는 ARM 플랫폼 및 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 플랫폼을 통해 DENORMAL 피연산자 및 결과가 플러시되거나&0;으로 강제 적용될 수 있습니다. `_controlfp_s`, `_controlfp` 및 `_control87` 함수는 이 동작을 변경하는 마스크를 제공합니다. 다음 예제에서는 이 마스크의 사용을 보여 줍니다.  
+ Intel(x86) 파생 플랫폼에서는 하드웨어의 DENORMAL 입력 및 출력 값을 지원합니다. x86 동작은 DENORMAL 값을 유지하는 것입니다. SSE2를 지원하는 ARM 플랫폼 및 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 플랫폼을 통해 DENORMAL 피연산자 및 결과가 플러시되거나 0으로 강제 적용될 수 있습니다. `_controlfp_s`, `_controlfp` 및 `_control87` 함수는 이 동작을 변경하는 마스크를 제공합니다. 다음 예제에서는 이 마스크의 사용을 보여 줍니다.  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -129,7 +130,7 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  사용 하는 경우이 함수는 무시 됩니다 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 공용 언어 런타임 (CLR)에 기본 부동 소수점 정밀도만 지원 하기 때문에 컴파일할 수 있습니다.  
   
- **16진수 값**  
+### <a name="mask-constants-and-values"></a>마스크 상수 및 값  
   
  `_MCW_EM` 마스크의 경우 마스크를 지우면 예외가 설정되며, 이를 통해 하드웨어 예외가 허용됩니다. 마스크를 설정하면 예외가 숨겨집니다. `_EM_UNDERFLOW` 또는 `_EM_OVERFLOW`가 발생하면 다음 부동 소수점 명령이 실행될 때까지 하드웨어 예외가 throw됩니다. `_EM_UNDERFLOW` 또는 `_EM_OVERFLOW` 직후에 하드웨어 예외를 생성하려면 FWAIT MASM 명령을 호출하세요.  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>예제  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>출력  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

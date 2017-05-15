@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b50819686ca10a5676c75fb47375572d39974a1f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ef742cc4715c419b113e9235bbcc257ba8f1944
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
@@ -63,29 +64,29 @@ class back_insert_iterator;
   
 |||  
 |-|-|  
-|[back_insert_iterator](#back_insert_iterator__back_insert_iterator)|컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.|  
+|[back_insert_iterator](#back_insert_iterator)|컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#back_insert_iterator__container_type)|`back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.|  
-|[reference](#back_insert_iterator__reference)|`back_insert_iterator`에 대한 참조를 제공하는 형식입니다.|  
+|[container_type](#container_type)|`back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.|  
+|[reference](#reference)|`back_insert_iterator`에 대한 참조를 제공하는 형식입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator*](#back_insert_iterator__operator_star)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|  
-|[operator++](#back_insert_iterator__operator_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|  
-|[operator=](#back_insert_iterator__operator_eq)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 할당 연산자입니다.|  
+|[operator*](#op_star)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|  
+|[operator++](#op_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|  
+|[operator=](#op_eq)|후면 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용되는 할당 연산자입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더**: \<iterator>  
   
  **네임스페이스:** std  
   
-##  <a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
  컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.  
   
 ```   
@@ -147,7 +148,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
+##  <a name="container_type"></a>  back_insert_iterator::container_type  
  `back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.  
   
 ```   
@@ -199,7 +200,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
+##  <a name="op_star"></a>  back_insert_iterator::operator*  
  출력 반복기 식 \* *i* = *x*을 구현하는 데 사용되는 역참조 연산자입니다.  
   
 ```  
@@ -256,7 +257,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  back_insert_iterator::operator++  
  값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.  
   
 ```  
@@ -314,7 +315,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
+##  <a name="op_eq"></a>  back_insert_iterator::operator=  
  컨테이너의 백 엔드에 값을 추가하거나 푸시합니다.  
   
 ```  
@@ -377,7 +378,7 @@ int main( )
 }  
 ```  
   
-##  <a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
+##  <a name="reference"></a>  back_insert_iterator::reference  
  `back_insert_iterator`에 대한 참조를 제공하는 형식입니다.  
   
 ```  

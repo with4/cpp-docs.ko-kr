@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
@@ -138,28 +139,28 @@ errno_t _wsplitpath_s(
  싱글바이트 문자 또는 와이드 문자 단위의 `ext` 버퍼 크기입니다. `ext`가 `NULL`이면 이 값은 0이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공 시&0;이고, 실패 시 오류 코드입니다.  
+ 성공 시 0이고, 실패 시 오류 코드입니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
 |조건|반환 값|  
 |---------------|------------------|  
 |`path`가 `NULL`인 경우|`EINVAL`|  
-|`drive`가 `NULL`이고 `driveNumberOfElements`가&0;이 아닌 경우|`EINVAL`|  
-|`drive`이 `NULL`이 아니고 `driveNumberOfElements`가&0;인 경우|`EINVAL`|  
-|`dir`가 `NULL`이고 `dirNumberOfElements`가&0;이 아닌 경우|`EINVAL`|  
-|`dir`이 `NULL`이 아니고 `dirNumberOfElements`가&0;인 경우|`EINVAL`|  
-|`fname`가 `NULL`이고 `nameNumberOfElements`가&0;이 아닌 경우|`EINVAL`|  
-|`fname`이 `NULL`이 아니고 `nameNumberOfElements`가&0;인 경우|`EINVAL`|  
-|`ext`가 `NULL`이고 `extNumberOfElements`가&0;이 아닌 경우|`EINVAL`|  
-|`ext`가 `NULL`이 아니고 `extNumberOfElements`가&0;인 경우|`EINVAL`|  
+|`drive`가 `NULL`이고 `driveNumberOfElements`가 0이 아닌 경우|`EINVAL`|  
+|`drive`이 `NULL`이 아니고 `driveNumberOfElements`가 0인 경우|`EINVAL`|  
+|`dir`가 `NULL`이고 `dirNumberOfElements`가 0이 아닌 경우|`EINVAL`|  
+|`dir`이 `NULL`이 아니고 `dirNumberOfElements`가 0인 경우|`EINVAL`|  
+|`fname`가 `NULL`이고 `nameNumberOfElements`가 0이 아닌 경우|`EINVAL`|  
+|`fname`이 `NULL`이 아니고 `nameNumberOfElements`가 0인 경우|`EINVAL`|  
+|`ext`가 `NULL`이고 `extNumberOfElements`가 0이 아닌 경우|`EINVAL`|  
+|`ext`가 `NULL`이 아니고 `extNumberOfElements`가 0인 경우|`EINVAL`|  
   
  이러한 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
  버퍼가 너무 짧아 결과를 저장할 수 없으면 이러한 함수는 모든 버퍼를 비워 빈 문자열로 만들고 `errno`를 `ERANGE`로 설정한 후에 `ERANGE`를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_splitpath_s` 함수는 경로를&4;개 구성 요소로 분해합니다. `_splitpath_s`는 현재 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wsplitpath_s`는 `_splitpath_s`의 와이드 문자 버전이며, `_``wsplitpath_s`에 대한 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.  
+ `_splitpath_s` 함수는 경로를 4개 구성 요소로 분해합니다. `_splitpath_s`는 현재 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wsplitpath_s`는 `_splitpath_s`의 와이드 문자 버전이며, `_``wsplitpath_s`에 대한 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>예제  
  [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)의 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  `_cabs`는 성공 시 해당 인수의 절대값을 반환합니다. 오버플로에서 `_cabs`는 `HUGE_VAL`을 반환하고 `errno`를 `ERANGE`로 설정합니다. [_matherr](../../c-runtime-library/reference/matherr.md)을 사용하여 오류 처리를 변경할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- `_cabs` 함수는 [_complex](../../c-runtime-library/standard-types.md) 형식의 구조여야 하는 복소수의 절대값을 계산합니다. `z` 구조는 실수부인 `x`와 허수부인 `y`로 구성되어 있습니다. `_cabs`를 호출하면 `sqrt`(`z.x``*``z.x``+``z.y`*`z.y`) 식의 값과 동일한 값이 생성됩니다.  
+ `_cabs` 함수는 [_complex](../../c-runtime-library/standard-types.md) 형식의 구조여야 하는 복소수의 절대값을 계산합니다. `z` 구조는 실수부인 `x`와 허수부인 `y`로 구성되어 있습니다. 에 대 한 호출 `_cabs` 해당 하는 식의 값이 생성 `sqrt( z.x * z.x + z.y * z.y )`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

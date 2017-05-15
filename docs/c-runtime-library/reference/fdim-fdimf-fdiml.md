@@ -1,57 +1,74 @@
 ---
-title: "fdim, fdimf, fdiml | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-  - "math/fdim"
-  - "math/fdimf"
-  - "math/fdiml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fdim 함수"
-  - "fdimf 함수"
-  - "fdiml 함수"
+title: "fdim, fdimf, fdiml | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fdim
+- fdimf
+- fdiml
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fdim
+- fdimf
+- fdiml
+- math/fdim
+- math/fdimf
+- math/fdiml
+dev_langs:
+- C++
+helpviewer_keywords:
+- fdim function
+- fdimf function
+- fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# fdim, fdimf, fdiml
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f13291a00b97c319ebe69bce6939a95e6c022fd8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
-첫 번째 및 두 번째 값 사이의 양의 차이 확인 합니다.  
+---
+# <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
+첫 번째 값과 두 번째 값의 양의 차이를 결정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double fdim(  
@@ -81,45 +98,45 @@ long double fdiml(
   
 ```  
   
-#### 매개 변수  
- \[in\] `x`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `x`  
  첫 번째 값입니다.  
   
- \[in\] `y`  
+ [in] `y`  
  두 번째 값입니다.  
   
-## 반환 값  
- 사이의 양의 차이 반환 `x` 및 `y`:  
+## <a name="return-value"></a>반환 값  
+ `x`와 `y`의 양의 차이를 반환합니다.  
   
 |반환 값|시나리오|  
-|----------|----------|  
-|x\-y|경우 x \> y|  
-|0|경우 x \< \= y|  
+|------------------|--------------|  
+|x-y|if x > y|  
+|0|if x <= y|  
   
- 그렇지 않은 경우 반환할 수 있습니다 다음 오류 중 하나:  
+ 그렇지 않으면 다음 오류 중 하나를 반환할 수 있습니다.  
   
 |문제|반환|  
-|--------|--------|  
-|오버플로 범위 오류|\+ HUGE\_VAL, \+ HUGE\_VALF, 또는 \+ HUGE\_VALL|  
-|언더플로 범위 오류|올바른 값 \(반올림\) 한 후|  
-|`x` 또는 `y` nan|NaN|  
+|-----------|------------|  
+|오버플로 범위 오류|+HUGE_VAL, +HUGE_VALF 또는 +HUGE_VALL|  
+|언더플로 범위 오류|올바른 값(반올림 후)|  
+|`x` 또는 `y`가 NaN입니다.|NaN|  
   
- 오류를 보고에 지정 된 대로 [\_matherr](../../c-runtime-library/reference/matherr.md)합니다.  
+ 오류는 [_matherr](../../c-runtime-library/reference/matherr.md)에 지정된 대로 보고됩니다.  
   
-## 주의  
- C \+ \+에서는 오버 로드를 허용 하므로의 오버 로드를 호출할 수 있습니다 `fdim` 및 float 및 long double 형식을 반환 하 합니다. C 프로그램에서 `fdim` 항상 걸리고 double 값을 반환 합니다.  
+## <a name="remarks"></a>설명  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `fdim`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `fdim`는 항상 Double을 사용하고 반환합니다.  
   
- NaN 처리를 제외 하 고이 함수는 동일 [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)\(`x`\-`y,` 0\).  
+ NaN 처리를 제외 하 고이 함수는 동일 `fmax(x - y, 0)`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|함수|C 헤더|C\+\+ 헤더|  
-|--------|----------|--------------|  
-|`fdim`, `fdimf`,  `fdiml`|\<math.h\>|\<cmath\>|  
+|함수|C 헤더|C++ 헤더|  
+|--------------|--------------|------------------|  
+|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [abs, labs, llabs \_abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)

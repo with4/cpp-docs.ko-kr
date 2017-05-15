@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b0852cc3fd3531e05791cfce952853265b4458b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같지 않은지 테스트합니다.  
   
 ```  
@@ -44,10 +46,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
   
- ` right`  
+ `right`  
  같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -158,7 +160,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*  
+##  <a name="op_star"></a>  operator*  
  하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.  
   
 ```  
@@ -180,10 +182,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  두 복소수 중 첫 번째 복소수이거나 * 연산으로 곱할 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
- ` right`  
+ `right`  
  두 복소수 중 두 번째 복소수이거나 * 연산으로 곱할 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -252,7 +254,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 더합니다.  
   
 ```  
@@ -277,17 +279,17 @@ complex<Type> operator+(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  두 복소수 중 첫 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
- ` right`  
+ `right`  
  두 복소수 중 두 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
 ### <a name="return-value"></a>반환 값  
  값과 형식이 매개 변수 입력으로 지정되는 두 숫자를 더한 복소수입니다.  
   
 ### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다. 단항 연산자는 ` left.`를 반환합니다.  
+ 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다. 단항 연산자는 반환 `left`합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -389,7 +391,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 뺍니다.  
   
 ```   
@@ -413,14 +415,14 @@ complex<Type> operator-(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  두 복소수 중 첫 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
- ` right`  
+ `right`  
  두 복소수 중 두 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 값과 형식이 매개 변수 입력으로 지정되는 두 숫자인 ` left`에서 ` right`를 뺀 복소수입니다.  
+ 값과 형식이 매개 변수 입력으로 지정되는 두 숫자인 `left`에서 `right`를 뺀 복소수입니다.  
   
 ### <a name="remarks"></a>설명  
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
@@ -527,7 +529,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a>  operator/  
+##  <a name="op_div"></a>  operator/  
  하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 나눕니다.  
   
 ```   
@@ -548,10 +550,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  복소수이거나 / 연산으로 나눌 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
- ` right`  
+ `right`  
  복소수이거나 / 연산으로 분자를 나누는 데 사용할 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -643,7 +645,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  지정된 복소수를 출력 스트림에 삽입합니다.  
   
 ```   
@@ -657,7 +659,7 @@ basic_ostream<Elem, Traits>& operator<<(
  `Ostr`  
  복소수를 입력하는 출력 스트림입니다.  
   
- ` right`  
+ `right`  
  출력 스트림에 입력하는 복소수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -701,7 +703,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같은지 테스트합니다.  
   
 ```  
@@ -723,10 +725,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
   
- ` right`  
+ `right`  
  같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -837,7 +839,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  입력 스트림에서 복소수 값을 추출합니다.  
   
 ```  
@@ -852,11 +854,11 @@ basic_istream<Elem, Traits>& operator>>(
  `Istr`  
  복소수를 추출할 입력 스트림입니다.  
   
- ` right`  
+ `right`  
  입력 스트림에서 추출하는 복소수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `Istr`에서 지정된 복소수의 값을 읽고 ` right.`로 반환합니다.  
+ 지정된 된 복소수의 값을 읽고 `Istr` 로 반환 하 고 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
  유효한 입력 형식은 다음과 같습니다.  

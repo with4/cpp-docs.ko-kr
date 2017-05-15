@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a0da341d7dd704c9c1b455c5b3e2e060ba6a3e07
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c3992066b5b305a7b9de6ef47c6ba42e15da2518
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ecvt"></a>_ecvt
@@ -88,7 +89,7 @@ char *_ecvt(
  `_ecvt`는 숫자 문자열에 대한 포인터를 반환합니다. 오류가 발생한 경우 NULL입니다.  
   
 ## <a name="remarks"></a>설명  
- `_ecvt` 함수는 부동 소수점 숫자를 문자열로 변환합니다. `value` 매개 변수는 변환할 부동 소수점 숫자입니다. 이 함수는 `value` 중 최대 `count`개의 숫자를 문자열로 저장하고 null 문자('\0')를 추가합니다. `value`의 숫자 개수가 `count`개를 초과하면 낮은 자리 숫자가 반올림됩니다. 숫자가 `count`개보다 적으면 문자열이&0;으로 채워집니다.  
+ `_ecvt` 함수는 부동 소수점 숫자를 문자열로 변환합니다. `value` 매개 변수는 변환할 부동 소수점 숫자입니다. 이 함수는 `value` 중 최대 `count`개의 숫자를 문자열로 저장하고 null 문자('\0')를 추가합니다. `value`의 숫자 개수가 `count`개를 초과하면 낮은 자리 숫자가 반올림됩니다. 숫자가 `count`개보다 적으면 문자열이 0으로 채워집니다.  
   
  `_ecvt`에서 반환된 전체 숫자 개수는 `_CVTBUFSIZE`를 초과하지 않습니다.  
   
@@ -136,9 +137,6 @@ int main( void )
 ```Output  
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

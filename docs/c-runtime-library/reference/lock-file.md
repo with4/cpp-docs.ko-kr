@@ -1,50 +1,67 @@
 ---
-title: "_lock_file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lock_file"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_lock_file"
-  - "lock_file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lock_file 함수"
-  - "파일 잠금[C++]"
-  - "lock_file 함수"
+title: "_lock_file | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lock_file
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lock_file
+- lock_file
+dev_langs:
+- C++
+helpviewer_keywords:
+- file locking [C++]
+- _lock_file function
+- lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _lock_file
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 379f0cba0d19133acbe70f7d0e9e186616a817a5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-`FILE` 개체에 동시에 액세스하는 스레드들로부터 일관성을 보장하기 위해 `FILE` 개체를 잠급니다.  
+---
+# <a name="lockfile"></a>_lock_file
+`FILE` 개체에 동시에 액세스하는 스레드에 대한 일관성을 유지하기 위해 `FILE` 개체를 잠급니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void _lock_file(  
@@ -52,22 +69,22 @@ void _lock_file(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `file`  
- 파일 처리기입니다.  
+ 파일 핸들입니다.  
   
-## 설명  
- `_lock_file` 함수는 `file`에 의해 지정된 `FILE` 개체를 잠급니다.  내부 파일은 `_lock_file`에 의해 잠기지 않습니다.  파일에 대한 잠금을 해제하기 위하여 [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md)를 사용합니다.  `_lock_file` 및 `_unlock_file`의 호출은 반드시 스레드에서 일치해야 합니다.  
+## <a name="remarks"></a>설명  
+ `_lock_file` 함수는 `file`에 지정된 `FILE` 개체를 잠급니다. 기본 파일은 `_lock_file`로 잠글 수 없습니다. 파일에 대한 잠금을 해제하려면 [_unlock_file](../../c-runtime-library/reference/unlock-file.md)을 사용합니다. `_lock_file` 및 `_unlock_file`에 대한 호출은 스레드에서 일치해야 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`_lock_file`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_lock_file`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_lock_file.c  
@@ -119,31 +136,31 @@ int main()
 }  
 ```  
   
-  **...**  
-**첫 번째**  
-**초**  
-**첫 번째**  
-**초**  
-**Third**  
-**초**  
-**Third**  
-**초**  
-**...**  
-**FSiercsotn**  
-**dF**  
-**iSrescto**  
-**nFdi**  
-**rSsetc**  
-**oFnidr**  
-**sSte**  
-**cFoinrds**  
-**tS**  
-**eFciornsdt**   
-## 해당 .NET Framework 항목  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
+```Output  
+...  
+First  
+Second  
+First  
+Second  
+Third  
+Second  
+Third  
+Second  
+...  
+FSiercsotn  
+dF  
+iSrescto  
+nFdi  
+rSsetc  
+oFnidr  
+sSte  
+cFoinrds  
+tS  
+eFciornsdt  
+```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_unlock_file](../../c-runtime-library/reference/unlock-file.md)

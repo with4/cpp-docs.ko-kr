@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 97be545243fb4ef60bff8b8244ca9fd943b25cd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f71fbabf28c9e196a8cc0985e04bb2b39ab7ad93
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="setunexpected-crt"></a>set_unexpected(CRT)
@@ -88,7 +89,7 @@ typedef void ( *unexpected_function )( );
   
  C++ 예외 처리의 현재 Microsoft 구현에서는 `unexpected`가 기본적으로 `terminate`를 호출하며 예외 처리 런타임 라이브러리를 통해서는 호출되지 않습니다. `terminate`가 아닌 `unexpected`를 호출하는 방식에 특별한 이점은 없습니다.  
   
- 동적으로 연결된 모든 DLL 또는 EXE에 대해서는 `set_unexpected` 처리기가&1;개 있습니다. `set_unexpected`를 호출하더라도 사용자의 처리기가 다른 처리기로 바뀌거나 사용자가 다른 DLL 또는 EXE로 설정한 처리기를 바꿀 수 있습니다.  
+ 동적으로 연결된 모든 DLL 또는 EXE에 대해서는 `set_unexpected` 처리기가 1개 있습니다. `set_unexpected`를 호출하더라도 사용자의 처리기가 다른 처리기로 바뀌거나 사용자가 다른 DLL 또는 EXE로 설정한 처리기를 바꿀 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -96,10 +97,7 @@ typedef void ( *unexpected_function )( );
 |-------------|---------------------|  
 |`set_unexpected`|\<eh.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)   

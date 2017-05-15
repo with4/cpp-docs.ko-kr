@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 440cf44dda47253141247fe9a82925e13c84b48f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
@@ -98,7 +99,7 @@ errno_t mbsrtowcs_s(
  `mbstate_t` 변환 상태 개체에 대한 포인터입니다. 이 값이 null 포인터이면 정적 내부 변환 상태 개체가 사용됩니다. 내부 `mbstate_t` 개체는 스레드로부터 안전하지 않으므로 항상 고유한 `mbstate` 매개 변수를 전달하는 것이 좋습니다.  
   
 ## <a name="return-value"></a>반환 값  
- 변환이 완료되면&0;이 반환되고, 실패하면 오류 코드가 반환됩니다.  
+ 변환이 완료되면 0이 반환되고, 실패하면 오류 코드가 반환됩니다.  
   
 |오류 조건|반환 값 및 `errno`|  
 |---------------------|------------------------------|  
@@ -142,9 +143,6 @@ errno_t mbsrtowcs_s(
   
 ## <a name="exceptions"></a>예외  
  `mbsrtowcs_s` 함수는 현재 스레드의 함수가 `setlocale`을 호출하지 않고, 이 함수가 실행 중이며, `mbstate` 인수가 null 포인터가 아니면 다중 스레드로부터 안전합니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

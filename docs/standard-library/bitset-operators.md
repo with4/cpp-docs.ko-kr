@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 연산자
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a>  operator&amp;  
  두 bitset 간에 비트 `AND`를 수행합니다.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  각각의 요소를 비트 `AND`로 결합할 두 bitset 중 첫 번째입니다.  
   
- ` right`  
+ `right`  
  각각의 요소를 비트 `AND`로 결합할 두 valarray 중 두 번째입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 요소가 ` left` 및 ` right`의 해당 요소에 대한 `AND` 연산을 수행한 결과인 bitset입니다.  
+ 요소가 `left` 및 `right`의 해당 요소에 대한 `AND` 연산을 수행한 결과인 bitset입니다.  
   
 ### <a name="example"></a>예제  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  비트 시퀀스의 텍스트 표현을 출력 스트림에 삽입합니다.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` right`  
+ `right`  
  출력 스트림에 문자열로 삽입할 **bitset\<N>** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  bitset에 대한 비트 문자의 문자열을 읽습니다.  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  bitset에 삽입할 입력 스트림에 입력되는 문자열입니다.  
   
- ` right`  
+ `right`  
  입력 스트림에서 비트를 수신하는 bitset입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a>  operator^  
  두 bitset 간에 비트 `EXCLUSIVE-OR`을 수행합니다.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  각각의 요소를 비트 `EXCLUSIVE-OR`로 결합할 두 bitset 중 첫 번째입니다.  
   
- ` right`  
+ `right`  
  각각의 요소를 비트 `EXCLUSIVE-OR`로 결합할 두 valarray 중 두 번째입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 요소가 ` left` 및 ` right`의 해당 요소에 대한 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.  
+ 요소가 `left` 및 `right`의 해당 요소에 대한 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.  
   
 ### <a name="example"></a>예제  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>연산자 |  
  두 bitset 간에 비트 `OR`을 수행합니다.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  각각의 요소를 비트 `OR`로 결합할 두 bitset 중 첫 번째입니다.  
   
- ` right`  
+ `right`  
  각각의 요소를 비트 `OR`로 결합할 두 valarray 중 두 번째입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 요소가 ` left` 및 ` right`의 해당 요소에 대한 `OR` 연산을 수행한 결과인 bitset입니다.  
+ 요소가 `left` 및 `right`의 해당 요소에 대한 `OR` 연산을 수행한 결과인 bitset입니다.  
   
 ### <a name="example"></a>예제  
   

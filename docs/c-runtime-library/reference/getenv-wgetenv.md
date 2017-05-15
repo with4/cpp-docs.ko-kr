@@ -1,59 +1,76 @@
 ---
-title: "getenv, _wgetenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getenv"
-  - "_wgetenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-environment-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wgetenv"
-  - "getenv"
-  - "_tgetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tgetenv 함수"
-  - "_wgetenv 함수"
-  - "환경 값"
-  - "환경 변수"
-  - "getenv 함수"
-  - "tgetenv 함수"
-  - "wgetenv 함수"
+title: "getenv, _wgetenv | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getenv
+- _wgetenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wgetenv
+- getenv
+- _tgetenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- getenv function
+- tgetenv function
+- wgetenv function
+- environment values
+- environment variables
+- _tgetenv function
+- _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# getenv, _wgetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2838a1c79ad97bfd665a367b2a597cb20ac70097
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-현재 환경에서 값을 가져옵니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [getenv\_s, \_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)를 참조하십시오.  
+---
+# <a name="getenv-wgetenv"></a>getenv, _wgetenv
+현재 환경에서 값을 가져옵니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)를 참조하세요.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 char *getenv(   
@@ -64,50 +81,50 @@ wchar_t *_wgetenv(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `varname`  
- 환경 변수명  
+ 환경 변수 이름입니다.  
   
-## 반환 값  
- 포함된 `varname` 환경 테이블 항목에 관한 포인터를 반환합니다.  반환된 포인터를 사용하여 환경 변수 값을 수정하는 것은 안전하지 않습니다.  이 `_putenv` 함수는 환경 변수의 값을 수정하는데 사용합니다.  반환 값은 `NULL` 입니다. 이는 `varname` 이 환경 테이블에 없을 경우입니다.  
+## <a name="return-value"></a>반환 값  
+ `varname`이 포함된 환경 테이블 항목에 대한 포인터를 반환합니다. 반환된 포인터를 사용하여 환경 변수의 값을 수정하는 것은 안전하지 않습니다. `_putenv` 함수를 사용하여 환경 변수 값을 수정합니다. `varname`이 환경 테이블에 없을 경우 반환 값은 `NULL`입니다.  
   
-## 설명  
- `getenv` 함수는 `varname` 에 대한 환경 변수 목록을 검색합니다.  `getenv` 는 Windows 운영 체제에서 대\/소문자가 구분 되지 않습니다.  `getenv` 와 `_putenv` 는 환경에 접근하기 위한 전역 변수 `_environ` 에 의해 포인터된 환경 복사본을 사용합니다.  `getenv` 는 운영체제에 의해 프로세스를 만드는 환경 "세그먼트"가 아닌 런타임 라이브러리에 접근할 수 있는 데이터 구조에서만 작동합니다.  따라서 프로그램은 `envp` 인수를 사용합니다. [main](../../cpp/main-program-startup.md) 또는 [wmain](../../cpp/main-program-startup.md) 은 잘못된 정보를 검색할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `getenv` 함수는 `varname`애 대한 환경 변수 목록을 검색합니다. `getenv`는 Windows 운영 체제에서 대/소문자를 구분하지 않습니다. `getenv` 및 `_putenv`는 전역 변수 `_environ`이 가리키는 환경의 복사본을 사용하여 환경에 액세스합니다. `getenv`는 운영 체제에서 프로세스에 대해 만드는 환경 "세그먼트"가 아니라 런타임 라이브러리에 액세스할 수 있는 데이터 구조에서만 작동합니다. 따라서 [main](../../cpp/main-program-startup.md) 또는 [wmain](../../cpp/main-program-startup.md)에 대해 `envp` 인수를 사용하는 프로그램은 잘못된 정보를 검색할 수 있습니다.  
   
- 만일 `varname` 이 `NULL` 인 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명된 대로 잘못된 매개변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 함수는 `errno` 를 `EINVAL` 에 설정하고 `NULL`을 반환합니다.  
+ `varname`가 `NULL`인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `NULL`을 반환합니다.  
   
- `_wgetenv` 는 `getenv` 의 와이드 문자 버전입니다. `_wgetenv` 인수와 반환 값은 와이드 문자 문자열입니다.  `_wenviron` 전역 변수는 와이드 문자 버전인 `_environ`입니다.  
+ `_wgetenv`는 `getenv`의 와이드 문자 버전이고, `_wgetenv`의 인수와 반환 값은 와이드 문자 문자열입니다. `_wenviron` 전역 변수는 `_environ`의 와이드 문자 버전입니다.  
   
- MBCS 프로그램 \(예를 들어, ASCII SBCS 프로그램에서\) `_wenviron` 는 원래 `NULL` 입니다. 환경에서 멀티 바이트 문자 문자열 구성 되어 있기 때문입니다.  `_wputenv`를 처음 호출할 때 또는 MBCS 환경이 이미 있는 경우에는 `_wgetenv` 를 처음 호출할 때 해당 와이드 문자열 환경이 만들어지고 `_wenviron`에 의해 가르켜집니다.  
+ MBCS 프로그램(예: SBCS ASCII 프로그램)에서 환경은 멀티바이트 문자열로 구성되기 때문에, `_wenviron`은 처음에 `NULL`입니다. 그런 다음 `_wputenv` 또는 `_wgetenv`의 첫 번째 호출에서 (MBCS) 환경이 이미 있는 경우 해당 와이드 문자열 환경이 만들어지고 `_wenviron`이 해당 환경을 가리킵니다.  
   
- 유니코드와 유사한 \(`_wmain`\) 프로그램인, `_environ` 는 원래 `NULL` 입니다. 와이드 문자열 환경이 구성 되어 있기 때문입니다.  `_putenv`를 처음 호출할 때 또는 MBCS 환경이 이미 있는 경우에는 `getenv` 를 처음 호출할 때 해당 와이드 문자열 환경이 만들어지고, `_environ`에 의해 가르켜집니다.  
+ 마찬가지로, 유니코드(`_wmain`) 프로그램에서는 환경이 와이드 문자열로 구성되기 때문에 `_environ`은 처음에 `NULL`입니다. 그다음에 `_putenv` 또는 `getenv`의 첫 번째 호출에서 (유니코드) 환경이 이미 있는 경우 해당 MBCS 환경이 만들어지고 `_environ`에 의해 가리킵니다.  
   
- 환경 프로그램의 두개 복사본\(MBCS와 유니코드\)이 프로그램에서 동시에 존재할 때, 실행 시간을 더 늦춘 결과로서, 런타임 시스템은 두개의 복사본을 유지해야만 합니다.  예를 들어, `_putenv` 이 호출될 때마다, `_wputenv` 호출은 또한 자동으로 실행됩니다, 따라서 두개의 환경 문자열은 반응하게됩니다.  
+ 환경의 두 개의 복사본(MBCS 및 유니코드)이 프로그램에 동시에 존재하는 경우 런타임 시스템은 두 복사본을 모두 유지해야 하며 이에 따라 실행 시간이 늦어집니다. 예를 들어 `_putenv`를 호출할 때마다 `_wputenv`에 대한 호출도 자동으로 실행되어 두 환경 문자열이 일치하게 됩니다.  
   
 > [!CAUTION]
->  경우에 따라서 런타임 시스템 유니코드 버전 및 환경, 멀티 바이트 버전을 모두 유지 관리 하는 경우 이러한 두 환경 버전은 정확하게 반응하지 않습니다.  멀티 바이트문자 문자열에 대한 고유 유니코드 문자열 매핑은 반드시 고유 하지 않기 때문에, 고유 유니코드 문자열로부터 매핑이 필요 이상으로 고유하지 않습니다.  자세한 내용은 [\_environ, \_wenviron](../../c-runtime-library/environ-wenviron.md)를 참조하십시오.  
+>  드문 경우지만, 런타임 시스템이 유니코드 버전과 멀티바이트 버전의 환경을 모두 유지할 때 이러한 두 환경 버전이 정확히 일치하지 않을 수도 있습니다. 이는 고유한 멀티바이트 문자열이 고유한 유지코드 문자열에 매핑되지만 고유 유니코드 문자열에서 멀티바이트 문자열로 매핑이 반드시 고유하지는 않기 때문입니다. 자세한 내용은 [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md)을 참조하세요.  
   
 > [!NOTE]
->  `_putenv` 및 `_getenv` 함수 패밀리는 스레드로부터 안전 하지 않습니다.  `_putenv` 임의 오류가 발생 하 여 문자열을 수정하는 동안, `_getenv` 는 문자열 포인터를 반환합니다.  이러한 함수에 대한 호출은 동기화해야 합니다.  
+>  함수의 `_putenv` 및 `_getenv` 패밀리는 스레드로부터 안전하지 않습니다. `_getenv`는 `_putenv`가 문자열을 수정하는 동안 문자열 포인터를 반환할 수 있으므로 임의의 오류를 발생시킵니다. 이러한 함수에 대한 호출은 동기화해야 합니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tgetenv`|`getenv`|`getenv`|`_wgetenv`|  
   
- 이 `TZ` 환경 변수의 값을 바꾸거나 확인하기 위하여, `getenv`, `_putenv` 및 `_tzset` 필요에 따라 사용합니다.  자세한 내용은 `TZ` [\_tzset](../../c-runtime-library/reference/tzset.md) 및 [\_daylight, 시간대 및 \_tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md) 를 참조하십시오.  
+ `TZ` 환경 변수 값을 확인하거나 변경하려면 필요에 따라 `getenv`, `_putenv` 및 `_tzset`를 사용합니다. `TZ`에 대한 자세한 내용은 [_tzset](../../c-runtime-library/reference/tzset.md) 및 [_daylight, timezone 및 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)을 참조하세요.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|  
-|--------|-----------|  
-|`getenv`|\<stdlib.h\>|  
-|`_wgetenv`|\<stdlib.h\> 또는 \<wchar.h\>|  
+|-------------|---------------------|  
+|`getenv`|\<stdlib.h>|  
+|`_wgetenv`|\<stdlib.h> 또는 \<wchar.h>|  
   
- 추가 호환성 정보는 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_getenv.c  
@@ -144,12 +161,12 @@ int main( void )
 }  
 ```  
   
-  **원본 LIB 변수: C:\\progra~1\\devstu~1\\vc\\lib**  
-**새 변수를 LIB: c:\\mylib;c:\\yourlib**   
-## 해당 .NET Framework 항목  
- [System.Environment::GetEnvironmentVariables](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
+```Output  
+Original LIB variable is: C:\progra~1\devstu~1\vc\lib  
+New LIB variable is: c:\mylib;c:\yourlib  
+```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   
- [\_putenv, \_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [환경 상수](../../c-runtime-library/environmental-constants.md)

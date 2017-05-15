@@ -44,10 +44,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbe0589b9f0b02a738e8367002986c1669935605
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9545a1c559574bd5dc86e8924a65db9bea8cf9ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 클래스
@@ -78,7 +79,7 @@ class wstring_convert
   
 -   할당된 변환 개체에 대한 포인터(wbuffer_convert 개체가 제거될 때 해제됨)  
   
--   [state_type](#wstring_convert__state_type) 형식의 변환 상태 개체  
+-   [state_type](#state_type) 형식의 변환 상태 개체  
   
 -   변환 개수  
   
@@ -86,32 +87,32 @@ class wstring_convert
   
 |||  
 |-|-|  
-|[wstring_convert](#wstring_convert__wstring_convert)|`wstring_convert` 형식의 개체를 생성합니다.|  
+|[wstring_convert](#wstring_convert)|`wstring_convert` 형식의 개체를 생성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[byte_string](#wstring_convert__byte_string)|바이트 문자열을 나타내는 형식입니다.|  
-|[wide_string](#wstring_convert__wide_string)|와이드 문자열을 나타내는 형식입니다.|  
-|[state_type](#wstring_convert__state_type)|변환 상태를 나타내는 형식입니다.|  
-|[int_type](#wstring_convert__int_type)|정수를 나타내는 형식입니다.|  
+|[byte_string](#byte_string)|바이트 문자열을 나타내는 형식입니다.|  
+|[wide_string](#wide_string)|와이드 문자열을 나타내는 형식입니다.|  
+|[state_type](#state_type)|변환 상태를 나타내는 형식입니다.|  
+|[int_type](#int_type)|정수를 나타내는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[from_bytes](#wstring_convert__from_bytes)|바이트 문자열을 와이드 문자열로 변환합니다.|  
-|[to_bytes](#wstring_convert__to_bytes)|와이드 문자열을 바이트 문자열로 변환합니다.|  
-|[converted](#wstring_convert__converted)|성공적인 변환 수를 반환합니다.|  
-|[state](#wstring_convert__state)|변환의 상태를 나타내는 개체를 반환합니다.|  
+|[from_bytes](#from_bytes)|바이트 문자열을 와이드 문자열로 변환합니다.|  
+|[to_bytes](#to_bytes)|와이드 문자열을 바이트 문자열로 변환합니다.|  
+|[converted](#converted)|성공적인 변환 수를 반환합니다.|  
+|[state](#state)|변환의 상태를 나타내는 개체를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<locale>  
   
  **네임스페이스:** std  
   
-##  <a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
+##  <a name="byte_string"></a>  wstring_convert::byte_string  
  바이트 문자열을 나타내는 형식입니다.  
   
 ```
@@ -121,7 +122,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>설명  
  이 형식은 `std::basic_string<char>`의 동의어입니다.  
   
-##  <a name="wstring_convert__converted"></a>  wstring_convert::converted  
+##  <a name="converted"></a>  wstring_convert::converted  
  성공적인 변환 수를 반환합니다.  
   
 ```
@@ -134,7 +135,7 @@ size_t converted() const;
 ### <a name="remarks"></a>설명  
  성공적인 변환 수가 변환 개수 개체에 저장됩니다.  
   
-##  <a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
+##  <a name="from_bytes"></a>  wstring_convert::from_bytes  
  바이트 문자열을 와이드 문자열로 변환합니다.  
   
 ```
@@ -150,7 +151,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|  
 |`Byte`|변환할 단일 요소 바이트 시퀀스입니다.|  
 |`ptr`|변환할 C 스타일의 null 종료 문자 시퀀스입니다.|  
-|`Bstr`|변환할 [byte_string](#wstring_convert__byte_string)입니다.|  
+|`Bstr`|변환할 [byte_string](#byte_string)입니다.|  
 |`first`|변환할 문자 범위의 첫 문자입니다.|  
 |`last`|변환할 문자 범위의 마지막 문자입니다.|  
   
@@ -162,7 +163,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  성공적으로 변환된 입력 요소 수는 변환 개수 개체에 저장됩니다. 변환 오류가 발생하지 않는 경우 멤버 함수는 변환된 와이드 문자열을 반환합니다. 오류가 발생하는 경우, 와이드 문자열 오류 메시지에 대한 이니셜라이저를 사용하여 생성된 개체라면 멤버 함수는 와이드 문자열 오류 메시지 개체를 반환합니다. 그렇지 않으면 구성원 함수가 [range_error](../standard-library/range-error-class.md) 클래스의 개체를 발생시킵니다.  
   
-##  <a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
+##  <a name="int_type"></a>  wstring_convert::int_type  
  정수를 나타내는 형식입니다.  
   
 ```
@@ -172,7 +173,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>설명  
  이 형식은 `wide_string::traits_type::int_type`의 동의어입니다.  
   
-##  <a name="wstring_convert__state"></a>  wstring_convert::state  
+##  <a name="state"></a>  wstring_convert::state  
  변환의 상태를 나타내는 개체를 반환합니다.  
   
 ```
@@ -184,7 +185,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
+##  <a name="state_type"></a>  wstring_convert::state_type  
  변환 상태를 나타내는 형식입니다.  
   
 ```
@@ -194,7 +195,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>설명  
  형식은 변환 상태를 나타낼 수 있는 개체에 대해 설명합니다. 이 형식은 `Codecvt::state_type`의 동의어입니다.  
   
-##  <a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
+##  <a name="to_bytes"></a>  wstring_convert::to_bytes  
  와이드 문자열을 바이트 문자열로 변환합니다.  
   
 ```
@@ -210,7 +211,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|  
 |`Char`|변환할 와이드 문자입니다.|  
 |`Wptr`|변환할 null로 끝나는 시퀀스로, `wptr`에서 시작되며 C 스타일입니다.|  
-|`Wstr`|변환할 [wide_string](#wstring_convert__wide_string)입니다.|  
+|`Wstr`|변환할 [wide_string](#wide_string)입니다.|  
 |`first`|변환할 요소의 범위에서 첫 번째 요소입니다.|  
 |`last`|변환할 요소의 범위에서 마지막 요소입니다.|  
   
@@ -219,7 +220,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  성공적으로 변환된 입력 요소 수는 변환 개수 개체에 저장됩니다. 변환 오류가 발생하지 않는 경우 멤버 함수는 변환된 바이트 문자열을 반환합니다. 오류가 발생하는 경우, 바이트 문자열 오류 메시지에 대한 이니셜라이저를 사용하여 생성된 개체라면 멤버 함수는 바이트 문자열 오류 메시지 개체를 반환합니다. 그렇지 않으면 구성원 함수가 [range_error](../standard-library/range-error-class.md) 클래스의 개체를 발생시킵니다.  
   
-##  <a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
+##  <a name="wide_string"></a>  wstring_convert::wide_string  
  와이드 문자열을 나타내는 형식입니다.  
   
 ```
@@ -229,7 +230,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>설명  
  이 형식은 `std::basic_string<Elem>`의 동의어입니다.  
   
-##  <a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
+##  <a name="wstring_convert"></a>  wstring_convert::wstring_convert  
  `wstring_convert` 형식의 개체를 생성합니다.  
   
 ```
@@ -243,9 +244,9 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`*Pcvt`|변환을 수행할 `Codecvt` 형식의 개체입니다.|  
-|`_State`|변환 상태를 나타내는 [state_type](#wstring_convert__state_type) 형식의 개체입니다.|  
-|`_Berr`|오류 시에 표시할 [byte_string](#wstring_convert__byte_string)입니다.|  
-|`Werr`|오류 시에 표시할 [wide_string](#wstring_convert__wide_string)입니다.|  
+|`_State`|변환 상태를 나타내는 [state_type](#state_type) 형식의 개체입니다.|  
+|`_Berr`|오류 시에 표시할 [byte_string](#byte_string)입니다.|  
+|`Werr`|오류 시에 표시할 [wide_string](#wide_string)입니다.|  
   
 ### <a name="remarks"></a>설명  
  첫 번째 생성자는 [변환 개체](../standard-library/wstring-convert-class.md)에 *Pcvt_arg*를 저장합니다.

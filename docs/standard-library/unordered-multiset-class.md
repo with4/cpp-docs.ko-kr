@@ -10,94 +10,91 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_multiset
-- std::unordered_multiset
 - unordered_set/std::unordered_multiset
-- std::unordered_multiset::allocator_type
 - unordered_set/std::unordered_multiset::allocator_type
-- std::unordered_multiset::const_iterator
 - unordered_set/std::unordered_multiset::const_iterator
-- std::unordered_multiset::const_local_iterator
 - unordered_set/std::unordered_multiset::const_local_iterator
-- std::unordered_multiset::const_pointer
 - unordered_set/std::unordered_multiset::const_pointer
-- std::unordered_multiset::const_reference
 - unordered_set/std::unordered_multiset::const_reference
-- std::unordered_multiset::difference_type
 - unordered_set/std::unordered_multiset::difference_type
-- std::unordered_multiset::hasher
 - unordered_set/std::unordered_multiset::hasher
-- std::unordered_multiset::iterator
 - unordered_set/std::unordered_multiset::iterator
-- std::unordered_multiset::key_equal
 - unordered_set/std::unordered_multiset::key_equal
-- std::unordered_multiset::key_type
 - unordered_set/std::unordered_multiset::key_type
-- std::unordered_multiset::local_iterator
 - unordered_set/std::unordered_multiset::local_iterator
-- std::unordered_multiset::pointer
 - unordered_set/std::unordered_multiset::pointer
-- std::unordered_multiset::reference
 - unordered_set/std::unordered_multiset::reference
-- std::unordered_multiset::size_type
 - unordered_set/std::unordered_multiset::size_type
-- std::unordered_multiset::value_type
 - unordered_set/std::unordered_multiset::value_type
-- std::unordered_multiset::begin
 - unordered_set/std::unordered_multiset::begin
-- std::unordered_multiset::bucket
 - unordered_set/std::unordered_multiset::bucket
-- std::unordered_multiset::bucket_count
 - unordered_set/std::unordered_multiset::bucket_count
-- std::unordered_multiset::bucket_size
 - unordered_set/std::unordered_multiset::bucket_size
-- std::unordered_multiset::cbegin
 - unordered_set/std::unordered_multiset::cbegin
-- std::unordered_multiset::cend
 - unordered_set/std::unordered_multiset::cend
-- std::unordered_multiset::clear
 - unordered_set/std::unordered_multiset::clear
-- std::unordered_multiset::count
 - unordered_set/std::unordered_multiset::count
-- std::unordered_multiset::emplace
 - unordered_set/std::unordered_multiset::emplace
-- std::unordered_multiset::emplace_hint
 - unordered_set/std::unordered_multiset::emplace_hint
-- std::unordered_multiset::empty
 - unordered_set/std::unordered_multiset::empty
-- std::unordered_multiset::end
 - unordered_set/std::unordered_multiset::end
-- std::unordered_multiset::equal_range
 - unordered_set/std::unordered_multiset::equal_range
-- std::unordered_multiset::erase
 - unordered_set/std::unordered_multiset::erase
-- std::unordered_multiset::find
 - unordered_set/std::unordered_multiset::find
-- std::unordered_multiset::get_allocator
 - unordered_set/std::unordered_multiset::get_allocator
-- std::unordered_multiset::hash_function
-- unordered_set/std::unordered_multiset::hash_function
-- std::unordered_multiset::insert
+- unordered_set/std::unordered_multiset::hash
 - unordered_set/std::unordered_multiset::insert
-- std::unordered_multiset::key_eq
 - unordered_set/std::unordered_multiset::key_eq
-- std::unordered_multiset::load_factor
 - unordered_set/std::unordered_multiset::load_factor
-- std::unordered_multiset::max_bucket_count
 - unordered_set/std::unordered_multiset::max_bucket_count
-- std::unordered_multiset::max_load_factor
 - unordered_set/std::unordered_multiset::max_load_factor
-- std::unordered_multiset::max_size
 - unordered_set/std::unordered_multiset::max_size
-- std::unordered_multiset::rehash
 - unordered_set/std::unordered_multiset::rehash
-- std::unordered_multiset::size
 - unordered_set/std::unordered_multiset::size
-- std::unordered_multiset::swap
 - unordered_set/std::unordered_multiset::swap
-- std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::unordered_multiset
-- std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::operator=
+- unordered_set/std::unordered_multiset::allocator_type
+- unordered_set/std::unordered_multiset::const_iterator
+- unordered_set/std::unordered_multiset::const_local_iterator
+- unordered_set/std::unordered_multiset::const_pointer
+- unordered_set/std::unordered_multiset::const_reference
+- unordered_set/std::unordered_multiset::difference_type
+- unordered_set/std::unordered_multiset::hasher
+- unordered_set/std::unordered_multiset::iterator
+- unordered_set/std::unordered_multiset::key_equal
+- unordered_set/std::unordered_multiset::key_type
+- unordered_set/std::unordered_multiset::local_iterator
+- unordered_set/std::unordered_multiset::pointer
+- unordered_set/std::unordered_multiset::reference
+- unordered_set/std::unordered_multiset::size_type
+- unordered_set/std::unordered_multiset::value_type
+- unordered_set/std::unordered_multiset::begin
+- unordered_set/std::unordered_multiset::bucket
+- unordered_set/std::unordered_multiset::bucket_count
+- unordered_set/std::unordered_multiset::bucket_size
+- unordered_set/std::unordered_multiset::cbegin
+- unordered_set/std::unordered_multiset::cend
+- unordered_set/std::unordered_multiset::clear
+- unordered_set/std::unordered_multiset::count
+- unordered_set/std::unordered_multiset::emplace
+- unordered_set/std::unordered_multiset::emplace_hint
+- unordered_set/std::unordered_multiset::empty
+- unordered_set/std::unordered_multiset::end
+- unordered_set/std::unordered_multiset::equal_range
+- unordered_set/std::unordered_multiset::erase
+- unordered_set/std::unordered_multiset::find
+- unordered_set/std::unordered_multiset::get_allocator
+- unordered_set/std::unordered_multiset::hash_function
+- unordered_set/std::unordered_multiset::insert
+- unordered_set/std::unordered_multiset::key_eq
+- unordered_set/std::unordered_multiset::load_factor
+- unordered_set/std::unordered_multiset::max_bucket_count
+- unordered_set/std::unordered_multiset::max_load_factor
+- unordered_set/std::unordered_multiset::max_size
+- unordered_set/std::unordered_multiset::rehash
+- unordered_set/std::unordered_multiset::size
+- unordered_set/std::unordered_multiset::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,10 +118,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cae7184dd2d0e241ee13e6867897e4699d7d56a1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4df02938056e6a49c71de0ce594cf7eeb84208f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset 클래스
@@ -155,73 +153,73 @@ class unordered_multiset;
 |||  
 |-|-|  
 |형식 정의|설명|  
-|[unordered_multiset::allocator_type](#unordered_multiset__allocator_type)|저장소 관리를 위한 할당자의 형식입니다.|  
-|[unordered_multiset::const_iterator](#unordered_multiset__const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
-|[unordered_multiset::const_local_iterator](#unordered_multiset__const_local_iterator)|제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.|  
-|[unordered_multiset::const_pointer](#unordered_multiset__const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
-|[unordered_multiset::const_reference](#unordered_multiset__const_reference)|요소에 대한 상수 참조의 형식입니다.|  
-|[unordered_multiset::difference_type](#unordered_multiset__difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
-|[unordered_multiset::hasher](#unordered_multiset__hasher)|해시 함수의 형식입니다.|  
-|[unordered_multiset::iterator](#unordered_multiset__iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
-|[unordered_multiset::key_equal](#unordered_multiset__key_equal)|비교 함수의 형식입니다.|  
-|[unordered_multiset::key_type](#unordered_multiset__key_type)|정렬 키의 형식입니다.|  
-|[unordered_multiset::local_iterator](#unordered_multiset__local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|  
-|[unordered_multiset::pointer](#unordered_multiset__pointer)|요소에 대한 포인터의 형식입니다.|  
-|[unordered_multiset::reference](#unordered_multiset__reference)|요소에 대한 참조의 형식입니다.|  
-|[unordered_multiset::size_type](#unordered_multiset__size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
-|[unordered_multiset::value_type](#unordered_multiset__value_type)|요소의 형식입니다.|  
+|[allocator_type](#allocator_type)|저장소 관리를 위한 할당자의 형식입니다.|  
+|[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|  
+|[const_local_iterator](#const_local_iterator)|제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.|  
+|[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|  
+|[const_reference](#const_reference)|요소에 대한 상수 참조의 형식입니다.|  
+|[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
+|[hasher](#hasher)|해시 함수의 형식입니다.|  
+|[iterator](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|  
+|[key_equal](#key_equal)|비교 함수의 형식입니다.|  
+|[key_type](#key_type)|정렬 키의 형식입니다.|  
+|[local_iterator](#local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|  
+|[pointer](#pointer)|요소에 대한 포인터의 형식입니다.|  
+|[reference](#reference)|요소에 대한 참조의 형식입니다.|  
+|[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|  
+|[value_type](#value_type)|요소의 형식입니다.|  
   
 |||  
 |-|-|  
 |멤버 함수|설명|  
-|[unordered_multiset::begin](#unordered_multiset__begin)|제어되는 시퀀스의 시작을 지정합니다.|  
-|[unordered_multiset::bucket](#unordered_multiset__bucket)|키 값에 대한 버킷 개수를 가져옵니다.|  
-|[unordered_multiset::bucket_count](#unordered_multiset__bucket_count)|버킷 개수를 가져옵니다.|  
-|[unordered_multiset::bucket_size](#unordered_multiset__bucket_size)|버킷의 크기를 가져옵니다.|  
-|[unordered_multiset::cbegin](#unordered_multiset__cbegin)|제어되는 시퀀스의 시작을 지정합니다.|  
-|[unordered_multiset::cend](#unordered_multiset__cend)|제어되는 시퀀스의 끝을 지정합니다.|  
-|[unordered_multiset::clear](#unordered_multiset__clear)|모든 요소를 제거합니다.|  
-|[unordered_multiset::count](#unordered_multiset__count)|지정한 키와 일치하는 요소의 수를 찾습니다.|  
-|[unordered_multiset::emplace](#unordered_multiset__emplace)|생성된 요소를 추가합니다.|  
-|[unordered_multiset::emplace_hint](#unordered_multiset__emplace_hint)|힌트와 함께 생성된 요소를 추가합니다.|  
-|[unordered_multiset::empty](#unordered_multiset__empty)|요소가 있는지 여부를 테스트합니다.|  
-|[unordered_multiset::end](#unordered_multiset__end)|제어되는 시퀀스의 끝을 지정합니다.|  
-|[unordered_multiset::equal_range](#unordered_multiset__equal_range)|지정된 키와 일치하는 범위를 찾습니다.|  
-|[unordered_multiset::erase](#unordered_multiset__erase)|지정된 위치에 있는 요소를 제거합니다.|  
-|[unordered_multiset::find](#unordered_multiset__find)|지정된 키와 일치하는 요소를 찾습니다.|  
-|[unordered_multiset::get_allocator](#unordered_multiset__get_allocator)|저장된 할당자 개체를 가져옵니다.|  
-|[unordered_multiset::hash_function](#unordered_multiset__hash_function)|저장된 해시 함수 개체를 가져옵니다.|  
-|[unordered_multiset::insert](#unordered_multiset__insert)|요소를 추가합니다.|  
-|[unordered_multiset::key_eq](#unordered_multiset__key_eq)|저장된 비교 함수 개체를 가져옵니다.|  
-|[unordered_multiset::load_factor](#unordered_multiset__load_factor)|버킷당 평균 요소 수를 계산합니다.|  
-|[unordered_multiset::max_bucket_count](#unordered_multiset__max_bucket_count)|최대 버킷 개수를 가져옵니다.|  
-|[unordered_multiset::max_load_factor](#unordered_multiset__max_load_factor)|버킷당 최대 요소 수를 가져오거나 설정합니다.|  
-|[unordered_multiset::max_size](#unordered_multiset__max_size)|제어되는 시퀀스의 최대 크기를 가져옵니다.|  
-|[unordered_multiset::rehash](#unordered_multiset__rehash)|해시 테이블을 다시 빌드합니다.|  
-|[unordered_multiset::size](#unordered_multiset__size)|요소 수를 계산합니다.|  
-|[unordered_multiset::swap](#unordered_multiset__swap)|두 컨테이너의 내용을 바꿉니다.|  
-|[unordered_multiset::unordered_multiset](#unordered_multiset__unordered_multiset)|컨테이너 개체를 만듭니다.|  
+|[begin](#begin)|제어되는 시퀀스의 시작을 지정합니다.|  
+|[버킷](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|  
+|[bucket_count](#bucket_count)|버킷 개수를 가져옵니다.|  
+|[bucket_size](#bucket_size)|버킷의 크기를 가져옵니다.|  
+|[cbegin](#cbegin)|제어되는 시퀀스의 시작을 지정합니다.|  
+|[cend](#cend)|제어되는 시퀀스의 끝을 지정합니다.|  
+|[clear](#clear)|모든 요소를 제거합니다.|  
+|[count](#count)|지정한 키와 일치하는 요소의 수를 찾습니다.|  
+|[emplace](#emplace)|생성된 요소를 추가합니다.|  
+|[emplace_hint](#emplace_hint)|힌트와 함께 생성된 요소를 추가합니다.|  
+|[empty](#empty)|요소가 있는지 여부를 테스트합니다.|  
+|[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|  
+|[equal_range](#equal_range)|지정된 키와 일치하는 범위를 찾습니다.|  
+|[erase](#erase)|지정된 위치에 있는 요소를 제거합니다.|  
+|[find](#find)|지정된 키와 일치하는 요소를 찾습니다.|  
+|[get_allocator](#get_allocator)|저장된 할당자 개체를 가져옵니다.|  
+|[hash_function](#hash)|저장된 해시 함수 개체를 가져옵니다.|  
+|[insert](#insert)|요소를 추가합니다.|  
+|[key_eq](#key_eq)|저장된 비교 함수 개체를 가져옵니다.|  
+|[load_factor](#load_factor)|버킷당 평균 요소 수를 계산합니다.|  
+|[max_bucket_count](#max_bucket_count)|최대 버킷 개수를 가져옵니다.|  
+|[max_load_factor](#max_load_factor)|버킷당 최대 요소 수를 가져오거나 설정합니다.|  
+|[max_size](#max_size)|제어되는 시퀀스의 최대 크기를 가져옵니다.|  
+|[rehash](#rehash)|해시 테이블을 다시 빌드합니다.|  
+|[size](#size)|요소 수를 계산합니다.|  
+|[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|  
+|[unordered_multiset](#unordered_multiset)|컨테이너 개체를 만듭니다.|  
   
 |||  
 |-|-|  
 |연산자|설명|  
-|[unordered_multiset::operator=](#unordered_multiset__operator_eq)|해시 테이블을 복사합니다.|  
+|[unordered_multiset::operator=](#op_eq)|해시 테이블을 복사합니다.|  
   
 ## <a name="remarks"></a>설명  
- 개체는 저장된 두 개체, [unordered_multiset::key_equal](#unordered_multiset__key_equal) 형식의 비교 함수 개체, [unordered_multiset::hasher](#unordered_multiset__hasher) 형식의 해시 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 첫 번째 저장된 개체는 구성원 함수 [unordered_multiset::key_eq](#unordered_multiset__key_eq)`()`를 호출하여 액세스하며, 두 번째 저장된 개체는 구성원 함수 [unordered_multiset::hash_function](#unordered_multiset__hash_function)`()`을 호출하여 액세스합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 템플릿 클래스 [unordered_set 클래스](../standard-library/unordered-set-class.md)와 달리, 템플릿 클래스 `unordered_multiset`의 개체는 `key_eq()(X, Y)`가 제어된 시퀀스의 두 요소에 대해 항상 false라는 점에 대해 보장하지 않습니다. (키는 고유할 필요가 없습니다.)  
+ 개체는 저장된 두 개체, [unordered_multiset::key_equal](#key_equal) 형식의 비교 함수 개체, [unordered_multiset::hasher](#hasher) 형식의 해시 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 첫 번째 저장된 개체는 구성원 함수 [unordered_multiset::key_eq](#key_eq)`()`를 호출하여 액세스하며, 두 번째 저장된 개체는 구성원 함수 [unordered_multiset::hash_function](#hash)`()`을 호출하여 액세스합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 템플릿 클래스 [unordered_set 클래스](../standard-library/unordered-set-class.md)와 달리, 템플릿 클래스 `unordered_multiset`의 개체는 `key_eq()(X, Y)`가 제어된 시퀀스의 두 요소에 대해 항상 false라는 점에 대해 보장하지 않습니다. (키는 고유할 필요가 없습니다.)  
   
- 개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입할 때 [unordered_multiset::load_factor](#unordered_multiset__load_factor)`()`에서 최대 로드 비율이 초과될 경우 컨테이너는 버킷 수를 증가시키고 필요에 따라 해시 테이블을 다시 빌드합니다.  
+ 개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입할 때 [unordered_multiset::load_factor](#load_factor)`()`에서 최대 로드 비율이 초과될 경우 컨테이너는 버킷 수를 증가시키고 필요에 따라 해시 테이블을 다시 빌드합니다.  
   
  제어된 시퀀스의 실제 요소 순서는 해시 함수, 비교 함수, 삽입 순서, 최대 로드 비율, 현재 버킷 수에 따라 달라집니다. 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 하지만 동일하게 정렬된 요소의 하위 집합은 제어된 시퀀스에서 항상 인접해 있습니다.  
   
- 개체는 [unordered_multiset::allocator_type](#unordered_multiset__allocator_type) 형식의 저장된 할당자 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당하고 해제합니다. 그러한 할당자 개체는 템플릿 클래스 `allocator`의 개체와 같은 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.  
+ 개체는 [unordered_multiset::allocator_type](#allocator_type) 형식의 저장된 할당자 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당하고 해제합니다. 그러한 할당자 개체는 템플릿 클래스 `allocator`의 개체와 같은 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<unordered_set>  
   
  **네임스페이스:** std  
   
-##  <a name="a-nameunorderedmultisetallocatortypea--unorderedmultisetallocatortype"></a><a name="unordered_multiset__allocator_type"></a>  unordered_multiset::allocator_type  
+##  <a name="allocator_type"></a>  unordered_multiset::allocator_type  
  저장소 관리를 위한 할당자의 형식입니다.  
   
 ```  
@@ -258,7 +256,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultisetbegina--unorderedmultisetbegin"></a><a name="unordered_multiset__begin"></a>  unordered_multiset::begin  
+##  <a name="begin"></a>  unordered_multiset::begin  
  제어되는 시퀀스 또는 버킷의 시작을 지정합니다.  
   
 ```  
@@ -327,7 +325,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketa--unorderedmultisetbucket"></a><a name="unordered_multiset__bucket"></a>  unordered_multiset::bucket  
+##  <a name="bucket"></a>  unordered_multiset::bucket  
  키 값에 대한 버킷 개수를 가져옵니다.  
   
 ```  
@@ -381,7 +379,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketcounta--unorderedmultisetbucketcount"></a><a name="unordered_multiset__bucket_count"></a>  unordered_multiset::bucket_count  
+##  <a name="bucket_count"></a>  unordered_multiset::bucket_count  
  버킷 개수를 가져옵니다.  
   
 ```  
@@ -467,7 +465,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketsizea--unorderedmultisetbucketsize"></a><a name="unordered_multiset__bucket_size"></a>  unordered_multiset::bucket_size  
+##  <a name="bucket_size"></a>  unordered_multiset::bucket_size  
  버킷의 크기를 가져옵니다.  
   
 ```  
@@ -521,7 +519,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultisetcbegina--unorderedmultisetcbegin"></a><a name="unordered_multiset__cbegin"></a>  unordered_multiset::cbegin  
+##  <a name="cbegin"></a>  unordered_multiset::cbegin  
  범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -544,7 +542,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmultisetcenda--unorderedmultisetcend"></a><a name="unordered_multiset__cend"></a>  unordered_multiset::cend  
+##  <a name="cend"></a>  unordered_multiset::cend  
  범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
   
 ```  
@@ -569,7 +567,7 @@ auto i2 = Container.cend();
   
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-##  <a name="a-nameunorderedmultisetcleara--unorderedmultisetclear"></a><a name="unordered_multiset__clear"></a>  unordered_multiset::clear  
+##  <a name="clear"></a>  unordered_multiset::clear  
  모든 요소를 제거합니다.  
   
 ```  
@@ -577,7 +575,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multiset::erase](#unordered_multiset__erase)`(` [unordered_multiset::begin](#unordered_multiset__begin)`(),` [unordered_multiset::end](#unordered_multiset__end)`())`를 호출합니다.  
+ 구성원 함수는 [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`를 호출합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -635,7 +633,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstiteratora--unorderedmultisetconstiterator"></a><a name="unordered_multiset__const_iterator"></a>  unordered_multiset::const_iterator  
+##  <a name="const_iterator"></a>  unordered_multiset::const_iterator  
  제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
   
 ```  
@@ -677,7 +675,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstlocaliteratora--unorderedmultisetconstlocaliterator"></a><a name="unordered_multiset__const_local_iterator"></a>  unordered_multiset::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_multiset::const_local_iterator  
  제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.  
   
 ```  
@@ -724,7 +722,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstpointera--unorderedmultisetconstpointer"></a><a name="unordered_multiset__const_pointer"></a>  unordered_multiset::const_pointer  
+##  <a name="const_pointer"></a>  unordered_multiset::const_pointer  
  요소에 대한 상수 포인터의 형식입니다.  
   
 ```  
@@ -769,7 +767,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstreferencea--unorderedmultisetconstreference"></a><a name="unordered_multiset__const_reference"></a>  unordered_multiset::const_reference  
+##  <a name="const_reference"></a>  unordered_multiset::const_reference  
  요소에 대한 상수 참조의 형식입니다.  
   
 ```  
@@ -814,7 +812,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetcounta--unorderedmultisetcount"></a><a name="unordered_multiset__count"></a>  unordered_multiset::count  
+##  <a name="count"></a>  unordered_multiset::count  
  지정한 키와 일치하는 요소의 수를 찾습니다.  
   
 ```  
@@ -826,7 +824,7 @@ size_type count(const Key& keyval) const;
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multiset::equal_range](#unordered_multiset__equal_range)`(keyval)`로 구분된 범위의 요소 수를 반환합니다.  
+ 구성원 함수는 [unordered_multiset::equal_range](#equal_range)`(keyval)`로 구분된 범위의 요소 수를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -867,7 +865,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmultisetdifferencetypea--unorderedmultisetdifferencetype"></a><a name="unordered_multiset__difference_type"></a>  unordered_multiset::difference_type  
+##  <a name="difference_type"></a>  unordered_multiset::difference_type  
  두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
 ```  
@@ -925,7 +923,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmultisetemplacea--unorderedmultisetemplace"></a><a name="unordered_multiset__emplace"></a>  unordered_multiset::emplace  
+##  <a name="emplace"></a>  unordered_multiset::emplace  
  생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -948,9 +946,9 @@ iterator emplace(Args&&... args);
   
  삽입 중에 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다.  
   
- 코드 예제를 보려면 [multiset::emplace](../standard-library/multiset-class.md#multiset__emplace)를 참조하세요.  
+ 코드 예제를 보려면 [multiset::emplace](../standard-library/multiset-class.md#emplace)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultisetemplacehinta--unorderedmultisetemplacehint"></a><a name="unordered_multiset__emplace_hint"></a>  unordered_multiset::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_multiset::emplace_hint  
  배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
@@ -976,9 +974,9 @@ iterator emplace_hint(
   
  삽입 중에 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다.  
   
- 코드 예제를 보려면 [set::emplace_hint](../standard-library/set-class.md#set__emplace_hint)를 참조하세요.  
+ 코드 예제를 보려면 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultisetemptya--unorderedmultisetempty"></a><a name="unordered_multiset__empty"></a>  unordered_multiset::empty  
+##  <a name="empty"></a>  unordered_multiset::empty  
  요소가 있는지 여부를 테스트합니다.  
   
 ```  
@@ -1044,7 +1042,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetenda--unorderedmultisetend"></a><a name="unordered_multiset__end"></a>  unordered_multiset::end  
+##  <a name="end"></a>  unordered_multiset::end  
  제어되는 시퀀스의 끝을 지정합니다.  
   
 ```  
@@ -1110,7 +1108,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetequalrangea--unorderedmultisetequalrange"></a><a name="unordered_multiset__equal_range"></a>  unordered_multiset::equal_range  
+##  <a name="equal_range"></a>  unordered_multiset::equal_range  
  지정된 키와 일치하는 범위를 찾습니다.  
   
 ```  
@@ -1177,7 +1175,7 @@ equal_range('x'):
 equal_range('b'): [b]  
 ```  
   
-##  <a name="a-nameunorderedmultiseterasea--unorderedmultiseterase"></a><a name="unordered_multiset__erase"></a>  unordered_multiset::erase  
+##  <a name="erase"></a>  unordered_multiset::erase  
  지정된 위치에서 unordered_multiset의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.  
   
 ```  
@@ -1211,9 +1209,9 @@ size_type erase(
  세 번째 구성원 함수의 경우 unordered_multiset에서 제거된 요소의 수를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 코드 예제를 보려면 [set::erase](../standard-library/set-class.md#set__erase)를 참조하세요.  
+ 코드 예제를 보려면 [set::erase](../standard-library/set-class.md#erase)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultisetfinda--unorderedmultisetfind"></a><a name="unordered_multiset__find"></a>  unordered_multiset::find  
+##  <a name="find"></a>  unordered_multiset::find  
  지정된 키와 일치하는 요소를 찾습니다.  
   
 ```  
@@ -1225,7 +1223,7 @@ const_iterator find(const Key& keyval) const;
  검색할 키 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 [unordered_multiset::equal_range](#unordered_multiset__equal_range)`(keyval).first`를 반환합니다.  
+ 구성원 함수는 [unordered_multiset::equal_range](#equal_range)`(keyval).first`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1271,7 +1269,7 @@ find('A') == false
 find('b') == true: [b]  
 ```  
   
-##  <a name="a-nameunorderedmultisetgetallocatora--unorderedmultisetgetallocator"></a><a name="unordered_multiset__get_allocator"></a>  unordered_multiset::get_allocator  
+##  <a name="get_allocator"></a>  unordered_multiset::get_allocator  
  저장된 할당자 개체를 가져옵니다.  
   
 ```  
@@ -1308,7 +1306,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultisethashfunctiona--unorderedmultisethashfunction"></a><a name="unordered_multiset__hash_function"></a>  unordered_multiset::hash_function  
+##  <a name="hash"></a>  unordered_multiset::hash_function  
  저장된 해시 함수 개체를 가져옵니다.  
   
 ```  
@@ -1345,7 +1343,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultisethashera--unorderedmultisethasher"></a><a name="unordered_multiset__hasher"></a>  unordered_multiset::hasher  
+##  <a name="hasher"></a>  unordered_multiset::hasher  
  해시 함수의 형식입니다.  
   
 ```  
@@ -1382,7 +1380,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultisetinserta--unorderedmultisetinsert"></a><a name="unordered_multiset__insert"></a>  unordered_multiset::insert  
+##  <a name="insert"></a>  unordered_multiset::insert  
  unordered_multiset에 요소 또는 요소의 범위를 삽입합니다.  
   
 ```  
@@ -1431,10 +1429,10 @@ IList);
 |매개 변수|설명|  
 |`Val`|unordered_multiset에 삽입할 요소의 값입니다.|  
 |`Where`|올바른 삽입 지점 검색을 시작할 위치입니다.|  
-|`ValTy`|unordered_multiset가 [value_type](../standard-library/map-class.md#map__value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
+|`ValTy`|unordered_multiset가 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 `Val`을 인수로 완벽하게 전달하는 템플릿 매개 변수입니다.|  
 |`First`|복사할 첫 번째 요소의 위치입니다.|  
 |`Last`|복사할 마지막 요소 바로 다음 위치입니다.|  
-|`InputIterator`|[value_type](../standard-library/map-class.md#map__value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
+|`InputIterator`|[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|  
 |`IList`|요소를 복사할 원본 [initializer_list](../standard-library/initializer-list.md)입니다.|  
   
 ### <a name="return-value"></a>반환 값  
@@ -1447,17 +1445,17 @@ IList);
   
  요소를 하나만 삽입하는 중 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너의 상태가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다. 여러 요소를 삽입하는 중 예외가 throw되면 컨테이너는 지정되지 않았으나 유효한 상태로 남아 있습니다.  
   
- 컨테이너의 [value_type](../standard-library/map-class.md#map__value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `unordered_multiset<V>::value_type`은 `const V`입니다.  
+ 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `unordered_multiset<V>::value_type`은 `const V`입니다.  
   
  범위 멤버 함수 (5)는 `[First, Last)` 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 unordered_multiset에 요소 값의 시퀀스를 입력하므로 `Last`는 삽입되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `m.insert(v.begin(), v.end());` 문은 `v`의 모든 요소를 `m`에 삽입합니다.  
   
  이니셜라이저 목록 구성원 함수 (6)은 [initializer_list](../standard-library/initializer-list.md)를 사용하여 요소를 unordered_multiset로 복사합니다.  
   
- 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [unordered_multiset::emplace](#unordered_multiset__emplace) 및 [unordered_multiset::emplace_hint](#unordered_multiset__emplace_hint)를 참조하세요.  
+ 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [unordered_multiset::emplace](#emplace) 및 [unordered_multiset::emplace_hint](#emplace_hint)를 참조하세요.  
   
- 코드 예제를 보려면 [multiset::insert](../standard-library/multiset-class.md#multiset__insert)를 참조하세요.  
+ 코드 예제를 보려면 [multiset::insert](../standard-library/multiset-class.md#insert)를 참조하세요.  
   
-##  <a name="a-nameunorderedmultisetiteratora--unorderedmultisetiterator"></a><a name="unordered_multiset__iterator"></a>  unordered_multiset::iterator  
+##  <a name="iterator"></a>  unordered_multiset::iterator  
  unordered_multiset의 요소를 읽을 수 있는 상수 [정방향 반복기](../standard-library/forward-iterator-tag-struct.md)를 제공하는 형식입니다.  
   
 ```  
@@ -1465,9 +1463,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>예제  
-  **반복기**를 선언하고 사용하는 방법의 예제는 [begin](../standard-library/multiset-class.md#multiset__begin)의 예제를 참조하세요.  
+  **반복기**를 선언하고 사용하는 방법의 예제는 [begin](../standard-library/multiset-class.md#begin)의 예제를 참조하세요.  
   
-##  <a name="a-nameunorderedmultisetkeyeqa--unorderedmultisetkeyeq"></a><a name="unordered_multiset__key_eq"></a>  unordered_multiset::key_eq  
+##  <a name="key_eq"></a>  unordered_multiset::key_eq  
  저장된 비교 함수 개체를 가져옵니다.  
   
 ```  
@@ -1506,7 +1504,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetkeyequala--unorderedmultisetkeyequal"></a><a name="unordered_multiset__key_equal"></a>  unordered_multiset::key_equal  
+##  <a name="key_equal"></a>  unordered_multiset::key_equal  
  비교 함수의 형식입니다.  
   
 ```  
@@ -1545,7 +1543,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetkeytypea--unorderedmultisetkeytype"></a><a name="unordered_multiset__key_type"></a>  unordered_multiset::key_type  
+##  <a name="key_type"></a>  unordered_multiset::key_type  
  정렬 키의 형식입니다.  
   
 ```  
@@ -1598,7 +1596,7 @@ int main()
 [d] [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetloadfactora--unorderedmultisetloadfactor"></a><a name="unordered_multiset__load_factor"></a>  unordered_multiset::load_factor  
+##  <a name="load_factor"></a>  unordered_multiset::load_factor  
  버킷당 평균 요소 수를 계산합니다.  
   
 ```  
@@ -1606,7 +1604,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 구성원 함수는 `(float)`[unordered_multiset::size](#unordered_multiset__size)`() / (float)`[unordered_multiset::bucket_count](#unordered_multiset__bucket_count)`()`(버킷당 평균 요소 수)를 반환합니다.  
+ 구성원 함수는 `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`(버킷당 평균 요소 수)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1665,7 +1663,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameunorderedmultisetlocaliteratora--unorderedmultisetlocaliterator"></a><a name="unordered_multiset__local_iterator"></a>  unordered_multiset::local_iterator  
+##  <a name="local_iterator"></a>  unordered_multiset::local_iterator  
  버킷 반복기의 형식입니다.  
   
 ```  
@@ -1712,7 +1710,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxbucketcounta--unorderedmultisetmaxbucketcount"></a><a name="unordered_multiset__max_bucket_count"></a>  unordered_multiset::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_multiset::max_bucket_count  
  최대 버킷 개수를 가져옵니다.  
   
 ```  
@@ -1798,7 +1796,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxloadfactora--unorderedmultisetmaxloadfactor"></a><a name="unordered_multiset__max_load_factor"></a>  unordered_multiset::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_multiset::max_load_factor  
  버킷당 최대 요소 수를 가져오거나 설정합니다.  
   
 ```  
@@ -1891,7 +1889,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxsizea--unorderedmultisetmaxsize"></a><a name="unordered_multiset__max_size"></a>  unordered_multiset::max_size  
+##  <a name="max_size"></a>  unordered_multiset::max_size  
  제어되는 시퀀스의 최대 크기를 가져옵니다.  
   
 ```  
@@ -1925,7 +1923,7 @@ int main()
 max_size() == 4294967295  
 ```  
   
-##  <a name="a-nameunorderedmultisetoperatoreqa--unorderedmultisetoperator"></a><a name="unordered_multiset__operator_eq"></a>  unordered_multiset::operator=  
+##  <a name="op_eq"></a>  unordered_multiset::operator=  
  해시 테이블을 복사합니다.  
   
 ```  
@@ -1939,10 +1937,10 @@ unordered_multiset& operator=(unordered_multiset&& right);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|` right`|`unordered_multiset`에 복사되는 [unordered_multiset](../standard-library/unordered-multiset-class.md)입니다.|  
+|`right`|`unordered_multiset`에 복사되는 [unordered_multiset](../standard-library/unordered-multiset-class.md)입니다.|  
   
 ### <a name="remarks"></a>설명  
- `operator=`는 `unordered_multiset`에서 기존 요소를 지운 후에 ` right`의 내용을 `unordered_multiset`로 복사하거나 이동합니다.  
+ `operator=`는 `unordered_multiset`에서 기존 요소를 지운 후에 `right`의 내용을 `unordered_multiset`로 복사하거나 이동합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -1981,7 +1979,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmultisetpointera--unorderedmultisetpointer"></a><a name="unordered_multiset__pointer"></a>  unordered_multiset::pointer  
+##  <a name="pointer"></a>  unordered_multiset::pointer  
  요소에 대한 포인터의 형식입니다.  
   
 ```  
@@ -2027,7 +2025,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetreferencea--unorderedmultisetreference"></a><a name="unordered_multiset__reference"></a>  unordered_multiset::reference  
+##  <a name="reference"></a>  unordered_multiset::reference  
  요소에 대한 참조의 형식입니다.  
   
 ```  
@@ -2073,7 +2071,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetrehasha--unorderedmultisetrehash"></a><a name="unordered_multiset__rehash"></a>  unordered_multiset::rehash  
+##  <a name="rehash"></a>  unordered_multiset::rehash  
  해시 테이블을 다시 빌드합니다.  
   
 ```  
@@ -2149,7 +2147,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmultisetsizea--unorderedmultisetsize"></a><a name="unordered_multiset__size"></a>  unordered_multiset::size  
+##  <a name="size"></a>  unordered_multiset::size  
  요소 수를 계산합니다.  
   
 ```  
@@ -2215,7 +2213,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetsizetypea--unorderedmultisetsizetype"></a><a name="unordered_multiset__size_type"></a>  unordered_multiset::size_type  
+##  <a name="size_type"></a>  unordered_multiset::size_type  
  두 요소 사이의 부호가 없는 거리의 형식입니다.  
   
 ```  
@@ -2250,7 +2248,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmultisetswapa--unorderedmultisetswap"></a><a name="unordered_multiset__swap"></a>  unordered_multiset::swap  
+##  <a name="swap"></a>  unordered_multiset::swap  
  두 컨테이너의 내용을 바꿉니다.  
   
 ```  
@@ -2262,7 +2260,7 @@ void swap(unordered_multiset& right);
  교환할 컨테이너입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. [unordered_multiset::get_allocator](#unordered_multiset__get_allocator)`() == right.get_allocator()`인 경우 일정 시간에 이 작업을 수행하고 `Tr` 형식의 저장된 특성 개체를 복사한 결과로만 예외를 throw하며 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
+ 멤버 함수는 `*this` 와 `right`간에 제어되는 시퀀스를 교환합니다. [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`인 경우 일정 시간에 이 작업을 수행하고 `Tr` 형식의 저장된 특성 개체를 복사한 결과로만 예외를 throw하며 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -2320,7 +2318,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetunorderedmultiseta--unorderedmultisetunorderedmultiset"></a><a name="unordered_multiset__unordered_multiset"></a>  unordered_multiset::unordered_multiset  
+##  <a name="unordered_multiset"></a>  unordered_multiset::unordered_multiset  
  컨테이너 개체를 만듭니다.  
   
 ```  
@@ -2397,7 +2395,7 @@ unordered_multiset(
   
  할당자 개체는 인수 `Al`입니다(있는 경우). 그렇지 않으면 `Alloc()`입니다.  
   
-##  <a name="a-nameunorderedmultisetvaluetypea--unorderedmultisetvaluetype"></a><a name="unordered_multiset__value_type"></a>  unordered_multiset::value_type  
+##  <a name="value_type"></a>  unordered_multiset::value_type  
  요소의 형식입니다.  
   
 ```  

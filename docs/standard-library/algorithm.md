@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;알고리즘&gt;
@@ -147,7 +148,7 @@ ms.lasthandoff: 02/24/2017
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|정렬된 두 소스 범위 중 하나에만 속하는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|정렬된 두 소스 범위 중 하나 이상에 속하는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬합니다.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|난수 생성기를 사용하여 지정된 범위 내 요소의 순서를 섞습니다(다시 정렬).|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|난수 생성기를 사용하여 지정된 범위 내 요소의 순서를 섞습니다(다시 정렬).|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|힙을 정렬된 범위로 변환합니다.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|범위의 요소를 두 개의 연결되지 않은 집합으로 분류하고, 단항 조건자를 만족하는 요소는 만족하지 않는 요소보다 앞에 오도록 하여 동등한 요소의 상대적 관계를 유지합니다.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬하고 동등한 요소의 상대적 관계를 유지합니다.|  

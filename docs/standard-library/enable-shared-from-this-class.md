@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7f32ee8a40da16ac919f0c3d8be05573f7b78c3a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bfe398bf4829d6ef86543890bea28a351bcb4a3d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 클래스
@@ -67,14 +68,14 @@ protected:
   
  실수로 잘못 사용하는 것을 방지할 수 있도록 생성자, 소멸자 및 대입 연산자가 보호됩니다. 템플릿 인수 형식 `Ty`는 파생된 클래스의 형식이어야 합니다.  
   
- 사용법에 대한 예제는 [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this)를 참조하세요.  
+ 사용법에 대한 예제는 [enable_shared_from_this::shared_from_this](#shared_from_this)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<memory>  
   
  **네임스페이스:** std  
   
-##  <a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
+##  <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this  
  인스턴스 소유권을 기존 `shared_ptr` 소유자와 공유하는 `shared_ptr`를 생성합니다.  
   
 ```  
@@ -120,5 +121,5 @@ sp2->val == 3
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this)   
+ [enable_shared_from_this::shared_from_this](#shared_from_this)   
  [shared_ptr 클래스](../standard-library/shared-ptr-class.md)

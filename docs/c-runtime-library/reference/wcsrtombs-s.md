@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 52f3395cc878c1f051867d81ee12d0c9b3de619d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
@@ -100,7 +101,7 @@ errno_t wcsrtombs_s(
  `mbstate_t` 변환 상태 개체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공시&0;, 실패시 오류 코드.  
+ 성공시 0, 실패시 오류 코드.  
   
 |오류 조건|반환 값 및 `errno`|  
 |---------------------|------------------------------|  
@@ -185,9 +186,6 @@ void main()
 ```Output  
 The string was successfully converted.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

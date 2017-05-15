@@ -1,71 +1,88 @@
 ---
-title: "vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vswprintf_l"
-  - "_vsprintf_l"
-  - "vsprintf"
-  - "vswprintf"
-  - "__vswprintf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vstprintf"
-  - "vswprintf"
-  - "_vstprintf"
-  - "vsprintf"
-  - "__vswprintf_l"
-  - "_vsprintf_l"
-  - "_vswprintf_l"
-  - "vswprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vswprintf_l 함수"
-  - "_vsprintf_l 함수"
-  - "_vstprintf 함수"
-  - "_vstprintf_l 함수"
-  - "_vswprintf_l 함수"
-  - "버퍼 오버런"
-  - "버퍼, 오버런 방지"
-  - "버퍼, 버퍼 오버런"
-  - "서식 있는 텍스트"
-  - "vsprintf 함수"
-  - "vsprintf_l 함수"
-  - "vstprintf 함수"
-  - "vstprintf_l 함수"
-  - "vswprintf 함수"
-  - "vswprintf_l 함수"
+title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vswprintf_l
+- _vsprintf_l
+- vsprintf
+- vswprintf
+- __vswprintf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vstprintf
+- vswprintf
+- _vstprintf
+- vsprintf
+- __vswprintf_l
+- _vsprintf_l
+- _vswprintf_l
+- vswprintf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- __vswprintf_l function
+- _vstprintf_l function
+- formatted text
+- vstprintf_l function
+- _vswprintf_l function
+- vsprintf_l function
+- buffers, avoiding overruns
+- buffer overruns
+- vswprintf_l function
+- buffers, buffer overruns
+- vstprintf function
+- _vsprintf_l function
+- vswprintf function
+- vsprintf function
+- _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f738bc22cc5b3feb854dc958607509352202a738
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-인수 목록에 대한 포인터를 사용하여 서식이 지정된 출력을 작성합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [vsprintf\_s, \_vsprintf\_s\_l, vswprintf\_s, \_vswprintf\_s\_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)를 참조하십시오.  
+---
+# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+인수 목록에 대한 포인터를 사용하여 형식이 지정된 출력을 씁니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int vsprintf(  
@@ -126,12 +143,12 @@ int _vswprintf_l(
 ); // C++ only  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `buffer`  
  출력을 위한 저장소 위치입니다.  
   
  `count`  
- 이 함수의 `UNICODE` 버전에서 저장하기 위한 문자의 최대 수입니다.  
+ 이 함수의 `UNICODE` 버전에 저장할 최대 문자 수입니다.  
   
  `format`  
  형식 사양입니다.  
@@ -142,42 +159,42 @@ int _vswprintf_l(
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- `vsprintf` 와 `vswprintf` 는 NULL 문자로 끝나거나 오류가 발생한 경우의 네이티브 값을 제외한 작성된 문자의 수를 반환합니다.  `buffer` 또는 `format` 가 NULL 포인터인 경우, 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 \-1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
+## <a name="return-value"></a>반환 값  
+ `vsprintf` 및 `vswprintf`는 null 종결 문자를 포함하지 않고 작성된 문자 수를 반환하거나, 출력 오류가 발생하는 경우 음수 값을 반환합니다. `buffer` 또는 `format`이 null 포인터이면 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [\_doserrno, errno, \_sys\_errlist 및 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
+ 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## 설명  
- 이러한 함수의 각각은 인수 목록에 대한 포인터를 가지며, 서식을 지정하고 지정된 데이터를 `buffer` 가 가르키는 메모리에 작성합니다.  
+## <a name="remarks"></a>설명  
+ 이러한 함수는 각각 인수 목록에 대한 포인터를 가져오며 `buffer`가 가리키는 메모리에 지정된 데이터를 씁니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
 > [!IMPORTANT]
->  `vsprintf` 을 사용하면 작성된 문자의 수를 제한할 방법이 없습니다. 즉, 이러한 함수를 사용한 코드는 버퍼 초과를 허용합니다.  얼마나 많은 버퍼가 필요한지 결정하려면 대신에 [\_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 를 사용하거나 [\_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 를 호출하십시오.  `format`이 사용자 정의 문자열이 아닌지도 확인하십시오.  자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하십시오.  
+>  `vsprintf`를 사용하는 경우 기록되는 문자 수를 제한할 방법이 없습니다. 즉, 이 함수를 사용하는 코드에서는 버퍼 오버런이 발생하기 쉽습니다. 대신 [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)를 사용하거나 [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)를 호출하여 필요한 버퍼의 크기를 확인하세요. 또한 `format`이 사용자 정의 문자열이 아닌지 확인합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
- `vswprintf`는 `size_t` 형식의 두 번째 매개 변수인 `count`를 요구하는 ISO C 표준을 준수합니다.  오래된 비표준 동작을 동작시키려면 `_CRT_NON_CONFORMING_SWPRINTFS.` 을 정의하십시오. 오래된 동작은 다음 버전에 없을 수도 있으므로 코드는 새로운 규칙 동작을 사용하도록 변경해야합니다.  
+ `vswprintf`는 `size_t` 형식의 두 번째 매개 변수 `count`를 요구하는 ISO C 표준을 준수합니다. 이전의 비표준 동작을 강제 적용하려면 `_CRT_NON_CONFORMING_SWPRINTFS.`를 정의합니다. 이후 버전에서 기존 동작이 제거될 수도 있으므로 새 준수 동작을 사용하도록 코드를 변경해야 합니다.  
   
- C\+\+에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다.  자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)을 참조하십시오.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf`|`vsprintf`|`vsprintf`|`vswprintf`|  
 |`_vstprintf_l`|`_vsprintf_l`|`_vsprintf_l`|`_vswprintf_l`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |루틴|필수 헤더|선택적 헤더|  
-|--------|-----------|------------|  
-|`vsprintf`, `_vsprintf_l`|\<stdio.h\> 과 \<stdarg.h\>|\<varargs.h\>\*|  
-|`vswprintf`, `_vswprintf_l`|\<stdio.h\> 또는 \<wchar.h\>, 및 \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`vsprintf`, `_vsprintf_l`|\<stdio.h> 및 \<stdarg.h>|\<varargs.h>*|  
+|`vswprintf`, `_vswprintf_l`|\<stdio.h> 또는 \<wchar.h> 및 \<stdarg.h>|\<varargs.h>*|  
   
- \*는 UNIX V 호환성을 위해 필요합니다.  
+ \* UNIX V 호환성을 위해 필요합니다.  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_vsprintf.c  
@@ -207,7 +224,8 @@ void test( char * format, ... )
     // Note: vsprintf is deprecated; consider using vsprintf_s instead  
     puts( buffer );  
   
-    free( buffer );  
+    free( buffer ); 
+    va_end( args ); 
 }  
   
 int main( void )  
@@ -217,16 +235,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**This is a string**   
-## 해당 .NET Framework 항목  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 함수](../../c-runtime-library/vprintf-functions.md)   
  [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

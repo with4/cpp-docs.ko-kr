@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
@@ -59,12 +60,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|연산자의 좌변에 있는 unordered_multiset 개체가 우변에 있는 unordered_multiset 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|연산자의 좌변에 있는 unordered_multiset 개체가 우변에 있는 unordered_multiset 개체와 같은지 테스트합니다.|  
-|[swap 함수](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|두 multiset를 바꿉니다.|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|연산자의 좌변에 있는 unordered_set 개체가 우변에 있는 unordered_set 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|연산자의 좌변에 있는 unordered_set 개체가 우변에 있는 unordered_set 개체와 같은지 테스트합니다.|  
-|[swap 함수](../standard-library/unordered-set-functions.md#swap)|두 set를 바꿉니다.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|연산자의 좌변에 있는 unordered_multiset 개체가 우변에 있는 unordered_multiset 개체와 같지 않은지 테스트합니다.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_multiset 개체가 우변에 있는 unordered_multiset 개체와 같은지 테스트합니다.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|두 multiset를 바꿉니다.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|연산자의 좌변에 있는 unordered_set 개체가 우변에 있는 unordered_set 개체와 같지 않은지 테스트합니다.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_set 개체가 우변에 있는 unordered_set 개체와 같은지 테스트합니다.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|두 set를 바꿉니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [unordered_map 클래스](../standard-library/unordered-map-class.md)   

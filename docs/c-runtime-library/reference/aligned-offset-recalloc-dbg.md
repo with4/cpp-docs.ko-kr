@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 04a060699b23bfc5dfaba5da0d41a522455eb03a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7c65c73075c282f3a1b0dac83692c0adfe527c58
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
@@ -95,10 +96,10 @@ void * _aligned_offset_recalloc_dbg(
  `realloc` 작업이 요청되었거나 NULL인 소스 파일의 줄 번호입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_aligned_offset_recalloc_dbg`는 다시 할당된(그리고 이동되었을 수 있는) 메모리 블록에 대한 void 포인터를 반환합니다. 크기가&0;이고 버퍼 인수가 `NULL`이 아닌 경우 또는 버퍼를 지정된 크기로 확장하는 데 사용할 수 있는 메모리가 부족한 경우 반환 값은 `NULL`입니다. 첫 번째 경우 원래 블록이 해제됩니다. 두 번째 경우 원래 블록은 변경되지 않습니다. 반환 값은 모든 형식의 개체 저장을 위해 적절하게 맞도록 보장되어 있는 저장소 공간을 가리킵니다. void가 아닌 형식의 포인터를 얻으려면 반환 값에 형식 캐스팅을 사용합니다.  
+ `_aligned_offset_recalloc_dbg`는 다시 할당된(그리고 이동되었을 수 있는) 메모리 블록에 대한 void 포인터를 반환합니다. 크기가 0이고 버퍼 인수가 `NULL`이 아닌 경우 또는 버퍼를 지정된 크기로 확장하는 데 사용할 수 있는 메모리가 부족한 경우 반환 값은 `NULL`입니다. 첫 번째 경우 원래 블록이 해제됩니다. 두 번째 경우 원래 블록은 변경되지 않습니다. 반환 값은 모든 형식의 개체 저장을 위해 적절하게 맞도록 보장되어 있는 저장소 공간을 가리킵니다. void가 아닌 형식의 포인터를 얻으려면 반환 값에 형식 캐스팅을 사용합니다.  
   
 ## <a name="remarks"></a>설명  
- `_aligned_offset_realloc_dbg`는 [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_aligned_offset_recalloc_dbg`에 대한 각 호출이 _`aligned_offset_recalloc`에 대한 호출로 줄어듭니다. \_`aligned_offset_recalloc`와 `_aligned_offset_recalloc_dbg` 둘 다 기본 힙에서 메모리 블록을 다시 할당하지만 `_aligned_offset_recalloc_dbg`는 여러 디버깅 기능을 수용합니다. 이러한 기능에는 메모리 블록의 사용자 부분 한 쪽에서의 버퍼(어느 쪽이든지 상관없이)로 누수 테스트, 블록 형식 매개 변수로 특정 할당 형식 추적 및 `filename`/`linenumber` 정보로 할당 요청의 원점을 확인하는 기능이 있습니다.  
+ `_aligned_offset_realloc_dbg`는 [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_aligned_offset_recalloc_dbg`에 대한 각 호출이 `_aligned_offset_recalloc`에 대한 호출로 줄어듭니다. `_aligned_offset_recalloc`와 `_aligned_offset_recalloc_dbg` 둘 다 기본 힙에서 메모리 블록을 다시 할당하지만 `_aligned_offset_recalloc_dbg`는 여러 디버깅 기능을 수용합니다. 이러한 기능에는 메모리 블록의 사용자 부분 한쪽에서의 버퍼(어느 쪽이든지 상관없이)로 누수 테스트, 블록 형식 매개 변수로 특정 할당 형식 추적 및 `filename`/`linenumber` 정보로 할당 요청의 원점을 확인하는 기능이 있습니다.  
   
  `_aligned_offset_realloc_dbg`는 요청된 `newSize`보다 약간 더 많은 공간을 지정된 메모리 블록에 다시 할당합니다. `newSize`는 원래 할당된 메모리 블록의 크기보다 더 크거나 작을 수 있습니다. 디버그 힙 관리자는 추가 공간을 사용하여 디버그 메모리 블록을 연결하고 응용 프로그램에 디버그 헤더 정보를 제공하고 버퍼를 덮어씁니다. 다시 할당하면 원래 메모리 블록이 힙의 다른 위치로 이동하고 메모리 블록의 크기가 변할 수 있습니다. 메모리 블록이 이동하면 원래 블록의 내용을 덮어씁니다.  
   
@@ -111,9 +112,6 @@ void * _aligned_offset_recalloc_dbg(
 |루틴|필수 헤더|  
 |-------------|---------------------|  
 |`_aligned_offset_recalloc_dbg`|\<malloc.h>|  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 맞춤](../../c-runtime-library/data-alignment.md)

@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 2e78e22c04bac149694a4c4f860074296c7b37fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8e3518fb40cdd3e8bdd14b5ed64f4cc6dbcb1058
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="bitset-class"></a>bitset 클래스
@@ -66,7 +67,7 @@ class bitset
   
 #### <a name="parameters"></a>매개 변수  
  *N*  
- 컴파일 시 알아야 하는 형식 **size_t**의&0;이 아닌 정수를 사용하여 bitset 개체의 비트 수를 지정합니다.  
+ 컴파일 시 알아야 하는 형식 **size_t**의 0이 아닌 정수를 사용하여 bitset 개체의 비트 수를 지정합니다.  
   
 ## <a name="remarks"></a>설명  
  유사한 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)와 달리 bitset 클래스는 반복기가 없으며 표준 템플릿 라이브러리 컨테이너가 아닙니다. 또한 **bitset\<N\>**이 선언되었을 때 템플릿 매개 변수 **N**으로 지정된 크기에 따라 컴파일 시 고정되어 있는 일부 특정 크기가 됨으로써 vector\<bool>과도 다릅니다.  
@@ -77,59 +78,59 @@ class bitset
   
 |||  
 |-|-|  
-|[bitset](#bitset__bitset)|클래스 `bitset\<N>`의 개체를 생성하고 비트를&0;, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.|  
+|[bitset](#bitset)|클래스 `bitset\<N>`의 개체를 생성하고 비트를 0, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#bitset__element_type)|데이터 형식 `bool`의 동의어이고 `bitset`에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.|  
+|[element_type](#element_type)|데이터 형식 `bool`의 동의어이고 `bitset`에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.|  
   
 ### <a name="member-functions"></a>멤버 함수  
   
 |||  
 |-|-|  
-|[all](#bitset__all)|이 `bitset`에 있는 모든 비트를 테스트하여 모두 `true`로 설정되었는지 여부를 확인합니다.|  
-|[any](#bitset__any)|멤버 함수는 시퀀스의 모든 비트가 1로 설정되었는지 여부를 테스트합니다.|  
-|[count](#bitset__count)|멤버 함수는 비트 시퀀스에 설정된 비트 수를 반환합니다.|  
-|[flip](#bitset__flip)|`bitset`에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.|  
-|[none](#bitset__none)|`bitset` 개체에서 1로 설정된 비트가 없는지 테스트합니다.|  
-|[reset](#bitset__reset)|`bitset`에 있는 모든 비트를 0으로 재설정하거나 지정된 위치의 비트를 0으로 재설정합니다.|  
-|[set](#bitset__set)|`bitset`에 있는 모든 비트를 1로 설정하거나 지정된 위치의 비트를 1로 설정합니다.|  
-|[size](#bitset__size)|`bitset` 개체의 비트 수를 반환합니다.|  
-|[test](#bitset__test)|`bitset`에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.|  
-|[to_string](#bitset__to_string)|`bitset` 개체를 문자열 표현으로 변환합니다.|  
-|[to_ullong](#bitset__to_ullong)|`bitset`에 있는 비트 값의 합을 `unsigned long long`로 반환합니다.|  
-|[to_ulong](#bitset__to_ulong)|`bitset` 개체를 `bitset`을 초기화하는 데 사용되는 경우 포함된 비트 시퀀스를 생성할 `unsigned long`로 변환합니다.|  
+|[all](#all)|이 `bitset`에 있는 모든 비트를 테스트하여 모두 `true`로 설정되었는지 여부를 확인합니다.|  
+|[any](#any)|멤버 함수는 시퀀스의 모든 비트가 1로 설정되었는지 여부를 테스트합니다.|  
+|[count](#count)|멤버 함수는 비트 시퀀스에 설정된 비트 수를 반환합니다.|  
+|[flip](#flip)|`bitset`에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.|  
+|[none](#none)|`bitset` 개체에서 1로 설정된 비트가 없는지 테스트합니다.|  
+|[reset](#reset)|`bitset`에 있는 모든 비트를 0으로 재설정하거나 지정된 위치의 비트를 0으로 재설정합니다.|  
+|[set](#set)|`bitset`에 있는 모든 비트를 1로 설정하거나 지정된 위치의 비트를 1로 설정합니다.|  
+|[size](#size)|`bitset` 개체의 비트 수를 반환합니다.|  
+|[test](#test)|`bitset`에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.|  
+|[to_string](#to_string)|`bitset` 개체를 문자열 표현으로 변환합니다.|  
+|[to_ullong](#to_ullong)|`bitset`에 있는 비트 값의 합을 `unsigned long long`로 반환합니다.|  
+|[to_ulong](#to_ulong)|`bitset` 개체를 `bitset`을 초기화하는 데 사용되는 경우 포함된 비트 시퀀스를 생성할 `unsigned long`로 변환합니다.|  
   
 ### <a name="member-classes"></a>멤버 클래스  
   
 |||  
 |-|-|  
-|[reference](#bitset__reference)|`bitset`의 `operator[]`에 대한 도우미 클래스로서 개별 비트에 액세스하고 조작하는 데 사용되는 `bitset`에 포함된 비트를 참조하는 프록시 클래스입니다.|  
+|[reference](#reference)|`bitset`의 `operator[]`에 대한 도우미 클래스로서 개별 비트에 액세스하고 조작하는 데 사용되는 `bitset`에 포함된 비트를 참조하는 프록시 클래스입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator!=](#bitset__operator_neq)|지정한 `bitset`와 다른지 알기 위해 대상 `bitset`을 테스트합니다.|  
-|[operator&=](#bitset__operator_and_eq)|논리적 `AND` 작업과 bitsets의 비트 조합을 수행합니다.|  
-|[operator<<](#bitset__operator_lshift)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
-|[operator<<=](#bitset__operator_lshift_eq)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
-|[operator==](#bitset__operator_eq_eq)|지정한 `bitset`와 같은지 알기 위해 대상 `bitset`을 테스트합니다.|  
-|[operator>>](#bitset__operator_rshift)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
-|[operator>>=](#bitset__operator_rshift_eq)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
-|[operator&#91;&#93;](#bitset__operator_at)|`bitset`을 수정할 수 있을 경우 `bitset`에서 지정된 위치의 비트에 대한 참조를 반환하고, 그렇지 않으면 해당 위치서 비트 값을 반환합니다.|  
-|[operator^=](#bitset__operator_xor_eq)|배타적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
-|[operator&#124;=](#bitset__operator_or_eq')|포괄적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
-|[operator~](#bitset__operator_dtor)|대상 `bitset`의 모든 비트를 반전하고 결과를 반환합니다.|  
+|[operator!=](#op_neq)|지정한 `bitset`와 다른지 알기 위해 대상 `bitset`을 테스트합니다.|  
+|[operator&=](#op_and_eq)|논리적 `AND` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator<<](#op_lshift)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
+|[operator<<=](#op_lshift_eq)|왼쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
+|[operator==](#op_eq_eq)|지정한 `bitset`와 같은지 알기 위해 대상 `bitset`을 테스트합니다.|  
+|[operator>>](#op_rshift)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 `bitset`에 반환합니다.|  
+|[operator>>=](#op_rshift_eq)|오른쪽의 `bitset`에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 대상으로 지정된 `bitset`에 반환합니다.|  
+|[operator&#91;&#93;](#op_at)|`bitset`을 수정할 수 있을 경우 `bitset`에서 지정된 위치의 비트에 대한 참조를 반환하고, 그렇지 않으면 해당 위치서 비트 값을 반환합니다.|  
+|[operator^=](#op_xor_eq)|배타적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator&#124;=](#op_or_eq')|포괄적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.|  
+|[operator~](#op_dtor)|대상 `bitset`의 모든 비트를 반전하고 결과를 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<bitset>  
   
  **네임스페이스:** std  
   
-##  <a name="bitset__all"></a>  bitset::all  
+##  <a name="all"></a>  bitset::all  
  이 bitset의 모든 비트를 테스트하여 모두 true로 설정되었는지 확인합니다.  
   
 ```  
@@ -139,7 +140,7 @@ bool all() const;
 ### <a name="return-value"></a>반환 값  
  이 집합의 모든 비트가 true이면 true를 반환합니다. 하나 이상의 비트가 false이면 **false**를 반환합니다.  
   
-##  <a name="bitset__any"></a>  bitset::any  
+##  <a name="any"></a>  bitset::any  
  시퀀스의 모든 비트가 1로 설정되어 있는지를 테스트합니다.  
   
 ```  
@@ -200,8 +201,8 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__bitset"></a>  bitset::bitset  
- 클래스 `bitset\<N>`의 개체를 생성하고 비트를&0;, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.  
+##  <a name="bitset"></a>  bitset::bitset  
+ 클래스 `bitset\<N>`의 개체를 생성하고 비트를 0, 지정된 일부 값 또는 문자열의 문자에서 얻은 값으로 초기화합니다.  
   
 ```  
 bitset();
@@ -235,13 +236,13 @@ explicit bitset(
  생성 중인 bitset의 비트를 초기화하기 위해 두 개의 기본 표현이 사용되는 부호 없는 정수입니다.  
   
  `str`  
- bitset 비트 값을 초기화하는 데 사용되는&0;과&1;의 문자열입니다.  
+ bitset 비트 값을 초기화하는 데 사용되는 0과 1의 문자열입니다.  
   
  `_CStr`  
- bitset 비트 값을 초기화하는 데 사용되는&0;과&1;의 C 스타일 문자열입니다.  
+ bitset 비트 값을 초기화하는 데 사용되는 0과 1의 C 스타일 문자열입니다.  
   
  `_Pos`  
- 문자열에서 문자의 위치이며,&0;에서 시작하고 왼쪽에서 오른쪽으로 계산되고 bitset의 첫 번째 비트를 초기화하는 데 사용됩니다.  
+ 문자열에서 문자의 위치이며, 0에서 시작하고 왼쪽에서 오른쪽으로 계산되고 bitset의 첫 번째 비트를 초기화하는 데 사용됩니다.  
   
  `count`  
  bitset의 비트에 초기 값을 제공하는 데 사용되는 문자열의 문자 수입니다.  
@@ -255,15 +256,15 @@ explicit bitset(
 ### <a name="remarks"></a>설명  
  세 가지 생성자를 사용하여 `bitset\<N>` 클래스의 개체를 생성할 수 있습니다.  
   
--   첫 번째 생성자는 매개 변수를 허용하지 않고, `bitset\<N>` 클래스의 개체를 생성하며, 모든 N 비트를 기본값&0;으로 초기화합니다.  
+-   첫 번째 생성자는 매개 변수를 허용하지 않고, `bitset\<N>` 클래스의 개체를 생성하며, 모든 N 비트를 기본값 0으로 초기화합니다.  
   
 -   두 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하고 단일 `unsigned long long` 매개 변수를 사용하여 비트를 초기화합니다.  
   
--   세 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하여,&0;과&1;의 C 스타일 문자열로 제공된 문자에 해당하는 값으로 N 비트를 초기화합니다. 문자열을 `bitset<5> b5("01011");` 문자열 형식으로 전환하지 않고 생성자를 호출합니다.  
+-   세 번째 생성자는 `bitset\<N>` 클래스의 개체를 생성하여, 0과 1의 C 스타일 문자열로 제공된 문자에 해당하는 값으로 N 비트를 초기화합니다. 문자열을 `bitset<5> b5("01011");` 문자열 형식으로 전환하지 않고 생성자를 호출합니다.  
   
  제공된 두 개의 생성자 템플릿이 있습니다.  
   
--   첫 번째 생성자 템플릿은 `bitset\<N>` 클래스의 개체를 구성하고&0;과&1;의 문자열로 제공된 문자에서 비트를 초기화합니다. 문자열에 0 또는 1이 아닌 문자가 있는 경우 생성자는 [잘못된 인수](../standard-library/invalid-argument-class.md) 클래스의 개체를 throw합니다. 지정된 위치(`_Pos`)가 문자열의 길이를 벗어나는 경우 생성자는 [out_of_range](../standard-library/out-of-range-class.md) 클래스의 개체를 throw합니다. 생성자는 `_Pos + j` 위치에 있는 문자열의 문자가 1인 bitset에서 *j* 위치에 있는 비트만 설정합니다. 기본적으로 `_Pos`는 0입니다.  
+-   첫 번째 생성자 템플릿은 `bitset\<N>` 클래스의 개체를 구성하고 0과 1의 문자열로 제공된 문자에서 비트를 초기화합니다. 문자열에 0 또는 1이 아닌 문자가 있는 경우 생성자는 [잘못된 인수](../standard-library/invalid-argument-class.md) 클래스의 개체를 throw합니다. 지정된 위치(`_Pos`)가 문자열의 길이를 벗어나는 경우 생성자는 [out_of_range](../standard-library/out-of-range-class.md) 클래스의 개체를 throw합니다. 생성자는 `_Pos + j` 위치에 있는 문자열의 문자가 1인 bitset에서 *j* 위치에 있는 비트만 설정합니다. 기본적으로 `_Pos`는 0입니다.  
   
 -   두 번째 생성자 템플릿은 첫 번째와 유사하지만, 초기화할 비트 수를 지정하는 데 사용되는 추가 매개 변수(`count`)를 포함합니다. 또한 `_Zero`와 `_One`이라는 두 개의 선택적 매개 변수를 가지고 있는데, 이는 `str`의 문자가 각각 0비트와 1비트를 의미하는 것으로 해석됨을 나타냅니다.  
   
@@ -342,7 +343,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
 ```  
   
-##  <a name="bitset__count"></a>  bitset::count  
+##  <a name="count"></a>  bitset::count  
  비트 시퀀스에 설정된 비트 수를 반환합니다.  
   
 ```  
@@ -397,7 +398,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.  
 ```  
   
-##  <a name="bitset__element_type"></a>  bitset::element_type  
+##  <a name="element_type"></a>  bitset::element_type  
  데이터 형식 `bool`의 동의어이고 bitset에서 요소 비트를 참조하는 데 사용할 수 있는 형식입니다.  
   
 ```  
@@ -452,7 +453,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.  
 ```  
   
-##  <a name="bitset__flip"></a>  bitset::flip  
+##  <a name="flip"></a>  bitset::flip  
  bitset에 있는 모든 비트의 값을 반전하거나 지정된 위치에서 단일 비트를 반전합니다.  
   
 ```  
@@ -521,7 +522,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.  
 ```  
   
-##  <a name="bitset__none"></a>  bitset::none  
+##  <a name="none"></a>  bitset::none  
  bitset 개체에서 1로 설정된 비트가 없는지 테스트합니다.  
   
 ```  
@@ -576,7 +577,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__operator_neq"></a>  bitset::operator!=  
+##  <a name="op_neq"></a>  bitset::operator!=  
  대상 bitset가 지정된 bitset와 다른지를 테스트합니다.  
   
 ```  
@@ -634,7 +635,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
+##  <a name="op_and_eq"></a>  bitset::operator&amp;=  
  논리적 **AND** 연산으로 bitset의 비트 조합을 수행합니다.  
   
 ```  
@@ -697,7 +698,7 @@ After bitwise AND combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
 
-##  <a name="bitset__operator_lshift"></a> bitset::operator\<\<    
+##  <a name="op_lshift"></a> bitset::operator\<\<    
   
 왼쪽의 bitset에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 bitset로 반환합니다.  
   
@@ -713,7 +714,7 @@ bitset\<N> operator<<(size_t _Pos) const;
  필요한 위치 수만큼 왼쪽으로 이동한 비트가 있는 수정된 bitset입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자 함수는 **bitset**( **\*this**) **<<= pos,**를 반환합니다. 여기서 [<<=](#bitset__operator_lshift_eq)는 bitset의 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상 bitset로 반환합니다.  
+ 멤버 연산자 함수는 **bitset**( **\*this**) **<<= pos,**를 반환합니다. 여기서 [<<=](#op_lshift_eq)는 bitset의 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상 bitset로 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -746,7 +747,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
+##  <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=  
  bitset에 있는 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상으로 지정된 bitset로 반환합니다.  
   
 ```  
@@ -789,7 +790,7 @@ After shifting the bits 2 positions to the left,
  the target bitset b1 becomes: ( 11100 ).  
 ```  
   
-##  <a name="bitset__operator_eq_eq"></a>  bitset::operator==  
+##  <a name="op_eq_eq"></a>  bitset::operator==  
  대상 bitset가 지정된 bitset와 같은지를 테스트합니다.  
   
 ```  
@@ -846,7 +847,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
+##  <a name="op_rshift"></a>  bitset::operator&gt;&gt;  
  오른쪽의 bitset에 있는 비트를 지정된 위치 수만큼 이동하고 결과를 새 bitset로 반환합니다.  
   
 ```  
@@ -896,7 +897,7 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).  
 ```  
   
-##  <a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
+##  <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=  
  bitset에 있는 비트를 지정된 위치 수만큼 오른쪽으로 이동하고 결과를 대상으로 지정된 bitset로 반환합니다.  
   
 ```  
@@ -940,7 +941,7 @@ After shifting the bits 2 positions to the right,
  the target bitset b1 becomes: ( 00111 ).  
 ```  
   
-##  <a name="bitset__operator_at"></a>  bitset::operator[]  
+##  <a name="op_at"></a>  bitset::operator[]  
  bitset를 수정할 수 있는 경우 bitset 내 지정된 위치의 비트에 대한 참조를 반환하고, 수정할 수 없는 경우 해당 위치의 비트 값을 반환합니다.  
   
 ```  
@@ -981,7 +982,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
+##  <a name="op_xor_eq"></a>  bitset::operator^=  
  배타적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.  
   
 ```  
@@ -1043,7 +1044,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
+##  <a name="op_or_eq"></a>  bitset::operator&#124;=  
  포괄적 `OR` 작업과 bitsets의 비트 조합을 수행합니다.  
   
 ```  
@@ -1106,7 +1107,7 @@ After bitwise inclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_dtor"></a>  bitset::operator~  
+##  <a name="op_dtor"></a>  bitset::operator~  
  대상 bitset의 모든 비트를 반전하고 결과를 반환합니다.  
   
 ```  
@@ -1149,7 +1150,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).  
 ```  
   
-##  <a name="bitset__reference"></a>  bitset::reference  
+##  <a name="reference"></a>  bitset::reference  
  bitset 클래스의 `operator[]`에 대한 도우미 클래스로서 개별 비트에 액세스하고 조작하는 데 사용되는 bitset에 포함된 비트를 참조하는 프록시 클래스입니다.  
   
 ```  
@@ -1267,7 +1268,7 @@ After flipping the value of the bit at position 4 in bitset b2,
 After a second flip, the value of the position 4 bit in b2 is now: 1.  
 ```  
   
-##  <a name="bitset__reset"></a>  bitset::reset  
+##  <a name="reset"></a>  bitset::reset  
  bitset에 있는 모든 비트를 0으로 다시 설정하거나 지정된 위치의 비트를 0으로 다시 설정합니다.  
   
 ```  
@@ -1323,7 +1324,7 @@ The collecion of bits obtained from resetting all
  the elements of the bitset b1 is: ( 00000 )  
 ```  
   
-##  <a name="bitset__set"></a>  bitset::set  
+##  <a name="set"></a>  bitset::set  
  bitset에 있는 모든 비트를 1로 설정하거나 지정된 위치의 비트를 1로 설정합니다.  
   
 ```   
@@ -1385,7 +1386,7 @@ The collecion of bits obtained from setting all the
  elements of the bitset b1 is: ( 11111 )  
 ```  
   
-##  <a name="bitset__size"></a>  bitset::size  
+##  <a name="size"></a>  bitset::size  
  bitset 개체의 비트 수를 반환합니다.  
   
 ```  
@@ -1426,7 +1427,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.  
 ```  
   
-##  <a name="bitset__test"></a>  bitset::test  
+##  <a name="test"></a>  bitset::test  
  bitset에서 지정된 위치의 비트가 1로 설정되어 있는지 테스트합니다.  
   
 ```  

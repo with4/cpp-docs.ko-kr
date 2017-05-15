@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f191d64115bca85502d8fd3fbe0525c0e2be65c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0e2bad41f044046fd0f75a30989c1f39adb69560
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fcvt"></a>_fcvt
@@ -89,7 +90,7 @@ char *_fcvt(
  `_fcvt`는 숫자 문자열에 대한 포인터를 반환합니다. 오류가 발생한 경우 NULL입니다.  
   
 ## <a name="remarks"></a>설명  
- `_fcvt` 함수는 부동 소수점 숫자를 null 종료 문자열로 변환합니다. `value` 매개 변수는 변환할 부동 소수점 숫자입니다. `_fcvt`는 `value` 중 숫자를 문자열로 저장하고 null 문자('\0')를 추가합니다. `count` 매개 변수는 소수점 뒤에 저장할 자릿수를 지정합니다. 나머지 숫자는 `count`자리로 반올림됩니다. 정밀도의 숫자가 `count`개보다 적으면 문자열이&0;으로 채워집니다.  
+ `_fcvt` 함수는 부동 소수점 숫자를 null 종료 문자열로 변환합니다. `value` 매개 변수는 변환할 부동 소수점 숫자입니다. `_fcvt`는 `value` 중 숫자를 문자열로 저장하고 null 문자('\0')를 추가합니다. `count` 매개 변수는 소수점 뒤에 저장할 자릿수를 지정합니다. 나머지 숫자는 `count`자리로 반올림됩니다. 정밀도의 숫자가 `count`개보다 적으면 문자열이 0으로 채워집니다.  
   
  `_fcvt`에서 반환된 전체 숫자 개수는 `_CVTBUFSIZE`를 초과하지 않습니다.  
   
@@ -137,9 +138,6 @@ int main( void )
 ```Output  
 source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

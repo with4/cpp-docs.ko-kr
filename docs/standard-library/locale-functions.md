@@ -25,10 +25,11 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ca6c94270b97f8b6e48871699628415e2133778
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 함수
@@ -162,7 +163,7 @@ bool isalpha(CharType Ch, const locale& Loc)
  테스트된 요소가 영문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -223,7 +224,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
  테스트된 요소가 제어 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -284,7 +285,7 @@ bool isdigit(CharType Ch, const locale& Loc)
  테스트된 요소가 숫자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **digit**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -345,7 +346,7 @@ bool isgraph(CharType Ch, const locale& Loc)
  테스트된 요소가 영숫자 또는 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **graph**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -406,7 +407,7 @@ bool islower(CharType Ch, const locale& Loc)
  테스트된 요소가 소문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **lower**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -467,7 +468,7 @@ bool isprint(CharType Ch, const locale& Loc)
  테스트된 요소가 인쇄 가능하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **print**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -527,7 +528,7 @@ bool ispunct(CharType Ch, const locale& Loc)
  테스트된 요소가 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **punct**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -588,7 +589,7 @@ bool isspace(CharType Ch, const locale& Loc)
  테스트된 요소가 공백 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **space**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -649,7 +650,7 @@ bool isupper(CharType Ch, const locale& Loc)
  테스트된 요소가 대문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **upper**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -692,7 +693,7 @@ int main( )
 ```  
   
 ##  <a name="isxdigit"></a>  isxdigit  
- 로캘의 요소가&16;자 숫자를 나타내는 데 사용되는 문자인지를 테스트합니다.  
+ 로캘의 요소가 16자 숫자를 나타내는 데 사용되는 문자인지를 테스트합니다.  
   
 ```  
 template <class CharType>  
@@ -707,10 +708,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
  테스트할 요소를 포함하는 로캘입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 테스트된 요소가&16;진수를 나타내는 데 사용된 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+ 테스트된 요소가 16진수를 나타내는 데 사용된 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)를 반환합니다.  
   
  16진수는 16을 기준으로 사용하여 숫자를 나타내는데, 숫자 0-9와 대/소문자를 구분하지 않는 문자 A-F를 사용하여 10진수 0-15를 나타냅니다.  
   
@@ -773,7 +774,7 @@ CharType tolower(CharType Ch, const locale& Loc)
  소문자로 변환된 문자입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#ctype__tolower)( `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -818,7 +819,7 @@ CharType toupper(CharType Ch, const locale& Loc)
  대문자로 변환된 문자입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#ctype__toupper)( `Ch`)를 반환합니다.  
+ 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)를 반환합니다.  
   
 ### <a name="example"></a>예제  
   

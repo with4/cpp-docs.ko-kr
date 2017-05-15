@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 함수
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  이 개체는 매개 변수 형식 [std::nothrow_t](../standard-library/nothrow-t-structure.md)의 일치를 확인하기 위한 함수 인수로 사용됩니다.  
   
 ### <a name="example"></a>예제  
-  `std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#operator_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)를 참조하세요.  
+  `std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#op_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
  `operator new`가 메모리 할당 시도에 실패할 때 호출되는 사용자 함수를 설치합니다.  
@@ -48,10 +49,10 @@ new_handler set_new_handler(new_handler Pnew) throw();
  설치할 new_handler입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 첫 번째 호출의 경우&0;이고 후속 호출의 경우 이전 `new_handler`입니다.  
+ 첫 번째 호출의 경우 0이고 후속 호출의 경우 이전 `new_handler`입니다.  
   
 ### <a name="remarks"></a>설명  
- 함수는 유지 관리하는 정적 [새 처리기](../standard-library/new-typedefs.md#new_handler) 포인터에 `Pnew`를 저장한 다음 이전에 포인터에 저장되었던 값을 반환합니다. 새 처리기는 [operator new](../standard-library/new-operators.md#operator_new)( **size_t**)에서 사용됩니다.  
+ 함수는 유지 관리하는 정적 [새 처리기](../standard-library/new-typedefs.md#new_handler) 포인터에 `Pnew`를 저장한 다음 이전에 포인터에 저장되었던 값을 반환합니다. 새 처리기는 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)에서 사용됩니다.  
   
 ### <a name="example"></a>예제  
   

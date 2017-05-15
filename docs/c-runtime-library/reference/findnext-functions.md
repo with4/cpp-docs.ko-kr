@@ -120,10 +120,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1a79f5859d35b324b4469918bf1107da32f651c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 58132a9c16f23d7885432b05a459cc348c0bf915
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
@@ -190,7 +191,7 @@ int _wfindnext64i32(
  파일 정보 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 0을 반환합니다. 그렇지 않으면 -1을 반환하고 `errno`를 오류 특성을 나타내는 값으로 설정합니다. 다음 표에 가능한 오류 코드가 나와 있습니다.  
+ 성공하면 0을 반환합니다. 그렇지 않으면-1을 반환 하 고 설정 `errno` 오류의 특성을 나타내는 값입니다. 다음 표에 가능한 오류 코드가 나와 있습니다.  
   
  `EINVAL`  
  잘못된 매개 변수: `fileinfo`가 `NULL`이었습니다. 또는 운영 체제에서 예기치 않은 오류를 반환했습니다.  
@@ -257,9 +258,6 @@ int _wfindnext64i32(
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 호출](../../c-runtime-library/system-calls.md)   

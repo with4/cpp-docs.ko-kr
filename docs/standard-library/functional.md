@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -59,7 +60,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="c11c14-implementation"></a>C++11/C++14 구현  
  C++11/C++14의 Visual C++ 구현에서 다음 기능이 추가되었습니다.  
   
--   *호출 시그니처*는 반환 형식의 이름 및&0;개 이상 인수 형식의 괄호로 묶인 쉼표로 구분된 목록입니다.  
+-   *호출 시그니처*는 반환 형식의 이름 및 0개 이상 인수 형식의 괄호로 묶인 쉼표로 구분된 목록입니다.  
   
 -   *호출 가능 형식*은 함수에 대한 포인터, 멤버 함수에 대한 포인터, 멤버 데이터에 대한 포인터 또는 개체가 함수 호출 연산자 바로 왼쪽에 표시될 수 있는 클래스 형식입니다.  
   
@@ -126,22 +127,22 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|호출 가능 개체에 인수를 바인딩합니다.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|이항 함수의 두 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|두 매개 변수의 비트 논리적 AND(binary operator&)를 반환합니다.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|매개 변수의 비트 논리적 보수(operator~)를 반환합니다.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|두 매개 변수의 비트 논리적 OR(operator&#124;)를 반환합니다.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|두 매개 변수의 비트 논리적 XOR(operator^)을 반환합니다.|  
-|[cref](../standard-library/functional-functions.md#cref_function)|인수에서 const `reference_wrapper`를 생성합니다.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|단순 호출 래퍼를 생성합니다.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|포인터 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|참조 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.|  
-|[not1](../standard-library/functional-functions.md#not1_function)|단항 조건자의 보수를 반환합니다.|  
-|[not2](../standard-library/functional-functions.md#not2_function)|이항 조건자의 보수를 반환합니다.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|단항 및 이항 함수 포인터를 각각 조정 가능한 단항 및 이항 함수로 변환하는 데 사용되는 도우미 템플릿 함수입니다.|  
-|[ref](../standard-library/functional-functions.md#ref_function)|인수에서 `reference_wrapper` 를 생성합니다.|  
-|[swap](../standard-library/functional-functions.md#swap_function)|두 `function` 개체를 교환합니다.|  
+|[bind](../standard-library/functional-functions.md#bind)|호출 가능 개체에 인수를 바인딩합니다.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|이항 함수의 두 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|두 매개 변수의 비트 논리적 AND(binary operator&)를 반환합니다.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|매개 변수의 비트 논리적 보수(operator~)를 반환합니다.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|두 매개 변수의 비트 논리적 OR(operator&#124;)를 반환합니다.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|두 매개 변수의 비트 논리적 XOR(operator^)을 반환합니다.|  
+|[cref](../standard-library/functional-functions.md#cref)|인수에서 const `reference_wrapper`를 생성합니다.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|단순 호출 래퍼를 생성합니다.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|포인터 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|참조 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.|  
+|[not1](../standard-library/functional-functions.md#not1)|단항 조건자의 보수를 반환합니다.|  
+|[not2](../standard-library/functional-functions.md#not2)|이항 조건자의 보수를 반환합니다.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|단항 및 이항 함수 포인터를 각각 조정 가능한 단항 및 이항 함수로 변환하는 데 사용되는 도우미 템플릿 함수입니다.|  
+|[ref](../standard-library/functional-functions.md#ref)|인수에서 `reference_wrapper` 를 생성합니다.|  
+|[swap](../standard-library/functional-functions.md#swap)|두 `function` 개체를 교환합니다.|  
   
 ### <a name="structs"></a>구조체  
   
@@ -175,8 +176,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|호출 가능 개체의 같음 비교를 허용하지 않습니다.|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|호출 가능 개체의 같지 않음 비교를 허용하지 않습니다.|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|호출 가능 개체의 같음 비교를 허용하지 않습니다.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|호출 가능 개체의 같지 않음 비교를 허용하지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   

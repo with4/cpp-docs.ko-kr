@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - uniform_int_distribution
-- std::uniform_int_distribution
 - random/std::uniform_int_distribution
-- std::uniform_int_distribution::reset
 - random/std::uniform_int_distribution::reset
-- std::uniform_int_distribution::a
 - random/std::uniform_int_distribution::a
-- std::uniform_int_distribution::b
 - random/std::uniform_int_distribution::b
-- std::uniform_int_distribution::param
 - random/std::uniform_int_distribution::param
-- std::uniform_int_distribution::min
 - random/std::uniform_int_distribution::min
-- std::uniform_int_distribution::max
 - random/std::uniform_int_distribution::max
-- std::uniform_int_distribution::operator()
 - random/std::uniform_int_distribution::operator()
-- std::uniform_int_distribution::param_type
 - random/std::uniform_int_distribution::param_type
-- std::uniform_int_distribution::param_type::a
 - random/std::uniform_int_distribution::param_type::a
-- std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::b
-- std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator==
-- std::uniform_int_distribution::param_type::operator!=
 - random/std::uniform_int_distribution::param_type::operator!=
+- random/std::uniform_int_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 56ce46ec6b19a0ac5068193d5e1d3dfb0c9b4ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0555c6562ee987eab9eebc2e9e178a31cdf684e9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 클래스
@@ -107,8 +96,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[uniform_int_distribution::uniform_int_distribution](#uniform_int_distribution__uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform_int_distribution::param_type](#uniform_int_distribution__param_type)|  
+|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
 속성 멤버 `a()`는 분포의 현재 저장된 최하한을 반환하고 `b()`는 현재 저장된 최상한을 반환합니다. 이 분포 클래스의 경우 최하한과 최상한 값은 공통 속성 함수 `min()` 및 `max()`가 반환한 값과 동일합니다.  
   
@@ -205,7 +194,7 @@ Distribution for 200 samples:
   
  **네임스페이스:** std  
   
-##  <a name="a-nameuniformintdistributionuniformintdistributiona--uniformintdistributionuniformintdistribution"></a><a name="uniform_int_distribution__uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
+##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
 분포를 생성합니다.  
   
 ```  
@@ -231,7 +220,7 @@ explicit uniform_int_distribution(const param_type& parm);
   
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-nameuniformintdistributionparamtypea--uniformintdistributionparamtype"></a><a name="uniform_int_distribution__param_type"></a>  uniform_int_distribution::param_type  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
  분포의 매개 변수를 저장합니다.  
 ```cpp  
 struct param_type {  

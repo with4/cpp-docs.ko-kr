@@ -56,14 +56,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
-디버깅 메시지가 포함된 보고서를 생성하고 이 보고서를 가능한 대상&3;개로 보냅니다(디버그 버전에만 해당).  
+디버깅 메시지가 포함된 보고서를 생성하고 이 보고서를 가능한 대상 3개로 보냅니다(디버그 버전에만 해당).  
   
 ## <a name="syntax"></a>구문  
   
@@ -106,12 +107,12 @@ int _CrtDbgReportW(
  `format`에서 사용하는 선택적 대체 인수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 모든 보고서 대상에 대해 `_CrtDbgReport` 및 `_CrtDbgReportW`는 오류가 발생하면 –1을 반환하고 오류가 발생하지 않으면 0을 반환합니다. 그러나 보고서 대상이 디버그 메시지 창이고 사용자가 **다시 시도** 단추를 클릭하면 이러한 함수는 1을 반환합니다. 사용자가 디버그 메시지 창에서 **중단** 단추를 클릭하면 이러한 함수가 즉시 중단되고 값을 반환하지 않습니다.  
+ 모든 보고서 대상에 대 한 `_CrtDbgReport` 및 `_CrtDbgReportW` 없는 오류가 발생 한 경우 오류가 발생 한 경우-1과 0을 반환 합니다. 그러나 보고서 대상이 디버그 메시지 창이고 사용자가 **다시 시도** 단추를 클릭하면 이러한 함수는 1을 반환합니다. 사용자가 디버그 메시지 창에서 **중단** 단추를 클릭하면 이러한 함수가 즉시 중단되고 값을 반환하지 않습니다.  
   
- [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 디버그 매크로는 `_CrtDbgReport`를 호출하여 디버그 보고서를 생성합니다. [_ASSERT[E]](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` 및 `_RPTFW``n`뿐만 아니라 이러한 매크로의 와이드 문자 버전은 `_CrtDbgReportW`를 사용하여 디버그 보고서를 생성합니다. JIT(Just-In-Time) 디버깅을 사용하도록 설정한 경우 `_CrtDbgReport` 또는 `_CrtDbgReportW`가 1을 반환하면 이러한 매크로는 디버거를 시작합니다.  
+ [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 디버그 매크로는 `_CrtDbgReport`를 호출하여 디버그 보고서를 생성합니다. [_ASSERT[E]](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` 및 `_RPTFW n`뿐만 아니라 이러한 매크로의 와이드 문자 버전은 `_CrtDbgReportW`를 사용하여 디버그 보고서를 생성합니다. JIT(Just-In-Time) 디버깅을 사용하도록 설정한 경우 `_CrtDbgReport` 또는 `_CrtDbgReportW`가 1을 반환하면 이러한 매크로는 디버거를 시작합니다.  
   
 ## <a name="remarks"></a>설명  
- `_CrtDbgReport` 및 `_CrtDbgReportW`는&3;가지 다른 대상, 즉 디버그 보고서 파일, 디버그 모니터([!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 디버그) 또는 디버그 메시지 창으로 디버거 보고서를 보낼 수 있습니다. 두 구성 함수인 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)와 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)은 각 보고서 형식의 대상을 지정하는 데 사용됩니다. 이러한 함수를 사용하면 각 보고서 형식의 보고 대상을 개별적으로 제어할 수 있습니다. 예를 들어 `reportType`의 `_CRT_WARN`은 디버그 모니터로만 보내도록 하고 `reportType`의 `_CRT_ASSERT`은 디버그 메시지 창과 사용자 정의 보고서 파일로 보내도록 지정할 수 있습니다.  
+ `_CrtDbgReport` 및 `_CrtDbgReportW`는 3가지 다른 대상, 즉 디버그 보고서 파일, 디버그 모니터([!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 디버그) 또는 디버그 메시지 창으로 디버거 보고서를 보낼 수 있습니다. 두 구성 함수인 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)와 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)은 각 보고서 형식의 대상을 지정하는 데 사용됩니다. 이러한 함수를 사용하면 각 보고서 형식의 보고 대상을 개별적으로 제어할 수 있습니다. 예를 들어 `reportType`의 `_CRT_WARN`은 디버그 모니터로만 보내도록 하고 `reportType`의 `_CRT_ASSERT`은 디버그 메시지 창과 사용자 정의 보고서 파일로 보내도록 지정할 수 있습니다.  
   
  `_CrtDbgReportW`는 `_CrtDbgReport`의 와이드 문자 버전입니다. 이 함수의 모든 출력 및 문자열 매개 변수는 와이드 문자열에 있습니다. 이 점을 제외하면 이 함수는 싱글바이트 문자 버전과 동일합니다.  
   
@@ -128,7 +129,7 @@ int _CrtDbgReportW(
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|
           `stdout`에 메시지를 씁니다.|  
   
- 보고서는&1;개,&2;개 또는&3;개 대상으로 보내거나 아무 대상으로도 보내지 않을 수 있습니다. 보고서 모드 및 보고서 파일을 지정하는 방법에 대한 자세한 내용은 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수를 참조하세요. 디버그 매크로 및 보고 함수 사용에 대한 자세한 내용은 [보고서 매크로](/visualstudio/debugger/macros-for-reporting)를 참조하세요.  
+ 보고서는 1개, 2개 또는 3개 대상으로 보내거나 아무 대상으로도 보내지 않을 수 있습니다. 보고서 모드 및 보고서 파일을 지정하는 방법에 대한 자세한 내용은 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수를 참조하세요. 디버그 매크로 및 보고 함수 사용에 대한 자세한 내용은 [보고서 매크로](/visualstudio/debugger/macros-for-reporting)를 참조하세요.  
   
  응용 프로그램에 `_CrtDbgReport` 및 `_CrtDbgReportW`에서 제공하는 것보다 더 뛰어난 유연성이 필요한 경우 고유한 보고 함수를 작성한 후 [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) 함수를 사용하여 C 런타임 라이브러리 보고 메커니즘에 이 보고 함수를 연결할 수 있습니다.  
   
@@ -158,16 +159,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  보고 함수 변경 방법의 예는 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)   

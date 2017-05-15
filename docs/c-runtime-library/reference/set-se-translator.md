@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: d8d43b39c9f71807d68f20cb4873abf96d3f91e8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: df4705972f45fd129462f5a3f131c72135254620
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="setsetranslator"></a>_set_se_translator
@@ -93,7 +94,7 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
  `_set_se_translator`의 경우 동적으로 CRT에 연결할 때 의미하는 사항이 있습니다. 즉, 프로세스의 다른 DLL이 `_set_se_translator`를 호출하고 처리기를 자체 처리기로 대체할 수 있습니다.  
   
- 관리 코드(/clr을 사용하여 컴파일된 코드) 또는 혼합된 네이티브 및 관리 코드에서 `_set_se_translator`를 사용할 때 변환기가 네이티브 코드로 생성된 예외에만 영향을 줍니다. 관리 코드에서 생성된 관리 예외(예: `System::Exception`을 발생시키는 경우)는 변환기 함수를 통해 라우팅되지 않습니다. Win32 함수 `RaiseException`을 사용하여 관리 코드에서 발생하는 예외 또는&0;으로 나누기 예외와 같은 시스템 예외에 의해 발생하는 예외가 변환기를 통해 라우팅됩니다.  
+ 관리 코드(/clr을 사용하여 컴파일된 코드) 또는 혼합된 네이티브 및 관리 코드에서 `_set_se_translator`를 사용할 때 변환기가 네이티브 코드로 생성된 예외에만 영향을 줍니다. 관리 코드에서 생성된 관리 예외(예: `System::Exception`을 발생시키는 경우)는 변환기 함수를 통해 라우팅되지 않습니다. Win32 함수 `RaiseException`을 사용하여 관리 코드에서 발생하는 예외 또는 0으로 나누기 예외와 같은 시스템 예외에 의해 발생하는 예외가 변환기를 통해 라우팅됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -218,9 +219,6 @@ int main(int argc, char** argv) {
 Translating the structured exception to a C++ exception.  
 Caught CMyException.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)   

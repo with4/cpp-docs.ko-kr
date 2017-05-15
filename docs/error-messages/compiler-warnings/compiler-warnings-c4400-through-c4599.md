@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
@@ -215,18 +214,18 @@ MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한
 |컴파일러 경고 (수준 1) C4453|'*형식*': '[WebHostHidden]' 형식을 해야 하지 않은 public 형식의 게시 된 표면에 사용할 수 없습니다 '[WebHostHidden]'|  
 |컴파일러 경고 (수준 1) C4454|'*함수*' 없이 [defaultoverload] 지정 된 입력된 매개 변수 수가 이상으로 오버 로드 됩니다. 선택 '*선언*' 기본 오버 로드로|  
 |컴파일러 경고 (수준 1) C4455|' 연산자 *연산자*': 밑줄로 시작 하지 않는 리터럴 접미사 식별자는 예약 되어 있습니다.|  
-|컴파일러 경고 (수준 3) C4456|선언 '*식별자*' 이전 로컬 선언을 숨깁니다.|  
-|컴파일러 경고 (수준 3) C4457|선언 '*식별자*' 숨깁니다 함수 매개 변수|  
-|컴파일러 경고 (수준 3) C4458|선언 '*식별자*' 클래스 멤버를 숨깁니다|  
-|컴파일러 경고 (수준 3) C4459|선언 '*식별자*' 전역 선언을 숨깁니다.|  
+|[컴파일러 경고 (수준 4) C4456](compiler-warning-level-4-c4456.md)|선언 '*식별자*' 이전 로컬 선언을 숨깁니다.|  
+|[컴파일러 경고 (수준 4) C4457](compiler-warning-level-4-c4457.md)|선언 '*식별자*' 숨깁니다 함수 매개 변수|  
+|[컴파일러 경고 (수준 4) C4458](compiler-warning-level-4-c4458.md)|선언 '*식별자*' 클래스 멤버를 숨깁니다|  
+|[컴파일러 경고 (수준 4) C4459](compiler-warning-level-4-c4459.md)|선언 '*식별자*' 전역 선언을 숨깁니다.|  
 |[컴파일러 경고(수준 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; 관리 되는 ' 연산자 '*연산자*', 참조로 매개 변수를 전달 합니다. ' WinRT &#124; 관리 되는 ' 연산자 '*연산자*'c + + 연산자에서 다른 의미 체계의 '*cpp_operator*', 값으로 전달 하 시겠습니까?|  
 |[컴파일러 경고(수준 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*':이 클래스에 종료 자가 '! *종료자*' 소멸자가 되지 않은 있지만 ' ~*dtor*'|  
 |[컴파일러 경고(수준 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*형식*': 형식의 GUID를 확인할 수 없습니다. 프로그램은 런타임에 실패할 수 있습니다.|  
-|컴파일러 경고 C4463|오버플로. 할당 '*값*' 비트 필드에 값을 포함할 수 있는'*min_value*'to'*max_value*'|  
+|[컴파일러 경고 (수준 4) C4463](compiler-warning-level-4-c4463.md)|오버플로. 할당 '*값*' 비트 필드에 값을 포함할 수 있는'*min_value*'to'*max_value*'|  
 |컴파일러 경고 C4464|include에 상대 경로 포함 '..'|  
 |[컴파일러 경고(수준 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|/clr을 지정하면 부동 소수점 제어 pragma가 무시됩니다.|  
 |[컴파일러 경고 (수준 4) C4471](compiler-warning-level-4-c4471.md)|'*열거형*': 범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다.|  
-|컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용)를 추가 ' WinRT &#124; 관리 되는 ' 열거형|  
+|컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용) 추가 ' WinRT &#124; 관리 되는 ' 열거형|  
 |컴파일러 경고 C4480|비표준 확장이 사용 됨: 열거형에 대 한 기본 형식 지정 '*열거형*'|  
 |[컴파일러 경고(수준 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|비표준 확장이 사용 됨: 재정의 지정자 '*키워드*'|  
 |컴파일러 경고 C4482|비표준 확장이 사용 됨: 열거형 '*열거형*' 정규화 된 이름에 사용 되는|  

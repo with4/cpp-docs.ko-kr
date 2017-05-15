@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,18 +67,17 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  `pstatus`  
- 예외 상태 플래그를 설정할 값을 포함한 `fexcept_t` 개체에 대한 포인터입니다. 개체는 [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654)에 대한 이전 호출을 통해 설정될 수 있습니다.  
+ 예외 상태 플래그를 설정할 값을 포함한 `fexcept_t` 개체에 대한 포인터입니다. 개체는 [fegetexceptflag](fegetexceptflag2.md)에 대한 이전 호출을 통해 설정될 수 있습니다.  
   
  `excepts`  
  설정할 부동 소수점 예외 상태 플래그입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 모든 지정된 예외 상태 플래그가 성공적으로 설정되면 0을 반환합니다. 그렇지 않으면&0;이 아닌 값을 반환합니다.  
+ 모든 지정된 예외 상태 플래그가 성공적으로 설정되면 0을 반환합니다. 그렇지 않으면 0이 아닌 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `fesetexceptflag` 함수는 `excepts`를 통해 지정한 부동 소수점 예외 상태 플래그의 상태를 `pstatus`가 가리키는 `fexcept_t` 개체에 설정된 해당 값으로 설정합니다.  이 함수는 예외를 발생시키지 않습니다. `pstatus` 포인터가 유효한 `fexcept_t` 개체를 가리켜야 합니다. 그렇지 않으면 후속 동작이 정의 해제됩니다. `fesetexceptflag` 함수는 \<fenv.h>에 정의된 `excepts`의 다음 예외 매크로 값을 지원합니다.  
@@ -91,7 +91,7 @@ int fesetexceptflag(
 |FE_UNDERFLOW|초기 부동 소수점 작업 결과가 완전히 정확하게 표시하기에 너무 작습니다. 비정상적인 값이 생성되었습니다.|  
 |FE_ALLEXCEPT|모든 지원되는 부동 소수점 예외의 비트 OR입니다.|  
   
- `excepts` 인수는&0;, 지원되는 부동 소수점 예외 매크로 중 하나 또는 매크로 중 두 개 이상의 비트 OR일 수 있습니다. 기타 인수 값의 결과는 정의 해제됩니다.  
+ `excepts` 인수는 0, 지원되는 부동 소수점 예외 매크로 중 하나 또는 매크로 중 두 개 이상의 비트 OR일 수 있습니다. 기타 인수 값의 결과는 정의 해제됩니다.  
   
  이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)를 참조하세요.  
   

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1 개체
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>설명  
- `_1, _2, ... _M` 개체는 [bind 함수](../standard-library/functional-functions.md#bind_function)에서 반환한 개체에 대한 함수 호출에서 각각 첫 번째, 두 번째... M번째 인수를 지정하는 자리 표시자입니다. bind 식을 평가할 때 N번째 인수를 삽입해야 하는 위치를 지정하려면 `_N`을 사용합니다.  
+ 개체 `_1, _2, ... _M` 자리 표시자를 지정 하는 첫 번째, 두 번째,..., Mth 인수 함수 호출을 반환 하는 개체에 각각 [바인딩할](../standard-library/functional-functions.md#bind)합니다. bind 식을 평가할 때 N번째 인수를 삽입해야 하는 위치를 지정하려면 `_N`을 사용합니다.  
   
  이 구현에서 `M`의 값은 20입니다.  
   
@@ -116,6 +117,6 @@ int main()
  **네임스페이스:** std  
   
 ## <a name="see-also"></a>참고 항목  
- [bind 함수](../standard-library/functional-functions.md#bind_function)   
+ [바인딩](../standard-library/functional-functions.md#bind)   
  [is_placeholder 클래스](../standard-library/is-placeholder-class.md)
 

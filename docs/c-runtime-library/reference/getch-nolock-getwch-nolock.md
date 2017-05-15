@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c25516a625df7e43ff8d008370b71a5f7a7c8b3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ab4f6c8789505a6f2439d3c61815e668a12c4bb6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
@@ -129,13 +130,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)   

@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -49,10 +50,10 @@ ms.lasthandoff: 02/24/2017
 #include <future>  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  사용 하 여 컴파일되는 코드에서 **/clr**,이 헤더는 차단 됩니다.  
+>  사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.  
   
  *비동기 공급자*는 함수 호출의 결과를 저장합니다. *비동기 반환 개체*는 함수 호출 결과를 검색하는 데 사용됩니다. *연결된 비동기 상태*를 통해 비동기 공급자와 비동기 반환 개체 하나 이상 사이에서 통신할 수 있습니다.  
   
@@ -91,19 +92,19 @@ ms.lasthandoff: 02/24/2017
   
 |이름|설명|  
 |----------|-----------------|  
-|[async 함수](../standard-library/future-functions.md#async_function)|비동기 공급자를 나타냅니다.|  
-|[future_category 함수](../standard-library/future-functions.md#future_category_function)|`future` 개체와 연결된 오류의 특징을 결정하는 `error_category` 개체에 대한 참조를 반환합니다.|  
-|[make_error_code 함수](../standard-library/future-functions.md#make_error_code_function)|`future` 오류의 특징을 결정하는 `error_category` 개체가 포함된 `error_code`를 만듭니다.|  
-|[make_error_condition 함수](../standard-library/future-functions.md#make_error_condition_function)|`future` 오류의 특징을 결정하는 `error_category` 개체가 포함된 `error_condition`을 만듭니다.|  
-|[swap 함수](../standard-library/future-functions.md#swap_function)|`promise` 개체 하나의 연결된 비동기 상태를 다른 개체의 상태와 교환합니다.|  
+|[async](../standard-library/future-functions.md#async)|비동기 공급자를 나타냅니다.|  
+|[future_category](../standard-library/future-functions.md#future_category)|`future` 개체와 연결된 오류의 특징을 결정하는 `error_category` 개체에 대한 참조를 반환합니다.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|`future` 오류의 특징을 결정하는 `error_category` 개체가 포함된 `error_code`을 만듭니다.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|`future` 오류의 특징을 결정하는 `error_category` 개체가 포함된 `error_condition`을 만듭니다.|  
+|[swap](../standard-library/future-functions.md#swap)|`promise` 개체 하나의 연결된 비동기 상태를 다른 개체의 상태와 교환합니다.|  
   
 ### <a name="enumerations"></a>열거형  
   
 |이름|설명|  
 |----------|-----------------|  
-|[future_errc 열거형](../standard-library/future-enums.md#future_errc_enumeration)|`future_error` 클래스에서 보고한 오류에 대해 기호화된 이름을 제공합니다.|  
-|[future_status 열거형](../standard-library/future-enums.md#future_status_enumeration)|timed wait 함수가 반환할 수 있는 이유에 대해 기호화된 이름을 제공합니다.|  
-|[launch 열거형](../standard-library/future-enums.md#launch_enumeration)|템플릿 함수 `async`에 가능한 모드를 설명하는 비트 마스크 형식을 나타냅니다.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` 클래스에서 보고한 오류에 대해 기호화된 이름을 제공합니다.|  
+|[future_status](../standard-library/future-enums.md#future_status)|timed wait 함수가 반환할 수 있는 이유에 대해 기호화된 이름을 제공합니다.|  
+|[시작](../standard-library/future-enums.md#launch)|템플릿 함수 `async`에 가능한 모드를 설명하는 비트 마스크 형식을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)

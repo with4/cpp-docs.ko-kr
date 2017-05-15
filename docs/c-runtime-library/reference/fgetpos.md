@@ -1,48 +1,65 @@
 ---
-title: "fgetpos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetpos"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetpos"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fgetpos 함수"
-  - "스트림, 파일 위치 표시기"
+title: "fgetpos | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetpos
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetpos function
+- streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# fgetpos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c53e5742a518934ad0afcfaa06ad4e5905c484e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
-스트림의 파일 위치 지시자를 가져옵니다.  
+---
+# <a name="fgetpos"></a>fgetpos
+스트림의 파일 위치 표시기를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int fgetpos(   
@@ -51,28 +68,28 @@ int fgetpos(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `stream`  
  대상 스트림입니다.  
   
  `pos`  
- 저장소 위치 표시기입니다.  
+ 위치 표시기 저장소입니다.  
   
-## 반환 값  
- 만일 성공하면, `fgetpos` 은 0을 반환합니다.  실패 시, 0이아닌 값을 반환하고 `errno` 을 \(STDIO.H에서 정의된\)다음 매니패스트 상수의 하나로 설정합니다: 이것은 지정된 스트림이 유효하지 않은 파일 포인터나 접근이 불가능한 `EBADF` 이거나 null포인터처럼, `pos` 의 값 또는 `stream` 을 의미하는 `EINVAL` 입니다.  만일 `stream` 또는 `pos` 는 `NULL` 포인터인 경우, 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에서 설명된 대로 잘못된 매개변수 처리기를 호출합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 `fgetpos`가 0을 반환합니다. 오류가 발생하면 0이 아닌 값을 반환하고 `errno`를 STDIO.H에 정의된 다음 매니페스트 상수 `EBADF`(지정된 스트림이 유효한 파일 포인터가 아니거나 액세스할 수 없음을 의미) 또는 `EINVAL`(`stream` 값 또는 `pos` 값이 null 포인터인 경우 잘못되었음을 의미) 중 하나로 설정합니다. `stream` 또는 `pos`가 `NULL` 포인터인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다.  
   
-## 설명  
- `fgetpos` 함수는 `pos` 로 지정된 객체에 이것을 저장하고 `stream` 파일 위치 지시자의 현재 값을 가져오는 함수입니다.  `fsetpos` 함수는 `fgetpos` 이 호출된 시간에 이것의 위치에 대한 `stream` 인수의 포인터를 재설정하기위해 `pos` 에 저장된 정보를 사용할 수 있습니다.  `pos` 값은 내부 형식에 저장되고 `fgetpos` 와 `fsetpos` 에 의해서만 사용에 대해 만들어집니다.  
+## <a name="remarks"></a>설명  
+ `fgetpos` 함수는 `stream` 인수 파일 위치 표시기의 현재 값을 가져오고 `pos`가 가리키는 개체에 저장합니다. `fsetpos` 함수는 나중에 `pos`에 저장된 정보를 사용하여 `fgetpos`가 호출되었던 위치에 대한 `stream` 인수의 포인터를 재설정합니다. `pos` 값은 내부 형식으로 저장되고 `fgetpos` 및 `fsetpos`에서만 사용됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|Function|필수 헤더|  
-|--------------|-----------|  
-|`fgetpos`|\<stdio.h\>|  
+|함수|필수 헤더|  
+|--------------|---------------------|  
+|`fgetpos`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_fgetpos.c  
@@ -114,22 +131,19 @@ int main( void )
 }  
 ```  
   
-## 입력: crt\_fgetpos.txt  
+## <a name="input-crtfgetpostxt"></a>입력: crt_fgetpos.txt  
   
 ```  
 fgetpos gets a stream's file-position indicator.  
 ```  
   
-### 출력 crt\_fgetpos.txt  
+### <a name="output-crtfgetpostxt"></a>출력 crt_fgetpos.txt  
   
 ```  
 after fgetpos: gets a stream  
 after fsetpos: gets a stream  
 ```  
   
-## 해당 .NET Framework 항목  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
-## 참고 항목  
- [스트림 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
  [fsetpos](../../c-runtime-library/reference/fsetpos.md)

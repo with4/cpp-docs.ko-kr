@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  결과를 저장할 구조체에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 파일 상태 정보를 가져오는 경우 0을 반환합니다. 반환 값 –1은 오류를 나타냅니다. 파일이 잘못되었거나 `buffer`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EBADF`(잘못된 파일 설명자인 경우) 또는 `EINVAL`(`buffer`가 `NULL`인 경우)로 설정됩니다.  
+ 파일 상태 정보를 가져오는 경우 0을 반환합니다. 반환 값-1의 오류를 나타냅니다. 파일이 잘못되었거나 `buffer`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EBADF`(잘못된 파일 설명자인 경우) 또는 `EINVAL`(`buffer`가 `NULL`인 경우)로 설정됩니다.  
   
 ## <a name="remarks"></a>설명  
  `_fstat` 함수는 `fd`와 연결된 열린 파일에 대한 정보를 가져오고 `buffer`가 가리키는 구조체에 저장합니다. SYS\Stat.h에 정의된 `_stat` 구조체에는 다음 필드가 포함되어 있습니다.  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  이러한 함수의 변형은 32비트 또는 64비트 시간 형식과 32비트 또는 64비트 파일 길이를 지원합니다. 첫 번째 숫자 접미사(`32` 또는 `64`)는 사용된 시간 형식의 크기를 나타내며, 두 번째 접미사( `i32` 또는 `i64`)는 파일 크기가 32비트 정수로 표시되는지 아니면 64비트 정수로 표시되는지를 나타냅니다.  
   
- `_fstat`는 `_fstat64i32`와 동일하며, `struct``_stat`는 64비트 시간을 포함합니다. `_USE_32BIT_TIME_T` 가 정의되지 않는 한 그러하며, 이 경우 이전 동작이 적용됩니다. `_fstat` 는 32비트 시간을 사용하고 `struct``_stat` 는 32비트 시간을 포함합니다. 이는 `_fstati64`의 경우에도 마찬가지입니다.  
+ `_fstat`는 `_fstat64i32`와 동일하며, `struct _stat`는 64비트 시간을 포함합니다. `_USE_32BIT_TIME_T` 가 정의되지 않는 한 그러하며, 이 경우 이전 동작이 적용됩니다. `_fstat` 는 32비트 시간을 사용하고 `struct _stat` 는 32비트 시간을 포함합니다. 이는 `_fstati64`의 경우에도 마찬가지입니다.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat의 시간 형식 및 파일 길이 형식 변형  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 처리](../../c-runtime-library/file-handling.md)   

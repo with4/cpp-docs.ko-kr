@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1810a9c79d21b6a0b19f5f4e4f2d4c59d286e5b7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 7ddada62e9bb209d8b5ffad6af3728edce36e443
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="gettimezone"></a>_get_timezone
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/24/2017
  UTC와 현지 시간 사이의 차이(초)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;이고 오류가 발생하면 `errno` 값입니다.  
+ 성공하면 0이고 오류가 발생하면 `errno` 값입니다.  
   
 ## <a name="remarks"></a>설명  
  `_get_timezone` 함수는 UTC와 현지 시간 사이의 차이(초)를 정수로 검색합니다. 기본값은 태평양 표준시(UTC보다 8시간 뒤)에 대해 28,800초입니다.  
@@ -89,9 +90,6 @@ ms.lasthandoff: 02/24/2017
 |`_get_timezone`|\<time.h>|  
   
  자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

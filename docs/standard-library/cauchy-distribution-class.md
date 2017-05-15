@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - cauchy_distribution
-- std::cauchy_distribution
 - random/std::cauchy_distribution
-- std::cauchy_distribution::reset
 - random/std::cauchy_distribution::reset
-- std::cauchy_distribution::a
 - random/std::cauchy_distribution::a
-- std::cauchy_distribution::b
 - random/std::cauchy_distribution::b
-- std::cauchy_distribution::param
 - random/std::cauchy_distribution::param
-- std::cauchy_distribution::min
 - random/std::cauchy_distribution::min
-- std::cauchy_distribution::max
 - random/std::cauchy_distribution::max
-- std::cauchy_distribution::operator()
 - random/std::cauchy_distribution::operator()
-- std::cauchy_distribution::param_type
 - random/std::cauchy_distribution::param_type
-- std::cauchy_distribution::param_type::a
 - random/std::cauchy_distribution::param_type::a
-- std::cauchy_distribution::param_type::b
 - random/std::cauchy_distribution::param_type::b
-- std::cauchy_distribution::param_type::operator==
 - random/std::cauchy_distribution::param_type::operator==
-- std::cauchy_distribution::param_type::operator!=
 - random/std::cauchy_distribution::param_type::operator!=
+- random/std::cauchy_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: 6cbe218a9bcac3b35952e6993cc496689e0290aa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2af8fbb5fb6bfee6bc0a996fffe2e62f1d78cde0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 클래스
@@ -110,8 +99,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[cauchy_distribution::cauchy_distribution](#cauchy_distribution__cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[cauchy_distribution::param_type](#cauchy_distribution__param_type)|  
+|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
+|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|  
   
 속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 `a` 및 `b` 각각에 대한 값을 반환합니다.  
   
@@ -267,7 +256,7 @@ Distribution for 10 samples:
   
 **네임스페이스:** std  
   
-##  <a name="a-namecauchydistributioncauchydistributiona--cauchydistributioncauchydistribution"></a><a name="cauchy_distribution__cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
+##  <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
 분포를 생성합니다.  
   
 ```  
@@ -292,7 +281,7 @@ explicit cauchy_distribution(const param_type& parm);
   
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
   
-##  <a name="a-namecauchydistributionparamtypea--cauchydistributionparamtype"></a><a name="cauchy_distribution__param_type"></a>  cauchy_distribution::param_type  
+##  <a name="param_type"></a>  cauchy_distribution::param_type  
 분포의 모든 매개 변수를 저장합니다.  
   
 ```cpp    

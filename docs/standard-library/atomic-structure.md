@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: fd21d2fe59dc7db7670fb94fde6d169603bbf6d1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="atomic-structure"></a>atomic 구조체
@@ -53,14 +54,14 @@ struct atomic;
   
 |이름|설명|  
 |----------|-----------------|  
-|[atomic::atomic 생성자](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|atomic 개체를 생성합니다.|  
+|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|atomic 개체를 생성합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[atomic::operator Ty 연산자](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|저장된 값을 읽고 반환합니다. ([atomic::load 메서드](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[atomic::operator= 연산자](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|지정된 값을 사용하여 저장된 값을 바꿉니다. ([atomic::store 메서드](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator Ty 연산자](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|저장된 값을 읽고 반환합니다. ([atomic:: load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= 연산자](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|지정된 값을 사용하여 저장된 값을 바꿉니다. ([atomic:: store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
 |[atomic::operator++ 연산자](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|저장된 값을 증가시킵니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
 |[atomic::operator+= 연산자](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|지정된 값을 저장된 값에 더합니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
 |[atomic::operator-- 연산자](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|저장된 값을 감소시킵니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.|  
@@ -73,16 +74,16 @@ struct atomic;
   
 |이름|설명|  
 |----------|-----------------|  
-|[atomic::compare_exchange_strong 메서드](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|`this`에서 `atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
-|[atomic::compare_exchange_weak 메서드](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|`this`에서 `weak_atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
-|[atomic::fetch_add 메서드](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|지정된 값을 저장된 값에 더합니다.|  
-|[atomic::fetch_and 메서드](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|지정된 값 및 저장된 값에서 비트 `and`를 수행합니다.|  
-|[atomic::fetch_or 메서드](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|지정된 값 및 저장된 값에서 비트 `or`를 수행합니다.|  
-|[atomic::fetch_sub 메서드](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|지정된 값을 저장된 값에서 뺍니다.|  
-|[atomic::fetch_xor 메서드](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|지정된 값 및 저장된 값에서 비트 `exclusive or`를 수행합니다.|  
-|[atomic::is_lock_free 메서드](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|`this`의 원자 연산이 *잠금 해제*인지를 지정합니다. 원자 형식의 어떤 원자 연산도 잠금을 사용하지 않는 경우 해당 원자 형식을 *잠금 해제*라고 합니다.|  
-|[atomic::load 메서드](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|저장된 값을 읽고 반환합니다.|  
-|[atomic::store 메서드](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|지정된 값을 사용하여 저장된 값을 바꿉니다.|  
+|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|`this`에서 `atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
+|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|`this`에서 `weak_atomic_compare_and_exchange` 연산을 수행하고 결과를 반환합니다.|  
+|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|지정된 값을 저장된 값에 더합니다.|  
+|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|지정된 값 및 저장된 값에서 비트 `and`를 수행합니다.|  
+|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|지정된 값 및 저장된 값에서 비트 `or`를 수행합니다.|  
+|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|지정된 값을 저장된 값에서 뺍니다.|  
+|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|지정된 값 및 저장된 값에서 비트 `exclusive or`를 수행합니다.|  
+|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|`this`의 원자 연산이 *잠금 해제*인지를 지정합니다. 원자 형식의 어떤 원자 연산도 잠금을 사용하지 않는 경우 해당 원자 형식을 *잠금 해제*라고 합니다.|  
+|[부하](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|저장된 값을 읽고 반환합니다.|  
+|[저장소](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|지정된 값을 사용하여 저장된 값을 바꿉니다.|  
   
 ## <a name="remarks"></a>설명  
  `Ty` 형식은 *일반적으로 복사 가능*해야 합니다. [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)를 사용하여 바이트를 복사하면 비교 시 원본 개체와 같은 유효한 `Ty` 개체가 생성되어야 합니다. `compare_exchange_weak` 및 `compare_exchange_strong` 멤버 함수는 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)를 사용하여 두 개의 `Ty` 값이 같은지 확인합니다. 이러한 함수는 `operator==`에 정의된 `Ty`를 사용하지 않습니다. `atomic`의 멤버 함수는 `memcpy`를 사용하여 `Ty` 형식의 값을 복사합니다.  
@@ -102,7 +103,7 @@ struct atomic;
  정수 특수화는 해당 `atomic_``integral` 형식에서 파생됩니다. 예를 들어 `atomic<unsigned int>`는 `atomic_uint`에서 파생됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** atomic  
+ **헤더:** \<원자성 >  
   
  **네임스페이스:** std  
   

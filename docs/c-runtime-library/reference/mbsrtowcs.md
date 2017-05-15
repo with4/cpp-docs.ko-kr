@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 21e4b9b438c19054ad62ee26ead6db693f709885
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bec54ca0efe0f8aefabbe0c616e283b64fd22166
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
@@ -108,9 +109,6 @@ size_t mbsrtowcs(
   
 ## <a name="exceptions"></a>예외  
  `mbsrtowcs` 함수는 현재 스레드의 함수가 `setlocale`을 호출하지 않고, 이 함수가 실행 중이며, `mbstate` 인수가 null 포인터가 아니면 다중 스레드로부터 안전합니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

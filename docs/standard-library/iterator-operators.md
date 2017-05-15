@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 636825d8dc49ed0d4d7beaa03328b7a3f20f668e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 연산자
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator+](#operator_add)|  
-|[operator-](#operator-)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 다른지를 테스트합니다.  
   
 ```  
@@ -37,10 +39,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **iterator** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **iterator** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -111,7 +113,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.  
   
 ```  
@@ -137,10 +139,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  iterator 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  iterator 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -149,7 +151,7 @@ bool operator==(
 ### <a name="remarks"></a>설명  
  반복기 개체가 컨테이너의 동일한 요소로 주소 지정되면 서로 같습니다. 두 반복기가 컨테이너의 다른 요소를 가리키면 반복기가 같지 않습니다.  
   
- 처음 두 템플릿 연산자는 ` left`와 ` right`가 동일한 반복기를 저장하는 경우에만 true를 반환합니다. 세 번째 템플릿 연산자는 ` left`와 ` right`가 동일한 스트림 포인터를 저장하는 경우에만 true를 반환합니다. 네 번째 템플릿 연산자는 ` left.equal ( right)`를 반환합니다.  
+ 처음 두 템플릿 연산자는 `left`와 `right`가 동일한 반복기를 저장하는 경우에만 true를 반환합니다. 세 번째 템플릿 연산자는 `left`와 `right`가 동일한 스트림 포인터를 저장하는 경우에만 true를 반환합니다. 네 번째 템플릿 연산자는 ` left.equal ( right)`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -213,7 +215,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작은지를 테스트합니다.  
   
 ```  
@@ -222,10 +224,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  **iterator** 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  **iterator** 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -300,7 +302,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.  
   
 ```  
@@ -309,10 +311,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  iterator 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  iterator 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -391,7 +393,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 큰지를 테스트합니다.  
   
 ```  
@@ -400,10 +402,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  iterator 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  iterator 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -476,7 +478,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.  
   
 ```  
@@ -485,10 +487,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  iterator 형식의 개체입니다.  
   
- ` right`  
+ `right`  
  iterator 형식의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -567,7 +569,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소의 주소를 지정하는 `move_iterator` 또는 `reverse_iterator`를 반환합니다.  
   
 ```  
@@ -588,11 +590,11 @@ operator+(
  `_Off`  
  const move_iterator 또는 const reverse_iterator가 오프셋되는 위치의 수입니다.  
   
- ` right`  
+ `right`  
  오프셋할 반복기입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 합계 ` right` + `_Off`를 반환합니다.  
+ 합계 `right` + `_Off`를 반환합니다.  
   
 ### <a name="example"></a>예제  
   
@@ -643,7 +645,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  다른 반복기에서 하나의 반복기를 빼고 차이를 반환합니다.  
   
 ```  
@@ -659,19 +661,19 @@ Tdiff operator-(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- ` left`  
+ `left`  
  반복기입니다.  
   
- ` right`  
+ `right`  
  반복기입니다.  
   
 ### <a name="return-value"></a>반환 값  
  두 반복기 간의 차이입니다`.`  
   
 ### <a name="remarks"></a>설명  
- 첫 번째 템플릿 연산자는 ` left.base() -  right.base()`를 반환합니다.  
+ 첫 번째 템플릿 연산자는 `left.base() - right.base()`를 반환합니다.  
   
- 두 번째 템플릿 연산자는 ` right.current -  left.current`를 반환합니다.  
+ 두 번째 템플릿 연산자는 `right.current - left.current`를 반환합니다.  
   
  `Tdiff`는 반환된 식의 형식에 의해 결정됩니다. 그렇지 않으면 `RandomIterator1::difference_type`입니다.  
   

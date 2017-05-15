@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8d6ae9f6207bc0cc42ec2a0749ddfb6253c496f6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b5af03e83cc39c20fca310ba0c2377469c59ef38
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="longjmp"></a>longjmp
@@ -77,7 +78,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>설명  
  `longjmp` 함수는 `env`에 의해 `setjmp`에서 이전에 저장된 스택 환경 및 실행 로캘을 복원합니다. `setjmp` 및 `longjmp`는 로캘이 아닌 `goto`를 실행하는 방법을 제공합니다. 이는 일반적으로 표준 호출 및 반환 규칙을 사용하지 않고 이전에 호출된 루틴에서 오류 처리 또는 복구 코드에 실행 제어를 전달하는 데 사용됩니다.  
   
- `setjmp`에 대한 호출은 현재 스택 환경을 `env`에 저장합니다. `longjmp`에 대한 후속 호출은 저장된 환경을 복원하고 컨트롤을 해당 `setjmp` 호출 바로 다음에 오는 포인터로 반환합니다. *value*가 `setjmp` 호출에 의해 반환된 것처럼 실행이 다시 시작됩니다. 컨트롤을 받는 루틴에 액세스할 수 있는 모든 변수 값(레지스터 변수 제외)은 `longjmp`가 호출될 때 가지고 있던 값을 포함합니다. 레지스터 변수 값은 예측할 수 없습니다. `setjmp`에서 반환되는 값은&0;이 아니어야 합니다. *value*가 0으로 전달되는 경우 값 1은 실제 반환에서 대체됩니다.  
+ `setjmp`에 대한 호출은 현재 스택 환경을 `env`에 저장합니다. `longjmp`에 대한 후속 호출은 저장된 환경을 복원하고 컨트롤을 해당 `setjmp` 호출 바로 다음에 오는 포인터로 반환합니다. *value*가 `setjmp` 호출에 의해 반환된 것처럼 실행이 다시 시작됩니다. 컨트롤을 받는 루틴에 액세스할 수 있는 모든 변수 값(레지스터 변수 제외)은 `longjmp`가 호출될 때 가지고 있던 값을 포함합니다. 레지스터 변수 값은 예측할 수 없습니다. `setjmp`에서 반환되는 값은 0이 아니어야 합니다. *value*가 0으로 전달되는 경우 값 1은 실제 반환에서 대체됩니다.  
   
  `longjmp`를 호출한 함수가 반환되기 전에 `setjmp`를 호출합니다. 그렇지 않으면 결과를 예측할 수 없습니다.  
   
@@ -104,9 +105,6 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="example"></a>예제  
  [_fpreset](../../c-runtime-library/reference/fpreset.md)에 대한 예제를 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

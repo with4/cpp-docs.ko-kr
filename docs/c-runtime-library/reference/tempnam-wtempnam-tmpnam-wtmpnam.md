@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  생성된 이름이 저장되며 함수가 반환하는 이름과 동일하게 지정되는 포인터입니다. 이 매개 변수를 사용하면 생성되는 이름을 편리하게 저장할 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이러한 각 함수는 생성된 이름에 대한 포인터를 반환하거나, 오류가 발생하면 `NULL`을 반환합니다. `tmpnam`을 사용하여 `TMP_MAX`(STDIO.H 참조)보다 많은 호출을 시도하거나, `_tempnam`를 사용할 때 TMP 환경 변수와 `dir` 매개 변수에 잘못된 디렉터리 이름이 지정되어 있으면 오류가 발생할 수 있습니다.  
+ 이러한 각 함수는 생성된 이름에 대한 포인터를 반환하거나, 오류가 발생하면 `NULL`을 반환합니다. 시도 하면 오류가 발생할 수 있습니다 이상 `TMP_MAX` (STDIO 참조 합니다. H) 사용 하 여 호출 `tmpnam` 사용 하는 경우 또는 `_tempnam` 및 TMP 환경 변수에 지정 된 잘못 된 디렉터리 이름이 고는 `dir` 매개 변수입니다.  
   
 > [!NOTE]
 >  `tmpnam` 및 `_wtmpnam`에서 반환하는 포인터는 내부 정적 버퍼를 가리킵니다. 이러한 포인터를 할당 해제하기 위해 [free](../../c-runtime-library/reference/free.md)를 호출해서는 안 됩니다. `free`는 `_tempnam` 및 `_wtempnam`에서 할당한 포인터에 대해 호출해야 합니다.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스트림 I/O](../../c-runtime-library/stream-i-o.md)   

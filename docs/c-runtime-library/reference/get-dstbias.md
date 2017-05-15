@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 336f03207c1ead18dd7e47f44fd8c1055da4bc0e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 51facd97e9e1b7478893c23693d67cd022b5bed7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="getdstbias"></a>_get_dstbias
@@ -77,7 +78,7 @@ ms.lasthandoff: 02/24/2017
  일관 절약 시간의 오프셋(초)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면&0;이고 오류가 발생하면 `errno` 값입니다.  
+ 성공하면 0이고 오류가 발생하면 `errno` 값입니다.  
   
 ## <a name="remarks"></a>설명  
  `_get_dstbias` 함수는 일광 절약 시간의 초 수를 정수로 검색합니다. 일광 절약 시간이 적용 중인 경우 몇몇 지역에서 2시간 오프셋을 따르고 있더라도 기본 오프셋은 3,600초입니다. 이 값은 한 시간을 나타내는 초 수입니다.  
@@ -85,9 +86,6 @@ ms.lasthandoff: 02/24/2017
  `seconds`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
  매크로 `_dstbias` 또는 사용되지 않는 함수 `__dstbias` 대신 이 함수를 사용하는 것이 좋습니다.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

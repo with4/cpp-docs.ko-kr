@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tzset"></a>_tzset
@@ -71,7 +72,7 @@ void _tzset( void );
 ## <a name="remarks"></a>설명  
  `_tzset` 함수는 환경 변수 `TZ` 의 현재 설정을 사용하여 세 개의 전역 변수 `_daylight`, `_timezone`및 `_tzname`에 값을 할당합니다. 이러한 변수는 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 및 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 함수에서 UTC(협정 세계시)를 현지 시간으로 수정하는 데 사용되며, `time` 함수가 시스템 시간에서 UTC를 계산하는 데 사용됩니다. 다음 구문을 사용하여 `TZ` 환경 변수를 설정합니다.  
   
- `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  3자의 표준 시간대 이름(예: PST)입니다. 현지 시간에서 UTC로의 올바른 오프셋을 지정해야 합니다.  
@@ -99,7 +100,7 @@ set TZ=GST-1GDT
   
  이 명령은 GST를 사용하여 독일 표준 시간을 나타내고, UTC는 독일보다 한 시간 뒤, 즉 독일은 UTC보다 한 시간 앞이라고 가정하며, 독일은 일광 절약 시간을 준수한다고 가정합니다.  
   
- `TZ` 값을 설정하지 않으면 _`tzset` 은 운영 체제에서 지정한 표준 시간대 정보를 사용하려고 시도합니다. Windows 운영 체제에서 이 정보는 제어판의 날짜/시간 응용 프로그램에 지정되어 있습니다. `_tzset` 에서 이 정보를 가져올 수 없는 경우 기본적으로 태평양 표준 시간대를 의미하는 PST8PDT를 사용합니다.  
+ 경우는 `TZ` 값을 설정 하지 않으면 `_tzset` 운영 체제에서 지정 된 표준 시간대 정보를 사용 하려고 시도 합니다. Windows 운영 체제에서 이 정보는 제어판의 날짜/시간 응용 프로그램에 지정되어 있습니다. `_tzset` 에서 이 정보를 가져올 수 없는 경우 기본적으로 태평양 표준 시간대를 의미하는 PST8PDT를 사용합니다.  
   
  `TZ` 환경 변수 값에 따라 `_daylight`을 호출할 때 다음 값이 전역 변수 `_timezone`, `_tzname` 및 `_tzset` 에 할당됩니다.  
   
@@ -154,9 +155,6 @@ _daylight = 1
 _timezone = 28800  
 _tzname[0] = Pacific Standard Time  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시간 관리](../../c-runtime-library/time-management.md)   

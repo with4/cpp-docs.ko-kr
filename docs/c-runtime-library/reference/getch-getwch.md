@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5f2d015ecc2f027712bc81f1ea538f88e130662
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d54444dcd6f0b22527dc2362cfdee5f2b1c33b60
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
@@ -79,7 +80,7 @@ wint_t _getwch( void );
  읽은 문자를 반환합니다. 반환되는 오류가 없습니다.  
   
 ## <a name="remarks"></a>설명  
- `_getch` 및 `_getwch` 함수는 문자를 에코하지 않고 콘솔에서 단일 문자를 읽습니다. 이 중 어느 것도, CTRL + C를 읽을 수 없습니다. 화살표 키 또는 기능 키를 읽을 때, 각 함수는 두 번 호출되어야 합니다. 0 또는 0xE0를 첫 번째 호출에서 반환하고 실제 키 코드를 두 번째 호출에서 반환합니다.  
+ `_getch` 및 `_getwch` 함수는 문자를 출력 하지 않고 콘솔에서 단일 문자를 읽습니다. 이 중 어느 것도, CTRL + C를 읽을 수 없습니다. 화살표 키 또는 기능 키를 읽을 때, 각 함수는 두 번 호출되어야 합니다. 0 또는 0xE0를 첫 번째 호출에서 반환하고 실제 키 코드를 두 번째 호출에서 반환합니다.  
   
  이러한 함수는 호출 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_getch_nolock, _getwch_nolock](../../c-runtime-library/reference/getch-nolock-getwch-nolock.md)을 참조하세요.  
   
@@ -100,7 +101,7 @@ wint_t _getwch( void );
   
 ## <a name="example"></a>예제  
   
-```  
+```C  
 // crt_getch.c  
 // compile with: /c  
 // This program reads characters from  
@@ -126,13 +127,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 사용  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)   

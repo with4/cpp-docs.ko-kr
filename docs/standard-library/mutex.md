@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7e6aaf9ae1817da4a532b00fe0bf54afc5e9cd17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 241d1ad9b3313337b874d5e9a6d39f86f2c71838
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 `mutex`, `recursive_mutex`, `timed_mutex`, `recursive_timed_mutex` 클래스, `lock_guard`, `unique_lock` 템플릿, 그리고 상호 배제 코드 영역을 정의하는 지원 형식과 함수를 정의하려면 표준 헤더 \<mutex>를 포함합니다.  
   
 > [!WARNING]
->  Visual Studio 2015의 C++ 표준 라이브러리 동기화 형식은 Windows 동기화 기본 형식을 따르고 더 이상 ConcRT를 사용하지 않습니다(대상 플랫폼이 Windows XP인 경우 제외). \<mutex>에 정의된 형식은 모든 ConcRT 형식 및 함수와 함께 사용하면 안 됩니다.  
+>  Visual Studio 2015부터, c + + 표준 라이브러리 동기화 형식은 Windows 동기화 기본 형식을 기반으로 따르고 더 이상 ConcRT를 사용 하 여 (경우 제외 대상 플랫폼이 Windows XP). \<mutex>에 정의된 형식은 모든 ConcRT 형식 및 함수와 함께 사용하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,10 +50,10 @@ ms.lasthandoff: 02/24/2017
 #include <mutex>  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  사용 하 여 컴파일되는 코드에서 **/clr**,이 헤더는 차단 됩니다.  
+>  사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.  
   
  `mutex` 및 `recursive_mutex` 클래스는 *뮤텍스 형식*입니다. 뮤텍스 형식에는 예외를 throw하지 않는 기본 생성자와 소멸자가 있습니다. 이러한 개체에는 여러 스레드가 동일한 개체를 잠그려고 할 때 상호 배제하는 메서드가 있습니다. 특히, 뮤텍스 형식에는 `lock`, `try_lock` 및 `unlock` 메서드가 포함되어 있습니다.  
   
@@ -87,8 +88,8 @@ ms.lasthandoff: 02/24/2017
   
 |이름|설명|  
 |----------|-----------------|  
-|[call_once 함수](../standard-library/mutex-functions.md#call_once_function)|지정된 호출 가능 개체를 실행 중 정확하게 한 번 호출할 수 있는 메커니즘을 제공합니다.|  
-|[lock 함수](../standard-library/mutex-functions.md#lock_function)|교착 상태가 발생하지 않고 모든 인수를 잠그려고 시도합니다.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|지정된 호출 가능 개체를 실행 중 정확하게 한 번 호출할 수 있는 메커니즘을 제공합니다.|  
+|[lock](../standard-library/mutex-functions.md#lock)|교착 상태가 발생하지 않고 모든 인수를 잠그려고 시도합니다.|  
   
 ### <a name="structs"></a>Structs  
   
@@ -103,9 +104,9 @@ ms.lasthandoff: 02/24/2017
   
 |이름|설명|  
 |----------|-----------------|  
-|[adopt_lock 변수](../standard-library/mutex-functions.md#adopt_lock_variable)|생성자에게 전달 중인 뮤텍스 개체가 잠겨 있음을 나타내기 위해 `lock_guard` 및 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
-|[defer_lock 변수](../standard-library/mutex-functions.md#defer_lock_variable)|생성자가 전달 중인 뮤텍스 개체를 잠그면 안 됨을 나타내기 위해 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
-|[try_to_lock 변수](../standard-library/mutex-functions.md#try_to_lock_variable)|생성자가 차단 없이 전달 중인 `mutex`의 잠금을 해제하려고 하면 안 됨을 나타내기 위해 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|생성자에게 전달 중인 뮤텍스 개체가 잠겨 있음을 나타내기 위해 `lock_guard` 및 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|생성자가 전달 중인 뮤텍스 개체를 잠그면 안 됨을 나타내기 위해 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|생성자가 차단 없이 전달 중인 `mutex`의 잠금을 해제하려고 하면 안 됨을 나타내기 위해 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)

@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7c7659bb52594678538ea2701174c070ace41d70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4d7a7b05896bac9e1b3f4ac29ee24a6ad7d61a82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
@@ -80,7 +81,7 @@ unsigned int _clearfp( void );
   
  `_clearfp`는 플랫폼 독립적이며 `_clear87` 루틴의 이식 가능한 버전입니다. 인텔(x86) 플랫폼에서는 `_clear87`과 동일하고 x64 및 ARM 플랫폼에 의해 지원됩니다. 부동 소수점 코드를 x64 및 ARM에 이식하려면 `_clearfp`를 사용하세요. x86 플랫폼만 대상으로 하는 경우 `_clear87` 또는 `_clearfp`를 사용할 수 있습니다.  
   
- 로 컴파일하는 경우 이러한 함수는 사용 되지 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 공용 언어 런타임은 기본 부동 소수점 정밀도만 지원 하기 때문에 있습니다.  
+ 로 컴파일하는 경우 이러한 함수는 무시 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 공용 언어 런타임은 기본 부동 소수점 정밀도만 지원 하기 때문에 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -129,9 +130,6 @@ Status: 0000 - clear
 Status: 0003 - inexact, underflow  
 Status: 80000 - denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   

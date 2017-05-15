@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23bcf7a96dfbfa7719b20f2a035ddcbc93c835ee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pipe"></a>_pipe
@@ -68,11 +69,10 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      int _pipe(  
-int *pfds,  
-unsigned int psize,  
-int textmode   
+int _pipe(  
+   int *pfds,  
+   unsigned int psize,  
+   int textmode   
 );  
 ```  
   
@@ -87,7 +87,7 @@ int textmode
  파일 모드입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되는 경우 0을 반환합니다. -1이 반환되면 오류가 발생한 것입니다. 오류 시 `errno`는 다음 값 중 하나로 설정됩니다.  
+ 정상적으로 실행되는 경우 0을 반환합니다. 오류를 나타내는 데-1 반환 합니다. 오류 시 `errno`는 다음 값 중 하나로 설정됩니다.  
   
 -   `EMFILE` - 파일 설명자를 더 이상 사용할 수 없음을 나타냅니다.  
   
@@ -120,9 +120,9 @@ int textmode
 |-------------|---------------------|---------------------|  
 |`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
- `_O_BINARY` 및 `_O_TEXT` 정의의 경우&1;입니다.  
+ `_O_BINARY` 및 `_O_TEXT` 정의의 경우 1입니다.  
   
- `errno` 정의의 경우&2;입니다.  
+ `errno` 정의의 경우 2입니다.  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
@@ -131,9 +131,8 @@ int textmode
   
 ## <a name="example-1"></a>예제 1  
   
-```  
-  
-      // crt_pipe.c  
+```C  
+// crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -216,9 +215,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## <a name="sample-output"></a>샘플 출력  
-  
-```  
+```Output  
 Son, what is the square root of 1000?  
 Son, what is the square root of 2000?  
 Son, what iDad, the square root of 1000 is 31.62.  
@@ -240,7 +237,7 @@ Dad, the square root of 8000 is 89.44.
 ## <a name="example-2"></a>예제 2  
  이 예제는 기본 필터 응용 프로그램입니다. 이 응용 프로그램은 생성된 응용 프로그램의 stdout를 필터로 이동하는 파이프를 만든 후 crt_pipe_beeper 응용 프로그램을 생성합니다. 필터는 ASCII 7(경고음) 문자를 제거합니다.  
   
-```  
+```C  
 // crt_pipe_beeper.c  
   
 #include <stdio.h>  
@@ -259,7 +256,7 @@ int main()
   
  실제 필터 응용 프로그램:  
   
-```  
+```C  
 // crt_pipe_BeepFilter.C  
 // arguments: crt_pipe_beeper.exe  
   
@@ -352,9 +349,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="output"></a>출력  
-  
-```  
+```Output  
 This is speaker beep number 1...  
 This is speaker beep number 2...  
 This is speaker beep number 3...  
@@ -366,9 +361,6 @@ This is speaker beep number 8...
 This is speaker beep number 9...  
 This is speaker beep number 10...  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   

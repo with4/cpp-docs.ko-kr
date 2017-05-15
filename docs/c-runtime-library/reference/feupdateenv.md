@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feupdateenv"></a>feupdateenv
@@ -66,12 +67,12 @@ int feupdateenv(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  `penv`  
- [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 또는 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9)를 호출하여 설정한 부동 소수점 환경을 포함하는 `fenv_t` 개체에 대한 포인터입니다. FE_DFL_ENV 매크로를 사용하여 기본 시작 부동 소수점 환경을 지정할 수도 있습니다.  
+ [fegetenv](fegetenv1.md) 또는 [feholdexcept](feholdexcept2.md)를 호출하여 설정한 부동 소수점 환경을 포함하는 `fenv_t` 개체에 대한 포인터입니다. FE_DFL_ENV 매크로를 사용하여 기본 시작 부동 소수점 환경을 지정할 수도 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
- 모든 작업이 성공적으로 완료되면 0을 반환합니다.        그렇지 않으면&0;이 아닌 값을 반환합니다.  
+ 모든 작업이 성공적으로 완료되면 0을 반환합니다. 그렇지 않으면 0이 아닌 값을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `feupdateenv` 함수는 여러 작업을 수행합니다. 먼저, 현재 발생한 부동 소수점 예외 상태 플래그를 자동 저장소에 저장합니다. 그런 다음 `penv`가 가리키는 `fenv_t` 개체에 저장된 값에 따라 현재 부동 소수점 환경을 설정합니다. `penv`가 FE_DFL_ENV가 아니거나 유효한 `fenv_t` 개체를 가리키지 않을 경우 후속 동작이 정의 해제됩니다. 마지막으로 `feupdateenv`는 로컬에 저장된 부동 소수점 예외를 발생시킵니다.  

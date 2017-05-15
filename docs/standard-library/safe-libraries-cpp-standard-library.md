@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 704101f267c1d63ffc5def918f031bfc9b257e67
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f1698faaf860ab5b1e2e8579d2077c09c2a46114
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="safe-libraries-c-standard-library"></a>안전한 라이브러리: C++ 표준 라이브러리
@@ -54,17 +55,17 @@ C++ 표준 라이브러리를 포함하여 보안을 강화하기 위해 Visual 
   
 |잠재적으로 안전하지 않은 메서드|보다 안전한 메서드|  
 |-------------------------------|----------------------|  
-|[basic_string::copy](../standard-library/basic-string-class.md#basic_string__copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#basic_string___copy_s)|  
-|[char_traits::copy](../standard-library/char-traits-struct.md#char_traits__copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#char_traits___copy_s)|  
+|[copy](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|  
+|[copy](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|  
   
  위의 안전하지 않을 수 있는 메서드 중 하나를 호출하거나 반복기를 잘못 사용하면 컴파일러에서 [컴파일러 경고(수준 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)을 생성합니다. 이러한 경고를 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)  
   
  [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
- [확인된 반복기](../standard-library/checked-iterators.md)  
+ [Checked Iterators](../standard-library/checked-iterators.md)  
   
  [디버그 반복기 지원](../standard-library/debug-iterator-support.md)  
   

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
@@ -90,9 +91,9 @@ unsigned int _mbbtombc_l(
  `_mbbtombc`가 `c`를 성공적으로 변환한 경우 멀티바이트 문자를 반환합니다. 그렇지 않으면 `c`를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbbtombc` 함수는 지정된 싱글바이트 멀티바이트 문자를 해당 더블바이트 멀티바이트 문자로 변환합니다. 문자를 변환하려면 0x20 - 0x7E 또는 0xA1 - 0xDF 범위 내에 있어야 합니다.  
+ `_mbbtombc` 함수는 지정된 싱글바이트 멀티바이트 문자를 해당 더블바이트 멀티바이트 문자로 변환합니다. 문자 변환 될 0xDF 0x20-0x7E 또는 0xA1-범위 사이 여야 합니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. 이 버전의 함수는 `_mbbtombc`가 이 로캘 종속 동작의 현재 로캘을 사용하고 `_mbbtombc_l`은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. 이 버전의 함수는 `_mbbtombc`가 이 로캘 종속 동작의 현재 로캘을 사용하고 `_mbbtombc_l`은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이전 버전에서 `_mbbtombc`의 이름은 `hantozen`입니다. 새 코드의 경우 `_mbbtombc`를 사용합니다.  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값  
- 해당 사항 없음. 표준 C 함수를 호출하려면 `PInvoke`를 사용합니다. 자세한 내용은 [플랫폼 호출 예제](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

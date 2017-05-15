@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e5f214501712bd8d6212f465fe82d835ccaf9028
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 37c517bf764e9a9840d549aa9f223ad0942d8c48
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 클래스
@@ -76,30 +77,30 @@ class istream_iterator
   
 |||  
 |-|-|  
-|[istream_iterator](#istream_iterator__istream_iterator)|기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.|  
+|[istream_iterator](#istream_iterator)|기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#istream_iterator__char_type)|`istream_iterator`의 문자 형식을 허용하는 형식입니다.|  
-|[istream_type](#istream_iterator__istream_type)|`istream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
-|[traits_type](#istream_iterator__traits_type)|`istream_iterator`의 특성 형식을 허용하는 형식입니다.|  
+|[char_type](#char_type)|`istream_iterator`의 문자 형식을 허용하는 형식입니다.|  
+|[istream_type](#istream_type)|`istream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
+|[traits_type](#traits_type)|`istream_iterator`의 특성 형식을 허용하는 형식입니다.|  
   
 ### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[operator*](#istream_iterator__operator_star)|역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.|  
-|[operator->](#istream_iterator__operator-_gt_)|멤버의 값을 반환합니다(있는 경우).|  
-|[operator++](#istream_iterator__operator_add_add)|입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|  
+|[operator*](#op_star)|역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.|  
+|[operator->](#operator-_gt)|멤버의 값을 반환합니다(있는 경우).|  
+|[operator++](#op_add_add)|입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<iterator>  
   
  **네임스페이스:** std  
   
-##  <a name="istream_iterator__char_type"></a>  istream_iterator::char_type  
+##  <a name="char_type"></a>  istream_iterator::char_type  
  `istream_iterator`의 문자 형식을 허용하는 형식입니다.  
   
 ```
@@ -145,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_iterator"></a>  istream_iterator::istream_iterator  
+##  <a name="istream_iterator"></a>  istream_iterator::istream_iterator  
  기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.  
   
 ```
@@ -197,7 +198,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_type"></a>  istream_iterator::istream_type  
+##  <a name="istream_type"></a>  istream_iterator::istream_type  
  `istream_iterator`의 스트림 형식을 허용하는 형식입니다.  
   
 ```
@@ -208,9 +209,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  이 형식은 `basic_istream`\< **CharType**, **Traits**>의 동의어입니다.  
   
 ### <a name="example"></a>예제  
-  `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istream_iterator](#istream_iterator__istream_iterator)를 참조하세요.  
+  `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istream_iterator](#istream_iterator)를 참조하세요.  
   
-##  <a name="istream_iterator__operator_star"></a>  istream_iterator::operator*  
+##  <a name="op_star"></a>  istream_iterator::operator*  
  역참조 연산자는 `istream_iterator`에서 주소를 지정한 **Type** 형식의 저장된 개체를 반환합니다.  
   
 ```
@@ -252,7 +253,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt_"></a>  istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt"></a>  istream_iterator::operator-&gt;  
  멤버의 값을 반환합니다(있는 경우).  
   
 ```
@@ -299,7 +300,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator_add_add"></a>  istream_iterator::operator++  
+##  <a name="op_add_add"></a>  istream_iterator::operator++  
  입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.  
   
 ```
@@ -343,7 +344,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__traits_type"></a>  istream_iterator::traits_type  
+##  <a name="traits_type"></a>  istream_iterator::traits_type  
  `istream_iterator`의 특성 형식을 허용하는 형식입니다.  
   
 ```

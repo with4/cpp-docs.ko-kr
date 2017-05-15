@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>설명  
  `<type_traits>`의 클래스 및 템플릿은 컴파일 시간에 형식 유추, 분류 및 변환을 지원하고, 형식 관련 오류를 검색하고, 제네릭 코드 최적화를 지원하는 데 사용됩니다. 이러한 클래스와 템플릿에는 형식 속성을 설명하는 단항 형식 특성, 형식 간의 관계를 설명하는 이진 형식 특성, 그리고 형식 속성을 수정하는 변환 특성이 포함됩니다.  
   
- 형식 특성을 지원하려는 경우 `integral_constant` 도우미 클래스를 정의합니다. 이 클래스는 형식 조건자의 기본 클래스를 구성하는 템플릿 특수화 `true_type` 및 `false_type`을 포함합니다. *형식 조건자*는 형식 인수를 하나 이상 사용하는 템플릿입니다. 형식 조건자가 *true인 경우* 형식은 [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)에서 직접 또는 간접적으로 공개 파생됩니다. 형식 조건자가 *false인 경우* 형식은 [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)에서 직접 또는 간접적으로 공개 파생됩니다.  
+ 형식 특성을 지원하려는 경우 `integral_constant` 도우미 클래스를 정의합니다. 이 클래스는 형식 조건자의 기본 클래스를 구성하는 템플릿 특수화 `true_type` 및 `false_type`을 포함합니다. *형식 조건자*는 형식 인수를 하나 이상 사용하는 템플릿입니다. 형식 조건자가 *true인 경우* 형식은 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 직접 또는 간접적으로 공개 파생됩니다. 형식 조건자가 *false인 경우* 형식은 [false_type](../standard-library/type-traits-typedefs.md#false_type)에서 직접 또는 간접적으로 공개 파생됩니다.  
   
  *형식 한정자* 또는 *변환 특성*은 템플릿 인수를 하나 이상 사용하며 수정된 형식과 동일한 의미인 단일 구성원(`type`)를 포함하는 템플릿입니다.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|형식 및 값에서 정수 계열 상수를 만듭니다.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|값이 true인 정수 상수를 보관합니다.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|값이 false인 정수 상수를 보관합니다.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|값이 true인 정수 상수를 보관합니다.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|값이 false인 정수 상수를 보관합니다.|  
   
  기본 형식 범주  
   
