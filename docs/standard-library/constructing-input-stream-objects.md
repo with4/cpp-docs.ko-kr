@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [입력 문자열 스트림 생성자](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a>입력 파일 스트림 생성자  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a>입력 파일 스트림 생성자  
  입력 파일 스트림을 만드는 방법에는 두 가지가 있습니다.  
   
 -   `void` 인수 생성자를 사용한 다음 `open` 멤버 함수를 호출합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a>입력 문자열 스트림 생성자  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a>입력 문자열 스트림 생성자  
  입력 문자열 스트림 생성자를 사용하려면 미리 할당되고 미리 초기화된 저장소의 주소가 필요합니다.  
   
 ```  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -66,7 +67,7 @@ OLE 컨트롤의 한 기능을 속성 지 속성 (또는 serialization)는 OLE �
   
  또한는 `AfxOleTypeMatchGuid` 간의 일치 여부를 테스트 하려면 전역 함수는 제공 되는 `TYPEDESC` 및 지정 된 GUID입니다.  
   
-##  <a name="a-namepxbloba--pxblob"></a><a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>PX_Blob  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 직렬화 또는 binary large object (BLOB) 데이터를 저장 하는 속성을 초기화 합니다.  
   
 ```  
@@ -111,7 +112,7 @@ hBlobDefault
   
  `PX_Blob` Windows를 사용 하 여 메모리를 할당 합니다 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API를 BLOB 형식 속성을 로드 하는 경우. 이 메모리를 비우는 책임이 있습니다. 따라서 컨트롤의 소멸자를 호출 해야 [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 형식 속성에 대해 해제에 대 한 핸들을 컨트롤에 할당 된 메모리입니다.  
   
-##  <a name="a-namepxboola--pxbool"></a><a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>PX_Bool  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **BOOL**합니다.  
   
 ```  
@@ -154,7 +155,7 @@ bValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은에서 읽거나 쓸에서 참조를 변수에 `bValue`를 적절 하 게 합니다. 경우 `bDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxcolora--pxcolor"></a><a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>PX_Color  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **OLE_COLOR**합니다.  
   
 ```  
@@ -196,7 +197,7 @@ clrDefault);
 ### <a name="remarks"></a>주의  
  속성의 값은에서 읽거나 쓸에서 참조를 변수에 `clrValue`를 적절 하 게 합니다. 경우 `clrDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxcurrencya--pxcurrency"></a><a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>PX_Currency  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **통화**합니다.  
   
 ```  
@@ -239,7 +240,7 @@ cyValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은에서 읽거나 쓸에서 참조를 변수에 `cyValue`를 적절 하 게 합니다. 경우 `cyDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxdatapatha--pxdatapath"></a><a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>PX_DataPath  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 데이터 경로 형식의 속성을 초기화 하는 함수 [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)합니다.  
   
 ```  
@@ -275,7 +276,7 @@ pPX,
 ### <a name="remarks"></a>주의  
  데이터 경로 속성 비동기 컨트롤 속성을 구현합니다. 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `dataPathProperty`를 적절 하 게 합니다.  
   
-##  <a name="a-namepxdoublea--pxdouble"></a><a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>PX_Double  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **이중**합니다.  
   
 ```  
@@ -318,7 +319,7 @@ doubleValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `doubleValue`를 적절 하 게 합니다. 경우 `doubleDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxfonta--pxfont"></a><a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>PX_Font  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 직렬화 또는 글꼴의 속성을 초기화 합니다.  
   
 ```  
@@ -364,7 +365,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나 쓴 `font`, `CFontHolder` 를 적절 한 참조입니다. 경우 `pFontDesc` 및 `pFontDispAmbient` 필요할 때 속성의 기본값을 초기화 하는 데 사용 하는 지정 됩니다. 이러한 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다. 일반적으로 전달 하면 **NULL** 에 대 한 `pFontDesc` 앰비언트 값을 반환 하 고 `COleControl::AmbientFont` 에 대 한 `pFontDispAmbient`합니다. 글꼴 개체에서 반환 하는 참고 `COleControl::AmbientFont` 를 호출 하 여 해제 되어야는 **IFontDisp::Release** 멤버 함수입니다.  
   
-##  <a name="a-namepxfloata--pxfloat"></a><a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>PX_Float  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **float**합니다.  
   
 ```  
@@ -407,7 +408,7 @@ floatValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `floatValue`를 적절 하 게 합니다. 경우 `floatDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxiunknowna--pxiunknown"></a><a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>PX_IUnknown  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 serialize 하거나 개체 함으로써 표시 되는 속성을 초기화 하는 **IUnknown**-파생 인터페이스입니다.  
   
 ```  
@@ -449,7 +450,7 @@ pUnkDefault
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 *펑크*를 적절 하 게 합니다. 경우 `pUnkDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxlonga--pxlong"></a><a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>PX_Long  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **긴**합니다.  
   
 ```  
@@ -492,7 +493,7 @@ lValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `lValue`를 적절 하 게 합니다. 경우 `lDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxpicturea--pxpicture"></a><a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>PX_Picture  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 serialize 하거나 컨트롤의 사진 속성을 초기화 합니다.  
   
 ```  
@@ -535,7 +536,7 @@ pict  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `pict`를 적절 하 게 합니다. 경우 `pictDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxshorta--pxshort"></a><a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>PX_Short  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **짧은**합니다.  
   
 ```  
@@ -578,7 +579,7 @@ sValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `sValue`를 적절 하 게 합니다. 경우 `sDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxulonga--pxulong"></a><a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>PX_ULong  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **ULONG**합니다.  
   
 ```  
@@ -621,7 +622,7 @@ ulValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `ulValue`를 적절 하 게 합니다. 경우 `ulDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxushorta--pxushort"></a><a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>PX_UShort  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 `unsigned` **짧은**합니다.  
   
 ```  
@@ -664,7 +665,7 @@ usValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 *usValue*를 적절 하 게 합니다. 경우 *usDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxstringa--pxstring"></a><a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>PXstring  
  사용자 컨트롤 내에서이 함수를 호출 **DoPropExchange** 멤버 함수를 직렬화 또는 문자 문자열 속성을 초기화 합니다.  
   
 ```  
@@ -707,7 +708,7 @@ strValue  ,
 ### <a name="remarks"></a>주의  
  속성의 값은 읽거나에서 참조 하는 변수를 쓸 `strValue`를 적절 하 게 합니다. 경우 `strDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
   
-##  <a name="a-namepxvbxfontconverta--pxvbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
  사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` VBX 컨트롤의 글꼴 관련 속성을 변환 하 여 글꼴 속성을 초기화 하는 멤버 함수입니다.  
   
 ```  

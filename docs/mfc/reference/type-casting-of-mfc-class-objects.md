@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|캐스팅 법적가 있는지 확인 하는 동안 클래스 개체에 대 한 포인터에 대 한 포인터를 캐스팅 합니다.|  
 |[STATIC_DOWNCAST](#static_downcast)|관련 된 형식의 포인터에 하나의 클래스 개체에 대 한 포인터를 캐스팅합니다. 디버그 빌드를이 인해는 **ASSERT** 개체가 없는 경우는 "일종의" 대상 유형입니다.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  캐스팅 법적가 있는지 확인 하는 동안 클래스 개체에 대 한 포인터에 대 한 포인터를 캐스팅 하는 편리한 방법을 제공 합니다.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  포인터에 의해 참조 되는 개체가 하는 경우는 식별 된 클래스가 "일종의" 매크로 적절 한 포인터를 반환 합니다. 매크로 반환 하는 경우 유효한 캐스트를 없는 **NULL**합니다.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  캐스트 *pobject* 에 대 한 포인터는 *눈여겨 보십시오* 개체입니다.  
   
 ```   

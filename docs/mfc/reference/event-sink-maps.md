@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/24/2017
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|OLE 컨트롤의 집합에서 속성 알림 처리에 대 한 처리기를 정의 합니다.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|컨트롤 컨테이너에 의해 처리 되기 전에 컨트롤에 의해 전송 된 속성 알림을 수신 합니다.|  
   
-##  <a name="a-namebegineventsinkmapa--begineventsinkmap"></a><a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
  이벤트 싱크 맵의 정의 시작합니다.  
   
 ```   
@@ -78,7 +79,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-namedeclareeventsinkmapa--declareeventsinkmap"></a><a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
  OLE 컨테이너는 컨테이너의 통지는 이벤트를 지정 하는 이벤트 싱크 맵을 제공할 수 있습니다.  
   
 ```   
@@ -93,7 +94,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
   
-##  <a name="a-nameendeventsinkmapa--endeventsinkmap"></a><a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
  이벤트 싱크 맵의 정의 종료합니다.  
   
 ```   
@@ -103,7 +104,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-nameoneventa--onevent"></a><a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>ON_EVENT  
  사용 된 `ON_EVENT` 매크로 이벤트에 대 한 이벤트 처리기 함수를 정의 하는 OLE 컨트롤에 의해 발생 합니다.  
   
 ```   
@@ -138,7 +139,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-nameoneventrangea--oneventrange"></a><a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>ON_EVENT_RANGE  
  사용 된 `ON_EVENT_RANGE` 이벤트에 대 한 이벤트 처리기 함수를 정의 하는 매크로 연속 Id 범위 내에서 컨트롤 ID를 가진 모든 OLE 컨트롤에 의해 발생 합니다.  
   
 ```   
@@ -185,7 +186,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-nameoneventreflecta--oneventreflect"></a><a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
  `ON_EVENT_REFLECT` 매크로 사용할 이벤트 싱크 맵 OLE 컨트롤의 래퍼 클래스의 경우 컨트롤은 컨트롤 컨테이너에 의해 처리 되기 전에 발생 하는 이벤트를 수신 합니다.  
   
 ```   
@@ -219,7 +220,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-nameonpropnotifya--onpropnotify"></a><a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
  사용 된 `ON_PROPNOTIFY` OLE 컨트롤의 속성 알림을 처리 하기 위한 이벤트 싱크 맵 항목을 정의 하는 매크로입니다.  
   
 ```   
@@ -252,7 +253,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  목록에 대해서는 **VTS_** 상수 참조 [EVENT_CUSTOM](event-maps.md#event_custom)합니다.  
   
-##  <a name="a-nameonpropnotifyrangea--onpropnotifyrange"></a><a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
  사용 된 `ON_PROPNOTIFY_RANGE` 연속 Id 범위 내에서 컨트롤 ID를 가진 모든 OLE 컨트롤의 속성 알림을 처리 하기 위한 이벤트 싱크 맵 항목을 정의 하는 매크로입니다.  
   
 ```  
@@ -283,7 +284,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="a-nameonpropnotifyreflecta--onpropnotifyreflect"></a><a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
  `ON_PROPNOTIFY_REFLECT` 매크로 사용할 이벤트 싱크 맵 OLE 컨트롤의 래퍼 클래스의 경우 컨트롤은 컨트롤 컨테이너에 의해 처리 되기 전에 보낸 속성 알림을 수신 합니다.  
   
 ```  

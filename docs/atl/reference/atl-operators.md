@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
 ms.openlocfilehash: 87aadf7aacc31ded165a8e1380823cb20e614fb1
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/24/2017
   
  이러한 연산자는 모든 파일 atlsecurity.h에 정의 됩니다.  
   
-##  <a name="a-nameoperatoreqeqa--operator-"></a><a name="operator_eq_eq"></a>연산자 = =  
+##  <a name="operator_eq_eq"></a>연산자 = =  
  비교 `CSid` 개체 또는 `SID` 구조체가 같은지 (보안 식별자)입니다.  
   
 ```   
@@ -68,7 +69,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 개체가 동일 하면 **false** 같지 않은 경우.  
   
-##  <a name="a-nameoperatorneqa--operator-"></a><a name="operator_neq"></a>연산자! =  
+##  <a name="operator_neq"></a>연산자! =  
  비교 `CSid` 개체 또는 `SID` 구조체가 다른 지 (보안 식별자)입니다.  
   
 ```   
@@ -85,7 +86,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 개체가 같지 않으면 **false** 같으면 합니다.  
   
-##  <a name="a-nameoperatorlta--operator-"></a><a name="operator_lt"></a>연산자  
+##  <a name="operator_lt"></a>연산자  
  테스트는 `CSid` 개체 또는 `SID` 연산자의 왼쪽에는 구조는 보다 작은 `CSid` 개체 또는 `SID` 구조 (c + + 표준 라이브러리 호환용) 오른쪽에 있습니다.  
   
 ```   
@@ -105,7 +106,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>주의  
  이 연산자의 주소에 대 한 조치는 `CSid` 개체 또는 `SID` 구조체와 c + + 표준 라이브러리 컬렉션 클래스와의 호환성을 제공 하기 위해 구현 됩니다.  
   
-##  <a name="a-nameoperatorgta--operator-"></a><a name="operator_gt"></a>연산자 >  
+##  <a name="operator_gt"></a>연산자 >  
  테스트는 `CSid` 개체 또는 `SID` 연산자의 좌 변에 구조 보다 크면는 `CSid` 개체 또는 `SID` 구조 (c + + 표준 라이브러리 호환용) 오른쪽에 있습니다.  
   
 ```   
@@ -125,7 +126,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>주의  
  이 연산자의 주소에 대 한 조치는 `CSid` 개체 또는 `SID` 구조체와 c + + 표준 라이브러리 컬렉션 클래스와의 호환성을 제공 하기 위해 구현 됩니다.  
   
-##  <a name="a-nameoperatorlteqa--operator-"></a><a name="operator_lt__eq"></a>연산자<=></=>  
+##  <a name="operator_lt__eq"></a>연산자<=></=>  
  테스트는 `CSid` 개체 또는 `SID` 값 보다 작거나 같음 연산자의 왼쪽에는 구조는는 `CSid` 개체 또는 `SID` 구조 (c + + 표준 라이브러리 호환용) 오른쪽에 있습니다.  
   
 ```   
@@ -145,7 +146,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>주의  
  이 연산자의 주소에 대 한 조치는 `CSid` 개체 또는 `SID` 구조체와 c + + 표준 라이브러리 컬렉션 클래스와의 호환성을 제공 하기 위해 구현 됩니다.  
   
-##  <a name="a-nameoperatorgteqa--operator-"></a><a name="operator_gt__eq"></a>연산자 > =  
+##  <a name="operator_gt__eq"></a>연산자 > =  
  테스트는 `CSid` 개체 또는 `SID` 보다 크거나 같음 연산자의 왼쪽에는 구조는는 `CSid` 개체 또는 `SID` 구조 (c + + 표준 라이브러리 호환용) 오른쪽에 있습니다.  
   
 ```   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
 ms.openlocfilehash: 9b0d7d245ae204fd59715c8142a836adbb63c10a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ class task_options;
   
  **네임스페이스:** 동시성  
   
-##  <a name="a-namegetcancellationtokena--taskoptionsgetcancellationtoken-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options:: get_cancellation_token 메서드 (동시성 런타임)  
+##  <a name="get_cancellation_token"></a>task_options:: get_cancellation_token 메서드 (동시성 런타임)  
  취소 토큰을 반환합니다.  
   
 ```
@@ -83,7 +84,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namegetcontinuationcontexta--taskoptionsgetcontinuationcontext-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options:: get_continuation_context 메서드 (동시성 런타임)  
+##  <a name="get_continuation_context"></a>task_options:: get_continuation_context 메서드 (동시성 런타임)  
  연속 컨텍스트를 반환합니다.  
   
 ```
@@ -92,7 +93,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namegetschedulera--taskoptionsgetscheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options:: get_scheduler 메서드 (동시성 런타임)  
+##  <a name="get_scheduler"></a>task_options:: get_scheduler 메서드 (동시성 런타임)  
  스케줄러를 반환합니다.  
   
 ```
@@ -101,7 +102,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namehascancellationtokena--taskoptionshascancellationtoken-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options:: has_cancellation_token 메서드 (동시성 런타임)  
+##  <a name="has_cancellation_token"></a>task_options:: has_cancellation_token 메서드 (동시성 런타임)  
  사용자가 취소 토큰을 지정했는지 여부를 나타냅니다.  
   
 ```
@@ -110,7 +111,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namehasschedulera--taskoptionshasscheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options:: has_scheduler 메서드 (동시성 런타임)  
+##  <a name="has_scheduler"></a>task_options:: has_scheduler 메서드 (동시성 런타임)  
  사용자가 스케줄러 n을 지정했는지 여부를 나타냅니다.  
   
 ```
@@ -119,7 +120,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="a-namesetcancellationtokena--taskoptionssetcancellationtoken-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options:: set_cancellation_token 메서드 (동시성 런타임)  
+##  <a name="set_cancellation_token"></a>task_options:: set_cancellation_token 메서드 (동시성 런타임)  
  옵션에서 지정된 토큰을 설정합니다.  
   
 ```
@@ -129,7 +130,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>매개 변수  
  `_Token`  
   
-##  <a name="a-namesetcontinuationcontexta--taskoptionssetcontinuationcontext-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options:: set_continuation_context 메서드 (동시성 런타임)  
+##  <a name="set_continuation_context"></a>task_options:: set_continuation_context 메서드 (동시성 런타임)  
  옵션에서 지정된 연속 컨텍스트를 설정합니다.  
   
 ```
@@ -139,7 +140,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 ### <a name="parameters"></a>매개 변수  
  `_ContinuationContext`  
   
-##  <a name="a-namectora--taskoptionstaskoptions-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options:: task_options 생성자 (동시성 런타임)  
+##  <a name="ctor"></a>task_options:: task_options 생성자 (동시성 런타임)  
  작업 생성 옵션의 기본 목록  
   
 ```

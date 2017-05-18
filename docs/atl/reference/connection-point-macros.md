@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: c16b6f2f889745270a51a32a1449add86dec6ecb
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h 
    
-##  <a name="a-namebeginconnectionpointmapa--beginconnectionpointmap"></a><a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
  연결 지점 맵 항목의 시작을 표시 합니다.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&101;](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="a-nameconnectionpointentrya--connectionpointentry-and-connectionpointentryp"></a><a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
  액세스할 수 있도록 연결 지점 맵은에 지정된 된 인터페이스에 대 한 연결 지점을 입력 합니다.  
   
 ```
@@ -94,7 +95,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&120;](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="a-nameendconnectionpointmapa--endconnectionpointmap"></a><a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
  연결 지점 맵 항목의 끝을 표시 합니다.  
   
 ```

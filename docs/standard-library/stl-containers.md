@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/24/2017
   
  컨테이너는 시퀀스 컨테이너, 연관 컨테이너 및 컨테이너 어댑터의 세 가지 범주로 나눌 수 있습니다.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> 시퀀스 컨테이너  
+##  <a name="sequence_containers"></a> 시퀀스 컨테이너  
  시퀀스 컨테이너는 지정된 요소가 삽입된 순서를 유지합니다.  
   
  `vector` 컨테이너는 배열처럼 동작하지만 필요에 따라 자동으로 증가할 수 있습니다. 임의로 액세스되고 지속적으로 저장되며 길이가 매우 유연하게 조정됩니다. 따라서 `vector`는 대부분의 응용 프로그램에 대한 기본 시퀀스 컨테이너입니다. 사용할 시퀀스 컨테이너의 종류에 대해 확실히 모르는 경우 벡터를 사용하여 시작합니다. 자세한 내용은 [vector 클래스](../standard-library/vector-class.md)를 참조하세요.  

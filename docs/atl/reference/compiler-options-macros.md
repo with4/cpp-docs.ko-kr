@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
 ms.openlocfilehash: dbce962873194c1bdcb063537247650cff568e35
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2017
 |[ATL_NOINLINE](#atl_noinline)|인라인 함수를 나타내는 기호 되지 않아야 합니다.|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|단일 스레딩 모델을 사용 하 여 모든 개체를 정의 합니다.|  
   
-##  <a name="a-nameatlallwarningsa--atlallwarnings"></a><a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
  이전 버전의 ATL.에서 변환 된 프로젝트에서 오류를 활성화 하는 기호  
   
 ```
@@ -88,7 +89,7 @@ ms.lasthandoff: 02/24/2017
   
  새 프로젝트를 Visual c + +.NET 2002를 사용 하 여 생성 됩니다 이걸 `#define` stdafx.h에 기본적으로 설정 합니다.  
   
-##  <a name="a-nameatlapartmentthreadeda--atlapartmentthreaded"></a><a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
  하나 이상의 개체 아파트 스레딩을 사용 하는 경우를 정의 합니다.  
   
 ```
@@ -98,7 +99,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>주의  
  아파트 스레딩 지정합니다. 참조 [프로젝트의 스레딩 모델 지정](../../atl/specifying-the-threading-model-for-a-project-atl.md) 다른 옵션, 스레딩 및 [옵션, ATL 단순 개체 마법사](../../atl/reference/options-atl-simple-object-wizard.md) 에 대 한 설명은 스레딩 모델 ATL 개체에 사용할 수 있습니다.  
   
-##  <a name="a-nameatlcstringexplicitconstructorsa--atlcstringexplicitconstructors"></a><a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  어느 `CString` 있는 의도 하지 않은 변환을 방지 명시적 생성자입니다.  
   
 ```
@@ -110,7 +111,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  _T 매크로 모든 생성자 문자열 인수를 사용 하 여 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS를 정의 하 고 _UNICODE 정의 여부에 관계 없이 컴파일 오류를 방지할 수 있습니다.  
   
-##  <a name="a-nameatlenableptmwarninga--atlenableptmwarning"></a><a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
  멤버 함수에 대 한 포인터에 대 한 ANSI c + + 표준 규격 구문을 사용 하도록 하기 위해이 매크로 정의 합니다. 이 매크로 사용 하 여 비표준 구문을 사용 하는 멤버 함수에 대 한 포인터를 초기화 하는 경우 생성 되는 c&4867;이 발생 컴파일러 오류가 발생 합니다.  
   
 ```
@@ -132,7 +133,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Note는 '/' 문자를 추가 하는 맵 매크로 대 한 추가 하면 안 것 다시 코드에 있습니다.  
   
-##  <a name="a-nameatlfreethreadeda--atlfreethreaded"></a><a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
  개체의 하나 이상의 무료 또는 중립 스레딩을 사용 하는 경우를 정의 합니다.  
   
 ```
@@ -142,7 +143,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>주의  
  자유 스레딩 지정합니다. 자유 스레딩 하는 것은 다중 스레드 아파트 모델과 동일 합니다. 참조 [프로젝트의 스레딩 모델 지정](../../atl/specifying-the-threading-model-for-a-project-atl.md) 다른 옵션, 스레딩 및 [옵션, ATL 단순 개체 마법사](../../atl/reference/options-atl-simple-object-wizard.md) 에 대 한 설명은 스레딩 모델 ATL 개체에 사용할 수 있습니다.  
   
-##  <a name="a-nameatlmultithreadeda--atlmultithreaded"></a><a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
  프로젝트를 나타내는 기호가 모두 무료 또는 중립으로 표시 된 개체를 갖습니다.  
   
 ```
@@ -152,7 +153,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>주의  
  이 기호가 정의 된 ATL는 전역 데이터에 대 한 액세스를 동기화 할 올바르게 하는 코드에서 끌어옵니다. 새 코드는 해당 하는 매크로 사용 해야 [_ATL_FREE_THREADED](#_atl_free_threaded) 대신 합니다.  
   
-##  <a name="a-nameatlnoautomaticnamespacea--atlnoautomaticnamespace"></a><a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
  ATL.로 네임 스페이스의 기본 사용을 방지 하는 기호  
   
 ```
@@ -162,7 +163,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>주의  
  이 기호를 정의 하지 않은 경우 atlbase.h를 포함 하 여 수행 합니다 **ATL 네임 스페이스를 사용 하 여** 기본적으로 이름 충돌을 될 수 있습니다. 이 방지 하려면이 기호를 정의 합니다.  
   
-##  <a name="a-nameatlnocomsupporta--atlnocomsupport"></a><a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
  COM 관련 코드 프로젝트를 컴파일할 수 없도록 기호입니다.  
   
 ```

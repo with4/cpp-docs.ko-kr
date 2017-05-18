@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlplus.h  
    
-##  <a name="a-namebeginrdxmapa--beginrdxmap"></a><a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
  레지스트리 데이터 교환 구조의 시작 부분을 표시 합니다.  
   
 ```
@@ -71,14 +72,14 @@ BEGIN_RDX_MAP
   
  전역 함수 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), 또는에서 만든 동일한 이름의 멤버 함수는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` 코드는 시스템 레지스트리와 RDX 맵에 지정 된 변수는 데이터를 교환 해야 할 때마다 매크로 사용 해야 합니다.  
   
-##  <a name="a-nameendrdxmapa--endrdxmap"></a><a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>END_RDX_MAP  
  레지스트리 데이터 교환 맵의 끝을 표시 합니다.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="a-namerdxbinarya--rdxbinary"></a><a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>RDX_BINARY  
  바이트 형식의 지정 된 멤버 변수를 지정 된 레지스트리 항목을 연결합니다.  
   
 ```
@@ -109,7 +110,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>주의  
  이 매크로와 함께 사용 되는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` 멤버 변수는 지정 된 레지스트리 항목에 연결 하는 매크로입니다. 전역 함수 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), 또는에서 만든 동일한 이름의 멤버 함수는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` RDX 맵에서 시스템 레지스트리와 멤버 변수 간의 데이터 교환을 수행 하 매크로 사용 해야 합니다.  
   
-##  <a name="a-namerdxcstringtexta--rdxcstringtext"></a><a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
  CString 형식의 지정 된 멤버 변수를 지정 된 레지스트리 항목을 연결합니다.  
   
 ```
@@ -140,7 +141,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>주의  
  이 매크로와 함께 사용 되는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` 멤버 변수는 지정 된 레지스트리 항목에 연결 하는 매크로입니다. 전역 함수 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), 또는에서 만든 동일한 이름의 멤버 함수는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` RDX 맵에서 시스템 레지스트리와 멤버 변수 간의 데이터 교환을 수행 하 매크로 사용 해야 합니다.  
   
-##  <a name="a-namerdxdworda--rdxdword"></a><a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>RDX_DWORD  
  DWORD 형식의 지정 된 멤버 변수를 지정 된 레지스트리 항목을 연결합니다.  
   
 ```
@@ -171,7 +172,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>주의  
  이 매크로와 함께 사용 되는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` 멤버 변수는 지정 된 레지스트리 항목에 연결 하는 매크로입니다. 전역 함수 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), 또는에서 만든 동일한 이름의 멤버 함수는 `BEGIN_RDX_MAP` 및 `END_RDX_MAP` RDX 맵에서 시스템 레지스트리와 멤버 변수 간의 데이터 교환을 수행 하 매크로 사용 해야 합니다.  
   
-##  <a name="a-namerdxtexta--rdxtext"></a><a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>RDX_TEXT  
  TCHAR 형식의 지정 된 멤버 변수를 지정 된 레지스트리 항목을 연결합니다.  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
    
-##  <a name="a-nameatladvisea--atladvise"></a><a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>AtlAdvise  
  개체의 연결 지점과 클라이언트의 싱크 간에 연결을 만듭니다.  
   
 > [!IMPORTANT]
@@ -88,7 +89,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunadvisea--atlunadvise"></a><a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>AtlUnadvise  
  통해 설정한 연결을 종료 [AtlAdvise](#atladvise)합니다.  
   
 > [!IMPORTANT]
@@ -117,7 +118,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&96;](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="a-nameatladvisesinkmapa--atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  개체의 싱크 이벤트 맵에서 모든 항목을 advise하거나 unadvise하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]

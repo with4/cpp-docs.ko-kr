@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f03ca61c6ab3c550c316b380d34eb5fa4f3b61de
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="a-namedeclareobjectdescriptiona--declareobjectdescription"></a><a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
+##  <a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
  클래스 개체에 대 한 텍스트 설명을 지정할 수 있습니다.  
   
 ```
@@ -71,7 +72,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&123;](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
-##  <a name="a-nameobjectentryautoa--objectentryauto"></a><a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
+##  <a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
  개체 맵의에 ATL 개체를 입력 하 고, 레지스트리를 업데이트 및 개체의 인스턴스를 만듭니다.  
   
 ```
@@ -102,7 +103,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 |클래스 수준 초기화 및 정리|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
-##  <a name="a-nameobjectentrynoncreateableexautoa--objectentrynoncreateableexauto"></a><a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
+##  <a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
  개체를 등록하고 초기화해야 하지만 `CoCreateInstance`를 통해 외부적으로 생성할 수 없도록 지정할 수 있습니다.  
   
 ```

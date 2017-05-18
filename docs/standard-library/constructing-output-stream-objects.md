@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [출력 문자열 스트림 생성자](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a>출력 파일 스트림 생성자  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a>출력 파일 스트림 생성자  
  두 가지 방법 중 하나로 출력 파일 스트림을 생성할 수 있습니다.  
   
 -   기본 생성자를 사용한 다음 `open` 멤버 함수를 호출합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a>출력 문자열 스트림 생성자  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a>출력 문자열 스트림 생성자  
  출력 문자열 스트림을 생성하려면 다음과 같은 방식으로 `ostringstream`을 사용할 수 있습니다.  
   
 ```  

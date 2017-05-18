@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: eea45a3315237c77eff0231d485111cefb8557cc
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="a-namebeginservicemapa--beginservicemap"></a><a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
  서비스 맵의 시작을 표시 합니다.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM&#57;](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="a-nameendservicemapa--endservicemap"></a><a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>END_SERVICE_MAP  
  서비스 맵의 끝을 표시 합니다.  
   
 ```
@@ -79,7 +80,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="a-nameserviceentrya--serviceentry"></a><a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>SERVICE_ENTRY  
  개체에 지정 된 서비스 id를 지원함을 나타냅니다 *SID*합니다.  
   
 ```
@@ -93,7 +94,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="a-nameserviceentrychaina--serviceentrychain"></a><a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
  지시 [IServiceProviderImpl::QueryService](#queryservice) 가 지정한 개체에 대 한 체인을 `punk`합니다.  
   
 ```
@@ -107,7 +108,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
  만듭니다 또는 지정된 된 서비스에 액세스 하 고 서비스에 대 한 지정된 된 인터페이스에 대 한 인터페이스 포인터를 반환 합니다.  
   
 ```
