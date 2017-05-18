@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: fbbed22766f9029456f15c4a554ae91322e6a275
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="a-namebeginpropmapa--beginpropmap"></a><a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
  개체의 속성 매핑이의 시작을 표시 합니다.  
   
 ```
@@ -73,7 +74,7 @@ BEGIN_PROP_MAP(theClass)
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&103;](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="a-namepropdataentrya--propdataentry"></a><a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
  범위 또는 ActiveX 컨트롤의 크기를 나타냅니다.  
   
 ```
@@ -102,7 +103,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing #&132;](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="a-namepropentrytypea--propentrytype"></a><a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
  이 매크로 사용 하 여 개체의 속성에 속성 설명, DISPID, 속성 및 속성 페이지 CLSID를 입력 합니다.  
   
 ```
@@ -130,7 +131,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>예제  
  예를 참조 [BEGIN_PROP_MAP](#begin_prop_map)합니다.  
   
-##  <a name="a-namepropentrytypeexa--propentrytypeex"></a><a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
  유사한 [PROP_ENTRY_TYPE](#prop_entry_type), 개체가 여러 개의 이중 인터페이스를 지 원하는 경우 특정 IID를 지정할 수 있습니다.  
   
 ```
@@ -163,7 +164,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing #&133;](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="a-nameproppagea--proppage"></a><a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>PROP_PAGE  
  이 매크로 사용 하 여 개체의 속성 맵의 속성 페이지 CLSID를 입력 합니다.  
   
 ```
@@ -185,7 +186,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing #&134;](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="a-nameendpropmapa--endpropmap"></a><a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>END_PROP_MAP  
  개체의 속성 매핑이의 끝을 표시 합니다.  
   
 ```

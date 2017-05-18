@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -59,8 +61,3 @@ ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
 1. **연결** 단추를 클릭하여 원격 컴퓨터에 대한 연결을 시도합니다.  연결이 실패하면 변경해야 하는 입력 상자에 빨간색 윤곽선이 표시됩니다.
 
    ![연결 관리자 오류](media/settings_connectionmanagererror.png)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

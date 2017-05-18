@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: f32926b6efd4ffb9c0541c0574a479c13dac01df
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
    
-##  <a name="a-namedeclarewndclassa--declarewndclass"></a><a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
+##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
  새 창 클래스의 이름을 지정할 수 있습니다. 이 매크로 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.  
   
 ```
@@ -81,7 +82,7 @@ DECLARE_WND_CLASS( WndClassName )
   
  ATL에서 창 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [ATL 창 클래스](../../atl/atl-window-classes.md)합니다.  
 
-##  <a name="a-namedeclarewndclass2a--declarewndclass2"></a><a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
+##  <a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
  (Visual Studio 2017) 비슷하지만 DECLARE_WND_CLASS는 /permissive-option으로 컴파일할 때 종속 이름 오류를 방지 하는 추가 매개 변수를 사용 합니다.
   
 ```
@@ -99,7 +100,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 다음은 /permissive-option을 사용 하는 종속 이름을 포함 하기 때문에 DECLARE_WND_CLASS 컴파일 오류가 발생 합니다. DECLARE_WND_CLASS2이이 매크로에 사용 되 고는 /permissive-flag에서 오류가 발생 하지는 클래스 이름을 명시적으로 지정 해야 합니다.
 그렇지 않으면이 매크로 [DECLARE_WND_CLASS](#declare_wnd_class)합니다.
    
-##  <a name="a-namedeclarewndsuperclassa--declarewndsuperclass"></a><a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
+##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
  클래스의 매개 변수를 지정할 수 있습니다. 이 매크로 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.  
   
 ```
@@ -127,7 +128,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
   
  ATL에서 창 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [ATL 창 클래스](../../atl/atl-window-classes.md)합니다.  
   
-##  <a name="a-namedeclarewndclassexa--declarewndclassex"></a><a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
+##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
  새 창 클래스의 기반이 될 기존 창 클래스의 이름을 지정할 수 있습니다. 이 매크로 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.  
   
 ```

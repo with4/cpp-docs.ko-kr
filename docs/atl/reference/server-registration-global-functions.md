@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4ace3bb50d824827071260e3f43cec3cda32742f
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
    
-##  <a name="a-nameatlcommoduleregisterservera--atlcommoduleregisterserver"></a><a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
  이 함수는 개체 맵의 모든 개체를 등록하기 위해 호출됩니다.  
   
 ```
@@ -80,7 +81,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
   
  이 함수를 호출 하 [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)합니다.  
   
-##  <a name="a-nameatlcommoduleunregisterservera--atlcommoduleunregisterserver"></a><a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
  이 함수는 개체 맵의 모든 개체를 등록 취소하기 위해 호출됩니다.  
   
 ```
@@ -108,7 +109,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
   
  이 함수를 호출 하 [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)합니다.  
   
-##  <a name="a-nameatlcommoduleregisterclassobjectsa--atlcommoduleregisterclassobjects"></a><a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
  이 함수는 클래스 개체를 등록하기 위해 호출됩니다.  
   
 ```
@@ -134,7 +135,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>주의  
  이 도우미 함수를 사용 하 여 [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (ATL 7.0에 사용 되지 않음) 및 [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)합니다.  
   
-##  <a name="a-nameatlcommodulerevokeclassobjectsa--atlcommodulerevokeclassobjects"></a><a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
  이 함수는 실행 개체 테이블에서 클래스 팩터리를 제거하기 위해 호출됩니다.  
   
 ```
@@ -151,7 +152,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>주의  
  이 도우미 함수를 사용 하 여 [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (ATL 7.0에 사용 되지 않음) 및 [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)합니다.  
   
-##  <a name="a-nameatlcommodulegetclassobjecta--atlcommodulegetclassobject"></a><a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
  이 함수는 클래스 팩터리를 반환하기 위해 호출됩니다.  
   
 ```

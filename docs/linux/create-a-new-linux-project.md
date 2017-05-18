@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -47,10 +49,5 @@ Visual Studio에서 새 Linux 프로젝트를 만들려면 다음을 수행합�
    | **콘솔 응용 프로그램(Linux)** | Linux 컴퓨터를 대상으로 하는 프로젝트로, 콘솔에 텍스트를 출력하도록 작성한 샘플 코드가 포함되어 있습니다.
    | **빈 프로젝트(Linux)**       | Linux 컴퓨터를 대상으로 하는 프로젝트로, 작성한 샘플 코드가 없습니다.
    | **메이크파일 프로젝트(Linux)**    | Linux 컴퓨터를 대상으로 하는 프로젝트로, 표준 메이크파일 빌드 시스템을 사용하여 빌드됩니다.
-
-
-
-
-<!--HONumber=Feb17_HO4-->
 
 

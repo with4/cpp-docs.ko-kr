@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/24/2017
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|선언 된 `GetTypeLib` (클래스 선언에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|구현 하는 `GetTypeLib` (클래스 구현에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
   
-##  <a name="a-namedeclareoletypeliba--declareoletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
  선언 된 `GetTypeLib` 컨트롤 클래스의 멤버 함수입니다.  
   
 ```   
@@ -68,7 +69,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
 
-##  <a name="a-nameimplementoletypeliba--implementoletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
  컨트롤의 구현 `GetTypeLib` 멤버 함수입니다.  
   
 ```   

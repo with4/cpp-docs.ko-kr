@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
@@ -74,7 +76,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
 3.  [Windows 런타임 구성 요소로 C++ 라이브러리 포팅](#BK_WinRTComponent)  
   
-##  <a name="a-namebkwin32dlla-using-a-win32-dll-in-a-universal-windows-platform-app"></a><a name="BK_Win32DLL"></a> 유니버설 Windows 플랫폼 앱에서 Win32 DLL 사용  
+##  <a name="BK_Win32DLL"></a> 유니버설 Windows 플랫폼 앱에서 Win32 DLL 사용  
  보안과 안정성을 높이기 위해 유니버설 Windows 앱은 제한된 런타임 환경에서 실행되므로 클래식 Windows 데스크톱 응용 프로그램에서 사용하듯이 네이티브 DLL을 사용할 수 없습니다. DLL의 소스 코드가 있는 경우 UWP에서 실행되도록 코드를 이식할 수 있습니다. 먼저 프로젝트를 UWP 프로젝트로 식별하기 위해 몇 가지 프로젝트 설정과 프로젝트 파일 메타데이터를 변경합니다. C++/CX를 사용하도록 설정하는 /ZW 옵션을 사용하여 라이브러리 코드를 컴파일해야 합니다. 특정 API 코드는 해당 환경과 관련된 더 엄격한 제어 때문에 UWP 앱에서 허용되지 않습니다. [Windows 런타임 앱 및 UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)을 참조하세요.  
   
  __declspec(dllexport)를 사용하여 함수를 노출하는 네이티브 DLL이 있는 경우에는 다음 절차가 적용됩니다.  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
     ```  
   
-##  <a name="a-namebkstaticliba-using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a> UWP 앱에서 네이티브 C++ 정적 라이브러리 사용  
+##  <a name="BK_StaticLib"></a> UWP 앱에서 네이티브 C++ 정적 라이브러리 사용  
  UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용할 수 있지만 알아두어야 할 몇 가지 제한 사항이 있습니다. 먼저 이 [항목](https://msdn.microsoft.com/library/hh771041.aspx)에서 C++/CX의 정적 라이브러리에 대한 내용을 읽습니다. UWP 앱에서 정적 라이브러리의 네이티브 코드에 액세스할 수 있지만 이러한 정적 라이브러리에서는 공용 ref 형식을 만들지 않는 것이 좋습니다. /ZW 옵션을 사용하여 정적 라이브러리를 컴파일하는 경우 라이브러리 관리자(실제로는 가장된 링커)는 다음과 같이 경고합니다.  
   
 ```  
@@ -230,7 +232,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      **솔루션 탐색기**의 **참조** 노드에서 참조를 추가하지 마세요. 해당 메커니즘은 Windows 런타임 구성 요소에만 적용됩니다.  
   
-##  <a name="a-namebkwinrtcomponenta-porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a> Windows 런타임 구성 요소로 C++ 라이브러리 포팅  
+##  <a name="BK_WinRTComponent"></a> Windows 런타임 구성 요소로 C++ 라이브러리 포팅  
  UWP 앱의 정적 라이브러리에서 네이티브 API를 사용하려는 경우 네이티브 라이브러리의 소스 코드가 있으면 해당 코드를 Windows 런타임 구성 요소로 이식할 수 있습니다. 이 라이브러리는 더 이상 정적 라이브러리가 아니며 DLL이 됩니다. 모든 C++ UWP 앱에서 이 라이브러리를 사용할 수 있지만, 정적 라이브러리의 경우와 달리 언어에 관계없이 모든 UWP 앱 코드에서 클라이언트가 사용할 수 있는 ref 형식 및 다른 C++/CX 구문을 추가할 수 있습니다. 따라서 C#, Visual Basic 또는 JavaScript에서 이러한 형식에 액세스할 수 있습니다.  기본 절차는 Windows 런타임 구성 요소 프로젝트를 만들고 여기에 정적 라이브러리에 대한 코드를 추가한 다음 표준 C++ 컴파일에서 /ZW 컴파일로 코드를 이동할 때 발생하는 모든 오류를 해결하는 것입니다.  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Windows 런타임 구성 요소로 C++ 라이브러리를 이식하려면  
@@ -257,8 +259,3 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 ## <a name="see-also"></a>참고 항목  
  [유니버설 Windows 플랫폼으로 포팅](../porting/porting-to-the-universal-windows-platform-cpp.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

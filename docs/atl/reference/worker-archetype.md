@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype::Execute
 작업 항목을 처리 하기 위해 호출.  
   
   
@@ -100,7 +101,7 @@ void Execute(
  `pOverlapped`  
  에 대 한 포인터는 [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) 구조를에서 어떤 작업 항목이 대기 중인 큐를 만드는 데 사용 합니다.  
   
-## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype::Initialize
 모든 요청에 전달 되기 전에 작업자 개체를 초기화 하기 위해 호출 `WorkerArchetype::Execute`합니다.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -113,7 +114,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>반환 값  
  반환할 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype::RequestType
 작업자 클래스에 의해 처리 될 수 있는 작업 항목의 형식에 대 한 typedef입니다.  
   
 ```  
@@ -123,7 +124,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>주의  
  이 형식은의 첫 번째 매개 변수로 사용 해야 `WorkerArchetype::Execute` 는 ULONG_PTR에서 캐스팅 될 수 있어야 하 고 있습니다.  
   
-## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype::Terminate
 모든 요청에 전달 된 후 작업자 개체의 초기화를 취소 하기 위해 호출 `WorkerArchetype::Execute`).  
     
 ``` 

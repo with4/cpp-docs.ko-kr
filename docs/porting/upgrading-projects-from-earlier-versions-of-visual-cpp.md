@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
 ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>이전 버전의 Visual C++에서 프로젝트 업그레이드
@@ -63,8 +65,3 @@ ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
  [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 
  [Visual C++ 변경 기록 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)   
  [비표준 동작](../cpp/nonstandard-behavior.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
