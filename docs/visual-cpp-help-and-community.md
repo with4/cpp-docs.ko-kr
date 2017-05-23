@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 도움말 및 커뮤니티
@@ -52,7 +54,7 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |[Windows 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=256534)|C++ 및 기타 언어를 사용하여 [!INCLUDE[win8](build/reference/includes/win8_md.md)]용 앱을 개발하는 방법에 대한 정보를 포함합니다. Windows 개발자 센터의 일부이며, C++ 콘텐츠는 문서 > 언어 참조 노드 아래에 있습니다.|  
   
 ### <a name="online-and-offline-documentation"></a>온라인 및 오프라인 설명서  
- 온라인 Windows 개발자 센터와 MSDN Library의 콘텐츠를 볼 수 있습니다. 이 콘텐츠 자주 업데이트됩니다.  
+ Microsoft 개발자 콘텐츠를 온라인으로 볼 수 있습니다. 이 콘텐츠는 정기적으로 업데이트됩니다. 
   
  또한 콘텐츠를 로컬에서 다운로드하여 오프라인 도움말 뷰어에서 볼 수 있습니다. 오프라인 설명서는 관련 콘텐츠에 대한 도서로 구성되며, 정기적으로 업데이트됩니다. 도서가 제공되면 관심 있는 도서를 다운로드할 수 있습니다. 자세한 내용은 [Microsoft 도움말 뷰어](/visualstudio/ide/microsoft-help-viewer)를 참조하세요.  
   
@@ -64,8 +66,3 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|동영상 인터뷰 및 강의를 포함합니다. Channel 9 홈페이지에서 검색 상자를 사용하여 C++ 콘텐츠 찾을 수 있습니다.|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Visual Studio 및 관련 개발 도구에 대한 기사 및 뉴스를 포함합니다.|  
 |[MSDN 포럼](http://go.microsoft.com/fwlink/p/?LinkId=256538)|질문을 게시하고 Microsoft 및 커뮤니티 전문가로부터 답변을 얻을 수 있는 공식 Microsoft 포럼입니다. 포럼 홈페이지에서 검색 상자를 사용하여 특별히 C++와 관련된 포럼을 찾을 수 있습니다.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

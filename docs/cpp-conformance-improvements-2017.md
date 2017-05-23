@@ -26,15 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9b35cb78e482ad9441939f1d7eae5d214d13ab4f
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
+ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 C++ 규칙 향상
-
+업데이트 버전 15.3의 향상된 기능을 확인하려면 [Visual Studio 업데이트 버전 15.3의 버그 수정](#update_153)을 참조하세요.
 ## <a name="new-language-features"></a>새 언어 기능  
 컴파일러는 일반화된 constexpr을 지원하고 집계에 NSDMI를 사용할 수 있기 때문에 이제 C++14 표준에 추가된 기능을 완벽히 갖췄습니다. 하지만 아직까지 C++11 표준 기능과 C++98 표준 기능이 몇 가지 부족합니다. 컴파일러의 현재 상태를 보여 주는 테이블은 [Visual C++ Language Conformance](visual-cpp-language-conformance.md)(Visual C++ 언어 규칙)를 참조하세요.
 
@@ -278,16 +279,6 @@ static_assert(test2, "PASS2");
 C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 링크가 있으므로 내보낼 수 없습니다. Visual Studio 2015 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. 다음 예제에서는 Visual Studio 2017에서 "오류 C2201: ' const `anonymous namespace'::S1::`vftable'': 가져오거나 내보내려면 외부 링크가 있어야 합니다." 오류를 발생시킵니다.
 
 ```cpp
-namespace
-{
-    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
-}
-```
-
-### <a name="classes-declared-in-anonymous-namespaces"></a>익명 네임스페이스에 선언된 클래스
-C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 링크가 있으므로 내보낼 수 없습니다. Visual Studio 2015 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. 다음 예제에서는 Visual Studio 2017에서 "오류 C2201: ' const `anonymous namespace'::S1::`vftable'': 가져오거나 내보내려면 외부 링크가 있어야 합니다." 오류를 발생시킵니다.
-
-```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
@@ -357,6 +348,241 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
        r2->Value;
 }
 ```
+
+## <a name="update_153"></a> Visual Studio 2017 업데이트 버전 15.3
+### <a name="calls-to-deleted-member-templates"></a>삭제된 멤버 템플릿에 대한 호출
+Visual Studio의 이전 버전에서는 경우에 따라 컴파일러가 런타임에 충돌을 일으킬 수 있는 삭제된 멤버 템플릿에 대한 잘못된 형식의 호출에 관련된 오류를 내보내지 못합니다. 다음 코드는 C2280 “‘int S<int>::f<int>(void)’: 삭제된 함수를 참조하려고 합니다.”를 생성합니다.
+```cpp
+template<typename T> 
+struct S { 
+template<typename U> static int f() = delete; 
+}; 
+ 
+void g() 
+{ 
+decltype(S<int>::f<int>()) i; // this should fail 
+}
+```
+오류를 해결하려면 i를 `int`로 선언합니다.
+
+### <a name="pre-condition-checks-for-type-traits"></a>형식 특성에 대한 전제 조건 검사
+Visual Studio 2017 업데이트 버전 15.3에서는 표준을 더 엄격하게 따르도록 형식 특성에 대한 전제 조건 검사가 향상됩니다. 해당 검사는 할당 가능합니다. 다음 코드는 업데이트 버전 15.3에서 C2139를 생성합니다.
+
+```cpp
+struct S; 
+enum E; 
+ 
+static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
+static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+```
+
+### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>네이티브에서 관리로의 마샬링에 대한 새로운 컴파일러 경고 및 런타임 검사
+관리되는 함수에서 네이티브 함수로 호출하려면 마샬링이 필요합니다. CLR는 마샬링을 수행하지만 C++ 의미 체계를 이해하지 못합니다. 네이티브 개체를 값으로 전달하면 CLR는 개체의 복사 생성자를 호출하거나 런타임에 정의되지 않은 동작을 생성할 수 있는 BitBlt를 사용합니다. 
+ 
+이제 컴파일러는 컴파일 시간에 삭제된 복사 ctor를 포함하는 네이티브 개체가 네이티브 경계와 관리되는 경계 사이에 값으로 전달됨을 알 수 있는 경우 경고를 내보냅니다. 컴파일러가 컴파일 시간에 알 수 없는 경우 컴파일러는 잘못된 형식의 마샬링이 수행될 때 프로그램이 즉시 std::terminate를 호출하도록 런타임 검사를 삽입합니다. 업데이트 버전 15.3에서 다음 코드는 C4606을 생성합니다. “ ‘A’: 네이티브 및 관리 경계에서 인수를 값별로 전달하려면 유효한 복사 생성자가 필요합니다. 이 생성자가 없으면 런타임 동작이 정의되지 않습니다.”
+```cpp
+class A 
+{ 
+public: 
+A() : p_(new int) {} 
+~A() { delete p_; } 
+ 
+A(A const &) = delete; 
+A(A &&rhs) { 
+p_ = rhs.p_; 
+} 
+ 
+private: 
+int *p_; 
+}; 
+ 
+#pragma unmanaged 
+ 
+void f(A a) 
+{ 
+} 
+ 
+#pragma managed 
+ 
+int main() 
+{ 
+    f(A()); // This call from managed to native requires marshalling. The CLR doesn't understand C++ and uses BitBlt, which will result in a double-free later. 
+}
+```
+오류를 해결하려면 `#pragma managed` 지시문을 제거하여 호출자를 네이티브로 표시하고 마샬링을 피합니다. 
+
+### <a name="experimental-api-warning-for-winrt"></a>WinRT에 대한 실험적 API 경고
+실험 및 피드백용으로 릴리스된 WinRT API는 `Windows.Foundation.Metadata.ExperimentalAttribute`로 데코레이트됩니다. 업데이트 버전 15.3에서 컴파일러는 특성을 발견할 경우 경고 C4698을 생성합니다. 이전 Windows SDK 버전의 몇몇 API는 이미 특성으로 데코레이트되었고 이러한 API를 호출하면 이 컴파일러 경고의 트리거가 시작됩니다. 최신 Windows SDK에서는 모든 제공된 형식에서 특성이 제거되지만 이전 SDK를 사용 중인 경우에는 모든 제공된 형식 호출에 대해 이러한 경고를 표시하지 않아야 합니다.
+다음 코드는 경고 C4698을 생성합니다. “‘Windows::Storage::IApplicationDataStatics2::GetForUserAsync’는 평가 목적으로만 제공되며 향후 업데이트에서 변경되거나 제거될 수 있습니다.”
+```cpp
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+```
+
+이 경고를 사용하지 않도록 설정하려면 #pragma를 추가합니다.
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable:4698) 
+ 
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() 
+ 
+#pragma warning(pop)
+```
+### <a name="out-of-line-definition-of-a-template-member-function"></a>템플릿 멤버 함수의 확장 정의 
+업데이트 버전 15.3에서는 클래스에서 선언되지 않은 템플릿 멤버 함수의 확장 정의를 발견할 경우 오류를 생성합니다. 다음 코드는 오류 C2039를 생성합니다. ‘f’:이 ‘S’의 멤버가 아닙니다.
+
+```cpp
+struct S {}; 
+ 
+template <typename T> 
+void S::f(T t) {}
+```
+
+오류를 해결하려면 클래스에 선언을 추가합니다.
+
+```cpp
+struct S { 
+    template <typename T> 
+    void f(T t); 
+}; 
+template <typename T> 
+void S::f(T t) {}
+```
+
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>“this” 포인터의 주소를 가져오려고 합니다.
+C++에서 ‘this’는 X에 대한 형식 포인터의 prvalue입니다. ‘this’의 주소를 가져오거나 lvalue 참조에 바인딩할 수 없습니다. 이전 버전의 Visual Studio에서는 컴파일러를 통해 캐스트를 수행하여 이 제한 사항을 회피할 수 있습니다. 업데이트 버전 15.3에서 컴파일러는 오류 C2664를 생성합니다.
+
+### <a name="conversion-to-an-inaccessible-base-class"></a>액세스할 수 없는 기본 클래스로의 변환
+업데이트 버전 15.3에서는 형식을 액세스할 수 없는 기본 클래스로 변환하려고 할 때 오류를 생성합니다. 이제 컴파일러는  
+“오류 C2243: ‘type cast’: ‘D *’에서 ‘B *’로의 변환이 있지만 액세스할 수 없습니다.”를 발생시킵니다. 다음 코드는 형식이 잘못되었고 런타임에 충돌을 일으킬 수 있습니다. 이제 컴파일러는 다음과 같은 코드를 발견할 때 C2243을 생성합니다.
+
+```cpp
+#include <memory> 
+ 
+class B { }; 
+class D : B { }; // should be public B { }; 
+ 
+void f() 
+{ 
+   std::unique_ptr<B>(new D()); 
+}
+```
+### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>기본 인수는 멤버 함수의 확장 정의에서 허용되지 않음
+기본 인수는 템플릿 클래스에 있는 멤버 함수의 확장 정의에서 허용되지 않습니다.  컴파일러는 /permissive에서는 경고를 생성하고 /permissive-에서는 하드 오류를 생성합니다. 이전 버전의 Visual Studio에서는 다음 잘못된 형식의 코드가 런타임 충돌을 일으킬 수 있습니다. 업데이트 버전 15.3에서는 경고 C5034를 생성합니다. ‘A<T>::f’: 클래스 템플릿 멤버의 확장 정의에는 기본 인수가 포함될 수 없습니다.
+```cpp
+ 
+template <typename T> 
+struct A { 
+    T f(T t, bool b = false); 
+}; 
+ 
+template <typename T> 
+T A<T>::f(T t, bool b = false) 
+{ 
+... 
+}
+```
+오류를 해결하려면 “= false” 기본 인수를 제거합니다. 
+
+### <a name="use-of-offsetof-with-compound-member-designator"></a>복합 멤버 지정자와 함께 offsetof 사용
+업데이트 버전 15.3에서 m이 “복합 멤버 지정자”인 offsetof(T, m)를 사용하면 /Wall 옵션으로 컴파일할 때 경고가 발생합니다. 다음 코드는 형식이 잘못되었고 런타임에 충돌을 일으킬 수 있습니다. 업데이트 버전 15.3에서는 “경고 C4841: 비표준 확장이 사용됨: offseto의 복합 멤버 지정자”를 생성합니다.
+
+```cpp
+  
+struct A { 
+int arr[10]; 
+}; 
+ 
+// warning C4841: non-standard extension used: compound member designator in offsetof 
+constexpr auto off = offsetof(A, arr[2]);
+```
+코드를 수정하려면 pragma를 사용하여 경고를 사용하지 않도록 설정하거나 offsetof를 사용하지 않도록 코드를 변경합니다. 
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable: 4841) 
+constexpr auto off = offsetof(A, arr[2]); 
+#pragma warning(pop) 
+```
+
+### <a name="using-offsetof-with-static-data-member-or-member-function"></a>정적 데이터 멤버 또는 멤버 함수와 함께 offsetof 사용
+업데이트 버전 15.3에서 m이 정적 데이터 멤버 또는 멤버 함수를 참조하는 offsetof(T, m)를 사용하면 오류가 발생합니다. 다음 코드는 “오류 C4597: 정의되지 않은 동작: offsetof가 멤버 함수 ‘foo’에 적용되었습니다.” 및 “오류 C4597: 정의되지 않은 동작: offsetof가 정적 데이터 멤버 ‘bar’에 적용되었습니다.”를 생성합니다.
+```cpp
+ 
+#include <cstddef> 
+ 
+struct A { 
+int foo() { return 10; } 
+static constexpr int bar = 0; 
+}; 
+ 
+constexpr auto off = offsetof(A, foo); 
+Constexpr auto off2 = offsetof(A, bar);
+```
+ 
+이 코드는 형식이 잘못되었고 런타임에 충돌을 일으킬 수 있습니다. 오류를 해결하려면 정의되지 않은 동작을 더 이상 호출하지 않도록 코드를 변경합니다. 이는 C++ 표준에서 허용되지 않는 이식할 수 없는 코드입니다.
+
+### <a name="new-warning-on-declspec-attributes"></a>declspec 특성에 대한 새로운 경고
+업데이트 버전 15.3에서 컴파일러는 __declspec(…)가 extern “C” 링크 사양 앞에 적용될 경우 더 이상 특성을 무시하지 않습니다. 이전 버전에서는 컴파일러가 런타임 의미를 가질 수 있는 특성을 무시합니다. `/Wall /WX` 옵션이 설정되면 다음 코드는 “경고 C4768: 링크 사양 앞의 __declspec 특성은 무시됩니다.”를 생성합니다.
+
+```cpp
+ 
+__declspec(noinline) extern "C" HRESULT __stdcall
+```
+
+경고를 해결하려면 extern “C”를 먼저 삽입합니다.
+
+```cpp
+extern "C" __declspec(noinline) HRESULT __stdcall
+```
+
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 및 삭제된 소멸자 호출
+이전 버전의 Visual Studio에서 컴파일러는 삭제된 소멸자 호출이 ‘decltype’과 연결된 식의 컨텍스트에서 발생한 시점을 검색하지 않았습니다. 업데이트 버전 15.3에서 다음 코드는 “오류 C2280: ‘A<T>::~A(void)’: 삭제된 함수를 참조하려고 합니다.”를 생성합니다.
+
+```cpp
+template<typename T> 
+struct A 
+{ 
+   ~A() = delete; 
+}; 
+ 
+template<typename T> 
+auto f() -> A<T>; 
+ 
+template<typename T> 
+auto g(T) -> decltype((f<T>())); 
+ 
+void h() 
+{ 
+   g(42); 
+}
+```
+### <a name="unitialized-const-variables"></a>초기화되지 않은 const 변수
+Visual Studio 2017 RTW 릴리스에는 ‘const’ 변수가 초기화되지 않으면 C++ 컴파일러가 진단을 실행하지 않는 재발 문제가 있었습니다. 이 재발 문제는 Visual Studio 2017 업데이트 1에서 해결되었습니다. 다음 코드는 “경고 C4132: ‘Value’: const 개체를 초기화해야 합니다.”를 생성합니다.
+
+```cpp
+const int Value;
+```
+오류를 해결하려면 `Value`에 값을 할당합니다.
+
+### <a name="empty-declarations"></a>빈 선언
+이제 Visual Studio 2017 업데이트 버전 15.3에서는 기본 제공 형식만이 아닌 모든 형식의 빈 선언에 대해 경고를 생성합니다. 다음 코드는 모든 네 가지 선언에 대한 수준 2 C4091 경고를 생성합니다.
+
+```cpp
+struct A {};
+template <typename> struct B {};
+enum C { c1, c2, c3 };
+ 
+int;    // warning C4091 : '' : ignored on left of 'int' when no variable is declared
+A;      // warning C4091 : '' : ignored on left of 'main::A' when no variable is declared
+B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is declared
+C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
+```
+
+경고를 제거하려면 빈 선언을 주석으로 처리하거나 제거합니다.  명명되지 않은 개체에 부작용(예: RAII)을 포함하려면 개체에 이름을 지정해야 합니다.
+ 
+경고는 /Wv:18에서는 제외되고 기본적으로 경고 수준 W2에서 켜집니다.
+
 
 ## <a name="see-also"></a>참고 항목  
 [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
-ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
+ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
@@ -317,7 +318,7 @@ ms.lasthandoff: 04/05/2017
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **launch::any 및 launch::sync 정책** The nonstandard launch::any 및 launch::sync 정책 were removed. 대신에 launch::any의 경우 launch:async &#124; launch:deferred를 사용합니다. launch::sync의 경우 launch::deferred를 사용합니다. [launch 열거형](../standard-library/future-enums.md#launch_enumeration)을 참조하세요.  
+-   **launch::any 및 launch::sync 정책** The nonstandard launch::any 및 launch::sync 정책 were removed. 대신에 launch::any의 경우 launch:async &#124; launch:deferred를 사용합니다. launch::sync의 경우 launch::deferred를 사용합니다. [launch 열거형](../standard-library/future-enums.md#launch)을 참조하세요.  
   
 ####  <a name="BK_MFC"></a> MFC 및 ATL  
   
@@ -864,6 +865,752 @@ ms.lasthandoff: 04/05/2017
 -   **복사 생성자**  
   
      [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
+
+<!--From here to VS_Update1 added 04/21/2017-->
+
+-   **extern “C”로 선언된 main에는 이제 반환 형식이 필요합니다.**  
+
+다음 코드는 C4430을 생성합니다. 
+```cpp
+extern "C" __cdecl main(){} // C4430
+```
+오류를 해결하려면 반환 형식을 추가합니다.
+```cpp
+extern "C" int __cdecl main(){} // OK
+```
+
+ -   **typename이 멤버 이니셜라이저에서 허용되지 않음**  
+
+다음 코드는 C2059를 생성합니다.
+ ```cpp
+template<typename T>
+struct S1 : public T::type
+{
+    S1() : typename T::type() // C2059
+    {
+    }
+};
+
+struct S2 {
+    typedef S2 type;
+};
+
+S1<S2> s;
+```
+오류를 해결하려면 이니셜라이저에서 `typename`을 제거합니다.
+```cpp
+S1() : T::type() // OK
+...
+```
+
+-   **명시적 특수화의 저장소 클래스가 무시됩니다.** 
+
+다음 코드에서 정적 저장소 클래스 지정자가 무시됩니다. 
+```cpp
+template <typename T>
+void myfunc(T h)
+{
+}
+
+template<>
+static void myfunc(double h) // static is ignored
+{
+}
+
+```
+
+-   **클래스 템플릿 내부 static_assert에서 사용되는 상수가 항상 실패합니다.**  
+
+다음 코드를 사용하면 static_assert가 항상 실패합니다.
+```cpp
+template <size_t some_value>
+struct S1
+{
+    static_assert(false, "default not valid"); // always invoked
+
+};
+
+//other partial specializations here
+```
+
+이 문제를 해결하려면 값을 구조체로 래핑합니다.
+```cpp
+template <size_t some_value>
+struct constant_false {
+    static const bool value = false;
+};
+
+template <size_t some_value>
+struct S1
+{
+    static_assert(constant_false<some_value>::value, "default not valid");
+};
+
+//other partial specializations here
+```
+
+-   **정방향 선언에 적용된 규칙. (C에만 적용됨)**  
+
+다음 코드는 C2065를 생성합니다.
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
+```
+
+문제를 해결하려면 적절한 정방향 선언을 추가합니다.
+
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+// forward declarations:
+typedef struct token_s TOKEN; 
+typedef TOKEN *PTOKEN;
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
+```
+
+-   **함수 포인터 형식의 더 일관된 적용**  
+
+다음 코드는 C2197을 생성합니다.
+
+```cpp
+typedef int(*F1)(int);
+typedef int(*F2)(int, int);
+
+void func(F1 f, int v1, int v2)
+{
+    f(v1, v2); // C2197
+}
+```
+
+-   **오버로드된 함수에 대한 모호한 호출**  
+
+다음 코드는 C266을 생성합니다. ‘N::bind’: 오버로드된 함수에 대한 모호한 호출
+```cpp 
+template<typename R, typename T, typename T1, typename A1>
+void bind(R(T::*)(T1), A1&&);
+
+namespace N
+{
+    template <typename T, typename R, typename ... Tx>
+    void bind(R(T::*)(Tx...), T* ptr);
+}
+
+using namespace N;
+
+class Manager
+{
+public:
+    void func(bool initializing);
+
+    void mf()
+    {
+        bind(&Manager::func, this); //C2668
+    }
+};
+```
+
+오류를 해결하려면 bind: N::bind(...)에 대한 호출을 정규화합니다. 하지만 이 변경이 선언되지 않은 식별자를 통한 매니페스트인 경우에는(C2065) ‘using’ 선언을 사용하여 이 오류를 해결하는 것이 좋습니다.
+
+이 패턴은 ComPtr 및 Microsoft::WRL 네임스페이스의 기타 형식에서 자주 발생합니다.
+
+-   **잘못된 주소 수정**  
+
+다음 코드는 C2440을 생성합니다. ‘=’: ‘type *’에서 ‘type’으로 변환할 수 없습니다. 오류를 해결하려면 &(type)를 (type)로 변경하고 (&f())를 (f())로 변경합니다.
+ 
+```cpp
+\\ C
+typedef void (*type)(void);
+ 
+void f(int i, type p);
+void g(int);
+void h(void)
+{
+    f(0, &(type)g);
+}
+ 
+\\ C++
+typedef void(*type)(void);
+ 
+type f();
+ 
+void g(type);
+ 
+void h()
+{
+    g(&f());
+}
+
+```
+
+-   **문자열 리터럴이 상수 배열임**  
+
+다음 코드는 C2664를 생성합니다. ‘void f(void *)’: 인수 1을 ‘const char (*)[2]’에서 ‘void *’로 변환할 수 없습니다.
+```cpp
+void f(void *);
+ 
+void h(void)
+{
+    f(&__FUNCTION__); 
+    void *p = &"";
+}
+```
+
+오류를 해결하려면 함수 매개 변수 형식을 ‘const void*’로 변경하거나 h의 본문을 다음과 같이 변경합니다.
+
+```cpp
+void h(void)
+{
+    char name[] = __FUNCTION__;
+    f( name); 
+    void *p = &"";
+}
+
+```
+
+-   **C++11 UDL 문자열**  
+
+다음 코드는 오류 C3688을 생성합니다. 잘못된 리터럴 접미사 ‘L’; 리터럴 연산자 또는 리터럴 연산자 템플릿 ‘operator ""L’을 찾을 수 없습니다.
+
+
+```cpp
+#define MACRO
+
+#define STRCAT(x, y) x\#\#y
+
+int main(){
+
+    auto *val1 = L"string"MACRO;
+    auto *val2 = L"hello "L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+```
+오류를 해결하려면 코드를 다음으로 변경합니다.
+
+```cpp
+#define MACRO
+
+// Remove ##. Strings are automatically
+// concatenated so they are not needed
+#define STRCAT(x, y) x y
+
+int main(){
+    //Add space after closing quote
+    auto *val1 = L"string" MACRO;
+    auto *val2 = L"hello " L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+
+```
+위의 예제에서 `MACRO`는 더 이상 두 개의 토큰으로 구문 분석되지 않습니다(문자열 뒤에 매크로가 나옴).  이제 단일 토큰 UDL로 구문 분석됩니다.  L""L""에도 동일하게 적용됩니다. 이전에는 L"" 및 L""로 구문 분석되었고 지금은 L""L 및 ""로 구문 분석됩니다.
+
+문자열 연결 규칙도 L“a” “b”가 L“ab”와 같음을 의미하는 표준 준수에 추가되었습니다. 이전 버전의 Visual Studio에서는 문자 너비가 다른 문자열의 연결을 허용하지 않았습니다.
+
+
+-   **C++11 빈 문자가 제거됨**  
+
+다음 코드는 오류 C2137을 생성합니다. 빈 문자 상수
+
+```cpp
+bool check(wchar_t c){
+    return c == L''; //implicit null character
+}
+```
+
+오류를 해결하려면 코드를 다음으로 변경합니다.
+
+```cpp
+bool check(wchar_t c){
+    return c == L'\0';
+}
+```
+
+-   **MFC 예외는 복사할 수 없으므로 값으로 catch할 수 없음**  
+
+이제 MFC 응용 프로그램의 다음 코드는 오류 C2316을 발생시킵니다. ‘D’: 소멸자 및(또는) 복사 생성자가 액세스할 수 없는 상태이거나 삭제되었으므로 catch될 수 없습니다.
+
+```cpp
+struct B {
+public:
+    B();
+private:
+    B(const B &);
+};
+
+struct D : public B {
+};
+
+int main()
+{
+    try
+    {
+    }
+    catch (D) // C2316
+    {
+    }
+}
+
+```
+코드를 수정하려면 catch 블록을 ‘catch (const D &)’로 변경할 수 있지만 대개 MFC TRY/CATCH 매크로를 사용하는 것이 더 좋은 해결 방법입니다.
+
+-   **이제 alignof가 키워드임**  
+
+다음 코드는 오류 C2332를 생성합니다. ‘class’: 태그 이름이 누락되었습니다. 코드를 수정하려면 클래스 이름을 바꿔야 합니다. 그러지 않으면 클래스가 alignof와 같은 작업을 수행할 경우 클래스를 새 키워드로 바꾸면 됩니다.
+```cpp
+class alignof{}
+```
+
+-   **이제 constexpr이 키워드임**  
+
+다음 코드는 이제 오류 C2059를 생성합니다. 구문 오류: ‘)’. 코드를 수정하려면 “constexpr”이라는 함수 또는 변수 이름을 바꿔야 합니다. 
+```cpp
+int constexpr() {return 1;}
+```
+
+-   **이동 가능한 형식은 const일 수 없음**  
+
+함수가 이동하지 않으려는 형식을 반환하면 반환 형식은 const이면 안 됩니다.
+
+-   **삭제된 복사 생성자**  
+
+다음 코드는 C2280을 반환합니다. ‘S::S(S &&)’: 삭제된 함수를 참조하려고 합니다.
+
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = S(2, 3); //C2280
+```
+오류를 해결하려면 S2에 대한 직접 초기화를 사용합니다.
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = {2,3}; //OK
+```
+
+-   **람다 캡처가 없을 경우에만 생성되는 함수 포인터로의 변환**  
+
+다음 코드는 Visual Studio 2015에서 C2664를 생성합니다. 
+
+```cpp
+void func(int(*)(int)) {}
+
+int main() {
+
+    func([=](int val) { return val; });
+}
+```
+오류를 해결하려면 캡처 목록에서 `=`을 제거합니다.
+
+-   **변환 연산자가 포함된 모호한 호출**  
+
+다음 코드는 오류 C2440을 생성합니다. ‘type cast’: ‘S2’에서 ‘S1’으로 변환할 수 없습니다.
+
+```cpp 
+struct S1 {
+    S1(int);
+};
+
+struct S2 {
+    operator S1();
+    operator int();
+};
+
+void f(S2 s2)
+{
+
+    (S1)s2;
+
+}
+```
+오류를 해결하려면 변환 연산자를 명시적으로 호출합니다.
+
+```cpp
+void f(S2 s2)
+{
+    //Explicitly call the conversion operator
+    s2.operator S1();
+    // Or
+    S1((int)s2);
+}
+
+```
+
+다음 코드는 오류 C2593을 생성합니다. ‘operator =’이 모호합니다.
+
+```cpp
+struct S1 {};
+
+struct S2 {
+    operator S1&();
+    operator S1() const;
+};
+
+void f(S1 *p, S2 s)
+{
+    *p = s;
+}
+```
+오류를 해결하려면 변환 연산자를 명시적으로 호출합니다.
+```cpp
+void f(S1 *p, S2 s)
+{
+       *p = s.operator S1&();
+}
+```
+
+-   **NSDMI(비정적 데이터 멤버 초기화)에서 잘못된 복사 초기화 수정**  
+
+다음 코드는 오류 C2664를 생성합니다. ‘S1::S1(S1 &&)’: 인수 1을 ‘bool’에서 ‘const S1 &’로 변환할 수 없습니다.
+```cpp
+struct S1 {
+    explicit S1(bool);
+};
+
+struct S2 {
+    S1 s2 = true; // error
+};
+```
+오류를 해결하려면 직접 초기화를 사용합니다.
+```cpp
+struct S2 {
+S1 s1{true}; // OK
+};
+```
+
+-   **decltype 문의 내부에서 생성자 액세스**  
+
+다음 코드는 C2248을 생성합니다. ‘S::S’: 클래스 ‘S’에서 선언된 전용 멤버에 액세스할 수 없습니다.
+```cpp
+class S {
+    S();
+public:
+    int i;
+};
+
+class S2 {
+    auto f() -> decltype(S().i);
+};
+```
+오류를 해결하려면 S2에 대한 friend 선언을 S에 추가합니다.
+```cpp
+class S {
+    S();
+    friend class S2; // Make S2 a friend
+public:
+    int i;
+};
+```
+
+-   **람다의 기본 ctor가 암시적으로 삭제됨**  
+
+다음 코드는 오류 C3497을 생성합니다. 람다의 인스턴스를 생성할 수 없습니다.
+```cpp
+void func(){
+    auto lambda = [](){};    
+ 
+    decltype(lambda) other;
+}
+```
+오류를 해결하려면 기본 생성자를 호출할 필요성을 제거합니다. 람다가 아무것도 캡처하지 않으면 함수 포인터로 캐스트될 수 있습니다.
+
+-   **삭제된 대입 연산자가 있는 람다**  
+
+다음 코드는 오류 C2280을 생성합니다.
+
+```cpp
+#include <memory>
+#include <type_traits>
+
+template <typename T, typename D>
+std::unique_ptr<T, typename std::remove_reference<D &&>::type> wrap_unique(T *p, D &&d);
+
+void f(int i)
+{
+    auto encodedMsg = wrap_unique<unsigned char>(nullptr, [i](unsigned char *p) {
+    });
+    encodedMsg = std::move(encodedMsg);
+}
+```
+오류를 해결하려면 람다를 functor 클래스로 바꾸거나 대입 연산자를 사용할 필요성을 제거합니다.
+
+-   **삭제된 복사 생성자가 포함된 개체를 이동하려고 함**  
+
+다음 코드는 오류 C2280을 생성합니다. ‘moveable::moveable(const moveable &)’: 삭제된 함수를 참조하려고 합니다.
+```cpp
+struct moveable {
+
+    moveable() = default;
+    moveable(moveable&&) = default;
+    moveable(const moveable&) = delete;
+};
+
+struct S {
+    S(moveable && m) :
+        m_m(m)//copy constructor deleted
+    {}
+    moveable m_m;
+};
+
+```
+오류를 해결하려면 std::move를 사용합니다.
+```cpp
+S(moveable && m) :
+    m_m(std::move(m))
+```
+-   **로컬 클래스가 나중에 같은 함수에서 정의된 다른 로컬 클래스를 참조할 수 없음**  
+
+다음 코드는 오류 C2079를 생성합니다. ‘s’가 정의되지 않은 구조체 ‘main::S2’를 사용합니다.
+```cpp
+int main()
+{
+    struct S2;
+    struct S1 {
+        void f() {
+            S2 s;
+        }
+    };
+    struct S2 {};
+}
+```
+오류를 해결하려면 S2의 정의를 위로 이동합니다.
+```cpp
+int main()
+{
+    struct S2 { //moved up
+    };
+ 
+struct S1 {
+    void f() {
+        S2 s;
+        }
+    };
+}
+```
+
+-   **파생된 ctor의 본문에서 보호된 기본 ctor를 호출할 수 없습니다.**  
+
+다음 코드는 오류 C2248을 생성합니다. ‘S1::S1’: 클래스 ‘S1’에서 선언된 보호된 멤버에 액세스할 수 없습니다.
+```cpp
+struct S1 {
+protected:
+    S1();
+};
+
+struct S2 : public S1 {
+    S2() {
+        S1();
+    }
+};
+```
+오류를 해결하려면 S2에서 S1() 호출을 생성자에서 제거하고 필요한 경우 다른 함수에 삽입합니다.
+
+-   **{}는 포인터로의 변환을 방지함**  
+
+다음 코드는 C2439를 생성합니다. ‘S::p’: 멤버를 초기화할 수 없습니다.    
+```cpp
+struct S {
+    S() : p({ 0 }) {}
+    void *p;
+};
+```
+오류를 해결하려면 0을 둘러싼 중괄호를 제거하거나 이 예제에 표시된 대로 `nullptr`를 사용합니다.
+```cpp
+struct S {
+    S() : p(nullptr) {}
+    void *p;
+};
+```
+
+-   **괄호가 있는 잘못된 매크로 정의 및 사용**  
+
+다음 예제는 오류 C2008을 생성합니다. ‘;’: 매크로 정의에 사용할 수 없습니다.
+```cpp
+#define A; //cause of error
+
+struct S {
+    A(); // error
+};
+```
+문제를 해결하려면 맨 위 줄을 `#define A();`로 변경합니다.
+
+다음 코드는 오류 C2059를 생성합니다. 구문 오류: ‘)’.
+```cpp
+
+//notice the space after 'A'
+#define A () ;
+
+struct S {
+    A();
+};
+```
+코드를 수정하려면 A와 () 사이에서 공백을 제거합니다.
+
+다음 코드는 오류 C2091을 생성합니다. 함수가 함수를 반환합니다.
+
+```cpp
+
+#define DECLARE void f()
+
+struct S {
+    DECLARE();
+};
+```
+오류를 해결하려면 S에서 DECLARE 뒤의 괄호를 제거합니다. `DECLARE;`.
+
+다음 코드는 오류 C2062를 생성합니다. 형식 ‘int’를 사용할 수 없습니다.
+
+```cpp
+#define A (int)
+
+struct S {
+    A a;
+};
+```
+문제를 해결하려면 다음과 같이 A를 정의합니다.
+```cpp
+#define A int
+```
+
+-   **선언의 추가 괄호**  
+
+다음 코드는 오류 C2062를 생성합니다. 형식 ‘int’를 사용할 수 없습니다.
+```cpp
+
+struct S {
+    int i;
+    (int)j;
+};
+```
+오류를 해결하려면 `j`에서 괄호를 제거합니다. 쉽게 구별할 수 있도록 괄호가 필요하면 typedef를 사용합니다.
+
+-   **컴파일러에서 생성되는 생성자 및 __declspec(novtable)**  
+
+Visual Studio 2015에서는 가상 기본 클래스가 포함된 추상 클래스의 인라인 컴파일러에서 생성된 생성자가 __declspec(dllimport)과 함께 사용될 경우 부적절한 __declspec(novtable) 사용을 노출할 가능성이 큽니다.
+
+-   **auto에 direct-list-initialization의 단일 식이 필요함** 다음 코드는 오류 C3518을 생성합니다. ‘testPositions’: direct-list-initialization 컨텍스트에서 ‘auto’에 대한 형식은 하나의 이니셜라이저 식에서만 추론할 수 있습니다.
+
+```cpp
+auto testPositions{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+오류를 해결하기 위해 testPositions를 다음과 같이 초기화할 수 있습니다.
+
+```cpp
+std::tuple<int, int> testPositions[]{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+
+-   **is_convertible에 대한 형식 및 형식 포인터 확인**  
+
+다음 코드에서는 정적 어설션이 실패합니다. 
+
+```cpp
+struct B1 {
+private:
+    B1(const B1 &);
+};
+struct B2 : public B1 {};
+struct D : public B2 {};
+
+static_assert(std::is_convertible<D, B2>::value, "fail");
+```
+오류를 해결하려면 D 및 B2에 대한 포인터를 비교하도록 static_assert를 변경합니다.
+
+```cpp
+static_assert(std::is_convertible<D*, B2*>::value, "fail");
+```
+
+-   **declspec(novtable) 선언이 일관성을 유지해야 함**  
+
+declspec 선언은 모든 라이브러리에서 일관성을 유지해야 합니다. 다음 코드는 ODR(단일 정의 규칙) 위반을 생성합니다.
+
+```cpp
+
+//a.cpp
+class __declspec(dllexport)
+    A {
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+
+A::A() {}
+A::~A() {}
+A::A(const A&) {}
+
+//b.cpp
+// compile with cl.exe /nologo /LD /EHsc /Osx b.cpp
+#pragma comment(lib, "A")
+class __declspec(dllimport) A
+{
+public: A();
+         A(const A&);
+         virtual ~A();
+private:
+    int i;
+};
+
+struct __declspec(novtable) __declspec(dllexport) B
+    : virtual public A {
+    virtual void f() = 0;
+};
+
+//c.cpp
+#pragma comment(lib, "A")
+#pragma comment(lib, "B")
+class __declspec(dllimport) A
+{
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+struct  /* __declspec(novtable) */ __declspec(dllimport) B // Error. B needs to be novtable here also.
+    : virtual public A
+{
+    virtual void f() = 0;
+};
+
+struct C : virtual B
+{
+    virtual void f();
+};
+
+void C::f() {}
+C c;
+```
+
+
   
 ###  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
   
@@ -952,7 +1699,7 @@ ms.lasthandoff: 04/05/2017
   
      또한 컴파일러가 특정 진단을 제공하지는 않지만, 인라인 operator new는 잘못된 형식으로 간주됩니다.  
   
--   ***비클래스 형식에서 'operator*type**()'(사용자 정의 변환) 호출  
+-   ***비클래스 형식에서 'operator* type**()'(사용자 정의 변환) 호출  
   
      이전 버전의 컴파일러에서는 'operator *type*()'을 자동으로 무시하면서 비클래스 형식에서 호출할 수 있었습니다. 이 이전 동작으로 잘못된 코드가 자동으로 생성되어 예기치 않은 런타임 동작이 발생하는 위험이 초래되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2228이 발생합니다.  
   
@@ -2795,3 +3542,4 @@ ms.lasthandoff: 04/05/2017
   
 ## <a name="see-also"></a>참고 항목  
 [Visual Studio의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md)
+
