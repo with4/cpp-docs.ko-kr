@@ -1,101 +1,122 @@
 ---
 title: "안전한 템플릿 오버로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-  - "보안 템플릿 오버로드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+- secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 안전한 템플릿 오버로드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/24/2017
 
-더 새롭고, 보안이 강화된 버전 덕에 많은 CRT 함수가 더 이상 사용되지 않습니다. \(예를 들어, `strcpy_s`는 `strcpy`보다 더 안전한 대체입니다.\)  CRT는 더 안전한 변형으로의 전환을 용이하게 하기 위하여 템플릿 오버로드를 제공합니다.  
+---
+# <a name="secure-template-overloads"></a>안전한 템플릿 오버로드
+Microsoft는 여러 CRT(C 런타임) 라이브러리 함수를 보안이 강화된 버전으로 대체했습니다. 예를 들어 `strcpy_s`가 `strcpy`보다 더 안전합니다. 사용되지 않는 함수는 메모리를 덮어쓸 수 있는 작업을 차단하지 않기 때문에 보안 버그의 일반적인 원인입니다. 기본적으로 컴파일러는 이러한 함수 중 하나를 사용할 때 사용 중단 경고를 생성합니다. CRT는 더 안전한 변형으로 쉽게 전환할 수 있도록 이러한 함수에 대한 C++ 템플릿 오버로드를 제공합니다.  
   
- 예를 들어, 이 코드는 `strcpy`가 더 이상 사용되지 않기 때문에 경고를 발생시킵니다.  
+예를 들어 이 코드 조각은 `strcpy`가 더 이상 사용되지 않기 때문에 경고를 생성합니다.  
   
- `char szBuf[10];`  
+```cpp  
+char szBuf[10];  
+strcpy(szBuf, "test"); // warning: deprecated  
+```
   
- `strcpy(szBuf, "test"); // warning: deprecated`  
+코드가 안전하지 않을 수 있다는 것을 알리는 사용 중단 경고가 있습니다. 코드가 메모리를 덮어쓸 수 없다는 것을 확인한 경우에는 여러 가지 선택 사항이 있습니다. 경고를 무시하거나, 경고를 표시하지 않도록 CRT에 대한 include 문 앞에 기호 `_CRT_SECURE_NO_WARNINGS`를 정의하거나, `strcpy_s`를 사용하도록 코드를 업데이트할 수 있습니다.  
   
- 이 경고를 무시할 수 있습니다.  이 경고를 나타내지 않게 하기 위하여 `_CRT_SECURE_NO_WARNINGS` 기호를 정의하거나 `strcpy_s`를 사용하는 코드로 업데이트합니다.  
+```cpp  
+char szBuf[10];  
+strcpy_s(szBuf, 10, "test"); // security-enhanced _s function  
+```
   
- `char szBuf[10];`  
+템플릿 오버로드는 추가 옵션을 제공합니다. `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`를 1로 정의하면 더 안전한 변형을 자동으로 호출하는 표준 CRT 함수의 템플릿 오버로드가 사용하도록 설정됩니다. `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`가 1이면 코드를 변경할 필요가 없습니다. 내부적으로 `strcpy`에 대한 호출은 자동으로 제공된 크기 인수를 사용하는 `strcpy_s`에 대한 호출로 변경됩니다.  
   
- `strcpy_s(szBuf, 10, "test"); // security-enhanced _s function`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- 템플릿 오버로드는 추가 옵션을 제공합니다.  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`를 1로 정의하는 것은 더 안전한 변형을 자동으로 호출하는 표준 CRT 함수의 템플릿 오버로드를 활성화시킵니다.  만약 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`가 1이면, 코드에 어떠한 변경도 필요하지 않습니다.  내부적으로, `strcpy`의 호출은 자동으로 제공된 크기 인수와 함께 `strcpy_s`의 호출로 변경됩니다.  
+// ...  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+char szBuf[10];  
+strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `...`  
-  
- `char szBuf[10];`  
-  
- `strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
-  
- `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`는 `strncpy`와 같이 수를 세는 함수에 영향을 미치지 않습니다.  수를 세는 함수에 대해 템플릿 오버로드를 적용시키려면, `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`를 1로 정의합니다.  그러나 이를 수행하기 전에, 코드가 버퍼의 크기가 아니라 문자의 수를 전달하는지를 확실히 해야 합니다. \(보편적인 실수\)  또한 안전한 변형이 호출되었을 때, 함수 호출 이후 버퍼의 끝에 명시적으로 null 종료 문자를 쓰는 코드는 필요하지 않습니다.  잘라내기 동작을 해야 할 경우에는 [\_TRUNCATE](../c-runtime-library/truncate.md)를 참조하십시오.  
+매크로 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`는 `strncpy`와 같이 개수를 세는 함수에 영향을 주지 않습니다. 개수 함수에 대한 템플릿 오버로드를 사용하도록 설정하려면 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`를 1로 정의합니다. 그러나 이러한 작업을 수행하기 전에 코드가 버퍼의 크기가 아닌(일반적인 실수) 문자 개수를 전달하는지 확인해야 합니다. 또한 안전한 변형이 호출되는 경우 함수 호출 이후 명시적으로 버퍼의 끝에 null 종결자를 쓰는 코드는 필요하지 않습니다. 잘라내기 동작이 필요한 경우 [_TRUNCATE](../c-runtime-library/truncate.md)를 참조하세요.  
   
 > [!NOTE]
->  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 매크로는 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`도 또한 1로 정의될 것을 요구합니다.  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`가 1로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`이 0으로 정의되면, 응용 프로그램은 템플릿 오버로드를 수행하지 않습니다.  
+>  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 매크로의 경우 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`도 1로 정의되어야 합니다. `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`가 1로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`가 0으로 정의되는 경우 응용 프로그램은 템플릿 오버로드를 수행하지 않습니다.  
   
- `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`를 1로 정의하는 것은 안전한 변형\("\_s"로 끝나는 이름\)의 템플릿 오버로드를 활성화시킵니다.  이 경우, `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`이 1이면, 원본 코드에서 작은 변경 하나가 있어야 합니다.  
+`_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`를 1로 정의하면 안전한 변형(“_s”로 끝나는 이름)의 템플릿 오버로드가 사용하도록 설정됩니다. 이 경우 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`가 1이면 원본 코드에서 작은 변경 작업이 하나 수행되어야 합니다.  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char szBuf[10];`  
+char szBuf[10];  
+strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
+ “_s”를 추가하여 함수 이름만 변경해야 합니다. 템플릿 오버로드는 크기 인수를 제공합니다.  
   
- 함수의 이름만 바뀔 필요가 있습니다\("\_s"를 추가함으로써\). 템플릿 오버로드는 크기 인수 제공을 관할합니다.  
+ 기본적으로 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 및 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`가 0(해제)으로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`가 1(설정)로 정의됩니다.  
   
- 기본적으로, `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 및 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`는 0\(사용 안 함\)으로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`은 1\(사용\)로 정의됩니다.  
+ 이러한 템플릿 오버로드는 정적 배열에 대해서만 작동합니다. 동적으로 할당된 버퍼의 경우 추가 소스 코드 변경이 필요합니다. 위 예제를 다시 봅니다.  
   
- 이러한 템플릿 오버로드는 정적 배열에만 작업된다는 것을 유의하십시오.  추가 소스 코드를 변경해야 하는 동적으로 할당된 버퍼입니다.  위 예제를 다시 봅니다.  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+// ...  
   
- `...`  
+char *szBuf = (char*)malloc(10);  
+strcpy(szBuf, "test"); // still deprecated; you have to change it to  
+                       // strcpy_s(szBuf, 10, "test");  
+```  
   
- `char *szBuf = (char*)malloc(10);`  
+ 또 다른 예제:  
   
- `strcpy(szBuf, "test"); // still deprecated; have to change to`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `// strcpy_s(szBuf, 10, "test");`  
+// ...  
   
- 또 다른 예입니다.  
+char *szBuf = (char*)malloc(10);  
+strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to  
+                         // strcpy_s(szBuf, 10, "test");  
+```  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
-  
- `...`  
-  
- `char *szBuf = (char*)malloc(10);`  
-  
- `strcpy_s(szBuf, "test"); // doesn't compile; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRT의 보안 기능](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)
