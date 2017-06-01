@@ -86,6 +86,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 클래스
 팝업 메뉴를 포함하는 도구 모음 단추입니다.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -221,7 +222,7 @@ CMFCToolBarMenuButton(
  [!code-cpp[NVC_MFC_WordPad #&9;](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
 ##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
@@ -235,7 +236,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -314,7 +315,7 @@ void DrawDocumentIcon(
  이 메서드는 문서 아이콘을 사용 하 고 가운데에 의해 지정 된 영역 메뉴 단추를 그립니다 `rectImage`합니다.  
   
 ##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableQuickCustomize();
@@ -323,7 +324,7 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasButton() const;  
@@ -334,7 +335,7 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HaveHotBorder() const;  
@@ -345,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsBorder() const;  
@@ -356,7 +357,7 @@ virtual BOOL IsBorder() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsClickedOnMenu() const;  
@@ -367,7 +368,7 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsQuickMode();
@@ -504,7 +505,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
  이 멤버 변수를로 설정 되 면 `TRUE`, 단추를 항상 호출 [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) 메서드를 단추에 이미지를 표시 합니다. 때 `m_bAlwaysCallOwnerDraw` 는 `FALSE`를 단추 자체 이미지는 미리 정의 하는 경우 이미지를 그립니다. 그렇지 않으면, 호출 `OnDrawMenuImage`합니다.  
   
 ##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterCreatePopupMenu();
@@ -513,7 +514,7 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
@@ -524,7 +525,7 @@ virtual BOOL OnBeforeDrag() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -543,7 +544,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancelMode();
@@ -552,7 +553,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -564,7 +565,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnClick(
@@ -596,7 +597,7 @@ virtual BOOL OnClickMenuItem();
  메뉴 항목 처리를 사용자 지정 하려면 재정의 `OnClickMenuItem` 에서 파생 된 클래스에서 `CMFCToolBarMenuButton` 클래스입니다. 재정의 해야 [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) 파생된 클래스의 인스턴스를 사용 하 여 특수 처리를 필요로 하는 메뉴 단추를 바꿉니다.  
   
 ##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -610,7 +611,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(
@@ -637,7 +638,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -673,7 +674,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
  이 함수는 사용자가 도구 모음 메뉴 단추에서 드롭다운 메뉴를 열 때 프레임 워크에 의해 호출 됩니다.  
   
 ##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ResetImageToDefault();
@@ -682,7 +683,7 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SaveBarState();
@@ -692,7 +693,7 @@ virtual void SaveBarState();
  프레임 워크는 끌어서 놓기 작업의 결과로 도구 모음 단추를 만들 때이 메서드를 호출 합니다. 이 메서드는 [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) 메서드를 다시 해당 메뉴 팝업 메뉴의 부모 단추가 최상위 팝업 메뉴의 합니다.  
   
 ##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -759,7 +760,7 @@ void SetMenuPaletteMode(
  팔레트 모드에서 모든 메뉴 항목은 여러 열 팔레트도 표시 됩니다. 사용 하 여 행의 수를 지정 `nPaletteRows`합니다.  
   
 ##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMessageWnd(CWnd* pWndMessage);

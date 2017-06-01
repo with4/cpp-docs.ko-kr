@@ -110,7 +110,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 클래스
 도구 모음에 이미지를 지정 합니다. `CMFCToolBarImages` 클래스는 파일 또는 응용 프로그램 리소스에서 로드 된 도구 모음 이미지를 관리 합니다.  
-  
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -224,7 +224,7 @@ class CMFCToolBarImages : public CObject
  **헤더:** afxtoolbarimages.h  
   
 ##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AdaptColors(
@@ -287,7 +287,7 @@ int AddImage(
  도구 모음 수가 이미지를 `CMFCToolBarImages` 새로운 비트맵 성공적으로 추가 된 후 개체를 유지 관리 작업에 실패 한 경우-1입니다.  
   
 ##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall CleanUp();
@@ -313,7 +313,7 @@ CMFCToolBarImages();
  생성 된 `CMFCToolBarImages` 개체의 렌더링 엔진을 초기화 하 고 16 x 15 픽셀 이미지 크기를 기본값으로 설정 합니다. 사용 하 여 [CMFCToolBarImages::SetImageSize](#setimagesize) 이미지를 추가 하기 전에 이미지 크기를 변경 합니다.  
   
 ##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CopyImageToClipboard(int iImage);
@@ -327,7 +327,7 @@ BOOL CopyImageToClipboard(int iImage);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CopyTo(CMFCToolBarImages& imageList);
@@ -358,7 +358,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
  이 함수를 사용 하 여 신속 하 게 외부 이미지 목록에서 도구 모음 이미지 목록 초기화 합니다.  
   
 ##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static HRGN __stdcall CreateRegionFromImage(
@@ -440,7 +440,7 @@ BOOL Draw(
  `TRUE`지정된 된 이미지는 성공적으로 표시 된 경우 `FALSE` 이미지 인덱스 잘못 되었거나 다른 몇 가지 오류가 발생 한 경우.  
   
 ##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL DrawEx(
@@ -472,7 +472,7 @@ BOOL DrawEx(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
@@ -528,7 +528,7 @@ static void FillDitheredRect(
  이 메서드를 사용 하 여 시스템 색 COLOR_BTNFACE 및 COLOR_BTNHIGHLIGHT의 평균을 색으로 사각형을 채웁니다. 시스템 256 색을 사용 하는 경우 사각형이 채워집니다 디더링된 패턴 이러한 두 가지 색을 대신 합니다.  
   
 ##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetAlwaysLight() const;  
@@ -562,7 +562,7 @@ static BYTE GetDisabledImageAlpha();
  호출할 수 있습니다 [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) 알파 채널 값을 변경 합니다.  
   
 ##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BYTE __stdcall GetFadedImageAlpha();
@@ -605,7 +605,7 @@ HBITMAP GetImageWell() const;
  도구 모음 이미지 라고 하는 단일 비트맵의 행에 저장 되어 있는 *이미지 잘*합니다. 이미지 웰을 도구 모음 이미지를 찾으려면 도구 모음 이미지의 너비에 따라 이미지의 인덱스를 곱하기 (참조 [CMFCToolBarImages::GetImageSize](#getimagesize))도 이미지 내에 있는 이미지의 가로 오프셋을 얻을 수 있습니다.  
   
 ##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HBITMAP GetImageWellLight() const;  
@@ -616,7 +616,7 @@ HBITMAP GetImageWellLight() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetLastImageRect() const;  
@@ -627,7 +627,7 @@ CRect GetLastImageRect() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetLightPercentage() const;  
@@ -638,7 +638,7 @@ int GetLightPercentage() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetMapTo3DColors() const;  
@@ -649,7 +649,7 @@ BOOL GetMapTo3DColors() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HBITMAP GetMask(int iImage);
@@ -677,7 +677,7 @@ int GetResourceOffset(UINT uiResId) const;
  메서드가 성공 하면 이미지 인덱스 지정 된 리소스 ID 사용 하 여 이미지에 존재 하지 않는 경우-1입니다.  
   
 ##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 COLORREF GetTransparentColor() const;  
@@ -721,7 +721,7 @@ static BOOL Is32BitTransparencySupported();
  이 정적 메서드를 사용 하 여 운영 체제 32 비트 알파 혼합을 지원 하는지 여부를 런타임에 결정 합니다. 이 기능이 지원 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 이상 버전.  
   
 ##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsPreMultiplyAutoCheck() const;  
@@ -817,7 +817,7 @@ BOOL Load(
  파일에 읽기 전용 특성을 읽기 전용으로 이미지 목록이 표시 됩니다.  
   
 ##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL LoadStr(
@@ -836,7 +836,7 @@ BOOL LoadStr(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapFromSysColor(
@@ -853,7 +853,7 @@ static COLORREF __stdcall MapFromSysColor(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL MapTo3dColors(
@@ -872,7 +872,7 @@ BOOL MapTo3dColors(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapToSysColor(
@@ -889,7 +889,7 @@ static COLORREF __stdcall MapToSysColor(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
@@ -938,7 +938,7 @@ static BOOL MirrorBitmap(
  이 함수는 오른쪽에서 왼쪽 문자 체계를 지 원하는 데 사용 됩니다.  
   
 ##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall MirrorBitmapVert(
@@ -955,7 +955,7 @@ static BOOL __stdcall MirrorBitmapVert(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL MirrorVert();
@@ -966,7 +966,7 @@ BOOL MirrorVert();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void OnSysColorChange();
@@ -975,7 +975,7 @@ void OnSysColorChange();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1050,7 +1050,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
  디스크 파일에 사용자 지정 이미지를 저장 하려면이 메서드를 호출 합니다. 경우 `lpszBmpFileName` 는 `NULL`, 있는 비트맵으로 로드 된 파일에 비트맵을 저장 하는 메서드는 [CMFCToolBarImages::Load](#load) 메서드.  
   
 ##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
@@ -1076,7 +1076,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
  비활성화 된 이미지에 대 한 사용자 지정 알파 값을 설정 하려면이 메서드를 사용 합니다. 기본값은 반투명 하 비활성화 된 단추 이미지에 이르게 127입니다. 값 0 설정 하는 경우 사용할 수 없는 이미지 완전히 투명 하 게 됩니다. 값이 255로 설정 하면 사용할 수 없는 이미지를 완전히 불투명 하 게 됩니다.  
   
 ##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
@@ -1104,7 +1104,7 @@ void SetImageSize(
  기본적으로 도구 모음 이미지의 크기는 16 x 15 픽셀입니다. 다른 크기의 도구 모음 이미지를 사용 하려는 경우이 메서드를 호출 합니다.  
   
 ##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetLightPercentage(int nValue);
@@ -1116,7 +1116,7 @@ void SetLightPercentage(int nValue);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1128,7 +1128,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1140,7 +1140,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetSingleImage();

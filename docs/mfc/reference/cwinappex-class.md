@@ -100,6 +100,7 @@ ms.lasthandoff: 03/31/2017
 # <a name="cwinappex-class"></a>CWinAppEx 클래스
 `CWinAppEx`응용 프로그램 상태를 처리, 레지스트리에 상태를 저장, 레지스트리에서 상태를 로드, 응용 프로그램 관리자를 초기화 및 이러한 동일한 응용 프로그램 관리자에 대 한 링크를 제공 합니다.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -321,7 +322,7 @@ BOOL EnableUserTools(
  사용자 도구 및 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 참조 [사용자 정의 도구](../../mfc/user-defined-tools.md)합니다.  
   
 ##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int ExitInstance();
@@ -373,7 +374,7 @@ CContextMenuManager* GetContextMenuManager();
  이 함수를 호출 하는 CContextMenuManager 개체가 초기화 되지 않은 경우 [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) 대 한 포인터를 반환 하기 전에.  
   
 ##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetDataVersion() const;  
@@ -762,7 +763,7 @@ BOOL InitTooltipManager();
  경우에 도구 설명 관리자가 이미 응용 프로그램을 호출 하면 `InitTooltipManager`, 응용 프로그램이 포함 됩니다는 [ASSERT](diagnostic-services.md#assert) 실패 합니다. 따라서 호출 하면 안 `InitTooltipManager` 만들면는 `CTooltipManager` 개체를 직접 합니다. 사용자 지정을 사용 하지 않는 경우 `CTooltipManager`를 사용 해야 `GetTooltipManager` 만들려는 `CTooltipManager` 개체입니다.  
   
 ##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResourceSmartUpdate() const;  
@@ -936,7 +937,7 @@ virtual BOOL OnViewDoubleClick(
  사용자 지정 마우스 동작을 지원 하기 위해 호출 해야 처리 하는 경우이 함수는 `WM_LBUTTONDBLCLK` 메시지입니다. 이 메서드는 제공한 보기 ID와 연결 된 명령을 실행 합니다. `iViewId`합니다. 사용자 지정 마우스 동작에 대 한 자세한 내용은 참조 [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)합니다.  
   
 ##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnWorkspaceIdle(CWnd*);

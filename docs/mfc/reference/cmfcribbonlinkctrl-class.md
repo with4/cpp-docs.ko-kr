@@ -56,6 +56,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 클래스
 리본에 배치되는 하이퍼링크를 구현합니다. 하이퍼링크를 클릭하면 웹 페이지가 열립니다.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -125,7 +126,7 @@ CMFCRibbonLinkCtrl(
  [!code-cpp[NVC_MFC_RibbonGadgets #&1;](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
 ##  <a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -137,7 +138,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -163,7 +164,7 @@ LPCTSTR GetLink() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -177,7 +178,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CString GetToolTipText() const;  
@@ -188,7 +189,7 @@ virtual CString GetToolTipText() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -203,7 +204,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
@@ -214,7 +215,7 @@ virtual BOOL IsDrawTooltipImage() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondraw"></a>CMFCRibbonLinkCtrl::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -226,7 +227,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl::OnMouseMove  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnMouseMove(CPoint point);
@@ -238,7 +239,7 @@ virtual void OnMouseMove(CPoint point);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSetIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetIcon();

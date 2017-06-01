@@ -279,7 +279,7 @@ class CMFCPropertyGridCtrl : public CWnd
  **헤더:** afxpropertygridctrl.h  
   
 ##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT accSelect(
@@ -332,7 +332,7 @@ virtual void AdjustLayout();
  이 메서드는 전체 속성 표 컨트롤 및 이미지, 글꼴 및 컨트롤을 포함 하 여 해당 속성을 그리는 방법을 다시 계산 합니다.  
   
 ##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
@@ -453,7 +453,7 @@ BOOL DeleteProperty(
  이 메서드를 사용 하 여 속성 표 컨트롤에서 속성 및 모든 하위 항목을 삭제 합니다.  
   
 ##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL DrawControlBarColors() const;  
@@ -588,7 +588,7 @@ CMFCPropertyGridProperty* FindItemByData(
  사용 하 여는 [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) 생성자 또는 [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) 연결 하는 방법이 한 `DWORD` 속성으로.  
   
 ##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accChildCount(long* pcountChildren);
@@ -602,7 +602,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 ### <a name="remarks"></a>설명  
   
 ##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
@@ -616,7 +616,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accHelp(
@@ -633,7 +633,7 @@ virtual HRESULT get_accHelp(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accHelpTopic(
@@ -652,7 +652,7 @@ virtual HRESULT get_accHelpTopic(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accKeyboardShortcut(
@@ -669,7 +669,7 @@ virtual HRESULT get_accKeyboardShortcut(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -986,7 +986,7 @@ BOOL IsAlphabeticMode() const;
  사용 하 여는 [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) 메서드를 사용 하도록 설정 하거나 영문자 모드를 사용 하지 않도록 합니다.  
   
 ##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAlwaysShowUserToolTip() const;  

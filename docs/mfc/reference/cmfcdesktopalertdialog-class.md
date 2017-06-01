@@ -47,6 +47,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 클래스
 `CMFCDesktopAlertDialog` 클래스와 함께 사용는 [CMFCDesktopAlertWnd 클래스](../../mfc/reference/cmfcdesktopalertwnd-class.md) 팝업 창에 사용자 지정 대화 상자를 표시 합니다.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -93,7 +95,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
  **헤더:** afxDesktopAlertDialog.h  
   
 ##  <a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateFromParams(
@@ -110,7 +112,7 @@ BOOL CreateFromParams(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CSize GetDlgSize();
@@ -121,7 +123,7 @@ CSize GetDlgSize();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL HasFocus() const;  
@@ -132,7 +134,7 @@ BOOL HasFocus() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);

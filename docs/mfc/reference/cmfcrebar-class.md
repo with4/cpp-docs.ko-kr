@@ -54,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 클래스
 A `CMFCReBar` 개체는 레이아웃, 지 속성, rebar 컨트롤에 대 한 상태 정보를 제공 하는 컨트롤 막대입니다.  
-  
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -181,7 +181,7 @@ CReBarCtrl& GetReBarCtrl() const;
  프로그램 크기 조정 막대를 사용자 지정할 때 Windows rebar 공용 컨트롤 기능을 활용 하려면이 메서드를 호출 합니다.  
   
 ##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -198,7 +198,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="canfloat"></a>CMFCReBar::CanFloat  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanFloat() const;  
@@ -209,7 +209,7 @@ virtual BOOL CanFloat() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableDocking(DWORD dwDockStyle);
@@ -221,7 +221,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetReBarBandInfoSize() const;  
@@ -232,7 +232,7 @@ UINT GetReBarBandInfoSize() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -246,7 +246,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual INT_PTR OnToolHitTest(
@@ -263,7 +263,7 @@ virtual INT_PTR OnToolHitTest(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -278,7 +278,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetPaneAlignment(DWORD dwAlignment);
