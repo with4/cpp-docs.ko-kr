@@ -93,6 +93,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 클래스
 도킹을 구현하는 메뉴 모음입니다.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -212,7 +213,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCMenuBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -223,7 +224,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -240,7 +241,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="calclayout"></a>CMFCMenuBar::CalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcLayout(
@@ -257,7 +258,7 @@ virtual CSize CalcLayout(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int CalcMaxButtonHeight();
@@ -268,7 +269,7 @@ virtual int CalcMaxButtonHeight();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeClosed() const;  
@@ -279,7 +280,7 @@ virtual BOOL CanBeClosed() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="canberestored"></a>CMFCMenuBar::CanBeRestored  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeRestored() const;  
@@ -425,7 +426,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
  이 메서드를 사용 하는 알고리즘에는 복잡 하며 속도가 느린 시스템 응용 프로그램의 성능이 저하 될 수 있습니다.  
   
 ##  <a name="getavailableexpandsize"></a>CMFCMenuBar::GetAvailableExpandSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetAvailableExpandSize() const;  
@@ -436,7 +437,7 @@ virtual int GetAvailableExpandSize() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getcolumnwidth"></a>CMFCMenuBar::GetColumnWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetColumnWidth() const;  
@@ -473,7 +474,7 @@ UINT GetDefaultMenuResId() const;
  프레임 워크 로드에 대 한 기본 메뉴는 `CMFCMenuBar` 리소스 파일에서 개체입니다.  
   
 ##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
@@ -487,7 +488,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetForceDownArrows();
@@ -549,7 +550,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
  에 대 한 포인터는 `CMFCToolBarButton` 개체에 지정 된 인덱스와 일치 하는 `iItem`합니다. `NULL`인덱스가 잘못 되었습니다 하는 경우.  
   
 ##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRowHeight() const;  
@@ -560,7 +561,7 @@ virtual int GetRowHeight() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getsystembutton"></a>CMFCMenuBar::GetSystemButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolBarMenuButtonsButton* GetSystemButton(
@@ -577,7 +578,7 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getsystembuttonscount"></a>CMFCMenuBar::GetSystemButtonsCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetSystemButtonsCount() const;  
@@ -588,7 +589,7 @@ int GetSystemButtonsCount() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getsystemmenu"></a>CMFCMenuBar::GetSystemMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;  
@@ -613,7 +614,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
  기본적으로 프레임 워크 강조 표시 하지 않습니다 사용할 수 없는 메뉴 항목 위로 마우스 포인터를 놓을 때.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::IsButtonExtraSizeAvailable  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
@@ -725,7 +726,7 @@ virtual BOOL LoadState(
  대부분의 경우에서에 응용 프로그램 호출 하지 않습니다 `LoadState`합니다. 작업 영역을 초기화 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
   
 ##  <a name="onchangehot"></a>CMFCMenuBar::OnChangeHot  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeHot(int iHot);
@@ -751,7 +752,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
  이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 프레임 워크는 메뉴 리소스는 리소스 파일에서 로드 된 후 사용자 지정 코드를 실행 하려면이 함수를 재정의 합니다.  
   
 ##  <a name="onsendcommand"></a>CMFCMenuBar::OnSendCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -782,7 +783,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  이 메서드의 기본 구현에서는 사용자가 제공 하는 텍스트에는 단추의 텍스트를 변경 합니다.  
   
 ##  <a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual INT_PTR OnToolHitTest(
@@ -799,7 +800,7 @@ virtual INT_PTR OnToolHitTest(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="pretranslatemessage"></a>CMFCMenuBar::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -872,7 +873,7 @@ void SetDefaultMenuResId(UINT uiResId);
  사용 된 [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) 복원 되지 않고 기본 메뉴를 검색 하는 메서드입니다.  
   
 ##  <a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetForceDownArrows(BOOL bValue);

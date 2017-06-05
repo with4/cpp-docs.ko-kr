@@ -56,6 +56,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 클래스
 확장 된 도구 설명 구현에 따라는 [CToolTipCtrl 클래스](../../mfc/reference/ctooltipctrl-class.md)합니다. `CMFCToolTipCtrl` 클래스 기반의 도구 설명은 아이콘, 레이블 및 설명을 표시할 수 있습니다. 그라데이션 채우기, 사용자 지정 텍스트와 테두리 색, 굵은 텍스트, 둥근 모서리 또는 풍선 스타일을 사용하여 시각적인 모양을 사용자 지정할 수 있습니다.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -165,7 +167,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
  **헤더:** afxtooltipctrl.h  
   
 ##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
@@ -220,7 +222,7 @@ virtual void OnDrawBorder(
  도구 설명 테두리의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize OnDrawDescription(
@@ -359,7 +361,7 @@ virtual void SetDescription(const CString strDesrciption);
  설명 텍스트는 구분 기호에서 도구 설명에 표시 됩니다.  
   
 ##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetFixedWidth(
@@ -374,7 +376,7 @@ void SetFixedWidth(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -386,7 +388,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetLocation(CPoint pt);

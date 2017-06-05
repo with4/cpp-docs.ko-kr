@@ -75,7 +75,9 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 클래스
-`CMFCStatusBar` 유사한 상태 표시줄을 구현 하는 클래스는 `CStatusBar` 클래스입니다. 그러나 `CMFCStatusBar` 클래스에는 `CStatusBar` 클래스에 의해 제공되지 않는 기능(예: 이미지, 애니메이션 및 진행률 표시줄을 표시하는 기능 및 마우스 두 번 클릭에 응답하는 기능)이 포함되어 있습니다.  
+`CMFCStatusBar` 유사한 상태 표시줄을 구현 하는 클래스는 `CStatusBar` 클래스입니다. 그러나 `CMFCStatusBar` 클래스에는 `CStatusBar` 클래스에 의해 제공되지 않는 기능(예: 이미지, 애니메이션 및 진행률 표시줄을 표시하는 기능 및 마우스 두 번 클릭에 응답하는 기능)이 포함되어 있습니다. 
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>구문  
   
@@ -171,7 +173,7 @@ class CMFCStatusBar : public CPane
  **헤더:** afxstatusbar.h  
   
 ##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -188,7 +190,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
@@ -202,7 +204,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="create"></a>CMFCStatusBar::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL Create(
@@ -221,7 +223,7 @@ BOOL Create(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="createex"></a>CMFCStatusBar::CreateEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateEx(
@@ -242,7 +244,7 @@ BOOL CreateEx(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
@@ -316,7 +318,7 @@ int GetCount() const;
  상태 표시줄의 창 수를 지정 합니다.  
   
 ##  <a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetDrawExtendedArea() const;  
@@ -327,7 +329,7 @@ BOOL GetDrawExtendedArea() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -341,7 +343,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getitemid"></a>CMFCStatusBar::GetItemID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -355,7 +357,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetItemRect(
@@ -370,7 +372,7 @@ void GetItemRect(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneInfo(
@@ -389,7 +391,7 @@ void GetPaneInfo(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 long GetPaneProgress(int nIndex) const;  
@@ -403,7 +405,7 @@ long GetPaneProgress(int nIndex) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
@@ -417,7 +419,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneText(
@@ -499,7 +501,7 @@ virtual void OnDrawPane(
  이 메서드를 재정의 하는 `CMFCStatusBar`-창의 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
 ##  <a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -513,7 +515,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDrawExtendedArea(BOOL bSet = TRUE);
@@ -525,7 +527,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setindicators"></a>CMFCStatusBar::SetIndicators  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL SetIndicators(
@@ -627,7 +629,7 @@ void SetPaneIcon(
  모든 실행 중인 애니메이션이 있는 경우는 [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) 가 설정 하 고, 애니메이션 중지 됩니다.  
   
 ##  <a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneInfo(
@@ -671,7 +673,7 @@ void SetPaneProgress(
  지정 된 창에 대 한이 함수를 사용 하려면를 호출 해야 [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) 첫 번째입니다.  
   
 ##  <a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneStyle(
@@ -686,7 +688,7 @@ void SetPaneStyle(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SetPaneText(

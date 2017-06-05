@@ -42,7 +42,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 클래스
 `CMFCDragFrameImpl` 클래스는 사용자가 표준 도킹 모드에서 창을 끌 때 나타나는 끌기 사각형을 그립니다.  
-  
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -61,7 +62,7 @@ class CMFCDragFrameImpl
  **헤더:** afxdragframeimpl.h  
   
 ##  <a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
@@ -73,7 +74,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="init"></a>CMFCDragFrameImpl::Init  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Init(CWnd* pDraggedWnd);
@@ -85,7 +86,7 @@ void Init(CWnd* pDraggedWnd);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -97,7 +98,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void PlaceTabPreDocking(
@@ -115,7 +116,7 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -127,7 +128,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="resetstate"></a>CMFCDragFrameImpl::ResetState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ResetState();

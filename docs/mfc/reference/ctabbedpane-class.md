@@ -54,6 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 클래스
 분리 가능한 탭이 포함된 창의 기능을 구현합니다.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -173,7 +175,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
  **헤더:** afxTabbedPane.h  
   
 ##  <a name="detachpane"></a>CTabbedPane::DetachPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DetachPane(
@@ -208,7 +210,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
  기본적으로이 옵션이 비활성화 됩니다.  
   
 ##  <a name="floattab"></a>CTabbedPane::FloatTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL FloatTab(
@@ -250,7 +252,7 @@ virtual void GetTabArea(
  이 메서드를 재정의 하는 `CTabbedPane`-이 동작을 변경 하는 클래스를 파생 합니다.  
   
 ##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
@@ -261,7 +263,7 @@ CMFCTabCtrl* GetTabWnd() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasAutoHideMode() const;  

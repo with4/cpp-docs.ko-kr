@@ -53,6 +53,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 클래스
 분리 메뉴를 관리합니다. 분리 메뉴는 메뉴 모음의 메뉴입니다. 사용자는 메뉴 모음에서 분리 메뉴를 제거하여 이동 가능한 상태로 만들 수 있습니다.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -97,7 +99,7 @@ class CMenuTearOffManager : public CObject
  **헤더:** afxmenutearoffmanager.h  
   
 ##  <a name="build"></a>CMenuTearOffManager::Build  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Build(
@@ -122,7 +124,7 @@ CMenuTearOffManager();
  대부분의 경우에서 만들면 안 한 `CMenuTearOffManager` 수동으로. 응용 프로그램의 프레임 워크를 만들고는 `CMenuTearOffManager` 개체를 호출할 때 [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)합니다.  
   
 ##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 LPCTSTR GetRegPath() const;  
@@ -159,7 +161,7 @@ BOOL Initialize(
  다양 한 메뉴 Id에서 `uiTearOffMenuFirst` 를 `uiTearOffMenuLast` 연속 간격 이어야 합니다. 간격의 응용 프로그램에서 동시에 나타날 수 있는 분리 메뉴를 정의 합니다.  
   
 ##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDynamicID(UINT uiID) const;  
@@ -173,7 +175,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="parse"></a>CMenuTearOffManager::Parse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT Parse(CString& str);
@@ -187,7 +189,7 @@ UINT Parse(CString& str);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="reset"></a>CMenuTearOffManager::Reset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Reset(HMENU hmenu);
@@ -199,7 +201,7 @@ void Reset(HMENU hmenu);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetInUse(
@@ -214,7 +216,7 @@ void SetInUse(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetupTearOffMenus(HMENU hMenu);

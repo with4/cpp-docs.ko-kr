@@ -54,7 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 클래스
 `CMFCShellTreeCtrl` 클래스 확장 [CTreeCtrl 클래스](../../mfc/reference/ctreectrl-class.md) 셸 항목의 계층 구조를 표시 하 여 기능 합니다.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -164,7 +165,7 @@ CMFCShellListCtrl* GetRelatedList() const;
  사용 하 여 한 `CMFCShellListCtrl` 와 함께 개체는 `CMFCShellTreeCtrl` 개체 탐색기와 유사한 창을 만들 수 있습니다. 메서드를 사용 하 여 [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) 두 클래스를 연결 합니다. 프레임 워크를 자동으로 업데이트 연결 후는 `CMFCShellListCtrl` 경우의 선택은 `CMFCShellTreeCtrl` 변경 합니다.  
   
 ##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnChildNotify(
@@ -185,7 +186,7 @@ virtual BOOL OnChildNotify(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnGetItemIcon(
@@ -202,7 +203,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);

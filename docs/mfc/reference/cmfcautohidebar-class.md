@@ -59,7 +59,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 클래스
 `CMFCAutoHideBar` 클래스는 자동 숨기기 기능을 구현하는 특수 도구 모음 클래스입니다.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -157,7 +158,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
 - `CBRS_ALIGN_BOTTOM`  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -168,7 +169,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -194,7 +195,7 @@ CMFCAutoHideBar();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="create"></a>CMFCAutoHideBar::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL Create(
@@ -255,7 +256,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
  사용자 위에 마우스 커서를 배치 하는 경우는 `CMFCAutoHideButton`, 프레임 워크에 연결된 된 창을 표시 하기 전에 약간의 지연이 발생 합니다. 이 매개 변수는 이러한 지연 시간 (밀리초)의 길이 결정합니다.  
   
 ##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -299,7 +300,7 @@ virtual void SetActiveInGroup(BOOL bActive);
  참조 [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup)합니다.  
   
 ##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRecentVisibleState(BOOL bState);

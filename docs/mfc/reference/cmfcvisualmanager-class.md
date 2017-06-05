@@ -212,6 +212,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 클래스
 응용 프로그램의 모양을 전역 수준에서 변경하는 기능을 지원합니다. `CMFCVisualManager` 클래스는 일관된 스타일을 사용하여 응용 프로그램의 GUI 컨트롤을 그리는 명령을 제공하는 클래스와 함께 작동합니다. 이러한 다른 클래스를 비주얼 관리자라고 하며 `CMFCBaseVisualManager`에서 상속됩니다.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -459,7 +461,7 @@ CMFCVisualManager::GetInstance ()->RedrawAll ();
  **헤더:** afxvisualmanager.h  
   
 ##  <a name="adjustframes"></a>CMFCVisualManager::AdjustFrames  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall AdjustFrames();
@@ -468,7 +470,7 @@ static void __stdcall AdjustFrames();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="adjusttoolbars"></a>CMFCVisualManager::AdjustToolbars  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall AdjustToolbars();
@@ -490,7 +492,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
  파생된 비주얼 관리자에서이 함수를 재정의 하 고 반환 `TRUE` 경우 3D 탭 항상 강조 표시 됩니다. 이 메서드의 기본 구현에서는 반환 `FALSE`합니다.  
   
 ##  <a name="cmfcvisualmanager"></a>CMFCVisualManager::CMFCVisualManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -502,7 +504,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="destroyinstance"></a>CMFCVisualManager::DestroyInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -514,7 +516,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void DoDrawHeaderSortArrow(
@@ -533,7 +535,7 @@ void DoDrawHeaderSortArrow(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="drawcomboborderwinxp"></a>CMFCVisualManager::DrawComboBorderWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -553,7 +555,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 ### <a name="remarks"></a>주의  
   
 ##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::DrawComboDropButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -573,7 +575,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 ### <a name="remarks"></a>주의  
   
 ##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManager::DrawPushButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -593,7 +595,7 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 ### <a name="remarks"></a>주의  
   
 ##  <a name="drawtextonglass"></a>CMFCVisualManager::DrawTextOnGlass  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawTextOnGlass(
@@ -618,7 +620,7 @@ virtual BOOL DrawTextOnGlass(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
@@ -677,7 +679,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  캡션 표시줄에 대 한 텍스트 색을 사용자 지정 하려면 파생된 클래스에서이 메서드를 재정의 합니다. 재정의 된 메서드를 원하는 색을 반환 합니다.  
   
 ##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager::GetCaptionButtonExtraBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCaptionButtonExtraBorder() const;  
@@ -688,7 +690,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager::GetDockingPaneCaptionExtraHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetDockingPaneCaptionExtraHeight() const;  
@@ -714,7 +716,7 @@ virtual int GetDockingTabsBordersSize();
  탭된 도킹된 컨트롤 막대의 테두리 크기를 변경 하려면 사용자 지정 비주얼 관리자에서이 메서드를 재정의 합니다. 기본 구현된 경우에는 -1을 반환합니다.  
   
 ##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager::GetHighlightedMenuItemTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -754,7 +756,7 @@ virtual int GetMDITabsBordersSize();
  MDITabs 창 테두리 크기를 사용자 지정 하는 파생된 클래스에서이 함수를 재정의 합니다.  
   
 ##  <a name="getmenuimagemargin"></a>CMFCVisualManager::GetMenuImageMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetMenuImageMargin() const;  
@@ -765,7 +767,7 @@ virtual int GetMenuImageMargin() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager::GetMenuItemTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetMenuItemTextColor(
@@ -827,7 +829,7 @@ virtual int GetPopupMenuBorderSize() const;
  응용 프로그램에 팝업 메뉴의 테두리 크기를 사용자 지정 하려면이 메서드를 재정의 합니다.  
   
 ##  <a name="getpopupmenugap"></a>CMFCVisualManager::GetPopupMenuGap  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetPopupMenuGap() const;  
@@ -872,7 +874,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  응용 프로그램에서 속성 목록의 텍스트 색을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
 ##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager::GetRibbonHyperlinkTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -886,7 +888,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager::GetRibbonPopupBorderSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;  
@@ -900,7 +902,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -911,7 +913,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -922,7 +924,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -936,7 +938,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonslidercolors"></a>CMFCVisualManager::GetRibbonSliderColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetRibbonSliderColors(
@@ -959,7 +961,7 @@ virtual void GetRibbonSliderColors(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager::GetRibbonStatusBarTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -973,7 +975,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager::GetShowAllMenuItemsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetShowAllMenuItemsHeight(
@@ -990,7 +992,7 @@ virtual int GetShowAllMenuItemsHeight(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager::GetSmartDockingBaseGuideColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetSmartDockingBaseGuideColors(
@@ -1005,7 +1007,7 @@ virtual void GetSmartDockingBaseGuideColors(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager::GetSmartDockingHighlightToneColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1028,7 +1030,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager::GetStatusBarPaneTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1092,7 +1094,7 @@ virtual void GetTabFrameColors(
  프레임 워크 탭 창을 그릴 때 사용 되는 색 집합을 사용자 지정 하려는 경우에 파생된 클래스에서이 함수를 재정의 합니다.  
   
 ##  <a name="gettabhorzmargin"></a>CMFCVisualManager::GetTabHorzMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1106,7 +1108,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettabtextcolor"></a>CMFCVisualManager::GetTabTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetTabTextColor(
@@ -1125,7 +1127,7 @@ virtual COLORREF GetTabTextColor(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionHeight() const;  
@@ -1136,7 +1138,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionHorzOffset() const;  
@@ -1147,7 +1149,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionVertOffset() const;  
@@ -1158,7 +1160,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupVertOffset() const;  
@@ -1169,7 +1171,7 @@ int GetTasksPaneGroupVertOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager::GetTasksPaneHorzMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneHorzMargin() const;  
@@ -1180,7 +1182,7 @@ int GetTasksPaneHorzMargin() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager::GetTasksPaneIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneIconHorzOffset() const;  
@@ -1191,7 +1193,7 @@ int GetTasksPaneIconHorzOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager::GetTasksPaneIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneIconVertOffset() const;  
@@ -1202,7 +1204,7 @@ int GetTasksPaneIconVertOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager::GetTasksPaneTaskHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneTaskHorzOffset() const;  
@@ -1213,7 +1215,7 @@ int GetTasksPaneTaskHorzOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager::GetTasksPaneVertMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneVertMargin() const;  
@@ -1248,7 +1250,7 @@ virtual COLORREF GetToolbarButtonTextColor(
  응용 프로그램에서 도구 모음 단추의 텍스트 색을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager::GetToolBarCustomizeButtonMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetToolBarCustomizeButtonMargin() const;  
@@ -1259,7 +1261,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager::GetToolbarDisabledColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetToolbarDisabledColor() const;  
@@ -1283,7 +1285,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
  사용할 수 있는 도구 모음 단추의 텍스트 색을 설정 하려면 사용자 지정 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager::GetToolbarHighlightColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetToolbarHighlightColor();
@@ -1294,7 +1296,7 @@ virtual COLORREF GetToolbarHighlightColor();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettooltipinfo"></a>CMFCVisualManager::GetToolTipInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL GetToolTipInfo(
@@ -1321,7 +1323,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
  `TRUE`자동 숨기기 단추 겹치면; `FALSE` 일치 하지 않을 경우.  
   
 ##  <a name="isautodestroy"></a>CMFCVisualManager::IsAutoDestroy  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAutoDestroy() const;  
@@ -1332,7 +1334,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager::IsDefaultWinXPPopupButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;  
@@ -1385,7 +1387,7 @@ BOOL IsFadeInactiveImage() const;
  활성화 하거나 호출 하 여 조명 효과 비활성화할 수 [CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)합니다. 조명 효과 바로 사용할 수 없는 이미지 흐리게 표시 됩니다.  
   
 ##  <a name="isframemenucheckeditems"></a>CMFCVisualManager::IsFrameMenuCheckedItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsFrameMenuCheckedItems() const;  
@@ -1396,7 +1398,7 @@ BOOL IsFrameMenuCheckedItems() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager::IsHighlightOneNoteTabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsHighlightOneNoteTabs() const;  
@@ -1407,7 +1409,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager::IsHighlightWholeMenuItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsHighlightWholeMenuItem();
@@ -1418,7 +1420,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager::IsLayeredRibbonKeyTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsLayeredRibbonKeyTip() const;  
@@ -1455,7 +1457,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
  [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 메뉴와 그림자를 그릴 때이 메서드를 호출 합니다. 기본적으로이 메서드는 다음과 같이 반환 됩니다. `FALSE`합니다. Office XP의 팝업 메뉴와 비슷합니다 팝업 메뉴를 사용 하려는 경우 사용자 지정 비주얼 관리자에서이 메서드를 재정의 하 고 반환 `TRUE`합니다.  
   
 ##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager::IsOffsetPressedButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsOffsetPressedButton() const;  
@@ -1476,7 +1478,7 @@ virtual BOOL IsOwnerDrawCaption();
  `TRUE`응용 프로그램에서 모든 프레임 창을 소유자 그리기 캡션이; 하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager::IsOwnerDrawMenuCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1497,7 +1499,7 @@ BOOL IsShadowHighlightedImage() const;
  강조 표시 된 이미지; 아래에 그림자를 표시 하는 비주얼 관리자 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager::IsToolbarButtonFillEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsToolbarButtonFillEnabled() const;  
@@ -1508,7 +1510,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="istoolbarroundshape"></a>CMFCVisualManager::IsToolbarRoundShape  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1522,7 +1524,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager::IsWindowsThemingSupported  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsWindowsThemingSupported() const;  
@@ -1533,7 +1535,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onactivateapp"></a>CMFCVisualManager::OnActivateApp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnActivateApp(
@@ -1667,7 +1669,7 @@ virtual void OnDrawButtonBorder(
  도구 모음 단추의 가능한 상태는 `ButtonsIsRegular`, `ButtonsIsPressed`, 또는 `ButtonsIsHighlighted`합니다.  
   
 ##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawButtonSeparator(
@@ -1719,7 +1721,7 @@ virtual void OnDrawCaptionBarBorder(
  캡션 표시줄의 테두리 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager::OnDrawCaptionBarButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1746,7 +1748,7 @@ virtual void OnDrawCaptionBarButtonBorder(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager::OnDrawCaptionBarInfoArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionBarInfoArea(
@@ -1804,7 +1806,7 @@ virtual void OnDrawCaptionButton (
  캡션 단추의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawcheckbox"></a>CMFCVisualManager::OnDrawCheckBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCheckBox(
@@ -1825,7 +1827,7 @@ virtual void OnDrawCheckBox(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawcheckboxex"></a>CMFCVisualManager::OnDrawCheckBoxEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCheckBoxEx(
@@ -1918,7 +1920,7 @@ virtual void OnDrawComboDropButton(
  콤보 상자 단추의 드롭 단추 모양 사용자 지정 하 여 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawcontrolborder"></a>CMFCVisualManager::OnDrawControlBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -1992,7 +1994,7 @@ virtual void OnDrawEditBorder(
  테두리를 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 하는 `CMFCToolBarEditBoxButton` 개체입니다.  
   
 ##  <a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawExpandingBox(
@@ -2100,7 +2102,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
  경우 `bIsUp` 는 `TRUE`를 비주얼 관리자를 정렬 화살표를 그립니다. 있으면 `FALSE`를 비주얼 관리자 아래쪽 정렬 화살표를 그립니다. 재정의 `OnDrawHeaderCtrlSortArrow` 정렬 단추 모양 사용자 지정 하려면 파생된 클래스에 있습니다.  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2140,7 +2142,7 @@ virtual void OnDrawMenuBorder(
  이 메서드의 기본 구현에는 표준 메뉴 테두리가 표시 됩니다. 메뉴 테두리의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawmenucheck"></a>CMFCVisualManager::OnDrawMenuCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuCheck(
@@ -2161,7 +2163,7 @@ virtual void OnDrawMenuCheck(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager::OnDrawMenuItemButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuItemButton(
@@ -2182,7 +2184,7 @@ virtual void OnDrawMenuItemButton(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawmenulabel"></a>CMFCVisualManager::OnDrawMenuLabel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnDrawMenuLabel(
@@ -2199,7 +2201,7 @@ virtual COLORREF OnDrawMenuLabel(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager::OnDrawMenuResizeBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuResizeBar(
@@ -2251,7 +2253,7 @@ virtual void OnDrawMenuScrollButton(
  스크롤 단추 메뉴의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다. 메뉴 항목의 전체 높이 팝업 메뉴의 높이 초과 하는 경우에 팝업 메뉴의 가장자리에 메뉴 스크롤 단추가 나타납니다.  
   
 ##  <a name="ondrawmenushadow"></a>CMFCVisualManager::OnDrawMenuShadow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuShadow(
@@ -2313,7 +2315,7 @@ virtual void OnDrawMenuSystemButton(
  이 메서드의 기본 구현에서는 호출 [CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol) 와 `DFC_CAPTION` 유형입니다. 시스템 단추 모양 사용자 지정 비주얼 관리자 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawminiframeborder"></a>CMFCVisualManager::OnDrawMiniFrameBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMiniFrameBorder(
@@ -2435,7 +2437,7 @@ virtual COLORREF OnDrawPaneCaption(
  창 캡션의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawpanedivider"></a>CMFCVisualManager::OnDrawPaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPaneDivider(
@@ -2454,7 +2456,7 @@ virtual void OnDrawPaneDivider(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManager::OnDrawPopupWindowBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPopupWindowBorder(
@@ -2469,7 +2471,7 @@ virtual void OnDrawPopupWindowBorder(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager::OnDrawPopupWindowButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2486,7 +2488,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManager::OnDrawPopupWindowCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2662,7 +2664,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  리본 범주에 대 한 캡션 표시줄의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다. 캡션 표시줄에 대 한 자세한 내용은 참조 [CMFCRibbonContextCaption 클래스](../../mfc/reference/cmfcribboncontextcaption-class.md)합니다.  
   
 ##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager::OnDrawRibbonCategoryScroll  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonCategoryScroll(
@@ -2703,7 +2705,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  리본 범주 탭의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다. 리본 범주에 대 한 자세한 내용은 참조 [CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md)합니다.  
   
 ##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager::OnDrawRibbonCheckBoxOnList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -2724,7 +2726,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager::OnDrawRibbonColorPaletteBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonColorPaletteBox(
@@ -2776,7 +2778,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
  기본 단추의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonDefaultPaneButtonContext(
@@ -2791,7 +2793,7 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -2812,7 +2814,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager::OnDrawRibbonGalleryBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonGalleryBorder(
@@ -2829,7 +2831,7 @@ virtual void OnDrawRibbonGalleryBorder(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManager::OnDrawRibbonGalleryButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonGalleryButton(
@@ -2844,7 +2846,7 @@ virtual void OnDrawRibbonGalleryButton(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondrawribbonkeytip"></a>CMFCVisualManager::OnDrawRibbonKeyTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonKeyTip(
@@ -2928,7 +2930,7 @@ virtual void OnDrawRibbonMainPanelFrame(
  에 대 한 프레임의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 하는 `CMFCRibbonMainPanel`합니다.  
   
 ##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager::OnDrawRibbonMenuCheckFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3224,7 +3226,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
  리본 메뉴의 탭 집합 주위 프레임의 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager::OnDrawScrollButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawScrollButtons(
@@ -3272,7 +3274,7 @@ virtual void OnDrawSeparator(
  구분 기호는 컨트롤 막대에서 그룹 관련된 아이콘을 구분 하는 데 사용 됩니다. 이 메서드의 기본 구현에서는 표준 구분 기호를 표시합니다. 구분 기호 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager::OnDrawShowAllMenuItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawShowAllMenuItems(
@@ -3706,7 +3708,7 @@ virtual void OnDrawTasksGroupCaption(
  캡션을 사용자 지정 하려면 파생된 클래스에서이 메서드를 재정의 하는 `CMFCTasksPaneTaskGroup`합니다.  
   
 ##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager::OnDrawTasksGroupIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTasksGroupIcon(
@@ -3754,7 +3756,7 @@ virtual void OnDrawTearOffCaption(
  분리 막대에 대 한 캡션의 모양 사용자 지정 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="ondrawtoolboxframe"></a>CMFCVisualManager::OnDrawToolBoxFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawToolBoxFrame(
@@ -3791,7 +3793,7 @@ virtual BOOL OnEraseMDIClientArea(
  비주얼 관리자 서 MDI 클라이언트 영역을 지울 때 사용자 지정 코드를 실행 하려면이 메서드를 재정의 합니다.  
   
 ##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager::OnErasePopupWindowButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnErasePopupWindowButton(
@@ -3976,7 +3978,7 @@ virtual void OnFillButtonInterior(
  도구 모음 단추의 가능한 상태는 `ButtonsIsRegular`, `ButtonsIsPressed`, 또는 `ButtonsIsHighlighted`합니다.  
   
 ##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnFillCaptionBarButton(
@@ -4273,7 +4275,7 @@ virtual void OnFillRibbonMenuFrame(
  메뉴 모음에 대 한 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 하는 `CMFCRibbonMainPanel`합니다.  
   
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4438,7 +4440,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
  강조 표시 된 메뉴 명령의 모양을 사용자 지정할 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
 ##  <a name="onncactivate"></a>CMFCVisualManager::OnNcActivate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnNcActivate(
@@ -4520,7 +4522,7 @@ static void RedrawAll();
 ```  
   
 ##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager::RibbonCategoryColorToRGB  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);

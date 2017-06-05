@@ -97,6 +97,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 클래스
 리본 요소 집합이 포함된 패널을 구현합니다. 패널을 그리면 지정된 패널 크기에 가능한 한 많은 요소를 표시합니다.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 
   
 ## <a name="syntax"></a>구문  
   
@@ -450,7 +453,7 @@ LPCTSTR GetName() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
@@ -471,7 +474,7 @@ CMFCRibbonCategory* GetParentCategory() const;
  이 리본 패널을 포함 하는 리본 범주에 대 한 포인터입니다.  
   
 ##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
@@ -696,7 +699,7 @@ virtual BOOL IsMainPanel() const;
  사용자가 응용 프로그램 단추를 선택 하는 경우 주 리본 패널이 표시 됩니다.  
   
 ##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuMode() const;  
@@ -707,7 +710,7 @@ BOOL IsMenuMode() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnKey(UINT nChar);

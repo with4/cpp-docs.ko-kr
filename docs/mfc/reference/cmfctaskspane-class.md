@@ -410,7 +410,7 @@ int AddPage(LPCTSTR lpszPageLabel);
  새 페이지의&0;부터 시작 하는 인덱스입니다.  
   
 ##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int AddSeparator(int nGroup);
@@ -496,7 +496,7 @@ CMFCTasksPane();
 ```  
   
 ##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CollapseAllGroups(BOOL bCollapse = TRUE);
@@ -544,7 +544,7 @@ BOOL CollapseGroup(
  축소 된 그룹 그룹 제목을;를 보여 줍니다. 작업 목록에 숨겨져 있습니다.  
   
 ##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -648,7 +648,7 @@ void EnableNavigationToolbar(
  기본적으로 프레임 워크에는 탐색 도구 모음을 표시 되지 않습니다. 탐색 도구 모음 표시 되지 않으면 도킹 표시줄의 캡션에 탐색 단추가 있습니다.  
   
 ##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableOffsetCustomControls(BOOL bEnable);
@@ -797,7 +797,7 @@ int GetHorzMargin() const;
  작업 창 및 클라이언트 영역의 가장자리 사이의 기본 간격은 12 픽셀입니다.  
   
 ##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetNextPages(CStringList& lstNextPages) const;  
@@ -838,7 +838,7 @@ int GetPagesCount() const;
  작업 창에서 페이지의 수입니다.  
   
 ##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPreviousPages(CStringList& lstPrevPages) const;  
@@ -850,7 +850,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
@@ -966,7 +966,7 @@ int GetTasksHorzOffset() const;
  작업의 기본 가로 오프셋은 12 픽셀입니다.  
   
 ##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconHorzOffset() const;  
@@ -977,7 +977,7 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconVertOffset() const;  
@@ -1001,7 +1001,7 @@ int GetVertMargin() const;
  세로 여백은 작업창과 클라이언트 영역의 가장자리 사이의 공간입니다. 세로 여백의 기본값은 12 픽셀입니다.  
   
 ##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
@@ -1051,7 +1051,7 @@ BOOL IsForwardButtonEnabled() const;
  앞으로 단추 작업 페이지의 기록에서 앞으로 탐색이 있습니다.  
   
 ##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsGroupCollapseEnabled() const;  
@@ -1082,7 +1082,7 @@ BOOL IsNavigationToolbarEnabled() const;
  `TRUE`탐색 도구 모음을 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
 ##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolBox() const;  
@@ -1113,7 +1113,7 @@ BOOL IsWrapTasksEnabled() const;
  `TRUE`작업 문자열; 래핑된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadState(
@@ -1142,7 +1142,7 @@ virtual void OnActivateTasksPanePage();
  작업 창 페이지의 모양을 사용자 지정 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancel();
@@ -1180,7 +1180,7 @@ virtual void OnClickTask(
  작업을 클릭할 때 사용자 지정 코드를 실행 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="onok"></a>CMFCTasksPane::OnOK  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnOK();
@@ -1225,7 +1225,7 @@ virtual void OnPressHomeButton();
  홈 탐색 단추를 클릭할 때 사용자 지정 코드를 실행 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPressOtherButton(
@@ -1240,7 +1240,7 @@ virtual void OnPressOtherButton(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1254,7 +1254,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1283,7 +1283,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RecalcLayout(BOOL bRedraw = TRUE);
@@ -1377,7 +1377,7 @@ BOOL RemoveTask(
  `TRUE`함수가 성공 하면 `FALSE` 경우 `nGroup` 또는 `nTask` 올바르지 않습니다.  
   
 ##  <a name="savestate"></a>CMFCTasksPane::SaveState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SaveState(
@@ -1396,7 +1396,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="serialize"></a>CMFCTasksPane::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -1638,7 +1638,7 @@ void SetTasksHorzOffset(int n = -1);
  기본 가로 오프셋은 12 픽셀입니다.  
   
 ##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconHorzOffset(int n = -1);
@@ -1650,7 +1650,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconVertOffset(int n = -1);
@@ -1736,7 +1736,7 @@ BOOL SetWindowHeight(
  호출 [CMFCTasksPane::AddWindow](#addwindow) 작업 창 컨트롤을 추가 합니다.  
   
 ##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);

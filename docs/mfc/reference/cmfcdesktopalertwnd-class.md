@@ -62,7 +62,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` 클래스는 이벤트에 대 한 사용자에 게 화면에 표시 되는 모덜리스 대화 상자의의 기능을 구현 합니다.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -288,7 +289,7 @@ BOOL HasSmallCaption() const;
  작은 캡션 또는 보통 크기로 캡션을 팝업 창에 있는지 확인 하려면이 메서드를 사용 합니다. 기본적으로 작은 캡션 7 픽셀 높이 합니다. Windows API 함수를 호출 하 여 보통 크기로 캡션 높이 가져올 수 있습니다 `GetSystemMetrics(SM_CYCAPTION)`합니다.  
   
 ##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
@@ -319,7 +320,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  알림 창에 대 한 링크를 클릭할 때 알림이 표시 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCommand(
@@ -336,7 +337,7 @@ virtual BOOL OnCommand(
 ### <a name="remarks"></a>주의  
   
 ##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -348,7 +349,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
@@ -442,7 +443,7 @@ void SetTransparency(BYTE nTransparency);
  팝업 창에 대 한 투명도 수준을 설정 하려면이 함수를 호출 합니다.  
   
 ##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetDialogSize();

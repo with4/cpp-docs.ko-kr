@@ -101,6 +101,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 `CMDIChildWndEx` 클래스 다중 문서 MDI (인터페이스) 자식 창 Windows의 기능을 제공 합니다. 기능을 확장 [CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)합니다. MDI 응용 프로그램에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.  
+ 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ## <a name="syntax"></a>구문  
   
@@ -238,7 +241,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  지연 된 창 위치 구조에 대 한 핸들입니다.  
   
 ##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanShowOnMDITabs();
@@ -348,7 +351,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
  주 프레임에 도킹 맞춤을 사용 하도록 설정 하려면이 메서드를 호출 합니다. CBRS_ALIGN_ 플래그의 조합에 전달할 수 있습니다 (자세한 내용은 참조 [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
 ##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -427,7 +430,7 @@ CBasePane* GetPane(UINT nID);
  창에 대 한 포인터는 경우 발견, 그렇지 않으면 `NULL`합니다.  
   
 ##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -661,7 +664,7 @@ void RemovePaneFromDockManager(
  제거 창을 대체 하는 창에 대 한 포인터입니다.  
   
 ##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRelatedTabGroup(CMFCTabCtrl* p);
@@ -673,7 +676,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(

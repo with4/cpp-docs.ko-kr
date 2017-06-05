@@ -124,6 +124,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 클래스
 A `CMFCPropertyGridProperty` 개체 속성 목록 컨트롤에 목록 항목을 나타냅니다.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -1203,7 +1205,7 @@ virtual BOOL OnKillFocus(CWnd*);
  기본적으로이 메서드는 아무 것도 한 다음 반환 `TRUE`합니다. 이 메서드를 재정의 하는 경우 반환 `TRUE` 경우 프레임 워크 속성 입력된 포커스를 잃었을 때 편집 작업을 종료할 수 있습니다.  
   
 ##  <a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
@@ -1216,7 +1218,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
   
 ##  <a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPosSizeChanged(CRect);
@@ -1287,7 +1289,7 @@ virtual BOOL OnSetCursor() const;
  This method supports the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
   
 ##  <a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetSelection(CMFCPropertyGridProperty*);

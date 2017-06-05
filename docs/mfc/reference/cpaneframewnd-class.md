@@ -259,7 +259,7 @@ virtual void AdjustLayout();
 ```  
   
 ##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AdjustPaneFrames();
@@ -337,7 +337,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
  미니 프레임에 도킹할 수 있는 경우 0이 아닌 `pDockingBar`그렇지 않으면 0입니다.  
   
 ##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CheckGripperVisibility();
@@ -520,7 +520,7 @@ virtual CString GetCaptionText();
  캡션 텍스트를 표시 하는 경우이 메서드는 프레임 워크에 의해 호출 됩니다.  
   
 ##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager() const;  
@@ -557,7 +557,7 @@ virtual CWnd* GetFirstVisiblePane() const;
  미니 프레임 창의 첫 번째 창 또는 `NULL` 미니 프레임 창에 창이 없는 경우.  
   
 ##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CPoint GetHotPoint() const;  
@@ -592,7 +592,7 @@ virtual int GetPaneCount() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CWnd* GetParent();
@@ -603,7 +603,7 @@ CWnd* GetParent();
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetPinState() const;  
@@ -614,7 +614,7 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRecentFloatingRect() const;  
@@ -670,7 +670,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMRIGHT`|점은 오른쪽 아래에 있습니다.|  
   
 ##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsCaptured() const;  
@@ -681,7 +681,7 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>주의  
   
 ##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDelayShow() const;  
@@ -862,7 +862,7 @@ virtual void OnShowPane(
  미니 프레임 창의 창을 표시 하거나 숨길 때 프레임 워크에 의해 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
 ##  <a name="pin"></a>CPaneFrameWnd::Pin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Pin(BOOL bPin = TRUE);
@@ -994,7 +994,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
 ##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDelayShow(BOOL bDelayShow);
@@ -1006,7 +1006,7 @@ void SetDelayShow(BOOL bDelayShow);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDockingManager(CDockingManager* pManager);
@@ -1040,7 +1040,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
  도킹 관리자에 대 한 포인터입니다.  
   
 ##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetHotPoint(CPoint& ptNew);
@@ -1105,7 +1105,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  메서드가 성공했으면 `TRUE`이고, 실패했으면 `FALSE`입니다.  
   
 ##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -1117,7 +1117,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ### <a name="remarks"></a>주의  
   
 ##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void StoreRecentTabRelatedInfo(
