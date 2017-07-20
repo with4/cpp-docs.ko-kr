@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **new 및 delete** 이전 라이브러리 버전에서는 구현 시 정의된 연산자 new 및 delete 함수를 런타임 라이브러리 DLL(예: msvcr120.dll)에서 내보냈습니다. 현재 이들 연산자 함수는 런타임 라이브러리 DLL을 사용할 때라도 항상 정적으로 이진 파일에 연결됩니다.  
   
-     이는 네이티브 또는 혼합 코드(/clr)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 /clr:pure로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 #include \<new> 또는 #include \<new.h>를 추가해야 할 수 있습니다. /clr:pure는 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.  
+     이는 네이티브 또는 혼합 코드(/clr)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 /clr:pure로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 #include \<new> 또는 #include \<new.h>를 추가해야 할 수 있습니다. /clr:pure는 Visual Studio 2015에서 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/28/2017
 ####  <a name="BK_STL"></a> C++ 표준 라이브러리  
  새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전(예: Visual Studio 2013의 경우 1800)이 포함된 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
   
--   **C++ 표준 라이브러리 포함 파일** C++ 표준 라이브러리 헤더의 include 구조체에 몇 가지 변경 내용이 적용되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]의 헤더 변경 내용 두 개 이상이 사용자 코드에 영향을 미칩니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째, \<tuple>은 현재 모든 \<array>를 포함하지 않고 std::array를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 현재 std::array를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.  
+-   **C++ 표준 라이브러리 포함 파일** C++ 표준 라이브러리 헤더의 include 구조체에 몇 가지 변경 내용이 적용되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. Visual Studio 2015에서 두 개 이상의 헤더 변경 내용이 사용자 코드에 영향을 줍니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째, \<tuple>은 현재 모든 \<array>를 포함하지 않고 std::array를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 현재 std::array를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.  
   
 -   **steady_clock** [steady_clock](../standard-library/steady-clock-struct.md)의 \<chrono> 구현은 지속성 및 단조성에 대한 C++ 표준 요구 사항을 충족하도록 변경되었습니다. 이제 steady_clock은 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) (영문)를 기반으로 하고 high_resolution_clock은 steady_clock에 대한 typedef입니다. 따라서 Visual C++에서 steady_clock::time_point는 현재 chrono::time_point<steady_clock>에 대한 typedef이나, 다른 구현에 이를 반드시 적용할 필요는 없습니다.  
   
@@ -280,7 +280,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **std::allocator::deallocate** Visual C++ 2013 이하에서 std::allocator::deallocate(p, n)는 n으로 전달된 인수를 무시했습니다.  C++ 표준에서 n은 항상 p를 반환한 allocate의 호출에 첫 번째 인수로 전달된 값과 같아야 합니다. 그러나 현재 버전에서는 n 값이 검사됩니다. 표준에 필요한 값과 다른 n에 대한 인수를 전달하는 코드는 런타임에 충돌을 가져올 수 있습니다.  
   
--   **hash_map 및 hash_set** 비표준 헤더 파일 hash_map 및 hash_set은 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 사용되지 않고 이후 릴리스에서 제거될 예정입니다. 대신에 unordered_map 및 unordered_set을 사용하세요.  
+-   **hash_map 및 hash_set** 비표준 헤더 파일 hash_map 및 hash_set은 Visual Studio 2015에서 사용되지 않고 이후 릴리스에서 제거될 예정입니다. 대신에 unordered_map 및 unordered_set을 사용하세요.  
   
 -   **비교 연산자 및 operator()** 현재 연관 컨테이너(\<map> 패밀리)에서 const 호출 가능 함수 호출 연산자를 포함하려면 비교 연산자가 필요합니다. 현재 비교 연산자 클래스 선언에서 다음 코드는 컴파일되지 않습니다.  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 04/28/2017
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **형식 특성** The old names for 형식 특성 from an earlier version of the C++ draft standard have been removed. 이 이름은 C++11에서 변경되었고 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 C++11 값으로 업데이트되었습니다. 다음 표에서는 이전 이름과 새 이름을 보여 줍니다.  
+-   **형식 특성** The old names for 형식 특성 from an earlier version of the C++ draft standard have been removed. 이 이름은 C++11에서 변경되었고 Visual Studio 2015에서 C++11 값으로 업데이트되었습니다. 다음 표에서는 이전 이름과 새 이름을 보여 줍니다.  
   
     |이전 이름|새 이름|  
     |--------------|--------------|  
@@ -864,7 +864,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **복사 생성자**  
   
-     [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
+     [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 Visual Studio 2015에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
