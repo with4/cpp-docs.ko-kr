@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 포팅 및 업그레이드 가이드
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/24/2017
 |[타사 라이브러리 포팅](porting-third-party-libraries.md)|**vcpkg** 명령줄 도구를 사용하여 이전 오픈 소스 라이브러리를 최신 Visual C++ 도구 집합으로 컴파일된 버전으로 포팅하는 방법입니다.|  
 |[포팅 및 업그레이드: 예제 및 사례 연구](porting-and-upgrading-examples-and-case-studies.md)|이 섹션에서는 여러 가지 샘플 및 응용 프로그램을 포팅 및 업그레이드하고 경험과 결과를 설명했습니다. 이러한 내용을 읽으면 포팅 및 업그레이드 프로세스와 관련된 사항을 이해하는 데 도움이 될 수 있습니다. 프로세스 전반에 걸쳐 업그레이드를 위한 팁과 트릭을 설명하고 특정 오류를 수정한 방법을 보여 줍니다.|  
 |[유니버설 Windows 플랫폼으로 포팅](porting-to-the-universal-windows-platform-cpp.md)|Windows 10으로 코드를 이식하는 방법에 대한 정보를 포함합니다.|  
-|[UNIX 사용자를 위한 Visual C++ 소개](introduction-to-visual-cpp-for-unix-users.md)|[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]를 처음 사용하며 생산성을 높이려는 UNIX 사용자에게 정보를 제공합니다.|  
+|[UNIX 사용자를 위한 Visual C++ 소개](introduction-to-visual-cpp-for-unix-users.md)|Visual C++를 처음 사용하며 생산성을 높이려는 UNIX 사용자에게 정보를 제공합니다.|  
 |[UNIX에서 Win32로 포팅](porting-from-unix-to-win32.md)|UNIX 응용 프로그램을 Windows로 마이그레이션하는 옵션을 설명합니다.|  
 |[C++/CLI 마이그레이션 입문](../dotnet/cpp-cli-migration-primer.md)|새 구문을 사용하도록 Managed Extensions for C++ 구문을 업그레이드하는 방법을 자세히 보여 줍니다. 자세한 내용은 [런타임 플랫폼의 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)을 참조하세요.|  
   

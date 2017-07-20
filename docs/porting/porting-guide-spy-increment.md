@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
 이 포팅 사례 연구는 일반적인 포팅 프로젝트, 발생할 수 있는 문제 유형 및 포팅 문제를 다루기 위한 몇 가지 일반적인 팁과 트릭에 대한 아이디어를 제공하도록 설계되었습니다. 프로젝트 포팅 경험은 코드의 세부 사항에 따라 달라지므로 결정적인 포팅 가이드는 아닙니다.  
   
 ## <a name="spy"></a>Spy++  
- Spy++는 Windows 데스크톱의 사용자 인터페이스 요소에 대해 모든 종류의 정보를 제공하는 널리 사용되는 Windows 데스크톱용 GUI 진단 도구입니다. 창의 전체 계층 구조를 표시하고 각 창과 컨트롤에 대한 메타데이터에 액세스할 수 있게 합니다. 이 유용한 응용 프로그램은 수년 동안 Visual Studio와 함께 제공되었습니다. Visual C++ 6.0에서 마지막으로 컴파일된 이전 버전을 찾아 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]로 포팅했습니다. Visual Studio 2017의 환경은 거의 동일해야 합니다.
+ Spy++는 Windows 데스크톱의 사용자 인터페이스 요소에 대해 모든 종류의 정보를 제공하는 널리 사용되는 Windows 데스크톱용 GUI 진단 도구입니다. 창의 전체 계층 구조를 표시하고 각 창과 컨트롤에 대한 메타데이터에 액세스할 수 있게 합니다. 이 유용한 응용 프로그램은 수년 동안 Visual Studio와 함께 제공되었습니다. Visual C++ 6.0에서 마지막으로 컴파일된 이전 버전이 Visual Studio 2015로 이식되었습니다. Visual Studio 2017의 환경은 거의 동일해야 합니다.
   
  이 사례가 특히 Visual C++ 6.0 이후 Visual C++의 각 릴리스로 업데이트되지 않은 오래된 프로젝트에 대해 MFC 및 Win32 API를 사용하는 Windows 데스크톱 응용 프로그램을 포팅하는 일반적인 경우라고 간주했습니다.  
   
@@ -84,7 +84,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Windows XP는 Microsoft에서 더 이상 지원되지 않으므로 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 대상으로 지정할 수는 있지만 응용 프로그램에서 지원을 단계적으로 중단하고 사용자가 새 버전의 Windows를 채택하도록 장려해야 합니다.  
+ Windows XP는 Microsoft에서 더 이상 지원되지 않으므로 Visual Studio 2015에서 대상으로 지정할 수는 있지만 응용 프로그램에서 지원을 단계적으로 중단하고 사용자가 새 버전의 Windows를 채택하도록 장려해야 합니다.  
   
  오류를 제거하려면 **프로젝트 속성** 설정을 현재 대상으로 지정하려는 가장 낮은 Windows 버전으로 업데이트하여 WINVER을 정의합니다. 다양한 Windows 릴리스에 대한 값 테이블은 [여기](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx)서 확인할 수 있습니다.  
   

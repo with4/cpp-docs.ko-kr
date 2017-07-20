@@ -21,10 +21,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
@@ -526,7 +527,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
 -   **복사 생성자**  
   
-     [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
+     [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 및 Visual Studio 2015에서 컴파일러는 클래스에 사용자 정의 이동 생성자가 있지만 사용자 정의 복사 생성자가 없을 경우 해당 클래스에 대한 복사 생성자를 생성합니다. Dev14에서는 생성된 복사 생성자가 "= delete"로 표시됩니다.  
   
 ##  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상  
   
@@ -606,7 +607,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
   
      또한 컴파일러가 특정 진단을 제공하지는 않지만, 인라인 operator new는 잘못된 형식으로 간주됩니다.  
   
--   **비클래스 형식에서 'operator*type*()'(사용자 정의 변환) 호출**  
+-   ***비클래스 형식에서 'operator* type**()'(사용자 정의 변환) 호출  
   
      이전 버전의 컴파일러에서는 'operator *type*()'을 자동으로 무시하면서 비클래스 형식에서 호출할 수 있었습니다. 이 이전 동작으로 잘못된 코드가 자동으로 생성되어 예기치 않은 런타임 동작이 발생하는 위험이 초래되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2228이 발생합니다.  
   
@@ -1388,7 +1389,7 @@ Visual C++ 2015 이상 버전에서는 컴파일러 규칙 개선 작업이 진�
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     컴파일러에서 지원이 제거될 때까지 특성 사용 ATL 코드를 계속 사용하려는 경우 `/Wv:18` 또는 `/wd:4467` 명령줄 인수를 컴파일러에 전달하거나 소스 코드에 `#pragma warning(disable:4467)`을 추가하여 이 경고를 해제할 수 있습니다.  
+     컴파일러에서 지원이 제거될 때까지 특성 사용 ATL 코드를 계속 사용하려는 경우 `/Wv:18` 또는 `/wd4467` 명령줄 인수를 컴파일러에 전달하거나 소스 코드에 `#pragma warning(disable:4467)`을 추가하여 이 경고를 해제할 수 있습니다.  
   
      예제 1(이전)  
   

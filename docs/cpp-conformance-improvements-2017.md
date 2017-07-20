@@ -1,7 +1,7 @@
 ---
 title: "C++ 컴파일러 규칙 향상 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-Visual Studio 2017에서는 조건부 계산 연산의 왼쪽 피연산자가 constexpr 컨텍스트에서 유효하지 않을 경우 정확히 오류를 발생시킵니다. 다음 코드는 Visual Studio 2015에서는 컴파일되지만 Visual Studio 2017에서는 컴파일되지 않습니다.
+Visual Studio 2017에서는 조건부 계산 연산의 왼쪽 피연산자가 constexpr 컨텍스트에서 유효하지 않을 경우 정확히 오류를 발생시킵니다. 다음 코드는 Visual Studio 2017이 아닌 Visual Studio 2015에서 컴파일합니다(C3615 constexpr 함수 ‘f’는 상수 식이 될 수 없음).
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 오류를 수정하려면 array::size() 함수를 constexpr로 선언하거나 f에서 constexpr 한정자를 제거합니다. 
@@ -355,12 +355,12 @@ Visual Studio의 이전 버전에서는 경우에 따라 컴파일러가 런타�
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 오류를 해결하려면 i를 `int`로 선언합니다.
@@ -372,8 +372,8 @@ Visual Studio 2017 업데이트 버전 15.3에서는 표준을 더 엄격하게 
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>네이티브에서 관리로의 마샬링에 대한 새로운 컴파일러 경고 및 런타임 검사
@@ -384,16 +384,16 @@ static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 R
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -415,7 +415,7 @@ int main()
 실험 및 피드백용으로 릴리스된 WinRT API는 `Windows.Foundation.Metadata.ExperimentalAttribute`로 데코레이트됩니다. 업데이트 버전 15.3에서 컴파일러는 특성을 발견할 경우 경고 C4698을 생성합니다. 이전 Windows SDK 버전의 몇몇 API는 이미 특성으로 데코레이트되었고 이러한 API를 호출하면 이 컴파일러 경고의 트리거가 시작됩니다. 최신 Windows SDK에서는 모든 제공된 형식에서 특성이 제거되지만 이전 SDK를 사용 중인 경우에는 모든 제공된 형식 호출에 대해 이러한 경고를 표시하지 않아야 합니다.
 다음 코드는 경고 C4698을 생성합니다. “‘Windows::Storage::IApplicationDataStatics2::GetForUserAsync’는 평가 목적으로만 제공되며 향후 업데이트에서 변경되거나 제거될 수 있습니다.”
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 이 경고를 사용하지 않도록 설정하려면 #pragma를 추가합니다.
@@ -435,7 +435,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 오류를 해결하려면 클래스에 선언을 추가합니다.
@@ -460,7 +460,7 @@ C++에서 ‘this’는 X에 대한 형식 포인터의 prvalue입니다. ‘thi
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -527,7 +527,7 @@ Constexpr auto off2 = offsetof(A, bar);
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 경고를 해결하려면 extern “C”를 먼저 삽입합니다.
@@ -535,6 +535,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+이 경고는 기본적으로 꺼져 있으며 `/Wall /WX`로 컴파일된 코드에만 영향을 줍니다.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 및 삭제된 소멸자 호출
 이전 버전의 Visual Studio에서 컴파일러는 삭제된 소멸자 호출이 ‘decltype’과 연결된 식의 컨텍스트에서 발생한 시점을 검색하지 않았습니다. 업데이트 버전 15.3에서 다음 코드는 “오류 C2280: ‘A<T>::~A(void)’: 삭제된 함수를 참조하려고 합니다.”를 생성합니다.
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>초기화되지 않은 const 변수
+### <a name="uninitialized-const-variables"></a>초기화되지 않은 const 변수
 Visual Studio 2017 RTW 릴리스에는 ‘const’ 변수가 초기화되지 않으면 C++ 컴파일러가 진단을 실행하지 않는 재발 문제가 있었습니다. 이 재발 문제는 Visual Studio 2017 업데이트 1에서 해결되었습니다. 다음 코드는 “경고 C4132: ‘Value’: const 개체를 초기화해야 합니다.”를 생성합니다.
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 오류를 해결하려면 `Value`에 값을 할당합니다.
 
@@ -583,6 +584,108 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
  
 경고는 /Wv:18에서는 제외되고 기본적으로 경고 수준 W2에서 켜집니다.
 
+
+### <a name="stdisconvertible-for-array-types"></a>배열 형식에 대한 std::is_convertible
+이전 버전의 컴파일러는 배열 형식에 대한 [std::is_convertible](standard-library/is-convertible-class.md)에 대해 잘못된 결과를 제공했습니다. 따라서 라이브러리 작성자는 `std::is_convertable<…>` 형식 특성을 사용할 때 특별히 Visual C++ 컴파일러를 사용해야 했습니다. 다음 예제에서는 정적 어설션이 이전 버전의 Visual Studio는 통과하나 Visual Studio 2017 업데이트 버전 15.3은 통과하지 못합니다.
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+가상의 함수 정의가 올바른 형식으로 되어 있는지 확인하는 방법으로 **std::is_convertible<From, To>**가 계산됩니다.
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>비공개 소멸자 및 std::is_constructible
+이전 버전의 컴파일러는 [std::is_constructible](standard-library/is-constructible-class.md)의 결과를 결정할 때 소멸자가 비공개인지 여부를 무시합니다. 그러나 지금은 비공개 여부를 고려합니다. 다음 예제에서는 정적 어설션이 이전 버전의 Visual Studio는 통과하나 Visual Studio 2017 업데이트 버전 15.3은 통과하지 못합니다.
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+비공개 소멸자는 형식을 non-constructible로 만듭니다. 다음 선언이 작성된 것처럼 **std::is_constructible<T, Args…>**가 계산됩니다.
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+이 호출은 소멸자 호출을 의미합니다.
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: 모호한 오버로드 확인
+이전 버전의 컴파일러는 선언 및 인수 종속적인 조회를 모두 사용하여 검색할 때 모호성을 감지하지 못하는 경우가 종종 있었습니다. 그러면 잘못된 오버로드를 선택하고 예기치 않은 런타임 동작이 발생할 수 있습니다. 다음 예제에서는 Visual Studio 2017 업데이트 버전 15.3이 오버로드된 함수에 C2668 ‘f’: 모호한 호출을 정확히 수행합니다.
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+::f()를 호출하려는 경우 코드를 수정하려면 사용 중인 N::f 문을 제거합니다.
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: 로컬 함수 선언 및 인수 종속 조회
+로컬 함수 선언은 바깥쪽 범위에 있는 함수 선언을 숨기고 인수 종속 조회를 사용하지 않도록 설정합니다.
+그러나 이 경우에는 이전 버전의 Visual C++ 컴파일러가 인수 종속 조회를 수행했으므로 잘못된 오버로드를 선택하고 예기치 않은 런타임 동작이 발생할 가능성이 있습니다. 일반적으로 오류는 로컬 함수 선언의 잘못된 시그니처 때문입니다. 다음 예제에서는 Visual Studio 2017 업데이트 버전 15.3이 C2660 ‘f’: 함수가 2개의 인수를 사용하지 않음을 정확히 수행합니다.
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+이 문제를 해결하려면 **f(S)** 시그니처를 변경하거나 제거합니다.
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: 이니셜라이저 목록에서 초기화 순서
+클래스 구성원은 이니셜라이저 목록에 나타나는 순서가 아니라 선언된 순서대로 초기화됩니다. 이전 버전의 컴파일러는 이니셜라이저 목록의 순서가 선언 순서와 다른 경우 경고를 표시하지 않았습니다. 이로 인해 한 구성원의 초기화가 이미 초기화되고 있는 목록의 다른 구성원에 종속되는 경우에는 정의되지 않은 런타임 동작이 발생할 수 있었습니다. 다음 예제에서는 Visual Studio 2017 업데이트 버전 15.3(/Wall 또는 /WX 포함)에서 C5038: 데이터 구성원 ‘A::y’가 데이터 구성원 ‘A::x’ 이후에 초기화됨 경고가 발생합니다.
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+문제를 해결하려면 선언과 같은 순서가 되도록 이니셜라이저 목록을 정렬합니다. 하나 또는 두 이니셜라이저가 기본 클래스 구성원을 참조하는 경우 유사한 경고가 발생합니다.
+
+이 경고는 기본적으로 꺼져 있으며 /Wall 또는 /WX를 사용하여 컴파일한 코드에만 영향을 줍니다.
 
 ## <a name="see-also"></a>참고 항목  
 [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)  
