@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7c75629d56e6d8e5291b7d1f7cca9995ab9a50da
-ms.openlocfilehash: d8515fc613f95ae5d6395e33b49482488bcc488d
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>UNIX 사용자를 위한 Visual C++ 소개
-이 항목에서는 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]를 처음 사용하며 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]로 생산성을 높이려는 UNIX 사용자에게 정보를 제공합니다.  
+이 항목에서는 Visual C++를 처음 사용하며 Visual C++로 생산성을 높이려는 UNIX 사용자에게 정보를 제공합니다.  
   
 ## <a name="getting-started-on-the-command-line"></a>명령줄에서 시작  
- UNIX 명령줄 환경을 사용하는 것과 유사한 방식으로 명령줄에서 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]를 사용할 수 있습니다. 명령줄 C 및 C++ 컴파일러(CL.EXE)와 UNIX에서 만든 유틸리티의 Microsoft 버전인 NMAKE.EXE를 비롯한 도구를 사용하여 명령 프롬프트에서 컴파일합니다.  
+ UNIX 명령줄 환경을 사용하는 것과 유사한 방식으로 명령줄에서 Visual C++를 사용할 수 있습니다. 명령줄 C 및 C++ 컴파일러(CL.EXE)와 UNIX에서 만든 유틸리티의 Microsoft 버전인 NMAKE.EXE를 비롯한 도구를 사용하여 명령 프롬프트에서 컴파일합니다.  
   
- UNIX에서는 /usr/bin 등의 공용 폴더에 명령이 설치됩니다. [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]에서는 설치 디렉터리의 VC\bin(일반 설치의 경우 Program Files\Microsoft Visual Studio 8\VC\bin)에 명령줄 도구가 설치됩니다. 명령줄 도구를 사용하려면 설치 디렉터리의 Common7\Tools에 있는 vsvars32.bat를 실행합니다. 그러면 경로에 bin 디렉터리가 추가되고 명령줄에서 Visual C++ 프로그램을 컴파일하는 데 필요한 기타 경로가 설정됩니다. 자세한 내용은 [명령줄 빌드](../build/building-on-the-command-line.md) 및 [연습: 명령줄에서 네이티브 C++ 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)을 참조하세요.  
+ UNIX에서는 /usr/bin 등의 공용 폴더에 명령이 설치됩니다. Visual C++에서는 설치 디렉터리의 VC\bin(일반 설치의 경우 Program Files\Microsoft Visual Studio 8\VC\bin)에 명령줄 도구가 설치됩니다. 명령줄 도구를 사용하려면 설치 디렉터리의 Common7\Tools에 있는 vsvars32.bat를 실행합니다. 그러면 경로에 bin 디렉터리가 추가되고 명령줄에서 Visual C++ 프로그램을 컴파일하는 데 필요한 기타 경로가 설정됩니다. 자세한 내용은 [명령줄 빌드](../build/building-on-the-command-line.md) 및 [연습: 명령줄에서 네이티브 C++ 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)을 참조하세요.  
   
 > [!NOTE]
 >  **시작** 메뉴에서 **Visual Studio 명령줄 프롬프트**를 사용하여 명령 프롬프트를 열면 vsvars32.bat가 실행됩니다.  
@@ -60,10 +60,10 @@ ms.lasthandoff: 02/24/2017
  잠재적으로 각각 다른 컴파일러 옵션 집합이나 다른 언어로 빌드된 여러 라이브러리와 실행 파일로 구성된 응용 프로그램은 단일 *솔루션*에 속하는 여러 프로젝트에 저장됩니다. 솔루션은 여러 프로젝트를 함께 그룹화하는 컨테이너에 대한 추상화입니다. 솔루션 정보는 확장명이 .sln 솔루션 파일에 저장됩니다. 자세한 내용은 [Visual Studio의 솔루션 및 프로젝트](/visualstudio/ide/solutions-and-projects-in-visual-studio) 및 [C++ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)을 참조하세요.  
   
 ## <a name="importing-your-existing-code"></a>기존 코드 가져오기  
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]를 통해 메이크파일을 포함하거나 포함하지 않고 컴파일하도록 설정된 기존 코드를 사용하고 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 프로젝트에 넣을 수 있습니다. 자세한 내용은 **기존 코드 파일에서 프로젝트 만들기 마법사**를 참조하세요. 자세한 내용은 [방법: 기존 코드로 C++ 프로젝트 만들기](../ide/how-to-create-a-cpp-project-from-existing-code.md)를 참조하세요.  
+ Visual C++를 통해 메이크파일을 포함하거나 포함하지 않고 컴파일하도록 설정된 기존 코드를 사용하고 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 프로젝트에 넣을 수 있습니다. 자세한 내용은 **기존 코드 파일에서 프로젝트 만들기 마법사**를 참조하세요. 자세한 내용은 [방법: 기존 코드로 C++ 프로젝트 만들기](../ide/how-to-create-a-cpp-project-from-existing-code.md)를 참조하세요.  
   
 ## <a name="creating-a-new-project"></a>새 프로젝트 만들기  
- 개발 환경에서 새 프로젝트를 만들 수 있습니다. [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]에서는 여러 일반적인 프로젝트에 대한 표준 코드를 제공하는 다양한 템플릿을 제공합니다. 응용 프로그램 마법사를 사용하여 다양한 응용 프로그램 형식에 대한 코드 개요로 프로젝트를 생성할 수 있습니다.  
+ 개발 환경에서 새 프로젝트를 만들 수 있습니다. Visual C++에서는 여러 일반적인 프로젝트에 대한 표준 코드를 제공하는 다양한 템플릿을 제공합니다. 응용 프로그램 마법사를 사용하여 다양한 응용 프로그램 형식에 대한 코드 개요로 프로젝트를 생성할 수 있습니다.  
   
  **콘솔 응용 프로그램(Win32) 마법사**를 사용하면 빈 프로젝트로 시작할 수 있습니다. **빈 프로젝트** 확인란을 선택합니다. 나중에 프로젝트에 새 파일과 기존 파일을 추가할 수 있습니다.  
   
@@ -83,4 +83,4 @@ ms.lasthandoff: 02/24/2017
  자세한 내용은 [UNIX에서 Win32로 이식](../porting/porting-from-unix-to-win32.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual C++ 둘러보기](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)
+ [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

@@ -1,4 +1,4 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 오픈 소스 사용 규정
+ ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 오픈 소스 사용 규정
 
 이 프로젝트는 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)(Microsoft 오픈 소스 사용 규정)를 채택했습니다.
 자세한 내용은 [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)(사용 규정 FAQ)를 참조하고 추가 질문이나 의견이 있을 경우 [opencode@microsoft.com](mailto:opencode@microsoft.com)으로 문의하세요.
@@ -7,7 +7,9 @@
 
 환영합니다. 이 리포지토리는 개발 중인 Visual C++ 기술 문서의 소스 파일을 포함합니다. 항목은 [Visual C++ 설명서 사이트](https://docs.microsoft.com/cpp)에 게시됩니다.
 
-Visual Basic 및 Visual C#에 대한 설명서는 별도의 리포지토리([http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs))에 있고 Visual Studio 설명서는 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs)의 리포지토리에 있습니다.
+이 리포지토리는 2017년 6월 23에 Microsoft/vcppdocs에서 MicrosoftDocs/cpp-docs-pr로 이동되었습니다.
+
+Visual Basic 및 Visual C#에 대한 설명서는 별도의 리포지토리([http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs))에 있고 Visual Studio 2017 설명서는 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs)의 리포지토리에 있습니다.
 
 ## <a name="contributing-to-the-documentation"></a>설명서에 기여
 
