@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/30/2017
 
 ---
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/01/2017
 * STL 개선의 전체 목록은 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)(VS 2017 RTM의 STL 수정 사항)을 참조하세요.
 
 ### <a name="open-source-library-support"></a>오픈 소스 라이브러리 지원  
-vcpkg는 오픈 소스 명령줄 도구로, Visual Studio에서 오픈 소스 C++ 정적 라이브러리와 DLL을 얻고 빌드하는 프로세스를 훨씬 간소화합니다. 자세한 내용은 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/)(vcpkg 업데이트: 이제 정적 연결을 사용할 수 있음)을 참조하세요.
+vcpkg는 오픈 소스 명령줄 도구로, Visual Studio에서 오픈 소스 C++ 정적 라이브러리와 DLL을 얻고 빌드하는 프로세스를 훨씬 간소화합니다. 자세한 내용은 [vcpkg: C++용 패키지 관리자](vcpkg.md)를 참조하세요.
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
 C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되었습니다. 자세한 내용은 [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/)(GitHub에서 CppRestSDK 2.9.0을 사용할 수 있음)를 참조하세요.
@@ -143,9 +144,9 @@ C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되
 Visual Studio 2017에서는 솔루션 또는 프로젝트를 만들 필요 없이 소스 코드가 포함된 폴더에서 코딩, 빌드 및 디버그할 수 있는 "폴더 열기" 기능이 도입되었습니다. 이렇게 하면 프로젝트가 MSBuild 기반 프로젝트가 아닌 경우에도 Visual Studio를 훨씬 간단하게 시작할 수 있습니다. "폴더 열기"를 사용하면 Visual Studio에서 MSBuild 프로젝트에 이미 제공하는 강력한 코드 이해, 편집, 빌드 및 디버깅 기능에 액세스할 수 있습니다. 자세한 내용은 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/)("폴더 열기"를 사용하여 C++ 코드베이스를 Visual Studio로 가져오기)를 참조하세요.
 
 * 폴더 열기 환경이 개선되었습니다. 다음 json 파일을 통해 환경을 사용자 지정할 수 있습니다.
-  -    IntelliSense 및 검색 환경을 사용자 지정할 수 있는 CppProperties.json.
-  -    빌드 단계를 사용자 지정할 수 있는 Tasks.json. 
-  -    디버깅 환경을 사용자 지정할 수 있는 Launch.json.
+  - IntelliSense 및 검색 환경을 사용자 지정할 수 있는 CppProperties.json.
+  - 빌드 단계를 사용자 지정할 수 있는 Tasks.json. 
+  - 디버깅 환경을 사용자 지정할 수 있는 Launch.json.
 
 ### <a name="cmake-support-via-open-folder"></a>폴더 열기를 사용한 CMake 지원
 Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하지 않고 CMake 프로젝트를 사용할 수 있는 지원이 도입되었습니다. 자세한 내용은 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)(Visual Studio의 CMake 지원) 및 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)(Visual Studio 2017의 CMake 지원 - RC.2 업데이트의 새로운 기능)를 참조하세요. “폴더 열기”로 CMake 프로젝트를 여는 경우 C++ 편집, 빌드, 디버깅 환경이 자동으로 구성됩니다.
