@@ -1,34 +1,52 @@
 ---
-title: "샘플 일반 텍스트 프로그램 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TCHAR 형식"
-  - "매핑, TCHAR.H 데이터 형식"
-  - "일반 텍스트 예제[CRT]"
-  - "TCHAR 형식"
-  - "TCHAR.H 데이터 형식, 매핑"
+title: "샘플 일반 텍스트 프로그램 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 샘플 일반 텍스트 프로그램
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>샘플 일반 텍스트 프로그램
 **Microsoft 전용**  
   
- 다음 프로그램 GENTEXTC는 TCHAR에서 정의된 제네릭 텍스트 매핑의 보다 상세한 설명을 제공합니다.  
+ 다음 프로그램 GENTEXT.C에서는 TCHAR.H에서 정의된 제네릭 텍스트 매핑의 사용에 대해 보다 상세한 설명을 제공합니다.  
   
 ```  
 // GENTEXT.C  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- `_MBCS` 이 정의된 경우, GENTEXT.C는 다음 MBCS 프로그램을 매핑합니다.  
+ `_MBCS`가 정의된 경우 GENTEXT.C는 다음 MBCS 프로그램에 매핑됩니다.  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- 만일 `_UNICODE` 이 정의된 경우, GENTEXT.C는 다음 프로그램의 유니코드 버전을 매핑합니다.  `main` 에 대한 대체로써 유니코드 프로그램에서  `wmain` 을 사용하는 자세한 내용은 *C 언어 참조*에서 [wmain 사용](../c-language/using-wmain.md) 을 참고하세요.  
+ `_UNICODE`가 정의된 경우 GENTEXT.C는 프로그램의 다음 유니코드 버전에 매핑됩니다. `main` 대신 유니코드 프로그램의 `wmain`을 사용하는 방법에 대한 자세한 내용은 *C 언어 참조*의 [wmain 사용](../c-language/using-wmain.md)을 참조하세요.  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- `_MBCS` 또는 `_UNICODE` 가 둘다 정의되지 않은경우, GENTEXT.C는 단일바이트 코드를 다음과 같이 매핑합니다.  
+ `_MBCS` 또는 `_UNICODE`가 둘 다 정의되지 않은 경우 GENTEXT.C는 다음과 같이 싱글바이트 ASCII 코드에 매핑됩니다.  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,7 +202,7 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)   
  [데이터 형식 매핑](../c-runtime-library/data-type-mappings.md)   
  [상수 및 전역 변수 매핑](../c-runtime-library/constant-and-global-variable-mappings.md)   
