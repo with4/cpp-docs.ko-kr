@@ -1,60 +1,77 @@
 ---
-title: "데이터 형식 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TXCHAR"
-  - "_TUCHAR"
-  - "_TINT"
-  - "_TSCHAR"
-  - "_TCHAR"
-  - "TCHAR::H"
-  - "TCHAR"
-  - "_T"
-  - "_TEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_T 형식"
-  - "_TCHAR 형식"
-  - "_TEXT 형식"
-  - "_TINT 형식"
-  - "_TSCHAR 형식"
-  - "_TUCHAR 형식"
-  - "_TXCHAR 형식"
-  - "일반 텍스트 데이터 형식"
-  - "T 형식"
-  - "TCHAR 형식"
-  - "TCHAR.H 데이터 형식, 정의된 매핑"
-  - "TEXT 형식"
-  - "TINT 형식"
-  - "TSCHAR 형식"
-  - "TUCHAR 형식"
-  - "TXCHAR 형식"
+title: "데이터 형식 매핑 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TXCHAR
+- _TUCHAR
+- _TINT
+- _TSCHAR
+- _TCHAR
+- TCHAR::H
+- TCHAR
+- _T
+- _TEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- TXCHAR type
+- _TSCHAR type
+- T type
+- _TUCHAR type
+- _TEXT type
+- _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 데이터 형식 매핑
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4a5b7610ac3e83a8c3f05db330798e85c82cce2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-이 데이터 형식 매핑은 TCHAR.H에 정의 되어 있으며 상수 `_UNICODE` 또는 `_MBCS`가 프로그램에 정의되어 있는지의 여부에 따라 다릅니다.  
+---
+# <a name="data-type-mappings"></a>데이터 형식 매핑
+이러한 데이터 형식 매핑은 TCHAR.H에서 정의되고 상수 `_UNICODE` 또는 `_MBCS`가 프로그램에서 정의되었는지 여부에 따라 달라집니다.  
   
- 관련 내용은, [Using TCHAR.H Data Types with \_MBCS Code](../text/using-tchar-h-data-types-with-mbcs-code.md)를 참조하십시오.  
+ 관련 정보는 [_MBCS 코드와 TCHAR.H 데이터 형식 사용](../text/using-tchar-h-data-types-with-mbcs-code.md)을 참조하세요.  
   
-### 제네릭 텍스트 데이터 형식 매핑  
+### <a name="generic-text-data-type-mappings"></a>일반 텍스트 데이터 형식 매핑  
   
-|제네릭 텍스트<br /><br /> 데이터 형식 이름|SBCS \(\_UNICODE,<br /><br /> \_MBCS not<br /><br /> defined\)|\_MBCS<br /><br /> 가 정의됨|\_UNICODE<br /><br /> 가 정의됨|  
-|---------------------------|----------------------------------------------------|----------------------|-------------------------|  
+|일반 텍스트<br /><br /> 데이터 형식 이름|SBCS(_UNICODE,<br /><br /> _MBCS 정의되지<br /><br /> 않음)|_MBCS<br /><br /> 정의|_UNICODE<br /><br /> 정의|  
+|--------------------------------------|----------------------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|  
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|  
@@ -63,9 +80,9 @@ caps.handback.revision: 7
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 또는 `_TEXT`|적용 안 됨\(전처리기에서 제거\)|적용 안 됨\(전처리기에서 제거\)|`L`\(다음 문자 또는 문자열을 해당 Unicode 로 변환\)|  
+|`_T` 또는 `_TEXT`|효과 없음(전처리기에 의해 제거됨)|효과 없음(전처리기에 의해 제거됨)|`L`(다음 문자 또는 문자열을 유니코드 문자 또는 문자열로 변환)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)   
  [상수 및 전역 변수 매핑](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [루틴 매핑](../c-runtime-library/routine-mappings.md)   

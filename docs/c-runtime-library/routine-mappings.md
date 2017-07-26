@@ -1,41 +1,58 @@
 ---
 title: "루틴 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "일반 텍스트 매핑"
-  - "TCHAR.H 데이터 형식, 루틴 매핑 목록"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 루틴 매핑
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-일반 텍스트 루틴 맵핑은 TCHAR.H에 정의되어있습니다.  `_tccpy` 와 `_tclen` 는 MBCS 모델에서 함수로 매핑합니다; 그들은 완전성을 위해 SBCS 와 유니코드 모델에서 인라인 함수나 매크로에 매핑됩니다.  일반 텍스트 루틴에 대한 자세한 내용은 `SBCS`\-, `_MBCS`\-, 또는 `_UNICODE`\-related routine에 해당하는 도움말 항목을 참고하십시오.  
+---
+# <a name="routine-mappings"></a>루틴 매핑
+제네릭 텍스트 루틴 매핑은 TCHAR.H에 정의되어 있습니다. `_tccpy` 및 `_tclen`은 MBCS 모델의 함수에 매핑됩니다. 이러한 함수는 완전성을 위해 SBCS 및 유니코드 모델의 매크로 또는 인라인 함수에 매핑됩니다. 제네릭 텍스트 루틴에 대한 자세한 내용은 `SBCS`, `_MBCS` 또는 `_UNICODE` 관련 루틴에 대한 도움말 항목을 참조하십시오.  
   
- 아래 테이블의 왼쪽 열에 나열된 개별 루틴에 대한 자세한 내용은 이 설명서에서는 확인할 수 없습니다.  그러나 해당하는 `SBCS`\-, `_MBCS`\-, 또는 `_UNICODE`\-related routine 에서는 정보를 쉽게 찾아 볼 수 있습니다.  아래에 나열된 일반 텍스트 루틴을 찾으려면 **Search** 명령과 **Help** 메뉴를 사용하십시오.  
+ 다음 표의 왼쪽 열에 나열된 개별 루틴에 대한 자세한 내용은 이 설명서에서 확인할 수 없습니다. 그러나 해당하는 `SBCS`, `_MBCS` 또는 `_UNICODE` 관련 루틴에 대한 정보를 쉽게 조회할 수 있습니다. 아래에 나열된 제네릭 텍스트 루틴을 조회하려면 **도움말** 메뉴의 **검색** 명령을 사용하세요.  
   
- 자세한 내용은 [Generic\-Text Mappings in TCHAR.H](../text/generic-text-mappings-in-tchar-h.md) 을 참조하십시오.  
+ 자세한 내용은 [TCHAR.H의 제네릭 텍스트 매핑](../text/generic-text-mappings-in-tchar-h.md)을 참조하세요.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
-|일반 텍스트 루틴 이름|SBCS \(\_UNICODE & MBCS 정의되지 않음\)|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|------------------|---------------------------------------|----------------|-------------------|  
+|제네릭 텍스트 루틴 이름|SBCS(_UNICODE 및 MBCS가 정의되지 않음)|_MBCS 정의됨|_UNICODE 정의됨|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -271,7 +288,7 @@ caps.handback.revision: 9
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)   
  [데이터 형식 매핑](../c-runtime-library/data-type-mappings.md)   
  [상수 및 전역 변수 매핑](../c-runtime-library/constant-and-global-variable-mappings.md)   

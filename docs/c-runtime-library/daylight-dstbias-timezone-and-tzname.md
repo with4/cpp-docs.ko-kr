@@ -1,78 +1,96 @@
 ---
-title: "_daylight, _dstbias, _timezone 및 _tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tzname"
-  - "_timezone"
-  - "timezone"
-  - "_daylight"
-  - "_tzname"
-  - "daylight"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "시간대"
-  - "시간 조정"
-  - "timezone 변수"
-  - "_tzname 함수"
-  - "_daylight 함수"
-  - "_timezone 함수"
-  - "daylight 함수"
-  - "현지 시간 조정"
-  - "timezone 함수"
-  - "tzname 함수"
-  - "시간대 변수"
+title: "_daylight, _dstbias, _timezone 및 _tzname | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tzname
+- _timezone
+- timezone
+- _daylight
+- _tzname
+- daylight
+dev_langs:
+- C++
+helpviewer_keywords:
+- time zones
+- time adjustments
+- timezone variables
+- _tzname function
+- _daylight function
+- _timezone function
+- daylight function
+- local time adjustments
+- timezone function
+- tzname function
+- time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _daylight, _dstbias, _timezone 및 _tzname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0b2b40db8d478eeb1570022bd1c901c2c28a883b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-`_daylight`, `_dstbias`, `_timezone` 와 `_tzname` 는 현지 시간 조정을 위한 시간과 날짜 루틴에서 사용됩니다.  이러한 전역 변수는 전역 변수 대신에 사용 될 수 있는 보안 기능이 강화된 버전의 함수에서는 종료됩니다.  
+---
+# <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone 및 _tzname
+`_daylight`, `_dstbias`, `_timezone` 및 `_tzname`은 일부 시간 및 날짜 루틴에서 현지 시간을 조정하는 데 사용됩니다. 이러한 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전에 대해서는 더 이상 사용되지 않습니다.  
   
-|전역 변수입니다.|기능적인 동일성.|  
-|---------------|---------------|  
-|`_daylight`|[\_get\_daylight](../c-runtime-library/reference/get-daylight.md)|  
-|`_dstbias`|[\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
-|`_timezone`|[\_get\_timezone](../c-runtime-library/reference/get-timezone.md)|  
-|`_tzname`|[\_get\_tzname](../c-runtime-library/reference/get-tzname.md)|  
+|전역 변수|해당 기능|  
+|---------------------|---------------------------|  
+|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|  
+|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
+|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|  
+|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|  
   
- Time.h에서 선언된 것은 다음과 같습니다.  
+ 이 전역 변수는 Time.h에서 다음과 같이 선언됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-extern int _daylight;   
-extern int _dstbias;   
-extern long _timezone;   
+extern int _daylight;   
+extern int _dstbias;   
+extern long _timezone;   
 extern char *_tzname[2];  
 ```  
   
-## 설명  
- `_ftime` , `localtime`, 또는 `_tzset`의 호출에서, `_daylight`, `_dstbias`, `_timezone`, 그리고 `_tzname` 의 값은 `TZ` 환경 변수의 값으로부터 결정됩니다.  만일 명시적으로 `TZ`의 값을 설정하는 경우, `_tzname[0]` 과 `_tzname[1]` 은 각각 "PDT"와 "PST"의 기본설정을 포함합니다.  시간\-조작 기능들 \([\_tzset](../c-runtime-library/reference/tzset.md), [\_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md), 그리고 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)\)는 각가의 변수의 기본값에 대한 운영체제를 쿼리함으로써 `_daylight`, `_dstbias` 그리고 `_timezone` 의 값을 설정하도록 시도합니다.  시간 영역 전역 변수 값은 다음 표와 같습니다.  
+## <a name="remarks"></a>설명  
+ `_ftime`, `localtime` 또는 `_tzset` 호출 시 `_daylight`, `_dstbias`, `_timezone` 및 `_tzname` 값은 `TZ` 환경 변수 값에 따라 결정됩니다. `TZ` 값을 명시적으로 설정하지 않으면 `_tzname[0]` 및 `_tzname[1]`에는 각각 기본 설정인 "PST" 및 "PDT"가 포함됩니다.  시간 조작 함수([_tzset](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md) 및 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md))는 운영 체제에 각 변수의 기본값을 쿼리하여 `_daylight`, `_dstbias` 및 `_timezone` 값을 설정하려고 합니다. 시간대 전역 변수 값은 다음 표에 나와 있습니다.  
   
 |변수|값|  
-|--------|-------|  
-|`_daylight`|일광 절약 시간제 영역\(DST\)은 `TZ` 에서 지정되거나 운영체제로부터 결정되지 않습니다; 그렇지 않으면, 0입니다.  기본값은 1입니다.|  
-|`_dstbias`|일광 절약 시간에 대한 오프셋.|  
-|`_timezone`|초에서 다른점은 현지 시간과 협정 세계시간의 차이입니다.  기본값은 28,800입니다.|  
-|`_tzname[0]`|시간 영역 이름은 `TZ` 환경변수로부터 파생됩니다.  기본값은 "PST"입니다.|  
-|`_tzname[1]`|DST 영역 이름은 `TZ` 환경변수로부터 파생됩니다.  기본값은 "PDT"입니다.\(태평양 일광 절약 시간\)|  
+|--------------|-----------|  
+|`_daylight`|DST(일광 절약 시간) 영역이 `TZ`에서 지정되거나 운영 체제에 따라 결정될 경우 0이 아닌 값이고, 그렇지 않으면 0입니다. 기본값은 1입니다.|  
+|`_dstbias`|일광 절약 시간의 오프셋입니다.|  
+|`_timezone`|협정 세계시와 현지 시간의 차이(초)입니다. 기본값은 28,800입니다.|  
+|`_tzname[0]`|`TZ` 환경 변수에서 파생된 시간대 이름입니다. 기본값은 "PST"입니다.|  
+|`_tzname[1]`|`TZ` 환경 변수에서 파생된 DST 영역 이름입니다. 기본값은 "PDT"(태평양 일광 절약 시간)입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [전역 변수](../c-runtime-library/global-variables.md)   
- [\_get\_daylight](../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../c-runtime-library/reference/get-timezone.md)   
- [\_get\_tzname](../c-runtime-library/reference/get-tzname.md)
+ [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
+ [_get_tzname](../c-runtime-library/reference/get-tzname.md)
