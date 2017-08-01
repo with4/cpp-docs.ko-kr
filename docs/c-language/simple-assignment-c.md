@@ -1,33 +1,50 @@
 ---
 title: "단순 할당 (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "할당 연산자[C++], 소규모"
-  - "데이터 형식 변환[C++], 단순 할당"
-  - "등호"
-  - "연산자[C], 단순 할당"
-  - "단순 할당 연산자"
-  - "형식 변환[C++], 단순 할당"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type conversion [C++], simple assignment
+- data type conversion [C++], simple assignment
+- operators [C], simple assignment
+- assignment operators [C++], simple
+- simple assignment operator
+- equal sign
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 단순 할당 (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a60ec2f6f6466b579f917d02dabc24736c5a2e92
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-단순 할당 연산자는 오른쪽 피연산자를 왼쪽 피연산자에 할당합니다.  오른쪽 피연산자의 값은 할당 식의 형식으로 변환되며 왼쪽 피연산자로 지정된 개체에 저장된 값을 대체합니다.  할당에 대한 변환 규칙이 적용됩니다\([할당 변환](../c-language/assignment-conversions.md) 참조\).  
+---
+# <a name="simple-assignment-c"></a>단순 할당 (C)
+단순 할당 연산자는 오른쪽 피연산자를 왼쪽 피연산자에 할당합니다. 오른쪽 피연산자의 값은 할당 식의 형식으로 변환되며 왼쪽 피연산자로 지정된 개체에 저장된 값을 대체합니다. 할당에 대한 변환 규칙이 적용됩니다([할당 변환](../c-language/assignment-conversions.md) 참조).  
   
 ```  
 double x;  
@@ -38,5 +55,5 @@ x = y;
   
  이 예제에서 `y`의 값은 **double** 형식으로 변환되어 `x`에 할당됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [C 할당 연산자](../c-language/c-assignment-operators.md)

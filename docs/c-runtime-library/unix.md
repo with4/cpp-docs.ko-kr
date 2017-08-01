@@ -1,42 +1,59 @@
 ---
-title: "UNIX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unix"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "POSIX 호환성"
-  - "POSIX 파일 이름"
-  - "UNIX"
-  - "UNIX, 호환성"
+title: UNIX | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unix
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX
+- POSIX compatibility
+- POSIX file names
+- UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# UNIX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 500280e2818908930fe2e3fe2608e217e1ba4b49
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-프로그램을 UNIX로 이식 하려는 경우 다음의 지침을 따르십시오.  
+---
+# <a name="unix"></a>UNIX
+프로그램을 UNIX로 이식할 계획인 경우 다음 지침을 따르십시오.  
   
--   헤더 파일을 시스템 하위 디렉터리에서 제거 하지 마십시오.  UNIX 프로그램을 전송 하지 않을 경우에 다른 시스템 헤더 파일을 배치할 수 있습니다.  
+-   SYS 하위 디렉터리에서 헤더 파일을 제거하지 마십시오. 프로그램을 UNIX로 전송할 계획이 아닌 경우 SYS 헤더 파일을 다른 위치에 배치할 수 있습니다.  
   
--   루틴에서 인수로 경로와 파일 이름을 나타내는 문자열을 UNIX 호환 경로 구분 기호로사용합니다.  Win32에서 운영 체제는 백 슬래시 \(\\\) 및 슬래시 \(\/\)를 모두 지원하는 반면, UNIX는 이러한 목적으로 만 슬래시 \(\/\)를 지원합니다.  예를 들어, 따라서 이 문서는 `#include` 문의 경로 구분 기호로서 UNIX 호환 착신 전환 슬래시를사용합니다. \(단, 윈도우 운영 체제 명령 셸, CMD.EXE는 명령 프롬프트에서 입력 한 명령에 슬래시를 지원하지 않습니다.\)  
+-   경로 및 파일 이름을 나타내는 문자열을 인수로 사용하는 루틴에서 UNIX와 호환되는 경로 구분 기호를 사용합니다. UNIX에서는 이러한 용도로 슬래시(/)만 지원하지만 Win32 운영 체제에서는 백슬래시(\\)와 슬래시(/)를 모두 지원합니다. 따라서 이 문서는 `#include` 문에서 UNIX와 호환되는 슬래시를 경로 구분 기호로 사용합니다. 그러나 Windows 운영 체제 명령 셸인 CMD.EXE에서는 명령 프롬프트에 입력한 명령에서 슬래시를 지원하지 않습니다.  
   
--   UNIX 에서 현재 작업하는 경로 및 파일 이름을 대소문자로 사용합니다.  Win32 운영 체제에서 파일 할당 테이블 \(FAT\) 파일 시스템은 대\/소문자 입니다.. NTFS 파일 시스템 디렉터리 목록은 대\/소문자를 유지 하지만 검색 파일 및 기타 시스템 작업은 대\/소문자를 무시합니다.  
+-   UNIX에서 제대로 작동하는 경로 및 파일 이름(대/소문자 구분)을 사용합니다. Win32 운영 체제에서 FAT(파일 할당 테이블) 파일 시스템은 대/소문자를 구분하지 않습니다. NTFS 파일 시스템은 디렉터리 목록에 대해 대/소문자를 유지하지만 파일 검색 및 기타 시스템 작업에서는 대/소문자를 무시합니다.  
   
     > [!NOTE]
-    >  Visual C\+\+, UNIX 호환성의 버전 정보는 함수 설명자에서 제거되었습니다.  
+    >  이 버전의 Visual C++에서는 함수 설명에서 호환성 정보가 제외되었습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호환성](../c-runtime-library/compatibility.md)

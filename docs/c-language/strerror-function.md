@@ -1,27 +1,44 @@
 ---
 title: "strerror 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strerror 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- strerror function
 ms.assetid: 9fb9366e-d9a8-47d4-ad51-d98774a0617f
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# strerror 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: aab59fc399edeaf92e985f40cf09ea3a028a1dff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="strerror-function"></a>strerror 함수
 **ANSI 4.11.6.2** `strerror` 함수에서 반환한 오류 메시지 문자열 내용입니다.  
   
  `strerror` 함수는 다음 메시지를 생성합니다.  
@@ -66,5 +83,5 @@ caps.handback.revision: 6
 36  Resource deadlock would occur  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [라이브러리 함수](../c-language/library-functions.md)

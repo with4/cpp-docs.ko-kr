@@ -1,38 +1,55 @@
 ---
-title: "Windows 플랫폼(CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이전 버전과의 호환성[C++], C 런타임 라이브러리"
-  - "호환성[C++], C 런타임 라이브러리"
-  - "CRT, 호환성"
-  - "MBCS[C++], Win32 플랫폼"
-  - "운영 체제[C++]"
-  - "유니코드[C++], Win32 플랫폼"
+title: "Windows 플랫폼 (CRT) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT, compatibility
+- backward compatibility [C++], C run-time libraries
+- compatibility [C++], C run-time libraries
+- MBCS [C++], Win32 platforms
+- operating systems [C++]
+- Unicode [C++], Win32 platforms
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Windows 플랫폼(CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 15794df0948622e6f3c584c881d1c42b96f1e9e0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-[!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] 에 대해 C 런타임 라이브러리는 [!INCLUDE[win8](../build/includes/win8_md.md)], [!INCLUDE[winserver8](../build/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 \(SP3\) for x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 \(SP2\) for x64, 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 \(SP2\) for both x86 and x64 을 지원합니다.  이러한 운영 체제의 모두는 Windows 응용 프로그램 프로그래밍 인터페이스 \(API\) 지원 및 유니코드 지원을 제공 합니다.  또한 모든 Win32 응용 프로그램에서 멀티 바이트 문자 집합 \(MBCS\)을 사용할 수 있습니다.  
+---
+# <a name="windows-platforms-crt"></a>Windows 플랫폼(CRT)
+[!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)]에 대한 C 런타임 라이브러리는 x86에 대해서는 [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] 서비스 팩 3(SP3)을, x64에 대해서는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 서비스 팩 2(SP2)를, x86과 x64 모두에 대해서는 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 서비스 팩 2(SP2)를 지원합니다. 이러한 운영 체제는 모두 Windows API(응용 프로그래밍 인터페이스) 및 유니코드를 지원합니다. 또한 모든 Win32 응용 프로그램에서 MBCS(멀티바이트 문자 집합)를 사용할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 은 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 개발을 지원하지 않습니다.  [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 에 대한 지원을 추가하기 위해 [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] 을 설치해야 합니다.  
+>  [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)]는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 개발을 지원하지 않습니다. [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] 및 [!INCLUDE[winxp](../build/includes/winxp_md.md)]에 대한 지원을 추가하기 위해 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]을 설치해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호환성](../c-runtime-library/compatibility.md)

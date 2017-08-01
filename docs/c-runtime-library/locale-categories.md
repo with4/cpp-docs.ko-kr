@@ -1,45 +1,62 @@
 ---
 title: "로캘 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LC_MAX"
-  - "LC_MIN"
-  - "LC_MONETARY"
-  - "LC_TIME"
-  - "LC_NUMERIC"
-  - "LC_COLLATE"
-  - "LC_CTYPE"
-  - "LC_ALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LC_ALL 상수"
-  - "LC_COLLATE 상수"
-  - "LC_CTYPE 상수"
-  - "LC_MAX 상수"
-  - "LC_MIN 상수"
-  - "LC_MONETARY 상수"
-  - "LC_NUMERIC 상수"
-  - "LC_TIME 상수"
-  - "로캘 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LC_MAX
+- LC_MIN
+- LC_MONETARY
+- LC_TIME
+- LC_NUMERIC
+- LC_COLLATE
+- LC_CTYPE
+- LC_ALL
+dev_langs:
+- C++
+helpviewer_keywords:
+- LC_MIN constant
+- LC_MONETARY constant
+- LC_CTYPE constant
+- locale constants
+- LC_MAX constant
+- LC_ALL constant
+- LC_TIME constant
+- LC_NUMERIC constant
+- LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 로캘 범주
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: dcb4fe96d79ed7b66814c33ecda5d2f68481a4fa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="locale-categories"></a>로캘 범주
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -47,26 +64,26 @@ caps.handback.revision: 7
   
 ```  
   
-## 설명  
- 로캘 범주는 프로그램의 로캘 정보의 어느 부분이 사용될 것인지를 지정하기 위하여 지역 루틴에 의해서 사용되는 매니페스트 상수입니다.  로캘은 지역화될 수 있는 프로그램의 특정 측면을 위한 인근\(또는 나라\/지역\)을 참조합니다.  로캘 종속 범주는 예를 들어, 날짜 형식 지정 또는 통화 값의 형식 표시가 포함됩니다.  
+## <a name="remarks"></a>설명  
+ 로캘 범주는 지역화 루틴에서 사용할 프로그램 로캘 정보 부분을 지정하는 데 사용하는 매니페스트 상수입니다. 로캘은 프로그램의 특정 측면을 사용자 지정할 수 있는 지역성(또는 국가/지역)을 나타냅니다. 로캘 종속 영역에는 날짜 형식 지정 및 통화 값의 형식 표시 등이 포함됩니다.  
   
-|로캘 범주|영향 받는 프로그램의 부분|  
-|-----------|--------------------|  
-|`LC_ALL`|모든 특정 로캘 행동 \(모든 범주\)|  
+|로캘 범주|영향을 받는 프로그램 부분|  
+|---------------------|-------------------------------|  
+|`LC_ALL`|모든 로캘 관련 동작(모든 범주)|  
 |`LC_COLLATE`|`strcoll` 및 `strxfrm` 함수의 동작|  
-|`LC_CTYPE`|문자 처리 함수의 동작\(영향을 받지 않는 **isdigit**, `isxdigit`, `mbstowcs`, `mbtowc`을 제외\)|  
-|`LC_MAX`|`LC_TIME`와 동일|  
-|`LC_MIN`|`LC_ALL`와 동일|  
-|`LC_MONETARY`|`localeconv` 함수에 의해서 반환되는 monetary\-형식 정보|  
-|`LC_NUMERIC`|형식이 지정 된 출력 루틴\(예를 들어 `printf`과 같은\), 데이터 변환 루틴, `localeconv`에 의해 반환된 비통화 서식 정보에 대한 10진 소수점 문자|  
+|`LC_CTYPE`|문자 처리 함수(영향을 받지 않는 **isdigit**, `isxdigit`, `mbstowcs` 및 `mbtowc` 제외)의 동작입니다.|  
+|`LC_MAX`|`LC_TIME`과 같음|  
+|`LC_MIN`|`LC_ALL`과 같음|  
+|`LC_MONETARY`|`localeconv` 함수에 의해 반환되는 통화 서식 정보입니다.|  
+|`LC_NUMERIC`|서식이 지정된 출력 루틴(예: `printf`), 데이터 변환 루틴 및 `localeconv` 함수에 의해 반환된 비통화 서식 정보에 대한 소수점 문자입니다.|  
 |`LC_TIME`|`strftime` 함수의 동작|  
   
- 예제는 [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하십시오.  
+ 예제에 대해서는 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [localeconv](../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll 함수](../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, \_strftime\_l, \_wcsftime\_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
+ [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
  [전역 상수](../c-runtime-library/global-constants.md)

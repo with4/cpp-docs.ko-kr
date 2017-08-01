@@ -1,36 +1,53 @@
 ---
 title: "바이트 및 와이드 스트림 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Byte and Wide Streams"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "byte 함수"
-  - "와이드 스트림"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Byte and Wide Streams
+dev_langs:
+- C++
+helpviewer_keywords:
+- byte streams
+- wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 바이트 및 와이드 스트림
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c916caf1ee0b39567813921401ee02cbda83d222
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-바이트 스트림은 바이트의 시퀀스로 파일을 처리합니다.  프로그램 내에서 스트림은 바이트의 시퀀스와 동일합니다.  
+---
+# <a name="byte-and-wide-streams"></a>바이트 및 와이드 스트림
+바이트 스트림은 파일을 바이트의 시퀀스로 처리합니다. 프로그램에서 스트림은 바이트 시퀀스와 동일합니다.  
   
- 반면, 와이드 스트림은 파일을 다양한 인코딩 규칙을 가질 수 있는 일반화된 멀티 바이트 문자로 처리합니다. \(이전에 설명한 대로 텍스트 및 이진 파일은 여전히 읽히고 작성됩니다.\) 프로그램에서 스트림은 상응하는 와이드 문자의 시퀀스와 유사합니다.  두 표현 사이의 변환은 표준 C 라이브러리 내에서 발생합니다.  변환 규칙은 원칙적으로 `LC_CTYPE` 범주를 변경하는 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 호출하여 변경할 수 있습니다.  와이드 스트림은 와이드 기반이 될 때 이 변환 규칙을 지정하며 `LC_CTYPE` 범주가 이후에 변경되더라도 이러한 규칙을 유지합니다.  
+ 반면, 와이드 스트림은 파일을 일반화된 멀티바이트 문자 시퀀스로 처리하므로 광범위한 인코딩 규칙이 적용될 수 있습니다. (텍스트 및 이진 파일은 여전히 앞에서 설명된 대로 읽고 씁니다.) 프로그램에서 스트림은 와이드 문자의 해당 시퀀스와 유사합니다. 이러한 두 표현 간의 변환은 표준 C 라이브러리에서 진행됩니다. 원칙적으로 변환 규칙은 `LC_CTYPE` 범주를 변경하는 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 호출에 의해 변경될 수 있습니다. 각 와이드 스트림은 와이드 방향이 될 때 해당 변환 규칙을 결정하고, 나중에 범주 `LC_CTYPE`이 변경되더라도 이러한 규칙을 유지합니다.  
   
- 와이드 스트림 내에서의 위치 지정은 텍스트 스트림와 동일한 제한을 갖습니다.  또한 파일 위치 표시기도 상태에 따라 다른 인코딩을 처리해야 할 수 있습니다.  일반적으로, 이는 스트림 내의 바이트 오프셋과 `mbstate_t` 형식의 개체를 모두 포함합니다.  따라서, 와이드 스트림에서 유일하게 신뢰할 수 있는 파일 위치를 얻을 수 있는 방법은 [fgetpos](../c-runtime-library/reference/fgetpos.md)를 호출하는 것이며, 이렇게 얻은 위치를 다시 저장하는 유일하게 신뢰할 수 있는 방법은 [fsetpos](../c-runtime-library/reference/fsetpos.md)를 호출하는 것입니다.  
+ 와이드 스트림 내의 위치 지정은 텍스트 스트림과 동일한 제한이 적용됩니다. 또한 파일 위치 표시기는 상태 종속적 인코딩을 처리해야 할 수 있습니다. 일반적으로는 여기에는 스트림 내의 바이트 오프셋과 `mbstate_t` 형식의 개체가 모두 포함됩니다. 따라서 와이드 스트림 내에서 파일 위치를 가져오는 믿을 수 있는 유일한 방법은 [fgetpos](../c-runtime-library/reference/fgetpos.md)를 호출하는 것이며, 이 방법으로 획득한 위치를 복원하는 믿을 수 있는 유일한 방법은 [fsetpos](../c-runtime-library/reference/fsetpos.md)를 호출하는 것입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 및 스트림](../c-runtime-library/files-and-streams.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

@@ -1,28 +1,45 @@
 ---
 title: "사용되지 않는 함수 선언 및 정의 폼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이전 스타일 함수 선언"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 사용되지 않는 함수 선언 및 정의 폼
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 7ef80d6a438118da00d8afaf67cf9317cc50b953
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-이전 스타일 함수 선언 및 정의는 매개 변수 선언에 대해 ANSI C 표준에 의해 권장되는 구문과 약간 다른 규칙을 사용합니다.  첫째로 이전 스타일 선언에는 매개 변수 목록이 없습니다.  둘째로 함수 정의에서는 매개 변수가 나열되지만 해당 형식은 매개 변수 목록에 선언되지 않습니다.  형식 선언은 함수 본문을 구성하는 복합 문의 앞에 와야 합니다.  이전 스타일 구문은 사용되지 않으며 새 코드에 사용하면 안 됩니다.  그러나 이전 스타일 구문을 사용하는 코드는 여전히 지원됩니다.  다음 예제에서는 사용되지 않는 선언 및 정의 형태를 보여 줍니다.  
+---
+# <a name="obsolete-forms-of-function-declarations-and-definitions"></a>사용되지 않는 함수 선언 및 정의 폼
+이전 스타일 함수 선언 및 정의는 매개 변수 선언에 대해 ANSI C 표준에 의해 권장되는 구문과 약간 다른 규칙을 사용합니다. 첫째로 이전 스타일 선언에는 매개 변수 목록이 없습니다. 둘째로 함수 정의에서는 매개 변수가 나열되지만 해당 형식은 매개 변수 목록에 선언되지 않습니다. 형식 선언은 함수 본문을 구성하는 복합 문의 앞에 와야 합니다. 이전 스타일 구문은 사용되지 않으며 새 코드에 사용하면 안 됩니다. 그러나 이전 스타일 구문을 사용하는 코드는 여전히 지원됩니다. 다음 예제에서는 사용되지 않는 선언 및 정의 형태를 보여 줍니다.  
   
 ```  
 double old_style();           /* Obsolete function declaration */  
@@ -35,9 +52,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 }  
 ```  
   
- `int`와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다\(선언이 권장되기는 함\).  
+ `int`와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다(선언이 권장되기는 함).  
   
- ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 \/Za 옵션으로 컴파일할 때 오류를 생성하며 \/Ze로 컴파일할 때 수준 4 경고를 생성합니다.  예를 들면 다음과 같습니다.  
+ ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 예:  
   
 ```  
 void funct1( a, ... )  /* Generates a warning under /Ze or */  
@@ -56,7 +73,7 @@ void funct1( int a, ... )
   
  승격된 형식과 동일하지 않은 형식이 있는 매개 변수나 줄임표로 동일한 함수를 이후에 선언하거나 정의하는 경우에도 이전 스타일 함수 선언으로 인해 경고가 생성됩니다.  
   
- 다음 단원인 [C 함수 정의](../c-language/c-function-definitions.md)에서는 이전 스타일 구문을 포함하여 함수 정의를 위한 구문을 보여 줍니다.  이전 스타일 구문에서 매개 변수 목록의 비터미널은 *identifier\-list*입니다.  
+ 다음 섹션 [C 함수 정의](../c-language/c-function-definitions.md)에서는 이전 스타일 구문을 포함하여 함수 정의를 위한 구문을 보여 줍니다. 이전 스타일 구문에서 매개 변수 목록의 비터미널은 *identifier-list*입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [함수 개요](../c-language/overview-of-functions.md)

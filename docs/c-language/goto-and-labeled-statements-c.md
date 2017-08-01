@@ -1,50 +1,67 @@
 ---
 title: "goto 및 레이블 문 (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "goto"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "goto 키워드[C]"
-  - "labeled 문"
-  - "문, labeled"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- goto
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
+- goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# goto 및 레이블 문 (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2e42906c932375ec62597868f7c106712bd25cbc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-`goto` 문은 레이블에 제어를 전송합니다.  지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.  
+---
+# <a name="goto-and-labeled-statements-c"></a>goto 및 레이블 문 (C)
+`goto` 문은 레이블에 제어를 전송합니다. 지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.  
   
-## 구문  
- 문:  
- *레이블 문*  
+## <a name="syntax"></a>구문  
+ *statement*:  
+ *labeled-statement*  
   
- *점프 문*  
+ *jump-statement*  
   
- 점프 문:  
+ *점프 문*:  
  **goto**  *identifier*  **;**  
   
- *labeled\-statement*:  
+ *labeled-statement*:  
  *identifier*  **:**  *statement*  
   
  문 레이블은 `goto` 문에만 의미가 있으며 다른 모든 컨텍스트에서 레이블 문은 레이블에 관계없이 실행됩니다.  
   
- *jump\-statement*는 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.  `goto` 이후에 오는 *identifier* 이름 집합은 해당 이름이 다른 식별자를 방해하지 않도록 자체 네임스페이스를 가지고 있습니다.  레이블을 다시 선언할 수 없습니다.  자세한 내용은 [네임스페이스](../c-language/name-spaces.md)를 참조하십시오.  
+ *jump-statement*는 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다. `goto` 이후에 오는 *identifier* 이름 집합은 해당 이름이 다른 식별자를 방해하지 않도록 자체 네임스페이스를 가지고 있습니다. 레이블을 다시 선언할 수 없습니다. 자세한 내용은 [네임스페이스](../c-language/name-spaces.md)를 참조하세요.  
   
- 가능하면 `goto`보다 **break**, **continue** 및 `return` 문을 사용하는 것이 더 좋은 프로그래밍 방식입니다.  **break** 문은 한 수준의 루프에서만 종료되므로 깊이 중첩된 루프 내에서 루프를 종료하려면 `goto`가 필요할 수도 있습니다.  
+ 가능하면 `goto`보다 **break**, **continue** 및 `return` 문을 사용하는 것이 더 좋은 프로그래밍 방식입니다. **break** 문은 한 수준의 루프에서만 종료되므로 깊이 중첩된 루프 내에서 루프를 종료하려면 `goto`가 필요할 수도 있습니다.  
   
  이 예제에서는 `goto` 문을 보여 줍니다.  
   
@@ -74,7 +91,7 @@ int main()
 }  
 ```  
   
- 이 예제에서 `i`가 5에 해당하는 경우 `goto` 문은 `stop`이라는 레이블이 지정된 지점으로 제어를 전송합니다.  
+ 이 예제에서 `goto`가 5에 해당하는 경우 `stop` 문은 `i`이라는 레이블이 지정된 지점으로 제어를 전송합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [문](../c-language/statements-c.md)

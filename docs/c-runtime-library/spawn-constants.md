@@ -1,59 +1,76 @@
 ---
 title: "spawn 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_P_NOWAIT"
-  - "_P_OVERLAY"
-  - "_P_WAIT"
-  - "_P_DETACH"
-  - "_P_NOWAITO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_P_DETACH 상수"
-  - "_P_NOWAIT 상수"
-  - "_P_NOWAITO 상수"
-  - "_P_OVERLAY 상수"
-  - "_P_WAIT 상수"
-  - "P_DETACH 상수"
-  - "P_NOWAIT 상수"
-  - "P_NOWAITO 상수"
-  - "P_OVERLAY 상수"
-  - "P_WAIT 상수"
-  - "spawn 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _P_NOWAIT
+- _P_OVERLAY
+- _P_WAIT
+- _P_DETACH
+- _P_NOWAITO
+dev_langs:
+- C++
+helpviewer_keywords:
+- _P_OVERLAY constant
+- P_DETACH constant
+- P_OVERLAY constant
+- P_NOWAIT constant
+- _P_DETACH constant
+- _P_NOWAIT constant
+- _P_NOWAITO constant
+- P_NOWAITO constant
+- spawn constants
+- P_WAIT constant
+- _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# spawn 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 89b430cf7e64d64137cd5f844573d0fe5a3a3bc7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="spawn-constants"></a>spawn 상수
+## <a name="syntax"></a>구문  
   
 ```  
 #include <process.h>  
 ```  
   
-## 설명  
- `mode` 인수는 작업이 수행되는 동안 호출 프로세스의 작업을 얻도록 결정합니다.  `mode` 에 대해 다음 값을 가질 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `mode` 인수는 생성 작업 전과 해당 작업이 수행되는 중에 호출 프로세스에 의해 수행되는 작업을 결정합니다. `mode`에 대해 다음 값을 사용할 수 있습니다.  
   
 |상수|의미|  
-|--------|--------|  
-|`_P_OVERLAY`|오버레이 호출 프로세스는 새 프로세스, 호출 프로세스 파괴를 사용합니다.\(`_exec` 호출과 같은 효과\)|  
-|`_P_WAIT`|새 프로세스의 실행이 완료될때 까지 호출 스레드를 일시 중단합니다.\(동기적 `_spawn`\)|  
-|`_P_NOWAIT`, `_P_NOWAITO`|호출 프로세스와 새 프로세스를 동시에 실행합니다.\(비동기 `_spawn`\)|  
-|`_P_DETACH`|호출 프로세스를 계속 실행합니다; 새 프로세스는 콘솔이나 키보드에서 액세스없이 백그라운드에서 실행됩니다.  새 프로세스에 대하여 `_cwait` 의 호출이 실패합니다.  이 작업은 비동기 작업이므로 `_spawn` 입니다.|  
+|--------------|-------------|  
+|`_P_OVERLAY`|호출 프로세스를 제거하며 호출 프로세스를 새로운 프로세스와 겹쳐서 표시합니다(`_exec` 호출과 효과가 같음).|  
+|`_P_WAIT`|새로운 프로세스의 실행이 완료될 때까지 호출 스레드를 일시 중단합니다(동기적 `_spawn`).|  
+|`_P_NOWAIT`, `_P_NOWAITO`|호출 프로세스를 계속 새로운 프로세스와 동시에 실행합니다(비동기적 `_spawn`).|  
+|`_P_DETACH`|호출 프로세스를 계속 실행합니다. 새로운 프로세스는 콘솔 또는 키보드에 대한 액세스 없이 백그라운드에서 실행됩니다. 새로운 프로세스에 대해 `_cwait`를 호출하는 작업은 실패합니다. 이는 비동기적 `_spawn`입니다.|  
   
-## 참고 항목  
- [\_spawn, \_wspawn 함수](../c-runtime-library/spawn-wspawn-functions.md)   
+## <a name="see-also"></a>참고 항목  
+ [_spawn, _wspawn 함수](../c-runtime-library/spawn-wspawn-functions.md)   
  [전역 상수](../c-runtime-library/global-constants.md)

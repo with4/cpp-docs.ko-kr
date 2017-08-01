@@ -1,63 +1,80 @@
 ---
-title: "stdin, stdout, stderr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdin"
-  - "stderr"
-  - "stdout"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "표준 오류 스트림"
-  - "표준 입력 스트림"
-  - "표준 출력 스트림"
-  - "stderr 함수"
-  - "stdin 함수"
-  - "stdout 함수"
+title: stdin, stdout, stderr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdin
+- stderr
+- stdout
+dev_langs:
+- C++
+helpviewer_keywords:
+- stdout function
+- standard output stream
+- standard error stream
+- stdin function
+- standard input stream
+- stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# stdin, stdout, stderr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 331b60a8cd06e42c032c6d8c81b58b8e4f4501ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
+## <a name="syntax"></a>구문  
   
 ```  
   
-      FILE *stdin;   
-FILE *stdout;   
-FILE *stderr;   
+      FILE *stdin;   
+FILE *stdout;   
+FILE *stderr;   
 #include <stdio.h>  
 ```  
   
-## 설명  
- 오류 출력과 입력, 출력에 대한 표준 스트림이 있습니다.  
+## <a name="remarks"></a>설명  
+ 입력, 출력 및 오류 출력에 대한 표준 스트림입니다.  
   
- 기본적으로, 표준 입력은 표준 출력과 표준 에러가 화면에 출력되는 동안, 키보드로부터 읽혀집니다.  
+ 기본적으로 표준 입력은 키보드에서 읽고 표준 출력 및 표준 오류는 화면에 출력됩니다.  
   
- 다음 스트림 포인터들은 표준 스트림을 액세스하는데 사용할 수 있습니다.  
+ 다음 스트림 포인터를 표준 스트림에 액세스하는 데 사용할 수 있습니다.  
   
 |포인터|스트림|  
-|---------|---------|  
+|-------------|------------|  
 |`stdin`|표준 입력|  
 |**stdout**|표준 출력|  
 |`stderr`|표준 오류|  
   
- 이러한 포인터들은 함수에 대한 매개변수로써 사용될 수 있습니다.  **getchar** 와 `putchar`와 같은 일부 함수들은 자동적으로 `stdin` 과 **stdout** 을 사용합니다.  
+ 이러한 포인터는 함수에 대한 인수로 사용할 수 있습니다. **getchar** 및 `putchar`와 같은 일부 함수는 자동으로 `stdin` 및 **stdout**을 사용합니다.  
   
- 이러한 포인터는 상수들이고 새로운 값이 할당될 수 없습니다.  `freopen` 함수는 다른 장치들 또는 디스크 파일들에 대한 스트림을 리디렉션하기 위해 사용될 수 있습니다.  운영 체제는 명령레벨에서 프로그램의 표준 입력과 출력을 리디렉션 할 수 있도록 합니다.  
+ 이러한 포인터는 상수입니다. 여기에 새로운 값을 할당할 수 없습니다. `freopen` 함수는 스트림을 디스크 파일 또는 다른 장치로 리디렉션하는 데 사용할 수 있습니다. 운영 체제에서는 명령 수준에서 프로그램의 표준 입력 및 출력을 리디렉션할 수 있습니다.  
   
-## 참고 항목  
- [스트림 I\/O](../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>참고 항목  
+ [스트림 I/O](../c-runtime-library/stream-i-o.md)   
  [전역 상수](../c-runtime-library/global-constants.md)
