@@ -15,6 +15,7 @@ apiname:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -81,6 +82,7 @@ apiname:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -224,6 +226,9 @@ apiname:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -273,7 +278,8 @@ apiname:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -287,6 +293,8 @@ apilocation:
 - api-ms-win-crt-private-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- vcruntime140_app.dll
+- msvcp140_app.dll
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -295,6 +303,7 @@ f1_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -361,6 +370,7 @@ f1_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -504,6 +514,9 @@ f1_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -553,7 +566,8 @@ f1_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -563,6 +577,7 @@ helpviewer_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -629,6 +644,7 @@ helpviewer_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -772,6 +788,9 @@ helpviewer_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -821,7 +840,8 @@ helpviewer_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 caps.latest.revision: 12
 author: corob-msft
@@ -843,17 +863,19 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b339a9eb92fcb97733b259c3c7c25e7e89784c67
+ms.sourcegitcommit: ac823b16dbcb3ef2bac984a8d0634ac51198dae4
+ms.openlocfilehash: e82838570d8c01d4ecc36fda384a102c415618ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/02/2017
 
 ---
-# <a name="internal-crt-globals-and-functions"></a>내부 CRT 전역 및 함수
+# <a name="internal-crt-globals-and-functions"></a>내부 CRT 전역 및 함수  
+  
 CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를 지원하는 데만 사용되는 함수 및 전역 변수가 포함되어 있습니다. 이 중 일부는 구현 세부 사항으로 공용 헤더에 노출됩니다. 이러한 함수 및 전역 변수는 공용 내보내기를 통해 액세스할 수 있지만 사용자의 코드에서 사용할 수는 없습니다. 대신 이러한 함수 및 변수를 사용하는 코드를 변경하여 공용 라이브러리 해당 값을 사용하는 것이 좋습니다. 이러한 함수는 버전마다 변경될 수 있습니다. 식별할 수 있도록 아래에는 이러한 함수가 나열되어 있습니다. 추가 설명서가 있으면 링크가 제공되지만 일반적으로 이러한 구현 세부 사항은 문서화되지 않습니다.  
   
 ## <a name="internal-crt-globals-and-value-macros"></a>내부 CRT 전역 및 값 매크로  
- 다음 전역 변수 및 매크로 정의는 CRT를 구현하는 데 사용됩니다.  
+  
+다음 전역 변수 및 매크로 정의는 CRT를 구현하는 데 사용됩니다.  
   
 |이름|  
 |----------|  
@@ -957,6 +979,7 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |__CxxLongjmpUnwind|  
 |__CxxQueryExceptionSize|  
 |__CxxRegisterExceptionObject|  
+|_CxxThrowException|  
 |__CxxUnregisterExceptionObject|  
 |__daylight|  
 |_dclass|  
@@ -1118,6 +1141,9 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |[__setusermatherr](../c-runtime-library/setusermatherr.md)|  
 |_SetWinRTOutOfMemoryExceptionCallback|  
 |_sopen_dispatch|  
+|__std_exception_copy|  
+|__std_exception_destroy|  
+|__std_type_info_destroy_list|  
 |__stdio_common_vfprintf|  
 |__stdio_common_vfprintf_p|  
 |__stdio_common_vfprintf_s|  
@@ -1168,6 +1194,8 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |__wcsncnt|  
 |[__wgetmainargs](../c-runtime-library/getmainargs-wgetmainargs.md)|  
 |_wsopen_dispatch|  
+|_Xbad_alloc|  
+|_Xlength_error|  
   
 ## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)

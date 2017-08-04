@@ -1,28 +1,45 @@
 ---
-title: "비트 필드의 저장소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "비트 필드의 저장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 비트 필드의 저장소
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b0e25945ff20adcccce060363601cfc1a1a1f6fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="storage-of-bit-fields"></a>비트 필드의 저장
 **ANSI 3.5.2.1** int 내 비트 필드의 할당 순서  
   
- 비트 필드는 최하위 비트에서 최상위 비트까지 정수 내에 할당됩니다.  다음 코드에서  
+ 비트 필드는 최하위 비트에서 최상위 비트까지 정수 내에 할당됩니다. 다음 코드에서  
   
 ```  
 struct mybitfields  
@@ -49,5 +66,5 @@ cccccccb bbbbaaaa
   
  80x86 프로세서는 높은 바이트 앞에 낮은 바이트의 정수 값을 저장하므로 0x01F2보다 높은 정수는 0x01이 뒤에 오는 0xF2로 실제 메모리에 저장됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구조체, 공용 구조체, 열거형 및 비트 필드](../c-language/structures-unions-enumerations-and-bit-fields.md)

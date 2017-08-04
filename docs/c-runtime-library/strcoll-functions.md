@@ -1,67 +1,84 @@
 ---
 title: "strcoll 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr120.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strcoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "코드 페이지, 문자열 비교에 사용"
-  - "strcoll 함수"
-  - "문자열 비교[C++], 문화권별"
-  - "문자열[C++], 코드 페이지로 비교"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr120.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+apitype: DLLExport
+f1_keywords:
+- strcoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- string comparison [C++], culture-specific
+- strcoll functions
+- strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# strcoll 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2d0073470eade62584b107d38cafed0184c0383e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-각 `strcoll` 와 `wcscoll` 함수는 현재 사용하는 로캘 코드 페이지의 `LC_COLLATE` 범주 설정에 따라 두 문자열을 비교합니다.  각각의 `_mbscoll` 함수는 현재 사용중인 멀티 바이트 코드 페이지에 따라 두 문자열을 비교합니다.  비교에 대한 인터넷의 차이점과 현제 코드 페이지에서 사전순 문자 순서와 문자집합 순서사에서 다른점이 있을때, 문자열 비교에 대한 `coll`을 사용합니다.  문자열 동일성에 대해 테스트에 대해 해당 `cmp` 함수들을 사용합니다.  
+---
+# <a name="strcoll-functions"></a>strcoll 함수
+각 `strcoll` 및 `wcscoll` 함수는 현재 사용 중인 로캘 코드 페이지의 `LC_COLLATE` 범주 설정에 따라 두 개의 문자열을 비교합니다. 각 `_mbscoll` 함수는 현재 사용 중인 멀티바이트 코드 페이지에 따라 두 개의 문자열을 비교합니다. `coll` 함수는 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 비교 시 중요한 경우의 문자열 비교에 사용합니다. 문자열 일치만 테스트하려면 해당 `cmp` 함수를 사용합니다.  
   
-### strcoll 함수  
+### <a name="strcoll-functions"></a>strcoll 함수  
   
-|SBCS|유니코드\(Unicode\)|MBCS|설명|  
-|----------|---------------------|----------|--------|  
-|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[\_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|두 문자열들을 분석합니다.|  
-|[\_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[\_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[\_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|두 개의 문자열 \(대\/소문자 구분 없이\)을 분석합니다.|  
-|[\_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[\_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[\_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|두 문자열의 첫 `count` 문자를 분석합니다.|  
-|[\_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[\_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[\_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|\(인식하지 않는 경우\) 두 문자열의 첫 `count` 문자들을 분석합니다.|  
+|SBCS|유니코드(Unicode)|MBCS|설명|  
+|----------|-------------|----------|-----------------|  
+|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|두 문자열을 비교합니다.|  
+|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|두 문자열을 비교합니다(대/소문자 구분).|  
+|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|두 문자열의 처음 `count`자를 비교합니다.|  
+|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|두 문자열의 처음 `count`자를 비교합니다(대/소문자 구분 없음).|  
   
-## 설명  
- 이러한 함수들\(`strcoll`, `stricoll`, `_strncoll` 과 `_strnicoll`\)의 싱글바이트 문자\(SBCS\) 버전은 `string1` 과 `string2` 을 현재 범주의 `LC_COLLATE` 범주 설정에따라 비교합니다.  이러한 함수는 대조 시퀀스를 제공하는 로캘 코드 페이지를 사용하는 `strcoll` 함수들에서 해당 `strcmp` 함수들과는 다릅니다.  문자열 집합 순서와 사전 순서상 문자 순서가 다른 로캘들에서 문자열 비교는, `strcmp` 함수들보다는 `strcoll` 함수들을 사용해야합니다.  `LC_COLLATE` 에 대한 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이러한 함수(`strcoll`, `stricoll`, `_strncoll` 및 `_strnicoll`)의 SBCS(싱글바이트 문자) 버전은 현재 로캘의 `LC_COLLATE` 범주 설정에 따라 `string1` 및 `string2`를 비교합니다. 이러한 함수는 `strcoll` 함수가 데이터 정렬 시퀀스를 제공하는 로캘 코드 페이지 정보를 사용한다는 측면에서 해당 `strcmp` 함수와 다릅니다. 문자 집합 순서와 사전적 문자 순서가 다른 로캘에서 문자열을 비교하는 경우 해당 `strcmp` 함수가 아닌 `strcoll` 함수를 사용해야 합니다. `LC_COLLATE`에 대한 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요.  
   
- 일부 코드 페이지와 해당 문자 집합에 대한 문자 집합에, 문자의 순서 lexicographic 문자 순서와에서 다를 수 있습니다.  "C" 로케일에서 이 경우가 아니라면: ASCII 문자 집합의 문자 순서는 문자 lexicographic 순서와 동일합니다.  그러나 특정 유럽 코드 페이지에서 예를 들어, 문자 'a' \(값 0x61\) 앞 문자 'ä' \(0xE4\)의 값은 문자 집합, 그러나 사전 순으로 문자를 제외한 문자 'ä' 앞에 'a' 입니다.  이러한 상황에서 사전순서상의 비교를 수행하려면 `strcmp` 대신 `strcoll` 를 사용하세요.  결과 문자열에 `strcmp`을 사용하는 것 대신에, 원본 문자열에 `strxfrm`를 사용할 수 있습니다.  
+ 일부 코드 페이지와 해당 문자 집합의 경우 문자 집합의 문자 순서가 사전적 문자 순서와 다를 수 있습니다. "C" 로캘에서는 해당되지 않습니다. 즉, ASCII 문자 집합에서 문자의 순서는 문자의 사전적 순서와 동일합니다. 예를 들어 특정 유럽 코드 페이지의 문자 집합에서 문자 'a'(값 0x61)는 문자 'ä'(값 0xE4) 앞에 오지만 사전적으로는 문자 'ä'가 'a' 앞에 옵니다. 이러한 인스턴스에서 사전적 비교를 수행하려면 `strcmp` 대신 `strcoll`을 사용합니다. 또는 원본 문자열에 `strxfrm`를 사용한 다음 결과 문자열에 `strcmp`을 사용할 수 있습니다.  
   
- `strcoll`, `stricoll`, `_strncoll` 과 `_strnicoll` 는 자동적으로 사용하는 현재 로캘 코드페이지에 따라 와이드 문자\(유니코드\) 대응으로써, 멀티바이트 문자열을 처리합니다.  그러나, 이러한 함수의 멀티 바이트 문자\(MBCS\) 버전은 현재 사용 중인 멀티 바이트 코드 페이지에 따라 문자 단위로 합쳐집니다.  
+ `strcoll``stricoll`, `_strncoll` 및 `_strnicoll`은 해당 와이드 문자(유니코드) 요소와 마찬가지로 현재 사용 중인 로캘 코드 페이지에 따라 멀티바이트 문자열을 자동으로 처리합니다. 그러나 이러한 함수의 MBCS(멀티 바이트 문자) 버전은 현재 사용 중인 멀티바이트 코드 페이지에 따라 문자 단위로 문자열을 비교합니다.  
   
- 이 `coll` 함수는 사전순으로 비교한 문자열을 비교하기 때문에, `cmp` 함수는 같은 문자열을 쉽게 테스트하는 것 인데도 `coll` 함수는 같은 `cmp` 버전보다 더 많이 느립니다.  그럼에도, 문자 사이는 차이점이 현재 코드 페이지에 순서와 lexicographic 문자 순서 설정 및 문자열 비교에 대한 관심의 차이가 있는 경우에 `coll` 함수를 사용해야 합니다.  
+ `coll` 함수는 문자열을 비교하기 위해 사전적으로 대조하는 반면 `cmp` 함수는 문자열이 같은지 여부만 테스트하므로 `coll` 함수는 해당 `cmp` 버전보다 훨씬 더 느립니다. 따라서 `coll` 함수는 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 사용해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로캘](../c-runtime-library/locale.md)   
  [문자열 조작](../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

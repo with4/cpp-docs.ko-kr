@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,10 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 07fcee10e916162dfd3662815171621ef653ee6a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="time-management"></a>시간 관리
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/04/2017
 |[clock](../c-runtime-library/reference/clock.md)|프로세스의 경과된 벽시계 시간을 반환합니다.|  
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|시간을 `time_t`, `__time32_t` 또는 `__time64_t` 형식에서 문자열로 변환합니다. `_s` 접미사를 포함한 버전의 함수가 더 안전합니다.|  
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|두 시간 사이의 차이를 계산합니다.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|`struct _timeb` 형식 또는 `struct``__timeb64`  `_s` 접미사를 포함한 버전의 함수가 더 안전합니다.|  
+|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|`struct _timeb` 형식 또는 `struct __timeb64`  `_s` 접미사를 포함한 버전의 함수가 더 안전합니다.|  
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|열린 파일의 수정 시간을 설정합니다.|  
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|시간 형식을 `time_t`에서 `struct tm` 또는 `__time64_t`에서 `struct tm`으로 변환합니다. `_s` 접미사가 포함된 이러한 함수의 버전이 더 안전합니다.|  
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|시간을 `time_t`에서 `struct tm`으로 또는 형식 `__time64_t`에서 `struct tm`(로컬 수정 포함)으로 변환합니다. `_s` 접미사를 포함한 버전의 함수가 더 안전합니다.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/04/2017
 >  Microsoft C/C++ 버전 7.0을 제외한 모든 버전의 Microsoft C/C++과 모든 버전의 Visual C++에서, 시간 함수는 1970년 1월 1일 자정 이후 경과된 초 시간으로 현재 시간을 반환합니다. Microsoft C/C++ 버전 7.0에서 `time` 은 1899년 12월 31일 자정 이후 경과된 초 시간으로 현재 시간을 반환했습니다.  
   
 > [!NOTE]
->  Visual C++ 2005 전의 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 및 Microsoft C/C++ 버전에서 `time_t`는 `long int`(32비트)이며, 따라서 2038년 1월 19일 3시 14분 7초(UTC)가 지나면 사용할 수 없습니다. `time_t`는 이제 기본적으로 `__time64_t`와 동일하지만 `_USE_32BIT_TIME_T`를 정의하면 `time_t`가 `__time32_t`로 변경되고 많은 시간 함수에서 32비트 `time_t`를 사용하는 버전을 호출합니다. 자세한 내용은 [표준 형식](../c-runtime-library/standard-types.md) 및 개별 시간 함수 문서의 설명을 참조하세요.  
+>  Visual C++ 2005 전의 Visual C++ 및 Microsoft C/C++ 버전에서 `time_t`는 `long int`(32비트)이며, 따라서 2038년 1월 19일 3시 14분 7초(UTC)가 지나면 사용할 수 없습니다. `time_t` 는 이제 기본적으로 `__time64_t` 와 동일하지만 `_USE_32BIT_TIME_T` 를 정의하면 `time_t` 가 `__time32_t` 로 변경되고 많은 시간 함수에서 32비트 `time_t`를 사용하는 버전을 호출합니다. 자세한 내용은 [표준 형식](../c-runtime-library/standard-types.md) 및 개별 시간 함수 문서의 설명을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,44 +1,61 @@
 ---
 title: "문자열 초기화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자 배열, 초기화"
-  - "배열 초기화, 문자열"
-  - "문자열[C++], 초기화"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- character arrays, initializing
+- strings [C++], initializing
+- initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 문자열 초기화
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c1bf614544f008910a86e8281cb775c1d7734b0d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-문자열 리터럴\(또는 와이드 문자열 리터럴\)로 문자\(또는 와이드 문자\) 배열을 초기화할 수 있습니다.  예를 들면 다음과 같습니다.  
+---
+# <a name="initializing-strings"></a>문자열 초기화
+문자열 리터럴(또는 와이드 문자열 리터럴)로 문자(또는 와이드 문자) 배열을 초기화할 수 있습니다. 예:  
   
 ```  
 char code[ ] = "abc";  
 ```  
   
- `code`를 네 개의 요소로 이루어진 문자 배열로 초기화합니다.  네 번째 요소는 null 문자로, 모든 문자열 리터럴을 종료합니다.  
+ `code`를 네 개의 요소로 이루어진 문자 배열로 초기화합니다. 네 번째 요소는 null 문자로, 모든 문자열 리터럴을 종료합니다.  
   
- 식별자 목록의 길이는 초기화될 식별자 수만큼만 가능합니다.  문자열보다 짧은 배열 크기를 지정한 경우 추가 문자는 무시됩니다.  예를 들어, 다음 선언은 `code`를 요소가 3개인 문자 배열로 초기화합니다.  
+ 식별자 목록의 길이는 초기화될 식별자 수만큼만 가능합니다. 문자열보다 짧은 배열 크기를 지정한 경우 추가 문자는 무시됩니다. 예를 들어, 다음 선언은 `code`를 요소가 3개인 문자 배열로 초기화합니다.  
   
 ```  
 char code[3] = "abcd";  
 ```  
   
- 이니셜라이저의 처음 세 문자만 `code`에 할당됩니다.  `d` 문자 및 문자열 종료 null 문자는 무시됩니다.  이는 종료되지 않은 문자열\(즉, 끝을 표시하는 0 값이 없는 문자열\)을 만들고 이 조건을 나타내는 진단 메시지를 생성합니다.  
+ 이니셜라이저의 처음 세 문자만 `code`에 할당됩니다. `d` 문자 및 문자열 종료 null 문자는 무시됩니다. 이는 종료되지 않은 문자열(즉, 끝을 표시하는 0 값이 없는 문자열)을 만들고 이 조건을 나타내는 진단 메시지를 생성합니다.  
   
  선언  
   
@@ -46,7 +63,7 @@ char code[3] = "abcd";
 char s[] = "abc", t[3] = "abc";  
 ```  
   
- \=  
+ =  
   
 ```  
 char s[]  = {'a', 'b', 'c', '\0'},   
@@ -61,5 +78,5 @@ char s[]  = {'a', 'b', 'c', '\0'},
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [초기화](../c-language/initialization.md)

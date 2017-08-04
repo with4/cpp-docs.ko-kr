@@ -1,83 +1,101 @@
 ---
 title: "배열 선언 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "배열[C++], 선언"
-  - "배열 선언"
-  - "다차원 배열"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- multidimensional arrays
+- declaring arrays
+- arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 배열 선언
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ed6af1d3a1d092728cb99e6d52696e1d0f676d92
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-"배열 선언"은 배열의 이름을 지정하고 배열 요소의 형식을 지정합니다.  배열 선언은 배열의 요소 수를 정의할 수도 있습니다.  배열 형식이 있는 변수는 배열 요소의 형식에 대한 포인터로 간주됩니다.  
+---
+# <a name="array-declarations"></a>배열 선언
+"배열 선언"은 배열의 이름을 지정하고 배열 요소의 형식을 지정합니다. 배열 선언은 배열의 요소 수를 정의할 수도 있습니다. 배열 형식이 있는 변수는 배열 요소의 형식에 대한 포인터로 간주됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
  `declaration`:  
- *declaration\-specifiers init\-declarator\-list*  opt               **;**  
+ *declaration-specifiers init-declarator-list* opt**;**  
   
- *init\-declarator\-list*:  
- *init\-declarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init\-declarator\-list* **,**  *init\-declarator*  
+ *init-declarator-list* **,**  *init-declarator*  
   
- *init\-declarator*:  
+ *init-declarator*:  
  *declarator*  
   
- *declarator*  **\=**  *initializer*  
+ *declarator*  **=**  *initializer*  
   
  `declarator`:  
- *pointer*  opt *direct\-declarator*  
+ *pointer* opt*direct-declarator*  
   
- *direct\-declarator*:  
- *direct\-declarator*  **\[**  *constant\-expression*  opt **\]**  
+ *direct-declarator*:  
+ *direct-declarator*  **[**  *constant-expression* opt**]**  
   
- *constant\-expression*은 선택 사항이기 때문에 구문에는 두 가지 형태가 있습니다.  
+ *constant-expression*은 선택 사항이기 때문에 구문에는 두 가지 형태가 있습니다.  
   
--   첫 번째 형태는 배열 변수를 정의합니다.  대괄호 안의 *constant\-expression* 인수는 배열의 요소 수를 지정합니다.  *constant\-expression*\(있는 경우\)에는 정수 계열 형식과 0보다 큰 값이 있어야 합니다.  각 요소에는 *type\-specifier*로 지정된 형식이 있으며, 형식은 `void`를 제외한 모든 형식이 될 수 있습니다.  배열 요소는 함수 형식일 수 없습니다.  
+-   첫 번째 형태는 배열 변수를 정의합니다. 대괄호 안의 *constant-expression* 인수는 배열의 요소 수를 지정합니다. *constant-expression*(있는 경우)에는 정수 계열 형식과 0보다 큰 값이 있어야 합니다. 각 요소에는 *type-specifier*로 지정된 형식이 있으며, 형식은 `void`를 제외한 모든 형식이 될 수 있습니다. 배열 요소는 함수 형식일 수 없습니다.  
   
--   두 번째 형태는 다른 곳에 정의된 변수를 선언합니다.  이 형태에서는 대괄호로 묶은 *constant\-expression* 인수가 생략되지만 대괄호는 생략되지 않습니다.  배열을 이전에 초기화했거나, 배열을 매개 변수로 선언했거나, 프로그램의 다른 곳에서 명시적으로 정의된 배열에 대한 참조로 배열을 선언한 경우에만 이 형태를 사용할 수 있습니다.  
+-   두 번째 형태는 다른 곳에 정의된 변수를 선언합니다. 이 형태에서는 대괄호로 묶은 *constant-expression* 인수가 생략되지만 대괄호는 생략되지 않습니다. 배열을 이전에 초기화했거나, 배열을 매개 변수로 선언했거나, 프로그램의 다른 곳에서 명시적으로 정의된 배열에 대한 참조로 배열을 선언한 경우에만 이 형태를 사용할 수 있습니다.  
   
- 두 형태 모두에서 *direct\-declarator*는 변수의 이름을 지정하고 변수의 형식을 수정할 수 있습니다.  *direct\-declarator* 뒤에 오는 대괄호\(**\[ \]**\)는 선언자를 배열 형식으로 수정합니다.  
+ 두 형태 모두에서 *direct-declarator*는 변수의 이름을 지정하고 변수의 형식을 수정할 수 있습니다. *direct-declarator* 뒤에 오는 대괄호(**[ ]**)는 선언자를 배열 형식으로 수정합니다.  
   
  형식 한정자는 배열 형식의 개체에 대한 선언에 나타날 수 있지만 한정자는 배열 자체가 아니라 요소에 적용됩니다.  
   
- 이 형태에서는 배열 선언자 뒤에 대괄호로 묶은 상수 식 목록을 추가하여 배열의 배열\("다차원" 배열\)을 선언할 수 있습니다.  
+ 이 형태에서는 배열 선언자 뒤에 대괄호로 묶은 상수 식 목록을 추가하여 배열의 배열("다차원" 배열)을 선언할 수 있습니다.  
   
 ```  
   
-type-specifier declarator [constant-expression] [constant-expression] ...  
+type-specifier  
+declarator [constant-expression] [constant-expression] ...  
 ```  
   
- 대괄호로 묶은 각 *constant\-expression*은 지정된 차원의 요소 수를 정의합니다. 2차원 배열에는 대괄호로 묶은 식이 2개 있고 3차원 배열에는 3개가 있는 식입니다.  배열을 초기화했거나, 배열을 매개 변수로 선언했거나, 프로그램의 다른 곳에서 명시적으로 정의된 배열에 대한 참조로 배열을 선언한 경우 첫 번째 상수 식을 생략할 수 있습니다.  
+ 대괄호로 묶은 각 *constant-expression*은 지정된 차원의 요소 수를 정의합니다. 2차원 배열에는 대괄호로 묶은 식이 2개 있고 3차원 배열에는 3개가 있는 식입니다. 배열을 초기화했거나, 배열을 매개 변수로 선언했거나, 프로그램의 다른 곳에서 명시적으로 정의된 배열에 대한 참조로 배열을 선언한 경우 첫 번째 상수 식을 생략할 수 있습니다.  
   
  [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)에 설명된 것처럼 복잡한 선언자를 사용하여 포인터 배열을 다양한 개체 형식으로 정의할 수 있습니다.  
   
- 배열은 행별로 저장됩니다.  예를 들어, 다음 배열은 각각 두 행과 세 열로 구성됩니다.  
+ 배열은 행별로 저장됩니다. 예를 들어, 다음 배열은 각각 두 행과 세 열로 구성됩니다.  
   
 ```  
 char A[2][3];  
 ```  
   
- 첫 번째 행의 세 열이 먼저 저장된 다음 두 번째 행의 세 열이 저장됩니다.  이에 따라 마지막 첨자가 가장 빠르게 변화합니다.  
+ 첫 번째 행의 세 열이 먼저 저장된 다음 두 번째 행의 세 열이 저장됩니다. 이에 따라 마지막 첨자가 가장 빠르게 변화합니다.  
   
- 배열의 개별 요소를 참조하려면 [후위 연산자](../c-language/postfix-operators.md)에 설명된 것처럼 첨자 식을 사용하십시오.  
+ 배열의 개별 요소를 참조하려면 [후위 연산자](../c-language/postfix-operators.md)에 설명된 것처럼 첨자 식을 사용하세요.  
   
-## 예제  
+## <a name="examples"></a>예제  
  다음 예제에서는 배열 선언을 보여 줍니다.  
   
 ```  
@@ -92,19 +110,19 @@ struct {
 } complex[100];  
 ```  
   
- 이것은 구조체 배열의 선언입니다.  이 배열에는 요소가 100개 있습니다. 각 요소는 두 멤버가 포함된 구조체입니다.  
+ 이것은 구조체 배열의 선언입니다. 이 배열에는 요소가 100개 있습니다. 각 요소는 두 멤버가 포함된 구조체입니다.  
   
 ```  
 extern char *name[];  
 ```  
   
- 이 문은 `char`에 대한 포인터 배열의 형식과 이름을 선언합니다.  `name`의 실제 정의는 다른 곳에서 발생합니다.  
+ 이 문은 `char`에 대한 포인터 배열의 형식과 이름을 선언합니다. `name`의 실제 정의는 다른 곳에서 발생합니다.  
   
  **Microsoft 전용**  
   
- 배열의 최대 크기를 보유하는 데 필요한 정수의 형식은 **size\_t**의 크기입니다.  헤더 파일 STDDEF.H에 정의된 **size\_t**는 0x00000000~0x7CFFFFFF 범위의 `unsigned int`입니다.  
+ 배열의 최대 크기를 보유하는 데 필요한 정수의 형식은 **size_t**의 크기입니다. 헤더 파일 STDDEF.H에 정의된 **size_t**는 0x00000000~0x7CFFFFFF 범위의 `unsigned int`입니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

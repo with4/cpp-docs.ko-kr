@@ -684,6 +684,7 @@
 ## [컴파일러 오류 C3418](compiler-error-c3418.md)
 ## [컴파일러 오류 C3420](compiler-error-c3420.md)
 ## [컴파일러 오류 C3421](compiler-error-c3421.md)
+## [컴파일러 오류 C3446](compiler-error-c3446.md)
 ## [컴파일러 오류 C3450](compiler-error-c3450.md)
 ## [컴파일러 오류 C3451](compiler-error-c3451.md)
 ## [컴파일러 오류 C3452](compiler-error-c3452.md)

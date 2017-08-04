@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 라이브러리 기능
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/07/2017
 ## <a name="c-run-time-libraries-crt"></a>C 런타임 라이브러리(CRT)  
  CRT(C 런타임) 라이브러리는 ISO C99 표준 라이브러리를 통합하는 C++ 표준 라이브러리의 일부입니다. CRT를 구현하는 Visual C++ 라이브러리는 네이티브 코드 개발, 혼합된 네이티브와 관리 코드 및 .NET 개발을 위한 순수 관리 코드를 지원합니다. 모든 버전의 CRT는 다중스레드 개발을 지원합니다. 대부분의 라이브러리는 라이브러리를 코드에 직접 연결하는 정적 연결이나 코드에서 공용 DLL 파일을 사용할 수 있도록 하는 동적 연결을 모두 지원합니다.  
   
- Visual Studio 2015부터 CRT는 새로운 이진 파일로 리팩터링되었습니다. UCRT(유니버설 CRT)에는 표준 C99 CRT 라이브러리에서 내보낸 전역 변수 및 함수가 포함됩니다. UCRT는 이제 Windows 구성 요소이며 Windows 10의 일부로 제공됩니다. 이제 정적 라이브러리, DLL 가져오기 라이브러리 및 UCRT에 대한 헤더 파일이 Windows 10 SDK에 있습니다. Visual C++를 설치하면 Visual Studio 설치에서 UCRT를 사용하는 데 필요한 Windows 10 SDK의 하위 집합을 설치합니다. Visual Studio 2015 이상 버전에서 지원하는 모든 Windows 버전에서 UCRT를 사용할 수 있습니다. Windows 10이 아닌 지원되는 다른 버전의 Windows에 대해 vcredist를 사용하여 재배포할 수 있습니다. 자세한 내용은 [Visual C++ 파일 재배포](../ide/redistributing-visual-cpp-files.md)를 참조하세요.  
+ Visual Studio 2015부터 CRT는 새로운 이진 파일로 리팩터링되었습니다. UCRT(유니버설 CRT)에는 표준 C99 CRT 라이브러리에서 내보낸 전역 변수 및 함수가 포함됩니다. UCRT는 이제 Windows 구성 요소이며 Windows 10의 일부로 제공됩니다. 이제 정적 라이브러리, DLL 가져오기 라이브러리 및 UCRT에 대한 헤더 파일이 Windows 10 SDK에 있습니다. Visual C++를 설치하면 Visual Studio 설치에서 UCRT를 사용하는 데 필요한 Windows 10 SDK의 하위 집합을 설치합니다. Visual Studio 2015 이상 버전에서 지원하는 모든 Windows 버전에서 UCRT를 사용할 수 있습니다. Windows 10이 아닌 지원되는 다른 버전의 Windows에 대해 vcredist를 사용하여 재배포할 수 있습니다. 자세한 내용은 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)을 참조하세요.  
   
  다음 표에는 UCRT를 구현하는 라이브러리가 나열되어 있습니다.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/07/2017
   
 |라이브러리|특성|옵션|전처리기 지시문|  
 |-------------|---------------------|------------|-----------------------------|  
-|libcmt.lib|네이티브 CRT 시작을 코드에 정적으로 연결합니다.|**/MT**|_MT|  
+|LIBCMT.lib|네이티브 CRT 시작을 코드에 정적으로 연결합니다.|**/MT**|_MT|  
 |libcmtd.lib|네이티브 CRT 시작의 디버그 버전을 정적으로 연결합니다. 재배포할 수 없습니다.|**/MTd**|_DEBUG, _MT|  
 |msvcrt.lib|DLL UCRT 및 vcruntime과 함께 사용할 네이티브 CRT 시작에 대한 정적 라이브러리입니다.|**/MD**|_MT, _DLL|  
 |msvcrtd.lib|DLL UCRT 및 vcruntime과 함께 사용할 네이티브 CRT 시작의 디버그 버전에 대한 정적 라이브러리입니다. 재배포할 수 없습니다.|**/MDd**|_DEBUG, _MT, _DLL|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 03/07/2017
   
  정적으로 연결된 CRT를 사용하면 C 런타임 라이브러리에서 저장하는 모든 상태 정보가 해당 CRT 인스턴스의 로컬에 있게 됩니다. 예를 들어 정적으로 연결된 CRT를 사용할 때 [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)을 사용하는 경우 `strtok` 파서의 위치는 정적 CRT의 다른 인스턴스에 연결된 동일한 프로세스에 있는(그러나 다른 DLL 또는 EXE에 있는) 코드에 사용되는 `strtok` 상태와 관련이 없습니다. 반면 동적으로 연결된 CRT는 CRT에 동적으로 연결된 프로세스 내의 모든 코드에 대한 상태를 공유합니다. 이러한 함수의 더 안전한 새 버전을 사용하는 경우 이 문제는 적용되지 않습니다. 예를 들어 `strtok_s` 에서는 이 문제가 발생하지 않습니다.  
   
- 정적 CRT에 연결하여 작성된 DLL에는 자체 CRT 상태가 있으므로 DLL에서 CRT에 정적으로 연결하는 것은 이로 인한 결과를 특별히 원하거나 알고 있는 경우 외에는 권장되지 않습니다. 예를 들어 자체의 정적 CRT에 연결된 DLL을 로드하는 실행 파일에서 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)를 호출하는 경우 DLL의 코드로 생성되는 하드웨어 예외는 변환기에 의해 catch되지 않지만 주 실행 파일의 코드로 생성되는 하드웨어 예외는 catch됩니다.  
+ 정적 CRT에 연결하여 작성된 DLL에는 자체 CRT 상태가 있으므로 DLL에서 CRT에 정적으로 연결하는 것은 이로 인한 결과를 특별히 원하거나 알고 있는 경우 외에는 권장되지 않습니다. 예를 들어 자체의 정적 CRT에 연결된 DLL를 로드하는 실행 파일에서 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) 를 호출하는 경우 DLL의 코드에서 생성되는 하드웨어 예외는 catch되지 않지만 주 실행 파일의 코드에서 생성되는 하드웨어 예외는 catch됩니다.  
   
  **/clr** 컴파일러 스위치를 사용하는 경우 코드가 정적 라이브러리인 msvcmrt.lib와 연결됩니다. 이 정적 라이브러리는 관리 코드와 네이티브 CRT 사이의 프록시를 제공합니다. 정적으로 연결된 CRT( **/MT** 또는 **/MTd** 옵션)를 **/clr**과 함께 사용할 수 없습니다. 대신 동적으로 연결된 라이브러리(**/MD** 또는 **/MDd**)를 사용하세요.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 03/07/2017
   
  **/clr**과 함께 CRT를 사용하는 방법에 대한 자세한 내용은 [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)를 참조하고, **/clr:pure**의 경우 [순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조하세요.  
   
- 응용 프로그램의 디버그 버전을 빌드하려면 [_DEBUG](../c-runtime-library/debug.md) 플래그를 정의해야 하며 응용 프로그램을 이러한 라이브러리 중 하나의 디버그 버전과 연결해야 합니다. 라이브러리 파일의 디버그 버전을 사용하는 방법에 대한 자세한 내용은 [CRT 디버깅 기술](/visualstudio/debugger/crt-debugging-techniques)을 참조하세요.  
+ 응용 프로그램의 디버그 버전을 빌드하려면 [_DEBUG](../c-runtime-library/debug.md) 플래그를 정의해야 하며 응용 프로그램을 이러한 라이브러리 중 하나의 디버그 버전과 연결해야 합니다. 라이브러리 파일의 디버그 버전을 사용하는 방법에 대한 자세한 내용은 참조 [CRT 디버깅 기술](/visualstudio/debugger/crt-debugging-techniques)을 참조하세요.  
   
  이 버전의 CRT는 C99 표준을 완벽하게 준수하지 않습니다. 특히 \<tgmath.h> 헤더 및 CX_LIMITED_RANGE/FP_CONTRACT pragma 매크로는 지원되지 않습니다. 표준 IO 함수에서 매개 변수 지정자의 의미와 같은 특정 요소는 기본적으로 레거시 해석을 사용합니다. /Zc 컴파일러 규칙 옵션을 사용하고 링커 옵션을 지정하여 라이브러리 규칙의 일부 측면을 제어할 수 있습니다.  
   
@@ -116,19 +116,19 @@ ms.lasthandoff: 03/07/2017
   
 |C++ 표준 라이브러리|특성|옵션|전처리기 지시문|  
 |----------------------------|---------------------|------------|-----------------------------|  
-|LIBCPMT.LIB|다중 스레드, 정적 링크|**/MT**|_MT|  
+|LIBCPMT.lib|다중 스레드, 정적 링크|**/MT**|_MT|  
 |MSVCPRT.LIB|다중 스레드, 동적 링크(MSVCP\<version>.dll에 대한 가져오기 라이브러리)|**/MD**|_MT, _DLL|  
 |LIBCPMTD.LIB|다중 스레드, 정적 링크|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|다중 스레드, 동적 링크(MSVCP\<version>D.DLL에 대한 가져오기 라이브러리)|**/MDd**|_DEBUG, _MT, _DLL|  
   
- 프로젝트의 릴리스 버전을 작성할 때 선택한 컴파일러 옵션(다중 스레드, DLL, /clr)에 따라 기본 C 런타임 라이브러리(LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) 중 하나가 기본적으로 연결됩니다. 코드에 [C++ 표준 라이브러리 헤더 파일](../standard-library/cpp-standard-library-header-files.md) 중 하나를 포함하는 경우 컴파일 시 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]에 의해 C++ 표준 라이브러리가 자동으로 연결됩니다. 예를 들면 다음과 같습니다.  
+ 프로젝트의 릴리스 버전을 작성할 때 선택한 컴파일러 옵션(다중 스레드, DLL, /clr)에 따라 기본 C 런타임 라이브러리(LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) 중 하나가 기본적으로 연결됩니다. 코드에 [C++ 표준 라이브러리 헤더 파일](../standard-library/cpp-standard-library-header-files.md) 중 하나를 포함하는 경우 컴파일 시 Visual C++에 의해 C++ 표준 라이브러리가 자동으로 연결됩니다. 예:  
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>응용 프로그램에서 여러 CRT 버전을 사용하는 경우 발생하는 문제  
- 둘 이상의 DLL 또는 EXE가 있는 경우에는 다른 버전의[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]를 사용하는지 여부와 상관없이 둘 이상의 CRT가 있을 수 있습니다. 예를 들어 CRT를 여러 DLL에 정적으로 연결하면 동일한 문제가 발생할 수 있습니다. 정적 CRT에서 이 문제가 발생하는 경우 개발자는 **/MD** 로 컴파일하여 CRT DLL을 사용하게 됩니다. DLL에서 DLL 경계를 넘어 CRT 리소스를 전달하는 경우 CRT가 일치하지 않는 문제가 발생하며 Visual C++를 사용하여 프로젝트를 다시 컴파일해야 합니다.  
+ 둘 이상의 DLL 또는 EXE가 있는 경우에는 다른 버전의 Visual C++를 사용하는지 여부와 상관없이 둘 이상의 CRT가 있을 수 있습니다. 예를 들어 CRT를 여러 DLL에 정적으로 연결하면 동일한 문제가 발생할 수 있습니다. 정적 CRT에서 이 문제가 발생하는 경우 개발자는 **/MD** 로 컴파일하여 CRT DLL을 사용하게 됩니다. DLL에서 DLL 경계를 넘어 CRT 리소스를 전달하는 경우 CRT가 일치하지 않는 문제가 발생하며 Visual C++를 사용하여 프로젝트를 다시 컴파일해야 합니다.  
   
  프로그램 둘 이상의 CRT 버전을 사용하는 경우에는 특정 CRT 개체(예: 파일 핸들, 로캘 및 환경 변수)를 DLL 경계를 넘어 전달할 때 주의해야 합니다. 관련된 문제 및 해결 방법에 대한 자세한 내용은 [DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)를 참조하세요.  
   

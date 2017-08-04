@@ -1,40 +1,57 @@
 ---
 title: "C 명령줄 처리 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_exec 함수"
-  - "_setargv 함수"
-  - "_spawn 함수"
-  - "명령줄, 처리"
-  - "명령줄, 인수 처리"
-  - "명령줄 처리"
-  - "환경, 환경 처리 루틴"
-  - "시작 코드, 명령줄 처리 사용자 지정"
-  - "환경 처리 표시하지 않음"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _spawn functions
+- command line, processing
+- command-line processing
+- startup code, customizing command-line processing
+- environment, environment-processing routine
+- _setargv function
+- command line, processing arguments
+- suppressing environment processing
+- _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# C 명령줄 처리 사용자 지정
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: fd7217a12616fca234ed1fcd8a3c31f0b46a1ba0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-프로그램에서 명령줄 인수를 사용하지 않는 경우 명령줄 처리를 수행하는 라이브러리 루틴의 사용을 억제하여 약간의 공간을 절약할 수 있습니다.  이 루틴을 **\_setargv**\(또는 와이드 문자 환경에서는 **\_wsetargv**\)라고 합니다\([와일드카드 인수 확장](../c-language/expanding-wildcard-arguments.md) 참조\).  이 루틴의 사용을 억제하려면 **main** 함수를 포함하는 파일에서 아무 작업도 수행하지 않는 루틴을 정의하고 **\_setargv**\(또는 와이드 문자 환경에서는 **\_wsetargv**\)라는 이름을 지정합니다.  **\_setargv** 또는 **\_wsetargv**를 호출하면 정의한 **\_setargv** 또는 **\_wsetargv**가 실행되며 라이브러리 버전이 로드되지 않습니다.  
+---
+# <a name="customizing-c-command-line-processing"></a>C 명령줄 처리 사용자 지정
+프로그램에서 명령줄 인수를 사용하지 않는 경우 명령줄 처리를 수행하는 라이브러리 루틴의 사용을 억제하여 약간의 공간을 절약할 수 있습니다. 이 루틴을 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라고 합니다([와일드카드 인수 확장명](../c-language/expanding-wildcard-arguments.md) 참조). 이 루틴의 사용을 억제하려면 **main** 함수를 포함하는 파일에서 아무 작업도 수행하지 않는 루틴을 정의하고 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라는 이름을 지정합니다. **_setargv** 또는 **_wsetargv**를 호출하면 정의한 **_setargv** 또는 **_wsetargv**가 실행되며 라이브러리 버전이 로드되지 않습니다.  
   
- 마찬가지로 `envp` 인수를 통해 환경 테이블에 액세스하지 않을 경우 환경 처리 루틴인 **\_setenvp**\(또는 **\_wsetenvp**\) 대신 사용할 사용자 고유의 빈 루틴을 제공할 수 있습니다.  
+ 마찬가지로 `envp` 인수를 통해 환경 테이블에 액세스하지 않을 경우 환경 처리 루틴인 **_setenvp**(또는 **_wsetenvp**) 대신 사용할 사용자 고유의 빈 루틴을 제공할 수 있습니다.  
   
- 프로그램에서 C 런타임 라이브러리의 **\_spawn** 또는 **\_exec** 계열 루틴을 호출하는 경우 생성하는 프로세스에서 새 프로세스로 환경을 전달하는 데 환경 처리 루틴이 사용되므로 환경 처리 루틴을 억제하면 안 됩니다.  
+ 프로그램에서 C 런타임 라이브러리의 **_spawn** 또는 **_exec** 계열 루틴을 호출하는 경우 생성하는 프로세스에서 새 프로세스로 환경을 전달하는 데 환경 처리 루틴이 사용되므로 환경 처리 루틴을 억제하면 안 됩니다.  
   
-## 참고 항목  
- [기본 함수 및 프로그램 실행](../c-language/main-function-and-program-execution.md)
+## <a name="see-also"></a>참고 항목  
+ [main 함수 및 프로그램 실행](../c-language/main-function-and-program-execution.md)

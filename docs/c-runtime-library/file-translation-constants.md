@@ -1,60 +1,77 @@
 ---
 title: "파일 변환 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.constants.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "상수[C++], 파일 변환 모드"
-  - "파일 변환[C++]"
-  - "파일 변환[C++], 상수"
-  - "변환 상수"
-  - "변환, 상수"
-  - "변환, 파일 변환 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.constants.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- translation constants
+- file translation [C++], constants
+- translation, file translation constants
+- translation, constants
+- constants [C++], file translation mode
+- file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 파일 변환 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e3005ebe8d36f77a470634b9fdd0003d9b6bb8d5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="file-translation-constants"></a>파일 변환 상수
+## <a name="syntax"></a>구문  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## 설명  
- 이 상수들은 변환 모드\(**"b"** 또는 **"t"**\)를 지정합니다.  이 모드는 액세스 유형\(**"r"**, **"w"**, **"a"**, **"r\+"**, **"w\+"**, **"a\+"**\)을 지정하는 문자열에 포함됩니다.  
+## <a name="remarks"></a>설명  
+ 이러한 상수는 변환 모드(**"b"** 또는 **"t"**)를 지정합니다. 이 모드는 액세스 형식(**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**)을 지정하는 문자열에 포함됩니다.  
   
  변환 모드는 다음과 같습니다.  
   
  **t**  
- 텍스트\(변환됨\) 모드에서 엽니다.  이 모드에서 캐리지 리턴\/줄 바꿈 \(CR\-LF\) 조합은 입력에서 단일 줄 바꿈\(LF\)으로 변환되고, 줄 바꿈 문자는 출력에서 캐리지 리턴\/줄 바꿈 조합으로 변환됩니다.  또한, CTRL \+ Z는 입력에서 파일 끝 문자로 해석 됩니다.  읽기\/쓰기를 위해 연 파일에서 `fopen`은 파일 끝에서 Ctrl\+Z를 확인하여 제거합니다\(가능한 경우\).  `fseek` 및 `ftell`을 사용하여 Ctrl\+Z로 끝나는 파일 내에서 이동하면 파일의 끝 부분에서 `fseek`가 제대로 동작하지 않을 수 있으므로 이 작업을 수행합니다.  
+ 텍스트(변환됨) 모드에서 엽니다. 이 모드에서는 CR-LF(캐리지 리턴 줄 바꿈) 조합은 입력 시 단일 LF(줄 바꿈)로 변환되고, LF 문자는 출력 시 CR-LF 조합으로 변환됩니다. 또한 CTRL+Z는 입력 시 파일 끝 문자로 변환됩니다. 읽기용으로나 읽기/쓰기용으로 열려 있는 파일에서 `fopen`은 파일 끝에 CTRL+Z가 있는지 확인하고 가능한 경우 이를 제거합니다. 이렇게 처리되는 이유는 `fseek` 및 `ftell` 함수를 사용하여 CTRL+Z로 끝나는 파일 내에서 이동하면 `fseek`가 파일 끝 부분에서 제대로 동작하지 않을 수 있기 때문입니다.  
   
 > [!NOTE]
->  **t** 옵션은 `fopen` 및 `freopen`의 ANSI 표준에 속하지 않습니다.  이는 Microsoft 확장이며 ANSI 이식성이 요구되는 곳에 사용될 수 없습니다.  
+>  **t** 옵션은 `fopen` 및 `freopen`에 대한 ANSI 표준에 속하지 않습니다. 이 옵션은 Microsoft 확장으로, ANSI 포팅 기능을 원할 경우 사용하면 안 됩니다.  
   
  **b**  
- 이진\(변환되지 않은\) 모드에서 열립니다.  위의 변환이 억제됩니다.  
+ 이진(변환되지 않음) 모드에서 엽니다. 위 변환은 표시되지 않습니다.  
   
- **t** 또는 **b**가 *mode*에 지정되지 않은 경우, 기본 변환 모드는 [\_fmode](../c-runtime-library/fmode.md) 변수로 정의됩니다.  텍스트 및 이진 모드를 사용하는 방법에 대한 자세한 내용은 [Text and Binary Mode File I\/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)를 참조하십시오.  
+ *mode*에 **t** 또는 **b**가 지정되지 않은 경우 변환 모드는 기본 모드 변수 [_fmode](../c-runtime-library/fmode.md)로 정의됩니다. 텍스트 모드와 이진 모드 사용에 대한 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)를 참조하세요.  
   
-## 참고 항목  
- [\_fdopen, \_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+## <a name="see-also"></a>참고 항목  
+ [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
+ [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
  [전역 상수](../c-runtime-library/global-constants.md)

@@ -1,139 +1,156 @@
 ---
 title: "errno 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENOEXEC"
-  - "ENOMEM"
-  - "E2BIG"
-  - "STRUNCATE"
-  - "ENOENT"
-  - "EMFILE"
-  - "EBADF"
-  - "EDEADLOCK"
-  - "EXDEV"
-  - "EILSEQ"
-  - "EINVAL"
-  - "EDOM"
-  - "EACCES"
-  - "ERANGE"
-  - "ENOSPC"
-  - "EAGAIN"
-  - "EEXIST"
-  - "ECHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E2BIG 상수"
-  - "EACCES 상수"
-  - "EAGAIN 상수"
-  - "EBADF 상수"
-  - "ECHILD 상수"
-  - "EDEADLOCK 상수"
-  - "EDOM 상수"
-  - "EEXIST 상수"
-  - "EILSEQ 상수"
-  - "EINVAL 상수"
-  - "EMFILE 상수"
-  - "ENOENT 상수"
-  - "ENOEXEC 상수"
-  - "ENOMEM 상수"
-  - "ENOSPC 상수"
-  - "ERANGE 상수"
-  - "errno 상수"
-  - "EXDEV 상수"
-  - "STRUNCATE 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ENOEXEC
+- ENOMEM
+- E2BIG
+- STRUNCATE
+- ENOENT
+- EMFILE
+- EBADF
+- EDEADLOCK
+- EXDEV
+- EILSEQ
+- EINVAL
+- EDOM
+- EACCES
+- ERANGE
+- ENOSPC
+- EAGAIN
+- EEXIST
+- ECHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- ENOEXEC constant
+- EBADF constant
+- EAGAIN constant
+- EINVAL constant
+- ENOENT constant
+- errno constants
+- E2BIG constant
+- EMFILE constant
+- EDEADLOCK constant
+- ENOSPC constant
+- EDOM constant
+- ENOMEM constant
+- EACCES constant
+- EEXIST constant
+- STRUNCATE constant
+- ERANGE constant
+- ECHILD constant
+- EXDEV constant
+- EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# errno 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 993d61cf94df06c01623f231f3a4915d0ec8cc41
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="errno-constants"></a>errno 상수
+## <a name="syntax"></a>구문  
   
 ```  
   
 #include <errno.h>  
 ```  
   
-## 설명  
- **errno**값은 다양한 오류 조건의 이벤트에서 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)에 지정된 상수입니다.  
+## <a name="remarks"></a>설명  
+ **errno** 값은 여러 오류 조건에서 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)에 할당된 상수입니다.  
   
- ERRNO.H는 **errno** 값의 정의를 포함합니다.  그러나 ERRNO.H에 주어진 모든 정의가 32비트 Windows 운영 체제에서 사용되는 것은 아닙니다.  ERRNO.H 안의 값 일부는 UNIX 계열 운영 체제와의 호환성을 유지하기 위해 존재합니다.  
+ ERRNO.H는 **errno** 값의 정의를 포함합니다. 그러나 ERRNO.H에서 지정된 정의 중 일부는 32비트 Windows 운영 체제에서 사용되지 않습니다. ERRNO.H에 있는 값 중 일부는 UNIX 운영 체제군과의 호환성을 유지하기 위해 제공됩니다.  
   
- 32비트 Windows 운영 체제에서 **errno** 값은 XENIX 시스템 내 **errno** 값의 부분집합입니다.  따라서, 해당 **errno** 값은 Windows 운영 체제로부터의 시스템 호출에 의해 반환되는 실제 오류 코드와 반드시 동일할 필요가 없습니다.  실제 운영 체제의 오류 코드에 액세스하려면, 이 값을 포함하고 있는 [\_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 사용하십시오.  
+ 32비트 Windows 운영 체제의 **errno** 값은 XENIX 시스템 내 **errno**에 대한 값의 하위 집합입니다. 따라서 **errno** 값은 Windows 운영 체제의 시스템 호출에 의해 반환되는 실제 오류 코드와 동일할 필요는 없습니다. 실제 운영 체제 오류 코드에 액세스하려면 이 값을 포함하는 [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 사용하세요.  
   
- 다음 **errno** 값을 사용할 수 있습니다.  
+ 다음과 같은 **errno** 값이 지원됩니다.  
   
  **ECHILD**  
  생성된 프로세스가 없습니다.  
   
  **EAGAIN**  
- 더 이상 프로세스가 없습니다.  더 이상 프로세스 슬롯이 없거나 충분한 메모리가 없거나, 최대 중첩 수준에 도달했기 때문에 새 프로세스를 만들려는 시도가 실패하였습니다.  
+ 더 이상 프로세스가 없습니다. 더 이상 프로세스 슬롯이 없거나, 메모리가 부족하거나, 최대 중첩 수준에 도달했기 때문에 새 프로세스를 만들려는 시도가 실패했습니다.  
   
  **E2BIG**  
  인수 목록이 너무 깁니다.  
   
  **EACCES**  
- 사용 권한이 거부되었습니다.  파일의 권한 설정이 지정된 액세스를 허용하지 않습니다.  이 오류는 파일의 속성과 호환되지 않는 방법을 통해서 파일\(또는 일부 경우 디렉터리\)에 대한 액세스 시도가 일어났다는 것을 의미합니다.  
+ 사용 권한이 거부되었습니다. 파일의 권한 설정이 지정된 액세스를 허용하지 않습니다. 이 오류는 파일의 특성과 호환되지 않는 방식으로 파일(또는 일부 경우 디렉터리)에 액세스하려는 시도가 있었음을 의미합니다.  
   
- 예를 들어, 열려 있지 않은 파일로부터 읽거나, 읽기 전용 파일을 쓰기 위해서 열거나, 파일 대신 디렉터리를 열려는 시도가 있는 경우 오류가 발생할 수 있습니다.  MS\-DOS 운영 체제 버전 3.0 및 그 이후 버전에서,  **EACCES**는 잠금 또는 공유 위반을 나타낼 수도 있습니다.  
+ 예를 들어 열려 있지 않은 파일로부터 읽거나, 기존 읽기 전용 파일을 쓰기 위해 열거나, 파일 대신 디렉터리를 열려는 시도가 있는 경우 오류가 발생할 수 있습니다. MS-DOS 운영 체제 버전 3.0 이상에서 **EACCES**는 잠금 또는 공유 위반을 나타낼 수도 있습니다.  
   
- 파일 또는 디렉터리 이름 바꾸기 또는 기존 디렉터리를 제거하는 시도에서 오류가 발생할 수도 있습니다.  
+ 파일 또는 디렉터리의 이름을 바꾸거나 기존 디렉터리를 제거하려는 동안 오류가 발생할 수도 있습니다.  
   
  **EBADF**  
- 잘못된 파일 번호입니다.  가능한 원인은 두 가지입니다. 1\) 지정한 파일 기술자가 잘못된 값이거나 파일의 열기를 참조하지 않습니다. 2\) 읽기 전용으로 열린 파일 또는 장치에 쓰려는 시도가 발생한 경우  
+ 잘못된 파일 번호입니다. 가능한 원인은 두 가지입니다. 1) 지정한 파일 설명자가 잘못된 값이거나 열려 있는 파일을 참조하지 않습니다. 2) 읽기 전용으로 열린 파일 또는 장치에 쓰려는 시도가 있었습니다.  
   
  **EDEADLOCK**  
- 리소스 교착 상태가 발생합니다.  수학 함수에 대한 인수는 함수의 도메인에 포함되지 않습니다.  
+ 리소스 교착 상태가 발생합니다. 수학 함수에 대한 인수는 함수의 도메인에 포함되지 않습니다.  
   
  **EDOM**  
  수학 인수입니다.  
   
  **EEXIST**  
- 파일이 존재합니다.  이미 존재하는 파일을 만드려는 시도가 일어났습니다.  예를 들어, **\_O\_CREAT** 및 **\_O\_EXCL** 플래그가 **\_open** 호출에서 지정됩니다. 하지만 명명된 된 파일이 이미 있습니다.  
+ 파일이 존재합니다. 이미 존재하는 파일을 만들려는 시도가 있었습니다. 예를 들어 **_O_CREAT** 및 **_O_EXCL** 플래그가 **_open** 호출에서 지정되지만 명명된 파일이 이미 있습니다.  
   
  **EILSEQ**  
- 잘못된 바이트의 시퀀스\(예를 들어, MBCS 문자열\)입니다.  
+ 잘못된 바이트의 시퀀스(예: MBCS 문자열에 있음)입니다.  
   
  **EINVAL**  
- 잘못된 인수입니다.  함수의 인수 중 하나에 잘못된 값이 지정되었습니다.  예를 들어, 파일 포인터의 위치를 지정할 때 \(**fseek**의 호출에 의해\) 주어진 값이 파일의 시작보다 앞인 경우입니다.  
+ 인수가 잘못되었습니다. 함수의 인수 중 하나에 대해 잘못된 값이 지정되었습니다. 예를 들어 **fseek**에 대한 호출을 통해 파일 포인터의 위치를 지정할 때 원본에 대해 지정된 값이 파일의 시작 부분 앞에 있습니다.  
   
  **EMFILE**  
- 너무 많은 파일을 엽니다.  더 이상의 사용 가능한 파일 기술자가 없으므로, 더 이상 파일을 열 수 없습니다.  
+ 열려 있는 파일이 너무 많습니다. 더 이상 사용 가능한 파일 설명자가 없으므로 더 이상 파일을 열 수 없습니다.  
   
  **ENOENT**  
- 그러한 파일 또는 디렉터리가 없습니다.  지정된 파일 또는 디렉터리가 존재하지 않거나 찾을 수 없습니다.  지정한 파일이 존재하지 않거나 경로가 존재하는 디렉터리를 지정하지 않을 때마다 이 메시지가 나타날 수 있습니다.  
+ 이러한 파일 또는 디렉터리가 없습니다. 지정된 파일 또는 디렉터리가 존재하지 않거나 찾을 수 없습니다. 지정한 파일이 존재하지 않거나 경로의 구성 요소에서 기존 디렉터리를 지정하지 않을 때마다 이 메시지가 나타날 수 있습니다.  
   
  **ENOEXEC**  
- Exec 형식 오류입니다.  실행 파일이 아니거나 잘못된 형식의 실행 파일을 실행하려는 시도가 있었습니다.  
+ 실행 형식 오류입니다. 실행 파일이 아니거나 잘못된 형식의 실행 파일을 실행하려는 시도가 있었습니다.  
   
  **ENOMEM**  
- 코어가 부족합니다.  시도된 연산자를 위한 메모리가 부족합니다.  예를 들어, 자식 프로세스를 실행하기에 메모리가 부족하거나 **\_getcwd**의 할당 요청 호출이 만족되지 않은 경우 이 메시지가 나타날 수 있습니다.  
+ 코어가 부족합니다. 시도된 연산자에 대한 메모리가 부족합니다. 예를 들어 자식 프로세스를 실행하기 위한 메모리가 부족하거나 **_getcwd** 호출의 할당 요청이 만족되지 않을 때 이 메시지가 나타날 수 있습니다.  
   
  **ENOSPC**  
- 장치에 남은 공간이 없습니다.  장치에 더 이상 쓸 공간이 없습니다. \(예를 들어, 디스크가 꽉 찬 경우\)  
+ 장치에 남은 공간이 없습니다. 장치에 더 이상 쓸 공간이 없습니다(예: 디스크가 꽉 찬 경우).  
   
  **ERANGE**  
- 결과가 너무 큽니다.  수학 함수의 인수가 너무 커서 결과의 일부 또는 전체가 손실되었습니다.  이 오류는 인수가 예상보다 클 때 다른 함수에서도 발생할 수 있습니다\(예를 들어, **\_getcwd**의 *buffer* 인수가 예상보다 길 경우\).  
+ 결과가 너무 큽니다. 수학 함수의 인수가 너무 커서 결과에서 중요 전체 또는 부분 손실이 발생했습니다. 이 오류는 인수가 예상보다 클 때 다른 함수에서도 발생할 수 있습니다(예: **_getcwd**에 대한 *buffer* 인수가 예상보다 긴 경우).  
   
  **EXDEV**  
- 장치 간 연결입니다.  파일을 다른 장치로 이동하려는 시도가 있었습니다\(**rename** 함수를 이용해서\).  
+ 장치 간 연결입니다. 파일을 다른 장치로 이동하려는 시도가 있었습니다(**rename** 함수 사용).  
   
  **STRUNCATE**  
- 문자열 복사 또는 연결에 의해 절단된 문자열이 생성되었습니다.  [\_TRUNCATE](../c-runtime-library/truncate.md)를 참조하십시오.  
+ 문자열 복사 또는 연결에 의해 문자열이 잘렸습니다. [_TRUNCATE](../c-runtime-library/truncate.md)를 참조하세요.  
   
- 다음 값은 Posix 호환을 위해 지원됩니다.  이들은 비 Posix 시스템에서 필요한 값입니다.  
+ 다음 값은 Posix와의 호환성을 위해 지원됩니다. 이러한 값은 비Posix 시스템에 필요한 값입니다.  
   
 ```  
 #define E2BIG [argument list too long]  
@@ -217,5 +234,5 @@ caps.handback.revision: 8
 #define EXDEV [cross device link]  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [전역 상수](../c-runtime-library/global-constants.md)

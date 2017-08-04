@@ -1,25 +1,42 @@
 ---
 title: "라이브러리 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 라이브러리 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1c57ba02eb88b5097945e1e6c0e7560dc61d0d25
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="library-functions"></a>라이브러리 함수
 -   [NULL 매크로](../c-language/null-macro.md)  
   
 -   [assert 함수에서 진단 인쇄](../c-language/diagnostic-printed-by-the-assert-function.md)  
@@ -82,5 +99,5 @@ caps.handback.revision: 9
   
 -   [clock 함수](../c-language/clock-function-c.md)  
   
-## 참고 항목  
- [구현이 정의된 동작](../c-language/implementation-defined-behavior.md)
+## <a name="see-also"></a>참고 항목  
+ [Implementation-Defined Behavior](../c-language/implementation-defined-behavior.md)

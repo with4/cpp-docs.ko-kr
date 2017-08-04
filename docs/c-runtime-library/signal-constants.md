@@ -1,74 +1,91 @@
 ---
 title: "신호 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SIGTERM"
-  - "SIGFPE"
-  - "SIGABRT"
-  - "SIGILL"
-  - "SIGINT"
-  - "SIGSEGV"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SIGABRT 상수"
-  - "SIGFPE 상수"
-  - "SIGILL 상수"
-  - "SIGINT 상수"
-  - "신호 상수"
-  - "SIGSEGV 상수"
-  - "SIGTERM 상수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SIGTERM
+- SIGFPE
+- SIGABRT
+- SIGILL
+- SIGINT
+- SIGSEGV
+dev_langs:
+- C++
+helpviewer_keywords:
+- SIGTERM constant
+- SIGABRT constant
+- SIGSEGV constant
+- SIGFPE constant
+- SIGINT constant
+- signal constants
+- SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 신호 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 511d700aa5eaa47c59648160e152cfc14c4c1177
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
-## 구문  
+---
+# <a name="signal-constants"></a>신호 상수
+## <a name="syntax"></a>구문  
   
 ```  
 #include <signal.h>  
 ```  
   
-## 설명  
- `sig` 인수는 아래\(SIGNAL.H에서 정의된\) 기록된 매니페스트 상수들 중 하나여야 합니다.  
+## <a name="remarks"></a>설명  
+ `sig` 인수는 아래에 나열된 매니페스트 상수 중 하나여야 합니다(SIGNAL.H에 정의).  
   
  `SIGABRT`  
- Abnormal termination.  기본 작업은 종료 코드 3을 사용하여 호출하는 프로그램을 종료합니다.  
+ 비정상적인 종료. 기본 작업은 호출 프로그램을 종료하고 종료 코드 3을 생성합니다.  
   
  `SIGABRT_COMPAT`  
- SIGABRT과 동일합니다.  다른 플랫폼과 호환됩니다.  
+ SIGABRT와 동일. 다른 플랫폼과의 호환을 위해 필요합니다.  
   
  `SIGFPE`  
- 잘못된 연산이나 0으로 나누기, 오버플로우같은 부동소수점 오류입니다.  기본 동작이 호출 프로그램을 종료합니다.  
+ 부동 소수점 오류(오버플로, 0으로 나누기 또는 잘못된 작업) 기본 작업은 호출 프로그램을 종료합니다.  
   
  `SIGILL`  
- 잘못된 명령.  기본 동작이 호출 프로그램을 종료합니다.  
+ 잘못된 명령. 기본 작업은 호출 프로그램을 종료합니다.  
   
  `SIGINT`  
- CTRL\+C 인터럽트  기본 작업은 종료 코드 3을 사용하여 호출하는 프로그램을 종료합니다.  
+ Ctrl+C 인터럽트. 기본 작업은 호출 프로그램을 종료하고 종료 코드 3을 생성합니다.  
   
  `SIGSEGV`  
- 잘못된 저장소 액세스.  기본 동작이 호출 프로그램을 종료합니다.  
+ 잘못된 저장소 액세스. 기본 작업은 호출 프로그램을 종료합니다.  
   
  `SIGTERM`  
- 전송 프로그램 종료 요청.  기본 작업은 종료 코드 3을 사용하여 호출하는 프로그램을 종료합니다.  
+ 프로그램에 종료 요청이 전송됨. 기본 작업은 호출 프로그램을 종료하고 종료 코드 3을 생성합니다.  
   
  `SIG_ERR`  
- 반환 형식을 나타내는 신호에서 오류가 발생했습니다.  
+ 오류가 발생했음을 나타내는 신호의 반환 형식  
   
-## 참고 항목  
- [신호](../c-runtime-library/reference/signal.md)   
+## <a name="see-also"></a>참고 항목  
+ [signal](../c-runtime-library/reference/signal.md)   
  [raise](../c-runtime-library/reference/raise.md)   
  [전역 상수](../c-runtime-library/global-constants.md)
