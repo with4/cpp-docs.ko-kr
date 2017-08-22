@@ -11,10 +11,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
+ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/01/2017
 ### <a name="toolset"></a>도구 집합  
  obj 및 lib 파일 형식은 잘 정의되어 있고 거의 변경되지 않습니다. 때때로 이러한 파일 형식이 추가되지만, 일반적으로 이러한 추가 항목은 최신 도구 집합이 이전 도구 집합에서 생성된 개체 파일 및 라이브러리를 사용하는 데 영향을 주지 않습니다. 여기서 한 가지 중요한 예외는 /GL(링크 타임 코드 생성/전체 프로그램 최적화)을 사용하여 컴파일하는 경우입니다. /GL을 사용하여 컴파일하는 경우 결과로 생성된 개체 파일은 이 파일을 생성하는 데 사용된 것과 동일한 도구 집합을 통해서만 연결할 수 있습니다. 따라서 /GL 및 Visual Studio 2017(v141) 컴파일러를 사용하여 개체 파일을 생성하는 경우 Visual Studio 2017(v141) 링커를 사용하여 연결해야 합니다. 이는 /GL 개체 내의 내부 데이터 구조가 도구 집합의 주 버전 간에 안정적이지 않으며 최신 도구 집합이 오래된 데이터 형식을 이해하지 못하기 때문입니다.  
   
- C++에는 안정적인 ABI(응용 프로그램 이진 인터페이스)가 없습니다. Visual C++는 릴리스의 모든 부 버전에 대해 안정적인 ABI를 유지 관리합니다. 예를 들어 Visual Studio 2017과 모든 업데이트는 이진 호환됩니다. 그러나 Visual C++의 주 버전 간에는 ABI가 호환되지 않을 수 있습니다(단, 2015와 2017은 _이진 호환됨_). 즉, C++ 형식 레이아웃, 이름 데코레이션, 예외 처리 및 C++ ABI의 다른 부분에서 주요 변경이 수행될 수 있습니다. 따라서 C++ 연결이 있는 외부 기호를 포함하는 개체 파일은 다른 주 버전의 Visual C++ 도구 집합을 사용하여 생성된 개체 파일에 제대로 연결하지 못할 수 있습니다. 여기서 "작동하지 않을 수 있다"는 말은 여러 가능한 결과를 나타냅니다. 즉, 연결에 완전히 실패하거나(예: 이름 데코레이션이 변경된 경우), 연결은 성공하지만 런타임 시 기능이 작동하지 않거나(예: 형식 레이아웃이 변경된 경우), 대부분의 경우 기능이 작동하고 오류가 발생하지 않을 수도 있습니다. 또한 C++ ABI는 불안정하지만 C ABI 및 COM에 필요한 C++ ABI의 하위 집합은 안정적입니다.  
+ C++에는 안정적인 ABI(응용 프로그램 이진 인터페이스)가 없습니다. Visual C++는 릴리스의 모든 부 버전에 대해 안정적인 ABI를 유지 관리합니다. 예를 들어 Visual Studio 2017과 모든 업데이트는 이진 호환됩니다. 그러나 Visual C++의 주 버전 간에는 ABI가 호환되지 않을 수 있습니다(단, 2015와 2017은 _이진 호환됨_). 즉, C++ 형식 레이아웃, 이름 데코레이션, 예외 처리 및 C++ ABI의 다른 부분에서 주요 변경이 수행될 수 있습니다. 따라서 C++ 연결이 있는 외부 기호를 포함하는 개체 파일은 다른 주 버전의 Visual C++ 도구 집합을 사용하여 생성된 개체 파일에 제대로 연결하지 못할 수 있습니다. 여기서 "작동하지 않을 수 있음"에는 여러 가능한 결과가 있습니다. 즉, 연결이 완전히 실패하거나(예: 이름 데코레이션이 변경된 경우), 연결은 성공하지만 런타임 시 작업이 작동하지 않거나(예: 형식 레이아웃이 변경된 경우), 대부분의 경우 작업이 작동하고 오류가 전혀 발생하지 않을 수도 있습니다. 또한 C++ ABI는 불안정하지만 C ABI 및 COM에 필요한 C++ ABI의 하위 집합은 안정적입니다.  
   
 ### <a name="libraries"></a>라이브러리  
 
@@ -166,6 +167,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  자세한 내용은 [MBCS에서 유니코드로 포팅](porting-guide-spy-increment.md#porting_to_unicode)을 참조하세요. MBCS 및 유니코드에 대한 일반적인 내용은 [Visual C++의 텍스트 및 문자열](../text/text-and-strings-in-visual-cpp.md) 및 [국제화](../c-runtime-library/internationalization.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [이전 버전의 Visual C++에서 프로젝트 업그레이드](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
- [Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)
+ [이전 버전의 Visual C++에서 프로젝트 업그레이드](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)
 
