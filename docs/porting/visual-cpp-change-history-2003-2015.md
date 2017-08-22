@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/01/2017
   
 #### <a name="general-changes"></a>일반 변경 내용  
   
--   **리팩터링된 이진 파일** CRT 라이브러리가 다음 이진 파일 두 개로 리팩터링되었습니다. 범용 CRT(ucrtbase)에는 대부분 표준 기능이 포함되고 VC 런타임 라이브러리(vcruntime140)에는 컴파일러 관련 기능이 포함됩니다(예: 예외 처리 및 내장). 링커는 자동으로 새 기본 라이브러리를 사용하므로 기본 프로젝트 설정을 사용하면 이 변경이 영향을 미치지 않습니다. 프로젝트의 **링커** 속성 **모든 기본 라이브러리 무시** 를 **예** 로 설정했거나 명령줄에서 /NODEFAULTLIB 링커 옵션을 사용 중이면 **추가 종속성** 속성에서 라이브러리 목록을 업데이트하여 새 리팩터링된 라이브러리를 포함해야 합니다. 이전 CRT 라이브러리(libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib)를 해당하는 리팩터링된 라이브러리로 바꿉니다. 두 리팩터링된 라이브러리에는 각각 정적(.lib) 및 동적(.dll) 버전과 릴리스(접미사 없음) 및 디버그("d" 접미사 사용) 버전이 있습니다. 동적 버전에는 연결할 가져오기 라이브러리가 포함됩니다. 두 리팩터링된 라이브러리에는 범용 CRT인, 특히 ucrtbase.dll 또는 .lib, ucrtbased.dll 또는 .lib와 VC 런타임 라이브러리인 libvcruntime.lib, libvcruntime.dll, libvcruntimed.lib 및 libvcruntimed.dll이 있습니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
+-   **리팩터링된 이진 파일** CRT 라이브러리는 두 개의 다른 이진 파일로 리팩터링되었습니다. 즉 유니버설 CRT(ucrtbase)에는 대부분의 표준 기능이 포함되어 있으며, VC 런타임 라이브러리(vcruntime)에는 예외 처리 및 내장 함수와 같은 컴파일러 관련 기능이 포함되어 있습니다. 링커는 자동으로 새 기본 라이브러리를 사용하므로 기본 프로젝트 설정을 사용하면 이 변경이 영향을 미치지 않습니다. 프로젝트의 **링커** 속성 **모든 기본 라이브러리 무시** 를 **예** 로 설정했거나 명령줄에서 /NODEFAULTLIB 링커 옵션을 사용 중이면 **추가 종속성** 속성에서 라이브러리 목록을 업데이트하여 새 리팩터링된 라이브러리를 포함해야 합니다. 이전 CRT 라이브러리(libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib)를 해당하는 리팩터링된 라이브러리로 바꿉니다. 두 리팩터링된 라이브러리에는 각각 정적(.lib) 및 동적(.dll) 버전과 릴리스(접미사 없음) 및 디버그("d" 접미사 사용) 버전이 있습니다. 동적 버전에는 연결할 가져오기 라이브러리가 포함됩니다. 리팩터링된 두 라이브러리는 유니버설 CRT(구체적으로 ucrtbase.dll 또는 .lib, ucrtbased.dll 또는 .lib)와 VC 런타임 라이브러리(libvcruntime.lib, vcruntime*버전*.dll, libvcruntimed.lib 및 vcruntimed*버전*.dll)입니다. Visual Studio 2015 및 Visual Studio 2017의 *버전*은 모두 140입니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
   
 #### <a name="localeh"></a>\<locale.h>  
   
@@ -1423,7 +1423,7 @@ struct S2 : public S1 {
 
 -   **{}는 포인터로의 변환을 방지함**  
 
-다음 코드는 C2439를 생성합니다. ‘S::p’: 멤버를 초기화할 수 없습니다.    
+다음 코드는 C2439를 생성합니다. ‘S::p’: 멤버를 초기화할 수 없습니다.   
 ```cpp
 struct S {
     S() : p({ 0 }) {}
