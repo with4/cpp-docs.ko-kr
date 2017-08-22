@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>C 런타임 라이브러리 참조
@@ -76,8 +76,8 @@ Microsoft 런타임 라이브러리는 Microsoft Windows 운영 체제에 대한
  [런타임 오류 검사](../c-runtime-library/run-time-error-checking.md)  
  런타임 오류 검사를 지원하는 함수에 대한 링크를 제공합니다.  
   
- [런타임 라이브러리 동작](../build/run-time-library-behavior.md)  
- CRT DLL의 진입점을 설명합니다.  
+ [DLL 및 Visual C++ 런타임 라이브러리 동작](../build/run-time-library-behavior.md)  
+ DLL에 사용되는 진입점과 시작 코드를 설명합니다.  
   
  [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, C++ 표준 라이브러리를 포함하여 Visual C++에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
