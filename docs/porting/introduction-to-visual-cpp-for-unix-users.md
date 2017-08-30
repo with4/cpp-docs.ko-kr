@@ -1,5 +1,5 @@
 ---
-title: "UNIX 사용자를 위한 Visual C++ 소개 | Microsoft 문서"
+title: Introduction to Visual C++ for UNIX Users | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,56 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 6eaba7ea947bc6a9c79c67745876bc0d67e73314
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="introduction-to-visual-c-for-unix-users"></a>UNIX 사용자를 위한 Visual C++ 소개
-이 항목에서는 Visual C++를 처음 사용하며 Visual C++로 생산성을 높이려는 UNIX 사용자에게 정보를 제공합니다.  
+# <a name="introduction-to-visual-c-for-unix-users"></a>Introduction to Visual C++ for UNIX Users
+
+This topic provides information for UNIX users who are new to Visual C++ and want to become productive with Visual C++ and the Visual Studio Integrated Development Environment (IDE).  
   
-## <a name="getting-started-on-the-command-line"></a>명령줄에서 시작  
- UNIX 명령줄 환경을 사용하는 것과 유사한 방식으로 명령줄에서 Visual C++를 사용할 수 있습니다. 명령줄 C 및 C++ 컴파일러(CL.EXE)와 UNIX에서 만든 유틸리티의 Microsoft 버전인 NMAKE.EXE를 비롯한 도구를 사용하여 명령 프롬프트에서 컴파일합니다.  
+## <a name="getting-started-on-the-command-line"></a>Getting Started on the Command Line  
+
+You can use Visual C++ from the command line in a similar way that you would use a UNIX command-line environment. You compile from the command prompt by using the command-line C and C++ compiler (CL.EXE), linker (LINK.EXE), and other tools, including NMAKE.EXE, the Microsoft version of the UNIX make utility.  
   
- UNIX에서는 /usr/bin 등의 공용 폴더에 명령이 설치됩니다. Visual C++에서는 설치 디렉터리의 VC\bin(일반 설치의 경우 Program Files\Microsoft Visual Studio 8\VC\bin)에 명령줄 도구가 설치됩니다. 명령줄 도구를 사용하려면 설치 디렉터리의 Common7\Tools에 있는 vsvars32.bat를 실행합니다. 그러면 경로에 bin 디렉터리가 추가되고 명령줄에서 Visual C++ 프로그램을 컴파일하는 데 필요한 기타 경로가 설정됩니다. 자세한 내용은 [명령줄 빌드](../build/building-on-the-command-line.md) 및 [연습: 명령줄에서 네이티브 C++ 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)을 참조하세요.  
+In UNIX, commands are installed in a common folder, such as /usr/bin. In Visual C++, the command-line tools are installed in your Visual Studio installation directory in the VC\bin subdirectory and its subdirectories. Unlike UNIX, these tools are not available in a plain command prompt window. To use the command-line tools, use a developer command prompt shortcut, or run a developer command file such as vcvarsall.bat. This sets up the path and other environment variables that are necessary to compile Visual C++ programs from the command line. For more information, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md) and [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-> [!NOTE]
->  **시작** 메뉴에서 **Visual Studio 명령줄 프롬프트**를 사용하여 명령 프롬프트를 열면 vsvars32.bat가 실행됩니다.  
+To open a developer command prompt shortcut, enter *developer command prompt* in the desktop search control and choose the **Developer Command Prompt** result for your version of Visual Studio. To choose a developer command prompt that is preconfigured for a particular host and target architecture, open the **Start** menu (the Windows icon in the corner of the desktop) and then scroll to the folder for your version of Visual Studio, such as **Visual Studio 2017**. Open the folder and choose the command prompt shortcut for your preferred host and target architecture.
   
- Visual Studio 디버거, 문 완성 등의 보다 강력한 기능을 활용하려면 개발 환경을 사용해야 합니다.  
+To take advantage of more powerful features, such as the Visual Studio debugger, IntelliSense code look-up and statement completion, visual designers, project management, and so on, you need to use the Visual Studio IDE.  
   
-## <a name="debugging-your-code"></a>코드 디버그  
- 명령줄을 사용하고 개발용 워크스테이션에서 응용 프로그램을 실행하는 경우 코드에서 메모리 액세스 위반, 처리되지 않은 예외 또는 기타 복구할 수 없는 오류가 발생할 때 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 디버거를 실행하는 대화 상자가 표시되는 것을 확인할 수 있습니다. **확인**을 클릭하면 Visual Studio 개발 환경이 시작되고 디버거가 오류 지점에서 열립니다. 이러한 방식으로 응용 프로그램을 디버그할 수 있으며, 이 경우 [/Z7, /Zi, /ZI(디버그 정보 형식)](../build/reference/z7-zi-zi-debug-information-format.md) 스위치로 컴파일한 경우에만 소스 코드를 사용할 수 있습니다. 자세한 내용은 [네이티브 코드 디버그](/visualstudio/debugger/debugging-native-code) 및 [C++ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)을 참조하세요.  
+## <a name="debugging-your-code"></a>Debugging Your Code  
+
+If you use the command line and run your applications on your development workstation, you will see that a dialog box to run the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] debugger is displayed when your code encounters a memory access violation, unhandled exception, or other unrecoverable errors. If you click **OK**, then the Visual Studio development environment is started, and the debugger will open to the point of failure. It is possible to debug your applications this way, and, in this case, your source code would only be available if you compiled with the [/Z7, /Zi, /ZI (Debug Information Format)](../build/reference/z7-zi-zi-debug-information-format.md) switch. For more information, see [Debugging Native Code](/visualstudio/debugger/debugging-native-code) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="using-the-development-environment"></a>개발 환경 사용  
- 개발 환경을 사용하면 *프로젝트*의 소스 코드를 보다 쉽게 편집 및 빌드할 수 있습니다. 프로젝트는 라이브러리 또는 실행 파일과 같은 하나의 단위로 컴파일되는 소스 및 관련 파일의 컬렉션입니다. 또한 프로젝트에는 파일을 빌드하는 방법에 대한 정보도 들어 있습니다. 프로젝트 정보는 확장명이 .prj인 프로젝트 파일에 저장됩니다.  
+## <a name="using-the-development-environment"></a>Using the Development Environment  
+
+It is easier to use the development environment to edit and build your source code in a *project*. A project is a collection of source and related files that will be compiled into a single unit, such as a library or executable. A project also contains information on how the files are to be built. Information about projects is stored in a project file with the extension .prj.  
   
- 잠재적으로 각각 다른 컴파일러 옵션 집합이나 다른 언어로 빌드된 여러 라이브러리와 실행 파일로 구성된 응용 프로그램은 단일 *솔루션*에 속하는 여러 프로젝트에 저장됩니다. 솔루션은 여러 프로젝트를 함께 그룹화하는 컨테이너에 대한 추상화입니다. 솔루션 정보는 확장명이 .sln 솔루션 파일에 저장됩니다. 자세한 내용은 [Visual Studio의 솔루션 및 프로젝트](/visualstudio/ide/solutions-and-projects-in-visual-studio) 및 [C++ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)을 참조하세요.  
+An application that consists of multiple libraries and executables, each potentially built with a different set of compiler options or even in a different language, are stored in multiple projects that are part of a single *solution*. A solution is an abstraction for a container to group multiple projects together. Information about solutions is stored in a solution file with the extension .sln. For more information, see [Solutions and Projects in Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="importing-your-existing-code"></a>기존 코드 가져오기  
- Visual C++를 통해 메이크파일을 포함하거나 포함하지 않고 컴파일하도록 설정된 기존 코드를 사용하고 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 프로젝트에 넣을 수 있습니다. 자세한 내용은 **기존 코드 파일에서 프로젝트 만들기 마법사**를 참조하세요. 자세한 내용은 [방법: 기존 코드로 C++ 프로젝트 만들기](../ide/how-to-create-a-cpp-project-from-existing-code.md)를 참조하세요.  
+## <a name="importing-your-existing-code"></a>Importing Your Existing Code 
+ 
+You can use Visual C++ to build existing code that is set up to compile with or without a makefile and put it into a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] project. For more information, see [How to: Create a C++ Project from Existing Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
-## <a name="creating-a-new-project"></a>새 프로젝트 만들기  
- 개발 환경에서 새 프로젝트를 만들 수 있습니다. Visual C++에서는 여러 일반적인 프로젝트에 대한 표준 코드를 제공하는 다양한 템플릿을 제공합니다. 응용 프로그램 마법사를 사용하여 다양한 응용 프로그램 형식에 대한 코드 개요로 프로젝트를 생성할 수 있습니다.  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+
+You can create new projects in the development environment. Visual C++ provides numerous templates that provide standard code for various common projects. You can use application wizards to generate projects with code outlines for various application types.  
   
- **콘솔 응용 프로그램(Win32) 마법사**를 사용하면 빈 프로젝트로 시작할 수 있습니다. **빈 프로젝트** 확인란을 선택합니다. 나중에 프로젝트에 새 파일과 기존 파일을 추가할 수 있습니다.  
+You can start with an empty project by using the **Console Application (Win32) Wizard**. Select the **Empty Project** check box. You can then add new and existing files to the project later.  
   
- 프로젝트를 만들 때 프로젝트에 이름을 지정해야 합니다. 기본적으로 프로젝트 이름은 프로젝트에서 빌드된 DLL(동적 연결 라이브러리) 또는 실행 파일의 이름과 같습니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
+When you create a project, you must name the project. By default, the project name equals the name of the dynamic-link library (DLL) or executable that is build from the project. For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).  
   
-## <a name="microsoft-specific-modifiers"></a>Microsoft 전용 한정자  
- Visual C++에는 표준 C++ 프로그래밍 언어에 대한 여러 확장이 포함되어 있습니다. 이러한 확장은 특히 저장소 클래스 특성, 함수 호출 규칙 및 기본 주소를 지정하는 데 사용됩니다. 모든 Visual C++ 확장의 전체 목록은 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)를 참조하세요.  
+## <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers  
+
+Visual C++ contains several extensions to the standard C++ programming language to support programming for Windows operating systems. These extensions are used to specify storage class attributes, function calling conventions, and based addressing, among other things. For a complete list of all Visual C++ extensions, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).  
   
- **/Za** 컴파일러 옵션을 통해 C++에 대한 모든 Microsoft 전용 확장을 사용하지 않도록 설정할 수 있습니다. 이 옵션은 여러 플랫폼에서 실행할 코드를 작성하려는 경우에 권장됩니다. **/Za** 컴파일러 옵션에 대한 자세한 내용은 [/Za, /Ze(언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md)를 참조하세요. Visual C++ 규칙에 대한 자세한 내용은 [비표준 동작](../cpp/nonstandard-behavior.md)을 참조하세요.  
+You can disable all Microsoft-specific extensions to C++ by using the **/Za** compiler option. This option is recommended if you want to write code to run on multiple platforms. For more information on the **/Za** compiler option, see [/Za, /Ze (Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md). For more information on Visual C++ conformance, see [Nonstandard Behavior](../cpp/nonstandard-behavior.md).  
   
-## <a name="precompiled-headers"></a>미리 컴파일된 헤더  
- Microsoft C 및 C++ 컴파일러는 인라인 코드를 포함하여 모든 C 또는 C++ 코드를 미리 컴파일하는 옵션을 제공합니다. 이 성능 기능을 사용하여 안정적인 코드 본문을 컴파일하고, 코드의 컴파일된 상태를 파일에 저장하고, 후속 컴파일 중 미리 컴파일된 코드와 아직 개발 중인 코드를 결합할 수 있습니다. 안정적인 코드는 다시 컴파일할 필요가 없기 때문에 각 후속 컴파일 속도가 향상됩니다.  
+## <a name="precompiled-headers"></a>Precompiled Headers  
+
+The Microsoft C and C++ compilers provide options for precompiling any C or C++ code, including inline code. Using this performance feature, you can compile a stable body of code, store the compiled state of the code in a file, and, during subsequent compilations, combine the precompiled code with code that is still under development. Each subsequent compilation is faster because the stable code does not need to be recompiled.  
   
- 기본적으로 미리 컴파일된 코드는 **stdafx.h** 및 **stdafx.cpp** 파일에서 모두 지정됩니다. **미리 컴파일된 헤더** 옵션을 선택 취소하지 않으면 **새 프로젝트** 마법사가 자동으로 이러한 파일을 만듭니다. 미리 컴파일된 헤더에 대한 자세한 내용은 [미리 컴파일된 헤더 파일 만들기](../build/reference/creating-precompiled-header-files.md)를 참조하세요.  
+By default, all precompiled code is specified in the files **stdafx.h** and **stdafx.cpp**. The **New Project** wizard will automatically create these files for you unless you deselect the **Precompiled header** option. For more information on precompiled headers, see [Creating Precompiled Header Files](../build/reference/creating-precompiled-header-files.md).  
   
-## <a name="related-sections"></a>관련 단원  
- 자세한 내용은 [UNIX에서 Win32로 이식](../porting/porting-from-unix-to-win32.md)을 참조하세요.  
+## <a name="related-sections"></a>Related Sections  
+
+For more information, see [Porting from UNIX to Win32](../porting/porting-from-unix-to-win32.md).  
   
-## <a name="see-also"></a>참고 항목  
- [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](../build/building-c-cpp-programs.md)

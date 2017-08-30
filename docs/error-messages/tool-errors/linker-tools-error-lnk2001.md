@@ -1,5 +1,5 @@
 ---
-title: "링커 도구 오류 LNK2001 | Microsoft Docs"
+title: Linker Tools Error LNK2001 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,100 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c7a2d48507c5c6f5f6c469f0a524e6e392bdd166
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: b84789e0de5b8da870dbfa7cb636440704cc022e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="linker-tools-error-lnk2001"></a>링커 도구 오류 LNK2001
-확인 되지 않은 외부 기호 "*기호*"  
+# <a name="linker-tools-error-lnk2001"></a>Linker Tools Error LNK2001
+unresolved external symbol "*symbol*"  
   
-컴파일된 코드에서는 참조 또는 호출 *기호*이지만, 그에 라이브러리 또는 개체 파일을 링커에 지정 기호가 정의 되지 않습니다.  
+The compiled code makes a reference or call to *symbol*, but that symbol isn't defined in any of the libraries or object files specified to the linker.  
   
-이 오류 메시지 다음에 심각한 오류 [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)합니다. LNK1120 오류를 해결 하려면 모든 LNK2001 및 LNK2019 오류를 수정 해야 합니다.  
+This error message is followed by fatal error [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). You must fix all LNK2001 and LNK2019 errors to fix error LNK1120.  
   
-## <a name="possible-causes"></a>가능한 원인  
+## <a name="possible-causes"></a>Possible causes  
   
-이 오류가 발생 하는 방법은 여러 가지가 있지만 링커 없습니다 된 변수 또는 함수에 대 한 참조를 포함 하는 모든 *해결*, 또는 찾기에 대 한 정의입니다. 기호가 없을 때 확인할 수 있습니다 *선언*, 하지는 않지만 *정의*이므로 다른 소스 파일 또는 라이브러리에는 정의가 있을 수 있습니다. 기호 참조 되었지만 정의 되지 않았습니다. 된 경우 링커 오류가 발생 합니다.  
+There are many ways to get this error, but all of them involve a reference to a function or variable that the linker can't *resolve*, or find a definition for. The compiler can identify when a symbol is not *declared*, but not when it is not *defined*, because the definition may be in a different source file or library. If a symbol is referred to but never defined, the linker generates an error.  
   
-### <a name="coding-issues"></a>코딩 문제  
+### <a name="coding-issues"></a>Coding issues  
   
-이 오류는 일치 하지 않는 대/소문자 소스 코드 또는 모듈 정의 (.def)에 발생할 수 있습니다 파일입니다. 예를 들어, 변수 이름 `var1` 한 c + +에서 원본 파일 및로 액세스 하려고 `VAR1` ,이 오류가 생성 됩니다. 이 문제를 해결 하려면 사용 하 여는 일관성 있게 철자를 입력 하 고 이름은 대/소문자를 합니다.  
+This error can be caused by mismatched case in your source code or module-definition (.def) file. For example, if you name a variable `var1` in one C++ source file and try to access it as `VAR1` in another, this error is generated. To fix this issue, use consistently spelled and cased names.  
   
-이 오류를 사용 하는 프로젝트에서 발생할 수 있습니다 [함수 인라이닝](../../error-messages/tool-errors/function-inlining-problems.md) 아닌 헤더 파일에 소스 파일에는 함수를 정의 하는 경우. 정의 된 소스 파일 외부 인라인 된 함수를 볼 수 없습니다. 이 문제를 해결 하려면 선언 된 헤더에 인라인 된 함수를 정의 합니다.  
+This error can be caused in a project that uses [function inlining](../../error-messages/tool-errors/function-inlining-problems.md) if you define the functions in a source file rather than in a header file. Inlined functions can't be seen outside the source file that defines them. To fix this issue, define the inlined functions in the headers where they are declared.  
   
-이 오류는 사용 하지 않고 c + + 프로그램에서 C 함수를 호출 하는 경우에 발생할 수 있습니다는 `extern "C"` C 함수에 대 한 선언 합니다. 컴파일러는 C 및 c + + 코드에 대 한 서로 다른 내부 기호 명명 규칙을 사용 하 고 기호를 확인할 때 링커가 검색 하는 내부 기호 이름입니다. 이 문제를 해결 하려면 사용 하 여 프로그램 `extern "C"` 모든 선언 하면 컴파일러가 해당 기호에 대 한 C 내부 명명 규칙을 사용 하는 c + + 코드에 사용 되는 C 함수의 래퍼입니다. 컴파일러 옵션 [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 및 [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 하면 컴파일러가 파일 이름 확장명에 관계 없이 파일을 c + + 또는 C로 컴파일합니다. 이러한 옵션에는 내부 함수 이름은 원하는 것과 다른 발생할 수 있습니다.  
+This error can be caused if you call a C function from a C++ program without using an `extern "C"` declaration for the C function. The compiler uses different internal symbol naming conventions for C and C++ code, and it is the internal symbol name that the linker looks for when resolving symbols. To fix this issue, use an `extern "C"` wrapper around all declarations of C functions used in your C++ code, which causes the compiler to use the C internal naming convention for those symbols. Compiler options [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) and [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) cause the compiler to compile files as C++ or C, respectively, regardless of the filename extension. These options can cause internal function names different from what you expect.  
   
-이 오류는 함수 또는 외부 링크를 사용 하지 않는 데이터를 참조 하려고 하 여 발생할 수 있습니다. C + +에서 인라인 함수 및 `const` 으로 명시적으로 지정 되지 않은 데이터는 내부 링크 `extern`합니다. 이 문제를 해결 하려면 명시적을 사용 하 여 `extern` 정의 원본 파일 외부 기호에 대 한 선언을 참조 합니다.  
+This error can be caused by an attempt to reference functions or data that don't have external linkage. In C++, inline functions and `const` data have internal linkage unless explicitly specified as `extern`. To fix this issue, use explicit `extern` declarations on symbols referred to outside the defining source file.  
   
-이 오류를 때문일 수 있습니다는 [함수 본문 또는 변수 누락](../../error-messages/tool-errors/missing-function-body-or-variable.md) 정의 합니다. 이 오류는 선언, 정의 하지 않음, 변수, 함수 또는 클래스 코드에서 때 일반적입니다. 컴파일러는 함수 프로토타입이 필요 또는 `extern` 오류, 하지만 링커 하지 않고 개체 파일을 생성 하는 변수 선언을 확인할 수 없습니다는 함수 호출 또는 변수에 대 한 참조를 함수 코드 또는 예약 된 변수 공간이 없습니다. 이 문제를 해결 하려면 모든 참조 된 함수 및 변수는 소스 파일 또는 링크에 포함 된 라이브러리에 정의 완벽 하 게 되어 있는지를 확인 합니다.  
+This error can be caused by a [missing function body or variable](../../error-messages/tool-errors/missing-function-body-or-variable.md) definition. This error is common when you declare, but don't define, variables, functions, or classes in your code. The compiler only needs a function prototype or `extern` variable declaration to generate an object file without error, but the linker cannot resolve a call to the function or a reference to the variable because there is no function code or variable space reserved. To fix this issue, make sure that every referenced function and variable is fully defined in a source file or library included in your link.  
   
-이 오류를 반환 및 매개 변수 형식 또는 함수 정의 일치 하지 않는 호출 규칙을 사용 하는 함수 호출에 의해 발생할 수 있습니다. C + + 개체 파일에 [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md) 호출 규칙, 클래스 또는 네임 스페이스 범위 및 함수 반환 및 매개 변수 형식은 함수 호출에 다른 개체 파일에서 확인 되 면 일치 하도록 기호로 사용 되는 데코 레이트 된 최종 함수 이름에 통합 합니다. 이 문제를 해결 하려면 선언, 정 및 모든 함수 호출에 사용 동일한 범위, 유형 및 호출 규칙을 확인 합니다.  
+This error can be caused by a function call that uses return and parameter types or calling conventions that do not match those in the function definition. In C++ object files, [Name decoration](../../error-messages/tool-errors/name-decoration.md) incorporates the calling convention, class or namespace scope, and return and parameter types of a function into the final decorated function name, which is used as the symbol to match when calls to the function from other object files are resolved. To fix this issue, make sure that the declaration, definition, and calls to the function all use the same scopes, types, and calling conventions.  
   
-함수 프로토타입 클래스 정의에 포함 되었지만 되지 못한 경우 c + + 코드에서이 오류가 발생할 수 있습니다 [구현을 포함](../../error-messages/tool-errors/missing-function-body-or-variable.md) 함수를 호출 하는 것입니다. 이 문제를 해결 하려면 클래스의 멤버를 선언 된 모든 호출에 대 한 정의 제공 해야 합니다.  
+This error can be caused in C++ code when you include a function prototype in a class definition but fail to [include the implementation](../../error-messages/tool-errors/missing-function-body-or-variable.md) of the function, and then call it. To fix this issue, be sure to provide a definition for all called declared members of a class.  
   
-이 오류는 추상 기본 클래스에서 순수 가상 함수를 호출 하려고 하 여 발생할 수 있습니다. 순수 가상 함수에 기본 클래스 구현이 없습니다. 이 문제를 해결 하려면 가상 함수 호출 모두는 구현 되었는지 확인 합니다.  
+This error can be caused by an attempt to call a pure virtual function from an abstract base class. A pure virtual function has no base class implementation. To fix this issue, make sure all called virtual functions are implemented.  
   
-이 오류는 함수 내에서 선언 된 변수를 사용 하려는 경우에 발생할 수 있습니다 ([지역 변수](../../error-messages/tool-errors/automatic-function-scope-variables.md)) 해당 함수의 범위 밖에 있습니다. 이 문제를 해결 하려면 변수 범위에 있지 않은에 대 한 참조를 제거 하거나 더 높은 범위 변수 이동 합니다.  
+This error can be caused by trying to use a variable declared within a function ([a local variable](../../error-messages/tool-errors/automatic-function-scope-variables.md)) outside the scope of that function. To fix this issue, remove the reference to the variable that is not in scope, or move the variable to a higher scope.  
   
-이 오류는 ATL 프로젝트의 릴리스 버전 빌드 CRT 시작 코드가 필요 하다는 메시지를 생성 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면 다음 중 하나를 수행  
+This error can occur when you build a Release version of an ATL project, producing a message that CRT startup code is required. To fix this issue, do one of the following,  
   
--   제거 `_ATL_MIN_CRT` 전처리기의 목록에서 CRT 시작 코드가 포함 될 수 있도록 정의 합니다. 참조 [일반 속성 페이지 (프로젝트)](../../ide/general-property-page-project.md) 자세한 정보에 대 한 합니다.  
+-   Remove `_ATL_MIN_CRT` from the list of preprocessor defines to allow CRT startup code to be included. See [General Property Page (Project)](../../ide/general-property-page-project.md) for more information.  
   
--   가능 하면 CRT 시작 코드를 필요로 하는 CRT 함수에 대 한 호출을 제거 합니다. 해당 Win32 형식 대신 사용 합니다. 사용 예를 들어 `lstrcmp` 대신 `strcmp`합니다. CRT 시작 코드를 필요로 하는 알려진된 함수에 문자열 및 부동 소수점 함수가 중 일부입니다.  
+-   If possible, remove calls to CRT functions that require CRT startup code. Instead, use their Win32 equivalents. For example, use `lstrcmp` instead of `strcmp`. Known functions that require CRT startup code are some of the string and floating point functions.  
   
-### <a name="compilation-and-link-issues"></a>컴파일 및 링크 문제  
+### <a name="compilation-and-link-issues"></a>Compilation and link issues  
   
-프로젝트 라이브러리에 대 한 참조를 손실 된 경우이 오류가 발생할 수 있습니다 (합니다. LIB) 또는 개체 (합니다. OBJ) 파일입니다. 이 문제를 해결 하려면 필요한 라이브러리 또는 개체 파일에 대 한 참조를 프로젝트에 추가 합니다. 자세한 내용은 참조 [링커 입력으로 사용 하는.lib 파일](../../build/reference/dot-lib-files-as-linker-input.md)합니다.  
+This error can occur when the project is missing a reference to a library (.LIB) or object (.OBJ) file. To fix this issue, add a reference to the required library or object file to your project. For more information, see [.lib Files as Linker Input](../../build/reference/dot-lib-files-as-linker-input.md).  
   
-사용 하는 경우이 오류가 발생할 수 있습니다는 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 또는 [/Zl](../../build/reference/zl-omit-default-library-name.md) 옵션입니다. 이러한 옵션을 지정 하면 명시적으로 포함 하지 않으면 필요한 코드를 포함 하는 라이브러리 프로젝트에 연결 되지 않습니다. 이 문제를 해결 하려면 명시적으로 링크 명령줄에 사용할 모든 라이브러리를 포함 합니다. 이러한 옵션을 사용 하는 경우 많은 누락 CRT 또는 표준 라이브러리 함수 이름을 표시 하는 경우 명시적으로 링크의 CRT 및 표준 라이브러리 Dll 또는 라이브러리 파일을 포함 합니다.  
+This error can occur if you use the [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) or [/Zl](../../build/reference/zl-omit-default-library-name.md) options. When you specify these options, libraries that contain required code are not linked into the project unless you have explicitly included them. To fix this issue, explicitly include all the libraries you use on the link command line. If you see many missing CRT or Standard Library function names when you use these options, explicitly include the CRT and Standard Library DLLs or library files in the link.  
 
-사용 하 여 컴파일하는 경우는 **/clr** 옵션,.cctor에 대 한 누락 된 참조가 있을 수 있습니다. 이 문제를 해결 하려면 참조 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md) 자세한 정보에 대 한 합니다.  
+If you compile using the **/clr** option, there can be a missing reference to .cctor. To fix this issue, see [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md) for more information.  
   
-이 오류는 응용 프로그램의 디버그 버전을 빌드할 때 릴리스 모드 라이브러리에 연결 되는 경우에 발생할 수 있습니다. 마찬가지로, 옵션을 사용할 경우 **/MTd** 또는 **/MDd** 정의 또는 `_DEBUG` 다음 릴리스 라이브러리에 연결 하 고, 다른 문제와 많은 잠재적 해결 되지 않은 외부 소요 될 수 있습니다. 디버그 라이브러리와 릴리스 모드 빌드 연결도 유사한 문제가 발생 합니다. 이 문제를 해결 하려면 소매 라이브러리에 일반 정품에서 빌드 및 디버그 라이브러리를 사용 하 여 디버그 빌드에서 이어야 합니다.  
+This error can occur if you link to the release mode libraries when building a debug version of an application. Similarly, if you use options **/MTd** or **/MDd** or define `_DEBUG` and then link to the release libraries, you should expect many potential unresolved externals, among other problems. Linking a release mode build with the debug libraries also causes similar problems. To fix this issue, make sure you use the debug libraries in your debug builds, and retail libraries in your retail builds.  
   
-이 오류 코드는 라이브러리의 한 버전에서 기호를 참조 하지만 서로 다른 버전의 링커를 라이브러리를 제공 하는 경우에 발생할 수 있습니다. 일반적으로 개체 파일 또는 라이브러리가 다른 버전의 컴파일러에 대해 작성 된 혼합할 수 없습니다. 새 버전에 제공 되는 라이브러리를 반대로 및 이전 버전에 포함 된 라이브러리에서 찾을 수 없는 기호를 포함할 수 있습니다. 이 문제를 해결 하려면 함께 연결 하기 전에 모든 개체 파일 및 라이브러리와 동일한 버전의 컴파일러를 빌드하십시오.  
+This error can occur if your code refers to a symbol from one version of a library, but you supply a different version of the library to the linker. Generally, you can't mix object files or libraries that are built for different versions of the compiler. The libraries that ship in a new version may contain symbols that cannot be found in the libraries included with previous versions, and vice-versa. To fix this issue, build all the object files and libraries with the same version of the compiler before linking them together.  
   
--  도구 &#124; 옵션 &#124; 프로젝트 &#124; 라이브러리 파일 선택 영역에서의 VC + + 디렉터리 대화 상자를 사용 하면 라이브러리 검색 순서를 변경할 수 있습니다. 프로젝트의 속성 페이지 대화 상자에서 링커 폴더 만료 될 수 있는 경로 포함할 수도 있습니다.  
+-  The Tools &#124; Options &#124; Projects &#124; VC++ Directories dialog, under the Library files selection, allows you to change the library search order. The Linker folder in the project's Property Pages dialog box may also contain paths that could be out of date.  
   
--  이 문제는 (다른 위치에), 새로운는 SDK가 설치 및 검색 순서 새 위치를 가리키도록 업데이트 되지 않습니다 때 나타날 수 있습니다. 새 sdk의 경로 입력 해야 일반적으로 포함 및 라이브러리의 기본 Visual c + + 위치 앞에 디렉터리입니다. 또한 포함 된 경로 포함 하는 프로젝트 경로 이전 경로 유효 하지만 서로 다른 위치에 설치 하는 새 버전에서 추가 된 새로운 기능에 대해 만료 된를 여전히 가리킬 수 있습니다.  
+-  This problem may appear when a new SDK is installed (perhaps to a different location), and the search order is not updated to point to the new location. Normally, you should put the path to new SDK include and lib directories in front of the default Visual C++ location. Also, a project containing embedded paths may still point to old paths that are valid, but out of date for new functionality added by the new version that is installed to a different location.  
   
--   명령줄에서 작성 하 고 고유한 환경 변수를 만든 도구, 라이브러리 및 헤더 파일의 경로 동일한 버전으로 이동 있는지 확인 합니다. 자세한 내용은 [명령줄 빌드에 맞는 경로 및 환경 변수 설정](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)을 참조하세요.
+-   If you build at the command line and have created your own environment variables, verify that the paths to tools, libraries, and header files go to a consistent version. For more information, see [Set the Path and Environment Variables for Command-Line Builds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
   
-여기에 현재 없는 표준에 대 한 [c + + 이름 지정](../../error-messages/tool-errors/name-decoration.md) 간에 서로 다른 버전의 컴파일러 또는 컴파일러 공급 업체 간에 합니다. 따라서 다른 컴파일러로 컴파일한 개체 파일에 연결 될 수 있습니다 같은 명명 체계가 생성 없고 오류 LNK2001 합니다.  
+There is currently no standard for [C++ naming](../../error-messages/tool-errors/name-decoration.md) between compiler vendors or even between different versions of a compiler. Therefore, linking object files compiled with other compilers may not produce the same naming scheme and thus cause error LNK2001.  
   
-[혼합 인라인이 아닌 컴파일 옵션](../../error-messages/tool-errors/function-inlining-problems.md) 서로 다른 모듈에서 LNK2001 발생할 수 있습니다. C + + 라이브러리 함수 인라이닝 설정 만들어집니다 (**/Ob1** 또는 **/Ob2**) 하지만 함수를 설명 하는 해당 헤더 파일의 인라인 처리 해제 되어 (없음 `inline` 키워드)를이 오류가 발생 합니다. 이 문제를 해결 하려면 함수 정의 `inline` 다른 소스 파일에 포함 하는 헤더 파일에 있습니다.  
+[Mixing inline and non-inline compile options](../../error-messages/tool-errors/function-inlining-problems.md) on different modules can cause LNK2001. If a C++ library is created with function inlining turned on (**/Ob1** or **/Ob2**) but the corresponding header file describing the functions has inlining turned off (no `inline` keyword), this error occurs. To fix this issue, define the functions `inline` in the header file you include in other source files.  
   
-사용 하는 경우는 `#pragma inline_depth` 컴파일러 지시문을 해야는 [값 2 이상 집합의](../../error-messages/tool-errors/function-inlining-problems.md), 또한를 사용 해야 하 고는 [/Ob1](../../build/reference/ob-inline-function-expansion.md) 또는 [/Ob2](../../build/reference/ob-inline-function-expansion.md) 컴파일러 옵션입니다.  
+If you use the `#pragma inline_depth` compiler directive, make sure you have a [value of 2 or greater set](../../error-messages/tool-errors/function-inlining-problems.md), and make sure you also use the [/Ob1](../../build/reference/ob-inline-function-expansion.md) or [/Ob2](../../build/reference/ob-inline-function-expansion.md) compiler option.  
   
-이 오류는 링크를 생략 하면 리소스 전용 DLL을 만들 때 /NOENTRY 옵션. 이 문제를 해결 하려면 /NOENTRY 옵션을 link 명령에 추가 합니다.  
+This error can occur if you omit the LINK option /NOENTRY when you create a resource-only DLL. To fix this issue, add the /NOENTRY option to the link command.  
   
-이 오류는 프로젝트에 잘못 된 /SUBSYSTEM 또는 /ENTRY 설정을 사용 하는 경우에 발생할 수 있습니다. 예를 들어 콘솔 응용 프로그램을 작성 하 고 /subsystem 확인 되지 않은 외부 오류가 발생에 대 한 `WinMain`합니다. 이 문제를 해결 하려면 프로젝트 형식에 대 한 옵션을와 일치 해야 합니다. 이러한 옵션 및 진입점에 대 한 자세한 내용은 참조는 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 및 [/ENTRY](../../build/reference/entry-entry-point-symbol.md) 링커 옵션입니다.  
+This error can occur if you use incorrect /SUBSYSTEM or /ENTRY settings in your project. For example, if you write a console application and specify /SUBSYSTEM:WINDOWS, an unresolved external error is generated for `WinMain`. To fix this issue, make sure you match the options to the project type. For more information on these options and entry points, see the [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) and [/ENTRY](../../build/reference/entry-entry-point-symbol.md) linker options.  
   
-### <a name="exported-symbol-issues"></a>내보낸된 기호 문제  
+### <a name="exported-symbol-issues"></a>Exported symbol issues  
   
-이 오류는.def 파일에 나열 된 내보내기를 찾을 수 없을 때 발생 합니다. 존재 하지 않는 것은 철자가 잘못 또는 c + + 데코 레이트 된 이름을 사용 하 여 때문일 수 있습니다. .Def 파일 데코 레이트 된 이름을 사용할 수 없습니다. 이 문제를 해결 하려면 불필요 한 내보내기를 제거 하 고 사용 `extern "C"` 내보낸된 기호에 대 한 선언이 있습니다.  
+This error occurs when an export listed in a .def file is not found. This could be because it does not exist, is spelled incorrectly, or uses C++ decorated names. A .def file does not take decorated names. To fix this issue, remove unneeded exports, and use `extern "C"` declarations for exported symbols.  
   
-## <a name="what-is-an-unresolved-external-symbol"></a>확인 되지 않은 외부 기호는 무엇입니까?  
+## <a name="what-is-an-unresolved-external-symbol"></a>What is an unresolved external symbol?  
   
-A *기호* 함수 또는 컴파일된 개체 파일 또는 라이브러리에서 내부적으로 사용 하는 전역 변수에 대 한 이름입니다. 기호는 *정의* 함수 본문에 컴파일된 코드 위치는 함수 또는 전역 변수에 대해 저장소가 할당 개체 파일에 있습니다. *외부 기호* 기호는 *참조*, 즉, 사용 또는 하나의 개체 파일에서 호출 뿐 아니라 다른 라이브러리 또는 개체 파일에 정의 합니다. *내보낸 기호* 개체 파일 또는 정의 하는 라이브러리에서 공개적으로 사용할 수 있는 하나입니다. 링커 해야 *해결*, 또는 응용 프로그램 또는 DLL에 연결 될 때 개체 파일에서 참조 하는 모든 외부 기호에 대해 일치 하는 정의 확인해 보세요. 연결 된 파일에서 일치 하는 내보낸된 기호를 검색 하 여 외부 기호를 확인할 수 없는 경우에 링커 오류가 발생 합니다.    
+A *symbol* is the name for a function or global variable used internally by a compiled object file or library. A symbol is *defined* in the object file where storage is allocated for a global variable, or for a function, where the compiled code for the function body is placed. An *external symbol* is a symbol that's *referenced*, that is, used or called in one object file, but defined in a different library or object file. An *exported symbol* is one that's made publicly available by the object file or library that defines it. The linker must *resolve*, or find the matching definition for, every external symbol referenced by an object file when it is linked into an application or DLL. The linker generates an error when it can't resolve an external symbol by finding a matching exported symbol in any of the linked files.    
   
-## <a name="use-the-decorated-name-to-find-the-error"></a>데코 레이트 된 이름을 사용 하 여 오류를 찾으려면
+## <a name="use-the-decorated-name-to-find-the-error"></a>Use the decorated name to find the error
   
-C + + 컴파일러 및 링커 사용 [이름 데코레이션](../../error-messages/tool-errors/name-decoration.md)라고도 *이름 장식*, 변수 형식 또는 반환 형식, 매개 변수 형식, 범위 및 기호 이름에서 함수의 호출 규칙에 대 한 추가 정보를 인코딩합니다. 이 데코 레이트 된 이름은 링커가 외부 기호를 확인 하기 위해 검색 기호 이름이입니다.  
+The C++ compiler and linker use [Name Decoration](../../error-messages/tool-errors/name-decoration.md), also known as *name-mangling*, to encode extra information about the type of a variable or the return type, parameter types, scope, and calling convention of a function in the symbol name. This decorated name is the symbol name the linker searches for to resolve external symbols.  
   
-추가 정보 일부 기호 이름 때문에 링크 오류 함수 또는 변수 선언 정확히 일치 하지 않는 함수 또는 변수를 정의 하는 경우 발생할 수 있습니다. 이 동일한 헤더 파일은 소스 파일을 컴파일할 때 다른 컴파일러 플래그를 사용 하는 경우 호출 코드 및 정의 코드를 둘 다에 사용 하는 경우에 발생할 수 있습니다. 예를 들어, 사용 하도록 코드를 컴파일한 경우이 오류가 발생할 수 있습니다는 `__vectorcall` 클라이언트가 기본값을 사용 하 여 호출 하는 라이브러리에 연결할 수 있지만 호출 규칙 `__cdecl` 또는 `__fastcall` 호출 규칙입니다. 이 경우 기호 일치 하지 않는 호출 규칙 다르기 때문에   
+Because the extra information becomes part of the symbol name, a link error can result if the declaration of a function or variable does not exactly match the definition of the function or variable. This can happen even if the same header file is used in both the calling code and the defining code, if different compiler flags are used when compiling the source files. For example, you can get this error if your code is compiled to use the `__vectorcall` calling convention, but you link to a library that expects clients to call it using the default `__cdecl` or `__fastcall` calling convention. In this case, the symbols do not match because the calling conventions are different   
   
-이러한 종류의 오류 원인을 확인 하기 위해 링커 오류 메시지가 모두 "친숙 한 이름을 표시," 확인 되지 않은 외부 기호에 대 한 괄호 안에 데코 레이트 된 이름 및 소스 코드에 사용 되는 이름입니다. 다른 트 데코 레이 된 이름과 비교할 수 있어야 하는 데코레이팅된 이름을 변환 하는 방법을 알 필요가 없습니다. 예상 되는 기호가 이름과 실제 기호 이름을 비교할 컴파일러와 함께 제공 되는 명령줄 도구를 사용할 수 있습니다.  
+To help you find the cause of this kind of error, the linker error message shows you both the "friendly name," the name used in source code, and the decorated name (in parentheses) for the unresolved external symbol. You don't need to know how to translate the decorated name to be able to compare it with other decorated names. You can use command line tools that are included with the compiler to compare the expected symbol name and the actual symbol name:  
 
--   [/exports](../../build/reference/dash-exports.md) 및 [/symbols](../../build/reference/symbols.md) .dll 및 개체 또는 라이브러리 파일에 정의 된 기호는 검색할 DUMPBIN 명령줄 도구의 옵션 수 있습니다. 내보낸 데코레이팅된과 이름이 일치 하는 트 데코 레이 된 이름이 링커가 검색 있는지 확인 하는 데 사용할 수 있습니다.  
+-   The [/EXPORTS](../../build/reference/dash-exports.md) and [/SYMBOLS](../../build/reference/symbols.md) options of the DUMPBIN command line tool can help you discover which symbols are defined in your .dll and object or library files. You can use this to verify that the exported decorated names match the decorated names the linker searches for.  
   
-경우에 따라 링커가 기호에 대 한 데코 레이트 된 이름을만 보고할 수 있습니다. UNDNAME 명령줄 도구를 사용 하 여 데코레이팅되지 않은 형태의 데코레이팅된 이름 가져올 수 있습니다.  
+In some cases, the linker can only report the decorated name for a symbol. You can use the UNDNAME command line tool to get the undecorated form of a decorated name.  
   
-## <a name="additional-resources"></a>추가 리소스  
+## <a name="additional-resources"></a>Additional resources  
   
-LNK2001에 대 한 가능한 원인 및 해결 하는 방법에 대 한 자세한 내용은 스택 오버플로 질문을 참조 하십시오. [정의 되지 않은 참조/확인 되지 않은 외부 기호 오류가 란 무엇이 고 어떻게 해결 하나요?](http://stackoverflow.com/q/12573816/2002113)합니다.  
+For more information about possible causes and solutions for LNK2001, see the Stack Overflow question [What is an undefined reference/unresolved external symbol error and how do I fix it?](http://stackoverflow.com/q/12573816/2002113).  
 
 

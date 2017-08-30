@@ -1,40 +1,57 @@
 ---
-title: "ARM 프로세서용 프로그램 구성(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Configure Visual C++ for ARM processors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# ARM 프로세서용 프로그램 구성(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e021610f381e1987af600de575509c658ae81ff7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-이 설명서 섹션에는 ARM 하드웨어를 대상으로 하는 Visual C\+\+ 빌드 도구 사용 방법에 대한 정보가 포함되어 있습니다.  
+---
+# <a name="configure-visual-c-for-arm-processors"></a>Configure Visual C++ for ARM processors
+
+This section of the documentation contains information about how to use the Visual C++ build tools to target ARM hardware.  
   
-## 단원 내용  
- [ARM ABI 규칙 개요](../build/overview-of-arm-abi-conventions.md)  
- Windows on ARM에서 사용 등록, 호출 규칙 및 예외 처리에 사용하는 응용 프로그램 이진 인터페이스에 대해 설명합니다.  
+## <a name="in-this-section"></a>In This Section  
+
+[Overview of ARM ABI Conventions](../build/overview-of-arm-abi-conventions.md)  
+Describes the application binary interface used by Windows on ARM for register usage, calling conventions and exception handling.  
   
- [일반적인 Visual C\+\+ ARM 마이그레이션 문제](../build/common-visual-cpp-arm-migration-issues.md)  
- 일반적으로 아키텍처 간에 이식이 가능한 것으로 가정되지만 ARM에서는 x86 및 x64와 다른 결과를 생성하는 C\+\+ 코드 요소에 대해 설명합니다.  
+[Common Visual C++ ARM Migration Issues](../build/common-visual-cpp-arm-migration-issues.md)  
+Describes C++ code elements that are commonly assumed to be portable across architectures, but which produce different results for ARM than for x86 and x64.  
   
- [ARM 예외 처리](../build/arm-exception-handling.md)  
- Windows on ARM의 구조적 예외 처리 중에 사용되는 스택 해제용 인코딩 구성표에 대해 설명합니다.  
+[ARM Exception Handling](../build/arm-exception-handling.md)  
+Describes the encoding scheme for stack unwinding during structured exception handling in Windows on ARM.  
   
-## 관련 단원  
+## <a name="related-sections"></a>Related Sections  
   
-|제목|설명|  
-|--------|--------|  
-|[ARM 내장 함수](../intrinsics/arm-intrinsics.md)|ARM 아키텍처를 사용하는 프로세서의 컴파일러 내장 기능에 대해 설명합니다.|
+[ARM Intrinsics](../intrinsics/arm-intrinsics.md)  
+Describes compiler intrinsics for processors that use the ARM architecture.

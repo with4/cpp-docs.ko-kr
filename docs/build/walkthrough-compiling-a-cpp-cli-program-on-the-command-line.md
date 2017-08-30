@@ -1,52 +1,68 @@
 ---
-title: "연습: 명령줄에서 C++/CLI 프로그램 컴파일 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CLI Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 연습: 명령줄에서 C++/CLI 프로그램 컴파일
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 44d67c8e7f83ca5433436cf6b851e3f066a930ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-CLR\(공용 언어 런타임\)을 대상으로 하는 Visual C\+\+ 프로그램을 만들어 .NET Framework를 사용하여 명령줄에서 빌드할 수 있습니다.  Visual C\+\+은 .NET 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C\+\+\/CLI 프로그래밍 언어를 지원합니다.  C\+\+\/CLI 언어에 대한 지침은 [Pure C\+\+: Hello, C\+\+\/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx)를 참조하세요.  일반 정보는 [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)을 참조하세요.  
+---
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CLI Program on the Command Line
+You can create Visual C++ programs that target the Common Language Runtime (CLR) and use the .NET Framework, and build them on the command line. Visual C++ supports the C++/CLI programming language, which has additional types and operators to target the .NET programming model. For an introduction to the C++/CLI language, see [Pure C++: Hello, C++/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). For general information, see [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
   
- 이 연습에서는 텍스트 편집기를 사용하여 기본적인 C\+\+\/CLI 프로그램을 만든 다음 명령줄에서 컴파일합니다.  여기에 나와 있는 내용을 입력하는 대신 C\+\+\/CLI 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C\+\+\/CLI 코드 샘플을 사용할 수도 있습니다.  이 기술은 UI 요소가 없는 소형 모듈을 빌드하고 테스트하는 데 유용합니다.  
+ In this walkthrough, you use a text editor to create a basic C++/CLI program, and then compile it on the command line. (You can use your own C++/CLI program instead of typing the one that's shown, or you can use a C++/CLI code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  또한 Visual Studio IDE를 사용하여 C\+\+\/CLI 프로그램을 컴파일할 수 있습니다.  자세한 내용은 [연습: Visual Studio에서 CLR을 대상으로 하는 C\+\+ 프로그램 컴파일](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)을 참조하십시오.  
+>  You can also use the Visual Studio IDE to compile C++/CLI programs. For more information, see [Walkthrough: Compiling a C++ Program that Targets the CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
   
-## 사전 요구 사항  
- 개발자는 C\+\+ 언어의 기본적인 사항을 알고 있어야 합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## C\+\+\/CLI 프로그램 컴파일  
- 다음 단계는 .NET Framework 클래스를 사용하는 C\+\+\/CLI 콘솔 응용 프로그램을 컴파일하는 방법을 보여줍니다.  
+## <a name="compiling-a-ccli-program"></a>Compiling a C++/CLI Program  
+ The following steps show how to compile a C++/CLI console application that uses .NET Framework classes.  
   
- C\+\+\/CLI에 대해 컴파일을 사용하도록 설정하려면 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션을 사용해야 합니다.  Visual C\+\+ 컴파일러는 MSIL 코드를 포함하거나 MSIL 코드와 네이티브 코드가 혼합되어 있는 .exe 파일을 생성하여 필수 .NET Framework 라이브러리에 연결합니다.  
+ To enable compilation for C++/CLI, you must use the [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that contains MSIL code—or mixed MSIL and native code—and links to the required .NET Framework libraries.  
   
-#### 명령줄에서 C\+\+\/CLI 응용 프로그램을 컴파일하려면  
+#### <a name="to-compile-a-ccli-application-on-the-command-line"></a>To compile a C++/CLI application on the command line  
   
-1.  **개발자 명령 프롬프트** 창을 엽니다.  **시작** 창에서 **앱**을 엽니다.  사용 중인 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 버전에서 **Visual Studio Tools** 폴더를 연 다음 **개발자 명령 프롬프트** 바로 가기를 선택합니다. 명령 프롬프트 창을 여는 방법에 대한 자세한 내용은 [명령줄 빌드를 위한 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)을 참조하세요.  
+1.  Open a **Developer Command Prompt** window. For specific instructions, see [To open a developer command prompt window](../build/building-on-the-command-line.md#developer_command_prompt).  
   
-     컴퓨터 운영 체제 및 구성에 따라 코드를 정상적으로 컴파일하려면 관리자 자격 증명이 필요할 수 있습니다.  관리자로 명령 프롬프트 창을 실행하려면 **개발자 명령 프롬프트**의 바로 가기 메뉴를 연 다음 **관리자 권한으로 실행**을 선택합니다.  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the command prompt window as an administrator, right-click to open the shortcut menu for the command prompt and then choose **More**, **Run as administrator**.  
   
-2.  명령 프롬프트에 **notepad basicclr.cpp**를 입력합니다.  
+2.  At the command prompt, enter **notepad basicclr.cpp**.  
   
-     파일을 만들 것인지 묻는 메시지가 나타나면 **예**를 선택합니다.  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  메모장에 다음 줄을 입력합니다.  
+3.  In Notepad, enter these lines:  
   
     ```  
     int main()  
@@ -55,20 +71,21 @@ CLR\(공용 언어 런타임\)을 대상으로 하는 Visual C\+\+ 프로그램�
     }  
     ```  
   
-4.  메뉴 모음에서 **파일**, **저장**을 선택합니다.  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     <xref:System> 네임스페이스에서 .NET Framework 클래스\(<xref:System.Console>\)를 사용하는 Visual C\+\+ 소스 파일을 만들었습니다.  
+     You have created a Visual C++ source file that uses a .NET Framework class (<xref:System.Console>) in the <xref:System> namespace.  
   
-5.  명령 프롬프트에 **cl \/clr basicclr.cpp**를 입력합니다.  cl.exe 컴파일러는 이 소스 파일을 MSIL이 포함된 .obj 파일로 컴파일한 다음 링커를 실행하여 실행 프로그램인 basicclr.exe를 생성합니다.  
+5.  At the command prompt, enter **cl /clr basicclr.cpp**. The cl.exe compiler compiles the source code into an .obj file that contains MSIL, and then runs the linker to generate an executable program named basicclr.exe.  
   
-6.  basicclr.exe 프로그램을 실행하려면 명령 프롬프트에 **basicclr**을 입력합니다.  
+6.  To run the basicclr.exe program, at the command prompt, enter **basicclr**.  
   
-     프로그램이 다음 텍스트를 표시하고 종료됩니다.  
+     The program displays this text and exits:  
   
-  **This is a C\+\+\/CLI program.**  
+    ```Output  
+    This is a C++/CLI program.  
+    ```  
   
-## 참고 항목  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ko-kr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [C\+\+ 언어 참조](../cpp/cpp-language-reference.md)   
- [C\/C\+\+ 프로그램 빌드](../build/building-c-cpp-programs.md)   
- [컴파일러 옵션](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)

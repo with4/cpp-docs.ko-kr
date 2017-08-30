@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3861 | Microsoft 문서"
+title: Compiler Error C3861 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,48 +19,63 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 177890dcd3ff2abf07f5d9e282efd4a9fd7121a7
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 445fdf33d5b085f846270c8d4b82696b3752e157
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="compiler-error-c3861"></a>컴파일러 오류 C3861
-'identifier': 식별자를 찾을 수 없습니다.  
+# <a name="compiler-error-c3861"></a>Compiler Error C3861
+
+> '*identifier*': identifier not found  
   
-컴파일러가 인수 종속 조회를 사용하는 경우에도 식별자에 대한 참조를 확인할 수 없습니다.  
+The compiler was not able to resolve a reference to an identifier, even using argument-dependent lookup.  
   
-이 오류를 해결하려면 식별자 선언에서 대/소문자 및 철자를 확인합니다. 확인 [범위 확인 연산자](../../cpp/scope-resolution-operator.md) 및 네임 스페이스 [지시문을 사용 하 여](../../cpp/namespaces-cpp.md#using_directives) 올바르게 사용 됩니다. 식별자가 헤더 파일에 선언된 경우 헤더가 참조되기 전에 포함되었는지 확인합니다. 또한 식별자에서 제외 되지 않은 확인 [조건부 컴파일 지시문](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)합니다.  
+To fix this error, compare use of *identifier* to the identifier declaration for case and spelling. Verify that [scope resolution operators](../../cpp/scope-resolution-operator.md) and namespace [using directives](../../cpp/namespaces-cpp.md#using_directives) are used correctly. If the identifier is declared in a header file, verify that the header is included before the identifier is referenced. If the identifier is meant to be externally visible, make sure that it is declared in any source file that uses it. Also check that the identifier declaration or definition is not excluded by [conditional compilation directives](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md). 
+
+Changes to remove obsolete functions from the C Runtime Library in Visual Studio 2015 can cause C3861. To resolve this error, remove references to these functions or replace them with their secure alternatives, if any. For more information, see [Obsolete Functions](../../c-runtime-library/obsolete-functions.md).  
+
+If error C3861 appears after project migration from older versions of the compiler, you may have issues related to supported Windows versions. Visual C++ no longer supports targeting Windows 95, Windows 98, Windows ME, Windows NT or Windows 2000. If your WINVER or _WIN32_WINNT macros are assigned to one of these versions of Windows, you must modify the macros. For more information, see [Modifying WINVER and _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
   
-## <a name="example"></a>예제  
-다음 샘플에서는 C3861을 생성합니다.  
+## <a name="example"></a>Example  
+
+The following sample generates C3861 because the identifier is not defined.  
   
 ```cpp  
 // C3861.cpp  
 void f2(){}  
 int main() {  
-   f();   // C3861  
+   f();    // C3861  
    f2();   // OK  
 }  
 ```  
   
-## <a name="example"></a>예제  
-이제 C++ 표준 라이브러리의 예외 클래스는 `std` 네임스페이스에 있습니다.  
+## <a name="example"></a>Example  
+
+The following sample generates C3861 because an identifier is only visible in the file scope of its definition, unless it is declared in other source files that use it.  
+  
+```cpp  
+// C3861_a1.cpp
+// Compile with: cl /EHsc /W4 C3861_a1.cpp C3861_a2.cpp  
+#include <iostream>
+// Uncomment the following line to fix:
+// int f();  // declaration makes external function visible
+int main() {  
+   std::cout << f() << std::endl;    // C3861
+}  
+```  
+  
+```cpp  
+// C3861_a2.cpp  
+int f() {  // declared and defined here
+   return 42;  
+}
+```  
+  
+## <a name="example"></a>Example  
+
+Exception classes in the C++ Standard Library require the `std` namespace.  
   
 ```cpp  
 // C3861_b.cpp  
@@ -75,5 +90,19 @@ int main() {
    catch (...) {  
       std::cout << "caught an exception" << std::endl;  
    }  
+}  
+```  
+## <a name="example"></a>Example  
+
+Obsolete functions have been removed from the CRT library.  
+  
+```cpp  
+// C3861_c.cpp  
+#include <stdio.h>  
+int main() {  
+   char line[21]; // room for 20 chars + '\0'  
+   gets( line );  // C3861  
+   // Use gets_s instead.  
+   printf( "The line entered was: %s\n", line );  
 }  
 ```

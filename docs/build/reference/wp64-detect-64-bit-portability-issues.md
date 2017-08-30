@@ -1,75 +1,96 @@
 ---
-title: "/Wp64(64비트 이식성 문제 검색) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems"
-  - "VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems"
-  - "/wp64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Wp64 컴파일러 옵션[C++]"
-  - "64비트 컴파일러[C++], 이식성 문제 검색"
-  - "Wp64 컴파일러 옵션[C++]"
-  - "-Wp64 컴파일러 옵션[C++]"
+title: -Wp64 (Detect 64-Bit Portability Issues) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems
+- VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems
+- /wp64
+dev_langs:
+- C++
+helpviewer_keywords:
+- 64-bit compiler [C++], detecting portability problems
+- /Wp64 compiler option [C++]
+- -Wp64 compiler option [C++]
+- Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# /Wp64(64비트 이식성 문제 검색)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 06f035f2208558f99e50833c576896a2088f5ed6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-이 컴파일러 옵션은 더 이상 사용되지 않습니다. Visual Studio 2013 이전 버전에서는 [\_\_w64](../../cpp/w64.md) 키워드로도 표시된 형식에서 64비트 이식성 문제를 검색합니다.  
+---
+# <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Detect 64-Bit Portability Issues)
+
+This compiler option is obsolete. In versions of Visual Studio before Visual Studio 2013, this detects 64-bit portability problems on types that are also marked with the [__w64](../../cpp/w64.md) keyword.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Wp64  
 ```  
   
-## 설명  
- 기본적으로 Visual Studio 2013 이전 버전에서는 **\/Wp64** 컴파일러 옵션이 Visual C\+\+ 32비트 컴파일러에서는 꺼져 있고 Visual C\+\+ 64비트 컴파일러에서는 켜져 있습니다.  
+## <a name="remarks"></a>Remarks  
+
+By default, in versions of Visual Studio before Visual Studio 2013, the **/Wp64** compiler option is off in the Visual C++ compiler that builds 32-bit x86 code, and on in the Visual C++ compiler that builds 64-bit, x64 code.  
   
 > [!IMPORTANT]
->  [\/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) 컴파일러 옵션 및 [\_\_w64](../../cpp/w64.md) 키워드는 Visual Studio 2010 및 Visual Studio 2012에서 더 이상 사용되지 않으며 Visual Studio 2013부터는 지원되지 않습니다. 이 스위치를 사용하는 프로젝트를 변환하면 변환 중에 스위치가 마이그레이션되지 않습니다. Visual Studio 2010 또는 Visual Studio 2012에서 이 옵션을 사용하려면 프로젝트 속성의 **명령줄** 섹션에서 **추가 옵션** 아래에 컴파일러 스위치를 입력해야 합니다. 명령줄에서 **\/Wp64** 컴파일러 옵션을 사용하면 컴파일러에서 명령줄 경고 D9002를 표시합니다. 64비트 이식성 문제를 검색하기 위해 이 옵션과 키워드를 사용하는 대신 64비트 플랫폼을 대상으로 하는 Visual C\+\+ 컴파일러를 사용하고 [\/W4](../../build/reference/compiler-option-warning-level.md) 옵션을 지정합니다. 자세한 내용은 [64비트용 프로그램 구성](../../build/configuring-programs-for-64-bit-visual-cpp.md)을 참조하세요.  
+>  The [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) compiler option and [__w64](../../cpp/w64.md) keyword are deprecated in Visual Studio 2010 and Visual Studio 2012, and not supported starting in Visual Studio 2013. If you convert a project that uses this switch, the switch will not be migrated during conversion. To use this option in Visual Studio 2010 or Visual Studio 2012, you must type the compiler switch under **Additional Options** in the **Command Line** section of the project properties. If you use the **/Wp64** compiler option on the command line, the compiler issues Command-Line Warning D9002. Instead of using this option and keyword to detect 64-bit portability issues, use a Visual C++ compiler that targets a 64-bit platform and specify the [/W4](../../build/reference/compiler-option-warning-level.md) option. For more information, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
- 다음 유형의 변수는 64비트 운영 체제에서 사용되는 것처럼 32비트 운영 체제에서 테스트됩니다.  
+Variables of the following types are tested on a 32-bit operating system as if they were being used on a 64-bit operating system:  
   
 -   int  
   
 -   long  
   
--   포인터  
+-   pointer  
   
- 64비트 컴파일러를 사용하여 응용 프로그램을 정기적으로 컴파일하는 경우 64비트 컴파일러가 모든 문제를 검색하므로 32비트 컴파일에서는 **\/Wp64**를 사용하지 않도록 설정하면 됩니다. Windows 64비트 운영 체제를 대상으로 지정하는 방법에 대한 자세한 내용은 [64비트용 프로그램 구성](../../build/configuring-programs-for-64-bit-visual-cpp.md)을 참조하세요.  
+ If you regularly compile your application by using a compiler that builds 64-bit, x64 code, you can just disable **/Wp64** in your 32-bit compilations because the 64-bit compiler will detect all issues. For more information about how to target a Windows 64-bit operating system, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>To set this compiler option in the Visual Studio development environment  
   
-1.  프로젝트 **속성 페이지** 대화 상자를 엽니다.  
+1.  Open the project **Property Pages** dialog box.  
   
-     자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하세요.  
+     For more information, see [Working with Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  Click the **C/C++** folder.  
   
-3.  **명령줄** 속성 페이지를 클릭합니다.  
+3.  Click the **Command Line** property page.  
   
-4.  **\/Wp64**를 포함하도록 **추가 옵션** 상자의 내용을 수정합니다.  
+4.  Modify the **Additional Options** box to include **/Wp64**.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>To set this compiler option programmatically  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>를 참조하세요.  
+-   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.  
   
-## 참고 항목  
- [컴파일러 옵션](../../build/reference/compiler-options.md)   
- [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)   
- [64비트용 프로그램 구성](../../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Compiler Options](../../build/reference/compiler-options.md)   
+[Setting Compiler Options](../../build/reference/setting-compiler-options.md)   
+[Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md)

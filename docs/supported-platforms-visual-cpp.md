@@ -1,5 +1,5 @@
 ---
-title: "지원되는 플랫폼(Visual C++) | Microsoft 문서"
+title: Supported Platforms (Visual C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0192e9bd6ef9d93e274c43c24137a27e5aa53dab
-ms.openlocfilehash: c0c209c16ad4a264b851321a2879104112da81f2
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="supported-platforms-visual-c"></a>지원되는 플랫폼(Visual C++)
-[!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)]를 사용하여 빌드한 응용 프로그램은 다음과 같이 다양한 플랫폼을 대상으로 할 수 있습니다.  
+# <a name="supported-platforms-visual-c"></a>Supported Platforms (Visual C++)
+
+Apps built by using [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] can be targeted to various platforms, as follows.  
   
-|운영 체제|x86|x64|ARM|  
+|Operating System|x86|x64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  
@@ -54,14 +55,18 @@ ms.lasthandoff: 02/24/2017
 |Windows 8.1|X|X|X|  
 |Windows 10|X|X|X|  
 |Android **|X|X|X|  
-|iOS **|X|X|x|  
+|iOS **|X|X|X|  
+|Linux ***|X|X|X|  
   
- \* Visual Studio 2015, Visual Studio 2013, 및 Visual Studio 2012 Update 1 이상 버전에 포함된 Windows XP 플랫폼 도구 집합을 사용하여 Windows XP 및 [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] 프로젝트를 빌드할 수 있습니다. 이 플랫폼 도구 집합을 다운로드하고 사용하는 방법에 대한 자세한 내용은 [Windows XP용 프로그램 구성](build/configuring-programs-for-windows-xp.md)을 참조하세요. 플랫폼 도구 집합을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](build/how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.  
+\* You can use the Windows XP platform toolset included in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013, and Visual Studio 2012 Update 1 or later to build Windows XP and [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] projects. For information on how to use this platform toolset, see [Configuring Programs for Windows XP](build/configuring-programs-for-windows-xp.md). For additional information on changing the platform toolset, see [How to: Modify the Target Framework and Platform Toolset](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
   
- ** Visual Studio 2015 설치의 선택 사항인 플랫폼 간 모바일 개발용 Visual C++ 구성 요소를 대상 iOS 또는 Android 플랫폼에 설치할 수 있습니다. 자세한 내용은 [플랫폼 간 모바일 개발용 Visual C++ 설치](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)를 참조하세요. IOS 코드를 작성하려면 Mac 컴퓨터가 있어야 하며 다른 요구 사항을 충족해야 합니다. 필수 구성 요소 목록 및 설치 지침을 보려면 [iOS를 사용하여 빌드할 수 있도록 도구 설치 및 구성](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios)을 참조하세요. 대상 하드웨어와 일치하는 x86 또는 ARM 코드를 빌드할 수 있습니다. iOS 시뮬레이터, Android용 Microsoft Visual Studio 에뮬레이터, 일부 Android 장치용으로 빌드하려면 x86 구성을 사용합니다. iOS 장치 및 대부분의 Android 장치용으로 빌드하려면 ARM 구성을 사용합니다.  
+\*\* You can install the **Mobile development with C++** workload in the Visual Studio installer (or the optional **Visual C++ for Cross Platform Mobile Development** component in Visual Studio 2015 setup) to target iOS or Android platforms. For instructions, see [Install Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). To build iOS code, you must have a Mac computer and meet other requirements. For a list of prerequisites and installation instructions, see [Install And Configure Tools to Build using iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). You can build x86 or ARM code to match the target hardware. Use x86 configurations to build for the iOS simulator, Microsoft Visual Studio Emulator for Android, and some Android devices. Use ARM configurations to build for iOS devices and most Android devices.  
   
- 대상 플랫폼 구성을 설정하는 방법에 대한 자세한 내용은 [방법: 64비트 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)을 참조하세요.  
+\*\*\* You can install the **Linux development with C++** workload in the Visual Studio installer to target Linux platforms. For instructions, see [Download, Install and Setup the Linux Workload](linux/download-install-and-setup-the-linux-development-workload.md). This toolset compiles your executable on the target machine, so you can build for any supported architecture.  
+
+For information about how to set the target platform configuration, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Studio 버전의 Visual C++ 도구 및 기능](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
- [시작](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ Tools and Features in Visual Studio Editions](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
+[Getting Started](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
