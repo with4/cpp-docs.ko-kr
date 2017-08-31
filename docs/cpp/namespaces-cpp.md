@@ -1,39 +1,55 @@
 ---
-title: "네임스페이스 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "namespace_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "전역 네임스페이스"
-  - "네임스페이스[C++]"
-  - "네임스페이스[C++], C++"
-  - "네임스페이스[C++], global"
-  - "Visual C++, 네임스페이스"
+title: Namespaces (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 08/30/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- namespace_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- namespaces [C++], C++
+- namespaces [C++]
+- namespaces [C++], global
+- global namespace
+- Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 네임스페이스 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/31/2017
 
-네임스페이스는 내부 식별자\(형식, 함수, 변수 등의 이름\)에 범위를 제공하는 선언적 영역입니다.  네임스페이스는 코드를 논리 그룹으로 구성하고 특히 코드베이스에 여러 라이브러리가 포함된 경우 발생할 수 있는 이름 충돌을 방지하는 데 사용됩니다.  네임스페이스 범위에 있는 모든 식별자는 한정 없이 서로에게 표시됩니다.  네임스페이스 외부 식별자는 각 식별자의 정규화된 이름\(예: `std::vector<std::string> vec;`\)을 사용하거나, 단일 식별자에 대한 [선언 사용](../cpp/using-declaration.md)\(`using std::string`\) 또는 네임스페이스의 모든 식별자에 대한 [using 지시문](../misc/using-directive-cpp.md)\(`using namespace std;`\)을 통해 멤버에 액세스할 수 있습니다.  헤더 파일의 코드는 항상 정규화된 네임스페이스 이름을 사용해야 합니다.  
+---
+# <a name="namespaces-c"></a>Namespaces (C++)
+A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries. All identifiers at namespace scope are visible to one another without qualification. Identifiers outside the namespace can access the members by using the fully qualified name for each identifier, for example `std::vector<std::string> vec;`, or else by a [using Declaration](../cpp/using-declaration.md) for a single identifier (`using std::string`), or a [using Directive](../cpp/namespaces-cpp.md#using_directives) for all the identifiers in the namespace (`using namespace std;`). Code in header files should always use the fully qualified namespace name.  
   
- 다음 예제에서는 네임스페이스 선언 및 네임스페이스 외부 코드가 해당 멤버에 액세스할 수 있는 세 가지 방법을 보여 줍니다.  
+ The following example shows a namespace declaration and three ways that code outside the namespace can accesses their members.  
   
-```  
+```cpp  
 namespace ContosoData  
 {      
     class ObjectManager   
@@ -45,45 +61,46 @@ namespace ContosoData
 }  
 ```  
   
- 정규화된 이름 사용:  
+ Use the fully qualified name:  
   
-```  
+```cpp  
 ContosoData::ObjectManager mgr;  
 mgr.DoSomething();  
 ContosoData::Func(mgr);  
 ```  
   
- using 선언을 사용하여 하나의 식별자를 범위로 가져오기:  
+ Use a using declaration to bring one identifier into scope:  
   
-```  
-using WidgetsUnlimited::ObjectManager;  
+```cpp  
+using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
   
 ```  
   
- using 지시문을 사용하여 네임스페이스의 모든 식별자를 범위로 가져오기:  
+ Use a using directive to bring everything in the namespace into scope:  
   
-```  
-using namespace WidgetsUnlimited;  
+```cpp  
+using namespace ContosoData;
+  
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
   
 ```  
   
-## using 지시문  
- `using` 지시문을 사용하면 *namespace\-name*을 명시적 한정자로 지정하지 않고 **네임스페이스**의 모든 이름을 사용할 수 있습니다.  네임스페이스에서 여러 식별자를 사용하는 경우 구현 파일\(즉,  \*.cpp\)에 using 지시문을 사용합니다. 한두 개의 식별자만 사용하는 경우 using 선언을 사용하여 네임스페이스의 모든 식별자가 아니라 해당 식별자만 범위로 가져오는 것이 좋습니다.  지역 변수의 이름이 네임스페이스 변수와 동일한 경우 네임스페이스 변수가 숨겨집니다.  전역 변수와 동일한 이름을 가진 네임스페이스 변수를 사용하면 오류가 발생합니다.  
+## <a id="using_directives"></a> using directives  
+ The `using` directive allows all the names in a **namespace** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.  
   
 > [!NOTE]
->  using 지시문은 .cpp 파일 맨 위나\(파일 범위\) 클래스 또는 함수 정의 내에 배치할 수 있습니다.  
+>  A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.  
 >   
->  일반적으로 헤더 파일\(\*.h\)에는 using 지시문을 넣지 마세요. 해당 헤더를 포함하는 모든 파일이 네임스페이스의 모든 식별자를 범위로 가져오기 때문에 이름 숨김 및 이름 충돌 문제가 발생할 수 있으며, 디버그하기 매우 어렵습니다.  헤더 파일에는 항상 정규화된 이름을 사용하세요.  이름이 너무 길면 네임스페이스 별칭을 사용하여 축약할 수 있습니다.  다음을 참조하세요.  
+>  In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)  
   
-## 네임스페이스 및 네임스페이스 멤버 선언  
- 일반적으로 헤더 파일에서 네임스페이스를 선언합니다.  함수 구현이 별도 파일에 있는 경우 이 예제와 같이 함수 이름을 한정합니다.  
+## <a name="declaring-namespaces-and-namespace-members"></a>Declaring namespaces and namespace members  
+ Typically, you declare a namespace in a header file. If your function implementations are in a separate file, then qualify the function names, as in this example.  
   
-```  
+```cpp  
 //contosoData.h   
 #pragma once  
 namespace ContosoDataServer  
@@ -94,26 +111,26 @@ namespace ContosoDataServer
 }  
 ```  
   
- contosodata.cpp의 함수 구현은 using 지시문을 파일 맨 위에 배치한 경우에도 정규화된 이름을 사용해야 합니다.  
+ Function implementations in contosodata.cpp should use the fully qualified name, even if you place a `using` directive at the top of the file:  
   
-```  
+```cpp  
 #include "contosodata.h"  
 using namespace ContosoDataServer;   
   
-void ContosoDataServer::Foo()  
+void ContosoDataServer::Foo() // use fully-qualified name here  
 {  
-   //no qualification because using directive above  
+   // no qualification needed for Bar()  
    Bar();   
 }  
   
 int ContosoDataServer::Bar(){return 0;}  
 ```  
   
- 단일 파일의 여러 블록과 여러 파일에서 네임스페이스를 선언할 수 있습니다.  컴파일러가 전처리 중에 파트를 결합하며, 결과로 생성된 네임스페이스에는 모든 파트에서 선언된 멤버가 모두 포함됩니다.  이러한 예로 표준 라이브러리의 각 헤더 파일에서 선언된 std 네임스페이스가 있습니다.  
+ A namespace can be declared in multiple blocks in a single file, and in multiple files. The compiler joins the parts together during preprocessing and the resulting namespace contains all the members declared in all the parts. An example of this is the std namespace which is declared in each of the header files in the standard library.  
   
- 정의된 이름의 [명시적 정규화](../misc/explicit-qualification.md)로 선언된 명명된 네임스페이스의 멤버는 해당 네임스페이스의 외부에서 정의될 수 있습니다.  그러나 정의는 선언의 네임스페이스를 포함하는 네임스페이스의 선언 위치 다음에 표시되어야 합니다.  예:  
+ Members of a named namespace can be defined outside the namespace in which they are declared by explicit qualification of the name being defined. However, the definition must appear after the point of declaration in a namespace that encloses the declaration's namespace. For example:  
   
-```  
+```cpp  
 // defining_namespace_members.cpp  
 // C2039 expected  
 namespace V {  
@@ -129,18 +146,18 @@ namespace V {
 }  
 ```  
   
- 이 오류는 여러 헤더 파일에서 네임스페이스 멤버가 선언되었으며 해당 헤더를 올바른 순서로 포함하지 않은 경우에 발생할 수 있습니다.  
+ This error can occur when namespace members are declared across multiple header files, and you have not included those headers in the correct order.  
   
-## 전역 네임스페이스  
- 식별자가 명시적 네임스페이스에서 선언되지 않은 경우 암시적 전역 네임스페이스에 포함됩니다.  일반적으로 전역 네임스페이스에 있어야 하는 [main 함수](../c-language/main-function-and-program-execution.md) 진입점을 제외하고 가능하면 전역 범위에서 선언하지 않도록 하세요.  전역 식별자를 명시적으로 한정하려면 `::SomeFunction(x);`과 같이 범위 확인 연산자를 이름 없이 사용합니다.  이렇게 하면 다른 네임스페이스에 있는 동일한 이름의 식별자와 해당 식별자가 구분되며, 다른 사용자가 코드를 더 쉽게 이해하는 데에도 도움이 됩니다.  
+## <a name="the-global-namespace"></a>The global namespace  
+ If an identifier is not declared in an explicit namespace, it is part of the implicit global namespace. In general, try to avoid making declarations at global scope when possible, except for the entry point [main Function](../c-language/main-function-and-program-execution.md), which is required to be in the global namespace. To explicitly qualify a global identifier, use the scope resolution operator with no name, as in `::SomeFunction(x);`. This will differentiate the identifier from anything with the same name in any other namespace, and it will also help to make your code easier for others to understand.  
   
-## std 네임스페이스  
- 모든 C\+\+ 표준 라이브러리 형식과 함수는 std 네임스페이스 또는 std 안에 중첩된 네임스페이스에서 선언됩니다.  
+## <a name="the-std-namespace"></a>The std namespace  
+ All C++ standard library types and functions are declared in the `std` namespace or namespaces nested inside `std`.  
   
-## 중첩된 네임스페이스  
- 네임스페이스를 중첩할 수 있습니다.  일반적인 중첩된 네임스페이스는 해당 부모 멤버에 무한정 액세스할 수 있지만 부모 멤버는 인라인으로 선언되지 않은 경우 다음 예제와 같이 중첩된 네임스페이스에 무한정 액세스할 수 없습니다.  
+## <a name="nested-namespaces"></a>Nested namespaces  
+ Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent’s members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:  
   
-```  
+```cpp  
 namespace ContosoDataServer  
 {  
     void Foo();   
@@ -157,12 +174,12 @@ namespace ContosoDataServer
 }  
 ```  
   
- 일반적인 중첩된 네임스페이스를 사용하여 부모 네임스페이스의 공용 인터페이스에 포함되지 않는 내부 구현 세부 정보를 캡슐화할 수 있습니다.  
+ Ordinary nested namespaces can be used to encapsulate internal implementation details that are not part of the public interface of the parent namespace.  
   
-## 인라인 네임스페이스\(C\+\+ 11\)  
- 일반적인 중첩된 네임스페이스와 달리, 인라인 네임스페이스의 멤버는 부모 네임스페이스의 멤버로 처리됩니다.  이러한 특징 때문에 오버로드된 함수의 인수 종속 조회가 부모 및 중첩된 인라인 네임스페이스에 오버로드가 있는 함수에서 작동할 수 있습니다.  또한 인라인 네임스페이스에서 선언된 템플릿의 부모 네임스페이스에서 특수화를 선언할 수 있습니다.  다음 예제에서는 외부 코드가 기본적으로 인라인 네임스페이스에 바인딩하는 방법을 보여 줍니다.  
+## <a name="inline-namespaces-c-11"></a>Inline namespaces (C++ 11)  
+ In contrast to an ordinary nested namespace, members of an inline namespace are treated as members of the parent namespace. This characteristic enables argument dependent lookup on overloaded functions to work on functions that have overloads in a parent and a nested inline namespace. It also enables you to declare a specialization in a parent namespace for a template that is declared in the inline namespace. The following example shows how external code binds to the inline namespace by default:  
   
-```  
+```cpp  
 //Header.h  
 #include <string>  
   
@@ -194,9 +211,9 @@ int main()
 }  
 ```  
   
- 다음 예제에서는 인라인 네임스페이스에서 선언된 템플릿의 부모에서 특수화를 선언할 수 있는 방법을 보여 줍니다.  
+ The following example shows how you can declare a specialization in a parent of a template that is declared in an inline namespace:  
   
-```  
+```cpp  
 namespace Parent  
 {  
     inline namespace new_ns  
@@ -213,13 +230,13 @@ namespace Parent
   
 ```  
   
- 인라인 네임스페이스를 버전 관리 메커니즘으로 사용하여 라이브러리의 공용 인터페이스에 대한 변경 내용을 관리할 수 있습니다.  예를 들어 단일 부모 네임스페이스를 만들고 인터페이스의 각 버전을 부모 안에 중첩된 자체 네임스페이스에 캡슐화할 수 있습니다.  가장 최근 버전이나 기본 설정 버전을 보유한 네임스페이스는 인라인으로 한정되므로 부모 네임스페이스의 직접 멤버인 것처럼 노출됩니다.  Parent::Class를 호출하는 클라이언트 코드는 자동으로 새 코드에 바인딩합니다.  이전 버전을 사용하려는 클라이언트는 해당 코드가 있는 중첩된 네임스페이스의 정규화된 경로를 사용하여 계속 액세스할 수 있습니다.  
+ You can use inline namespaces as a versioning mechanism to manage changes to the public interface of a library. For example, you can create a single parent namespace, and encapsulate each version of the interface in its own namespace nested inside the parent. The namespace that holds the most recent or preferred version is qualified as inline, and is therefore exposed as if it were a direct member of the parent namespace. Client code that invokes the Parent::Class will automatically bind to the new code. Clients that prefer to use the older version can still access it by using the fully qualified path to the nested namespace that has that code.  
   
- 컴파일 단위에서 네임스페이스의 첫 번째 선언에 Inline 키워드를 적용해야 합니다.  
+ The inline keyword must be applied to the first declaration of the namespace in a compilation unit.  
   
- 다음 예제에서는 각각 중첩된 네임스페이스에 있는 각 인터페이스의 두 버전을 보여 줍니다.  `v_20` 네임스페이스는 `v_10` 인터페이스에서 약간 수정되었으며 인라인으로 표시됩니다.  새 라이브러리를 사용하고 `Contoso::Funcs::Add`를 호출하는 클라이언트 코드는 v\_20 버전을 호출합니다.  코드에서 `Contoso::Funcs::Divide`를 호출하려고 하면 이제 컴파일 타임 오류가 발생합니다.  해당 함수가 실제로 필요한 경우 명시적으로 `Contoso::v_10::Funcs::Divide`를 호출하여 `v_10` 버전에 계속 액세스할 수 있습니다.  
+ The following example shows two versions of an interface, each in a nested namespace. The `v_20` namespace has some modification from the `v_10` interface and is marked as inline. Client code that uses the new library and calls `Contoso::Funcs::Add` will invoke the v_20 version. Code that attempts to call `Contoso::Funcs::Divide` will now get a compile time error. If they really need that function, they can still access the `v_10` version by explicitly calling `Contoso::v_10::Funcs::Divide`.  
   
-```  
+```cpp  
 namespace Contoso  
 {  
     namespace v_10  
@@ -254,29 +271,28 @@ namespace Contoso
   
 ```  
   
-## 네임스페이스 별칭  
- 네임스페이스 이름은 고유해야 하며, 이는 대체로 이름이 너무 짧지 않아야 함을 의미합니다.  이름의 길이로 인해 코드를 읽기 어렵거나 using 지시문을 사용할 수 없는 헤더 파일에 입력하기 번거로운 경우 실제 이름의 약어로 사용되는 네임스페이스 별칭을 만들 수 있습니다.  예:  
+## <a id="namespace_aliases"></a> Namespace aliases  
+ Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can’t be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:  
   
-```  
+```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
   
 ```  
   
-## 익명 또는 명명되지 않은 네임스페이스  
- 명시적 네임스페이스를 만들고 이름을 지정하지 않을 수 있습니다.  
+## <a name="anonymous-or-unnamed-namespaces"></a>anonymous or unnamed namespaces  
+ You can create an explicit namespace but not give it a name:  
   
-```  
+```cpp  
 namespace  
 {  
     int MyFunc(){}  
 }  
 ```  
   
- 이를 명명되지 않은 네임스페이스 또는 익명 네임스페이스라고 하며, 명명된 네임스페이스를 만들지 않고도 변수 선언을 다른 파일의 코드에 표시하지 않으려는 경우\(즉,  내부 연결 제공\)에 유용합니다.  동일한 파일의 모든 코드에서 명명되지 않은 네임스페이스의 식별자를 볼 수 있지만, 해당 파일 외부 또는 보다 정확히 말해 변환 단위 외부에서는 네임스페이스 자체와 함께 식별자를 볼 수 없습니다.  
+ This is called an unnamed or anonymous namespace and it is useful when you want to make variable declarations invisible to code in other files (i.e. give them internal linkage) without having to create a named namespace. All code in the same file can see the identifiers in an unnamed namespace but the identifiers, along with the namespace itself, are not visible outside that file—or more precisely outside the translation unit.  
   
-## 설명  
-  
-## 참고 항목  
- [선언](../misc/declarations.md)
+## <a name="see-also"></a>See Also  
+ [Declarations and Definitions](declarations-and-definitions-cpp.md)
+
