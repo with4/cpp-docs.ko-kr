@@ -1,5 +1,5 @@
 ---
-title: "내부 CRT 전역 및 함수 | Microsoft Docs"
+title: Internal CRT Globals and Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,6 +18,8 @@ apiname:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -295,6 +297,7 @@ apilocation:
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
+- ntdll.dll
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -306,6 +309,8 @@ f1_keywords:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -580,6 +585,8 @@ helpviewer_keywords:
 - __C_specific_handler
 - _calloc_base
 - _chkesp
+- __chkstk
+- _chkstk
 - _chvalidator
 - _chvalidator_l
 - _CIacos
@@ -843,41 +850,25 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ac823b16dbcb3ef2bac984a8d0634ac51198dae4
-ms.openlocfilehash: e82838570d8c01d4ecc36fda384a102c415618ae
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 0afa07af22d787e669f32d21c021bec02e2de42e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="internal-crt-globals-and-functions"></a>내부 CRT 전역 및 함수  
+# <a name="internal-crt-globals-and-functions"></a>Internal CRT Globals and Functions  
   
-CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를 지원하는 데만 사용되는 함수 및 전역 변수가 포함되어 있습니다. 이 중 일부는 구현 세부 사항으로 공용 헤더에 노출됩니다. 이러한 함수 및 전역 변수는 공용 내보내기를 통해 액세스할 수 있지만 사용자의 코드에서 사용할 수는 없습니다. 대신 이러한 함수 및 변수를 사용하는 코드를 변경하여 공용 라이브러리 해당 값을 사용하는 것이 좋습니다. 이러한 함수는 버전마다 변경될 수 있습니다. 식별할 수 있도록 아래에는 이러한 함수가 나열되어 있습니다. 추가 설명서가 있으면 링크가 제공되지만 일반적으로 이러한 구현 세부 사항은 문서화되지 않습니다.  
+The C runtime (CRT) library contains functions and global variables that are used only to support the public library interface. Some of them are exposed in public headers as implementation details. Although these functions and global variables are accessible through public exports, they are not intended for use by your code. We recommend that you change any code that uses these functions and variables to use public library equivalents instead. These functions may change from version to version. They are listed here to help you identify them. Links are provided when additional documentation exists, but in general, these implementation details are not documented.  
   
-## <a name="internal-crt-globals-and-value-macros"></a>내부 CRT 전역 및 값 매크로  
+## <a name="internal-crt-globals-and-value-macros"></a>Internal CRT Globals and Value Macros  
   
-다음 전역 변수 및 매크로 정의는 CRT를 구현하는 데 사용됩니다.  
+These global variables and macro definitions are used to implement the CRT.  
   
-|이름|  
+|Name|  
 |----------|  
 |__badioinfo|  
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
@@ -892,10 +883,11 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |[_wcmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
 |__winitenv|  
   
-## <a name="internal-crt-functions-and-function-macros"></a>내부 CRT 함수 및 함수 매크로  
- 다음 함수 및 함수 매크로는 CRT 및 C++ 표준 라이브러리를 구현하는 데 사용됩니다.  
+## <a name="internal-crt-functions-and-function-macros"></a>Internal CRT Functions and Function Macros
+
+These functions and function macros are used to implement the CRT and the C++ Standard Library.  
   
-|이름|  
+|Name|  
 |----------|  
 |__acrt_iob_func|  
 |__AdjustPointer|  
@@ -905,6 +897,8 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |__C_specific_handler|  
 |_calloc_base|  
 |_chkesp|  
+|__chkstk|  
+|_chkstk|  
 |_chvalidator|  
 |_chvalidator_l|  
 |_CIacos|  
@@ -1197,5 +1191,6 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 |_Xbad_alloc|  
 |_Xlength_error|  
   
-## <a name="see-also"></a>참고 항목  
- [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)
+## <a name="see-also"></a>See Also
+
+[Run-Time Routines by Category](../c-runtime-library/run-time-routines-by-category.md)

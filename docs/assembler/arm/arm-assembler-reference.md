@@ -1,37 +1,55 @@
 ---
-title: "ARM Assembler Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: ARM Assembler Reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# ARM Assembler Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 42f71d9a24175d13205ec09ae7bcc90f0eb8a614
+ms.openlocfilehash: a3a472b4dd56848d63ef225bd0b0c083ef0353e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/29/2017
 
-설명서의이 섹션에서는 문서에서 Microsoft ARM 어셈블러 \(armasm\) 및 관련된 도구에 대 한 참조 자료를 제공합니다.  
+---
+# <a name="arm-assembler-reference"></a>ARM Assembler Reference
+The articles in this section of the documentation provide reference material for the Microsoft ARM assembler (armasm) and related tools.  
   
-## 관련된 기사  
+## <a name="related-articles"></a>Related Articles  
   
-|제목|설명|  
-|--------|--------|  
-|[ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)|Armasm 명령줄 옵션에 설명 합니다.|  
-|[ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Armasm를 일반적으로 나타나는 경고 및 오류 메시지에 설명 합니다.|  
-|[ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)|Armasm에서 다른 ARM 지시문을 설명 합니다.|  
-|[ARM 아키텍처 참조 수동](http://go.microsoft.com/fwlink/?LinkId=246464) ARM 정보 센터 웹 사이트에서.|ARM 어셈블리 언어에 대 한 추가 정보를 포함합니다.|  
-|[ARM 어셈블러 도구 가이드](http://go.microsoft.com/fwlink/?LinkId=246102) ARM 정보 센터 웹 사이트에서.|암, 엄지, 네온, VFP에 대 한 참조 섹션을 포함합니다. **Note:**  ARM 정보 센터 웹 사이트를 참조 하는 "armasm" 어셈블러에 Visual Studio 포함 하 고이 절에 나와 있는 Microsoft asmasm 어셈블러가 아닙니다.|  
+|Title|Description|  
+|-----------|-----------------|  
+|[ARM Assembler Command-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)|Describes the armasm command-line options.|  
+|[ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Describes commonly encountered armasm warning and error messages.|  
+|[ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)|Describes the ARM directives that are different in armasm.|  
+|[ARM Architecture Reference Manual](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) on the ARM Developer website.|Choose the relevant manual for your ARM architecture. Each contains reference sections about ARM, Thumb, NEON, and VFP, and additional information about the ARM assembly language.|  
+|[ARM Compiler armasm User Guide](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) on the ARM Developer website.|Choose a recent version to find up-to-date information about the ARM assembly language. **Note:**  The "armasm" assembler that is referred to on the ARM Developer website is not the Microsoft armasm assembler that is included in Visual Studio and is documented in this section.|  
   
-## 참고 항목  
- [ARM 내장](../../intrinsics/arm-intrinsics.md)   
- [컴파일러 내장 함수](../../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>See Also  
+ [ARM Intrinsics](../../intrinsics/arm-intrinsics.md)   
+ [Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md)
+

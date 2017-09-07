@@ -46,11 +46,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 0ae005c2367f891e0b7a91e3f7e45d42d852fb78
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 라이브러리 기능
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/01/2017
 |msvcurt.lib|**사용되지 않음** 순수 관리 CRT에 대한 정적 라이브러리입니다.|**/clr:pure**||  
 |msvcurtd.lib|**사용되지 않음** 순수 관리 CRT의 디버그 버전에 대한 정적 라이브러리입니다. 재배포할 수 없습니다.|**/clr:pure**||  
   
- C 런타임 라이브러리를 지정하는 컴파일러 옵션을 사용하지 않고 명령줄에서 프로그램을 연결하면 링커는 정적으로 연결된 CRT 라이브러리 libcmt.lib, libvcruntime.lib 및 libucrt.lib를 사용합니다.  
+ C 런타임 라이브러리를 지정하는 컴파일러 옵션을 사용하지 않고 명령줄에서 프로그램을 연결하면 링커는 정적으로 연결된 CRT 라이브러리, 즉 libcmt.lib, libvcruntime.lib 및 libucrt.lib를 사용합니다.  
   
  정적으로 연결된 CRT를 사용하면 C 런타임 라이브러리에서 저장하는 모든 상태 정보가 해당 CRT 인스턴스의 로컬에 있게 됩니다. 예를 들어 정적으로 연결된 CRT를 사용할 때 [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)을 사용하는 경우 `strtok` 파서의 위치는 정적 CRT의 다른 인스턴스에 연결된 동일한 프로세스에 있는(그러나 다른 DLL 또는 EXE에 있는) 코드에 사용되는 `strtok` 상태와 관련이 없습니다. 반면 동적으로 연결된 CRT는 CRT에 동적으로 연결된 프로세스 내의 모든 코드에 대한 상태를 공유합니다. 이러한 함수의 더 안전한 새 버전을 사용하는 경우 이 문제는 적용되지 않습니다. 예를 들어 `strtok_s` 에서는 이 문제가 발생하지 않습니다.  
   

@@ -1,69 +1,70 @@
 ---
-title: "방법: 명령줄에서 64비트 Visual C++ 도구 집합 활성화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "64비트 컴파일러[C++], 명령줄 사용법"
-  - "64비트 컴파일러[C++], 명령줄에서 도구 집합 활성화"
-  - "명령줄[C++], 64비트 컴파일러"
-  - "IPF"
-  - "IPF, 명령줄 컴파일러"
-  - "Itanium[C++]"
-  - "Itanium[C++], 명령줄 컴파일러"
-  - "x64[C++]"
-  - "x64[C++], 명령줄 컴파일러"
+title: 'How to: Enable a 64-Bit Visual C++ Toolset on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- x64 [C++]
+- 64-bit compiler [C++], command line usage
+- 64-bit compiler [C++], toolset enabling at command line
+- command line [C++], 64-bit compiler
+- Itanium [C++], command-line compiler
+- IPF
+- Itanium [C++]
+- IPF, command-line compiler
+- x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 방법: 명령줄에서 64비트 Visual C++ 도구 집합 활성화
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 88cd06c4ca6ac57fdb677cfc56fd8972983df4c1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-Visual C\+\+에는 32비트, 64비트 또는 ARM 기반 Windows 운영 체제에서 실행할 수 있는 응용 프로그램을 만드는 데 사용할 수 있는 컴파일러가 포함되어 있습니다.  
+---
+# <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>How to: Enable a 64-Bit, x64 hosted Visual C++ toolset on the command line
+
+Visual C++ includes compilers, linkers, and other tools that you can use to create platform-specific versions of your apps that can run on 32-bit, 64-bit, or ARM-based Windows operating systems. Other optional Visual Studio workloads let you use C++ tools to target other platforms, such as iOS, Android, and Linux. The default build architecture uses 32-bit, x86-hosted tools to build 32-bit, x86-native Windows code. However, you probably have a 64-bit computer. You can take advantage of the processor and memory space available to 64-bit code by using the 64-bit, x64-hosted toolset when you build code for x86, x64, or ARM processors.
   
 > [!NOTE]
->  각 Visual C\+\+ 버전에 포함된 특정 도구에 대한 자세한 내용은 [Visual Studio 버전의 Visual C\+\+ 도구 및 템플릿](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md)를 참조하십시오.  
+>  For information about the specific tools that are included with each Visual C++ edition, see [Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).  
 >   
->  Visual Studio IDE를 사용하여 64비트 응용 프로그램을 만드는 방법에 대한 자세한 내용은 [방법: 64비트 플랫폼을 대상으로 한 Visual C\+\+ 프로젝트 구성](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)을 참조하세요.  
+>  For information about how to use the Visual Studio IDE to create 64-bit applications, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에는 x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 및 ARM 대상에 대해 x86으로 호스팅되는 32비트, 네이티브 및 크로스 컴파일러가 포함됩니다.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]를 64 비트 Windows 운영 체제, 32 비트, x86 호스트의 네이티브 및 크로스 컴파일러 및 64 비트에 설치되면 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\-호스트 네이티브 및 크로스 컴파일러는 각 대상\(x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 및 ARM\)에 설치됩니다.  각 대상을 위한 32비트 및 64비트 컴파일러는 동일한 코드를 생성하지만 64비트 컴파일러는 미리 컴파일된 헤더 기호 및 전체 프로그램 최적화\([\/GL](../build/reference/gl-whole-program-optimization.md), [\/LTCG](../build/reference/ltcg-link-time-code-generation.md)\) 옵션을 위해 더 많은 메모리를 지원합니다.  32비트 컴파일러를 사용할 때 메모리 제한이 발생하는 경우 64비트 컴파일러를 사용해 보십시오.  
+When you install a C++ workload in the Visual Studio installer, it always installs 32-bit, x86-hosted, native and cross compiler tools to build x86 and x64 code. If you include the Universal Windows Platform workload, it also installs x86-hosted cross compiler tools to build ARM code. If you install these workloads on a 64-bit, x64 processor, you also get 64-bit native and cross compiler tools to build x86, x64, and ARM code. The 32-bit and 64-bit tools generate identical code, but the 64-bit tools support more memory for precompiled header symbols and the Whole Program Optimization ([/GL](../build/reference/gl-whole-program-optimization.md) and [/LTCG](../build/reference/ltcg-link-time-code-generation.md)) options. If you run into memory limits when you use the 32-bit tools, try the 64-bit tools.  
+
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Use a 64-bit hosted developer command prompt shortcut
   
- Visual Studio를 64비트 Windows 운영 체제에 설치하면 64비트 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 네이티브 및 x86 크로스 컴파일러에 대한 명령 프롬프트 바로 가기를 추가로 사용할 수 있습니다.  Windows 8에서 이러한 명령 프롬프트에 액세스하려면 **시작** 화면에서 **모든 응용 프로그램**을 엽니다.  설치된 **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]** 버전에서 **Visual Studio Tools**를 열고 네이티브 도구 또는 크로스 도구 명령 프롬프트 중 하나를 선택합니다.  이전 버전의 Windows에서 **시작**을 선택하고 **모든 프로그램**, **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]**, **Visual Studio Tools**를 확장한 다음 명령 프롬프트를 선택합니다.  
+When Visual Studio is installed on a 64-bit Windows operating system, additional developer command prompt shortcuts for the 64-bit, x64-hosted native and cross compilers are available. To access these command prompts on Windows 10, on the **Start** menu, open the folder for your version of Visual Studio, for example **Visual Studio 2017**, and then choose one of the x64 native or cross-tool developer command prompts. To access these command prompts on Windows 8, on the **Start** screen, open **All apps**. Under the heading for the installed version of Visual Studio, open the **Visual Studio** folder (in older versions of Visual Studio, it may be named **Visual Studio Tools**). On earlier versions of Windows, choose **Start**, expand **All Programs**, the folder for your version of **Visual Studio** (and on older versions of Visual Studio, **Visual Studio Tools**). For more information, see [Developer command prompt shortcuts](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).  
   
-## Vcvarsall.bat  
- 컴파일러는 컴파일러 도구 집합을 사용하도록 설정하는 경로 및 환경 변수를 구성하기 위해 명령줄에서 vcvarsall.bat 명령 파일을 실행하여 사용할 수 있습니다.  x86 또는 ARM 플랫폼을 대상으로 하는 64비트 도구 집합을 사용하도록 설정하는 명령 프롬프트 바로 가기는 없으므로, 64비트 도구 집합을 사용하려면 명령 프롬프트 창에서 vcvarsall.bat를 대신 사용합니다.  자세한 내용은 [명령줄 빌드를 위한 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)을 참조하십시오.  
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Use Vcvarsall.bat to set a 64-bit hosted build architecture
   
- 다음 단계에서는 x86, x64 및 ARM 플랫폼을 대상으로 64비트 네이티브 도구 집합을 사용하도록 명령 프롬프트를 구성하는 방법을 보여줍니다.  
+Any of the native or cross compiler tools build configurations can be used on the command line by running the vcvarsall.bat command file. This command file configures the path and environment variables that enable a particular build architecture in an existing command prompt window. For specific instructions, see [Developer command files and locations](../build/building-on-the-command-line.md#developer_command_files) .  
   
-#### 64비트 도구 집합을 사용하기 위해 vcvarsall.bat를 실행하려면  
-  
-1.  명령 프롬프트에서 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 설치 디렉터리로 변경합니다.  위치는 시스템과 설치한 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에 따라 달라지지만 일반적인 위치는 C:\\Program Files \(x86\)\\Microsoft Visual Studio *버전*\\VC\\입니다. 예를 들어 다음과 같이 입력합니다.  
-  
-     cd "\\Program Files \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  x64 플랫폼을 대상으로 하는 64비트 명령줄 빌드를 위해 이 명령 프롬프트 창을 구성하려면 명령 프롬프트에 다음과 같이 입력합니다.  
-  
-     `vcvarsall amd64`  
-  
-3.  x86 플랫폼을 대상으로 하는 64비트 명령줄 빌드를 위해 이 명령 프롬프트 창을 구성하려면 명령 프롬프트에 다음과 같이 입력합니다.  
-  
-     `vcvarsall amd64_x86`  
-  
-4.  ARM 플랫폼을 대상으로 하는 64비트 명령줄 빌드를 위해 이 명령 프롬프트 창을 구성하려면 명령 프롬프트에 다음과 같이 입력합니다.  
-  
-     `vcvarsall amd64_arm`  
-  
-## 참고 항목  
- [64비트용 프로그램 구성](../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)

@@ -1,98 +1,210 @@
 ---
-title: "명령줄 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "빌드[C++], 명령줄"
-  - "명령줄[C++], 빌드"
-  - "명령줄[C++], 컴파일러"
-  - "명령줄 빌드[C++]"
-  - "소스 코드 컴파일[C++], 명령줄"
+title: Build C/C++ Code on the Command Line | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command-line builds [C++]
+- compiling source code [C++], command line
+- builds [C++], command-line
+- command line [C++], building from
+- command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 명령줄 빌드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 17650f4b3beb23ac03fba441d17ae05b62254a73
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에 포함된 도구를 사용하여 명령줄에서 C 및 C\+\+ 응용 프로그램을 빌드할 수 있습니다.  모든 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 버전은 컴파일러, 링커 및 기타 빌드 도구가 포함된 명령줄 도구 집합과 필수 빌드 환경을 설정하는 명령 파일을 설치합니다.  기본적으로 이러한 도구는 *드라이브*:\\Program Files \(x86\)\\Microsoft Visual Studio *버전*\\VC\\bin\\에 설치됩니다.  컴퓨터의 실제 디렉터리는 시스템, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 버전 및 설치 선택 사항에 따라 달라집니다.  
+---
+# <a name="build-cc-code-on-the-command-line"></a>Build C/C++ code on the command line
+
+You can build C and C++ applications on the command line by using tools that are included in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].
+
+When you choose one of the C++ workloads in the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Installer, it installs a toolset that includes the C/C++ compilers, linkers, and other build tools. These tools are used by the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE, and they can also be used at the command line. There are separate x86-hosted and x64-hosted compilers and tools to build code for x86, x64, and ARM targets. Each set of tools for a particular host and target build architecture is stored in its own directory. To work correctly, these tools require several specific environment variables to add them to the path and to set include file, library file, and SDK locations. To make it easy to set these environment variables, the installer creates customized command files, also known as batch files, during installation. You can run one of these command files in a command prompt window to set a specific build architecture. For convenience, the installer also creates shortcuts in your Start menu (or Start page on Windows 8.x) that start developer command prompt windows by using these command files, so all the required environment variables are set and ready to use. 
+
+The required environment variables are specific to your installation and to the build architecture you choose, and might be changed by product updates or upgrades. Therefore, we strongly recommend that you use one of the installed command prompt shortcuts or command files instead of setting the environment variables in Windows yourself. For more information, see [Set the Path and Environment Variables for Command-Line Builds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+
+The command-line toolsets, command files, and command prompt shortcuts that are installed depend on your computer processor and the options selected during installation. At a minimum, the 32-bit x86-hosted tools that build 32-bit x86-native code and cross tools that build 64-bit x64-native code are installed. If you have 64-bit Windows, the 64-bit x64-hosted tools that build 64-bit native code and cross tools that build 32-bit native code are also installed. If you choose to install the optional C++ Universal Windows Platform tools, then the 32-bit and 64-bit native tools that build ARM code are also installed. Other workloads may install additional tools.
+
+<a name="developer_command_prompt_shortcuts"></a>
+## <a name="developer-command-prompt-shortcuts"></a>Developer command prompt shortcuts
+
+The command prompt shortcuts are installed in a version-specific [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] folder in your Start menu. Here's a list of the base command prompt shortcuts and the build architectures they support:
+
+- **Developer Command Prompt** Sets the environment to use 32-bit, x86-native tools to build 32-bit, x86-native code.  
+- **x86 Native Tools Command Prompt** Sets the environment to use 32-bit, x86-native tools to build 32-bit, x86-native code.  
+- **x64 Native Tools Command Prompt** Sets the environment to use 64-bit, x64-native tools to build 64-bit, x64-native code.  
+- **x86_x64 Cross Tools Command Prompt** Sets the environment to use 32-bit, x86-native tools to build 64-bit, x64-native code.  
+- **x64_x86 Cross Tools Command Prompt** Sets the environment to use 64-bit, x64-native tools to build 32-bit, x86-native code.  
+
+The actual Start menu folder and shortcut names vary depending on the version of [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] you have installed, and the installation Nickname if you set one. For example, if you have Visual Studio 2017 installed, and you've given it an installation Nickname of 15.3, the developer command prompt shortcut is named **Developer Command Prompt for VS 2017 (15.3)**, in a folder named **Visual Studio 2017**. 
+
+If you've installed the [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931) or [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, there may only be specific native or cross tools developer command prompt options. 
+
+<a name="developer_command_prompt"></a>
+## <a name="to-open-a-developer-command-prompt-window"></a>To open a developer command prompt window  
   
- 제대로 작업하려면 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 명령줄 도구에는 설치에 맞춰 사용자 지정된 여러 환경 변수가 필요합니다.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]가 설치되면 Visual Studio는 필수 환경 변수를 설정하기 위해 실행할 수 있는 vcvarsall.bat 명령 파일을 만듭니다.  또한 이러한 변수가 이미 설정되어 있는 개발자 명령 프롬프트 창을 시작하는 바로 가기도 만듭니다.  이러한 환경 변수는 사용자의 설치에 고유하게 설정되며 제품 업데이트 또는 업그레이드 시 변경될 수 있습니다.  따라서 이러한 변수를 직접 설정하기 보다는 vcvarsall.bat 또는 개발자 명령 프롬프트 바로 가기를 사용하는 것이 좋습니다.  자세한 내용은 [명령줄 빌드를 위한 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)을 참조하십시오.  
+1.  On the desktop, open the Windows **Start** menu, and then scroll to find and open the folder for your version of Visual Studio, for example, **Visual Studio 2017**. In some older versions of Visual Studio, the shortcuts are in a subfolder called **Visual Studio Tools**.  
   
-### 개발자 명령 프롬프트 창을 열려면  
+2.  In the folder, choose the **Developer Command Prompt** for your version of Visual Studio. This shortcut starts a developer command prompt window that uses the default build architecture of 32-bit, x86-native tools to build 32-bit, x86-native code. If you prefer a non-default build architecture, choose one of the native or cross tools command prompts to specify the host and target architecture. 
+
+An even faster way to open a developer command prompt window is to enter *developer command prompt* in the desktop search box, then choose the desired result.
+
+<a name="developer_command_files"></a>
+## <a name="developer-command-files-and-locations"></a>Developer command files and locations
+
+If you prefer to set the build architecture environment in an existing command prompt window, you can use one of the command files created by the installer. The location of these files depends on the version of [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] you have installed, and on location and naming choices you made during installation. For Visual Studio 2017, the typical installation location on a 64-bit computer is in \Program Files (x86)\Microsoft Visual Studio\2017\\*edition*, where *edition* may be Community, Professional, Enterprise, BuildTools, or another name you supplied. For Visual Studio 2015, the typical installation location is in \Program Files (x86)\Microsoft Visual Studio 14.0. 
+
+The primary developer command prompt command file, VsDevCmd.bat, is located in the Common7\Tools subdirectory of the installation directory. When no parameters are specified, this sets the environment and build architecture to use the 32-bit x86-native tools to build 32-bit x86 code.
+
+Additional command files are available to set up specific build architectures, depending on your processor architecture and the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] workloads and options you have installed. In Visual Studio 2017, these are located in the VC\Auxiliary\Build subdirectory of the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installation directory. In Visual Studio 2015, these are located in the VC, VC\bin, or VC\bin\\*architectures* subdirectories of the installation directory, where *architectures* is one of the native or cross compiler options. These command files set parameters and call VsDevCmd.bat to set up the specified build architecture environment. A typical installation may include these command files:
+
+- **vcvars32.bat** Use the 32-bit x86-native tools to build 32-bit x86 code.  
+- **vcvars64.bat** Use the 64-bit x64-native tools to build 64-bit x64 code.  
+- **vcvarsx86_amd64.bat** Use the 32-bit x86-native cross tools to build 64-bit x64 code.  
+- **vcvarsamd64_x86.bat** Use the 64-bit x64-native cross tools to build 32-bit x86 code.  
+- **vcvarsx86_arm.bat** Use the 32-bit x86-native cross tools to build ARM code.  
+- **vcvarsamd64_arm.bat** Use the 64-bit x64-native cross tools to build ARM code.  
+- **vcvarsall.bat** Use parameters to specify the host and target architectures, as well as SDK and platform choices. Call by using a `/help` parameter for a list of options.  
+
+> [!CAUTION]
+>  The vcvarsall.bat file and other command files can vary from computer to computer. Do not replace a missing or damaged vcvarsall.bat file by using a file from another computer. Rerun the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installer to replace the missing file.  
+>   
+> The vcvarsall.bat file also varies from version to version. If the current version of Visual C++ is installed on a computer that also has an earlier version of Visual C++, do not run vcvarsall.bat or another command file from different versions in the same command prompt window.  
+ 
+The simplest way to specify a particular build architecture in an existing command window is to use the vcvarsall.bat file. You can use vcvarsall.bat to set environment variables to configure the command line for native 32-bit or 64-bit compilation, or for cross-compilation to x86, x64, or ARM processors; to target Windows Store, Universal Windows Platform, or Windows Desktop platforms; to specify which Windows SDK to use; and to specify the platform toolset version. If no arguments are provided, vcvarsall.bat configures the environment variables for using the current 32-bit native compiler for x86 Windows Desktop targets. However, you can use it to configure any of the native or cross compiler tools. If you specify a compiler configuration that is not installed or is not available on your build computer architecture, an error message is displayed. This table shows the supported architecture arguments:  
   
-1.  Windows 8 시작 화면에서 Visual Studio Tools를 입력합니다.  입력한 내용에 따라 검색 결과가 바뀝니다. **Visual Studio Tools**가 나타나면 선택합니다.  
+|Vcvarsall.bat architecture argument|Compiler|Host computer architecture|Build output architecture|  
+|----------------------------|--------------|----------------------------------|-------------------------------|  
+|x86|x86 32-bit native|x86, x64|x86|  
+|x86\_amd64 or x86\_x64|x64 on x86 cross|x86, x64|x64|  
+|x86_arm|ARM on x86 cross|x86, x64|ARM|  
+|amd64 or x64|x64 64-bit native|x64|x64|  
+|amd64\_x86 or x64\_x86|x86 on x64 cross|x64|x86|  
+|amd64\_arm or x64\_arm|ARM on x64 cross|x64|ARM|  
   
-     이전 버전의 Windows에는 **시작**을 선택한 다음 검색 상자에 Visual Studio Tools를 입력합니다.  검색 결과에 **Visual Studio Tools**가 나타나면 선택합니다.  
+You can use the **store** or **uwp** options to specify the platform type, or neither to specify a desktop app. To specify the Windows SDK version, you can use a full Windows 10 SDK number such as 10.0.10240.0, or specify 8.1 to use the Windows 8.1 SDK. Use 14.0 to specify the Visual Studio 2015 compiler toolset; by default, the environment is set to use the Visual Studio 2017 compiler toolset.
+
+<a name="vcvarsall"></a>
+## <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>To set up the build environment in an existing command prompt window  
   
-2.  **Visual Studio Tools** 폴더에서 사용 중인 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 버전에 해당하는 **개발자 명령 프롬프트**를 엽니다.  
+1.  At the command prompt, use the CD command to change to the Visual Studio installation directory. Then, use CD again to change to the subdirectory that contains the configuration-specific command files. For Visual Studio 2017, this is the VC\Auxiliary\Build subdirectory. For Visual Studio 2015, use the VC subdirectory.  
   
- 명령줄에서 C\/C\+\+ 프로젝트를 빌드하려면 다음 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 명령줄 도구를 사용할 수 있습니다.  
+1.  To configure this command prompt window to use 32-bit tools to build code for x86 platforms, at the command prompt, enter:  
   
- [CL](../build/reference/compiling-a-c-cpp-program.md)  
- 컴파일러\(cl.exe\)를 사용하여 소스 코드 파일을 컴파일한 다음 앱, 라이브러리 및 DLL에 연결합니다.  
+     `vcvarsall`  
+
+1.  To configure this command prompt window to use 32-bit tools to build code for x64 platforms, at the command prompt, enter:  
   
- [링크](../build/reference/linking.md)  
- 링커\(link.exe\)를 사용하여 컴파일된 개체 파일 및 라이브러리를 앱 및 DLL에 연결합니다.  
+     `vcvarsall x86_amd64`  
   
- [MSBuild\(Visual C\+\+\)](../build/msbuild-visual-cpp.md)  
- MSBuild\(msbuild.exe\)를 사용하여 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 프로젝트 및 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 솔루션을 빌드합니다.  이는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE에서 프로젝트 **빌드** 또는 **솔루션 빌드** 명령을 실행하는 것과 같습니다.  
+1.  To configure this command prompt window to use 32-bit tools to build code for ARM platforms, at the command prompt, enter:  
   
- [DEVENV](../Topic/Devenv%20Command%20Line%20Switches.md)  
- 명령줄 스위치\(예: **\/Build** 또는 **\/Clean**\)와 함께 DEVENV\(devenv.exe\)를 사용하여 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE를 표시하지 않고 특정 빌드 명령을 수행합니다.  
+     `vcvarsall x86_arm`  
   
- [NMAKE](../build/nmake-reference.md)  
- NMAKE\(nmake.exe\)를 사용하여 기존 메이크파일로 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 프로젝트 빌드 작업을 자동화합니다.  
+1.  To configure this command prompt window to use 64-bit tools to build code for x64 platforms, at the command prompt, enter:  
   
- 명령줄에서 빌드하는 경우 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]를 시작한 다음 메뉴 모음에서 **도움말**, **검색**을 선택하여 경고, 오류 및 메시지에 대한 정보를 얻을 수 있습니다.  
+     `vcvarsall amd64`  
   
-## 단원 내용  
- 설명서의 이 섹션에 있는 문서는 명령줄에서 앱을 빌드하는 방법을 보여주고, 64비트 도구 집합을 사용하고 x86, x64 및 ARM 플랫폼을 대상으로 하도록 명령줄 빌드 환경을 사용자 지정하는 방법에 대해 설명하고, 명령줄 빌드 도구인 MSBuild 및 NMAKE를 사용하는 방법을 보여줍니다.  
+1.  To configure this command prompt window to use 64-bit tools to build code for x86 platforms, at the command prompt, enter:  
   
- [연습: 명령줄에서 네이티브 C\+\+ 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)  
- 명령줄에서 간단한 C\+\+ 프로그램을 만들고 컴파일하는 방법을 보여주는 예제를 제공합니다.  
+     `vcvarsall amd64_x86`  
   
- [연습: 명령줄에서 C 프로그램 컴파일](../Topic/Walkthrough:%20Compiling%20a%20C%20Program%20on%20the%20Command%20Line.md)  
- C 프로그래밍 언어로 작성한 프로그램을 컴파일하는 방법에 대해 설명합니다.  
+1.  To configure this command prompt window to use 64-bit tools to build code for ARM platforms, at the command prompt, enter:  
   
- [연습: 명령줄에서 C\+\+\/CLI 프로그램 컴파일](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
- .NET Framework를 사용하는 C\+\+\/CLI 프로그램을 만들어 컴파일하는 방법에 대해 설명합니다.  
+     `vcvarsall amd64_arm`  
+
+The command file sets the required environment variables for the paths to the build tools, libraries, and headers. You can now use this command prompt window to run the command-line compiler and tools.  
   
- [연습: 명령줄에서 C\+\+\/CX 프로그램 컴파일](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
- Windows 런타임을 사용하는 C\+\+\/CX 프로그램을 만들어 컴파일하는 방법에 대해 설명합니다.  
+If you are using [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches) for command-line builds, the environment set by vcvarsall.bat or other command files does not affect your builds, unless you also specify the **/useenv** option.  
+
+## <a name="command-line-tools"></a>Command line tools
   
- [명령줄 빌드에 맞는 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
- 32비트 또는 64비트 도구 집합을 사용하여 x86, x64 및 ARM 플랫폼을 대상으로 하는 명령줄 빌드에 필요한 환경 변수가 들어있는 명령 프롬프트 창을 시작하는 방법에 대해 설명합니다.  
+To build a C/C++ project on the command line, you can use these Visual C++ command-line tools:  
   
- [NMAKE 참조](../build/nmake-reference.md)  
- Microsoft Program Maintenance Utility\(NMAKE.EXE\)에 대해 설명하는 문서의 링크를 제공합니다.  
+[CL](../build/reference/compiling-a-c-cpp-program.md)  
+Use the compiler (cl.exe) to compile and link source code files into apps, libraries, and DLLs.  
   
- [MSBuild\(Visual C\+\+\)](../build/msbuild-visual-cpp.md)  
- MSBuild.EXE를 사용하는 방법에 대해 설명하는 문서의 링크를 제공합니다.  
+[Link](../build/reference/linking.md)  
+Use the linker (link.exe) to link compiled object files and libraries into apps and DLLs.  
   
-## 관련 단원  
- [\/MD, \/MT, \/LD\(런타임 라이브러리 사용\)](../build/reference/md-mt-ld-use-run-time-library.md)  
- 컴파일러 옵션을 사용하여 디버그 또는 릴리스 런타임 라이브러리를 사용하는 방법에 대해 설명합니다.  
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
+Use MSBuild (msbuild.exe) to build Visual C++ projects and [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] solutions. This is equivalent to running the **Build** project or **Build Solution** command in the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE.  
   
- [C\/C\+\+ 컴파일러 옵션](../build/reference/compiler-options.md)  
- C 및 C\+\+ 컴파일러 옵션과 CL.exe에 대해 설명하는 문서에 대한 링크를 제공합니다.  
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)  
+Use DEVENV (devenv.exe) combined with a command-line switch—for example, **/Build** or **/Clean**—to perform certain build commands without displaying the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] IDE.  
   
- [링커 옵션](../build/reference/linker-options.md)  
- 링커 옵션 및 LINK.exe에 대해 설명하는 문서에 대한 링크를 제공합니다.  
+[NMAKE](../build/nmake-reference.md)  
+Use NMAKE (nmake.exe) to automate tasks that build Visual C++ projects by using a traditional makefile.  
   
- [C\/C\+\+ 빌드 도구](../build/reference/c-cpp-build-tools.md)  
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에 포함된 C\/C\+\+ 빌드 도구에 대한 링크를 제공합니다.  
+When you build on the command line, you can get information about warnings, errors, and messages. Start [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] and then on the menu bar, choose **Help**, **Search**.  
   
-## 참고 항목  
- [C\/C\+\+ 프로그램 빌드](../build/building-c-cpp-programs.md)
+## <a name="in-this-section"></a>In This Section  
+
+The articles in this section of the documentation show how to build apps on the command line, describe how to customize the command-line build environment to use 64-bit toolsets and target x86, x64, and ARM platforms, and demonstrate how to use the command-line build tools MSBuild and NMAKE.  
+  
+[Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)  
+Gives an example that shows how to create and compile a simple C++ program on the command line.  
+  
+[Walkthrough: Compile a C Program on the Command Line](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+Describes how to compile a program written in the C programming language.  
+  
+[Walkthrough: Compiling a C++/CLI Program on the Command Line](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)  
+Describes how to create and compile a C++/CLI program that uses the .NET Framework.  
+  
+[Walkthrough: Compiling a C++/CX Program on the Command Line](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
+Describes how to create and compile a C++/CX program that uses the Windows Runtime.  
+  
+[Set the Path and Environment Variables for Command-Line Builds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
+Describes how to start a command prompt window that has the required environment variables set for command-line builds that target x86, x64, and ARM platforms by using a 32-bit or 64-bit toolset.  
+  
+[NMAKE Reference](../build/nmake-reference.md)  
+Provides links to articles that describe the Microsoft Program Maintenance Utility (NMAKE.EXE).  
+  
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
+Provides links to articles that discuss how to use MSBuild.EXE.  
+  
+## <a name="related-sections"></a>Related Sections  
+
+[/MD, /MT, /LD (Use Run-Time Library)](../build/reference/md-mt-ld-use-run-time-library.md)  
+Describes how to use these compiler options to use a Debug or Release run-time library.  
+  
+[C/C++ Compiler Options](../build/reference/compiler-options.md)  
+Provides links to articles that discuss the C and C++ compiler options and CL.exe.  
+  
+[Linker Options](../build/reference/linker-options.md)  
+Provides links to articles that discuss the linker options and LINK.exe.  
+  
+[C/C++ Build Tools](../build/reference/c-cpp-build-tools.md)  
+Provides links to the C/C++ build tools that are included in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+  
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](../build/building-c-cpp-programs.md)

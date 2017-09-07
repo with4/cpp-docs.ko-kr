@@ -1,72 +1,91 @@
 ---
-title: "방법: 64비트 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "플랫폼[C++], 64비트"
-  - "64비트 프로그래밍[C++], 프로젝트 구성"
-  - "프로젝트 구성[C++]"
+title: 'How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- platforms [C++], 64-bit
+- 64-bit programming [C++], configuring projects
+- project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 방법: 64비트 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 835f5f5b2fcfacb162fddaa902c7a1070e9d3773
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-64비트 플랫폼을 대상으로 하도록 C\+\+ 응용 프로그램을 설정하는 데 Visual Studio의 프로젝트 구성을 사용할 수 있습니다. 또한 Win32 프로젝트 설정을 64비트 프로젝트 구성에 마이그레이션할 수 있습니다.  
+---
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms
+
+You can use the project configurations in the Visual Studio IDE to set up C++ applications to target 64-bit, x64 platforms. You can also migrate Win32 project settings into a 64-bit project configuration.  
   
-### 64비트 플랫폼을 대상으로 하도록 C\+\+ 응용 프로그램을 설정하려면  
+### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>To set up C++ applications to target 64-bit platforms  
   
-1.  구성하려는 C\+\+ 프로젝트를 엽니다.  
+1.  Open the C++ project that you want to configure.  
   
-2.  해당 프로젝트의 속성 페이지를 엽니다. 자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../misc/how-to-open-project-property-pages.md)을 참조하세요.  
-  
-    > [!NOTE]
-    >  .NET 프로젝트의 경우 **구성 속성** 노드 또는 해당 자식 노드 중 하나가 **\<프로젝트 이름\> 속성 페이지** 대화 상자에서 선택되어 있는지 확인합니다. 선택되어 있지 않으면 **구성 관리자** 단추를 사용할 수 없습니다.  
-  
-3.  **구성 관리자** 단추를 선택하여 **구성 관리자** 대화 상자를 엽니다.  
-  
-4.  **활성 솔루션 플랫폼** 드롭다운 목록에서 **\<새로 만들기...\>** 옵션을 선택하여 **새 솔루션 플랫폼** 대화 상자를 엽니다.  
-  
-5.  **새 플랫폼 입력 또는 선택** 드롭다운 목록에서 64비트 플랫폼을 선택합니다.  
+2.  Open the property pages for that project. For more information, see [Working with Project Properties](../ide/working-with-project-properties.md).  
   
     > [!NOTE]
-    >  **새 솔루션 플랫폼** 대화 상자에서 **다음에서 설정 복사** 옵션을 사용하여 기존 프로젝트 설정을 새 64비트 프로젝트 구성에 복사할 수 있습니다.  
+    >  For .NET projects, make sure that the **Configuration Properties** node, or one of its child nodes, is selected in the **\<Projectname> Property Pages** dialog box; otherwise, the **Configuration Manager** button remains unavailable.  
   
-6.  **확인** 단추를 선택합니다. 이전 단계에서 선택한 플랫폼이 **구성 관리자** 대화 상자의 **활성 솔루션 플랫폼** 아래에 표시됩니다.  
+3.  Choose the **Configuration Manager** button to open the **Configuration Manager** dialog box.  
   
-7.  **구성 관리자** 대화 상자에서 **닫기** 단추를 선택한 후 **\<프로젝트 이름\> 속성 페이지** 대화 상자에서 **확인** 단추를 선택합니다.  
+4.  In the **Active Solution Platform** drop-down list, select the **\<New...>** option to open the **New Solution Platform** dialog box.  
   
-### Win32 프로젝트 설정을 64비트 프로젝트 구성에 복사하려면  
-  
--   64비트 플랫폼을 대상으로 하도록 프로젝트를 설정하는 동안 **새 솔루션 플랫폼** 대화 상자가 열리는 경우 **다음에서 설정 복사** 드롭다운 목록에서 **Win32**를 선택합니다. 다음 프로젝트 설정이 프로젝트 수준에서 자동으로 업데이트됩니다.  
-  
-    -   [\/MACHINE](../build/reference/machine-specify-target-platform.md) 링커 옵션이 **\/MACHINE:X64**로 설정됩니다.  
-  
-    -   **출력 등록**이 꺼집니다. 자세한 내용은 [링커 속성 페이지](../ide/linker-property-pages.md)을 참조하세요.  
-  
-    -   **대상 환경**이 **\/env x64**로 설정됩니다. 자세한 내용은 [MIDL 속성 페이지: 일반](../ide/midl-property-pages-general.md)을 참조하세요.  
-  
-    -   **매개 변수 유효성 검사**가 초기화되어 기본값으로 다시 설정됩니다. 자세한 내용은 [MIDL 속성 페이지: 고급](../ide/midl-property-pages-advanced.md)을 참조하세요.  
-  
-    -   **디버그 정보 형식**이 Win32 프로젝트 구성에서 **\/ZI**로 설정되면 64비트 프로젝트 구성에서는 **\/Zi**로 설정됩니다. 자세한 내용은 [\/Z7, \/Zi, \/ZI\(디버깅 정보 형식\)](../build/reference/z7-zi-zi-debug-information-format.md)을 참조하세요.  
+5.  In the **Type or select the new platform** drop-down list, select a 64-bit target platform.  
   
     > [!NOTE]
-    >  이러한 프로젝트 속성이 파일 수준에서 재정의된 경우에는 어떠한 속성도 변경되지 않습니다.  
+    >  In the **New Solution Platform** dialog box, you can use the **Copy settings from** option to copy existing project settings into the new 64-bit project configuration.  
   
-## 참고 항목  
- [64비트 응용 프로그램](../Topic/64-bit%20Applications.md)   
- [64비트용 프로그램 구성](../build/configuring-programs-for-64-bit-visual-cpp.md)   
- [64비트 응용 프로그램 디버그](../Topic/Debug%2064-Bit%20Applications.md)
+6.  Choose the **OK** button. The platform that you selected in the preceding step appears under **Active Solution Platform** in the **Configuration Manager** dialog box.  
+  
+7.  Choose the **Close** button in the **Configuration Manager** dialog box, and then choose the **OK** button in the **\<Projectname> Property Pages** dialog box.  
+  
+### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>To copy Win32 project settings into a 64-bit project configuration  
+  
+-   When the **New Solution Platform** dialog box is open while you set up a project to target a 64-bit platform, in the **Copy settings from** drop-down list, select **Win32**. These project settings are automatically updated on the project level:  
+  
+    -   The [/MACHINE](../build/reference/machine-specify-target-platform.md) linker option is set to **/MACHINE:X64**.  
+  
+    -   **Register Output** is turned OFF. For more information, see [Linker Property Pages](../ide/linker-property-pages.md).  
+  
+    -   **Target Environment** is set to **/env x64**. For more information, see [MIDL Property Pages: General](../ide/midl-property-pages-general.md).  
+  
+    -   **Validate Parameters** is cleared and reset to the default value. For more information, see [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).  
+  
+    -   If **Debug Information Format** was set to **/ZI** in the Win32 project configuration, then it is set to **/Zi** in the 64-bit project configuration. For more information, see [/Z7, /Zi, /ZI (Debug Information Format)](../build/reference/z7-zi-zi-debug-information-format.md).  
+  
+    > [!NOTE]
+    >  None of these project properties are changed if they are overridden on the file level.  
+  
+## <a name="see-also"></a>See Also  
+
+[.NET Framework 64-bit Applications](/dotnet/framework/64-bit-apps)   
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[Debug 64-Bit Applications](/visualstudio/debugger/debug-64-bit-applications)

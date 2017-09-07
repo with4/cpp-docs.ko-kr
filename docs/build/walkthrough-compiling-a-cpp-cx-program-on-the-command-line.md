@@ -1,50 +1,66 @@
 ---
-title: "연습: 명령줄에서 C++/CX 프로그램 컴파일 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CX Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 연습: 명령줄에서 C++/CX 프로그램 컴파일
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 82ce88b7769c37ee6219df59c19490537cfe2571
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
 
-Windows 런타임을 대상으로 하는 Visual C\+\+ 프로그램을 만들어 명령줄에서 빌드할 수 있습니다.  Visual C\+\+는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 Visual C\+\+ 구성 요소 확장\(C\+\+\/CX\)을 지원합니다.  C\+\+\/CX를 사용하여 Windows Phone 8.1, Windows 스토어 및 Windows 데스크톱용 앱을 빌드할 수 있습니다.  자세한 내용은 [A Tour of C\+\+\/CX](http://msdn.microsoft.com/magazine/dn166929.aspx) 및 [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)을 참조하세요.  
+---
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CX Program on the Command Line
+You can create Visual C++ programs that target the Windows Runtime and build them on the command line. Visual C++ supports Visual C++ component extensions (C++/CX), which has additional types and operators to target the Windows Runtime programming model. You can use C++/CX to build apps for Windows Phone 8.1, Windows Store, and Windows desktop. For more information, see [A Tour of C++/CX](http://msdn.microsoft.com/magazine/dn166929.aspx) and [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md).  
   
- 이 연습에서는 텍스트 편집기를 사용하여 기본적인 C\+\+\/CX 프로그램을 만든 다음 명령줄에서 컴파일합니다.  여기에 나와 있는 내용을 입력하는 대신 C\+\+\/CX 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C\+\+\/CX 코드 샘플을 사용할 수도 있습니다.  이 기술은 UI 요소가 없는 소형 모듈을 빌드하고 테스트하는 데 유용합니다.  
+ In this walkthrough, you use a text editor to create a basic C++/CX program, and then compile it on the command line. (You can use your own C++/CX program instead of typing the one that's shown, or you can use a C++/CX code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  또한 Visual Studio IDE를 사용하여 C\+\+\/CX 프로그램을 컴파일할 수 있습니다.  IDE는 명령줄에서는 제공되지 않는 디자인, 디버그, 에뮬레이션 및 배포 지원을 포함하므로 IDE를 사용하여 Windows 스토어 앱을 빌드하는 것이 좋습니다.  자세한 내용은 [Create a basic C\+\+ Store app](http://msdn.microsoft.com/library/windows/apps/dn263168)을 참조하십시오.  
+>  You can also use the Visual Studio IDE to compile C++/CX programs. Because the IDE includes design, debugging, emulation, and deployment support that isn't available on the command line, we recommend that you use the IDE to build Windows Store apps. For more information, see [Create a basic C++ Store app](http://msdn.microsoft.com/library/windows/apps/dn263168).  
   
-## 사전 요구 사항  
- 개발자는 C\+\+ 언어의 기본적인 사항을 알고 있어야 합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## C\+\+\/CX 프로그램 컴파일  
- C\+\+\/CX를 컴파일할 수 있도록 설정하려면 [\/ZW](../build/reference/zw-windows-runtime-compilation.md) 컴파일러 옵션을 사용해야 합니다.  Visual C\+\+ 컴파일러는 Windows 런타임을 대상으로 하는 .exe 파일을 생성하고 필수 라이브러리에 연결합니다.  
+## <a name="compiling-a-ccx-program"></a>Compiling a C++/CX Program  
+ To enable compilation for C++/CX, you must use the [/ZW](../build/reference/zw-windows-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that targets the Windows Runtime, and links to the required libraries.  
   
-#### 명령줄에서 C\+\+\/CX 응용 프로그램을 컴파일하려면  
+#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>To compile a C++/CX application on the command line  
   
-1.  **개발자 명령 프롬프트** 창을 엽니다.  **시작** 창에서 **앱**을 엽니다.  사용 중인 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 버전에서 **Visual Studio Tools** 폴더를 연 다음 **개발자 명령 프롬프트** 바로 가기를 선택합니다. 명령 프롬프트 창을 여는 방법에 대한 자세한 내용은 [명령줄 빌드를 위한 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)을 참조하세요.  
+1.  Open a **Developer Command Prompt** window. (On the **Start** window, open **Apps**. Open the **Visual Studio Tools** folder under your version of [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], and then choose the **Developer Command Prompt** shortcut.) For more information about how to open a Developer Command Prompt window, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md).  
   
-     컴퓨터 운영 체제 및 구성에 따라 코드를 정상적으로 컴파일하려면 관리자 자격 증명이 필요할 수 있습니다.  관리자로 명령 프롬프트 창을 실행하려면 **개발자 명령 프롬프트**의 바로 가기 메뉴를 연 다음 **관리자 권한으로 실행**을 선택합니다.  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the Command Prompt window as an administrator, open the shortcut menu for **Developer Command Prompt** and then choose **Run as administrator**.  
   
-2.  명령 프롬프트에서 **notepad basiccx.cpp**를 입력합니다.  
+2.  At the command prompt, enter **notepad basiccx.cpp**.  
   
-     파일을 만들 것인지 묻는 메시지가 나타나면 **예**를 선택합니다.  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  메모장에 다음 줄을 입력합니다.  
+3.  In Notepad, enter these lines:  
   
     ```cpp  
     using namespace Platform;  
@@ -56,20 +72,21 @@ Windows 런타임을 대상으로 하는 Visual C\+\+ 프로그램을 만들어 
   
     ```  
   
-4.  메뉴 모음에서 **파일**, **저장**을 선택합니다.  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     Windows 런타임 [Platform 네임스페이스](../Topic/Platform%20namespace%20\(C++-CX\).md) 네임스페이스를 사용하는 Visual C\+\+ 소스 파일을 만들었습니다.  
+     You have created a Visual C++ source file that uses the Windows Runtime [Platform namespace](../cppcx/platform-namespace-c-cx.md) namespace.  
   
-5.  명령 프롬프트에서 **cl \/EHsc \/ZW basiccx.cpp \/link \/SUBSYSTEM:CONSOLE**을 입력합니다.  cl.exe 컴파일러는 이 소스 파일을 .obj 파일로 컴파일한 다음 링커를 실행하여 실행 프로그램인 basiccx.exe를 생성합니다.  [\/EHsc](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션은 C\+\+ 예외 처리 모델을 지정하고 [\/link](../build/reference/link-pass-options-to-linker.md) 플래그는 콘솔 응용 프로그램을 지정합니다.  
+5.  At the command prompt, enter **cl /EHsc /ZW basiccx.cpp /link /SUBSYSTEM:CONSOLE**. The cl.exe compiler compiles the source code into an .obj file, and then runs the linker to generate an executable program named basiccx.exe. (The [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option specifies the C++ exception-handling model, and the [/link](../build/reference/link-pass-options-to-linker.md) flag specifies a console application.)  
   
-6.  basiccx.exe 프로그램을 실행하려면 명령 프롬프트에 **basiccx**를 입력합니다.  
+6.  To run the basiccx.exe program, at the command prompt, enter **basiccx**.  
   
-     프로그램이 다음 텍스트를 표시하고 종료됩니다.  
+     The program displays this text and exits:  
   
-  **This is a C\+\+\/CX program.**  
+    ```Output  
+    This is a C++/CX program.  
+    ```  
   
-## 참고 항목  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ko-kr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [C\+\+ 언어 참조](../cpp/cpp-language-reference.md)   
- [C\/C\+\+ 프로그램 빌드](../build/building-c-cpp-programs.md)   
- [컴파일러 옵션](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)
