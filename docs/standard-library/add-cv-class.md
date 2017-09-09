@@ -1,5 +1,5 @@
 ---
-title: "add_cv 클래스 | Microsoft 문서"
+title: add_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_cv
 - type_traits/std::add_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
-ms.openlocfilehash: efa1d246eb793cb2d0a64347aa062e7ab908e7c4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8d36187e25e3b6d64a9455b6d88333e5c1eff000
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addcv-class"></a>add_cv 클래스
-형식에서 const volatile 형식을 만듭니다.  
+# <a name="addcv-class"></a>add_cv Class
+Makes const volatile type from type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,16 +54,16 @@ template <class T>
 using add_cv_t = typename add_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *T*  
-수정할 형식입니다.  
+The type to modify.  
   
-## <a name="remarks"></a>설명  
-*T*가 이미 cv 한정자를 가지고 있거나 참조 또는 함수인 경우가 아닌 한, 수정된 형식 `add_cv<T>`의 인스턴스에는 [add_volatile](../standard-library/add-volatile-class.md) 및 [add_const](../standard-library/add-const-class.md)에 의해 수정된 *T*에 해당하는 `type` 멤버 typedef가 있습니다.  
+## <a name="remarks"></a>Remarks  
+An instance of the modified type `add_cv<T>` has a `type` member typedef equivalent to *T* modified by both [add_volatile](../standard-library/add-volatile-class.md) and [add_const](../standard-library/add-const-class.md), unless *T* already has the cv-qualifiers, is a reference, or is a function.  
   
-`add_cv_t<T>` 도우미 형식은 `add_cv<T>` 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.
+The `add_cv_t<T>` helper type is a shortcut to access the `add_cv<T>` member typedef `type`.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // add_cv.cpp
@@ -109,12 +108,12 @@ invoked volatile S.f()
 invoked const volatile S.f()  
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<type_traits>  
-**네임스페이스:** std  
+## <a name="requirements"></a>Requirements  
+**Header:** \<type_traits>  
+**Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [<type_traits>](../standard-library/type-traits.md)   
-[remove_const 클래스](../standard-library/remove-const-class.md)   
-[remove_volatile 클래스](../standard-library/remove-volatile-class.md)
+[remove_const Class](../standard-library/remove-const-class.md)   
+[remove_volatile Class](../standard-library/remove-volatile-class.md)
 

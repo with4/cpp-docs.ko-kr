@@ -1,5 +1,5 @@
 ---
-title: "&lt;bitset&gt; | Microsoft 문서"
+title: '&lt;bitset&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<bitset>
-- std.<bitset>
-- <bitset>
+- std::<bitset>", "<bitset>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d0b9f494cec6212616813f9d622b97ff9d54bd3e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d78841f96bcff52cf7ffd68bc18263dd012e8ba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
-템플릿 클래스 bitset 및 고정 크기 비트 시퀀스를 나타내고 조작하기 위한 두 개의 지원 템플릿 함수를 정의합니다.  
+Defines the template class bitset and two supporting template functions for representing and manipulating fixed-size sequences of bits.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,25 +52,25 @@ ms.lasthandoff: 04/29/2017
   
 ```  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator&](../standard-library/bitset-operators.md#op_amp)|두 bitset 간에 비트 AND를 수행합니다.|  
-|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|비트 시퀀스의 텍스트 표현을 표준 출력 스트림에 삽입합니다.|  
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|비트 시퀀스의 텍스트 표현을 표준 입력 스트림에 삽입합니다.|  
-|[operator^](../standard-library/bitset-operators.md#op_xor)|두 bitset 간에 비트 EXCLUSIVE-OR을 수행합니다.|  
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|두 bitset 간에 비트 OR을 수행합니다.|  
+|[operator&](../standard-library/bitset-operators.md#op_amp)|Performs a bitwise AND between two bitsets.|  
+|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Inserts a text representation of the bit sequence into the standard output stream.|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Inserts a text representation of the bit sequence into the standard input stream.|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Performs a bitwise EXCLUSIVE-OR between two bitsets.|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Performs a bitwise OR between two bitsets.|  
   
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[bitset 클래스](../standard-library/bitset-class.md)|이 템플릿 클래스는 일련의 항목 또는 조건에 대한 플래그를 유지하기 위한 간단한 방법으로 제공하는 고정된 비트 수로 구성된 시퀀스를 저장하는 개체 형식을 설명합니다.|  
+|[bitset Class](../standard-library/bitset-class.md)|The template class describes a type of object that stores a sequence consisting of a fixed number of bits that provide a compact way of keeping flags for a set of items or conditions.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

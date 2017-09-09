@@ -1,5 +1,5 @@
 ---
-title: "time_put_byname 클래스 | Microsoft Docs"
+title: time_put_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_put_byname
 - xloctime/std::time_put_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 64073ef0aec24e0e6ceae0c798e9519ebae1ee35
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeputbyname-class"></a>time_put_byname 클래스
-`time_put`\< CharType, OutputIterator > 형식의 로캘 패싯으로 사용할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  
+# <a name="timeputbyname-class"></a>time_put_byname Class
+The derived template class describes an object that can serve as a locale facet of type `time_put`\< CharType, OutputIterator >.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
@@ -65,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 로캘 이름  
+ A locale name.  
   
  `_Refs`  
- 초기 참조 횟수  
+ An initial reference count.  
   
-## <a name="remarks"></a>설명  
- 해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 의해 결정됩니다. 각 생성자는 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the [named](../standard-library/locale-class.md#name) locale `_Locname`. Each constructor initializes its base object with [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

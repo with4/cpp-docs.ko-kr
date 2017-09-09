@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vector<bool>::reference::flip
-- std::vector<bool>::reference::flip
+- vector/std::vector<bool>::reference::flip
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,23 +33,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 3df75ecbe47a1e6da00aa1b7a6bf55982a307d2d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9c7a3eb284d64d6ff3f8a23bd8efd1e05def8de8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
-참조된 [vector\<bool>](../standard-library/vector-bool-class.md) 요소의 부울 값을 반전합니다.  
+Inverts the Boolean value of a referenced [vector\<bool>](../standard-library/vector-bool-class.md) element.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void flip();
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // vector_bool_ref_flip.cpp  
@@ -83,7 +82,7 @@ int main()
   
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
   
 ```  
 The vector is:  
@@ -92,13 +91,13 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<vector>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<vector>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [vector\<bool>::reference 클래스](../standard-library/vector-bool-reference-class.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

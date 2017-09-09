@@ -1,5 +1,5 @@
 ---
-title: "is_function 클래스 | Microsoft 문서"
+title: is_function Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is
 - type_traits/std::is
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 8f718f24d0751a1050b76f8fb2cab09b0b970647
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9830bb9c4d26dcc930c503a4407cadf654b46d65
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isfunction-class"></a>is_function 클래스
-형식이 함수 형식인지 테스트합니다.  
+# <a name="isfunction-class"></a>is_function Class
+Tests if type is a function type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_function;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty` 형식이 함수 형식인 경우 true이고 그렇지 않은 경우 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a function type, otherwise it holds false.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_function.cpp   
@@ -97,12 +96,12 @@ is_function<functional> == false
 is_function<float()> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_object 클래스](../standard-library/is-object-class.md)
+ [is_object Class](../standard-library/is-object-class.md)
 

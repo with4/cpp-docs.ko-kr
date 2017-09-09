@@ -1,5 +1,5 @@
 ---
-title: "normal_distribution 클래스 | Microsoft Docs"
+title: normal_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- normal_distribution
 - random/std::normal_distribution
 - random/std::normal_distribution::reset
 - random/std::normal_distribution::mean
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- normal_distribution class
+- std::normal_distribution [C++]
+- std::normal_distribution [C++], reset
+- std::normal_distribution [C++], mean
+- std::normal_distribution [C++], stddev
+- std::normal_distribution [C++], param
+- std::normal_distribution [C++], min
+- std::normal_distribution [C++], max
+- std::normal_distribution [C++], param_type
+- std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
 caps.latest.revision: 19
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 16b8c59395ae727e47be88e32aeb87c32b2e403d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ccb23d20952df8f0b1a530ba245917260e5d36ee
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="normaldistribution-class"></a>normal_distribution 클래스
-정규 분포를 생성합니다.  
+# <a name="normaldistribution-class"></a>normal_distribution Class
+Generates a normal distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class normal_distribution  
@@ -88,33 +95,33 @@ public:
    };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
-정규 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Normal Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|  
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|  
   
-속성 함수 `mean()` 및 `stddev()`은 저장된 분포 매개 변수인 `mean` 및 `stddev` 각각에 대한 값을 반환합니다.  
+The property functions `mean()` and `stddev()` return the values for the stored distribution parameters `mean` and `stddev` respectively.  
   
-속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-정규 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [정규 분포](http://go.microsoft.com/fwlink/LinkId=400924)를 참조하세요.  
+For detailed information about the Normal distribution, see the Wolfram MathWorld article [Normal Distribution](http://go.microsoft.com/fwlink/LinkId=400924).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -199,38 +206,38 @@ Distribution for 10 samples:
     10: 2.7821317338  
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**네임스페이스:** std  
+**Namespace:** std  
   
 ##  <a name="normal_distribution"></a>  normal_distribution::normal_distribution  
-분포를 생성합니다.  
+Constructs the distribution.  
   
 ```  
 explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
 explicit normal_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *mean*  
-`mean` 분포 매개 변수입니다.  
+The `mean` distribution parameter.  
   
 *stddev*  
-`stddev` 분포 매개 변수입니다.  
+The `stddev` distribution parameter.  
   
 *parm*  
-분포를 생성하는 데 사용되는 매개 변수 구조입니다.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 ≤ stddev`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ stddev`  
   
-첫 번째 생성자는 저장된 `mean` 값이 *mean* 값을 보유하고 저장된 `stddev` 값이 *stddev* 값을 보유하고 있는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `mean` value holds the value *mean* and whose stored `stddev` value holds the value *stddev*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  normal_distribution::param_type  
-분포의 매개 변수를 저장합니다.  
+Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -243,22 +250,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *mean*  
-`mean` 분포 매개 변수입니다.  
+The `mean` distribution parameter.  
   
 *stddev*  
-`stddev` 분포 매개 변수입니다.  
+The `stddev` distribution parameter.  
   
 *right*  
-비교에 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to compare.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 ≤ stddev`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ stddev`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

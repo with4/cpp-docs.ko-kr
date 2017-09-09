@@ -1,5 +1,5 @@
 ---
-title: "ctype&lt;char&gt; 클래스 | Microsoft 문서"
+title: ctype&lt;char&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 45f94354962f3312ef7f935d1461d4ca54c42915
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 클래스
-이 클래스는 `char` 형식에 대한 템플릿 클래스 **ctype\<CharType**>의 명시적 특수화입니다. `char` 형식 문자의 다양한 속성에 대해 특징을 지정하기 위한 로캘 패싯으로 사용할 수 있는 개체를 설명합니다.  
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; Class
+The class is an explicit specialization of template class **ctype\<CharType**> to type `char`, describing an object that can serve as a locale facet to characterize various properties of a character of type `char`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
@@ -144,31 +144,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>설명  
- 명시적 특수화는 다음과 같은 여러 가지 면에서 템플릿 클래스와 다릅니다.  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization differs from the template class in several ways:  
   
--   ctype<`char`> 클래스의 개체는 **ctype_base::mask** 형식의 UCHAR_MAX + 1 요소로 구성된 배열인, ctype 마스크 테이블의 첫 번째 요소에 대한 포인터를 저장합니다. 또한 ctype\< **Elem**> 개체가 삭제된 경우 배열을 삭제해야 할지(`operator delete[]`를 사용하여) 여부를 나타내는 부울 개체도 저장합니다.  
+-   An object of class ctype< `char`> stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type **ctype_base::mask**. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.  
   
--   유일한 공용 생성자를 사용하여 ctype 마스크 테이블, **tab**을 지정하고 ctype<`char`> 개체가 삭제되었을 때 배열을 삭제해야 하는 경우 true인 부울 개체, **del**을 지정하고 참조 횟수 매개 변수 refs도 지정할 수 있습니다.  
+-   Its sole public constructor lets you specify **tab**, the ctype mask table, and **del**, the Boolean object that is true if the array should be deleted when the ctype< `char`> object is destroyed, as well as the reference-count parameter refs.  
   
--   보호된 멤버 함수 **table**은 저장된 ctype 마스크 테이블을 반환합니다.  
+-   The protected member function **table** returns the stored ctype mask table.  
   
--   정적 멤버 개체 **table_size**는 ctype 마스크 테이블의 최소 요소 수를 지정합니다.  
+-   The static member object **table_size** specifies the minimum number of elements in a ctype mask table.  
   
--   보호된 정적 멤버 함수 **classic_table**은 "C" 로캘에 적합한 ctype 마스크 테이블을 반환합니다.  
+-   The protected static member function **classic_table**( returns the ctype mask table appropriate to the "C" locale.  
   
--   보호된 가상 멤버 함수 [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) 또는 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)이 없습니다. 해당 공용 멤버 함수는 동일한 작업을 자체적으로 수행합니다.  
+-   There are no protected virtual member functions [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is), or [do_scan_not](../standard-library/ctype-class.md#do_scan_not). The corresponding public member functions perform the equivalent operations themselves.  
   
- 멤버 함수 [do_narrow](../standard-library/ctype-class.md#do_narrow) 및 [do_widen](../standard-library/ctype-class.md#do_widen)은 변경되지 않은 요소를 복사합니다.  
+ The member functions [do_narrow](../standard-library/ctype-class.md#do_narrow) and [do_widen](../standard-library/ctype-class.md#do_widen) copy elements unaltered.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [facet 클래스](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
- [ctype_base 클래스](../standard-library/ctype-base-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [facet Class](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
+ [ctype_base Class](../standard-library/ctype-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

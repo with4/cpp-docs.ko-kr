@@ -1,48 +1,52 @@
 ---
-title: "&lt;unordered_map&gt; 연산자 | Microsoft Docs"
+title: '&lt;unordered_map&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- unordered_map/std::operator!=
+- unordered_map/std::operator==
+dev_langs:
+- C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 464759b2da6de2af311184cfb0066d56be2c3557
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bb9ba280f15d1ce6ac28e67e9d6b9e0d76ba270c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 연산자
+# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; operators
 |||||  
 |-|-|-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.  
+ Tests whether the [unordered_map](../standard-library/unordered-map-class.md) object on the left side of the operator is not equal to the unordered_map object on the right side.  
   
 ```
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_map` 형식의 개체입니다.  
+ An object of type `unordered_map`.  
   
  `right`  
- `unordered_map` 형식의 개체입니다.  
+ An object of type `unordered_map`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_map이 같으면 `true`이고 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_maps are not equal; `false` if they are equal.  
   
-### <a name="remarks"></a>설명  
- unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_map objects is not affected by the arbitrary order in which they store their elements. Two unordered_maps are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_map_op_ne.cpp  
@@ -75,7 +79,7 @@ int main( )
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `um1 != um2: true`  
   
@@ -84,26 +88,26 @@ int main( )
  `um2 != um3: true`  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.  
+ Tests whether the [unordered_map](../standard-library/unordered-map-class.md) object on the left side of the operator is equal to the unordered_map object on the right side.  
   
 ```
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_map` 형식의 개체입니다.  
+ An object of type `unordered_map`.  
   
  `right`  
- `unordered_map` 형식의 개체입니다.  
+ An object of type `unordered_map`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_map이 같으면 `true`이고 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_maps are equal; `false` if they are not equal.  
   
-### <a name="remarks"></a>설명  
- unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_map objects is not affected by the arbitrary order in which they store their elements. Two unordered_maps are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_map_op_eq.cpp  
@@ -136,7 +140,7 @@ int main( )
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `um1 == um2: false`  
   
@@ -145,26 +149,26 @@ int main( )
  `um2 == um3: false`  
   
 ##  <a name="op_neq_multimap"></a>  operator!=  
- 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.  
+ Tests whether the [unordered_multimap](../standard-library/unordered-multimap-class.md) object on the left side of the operator is not equal to the unordered_multimap object on the right side.  
   
 ```
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_multimap` 형식의 개체입니다.  
+ An object of type `unordered_multimap`.  
   
  `right`  
- `unordered_multimap` 형식의 개체입니다.  
+ An object of type `unordered_multimap`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_multimap이 같지 않으면 `true`이고 같으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_multimaps are not equal; `false` if they are equal.  
   
-### <a name="remarks"></a>설명  
- unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 두 unordered_multimap은 같지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_multimap objects is not affected by the arbitrary order in which they store their elements. Two unordered_multimaps are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are not equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multimap_op_ne.cpp  
@@ -198,7 +202,7 @@ int main( )
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `um1 != um2: true`  
   
@@ -207,26 +211,26 @@ int main( )
  `um2 != um3: true`  
   
 ##  <a name="op_eq_eq_multimap"></a>  operator==  
- 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.  
+ Tests whether the [unordered_multimap](../standard-library/unordered-multimap-class.md) object on the left side of the operator is equal to the unordered_multimap object on the right side.  
   
 ```
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_multimap` 형식의 개체입니다.  
+ An object of type `unordered_multimap`.  
   
  `right`  
- `unordered_multimap` 형식의 개체입니다.  
+ An object of type `unordered_multimap`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_multimap이 같으면 `true`이고 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_multimaps are equal; `false` if they are not equal.  
   
-### <a name="remarks"></a>설명  
- unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_multimap objects is not affected by the arbitrary order in which they store their elements. Two unordered_multimaps are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multimap_op_eq.cpp  
@@ -260,7 +264,7 @@ int main( )
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `um1 == um2: false`  
   
@@ -268,7 +272,7 @@ int main( )
   
  `um2 == um3: false`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)
 
 

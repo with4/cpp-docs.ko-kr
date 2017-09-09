@@ -1,5 +1,5 @@
 ---
-title: "unary_negate 클래스 | Microsoft Docs"
+title: unary_negate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aec04f9e8cd63ed5e5a201bd48d02f5f1500ad6d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unarynegate-class"></a>unary_negate 클래스
-지정된 단항 함수의 반환 값을 부정하는 멤버 함수를 제공하는 템플릿 클래스입니다.  
+# <a name="unarynegate-class"></a>unary_negate Class
+A template class providing a member function that negates the return value of a specified unary function.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Predicate>
@@ -57,22 +56,22 @@ public:
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Func`  
- 부정할 단항 함수입니다.  
+ The unary function to be negated.  
   
  `left`  
- 부정할 단항 함수의 피연산자입니다.  
+ The operand of the unary function to be negated.  
   
-## <a name="return-value"></a>반환 값  
- 단항 함수의 부정  
+## <a name="return-value"></a>Return Value  
+ The negation of the unary function.  
   
-## <a name="remarks"></a>설명  
- 템플릿 클래스는 단항 함수 개체 function object _ *Func*의 복사본을 저장합니다. 그리고 **!**\_를 반환하도록 해당 구성원 함수 `operator()`를 정의합니다. *Func(left).*  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of a unary function object _ *Func.* It defines its member function `operator()` as returning **!**\_ *Func(left).*  
   
- `unary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. 도우미 함수 [not1](../standard-library/functional-functions.md#not1)을 사용하면 **unary_negator** 어댑터 조건자를 보다 쉽게 선언하고 사용할 수 있습니다.  
+ The constructor of `unary_negate` is rarely used directly. The helper function [not1](../standard-library/functional-functions.md#not1) provides an easier way to declare and use the **unary_negator** adaptor predicate.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_negate.cpp  
@@ -124,14 +123,14 @@ The number of elements in v1 not greater than 10 is: 3.
 */  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

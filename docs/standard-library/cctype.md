@@ -1,5 +1,5 @@
 ---
-title: "&lt;cctype&gt; | Microsoft 문서"
+title: '&lt;cctype&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<cctype>
-- std::<cctype>
-- <cctype>
+- std::<cctype>", "<cctype>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,30 +33,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b4c66b0f3dfb4fda0633e2a8808fc449a4dd0280
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b16f7fd2095e799a5634b47e4476e9db0cb632f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
-표준 C 라이브러리 헤더 \<ctype.h>를 포함하고 `std` 네임스페이스에 연결된 이름을 추가합니다.  
+Includes the Standard C library header \<ctype.h> and adds the associated names to the `std` namespace.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <cctype>  
   
 ```  
   
-## <a name="remarks"></a>설명  
- 이 헤더를 포함하는 경우 표준 C 라이브러리 헤더의 외부 링크를 사용하여 선언한 이름이 `std` 네임스페이스에도 선언됩니다.  
+## <a name="remarks"></a>Remarks  
+ Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

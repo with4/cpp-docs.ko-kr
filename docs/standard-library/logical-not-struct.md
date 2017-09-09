@@ -1,15 +1,14 @@
 ---
-title: "logical_not 구조체 | Microsoft 문서"
+title: logical_not Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- logical_not
 - xfunctional/std::logical_not
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 2f84361ba71a50601349542797840e2d45ffad21
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 82640c0e316d9ea5619c19d49a7aa772178fc656
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="logicalnot-struct"></a>logical_not 구조체
-인수에 대해 논리적 NOT 연산(`operator!`)을 수행하는 미리정의된 함수 개체입니다.  
+# <a name="logicalnot-struct"></a>logical_not Struct
+A predefined function object that performs the logical not operation ( `operator!`) on its argument.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,17 +64,17 @@ struct logical_not<void>
  };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Type`  
- 지정되었거나 유추된 형식의 피연산자를 사용하는 `operator!`를 지원하는 모든 형식입니다.  
+ Any type that supports an `operator!` that takes an operand of the specified or inferred type.  
   
  `Left`  
- 논리적 NOT 연산의 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `Type`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The operand of the logical not operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `Type`.  
   
-## <a name="return-value"></a>반환 값  
- `!``Left`의 결과입니다. 특수화된 템플릿은 `operator!`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+## <a name="return-value"></a>Return Value  
+ The result of `!Left`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator!`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_logical_not.cpp  
@@ -119,14 +119,14 @@ The deque with its values negated is:
  */  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

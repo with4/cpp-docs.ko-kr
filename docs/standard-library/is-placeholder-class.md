@@ -1,5 +1,5 @@
 ---
-title: "is_placeholder 클래스 | Microsoft 문서"
+title: is_placeholder Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_placeholder
 - functional/std::is_placeholder
 dev_langs:
 - C++
@@ -34,26 +33,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15cd09104039d45df72e2bc0476d9d6005b69a68
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isplaceholder-class"></a>is_placeholder 클래스
-형식이 자리 표시자인지 테스트합니다.  
+# <a name="isplaceholder-class"></a>is_placeholder Class
+Tests if type is a placeholder.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 struct is_placeholder {  
    static const int value;  
    };  
   
-## <a name="remarks"></a>설명  
- `Ty` 형식이 자리 표시자가 아니면 상수 값 `value`는 0이고, 그렇지 않으면 해당 값은 바인딩된 함수 호출 인수의 위치입니다. N번째 자리 표시자 `_N`에 대해 `N` 값을 확인하는 데 사용됩니다.  
+## <a name="remarks"></a>Remarks  
+ The constant value `value` is 0 if the type `Ty` is not a placeholder; otherwise, its value is the position of the function call argument that it binds to. You use it to determine the value `N` for the Nth placeholder `_N`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -83,12 +82,12 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [_1 개체](../standard-library/1-object.md)
+## <a name="see-also"></a>See Also  
+ [_1 Object](../standard-library/1-object.md)
 
 

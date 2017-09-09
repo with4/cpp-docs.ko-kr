@@ -1,5 +1,5 @@
 ---
-title: "queue 클래스 | Microsoft Docs"
+title: queue Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- queue
 - queue/std::queue::container_type
 - queue/std::queue::size_type
 - queue/std::queue::value_type
@@ -22,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- queue class
+- std::queue [C++], container_type
+- std::queue [C++], size_type
+- std::queue [C++], value_type
+- std::queue [C++], back
+- std::queue [C++], empty
+- std::queue [C++], front
+- std::queue [C++], pop
+- std::queue [C++], push
+- std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 caps.latest.revision: 21
 author: corob-msft
@@ -42,77 +49,77 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fece900810da825fddb0aa6a54d45413fb369fd2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="queue-class"></a>queue 클래스
-일부 기본 컨테이너 형식의 앞과 뒤 요소에 대한 액세스를 제한하는 기능 제한을 제공하는 템플릿 컨테이너 어댑터 클래스입니다. 요소는 뒤에 추가하거나 앞에서 제거할 수 있으며 큐의 양쪽 끝에서 요소를 검사할 수 있습니다.  
+# <a name="queue-class"></a>queue Class
+A template container adaptor class that provides a restriction of functionality for some underlying container type, limiting access to the front and back elements. Elements can be added at the back or removed from the front, and elements can be inspected at either end of the queue.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type, class Container = deque <Type>>  
 class queue  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *Type*  
- 큐에 저장되는 요소 데이터 형식입니다.  
+ The element data type to be stored in the queue  
   
  `Container`  
- 큐를 구현하는 데 사용된 기본 컨테이너의 형식입니다.  
+ The type of the underlying container used to implement the queue.  
   
-## <a name="remarks"></a>설명  
- 스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The elements of class **Type** stipulated in the first template parameter of a queue object are synonymous with [value_type](#value_type) and must match the type of element in the underlying container class **Container** stipulated by the second template parameter. The **Type** must be assignable, so that it is possible to copy objects of that type and to assign values to variables of that type.  
   
- 스택에 적합한 기본 컨테이너 클래스에는 `front`, **back**, `push_back` 및 `pop_front`의 작업을 지원하는 [deque](../standard-library/deque-class.md) 및 [list](../standard-library/list-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.  
+ Suitable underlying container classes for queue include [deque](../standard-library/deque-class.md) and [list](../standard-library/list-class.md), or any other sequence container that supports the operations of `front`, **back**, `push_back`, and `pop_front`. The underlying container class is encapsulated within the container adaptor, which exposes only the limited set of the sequence container member functions as a public interface.  
   
- 스택 개체는 클래스 **Type**의 요소가 동등 비교 가능한 경우에만 동등 비교할 수 있으며 클래스 **Type**의 요소가 미만 비교 가능한 경우에만 미만 비교가 가능합니다.  
+ The queue objects are equality comparable if and only if the elements of class **Type** are equality comparable, and are less-than comparable if and only if the elements of class **Type** are less-than comparable.  
   
- C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 stack, queue, priority_queue의 세 가지 형식이 있습니다. 각 어댑터는 일부 기본 컨테이너 클래스의 기능을 제한하여 표준 데이터 구조에 대해 정확하게 제어되는 인터페이스를 제공합니다.  
+ There are three types of container adaptors defined by the C++ Standard Library: stack, queue, and priority_queue. Each restricts the functionality of some underlying container class to provide a precisely controlled interface to a standard data structure.  
   
--   [stack 클래스](../standard-library/stack-class.md)는 LIFO(후입선출) 데이터 구조를 지원합니다. 쌓여 있는 접시 더미의 예로 이해할 수 있습니다. 요소(접시)는 기본 컨테이너의 끝에 있는 마지막 요소인 스택의 맨 위에서만 삽입하거나 검사하거나 제거할 수 있습니다. 맨 위 요소로만 액세스를 제한하는 것이 stack 클래스를 사용하는 이유입니다.  
+-   The [stack class](../standard-library/stack-class.md) supports a last-in, first-out (LIFO) data structure. A good analogue to keep in mind would be a stack of plates. Elements (plates) may be inserted, inspected, or removed only from the top of the stack, which is the last element at the end of the base container. The restriction to accessing only the top element is the reason for using the stack class.  
   
--   queue 클래스는 FIFO(선입선출) 데이터 구조를 지원합니다. 은행 창구 직원을 만나려고 줄 서 있는 사람들의 예로 이해할 수 있습니다. 요소(사람)는 줄의 뒤에 추가될 수 있고 줄의 앞에서 제거됩니다. 줄의 앞과 뒤는 모두 검사할 수 있습니다. queue 클래스를 사용하는 이유는 이 방식으로 앞과 뒤의 요소만 액세스할 수 있기 때문입니다.  
+-   The queue class supports a first-in, first-out (FIFO) data structure. A good analogue to keep in mind would be people lining up for a bank teller. Elements (people) may be added to the back of the line and are removed from the front of the line. Both the front and the back of a line may be inspected. The restriction to accessing only the front and back elements in this way is the reason for using the queue class.  
   
--   [priority_queue 클래스](../standard-library/priority-queue-class.md)는 가장 큰 요소가 항상 최상위 위치에 있도록 요소를 정렬합니다. 이 클래스는 요소의 삽입과 최상위 요소의 검사 및 제거를 지원합니다. 나이, 키 또는 기타 조건을 기준으로 정렬된 줄을 선 사람들의 예로 이해할 수 있습니다.  
+-   The [priority_queue class](../standard-library/priority-queue-class.md) orders its elements so that the largest element is always at the top position. It supports insertion of an element and the inspection and removal of the top element. A good analogue to keep in mind would be people lining up where they are arranged by age, height, or some other criterion.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[queue](#queue)|비어 있거나 기본 컨테이너 개체의 복사본인 `queue`을 생성합니다.|  
+|[queue](#queue)|Constructs a `queue` that is empty or that is a copy of a base container object.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|`queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
-|[size_type](#size_type)|`queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#value_type)|`queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
+|[container_type](#container_type)|A type that provides the base container to be adapted by the `queue`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `queue`.|  
+|[value_type](#value_type)|A type that represents the type of object stored as an element in a `queue`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[back](#back)|`queue` 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.|  
-|[empty](#empty)|`queue`이 비어 있는지를 테스트합니다.|  
-|[front](#front)|`queue` 앞의 첫 번째 요소에 대한 참조를 반환합니다.|  
-|[pop](#pop)|`queue` 앞에서 요소를 제거합니다.|  
-|[push](#push)|`queue` 뒤에 요소를 추가합니다.다.|  
-|[size](#size)|`queue`에 있는 요소 수를 반환합니다.|  
+|[back](#back)|Returns a reference to the last and most recently added element at the back of the `queue`.|  
+|[empty](#empty)|Tests if the `queue` is empty.|  
+|[front](#front)|Returns a reference to the first element at the front of the `queue`.|  
+|[pop](#pop)|Removes an element from the front of the `queue`.|  
+|[push](#push)|Adds an element to the back of the `queue`.|  
+|[size](#size)|Returns the number of elements in the `queue`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<queue>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<queue>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="back"></a>  queue::back  
- queue 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the last and most recently added element at the back of the queue.  
   
 ```  
 reference back();
@@ -120,15 +127,15 @@ reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- queue의 마지막 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.  
+### <a name="return-value"></a>Return Value  
+ The last element of the queue. If the queue is empty, the return value is undefined.  
   
-### <a name="remarks"></a>설명  
- **back**의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. **back**의 반환 값이 **reference**에 할당된 경우에는 queue 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **back** is assigned to a `const_reference`, the queue object cannot be modified. If the return value of **back** is assigned to a **reference**, the queue object can be modified.  
   
- 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 queue의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty queue.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_back.cpp  
@@ -155,31 +162,31 @@ int main( )
 ```  
   
 ##  <a name="container_type"></a>  queue::container_type  
- 조정할 기본 컨테이너를 제공하는 형식입니다.  
+ A type that provides the base container to be adapted.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다. 2개 C++ 표준 라이브러리 시퀀스 컨테이너 클래스(list 클래스 및 기본 deque 클래스)는 queue 개체의 기본 컨테이너로 사용하기 위한 요구 사항을 충족합니다. 이 요구 사항을 충족하는 사용자 정의 형식도 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Container`. Two C++ Standard Library sequence container classes — the list class and the default deque class — meet the requirements to be used as the base container for a queue object. User-defined types satisfying the requirements may also be used.  
   
- `Container`에 대한 자세한 내용은 [queue 클래스](../standard-library/queue-class.md) 항목의 설명 섹션을 참조하세요.  
+ For more information on `Container`, see the Remarks section of the [queue Class](../standard-library/queue-class.md) topic.  
   
-### <a name="example"></a>예제  
-  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [queue](#queue) for an example of how to declare and use `container_type`.  
   
 ##  <a name="empty"></a>  queue::empty  
- queue가 비어 있는지 테스트합니다.  
+ Tests if a queue is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- queue가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the queue is empty; **false** if the queue is nonempty.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_empty.cpp  
@@ -214,7 +221,7 @@ The queue q2 is empty.
 ```  
   
 ##  <a name="front"></a>  queue::front  
- queue 앞의 첫 번째 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the first element at the front of the queue.  
   
 ```  
 reference front();
@@ -222,17 +229,17 @@ reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 큐의 첫 번째 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.  
+### <a name="return-value"></a>Return Value  
+ The first element of the queue. If the queue is empty, the return value is undefined.  
   
-### <a name="remarks"></a>설명  
- `front`의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. `front`의 반환 값이 **reference**에 할당된 경우에는 queue 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of `front` is assigned to a `const_reference`, the queue object cannot be modified. If the return value of `front` is assigned to a **reference**, the queue object can be modified.  
   
- 구성원 함수는 비어 있지 않아야 하는 제어되는 시퀀스의 첫 번째 요소에 대한 **reference**를 반환합니다.  
+ The member function returns a **reference** to the first element of the controlled sequence, which must be nonempty.  
   
- 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 queue의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty queue.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_front.cpp  
@@ -263,16 +270,16 @@ int main() {
 ```  
   
 ##  <a name="pop"></a>  queue::pop  
- queue 앞에서 요소를 제거합니다.  
+ Removes an element from the front of the queue.  
   
 ```  
 void pop();
 ```  
   
-### <a name="remarks"></a>설명  
- 구성원 함수를 적용하려면 queue가 비어 있지 않아야 합니다. queue의 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The queue must be nonempty to apply the member function. The top of the queue is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_pop.cpp  
@@ -317,20 +324,20 @@ After a pop, the element at the front of the queue is 20.
 ```  
   
 ##  <a name="push"></a>  queue::push  
- queue 뒤에 요소를 추가합니다.다.  
+ Adds an element to the back of the queue.  
   
 ```  
 void push(const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- queue 끝에 추가되는 요소입니다.  
+ The element added to the back of the queue.  
   
-### <a name="remarks"></a>설명  
- queue의 뒤 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The back of the queue is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_push.cpp  
@@ -363,7 +370,7 @@ The element at the front of the queue is 10.
 ```  
   
 ##  <a name="queue"></a>  queue::queue  
- 비어 있거나 기본 컨테이너 개체의 복사본인 queue를 생성합니다.  
+ Constructs a queue that is empty or that is a copy of a base container object.  
   
 ```  
 queue();
@@ -371,14 +378,14 @@ queue();
 explicit queue(const container_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 생성된 queue가 복사본이 되는 **const** 컨테이너입니다.  
+ The **const** container of which the constructed queue is to be a copy.  
   
-### <a name="remarks"></a>설명  
- queue의 기본 컨테이너는 deque입니다. list는 기본 컨테이너로 지정할 수 있지만 vector는 필수 `pop_front` 구성원 함수를 포함하지 않으므로 기본 컨테이너로 지정할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The default base container for queue is deque. You can also specify list as a base container, but you cannot specify vector, because it lacks the required `pop_front` member function.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_queue.cpp  
@@ -427,16 +434,16 @@ The element at the back of queue q5 is 2.
 ```  
   
 ##  <a name="size"></a>  queue::size  
- queue에 있는 요소 수를 반환합니다.  
+ Returns the number of elements in the queue.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- queue의 현재 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The current length of the queue.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_size.cpp  
@@ -466,29 +473,29 @@ The queue length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  queue::size_type  
- queue에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
+ An unsigned integer type that can represent the number of elements in a queue.  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the `size_type` of the base container adapted by the queue.  
   
-### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#front)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [queue::front](#front) for an example of how to declare and use `size_type`.  
   
 ##  <a name="value_type"></a>  queue::value_type  
- queue에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
+ A type that represents the type of object stored as an element in a queue.  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 queue에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the `value_type` of the base container adapted by the queue.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // queue_value_type.cpp  
@@ -518,8 +525,8 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

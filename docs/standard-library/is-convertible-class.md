@@ -1,5 +1,5 @@
 ---
-title: "is_convertible 클래스 | Microsoft 문서"
+title: is_convertible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_convertible
 - type_traits/std::is_convertible
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 381fa9297dd9fad3efd84078a000fea65af0abfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ca63e76acd1f1d7c892489dd86376d040b8f614a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isconvertible-class"></a>is_convertible 클래스
-한 가지 형식을 다른 형식으로 변환할 수 있는지 여부를 테스트합니다.  
+# <a name="isconvertible-class"></a>is_convertible Class
+Tests if one type is convertible to another.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class From, class To>  
 struct is_convertible;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `From`  
- 변환할 원본 형식입니다.  
+ The type to convert from.  
   
  `Ty`  
- 변환할 대상 형식입니다.  
+ The type to convert to.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 식 `To to = from;`이 올바른 형식인 경우 true입니다(여기서 `from`은 `From` 형식의 개체임).  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the expression `To to = from;`, where `from` is an object of type `From`, is well-formed.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_convertible.cpp   
@@ -95,12 +94,12 @@ is_convertible<trivial, trivial> == true
 is_convertible<char, int> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_base_of 클래스](../standard-library/is-base-of-class.md)
+ [is_base_of Class](../standard-library/is-base-of-class.md)
 

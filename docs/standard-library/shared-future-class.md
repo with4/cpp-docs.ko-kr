@@ -1,5 +1,5 @@
 ---
-title: "shared_future 클래스 | Microsoft Docs"
+title: shared_future Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,59 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 84b55dc763d4cd254e4aca55c01690ce5abf0152
+helpviewer_keywords:
+- std::shared_future [C++]
+- std::shared_future [C++], shared_future
+- std::shared_future [C++], get
+- std::shared_future [C++], valid
+- std::shared_future [C++], wait
+- std::shared_future [C++], wait_for
+- std::shared_future [C++], wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14f427af73abbe511ecdd326240388cc29da16df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedfuture-class"></a>shared_future 클래스
-*비동기 반환 개체*를 설명합니다. [future](../standard-library/future-class.md) 개체와는 달리 `shared_future` 개체의 경우 원하는 수만큼 *비동기 공급자*에 연결할 수 있습니다.  
+# <a name="sharedfuture-class"></a>shared_future Class
+Describes an *asynchronous return object*. In contrast with a [future](../standard-library/future-class.md) object, an *asynchronous provider* can be associated with any number of `shared_future` objects.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class shared_future;
 ```  
   
-## <a name="remarks"></a>설명  
- *비어 있는* `shared_future` 개체에 대해서는 `valid`, `operator=` 및 소멸자 이외의 메서드는 호출하지 마세요.  
+## <a name="remarks"></a>Remarks  
+ Do not call any methods other than `valid`, `operator=`, and the destructor on a `shared_future` object that's *empty*.  
   
- `shared_future` 개체는 동기화되지 않습니다. 여러 스레드에서 같은 개체에 대해 메서드를 호출하면 결과를 예측할 수 없는 데이터 경쟁이 발생합니다.  
+ `shared_future` objects are not synchronized. Calling methods on the same object from multiple threads introduces a data race that has unpredictable results.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future](#shared_future)|`shared_future` 개체를 생성합니다.|  
+|[shared_future](#shared_future)|Constructs a `shared_future` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[get](#get)|*연결된 비동기 상태*에 저장된 결과를 검색합니다.|  
-|[유효한](#valid)|개체가 비어 있지 않은지를 지정합니다.|  
-|[대기](#wait)|연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.|  
-|[wait_for](#wait_for)|연결된 비동기 상태가 준비로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.|  
-|[wait_until](#wait_until)|연결된 비동기 상태가 준비로 설정되거나 지정된 시점이 될 때까지 차단합니다.|  
+|[get](#get)|Retrieves the result that's stored in the *associated asynchronous state*.|  
+|[valid](#valid)|Specifies whether the object is not empty.|  
+|[wait](#wait)|Blocks the current thread until the associated asynchronous state is ready.|  
+|[wait_for](#wait_for)|Blocks until the associated asynchronous state is ready or until the specified time has elapsed.|  
+|[wait_until](#wait_until)|Blocks until the associated asynchronous state is ready or until a specified point in time.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future::operator=](#op_eq)|새 연결된 비동기 상태를 할당합니다.|  
+|[shared_future::operator=](#op_eq)|Assigns a new associated asynchronous state.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<이후 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-##  <a name="get"></a>shared_future:: get
- *연결된 비동기 상태*에 저장된 결과를 검색합니다.  
+##  <a name="get"></a>  shared_future::get
+ Retrieves the result that's stored in the *associated asynchronous state*.  
   
 ```
 const Ty& get() const;
@@ -99,37 +107,37 @@ Ty& get() const;
 void get() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 결과가 예외이면 메서드는 예외를 다시 throw합니다. 그렇지 않으면 결과가 반환됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the result is an exception, the method rethrows it. Otherwise, the result is returned.  
   
- 이 메서드는 결과를 검색하기 전에 연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.  
+ Before it retrieves the result, this method blocks the current thread until the associated asynchronous state is ready.  
   
- 부분 특수화 `shared_future<Ty&>`의 경우 저장되는 값은 실제로는 반환 값으로 *비동기 공급자*에 전달된 개체에 대한 참조입니다.  
+ For the partial specialization `shared_future<Ty&>`, the stored value is effectively a reference to the object that was passed to the *asynchronous provider* as the return value.  
   
- 특수화에 대해서는 저장된 값이 없으므로 `shared_future<void>` 메서드는 `void`를 반환합니다.  
+ Because no stored value exists for the specialization `shared_future<void>`, the method returns `void`.  
   
 ##  <a name="op_eq"></a>  shared_future::operator=  
- 지정된 개체에서 *연결된 비동기 상태*를 전송합니다.  
+ Transfers an *associated asynchronous state* from a specified object.  
   
 ```
 shared_future& operator=(shared_future&& Right) noexcept;
 shared_future& operator=(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Right`  
- `shared_future` 개체입니다.  
+ A `shared_future` object.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>설명  
- 첫 번째 연산자의 경우 작업 후 `Right`에는 더 이상 연결된 비동기 상태가 없습니다.  
+### <a name="remarks"></a>Remarks  
+ For the first operator, `Right` no longer has an associated asynchronous state after the operation.  
   
- 두 번째 메서드의 경우 `Right`는 연결된 비동기 상태를 유지합니다.  
+ For the second method, `Right` maintains its associated asynchronous state.  
   
-##  <a name="shared_future"></a>  shared_future::shared_future 생성자  
- `shared_future` 개체를 생성합니다.  
+##  <a name="shared_future"></a>  shared_future::shared_future Constructor  
+ Constructs a `shared_future` object.  
   
 ```
 shared_future() noexcept;
@@ -138,39 +146,39 @@ shared_future(shared_future&& Right) noexcept;
 shared_future(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Right`  
- [future](../standard-library/future-class.md) 또는 `shared_future` 개체입니다.  
+ A [future](../standard-library/future-class.md) or `shared_future` object.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 *연결된 비동기 상태*가 없는 `shared_future` 개체를 생성합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs a `shared_future` object that has no *associated asynchronous state*.  
   
- 두 번째 및 세 번째 생성자는 `shared_future` 개체를 생성하며 `Right`에서 연결된 비동기 상태를 전송합니다. `Right`에는 더 이상 연결된 비동기 상태가 없습니다.  
+ The second and third constructors construct a `shared_future` object and transfer the associated asynchronous state from `Right`. `Right` no longer has an associated asynchronous state.  
   
- 네 번째 생성자는 연결된 비동기 상태가 동일한 `shared_future` 개체를 `Right`로 생성합니다.  
+ The fourth constructor constructs a `shared_future` object that has the same associated asynchronous state as `Right`.  
   
-##  <a name="valid"></a>shared_future:: valid
- 개체에 *연결된 비동기 상태*가 있는지를 지정합니다.  
+##  <a name="valid"></a>  shared_future::valid
+ Specifies whether the object has an *associated asynchronous state*.  
   
 ```
 bool valid() noexcept;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the object has an associated asynchronous state; otherwise, `false`.  
   
-##  <a name="wait"></a>shared_future:: wait
- *연결된 비동기 상태*가 *ready*로 설정될 때까지 현재 스레드를 차단합니다.  
+##  <a name="wait"></a>  shared_future::wait
+ Blocks the current thread until the *associated asynchronous state* is *ready*.  
   
 ```
 void wait() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 준비입니다.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
- 연결된 비동기 상태가 *ready*로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.  
+##  <a name="wait_for"></a>  shared_future::wait_for
+ Blocks the current thread until the associated asynchronous state is *ready* or until a specified time has elapsed.  
   
 ```
 template <class Rep, class Period>
@@ -178,18 +186,18 @@ future_status wait_for(
     const chrono::duration<Rep, Period>& Rel_time) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- 스레드가 차단되는 최대 시간 간격을 지정하는 [chrono::duration](../standard-library/duration-class.md) 개체입니다.  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies a maximum time interval that the thread blocks.  
   
-### <a name="return-value"></a>반환 값  
- 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status)입니다.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>설명  
- 연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 *ready*로 설정됩니다.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
- 연결된 비동기 상태가 *준비*가 되거나 지정된 시점이 지날 때까지 현재 스레드를 차단합니다.  
+##  <a name="wait_until"></a>  shared_future::wait_until
+ Blocks the current thread until the associated asynchronous state is *ready* or until after a specified time point.  
   
 ```
 template <class Clock, class Duration>
@@ -197,18 +205,18 @@ future_status wait_until(
     const chrono::time_point<Clock, Duration>& Abs_time) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- 스레드 차단을 해제할 수 있는 시간을 지정하는 [chrono::time_point](../standard-library/time-point-class.md) 개체입니다.  
+ A [chrono::time_point](../standard-library/time-point-class.md) object that specifies a time after which the thread can unblock.  
   
-### <a name="return-value"></a>반환 값  
- 반환 이유를 나타내는 [future_status](../standard-library/future-enums.md#future_status)입니다.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>설명  
- 연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 ready로 설정됩니다.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

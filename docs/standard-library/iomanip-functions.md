@@ -1,5 +1,5 @@
 ---
-title: "&lt;iomanip&gt; 함수 | Microsoft 문서"
+title: '&lt;iomanip&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,14 +21,26 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+helpviewer_keywords:
+- std::get_money [C++]
+- std::get_time [C++]
+- std::put_money [C++]
+- std::put_time [C++]
+- std::quoted [C++]
+- std::resetiosflags [C++]
+- std::setbase [C++]
+- std::setfill [C++]
+- std::setiosflags [C++]
+- std::setprecision [C++]
+- std::setw [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 32d7b79f7ccefb3b0ab349fd646c8001f0eddda3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
+# <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; functions
 ||||  
 |-|-|-|  
 |[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|  
@@ -37,86 +49,86 @@ ms.lasthandoff: 04/29/2017
 |[setprecision](#setprecision)|[setw](#setw)|  
   
 ##  <a name="iomanip_get_money"></a>  get_money  
- 원하는 형식을 사용하여 스트림에서 통화 값을 추출하고 매개 변수에서 값을 반환합니다.  
+ Extracts a monetary value from a stream using the desired format, and returns the value in a parameter.  
   
 ```  
 template <class Money>  
 T7 get_money(Money& _Amount, bool _Intl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  _Amount  
- 추출된 통화 값입니다.  
+ The extracted monetary value.  
   
  _Intl  
- `true`일 경우 국가별 형식을 사용합니다. 기본값은 `false`입니다.  
+ If `true`, use international format. The default value is `false`.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `str` 스트림에서 추출될 경우 `formatted input function`처럼 동작하는 개체를 반환합니다. 이 입력 함수는 `str`과 연결된 로캘 패싯 `money_get`에 대해 멤버 함수 `get`을 호출하며, `_Intl`을 사용하여 국가별 형식을 나타냅니다. 성공하면 추출된 통화 값을 `_Amount`에 저장합니다. 그런 다음 조작자는 `str`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when extracted from the stream `str`, behaves as a `formatted input function` that calls the member function `get` for the locale facet `money_get` associated with `str`, using `_Intl` to indicate international format. If successful, the call stores in `_Amount` the extracted monetary value. The manipulator then returns `str`.  
   
- `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.  
+ `Money` must be of type `long double` or an instantiation of `basic_string` with the same element and traits parameters as `str`.  
   
 ##  <a name="iomanip_get_time"></a>  get_time  
- 원하는 형식을 사용하여 스트림에서 시간 값을 추출합니다. 매개 변수의 값을 시간 구조로 반환합니다.  
+ Extracts a time value from a stream using a desired format. Returns the value in a parameter as a time structure.  
   
 ```  
 template <class Elem>  
 T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Tptr`  
- 시간 구조 형식의 시간입니다.  
+ The time in the form of a time structure.  
   
  `_Fmt`  
- 시간 구조를 가져오는 데 사용할 원하는 형식입니다.  
+ The desired format to use to obtain the time value.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `str` 스트림에서 추출될 경우 `formatted input function`처럼 동작하는 개체를 반환합니다. 이 입력 함수는 `str`과 연결된 로캘 패싯 `time_get`에 대해 멤버 함수 `get`을 호출하며, `tptr`을 사용하여 시간 구조를 나타내고 `fmt`를 사용하여 null로 끝나는 형식 문자열의 시작을 나타냅니다. 성공하면 추출된 시간 필드와 연결된 값을 시간 구조에 저장합니다. 그런 다음 조작자는 `str`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when extracted from the stream `str`, behaves as a `formatted input function` that calls the member function `get` for the locale facet `time_get` associated with `str`, using `tptr` to indicate the time structure and `fmt` to indicate the beginning of a null-terminated format string. If successful, the call stores in the time structure the values associated with any extracted time fields. The manipulator then returns `str`.  
   
 ##  <a name="iomanip_put_money"></a>  put_money  
- 원하는 형식을 사용하여 스트림에 금액을 삽입합니다.  
+ Inserts a monetary amount using the desired format into a stream.  
   
 ```  
 template <class Money>  
 T8 put_money(const Money& _Amount, bool _Intl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Amount`  
- 스트림에 삽입할 금액입니다.  
+ The monetary amount to insert into the stream.  
   
  `_Intl`  
- 조작자가 국가별 형식을 사용해야 하는 경우 `true`로 설정하고 사용하면 안 되는 경우 `false`로 설정합니다.  
+ Set to `true` if manipulator should use international format, `false` if it should not.  
   
-### <a name="return-value"></a>반환 값  
- `str`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `str`.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `str` 스트림에 삽입될 경우 서식 있는 출력 함수처럼 동작하는 개체를 반환합니다. 이 출력 함수는 `str`과 연결된 로캘 패싯 `money_put`에 대해 멤버 함수 `put`을 호출합니다. 호출이 성공하면 적절하게 서식이 지정된 `amount`를 삽입하며, `_Intl`을 사용하여 국가별 형식을 나타내고 `str.fill()`을 채우기 요소로 사용합니다. 그런 다음 조작자는 `str`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when inserted into the stream `str`, behaves as a formatted output function that calls the member function `put` for the locale facet `money_put` associated with `str`. If successful, the call inserts `amount` suitably formatted, using `_Intl` to indicate international format and `str.fill()`, as the fill element. The manipulator then returns `str`.  
   
- `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.  
+ `Money` must be of type `long double` or an instantiation of `basic_string` with the same element and traits parameters as `str`.  
   
 ##  <a name="iomanip_put_time"></a>  put_time  
- 지정된 형식을 사용하여 시간 구조에서 스트림으로 시간 값을 씁니다.  
+ Writes a time value from a time structure to a stream by using a specified format.  
   
 ```  
 template <class Elem>  
 T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Tptr`  
- 스트림에 쓸 시간 값으로, 시간 구조에 제공됩니다.  
+ The time value to write to the stream, provided in a time structure.  
   
  `_Fmt`  
- 시간 값을 쓸 원하는 형식입니다.  
+ The desired format to write the time value.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `str` 스트림에 삽입될 경우 `formatted output function`처럼 동작하는 개체를 반환합니다. 출력 함수는 `str`과 연결된 로캘 패킷 `time_put`에 대해 멤버 함수 `put`을 호출합니다. 출력 함수는 `_Tptr`을 사용하여 시간 구조를 나타내고 `_Fmt`를 사용하여 NUL로 끝나는 형식 문자열의 시작을 나타냅니다. 성공하면 형식 문자열에서 리터럴 텍스트를 삽입하고 시간 구조에서 변환된 값을 삽입합니다. 그런 다음 조작자는 `str`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when inserted into the stream `str`, behaves as a `formatted output function`. The output function calls the member function `put` for the locale facet `time_put` associated with `str`. The output function uses `_Tptr` to indicate the time structure and `_Fmt` to indicate the beginning of a NUL-terminated format string. If successful, the call inserts literal text from the format string and converted values from the time structure. The manipulator then returns `str`.  
   
 ##  <a name="quoted"></a>  quoted  
- **(C++14의 새로운 기능)** >> 및 << 연산자를 사용하여 스트림에 대한 문자열의 편리한 왕복을 가능하게 하는 iostream 조작자입니다.  
+ **(New in C++14)** An iostream manipulator that enables convenient round-tripping of strings into and out of streams using the >> and << operators.  
   
 ```  
 quoted(std::string str) // or wstring  
@@ -125,21 +137,21 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- std::string, char*, 문자열 리터럴, 원시 문자열 리터럴 또는 이러한 항목의 다양한 버전(예: std::wstring, wchar_t\*)입니다.  
+ A std::string, char*, string literal or raw string literal, or a wide version of any of these (e.g. std::wstring, wchar_t\*).  
   
  `delimiter`  
- 문자열의 시작과 끝에 대한 구분 기호로 사용할 사용자 지정 문자 또는 와이드 문자입니다.  
+ A user-specified character, or wide character, to use as the delimiter for the beginning and end of the string.  
   
  `escape`  
- 문자열 내의 이스케이프 시퀀스에 대한 이스케이프 문자로 사용할 사용자 지정 문자 또는 와이드 문자입니다.  
+ A user-specified character, or wide character, to use as the escape character for escape sequences within the string.  
   
-### <a name="remarks"></a>설명  
- [삽입 연산자 사용 및 형식 제어](../standard-library/using-insertion-operators-and-controlling-format.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ See [Using Insertion Operators and Controlling Format](../standard-library/using-insertion-operators-and-controlling-format.md).  
   
-### <a name="example"></a>예제  
-  이 예제에서는 좁은 문자열을 사용하여 기본 구분 기호 및 이스케이프 문자와 함께 `quoted`를 사용하는 방법을 보여 줍니다. 와이드 문자열도 동일하게 지원됩니다.  
+### <a name="example"></a>Example  
+  This example shows how to use `quoted` with the default delimiter and escape character using narrow strings. Wide strings are equally supported.  
   
 ```cpp  
 #include <iostream>  
@@ -194,8 +206,8 @@ Press Enter to exit
 */  
 ```  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 사용자 지정 구분 기호 및/또는 이스케이프 문자를 제공하는 방법을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example shows how to provide custom a delimiter and/or escape character:  
   
 ```cpp  
 #include <iostream>  
@@ -279,117 +291,117 @@ Press Enter to exit
 ```  
   
 ##  <a name="resetiosflags"></a>  resetiosflags  
- 지정된 플래그를 지웁니다.  
+ Clears the specified flags.  
   
 ```  
 T1 resetiosflags(ios_base::fmtflags Mask);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Mask`  
- 선택을 취소할 플래그입니다.  
+ The flags to clear.  
   
-### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), and then returns **str**.  
   
-### <a name="example"></a>예제  
-  `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `resetiosflags`.  
   
 ##  <a name="setbase"></a>  setbase  
- 정수의 밑을 설정합니다.  
+ Set base for integers.  
   
 ```  
 T3 setbase(int _Base);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Base`  
- 숫자 밑입니다.  
+ The number base.  
   
-### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags))를 호출하는 개체를 반환한 다음 **str**을 반환합니다. 여기서 **mask**는 다음과 같이 결정됩니다.  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)), and then returns **str**. Here, **mask** is determined as follows:  
   
--   _ *Base*가 8이면 **mask**는 `ios_base::`[oct](../standard-library/ios-functions.md#oct)입니다.  
+-   If _ *Base* is 8, then **mask** is `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
--   _ *Base*가 10이면 mask는 `ios_base::`[dec](../standard-library/ios-functions.md#dec)입니다.  
+-   If _ *Base* is 10, then mask is `ios_base::`[dec](../standard-library/ios-functions.md#dec).  
   
--   _ *Base*가 16이면 **mask**는 `ios_base::`[hex](../standard-library/ios-functions.md#hex)입니다.  
+-   If _ *Base* is 16, then **mask** is `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   _ *Base*가 다른 모든 값이면 mask는 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)입니다.  
+-   If _ *Base* is any other value, then mask is `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
-### <a name="example"></a>예제  
-  `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setbase`.  
   
 ##  <a name="setfill"></a>  setfill  
- 오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자를 설정합니다.  
+ Sets the character that will be used to fill spaces in a right-justified display.  
   
 ```  
 template <class Elem>  
 T4 setfill(Elem Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자입니다.  
+ The character that will be used to fill spaces in a right-justified display.  
   
-### <a name="return-value"></a>반환 값  
- 템플릿 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다. **Elem** 형식은 **str** 스트림에 대한 요소 형식과 동일해야 합니다.  
+### <a name="return-value"></a>Return Value  
+ The template manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`), and then returns **str**. The type **Elem** must be the same as the element type for the stream **str**.  
   
-### <a name="example"></a>예제  
-  `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setfill`.  
   
 ##  <a name="setiosflags"></a>  setiosflags  
- 지정된 플래그를 설정합니다.  
+ Sets the specified flags.  
   
 ```  
 T2 setiosflags(ios_base::fmtflags Mask);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Mask`  
- 설정할 플래그입니다.  
+ The flags to set.  
   
-### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), and then returns **str**.  
   
-### <a name="example"></a>예제  
-  `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setiosflags`.  
   
 ##  <a name="setprecision"></a>  setprecision  
- 부동 소수점 값의 전체 자릿수를 설정합니다.  
+ Sets the precision for floating-point values.  
   
 ```  
 T5 setprecision(streamsize Prec);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Prec`  
- 부동 소수점 값의 전체 자릿수입니다.  
+ The precision for floating-point values.  
   
-### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`), and then returns **str**.  
   
-### <a name="example"></a>예제  
-  `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setprecision`.  
   
 ##  <a name="setw"></a>  setw  
- 스트림에서 다음 요소에 대한 표시 필드의 너비를 지정합니다.  
+ Specifies the width of the display field for the next element in the stream.  
   
 ```  
 T6 setw(streamsize Wide);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Wide`  
- 표시 필드의 너비입니다.  
+ The width of the display field.  
   
-### <a name="return-value"></a>반환 값  
- 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*), then returns **str**.  
   
-### <a name="remarks"></a>설명  
- setw는 스트림에서 다음 요소에 대한 너비만 설정하며 너비를 지정하려는 각 요소 앞에 삽입되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ setw sets the width only for the next element in the stream and must be inserted before each element whose width you want to specify.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iomanip_setw.cpp   
@@ -604,7 +616,7 @@ l4 = 4096
 l5 = 65536  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<iomanip>](../standard-library/iomanip.md)
 
 

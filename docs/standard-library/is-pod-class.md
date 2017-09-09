@@ -1,5 +1,5 @@
 ---
-title: "is_pod 클래스 | Microsoft 문서"
+title: is_pod Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_pod
 - type_traits/std::is_pod
 dev_langs:
 - C++
@@ -35,55 +34,55 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 2236d6a9796b1353b919a63620606242cde169bd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ecbad6c19819f6d99ec7cfd3d34d61e1e0201569
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ispod-class"></a>is_pod 클래스
-형식이 POD인지 테스트합니다.  
+# <a name="ispod-class"></a>is_pod Class
+Tests if type is POD.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_pod;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *T*  
-형식이 쿼리입니다.  
+The type to query.  
   
-## <a name="remarks"></a>설명  
-*T* 형식이 POD(Plain Old Data)이면 `is_pod<T>::value`는 `true`이고, 그렇지 않으면 `false`입니다.  
+## <a name="remarks"></a>Remarks  
+`is_pod<T>::value` is `true` if the type *T* is Plain Old Data (POD). Otherwise it is `false`.  
   
-산술 형식, 열거형 형식, 포인터 형식 및 멤버 형식에 대한 포인터는 POD입니다.  
+Arithmetic types, enumeration types, pointer types, and pointer to member types are POD.  
   
-POD 형식의 cv 한정된 버전 자체도 POD 형식입니다.  
+A cv-qualified version of a POD type is itself a POD type.  
   
-POD 배열 자체도 POD입니다.  
+An array of POD is itself POD.  
   
-다음 조건을 충족하는 경우 해당 비정적 데이터 멤버가 모두 POD인 구조체 또는 공용 구조체 자체도 POD입니다.  
+A struct or union, all of whose non-static data members are POD, is itself POD if it has:  
   
--   사용자가 선언한 생성자 없음  
+-   No user-declared constructors.  
   
--   전용 또는 보호된 비정적 데이터 멤버 없음  
+-   No private or protected non-static data members.  
   
--   기본 클래스 없음  
+-   No base classes.  
   
--   가상 함수 없음  
+-   No virtual functions.  
   
--   참조 형식의 비정적 데이터 멤버 없음  
+-   No non-static data members of reference type.  
   
--   사용자 정의 복사 할당 연산자 없음  
+-   No user-defined copy assignment operator.  
   
--   사용자 정의 소멸자 없음  
+-   No user-defined destructor.  
   
-따라서 POD 구조체 및 배열을 포함하는 POD 구조체 및 배열을 재귀적으로 빌드할 수 있습니다.  
+Therefore, you can recursively build POD structs and arrays that contain POD structs and arrays.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_pod.cpp   
@@ -119,12 +118,12 @@ is_pod<int> == true
 is_pod<throws> == false  
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<type_traits>  
   
-**네임스페이스:** std  
+**Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [<type_traits>](../standard-library/type-traits.md)
 
 

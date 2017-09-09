@@ -1,5 +1,5 @@
 ---
-title: "&lt;locale&gt; 함수 | Microsoft 문서"
+title: '&lt;locale&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,14 +25,30 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+helpviewer_keywords:
+- std::has_facet [C++]
+- std::isalnum [C++]
+- std::isalpha [C++]
+- std::iscntrl [C++]
+- std::isdigit [C++]
+- std::isgraph [C++]
+- std::islower [C++]
+- std::isprint [C++]
+- std::ispunct [C++]
+- std::isspace [C++]
+- std::isupper [C++]
+- std::isxdigit [C++]
+- std::tolower [C++]
+- std::toupper [C++]
+- std::use_facet [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4d3be53163b1ca0676e0561ab10ad1d8af545858
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlocalegt-functions"></a>&lt;locale&gt; 함수
+# <a name="ltlocalegt-functions"></a>&lt;locale&gt; functions
 ||||  
 |-|-|-|  
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|  
@@ -42,24 +58,24 @@ ms.lasthandoff: 04/29/2017
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
 ##  <a name="has_facet"></a>  has_facet  
- 특정 패싯이 지정된 로캘에 저장되었는지를 테스트합니다.  
+ Tests if a particular facet is stored in a specified locale.  
   
 ```  
 template <class Facet>  
 bool has_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 패싯이 있는지 테스트할 로캘입니다.  
+ The locale to be tested for the presence of a facet.  
   
-### <a name="return-value"></a>반환 값  
- 로캘에 테스트된 패싯이 있으면 **true**이고, 없으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the locale has the facet tested for; **false** if it does not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `use_facet`을 호출하여 패싯이 없는 경우 throw되는 예외를 방지하기 전에 필수가 아닌 패싯이 로캘에 나열되는지 여부를 확인하는 데 유용합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function is useful for checking whether nonmandatory facets are listed in a locale before `use_facet` is called to avoid the exception that would be thrown if it were not present.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_has_facet.cpp  
@@ -81,24 +97,24 @@ int main( )
 ```  
   
 ##  <a name="isalnum"></a>  isalnum  
- 로캘의 요소가 알파벳인지 또는 숫자인지를 테스트합니다.  
+ Tests whether an element in a locale is an alphabetic or a numeric character.  
   
 ```  
 template <class CharType>  
 bool isalnum(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 영숫자 요소입니다.  
+ The alphanumeric element to be tested.  
   
  `Loc`  
- 테스트할 영숫자 요소를 포함하는 로캘입니다.  
+ The locale containing the alphanumeric element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 영숫자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphanumeric; **false** if it is not.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalnum.cpp  
@@ -145,27 +161,27 @@ The character '3' in the locale is alphanumeric.
 ```  
   
 ##  <a name="isalpha"></a>  isalpha  
- 로캘의 요소가 영문자인지를 테스트합니다.  
+ Tests whether an element in a locale is an alphabetic character.  
   
 ```  
 template <class CharType>  
 bool isalpha(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 영문자 요소를 포함하는 로캘입니다.  
+ The locale containing the alphabetic element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 영문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphabetic; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalpha.cpp  
@@ -206,27 +222,27 @@ int main( )
 ```  
   
 ##  <a name="iscntrl"></a>  iscntrl  
- 로캘의 요소가 제어 문자인지를 테스트합니다.  
+ Tests whether an element in a locale is a control character.  
   
 ```  
 template <class CharType>  
 bool iscntrl(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 제어 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a control character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_iscntrl.cpp  
@@ -267,27 +283,27 @@ int main( )
 ```  
   
 ##  <a name="isdigit"></a>  isdigit  
- 로캘의 요소가 숫자인지를 테스트합니다.  
+ Tests whether an element in a locale is a numeric character.  
   
 ```  
 template <class CharType>  
 bool isdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 숫자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a numeric character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_digit.cpp  
@@ -328,27 +344,27 @@ int main( )
 ```  
   
 ##  <a name="isgraph"></a>  isgraph  
- 로캘의 요소가 영숫자인지 문장 부호인지를 테스트합니다.  
+ Tests whether an element in a locale is an alphanumeric or punctuation character.  
   
 ```  
 template <class CharType>  
 bool isgraph(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 영숫자 또는 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an alphanumeric or a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_graph.cpp  
@@ -389,27 +405,27 @@ int main( )
 ```  
   
 ##  <a name="islower"></a>  islower  
- 로캘의 요소가 소문자인지를 테스트합니다.  
+ Tests whether an element in a locale is lower case.  
   
 ```  
 template <class CharType>  
 bool islower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 소문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a lowercase character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_islower.cpp  
@@ -450,27 +466,27 @@ int main( )
 ```  
   
 ##  <a name="isprint"></a>  isprint  
- 로캘의 요소가 인쇄 가능한 문자인지를 테스트합니다.  
+ Tests whether an element in a locale is a printable character.  
   
 ```  
 template <class CharType>  
 bool isprint(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 인쇄 가능하면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a printable; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isprint.cpp  
@@ -510,27 +526,27 @@ int main( )
 ```  
   
 ##  <a name="ispunct"></a>  ispunct  
- 로캘의 요소가 문장 부호 문자인지를 테스트합니다.  
+ Tests whether an element in a locale is a punctuation character.  
   
 ```  
 template <class CharType>  
 bool ispunct(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_ispunct.cpp  
@@ -571,27 +587,27 @@ int main( )
 ```  
   
 ##  <a name="isspace"></a>  isspace  
- 로캘의 요소가 공백 문자인지를 테스트합니다.  
+ Tests whether an element in a locale is a whitespace character.  
   
 ```  
 template <class CharType>  
 bool isspace(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 공백 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a whitespace character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isspace.cpp  
@@ -632,27 +648,27 @@ int main( )
 ```  
   
 ##  <a name="isupper"></a>  isupper  
- 로캘의 요소가 대문자인지를 테스트합니다.  
+ Tests whether an element in a locale is in upper case.  
   
 ```  
 template <class CharType>  
 bool isupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 대문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an uppercase character; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isupper.cpp  
@@ -693,29 +709,29 @@ int main( )
 ```  
   
 ##  <a name="isxdigit"></a>  isxdigit  
- 로캘의 요소가 16자 숫자를 나타내는 데 사용되는 문자인지를 테스트합니다.  
+ Tests whether an element in a locale is a character used to represent a hexadecimal number.  
   
 ```  
 template <class CharType>  
 bool isxdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 테스트할 요소입니다.  
+ The element to be tested.  
   
  `Loc`  
- 테스트할 요소를 포함하는 로캘입니다.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>반환 값  
- 테스트된 요소가 16진수를 나타내는 데 사용된 문자이면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a character used to represent a hexadecimal number; **false** if it is not.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).  
   
- 16진수는 16을 기준으로 사용하여 숫자를 나타내는데, 숫자 0-9와 대/소문자를 구분하지 않는 문자 A-F를 사용하여 10진수 0-15를 나타냅니다.  
+ Hexadecimal digits use base 16 to represent numbers, using the numbers 0 through 9 plus case-insensitive letters A through F to represent the decimal numbers 0 through 15.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isxdigit.cpp  
@@ -756,27 +772,27 @@ int main( )
 ```  
   
 ##  <a name="tolower"></a>  tolower  
- 문자를 소문자로 변환합니다.  
+ Converts a character to lower case.  
   
 ```  
 template <class CharType>  
 CharType tolower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 소문자로 변환할 문자입니다.  
+ The character to be converted to lower case.  
   
  `Loc`  
- 변환할 문자를 포함하는 로캘입니다.  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 소문자로 변환된 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The character converted to lower case.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_tolower.cpp  
@@ -801,27 +817,27 @@ int main( )
 ```  
   
 ##  <a name="toupper"></a>  toupper  
- 문자를 대문자로 변환합니다.  
+ Converts a character to upper case.  
   
 ```  
 template <class CharType>  
 CharType toupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 대문자로 변환할 문자입니다.  
+ The character to be converted to upper case.  
   
  `Loc`  
- 변환할 문자를 포함하는 로캘입니다.  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 대문자로 변환된 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The character converted to upper case.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_toupper.cpp  
@@ -846,24 +862,24 @@ int main( )
 ```  
   
 ##  <a name="use_facet"></a>  use_facet  
- 로캘에 저장된 지정된 형식의 패싯에 대한 참조를 반환합니다.  
+ Returns a reference to a facet of a specified type stored in a locale.  
   
 ```  
 template <class Facet>  
 const Facet& use_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 참조되는 패싯의 형식을 포함하는 const 로캘입니다.  
+ The const locale containing the type of facet being referenced.  
   
-### <a name="return-value"></a>반환 값  
- 인수 로캘 내에 포함된 `Facet` 클래스의 패싯에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the facet of class `Facet` contained within the argument locale.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수에서 반환한 패싯에 대한 참조는 포함하는 로캘의 모든 복사본이 존재하는 한 유효한 상태로 유지됩니다. `Facet` 클래스의 이러한 패싯 개체가 인수 로캘에 나열되지 않는 경우 이 함수는 `bad_cast` 예외를 throw합니다.  
+### <a name="remarks"></a>Remarks  
+ The reference to the facet returned by the template function remains valid as long as any copy of the containing locale exists. If no such facet object of class `Facet` is listed in the argument locale, the function throws a `bad_cast` exception.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_use_facet.cpp  
@@ -902,7 +918,7 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)
 
 

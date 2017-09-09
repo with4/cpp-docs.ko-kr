@@ -1,5 +1,5 @@
 ---
-title: "is_move_assignable 클래스 | Microsoft 문서"
+title: is_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_move_assignable
 - type_traits/std::is_move_assignable
 dev_langs:
 - C++
@@ -34,36 +33,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: db3e621e4638aab864fa897a6f046f81a6549daa
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9b7593198b72c0c479475618940c767328112d2a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismoveassignable-class"></a>is_move_assignable 클래스
-형식을 이동 할당할 수 있는지 테스트합니다.  
+# <a name="ismoveassignable-class"></a>is_move_assignable Class
+Tests if the type can be move assigned.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_move_assignable;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식에 대한 rvalue 참조를 형식에 대한 참조에 할당할 수 있는 경우 형식은 이동 할당할 수 있습니다. 형식 조건자는 `is_assignable<T&, T&&>`와 같습니다. 이동 할당 가능한 형식에는 컴파일러에서 생성되었거나 사용자가 정의한 이동 대입 연산자를 포함하는 참조 가능한 스칼라 형식과 클래스 형식이 포함됩니다.  
+## <a name="remarks"></a>Remarks  
+ A type is move assignable if an rvalue reference to the type can be assigned to a reference to the type. The type predicate is equivalent to `is_assignable<T&, T&&>`. Move assignable types include referenceable scalar types and class types that have either compiler-generated or user-defined move assignment operators.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

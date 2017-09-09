@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stdexcept>
-- std::<stdexcept>
-- <stdexcept>
+- std::<stdexcept>", "<stdexcept>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a01f0cf531196d59815eb87f03ee9d8a15574088
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 42d6d48b08732712b4b7c7898b937017197b20a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
-예외 보고에 사용되는 여러 표준 클래스를 정의합니다. 클래스는 [exception](../standard-library/exception-class.md) 클래스에서 모두 파생된 파생 계층 구조를 형성하고 두 가지 일반 형식의 예외(논리 오류 및 런타임 오류)를 포함합니다. 논리 오류는 프로그래머 실수로 인해 발생합니다. 기본 클래스 logic_error에서 파생되며 다음을 포함합니다.  
+Defines several standard classes used for reporting exceptions. The classes form a derivation hierarchy all derived from class [exception](../standard-library/exception-class.md) and include two general types of exceptions: logical errors and run-time errors. The logical errors are caused programmer mistakes. They derive from the base class logic_error and include:  
   
 -   `domain_error`  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
 -   `out_of_range`  
   
- 런타임 오류는 라이브러리 함수 또는 런타임 시스템의 실수로 인해 발생합니다. 기본 클래스 runtime_error에서 파생되며 다음을 포함합니다.  
+ The run-time errors occur because of mistakes in either the library functions or in the run-time system. They derive from the base class runtime_error and include:  
   
 -   `overflow_error`  
   
@@ -61,22 +59,22 @@ ms.lasthandoff: 02/24/2017
   
 -   `underflow_error`  
   
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[domain_error 클래스](../standard-library/domain-error-class.md)|이 클래스는 도메인 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[invalid_argument 클래스](../standard-library/invalid-argument-class.md)|이 클래스는 잘못된 인수를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[length_error 클래스](../standard-library/length-error-class.md)|이 클래스는 너무 길어서 지정할 수 없는 개체 생성 시도를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[logic_error 클래스](../standard-library/logic-error-class.md)|이 클래스는 논리적 사전 조건 위반과 같이 프로그램이 실행되기 전에 검색될 수 있는 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[out_of_range 클래스](../standard-library/out-of-range-class.md)|이 클래스는 유효 범위를 벗어난 인수를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[overflow_error 클래스](../standard-library/overflow-error-class.md)|이 클래스는 산술 오버플로를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[range_error 클래스](../standard-library/range-error-class.md)|이 클래스는 범위 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[runtime_error 클래스](../standard-library/runtime-error-class.md)|이 클래스는 프로그램이 실행되는 경우에만 검색될 수 있는 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
-|[underflow_error 클래스](../standard-library/underflow-error-class.md)|이 클래스는 산술 언더플로를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.|  
+|[domain_error Class](../standard-library/domain-error-class.md)|The class serves as the base class for all exceptions thrown to report a domain error.|  
+|[invalid_argument Class](../standard-library/invalid-argument-class.md)|The class serves as the base class for all exceptions thrown to report an invalid argument.|  
+|[length_error Class](../standard-library/length-error-class.md)|The class serves as the base class for all exceptions thrown to report an attempt to generate an object too long to be specified.|  
+|[logic_error Class](../standard-library/logic-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable before the program executes, such as violations of logical preconditions.|  
+|[out_of_range Class](../standard-library/out-of-range-class.md)|The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.|  
+|[overflow_error Class](../standard-library/overflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic overflow.|  
+|[range_error Class](../standard-library/range-error-class.md)|The class serves as the base class for all exceptions thrown to report a range error.|  
+|[runtime_error Class](../standard-library/runtime-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable only when the program executes.|  
+|[underflow_error Class](../standard-library/underflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic underflow.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

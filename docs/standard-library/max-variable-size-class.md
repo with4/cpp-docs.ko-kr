@@ -1,5 +1,5 @@
 ---
-title: "max_variable_size 클래스 | Microsoft 문서"
+title: max_variable_size Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::max_variable_size
 - allocators/stdext::max_variable_size
-- max_variable_size
 - allocators/stdext::max_variable_size::allocated
 - allocators/stdext::max_variable_size::deallocated
 - allocators/stdext::max_variable_size::full
@@ -20,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- max_variable_size class
+- stdext::max_variable_size
+- stdext::max_variable_size [C++], allocated
+- stdext::max_variable_size [C++], deallocated
+- stdext::max_variable_size [C++], full
+- stdext::max_variable_size [C++], released
+- stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
 caps.latest.revision: 18
 author: corob-msft
@@ -40,119 +43,119 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb2405313f9b58bc6c5634410a5c378e0f0abca
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ba2450e4079307d26402dd56532686f687ab3f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maxvariablesize-class"></a>max_variable_size 클래스
-[freelist](../standard-library/freelist-class.md) 개체를 할당된 메모리 블록의 수에 거의 비례하는 최대 길이로 제한하는 [max 클래스](../standard-library/allocators-header.md) 개체를 설명합니다.  
+# <a name="maxvariablesize-class"></a>max_variable_size Class
+Describes a [max class](../standard-library/allocators-header.md) object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length that is roughly proportional to the number of allocated memory blocks.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class max_variable_size
 ```  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[max_variable_size](#max_variable_size)|`max_variable_size` 형식의 개체를 생성합니다.|  
+|[max_variable_size](#max_variable_size)|Constructs an object of type `max_variable_size`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocated](#allocated)|할당된 메모리 블록의 수를 늘립니다.|  
-|[deallocated](#deallocated)|할당된 메모리 블록의 수를 줄입니다.|  
-|[full](#full)|사용 가능한 목록에 더 많은 메모리 블록을 추가할지 여부를 지정하는 값을 반환합니다.|  
-|[released](#released)|사용 가능한 목록에서 메모리 블록의 수를 줄입니다.|  
-|[saved](#saved)|사용 가능한 목록에서 메모리 블록의 수를 늘립니다.|  
+|[allocated](#allocated)|Increments the count of allocated memory blocks.|  
+|[deallocated](#deallocated)|Decrements the count of allocated memory blocks.|  
+|[full](#full)|Returns a value that specifies whether more memory blocks should be added to the free list.|  
+|[released](#released)|Decrements the count of memory blocks on the free list.|  
+|[saved](#saved)|Increments the count of memory blocks on the free list.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **네임스페이스:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocated"></a>  max_variable_size::allocated  
- 할당된 메모리 블록의 수를 늘립니다.  
+ Increments the count of allocated memory blocks.  
   
 ```
 void allocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|증분 값입니다.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `_Nx`를 저장된 값 `_Nallocs`에 더합니다. 이 멤버 함수는 `cache_freelist::allocate`에서 `new` 연산자를 성공적으로 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `new` 연산자가 할당한 메모리 블록의 수입니다.  
+### <a name="remarks"></a>Remarks  
+ This member function adds `_Nx` to the stored value `_Nallocs`. This member function is called after each successful call by `cache_freelist::allocate` to operator `new`. The argument `_Nx` is the number of memory blocks in the chunk allocated by operator `new`.  
   
 ##  <a name="deallocated"></a>  max_variable_size::deallocated  
- 할당된 메모리 블록의 수를 줄입니다.  
+ Decrements the count of allocated memory blocks.  
   
 ```
 void deallocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|증분 값입니다.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `_Nx`를 저장된 값 `_Nallocs`에서 뺍니다. 이 멤버 함수는 `cache_freelist::deallocate`에서 `delete` 연산자를 호출할 때마다 호출됩니다. `_Nx` 인수는 청크에서 `delete` 연산자가 할당 취소한 메모리 블록의 수입니다.  
+### <a name="remarks"></a>Remarks  
+ The member function subtracts `_Nx` from the stored value `_Nallocs`. This member function is called after each call by `cache_freelist::deallocate` to operator `delete`. The argument `_Nx` is the number of memory blocks in the chunk deallocated by operator `delete`.  
   
 ##  <a name="full"></a>  max_variable_size::full  
- 사용 가능한 목록에 더 많은 메모리 블록을 추가할지 여부를 지정하는 값을 반환합니다.  
+ Returns a value that specifies whether more memory blocks should be added to the free list.  
   
 ```
 bool full();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `_Nallocs / 16 + 16 <= _Nblocks`이면 `true`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if `_Nallocs / 16 + 16 <= _Nblocks`.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출에서 `true`를 반환하는 경우 `deallocate`는 메모리 블록을 사용 가능한 목록에 넣고, false를 반환하는 경우 `deallocate`는 `delete` 연산자를 호출하여 블록을 할당 취소합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by `cache_freelist::deallocate`. If the call returns `true`, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator `delete` to deallocate the block.  
   
 ##  <a name="max_variable_size"></a>  max_variable_size::max_variable_size  
- `max_variable_size` 형식의 개체를 생성합니다.  
+ Constructs an object of type `max_variable_size`.  
   
 ```
 max_variable_size();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 생성자는 저장된 값 `_Nblocks` 및 `_Nallocs`를 0으로 초기화합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor initializes the stored values `_Nblocks` and `_Nallocs` to zero.  
   
 ##  <a name="released"></a>  max_variable_size::released  
- 사용 가능한 목록에서 메모리 블록의 수를 줄입니다.  
+ Decrements the count of memory blocks on the free list.  
   
 ```
 void released();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 저장된 값 `_Nblocks`를 줄입니다. 현재 max 클래스의 `released` 멤버 함수는 사용 가능한 목록에서 메모리 블록을 제거할 때마다 `cache_freelist::allocate`에서 호출됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function decrements the stored value `_Nblocks`. The `released` member function of the current max class is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.  
   
 ##  <a name="saved"></a>  max_variable_size::saved  
- 사용 가능한 목록에서 메모리 블록의 수를 늘립니다.  
+ Increments the count of memory blocks on the free list.  
   
 ```
 void saved();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 저장된 값 `_Nblocks`를 늘립니다. 이 멤버 함수는 사용 가능한 목록에 메모리 블록을 넣을 때마다 `cache_freelist::deallocate`에서 호출됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function increments the stored value `_Nblocks`. This member function is called by `cache_freelist::deallocate` whenever it puts a memory block on the free list.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

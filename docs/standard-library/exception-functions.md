@@ -1,5 +1,5 @@
 ---
-title: "&lt;exception&gt; 함수 | Microsoft 문서"
+title: '&lt;exception&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,13 +20,25 @@ f1_keywords:
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 08d2a2161a2596cebb27175c55023d5313c7b908
-ms.lasthandoff: 02/24/2017
+helpviewer_keywords:
+- std::current_exception [C++]
+- std::get_terminate [C++]
+- std::get_unexpected [C++]
+- std::make_exception_ptr [C++]
+- std::rethrow_exception [C++]
+- std::set_terminate [C++]
+- std::set_unexpected [C++]
+- std::terminate [C++]
+- std::uncaught_exception [C++]
+- std::unexpected [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac885e7157fb144f45403d493473b3ae1a8921a4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 함수
+# <a name="ltexceptiongt-functions"></a>&lt;exception&gt; functions
 ||||  
 |-|-|-|  
 |[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
@@ -35,83 +47,83 @@ ms.lasthandoff: 02/24/2017
 |[unexpected](#unexpected)|  
   
 ##  <a name="current_exception"></a>  current_exception  
- 현재 예외에 대한 스마트 포인터를 가져옵니다.  
+ Obtains a smart pointer to the current exception.  
   
 ```cpp  
 exception_ptr current_exception();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 예외를 가리키는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to the current exception.  
   
-### <a name="remarks"></a>설명  
- catch 블록에서 `current_exception` 함수를 호출합니다. 예외가 발생하고 catch 블록이 예외를 catch할 경우, `current_exception` 함수는 예외를 참조하는 `exception_ptr` 개체를 반환합니다. 그렇지 않으면 인수가 null `exception_ptr` 개체를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Call the `current_exception` function in a catch block. If an exception is in flight and the catch block can catch the exception, the `current_exception` function returns an `exception_ptr` object that references the exception. Otherwise, the function returns a null `exception_ptr` object.  
   
- `current_exception` 함수는 `catch` 문이 [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) 문을 지정하는지 여부와 관계없이 발생 중인 예외를 캡처합니다.  
+ The `current_exception` function captures the exception that is in flight regardless of whether the `catch` statement specifies an [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) statement.  
   
- 예외를 다시 throw하지 않는 경우 `catch`의 끝에서 현재 예외의 소멸자가 호출되지 않습니다. 그러나 소멸자에 있는`current_exception` 함수를 호출하는 경우, 함수는 현재 예외를 참조하는 `exception_ptr` 개체를 반환합니다.  
+ The destructor for the current exception is called at the end of the `catch` block if you do not rethrow the exception. However, even if you call the `current_exception` function in the destructor, the function returns an `exception_ptr` object that references the current exception.  
   
- `current_exception` 수식에 대한 연속 호출은 현재 예외 건의 다른 복사본을 뜻하는 `exception_ptr` 개체를 반환합니다. 따라서 개체는 복사본에 같은 이진 값이 있더라도 다른 복사본을 참조하기 때문에 같지 않은 것으로 비교합니다.  
+ Successive calls to the `current_exception` function return `exception_ptr` objects that refer to different copies of the current exception. Consequently, the objects compare as unequal because they refer to different copies, even though the copies have the same binary value.  
   
 ##  <a name="make_exception_ptr"></a>  make_exception_ptr  
- 예외 복사본이 들어 있는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 개체를 생성합니다.  
+ Creates an [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object that holds a copy of an exception.  
   
 ```cpp  
 template <class E>  
 exception_ptr make_exception_ptr(E Except);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Except`  
- 복사할 예외가 있는 클래스입니다. 모든 클래스 개체를 인수로 사용할 수 있지만, 일반적으로 [예외 클래스](../standard-library/exception-class.md) 개체를 `make_exception_ptr` 함수의 인수로 지정합니다.  
+ The class with the exception to copy. Usually, you specify an [exception class](../standard-library/exception-class.md) object as the argument to the `make_exception_ptr` function, although any class object can be the argument.  
   
-### <a name="return-value"></a>반환 값  
- `Except`에 대한 현재 예외의 복사본을 가리키는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to a copy of the current exception for `Except`.  
   
-### <a name="remarks"></a>설명  
- `make_exception_ptr` 함수 호출은 C++ 예외를 throw하고 catch 블록에서 catch한 다음 [current_exception](../standard-library/exception-functions.md#current_exception) 함수를 호출하여 예외를 참조하는 `exception_ptr` 개체를 반환하는 것과 동일합니다. `make_exception_ptr` 함수의 Microsoft 구현은 예외를 throw한 후 catch하는 것보다 더 효율적입니다.  
+### <a name="remarks"></a>Remarks  
+ Calling the `make_exception_ptr` function is equivalent to throwing a C++ exception, catching it in a catch block, and then calling the [current_exception](../standard-library/exception-functions.md#current_exception) function to return an `exception_ptr` object that references the exception. The Microsoft implementation of the `make_exception_ptr` function is more efficient than throwing and then catching an exception.  
   
- 응용 프로그램에는 일반적으로 `make_exception_ptr` 함수가 필요하지 않으며 이 함수를 사용하지 않는 것이 좋습니다.  
+ An application typically does not require the `make_exception_ptr` function, and we discourage its use.  
   
 ##  <a name="rethrow_exception"></a>  rethrow_exception  
- 매개 변수로 전달되는 예외를 throw합니다.  
+ Throws an exception passed as a parameter.  
   
 ```cpp  
 void rethrow_exception(exception_ptr P);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `P`  
- 다시 throw할 catch된 예외입니다. `P`가 null인 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)인 경우 함수에서 [std::bad_exception](../standard-library/bad-exception-class.md)을 throw합니다.  
+ The caught exception to re-throw. If `P` is a null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), the function throws [std::bad_exception](../standard-library/bad-exception-class.md).  
   
-### <a name="remarks"></a>설명  
- `exception_ptr` 개체에서 catch된 예외를 저장한 후 기본 스레드에서 개체를 처리할 수 있습니다. 기본 스레드에서 `rethrow_exception` 개체와 함께 작동하는 `exception_ptr` 함수를 호출합니다. `rethrow_exception` 함수는 `exception_ptr` 개체에서 예외를 추출하고, 주 스레드의 컨텍스트에서 예외를 throw합니다.  
+### <a name="remarks"></a>Remarks  
+ After you store a caught exception in an `exception_ptr` object, the primary thread can process the object. In your primary thread, call the `rethrow_exception` function together with the `exception_ptr` object as its argument. The `rethrow_exception` function extracts the exception from the `exception_ptr` object and then throws the exception in the context of the primary thread.  
   
 ##  <a name="get_terminate"></a>  get_terminate  
- 현재 `terminate_handler` 함수를 가져옵니다.  
+ Obtains the current `terminate_handler` function.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
 ##  <a name="set_terminate"></a>  set_terminate  
- 프로그램을 종료할 때 호출할 새 `terminate_handler`를 설정합니다.  
+ Establishes a new `terminate_handler` to be called at the termination of the program.  
   
 ```  
 terminate_handler set_terminate(terminate_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fnew`  
- 종료 시 호출할 함수입니다.  
+ The function to be called at termination.  
   
-### <a name="return-value"></a>반환 값  
- 종료 시 호출에 사용된 이전 함수의 주소입니다.  
+### <a name="return-value"></a>Return Value  
+ The address of the previous function that used to be called at termination.  
   
-### <a name="remarks"></a>설명  
- 함수는 새 [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)를 함수 * `fnew`로 설정합니다. 따라서 `fnew`가 null 포인터가 아니어야 합니다. 함수는 이전 terminate 처리기의 주소를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function establishes a new [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) as the function * `fnew`. Thus, `fnew` must not be a null pointer. The function returns the address of the previous terminate handler.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_set_terminate.cpp  
@@ -141,32 +153,32 @@ int main()
 ```  
   
 ##  <a name="get_unexpected"></a>  get_unexpected  
- 현재 `unexpected_handler` 함수를 가져옵니다.  
+ Obtains the current `unexpected_handler` function.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
 ##  <a name="set_unexpected"></a>  set_unexpected  
- 예기치 않은 예외가 발생할 경우를 위해 새 `unexpected_handler`를 설정합니다.  
+ Establishes a new `unexpected_handler` to be when an unexpected exception is encountered.  
   
 ```  
 unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fnew`  
- 예기치 않은 예외가 발생할 경우를 호출할 함수입니다.  
+ The function to be called when an unexpected exception is encountered.  
   
-### <a name="return-value"></a>반환 값  
- 이전 `unexpected_handler`의 주소입니다.  
+### <a name="return-value"></a>Return Value  
+ The address of the previous `unexpected_handler`.  
   
-### <a name="remarks"></a>설명  
- `fnew`는 null 포인터가 아니어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ `fnew` must not be a null pointer.  
   
- C++ 표준의 경우 함수가 throw 목록에 없는 예외를 throw할 경우 `unexpected`가 호출되어야 합니다. 현재 구현은 이 기능을 지원하지 않습니다. 다음 예제에서는 `unexpected`를 직접 호출하고 나서 `unexpected_handler`를 호출합니다.  
+ The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The following example calls `unexpected` directly, which then calls the `unexpected_handler`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_set_unexpected.cpp  
@@ -193,31 +205,31 @@ int main()
 ```  
   
 ##  <a name="terminate"></a>  terminate  
- 종료 처리기를 호출합니다.  
+ Calls a terminate handler.  
   
 ```  
 void terminate();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 함수는 `void` 형식 함수인 terminate 처리기를 호출합니다. **terminate**가 프로그램에 의해 직접 호출될 경우 [set_terminate](../standard-library/exception-functions.md#set_terminate)에 대한 호출을 통해 가장 최근 설정된 terminate 처리기가 호출됩니다. throw 식 평가 중에 다른 여러 가지 이유로 **terminate**가 호출될 경우에는 throw 식을 평가한 직후 적용되는 terminate 처리기가 호출됩니다.  
+### <a name="remarks"></a>Remarks  
+ The function calls a terminate handler, a function of type `void`. If **terminate** is called directly by the program, the terminate handler is the one most recently set by a call to [set_terminate](../standard-library/exception-functions.md#set_terminate). If **terminate** is called for any of several other reasons during evaluation of a throw expression, the terminate handler is the one in effect immediately after evaluating the throw expression.  
   
- terminate 처리기는 호출자로 반환되지 않을 수 있습니다. 프로그램 시작 시 **abort**를 호출하는 함수가 terminate 처리기입니다.  
+ A terminate handler may not return to its caller. At program startup, the terminate handler is a function that calls **abort**.  
   
-### <a name="example"></a>예제  
-  **terminate** 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **terminate**.  
   
 ##  <a name="uncaught_exception"></a>  uncaught_exception  
- throw된 예외가 현재 처리 중인 경우에만 `true`를 반환합니다.  
+ Returns `true` only if a thrown exception is being currently processed.  
   
 ```  
 bool uncaught_exception();
 ```  
   
-### <a name="return-value"></a>반환 값  
- throw 식 평가를 완료한 후, 그리고 일치하는 처리기에서 예외 선언 초기화를 완료하거나 throw 식의 결과로 [unexpected](../standard-library/exception-functions.md#unexpected)를 호출하기 전에 `true`를 반환합니다. 특히 `uncaught_exception`은 예외 해제 중에 호출되는 소멸자에서 호출된 경우 `true`를 반환합니다. 장치의 경우 `uncaught_exception`은 Windows Mobile 2005 플랫폼을 포함하여 Windows CE 5.00 이상 버전에서만 지원됩니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` after completing evaluation of a throw expression and before completing initialization of the exception declaration in the matching handler or calling [unexpected](../standard-library/exception-functions.md#unexpected) as a result of the throw expression. In particular, `uncaught_exception` will return `true` when called from a destructor that is being invoked during an exception unwind. On devices, `uncaught_exception` is only supported on Windows CE 5.00 and higher versions, including Windows Mobile 2005 platforms.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_uncaught_exception.cpp  
@@ -271,31 +283,31 @@ In Test::~Test("outside try block")
 ```  
   
 ##  <a name="unexpected"></a>  unexpected  
- unexpected 처리기를 호출합니다.  
+ Calls the unexpected handler.  
   
 ```  
 void unexpected();
 ```  
   
-### <a name="remarks"></a>설명  
- C++ 표준의 경우 함수가 throw 목록에 없는 예외를 throw할 경우 `unexpected`가 호출되어야 합니다. 현재 구현은 이 기능을 지원하지 않습니다. 이 예제에서는 unexpected 처리기를 호출하는 `unexpected`를 직접 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The example calls `unexpected` directly, which calls the unexpected handler.  
   
- 이 함수는 `void` 형식 함수인 unexpected 처리기를 호출합니다. `unexpected`가 프로그램에 의해 직접 호출될 경우 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)에 대한 호출을 통해 가장 최근 설정된 unexpected 처리기가 호출됩니다.  
+ The function calls an unexpected handler, a function of type `void`. If `unexpected` is called directly by the program, the unexpected handler is the one most recently set by a call to [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
   
- unexpected 처리기는 호출자로 반환되지 않을 수 있습니다. 다음과 같은 경우 실행을 종료할 수 있습니다.  
+ An unexpected handler may not return to its caller. It may terminate execution by:  
   
--   예외 사양에 나열된 형식의 개체 또는 unexpected 처리기가 프로그램에서 직접 호출될 경우 모든 형식의 개체를 throw할 경우.  
+-   Throwing an object of a type listed in the exception specification or an object of any type if the unexpected handler is called directly by the program.  
   
--   형식 [bad_exception](../standard-library/bad-exception-class.md)의 개체를 throw할 경우.  
+-   Throwing an object of type [bad_exception](../standard-library/bad-exception-class.md).  
   
--   [terminate](../standard-library/exception-functions.md#terminate), **abort** 또는 **exit**(`int`)를 호출할 경우.  
+-   Calling [terminate](../standard-library/exception-functions.md#terminate), **abort** or **exit**( `int`).  
   
- 프로그램 시작 시 [terminate](../standard-library/exception-functions.md#terminate)를 호출하는 함수가 unexpected 처리기입니다.  
+ At program startup, the unexpected handler is a function that calls [terminate](../standard-library/exception-functions.md#terminate).  
   
-### <a name="example"></a>예제  
-  **unexpected** 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **unexpected.**  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<exception>](../standard-library/exception.md)
 
 

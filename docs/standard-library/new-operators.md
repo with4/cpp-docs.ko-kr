@@ -1,5 +1,5 @@
 ---
-title: "&lt;new&gt; 연산자 | Microsoft Docs"
+title: '&lt;new&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,21 +12,21 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 52633103180338b6db7b96f2d76391f58e1f4c35
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e5e0dc48d0aeb09da07654043addd81b096bbcc6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 연산자
+# <a name="ltnewgt-operators"></a>&lt;new&gt; operators
 ||||  
 |-|-|-|  
 |[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|  
 |[operator new[]](#op_new_arr)|  
   
 ##  <a name="op_delete"></a>  operator delete  
- 개별 개체에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.  
+ The function called by a delete expression to deallocate storage for individual of objects.  
   
 ```
 void operator delete(void* ptr) throw();
@@ -38,24 +38,24 @@ void operator delete(void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 삭제에 의해 값이 무효 처리되는 포인터입니다.  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 함수는 `ptr`의 값을 무효 처리하기 위해 delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a delete expression to render the value of `ptr` invalid. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
- `ptr`의 null 값에 대한 기본 동작은 아무 작업도 수행하지 않는 것입니다. 기타 모든 `ptr`의 값은 앞에서 설명한 것처럼 호출을 통해 이전에 반환된 값이어야 합니다. `ptr`의 null이 아닌 값에 대한 기본 동작은 이전 호출에 의해 할당된 저장소를 회수하는 것입니다. 이처럼 회수된 저장소의 일부분 또는 전체가 `operator new`( **size_t**) 또는 `calloc`( **size_t**), `malloc`( **size_t**), `realloc`( **void\***, **size_t**)에 대한 후속 호출을 통해 할당되는 조건은 지정되지 않습니다.  
+ The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to `operator new`( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 두 번째 함수는 **new**( **std::size_t**) 형식의 new 식에 해당하는 placement delete 식에 의해 호출되며, 아무 작업도 수행하지 않습니다.  
+ The second function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**). It does nothing.  
   
- 세 번째 함수는 **new**( **std::size_t**, **conststd::nothrow_t&**) 형식의 new 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 `operator new`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 **delete**( `ptr`)를 평가하는 것입니다.  
+ The third function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**, **conststd::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to `operator new`( **size_t**). The default behavior is to evaluate **delete**( `ptr`).  
   
-### <a name="example"></a>예제  
-  `operator delete`를 사용하는 예제는 [operator new](../standard-library/new-operators.md#op_new)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) for an example that use `operator delete`.  
   
 ##  <a name="op_delete_arr"></a>  operator delete[]  
- 개체 배열에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.  
+ The function called by a delete expression to deallocate storage for an array of objects.  
   
 ```
 void operator delete[](void* ptr) throw();
@@ -67,22 +67,22 @@ void operator delete[](void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 삭제에 의해 값이 무효 처리되는 포인터입니다.  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 함수는 `ptr`의 값을 무효 처리하기 위해 `delete[]` 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있으므로 함수는 교체 가능합니다. 필요한 동작은 이전 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. `ptr`의 null 값에 대한 기본 동작은 아무 작업도 수행하지 않는 것입니다. 기타 모든 `ptr`의 값은 앞에서 설명한 것처럼 호출을 통해 이전에 반환된 값이어야 합니다. `ptr`의 null이 아닌 값에 대한 기본 동작은 이전 호출에 의해 할당된 저장소를 회수하는 것입니다. 이처럼 회수된 저장소의 일부분 또는 전체가 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 또는 `calloc`( **size_t**), `malloc`( **size_t**), `realloc`( **void\***, **size_t**)에 대한 후속 호출을 통해 할당되는 조건은 지정되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The first function is called by an `delete[]` expression to render the value of `ptr` invalid. The function is replaceable because the program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**). The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 두 번째 함수는 `new[]`( **std::size_t**) 형식의 `new[]` 식에 해당하는 placement `delete[]` 식에 의해 호출되며, 아무 작업도 수행하지 않습니다.  
+ The second function is called by a placement `delete[]` expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**). It does nothing.  
   
- 세 번째 함수는 `new[]`( **std::size_t**, **const std::nothrow_t&**) 형식의 `new[]` 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 operator `new[]`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 `delete[]`( `ptr`)를 평가하는 것입니다.  
+ The third function is called by a placement delete expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**, **const std::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to operator `new[]`( **size_t**). The default behavior is to evaluate `delete[]`( `ptr`).  
   
-### <a name="example"></a>예제  
-  `operator delete[]` 사용 방법의 예제는 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of the use of `operator delete[]`.  
   
 ##  <a name="op_new"></a>  operator new  
- 개별 개체에 대해 저장소를 할당하기 위해 new 식에서 호출되는 함수입니다.  
+ The function called by a new-expression to allocate storage for individual objects.  
   
 ```
 void* operator new(std::size_t count) throw(bad_alloc);
@@ -94,46 +94,46 @@ void* operator new(std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- 할당할 저장소의 바이트 수입니다.  
+ The number of bytes of storage to be allocated.  
   
  `ptr`  
- 반환할 포인터입니다.  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>반환 값  
- 새로 할당된 저장소의 가장 낮은 바이트 주소에 대한 포인터입니다. 또는 `ptr.`입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>설명  
- 첫 번째 함수는 `count`바이트의 저장소를 할당하기 위해 new 식에서 호출되며, 해당 크기의 모든 개체를 나타내도록 적절하게 정렬됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸며 대체 가능한 대체 함수를 이 함수 시그니처로 정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 필요한 동작은 요청에 따라 저장소를 할당할 수 있는 경우에만 null이 아닌 포인터를 반환하는 것입니다. 이러한 각 할당에서는 할당된 다른 저장소에서 저장소를 분리하는 포인터가 생성됩니다. 연속 호출을 통해 할당되는 저장소의 순서와 연속성은 지정되지 않습니다. 저장된 초기값은 지정되지 않습니다. 반환되는 포인터는 할당된 저장소의 시작 위치(최저 바이트 주소)를 가리킵니다. count가 0이면 반환되는 값은 함수가 반환하는 다른 값과 비교 시 동일하지 않습니다.  
+ The required behavior is to return a nonnull pointer only if storage can be allocated as requested. Each such allocation yields a pointer to storage disjoint from any other allocated storage. The order and contiguity of storage allocated by successive calls is unspecified. The initial stored value is unspecified. The returned pointer points to the start (lowest byte address) of the allocated storage. If count is zero, the value returned does not compare equal to any other value returned by the function.  
   
- 기본 동작은 루프를 실행하는 것입니다. 루프 내에서 함수는 먼저 요청된 저장소 할당을 시도합니다. 이 시도에서 `malloc`( **size_t**)를 호출하는지 여부는 지정되지 않습니다. 이 시도가 성공하면 함수는 할당된 저장소에 대한 포인터를 반환합니다. 그렇지 않으면 함수는 지정된 [새 처리기](../standard-library/new-typedefs.md#new_handler)를 호출합니다. 호출된 함수가 반환되면 루프는 반복됩니다. 요청된 저장소 할당 시도가 성공하거나 호출된 함수가 반환되지 않으면 루프는 종료됩니다.  
+ The default behavior is to execute a loop. Within the loop, the function first attempts to allocate the requested storage. Whether the attempt involves a call to `malloc`( **size_t**) is unspecified. If the attempt is successful, the function returns a pointer to the allocated storage. Otherwise, the function calls the designated [new handler](../standard-library/new-typedefs.md#new_handler). If the called function returns, the loop repeats. The loop terminates when an attempt to allocate the requested storage is successful or when a called function does not return.  
   
- 새 처리기에 필요한 동작은 다음 작업 중 하나를 수행하는 것입니다.  
+ The required behavior of a new handler is to perform one of the following operations:  
   
--   더 많은 저장소를 할당 가능하도록 지정한 후에 반환됨  
+-   Make more storage available for allocation and then return.  
   
--   **abort** 또는 **exit**( `int`) 호출  
+-   Call either **abort** or **exit**( `int`).  
   
--   **bad_alloc** 형식의 예외 throw  
+-   Throw an object of type **bad_alloc.**  
   
- [새 처리기](../standard-library/new-typedefs.md#new_handler)의 기본 동작은 `bad_alloc` 형식의 개체를 throw하는 것입니다. null 포인터가 기본 새 처리기를 지정합니다.  
+ The default behavior of a [new handler](../standard-library/new-typedefs.md#new_handler) is to throw an object of type `bad_alloc`. A null pointer designates the default new handler.  
   
- `operator new`( **size_t**)를 연속 호출하여 할당되는 저장소 및 해당 저장소에 저장되는 초기값의 순서와 연속성은 지정되지 않습니다.  
+ The order and contiguity of storage allocated by successive calls to `operator new`( **size_t**) is unspecified, as are the initial values stored there.  
   
- 두 번째 함수는 `count`바이트의 저장소를 할당하기 위해 placement new 식에서 호출되며, 해당 크기의 모든 개체를 나타내도록 적절하게 정렬됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸며 대체 가능한 대체 함수를 이 함수 시그니처로 정의할 수 있습니다.  
+ The second function is called by a placement new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 기본 동작은 함수 실행이 성공하면 `operator new`( `count`)를 반환하는 것입니다. 그렇지 않으면 null 포인터가 반환됩니다.  
+ The default behavior is to return `operator new`( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 세 번째 함수는 **new** ( *args*) T 형식의 placement **new** 식에 의해 호출됩니다. 여기서 *args*는 단일 개체 포인터로 구성됩니다. 이 포인터는 알려진 주소에 개체를 생성하는 데 유용할 수 있습니다. 함수는 *ptr*을 반환합니다.  
+ The third function is called by a placement **new** expression, of the form **new** ( *args*) T. Here, *args* consists of a single object pointer. This can be useful for constructing an object at a known address. The function returns *ptr*.  
   
- `operator new`에서 할당하는 저장소를 비우려면 [operator delete](../standard-library/new-operators.md#op_delete)를 호출합니다.  
+ To free storage allocated by `operator new`, call [operator delete](../standard-library/new-operators.md#op_delete).  
   
- new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_new.cpp  
@@ -177,7 +177,7 @@ int main( )
 ```  
   
 ##  <a name="op_new_arr"></a>  operator new[]  
- 개체 배열에 대해 저장소를 할당하기 위해 new 식에서 호출되는 할당 함수입니다.  
+ The allocation function called by a new expression to allocate storage for an array of objects.  
   
 ```
 void* operator new[](std::size_t count) throw(std::bad_alloc);
@@ -189,28 +189,28 @@ void* operator new[](std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- 배열 개체에 대해 할당할 저장소의 바이트 수입니다.  
+ The number of bytes of storage to be allocated for the array object.  
   
  `ptr`  
- 반환할 포인터입니다.  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>반환 값  
- 새로 할당된 저장소의 가장 낮은 바이트 주소에 대한 포인터입니다. 또는 `ptr.`입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>설명  
- 첫 번째 함수는 `count`바이트의 저장소를 할당하기 위해 `new[]` 식에서 호출되며, 해당 크기 이하의 모든 개체를 나타내도록 적절하게 정렬됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)와 동일합니다. 기본 동작은 `operator new`( `count`)를 반환하는 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size or smaller. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is the same as for [operator new](../standard-library/new-operators.md#op_new)( **size_t**). The default behavior is to return `operator new`( `count`).  
   
- 두 번째 함수는 `count`바이트의 저장소를 할당하기 위해 placement `new[]` 식에서 호출되며, 해당 크기의 모든 배열 개체를 나타내도록 적절하게 정렬됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 기본 동작은 함수 실행이 성공하면 **operatornew**( `count`)를 반환하는 것입니다. 그렇지 않으면 null 포인터가 반환됩니다.  
+ The second function is called by a placement `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The default behavior is to return **operatornew**( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 세 번째 함수는 **new** ( *args*) **T**[ **N**] 형식의 placement `new[]` 식에 의해 호출됩니다. 여기에서 *args*는 단일 개체 포인터로 구성됩니다. 함수에서 `ptr`을 반환합니다.  
+ The third function is called by a placement `new[]` expression, of the form **new** ( *args*) **T**[ **N**]. Here, *args* consists of a single object pointer. The function returns `ptr`.  
   
- `operator new[]`에서 할당하는 저장소를 비우려면 [operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)를 호출합니다.  
+ To free storage allocated by `operator new[]`, call [operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
- new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_alloc.cpp  
@@ -251,7 +251,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

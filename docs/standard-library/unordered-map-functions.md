@@ -1,5 +1,5 @@
 ---
-title: "&lt;unordered_map&gt; 함수 | Microsoft Docs"
+title: '&lt;unordered_map&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,20 +17,22 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b60954085c747fb06bc6ba4f6058909a54765e49
+helpviewer_keywords:
+- ', '
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 684a64b21b8ffac0d80fdfdc5e09e6d366116511
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 함수
+# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; functions
 |||  
 |-|-|  
-|[swap(unordered_map)](#swap)|[swap(unordered_multimap)](#swap_function_multimap)|  
+|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|  
   
-##  <a name="swap"></a>  swap(unordered_map)  
- 두 컨테이너의 내용을 바꿉니다.  
+##  <a name="swap"></a>  swap (unordered_map)  
+ Swaps the contents of two containers.  
   
 ```  
 template <class Key, class Ty, class Hash, class Pred, class Alloc>  
@@ -39,32 +41,32 @@ void swap(
     unordered_map <Key, Ty, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Key`  
- 키 형식입니다.  
+ The key type.  
   
  `Ty`  
- 매핑된 형식입니다.  
+ The mapped type.  
   
  `Hash`  
- 해시 함수 개체 형식입니다.  
+ The hash function object type.  
   
  `Pred`  
- 같음 비교 함수 개체 형식입니다.  
+ The equality comparison function object type.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 교환할 첫 번째 컨테이너입니다.  
+ The first container to swap.  
   
  `right`  
- 교환할 두 번째 컨테이너입니다.  
+ The second container to swap.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`을 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__u_m_swap.cpp   
@@ -120,8 +122,8 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="swap_function_multimap"></a>  swap(unordered_multimap)  
- 두 컨테이너의 내용을 바꿉니다.  
+##  <a name="swap_function_multimap"></a>  swap (unordered_multimap)  
+ Swaps the contents of two containers.  
   
 ```  
 template <class Key, class Ty, class Hash, class Pred, class Alloc>  
@@ -130,32 +132,32 @@ void swap(
     unordered_multimap <Key, Ty, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Key`  
- 키 형식입니다.  
+ The key type.  
   
  `Ty`  
- 매핑된 형식입니다.  
+ The mapped type.  
   
  `Hash`  
- 해시 함수 개체 형식입니다.  
+ The hash function object type.  
   
  `Pred`  
- 같음 비교 함수 개체 형식입니다.  
+ The equality comparison function object type.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 교환할 첫 번째 컨테이너입니다.  
+ The first container to swap.  
   
  `right`  
- 교환할 두 번째 컨테이너입니다.  
+ The second container to swap.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`을 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__u_mm_swap.cpp   
@@ -211,7 +213,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)
 
 

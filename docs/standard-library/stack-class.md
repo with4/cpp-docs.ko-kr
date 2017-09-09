@@ -1,5 +1,5 @@
 ---
-title: "stack 클래스 | Microsoft Docs"
+title: stack Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stack
 - stack/std::stack::container_type
 - stack/std::stack::size_type
 - stack/std::stack::value_type
@@ -21,8 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- stack, stack class
-- stack class
+- std::stack [C++], container_type
+- std::stack [C++], size_type
+- std::stack [C++], value_type
+- std::stack [C++], empty
+- std::stack [C++], pop
+- std::stack [C++], push
+- std::stack [C++], size
+- std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
 caps.latest.revision: 22
 author: corob-msft
@@ -42,98 +47,98 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f09ff7fca199d2d30c35954a69ee292ee61e151e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="stack-class"></a>stack 클래스
-최근에 일부 기본 컨테이너 형식에 추가된 요소로만 액세스를 제한하는 템플릿 컨테이너 어댑터 클래스입니다. stack 클래스는 컨테이너에서 스택 작업만 수행되고 있음을 명확하게 해야 하는 경우에 사용됩니다.  
+# <a name="stack-class"></a>stack Class
+A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type. The stack class is used when it is important to be clear that only stack operations are being performed on the container.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type, class Container= deque <Type>>  
 class stack  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *Type*  
- 스택에 저장되는 요소 데이터 형식입니다.  
+ The element data type to be stored in the stack.  
   
  `Container`  
- 스택을 구현하는 데 사용된 기본 컨테이너의 형식입니다. 기본값은 클래스 `deque`*\<Type>*입니다.  
+ The type of the underlying container used to implement the stack. The default value is the class `deque`*\<Type>*.  
   
-## <a name="remarks"></a>설명  
- stack 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type**의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The elements of class **Type** stipulated in the first template parameter of a stack object are synonymous with [value_type](#value_type) and must match the type of element in the underlying container class **Container** stipulated by the second template parameter. The **Type** must be assignable, so that it is possible to copy objects of that type and to assign values to variables of that type.  
   
- 스택에 적합한 기본 컨테이너 클래스에는 **back**, `push_back` 및 `pop_back`의 작업을 지원하는 [deque](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md) 및 [vector 클래스](../standard-library/vector-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.  
+ Suitable underlying container classes for stack include [deque](../standard-library/deque-class.md), [list class](../standard-library/list-class.md), and [vector class](../standard-library/vector-class.md), or any other sequence container that supports the operations of **back**, `push_back`, and `pop_back`. The underlying container class is encapsulated within the container adaptor, which exposes only the limited set of the sequence container member functions as a public interface.  
   
- stack 개체는 클래스 **Type**의 요소가 동등 비교 가능한 경우에만 동등 비교할 수 있으며 클래스 **Type**의 요소가 미만 비교 가능한 경우에만 미만 비교가 가능합니다.  
+ The stack objects are equality comparable if and only if the elements of class **Type** are equality comparable and are less-than comparable if and only if the elements of class **Type** are less-than comparable.  
   
--   stack 클래스는 LIFO(후입선출) 데이터 구조를 지원합니다. 쌓여 있는 접시 더미의 예로 이해할 수 있습니다. 요소(접시)는 기본 컨테이너의 끝에 있는 마지막 요소인 스택의 맨 위에서만 삽입하거나 검사하거나 제거할 수 있습니다. 맨 위 요소로만 액세스를 제한하는 것이 stack 클래스를 사용하는 이유입니다.  
+-   The stack class supports a last-in, first-out (LIFO) data structure. A good analogue to keep in mind would be a stack of plates. Elements (plates) may be inserted, inspected, or removed only from the top of the stack, which is the last element at the end of the base container. The restriction to accessing only the top element is the reason for using the stack class.  
   
--   [queue 클래스](../standard-library/queue-class.md)는 FIFO(선입선출) 데이터 구조를 지원합니다. 은행 창구 직원을 만나려고 줄 서 있는 사람들의 예로 이해할 수 있습니다. 요소(사람)는 줄의 뒤에 추가될 수 있고 줄의 앞에서 제거됩니다. 줄의 앞과 뒤는 모두 검사할 수 있습니다. queue 클래스를 사용하는 이유는 이 방식으로 앞과 뒤의 요소만 액세스할 수 있기 때문입니다.  
+-   The [queue class](../standard-library/queue-class.md) supports a first-in, first-out (FIFO) data structure. A good analogue to keep in mind would be people lining up for a bank teller. Elements (people) may be added to the back of the line and are removed from the front of the line. Both the front and the back of a line may be inspected. The restriction to accessing only the front and back elements in this way is the reason fur using the queue class.  
   
--   [priority_queue 클래스](../standard-library/priority-queue-class.md)는 가장 큰 요소가 항상 최상위 위치에 있도록 요소를 정렬합니다. 이 클래스는 요소의 삽입과 최상위 요소의 검사 및 제거를 지원합니다. 나이, 키 또는 기타 조건을 기준으로 정렬된 줄을 선 사람들의 예로 이해할 수 있습니다.  
+-   The [priority_queue class](../standard-library/priority-queue-class.md) orders its elements so that the largest element is always at the top position. It supports insertion of an element and the inspection and removal of the top element. A good analogue to keep in mind would be people lining up where they are arranged by age, height, or some other criterion.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[stack](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|  
+|[stack](#stack)|Constructs a `stack` that is empty or that is a copy of a base container object.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|`stack`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|  
-|[size_type](#size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#value_type)|`stack`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|  
+|[container_type](#container_type)|A type that provides the base container to be adapted by a `stack`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `stack`.|  
+|[value_type](#value_type)|A type that represents the type of object stored as an element in a `stack`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[empty](#empty)|`stack`이 비어 있는지를 테스트합니다.|  
-|[pop](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|  
-|[push](#push)|`stack`의 맨 위에 요소를 추가합니다.|  
-|[size](#size)|`stack`에 있는 요소 수를 반환합니다.|  
-|[top](#top)|`stack`의 맨 위에 있는 요소에 대한 참조를 반환합니다.|  
+|[empty](#empty)|Tests if the `stack` is empty.|  
+|[pop](#pop)|Removes the element from the top of the `stack`.|  
+|[push](#push)|Adds an element to the top of the `stack`.|  
+|[size](#size)|Returns the number of elements in the `stack`.|  
+|[top](#top)|Returns a reference to an element at the top of the `stack`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<stack>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stack>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="container_type"></a>  stack::container_type  
- 조정할 기본 컨테이너를 제공하는 형식입니다.  
+ A type that provides the base container to be adapted.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다. 3개 C++ 표준 라이브러리 시퀀스 컨테이너 클래스(vector 클래스, list 클래스 및 기본 클래스인 deque)는 모두 stack 개체의 기본 컨테이너로 사용하기 위한 요구 사항을 충족합니다. 이러한 요구 사항을 충족하는 사용자 정의 형식도 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Container`. All three C++ Standard Library sequence container classes — the vector class, list class, and the default class deque — meet the requirements to be used as the base container for a stack object. User-defined types satisfying these requirements may also be used.  
   
- `Container`에 대한 자세한 내용은 [stack 클래스](../standard-library/stack-class.md) 항목의 설명 섹션을 참조하세요.  
+ For more information on `Container`, see the Remarks section of the [stack Class](../standard-library/stack-class.md) topic.  
   
-### <a name="example"></a>예제  
-  `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [stack::stack](#stack) for an example of how to declare and use `container_type`.  
   
 ##  <a name="empty"></a>  stack::empty  
- 스택이 비어 있는지 테스트합니다.  
+ Tests if a stack is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스택이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack is empty; **false** if the stack is nonempty.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_empty.cpp  
@@ -167,16 +172,16 @@ The stack s2 is empty.
 ```  
   
 ##  <a name="pop"></a>  stack::pop  
- stack의 가장 윗부분의 요소를 제거합니다.  
+ Removes the element from the top of the stack.  
   
 ```  
 void pop();
 ```  
   
-### <a name="remarks"></a>설명  
- 구성원 함수를 적용하려면 스택이 비어 있지 않아야 합니다. 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The stack must be nonempty to apply the member function. The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_pop.cpp  
@@ -221,20 +226,20 @@ After a pop, the element at the top of the stack is 20.
 ```  
   
 ##  <a name="push"></a>  stack::push  
- 스택 맨 위의 끝부분에 요소를 추가합니다.  
+ Adds an element to the top end of the stack.  
   
 ```  
 void push(const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- 스택의 맨 위에 추가되는 요소입니다.  
+ The element added to the top of the stack.  
   
-### <a name="remarks"></a>설명  
- 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_push.cpp  
@@ -267,16 +272,16 @@ The element at the top of the stack is 30.
 ```  
   
 ##  <a name="size"></a>  stack::size  
- 스택의 요소 수를 반환합니다.  
+ Returns the number of elements in the stack.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스택의 현재 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The current length of the stack.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_size.cpp  
@@ -306,20 +311,20 @@ The stack length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  stack::size_type  
- 스택에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.  
+ An unsigned integer type that can represent the number of elements in a stack.  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 스택에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `size_type` of the base container adapted by the stack.  
   
-### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`.  
   
 ##  <a name="stack"></a>  stack::stack  
- 비어 있거나 기본 컨테이너 개체의 복사본인 스택을 생성합니다.  
+ Constructs a stack that is empty or that is a copy of a base container class.  
   
 ```  
 stack();
@@ -327,11 +332,11 @@ stack();
 explicit stack(const container_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 생성된 스택이 복사본이 되는 컨테이너입니다.  
+ The container of which the constructed stack is to be a copy.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_stack.cpp  
@@ -371,7 +376,7 @@ The element at the top of stack vsi2 is 1.
 ```  
   
 ##  <a name="top"></a>  stack::top  
- stack의 가장 윗부분의 요소에 대한 참조를 반환합니다.  
+ Returns a reference to an element at the top of the stack.  
   
 ```  
 reference top();
@@ -379,15 +384,15 @@ reference top();
 const_reference top() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스택의 맨 위에 있는 컨테이너의 마지막 요소에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the last element in the container at the top of the stack.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수를 적용하려면 스택이 비어 있지 않아야 합니다. 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The stack must be nonempty to apply the member function. The top of the stack is the position occupied by the most recently added element and is the last element at the end of the container.  
   
- **top**의 반환 값이 `const_reference`에 할당된 경우 stack 개체를 수정할 수 없습니다. **top**의 반환 값이 **reference**에 할당된 경우에는 stack 개체를 수정할 수 있습니다.  
+ If the return value of **top** is assigned to a `const_reference`, the stack object cannot be modified. If the return value of **top** is assigned to a **reference**, the stack object can be modified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_top.cpp  
@@ -419,16 +424,16 @@ The next integer down is 1.
 ```  
   
 ##  <a name="value_type"></a>  stack::value_type  
- 스택에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.  
+ A type that represents the type of object stored as an element in a stack.  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 스택에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `value_type` of the base container adapted by the stack.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_value_type.cpp  
@@ -457,8 +462,8 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

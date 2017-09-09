@@ -1,5 +1,5 @@
 ---
-title: "cauchy_distribution 클래스 | Microsoft 문서"
+title: cauchy_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cauchy_distribution
 - random/std::cauchy_distribution
 - random/std::cauchy_distribution::reset
 - random/std::cauchy_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- cauchy_distribution class
+- std::cauchy_distribution [C++]
+- std::cauchy_distribution [C++], reset
+- std::cauchy_distribution [C++], a
+- std::cauchy_distribution [C++], b
+- std::cauchy_distribution [C++], param
+- std::cauchy_distribution [C++], min
+- std::cauchy_distribution [C++], max
+- std::cauchy_distribution [C++], param_type
+- std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
 caps.latest.revision: 25
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2af8fbb5fb6bfee6bc0a996fffe2e62f1d78cde0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf0bfe22396096a054e841619959b5285b11fab8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution 클래스
-코시 분포를 생성합니다.  
+# <a name="cauchydistribution-class"></a>cauchy_distribution Class
+Generates a Cauchy distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>  
@@ -88,35 +95,35 @@ public:
    };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
 
-## <a name="remarks"></a>설명  
-코시 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 부동 소수점 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Cauchy Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
 |`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|  
   
-속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 `a` 및 `b` 각각에 대한 값을 반환합니다.  
+The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.  
   
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-코시 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Cauchy Distribution](http://go.microsoft.com/fwlink/LinkId=400523)(코시 분포)을 참조하세요.  
+For detailed information about the cauchy distribution, see the Wolfram MathWorld article [Cauchy Distribution](http://go.microsoft.com/fwlink/LinkId=400523).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -176,7 +183,7 @@ int main()
 }  
 ```  
   
-첫 번째 실행:  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -201,7 +208,7 @@ Distribution for 10 samples:
     10: 2.5253154706  
 ```  
   
-두 번째 실행:  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -226,7 +233,7 @@ Distribution for 10 samples:
     10: 25.2531547063  
 ```  
   
-세 번째 실행:  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -251,38 +258,38 @@ Distribution for 10 samples:
     10: 35.2531547063  
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**네임스페이스:** std  
+**Namespace:** std  
   
 ##  <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
-분포를 생성합니다.  
+Constructs the distribution.  
   
 ```  
 explicit cauchy_distribution(result_type a = 0.0, result_type b = 1.0);
 explicit cauchy_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *a*  
-`a` 분포 매개 변수입니다.  
+The `a` distribution parameter.  
   
 *b*  
-`b` 분포 매개 변수입니다.  
+The `b` distribution parameter.  
   
 *parm*  
-분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < b`  
   
-첫 번째 생성자는 저장된 `a` 값이 *a* 값을 갖고 저장된 `b` 값이 *b* 값을 갖는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  cauchy_distribution::param_type  
-분포의 모든 매개 변수를 저장합니다.  
+Stores all the parameters of the distribution.  
   
 ```cpp    
 struct param_type {  
@@ -296,22 +303,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *a*  
-`a` 분포 매개 변수입니다.  
+The `a` distribution parameter.  
   
 *b*  
-`b` 분포 매개 변수입니다.  
+The `b` distribution parameter.  
   
 *right*  
-이 매개 변수와 비교할 `param_type` 개체입니다.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < b`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

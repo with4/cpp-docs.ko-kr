@@ -1,5 +1,5 @@
 ---
-title: "&lt;mutex&gt; 함수 및 변수 | Microsoft Docs"
+title: '&lt;mutex&gt; functions and variables | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,28 +15,34 @@ f1_keywords:
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: dd24fb7f1b65f92c57915afa5f9b0412e019059d
+helpviewer_keywords:
+- std::adopt_lock [C++]
+- std::call_once [C++]
+- std::defer_lock [C++]
+- std::lock [C++]
+- std::try_to_lock [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 28ceab348f8daac6f764125a933d6e8e0dd12b84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 함수 및 변수
+# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; functions and variables
 ||||  
 |-|-|-|  
 |[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|  
 |[lock](#lock)|[try_to_lock](#try_to_lock)|  
   
-##  <a name="adopt_lock"></a>  adopt_lock 변수  
- 생성자에게 전달 중인 뮤텍스 개체가 잠겨 있음을 나타내기 위해 [lock_guard](../standard-library/lock-guard-class.md) 및 [unique_lock](../standard-library/unique-lock-class.md)의 생성자에 전달할 수 있는 개체를 나타냅니다.  
+##  <a name="adopt_lock"></a>  adopt_lock Variable  
+ Represents an object that can be passed to constructors for [lock_guard](../standard-library/lock-guard-class.md) and [unique_lock](../standard-library/unique-lock-class.md) to indicate that the mutex object that is also being passed to the constructor is locked.  
   
 ```cpp  
 const adopt_lock_t adopt_lock;
 ```  
   
 ##  <a name="call_once"></a>  call_once  
- 지정된 호출 가능 개체를 실행 중 정확하게 한 번 호출할 수 있는 메커니즘을 제공합니다.  
+ Provides a mechanism for calling a specified callable object exactly once during execution.  
   
 ```
 template <class Callable, class... Args>
@@ -44,47 +50,47 @@ void call_once(once_flag& Flag,
     Callable F&&, Args&&... A);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Flag`  
- 호출 가능 개체가 한 번만 호출되도록 하는 [once_flag](../standard-library/once-flag-structure.md) 개체입니다.  
+ A [once_flag](../standard-library/once-flag-structure.md) object that ensures that the callable object is only called once.  
   
  `F`  
- 호출 가능 개체입니다.  
+ A callable object.  
   
  `A`  
- 인수 목록입니다.  
+ An argument list.  
   
-### <a name="remarks"></a>설명  
- `Flag`가 유효하지 않으면 함수는 오류 코드가 `invalid_argument`인 [system_error](../standard-library/system-error-class.md)를 throw합니다. 그렇지 않은 경우 템플릿 함수는 해당 `Flag` 인수를 사용하여 템플릿 함수가 호출되는 횟수와 관계없이 `F(A...)`를 정확히 한 번 올바르게 호출합니다. 예외가 throw되어 `F(A...)`가 종료되면 호출은 실패한 것입니다.  
+### <a name="remarks"></a>Remarks  
+ If `Flag` is not valid, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`. Otherwise, the template function uses its `Flag` argument to ensure that it calls `F(A...)` successfully exactly once, regardless of how many times the template function is called. If `F(A...)` exits by throwing an exception, the call was not successful.  
   
-##  <a name="defer_lock"></a>  defer_lock 변수  
- [unique_lock](../standard-library/unique-lock-class.md)을 위해 생성자에 전달할 수 있는 개체를 나타냅니다. 이 변수는 생성자가 역시 생성자로 전달되는 뮤텍스 개체를 잠그면 안 됨을 나타냅니다.  
+##  <a name="defer_lock"></a>  defer_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md). This indicates that the constructor should not lock the mutex object that's also being passed to it.  
   
 ```cpp  
 const defer_lock_t defer_lock;
 ```  
   
 ##  <a name="lock"></a>  lock  
- 교착 상태가 발생하지 않고 모든 인수를 잠그려고 시도합니다.  
+ Attempts to lock all arguments without deadlock.  
   
 ```cpp  
 template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수에 대한 인수는 *뮤텍스 형식*이어야 합니다. 단, `try_lock` 호출에서는 예외를 throw할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The arguments to the template function must be *mutex types*, except that calls to `try_lock` might throw exceptions.  
   
- 함수는 `lock`, `try_lock`, `unlock` 호출에 의한 교착 상태 없이 모든 인수를 잠급니다. `lock` 또는 `try_lock` 호출에서 예외가 throw되면 함수는 예외를 다시 throw하기 전에 정상적으로 잠긴 모든 뮤텍스 개체에 대해 `unlock`을 호출합니다.  
+ The function locks all of its arguments without deadlock by calls to `lock`, `try_lock`, and `unlock`. If a call to `lock` or `try_lock` throws an exception, the function calls `unlock` on any of the mutex objects that were successfully locked before rethrowing the exception.  
   
-##  <a name="try_to_lock"></a>  try_to_lock 변수  
- 생성자가 차단 없이 역시 생성자로 전달되는 `mutex`의 잠금 해제를 시도해야 함을 나타내기 위해 [unique_lock](../standard-library/unique-lock-class.md)의 생성자에 전달할 수 있는 개체를 나타냅니다.  
+##  <a name="try_to_lock"></a>  try_to_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md) to indicate that the constructor should try to unlock the `mutex` that is also being passed to it without blocking.  
   
 ```cpp  
 const try_to_lock_t try_to_lock;
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<mutex>](../standard-library/mutex.md)
 
 

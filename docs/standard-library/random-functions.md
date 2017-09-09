@@ -1,48 +1,52 @@
 ---
-title: "&lt;random&gt; 함수 | Microsoft Docs"
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>&lt;random&gt; 함수
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
 ##  <a name="generate_canonical"></a>  generate_canonical  
- 임의 시퀀스에서 부동 소수점 값을 반환합니다.  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  ISO C++ 표준에 따르면 이 함수는 범위 [ `0`, `1`) 내 값을 반환해야 합니다. Visual Studio는 아직 이 제약 조건을 따르고 있지 않습니다. 이 범위에 속하는 값을 생성하려면 [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)을 사용합니다.  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- 부동 소수점 정수 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- 난수 생성기입니다.  
+ The random number generator.  
   
  `Gen`  
- 난수 생성기입니다.  
+ The random number generator.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 `operator()`의 `Gen`를 반복적으로 호출하고 `x`에서 지정한 수의 가수 비트를 수집할 때까지 반환된 값을 `RealType` 형식의 부동 소수점 값 `x`로 압축합니다. 지정된 수는 `Bits`(0이 아니어야 함)와 `RealType`의 전체 가수 비트 수보다 작아야 합니다. 첫 번째 호출은 최하위 비트를 제공합니다. 함수에서 `x`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

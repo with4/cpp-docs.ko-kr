@@ -1,5 +1,5 @@
 ---
-title: "remove_reference 클래스 | Microsoft Docs"
+title: remove_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_reference
 - type_traits/std::remove_reference
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 873efb477296b9f6765eb9a85d9ac62f63405382
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ae1dbd6447b6f9f2544f58c74c132ace200b19d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removereference-class"></a>remove_reference 클래스
-형식에서 비참조 형식을 만듭니다.  
+# <a name="removereference-class"></a>remove_reference Class
+Makes non reference type from type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_reference_t = typename remove_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 수정할 형식입니다.  
+ The type to modify.  
   
-## <a name="remarks"></a>설명  
- `remove_reference<T>`의 인스턴스는 `T1`가 `T` 형식인 경우 수정된 형식인 `T1&`을 보관하고, 그렇지 않은 경우 `T`를 보관합니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_reference<T>` holds a modified-type that is `T1` when `T` is of the form `T1&`, otherwise `T`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_reference_t<int&> == int  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_lvalue_reference 클래스](../standard-library/add-lvalue-reference-class.md)
+ [add_lvalue_reference Class](../standard-library/add-lvalue-reference-class.md)
 

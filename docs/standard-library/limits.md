@@ -1,5 +1,5 @@
 ---
-title: "&lt;limits&gt; | Microsoft 문서"
+title: '&lt;limits&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<limits>
-- std::<limits>
-- limits/std::<limits>
-- <limits>
+- std::<limits>", "limits/std::<limits>", "<limits>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,42 +33,42 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: bd4d0e1dbc7b350cd0683fdd5e6ad3fc1dc1f781
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1e3dec2877b948a9927b7127d2f185fc83650fe6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
-템플릿 클래스 `numeric_limits`와 부동 소수점 표현 및 반올림과 관련된 두 개의 열거형을 정의합니다.  
+Defines the template class `numeric_limits` and two enumerations concerning floating-point representations and rounding.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <limits>  
   
 ```  
   
-## <a name="remarks"></a>설명  
- `numeric_limits` 클래스의 명시적 특수화는 문자, 정수 및 부동 소수점 형식과 C++ 언어 규칙으로 고정되지 않고 구현에서 정의된 `bool`을 포함하여 기본 형식의 많은 속성을 설명합니다. \<limits>에 설명된 속성에는 정확도, 최소 및 최대 크기 표현, 반올림 및 신호 형식 오류가 포함됩니다.  
+## <a name="remarks"></a>Remarks  
+ Explicit specializations of the `numeric_limits` class describe many properties of the fundamental types, including the character, integer, and floating-point types and `bool` that are implementation defined rather than fixed by the rules of the C++ language. Properties described in \<limits> include accuracy, minimum and maximum sized representations, rounding, and signaling type errors.  
   
-### <a name="enumerations"></a>열거형  
-  
-|||  
-|-|-|  
-|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|이 열거형은 구현에서 비정규화된 부동 소수점 값(너무 작아서 정규화된 값으로 나타낼 수 없는 값)을 나타내기 위해 선택할 수 있는 다양한 메서드를 설명합니다.|  
-|[float_round_style](../standard-library/limits-enums.md#float_round_style)|이 열거형은 구현에서 부동 소수점 값을 정수 값으로 반올림하기 위해 선택할 수 있는 다양한 메서드를 설명합니다.|  
-  
-### <a name="classes"></a>클래스  
+### <a name="enumerations"></a>Enumerations  
   
 |||  
 |-|-|  
-|[numeric_limits 클래스](../standard-library/numeric-limits-class.md)|이 템플릿 클래스는 기본 제공 숫자 형식의 산술 속성을 설명합니다.|  
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|The enumeration describes the various methods that an implementation can choose for representing a denormalized floating-point value — one too small to represent as a normalized value:|  
+|[float_round_style](../standard-library/limits-enums.md#float_round_style)|The enumeration describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[numeric_limits Class](../standard-library/numeric-limits-class.md)|The template class describes arithmetic properties of built-in numerical types.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

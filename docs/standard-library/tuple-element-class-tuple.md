@@ -1,5 +1,5 @@
 ---
-title: "tuple_element 클래스 | Microsoft Docs"
+title: tuple_element Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_element
-- std::tuple_element
-- utility/std::tuple_element
+- tuple_element", "std::tuple_element", "utility/std::tuple_element
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_element Class
+- ', '
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
 author: corob-msft
@@ -35,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 86d3e1e93b6a0bedbae20c2dacec7c393c0dd3a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tupleelement-class"></a>tuple_element 클래스
-`tuple` 요소를 래핑합니다. 특수화는 `array` 요소 및 `pair` 요소를 래핑합니다.  
+# <a name="tupleelement-class"></a>tuple_element Class
+Wraps a `tuple` element. Specializations wrap `array` elements and `pair` elements.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 // CLASS tuple_element (find element by index)  
@@ -82,36 +80,36 @@ template <class T1, class T2>
    struct tuple_element<1, pair<T1, T2>>;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *Index*  
-지정된 요소의 인덱스입니다.  
+The index of the designated element.  
   
 *Tuple*  
-튜플의 형식입니다.  
+The type of the tuple.  
   
 *Elem*  
-배열 요소의 형식입니다.  
+The type of an array element.  
   
 *Size*  
-배열의 크기입니다.  
+The size of the array.  
 
-*T1* 쌍의 첫 번째 요소 형식입니다.
+*T1* The type of the first element in a pair.
   
 *T2*  
-쌍의 두 번째 요소 형식입니다.
+The type of the second element in a pair.
 
-## <a name="remarks"></a>설명  
-템플릿 클래스 `tuple_element`에는 튜플 형식 `Tuple`의 인덱스 `Index`에 있는 형식과 동일한 의미인 중첩 형식 정의 `type`이 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class `tuple_element` has a nested typedef `type` that is a synonym for the type at index `Index` of the tuple type `Tuple`.  
 
-`tuple_element_t` 형식 정의는 `tuple_element<Index, Tuple>::type`에 사용할 수 있는 편리한 별칭입니다.  
+The typedef `tuple_element_t` is a convenient alias for `tuple_element<Index, Tuple>::type`.  
   
-배열의 템플릿 클래스 특수화는 `array`에 대한 인터페이스를 각각 형식이 동일한 `Size` 요소의 튜플로 제공합니다. 각 특수화에는 `type` 의 `Index` 요소 형식에 대한 동의어인 중첩된 typedef `array`이 있어 모든 const-volatile 한정자가 유지됩니다.  
+The template class specialization for arrays provides an interface to an `array` as a tuple of `Size` elements, each of which has the same type. Each specialization has a nested typedef `type` that is a synonym for the type of the `Index` element of the `array`, with any const-volatile qualifications preserved.  
   
-`pair` 형식의 템플릿 특수화는 각각 단일 구성원 형식 정의 `type`를 제공합니다. 이 형식 정의는 쌍의 지정된 위치에 있는 요소 형식과 동일한 의미이며, 모든 const 및/또는 volatile 한정자가 유지됩니다. `tuple_element_t` 형식 정의는 `tuple_element<N, pair<T1, T2>>::type`에 사용할 수 있는 편리한 별칭입니다.  
+The template specializations for `pair` types each provide a single member typedef, `type`, which is a synonym for the type of the element at the specified position in the pair, with any const and/or volatile qualifications preserved. The typedef `tuple_element_t` is a convenient alias for `tuple_element<N, pair<T1, T2>>::type`.  
   
-사용 하 여는 [get 함수 &lt;유틸리티&gt; ](../standard-library/utility-functions.md#get) 지정 된 위치 또는 지정 된 형식의 요소를 반환 합니다. 
+Use the [get Function &lt;utility&gt;](../standard-library/utility-functions.md#get) to return the element at a specified position, or of a specified type. 
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>  
@@ -136,7 +134,7 @@ int main() {
 0 1.5 Tail  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -166,7 +164,7 @@ int main()
  0  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <utility>   
@@ -197,10 +195,10 @@ int main() {
  0 1.333  
 ```  
 
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<tuple>  
- **헤더:** \<array>(배열 특수화의 경우)  **헤더:** \<utility>(쌍 특수화의 경우)  **네임스페이스:** std  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
+ **Header:** \<array> (for array specialization) **Header:** \<utility> (for pair specializations) **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [tuple ](../standard-library/tuple-class.md)
 

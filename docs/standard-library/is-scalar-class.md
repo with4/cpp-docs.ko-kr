@@ -1,5 +1,5 @@
 ---
-title: "is_scalar 클래스 | Microsoft 문서"
+title: is_scalar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_scalar
 - type_traits/std::is_scalar
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 7025e3eb4545689522375a9b7943360d9144c0f8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f3d5447a026c7e4955292a4f6057c015d7178c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isscalar-class"></a>is_scalar 클래스
-형식이 스칼라인지 테스트합니다.  
+# <a name="isscalar-class"></a>is_scalar Class
+Tests if type is scalar.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_scalar;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty` 형식이 정수 형식, 부동 소수점 형식, 열거형 형식, 포인터 형식 또는 멤버 포인터 형식이거나 이들 형식 중 하나의 `cv-qualified` 형식이면 true를 포함하고, 그렇지 않으면 false를 포함합니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an integral type, a floating point type, an enumeration type, a pointer type, or a pointer to member type, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_scalar.cpp   
@@ -95,12 +94,12 @@ is_scalar<int> == true
 is_scalar<float> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_compound 클래스](../standard-library/is-compound-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)
 

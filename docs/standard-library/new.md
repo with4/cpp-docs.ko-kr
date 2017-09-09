@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<new>
-- <new>
-- std.<new>
+- std::<new>", "<new>", "std.<new>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,63 +33,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0a864c12451b9265c35405b2b3c5eac82a577485
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
-프로그램이 제어하는 저장소의 할당 및 해제를 제어하는 여러 형식 및 함수를 정의합니다. 또한 저장소 관리 오류에 대한 보고를 위해 구성 요소를 정의합니다.  
+Defines several types and functions that control the allocation and freeing of storage under program control. It also defines components for reporting on storage management errors.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <new>  
   
 ```  
   
-## <a name="remarks"></a>설명  
- 이 헤더에 선언된 함수 중 일부는 교체할 수 있습니다. 구현은 이 문서에서 해당 동작을 설명하는 기본 버전을 제공합니다. 그러나 프로그램에서 동일한 서명으로 함수를 정의하여 링크 타임에 기본 버전을 바꿀 수 있습니다. 대체 버전은 이 문서에 설명된 요구 사항을 충족해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ Some of the functions declared in this header are replaceable. The implementation supplies a default version, whose behavior is described in this document. A program can, however, define a function with the same signature to replace the default version at link time. The replacement version must satisfy the requirements described in this document.  
   
-### <a name="objects"></a>개체  
+### <a name="objects"></a>Objects  
   
 |||  
 |-|-|  
-|[nothrow](../standard-library/new-functions.md#nothrow)|**new** 및 **delete**의 `nothrow` 버전에 대한 인수로 사용할 개체를 제공합니다.|  
+|[nothrow](../standard-library/new-functions.md#nothrow)|Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[new_handler](../standard-library/new-typedefs.md#new_handler)|새 처리기로 사용하기에 적합한 함수를 가리키는 형식입니다.|  
+|[new_handler](../standard-library/new-typedefs.md#new_handler)|A type that points to a function suitable for use as a new handler.|  
   
-### <a name="functions"></a>함수  
-  
-|||  
-|-|-|  
-|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|new가 메모리 할당 시도에 실패할 때 호출되는 사용자 함수를 설치합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#op_delete)|개별 개체에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|개체 배열에 대해 저장소를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.|  
-|[operator new](../standard-library/new-operators.md#op_new)|개별 개체에 대해 저장소를 할당하기 위해 new 식에서 호출되는 함수입니다.|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|개체 배열에 대해 저장소를 할당하기 위해 new 식에서 호출되는 함수입니다.|  
+|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Installs a user function that is called when new fails in its attempt to allocate memory.|  
   
-### <a name="classes"></a>클래스  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[bad_alloc 클래스](../standard-library/bad-alloc-class.md)|이 클래스는 할당 요청이 성공하지 못했음을 나타내기 위해 발생하는 예외를 설명합니다.|  
-|[nothrow_t 클래스](../standard-library/nothrow-t-structure.md)|이 클래스는 함수가 예외를 발생시키는 대신 null 포인터를 반환하여 할당 오류를 보고해야 함을 나타내기 위해 new 연산자에 대한 함수 매개 변수로 사용됩니다.|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|The function called by a delete expression to deallocate storage for individual of objects.|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|The function called by a delete expression to deallocate storage for an array of objects.|  
+|[operator new](../standard-library/new-operators.md#op_new)|The function called by a new expression to allocate storage for individual objects.|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|The function called by a new expression to allocate storage for an array of objects.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[bad_alloc Class](../standard-library/bad-alloc-class.md)|The class describes an exception thrown to indicate that an allocation request did not succeed.|  
+|[nothrow_t Class](../standard-library/nothrow-t-structure.md)|The class is used as a function parameter to operator new to indicate that the function should return a null pointer to report an allocation failure, rather than throw an exception.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

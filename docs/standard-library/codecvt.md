@@ -1,5 +1,5 @@
 ---
-title: "&lt;codecvt&gt; | Microsoft 문서"
+title: '&lt;codecvt&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt
-- std::<codecvt>
-- std.<codecvt>
-- <codecvt>
+- codecvt", "std::<codecvt>", "<codecvt>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,74 +33,74 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: 75f527ca1e0742a1958076b49446b257793c69a5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ebfd3f17d03d7cdb83a5ac8d25e6a1fda472cebb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
-템플릿 클래스 [codecvt](../standard-library/codecvt-class.md)를 기반으로 하는 개체를 설명하는 여러 템플릿 클래스를 정의합니다. 이러한 개체는 `Elem` 형식의 값 시퀀스와 `char` 형식의 값 시퀀스 간의 변환을 제어하는 [로캘 패싯](../standard-library/locale-class.md#facet_class)으로 사용할 수 있습니다.  
+Defines several template classes that describe objects based on template class [codecvt](../standard-library/codecvt-class.md). These objects can serve as [locale facets](../standard-library/locale-class.md#facet_class) that control conversions between a sequence of values of type `Elem` and a sequence of values of type `char`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <codecvt>  
   
 ```  
   
-## <a name="remarks"></a>설명  
- 이 헤더에 선언된 로캘 패싯은 여러 문자 인코딩 간에 변환됩니다. 와이드 문자의 경우(프로그램 내에서 고정 크기의 정수로 저장됨):  
+## <a name="remarks"></a>Remarks  
+ The locale facets declared in this header convert between several character encodings. For wide characters (stored within the program in fixed-size integers):  
   
--   UCS-4는 프로그램 내에서 인코드된 유니코드(ISO 10646)입니다.  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program  
   
--   UCS-4는 프로그램 내에서 32비트 정수로 인코드된 유니코드(ISO 10646)입니다.  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program as a 32-bit integer.  
   
--   UCS-2는 프로그램 내에서 인코드된 유니코드입니다.  
+-   UCS-2 is Unicode encoded within the program  
   
--   UCS-2는 프로그램 내에서 16비트 정수로 인코드된 유니코드입니다.  
+-   UCS-2 is Unicode encoded within the program as a 16-bit integer.  
   
--   UTF-16은 프로그램 내에서 1개 정수로 인코드된 유니코드입니다.  
+-   UTF-16 is Unicode encoded within the program as either one  
   
--   UTF-16은 프로그램 내에서 하나 또는 두 개의 16비트 정수로 인코드된 유니코드입니다. (표준 C 또는 표준 C++에 대한 유효한 와이드 문자 인코딩의 모든 요구 사항을 충족하지는 않습니다. 그럼에도 불구하고 매우 광범위하게 사용됩니다.)  
+-   UTF-16 is Unicode encoded within the program as either one or two 16-bit integers. (Note that this does not meet all the requirements of a valid wide-character encoding for Standard C or Standard C++. Nevertheless it is widely used as such.)  
   
- 바이트 스트림의 경우(파일에 저장되거나 바이트 시퀀스로 전송되거나 프로그램 내에서 `char` 배열로 저장됨):  
+ For byte streams (stored in a file, transmitted as a byte sequence, or stored within the program in an array of `char`):  
   
--   UTF-8은 인코드된 유니코드입니다.  
+-   UTF-8 is Unicode encoded  
   
--   UTF-8은 바이트 스트림 내에서 결정적 바이트 순서를 가진 하나 이상의 8비트 바이트로 인코드된 유니코드입니다.  
+-   UTF-8 is Unicode encoded within a byte stream as one or more eight-bit bytes with a deterministic byte order.  
   
--   UTF-16LE는 인코드된 유니코드입니다.  
+-   UTF-16LE is Unicode encoded  
   
--   UTF-16LE는 바이트 스트림 내에서 각 16비트 정수가 두 개의 8비트 바이트로 표현되며 덜 중요한 바이트가 먼저 표시되는 UTF-16으로 인코드된 유니코드입니다.  
+-   UTF-16LE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, less significant byte first.  
   
--   UTF-16BE는 인코드된 유니코드입니다.  
+-   UTF-16BE is Unicode encoded  
   
--   UTF-16BE는 바이트 스트림 내에서 각 16비트 정수가 두 개의 8비트 바이트로 표현되며 더 중요한 바이트가 먼저 표시되는 UTF-16으로 인코드된 유니코드입니다.  
+-   UTF-16BE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, more significant byte first.  
   
-### <a name="enumerations"></a>열거형  
-  
-|||  
-|-|-|  
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|로캘 패싯에 대한 구성 정보를 지정합니다.|  
-  
-### <a name="classes"></a>클래스  
+### <a name="enumerations"></a>Enumerations  
   
 |||  
 |-|-|  
-|[codecvt_utf8](codecvt-utf8-class.md)|UCS-2 또는 UCS-4로 인코드된 와이드 문자와 UTF-8로 인코드된 바이트 스트림 간에 변환되는 로캘 패싯을 나타냅니다.|  
-|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|UTF-16으로 인코드된 와이드 문자와 UTF-8로 인코드된 바이트 스트림 간에 변환되는 로캘 패싯을 나타냅니다.|  
-|[codecvt_utf16](codecvt-utf16-class.md)|UCS-2 또는 UCS-4로 인코드된 와이드 문자와 UTF-16LE 또는 UTF-16BE로 인코드된 바이트 스트림 간에 변환되는 로캘 패싯을 나타냅니다.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Specifies configuration information for locale facets.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4 and a byte stream encoded as UTF-16LE or UTF-16BE.|  
 
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<codecvt>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<codecvt>  
   
- **네임스페이스:** stdt  
+ **Namespace:** stdt  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

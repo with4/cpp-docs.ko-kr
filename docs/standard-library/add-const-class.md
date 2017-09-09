@@ -1,5 +1,5 @@
 ---
-title: "add_const 클래스 | Microsoft 문서"
+title: add_const Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_const
 - type_traits/std::add_const
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: cb3ac9b9a7d25d129e1faa1b98cac176153c3966
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7865a718b4fa0ed95971ec091d5cfcd1b18a92ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addconst-class"></a>add_const 클래스
-형식에서 const 형식을 만듭니다.  
+# <a name="addconst-class"></a>add_const Class
+Makes const type from type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct add_const;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 수정할 형식입니다.  
+ The type to modify.  
   
-## <a name="remarks"></a>설명  
- `Ty`가 참조, 함수 또는 const 한정 형식인 경우 형식 한정자 인스턴스는 수정된 형식인 `Ty`이고, 그렇지 않은 경우 `const Ty`입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `Ty` if `Ty` is a reference, a function, or a const-qualified type, otherwise `const Ty`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__add_const.cpp   
@@ -83,12 +82,12 @@ int main()
 add_const<int> == int  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_const 클래스](../standard-library/remove-const-class.md)
+ [remove_const Class](../standard-library/remove-const-class.md)
 

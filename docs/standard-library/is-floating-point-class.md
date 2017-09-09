@@ -1,5 +1,5 @@
 ---
-title: "is_floating_point 클래스 | Microsoft 문서"
+title: is_floating_point Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_floating_point
 - type_traits/std::is_floating_point
 dev_langs:
 - C++
@@ -35,33 +34,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: fad953c57d32b7851cff3083fc133dce5fd2ef10
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d907874f5528f131dd413ce9d6305a921ed86bf2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isfloatingpoint-class"></a>is_floating_point 클래스
-형식이 부동 소수점인지를 테스트합니다.  
+# <a name="isfloatingpoint-class"></a>is_floating_point Class
+Tests if type is floating point.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_floating_point;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty` 형식이 부동 소수점 형식 또는 `cv-qualified` 형태의 부동 소수점 형식인 경우 true이고, 그렇지 않은 경우 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a floating point type or a `cv-qualified` form of a floating point type, otherwise it holds false.  
   
- 부동 소수점 형식은 `float`, `double` 또는 `long double` 중 하나입니다.  
+ A floating point type is one of `float`, `double`, or `long double`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_floating_point.cpp   
@@ -94,12 +93,12 @@ is_floating_point<int> == false
 is_floating_point<float> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_integral 클래스](../standard-library/is-integral-class.md)
+ [is_integral Class](../standard-library/is-integral-class.md)
 

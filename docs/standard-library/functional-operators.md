@@ -1,5 +1,5 @@
 ---
-title: "&lt;functional&gt; 연산자 | Microsoft 문서"
+title: '&lt;functional&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,20 +20,20 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f38d129aab8703b6077b2848d7b71bb0a07e0ea7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1b6e189f5940fdbf7a9399a74ba0efaebf6ce823
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 연산자
+# <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; operators
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 호출 가능 개체가 비어 있는지 테스트합니다.  
+ Tests if callable object is empty.  
   
 ```  
 template <class Fty>  
@@ -43,20 +43,20 @@ template <class Fty>
 bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 래핑할 함수 형식입니다.  
+ The function type to wrap.  
   
  `f`  
- 함수 개체입니다.  
+ The function object  
   
  `npc`  
- null 포인터입니다.  
+ A null pointer.  
   
-### <a name="remarks"></a>설명  
- 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있는 경우에만 둘 다 true를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The operators both take an argument that is a reference to a `function` object and an argument that is a null pointer constant. Both return true only if the `function` object is empty.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__operator_eq.cpp
@@ -90,7 +90,7 @@ empty == false
 ```  
   
 ##  <a name="op_neq"></a>  operator!=  
- 호출 가능 개체가 비어 있지 않은지 테스트합니다.  
+ Tests if callable object is not empty.  
   
 ```  
 template <class Fty>  
@@ -100,20 +100,20 @@ template <class Fty>
 bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 래핑할 함수 형식입니다.  
+ The function type to wrap.  
   
  `f`  
- 함수 개체입니다.  
+ The function object  
   
  `npc`  
- null 포인터입니다.  
+ A null pointer.  
   
-### <a name="remarks"></a>설명  
- 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있지 않은 경우에만 둘 다 true를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The operators both take an argument that is a reference to a `function` object and an argument that is a null pointer constant. Both return true only if the `function` object is not empty.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__operator_ne.cpp   
@@ -146,7 +146,7 @@ not empty == false
 not empty == true  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)
 
 

@@ -1,15 +1,14 @@
 ---
-title: "strstreambuf 클래스 | Microsoft Docs"
+title: strstreambuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- strstreambuf
 - strstream/std::strstreambuf::freeze
 - strstream/std::strstreambuf::overflow
 - strstream/std::strstreambuf::pbackfail
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- strstreambuf class
+- std::strstreambuf [C++], freeze
+- std::strstreambuf [C++], overflow
+- std::strstreambuf [C++], pbackfail
+- std::strstreambuf [C++], pcount
+- std::strstreambuf [C++], seekoff
+- std::strstreambuf [C++], seekpos
+- std::strstreambuf [C++], str
+- std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
 caps.latest.revision: 25
 author: corob-msft
@@ -41,86 +47,86 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c83057040c75e4d95a55915dcbd4921557ad71fe
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 040def71458afc772069e6e1cd6bffb6fcdf6983
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="strstreambuf-class"></a>strstreambuf 클래스
-`char` 배열 개체에 저장된 요소의 시퀀스로/에서 요소의 전송을 제어하는 스트림 버퍼를 설명합니다.  
+# <a name="strstreambuf-class"></a>strstreambuf Class
+Describes a stream buffer that controls the transmission of elements to and from a sequence of elements stored in a `char` array object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class strstreambuf : public streambuf  
 ```  
   
-## <a name="remarks"></a>설명  
- 개체 생성 방법에 따라 시퀀스의 변경 내용을 수용하도록 필요에 따라 개체를 할당, 확장 및 해제할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Depending on how the object is constructed, it can be allocated, extended, and freed as necessary to accommodate changes in the sequence.  
   
- `strstreambuf` 클래스의 개체는 모드 정보의 여러 비트를 해당 `strstreambuf` 모드로 저장합니다. 이러한 비트는 제어되는 시퀀스가 다음과 같은지 여부를 나타냅니다.  
+ An object of class `strstreambuf` stores several bits of mode information as its `strstreambuf` mode. These bits indicate whether the controlled sequence:  
   
--   할당되었으며 결국 해제해야 하는지 여부  
+-   Has been allocated and needs to be freed eventually.  
   
--   수정할 수 있는지 여부  
+-   Is modifiable.  
   
--   저장소를 다시 할당하여 확장할 수 있는지 여부  
+-   Is extendable by reallocating storage.  
   
--   고정되어 개체가 아닌 에이전시에서 해당 개체를 삭제하거나 해제(할당된 경우)하기 전에 고정 해제해야 하는지 여부  
+-   Has been frozen and hence needs to be unfrozen before the object is destroyed, or freed (if allocated) by an agency other than the object.  
   
- 고정된 제어되는 시퀀스는 이러한 별도 모드 비트의 상태에 관계없이 수정하거나 확장할 수 없습니다.  
+ A controlled sequence that is frozen cannot be modified or extended, regardless of the state of these separate mode bits.  
   
- 개체는 `strstreambuf` 할당을 제어하는 두 함수에 대한 포인터를 저장합니다. null 포인터인 경우 개체가 제어되는 시퀀스에 대한 저장소를 할당 및 해제하는 고유한 메서드를 만듭니다.  
+ The object also stores pointers to two functions that control `strstreambuf` allocation. If these are null pointers, the object devises its own method of allocating and freeing storage for the controlled sequence.  
   
 > [!NOTE]
->  이 클래스는 사용되지 않습니다. 대신 [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) 또는 [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)를 사용하는 것이 좋습니다.  
+>  This class is deprecated. Consider using [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) or [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf) instead.  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[strstreambuf](#strstreambuf)|`strstreambuf` 형식의 개체를 생성합니다.|  
-  
-### <a name="member-functions"></a>멤버 함수  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[freeze](#freeze)|스트림 버퍼 작업을 통해 스트림 버퍼를 사용할 수 없게 합니다.|  
-|[overflow](#overflow)|가득 찬 버퍼에 새 문자를 삽입할 때 호출할 수 있는 보호된 가상 함수입니다.|  
-|[pbackfail](#pbackfail)|요소를 입력 스트림에 다시 넣은 후 다음 포인터에서 가리키는 현재 요소로 설정하려고 하는 보호된 가상 멤버 함수입니다.|  
-|[pcount](#pcount)|제어되는 시퀀스에 기록되는 요소 수의 개수를 반환합니다.|  
-|[seekoff](#seekoff)|제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.|  
-|[seekpos](#seekpos)|제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.|  
-|[str](#str)|[freeze](#freeze)를 호출한 다음 제어되는 시퀀스의 시작 부분에 대한 포인터를 반환합니다.|  
-|[underflow](#underflow)|입력 스트림에서 현재 요소를 추출하는 보호된 가상 함수입니다.|  
+|[strstreambuf](#strstreambuf)|Constructs an object of type `strstreambuf`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<strstream >  
+### <a name="member-functions"></a>Member Functions  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[freeze](#freeze)|Causes a stream buffer to be unavailable through stream buffer operations.|  
+|[overflow](#overflow)|A protected virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|A protected virtual member function that tries to put back an element into the input stream, and then make it the current element (pointed to by the next pointer).|  
+|[pcount](#pcount)|Returns a count of the number of elements written to the controlled sequence.|  
+|[seekoff](#seekoff)|A protected virtual member function that tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|A protected virtual member function that tries to alter the current positions for the controlled streams.|  
+|[str](#str)|Calls [freeze](#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+|[underflow](#underflow)|A protected virtual function to extract the current element from the input stream.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="freeze"></a>  strstreambuf::freeze  
- 스트림 버퍼 작업을 통해 스트림 버퍼를 사용할 수 없게 합니다.  
+ Causes a stream buffer to be unavailable through stream buffer operations.  
   
 ```  
 void freeze(bool _Freezeit = true);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Freezeit`  
- 스트림을 고정할지를 나타내는 `bool`입니다.  
+ A `bool` indicating whether you want the stream to be frozen.  
   
-### <a name="remarks"></a>설명  
- `_Freezeit`가 true이면 함수는 저장된 `strstreambuf` 모드를 변경하여 제어되는 시퀀스를 고정합니다. 그렇지 않은 경우에는 제어되는 시퀀스를 고정하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ If `_Freezeit` is true, the function alters the stored `strstreambuf` mode to make the controlled sequence frozen. Otherwise, it makes the controlled sequence not frozen.  
   
- [str](#str)은 `freeze`를 의미합니다.  
+ [str](#str) implies `freeze`.  
   
 > [!NOTE]
->  고정된 버퍼는 `strstreambuf` 소멸 중에 해제되지 않습니다. 메모리 누수를 방지하려면 버퍼를 해제하기 전에 고정을 취소해야 합니다.  
+>  A frozen buffer will not be freed during `strstreambuf` destruction. You must unfreeze the buffer before it is freed to avoid a memory leak.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // strstreambuf_freeze.cpp  
@@ -187,63 +193,63 @@ test1test3
 ```  
   
 ##  <a name="overflow"></a>  strstreambuf::overflow  
- 가득 찬 버퍼에 새 문자를 삽입할 때 호출할 수 있는 보호된 가상 함수입니다.  
+ A protected virtual function that can be called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int overflow(int _Meta = EOF);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 버퍼에 삽입할 문자 또는 `EOF`입니다.  
+ The character to insert into the buffer, or `EOF`.  
   
-### <a name="return-value"></a>반환 값  
- 함수는 정상적으로 실행되지 않으면 `EOF`를 반환합니다. 그렇지 않고 _ *Meta* == `EOF`인 경우에는 `EOF` 이외의 값을 반환합니다. 그 외의 경우에는 \_ *Meta*를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns `EOF`. Otherwise, if _ *Meta* == `EOF`, it returns some value other than `EOF`. Otherwise, it returns \_ *Meta*.  
   
-### <a name="remarks"></a>설명  
- _ *Meta* != `EOF`인 경우 보호되는 가상 구성원 함수는 ( `char`)\_ *Meta* 요소를 출력 버퍼에 삽입하려고 합니다. 함수는 여러 가지 방식으로 이 삽입을 수행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* != `EOF`, the protected virtual member function tries to insert the element ( `char`)\_ *Meta* into the output buffer. It can do so in various ways:  
   
--   쓰기 위치를 사용할 수 있는 경우 요소를 쓰기 위칭에 저장하고 출력 버퍼에 대해 다음 포인터를 증분할 수 있습니다.  
+-   If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   저장된 strstreambuf 모드에서 제어되는 시퀀스가 수정/확장 가능하며 고정되어 있지 않음을 나타내면 함수는 출력 버퍼에 대해 쓰기 위치를 새로 할당하여 사용 가능하도록 설정할 수 있습니다. 이러한 방식으로 출력 버퍼를 확장하면 연결된 입력 버퍼도 확장됩니다.  
+-   If the stored strstreambuf mode says the controlled sequence is modifiable, extendable, and not frozen, the function can make a write position available by allocating new for the output buffer. Extending the output buffer this way also extends any associated input buffer.  
   
 ##  <a name="pbackfail"></a>  strstreambuf::pbackfail  
- 요소를 입력 스트림에 다시 넣은 후 다음 포인터에서 가리키는 현재 요소로 설정하려고 하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that tries to put back an element into the input stream, and then makes it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int pbackfail(int _Meta = EOF);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 버퍼에 삽입할 문자 또는 `EOF`입니다.  
+ The character to insert into the buffer, or `EOF`.  
   
-### <a name="return-value"></a>반환 값  
- 함수는 정상적으로 실행되지 않으면 `EOF`를 반환합니다. 그렇지 않고 _ *Meta* == `EOF`인 경우에는 `EOF` 이외의 값을 반환합니다. 그 외의 경우에는 \_ *Meta*를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns `EOF`. Otherwise, if _ *Meta* == `EOF`, it returns some value other than `EOF`. Otherwise, it returns \_ *Meta*.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 구성원 함수는 요소를 입력 버퍼에 다시 넣은 후 다음 포인터에서 가리키는 현재 요소로 설정하려고 합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to put back an element into the input buffer, and then make it the current element (pointed to by the next pointer).  
   
- _ *Meta* == `EOF`인 경우 현재 요소 이전에 스트림에 이미 있었던 요소를 실제로 다시 넣습니다. 그렇지 않으면 요소가 **ch** = ( `char`)\_ *Meta*에 의해 바뀝니다. 함수는 여러 가지 방법으로 요소를 다시 넣을 수 있습니다.  
+ If _ *Meta* == `EOF`, the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **ch** = ( `char`)\_ *Meta*. The function can put back an element in various ways:  
   
--   putback 위치를 사용할 수 있고 여기에 저장된 요소가 **ch**와 비교 시 같으면 입력 버퍼에 대한 다음 포인터를 감소시킬 수 있습니다.  
+-   If a putback position is available, and the element stored there compares equal to **ch**, it can decrement the next pointer for the input buffer.  
   
--   putback 위치를 사용할 수 있고 strstreambuf 모드에서 제어되는 시퀀스가 수정 가능함을 나타내면 함수는 **ch**를 putback 위치에 저장하고 입력 버퍼에 대한 다음 포인터를 감소시킬 수 있습니다.  
+-   If a putback position is available, and if the strstreambuf mode says the controlled sequence is modifiable, the function can store **ch** into the putback position and decrement the next pointer for the input buffer.  
   
 ##  <a name="pcount"></a>  strstreambuf::pcount  
- 제어되는 시퀀스에 기록되는 요소 수의 개수를 반환합니다.  
+ Returns a count of the number of elements written to the controlled sequence.  
   
 ```  
 streamsize pcount() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 제어되는 시퀀스에 기록되는 요소 수의 개수입니다.  
+### <a name="return-value"></a>Return Value  
+ A count of the number of elements written to the controlled sequence.  
   
-### <a name="remarks"></a>설명  
- 구체적으로 [pptr](../standard-library/basic-streambuf-class.md#pptr)이 null 포인터이면 함수는 0을 반환합니다. 그렇지 않으면 반환 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)합니다.  
+### <a name="remarks"></a>Remarks  
+ Specifically, if [pptr](../standard-library/basic-streambuf-class.md#pptr) is a null pointer, the function returns zero. Otherwise, it returns `pptr` - [pbase](../standard-library/basic-streambuf-class.md#pbase).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // strstreambuf_pcount.cpp  
@@ -263,7 +269,7 @@ int main( )
 ```  
   
 ##  <a name="seekoff"></a>  strstreambuf::seekoff  
- 제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual streampos seekoff(streamoff _Off,
@@ -271,74 +277,74 @@ virtual streampos seekoff(streamoff _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- `_Way`를 기준으로 찾을 위치입니다.  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- 오프셋 작업의 시작 지점입니다. 가능한 값은 [seekdir](../standard-library/ios-base-class.md#seekdir)을 참조하세요.  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>반환 값  
- 함수는 스트림 위치 중 하나 또는 두 위치를 모두 정상적으로 변경하면 결과 스트림 위치를 반환합니다. 그렇지 않으면 함수는 실패하며 잘못된 스트림 위치가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds in altering either or both stream positions, it returns the resultant stream position. Otherwise, it fails and returns an invalid stream position.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 구성원 함수는 제어된 스트림의 현재 위치를 변경하려고 합니다. strstreambuf 클래스 개체의 경우 스트림 위치는 스트림 오프셋으로만 구성됩니다. 오프셋 0은 제어되는 시퀀스의 첫 번째 요소를 지정합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class strstreambuf, a stream position consists purely of a stream offset. Offset zero designates the first element of the controlled sequence.  
   
- 새 위치는 다음과 같이 결정됩니다.  
+ The new position is determined as follows:  
   
--   `_Way` == `ios_base::beg`인 경우 새 위치는 스트림 시작 부분에 _ *Off*를 더한 위치입니다.  
+-   If `_Way` == `ios_base::beg`, the new position is the beginning of the stream plus _ *Off*.  
   
--   `_Way` == `ios_base::cur`인 경우 새 위치는 현재 스트림 위치에 _ *Off*를 더한 위치입니다.  
+-   If `_Way` == `ios_base::cur`, the new position is the current stream position plus _ *Off*.  
   
--   `_Way` == `ios_base::end`인 경우 새 위치는 스트림 끝에 _ *Off*를 더한 위치입니다.  
+-   If `_Way` == `ios_base::end`, the new position is the end of the stream plus _ *Off*.  
   
- `_Which` & **ios_base::in**이 0이 아니고 입력 버퍼가 있으면 함수는 입력 버퍼에서 읽을 다음 위치를 변경합니다. `_Which` & **ios_base::out**도 0이 아니고 `_Way` != **ios_base::cur** 및 출력 버퍼가 있는 경우 함수는 읽을 다음 위치와 일치하도록 쓸 다음 위치도 설정합니다.  
+ If `_Which` & **ios_base::in** is nonzero and the input buffer exist, the function alters the next position to read in the input buffer. If `_Which` & **ios_base::out** is also nonzero, `_Way` != **ios_base::cur**, and the output buffer exists, the function also sets the next position to write to match the next position to read.  
   
- 그렇지 않고 `_Which` & `ios_base::out`이 0이 아니며 출력 버퍼가 있으면 함수는 출력 버퍼에서 쓸 다음 위치를 변경합니다. 그렇지 않은 경우 위치 지정 작업이 실패합니다. 위치 지정 작업을 정상적으로 수행하려면 결과 스트림 위치가 제어되는 시퀀스 내에 있어야 합니다.  
+ Otherwise, if `_Which` & `ios_base::out` is nonzero and the output buffer exists, the function alters the next position to write in the output buffer. Otherwise, the positioning operation fails. For a positioning operation to succeed, the resulting stream position must lie within the controlled sequence.  
   
 ##  <a name="seekpos"></a>  strstreambuf::seekpos  
- 제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- 찾을 위치입니다.  
+ The position to seek for.  
   
  `_Which`  
- 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>반환 값  
- 함수는 스트림 위치 중 하나 또는 두 위치를 모두 정상적으로 변경하면 결과 스트림 위치를 반환합니다. 그렇지 않으면 함수는 실패하며 잘못된 스트림 위치가 반환됩니다. 스트림 위치가 잘못되었는지를 확인하려면 반환 값을 `pos_type(off_type(-1))`과 비교합니다.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds in altering either or both stream positions, it returns the resultant stream position. Otherwise, it fails and returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 구성원 함수는 제어된 스트림의 현재 위치를 변경하려고 합니다. strstreambuf 클래스 개체의 경우 스트림 위치는 스트림 오프셋으로만 구성됩니다. 오프셋 0은 제어되는 시퀀스의 첫 번째 요소를 지정합니다. 새 위치는 _ *Sp*에 의해 결정됩니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class strstreambuf, a stream position consists purely of a stream offset. Offset zero designates the first element of the controlled sequence. The new position is determined by _ *Sp*.  
   
- `_Which` & **ios_base::in**이 0이 아니고 입력 버퍼가 있으면 함수는 입력 버퍼에서 읽을 다음 위치를 변경합니다. `_Which` & `ios_base::out`이 0이 아니고 출력 버퍼가 있는 경우 함수는 읽을 다음 위치와 일치하도록 쓸 다음 위치도 설정합니다. 그렇지 않고 `_Which` & `ios_base::out`이 0이 아니며 출력 버퍼가 있으면 함수는 출력 버퍼에서 쓸 다음 위치를 변경합니다. 그렇지 않은 경우 위치 지정 작업이 실패합니다. 위치 지정 작업을 정상적으로 수행하려면 결과 스트림 위치가 제어되는 시퀀스 내에 있어야 합니다.  
+ If `_Which` & **ios_base::in** is nonzero and the input buffer exists, the function alters the next position to read in the input buffer. If `_Which` & `ios_base::out` is nonzero and the output buffer exists, the function also sets the next position to write to match the next position to read. Otherwise, if `_Which` & `ios_base::out` is nonzero and the output buffer exists, the function alters the next position to write in the output buffer. Otherwise, the positioning operation fails. For a positioning operation to succeed, the resulting stream position must lie within the controlled sequence.  
   
 ##  <a name="str"></a>  strstreambuf::str  
- [freeze](#freeze)를 호출한 다음 제어되는 시퀀스의 시작 부분에 대한 포인터를 반환합니다.  
+ Calls [freeze](#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```  
 char *str();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 제어되는 시퀀스의 시작 부분에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>설명  
- 종료 null 요소는 명시적으로 삽입한 경우가 아니면 없습니다.  
+### <a name="remarks"></a>Remarks  
+ No terminating null element exists, unless you explicitly insert one.  
   
-### <a name="example"></a>예제  
-  **str**을 사용하는 샘플은 [strstreambuf::freeze](#freeze)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [strstreambuf::freeze](#freeze) for a sample that uses **str**.  
   
 ##  <a name="strstreambuf"></a>  strstreambuf::strstreambuf  
- `strstreambuf` 형식의 개체를 생성합니다.  
+ Constructs an object of type `strstreambuf`.  
   
 ```  
 explicit strstreambuf(streamsize count = 0);
@@ -368,53 +374,52 @@ strstreambuf(const unsigned char* _Getptr,
     streamsize count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *_Allocfunc*  
- 버퍼 메모리를 할당하는 데 사용되는 함수입니다.  
+ The function used to allocate buffer memory.  
   
  `count`  
- `_Getptr`이 가리키는 버퍼의 길이를 결정합니다. `_Getptr`이 인수(첫 번째 생성자 형식)가 아닌 경우에는 버퍼에 대해 제안된 할당 크기입니다.  
+ Determines the length of the buffer pointed to by `_Getptr`. If `_Getptr` is not an argument (first constructor form), a suggested allocation size for the buffers.  
   
  *_Freefunc*  
- 버퍼 메모리를 확보하는 데 사용되는 함수입니다.  
+ The function used to free buffer memory.  
   
  `_Getptr`  
- 입력에 사용되는 버퍼입니다.  
+ A buffer used for input.  
   
  `_Putptr`  
- 출력에 사용되는 버퍼입니다.  
+ A buffer used for output.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 입력 버퍼, 출력 버퍼 및 strstreambuf 할당을 제어하는 모든 포인터에 null 포인터를 저장합니다. 이 생성자는 제어되는 시퀀스를 수정/확장할 수 있도록 저장된 strstreambuf 모드를 설정합니다. 또한 제안된 초기 할당 크기로 `count`를 허용합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a null pointer in all the pointers controlling the input buffer, the output buffer, and strstreambuf allocation. It sets the stored strstreambuf mode to make the controlled sequence modifiable and extendable. It also accepts `count` as a suggested initial allocation size.  
   
- 두 번째 생성자도 첫 번째 생성자와 동일하게 동작합니다. 단, 저장소 할당을 호출하는 함수에 대한 포인터로 _ *Allocfunc*를 저장하고, 해당 저장소 확보를 호출하는 함수에 대한 포인터로 \_ *Freefunc*를 저장합니다.  
+ The second constructor behaves like the first, except that it stores _ *Allocfunc* as the pointer to the function to call to allocate storage and \_ *Freefunc* as the pointer to the function to call to free that storage.  
   
- 아래에 3개 생성자의 코드가 나와 있습니다.  
+ The three constructors:  
   
 ```  
- 
-    strstreambuf(char *_Getptr,
+strstreambuf(char *_Getptr,
     streamsize count,  
-char *putptr = 0);
-
-    strstreambuf(signed char *_Getptr,
+    char *putptr = 0);
+  
+strstreambuf(signed char *_Getptr,
     streamsize count,  
-signed char *putptr = 0);
-
-    strstreambuf(unsigned char *_Getptr,
+    signed char *putptr = 0);
+  
+strstreambuf(unsigned char *_Getptr,
     streamsize count,  
-unsigned char *putptr = 0);
+    unsigned char *putptr = 0);
 ```  
   
- `_Getptr`이 제어되는 시퀀스를 저장하는 데 사용되는 배열 개체를 지정한다는 점을 제외하면 세 번째 생성자도 첫 번째 생성자와 동일하게 동작합니다. 따라서 이 생성자는 null 포인터가 아니어야 합니다. 배열의 요소 수 *N*은 다음과 같이 결정됩니다.  
+ also behave like the first, except that `_Getptr` designates the array object used to hold the controlled sequence. (Hence, it must not be a null pointer.) The number of elements *N* in the array is determined as follows:  
   
--   ( `count` > 0)인 경우 *N*은 **count**입니다.  
+-   If (`count` > 0), then *N* is `count`.  
   
--   `(``count` == 0)인 경우 *N*은 `strlen`( ( **const**`char` *) `_Getptr` )입니다.  
+-   If (`count` == 0), then *N* is `strlen`( ( **const** `char` *) `_Getptr` ).  
   
--   ( `count` < 0)인 경우 *N*은 **INT_MAX**입니다.  
+-   If (`count` < 0), then *N* is **INT_MAX**.  
   
- `_Putptr`이 null 포인터이면 함수는 다음 코드를 실행하여 입력 버퍼만 설정합니다.  
+ If `_Putptr` is a null pointer, the function establishes just an input buffer by executing:  
   
 ```  
 setg(_Getptr,
@@ -422,7 +427,7 @@ setg(_Getptr,
     _Getptr + N);
 ```  
   
- 그렇지 않으면 다음 코드를 실행하여 입력 버퍼와 출력 버퍼를 모두 설정합니다.  
+ Otherwise, it establishes both input and output buffers by executing:  
   
 ```  
 setg(_Getptr,
@@ -433,47 +438,46 @@ setp(_Putptr,
     _Getptr + N);
 ```  
   
- 이 경우 `_Putptr`은 [ `_Getptr`, `_Getptr` + *N*] 간격 내에 있어야 합니다.  
+ In this case, `_Putptr` must be in the interval [ `_Getptr`, `_Getptr` + *N*].  
   
- 마지막으로, 아래 코드에 나와 있는 세 가지 생성자는  
+ Finally, the three constructors:  
   
 ```  
- 
 strstreambuf(const char *_Getptr,
     streamsize count);
 
-    strstreambuf(const signed char *_Getptr,
+strstreambuf(const signed char *_Getptr,
     streamsize count);
 
-    strstreambuf(const unsigned char *_Getptr,
+strstreambuf(const unsigned char *_Getptr,
     streamsize count);
 ```  
   
- 모두 다음 코드와 동일하게 동작합니다.  
+ all behave the same as:  
   
 ```  
 streambuf((char *)_Getptr, count);
 ```  
   
- 단, 저장된 모드로 인해 제어되는 시퀀스를 수정하거나 확장할 수는 없습니다.  
+ except that the stored mode makes the controlled sequence neither modifiable nor extendable.  
   
 ##  <a name="underflow"></a>  strstreambuf::underflow  
- 입력 스트림에서 현재 요소를 추출하는 보호된 가상 함수입니다.  
+ A protected virtual function to extract the current element from the input stream.  
   
 ```  
 virtual int underflow();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 함수는 정상적으로 실행되지 않으면 `EOF`를 반환합니다. 그렇지 않으면 위에서 설명한 대로 변환된 입력 스트림의 현재 요소를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns `EOF`. Otherwise, it returns the current element in the input stream, converted as described above.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 구성원 함수는 입력 버퍼에서 현재 요소 **ch** 추출을 시도한 다음 현재 스트림 위치로 이동하여 요소를 ( `int`)( `unsigned``char`) **ch**로 반환합니다. 이 경우 사용할 수 있는 방법은 한 가지뿐입니다. 읽기 위치를 사용할 수 있으면 함수는 읽기 위치에 저장된 요소로 **ch**를 가져온 후 입력 버퍼의 다음 포인터로 이동합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to extract the current element **ch** from the input buffer, then advance the current stream position, and return the element as (`int`)(`unsigned char`) **ch**. It can do so in only one way: if a read position is available, it takes **ch** as the element stored in the read position and advances the next pointer for the input buffer.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [streambuf](../standard-library/streambuf-typedefs.md#streambuf)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 프로그래밍](../standard-library/iostream-programming.md)   
- [iostreams 규칙](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

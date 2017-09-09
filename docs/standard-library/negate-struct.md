@@ -1,15 +1,14 @@
 ---
-title: "negate 구조체 | Microsoft Docs"
+title: negate Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- negate
 - xfunctional/std::negate
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 810861f1f1343d13b5e539a1a21206a72bcb3ec1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: be2718d8884f1ae91b252dbe5839c6c54857a82f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="negate-struct"></a>negate 구조체
-인수에 대해 산술 부정 연산(단항 `operator-`)을 수행하는 미리 정의된 함수 개체입니다.  
+# <a name="negate-struct"></a>negate Struct
+A predefined function object that performs the arithmetic negation operation (unary `operator-`) on its argument.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,17 +64,17 @@ struct negate<void>
  };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Type`  
- 지정되었거나 유추된 형식의 피연산자를 사용하는 `operator-`를 지원하는 모든 형식입니다.  
+ Any type that supports an `operator-` that takes an operand of the specified or inferred type.  
   
  `Left`  
- 부정할 피연산자입니다. 특수화된 템플릿은 유추 형식 `Type`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The operand to be negated. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `Type`.  
   
-## <a name="return-value"></a>반환 값  
- `-``Left.`의 결과. 특수화된 템플릿은 단항 `operator-`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+## <a name="return-value"></a>Return Value  
+ The result of `-Left.` The specialized template does perfect forwarding of the result, which has the type that's returned by unary `operator-`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_negate.cpp  
@@ -116,14 +116,14 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

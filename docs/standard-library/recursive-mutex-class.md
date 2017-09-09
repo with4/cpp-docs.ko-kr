@@ -1,5 +1,5 @@
 ---
-title: "recursive_mutex 클래스 | Microsoft Docs"
+title: recursive_mutex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,98 +35,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e5fccf4d1c1019d8922ae0676d7f5fe8e8dfd2a
+helpviewer_keywords:
+- std::recursive_mutex [C++]
+- std::recursive_mutex [C++], recursive_mutex
+- std::recursive_mutex [C++], lock
+- std::recursive_mutex [C++], try_lock
+- std::recursive_mutex [C++], unlock
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b95335a0b67f7345dd61a1de5d6da4589055dc72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="recursivemutex-class"></a>recursive_mutex 클래스
-*뮤텍스 형식*을 나타냅니다. [mutex](../standard-library/mutex-class-stl.md)와 달리 이미 잠겨 있는 개체에 대한 잠금 메서드 호출 동작은 적절하게 정의됩니다.  
+# <a name="recursivemutex-class"></a>recursive_mutex Class
+Represents a *mutex type*. In contrast to [mutex](../standard-library/mutex-class-stl.md), the behavior of calls to locking methods for objects that are already locked is well-defined.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class recursive_mutex;
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[recursive_mutex](#recursive_mutex)|`recursive_mutex` 개체를 생성합니다.|  
-|[~recursive_mutex 소멸자](#dtorrecursive_mutex_destructor)|`recursive_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|  
+|[recursive_mutex](#recursive_mutex)|Constructs a `recursive_mutex` object.|  
+|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Releases any resources that are used by the `recursive_mutex` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock](#lock)|스레드가 뮤텍스의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|  
-|[try_lock](#try_lock)|차단되지 않고 뮤텍스의 소유권을 가져오려고 시도합니다.|  
-|[unlock](#unlock)|뮤텍스의 소유권을 해제합니다.|  
+|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the mutex.|  
+|[try_lock](#try_lock)|Attempts to obtain ownership of the mutex without blocking.|  
+|[unlock](#unlock)|Releases ownership of the mutex.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<뮤텍스 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="lock"></a>  lock  
- 스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.  
+ Blocks the calling thread until the thread obtains ownership of the `mutex`.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>설명  
- 호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 결과를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the method returns immediately, and the previous lock remains in effect.  
   
 ##  <a name="recursive_mutex"></a>  recursive_mutex  
- 잠기지 않은 `recursive_mutex` 개체를 생성합니다.  
+ Constructs a `recursive_mutex` object that is not locked.  
   
 ```cpp  
 recursive_mutex();
 ```  
   
 ##  <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex  
- 개체에서 사용하는 리소스를 모두 해제합니다.  
+ Releases any resources that are used by the object.  
   
 ```cpp  
 ~recursive_mutex();
 ```  
   
-### <a name="remarks"></a>설명  
- 소멸자가 실행될 때 개체가 잠겨 있는 경우, 이 동작은 정의되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ If the object is locked when the destructor runs, the behavior is undefined.  
   
 ##  <a name="try_lock"></a>  try_lock  
- 차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 bool try_lock() noexcept;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 `mutex`의 소유권을 정상적으로 가져오거나 호출 스레드가 `mutex`를 이미 소유하고 있으면 `true`이고 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>설명  
- 호출 스레드가 `mutex`를 이미 소유하고 있으면 함수는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the function immediately returns `true`, and the previous lock remains in effect.  
   
 ##  <a name="unlock"></a>  unlock  
- 뮤텍스의 소유권을 해제합니다.  
+ Releases ownership of the mutex.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 `recursive_mutex` 개체에 대해 [lock](#lock) 및 [try_lock](#try_lock)이 정상적으로 호출된 횟수만큼 호출된 후에만 `mutex`의 소유권을 해제합니다.  
+### <a name="remarks"></a>Remarks  
+ This method releases ownership of the `mutex` only after it is called as many times as [lock](#lock) and [try_lock](#try_lock) have been called successfully on the `recursive_mutex` object.  
   
- 호출 스레드가 `mutex`를 소유하지 않은 경우, 이 동작은 정의되지 않습니다.  
+ If the calling thread does not own the `mutex`, the behavior is undefined.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

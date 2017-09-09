@@ -1,5 +1,5 @@
 ---
-title: "&lt;regex&gt; 연산자 | Microsoft Docs"
+title: '&lt;regex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,14 +19,14 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 507f422cf476e7d6c928c22c516ee2e242282b04
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-operators"></a>&lt;regex&gt; 연산자
+# <a name="ltregexgt-operators"></a>&lt;regex&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/29/2017
 |[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 다양한 개체가 같지 않은지 비교합니다.  
+ Not equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -71,26 +71,26 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 `!(left == right)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left == right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ne.cpp   
@@ -151,7 +151,7 @@ sub != 'a' == true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 다양한 개체가 보다 작은지 비교합니다.  
+ Less than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -184,26 +184,26 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 해당 인수를 문자열 형식으로 변환하고 `left`의 변환된 값이 `right`의 변환된 값과 비교하여 더 작은 경우에만 true를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts its arguments to a string type and returns true only if the converted value of `left` compares less than the converted value of `right`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_lt.cpp   
@@ -259,7 +259,7 @@ sub < 'a' == false
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 스트림에 sub_match를 삽입합니다.  
+ Inserts a sub_match in a stream.  
   
 ```  
 template <class Elem, class IOtraits, class Alloc, class BidIt>  
@@ -267,29 +267,29 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 요소 형식입니다.  
+ The element type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `os`  
- 출력 스트림입니다.  
+ The output stream.  
   
  `right`  
- 삽입할 개체입니다.  
+ The object to insert.  
   
-### <a name="remarks"></a>설명  
- 템플릿 연산자는 `os << right.str()`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template operator returns `os << right.str()`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ins.cpp   
@@ -317,7 +317,7 @@ whole match: caaa
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 다양한 개체가 작거나 같은지 비교합니다.  
+ Less than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -350,26 +350,26 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 `!(right < left)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(right < left)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_le.cpp   
@@ -425,7 +425,7 @@ sub <= 'a' == false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 다양한 개체가 같은지 비교합니다.  
+ Equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -462,34 +462,34 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 해당 인수를 각각 문자열 형식으로 변환하고 변환된 개체가 같은지를 비교한 결과를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts each of its arguments to a string type and returns the result of comparing the converted objects for equality.  
   
- 템플릿 연산자는 해당 인수를 문자열 형식으로 변환할 때 적용되는 다음 변환 중 첫 번째 변환을 사용합니다.  
+ When a template operator converts its arguments to a string type it uses the first of the following transformations that applies:  
   
- 형식이 템플릿 클래스 `match_results` 또는 `sub_match`의 특수화인 인수는 `str` 구성원 함수를 호출하여 변환합니다.  
+ arguments whose types are a specialization of template class `match_results` or `sub_match` are converted by calling the `str` member function;  
   
- 형식이 템플릿 클래스 `basic_string`의 특수화인 인수는 변경되지 않습니다.  
+ arguments whose types are a specialization of the template class `basic_string` are unchanged;  
   
- 그 외의 모든 인수 형식은 템플릿 클래스 `basic_string`의 적절한 특수화를 위한 생성자로 인수 값을 전달하여 변환합니다.  
+ all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the template class `basic_string`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_eq.cpp   
@@ -550,7 +550,7 @@ sub == 'a' == false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 다양한 개체가 보다 큰지 비교합니다.  
+ Greater than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -583,26 +583,26 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 `right < left`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `right < left`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_gt.cpp   
@@ -658,7 +658,7 @@ sub > 'a' == true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 다양한 개체가 크거나 같은지 비교합니다.  
+ Greater than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -691,26 +691,26 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 반복기 형식입니다.  
+ The iterator type.  
   
  `IOtraits`  
- 문자열 특성 클래스입니다.  
+ The string traits class.  
   
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `left`  
- 비교할 왼쪽 개체입니다.  
+ The left object to compare.  
   
  `right`  
- 비교할 오른쪽 개체입니다.  
+ The right object to compare.  
   
-### <a name="remarks"></a>설명  
- 각 템플릿 연산자는 `!(left < right)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left < right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ge.cpp   
@@ -764,15 +764,15 @@ sub >= "aab" == false
 sub >= 'a' == true  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 클래스](../standard-library/regex-constants-class.md)  
-[regex_error 클래스](../standard-library/regex-error-class.md)  
-[\<regex> 함수](../standard-library/regex-functions.md)  
-[regex_iterator 클래스](../standard-library/regex-iterator-class.md)  
-[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 클래스](../standard-library/regex-traits-class.md)  
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 
 

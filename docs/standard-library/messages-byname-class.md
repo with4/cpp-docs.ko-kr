@@ -1,5 +1,5 @@
 ---
-title: "messages_byname 클래스 | Microsoft 문서"
+title: messages_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- messages_byname
 - xlocmes/std::messages_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5bc3f2ed4f97c1beaead7510a0c5c09f5bd91e9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="messagesbyname-class"></a>messages_byname 클래스
-파생된 템플릿 클래스는 지정된 로캘의 메시지 패싯으로 사용하여 지역화된 메시지를 검색할 수 있는 개체에 대해 설명합니다.  
+# <a name="messagesbyname-class"></a>messages_byname Class
+The derived template class describes an object that can serve as a message facet of a given locale, enabling the retrieval of localized messages.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType>
@@ -64,23 +63,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 명명된 로캘입니다.  
+ A named locale.  
   
  `_Refs`  
- 초기 참조 개수입니다.  
+ An initial reference count.  
   
-## <a name="remarks"></a>설명  
- 해당 동작은 명명된 로캘 `_Locname`에 따라 결정됩니다. 각 생성자는 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`)를 통해 기본 개체를 초기화합니다.  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

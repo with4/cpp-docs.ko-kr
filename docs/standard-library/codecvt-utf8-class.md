@@ -1,5 +1,5 @@
 ---
-title: "codecvt_utf8 | Microsoft 문서"
+title: codecvt_utf8 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8
 - codecvt/std::codecvt_utf8
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 1f6c2724747d22aa662779fa8f6433647a7853f3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8294e0edecb56016671223ee7f0d23e6ff0c3d71
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
-UCS-2 또는 UCS-4로 인코드된 와이드 문자와 UTF-8로 인코드된 바이트 스트림 간에 변환되는 [로캘](../standard-library/locale-class.md) 패싯을 나타냅니다.
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-와이드 문자 요소 형식입니다.  
+The wide-character element type.  
 `Maxcode`  
-로캘 패싯에 대한 최대 문자 수입니다.  
+The maximum number of characters for the locale facet.  
 `Mode`  
-로캘 패싯에 대한 구성 정보입니다.  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>Remarks
 
-바이트 스트림은 이진 파일 또는 텍스트 파일에 작성할 수 있습니다.  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>Requirements
 
-헤더: <codecvt> 네임스페이스: std
+Header: <codecvt> Namespace: std
 

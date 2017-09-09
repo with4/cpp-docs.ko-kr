@@ -1,5 +1,5 @@
 ---
-title: "sync_none 클래스 | Microsoft Docs"
+title: sync_none Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sync_none
 - allocators/stdext::sync_none
-- stdext::sync_none
 - allocators/stdext::sync_none::allocate
 - allocators/stdext::sync_none::deallocate
 - allocators/stdext::sync_none::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- sync_none class
+- stdext::sync_none
+- stdext::sync_none [C++], allocate
+- stdext::sync_none [C++], deallocate
+- stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
 caps.latest.revision: 21
 author: corob-msft
@@ -38,95 +39,95 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f56f09f3c3591d0c969ea3b3e242cf39812356fb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 086bf59fa51ee86e14bdb981796587023a034d89
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncnone-class"></a>sync_none 클래스
-동기화를 제공하지 않는 [동기화 필터](../standard-library/allocators-header.md)를 설명합니다.  
+# <a name="syncnone-class"></a>sync_none Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that provides no synchronization.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class sync_none
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|메모리 블록을 할당합니다.|  
-|[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
-|[equals](#equals)|두 캐시가 같은지 비교합니다.|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **네임스페이스:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  sync_none::allocate  
- 메모리 블록을 할당합니다.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|할당할 배열의 요소 수입니다.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 `cache.allocate(count)`를 반환합니다. 여기서 `cache`는 캐시 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `cache.allocate(count)`, where `cache` is the cache object.  
   
 ##  <a name="deallocate"></a>  sync_none::deallocate  
- 지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|  
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 `cache.deallocate(ptr, count)`를 호출합니다. 여기서 `cache`는 캐시 개체를 나타냅니다.  
+### <a name="remarks"></a>Remarks  
+ The member function calls `cache.deallocate(ptr, count)`, where `cache` represents the cache object.  
   
 ##  <a name="equals"></a>  sync_none::equals  
- 두 캐시가 같은지 비교합니다.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|동기화 필터의 캐시 개체입니다.|  
-|`Other`|같은지 비교할 캐시 개체입니다.|  
+|`Cache`|The cache object of the synchronization filter.|  
+|`Other`|The cache object to compare for equality.|  
   
-### <a name="return-value"></a>반환 값  
- 구성원 함수는 항상 `true`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function always returns `true`.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

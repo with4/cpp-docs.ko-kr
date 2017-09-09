@@ -1,5 +1,5 @@
 ---
-title: "valarray&lt;bool&gt; 클래스 | Microsoft Docs"
+title: valarray&lt;bool&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,23 +34,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 717f6acf58738643767555f5473a99cb7c3f44c3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8cc524606c12bbf48ccdc579440e1d98d2b22661
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 클래스
-`bool` 형식의 요소에 대한 템플릿 클래스 **valarray\<Type>**의 특수 버전입니다.  
+# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; Class
+A specialized version of the template class **valarray\<Type>** to elements of type `bool`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class valarray<bool>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // valarray_bool.cpp  
@@ -97,13 +97,13 @@ The result of the less-than comparison test is the
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [valarray 클래스](../standard-library/valarray-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [valarray Class](../standard-library/valarray-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

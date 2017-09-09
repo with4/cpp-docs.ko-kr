@@ -1,5 +1,5 @@
 ---
-title: "time_get_byname 클래스 | Microsoft Docs"
+title: time_get_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_get_byname
 - xloctime/std::time_get_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 609bf85c8d56172f9498997e83740cf9620798dc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4179ade157e45c6ba746a6c7cccaaa8ae44310fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timegetbyname-class"></a>time_get_byname 클래스
-`time_get`\<CharType, InputIterator> 형식의 로캘 패싯으로 사용할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  
+# <a name="timegetbyname-class"></a>time_get_byname Class
+The derived template class describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Elem, class InputIterator =
@@ -65,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 명명된 로캘입니다.  
+ A named locale.  
   
  `_Refs`  
- 초기 참조 횟수  
+ An initial reference count.  
   
-## <a name="requirements"></a>요구 사항  
- 해당 동작은 명명된 로캘 `_Locname`에 따라 결정됩니다. 각 생성자는 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
+## <a name="requirements"></a>Requirements  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

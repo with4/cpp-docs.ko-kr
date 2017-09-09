@@ -1,5 +1,5 @@
 ---
-title: "money_put 클래스 | Microsoft Docs"
+title: money_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocmon/std::money_put
-- money_put
 - locale/std::money_put::char_type
 - locale/std::money_put::iter_type
 - locale/std::money_put::string_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- money_put class
+- std::money_put [C++]
+- std::money_put [C++], char_type
+- std::money_put [C++], iter_type
+- std::money_put [C++], string_type
+- std::money_put [C++], do_put
+- std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 caps.latest.revision: 19
 author: corob-msft
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 825edc66a7b4b565222133ebb47a789efbdba52b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cac0d424273a2c497f42b6aec2cfb78281d20b9d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneyput-class"></a>money_put 클래스
-통화 값에서 `CharType` 형식의 시퀀스로 변환을 제어하는 로캘 패싯으로 사용 가능한 개체에 대해 설명하는 템플릿 클래스입니다.  
+# <a name="moneyput-class"></a>money_put Class
+The template class describes an object that can serve as a locale facet to control conversions of monetary values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -57,54 +61,54 @@ template <class CharType,
 class money_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 로캘의 문자를 인코딩하기 위해 프로그램 내 사용하는 형식입니다.  
+ The type used within a program to encode characters in a locale.  
   
  `OutputIterator`  
- 통화 put 함수가 출력을 쓰는 반복기의 형식입니다.  
+ The type of iterator to which the monetary put functions write their output.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[money_put](#money_put)|`money_put` 형식의 개체에 대한 생성자입니다.|  
+|[money_put](#money_put)|The constructor for objects of type `money_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.|  
-|[iter_type](#iter_type)|출력 반복기에 대해 설명하는 형식입니다.|  
-|[string_type](#string_type)|`CharType` 형식의 문자가 포함된 문자열을 설명하는 형식입니다.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|숫자 또는 문자열을 통화 값을 나타내는 문자 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.|  
-|[put](#put)|숫자 또는 문자열을 통화 값을 나타내는 문자 시퀀스로 변환합니다.|  
+|[do_put](#do_put)|A virtual function called to convert either number or a string to a character sequence that represents a monetary value.|  
+|[put](#put)|Converts either number or a string to a character sequence that represents a monetary value.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  money_put::char_type  
- 로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  money_put::do_put  
- 숫자 또는 문자열을 통화 값을 나타내는 문자 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to convert either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 virtual iter_type do_put(
@@ -123,101 +127,101 @@ virtual iter_type do_put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `next`  
- 삽입된 문자열의 첫 번째 요소 주소를 지정하는 반복기입니다.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- 시퀀스에서 필요한 통화 기호 유형을 나타내는 부울 값입니다. 국제의 경우 **true**이고 국내의 경우 **false**입니다.  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- 간격에 사용되는 문자입니다.  
+ A character which is used for spacing.  
   
  `val`  
- 변환할 문자열 개체입니다.  
+ A string object to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 생성된 마지막 요소에서 한 위치 다음의 위치 주소를 지정하는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>설명  
- 보호되는 첫 번째 가상 구성원 함수는 [string_type](#string_type) 개체 `val`에서 통화 출력 필드를 생성하기 위해 `next`부터 시작하여 순차 요소를 생성합니다. 에 의해 제어 되는 시퀀스 `val` 필요에 따라 앞에 빼기 기호 (-)을 나타내는 하나 이상의 10 진수 숫자로 시작 해야 합니다. 함수는 생성된 통화 출력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function generates sequential elements beginning at `next` to produce a monetary output field from the [string_type](#string_type) object `val`. The sequence controlled by `val` must begin with one or more decimal digits, optionally preceded by a minus sign (-), which represents the amount. The function returns an iterator designating the first element beyond the generated monetary output field.  
   
- 두 번째 보호된 가상 구성원 함수는 실제로 `val`을 먼저 10진수 숫자 시퀀스(필요에 따라 앞에 빼기 기호가 붙음)로 변환한 다음 위의 설명과 같이 해당 시퀀스를 변환한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.  
+ The second virtual protected member function behaves the same as the first, except that it effectively first converts `val` to a sequence of decimal digits, optionally preceded by a minus sign, then converts that sequence as above.  
   
- 통화 출력 필드의 형식은 [locale facet](../standard-library/locale-class.md#facet_class) fac에 의해 결정됩니다. 이 항목은 유효 호출 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc))에서 반환됩니다.  
+ The format of a monetary output field is determined by the [locale facet](../standard-library/locale-class.md#facet_class) fac returned by the (effective) call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
   
- 구체적으로는 다음과 같습니다.  
+ Specifically:  
   
-- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format)은 음수가 아닌 값에 대해 필드 구성 요소가 생성되는 순서를 결정합니다.  
+- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) determines the order in which components of the field are generated for a nonnegative value.  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format)은 음수 값에 대해 필드 구성 요소가 생성되는 순서를 결정합니다.  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determines the order in which components of the field are generated for a negative value.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol)은 통화 기호에 대해 생성할 요소 시퀀스를 결정합니다.  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determines the sequence of elements to generate for a currency symbol.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign)은 양수 기호에 대해 생성할 요소 시퀀스를 결정합니다.  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determines the sequence of elements to generate for a positive sign.  
   
-- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign)은 음수 기호에 대해 생성할 요소 시퀀스를 결정합니다.  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determines the sequence of elements to generate for a negative sign.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping)은 숫자가 소수점 왼쪽으로 그룹화되는 방법을 결정합니다.  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep)는 소수점 왼쪽의 숫자 그룹을 구분하는 요소를 결정합니다.  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determines the element that separates groups of digits to the left of any decimal point.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point)는 소수 자릿수와 정수 자릿수를 구분하는 요소를 결정합니다.  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determines the element that separates the integer digits from any fraction digits.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits)는 소수점 오른쪽에 있는 유효 소수 자릿수의 수를 결정합니다.  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determines the number of significant fraction digits to the right of any decimal point.  
   
- 부호 문자열 ( **fac**. `negative_sign` 또는 **fac**. `positive_sign`)에 요소가 두 개 이상 있으면 첫 번째 요소만 생성되며, **money_base::sign**과 동일한 요소가 형식 패턴 ( **fac**. `neg_format` 또는 **fac**. `pos_format`). 나머지 요소는 통화 출력 필드의 끝에 생성됩니다.  
+ If the sign string ( **fac**. `negative_sign` or **fac**. `positive_sign`) has more than one element, only the first element is generated where the element equal to **money_base::sign** appears in the format pattern ( **fac**. `neg_format` or **fac**. `pos_format`). Any remaining elements are generated at the end of the monetary output field.  
   
- **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase)가 0이 아니면 문자열 **fac**. `curr_symbol`이 생성되며, **money_base::symbol**과 동일한 요소가 형식 패턴에 나타납니다. 그렇지 않은 경우에는 통화 기호가 생성되지 않습니다.  
+ If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) is nonzero, the string **fac**. `curr_symbol` is generated where the element equal to **money_base::symbol** appears in the format pattern. Otherwise, no currency symbol is generated.  
   
- **fac**, **grouping**에 의해 그룹화 제약 조건이 적용되지 않는 경우(해당 첫 번째 요소값이 CHAR_MAX임) **fac**. `thousands_sep`의 인스턴스가 통화 출력 필드의 값 부분에 생성되지 않습니다. 이 필드에는 **money_base::value**와 동일한 요소가 형식 패턴에 나타납니다. **fac**. `frac_digits`가 0이면 소수 자릿수 뒤에 **fac**. `decimal_point`의 인스턴스가 생성되지 않습니다. 그렇지 않은 경우 결과 통화 출력 필드에서 하위 순서 **fac**. `frac_digits` 소수 자릿수가 소수점 오른쪽에 배치됩니다.  
+ If no grouping constraints are imposed by **fac**. **grouping** (its first element has the value CHAR_MAX), then no instances of **fac**. `thousands_sep` are generated in the value portion of the monetary output field (where the element equal to **money_base::value** appears in the format pattern). If **fac**. `frac_digits` is zero, then no instance of **fac**. `decimal_point` is generated after the decimal digits. Otherwise, the resulting monetary output field places the low-order **fac**. `frac_digits` decimal digits to the right of the decimal point.  
   
- 모든 숫자 출력 필드에 대해서는 채우기가 수행됩니다. 단, **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal)이 0이 아니면 내부 채우기가 생성되며 **money_base::space**와 동일한 요소가 형식 패턴에 나타납니다(나타나는 경우). 그렇지 않으면 생성된 시퀀스 앞에서 내부 채우기가 수행됩니다. 채우기 문자는 **fill**입니다.  
+ Padding occurs as for any numeric output field, except that if **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) is nonzero, any internal padding is generated where the element equal to **money_base::space** appears in the format pattern, if it does appear. Otherwise, internal padding occurs before the generated sequence. The padding character is **fill**.  
   
- 함수는 **iosbase**. **width**(0)을 호출하여 필드 너비를 0으로 다시 설정합니다.  
+ The function calls **iosbase**. **width**(0) to reset the field width to zero.  
   
-### <a name="example"></a>예제  
-  **put**에 의해 가상 구성원 함수가 호출되는 [put](#put)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [put](#put), where the virtual member function is called by **put**.  
   
 ##  <a name="iter_type"></a>  money_put::iter_type  
- 출력 반복기에 대해 설명하는 형식입니다.  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **OutputIterator**와 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator.**  
   
 ##  <a name="money_put"></a>  money_put::money_put  
- `money_put` 형식의 개체에 대한 생성자입니다.  
+ The constructor for objects of type `money_put`.  
   
 ```  
 explicit money_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체가 포함된 로캘에서 개체의 수명을 관리합니다.  
+-   0: the lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: the lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: these values are not defined.  
   
- 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
+ No direct examples are possible, because the destructor is protected.  
   
- 생성자는 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="put"></a>  money_put::put  
- 숫자 또는 문자열을 통화 값을 나타내는 문자 시퀀스로 변환합니다.  
+ Converts either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 iter_type put(
@@ -236,29 +240,29 @@ iter_type put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `next`  
- 삽입된 문자열의 첫 번째 요소 주소를 지정하는 반복기입니다.  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- 시퀀스에서 필요한 통화 기호 유형을 나타내는 부울 값입니다. 국제의 경우 **true**이고 국내의 경우 **false**입니다.  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- 집합이 통화 기호가 선택 사항임을 나타낼 때 사용하는 형식 플래그입니다. 그 외의 경우 통화 기호는 필수 항목입니다.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- 간격에 사용되는 문자입니다.  
+ A character which is used for spacing.  
   
  `val`  
- 변환할 문자열 개체입니다.  
+ A string object to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 생성된 마지막 요소에서 한 위치 다음의 위치 주소를 지정하는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>설명  
- 두 구성원 함수는 모두 [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Both member functions return [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // money_put_put.cpp  
@@ -291,18 +295,18 @@ money_put( ) = "CAD1,000.12"
 ```  
   
 ##  <a name="string_type"></a>  money_put::string_type  
- **CharType** 형식의 문자가 포함된 문자열을 설명하는 형식입니다.  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 개체가 소스 시퀀스의 요소 시퀀스를 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store sequences of elements from the source sequence.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [facet 클래스](../standard-library/locale-class.md#facet_class)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

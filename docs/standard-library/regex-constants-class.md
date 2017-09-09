@@ -1,5 +1,5 @@
 ---
-title: "regex_constants 클래스 | Microsoft Docs"
+title: regex_constants Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,63 +9,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_constants
 - regex/std::regex_constants
-- error_collate
 - regex/std::regex_constants::error_collate
-- error_ctype
 - regex/std::regex_constants::error_ctype
-- error_escape
 - regex/std::regex_constants::error_escape
-- error_backref
 - regex/std::regex_constants::error_backref
-- error_brack
 - regex/std::regex_constants::error_brack
-- error_paren
 - regex/std::regex_constants::error_paren
-- error_brace
 - regex/std::regex_constants::error_brace
-- error_badbrace
 - regex/std::regex_constants::error_badbrace
-- error_range
 - regex/std::regex_constants::error_range
-- error_space
 - regex/std::regex_constants::error_space
-- error_badrepeat
 - regex/std::regex_constants::error_badrepeat
-- error_complexity
 - regex/std::regex_constants::error_complexity
-- error_stack
 - regex/std::regex_constants::error_stack
-- error_parse
 - regex/std::regex_constants::error_parse
-- error_syntax
 - regex/std::regex_constants::error_syntax
-- match_default
 - regex/std::regex_constants::match_default
-- match_not_bol
 - regex/std::regex_constants::match_not_bol
-- match_not_eol
 - regex/std::regex_constants::match_not_eol
-- match_not_bow
 - regex/std::regex_constants::match_not_bow
-- match_not_eow
 - regex/std::regex_constants::match_not_eow
-- match_any
 - regex/std::regex_constants::match_any
-- match_not_null
 - regex/std::regex_constants::match_not_null
-- match_continuous
 - regex/std::regex_constants::match_continuous
-- match_prev_avail
 - regex/std::regex_constants::match_prev_avail
-- format_default
 - regex/std::regex_constants::format_default
-- format_sed
 - regex/std::regex_constants::format_sed
-- format_no_copy
 - regex/std::regex_constants::format_no_copy
-- format_first_only
 - regex/std::regex_constants::format_first_only
 - regex/std::regex_constants::ECMAScript
 - regex/std::regex_constants::basic
@@ -80,7 +51,45 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- regex_constants class
+- std::regex_constants [C++]
+- std::regex_constants [C++], error_collate
+- std::regex_constants [C++], error_ctype
+- std::regex_constants [C++], error_escape
+- std::regex_constants [C++], error_backref
+- std::regex_constants [C++], error_brack
+- std::regex_constants [C++], error_paren
+- std::regex_constants [C++], error_brace
+- std::regex_constants [C++], error_badbrace
+- std::regex_constants [C++], error_range
+- std::regex_constants [C++], error_space
+- std::regex_constants [C++], error_badrepeat
+- std::regex_constants [C++], error_complexity
+- std::regex_constants [C++], error_stack
+- std::regex_constants [C++], error_parse
+- std::regex_constants [C++], error_syntax
+- std::regex_constants [C++], match_default
+- std::regex_constants [C++], match_not_bol
+- std::regex_constants [C++], match_not_eol
+- std::regex_constants [C++], match_not_bow
+- std::regex_constants [C++], match_not_eow
+- std::regex_constants [C++], match_any
+- std::regex_constants [C++], match_not_null
+- std::regex_constants [C++], match_continuous
+- std::regex_constants [C++], match_prev_avail
+- std::regex_constants [C++], format_default
+- std::regex_constants [C++], format_sed
+- std::regex_constants [C++], format_no_copy
+- std::regex_constants [C++], format_first_only
+- std::regex_constants [C++], ECMAScript
+- std::regex_constants [C++], basic
+- std::regex_constants [C++], extended
+- std::regex_constants [C++], awk
+- std::regex_constants [C++], grep
+- std::regex_constants [C++], egrep
+- std::regex_constants [C++], icase
+- std::regex_constants [C++], nosubs
+- std::regex_constants [C++], optimize
+- std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 caps.latest.revision: 18
 author: corob-msft
@@ -100,17 +109,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 88a553e1c9a29a1057af91ff096b16547e266ce0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regexconstants-class"></a>regex_constants 클래스
-정규식 플래그에 대한 네임스페이스입니다.  
+# <a name="regexconstants-class"></a>regex_constants Class
+Namespace for regular expression flags.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace regex_constants {  
@@ -120,16 +129,16 @@ namespace regex_constants {
  }  
 ```  
   
-## <a name="remarks"></a>설명  
- 네임스페이스 `regex_constants`는 여러 플래그 형식과 관련 플래그 값을 캡슐화합니다.  
+## <a name="remarks"></a>Remarks  
+ The namespace `regex_constants` encapsulates several flag types and their associated flag values.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="error_type"></a>  regex_constants::error_type  
- 정규식 구문 오류 보고에 대한 플래그입니다.  
+ Flags for reporting regular expression syntax errors.  
   
 ```  
 enum error_type
@@ -152,43 +161,43 @@ enum error_type
     };  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식은 오류 플래그를 저장할 수 있는 개체를 설명하는 열거 형식입니다. 고유 플래그 값은 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is an enumerated type that describes an object that can hold error flags. The distinct flag values are:  
   
- `error_backref` -- 식에 잘못된 역참조가 포함되었습니다.  
+ `error_backref` -- the expression contained an invalid back reference  
   
- `error_badbrace` 식에 잘못된 개수의 { } 식이 포함되었습니다.  
+ `error_badbrace` -- the expression contained an invalid count in a { } expression  
   
- `error_badrepeat` -- 반복 실행 식(대부분의 컨텍스트에서 '*', '?', '+', '{' 중 하나)이 식 뒤에 오지 않았습니다.  
+ `error_badrepeat` -- a repeat expression (one of '*', '', '+', '{' in most contexts) was not preceded by an expression  
   
- `error_brace` -- 식에 일치하지 않는 '(' 또는 ')'가 포함되었습니다.  
+ `error_brace` -- the expression contained an unmatched '{' or '}'  
   
- `error_brack` -- 식에 일치하지 않는 '(' 또는 ')'가 포함되었습니다.  
+ `error_brack` -- the expression contained an unmatched '[' or ']'  
   
- `error_collate` -- 식에 잘못된 데이터 정렬 요소 이름이 포함되었습니다.  
+ `error_collate` -- the expression contained an invalid collating element name  
   
- `error_complexity` -- 시도된 일치가 너무 복잡하여 실패했습니다.  
+ `error_complexity` -- an attempted match failed because it was too complex  
   
- `error_ctype` -- 식에 잘못된 문자 클래스 이름이 포함되었습니다.  
+ `error_ctype` -- the expression contained an invalid character class name  
   
- `error_escape` -- 식에 잘못된 이스케이프 시퀀스가 포함되었습니다.  
+ `error_escape` -- the expression contained an invalid escape sequence  
   
- `error_paren` -- 식에 일치하지 않는 '(' 또는 ')'가 포함되었습니다.  
+ `error_paren` -- the expression contained an unmatched '(' or ')'  
   
- `error_parse` - 식을 구문 분석하지 못했습니다.  
+ `error_parse` -- the expression failed to parse  
   
- `error_range` -- 식에 잘못된 문자 범위 지정자가 포함되었습니다.  
+ `error_range` -- the expression contained an invalid character range specifier  
   
- `error_space` -- 사용 가능한 리소스가 부족하여 정규식을 구문 분석하지 못했습니다.  
+ `error_space` -- parsing a regular expression failed because there were not enough resources available  
   
- `error_stack` -- 사용 가능한 메모리가 부족하여 시도된 일치가 실패했습니다.  
+ `error_stack` -- an attempted match failed because there was not enough memory available  
   
- `error_syntax` -- 구문 오류를 구문 분석하지 못했습니다.  
+ `error_syntax` -- parsing failed on a syntax error  
   
- `error_backref` -- 식에 잘못된 역참조가 포함되었습니다.  
+ `error_backref` -- the expression contained an invalid back reference  
   
 ##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- 정규식 일치 옵션에 대한 플래그입니다.  
+ Flags for regular expression matching options.  
   
 ```  
 enum match_flag_type 
@@ -210,41 +219,41 @@ enum match_flag_type
     };  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식은 정규식에 대해 텍스트 시퀀스를 일치시킬 때 사용할 옵션 및 텍스트를 대체할 때 사용할 형식 플래그에 대해 설명하는 비트 마스크 형식입니다. 옵션은 `|`와 함께 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes options to be used when matching a text sequence against a regular expression and format flags to be used when replacing text. Options can be combined with `|`.  
   
- 일치 옵션은 다음과 같습니다.  
+ The match options are:  
   
  `match_default`  
   
- `match_not_bol` -- 대상 시퀀스의 첫 번째 위치를 줄의 시작으로 처리하지 않습니다.  
+ `match_not_bol` -- do not treat the first position in the target sequence as the beginning of a line  
   
- `match_not_eol` -- 대상 시퀀스의 끝을 지난 위치를 줄의 끝으로 처리하지 않습니다.  
+ `match_not_eol` -- do not treat the past-the-end position in the target sequence as the end of a line  
   
- `match_not_bow` -- 대상 시퀀스의 첫 번째 위치를 단어의 시작으로 처리하지 않습니다.  
+ `match_not_bow` -- do not treat the first position in the target sequence as the beginning of a word  
   
- `match_not_eow` -- 대상 시퀀스의 끝을 지난 위치를 단어의 끝으로 처리하지 않습니다.  
+ `match_not_eow` -- do not treat the past-the-end position in the target sequence as the end of a word  
   
- `match_any` -- 둘 이상의 일치 항목이 가능한 경우 임의 일치 항목이 허용됩니다.  
+ `match_any` -- if more than one match is possible any match is acceptable  
   
- `match_not_null` -- 빈 시퀀스를 일치 항목으로 처리하지 않습니다.  
+ `match_not_null` -- do not treat an empty subsequence as a match  
   
- `match_continuous` -- 대상 시퀀스의 시작 부분이 아닌 다른 위치에서 일치 항목을 검색하지 않습니다.  
+ `match_continuous` -- do not search for matches other than at the beginning of the target sequence  
   
- `match_prev_avail` -- `--first`는 유효한 반복기이며, 설정된 경우 `match_not_bol` 및 `match_not_bow`를 무시합니다.  
+ `match_prev_avail` -- `--first` is a valid iterator; ignore `match_not_bol` and `match_not_bow` if set  
   
- 형식 플래그는 다음과 같습니다.  
+ The format flags are:  
   
- `format_default` -- ECMAScript 형식 규칙을 사용합니다.  
+ `format_default` -- use ECMAScript format rules  
   
- `format_sed` -- sed 형식 규칙을 사용합니다.  
+ `format_sed` -- use sed format rules  
   
- `format_no_copy` -- 정규식과 일치하지 않는 텍스트를 복사하지 않습니다.  
+ `format_no_copy` -- do not copy text that does not match the regular expression  
   
- `format_first_only` -- 첫 번째 일치 항목 뒤에서 일치 항목을 검색하지 않습니다.  
+ `format_first_only` -- do not search for matches after the first one  
   
 ##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- 구문 옵션을 선택하기 위한 플래그입니다.  
+ Flags for selecting syntax options.  
   
 ```  
 enum syntax_option_type
@@ -264,40 +273,40 @@ enum syntax_option_type
     };  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식은 정규식을 컴파일할 때 사용할 언어 지정자 및 구문 한정자를 설명하는 비트 마스크 형식입니다. 옵션은 `|`와 함께 사용할 수 있습니다. 한 번에 둘 이상의 언어 지정자를 사용할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes language specifiers and syntax modifiers to be used when compiling a regular expression. Options can be combined with `|`. No more than one language specifier should be used at a time.  
   
- 언어 지정자는 다음과 같습니다.  
+ The language specifiers are:  
   
- `ECMAScript` -- ECMAScript로 컴파일  
+ `ECMAScript` -- compile as ECMAScript  
   
- `basic` -- BRE로 컴파일  
+ `basic` -- compile as BRE  
   
- `extended` -- ERE로 컴파일  
+ `extended` -- compile as ERE  
   
- `awk` -- awk로 컴파일  
+ `awk` -- compile as awk  
   
- `grep` -- grep로 컴파일  
+ `grep` -- compile as grep  
   
- `egrep` -- egrep로 컴파일  
+ `egrep` -- compile as egrep  
   
- 구문 한정자는 다음과 같습니다.  
+ The syntax modifiers are:  
   
- `icase` -- 일치 항목이 대/소문자를 구분하지 않도록 함  
+ `icase` -- make matches case-insensitive  
   
- `nosubs` -- 구현에서 캡처 그룹의 내용을 추적하지 않아도 됨  
+ `nosubs` -- the implementaton need not keep track of the contents of capture groups  
   
- `optimize` -- 구현에서 정규식 컴파일 속도가 아닌 일치 속도를 강조해야 함  
+ `optimize` -- the implementation should emphasize speed of matching rather than speed of regular expression compilation  
   
- `collate` -- 일치 항목이 로캘을 구분하도록 함  
+ `collate` -- make matches locale-sensitive  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_error 클래스](../standard-library/regex-error-class.md)  
-[\<regex> 함수](../standard-library/regex-functions.md)  
-[regex_iterator 클래스](../standard-library/regex-iterator-class.md)  
-[\<regex> 연산자](../standard-library/regex-operators.md)  
-[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 클래스](../standard-library/regex-traits-class.md)  
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

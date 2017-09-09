@@ -1,5 +1,5 @@
 ---
-title: "cache_chunklist 클래스 | Microsoft 문서"
+title: cache_chunklist Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
-- stdext::cache_chunklist
-- cache_chunklist
 - allocators/stdext::cache_chunklist::allocate
 - allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
-- cache_chunklist class
+- stdext::cache_chunklist
+- stdext::cache_chunklist [C++], allocate
+- stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 caps.latest.revision: 17
 author: corob-msft
@@ -37,96 +37,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6ffeb2a0ac7f1d5b6f45ea351e8448475b232b88
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist 클래스
-단일 크기의 메모리 블록을 할당하고 할당 취소하는 [블록 할당자](../standard-library/allocators-header.md)를 정의합니다.  
+# <a name="cachechunklist-class"></a>cache_chunklist Class
+Defines a [block allocator](../standard-library/allocators-header.md) that allocates and deallocates memory blocks of a single size.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Sz, std::size_t Nelts = 20>  
 class cache_chunklist
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|할당할 배열의 요소 수입니다.|  
+|`Sz`|The number of elements in the array to be allocated.|  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 `operator new`를 사용하여 원시 메모리의 청크를 할당하고, 필요한 경우 메모리 블록에 대한 저장소를 할당할 블록을 하위 할당합니다. 또한 각 청크에 대한 별도의 사용 가능한 목록에 할당 취소된 메모리 블록을 저장하고, 사용 중인 메모리 블록이 없는 청크의 경우 `operator delete`를 사용하여 할당 취소합니다.  
+## <a name="remarks"></a>Remarks  
+ This template class uses `operator new` to allocate chunks of raw memory, suballocating blocks to allocate storage for a memory block when needed; it stores deallocated memory blocks in a separate free list for each chunk, and uses `operator delete` to deallocate a chunk when none of its memory blocks is in use.  
   
- 각 메모리 블록은 `Sz` 바이트의 사용 가능한 메모리 및 해당 블록이 속해 있는 청크에 대한 포인터를 포함합니다. 각 청크는 `operator new`와 `operator delete`에서 필요로 하는 `Nelts` 메모리 블록, 세 가지 포인터, int 및 데이터를 포함합니다.  
+ Each memory block holds `Sz` bytes of usable memory and a pointer to the chunk that it belongs to. Each chunk holds `Nelts` memory blocks, three pointers, an int and the data that `operator new` and `operator delete` require.  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[cache_chunklist](#cache_chunklist)|`cache_chunklist` 형식의 개체를 생성합니다.|  
-  
-### <a name="member-functions"></a>멤버 함수  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|메모리 블록을 할당합니다.|  
-|[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
+|[cache_chunklist](#cache_chunklist)|Constructs an object of type `cache_chunklist`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **네임스페이스:** stdext  
+|||  
+|-|-|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  cache_chunklist::allocate  
- 메모리 블록을 할당합니다.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|할당할 배열의 요소 수입니다.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>반환 값  
- 할당된 개체에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
- `cache_chunklist` 형식의 개체를 생성합니다.  
+ Constructs an object of type `cache_chunklist`.  
   
 ```
 cache_chunklist();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="deallocate"></a>  cache_chunklist::deallocate  
- 지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|  
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

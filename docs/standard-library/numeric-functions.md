@@ -1,5 +1,5 @@
 ---
-title: "&lt;numeric&gt; 함수 | Microsoft Docs"
+title: '&lt;numeric&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+helpviewer_keywords:
+- std::accumulate [C++]
+- std::adjacent_difference [C++]
+- std::inner_product [C++]
+- std::iota [C++]
+- std::partial_sum [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5d356585509e7398da3f697f935c866e393b2c42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 함수
+# <a name="ltnumericgt-functions"></a>&lt;numeric&gt; functions
 ||||  
 |-|-|-|  
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
 ##  <a name="accumulate"></a>  accumulate  
- 연속적 부분 합계를 계산하여 일부 초기값을 비롯한 지정된 범위 내 모든 요소의 합계를 계산하거나, 합계 대신 지정된 이진 연산을 사용하여 유사하게 구한 연속적 부분 결과의 결과를 계산합니다.  
+ Computes the sum of all the elements in a specified range including some initial value by computing successive partial sums or computes the result of successive partial results similarly obtained from using a specified binary operation other than the sum.  
   
 ```  
 template <class InputIterator, class Type>  
@@ -43,26 +49,26 @@ Type accumulate(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  `first`  
- 지정된 이진 연산에 따라 합을 계산하거나 결합할 범위의 첫 번째 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the first element in the range to be summed or combined according to a specified binary operation.  
   
  `last`  
- 반복된 누적에 실제로 포함된 마지막 요소 하나 다음 위치의 지정된 이진 연산에 따라 합을 계산하거나 결합할 범위의 마지막 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the last element in the range to be summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `val`  
- 지정된 이진 연산에 따라 각 요소가 차례로 추가되거나 결합되는 초기값입니다.  
+ An initial value to which each element is in turn added or combined with according to a specified binary operation.  
   
  `binary_op`  
- 지정된 범위의 각 요소와 이전 적용의 결과에 적용할 이진 연산입니다.  
+ The binary operation that is to be applied to the each element in the specified range and the result of its previous applications.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 템플릿 함수의 경우 지정된 범위의 모든 요소와 `val`의 합입니다. 두 번째 템플릿 함수의 경우 ( *PartialResult, \*Iter*)에 합계 연산 대신 지정된 이진 연산을 적용한 결과입니다. 여기서 *PartialResult*는 이전에 연산을 적용한 결과이고 `Iter`은 범위의 요소를 가리키는 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ The sum of `val` and all the elements in the specified range for the first template function, or, for the second template function, the result of applying the binary operation specified, instead of the sum operation, to ( *PartialResult, \*Iter*), where *PartialResult* is the result of previous applications of the operation and `Iter` is an iterator pointing to an element in the range.  
   
-### <a name="remarks"></a>설명  
- 초기값을 사용하면 범위가 비어 있을 때도 결과가 적절하게 정의되며 `val`이 반환됩니다. 이진 연산은 결합 법칙이나 교환 법칙이 성립하지 않아도 됩니다. 결과는 초기값 `val`로 초기화되며, 그리고 나면 범위 전체에서 *result* = `binary_op` ( *result*, **\***`Iter`)가 반복 계산됩니다. 여기서 `Iter`은 범위의 연속 요소를 가리키는 반복기입니다. 범위는 유효해야 하며 복잡성은 범위의 크기에 비례해야 합니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The initial value insures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operation does not need to be associative or commutative. The result is initialized to the initial value `val` and then *result* = `binary_op` ( *result*, **\***`Iter`) is calculated iteratively through the range, where `Iter` is an iterator pointing to successive element in the range. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_accum.cpp  
@@ -162,7 +168,7 @@ The vector of partial products is:
 ```  
   
 ##  <a name="adjacent_difference"></a>  adjacent_difference  
- 각 요소와 입력 범위의 해당 선행 작업간 연속 차이를 계산하고 결과를 대상 범위로 출력하거나 차이 연산을 지정된 다른 이진 연산으로 대체한 일반화된 절차 결과를 계산합니다.  
+ Computes the successive differences between each element and its predecessor in an input range and outputs the results to a destination range or computes the result of a generalized procedure where the difference operation is replaced by another, specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIterator>  
@@ -179,32 +185,32 @@ OutputIterator adjacent_difference(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 입력 범위에서 해당 선행 작업과 차별화해야 하거나 지정된 다른 이진 작업에서 값 쌍을 처리해야 하는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the first element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `last`  
- 입력 범위에서 해당 선행 작업과 차별화해야 하거나 지정된 다른 이진 작업에서 값 쌍을 처리해야 하는 마지막 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the last element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `result`  
- 일련의 차이 또는 지정된 작업의 결과를 저장할 대상 범위의 첫 번째 요소를 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the first element a destination range where the series of differences or the results of the specified operation is to be stored.  
   
  `binary_op`  
- 차이 절차에서 차감 연산을 대체하는 일반화된 연산에 적용할 이항 연산입니다.  
+ The binary operation that is to be applied in the generalized operation replacing the operation of subtraction in the differencing procedure.  
   
-### <a name="return-value"></a>반환 값  
- 대상 범위 끝을 주소 지정하는 출력 반복기:`result` + ( `last` - `first`)  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`).  
   
-### <a name="remarks"></a>주의  
- 출력 반복기 _ *결과* 입력된 반복기와 동일한 반복기 일 수 있는 경우 * 먼저 * 있도록 `adjacent_difference`s 계산할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The output iterator _ *result* is allowed to be the same iterator as the input iterator * first,* so that `adjacent_difference`s may be computed in place.  
   
- 값의 시퀀스에 대 한 *는*1, *는*2, *는*입력된 범위의 첫 번째 템플릿 함수에서 3 저장 연속 **partial_difference**s *는*1, *는*2- *는*1, a3- *는*대상 범위에서 2입니다.  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the first template function stores successive **partial_difference**s *a*1, *a*2 - *a*1, a3 - *a*2, in the destination range.  
   
- 입력 범위의 값 시퀀스 *a*1, *a*2, *a*3에 대해 두 번째 템플릿 함수는 연속하는 **partial_difference** *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2를 대상 범위에 저장합니다.  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive **partial_difference**s *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, in the destination range.  
   
- 이항 연산 `binary_op`는 적용 연산 순서가 완전히 적용되므로 결합성이 있거나 가환적일 필요가 없습니다.  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_adj_diff.cpp  
@@ -266,7 +272,7 @@ int main( )
 ```  
   
 ##  <a name="inner_product"></a>  inner_product  
- 두 범위의 요소 전체의 곱의 합을 계산하여 지정된 초기값에 추가하거나 합 및 곱 이진 연산을 지정된 다른 이진 연산으로 대체한 일반화된 절차의 결과를 계산합니다.  
+ Computes the sum of the element-wise product of two ranges and adds it to a specified initial value or computes the result of a generalized procedure where the sum and product binary operations are replaced by other specified binary operations.  
   
 ```  
 template <class InputIterator1, class InputIterator2, class Type>  
@@ -286,42 +292,42 @@ Type inner_product(
     BinaryOperation2  binary_op2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 두 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 첫 번째 범위의 첫 번째 요소 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the first element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `last1`  
- 두 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 첫 번째 범위의 마지막 번째 요소 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the last element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `first2`  
- 첫 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 두 번째 범위의 첫 번째 요소 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the first element in the second range whose inner product or generalized inner product with the first range is to be computed.  
   
  `val`  
- 범위 간의 내부 곱 또는 일반화된 내부 곱을 더할 초기값입니다.  
+ An initial value to which the inner product or generalized inner product between the ranges is to be added.  
   
  *binary_op1*  
- 내부 곱 일반화에서 요소별 곱에 적용되는 합계의 내부 곱 연산을 대체하는 이진 연산입니다.  
+ The binary operation that replaces the inner product operation of sum applied to the element-wise products in the generalization of the inner product.  
   
  *binary_op2*  
- 내부 곱 일반화에서 곱하기의 내부 곱 요소별 연산을 대체하는 이진 연산입니다.  
+ The binary operation that replaces the inner product element-wise operation of multiply in the generalization of the inner product.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 구성원 함수는 요소별 곱의 합을 반환하고 해당 합을 지정된 초기값에 더합니다. 따라서 값 *a*i 및 *b*i의 범위에 대해 이 함수는 다음 결과를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the sum of the element-wise products and adds to it the specified initial value. So for ranges of values *a*i and *b*i, it returns:  
   
- `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- 반복적으로 대체 하 여 `val` 와 `val` + ( *는*i \* *b*i).  
+ by iteratively replacing `val` with `val` + ( *a*i \* *b*i ).  
   
- 두 번째 구성원 함수는 다음 결과를 반환합니다.  
+ The second member function returns:  
   
- `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
+ `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
- 반복적으로 대체 하 여 `val` 와 `val` *binary_op1* ( *는*i *binary_op2* *b*i).  
+ by iteratively replacing `val` with `val` *binary_op1* ( *a*i *binary_op2* *b*i ).  
   
-### <a name="remarks"></a>설명  
- 초기값을 사용하면 범위가 비어 있을 때도 결과가 적절하게 정의되며 `val`이 반환됩니다. 이진 연산은 결합 법칙이나 교환 법칙이 성립하지 않아도 됩니다. 범위는 유효해야 하며 복잡성은 범위의 크기에 비례해야 합니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The initial value ensures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operations do not need to be associative or commutative. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_inner_prod.cpp  
@@ -412,27 +418,27 @@ int main()
 ```  
   
 ##  <a name="iota"></a>  iota  
- 시작 값을 저장하고, 첫 번째 요소부터 시작하여 간격 `[ first,  last)`의 각 요소에서 해당 값의 연속적 증분(` value++`)으로 채웁니다.  
+ Stores a starting value, beginning with the first element and filling with successive increments of that value ( ` value++`) in each of the elements in the interval `[ first,  last)`.  
   
 ```  
 template <class ForwardIterator, class Type>  
 void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 채울 범위의 첫 번째 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator that addresses the first element in the range to be filled.  
   
  `last`  
- 채울 범위의 마지막 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator that addresses the last element in the range to be filled.  
   
  `value`  
- 첫 번째 요소에 저장하고 후속 요소에 대해 연속적으로 증분할 시작 값입니다.  
+ The starting value to store in the first element and to successively increment for subsequent elements.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 함수를 사용할 수 있도록 정수 [list](../standard-library/list.md)를 채운 다음 `list`로 [vector](../standard-library/vector.md)를 채우는 `iota` 함수의 몇 가지 사용 방법을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates some uses for the `iota` function by filling a [list](../standard-library/list.md) of integers and then filling a [vector](../standard-library/vector.md) with the `list` so that the [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) function can be used.  
   
 ```cpp  
 // compile by using: cl /EHsc /nologo /W4 /MTd  
@@ -473,7 +479,7 @@ int main(void)
 ```  
   
 ##  <a name="partial_sum"></a>  partial_sum  
- 첫 번째 요소부터 *i*번째 요소까지 입력 범위에서 일련의 합계를 계산하고 각 합계의 결과를 대상 범위의 *i*번째 요소에 저장하거나 합 연산을 지정된 다른 이진 연산으로 대체한 일반화된 절차 결과를 계산합니다.  
+ Computes a series of sums in an input range from the first element through the *i*th element and stores the result of each such sum in the *i*th element of a destination range or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIt>  
@@ -490,32 +496,32 @@ OutputIterator partial_sum(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 지정된 이진 연산에 따라 부분적으로 합을 계산하거나 결합할 범위의 첫 번째 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the first element in the range to be partially summed or combined according to a specified binary operation.  
   
  `last`  
- 반복된 누적에 실제로 포함된 마지막 요소 하나 다음 위치의 지정된 이진 연산에 따라 부분적으로 합을 계산하거나 결합할 범위의 마지막 요소를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the last element in the range to be partially summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `result`  
- 일련의 부분적 합 또는 지정된 작업의 결과를 저장할 대상 범위의 첫 번째 요소를 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the first element a destination range where the series of partial sums or the results of the specified operation is to be stored.  
   
  `binary_op`  
- 부분적 합 절차에서 합 연산을 대체하는 일반화된 연산에 적용할 이항 연산입니다.    
+ The binary operation that is to be applied in the generalized operation replacing the operation of sum in the partial sum procedure.    
   
-### <a name="return-value"></a>반환 값  
- 대상 범위 끝을 주소 지정하는 출력 반복기:`result` + ( `last` - `first`)  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`),  
   
-### <a name="remarks"></a>설명  
- 부분 합을 계산할 수 있도록 출력 반복기 `result`는 입력 반복기 `first`와 동일한 반복기일 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The output iterator `result` is allowed to be the same iterator as the input iterator `first`, so that partial sums may be computed in place.  
   
- 입력 범위의 값 시퀀스 *a*1, *a*2, *a*3에 대해 첫 번째 템플릿 함수는 연속 부분 합을 대상 범위에 저장합니다. 여기서 *i*번째 요소는 (  ( ( *a*1 + *a*2) + *a*3) *a*i)로 지정됩니다.  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the first template function stores successive partial sums in the destination range, where the *i*th element is given by (  ( ( *a*1 + *a*2) + *a*3) *a*i).  
   
- 값의 시퀀스에 대 한 *는*1, *는*2, *는*3, 입력 범위의 두 번째 템플릿 함수를 저장 위치 i 번째 요소를 지정 하 여 대상 범위에서 연속적 부분 합계 ((( *는*1 `binary_op` *는*2) `binary_op` *는*3) *는*i).  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the second template function stores successive partial sums in the destination range, where the ith element is given by (  ( ( *a*1 `binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).  
   
- 이항 연산 `binary_op`는 적용 연산 순서가 완전히 적용되므로 결합성이 있거나 가환적일 필요가 없습니다.  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_partial_sum.cpp  
@@ -575,7 +581,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<numeric>](../standard-library/numeric.md)
 
 

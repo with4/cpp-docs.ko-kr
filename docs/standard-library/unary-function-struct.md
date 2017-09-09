@@ -1,5 +1,5 @@
 ---
-title: "unary_function 구조체 | Microsoft Docs"
+title: unary_function Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary
 - functional/std::unary
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf173d75b04598f7472e7c906b74b9d11fc76870
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unaryfunction-struct"></a>unary_function 구조체
-단항 함수 개체를 제공하는 파생 클래스에 상속될 수 있는 형식을 정의하는 빈 기본 구조체입니다.  
+# <a name="unaryfunction-struct"></a>unary_function Struct
+An empty base struct that defines types that may be inherited by derived classes that provides a unary function object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 struct unary_function 
 {
@@ -52,12 +51,12 @@ struct unary_function
    typedef Result result_type;
 };  
 ``` 
-## <a name="remarks"></a>설명  
- 템플릿 구조체는 **result_type**`operator()`(**constargument_type&**) **const** 형식의 구성원 함수를 정의하는 클래스의 기준으로 사용됩니다.  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base for classes that define a member function of the form **result_type**`operator()`( **constargument_type&**) **const**.  
   
- 이러한 모든 파생 단항 함수는 유일한 인수 유형을 **argument_type**으로, 반환 형식을 **result_type**로 참조할 수 있습니다.  
+ All such derived unary functions can refer to their sole argument type as **argument_type** and their return type as **result_type**.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_function.cpp  
@@ -107,14 +106,14 @@ The number of elements in v1 greater than 10 is: 3.
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;tuple&gt; 함수 | Microsoft Docs"
+title: '&lt;tuple&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,20 +18,27 @@ dev_langs:
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: acf980e3bcd491eb08dee0c87ee1762dc25b417b
+helpviewer_keywords:
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8853217b74474559ea00fe0819ec819bde5f9a3d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-functions"></a>&lt;tuple&gt; 함수
+# <a name="lttuplegt-functions"></a>&lt;tuple&gt; functions
 ||||  
 |-|-|-|  
 |[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|  
   
 ##  <a name="get"></a>  get
- 인덱스 또는 형식(C++14)을 기준으로 `tuple` 개체에서 요소를 가져옵니다.  
+ Gets an element from a `tuple` object, by index or (in C++14) by type.  
   
 ```  
 // by index:
@@ -61,25 +68,25 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 가져올 요소의 인덱스입니다.  
+ The index of the element to get.  
   
  `Types`  
- 튜플에서 선언된 형식의 시퀀스로, 선언 순서대로 나열됩니다.  
+ The sequence of types declared in the tuple, in declaration order.  
   
  `T`  
- 가져올 요소의 형식입니다.  
+ The type of the element to get.  
   
  `Tuple`  
- 임의의 수의 요소가 포함된 std::tuple입니다.  
+ A std::tuple that contains any number of elements.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 인덱스 `Index`에 있는 값에 대한 참조나 `T` 개체에 있는 `tuple` 형식의 참조를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template functions return a reference to the value at index `Index`, or of type `T` in the `tuple` object.  
   
- `get<T>(Tuple)` 을 호출할 때 튜플에 T 형식의 요소가 두 개 이상 있거나 없는 경우 컴파일러 오류가 생성됩니다.  
+ Calling `get<T>(Tuple)` will produce a compiler error if Tuple contains more or less than one element of type T.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -108,27 +115,27 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="make_tuple"></a>make_tuple
- 요소 값에서 `tuple`을 만듭니다.  
+##  <a name="make_tuple"></a>  make_tuple
+ Makes a `tuple` from element values.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Nth 함수 매개 변수의 형식입니다.  
+ The type of the Nth function parameter.  
   
  `tN`  
- Nth 함수 매개 변수의 값입니다.  
+ The value of the Nth function parameter.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`을 반환합니다. 여기서 각 `Vi` 형식은 해당하는 `Ti` 형식이 `cv` `reference_wrapper<X>`이면 `X&`이고 그렇지 않으면 `Ti`입니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, where each type `Vi` is `X&` when the corresponding type `Ti` is `cv` `reference_wrapper<X>`; otherwise, it is `Ti`.  
   
- `make_tuple`의 장점 하나는 저장되는 개체 형식이 컴파일러에서 자동으로 저장되며 명시적으로 지정하지 않아도 된다는 점입니다. `make_tuple<int, int>(1, 2)`를 사용할 경우 불필요하게 장황해지고 컴파일 문제의 원인이 될 수 있는 복잡한 rvalue 참조 문제만 더해지므로 `make_tuple` 등의 명시적 템플릿 인수를 사용하지 마십시오.  
+ One advantage of `make_tuple` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_tuple<int, int>(1, 2)` when you use `make_tuple` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__make_tuple.cpp   
@@ -165,22 +172,22 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="tie"></a>동률
- 요소 선언에서 `tuple`을 만듭니다.  
+##  <a name="tie"></a>  tie
+ Makes a `tuple` from element references.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 기본 형식입니다.  
+ The base type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tie.cpp   
@@ -221,7 +228,7 @@ int main() {
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

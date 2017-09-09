@@ -1,5 +1,5 @@
 ---
-title: "moneypunct 클래스 | Microsoft Docs"
+title: moneypunct Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- moneypunct
 - xlocmon/std::moneypunct
 - locale/std::moneypunct::char_type
 - locale/std::moneypunct::string_type
@@ -34,7 +33,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- moneypunct class
+- std::moneypunct [C++]
+- std::moneypunct [C++], char_type
+- std::moneypunct [C++], string_type
+- std::moneypunct [C++], curr_symbol
+- std::moneypunct [C++], decimal_point
+- std::moneypunct [C++], do_curr_symbol
+- std::moneypunct [C++], do_decimal_point
+- std::moneypunct [C++], do_frac_digits
+- std::moneypunct [C++], do_grouping
+- std::moneypunct [C++], do_neg_format
+- std::moneypunct [C++], do_negative_sign
+- std::moneypunct [C++], do_pos_format
+- std::moneypunct [C++], do_positive_sign
+- std::moneypunct [C++], do_thousands_sep
+- std::moneypunct [C++], frac_digits
+- std::moneypunct [C++], grouping
+- std::moneypunct [C++], neg_format
+- std::moneypunct [C++], negative_sign
+- std::moneypunct [C++], pos_format
+- std::moneypunct [C++], positive_sign
+- std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 caps.latest.revision: 20
 author: corob-msft
@@ -54,100 +73,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9567db1b823f373a5ea26e6d113cc9176901453d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d93d1577734d8ae8ec3211218108474de329635
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneypunct-class"></a>moneypunct 클래스
-템플릿 클래스는 통화 입력 필드 또는 통화 출력 필드를 나타내는 데 사용 가능한 `CharType` 형식의 시퀀스를 설명하는 데 로캘 패싯으로 사용할 수 있는 개체에 대해 설명합니다. 템플릿 매개 변수 `Intl`이 `true`인 경우 국제 규약을 준수합니다.  
+# <a name="moneypunct-class"></a>moneypunct Class
+The template class describes an object that can serve as a locale facet to describe the sequences of type `CharType` used to represent a monetary input field or a monetary output field. If the template parameter `Intl` is `true`, international conventions are observed.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType, bool Intl>  
 class moneypunct;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 문자를 인코딩하기 위해 프로그램 내 사용하는 형식  
+ The type used within a program to encode characters.  
   
  `Intl`  
- 국제 규약을 준수하는지 여부를 지정하는 플래그입니다.  
+ A flag specifying whether international conventions are to be observed.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
- 상수 정적 개체 intl에는 템플릿 매개 변수 **Intl**의 값이 저장됩니다.  
+ The const static object intl stores the value of the template parameter **Intl**.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[moneypunct](#moneypunct)|`moneypunct` 형식의 개체 생성자입니다.|  
+|[moneypunct](#moneypunct)|Constructor of objects of type `moneypunct`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.|  
-|[string_type](#string_type)|`CharType` 형식의 문자가 포함된 문자열을 설명하는 형식입니다.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[curr_symbol](#curr_symbol)|통화 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.|  
-|[decimal_point](#decimal_point)|소수점 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.|  
-|[do_curr_symbol](#do_curr_symbol)|통화 기호로 사용할 로캘별 요소 시퀀스를 반환하는 보호된 가상 멤버 함수입니다.|  
-|[do_decimal_point](#do_decimal_point)|소수점 기호로 사용할 로캘별 요소 시퀀스를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_frac_digits](#do_frac_digits)|보호된 가상 멤버 함수가 소수점 오른쪽에 표시할 자릿수를 로캘별로 반환합니다.|  
-|[do_grouping](#do_grouping)|보호된 가상 멤버 함수가 소수점 자리 왼쪽의 숫자를 그룹화하는 방법을 결정하는 로캘별 규칙을 반환합니다.|  
-|[do_neg_format](#do_neg_format)|음수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_negative_sign](#do_negative_sign)|음수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_pos_format](#do_pos_format)|양수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_positive_sign](#do_positive_sign)|양수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_thousands_sep](#do_thousands_sep)|1000 단위 구분 기호로 사용할 로캘별 요소 시퀀스를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[frac_digits](#frac_digits)|소수점 오른쪽에 표시할 자릿수를 로캘별로 반환합니다.|  
-|[grouping](#grouping)|소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙을 반환합니다.|  
-|[neg_format](#neg_format)|음수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환합니다.|  
-|[negative_sign](#negative_sign)|음수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.|  
-|[pos_format](#pos_format)|양수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환합니다.|  
-|[positive_sign](#positive_sign)|양수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.|  
-|[thousands_sep](#thousands_sep)|1000 단위 구분 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.|  
+|[curr_symbol](#curr_symbol)|Returns a locale-specific sequence of elements to use as a currency symbol.|  
+|[decimal_point](#decimal_point)|Returns a locale-specific sequence of elements to use as a decimal point symbol.|  
+|[do_curr_symbol](#do_curr_symbol)|A protected virtual member function that returns a locale-specific sequence of elements to use as a currency symbol.|  
+|[do_decimal_point](#do_decimal_point)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a decimal point symbol.|  
+|[do_frac_digits](#do_frac_digits)|The protected virtual member function returns a locale-specific count of the number of digits to display to the right of any decimal point.|  
+|[do_grouping](#do_grouping)|The protected virtual member function returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[do_neg_format](#do_neg_format)|A protected virtual member function that is called to return a locale-specific rule for formatting outputs with negative amounts.|  
+|[do_negative_sign](#do_negative_sign)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a negative sign symbol.|  
+|[do_pos_format](#do_pos_format)|A protected virtual member function that is called to return a locale-specific rule for formatting outputs with positive amounts.|  
+|[do_positive_sign](#do_positive_sign)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a positive sign symbol.|  
+|[do_thousands_sep](#do_thousands_sep)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a thousands separator symbol.|  
+|[frac_digits](#frac_digits)|Returns a locale-specific count of the number of digits to display to the right of any decimal point.|  
+|[grouping](#grouping)|Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[neg_format](#neg_format)|Returns a locale-specific rule for formatting outputs with negative amounts.|  
+|[negative_sign](#negative_sign)|Returns a locale-specific sequence of elements to use as a negative sign symbol.|  
+|[pos_format](#pos_format)|Returns a locale-specific rule for formatting outputs with positive amounts.|  
+|[positive_sign](#positive_sign)|Returns a locale-specific sequence of elements to use as a positive sign symbol.|  
+|[thousands_sep](#thousands_sep)|Returns a locale-specific sequence of elements to use as a thousands separator symbol.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  moneypunct::char_type  
- 로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="curr_symbol"></a>  moneypunct::curr_symbol  
- 통화 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+ Returns a locale-specific sequence of elements to use as a currency symbol.  
   
 ```  
 string_type curr_symbol() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 통화 기호를 포함하는 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string containing the currency symbol.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_curr_symbol](#do_curr_symbol)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_curr_symbol](#do_curr_symbol).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_curr_symbol.cpp  
@@ -169,19 +188,19 @@ int main( )
 ```  
   
 ##  <a name="decimal_point"></a>  moneypunct::decimal_point  
- 소수점 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+ Returns a locale-specific sequence of elements to use as a decimal point symbol.  
   
 ```  
 CharType decimal_point() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 기호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_decimal_point](#do_decimal_point)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_decimal_point](#do_decimal_point).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_decimal_pt.cpp  
@@ -212,152 +231,152 @@ German_Germany.1252 domestic decimal point ,
 ```  
   
 ##  <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol  
- 통화 기호로 사용할 로캘별 요소 시퀀스를 반환하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a currency symbol.  
   
 ```  
 virtual string_type do_curr_symbol() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 기호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="example"></a>예제  
-  `curr_symbol`에 의해 가상 구성원 함수가 호출되는 [curr_symbol](#curr_symbol)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [curr_symbol](#curr_symbol), where the virtual member function is called by `curr_symbol`.  
   
 ##  <a name="do_decimal_point"></a>  moneypunct::do_decimal_point  
- 소수점 기호통화 기호로 사용할 로캘별 요소 시퀀스를 반환하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a decimal point symbol.  
   
 ```  
 virtual CharType do_decimal_point() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 기호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="example"></a>예제  
-  `decimal_point`에 의해 가상 구성원 함수가 호출되는 [decimal_point](#decimal_point)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.  
   
 ##  <a name="do_frac_digits"></a>  moneypunct::do_frac_digits  
- 소수점 오른쪽에 표시할 자릿수를 로캘별로 반환하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that returns a locale-specific count of the number of digits to display to the right of any decimal point.  
   
 ```  
 virtual int do_frac_digits() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 오른쪽에 표시할 로캘별 자릿수입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific count of the number of digits to display to the right of any decimal point.  
   
-### <a name="example"></a>예제  
-  `frac_digits`에 의해 가상 구성원 함수가 호출되는 [frac_digits](#frac_digits)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [frac_digits](#frac_digits), where the virtual member function is called by `frac_digits`.  
   
 ##  <a name="do_grouping"></a>  moneypunct::do_grouping  
- 소수점 자리 왼쪽의 숫자를 그룹화하는 방법을 결정하는 로캘별 규칙을 반환하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 virtual string do_grouping() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="example"></a>예제  
-  **grouping**에 의해 가상 구성원 함수가 호출되는 [grouping](#grouping)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [grouping](#grouping), where the virtual member function is called by **grouping**.  
   
 ##  <a name="do_neg_format"></a>  moneypunct::do_neg_format  
- 음수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific rule for formatting outputs with negative amounts.  
   
 ```  
 virtual pattern do_neg_format() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 보호된 가상 구성원 함수는 음수 값에 대해 통화 출력 필드를 생성하는 방법을 결정하기 위한 로캘별 규칙을 반환합니다. **pattern::field**의 각 4개 요소가 포함할 수 있는 값은 다음과 같습니다.  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns a locale-specific rule for determining how to generate a monetary output field for a negative amount. Each of the four elements of **pattern::field** can have the values:  
   
-- **none** - 0개 이상의 공백과 일치시키거나 아무 항목도 생성하지 않습니다.  
+- **none** to match zero or more spaces or generate nothing.  
   
-- **sign** - 양수/음수 부호와 일치시키거나 해당 부호를 생성합니다.  
+- **sign** to match or generate a positive or negative sign.  
   
-- **space** - 0개 이상의 공백과 일치시키거나 공백을 생성합니다.  
+- **space** to match zero or more spaces or generate a space.  
   
-- **symbol** - 통화 기호와 일치시키거나 통화 기호를 생성합니다.  
+- **symbol** to match or generate a currency symbol.  
   
-- **value** - 통화 값과 일치시키거나 통화 값을 생성합니다.  
+- **value** to match or generate a monetary value.  
   
- 통화 출력 필드의 구성 요소가 생성되며, 통화 입력 필드의 구성 요소는 **pattern::field**에 나타나는 순서대로 일치 여부를 확인합니다. 각각의 **sign**, **symbol**, **value** 및 **none** 또는 **space** 값은 정확히 한 번 나와야 합니다. **none** 값은 첫 번째로 나올 수 없습니다. spce 값은 첫 번째나 마지막에 나올 수 **없습니다**. **Intl**이 true이면 값의 순서는 **symbol**, **sign**, **none**, **value**입니다.  
+ Components of a monetary output field are generated and components of a monetary input field are matched in the order in which these elements appear in **pattern::field**. Each of the values **sign**, **symbol**, **value**, and either **none** or **space** must appear exactly once. The value **none** must not appear first. The value space **must** not appear first or last. If **Intl** is true, the order is **symbol**, **sign**, **none**, then **value**.  
   
- `moneypunct`\< **CharType**, **Intl**>의 템플릿 버전은 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`을 반환합니다.  
+ The template version of `moneypunct`\< **CharType**, **Intl**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
-### <a name="example"></a>예제  
-  `neg_format`에 의해 가상 구성원 함수가 호출되는 [neg_format](#neg_format)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [neg_format](#neg_format), where the virtual member function is called by `neg_format`.  
   
 ##  <a name="do_negative_sign"></a>  moneypunct::do_negative_sign  
- 음수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific sequence of elements to use as a negative sign symbol.  
   
 ```  
 virtual string_type do_negative_sign() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 음수 부호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a negative sign.  
   
-### <a name="example"></a>예제  
-  `negative_sign`에 의해 가상 구성원 함수가 호출되는 [negative_sign](#negative_sign)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [negative_sign](#negative_sign), where the virtual member function is called by `negative_sign`.  
   
 ##  <a name="do_pos_format"></a>  moneypunct::do_pos_format  
- 양수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific rule for formatting outputs with positive amounts.  
   
 ```  
 virtual pattern do_pos_format() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 보호된 가상 구성원 함수는 양수 금액에 대해 통화 출력 필드를 생성하는 방법을 결정하기 위한 로캘별 규칙을 반환합니다. 또한 통화 입력 필드의 구성 요소 일치 방법도 결정합니다. 인코딩은 [do_neg_format](#do_neg_format)과 동일합니다.  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns a locale-specific rule for determining how to generate a monetary output field for a positive amount. (It also determines how to match the components of a monetary input field.) The encoding is the same as for [do_neg_format](#do_neg_format).  
   
- moneypunct\< **CharType**, **Inputlterator**>의 템플릿 버전은 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`을 반환합니다.  
+ The template version of moneypunct\< **CharType**, **Inputlterator**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
-### <a name="example"></a>예제  
-  `pos_format`에 의해 가상 구성원 함수가 호출되는 [pos_format](#pos_format)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [pos_format](#pos_format), where the virtual member function is called by `pos_format`.  
   
 ##  <a name="do_positive_sign"></a>  moneypunct::do_positive_sign  
- 양수 부호로 사용할 로캘별 요소 시퀀스를 반환하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a positive sign.  
   
 ```  
 virtual string_type do_positive_sign() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 양수 부호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a positive sign.  
   
-### <a name="example"></a>예제  
-  `positive_sign`에 의해 가상 구성원 함수가 호출되는 [positive_sign](#positive_sign)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [positive_sign](#positive_sign), where the virtual member function is called by `positive_sign`.  
   
 ##  <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep  
- 소수점 왼쪽의 그룹 구분 기호로 사용할 로캘별 요소를 반환하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that returns a locale-specific element to use as a group separator to the left of any decimal point.  
   
 ```  
 virtual CharType do_thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소스점 왼쪽의 그룹 구분 기호로 사용할 로캘별 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a group separator to the left of any decimal point.  
   
-### <a name="example"></a>예제  
-  `thousands_sep`에 의해 가상 구성원 함수가 호출되는 [thousands_sep](#thousands_sep)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.  
   
 ##  <a name="frac_digits"></a>  moneypunct::frac_digits  
- 소수점 오른쪽에 표시할 자릿수를 로캘별로 반환합니다.  
+ Returns a locale-specific count of the number of digits to display to the right of any decimal point.  
   
 ```  
 int frac_digits() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 오른쪽에 표시할 로캘별 자릿수입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific count of the number of digits to display to the right of any decimal point.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_frac_digits](#do_frac_digits)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_frac_digits](#do_frac_digits).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_frac_digits.cpp  
@@ -411,19 +430,19 @@ German_Germany.1252 domestic frac_digits
 ```  
   
 ##  <a name="grouping"></a>  moneypunct::grouping  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙을 반환합니다.  
+ Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 string grouping() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_grouping](#do_grouping)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_grouping](#do_grouping).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_grouping.cpp  
@@ -477,43 +496,43 @@ German_Germany.1252 domestic frac_digits
 ```  
   
 ##  <a name="moneypunct"></a>  moneypunct::moneypunct  
- `moneypunct` 형식의 개체 생성자입니다.  
+ Constructor of objects of type `moneypunct`.  
   
 ```  
 explicit moneypunct(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: These values are not defined.  
   
- 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
+ No direct examples are possible, because the destructor is protected.  
   
- 생성자는 [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*)를 통해 해당 기준 개체를 초기화합니다.  
+ The constructor initializes its base object with [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
 ##  <a name="neg_format"></a>  moneypunct::neg_format  
- 음수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환합니다.  
+ Returns a locale-specific rule for formatting outputs with negative amounts.  
   
 ```  
 pattern neg_format() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 음수 금액의 출력 서식을 지정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for formatting outputs with negative amounts.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_neg_format](#do_neg_format)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_neg_format](#do_neg_format).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_neg_format.cpp  
@@ -546,19 +565,19 @@ int main( ) {
 ```  
   
 ##  <a name="negative_sign"></a>  moneypunct::negative_sign  
- 음수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+ Returns a locale-specific sequence of elements to use as a negative sign symbol.  
   
 ```  
 string_type negative_sign() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 음수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a locale-specific sequence of elements to use as a negative sign symbol.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_negative_sign](#do_negative_sign)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_negative_sign](#do_negative_sign).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_neg_sign.cpp  
@@ -605,19 +624,19 @@ French_France.1252 domestic negative sign: -
 ```  
   
 ##  <a name="pos_format"></a>  moneypunct::pos_format  
- 양수 금액의 출력의 서식을 지정하기 위한 로캘별 규칙을 반환합니다.  
+ Returns a locale-specific rule for formatting outputs with positive amounts.  
   
 ```  
 pattern pos_format() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 양수 금액의 출력 서식을 지정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for formatting outputs with positive amounts.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_pos_format](#do_pos_format)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_pos_format](#do_pos_format).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_pos_format.cpp  
@@ -650,19 +669,19 @@ int main() {
 ```  
   
 ##  <a name="positive_sign"></a>  moneypunct::positive_sign  
- 양수 부호 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+ Returns a locale-specific sequence of elements to use as a positive sign symbol.  
   
 ```  
 string_type positive_sign() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 양수 부호 기호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a positive sign symbol.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_positive_sign](#do_positive_sign)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_positive_sign](#do_positive_sign).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_pos_sign.cpp  
@@ -709,29 +728,29 @@ French_France.1252 domestic positive sign:
 ```  
   
 ##  <a name="string_type"></a>  moneypunct::string_type  
- **CharType** 형식의 문자가 포함된 문자열을 설명하는 형식입니다.  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 개체가 문장 부호 시퀀스의 복사본을 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.  
   
 ##  <a name="thousands_sep"></a>  moneypunct::thousands_sep  
- 1000 단위 구분 기호로 사용할 로캘별 요소 시퀀스를 반환합니다.  
+ Returns a locale-specific sequence of elements to use as a thousands separator symbol.  
   
 ```  
 CharType thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 1000 단위 구분 기호로 사용할 로캘별 요소 시퀀스입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a thousands separator  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_thousands_sep](#do_thousands_sep)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_thousands_sep](#do_thousands_sep).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_thou_sep.cpp  
@@ -776,8 +795,8 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

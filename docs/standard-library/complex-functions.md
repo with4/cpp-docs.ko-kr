@@ -1,5 +1,5 @@
 ---
-title: "&lt;complex&gt; 함수 | Microsoft 문서"
+title: '&lt;complex&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,14 +28,33 @@ f1_keywords:
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
 caps.latest.revision: 14
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a
+helpviewer_keywords:
+- std::abs [C++]
+- std::arg [C++]
+- std::conj [C++]
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::imag [C++]
+- std::log [C++]
+- std::log10
+- std::norm [C++]
+- std::polar [C++]
+- std::pow [C++]
+- std::real [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::tan [C++]
+- std::tanh [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14714c92087492199c47580144dfbd64afece59a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 함수
+# <a name="ltcomplexgt-functions"></a>&lt;complex&gt; functions
 ||||  
 |-|-|-|  
 |[abs](#abs)|[arg](#arg)|[conj](#conj)|
@@ -46,24 +65,24 @@ ms.lasthandoff: 04/19/2017
 |[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|  
   
 ##  <a name="abs"></a>  abs  
- 복소수의 모듈러스를 계산합니다.  
+ Calculates the modulus of a complex number.  
   
 ```  
 template <class Type>  
 Type abs(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 모듈러스를 결정해야 하는 복소수입니다.  
+ The complex number whose modulus is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 모듈러스입니다.  
+### <a name="return-value"></a>Return Value  
+ The modulus of a complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수의 *모듈러스*는 복소수를 나타내는 벡터의 길이에 대한 측정입니다. 복소수의 모듈러스                         a + bi는 sqrt (a<sup>2</sup> + b<sup>2</sup>)이며, |a + bi|로 표기됩니다. 복소수의 *기준*                         a + bi는 (a<sup>2</sup> + b<sup>2</sup>)이므로 복소수의 모듈러스는 해당 기준의 제곱근입니다.  
+### <a name="remarks"></a>Remarks  
+ The *modulus* of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number                         a + bi is                         sqrt (a<sup>2</sup> + b<sup>2</sup>),  written                         &#124;a + bi&#124;. The *norm* of a complex number                         a + bi is (a<sup>2</sup> + b<sup>2</sup>), so the modulus of a complex number is the square root of its norm.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_abs.cpp  
@@ -129,24 +148,24 @@ The complex numbers c2 & c3 have the same principal arguments.
 ```  
   
 ##  <a name="arg"></a>  arg  
- 복소수에서 인수를 추출합니다.  
+ Extracts the argument from a complex number.  
   
 ```  
 template <class Type>  
 Type arg(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 인수를 결정해야 하는 복소수입니다.  
+ The complex number whose argument is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 인수입니다.  
+### <a name="return-value"></a>Return Value  
+ The argument of the complex number.  
   
-### <a name="remarks"></a>설명  
- *인수* 는 복합 평면의에서 양수 실제 축과 함께 사용 하면 복잡 한 벡터 각도입니다. 복소수 *a + bi*, 인수가 arctan 같음 (*b / a*). 각도는 양의 실수 축에서 시계 반대 방향으로 측정되는 경우 양을 나타내고, 시계 방향으로 측정되는 경우 음을 나타냅니다. 주 값이-pi 보다 큰 보다과 같지 + pi 또는 합니다.  
+### <a name="remarks"></a>Remarks  
+ The *argument* is the angle that the complex vector makes with the positive real axis in the complex plane. For a complex number *a + bi*, the argument is equal to arctan(*b/a*). The angle has a positive sense when measured in a counterclockwise direction from the positive real axis and a negative sense when measured in a clockwise direction. The principal values are greater than -pi and less than or equal to +pi.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_arg.cpp  
@@ -212,24 +231,24 @@ The complex numbers c2 & c3 have the same principal arguments.
 ```  
   
 ##  <a name="conj"></a>  conj  
- 복소수의 켤레 복소수를 반환합니다.  
+ Returns the complex conjugate of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> conj(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 켤레 복소수가 반환되는 복소수입니다.  
+ The complex number whose complex conjugate is being returned.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 켤레 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex conjugate of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수의 켤레 복소수 *a + bi* 은 *-bi*합니다. 복소수와 켤레 복소수는 숫자 *a*2 + *b*2의 기준입니다.  
+### <a name="remarks"></a>Remarks  
+ The complex conjugate of a complex number *a + bi* is *a - bi*. The product of a complex number and its conjugate is the norm of the number *a*2 + *b*2.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_conj.cpp  
@@ -283,28 +302,28 @@ The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```  
   
 ##  <a name="cos"></a>  cos  
- 복소수의 코사인을 반환합니다.  
+ Returns the cosine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> cos(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 코사인을 결정하는 복소수입니다.  
+ The complex number whose cosine is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 코사인인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the cosine of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 코사인을 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex cosines:  
   
  cos ( *z*) = (1/2)\*( exp ( *iz*) + exp (- *iz*) )  
   
  cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_cos.cpp  
@@ -370,28 +389,28 @@ The complex components cos (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="cosh"></a>  cosh  
- 복소수의 쌍곡 코사인을 반환합니다.  
+ Returns the hyperbolic cosine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> cosh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 쌍곡 코사인을 결정하는 복소수입니다.  
+ The complex number whose hyperbolic cosine is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 쌍곡 코사인인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic cosine of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 쌍곡 코사인을 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic cosines:  
   
  cos ( *z*) = (1/2)\*( exp ( *z*) + exp (- *z*) )  
   
  cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_cosh.cpp  
@@ -457,21 +476,21 @@ The complex components cosh (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="exp"></a>  exp  
- 복소수의 지수 함수를 반환합니다.  
+ Returns the exponential function of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> exp(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 지수를 결정하는 복소수입니다.  
+ The complex number whose exponential is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 지수인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the exponential of the input complex number.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_exp.cpp  
@@ -525,24 +544,24 @@ int main() {
 ```  
   
 ##  <a name="imag"></a>  imag  
- 복소수의 허수 구성 요소를 추출합니다.  
+ Extracts the imaginary component of a complex number.  
   
 ```  
 template <class Type>  
 Type imag(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 실수 부분을 추출할 복소수입니다.  
+ The complex number whose real part is to be extracted.  
   
-### <a name="return-value"></a>반환 값  
- 전역 함수인 복소수 허수 부분입니다.  
+### <a name="return-value"></a>Return Value  
+ The imaginary part of the complex number as a global function.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 복소수의 실수 부분을 수정하는 데 사용할 수 없습니다. 실수 부분을 변경하려면 새 복소수에 구성 요소 값이 할당되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complexc_imag.cpp  
@@ -573,24 +592,24 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 ```  
   
 ##  <a name="log"></a>  log  
- 복소수의 자연 로그를 반환합니다.  
+ Returns the natural logarithm of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> log(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 자연 로그를 결정하고 있는 복소수입니다.  
+ The complex number whose natural logarithm is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 자연 로그인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the natural logarithm of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 분기는 음의 실수 축을 따릅니다.  
+### <a name="remarks"></a>Remarks  
+ The branch cuts are along the negative real axis.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_log.cpp  
@@ -639,24 +658,24 @@ int main() {
 ```  
   
 ##  <a name="log10"></a>  log10  
- 복소수의 상용 로그를 반환합니다.  
+ Returns the base 10 logarithm of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> log10(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 상용 로그를 결정하는 복소수입니다.  
+ The complex number whose base 10 logarithm is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 상용 로그인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the base 10 logarithm of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 분기는 음의 실수 축을 따릅니다.  
+### <a name="remarks"></a>Remarks  
+ The branch cuts are along the negative real axis.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_log10.cpp  
@@ -705,24 +724,24 @@ int main() {
 ```  
   
 ##  <a name="norm"></a>  norm  
- 복소수 기준을 추출합니다.  
+ Extracts the norm of a complex number.  
   
 ```  
 template <class Type>  
 Type norm(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 기준을 결정해야 하는 복소수입니다.  
+ The complex number whose norm is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 기준입니다.  
+### <a name="return-value"></a>Return Value  
+ The norm of a complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 기준인 *a + bi*는 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)입니다.* 복소수의 기준은 모듈러스의 제곱입니다. 복소수의 모듈러스는 복소수를 나타내는 벡터의 길이에 대한 측정입니다. 복소수의 모듈러스인 *a + bi*는 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)이며,* *|a + bi|로 표기됩니다.*  
+### <a name="remarks"></a>Remarks  
+ The norm of a complex number *a + bi* is *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* The norm of a complex number is the square of its modulus. The modulus of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number *a + bi* is `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*),* written *&#124;a + bi&#124;.*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_norm.cpp  
@@ -784,27 +803,27 @@ The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```  
   
 ##  <a name="polar"></a>  polar  
- 지정한 모듈러스 및 인수에 해당하는 복소수를 데카르트 형태로 반환합니다.  
+ Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.  
   
 ```  
 template <class Type>  
 complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *_Modulus*  
- 입력될 복소수의 모듈러스입니다.  
+ The modulus of the complex number being input.  
   
  *_Argument*  
- 입력되는 복소수의 인수입니다.  
+ The argument of the complex number being input.  
   
-### <a name="return-value"></a>반환 값  
- 극좌표 형식으로 지정된 복소수의 직각좌표 형식입니다.  
+### <a name="return-value"></a>Return Value  
+ Cartesian form of the complex number specified in polar form.  
   
-### <a name="remarks"></a>설명  
- 극좌표 형 형식의 복소수 제공 모듈러스 *r* 및 인수 *p*실수 및 허수 데카르트 구성 요소가 이러한 매개 변수는 관련이, *는* 및 *b* 수식으로 *는* = r \* cos *p* 및 *b* = *r* \* sin *p*합니다.  
+### <a name="remarks"></a>Remarks  
+ The polar form of a complex number provides the modulus *r* and the argument *p*, where these parameters are related to the real and imaginary Cartesian components *a* and *b* by the equations *a* = r \* cos *p* and *b* = *r* \* sin *p*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_polar.cpp  
@@ -857,7 +876,7 @@ Argument of c2 is recovered from c2 using:
 ```  
   
 ##  <a name="pow"></a>  pow  
- 복소수인 밑수를 다른 복소수로 거듭제곱하여 얻은 복소수를 계산합니다.  
+ Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.  
   
 ```  
 template <class Type>  
@@ -873,22 +892,22 @@ template <class Type>
 complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Base`  
- 복소수이거나 멤버 함수에 의해 거듭제곱되는 밑인 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The complex number or number that is of the parameter type for the complex number that is the base to be raised to a power by the member function.  
   
  *_Power*  
- 정수 또는 복소수이거나 멤버 함수에 의한 밑의 거듭제곱인 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The integer or complex number or number that is of the parameter type for the complex number that is the power that the base is to be raised to by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 밑을 지정된 만큼 거듭제곱하여 얻은 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number obtained by raising the specified base to the specified power.  
   
-### <a name="remarks"></a>설명  
- 각 함수는 효과적으로 두 피연산자를 반환 형식으로 변환한 후 변환된 **left**를 거듭제곱 **right**로 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The functions each effectively convert both operands to the return type, and then return the converted **left** to the power **right**.  
   
- 분기는 음의 실수 축을 따릅니다.  
+ The branch cut is along the negative real axis.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_pow.cpp  
@@ -998,24 +1017,24 @@ The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```  
   
 ##  <a name="real"></a>  real  
- 복소수의 실수 구성 요소를 추출합니다.  
+ Extracts the real component of a complex number.  
   
 ```  
 template <class Type>  
 Type real(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 실수 부분을 추출할 복소수입니다.  
+ The complex number whose real part is to be extracted.  
   
-### <a name="return-value"></a>반환 값  
- 전역 함수인 복소수의 실수 부분입니다.  
+### <a name="return-value"></a>Return Value  
+ The real part of the complex number as a global function.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 복소수의 실수 부분을 수정하는 데 사용할 수 없습니다. 실수 부분을 변경하려면 새 복소수에 구성 요소 값이 할당되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_real.cpp  
@@ -1046,28 +1065,28 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 ```  
   
 ##  <a name="sin"></a>  sin  
- 복소수의 사인을 반환합니다.  
+ Returns the sine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sin(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 사인을 결정하는 복소수입니다.  
+ The complex number whose sine is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 사인인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the sine of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 사인을 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex sines:  
   
  sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sin.cpp  
@@ -1133,28 +1152,28 @@ The complex components sin (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="sinh"></a>  sinh  
- 복소수의 쌍곡 사인을 반환합니다.  
+ Returns the hyperbolic sine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sinh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 쌍곡 사인을 결정하는 복소수입니다.  
+ The complex number whose hyperbolic sine is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 쌍곡 사인인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic sine of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 쌍곡 사인을 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic sines:  
   
  sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sinh.cpp  
@@ -1220,28 +1239,28 @@ The complex components sinh (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="sqrt"></a>  sqrt  
- 복소수의 제곱근을 계산합니다.  
+ Calculates the square root of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sqrt(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 제곱근을 구할 복소수입니다.  
+ The complex number whose square root is to be found.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 제곱근입니다.  
+### <a name="return-value"></a>Return Value  
+ The square root of a complex number.  
   
-### <a name="remarks"></a>설명  
- 제곱근은 반개구간(-p i/2, pi/2)의 위상각을 갖습니다.  
+### <a name="remarks"></a>Remarks  
+ The square root will have a phase angle in the half-open interval (-pi/2, pi/2].  
   
- 복합 평면의 분기는 음의 실수 축을 따릅니다.  
+ The branch cuts in the complex plane are along the negative real axis.  
   
- 복소수의 제곱근은 입력 숫자의 제곱근인 모듈러스와 입력 숫자의 1/2인 인수를 갖습니다.  
+ The square root of a complex number will have a modulus that is the square root of the input number and an argument that is one-half that of the input number.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sqrt.cpp  
@@ -1293,26 +1312,26 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
 ```  
   
 ##  <a name="tan"></a> tan  
- 복소수의 탄젠트를 반환합니다.  
+ Returns the tangent of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> tan(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 탄젠트를 결정하는 복소수입니다.  
+ The complex number whose tangent is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 탄젠트인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the tangent of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 코탄젠트를 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex cotangent:  
   
  tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_tan.cpp  
@@ -1378,26 +1397,26 @@ The complex components tan (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="tanh"></a>  tanh  
- 복소수의 쌍곡 탄젠트를 반환합니다.  
+ Returns the hyperbolic tangent of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> tanh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 쌍곡 탄젠트를 결정하는 복소수입니다.  
+ The complex number whose hyperbolic tangent is being determined.  
   
-### <a name="return-value"></a>반환 값  
- 입력 복소수의 쌍곡 탄젠트인 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic tangent of the input complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 쌍곡 코탄젠트를 정의하는 항:  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic cotangent:  
   
  tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_tanh.cpp  
@@ -1462,7 +1481,7 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.761594,-8.68604e-014)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<complex>](../standard-library/complex.md)
 
 

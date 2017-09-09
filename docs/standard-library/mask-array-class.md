@@ -1,5 +1,5 @@
 ---
-title: "mask_array 클래스 | Microsoft 문서"
+title: mask_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mask_array
 - valarray/std::mask_array
 dev_langs:
 - C++
@@ -35,28 +34,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f2e587423bbd706ac732180872a56db920f661a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maskarray-class"></a>mask_array 클래스
-하위 집합 배열 간의 작업을 제공하여 부울 식으로 지정된 부모 valarray의 하위 집합인 개체를 지원하는 내부 보조 템플릿 클래스입니다.  
+# <a name="maskarray-class"></a>mask_array Class
+An internal, auxiliary template class that supports objects that are subsets of parent valarrays, specified with a Boolean expression, by providing operations between the subset arrays.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
   
   
-## <a name="remarks"></a>설명  
- 이 클래스는 **valarray\<Type>** 개체에서 선택할 요소의 시퀀스를 설명하는 [valarray\<bool>](../standard-library/valarray-bool-class.md) 클래스의 **ba** 개체와 함께 [valarray](../standard-library/valarray-class.md)**\<Type>** 클래스의 **va** 개체에 대한 참조를 저장하는 개체를 설명합니다.  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object **va** of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object **ba** of class [valarray\<bool>](../standard-library/valarray-bool-class.md), which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- **mask_array\<Type>** 개체를 생성하려면 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 형식의 식을 작성하면 됩니다. 그러면 mask_array 클래스의 멤버 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점을 제외하고 **valarray\<Type>**에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다.  
+ You construct a **mask_array\<Type>** object only by writing an expression of the form [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). The member functions of class mask_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected.  
   
- 시퀀스는 최대 **ba.size** 개 요소로 구성됩니다. 요소 *J* 는 **ba**[ *J*]가 true인 경우에만 포함됩니다. 따라서 **ba**에 있는 true 요소 수 만큼의 요소가 시퀀스에 있습니다. `I` 가 **ba**에서 가장 낮은 true 요소의 인덱스인 경우 **va**[ `I`]는 선택한 시퀀스의 요소 0입니다.  
+ The sequence consists of at most **ba.size** elements. An element *J* is included only if **ba**[ *J*] is true. Thus, there are as many elements in the sequence as there are true elements in **ba**. If `I` is the index of the lowest true element in **ba**, then **va**[ `I`] is element zero in the selected sequence.  
   
-## <a name="example"></a>예제:  
+## <a name="example"></a>Example:  
   
 ```  
 // mask_array.cpp  
@@ -90,19 +89,19 @@ int main( )
 }  
 ```  
   
-### <a name="output"></a>출력  
+### <a name="output"></a>Output  
   
 ```  
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

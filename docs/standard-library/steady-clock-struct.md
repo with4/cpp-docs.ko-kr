@@ -1,5 +1,5 @@
 ---
-title: "steady_clock 구조체 | Microsoft Docs"
+title: steady_clock struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,50 +31,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 332008ed313eeae7f04f39165424a9280c2aed8c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8332ccdd3349f52acb2c913f68fe5ced2805a848
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="steadyclock-struct"></a>steady_clock 구조체
-`steady` 클록을 나타냅니다.  
+# <a name="steadyclock-struct"></a>steady_clock struct
+Represents a `steady` clock.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct steady_clock;  
 ```  
   
-## <a name="remarks"></a>설명  
- Windows에서 steady_clock은 QueryPerformanceCounter 함수를 래핑합니다.  
+## <a name="remarks"></a>Remarks  
+ On Windows, steady_clock wraps the QueryPerformanceCounter function.  
   
- `now()`에 대한 첫 번째 호출에서 반환되는 값이 항상 `now()`에 대한 순차적 호출에서 반환되는 값보다 작거나 같을 경우 클록은 *단조*입니다.  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
- 클록이 *단조*이고 클록 틱 간 시간이 지속적이면 해당 클록은 *지속*입니다.  
+ A clock is *steady* if it is *monotonic* and if the time between clock ticks is constant.  
   
- High_resolution_clock은 steady_clock에 대한 typedef입니다.  
+ High_resolution_clock is a typdef for steady_clock.  
   
-## <a name="public-functions"></a>공용 함수  
+## <a name="public-functions"></a>Public functions  
   
-|함수|설명|  
+|Function|Description|  
 |--------------|-----------------|  
-|now|현재 시간을 time_point 값으로 반환합니다.|  
+|now|Returns the current time as a time_point value.|  
   
-## <a name="public-constants"></a>공용 상수  
+## <a name="public-constants"></a>Public Constants  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`system_clock::is_steady`|`true`입니다. `steady_clock`은 *지속*입니다.|  
+|`system_clock::is_steady`|Holds `true`. A `steady_clock` is *steady*.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<c h >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **네임스페이스:** std::chrono  
+ **Namespace:** std::chrono  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
- [system_clock 구조체](../standard-library/system-clock-structure.md)
+ [system_clock Structure](../standard-library/system-clock-structure.md)
 

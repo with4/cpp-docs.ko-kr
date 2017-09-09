@@ -1,5 +1,5 @@
 ---
-title: "&lt;condition_variable&gt; | Microsoft 문서"
+title: '&lt;condition_variable&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,59 +32,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 6002dcd4cd0fe35c99ce56a1d9fd3b5f3c23dd08
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5cf0a7bed02578f4bd4e7fe8146c7f67835a01ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
-조건이 true가 될 때까지 대기하는 개체를 만드는 데 사용되는 [condition_variable](../standard-library/condition-variable-class.md) 및 [condition_variable_any](../standard-library/condition-variable-any-class.md) 클래스를 정의합니다.  
+Defines the classes [condition_variable](../standard-library/condition-variable-class.md) and [condition_variable_any](../standard-library/condition-variable-any-class.md) that are used to create objects that wait for a condition to become true.  
   
- 이 헤더는 동시성 런타임(ConcRT)을 사용하므로 다른 ConcRT 메커니즘과 함께 사용할 수 있습니다. ConcRT에 대한 자세한 내용은 [동시성 런타임](../parallel/concrt/concurrency-runtime.md)을 참조하세요.  
+ This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <condition_variable>  
 ```  
   
 > [!NOTE]
->  사용 하 여 컴파일되는 코드에서 **/clr**,이 헤더는 차단 됩니다.  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
-### <a name="remarks"></a>주의  
- 조건 변수를 대기하는 코드에서는 `mutex`를 사용해야 합니다. 조건 변수를 대기하는 함수를 호출하기 전에 호출 스레드에서 `mutex`를 잠가야 합니다. 호출된 함수가 반환될 때 `mutex`가 잠깁니다. 스레드가 조건이 true가 될 때까지 대기하는 동안에는 `mutex`가 잠기지 않습니다. 예기치 않은 결과가 없도록 조건 변수를 대기하는 각 스레드는 동일한 `mutex` 개체를 사용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Code that waits for a condition variable must also use a `mutex`. A calling thread must lock the `mutex` before it calls the functions that wait for the condition variable. The `mutex` is then locked when the called function returns. The `mutex` is not locked while the thread waits for the condition to become true. So that there are no unpredictable results, each thread that waits for a condition variable must use the same `mutex` object.  
   
- `condition_variable_any` 형식의 개체는 모든 종류의 뮤텍스와 함께 사용할 수 있습니다. 사용되는 뮤텍스의 형식에서 `try_lock` 메서드를 제공할 필요가 없습니다. `condition_variable` 형식의 개체만 `unique_lock<mutex>` 형식의 뮤텍스와 함께 사용할 수 있습니다. 이 형식의 개체는 `condition_variable_any<unique_lock<mutex>>` 형식의 개체보다 빠를 수 있습니다.  
+ Objects of type `condition_variable_any` can be used with a mutex of any type. The type of the mutex that is used does not have to provide the `try_lock` method. Objects of type `condition_variable` can only be used with a mutex of type `unique_lock<mutex>`. Objects of this type may be faster than objects of type `condition_variable_any<unique_lock<mutex>>`.  
   
- 이벤트를 대기하려면 먼저 뮤텍스를 잠근 후 조건 변수에 대한 `wait` 메서드 중 하나를 호출합니다. 다른 스레드가 조건 변수를 알릴 때까지 `wait`에서 블록을 호출합니다.  
+ To wait for an event, first lock the mutex, and then call one of the `wait` methods on the condition variable. The `wait` call blocks until another thread signals the condition variable.  
   
- 조건 변수를 대기 중인 스레드가 적절한 알림 없이 차단 해제될 때 *의사 대기 모드 해제*가 발생합니다. 이러한 의사 대기 모드 해제를 인식하기 위해 대기 함수에서 코드가 반환될 때 조건이 true가 될 때까지 대기하는 코드에서 해당 조건을 명시적으로 확인해야 합니다. 이는 보통 루프를 사용하여 수행됩니다. `wait(unique_lock<mutex>& lock, Predicate pred)`를 사용하여 이 루프를 자동으로 수행할 수 있습니다.  
+ *Spurious wakeups* occur when threads that are waiting for condition variables become unblocked without appropriate notifications. To recognize such spurious wakeups, code that waits for a condition to become true should explicitly check that condition when the code returns from a wait function. This is usually done by using a loop; you can use `wait(unique_lock<mutex>& lock, Predicate pred)` to perform this loop for you.  
   
 ```cpp  
 while (condition is false)
     wait for condition variable;
 ```  
   
- `condition_variable_any` 및 `condition_variable` 클래스는 각기 조건을 대기하는 세 개의 메서드를 포함합니다.  
+ The `condition_variable_any` and `condition_variable` classes each have three methods that wait for a condition.  
   
-- `wait`는 제한 없는 시간 동안 대기합니다.  
+- `wait` waits for an unbounded time period.  
   
-- `wait_until`은 지정된 `time`까지 대기합니다.  
+- `wait_until` waits until a specified `time`.  
   
-- `wait_for`는 지정된 `time interval` 동안 대기합니다.  
+- `wait_for` waits for a specified `time interval`.  
   
- 이러한 각 메서드에는 두 개의 오버로드된 버전이 있습니다. 하나는 대기만 하다가 의사적으로 대기 모드를 해제할 수 있습니다. 다른 하나는 조건자를 정의하는 추가 템플릿 인수를 사용합니다. 조건자가 `true`가 될 때까지 메서드에서 반환하지 않습니다.  
+ Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is `true`.  
   
- 각 클래스에는 조건이 `true`가 되는 것을 조건 변수에 알리는 데 사용되는 두 가지 메서드가 있습니다.  
+ Each class also has two methods that are used to notify a condition variable that its condition is `true`.  
   
-- `notify_one`은 조건 변수를 대기 중인 스레드 중 하나의 대기 모드를 해제합니다.  
+- `notify_one` wakes up one of the threads that is waiting for the condition variable.  
   
-- `notify_all`은 조건 변수를 대기 중인 모든 스레드의 대기 모드를 해제합니다.  
+- `notify_all` wakes up all of the threads that are waiting for the condition variable.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [condition_variable 클래스](../standard-library/condition-variable-class.md)   
- [condition_variable_any 클래스](../standard-library/condition-variable-any-class.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [condition_variable Class](../standard-library/condition-variable-class.md)   
+ [condition_variable_any Class](../standard-library/condition-variable-any-class.md)
 

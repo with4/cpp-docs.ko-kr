@@ -1,5 +1,5 @@
 ---
-title: "&lt;tuple&gt; 연산자 | Microsoft Docs"
+title: '&lt;tuple&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,21 +18,21 @@ dev_langs:
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 97cdd6afe672d902efd92a692b23e920f7d03647
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8c3921cf6d1c4fc5a1d754f1bb08a247d9612319
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-operators"></a>&lt;tuple&gt; 연산자
+# <a name="lttuplegt-operators"></a>&lt;tuple&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- `tuple` 개체가 다른지 비교합니다.  
+ Compare `tuple` objects for inequality.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -41,14 +41,14 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수는 `N`이 0이면 false를 반환하고 그렇지 않으면 `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns false when `N` is 0, otherwise `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_ne.cpp   
@@ -94,7 +94,7 @@ true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- `tuple` 개체를 비교하여 더 작은 개체를 확인합니다.  
+ Compare `tuple` objects for less.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -103,14 +103,14 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수는 `N`이 0보다 크고 `tpl1`의 첫 번째 다른 값이 `tpl2`의 해당 값에 비해 작으면 true를 반환하고, 그렇지 않으면 false를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns true when `N` is greater than 0 and the first differing value in `tpl1` compares less than the corresponding value in `tpl2`, otherwise it returns false.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_lt.cpp   
@@ -156,7 +156,7 @@ true
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- `tuple` 개체가 작거나 같은지 비교합니다.  
+ Compare `tuple` objects for less or equal.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -165,14 +165,14 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수에서 `!(tpl2 < tpl1)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns `!(tpl2 < tpl1)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_le.cpp   
@@ -218,7 +218,7 @@ false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- `tuple` 개체가 같은지 비교합니다.  
+ Compare `tuple` objects for equality.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -227,14 +227,14 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수는 `N`이 0이면 true를 반환하고 그렇지 않으면 `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns true when `N` is 0, otherwise `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_eq.cpp   
@@ -280,7 +280,7 @@ false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- `tuple` 개체를 비교하여 더 큰 개체를 확인합니다.  
+ Compare `tuple` objects for greater.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -289,14 +289,14 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수에서 `tpl2 < tpl1`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns `tpl2 < tpl1`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_gt.cpp   
@@ -342,7 +342,7 @@ true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- `tuple` 개체가 크거나 같은지 비교합니다.  
+ Compare `tuple` objects for greater or equal.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -351,14 +351,14 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `TN`  
- N번째 튜플 요소의 형식입니다.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>설명  
- 함수에서 `!(tpl1 < tpl2)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns `!(tpl1 < tpl2)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_ge.cpp   
@@ -403,7 +403,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

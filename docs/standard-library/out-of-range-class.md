@@ -1,5 +1,5 @@
 ---
-title: "out_of_range 클래스 | Microsoft Docs"
+title: out_of_range Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- out_of_range
 - stdexcept/std::out_of_range
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 416f866ead1e3e4468136ebbdef1b5d7750691d4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfdc765f6246574ee09118e70654aac2ec81e205
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="outofrange-class"></a>out_of_range 클래스
-이 클래스는 유효 범위를 벗어난 인수를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.  
+# <a name="outofrange-class"></a>out_of_range Class
+The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class out_of_range : public logic_error {  
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>설명  
- [what](../standard-library/exception-class.md)에서 반환된 값은 **message**`.`[data](../standard-library/basic-string-class.md#data)의 복사본입니다.  
+## <a name="remarks"></a>Remarks  
+ The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // out_of_range.cpp  
@@ -83,19 +82,19 @@ int main() {
 }  
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
   
 ```  
 Caught: invalid string position  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<stdexcept>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stdexcept>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [logic_error 클래스](../standard-library/logic-error-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [logic_error Class](../standard-library/logic-error-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

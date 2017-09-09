@@ -1,23 +1,39 @@
 ---
-title: "&lt;iterator&gt; 연산자 | Microsoft 문서"
+title: '&lt;iterator&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- iterator/std::operator!=
+- iterator/std::operator&gt;
+- iterator/std::operator&gt;=
+- iterator/std::operator&lt;
+- iterator/std::operator&lt;=
+- iterator/std::operator+
+- iterator/std::operator-
+- iterator/std::operator==
+dev_langs:
+- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+helpviewer_keywords:
+- std::operator!= (iterator)
+- std::operator&gt; (iterator)
+- std::operator&gt;= (iterator)
+- std::operator&lt; (iterator)
+- std::operator&lt;= (iterator), std::operator== (iterator)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 129433eebdc988b863d1a61d2ceaf220cd897096
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 연산자
+# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -25,7 +41,7 @@ ms.lasthandoff: 04/29/2017
 |[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 다른지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is not equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
@@ -38,20 +54,20 @@ template <class CharType, class Tr>
 bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **iterator** 형식의 개체입니다.  
+ An object of type **iterator**.  
   
  `right`  
- **iterator** 형식의 개체입니다.  
+ An object of type **iterator**.  
   
-### <a name="return-value"></a>반환 값  
- 반복기 개체가 같지 않으면 **true**이고, 반복기 개체가 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator objects are not equal; **false** if the iterator objects are equal.  
   
-### <a name="remarks"></a>설명  
- 반복기 개체가 컨테이너의 동일한 요소로 주소 지정되면 서로 같습니다. 두 반복기가 컨테이너의 다른 요소를 가리키면 반복기가 같지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_ne.cpp  
@@ -114,7 +130,7 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -138,22 +154,22 @@ bool operator==(
     const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
  `right`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
-### <a name="return-value"></a>반환 값  
- 반복기 개체가 같으면 `true`이고, 반복기 개체가 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the iterator objects are equal; `false` if the iterator objects are not equal.  
   
-### <a name="remarks"></a>설명  
- 반복기 개체가 컨테이너의 동일한 요소로 주소 지정되면 서로 같습니다. 두 반복기가 컨테이너의 다른 요소를 가리키면 반복기가 같지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
   
- 처음 두 템플릿 연산자는 `left`와 `right`가 동일한 반복기를 저장하는 경우에만 true를 반환합니다. 세 번째 템플릿 연산자는 `left`와 `right`가 동일한 스트림 포인터를 저장하는 경우에만 true를 반환합니다. 네 번째 템플릿 연산자는 ` left.equal ( right)`를 반환합니다.  
+ The first two template operators return true only if both `left` and `right` store the same iterator. The third template operator returns true only if both `left` and `right` store the same stream pointer. The fourth template operator returns ` left.equal ( right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_eq.cpp  
@@ -216,27 +232,27 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작은지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is less than the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **iterator** 형식의 개체입니다.  
+ An object of type **iterator**.  
   
  `right`  
- **iterator** 형식의 개체입니다.  
+ An object of type **iterator**.  
   
-### <a name="return-value"></a>반환 값  
- 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작으면 **true**이고, 오른쪽 반복기보다 크거나 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is less than the iterator on the right side of the expression; **false** if it is greater than or equal to the iterator on the right.  
   
-### <a name="remarks"></a>설명  
- 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작습니다. 한 반복기 개체가 다른 반복기 개체와 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is not less than another if it addresses either the same element as the other iterator object or an element that occurs later in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_lt.cpp  
@@ -303,27 +319,27 @@ The iterator rVPOS1 is less than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is less than or equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
  `right`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
-### <a name="return-value"></a>반환 값  
- 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작거나 같으면 **true**이고, 오른쪽 반복기보다 크면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is less than or equal to the iterator on the right side of the expression; **false** if it is greater than the iterator on the right.  
   
-### <a name="remarks"></a>설명  
- 한 반복기 개체가 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작거나 같습니다. 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is less than or equal to another if it addresses the same element or an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_le.cpp  
@@ -394,27 +410,27 @@ The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 큰지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is greater than the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
  `right`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
-### <a name="return-value"></a>반환 값  
- 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크면 **true**이고, 오른쪽 반복기보다 작거나 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is greater than the iterator on the right side of the expression; **false** if it is less than or equal to the iterator on the right.  
   
-### <a name="remarks"></a>설명  
- 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다. 한 반복기 개체가 다른 반복기 개체와 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 크지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is not greater than another if it addresses either the same element as the other iterator object or an element that occurs earlier in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_gt.cpp  
@@ -479,27 +495,27 @@ The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.  
+ Tests if the iterator object on the left side of the operator is greater than or equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
  `right`  
- iterator 형식의 개체입니다.  
+ An object of type iterator.  
   
-### <a name="return-value"></a>반환 값  
- 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크거나 같으면 **true**이고, 오른쪽 반복기보다 작으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is greater than or equal to the iterator on the right side of the expression; **false** if it is less than the iterator on the right.  
   
-### <a name="remarks"></a>설명  
- 한 반복기 개체가 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다. 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작습니다.  
+### <a name="remarks"></a>Remarks  
+ One iterator object is greater than or equal to another if it addresses the same element or an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_ge.cpp  
@@ -570,7 +586,7 @@ The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- 반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소의 주소를 지정하는 `move_iterator` 또는 `reverse_iterator`를 반환합니다.  
+ Adds an offset to an iterator and returns a `move_iterator` or a `reverse_iterator` addressing the inserted element at the new offset position.  
   
 ```  
 template <class RandomIterator, class Diff>  
@@ -586,17 +602,17 @@ operator+(
     const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- const move_iterator 또는 const reverse_iterator가 오프셋되는 위치의 수입니다.  
+ The number of positions the const move_iterator or const reverse_iterator is to be offset.  
   
  `right`  
- 오프셋할 반복기입니다.  
+ The iterator to be offset.  
   
-### <a name="return-value"></a>반환 값  
- 합계 `right` + `_Off`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the sum `right` + `_Off`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_insert.cpp  
@@ -646,7 +662,7 @@ The iterator rVPOS1 now points to the fifth element
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- 다른 반복기에서 하나의 반복기를 빼고 차이를 반환합니다.  
+ Subtracts one iterator from another and returns the difference.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -660,24 +676,24 @@ Tdiff operator-(
     const reverse_iterator<RandomIterator2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 반복기입니다.  
+ An iterator.  
   
  `right`  
- 반복기입니다.  
+ An iterator.  
   
-### <a name="return-value"></a>반환 값  
- 두 반복기 간의 차이입니다`.`  
+### <a name="return-value"></a>Return Value  
+ The difference between two iterators `.`  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 연산자는 `left.base() - right.base()`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns `left.base() - right.base()`.  
   
- 두 번째 템플릿 연산자는 `right.current - left.current`를 반환합니다.  
+ The second template operator returns `right.current - left.current`.  
   
- `Tdiff`는 반환된 식의 형식에 의해 결정됩니다. 그렇지 않으면 `RandomIterator1::difference_type`입니다.  
+ `Tdiff` is determined by the type of the returned expression. Otherwise, it is `RandomIterator1::difference_type`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_sub.cpp  
@@ -734,7 +750,7 @@ The iterator rVPOS2 now points to the fifth element
 The difference: rVPOS2 - rVPOS1= 4.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)
 
 

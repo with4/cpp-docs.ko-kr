@@ -1,5 +1,5 @@
 ---
-title: "&lt;forward_list&gt; 함수 | Microsoft 문서"
+title: '&lt;forward_list&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,19 +11,20 @@ f1_keywords:
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1c8cbb3a8dbbf7f6c14400f531e7ab40a2c84f6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bc9a3e66e9cebfeb02f4e4b059b5c087ce93c2eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltforwardlistgt-functions"></a>&lt;forward_list&gt; 함수
+# <a name="ltforwardlistgt-functions"></a>&lt;forward_list&gt; functions
 ||  
 |-|  
 |[swap](#swap)|  
   
 ##  <a name="swap"></a>  swap  
- 두 정방향 목록의 요소를 교환합니다.  
+ Exchanges the elements of two forward lists.  
   
 ```
 void swap(
@@ -31,17 +32,17 @@ void swap(
     forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `left.swap(right)`를 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function executes `left.swap(right)`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

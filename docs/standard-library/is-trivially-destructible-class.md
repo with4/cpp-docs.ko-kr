@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_destructible 클래스 | Microsoft 문서"
+title: is_trivially_destructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_destructible
 - type_traits/std::is_trivially_destructible
 dev_langs:
 - C++
@@ -35,35 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 523d8a6ce58f39340bd33406439774824f85b7cb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f19c2da258fda90e73b247105131a5a45b8418bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallydestructible-class"></a>is_trivially_destructible 클래스
-형식이 일반적으로 소멸 가능한지 테스트합니다.  
+# <a name="istriviallydestructible-class"></a>is_trivially_destructible Class
+Tests whether the type is trivially destructible.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>  
 struct is_trivially_destructible;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `T` 형식이 소멸 가능한 형식이고 소멸자가 특수한 작업을 사용하지 않는 것으로 컴파일러에 알려진 경우 true이고, 그렇지 않으면 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a destructible type, and the destructor is known to the compiler to use no non-trivial operations. Otherwise, it holds false.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

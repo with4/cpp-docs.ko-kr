@@ -1,5 +1,5 @@
 ---
-title: "pointer_traits 구조체 | Microsoft Docs"
+title: pointer_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,25 +41,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6dd1d04071429da08fca79bc900757f2adc74c98
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="pointertraits-struct"></a>pointer_traits 구조체
-포인터 형식 `allocator_traits`를 사용하여 할당자를 설명하기 위해 템플릿 클래스 `Ptr`의 개체에 필요한 정보를 제공합니다.  
+# <a name="pointertraits-struct"></a>pointer_traits Struct
+Supplies information that is needed by an object of template class `allocator_traits` to describe an allocator with pointer type `Ptr`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Ptr>
 struct pointer_traits;
 ```  
   
-## <a name="remarks"></a>설명  
- Ptr은 `Ty *` 형식의 원시 포인터 또는 다음 속성을 포함하는 클래스일 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Ptr can be a raw pointer of type `Ty *` or a class with the following properties.  
 ```  
 struct Ptr
    { // describes a pointer type usable by allocators
@@ -74,38 +74,38 @@ struct Ptr
 ```
 ### <a name="typedefs"></a>Typedefs  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`typedef T2 difference_type`|`T2` 형식은 해당 형식이 있으면 `Ptr::difference_type`이고 그렇지 않으면 `ptrdiff_t`입니다. `Ptr`이 원시 포인터이면 형식은 `ptrdiff_t`입니다.|  
-|`typedef T1 element_type`|`T1` 형식은 해당 형식이 있으면 `Ptr::element_type`이고 그렇지 않으면 `Ty`입니다. `Ptr`이 원시 포인터이면 형식은 `Ty`입니다.|  
-|`typedef Ptr pointer`|형식은 `Ptr`입니다.|  
+|`typedef T2 difference_type`|The type `T2` is `Ptr::difference_type` if that type exists, otherwise `ptrdiff_t`. If `Ptr` is a raw pointer, the type is `ptrdiff_t`.|  
+|`typedef T1 element_type`|The type `T1` is `Ptr::element_type` if that type exists, otherwise `Ty`. If `Ptr` is a raw pointer, the type is `Ty`.|  
+|`typedef Ptr pointer`|The type is `Ptr`.|  
   
 ### <a name="structs"></a>Structs  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`pointer_traits::rebind`|기본 포인터 형식을 지정된 형식으로 변환하려고 시도합니다.|  
+|`pointer_traits::rebind`|Attempts to convert the underlying pointer type to a specified type.|  
   
-### <a name="methods"></a>메서드  
+### <a name="methods"></a>Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[pointer_to](#pointer_to)|클래스 `Ptr`의 개체에 대한 임의 참조를 변환합니다.|  
+|[pointer_to](#pointer_to)|Converts an arbitrary reference to an object of class `Ptr`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="pointer_to"></a>  pointer_to  
- 해당 함수가 있는 경우 `Ptr::pointer_to(obj)`를 반환하는 정적 메서드입니다. 그렇지 않으면 클래스 `Ptr`의 개체에 대한 임의 참조를 변환할 수 없습니다. `Ptr`이 원시 포인터이면 이 메서드는 `addressof(obj)`를 반환합니다.  
+ Static method that returns `Ptr::pointer_to(obj)`, if that function exists. Otherwise, it is not possible to convert an arbitrary reference to an object of class `Ptr`. If `Ptr` is a raw pointer, this method returns `addressof(obj)`.  
   
 ```cpp  
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [allocator_traits 클래스](../standard-library/allocator-traits-class.md)
+ [allocator_traits Class](../standard-library/allocator-traits-class.md)
 
 

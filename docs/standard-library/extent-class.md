@@ -1,5 +1,5 @@
 ---
-title: "extent 클래스 | Microsoft 문서"
+title: extent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- extent
 - type_traits/std::extent
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 23cf8230cd5b8adb7975ec21a249d9efc4d66c71
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2c7650f705b47075bd03fe5b3d04c749441c28a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="extent-class"></a>extent 클래스
-배열 차원을 가져옵니다.  
+# <a name="extent-class"></a>extent Class
+Gets an array dimension.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty, unsigned I = 0>  
 struct extent;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
  `I`  
- 쿼리에 바인딩되는 배열입니다.  
+ The array bound to query.  
   
-## <a name="remarks"></a>설명  
- `Ty`가 `I` 이상의 차원을 가진 배열 형식인 경우 형식 쿼리에는 `I`에서 지정되는 차원의 요소 수가 포함됩니다. `Ty`가 배열 형식이 아니거나 순위가 `I`보다 작은 경우, 또는 `I`가 0이고 `Ty`가 "범위를 알 수 없는 배열 `U`" 형식인 경우 형식 쿼리는 0 값을 가집니다.  
+## <a name="remarks"></a>Remarks  
+ If `Ty` is an array type that has at least `I` dimensions, the type query holds the number of elements in the dimension specified by `I`. If `Ty` is not an array type or its rank is less than `I`, or if `I` is zero and `Ty` is of type "array of unknown bound of `U`", the type query holds the value 0.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__extent.cpp   
@@ -87,13 +86,13 @@ extent 0 == 5
 extent 1 == 10  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_all_extents 클래스](../standard-library/remove-all-extents-class.md)   
- [remove_extent 클래스](../standard-library/remove-extent-class.md)
+ [remove_all_extents Class](../standard-library/remove-all-extents-class.md)   
+ [remove_extent Class](../standard-library/remove-extent-class.md)
 

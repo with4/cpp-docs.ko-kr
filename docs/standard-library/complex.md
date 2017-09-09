@@ -1,5 +1,5 @@
 ---
-title: "&lt;complex&gt; | Microsoft 문서"
+title: '&lt;complex&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <complex>
-- std.<complex>
-- std::<complex>
+- <complex>", "std::<complex>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 03b72414921c6de42a7e5c4dd5bd91d1630c4ee4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-컨테이너 템플릿 클래스를 정의 **복잡 한** 및 해당 지원 템플릿을 합니다.  
+Defines the container template class **complex** and its supporting templates.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <complex>  
 ```  
   
-## <a name="remarks"></a>설명  
- 복소수는 실수의 순서가 지정된 쌍입니다. 순수하게 기하학적 측면에서 복합 평면은 실제 2차원 평면입니다. 실제 평면과 구분되는 복합 평면의 특성은 추가 대수 구조가 있기 때문입니다. 이 대수 구조에는 두 가지 기본 작업이 있습니다.  
+## <a name="remarks"></a>Remarks  
+ A complex number is an ordered pair of real numbers. In purely geometrical terms, the complex plane is the real, two-dimensional plane. The special qualities of the complex plane that distinguish it from the real plane are due to its having an additional algebraic structure. This algebraic structure has two fundamental operations:  
   
 -   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
 -   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
- 복합 더하기 및 복합 곱하기 연산이 있는 복소수 집합은 표준 대수 측면에서 필드입니다.  
+ The set of complex numbers with the operations of complex addition and complex multiplication are a field in the standard algebraic sense:  
   
--   더하기 및 곱하기 연산은 누적 및 연결되고, 실수 필드의 실제 더하기 및 곱하기와 마찬가지로 곱하기가 더하기에 배포됩니다.  
+-   The operations of addition and multiplication are commutative and associative and multiplication distributes over addition exactly as it does with real addition and multiplication on the field of real numbers.  
   
--   복소수 (0, 0)는 덧셈 id 및 (1, 0)은 곱셈 id입니다.  
+-   The complex number (0, 0) is the additive identity and (1, 0) is the multiplicative identity.  
   
--   복소수의 덧셈 역 (*는*, *b*)는 (-*는*,-*b*), 및는 제외 하 고 이러한 모든 복소수의 곱셈 역 수는 (0, 0)은  
+-   The additive inverse for a complex number (*a*, *b*) is (-*a*, -*b*), and the multiplicative inverse for all such complex numbers except (0, 0) is  
   
      (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- 복소수를 나타내 *z* = (*는*, *b*) 형태로 *z* = *는* + *bi*여기서 *i*<sup>2</sup> = 복소수 집합 및 해당 구성 요소에 실수 집합의 대 수를 적용할 수에 대 한 규칙은-1입니다. 예를 들면 다음과 같습니다.  
+ By representing a complex number *z* = (*a*, *b*) in the form *z* = *a* + *bi*, where *i*<sup>2</sup> = -1, the rules for the algebra of the set of real numbers can be applied to the set of complex numbers and to their components. For example:  
   
   (1 + 2*i*) \* (2 + 3*i*)  
   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -76,9 +74,9 @@ ms.lasthandoff: 04/29/2017
   = (2 - 6) + (3 + 4)*i*  
   = -4 + 7*i*  
   
- 복소수 시스템은 필드이지만 순서가 지정된 필드가 아닙니다. 순서가 있지 않습니다 복소수의 이므로 실수 및 해당 하위 집합의 필드에 대 한 부등식 실수는 복소수를 적용할 수 없습니다.  
+ The system of complex numbers is a field, but it is not an ordered field. There is no ordering of the complex numbers as there is for the field of real numbers and its subsets, so inequalities cannot be applied to complex numbers as they are to real numbers.  
   
- 복소수 *z*를 나타내는 일반적인 형태로는 다음과 같이 세 가지가 있습니다.  
+ There are three common forms of representing a complex number *z*:  
   
 -   Cartesian: *z* = *a* + *bi*  
   
@@ -86,75 +84,75 @@ ms.lasthandoff: 04/29/2017
   
 -   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
- 복소수의 이러한 표준 표현에 사용되는 용어는 다음과 같이 참조됩니다.  
+ The terms used in these standard representations of a complex number are referred to as follows:  
   
--   직각좌표 실수 성분 또는 실수부 *a*  
+-   The real Cartesian component or real part *a*.  
   
--   직각좌표 허수 성분 또는 허수부 *b*  
+-   The imaginary Cartesian component or imaginary part *b*.  
   
--   모듈러스 또는 절대값 복소수 *r*합니다.  
+-   The modulus or absolute value of a complex number *r*.  
   
--   인수 또는 위상 각 *p* 라디안에서입니다.  
+-   The argument or phase angle *p* in radians.  
   
- 여러 값을 반환할 수 있는 함수는-π 보다 크거나 같고 인수에 대해 주 값을 반환 하는 데 필요한 지정 되지 않는 보다 크거나 + π 또는 단일 값으로 변경 하지 않으려면입니다. 모든 각도 라디안으로 표시 되어야 합니다 원에서 2 π 라디안 (360도) 부분.  
+ Unless otherwise specified, functions that can return multiple values are required to return a principal value for their arguments greater than -π and less than or equal to +π to keep them single valued. All angles must be expressed in radians, where there are 2π radians (360 degrees) in a circle.  
   
-### <a name="functions"></a>함수  
-  
-|||  
-|-|-|  
-|[abs](../standard-library/complex-functions.md#abs)|복소수의 모듈러스를 계산합니다.|  
-|[arg](../standard-library/complex-functions.md#arg)|복소수에서 인수를 추출합니다.|  
-|[conj](../standard-library/complex-functions.md#conj)|복소수의 켤레 복소수를 반환합니다.|  
-|[cos](../standard-library/complex-functions.md#cos)|복소수의 코사인을 반환합니다.|  
-|[cosh](../standard-library/complex-functions.md#cosh)|복소수의 쌍곡 코사인을 반환합니다.|  
-|[exp](../standard-library/complex-functions.md#exp)|복소수의 지수 함수를 반환합니다.|  
-|[imag](../standard-library/complex-functions.md#imag)|복소수의 허수 구성 요소를 추출합니다.|  
-|[log](../standard-library/complex-functions.md#log)|복소수의 자연 로그를 반환합니다.|  
-|[log10](../standard-library/complex-functions.md#log10)|복소수의 상용 로그를 반환합니다.|  
-|[norm](../standard-library/complex-functions.md#norm)|복소수 기준을 추출합니다.|  
-|[polar](../standard-library/complex-functions.md#polar)|지정한 모듈러스 및 인수에 해당하는 복소수를 데카르트 형태로 반환합니다.|  
-|[pow](../standard-library/complex-functions.md#pow)|복소수인 밑수를 다른 복소수로 거듭제곱하여 얻은 복소수를 계산합니다.|  
-|[real](../standard-library/complex-functions.md#real)|복소수의 실수 구성 요소를 추출합니다.|  
-|[sin](../standard-library/complex-functions.md#sin)|복소수의 사인을 반환합니다.|  
-|[sinh](../standard-library/complex-functions.md#sinh)|복소수의 쌍곡 사인을 반환합니다.|  
-|[sqrt](../standard-library/complex-functions.md#sqrt)|복소수의 제곱근을 반환합니다.|  
-|[tan](../standard-library/complex-functions.md#tan)|복소수의 탄젠트를 반환합니다.|  
-|[tanh](../standard-library/complex-functions.md#tanh)|복소수의 쌍곡 탄젠트를 반환합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#op_neq)|하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같지 않은지 테스트합니다.|  
-|[operator*](../standard-library/complex-operators.md#op_star)|하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.|  
-|[operator+](../standard-library/complex-operators.md#op_add)|하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 더합니다.|  
-|[operator-](../standard-library/complex-operators.md#operator-)|하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 뺍니다.|  
-|[operator/](../standard-library/complex-operators.md#op_div)|하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 나눕니다.|  
-|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|출력 스트림에 복소수를 삽입하는 템플릿 함수입니다.|  
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같은지 테스트합니다.|  
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|입력 스트림에서 복소수를 추출하는 템플릿 함수입니다.|  
+|[abs](../standard-library/complex-functions.md#abs)|Calculates the modulus of a complex number.|  
+|[arg](../standard-library/complex-functions.md#arg)|Extracts the argument from a complex number.|  
+|[conj](../standard-library/complex-functions.md#conj)|Returns the complex conjugate of a complex number.|  
+|[cos](../standard-library/complex-functions.md#cos)|Returns the cosine of a complex number.|  
+|[cosh](../standard-library/complex-functions.md#cosh)|Returns the hyperbolic cosine of a complex number.|  
+|[exp](../standard-library/complex-functions.md#exp)|Returns the exponential function of a complex number.|  
+|[imag](../standard-library/complex-functions.md#imag)|Extracts the imaginary component of a complex number.|  
+|[log](../standard-library/complex-functions.md#log)|Returns the natural logarithm of a complex number.|  
+|[log10](../standard-library/complex-functions.md#log10)|Returns the base 10 logarithm of a complex number.|  
+|[norm](../standard-library/complex-functions.md#norm)|Extracts the norm of a complex number.|  
+|[polar](../standard-library/complex-functions.md#polar)|Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.|  
+|[pow](../standard-library/complex-functions.md#pow)|Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.|  
+|[real](../standard-library/complex-functions.md#real)|Extracts the real component of a complex number.|  
+|[sin](../standard-library/complex-functions.md#sin)|Returns the sine of a complex number.|  
+|[sinh](../standard-library/complex-functions.md#sinh)|Returns the hyperbolic sine of a complex number.|  
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Returns the square root of a complex number.|  
+|[tan](../standard-library/complex-functions.md#tan)|Returns the tangent of a complex number.|  
+|[tanh](../standard-library/complex-functions.md#tanh)|Returns the hyperbolic tangent of a complex number.|  
   
-### <a name="classes"></a>클래스  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|형식의 두 개체의 정렬된 된 쌍을 저장 하는 개체를 설명 하는 명시적으로 특수화 된 템플릿 클래스 **double**, 여기서 첫 번째는 복소수의 실수 부분을 나타내고 및 두 번째 허수 부분을 나타냅니다.|  
-|[complex\<float>](../standard-library/complex-float.md)|형식의 두 개체의 정렬된 된 쌍을 저장 하는 개체를 설명 하는 명시적으로 특수화 된 템플릿 클래스 **float**, 여기서 첫 번째는 복소수의 실수 부분을 나타내고 및 두 번째 허수 부분을 나타냅니다.|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|형식의 두 개체의 정렬된 된 쌍을 저장 하는 개체를 설명 하는 명시적으로 특수화 된 템플릿 클래스 **long double**, 여기서 첫 번째는 복소수의 실수 부분을 나타내고 및 두 번째 허수 부분을 나타냅니다.|  
-|[complex](../standard-library/complex-class.md)|이 템플릿 클래스는 복소수 체계를 나타내고 복잡한 산술 연산을 수행하는 데 사용되는 개체를 설명합니다.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator-](../standard-library/complex-operators.md#operator-)|Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|A template function that inserts a complex number into the output stream.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|A template function that extracts a complex value from the input stream.|  
   
-### <a name="literals"></a>리터럴  
- \<complex> 헤더는 실수부가 0이고 허수부가 입력 매개 변수의 값이 되는 복소수를 만드는 다음의 [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)을 정의합니다.  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|이 반환 됩니다.`complex<long double>{0.0L, static_cast<long double>(d)}`|  
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}`를 반환합니다.|  
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|`complex<float>{0.0f, static_cast<float>(d)}`를 반환합니다.|  
+|[complex\<double>](../standard-library/complex-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<float>](../standard-library/complex-float.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **float**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **long double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex](../standard-library/complex-class.md)|The template class describes an object used to represent the complex number system and perform complex arithmetic operations.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="literals"></a>Literals  
+ The \<complex> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) which create a complex number with the real part being zero and the imaginary part being the value of the input parameter.  
+  
+|||  
+|-|-|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Returns: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Returns: `complex<double>{0.0, static_cast<double>(d)}`.|  
+|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Returns: `complex<float>{0.0f, static_cast<float>(d)}`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

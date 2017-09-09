@@ -1,5 +1,5 @@
 ---
-title: "&lt;ostream&gt; 함수 | Microsoft Docs"
+title: '&lt;ostream&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,43 +14,48 @@ f1_keywords:
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
 caps.latest.revision: 15
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 89eebd013c08f52175e5e4038b501d4ce572e55a
+helpviewer_keywords:
+- std::swap [C++]
+- std::endl [C++]
+- std::ends [C++]
+- std::flush [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a6f796a21ec0e8448524963a4d3f62edb492840d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 함수
+# <a name="ltostreamgt-functions"></a>&lt;ostream&gt; functions
 ||||  
 |-|-|-|  
 |[swap](#swap)|[endl](#endl)|[ends](#ends)|  
 |[flush](#flush)|  
   
 ##  <a name="endl"></a>  endl  
- 줄을 종료하고 버퍼를 플러시합니다.  
+ Terminates a line and flushes the buffer.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& endl(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 요소 형식입니다.  
+ The element type.  
   
  `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- 문자 특성입니다.  
+ Character traits.  
   
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**))을 호출한 다음 `Ostr`**.** [flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**)), and then calls `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). It returns `Ostr`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_endl.cpp  
@@ -69,29 +74,29 @@ testing
 ```  
   
 ##  <a name="ends"></a>  ends  
- 문자열을 종료합니다.  
+ Terminates a string.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& ends(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 요소 형식입니다.  
+ The element type.  
   
  `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- 문자 특성입니다.  
+ Character traits.  
   
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**))을 호출하고 `Ostr.`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**)). It returns `Ostr.`  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_ends.cpp  
@@ -112,29 +117,29 @@ ab c
 ```  
   
 ##  <a name="flush"></a>  flush  
- 버퍼를 플러시합니다.  
+ Flushes the buffer.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& flush(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 요소 형식입니다.  
+ The element type.  
   
  `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- 문자 특성입니다.  
+ Character traits.  
   
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). It returns `Ostr`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_flush.cpp  
@@ -153,7 +158,7 @@ testing
 ```  
   
 ##  <a name="swap"></a>  swap  
- 두 `basic_ostream` 개체의 값을 교환합니다.  
+ Exchanges the values of two `basic_ostream` objects.  
   
 ```  
 template <class Elem, class Tr>  
@@ -162,17 +167,17 @@ void swap(
     basic_ostream<Elem, Tr>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `basic_ostream` 개체에 대한 lvalue 참조입니다.  
+ An lvalue reference to a `basic_ostream` object.  
   
  `right`  
- `basic_ostream` 개체에 대한 lvalue 참조입니다.  
+ An lvalue reference to a `basic_ostream` object.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수 `swap`은 `left.swap(right)`을 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function `swap` executes `left.swap(right)`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

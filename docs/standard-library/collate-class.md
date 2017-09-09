@@ -1,5 +1,5 @@
 ---
-title: "collate 클래스 | Microsoft 문서"
+title: collate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - locale/std::collate
-- collate
-- Collate
 - locale/std::collate::char_type
 - locale/std::collate::string_type
 - locale/std::collate::compare
@@ -23,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- collate class
+- std::collate [C++]
+- std::collate [C++], char_type
+- std::collate [C++], string_type
+- std::collate [C++], compare
+- std::collate [C++], do_compare
+- std::collate [C++], do_hash
+- std::collate [C++], do_transform
+- std::collate [C++], hash
+- std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 caps.latest.revision: 18
 author: corob-msft
@@ -43,71 +49,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 070813dde1fc118e35ade636261541e585504c50
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: db02822b3e5e2e5fbf1851c6b8709a4963f70e15
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="collate-class"></a>collate 클래스
-문자열 내 문자의 정렬 및 그룹화, 문자열 간의 비교, 문자열 해싱을 제어하는 로캘 패싯으로 사용할 수 있는 개체를 설명하는 템플릿 클래스입니다.  
+# <a name="collate-class"></a>collate Class
+A template class that describes an object that can serve as a locale facet to control the ordering and grouping of characters within a string, comparisons between them and the hashing of strings.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class collate : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 문자를 인코딩하기 위해 프로그램 내 사용하는 형식  
+ The type used within a program to encode characters.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다. 일부 언어에서는 문자가 그룹화되고 단일 문자로 취급되며, 다른 언어에서는 개별 문자가 두 문자인 것처럼 취급됩니다. collate 클래스에서 제공하는 데이터 정렬 서비스는 이러한 경우를 정렬하는 방법을 제공합니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.** In some languages, characters are grouped and treated as a single character, and in others, individual characters are treated as if they were two characters. The collating services provided by the collate class provide the way to sort these cases.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[collate](#collate)|문자열 정렬 규칙을 처리할 로캘 패싯으로 사용할 `collate` 클래스 개체의 생성자입니다.|  
+|[collate](#collate)|The constructor for objects of class `collate` that serves as a locale facet to handle string sorting conventions.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|`CharType` 형식의 문자를 설명하는 형식입니다.|  
-|[string_type](#string_type)|`basic_string` 형식의 문자가 포함된 `CharType` 형식의 문자열을 설명하는 형식입니다.|  
+|[char_type](#char_type)|A type that describes a character of type `CharType`.|  
+|[string_type](#string_type)|A type that describes a string of type `basic_string` containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[compare](#compare)|패싯별 규칙에 따라 두 문자 시퀀스의 같음 또는 동등성을 비교합니다.|  
-|[do_compare](#do_compare)|패싯별 규칙에 따라 두 문자 시퀀스를 비교하기 위해 가상 함수를 호출하여 두 문자 시퀀스의 같음 또는 동등성을 비교합니다.|  
-|[do_hash](#do_hash)|패싯별 규칙에 따라 시퀀스의 해시 값을 확인하기 위해 가상 함수를 호출합니다.|  
-|[do_transform](#do_transform)|가상 함수를 호출하여 문자 시퀀스를 로캘에서 문자열로 변환하고 동일한 로캘에서 유사한 방식으로 변환된 다른 문자 시퀀스와 사전순으로 비교하는 데 사용합니다.|  
-|[hash](#hash)|패싯별 규칙에 따라 시퀀스의 해시 값을 확인합니다.|  
-|[transform](#transform)|문자 시퀀스를 로캘에서 문자열로 변환하고 동일한 로캘에서 유사한 방식으로 변환된 다른 문자 시퀀스와 사전순으로 비교하는 데 사용합니다.|  
+|[compare](#compare)|Compares two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_compare](#do_compare)|A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_hash](#do_hash)|A virtual function called to determine the hash value of sequences according to their facet-specific rules.|  
+|[do_transform](#do_transform)|A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
+|[hash](#hash)|Determines the hash value of sequence according to their facet-specific rules.|  
+|[transform](#transform)|Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  collate::char_type  
- **CharType** 형식의 문자를 설명하는 형식입니다.  
+ A type that describes a character of type **CharType**.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="collate"></a>  collate::collate  
- 문자열 정렬 규칙을 처리하는 데 로캘 패싯으로 사용할 collate 클래스 개체의 생성자입니다.  
+ The constructor for objects of class collate that serves as a locale facet to handle string sorting conventions.  
   
 ```  
 public:  
@@ -120,26 +126,26 @@ protected:
     size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리의 유형을 지정하는 데 사용하는 정수 값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
  `_Locname`  
- 로캘 이름입니다.  
+ The name of the locale.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: These values are not defined.  
   
- 생성자와 해당 기본 개체를 초기화 합니다. **로캘::**[패싯](../standard-library/locale-class.md#facet_class)(`_Refs`).  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
 ##  <a name="compare"></a>  collate::compare  
- 패싯별 규칙에 따라 두 문자 시퀀스의 같음 또는 동등성을 비교합니다.  
+ Compares two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 int compare(const CharType* first1,
@@ -148,34 +154,34 @@ int compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 비교할 첫 번째 시퀀스의 첫 번째 요소에 대한 포인터입니다.  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- 비교할 첫 번째 시퀀스의 마지막 요소에 대한 포인터입니다.  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- 비교할 두 번째 시퀀스의 첫 번째 요소에 대한 포인터입니다.  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- 비교할 두 번째 시퀀스의 마지막 요소에 대한 포인터입니다.  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 멤버 함수는 다음을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   첫 번째 시퀀스가 두 번째 시퀀스보다 작은 것으로 비교되는 경우, -1  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   두 번째 시퀀스가 첫 번째 시퀀스보다 작은 것으로 비교되는 경우, +1  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   시퀀스가 같은 경우, 0  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>설명  
- 시퀀스 내에서 가장 앞의 서로 다른 쌍에 더 작은 요소가 있는 경우 또는 서로 다른 쌍이 없지만 첫 번째 시퀀스가 더 짧은 경우 첫 번째 시퀀스는 더 작은 것으로 비교됩니다.  
+### <a name="remarks"></a>Remarks  
+ The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences, or, if no unequal pairs exist, but the first sequence is shorter.  
   
- 멤버 함수는 [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`)를 반환합니다.  
+ The member function returns [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_compare.cpp  
@@ -201,7 +207,7 @@ int main() {
 ```  
   
 ##  <a name="do_compare"></a>  collate::do_compare  
- 패싯별 규칙에 따라 두 문자 시퀀스를 비교하기 위해 가상 함수를 호출하여 두 문자 시퀀스의 같음 또는 동등성을 비교합니다.  
+ A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 virtual int do_compare(const CharType* first1,
@@ -210,103 +216,103 @@ virtual int do_compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 비교할 첫 번째 시퀀스의 첫 번째 요소에 대한 포인터입니다.  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- 비교할 첫 번째 시퀀스의 마지막 요소에 대한 포인터입니다.  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- 비교할 두 번째 시퀀스의 첫 번째 요소에 대한 포인터입니다.  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- 비교할 두 번째 시퀀스의 마지막 요소에 대한 포인터입니다.  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 멤버 함수는 다음을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   첫 번째 시퀀스가 두 번째 시퀀스보다 작은 것으로 비교되는 경우, -1  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   두 번째 시퀀스가 첫 번째 시퀀스보다 작은 것으로 비교되는 경우, +1  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   시퀀스가 같은 경우, 0  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>설명  
- 보호 된 가상 멤버 함수에 시퀀스를 비교 [* first1, Last1) *에서 순서와 *[first2, last2*). 이 함수는 **CharType** 형식의 해당 요소 쌍 사이에 **operator<**을 사용하여 값을 비교합니다. 시퀀스 내에서 가장 앞의 서로 다른 쌍에 더 작은 요소가 있는 경우 또는 서로 다른 쌍이 없지만 첫 번째 시퀀스가 더 짧은 경우 첫 번째 시퀀스는 더 작은 것으로 비교됩니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function compares the sequence at [ * first1, Last1)* with the sequence at *[ first2,  last2*). It compares values by applying **operator<** between pairs of corresponding elements of type **CharType**. The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences or if no unequal pairs exist but the first sequence is shorter.  
   
-### <a name="example"></a>예제  
-  `do_compare`를 호출하는 [collate::compare](#compare)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [collate::compare](#compare), which calls `do_compare`.  
   
 ##  <a name="do_hash"></a>  collate::do_hash  
- 패싯별 규칙에 따라 시퀀스의 해시 값을 확인하기 위해 가상 함수를 호출합니다.  
+ A virtual function called to determine the hash value of sequences according to their facet-specific rules.  
   
 ```  
 virtual long do_hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 결정할 값이 있는 시퀀스의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- 결정할 값이 있는 시퀀스의 마지막 문자에 대한 포인터입니다.  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스에 대한 **long** 형식의 해시 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>설명  
- 해시 값은 목록의 배열에 의사(pseudo) 임의로 시퀀스를 분산하는 경우 등에 유용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>예제  
-  `do_hash`를 호출하는 [hash](#hash)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [hash](#hash), which calls `do_hash`.  
   
 ##  <a name="do_transform"></a>  collate::do_transform  
- 가상 함수를 호출하여 문자 시퀀스를 로캘에서 문자열로 변환하고 동일한 로캘에서 유사한 방식으로 변환된 다른 문자 시퀀스와 사전순으로 비교하는 데 사용합니다.  
+ A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 virtual string_type do_transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 변환할 시퀀스의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- 변환할 시퀀스의 마지막 문자에 대한 포인터입니다.  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 변환된 문자 시퀀스인 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string that is the transformed character sequence.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 멤버 함수는 제어된 시퀀스가 시퀀스 [`first`, `last`)의 복사본인 [string_type](#string_type) 클래스의 개체를 반환합니다. collate\< **CharType**>에서 파생된 클래스가 [do_compare](#do_compare)를 재정의하는 경우 `do_transform`도 일치하도록 재정의해야 합니다. `collate::compare`에 전달된 경우 두 개의 변형된 문자열은 파생된 클래스에서 비교할 변환되지 않은 문자열을 전달하여 얻을 수 있는 것과 동일한 결과를 생성해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns an object of class [string_type](#string_type) whose controlled sequence is a copy of the sequence [ `first`, `last`). If a class derived from collate\< **CharType**> overrides [do_compare](#do_compare), it should also override `do_transform` to match. When passed to `collate::compare`, two transformed strings should yield the same result that you would get from passing the untransformed strings to compare in the derived class.  
   
-### <a name="example"></a>예제  
-  `do_transform`을 호출하는 [transform](#transform)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [transform](#transform), which calls `do_transform`.  
   
 ##  <a name="hash"></a>  collate::hash  
- 패싯별 규칙에 따라 시퀀스의 해시 값을 확인합니다.  
+ Determines the hash value of sequence according to their facet-specific rules.  
   
 ```  
 long hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 결정할 값이 있는 시퀀스의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- 결정할 값이 있는 시퀀스의 마지막 문자에 대한 포인터입니다.  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스에 대한 **long** 형식의 해시 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_hash](#do_hash)(`first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_hash](#do_hash)( `first`, `last`).  
   
- 해시 값은 목록의 배열에 의사(pseudo) 임의로 시퀀스를 분산하는 경우 등에 유용할 수 있습니다.  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_hash.cpp  
@@ -335,39 +341,39 @@ int main( )
 ```  
   
 ##  <a name="string_type"></a>  collate::string_type  
- **CharType** 형식의 문자가 포함된 `basic_string` 형식의 문자열을 설명하는 형식입니다.  
+ A type that describes a string of type `basic_string` containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType> string_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 개체가 소스 시퀀스의 복사본을 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the source sequence.  
   
-### <a name="example"></a>예제  
-  `string_type`의 선언 및 사용 방법의 예는 [transform](#transform)을 참조하세요.  
+### <a name="example"></a>Example  
+  For an example of how to declare and use `string_type`, see [transform](#transform).  
   
 ##  <a name="transform"></a>  collate::transform  
- 문자 시퀀스를 로캘에서 문자열로 변환하고 동일한 로캘에서 유사한 방식으로 변환된 다른 문자 시퀀스와 사전순으로 비교하는 데 사용합니다.  
+ Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 string_type transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 변환할 시퀀스의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- 변환할 시퀀스의 마지막 문자에 대한 포인터입니다.  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 변환된 문자 시퀀스가 포함된 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string that contains the transformed character sequence.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_transform](#do_transform)(`first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_transform](#do_transform)( `first`, `last`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_transform.cpp  
@@ -412,8 +418,8 @@ int main( )
 -1-11  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

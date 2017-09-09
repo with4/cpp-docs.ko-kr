@@ -1,5 +1,5 @@
 ---
-title: "reference_wrapper 클래스 | Microsoft Docs"
+title: reference_wrapper Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
@@ -22,8 +21,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- reference_wrapper class
-- reference_wrapper
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++], result_type
+- std::reference_wrapper [C++], type
+- std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e6acb873221133edb3000eeb82bd72ac9185744
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper 클래스
-참조를 래핑합니다.  
+# <a name="referencewrapper-class"></a>reference_wrapper Class
+Wraps a reference.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -75,54 +77,54 @@ private:
 };  
 ```  
   
-## <a name="remarks"></a>설명  
-`reference_wrapper<Ty>`는 `Ty` 형식의 개체 또는 함수에 대한 참조를 래핑하며 해당 형식의 개체를 가리키는 포인터가 포함된 복사본 생성/할당 가능 래퍼입니다. `reference_wrapper`를 사용하면 표준 컨테이너에 참조를 저장하고 `std::bind`에 대한 참조를 통해 개체를 전달할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+A `reference_wrapper<Ty>` is a copy constructible and copy assignable wrapper around a reference to an object or a function of type `Ty`, and holds a pointer that points to an object of that type. A `reference_wrapper` can be used to store references in standard containers, and to pass objects by reference to `std::bind`.  
   
-`Ty` 형식은 개체 형식 또는 함수 형식이어야 하며, 그렇지 않으면 컴파일 시간에 정적 어설션이 실패합니다.  
+The type `Ty` must be an object type or a function type, or a static assert fails at compile time.  
   
-도우미 함수 [std::ref](functional-functions.md#ref) 및 [std::cref](functional-functions.md#cref)를 사용하여 `reference_wrapper` 개체를 만들 수 있습니다.  
+The helper functions [std::ref](functional-functions.md#ref) and [std::cref](functional-functions.md#cref) can be used to create `reference_wrapper` objects.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[reference_wrapper](#reference_wrapper)|`reference_wrapper`를 생성합니다.|  
+|[reference_wrapper](#reference_wrapper)|Constructs a `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[result_type](#result_type)|래핑된 참조의 약한 결과 형식입니다.|  
-|[형식](#type)|래핑된 참조 형식입니다.|  
+|[result_type](#result_type)|The weak result type of the wrapped reference.|  
+|[type](#type)|The type of the wrapped reference.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[get](#get)|래핑된 참조를 가져옵니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|래핑된 참조에 대한 포인터를 가져옵니다.|  
-|[reference_wrapper::operator()](#op_call)|래핑된 참조를 호출합니다.|  
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+|[get](#get)|Obtains the wrapped reference.|  
   
- **네임스페이스:** std  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Gets a pointer to the wrapped reference.|  
+|[reference_wrapper::operator()](#op_call)|Calls the wrapped reference.|  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
+  
+ **Namespace:** std  
   
 ##  <a name="get"></a>  reference_wrapper::get  
- 래핑된 참조를 가져옵니다.  
+ Obtains the wrapped reference.  
   
 ```  
 Ty& get() const noexcept;
 ```  
   
-### <a name="remarks"></a>설명  
-구성원 함수는 래핑된 참조를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+The member function returns the wrapped reference.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_get.cpp   
@@ -150,16 +152,16 @@ i = -1
 ```  
   
 ##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
- 래핑된 참조를 가져옵니다.  
+ Gets the wrapped reference.  
   
 ```  
 operator Ty&() const noexcept;
 ```  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 `*ptr`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `*ptr`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_cast.cpp   
@@ -184,24 +186,24 @@ i = 1
 ```  
   
 ##  <a name="op_call"></a>  reference_wrapper::operator()  
- 래핑된 참조를 호출합니다.  
+ Calls the wrapped reference.  
   
 ```  
 template <class... Types>  
 auto operator()(Types&&... args);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Types`  
- 인수 목록 유형입니다.  
+ The argument list types.  
   
  `args`  
- 인수 목록입니다.  
+ The argument list.  
   
-### <a name="remarks"></a>설명  
- 템플릿 구성원 `operator()`는 `std::invoke(get(), std::forward<Types>(args)...)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template member `operator()` returns `std::invoke(get(), std::forward<Types>(args)...)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_call.cpp   
@@ -227,23 +229,23 @@ rwi(3) = -3
 ```  
   
 ##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
- `reference_wrapper`를 생성합니다.  
+ Constructs a `reference_wrapper`.  
   
 ```  
 reference_wrapper(Ty& val) noexcept;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 래핑할 형식입니다.  
+ The type to wrap.  
   
  `val`  
- 래핑할 값입니다.  
+ The value to wrap.  
   
-### <a name="remarks"></a>설명  
- 생성자는 저장된 값 `ptr`을 `&val`로 설정합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor sets the stored value `ptr` to `&val`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_reference_wrapper.cpp   
@@ -275,16 +277,16 @@ i = -1
 ```  
   
 ##  <a name="result_type"></a>  reference_wrapper::result_type  
- 래핑된 참조의 약한 결과 형식입니다.  
+ The weak result type of the wrapped reference.  
   
 ```  
 typedef R result_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `result_type` 형식 정의는 래핑된 함수의 취약한 결과 형식과 동일한 의미입니다. 이 형식 정의는 함수 형식에서만 의미가 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The `result_type` typedef is a synonym for the weak result type of a wrapped function. This typedef is only meaningful for function types.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_result_type.cpp   
@@ -312,16 +314,16 @@ val = -3
 ```  
   
 ##  <a name="type"></a>  reference_wrapper::type  
- 래핑된 참조 형식입니다.  
+ The type of the wrapped reference.  
   
 ```  
 typedef Ty type;  
 ```  
   
-### <a name="remarks"></a>설명  
- typedef는 템플릿 인수 `Ty`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template argument `Ty`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_type.cpp   
@@ -351,7 +353,7 @@ i = 1
 rwi = 1  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [cref](../standard-library/functional-functions.md#cref)   
  [ref](../standard-library/functional-functions.md#ref)
 

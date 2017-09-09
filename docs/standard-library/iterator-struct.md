@@ -1,5 +1,5 @@
 ---
-title: "iterator 구조체 | Microsoft 문서"
+title: iterator Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iterator
 - xutility/std::iterator
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: b14712f36d8cc7b4dbbdd4fd6a0cef3cb0667d8b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c634a769384b34fde401a8089ac00c6ba5a2c664
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iterator-struct"></a>iterator 구조체
-사용자 정의 반복기 클래스가 **iterator_trait**에서 제대로 작동하도록 하기 위해 사용되는 빈 기본 구조체입니다.  
+# <a name="iterator-struct"></a>iterator Struct
+An empty base struct used to ensure that a user-defined iterator class works properly with **iterator_trait**s.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```    
 struct iterator {
    typedef Category iterator_category;
@@ -56,35 +55,35 @@ struct iterator {
    typedef Reference reference;
    };  
 ```    
-## <a name="remarks"></a>설명  
- 템플릿 구조체는 모든 반복기에 대해 기본 형식으로 사용됩니다. 이 구조체는 멤버 형식을 정의합니다.  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base type for all iterators. It defines the member types  
   
-- `iterator_category`(템플릿 매개 변수 `Category`의 동의어)  
+- `iterator_category` (a synonym for the template parameter `Category`).  
   
-- `value_type`(템플릿 매개 변수 **Type**의 동의어)  
+- `value_type` (a synonym for the template parameter **Type**).  
   
-- `difference_type`(템플릿 매개 변수 `Distance`의 동의어)  
+- `difference_type` (a synonym for the template parameter `Distance`).  
   
-- `distance_type`(템플릿 매개 변수 `Distance`의 동의어)  
+- `distance_type` (a synonym for the template parameter `Distance`)  
   
-- `pointer`(템플릿 매개 변수 `Pointer`의 동의어)  
+- `pointer` (a synonym for the template parameter `Pointer`).  
   
-- `reference`(템플릿 매개 변수 `Reference`의 동의어)  
+- `reference` (a synonym for the template parameter `Reference`).  
   
- `value_type`은 **pointer**가 const **Type**의 개체를 가리키고 참조가 const **Type**의 개체를 지정하는 경우에도 상수 형식이 아니어야 합니다.  
+ Note that `value_type` should not be a constant type even if **pointer** points at an object of const **Type** and reference designates an object of const **Type**.  
   
-## <a name="example"></a>예제  
- 반복기 기본 클래스에서 형식을 선언하고 사용하는 방법에 대한 예제는 [iterator_traits](../standard-library/iterator-traits-struct.md)를 참조하세요.  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) for an example of how to declare and use the types in the iterator base class.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "complex 클래스 | Microsoft 문서"
+title: complex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- complex
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
 dev_langs:
 - C++
 helpviewer_keywords:
-- complex numbers
-- complex class
+- std::complex [C++], value_type
+- std::complex [C++], imag
+- std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 caps.latest.revision: 18
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8f5f401e61aab91d24679ffdc8d796fb9138ee61
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0018aa0e4d4a7aea33a8893db28f18478ed1010b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="complex-class"></a>complex 클래스
-템플릿 클래스는 **Type** 형식의 두 개체를 저장하는 개체를 설명하며, 한 개체는 복소수의 실수부를 나타내고 다른 개체는 허수부를 나타냅니다.  
+# <a name="complex-class"></a>complex Class
+The template class describes an object that stores two objects of type **Type**, one that represents the real part of a complex number and one that represents the imaginary part.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
  
@@ -56,55 +56,55 @@ Type>
 class complex  
 ```  
   
-## <a name="remarks"></a>설명  
- **Type** 클래스의 개체:  
+## <a name="remarks"></a>Remarks  
+ An object of class **Type**:  
   
--   기본 동작과 함께 공용 기본 생성자, 소멸자, 복사 생성자 및 대입 연산자를 포함합니다.  
+-   Has a public default constructor, destructor, copy constructor, and assignment operator with conventional behavior.  
   
--   정수 또는 부동 소수점 값이 할당되거나 기본 동작을 사용하는 이러한 값에 형식 캐스트될 수 있습니다.  
+-   Can be assigned integer or floating-point values, or type cast to such values with conventional behavior.  
   
--   필요에 따라 기본 동작으로 부동 소수점 형식을 위해 정의된 산술 연산자 및 수학 함수를 정의합니다.  
+-   Defines the arithmetic operators and math functions, as needed, that are defined for the floating-point types with conventional behavior.  
   
- 특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. **Type** 클래스의 개체에 대한 작업 중 예외를 throw하는 작업이 없을 수도 있습니다.  
+ In particular, no subtle differences may exist between copy construction and default construction followed by assignment. None of the operations on objects of class **Type** may throw exceptions.  
   
- 세 개의 부동 소수점 형식에 대해 템플릿 클래스 complex의 명시적 특수화가 존재합니다. 이 구현에서, 다른 형식의 **Type** 값은 실제 계산을 위해 **double**로 형식 캐스트됩니다. **double** 결과는 **Type** 형식의 저장된 개체에 다시 할당됩니다`.`  
+ Explicit specializations of template class complex exist for the three floating-point types. In this implementation, a value of any other type **Type** is typecast to **double** for actual calculations, with the **double** result assigned back to the stored object of type **Type**`.`  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[complex](#complex)|지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.|  
+|[complex](#complex)|Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|복소수의 실수부와 허수부를 나타내는 데 사용되는 데이터 형식을 표시하는 형식입니다.|  
+|[value_type](#value_type)|A type that represents the data type used to represent the real and imaginary parts of a complex number.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[imag](#imag)|복소수의 허수 구성 요소를 추출합니다.|  
-|[real](#real)|복소수의 실수 구성 요소를 추출합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*=](#op_star_eq)|대상 복소수와 요소를 곱합니다. 요소는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|  
-|[operator+=](#op_add_eq)|대상 복소수에 숫자를 더합니다. 여기서 더해지는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|  
-|[operator-=](#operator-_eq)|대상 복소수에서 숫자를 뺍니다. 여기서 빼는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|  
-|[operator/=](#op_div_eq)|대상 복소수를 제수로 나눕니다. 제수는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|  
-|[operator=](#op_eq)|대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|  
+|[imag](#imag)|Extracts the imaginary component of a complex number.|  
+|[real](#real)|Extracts the real component of a complex number.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더**: \<complex>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator*=](#op_star_eq)|Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator+=](#op_add_eq)|Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator-=](#operator-_eq)|Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator/=](#op_div_eq)|Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator=](#op_eq)|Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
+  
+ **Namespace:** std  
   
 ##  <a name="complex"></a>  complex::complex  
- 지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.  
+ Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.  
   
 ```  
 constexpr complex(
@@ -119,36 +119,36 @@ constexpr complex(
     complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_RealVal`  
- 생성되고 있는 복소수를 초기화하는데 사용되는 실수 부분의 값입니다.  
+ The value of the real part used to initialize the complex number being constructed.  
   
  `_ImagVal`  
- 생성되고 있는 복소수를 초기화하는데 사용되는 허수 부분의 값입니다.  
+ The value of the imaginary part used to initialize the complex number being constructed.  
   
  `complexNum`  
- 해당 실수 및 허수 부분이 생성되고 있는 복소수를 초기화하는데 사용되는 복소수입니다.  
+ The complex number whose real and imaginary parts are used to initialize the complex number being constructed.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 저장된 실수부를 _ *RealVal*로, 저장된 허수부를 \_ *Imagval*로 초기화합니다. 두 번째 생성자는 저장된 실수부를 `complexNum`**.real**()로, 저장된 허수부를 `complexNum`**.imag**()로 초기화합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the stored real part to _ *RealVal* and the stored imaginary part to \_ *Imagval*. The second constructor initializes the stored real part to `complexNum`**.real**() and the stored imaginary part to `complexNum`**.imag**().  
   
- 이 구현에서 변환기가 멤버 템플릿 함수를 지원하지 않는 경우는 결과는 다음과 같습니다.  
+ In this implementation, if a translator does not support member template functions, the template:  
   
 ```  
 template <class Other>  
 complex(const complex<Other>& right);
 ```  
   
- 위 템플릿이 아래 템플릿으로 바뀝니다.  
+ is replaced with:  
   
 ```  
  
 complex(const complex& right);
 ```  
   
- 위 템플릿은 복사 생성자입니다.  
+ which is the copy constructor.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_complex.cpp  
@@ -189,7 +189,7 @@ int main( )
 ```  
   
 ##  <a name="imag"></a>  complex::imag  
- 복소수의 허수 구성 요소를 추출합니다.  
+ Extracts the imaginary component of a complex number.  
   
 ```  
 T imag() const;
@@ -198,17 +198,17 @@ T imag() const;
 T imag(const T& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 허수 값을 추출할 복소수입니다.  
+ A complex number whose imaginary value is to be extracted.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 허수 부분입니다.  
+### <a name="return-value"></a>Return Value  
+ The imaginary part of the complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 *a + bi*의 경우 허수부 또는 성분은 *Im(a + bi) = b.*입니다.  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the imaginary part or component is *Im(a + bi) = b.*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_imag.cpp  
@@ -240,7 +240,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="op_star_eq"></a>  complex::operator*=  
- 대상 복소수와 요소를 곱합니다. 요소는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.  
+ Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -251,17 +251,17 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수로 지정된 수와 곱한 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been multiplied by the number specified as a parameter.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_me.cpp  
@@ -320,7 +320,7 @@ int main() {
 ```  
   
 ##  <a name="op_add_eq"></a>  complex::operator+=  
- 대상 복소수에 숫자를 더합니다. 여기서 더해지는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.  
+ Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -331,17 +331,17 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>반환 값  
- 추가되는 매개 변수로 지정된 숫자를 포함하는 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter added.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_pe.cpp  
@@ -419,7 +419,7 @@ The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="complex__operator-_eq"></a>  complex::operator-=  
- 대상 복소수에서 숫자를 뺍니다. 여기서 빼는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.  
+ Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -430,20 +430,20 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 대상 복소수에서 뺄 복소수입니다.  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- 대상 복소수에서 뺄 실수입니다.  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>반환 값  
- 뺄 매개 변수로 지정된 숫자를 포함하는 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter subtracted from it.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_se.cpp  
@@ -523,7 +523,7 @@ The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```  
   
 ##  <a name="op_div_eq"></a>  complex::operator/=  
- 대상 복소수를 제수로 나눕니다. 제수는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.  
+ Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -534,20 +534,20 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 대상 복소수에서 뺄 복소수입니다.  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- 대상 복소수에서 뺄 실수입니다.  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수로 지정된 숫자로 나눈 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been divided by the number specified as a parameter.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_de.cpp  
@@ -623,7 +623,7 @@ The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq"></a>  complex::operator=  
- 대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.  
+ Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.  
   
 ```  
 template <class Other>  
@@ -632,17 +632,17 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수로 지정된 숫자가 할당된 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been assigned the number specified as a parameter.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_as.cpp  
@@ -697,7 +697,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 ```  
   
 ##  <a name="real"></a>  complex::real  
- 복소수의 실수 구성 요소를 가져오거나 설정합니다.  
+ Gets or sets the real component of a complex number.  
   
 ```  
 constexpr T real() const;
@@ -706,17 +706,17 @@ constexpr T real() const;
 T real(const T& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 실수 값을 추출할 복소수입니다.  
+ A complex number whose real value is to be extracted.  
   
-### <a name="return-value"></a>반환 값  
- 복소수의 실수 부분입니다.  
+### <a name="return-value"></a>Return Value  
+ The real part of the complex number.  
   
-### <a name="remarks"></a>설명  
- 복소수 *a + bi*의 경우 실수부 또는 성분은 *Re(a + bi) = a.*입니다.  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the real part or component is *Re(a + bi) = a.*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_class_real.cpp  
@@ -748,17 +748,17 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="value_type"></a>  complex::value_type  
- 복소수의 실수부와 허수부를 나타내는 데 사용되는 데이터 형식을 표시하는 형식입니다.  
+ A type that represents the data type used to represent the real and imaginary parts of a complex number.  
   
 ```  
  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `value_type`은 complex 클래스 **Type** 템플릿 매개 변수의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the class complex **Type** template parameter.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_valuetype.cpp  
@@ -783,8 +783,8 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [complex 멤버](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Members](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

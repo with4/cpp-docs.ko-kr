@@ -1,5 +1,5 @@
 ---
-title: "binder2nd 클래스 | Microsoft 문서"
+title: binder2nd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- binder2nd
 - xfunctional/std::binder2nd
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f9a8fbf0154d9455b18ba6e4b695be9b542ac175
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="binder2nd-class"></a>binder2nd 클래스
-이항 함수의 두 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 생성자를 제공하는 템플릿 클래스입니다.  
+# <a name="binder2nd-class"></a>binder2nd Class
+A template class providing a constructor that converts a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Operation>
@@ -68,25 +67,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Func`  
- 단항 함수 개체로 변환할 이항 함수 개체입니다.  
+ The binary function object to be converted to a unary function object.  
   
  `right`  
- 이항 함수 개체의 두 번째 인수가 바인딩되는 값입니다.  
+ The value to which the second argument of the binary function object is to be bound.  
   
  `left`  
- 수정된 이진 개체를 두 번째 인수의 고정 값과 비교하는 인수의 값입니다.  
+ The value of the argument that the adapted binary object compares to the fixed value of the second argument.  
   
-## <a name="return-value"></a>반환 값  
- 이항 함수 개체의 두 번째 인수를 `right.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the second argument of the binary function object to the value `right.`  
   
-## <a name="remarks"></a>설명  
- 템플릿 클래스는 이항 함수 개체 _ *Func*의 복사본을 **op**에, `right`의 복사본을 **value**에 저장합니다. 그리고 **op**( `left`, **value**)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of a binary function object _ *Func* in **op**, and a copy of `right` in **value**. It defines its member function `operator()` as returning **op**( `left`, **value**).  
   
- `Func`가 **Operation** 형식의 개체이고 c가 상수이면 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` )는 `binder2nd` 클래스 생성자 `binder2nd`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
+ If `Func` is an object of type **Operation** and c is a constant, then [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) is equivalent to the `binder2nd` class constructor `binder2nd`\< **Operation**> ( `Func`, `c` ) and more convenient.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_binder2nd.cpp  
@@ -136,14 +135,14 @@ The number of elements in v1 less than 10 is: 2.
 */  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

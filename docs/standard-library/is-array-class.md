@@ -1,5 +1,5 @@
 ---
-title: "is_array 클래스 | Microsoft 문서"
+title: is_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_array
 - type_traits/std::is_array
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: c884a52096f69c057e3a376052c62b939f52528d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d62f5b72ad7b8b012b55d60047b101dc0111616e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isarray-class"></a>is_array 클래스
-형식이 배열인지 여부를 테스트합니다.  
+# <a name="isarray-class"></a>is_array Class
+Tests if type is array.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_array;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty` 형식이 배열 형식인 경우 true이고 그렇지 않은 경우 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an array type, otherwise it holds false.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_array.cpp   
@@ -91,13 +90,13 @@ is_array<int> == false
 is_array<int[5]> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [extent 클래스](../standard-library/extent-class.md)   
- [rank 클래스](../standard-library/rank-class.md)
+ [extent Class](../standard-library/extent-class.md)   
+ [rank Class](../standard-library/rank-class.md)
 

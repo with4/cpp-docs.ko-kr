@@ -1,5 +1,5 @@
 ---
-title: "subtract_with_carry_engine 클래스 | Microsoft Docs"
+title: subtract_with_carry_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- subtract_with_carry_engine
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
 - random/std::subtract_with_carry_engine::discard
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- subtract_with_carry_engine class
+- std::subtract_with_carry_engine [C++]
+- std::subtract_with_carry_engine [C++], default_seed
+- std::subtract_with_carry_engine [C++], discard
+- std::subtract_with_carry_engine [C++], min
+- std::subtract_with_carry_engine [C++], max
+- std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 caps.latest.revision: 20
 author: corob-msft
@@ -39,69 +43,69 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c73401963b231883d26aa45590a9cad305b13875
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b686e174e483e619dd7b45c54eef9ce3244ad4ba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 클래스
-subtract-with-carry(지연된 피보나치) 알고리즘을 사용하여 임의 시퀀스를 생성합니다.  
+# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine Class
+Generates a random sequence by the subtract-with-carry (lagged Fibonacci) algorithm.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType, size_t W, size_t S, size_t R>  
 class subtract_with_carry_engine;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **단어 크기**. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
- **짧은 지연**. 정수 값의 개수입니다. **사전 조건**: `0 < S < R`  
+ **Short lag**. Number of integer values. **Precondition**: `0 < S < R`  
   
  `R`  
- **긴 지연**. 되풀이가 연속으로 발생했는지 확인합니다.  
+ **Long lag**. Determines recurrence in the series generated.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|  
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|  
-|`default_seed`는 `19780503u`로 정의된 멤버 상수로, `subtract_with_carry_engine::seed` 및 단일 값 생성자의 기본 매개 변수 값으로 사용됩니다.|||  
+|`default_seed` is a member constant, defined as `19780503u`, used as the default parameter value for `subtract_with_carry_engine::seed` and the single value constructor.|||  
   
- 엔진 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- `substract_with_carry_engine` 템플릿 클래스는 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)보다 향상되었습니다. 이러한 엔진 둘 다 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)만큼 빠르거나 품질 결과가 뛰어나지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ The `substract_with_carry_engine` template class is an improvement over the [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Neither for these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- 이 엔진은 되풀이 관계(*period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`을 사용하여 사용자가 지정한 부호가 없는 정수 형식의 값을 생성합니다. 여기서 `cy(i)`의 값은 `x(i - S) - x(i - R) - cy(i - 1) < 0`인 경우 `1`이고, 그렇지 않으면 `0`입니다. `M`의 값은 `2`<sup>W</sup>입니다. 엔진의 상태는 전달 표시기 + `R` 값입니다. 이러한 값은 마지막 `R` 값으로 구성됩니다. `operator()`가 `R`번 호출된 경우 그렇습니다. 그렇지 않으면 반환된 `N` 값과 시드의 마지막 `R - N` 값으로 구성됩니다.  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, where `cy(i)` has the value `1` if `x(i - S) - x(i - R) - cy(i - 1) < 0`, otherwise `0`, and `M` has the value `2`<sup>W</sup>. The engine's state is a carry indicator plus `R` values. These values consist of the last `R` values returned if `operator()` has been called at least `R` times, otherwise the `N` values that have been returned and the last `R - N` values of the seed.  
   
- 템플릿 인수 `UIntType`은 최대 `M - 1`까지 값을 보유할 수 있도록 충분히 커야 합니다.  
+ The template argument `UIntType` must be large enough to hold values up to `M - 1`.  
   
- 엔진에서 직접 생성기를 생성할 수 있더라도 아래의 미리 정의된 typedef 중 하나를 사용할 수 있습니다.  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs:  
   
- `ranlux24_base`: `ranlux24`에 대한 기준으로 사용됩니다.                   
+ `ranlux24_base`: Used as a base for `ranlux24`.                   
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
- `ranlux48_base`: `ranlux48`에 대한 기준으로 사용됩니다.                   
+ `ranlux48_base`: Used as a base for `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- subtract_with_carry_engine 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [지연된 피보나치 생성기](http://go.microsoft.com/fwlink/LinkId=402445)를 참조하세요.  
+ For detailed information about the subract with carry engine algorithm, see the Wikipedia article [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

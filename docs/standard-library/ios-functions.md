@@ -1,5 +1,5 @@
 ---
-title: "&lt;ios&gt; 함수 | Microsoft 문서"
+title: '&lt;ios&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,14 +33,38 @@ f1_keywords:
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0939c7bf681a3ef336d9846dfd2cbe1c117d3cd8
+helpviewer_keywords:
+- std::defaultfloat [C++]
+- std::boolalpha [C++]
+- std::dec [C++]
+- std::fixed [C++]
+- std::hex [C++]
+- std::internal [C++]
+- std::left [C++]
+- std::noboolalpha [C++]
+- std::noshowbase [C++]
+- std::noshowpoint [C++]
+- std::noshowpos [C++]
+- std::noskipws [C++]
+- std::nounitbuf [C++]
+- std::nouppercase [C++]
+- std::oct [C++]
+- std::right [C++]
+- std::scientific [C++]
+- std::showbase [C++]
+- std::showpoint [C++]
+- std::showpos [C++]
+- std::skipws [C++]
+- std::unitbuf [C++]
+- std::uppercase [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3fffde3f04da07baf858209d717098ec7ad5e085
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiosgt-functions"></a>&lt;ios&gt; 함수
+# <a name="ltiosgt-functions"></a>&lt;ios&gt; functions
 ||||  
 |-|-|-|  
 |[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[dec](#dec)|  
@@ -53,27 +77,27 @@ ms.lasthandoff: 04/29/2017
 |[unitbuf](#unitbuf)|[uppercase](#uppercase)|  
   
 ##  <a name="boolalpha"></a>  boolalpha  
- [bool](../cpp/bool-cpp.md) 형식의 변수가 스트림에서 **true** 또는 **false**로 표시되도록 지정합니다.  
+ Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as **true** or **false** in the stream.  
   
 ```  
 ios_base& boolalpha(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 `bool` 형식의 변수는 1 또는 0으로 표시됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, variables of type `bool` are displayed as 1 or 0.  
   
- `boolalpha`시그니처 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
+ `boolalpha` effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), and then returns `str`.  
   
- [noboolalpha](../standard-library/ios-functions.md#noboolalpha)는 `boolalpha`의 결과를 되돌립니다.  
+ [noboolalpha](../standard-library/ios-functions.md#noboolalpha) reverses the effect of `boolalpha`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_boolalpha.cpp  
@@ -101,25 +125,25 @@ true
 ```  
   
 ##  <a name="dec"></a>  dec  
- 정수 변수가 밑수 10 표기법으로 표시되도록 지정합니다.  
+ Specifies that integer variables appear in base 10 notation.  
   
 ```  
 ios_base& dec(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 정수 변수는 10진으로 표시됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10.  
   
- **dec**는 `str``.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**)를 효과적으로 호출한 다음 `str`을 반환합니다.  
+ **dec** effectively calls `str.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_dec.cpp  
@@ -150,39 +174,39 @@ int main( )
 ```  
   
 ##  <a name="ios_defaultfloat"></a>  &lt;ios&gt; defaultfloat  
- 부동 소수점 값에 기본 표시 형식을 사용하도록 `ios_base` 개체의 플래그를 구성합니다.  
+ Configures the flags of an `ios_base` object to use a default display format for float values.  
   
 ```  
 ios_base& defaultfloat(ios_base& _Iosbase);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Iosbase`  
- `ios_base` 개체입니다.  
+ An `ios_base` object.  
   
-### <a name="remarks"></a>설명  
- 조작자는 _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`를 효과적으로 호출한 다음 _I `osbase`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, then returns _I `osbase`.  
   
 ##  <a name="fixed"></a>  fixed  
- 부동 소수점 숫자가 고정 Decimal 표기법으로 표시되도록 지정합니다.  
+ Specifies that a floating-point number is displayed in fixed-decimal notation.  
   
 ```  
 ios_base& fixed(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- **fixed**는 부동 소수점 숫자에 대한 기본 표시 표기법입니다. [scientific](../standard-library/ios-functions.md#scientific)은 과학적 표기법을 사용하여 부동 소수점 숫자를 표시하도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ **fixed** is the default display notation for floating-point numbers. [scientific](../standard-library/ios-functions.md#scientific) causes floating-point numbers to be displayed using scientific notation.  
   
- 조작자를 효과적으로 호출 * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_fixed.cpp  
@@ -208,47 +232,47 @@ int main( )
 ```  
   
 ##  <a name="hex"></a>  hex  
- 정수 변수가 16진 표기법으로 표시되도록 지정합니다.  
+ Specifies that integer variables shall appear in base 16 notation.  
   
 ```  
 ios_base& hex(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 정수 변수는 10진 표기법으로 표시됩니다. [dec](../standard-library/ios-functions.md#dec) 및 [oct](../standard-library/ios-functions.md#oct)도 정수 변수가 표시되는 방식을 변경합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10 notation. [dec](../standard-library/ios-functions.md#dec) and [oct](../standard-library/ios-functions.md#oct) also change the way integer variables appear.  
   
- 조작자는 `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**)를 효과적으로 호출한 다음 `str`을 반환합니다.  
+ The manipulator effectively calls `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**), and then returns `str`.  
   
-### <a name="example"></a>예제  
-  **hex**를 사용하는 방법에 대한 예제는 [dec](../standard-library/ios-functions.md#dec)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [dec](../standard-library/ios-functions.md#dec) for an example of how to use **hex**.  
   
 ##  <a name="internal"></a>  internal  
- 숫자의 부호를 왼쪽에 맞추고 숫자를 오른쪽에 맞춥니다.  
+ Causes a number's sign to be left justified and the number to be right justified.  
   
 ```  
 ios_base& internal(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- `str`이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>설명  
- [showpos](../standard-library/ios-functions.md#showpos)는 양수에 대해 부호가 표시되도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ [showpos](../standard-library/ios-functions.md#showpos) causes the sign to display for positive numbers.  
   
- 조작자는 `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags))를 효과적으로 호출한 다음 `str`을 반환합니다.  
+ The manipulator effectively calls `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_internal.cpp  
@@ -272,23 +296,23 @@ int main( void )
 ```  
   
 ##  <a name="left"></a>  left  
- 너비가 출력 너비보다 작은 텍스트를 왼쪽에 여백을 두고 스트림 플러시에 표시합니다.  
+ Causes text that is not as wide as the output width to appear in the stream flush with the left margin.  
   
 ```  
 ios_base& left(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), 다음을 반환 하 고 `str`합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_left.cpp  
@@ -311,71 +335,71 @@ int main( )
 ```  
   
 ##  <a name="noboolalpha"></a>  noboolalpha  
- [bool](../cpp/bool-cpp.md) 형식의 변수가 스트림에서 1 또는 0으로 표시되도록 지정합니다.  
+ Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as 1 or 0 in the stream.  
   
 ```  
 ios_base& noboolalpha(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 `noboolalpha`가 설정되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ By default, `noboolalpha` is in effect.  
   
- `noboolalpha`시그니처 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
+ `noboolalpha` effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), and then returns `str`.  
   
- [boolalpha](../standard-library/ios-functions.md#boolalpha)는 `noboolalpha`의 결과를 되돌립니다.  
+ [boolalpha](../standard-library/ios-functions.md#boolalpha) reverses the effect of `noboolalpha`.  
   
-### <a name="example"></a>예제  
-  `noboolalpha` 사용 예제는 [boolalpha](../standard-library/ios-functions.md#boolalpha)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [boolalpha](../standard-library/ios-functions.md#boolalpha) for an example of using `noboolalpha`.  
   
 ##  <a name="noshowbase"></a>  noshowbase  
- 숫자가 표시되는 표기법 밑수 표시를 해제합니다.  
+ Turns off indicating the notational base in which a number is displayed.  
   
 ```  
 ios_base& noshowbase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- `noshowbase`는 기본적으로 설정되어 있습니다. [showbase](../standard-library/ios-functions.md#showbase)를 사용하여 숫자의 표기 기준을 나타냅니다.  
+### <a name="remarks"></a>Remarks  
+ `noshowbase` is on by default. Use [showbase](../standard-library/ios-functions.md#showbase) to indicate the notational base of numbers.  
   
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), and then returns `str`.  
   
-### <a name="example"></a>예제  
-  `noshowbase`를 사용하는 방법에 대한 예제는 [showbase](../standard-library/ios-functions.md#showbase)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [showbase](../standard-library/ios-functions.md#showbase) for an example of how to use `noshowbase`.  
   
 ##  <a name="noshowpoint"></a>  noshowpoint  
- 소수 부분이 0인 부동 소수점 숫자의 정수 부분만 표시합니다.  
+ Displays only the whole-number part of floating-point numbers whose fractional part is zero.  
   
 ```  
 ios_base& noshowpoint(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- `noshowpoint`는 기본적으로 설정되어 있습니다. [showpoint](../standard-library/ios-functions.md#showpoint) 및 [precision](../standard-library/ios-base-class.md#precision)을 사용하여 소수점 뒤에 0을 표시합니다.  
+### <a name="remarks"></a>Remarks  
+ `noshowpoint` is on by default; use [showpoint](../standard-library/ios-functions.md#showpoint) and [precision](../standard-library/ios-base-class.md#precision) to display zeros after the decimal point.  
   
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_noshowpoint.cpp  
@@ -400,47 +424,47 @@ int main( )
 ```  
   
 ##  <a name="noshowpos"></a>  noshowpos  
- 양수에 명시적으로 부호가 지정되지 않습니다.  
+ Causes positive numbers to not be explicitly signed.  
   
 ```  
 ios_base& noshowpos(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- `noshowpos`는 기본적으로 설정되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ `noshowpos` is on by default.  
   
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), 그런 다음 반환 `str`합니다.  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), then returns `str`.  
   
-### <a name="example"></a>예제  
-  `noshowpos` 사용 예제는 [showpos](../standard-library/ios-functions.md#showpos)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [showpos](../standard-library/ios-functions.md#showpos) for an example of using `noshowpos`.  
   
 ##  <a name="noskipws"></a>  noskipws  
- 입력 스트림이 공백을 읽습니다.  
+ Cause spaces to be read by the input stream.  
   
 ```  
 ios_base& noskipws(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 [skipws](../standard-library/ios-functions.md#skipws)가 적용됩니다. 입력 스트림에서 공백을 읽으면 버퍼의 끝을 신호로 보냅니다.  
+### <a name="remarks"></a>Remarks  
+ By default, [skipws](../standard-library/ios-functions.md#skipws) is in effect. When a space is read in the input stream, it signals the end of the buffer.  
   
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_noskipws.cpp  
@@ -460,86 +484,86 @@ int main() {
 ```  
   
 ##  <a name="nounitbuf"></a>  nounitbuf  
- 출력이 버퍼링되고 버퍼가 가득 차면 처리되도록 합니다.  
+ Causes output to be buffered and processed on when the buffer is full.  
   
 ```  
 ios_base& nounitbuf(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- [unitbuf](../standard-library/ios-functions.md#unitbuf)는 버퍼가 비어 있지 않으면 처리되도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ [unitbuf](../standard-library/ios-functions.md#unitbuf) causes the buffer to be processed when it is not empty.  
   
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), and then returns `str`.  
   
 ##  <a name="nouppercase"></a>  nouppercase  
- 16진수 숫자와 과학적 표기법의 지수가 소문자로 표시되도록 지정합니다.  
+ Specifies that hexadecimal digits and the exponent in scientific notation appear in lowercase.  
   
 ```  
 ios_base& nouppercase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), 다음을 반환 하 고 `str`합니다.  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), and then returns `str`.  
   
-### <a name="example"></a>예제  
-  `nouppercase` 사용 예제는 [uppercase](../standard-library/ios-functions.md#uppercase)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [uppercase](../standard-library/ios-functions.md#uppercase) for an example of using `nouppercase`.  
   
 ##  <a name="oct"></a>  oct  
- 정수 변수가 밑수 8 표기법으로 표시되도록 지정합니다.  
+ Specifies that integer variables appear in base 8 notation.  
   
 ```  
 ios_base& oct(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- 개체에 대 한 참조를 *str* 파생 됩니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which *str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 정수 변수는 10진 표기법으로 표시됩니다. [dec](../standard-library/ios-functions.md#dec) 및 [hex](../standard-library/ios-functions.md#hex)도 정수 변수가 표시되는 방식을 변경합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10 notation. [dec](../standard-library/ios-functions.md#dec) and [hex](../standard-library/ios-functions.md#hex) also change the way integer variables appear.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), and then returns `str`.  
   
-### <a name="example"></a>예제  
-  **oct**를 사용하는 방법에 대한 예제는 [dec](../standard-library/ios-functions.md#dec)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [dec](../standard-library/ios-functions.md#dec) for an example of how to use **oct**.  
   
 ##  <a name="right"></a>  right  
- 너비가 출력 너비보다 작은 텍스트를 오른쪽에 여백을 두고 스트림 플러시에 표시합니다.  
+ Causes text that is not as wide as the output width to appear in the stream flush with the right margin.  
   
 ```  
 ios_base& right(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- 개체에 대 한 참조를 *str* 파생 됩니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which *str* is derived.  
   
-### <a name="remarks"></a>설명  
- [left](../standard-library/ios-functions.md#left)도 텍스트의 양쪽 맞춤을 수정합니다.  
+### <a name="remarks"></a>Remarks  
+ [left](../standard-library/ios-functions.md#left) also modifies the justification of text.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_right.cpp  
@@ -574,25 +598,25 @@ int main( )
 ```  
   
 ##  <a name="scientific"></a>  scientific  
- 과학적 표기법을 사용하여 부동 소수점 숫자가 표시되도록 합니다.  
+ Causes floating-point numbers to be displayed using scientific notation.  
   
 ```  
 ios_base& scientific(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 [fixed](../standard-library/ios-functions.md#fixed) 표기법이 부동 소수점 숫자에 적용됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, [fixed](../standard-library/ios-functions.md#fixed) notation is in effect for floating-point numbers.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_scientific.cpp  
@@ -615,25 +639,25 @@ int main( )
 ```  
   
 ##  <a name="showbase"></a>  showbase  
- 숫자가 표시되는 표기법 밑수를 표시합니다.  
+ Indicates the notational base in which a number is displayed.  
   
 ```  
 ios_base& showbase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 숫자의 표기 기준은 [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) 또는 [hex](../standard-library/ios-functions.md#hex)를 사용하여 변경할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The notational base of a number can be changed with [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct), or [hex](../standard-library/ios-functions.md#hex).  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_showbase.cpp  
@@ -665,47 +689,47 @@ int main( )
 ```  
   
 ##  <a name="showpoint"></a>  showpoint  
- 소수 부분이 0인 경우에도 부동 소수점 숫자의 정수 부분과 소수점 이하 자릿수를 표시합니다.  
+ Displays the whole-number part of a floating-point number and digits to the right of the decimal point even when the fractional part is zero.  
   
 ```  
 ios_base& showpoint(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)가 적용됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, [noshowpoint](../standard-library/ios-functions.md#noshowpoint) is in effect.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), and then returns `str`.  
   
-### <a name="example"></a>예제  
-  `showpoint` 사용 예제는 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [noshowpoint](../standard-library/ios-functions.md#noshowpoint) for an example of using `showpoint`.  
   
 ##  <a name="showpos"></a>  showpos  
- 양수에 명시적으로 부호가 지정됩니다.  
+ Causes positive numbers to be explicitly signed.  
   
 ```  
 ios_base& showpos(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- [noshowpos](../standard-library/ios-functions.md#noshowpos)가 기본값입니다.  
+### <a name="remarks"></a>Remarks  
+ [noshowpos](../standard-library/ios-functions.md#noshowpos) is the default.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_showpos.cpp  
@@ -728,25 +752,25 @@ int main( )
 ```  
   
 ##  <a name="skipws"></a>  skipws  
- 입력 스트림이 공백을 읽지 않습니다.  
+ Cause spaces to not be read by the input stream.  
   
 ```  
 ios_base& skipws(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- _ *Str*이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 `skipws`가 설정되어 있습니다. [noskipws](../standard-library/ios-functions.md#noskipws)는 입력 스트림에서 공백을 읽도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, `skipws` is in effect. [noskipws](../standard-library/ios-functions.md#noskipws) will cause spaces to be read from the input stream.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -778,46 +802,46 @@ int main( )
 ```  
   
 ##  <a name="unitbuf"></a>  unitbuf  
- 버퍼가 비어 있지 않으면 출력이 처리됩니다.  
+ Causes output to be processed when the buffer is not empty.  
   
 ```  
 ios_base& unitbuf(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- `str`이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>설명  
- `endl`도 버퍼를 플러시합니다.  
+### <a name="remarks"></a>Remarks  
+ Note that `endl` also flushes the buffer.  
   
- [nounitbuf](../standard-library/ios-functions.md#nounitbuf)가 기본적으로 적용됩니다.  
+ [nounitbuf](../standard-library/ios-functions.md#nounitbuf) is in effect by default.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
 ##  <a name="uppercase"></a>  uppercase  
- 16진수 숫자와 과학적 표기법의 지수가 대문자로 표시되도록 지정합니다.  
+ Specifies that hexadecimal digits and the exponent in scientific notation appear in uppercase.  
   
 ```  
 ios_base& uppercase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>반환 값  
- `str`이 파생되는 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 [nouppercase](../standard-library/ios-functions.md#nouppercase)가 적용됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, [nouppercase](../standard-library/ios-functions.md#nouppercase) is in effect.  
   
- 조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), 다음을 반환 하 고 `str`합니다.  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_uppercase.cpp  
@@ -845,7 +869,7 @@ a
 A  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<ios>](../standard-library/ios.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "decay 클래스 | Microsoft 문서"
+title: decay Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- decay
 - type_traits/std::decay
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: cb75f00c4f7dfc46122c8e69e5572de1ec23f8ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fd24a6f493cce88804abedf275c8038d0e05067
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="decay-class"></a>decay 클래스
-값으로 전달되는 형식을 생성합니다. 형식을 비참조, 비상수, 비휘발성으로 만들거나 함수 또는 배열 형식에서 형식에 대한 포인터를 만듭니다.  
+# <a name="decay-class"></a>decay Class
+Produces the type as passed by value. Makes the type non-reference, non-const, non-volatile, or makes a pointer to the type from a function or an array type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
@@ -54,27 +53,27 @@ template <class T>
 using decay_t = typename decay<T>::type;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 수정할 형식입니다.  
+ The type to modify.  
   
-## <a name="remarks"></a>설명  
- decay 템플릿을 사용하여 형식이 값을 통해 인수로 전달된 것처럼 결과 형식을 생성합니다. 템플릿 클래스 멤버 typedef `type`은 다음 단계에서 정의되는 수정된 형식을 포함합니다.  
+## <a name="remarks"></a>Remarks  
+ Use the decay template to produce the resulting type as if the type was passed by value as an argument. The template class member typedef `type` holds a modified type that is defined in the following stages:  
   
--   `U` 형식은 `remove_reference<T>::type`으로 정의되어 있습니다.  
+-   The type `U` is defined as `remove_reference<T>::type`.  
   
--   `is_array<U>::value`가 true이면 수정된 형식 `type`이 `remove_extent<U>::type *`입니다.  
+-   If `is_array<U>::value` is true, the modified type `type` is `remove_extent<U>::type *`.  
   
--   그렇지 않은 경우, `is_function<U>::value`가 true이면 수정된 형식 `type`은 `add_pointer<U>::type`입니다.  
+-   Otherwise, if `is_function<U>::value` is true, the modified type `type` is `add_pointer<U>::type`.  
   
--   그렇지 않은 경우, 수정된 형식 `type`은 `remove_cv<U>::type`입니다.  
+-   Otherwise, the modified type `type` is `remove_cv<U>::type`.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

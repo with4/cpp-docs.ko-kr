@@ -1,5 +1,5 @@
 ---
-title: "add_pointer 클래스 | Microsoft 문서"
+title: add_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_pointer
 - type_traits/std::add_pointer
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 008f19421575b8a930498a615642fdfdad99b7b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b7f0fa84b8a99b5e2225dfdf4028807f2d89eaa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addpointer-class"></a>add_pointer 클래스
-지정된 형식에서 포인터-형식을 만듭니다.  
+# <a name="addpointer-class"></a>add_pointer Class
+Makes a pointer-to-type from a specified type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,17 +54,17 @@ template <class T>
 using add_pointer_t = typename add_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *T*  
-수정할 형식입니다.  
+The type to modify.  
   
-## <a name="remarks"></a>설명  
-`remove_reference<T>::type*`과 동일한 멤버 typedef `type` 이름입니다. `add_pointer_t` 별칭은 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.  
+## <a name="remarks"></a>Remarks  
+The member typedef `type` names the same type as `remove_reference<T>::type*`. The alias `add_pointer_t` is a shortcut to access the member typedef `type`.  
   
-참조에서 포인터를 만드는 것은 잘못이기 때문에 `add_pointer`가 포인터-형식을 만들기 전에 지정된 형식에서 참조(있는 경우)를 제거합니다. 결과적으로, 형식이 참조인지 걱정하지 않고도 `add_pointer`를 포함하여 형식을 사용할 수 있습니다.  
+Because it is invalid to make a pointer from a reference, `add_pointer` removes the reference, if any, from the specified type before it makes a pointer-to-type. Consequently, you can use a type with `add_pointer` without being concerned about whether the type is a reference.  
   
-## <a name="example"></a>예제  
-다음 예제에서는 `add_pointer` 형식이 해당 형식의 포인터와 같은 경우를 보여 줍니다.  
+## <a name="example"></a>Example  
+The following example demonstrates that `add_pointer` of a type is the same as a pointer to that type.  
   
 ```cpp  
 #include <type_traits>   
@@ -87,12 +86,12 @@ int main()
 add_pointer_t<int> == int *  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_pointer 클래스](../standard-library/remove-pointer-class.md)
+ [remove_pointer Class](../standard-library/remove-pointer-class.md)
 

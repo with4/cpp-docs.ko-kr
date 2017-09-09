@@ -1,5 +1,5 @@
 ---
-title: "is_nothrow_assignable 클래스 | Microsoft 문서"
+title: is_nothrow_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_nothrow_assignable
 - type_traits/std::is_nothrow_assignable
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8f7cfa4eafda6061e503b5b8495d64c29a19eda8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e9184758ec0ecd094975cf7edcb7266427cca225
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowassignable-class"></a>is_nothrow_assignable 클래스
-`From` 형식의 값을 `To` 형식에 할당할 수 있는지 여부와 할당이 throw되지 않는 것으로 알려져 있는지를 테스트합니다.  
+# <a name="isnothrowassignable-class"></a>is_nothrow_assignable Class
+Tests whether a value of `From` type can be assigned to `To` type and the assignment is known not to throw.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_nothrow_assignable;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- 후  
- 할당을 받는 개체의 형식입니다.  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
- 보낸 사람  
- 값을 제공하는 개체의 형식입니다.  
+ From  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>설명  
- `declval<To>() = declval<From>()` 식은 올바른 형식이어야 하며 throw되지 않는 것으로 컴파일러에 알려져 있어야 합니다. `From`과 `To`는 둘 다 완전한 형식이거나, `void`이거나, 범위를 알 수 없는 배열이어야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The expression `declval<To>() = declval<From>()` must be well-formed and must be known to the compiler not to throw. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

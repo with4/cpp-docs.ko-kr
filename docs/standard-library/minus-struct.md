@@ -1,15 +1,14 @@
 ---
-title: "minus 구조체 | Microsoft Docs"
+title: minus Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- minus
 - xfunctional/std::minus
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e2ed81d3d990e9c9f2a9a21d04fabcbbfbb94f9a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c877325af09f3ad486a6965e2652b829213ffbbf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="minus-struct"></a>minus 구조체
-인수에 대해 빼기 연산(이진 `operator-`)을 수행하는 미리 정의된 함수 개체입니다.  
+# <a name="minus-struct"></a>minus Struct
+A predefined function object that performs the subtraction operation (binary `operator-`)  on its arguments.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,20 +64,20 @@ struct minus<void>
  };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 지정되었거나 유추된 형식의 피연산자를 가져오는 이진 `operator-`를 지원하는 형식입니다.  
+ A type that supports a binary `operator-` that takes operands of the specified or inferred types.  
   
  `Left`  
- 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The left operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The right operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>반환 값  
- `Left``-``Right`의 결과입니다. 특수 템플릿은 `operator-`에 의해 반환되는 형식을 포함하는 결과를 완벽하게 전달합니다.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left - Right`. The specialized template does perfect forwarding of the result, which has the type returned by `operator-`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_minus.cpp  
@@ -132,14 +132,14 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

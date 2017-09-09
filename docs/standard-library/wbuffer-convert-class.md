@@ -1,5 +1,5 @@
 ---
-title: "wbuffer_convert 클래스 | Microsoft Docs"
+title: wbuffer_convert Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::cvt::wbuffer_convert
-- wbuffer_convert
-- cvt::wbuffer_convert
 - wbuffer/stdext::cvt::wbuffer_convert
 dev_langs:
 - C++
@@ -36,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 8efbf80606e1196b7376a264e63b87e89e07b53d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 87c43bde8a5b8b029242aaf7b87d5d8f90bbe6ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert 클래스
-바이트 스트림 버퍼에서 나가고 들어오는 요소의 전송을 제어하는 스트림 버퍼에 대해 설명합니다.  
+# <a name="wbufferconvert-class"></a>wbuffer_convert Class
+Describes a stream buffer that controls the transmission of elements to and from a byte stream buffer.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Codecvt, class Elem = wchar_t, class Traits = std::char_traits<Elem>>
@@ -54,22 +51,22 @@ class wbuffer_convert
  : public std::basic_streambuf<Elem, Traits>
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Codecvt`|변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.|  
-|`Elem`|와이드 문자 요소 형식입니다.|  
-|`Traits`|*Elem*과 연결된 특성입니다.|  
+|`Codecvt`|The [locale](../standard-library/locale-class.md) facet that represents the conversion object.|  
+|`Elem`|The wide-character element type.|  
+|`Traits`|The traits associated with *Elem*.|  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 `std::streambuf` 형식의 바이트 스트림 버퍼에서 나가고 들어오는 `_Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명하며, 해당 문자 특성은 `Traits` 클래스로 설명합니다.  
+## <a name="remarks"></a>Remarks  
+ This template class describes a stream buffer that controls the transmission of elements of type `_Elem`, whose character traits are described by the class `Traits`, to and from a byte stream buffer of type `std::streambuf`.  
   
- `Elem` 값 시퀀스와 멀티바이트 시퀀스 간 변환은 클래스 `Codecvt<Elem, char, std::mbstate_t>`의 개체에 의해 수행되며, 표준 코드 변환 패싯 `std::codecvt<Elem, char, std::mbstate_t>`의 요구 사항을 충족합니다.  
+ Conversion between a sequence of `Elem` values and multibyte sequences is performed by an object of class `Codecvt<Elem, char, std::mbstate_t>`, which meets the requirements of the standard code-conversion facet `std::codecvt<Elem, char, std::mbstate_t>`.  
   
- 이 템플릿 클래스의 개체는 다음을 저장합니다.  
+ An object of this template class stores:  
   
--   기본 바이트 스트림 버퍼에 대한 포인터  
+-   A pointer to its underlying byte stream buffer  
   
--   할당된 변환 개체에 대한 포인터([wbuffer_convert](../standard-library/wbuffer-convert-class.md) 개체가 제거될 때 해제됨)
+-   A pointer to the allocated conversion object (which is freed when the [wbuffer_convert](../standard-library/wbuffer-convert-class.md)
 

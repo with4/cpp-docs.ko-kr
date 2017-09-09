@@ -1,5 +1,5 @@
 ---
-title: "&lt;iterator&gt; 함수 | Microsoft 문서"
+title: '&lt;iterator&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,14 +24,29 @@ f1_keywords:
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+helpviewer_keywords:
+- std::advance [C++]
+- std::back_inserter [C++]
+- std::begin [C++]
+- std::cbegin [C++]
+- std::cend [C++]
+- std::distance [C++]
+- std::end [C++]
+- std::front_inserter [C++]
+- std::inserter [C++]
+- std::make_checked_array_iterator [C++]
+- std::make_move_iterator [C++]
+- std::make_unchecked_array_iterator [C++]
+- std::next [C++]
+- std::prev [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8bb8fc00d90777a6ce2cfaa3a2e6db879a6e28c9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 함수
+# <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; functions
 ||||  
 |-|-|-|  
 |[advance](#advance)|[back_inserter](#back_inserter)|[begin](#begin)|  
@@ -41,7 +56,7 @@ ms.lasthandoff: 04/29/2017
 |[next](#next)|[prev](#prev)|  
   
 ##  <a name="advance"></a>  advance  
- 지정된 위치 수만큼 반복기를 증가시킵니다.  
+ Increments an iterator by a specified number of positions.  
   
 ```  
 template <class InputIterator, class Distance>  
@@ -50,21 +65,21 @@ void advance(
     Distance Off);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `InIt`  
- 입력 반복기에 대해 증가하고 요구 사항을 충족해야 하는 반복기입니다.  
+ The iterator that is to be incremented and that must satisfy the requirements for an input iterator.  
   
  `Off`  
- 반복기의 차이 형식으로 변환할 수 있고 반복기의 위치를 증가시킬 횟수를 지정하는 정수 계열 형식입니다.  
+ An integral type that is convertible to the iterator's difference type and that specifies the number of increments the position of the iterator is to be advanced.  
   
-### <a name="remarks"></a>설명  
- 증가 범위는 특이하지 않아야 하며, 반복기는 역참조 가능하거나 끝을 지날 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range advanced through must be nonsingular, where the iterators must be dereferenceable or past the end.  
   
- **InputIterator**가 양방향 반복기 형식의 요구 사항을 충족할 경우 `Off`는 음수가 될 수 있습니다. **InputIterator**가 입력 또는 정방향 반복기 형식인 경우 `Off`는 음수가 아니어야 합니다.  
+ If the **InputIterator** satisfies the requirements for a bidirectional iterator type, then `Off` may be negative. If **InputIterator** is an input or forward iterator type, `Off` must be nonnegative.  
   
- advance 함수는 **InputIterator**가 임의 액세스 반복기의 요구 사항을 충족할 경우 고정적 복잡성이 있습니다. 그렇지 않으면 선형 복잡성이 있으며 비용도 잠재적으로 높을 수 있습니다.  
+ The advance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_advance.cpp  
@@ -112,24 +127,24 @@ LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```  
   
 ##  <a name="back_inserter"></a>  back_inserter  
- 지정된 컨테이너 뒤에 요소를 삽입할 수 있는 반복기를 만듭니다.  
+ Creates an iterator that can insert elements at the back of a specified container.  
   
 ```  
 template <class Container>  
 back_insert_iterator<Container> back_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 후면 삽입을 실행할 컨테이너입니다.  
+ The container into which the back insertion is to be executed.  
   
-### <a name="return-value"></a>반환 값  
- 컨테이너 개체 `_Cont`와 연결된 `back_insert_iterator`입니다.  
+### <a name="return-value"></a>Return Value  
+ A `back_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>설명  
- C++ 표준 라이브러리 내에서 인수는 `push_back` 멤버 함수가 있는 세 가지 시퀀스 컨테이너 [deque 클래스](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md) 또는 [vector 클래스](../standard-library/vector-class.md) 중 하나를 참조해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Within the C++ Standard Library, the argument must refer to one of the three sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md), [list Class](../standard-library/list-class.md), or [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_back_inserter.cpp  
@@ -179,7 +194,7 @@ After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```  
   
 ##  <a name="begin"></a>  begin  
- 지정된 컨테이너의 첫 번째 요소에 대한 반복기를 검색합니다.  
+ Retrieves an iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -194,20 +209,20 @@ template <class Ty, class Size>
 Ty *begin(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 컨테이너입니다.  
+ A container.  
   
  `array`  
- `Ty` 형식의 개체의 배열입니다.  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 두 템플릿 함수에서 `cont.begin()`을 반환합니다. 첫 번째 함수는 비상수이고, 두 번째는 상수입니다.  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.begin()`. The first function is non-constant; the second one is constant.  
   
- 세 번째 템플릿 함수는 `array`를 반환합니다.  
+ The third template function returns `array`.  
   
-### <a name="example"></a>예제  
-  제네릭 동작이 더 필요할 경우 컨테이너 멤버 `begin()` 대신 이 템플릿 함수를 사용하는 것이 좋습니다.  
+### <a name="example"></a>Example  
+  We recommend that you use this template function in place of container member `begin()` when more generic behavior is required.  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd   
@@ -259,7 +274,7 @@ Output:
 160 106 80 70 53 40 35 23 20 16 10 8 5 4 2 1  
 ```  
   
-  이 함수 `reverse_sort`는 비멤버 버전 `begin()`을 호출하므로 정기 배열 이외에 모든 종류의 컨테이너를 지원합니다. `reverse_sort`를 코딩하여 컨테이너 멤버 `begin()`을 사용할 경우  
+  The function `reverse_sort` supports containers of any kind, in addition to regular arrays, because it calls the non-member version of `begin()`. If `reverse_sort` were coded to use the container member `begin()`:  
   
 ```cpp  
 template <typename C>  
@@ -272,14 +287,14 @@ void reverse_sort(C& c) {
 }  
 ```  
   
- 그런 다음 여기에 배열을 전송하면 이 컴파일러 오류가 발생합니다.  
+ Then sending an array to it would cause this compiler error:  
   
 ```  
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
 ##  <a name="cbegin"></a>  cbegin  
- 지정된 컨테이너의 첫 번째 요소에 대한 상수 반복기를 검색합니다.  
+ Retrieves a const iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -287,17 +302,17 @@ auto cbegin(const Container& cont)   `
    -> decltype(cont.begin());
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 컨테이너 또는 initializer_list입니다.  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>반환 값  
- 상수 `cont.begin()`입니다.  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.begin()`.  
   
-### <a name="remarks"></a>설명  
- 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- `begin()` 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 수정 가능(비`const`) 컨테이너 또는 `begin()` 및 `cbegin()`을 지원하는 모든 종류의 `initializer_list`로 가정합니다.  
+ You can use this member function in place of the `begin()` template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -308,7 +323,7 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  cend  
- 지정된 컨테이너에서 마지막 요소 다음에 있는 요소에 대한 상수 반복기를 검색합니다.  
+ Retrieves a const iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -316,17 +331,17 @@ auto cend(const Container& cont)   `
    -> decltype(cont.end());
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 컨테이너 또는 initializer_list입니다.  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>반환 값  
- 상수 `cont.end()`입니다.  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.end()`.  
   
-### <a name="remarks"></a>설명  
- 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- [end()](../standard-library/iterator-functions.md#end) 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 수정 가능(비`const`) 컨테이너 또는 `end()` 및 `cend()`를 지원하는 모든 종류의 `initializer_list`로 가정합니다.  
+ You can use this member function in place of the [end()](../standard-library/iterator-functions.md#end) template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -337,27 +352,27 @@ auto i2 = Container.cend();
 ```  
   
 ##  <a name="distance"></a>  distance  
- 두 반복기에 의해 주소가 지정된 위치 사이의 간격의 수를 결정합니다.  
+ Determines the number of increments between the positions addressed by two iterators.  
   
 ```  
 template <class InputIterator>  
 typename iterator_traits<InputIterator>::difference_type distance(InputIterator first, InputIterator last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 두 번째로부터의 거리를 결정해야 하는 첫 번째 반복기입니다.  
+ The first iterator whose distance from the second is to be determined.  
   
  `last`  
- 첫 번째로부터의 거리를 결정해야 하는 두 번째 반복기입니다.  
+ The second iterator whose distance from the first is to be determined.  
   
-### <a name="return-value"></a>반환 값  
- `first`가 `last`가 될 때까지 증가되어야 하는 횟수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of times that `first` must be incremented until it equal `last`.  
   
-### <a name="remarks"></a>설명  
- distance 함수는 **InputIterator**가 임의 액세스 반복기의 요구 사항을 충족할 경우 고정적 복잡성이 있습니다. 그렇지 않으면 선형 복잡성이 있으며 비용도 잠재적으로 높을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The distance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_distance.cpp  
@@ -406,7 +421,7 @@ The distance from L.begin( ) to LPOS is: 7.
 ```  
   
 ##  <a name="end"></a>  end  
- 지정된 컨테이너에서 마지막 요소 다음의 요소에 대한 반복기를 검색합니다.  
+ Retrieves an iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -421,42 +436,42 @@ template <class Ty, class Size>
 Ty *end(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 컨테이너입니다.  
+ A container.  
   
  `array`  
- `Ty` 형식의 개체의 배열입니다.  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 두 템플릿 함수는 `cont.end()`를 반환합니다(첫 번째 함수는 비상수이며, 두 번째 함수는 상수임).  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.end()` (the first is non-constant and the second is constant).  
   
- 세 번째 템플릿 함수는 `array + Size`를 반환합니다.  
+ The third template function returns `array + Size`.  
   
-### <a name="remarks"></a>설명  
- 코드 예제는 [begin](../standard-library/iterator-functions.md#begin)을 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [begin](../standard-library/iterator-functions.md#begin).  
   
 ##  <a name="front_inserter"></a>  front_inserter  
- 지정된 컨테이너 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.  
+ Creates an iterator that can insert elements at the front of a specified container.  
   
 ```  
 template <class Container>  
 front_insert_iterator<Container> front_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 앞에 요소를 삽입할 컨테이너 개체입니다.  
+ The container object whose front is having an element inserted.  
   
-### <a name="return-value"></a>반환 값  
- 컨테이너 개체 `_Cont`와 연결된 `front_insert_iterator`입니다.  
+### <a name="return-value"></a>Return Value  
+ A `front_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>설명  
- front_insert_iterator 클래스의 멤버 함수 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator)를 사용할 수도 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The member function [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) of the front_insert_iterator class may also be used.  
   
- C++ 표준 라이브러리 내에서 인수는 `push_back` 멤버 함수가 있는 두 가지 시퀀스 컨테이너 [deque 클래스](../standard-library/deque-class.md) 또는 "list 클래스" 중 하나를 참조해야 합니다.  
+ Within the C++ Standard Library, the argument must refer to one of the two sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md) or "list Class".  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_front_inserter.cpp  
@@ -504,7 +519,7 @@ After the front insertions, the list L is:
 ```  
   
 ##  <a name="inserter"></a>  inserter  
- 사용 하는 도우미 템플릿 함수 `inserter(_Cont, _Where)` 대신 `insert_iterator<Container>(_Cont, _Where)`합니다.  
+ A helper template function that lets you use `inserter(_Cont, _Where)` instead of `insert_iterator<Container>(_Cont, _Where)`.  
   
 ```  
 template <class Container>  
@@ -514,17 +529,17 @@ inserter(
     typename Container::iterator _Where);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 새 요소를 추가할 컨테이너입니다.  
+ The container to which new elements are to be added.  
   
  `_Where`  
- 삽입 지점을 찾고 있는 반복기입니다.  
+ An iterator locating the point of insertion.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수를 반환 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_inserter.cpp  
@@ -572,10 +587,10 @@ After the insertions, the list L is:
 ```  
   
 ##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
- 다른 알고리즘에서 사용할 수 있는 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)를 만듭니다.  
+ Creates a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  이 함수는 C++ 표준 라이브러리의 Microsoft 확장입니다. 이 함수를 사용하여 구현한 코드는 이 Microsoft 확장을 지원하지 않는 C++ 표준 빌드 환경으로 이식할 수 없습니다.  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -586,26 +601,26 @@ checked_array_iterator<Iter>
     size_t Index = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- 대상 배열에 대한 포인터입니다.  
+ A pointer to the destination array.  
   
  `Size`  
- 대상 배열의 크기입니다.  
+ The size of the destination array.  
   
  `Index`  
- 배열에 대한 선택적 크기입니다.  
+ Optional index into the array.  
   
-### <a name="return-value"></a>반환 값  
- `checked_array_iterator`의 인스턴스입니다.  
+### <a name="return-value"></a>Return Value  
+ An instance of `checked_array_iterator`.  
   
-### <a name="remarks"></a>설명  
- `make_checked_array_iterator` 함수는 `stdext` 네임스페이스에 정의되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The `make_checked_array_iterator` function is defined in the `stdext` namespace.  
   
- 이 함수는 원시 포인터를 사용하며, 경계를 벗어나 확인하지 않는 [checked_array_iterator](../standard-library/checked-array-iterator-class.md) 클래스로 래핑되는 경우가 일반적입니다. 해당 클래스는 확인된 것으로 표시되기 때문에 C++ 표준 라이브러리에서 그에 대해 경고하지 않습니다. 자세한 내용과 코드 예제는 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ This function takes a raw pointer—which would ordinarily cause concern about bounds overrun—and wraps it in a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) class that does checking. Because that class is marked as checked, the C++ Standard Library doesn't warn about it. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 [벡터](../standard-library/vector-class.md)를 만들고 10개 항목으로 채웁니다. 벡터 콘텐츠는 복사 알고리즘을 사용하여 배열로 복사된 다음, `make_checked_array_iterator`를 사용하여 대상을 지정합니다. 그러면 디버그 어설션 실패를 트리거할 수 있도록 고의적 경계 위반 확인을 수행합니다.  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_checked_array_iterator` is used to specify the destination. This is followed by an intentional violation of the bounds checking so that a debug assertion failure is triggered.  
   
 ```cpp  
 // make_checked_array_iterator.cpp  
@@ -662,7 +677,7 @@ int main()
 ```  
   
 ##  <a name="make_move_iterator"></a>  make_move_iterator  
- 제공된 반복기를 `stored` 반복기로 포함하는 `move iterator`를 만듭니다.  
+ Creates a `move iterator` that contains the provided iterator as the `stored` iterator.  
   
 ```  
 template <class Iterator>  
@@ -670,18 +685,18 @@ move_iterator<Iterator>
 make_move_iterator(const Iterator& _It);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_It`  
- 새 이동 반복기에 저장되는 반복기입니다.  
+ The iterator stored in the new move iterator.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `move_iterator``<Iterator>(``_It``)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `move_iterator` `<Iterator>(_It)`.  
   
 ##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
- 다른 알고리즘에서 사용할 수 있는 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)를 만듭니다.  
+ Creates an [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  이 함수는 C++ 표준 라이브러리의 Microsoft 확장입니다. 이 함수를 사용하여 구현한 코드는 이 Microsoft 확장을 지원하지 않는 C++ 표준 빌드 환경으로 이식할 수 없습니다.  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -689,20 +704,20 @@ unchecked_array_iterator<Iter>
     make_unchecked_array_iterator(Iter Ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- 대상 배열에 대한 포인터입니다.  
+ A pointer to the destination array.  
   
-### <a name="return-value"></a>반환 값  
- `unchecked_array_iterator`의 인스턴스입니다.  
+### <a name="return-value"></a>Return Value  
+ An instance of `unchecked_array_iterator`.  
   
-### <a name="remarks"></a>설명  
- `make_unchecked_array_iterator` 함수는 `stdext` 네임스페이스에 정의되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The `make_unchecked_array_iterator` function is defined in the `stdext` namespace.  
   
- 이 함수는 원시 포인터를 사용하고 확인을 수행하지 않는 클래스에서 래핑되어 최적화 대상이 없지만, [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 등의 컴파일러 경고도 해제합니다. 따라서 이 방법은 경고를 전체적으로 해제하거나 확인 비용 없이 확인하지 않은 포인터 경고를 처리할 수 있는 계획적 방법입니다. 자세한 내용과 코드 예제는 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ This function takes a raw pointer and wraps it in a class that performs no checking and therefore optimizes away to nothing, but it also silences compiler warnings such as [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Therefore, this is a targeted way to deal with unchecked-pointer warnings without globally silencing them or incurring the cost of checking. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 [벡터](../standard-library/vector-class.md)를 만들고 10개 항목으로 채웁니다. 벡터 콘텐츠는 복사 알고리즘을 사용하여 배열로 복사된 다음, `make_unchecked_array_iterator`를 사용하여 대상을 지정합니다.  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_unchecked_array_iterator` is used to specify the destination.  
   
 ```cpp  
 // make_unchecked_array_iterator.cpp  
@@ -753,7 +768,7 @@ int main()
 ```  
   
 ##  <a name="next"></a>  next  
- 지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.  
+ Iterates a specified number of times and returns the new iterator position.  
   
 ```  
 template <class InputIterator>  
@@ -762,21 +777,21 @@ InputIterator next(
     typename iterator_traits<InputIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 현재 위치입니다.  
+ The current position.  
   
  `_Off`  
- 반복할 횟수입니다.  
+ The number of times to iterate.  
   
-### <a name="return-value"></a>반환 값  
- `_Off`번 반복 후 새 반복기 위치를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the new iterator position after iterating `_Off` times.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `_Off`번 증가된 `next`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` incremented `_Off` times  
   
 ##  <a name="prev"></a>  prev  
- 역순으로 지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.  
+ Iterates in reverse a specified number of times and returns the new iterator position.  
   
 ```  
 template <class BidirectionalIterator>  
@@ -785,17 +800,17 @@ BidirectionalIterator prev(
     typename iterator_traits<BidirectionalIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 현재 위치입니다.  
+ The current position.  
   
  `_Off`  
- 반복할 횟수입니다.  
+ The number of times to iterate.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `off`번 감소된 `next`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` decremented `off` times.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)
 
 

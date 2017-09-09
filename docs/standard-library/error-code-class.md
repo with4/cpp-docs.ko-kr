@@ -1,5 +1,5 @@
 ---
-title: "error_code 클래스 | Microsoft 문서"
+title: error_code Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- error_code
 - system_error/std::error_code
 - system_error/std::error_code::value_type
 - system_error/std::error_code::assign
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- error_code class
+- std::error_code
+- std::error_code::value_type
+- std::error_code::assign
+- std::error_code::category
+- std::error_code::clear
+- std::error_code::default_error_condition
+- std::error_code::message
+- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: 17
 author: corob-msft
@@ -41,113 +47,113 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 82c70317383fe096c56b0d5b79bab24175d2872a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 142139958fc244f896fc6fa9e66871392ed2fbc6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="errorcode-class"></a>error_code 클래스
-구현에 관련된 하위 수준 시스템 오류를 나타냅니다.  
+# <a name="errorcode-class"></a>error_code Class
+Represents low-level system errors that are implementation-specific.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class error_code;
 ```  
   
-## <a name="remarks"></a>설명  
- 형식 `error_code` 클래스의 개체는 오류 코드 값 및 보고된 하위 수준 시스템 오류를 설명하는 오류 코드의 [category](../standard-library/error-category-class.md)를 나타내는 개체에 대한 포인터를 저장합니다.  
+## <a name="remarks"></a>Remarks  
+ An object of type `error_code` class stores an error code value and a pointer to an object that represents a [category](../standard-library/error-category-class.md) of error codes that describe reported low-level system errors.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[error_code](#error_code)|`error_code` 형식의 개체를 생성합니다.|  
+|[error_code](#error_code)|Constructs an object of type `error_code`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|  
+|[value_type](#value_type)|A type that represents the stored error code value.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[assign](#assign)|오류 코드 값과 범주를 오류 코드에 할당합니다.|  
-|[category](#category)|오류 범주를 반환합니다.|  
-|[clear](#clear)|오류 코드 값과 범주를 지웁니다.|  
-|[default_error_condition](#default_error_condition)|기본 오류 조건을 반환합니다.|  
-|[message](#message)|오류 코드의 이름을 반환합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator==](#op_eq_eq)|`error_code` 개체가 같은지 테스트합니다.|  
-|[operator!=](#op_neq)|`error_code` 개체가 같지 않은지 테스트합니다.|  
-|[operator<](#op_lt)|`error_code` 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.|  
-|[operator=](#op_eq)|새 열거형 값을 `error_code` 개체에 할당합니다.|  
-|[operator bool](#op_bool)|형식 `error_code`의 변수를 캐스트합니다.|  
+|[assign](#assign)|Assigns an error code value and category to an error code.|  
+|[category](#category)|Returns the error category.|  
+|[clear](#clear)|Clears the error code value and category.|  
+|[default_error_condition](#default_error_condition)|Returns the default error condition.|  
+|[message](#message)|Returns the name of the error code.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<system_error>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator==](#op_eq_eq)|Tests for equality between `error_code` objects.|  
+|[operator!=](#op_neq)|Tests for inequality between `error_code` objects.|  
+|[operator<](#op_lt)|Tests if the `error_code` object is less than the `error_code` object passed in for comparison.|  
+|[operator=](#op_eq)|Assigns a new enumeration value to the `error_code` object.|  
+|[operator bool](#op_bool)|Casts a variable of type `error_code`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
+  
+ **Namespace:** std  
   
 ##  <a name="assign"></a>  error_code::assign  
- 오류 코드 값과 범주를 오류 코드에 할당합니다.  
+ Assigns an error code value and category to an error code.  
   
 ```
 void assign(value_type val, const error_category& _Cat);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|`error_code`에 저장할 오류 코드 값입니다.|  
-|`_Cat`|`error_code`에 저장할 오류 범주입니다.|  
+|`val`|The error code value to store in the `error_code`.|  
+|`_Cat`|The error category to store in the `error_code`.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 `val`을 오류 코드 값 및 `_Cat`에 대한 포인터로 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function stores `val` as the error code value and a pointer to `_Cat`.  
   
 ##  <a name="category"></a>  error_code::category  
- 오류 범주를 반환합니다.  
+ Returns the error category.  
   
 ```
 const error_category& category() const;
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="clear"></a>  error_code::clear  
- 오류 코드 값과 범주를 지웁니다.  
+ Clears the error code value and category.  
   
 ```
 clear();
 ```  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 0 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category) 개체에 대한 포인터를 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function stores a zero error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category) object.  
   
 ##  <a name="default_error_condition"></a>  error_code::default_error_condition  
- 기본 오류 조건을 반환합니다.  
+ Returns the default error condition.  
   
 ```
 error_condition default_error_condition() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- [default_error_condition](../standard-library/error-category-class.md#default_error_condition)에 의해 지정된 [error_condition](../standard-library/error-condition-class.md)입니다.  
+### <a name="return-value"></a>Return Value  
+ The [error_condition](../standard-library/error-condition-class.md) specified by [default_error_condition](../standard-library/error-category-class.md#default_error_condition).  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `category().default_error_condition(value())`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function returns `category().default_error_condition(value())`.  
   
 ##  <a name="error_code"></a>  error_code::error_code  
- `error_code` 형식의 개체를 생성합니다.  
+ Constructs an object of type `error_code`.  
   
 ```
 error_code();
@@ -160,93 +166,93 @@ error_code(_Enum _Errcode,
     error_code>::type* = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|`error_code`에 저장할 오류 코드 값입니다.|  
-|`_Cat`|`error_code`에 저장할 오류 범주입니다.|  
-|`_Errcode`|`error_code`에 저장할 열거형 값입니다.|  
+|`val`|The error code value to store in the `error_code`.|  
+|`_Cat`|The error category to store in the `error_code`.|  
+|`_Errcode`|The enumeration value to store in the `error_code`.|  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 0 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터를 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a zero error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
- 두 번째 생성자는 `val`을 오류 코드 값 및 [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8)에 대한 포인터로 저장합니다.  
+ The second constructor stores `val` as the error code value and a pointer to [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).  
   
- 세 번째 생성자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다.  
+ The third constructor stores `(value_type)_Errcode` as the error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
 ##  <a name="message"></a>  error_code::message  
- 오류 코드의 이름을 반환합니다.  
+ Returns the name of the error code.  
   
 ```
 string message() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 오류 코드의 이름을 나타내는 `string`입니다.  
+### <a name="return-value"></a>Return Value  
+ A `string` representing the name of the error code.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `category().message(value())`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function returns `category().message(value())`.  
   
 ##  <a name="op_eq_eq"></a>  error_code::operator==  
- `error_code` 개체가 같은지 테스트합니다.  
+ Tests for equality between `error_code` objects.  
   
 ```
 bool operator==(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|같은지 테스트할 개체입니다.|  
+|`right`|The object to be tested for equality.|  
   
-### <a name="return-value"></a>반환 값  
- 개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are equal; **false** if objects are not equal.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 `category() == right.category() && value == right.value()`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `category() == right.category() && value == right.value()`.  
   
 ##  <a name="op_neq"></a>  error_code::operator!=  
- `error_code` 개체가 같지 않은지 테스트합니다.  
+ Tests for inequality between `error_code` objects.  
   
 ```
 bool operator!=(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|같지 않은지 테스트할 개체입니다.|  
+|`right`|The object to be tested for inequality.|  
   
-### <a name="return-value"></a>반환 값  
- `error_code` 개체가 `right`에 전달된 `error_code` 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_code` object is not equal to the `error_code` object passed in `right`; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 `!(*this == right)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `!(*this == right)`.  
   
 ##  <a name="op_lt"></a>  error_code::operator&lt;  
- [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.  
+ Tests if the [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) object is less than the `error_code` object passed in for comparison.  
   
 ```
 bool operator<(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|비교할 error_code 개체입니다.|  
+|`right`|The error_code object to be compared.|  
   
-### <a name="return-value"></a>반환 값  
- `error_code` 개체가 비교를 위해 전달된 `error_code` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_code` object is less than the `error_code` object passed in for comparison; Otherwise, **false**.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 `category() < right.category() || category() == right.category() && value < right.value()`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `category() < right.category() || category() == right.category() && value < right.value()`.  
   
 ##  <a name="op_eq"></a>  error_code::operator=  
- 새 열거형 값을 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체에 할당합니다.  
+ Assigns a new enumeration value to the [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) object.  
   
 ```
 template <class _Enum>
@@ -255,55 +261,55 @@ typename enable_if<is_error_code_enum<_Enum>::value,
  operator=(_Enum _Errcode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Errcode`|`error_code` 개체에 할당할 열거형 값입니다.|  
+|`_Errcode`|The enumeration value to assign to the `error_code` object.|  
   
-### <a name="return-value"></a>반환 값  
- 멤버 함수를 통해 새 열거형 값이 할당될 `error_code` 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `error_code` object that is being assigned the new enumeration value by the member function.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다. `*this`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator stores `(value_type)_Errcode` as the error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category). It returns `*this`.  
   
 ##  <a name="op_bool"></a>  error_code::operator bool  
- 형식 `error_code`의 변수를 캐스트합니다.  
+ Casts a variable of type `error_code`.  
   
 ```
 explicit operator bool() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- `error_code` 개체의 부울 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The Boolean value of the `error_code` object.  
   
-### <a name="remarks"></a>설명  
- 연산자는 [value](#value)가 0과 같지 않을 경우에만 `true`로 변환할 수 있는 값을 반환합니다. 반환 형식은 `bool`로만 변환할 수 있고, `void *` 또는 기타 알려진 스칼라 형식으로 변환할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value convertible to `true` only if [value](#value) is not equal to zero. The return type is convertible only to `bool`, not to `void *` or other known scalar types.  
   
 ##  <a name="value"></a>  error_code::value  
- 저장된 오류 코드 값을 반환합니다.  
+ Returns the stored error code value.  
   
 ```
 value_type value() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 형식 [value_type](#value_type)의 저장된 오류 코드 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The stored error code value of type [value_type](#value_type).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="value_type"></a>  error_code::value_type  
- 저장된 오류 코드 값을 나타내는 형식입니다.  
+ A type that represents the stored error code value.  
   
 ```
 typedef int value_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식 정의는 `int`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ This type definition is a synonym for `int`.  
   
-## <a name="see-also"></a>참고 항목  
- [error_category 클래스](../standard-library/error-category-class.md)   
+## <a name="see-also"></a>See Also  
+ [error_category Class](../standard-library/error-category-class.md)   
  [<system_error>](../standard-library/system-error.md)
 
 

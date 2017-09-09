@@ -1,5 +1,5 @@
 ---
-title: "remove_extent 클래스 | Microsoft Docs"
+title: remove_extent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_extent
 - type_traits/std::remove_extent
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 670e0b97c79fb7d022b2ca5ed08326b31c96e336
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6b2d2e786775171867fc973947acb280d16d7a38
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removeextent-class"></a>remove_extent 클래스
-배열 형식에서 요소 형식을 만듭니다.  
+# <a name="removeextent-class"></a>remove_extent Class
+Makes element type from array type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_extent_t = typename remove_extent<T>::type;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 수정할 형식입니다.  
+ The type to modify.  
   
-## <a name="remarks"></a>설명  
- `remove_extent<T>`의 인스턴스는 `T1`가 `T` 형식인 경우 수정된 형식인 `T1[N]`을 보관하고, 그렇지 않은 경우 `T`를 보관합니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_extent<T>` holds a modified-type that is `T1` when `T` is of the form `T1[N]`, otherwise `T`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -89,12 +88,12 @@ remove_extent_t<int[5]> == int
 remove_extent_t<int[5][10]> == int [10]  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_all_extents 클래스](../standard-library/remove-all-extents-class.md)
+ [remove_all_extents Class](../standard-library/remove-all-extents-class.md)
 

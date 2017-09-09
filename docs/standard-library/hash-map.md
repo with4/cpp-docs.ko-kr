@@ -1,5 +1,5 @@
 ---
-title: "&lt;hash_map&gt; | Microsoft 문서"
+title: '&lt;hash_map&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<hash_map>
-- <hash_map>
-- std::<hash_map>
+- <hash_map>", "std::<hash_map>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,59 +34,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a1c256df1182c00c1b6045923ba9975f02c9bfa2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c3807ad83dc756ce62acd3e4f3fb5168e6d2d624
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 > [!NOTE]
->  이 헤더는 사용되지 않습니다. [<unordered_map>](../standard-library/unordered-map.md)을 대신 사용하는 것이 좋습니다.  
+>  This header is obsolete. The alternative is [<unordered_map>](../standard-library/unordered-map.md).  
   
- 컨테이너 템플릿 클래스 hash_map 및 hash_multimap과 지원 템플릿을 정의합니다.  
+ Defines the container template classes hash_map and hash_multimap and their supporting templates.  
   
- Visual C++ .NET 2003에서 <hash_map> 및 <hash_set> 헤더 파일의 멤버는 더 이상 std 네임스페이스에 없으며, 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the <hash_map> and <hash_set> header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <hash_map>  
   
 ```  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
-|Hash_map 버전|Hash_multimap 버전|설명|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[operator!=(hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|연산자의 좌변에 있는 hash_map 또는 hash_multimap 개체가 우변에 있는 hash_map 또는 hash_multimap 개체와 같지 않은지 테스트합니다.|  
-|[operator==(hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|연산자의 좌변에 있는 hash_map 또는 hash_multimap 개체가 우변에 있는 hash_map 또는 hash_multimap 개체와 같은지 테스트합니다.|  
+|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is not equal to the hash_map or hash_multimap object on the right side.|  
+|[operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is equal to the hash_map or hash_multimap object on the right side.|  
   
-### <a name="specialized-template-functions"></a>특별 템플릿 함수  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
-|Hash_map 버전|Hash_multimap 버전|설명|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[swap(hash_map)](../standard-library/hash-map-class.md#swap)|[swap(hash_multimap)](../standard-library/hash-multimap-class.md#swap)|두 hash_map 또는 hash_multimap의 요소를 교환합니다.|  
+|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|Exchanges the elements of two hash_maps or hash_multimaps.|  
   
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[hash_compare 클래스](../standard-library/hash-compare-class.md)|해시 연관 컨테이너(hash_map, hash_multimap, hash_set 또는 hash_multiset) 중 하나에서 기본 **Traits** 매개 변수 개체로 사용하여 포함된 요소의 순서를 지정하고 해시할 수 있는 개체를 설명합니다.|  
-|[value_compare 클래스](../standard-library/value-compare-class.md)|키 값 비교를 통해 hash_map의 요소를 비교하여 hash_map 내의 상대 순서를 확인할 수 있는 함수 개체를 제공합니다.|  
-|[hash_map 클래스](../standard-library/hash-map-class.md)|각 요소가 값이 고유하고 연결된 데이터 값인 정렬 키가 있는 쌍인 컬렉션에서 데이터를 신속하게 저장하고 검색하는 데 사용됩니다.|  
-|[hash_multimap 클래스](../standard-library/hash-multimap-class.md)|각 요소가 값이 고유하고 연결된 데이터 값이 아니어도 되는 정렬 키가 있는 쌍인 컬렉션에서 데이터를 신속하게 저장하고 검색합니다.|  
+|[hash_compare Class](../standard-library/hash-compare-class.md)|Describes an object that can be used by any of the hash associative containers — hash_map, hash_multimap, hash_set, or hash_multiset — as a default **Traits** parameter object to order and hash the elements they contain.|  
+|[value_compare Class](../standard-library/value-compare-class.md)|Provides a function object that can compare the elements of a hash_map by comparing the values of their keys to determine their relative order in the hash_map.|  
+|[hash_map Class](../standard-library/hash-map-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value is unique and an associated data value.|  
+|[hash_multimap Class](../standard-library/hash-multimap-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<hash_map>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
   
- **네임스페이스:** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

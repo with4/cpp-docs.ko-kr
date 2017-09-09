@@ -1,5 +1,5 @@
 ---
-title: "&lt;algorithm&gt; 함수 | Microsoft 문서"
+title: '&lt;algorithm&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,172 +8,90 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- adjacent_find
 - algorithm/std::all_of
-- all_of
 - algorithm/std::any_of
-- any_of
 - algorithm/std::binary_search
-- binary_search
 - algorithm/std::copy
-- copy
 - algorithm/std::copy_backward
-- copy_backward
 - algorithm/std::copy_if
-- copy_if
 - algorithm/std::copy_n
-- copy_n
 - algorithm/std::equal
-- equal
 - algorithm/std::equal_range
-- equal_range
 - algorithm/std::fill
-- fill
 - algorithm/std::fill_n
-- fill_n
 - algorithm/std::find
-- find
 - algorithm/std::find_end
-- find_end
 - algorithm/std::find_first_of
-- find_first_of
 - algorithm/std::find_if
-- find_if
 - algorithm/std::find_if_not
-- find_if_not
 - algorithm/std::for_each
-- for_each
 - algorithm/std::generate
-- generate
 - algorithm/std::generate_n
-- generate_n
 - algorithm/std::includes
-- includes
 - algorithm/std::inplace_merge
-- inplace_merge
 - algorithm/std::is_heap
-- is_heap
 - algorithm/std::is_heap_until
-- is_heap_until
 - algorithm/std::is_partitioned
-- is_partitioned
 - algorithm/std::is_permutation
-- is_permutation
 - algorithm/std::is_sorted
-- is_sorted
 - algorithm/std::is_sorted_until
-- is_sorted_until
 - algorithm/std::iter_swap
-- iter_swap
 - algorithm/std::lexicographical_compare
-- lexicographical_compare
 - algorithm/std::lower_bound
-- lower_bound
 - algorithm/std::make_heap
-- make_heap
 - algorithm/std::max
-- max
 - algorithm/std::max_element
-- max_element
 - algorithm/std::merge
-- merge
 - algorithm/std::min
-- min
 - algorithm/std::minmax
-- minmax
 - algorithm/std::minmax_element
-- minmax_element
 - algorithm/std::min_element
-- min_element
 - algorithm/std::mismatch
-- mismatch
 - algorithm/std::move
-- move
 - algorithm/std::move_backward
-- move_backward
 - algorithm/std::next_permutation
-- next_permutation
 - algorithm/std::none_of
-- none_of
 - algorithm/std::nth_element
-- nth_element
 - algorithm/std::partial_sort
-- partial_sort
 - algorithm/std::partial_sort_copy
-- partial_sort_copy
 - algorithm/std::partition
-- partition
 - algorithm/std::partition_point
-- partition_point
 - algorithm/std::pop_heap
-- pop_heap
 - algorithm/std::prev_permutation
-- prev_permutation
 - algorithm/std::push_heap
-- push_heap
 - algorithm/std::random_shuffle
-- random_shuffle
 - algorithm/std::remove
-- remove
 - algorithm/std::remove_copy
-- remove_copy
 - algorithm/std::remove_copy_if
-- remove_copy_if
 - algorithm/std::remove_if
-- remove_if
 - algorithm/std::replace
-- replace
 - algorithm/std::replace_copy
-- replace_copy
 - algorithm/std::replace_copy_if
-- replace_copy_if
 - algorithm/std::replace_if
-- replace_if
 - algorithm/std::reverse
-- reverse
 - algorithm/std::reverse_copy
-- reverse_copy
 - algorithm/std::rotate
-- rotate
 - algorithm/std::rotate_copy
-- rotate_copy
 - algorithm/std::search
-- search
 - algorithm/std::search_n
-- search_n
 - algorithm/std::set_difference
-- set_difference
 - algorithm/std::set_intersection
-- set_intersection
 - algorithm/std::set_symmetric_difference
-- set_symmetric_difference
 - algorithm/std::set_union
-- set_union
 - algorithm/std::shuffle
-- shuffle
 - algorithm/std::sort
-- sort
 - algorithm/std::sort_heap
-- sort_heap
 - algorithm/std::stable_partition
-- stable_partition
 - algorithm/std::stable_sort
-- stable_sort
 - algorithm/std::swap_ranges
-- swap_ranges
 - algorithm/std::transform
-- transform
 - algorithm/std::unique
-- unique
 - algorithm/std::unique_copy
-- unique_copy
 - algorithm/std::upper_bound
-- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -194,14 +112,113 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+helpviewer_keywords:
+- std::adjacent_find [C++]
+- std::all_of [C++]
+- std::any_of [C++]
+- std::binary_search [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_if [C++]
+- std::copy_n [C++]
+- std::equal [C++]
+- std::equal_range [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::find_end [C++]
+- std::find_first_of [C++]
+- std::find_if [C++]
+- std::find_if_not [C++]
+- std::for_each [C++]
+- std::generate [C++]
+- std::generate_n [C++]
+- std::includes [C++]
+- std::inplace_merge [C++]
+- std::is_heap [C++]
+- std::is_heap_until [C++]
+- std::is_partitioned [C++]
+- std::is_permutation [C++]
+- std::is_sorted [C++]
+- std::is_sorted_until [C++]
+- std::iter_swap [C++]
+- std::lexicographical_compare [C++]
+- std::lower_bound [C++]
+- std::make_heap [C++]
+- std::max [C++]
+- std::max_element [C++]
+- std::merge [C++]
+- std::min [C++]
+- std::minmax [C++]
+- std::minmax_element [C++]
+- std::min_element [C++]
+- std::mismatch [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::next_permutation [C++]
+- std::none_of [C++]
+- std::nth_element [C++]
+- std::partial_sort [C++]
+- std::partial_sort_copy [C++]
+- std::partition [C++]
+- std::partition_point [C++]
+- std::pop_heap [C++]
+- std::prev_permutation [C++]
+- std::push_heap [C++]
+- std::random_shuffle [C++]
+- std::remove [C++]
+- std::remove_copy [C++]
+- std::remove_copy_if [C++]
+- std::remove_if [C++]
+- std::replace [C++]
+- std::replace_copy [C++]
+- std::replace_copy_if [C++]
+- std::replace_if [C++]
+- std::reverse [C++]
+- std::reverse_copy [C++]
+- std::rotate [C++]
+- std::rotate_copy [C++]
+- std::search [C++]
+- std::search_n [C++]
+- std::set_difference [C++]
+- std::set_intersection [C++]
+- std::set_symmetric_difference [C++]
+- std::set_union [C++]
+- std::shuffle [C++]
+- std::sort [C++]
+- std::sort_heap [C++]
+- std::stable_partition [C++]
+- std::stable_sort [C++]
+- std::swap_ranges [C++]
+- std::transform [C++]
+- std::unique [C++]
+- std::unique_copy [C++]
+- std::upper_bound [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_n [C++]
+- std::count [C++]
+- std::equal [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::is_permutation [C++]
+- std::lexicographical_compare [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::reverse [C++]
+- std::rotate [C++]
+- std::count_if [C++]
+- std::partition_copy [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 941b66bd40b1b14fd07f823023675d9ac52e141c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 함수
+# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; functions
 ||||  
 |-|-|-|  
 |[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
@@ -235,7 +252,7 @@ ms.lasthandoff: 04/19/2017
 |[upper_bound](#upper_bound)|  
   
 ##  <a name="adjacent_find"></a>  adjacent_find  
- 같지 않거나 지정한 조건을 충족하는 인접 요소 두 개를 검색합니다.  
+ Searches for two adjacent elements that are either equal or satisfy a specified condition.  
   
 ```  
 template<class ForwardIterator>  
@@ -250,25 +267,25 @@ template<class ForwardIterator , class BinaryPredicate>
         BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `comp`  
- 검색 중인 범위 내 인접 요소의 값이 충족하도록 할 조건을 제공하는 이진 조건자입니다.  
+ The binary predicate giving the condition to be satisfied by the values of the adjacent elements in the range being searched.  
   
-### <a name="return-value"></a>반환 값  
- 서로 같거나(첫 번째 버전) 이진 조건자가 지정한 조건을 충족하는(두 번째 버전) 인접 쌍의 첫 번째 요소에 대한 정방향 반복기입니다(해당 요소 쌍이 있는 경우). 그렇지 않으면 `last`를 가리키는 반복기가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the first element of the adjacent pair that are either equal to each other (in the first version) or that satisfy the condition given by the binary predicate (in the second version), provided that such a pair of elements is found. Otherwise, an iterator pointing to `last` is returned.  
   
-### <a name="remarks"></a>설명  
- `adjacent_find` 알고리즘은 변경할 수 없는 시퀀스 알고리즘입니다. 검색할 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 알고리즘의 시간 복잡도는 범위에 포함된 요소 수에 비례합니다.  
+### <a name="remarks"></a>Remarks  
+ The `adjacent_find` algorithm is a nonmutating sequence algorithm. The range to be searched must be valid; all pointers must be dereferenceable and the last position is reachable from the first by incrementation. The time complexity of the algorithm is linear in the number of elements contained in the range.  
   
- 요소 간의 일치를 확인하는 데 사용되는 `operator==`는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the match between elements must impose an equivalence relation between its operands.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -331,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
 ```  
   
 ##  <a name="all_of"></a>  all_of  
- 지정한 범위에서 각 요소에 조건이 있을 경우 `true`를 반환합니다.  
+ Returns `true` when a condition is present at each element in the given range.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -341,24 +358,24 @@ template<class InputIterator, class Predicate>
         BinaryPredicatecomp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건 검사의 시작 위치를 나타내는 입력 반복기입니다. 반복기는 요소 범위의 시작 위치를 표시합니다.  
+ An input iterator that indicates where to start to check for a condition. The iterator marks where a range of elements starts.  
   
  `last`  
- 조건을 검사할 요소 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- 테스트할 조건입니다. 확인 중인 요소가 충족할 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ A condition to test for. This is a user-defined predicate function object that defines the condition to be satisfied by an element being checked. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 범위의 각 요소에서 조건이 검색되는 경우 `true`, 조건이 한 번도 검색되지 않는 경우 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at each element in the indicated range, and `false` if the condition is not detected at least one time.  
   
-### <a name="remarks"></a>설명  
- `[0,Last - first)` 범위의 각 `N`에 대해 `comp(*(_First + N))` 조건자가 `true`인 경우에만 템플릿 함수가 `true`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for each `N` in the range `[0,Last - first)`, the predicate `comp(*(_First + N))` is `true`.  
   
 ##  <a name="any_of"></a>  any_of  
- 요소의 지정된 범위에 조건이 한 번이라도 있을 경우 `true`를 반환합니다.  
+ Returns `true` when a condition is present at least once in the specified range of elements.  
   
 ```  
 template<class InputIterator, class UnaryPredicate>  
@@ -368,26 +385,26 @@ template<class InputIterator, class UnaryPredicate>
         UnaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건에 대한 요소 범위 확인의 시작 위치를 나타내는 입력 반복기입니다.  
+ An input iterator that indicates where to start checking a range of elements for a condition.  
   
  `last`  
- 조건을 검사할 요소 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- 테스트할 조건입니다. 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 테스트 중인 요소가 충족해야 할 조건을 정의합니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ A condition to test for. This is provided by a user-defined predicate function object. The predicate defines the condition to be satisfied by the element being tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 표시된 범위에서 조건이 한 번이라도 검색되면 `true`, 조건이 전혀 검색되지 않으면 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at least once in the indicated range, `false` if the condition is never detected.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `true`를 반환하는 경우는 일부 `N`(범위  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range  
   
- `[0, last - first)`조건자 `comp(*(first + N))` 그렇습니다.  
+ `[0, last - first)`, the predicate `comp(*(first + N))` is true.  
   
 ##  <a name="binary_search"></a>  binary_search  
- 정렬된 범위에 지정된 값과 같거나 이진 조건자가 지정한 의미에 따라 지정된 값과 같은 요소가 있는지 여부를 테스트합니다.  
+ Tests whether there is an element in a sorted range that is equal to a specified value or that is equivalent to it in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>      
@@ -405,34 +422,34 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- 요소의 값과 일치해야 하는 값 또는 이진 조건자에 의해 지정된 요소 값의 조건을 충족해야 하는 값입니다.  
+ The value required to be matched by the value of the element or that must satisfy the condition with the element value specified by the binary predicate.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하여 조건이 충족되면 `true`를 반환하고, 충족되지 않으면 `false`를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값과 동일하거나 등가인 범위에서 요소가 발견될 경우 `true`, 아닌 경우 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if an element is found in the range that is equal or equivalent to the specified value; otherwise, `false`.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 정렬된 범위는 각각 `binary_search` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted range must each be arranged as a precondition to the application of the `binary_search` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 소스 범위는 `binary_search`에 의해 수정되지 않습니다.  
+ The source ranges are not modified by `binary_search`.  
   
- 정방향 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 등가이거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 비등가 요소 사이에 정렬이 수행됩니다.  
+ The value types of the forward iterators need to be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 알고리즘의 복잡성은 임의 액세스 반복기에 대 한 로그 및 선형 단계에 비례하여 수 이며 그렇지 않은 경우 ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -515,7 +532,7 @@ int main( )
 ```  
   
 ##  <a name="copy"></a>  copy  
- 소스 범위의 요소를 대상 범위에 할당하여 요소의 소스 시퀀스 전체에서 반복하고 정방향으로 새 위치를 할당합니다.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a forward direction.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -525,27 +542,27 @@ template<class InputIterator, class OutputIterator>
         OutputIterator destBeg);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 원본 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last`  
- 소스 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 입력 반복기입니다.  
+ An input iterator addressing the position that is one past the final element in the source range.  
   
  *destBeg*  
- 대상 범위의 첫 번째 요소의 위치를 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>반환 값  
- 출력 반복기입니다. 즉, 대상 범위에서 마지막 요소 하나 위치를 주소 지정, 반복기 주소 `result` + ( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `result` + ( `last` -  `first` ).  
   
-### <a name="remarks"></a>설명  
- 소스 범위는 유효해야 하며 대상에서 복사할 모든 요소를 보관할 충분한 공간이 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- 알고리즘은 첫 요소부터 시작하여 소스 요소를 복사하기 때문에 소스 범위의 `last` 위치가 대상 범위에 포함되지 않은 경우 대상 범위가 소스 범위와 겹칠 수 있습니다. **copy** 는 소스 범위와 대상 범위가 겹치지 않는 경우 오른쪽이 아니라 왼쪽으로 요소를 이동하는 데 사용될 수 있습니다. 여러 위치를 오른쪽으로 이동하려면 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 알고리즘을 사용합니다.  
+ Because the algorithm copies the source elements in order beginning with the first element, the destination range can overlap with the source range provided the `last` position of the source range is not contained in the destination range. **copy** can be used to shift elements to the left but not the right, unless there is no overlap between the source and destination ranges. To shift to the right any number of positions, use the [copy_backward](../standard-library/algorithm-functions.md#copy_backward) algorithm.  
   
- **copy** 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.  
+ The **copy** algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy.cpp  
@@ -604,7 +621,7 @@ v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```  
   
 ##  <a name="copy_backward"></a>  copy_backward  
- 소스 범위의 요소를 대상 범위에 할당하여 요소의 소스 시퀀스 전체에서 반복하고 역방향으로 새 위치를 할당합니다.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a backward direction.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -614,31 +631,31 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
         BidirectionalIterator2 destEnd);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 소스 범위의 첫 번째 요소의 위치를 주소 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the source range.  
   
  `last`  
- 소스 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position that is one past the final element in the source range.  
   
  `destEnd`  
- 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="return-value"></a>반환 값  
- 출력 반복기입니다. 즉, 대상 범위에서 마지막 요소 하나 위치를 주소 지정, 반복기 주소 `destEnd` -( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `destEnd` - ( `last` -  `first` ).  
   
-### <a name="remarks"></a>설명  
- 소스 범위는 유효해야 하며 대상에서 복사할 모든 요소를 보관할 충분한 공간이 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- 이 `copy_backward` 알고리즘은 복사 알고리즘보다 요구 사항이 더 엄격합니다. 입력 및 출력 반복기가 모두 양방향입니다.  
+ The `copy_backward` algorithm imposes more stringent requirements than that the copy algorithm. Both its input and output iterators must be bidirectional.  
   
- `copy_backward` 및 [move_backward](../standard-library/algorithm-functions.md#move_backward) 알고리즘은 대상 범위의 끝 부분을 가리키는 반복기를 사용하여 출력 범위를 지정하는 유일한 C++ 표준 라이브러리 알고리즘입니다.  
+ The `copy_backward` and [move_backward](../standard-library/algorithm-functions.md#move_backward) algorithms are the only C++ Standard Library algorithms designating the output range with an iterator pointing to the end of the destination range.  
   
- 왜냐하면 알고리즘은 지난 요소의 시작하는 주문의 소스 요소를 복사하고, 도착 범위는 도착 범위를 포함하지 않는 소스 범위의 `first` 위치에 제공되는 소스 범위에 중복할 수 있습니다. `copy_backward`는 소스와 대상 범위가 겹치지 않는 한 왼쪽이 아닌 오른쪽으로 요소를 이동하는 데 사용할 수 있습니다. 여러 위치를 왼쪽으로 이동하려면, [복사](../standard-library/algorithm-functions.md#copy) 알고리즘을 사용합니다.  
+ Because the algorithm copies the source elements in order beginning with the last element, the destination range can overlap with the source range provided the  `first` position of the source range is not contained in the destination range. `copy_backward` can be used to shift elements to the right but not the left, unless there is no overlap between the source and destination ranges. To shift to the left any number of positions, use the [copy](../standard-library/algorithm-functions.md#copy) algorithm.  
   
- 이 `copy_backward` 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새로운 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.  
+ The `copy_backward` algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -690,7 +707,7 @@ int main() {
 ```  
   
 ##  <a name="copy_if"></a>  copy_if  
- 요소 범위에서, 지정된 조건에 대해 `true`인 요소를 복사합니다.  
+ In a range of elements, copies the elements that are `true` for the specified condition.  
   
 ```  
 template<class InputIterator, class OutputIterator, class BinaryPredicate>  
@@ -701,31 +718,31 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건을 검사할 범위의 시작을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the start of a range to check for the condition.  
   
  `last`  
- 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of the range.  
   
  `dest`  
- 복사된 요소에 대한 대상을 나타내는 출력 반복기입니다.  
+ The output iterator that indicates the destination for the copied elements.  
   
  `_Pred`  
- 범위의 모든 요소가 테스트되는 조건입니다. 이 조건은 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition against which every element in the range is tested. This condition is provided by a user-defined predicate function object. A predicate takes one argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 조건을 만족하는 각 요소에 대해 `dest`와 동일한 출력 반복기가 한 번씩 증가합니다. 즉, 반환 값 빼기 `dest`는 복사된 요소의 수와 같습니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator that equals `dest` incremented once for each element that fulfills the condition. In other words, the return value minus `dest` equals the number of copied elements.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- `[0, last - first)` 범위의 각 `N`에 대해 위의 식을 한 번 평가하고, 가장 낮은 값부터 시작하여 `N`의 값을 최소값부터 엄격하게 증가시킵니다. `dest` 및 `first`가 저장소 영역을 지정하는 경우 `dest`가 `[` `first``,` `last``)` 범위에 포함되어서는 안 됩니다.  
+ once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. If `dest` and  `first` designate regions of storage, `dest` must not be in the range `[ first, last )`.  
   
 ##  <a name="copy_n"></a>  copy_n  
- 지정된 수의 요소를 복사합니다.  
+ Copies a specified number of elements.  
   
 ```  
 template<class InputIterator, class Size, class OutputIterator>  
@@ -735,24 +752,24 @@ template<class InputIterator, class Size, class OutputIterator>
         OutputIterator dest);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 요소를 복사할 원본 위치를 나타내는 입력 반복기입니다.  
+ An input iterator that indicates where to copy elements from.  
   
  `count`  
- 복사할 요소의 수를 지정하는 부호 있는/부호 없는 정수 형식입니다.  
+ A signed or unsigned integer type specifying the number of elements to copy.  
   
  `dest`  
- 요소를 복사할 위치를 나타내는 출력 반복기입니다.  
+ An output iterator that indicates where to copy elements to.  
   
-### <a name="return-value"></a>반환 값  
- 요소가 복사된 출력 반복기를 반환합니다. 세 번째 매개 변수인 `dest`의 반환된 값과 같습니다.  
+### <a name="return-value"></a>Return Value  
+ Returns an output iterator where elements have been copied to. It is the same as the returned value of the third parameter, `dest`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수 계산 `*(dest + N) = *(first + N))` 마다 한 번씩 `N` 범위에 `[0, count)`를 엄격 하 게 증가의 값에 대 한 `N` 가장 낮은 값으로 시작 합니다. 그런 다음 `dest + N`를 반환합니다. 경우 `dest` 및 `first` 저장소, 영역을 지정 `dest` 범위 밖에 있어야 `[first, last)`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = *(first + N))` once for each `N` in the range `[0, count)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="count"></a>  count  
- 해당 값이 지정된 값과 일치하는 요소의 개수를 반환합니다.  
+ Returns the number of elements in a range whose values match a specified value.  
   
 ```  
 template<class InputIterator, class Type> 
@@ -762,25 +779,25 @@ template<class InputIterator, class Type>
         const Type& val);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 트래버스할 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- 트래버스할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- 계산할 요소의 값입니다.  
+ The value of the elements to be counted.  
   
-### <a name="return-value"></a>반환 값  
- 값이 `val`인 [  `first`, `last` ) 범위에 있는 요소의 수를 계산하는 **InputIterator**의 차이 유형입니다.  
+### <a name="return-value"></a>Return Value  
+ The difference type of the **InputIterator** that counts the number of elements in the range [  `first`, `last` ) that have value `val`.  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 이 알고리즘은 템플릿 함수 [count_if](../standard-library/algorithm-functions.md#count_if)가 포함된 모든 조건자를 충족하는 요소를 계산하기 위해 일반화됩니다.  
+ This algorithm is generalized to count elements that satisfy any predicate with the template function [count_if](../standard-library/algorithm-functions.md#count_if).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count.cpp  
@@ -818,7 +835,7 @@ The number of 10s in v2 is: 3.
 ```  
   
 ##  <a name="count_if"></a>  count_if  
- 범위 내에서 해당 값이 지정된 조건과 일치하는 요소의 개수를 반환합니다.  
+ Returns the number of elements in a range whose values satisfy a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>
@@ -828,23 +845,23 @@ template<class InputIterator, class Predicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `_Pred`  
- 요소 개수를 세기 위한 일치 조건을 정의하는 사용자 정의 조건자 함수 개체. 조건자는 단일 인수를 받아서 **true** 또는 **false**를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be counted. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>반환 값  
- 조건자로 지정된 조건과 일치하는 요소의 개수.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that satisfy the condition specified by the predicate.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 "지정한 값과 일치" 조건자를 다른 임의의 조건자로 교체하는 방식으로 [count](../standard-library/algorithm-functions.md#count) 알고리즘을 일반화한 것입니다.  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [count](../standard-library/algorithm-functions.md#count), replacing the predicate "equals a specific value" with any predicate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -888,11 +905,11 @@ The number of elements in v1 greater than 10 is: 2.
 ```  
   
 ##  <a name="equal"></a>  equal  
- 두 범위를 요소별로 비교하여 같음 여부 또는 이진 조건자가 지정한 의미의 동등성을 확인합니다.  
+ Compares two ranges element by element for equality or equivalence in a sense specified by a binary predicate.  
   
- 서로 다른 컨테이너 형식(예: `vector` 및 `list`)에서 요소를 비교하는 경우, 다른 요소 형식을 비교하는 경우 또는 컨테이너의 하위 범위를 비교해야 하는 경우 `std::equal`을 사용합니다. 그렇지 않고 같은 컨테이너 형식에서 같은 형식의 요소를 비교하는 경우에는 각 컨테이너에 제공되는 비 멤버 `operator==`를 사용합니다.  
+ Use `std::equal` when comparing elements in different container types (for example `vector` and `list`) or when comparing different element types, or when you need to compare sub-ranges of containers. Otherwise, when comparing elements of the same type in the same container type, use the non-member `operator==` that is provided for each container.  
   
- 두 번째 범위에 단일 반복기만 사용하는 오버로드는 두 번째 범위가 첫 번째 범위보다 긴 경우 차이를 감지하지 못하고 두 번째 범위가 첫 번째 범위보다 짧은 경우 정의되지 않은 동작이 발생하므로 C++14 코드에서 이중 범위 오버로드를 사용합니다.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -924,33 +941,33 @@ bool equal(
     BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 테스트할 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- 테스트할 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- 테스트할 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `First2`  
- 테스트할 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 요소별로 비교할 경우 범위가 이진 조건자에서 동일하거나 동등한 경우에만 **true**이고, 아닌 경우에는 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if and only if the ranges are identical or equivalent under the binary predicate when compared element by element; otherwise, **false**.  
   
-### <a name="remarks"></a>설명  
- 검색할 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- 두 범위의 길이가 같은 경우 알고리즘의 시간 복잡도는 범위에 포함된 요소 수에 비례합니다. 그렇지 않은 경우 함수에서 바로 `false`를 반환합니다.  
+ If the two ranges are equal length, then the time complexity of the algorithm is linear in the number of elements contained in the range. Otherwise the function immediately returns `false`.  
   
- 피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 `operator==`나 사용자 정의 조건자 모두 필요하지 않습니다.  
+ Neither the `operator==` nor the user-defined predicate is required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -985,7 +1002,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  equal_range  
- 정렬된 범위가 지정되면, 모든 요소가 지정된 값에 해당하는 하위 범위를 찾습니다.  
+ Given an ordered range, finds the subrange in which all elements are equivalent to a given value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1002,34 +1019,34 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `val`  
- 정렬된 범위에서 검색되는 값입니다.  
+ The value being searched for in the ordered range.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다.  
+ User-defined predicate function object that defines the sense in which one element is less than another.  
   
-### <a name="return-value"></a>반환 값  
- 사용된 이진 조건자에 의해 정의된 의미(`comp` 또는 기본값, less-than)에서 모든 요소가 `val`과 같은, 검색된 범위 내에 포함된 하위 범위를 지정하는 정방향 반복기의 쌍입니다.  
+### <a name="return-value"></a>Return Value  
+ A pair of forward iterators that specify a subrange, contained within the range searched, in which all of the elements are equivalent to `val` in the sense defined by the binary predicate used (either `comp` or the default, less-than).  
   
- 해당 범위의 요소가 `val`과 같지 않으면 반환된 정방향 반복기 쌍은 동일하며, 범위의 순서를 방해하지 않고 `val`을 삽입할 수 있는 지점을 지정합니다.  
+ If no elements in the range are equivalent to `val`, the returned pair of forward iterators are equal and specify the point where `val` could be inserted without disturbing the order of the range.  
   
-### <a name="remarks"></a>설명  
- 알고리즘에 의해 반환된 쌍의 첫 번째 반복기는 [lower_bound](../standard-library/algorithm-functions.md#lower_bound), 두 번째 반복기는 [upper_bound](../standard-library/algorithm-functions.md#upper_bound)입니다.  
+### <a name="remarks"></a>Remarks  
+ The first iterator of the pair returned by the algorithm is [lower_bound](../standard-library/algorithm-functions.md#lower_bound), and the second iterator is [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
   
- `equal_range`에 제공된 조건자에 따라 범위를 정렬해야 합니다. 예를 들어, greater-than 조건자를 사용하려는 경우 범위를 내림차순으로 정렬해야 합니다.  
+ The range must be sorted according to the predicate provided to `equal_range`. For example, if you are going to use the greater-than predicate, the range must be sorted in descending order.  
   
- `equal_range`에서 반환한 반복기 쌍에 의해 정의된 비어 있을 수 있는 하위 범위의 요소는 사용된 조건자에 의해 정의된 의미에서 `val`과 같습니다.  
+ Elements in the possibly empty subrange defined by the pair of iterators returned by `equal_range` will be equivalent to `val` in the sense defined by the predicate used.  
   
- 알고리즘의 복잡성은 임의 액세스 반복기에 대 한 로그 및 선형 단계에 비례하여 수 이며 그렇지 않은 경우 ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1148,7 +1165,7 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  fill  
- 지정한 범위의 모든 요소에 동일한 새 값을 할당합니다.  
+ Assigns the same new value to every element in a specified range.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1158,20 +1175,20 @@ void fill(
     const Type& val);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 트래버스할 범위 내 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- 트래버스할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- [  `first`, `last`) 범위의 요소에 할당할 값입니다.  
+ The value to be assigned to elements in the range [  `first`, `last`).  
   
-### <a name="remarks"></a>설명  
- 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1213,7 +1230,7 @@ Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```  
   
 ##  <a name="fill_n"></a>  fill_n  
- 특정 요소로 시작하는 범위에서 지정된 개수의 요소에 새 값을 할당합니다.  
+ Assigns a new value to a specified number of elements in a range beginning with a particular element.  
   
 ```  
 template<class OutputIterator, class Size, class Type>  
@@ -1223,23 +1240,23 @@ OutputIterator fill_n(
     const Type& Val);   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First`  
- `Val` 값을 할당할 범위 내 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the range to be assigned the value `Val`.  
   
  `Count`  
- 값을 할당할 요소의 수를 지정하는 부호 있는/부호 없는 정수 형식입니다.  
+ A signed or unsigned integer type specifying the number of elements to be assigned the value.  
   
  `Val`  
- [ `First`,          *First + Count*) 범위의 요소에 할당할 값입니다.  
+ The value to be assigned to elements in the range [ `First`,          *First + Count*).  
   
-### <a name="return-value"></a>반환 값  
- `Count` > 0인 경우 마지막 요소 뒤에 오는 요소에 대한 반복기이고, 아닌 경우 첫 번째 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the element that follows the last element filled if `Count` > zero, otherwise the first element.  
   
-### <a name="remarks"></a>설명  
- 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1289,7 +1306,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  find  
- 범위에서 지정된 값을 가진 요소가 첫 번째로 나타나는 위치를 찾습니다.  
+ Locates the position of the first occurrence of an element in a range that has a specified value.  
   
 ```  
 template<class InputIterator, class T>  
@@ -1299,26 +1316,26 @@ InputIterator find(
     const T& val);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 지정된 값을 검색할 범위 내 첫 번째 요소의 위치 주소를 지정하는 입력 반복기입니다  
+ An input iterator addressing the position of the first element in the range to be searched for the specified value.  
   
  `last`  
- 지정된 값을 검색할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range to be searched for the specified value.  
   
  `val`  
- 검색할 값입니다.  
+ The value to be searched for.  
   
-### <a name="return-value"></a>반환 값  
- 검색 중인 범위 내에서 지정된 값이 처음 나타나는 위치의 주소를 지정하는 입력 반복기입니다. 동일한 값의 요소가 없으면 `last`가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first occurrence of the specified value in the range being searched. If no element is found with an equivalent value, returns `last`.  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- `find()`를 사용하는 코드 예제를 보려면 [find_if](../standard-library/algorithm-functions.md#find_if)를 참조하세요.  
+ For a code example using `find()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="find_end"></a>  find_end  
- 범위에서 지정된 시퀀스와 동일하거나 이진 조건자가 지정한 의미와 동일한 마지막 하위 시퀀스를 찾습니다.  
+ Looks in a range for the last subsequence that is identical to a specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1337,31 +1354,31 @@ ForwardIterator1 find_end(
     Pred Comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `Last1`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the last element in the range to be searched.  
   
  `First2`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to search for.  
   
  `Last2`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the last element in the range to search for.  
   
  `Comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 시퀀스 [First2, Last2)와 일치하는 [First1, Last1) 내의 마지막 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the last subsequence within [First1, Last1) that matches the specified sequence [First2, Last2).  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1458,7 +1475,7 @@ There is a sequence of elements in v1 that are equivalent to those
 ```  
   
 ##  <a name="find_first_of"></a>  find_first_of  
- 대상 범위 내에서 여러 값이 첫 번째로 나타나는 경우 또는 이진 조건자가 지정한 의미에서 지정된 요소 집합과 동일한 여러 요소가 첫 번째로 나타나는 경우를 검색합니다.  
+ Searches for the first occurrence of any of several values within a target range or for the first occurrence of any of several elements that are equivalent in a sense specified by a binary predicate to a specified set of the elements.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1477,31 +1494,31 @@ ForwardIterator1 find_first_of(
     BinaryPredicate  comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- 일치를 확인할 범위 내 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- 일치를 확인할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1601,7 +1618,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="find_if"></a>  find_if  
- 범위에서 지정된 조건을 만족하는 요소가 첫 번째 나타나는 위치를 찾습니다.  
+ Locates the position of the first occurrence of an element in a range that satisfies a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1611,23 +1628,23 @@ InputIterator find_if(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- 검색 중인 요소가 충족하는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 조건자는 인수 하나를 사용하며 `true`(충족) 또는 `false`(미충족)를 반환합니다. `pred`의 서명은 `bool pred(const T& arg);`여야 합니다. 여기서 `T`는 역참조 시 `InputIterator`를 암시적으로 변환할 수 있는 형식입니다. `const` 키워드는 함수 개체 또는 람다가 인수를 수정하지 않아야 함을 나타내기 위한 용도로만 표시되어 있습니다.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>반환 값  
- 조건자로 지정된 조건을 충족하는 범위 내 첫 번째 요소를 참조하는 입력 반복기입니다. 이 경우 조건자는 `true`를 반환합니다. 조건자를 충족하는 요소가 없으면 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that satisfies the condition specified by the predicate (the predicate results in `true`). If no element is found to satisfy the predicate, returns `last`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [find](../standard-library/algorithm-functions.md#find) 알고리즘을 일반화한 것으로, "equals a specific value" 조건자를 임의의 조건자로 바꿉니다. 이 조건자와 논리적으로 반대되는 항목(조건자를 충족하지 않는 첫 번째 요소를 찾음)은 [find_if_not](../standard-library/algorithm-functions.md#find_if_not)을 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does not satisfy the predicate), see [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1714,7 +1731,7 @@ int main()
 ```  
   
 ##  <a name="find_if_not"></a>  find_if_not  
- 표시된 범위에서 조건을 충족하지 않는 첫 번째 요소를 반환합니다.  
+ Returns the first element in the indicated range that does not satisfy a condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1724,26 +1741,26 @@ InputIterator find_if_not(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- 검색 중인 요소가 충족하지 않는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 조건자는 인수 하나를 사용하며 `true`(충족) 또는 `false`(미충족)를 반환합니다. `pred`의 서명은 `bool pred(const T& arg);`여야 합니다. 여기서 `T`는 역참조 시 `InputIterator`를 암시적으로 변환할 수 있는 형식입니다. `const` 키워드는 함수 개체 또는 람다가 인수를 수정하지 않아야 함을 나타내기 위한 용도로만 표시되어 있습니다.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be not satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>반환 값  
- 조건자로 지정된 조건을 충족하지 않는 범위 내 첫 번째 요소를 참조하는 입력 반복기입니다. 이 경우 조건자는 `false`를 반환합니다. 모든 요소가 조건자를 충족하는 경우(조건자가 모든 요소에 대해 `true`를 반환함) `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that does not satisfy the condition specified by the predicate (the predicate results in `false`). If all elements satisfy the predicate (the predicate results in `true` for every element), returns `last`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 [find](../standard-library/algorithm-functions.md#find) 알고리즘을 일반화한 것으로, "equals a specific value" 조건자를 임의의 조건자로 바꿉니다. 이 조건자와 논리적으로 반대되는 항목(조건자를 충족하는 첫 번째 요소를 찾음)은 [find_if](../standard-library/algorithm-functions.md#find_if)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does satisfy the predicate), see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
- `find_if_not()`에 맞게 즉시 조정 가능한 코드 예제는 [find_if](../standard-library/algorithm-functions.md#find_if)를 참조하세요.  
+ For a code example readily adaptable to `find_if_not()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="for_each"></a>  for_each  
- 범위 내에서 정방향으로 각 요소에 지정된 함수 개체를 적용하고 함수 개체를 반환합니다.  
+ Applies a specified function object to each element in a forward order within a range and returns the function object.  
   
 ```  
 template<class InputIterator, class Function>  
@@ -1753,27 +1770,27 @@ Function for_each(
     Function _Func);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 작업을 수행할 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range to be operated on.  
   
  `last`  
- 작업을 수행할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range operated on.  
   
  `_Func`  
- 범위의 각 요소에 적용되는 사용자 정의 함수 개체입니다.  
+ User-defined function object that is applied to each element in the range.  
   
-### <a name="return-value"></a>반환 값  
- 범위에서 모든 요소에 적용된 후 함수 개체의 복사본입니다.  
+### <a name="return-value"></a>Return Value  
+ A copy of the function object after it has been applied to all of the elements in the range.  
   
-### <a name="remarks"></a>설명  
- `for_each` 알고리즘은 매우 유연하여, 사용자가 지정한 서로 다른 방법으로 범위 내에서 각 요소를 수정할 수 있습니다. 서로 다른 매개 변수를 전달하여 템플릿화된 함수를 수정된 형식으로 다시 사용할 수 있습니다. 사용자 정의 함수는 범위의 모든 요소를 처리한 후 알고리즘이 반환할 수 있는 내부 상태 내에서 정보를 누적할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The algorithm `for_each` is very flexible, allowing the modification of each element within a range in different, user-specified ways. Templatized functions may be reused in a modified form by passing different parameters. User-defined functions may accumulate information within an internal state that the algorithm may return after processing all of the elements in the range.  
   
- 참조된 범위는 유효해야 하며, 모든 포인터는 역참조 가능해야 하고 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 복잡성은 선형 이며 최대 ( `last`  -   `first`) 비교 합니다.  
+ The complexity is linear with at most ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1887,7 +1904,7 @@ The average of the elements of v1 is:
 ```  
   
 ##  <a name="generate"></a>  generate  
- 범위에 있는 각 요소에 함수 개체에 의해 생성된 값을 할당합니다.  
+ Assigns the values generated by a function object to each element in a range.  
   
 ```  
 template<class ForwardIterator, class Generator>  
@@ -1897,24 +1914,24 @@ void generate(
     Generator _Gen);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 값을 할당할 범위에서 첫 번째 요소의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to which values are to be assigned.  
   
  `last`  
- 값을 할당할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to which values are to be assigned.  
   
  `_Gen`  
- 인수 없이 호출되는 함수 개체로, 범위 내 각 요소에 할당되는 값을 생성하는 데 사용됩니다.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>설명  
- 이 함수 개체는 범위 내 각 요소에 대해 호출되고 호출될 때마다 동일한 값을 반환할 필요가 없습니다. 예를 들어 파일에서 읽거나 로컬 상태를 참조 및 수정할 수 있습니다. 생성기의 결과 형식은 범위의 정방향 반복기 값 형식으로 변환할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- 참조된 범위는 유효해야 하며, 모든 포인터는 역참조 가능해야 하고 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 복잡성은 선형 이며 정확히 ( `last`  -   `first`)에 필요한 생성기에 대 한 호출입니다.  
+ The complexity is linear, with exactly ( `last` -  `first`) calls to the generator being required.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_generate.cpp  
@@ -1958,7 +1975,7 @@ Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```  
   
 ##  <a name="generate_n"></a>  generate_n  
- 함수 개체에 의해 생성된 값을 범위 내 지정된 수의 요소에 할당하고 마지막에 할당된 값 하나 다음의 위치로 반환합니다.  
+ Assigns the values generated by a function object to a specified number of elements in a range and returns to the position one past the last assigned value.  
   
 ```  
 template<class OutputIterator, class Diff, class Generator>  
@@ -1968,24 +1985,24 @@ void generate_n(
     Generator Gen);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First`  
- 값이 할당된 범위 내 첫 번째 요소의 주소를 지정하는 출력 반복기입니다  
+ An output iterator addressing the position of first element in the range to which values are to be assigned.  
   
  `Count`  
- 생성기 함수를 통해 값이 할당되는 요소 수를 지정하는 부호가 있거나 없는 정수 형식입니다.  
+ A signed or unsigned integer type specifying the number of elements to be assigned a value by the generator function.  
   
  `Gen`  
- 인수 없이 호출되는 함수 개체로, 범위 내 각 요소에 할당되는 값을 생성하는 데 사용됩니다.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>설명  
- 이 함수 개체는 범위 내 각 요소에 대해 호출되고 호출될 때마다 동일한 값을 반환할 필요가 없습니다. 예를 들어 파일에서 읽거나 로컬 상태를 참조 및 수정할 수 있습니다. 생성기의 결과 형식은 범위의 정방향 반복기 값 형식으로 변환할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- 참조된 범위는 유효해야 하며, 모든 포인터는 역참조 가능해야 하고 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 복잡성은 필요한 생성기에 대해 정확하게 `Count`개 선형 호출입니다.  
+ The complexity is linear, with exactly `Count` calls to the generator being required.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2030,7 +2047,7 @@ int main()
 ```  
   
 ##  <a name="includes"></a>  includes  
- 요소 간 순서 지정 또는 동등성 기준을 이진 조건자로 지정할 수 있을 경우 하나의 정렬된 범위가 두 번째 정렬된 범위에 포함된 모든 요소를 포함할 수 있는지 여부를 테스트합니다.  
+ Tests whether one sorted range contains all the elements contained in a second sorted range, where the ordering or equivalence criterion between elements may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2049,39 +2066,39 @@ bool includes(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 두 번째의 모든 요소가 첫 번째에 포함되는지를 테스트할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last1`  
- 두 번째의 모든 요소가 첫 번째에 포함되는지를 테스트할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
   `first2`  
- 두 번째의 모든 요소가 첫 번째에 포함되는지를 테스트할 두 개의 정렬된 연속 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last2`  
- 두 번째의 모든 요소가 첫 번째에 포함되는지를 테스트할 두 개의 정렬된 연속 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 정렬된 범위가 두 번째 정렬된 범위의 모든 요소를 포함하는 경우 **true**, 아닌 경우 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first sorted range contains all the elements in the second sorted range; otherwise, **false**.  
   
-### <a name="remarks"></a>설명  
- 이 테스트에서 고려해 볼 또 다른 방법은 두 번째 소스 범위가 첫 번째 소스 범위의 하위 집합인지를 확인하는 것입니다.  
+### <a name="remarks"></a>Remarks  
+ Another way to think of this test is that it determined whether the second source range is a subset of the first source range.  
   
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- 정렬된 소스 범위는 각각 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the algorithm includes in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 소스 범위는 **merge**알고리즘에 의해 수정되지 않습니다  
+ The source ranges are not modified by the algorithm **merge**.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 좀 더 정확하게, 알고리즘은 지정된 이진 조건자에 따라 첫 번째 정렬된 범위의 모든 요소가 두 번째 정렬된 범위의 모든 요소와 동일한 순서인지를 테스트합니다.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. More precisely, the algorithm tests whether all the elements in the first sorted range under a specified binary predicate have equivalent ordering to those in the second sorted range.  
   
- 알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-(* last2-first2 *))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( * last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2231,7 +2248,7 @@ At least one of the elements in vector v3b is  not contained under mod_lesser in
 ```  
   
 ##  <a name="inplace_merge"></a>  inplace_merge  
- 두 연속 정렬 범위의 요소를 단일 정렬 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -2248,27 +2265,27 @@ void inplace_merge(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 단일 범위로 결합하고 정렬할 두 개의 정렬된 연속 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the first of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `middle`  
- 단일 범위로 결합하고 정렬할 두 개의 정렬된 연속 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `last`  
- 단일 범위로 결합하고 정렬할 두 개의 정렬된 연속 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position one past the last element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 연속 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted consecutive ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- 정렬된 연속 범위는 각각 `inplace_merge` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다. 각 범위 내 요소의 상대 순서가 유지되므로 작업이 안정적입니다. 두 소스 범위에 동일한 요소가 있는 경우, 결합된 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다.  
+ The sorted consecutive ranges must each be arranged as a precondition to the application of the `inplace_merge` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges. The operation is stable as the relative order of elements within each range is preserved. When there are equivalent elements in both source ranges, the element is the first range precedes the element from the second in the combined range.  
   
- 알고리즘은 임시 버퍼에 메모리를 할당하므로 복잡성은 사용 가능한 메모리에 따라 달라집니다. 최상의 경우는 선형 이며 충분 한 메모리를 사용할 수 있는 경우 (* 성-*)-1 비교; 최악의 경우에는 보조 메모리가 사용할 수 없을 경우 *N* 로그 *(N)*여기서 *N* = (* 성-*).  
+ The complexity depends on the available memory as the algorithm allocates memory to a temporary buffer. If sufficient memory is available, the best case is linear with ( * last - first*) - 1 comparisons; if no auxiliary memory is available, the worst case is  *N* log *(N)*, where  *N* = ( * last - first*).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2380,7 +2397,7 @@ Merged inplace with binary predicate mod_lesser specified,
 ```  
   
 ##  <a name="is_heap"></a>  is_heap  
- 지정된 범위의 요소가 힙을 구성할 경우 `true`를 반환합니다.  
+ Returns `true` if the elements in the specified range form a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2395,28 +2412,28 @@ bool is_heap(
     BinaryPredicate comp);   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 힙을 검사할 범위의 시작을 나타내는 임의 액세스 반복기입니다.  
+ A random access iterator that indicates the start of a range to check for a heap.  
   
  `last`  
- 범위의 끝을 나타내는 임의 액세스 반복기입니다.  
+ A random access iterator that indicates the end of a range.  
   
  `comp`  
- 요소 순서를 테스트 하는 조건입니다. 이진 조건자는 단일 인수를 사용 하 고 반환 `true` 또는 `false`합니다.  
+ A condition to test to order elements. A binary predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 범위의 요소가 힙을 구성하는 경우 `true`, 아닌 경우 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the elements in the specified range form a heap, `false` if they do not.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 함수는 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first``,` `last``) ==` `last`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.  
   
- 두 번째 템플릿 함수는  
+ The second template function returns  
   
- `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`를 반환합니다.  
+ `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
 ##  <a name="is_heap_until"></a>  is_heap_until  
- 힙 정렬 조건을 충족하지 않는 [ `begin`, `end`) 범위의 첫 번째 요소에 배치된 반복기를 반환하거나, 범위가 힙을 형성하는 경우에는 `end`를 반환합니다.  
+ Returns an iterator positioned at the first element in the range [ `begin`, `end`) that does not satisfy the heap ordering condition, or `end` if the range forms a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2431,26 +2448,26 @@ RandomAccessIterator is_heap_until(
     BinaryPredicate compare);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `begin`  
- 힙에 대해 확인할 범위의 첫 번째 요소를 지정하는 임의 액세스 반복기입니다.  
+ A random access iterator that specifies the first element of a range to check for a heap.  
   
  `end`  
- 힙에 대해 확인할 범위의 끝을 지정하는 임의 액세스 반복기입니다.  
+ A random access iterator that specifies the end of the range to check for a heap.  
   
  `compare`  
- 힙을 정의하는 엄격한/약한 정렬 조건을 지정하는 이진 조건자입니다. `compare`를 지정하지 않는 경우의 기본 조건자는 `std::less<>`입니다.  
+ A binary predicate that specifies the strict weak ordering condition that defines a heap. The default predicate when `compare` is not specified is `std::less<>`.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 범위가 힙을 형성하거나 요소를 하나 이하로 포함하는 경우 `end`를 반복합니다. 그렇지 않으면 첫 번째로 발견된 힙 조건을 충족하지 않는 요소에 대한 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `end` if the specified range forms a heap or contains one or fewer elements. Otherwise, returns an iterator for the first element found that does not satisfy the heap condition.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 함수는 `[``begin``,` `end``]`의 마지막 반복기 `next`를 반환합니다. 여기서 `[``begin``, next)`는 `std::less<>` 함수 개체로 정렬되는 힙입니다. 거리가 `end` `-` `begin` `< 2`인 경우, 함수는 `end`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[ begin , end ]` where `[ begin , next)` is a heap ordered by the function object `std::less<>`. If the distance `end - begin < 2`, the function returns `end`.  
   
- 두 번째 템플릿도 첫 번째 템플릿과 동일하게 동작하지만 힙 정렬 조건으로 `compare`가 아닌 `std::less<>` 조건자를 사용합니다.  
+ The second template function behaves the same as the first, except that it uses the predicate `compare` instead of `std::less<>` as the heap ordering condition.  
   
 ##  <a name="is_partitioned"></a>  is_partitioned  
- 지정된 범위에서 조건에 대해 `true`를 테스트하는 모든 요소가 `true`를 테스트하는 요소 앞에 있을 경우 `false`를 반환합니다.  
+ Returns `true` if all the elements in the given range that test `true` for a condition come before any elements that test `false`.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
@@ -2460,24 +2477,24 @@ bool is_partitioned(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 범위에서 조건 검사의 시작 위치를 나타내는 입력 반복기입니다.  
+ An input iterator that indicates where a range starts to check for a condition.  
   
  `last`  
- 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of a range.  
   
  `comp`  
- 테스트할 조건입니다. 검색 중인 요소가 충족할 조건을 정의하는 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 범위에서 조건에 대해 `true`를 테스트하는 모든 요소가 `false`를 테스트하는 요소 앞에 있는 경우 true, 아닌 경우 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns true when all of the elements in the given range that test `true` for a condition come before any elements that test `false`, and otherwise returns `false`.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 `[` `first``,` `last``)`의 모든 요소가 `comp`에 의해 분할된 경우에만 `true`를 반환합니다. 즉, `comp``(X)`가 참인 `[` `first``,` `last``)`의 모든 요소 `X`는 `comp``(Y)`가 `false`인 모든 요소 `Y` 전에 발생합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if all elements in `[` `first ,` `last )` are partitioned by `comp`; that is, all elements `X` in `[` `first ,` `last )` for which `comp (X)` is true occur before all elements `Y` for which `comp (Y)` is `false`.  
   
 ##  <a name="is_permutation"></a>  is_permutation  
- 요소의 순서가 동일한지 여부에 관계없이 두 범위에 동일한 요소가 포함되어 있으면 true를 반환합니다. 두 번째 범위에 단일 반복기만 사용하는 오버로드는 두 번째 범위가 첫 번째 범위보다 긴 경우 차이를 감지하지 못하고 두 번째 범위가 첫 번째 범위보다 짧은 경우 정의되지 않은 동작이 발생하므로 C++14 코드에서 이중 범위 오버로드를 사용합니다.  
+ Returns true if both ranges contain the same elements, whether or not the elements are in the same order. Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2510,34 +2527,34 @@ bool is_permutation(
     Predicate Pred);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 범위의 첫 번째 요소를 참조하는 정방향 반복기입니다.  
+ A forward iterator that refers to the first element of the range.  
   
  `Last1`  
- 범위의 마지막 요소를 지난 요소를 참조하는 정방향 반복기입니다.  
+ A forward iterator that refers one past the last element of the range.  
   
  `First2`  
- 비교에 사용되는, 두 번째 범위의 첫 번째 요소를 참조하는 정방향 반복기입니다.  
+ A forward iterator that refers to the first element of a second range, used for comparison.  
   
  `Last2`  
- 비교에 사용되는, 두 번째 범위의 마지막 요소를 지난 요소를 참조하는 정방향 반복기입니다.  
+ A forward iterator that refers to one past the last element of a second range, used for comparison.  
   
  `Pred`  
- 동등성을 테스트하고 `bool`을 반환하는 조건자입니다.  
+ A predicate that tests for equivalence and returns a `bool`.  
   
-### <a name="return-value"></a>반환 값  
- 비교 연산자 조건자에 따라 동일하게 범위를 다시 정렬할 수 있으면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` when the ranges can be rearranged so as to be identical according to the comparator predicate; otherwise, `false`.  
   
-### <a name="remarks"></a>설명  
- 최악의 경우 `is_permutation`은 정방형 복잡성을 갖습니다.  
+### <a name="remarks"></a>Remarks  
+ `is_permutation` has quadratic complexity in the worst case.  
   
- 첫 번째 템플릿 함수에서는 `First2`에서 시작하는 범위에 [ `First1`, `Last1`)로 지정된 범위만큼 많은 요소가 있다고 가정합니다. 두 번째 범위에 더 많은 요소가 있는 경우 무시되고, 더 적은 요소가 있는 경우 정의되지 않은 동작이 발생합니다. 세 째 템플릿 함수(C++14 이상)에서는 이러한 가정을 하지 않습니다.  [ `First1`, `Last1`)로 지정된 범위의 각 요소 X에 대해 `First2` 또는 [ `First2, Last2).`에서 시작하는 범위에 있는 것만큼 많은 Y 요소가 X == Y인 동일한 범위에 있는 경우에만 둘 다 `true`를 반환합니다. 여기에서 `operator==`는 해당 피연산자 간에 pairwise 비교를 수행해야 합니다.  
+ The first template function assumes that there are as many elements in the range beginning at `First2` as there are in the range designated by [ `First1`, `Last1`). If there are more elements in the second range, they are ignored; if there are less, undefined behavior will occur. The third template function (C++14 and later) does not make this assumption.  Both return `true` only if, for each element X in the range designated by [ `First1`, `Last1`) there are as many elements Y in the same range for which X == Y as there are in the range beginning at `First2` or [ `First2, Last2).` Here, `operator==` must perform a pairwise comparison between its operands.  
   
- 두 번째 및 네 번째 템플릿 함수는 `operator==(X, Y)`를 `Pred(X, Y)`로 대체한다는 점을 제외하고 동일하게 동작합니다. 올바르게 동작하려면 조건자가 대칭, 재귀 및 전이여야 합니다.  
+ The second and fourth template functions behave the same, except that they replace `operator==(X, Y)` with `Pred(X, Y)`. To behave correctly, the predicate must be symmetric, reflexive and transitive.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 `is_permutation`을 사용하는 방법을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example shows how to use `is_permutation`:  
   
 ```cpp  
 #include <vector>  
@@ -2593,7 +2610,7 @@ int main()
 ```  
   
 ##  <a name="is_sorted"></a>  is_sorted  
- 지정된 범위의 요소가 정렬된 순서로 되어 있을 경우 `true`를 반환합니다.  
+ Returns `true` if the elements in the specified range are in sorted order.  
   
 ```  
 template<class ForwardIterator>  
@@ -2608,25 +2625,25 @@ bool is_sorted(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 검사할 범위가 시작되는 위치를 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates where the range to check begins.  
   
  `last`  
- 범위의 끝을 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 두 요소 사이의 순서를 결정하기 위해 테스트할 조건입니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다. `operator<`와 동일한 작업을 수행합니다.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`. This performs the same task as `operator<`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 함수는 [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`를 반환합니다. operator< 함수는 순서 비교를 수행합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. The `operator<` function performs the order comparison.  
   
- 두 번째 템플릿 함수는 `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`를 반환합니다. `comp` 조건자 함수는 순서 비교를 수행합니다.  
+ The second template function returns `is_sorted_until( first, last , comp ) == last`. The `comp` predicate function performs the order comparison.  
   
 ##  <a name="is_sorted_until"></a>  is_sorted_until  
- 지정된 범위에서 정렬된 순서에 있는 마지막 요소로 설정된 `ForwardIterator`를 반환합니다.  
+ Returns a `ForwardIterator` that is set to the last element that is in sorted order from a specified range.  
   
- 두 번째 버전에서는 지정된 두 요소가 정렬된 순서대로 있는 경우 `true`를 반환하고 아닌 경우 `false`를 반환하는 `BinaryPredicate` 함수를 제공할 수 있습니다.  
+ The second version lets you provide a `BinaryPredicate` function that returns `true` when two given elements are in sorted order, and `false` otherwise.  
   
 ```  
 template<class ForwardIterator>  
@@ -2642,26 +2659,26 @@ template<class ForwardIterator, class BinaryPredicate>
     );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 검사할 범위가 시작되는 위치를 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates where the range to check starts.  
   
  `last`  
- 범위의 끝을 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 두 요소 사이의 순서를 결정하기 위해 테스트할 조건입니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 정렬된 순서에서 마지막 요소에 대해 설정된 `ForwardIterator`를 반환합니다. 정렬된 시퀀스는 `first`부터 시작합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` set to the last element in sorted order. The sorted sequence starts from  `first`.  
   
-### <a name="remarks"></a>설명  
- `[` `first``, next)`가 `operator<`에 의해 정렬된 시퀀스가 되도록 첫 번째 템플릿 함수는 `[` `first``,` `last``]`에서 마지막 반복기 `next`를 반환합니다. `distance()` `< 2`인 경우 함수는 `last`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[` `first ,` `last ]` so that `[` `first , next)` is a sorted sequence ordered by `operator<`. If `distance()` `< 2` the function returns `last`.  
   
- `operator<(X, Y)`를 `comp``(X, Y)`로 바꾸는 것을 제외하면 두 번째 템플릿 함수도 동일하게 동작합니다.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
 ##  <a name="iter_swap"></a>  iter_swap  
- 지정된 반복기의 쌍이 참조하는 두 값을 교환합니다.  
+ Exchanges two values referred to by a pair of specified iterators.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2669,19 +2686,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 값을 교환할 정방향 반복기 중 하나입니다.  
+ One of the forward iterators whose value is to be exchanged.  
   
  `right`  
- 값을 교환할 정방향 반복기 중 두 번째입니다.  
+ The second of the forward iterators whose value is to be exchanged.  
   
-### <a name="remarks"></a>설명  
- 이전 버전과의 호환성을 위해 C++ 표준에 포함된 **iter_swap**보다 `swap`을 먼저 사용해야 합니다. `Fit1` 및 `Fit2`가 정방향 반복기이면 `iter_swap` ( `Fit1`, `Fit2` )는 `swap` ( * `Fit1`, \* `Fit2` )와 같습니다.  
+### <a name="remarks"></a>Remarks  
+ `swap` should be used in preference to i **ter_swap**, which was included in the C++ Standard for backward compatibility. If `Fit1` and `Fit2` are forward iterators, then `iter_swap` ( `Fit1`, `Fit2` ), is equivalent to `swap` ( * `Fit1`, \* `Fit2` ).  
   
- 입력 정방향 반복기의 값 형식은 동일한 값을 가져야 합니다.  
+ The value types of the input forward iterators must have the same value.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2815,7 +2832,7 @@ After exchanging first elements,
 ```  
   
 ##  <a name="lexicographical_compare"></a>  lexicographical_compare  
- 두 시퀀스를 요소별로 비교하여 둘 중 작은 것을 결정합니다.  
+ Compares element by element between two sequences to determine which is lesser of the two.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2835,35 +2852,35 @@ bool lexicographical_compare(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 비교할 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first range to be compared.  
   
  `last1`  
- 비교할 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the first range to be compared.  
   
   `first2`  
- 비교할 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the second range to be compared.  
   
  `last2`  
- 비교할 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the second range to be compared.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 범위가 두 번째 범위보다 사전 순으로 작은 경우 **true**, 아닌 경우 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first range is lexicographically less than the second range; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 시퀀스 간 사전순 비교는 다음 조건이 충족될 때까지 요소를 비교합니다.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between sequences compares them element by element until:  
   
--   두 개의 해당 요소가 같지 않음을 발견하고, 비교의 결과를 시퀀스 간 비교의 결과로서 가져올 때까지  
+-   It finds two corresponding elements unequal, and the result of their comparison is taken as the result of the comparison between sequences.  
   
--   부등식이 발견되지는 않지만 한 시퀀스가 다른 시퀀스보다 많은 요소를 가지고 있어, 더 짧은 시퀀스가 더 긴 시퀀스보다 작은 것으로 간주될 때까지  
+-   No inequalities are found, but one sequence has more elements than the other, and the shorter sequence is considered less than the longer sequence.  
   
--   부등식이 발견되지 않고 시퀀스가 동일한 수의 요소를 가지고 있어서, 시퀀스가 같으며 비교 결과가 false가 될 때까지  
+-   No inequalities are found and the sequences have the same number of elements, and so the sequences are equal and the result of the comparison is false.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -2959,7 +2976,7 @@ Vector v1 is not lexicographically_less than v2 under twice.
 ```  
   
 ##  <a name="lower_bound"></a>  lower_bound  
- 정렬된 범위에서 지정된 값보다 크거나 같은 값을 갖는 첫 번째 요소의 위치를 찾습니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Finds the position of the first element in an ordered range that has a value greater than or equivalent to a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator, class Type>  
@@ -2977,34 +2994,34 @@ ForwardIterator lower_bound(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- 정렬된 범위에서 첫 번째 위치 또는 가능한 첫 번째 위치가 검색되는 값입니다.  
+ The value whose first position or possible first position is being searched for in the ordered range.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값보다 크거나 같은 값이 있는 정렬된 범위의 첫 번째 요소 위치에 있는 정방향 반복기입니다. 여기서 같음은 이진 조건자로 지정됩니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator at the position of the first element in an ordered range with a value that is greater than or equivalent to a specified value, where the equivalence is specified with a binary predicate.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- 정렬된 범위는 `lower_bound` 사용의 사전 조건이며 순서는 이진 조건자로 지정된 것과 같습니다.  
+ A sorted range is a precondition of using `lower_bound` and where the ordering is the same as specified by with binary predicate.  
   
- 범위는 `lower_bound` 알고리즘에 의해 수정되지 않습니다.  
+ The range is not modified by the algorithm `lower_bound`.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 비등가 요소 사이에 정렬이 수행됩니다.  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 알고리즘의 복잡성은 임의 액세스 반복자에 대해서는 로그이고, 다른 경우에는 ( `last - first`)에 비례하는 단계 수와 함께 선형입니다.  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3096,7 +3113,7 @@ int main( )
 ```  
   
 ##  <a name="make_heap"></a>  make_heap  
- 지정한 범위의 요소를 첫 번째 요소가 가장 큰 힙으로 변환합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Converts elements from a specified range into a heap in which the first element is the largest and for which a sorting criterion may be specified with a binary predicate.  
   
 ```  
  template<class RandomAccessIterator>  
@@ -3112,28 +3129,28 @@ void make_heap(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 힙으로 변환할 범위에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the range to be converted into a heap.  
   
  `last`  
- 힙으로 변환할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 힙에는 두 가지 속성이 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   첫 번째 요소는 항상 가장 큽니다.  
+-   The first element is always the largest.  
   
--   로그 시간에서 요소를 추가하거나 제거할 수 있습니다.  
+-   Elements may be added or removed in logarithmic time.  
   
- 힙은 우선 순위 큐를 구현하는 이상적인 방법이며 C++ 표준 라이브러리 컨테이너 어댑터 [priority_queue 클래스](../standard-library/priority-queue-class.md)의 구현에 사용됩니다.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 복잡성은 선형 3 요구 \* (* 성-*) 비교 합니다.  
+ The complexity is linear, requiring 3 \* ( * last - first*) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3176,7 +3193,7 @@ int main() {
 ```  
   
 ##  <a name="max"></a>  max  
- 두 개체를 비교하고 둘 중 큰 개체를 반환합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3201,26 +3218,26 @@ template<class Type, class Pr>
     );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교되는 두 개체 중 첫 번째입니다.  
+ The first of the two objects being compared.  
   
  `right`  
- 비교되는 두 개체 중 두 번째입니다.  
+ The second of the two objects being compared.  
   
  `comp`  
- 두 개체를 비교하는 데 사용되는 이진 조건자입니다.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 비교할 개체가 포함된 이니셜라이저 목록입니다.  
+ The initializer list that contains the objects to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 둘 중 더 큰 개체입니다. 더 큰 개체가 없는 경우 두 개체 중 첫 번째 개체가 반환됩니다. initializer_list의 경우 목록의 개체 중 가장 큰 개체가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ The greater of the two objects, unless neither is greater; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the greatest of the objects in the list.  
   
-### <a name="remarks"></a>설명  
- `max` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위에서 작동하는 함수가 필요한 경우 [max_element](../standard-library/algorithm-functions.md#max_element)를 대신 사용합니다.  
+### <a name="remarks"></a>Remarks  
+ The `max` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that operates on a range of elements, use [max_element](../standard-library/algorithm-functions.md#max_element) instead.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max.cpp  
@@ -3389,7 +3406,7 @@ Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```  
   
 ##  <a name="max_element"></a>  max_element  
- 지정된 범위에서 가장 큰 첫 번째 요소를 찾습니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Finds the first occurrence of largest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator>  
@@ -3400,25 +3417,25 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 최대 요소를 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched for the largest element.  
   
  `last`  
- 최대 요소를 검색할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the largest element.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 검색할 범위에서 최대 요소의 첫 번째 발생 위치의 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the largest element in the range searched.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 선형: ( `last`  -   `first`)-1 비교는 비어 있지 않은 범위에 대 한 필요 합니다.  
+ The complexity is linear: ( `last` -  `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3519,7 +3536,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  merge  
- 정렬된 두 소스 범위의 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Combines all of the elements from two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -3541,44 +3558,44 @@ OutputIterator merge(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 단일 범위로 결합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
  `last1`  
- 단일 범위로 결합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
   `first2`  
- 단일 범위로 결합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `last2`  
- 단일 범위로 결합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `result`  
- 두 개의 소스 범위가 정렬된 단일 범위로 결합되는 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be combined into a single sorted range.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 대상 범위는 소스 범위 중 하나와 겹쳐서는 안 되며, 대상 범위를 포함할 수 있을 정도로 커야 합니다.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 정렬된 소스 범위는 각각 **merge** 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 **merge**알고리즘에 의해 수정되지 않습니다  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range.  
   
- 알고리즘의 복잡성은 선형 이며 최대 (* last1-first1*)-(* last2-first2*)-1 비교 합니다.  
+ The complexity of the algorithm is linear with at most ( * last1 - first1*) - ( * last2 - first2*) - 1 comparisons.  
   
- [list class](../standard-library/list-class.md) 클래스는 두 목록의 요소를 병합하는 멤버 함수 "병합"을 제공합니다.  
+ The [list class](../standard-library/list-class.md) provides a member function "merge" to merge the elements of two lists.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3689,7 +3706,7 @@ int main() {
 ```  
   
 ##  <a name="min"></a>  min  
- 두 개체를 비교하고 둘 중 작은 개체를 반환합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Compares two objects and returns the lesser of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3713,26 +3730,26 @@ template<class Type, class Pr>    Type min (
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교되는 두 개체 중 첫 번째입니다.  
+ The first of the two objects being compared.  
   
  `right`  
- 비교되는 두 개체 중 두 번째입니다.  
+ The second of the two objects being compared.  
   
  `comp`  
- 두 개체를 비교하는 데 사용되는 이진 조건자입니다.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 비교할 멤버가 포함된 initializer_list입니다.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 둘 중 더 작은 개체입니다. 더 작은 개체가 없는 경우 두 개체 중 첫 번째 개체가 반환됩니다. initializer_list의 경우 목록의 개체 중 가장 작은 개체가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ The lesser of the two objects, unless neither is lesser; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the least of the objects in the list.  
   
-### <a name="remarks"></a>설명  
- `min` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위를 사용하는 함수가 필요한 경우 [min_element](../standard-library/algorithm-functions.md#min_element)를 사용합니다.  
+### <a name="remarks"></a>Remarks  
+ The `min` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that uses a range of elements, use [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min.cpp  
@@ -3900,7 +3917,7 @@ Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```  
   
 ##  <a name="min_element"></a>  min_element  
- 지정된 범위에서 가장 작은 첫 번째 요소를 찾습니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Finds the first occurrence of smallest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator>  
@@ -3911,25 +3928,25 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 최소 요소를 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched for the smallest element.  
   
  `last`  
- 최소 요소를 검색할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the smallest element.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 검색할 범위에서 최소 요소의 첫 번째 발생 위치의 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the smallest element in the range searched.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 선형: ( `last`  -  `first`)-1 비교는 비어 있지 않은 범위에 대 한 필요 합니다.  
+ The complexity is linear: ( `last` - `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4040,7 +4057,7 @@ The smallest element in v1 under the mod_lesser
 ```  
   
 ##  <a name="minmax_element"></a>  minmax_element  
- 한 번의 호출로 `min_element` 및 `max_element`에 의해 수행된 작업을 수행합니다.  
+ Performs the work performed by `min_element` and `max_element` in one call.  
   
 ```  
 template<class ForwardIterator>  
@@ -4058,36 +4075,36 @@ template<class ForwardIterator, class BinaryPredicate>
                 );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 범위의 시작을 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates the beginning of a range.  
   
  `last`  
- 범위의 끝을 나타내는 정방향 반복기입니다.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 요소의 순서 지정에 사용되는 선택적인 테스트입니다.  
+ An optional test used to order elements.  
   
-### <a name="return-value"></a>반환 값  
- 반환 값  
+### <a name="return-value"></a>Return Value  
+ Returns  
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)(  `first`, `last`), [max_element](../standard-library/algorithm-functions.md#max_element)(  `first`, `last`)).  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 함수는 다음을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last),max_element(_First,Last))`.  
+ `(min_element(_First,Last), max_element(_First,Last))`.  
   
- `operator<(X, Y)`를 `comp``(X, Y)`로 바꾸는 것을 제외하면 두 번째 템플릿 함수도 동일하게 동작합니다.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
- 시퀀스가 비어 있지 않은 경우 함수는 최대 `3 * (``last` `-` `first` `- 1) / 2`개의 비교를 수행합니다.  
+ If the sequence is non-empty, the function performs at most `3 * (last - first - 1) / 2` comparisons.  
   
 ##  <a name="minmax"></a>  minmax  
- 두 개의 입력된 매개 변수를 비교하여 작은 수에서 큰 수의 순서로 구성된 한 쌍을 반환합니다.  
+ Compares two input parameters and returns them as a pair, in order of lesser to greater.  
   
 ```  
 template<class Type>  
@@ -4114,32 +4131,32 @@ template<class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교되는 두 개체 중 첫 번째입니다.  
+ The first of the two objects being compared.  
   
  `right`  
- 비교되는 두 개체 중 두 번째입니다.  
+ The second of the two objects being compared.  
   
  `comp`  
- 두 개체를 비교하는 데 사용되는 이진 조건자입니다.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 비교할 멤버가 포함된 initializer_list입니다.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="remarks"></a>설명  
- `right`가 `left`보다 작은 경우 첫 번째 템플릿 함수는 `pair<const Type&, const Type&>(``right``,` `left``)`를 반환합니다. 아닌 경우 `pair<const Type&, const Type&>(``left``,` `right``)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns `pair<const Type&, const Type&>( right , left )` if `right` is less than `left`. Otherwise, it returns `pair<const Type&, const Type&>( left , right )`.  
   
- 두 번째 멤버 함수는 `comp` 조건자와 비교할 때 첫 번째 요소가 더 작고 두 번째 요소가 더 큰 쌍을 반환합니다.  
+ The second member function returns a pair where the first element is the lesser and the second is the greater when compared by the predicate `comp`.  
   
- 나머지 템플릿 함수는 `left` 및 `right` 매개 변수를 `_IList`로 바꾸는 것을 제외하고 동일하게 동작합니다.  
+ The remaining template functions behave the same, except that they replace the `left` and `right` parameters with `_IList`.  
   
- 함수는 정확히 하나의 비교를 수행합니다.  
+ The function performs exactly one comparison.  
   
 ##  <a name="mismatch"></a>  mismatch  
- 두 범위를 요소별로 비교하고 차이가 발생한 첫 번째 위치를 찾습니다.  
+ Compares two ranges element by element and locates the first position where a difference occurs.  
   
- 두 번째 범위에 단일 반복기만 사용하는 오버로드는 두 번째 범위가 첫 번째 범위보다 긴 경우 차이를 감지하지 못하고 두 번째 범위가 첫 번째 범위보다 짧은 경우 정의되지 않은 동작이 발생하므로 C++14 코드에서 이중 범위 오버로드를 사용합니다.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4172,36 +4189,36 @@ mismatch(
      BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 테스트할 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- 테스트할 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- 테스트할 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `Last2`  
- 테스트할 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- 각 범위에 있는 현재 요소를 비교하고 동일한지 여부를 확인하는 사용자 정의 조건자 함수 개체입니다. 조건이 충족되면 **true**를 반환하고, 충족되지 않으면 **false**를 반환합니다.  
+ User-defined predicate function object that compares the current elements in each range and determines whether they are equivalent. It returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 두 범위에서 불일치의 위치 주소를 지정하는 반복기 쌍입니다(첫 번째 범위의 위치에 대한 첫 번째 구성 요소 반복기 및 두 번째 범위의 위치에 대한 두 번째 구성 요소 반복기). 비교된 범위의 요소 간에 차이점이 있거나 두 범위의 모든 요소 쌍이 두 번째 버전의 이진 조건자를 충족하면 첫 번째 구성 요소 반복기는 첫 번째 범위에 있는 마지막 요소 하나 다음의 위치를 가리키고 두 번째 구성 요소 반복기는 두 번째 범위에서 테스트된 마지막 요소 하나 다음의 위치를 가리킵니다.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators addressing the positions of the mismatch in the two ranges, the first component iterator to the position in the first range and the second component iterator to the position in the second range. If there is no difference between the elements in the ranges compared or if the binary predicate in the second version is satisfied by all element pairs from the two ranges, then the first component iterator points to the position one past the final element in the first range and the second component iterator to position one past the final element tested in the second range.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 함수에서는 first2에서 시작하는 범위에 [first1, last1)로 지정된 범위만큼 많은 요소가 있다고 가정합니다. 두 번째 범위에 더 많은 요소가 있는 경우 무시되고, 더 적은 요소가 있는 경우 정의되지 않은 동작이 발생합니다.  
+### <a name="remarks"></a>Remarks  
+ The first template function assumes that there are as many elements in the range beginning at first2 as there are in the range designated by [first1, last1). If there are more in the second range, they are ignored; if there are less then undefined behavior will result.  
   
- 검색할 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- 알고리즘의 시간 복잡도는 더 짧은 범위에 포함된 요소 수에 비례합니다.  
+ The time complexity of the algorithm is linear in the number of elements contained in the shorter range.  
   
- 피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 사용자 정의 조건자가 필요하지 않습니다.  
+ The user-defined predicate is not required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 불일치 사용 방법을 보여 줍니다. C++03 오버로드는 예기치 않은 결과를 생성하는 방법을 보여 주는 목적으로만 표시됩니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates how to use mismatch. The C++03 overload is shown only in order to demonstrate how it can produce an unexpected result.  
   
 ```cpp  
 #include <vector>  
@@ -4297,7 +4314,7 @@ Press a key
 ```  
   
 ##  <a name="alg_move"></a>  &lt;alg&gt; move  
- 지정된 범위와 연결된 요소를 이동합니다.  
+ Move elements associated with a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -4308,21 +4325,21 @@ template<class InputIterator, class OutputIterator>
                   );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 이동할 요소 범위의 시작 위치를 나타내는 입력 반복기입니다.  
+ An input iterator that indicates where to start the range of elements to move.  
   
  `last`  
- 이동할 요소 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of a range of elements to move.  
   
  `dest`  
- 이동된 요소를 포함하는 출력 반복기입니다.  
+ The output iterator that is to contain the moved elements.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수 계산 `*(dest + N) = move(*(first + N))` 마다 한 번씩 `N` 범위에 `[0, last - first)`를 엄격 하 게 증가의 값에 대 한 `N` 가장 낮은 값으로 시작 합니다. 그런 다음 `dest + N`를 반환합니다. 경우 `dest` 및 `first` 저장소, 영역을 지정 `dest` 범위 밖에 있어야 `[first, last)`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = move(*(first + N))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
- 한 반복기의 요소를 다른 반복기로 이동합니다. 이동은 지정된 범위의 마지막 요소에서 시작하고 해당 범위의 첫 번째 요소에서 끝납니다.  
+ Moves the elements of one iterator to another. The move starts with the last element in a specified range, and ends with the first element in that range.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -4333,23 +4350,23 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소를 이동할 범위의 시작을 나타내는 반복기입니다.  
+ An iterator that indicates the start of a range to move elements from.  
   
  `last`  
- 요소를 이동할 범위의 끝을 나타내는 반복기입니다. 이 요소를 이동하지 않습니다.  
+ An iterator that indicates the end of a range to move elements from. This element is not moved.  
   
  `destEnd`  
- 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수 계산 `*(destEnd - N - 1) = move(*(last - N - 1))` 마다 한 번씩 `N` 범위에 `[0, last - first)`를 엄격 하 게 증가의 값에 대 한 `N` 가장 낮은 값으로 시작 합니다. 그런 다음 `destEnd - (last - first)`를 반환합니다. 경우 `destEnd` 및 `first` 저장소, 영역을 지정 `destEnd` 범위 밖에 있어야 `[first, last)`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(destEnd - N - 1) = move(*(last - N - 1))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `destEnd - (last - first)`. If `destEnd` and  `first` designate regions of storage, `destEnd` must not be in the range `[first, last)`.  
   
- `move` 및 `move_backward`는 이동 반복기와 함께 `copy` 및 `copy_backward`를 사용하는 것과 기능적으로 등가입니다.  
+ `move` and `move_backward` are functionally equivalent to using `copy` and `copy_backward` with a move iterator.  
   
 ##  <a name="next_permutation"></a>  next_permutation  
- 원래 순서 지정을 사전순에 따라 다음으로 큰 순열(있는 경우)로 대체할 수 있도록 범위의 요소 순서를 재정렬합니다. 여기서 다음의 의미는 이진 조건자로 지정할 수 있습니다.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically next greater permutation if it exists, where the sense of next may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -4360,27 +4377,27 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 순열할 범위의 첫 번째 요소 위치의 주소를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- 순열할 범위의 마지막 요소 하나 다음 위치의 주소를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 사전식으로 다음 순열이 존재하여 범위의 원래 순서를 교체한 경우 **true**, 아닌 경우 **false**입니다. 이 경우 순서 지정은 사전식으로 가장 작은 순열로 변환됩니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lexicographically next permutation exists and has replaced the original ordering of the range; otherwise **false**, in which case the ordering is transformed into the lexicographically smallest permutation.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 기본 이진 조건자는 less than이며, 범위의 요소는 다음 순열이 잘 정의되도록 less-than comparable이어야 합니다.  
+ The default binary predicate is less than and the elements in the range must be less than comparable to insure that the next permutation is well defined.  
   
- 복잡성은 선형 이며 최대 (* 성-*) / 2 바꿉니다.  
+ The complexity is linear with at most ( * last - first*)/2 swaps.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4520,7 +4537,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- 요소 범위를 분할하여 범위에서 시퀀스의 n번째 요소 앞의 모든 요소가 n번째 요소보다 작거나 같고 그 다음의 요소는 크거나 같도록 *n*번째 요소를 정확하게 찾습니다.  
+ Partitions a range of elements, correctly locating the                 *n*th element of the sequence in the range so that all the elements in front of it are less than or equal to it and all the elements that follow it in the sequence are greater than or equal to it.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4531,29 +4548,29 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 파티셔닝할 범위에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the range to be partitioned.  
   
  *_Nth*  
- 파티션 경계에서 올바른 정렬을 위해 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of element to be correctly ordered on the boundary of the partition.  
   
  `last`  
- 파티셔닝할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- `nth_element` 알고리즘은 *n*번째 요소의 어느 한쪽 하위 범위에 있는 요소가 정렬되는 것을 보증하지 않습니다. 따라서 선택된 요소 아래의 범위에 있는 요소를 정렬하는 `partial_sort`보다 보증이 줄어들고, 더 낮은 범위의 순서가 필요하지 않은 경우 `partial_sort`에 대한 더 빠른 대안으로 사용될 수 있습니다.  
+ The `nth_element` algorithm does not guarantee that elements in the sub-ranges either side of the  *n*th element are sorted. It thus makes fewer guarantees than `partial_sort`, which orders the elements in the range below some chosen element, and may be used as a faster alternative to `partial_sort` when the ordering of the lower range is not required.  
   
- 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other.  
   
- 정렬 복잡성의 평균을 기준으로 선형 * 성-* 합니다.  
+ The average of a sort complexity is linear with respect to  * last - first*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4620,31 +4637,31 @@ int main() {
 ```  
   
 ##  <a name="none_of"></a>  none_of  
- 지정한 범위에서 요소 사이에 조건이 절대 없을 경우 `true`를 반환합니다.  
+ Returns `true` when a condition is never present among elements in the given range.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건에 대한 요소 범위 확인의 시작 위치를 나타내는 입력 반복기입니다.  
+ An input iterator that indicates where to start to check a range of elements for a condition.  
   
  `last`  
- 요소 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of a range of elements.  
   
  `comp`  
- 테스트할 조건입니다. 이 조건은 조건을 정의하는 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 표시된 범위에서 조건이 한 번도 검색되지 않으면 `true`, 조건이 검색되면 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is not detected at least once in the indicated range, and `false` if the condition is detected.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수를 반환 `true` 일부에 대 한 경우에만 `N` 범위의 `[0, last - first)`, 조건자 `comp(*(first + N))` 항상 `false`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range `[0, last - first)`, the predicate `comp(*(first + N))` is always `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
- 범위에 있는 지정된 수의 더 작은 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬합니다.  
+ Arranges a specified number of the smaller elements in a range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4662,27 +4679,27 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 저장할 범위의 첫 번째 요소 위치를 주소 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `sortEnd`  
- 정렬할 하위 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the subrange to be sorted.  
   
  `last`  
- 부분적으로 정렬할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the range to be partially sorted.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. **sort** 알고리즘은 안정적이지 않으며 등가 요소의 상대적인 순서가 유지될 것임을 보증하지 않습니다. `stable_sort` 알고리즘은 원래의 순서를 유지합니다.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- 평균 부분 정렬 복잡성은 *O*(( `last`- `first`) log ( `sortEnd`- `first`))입니다.  
+ The average partial sort complexity is  *O*(( `last`- `first`) log ( `sortEnd`- `first`)).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4756,7 +4773,7 @@ Partially resorted (UDgreater) vector:
 ```  
   
 ##  <a name="partial_sort_copy"></a>  partial_sort_copy  
- 소스 범위의 요소를 대상 범위로 복사합니다. 여기서 소스 요소는 지정된 다른 이진 조건자보다 작거나 지정된 다른 이진 조건자로 정렬됩니다.  
+ Copies elements from a source range into a destination range where the source elements are ordered by either less than or another specified binary predicate.  
   
 ```  
  template<class InputIterator, class RandomAccessIterator>  
@@ -4776,31 +4793,31 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 원본 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last1`  
- 소스 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the source range.  
   
   `first2`  
- 정렬된 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the sorted destination range.  
   
  `last2`  
- 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the sorted destination range.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하여 조건이 충족되면 `true`를 반환하고, 충족되지 않으면 `false`를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 소스 범위에서 삽입한 마지막 요소를 넘어 대상 범위에서 하나 다음 위치 요소의 주소를 지정하는 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator addressing the element in the destination range one position beyond the last element inserted from the source range.  
   
-### <a name="remarks"></a>설명  
- 소스 및 대상 범위는 겹치지 않아야 하며 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며, 각 시퀀스 내 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges must not overlap and must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 등가가 아닌 요소는 정렬되고 등가인 요소는 정렬되지 않도록 엄밀히 약한 정렬을 제공해야 합니다. 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 보다 작음 조건에서 등가이지만, 반드시 같음은 아닙니다.  
+ The binary predicate must provide a strict weak ordering so that elements that are not equivalent are ordered, but elements that are equivalent are not. Two elements are equivalent under less than, but not necessarily equal, if neither is less than the other.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4877,7 +4894,7 @@ int main() {
 ```  
   
 ##  <a name="partition"></a>  partition  
- 범위의 요소를 두 개의 연결되지 않은 집합으로 분류하고, 단항 조건자를 만족하는 요소는 만족하지 않는 요소보다 앞에 오도록 합니다.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -4888,27 +4905,27 @@ template<class BidirectionalIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 파티셔닝할 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- 파티셔닝할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- 요소를 분류해야 할 경우 충족해야 할 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 조건자는 단일 인수를 받아서 **true** 또는 **false**를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes a single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>반환 값  
- 조건자 조건을 충족하지 못하는 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- *Pr* ( *a*,  *b*)가 false이고 *Pr* ( *b*,  *a*)도 false인 경우 *a*와 *b* 요소는 등가이지만 반드시 같음은 아닙니다. 여기서 *Pr*은 매개 변수로 지정된 조건자입니다. **partition** 알고리즘은 안정적이지 않으며 등가 요소의 상대적인 순서가 유지될 것임을 보증하지 않습니다. **stable_ partition** 알고리즘은 원래의 순서를 유지합니다.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **partition** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm **stable_ partition** does preserve this original ordering.  
   
- 복잡성은 선형:는 ( `last`  -   `first`)의 응용 프로그램 `comp` 자에서 ( `last`  -   `first`) / 2 바꿉니다.  
+ The complexity is linear: there are ( `last` -  `first`) applications of `comp` and at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partition.cpp  
@@ -4948,7 +4965,7 @@ int main( ) {
 ```  
   
 ##  <a name="partition_copy"></a>  partition_copy  
- 조건이 `true`인 요소를 한 대상으로 복사하고, 조건이 `false`인 요소를 다른 대상으로 복사합니다. 지정된 범위의 요소여야 합니다.  
+ Copies elements for which a condition is `true` to one destination, and for which the condition is `false` to another. The elements must come from a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>  
@@ -4962,27 +4979,27 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
         );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건을 검사할 범위의 시작을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the beginning of a range to check for a condition.  
   
  `last`  
- 범위의 끝을 나타내는 입력 반복기입니다.  
+ An input iterator that indicates the end of a range.  
   
  `dest1`  
- `_Pred`를 사용하여 테스트한 조건에 대해 true를 반환하는 요소를 복사하는 데 사용되는 출력 반복기입니다.  
+ An output iterator used to copy elements that return true for a condition tested by using `_Pred`.  
   
  `dest2`  
- `_Pred`를 사용하여 테스트한 조건에 대해 false를 반환하는 요소를 복사하는 데 사용되는 출력 반복기입니다.  
+ An output iterator used to copy elements that return false for a condition tested by using `_Pred`.  
   
  `_Pred`  
- 테스트할 조건입니다. 이 조건은 테스트할 조건을 정의하는 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="remarks"></a>설명  
- 각 요소를 복사 하는 템플릿 함수 `X` 에 `[first,last)` 를 `*dest1++` 경우 `_Pred(X)` 가 true 이면 또는 `*dest2++` 그렇지 않은 경우. `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function copies each element `X` in `[first,last)` to `*dest1++` if `_Pred(X)` is true, or to `*dest2++` if not. It returns `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
- 지정된 범위에서 조건을 충족하지 않는 첫 번째 요소를 반환합니다. 조건을 충족하는 요소가 앞에, 그렇지 않는 요소는 뒤에 정렬됩니다.  
+ Returns the first element in the given range that does not satisfy the condition. The elements are sorted so that those that satisfy the condition come before those that do not.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -4993,24 +5010,24 @@ template<class ForwardIterator, class Predicate>
     );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 조건을 검사할 범위의 시작을 나타내는 입력 `ForwardIterator`입니다.  
+ A `ForwardIterator` that indicates the start of a range to check for a condition.  
   
  `last`  
- 범위의 끝을 나타내는 `ForwardIterator`입니다.  
+ A `ForwardIterator` that indicates the end of a range.  
   
  `comp`  
- 테스트할 조건입니다. 검색 중인 요소가 충족할 조건을 정의하는 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 조건자는 단일 인수를 받아서 `true` 또는 `false`를 반환합니다.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- `comp`에 의해 테스트된 조건을 충족하지 않는 첫 번째 요소를 참조하는 `ForwardIterator`를 반환합니다. 요소가 발견되지 않으면 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` that refers to the first element that does not fulfill the condition tested for by `comp`, or returns `last` if one is not found.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 첫 번째 반복기 찾습니다 `it` 에 `[first, last)` 를 `comp(*it)` 은 `false`합니다. 시퀀스는 `comp`로 정렬해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function finds the first iterator `it` in `[first, last)` for which `comp(*it)` is `false`. The sequence must be ordered by `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
- 힙 맨 앞부터 범위의 끝에서 두 번째 위치 중에서 가장 큰 요소를 제거한 다음 나머지 요소로 새 힙을 구성합니다.  
+ Removes the largest element from the front of a heap to the next-to-last position in the range and then forms a new heap from the remaining elements.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5021,34 +5038,34 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 힙에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- 힙의 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the heap.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- `pop_heap` 알고리즘은 push_heap 알고리즘에 의해 수행되는 연산의 반대입니다. push_heap 알고리즘에서는 범위의 마지막 다음 위치에 있는 요소가 범위의 이전 요소로 구성된 힘에 추가되며, 이 경우 힙에 추가되는 요소는 이미 힙에 있는 다른 요소보다 더 큽니다.  
+### <a name="remarks"></a>Remarks  
+ The `pop_heap` algorithm is the inverse of the operation performed by the push_heap algorithm, in which an element at the next-to-last position of a range is added to a heap consisting of the prior elements in the range, in the case when the element being added to the heap is larger than any of the elements already in the heap.  
   
- 힙에는 두 가지 속성이 있습니다.  
+ Heaps have two properties:  
   
--   첫 번째 요소는 항상 가장 큽니다.  
+-   The first element is always the largest.  
   
--   로그 시간에서 요소를 추가하거나 제거할 수 있습니다.  
+-   Elements may be added or removed in logarithmic time.  
   
- 힙은 우선 순위 큐를 구현하는 이상적인 방법이며 C++ 표준 라이브러리 컨테이너 어댑터 [priority_queue 클래스](../standard-library/priority-queue-class.md)의 구현에 사용됩니다.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 끝에서 새로 추가된 요소를 제외한 범위는 힙이어야 합니다.  
+ The range excluding the newly added element at the end must be a heap.  
   
- 복잡성은 필요한 로그 최대 로그 (* 성-*) 비교 합니다.  
+ The complexity is logarithmic, requiring at most log ( * last - first*) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5111,7 +5128,7 @@ int main( )  {
 ```  
   
 ##  <a name="prev_permutation"></a>  prev_permutation  
- 원래 순서 지정을 사전식으로 이전의 큰 순열(있는 경우)로 대체할 수 있도록 범위의 요소 순서를 재정렬합니다. 여기서 이전의 의미는 이진 조건자로 지정할 수 있습니다.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically previous greater permutation if it exists, where the sense of previous may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -5127,27 +5144,27 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 순열할 범위의 첫 번째 요소 위치의 주소를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- 순열할 범위의 마지막 요소 하나 다음 위치의 주소를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하여 조건이 충족되면 `true`를 반환하고, 충족되지 않으면 `false`를 반환합니다.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 사전식으로 이전 순열이 존재하여 범위의 원래 순서를 교체한 경우 `true`, 아닌 경우 `false`입니다. 이 경우 순서 지정은 사전식으로 가장 큰 순열로 변환됩니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the lexicographically previous permutation exists and has replaced the original ordering of the range; otherwise `false`, in which case the ordering is transformed into the lexicographically largest permutation.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 기본 이진 조건자는 더 작으며, 범위의 요소는 이전 순열이 잘 정의되도록 less-than comparable이어야 합니다.  
+ The default binary predicate is less than and the elements in the range must be less-than comparable to ensure that the previous permutation is well defined.  
   
- 복잡성은 선형 이며 최대 ( `last`  -   `first`) / 2 바꿉니다.  
+ The complexity is linear, with at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5282,7 +5299,7 @@ After another prev_permutation of vector v1,
 ```  
   
 ##  <a name="push_heap"></a>  push_heap  
- 범위의 마지막에 있는 요소를 범위의 이전 요소로 구성된 기존 힙에 추가합니다.  
+ Adds an element that is at the end of a range to an existing heap consisting of the prior elements in the range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5293,34 +5310,34 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 힙에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- 힙으로 변환할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 요소를 먼저 기존 힙의 끝으로 다시 푸시해야 하며, 그런 다음 이 요소를 기존 힙에 추가하는 데 알고리즘이 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ The element must first be pushed back to the end of an existing heap and then the algorithm is used to add this element to the existing heap.  
   
- 힙에는 두 가지 속성이 있습니다.  
+ Heaps have two properties:  
   
--   첫 번째 요소는 항상 가장 큽니다.  
+-   The first element is always the largest.  
   
--   로그 시간에서 요소를 추가하거나 제거할 수 있습니다.  
+-   Elements may be added or removed in logarithmic time.  
   
- 힙은 우선 순위 큐를 구현하는 이상적인 방법이며 C++ 표준 라이브러리 컨테이너 어댑터 [priority_queue 클래스](../standard-library/priority-queue-class.md)의 구현에 사용됩니다.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 끝에서 새로 추가된 요소를 제외한 범위는 힙이어야 합니다.  
+ The range excluding the newly added element at the end must be a heap.  
   
- 복잡성은 필요한 로그 최대 로그 ( *성-*) 비교 합니다.  
+ The complexity is logarithmic, requiring at most log ( *last - first*) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5388,10 +5405,10 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- Std::random_shuffle() 함수는 사용 되지 않는 교체 [std:: shuffle](../standard-library/algorithm-functions.md#shuffle)합니다. 코드 예제 및 자세한 정보에 대 한 참조 [ \<임의 >](../standard-library/random.md) 과 Stackoverflow 게시물 [이유 std:: random_shuffle 메서드가 사용 되지 않습니다 C + + 14에서?](http://go.microsoft.com/fwlink/?LinkId=397954)합니다.  
+ The std::random_shuffle() function is deprecated, replaced by [std::shuffle](../standard-library/algorithm-functions.md#shuffle). For a code example and more information, see [\<random>](../standard-library/random.md) and the Stackoverflow posting  [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
- 나머지 요소의 순서에 영향을 미치거나 지정된 값이 없는 새 범위의 끝을 반환하지 않고 지정된 범위에서 지정된 값을 제거합니다.  
+ Eliminates a specified value from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -5399,31 +5416,31 @@ template<class ForwardIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 제거되는 범위의 첫 번째 요소 위치에 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 요소가 제거되는 범위의 첫 번째 요소를 벗어난 위치에 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `val`  
- 범위에서 제거될 값입니다.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값이 없는 나머지 시퀀스의 마지막 요소를 벗어난, 수정된 범위의 새로운 끝 위치에 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 제거되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not removed remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형; ( `last`  -   `first`) 같은지 비교 합니다.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality.  
   
- [list class](../standard-library/list-class.md)에는 **remove**의 더욱 효율적인 멤버 함수 버전이 있습니다. 이 버전은 포인터로 다시 링크합니다.  
+ The [list class](../standard-library/list-class.md) has a more efficient member function version of **remove**, which also relinks pointers.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5470,7 +5487,7 @@ int main( ) {
 ```  
   
 ##  <a name="remove_copy"></a>  remove_copy  
- 소스 범위의 요소를 대상 범위로 복사합니다. 단, 나머지 요소의 순서를 변경하거나 새 대상 범위의 끝을 반환하지 않고 지정된 값의 요소는 복사하지 않습니다.  
+ Copies elements from a source range to a destination range, except that elements of a specified value are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Type>  
@@ -5478,34 +5495,34 @@ template<class InputIterator, class OutputIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 제거되는 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 요소가 제거되는 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- 요소가 제거되는 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `val`  
- 범위에서 제거될 값입니다.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값이 없는 나머지 시퀀스 복사본의 마지막 요소 하나 다음에 대상 범위의 새로운 끝 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the copy of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>설명  
- 참조된 소스 및 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 지정된 값의 요소가 제거된 후 복사할 나머지 요소를 포함할 수 있는 충분한 공간이 대상 범위에 있어야 합니다.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- 제거되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not removed remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 할당 합니다.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5549,7 +5566,7 @@ int main() {
 ```  
   
 ##  <a name="remove_copy_if"></a>  remove_copy_if  
- 소스 범위의 요소를 대상 범위로 복사합니다. 단, 나머지 요소의 순서를 변경하거나 새 대상 범위의 끝을 반환하지 않고 조건자를 만족하는 요소는 복사하지 않습니다.  
+ Copies elements from a source range to a destination range, except that satisfying a predicate are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate>  
@@ -5557,36 +5574,36 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 제거되는 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 요소가 제거되는 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- 요소가 제거되는 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `_Pred`  
- 충족해야 하는 단항 조건자는 대체할 요소의 값입니다.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>반환 값  
- 조건자를 충족하는 요소가 없는 나머지 시퀀스의 마지막 요소 하나 다음에 대상 범위의 새로운 끝 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the remnant sequence free of the elements satisfying the predicate.  
   
-### <a name="remarks"></a>설명  
- 참조된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 지정된 값의 요소가 제거된 후 복사할 나머지 요소를 포함할 수 있는 충분한 공간이 대상 범위에 있어야 합니다.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- 제거되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not removed remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형:는 ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 할당 합니다.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
- 이러한 함수의 동작 방식에 대한 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ For information on how these functions behave, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5637,7 +5654,7 @@ int main() {
 ```  
   
 ##  <a name="remove_if"></a>  remove_if  
- 나머지 요소의 순서에 영향을 미치거나 지정된 값이 없는 새 범위의 끝을 반환하지 않고 지정된 범위에서 조건자를 만족하는 요소를 제거합니다.  
+ Eliminates elements that satisfy a predicate from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5645,31 +5662,31 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 제거되는 범위에서 첫 번째 요소의 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 요소가 제거되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being removed.  
   
  `_Pred`  
- 충족해야 하는 단항 조건자는 대체할 요소의 값입니다.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값이 없는 나머지 시퀀스의 마지막 요소를 벗어난, 수정된 범위의 새로운 끝 위치에 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 제거되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not removed remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형:는 ( `last`  -   `first`) 같은지 비교 합니다.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality.  
   
- List에는 remove의 더욱 효율적인 멤버 함수 버전이 있습니다. 이 버전은 포인터를 다시 링크합니다.  
+ List has a more efficient member function version of remove which relinks pointers.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5720,36 +5737,36 @@ int main( ) {
 ```  
   
 ##  <a name="replace"></a>  replace  
- 범위의 각 요소를 검사하고 요소가 지정된 값과 일치하면 대체합니다.  
+ Examines each element in a range and replaces it if it matches a specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
 void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, const Type& _NewVal);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 대체되는 범위에서 첫 번째 요소의 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 요소가 대체되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 입력 반복기입니다.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_OldVal`  
- 대체되는 요소의 이전 값입니다.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- 이전 값을 가진 요소에 할당되는 새 값입니다.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 대체되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not replaced remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5788,7 +5805,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy"></a>  replace_copy  
- 소스 범위의 각 요소를 검사하고 요소가 지정된 값과 일치하면 대체하는 동시에 결과를 새 대상 범위로 복사합니다.  
+ Examines each element in a source range and replaces it if it matches a specified value while copying the result into a new destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class Type>  
@@ -5801,35 +5818,35 @@ int main( ) {
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 대체되는 범위의 첫 번째 요소에 대한 위치를 가리키는 입력 반복기입니다.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 요소가 대체되는 범위의 마지막 요소 하나 다음에 대한 위치를 가리키는 입력 반복기입니다.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- 변경된 요소 시퀀스를 복사할 대상 범위의 첫 번째 요소를 가리키는 출력 반복기입니다.  
+ An output iterator pointing to the first element in the destination range to where the altered sequence of elements is being copied.  
   
  `_OldVal`  
- 대체되는 요소의 이전 값입니다.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- 이전 값을 가진 요소에 할당되는 새 값입니다.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="return-value"></a>반환 값  
- 변경된 요소 시퀀스를 복사할 대상 범위의 마지막 요소 하나 다음에 대한 위치를 가리키는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 겹치지 않아야 하고 둘 다 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- 대체되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not replaced remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형:는 ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5887,7 +5904,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy_if"></a>  replace_copy_if  
- 소스 범위의 각 요소를 검사하고 요소가 지정된 조건자를 충족하면 대체하는 동시에 결과를 새 대상 범위로 복사합니다.  
+ Examines each element in a source range and replaces it if it satisfies a specified predicate while copying the result into a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate, class Type>  
@@ -5900,35 +5917,35 @@ OutputIterator replace_copy_if(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 대체되는 범위의 첫 번째 요소에 대한 위치를 가리키는 입력 반복기입니다.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 요소가 대체되는 범위의 마지막 요소 하나 다음에 대한 위치를 가리키는 입력 반복기입니다.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- 요소가 복사되는 대상 범위에서 첫 번째 요소의 위치를 가리키는 출력 반복기입니다.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
  `_Pred`  
- 충족해야 하는 단항 조건자는 대체할 요소의 값입니다.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- 이전 값이 조건자를 충족하는 요소에 할당되는 새 값입니다.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="return-value"></a>반환 값  
- 변경된 요소 시퀀스를 복사할 대상 범위의 마지막 요소 하나 다음에 대한 위치를 가리키는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 겹치지 않아야 하고 둘 다 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- 대체되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not replaced remains stable.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -5993,7 +6010,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_if"></a>  replace_if  
- 범위의 각 요소를 검사하고 요소가 지정된 조건자를 충족하면 대체합니다.  
+ Examines each element in a range and replaces it if it satisfies a specified predicate.  
   
 ```  
 template<class ForwardIterator, class Predicate, class Type>  
@@ -6001,31 +6018,31 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 대체되는 범위에서 첫 번째 요소의 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 요소가 대체되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 반복기입니다.  
+ An iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_Pred`  
- 충족해야 하는 단항 조건자는 대체할 요소의 값입니다.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- 이전 값이 조건자를 충족하는 요소에 할당되는 새 값입니다.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 대체되지 않은 요소의 순서는 변하지 않고 남아 있습니다.  
+ The order of the elements not replaced remains stable.  
   
- `replace_if` 알고리즘은 **replace** 알고리즘의 일반화로서, 지정된 상수 값과 동일하지 않고 조건자를 지정하도록 허용합니다.  
+ The algorithm `replace_if` is a generalization of the algorithm **replace**, allowing any predicate to be specified, rather than equality to a specified constant value.  
   
- 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 복잡성은 선형:는 ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6070,7 +6087,7 @@ int main( ) {
 ```  
   
 ##  <a name="reverse"></a>  reverse  
- 범위 내에서 요소의 순서를 반대로 바꿉니다.  
+ Reverses the order of the elements within a range.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -6078,17 +6095,17 @@ template<class BidirectionalIterator>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 순열되는 범위에서 첫 번째 요소의 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position of the first element in the range within which the elements are being permuted.  
   
  `last`  
- 요소가 순열되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position one past the final element in the range within which the elements are being permuted.  
   
-### <a name="remarks"></a>설명  
- 참조된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6131,7 +6148,7 @@ The modified vector v1 with values reversed is:
 ```  
   
 ##  <a name="reverse_copy"></a>  reverse_copy  
- 소스 범위 내의 요소의 순서를 바꾸는 동시에 요소를 대상 범위로 복사합니다.  
+ Reverses the order of the elements within a source range while copying them into a destination range  
   
 ```  
 template<class BidirectionalIterator, class OutputIterator>  
@@ -6142,23 +6159,23 @@ OutputIterator reverse_copy(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 요소가 순열되는 소스 범위의 첫 번째 요소 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position of the first element in the source range within which the elements are being permuted.  
   
  `last`  
- 요소가 순열되는 소스 범위의 마지막 요소 하나 다음 위치를 가리키는 양방향 반복기입니다.  
+ A bidirectional iterator pointing to the position one past the final element in the source range within which the elements are being permuted.  
   
  `result`  
- 요소가 복사되는 대상 범위에서 첫 번째 요소의 위치를 가리키는 출력 반복기입니다.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
-### <a name="return-value"></a>반환 값  
- 변경된 요소 시퀀스를 복사할 대상 범위의 마지막 요소 하나 다음에 대한 위치를 가리키는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>설명  
- 참조된 소스 및 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6199,7 +6216,7 @@ int main( ) {
 ```  
   
 ##  <a name="rotate"></a>  rotate  
- 인접한 두 범위에 있는 요소를 교환합니다.  
+ Exchanges the elements in two adjacent ranges.  
   
 ```  
 template<class ForwardIterator>  
@@ -6207,22 +6224,22 @@ template<class ForwardIterator>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 회전할 범위 내 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- 해당 요소를 범위의 첫 번째 부분에 있는 요소와 교환해야 하는 범위의 두 번째 부분에서 첫 번째 요소의 위치를 지정하는 범위 내 경계를 정의하는 정방향 반복기입니다.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
 `Last`  
- 회전할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 선형 이며 최대 ( `last`  -   `first`) 바꿉니다.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6298,7 +6315,7 @@ After the rotation of a single deque element to the back,
 ```  
   
 ##  <a name="rotate_copy"></a>  rotate_copy  
- 소스 범위 내의 인접한 두 범위의 요소를 교환하고 결과를 대상 범위로 복사합니다.  
+ Exchanges the elements in two adjacent ranges within a source range and copies the result to a destination range.  
   
 ```  
 template<class ForwardIterator, class OutputIterator>  
@@ -6310,28 +6327,28 @@ OutputIterator rotate_copy(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 회전할 범위 내 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- 해당 요소를 범위의 첫 번째 부분에 있는 요소와 교환해야 하는 범위의 두 번째 부분에서 첫 번째 요소의 위치를 지정하는 범위 내 경계를 정의하는 정방향 반복기입니다.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
  _ `Last`  
- 회전할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
  `result`  
- 대상 범위의 첫 번째 요소의 위치를 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>반환 값  
- 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 선형 이며 최대 ( `last`  -   `first`) 바꿉니다.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6391,7 +6408,7 @@ int main() {
 ```  
   
 ##  <a name="search"></a>  search  
- 대상 범위 내에서 시퀀스의 요소가 지정된 요소 시퀀스와 동일하거나 이진 조건자가 지정한 의미에 따라 지정된 시퀀스의 요소와 동일한 첫 번째 시퀀스를 검색합니다.  
+ Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -6411,33 +6428,33 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- 일치를 확인할 범위 내 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- 일치를 확인할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 평균 복잡성은 검색 범위의 크기에 대해 선형이며, 가장 나쁜 경우의 복잡성도 검색 대상 시퀀스의 크기에 대해 선형입니다.  
+ Average complexity is linear with respect to the size of the searched range, and worst case complexity is also linear with respect to the size of the sequence being searched for.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search.cpp  
@@ -6536,7 +6553,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="search_n"></a>  search_n  
- 범위에서 특정 값의 요소가 지정된 수만큼 있거나 이진 조건자가 지정한 해당 값과 관련이 있는 첫 번째 하위 시퀀스를 검색합니다.  
+ Searches for the first subsequence in a range that of a specified number of elements having a particular value or a relation to that value as specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class Diff2, class Type>  
@@ -6556,33 +6573,33 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `count`  
- 검색하는 하위 시퀀스의 크기입니다.  
+ The size of the subsequence being searched for.  
   
  `val`  
- 검색하는 시퀀스에서 요소의 값입니다.  
+ The value of the elements in the sequence being searched for.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>설명  
- 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 검색 결과의 크기와 관련하여 선형입니다.  
+ Complexity is linear with respect to the size of the searched.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6666,7 +6683,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 ```  
   
 ##  <a name="set_difference"></a>  set_difference  
- 한 정렬된 소스 범위에 속하지만 두 번째 정렬된 소스 범위에 속하지 않는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Unites all of the elements that belong to one sorted source range, but not to a second sorted source range, into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6688,42 +6705,42 @@ OutputIterator set_difference(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 두 소스 범위의 차이를 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last1`  
- 두 소스 범위의 차이를 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `first2`  
- 두 소스 범위의 차이를 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last2`  
- 두 소스 범위의 차이를 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `result`  
- 두 소스 범위의 차이를 나타내는 정렬된 단일 범위로 두 개의 소스 범위를 통합할 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the difference of the two source ranges.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 두 소스 범위의 차이를 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the difference of the two source ranges.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 대상 범위는 소스 범위 중 하나와 겹쳐서는 안 되며, 첫 번째 소스 범위를 포함할 수 있을 정도로 커야 합니다.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the first source range.  
   
- 정렬된 소스 범위는 각각 `set_difference` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the `set_difference` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 merge 알고리즘에 의해 수정되지 않습니다  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함되어 두 번째보다 첫 번째 소스 범위에 더 많은 요소가 있는 경우에는 첫 번째 소스 범위에서 해당 요소의 발생 빈도가 두 번째 소스 범위에서 해당 요소의 발생 빈도를 초과하는 횟수가 대상 범위에 포함됩니다.  
+ The value types of the input iterators need be less-than-comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element such that there are more in the first source range than in the second, then the destination range will contain the number by which the occurrences of those elements in the first source range exceed the occurrences of those elements in the second source range.  
   
- 알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-( *last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6843,7 +6860,7 @@ int main( )
 ```  
   
 ##  <a name="set_intersection"></a>  set_intersection  
- 정렬된 두 소스 범위에 속하는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Unites all of the elements that belong to both sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6865,42 +6882,42 @@ OutputIterator set_intersection(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 두 소스 범위의 교집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last1`  
- 두 소스 범위의 교집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
   `first2`  
- 두 소스 범위의 교집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last2`  
- 두 소스 범위의 교집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
- **_** *결과*  
- 두 소스 범위의 교집합을 나타내는 정렬된 단일 범위로 두 개의 소스 범위를 통합할 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the intersection of the two source ranges.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 두 소스 범위의 교집합을 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the intersection of the two source ranges.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 대상 범위는 소스 범위 중 하나와 겹쳐서는 안 되며, 대상 범위를 포함할 수 있을 정도로 커야 합니다.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 정렬된 소스 범위는 각각 merge 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the merge algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 알고리즘에 의해 수정되지 않습니다  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우 두 소스 범위 모두에서 발생하는 중복 요소의 최대 개수가 대상 범위에 포함됩니다.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- 알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*) + ( *last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) + ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7014,7 +7031,7 @@ int main() {
 ```  
   
 ##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
- 정렬된 두 소스 범위 중 하나에만 속하는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Unites all of the elements that belong to one, but not both, of the sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7036,42 +7053,42 @@ OutputIterator set_symmetric_difference(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 두 소스 범위의 대칭차를 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last1`  
- 두 소스 범위의 대칭차를 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
   `first2`  
- 두 소스 범위의 대칭차를 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last2`  
- 두 소스 범위의 대칭차를 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
- **_** *결과*  
- 두 소스 범위의 대칭차를 나타내는 정렬된 단일 범위로 두 개의 소스 범위를 통합할 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the symmetric difference of the two source ranges.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 두 소스 범위의 대칭차를 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the symmetric difference of the two source ranges.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 대상 범위는 소스 범위 중 하나와 겹쳐서는 안 되며, 대상 범위를 포함할 수 있을 정도로 커야 합니다.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 정렬된 소스 범위는 각각 **merge** 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 merge 알고리즘에 의해 수정되지 않습니다  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우에는 소스 범위 중 하나에서 해당 요소의 발생 빈도가 두 번째 소스 범위에서 해당 요소의 발생 빈도를 초과하는 횟수의 절대값이 대상 범위에 포함됩니다.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the absolute value of the number by which the occurrences of those elements in the one of the source ranges exceeds the occurrences of those elements in the second source range.  
   
- 알고리즘의 복잡성은 선형 이며 최대 2 \* ((*last1-first1*)-(*last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
+ The complexity of the algorithm is linear with at most 2 \* ( (*last1 - first1*) - (*last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7191,7 +7208,7 @@ int main( )
 ```  
   
 ##  <a name="set_union"></a>  set_union  
- 정렬된 두 소스 범위 중 하나 이상에 속하는 모든 요소를 정렬된 단일 대상 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Unites all of the elements that belong to at least one of two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7212,42 +7229,42 @@ OutputIterator set_union(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 두 소스 범위의 합집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last1`  
- 두 소스 범위의 합집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 정렬된 소스 범위 중 첫 번째 범위에서 마지막 요소 하나 다음의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
   `first2`  
- 두 소스 범위의 합집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last2`  
- 두 소스 범위의 합집합을 나타내는 단일 범위로 통합하고 정렬할 두 개의 연속 정렬된 소스 범위 중 두 번째 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
- **_** *결과*  
- 두 소스 범위의 합집합을 나타내는 정렬된 단일 범위로 두 개의 소스 범위를 통합할 대상 범위에서 첫 번째 요소 위치의 주소를 지정하는 출력 반복기입니다.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the union of the two source ranges.  
   
  `comp`  
- 하나의 요소가 다른 요소보다 큰 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 가져와 첫 번째 요소가 두 번째 요소보다 작은 경우 **true** 를 반환하고, 그렇지 않은 경우 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 두 소스 범위의 합집합을 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the union of the two source ranges.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 대상 범위는 소스 범위 중 하나와 겹쳐서는 안 되며, 대상 범위를 포함할 수 있을 정도로 커야 합니다.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 정렬된 소스 범위는 각각 **merge** 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 **merge**알고리즘에 의해 수정되지 않습니다  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우 두 소스 범위 모두에서 발생하는 중복 요소의 최대 개수가 대상 범위에 포함됩니다.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- 알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-( *last2-first2*))-1 비교 합니다.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7367,7 +7384,7 @@ int main( )
 ```  
   
 ##  <a name="shuffle"></a>  std::shuffle  
- 난수 생성기를 사용하여 지정된 범위 내 요소의 순서를 섞습니다(다시 정렬).  
+ Shuffles (rearranges) elements for a given range by using a random number generator.  
   
 ```  
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>  
@@ -7376,24 +7393,21 @@ void shuffle(RandomAccessIterator first,
     UniformRandomNumberGenerator&& gen);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 순서를 섞으려는 범위 내 첫 번째 요소에 대한 반복기로, 이 요소를 포함합니다. 
-          `RandomAccessIterator` 및 `ValueSwappable`의 요구 사항을 충족해야 합니다.  
+ An iterator to the first element in the range to be shuffled, inclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `last`  
- 순서를 섞으려는 범위 내 마지막 요소에 대한 반복기로, 이 요소는 제외됩니다. 
-          `RandomAccessIterator` 및 `ValueSwappable`의 요구 사항을 충족해야 합니다.  
+ An iterator to the last element in the range to be shuffled, exclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `gen`  
- 
-          `shuffle()` 함수가 연산에 사용하는 난수 생성기입니다. `UniformRandomNumberGenerator`의 요구 사항을 충족해야 합니다.  
+ The random number generator that the `shuffle()` function will use for the operation. Must meet the requirements of a `UniformRandomNumberGenerator`.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용과 `shuffle()`을 사용하는 코드 샘플은 [\<random>](../standard-library/random.md)을 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ For more information, and a code sample that uses `shuffle()`, see [\<random>](../standard-library/random.md).  
   
 ##  <a name="sort"></a>  sort  
- 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬합니다.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7409,24 +7423,24 @@ template<class RandomAccessIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 저장할 범위의 첫 번째 요소 위치를 주소 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- 저장할 범위의 마지막 요소 하나 다음 위치를 주소 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이 이진 조건자는 두 개의 인수를 받아서, 두 인수가 순서대로 되어 있는 경우 `true`, 아닌 경우 `false`를 반환합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다. 자세한 내용은 [알고리즘](../standard-library/algorithms.md)을 참조하세요.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. This binary predicate takes two arguments and returns `true` if the two arguments are in order and `false` otherwise. This comparator function must impose a strict weak ordering on pairs of elements from the sequence. For more information, see [Algorithms](../standard-library/algorithms.md).  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. `sort` 알고리즘은 안정적이지 않으므로 등가 요소의 상대적인 순서가 유지될 것임을 보증하지 않습니다. `stable_sort` 알고리즘은 원래의 순서를 유지합니다.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The `sort` algorithm is not stable and so does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- 정렬 복잡성 평균이 *O*( *N* 로그 *N*) 여기서 *N* =  *성-이름*합니다.  
+ The average of a sort complexity is  *O*( *N* log  *N*), where  *N* =  *last - first*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7495,7 +7509,7 @@ Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```  
   
 ##  <a name="sort_heap"></a>  sort_heap  
- 힙을 정렬된 범위로 변환합니다.  
+ Converts a heap into a sorted range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7510,34 +7524,34 @@ template<class RandomAccessIterator, class Predicate>
       Predicate comp);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 대상 힙에서 첫 번째 요소 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position of the first element in the target heap.  
   
  `last`  
- 대상 힙의 마지막 요소 하나 다음 위치의 주소를 지정하는 임의 액세스 반복기입니다.  
+ A random-access iterator addressing the position one past the final element in the target heap.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 힙에는 두 가지 속성이 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   첫 번째 요소는 항상 가장 큽니다.  
+-   The first element is always the largest.  
   
--   로그 시간에서 요소를 추가하거나 제거할 수 있습니다.  
+-   Elements may be added or removed in logarithmic time.  
   
- 이 알고리즘을 적용하고 나면 적용된 범위가 더 이상 힙이 아닙니다.  
+ After the application if this algorithm, the range it was applied to is no longer a heap.  
   
- 등가 요소의 상대적 순서가 반드시 유지되지는 않으므로 이것은 안정적인 정렬이 아닙니다.  
+ This is not a stable sort because the relative order of equivalent elements is not necessarily preserved.  
   
- 힙은 우선 순위 큐를 구현하는 이상적인 방법이며 C++ 표준 라이브러리 컨테이너 어댑터 [priority_queue 클래스](../standard-library/priority-queue-class.md)의 구현에 사용됩니다.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 최대 *N* 로그 *N*여기서 *N* = ( *성-*).  
+ The complexity is at most  *N* log  *N*, where  *N* = ( *last - first*).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7588,7 +7602,7 @@ int main() {
 ```  
   
 ##  <a name="stable_partition"></a>  stable_partition  
- 범위의 요소를 두 개의 연결되지 않은 집합으로 분류하고, 단항 조건자를 만족하는 요소는 만족하지 않는 요소보다 앞에 오도록 하여 동등한 요소의 상대적 관계를 유지합니다.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it, preserving the relative order of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -7599,25 +7613,25 @@ BidirectionalIterator stable_partition(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 파티셔닝할 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- 파티셔닝할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `_Pred`  
- 요소를 분류해야 할 경우 충족해야 할 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 조건자는 단일 인수를 받아서 **true** 또는 **false**를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>반환 값  
- 조건자 조건을 충족하지 못하는 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- *Pr* ( *a*,  *b*)가 false이고 *Pr* ( *b*,  *a*)도 false인 경우 *a*와 *b* 요소는 등가이지만 반드시 같음은 아닙니다. 여기서 *Pr*은 매개 변수로 지정된 조건자입니다. **stable_ partition** 알고리즘은 안정적이며 등가 요소의 상대적인 순서가 유지될 것임을 보증합니다. **partition** 알고리즘은 반드시 원래 순서를 유지할 필요는 없습니다.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **stable_ partition** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved. The algorithm **partition** does not necessarily preserve this original ordering.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7663,7 +7677,7 @@ int main( ) {
 ```  
   
 ##  <a name="stable_sort"></a>  stable_sort  
- 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬하고 동등한 요소의 상대적 관계를 유지합니다.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate and preserves the relative ordering of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -7677,24 +7691,24 @@ void stable_sort(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 정렬할 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- 정렬할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 양방향 반복기입니다.  
+ A bidirectional iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. **sort** 알고리즘은 안정적이며 등가 요소의 상대적인 순서가 유지될 것임을 보증합니다.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved.  
   
- 실행 시간 복잡도 `stable_sort` 사용 가능한 메모리의 양에 따라 달라 집니다 (충분 한 메모리 부여 된 경우) 최상의 경우 하지만 *O*( *N* 로그 *N*) 최악의 대/소문자는 *O*( *N* (로그 *N* ) 2), 여기서 *N* =  *성-이름입니다.* 일반적으로 **sort** 알고리즘이 `stable_sort`보다 훨씬 빠릅니다.  
+ The run-time complexity of `stable_sort` depends on the amount of memory available, but the best case (given sufficient memory) is  *O*( *N* log  *N*) and the worst case is  *O*(  *N* ( log  *N* )2 ), where  *N* =  *last - First.* Usually, the **sort** algorithm is significantly faster than `stable_sort`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7762,7 +7776,7 @@ Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```  
   
 ##  <a name="swap"></a>  swap  
- 첫 번째 재정의는 두 개체의 값을 교환합니다. 두 번째 재정의는 두 개체 배열 간에 값을 교환합니다.  
+ The first override exchanges the values of two objects. The second override exchanges the values between two arrays of objects.  
   
 ```  
 template<class Type>  
@@ -7776,17 +7790,17 @@ template<class Type, size_t N>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 첫 번째 재정의에서는 내용이 있는 첫 번째 개체가 교환됩니다. 두 번째 재정의에서는 내용이 있는 첫 번째 개체 배열이 교환됩니다.  
+ For the first override, the first object to have its contents exchanged. For the second override, the first array of objects to have its contents exchanged.  
   
  `right`  
- 첫 번째 재정의에서는 내용이 있는 두 번째 개체가 교환됩니다. 두 번째 재정의에서는 내용이 있는 두 번째 개체 배열이 교환됩니다.  
+ For the first override, the second object to have its contents exchanged. For the second override, the second array of objects to have its contents exchanged.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 오버로드는 개별 개체에서 작동하도록 설계되었습니다. 두 번째 오버로드는 두 배열 간에 개체의 내용을 교환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first overload is designed to operate on individual objects. The second overload swaps the contents of objects between two arrays.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7843,7 +7857,7 @@ Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```  
   
 ##  <a name="swap_ranges"></a>  swap_ranges  
- 한 범위의 요소를 크기가 동일한 다른 범위의 요소로 교환합니다.  
+ Exchanges the elements of one range with the elements of another, equal sized range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -7854,25 +7868,25 @@ ForwardIterator2 swap_ranges(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 요소를 교환할 첫 번째 범위의 첫 번째 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the first position of the first range whose elements are to be exchanged.  
   
  `last1`  
- 요소를 교환할 첫 번째 범위의 마지막 위치 하나 다음을 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to one past the final position of the first range whose elements are to be exchanged.  
   
   `first2`  
- 요소를 교환할 두 번째 범위의 첫 번째 위치를 가리키는 정방향 반복기입니다.  
+ A forward iterator pointing to the first position of the second range whose elements are to be exchanged.  
   
-### <a name="return-value"></a>반환 값  
- 요소를 교환할 두 번째 범위의 마지막 위치 하나 다음을 가리키는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator pointing to one past the final position of the second range whose elements are to be exchanged.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 두 번째 범위는 첫 번째 범위 정도의 크기여야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation. The second range has to be as large as the first range.  
   
- 복잡성은 선형 이며 `last1`  -   `first1` 교체를 수행 합니다. 멤버 함수는 일반적으로 일관된 복잡성을 가지고 있기 때문에, 동일한 유형의 컨테이너에서 요소를 교환하는 경우 해당 컨테이너의 `swap` 멤버 함수를 사용해야 합니다.  
+ The complexity is linear with `last1` -  `first1` swaps performed. If elements from containers of the same type are being swapped, them the `swap` member function from that container should be used, because the member function typically has constant complexity.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7934,7 +7948,7 @@ After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```  
   
 ##  <a name="transform"></a>  transform  
- 두 소스 범위에서 요소 쌍에 또는 소스 범위에 있는 각 요소에 지정된 함수 개체를 적용하고 대상 범위에 함수 개체의 반환 값을 복사합니다.  
+ Applies a specified function object to each element in a source range or to a pair of elements from two source ranges and copies the return values of the function object into a destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class UnaryFunction>  
@@ -7954,33 +7968,33 @@ OutputIterator transform(
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 작업을 수행할 첫 번째 소스 범위에서 첫 번째 요소 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the first source range to be operated on.  
   
  `last1`  
- 작업을 수행할 첫 번째 소스 범위에서 최종 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position one past the final element in the first source range operated on.  
   
   `first2`  
- 작업을 수행할 두 번째 소스 범위에서 첫 번째 요소의 위치를 주소 지정하는 입력 반복기입니다.  
+ An input iterator addressing the position of the first element in the second source range to be operated on.  
   
  `result`  
- 대상 범위의 첫 번째 요소의 위치를 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range.  
   
  `_Func`  
- 첫 번째 소스 범위의 각 요소에 적용되는 알고리즘의 첫 번째 버전에서 사용되는 사용자 정의 단항 함수 개체 또는 두 개의 소스 범위에 정방향으로 쌍으로 적용되는 알고리즘의 두 번째 버전에서 사용되는 UD(사용자 정의) 이항 함수 개체입니다.  
+ User-defined unary function object used in the first version of the algorithm that is applied to each element in the first source range or A user-defined (UD) binary function object used in the second version of the algorithm that is applied pairwise, in a forward order, to the two source ranges.  
   
-### <a name="return-value"></a>반환 값  
- 함수 개체에 의해 변형된 출력 요소를 받는 대상 범위에서 최종 요소의 하나 다음 위치를 주소 지정하는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the output elements transformed by the function object.  
   
-### <a name="remarks"></a>설명  
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 대상 범위는 변환된 소스 범위를 포함할 만큼 충분히 커야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation. The destination range must be large enough to contain the transformed source range.  
   
- 경우 `result` 같게 설정 된 `first1` 위치에서 시퀀스를 수정 및 알고리즘의 첫 번째 버전에 다음 소스 및 대상 범위 지정 됩니다. 하지만 `result` 범위 내의 위치를 해결 하지 않을 수 있습니다 [`first1` + 1, `last1`).  
+ If `result` is set equal to  `first1` in the first version of the algorithm, then the source and destination ranges will be the same and the sequence will be modified in place. But the `result` may not address a position within the range [`first1` + 1, `last1`).  
   
- 복잡성은 선형 이며 최대 (`last1` -  `first1`) 비교 합니다.  
+ The complexity is linear with at most (`last1` -  `first1`) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8068,7 +8082,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 ```  
   
 ##  <a name="unique"></a>  unique  
- 지정된 범위에서 서로 인접한 중복 요소를 제거합니다.  
+ Removes duplicate elements that are adjacent to each other in a specified range.  
   
 ```  
 template<class ForwardIterator>  
@@ -8084,33 +8098,33 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 중복 제거를 위해 검색할 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the range to be scanned for duplicate removal.  
   
  `last`  
- 중복 제거를 위해 검색할 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the range to be scanned for duplicate removal.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 연속 중복 항목을 포함하지 않는 수정된 시퀀스의 새로운 끝에 대한 정방향 반복기로, 제거되지 않은 마지막 요소 하나 다음 위치의 주소를 지정합니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the new end of the modified sequence that contains no consecutive duplicates, addressing the position one past the last element not removed.  
   
-### <a name="remarks"></a>설명  
- 두 알고리즘 모두 동일한 요소의 연속된 쌍 중 두 번째 중복을 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- 알고리즘의 작업이 안정적이므로 삭제되지 않은 요소의 상대 순서가 변경되지 않습니다.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 시퀀스의 요소 수는 **unique** 알고리즘에 의해 변경되지 않으며 수정된 시퀀스의 끝 너머에 있는 요소는 역참조가 가능하지만 지정되지 않습니다.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation. he number of elements in the sequence is not changed by the algorithm **unique** and the elements beyond the end of the modified sequence are dereferenceable but not specified.  
   
- 복잡성은 선형 요구 ( `last`  -   `first`)-1 비교 합니다.  
+ The complexity is linear, requiring ( `last` -  `first`) - 1 comparisons.  
   
- List는 성능이 더 뛰어나고 좀 더 효과적인 멤버 함수인 "unique"를 제공합니다.  
+ List provides a more efficient member function "unique", which may perform better.  
   
- 이러한 알고리즘은 연관 컨테이너에서 사용할 수 없습니다.  
+ These algorithms cannot be used on an associative container.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8198,7 +8212,7 @@ Removing adjacent elements satisfying the binary
 ```  
   
 ##  <a name="unique_copy"></a>  unique_copy  
- 서로 인접한 중복 요소를 제외하고 소스 범위의 요소를 대상 범위로 복사합니다.  
+ Copies elements from a source range into a destination range except for the duplicate elements that are adjacent to each other.  
   
 ```  
  template<class InputIterator, class OutputIterator>  
@@ -8214,32 +8228,32 @@ OutputIterator unique_copy( InputIterator first,
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   `first`  
- 복사할 소스 범위에서 첫 번째 요소 위치의 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position of the first element in the source range to be copied.  
   
  `last`  
- 복사할 소스 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.  
+ A forward iterator addressing the position one past the final element in the source range to be copied.  
   
  `result`  
- 연속 중복 항목이 제거된 복사본을 수신하는 대상 범위에서 첫 번째 요소 위치의 주소 지정하는 출력 반복기입니다.  
+ An output iterator addressing the position of the first element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
  `comp`  
- 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 연속 중복 항목이 제거된 복사본을 수신하는 대상 범위에서 마지막 요소 하나 다음 위치의 주소 지정하는 출력 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
-### <a name="remarks"></a>설명  
- 두 알고리즘 모두 동일한 요소의 연속된 쌍 중 두 번째 중복을 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- 알고리즘의 작업이 안정적이므로 삭제되지 않은 요소의 상대 순서가 변경되지 않습니다.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within a sequence the last position is reachable from the first by incrementation.  
   
- 복잡성은 선형 요구 ( `last`  -   `first`) 비교 합니다.  
+ The complexity is linear, requiring ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8312,7 +8326,7 @@ int main() {
 ```  
   
 ##  <a name="upper_bound"></a>  upper_bound  
- 지정된 값보다 큰 값을 갖는 정렬된 범위에 있는 첫 번째 요소의 위치를 찾습니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
+ Finds the position of the first element in an ordered range that has a value that is greater than a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -8330,34 +8344,34 @@ template<class ForwardIterator, class Type, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 검색할 범위에서 첫 번째 요소의 위치입니다.  
+ The position of the first element in the range to be searched.  
   
  `last`  
- 검색할 범위에서 마지막 요소 하나 다음의 위치입니다.  
+ The position one past the final element in the range to be searched.  
   
  `value`  
- 반환된 반복기로 주소가 지정된 요소의 값이 초과해야 하는 정렬된 범위의 값입니다.  
+ The value in the ordered range that needs to be exceeded by the value of the element addressed by the iterator returned.  
   
  `comp`  
- 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 값보다 큰 값을 가진 첫 번째 요소의 위치에 대한 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the position of the first element that has a value greater than a specified value.  
   
-### <a name="remarks"></a>설명  
- 참조된 정렬된 소스 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- 정렬된 범위는 `upper_bound` 사용의 사전 조건이며 순서 기준은 이진 조건자로 지정된 것과 같습니다.  
+ A sorted range is a precondition of the use of `upper_bound` and where the ordering criterion is the same as specified by the binary predicate.  
   
- 범위는 `upper_bound`에 의해 수정되지 않습니다.  
+ The range is not modified by `upper_bound`.  
   
- 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 비등가 요소 사이에 정렬이 수행됩니다.  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 알고리즘의 복잡성은 임의 액세스 반복자에 대해서는 로그이고, 다른 경우에는 ( `last - first`)에 비례하는 단계 수와 함께 선형입니다.  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_upper_bound.cpp  
@@ -8447,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>참고 항목   
+## <a name="see-also"></a>See Also   
  [\<algorithm>](../standard-library/algorithm.md)

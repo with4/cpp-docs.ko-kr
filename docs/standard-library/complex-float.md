@@ -1,5 +1,5 @@
 ---
-title: "complex&lt;float&gt; | Microsoft 문서"
+title: complex&lt;float&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::complex<float>
-- std.complex<float>
-- complex<float>
+- std::complex<float>", "complex<float>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 50b4cd9578da0b70c1c37ea2919bc2dc765ee521
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c6dcc25f08b2a57e9992b9e85dc3ff0b3d39af9c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-둘 다 형식이 **float**인 개체의 정렬된 쌍을 저장하는 개체를 설명합니다. 첫 번째 개체는 복소수의 실수부를 나타내고 두 번째 개체는 허수부를 나타냅니다.  
+Describes an object that stores an ordered pair of objects both of type **float***,* the first representing the real part of a complex number and the second representing the imaginary part.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -67,25 +65,25 @@ constexpr complex(
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `_RealVal`  
- 생성되는 복소수의 실수부에 대한 **float** 형식의 값입니다.  
+ The value of type **float** for the real part of the complex number being constructed.  
   
  `_ImagVal`  
- 생성되는 복소수의 허수부에 대한 **float** 형식의 값입니다.  
+ The value of type **float** for the imaginary part of the complex number being constructed.  
   
  `complexNum`  
- 생성되는 **float** 형식의 복소수를 초기화하기 위해 사용되는 실수부와 허수부로 이루어진 **double** 또는 `long double` 형식의 복소수입니다.  
+ The complex number of type **double** or of type `long double` whose real and imaginary parts are used to initialize a complex number of type **float** being constructed.  
   
-## <a name="return-value"></a>반환 값  
- **float** 형식의 복소수입니다.  
+## <a name="return-value"></a>Return Value  
+ A complex number of type **float**.  
   
-## <a name="remarks"></a>설명  
- **float** 형식의 complex 클래스에 대한 템플릿 클래스 complex의 명시적 특수화는 해당 특수화가 정의하는 생성자에서만 템플릿 클래스와 다릅니다. **float**에서 **double**로의 변환은 암시적일 수 있지만 **float**에서 `long double`로의 덜 안전한 변환은 **명시적**이어야 합니다. **명시적**의 사용은 할당 구문을 사용하는 형식 변환의 시작을 배제합니다.  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization of the template class complex to a complex class of type **float** differs from the template class only in the constructors it defines. The conversion from **float** to **double** is allowed to be implicit, but the less safe conversion from **float** to `long double` is required to be **explicit**. The use of **explicit** rules out the initiation with type conversion using assignment syntax.  
   
- 템플릿 클래스 `complex`에 대한 자세한 내용은 [complex 클래스](../standard-library/complex-class.md)를 참조하세요. 템플릿 클래스 `complex`의 멤버 목록은 다음을 참조하세요.  
+ For more information on the template class `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the template class `complex`, see .  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // complex_comp_flt.cpp  
@@ -140,14 +138,14 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더**: \<complex>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [complex 클래스](../standard-library/complex-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Class](../standard-library/complex-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

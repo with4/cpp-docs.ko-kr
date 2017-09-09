@@ -1,20 +1,34 @@
 ---
-title: "&lt;complex&gt; operators | Microsoft 문서"
+title: '&lt;complex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- complex/std::operator!=
+- complex/std::operator&gt;&gt;
+- complex/std::operator&lt;&lt;
+- complex/std::operator*
+- complex/std::operator+
+- complex/std::operator-
+- complex/std::operator/
+- complex/std::operator==
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+helpviewer_keywords:
+- std::operator!= (complex)
+- std::operator&gt;&gt; (complex)
+- std::operator&lt;&lt; (complex), std::operator== (complex)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 92d32d428e109c8e52d25328025e98030d5fc304
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
@@ -25,7 +39,7 @@ ms.lasthandoff: 04/29/2017
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같지 않은지 테스트합니다.  
+ Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -45,22 +59,22 @@ bool operator!=(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>반환 값  
- 숫자가 같지 않으면 **true**이고, 숫자가 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are not equal; **false** if numbers are equal.  
   
-### <a name="remarks"></a>설명  
- 두 복소수는 해당 실수 부분도 같고 해당 허수 부분도 같은 경우에만 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 비교 테스트를 실행할 수 있습니다.  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_NE.cpp  
@@ -161,7 +175,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_star"></a>  operator*  
- 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.  
+ Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -181,20 +195,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 두 복소수 중 첫 번째 복소수이거나 * 연산으로 곱할 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
  `right`  
- 두 복소수 중 두 번째 복소수이거나 * 연산으로 곱할 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
-### <a name="return-value"></a>반환 값  
- 값과 형식이 매개 변수 입력으로 지정되는 두 숫자를 곱한 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the multiplication of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_mult.cpp  
@@ -255,7 +269,7 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 더합니다.  
+ Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -278,20 +292,20 @@ template <class Type>
 complex<Type> operator+(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 두 복소수 중 첫 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
  `right`  
- 두 복소수 중 두 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
-### <a name="return-value"></a>반환 값  
- 값과 형식이 매개 변수 입력으로 지정되는 두 숫자를 더한 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the addition of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다. 단항 연산자는 반환 `left`합니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format. The unary operator returns `left`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_add.cpp  
@@ -392,7 +406,7 @@ The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 뺍니다.  
+ Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -414,22 +428,22 @@ template <class Type>
 complex<Type> operator-(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 두 복소수 중 첫 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
  `right`  
- 두 복소수 중 두 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
-### <a name="return-value"></a>반환 값  
- 값과 형식이 매개 변수 입력으로 지정되는 두 숫자인 `left`에서 `right`를 뺀 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the subtraction of `right` from `left`, the two numbers whose values are specified by the parameter inputs.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
- 단항 연산자는 복소수의 부호를 변경하고, 실수부가 숫자 입력에서 음의 실수부이고 허수부가 숫자 입력에서 음의 허수부인 값을 반환합니다.  
+ The unary operator changes the sign of a complex number and returns a value whose real part is the negative of the real part of the number input and whose imaginary part is the negative of the imaginary part of the number input.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_sub.cpp  
@@ -530,7 +544,7 @@ The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```  
   
 ##  <a name="op_div"></a>  operator/  
- 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 나눕니다.  
+ Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -549,20 +563,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 복소수이거나 / 연산으로 나눌 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ A complex number or a number that is of the parameter type for a complex number that is the numerator to be divided by the denominator with the / operation.  
   
  `right`  
- 복소수이거나 / 연산으로 분자를 나누는 데 사용할 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.  
+ A complex number or a number that is of the parameter type for a complex number that is the denominator to be used to divide the numerator with the / operation.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수 입력으로 지정되는 값인 분모로 분자를 나눈 복소수입니다.  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the division of the numerator by the denominator, the values of which are specified by the parameter inputs.  
   
-### <a name="remarks"></a>설명  
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_div.cpp  
@@ -646,7 +660,7 @@ The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 지정된 복소수를 출력 스트림에 삽입합니다.  
+ Inserts a complex number specified into the output stream.  
   
 ```   
 template <class Type, class Elem, class Traits>  
@@ -655,20 +669,20 @@ basic_ostream<Elem, Traits>& operator<<(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ostr`  
- 복소수를 입력하는 출력 스트림입니다.  
+ The output stream into which the complex number is being entered.  
   
  `right`  
- 출력 스트림에 입력하는 복소수입니다.  
+ The complex number to be entered into the output stream  
   
-### <a name="return-value"></a>반환 값  
- `Ostr`에 지정된 복소수의 값을 직각좌표 형식(*실수부, 허수부*)으로 씁니다.  
+### <a name="return-value"></a>Return Value  
+ Writes the value of the specified complex number to the `Ostr` in a Cartesian format: ( *real part, imaginary part* ).  
   
-### <a name="remarks"></a>설명  
- 출력 스트림이 오버로드어 모든 형태의 복소수를 허용하며 기본 출력 형식은 직각좌표 형식입니다.  
+### <a name="remarks"></a>Remarks  
+ The output stream is overloaded so that it will accept any form of a complex number, and its default output format is the Cartesian format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_insert.cpp  
@@ -704,7 +718,7 @@ The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같은지 테스트합니다.  
+ Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -724,22 +738,22 @@ bool operator==(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>반환 값  
- 숫자가 같으면 **true**이고, 숫자가 같지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are equal; **false** if numbers are not equal.  
   
-### <a name="remarks"></a>설명  
- 두 복소수는 해당 실수 부분도 같고 해당 허수 부분도 같은 경우에만 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 비교 테스트를 실행할 수 있습니다.  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_EQ.cpp  
@@ -840,7 +854,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- 입력 스트림에서 복소수 값을 추출합니다.  
+ Extracts a complex value from the input stream.  
   
 ```  
  
@@ -850,26 +864,26 @@ basic_istream<Elem, Traits>& operator>>(
    complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Istr`  
- 복소수를 추출할 입력 스트림입니다.  
+ The input stream from which the complex number is being extracted.  
   
  `right`  
- 입력 스트림에서 추출하는 복소수입니다.  
+ The complex number that is being extracted from the input stream.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 복소수의 값을 읽고 `Istr` 로 반환 하 고 `right`합니다.  
+### <a name="return-value"></a>Return Value  
+ Reads the value of the specified complex number from `Istr` and returns it into `right`.  
   
-### <a name="remarks"></a>설명  
- 유효한 입력 형식은 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The valid input formats are  
   
-- *(실수부, 허수부)*  
+- *( real part, imaginary part )*  
   
-- *(실수부)*  
+- *( real part )*  
   
-- *실수부*  
+- *real part*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_extract.cpp  
@@ -896,7 +910,7 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<complex>](../standard-library/complex.md)
 
 

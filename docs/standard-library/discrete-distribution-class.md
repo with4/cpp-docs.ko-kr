@@ -1,5 +1,5 @@
 ---
-title: "discrete_distribution 클래스 | Microsoft 문서"
+title: discrete_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discrete_distribution
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
 - random/std::discrete_distribution::probabilities
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- discrete_distribution class
+- std::discrete_distribution [C++]
+- std::discrete_distribution [C++], reset
+- std::discrete_distribution [C++], probabilities
+- std::discrete_distribution [C++], param
+- std::discrete_distribution [C++], min
+- std::discrete_distribution [C++], max
+- std::discrete_distribution [C++], param_type
+- std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
 caps.latest.revision: 21
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2118eb841d1faf4f137ac30889443768ab6d0d89
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution 클래스
-각 간격의 확률이 균일하고 폭이 균등한 간격이 있는 이산 정수 분포를 생성합니다.  
+# <a name="discretedistribution-class"></a>discrete_distribution Class
+Generates a discrete integer distribution that has uniform-width intervals with uniform probability in each interval.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -90,25 +96,25 @@ public:
    result_type max() const;
    };  
 ```   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
- 정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- 이 표본 분포에는 각 간격의 확률이 균일하고 폭이 균등한 간격이 있습니다. 샘플링 분포에 대한 자세한 내용은 [piecewise_linear_distribution 클래스](../standard-library/piecewise-linear-distribution-class.md) 및 [piecewise_constant_distribution 클래스](../standard-library/piecewise-constant-distribution-class.md)를 참조하세요.  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has uniform-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md).  
   
- 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+ The following table links to articles about individual members:  
   
 |||  
 |-|-|  
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
 |`discrete_distribution::operator()`|[param_type](#param_type)|  
   
- 속성 함수 `vector<double> probabilities()`는 생성된 각 정수에 대한 개별 확률을 반환합니다.  
+ The property function `vector<double> probabilities()` returns the individual probabilities for each integer generated.  
   
- 분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -187,13 +193,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::    
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
- 분포를 생성합니다.  
+ Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -214,46 +220,46 @@ discrete_distribution(size_t count, double low, double high, UnaryOperation weig
 explicit discrete_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- 분포를 생성할 목록의 첫 번째 반복기입니다.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- 분포를 생성할 목록의 마지막 반복기입니다(반복기는 끝에 빈 요소를 사용하기 때문에 제외됨).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- 분포를 생성할 [initializer_list](../cpp/initializers.md)입니다.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- 분포 범위의 요소 수입니다. `count==0`이면 기본 생성자와 동일합니다(항상 0 생성).  
+ The number of elements in the distribution range. If `count==0`, equivalent to the default constructor (always generates zero).  
   
 *low*  
- 분포 범위의 가장 작은 값입니다.  
+ The lowest value in the distribution range.  
   
 *high*  
- 분포 범위의 가장 큰 값입니다.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- 분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 `double`로 변환할 수 있어야 합니다.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
- 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-기본 생성자는 저장된 확률 값에 값이 1인 요소가 있는 개체를 생성합니다. 그러면 0을 항상 생성하는 분포가 됩니다.  
+### <a name="remarks"></a>Remarks  
+The default constructor constructs an object whose stored probability value has one element with value 1. This will result in a distribution that always generates a zero.  
   
-*firstW* 및 *lastW* 매개 변수가 포함된 반복기 범위 생성자는 간격 시퀀스 [*firstW*, *lastW*)에 대해 반복기에서 가져온 가중치 값을 사용하여 분포 개체를 생성합니다.  
+The iterator range constructor that has parameters *firstW* and *lastW* constructs a distribution object by using weight values taken from the iterators over the interval sequence [*firstW*, *lastW*).  
   
-*weightlist* 매개 변수가 포함된 이니셜라이저 목록 생성자는 이니셜라이저 목록 *weightlist*의 가중치를 사용하여 분포 개체를 생성합니다.  
+The initializer list constructor that has a *weightlist* parameter constructs a distribution object with weights from the intializer list *weightlist*.  
   
-*count*, *low*, *high* 및 *weightfunc* 매개 변수가 포함된 생성자는 다음 규칙에 따라 초기화된 분포 개체를 생성합니다.  
--  *count* < 1, **n** = 1이라 기본 생성자와 같은 경우 항상 0을 생성합니다.  
--  *count* > 0, **n** = *count*인 경우 Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
+The constructor that has *count*, *low*, *high*, and *weightfunc* parameters constructs a distribution object initialized based on these rules:  
+-  If *count* < 1, **n** = 1, and as such is equivalent to the default constructor, always generating zero.  
+-  If *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
-`param_type` 매개 변수 *parm*이 포함된 생성자는 *parm*을 사용하여 분포 개체를 저장된 매개 변수 구조체로 생성합니다.  
+The constructor that has a `param_type` parameter *parm* constructs a distribution object using *parm* as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  discrete_distribution::param_type  
- 분포의 모든 매개 변수를 저장합니다.  
+ Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -277,35 +283,35 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- 분포를 생성할 목록의 첫 번째 반복기입니다.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- 분포를 생성할 목록의 마지막 반복기입니다(반복기는 끝에 빈 요소를 사용하기 때문에 제외됨).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- 분포를 생성할 [initializer_list](../cpp/initializers.md)입니다.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- 분포 범위의 요소 수입니다. *count*가 0이면 기본 생성자와 같습니다(항상 0 생성).  
+ The number of elements in the distribution range. If *count* is 0, this is equivalent to the default constructor (always generates zero).  
   
 *low*  
- 분포 범위의 가장 작은 값입니다.  
+ The lowest value in the distribution range.  
   
 *high*  
- 분포 범위의 가장 큰 값입니다.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- 분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 `double`로 변환할 수 있어야 합니다.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *right*  
- 이 매개 변수와 비교할 `param_type` 개체입니다.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
- 이 매개 변수 패키지를 `operator()`에 전달하여 반환 값을 생성할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This parameter package can be passed to `operator()` to generate the return value.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "front_insert_iterator 클래스 | Microsoft 문서"
+title: front_insert_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,13 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::front_insert_iterator
-- front_insert_iterator
 - iterator/std::front_insert_iterator::container_type
 - iterator/std::front_insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- front_insert_iterator class
+- std::front_insert_iterator [C++]
+- std::front_insert_iterator [C++], container_type
+- std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 caps.latest.revision: 17
 author: corob-msft
@@ -36,67 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a4c0051b8117dbd46d3dab1ad5453f7aaabfbd49
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="frontinsertiterator-class"></a>front_insert_iterator 클래스
-출력 반복기의 요구 사항을 충족하는 반복기 어댑터에 대해 설명합니다. 요소를 덮어쓰는 것이 아니라, 시퀀스 앞 부분에 요소를 삽입하므로 C++ 시퀀스 컨테이너의 반복기가 제공한 덮어쓰기 의미 체계와 다른 의미 체계를 제공합니다. `front_insert_iterator` 클래스는 컨테이너 형식에 대해 템플릿화됩니다.  
+# <a name="frontinsertiterator-class"></a>front_insert_iterator Class
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into the front of a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence containers. The `front_insert_iterator` class is templatized on the type of container.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Container>  
 class front_insert_iterator;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Container`  
- `front_insert_iterator`가 앞에 요소를 삽입할 컨테이너의 형식입니다.  
+ The type of container into the front of which elements are to be inserted by a `front_insert_iterator`.  
   
-## <a name="remarks"></a>설명  
- 컨테이너는 가능할 경우 시퀀스 처음에 분할된 시간으로 요소를 삽입하는 전면 삽입 시퀀스에 대한 요구 사항을 충족해야 합니다. [deque 클래스](../standard-library/deque-class.md) 및 [list](../standard-library/list-class.md) 클래스에서 정의한 C++ 표준 라이브러리 시퀀스 컨테이너는 필요한 `push_front` 멤버 함수를 제공하며 이러한 요구 사항을 충족합니다. 반면 [vector 클래스](../standard-library/vector-class.md)에서 정의한 시퀀스 컨테이너는 이러한 요구 사항을 충족하지 않으며 `front_insert_iterator`에서 사용할 수 있도록 적용할 수 없습니다. `front_insert_iterator`는 항상 컨테이너를 사용하여 초기화해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The container must satisfy the requirements for a front insertion sequence where is it possible to insert elements at the beginning of the sequence in amortized constant time. The C++ Standard Library sequence containers defined by the [deque Class](../standard-library/deque-class.md) and [list Class](../standard-library/list-class.md) provide the needed `push_front` member function and satisfy these requirements. By contrast, sequence containers defined by the [vector Class](../standard-library/vector-class.md) do not satisfy these requirements and cannot be adapted to use with `front_insert_iterator`s. A `front_insert_iterator` must always be initialized with its container.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator)|지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.|  
+|[front_insert_iterator](#front_insert_iterator)|Creates an iterator that can insert elements at the front of a specified container object.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|전면 삽입 대상인 컨테이너를 나타내는 형식입니다.|  
-|[reference](#reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|  
+|[container_type](#container_type)|A type that represents the container into which a front insertion is to be made.|  
+|[reference](#reference)|A type that provides a reference to an element in a sequence controlled by the associated container.|  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 역참조 연산자 * `i` = `x`|  
-|[operator++](#op_add_add)|값을 저장할 다음 위치에 `front_insert_iterator`를 증가시킵니다.|  
-|[operator=](#op_eq)|전면 삽입을 위해 출력 반복기 식을 구현하는 데 사용된 할당 연산자 * `i` = `x`|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x` for a front insertion.|  
+|[operator++](#op_add_add)|Increments the `front_insert_iterator` to the next location into which a value may be stored.|  
+|[operator=](#op_eq)|Assignment operator used to implement the output iterator expression * `i` = `x` for a front insertion.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더**: \<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<iterator>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="container_type"></a>  front_insert_iterator::container_type  
- 전면 삽입 대상인 컨테이너를 나타내는 형식입니다.  
+ A type that represents the container into which a front insertion is to be made.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Container**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_container_type.cpp  
@@ -127,20 +128,20 @@ The list L2 is: ( 40 10 20 ).
 ```  
   
 ##  <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
- 지정된 컨테이너 개체 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.  
+ Creates an iterator that can insert elements at the front of a specified container object.  
   
 ```  
 explicit front_insert_iterator(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- `front_insert_iterator`에서 요소를 삽입할 대상 컨테이너 개체입니다.  
+ The container object into which the `front_insert_iterator` is to insert elements.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수 컨테이너 개체에 대한 `front_insert_iterator`입니다.  
+### <a name="return-value"></a>Return Value  
+ A `front_insert_iterator` for the parameter container object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_front_insert_iterator.cpp  
@@ -187,19 +188,19 @@ After the front insertions, the list L is:
 ```  
   
 ##  <a name="op_star"></a>  front_insert_iterator::operator*  
- 주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.  
+ Dereferences the insert iterator returning the element it addresses.  
   
 ```  
 front_insert_iterator<Container>& operator*();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 멤버 함수는 주소가 지정된 요소의 값을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function returns the value of the element addressed.  
   
-### <a name="remarks"></a>설명  
- 출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ Used to implement the output iterator expression **\*Iter** = **value**. If **Iter** is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_deref.cpp  
@@ -245,7 +246,7 @@ After the front insertions, the list L is:
 ```  
   
 ##  <a name="op_add_add"></a>  front_insert_iterator::operator++  
- 값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.  
+ Increments the `back_insert_iterator` to the next location into which a value may be stored.  
   
 ```  
 front_insert_iterator<Container>& operator++();
@@ -253,13 +254,13 @@ front_insert_iterator<Container>& operator++();
 front_insert_iterator<Container> operator++(int);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 값을 저장할 수 있는 다음 위치의 주소를 지정하는 `front_insert_iterator`입니다.  
+### <a name="return-value"></a>Return Value  
+ A `front_insert_iterator` addressing the next location into which a value may be stored.  
   
-### <a name="remarks"></a>설명  
- preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ Both preincrementation and postincrementation operators return the same result.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_op_incre.cpp  
@@ -293,7 +294,7 @@ The list L1 is: ( 30 20 10 ).
 ```  
   
 ##  <a name="op_eq"></a>  front_insert_iterator::operator=  
- 컨테이너의 앞에 값을 추가(푸시)합니다.  
+ Appends (pushes) a value onto the front of the container.  
   
 ```  
 front_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -301,23 +302,23 @@ front_insert_iterator<Container>& operator=(typename Container::const_reference 
 front_insert_iterator<Container>& operator=(typename Container::value_type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- 컨테이너에 할당할 값입니다.  
+ The value to be assigned to the container.  
   
-### <a name="return-value"></a>반환 값  
- 컨테이너의 앞에 삽입된 마지막 요소에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the last element inserted at the front of the container.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 연산자는 `container.push_front( val)`을 계산하고 나서 `*this`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member operator evaluates `container.push_front( val)`, then returns `*this`.  
   
- 두 번째 멤버 연산자는 다음을 계산합니다.  
+ The second member operator evaluates  
   
  `container->push_front((typename Container::value_type&&) val)`,  
   
- 그런 다음 `*this`를 반환합니다.  
+ then returns `*this`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_op_assign.cpp  
@@ -351,13 +352,13 @@ The list L1 is: ( 30 20 10 ).
 ```  
   
 ##  <a name="reference"></a>  front_insert_iterator::reference  
- 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to an element in a sequence controlled by the associated container.  
   
 ```  
 typedef typename Container::reference reference;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // front_insert_iterator_reference.cpp  
@@ -393,9 +394,9 @@ The first element in the list L is: 30.
 *\  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

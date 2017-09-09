@@ -1,5 +1,5 @@
 ---
-title: "allocator_traits 클래스 | Microsoft 문서"
+title: allocator_traits Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,17 +48,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d4fdcb8af6fa8b33ee6153563770b9bf00f02942
+helpviewer_keywords:
+- std::allocator_traits [C++]
+- std::allocator_traits [C++], propagate_on_container_move_assignment
+- std::allocator_traits [C++], const_pointer
+- std::allocator_traits [C++], propagate_on_container_swap
+- std::allocator_traits [C++], propagate_on_container_copy_assignment
+- std::allocator_traits [C++], difference_type
+- std::allocator_traits [C++], allocator_type
+- std::allocator_traits [C++], value_type
+- std::allocator_traits [C++], pointer
+- std::allocator_traits [C++], size_type
+- std::allocator_traits [C++], const_void_pointer
+- std::allocator_traits [C++], void_pointer
+- std::allocator_traits [C++], allocate
+- std::allocator_traits [C++], construct
+- std::allocator_traits [C++], deallocate
+- std::allocator_traits [C++], destroy
+- std::allocator_traits [C++], max_size
+- std::allocator_traits [C++], select_on_container_copy_construction
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e76087fe07ce065aeb19de18acc17464e6b4e4a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatortraits-class"></a>allocator_traits 클래스
-템플릿 클래스는 *할당자 형식*을 보완하는 개체를 설명합니다. 할당자 형식은 할당된 저장소를 관리하는 데 사용되는 할당자 개체를 설명하는 형식입니다. 특히 할당자 형식 `Alloc`에 대해서는 할당자를 사용할 수 있는 컨테이너에 필요한 모든 정보를 확인하기 위해 `allocator_traits<Alloc>`를 사용할 수 있습니다. 자세한 내용은 기본 [allocator 클래스](../standard-library/allocator-class.md)를 참조하세요.  
+# <a name="allocatortraits-class"></a>allocator_traits Class
+The template class describes an object that supplements an *allocator type*. An allocator type is any type that describes an allocator object that is used for managing allocated storage. Specifically, for any allocator type `Alloc`, you can use `allocator_traits<Alloc>` to determine all the information that is needed by an allocator-enabled container. For more information, see the default [allocator Class](../standard-library/allocator-class.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Alloc>
@@ -67,39 +86,39 @@ class allocator_traits;
   
 ### <a name="typedefs"></a>Typedefs  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`allocator_traits::allocator_type`|이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.|  
-|`allocator_traits::const_pointer`|잘 구성된 형식인 경우 이 형식은 `Alloc::const_pointer`이고, 아닌 경우 `pointer_traits<pointer>::rebind<const value_type>`입니다.|  
-|`allocator_traits::const_void_pointer`|잘 구성된 형식인 경우 이 형식은 `Alloc::const_void_pointer`이고, 아닌 경우 `pointer_traits<pointer>::rebind<const void>`입니다.|  
-|`allocator_traits::difference_type`|잘 구성된 형식인 경우 이 형식은 `Alloc::difference_type`이고, 아닌 경우 `pointer_traits<pointer>::difference_type`입니다.|  
-|`allocator_traits::pointer`|잘 구성된 형식인 경우 이 형식은 `Alloc::pointer`이고, 아닌 경우 `value_type *`입니다.|  
-|`allocator_traits::propagate_on_container_copy_assignment`|잘 구성된 형식인 경우 이 형식은 `Alloc::propagate_on_container_copy_assignment`이고, 아닌 경우 `false_type`입니다.|  
-|`allocator_traits::propagate_on_container_move_assignment`|잘 구성된 형식인 경우 이 형식은 `Alloc::propagate_on_container_move_assignment`이고, 아닌 경우 `false_type`입니다. 형식이 true이면, 할당자를 사용할 수 있는 컨테이너는 이동 할당 시 저장된 할당자를 복사합니다.|  
-|`allocator_traits::propagate_on_container_swap`|잘 구성된 형식인 경우 이 형식은 `Alloc::propagate_on_container_swap`이고, 아닌 경우 `false_type`입니다. 형식이 true이면, 할당자를 사용할 수 있는 컨테이너는 교환 시 저장된 할당자를 교환합니다.|  
-|`allocator_traits::size_type`|잘 구성된 형식인 경우 이 형식은 `Alloc::size_type`이고, 아닌 경우 `make_unsigned<difference_type>::type`입니다.|  
-|`allocator_traits::value_type`|이 형식은 `Alloc::value_type`의 동의어입니다.|  
-|`allocator_traits::void_pointer`|잘 구성된 형식인 경우 이 형식은 `Alloc::void_pointer`이고, 아닌 경우 `pointer_traits<pointer>::rebind<void>`입니다.|  
+|`allocator_traits::allocator_type`|This type is a synonym for the template parameter `Alloc`.|  
+|`allocator_traits::const_pointer`|This type is `Alloc::const_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const value_type>`.|  
+|`allocator_traits::const_void_pointer`|This type is `Alloc::const_void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const void>`.|  
+|`allocator_traits::difference_type`|This type is `Alloc::difference_type`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::difference_type`.|  
+|`allocator_traits::pointer`|This type is `Alloc::pointer`, if that type is well-formed; otherwise, this type is `value_type *`.|  
+|`allocator_traits::propagate_on_container_copy_assignment`|This type is `Alloc::propagate_on_container_copy_assignment`, if that type is well-formed; otherwise, this type is `false_type`.|  
+|`allocator_traits::propagate_on_container_move_assignment`|This type is `Alloc::propagate_on_container_move_assignment`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container copies its stored allocator on a move assignment.|  
+|`allocator_traits::propagate_on_container_swap`|This type is `Alloc::propagate_on_container_swap`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container swaps its stored allocator on a swap.|  
+|`allocator_traits::size_type`|This type is `Alloc::size_type`, if that type is well-formed; otherwise, this type is `make_unsigned<difference_type>::type`.|  
+|`allocator_traits::value_type`|This type is a synonym for `Alloc::value_type`.|  
+|`allocator_traits::void_pointer`|This type is `Alloc::void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<void>`.|  
   
-### <a name="static-methods"></a>정적 메서드  
- 다음 정적 메서드는 지정된 할당자 매개 변수에서 해당 메서드를 호출합니다.  
+### <a name="static-methods"></a>Static Methods  
+ The following static methods call the corresponding method on a given allocator parameter.  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[allocate](#allocate)|지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.|  
-|[construct](#construct)|지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.|  
-|[deallocate](#deallocate)|지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.|  
-|[destroy](#destroy)|지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.|  
-|[max_size](#max_size)|지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.|  
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.|  
+|[allocate](#allocate)|Static method that allocates memory by using the given allocator parameter.|  
+|[construct](#construct)|Static method that uses a specified allocator to construct an object.|  
+|[deallocate](#deallocate)|Static method that uses a specified allocator to deallocate a specified number of objects.|  
+|[destroy](#destroy)|Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.|  
+|[max_size](#max_size)|Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Static method that calls `select_on_container_copy_construction` on the specified allocator.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-##  <a name="allocate"></a>allocator_traits:: allocate
- 지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.  
+##  <a name="allocate"></a>  allocator_traits::allocate
+ Static method that allocates memory by using the given allocator parameter.  
   
 ```cpp  
 static pointer allocate(Alloc& al, size_type count);
@@ -108,46 +127,46 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
  `count`  
- 할당할 요소의 수입니다.  
+ The number of elements to allocate.  
   
  `hint`  
- 요청 이전에 할당된 개체의 주소를 찾음으로써 저장소에 대한 요청을 충족하여 할당자 개체를 지원할 수 있는 `const_pointer`입니다. Null 포인터는 힌트 없음으로 처리됩니다.  
+ A `const_pointer` that might assist the allocator object in satisfying the request for storage by locating the address of an allocated object prior to the request. A null pointer is treated as no hint.  
   
-### <a name="return-value"></a>반환 값  
- 각 메서드는 할당된 개체에 대한 포인터를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each method returns a pointer to the allocated object.  
   
- 첫 번째 정적 메서드는 `al.allocate(count)`를 반환합니다.  
+ The first static method returns `al.allocate(count)`.  
   
- 해당 식이 잘 구성되어 있는 경우 두 번째 메서드는 `al.allocate(count, hint)`를 반환하고, 아닌 경우 `al.allocate(count)`를 반환합니다.  
+ The second method returns `al.allocate(count, hint)`, if that expression is well formed; otherwise it returns `al.allocate(count)`.  
   
-##  <a name="construct"></a>allocator_traits:: construct
- 지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.  
+##  <a name="construct"></a>  allocator_traits::construct
+ Static method that uses a specified allocator to construct an object.  
   
 ```cpp  
 template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
  `ptr`  
- 개체를 생성할 위치에 대한 포인터입니다.  
+ A pointer to the location where the object is to be constructed.  
   
  `args`  
- 개체 생성자에 전달되는 인수 목록입니다.  
+ A list of arguments that is passed to the object constructor.  
   
-### <a name="remarks"></a>설명  
- 해당 식이 잘 구성되어 있는 경우 정적 멤버 함수는 `al.construct(ptr, args...)`를 호출하고, 아닌 경우 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`를 평가합니다.  
+### <a name="remarks"></a>Remarks  
+ The static member function calls `al.construct(ptr, args...)`, if that expression is well formed; otherwise it evaluates `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="deallocate"></a>allocator_traits:: deallocate
- 지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.  
+##  <a name="deallocate"></a>  allocator_traits::deallocate
+ Static method that uses a specified allocator to deallocate a specified number of objects.  
   
 ```cpp  
 static void deallocate(Alloc al,
@@ -155,72 +174,72 @@ static void deallocate(Alloc al,
     size_type count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
  `ptr`  
- 할당을 취소할 개체의 시작 위치에 대한 포인터입니다.  
+ A pointer to the starting location of the objects to be deallocated.  
   
  `count`  
- 할당을 취소할 개체의 수입니다.  
+ The number of objects to deallocate.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 `al.deallocate(ptr, count)`를 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.deallocate(ptr, count)`.  
   
- 이 메서드는 아무것도 throw하지 않습니다.  
+ This method throws nothing.  
   
-##  <a name="destroy"></a>allocator_traits:: destroy
- 지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.  
+##  <a name="destroy"></a>  allocator_traits::destroy
+ Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.  
   
 ```cpp  
 template <class Uty>
 static void destroy(Alloc& al, Uty* ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
  `ptr`  
- 개체의 위치에 대한 포인터입니다.  
+ A pointer to the location of the object.  
   
-### <a name="remarks"></a>설명  
- 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.destroy(ptr)`를 호출하고, 아닌 경우 `ptr->~Uty()`를 평가합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.destroy(ptr)`, if that expression is well formed; otherwise it evaluates `ptr->~Uty()`.  
   
-##  <a name="max_size"></a>allocator_traits:: max_size
- 지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.  
+##  <a name="max_size"></a>  allocator_traits::max_size
+ Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.  
   
 ```cpp  
 static size_type max_size(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
-### <a name="remarks"></a>설명  
- 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.max_size()`를 반환하고, 아닌 경우 `numeric_limits<size_type>::max()`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns `al.max_size()`, if that expression is well formed; otherwise it returns `numeric_limits<size_type>::max()`.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
- 지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.  
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
+ Static method that calls `select_on_container_copy_construction` on the specified allocator.  
   
 ```cpp  
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `al`  
- 할당자 개체입니다.  
+ An allocator object.  
   
-### <a name="return-value"></a>반환 값  
- 잘 구성된 형식인 경우 이 메서드는 `al.select_on_container_copy_construction()`를 반환하고, 아닌 경우 `al`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `al.select_on_container_copy_construction()`, if that type is well formed; otherwise it returns `al`.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 연결된 컨테이너를 복사하여 생성할 할당자를 지정하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is used to specify an allocator when the associated container is copy-constructed.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [pointer_traits 구조체](../standard-library/pointer-traits-struct.md)   
- [scoped_allocator_adaptor 클래스](../standard-library/scoped-allocator-adaptor-class.md)
+ [pointer_traits Struct](../standard-library/pointer-traits-struct.md)   
+ [scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)
 

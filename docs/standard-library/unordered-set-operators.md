@@ -1,48 +1,52 @@
 ---
-title: "&lt;unordered_set&gt; 연산자 | Microsoft Docs"
+title: '&lt;unordered_set&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- unordered_set/std::operator!=
+- unordered_set/std::operator==
+dev_langs:
+- C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5fbd22c2f21eaa36e75afd051ab3fbaa5858e5a2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a967b858b6f1b31c623a15aa32655b6a83b865bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 연산자
+# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; operators
 |||||  
 |-|-|-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 [unordered_set](../standard-library/unordered-set-class.md) 개체가 우변에 있는 unordered_set 개체와 같지 않은지 테스트합니다.  
+ Tests whether the [unordered_set](../standard-library/unordered-set-class.md) object on the left side of the operator is not equal to the unordered_set object on the right side.  
   
 ```
 bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_set` 형식의 개체입니다.  
+ An object of type `unordered_set`.  
   
  `right`  
- `unordered_set` 형식의 개체입니다.  
+ An object of type `unordered_set`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_set가 같지 않으면 `true`이고 같으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_sets are not equal; `false` if they are equal.  
   
-### <a name="remarks"></a>설명  
- unordered_set 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_set는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_set objects is not affected by the arbitrary order in which they store their elements. Two unordered_sets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_set_ne.cpp   
@@ -79,7 +83,7 @@ int main()
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `c1 != c2: true`  
   
@@ -88,26 +92,26 @@ int main()
  `c2 != c3: true`  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 [unordered_set](../standard-library/unordered-set-class.md) 개체가 우변에 있는 unordered_set 개체와 같은지 테스트합니다.  
+ Tests whether the [unordered_set](../standard-library/unordered-set-class.md) object on the left side of the operator is equal to the unordered_set object on the right side.  
   
 ```
 bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_set` 형식의 개체입니다.  
+ An object of type `unordered_set`.  
   
  `right`  
- `unordered_set` 형식의 개체입니다.  
+ An object of type `unordered_set`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_set가 같으면 `true`이고 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_sets are equal; `false` if they are not equal.  
   
-### <a name="remarks"></a>설명  
- unordered_set 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_set는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_set objects is not affected by the arbitrary order in which they store their elements. Two unordered_sets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_set_eq.cpp   
@@ -144,7 +148,7 @@ int main()
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `c1 == c2: false`  
   
@@ -153,26 +157,26 @@ int main()
  `c2 == c3: false`  
   
 ##  <a name="op_neq_unordered_multiset"></a>  operator!=  
- 연산자의 좌변에 있는 [unordered_multiset](../standard-library/unordered-multiset-class.md) 개체가 우변에 있는 unordered_multiset 개체와 같지 않은지 테스트합니다.  
+ Tests whether the [unordered_multiset](../standard-library/unordered-multiset-class.md) object on the left side of the operator is not equal to the unordered_multiset object on the right side.  
   
 ```
 bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_multiset` 형식의 개체입니다.  
+ An object of type `unordered_multiset`.  
   
  `right`  
- `unordered_multiset` 형식의 개체입니다.  
+ An object of type `unordered_multiset`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_multiset가 같지 않으면 `true`이고 같으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_multisets are not equal; `false` if they are equal.  
   
-### <a name="remarks"></a>설명  
- unordered_multiset 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multiset는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_multiset objects is not affected by the arbitrary order in which they store their elements. Two unordered_multisets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multiset_ne.cpp   
@@ -212,7 +216,7 @@ int main()
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `c1 != c2: true`  
   
@@ -221,26 +225,26 @@ int main()
  `c2 != c3: true`  
   
 ##  <a name="op_eq_eq_unordered_multiset"></a>  operator==  
- 연산자의 좌변에 있는 [unordered_multiset](../standard-library/unordered-multiset-class.md) 개체가 우변에 있는 unordered_multiset 개체와 같은지 테스트합니다.  
+ Tests whether the [unordered_multiset](../standard-library/unordered-multiset-class.md) object on the left side of the operator is equal to the unordered_multiset object on the right side.  
   
 ```
 bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `unordered_multiset` 형식의 개체입니다.  
+ An object of type `unordered_multiset`.  
   
  `right`  
- `unordered_multiset` 형식의 개체입니다.  
+ An object of type `unordered_multiset`.  
   
-### <a name="return-value"></a>반환 값  
- unordered_multiset가 같으면 `true`이고 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the unordered_multisets are equal; `false` if they are not equal.  
   
-### <a name="remarks"></a>설명  
- unordered_multiset 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multiset는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between unordered_multiset objects is not affected by the arbitrary order in which they store their elements. Two unordered_multisets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multiset_eq.cpp   
@@ -280,7 +284,7 @@ int main()
   
 ```  
   
- **출력:**  
+ **Output:**  
   
  `c1 == c2: false`  
   
@@ -288,7 +292,7 @@ int main()
   
  `c2 == c3: false`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

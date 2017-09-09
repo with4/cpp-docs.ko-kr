@@ -1,5 +1,5 @@
 ---
-title: "treat_as_floating_point 구조체 | Microsoft Docs"
+title: treat_as_floating_point Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,33 +31,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 9d9e6b0b281fb97475b0c23acb4bf7d0fc391a52
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6cbf8b77c47fb62e29da5ab3d298dbad8e178517
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point 구조체
-`Rep`가 부동 소수점 형식으로 처리될 수 있는지를 지정합니다.  
+# <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point Structure
+Specifies whether `Rep` can be treated as a floating-point type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Rep>  
 struct treat_as_floating_point : is_floating_point<Rep>;  
 ```  
   
-## <a name="remarks"></a>설명  
- 특수화 `treat_as_floating_point<Rep>`가 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 파생되는 경우에만 `Rep`를 부동 소수점 형식으로 처리할 수 있습니다. 사용자 형식 정의에 대해 템플릿 클래스를 특수화할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ `Rep` can be treated as a floating-point type only when the specialization `treat_as_floating_point<Rep>` is derived from [true_type](../standard-library/type-traits-typedefs.md#true_type). The template class can be specialized for a user-defined type.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<c h >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **네임스페이스:** std::chrono  
+ **Namespace:** std::chrono  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

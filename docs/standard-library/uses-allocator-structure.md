@@ -1,5 +1,5 @@
 ---
-title: "uses_allocator 구조체 | Microsoft Docs"
+title: uses_allocator Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,17 +32,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: fefe7aba7df9c6f41e515017a13cdbe8dba1b56e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2d45875be8731d86943a2faf5cf31125d1435ef2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="usesallocator-structure"></a>uses_allocator 구조체
-항상 true인 특수화입니다.  
+# <a name="usesallocator-structure"></a>uses_allocator Structure
+Specializations that always hold true.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty, class Alloc>
@@ -51,13 +51,13 @@ template <class Ty, class Alloc>
 struct uses_allocator<packaged_task<Ty>, Alloc> : true_type;
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<이후 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "freelist 클래스 | Microsoft 문서"
+title: freelist Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::freelist
-- freelist
 - allocators/stdext::freelist
 - allocators/stdext::freelist::pop
 - allocators/stdext::freelist::push
 dev_langs:
 - C++
 helpviewer_keywords:
-- freelist class
+- stdext::freelist
+- stdext::freelist [C++], pop
+- stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 caps.latest.revision: 17
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e08b6f737616cf764f797681c5492840a9b044a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5c7366bbf75bb2bc3de753c4bca23d69d279d1a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="freelist-class"></a>freelist 클래스
-메모리 블록의 목록을 관리합니다.  
+# <a name="freelist-class"></a>freelist Class
+Manages a list of memory blocks.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Sz, class Max>  
@@ -55,76 +55,76 @@ class freelist
  : public Max
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|할당할 배열의 요소 수입니다.|  
-|`Max`|사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|  
+|`Sz`|The number of elements in the array to be allocated.|  
+|`Max`|The max class representing the maximum number of elements to be stored in the free list. The max class can be [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md), or [max_variable_size](../standard-library/max-variable-size-class.md).|  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 `Max`에 전달된 최대 클래스를 통해 결정된 목록의 최대 길이를 사용하여 크기가 `Sz`인 메모리 블록의 목록을 관리합니다.  
+## <a name="remarks"></a>Remarks  
+ This template class manages a list of memory blocks of size `Sz` with the maximum length of the list determined by the max class passed in `Max`.  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[freelist](#freelist)|`freelist` 형식의 개체를 생성합니다.|  
-  
-### <a name="member-functions"></a>멤버 함수  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[pop](#pop)|사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.|  
-|[push](#push)|목록에 메모리 블록을 추가합니다.|  
+|[freelist](#freelist)|Constructs an object of type `freelist`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **네임스페이스:** stdext  
+|||  
+|-|-|  
+|[pop](#pop)|Removes the first memory block from the free list.|  
+|[push](#push)|Adds a memory block to the list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="freelist"></a>  freelist::freelist  
- `freelist` 형식의 개체를 생성합니다.  
+ Constructs an object of type `freelist`.  
   
 ```
 freelist();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pop"></a>  freelist::pop  
- 사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.  
+ Removes the first memory block from the free list.  
   
 ```
 void *pop();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 목록에서 제거된 메모리 블록의 포인터를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the memory block removed from the list.  
   
-### <a name="remarks"></a>설명  
- 목록이 비어 있으면 멤버 함수는 `NULL`을 반환합니다. 그렇지 않으면 목록에서 첫 번째 메모리 블록을 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `NULL` if the list is empty. Otherwise, it removes the first memory block from the list.  
   
 ##  <a name="push"></a>  freelist::push  
- 목록에 메모리 블록을 추가합니다.  
+ Adds a memory block to the list.  
   
 ```
 bool push(void* ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|  
+|`ptr`|A pointer to the memory block to be added to the free list.|  
   
-### <a name="return-value"></a>반환 값  
- 최대 클래스의 `full` 함수가 `false`를 반환하면 `true`이고, 그렇지 않으면 `push` 함수가 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the `full` function of the max class returns `false`; otherwise, the `push` function returns `false`.  
   
-### <a name="remarks"></a>설명  
- 최대 클래스의 `full` 함수가 `false`를 반환하면 이 멤버 함수는 `ptr`가 가리키는 메모리 블록을 목록의 시작 부분에 추가합니다.  
+### <a name="remarks"></a>Remarks  
+ If the `full` function of the max class returns `false`, this member function adds the memory block pointed to by `ptr` to the head of the list.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 
