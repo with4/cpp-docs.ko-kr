@@ -1,5 +1,5 @@
 ---
-title: "CRichEditCtrl 클래스 | Microsoft Docs"
+title: CRichEditCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -109,126 +109,126 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.translationtype: MT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: 41ac94d20cf50cff78fd52deeb24e38067374bfe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cricheditctrl-class"></a>CRichEditCtrl 클래스
-Rich Edit 컨트롤의 기능을 제공합니다.  
+# <a name="cricheditctrl-class"></a>CRichEditCtrl Class
+Provides the functionality of the rich edit control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRichEditCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|`CRichEditCtrl` 개체를 생성합니다.|  
+|[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Constructs a `CRichEditCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCtrl::CanPaste](#canpaste)|클립보드의 내용을이 rich edit 컨트롤에 붙여 넣을 수 하는 경우를 결정 합니다.|  
-|[CRichEditCtrl::CanRedo](#canredo)|컨트롤의 redo queue의 작업이 있는지 여부를 결정 합니다.|  
-|[CRichEditCtrl::CanUndo](#canundo)|편집 작업을 수 있는 경우를 결정 합니다.|  
-|[CRichEditCtrl::CharFromPos](#charfrompos)|편집 컨트롤의 클라이언트 영역 내에서 지정된 된 지점에 가장 가까운 문자에 대 한 정보를 검색합니다.|  
-|[CRichEditCtrl::Clear](#clear)|현재 선택을 해제합니다.|  
-|[CRichEditCtrl::Copy](#copy)|현재 선택 영역을 클립보드에 복사 합니다.|  
-|[CRichEditCtrl::Create](#create)|Windows rich edit 컨트롤을 만들고이를 연결 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::CreateEx](#createex)|확장 창 스타일 지정 된 Windows rich edit 컨트롤을 만들고와 연결이 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::Cut](#cut)|클립보드의 현재 선택 항목을 잘라냅니다.|  
-|[CRichEditCtrl::DisplayBand](#displayband)|이 내용의의 일부 표시 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::EmptyUndoBuffer](#emptyundobuffer)|다시 설정 (해제)이 실행 취소 플래그 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::FindText](#findtext)|이 텍스트를 찾습니다 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::FindWordBreak](#findwordbreak)|다음 단어 구분 하기 전이나 후 지정 된 문자 위치를 찾거나 해당 위치에 있는 문자에 대 한 정보를 검색 합니다.|  
-|[CRichEditCtrl::FormatRange](#formatrange)|대상 출력 장치에 대 한 텍스트의 범위를 서식을 지정 합니다.|  
-|[CRichEditCtrl::GetCharPos](#getcharpos)|이 내에서 지정 된 문자의 위치를 결정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetDefaultCharFormat](#getdefaultcharformat)|검색의 현재 기본 문자 특성이 서식 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetEventMask](#geteventmask)|이 대 한 이벤트 마스크 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetFirstVisibleLine](#getfirstvisibleline)|이 표시 되는 최상위 줄 결정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|검색에 대 한 포인터는 `IRichEditOle` 이 rich edit 컨트롤에 대 한 인터페이스입니다.|  
-|[CRichEditCtrl::GetLimitText](#getlimittext)|이에 입력할 수 있는 텍스트 양을 제한을 가져옵니다 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetLine](#getline)|이 텍스트 줄 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetLineCount](#getlinecount)|이 줄의 수를 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetModify](#getmodify)|있는지 여부를 확인이 내용의 `CRichEditCtrl` 개체가 마지막으로 저장 한 이후 변경 합니다.|  
-|[CRichEditCtrl::GetOptions](#getoptions)|서식 있는 편집 컨트롤 옵션을 검색합니다.|  
-|[CRichEditCtrl::GetParaFormat](#getparaformat)|단락 서식이 현재 선택한 항목의 특성을 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetPunctuation](#getpunctuation)|Rich edit 컨트롤에 대 한 현재 문장 부호 문자를 검색합니다. 이 메시지는 아시아 언어 버전의 운영 체제 에서만 사용할 수 있습니다.|  
-|[CRichEditCtrl::GetRect](#getrect)|이 대 한 서식 지정 영역을 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetRedoName](#getredoname)|컨트롤의 모든 큐를 다시 실행 하는 경우 다음 동작의 유형을 검색 합니다.|  
-|[CRichEditCtrl::GetSel](#getsel)|시작과 끝이 현재 선택 항목의 위치를 가져옵니다 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetSelectionCharFormat](#getselectioncharformat)|이 현재 선택한 항목의 특성을 형식 지정 문자 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetSelectionType](#getselectiontype)|이 현재 선택한 항목의 콘텐츠 유형을 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::GetSelText](#getseltext)|이 현재 선택한 항목의 텍스트를 가져옵니다 `CRichEditCtrl` 개체|  
-|[CRichEditCtrl::GetTextLength](#gettextlength)|이 문자에 있는 텍스트의 길이 검색 `CRichEditCtrl` 개체입니다. Null 종결 문자를 포함 하지 않습니다.|  
-|[CRichEditCtrl::GetTextLengthEx](#gettextlengthex)|문자 또는 서식 있는 편집 보기에서 바이트 수를 검색 합니다. Rich edit 컨트롤에서 텍스트의 길이 결정 하는 방법을 지정 하는 플래그의 목록을 허용합니다|  
-|[CRichEditCtrl::GetTextMode](#gettextmode)|Rich edit 컨트롤의 현재 텍스트 모드와 실행 취소 수준을 검색합니다.|  
-|[CRichEditCtrl::GetTextRange](#gettextrange)|지정된 된 텍스트 범위를 검색합니다.|  
-|[CRichEditCtrl::GetUndoName](#getundoname)|있는 경우 다음 실행 취소 동작의 유형을 검색 합니다.|  
-|[CRichEditCtrl::GetWordWrapMode](#getwordwrapmode)|현재 줄 바꿈 및 단어 분리 옵션 rich edit 컨트롤을 검색합니다. 이 메시지는 아시아 언어 버전의 운영 체제 에서만 사용할 수 있습니다.|  
-|[CRichEditCtrl::HideSelection](#hideselection)|표시 하거나 현재 선택 영역을 숨깁니다.|  
-|[CRichEditCtrl::LimitText](#limittext)|텍스트를 입력할 수 있는 정보량을 제한 하는 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::LineFromChar](#linefromchar)|지정 된 문자를 포함 하는 줄을 결정 합니다.|  
-|[CRichEditCtrl::LineIndex](#lineindex)|이 지정된 된 줄의 문자 인덱스를 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::LineLength](#linelength)|이 지정된 된 줄의 길이 검색 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::LineScroll](#linescroll)|이 텍스트가 스크롤됩니다 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::Paste](#paste)|이 서식 있는 편집 컨트롤로 클립보드의 내용을 삽입합니다.|  
-|[CRichEditCtrl::PasteSpecial](#pastespecial)|클립보드의 내용이 지정된 된 데이터 형식에서이 서식 있는 편집 컨트롤에 삽입합니다.|  
-|[CRichEditCtrl::PosFromChar](#posfromchar)|클라이언트 영역 좌표로 edit 컨트롤의 지정 된 문자를 검색합니다.|  
-|[CRichEditCtrl::Redo](#redo)|컨트롤의 redo queue의 다음 작업을 다시 실행합니다.|  
-|[CRichEditCtrl::ReplaceSel](#replacesel)|이 현재 선택한 바꿉니다 `CRichEditCtrl` 지정 된 텍스트가 있는 개체입니다.|  
-|[CRichEditCtrl::RequestResize](#requestresize)|이 `CRichEditCtrl` 요청 크기 조정 알림 보낼 개체입니다.|  
-|[CRichEditCtrl::SetAutoURLDetect](#setautourldetect)|자동 URL을 검색 하는 서식 있는 편집 컨트롤에 활성 상태 인지 여부를 나타냅니다.|  
-|[CRichEditCtrl::SetBackgroundColor](#setbackgroundcolor)|이 명령 프롬프트 창의 배경색 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetDefaultCharFormat](#setdefaultcharformat)|현재 기본 문자 서식이 특성이 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetEventMask](#seteventmask)|이 대 한 이벤트 마스크를 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetModify](#setmodify)|설정 하거나이 대 한 수정 플래그가 해제 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetOLECallback](#setolecallback)|설정 된 `IRichEditOleCallback` 이 rich edit 컨트롤에 대 한 COM 개체입니다.|  
-|[CRichEditCtrl::SetOptions](#setoptions)|이 옵션을 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetParaFormat](#setparaformat)|단락 서식이 현재 선택한 항목의 특성을 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetPunctuation](#setpunctuation)|Rich edit 컨트롤에 대 한 문장 부호 문자를 설정합니다. 이 메시지는 아시아 언어 버전의 운영 체제 에서만 사용할 수 있습니다.|  
-|[CRichEditCtrl::SetReadOnly](#setreadonly)|이 대 한 읽기 전용 옵션이 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetRect](#setrect)|이 대 한 서식 지정 영역을 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetSel](#setsel)|이 선택 항목을 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetSelectionCharFormat](#setselectioncharformat)|이 현재 선택한 항목의 특성을 형식 지정 문자 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetTargetDevice](#settargetdevice)|이 대 한 대상 출력 장치 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetTextMode](#settextmode)|Rich edit 컨트롤의 텍스트 모드 또는 실행 취소 수준을 설정합니다. 메시지는 컨트롤 텍스트가 포함 된 경우 실패 합니다.|  
-|[CRichEditCtrl::SetUndoLimit](#setundolimit)|실행 취소 큐에 저장할 수 있는 작업의 최대 수를 설정 합니다.|  
-|[CRichEditCtrl::SetWordCharFormat](#setwordcharformat)|이 현재 단어의 특성을 형식 지정 문자 설정 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::SetWordWrapMode](#setwordwrapmode)|자동 줄 바꿈 및 단어 분리에 대 한 다양 한 옵션을 설정 편집 컨트롤입니다. 이 메시지는 아시아 언어 버전의 운영 체제 에서만 사용할 수 있습니다.|  
-|[CRichEditCtrl::StopGroupTyping](#stopgrouptyping)|컨트롤에서 수집 작업이 현재 실행 취소 작업에 입력 추가 중지 합니다. 컨트롤이 있는 경우 실행 취소 큐에 새 동작으로 다음 입력 작업을 저장 합니다.|  
-|[CRichEditCtrl::StreamIn](#streamin)|이 텍스트는 입력 스트림에서 삽입 `CRichEditCtrl` 개체입니다.|  
-|[CRichEditCtrl::StreamOut](#streamout)|이 텍스트 저장 `CRichEditCtrl` 출력 스트림으로 개체입니다.|  
-|[CRichEditCtrl::Undo](#undo)|마지막 편집 작업을 취소합니다.|  
+|[CRichEditCtrl::CanPaste](#canpaste)|Determines if the contents of the Clipboard can be pasted into this rich edit control.|  
+|[CRichEditCtrl::CanRedo](#canredo)|Determines whether there are any actions in the control's redo queue.|  
+|[CRichEditCtrl::CanUndo](#canundo)|Determines if an editing operation can be undone.|  
+|[CRichEditCtrl::CharFromPos](#charfrompos)|Retrieves information about the character closest to a specified point in the client area of an edit control.|  
+|[CRichEditCtrl::Clear](#clear)|Clears the current selection.|  
+|[CRichEditCtrl::Copy](#copy)|Copies the current selection to the Clipboard.|  
+|[CRichEditCtrl::Create](#create)|Creates the Windows rich edit control and associates it with this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::CreateEx](#createex)|Creates the Windows rich edit control with the specified extended Windows styles and associates it with this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::Cut](#cut)|Cuts the current selection to the Clipboard.|  
+|[CRichEditCtrl::DisplayBand](#displayband)|Displays a portion of the contents of this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::EmptyUndoBuffer](#emptyundobuffer)|Resets (clears) the undo flag of this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::FindText](#findtext)|Locates text within this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::FindWordBreak](#findwordbreak)|Finds the next word break before or after the specified character position, or retrieves information about the character at that position.|  
+|[CRichEditCtrl::FormatRange](#formatrange)|Formats a range of text for the target output device.|  
+|[CRichEditCtrl::GetCharPos](#getcharpos)|Determines the location of a given character within this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetDefaultCharFormat](#getdefaultcharformat)|Retrieves the current default character formatting attributes in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetEventMask](#geteventmask)|Retrieves the event mask for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetFirstVisibleLine](#getfirstvisibleline)|Determines the topmost visible line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|Retrieves a pointer to the `IRichEditOle` interface for this rich edit control.|  
+|[CRichEditCtrl::GetLimitText](#getlimittext)|Gets the limit on the amount of text a user can enter into this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetLine](#getline)|Retrieves a line of text from this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetLineCount](#getlinecount)|Retrieves the number of lines in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetModify](#getmodify)|Determines if the contents of this `CRichEditCtrl` object have changed since the last save.|  
+|[CRichEditCtrl::GetOptions](#getoptions)|Retrieves the rich edit control options.|  
+|[CRichEditCtrl::GetParaFormat](#getparaformat)|Retrieves the paragraph formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetPunctuation](#getpunctuation)|Retrieves the current punctuation characters for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::GetRect](#getrect)|Retrieves the formatting rectangle for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetRedoName](#getredoname)|Retrieves the type of the next action, if any, in the control's redo queue.|  
+|[CRichEditCtrl::GetSel](#getsel)|Gets the starting and ending positions of the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelectionCharFormat](#getselectioncharformat)|Retrieves the character formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelectionType](#getselectiontype)|Retrieves the type of contents in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelText](#getseltext)|Gets the text of the current selection in this `CRichEditCtrl` object|  
+|[CRichEditCtrl::GetTextLength](#gettextlength)|Retrieves the length of the text, in characters, in this `CRichEditCtrl` object. Does not include the terminating null character.|  
+|[CRichEditCtrl::GetTextLengthEx](#gettextlengthex)|Retrieves the number of characters or bytes in the rich edit view. Accepts a list of flags to indicate the method of determining length of the text in a rich edit control|  
+|[CRichEditCtrl::GetTextMode](#gettextmode)|Retrieves the current text mode and undo level of a rich edit control.|  
+|[CRichEditCtrl::GetTextRange](#gettextrange)|Retrieves the specified range of text.|  
+|[CRichEditCtrl::GetUndoName](#getundoname)|Retrieves the type of the next undo action, if any.|  
+|[CRichEditCtrl::GetWordWrapMode](#getwordwrapmode)|Retrieves the current word wrapping and word breaking options for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::HideSelection](#hideselection)|Shows or hides the current selection.|  
+|[CRichEditCtrl::LimitText](#limittext)|Limits the amount of text a user can enter into the `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineFromChar](#linefromchar)|Determines which line contains the given character.|  
+|[CRichEditCtrl::LineIndex](#lineindex)|Retrieves the character index of a given line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineLength](#linelength)|Retrieves the length of a given line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineScroll](#linescroll)|Scrolls the text in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::Paste](#paste)|Inserts the contents of the Clipboard into this rich edit control.|  
+|[CRichEditCtrl::PasteSpecial](#pastespecial)|Inserts the contents of the Clipboard into this rich edit control in the specified data format.|  
+|[CRichEditCtrl::PosFromChar](#posfromchar)|Retrieves the client area coordinates of a specified character in an edit control.|  
+|[CRichEditCtrl::Redo](#redo)|Redoes the next action in the control's redo queue.|  
+|[CRichEditCtrl::ReplaceSel](#replacesel)|Replaces the current selection in this `CRichEditCtrl` object with specified text.|  
+|[CRichEditCtrl::RequestResize](#requestresize)|Forces this `CRichEditCtrl` object to send request resize notifications.|  
+|[CRichEditCtrl::SetAutoURLDetect](#setautourldetect)|Indicates if the auto URL detection is active in a rich edit control.|  
+|[CRichEditCtrl::SetBackgroundColor](#setbackgroundcolor)|Sets the background color in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetDefaultCharFormat](#setdefaultcharformat)|Sets the current default character formatting attributes in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetEventMask](#seteventmask)|Sets the event mask for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetModify](#setmodify)|Sets or clears the modification flag for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetOLECallback](#setolecallback)|Sets the `IRichEditOleCallback` COM object for this rich edit control.|  
+|[CRichEditCtrl::SetOptions](#setoptions)|Sets the options for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetParaFormat](#setparaformat)|Sets the paragraph formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetPunctuation](#setpunctuation)|Sets the punctuation characters for a rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::SetReadOnly](#setreadonly)|Sets the read-only option for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetRect](#setrect)|Sets the formatting rectangle for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetSel](#setsel)|Sets the selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetSelectionCharFormat](#setselectioncharformat)|Sets the character formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetTargetDevice](#settargetdevice)|Sets the target output device for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetTextMode](#settextmode)|Sets the text mode or undo level of a rich edit control. The message fails if the control contains text.|  
+|[CRichEditCtrl::SetUndoLimit](#setundolimit)|Sets the maximum number of actions that can stored in the undo queue.|  
+|[CRichEditCtrl::SetWordCharFormat](#setwordcharformat)|Sets the character formatting attributes in the current word in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetWordWrapMode](#setwordwrapmode)|Sets the word-wrapping and word-breaking options for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::StopGroupTyping](#stopgrouptyping)|Stops the control from collecting additional typing actions into the current undo action. The control stores the next typing action, if any, into a new action in the undo queue.|  
+|[CRichEditCtrl::StreamIn](#streamin)|Inserts text from an input stream into this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::StreamOut](#streamout)|Stores text from this `CRichEditCtrl` object into an output stream.|  
+|[CRichEditCtrl::Undo](#undo)|Reverses the last editing operation.|  
   
-## <a name="remarks"></a>설명  
- "Rich edit 컨트롤"는 사용자 입력 수 있으며 텍스트를 편집 하는 창입니다. 텍스트 문자 및 단락 서식을 할당할 수 있으며 포함 된 OLE 개체를 포함할 수 있습니다. Rich edit 컨트롤 텍스트의 서식을 지정 하기 위한 프로그래밍 인터페이스를 제공 합니다. 그러나 응용 프로그램 사용자에 게 형식 지정 작업을 제공 하는 데 필요한 사용자 인터페이스 구성 요소를 구현 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ A "rich edit control" is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. Rich edit controls provide a programming interface for formatting text. However, an application must implement any user interface components necessary to make formatting operations available to the user.  
   
- 이 Windows 공용 컨트롤 (및 따라서는 `CRichEditCtrl` 클래스)은 이상 버전과 Windows 95/98 및 Windows NT 버전 3.51에서 실행 되는 프로그램 에서만 사용할 수 있습니다. `CRichEditCtrl` 클래스의 버전 2.0 / 3.0 지원는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] rich edit 컨트롤입니다.  
+ This Windows Common control (and therefore the `CRichEditCtrl` class) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later. The `CRichEditCtrl` class supports versions 2.0 and 3.0 of the Windows SDK rich edit control.  
   
 > [!CAUTION]
->  Rich edit 컨트롤을 사용 하는 대화 상자에서 하는 경우 (응용 프로그램은 MDI SDI 여부에 관계 없이 대화 상자 기반 또는)를 호출 해야 [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit) 대화 상자가 표시 되 면 합니다. 이 함수를 호출할 수 있는 일반적인 위치는 프로그램의 `InitInstance` 멤버 함수입니다. 대화 상자를 처음 사용할 때만 표시 하는 각 시간에 대해 호출할 필요가 없습니다. 호출할 필요가 없습니다 `AfxInitRichEdit` 사용 하는 경우 `CRichEditView`합니다.  
+>  If you are using a rich edit control in a dialog box (regardless whether your application is SDI, MDI, or dialog-based), you must call [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit) once before the dialog box is displayed. A typical place to call this function is in your program's `InitInstance` member function. You do not need to call it for each time you display the dialog box, only the first time. You do not have to call `AfxInitRichEdit` if you are working with `CRichEditView`.  
   
- 사용 하 여 대 한 자세한 내용은 `CRichEditCtrl`를 참조 하세요.  
+ For more information on using `CRichEditCtrl`, see:  
   
-- [컨트롤](../../mfc/controls-mfc.md)  
+- [Controls](../../mfc/controls-mfc.md)  
   
-- [CRichEditCtrl 사용](../../mfc/using-cricheditctrl.md)  
+- [Using CRichEditCtrl](../../mfc/using-cricheditctrl.md)  
   
--   기술 자료 문서 Q259949: 정보: SetCaretPos()은 적합 하지 않은 CEdit 또는 CRichEditCtrl 컨트롤  
+-   Knowledge Base article Q259949 : INFO: SetCaretPos() Is Not Appropriate with CEdit or CRichEditCtrl Controls  
   
- MFC 응용 프로그램에서 서식 있는 편집 컨트롤을 사용 하는 예제를 참조 하십시오.는 [워드 패드](../../visual-cpp-samples.md) 샘플 응용 프로그램입니다.  
+ For an example of using a rich edit control in an MFC application, see the [WORDPAD](../../visual-cpp-samples.md) sample application.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -237,113 +237,113 @@ class CRichEditCtrl : public CWnd
   
  `CRichEditCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
- Rich edit 컨트롤 지정된 클립보드 형식 붙여 넣을 수 하는 경우를 결정 합니다.  
+##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
+ Determines if the rich edit control can paste the specified Clipboard format.  
   
 ```  
 BOOL CanPaste(UINT nFormat = 0) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- 쿼리에 클립보드 데이터 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 반환 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049)합니다.  
+ The Clipboard data format to query. This parameter can be one of the predefined Clipboard formats or the value returned by [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
   
-### <a name="return-value"></a>반환 값  
- 클립보드 형식을 붙여넣을 수 있습니다. 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the Clipboard format can be pasted; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 경우 `nFormat` 은 0으로, `CanPaste` 현재 클립보드에 모든 형식 시도 합니다.  
+### <a name="remarks"></a>Remarks  
+ If `nFormat` is 0, `CanPaste` will try any format currently on the Clipboard.  
   
- 자세한 내용은 참조 [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) 메시지 및 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) message and [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
- Redo queue 동작이 포함 되어 있는지 여부를 결정 합니다.  
+##  <a name="canredo"></a>  CRichEditCtrl::CanRedo  
+ Determines if the redo queue contains any actions.  
   
 ```  
 BOOL CanRedo() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- Redo queue가 동작, 그렇지 않으면 0을 포함 하는 경우에 0이 아닙니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the redo queue contains actions, otherwise 0.  
   
-### <a name="remarks"></a>주의  
- Redo queue에 있는 작업의 이름을 검색 하려면 호출 [CRichEditCtrl::GetRedoName](#getredoname)합니다. 가장 최근 실행 취소 작업을 다시 실행 하려면 호출 [다시 실행](#redo)합니다.  
+### <a name="remarks"></a>Remarks  
+ To discover the name of the operation in the redo queue, call [CRichEditCtrl::GetRedoName](#getredoname). To redo the most recent Undo operation, call [Redo](#redo).  
   
- 자세한 내용은 참조 [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) in the Windows SDK.  
   
-##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
- 마지막 편집 작업을 취소할 수는 경우를 결정 합니다.  
+##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
+ Determines if the last editing operation can be undone.  
   
 ```  
 BOOL CanUndo() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 호출 마지막 편집 작업을 취소 하면 0이 아니고는 [실행 취소](#undo) 멤버 함수가 고, 0은 실행 취소할 수 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the last edit operation can be undone by a call to the [Undo](#undo) member function; 0 if it cannot be undone.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
- 매개 변수에서 지정 된 지점에서 문자에 대 한 정보를 검색 `pt`합니다.  
+##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
+ Retrieves information about the character at the point specified by the parameter `pt`.  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 된 점의 좌표를 포함 하는 개체입니다.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object containing the coordinates of the specified point.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 지점에 가장 가까운 문자의 0부터 시작 문자 인덱스입니다. 지정된 된 점이 컨트롤의 마지막 문자 뒤에 있는 경우 반환 값은 컨트롤의 마지막 문자를 나타냅니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based character index of the character nearest the specified point. If the specified point is beyond the last character in the control, the return value indicates the last character in the control.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 서식 있는 편집 컨트롤과 함께 작동합니다. 편집 컨트롤에 대 한 정보를 가져오려면 호출 [CEdit::CharFromPos](../../mfc/reference/cedit-class.md#charfrompos)합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function works with a rich edit control. To get the information for an edit control, call [CEdit::CharFromPos](../../mfc/reference/cedit-class.md#charfrompos).  
   
- 자세한 내용은 참조 [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) in the Windows SDK.  
   
-##  <a name="clear"></a>CRichEditCtrl::Clear  
- (취소)를 삭제 합니다. 현재 선택 영역 (있는 경우)은 풍부한 컨트롤을 편집 합니다.  
+##  <a name="clear"></a>  CRichEditCtrl::Clear  
+ Deletes (clears) the current selection (if any) in the rich edit control.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>주의  
- 수행한 삭제 **지우기** 호출 하 여 실행 취소 될 수는 [실행 취소](#undo) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The deletion performed by **Clear** can be undone by calling the [Undo](#undo) member function.  
   
- 현재 선택 영역을 삭제 하 고 삭제 된 내용을 클립보드에 배치 하려면 호출는 [잘라내기](#cut) 멤버 함수입니다.  
+ To delete the current selection and place the deleted contents onto the Clipboard, call the [Cut](#cut) member function.  
   
- 자세한 내용은 참조 [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="copy"></a>CRichEditCtrl::Copy  
- 현재 선택 영역 (있는 경우) rich edit 컨트롤에서 클립보드에 복사 합니다.  
+##  <a name="copy"></a>  CRichEditCtrl::Copy  
+ Copies the current selection (if any) in the rich edit control to the Clipboard.  
   
 ```  
 void Copy();
 ```  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="create"></a>CRichEditCtrl::Create  
- Windows rich edit 컨트롤을 만들고이를 연결 `CRichEditCtrl` 개체입니다.  
+##  <a name="create"></a>  CRichEditCtrl::Create  
+ Creates the Windows rich edit control and associates it with this `CRichEditCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -353,50 +353,50 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 편집 컨트롤의 스타일을 지정합니다. 에 나열 된 창 스타일의 조합을 적용는 **주의** 아래의 섹션 및 [컨트롤 스타일 편집](http://msdn.microsoft.com/library/windows/desktop/bb775464)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the edit control's style. Apply a combination of the window styles listed in the **Remarks** section below, and [edit control styles](http://msdn.microsoft.com/library/windows/desktop/bb775464), described in the Windows SDK.  
   
  `rect`  
- 편집 컨트롤의 크기와 위치를 지정합니다. 일 수 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
+ Specifies the edit control's size and position. Can be a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 편집 컨트롤의 부모 창 (종종는 [CDialog](../../mfc/reference/cdialog-class.md)). 않아야 **NULL**합니다.  
+ Specifies the edit control's parent window (often a [CDialog](../../mfc/reference/cdialog-class.md)). It must not be **NULL**.  
   
  `nID`  
- 편집 컨트롤의 ID를 지정 합니다.  
+ Specifies the edit control's ID.  
   
-### <a name="return-value"></a>반환 값  
- 초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization is successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 생성할는 `CRichEditCtrl` 두 단계를 수행에서 하는 개체입니다. 먼저 호출는 [CRichEditCtrl](#cricheditctrl) 생성자 호출 **만들기**, Windows 편집 컨트롤을 만들고에 연결 하는 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CRichEditCtrl` object in two steps. First, call the [CRichEditCtrl](#cricheditctrl) constructor, then call **Create**, which creates the Windows edit control and attaches it to the `CRichEditCtrl` object.  
   
- 이 함수를 서식 있는 편집 컨트롤을 만들 때 필요한 공용 컨트롤 라이브러리를 로드 해야 먼저 합니다. 라이브러리를 로드 하려면 전역 함수를 호출 [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), 공용 컨트롤 라이브러리를 다시 초기화 합니다. 호출 해야 `AfxInitRichEdit` 프로세스에서 한 번만 합니다.  
+ When you create a rich edit control with this function, first you must load the necessary common controls library. To load the libary, call the global function [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), which in turn initializes the common controls library. You need to call `AfxInitRichEdit` only once in your process.  
   
- 때 **만들기** 실행 되 면 Windows 보냅니다는 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), 및 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 편집 컨트롤에는 메시지입니다.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the edit control.  
   
- 기본적으로 이러한 메시지의 처리는 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), 및 [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 멤버 함수는 `CWnd` 기본 클래스입니다. 기본 메시지 처리를 확장 하려면에서 클래스를 파생 `CRichEditCtrl`, 메시지 맵을 새 클래스에 추가 하 고 위의 메시지 처리기 멤버 함수를 재정의 합니다. 재정의 `OnCreate`, 예를 들어 새 클래스에 대 한 필요한 초기화를 수행 하도록 합니다.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CRichEditCtrl`, add a message map to the new class, and override the above message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for the new class.  
   
- 다음 적용 [창 스타일](../../mfc/reference/window-styles.md) 를 편집 컨트롤입니다.  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to an edit control.  
   
-- **WS_CHILD** 항상 합니다.  
+- **WS_CHILD** Always.  
   
-- **WS_VISIBLE** 일반적으로 합니다.  
+- **WS_VISIBLE** Usually.  
   
-- **WS_DISABLED** 거의 없습니다.  
+- **WS_DISABLED** Rarely.  
   
-- **WS_GROUP** 컨트롤을 그룹화 합니다.  
+- **WS_GROUP** To group controls.  
   
-- **WS_TABSTOP** 탭 이동 순서에 편집 컨트롤을 포함 하도록 합니다.  
+- **WS_TABSTOP** To include edit control in the tabbing order.  
   
- 창 스타일에 대 한 자세한 내용은 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about window styles, see [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="createex"></a>CRichEditCtrl::CreateEx  
- 에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CRichEditCtrl` 개체입니다.  
+##  <a name="createex"></a>  CRichEditCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CRichEditCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -407,99 +407,99 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 편집 컨트롤의 스타일을 지정합니다. 에 나열 된 창 스타일의 조합을 적용는 **주의** 섹션 [만들기](#create) 및 [컨트롤 스타일 편집](http://msdn.microsoft.com/library/windows/desktop/bb775464)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the edit control's style. Apply a combination of the window styles listed in the **Remarks** section of [Create](#create) and [edit control styles](http://msdn.microsoft.com/library/windows/desktop/bb775464), described in the Windows SDK.  
   
  `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 컨트롤의 부모 창에 대 한 포인터입니다.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 컨트롤의 자식 창 id입니다.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of **Create** to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
- `CRichEditCtrl` 개체를 생성합니다.  
+##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
+ Constructs a `CRichEditCtrl` object.  
   
 ```  
 CRichEditCtrl();
 ```  
   
-### <a name="remarks"></a>설명  
- 사용 하 여 [만들기](#create) rich edit 컨트롤 창을 생성 하 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [Create](#create) to construct the Windows rich edit control.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="cut"></a>CRichEditCtrl::Cut  
- 삭제 (컷) 있는 현재 선택 항목 (있는 경우)은 풍부한 컨트롤을 편집 하 고 삭제 된 텍스트를 클립보드에 복사 합니다.  
+##  <a name="cut"></a>  CRichEditCtrl::Cut  
+ Delete (cuts) the current selection (if any) in the rich edit control and copies the deleted text to the Clipboard.  
   
 ```  
 void Cut();
 ```  
   
-### <a name="remarks"></a>주의  
- 수행한 삭제 **잘라내기** 호출 하 여 실행 취소 될 수는 [실행 취소](#undo) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The deletion performed by **Cut** can be undone by calling the [Undo](#undo) member function.  
   
- 삭제 된 텍스트를 클립보드에 배치 하지 않고 현재 선택 영역을 삭제 하려면 호출는 [지우기](#clear) 멤버 함수입니다.  
+ To delete the current selection without placing the deleted text into the Clipboard, call the [Clear](#clear) member function.  
   
- 자세한 내용은 참조 [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
- Rich edit 컨트롤 (텍스트 및 OLE 항목)의 내용에 대 하 여 이전에 형식이 지정 된 부분이 표시 [FormatRange](#formatrange)합니다.  
+##  <a name="displayband"></a>  CRichEditCtrl::DisplayBand  
+ Displays a portion of the contents of the rich edit control (text and OLE items), as previously formatted by [FormatRange](#formatrange).  
   
 ```  
 BOOL DisplayBand(LPRECT pDisplayRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDisplayRect`  
- 에 대 한 포인터는 [RECT](../../mfc/reference/rect-structure1.md) 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 영역입니다. 텍스트를 표시 하는 장치를 지정 하는 개체입니다.  
+ Pointer to a [RECT](../../mfc/reference/rect-structure1.md) or [CRect](../../atl-mfc-shared/reference/crect-class.md) object specifying the area of the device to display the text.  
   
-### <a name="return-value"></a>반환 값  
- 이 속성을 0이 아닌 서식 있는 텍스트의 표시에 성공 하면 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the display of the formatted text succeeds, otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- OLE 항목와 텍스트 포인터에 의해 지정 된 영역을 자르는 `pDisplayRect`합니다.  
+### <a name="remarks"></a>Remarks  
+ The text and OLE items are clipped to the area specified by the pointer `pDisplayRect`.  
   
- 자세한 내용은 참조 [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRichEditCtrl::FormatRange](#formatrange)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::FormatRange](#formatrange).  
   
-##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
- (Clear)이 rich edit 컨트롤의 실행 취소 플래그를 다시 설정합니다.  
+##  <a name="emptyundobuffer"></a>  CRichEditCtrl::EmptyUndoBuffer  
+ Resets (clear) the undo flag of this rich edit control.  
   
 ```  
 void EmptyUndoBuffer();
 ```  
   
-### <a name="remarks"></a>주의  
- 컨트롤 이제 없게 됩니다 마지막 편집 작업을 취소할 수 있습니다. Rich edit 컨트롤 내에서 작업을 취소할 수 될 때마다 실행 취소 플래그가 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The control will now be unable to undo the last editing operation. The undo flag is set whenever an operation within the rich edit control can be undone.  
   
- 실행 취소 플래그는 호출할 때마다 자동으로 선택 취소 된 [CWnd](../../mfc/reference/cwnd-class.md) 멤버 함수 [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)합니다.  
+ The undo flag is automatically cleared whenever you call the [CWnd](../../mfc/reference/cwnd-class.md) member function [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
- 자세한 내용은 참조 [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="findtext"></a>CRichEditCtrl::FindText  
- Rich edit 컨트롤 내에서 텍스트를 찾습니다.  
+##  <a name="findtext"></a>  CRichEditCtrl::FindText  
+ Finds text within the rich edit control.  
   
 ```  
 long FindText(
@@ -507,26 +507,26 @@ long FindText(
     FINDTEXTEX* pFindText) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 가능한 값 목록은 참조 `wParam` 에 [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For a list of possible values, see `wParam` in [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) in the Windows SDK.  
   
  *pFindText*  
- 에 대 한 포인터는 [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) 구조 검색에 대 한 매개 변수를 제공 하 고 일치 항목이 발견 된 범위를 반환 합니다.  
+ Pointer to the [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure giving the parameters for the search and returning the range where the match was found.  
   
-### <a name="return-value"></a>반환 값  
- 다음 항목이; 0부터 시작 문자 위치 -더 이상 일치 하는 경우에 1입니다.  
+### <a name="return-value"></a>Return Value  
+ Zero-based character position of the next match; - 1 if there are no more matches.  
   
-### <a name="remarks"></a>설명  
- 에 대해 적절 한 범위 매개 변수 설정 중 하나를 위로 또는 아래로 검색할 수 있습니다는 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 내에서 구조체는 **FINDTEXTEX** 구조입니다.  
+### <a name="remarks"></a>Remarks  
+ You can search either up or down by setting the proper range parameters in the [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure within the **FINDTEXTEX** structure.  
   
- 자세한 내용은 참조 [EM_FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb788011) 메시지 및 [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb788011) message and [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
- 앞 이나 뒤에 지정 된 위치에 다음 단어 분리를 찾습니다 `nStart`합니다.  
+##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
+ Finds the next word break before or after the position specified by `nStart`.  
   
 ```  
 DWORD FindWordBreak(
@@ -534,21 +534,21 @@ DWORD FindWordBreak(
     DWORD nStart) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nCode`  
- 수행할 동작을 나타냅니다. 목록이 가능한 값에 대 한 매개 변수에 대 한 설명을 참조 `code` 에 **EM_FINDWORDBREAK** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Indicates the action to take. For a list of possible values, see the description for the parameter `code` in **EM_FINDWORDBREAK** in the Windows SDK.  
   
  `nStart`  
- 시작할 0부터 시작 문자 위치입니다.  
+ The zero-based character position from which to start.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수에 따라 `nCode`합니다. 자세한 내용은 참조 [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="return-value"></a>Return Value  
+ Based on the parameter `nCode`. For more information, see [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) in the Windows SDK.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 지정 된 위치의 문자에 대 한 정보를 검색에 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can use this member function to retrieve information about a character at a given position.  
   
-##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
- 특정 장치에 대 한 서식 있는 편집 컨트롤에서 텍스트의 범위를 서식을 지정 합니다.  
+##  <a name="formatrange"></a>  CRichEditCtrl::FormatRange  
+ Formats a range of text in a rich edit control for a specific device.  
   
 ```  
 long FormatRange(
@@ -556,134 +556,134 @@ long FormatRange(
     BOOL bDisplay = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pfr*  
- 에 대 한 포인터는 [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) 출력 장치에 대 한 정보를 포함 하는 구조입니다. **NULL** rich edit 컨트롤 내에서 캐시 된 정보를 해제할 수 있는지를 나타냅니다.  
+ Pointer to the [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure which contains information about the output device. **NULL** indicates that cached information within the rich edit control can be freed.  
   
  *bDisplay*  
- 텍스트를 렌더링할지 여부를 나타냅니다. 경우 **FALSE**, 텍스트 방금 측정 됩니다.  
+ Indicates if the text should be rendered. If **FALSE**, the text is just measured.  
   
-### <a name="return-value"></a>반환 값  
- 1을 더한 지역 내에 포함 된 마지막 문자의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the last character that fits in the region plus one.  
   
-### <a name="remarks"></a>설명  
- 일반적으로이 호출에 대 한 호출 뒤 [DisplayBand](#displayband)합니다.  
+### <a name="remarks"></a>Remarks  
+ Typically, this call is followed by a call to [DisplayBand](#displayband).  
   
- 자세한 내용은 참조 [EM_FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb788020) 메시지 및 [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb788020) message and [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
- 이 지정 된 문자 위치 (왼쪽 위 모퉁이)를 가져옵니다 `CRichEditCtrl` 개체입니다.  
+##  <a name="getcharpos"></a>  CRichEditCtrl::GetCharPos  
+ Gets the position (top-left corner) of a given character within this `CRichEditCtrl` object.  
   
 ```  
 CPoint GetCharPos(long lChar) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lChar`  
- 문자의 0부터 시작 인덱스입니다.  
+ Zero-based index of the character.  
   
-### <a name="return-value"></a>반환 값  
- 로 지정 된 문자의 왼쪽 위 모퉁이 위치 `lChar`합니다.  
+### <a name="return-value"></a>Return Value  
+ The location of the top-left corner of the character specified by `lChar`.  
   
-### <a name="remarks"></a>주의  
- 문자는 0부터 시작 인덱스 값을 제공 하 여 지정 됩니다. 경우 `lChar` 이 마지막 문자 인덱스 보다 크면 `CRichEditCtrl` 개체를 반환 값이 마지막 문자 바로 다음에 오는 문자 위치 좌표를 지정 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The character is specified by giving its zero-based index value. If `lChar` is greater than the index of the last character in this `CRichEditCtrl` object, the return value specifies the coordinates of the character position just past the last character in this `CRichEditCtrl` object.  
   
- 자세한 내용은 참조 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in the Windows SDK.  
   
-##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
- 서식이 특성의 기본 문자 가져옵니다 `CRichEditCtrl` 개체입니다.  
+##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
+ Gets the default character formatting attributes of this `CRichEditCtrl` object.  
   
 ```  
 DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CHARFORMAT2& cf) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 첫 번째 버전에 대 한 포인터는 **CHARFORMAT** 구조 서식 특성의 기본 문자를 보유 합니다.  
+ In the first version, a pointer to a **CHARFORMAT** structure holding the default character formatting attributes.  
   
- 두 번째 버전에 대 한 포인터는 **CHARFORMAT2** Rich Edit 2.0 확장인 구조에는 **CHARFORMAT** 구조를 서식 특성의 기본 문자를 포함 합니다.  
+ In the second version, a pointer to a **CHARFORMAT2** structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>반환 값  
- **dwMask** 데이터 멤버의 `cf`합니다. 것의 기본 문자 특성 서식으로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `cf`. It specified the default character formatting attributes.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 **EM_GETCHARFORMAT** 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the **EM_GETCHARFORMAT** message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [SetDefaultCharFormat](#setdefaultcharformat)합니다.  
+### <a name="example"></a>Example  
+  See the example for [SetDefaultCharFormat](#setdefaultcharformat).  
   
-##  <a name="geteventmask"></a>CRichEditCtrl::GetEventMask  
- 이 대 한 이벤트 마스크를 가져옵니다 `CRichEditCtrl` 개체입니다.  
+##  <a name="geteventmask"></a>  CRichEditCtrl::GetEventMask  
+ Gets the event mask for this `CRichEditCtrl` object.  
   
 ```  
 long GetEventMask() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 대 한 이벤트 마스크 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The event mask for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 알림 메시지를 지정 하는 이벤트 마스크는 `CRichEditCtrl` 개체를 부모 창에 보냅니다.  
+### <a name="remarks"></a>Remarks  
+ The event mask specifies which notification messages the `CRichEditCtrl` object sends to its parent window.  
   
- 자세한 내용은 참조 [EM_GETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb788032) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb788032) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRichEditCtrl::SetEventMask](#seteventmask)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::SetEventMask](#seteventmask).  
   
-##  <a name="getfirstvisibleline"></a>CRichEditCtrl::GetFirstVisibleLine  
- 이 표시 되는 최상위 줄 결정 `CRichEditCtrl` 개체입니다.  
+##  <a name="getfirstvisibleline"></a>  CRichEditCtrl::GetFirstVisibleLine  
+ Determines the topmost visible line in this `CRichEditCtrl` object.  
   
 ```  
 int GetFirstVisibleLine() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 표시 되는 맨 위 줄의 0부터 시작 인덱스 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the uppermost visible line in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
-##  <a name="getiricheditole"></a>CRichEditCtrl::GetIRichEditOle  
- 액세스는 **IRichEditOle** 이 대 한 인터페이스 `CRichEditCtrl` 개체입니다.  
+##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
+ Accesses the **IRichEditOle** interface for this `CRichEditCtrl` object.  
   
 ```  
 IRichEditOle* GetIRichEditOle() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) 이 액세스 하는 데 사용할 수 있는 인터페이스 `CRichEditCtrl` OLE 개체의 기능입니다. **NULL** 인터페이스에 액세스할 수 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interface that can be used to access this `CRichEditCtrl` object's OLE functionality; **NULL** if the interface is not accessible.  
   
-### <a name="remarks"></a>주의  
- 이 인터페이스를 사용 하 여이 액세스 `CRichEditCtrl` OLE 개체의 기능입니다.  
+### <a name="remarks"></a>Remarks  
+ Use this interface to access this `CRichEditCtrl` object's OLE functionality.  
   
- 자세한 내용은 참조 [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041) 메시지 및 [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) 인터페이스는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041) message and [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interface in the Windows SDK.  
   
-##  <a name="getlimittext"></a>CRichEditCtrl::GetLimitText  
- 이 대 한 텍스트 제한 가져옵니다 `CRichEditCtrl` 개체입니다.  
+##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
+ Gets the text limit for this `CRichEditCtrl` object.  
   
 ```  
 long GetLimitText() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 텍스트 크기 제한 (바이트)이 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The current text limit, in bytes, for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 텍스트 제한은 최대 크기를 바이트 단위로 텍스트의 서식 있는 편집 컨트롤에 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The text limit is the maximum amount of text, in bytes, the rich edit control can accept.  
   
- 자세한 내용은 참조 [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
   
-##  <a name="getline"></a>CRichEditCtrl::GetLine  
- 이 텍스트 줄 검색 `CRichEditCtrl` 개체입니다.  
+##  <a name="getline"></a>  CRichEditCtrl::GetLine  
+ Retrieves a line of text from this `CRichEditCtrl` object.  
   
 ```  
 int GetLine(
@@ -696,100 +696,100 @@ int GetLine(
     int nMaxLength) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 검색할 줄의 0부터 시작 인덱스입니다.  
+ Zero-based index of the line to retrieve.  
   
  `lpszBuffer`  
- 텍스트를 받기 위한 버퍼를 가리킵니다. 버퍼의 첫 번째 단어는 최대 버퍼에 복사할 수 있는 바이트 수를 지정 해야 합니다.  
+ Points to the buffer to receive the text. The first word of the buffer must specify the maximum number of bytes that can be copied into the buffer.  
   
  `nMaxLength`  
- 최대에 복사할 수 있는 문자 수 `lpszBuffer`합니다. 두 번째 형식의 `GetLine` 이 값으로 지정 된 버퍼의 첫 번째 단어에 저장 하 고 `lpszBuffer`합니다.  
+ Maximum number of characters that can be copied into `lpszBuffer`. The second form of `GetLine` places this value into the first word of the buffer specified by `lpszBuffer`.  
   
-### <a name="return-value"></a>반환 값  
- 에 복사 하는 문자 수가 `lpszBuffer`합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of characters copied into `lpszBuffer`.  
   
-### <a name="remarks"></a>주의  
- 복사한 행에 null 종결 문자  
+### <a name="remarks"></a>Remarks  
+ The copied line does not contain a terminating null character.  
   
 > [!NOTE]
->  복사 될 문자 수를 저장 하는 버퍼의 첫 번째 단어, 때문에 버퍼 4 바이트 이상 인지 확인 합니다.  
+>  Because the first word of the buffer stores the number of characters to be copied, make sure that your buffer is at least 4 bytes long.  
   
- 자세한 내용은 참조 [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetLineCount](#getlinecount)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetLineCount](#getlinecount).  
   
-##  <a name="getlinecount"></a>CRichEditCtrl::GetLineCount  
- 에 있는 줄의 수를 검색는 `CRichEditCtrl` 개체입니다.  
+##  <a name="getlinecount"></a>  CRichEditCtrl::GetLineCount  
+ Retrieves the number of lines in the `CRichEditCtrl` object.  
   
 ```  
 int GetLineCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 줄 수가 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of lines in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
   
-##  <a name="getmodify"></a>CRichEditCtrl::GetModify  
- 있는지 여부를 확인이 내용의 `CRichEditCtrl` 개체를 수정 합니다.  
+##  <a name="getmodify"></a>  CRichEditCtrl::GetModify  
+ Determines if the contents of this `CRichEditCtrl` object have been modified.  
   
 ```  
 BOOL GetModify() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 값이 텍스트 `CRichEditCtrl` 개체가 수정 된; 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the text in this `CRichEditCtrl` object has been modified; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- Windows는 내부에 서식 있는 편집 컨트롤의 내용을 변경 되었는지 여부를 나타내는 플래그를 유지 관리 합니다. 편집 컨트롤이 만든 다음 호출 하 여 지울 수 있습니다 때이 플래그가 해제 되 고 [SetModify](#setmodify) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ Windows maintains an internal flag indicating whether the contents of the rich edit control have been changed. This flag is cleared when the edit control is first created and can also be cleared by calling the [SetModify](#setmodify) member function.  
   
- 자세한 내용은 참조 [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
   
-##  <a name="getoptions"></a>CRichEditCtrl::GetOptions  
- Rich edit 컨트롤에 대 한 현재 설정 된 옵션을 검색 합니다.  
+##  <a name="getoptions"></a>  CRichEditCtrl::GetOptions  
+ Retrieves the options currently set for the rich edit control.  
   
 ```  
 UINT GetOptions() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 옵션 플래그 값의 조합입니다. 이러한 값의 목록에 대 한 참조는 *fOptions* 에서 매개 변수는 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) 에 설명 된 대로 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="return-value"></a>Return Value  
+ A combination of the current option flag values. For a list of these values, see the *fOptions* parameter in the [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) message, as described in the Windows SDK.  
   
-##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
- 단락 특성의 현재 선택 영역 서식 가져옵니다.  
+##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
+ Gets the paragraph formatting attributes of the current selection.  
   
 ```  
 DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pf`  
- 첫 번째 버전에 대 한 포인터는 [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) 단락 서식 현재 선택 된 특성을 저장할 구조를 합니다.  
+ In the first version, a pointer to a [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure to hold the paragraph formatting attributes of the current selection.  
   
- 두 번째 버전에 대 한 포인터는 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Rich Edit 2.0 확장인 구조에는 **PARAFORMAT** 구조를 서식 특성의 기본 문자를 포함 합니다.  
+ In the second version, a pointer to a [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure, which is a Rich Edit 2.0 extension to the **PARAFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>반환 값  
- **dwMask** 데이터 멤버의 `pf`합니다. 단락 서식 현재 선택 영역 전체에 걸쳐 일관적인 특성을 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `pf`. It specifies the paragraph formatting attributes that are consistent throughout the current selection.  
   
-### <a name="remarks"></a>주의  
- 여러 단락을 선택 하면 `pf` 선택한 첫 번째 단락의 특성을 받습니다. 반환 값은 선택 영역 전체에 걸쳐 일관성 있는 특성을 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ If more than one paragraph is selected, `pf` receives the attributes of the first selected paragraph. The return value specifies which attributes are consistent throughout the selection.  
   
- 자세한 내용은 참조는 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) 메시지 및 **PARAFORMAT** 및 **PARAFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) message and the **PARAFORMAT** and **PARAFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRichEditCtrl::SetParaFormat](#setparaformat)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::SetParaFormat](#setparaformat).  
   
-##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
- Rich edit 컨트롤의 현재 문장 부호 문자를 가져옵니다.  
+##  <a name="getpunctuation"></a>  CRichEditCtrl::GetPunctuation  
+ Gets the current punctuation characters in a rich edit control.  
   
 ```  
 BOOL GetPunctuation(
@@ -797,53 +797,53 @@ BOOL GetPunctuation(
     PUNCTUATION* lpPunc) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fType`  
- 에 설명 된 대로 문장 부호 형식 플래그는 `fType` 의 매개 변수 [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The punctuation type flag, as described in the `fType` parameter of [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) in the Windows SDK.  
   
  `lpPunc`  
- 에 대 한 포인터는 [문장 부호](http://msdn.microsoft.com/library/windows/desktop/bb787944) 구조에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ A pointer to a [PUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb787944) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 그렇지 않으면 0 작업이 성공한 경우 0이 아닙니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded, otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 운영 체제의 아시아 언어 버전에만 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is available with only the Asian-language versions of the operating system.  
   
-##  <a name="getrect"></a>CRichEditCtrl::GetRect  
- 이 대 한 서식 지정 영역을 검색 `CRichEditCtrl` 개체입니다.  
+##  <a name="getrect"></a>  CRichEditCtrl::GetRect  
+ Retrieves the formatting rectangle for this `CRichEditCtrl` object.  
   
 ```  
 void GetRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) 에 대 한 포인터 또는 [RECT](../../mfc/reference/rect-structure1.md) 이 서식 지정 영역을 받으려는 `CRichEditCtrl` 개체입니다.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) or pointer to a [RECT](../../mfc/reference/rect-structure1.md) to receive the formatting rectangle of this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 서식 지정 영역에는 텍스트에 대 한 경계 사각형이입니다. 이 값은의 크기에 관계 없이 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The formatting rectangle is the bounding rectangle for the text. This value is independent of the size of the `CRichEditCtrl` object.  
   
- 자세한 내용은 참조 [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [LimitText](#limittext)합니다.  
+### <a name="example"></a>Example  
+  See the example for [LimitText](#limittext).  
   
-##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
- 있는 경우 redo queue에 다음 사용 가능한 동작의 유형을 검색 합니다.  
+##  <a name="getredoname"></a>  CRichEditCtrl::GetRedoName  
+ Retrieves the type of the next available action in the redo queue, if any.  
   
 ```  
 UNDONAMEID GetRedoName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 `GetRedoName` 반환 된 [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) 컨트롤의 redo queue의 다음 작업의 형식을 나타내는 열거형입니다. Redo queue는 비어 있는 경우 또는 큐에 다시 실행 동작을 알 수 없는 유형의 경우 `GetRedoName` 0을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, `GetRedoName` returns the [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) enumeration type indicating the type of the next action in the control's redo queue. If the redo queue is empty, or if the redo action in the queue is of an unknown type, `GetRedoName` returns 0.  
   
-### <a name="remarks"></a>설명  
- 실행 취소 하거나 다시 실행할 수 있는 동작의 유형을 입력, delete, 끌어서 놓기, 잘라내기, 포함 및 붙여넣기 작업 합니다. 이 정보는 redoable 동작의 드롭다운 목록 상자와 같은 실행 취소 및 다시 실행 작업에 대 한 확장된 된 사용자 인터페이스를 제공 하는 응용 프로그램에 유용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The types of actions that can be undone or redone include typing, delete, drag-drop, cut, and paste operations. This information can be useful for applications that provide an extended user interface for Undo and Redo operations, such as a drop-down list box of redoable actions.  
   
-##  <a name="getsel"></a>CRichEditCtrl::GetSel  
- 이 현재 선택 항목의 범위 검색 `CRichEditCtrl` 개체입니다.  
+##  <a name="getsel"></a>  CRichEditCtrl::GetSel  
+ Retrieves the bounds of the current selection in this `CRichEditCtrl` object.  
   
 ```  
 void GetSel(CHARRANGE& cr) const;  
@@ -853,124 +853,124 @@ void GetSel(
     long& nEndChar) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cr`  
- 에 대 한 참조는 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 구조 현재 선택 항목의 범위를 받을 수 있습니다.  
+ Reference to a [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure to receive the bounds of the current selection.  
   
  `nStartChar`  
- 현재 선택한 항목의 첫 번째 문자의 0부터 시작 인덱스입니다.  
+ Zero-based index of the first character in the current selection.  
   
  `nEndChar`  
- 현재 선택한 항목의 마지막 문자의 0부터 시작 인덱스입니다.  
+ Zero-based index of the last character in the current selection.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 두 가지 형태의 선택 영역에 대 한 범위를 가져올 수 있는 다른 방법을 제공 합니다. 이러한 폼 중 간단한 설명을 따르십시오.  
+### <a name="remarks"></a>Remarks  
+ The two forms of this function provide alternate ways to get the bounds for the selection. Brief descriptions of these forms follow:  
   
-- **GetSel (** `cr` **)** 이 양식에서 사용 하는 **CHARRANGE** 구조체를 해당 **cpMin** 및 **cpMax** 경계를 반환 하는 멤버입니다.  
+- **GetSel(** `cr` **)** This form uses the **CHARRANGE** structure with its **cpMin** and **cpMax** members to return the bounds.  
   
-- **GetSel (** `nStartChar` **,** `nEndChar` **)** 매개 변수에서 경계를 반환 하는이 양식을 `nStartChar` 및 `nEndChar`합니다.  
+- **GetSel(** `nStartChar` **,** `nEndChar` **)** This form returns the bounds in the parameters `nStartChar` and `nEndChar`.  
   
- 선택 영역 모든 포함 된 경우 시작 부분 ( **cpMin** 또는 `nStartChar`) 0이 고 끝 ( **cpMax** 또는 `nEndChar`)는-1입니다.  
+ The selection includes everything if the beginning ( **cpMin** or `nStartChar`) is 0 and the end ( **cpMax** or `nEndChar`) is - 1.  
   
- 자세한 내용은 참조 [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) 메시지 및 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) message and [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
- 현재 선택 된 특성 서식 지정 문자 가져옵니다.  
+##  <a name="getselectioncharformat"></a>  CRichEditCtrl::GetSelectionCharFormat  
+ Gets the character formatting attributes of the current selection.  
   
 ```  
 DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharFormat(CHARFORMAT2& cf) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 첫 번째 버전에 대 한 포인터는 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 구조 서식 현재 선택 된 특성 문자를 받을 수 있습니다.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure to receive the character formatting attributes of the current selection.  
   
- 두 번째 버전에 대 한 포인터는 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Rich Edit 2.0 확장인 구조에는 **CHARFORMAT** 구조 서식 현재 선택 된 특성 문자를 받을 수 있습니다.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure to receive the character formatting attributes of the current selection.  
   
-### <a name="return-value"></a>반환 값  
- **dwMask** 데이터 멤버의 `cf`합니다. 현재 선택 영역 전체에 걸쳐 일관적인 특성을 형식 지정 문자를 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `cf`. It specifies the character formatting attributes that are consistent throughout the current selection.  
   
-### <a name="remarks"></a>주의  
- `cf` 매개 변수는 현재 선택한 항목의 첫 번째 문자 특성을 받습니다. 반환 값은 선택 영역 전체에 걸쳐 일관성 있는 특성을 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `cf` parameter receives the attributes of the first character in the current selection. The return value specifies which attributes are consistent throughout the selection.  
   
- 자세한 내용은 참조는 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [SetSelectionCharFormat](#setselectioncharformat)합니다.  
+### <a name="example"></a>Example  
+  See the example for [SetSelectionCharFormat](#setselectioncharformat).  
   
-##  <a name="getselectiontype"></a>CRichEditCtrl::GetSelectionType  
- 이 선택 유형을 결정 `CRichEditCtrl` 개체입니다.  
+##  <a name="getselectiontype"></a>  CRichEditCtrl::GetSelectionType  
+ Determines the selection type in this `CRichEditCtrl` object.  
   
 ```  
 WORD GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 선택 항목의 내용을 나타내는 플래그입니다. 다음 플래그의 조합:  
+### <a name="return-value"></a>Return Value  
+ Flags indicating the contents of the current selection. A combination of the following flags:  
   
-- `SEL_EMPTY`현재 선택 영역이 없는 것을 나타냅니다.  
+- `SEL_EMPTY` Indicates that there is no current selection.  
   
-- `SEL_TEXT`텍스트가 현재 선택 영역에 포함 되어 있음을 나타냅니다.  
+- `SEL_TEXT` Indicates that the current selection contains text.  
   
-- `SEL_OBJECT`현재 선택 영역 OLE 항목을 하나 이상 포함 되어 있음을 나타냅니다.  
+- `SEL_OBJECT` Indicates that the current selection contains at least one OLE item.  
   
-- `SEL_MULTICHAR`현재 선택한 항목 텍스트의 문자를 여러 개 포함 되어 있음을 나타냅니다.  
+- `SEL_MULTICHAR` Indicates that the current selection contains more than one character of text.  
   
-- `SEL_MULTIOBJECT`현재 선택 영역에 둘 이상의 OLE 개체가 포함 되어 있음을 나타냅니다.  
+- `SEL_MULTIOBJECT` Indicates that the current selection contains more than one OLE object.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
   
-##  <a name="getseltext"></a>CRichEditCtrl::GetSelText  
- 이 현재 선택 영역에서 텍스트를 검색 `CRichEditCtrl` 개체입니다.  
+##  <a name="getseltext"></a>  CRichEditCtrl::GetSelText  
+ Retrieves the text from the current selection in this `CRichEditCtrl` object.  
   
 ```  
 long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 현재 선택한 항목의 텍스트를 받기 위한 버퍼에 대 한 포인터입니다.  
+ Pointer to the buffer to receive the text in the current selection.  
   
-### <a name="return-value"></a>반환 값  
- 폼에 따라 달라 집니다.  
+### <a name="return-value"></a>Return Value  
+ Depends on the form:  
   
-- **GetSelText (** `lpBuf` **)** 에 복사 하는 문자 수가 `lpBuf`, null 종료 포함 되지 않습니다.  
+- **GetSelText(** `lpBuf` **)** The number of characters copied into `lpBuf`, not including the null termination.  
   
-- **GetSelText ()** 현재 선택 영역을 포함 하는 문자열입니다.  
+- **GetSelText( )** The string containing the current selection.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 형태를 사용 하는 경우 **GetSelText (** `lpBuf` **)**, 버퍼 받도록 텍스트에 충분히 큰지 확인 해야 합니다. 호출 [GetSel](#getsel) 현재 선택 영역에 있는 문자의 수를 결정 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you use the first form, **GetSelText(** `lpBuf` **)**, you must ensure that the buffer is large enough for the text it will receive. Call [GetSel](#getsel) to determine the number of characters in the current selection.  
   
- 자세한 내용은 참조 [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRichEditCtrl::GetSelectionType](#getselectiontype)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::GetSelectionType](#getselectiontype).  
   
-##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
- 이 문자에 있는 텍스트의 길이 검색 `CRichEditCtrl` 개체를 null 종결 문자를 포함 하지 않습니다.  
+##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength  
+ Retrieves the length of the text, in characters, in this `CRichEditCtrl` object, not including the terminating null character.  
   
 ```  
 long GetTextLength() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 텍스트의 길이 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The length of the text in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
- Rich edit 컨트롤에서 텍스트의 길이 계산합니다.  
+##  <a name="gettextlengthex"></a>  CRichEditCtrl::GetTextLengthEx  
+ Calculates the length of the text in the rich edit control.  
   
 ```  
 long GetTextLengthEx(
@@ -978,31 +978,31 @@ long GetTextLengthEx(
     UINT uCodePage = -1) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 텍스트 길이 결정 하는 데 사용할 방법을 지정 하는 값입니다. 이 구성원 하나일 수 있습니다 또는 플래그 소속에 나열 된 값 [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) 에 설명 된는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Value specifying the method to be used in determining the text length. This member can be one or more of the values listed in the flags member of [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) described in the Windows SDK.  
   
  `uCodePage`  
- 번역 (ANSI 코드 페이지, 유니코드에 대 한 1200 CP_ACP)에 대 한 코드 페이지입니다.  
+ Code page for translation (CP_ACP for ANSI Code Page, 1200 for Unicode).  
   
-### <a name="return-value"></a>반환 값  
- 문자 또는 편집 컨트롤의 바이트 수입니다. 호환 되지 않는 플래그 설정 된 경우 `dwFlags`를이 멤버 함수는 반환 `E_INVALIDARG`합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of characters or bytes in the edit control. If incompatible flags were set in `dwFlags`, this member function returns `E_INVALIDARG`.  
   
-### <a name="remarks"></a>설명  
- `GetTextLengthEx`텍스트의 길이 결정 하는 추가 방법을 제공 합니다. Rich Edit 2.0 기능을 지원합니다. 참조 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]자세한 정보에 대 한 합니다.  
+### <a name="remarks"></a>Remarks  
+ `GetTextLengthEx` provides additional ways of determining the length of the text. It supports the Rich Edit 2.0 functionality. See [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDKfor more information.  
   
-##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
- Rich edit 컨트롤의 현재 텍스트 모드와 실행 취소 수준을 검색합니다.  
+##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
+ Retrieves the current text mode and undo level of a rich edit control.  
   
 ```  
 UINT GetTextMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 집합의 비트 플래그는 [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) 열거형 형식에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 플래그는 현재 텍스트 모드를 나타내고 컨트롤 수준 실행 취소 합니다.  
+### <a name="return-value"></a>Return Value  
+ A set of bit flags from the [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) enumeration type, as described in the Windows SDK. The flags indicate the current text mode and undo level of the control.  
   
-##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
- 지정된 된 문자 범위를 가져옵니다.  
+##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
+ Gets the specified range of characters.  
   
 ```  
 int GetTextRange(
@@ -1011,52 +1011,52 @@ int GetTextRange(
     CString& refString) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFirst`  
- 범위에서 첫 번째 문자 바로 앞에 문자 위치 인덱스입니다.  
+ The character position index immediately preceding the first character in the range.  
   
  `nLast`  
- 범위에서 마지막 문자 바로 뒤의 문자 위치입니다.  
+ The character position immediately following the last character in the range.  
   
  `refString`  
- 에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 텍스트 받게 될 개체입니다.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that will receive the text.  
   
-### <a name="return-value"></a>반환 값  
- Null 종결 문자를 포함 하지 않고, 복사 문자 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of characters copied, not including the terminating null character.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) in the Windows SDK.  
   
- `GetTextRange`Rich Edit 2.0 기능을 지원합니다. 참조 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]자세한 정보에 대 한 합니다.  
+ `GetTextRange` supports the Rich Edit 2.0 functionality. See [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDKfor more information.  
   
-##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
- 있는 경우 실행 취소 큐에 다음 사용 가능한 동작의 유형을 검색 합니다.  
+##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
+ Retrieves the type of the next available action in the undo queue, if any.  
   
 ```  
 UNDONAMEID GetUndoName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 실행 취소 작업은 컨트롤의 실행 취소 큐에 있는 경우 `GetUndoName` 반환 된 [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) 큐에 있는 다음 동작의 형식을 나타내는 열거형입니다. 실행 취소 큐가 비어 있는 경우 또는 큐의 실행 취소 동작을 알 수 없는 유형의 경우 `GetUndoName` 0을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If an undo action is in the control's undo queue, `GetUndoName` returns the [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) enumeration type indicating the type of the next action in the queue. If the undo queue is empty, or if the undo action in the queue is of an unknown type, `GetUndoName` returns 0.  
   
-### <a name="remarks"></a>주의  
- 실행 취소 하거나 다시 실행할 수 있는 동작의 유형을 입력, delete, 끌어서 놓기, 잘라내기, 포함 및 붙여넣기 작업 합니다. 이 정보는 실행 취소할 수 있는 작업의 드롭다운 목록 상자와 같은 실행 취소 및 다시 실행 작업에 대 한 확장된 된 사용자 인터페이스를 제공 하는 응용 프로그램에 유용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The types of actions that can be undone or redone include typing, delete, drag-drop, cut, and paste operations. This information can be useful for applications that provide an extended user interface for Undo and Redo operations, such as a drop-down list box of actions that can be undone.  
   
-##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
- 현재 줄 바꿈 및 단어 분리 옵션 rich edit 컨트롤을 검색합니다.  
+##  <a name="getwordwrapmode"></a>  CRichEditCtrl::GetWordWrapMode  
+ Retrieves the current word wrapping and word breaking options for the rich edit control.  
   
 ```  
 UINT GetWordWrapMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 줄 바꿈 및 단어 분리 옵션입니다. 이러한 옵션은 [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="return-value"></a>Return Value  
+ The current word wrapping and word breaking options. These options are described in [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 아시아 언어 버전의 운영 체제에만 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is available only for Asian-language versions of the operating system.  
   
-##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
- 선택 항목의 표시 여부를 변경 합니다.  
+##  <a name="hideselection"></a>  CRichEditCtrl::HideSelection  
+ Changes the visibility of the selection.  
   
 ```  
 void HideSelection(
@@ -1064,111 +1064,111 @@ void HideSelection(
     BOOL bPerm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bHide`  
- 선택 영역을 표시 하거나 숨길 경우 나타냅니다 **TRUE** 를 숨기려면 선택 합니다.  
+ Indicates if the selection should be shown or hidden, **TRUE** to hide the selection.  
   
  `bPerm`  
- 선택 영역에 대 한 표시 유형이 변경 영구적 이어야 하는 경우를 나타냅니다.  
+ Indicates if this change in visibility for the selection should be permanent.  
   
-### <a name="remarks"></a>설명  
- 때 `bPerm` 은 **TRUE**, 변경의 `ECO_NOHIDESEL` 이 대 한 옵션 `CRichEditCtrl` 개체입니다. 이 옵션의 간략 한 설명을 참조 하십시오. [SetOptions](#setoptions)합니다. 이 함수를 사용 하 여이 대 한 모든 옵션을 설정 하려면 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ When `bPerm` is **TRUE**, it changes the `ECO_NOHIDESEL` option for this `CRichEditCtrl` object. For a brief description of this option, see [SetOptions](#setoptions). You can use this function to set all the options for this `CRichEditCtrl` object.  
   
- 자세한 내용은 참조 [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="limittext"></a>CRichEditCtrl::LimitText  
- 사용자가 편집 컨트롤에 입력할 수 있는 텍스트의 길이 제한 합니다.  
+##  <a name="limittext"></a>  CRichEditCtrl::LimitText  
+ Limits the length of the text that the user can enter into an edit control.  
   
 ```  
 void LimitText(long nChars = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nChars`  
- 입력할 수 있는 텍스트의 바이트 단위로 지정 합니다. 이 매개 변수가 0 (기본값) 이면 텍스트 길이 64kb로 설정 됩니다.  
+ Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0 (the default value), the text length is set to 64K bytes.  
   
-### <a name="remarks"></a>주의  
- 입력할 수 있는 텍스트에만 제한 텍스트 제한을 변경 합니다. 편집 컨트롤에 이미 모든 텍스트 없습니다 영향을 주지도 않습니다 것 영향을 복사 하 여 편집 컨트롤에서 텍스트의 길이 [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) 멤버 함수에 `CWnd`합니다. 응용 프로그램에서 사용 하는 경우는 `SetWindowText` 함수에 대 한 호출에서 지정 된 편집 컨트롤에 많은 텍스트를 배치 하려면 `LimitText`, 사용자에 편집 컨트롤에서 텍스트를 삭제할 수 있습니다. 그러나 텍스트 제한 기존 텍스트를 새 텍스트로 대체에서 사용자를 하지 것입니다, 그리고 현재 선택 영역을 삭제 하지 않는 한 문자 제한에는 텍스트입니다.  
+### <a name="remarks"></a>Remarks  
+ Changing the text limit restricts only the text the user can enter. It has no effect on any text already in the edit control, nor does it affect the length of the text copied to the edit control by the [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) member function in `CWnd`. If an application uses the `SetWindowText` function to place more text into an edit control than is specified in the call to `LimitText`, the user can delete any of the text within the edit control. However, the text limit will prevent the user from replacing the existing text with new text, unless deleting the current selection causes the text to fall below the text limit.  
   
 > [!NOTE]
->  문자 제한에 대 한 각 OLE 항목을 단일 문자로 계산합니다.  
+>  For the text limit, each OLE item counts as a single character.  
   
- 자세한 내용은 참조 [EM_EXLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788003) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_EXLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788003) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
- 지정된 된 문자 인덱스를 포함 하는 줄의 줄 번호를 검색 합니다.  
+##  <a name="linefromchar"></a>  CRichEditCtrl::LineFromChar  
+ Retrieves the line number of the line that contains the specified character index.  
   
 ```  
 long LineFromChar(long nIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 편집 컨트롤의 텍스트에 원하는 문자에 대 한 0부터 시작 인덱스 값을 포함 하거나-1을 포함 합니다. 경우 `nIndex` 은-1, 캐럿을 포함 하는 줄, 현재 줄을 지정 합니다.  
+ Contains the zero-based index value for the desired character in the text of the edit control, or contains -1. If `nIndex` is -1, it specifies the current line, that is, the line that contains the caret.  
   
-### <a name="return-value"></a>반환 값  
- 로 지정 된 문자 인덱스를 포함 하는 줄의 0부터 시작 줄 번호 `nIndex`합니다. 경우 `nIndex` 은-1, 선택 항목의 첫 번째 문자를 포함 하는 줄 번호 반환 됩니다. 선택 영역이 없는 경우 현재 줄 번호 반환 됩니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based line number of the line containing the character index specified by `nIndex`. If `nIndex` is -1, the number of the line that contains the first character of the selection is returned. If there is no selection, the current line number is returned.  
   
-### <a name="remarks"></a>설명  
- 문자 인덱스가 rich edit 컨트롤의 처음부터 문자의 수입니다. 문자 개수를 OLE 항목을 단일 문자로 계산 됩니다.  
+### <a name="remarks"></a>Remarks  
+ A character index is the number of characters from the beginning of the rich edit control. For character counting, an OLE item is counted as a single character.  
   
- 자세한 내용은 참조 [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
- 이 줄의 문자 인덱스를 검색 `CRichEditCtrl` 개체입니다.  
+##  <a name="lineindex"></a>  CRichEditCtrl::LineIndex  
+ Retrieves the character index of a line within this `CRichEditCtrl` object.  
   
 ```  
 int LineIndex(int nLine = -1) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nLine`  
- 원하는 줄 편집 컨트롤의 텍스트에 대 한 인덱스 값을 포함 하거나-1을 포함 합니다. 경우 `nLine` 은-1, 캐럿을 포함 하는 줄, 현재 줄을 지정 합니다.  
+ Contains the index value for the desired line in the text of the edit control, or contains -1. If `nLine` is -1, it specifies the current line, that is, the line that contains the caret.  
   
-### <a name="return-value"></a>반환 값  
- 에 지정 된 줄의 문자 인덱스 `nLine` 하거나 지정된 된 줄 번호 큰 경우-1 다음 편집 컨트롤에는 줄 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ The character index of the line specified in `nLine` or -1 if the specified line number is greater then the number of lines in the edit control.  
   
-### <a name="remarks"></a>주의  
- 문자 인덱스에 지정된 된 줄에 서식 있는 편집 컨트롤의 처음부터 문자의 수입니다.  
+### <a name="remarks"></a>Remarks  
+ The character index is the number of characters from the beginning of the rich edit control to the specified line.  
   
- 자세한 내용은 참조 [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="linelength"></a>CRichEditCtrl::LineLength  
- Rich edit 컨트롤의 줄 길이 검색합니다.  
+##  <a name="linelength"></a>  CRichEditCtrl::LineLength  
+ Retrieves the length of a line in a rich edit control.  
   
 ```  
 int LineLength(int nLine = -1) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nLine`  
- 검색할 길이가 줄의 문자는 문자 인덱스를 지정 합니다. 이 매개 변수가-1 인 경우 문자열의 길이 포함 하지 않고 선택한 텍스트를 줄, 현재 줄 (캐럿을 포함 하는 줄)의 길이가 반환 됩니다. 때 `LineLength` 라고 단일 행 편집 컨트롤의 경우이 매개 변수가 무시 됩니다.  
+ Specifies the character index of a character in the line whose length is to be retrieved. If this parameter is -1, the length of the current line (the line that contains the caret) is returned, not including the length of any selected text within the line. When `LineLength` is called for a single-line edit control, this parameter is ignored.  
   
-### <a name="return-value"></a>반환 값  
- 때 `LineLength` 호출 되는 여러 줄 편집 컨트롤에 대 한 반환 값은 길이 (바이트)로 지정 된 줄의 `nLine`합니다. 때 `LineLength` 라고 단일 행 편집 컨트롤에 대 한 반환 값은 길이 (바이트) 편집 컨트롤의 텍스트입니다.  
+### <a name="return-value"></a>Return Value  
+ When `LineLength` is called for a multiple-line edit control, the return value is the length (in bytes) of the line specified by `nLine`. When `LineLength` is called for a single-line edit control, the return value is the length (in bytes) of the text in the edit control.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [LineIndex](#lineindex) 이 내의 지정 된 줄 번호에 대 한 문자 인덱스를 검색 하려면 멤버 함수 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [LineIndex](#lineindex) member function to retrieve a character index for a given line number within this `CRichEditCtrl` object.  
   
- 자세한 내용은 참조 [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [LineIndex](#lineindex)합니다.  
+### <a name="example"></a>Example  
+  See the example for [LineIndex](#lineindex).  
   
-##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
- 여러 줄 편집 컨트롤의 텍스트가 스크롤됩니다.  
+##  <a name="linescroll"></a>  CRichEditCtrl::LineScroll  
+ Scrolls the text of a multiple-line edit control.  
   
 ```  
 void LineScroll(
@@ -1176,40 +1176,40 @@ void LineScroll(
     int nChars = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nLines`  
- 세로로 스크롤할 줄 수를 지정 합니다.  
+ Specifies the number of lines to scroll vertically.  
   
  `nChars`  
- 가 가로로 스크롤하도록 문자 위치의 수를 지정 합니다. Rich edit 컨트롤 중 하나에 있으면이 값은 무시 됩니다는 **ES_RIGHT** 또는 **ES_CENTER** 스타일입니다. [편집 스타일](../../mfc/reference/edit-styles.md) 에 지정 된 [만들기](#create)합니다.  
+ Specifies the number of character positions to scroll horizontally. This value is ignored if the rich edit control has either the **ES_RIGHT** or **ES_CENTER** style. [Edit styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles) are specified in [Create](#create).  
   
-### <a name="remarks"></a>설명  
- 편집 컨트롤의에서 텍스트의 마지막 줄을 지 나 편집 컨트롤이 세로로 스크롤되지 않습니다. 현재 줄로 지정 된 줄 수를 더한 경우 `nLines` 줄 편집 컨트롤의 총 수를 초과 하면, 마지막 줄 편집 컨트롤의 편집 컨트롤 창의 위쪽 스크롤할 수 있도록 조정 되는 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The edit control does not scroll vertically past the last line of text in the edit control. If the current line plus the number of lines specified by `nLines` exceeds the total number of lines in the edit control, the value is adjusted so that the last line of the edit control is scrolled to the top of the edit-control window.  
   
- `LineScroll`용도 모든 줄의 마지막 문자를 지난 사이 이동 합니다.  
+ `LineScroll` can be used to scroll horizontally past the last character of any line.  
   
- 자세한 내용은 참조 [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetFirstVisibleLine](#getfirstvisibleline)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="paste"></a>CRichEditCtrl::Paste  
- 에 클립보드의 데이터를 삽입은 `CRichEditCtrl` 삽입점 캐럿의 위치에 있습니다.  
+##  <a name="paste"></a>  CRichEditCtrl::Paste  
+ Inserts the data from the Clipboard into the `CRichEditCtrl` at the insertion point, the location of the caret.  
   
 ```  
 void Paste();
 ```  
   
-### <a name="remarks"></a>주의  
- 데이터가는 클립보드 인식할 수 있는 형식이 데이터를 포함 하는 경우에 삽입 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Data is inserted only if the Clipboard contains data in a recognized format.  
   
- 자세한 내용은 참조 [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
- 특정 클립보드 형식으로 데이터를이에 붙여 넣는 `CRichEditCtrl` 개체입니다.  
+##  <a name="pastespecial"></a>  CRichEditCtrl::PasteSpecial  
+ Pastes data in a specific Clipboard format into this `CRichEditCtrl` object.  
   
 ```  
 void PasteSpecial(
@@ -1218,56 +1218,56 @@ void PasteSpecial(
     HMETAFILE hMF = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nClipFormat*  
- 클립보드 형식에이를 붙여 넣으려면 `CRichEditCtrl` 개체입니다.  
+ Clipboard format to paste into this `CRichEditCtrl` object.  
   
  *dvAspect*  
- 클립보드에서 검색할 데이터에 대 한 장치 측면입니다.  
+ Device aspect for the data to be retrieved from the Clipboard.  
   
  *hMF*  
- 붙여 넣을 개체의 아이콘 보기를 포함 하는 메타 파일에 대 한 핸들입니다.  
+ Handle to the metafile containing the iconic view of the object to be pasted.  
   
-### <a name="remarks"></a>주의  
- 새로운 재질 삽입점 캐럿의 위치에 삽입 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The new material is inserted at the insertion point, the location of the caret.  
   
- 자세한 내용은 참조 [EM_PASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/bb774214) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_PASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/bb774214) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
- 클라이언트 영역 좌표로 edit 컨트롤의 지정 된 문자를 검색합니다.  
+##  <a name="posfromchar"></a>  CRichEditCtrl::PosFromChar  
+ Retrieves the client area coordinates of a specified character in an edit control.  
   
 ```  
 CPoint PosFromChar(UINT nChar) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nChar`  
- 문자의 0부터 시작 하는 인덱스입니다.  
+ The zero-based index of the character.  
   
-### <a name="return-value"></a>반환 값  
- 문자, (x, y)의 위치입니다. 단일 행 편집 컨트롤에 대 한 y-좌표는 항상 0입니다.  
+### <a name="return-value"></a>Return Value  
+ The position of the character, (x, y). For a single-line edit control, the y-coordinate is always zero.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in the Windows SDK.  
   
-##  <a name="redo"></a>CRichEditCtrl::Redo  
- 컨트롤의 redo queue의 다음 작업을 다시 실행합니다.  
+##  <a name="redo"></a>  CRichEditCtrl::Redo  
+ Redoes the next action in the control's redo queue.  
   
 ```  
 BOOL Redo();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) in the Windows SDK.  
   
-##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
- 이 현재 선택한 바꿉니다 `CRichEditCtrl` 지정 된 텍스트는 개체입니다.  
+##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
+ Replaces the current selection in this `CRichEditCtrl` object with the specified text.  
   
 ```  
 void ReplaceSel(
@@ -1275,59 +1275,59 @@ void ReplaceSel(
     BOOL bCanUndo = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszNewText`  
- 대체 텍스트를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+ Pointer to a null-terminated string containing the replacement text.  
   
  `bCanUndo`  
- 이 기능을 실행 취소할 수 있는지를 지정 하려면이 매개 변수의 값을 설정 **TRUE**합니다. 기본값은 **FALSE**합니다.  
+ To specify that this function can be undone, set the value of this parameter to **TRUE**. The default value is **FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 모든 텍스트를 바꾸려면 `CRichEditCtrl` 개체를 가져오려면 [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)합니다.  
+### <a name="remarks"></a>Remarks  
+ To replace all the text in this `CRichEditCtrl` object, use [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
- 현재 선택 없으면 바꿀 텍스트 삽입 지점, 즉, 현재 캐럿 위치에 삽입 됩니다.  
+ If there is no current selection, the replacement text is inserted at the insertion point, that is, the current caret location.  
   
- 이 함수는 기존 문자 서식으로 삽입 된 텍스트 서식을 지정 합니다. 텍스트의 전체 범위를 바꿀 때 (호출 하 여 `SetSel`(0,-1) 호출 하기 전에 `ReplaceSel`), 문자의 단락 이전 단락 서식 지정을 유지 하는 새로 삽입 된 텍스트로 상속에 끝이 있습니다.  
+ This function will format the inserted text with the existing character formatting. When replacing the entire range of text (by calling `SetSel`(0,-1) before calling `ReplaceSel`), there is an end of paragraph character that retains the previous paragraph's formatting, which in inherited by the newly inserted text.  
   
- 자세한 내용은 참조 [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [LineIndex](#lineindex)합니다.  
+### <a name="example"></a>Example  
+  See the example for [LineIndex](#lineindex).  
   
-##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
- 이 `CRichEditCtrl` 보내려는 개체 **EN_REQUESTRESIZE** 알림 메시지를 해당 부모 창입니다.  
+##  <a name="requestresize"></a>  CRichEditCtrl::RequestResize  
+ Forces this `CRichEditCtrl` object to send **EN_REQUESTRESIZE** notification messages to its parent window.  
   
 ```  
 void RequestResize();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 기능은 유용 [CWnd::OnSize](../../mfc/reference/cwnd-class.md#onsize) 는 바닥 없음에 대 한 처리 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This function is useful during [CWnd::OnSize](../../mfc/reference/cwnd-class.md#onsize) processing for a bottomless `CRichEditCtrl` object.  
   
- 자세한 내용은 참조는 [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) 메시지 및 **바닥 없는 Rich Edit 컨트롤** 섹션 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) message and the **Bottomless Rich Edit Controls** section of [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDK.  
   
-##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
- Rich edit 컨트롤 URL을 자동으로 검색을 설정 합니다.  
+##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
+ Sets the rich edit control to automatically detect a URL.  
   
 ```  
 BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 컨트롤이 자동으로 URL을 검색 하도록 설정 되었는지 여부를 지정 합니다. 경우 **TRUE**를 사용할 수 있습니다. 경우 **FALSE**, 사용이 불가능 합니다.  
+ Specifies whether the control is set to automatically detect a URL. If **TRUE**, it is enabled. If **FALSE**, it is disabled.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 경우 0입니다. 예를 들어 메시지는 메모리 부족으로 인해 실패할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, otherwise nonzero. For example, the message may fail due to insufficient memory.  
   
-### <a name="remarks"></a>주의  
- 설정 된 경우 서식 있는 편집 컨트롤은 표준 URL 형식에 맞는지 확인 하기 위해 텍스트를 검사 합니다. 목록이 이러한 URL 형식에 대 한 참조 [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ If enabled, the rich edit control will scan the text to determine if it matches a standard URL format. For a list of these URL formats, see [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) in the Windows SDK.  
   
 > [!NOTE]
->  설정 하지 마십시오 `SetAutoURLDetect` 를 **TRUE** edit 컨트롤이 사용 하는 경우는 **CFE_LINK** Url 외의 텍스트에 대 한 효과입니다. `SetAutoURLDetect`Url에 대 한이 효과 사용 하도록 설정 하 고 다른 모든 텍스트에 사용 하지 않도록 설정 합니다. 참조 [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) 에 대 한 자세한 내용은 **CFE_LINK** 효과입니다.  
+>  Do not set `SetAutoURLDetect` to **TRUE** if your edit control uses the **CFE_LINK** effect for text other than URLs. `SetAutoURLDetect` enables this effect for URLs and disables it for all other text. See [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) for more information about the **CFE_LINK** effect.  
   
-##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
- 이 대 한 배경색을 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
+ Sets the background color for this `CRichEditCtrl` object.  
   
 ```  
 COLORREF SetBackgroundColor(
@@ -1335,111 +1335,111 @@ COLORREF SetBackgroundColor(
     COLORREF cr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bSysColor`  
- 명령 프롬프트 창의 배경색 시스템 값으로 설정 되어야 하는 경우를 나타냅니다. 이 값이 **TRUE**, `cr` 는 무시 됩니다.  
+ Indicates if the background color should be set to the system value. If this value is **TRUE**, `cr` is ignored.  
   
  `cr`  
- 요청 된 배경색입니다. 사용 되는 경우에만 `bSysColor` 은 **FALSE**합니다.  
+ The requested background color. Used only if `bSysColor` is **FALSE**.  
   
-### <a name="return-value"></a>반환 값  
- 이 대 한 이전 배경색 `CRichEditCtrl` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The previous background color for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>주의  
- 시스템 값 또는 지정 된 명령 프롬프트 창의 배경색을 설정할 수 있습니다 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The background color can be set to the system value or to a specified [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value.  
   
- 자세한 내용은 참조 [EM_SETBKGNDCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774228) 메시지 및 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETBKGNDCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774228) message and [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
- 이 새 텍스트 특성을 형식 지정 문자 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setdefaultcharformat"></a>  CRichEditCtrl::SetDefaultCharFormat  
+ Sets the character formatting attributes for new text in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetDefaultCharFormat(CHARFORMAT& cf);  
 BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 첫 번째 버전에 대 한 포인터는 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 서식 특성 새 기본 문자를 포함 하는 구조입니다.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new default character formatting attributes.  
   
- 두 번째 버전에 대 한 포인터는 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Rich Edit 2.0 확장인 구조에는 **CHARFORMAT** 서식 특성의 기본 문자를 포함 하는 구조입니다.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the default character formatting attributes.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>설명  
- 로 지정 된 특성에만 **dwMask** 소속 `cf` 이 기능으로 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- 자세한 내용은 참조는 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
- 이 대 한 이벤트 마스크를 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="seteventmask"></a>  CRichEditCtrl::SetEventMask  
+ Sets the event mask for this `CRichEditCtrl` object.  
   
 ```  
 DWORD SetEventMask(DWORD dwEventMask);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *dwEventMask*  
- 이 대 한 새 이벤트 마스크 `CRichEditCtrl` 개체입니다.  
+ The new event mask for this `CRichEditCtrl` object.  
   
-### <a name="return-value"></a>반환 값  
- 이전 이벤트 마스크입니다.  
+### <a name="return-value"></a>Return Value  
+ The previous event mask.  
   
-### <a name="remarks"></a>주의  
- 알림 메시지를 지정 하는 이벤트 마스크는 `CRichEditCtrl` 개체를 부모 창에 보냅니다.  
+### <a name="remarks"></a>Remarks  
+ The event mask specifies which notification messages the `CRichEditCtrl` object sends to its parent window.  
   
- 자세한 내용은 참조 [EM_SETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb774238) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb774238) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
- 설정 하거나 편집 컨트롤에 대 한 수정된 된 플래그를 지웁니다.  
+##  <a name="setmodify"></a>  CRichEditCtrl::SetModify  
+ Sets or clears the modified flag for an edit control.  
   
 ```  
 void SetModify(BOOL bModified = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bModified`  
- 값이 **TRUE** 이면 텍스트가 수정 된 값을 **FALSE** 는 수정 되지 않습니다 나타냅니다. 수정된 된 플래그는 기본적으로 설정 됩니다.  
+ A value of **TRUE** indicates that the text has been modified, and a value of **FALSE** indicates it is unmodified. By default, the modified flag is set.  
   
-### <a name="remarks"></a>설명  
- 수정된 된 플래그는 편집 컨트롤 내의 텍스트를 수정 했는지 여부를 나타냅니다. 사용자는 텍스트를 변경할 때마다 자동으로 설정 됩니다. 와 해당 값을 검색할 수는 [GetModify](#getmodify) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The modified flag indicates whether or not the text within the edit control has been modified. It is automatically set whenever the user changes the text. Its value can be retrieved with the [GetModify](#getmodify) member function.  
   
- 자세한 내용은 참조 [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetModify](#getmodify)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetModify](#getmodify).  
   
-##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
- 이 제공 `CRichEditCtrl` 개체는 **IRichEditOleCallback** OLE 관련 리소스 및 정보에 액세스 하는 데 사용할 개체입니다.  
+##  <a name="setolecallback"></a>  CRichEditCtrl::SetOLECallback  
+ Gives this `CRichEditCtrl` object an **IRichEditOleCallback** object to use to access OLE-related resources and information.  
   
 ```  
 BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pCallback`  
- 에 대 한 포인터는 [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) 개체가 `CRichEditCtrl` OLE 관련 리소스 및 정보를 가져올 개체를 사용 합니다.  
+ Pointer to an [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) object that this `CRichEditCtrl` object will use to get OLE-related resources and information.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 이 `CRichEditCtrl` 개체 호출 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379) 로 지정 된 COM 개체에 대 한 사용 개수를 증가 시키는 `pCallback`합니다.  
+### <a name="remarks"></a>Remarks  
+ This `CRichEditCtrl` object will call [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) to increment the usage count for the COM object specified by `pCallback`.  
   
- 자세한 내용은 참조 [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) 메시지 및 [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) 인터페이스는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) message and [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) interface in the Windows SDK.  
   
-##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
- 이 옵션을 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
+ Sets the options for this `CRichEditCtrl` object.  
   
 ```  
 void SetOptions(
@@ -1447,72 +1447,72 @@ void SetOptions(
     DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *wOp*  
- 작업의 유형을 나타냅니다. 다음 값 중 하나입니다.  
+ Indicates the type of operation. One of the following values:  
   
-- `ECOOP_SET`지정 된 옵션을 설정 `dwFlags`합니다.  
+- `ECOOP_SET` Set the options to those specified by `dwFlags`.  
   
-- `ECOOP_OR`이 메서드는 현재 옵션 결합 `dwFlags`합니다.  
+- `ECOOP_OR` Combine the current options with those specified by `dwFlags`.  
   
-- `ECOOP_AND`또한 지정 된 현재 옵션만 유지 `dwFlags`합니다.  
+- `ECOOP_AND` Retain only those current options that are also specified by `dwFlags`.  
   
-- `ECOOP_XOR`유지 되는 현재 이러한 옵션만 *하지* 에 지정 된 `dwFlags`합니다.  
+- `ECOOP_XOR` Logically exclusive OR the current options with those specified by `dwFlags`.  
   
  `dwFlags`  
- 서식 있는 편집 옵션입니다. 플래그 값은 설명 섹션에 나열 됩니다.  
+ Rich edit options. The flag values are listed in the Remarks section.  
   
-### <a name="remarks"></a>설명  
- 옵션은 다음 값의 조합 될 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The options can be a combination of the following values:  
   
-- `ECO_AUTOWORDSELECTION`단어 단위로 선택을에 두 번 클릭 합니다.  
+- `ECO_AUTOWORDSELECTION` Automatic word selection on double-click.  
   
-- `ECO_AUTOVSCROLL`줄의 끝에 문자를 입력 하는 경우 10 자 씩 텍스트 오른쪽에 자동으로 스크롤됩니다. 사용자가 ENTER 키를 누르면 컨트롤 0이 위치로 복원 하는 모든 텍스트를 스크롤합니다.  
+- `ECO_AUTOVSCROLL` Automatically scrolls text to the right by 10 characters when the user types a character at the end of the line. When the user presses the ENTER key, the control scrolls all text back to position zero.  
   
-- `ECO_AUTOHSCROLL`마지막 줄에서 ENTER 키를 누를 때 텍스트를 한 페이지 위로 자동으로 스크롤됩니다.  
+- `ECO_AUTOHSCROLL` Automatically scrolls text up one page when the user presses the ENTER key on the last line.  
   
-- `ECO_NOHIDESEL`편집 컨트롤에 대 한 기본 동작을 부정합니다. 컨트롤이 입력된 포커스를 잃고 컨트롤이 입력된 포커스를 받을 때 선택한 표시 하는 경우 기본 동작 선택 영역을 숨깁니다. 지정 하는 경우 `ECO_NOHIDESEL`, 선택한 텍스트 컨트롤에 포커스가 없는 경우에 반대로 됩니다.  
+- `ECO_NOHIDESEL` Negates the default behavior for an edit control. The default behavior hides the selection when the control loses the input focus and shows the selection when the control receives the input focus. If you specify `ECO_NOHIDESEL`, the selected text is inverted, even if the control does not have the focus.  
   
-- `ECO_READONLY`사용자를가 입력 하거나 편집 컨트롤의 텍스트를 편집할 수 없습니다.  
+- `ECO_READONLY` Prevents the user from typing or editing text in the edit control.  
   
-- `ECO_WANTRETURN`대화 상자에서 여러 줄 서식 있는 편집 컨트롤에 텍스트를 입력 하는 동안 사용자가 ENTER 키를 누를 때 캐리지 리턴 삽입할 수를 지정 합니다. 이 스타일을 지정 하지 않으면 ENTER 키를 부모 창의 기본 단추 (예를 들어 대화 상자에서 확인 단추)를 클릭 하면 유사한 rich edit 컨트롤의 부모 창에 명령을 보냅니다. 이 스타일에 편집 컨트롤을 단일 줄에 적용 되지 않습니다.  
+- `ECO_WANTRETURN` Specifies that a carriage return be inserted when the user presses the ENTER key while entering text into a multiple-line rich edit control in a dialog box. If you do not specify this style, pressing the ENTER key sends a command to the rich edit control's parent window, which mimics clicking the parent window's default button (for example, the OK button in a dialog box). This style has no effect on a single-line edit control.  
   
-- `ECO_SAVESEL`컨트롤이 포커스를 잃으면 선택 영역을 유지 합니다. 기본적으로 포커스를 회복 될 때 컨트롤의 전체 내용은 선택 됩니다.  
+- `ECO_SAVESEL` Preserves the selection when the control loses the focus. By default, the entire contents of the control are selected when it regains the focus.  
   
-- `ECO_VERTICAL`세로 방향으로 텍스트 및 개체를 그립니다. 아시아 언어에만 사용할 수 있습니다.  
+- `ECO_VERTICAL` Draws text and objects in a vertical direction. Available for Asian languages only.  
   
- 자세한 내용은 참조 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
- 단락 서식 특성이 현재 선택 영역을 설정 하는 `CRichEditCtrl` 개체입니다.  
+##  <a name="setparaformat"></a>  CRichEditCtrl::SetParaFormat  
+ Sets the paragraph formatting attributes for the current selection in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetParaFormat(PARAFORMAT& pf);  
 BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pf`  
- 첫 번째 버전에 대 한 포인터는 [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) 새 기본값을 포함 하는 구조 단락 서식 특성입니다.  
+ In the first version, a pointer to a [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure containing the new default paragraph formatting attributes.  
   
- 두 번째 버전에 대 한 포인터는 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Rich Edit 2.0 확장인 구조에는 **PARAFORMAT** 구조를 서식 특성의 기본 문자를 포함 합니다.  
+ In the second version, a pointer to a [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure, which is a Rich Edit 2.0 extension to the **PARAFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 로 지정 된 특성에만 **dwMask** 소속 `pf` 이 기능으로 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `pf` are changed by this function.  
   
- 자세한 내용은 참조는 [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) 메시지 및 **PARAFORMAT** 및 **PARAFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) message and the **PARAFORMAT** and **PARAFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
- Rich edit 컨트롤에는 문장 부호를 설정합니다.  
+##  <a name="setpunctuation"></a>  CRichEditCtrl::SetPunctuation  
+ Sets the punctuation in a rich edit control.  
   
 ```  
 BOOL SetPunctuation(
@@ -1520,62 +1520,62 @@ BOOL SetPunctuation(
     PUNCTUATION* lpPunc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fType`  
- 문장 부호 플래그입니다. 목록이 가능한 값에 대 한 참조는 `fType` 에 대 한 매개 변수 [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The punctuation flag. For a list of possible values, see the `fType` parameter for [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) in the Windows SDK.  
   
  `lpPunc`  
- 에 대 한 포인터는 [문장 부호](http://msdn.microsoft.com/library/windows/desktop/bb787944) 구조에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ A pointer to a [PUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb787944) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 운영 체제의 버전에만 아시아 언어에 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is available for only Asian-language versions of the operating system.  
   
-##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
- 변경 된 `ECO_READONLY` 이 대 한 옵션 `CRichEditCtrl` 개체입니다.  
+##  <a name="setreadonly"></a>  CRichEditCtrl::SetReadOnly  
+ Changes the `ECO_READONLY` option for this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bReadOnly`  
- 나타냅니다이 `CRichEditCtrl` 개체 읽기 전용 이어야 합니다.  
+ Indicates if this `CRichEditCtrl` object should be read only.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>설명  
- 이 옵션의 간략 한 설명을 참조 하십시오. [SetOptions](#setoptions)합니다. 이 함수를 사용 하 여이 대 한 모든 옵션을 설정 하려면 `CRichEditCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ For a brief description of this option, see [SetOptions](#setoptions). You can use this function to set all the options for this `CRichEditCtrl` object.  
   
- 자세한 내용은 참조 [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="setrect"></a>CRichEditCtrl::SetRect  
- 이 대 한 서식 지정 영역을 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setrect"></a>  CRichEditCtrl::SetRect  
+ Sets the formatting rectangle for this `CRichEditCtrl` object.  
   
 ```  
 void SetRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는에 대 한 포인터는 [RECT](../../mfc/reference/rect-structure1.md) 서식 지정 영역에 대 한 새 경계를 나타내는입니다.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) or pointer to a [RECT](../../mfc/reference/rect-structure1.md) that indicates the new bounds for the formatting rectangle.  
   
-### <a name="remarks"></a>주의  
- 서식 지정 영역 텍스트에 대 한 제한 사각형이입니다. 제한 사각형은 서식 있는 편집 컨트롤 창 크기에 관계 없이입니다. 때이 `CRichEditCtrl` 개체가 먼저 만들어진, 서식 지정 영역 창의 클라이언트 영역으로 동일한 크기입니다. 사용 하 여 `SetRect` rich edit 창이 보다 크거나 작을 서식 지정 영역에 있도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ The formatting rectangle is the limiting rectangle for the text. The limiting rectangle is independent of the size of the rich edit control window. When this `CRichEditCtrl` object is first created, the formatting rectangle is the same size as the client area of the window. Use `SetRect` to make the formatting rectangle larger or smaller than the rich edit window.  
   
- 자세한 내용은 참조 [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="setsel"></a>CRichEditCtrl::SetSel  
- 이 선택을 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setsel"></a>  CRichEditCtrl::SetSel  
+ Sets the selection within this `CRichEditCtrl` object.  
   
 ```  
 void SetSel(
@@ -1585,59 +1585,59 @@ void SetSel(
 void SetSel(CHARRANGE& cr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nStartChar`  
- 선택 영역에 대 한 첫 번째 문자의 0부터 시작 인덱스입니다.  
+ Zero-based index of the first character for the selection.  
   
  `nEndChar`  
- 선택 영역에 대 한 마지막 문자의 0부터 시작 인덱스입니다.  
+ Zero-based index of the last character for the selection.  
   
  `cr`  
- [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 현재 선택 항목의 범위를 보유 하는 구조입니다.  
+ [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure which holds the bounds of the current selection.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 두 가지 형태의 선택 영역에 대 한 범위를 설정 하는 다른 방법을 제공 합니다. 이러한 폼 중 간단한 설명을 따르십시오.  
+### <a name="remarks"></a>Remarks  
+ The two forms of this function provide alternate ways to set the bounds for the selection. Brief descriptions of these forms follow:  
   
-- **SetSel (** `cr` **)** 이 양식에서 사용 하는 **CHARRANGE** 구조체를 해당 **cpMin** 및 **cpMax** 멤버 범위를 설정 합니다.  
+- **SetSel(** `cr` **)** This form uses the **CHARRANGE** structure with its **cpMin** and **cpMax** members to set the bounds.  
   
-- **SetSel (** `nStartChar` **,** `nEndChar` **)** 매개 변수를 사용 하는이 양식을 `nStartChar` 및 `nEndChar` 범위를 설정 합니다.  
+- **SetSel(** `nStartChar` **,** `nEndChar` **)** This form use the parameters `nStartChar` and `nEndChar` to set the bounds.  
   
- 시작 중 더 큰 것으로 표시 된 선택의 끝에 캐럿 배치 됩니다 ( **cpMin** 또는 `nStartChar`) 및 end ( **cpMax** 또는 `nEndChar`) 인덱스입니다. 내용을이 함수는 `CRichEditCtrl` 캐럿 변수가 표시 됩니다.  
+ The caret is placed at the end of the selection indicated by the greater of the start ( **cpMin** or `nStartChar`) and end ( **cpMax** or `nEndChar`) indices. This function scrolls the contents of the `CRichEditCtrl` so that the caret is visible.  
   
- 이 모든 텍스트를 선택 하려면 `CRichEditCtrl` 개체, 호출 `SetSel` 시작 인덱스가 0이 고-1의 끝 인덱스입니다.  
+ To select all the text in this `CRichEditCtrl` object, call `SetSel` with a start index of 0 and an end index of - 1.  
   
- 자세한 내용은 참조 [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) 메시지 및 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) message and [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetSel](#getsel)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetSel](#getsel).  
   
-##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
- 이 현재 선택한 항목의 텍스트에 대 한 특성을 형식 지정 문자 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setselectioncharformat"></a>  CRichEditCtrl::SetSelectionCharFormat  
+ Sets the character formatting attributes for the text in the current selection in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetSelectionCharFormat(CHARFORMAT& cf);  
 BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 첫 번째 버전에 대 한 포인터는 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 현재 선택 영역에 대 한 특성을 새 문자 서식을 포함 하는 구조입니다.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new character formatting attributes for the current selection.  
   
- 두 번째 버전에 대 한 포인터는 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Rich Edit 2.0 확장인 구조에는 **CHARFORMAT** 서식 특성을 현재 선택 영역에서 새 문자가 포함 된 구조입니다.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the new character formatting attributes for the current selection.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>설명  
- 로 지정 된 특성에만 **dwMask** 소속 `cf` 이 기능으로 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- 자세한 내용은 참조는 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 31입니다.](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
- WYSIWYG에 사용 되는 대상 장치과 선 두께 설정 (표시 되는 결과가)이 서식을 `CRichEditCtrl` 개체입니다.  
+##  <a name="settargetdevice"></a>  CRichEditCtrl::SetTargetDevice  
+ Sets the target device and line width used for WYSIWYG (what you see is what you get) formatting in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetTargetDevice(
@@ -1650,119 +1650,119 @@ BOOL SetTargetDevice(
     long lLineWidth);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- 새 대상 장치에 대 한 장치 컨텍스트에 대 한 핸들입니다.  
+ Handle to the device context for the new target device.  
   
  *lLineWidth*  
- 서식 지정에 사용할 선 두께입니다.  
+ Line width to use for formatting.  
   
  `dc`  
- [CDC](../../mfc/reference/cdc-class.md) 새 대상 장치에 대 한 합니다.  
+ [CDC](../../mfc/reference/cdc-class.md) for the new target device.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- Rich edit 컨트롤 장치를 소유 하는 경우이 함수는 성공, 컨텍스트 매개 변수로 전달 합니다. 이 경우 호출 하는 함수는 장치 컨텍스트를 삭제 해서는 안 합니다.  
+### <a name="remarks"></a>Remarks  
+ If this function is successful, the rich edit control owns the device context passed as a parameter. In that case, the calling function should not destroy the device context.  
   
- 자세한 내용은 참조 [EM_SETTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/bb774282) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_SETTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/bb774282) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
- Rich edit 컨트롤에 대 한 텍스트 모드 또는 실행 취소 및 다시 실행 수준을 설정합니다.  
+##  <a name="settextmode"></a>  CRichEditCtrl::SetTextMode  
+ Sets the text mode or undo and redo level for a rich edit control.  
   
 ```  
 BOOL SetTextMode(UINT fMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *fMode*  
- 컨트롤의 텍스트 모드와 실행 취소 수준 매개 변수에 대 한 새 설정을 지정합니다. 참조에 대 한 mode 매개 변수 목록이 가능한 값에 대 한 [EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the new settings for the control's text mode and undo level parameters. For a list of the possible values, see the mode parameter for [EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, otherwise nonzero.  
   
-### <a name="remarks"></a>설명  
- 텍스트 모드에 대 한 참조 **EM_SETTEXTMODE** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For a description of the text modes, see **EM_SETTEXTMODE** in the Windows SDK.  
   
- 이 멤버 함수는 컨트롤 텍스트가 포함 된 경우 실패 합니다. 컨트롤이 비어 있는지 확인을 보낼는 [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) 메시지는 빈 문자열입니다.  
+ This member function fails if the control contains text. To make sure the control is empty, send a [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) message with an empty string.  
   
-##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
- 실행 취소 큐에 저장할 수 있는 작업의 최대 수를 설정 합니다.  
+##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
+ Sets the maximum number of actions that can stored in the undo queue.  
   
 ```  
 UINT SetUndoLimit(UINT nLimit);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nLimit*  
- 실행 취소 큐에 저장할 수 있는 작업의 최대 수를 지정 합니다. 실행 취소 하지 않으려면 0으로 설정 합니다.  
+ Specifies the maximum number of actions that can be stored in the undo queue. Set to zero to disable Undo.  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤을 편집 하는 다양 한에 대 한 실행 취소 동작의 새로운 최대 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The new maximum number of undo actions for the rich edit control.  
   
-### <a name="remarks"></a>설명  
- 기본적으로 실행 취소 큐에 있는 작업의 최대 수는 100. 이 값을 늘리면 새 수에 맞게 사용할 수 있는 메모리가 부족 하 여야 합니다. 성능 향상을 위해 제한 가능한 가장 작은 값을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the maximum number of actions in the undo queue is 100. If you increase this number, there must be enough available memory to accommodate the new number. For better performance, set the limit to the smallest possible value.  
   
-##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
- 이 현재 선택 된 단어에 대 한 특성을 형식 지정 문자 설정 `CRichEditCtrl` 개체입니다.  
+##  <a name="setwordcharformat"></a>  CRichEditCtrl::SetWordCharFormat  
+ Sets the character formatting attributes for the currently selected word in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetWordCharFormat(CHARFORMAT& cf);  
 BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 첫 번째 버전에 대 한 포인터는 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 현재 선택 된 단어에 대 한 특성을 새 문자 서식을 포함 하는 구조입니다.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new character formatting attributes for the currently selected word.  
   
- 두 번째 버전에 대 한 포인터는 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Rich Edit 2.0 확장인 구조에는 **CHARFORMAT** 서식 특성 현재 선택 된 단어에 대 한 새 문자가 포함 된 구조입니다.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the new character formatting attributes for the currently selected word.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 로 지정 된 특성에만 **dwMask** 소속 `cf` 이 기능으로 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- 자세한 내용은 참조는 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) 메시지 및 **CHARFORMAT** 및 **CHARFORMAT2** 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
- 자동 줄 바꿈 및 단어 분리에 대 한 다양 한 옵션을 설정 편집 컨트롤입니다.  
+##  <a name="setwordwrapmode"></a>  CRichEditCtrl::SetWordWrapMode  
+ Sets the word-wrapping and word-breaking options for the rich edit control.  
   
 ```  
 UINT SetWordWrapMode(UINT uFlags) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `uFlags`  
- 자동 줄 바꿈 및 단어 분리에 대해 설정 하는 옵션입니다. 목록이 가능한 옵션에 대 한 참조 [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The options to set for word wrapping and word breaking. For a list of possible options, see [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 현재 자동 줄 바꿈 및 단어 분리 옵션입니다.  
+### <a name="return-value"></a>Return Value  
+ The current word-wrapping and word-breaking options.  
   
-### <a name="remarks"></a>설명  
- 이 메시지는 아시아 언어 버전의 운영 체제 에서만 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This message is available only in Asian-language versions of the operating system.  
   
-##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
- 컨트롤에서 수집 작업이 현재 실행 취소 작업에 입력 추가 중지 합니다.  
+##  <a name="stopgrouptyping"></a>  CRichEditCtrl::StopGroupTyping  
+ Stops the control from collecting additional typing actions into the current undo action.  
   
 ```  
 void StopGroupTyping();
 ```  
   
-### <a name="remarks"></a>주의  
- 컨트롤이 있는 경우 실행 취소 큐에 새 동작으로 다음 입력 작업을 저장 합니다.  
+### <a name="remarks"></a>Remarks  
+ The control stores the next typing action, if any, into a new action in the undo queue.  
   
- 자세한 내용은 참조 [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) in the Windows SDK.  
   
-##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
- 이 텍스트 문자열로 바꿉니다 `CRichEditCtrl` 텍스트 지정 된 입력 스트림에서 지정 된 개체입니다.  
+##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
+ Replaces text in this `CRichEditCtrl` object with text from the specified input stream.  
   
 ```  
 long StreamIn(
@@ -1770,36 +1770,36 @@ long StreamIn(
     EDITSTREAM& es);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- 입력된 데이터 형식을 지정 하는 플래그입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ Flags specifying the input data formats. See the Remarks section for more information.  
   
  `es`  
- [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 입력된 스트림을 지정 하는 구조입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure specifying the input stream. See the Remarks section for more information.  
   
-### <a name="return-value"></a>반환 값  
- 입력 스트림에서 읽은 문자 수입니다.  
+### <a name="return-value"></a>Return Value  
+ Number of characters read from the input stream.  
   
-### <a name="remarks"></a>주의  
- 값 `nFormat` 다음 중 하나 여야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The value of `nFormat` must be one of the following:  
   
-- `SF_TEXT`텍스트를 읽는 나타냅니다.  
+- `SF_TEXT` Indicates reading text only.  
   
-- `SF_RTF`읽는 텍스트 및 서식 지정을 나타냅니다.  
+- `SF_RTF` Indicates reading text and formatting.  
   
- 이러한 값 중 하나로 결합할 수 `SFF_SELECTION`합니다. 경우 `SFF_SELECTION` 지정 된 `StreamIn` 현재 선택 된 입력 스트림의 내용으로 대체 합니다. 지정 하지 않으면 `StreamIn` 이의 전체 내용을 대체 `CRichEditCtrl` 개체입니다.  
+ Either of these values can be combined with `SFF_SELECTION`. If `SFF_SELECTION` is specified, `StreamIn` replaces the current selection with the contents of the input stream. If it is not specified, `StreamIn` replaces the entire contents of this `CRichEditCtrl` object.  
   
- 에 **EDITSTREAM** 매개 변수 `es`, 텍스트 버퍼를 구성 하는 콜백 함수를 지정 합니다. 이 콜백 함수는 입력된 스트림의 가득 찰 때까지 반복적으로 호출 됩니다.  
+ In the **EDITSTREAM** parameter `es`, you specify a callback function that fills a buffer with text. This callback function is called repeatedly, until the input stream is exhausted.  
   
- 자세한 내용은 참조 [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) 메시지 및 [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) message and [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  
   
- [!code-cpp[# 35 NVC_MFC_CRichEditCtrl](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
- 이 콘텐츠를 작성 `CRichEditCtrl` 지정 된 출력 스트림에 개체입니다.  
+##  <a name="streamout"></a>  CRichEditCtrl::StreamOut  
+ Writes out the contents of this `CRichEditCtrl` object to the specified output stream.  
   
 ```  
 long StreamOut(
@@ -1807,60 +1807,60 @@ long StreamOut(
     EDITSTREAM& es);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- 출력 데이터 형식을 지정 하는 플래그입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ Flags specifying the output data formats. See the Remarks section for more information.  
   
  `es`  
- [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 출력 스트림을 지정 하는 구조입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure specifying the output stream. See the Remarks section for more information.  
   
-### <a name="return-value"></a>반환 값  
- 출력 스트림에 쓴 문자의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ Number of characters written to the output stream.  
   
-### <a name="remarks"></a>주의  
- 값 `nFormat` 다음 중 하나 여야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The value of `nFormat` must be one of the following:  
   
-- `SF_TEXT`쓰기 텍스트만을 나타냅니다.  
+- `SF_TEXT` Indicates writing text only.  
   
-- `SF_RTF`쓰기 텍스트 및 서식 지정을 나타냅니다.  
+- `SF_RTF` Indicates writing text and formatting.  
   
-- `SF_RTFNOOBJS`공백이 포함 된 OLE 항목을 대체 쓰기 텍스트 및 서식 지정을 나타냅니다.  
+- `SF_RTFNOOBJS` Indicates writing text and formatting, replacing OLE items with spaces.  
   
-- `SF_TEXTIZED`쓰기 텍스트 및 OLE 항목의 텍스트 표현으로 서식 지정을 나타냅니다.  
+- `SF_TEXTIZED` Indicates writing text and formatting, with textual representations of OLE items.  
   
- 이러한 값을 결합할 수 `SFF_SELECTION`합니다. 경우 `SFF_SELECTION` 지정 된 `StreamOut` 출력 스트림으로 현재 선택 영역을 작성 합니다. 지정 하지 않으면 `StreamOut` 이 전체 콘텐츠를 작성 `CRichEditCtrl` 개체입니다.  
+ Any of these values can be combined with `SFF_SELECTION`. If `SFF_SELECTION` is specified, `StreamOut` writes out the current selection into the output stream. If it is not specified, `StreamOut` writes out the entire contents of this `CRichEditCtrl` object.  
   
- 에 **EDITSTREAM** 매개 변수 `es`을 텍스트로 버퍼를 채우는 콜백 함수를 지정 합니다. 이 콜백 함수에서 출력 스트림이 가득 찰 때까지 반복적으로 호출 됩니다.  
+ In the **EDITSTREAM** parameter `es`, you specify a callback function which fills a buffer with text. This callback function is called repeatedly, until the output stream is exhausted.  
   
- 자세한 내용은 참조 [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) 메시지 및 [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) message and [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CRichEditCtrl # 36](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_36.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#36](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_36.cpp)]  
   
- [!code-cpp[NVC_MFC_CRichEditCtrl # 37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="undo"></a>CRichEditCtrl::Undo  
- Rich edit 컨트롤의 마지막 작업 실행 취소합니다.  
+##  <a name="undo"></a>  CRichEditCtrl::Undo  
+ Undoes the last operation in the rich edit control.  
   
 ```  
 BOOL Undo();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 실행 취소 작업에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the undo operation is successful; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 실행 취소 작업 또한 취소할 수 없습니다. 예를 들어 첫 번째 호출로 삭제 된 텍스트를 복원할 수 있습니다 **실행 취소**합니다. 두 번째 호출으로 다시 사용 하 여 텍스트를 제거할 수 중간 편집 작업이 없는 상태로 **실행 취소**합니다.  
+### <a name="remarks"></a>Remarks  
+ An undo operation can also be undone. For example, you can restore deleted text with the first call to **Undo**. As long as there is no intervening edit operation, you can remove the text again with a second call to **Undo**.  
   
- 자세한 내용은 참조 [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CanUndo](#canundo)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CanUndo](#canundo).  
   
-## <a name="see-also"></a>참고 항목  
- [워드 패드 MFC 샘플](../../visual-cpp-samples.md)   
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CEdit 클래스](../../mfc/reference/cedit-class.md)   
- [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample WORDPAD](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CRichEditView Class](../../mfc/reference/cricheditview-class.md)
 
