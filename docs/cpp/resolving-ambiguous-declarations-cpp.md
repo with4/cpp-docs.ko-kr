@@ -1,47 +1,63 @@
 ---
-title: "모호성 해결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Resolving ambiguous declarations (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 모호성 해결
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0f49a3b4b7c131a477dc7ff25c95b15173d0bb85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-한 형식에서 다른 한 형식으로의 명시적 변환을 수행하려면 원하는 형식 이름을 지정하여 캐스팅을 사용해야 합니다.  일부 형식 캐스팅 결과 구문이 모호해집니다.  다음 함수 스타일 형식 캐스팅이 모호합니다.  
+---
+# <a name="resolving-ambiguous-declarations-c"></a>Resolving ambiguous declarations (C++)
+To perform explicit conversions from one type to another, you must use casts, specifying the desired type name. Some type casts result in syntactic ambiguity. The following function-style type cast is ambiguous:  
   
 ```  
 char *aName( String( s ) );  
 ```  
   
- 이는 함수 선언인지, 아니면 함수 스타일 캐스트가 이니셜라이저인 개체 선언인지 여부가 명확하지 않습니다. 형식이 `String`인 인수를 하나만 사용하는 형식 **char \***를 반환하는 함수를 선언하거나 `aName` 개체를 선언하고 해당 개체를 `String` 형식으로 캐스팅되는 `s` 값으로 초기화할 수 있습니다.  
+ It is unclear whether it is a function declaration or an object declaration with a function-style cast as the initializer: It could declare a function returning type **char \*** that takes one argument of type `String`, or it could declare the object `aName` and initialize it with the value of `s` cast to type `String`.  
   
- 선언이 올바른 함수 선언으로 간주될 수 있는 경우 해당 선언이 이와 같이 처리됩니다.  해당 선언이 함수 선인일 수 없는 경우에만, 즉 구문상으로 잘못된 경우 함수 스타일 형식 캐스트인지 여부를 확인하기 위해 문이 검사됩니다.  따라서 컴파일러는 문을 함수의 선언으로 간주하고 `s` 식별자 주위의 괄호를 무시합니다.  반면 다음  
+ If a declaration can be considered a valid function declaration, it is treated as such. Only if it cannot possibly be a function declaration — that is, if it would be syntactically incorrect — is a statement examined to see if it is a function-style type cast. Therefore, the compiler considers the statement to be a declaration of a function and ignores the parentheses around the identifier `s`. On the other hand, the statements:  
   
 ```  
 char *aName( (String)s );  
 ```  
   
- 및  
+ and  
   
 ```  
 char *aName = String( s );  
 ```  
   
- 문은 분명히 개체의 선언이며 `String` 형식에서 **char \*** 형식으로의 사용자 정의 변환이 호출되어 `aName`의 초기화를 수행합니다.  
+ are clearly declarations of objects, and a user-defined conversion from type `String` to type **char \*** is invoked to perform the initialization of `aName`.  
   
-## 참고 항목  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/ko-kr/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>See Also  
+ 

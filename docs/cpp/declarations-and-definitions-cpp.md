@@ -1,46 +1,62 @@
 ---
-title: "선언 및 정의 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Declarations and Definitions (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 선언 및 정의 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c296d5ec8c169e4f61ff14d998184c7ef36ae862
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-[선언](http://msdn.microsoft.com/ko-kr/2fd0cddb-b64c-4c9f-9aac-9f8e7ef892f4)은 프로그램 내의 이름\(예: 변수, 네임스페이스, 함수 및 클래스의 이름\)을 소개합니다.  또한, 선언은 형식 정보뿐만 아니라 선언되는 개체의 다른 특성도 지정합니다.  이름은 먼저 선언해야 사용할 수 있습니다. C\+\+에서는 이름이 선언되는 지점에 따라 이름이 컴파일러에 표시되는지 여부가 달라집니다.  컴파일 단위에서 늦은 지점에 선언한 함수 또는 클래스는 참조할 수 없습니다. 이 제한을 해결하려면 *정방향 선언*을 사용하면 됩니다.  
+---
+# <a name="declarations-and-definitions-c"></a>Declarations and Definitions (C++)
+Declarations introduce names in a program, for example the names of variables, namespaces, functions and classes. Declarations also specify type information as well as other characteristics of the object that is being declared. A name must be declared before it can be used; in C++ the point at which a name is declared determines whether it is visible to the compiler. You cannot refer to a function or class that is declared at some later point in the compilation unit; you can use *forward declarations* to get around this limitation.  
   
- [정의](http://msdn.microsoft.com/ko-kr/f96e2c0d-abb5-4414-9ea1-4d5b4048d50a)는 이름이 설명하는 코드 또는 데이터를 지정합니다.  선언할 항목을 위한 저장소 공간을 할당하려면 컴파일러에 정의가 있어야 합니다.  
+ Definitions specify what code or data the name describes. The compiler needs the definition in order to allocate storage space for the thing that is being declared.  
   
-## 선언  
- 선언은 프로그램에 하나 이상의 이름을 제공합니다.  선언은 프로그램에서 두 번 이상 발생할 수 있습니다.  따라서 클래스, 구조체, 열거 형식 및 다른 사용자 정의 형식이 각 컴파일 단위에 대해 선언될 수 있습니다.  이 여러 선언에 대한 제약 조건은 모든 선언이 동일해야 한다는 것입니다.  다음 경우를 제외하고 선언은 정의 역할도 합니다.  
+## <a name="declarations"></a>Declarations  
+ A declaration introduces one or more names into a program. Declarations can occur more than once in a program. Therefore, classes, structures, enumerated types, and other user-defined types can be declared for each compilation unit. The constraint on this multiple declaration is that all declarations must be identical. Declarations also serve as definitions, except when the declaration:  
   
-1.  선언이 함수 프로토타입\(함수 본문이 없는 함수 선언\)입니다.  
+1.  Is a function prototype (a function declaration with no function body).  
   
-2.  선언이 `extern` 지정자를 포함하지만 이니셜라이저\(개체 및 변수\) 또는 함수 본문\(함수\)은 포함하지 않습니다.  이것은 정의가 반드시 현재 변환 단위에 있지 않으며 이름 외부 링크를 제공해 줌을 나타냅니다.  
+2.  Contains the `extern` specifier but no initializer (objects and variables) or function body (functions). This signifies that the definition is not necessarily in the current translation unit and gives the name external linkage.  
   
-3.  선언이 클래스 선언 내의 정적 데이터 멤버입니다.  
+3.  Is of a static data member inside a class declaration.  
   
-     정적 클래스 데이터 멤버는 클래스의 모든 개체가 공유하는 개별 변수이므로 클래스 선언 외부에서 정의 및 초기화되어야 합니다.  클래스 및 클래스 멤버에 대한 자세한 내용은 [클래스](../cpp/classes-and-structs-cpp.md)를 참조하세요.  
+     Because static class data members are discrete variables shared by all objects of the class, they must be defined and initialized outside the class declaration. (For more information about classes and class members, see [Classes](../cpp/classes-and-structs-cpp.md).)  
   
-4.  선언이 `class T;`과 같은 정의가 뒤따르지 않는 클래스 이름 선언입니다.  
+4.  Is a class name declaration with no following definition, such as `class T;`.  
   
-5.  선언이 `typedef` 문입니다.  
+5.  Is a `typedef` statement.  
   
- 다음은 정의이기도 한 선언의 예제입니다.  
+ Examples of declarations that are also definitions are:  
   
 ```  
 // Declare and define int variables i and j.  
@@ -59,7 +75,7 @@ public:
 };  
 ```  
   
- 정의가 아닌 일부 선언은 다음과 같습니다.  
+ Some declarations that are not definitions are:  
   
 ```  
   
@@ -67,18 +83,18 @@ extern int i;
 char *strchr( const char *Str, const char Target );  
 ```  
   
- 선언자 바로 뒤, 이니셜라이저 앞\(선택 사항\)에서 이름이 선언된다고 간주합니다.  자세한 내용은 [선언 지점](../cpp/point-of-declaration-in-cpp.md)을 참조하세요.  
+ A name is considered to be declared immediately after its declarator but before its (optional) initializer. For more information, see [Point of Declaration](../cpp/point-of-declaration-in-cpp.md).  
   
- 선언은 *범위*에서 발생됩니다.  범위는 선언된 이름의 표시 및 정의된 개체\(있는 경우\)의 기간을 제어합니다.  범위 규칙이 선언에 사용되는 방법에 대한 자세한 내용은 [범위](../cpp/scope-visual-cpp.md)를 참조하세요.  
+ Declarations occur in a *scope*. The scope controls the visibility of the name declared and the duration of the object defined, if any. For more information about how scope rules interact with declarations, see [Scope](../cpp/scope-visual-cpp.md).  
   
- 개체 선언은 `extern`저장소 클래스 지정자에 설명된 [저장소 클래스 지정자가 포함된 경우를 제외하고는 정의이기도 합니다.](http://msdn.microsoft.com/ko-kr/10b3d22d-cb40-450b-994b-08cf9a211b6c) 함수 선언도 프로토타입이 아니라면 정의입니다.  프로토타입은 정의 함수 본문이 없는 함수 헤더입니다.  개체 정의를 통해 해당 개체에 대해 저장소가 할당되고 적절한 초기화가 수행됩니다.  
+ An object declaration is also a definition unless it contains the `extern` storage-class specifier described in [Storage classes](storage-classes-cpp.md). A function declaration is also a definition unless it is a prototype. A prototype is a function header without a defining function body. The definition of an object causes allocation of storage and appropriate initializations for that object.  
   
-## 정의  
- 정의는 개체 또는 변수, 함수, 클래스 또는 열거자의 고유 사양입니다.  정의가 고유해야 하기 때문에 프로그램에는 지정된 프로그램 요소에 대한 정의가 하나만 포함될 수 있습니다.  선언과 정의 간에 다 대 일 대응이 있을 수 있습니다.  프로그램 요소가 선언되지만 정의되지는 않는 두 가지 경우가 있습니다.  
+## <a name="definitions"></a>Definitions  
+ A definition is a unique specification of an object or variable, function, class, or enumerator. Because definitions must be unique, a program can contain only one definition for a given program element. There can be a many-to-one correspondence between declarations and definitions. There are two cases in which a program element can be declared and not defined:  
   
-1.  함수가 선언되지만 함수 호출 또는 함수의 주소를 사용하는 식으로 참조되지 않습니다.  
+1.  A function is declared but never referenced with a function call or with an expression that takes the function's address.  
   
-2.  클래스가 정의가 알려질 필요가 없는 방식으로만 사용됩니다.  그러나 클래스는 선언되어야 합니다.  다음 코드에서는 이러한 경우를 보여 줍니다.  
+2.  A class is used only in a way that does not require its definition be known. However, the class must be declared. The following code illustrates such a case:  
   
     ```  
     // definitions.cpp  
@@ -95,6 +111,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## 참고 항목  
- [기본 개념](../cpp/basic-concepts-cpp.md)   
- [선언 지점](../cpp/point-of-declaration-in-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Basic Concepts](../cpp/basic-concepts-cpp.md)   
+ [Point of Declaration](../cpp/point-of-declaration-in-cpp.md)

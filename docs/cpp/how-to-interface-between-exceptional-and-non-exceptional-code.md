@@ -1,173 +1,190 @@
 ---
-title: "방법: 예외 코드와 예외가 아닌 코드 간 인터페이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Interface Between Exceptional and Non-Exceptional Code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 방법: 예외 코드와 예외가 아닌 코드 간 인터페이스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ad3c19c53a8cfa00713566a570ef6588b39b42e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-이 문서는 c \+ \+ 모듈에서 일관된 예외 처리를 구현 하는 방법 및 이러한 예외 예외 경계에서 오류 코드를 변환 하는 방법을 설명합니다.  
+---
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>How to: Interface Between Exceptional and Non-Exceptional Code
+This article describes how to implement consistent exception-handling in a C++ module, and also how to translate those exceptions to and from error codes at the exception boundaries.  
   
- 때로 c \+ \+ 모듈은 예외 \(비 예외 코드\)를 사용하지 않는 코드와 인터페이스합니다.  이러한 인터페이스는 *예외 경계*로 알려져 있습니다.  예를 들어, `CreateFile` Wind32 함수를 c \+ \+ 프로그램에서 호출하려 할 것입니다.  `CreateFile` 는 예외를 throw하지 않습니다; 대신에 `GetLastError` 함수에 의해 검색되는 오류 코드를 설정합니다.  C \+ \+ 프로그램은 사소한 경우가 아니라면, 일관 된 예외 기반의 오류 처리 정책을 지키는 것이 좋습니다..  예외가 아닌 코드와 인터페이스하기 때문에, 중단 예외를 원하지 않을 것입니다. 그리고 C \+ \+ 모듈에서 예외 및 예외가 아닌 기반 정책 혼합을 원하지 않을 것입니다.  
+ Sometimes a C++ module has to interface with code that doesn't use exceptions (non-exceptional code). Such an interface is known as an *exception boundary*. For example, you may want to call the Win32 function `CreateFile` in your C++ program. `CreateFile` doesn't throw exceptions; instead it sets error codes that can be retrieved by the `GetLastError` function. If your C++ program is non-trivial, then in it you probably prefer to have a consistent exception-based error-handling policy. And you probably don't want to abandon exceptions just because you interface with non-exceptional code, and neither do you want to mix exception-based and non-exception-based error policies in your C++ module.  
   
-## C \+ \+에서 예외 없는 함수 호출  
- C \+ \+에서는 뛰어나지 않은 함수를 호출할 때, 오류를 감지하고 가능한 경우 예외를 throw 하는 C\+\+ 함수의 함수를 래핑할 것입니다.  래퍼 함수를 디자인할 때, 먼저 제공하기 위해 예외 보장 형식을 결정: throw를 하지 않습니다, 강력한 또는 기본.  둘째, 함수를 디자인하여 모든 리소스, 예를 들어, 예외가 throw 된 경우, 파일 처리기가 올바르게 해제되도록 합니다.  일반적으로, 스마트 포인터 또는 유사한 리소스 관리자는 리소스를 소유할 수 있습니다.  크기 조정 고려 사항에 대한 자세한 내용은 [방법: 예외 안전성을 위한 디자인](../cpp/how-to-design-for-exception-safety.md)을 참조하십시오.  
+## <a name="calling-non-exceptional-functions-from-c"></a>Calling Non-Exceptional Functions from C++  
+ When you call a non-exceptional function from C++, the idea is to wrap that function in a C++ function that detects any errors and then possibly throws an exception. When you design such a wrapper function, first decide which type of exception guarantee to provide:  no-throw, strong, or basic. Second, design the function so that all resources, for example, file handles, are correctly released if an exception is thrown. Typically, this means that you use smart pointers or similar resource managers to own the resources. For more information about design considerations, see [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md).  
   
-### 예제  
- 다음 예제는 내부적으로 두 파일을 읽고 여는 Win32 `CreateFile` 및 `ReadFile` 함수 를 사용하는 C\+\+ 함수를 보여줍니다.  `File` 클래스는 파일 핸들에 대한 초기화 \(RAII\) 래퍼인 리소스 획득입니다.  생성자는 "파일을 찾을 수 없음" 상태를 감지하고 C\+\+ 모듈\(이 예제에서, `main()` 함수\) 의 호출 스택 위로 오류를 전파하기 위해 예외를 throw합니다.  `File` 개체가 완전히 생성된후 다음 예외가 발생하는 경우,, 소멸자가 자동으로 파일 핸들을 해제하도록 `CloseHandle` 을 호출합니다. \(액티브 템플릿 라이브러리 \(ATL\) `CHandle` 클래스를 같은 용도로 또는 `unique_ptr` 함께 사용자 지정 deleter를 하여 사용할 수 있습니다.\) Win32 및 CRT Api를 호출하는 함수가 오류를 검색한 다음 로컬로 정의된 `runtime_error` 클래스 로부터 파생된 `Win32Exception` 클래스를 사용하여 반환하는 `ThrowLastErrorIf` 함수를 사용하는 C\+\+ 예외를 throw합니다.  이 예제의 모든 기능은 강력한 예외 보장 합니다; 언제든지 이러한 함수에서 예외가 throw되면 리소스가 유출 되고 프로그램 상태가 수정됩니다.  
+### <a name="example"></a>Example  
+ The following example shows C++ functions that use the Win32 `CreateFile` and `ReadFile` functions internally to open and read two files.  The `File` class is a resource acquisition is initialization (RAII) wrapper for the file handles. Its constructor detects a "file not found" condition and throws an exception to propagate the error up the call stack of the C++ module (in this example, the `main()` function). If an exception is thrown after a `File` object is fully constructed, the destructor automatically calls `CloseHandle` to release the file handle. (If you prefer, you can use the Active Template Library (ATL) `CHandle` class for this same purpose, or a `unique_ptr` together with a custom deleter.) The functions that call Win32 and CRT APIs detect errors and then throw C++ exceptions using the locally-defined `ThrowLastErrorIf` function, which in turn uses the `Win32Exception` class, derived from the `runtime_error` class. All functions in this example provide a strong exception guarantee; if an exception is thrown at any point in these functions, no resources are leaked and no program state is modified.  
   
 ```cpp  
-// compile with: /EHsc  
-#include <Windows.h>  
-#include <stdlib.h>  
-#include <vector>  
-#include <iostream>  
-#include <string>  
-#include <limits>  
-#include <stdexcept>  
+// compile with: /EHsc  
+#include <Windows.h>  
+#include <stdlib.h>  
+#include <vector>  
+#include <iostream>  
+#include <string>  
+#include <limits>  
+#include <stdexcept>  
   
-using namespace std;  
+using namespace std;  
   
-string FormatErrorMessage(DWORD error, const string& msg)  
+string FormatErrorMessage(DWORD error, const string& msg)  
 {  
-    static const int BUFFERLENGTH = 1024;  
-    vector<char> buf(BUFFERLENGTH);  
-    FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, error, 0, buf.data(),   
-        BUFFERLENGTH - 1, 0);   
-    return string(buf.data()) + "   ("  + msg  + ")";  
+    static const int BUFFERLENGTH = 1024;  
+    vector<char> buf(BUFFERLENGTH);  
+    FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, error, 0, buf.data(),   
+        BUFFERLENGTH - 1, 0);   
+    return string(buf.data()) + "   ("  + msg  + ")";  
 }  
   
-class Win32Exception : public runtime_error  
-{      
+class Win32Exception : public runtime_error  
+{      
 private:  
-    DWORD m_error;  
+    DWORD m_error;  
 public:  
-    Win32Exception(DWORD error, const string& msg)  
-        : runtime_error(FormatErrorMessage(error, msg)), m_error(error) { }  
+    Win32Exception(DWORD error, const string& msg)  
+        : runtime_error(FormatErrorMessage(error, msg)), m_error(error) { }  
   
-    DWORD GetErrorCode() const { return m_error; }  
+    DWORD GetErrorCode() const { return m_error; }  
 };  
   
-void ThrowLastErrorIf(bool expression, const string& msg)   
-{   
-    if (expression) {   
-        throw Win32Exception(GetLastError(), msg);   
-    }   
-}   
+void ThrowLastErrorIf(bool expression, const string& msg)   
+{   
+    if (expression) {   
+        throw Win32Exception(GetLastError(), msg);   
+    }   
+}   
   
-class File  
+class File  
 {  
 private:  
-    HANDLE m_handle;  
+    HANDLE m_handle;  
   
-    // Declared but not defined, to avoid double closing.  
-    File& operator=(const File&);  
-    File(const File&);  
+    // Declared but not defined, to avoid double closing.  
+    File& operator=(const File&);  
+    File(const File&);  
 public:  
-    explicit File(const string& filename)   
-    {  
-        m_handle = CreateFileA(filename.c_str(), GENERIC_READ, FILE_SHARE_READ,   
-            nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_READONLY, nullptr);  
-        ThrowLastErrorIf(m_handle == INVALID_HANDLE_VALUE,   
-            "CreateFile call failed on file named " + filename);  
-    }  
+    explicit File(const string& filename)   
+    {  
+        m_handle = CreateFileA(filename.c_str(), GENERIC_READ, FILE_SHARE_READ,   
+            nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_READONLY, nullptr);  
+        ThrowLastErrorIf(m_handle == INVALID_HANDLE_VALUE,   
+            "CreateFile call failed on file named " + filename);  
+    }  
   
-    ~File() { CloseHandle(m_handle); }  
+    ~File() { CloseHandle(m_handle); }  
   
-    HANDLE GetHandle() { return m_handle; }  
+    HANDLE GetHandle() { return m_handle; }  
 };  
   
-size_t GetFileSizeSafe(const string& filename)  
+size_t GetFileSizeSafe(const string& filename)  
 {  
-    File fobj(filename);  
-    LARGE_INTEGER filesize;  
+    File fobj(filename);  
+    LARGE_INTEGER filesize;  
   
-    BOOL result = GetFileSizeEx(fobj.GetHandle(), &filesize);  
-    ThrowLastErrorIf(result == FALSE, "GetFileSizeEx failed: " + filename);  
+    BOOL result = GetFileSizeEx(fobj.GetHandle(), &filesize);  
+    ThrowLastErrorIf(result == FALSE, "GetFileSizeEx failed: " + filename);  
   
-    if (filesize.QuadPart < (numeric_limits<size_t>::max)()) {  
-        return filesize.QuadPart;  
-    } else {  
-        throw;   
-    }  
+    if (filesize.QuadPart < (numeric_limits<size_t>::max)()) {  
+        return filesize.QuadPart;  
+    } else {  
+        throw;   
+    }  
 }  
   
-vector<char> ReadFileVector(const string& filename)  
+vector<char> ReadFileVector(const string& filename)  
 {  
-    File fobj(filename);  
-    size_t filesize = GetFileSizeSafe(filename);  
-    DWORD bytesRead = 0;  
+    File fobj(filename);  
+    size_t filesize = GetFileSizeSafe(filename);  
+    DWORD bytesRead = 0;  
   
-    vector<char> readbuffer(filesize);  
+    vector<char> readbuffer(filesize);  
   
-    BOOL result = ReadFile(fobj.GetHandle(), readbuffer.data(), readbuffer.size(),   
-        &bytesRead, nullptr);  
-    ThrowLastErrorIf(result == FALSE, "ReadFile failed: " + filename);  
+    BOOL result = ReadFile(fobj.GetHandle(), readbuffer.data(), readbuffer.size(),   
+        &bytesRead, nullptr);  
+    ThrowLastErrorIf(result == FALSE, "ReadFile failed: " + filename);  
   
-    cout << filename << " file size: " << filesize << ", bytesRead: "   
-        << bytesRead << endl;  
+    cout << filename << " file size: " << filesize << ", bytesRead: "   
+        << bytesRead << endl;  
   
-    return readbuffer;  
+    return readbuffer;  
 }  
   
-bool IsFileDiff(const string& filename1, const string& filename2)   
+bool IsFileDiff(const string& filename1, const string& filename2)   
 {  
-    return ReadFileVector(filename1) != ReadFileVector(filename2);  
-}   
+    return ReadFileVector(filename1) != ReadFileVector(filename2);  
+}   
   
-#include <iomanip>  
+#include <iomanip>  
   
-int main ( int argc, char* argv[] )  
+int main ( int argc, char* argv[] )  
 {  
-    string filename1("file1.txt");  
-    string filename2("file2.txt");  
+    string filename1("file1.txt");  
+    string filename2("file2.txt");  
   
-    try  
-    {  
-        if(argc > 2) {  
-            filename1 = argv[1];  
-            filename2 = argv[2];  
-        }   
+    try  
+    {  
+        if(argc > 2) {  
+            filename1 = argv[1];  
+            filename2 = argv[2];  
+        }   
   
-        cout << "Using file names " << filename1 << " and " << filename2 << endl;  
+        cout << "Using file names " << filename1 << " and " << filename2 << endl;  
   
-        if (IsFileDiff(filename1, filename2)) {  
-            cout << "*** Files are different." << endl;  
-        } else {  
-            cout<< "*** Files match." << endl;  
-        }  
-    }  
-    catch(const Win32Exception& e)  
-    {          
-        ios state(nullptr);  
-        state.copyfmt(cout);  
-        cout << e.what() << endl;  
-        cout << "Error code: 0x" << hex << uppercase << setw(8) << setfill('0')   
-            << e.GetErrorCode() << endl;  
-        cout.copyfmt(state); // restore previous formatting  
-    }  
+        if (IsFileDiff(filename1, filename2)) {  
+            cout << "*** Files are different." << endl;  
+        } else {  
+            cout<< "*** Files match." << endl;  
+        }  
+    }  
+    catch(const Win32Exception& e)  
+    {          
+        ios state(nullptr);  
+        state.copyfmt(cout);  
+        cout << e.what() << endl;  
+        cout << "Error code: 0x" << hex << uppercase << setw(8) << setfill('0')   
+            << e.GetErrorCode() << endl;  
+        cout.copyfmt(state); // restore previous formatting  
+    }  
 }  
   
 ```  
   
-## 비 코드에서 예외 코드를 호출  
- "extern C"가 C 프로그램에서 호출될 때 C\+\+ 함수가 선언됩니다.  여러 다른 언어로 작성된 코드에서 C\+\+ COM 서버를 사용할 수 있습니다.  예외 없는 코드에서 호출 되는 C\+\+의 주의 공용 함수를 구현 하는 경우, C\+\+ 함수는 예외를 호출자로 다시 전파하기 위해 허용해야 합니다.  따라서, C\+\+ 함수 처리는 다룰 수 있는 모든 예외를 특별히 감지해야 하고, 필요한 경우, 예외를 호출자가 이해하는 오류 코드로 변환해야 합니다.  모든 가능한 예외를 알고 있지 않은 경우,C\+\+ 함수는 마지막 처리기로써 `catch(…)` 블록을 갖고 있어야 합니다.  이런 경우에는, 프로그램의 상태를 알 수 없기 때문에, 호출자에게 오류를 보고 하는 것이 가장 좋습니다.  
+## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Calling Exceptional Code from Non-Exceptional Code  
+ C++ functions that are declared as "extern C" can be called by C programs. C++ COM servers can be consumed by code written in any of a number of different languages. When you implement public exception-aware functions in C++ to be called by non-exceptional code, the C++ function must not allow any exceptions to propagate back to the caller. Therefore, the C++ function must specifically catch every exception that it knows how to handle and, if appropriate, convert the exception to an error code that the caller understands. If not all potential exceptions are known, the C++ function should have a `catch(...)` block as the last handler. In such a case, it's best to report a fatal error to the caller, because your program might be in an unknown state.  
   
- 다음 예제는 `std::exception` 로 부터 파생된 예외 형식 또는 Win32예외가 throw 될수 있는 어떤 예외를 가정하는 함수를 보여줍니다.  함수는 이러한 유형의 예외를 검출하고 호출자에게 Win32 오류 코드와 오류 정보를 전파합니다.  
+ The following example shows a function that assumes that any exception that might be thrown is either a Win32Exception or an exception type derived from `std::exception`. The function catches any exception of these types and propagates the error information as a Win32 error code to the caller.  
   
 ```cpp  
 BOOL DiffFiles2(const string& file1, const string& file2)   
@@ -197,7 +214,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- 예외에서 오류 코드를 변환하는 경우, 하나의 잠재적인 문제는 예외가 저장 할 수 있는 다양한 정보를 포함하지 않는 오류 코드입니다.  제공하기 위해, throw 될 수 있는 각각 특정 형식에 대해 `catch` 블록을 제공할 수 있고 오류 코드로 변환되기 전에 예외의 자세한 기록에 로깅할 수 있습니다.  이러한 접근은 만약 같은 `catch` 블록의 집합을 여러 함수가 사용한다면 많은 코드 반복을 만들 수 있습니다.  코드의 반복을 피하기위한 좋은 방법은 이러한 블록의 리팩터링에 의해 `try` 및 `catch` 블록을 수행하는 전용 유틸리티 함수를 구현과 `try` 블록에서 차단되는 함수 개체를 허용하는 것입니다.  각 공용 함수에서, 람다 식으로 유틸리티 함수 코드를 전달합니다.  
+ When you convert from exceptions to error codes, one potential issue is that error codes often don't contain the richness of information that an exception can store. To address this, you can provide a `catch` block for each specific exception type that might be thrown, and perform logging to record the details of the exception before it is converted to an error code. This approach can create a lot of code repetition if multiple functions all use the same set of `catch` blocks. A good way to avoid code repetition is by refactoring those blocks into one private utility function that implements the `try` and `catch` blocks and accepts a function object that is invoked in the `try` block. In each public function, pass the code to the utility function as a lambda expression.  
   
 ```cpp  
 template<typename Func>   
@@ -220,7 +237,7 @@ bool Win32ExceptionBoundary(Func&& f)
   
 ```  
   
- 다음 예제에서는 함수를 정의 하는 람다 식을 작성하는 방법을 보여 줍니다.  함수가 람다 식을 사용하여 "인라인"으로 정의될 때, 함수 개체로 명명되어 작성된 경우 보다 읽기가 쉽습니다.  
+ The following example shows how to write the lambda expression that defines the functor. When a functor is defined "inline" by using a lambda expression, it is often easier to read than it would be if it were written as a named function object.  
   
 ```cpp  
 bool DiffFiles3(const string& file1, const string& file2)   
@@ -240,8 +257,8 @@ bool DiffFiles3(const string& file1, const string& file2)
   
 ```  
   
- 람다 식에 대한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조하십시오.  
+ For more information about lambda expressions, see [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md).  
   
-## 참고 항목  
- [오류 및 예외 처리](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [방법: 예외 안전성을 위한 디자인](../cpp/how-to-design-for-exception-safety.md)
+## <a name="see-also"></a>See Also  
+ [Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md)

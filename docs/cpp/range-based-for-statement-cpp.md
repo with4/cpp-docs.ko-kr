@@ -1,43 +1,60 @@
 ---
-title: "범위 기반 for 문(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Range-based for Statement (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 범위 기반 for 문(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: bc7fe69f815a1a1b10f36ef10b5f6f0c62811778
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-`statement` 반복적 및 순차적으로 `expression` 에서 각 요소를 실행합니다.  
+---
+# <a name="range-based-for-statement-c"></a>Range-based for Statement (C++)
+Executes `statement` repeatedly and sequentially for each element in `expression`.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       for ( for-range-declaration : expression )  
-   statement   
+   statement   
 ```  
   
-## 설명  
- 범위 기반이며 "범위"를 통해 실행 해야 하는 구조체 루프에 대한 `for` 문, 반복할 수 있는 어떤 것으로 정의 통해 실행 해야 하는 루프를 생성 하는 문\-예를 들어, `std::vector`, 또는 해당 범위에서 정의 된 STL 시퀀스 `begin()` 및 `end()`.  `for-range-declaration` 부분에서 정의된 이름은 `for` 문에서 지역적이고 `expression` 또는 `statement`에서 재정의될 수 없습니다.  [자동](../cpp/auto-cpp.md) 키워드가 `for-range-declaration` 문의 부분에 선호되는 것에 주목하십시오.  
+## <a name="remarks"></a>Remarks  
+ Use the range-based `for` statement to construct loops that must execute through a "range", which is defined as anything that you can iterate through—for example, `std::vector`, or any other C++ Standard Library sequence whose range is defined by a `begin()` and `end()`. The name that is declared in the `for-range-declaration` portion is local to the `for` statement and cannot be re-declared in `expression` or `statement`. Note that the [auto](../cpp/auto-cpp.md) keyword is preferred in the `for-range-declaration` portion of the statement. 
+
+ **New in Visual Studio 2017:**  Range-based for loops no longer require that begin() and end() return objects of the same type. This enables end() to return a sentinel object such as used by ranges as defined in the Ranges-V3 proposal. For more information, see [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) and the [range-v3 library on GitHub](https://github.com/ericniebler/range-v3).
   
- 이 코드 영역된 `for` 배열과 벡터를 반복 하는 루프를 어떻게 사용하는지 보여줍니다:  
+ This code shows how to use range-based `for` loops to iterate through an array and a vector:  
   
 ```cpp  
-  
 // range-based-for.cpp  
 // compile by using: cl /EHsc /nologo /W4  
 #include <iostream>  
@@ -69,7 +86,7 @@ int main()
     }  
     cout << endl;  
   
-    for( const auto &y : x ) { // Type inference by reference.  
+    for( const auto &y : x ) { // Type inference by const reference.  
         // Observes in-place. Preferred when no modify is needed.  
         cout << y << " ";  
     }  
@@ -93,7 +110,7 @@ int main()
   
 ```  
   
- 출력은 다음과 같습니다.  
+ Here is the output:  
   
  `1 2 3 4 5 6 7 8 9 10`  
   
@@ -109,20 +126,20 @@ int main()
   
  `end of vector test`  
   
- 범위 기반  `for`  루프가 이러한 `statement`에서 실행될 때: [브레이크](../cpp/break-statement-cpp.md), [반환](../cpp/return-statement-cpp.md), 또는  [goto](../cpp/goto-statement-cpp.md) 범위 기반 외부를 레이블 문으로 **에** 루프.  [계속](../cpp/continue-statement-cpp.md) 범위 기반에서 명세서 `for` 루프는 현재 반복에만 종료 합니다.  
+ A range-based `for` loop terminates when one of these in `statement` is executed: a [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), or [goto](../cpp/goto-statement-cpp.md) to a labeled statement outside the range-based **for** loop. A [continue](../cpp/continue-statement-cpp.md) statement in a range-based `for` loop terminates only the current iteration.  
   
- 범위 기반 `for` 에 대한 이러한 사실을 명심하십시오:  
+ Keep in mind these facts about range-based `for`:  
   
--   배열을 자동으로 인식 합니다.  
+-   Automatically recognizes arrays.  
   
--   `.begin()` 및 `.end()` 을 가진 컨테이너를 인식하십시오.  
+-   Recognizes containers that have `.begin()` and `.end()`.  
   
--   기타 항목을 위해 `begin()` 및 `end()` 인수 종속성 조회 사용하기.  
+-   Uses argument-dependent lookup `begin()` and `end()` for anything else.  
   
-## 참고 항목  
+## <a name="see-also"></a>See Also  
  [auto](../cpp/auto-cpp.md)   
- [반복 문](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
- [while 문 \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [do\-while 문\(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for 문 \(C\+\+\)](../cpp/for-statement-cpp.md)
+ [Iteration Statements](../cpp/iteration-statements-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [while Statement (C++)](../cpp/while-statement-cpp.md)   
+ [do-while Statement (C++)](../cpp/do-while-statement-cpp.md)   
+ [for Statement (C++)](../cpp/for-statement-cpp.md)

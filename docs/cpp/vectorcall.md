@@ -1,43 +1,60 @@
 ---
-title: "__vectorcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: __vectorcall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# __vectorcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c1478412f985d61a0bbd4635c7467a24b9074124
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-**Microsoft 전용**  
+---
+# <a name="vectorcall"></a>__vectorcall
+**Microsoft Specific**  
   
- `__vectorcall` 호출 규칙은 가능하면 함수의 인수가 레지스터에 전달되도록 지정합니다.  `__vectorcall`은 [\_\_fastcall](../cpp/fastcall.md) 또는 기본 [x64 호출 규칙](../build/overview-of-x64-calling-conventions.md)보다 인수에 레지스터를 더 많이 사용하도록 합니다.  `__vectorcall` 호출 규칙은 SSE2\(스트리밍 SIMD 확장 2\) 이상을 포함하는 x86 및 x64 프로세서의 네이티브 코드에서만 지원됩니다.  `__vectorcall`을 사용하여 여러 부동 소수점 또는 SIMD 벡터 인수를 전달하는 함수의 속도를 높이고 레지스터에 로드된 인수를 활용하는 작업을 수행합니다.  다음 목록은 `__vectorcall`을 x86 및 x64에서 구현할 때 공통적으로 사용되는 기능을 보여 줍니다.  차이점은 이 문서의 뒷부분에 설명되어 있습니다.  
+ The `__vectorcall` calling convention specifies that arguments to functions are to be passed in registers, when possible. `__vectorcall` uses more registers for arguments than [__fastcall](../cpp/fastcall.md) or the default [x64 calling convention](../build/overview-of-x64-calling-conventions.md) use. The `__vectorcall` calling convention is only supported in native code on x86 and x64 processors that include Streaming SIMD Extensions 2 (SSE2) and above. Use `__vectorcall` to speed functions that pass several floating-point or SIMD vector arguments and perform operations that take advantage of the arguments loaded in registers. The following list shows the features that are common to the x86 and x64 implementations of `__vectorcall`. The differences are explained later in this article.  
   
-|요소|구현|  
-|--------|--------|  
-|C 이름 데코레이션 규칙|함수 이름은 두 개의 "at" 기호\(@@\)가 접미사로 붙고 그 뒤에 매개 변수 목록의 바이트 수\(10진수\)가 이어집니다.|  
-|대\/소문자 변환 규칙|대\/소문자 변환은 수행되지 않습니다.|  
+|Element|Implementation|  
+|-------------|--------------------|  
+|C name-decoration convention|Function names are suffixed with two "at" signs (@@) followed by the number of bytes (in decimal) in the parameter list.|  
+|Case-translation convention|No case translation is performed.|  
   
- [\/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션을 사용하면 모듈의 각 함수를 `__vectorcall`로 컴파일합니다. 이때 함수는 멤버 함수이거나 충돌하는 호출 규칙 특성으로 선언되거나 `vararg` 변수 인수 목록을 사용하거나 이름이 `main`인 경우가 아니어야 합니다.  
+ Using the [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) compiler option causes each function in the module to compile as `__vectorcall` unless the function is a member function, is declared with a conflicting calling convention attribute, uses a `vararg` variable argument list, or has the name `main`.  
   
- `__vectorcall` 함수에 등록하여 다음 세 가지 인수 *정수 형식* 값, *벡터 형식* 값 및 HVA*\(균질 벡터 집합체\)* 값을 전달할 수 있습니다.  
+ You can pass three kinds of arguments by register in `__vectorcall` functions: *integer type* values, *vector type* values, and *homogeneous vector aggregate* (HVA) values.  
   
- 정수 형식은 프로세서의 네이티브 레지스터 크기에 적합하며\(예: x86 컴퓨터에서는 4바이트 또는 x64 컴퓨터에서는 8바이트\) 레지스터 길이의 정수로 변환한 후 비트 표현을 변경하지 않고 다시 변환하는 두 요구 사항을 충족합니다.  예를 들어, x86의 `int`\(x64에서는 `long long`\)로 승격할 수 있는 형식\(예: `char` 또는 `short`\) 또는 `int`\(x64에서는 `long long`\)로 캐스팅되고 변경 없이 원래 형식으로 되돌릴 수 있는 형식은 정수 형식입니다.  정수 형식은 4바이트\(x64에서는 8바이트\) 이하의 포인터, 참조 및 `struct` 또는 `union` 형식을 포함합니다.  x64 플랫폼에서 큰 `struct` 및 `union` 형식은 호출자에 의해 할당된 메모리에 대한 참조에 의해 전달됩니다. x86 플랫폼에서는 스택 값에 의해 전달됩니다.  
+ An integer type satisfies two requirements: it fits in the native register size of the processor—for example, 4 bytes on an x86 machine or 8 bytes on an x64 machine—and it’s convertible to an integer of register length and back again without changing its bit representation. For example, any type that can be promoted to `int` on x86 (`long long` on x64)—for example, a `char` or `short`—or that can be cast to `int` (`long long` on x64) and back to its original type without change is an integer type. Integer types include pointer, reference, and `struct` or `union` types of 4 bytes (8 bytes on x64) or less. On x64 platforms, larger `struct` and `union` types are passed by reference to memory allocated by the caller; on x86 platforms, they are passed by value on the stack.  
   
- 벡터 형식은 부동 소수점 형식\(예: `float` 또는 `double`\) 또는 SIMD 벡터 형식\(예: `__m128` 또는 `__m256`\) 중 하나입니다.  
+ A vector type is either a floating-point type—for example, a `float` or `double`—or an SIMD vector type—for example, `__m128` or `__m256`.  
   
- HVA 형식은 동일한 벡터 형식을 갖는 최대 4개의 데이터 멤버로 구성된 복합 형식입니다.  HVA 형식은 멤버의 벡터 형식과 맞춤 요구 사항이 동일합니다.  다음은 세 가지 동일한 벡터 형식과 32바이트 맞춤을 보여 주는 HVA `struct` 정의에 대한 예제입니다.  
+ An HVA type is a composite type of up to four data members that have identical vector types. An HVA type has the same alignment requirement as the vector type of its members. This is an example of an HVA `struct` definition that contains three identical vector types and has 32-byte alignment:  
   
 ```cpp  
 typedef struct {  
@@ -48,13 +65,13 @@ typedef struct {
   
 ```  
   
- 헤더 파일에 있는 `__vectorcall` 키워드를 사용하여 명시적으로 함수를 선언하여 오류 없이 링크에 별도로 컴파일된 코드를 허용합니다.  함수는 `__vectorcall`을 사용할 수 있도록 프로토타입화되어야 하며 `vararg` 변수 길이 인수 목록을 사용할 수 없습니다.  
+ Declare your functions explicitly with the `__vectorcall` keyword in header files to allow separately compiled code to link without errors. Functions must be prototyped to use `__vectorcall`, and can’t use a `vararg` variable length argument list.  
   
- `__vectorcall` 지정자를 사용하여 멤버 함수를 선언할 수 있습니다.  숨겨진 `this` 포인터는 첫 번째 정수 형식 인수 레지스터에 의해 전달됩니다.  
+ A member function may be declared by using the `__vectorcall` specifier. The hidden `this` pointer is passed by register as the first integer type argument.  
   
- ARM 컴퓨터에서는 컴파일러가 `__vectorcall`을 수락할지 무시할지 결정합니다.  
+ On ARM machines, `__vectorcall` is accepted and ignored by the compiler.  
   
- 비정적 클래스 멤버 함수의 경우 함수가 아웃오브 라인으로 정의되면 호출 규칙 한정자를 아웃오브 라인 정의에서 지정하지 않아도 됩니다.  즉, 클래스 비정적 멤버의 경우 선언하는 동안 지정된 호출 규칙이 정의 시에 가정됩니다.  다음의 클래스 정의를 가정해 봅니다.  
+ For non-static class member functions, if the function is defined out-of-line, the calling convention modifier does not have to be specified on the out-of-line definition. That is, for class non-static members, the calling convention specified during declaration is assumed at the point of definition. Given this class definition:  
   
 ```cpp  
 struct MyClass {  
@@ -62,38 +79,38 @@ struct MyClass {
 };  
 ```  
   
- 다음 코드는  
+ this:  
   
 ```cpp  
 void MyClass::mymethod() { return; }  
 ```  
   
- 다음 코드 조각과 일치합니다.  
+ is equivalent to this:  
   
 ```cpp  
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- `__vectorcall` 호출 규칙 한정자는 `__vectorcall` 함수에 대한 포인터가 만들어진 경우 지정되어야 합니다.  다음 예제는 4개의 `double` 인수를 사용하며 `__m256` 값을 반환하는 `__vectorcall` 함수 포인터의 `typedef`를 만듭니다.  
+ The `__vectorcall` calling convention modifier must be specified when a pointer to a `__vectorcall` function is created. The next example creates a `typedef` for a pointer to a `__vectorcall` function that takes four `double` arguments and returns an `__m256` value:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
 ```  
   
-## x64의 \_\_vectorcall 규칙  
- x64의 `__vectorcall` 호출 규칙은 표준 x64 호출 규칙을 확장하여 추가 레지스터를 활용합니다.  정수 형식 인수와 벡터 형식 인수 모두 인수 목록에 있는 위치를 기반으로 레지스터에 매핑됩니다.  HVA 인수는 사용되지 않는 벡터 레지스터에 할당됩니다.  
+## <a name="vectorcall-convention-on-x64"></a>__vectorcall convention on x64  
+ The `__vectorcall` calling convention on x64 extends the standard x64 calling convention to take advantage of additional registers. Both integer type arguments and vector type arguments are mapped to registers based on position in the argument list. HVA arguments are allocated to unused vector registers.  
   
- 왼쪽에서 오른쪽 순서로 처음 네 개의 인수가 정수 형식 인수인 경우 해당 위치 RCX, RDX, R8 또는 R9에 해당하는 레지스터에서 전달됩니다.  숨겨진 `this` 포인터는 첫 번째 정수 형식 인수로 처리됩니다.  처음 네 개의 인수 중 하나에 있는 HVA 인수를 사용 가능한 레지스터에서 전달할 수 없을 경우, 그 대신 호출자가 할당한 메모리에 대한 참조를 해당 정수 형식 레지스터에서 전달합니다.  네 번째 매개 변수 위치 뒤에 오는 정수 형식 인수는 스택에서 전달됩니다.  
+ When any of the first four arguments in order from left to right are integer type arguments, they are passed in the register that corresponds to that position—RCX, RDX, R8, or R9. A hidden `this` pointer is treated as the first integer type argument. When an HVA argument in one of the first four arguments can’t be passed in the available registers, a reference to caller-allocated memory is passed in the corresponding integer type register instead. Integer type arguments after the fourth parameter position are passed on the stack.  
   
- 왼쪽에서 오른쪽 순서로 처음 여섯 개의 인수가 벡터 형식 인수인 경우 인수 위치에 따라 0에서 5의 SSE 벡터 레지스터 값에 의해 전달됩니다.  부동 소수점 및 `__m128` 형식은 XMM 레지스터에서 전달되고 `__m256` 형식은 YMM 레지스터에서 전달됩니다.  벡터 형식이 참조가 아닌 값에 의해 전달되고 추가 레지스터가 사용되므로 이는 표준 x64 호출 규칙과 다릅니다.  벡터 형식 인수에 할당된 섀도 스택 공간은 8바이트로 고정되어 있으며 [\/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) 옵션이 적용되지 않습니다.  일곱 번째 이후의 매개 변수 자리에 오는 벡터 형식 인수는 호출자가 할당한 메모리에 대한 참조에 의해 스택에서 전달됩니다.  
+ When any of the first six arguments in order from left to right are vector type arguments, they are passed by value in SSE vector registers 0 to 5 according to argument position. Floating-point and `__m128` types are passed in XMM registers, and `__m256` types are passed in YMM registers. This differs from the standard x64 calling convention, because the vector types are passed by value instead of by reference, and additional registers are used. The shadow stack space allocated for vector type arguments is fixed at 8 bytes, and the [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) option does not apply. Vector type arguments in the seventh and later parameter positions are passed on the stack by reference to memory allocated by the caller.  
   
- 벡터 인수가 레지스터에 할당된 후 HVA 인수의 데이터 멤버는 전체 HVA에 사용할 수 있는 레지스터가 충분하지 않는 한 사용되지 않은 벡터 레지스터 XMM0~XMM5\(`__m256` 형식인 경우 YMM0~YMM5\)에 오름차순으로 할당됩니다.  사용할 수 있는 레지스터가 충분하지 않은 경우 HVA 인수는 호출자가 할당한 메모리에 대한 참조에 의해 전달됩니다.  HVA 인수에 대한 스택 섀도 공간은 정의되지 않은 내용을 포함하여 8바이트로 고정됩니다.  HVA 인수는 매개 변수 목록의 왼쪽에서 오른쪽 순서로 레지스터에 할당되며 어떤 위치에나 있을 수 있습니다.  벡터 레지스터에 할당되지 않은 처음 네 개의 인수 위치 중 하나에 있는 HVA 인수는 해당 위치에 대응하는 정수 레지스터에서 참조에 의해 전달됩니다.  네 번째 매개 변수 위치 뒤로 참조에 의해 전달된 HVA 인수는 스택에서 푸시됩니다.  
+ After registers are allocated for vector arguments, the data members of HVA arguments are allocated, in ascending order, to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for `__m256` types), as long as there are enough registers available for the entire HVA. If not enough registers are available, the HVA argument is passed by reference to memory allocated by the caller. The stack shadow space for an HVA argument is fixed at 8 bytes with undefined content. HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position. HVA arguments in one of the first four argument positions that are not assigned to vector registers are passed by reference in the integer register that corresponds to that position. HVA arguments passed by reference after the fourth parameter position are pushed on the stack.  
   
- `__vectorcall` 함수의 결과는 가능한 경우 레지스터에 값으로 반환됩니다.  8바이트 이하의 정수 형식 구조체 또는 공용 구조체를 포함한 정수 형식의 결과는 RAX에 값으로 반환됩니다.  벡터 형식 결과는 크기에 따라 XMM0 또는 YMM0에 값으로 반환됩니다.  HVA 결과에는 요소 크기에 따라 레지스터 XMM0:XMM3 또는 YMM0:YMM3에 값으로 반환되는 각 데이터 요소가 있습니다.  해당 레지스터에 맞지 않는 결과 형식은 호출자가 할당한 메모리에 대한 참조로 반환됩니다.  
+ Results of `__vectorcall` functions are returned by value in registers when possible. Results of integer type, including structs or unions of 8 bytes or less, are returned by value in RAX. Vector type results are returned by value in XMM0 or YMM0, depending on size. HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size. Result types that don't fit in the corresponding registers are returned by reference to memory allocated by the caller.  
   
- `__vectorcall`의 x64 구현에서는 호출자가 스택을 유지 관리합니다.  호출자 프롤로그 및 에필로그 코드는 호출된 함수의 스택을 할당하고 호출합니다.  인수는 오른쪽에서 왼쪽으로 스택에서 푸시되며 섀도 스택 공간에는 레지스터에 의해 전달된 인수가 할당됩니다.  
+ The stack is maintained by the caller in the x64 implementation of `__vectorcall`. The caller prolog and epilog code allocates and clears the stack for the called function. Arguments are pushed on the stack from right to left, and shadow stack space is allocated for arguments passed in registers.  
   
- 예를 들면 다음과 같습니다.  
+ Examples:  
   
 ```cpp  
 // crt_vc64.c  
@@ -190,20 +207,20 @@ int __cdecl main( void )
   
 ```  
   
-## x86의 \_\_vectorcall 규칙  
- `__vectorcall` 호출 규칙은 32비트 정수 형식 인수에 `__fastcall` 규칙을 적용하며 벡터 형식 및 HVA 인수에는 SSE 벡터 레지스터를 활용합니다.  
+## <a name="vectorcall-convention-on-x86"></a>__vectorcall convention on x86  
+ The `__vectorcall` calling convention follows the `__fastcall` convention for 32-bit integer type arguments, and takes advantage of the SSE vector registers for vector type and HVA arguments.  
   
- 매개 변수 목록에서 왼쪽에서 오른쪽 순서로 처음 두 개 정수 형식 인수는 각각 ECX 및 EDX에 배치됩니다.  숨겨진 `this` 포인터는 첫 번째 정수 형식 인수로 처리되고 ECX에서 전달됩니다.  처음 여섯 개 벡터 형식 인수는 인수 크기에 따라 0에서 5의 SSE 벡터 레지스터 값에 의해 XMM 또는 YMM 레지스터에서 전달됩니다.  
+ The first two integer type arguments found in the parameter list from left to right are placed in ECX and EDX, respectively. A hidden `this` pointer is treated as the first integer type argument, and is passed in ECX. The first six vector type arguments are passed by value through SSE vector registers 0 to 5, in the XMM or YMM registers, depending on argument size.  
   
- 왼쪽에서 오른쪽 순서로 처음 여섯 개 벡터 형식 인수는 0에서 5의 SSE 벡터 레지스터 값에 의해 전달됩니다.  부동 소수점 및 `__m128` 형식은 XMM 레지스터에서 전달되고 `__m256` 형식은 YMM 레지스터에서 전달됩니다.  레지스터에 의해 전달된 벡터 형식 인수에는 섀도 스택 공간이 할당되지 않습니다.  일곱 번째 이후의 벡터 형식 인수는 호출자가 할당한 메모리에 대한 참조에 의해 스택에서 전달됩니다.  이 인수에는 컴파일러 오류 [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) 제한이 적용되지 않습니다.  
+ The first six vector type arguments in order from left to right are passed by value in SSE vector registers 0 to 5. Floating-point and `__m128` types are passed in XMM registers, and `__m256` types are passed in YMM registers. No shadow stack space is allocated for vector type arguments passed by register. The seventh and subsequent vector type arguments are passed on the stack by reference to memory allocated by the caller. The limitation of compiler error [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) does not apply to these arguments.  
   
- 벡터 인수가 레지스터에 할당된 후 HVA 인수의 데이터 멤버는 전체 HVA에 사용할 수 있는 레지스터가 충분하지 않는 한 사용되지 않은 벡터 레지스터 XMM0~XMM5\(`__m256` 형식인 경우 YMM0~YMM5\)에 오름차순으로 할당됩니다.  사용할 수 있는 레지스터가 충분하지 않은 경우 HVA 인수는 호출자가 할당한 메모리에 대한 참조에 의해 스택에서 전달됩니다.  HVA 인수에는 스택 섀도 공간이 할당되지 않습니다.  HVA 인수는 매개 변수 목록의 왼쪽에서 오른쪽 순서로 레지스터에 할당되며 어떤 위치에나 있을 수 있습니다.  
+ After registers are allocated for vector arguments, the data members of HVA arguments are allocated in ascending order to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for `__m256` types), as long as there are enough registers available for the entire HVA. If not enough registers are available, the HVA argument is passed on the stack by reference to memory allocated by the caller. No stack shadow space for an HVA argument is allocated. HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position.  
   
- `__vectorcall` 함수의 결과는 가능한 경우 레지스터에 값으로 반환됩니다.  4바이트 이하의 정수 형식 구조체 또는 공용 구조체를 포함한 정수 형식의 결과는 EAX에 값으로 반환됩니다.  8바이트 이하의 정수 형식 구조체 또는 공용 구조체는 EDX:EAX에 값으로 반환됩니다.  벡터 형식 결과는 크기에 따라 XMM0 또는 YMM0에 값으로 반환됩니다.  HVA 결과에는 요소 크기에 따라 레지스터 XMM0:XMM3 또는 YMM0:YMM3에 값으로 반환되는 각 데이터 요소가 있습니다.  다른 결과 형식은 호출자가 할당한 메모리에 대한 참조로 반환됩니다.  
+ Results of `__vectorcall` functions are returned by value in registers when possible. Results of integer type, including structs or unions of 4 bytes or less, are returned by value in EAX. Integer type structs or unions of 8 bytes or less are returned by value in EDX:EAX. Vector type results are returned by value in XMM0 or YMM0, depending on size. HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size. Other result types are returned by reference to memory allocated by the caller.  
   
- `__vectorcall`의 x86 구현은 호출자가 오른쪽에서 왼쪽으로 스택에 푸시한 인수 규칙을 따르며 호출된 함수는 반환되기 전에 스택을 지웁니다.  레지스터에 배치되지 않은 인수만 스택으로 푸시됩니다.  
+ The x86 implementation of `__vectorcall` follows the convention of arguments pushed on the stack from right to left by the caller, and the called function clears the stack just before it returns. Only arguments that are not placed in registers are pushed on the stack.  
   
- 예를 들면 다음과 같습니다.  
+ Examples:  
   
 ```cpp  
 // crt_vc86.c  
@@ -296,8 +313,8 @@ int __cdecl main( void )
   
 ```  
   
- **Microsoft 전용 종료**  
+ **End Microsoft Specific**  
   
-## 참고 항목  
- [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Argument Passing and Naming Conventions](../cpp/argument-passing-and-naming-conventions.md)   
+ [Keywords](../cpp/keywords-cpp.md)

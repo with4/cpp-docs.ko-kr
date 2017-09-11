@@ -1,29 +1,46 @@
 ---
-title: "로컬로 선언된 이름에 대한 이름 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 로컬로 선언된 이름에 대한 이름 확인
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 767daf6f58a0389b14ea547fd912431734c41850
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-템플릿 인수를 사용하거나 사용하지 않고 템플릿 이름 자체를 참조할 수 있습니다.  클래스 템플릿의 범위에서 이름 자체는 템플릿을 나타냅니다.  템플릿 특수화 또는 부분 특수화의 범위에서 이름만 특수화 또는 부분 특수화를 참조합니다.  템플릿의 다른 특수화나 부분 특수화도 해당 템플릿 인수와 함께 참조될 수 있습니다.  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## 예제  
- 다음 코드는 클래스 템플릿의 이름 A가 특수화 또는 부분 특수화의 범위에서 다르게 해석된다는 것을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
 ```  
 // template_name_resolution3.cpp  
@@ -43,10 +60,10 @@ template<> class A<int> {
 };  
 ```  
   
-## 예제  
- 템플릿 매개 변수와 다른 개체 사이에 이름이 충돌할 경우 템플릿 매개 변수를 숨길 수도 있고 숨기지 않을 수도 있습니다.  다음 규칙은 우선 순위를 결정하는 데 도움이 됩니다.  
+## <a name="example"></a>Example  
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- 템플릿 매개 변수의 범위는 매개 변수가 처음 나타난 지점부터 클래스 또는 함수 템플릿의 끝까지입니다.  이름이 템플릿 인수 목록 또는 기본 클래스 목록에 다시 나타나는 경우 동일한 형식을 참조합니다.  표준 C\+\+에서는 이 이외에 템플릿 매개 변수와 동일한 이름을 같은 범위에서 선언할 수 없습니다.  Microsoft 확장은 템플릿 매개 변수가 템플릿 범위에서 다시 정의될 수 있도록 합니다.  다음 예제는 클래스 템플릿의 기본 지정에서의 템플릿 매개 변수 사용을 보여 줍니다.  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
 ```  
 // template_name_resolution4.cpp  
@@ -62,8 +79,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 템플릿의 멤버 함수를 클래스 템플릿 외부에서 정의할 때 다른 템플릿 매개 변수 이름을 사용할 수 있습니다.  템플릿 멤버 함수 정의가 선언이 템플릿 매개 변수에 대해 사용하는 이름과 다른 이름을 사용하고 정의에 사용된 이름이 선언의 다른 멤버와 충돌하는 경우 템플릿 선언의 멤버가 우선합니다.  
+## <a name="example"></a>Example  
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
 ```  
 // template_name_resolution5.cpp  
@@ -92,9 +109,12 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## 예제  
- 템플릿 함수 또는 멤버 함수를 템플릿을 선언한 네임스페이스 외부에서 정의할 때 템플릿 인수는 네임스페이스의 다른 멤버 이름보다 우선합니다.  
+```Output  
+Z::Z()  
+```  
+  
+## <a name="example"></a>Example  
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
   
 ```  
 // template_name_resolution6.cpp  
@@ -122,9 +142,12 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## 예제  
- 템플릿 클래스 선언 외부 정의에서 템플릿 클래스에 템플릿 인수에 종속되지 않는 기본 클래스가 있고 기본 클래스 또는 해당 멤버 중 하나가 템플릿 인수와 같은 이름을 가진 경우 기본 클래스 또는 멤버 이름은 템플릿 인수를 숨깁니다.  
+```Output  
+C<T>::g  
+```  
+  
+## <a name="example"></a>Example  
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
   
 ```  
 // template_name_resolution7.cpp  
@@ -155,7 +178,10 @@ int main() {
 }  
 ```  
   
-  **Base**  
-**1**   
-## 참고 항목  
- [이름 확인](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

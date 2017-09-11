@@ -1,64 +1,77 @@
 ---
-title: "별칭 및 typedef(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typedef"
-dev_langs: 
-  - "C++"
+title: Aliases and typedefs (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typedef
+dev_langs:
+- C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 별칭 및 typedef(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ab1d0d08368e75e26f4ca51f49f80c162d791f7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-*별칭 선언*을 사용하여 이전에 선언된 형식에 대한 동의어로 사용할 이름을 선언할 수 있습니다.  이 메커니즘은 비공식적으로 *형식 별칭*이라고도 합니다.  이 메커니즘을 사용하여 사용자 지정 할당자에 유용한 *별칭 템플릿*을 만들 수도 있습니다.  
+---
+# <a name="aliases-and-typedefs-c"></a>Aliases and typedefs (C++)
+You can use an *alias declaration* to declare a name to use as a synonym for a previously declared type. (This mechanism is also referred to informally as a *type alias*). You can also use this mechanism to create an *alias template*, which can be particularly useful for custom allocators.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 using identifier = type;  
 ```  
   
-## 설명  
+## <a name="remarks"></a>Remarks  
  `identifier`  
- 별칭 이름입니다.  
+ The name of the alias.  
   
  `type`  
- 별칭을 만들 형식 식별자입니다.  
+ The type identifier you are creating an alias for.  
   
- 별칭은 새 형식을 사용하지 않으며 기존 형식 이름의 의미를 변경할 수 없습니다.  
+ An alias does not introduce a new type and cannot change the meaning of an existing type name.  
   
- 가장 간단한 별칭 형태는 C\+\+ 03의 `typedef` 메커니즘과 동일합니다.  
+ The simplest form of an alias is equivalent to the `typedef` mechanism from C++03:  
   
 ```cpp  
-  
 // C++11  
 using counter = long;  
   
 // C++03 equivalent:  
 // typedef long counter;  
-  
 ```  
   
- 두 가지 모두 "카운터" 형식의 변수를 만들 수 있습니다.  `std::ios_base::fmtflags`에 대해서는 이와 같은 형식 별칭이 더 유용합니다.  
+ Both of these enable the creation of variables of type "counter". Something more useful would be a type alias like this one for `std::ios_base::fmtflags`:  
   
 ```cpp  
-  
 // C++11  
 using fmtfl = std::ios_base::fmtflags;  
+  
 // C++03 equivalent:  
 // typedef std::ios_base::fmtflags fmtfl;  
   
@@ -66,13 +79,11 @@ fmtfl fl_orig = std::cout.flags();
 fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout.hex;  
 // ...  
 std::cout.flags(fl_hex);  
-  
 ```  
   
- 별칭은 함수 포인터와도 사용할 수 있지만 형식 정의보다 훨씬 더 가독성이 뛰어납니다.  
+ Aliases also work with function pointers, but are much more readable than the equivalent typedef:  
   
 ```cpp  
-  
 // C++11  
 using func = void(*)(int);  
   
@@ -85,7 +96,7 @@ func fptr = &actual_function;
   
 ```  
   
- `typedef` 메커니즘의 단점은 템플릿과 함께 사용할 수 없다는 점입니다.  그러나 C\+\+ 11의 형식 별칭 구문을 사용하면 별칭 템플릿을 만들 수 있습니다.  
+ A limitation of the `typedef` mechanism is that it doesn't work with templates. However, the type alias syntax in C++11 enables the creation of alias templates:  
   
 ```cpp  
 template<typename T> using ptr = T*;   
@@ -95,11 +106,10 @@ ptr<int> ptr_int;
   
 ```  
   
-## 예제  
- 다음 예제에서는 사용자 지정 할당자\(이 경우 정수 벡터 형식\)와 별칭 템플릿을 사용하는 방법을 데모로 보여 줍니다.  `int`의 형식을 간편한 별칭으로 대체하여 기본 함수 코드의 매개 변수 목록을 간단히 표시할 수 있습니다.  코드 전반에 사용자 지정 할당자를 사용하여 가독성을 향상시키고 오타로 인한 버그의 위험을 줄일 수 있습니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use an alias template with a custom allocator—in this case, an integer vector type. You can substitute any type for `int` to create a convenient alias to hide the complex parameter lists in your main functional code. By using the custom allocator throughout your code you can improve readability and reduce the risk of introducing bugs caused by typos.  
   
 ```cpp  
-  
 #include <stdlib.h>  
 #include <new>  
   
@@ -151,16 +161,18 @@ int main ()
 }  
 ```  
   
-## 출력  
-  **1701 1764 1664**   
-## Typedefs  
- `typedef` 선언은 해당 범위 내에서 선언의 *형식 선언* 부분을 통해 제공된 형식에 대한 동의어가 되는 이름을 새로 추가합니다.  
+```Output  
+1701 1764 1664  
+```  
   
- typedef 선언을 사용하여 언어에서 이미 정의된 형식이나 사용자가 선언한 형식에 대한 보다 짧거나 의미 있는 이름을 생성할 수 있습니다.  typedef 이름을 사용하면 변경될 수 있는 구현 정보를 캡슐화할 수 있습니다.  
+## <a name="typedefs"></a>Typedefs  
+ A `typedef` declaration introduces a name that, within its scope, becomes a synonym for the type given by the *type-declaration* portion of the declaration.  
   
- **클래스**, `struct`, **집합체** 및 `enum` 선언과 달리, `typedef` 선언은 새 형식을 추가하지 않고 기존 형식에 대한 새 이름을 추가합니다.  
+ You can use typedef declarations to construct shorter or more meaningful names for types already defined by the language or for types that you have declared. Typedef names allow you to encapsulate implementation details that may change.  
   
- `typedef`를 사용하여 선언된 이름은 다른 식별자\(문 레이블 제외\)와 동일한 네임스페이스를 차지합니다.  따라서 클래스 형식으로 선언된 경우를 제외하고 이전에 선언된 이름과 동일한 식별자를 사용할 수 없습니다.  다음 예제를 참조하세요.  
+ In contrast to the **class**, `struct`, **union**, and `enum` declarations, `typedef` declarations do not introduce new types — they introduce new names for existing types.  
+  
+ Names declared using `typedef` occupy the same namespace as other identifiers (except statement labels). Therefore, they cannot use the same identifier as a previously declared name, except in a class-type declaration. Consider the following example:  
   
 ```  
 // typedef_names1.cpp  
@@ -169,7 +181,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.  
 ```  
   
- 또한 다른 식별자에 있는 이름 숨기기 규칙은 `typedef`를 사용하여 선언된 이름의 가시성을 통제합니다.  따라서 다음 예제는 C\+\+에서 사용할 수 있습니다.  
+ The name-hiding rules that pertain to other identifiers also govern the visibility of names declared using `typedef`. Therefore, the following example is legal in C++:  
   
 ```  
 // typedef_names2.cpp  
@@ -181,12 +193,7 @@ int main()
   
 // typedef UL back in scope  
 ```  
-  
--   [Typedef 이름의 재선언](../misc/redeclaration-of-typedef-names.md)  
-  
--   [클래스 형식으로 형식 정의 사용](../misc/use-of-typedef-with-class-types.md)  
-  
--   [Typedef 이름의 네임스페이스](../misc/name-space-of-typedef-names.md)  
+ 
   
 ```  
 // typedef_specifier1.cpp  
@@ -202,37 +209,37 @@ void myproc( int )
 }  
 ```  
   
- typedef와 동일한 이름의 로컬 범위 식별자를 선언하거나 같은 범위 또는 내부 범위에서 구조체 또는 공용 구조체의 멤버를 선언할 때 반드시 형식 지정자를 지정해야 합니다.  예:  
+ When declaring a local-scope identifier by the same name as a typedef, or when declaring a member of a structure or union in the same scope or in an inner scope, the type specifier must be specified. For example:  
   
 ```  
 typedef char FlagType;  
 const FlagType x;  
 ```  
   
- 식별자, 구조체 멤버 또는 공용 구조체 멤버에 `FlagType` 이름을 다시 사용하려면 형식을 제공해야 합니다.  
+ To reuse the `FlagType` name for an identifier, a structure member, or a union member, the type must be provided:  
   
 ```  
 const int FlagType;  // Type specifier required  
 ```  
   
- 다음과 같이 표현하면 충분하지 않습니다.  
+ It is not sufficient to say  
   
 ```  
 const FlagType;      // Incomplete specification  
 ```  
   
- `FlagType`이 다시 선언되는 식별자가 아니라 형식의 일부로 간주되기 때문입니다.  이 선언은 다음과 같이 잘못된 선언으로 간주됩니다.  
+ because the `FlagType` is taken to be part of the type, not an identifier that is being redeclared. This declaration is taken to be an illegal declaration like  
   
 ```  
 int;  // Illegal declaration   
 ```  
   
- 포인터, 함수 및 배열 형식을 비롯한 모든 형식을 typedef를 사용하여 선언할 수 있습니다.  정의의 표시 유형이 선언의 표시 유형과 동일한 경우 구조체 또는 공용 구조체 형식을 정의하기 전에 구조체 또는 공용 구조체 형식에 대한 포인터의 typedef 이름을 선언할 수 있습니다.  
+ You can declare any type with typedef, including pointer, function, and array types. You can declare a typedef name for a pointer to a structure or union type before you define the structure or union type, as long as the definition has the same visibility as the declaration.  
   
-### 예  
- `typedef` 선언의 한 가지 사용 방법은 선언을 더 균일하고 압축적으로 만드는 것입니다.  예:  
+### <a name="examples"></a>Examples  
+ One use of `typedef` declarations is to make declarations more uniform and compact. For example:  
   
-```  
+```cpp  
 typedef char CHAR;          // Character type.  
 typedef CHAR * PSTR;        // Pointer to a string (char *).  
 PSTR strchr( PSTR source, CHAR target );  
@@ -240,33 +247,33 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- `typedef`를 사용하여 같은 선언에서 기본 및 파생 형식을 지정하려면 선언을 쉼표로 구분하면 됩니다.  예:  
+ To use `typedef` to specify fundamental and derived types in the same declaration, you can separate declarators with commas. For example:  
   
 ```  
 typedef char CHAR, *PSTR;  
 ```  
   
- 다음 예제에서는 값을 반환하지 않고 두 개의 int 인수를 사용하는 함수에 대한 `DRAWF` 형식을 제공합니다.  
+ The following example provides the type `DRAWF` for a function returning no value and taking two int arguments:  
   
 ```  
 typedef void DRAWF( int, int );  
 ```  
   
- 위의 `typedef` 문 뒤의 선언은  
+ After the above `typedef` statement, the declaration  
   
 ```  
 DRAWF box;   
 ```  
   
- 다음 선언과 동일합니다.  
+ would be equivalent to the declaration  
   
 ```  
 void box( int, int );  
 ```  
   
- 사용자 정의 형식을 선언하고 이름을 지정하기 위해 종종 `typedef`가 `struct`와 결합합니다.  
+ `typedef` is often combined with `struct` to declare and name user-defined types:  
   
-```  
+```cpp  
 // typedef_specifier2.cpp  
 #include <stdio.h>  
   
@@ -285,11 +292,14 @@ int main()
 }  
 ```  
   
-  **10   0.990000**   
-### typedef 다시 선언  
- `typedef` 선언을 사용하여 동일한 이름이 동일한 형식을 참조하도록 다시 선언할 수 있습니다.  예:  
-  
+```Output  
+10   0.990000  
 ```  
+  
+### <a name="re-declaration-of-typedefs"></a>Re-declaration of typedefs  
+ The `typedef` declaration can be used to redeclare the same name to refer to the same type. For example:  
+  
+```cpp  
 // FILE1.H  
 typedef char CHAR;  
   
@@ -301,18 +311,18 @@ typedef char CHAR;
 #include "file2.h"   // OK  
 ```  
   
- PROG.CPP 프로그램에는 두 개의 헤더 파일이 포함되어 있으며, 두 파일 모두 `typedef`이라는 이름에 대한 `CHAR` 선언을 포함합니다.  두 선언이 동일한 형식을 참조하는 한 이러한 재선언은 허용됩니다.  
+ The program PROG.CPP includes two header files, both of which contain `typedef` declarations for the name `CHAR`. As long as both declarations refer to the same type, such redeclaration is acceptable.  
   
- `typedef`는 이전에 다른 형식으로 선언된 이름을 다시 정의할 수 없습니다.  따라서 FILE2.H에 다음이 포함된 경우  
+ A `typedef` cannot redefine a name that was previously declared as a different type. Therefore, if FILE2.H contains  
   
-```  
+```cpp  
 // FILE2.H  
 typedef int CHAR;     // Error  
 ```  
   
- 컴파일러는 `CHAR`이라는 이름이 다른 형식을 참조하도록 다시 선언하려는 시도 때문에 오류를 발생시킵니다.  이는 다음과 같은 구문으로 확장됩니다.  
+ the compiler issues an error because of the attempt to redeclare the name `CHAR` to refer to a different type. This extends to constructs such as:  
   
-```  
+```cpp  
 typedef char CHAR;  
 typedef CHAR CHAR;      // OK: redeclared as same type  
   
@@ -323,10 +333,10 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;  
 ```  
   
-### C\+\+의 typedef 및C  
- `typedef` 지정자를 클래스 형식에 사용하는 것은 `typedef` 선언에서 명명되지 않은 구조체를 선언하는 ANSI C의 방법 때문에 주로 지원됩니다.  예를 들어 많은 C 프로그래머는 다음을 사용합니다.  
+### <a name="typedefs-in-c-vs-c"></a>typedefs in C++ vs. C  
+ Use of the `typedef` specifier with class types is supported largely because of the ANSI C practice of declaring unnamed structures in `typedef` declarations. For example, many C programmers use the following:  
   
-```  
+```cpp  
 // typedef_with_class_types1.cpp  
 // compile with: /c  
 typedef struct {   // Declare an unnamed structure and give it the  
@@ -336,21 +346,21 @@ typedef struct {   // Declare an unnamed structure and give it the
 } POINT;  
 ```  
   
- 이러한 선언의 장점은 다음과 같은 선언이 가능하다는 것입니다.  
+ The advantage of such a declaration is that it enables declarations like:  
   
 ```  
 POINT ptOrigin;  
 ```  
   
- 위의 선언을 아래의 선언 대신 사용할 수 있습니다.  
+ instead of:  
   
 ```  
 struct point_t ptOrigin;  
 ```  
   
- C\+\+에서는 `typedef` 이름과 실제 형식\(**class**, `struct`, **union** 및 `enum` 키워드로 선언됨\) 간의 차이가 더 분명합니다.  `typedef` 문에서 이름이 없는 구조체를 선언하는 C의 방법이 여전히 작동하지만 이 방법은 C에서만큼 표기법상의 이점을 제공하지 않습니다.  
+ In C++, the difference between `typedef` names and real types (declared with the **class**, `struct`, **union**, and `enum` keywords) is more distinct. Although the C practice of declaring a nameless structure in a `typedef` statement still works, it provides no notational benefits as it does in C.  
   
-```  
+```cpp  
 // typedef_with_class_types2.cpp  
 // compile with: /c /W1  
 typedef struct {  
@@ -360,13 +370,11 @@ typedef struct {
 } POINT;  
 ```  
   
- 위의 예제에서는 명명되지 않은 클래스 `POINT` 구문을 사용하여 `typedef`라는 클래스를 선언합니다.  `POINT`는 클래스 이름으로 간주되지만 다음과 같은 제한 사항이 이런 방식으로 생성된 이름에 적용됩니다.  
+ The preceding example declares a class named `POINT` using the unnamed class `typedef` syntax. `POINT` is treated as a class name; however, the following restrictions apply to names introduced this way:  
   
--   해당 이름\(동의어\)은 **class**, `struct` 또는 **union** 접두사 뒤에 나타날 수 없습니다.  
+-   The name (the synonym) cannot appear after a **class**, `struct`, or **union** prefix.  
   
--   해당 이름은 클래스 선언 내에서 생성자 또는 소멸자 이름으로 사용할 수 없습니다.  
+-   The name cannot be used as constructor or destructor names within a class declaration.  
   
- 요약하면 이 구문은 상속, 생성 또는 소멸을 위한 메커니즘을 제공하지 않습니다.  
-  
-## 참고 항목  
- [using 키워드](../misc/using-keyword.md)
+ In summary, this syntax does not provide any mechanism for inheritance, construction, or destruction.  
+

@@ -1,37 +1,54 @@
 ---
-title: "C++ 언어 및 표준 라이브러리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C/C++ Language and Standard Libraries | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 언어 및 표준 라이브러리
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: a9f154b6f2d96658eb898cac6ae3147088de29bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-이 설명서 단원에는 C 및 C\+\+용 ISO 표준의 Microsoft 구현을 위한 지침 및 참조 내용이 포함됩니다.  
+---
+# <a name="cc-language-and-standard-libraries"></a>C/C++ Language and Standard Libraries
+This section of the documentation includes guidelines and reference content for the Microsoft implementation of the ISO standards for C and C++.  
   
-## 관련 문서  
+## <a name="related-articles"></a>Related Articles  
   
-|제목|설명|  
-|--------|--------|  
-|[C\+\+의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)|최신 C\+\+ 프로그래밍 언어 및 가장 좋은 방법에 대해 설명합니다.|  
-|[C\/C\+\+ 언어](../misc/c-cpp-languages.md)|C 및 C\+\+ 언어의 참조 콘텐츠입니다.|  
-|[C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)|CRT\(C 런타임\)의 Microsoft 구현에 대한 참조 콘텐츠입니다.|  
-|[C\+\+ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)|STL\(표준 템플릿 라이브러리\)의 Microsoft 구현에 대한 참조 콘텐츠입니다.|  
-|[SafeInt 라이브러리](../windows/safeint-library.md)|오버플로의 위험 없이 정수를 처리하는 함수 라이브러리의 참조 콘텐츠입니다.|  
-|[Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)|Visual Studio에 포함된 Visual C\+\+의 주요 기능을 설명하고 Visual C\+\+ 설명서의 나머지 부분에 연결합니다.|  
-|[IDE 및 개발 도구](../ide/ide-and-tools-for-visual-cpp-development.md)|C\+\+앱의 생성, 구성 및 배치를 위해 Visual Studio와 관련 도구 사용법에 관한 정보를 링크합니다.|  
-|[Visual C\+\+의 새로운 기능](../top/what-s-new-for-visual-cpp-in-visual-studio-2015.md)|이 릴리스의 새로운 기능 및 향상된 기능에 대해 설명합니다.|
+|Title|Description|  
+|-----------|-----------------|  
+|[Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Describes modern C++ programming idioms and best practices.|  
+|[C++ Language Reference](../cpp/cpp-language-reference.md)|Reference content for the C++ languages.|  
+|[C++ Standard Library](../standard-library/cpp-standard-library-reference.md)|Reference content for the Microsoft implementation of the C++ Standard Library.|  
+|[C Language Reference](../c-language/c-language-reference.md)|Reference content for the Microsoft implementation of the C language.|
+|[C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md)|Reference content for the Microsoft implementation of the C runtime (CRT).|
+|[SafeInt Library](../windows/safeint-library.md)|Reference content for a library of functions that handle integers without the risk of overflow.|  
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Describes key features of Visual C++ in Visual Studio and links to the rest of the Visual C++ documentation.|  
+|[IDE and Development Tools](../ide/ide-and-tools-for-visual-cpp-development.md)|Links to other articles that contain information about how to use Visual Studio and its related tools to create, build, and deploy C++ apps.|  
+|[What's New for Visual C++](../what-s-new-for-visual-cpp-in-visual-studio.md)|Describes the new features and enhancements in this release.|
