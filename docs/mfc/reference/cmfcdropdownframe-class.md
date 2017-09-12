@@ -1,5 +1,5 @@
 ---
-title: "CMFCDropDownFrame 클래스 | Microsoft 문서"
+title: CMFCDropDownFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDropDownFrame class
+- CMFCDropDownFrame [MFC], Create
+- CMFCDropDownFrame [MFC], GetParentMenuBar
+- CMFCDropDownFrame [MFC], GetParentPopupMenu
+- CMFCDropDownFrame [MFC], RecalcLayout
+- CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 caps.latest.revision: 23
 author: mikeblome
@@ -39,57 +43,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f045e4a3b580f12e64758737495c32963bea6db
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 135d88a8f1da56ffe32675c69e3e4ecf3b8075bd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 클래스
-드롭다운 도구 모음 및 드롭다운 도구 모음 단추에 드롭다운 프레임 창 기능을 제공합니다.  
+# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Class
+Provides drop-down frame window functionality to drop-down toolbars and drop-down toolbar buttons.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDropDownFrame : public CMiniFrameWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
-  
-|||  
-|-|-|  
-|이름|설명|  
-|`CMFCDropDownFrame::CMFCDropDownFrame`|기본 생성자입니다.|  
-|`CMFCDropDownFrame::~CMFCDropDownFrame`|소멸자|  
-  
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|이름|설명|  
-|[CMFCDropDownFrame::Create](#create)|
-          `CMFCDropDownFrame` 개체를 만듭니다.|  
-|`CMFCDropDownFrame::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|드롭 다운 프레임의 부모 메뉴 모음을 검색합니다.|  
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|드롭 다운 프레임의 부모 팝업 메뉴를 검색합니다.|  
-|`CMFCDropDownFrame::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|드롭 다운 프레임 위치를 변경합니다.|  
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|자식 드롭다운 도구 모음 창이 자동으로 소멸 됩니다 있는지 여부를 설정 합니다.|  
+|Name|Description|  
+|`CMFCDropDownFrame::CMFCDropDownFrame`|Default constructor.|  
+|`CMFCDropDownFrame::~CMFCDropDownFrame`|Destructor.|  
   
-### <a name="remarks"></a>설명  
- 이 클래스는 사용자 코드에서 직접 사용할 수 없습니다.  
+### <a name="public-methods"></a>Public Methods  
   
- 프레임 워크에서이 클래스를 사용 하 여 프레임 동작을 제공 하는 `CMFCDropDownToolbar` 및 `CMFCDropDownToolbarButton` 클래스입니다. 이러한 클래스에 대 한 자세한 내용은 참조 [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 및 [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)합니다.  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCDropDownFrame::Create](#create)|Creates a `CMFCDropDownFrame` object.|  
+|`CMFCDropDownFrame::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Retrieves the parent menu bar of the drop-down frame.|  
+|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Retrieves the parent pop-up menu of the drop-down frame.|  
+|`CMFCDropDownFrame::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Repositions the drop-down frame.|  
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Sets whether the child drop-down toolbar window is destroyed automatically.|  
   
-## <a name="example"></a>예제  
- 다음 예제에서는에 대 한 포인터를 검색 하는 방법을 한 `CMFCDropDownFrame` 에서 개체는 `CFrameWnd` 클래스 및 자식 드롭다운 도구 모음 창을 자동으로 소멸 되도록 설정 하는 방법입니다.  
+### <a name="remarks"></a>Remarks  
+ This class is not intended to be used directly from your code.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&36;](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
+ The framework uses this class to provide frame behavior to the `CMFCDropDownToolbar` and `CMFCDropDownToolbarButton` classes. For more information about these classes, see [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md) and [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CMFCDropDownFrame` object from a `CFrameWnd` class, and how to set the child drop-down toolbar window to be destroyed automatically.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,12 +105,11 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdropdowntoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdropdowntoolbar.h  
   
-##  <a name="create"></a>CMFCDropDownFrame::Create  
- 
-          `CMFCDropDownFrame` 개체를 만듭니다.  
+##  <a name="create"></a>  CMFCDropDownFrame::Create  
+ Creates a `CMFCDropDownFrame` object.  
   
 ```  
 virtual BOOL Create(
@@ -117,84 +119,84 @@ virtual BOOL Create(
     CMFCDropDownToolBar* pWndOriginToolbar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|[in] `pWndParent`|드롭 다운 프레임의 부모 창입니다.|  
-|[in] `x`|드롭다운 프레임의 위치에 대 한 가로 화면 좌표입니다.|  
-|[in] `y`|드롭다운 프레임의 위치에 대 한 세로 화면 좌표입니다.|  
-|[in] `pWndOriginToolbar`|이 메서드를 사용 하 여 새 드롭다운 프레임 개체를 채울 드롭다운 단추가 있는 도구 모음입니다.|  
+|Parameter|Description|  
+|[in] `pWndParent`|The parent window of the drop-down frame.|  
+|[in] `x`|The horizontal screen coordinate for the location of the down-down frame.|  
+|[in] `y`|The vertical screen coordinate for the location of the down-down frame.|  
+|[in] `pWndOriginToolbar`|The toolbar that has the drop-down buttons that this method uses to populate the new drop-down frame object.|  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`드롭 다운 프레임 성공적으로 생성 되었으면; 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the drop-down frame was successfully created; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) 메서드를 사용 하 여 드롭 다운 프레임 창 만들기는 `WS_POPUP` 스타일입니다. 드롭 다운 프레임 창이 지정된 된 화면 좌표에 나타납니다. 이 메서드는 실패 하는 경우는 [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) 메서드 반환 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls the base [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) method to create the drop-down frame window with the `WS_POPUP` style. The drop-down frame window appears at the specified screen coordinates. This method fails if the [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) method returns `FALSE`.  
   
- `CMFCDropDownFrame` 클래스는 제공 된 복사본을 만듭니다 `CMFCDropDownToolBar` 매개 변수입니다. 단추 이미지와 단추 상태에서이 메서드는 복사는 `pWndOriginToolbar` 매개 변수는 `m_pWndOriginToolbar` 데이터 멤버입니다.  
+ The `CMFCDropDownFrame` class creates a copy of the provided `CMFCDropDownToolBar` parameter. This method copies the button images and button states from the `pWndOriginToolbar` parameter to the `m_pWndOriginToolbar` data member.  
   
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
- 드롭 다운 프레임의 부모 메뉴 모음을 검색합니다.  
+##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
+ Retrieves the parent menu bar of the drop-down frame.  
   
 ```  
 CMFCMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 드롭 다운 프레임의 부모 메뉴 모음에 대 한 포인터 또는 `NULL` 프레임 부모가 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent menu bar of the drop-down frame, or `NULL` if the frame has no parent.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 부모 단추를 클릭 하 여 부모 메뉴 모음을 검색합니다. 이 메서드는 반환 `NULL` 드롭 다운 프레임에 부모 단추가 되었거나 부모 단추에 부모 메뉴 모음에 없습니다.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the parent menu bar from the parent button. This method returns `NULL` if the drop-down frame has no parent button or the parent button has no parent menu bar.  
   
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
- 드롭 다운 프레임의 부모 팝업 메뉴를 검색합니다.  
+##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
+ Retrieves the parent pop-up menu of the drop-down frame.  
   
 ```  
 CMFCDropDownFrame* GetParentPopupMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 드롭 다운 프레임의 부모 드롭다운 메뉴에 대 한 포인터 또는 `NULL` 프레임 부모가 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent drop-down menu of the drop-down frame, or `NULL` if the frame has no parent.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 부모 단추를 클릭 하 여 부모 메뉴를 검색합니다. 이 메서드는 반환 `NULL` 드롭 다운 프레임에 부모 단추가 또는 부모 단추에는 부모 메뉴에 없는 경우.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the parent menu from the parent button. This method returns `NULL` if the drop-down frame has no parent button or the parent button has no parent menu.  
   
-##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
- 드롭 다운 프레임 위치를 변경합니다.  
+##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
+ Repositions the drop-down frame.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|[in] `bNotify`|사용되지 않습니다.|  
+|Parameter|Description|  
+|[in] `bNotify`|Unused.|  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 드롭다운 프레임을 만들거나 부모 창의 크기를 조정할 때이 메서드를 호출 합니다. 이 메서드는 부모 창의 크기와 위치를 사용 하 여 드롭 다운 프레임의 크기와 위치를 계산 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the drop-down frame is created or the parent window is resized. This method calculates the position and size of the drop-down frame by using the position and size of the parent window.  
   
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
- 자식 드롭다운 도구 모음 창이 자동으로 소멸 됩니다 있는지 여부를 설정 합니다.  
+##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
+ Sets whether the child drop-down toolbar window is destroyed automatically.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
- `TRUE`자동으로 연결 된 드롭다운 도구 모음 창을;를 삭제 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to automatically destroy the associated drop-down toolbar window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 경우 `bAutoDestroy` 는 `TRUE`, 그런 다음 `CMFCDropDownFrame` 소멸자에는 연결 된 드롭다운 도구 모음 창 소멸 시킵니다. 기본값은 `TRUE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `bAutoDestroy` is `TRUE`, then the `CMFCDropDownFrame` destructor destroys the associated drop-down toolbar window. The default value is `TRUE`.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
 

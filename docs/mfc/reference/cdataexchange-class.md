@@ -1,5 +1,5 @@
 ---
-title: "CDataExchange 클래스 | Microsoft 문서"
+title: CDataExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,19 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DDX/DDV, Technical Note 26
-- DDX/DDV, CDataExchange class
-- DDX (dialog data exchange), direction of exchange
-- DDX (dialog data exchange), between dialog and CDialog
-- DDX (dialog data exchange), custom DDX routines
-- DDV (dialog data validation)
-- m_bSaveAndValidate
-- CDataExchange class
-- exchanging data between dialogs and CDialogs
-- DDV (dialog data validation), custom DDV routines
-- DDX/DDV
-- DDX (dialog data exchange)
-- validating data, dialog box data entry
+- CDataExchange [MFC], CDataExchange
+- CDataExchange [MFC], Fail
+- CDataExchange [MFC], PrepareCtrl
+- CDataExchange [MFC], PrepareEditCtrl
+- CDataExchange [MFC], PrepareOleCtrl
+- CDataExchange [MFC], m_bSaveAndValidate
+- CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
 caps.latest.revision: 20
 author: mikeblome
@@ -53,61 +47,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8f35e87d562a894411401755ccd4fdd54e43b58a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47fc1c6e72fc34686aeb3de2c1670b0a5b8d0bdd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdataexchange-class"></a>CDataExchange 클래스
-Microsoft Foundation 클래스에서 사용되는 DDX(대화 상자 데이터 교환) 및 DDV(대화 상자 데이터 유효성 검사) 루틴을 지원합니다.  
+# <a name="cdataexchange-class"></a>CDataExchange Class
+Supports the dialog data exchange (DDX) and dialog data validation (DDV) routines used by the Microsoft Foundation classes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDataExchange  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::CDataExchange](#cdataexchange)|`CDataExchange` 개체를 생성합니다.|  
+|[CDataExchange::CDataExchange](#cdataexchange)|Constructs a `CDataExchange` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::Fail](#fail)|유효성 검사가 실패할 때 호출 됩니다. 이전 컨트롤로 포커스를 다시 설정 하 고 예외를 throw 합니다.|  
-|[CDataExchange::PrepareCtrl](#preparectrl)|데이터 교환 또는 유효성 검사에 대 한 지정된 된 컨트롤을 준비합니다. Nonedit 컨트롤에 사용 됩니다.|  
-|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|데이터 교환 또는 유효성 검사에 대 한 지정 된 편집 컨트롤을 준비합니다.|  
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|데이터 교환 또는 유효성 검사에 대 한 지정된 된 OLE 컨트롤을 준비합니다. Nonedit 컨트롤에 사용 됩니다.|  
+|[CDataExchange::Fail](#fail)|Called when validation fails. Resets focus to the previous control and throws an exception.|  
+|[CDataExchange::PrepareCtrl](#preparectrl)|Prepares the specified control for data exchange or validation. Use for nonedit controls.|  
+|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|Prepares the specified edit control for data exchange or validation.|  
+|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|Prepares the specified OLE control for data exchange or validation. Use for nonedit controls.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|DDX 및 DDV의 방향에 대 한 플래그입니다.|  
-|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|데이터를 교환 하면 대화 상자 또는 창에 수행이 됩니다.|  
+|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Flag for the direction of DDX and DDV.|  
+|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|The dialog box or window where the data exchange takes place.|  
   
-## <a name="remarks"></a>주의  
- `CDataExchange`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CDataExchange` does not have a base class.  
   
- 사용자 지정 데이터 형식 또는 컨트롤에 대 한 데이터 교환 루틴을 작성 하는 경우이 클래스를 사용 하거나 사용자 고유의 데이터 유효성 검사 루틴을 작성 하는 경우. 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자](../../mfc/dialog-boxes.md)합니다.  
+ Use this class if you are writing data exchange routines for custom data types or controls, or if you are writing your own data validation routines. For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Boxes](../../mfc/dialog-boxes.md).  
   
- A `CDataExchange` DDX 및 DDV를 배치 하는 데 필요한 컨텍스트 정보를 제공 하는 개체입니다. 플래그 `m_bSaveAndValidate` 는 **FALSE** DDX 데이터 멤버에서 대화 상자 컨트롤의 초기 값을 채우는 데 사용 되는 경우. 플래그 `m_bSaveAndValidate` 는 **TRUE** 데이터 멤버 및 DDV 데이터 값의 유효성 검사에 사용 되는 경우에 대화 상자 컨트롤의 현재 값을 설정할 DDX 사용 되는 경우. DDV 유효성 검사에 실패 하는 경우 DDV 프로시저는 입력된 오류를 설명 하는 메시지 상자를 표시 됩니다. 그런 다음 DDV 프로시저 호출 합니다 **실패** 문제가 되는 컨트롤에 포커스를 설정 하 여 유효성 검사 프로세스를 중지 하려면 예외를 throw 합니다.  
+ A `CDataExchange` object provides the context information needed for DDX and DDV to take place. The flag `m_bSaveAndValidate` is **FALSE** when DDX is used to fill the initial values of dialog controls from data members. The flag `m_bSaveAndValidate` is **TRUE** when DDX is used to set the current values of dialog controls into data members and when DDV is used to validate the data values. If the DDV validation fails, the DDV procedure will display a message box explaining the input error. The DDV procedure will then call **Fail** to reset the focus to the offending control and throw an exception to stop the validation process.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDataExchange`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
- 생성 하려면이 멤버 함수를 호출 하는 `CDataExchange` 개체입니다.  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
+ Call this member function to construct a `CDataExchange` object.  
   
 ```  
 CDataExchange(
@@ -115,129 +109,129 @@ CDataExchange(
     BOOL bSaveAndValidate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pDlgWnd*  
- 컨트롤이 포함 된 부모 창에 대 한 포인터입니다. 이 일반적으로 [CDialog](../../mfc/reference/cdialog-class.md)-파생 개체입니다.  
+ A pointer to the parent window that contains the control. Usually this is a [CDialog](../../mfc/reference/cdialog-class.md)-derived object.  
   
  `bSaveAndValidate`  
- 경우 **TRUE**,이 개체 데이터의 유효성을 검사 한 다음 멤버를 컨트롤에서 데이터를 씁니다. 경우 **FALSE**,이 개체 멤버에서 컨트롤에 데이터를 이동 합니다.  
+ If **TRUE**, this object validates data, then writes data from the controls to the members. If **FALSE**, this object will move data from members to controls.  
   
-### <a name="remarks"></a>주의  
- 생성 된 `CDataExchange` 개체 프로그램 창에 전달할 데이터 교환 개체에 추가 정보를 저장 하기 위해 직접 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ Construct a `CDataExchange` object yourself to store extra information in the data exchange object to pass to your window's [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) member function.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCControlLadenDialog #&70;](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
- 프레임 워크 대화 상자 데이터 유효성 검사 (DDV) 작업이 실패 하면이 멤버 함수를 호출 합니다.  
+##  <a name="fail"></a>  CDataExchange::Fail  
+ The framework calls this member function when a dialog data validation (DDV) operation fails.  
   
 ```  
 void Fail();
 ```  
   
-### <a name="remarks"></a>주의  
- **실패** 입니다 유효성 검사가 실패 (있는 경우 복원 하는 컨트롤) 컨트롤에 포커스 및 선택을 복원 합니다. **실패** 다음 형식의 예외를 throw [CUserException](../../mfc/reference/cuserexception-class.md) 유효성 검사 프로세스를 중지 합니다. 예외는 오류가 표시 될 수를 설명 하는 메시지 상자를 하면 됩니다. DDV 유효성 검사에 실패 한 후 사용자는 문제가 되는 컨트롤의 데이터를 재진입할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ **Fail** restores the focus and selection to the control whose validation failed (if there is a control to restore). **Fail** then throws an exception of type [CUserException](../../mfc/reference/cuserexception-class.md) to stop the validation process. The exception causes a message box explaining the error to be displayed. After DDV validation fails, the user can reenter data in the offending control.  
   
- 사용자 지정 DDV 루틴의 구현자를 호출할 수 **실패** 유효성 검사가 실패할 때 자신의 루틴에서 합니다.  
+ Implementors of custom DDV routines can call **Fail** from their routines when a validation fails.  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
- 이 플래그는 대화 상자 데이터 교환 (DDX) 작업의 방향을 나타냅니다.  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
+ This flag indicates the direction of a dialog data exchange (DDX) operation.  
   
 ```  
 BOOL m_bSaveAndValidate;  
 ```  
   
-### <a name="remarks"></a>주의  
- 플래그가&0;이 아닌 경우는 `CDataExchange` 개체 사용자 컨트롤을 편집한 후 대화 상자 컨트롤에서 데이터를 대화 상자 클래스 데이터 멤버를 이동 하는 데 사용 되는 합니다. 개체 대화 상자 클래스 데이터 멤버에서 대화 상자 컨트롤을 초기화 하는 데 사용 되는 경우 플래그는&0;입니다.  
+### <a name="remarks"></a>Remarks  
+ The flag is nonzero if the `CDataExchange` object is being used to move data from the dialog controls to dialog-class data members after the user edits the controls. The flag is zero if the object is being used to initialize dialog controls from dialog-class data members.  
   
- 플래그 대화 상자 데이터 유효성 검사 (DDV) 하는 동안&0;이 아닌 이기도합니다.  
+ The flag is also nonzero during dialog data validation (DDV).  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
- 에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 대화 상자에 대 한 DDX (데이터 교환) 또는 유효성 검사 (DDV) 수행 되는 개체입니다.  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
+ Contains a pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object for which dialog data exchange (DDX) or validation (DDV) is taking place.  
   
 ```  
 CWnd* m_pDlgWnd;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 개체는 일반적으로 [CDialog](../../mfc/reference/cdialog-class.md) 개체입니다. 사용자 지정 DDX 또는 DDV 루틴의 구현자가이 포인터를 사용에 적용 될 컨트롤을 포함 하는 대화 상자 창에 대 한 액세스 권한을 얻을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This object is usually a [CDialog](../../mfc/reference/cdialog-class.md) object. Implementors of custom DDX or DDV routines can use this pointer to obtain access to the dialog window that contains the controls they are operating on.  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
- 프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정된 된 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
+ The framework calls this member function to prepare the specified control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 HWND PrepareCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- DDX 또는 DDV 대비해 컨트롤의 ID입니다.  
+ The ID of the control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>반환 값  
- `HWND` DDX 또는 DDV 준비 하 고 제어 합니다.  
+### <a name="return-value"></a>Return Value  
+ The `HWND` of the control being prepared for DDX or DDV.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [PrepareEditCtrl](#prepareeditctrl) 대신 편집 컨트롤에 대 한 다른 모든 컨트롤에 대 한이 멤버 함수를 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareEditCtrl](#prepareeditctrl) instead for edit controls; use this member function for all other controls.  
   
- 컨트롤의 저장에 대 한 준비로 구성 됩니다 `HWND` 에 `CDataExchange` 클래스입니다. 프레임 워크 DDX 또는 DDV 오류가 발생할 경우 이전에 포커스가 있는 컨트롤에 포커스를 복원 하려면이 핸들을 사용 합니다.  
+ Preparation consists of storing the control's `HWND` in the `CDataExchange` class. The framework uses this handle to restore the focus to the previously focused control in the event of a DDX or DDV failure.  
   
- 사용자 지정 DDX 또는 DDV 루틴의 구현자를 호출 해야 `PrepareCtrl` 모든 편집할 수 없는 컨트롤을 DDX 통해 데이터를 교환 하거나 DDV 통해 데이터의 유효성을 검사 합니다.  
+ Implementors of custom DDX or DDV routines should call `PrepareCtrl` for all non-edit controls for which they are exchanging data via DDX or validating data via DDV.  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
- 프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정 된 편집 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
+ The framework calls this member function to prepare the specified edit control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 HWND PrepareEditCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- DDX 또는 DDV 대비해 편집 컨트롤의 ID입니다.  
+ The ID of the edit control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>반환 값  
- `HWND` DDX 또는 DDV 준비 하 고 편집 컨트롤의 합니다.  
+### <a name="return-value"></a>Return Value  
+ The `HWND` of the edit control being prepared for DDX or DDV.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [PrepareCtrl](#preparectrl) 대신 모든 편집할 수 없는 컨트롤에 대 한 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareCtrl](#preparectrl) instead for all non-edit controls.  
   
- 다음 두 가지 중 준비 구성 됩니다. 첫째, `PrepareEditCtrl` 컨트롤의 저장 `HWND` 에 `CDataExchange` 클래스입니다. 프레임 워크 DDX 또는 DDV 오류가 발생할 경우 이전에 포커스가 있는 컨트롤에 포커스를 복원 하려면이 핸들을 사용 합니다. 둘째, `PrepareEditCtrl` 에 플래그를 설정의 `CDataExchange` 을 나타내는 클래스 데이터가 있는 교환 중인 하거나 유효성을 검사 하는 것은 편집 컨트롤 컨트롤입니다.  
+ Preparation consists of two things. First, `PrepareEditCtrl` stores the control's `HWND` in the `CDataExchange` class. The framework uses this handle to restore the focus to the previously focused control in the event of a DDX or DDV failure. Second, `PrepareEditCtrl` sets a flag in the `CDataExchange` class to indicate that the control whose data is being exchanged or validated is an edit control.  
   
- 사용자 지정 DDX 또는 DDV 루틴의 구현자를 호출 해야 `PrepareEditCtrl` 모든 편집을 DDX 통해 데이터를 교환 하거나 DDV 통해 데이터의 유효성을 검사 하는 컨트롤에 대 한 합니다.  
+ Implementors of custom DDX or DDV routines should call `PrepareEditCtrl` for all edit controls for which they are exchanging data via DDX or validating data via DDV.  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
- 프레임 워크 (DDX) 대화 상자 데이터 교환 및 유효성 검사 (DDV)에 지정된 된 OLE 컨트롤을 준비 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
+ The framework calls this member function to prepare the specified OLE control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- DDX 또는 DDV 대비해 OLE 컨트롤의 ID입니다.  
+ The ID of the OLE control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>반환 값  
- OLE 컨트롤 사이트에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the OLE control site.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [PrepareEditCtrl](#prepareeditctrl) 대신 편집 컨트롤 또는 [PrepareCtrl](#preparectrl) 다른 모든 비 OLE 컨트롤에 대 한 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareEditCtrl](#prepareeditctrl) instead for edit controls or [PrepareCtrl](#preparectrl) for all other non-OLE controls.  
   
- 사용자 지정 DDX 또는 DDV 루틴의 구현자를 호출 해야 `PrepareOleCtrl` 모든 OLE 컨트롤을 DDX 통해 데이터를 교환 하거나 DDV 통해 데이터의 유효성을 검사 합니다.  
+ Implementors of custom DDX or DDV routines should call `PrepareOleCtrl` for all OLE controls for which they are exchanging data via DDX or validating data via DDV.  
   
- 자신의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 VIEWEX](../../visual-cpp-samples.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [MFC Sample VIEWEX](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)   
  [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)
 

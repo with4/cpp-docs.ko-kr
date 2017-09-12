@@ -1,5 +1,5 @@
 ---
-title: "CStdioFile 클래스 | Microsoft Docs"
+title: CStdioFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,9 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CStdioFile class
-- I/O [MFC], stream
-- stream I/O
+- CStdioFile [MFC], CStdioFile
+- CStdioFile [MFC], Open
+- CStdioFile [MFC], ReadString
+- CStdioFile [MFC], Seek
+- CStdioFile [MFC], WriteString
+- CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
 caps.latest.revision: 22
 author: mikeblome
@@ -42,68 +45,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6b334c2973a2567a8a9bd16a80bd4c3628ced6d2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83a92d94332b9af71f6cbce7997530fa5714a009
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstdiofile-class"></a>CStdioFile 클래스
-런타임 함수에서 연 것과 C 런타임 스트림 파일을 나타냅니다 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  
+# <a name="cstdiofile-class"></a>CStdioFile Class
+Represents a C run-time stream file as opened by the run-time function [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStdioFile : public CFile  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::CStdioFile](#cstdiofile)|생성 된 `CStdioFile` 경로 또는 파일 포인터의 개체입니다.|  
+|[CStdioFile::CStdioFile](#cstdiofile)|Constructs a `CStdioFile` object from a path or file pointer.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::Open](#open)|오버로드됨. 열기는 기본 사용 하도록 설계 `CStdioFile` 생성자 (재정의 [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
-|[CStdioFile::ReadString](#readstring)|한 줄 텍스트를 읽습니다.|  
-|[CStdioFile::Seek](#seek)|현재 파일 포인터를 놓습니다.|  
-|[CStdioFile::WriteString](#writestring)|한 줄 텍스트를 씁니다.|  
+|[CStdioFile::Open](#open)|Overloaded. Open is designed for use with the default `CStdioFile` constructor (Overrides [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
+|[CStdioFile::ReadString](#readstring)|Reads a single line of text.|  
+|[CStdioFile::Seek](#seek)|Positions the current file pointer.|  
+|[CStdioFile::WriteString](#writestring)|Writes a single line of text.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::m_pStream](#m_pstream)|열려 있는 파일에 대 한 포인터를 포함합니다.|  
+|[CStdioFile::m_pStream](#m_pstream)|Contains a pointer to an open file.|  
   
-## <a name="remarks"></a>설명  
- 스트림 버퍼링 되는 파일과 텍스트 모드 (기본값) 또는 이진 모드에서 열 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Stream files are buffered and can be opened in either text mode (the default) or binary mode.  
   
- 텍스트 모드 캐리지 리턴-줄 바꿈 쌍에 대 한 특수 한 처리를 제공합니다. 줄 바꿈 문자를 작성 하는 경우 문자 (0x0A) 텍스트 모드를 `CStdioFile` 개체, 바이트 쌍 (, 0x0D 0x0A) 파일에 보내집니다. 읽을 때, 바이트 쌍 (, 0x0D 0x0A) 0x0A 싱글바이트도 변환 됩니다.  
+ Text mode provides special processing for carriage return-linefeed pairs. When you write a newline character (0x0A) to a text-mode `CStdioFile` object, the byte pair (0x0D, 0x0A) is sent to the file. When you read, the byte pair (0x0D, 0x0A) is translated to a single 0x0A byte.  
   
- [CFile](../../mfc/reference/cfile-class.md) 함수 [중복](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), 및 [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) 에 지원 되지 않습니다 `CStdioFile`합니다.  
+ The [CFile](../../mfc/reference/cfile-class.md) functions [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), and [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) are not supported for `CStdioFile`.  
   
- 이러한 함수를 호출 하는 경우는 `CStdioFile`를 얻게 됩니다는 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
+ If you call these functions on a `CStdioFile`, you will get a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 사용 하 여 대 한 자세한 내용은 `CStdioFile`, 문서를 참조 [MFC의 파일](../../mfc/files-in-mfc.md) 및 [파일 처리](../../c-runtime-library/file-handling.md) 에 *런타임 라이브러리 참조*합니다.  
+ For more information on using `CStdioFile`, see the articles [Files in MFC](../../mfc/files-in-mfc.md) and [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
   
  `CStdioFile`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
- `CStdioFile` 개체를 생성하고 초기화합니다.  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
+ Constructs and initializes a `CStdioFile` object.  
   
 ```  
 CStdioFile();  
@@ -122,47 +125,47 @@ CStdioFile(
     CAtlTransactionManager* pTM);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pOpenStream`  
- C 런타임 함수에 대 한 호출에서 반환 된 파일 포인터를 지정 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  
+ Specifies the file pointer returned by a call to the C run-time function [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
  `lpszFileName`  
- 문자열을 원하는 파일의 경로를 지정 합니다. 상대 또는 절대 경로일 수 있습니다.  
+ Specifies a string that is the path to the desired file. The path can be relative or absolute.  
   
  `nOpenFlags`  
- 파일 만들기, 파일 공유 및 파일 액세스 모드에 대 한 옵션을 지정 합니다. 비트 OR를 사용 하 여 여러 옵션을 지정할 수 있습니다 ( `|`) 연산자.  
+ Specifies options for file creation, file sharing, and file access modes. You can specify multiple options by using the bitwise OR ( `|`) operator.  
   
- 한 파일 액세스 모드 옵션을 지정 해야 합니다. 다른 모드는 선택적입니다. 참조 [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) 모드 옵션 및 기타 플래그 목록은 합니다. Mfc 버전 3.0 이상에서 공유 플래그 허용 됩니다.  
+ One file access mode option is required; other modes are optional. See [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) for a list of mode options and other flags. In MFC version 3.0 and later, share flags are allowed.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대 한 포인터입니다.  
+ Pointer to CAtlTransactionManager object.  
   
-### <a name="remarks"></a>설명  
- 기본 생성자는 파일을 연결 하지 않습니다는 `CStdioFile` 개체입니다. 이 생성자를 사용 하는 경우 사용 해야는 `CStdioFile::Open` 파일을 열에 연결 하는 메서드는 `CStdioFile` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The default constructor does not attach a file to the `CStdioFile` object. When using this constructor, you must use the `CStdioFile::Open` method to open a file and attach it to the `CStdioFile` object.  
   
- 단일 매개 변수 생성자에는 열려 있는 파일 스트림을 연결의 `CStdioFile` 개체입니다. 미리 정의 된 입/출력 파일 포인터를 포함 하는 포인터 값을 허용 `stdin`, `stdout`, 또는 `stderr`합니다.  
+ The single-parameter constructor attaches an open file stream to the `CStdioFile` object. Allowed pointer values include the predefined input/output file pointers `stdin`, `stdout`, or `stderr`.  
   
- 두 매개 변수 생성자 만듭니다는 `CStdioFile` 개체 하 고 지정된 된 경로와 해당 파일을 엽니다.  
+ The two-parameter constructor creates a `CStdioFile` object and opens the corresponding file with the given path.  
   
- 전달 하는 경우 `NULL` 중 하나에 대 한 `pOpenStream` 또는 `lpszFileName`, 생성자를 throw 한 `CInvalidArgException*`합니다.  
+ If you pass `NULL` for either `pOpenStream` or `lpszFileName`, the constructor throws a `CInvalidArgException*`.  
   
- 생성자를 throw 하는 경우 파일을 열거나 만들 수 없습니다는 `CFileException*`합니다.  
+ If the file cannot be opened or created, the constructor throws a `CFileException*`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
- `m_pStream` C 런타임 함수에서 반환 된 데이터 멤버는 열려 있는 파일에 대 한 포인터 `fopen`합니다.  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
+ The `m_pStream` data member is the pointer to an open file as returned by the C run-time function `fopen`.  
   
 ```  
 FILE* m_pStream;  
 ```  
   
-### <a name="remarks"></a>주의  
- **NULL** 파일이 열어본 적 되거나 닫힌 경우.  
+### <a name="remarks"></a>Remarks  
+ It is **NULL** if the file has never been opened or has been closed.  
   
-##  <a name="open"></a>CStdioFile::Open  
- 오버로드됨. 열기는 기본 사용 하도록 설계 `CStdioFile` 생성자입니다.  
+##  <a name="open"></a>  CStdioFile::Open  
+ Overloaded. Open is designed for use with the default `CStdioFile` constructor.  
   
 ```  
 virtual BOOL Open(
@@ -178,26 +181,26 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 문자열은 원하는 파일을 경로입니다. 상대 또는 절대 경로일 수 있습니다.  
+ A string that is the path to the desired file. The path can be relative or absolute.  
   
  `nOpenFlags`  
- 공유 및 액세스 모드입니다. 파일을 열 때 수행할 동작을 지정 합니다. 비트 OR (|) 연산자를 사용 하 여 옵션을 결합할 수 있습니다. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, modeCreate 및 modeNoInherit 모드는 선택적입니다.  
+ Sharing and access mode. Specifies the action to take when opening the file. You can combine options by using the bitwise-OR (&#124;) operator. One access permission and one share option are required; the modeCreate and modeNoInherit modes are optional.  
   
  `pError`  
- 실패 한 작업의 상태를 수신할 기존 파일 예외 개체에 대 한 포인터입니다.  
+ A pointer to an existing file-exception object that will receive the status of a failed operation.  
   
  `pTM`  
- `CAtlTransactionManager` 개체에 대한 포인터입니다.  
+ Pointer to a `CAtlTransactionManager` object.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
- 텍스트 데이터의 제한의 버퍼로 읽어 `nMax`연결 된 파일에서-1 문자는 `CStdioFile` 개체입니다.  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
+ Reads text data into a buffer, up to a limit of `nMax`-1 characters, from the file associated with the `CStdioFile` object.  
   
 ```  
 virtual LPTSTR ReadString(
@@ -207,32 +210,32 @@ virtual LPTSTR ReadString(
 virtual BOOL ReadString(CString& rString);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- 사용자가 제공한 버퍼를 null로 끝나는 텍스트 문자열을 받게 됩니다에 대 한 포인터를 지정 합니다.  
+ Specifies a pointer to a user-supplied buffer that will receive a null-terminated text string.  
   
  `nMax`  
- Null 종결 문자를 세 지 않고 읽기 문자의 최대 수를 지정 합니다.  
+ Specifies the maximum number of characters to read, not counting the terminating null character.  
   
  `rString`  
- 에 대 한 참조는 `CString` 함수에서 반환 된 문자열을 포함 하는 개체입니다.  
+ A reference to a `CString` object that will contain the string when the function returns.  
   
-### <a name="return-value"></a>반환 값  
- 텍스트 데이터를 포함 하는 버퍼에 대 한 포인터입니다. **NULL** ; 모든 데이터를 읽지 않고 파일의 끝에 도달 했습니다 아니면 부울, **FALSE** 경우 모든 데이터를 읽지 않고 파일의 끝에 도달 했습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the buffer containing the text data. **NULL** if end-of-file was reached without reading any data; or if boolean, **FALSE** if end-of-file was reached without reading any data.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 줄 바꿈 문자 읽기 중지 됩니다. 보다 적은 경우 if `nMax`-1 문자를 읽은, 줄 바꿈 문자는 버퍼에 저장 됩니다. Null 문자 ('\0')는 두 경우 모두 추가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Reading is stopped by the first newline character. If, in that case, fewer than `nMax`-1 characters have been read, a newline character is stored in the buffer. A null character ('\0') is appended in either case.  
   
- [CFile::Read](../../mfc/reference/cfile-class.md#read) 캐리지 리턴-줄 바꿈 쌍에 텍스트 모드 입력 하지만 종료 되지 않는 제공 됩니다.  
+ [CFile::Read](../../mfc/reference/cfile-class.md#read) is also available for text-mode input, but it does not terminate on a carriage return-linefeed pair.  
   
 > [!NOTE]
->  `CString` 이 함수의 버전을 제거는 `'\n'` 있으면;는 `LPTSTR` 버전은 그렇지 않습니다.  
+>  The `CString` version of this function removes the `'\n'` if present; the `LPTSTR` version does not.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
- 이전에 연된 파일에는 포인터 위치를 변경 합니다.  
+##  <a name="seek"></a>  CStdioFile::Seek  
+ Repositions the pointer in a previously opened file.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -240,63 +243,63 @@ virtual ULONGLONG Seek(
     UINT nFrom);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lOff`  
- 포인터를 이동 하는 바이트 수입니다.  
+ Number of bytes to move the pointer.  
   
  `nFrom`  
- 포인터 이동 모드입니다. 다음 값 중 하나 여야 합니다.  
+ Pointer movement mode. Must be one of the following values:  
   
-- `CFile::begin`: 파일 포인터를 이동 하는 `lOff` 파일의 시작 부분에서 바이트를 전달 합니다.  
+- `CFile::begin`: Move the file pointer `lOff` bytes forward from the beginning of the file.  
   
-- `CFile::current`: 파일 포인터를 이동 하는 `lOff` 파일의 현재 위치에서 바이트입니다.  
+- `CFile::current`: Move the file pointer `lOff` bytes from the current position in the file.  
   
-- `CFile::end`: 파일 포인터를 이동 하는 `lOff` 파일의 끝에서 바이트입니다. `lOff` 파일 되어 있어야 합니다 기존 검색 음수가; 양수 값은 파일의 끝을 지나서 검색 됩니다.  
+- `CFile::end`: Move the file pointer `lOff` bytes from the end of the file. Note that `lOff` must be negative to seek into the existing file; positive values will seek past the end of the file.  
   
-### <a name="return-value"></a>반환 값  
- 요청 된 위치가 법률, `Seek` 파일의 시작 부분에서 새 바이트 오프셋을 반환 합니다. 그렇지 않으면 반환 값이 정의 되지 및 `CFileException` 개체가 throw 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If the requested position is legal, `Seek` returns the new byte offset from the beginning of the file. Otherwise, the return value is undefined and a `CFileException` object is thrown.  
   
-### <a name="remarks"></a>설명  
- `Seek` 함수를 사용 파일의 내용에 대 한 임의 액세스 포인터 이동 하 여 지정된 된 시간 또는 절대입니다. 검색 하는 동안 데이터가 실제로 읽힙니다. 요청된 된 위치는 파일의 크기 보다 큰 경우 해당 위치에 파일 길이 확장할 수는 있으며 예외가 throw 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `Seek` function permits random access to a file's contents by moving the pointer a specified amount, absolutely or relatively. No data is actually read during the seek. If the requested position is larger than the size of the file, the file length will be extended to that position, and no exception will be thrown.  
   
- 파일을 열 때 파일 포인터는 오프셋 0, 파일의 시작 부분에 배치 됩니다.  
+ When a file is opened, the file pointer is positioned at offset 0, the beginning of the file.  
   
- 이 구현 `Seek` 런타임 라이브러리 (CRT) 기능에 따라 `fseek`합니다. 용도에 몇 가지 제한이 `Seek` 텍스트 모드에서 열린 스트림의에 있습니다. 자세한 내용은 참조 [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)합니다.  
+ This implementation of `Seek` is based on the Run-Time Library (CRT) function `fseek`. There are several limits on the usage of `Seek` on streams opened in text mode. For more information, see [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다. `Seek` 의 시작 부분에서 1000 바이트 포인터를 이동 하는 `cfile` 파일입니다. `Seek` 호출 이후에 해야 하므로 데이터를 읽지 않습니다 [CStdioFile::ReadString](#readstring) 데이터를 읽을 수 있습니다.  
+### <a name="example"></a>Example  
+ The following example shows how to use `Seek` to move the pointer 1000 bytes from the beginning of the `cfile` file. Note that `Seek` does not read data, so you must subsequently call [CStdioFile::ReadString](#readstring) to read data.  
   
- [!code-cpp[NVC_MFCFiles # 39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
+ [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
- 연결 된 파일에는 버퍼에서 데이터를 쓰고는 `CStdioFile` 개체입니다.  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
+ Writes data from a buffer to the file associated with the `CStdioFile` object.  
   
 ```  
 virtual void WriteString(LPCTSTR lpsz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- Null로 끝나는 문자열을 포함 하는 버퍼에 대 한 포인터를 지정 합니다.  
+ Specifies a pointer to a buffer that contains a null-terminated string.  
   
-### <a name="remarks"></a>설명  
- 종료 null 문자 ( `\0`) 파일에 기록 되지 않습니다. 이 메서드는 줄 바꿈 문자를 씁니다 `lpsz` 캐리지 리턴/줄 바꿈 쌍으로 파일에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The terminating null character ( `\0`) is not written to the file. This method writes newline characters in `lpsz` to the file as a carriage return/linefeed pair.  
   
- 파일을 사용 하 여 null로 종결 되지 않은 데이터를 작성 하려는 경우 `CStdioFile::Write` 또는 [CFile::Write](../../mfc/reference/cfile-class.md#write)합니다.  
+ If you want to write data that is not null-terminated to a file, use `CStdioFile::Write` or [CFile::Write](../../mfc/reference/cfile-class.md#write).  
   
- 이 메서드에서 throw 한 `CInvalidArgException*` 지정 하는 경우 `NULL` 에 대 한는 `lpsz` 매개 변수입니다.  
+ This method throws a `CInvalidArgException*` if you specify `NULL` for the `lpsz` parameter.  
   
- 이 메서드에서 throw 한 `CFileException*` 파일 시스템 오류에 대 한 응답에서입니다.  
+ This method throws a `CFileException*` in response to file system errors.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [CFile 클래스](../../mfc/reference/cfile-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CFile 클래스](../../mfc/reference/cfile-class.md)   
+## <a name="see-also"></a>See Also  
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFile Class](../../mfc/reference/cfile-class.md)   
  [CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)   
  [CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)   
  [CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)   
- [CNotSupportedException 클래스](../../mfc/reference/cnotsupportedexception-class.md)
+ [CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)
 

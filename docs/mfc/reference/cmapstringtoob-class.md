@@ -1,5 +1,5 @@
 ---
-title: "CMapStringToOb 클래스 | Microsoft 문서"
+title: CMapStringToOb Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,9 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- collection classes, string mapping
-- CMapStringToOb class
-- strings [C++], class for mapping
+- CMapStringToOb [MFC], CMapStringToOb
+- CMapStringToOb [MFC], GetCount
+- CMapStringToOb [MFC], GetHashTableSize
+- CMapStringToOb [MFC], GetNextAssoc
+- CMapStringToOb [MFC], GetSize
+- CMapStringToOb [MFC], GetStartPosition
+- CMapStringToOb [MFC], HashKey
+- CMapStringToOb [MFC], InitHashTable
+- CMapStringToOb [MFC], IsEmpty
+- CMapStringToOb [MFC], Lookup
+- CMapStringToOb [MFC], LookupKey
+- CMapStringToOb [MFC], RemoveAll
+- CMapStringToOb [MFC], RemoveKey
+- CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 caps.latest.revision: 20
 author: mikeblome
@@ -50,156 +61,156 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 2bfd277ebc1f00784d8e3d9686623777cb7fb5a5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 033146683a9cb37d92fa9cd8ad92832a44ac60fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmapstringtoob-class"></a>CMapStringToOb 클래스
-고유한 `CString` 개체를 `CObject` 포인터에 매핑하는 사전 컬렉션 클래스입니다.  
+# <a name="cmapstringtoob-class"></a>CMapStringToOb Class
+A dictionary collection class that maps unique `CString` objects to `CObject` pointers.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMapStringToOb : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|생성자입니다.|  
+|[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|Constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMapStringToOb::GetCount](#getcount)|이 map의 요소 수를 반환합니다.|  
-|[CMapStringToOb::GetHashTableSize](#gethashtablesize)|현재 해시 테이블의 요소 수를 결정합니다.|  
-|[CMapStringToOb::GetNextAssoc](#getnextassoc)|반복에 대 한 다음 요소를 가져옵니다.|  
-|[CMapStringToOb::GetSize](#getsize)|이 map의 요소 수를 반환합니다.|  
-|[CMapStringToOb::GetStartPosition](#getstartposition)|첫 번째 요소의 위치를 반환합니다.|  
-|[CMapStringToOb::HashKey](#hashkey)|지정된 된 키의 해시 값을 계산합니다.|  
-|[CMapStringToOb::InitHashTable](#inithashtable)|해시 테이블을 초기화합니다.|  
-|[CMapStringToOb::IsEmpty](#isempty)|빈 맵 조건 (요소 없음)에 대해 테스트 합니다.|  
-|[CMapStringToOb::Lookup](#lookup)|Void 포인터 키를 기반으로 하는 void 포인터를 조회 합니다. 포인터 값을 가리키는 것 엔터티 하지 비교에 사용 되는 키입니다.|  
-|[CMapStringToOb::LookupKey](#lookupkey)|지정 된 키 값과 연결 된 키에 대 한 참조를 반환 합니다.|  
-|[CMapStringToOb::RemoveAll](#removeall)|이 맵에서 모든 요소를 제거합니다.|  
-|[CMapStringToOb::RemoveKey](#removekey)|키가 지정 된 요소를 제거 합니다.|  
-|[CMapStringToOb::SetAt](#setat)|Map에 요소를 삽입합니다. 일치 하는 키가 있을 경우에 기존 요소를 대체 합니다.|  
+|[CMapStringToOb::GetCount](#getcount)|Returns the number of elements in this map.|  
+|[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Determines the current number of elements in the hash table.|  
+|[CMapStringToOb::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CMapStringToOb::GetSize](#getsize)|Returns the number of elements in this map.|  
+|[CMapStringToOb::GetStartPosition](#getstartposition)|Returns the position of the first element.|  
+|[CMapStringToOb::HashKey](#hashkey)|Calculates the hash value of a specified key.|  
+|[CMapStringToOb::InitHashTable](#inithashtable)|Initializes the hash table.|  
+|[CMapStringToOb::IsEmpty](#isempty)|Tests for the empty-map condition (no elements).|  
+|[CMapStringToOb::Lookup](#lookup)|Looks up a void pointer based on the void pointer key. The pointer value, not the entity it points to, is used for the key comparison.|  
+|[CMapStringToOb::LookupKey](#lookupkey)|Returns a reference to the key associated with the specified key value.|  
+|[CMapStringToOb::RemoveAll](#removeall)|Removes all the elements from this map.|  
+|[CMapStringToOb::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CMapStringToOb::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](#operator_at)|Map에 요소를 삽입-에 대 한 연산자 대체 `SetAt`합니다.|  
+|[CMapStringToOb::operator [ ]](#operator_at)|Inserts an element into the map — operator substitution for `SetAt`.|  
   
-## <a name="remarks"></a>주의  
- 삽입 한 후 한 `CString` -  `CObject*` 쌍 (요소)를 map으로 효율적으로 검색 하거나 삭제할 수는 문자열을 사용 하 여 쌍 또는 `CString` 값이 키로 합니다. 지도에 있는 모든 요소를 반복할 수도 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Once you have inserted a `CString`- `CObject*` pair (element) into the map, you can efficiently retrieve or delete the pair using a string or a `CString` value as a key. You can also iterate over all the elements in the map.  
   
- 형식의 변수 **위치** 모든 지도 변형에 대 한 대체 항목 액세스에 사용 됩니다. 사용할 수는 **위치** 항목 "기억" 하 고 맵을 통해 반복 합니다. 이 반복; 키 값으로 순차적 임을 생각할 수 있습니다. 아닙니다. 검색 된 요소의 순서는 결정 되지 않습니다.  
+ A variable of type **POSITION** is used for alternate entry access in all map variations. You can use a **POSITION** to "remember" an entry and to iterate through the map. You might think that this iteration is sequential by key value; it is not. The sequence of retrieved elements is indeterminate.  
   
- `CMapStringToOb`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 지도를 오버 로드 된 삽입을 사용 하 여 보관 파일에 저장 되는 경우 각 요소가 차례로 serialize 됩니다 ( ** << **) 연산자 또는 `Serialize` 멤버 함수입니다.  
+ `CMapStringToOb` incorporates the `IMPLEMENT_SERIAL` macro to support serialization and dumping of its elements. Each element is serialized in turn if a map is stored to an archive, either with the overloaded insertion ( **<<**) operator or with the `Serialize` member function.  
   
- 지도에 있는 개별 요소의 진단 덤프가 필요한 경우 (의 `CString` 값 및 `CObject` 내용을), 덤프 컨텍스트의 수준을 1 이상으로 설정 해야 합니다.  
+ If you need a diagnostic dump of the individual elements in the map (the `CString` value and the `CObject` contents), you must set the depth of the dump context to 1 or greater.  
   
- 경우는 `CMapStringToOb` 개체를 삭제 하거나 해당 요소를 제거 하는 경우는 `CString` 개체 및 `CObject` 포인터 제거 됩니다. 참조 하는 개체는 `CObject` 포인터 소멸 되지 않습니다.  
+ When a `CMapStringToOb` object is deleted, or when its elements are removed, the `CString` objects and the `CObject` pointers are removed. The objects referenced by the `CObject` pointers are not destroyed.  
   
- 맵 클래스를 파생 목록 파생 하는 것과 비슷합니다. 문서를 참조 하십시오 [컬렉션](../../mfc/collections.md) 특수 한 용도의 목록 클래스의 파생에 대 한 예제입니다.  
+ Map class derivation is similar to list derivation. See the article [Collections](../../mfc/collections.md) for an illustration of the derivation of a special-purpose list class.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMapStringToOb`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
- 빈 생성 `CString`을 아래와 같이 `CObject*` 맵.  
+##  <a name="cmapstringtoob"></a>  CMapStringToOb::CMapStringToOb  
+ Constructs an empty `CString`-to- `CObject*` map.  
   
 ```  
 CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- 지도 확장 하는 것에 대 한 메모리 할당 세분성을 지정 합니다.  
+ Specifies the memory-allocation granularity for extending the map.  
   
-### <a name="remarks"></a>주의  
- 메모리의 단위에서 할당 되는 지도 늘어나면 `nBlockSize` 항목입니다.  
+### <a name="remarks"></a>Remarks  
+ As the map grows, memory is allocated in units of `nBlockSize` entries.  
   
- 다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb:: CMapStringToOb**합니다.  
+ The following table shows other member functions that are similar to **CMapStringToOb:: CMapStringToOb**.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**CMapPtrToPtr (INT_PTR** `nBlockSize` **= 10).**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**CMapPtrToWord (INT_PTR** `nBlockSize` **= 10).**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**CMapStringToPtr (INT_PTR** `nBlockSize` **= 10).**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CMapStringToString (INT_PTR** `nBlockSize` **= 10).**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb (INT_PTR** `nBlockSize` **= 10).**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr (INT_PTR** `nBlockSize` **= 10).**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**CMapPtrToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**CMapPtrToWord( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**CMapStringToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CMapStringToString( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections #&63;](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
   
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
-##  <a name="getcount"></a>CMapStringToOb::GetCount  
- 지도에 있는 요소의 수를 결정 합니다.  
+##  <a name="getcount"></a>  CMapStringToOb::GetCount  
+ Determines how many elements are in the map.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 맵에서 요소의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in this map.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::GetCount`합니다.  
+### <a name="remarks"></a>Remarks  
+ The following table shows other member functions that are similar to `CMapStringToOb::GetCount`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Const; INT_PTR GetCount)**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Const; INT_PTR GetCount)**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Const; INT_PTR GetCount)**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Const; INT_PTR GetCount)**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; INT_PTR GetCount)**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; INT_PTR GetCount)**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount( ) const;**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&64;](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections#64](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
-##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
- 현재 해시 테이블의 요소 수를 결정합니다.  
+##  <a name="gethashtablesize"></a>  CMapStringToOb::GetHashTableSize  
+ Determines the current number of elements in the hash table.  
   
 ```  
 UINT GetHashTableSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 해시 테이블의 요소 수를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the number of elements in the hash table.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::GetHashTableSize`합니다.  
+### <a name="remarks"></a>Remarks  
+ The following table shows other member functions that are similar to `CMapStringToOb::GetHashTableSize`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Const; UINT GetHashTableSize)**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Const; UINT GetHashTableSize)**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Const; UINT GetHashTableSize)**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Const; UINT GetHashTableSize)**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; UINT GetHashTableSize)**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; UINT GetHashTableSize)**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT GetHashTableSize( ) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize( ) const;**|  
   
-##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
- 에 지도 요소를 검색 *rNextPosition*, 그런 다음 업데이트 *rNextPosition* 맵에서 다음 요소를 참조 하 합니다.  
+##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc  
+ Retrieves the map element at *rNextPosition*, then updates *rNextPosition* to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -208,44 +219,44 @@ void GetNextAssoc(
     CObject*& rValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *rNextPosition*  
- 에 대 한 참조를 지정 된 **위치** 이전에서 반환 된 값 **GetNextAssoc** 또는 **GetStartPosition** 호출 합니다.  
+ Specifies a reference to a **POSITION** value returned by a previous **GetNextAssoc** or **GetStartPosition** call.  
   
  *rKey*  
- 검색된 된 요소 (문자열)의 반환 된 키를 지정합니다.  
+ Specifies the returned key of the retrieved element (a string).  
   
  *rValue*  
- 검색 된 요소의 반환 된 값을 지정 합니다 (한 **CObject** 포인터). 이 매개 변수에 대 한 자세한 설명을 참조 하십시오.  
+ Specifies the returned value of the retrieved element (a **CObject** pointer). See Remarks for more about this parameter.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 지도에 있는 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 않음을 유의 하십시오 위치 시퀀스 반드시 키 값 시퀀스와 동일 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- 검색 된 요소가 있으면 지도 마지막 다음의 새 값 *rNextPosition* 로 설정 된 **NULL**합니다.  
+ If the retrieved element is the last in the map, then the new value of *rNextPosition* is set to **NULL**.  
   
- 에 대 한는 *rValue* 매개 변수를 하 여 개체 형식을 캐스팅 해야 **CObject\*&**, 즉 컴파일러의 필요를 다음 예와에서 같이:  
+ For the *rValue* parameter, be sure to cast your object type to **CObject\*&**, which is what the compiler requires, as shown in the following example:  
   
- [!code-cpp[NVC_MFCCollections #&65;](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections#65](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]  
   
- 이 쌍을 **GetNextAssoc** maps 템플릿을 기반으로 합니다.  
+ This is not true of **GetNextAssoc** for maps based on templates.  
   
- 다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb::GetNextAssoc**합니다.  
+ The following table shows other member functions that are similar to **CMapStringToOb::GetNextAssoc**.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, void\*&** *rKey* **, void\*&** *rValue* **) const;**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, void\*&** *rKey* **, WORD&** *rValue* **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**GetNextAssoc void (위치 / /** *rNextPosition* **, CString / /** *rKey* **, void\* & ** *rValue* **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**GetNextAssoc void (위치 / /** *rNextPosition* **, CString / /** *rKey* **, CString / /** *rValue* **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**GetNextAssoc void (위치 / /** *rNextPosition* **, WORD / /** *rKey* **, CObject\* & ** *rValue* **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, CString&** *rKey* **, void\*&** *rValue* **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, CString&** *rKey* **, CString&** *rValue* **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, WORD&** *rKey* **, CObject\*&** *rValue* **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc( POSITION&** *rNextPosition* **, WORD&** *rKey* **, void\*&** *rValue* **) const;**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&66;](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
+ [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
   
- 이 프로그램의 결과 다음과 같습니다.  
+ The results from this program are as follows:  
   
  `Lisa : a CAge at $4724 11`  
   
@@ -255,88 +266,88 @@ void GetNextAssoc(
   
  `Bart : a CAge at $45D4 13`  
   
-##  <a name="getsize"></a>CMapStringToOb::GetSize  
- 지도 요소 수를 반환합니다.  
+##  <a name="getsize"></a>  CMapStringToOb::GetSize  
+ Returns the number of map elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 지도 있는 항목의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the map.  
   
-### <a name="remarks"></a>주의  
- Map의 요소 수를 검색 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the map.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::GetSize`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::GetSize`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Const; INT_PTR GetSize)**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Const; INT_PTR GetSize)**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Const; INT_PTR GetSize)**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Const; INT_PTR GetSize)**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; INT_PTR GetSize)**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; INT_PTR GetSize)**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetSize( ) const;**|  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections #&67;](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#67](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
-##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
- 가 반환 하 여 지도 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 `GetNextAssoc` 를 호출 합니다.  
+##  <a name="getstartposition"></a>  CMapStringToOb::GetStartPosition  
+ Starts a map iteration by returning a **POSITION** value that can be passed to a `GetNextAssoc` call.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A **위치** 지도; 반복 하기 위한 시작 위치를 나타내는 값 또는 **NULL** 맵이 비어 있는 경우.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that indicates a starting position for iterating the map; or **NULL** if the map is empty.  
   
-### <a name="remarks"></a>주의  
- 반복 시퀀스는 예측할 수 없습니다. 따라서 "첫 번째 요소는 맵에서" 특별 한 의미가 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The iteration sequence is not predictable; therefore, the "first element in the map" has no special significance.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::GetStartPosition`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::GetStartPosition`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Const; 위치 GetStartPosition)**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Const; 위치 GetStartPosition)**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Const; 위치 GetStartPosition)**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Const; 위치 GetStartPosition)**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; 위치 GetStartPosition)**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; 위치 GetStartPosition)**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**POSITION GetStartPosition( ) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**POSITION GetStartPosition( ) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**POSITION GetStartPosition( ) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**POSITION GetStartPosition( ) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**POSITION GetStartPosition( ) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**POSITION GetStartPosition( ) const;**|  
   
-### <a name="example"></a>예제  
- 예를 참조 [CMapStringToOb::GetNextAssoc](#getnextassoc)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CMapStringToOb::GetNextAssoc](#getnextassoc).  
   
-##  <a name="hashkey"></a>CMapStringToOb::HashKey  
- 지정된 된 키의 해시 값을 계산합니다.  
+##  <a name="hashkey"></a>  CMapStringToOb::HashKey  
+ Calculates the hash value of a specified key.  
   
 ```  
 UINT HashKey(LPCTSTR key) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 해시 값 계산 해야 하는 키입니다.  
+ The key whose hash value is to be calculated.  
   
-### <a name="return-value"></a>반환 값  
- 키의 해시 값  
+### <a name="return-value"></a>Return Value  
+ The Key's hash value  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::HashKey`합니다.  
+### <a name="remarks"></a>Remarks  
+ The following table shows other member functions that are similar to `CMapStringToOb::HashKey`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void\* ** `key` **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\* ** `key` **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey( void\*** `key` **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey( void\*** `key` **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey( LPCTSTR** `key` **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey( LPCTSTR** `key` **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey( WORD** `key` **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey( WORD** `key` **) const;**|  
   
-##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable  
- 해시 테이블을 초기화합니다.  
+##  <a name="inithashtable"></a>  CMapStringToOb::InitHashTable  
+ Initializes the hash table.  
   
 ```  
 void InitHashTable(
@@ -344,54 +355,54 @@ void InitHashTable(
     BOOL bAllocNow = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hashSize`  
- 해시 테이블의 항목 수입니다.  
+ Number of entries in the hash table.  
   
  `bAllocNow`  
- 경우 **TRUE**, 초기화, 해시 테이블을 할당 필요할 때 테이블 할당은 그렇지 않은 경우.  
+ If **TRUE**, allocates the hash table upon initialization; otherwise the table is allocated when needed.  
   
-### <a name="remarks"></a>주의  
- 최상의 성능을 얻으려면 해시 테이블 크기 소수 이어야 합니다. 충돌을 최소화 하려면 크기 해야 약 20%는 가장 큰 예상된 데이터 집합 보다 큰 합니다.  
+### <a name="remarks"></a>Remarks  
+ For best performance, the hash table size should be a prime number. To minimize collisions, the size should be roughly 20 percent larger than the largest anticipated data set.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::InitHashTable`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::InitHashTable`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**InitHashTable void (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable( UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE );**|  
   
-##  <a name="isempty"></a>CMapStringToOb::IsEmpty  
- 맵이 비어 있는지 여부를 결정 합니다.  
+##  <a name="isempty"></a>  CMapStringToOb::IsEmpty  
+ Determines whether the map is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 맵은; 요소가 없으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this map contains no elements; otherwise 0.  
   
-### <a name="example"></a>예제  
- 예를 참조 [RemoveAll](#removeall)합니다.  
+### <a name="example"></a>Example  
+ See the example for [RemoveAll](#removeall).  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb:: IsEmpty**합니다.  
+### <a name="remarks"></a>Remarks  
+ The following table shows other member functions that are similar to **CMapStringToOb:: IsEmpty**.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Const; BOOL IsEmpty)**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Const; BOOL IsEmpty)**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Const; BOOL IsEmpty)**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Const; BOOL IsEmpty)**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; BOOL IsEmpty)**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; BOOL IsEmpty)**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty( ) const;**|  
   
-##  <a name="lookup"></a>CMapStringToOb::Lookup  
- 반환 된 `CObject` 기반 포인터는 `CString` 값입니다.  
+##  <a name="lookup"></a>  CMapStringToOb::Lookup  
+ Returns a `CObject` pointer based on a `CString` value.  
   
 ```  
 BOOL Lookup(
@@ -399,37 +410,37 @@ BOOL Lookup(
     CObject*& rValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 조회 되는 요소를 식별 하는 문자열 키를 지정 합니다.  
+ Specifies the string key that identifies the element to be looked up.  
   
  `rValue`  
- 조회 요소에서 반환 된 값을 지정합니다.  
+ Specifies the returned value from the looked-up element.  
   
-### <a name="return-value"></a>반환 값  
- 요소가 발견 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- `Lookup`해시 알고리즘을 사용 하 여 신속 하 게 정확히 일치 하는 키가 있는 지도 요소를 찾습니다 ( `CString` 값)입니다.  
+### <a name="remarks"></a>Remarks  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that matches exactly ( `CString` value).  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::LookUp`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::LookUp`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL Lookup( void\*** `key` **, void\*&** `rValue` **) const;**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL Lookup( void\*** `key` **, WORD&** `rValue` **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL Lookup( LPCTSTR** `key` **, void\*&** `rValue` **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL 조회 (LPCTSTR** `key` **, CString / /** `rValue` **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL Lookup( LPCTSTR** `key` **, CString&** `rValue` **) const;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL Lookup( WORD** `key` **, CObject\*&** `rValue` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL Lookup( WORD** `key` **, void\*&** `rValue` **) const;**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&68;](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
+ [!code-cpp[NVC_MFCCollections#68](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
-##  <a name="lookupkey"></a>CMapStringToOb::LookupKey  
- 지정 된 키 값과 연결 된 키에 대 한 참조를 반환 합니다.  
+##  <a name="lookupkey"></a>  CMapStringToOb::LookupKey  
+ Returns a reference to the key associated with the specified key value.  
   
 ```  
 BOOL LookupKey(
@@ -437,58 +448,58 @@ BOOL LookupKey(
     LPCTSTR& rKey) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 조회 되는 요소를 식별 하는 문자열 키를 지정 합니다.  
+ Specifies the string key that identifies the element to be looked up.  
   
  `rKey`  
- 연결 된 키에 대 한 참조입니다.  
+ The reference to the associated key.  
   
-### <a name="return-value"></a>반환 값  
- 키가 없으면; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the key was found; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 키에 대 한 참조를 사용 하 여 연결된 된 요소는 맵에서 제거 된 후 사용 하는 경우 또는 지도 소멸 된 후에 안전 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ Using a reference to a key is unsafe if used after the associated element was removed from the map or after the map was destroyed.  
   
- 다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb:: LookupKey**합니다.  
+ The following table shows other member functions that are similar to **CMapStringToOb:: LookupKey**.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR / /** `rKey` **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR / /** `rKey` **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey( LPCTSTR** `key` **, LPCTSTR&** `rKey` **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey( LPCTSTR** `key` **, LPCTSTR&** `rKey` **) const;**|  
   
-##  <a name="operator_at"></a>CMapStringToOb::operator]  
- 에 대 한 편리한 대체는 `SetAt` 멤버 함수입니다.  
+##  <a name="operator_at"></a>  CMapStringToOb::operator [ ]  
+ A convenient substitute for the `SetAt` member function.  
   
 ```  
 CObject*& operator[ ](lpctstr key);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터에 대 한 참조는 `CObject` ; 개체 또는 **NULL** 맵이 비어 있으면 또는 `key` 범위를 벗어났습니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to a pointer to a `CObject` object; or **NULL** if the map is empty or `key` is out of range.  
   
-### <a name="remarks"></a>주의  
- 따라서 (l-value) 대입문의 왼쪽에만 사용할 수 있습니다. 지정된 된 키와 지도 요소가 이면 새 요소가 만들어집니다.  
+### <a name="remarks"></a>Remarks  
+ Thus it can be used only on the left side of an assignment statement (an l-value). If there is no map element with the specified key, then a new element is created.  
   
- 경우 없습니다 "오른쪽" (r-value)이이 운영자에 해당 하는 지도에서 키를 찾을 수 있습니다 가능성이 있기 때문에 사용 하 여 `Lookup` 요소 검색을 위한 멤버 함수입니다.  
+ There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
- 다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb::operator**합니다.  
+ The following table shows other member functions that are similar to **CMapStringToOb::operator []**.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& operator[](void\*** `key` **\);**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD& operator[](void\*** `key` **\);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operator[](lpctstr** `key` **\);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString / 연산자 (lpctstr** `key` ** \);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString& operator[](lpctstr** `key` **\);**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& operator[](word** `key` **\);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& operator[](word** `key` **\);**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&72;](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
+ [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
   
- 이 프로그램의 결과 다음과 같습니다.  
+ The results from this program are as follows:  
   
  `Operator [] example: A CMapStringToOb with 2 elements`  
   
@@ -496,68 +507,68 @@ CObject*& operator[ ](lpctstr key);
   
  `[Bart] = a CAge at $497E 13`  
   
-##  <a name="removeall"></a>CMapStringToOb::RemoveAll  
- 이 맵에서 모든 요소를 제거 하 고 삭제는 `CString` key 개체입니다.  
+##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
+ Removes all the elements from this map and destroys the `CString` key objects.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>주의  
- `CObject` 각 키에서 참조 하는 개체가 소멸 되지 않습니다. `RemoveAll` 함수를 확인 하지 않습니다 하는 참조 된 경우 메모리 누수를 발생할 수 있습니다 `CObject` 개체가 소멸 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `CObject` objects referenced by each key are not destroyed. The `RemoveAll` function can cause memory leaks if you do not ensure that the referenced `CObject` objects are destroyed.  
   
- 맵이 비어 이미 경우 함수가 제대로 작동 합니다.  
+ The function works correctly if the map is already empty.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::RemoveAll`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::RemoveAll`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void RemoveAll ();**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void RemoveAll ();**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void RemoveAll ();**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void RemoveAll ();**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void RemoveAll ();**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll ();**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void RemoveAll( );**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void RemoveAll( );**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void RemoveAll( );**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void RemoveAll( );**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void RemoveAll( );**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll( );**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&69;](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
+ [!code-cpp[NVC_MFCCollections#69](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
-##  <a name="removekey"></a>CMapStringToOb::RemoveKey  
- 제공 된 키에 해당 하는 맵 항목을 조회 그런 다음 키가 있는 경우 항목을 제거 합니다.  
+##  <a name="removekey"></a>  CMapStringToOb::RemoveKey  
+ Looks up the map entry corresponding to the supplied key; then, if the key is found, removes the entry.  
   
 ```  
 BOOL RemoveKey(LPCTSTR key);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 지도 조회에 사용 되는 문자열을 지정 합니다.  
+ Specifies the string used for map lookup.  
   
-### <a name="return-value"></a>반환 값  
- 항목을 찾아 성공적으로 제거 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 발생할 수 있습니다 메모리 누수는 `CObject` 개체가 다른 곳에서 삭제 되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ This can cause memory leaks if the `CObject` object is not deleted elsewhere.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::RemoveKey`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::RemoveKey`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey (void\* ** `key` **);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void\* ** `key` **);**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey( void\*** `key` **);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey( void\*** `key` **);**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey( WORD** `key` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey( WORD** `key` **);**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&70;](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
+ [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
   
- 이 프로그램의 결과 다음과 같습니다.  
+ The results from this program are as follows:  
   
  `RemoveKey example: A CMapStringToOb with 3 elements`  
   
@@ -567,8 +578,8 @@ BOOL RemoveKey(LPCTSTR key);
   
  `[Bart] = a CAge at $4634 13`  
   
-##  <a name="setat"></a>CMapStringToOb::SetAt  
- Map에서 요소를 삽입 하는 기본 의미 합니다.  
+##  <a name="setat"></a>  CMapStringToOb::SetAt  
+ The primary means to insert an element in a map.  
   
 ```  
 void SetAt(
@@ -576,19 +587,19 @@ void SetAt(
     CObject* newValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 새 요소의 키 되는 문자열을 지정 합니다.  
+ Specifies the string that is the key of the new element.  
   
  `newValue`  
- 지정 된 `CObject` 포인터는 새 요소의 값입니다.  
+ Specifies the `CObject` pointer that is the value of the new element.  
   
-### <a name="remarks"></a>주의  
- 첫째, 키가 찾습니다. 키가 있으면 해당 값이 변경 됩니다; 그런 다음 그렇지 않으면 새 키-값 요소가 만들어집니다.  
+### <a name="remarks"></a>Remarks  
+ First, the key is looked up. If the key is found, then the corresponding value is changed; otherwise a new key-value element is created.  
   
- 다음 표에서 다른 멤버와 비슷한 함수 `CMapStringToOb::SetAt`합니다.  
+ The following table shows other member functions that are similar to `CMapStringToOb::SetAt`.  
   
-|클래스|멤버 함수|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt( void\*** `key` **, void\*** `newValue` **);**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt( void\*** `key` **, WORD** `newValue` **);**|  
@@ -597,12 +608,12 @@ void SetAt(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt( WORD** `key` **, CObject\*** `newValue` **);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt( WORD** `key` **, void\*** `newValue` **);**|  
   
-### <a name="example"></a>예제  
- 참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 컬렉션 예제에 사용 되는 클래스입니다.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) for a listing of the `CAge` class used in all collection examples.  
   
- [!code-cpp[NVC_MFCCollections #&71;](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  
+ [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  
   
- 이 프로그램의 결과 다음과 같습니다.  
+ The results from this program are as follows:  
   
  `before Lisa's birthday: A CMapStringToOb with 2 elements`  
   
@@ -616,13 +627,13 @@ void SetAt(
   
  `[Bart] = a CAge at $4654 13`  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CMapPtrToPtr 클래스](../../mfc/reference/cmapptrtoptr-class.md)   
- [CMapPtrToWord 클래스](../../mfc/reference/cmapptrtoword-class.md)   
- [CMapStringToPtr 클래스](../../mfc/reference/cmapstringtoptr-class.md)   
- [CMapStringToString 클래스](../../mfc/reference/cmapstringtostring-class.md)   
- [CMapWordToOb 클래스](../../mfc/reference/cmapwordtoob-class.md)   
- [CMapWordToPtr 클래스](../../mfc/reference/cmapwordtoptr-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)   
+ [CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)   
+ [CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)   
+ [CMapStringToString Class](../../mfc/reference/cmapstringtostring-class.md)   
+ [CMapWordToOb Class](../../mfc/reference/cmapwordtoob-class.md)   
+ [CMapWordToPtr Class](../../mfc/reference/cmapwordtoptr-class.md)
 

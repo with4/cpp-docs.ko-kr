@@ -1,5 +1,5 @@
 ---
-title: "COleDataSource 클래스 | Microsoft Docs"
+title: COleDataSource Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,17 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag and drop [C++], MFC support
-- Clipboard [C++], OLE support
-- uniform data transfer
-- OLE [C++], uniform data transfer
-- Clipboard [C++], MFC support
-- OLE Clipboard [C++], support
-- IDataObject, MFC encapsulation
-- data transfer [C++], OLE
-- COleDataSource class
-- OLE data transfer [C++]
-- uniform data transfer, OLE
+- COleDataSource [MFC], COleDataSource
+- COleDataSource [MFC], CacheData
+- COleDataSource [MFC], CacheGlobalData
+- COleDataSource [MFC], DelayRenderData
+- COleDataSource [MFC], DelayRenderFileData
+- COleDataSource [MFC], DelaySetData
+- COleDataSource [MFC], DoDragDrop
+- COleDataSource [MFC], Empty
+- COleDataSource [MFC], FlushClipboard
+- COleDataSource [MFC], GetClipboardOwner
+- COleDataSource [MFC], OnRenderData
+- COleDataSource [MFC], OnRenderFileData
+- COleDataSource [MFC], OnRenderGlobalData
+- COleDataSource [MFC], OnSetData
+- COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 caps.latest.revision: 23
 author: mikeblome
@@ -59,68 +63,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3839ebe5f278d71f933b6e76f2ad50dc8e62a165
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0d6db9b64098bf2bee5129b98dfe1797edfd6d8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledatasource-class"></a>COleDataSource 클래스
-응용 프로그램이 데이터를 넣어 두었다 클립보드 또는 끌어 놓기 작업과 같은 데이터 전송 작업에서 해당 데이터를 제공하는 캐시의 역할을 합니다.  
+# <a name="coledatasource-class"></a>COleDataSource Class
+Acts as a cache into which an application places the data that it will offer during data transfer operations, such as Clipboard or drag-and-drop operations.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDataSource : public CCmdTarget  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::COleDataSource](#coledatasource)|`COleDataSource` 개체를 생성합니다.|  
+|[COleDataSource::COleDataSource](#coledatasource)|Constructs a `COleDataSource` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::CacheData](#cachedata)|데이터를 사용 하 여 지정 된 형식에 제공 된 **STGMEDIUM** 구조입니다.|  
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|사용 하 여 지정 된 형식에서 데이터를 제공는 `HGLOBAL`합니다.|  
-|[COleDataSource::DelayRenderData](#delayrenderdata)|지연 된 렌더링을 사용 하 여 지정 된 형식으로 데이터를에서 제공 합니다.|  
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|지정 된 형식에서 데이터를 제공는 `CFile` 포인터입니다.|  
-|[COleDataSource::DelaySetData](#delaysetdata)|지원 되는 모든 형식에 대해 호출 `OnSetData`합니다.|  
-|[Coledatasource:: Dodragdrop](#dodragdrop)|데이터 소스와 끌어서 놓기 작업을 수행 합니다.|  
-|[COleDataSource::Empty](#empty)|비웁니다는 `COleDataSource` 데이터의 개체입니다.|  
-|[COleDataSource::FlushClipboard](#flushclipboard)|모든 데이터를 클립보드에 렌더링합니다.|  
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|클립보드에 데이터 아직 중지 되지 않은 인지 확인 합니다.|  
-|[COleDataSource::OnRenderData](#onrenderdata)|지연 된 렌더링의 일환으로 데이터를 검색합니다.|  
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|데이터를 검색 한 `CFile` 지연 된 렌더링의 일환으로 합니다.|  
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|데이터를 검색 한 `HGLOBAL` 지연 된 렌더링의 일환으로 합니다.|  
-|[COleDataSource::OnSetData](#onsetdata)|데이터를 교체 하기 위해 호출 됩니다는 `COleDataSource` 개체입니다.|  
-|[COleDataSource::SetClipboard](#setclipboard)|위치는 `COleDataSource` 개체 클립보드에 복사 합니다.|  
+|[COleDataSource::CacheData](#cachedata)|Offers data in a specified format using a **STGMEDIUM** structure.|  
+|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Offers data in a specified format using an `HGLOBAL`.|  
+|[COleDataSource::DelayRenderData](#delayrenderdata)|Offers data in a specified format using delayed rendering.|  
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Offers data in a specified format in a `CFile` pointer.|  
+|[COleDataSource::DelaySetData](#delaysetdata)|Called for every format that is supported in `OnSetData`.|  
+|[COleDataSource::DoDragDrop](#dodragdrop)|Performs drag-and-drop operations with a data source.|  
+|[COleDataSource::Empty](#empty)|Empties the `COleDataSource` object of data.|  
+|[COleDataSource::FlushClipboard](#flushclipboard)|Renders all data to the Clipboard.|  
+|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Verifies that the data placed on the Clipboard is still there.|  
+|[COleDataSource::OnRenderData](#onrenderdata)|Retrieves data as part of delayed rendering.|  
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Retrieves data into a `CFile` as part of delayed rendering.|  
+|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Retrieves data into an `HGLOBAL` as part of delayed rendering.|  
+|[COleDataSource::OnSetData](#onsetdata)|Called to replace the data in the `COleDataSource` object.|  
+|[COleDataSource::SetClipboard](#setclipboard)|Places a `COleDataSource` object on the Clipboard.|  
   
-## <a name="remarks"></a>설명  
- OLE 데이터 소스를 직접 만들 수 있습니다. 또는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 및 [COleServerItem](../../mfc/reference/coleserveritem-class.md) 클래스에 대 한 응답에서 OLE 데이터 원본을 만들고 해당 `CopyToClipboard` 및 `DoDragDrop` 멤버 함수입니다. 참조 [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) 간략 한 설명에 대 한 합니다. 재정의 `OnGetClipboardData` OLE 데이터 원본의 데이터 추가 클립보드 형식을 추가 하 고 클라이언트 항목이 나 서버 항목 클래스의 멤버 함수에 대해 생성 된 `CopyToClipboard` 또는 `DoDragDrop` 멤버 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ You can create OLE data sources directly. Alternately, the [COleClientItem](../../mfc/reference/coleclientitem-class.md) and [COleServerItem](../../mfc/reference/coleserveritem-class.md) classes create OLE data sources in response to their `CopyToClipboard` and `DoDragDrop` member functions. See [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) for a brief description. Override the `OnGetClipboardData` member function of your client item or server item class to add additional Clipboard formats to the data in the OLE data source created for the `CopyToClipboard` or `DoDragDrop` member function.  
   
- 전송에 대 한 데이터를 준비 하려는 경우이 클래스의 개체 만들고 데이터에 가장 적합 한 방법을 사용 하 여 데이터를 입력 해야 합니다. 데이터 소스에 삽입 하는 방법은 직접 영향을 받는 데이터를 즉시 제공 했는지 여부를 (즉시 렌더링) 또는 요청 시 (지연 된 렌더링). 제공 하는 데이터에 사용할 클립보드 형식을 전달 하 여 모든 클립보드 형식에 대 한 (선택적 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조)를 호출 [DelayRenderData](#delayrenderdata)합니다.  
+ Whenever you want to prepare data for a transfer, you should create an object of this class and fill it with your data using the most appropriate method for your data. The way it is inserted into a data source is directly affected by whether the data is supplied immediately (immediate rendering) or on demand (delayed rendering). For every Clipboard format in which you are providing data by passing the Clipboard format to be used (and an optional [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure), call [DelayRenderData](#delayrenderdata).  
   
- 데이터 원본 및 데이터 전송에 대 한 자세한 내용은 문서 참조 [데이터 개체 및 데이터 소스 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)합니다. 또한 문서 [클립보드 항목](../../mfc/clipboard.md) OLE 클립보드 메커니즘을 설명 합니다.  
+ For more information about data sources and data transfer, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md). In addition, the article [Clipboard Topics](../../mfc/clipboard.md) describes the OLE Clipboard mechanism.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDataSource`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
- 데이터는 제공 하는 동안 데이터 전송 작업에서 형식을 지정 하려면이 함수를 호출 합니다.  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheData(
@@ -129,31 +133,31 @@ void CacheData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpStgMedium`  
- 가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 지정 된 형식의 데이터를 포함 하는 구조입니다.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data in the format specified.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>주의  
- 이 함수 즉시 렌더링을 사용 하 여 제공 하기 때문에 데이터를 제공 해야 합니다. 데이터는 필요할 때까지 캐시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ You must supply the data, because this function provides it by using immediate rendering. The data is cached until needed.  
   
- 사용 하 여 데이터를 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조입니다. 사용할 수도 있습니다는 `CacheGlobalData` 멤버 함수는 데이터 양을 제공 하는 경우 사용 하 여 효율적으로 전송할 수 있을 만큼 적습니다는 `HGLOBAL`합니다.  
+ Supply the data using a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure. You can also use the `CacheGlobalData` member function if the amount of data you are supplying is small enough to be transferred efficiently using an `HGLOBAL`.  
   
- 호출한 후 `CacheData` 는 **데** 소속 `lpFormatEtc` 의 내용과 `lpStgMedium` 호출자가 아니라 데이터 개체에 의해 소유 됩니다.  
+ After the call to `CacheData` the **ptd** member of `lpFormatEtc` and the contents of `lpStgMedium` are owned by the data object, not by the caller.  
   
- 지연 된 렌더링을 사용 하려면 호출는 [DelayRenderData](#delayrenderdata) 또는 [DelayRenderFileData](#delayrenderfiledata) 멤버 함수입니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
- 데이터는 제공 하는 동안 데이터 전송 작업에서 형식을 지정 하려면이 함수를 호출 합니다.  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheGlobalData(
@@ -162,34 +166,34 @@ void CacheGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  *hGlobal*  
- 지정 된 형식의 데이터를 포함 하는 전역 메모리 블록에 대 한 핸들입니다.  
+ Handle to the global memory block containing the data in the format specified.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 즉시 렌더링; 함수를 호출할 때 데이터를 제공 해야 하므로 데이터를 제공 합니다. 데이터는 필요할 때까지 캐시 됩니다. 사용 하 여는 `CacheData` 많은 양의 데이터 또는 구조적된 저장소 매체 필요한 경우 제공 하는 경우 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using immediate rendering, so you must supply the data when calling the function; the data is cached until needed. Use the `CacheData` member function if you are supplying a large amount of data or if you require a structured storage medium.  
   
- 지연 된 렌더링을 사용 하려면 호출는 [DelayRenderData](#delayrenderdata) 또는 [DelayRenderFileData](#delayrenderfiledata) 멤버 함수입니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
- `COleDataSource` 개체를 생성합니다.  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
+ Constructs a `COleDataSource` object.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
- 데이터는 제공 하는 동안 데이터 전송 작업에서 형식을 지정 하려면이 함수를 호출 합니다.  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderData(
@@ -197,26 +201,26 @@ void DelayRenderData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 지연 된 렌더링 데이터 즉시 제공 되지 않은 데이터를 제공 합니다. [OnRenderData](#onrenderdata) 또는 [OnRenderGlobalData](#onrenderglobaldata) 데이터를 요청 하려면 멤버 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderData](#onrenderdata) or [OnRenderGlobalData](#onrenderglobaldata) member function is called to request the data.  
   
- 통해 데이터를 제공 하지 않을 경우이 함수를 사용 하 여 한 `CFile` 개체입니다. 통해 데이터를 제공 하는 경우는 `CFile` 개체를 호출 하는 [DelayRenderFileData](#delayrenderfiledata) 멤버 함수입니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ Use this function if you are not going to supply your data through a `CFile` object. If you are going to supply the data through a `CFile` object, call the [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 즉시 렌더링을 사용 하려면 호출는 [CacheData](#cachedata) 또는 [CacheGlobalData](#cacheglobaldata) 멤버 함수입니다.  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
- 데이터는 제공 하는 동안 데이터 전송 작업에서 형식을 지정 하려면이 함수를 호출 합니다.  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderFileData(
@@ -224,26 +228,26 @@ void DelayRenderFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>설명  
- 이 함수를 사용 하 여 지연 된 렌더링 데이터 즉시 제공 되지 않은 데이터를 제공 합니다. [OnRenderFileData](#onrenderfiledata) 데이터를 요청 하려면 멤버 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderFileData](#onrenderfiledata) member function is called to request the data.  
   
- 사용 하려는 경우이 함수를 사용 하 여 한 `CFile` 는 데이터를 제공 하는 개체입니다. 사용 하지 않을 경우는 `CFile` 개체를 호출 하는 [DelayRenderData](#delayrenderdata) 멤버 함수입니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ Use this function if you are going to use a `CFile` object to supply the data. If you are not going to use a `CFile` object, call the [DelayRenderData](#delayrenderdata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 즉시 렌더링을 사용 하려면 호출는 [CacheData](#cachedata) 또는 [CacheGlobalData](#cacheglobaldata) 멤버 함수입니다.  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
- 데이터 원본의 내용을 변경 기능을 지원 하려면이 함수를 호출 합니다.  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
+ Call this function to support changing the contents of the data source.  
   
 ```  
 void DelaySetData(
@@ -251,22 +255,22 @@ void DelaySetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터를 배치할 수 인 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard format in which the data is to be placed. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터를 교체의 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be replaced. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>주의  
- [OnSetData](#onsetdata) 이 프레임 워크에서 호출 됩니다. 프레임 워크에서 데이터 원본을 반환 될 때만 사용 됩니다 [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)합니다. 경우 `DelaySetData` 를 호출 하지 않으면 프로그램 `OnSetData` 함수 호출 되지 것입니다. `DelaySetData`각 클립보드를 호출 해야 합니다 또는 **FORMATETC** 지 원하는 형식.  
+### <a name="remarks"></a>Remarks  
+ [OnSetData](#onsetdata) will be called by the framework when this happens. This is only used when the framework returns the data source from [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). If `DelaySetData` is not called, your `OnSetData` function will never be called. `DelaySetData` should be called for each Clipboard or **FORMATETC** format you support.  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="dodragdrop"></a>Coledatasource:: Dodragdrop  
- 호출 된 `DoDragDrop` 멤버 함수에서 일반적으로이 데이터 원본에 대 한 끌어서 놓기 작업을 수행 하는 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) 처리기입니다.  
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
+ Call the `DoDragDrop` member function to perform a drag-and-drop operation for this data source, typically in an [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) handler.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -275,76 +279,76 @@ DROPEFFECT DoDragDrop(
     COleDropSource* pDropSource = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwEffects`  
- 끌어서 놓기 작업 허용 되는이 데이터 원본에서입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
+ Drag-and-drop operations that are allowed on this data source. Can be one or more of the following:  
   
-- `DROPEFFECT_COPY`복사 작업을 수행할 수 있습니다.  
+- `DROPEFFECT_COPY` A copy operation could be performed.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행할 수 있습니다.  
+- `DROPEFFECT_MOVE` A move operation could be performed.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수 없습니다.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data could be established.  
   
-- `DROPEFFECT_SCROLL`끌기 스크롤 작업이 발생할 수를 나타냅니다.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation could occur.  
   
  `lpRectStartDrag`  
- 끌기 실제로 시작 위치를 정의 하는 사각형에 대 한 포인터입니다. 자세한 내용은 아래 설명 부분을 참조하십시오.  
+ Pointer to the rectangle that defines where the drag actually starts. For more information, see the following Remarks section.  
   
  *pDropSource*  
- 놓기 소스를 가리킵니다. 경우 **NULL** 의 기본 구현을 다음 [COleDropSource](../../mfc/reference/coledropsource-class.md) 사용 됩니다.  
+ Points to a drop source. If **NULL** then a default implementation of [COleDropSource](../../mfc/reference/coledropsource-class.md) will be used.  
   
-### <a name="return-value"></a>반환 값  
- 끌어서 놓기 작업;에 의해 생성 된 효과 그렇지 않으면 `DROPEFFECT_NONE` 제공 된 사각형을 벗어나기 전에 마우스 단추를 놓은 때문에 에서만 작업을 시작 하는 경우.  
+### <a name="return-value"></a>Return Value  
+ Drop effect generated by the drag-and-drop operation; otherwise `DROPEFFECT_NONE` if the operation never begins because the user released the mouse button before leaving the supplied rectangle.  
   
-### <a name="remarks"></a>주의  
- 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 `lpRectStartDrag` 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 `lpRectStartDrag` 은 **NULL**, 사각형의 크기는 1 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ The drag-and-drop operation does not start immediately. It waits until the mouse cursor leaves the rectangle specified by `lpRectStartDrag` or until a specified number of milliseconds have passed. If `lpRectStartDrag` is **NULL**, the size of the rectangle is one pixel.  
   
- 레지스트리 키 설정 지연 시간 지정 됩니다. 호출 하 여 지연 시간을 변경할 수 있습니다 [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)합니다. 지연 시간을 지정 하지 않으면 기본값은 200 밀리초 사용 됩니다. 끌어서 지연 시간을 다음과 같이 저장 됩니다.  
+ The delay time is specified by a registry key setting. You can change the delay time by calling [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) or [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). If you do not specify the delay time, a default value of 200 milliseconds is used. Drag delay time is stored as follows:  
   
--   Windows NT 끌어서 지연 시간 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay에 저장 됩니다.  
+-   Windows NT   Drag delay time is stored in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Windows 3.x 끌어서 지연 시간 WIN에 저장 됩니다. INI 파일 [Windows} 섹션.  
+-   Windows 3.x   Drag delay time is stored in the WIN.INI file, under the [Windows} section.  
   
--   Windows 95/98 끌어서 지연 시간 WIN의 캐시 된 버전에 저장 됩니다. INI 합니다.  
+-   Windows 95/98   Drag delay time is stored in a cached version of WIN.INI.  
   
- 연기 된 정보는 레지스트리에 저장 됩니다는 방법에 대 한 자세한 내용은 끌어에 대 한 또는 합니다. INI 파일 참조 [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about how drag delay information is stored in either the registry or the .INI file, see [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in the Windows SDK.  
   
- 자세한 내용은 문서 참조 [끌어서 놓기: 놓기 소스 구현](../../mfc/drag-and-drop-implementing-a-drop-source.md)합니다.  
+ For more information, see the article [Drag and Drop: Implementing a Drop Source](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
- 비어 있는 것으로이 함수 호출의 `COleDataSource` 데이터의 개체입니다.  
+##  <a name="empty"></a>  COleDataSource::Empty  
+ Call this function to empty the `COleDataSource` object of data.  
   
 ```  
 void Empty();
 ```  
   
-### <a name="remarks"></a>주의  
- 다시 사용할 수 있도록 지연 렌더링 형식의 비우기와 캐시 모두.  
+### <a name="remarks"></a>Remarks  
+ Both cached and delay render formats are emptied so they can be reused.  
   
- 자세한 내용은 참조 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in the Windows SDK.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
- 클립보드에 사용 중이 고 다음 응용 프로그램을 종료 한 후 클립보드의에서 데이터를 붙여넣을 수 있는 데이터를 렌더링 합니다.  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
+ Renders data that is on the Clipboard, and then lets you paste data from the Clipboard after your application shuts down.  
   
 ```  
 static void PASCAL FlushClipboard();
 ```  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [SetClipboard](#setclipboard) 클립보드에 데이터를 저장 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [SetClipboard](#setclipboard) to put data on the Clipboard.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
- 클립보드의 데이터 이후 변경 되었는지 여부를 결정 [SetClipboard](#setclipboard) 가 마지막으로 호출 하 고이 경우 현재 소유자를 식별 합니다.  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
+ Determines whether the data on the Clipboard has changed since [SetClipboard](#setclipboard) was last called and, if so, identifies the current owner.  
   
 ```  
 static COleDataSource* PASCAL GetClipboardOwner();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 클립보드에 데이터 원본 또는 **NULL** 클립보드에 없으면 또는 호출 응용 프로그램이 클립보드를 소유 하지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ The data source currently on the Clipboard, or **NULL** if there is nothing on the Clipboard or if the Clipboard is not owned by the calling application.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
- 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
+ Called by the framework to retrieve data in the specified format.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -352,27 +356,27 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `lpStgMedium`  
- 가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 반환 될 데이터는 구조입니다.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in which the data is to be returned.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](#delayrenderdata) 또는 [DelayRenderFileData](#delayrenderfiledata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현을 호출 합니다 [OnRenderFileData](#onrenderfiledata) 또는 [OnRenderGlobalData](#onrenderglobaldata) 각각 제공 된 저장소 미디어는 파일 또는 메모리를 하는 경우. 이러한 형식은 모두를 제공 하는 그런 다음 기본 구현은 0을 반환 하 고 아무 작업도 수행 하지 않습니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function for delayed rendering. The default implementation of this function will call [OnRenderFileData](#onrenderfiledata) or [OnRenderGlobalData](#onrenderglobaldata) if the supplied storage medium is either a file or memory, respectively. If neither of these formats are supplied, then the default implementation will return 0 and do nothing. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 경우 `lpStgMedium` ->  *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 할당 되 고에 지정 된 대로 입력 해야 *tymed-> lpFormatEtc*합니다. 없으면 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
+ If `lpStgMedium`-> *tymed* is **TYMED_NULL**, the **STGMEDIUM** should be allocated and filled as specified by *lpFormatEtc->tymed*. If it is not **TYMED_NULL**, the **STGMEDIUM** should be filled in place with the data.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 데이터가 작고 크기가 고정 되어 있으면 재정의 `OnRenderGlobalData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If your data is small and fixed in size, override `OnRenderGlobalData`. If your data is in a file, or is of variable size, override `OnRenderFileData`.  
   
- 자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조는 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) 열거형 형식 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures, the [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) enumeration type, and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
- 지정 된 저장소 미디어로 파일을 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is a file.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -380,25 +384,25 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `pFile`  
- 가리키는 [CFile](../../mfc/reference/cfile-class.md) 데이터 렌더링 해야 하는 개체입니다.  
+ Points to a [CFile](../../mfc/reference/cfile-class.md) object in which the data is to be rendered.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수는 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you might want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override `OnRenderFileData`. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
- 지정 된 저장소 미디어로 전역 메모리 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is global memory.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -406,27 +410,27 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `phGlobal`  
- 반환 될 데이터는 전역 메모리에 대 한 핸들을 가리킵니다. 이 매개 변수 수 하나에 아직 할당 되지 경우 **NULL**합니다.  
+ Points to a handle to global memory in which the data is to be returned. If one has not yet been allocated, this parameter can be **NULL**.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 경우 `phGlobal` 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 `phGlobal`합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 `phGlobal` 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
+ If `phGlobal` is **NULL**, then a new `HGLOBAL` should be allocated and returned in `phGlobal`. Otherwise, the `HGLOBAL` specified by `phGlobal` should be filled with the data. The amount of data placed in the `HGLOBAL` must not exceed the current size of the memory block. Also, the block cannot be reallocated to a larger size.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 [OnRenderFileData](#onrenderfiledata)합니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override [OnRenderFileData](#onrenderfiledata). For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
- 설정 하거나 데이터를 바꿀지를 프레임 워크에서 호출 된 `COleDataSource` 지정 된 형식의 개체입니다.  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
+ Called by the framework to set or replace the data in the `COleDataSource` object in the specified format.  
   
 ```  
 virtual BOOL OnSetData(
@@ -435,37 +439,37 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터를 대체 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which data is being replaced.  
   
  `lpStgMedium`  
- 가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 의 현재 내용을 대체 하는 데이터를 포함 하는 구조는 `COleDataSource` 개체입니다.  
+ Points to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data that will replace the current contents of the `COleDataSource` object.  
   
  `bRelease`  
- 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 `bRelease`합니다. 경우 `bRelease` 가 0이 아닌 경우 데이터 원본 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 `bRelease` 는 0이 고, 호출자에 게 소유권을 갖고 데이터 원본은 호출의 지속 기간 동안만 저장 매체를 사용할 수 있습니다.  
+ Indicates who has ownership of the storage medium after completing the function call. The caller decides who is responsible for releasing the resources allocated on behalf of the storage medium. The caller does this by setting `bRelease`. If `bRelease` is nonzero, the data source takes ownership, freeing the medium when it has finished using it. When `bRelease` is 0, the caller retains ownership and the data source can use the storage medium only for the duration of the call.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 데이터 원본 변경 내용이 데이터를 소유는 성공적으로 가져온 것입니다. 즉, 고려 되지 소유권 경우 `OnSetData` 0을 반환 합니다. 데이터 원본 변수를 사용할 경우 소유권에 저장소 매체를 호출 하 여 해제 된 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The data source does not take ownership of the data until it has successfully obtained it. That is, it does not take ownership if `OnSetData` returns 0. If the data source takes ownership, it frees the storage medium by calling the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) function.  
   
- 기본 구현은 아무 작업도 수행하지 않습니다. 지정 된 형식의 데이터를 교체 하려면이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
+ The default implementation does nothing. Override this function to replace the data in the specified format. This is an advanced overridable.  
   
- 자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 및 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 및 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 의 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures and the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) functions in the Windows SDK.  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
- 에 포함 된 데이터는 `COleDataSource` 개체는 다음 기능 중 하나를 호출한 후 클립보드에 복사: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), 또는 [DelayRenderFileData](#delayrenderfiledata)합니다.  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
+ Puts the data contained in the `COleDataSource` object on the Clipboard after calling one of the following functions: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), or [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  
 void SetClipboard();
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDataObject 클래스](../../mfc/reference/coledataobject-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDataObject Class](../../mfc/reference/coledataobject-class.md)
 

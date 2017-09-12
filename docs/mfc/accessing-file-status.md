@@ -1,42 +1,61 @@
 ---
-title: "파일 상태 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "예제[MFC], 파일 상태"
-  - "파일 상태[C++]"
-  - "파일[C++], 액세스"
-  - "파일[C++], 상태 정보"
-  - "파일 상태"
+title: Accessing File Status | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [MFC], status information
+- examples [MFC], file status
+- files [MFC], accessing
+- file status [MFC]
+- status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 파일 상태 액세스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bb9f54784f7046bc73e33f8a53c9bb49956b12e6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-`CFile` 는 파일의 존재여부를 포함하여 생성과 수정날짜 및 시간, 논리정 크기와 경로등의 파일 상태를 얻을 수 있도록 지원해 줍니다.  
+---
+# <a name="accessing-file-status"></a>Accessing File Status
+`CFile` also supports getting file status, including whether the file exists, creation and modification dates and times, logical size, and path.  
   
-### 파일 상태를 가져오기.  
+### <a name="to-get-file-status"></a>To get file status  
   
-1.  파일에 관한 정보를 설정하고 가져오기 위해 [CFile](../mfc/reference/cfile-class.md) 클래스를 사용합니다.  유용한 응용 프로그램 하나는 만일 파일이 존재한다면 파일이 있는지 확인하기 위해 `CFile` 정적 멤버 함수인 **GetStatus** 을 사용하는 것입니다.  만일 지정된 파일이 존재하지 않는 다면 **GetStatus** 는 0을 반환합니다.  
+1.  Use the [CFile](../mfc/reference/cfile-class.md) class to get and set information about a file. One useful application is to use the `CFile` static member function **GetStatus** to determine if a file exists. **GetStatus** returns 0 if the specified file does not exist.  
   
- 따라서, 다음 예제에서 보이는 것 처럼, 파일을 열때, **CFile::modeCreate** 플래그의 사용 여부를 결정하기 위해 **GetStatus** 의 결과를 사용할 수 있습니다.  
+ Thus, you could use the result of **GetStatus** to determine whether to use the **CFile::modeCreate** flag when opening a file, as shown by the following example:  
   
- [!code-cpp[NVC_MFCFiles#3](../mfc/codesnippet/CPP/accessing-file-status_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]  
   
- 이에 대한 관련 내용은, [Serialization](../mfc/serialization-in-mfc.md) 를 참고하세요.  
+ For related information, see [Serialization](../mfc/serialization-in-mfc.md).  
   
-## 참고 항목  
- [파일](../mfc/files-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Files](../mfc/files-in-mfc.md)
+
+

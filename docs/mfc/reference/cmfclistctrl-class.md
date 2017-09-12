@@ -1,5 +1,5 @@
 ---
-title: "CMFCListCtrl 클래스 | Microsoft 문서"
+title: CMFCListCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCListCtrl class
+- CMFCListCtrl [MFC], EnableMarkSortedColumn
+- CMFCListCtrl [MFC], EnableMultipleSort
+- CMFCListCtrl [MFC], GetHeaderCtrl
+- CMFCListCtrl [MFC], IsMultipleSort
+- CMFCListCtrl [MFC], OnCompareItems
+- CMFCListCtrl [MFC], OnGetCellBkColor
+- CMFCListCtrl [MFC], OnGetCellFont
+- CMFCListCtrl [MFC], OnGetCellTextColor
+- CMFCListCtrl [MFC], RemoveSortColumn
+- CMFCListCtrl [MFC], SetSortColumn
+- CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 caps.latest.revision: 29
 author: mikeblome
@@ -45,50 +55,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3a4c67b2d7ea2a5356f7c053403edf414319a928
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6270fa413b67b3237ee923d10217b168f0ddc33e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfclistctrl-class"></a>CMFCListCtrl 클래스
-`CMFCListCtrl` 클래스의 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 의 고급 헤더 컨트롤 기능을 지원 하 여 클래스는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
+# <a name="cmfclistctrl-class"></a>CMFCListCtrl Class
+The `CMFCListCtrl` class extends the functionality of [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class by supporting the advanced header control functionality of the [CMFCHeaderCtrl Class](../../mfc/reference/cmfcheaderctrl-class.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCListCtrl : public CListCtrl  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|다른 배경색으로 정렬 된 열을 표시할 수가 있습니다.|  
-|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|여러 정렬 모드를 활성화 합니다.|  
-|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|밑줄이 그어진된 헤더 컨트롤에 대 한 참조를 반환합니다.|  
-|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|목록 컨트롤에 여러 정렬 모드 인지 확인 합니다.|  
-|[CMFCListCtrl::OnCompareItems](#oncompareitems)|두 개의 목록 컨트롤 항목을 비교 해야 하는 경우에 프레임 워크에서 호출 합니다.|  
-|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|개별 셀의 배경색을 결정 해야 할 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|그리고 있는 셀에 대 한 글꼴을 얻어야 하는 경우에 프레임 워크에서 호출 합니다.|  
-|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|개별 셀의 텍스트 색을 결정 해야 할 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|정렬 된 열 목록에서 정렬 열을 제거합니다.|  
-|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|현재 정렬 된 열 및 정렬 순서를 설정합니다.|  
-|[CMFCListCtrl::Sort](#sort)|목록 컨트롤을 정렬합니다.|  
+|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Enables the ability to mark a sorted column with a different background color.|  
+|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Enables multiple sort mode.|  
+|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|Returns a reference to the underlined header control.|  
+|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|Checks if the list control is in multiple sort mode.|  
+|[CMFCListCtrl::OnCompareItems](#oncompareitems)|Called by the framework when it must compare two list control items.|  
+|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|Called by the framework when it must determine the background color of an individual cell.|  
+|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|Called by the framework when it must obtain the font for the cell being drawn.|  
+|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|Called by the framework when it must determine the text color of an individual cell.|  
+|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|Removes a sort column from the list of sorted columns.|  
+|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|Sets the current sorted column and the sort order.|  
+|[CMFCListCtrl::Sort](#sort)|Sorts the list control.|  
   
-## <a name="remarks"></a>주의  
- `CMFCListCtrl`에 두 가지 향상 된 기능과 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스입니다. 첫째, 열 정렬을 지 사용 가능한 옵션 헤더에 자동으로 정렬 화살표를 그리기를 나타냅니다. 둘째, 동시에 여러 열에 대해 정렬 하는 데이터를 지원 합니다.  
+## <a name="remarks"></a>Remarks  
+ `CMFCListCtrl` offers two enhancements to [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class. First, it indicates that column sorting is an available option by automatically drawing a sort arrow on the header. Second, it supports data sorting on multiple columns at the same time.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCListCtrl` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 목록 컨트롤을 만들, 열을 삽입, 항목을 삽입 한 항목의 텍스트를 설정 및 목록 컨트롤의 글꼴을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCListCtrl` class. The example shows how to create a list control, insert columns, insert items, set the text of an item, and set the font of the list control. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&25;](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_VisualStudioDemo #&26;](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -99,11 +109,11 @@ class CMFCListCtrl : public CListCtrl
   
  [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxlistctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
- 다른 배경색으로 정렬 된 열을 표시합니다.  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
+ Marks the sorted columns with a different background color.  
   
 ```  
 void EnableMarkSortedColumn(
@@ -111,58 +121,58 @@ void EnableMarkSortedColumn(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMark`  
- 다른 배경색을 사용 하도록 설정할지 여부를 결정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether to enable a different background color.  
   
  [in] `bRedraw`  
- 컨트롤을 즉시 다시 그리도록 여부를 결정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether to redraw the control immediately.  
   
-### <a name="remarks"></a>주의  
- `EnableMarkSortedColumn`메서드를 사용 하 여 `CDrawingManager::PixelAlpha` 정렬 된 열에 사용할 색을 계산 합니다. 선택한 색은 일반 배경색을 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ `EnableMarkSortedColumn` uses the method `CDrawingManager::PixelAlpha` to calculate what color to use for sorted columns. The color picked is based upon the regular background color.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
- 여러 열 목록 컨트롤에서 데이터의 행을 정렬할 수 있습니다.  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
+ Enables sorting the rows of data in the list control by multiple columns.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 여러 열 정렬 모드를 사용 하도록 설정할지 여부를 지정 하는 부울입니다.  
+ A Boolean that specifies whether to enable multiple column sort mode.  
   
-### <a name="remarks"></a>주의  
- 여러 열에 따라 정렬 사용 하도록 설정 하면 열 계층이 필요가 있습니다. 데이터 행을 기본 열에 의해 먼저 정렬 됩니다. 그런 다음 해당 하는 모든 값 우선 순위에 따라 각 후속 열 정렬 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When you enable sorting based on multiple columns, the columns do have a hierarchy. The rows of data will first be sorted by the primary column. Any equivalent values are then sorted by each subsequent column based on priority.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
- 헤더 컨트롤에 대 한 참조를 반환합니다.  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
+ Returns a reference to the header control.  
   
 ```  
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본에 대 한 참조 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlying [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) object.  
   
-### <a name="remarks"></a>주의  
- 목록 컨트롤에 대 한 헤더 컨트롤에 열 제목을 포함 하는 창입니다. 일반적으로 열 바로 위에 배치 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The header control for a list control is the window that contains the titles for the columns. It is usually positioned directly above the columns.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
- 목록 컨트롤의 현재에서 정렬을 지원 하는지를 여러 열에 대해 확인 합니다.  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
+ Checks whether the list control currently supports sorting on multiple columns.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`목록 컨트롤에 여러 정렬; 지 원하는 경우 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the list control supports multiple sort; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 경우는 [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md) 여러 정렬을 지 원하는 사용자 여러 열 목록 컨트롤에서 데이터를 정렬할 수 있습니다. 여러 정렬 기능을 사용 하려면 호출 [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)합니다.  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md) supports multiple sorting, the user can sort the data in the list control by multiple columns. To enable multiple sorting, call [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
- 프레임 워크는 두 개의 항목을 비교 하는 경우이 메서드를 호출 합니다.  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
+ The framework calls this method when it compares two items.  
   
 ```  
 virtual int OnCompareItems(
@@ -171,24 +181,24 @@ virtual int OnCompareItems(
     int iColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lParam1`  
- 비교할 첫 번째 항목입니다.  
+ The first item to compare.  
   
  [in] `lParam2`  
- 비교할 두 번째 항목입니다.  
+ The second item to compare.  
   
  [in] `iColumn`  
- 이 메서드는 정렬 된 열의 인덱스입니다.  
+ The index of the column that this method is sorting.  
   
-### <a name="return-value"></a>반환 값  
- 이 두 항목의 상대 위치를 나타내는 정수입니다. 음수 값을 첫 번째 항목 두 번째 앞에 야 양수 값 이면 첫 번째 항목 두 번째 따라야 하 고&0; 이면이 두 항목은 동일 나타냅니다.  
+### <a name="return-value"></a>Return Value  
+ An integer that indicates the relative position of the two items. A negative value indicates that the first item should precede the second, positive value indicates that the first item should follow the second, and zero means that the two items are equivalent.  
   
-### <a name="remarks"></a>주의  
- 기본 구현에서는 항상 0을 반환합니다. 정렬 알고리즘을 제공 하려면이 함수를 재정의 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation always returns 0. You must override this function to provide a sorting algorithm.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
- 프레임 워크는 개별 셀의 배경색을 결정 해야 할 때이 메서드를 호출 합니다.  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
+ The framework calls this method when it must determine the background color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellBkColor(
@@ -196,21 +206,21 @@ virtual COLORREF OnGetCellBkColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 문제의 셀의 행입니다.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 문제의 셀의 열입니다.  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>반환 값  
- A `COLOREF` 셀의 배경색을 지정 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the background color of the cell.  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 `OnGetCellBkColor` 제공된 된 입력된 매개 변수를 사용 하지 않는 한 대신 호출 `GetBkColor`합니다. 따라서 기본적으로 전체 목록 컨트롤에는 동일한 배경색을 갖게 됩니다. 재정의할 수 `OnGetCellBkColor` 별도 배경색으로 개별 셀을 표시 하는 파생된 클래스에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of `OnGetCellBkColor` does not use the supplied input parameters and instead simply calls `GetBkColor`. Therefore, by default, the whole list control will have the same background color. You can override `OnGetCellBkColor` in a derived class to mark individual cells with a separate background color.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
- 프레임 워크는 개별 셀에 대 한 글꼴 얻을 경우이 메서드를 호출 합니다.  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
+ The framework calls this method when it obtains the font for an individual cell.  
   
 ```  
 virtual HFONT OnGetCellFont(
@@ -219,24 +229,24 @@ virtual HFONT OnGetCellFont(
     DWORD dwData = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 문제의 셀의 행입니다.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 문제의 셀의 열입니다.  
+ The column of the cell in question.  
   
  [in] `dwData`  
- 사용자 정의 데이터입니다. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.  
+ User-defined data. The default implementation does not use this parameter.  
   
-### <a name="return-value"></a>반환 값  
- 현재 셀에 사용 되는 글꼴에 대 한 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the font that is used for the current cell.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 다음과 같이 반환 됩니다. `NULL`합니다. 목록 컨트롤의 셀 모두에 동일한 글꼴이 되어 있습니다. 다른 셀에 대 한 다양 한 글꼴을 제공 하기 위해이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this method returns `NULL`. All of the cells in a list control have the same font. Override this method in order to provide different fonts for different cells.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
- 프레임 워크는 개별 셀의 텍스트 색을 결정 해야 할 때이 메서드를 호출 합니다.  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
+ The framework calls this method when it must determine the text color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellTextColor(
@@ -244,35 +254,35 @@ virtual COLORREF OnGetCellTextColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 문제의 셀의 행입니다.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 문제의 셀의 열입니다.  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>반환 값  
- A `COLOREF` 셀의 텍스트 색을 지정 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the text color of the cell.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 다음과 같이 호출 됩니다. `GetTextColor` 에 관계 없이 입력된 매개 변수입니다. 전체 목록 컨트롤에는 동일한 텍스트 색을 갖게 됩니다. 재정의할 수 `OnGetCellTextColor` 개별 셀을 별도 텍스트 색을 표시 하는 파생된 클래스에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this method calls `GetTextColor` regardless of input parameters. The whole list control will have the same text color. You can override `OnGetCellTextColor` in a derived class to mark individual cells with a separate text color.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
- 정렬 된 열 목록에서 정렬 열을 제거합니다.  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
+ Removes a sort column from the list of sorted columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 제거할 열입니다.  
+ The column to remove.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 헤더 컨트롤에서 정렬 열을 제거합니다. 호출 [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method removes a sort column from the header control. It calls [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
- 현재 정렬 된 열 및 정렬 순서를 설정합니다.  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
+ Sets the current sorted column and the sort order.  
   
 ```  
 void SetSortColumn(
@@ -281,21 +291,21 @@ void SetSortColumn(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 열 정렬입니다.  
+ The column to sort.  
   
  [in] `bAscending`  
- 정렬 순서를 지정 하는 부울입니다.  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- 메서드가로 표시 된 열을 추가 하는지 여부를 지정 하는 부울 `iColumn` 정렬 열 목록에 있습니다.  
+ A Boolean that specifies whether the method adds the column indicated by `iColumn` to the list of sort columns.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 메서드를 사용 하 여 헤더 컨트롤에 입력된 매개 변수를 전달 [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method passes the input parameters to the header control by using the method [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
- 목록 컨트롤을 정렬합니다.  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
+ Sorts the list control.  
   
 ```  
 virtual void Sort(
@@ -304,18 +314,18 @@ virtual void Sort(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 열 정렬입니다.  
+ The column to sort.  
   
  [in] `bAscending`  
- 정렬 순서를 지정 하는 부울입니다.  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- 이 메서드가로 표시 된 열을 추가 하는지 여부를 지정 하는 부울 `iColumn` 정렬 열 목록에 있습니다.  
+ A Boolean that specifies whether this method adds the column indicated by `iColumn` to the list of sort columns.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

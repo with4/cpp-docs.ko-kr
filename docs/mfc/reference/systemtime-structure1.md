@@ -1,5 +1,5 @@
 ---
-title: "SYSTEMTIME 구조&1; | Microsoft 문서"
+title: SYSTEMTIME Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SYSTEMTIME structure
+- SYSTEMTIME structure [MFC]
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
 caps.latest.revision: 15
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 298b2673a3eb05525683f8269fcd415d5be1c80a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 16af580a7aea15814d1e45f4854d5ded946ebdf0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="systemtime-structure1"></a>SYSTEMTIME 구조&1;
-`SYSTEMTIME` 구조체는 날짜 및 월, 일, 연도, 요일, 시간, 분, 초 및 밀리초에 대 한 개별 멤버를 사용 하 여 시간을 나타냅니다.  
+# <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
+The `SYSTEMTIME` structure represents a date and time using individual members for the month, day, year, weekday, hour, minute, second, and millisecond.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _SYSTEMTIME {  
@@ -58,39 +58,39 @@ typedef struct _SYSTEMTIME {
 } SYSTEMTIME;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *wYear*  
- 현재 연도입니다.  
+ The current year.  
   
  *wMonth*  
- 현재 월입니다. 1 월은 1입니다.  
+ The current month; January is 1.  
   
  *wDayOfWeek*  
- 현재 요일을; 일요일은 0, 월요일은 1, 합니다.  
+ The current day of the week; Sunday is 0, Monday is 1, and so on.  
   
  *wDay*  
- 해당 월의 현재 날짜입니다.  
+ The current day of the month.  
   
  *wHour*  
- 현재 시간입니다.  
+ The current hour.  
   
  *wMinute*  
- 현재 분입니다.  
+ The current minute.  
   
  *wSecond*  
- 현재 초입니다.  
+ The current second.  
   
  *wMilliseconds*  
- 현재 밀리초입니다.  
+ The current millisecond.  
   
-## <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities #&39;](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** winbase.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winbase.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 
 

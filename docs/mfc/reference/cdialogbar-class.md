@@ -1,5 +1,5 @@
 ---
-title: "CDialogBar 클래스 | Microsoft 문서"
+title: CDialogBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog bars, Windows modeless dialog box
-- CDialogBar class
-- dialog boxes, modeless
+- CDialogBar [MFC], CDialogBar
+- CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 caps.latest.revision: 23
 author: mikeblome
@@ -38,47 +37,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 33dc5f5f4d345745a4b9435e725f411f4387e287
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3a292e7cf09871b4d22e60f4e81f6fedf13d3c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogbar-class"></a>CDialogBar 클래스
-컨트롤 막대에 Windows 모덜리스 대화 상자의 기능을 제공합니다.  
+# <a name="cdialogbar-class"></a>CDialogBar Class
+Provides the functionality of a Windows modeless dialog box in a control bar.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogBar : public CControlBar  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::CDialogBar](#cdialogbar)|`CDialogBar` 개체를 생성합니다.|  
+|[CDialogBar::CDialogBar](#cdialogbar)|Constructs a `CDialogBar` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::Create](#create)|Windows 대화 상자 막대를 만들고 연결 하는 `CDialogBar` 개체입니다.|  
+|[CDialogBar::Create](#create)|Creates a Windows dialog bar and attaches it to the `CDialogBar` object.|  
   
-## <a name="remarks"></a>주의  
- 대화 상자 막대 사용자 수 사이 이동 하는 표준 Windows 컨트롤을 포함 한다는 점에서 대화 상자를 유사 합니다. 다른 유사성을 나타내는 대화 상자 모음 대화 상자 템플릿에서 만들어집니다.  
+## <a name="remarks"></a>Remarks  
+ A dialog bar resembles a dialog box in that it contains standard Windows controls that the user can tab between. Another similarity is that you create a dialog template to represent the dialog bar.  
   
- 만들기 및 대화 상자 막대를 사용 하 여 비슷합니다 만들고 사용 하는 `CFormView` 개체입니다. 먼저 사용 하 여는 [대화 상자 편집기](../../windows/dialog-editor.md) 스타일 대화 상자 템플릿을 정의 하려면 **WS_CHILD** 및 기타 스타일 없음. 서식 파일에는 스타일 없어야 합니다. **WS_VISIBLE**합니다. 응용 프로그램 코드에서 호출을 만드는 생성자는 `CDialogBar` 개체를 만든 다음 호출 **만들기** 대화 상자 모음 창을 만들고에 연결 하는 `CDialogBar` 개체입니다.  
+ Creating and using a dialog bar is similar to creating and using a `CFormView` object. First, use the [dialog editor](../../windows/dialog-editor.md) to define a dialog template with the style **WS_CHILD** and no other style. The template must not have the style **WS_VISIBLE**. In your application code, call the constructor to construct the `CDialogBar` object, then call **Create** to create the dialog-bar window and attach it to the `CDialogBar` object.  
   
- 대 한 자세한 내용은 `CDialogBar`, 문서를 참조 하십시오 [대화 상자 모음](../../mfc/dialog-bars.md) 및 [기술 Note 31](../../mfc/tn031-control-bars.md), 컨트롤 막대입니다.  
+ For more information on `CDialogBar`, see the article [Dialog Bars](../../mfc/dialog-bars.md) and [Technical Note 31](../../mfc/tn031-control-bars.md), Control Bars.  
   
 > [!NOTE]
->  현재 릴리스에서 `CDialogBar` 개체는 Windows Forms 컨트롤을 호스팅할 수 없습니다. Visual c + +에서 Windows Forms 컨트롤에 대 한 자세한 내용은 참조 [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+>  In the current release, a `CDialogBar` object cannot host Windows Forms controls. For more information about Windows Forms controls in Visual C++, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,18 +88,18 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
- `CDialogBar` 개체를 생성합니다.  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
+ Constructs a `CDialogBar` object.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
- 지정 된 대화 상자 리소스 템플릿을 로드 `lpszTemplateName` 또는 `nIDTemplate`와 스타일을 설정 하는 연결 대화 상자 모음 창을 만듭니다는 `CDialogBar` 개체입니다.  
+##  <a name="create"></a>  CDialogBar::Create  
+ Loads the dialog-box resource template specified by `lpszTemplateName` or `nIDTemplate`, creates the dialog-bar window, sets its style, and associates it with the `CDialogBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -117,53 +116,53 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 부모에 대 한 포인터 `CWnd` 개체입니다.  
+ A pointer to the parent `CWnd` object.  
   
  `lpszTemplateName`  
- 이름에 대 한 포인터는 `CDialogBar` 개체의 대화 상자 리소스 템플릿.  
+ A pointer to the name of the `CDialogBar` object's dialog-box resource template.  
   
  `nStyle`  
- 도구 모음 스타일입니다. 지원 되는 추가 도구 모음 스타일은  
+ The toolbar style. Additional toolbar styles supported are:  
   
-- `CBRS_TOP`컨트롤 막대는 프레임 창 위쪽에 있습니다.  
+- `CBRS_TOP` Control bar is at top of the frame window.  
   
-- `CBRS_BOTTOM`컨트롤 막대는 프레임 창 아래쪽에 있습니다.  
+- `CBRS_BOTTOM` Control bar is at bottom of the frame window.  
   
-- `CBRS_NOALIGN`컨트롤 막대 부모 크기가 조정 될 때 변경 되지 됩니다.  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
-- `CBRS_TOOLTIPS`컨트롤 막대에는 도구 설명이 표시 됩니다.  
+- `CBRS_TOOLTIPS` Control bar displays tool tips.  
   
-- **CBRS_SIZE_DYNAMIC** 동적 컨트롤 막대입니다.  
+- **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
-- **CBRS_SIZE_FIXED** 컨트롤 막대 고정 됩니다.  
+- **CBRS_SIZE_FIXED** Control bar is fixed.  
   
-- **CBRS_FLOATING** 부동 컨트롤 막대입니다.  
+- **CBRS_FLOATING** Control bar is floating.  
   
-- `CBRS_FLYBY`상태 표시줄의 단추에 대 한 정보를 표시합니다.  
+- `CBRS_FLYBY` Status bar displays information about the button.  
   
-- **CBRS_HIDE_INPLACE** 컨트롤 막대 사용자에 게 표시 되지 않습니다.  
+- **CBRS_HIDE_INPLACE** Control bar is not displayed to the user.  
   
  `nID`  
- 컨트롤의 ID는 대화 상자 모음입니다.  
+ The control ID of the dialog bar.  
   
  `nIDTemplate`  
- 리소스 ID는 `CDialogBar` 개체의 대화 상자 템플릿.  
+ The resource ID of the `CDialogBar` object's dialog-box template.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 하는 경우는 `CBRS_TOP` 또는 `CBRS_BOTTOM` 맞춤 스타일 대화 상자 막대의 너비는 프레임 창 및 높이가 지정 하는 리소스의 `nIDTemplate`합니다. 지정 하는 경우는 `CBRS_LEFT` 또는 `CBRS_RIGHT` 맞춤 스타일 대화 상자 막대의 높이 프레임 창 및 너비가 지정 하는 리소스의 `nIDTemplate`합니다.  
+### <a name="remarks"></a>Remarks  
+ If you specify the `CBRS_TOP` or `CBRS_BOTTOM` alignment style, the dialog bar's width is that of the frame window and its height is that of the resource specified by `nIDTemplate`. If you specify the `CBRS_LEFT` or `CBRS_RIGHT` alignment style, the dialog bar's height is that of the frame window and its width is that of the resource specified by `nIDTemplate`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCMessageMaps #&13;](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 CTRLBARS](../../visual-cpp-samples.md)   
- [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CFormView 클래스](../../mfc/reference/cformview-class.md)   
- [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

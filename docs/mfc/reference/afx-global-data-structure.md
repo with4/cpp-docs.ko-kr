@@ -1,5 +1,5 @@
 ---
-title: "AFX_GLOBAL_DATA 구조체 | Microsoft Docs"
+title: AFX_GLOBAL_DATA Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- GLOBAL_DATA
+- AFX_GLOBAL_DATA
 dev_langs:
 - C++
 helpviewer_keywords:
-- AFX_GLOBAL_DATA structure
+- AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 caps.latest.revision: 30
@@ -35,127 +35,127 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 772cb67930d12a30f136b6075f833b079cebe320
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 구조체
-`AFX_GLOBAL_DATA` 구조는 프레임워크를 관리하거나 응용 프로그램의 모양과 동작을 사용자 지정하는 데 사용되는 필드 및 메서드를 포함합니다.  
+# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA Structure
+The `AFX_GLOBAL_DATA` structure contains fields and methods that are used to manage the framework or customize the appearance and behavior of your application.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct AFX_GLOBAL_DATA  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|`AFX_GLOBAL_DATA` 구조를 생성합니다.|  
-|`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|소멸자|  
+|`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Constructs a `AFX_GLOBAL_DATA` structure.|  
+|`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Afx_global_data:: cleanup](#cleanup)|브러시, 글꼴 및 DLL 등 프레임워크에 의해 할당되는 리소스를 해제합니다.|  
-|[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|지정된 점을 기준으로 지정된 각도만큼 회전하는 회전 변환을 만듭니다.|  
-|[Afx_global_data:: drawparentbackground](#drawparentbackground)|지정된 영역에 컨트롤 부모의 배경을 그립니다.|  
-|[Afx_global_data:: drawtextonglass](#drawtextonglass)|지정된 테마의 비주얼 스타일로 지정된 텍스트를 그립니다.|  
-|[Afx_global_data:: excludetag](#excludetag)|지정된 버퍼에서 지정된 XML 태그 쌍을 제거합니다.|  
-|[Afx_global_data:: getcolor](#getcolor)|지정된 사용자 인터페이스 요소의 현재 색을 검색합니다.|  
-|[AFX_GLOBAL_DATA::GetDirect2dFactory](#getdirect2dfactory)|글로벌 데이터에 저장된 `ID2D1Factory` 인터페이스로 포인터를 반환합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.|  
-|[Afx_global_data:: gethandcursor](#gethandcursor)|식별자가 `IDC_HAND`인 손 모양의 미리 정의된 커서를 검색합니다.|  
-|[Afx_global_data:: getitaskbarlist](#getitaskbarlist)|ITaskBarList 인터페이스에 대한 포인터를 만들고 글로벌 데이터에 저장합니다.|  
-|[Afx_global_data:: getitaskbarlist3](#getitaskbarlist3)|ITaskBarList3 인터페이스에 대한 포인터를 만들고 글로벌 데이터에 저장합니다.|  
-|[Afx_global_data:: getnonclientmetrics](#getnonclientmetrics)|최소화되지 않은 창의 비클라이언트 영역과 관련된 메트릭을 검색합니다.|  
-|[Afx_global_data:: getshellautohidebars](#getshellautohidebars)|셸 자동 숨기기 막대의 위치를 결정합니다.|  
-|[Afx_global_data:: gettextheight](#gettextheight)|현재 글꼴에서 텍스트 문자의 높이를 검색합니다.|  
-|[AFX_GLOBAL_DATA::GetWICFactory](#getwicfactory)|글로벌 데이터에 저장된 `IWICImagingFactory` 인터페이스로 포인터를 반환합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.|  
-|[AFX_GLOBAL_DATA::GetWriteFactory](#getwritefactory)|글로벌 데이터에 저장된 `IDWriteFactory` 인터페이스로 포인터를 반환합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.|  
-|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D`, `DirectWrite`및 `WIC` 팩터리를 초기화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.|  
-|[Afx_global_data:: is32biticons](#is32biticons)|미리 정의된 32비트 아이콘이 지원되는지 여부를 나타냅니다.|  
-|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D` 의 초기화 여부를 확인합니다.|  
-|[Afx_global_data:: isdwmcompositionenabled](#isdwmcompositionenabled)|Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 메서드를 호출하는 간단한 방법을 제공합니다.|  
-|[Afx_global_data:: ishighcontrastmode](#ishighcontrastmode)|이미지가 현재 고대비로 표시되는지 여부를 나타냅니다.|  
-|[Afx_global_data:: onsettingchange](#onsettingchange)|데스크톱 메뉴 애니메이션의 현재 상태 및 작업 표시줄 자동 숨기기 기능을 탐지합니다.|  
-|[Afx_global_data:: registerwindowclass](#registerwindowclass)|지정된 MFC 창 클래스를 등록합니다.|  
-|[Afx_global_data:: releasetaskbarrefs](#releasetaskbarrefs)|GetITaskbarList 및 GetITaskbarList3 메서드를 통해 얻은 인터페이스를 해제합니다.|  
-|[Afx_global_data:: resume](#resume)|Windows [테마 및 비주얼 스타일](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)을 지원하는 메서드에 액세스하는 내부 함수 포인터를 다시 초기화합니다.|  
-|[Afx_global_data:: setlayeredattrib](#setlayeredattrib)|Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 메서드를 호출하는 간단한 방법을 제공합니다.|  
-|[Afx_global_data:: setmenufont](#setmenufont)|지정된 논리 글꼴을 만듭니다.|  
-|[Afx_global_data:: shellcreateitemfromparsingname](#shellcreateitemfromparsingname)|구문 분석 이름에서 셸 항목 개체를 만들고 초기화합니다.|  
-|[Afx_global_data:: updatefonts](#updatefonts)|프레임워크에서 사용하는 논리 글꼴을 다시 초기화합니다.|  
-|[Afx_global_data:: updatesyscolors](#updatesyscolors)|프레임워크에서 사용하는 색, 색 농도, 브러시, 펜 및 이미지를 초기화합니다.|  
+|[AFX_GLOBAL_DATA::CleanUp](#cleanup)|Releases resources that are allocated by the framework, such as brushes, fonts, and DLLs.|  
+|[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Creates a rotation transformation that rotates by a specified angle around a specified point.|  
+|[AFX_GLOBAL_DATA::DrawParentBackground](#drawparentbackground)|Draws the background of a control's parent in the specified area.|  
+|[AFX_GLOBAL_DATA::DrawTextOnGlass](#drawtextonglass)|Draws the specified text in the visual style of the specified theme.|  
+|[AFX_GLOBAL_DATA::ExcludeTag](#excludetag)|Removes the specified XML tag pair from a specified buffer.|  
+|[AFX_GLOBAL_DATA::GetColor](#getcolor)|Retrieves the current color of the specified user interface element.|  
+|[AFX_GLOBAL_DATA::GetDirect2dFactory](#getdirect2dfactory)|Returns a pointer to the `ID2D1Factory` interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.|  
+|[AFX_GLOBAL_DATA::GetHandCursor](#gethandcursor)|Retrieves the predefined cursor that resembles a hand and whose identifier is `IDC_HAND`.|  
+|[AFX_GLOBAL_DATA::GetITaskbarList](#getitaskbarlist)|Creates and stores in the global data a pointer to ITaskBarList interface.|  
+|[AFX_GLOBAL_DATA::GetITaskbarList3](#getitaskbarlist3)|Creates and stores in the global data a pointer to ITaskBarList3 interface.|  
+|[AFX_GLOBAL_DATA::GetNonClientMetrics](#getnonclientmetrics)|Retrieves the metrics associated with the nonclient area of nonminimized windows.|  
+|[AFX_GLOBAL_DATA::GetShellAutohideBars](#getshellautohidebars)|Determines positions of Shell auto hide bars.|  
+|[AFX_GLOBAL_DATA::GetTextHeight](#gettextheight)|Retrieves the height of text characters in the current font.|  
+|[AFX_GLOBAL_DATA::GetWICFactory](#getwicfactory)|Returns a pointer to the `IWICImagingFactory` interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.|  
+|[AFX_GLOBAL_DATA::GetWriteFactory](#getwritefactory)|Returns a pointer to the `IDWriteFactory` interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.|  
+|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Initializes `D2D`, `DirectWrite`, and `WIC` factories. Call this method before the main window is initialized.|  
+|[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Indicates whether predefined 32-bit icons are supported.|  
+|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Determines whether the `D2D` was initialized.|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Provides a simple way to call the Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) method.|  
+|[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Indicates whether images are currently displayed in high contrast.|  
+|[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Detects the current state of the desktop's menu animation and taskbar autohide features.|  
+|[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registers the specified MFC window class.|  
+|[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Releases interfaces obtained through GetITaskbarList and GetITaskbarList3 methods.|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|Reinitializes internal function pointers that access methods that support Windows [themes and visual styles](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx).|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Provides a simple way to call the Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) method.|  
+|[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Creates the specified logical font.|  
+|[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Creates and initializes a Shell item object from a parsing name.|  
+|[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reintializes the logical fonts that are used by the framework.|  
+|[AFX_GLOBAL_DATA::UpdateSysColors](#updatesyscolors)|Initializes the colors, color depth, brushes, pens, and images that are used by the framework.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Afx_global_data:: enableaccessibilitysupport](#enableaccessibilitysupport)|Microsoft Active Accessibility 지원을 사용하거나 사용하지 않도록 설정합니다. Active Accessibility는 사용자 인터페이스 요소에 대한 정보를 노출하기 위한 신뢰할 수 있는 방법을 제공합니다.|  
-|[Afx_global_data:: isaccessibilitysupport](#isaccessibilitysupport)|Microsoft Active Accessibility 지원이 활성화되어 있는지 여부를 나타냅니다.|  
-|[Afx_global_data:: iswindowslayersupportavailable](#iswindowslayersupportavailable)|운영 체제가 계층화된 창을 지원하는지 여부를 나타냅니다.|  
+|[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Enables or disables Microsoft Active Accessibility support. Active Accessibility provides reliable methods for exposing information about user interface elements.|  
+|[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Indicates whether Microsoft Active Accessibility support is enabled.|  
+|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|Indicates whether the operating system supports layered windows.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Afx_global_data:: bisosalphablendingsupport](#bisosalphablendingsupport)|현재 운영 체제가 알파 혼합을 지원하는지 여부를 나타냅니다.|  
-|[Afx_global_data:: biswindows7](#biswindows7)|응용 프로그램이 Windows 7 운영 체제 이상에서 실행되고 있는지 여부를 나타냅니다.|  
-|[Afx_global_data:: clractivecaptiongradient](#clractivecaptiongradient)|활성 캡션의 그라데이션 색을 지정합니다. 도킹 창에 일반적으로 사용됩니다.|  
-|[Afx_global_data:: clrinactivecaptiongradient](#clrinactivecaptiongradient)|비활성 캡션의 그라데이션 색을 지정합니다. 도킹 창에 일반적으로 사용됩니다.|  
-|[Afx_global_data:: m_busebuiltin32biticons](#m_busebuiltin32biticons)|프레임워크가 미리 정의된 32비트 컬러 아이콘을 사용하는지, 아니면 더 낮은 해상도의 아이콘을 사용하는지를 나타냅니다.|  
-|[Afx_global_data:: m_busesystemfont](#m_busesystemfont)|시스템 글꼴이 메뉴, 도구 모음 및 리본에 사용되는지 여부를 나타냅니다.|  
-|[Afx_global_data:: m_hcurhand](#m_hcurhand)|손 모양 커서에 대한 핸들을 저장합니다.|  
-|[Afx_global_data:: m_hcurstretch](#m_hcurstretch)|가로 늘이기 커서에 대한 핸들을 저장합니다.|  
-|[Afx_global_data:: m_hcurstretchvert](#m_hcurstretchvert)|세로 늘이기 커서에 대한 핸들을 저장합니다.|  
-|[Afx_global_data:: m_hicontool](#m_hicontool)|도구 아이콘에 대한 핸들을 저장합니다.|  
-|[Afx_global_data:: m_nautohidetoolbarmargin](#m_nautohidetoolbarmargin)|맨 왼쪽 자동 숨기기 도구 모음에서 도킹 모음의 왼쪽까지의 오프셋을 지정합니다.|  
-|[Afx_global_data:: m_nautohidetoolbarspacing](#m_nautohidetoolbarspacing)|자동 숨기기 도구 모음 사이의 간격을 지정합니다.|  
-|[Afx_global_data:: m_ndragframethicknessdock](#m_ndragframethicknessdock)|도킹된 상태를 전달하는 데 사용되는 끌기 프레임의 두께를 지정합니다.|  
-|[Afx_global_data:: m_ndragframethicknessfloat](#m_ndragframethicknessfloat)|부동 상태를 전달하는 데 사용되는 끌기 프레임의 두께를 지정합니다.|  
+|[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indicates whether the current operating system supports alpha blending.|  
+|[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Indicates whether the application is being executed under Windows 7 OS or higher|  
+|[AFX_GLOBAL_DATA::clrActiveCaptionGradient](#clractivecaptiongradient)|Specifies gradient color of active caption. Generally used for docking panes.|  
+|[AFX_GLOBAL_DATA::clrInactiveCaptionGradient](#clrinactivecaptiongradient)|Specifies gradient color of inactive active caption. Generally used for docking panes.|  
+|[AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons](#m_busebuiltin32biticons)|Indicates whether the framework uses predefined 32-bit color icons or icons of a lower resolution.|  
+|[AFX_GLOBAL_DATA::m_bUseSystemFont](#m_busesystemfont)|Indicates whether a system font is used for menus, toolbars, and ribbons.|  
+|[AFX_GLOBAL_DATA::m_hcurHand](#m_hcurhand)|Stores the handle for the hand cursor.|  
+|[AFX_GLOBAL_DATA::m_hcurStretch](#m_hcurstretch)|Stores the handle for the horizontal stretch cursor.|  
+|[AFX_GLOBAL_DATA::m_hcurStretchVert](#m_hcurstretchvert)|Stores the handle for the vertical stretch cursor.|  
+|[AFX_GLOBAL_DATA::m_hiconTool](#m_hicontool)|Stores the handle for the tool icon.|  
+|[AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin](#m_nautohidetoolbarmargin)|Specifies the offset from the leftmost autohide toolbar to the left side of the docking bar.|  
+|[AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing](#m_nautohidetoolbarspacing)|Specifies the gap between autohide toolbars.|  
+|[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](#m_ndragframethicknessdock)|Specifies the thickness of the drag frame that is used to communicate the docked state.|  
+|[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](#m_ndragframethicknessfloat)|Specifies the thickness of the drag frame that is used to communicate the floating state.|  
   
-### <a name="remarks"></a>설명  
- `AFX_GLOBAL_DATA` 구조에서 대부분의 데이터는 응용 프로그램 시작 시 초기화됩니다.  
+### <a name="remarks"></a>Remarks  
+ Most of the data in the `AFX_GLOBAL_DATA` structure is initialized when your application starts.  
   
-### <a name="inheritance-hierarchy"></a>상속 계층  
+### <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `AFX_GLOBAL_DATA`   
   
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxglobals.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxglobals.h  
   
-### <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [구조체, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+### <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 
-## <a name="bisosalphablendingsupport"></a>Afx_global_data:: bisosalphablendingsupport
-운영 체제 알파 혼합을 지원 하는지 여부를 나타냅니다.  
+## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
+Indicates whether the operating system supports alpha blending.  
   
   
 ```  
 BOOL  bIsOSAlphaBlendingSupport;  
 ```  
   
-### <a name="remarks"></a>설명  
- `TRUE`알파 혼합은 지원; 나타냅니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates alpha blending is supported; otherwise, `FALSE`.  
   
 
-## <a name="cleanup"></a>Afx_global_data:: cleanup
-브러시, 글꼴 및 DLL 등 프레임워크에 의해 할당되는 리소스를 해제합니다.  
+## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
+Releases resources that are allocated by the framework, such as brushes, fonts, and DLLs.  
   
   
 ```  
 void CleanUp();
 ```  
-## <a name="d2d1makerotatematrix"></a>AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
-지정된 점을 기준으로 지정된 각도만큼 회전하는 회전 변환을 만듭니다.  
+## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
+Creates a rotation transformation that rotates by a specified angle around a specified point.  
   
   
 ```  
@@ -165,21 +165,21 @@ HRESULT D2D1MakeRotateMatrix(
     D2D1_MATRIX_3X2_F *matrix);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  `angle`  
- 시계 방향으로 회전 각도도 합니다.  
+ The clockwise rotation angle, in degrees.  
   
  `center`  
- 회전할에 대 한 점입니다.  
+ The point about which to rotate.  
   
  `matrix`  
- 이 메서드가 반환 될 때 새 회전 변환을 포함 되어 있습니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains the new rotation transformation. You must allocate storage for this parameter.  
   
-### <a name="return-value"></a>반환 값  
- 그렇지 않으면 성공 하면 s_ok이 고 또는 오류 값을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK if successful, or an error value otherwise.  
   
-## <a name="drawparentbackground"></a>Afx_global_data:: drawparentbackground
-지정된 영역에 컨트롤 부모의 배경을 그립니다.  
+## <a name="drawparentbackground"></a> AFX_GLOBAL_DATA::DrawParentBackground
+Draws the background of a control's parent in the specified area.  
   
   
 ```  
@@ -189,21 +189,21 @@ BOOL DrawParentBackground(
     LPRECT lpRect = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `pWnd`  
- 컨트롤의 창에 대한 포인터입니다.  
+ Pointer to a control's window.  
   
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `lpRect`  
- 그리는 영역 경계가 되는 사각형에 대한 포인터입니다. 기본값은 `NULL`입니다.  
+ Pointer to a rectangle that bounds the area to draw. The default value is `NULL`.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-## <a name="drawtextonglass"></a>Afx_global_data:: drawtextonglass
-지정된 테마의 비주얼 스타일로 지정된 텍스트를 그립니다.  
+## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
+Draws the specified text in the visual style of the specified theme.  
   
   
 ```  
@@ -219,77 +219,77 @@ BOOL DrawTextOnGlass(
     COLORREF clrText = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `hTheme`  
- 창의 테마 데이터에 대한 핸드 또는 `NULL`입니다. 이 매개 변수가 `NULL` 이 아니고 테마가 지원되는 경우 프레임워크는 지정된 테마를 사용하여 텍스트를 그립니다. 그렇지 않으면 테마를 사용하여 텍스트를 그리지 않습니다.  
+ Handle to the theme data of a window, or `NULL`. The framework uses the specified theme to draw the text if this parameter is not `NULL` and themes are supported. Otherwise, the framework does not use a theme to draw the text.  
   
- [를 만들려면](http://msdn.microsoft.com/library/windows/desktop/bb759821) OpenThemeData `HTHEME`메서드를 사용합니다.  
+ Use the [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) method to create an `HTHEME`.  
   
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `iPartId`  
- 원하는 텍스트 모양이 있는 컨트롤 파트입니다. 자세한 내용은 [파트 및 상태](http://msdn.microsoft.com/library/windows/desktop/bb773210)에 설명된 표의 파트 열을 참조하세요. 이 값이 0이면 텍스트가 기본 글꼴로 그려지거나 장치 컨텍스트로 선택된 글꼴로 그려집니다.  
+ The control part that has the desired text appearance. For more information, see the Parts column of the table in [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210). If this value is 0, the text is drawn in the default font, or a font selected into the device context.  
   
  [in] `iStateId`  
- 원하는 텍스트 모양이 있는 컨트롤 상태입니다. 자세한 내용은 [파트 및 상태](http://msdn.microsoft.com/library/windows/desktop/bb773210)에 설명된 표의 상태 열을 참조하세요.  
+ The control state that has the desired text appearance. For more information, see the States column of the table in [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
  [in] `strText`  
- 그릴 텍스트입니다.  
+ The text to draw.  
   
  [in] `rect`  
- 지정된 텍스트가 그려지는 영역의 경계입니다.  
+ The boundary of the area in which the specified text is drawn.  
   
  [in] `dwFlags`  
- 지정된 텍스트가 그려지는 방식을 지정하는 플래그의 비트 조합(OR)입니다.  
+ A bitwise combination (OR) of flags that specify how the specified text is drawn.  
   
- 경우는 `hTheme` 매개 변수는 `NULL` 테마 되지 지원 하 여 사용 하는 경우 또는 `nFormat` 의 매개 변수는 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) 메서드 유효한 플래그를 설명 합니다. 테마가 지원되는 경우에는 `dwFlags` DrawThemeTextEx [메서드의](http://msdn.microsoft.com/library/windows/desktop/bb773317) 매개 변수가 유효한 플래그를 설명합니다.  
+ If the `hTheme` parameter is `NULL` or if themes are not supported and enabled, the `nFormat` parameter of the [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) method describes the valid flags. If themes are supported, the `dwFlags` parameter of the [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) method describes the valid flags.  
   
  [in] `nGlowSize`  
- 지정된 텍스트를 그리기 전에 배경에 그려지는 글로우 효과의 크기입니다. 기본값은 0입니다.  
+ The size of a glow effect that is drawn on the background before drawing the specified text. The default value is 0.  
   
  [in] `clrText`  
- 지정된 텍스트가 그려지는 색입니다. 기본값은 기본 색입니다.  
+ The color in which the specified text is drawn. The default value is the default color.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`테마는 지정 된 텍스트를 그리는 데 사용 되는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a theme is used to draw the specified text; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- 테마는 응용 프로그램의 비주얼 스타일을 정의합니다. `hTheme` 매개 변수가 `NULL`인 경우, [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 메서드가 지원되지 않는 경우 또는 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 컴퍼지션을 사용할 수 없는 경우에는 텍스트를 그리는 데 테마가 사용되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ A theme defines the visual style of an application. A theme is not used to draw the text if the `hTheme` parameter is `NULL`, or if the [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) method is not supported, or if [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) composition is disabled.  
   
-### <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+### <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [파트 및 상태](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
  [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [DWM 컴퍼지션 설정 및 제어](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
+ [Enable and Control DWM Composition](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
-## <a name="enableaccessibilitysupport"></a>Afx_global_data:: enableaccessibilitysupport
-Microsoft Active Accessibility 지원을 사용하거나 사용하지 않도록 설정합니다.  
+## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
+Enables or disables Microsoft Active Accessibility support.  
   
   
 ```  
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `bEnable`  
-내게 필요한 옵션 지원을 활성화하려면  `TRUE`로 설정하고 비활성화하려면 `FALSE`로 설정합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to enable accessibility support; `FALSE` to disable accessibility support. The default value is `TRUE`.  
   
-### <a name="remarks"></a>설명  
- Active Accessibility는 프로그램의 방식을 향상시키는 COM 기반의 기술이고 Windows 운영 체제는 보조 기술 제품과 함께 작동합니다. 이는 사용자 인터페이스 요소에 대한 정보를 노출하기 위한 신뢰할 수 있는 메서드를 제공합니다. 그러나 이제부터 Microsoft UI 자동화라고 하는 새로운 내게 필요한 옵션 모델을 사용할 수 있습니다. 두 기술을 비교를 참조 하십시오. [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)합니다.  
+### <a name="remarks"></a>Remarks  
+ Active Accessibility is a COM-based technology that improves the way programs and the Windows operating system work together with assistive technology products. It provides reliable methods for exposing information about user interface elements. However, a newer accessibility model called Microsoft UI Automation is now available. For a comparison of the two technologies, see [UI Automation and Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
- 사용 하 여는 [afx_global_data:: isaccessibilitysupport](#isaccessibilitysupport) 메서드를 Microsoft Active Accessibility를 지원 설정 되어 있는지 확인 합니다.  
+ Use the [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) method to determine whether Microsoft Active Accessibility support is enabled.  
   
  
-### <a name="see-also"></a>참고 항목  
- [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
- [Afx_global_data:: isaccessibilitysupport](#isaccessibilitysupport)
+### <a name="see-also"></a>See Also  
+ [UI Automation and Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
+ [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
-## <a name="excludetag"></a>Afx_global_data:: excludetag
-지정된 버퍼에서 지정된 XML 태그 쌍을 제거합니다.  
+## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
+Removes the specified XML tag pair from a specified buffer.  
   
   
 ```  
@@ -300,28 +300,28 @@ BOOL ExcludeTag(
     BOOL bIsCharsList = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `strBuffer`  
- 텍스트 버퍼입니다.  
+ A buffer of text.  
   
  [in] `lpszTag`  
- 한 쌍의 태그 및 닫는 XML 태그의 이름입니다.  
+ The name of a pair of opening and closing XML tags.  
   
  [out] `strTag`  
- 이 메서드가 반환 될 때는 `strTag` 사이 있는 여는 태그와 닫는 XML 태그에서 명명 된 텍스트를 포함 하는 매개 변수는 `lpszTag` 매개 변수입니다. 결과에서 선행 또는 후행 공백이 잘립니다.  
+ When this method returns, the `strTag` parameter contains the text that is between the opening and closing XML tags that are named by the `lpszTag` parameter. Any leading or trailing whitespace is trimmed from the result.  
   
  [in] `bIsCharsList`  
- `TRUE`이스케이프 문자에 대 한 기호를 변환 하는 `strTag` 실제 이스케이프 문자로; 매개 변수 `FALSE` 는 변환을 수행할 수 없습니다. 기본값은 `FALSE`합니다. 자세한 내용은 설명 부분을 참조하세요.  
+ `TRUE` to convert symbols for escape characters in the `strTag` parameter into actual escape characters; `FALSE` not to perform the conversion.The default value is `FALSE`. For more information, see Remarks.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- XML 태그 쌍 태그 및 닫는 태그를 시작 및 실행 하는 지정 된 버퍼에서 텍스트의 끝을 나타내는 이름이 구성 됩니다. `strBuffer` 는 버퍼를 지정 하는 매개 변수 및 `lpszTag` 매개 변수 XML 태그의 이름을 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ An XML tag pair consists of named opening and closing tags that indicate the start and end of a run of text in the specified buffer. The `strBuffer` parameter specifies the buffer, and the `lpszTag` parameter specifies the name of the XML tags.  
   
- 다음 표에 지정 된 버퍼에서 이스케이프 문자 집합을 인코딩할 기호를 사용 합니다. 지정 `TRUE` 에 대 한는 `bIsCharsList` 의 기호를 변환 하는 매개 변수는 `strTag` 실제 이스케이프 문자에 대 한 매개 변수. 다음 표에서 사용 하 여는 [_T()](../../c-runtime-library/data-type-mappings.md) 매크로를 기호를 지정 하 고 문자열을 이스케이프 합니다.  
+ Use the symbols in the following table to encode a set of escape characters in the specified buffer. Specify `TRUE` for the `bIsCharsList` parameter to convert the symbols in the `strTag` parameter into actual escape characters. The following table uses the [_T()](../../c-runtime-library/data-type-mappings.md) macro to specify the symbol and escape character strings.  
   
-|기호|이스케이프 문자|  
+|Symbol|Escape character|  
 |------------|----------------------|  
 |_T("\\\t")|_T("\t")|  
 |_T("\\\n")|_T("\n")|  
@@ -331,110 +331,110 @@ BOOL ExcludeTag(
 |_T("GT")|_T(">")|  
 |_T("AMP")|_T("&")|  
   
-## <a name="getcolor"></a>Afx_global_data:: getcolor
-지정된 사용자 인터페이스 요소의 현재 색을 검색합니다.  
+## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
+Retrieves the current color of the specified user interface element.  
   
   
 ```  
 COLORREF GetColor(int nColor);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `nColor`  
- 색을 검색 하는 사용자 인터페이스 요소를 지정 하는 값입니다. 유효한 값의 목록에 대 한 참조는 `nIndex` 의 매개 변수는 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 메서드.  
+ A value that specifies a user interface element whose color is retrieved. For a list of valid values, see the `nIndex` parameter of the [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) method.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 사용자 인터페이스 요소의 RGB 색상 값입니다. 자세한 내용은 설명 부분을 참조하세요.  
+### <a name="return-value"></a>Return Value  
+ The RGB color value of the specified user interface element. For more information, see Remarks.  
   
-### <a name="remarks"></a>설명  
- 경우는 `nColor` 매개 변수가 범위를 벗어나면 반환 값은 0입니다. 0이 유효한 RGB 값 이기도 하기 때문에 시스템 색이 현재 운영 체제에서 지원 되는지 여부를 확인 하려면이 메서드를 사용할 수 없습니다. 대신를 사용 하 여는 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) 반환 하는 메서드 `NULL` 색이 지원 되지 않는 경우.  
+### <a name="remarks"></a>Remarks  
+ If the `nColor` parameter is out of range, the return value is zero. Because zero is also a valid RGB value, you cannot use this method to determine whether a system color is supported by the current operating system. Instead, use the [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) method, which returns `NULL` if the color is not supported.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>See Also  
 
- [GetSysColor 함수](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [GetSysColor Function](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
 
-## <a name="getdirect2dfactory"></a>AFX_GLOBAL_DATA::GetDirect2dFactory
- 글로벌 데이터에 저장 된 ID2D1Factory 인터페이스에 대 한 포인터를 반환 합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.  
+## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
+ Returns a pointer to the ID2D1Factory interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.  
   
   
 ```  
 ID2D1Factory* GetDirect2dFactory();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 팩터리 생성에 성공 하면 또는 생성 하지 못한 경우 NULL 경우 ID2D1Factory 인터페이스 또는 현재 운영 체제에 대 한 포인터 D2D 지원이 필요는 없습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to ID2D1Factory interface if creation of a factory succeeds, or NULL if creation fails or current Operation System don't have D2D support.  
   
-## <a name="gethandcursor"></a>Afx_global_data:: gethandcursor
-식별자가 `IDC_HAND`인 손 모양의 미리 정의된 커서를 검색합니다.  
+## <a name="gethandcursor"></a>  AFX_GLOBAL_DATA::GetHandCursor
+Retrieves the predefined cursor that resembles a hand and whose identifier is `IDC_HAND`.  
   
   
 ```  
 HCURSOR GetHandCursor();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 손 모양 커서의 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ The handle of the hand cursor.  
 
-## <a name="getnonclientmetrics"></a>Afx_global_data:: getnonclientmetrics
-최소화되지 않은 창의 비클라이언트 영역과 관련된 메트릭을 검색합니다.  
+## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
+Retrieves the metrics associated with the nonclient area of nonminimized windows.  
   
   
 ```  
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in, out] `info`  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) 최소화 되지 않은 창의 비클라이언트 영역와 관련 된 확장 가능한 메트릭을 포함 하는 구조입니다.  
+ A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) structure that contains the scalable metrics associated with the nonclient area of a nonminimized window.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.  
  
   
-### <a name="see-also"></a>참고 항목   
- [NONCLIENTMETRICS 구조](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+### <a name="see-also"></a>See Also   
+ [NONCLIENTMETRICS Structure](http://msdn.microsoft.com/library/windows/desktop/ff729175)
 
-## <a name="gettextheight"></a>Afx_global_data:: gettextheight
- 현재 글꼴에서 텍스트 문자의 높이를 검색합니다.  
+## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
+ Retrieves the height of text characters in the current font.  
   
   
 ```  
 int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `bHorz`  
- `TRUE`텍스트를 가로로; 실행 될 때 문자의 높이 검색 하려면 `FALSE` 텍스트 실행을 세로로 하는 경우 문자의 높이 검색 하도록 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to retrieve the height of characters when text runs horizontally; `FALSE` to retrieve the height of characters when text runs vertically. The default value is `TRUE`.  
   
-### <a name="return-value"></a>반환 값  
- 해당 디센더를 해당 어센더에서 측정 된 현재 글꼴의 높이입니다.  
+### <a name="return-value"></a>Return Value  
+ The height of the current font, which is measured from its ascender to its descender.  
   
-## <a name="getwicfactory"></a>AFX_GLOBAL_DATA::GetWICFactory
-글로벌 데이터에 저장 되어 있는 IWICImagingFactory 인터페이스에 대 한 포인터를 반환 합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.  
+## <a name="getwicfactory"></a> AFX_GLOBAL_DATA::GetWICFactory
+Returns a pointer to the IWICImagingFactory interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.  
   
   
 ```  
 IWICImagingFactory* GetWICFactory();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 팩터리 생성에 성공 하면 또는 생성 하지 못한 경우 NULL 경우 IWICImagingFactory 인터페이스 또는 현재 운영 체제에 대 한 포인터 WIC 지원이 필요는 없습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IWICImagingFactory interface if creation of a factory succeeds, or NULL if creation fails or current Operation System don't have WIC support.  
   
-## <a name="getwritefactory"></a>AFX_GLOBAL_DATA::GetWriteFactory
-글로벌 데이터에 저장 된 IDWriteFactory 인터페이스에 대 한 포인터를 반환 합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.  
+## <a name="getwritefactory"></a> AFX_GLOBAL_DATA::GetWriteFactory
+Returns a pointer to the IDWriteFactory interface that is stored in the global data. If the interface is not initialized, it is created and has the default parameters.  
   
   
 ```  
 IDWriteFactory* GetWriteFactory();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 팩터리 생성에 성공 하면 또는 생성 하지 못한 경우 NULL 경우 IDWriteFactory 인터페이스 또는 현재 운영 체제에 대 한 포인터 DirectWrite 지원이 필요는 없습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IDWriteFactory interface if creation of a factory succeeds, or NULL if creation fails or current Operation System don't have DirectWrite support.  
  
-## <a name="initd2d"></a>AFX_GLOBAL_DATA::InitD2D
-D2D, DirectWrite, 및 WIC 팩터리를 초기화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.  
+## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
+Initializes D2D, DirectWrite, and WIC factories. Call this method before the main window is initialized.  
   
   
 ```  
@@ -443,18 +443,18 @@ BOOL InitD2D(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  `d2dFactoryType`  
- D2d 및 생성 하는 리소스의 스레딩 모델입니다.  
+ The threading model of the D2D factory and the resources it creates.  
   
  `writeFactoryType`  
- 쓰기 팩터리 개체를 공유 또는 격리 됩니다 있는지 여부를 지정 하는 값  
+ A value that specifies whether the write factory object will be shared or isolated  
   
-### <a name="return-value"></a>반환 값  
- TRUE를 반환 하는 팩터리 했는데 intilalizrd, FALSE-그렇지 않은 경우  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE if the factories were intilalizrd, FALSE - otherwise  
   
-## <a name="is32biticons"></a>Afx_global_data:: is32biticons
-미리 정의된 32비트 아이콘이 지원되는지 여부를 나타냅니다.  
+## <a name="is32biticons"></a> AFX_GLOBAL_DATA::Is32BitIcons
+Indicates whether predefined 32-bit icons are supported.  
   
   
 ```  
@@ -463,235 +463,235 @@ BOOL Is32BitIcons() const;
  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`32 비트를 미리 정의 된 아이콘 사용할 수 있습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if predefined 32-bit icons are supported; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- 이 메서드가 반환 `TRUE` 프레임 워크 지원 아이콘을 기본 제공 하는 32 비트, 및 16 비트 / 픽셀 이상의 운영 체제에서 지원 되는 경우 않으며 고대비에 이미지가 표시 되지 않는 경우.  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` if the framework supports 32-bit built-in icons, and if the operating system supports 16 bits per pixel or more, and if images are not displayed in high contrast.  
   
-## <a name="isaccessibilitysupport"></a>Afx_global_data:: isaccessibilitysupport
-Microsoft Active Accessibility 지원이 활성화되어 있는지 여부를 나타냅니다.  
+## <a name="isaccessibilitysupport"></a> AFX_GLOBAL_DATA::IsAccessibilitySupport
+Indicates whether Microsoft Active Accessibility support is enabled.  
   
   
 ```  
 BOOL IsAccessibilitySupport() const; 
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`내게 필요한 옵션 지원을 활성화 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if accessibility support is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- Microsoft Active Accessibility 했던 액세스할 수 있는 응용 프로그램을 만들기 위한 이전 솔루션입니다. Microsoft UI 자동화 보조 기술 제품의 요구를 해결 하기 위한 용도가 및 자동 테스트 도구는 Microsoft Windows에 대 한 새로운 접근성 모델로 합니다.   
+### <a name="remarks"></a>Remarks  
+ Microsoft Active Accessibility was the earlier solution for making applications accessible. Microsoft UI Automation is the new accessibility model for Microsoft Windows and is intended to address the needs of assistive technology products and automated testing tools.   
   
- 사용 하 여는 [afx_global_data:: enableaccessibilitysupport](#enableaccessibilitysupport) 메서드를 사용 하도록 설정 하거나 Active Accessibility를 지원 하지 않도록 설정 합니다.  
+ Use the [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) method to enable or disable Active Accessibility support.  
   
 
-### <a name="see-also"></a>참고 항목  
- [UI 자동화 및 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
+### <a name="see-also"></a>See Also  
+ [UI Automation and Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
-## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
- D2D 초기화 되었는지 여부를 결정 합니다.  
+## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
+ Determines whether the D2D was initialized  
   
   
 ```  
 BOOL IsD2DInitialized() const; 
 ```  
   
-### <a name="return-value"></a>반환 값  
- D2D 초기화 되었습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if D2D was initialized; otherwise FALSE.  
   
-## <a name="isdwmcompositionenabled"></a>Afx_global_data:: isdwmcompositionenabled
-Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 메서드를 호출하는 간단한 방법을 제공합니다.  
+## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
+Provides a simple way to call the Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) method.  
   
   
 ```  
 BOOL IsDwmCompositionEnabled();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 컴퍼지션을 사용 하도록 설정 되지 않았으면, `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) composition is enabled; otherwise, `FALSE`.  
   
-### <a name="see-also"></a>참고 항목    
- [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [DWM 컴퍼지션 설정 및 제어](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+### <a name="see-also"></a>See Also    
+ [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
+ [Enable and Control DWM Composition](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
-## <a name="ishighcontrastmode"></a>Afx_global_data:: ishighcontrastmode
- 이미지가 현재 고대비로 표시되는지 여부를 나타냅니다.    
+## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
+ Indicates whether images are currently displayed in high contrast.    
 ```  
 BOOL IsHighContrastMode() const; 
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이미지 검정색 또는 흰색 고대비 모드에 현재 표시 되어 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if images are currently displayed in black or white high contrast mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- 검은색 고대비 모드에서 생성할 빛 가장자리 흰색 되며 백그라운드 검은색입니다. 흰색 고대비 모드에서 생성할 빛 가장자리는 검은색 및 배경은 흰색입니다.  
+### <a name="remarks"></a>Remarks  
+ In black high contrast mode, edges facing the light are white and the background is black. In white high contrast mode, edges facing the light are black and the background is white.  
   
-## <a name="iswindowslayersupportavailable"></a>Afx_global_data:: iswindowslayersupportavailable
-운영 체제가 계층화된 창을 지원하는지 여부를 나타냅니다.  
+## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+Indicates whether the operating system supports layered windows.  
   
   
 ```  
 BOOL IsWindowsLayerSupportAvailable() const; 
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`계층된 창을 지원 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if layered windows are supported; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>설명  
- 계층된 창을 지 원하는 경우 *스마트 도킹* 표식 계층된 창을 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ If layered windows are supported, *smart docking* markers use layered windows.  
   
-## <a name="m_busebuiltin32biticons"></a>Afx_global_data:: m_busebuiltin32biticons
-프레임워크가 미리 정의된 32비트 컬러 아이콘을 사용하는지, 아니면 더 낮은 해상도의 아이콘을 사용하는지를 나타냅니다.  
+## <a name="m_busebuiltin32biticons"></a> AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
+Indicates whether the framework uses predefined 32-bit color icons or icons of a lower resolution.  
   
   
 ```  
 BOOL  m_bUseBuiltIn32BitIcons;  
 ```  
   
-### <a name="remarks"></a>설명  
- `TRUE`프레임 워크; 32 비트 색 아이콘을 사용 하도록 지정 `FALSE` 더 낮은 해상도 아이콘을 지정 합니다. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자에는이 멤버를 초기화 합니다. `TRUE`합니다.  
+### <a name="remarks"></a>Remarks  
+ `TRUE` specifies that the framework use 32-bit color icons; `FALSE` specifies lower resolution icons. The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to `TRUE`.  
   
- 이 멤버는 응용 프로그램 시작 시 설정 되어야 합니다.  
+ This member must be set at application startup.  
   
-## <a name="m_busesystemfont"></a>Afx_global_data:: m_busesystemfont
-시스템 글꼴이 메뉴, 도구 모음 및 리본에 사용되는지 여부를 나타냅니다.  
+## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
+Indicates whether a system font is used for menus, toolbars, and ribbons.  
   
   
 ```  
 BOOL m_bUseSystemFont;  
 ```  
   
-### <a name="remarks"></a>설명  
- `TRUE`시스템 글꼴;을 사용 하도록 지정 그렇지 않으면 `FALSE`합니다. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자에는이 멤버를 초기화 합니다. `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ `TRUE` specifies to use a system font; otherwise, `FALSE`. The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to `FALSE`.  
   
- 사용 하는 유일한 방법은 글꼴을 결정 하기 위해 프레임 워크에 대 한 않습니다이 멤버를 테스트 합니다. `AFX_GLOBAL_DATA::UpdateFonts` 메서드는 또한 기본 및 대체 글꼴을 메뉴, 도구 모음 및 리본에 적용할 수는 어떤 비주얼 스타일을 결정을 테스트 합니다.  
+ Testing this member is not the only way for the framework to determine the font to use. The `AFX_GLOBAL_DATA::UpdateFonts` method also tests default and alternative fonts to determine what visual styles are available to be applied to menus, toolbars, and ribbons.  
   
-## <a name="m_hcurhand"></a>Afx_global_data:: m_hcurhand
-손 모양 커서에 대한 핸들을 저장합니다.  
+## <a name="m_hcurhand"></a> AFX_GLOBAL_DATA::m_hcurHand
+Stores the handle for the hand cursor.  
   
   
 ```  
 HCURSOR m_hcurHand;  
 ```  
   
-## <a name="m_hcurstretch"></a>Afx_global_data:: m_hcurstretch
-가로 늘이기 커서에 대한 핸들을 저장합니다.  
+## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
+Stores the handle for the horizontal stretch cursor.  
   
   
 ```  
 HCURSOR m_hcurStretch;  
 ```  
 
-## <a name="m_hcurstretchvert"></a>Afx_global_data:: m_hcurstretchvert
-세로 늘이기 커서에 대한 핸들을 저장합니다.  
+## <a name="m_hcurstretchvert"></a> AFX_GLOBAL_DATA::m_hcurStretchVert
+Stores the handle for the vertical stretch cursor.  
   
   
 ```  
 HCURSOR m_hcurStretchVert;  
 ```  
   
-## <a name="m_hicontool"></a>Afx_global_data:: m_hicontool
-도구 아이콘에 대한 핸들을 저장합니다.  
+## <a name="m_hicontool"></a> AFX_GLOBAL_DATA::m_hiconTool
+Stores the handle for the tool icon.  
   
   
 ```  
 HICON m_hiconTool;  
 ```  
-## <a name="m_nautohidetoolbarmargin"></a>Afx_global_data:: m_nautohidetoolbarmargin
-도킹 창의 왼쪽 맨 왼쪽 autohide 도구 모음에서 오프셋을 지정합니다.  
+## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
+Specifies the offset from the leftmost autohide toolbar to the left side of the dock bar.  
   
   
 ```  
 int  m_nAutoHideToolBarMargin;  
 ```  
   
-### <a name="remarks"></a>설명  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 4 픽셀에이 멤버를 초기화 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to 4 pixels.  
   
-## <a name="m_nautohidetoolbarspacing"></a>Afx_global_data:: m_nautohidetoolbarspacing
-자동 숨기기 도구 모음 사이의 간격을 지정합니다.  
+## <a name="m_nautohidetoolbarspacing"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
+Specifies the gap between autohide toolbars.  
   
   
 ```  
 int   m_nAutoHideToolBarSpacing;  
 ```  
   
-### <a name="remarks"></a>설명  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 14 픽셀이 멤버를 초기화 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to 14 pixels.  
   
-## <a name="m_ndragframethicknessdock"></a>Afx_global_data:: m_ndragframethicknessdock
+## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
-도킹 된 상태를 표시 하는 데 사용 된 끌어서 프레임의 두께 지정 합니다.  
+Specifies the thickness of the drag frame that is used to indicate the docked state.  
   
   
 ```  
 int  m_nDragFrameThicknessDock;  
 ```  
   
-### <a name="remarks"></a>설명  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자를 3 픽셀로이 멤버를 초기화 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to 3 pixels.  
   
-## <a name="m_ndragframethicknessfloat"></a>Afx_global_data:: m_ndragframethicknessfloat
-부동 상태를 표시 하는 데 사용 된 끌어서 프레임의 두께 지정 합니다.  
+## <a name="m_ndragframethicknessfloat"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
+Specifies the thickness of the drag frame that is used to indicate the floating state.  
   
   
 ```  
 int  m_nDragFrameThicknessFloat;  
 ```  
   
-### <a name="remarks"></a>설명  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 생성자 4 픽셀에이 멤버를 초기화 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructor initializes this member to 4 pixels.  
   
-## <a name="onsettingchange"></a>Afx_global_data:: onsettingchange
-데스크톱 메뉴 애니메이션의 현재 상태 및 작업 표시줄 자동 숨기기 기능을 탐지합니다.  
+## <a name="onsettingchange"></a> AFX_GLOBAL_DATA::OnSettingChange
+Detects the current state of the desktop's menu animation and taskbar autohide features.  
   
   
 ```  
 void OnSettingChange();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 사용자의 데스크톱의 특정 한 특성의 상태에 프레임 워크 변수를 설정합니다. 이 메서드는 작업 자동 숨기기 기능 표시줄, 메뉴 페이드 메뉴 애니메이션의 현재 상태를 검색 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sets framework variables to the state of certain attributes of the user's desktop. This method detects the current state of the menu animation, menu fade, and task bar autohide features.  
   
-## <a name="registerwindowclass"></a>Afx_global_data:: registerwindowclass
-지정된 MFC 창 클래스를 등록합니다.  
+## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
+Registers the specified MFC window class.  
   
   
 ```  
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `lpszClassNamePrefix`  
- 등록 하는 창 클래스의 이름입니다.  
+ The name of the window class to register.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공 하면 등록 된 클래스의 정규화 된 이름 그렇지 않은 경우는 [리소스 예외](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)합니다.  
+### <a name="return-value"></a>Return Value  
+ The qualified name of the registered class if this method succeeds; otherwise, a [resource exception](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
-### <a name="remarks"></a>설명  
- 반환 값은 콜론으로 구분 된 목록입니다는 `lpszClassNamePrefix` 매개 변수 문자열 및 현재 응용 프로그램 인스턴스의; 핸들의 16 진수 텍스트로 표시 됩니다. 응용 프로그램 커서 식별자가 IDC_ARROW; 및 배경 브러시 화살표 커서를 합니다. MFC 창 클래스 등록 하는 방법에 대 한 자세한 내용은 참조 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)합니다.  
+### <a name="remarks"></a>Remarks  
+ The return value is a colon-delimited list of the `lpszClassNamePrefix` parameter string, and the hexadecimal text representations of the handles of the current application instance; the application cursor, which is the arrow cursor whose identifier is IDC_ARROW; and the background brush. For more information about registering MFC window classes, see [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
-### <a name="see-also"></a>참고 항목    
+### <a name="see-also"></a>See Also    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
  [AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
 
-## <a name="resume"></a>Afx_global_data:: resume
- Windows 테마 및 비주얼 스타일을 지 원하는 메서드에 액세스 하는 내부 함수 포인터를 다시 초기화 합니다. 
+## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
+ Reinitializes internal function pointers that access methods that support Windows themes and visual styles. 
   
   
 ```  
 BOOL Resume();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다. 디버그 모드에서이 메서드는이 메서드는 성공 하는 경우 어설션 합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`. In debug mode, this method asserts if this method is unsuccessful.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 프레임 워크 받을 때 호출 됩니다는 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called when the framework receives the [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) message.  
   
-## <a name="setlayeredattrib"></a>Afx_global_data:: setlayeredattrib
-Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 메서드를 호출하는 간단한 방법을 제공합니다.  
+## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
+Provides a simple way to call the Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) method.  
   
   
 ```  
@@ -702,28 +702,28 @@ BOOL SetLayeredAttrib(
     DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `hwnd`  
- 계층화된 창을 처리합니다.  
+ Handle to the layered window.  
   
  [in] `crKey`  
- 투명 색상 키입니다는 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) 계층화 된 창을 구성 하려면 사용 합니다.  
+ The transparency color key that the [Desktop Window Manager](http://msdn.microsoft.com/library/windows/desktop/aa969540) uses to compose the layered window.  
   
  [in] `bAlpha`  
- 계층화된 창의 불투명도를 기술하는 데 사용되는 알파 값입니다.  
+ The alpha value that is used to describe the opacity of the layered window.  
   
  [in] `dwFlags`  
- 사용할 메서드 매개 변수를 지정하는 플래그의 비트 조합(OR)입니다. `crKey` 매개 변수를 투명 색상으로 사용하려면 LWA_COLORKEY를 지정합니다. `bAlpha` 매개 변수를 사용해서 계층화된 창의 불투명도를 결정하려면 LWA_ALPHA를 지정합니다.  
+ A bitwise combination (OR) of flags that specify which method parameters to use. Specify LWA_COLORKEY to use the `crKey` parameter as the transparency color. Specify LWA_ALPHA to use the `bAlpha` parameter to determine the opacity of the layered window.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.   
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.   
  
-### <a name="see-also"></a>참고 항목   
+### <a name="see-also"></a>See Also   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
 
-## <a name="setmenufont"></a>Afx_global_data:: setmenufont
-지정된 논리 글꼴을 만듭니다.  
+## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
+Creates the specified logical font.  
   
   
 ```  
@@ -732,105 +732,105 @@ BOOL SetMenuFont(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  [in] `lpLogFont`  
- 글꼴의 특성을 포함 하는 구조에 대 한 포인터입니다.  
+ Pointer to a structure that contains the attributes of a font.  
   
  [in] `bHorz`  
- `TRUE`텍스트 가로; 실행 되도록 지정 하려면 `FALSE` 텍스트 세로 방향으로 실행 되도록 지정 하려면.  
+ `TRUE` to specify that the text runs horizontally; `FALSE` to specify that the text runs vertically.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다. 디버그 모드에서이 메서드는이 메서드는 성공 하는 경우 어설션 합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`. In debug mode, this method asserts if this method is unsuccessful.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 가로 일반 글꼴는 밑줄이 그어진된 글꼴 만들고 굵은 글꼴을 사용 되는 기본 메뉴 항목 합니다. 이 메서드는 필요에 따라 정기적인 세로 방향 글꼴을 만듭니다. 논리 글꼴에 대 한 자세한 내용은 참조 [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method creates a horizontal regular font, an underlined font, and a bold font that is used in default menu items. This method optionally creates a regular vertical font. For more information about logical fonts, see [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
   
-## <a name="updatefonts"></a>Afx_global_data:: updatefonts
-프레임워크에서 사용하는 논리 글꼴을 다시 초기화합니다.  
+## <a name="updatefonts"></a> AFX_GLOBAL_DATA::UpdateFonts
+Reintializes the logical fonts that are used by the framework.  
   
   
 ```  
 void UpdateFonts();
 ```  
   
-### <a name="remarks"></a>설명  
- 논리 글꼴에 대 한 자세한 내용은 참조 하십시오. `CFont::CreateFontIndirect`합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about logical fonts, see `CFont::CreateFontIndirect`.  
   
-## <a name="updatesyscolors"></a>Afx_global_data:: updatesyscolors
-프레임워크에서 사용하는 색, 색 농도, 브러시, 펜 및 이미지를 초기화합니다.  
+## <a name="updatesyscolors"></a> AFX_GLOBAL_DATA::UpdateSysColors
+Initializes the colors, color depth, brushes, pens, and images that are used by the framework.  
   
   
 ```  
 void UpdateSysColors();
 ```  
   
-## <a name="biswindows7"></a>Afx_global_data:: biswindows7
-응용 프로그램에서 Windows 7 이상이 실행 되는지를 나타냅니다.  
+## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
+Indicates whether the application is being executed under Windows 7 or higher.  
   
   
 ```  
 BOOL bIsWindows7;  
 ```  
   
-## <a name="clractivecaptiongradient"></a>Afx_global_data:: clractivecaptiongradient
-활성 캡션의 그라데이션 색을 지정합니다. 도킹 창에 일반적으로 사용됩니다.  
+## <a name="clractivecaptiongradient"></a> AFX_GLOBAL_DATA::clrActiveCaptionGradient
+Specifies the gradient color of the active caption. Generally used for docking panes.  
   
   
 ```  
 COLORREF clrActiveCaptionGradient;  
 ```  
   
-## <a name="clrinactivecaptiongradient"></a>Afx_global_data:: clrinactivecaptiongradient
-비활성 캡션의 그라데이션 색을 지정합니다. 도킹 창에 일반적으로 사용됩니다.  
+## <a name="clrinactivecaptiongradient"></a> AFX_GLOBAL_DATA::clrInactiveCaptionGradient
+Specifies the gradient color of the inactive caption. Generally used for docking panes.  
   
   
 ```  
 COLORREF clrInactiveCaptionGradient;  
 ```  
   
-## <a name="getitaskbarlist"></a>Afx_global_data:: getitaskbarlist
-만들고의 글로벌 데이터 저장에 대 한 포인터는 `ITaskBarList` 인터페이스입니다.  
+## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
+Creates and stores in the global data a pointer to the `ITaskBarList` interface.  
   
   
 ```  
 ITaskbarList *GetITaskbarList();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `ITaskbarList` 목록 개체 막대 작업 만들기 성공 하면 인터페이스 `NULL` 만들기가 실패 하거나 현재 운영 체제가 Windows 7 보다 작은 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `ITaskbarList` interface if creation of a task bar list object succeeds; `NULL` if creation fails or if the current Operation System is less than Windows 7.  
   
-## <a name="getitaskbarlist3"></a>Afx_global_data:: getitaskbarlist3
-만들고의 글로벌 데이터 저장에 대 한 포인터는 `ITaskBarList3` 인터페이스입니다.  
+## <a name="getitaskbarlist3"></a> AFX_GLOBAL_DATA::GetITaskbarList3
+Creates and stores in the global data a pointer to the `ITaskBarList3` interface.  
   
   
 ```  
 ITaskbarList3 *GetITaskbarList3();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `ITaskbarList3` 목록 개체 막대 작업 만들기 성공 하면 인터페이스 `NULL` 만들기가 실패 하거나 현재 운영 체제가 Windows 7 보다 작은 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `ITaskbarList3` interface if creation of a task bar list object succeeds; `NULL` if creation fails or if the current Operation System is less than Windows 7.  
   
-## <a name="getshellautohidebars"></a>Afx_global_data:: getshellautohidebars
-셸 자동 숨기기 막대의 위치를 결정합니다.  
+## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
+Determines positions of Shell auto hide bars.  
   
   
 ```  
 int GetShellAutohideBars();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 자동의 위치를 지정 하는 인코딩된 플래그와 함께 정수 값 모음을 숨깁니다. 다음 값을 결합할 수 있습니다: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT 합니다.  
+### <a name="return-value"></a>Return Value  
+ An integer value with encoded flags that specify positions of auto hide bars. It may combine the following values: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.  
   
-## <a name="releasetaskbarrefs"></a>Afx_global_data:: releasetaskbarrefs
-인터페이스를 통해 가져온 해제는 `GetITaskbarList` 및 `GetITaskbarList3` 메서드.  
+## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
+Releases interfaces obtained through the `GetITaskbarList` and `GetITaskbarList3` methods.  
   
   
 ```  
 void ReleaseTaskBarRefs();
 ```  
   
-## <a name="shellcreateitemfromparsingname"></a>Afx_global_data:: shellcreateitemfromparsingname
-구문 분석 이름에서 셸 항목 개체를 만들고 초기화합니다.  
+## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
+Creates and initializes a Shell item object from a parsing name.  
   
   
 ```  
@@ -841,20 +841,20 @@ HRESULT ShellCreateItemFromParsingName(
     void **ppv);
 ```  
   
-### <a name="parameters"></a>매개 변수   
+### <a name="parameters"></a>Parameters   
  `pszPath`  
- [in] 표시 이름에 대 한 포인터입니다.  
+ [in] A pointer to a display name.  
   
  `pbc`  
- 구문 분석 작업을 제어 하는 바인딩 컨텍스트에 대 한 포인터입니다.  
+ A pointer to a bind context that controls the parsing operation.  
   
  `riid`  
- 인터페이스 ID에 대 한 참조  
+ A reference to an interface ID.  
   
  `ppv`  
- [out] 이 함수를 반환 하는 경우에 요청 된 인터페이스 포인터를 포함 `riid`합니다. 일반적으로 `IShellItem` 또는 `IShellItem2`합니다.  
+ [out] When this function returns, contains the interface pointer requested in `riid`. This will typically be `IShellItem` or `IShellItem2`.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 반환 그렇지 않으면 오류 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK if successful; an error value otherwise.  
 
 

@@ -1,42 +1,60 @@
 ---
-title: "재정의 가능 CWinApp 멤버 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWinApp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램 클래스"
-  - "CWinApp 클래스, 재정의 가능"
-  - "재정의, CWinApp 재정의 가능 함수"
+title: Overridable CWinApp Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWinApp
+dev_langs:
+- C++
+helpviewer_keywords:
+- overriding [MFC], overridable functions in CWinApp
+- application class [MFC]
+- CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 재정의 가능 CWinApp 멤버 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 812ffa48a769fbe3e9e839d4b987a1617e9fae6f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-[CWinApp](../mfc/reference/cwinapp-class.md) 는 다양한 재정의 가능한 키 멤버 함수를 제공합니다. \(`CWinApp` 는 `CWinApp` 가 파생한 [CWinThread](../mfc/reference/cwinthread-class.md) 에서 이러한 함수를 재정의 합니다.  
+---
+# <a name="overridable-cwinapp-member-functions"></a>Overridable CWinApp Member Functions
+[CWinApp](../mfc/reference/cwinapp-class.md) provides several key overridable member functions (`CWinApp` overrides these members from class [CWinThread](../mfc/reference/cwinthread-class.md), from which `CWinApp` derives):  
   
 -   [InitInstance](../mfc/initinstance-member-function.md)  
   
--   [실행](../mfc/run-member-function.md)  
+-   [Run](../mfc/run-member-function.md)  
   
 -   [ExitInstance](../mfc/exitinstance-member-function.md)  
   
 -   [OnIdle](../mfc/onidle-member-function.md)  
   
- 재정의 해야 하는 `CWinApp` 멤버 함수는 `InitInstance` 입니다.  
+ The only `CWinApp` member function that you must override is `InitInstance`.  
   
-## 참고 항목  
- [CWinApp: 응용 프로그램 클래스](../mfc/cwinapp-the-application-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)
+

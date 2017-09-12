@@ -1,130 +1,149 @@
 ---
-title: "클래스 라이브러리 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "클래스 라이브러리"
-  - "클래스 라이브러리, MFC"
-  - "클래스[C++], MFC"
-  - "MFC 클래스 그룹화"
-  - "MFC, 클래스 라이브러리"
+title: Class Library Overview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- grouping MFC classes
+- MFC, class library
+- classes [MFC], MFC
+- class libraries, MFC
+- class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 클래스 라이브러리 개요
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 26efe50ba629114bf880d0cc409a9efe834f5e54
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 개요는 MFC\(Microsoft Foundation Class\) 라이브러리 버전 9.0의 클래스를 분류 및 설명합니다.  공동으로 사용하는 MFC의 클래스는 응용 프로그램 프레임 워크 구성\-Windows API용으로 작성된 응용 프로그램 프레임 워크입니다.  프로그래밍은 사용하는 응용 프로그램에 해당하는 코드를 입력하는 작업입니다.  
+---
+# <a name="class-library-overview"></a>Class Library Overview
+This overview categorizes and describes the classes in the Microsoft Foundation Class Library (MFC) version 9.0. The classes in MFC, taken together, constitute an application framework — the framework of an application written for the Windows API. Your programming task is to fill in the code that is specific to your application.  
   
- 라이브러리 클래스가 다음 범주로 표시되어 있습니다.  
+ The library's classes are presented here in the following categories:  
   
--   [루트 클래스: CObject](../mfc/root-class-cobject.md)  
+-   [Root Class: CObject](../mfc/root-class-cobject.md)  
   
--   [MFC 응용 프로그램 아키텍처 클래스](../mfc/mfc-application-architecture-classes.md)  
+-   [MFC Application Architecture Classes](../mfc/mfc-application-architecture-classes.md)  
   
-    -   [응용 프로그램 및 스레드 지원 클래스](../mfc/application-and-thread-support-classes.md)  
+    -   [Application and Thread Support Classes](../mfc/application-and-thread-support-classes.md)  
   
-    -   [명령 라우팅 클래스](../mfc/command-routing-classes.md)  
+    -   [Command Routing Classes](../mfc/command-routing-classes.md)  
   
-    -   [문서 클래스](../mfc/document-classes.md)  
+    -   [Document Classes](../mfc/document-classes.md)  
   
-    -   [뷰 클래스\(아키텍처\)](../mfc/view-classes-architecture.md)  
+    -   [View Classes (Architecture)](../mfc/view-classes-architecture.md)  
   
-    -   [프레임 창 클래스\(아키텍처\)](../mfc/frame-window-classes-architecture.md)  
+    -   [Frame Window Classes (Architecture)](../mfc/frame-window-classes-architecture.md)  
   
-    -   [문서 템플릿 클래스](../mfc/document-template-classes.md)  
+    -   [Document-Template Classes](../mfc/document-template-classes.md)  
   
--   [창, 대화 상자 및 컨트롤 클래스](../mfc/window-dialog-and-control-classes.md)  
+-   [Window, Dialog, and Control Classes](../mfc/window-dialog-and-control-classes.md)  
   
-    -   [프레임 창 클래스\(Windows\)](../mfc/frame-window-classes-windows.md)  
+    -   [Frame Window Classes (Windows)](../mfc/frame-window-classes-windows.md)  
   
-    -   [뷰 클래스\(Windows\)](../mfc/view-classes-windows.md)  
+    -   [View Classes (Windows)](../mfc/view-classes-windows.md)  
   
-    -   [대화 상자 클래스](../mfc/dialog-box-classes.md)  
+    -   [Dialog Box Classes](../mfc/dialog-box-classes.md)  
   
-    -   [컨트롤 클래스](../mfc/control-classes.md)  
+    -   [Control Classes](../mfc/control-classes.md)  
   
-    -   [컨트롤 기본 클래스](../mfc/control-bar-classes.md)  
+    -   [Control Bar Classes](../mfc/control-bar-classes.md)  
   
--   [그리기 및 인쇄 클래스](../mfc/drawing-and-printing-classes.md)  
+-   [Drawing and Printing Classes](../mfc/drawing-and-printing-classes.md)  
   
-    -   [출력\(장치 컨텍스트\) 클래스](../mfc/output-device-context-classes.md)  
+    -   [Output (Device Context) Classes](../mfc/output-device-context-classes.md)  
   
-    -   [그리기 도구 클래스](../mfc/drawing-tool-classes.md)  
+    -   [Drawing Tool Classes](../mfc/drawing-tool-classes.md)  
   
--   [단순 데이터 형식 클래스](../mfc/simple-data-type-classes.md)  
+-   [Simple Data Type Classes](../mfc/simple-data-type-classes.md)  
   
--   [배열, 목록 및 맵 클래스](../mfc/array-list-and-map-classes.md)  
+-   [Array, List, and Map Classes](../mfc/array-list-and-map-classes.md)  
   
-    -   [배열, 목록 및 맵에 대한 템플릿 클래스](../mfc/template-classes-for-arrays-lists-and-maps.md)  
+    -   [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md)  
   
-    -   [바로 사용할 수 있는 배열 클래스](../mfc/ready-to-use-array-classes.md)  
+    -   [Ready-to-Use Array Classes](../mfc/ready-to-use-array-classes.md)  
   
-    -   [바로 사용할 수 있는 목록 클래스](../mfc/ready-to-use-list-classes.md)  
+    -   [Ready-to-Use List Classes](../mfc/ready-to-use-list-classes.md)  
   
-    -   [바로 사용할 수 있는 맵 클래스](../mfc/ready-to-use-map-classes.md)  
+    -   [Ready-to-Use Map Classes](../mfc/ready-to-use-map-classes.md)  
   
--   [파일 및 데이터베이스 클래스](../mfc/file-and-database-classes.md)  
+-   [File and Database Classes](../mfc/file-and-database-classes.md)  
   
-    -   [파일 I\/O 클래스](../mfc/file-i-o-classes.md)  
+    -   [File I/O Classes](../mfc/file-i-o-classes.md)  
   
-    -   [DAO 클래스](../mfc/dao-classes.md)  
+    -   [DAO Classes](../mfc/dao-classes.md)  
   
-    -   [ODBC 클래스](../mfc/odbc-classes.md)  
+    -   [ODBC Classes](../mfc/odbc-classes.md)  
   
-    -   [OLE DB 클래스](../mfc/ole-db-classes.md)  
+    -   [OLE DB Classes](../mfc/ole-db-classes.md)  
   
--   [인터넷 및 네트워킹 클래스](../mfc/internet-and-networking-classes.md)  
+-   [Internet and Networking Classes](../mfc/internet-and-networking-classes.md)  
   
-    -   [Windows 소켓 클래스](../mfc/windows-sockets-classes.md)  
+    -   [Windows Sockets Classes](../mfc/windows-sockets-classes.md)  
   
-    -   [Win32 인터넷 클래스](../mfc/win32-internet-classes.md)  
+    -   [Win32 Internet Classes](../mfc/win32-internet-classes.md)  
   
--   [OLE 클래스](../mfc/ole-classes.md)  
+-   [OLE Classes](../mfc/ole-classes.md)  
   
-    -   [OLE 컨테이너 클래스](../mfc/ole-container-classes.md)  
+    -   [OLE Container Classes](../mfc/ole-container-classes.md)  
   
-    -   [OLE 서버 클래스](../mfc/ole-server-classes.md)  
+    -   [OLE Server Classes](../mfc/ole-server-classes.md)  
   
-    -   [OLE 끌어서 놓기 및 데이터 전송 클래스](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+    -   [OLE Drag-and-Drop and Data Transfer Classes](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
-    -   [OLE 일반 대화 상자 클래스](../mfc/ole-common-dialog-classes.md)  
+    -   [OLE Common Dialog Classes](../mfc/ole-common-dialog-classes.md)  
   
-    -   [OLE 자동화 클래스](../mfc/ole-automation-classes.md)  
+    -   [OLE Automation Classes](../mfc/ole-automation-classes.md)  
   
-    -   [OLE 컨트롤 클래스](../mfc/ole-control-classes.md)  
+    -   [OLE Control Classes](../mfc/ole-control-classes.md)  
   
-    -   [액티브 문서 클래스](../mfc/active-document-classes.md)  
+    -   [Active Document Classes](../mfc/active-document-classes.md)  
   
-    -   [OLE 관련 클래스](../mfc/ole-related-classes.md)  
+    -   [OLE-Related Classes](../mfc/ole-related-classes.md)  
   
--   [디버깅 및 예외 클래스](../mfc/debugging-and-exception-classes.md)  
+-   [Debugging and Exception Classes](../mfc/debugging-and-exception-classes.md)  
   
-    -   [디버깅 지원 클래스](../mfc/debugging-support-classes.md)  
+    -   [Debugging Support Classes](../mfc/debugging-support-classes.md)  
   
-    -   [예외 클래스](../mfc/exception-classes.md)  
+    -   [Exception Classes](../mfc/exception-classes.md)  
   
- [General Class Design Philosophy](../mfc/general-class-design-philosophy.md) 단원은 MFC 라이브러리가 디자인된 방식을 설명합니다.  
+ The section [General Class Design Philosophy](../mfc/general-class-design-philosophy.md) explains how the MFC Library was designed.  
   
- 프레임워크 개요에 대해 알아보려면 [클래스를 사용하여 Windows용 응용 프로그램 만들기](../mfc/using-the-classes-to-write-applications-for-windows.md)를 참조하십시오.  위에 나열된 일부 클래스는 프레임워크 외부에서 사용할 수 있으며, 컬렉션, 예외, 파일 및 문자열과 같은 유용한 추상화를 제공하는 범용 클래스입니다.  
+ For an overview of the framework, see [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Some of the classes listed above are general-purpose classes that can be used outside of the framework and provide useful abstractions such as collections, exceptions, files, and strings.  
   
- 상속 클래스를 보려면 [클래스 계층 구조 차트](../mfc/hierarchy-chart.md)를 사용합니다.  
+ To see the inheritance of a class, use the [Class Hierarchy Chart](../mfc/hierarchy-chart.md).  
   
- 이 개요에 나열된 클래스 외에도 MFC 라이브러리에는 여러 가지 전역 함수, 전역 변수 및 매크로가 포함되어 있습니다.  MFC 클래스에 대한 사전순 참조에 따라 [MFC 매크로 및 전역](../mfc/reference/mfc-macros-and-globals.md) 항목에는 이러한 항목에 대한 개요 및 세부 목록이 있습니다.  
+ In addition to the classes listed in this overview, the MFC Library contains a number of global functions, global variables, and macros. There is an overview and detailed listing of these in the topic [MFC Macros and Globals](../mfc/reference/mfc-macros-and-globals.md), which follows the alphabetical reference to the MFC classes.  
   
-## 참고 항목  
- [MFC 데스크톱 응용 프로그램](../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>See Also  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
+
+

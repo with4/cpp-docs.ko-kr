@@ -1,34 +1,52 @@
 ---
-title: "사용자 지정의 보안 의미 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 기능 팩, 보안"
-  - "보안, MFC 기능 팩"
+title: Security Implications of Customization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- security, MFC Feature Pack
+- MFC Feature Pack, security
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 사용자 지정의 보안 의미
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882ce16a4123125e10dd7cb6c2b4743f077b5241
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="security-implications-of-customization"></a>Security Implications of Customization
 This topic discusses a potential security weakness in MFC.  
   
-## Potential Security Weakness  
- MFC allows the user customize the look of an application user interface, for example, the appearance of buttons and icons.  MFC also supports user\-defined tools, which let the user execute shell commands.  A security vulnerability arises because the customized settings of the application are saved in the user profile in the registry.  Anyone who can access the registry can edit those settings and change the application appearance or behavior.  For example, an administrator on the computer could impersonate a user by causing the user's application to execute arbitrary programs \(even from a network share\).  
+## <a name="potential-security-weakness"></a>Potential Security Weakness  
+ MFC allows the user customize the look of an application user interface, for example, the appearance of buttons and icons. MFC also supports user-defined tools, which let the user execute shell commands. A security vulnerability arises because the customized settings of the application are saved in the user profile in the registry. Anyone who can access the registry can edit those settings and change the application appearance or behavior. For example, an administrator on the computer could impersonate a user by causing the user's application to execute arbitrary programs (even from a network share).  
   
-## 해결 방법  
+## <a name="workarounds"></a>Workarounds  
  We recommend any of these three ways to close the vulnerabilities in the registry:  
   
 -   Encrypt the data that is stored there  
@@ -39,5 +57,7 @@ This topic discusses a potential security weakness in MFC.
   
 -   You can also disable customizations in your application.  
   
-## 참고 항목  
- [MFC에 대한 사용자 지정](../mfc/customization-for-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)
+
+

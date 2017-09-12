@@ -1,232 +1,254 @@
 ---
-title: "TN031: 컨트롤 막대 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.bars"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "컨트롤 막대, 스타일"
-  - "CStatusBar 클래스, Tech Note 31 사용법"
-  - "CControlBar 클래스, Tech Note 31 사용법"
-  - "CControlBar 클래스, 파생"
-  - "컨트롤 막대, 클래스"
-  - "CDialogBar 클래스, Tech Note 31 사용법"
-  - "CToolBar 클래스, Tech Note 31 사용법"
-  - "TN031"
-  - "스타일, 컨트롤 막대"
+title: 'TN031: Control Bars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.bars
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], styles
+- CStatusBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], deriving from
+- control bars [MFC], classes [MFC]
+- CDialogBar class [MFC], Tech Note 31 usage
+- CToolBar class [MFC], Tech Note 31 usage
+- TN031
+- styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN031: 컨트롤 막대
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96602bc469bb7aab112833a68c999d69e39df36c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn031-control-bars"></a>TN031: Control Bars
 > [!NOTE]
->  다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다. 따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다. 최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 이 참고 사항에서는 MFC의 컨트롤 막대 클래스\(일반적인 [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar) 및 **CDockBar**\)에 대해 설명합니다.  
+ This note describes the control bar classes in MFC: the general [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), and **CDockBar**.  
   
- `CControlBar`  
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- **ControlBar**는 `CWnd`에서 파생된 클래스로 다음과 같은 특성을 가집니다.  
+ A **ControlBar** is a `CWnd`-derived class that:  
   
--   프레임 창의 위쪽 또는 아래쪽에 정렬됩니다.  
+-   Is aligned to the top or bottom of a frame window.  
   
--   HWND 기반 컨트롤\(예: `CDialogBar`\) 또는 비 `HWND` 기반 항목\(예: `CToolBar`, `CStatusBar`\)인 자식 항목을 포함할 수 있습니다.  
+-   May contain child items that are either HWND-based controls (for example, `CDialogBar`) or non-`HWND` based items (for example, `CToolBar`, `CStatusBar`).  
   
- 컨트롤 막대는 추가 스타일을 지원합니다.  
+ Control bars support the additional styles:  
   
--   `CBRS_TOP` \(기본값\) 컨트롤 막대를 위쪽에 고정합니다.  
+- `CBRS_TOP` (The default) pin the control bar to the top.  
   
--   `CBRS_BOTTOM` 컨트롤 막대를 아래쪽에 고정합니다.  
+- `CBRS_BOTTOM` Pin the control bar to the bottom.  
   
--   `CBRS_NOALIGN` 부모의 크기가 조정될 때 컨트롤 막대 위치를 변경하지 않습니다.  
+- `CBRS_NOALIGN` Do not reposition the control bar when the parent resizes.  
   
- `CControlBar`에서 파생된 클래스는 더 흥미로운 구현을 제공합니다.  
+ Classes derived from `CControlBar` provide more interesting implementations:  
   
--   `CStatusBar` 상태 표시줄, 항목은 텍스트를 포함하는 상태 표시줄 창입니다.  
+- `CStatusBar` A status bar, items are status bar panes containing text.  
   
--   `CToolBar` 도구 모음, 항목은 행으로 정렬되는 비트맵 단추입니다.  
+- `CToolBar` A toolbar, items are bitmap buttons aligned in a row.  
   
--   `CDialogBar` 표준 Windows 컨트롤\(대화 상자 템플릿 리소스에서 생성됨\)을 포함하는 도구 모음 같은 프레임  
+- `CDialogBar` A toolbar-like frame containing standard windows controls (created from a dialog template resource).  
   
--   **CDockBar** `CControlBar`에서 파생된 다른 개체를 위한 일반화된 도킹 영역입니다. 이 클래스에서 사용 가능한 특정 멤버 함수 및 변수는 이후 릴리스에서 변경될 수 있습니다.  
+- **CDockBar** A generalized docking area for other `CControlBar` derived objects. The specific member functions and variables available in this class are likely to change in future releases.  
   
- 모든 컨트롤 막대 개체\/창은 일부 부모 프레임 창의 자식 창이 되며, 일반적으로 프레임의 클라이언트 영역\(예: MDI 클라이언트 또는 뷰\)에 형제로 추가됩니다. 컨트롤 막대의 자식 창 ID가 중요합니다. 컨트롤 막대의 기본 레이아웃은 ID가 **AFX\_IDW\_CONTROLBAR\_FIRST**에서 **AFX\_IDW\_CONTROLBAR\_LAST** 사이 범위에 속하는 컨트롤 막대에만 작동합니다. 256개의 컨트롤 막대 ID 범위가 있지만 이러한 컨트롤 막대 ID 중 처음 32개는 특별히 인쇄 미리 보기 아키텍처에서 지원됩니다.  
+ All control bar objects/windows will be child windows of some parent frame window. They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view). The child window ID of a control bar is important. The default layout of control bar only works for control bars with IDs in the range of **AFX_IDW_CONTROLBAR_FIRST** to **AFX_IDW_CONTROLBAR_LAST**. Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.  
   
- `CControlBar` 클래스는 다음에 대한 표준 구현을 제공합니다.  
+ The `CControlBar` class gives standard implementation for:  
   
--   프레임의 위쪽, 아래쪽 또는 옆쪽에 컨트롤 막대 정렬  
+-   Aligning the control bar to the top, bottom, or either side of the frame.  
   
--   컨트롤 항목 배열 할당  
+-   Allocating control item arrays.  
   
--   파생된 클래스의 구현 지원  
+-   Supporting the implementation of derived classes.  
   
- C\+\+ 컨트롤 막대 개체는 일반적으로 `CFrameWnd` 파생 클래스의 멤버로 포함되며, 부모 `HWND` 및 개체가 제거되면 삭제됩니다. 힙에 컨트롤 막대 개체를 할당해야 하는 경우 `HWND`가 제거될 때 컨트롤 막대에 "**delete this**"가 적용되도록 **m\_bAutoDestruct** 멤버를 **TRUE**로 설정하기만 하면 됩니다.  
+ C++ control bar objects will usually be embedded as members of a `CFrameWnd` derived class, and will be cleaned up when the parent `HWND` and object are destroyed. If you need to allocate a control bar object on the heap, you can simply set the **m_bAutoDestruct** member to **TRUE** to make the control bar "**delete this**" when the `HWND` is destroyed.  
   
 > [!NOTE]
->  MFC의 파생 클래스\(예: `CStatusBar`, `CToolBar` 또는 `CDialogBar`\) 중 하나를 사용하는 대신 사용자 고유의 `CControlBar` 파생 클래스를 만드는 경우 `m_dwStyle` 데이터 멤버를 설정해야 합니다. 이 작업은 **Create** 재정의 시 수행할 수 있습니다.  
+>  If you create your own `CControlBar`-derived class, rather than using one of MFC's derived classes, such as `CStatusBar`, `CToolBar`, or `CDialogBar`, you will need to set the `m_dwStyle` data member. This can be done in the override of **Create**:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
-BOOL CMyControlBar::Create( CWnd* pParentWnd, DWORD dwStyle, UINT nID )  
+BOOL CMyControlBar::Create(CWnd* pParentWnd,
+    DWORD dwStyle,
+    UINT nID)  
 {  
-   m_dwStyle = dwStyle;  
-  
-   .  
-   .  
-   .  
+    m_dwStyle = dwStyle;  
+ 
+ .  
+ .  
+ .  
 }  
 ```  
   
- **컨트롤 막대 레이아웃 알고리즘**  
+ **Control Bar Layout Algorithm**  
   
- 컨트롤 막대 레이아웃 알고리즘은 매우 간단합니다. 프레임 창에서 컨트롤 막대 범위의 모든 자식 항목에 **WM\_SIZEPARENT** 메시지를 보냅니다. 이 메시지와 함께 부모의 클라이언트 사각형에 대한 포인터가 전달됩니다. 이 메시지는 Z축의 자식 항목에 전송됩니다. 컨트롤 막대 자식 항목은 이 정보를 사용하여 배치되고 부모의 클라이언트 영역 크기를 줄입니다. 보통 크기의 클라이언트 영역\(컨트롤 막대보다 작음\)용으로 남겨진 마지막 사각형은 주 클라이언트 창\(일반적으로 MDI 클라이언트, 뷰 또는 분할자 창\)을 배치하는 데 사용됩니다.  
+ The control bar layout algorithm is very simple. The frame window sends a message **WM_SIZEPARENT** to all children in the control bar range. Along with this message, a pointer to the parent's client rectangle is passed. This message is sent to children in Z-order. The control-bar children use this information to position themselves and to decrease the size of the parent's client area. The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).  
   
- 자세한 내용은 `CWnd::RepositionBars` 및 `CFrameWnd::RecalcLayout`을 참조하세요.  
+ See `CWnd::RepositionBars` and `CFrameWnd::RecalcLayout` for more details.  
   
- **WM\_SIZEPARENT**를 비롯한 MFC 개인 Windows 메시지는 [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md)에 기술되어 있습니다.  
+ MFC private Windows messages, including **WM_SIZEPARENT**, are documented in [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
- `CStatusBar`  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
- 상태 표시줄은 텍스트 출력 창 행이 있는 컨트롤 막대입니다. 텍스트 출력 창을 사용하는 두 가지 일반적인 방법은 다음과 같습니다.  
+ A status bar is a control bar that has a row of text output panes. There are two common ways to use text output panes:  
   
--   메시지 줄  
+-   As a message line  
   
-     \(예: 표준 메뉴 도움말 메시지 줄\). 일반적으로 0 기반 인덱스를 통해 액세스  
+     (for example, the standard menu help message line). These are usually accessed by a 0-based indexed  
   
--   상태 표시기  
+-   As status indicators  
   
-     \(예: CAP, NUM 및 SCRL 표시기\). 일반적으로 문자열\/명령 ID를 통해 액세스  
+     (for example, the CAP, NUM and SCRL indicators). These are usually accessed by string/command ID.  
   
- 상태 표시줄의 글꼴은 10포인트 MS Sans Serif\(Windows 인터페이스 응용 프로그램 디자인 가이드 또는 10포인트 Swiss 가변 폭 글꼴의 가장 일치하는 글꼴 매퍼 항목에 지정\)입니다. 일본어 버전과 같은 특정 버전의 Windows에서는 선택되는 글꼴이 다릅니다.  
+ The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font). On certain versions of Windows, such as the Japanese edition, the fonts selected are different.  
   
- 상태 표시줄에 사용되는 색은 Windows 인터페이스 응용 프로그램 디자인 가이드의 권장 사항과도 일치합니다. 이러한 색은 하드 코딩되지 않으며 제어판의 사용자 지정에 대한 응답으로 동적으로 변경됩니다.  
+ The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|항목|Windows COLOR 값|기본 RGB|  
-|--------|---------------------|------------|  
-|상태 표시줄 배경|**COLOR\_BTNFACE**|RGB\(192, 192, 192\)|  
-|상태 표시줄 텍스트|**COLOR\_BTNTEXT**|RGB\(000, 000, 000\)|  
-|상태 표시줄 위쪽\/왼쪽 가장자리|**COLOR\_BTNHIGHLIGHT**|RGB\(255, 255, 255\)|  
-|상태 표시줄 아래쪽\/오른쪽 가장자리|**COLOR\_BTNSHADOW**|RGB\(128, 128, 128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|Status bar background|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
+|Status bar text|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
+|Status bar top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
+|Status bar bot/right edges|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
   
- **CCmdUI의 CStatusBar 지원**  
+ **CCmdUI Support for CStatusBar**  
   
- 일반적으로 표시기는 `ON_UPDATE_COMMAND_UI` 메커니즘을 통해 업데이트됩니다. 유휴 시간에 상태 표시줄은 표시기 창의 문자열 ID로 `ON_UPDATE_COMMAND_UI` 처리기를 호출합니다.  
+ The way indicators are usually updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the status bar will call the `ON_UPDATE_COMMAND_UI` handler with the string ID of the indicator pane.  
   
- `ON_UPDATE_COMMAND_UI` 처리기는 다음을 호출할 수 있습니다.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: 창을 활성화하거나 비활성화합니다. 비활성화된 창은 정확히 활성화된 창처럼 표시되지만 텍스트가 보이지 않습니다\(즉, 텍스트 표시기가 해제됨\).  
+- **Enable**: To enable or disable the pane. A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).  
   
--   **SetText**: 텍스트를 변경합니다. 이를 사용할 때는 창 크기가 자동으로 조정되지 않으므로 주의해야 합니다.  
+- **SetText**: To change the text. Be careful if you use this because the pane will not automatically resize.  
   
- `CStatusBar` 만들기 및 사용자 지정 API에 대한 자세한 내용은 *클래스 라이브러리 참조*에서 [CStatusBar](../mfc/reference/cstatusbar-class.md) 클래스를 참조하세요. 상태 표시줄의 사용자 지정은 대부분 상태 표시줄이 처음에 표시되기 전에 수행해야 합니다.  
+ Refer to class [CStatusBar](../mfc/reference/cstatusbar-class.md) in the *Class Library Reference* for details about `CStatusBar` creation and customization APIs. Most customization of status bars should be done before the status bar is initially made visible.  
   
- 상태 표시줄은 하나의 스트레치 창\(일반적으로 첫 번째 창\)만 지원합니다. 이 창의 크기는 실제로 최소 크기입니다. 상태 표시줄이 모든 창의 최소 크기보다 큰 경우 스트레치 창에 임의의 추가 너비가 제공됩니다. 상태 표시줄이 있는 기본 응용 프로그램은 첫 번째 창이 스트레치이므로 CAP, NUM 및 SCRL에 대한 오른쪽 맞춤 표시기가 있습니다.  
+ The status bar supports only one stretchy pane, usually the first pane. The size of that pane is really a minimum size. If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane. The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.  
   
- `CToolBar`  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- 도구 모음은 구분 기호를 포함할 수 있는 비트맵 단추 행이 있는 컨트롤 막대입니다. 두 가지 스타일의 단추, 즉 누름 단추 및 확인란 단추가 지원됩니다. 라디오 그룹 기능은 확인란 단추 및 `ON_UPDATE_COMMAND_UI`와 함께 빌드될 수 있습니다.  
+ A toolbar is a control bar with a row of bitmap buttons that may include separators. Two styles of buttons are supported: pushbuttons and check box buttons. Radio group functionality can be built with check box buttons and `ON_UPDATE_COMMAND_UI`.  
   
- 도구 모음의 모든 비트맵 단추는 하나의 비트맵에서 가져옵니다. 이 비트맵은 각 단추에 대한 하나의 이미지 또는 문자 모양을 포함해야 합니다. 일반적으로 비트맵의 이미지\/문자 모양 순서는 화면에 그려지는 순서와 동일합니다. 사용자 지정 API를 사용하여 이를 변경할 수 있습니다.  
+ All the bitmap buttons in the toolbar are taken from one bitmap. This bitmap must contain one image or glyph for each button. Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen. (This can be changed using the customization APIs.)  
   
- 각 단추는 크기가 같아야 합니다. 기본값은 표준 24x22 픽셀입니다. 각 이미지\/문자 모양은 크기가 같고 비트맵에 세로로 정렬되어야 합니다. 기본 이미지\/문자 모양 크기는 16x15 픽셀입니다. 따라서 표준 크기를 사용하는 10개의 단추가 있는 도구 모음에는 너비가 160픽셀이고 높이가 15픽셀인 비트맵이 필요합니다.  
+ Each button must be the same size. The default is the standard 24x22 pixels. Each image/glyph must be the same size and must be side-by-side in the bitmap. The default image/glyph size is 16x15 pixels. Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.  
   
- 각 단추에는 하나의 이미지\/문자 모양만 있습니다. 이 하나의 이미지\/문자 모양에서 여러 단추 상태 및 스타일\(예: 누름, 위쪽, 아래쪽, 사용 안 함, 누른 상태로 사용 안 함, 비활성화 상태\)이 알고리즘 방식으로 생성됩니다. 이론적으로 모든 색 비트맵 또는 DIB를 사용할 수 있습니다. 여러 단추 상태를 생성하는 알고리즘은 원본 이미지가 회색 음영인 경우에 최상으로 작동합니다. 예제는 MFC 일반 샘플 [CLIPART](../top/visual-cpp-samples.md)에 제공된 표준 도구 모음 단추 및 도구 모음 단추 클립 아트를 참조하세요.  
+ Each button has one and only one image/glyph. The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph. Any color bitmap or DIB can be used in theory. The algorithm for generating the different button states works best if the original image is shades of gray. Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample [CLIPART](../visual-cpp-samples.md) for examples.  
   
- 도구 모음에 사용되는 색은 Windows 인터페이스 응용 프로그램 디자인 가이드의 권장 사항과도 일치합니다. 이러한 색은 하드 코딩되지 않으며 제어판의 사용자 지정에 대한 응답으로 동적으로 변경됩니다.  
+ The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|항목|Windows COLOR 값|기본 RGB|  
-|--------|---------------------|------------|  
-|도구 모음 배경|**COLOR\_BTNFACE**|RGB\(192,192,192\)|  
-|도구 모음 단추 위쪽\/왼쪽 가장자리|**COLOR\_BTNHIGHLIGHT**|RGB\(255,255,255\)|  
-|도구 모음 단추 아래쪽\/오른쪽 가장자리|**COLOR\_BTNSHADOW**|RGB\(128,128,128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|ToolBar background|**COLOR_BTNFACE**|RGB(192,192,192)|  
+|ToolBar buttons top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
+|ToolBar buttons bot/right edges|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
   
- 또한 도구 모음 비트맵 단추는 표준 Windows 단추 컨트롤인 경우에도 다시 칠해집니다. 이 다시 칠하기는 비트맵이 리소스에서 로드되는 경우에 발생하며, 제어판의 사용자 지정에 따른 시스템 색의 변경에 대한 응답으로 발생합니다. 도구 모음 비트맵의 다음 색은 자동으로 다시 칠해지므로 주의해서 사용해야 합니다. 비트맵의 일부를 다시 칠하지 않으려면 매핑된 RGB 값 중 하나와 근접한 색을 사용합니다. 매핑은 정확한 RGB 값을 기반으로 수행됩니다.  
+ In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls. This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel. The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution. If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values. The mapping is done based on exact RGB values.  
   
-|RGB 값|동적으로 매핑된 COLOR 값|  
-|-----------|----------------------|  
-|RGB\(000, 000, 000\)|COLOR\_BTNTEXT|  
-|RGB\(128, 128, 128\)|COLOR\_BTNSHADOW|  
-|RGB\(192, 192, 192\)|COLOR\_BTNFACE|  
-|RGB\(255, 255, 255\)|COLOR\_BTNHIGHLIGHT|  
+|RGB value|Dynamically mapped COLOR value|  
+|---------------|------------------------------------|  
+|RGB(000, 000, 000)|COLOR_BTNTEXT|  
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|  
+|RGB(192, 192, 192)|COLOR_BTNFACE|  
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|  
   
- `CToolBar` 만들기 및 사용자 지정 API에 대한 자세한 내용은 *클래스 라이브러리 참조*에서 [CToolBar](../mfc/reference/ctoolbar-class.md) 클래스를 참조하세요. 도구 모음의 사용자 지정은 대부분 도구 모음이 처음에 표시되기 전에 수행해야 합니다.  
+ Refer to class [CToolBar](../mfc/reference/ctoolbar-class.md) the *Class Library Reference* for details about the `CToolBar` creation and customization APIs. Most customization of toolbars should be done before the toolbar is initially made visible.  
   
- 사용자 지정 API를 사용하여 단추 ID, 스타일, 스페이서 너비 및 특정 단추에 사용되는 이미지\/문자 모양을 조정할 수 있습니다. 기본적으로 이러한 API는 사용할 필요가 없습니다.  
+ The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button. By default you do not need to use these APIs.  
   
-## CCmdUI의 CToolBar 지원  
- 도구 모음 단추는 항상 `ON_UPDATE_COMMAND_UI` 메커니즘을 통해 업데이트됩니다. 유휴 시간에 도구 모음은 해당 단추의 명령 ID로 `ON_UPDATE_COMMAND_UI` 처리기를 호출합니다.`ON_UPDATE_COMMAND_UI`는 구분 기호에 대해 호출되는 것이 아니라 누름 단추 및 확인란 단추에 대해 호출됩니다.  
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI Support for CToolBar  
+ The way toolbar buttons are always updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the toolbar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of that button. `ON_UPDATE_COMMAND_UI` is not called for separators, but it is called for pushbuttons and check box buttons.  
   
- `ON_UPDATE_COMMAND_UI` 처리기는 다음을 호출할 수 있습니다.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: 단추를 활성화하거나 비활성화합니다. 이는 누름 단추 및 확인란 단추에 대해 동일하게 작동합니다.  
+- **Enable**: To enable or disable the button. This works equally for pushbuttons and check box buttons.  
   
--   `SetCheck`: 단추의 선택 상태를 설정합니다. 도구 모음 단추에 대해 이를 호출하면 확인란 단추로 전환됩니다.`SetCheck`에서 사용할 수 있는 매개 변수는 0\(선택하지 않은 상태\), 1\(선택한 상태\) 또는 2\(비활성화 상태\)입니다.  
+- `SetCheck`: To set the check state of a button. Calling this for a toolbar button will turn it into a check box button. `SetCheck` takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)  
   
--   `SetRadio`: `SetCheck`의 축약형입니다.  
+- `SetRadio`: Shorthand for `SetCheck`.  
   
- 확인란 단추는 "자동" 확인란 단추입니다. 즉, 사용자가 누르면 상태가 즉시 변경됩니다. 선택한 상태는 눌러진 상태입니다. 기본 제공 사용자 인터페이스에는 단추를 "비활성화 상태"로 변경할 방법이 없습니다. 이는 코드를 통해 수행해야 합니다.  
+ Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state. Checked is the down or depressed state. There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.  
   
- 사용자 지정 API를 사용하여 지정된 도구 모음 단추의 상태를 변경할 수 있지만 도구 모음 단추가 나타내는 명령에 대한 `ON_UPDATE_COMMAND_UI` 처리기에서 이러한 상태를 변경하는 것이 좋습니다. 유휴 처리에서는 `ON_UPDATE_COMMAND_UI` 처리기를 사용하여 도구 모음 단추의 상태를 변경하므로 SetButtonStyle을 통해 이루어지는 이러한 상태 변경은 다음 유휴 상태 후 손실될 수 있습니다.  
+ The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the `ON_UPDATE_COMMAND_UI` handler for the command the toolbar button represents. Remember, the idle processing will change the state of toolbar buttons with the `ON_UPDATE_COMMAND_UI` handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.  
   
- 도구 모음 단추는 일반 단추 또는 메뉴 항목처럼 **WM\_COMMAND** 메시지를 보내며, 일반적으로 `ON_UPDATE_COMMAND_UI` 처리기를 제공하는 것과 동일한 클래스에서 `ON_COMMAND` 처리기에 의해 처리됩니다.  
+ Toolbar buttons will send **WM_COMMAND** messages like normal buttons or menu items and are normally handled by an `ON_COMMAND` handler in the same class that provides the `ON_UPDATE_COMMAND_UI` handler.  
   
- 화면 표시 상태에 사용되는 도구 모음 단추 스타일\(TBBS\_ 값\)에는 다음 4가지가 있습니다.  
+ There are four Toolbar button styles (TBBS_ values) used for display states:  
   
--   TBBS\_CHECKED:   확인란이 현재 선택되어 있습니다\(누름\).  
+-   TBBS_CHECKED:   Check box is currently checked (down).  
   
--   TBBS\_INDETERMINATE:   확인란이 현재 비활성화 상태입니다.  
+-   TBBS_INDETERMINATE:   Check box is currently indeterminate.  
   
--   TBBS\_DISABLED:   단추가 현재 비활성화되어 있습니다.  
+-   TBBS_DISABLED:   Button is currently disabled.  
   
--   TBBS\_PRESSED:   단추가 현재 눌러져 있습니다.  
+-   TBBS_PRESSED:   Button is currently pressed.  
   
- Windows 인터페이스 응용 프로그램 디자인 가이드의 6가지 공식 단추 스타일은 다음 TBBS 값으로 표현됩니다.  
+ The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:  
   
--   해제 \= 0  
+-   Up = 0  
   
--   마우스 누름 \= TBBS\_PRESSED \(&#124; 다른 모든 스타일\)  
+-   Mouse Down = TBBS_PRESSED (&#124; any other style)  
   
--   사용 안 함 \= TBBS\_DISABLED  
+-   Disabled = TBBS_DISABLED  
   
--   누름 \= TBBS\_CHECKED  
+-   Down = TBBS_CHECKED  
   
--   누른 상태로 사용 안 함 \= TBBS\_CHECKED &#124; TBBS\_DISABLED  
+-   Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED  
   
--   비활성화 상태 \= TBBS\_INDETERMINATE  
+-   Indeterminate = TBBS_INDETERMINATE  
   
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
- 대화 상자 막대는 표준 Windows 컨트롤을 포함하는 컨트롤 막대입니다. 컨트롤을 포함하고 컨트롤 간의 탭 이동을 지원한다는 점에서 대화 상자처럼 작동합니다. 또한 대화 상자 템플릿을 사용하여 막대를 나타낸다는 점에서도 대화 상자처럼 작동합니다.  
+ A dialog bar is a control bar that contains standard Windows controls. It acts like a dialog in that it contains the controls and supports tabbing between them. It also acts like a dialog in that it uses a dialog template to represent the bar.  
   
- `CDialogBar`는 표준 누름 단추 컨트롤을 포함하는 인쇄 미리 보기 도구 모음에 사용됩니다.  
+ A `CDialogBar` is used for the print-preview toolbar, which contains standard pushbutton controls.  
   
- `CDialogBar`를 사용하는 것은 `CFormView`를 사용하는 것과 유사합니다. 대화 상자 막대에 대한 대화 상자 템플릿을 정의하고 **WS\_CHILD** 이외의 모든 스타일을 제거해야 합니다. 대화 상자는 표시되지 않아야 합니다.  
+ Using a `CDialogBar` is like using a `CFormView`. You must define a dialog template for the dialog bar and remove all the styles except **WS_CHILD**. Note that the dialog must not be visible.  
   
- `CDialogBar`에 대한 컨트롤 알림은 도구 모음 단추와 마찬가지로 컨트롤 막대의 부모로 전송됩니다.  
+ The control notifications for a `CDialogBar` will be sent to the parent of the control bar (just like toolbar buttons).  
   
-## CCmdUI의 CDialogBar 지원  
- 대화 상자 막대 단추는 `ON_UPDATE_COMMAND_UI` 처리기 메커니즘을 통해 업데이트됩니다. 유휴 시간에 대화 상자 막대는 ID가 0x8000보다 크거나 같은\(즉, 명령 ID의 범위\) 모든 단추의 명령 ID로 `ON_UPDATE_COMMAND_UI` 처리기를 호출합니다.  
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI Support for CDialogBar  
+ Dialog bar buttons should be updated through the `ON_UPDATE_COMMAND_UI` handler mechanism. At idle time, the dialog bar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of all the buttons that have a ID >= 0x8000 (that is, in the range of command IDs).  
   
- `ON_UPDATE_COMMAND_UI` 처리기는 다음을 호출할 수 있습니다.  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   Enable: 단추를 활성화하거나 비활성화합니다.  
+-   Enable: to enable or disable the button.  
   
--   SetText: 단추의 텍스트를 변경합니다.  
+-   SetText: to change the text of the button.  
   
- 표준 창 관리자 API를 통해 사용자 지정을 수행할 수 있습니다.  
+ Customization can be done through standard window manager APIs.  
   
-## 참고 항목  
- [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   
- [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

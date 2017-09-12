@@ -1,5 +1,5 @@
 ---
-title: "CBitmapRenderTarget 클래스 | Microsoft 문서"
+title: CBitmapRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBitmapRenderTarget class
+- CBitmapRenderTarget [MFC], CBitmapRenderTarget
+- CBitmapRenderTarget [MFC], Attach
+- CBitmapRenderTarget [MFC], Detach
+- CBitmapRenderTarget [MFC], GetBitmap
+- CBitmapRenderTarget [MFC], GetBitmapRenderTarget
+- CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
 caps.latest.revision: 16
 author: mikeblome
@@ -40,130 +45,130 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 11bea138185df23c9f3cc79491c71d86861a6bdc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a03063991b663ef35047dac552b8c6fea9a1970f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 클래스
-ID2D1BitmapRenderTarget에 대 한 래퍼입니다.  
+# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget Class
+A wrapper for ID2D1BitmapRenderTarget.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBitmapRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|CBitmapRenderTarget 개체를 만듭니다.|  
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Constructs a CBitmapRenderTarget object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|기존 연결 개체를 대상 인터페이스를 렌더링 합니다.|  
-|[CBitmapRenderTarget::Detach](#detach)|렌더링 대상 인터페이스 개체에서 분리|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|이 렌더링 대상에 대 한 비트맵을 검색합니다. 반환 된 비트맵 그리기 작업에 사용할 수 있습니다.|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|반환 ID2D1BitmapRenderTarget 인터페이스|  
+|[CBitmapRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CBitmapRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Retrieves the bitmap for this render target. The returned bitmap can be used for drawing operations.|  
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Returns ID2D1BitmapRenderTarget interface|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|반환 ID2D1BitmapRenderTarget 인터페이스|  
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|Returns ID2D1BitmapRenderTarget interface|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget 개체에 대 한 포인터입니다.|  
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|A pointer to an ID2D1BitmapRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  `CBitmapRenderTarget` 
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CBitmapRenderTarget::Attach  
- 기존 연결 개체를 대상 인터페이스를 렌더링 합니다.  
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
- CBitmapRenderTarget 개체를 만듭니다.  
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
+ Constructs a CBitmapRenderTarget object.  
   
 ```  
 CBitmapRenderTarget();
 ```  
   
-##  <a name="detach"></a>CBitmapRenderTarget::Detach  
- 렌더링 대상 인터페이스 개체에서 분리  
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1BitmapRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 분리에 대 한 포인터는 대상 인터페이스를 렌더링 합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
- 이 렌더링 대상에 대 한 비트맵을 검색합니다. 반환 된 비트맵 그리기 작업에 사용할 수 있습니다.  
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
+ Retrieves the bitmap for this render target. The returned bitmap can be used for drawing operations.  
   
 ```  
 BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bitmap`  
- 이 메서드가 반환 하는 경우에이 렌더링 대상에 대 한 유효한 비트맵이 포함 되어 있습니다. 이 비트맵 그리기 작업에 사용할 수 있습니다.  
+ When this method returns, contains the valid bitmap for this render target. This bitmap can be used for drawing operations.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
- 반환 ID2D1BitmapRenderTarget 인터페이스  
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
+ Returns ID2D1BitmapRenderTarget interface  
   
 ```  
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1BitmapRenderTarget 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
- ID2D1BitmapRenderTarget 개체에 대 한 포인터입니다.  
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
+ A pointer to an ID2D1BitmapRenderTarget object.  
   
 ```  
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- 반환 ID2D1BitmapRenderTarget 인터페이스  
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*  
+ Returns ID2D1BitmapRenderTarget interface  
   
 ```  
 operator ID2D1BitmapRenderTarget*();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1BitmapRenderTarget 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapRenderTarget interface or NULL if object is not initialized yet.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

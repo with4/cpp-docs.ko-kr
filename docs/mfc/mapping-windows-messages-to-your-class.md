@@ -1,38 +1,55 @@
 ---
-title: "클래스에 Windows 메시지 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "매핑, 대화 상자 클래스에 메시지"
-  - "메시지 맵[C++], 대화 상자 클래스"
-  - "메시지 맵[C++], 클래스에 Windows 메시지 매핑"
-  - "대화 상자 클래스에 메시지"
-  - "대화 상자 클래스에 메시지, 매핑"
-  - "MFC 대화 상자, Windows 메시지"
-  - "Windows 메시지[C++], 대화 상자 클래스 매핑"
+title: Mapping Windows Messages to Your Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- message maps [MFC], in dialog class
+- Windows messages [MFC], mapping in dialog classes
+- messages to dialog class [MFC]
+- mappings [MFC]], messages to dialog class [MFC]
+- message maps [MFC], mapping Windows messages to classes
+- messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 클래스에 Windows 메시지 매핑
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1b5e151bcd5c36647849100b50161752878bf7d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-If you need your dialog box to handle Windows messages, override the appropriate handler functions.  To do so, use the Properties window to [map the messages](../mfc/reference/mapping-messages-to-functions.md) to the dialog class.  This writes a message\-map entry for each message and adds the message\-handler member functions to the class.  Use the Visual C\+\+ source code editor to write code in the message handlers.  
+---
+# <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your Class
+If you need your dialog box to handle Windows messages, override the appropriate handler functions. To do so, use the Properties window to [map the messages](../mfc/reference/mapping-messages-to-functions.md) to the dialog class. This writes a message-map entry for each message and adds the message-handler member functions to the class. Use the Visual C++ source code editor to write code in the message handlers.  
   
  You can also override member functions of [CDialog](../mfc/reference/cdialog-class.md) and its base classes, especially [CWnd](../mfc/reference/cwnd-class.md).  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
 -   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
@@ -40,6 +57,8 @@ If you need your dialog box to handle Windows messages, override the appropriate
   
 -   [Commonly added member functions](../mfc/commonly-added-member-functions.md)  
   
-## 참고 항목  
- [대화 상자](../mfc/dialog-boxes.md)   
- [대화 상자의 수명 주기](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

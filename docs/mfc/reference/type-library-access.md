@@ -1,5 +1,5 @@
 ---
-title: "형식 라이브러리 액세스 | Microsoft 문서"
+title: Type Library Access | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type libraries, accessing
+- type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
 author: mikeblome
@@ -33,68 +33,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c531cfd358a6f049754b55a5bc8902ad5a37d975
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-library-access"></a>형식 라이브러리 액세스
-형식 라이브러리는 다른 OLE 인식 응용 프로그램에는 OLE 컨트롤의 인터페이스를 노출합니다. 하나 이상의 인터페이스를 노출 하려는 경우 각 OLE 컨트롤에서 형식 라이브러리를 가져야 합니다.  
+# <a name="type-library-access"></a>Type Library Access
+Type libraries expose the interfaces of an OLE control to other OLE-aware applications. Each OLE control must have a type library if one or more interfaces are to be exposed.  
   
- 다음 매크로 사용 하는 자체 형식 라이브러리에 대 한 액세스를 제공 하는 OLE 컨트롤:  
+ The following macros allow an OLE control to provide access to its own type library:  
   
-### <a name="type-library-access"></a>형식 라이브러리 액세스  
+### <a name="type-library-access"></a>Type Library Access  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|선언 된 `GetTypeLib` (클래스 선언에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|구현 하는 `GetTypeLib` (클래스 구현에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
- 선언 된 `GetTypeLib` 컨트롤 클래스의 멤버 함수입니다.  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Declares the `GetTypeLib` member function of your control class.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *눈여겨 보십시오*  
- 형식 라이브러리와 관련 된 컨트롤 클래스의 이름입니다.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class related to the type library.  
   
-### <a name="remarks"></a>주의  
- 컨트롤 클래스 헤더 파일에서이 매크로 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file.  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
- 컨트롤의 구현 `GetTypeLib` 멤버 함수입니다.  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implements the control's `GetTypeLib` member function.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *눈여겨 보십시오*  
- 형식 라이브러리와 관련 된 컨트롤 클래스의 이름입니다.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class related to the type library.  
   
  *tlid*  
- 형식 라이브러리의 ID.  
+ The ID number of the type library.  
   
  `wVerMajor`  
- 형식 라이브러리의 주 버전 번호입니다.  
+ The type library major version number.  
   
  `wVerMinor`  
- 형식 라이브러리의 부 버전 번호입니다.  
+ The type library minor version number.  
   
-### <a name="remarks"></a>주의  
- 이 매크로 사용 하는 컨트롤 클래스는 구현 파일에 표시 되어야는 `DECLARE_OLETYPELIB` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLETYPELIB` macro.  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

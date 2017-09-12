@@ -1,5 +1,5 @@
 ---
-title: "COleUpdateDialog 클래스 | Microsoft 문서"
+title: COleUpdateDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,12 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Update dialog
-- links [C++], updating
-- updating OLE links
-- OLE dialog boxes, Edit Link
-- OLE link updating
-- COleUpdateDialog class
+- COleUpdateDialog [MFC], COleUpdateDialog
+- COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
 caps.latest.revision: 22
 author: mikeblome
@@ -41,40 +37,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8066a8dc9e572c14e9423af62d340e249351ac11
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af1ebfad4c2aae99e6e1774842cb2bb78ffe7b69
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleupdatedialog-class"></a>COleUpdateDialog 클래스
-OLE 편집 링크 대화 상자의 특별한 경우에 사용됩니다. 예를 들어, 문서에서 기존에 연결되거나 포함된 개체만 업데이트할 경우에 사용해야 합니다.  
+# <a name="coleupdatedialog-class"></a>COleUpdateDialog Class
+Used for a special case of the OLE Edit Links dialog box, which should be used when you need to update only existing linked or embedded objects in a document.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleUpdateDialog : public COleLinksDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|`COleUpdateDialog` 개체를 생성합니다.|  
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Constructs a `COleUpdateDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|표시는 **링크 편집** 업데이트 모드에서 대화 상자입니다.|  
+|[COleUpdateDialog::DoModal](#domodal)|Displays the **Edit Links** dialog box in an update mode.|  
   
-## <a name="remarks"></a>주의  
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -91,11 +87,11 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
- `COleUpdateDialog` 개체를 생성합니다.  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
+ Constructs a `COleUpdateDialog` object.  
   
 ```  
 explicit COleUpdateDialog(
@@ -105,44 +101,44 @@ explicit COleUpdateDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 업데이트 해야 할 수 있는 링크를 포함 하는 문서를 가리킵니다.  
+ Points to the document containing the links that may need updating.  
   
  *bUpdateLinks*  
- 연결 된 개체가 업데이트 될 지 여부를 결정 하는 플래그입니다.  
+ Flag that determines whether linked objects are to be updated.  
   
  *bUpdateEmbeddings*  
- 포함 된 개체가 업데이트 될 지 여부를 결정 하는 플래그입니다.  
+ Flag that determines whether embedded objects are to be updated.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자의 부모 창 기본 응용 프로그램 창으로 설정 됩니다.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box will be set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 이 함수가 구성만 `COleUpdateDialog` 개체입니다. 대화 상자를 표시 하려면 호출 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)합니다. 이 클래스를 대신 사용 해야 `COleLinksDialog` 기존 업데이트 하려는 경우 연결 항목 또는 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function constructs only a `COleUpdateDialog` object. To display the dialog box, call [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). This class should be used instead of `COleLinksDialog` when you want to update only existing linked or embedded items.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
- 링크 편집 대화 상자에 표시 모드를 업데이트 합니다.  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
+ Displays the Edit Links dialog box in update mode.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** 대화 상자에서 성공적으로 반환 하는 경우.  
+- **IDOK** if the dialog box returned successfully.  
   
-- **IDCANCEL** 업데이트 해야 하는 경우 현재 문서에 연결 되거나 포함 된 항목 중입니다.  
+- **IDCANCEL** if none of the linked or embedded items in the current document need updating.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 발생 한 오류 유형에 대 한 자세한 정보를 멤버 함수입니다. 목록이 가능한 오류에 대 한 참조는 [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 사용자가 취소 단추를 선택 하지 않으면 모든 링크 및/또는 포함 문서가 업데이트 됩니다.  
+### <a name="remarks"></a>Remarks  
+ All links and/or embeddings are updated unless the user selects the Cancel button.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [COleLinksDialog 클래스](../../mfc/reference/colelinksdialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleLinksDialog 클래스](../../mfc/reference/colelinksdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)
 

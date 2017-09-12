@@ -1,52 +1,71 @@
 ---
-title: "ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤 컨테이너[C++], 속성 보기 및 수정"
-  - "ActiveX 컨트롤[C++], 속성"
-  - "컨트롤[MFC], 속성"
-  - "속성[MFC], 보기 및 수정"
-  - "리소스 편집기, ActiveX 컨트롤 보기 및 수정"
+title: 'ActiveX Control Containers: Viewing and Modifying Control Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], viewing and modifying
+- ActiveX control containers [MFC], viewing and modifying properties
+- resource editors, viewing and modifying ActiveX controls
+- ActiveX controls [MFC], properties
+- controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f147544230d135b89f208eef2aba8db9a31468f8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-프로젝트에 ActiveX 컨트롤을 삽입했을 때, ActiveX 컨트롤에 의해 지원된 속성을 보거나 바꾸는 것이 유용합니다.  이 문서는 이 작업을 수행하기 위해 Visual C\+\+ 리소스 편집기를 사용하는 방법을 설명합니다.  
+---
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX Control Containers: Viewing and Modifying Control Properties
+When you insert an ActiveX control into a project, it is useful to view and change the properties supported by the ActiveX control. This article discusses how to use the Visual C++ resource editor to do this.  
   
- ActiveX 컨트롤 컨테이너 응용 프로그램이 포함된 컨트롤을 사용하면, 리소스 편집기에서 컨트롤의 속성을 보거나 수정할 수 있습니다.  또한 설계 시간 동안 속성 값을 설정하기 위해서 리소스 편집기를 사용할 수 있습니다.  그때 리소스 편집기는 프로젝트의 리소스 파일에 이러한 값을 자동적으로 저장합니다.  그때 컨트롤의 모든 인스턴스는 이러한 값으로 초기화된 그것의 속성을 가질 것입니다.  
+ If your ActiveX control container application uses embedded controls, you can view and modify the control's properties while in the resource editor. You can also use the resource editor to set property values during design time. The resource editor then automatically saves these values in the project's resource file. Any instance of the control will then have its properties initialized to these values.  
   
- 이 절차는 사용자가 컨트롤을 사용자 프로젝트에 삽입했다고 가정합니다.  자세한 내용은 [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md)을 참조하십시오.  
+ This procedure assumes that you have inserted a control into your project. For information, see [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md).  
   
- 컨트롤의 속성을 확인 하는 첫 번째 단계는 컨트롤의 인스턴스를 프로젝트 대화 상자 템플릿에 추가하는 것입니다.  
+ The first step in viewing the control's properties is to add an instance of the control to the project's dialog template.  
   
-### 컨트롤의 속성을 보려면  
+### <a name="to-view-the-properties-of-a-control"></a>To view the properties of a control  
   
-1.  리소스 뷰에서, **Dialog** 폴더를 엽니다.  
+1.  In Resource View, open the **Dialog** folder.  
   
-2.  주 대화 상자 템플릿을 엽니다.  
+2.  Open your main dialog box template.  
   
-3.  **Insert ActiveX Control** 대화 상자를 사용하여 ActiveX 컨트롤을 삽입합니다.  자세한 내용은 [Viewing and Adding ActiveX Controls to a Dialog Box](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)를 참조하십시오.  
+3.  Insert an ActiveX control using the **Insert ActiveX Control** dialog box. For more information, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
-4.  대화 상자에서 ActiveX 컨트롤을 선택합니다.  
+4.  Select the ActiveX control in the dialog box.  
   
-5.  속성 창에서 **속성** 단추를 클릭합니다.  
+5.  From the Properties window, click the **Properties** button.  
   
- 새로운 속성을 즉시 수정하거나 테스트하기 위해 **Properites** 대화 상자를 사용합니다.  
+ Use the **Properties** dialog box to modify and test new properties immediately.  
   
-## 참고 항목  
- [ActiveX 컨트롤 컨테이너](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

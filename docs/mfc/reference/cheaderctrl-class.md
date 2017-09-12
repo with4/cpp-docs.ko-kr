@@ -1,5 +1,5 @@
 ---
-title: "CHeaderCtrl 클래스 | Microsoft Docs"
+title: CHeaderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,9 +43,35 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHeaderCtrl class
-- Windows common controls [C++], CHeaderCtrl
-- header controls, CHeaderCtrl class
+- CHeaderCtrl [MFC], CHeaderCtrl
+- CHeaderCtrl [MFC], ClearAllFilters
+- CHeaderCtrl [MFC], ClearFilter
+- CHeaderCtrl [MFC], Create
+- CHeaderCtrl [MFC], CreateDragImage
+- CHeaderCtrl [MFC], CreateEx
+- CHeaderCtrl [MFC], DeleteItem
+- CHeaderCtrl [MFC], DrawItem
+- CHeaderCtrl [MFC], EditFilter
+- CHeaderCtrl [MFC], GetBitmapMargin
+- CHeaderCtrl [MFC], GetFocusedItem
+- CHeaderCtrl [MFC], GetImageList
+- CHeaderCtrl [MFC], GetItem
+- CHeaderCtrl [MFC], GetItemCount
+- CHeaderCtrl [MFC], GetItemDropDownRect
+- CHeaderCtrl [MFC], GetItemRect
+- CHeaderCtrl [MFC], GetOrderArray
+- CHeaderCtrl [MFC], GetOverflowRect
+- CHeaderCtrl [MFC], HitTest
+- CHeaderCtrl [MFC], InsertItem
+- CHeaderCtrl [MFC], Layout
+- CHeaderCtrl [MFC], OrderToIndex
+- CHeaderCtrl [MFC], SetBitmapMargin
+- CHeaderCtrl [MFC], SetFilterChangeTimeout
+- CHeaderCtrl [MFC], SetFocusedItem
+- CHeaderCtrl [MFC], SetHotDivider
+- CHeaderCtrl [MFC], SetImageList
+- CHeaderCtrl [MFC], SetItem
+- CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 caps.latest.revision: 24
 author: mikeblome
@@ -65,83 +91,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: faa23ea6f28c2643c9bee090ea150e37d0add97c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 42cc828d15f416fb6bf0642605ac0f997602cd02
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cheaderctrl-class"></a>CHeaderCtrl 클래스
-Windows의 공용 헤더 컨트롤의 기능을 제공합니다.  
+# <a name="cheaderctrl-class"></a>CHeaderCtrl Class
+Provides the functionality of the Windows common header control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHeaderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|`CHeaderCtrl` 개체를 생성합니다.|  
+|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Constructs a `CHeaderCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|헤더 컨트롤에 대 한 모든 필터를 지웁니다.|  
-|[CHeaderCtrl::ClearFilter](#clearfilter)|헤더 컨트롤에 대 한 필터를 지웁니다.|  
-|[CHeaderCtrl::Create](#create)|헤더 컨트롤을 만들고에 연결 된 `CHeaderCtrl` 개체입니다.|  
-|[CHeaderCtrl::CreateDragImage](#createdragimage)|헤더 컨트롤 내에서 항목의 이미지의 투명 한 버전을 만듭니다.|  
-|[CHeaderCtrl::CreateEx](#createex)|Windows는 지정 된 확장된 스타일을 사용 하 여 헤더 컨트롤을 만들고에 연결 된 `CListCtrl` 개체입니다.|  
-|[CHeaderCtrl::DeleteItem](#deleteitem)|헤더 컨트롤에서 항목을 삭제 합니다.|  
-|[CHeaderCtrl::DrawItem](#drawitem)|헤더 컨트롤의 지정된 된 항목을 그립니다.|  
-|[CHeaderCtrl::EditFilter](#editfilter)|헤더 컨트롤의 지정된 된 필터를 편집을 시작 합니다.|  
-|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|헤더 컨트롤에서 비트맵의 여백 너비를 검색합니다.|  
-|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|포커스가 있는 현재 헤더 컨트롤에서 항목의 식별자를 가져옵니다.|  
-|[CHeaderCtrl::GetImageList](#getimagelist)|헤더 컨트롤에서 그리기 헤더 항목에 사용할 이미지 목록의 처리를 검색 합니다.|  
-|[CHeaderCtrl::GetItem](#getitem)|헤더 컨트롤의 항목에 대 한 정보를 검색합니다.|  
-|[CHeaderCtrl::GetItemCount](#getitemcount)|헤더 컨트롤의 항목 수를 검색합니다.|  
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|헤더 컨트롤의 지정한 드롭 다운 단추에 대 한 경계 사각형 정보를 가져옵니다.|  
-|[CHeaderCtrl::GetItemRect](#getitemrect)|헤더 컨트롤의 지정된 된 항목에 대 한 경계 사각형을 검색 합니다.|  
-|[CHeaderCtrl::GetOrderArray](#getorderarray)|헤더 컨트롤에서 항목의 왼쪽-오른쪽 순서를 검색합니다.|  
-|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|현재 헤더 컨트롤에 대 한 오버플로 단추인의 경계 사각형을 가져옵니다.|  
-|[CHeaderCtrl::HitTest](#hittest)|헤더, 있는 경우 있는 항목을 지정 된 기간의 결정 합니다.|  
-|[CHeaderCtrl::InsertItem](#insertitem)|헤더 컨트롤에 새 항목을 삽입합니다.|  
-|[CHeaderCtrl::Layout](#layout)|지정 된 사각형 내에서 헤더 컨트롤의 위치와 크기를 검색합니다.|  
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|헤더 컨트롤에서 해당 순서에 따라 항목에 대 한 인덱스 값을 검색 합니다.|  
-|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|헤더 컨트롤의 여백 비트맵의 너비를 설정합니다.|  
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|필터 특성에서 변경이 수행 때와 게시의 제한 시간 간격으로 설정 된 `HDN_FILTERCHANGE` 알림입니다.|  
-|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|현재 헤더 컨트롤에서 지정 된 헤더 항목에 포커스를 설정합니다.|  
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|헤더 항목을 나타내는 수동 사이의 구분선 끌어 변경 및 헤더 항목의 삭제가 합니다.|  
-|[CHeaderCtrl::SetImageList](#setimagelist)|헤더 컨트롤에는 이미지 목록에 할당합니다.|  
-|[CHeaderCtrl::SetItem](#setitem)|헤더 컨트롤의 지정된 된 항목의 특성을 설정합니다.|  
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|헤더 컨트롤에서 항목의 왼쪽-오른쪽 순서를 설정합니다.|  
+|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Clears all filters for a header control.|  
+|[CHeaderCtrl::ClearFilter](#clearfilter)|Clears the filter for a header control.|  
+|[CHeaderCtrl::Create](#create)|Creates a header control and attaches it to a `CHeaderCtrl` object.|  
+|[CHeaderCtrl::CreateDragImage](#createdragimage)|Creates a transparent version of an item's image within a header control.|  
+|[CHeaderCtrl::CreateEx](#createex)|Creates a header control with the specified Windows extended styles and attaches it to a `CListCtrl` object.|  
+|[CHeaderCtrl::DeleteItem](#deleteitem)|Deletes an item from a header control.|  
+|[CHeaderCtrl::DrawItem](#drawitem)|Draws the specified item of a header control.|  
+|[CHeaderCtrl::EditFilter](#editfilter)|Starts editing the specified filter of a header control.|  
+|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Retrieves the width of the margin of a bitmap in a header control.|  
+|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Gets the identifier of the item in the current header control that has the focus.|  
+|[CHeaderCtrl::GetImageList](#getimagelist)|Retrieves the handle of an image list used for drawing header items in a header control.|  
+|[CHeaderCtrl::GetItem](#getitem)|Retrieves information about an item in a header control.|  
+|[CHeaderCtrl::GetItemCount](#getitemcount)|Retrieves a count of the items in a header control.|  
+|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Gets the bounding rectangle information for the specified drop-down button in a header control.|  
+|[CHeaderCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a given item in a header control.|  
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Retrieves the left-to-right order of items in a header control.|  
+|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Gets the bounding rectangle of the overflow button for the current header control.|  
+|[CHeaderCtrl::HitTest](#hittest)|Determines which header item, if any, is located at a specified point.|  
+|[CHeaderCtrl::InsertItem](#insertitem)|Inserts a new item into a header control.|  
+|[CHeaderCtrl::Layout](#layout)|Retrieves the size and position of a header control within a given rectangle.|  
+|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Retrieves the index value for an item based on its order in the header control.|  
+|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Sets the width of the margin of a bitmap in a header control.|  
+|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Sets the timeout interval between the time a change takes place in the filter attributes and the posting of an `HDN_FILTERCHANGE` notification.|  
+|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Sets the focus to a specified header item in the current header control.|  
+|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Changes the divider between header items to indicate a manual drag and drop of a header item.|  
+|[CHeaderCtrl::SetImageList](#setimagelist)|Assigns an image list to a header control.|  
+|[CHeaderCtrl::SetItem](#setitem)|Sets the attributes of the specified item in a header control.|  
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|Sets the left-to-right order of items in a header control.|  
   
-## <a name="remarks"></a>주의  
- 헤더 컨트롤에는 일반적으로 텍스트 또는 숫자 열 집합이 위에 배치 되는 창입니다. 각 열에 대 한 제목을 포함 하 고 부분으로 나눌 수 있습니다. 각 열의 너비를 설정 하려면 각 부분을 구분 하는 분할자를 끌 수 있습니다. 헤더 컨트롤의 예시의 경우에 대 한 참조 [헤더 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775238)합니다.  
+## <a name="remarks"></a>Remarks  
+ A header control is a window that is usually positioned above a set of columns of text or numbers. It contains a title for each column, and it can be divided into parts. The user can drag the dividers that separate the parts to set the width of each column. For an illustration of a header control, see [Header Controls](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
   
- 이 컨트롤 (및 따라서는 `CHeaderCtrl` 클래스)은 이상 버전과 Windows 95/98 및 Windows NT 버전 3.51에서 실행 되는 프로그램 에서만 사용할 수 있습니다.  
+ This control (and therefore the `CHeaderCtrl` class) is available only to programs that run under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Windows 95/Internet Explorer 4.0 공용 컨트롤에 대 한 추가 기능에는 다음이 포함 되어 있습니다.  
+ Functionality added for Windows 95/Internet Explorer 4.0 common controls includes the following:  
   
--   헤더 항목 사용자 지정 정렬 합니다.  
+-   Header item custom ordering.  
   
--   헤더 항목 끌어서 놓기, 헤더 항목 다시 정렬에 대 한 합니다. 사용 하 여는 `HDS_DRAGDROP` 스타일을 만들 때는 `CHeaderCtrl` 개체입니다.  
+-   Header item drag and drop, for reordering of header items. Use the `HDS_DRAGDROP` style when you create the `CHeaderCtrl` object.  
   
--   머리글 열 텍스트 열 크기 조정 하는 동안 지속적으로 볼 수 있습니다. 사용 하 여는 `HDS_FULLDRAG` 스타일을 만들 때 한 `CHeaderCtrl` 개체입니다.  
+-   Header column text constantly viewable during column resizing. Use the `HDS_FULLDRAG` style when you create a `CHeaderCtrl` object.  
   
--   헤더 핫 추적을 포인터 가리킬 때에 머리글 항목을 강조 표시 합니다. 사용 하 여는 `HDS_HOTTRACK` 스타일을 만들 때는 `CHeaderCtrl` 개체입니다.  
+-   Header hot tracking, which highlights the header item when the pointer is hovering over it. Use the `HDS_HOTTRACK` style when you create the `CHeaderCtrl` object.  
   
--   이미지 목록 지원입니다. 헤더 항목에 저장 된 이미지를 포함할 수 있습니다는 `CImageList` 개체 또는 텍스트입니다.  
+-   Image list support. Header items can contain images stored in a `CImageList` object or text.  
   
- 사용에 대 한 자세한 내용은 `CHeaderCtrl`, 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [CHeaderCtrl 사용 하 여](../../mfc/using-cheaderctrl.md)합니다.  
+ For more information about using `CHeaderCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CHeaderCtrl](../../mfc/using-cheaderctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -150,57 +176,57 @@ class CHeaderCtrl : public CWnd
   
  `CHeaderCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
- `CHeaderCtrl` 개체를 생성합니다.  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
+ Constructs a `CHeaderCtrl` object.  
   
 ```  
 CHeaderCtrl();
 ```  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
- 헤더 컨트롤에 대 한 모든 필터를 지웁니다.  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
+ Clears all filters for a header control.  
   
 ```  
 BOOL ClearAllFilters();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 Win32 메시지의 동작을 구현 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) 에 설명 된 대로-1의 열 값이 있는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) with a column value of -1, as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
- 헤더 컨트롤에 대 한 필터를 지웁니다.  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
+ Clears the filter for a header control.  
   
 ```  
 BOOL ClearFilter(int nColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nColumn`  
- 나타내는 선택을 필터링 하는 열 값입니다.  
+ Column value indicating which filter to clear.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 Win32 메시지의 동작을 구현 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl::Create  
- 헤더 컨트롤을 만들고에 연결 된 `CHeaderCtrl` 개체입니다.  
+##  <a name="create"></a>  CHeaderCtrl::Create  
+ Creates a header control and attaches it to a `CHeaderCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -210,58 +236,58 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 헤더 컨트롤의 스타일을 지정합니다. 헤더 컨트롤 스타일에 대 한 참조 [헤더 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775241) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the header control's style. For a description of header control styles, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241) in the Windows SDK.  
   
  `rect`  
- 헤더 컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조입니다.  
+ Specifies the header control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- 헤더 컨트롤의 부모 창에 일반적으로 지정 된 `CDialog`합니다. 않아야 **NULL**합니다.  
+ Specifies the header control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- 헤더 컨트롤의 ID를 지정 합니다.  
+ Specifies the header control's ID.  
   
-### <a name="return-value"></a>반환 값  
- 초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise zero.  
   
-### <a name="remarks"></a>설명  
- 생성할는 `CHeaderCtrl` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 하 고 호출 **만들기**, 헤더 컨트롤 만들고에 연결 하는 `CHeaderCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CHeaderCtrl` object in two steps. First, call the constructor and then call **Create**, which creates the header control and attaches it to the `CHeaderCtrl` object.  
   
- 헤더 컨트롤 스타일 아니라 헤더 컨트롤 배치 하 고 크기를 조정 하는 방법을 결정 하는 다음과 같은 일반적인 컨트롤 스타일을 사용할 수 있습니다 (참조 [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 대 한 자세한 내용은):  
+ In addition to the header control styles, you can use the following common control styles to determine how the header control positions and resizes itself (see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) for more information):  
   
-- `CCS_BOTTOM`부모 창의 클라이언트 영역의 맨 아래에 배치 하 고 컨트롤 창의 너비 부모와 동일한 너비를 설정 하는 합니다.  
+- `CCS_BOTTOM` Causes the control to position itself at the bottom of the parent window's client area and sets the width to be the same as the parent window's width.  
   
-- `CCS_NODIVIDER`컨트롤의 위쪽에 그려지는에서 두 픽셀 강조 표시 되지 않도록 합니다.  
+- `CCS_NODIVIDER` Prevents a two-pixel highlight from being drawn at the top of the control.  
   
-- `CCS_NOMOVEY`컨트롤이 크기 조정 및에 대 한 응답에서 가로로 하지만 하지을 세로로 자체 이동 하는 `WM_SIZE` 메시지입니다. 경우는 `CCS_NORESIZE` 스타일은 사용,이 스타일 적용 되지 않습니다. 헤더 컨트롤 기본적으로이 스타일을 갖습니다.  
+- `CCS_NOMOVEY` Causes the control to resize and move itself horizontally, but not vertically, in response to a `WM_SIZE` message. If the `CCS_NORESIZE` style is used, this style does not apply. Header controls have this style by default.  
   
-- `CCS_NOPARENTALIGN`컨트롤을 위쪽 또는 아래쪽 부모 창의 자동으로 이동할 수 없습니다. 대신, 컨트롤은 부모 창의 크기를 변경 되더라도 부모 창 내에서 위치를 유지합니다. 경우는 `CCS_TOP` 또는 `CCS_BOTTOM` 스타일도 사용 되는, 높이 기본적으로 조정 됩니다 있지만 위치와 폭 변경 되지 않습니다.  
+- `CCS_NOPARENTALIGN` Prevents the control from automatically moving to the top or bottom of the parent window. Instead, the control keeps its position within the parent window despite changes to the size of the parent window. If the `CCS_TOP` or `CCS_BOTTOM` style is also used, the height is adjusted to the default, but the position and width remain unchanged.  
   
-- `CCS_NORESIZE`초기 크기 또는 새 크기를 설정할 때 기본 너비와 높이 사용 하 여 컨트롤을 방지 합니다. 대신 컨트롤의 너비와 높이 생성 또는 크기 조정에 대 한 요청에 지정 된 사용 합니다.  
+- `CCS_NORESIZE` Prevents the control from using the default width and height when setting its initial size or a new size. Instead, the control uses the width and height specified in the request for creation or sizing.  
   
-- `CCS_TOP`컨트롤이 부모 창의 클라이언트 영역 위쪽에 배치 하 부모와 동일 하 게 너비 창의 너비를 설정 하는 합니다.  
+- `CCS_TOP` Causes the control to position itself at the top of the parent window's client area and sets the width to be the same as the parent window's width.  
   
- 헤더 컨트롤에 다음 창 스타일을 적용할 수 있습니다 (참조 [창 스타일](../../mfc/reference/window-styles.md) 에 대 한 자세한 내용은):  
+ You can also apply the following window styles to a header control (see [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) for more information):  
   
-- **WS_CHILD** 자식 창을 만듭니다. 함께 사용할 수 없습니다는 `WS_POPUP` 스타일입니다.  
+- **WS_CHILD** Creates a child window. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE** 처음에 표시 되는 창을 만듭니다.  
+- **WS_VISIBLE** Creates a window that is initially visible.  
   
-- **WS_DISABLED** 처음부터 사용할 창을 만듭니다.  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP** 를 이동할 수 한 컨트롤에서 다음 화살표 키를 가진 컨트롤 그룹의 첫 번째 컨트롤을 지정 합니다. 정의 된 모든 컨트롤은 **WS_GROUP** 후 동일한 그룹에 속하는 첫 번째 컨트롤에 스타일입니다. 다음 컨트롤은 **WS_GROUP** 스타일 스타일 그룹을 종료 하 고 다음 그룹 (즉, 한 그룹 끝 다음 시작 하는 위치)를 시작 합니다.  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP** 사용자 TAB 키를 사용 하 여 이동할 수 있는 컨트롤의 모든 숫자 중 하나를 지정 합니다. TAB 키를 누를 사용자로 지정 된 다음 컨트롤로 이동는 **WS_TABSTOP** 스타일입니다.  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
- 와 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CHeaderCtrl` 개체입니다.  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
+ Creates a control (a child window) and associate it with the `CHeaderCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -272,87 +298,87 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 헤더 컨트롤의 스타일입니다. 헤더 컨트롤 스타일에 대 한 참조 [헤더 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775241) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 참조 [만들기](#create) 목록은 한 추가 스타일입니다.  
+ The header control's style. For a description of header control styles, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241) in the Windows SDK. See [Create](#create) for a list of additional styles.  
   
  `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 컨트롤의 부모 창에 대 한 포인터입니다.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 컨트롤의 자식 창 id입니다.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of **Create** to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
- 헤더 컨트롤 내에서 항목의 이미지의 투명 한 버전을 만듭니다.  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
+ Creates a transparent version of an item's image within a header control.  
   
 ```  
 CImageList* CreateDragImage(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 헤더 컨트롤에서 항목의 0부터 시작 하는 인덱스입니다. 이 항목에 할당 된 이미지는 투명 한 이미지의 기반입니다.  
+ The zero-based index of the item within the header control. The image assigned to this item is the basis for the transparent image.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CImageList](../../mfc/reference/cimagelist-class.md) 성공 되지 않으면 개체 **NULL**합니다. 반환된 된 목록에는 하나의 이미지만 포함 되어 있습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object if successful; otherwise **NULL**. The returned list contains only one image.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 헤더 항목 끌어서 놓기 지원 하기 위해 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), as described in the Windows SDK. It is provided to support header item drag and drop.  
   
- `CImageList` 개체를 반환 된 포인터가 가리키는 임시 개체 이며 다음 유휴 시간 처리에서 삭제 됩니다.  
+ The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
- 헤더 컨트롤에서 항목을 삭제 합니다.  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
+ Deletes an item from a header control.  
   
 ```  
 BOOL DeleteItem(int nPos);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 삭제할 항목의 0부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the item to delete.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
- 소유자 그리기 헤더 컨트롤 변경 내용의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw header control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 에 대 한 포인터는 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) 그려야 하는 항목을 설명 하는 구조입니다.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>주의  
- **itemAction** 의 멤버는 `DRAWITEMSTRUCT` 구조 정의 그리기 작업을 수행 하는 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- 기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CHeaderCtrl` 개체입니다.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CHeaderCtrl` object.  
   
- 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 함수 종료 전에이 멤버입니다.  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
- 헤더 컨트롤의 지정된 된 필터를 편집 하기 시작 합니다.  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
+ Begins to edit the specified filter of a header control.  
   
 ```  
 BOOL EditFilter(
@@ -360,81 +386,81 @@ BOOL EditFilter(
     BOOL bDiscardChanges);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nColumn`  
- 열 편집입니다.  
+ The column to edit.  
   
  `bDiscardChanges`  
- 사용자를 처리 하는 방법을 지정 하는 값의 필터를 편집 하는 중 사용자가 변경 내용을 편집 때는 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) 메시지가 전송 됩니다.  
+ A value that specifies how to handle the user's editing changes if the user is in the process of editing the filter when the [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) message is sent.  
   
- 지정 `true` 사용자가 변경한 내용을 무시 하려면 또는 `false` 사용자가 수행한 변경 내용을 적용 합니다.  
+ Specify `true` to discard the changes made by the user, or `false` to accept the changes made by the user.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 Win32 메시지의 동작을 구현 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
- 헤더 컨트롤에서 비트맵의 여백 너비를 검색합니다.  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
+ Retrieves the width of the margin of a bitmap in a header control.  
   
 ```  
 int GetBitmapMargin() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 픽셀에서 비트맵 여백의 너비입니다.  
+### <a name="return-value"></a>Return Value  
+ The width of the bitmap margin in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
- 현재 헤더 컨트롤에 포커스가 있는 항목의 인덱스를 가져옵니다.  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
+ Gets the index of the item that has the focus in the current header control.  
   
 ```  
 int GetFocusedItem() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 포커스가 있는 머리글 항목의 0부터 시작 하는 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the header item that has the focus.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) 에 설명 되어 있는 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 변수를 정의 `m_headerCtrl`, 즉 현재 헤더 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 `SetFocusedItem` 및 `GetFocusedItem` 메서드. 코드의 이전 단원에서 5 개의 열이 있는 헤더 컨트롤을 생성 합니다. 그러나 열이 표시 되도록 열 구분 기호를 끌 수 있습니다. 다음 예제에서는 설정 하 고 마지막 열 머리글의 포커스 항목으로 확인 합니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `SetFocusedItem` and `GetFocusedItem` methods. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. The following example sets and then confirms the last column header as the focus item.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
- 헤더 컨트롤에서 그리기 헤더 항목에 사용할 이미지 목록의 처리를 검색 합니다.  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
+ Retrieves the handle of an image list used for drawing header items in a header control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CImageList](../../mfc/reference/cimagelist-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. `CImageList` 개체를 반환 된 포인터가 가리키는 임시 개체 이며 다음 유휴 시간 처리에서 삭제 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), as described in the Windows SDK. The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl::GetItem  
- 헤더 컨트롤 항목에 대 한 정보를 검색합니다.  
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem  
+ Retrieves information about a header control item.  
   
 ```  
 BOOL GetItem(
@@ -442,34 +468,34 @@ BOOL GetItem(
     HDITEM* pHeaderItem) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 검색할 항목의 0부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the item to retrieve.  
   
  `pHeaderItem`  
- 에 대 한 포인터는 [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) 구조체 새 항목입니다. 이 구조체를 사용는 `InsertItem` 및 `SetItem` 멤버 함수입니다. 모든 플래그 설정 된 **마스크** 요소 값의 해당 요소에 제대로 채워졌는지 반환 되 면 확인 합니다. 경우는 **마스크** 요소는 0으로 설정 되어, 다른 구조 요소에는 값은 의미가 없습니다.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that receives the new item. This structure is used with the `InsertItem` and `SetItem` member functions. Any flags set in the **mask** element ensure that values in the corresponding elements are properly filled in upon return. If the **mask** element is set to zero, values in the other structure elements are meaningless.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
- 헤더 컨트롤의 항목 수를 검색합니다.  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
+ Retrieves a count of the items in a header control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 헤더 컨트롤 항목의 수 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ Number of header control items if successful; otherwise - 1.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CHeaderCtrl::DeleteItem](#deleteitem)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
- 현재 헤더 컨트롤의 헤더 항목을 드롭 다운 단추의 경계 사각형을 가져옵니다.  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
+ Gets the bounding rectangle of the drop-down button for a header item in the current header control.  
   
 ```  
 BOOL GetItemDropDownRect(
@@ -477,31 +503,31 @@ BOOL GetItemDropDownRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|스타일은 헤더 항목의 0부터 시작 인덱스 `HDF_SPLITBUTTON`합니다. 자세한 내용은 참조는 `fmt` 의 멤버는 [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) 구조입니다.|  
-|[out] `lpRect`|에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 경계 사각형 정보를 얻습니다.|  
+|[in] `iItem`|Zero-based index of a header item whose style is `HDF_SPLITBUTTON`. For more information, see the `fmt` member of the [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.|  
+|[out] `lpRect`|Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure to receive the bounding rectangle information.|  
   
-### <a name="return-value"></a>반환 값  
- `true`이 함수는 성공 하는 경우 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this function is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) 에 설명 되어 있는 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 변수를 정의 `m_headerCtrl`, 즉 현재 헤더 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 `GetItemDropDownRect` 메서드. 코드의 이전 단원에서 5 개의 열이 있는 헤더 컨트롤을 생성 합니다. 다음 코드 예제에서는 머리글 드롭 다운 단추에 대 한 예약 된 첫 번째 열에 위치 주변 3 차원 사각형을 그립니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `GetItemDropDownRect` method. In an earlier section of the code, we created a header control with five columns. The following code example draws a 3D rectangle around the location on the first column that is reserved for the header drop-down button.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
- 헤더 컨트롤의 지정된 된 항목에 대 한 경계 사각형을 검색 합니다.  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
+ Retrieves the bounding rectangle for a given item in a header control.  
   
 ```  
 BOOL GetItemRect(
@@ -509,21 +535,21 @@ BOOL GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 헤더 컨트롤 항목의 0부터 시작 하는 인덱스입니다.  
+ The zero-based index of the header control item.  
   
  `lpRect`  
- 주소에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조체는 경계 사각형 정보입니다.  
+ A pointer to the address of a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle information.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 Win32 메시지의 동작을 구현 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), as described in the Windows SDK.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
- 헤더 컨트롤에서 항목의 왼쪽-오른쪽 순서를 검색합니다.  
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
+ Retrieves the left-to-right order of items in a header control.  
   
 ```  
 BOOL GetOrderArray(
@@ -531,84 +557,84 @@ BOOL GetOrderArray(
     int iCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `piArray`  
- 표시 된 왼쪽에서 오른쪽 순서로 헤더 컨트롤에서 항목의 인덱스 값을 받는 버퍼의 주소에 대 한 포인터입니다.  
+ A pointer to the address of a buffer that receives the index values of the items in the header control, in the order in which they appear from left to right.  
   
  `iCount`  
- 헤더 컨트롤 항목의 수입니다. 음수가 아닌 이어야 합니다.  
+ The number of header control items. Must be non-negative.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 헤더 항목 순서 지정을 지원 하기 위해 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), as described in the Windows SDK. It is provided to support header item ordering.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
- 현재 헤더 컨트롤의 오버플로 단추의 경계 사각형을 가져옵니다.  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
+ Gets the bounding rectangle of the overflow button of the current header control.  
   
 ```  
 BOOL GetOverflowRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[out] `lpRect`|에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조체는 경계 사각형 정보입니다.|  
+|[out] `lpRect`|Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle information.|  
   
-### <a name="return-value"></a>반환 값  
- `true`이 함수는 성공 하는 경우 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this function is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 헤더 컨트롤에 동시에 표시할 수 있는 것 보다 더 많은 항목이 포함 된 경우 컨트롤을 사용 하 여 스크롤 하는 오버플로 단추가 표시 되지 않는 항목에 표시 됩니다. 헤더 컨트롤에 있어야는 `HDS_OVERFLOW` 및 `HDF_SPLITBUTTON` 스타일 오버플로 단추를 표시 합니다. 경계 사각형 오버플로 단추를 포함 하 고 오버플로 단추가 표시 된 경우에 존재 합니다. 자세한 내용은 참조 [헤더 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775241)합니다.  
+### <a name="remarks"></a>Remarks  
+ If the header control contains more items than can be simultaneously displayed, the control can display an overflow button that scrolls to items that are not visible. The header control must have the `HDS_OVERFLOW` and `HDF_SPLITBUTTON` styles to display the overflow button. The bounding rectangle encloses the overflow button and exists only when the overflow button is displayed. For more information, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
   
- 이 메서드는 전송 된 [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) 에 설명 되어 있는 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ This method sends the [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 변수를 정의 `m_headerCtrl`, 즉 현재 헤더 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 `GetOverflowRect` 메서드. 코드의 이전 단원에서 5 개의 열이 있는 헤더 컨트롤을 생성 합니다. 그러나 열이 표시 되도록 열 구분 기호를 끌 수 있습니다. 일부 열이 표시 되지 않는 헤더 컨트롤 오버플로 단추를 그립니다. 다음 코드 예제에서는 오버플로 단추의 위치 주위 3D 사각형을 그립니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `GetOverflowRect` method. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. If some columns are not visible, the header control draws an overflow button. The following code example draws a 3D rectangle around the location of the overflow button.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
- 헤더, 있는 경우 있는 항목을 지정 된 기간의 결정 합니다.  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
+ Determines which header item, if any, is located at a specified point.  
   
 ```  
 int HitTest(LPHDHITTESTINFO* phdhti);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|에 대 한 포인터는 [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) 구조를 테스트 하는 시점을 지정 하 고 테스트의 결과 받습니다.|  
+|[in, out] `phdhti`|Pointer to a [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) structure that specifies the point to test and receives the results of the test.|  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 위치;에 있는 경우에 머리글 항목의 0부터 시작 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the header item, if any, at the specified position; otherwise, -1.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) 에 설명 되어 있는 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 변수를 정의 `m_headerCtrl`, 즉 현재 헤더 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 `HitTest` 메서드. 이 코드 예제는 이전 섹션에서 5 개의 열이 있는 헤더 컨트롤을 생성 합니다. 그러나 열이 표시 되도록 열 구분 기호를 끌 수 있습니다. 이 예제에서는 표시 되는 경우는 열의 인덱스를 보고 하 고 해당 열이 표시 되지 않으면-1입니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `HitTest` method. In an earlier section of this code example, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. This example reports the index of the column if it is visible and -1 if the column is not visible.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>CHeaderCtrl::InsertItem  
- 지정된 된 인덱스에 헤더 컨트롤에 새 항목을 삽입합니다.  
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem  
+ Inserts a new item into a header control at the specified index.  
   
 ```  
 int InsertItem(
@@ -616,171 +642,171 @@ int InsertItem(
     HDITEM* phdi);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 삽입할 항목의 인덱스(0부터 시작)입니다. 값이 0 이면 해당 항목의 헤더 컨트롤의 시작 부분에 삽입 됩니다. 값의 최 댓 값 보다 큰 경우 해당 항목의 헤더 컨트롤의 끝에 삽입 됩니다.  
+ The zero-based index of the item to be inserted. If the value is zero, the item is inserted at the beginning of the header control. If the value is greater than the maximum value, the item is inserted at the end of the header control.  
   
  *phdi*  
- 에 대 한 포인터는 [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) 삽입할 항목에 대 한 정보가 포함 된 구조체입니다.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that contains information about the item to be inserted.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 새 항목의 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ Index of the new item if successful; otherwise - 1.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl::Layout  
- 지정 된 사각형 내에서 헤더 컨트롤의 위치와 크기를 검색합니다.  
+##  <a name="layout"></a>  CHeaderCtrl::Layout  
+ Retrieves the size and position of a header control within a given rectangle.  
   
 ```  
 BOOL Layout(HDLAYOUT* pHeaderLayout);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pHeaderLayout*  
- 에 대 한 포인터는 [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) 크기와 헤더 컨트롤의 위치를 설정 하는 데 사용 되는 정보가 포함 된 구조입니다.  
+ Pointer to an [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) structure, which contains information used to set the size and position of a header control.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하도록 지정된 된 사각형에 있는 새 헤더 컨트롤에 대 한 적절 한 크기를 결정 하려면 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used to determine the appropriate dimensions for a new header control that is to occupy the given rectangle.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
- 헤더 컨트롤에서 해당 순서에 따라 항목에 대 한 인덱스 값을 검색 합니다.  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
+ Retrieves the index value for an item based on its order in the header control.  
   
 ```  
 int OrderToIndex(int nOrder) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nOrder*  
- 항목이 나타나는 헤더 컨트롤에서 왼쪽에서 오른쪽의 0부터 시작 순서.  
+ The zero-based order that the item appears in the header control, from left to right.  
   
-### <a name="return-value"></a>반환 값  
- 헤더 컨트롤에서 해당 순서에 따라 항목의 인덱스입니다. 왼쪽에서 오른쪽으로 0으로 시작 인덱스를 계산 합니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the item, based on its order in the header control. The index counts from left to right, beginning with 0.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 매크로의 동작을 구현 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 헤더 항목 순서 지정을 지원 하기 위해 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 macro [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), as described in the Windows SDK. It is provided to support header item ordering.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
- 헤더 컨트롤의 여백 비트맵의 너비를 설정합니다.  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
+ Sets the width of the margin of a bitmap in a header control.  
   
 ```  
 int SetBitmapMargin(int nWidth);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- 너비 (픽셀) 기존 헤더 컨트롤 내에서 비트맵 주위의 여백입니다.  
+ Width, specified in pixels, of the margin that surrounds a bitmap within an existing header control.  
   
-### <a name="return-value"></a>반환 값  
- 픽셀에서 비트맵 여백의 너비입니다.  
+### <a name="return-value"></a>Return Value  
+ The width of the bitmap margin in pixels.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
- 필터 특성에서 변경이 수행 때와 게시의 제한 시간 간격으로 설정 된 [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) 알림입니다.  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
+ Sets the timeout interval between the time a change takes place in the filter attributes and the posting of an [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notification.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *dwTimeOut*  
- 제한 시간 값 (밀리초)에서입니다.  
+ Timeout value, in milliseconds.  
   
-### <a name="return-value"></a>반환 값  
- 수정 중인 필터 컨트롤의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the filter control being modified.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), as described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
- 현재 헤더 컨트롤에서 지정 된 헤더 항목에 포커스를 설정합니다.  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
+ Sets the focus to a specified header item in the current header control.  
   
 ```  
 BOOL SetFocusedItem(int iItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|헤더 항목의 0부터 시작 인덱스입니다.|  
+|[in] `iItem`|Zero-based index of a header item.|  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) 에 설명 되어 있는 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 변수를 정의 `m_headerCtrl`, 즉 현재 헤더 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 `SetFocusedItem` 및 `GetFocusedItem` 메서드. 코드의 이전 단원에서 5 개의 열이 있는 헤더 컨트롤을 생성 합니다. 그러나 열이 표시 되도록 열 구분 기호를 끌 수 있습니다. 다음 예제에서는 설정 하 고 마지막 열 머리글의 포커스 항목으로 확인 합니다.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `SetFocusedItem` and `GetFocusedItem` methods. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. The following example sets and then confirms the last column header as the focus item.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4; 4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
- 헤더 항목을 나타내는 수동 사이의 구분선 끌어 변경 및 헤더 항목의 삭제가 합니다.  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
+ Changes the divider between header items to indicate a manual drag and drop of a header item.  
   
 ```  
 int SetHotDivider(CPoint pt);  
 int SetHotDivider(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pt`  
- 포인터의 위치입니다. 헤더 컨트롤에는 포인터의 위치에 따라 적절 한 구분선 강조 표시 합니다.  
+ The position of the pointer. The header control highlights the appropriate divider based on the pointer's position.  
   
  `nIndex`  
- 강조 표시 된 구분선의 인덱스입니다.  
+ The index of the highlighted divider.  
   
-### <a name="return-value"></a>반환 값  
- 강조 표시 된 구분선의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the highlighted divider.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 헤더 항목 끌어서 놓기 지원 하기 위해 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), as described in the Windows SDK. It is provided to support header item drag and drop.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CHeaderCtrl # 16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl::SetImageList  
- 헤더 컨트롤에는 이미지 목록에 할당합니다.  
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
+ Assigns an image list to a header control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- 에 대 한 포인터는 `CImageList` 헤더 컨트롤에 할당할 이미지 목록을 포함 하는 개체입니다.  
+ A pointer to a `CImageList` object containing the image list to be assigned to the header control.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CImageList](../../mfc/reference/cimagelist-class.md) 헤더 컨트롤에 이전에 할당 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CImageList](../../mfc/reference/cimagelist-class.md) object previously assigned to the header control.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. `CImageList` 개체를 반환 된 포인터가 가리키는 임시 개체 이며 다음 유휴 시간 처리에서 삭제 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), as described in the Windows SDK. The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CHeaderCtrl::GetImageList](#getimagelist)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl::SetItem  
- 헤더 컨트롤의 지정된 된 항목의 특성을 설정합니다.  
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem  
+ Sets the attributes of the specified item in a header control.  
   
 ```  
 BOOL SetItem(
@@ -788,21 +814,21 @@ BOOL SetItem(
     HDITEM* pHeaderItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 조작할 수 항목의 0부터 시작 하는 인덱스입니다.  
+ The zero-based index of the item to be manipulated.  
   
  `pHeaderItem`  
- 에 대 한 포인터는 [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) 새 항목에 대 한 정보가 포함 된 구조체입니다.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that contains information about the new item.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CHeaderCtrl::GetItem](#getitem)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetItem](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
- 헤더 컨트롤에서 항목의 왼쪽-오른쪽 순서를 설정합니다.  
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
+ Sets the left-to-right order of items in a header control.  
   
 ```  
 BOOL SetOrderArray(
@@ -810,26 +836,26 @@ BOOL SetOrderArray(
     LPINT piArray);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iCount`  
- 헤더 컨트롤 항목의 수입니다.  
+ The number of header control items.  
   
  `piArray`  
- 표시 된 왼쪽에서 오른쪽 순서로 헤더 컨트롤에서 항목의 인덱스 값을 받는 버퍼의 주소에 대 한 포인터입니다.  
+ A pointer to the address of a buffer that receives the index values of the items in the header control, in the order in which they appear from left to right.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 매크로의 동작을 구현 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 헤더 항목 순서 지정을 지원 하기 위해 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 macro [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), as described in the Windows SDK. It is provided to support header item ordering.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CHeaderCtrl::GetOrderArray](#getorderarray)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetOrderArray](#getorderarray).  
   
-## <a name="see-also"></a>참고 항목  
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CTabCtrl 클래스](../../mfc/reference/ctabctrl-class.md)   
- [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md)   
- [CImageList 클래스](../../mfc/reference/cimagelist-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CTabCtrl Class](../../mfc/reference/ctabctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)   
+ [CImageList Class](../../mfc/reference/cimagelist-class.md)
 

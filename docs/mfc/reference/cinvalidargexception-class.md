@@ -1,5 +1,5 @@
 ---
-title: "CInvalidArgException 클래스 | Microsoft 문서"
+title: CInvalidArgException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInvalidArgException class
+- CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
 caps.latest.revision: 19
 author: mikeblome
@@ -35,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 4091c0e8a35320482eba193c89c90982c7e4fca9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a44d4ebff914361a8e675e1c6757537e0d3999ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinvalidargexception-class"></a>CInvalidArgException 클래스
-이 클래스는 잘못된 인수 예외 상태를 나타냅니다.  
+# <a name="cinvalidargexception-class"></a>CInvalidArgException Class
+This class represents an invalid argument exception condition.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInvalidArgException : public CSimpleException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|생성자입니다.|  
+|[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|The constructor.|  
   
-## <a name="remarks"></a>주의  
- A `CInvalidArgException` 개체는 잘못 된 인수 예외 상태를 나타냅니다.  
+## <a name="remarks"></a>Remarks  
+ A `CInvalidArgException` object represents an invalid argument exception condition.  
   
- 예외 처리에 대 한 자세한 내용은 참조는 [CException 클래스](../../mfc/reference/cexception-class.md) 항목 및 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information on Exception Handling, see the [CException Class](../../mfc/reference/cexception-class.md) topic and [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -73,20 +73,20 @@ class CInvalidArgException : public CSimpleException
   
  `CInvalidArgException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException  
- 생성자입니다.  
+##  <a name="cinvalidargexception"></a>  CInvalidArgException::CInvalidArgException  
+ The constructor.  
   
 ```  
 CInvalidArgException();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 생성자를 직접 사용 하지 마십시오 전역 함수를 호출 **AfxThrowInvalidArgException**합니다.  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly; call the global function **AfxThrowInvalidArgException**.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CSimpleException 클래스](../../mfc/reference/csimpleexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSimpleException Class](../../mfc/reference/csimpleexception-class.md)
 

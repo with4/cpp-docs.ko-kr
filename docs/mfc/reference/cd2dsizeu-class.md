@@ -1,5 +1,5 @@
 ---
-title: "CD2DSizeU 클래스 | Microsoft 문서"
+title: CD2DSizeU Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSizeU class
+- CD2DSizeU [MFC], CD2DSizeU
+- CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a43ea5448a0b0d09d4cf27eafb01a4d4b610e4f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7e1154fb1de34355574ec0ac41a799286cdbc23d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsizeu-class"></a>CD2DSizeU 클래스
-D2D1_SIZE_U에 대 한 래퍼입니다.  
+# <a name="cd2dsizeu-class"></a>CD2DSizeU Class
+A wrapper for D2D1_SIZE_U.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSizeU : public D2D1_SIZE_U;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|오버로드됨. 생성 된 `CD2DSizeU` 에서 개체 `D2D1_SIZE_U` 개체입니다.|  
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Overloaded. Constructs a `CD2DSizeU` object from `D2D1_SIZE_U` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DSizeU::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::operator CSize](#operator_csize)|변환 `CD2DSizeU` 를 `CSize` 개체입니다.|  
+|[CD2DSizeU::operator CSize](#operator_csize)|Converts `CD2DSizeU` to `CSize` object.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_SIZE_U`  
   
  [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
- CSize 개체에서 CD2DSizeU 개체를 만듭니다.  
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
+ Constructs a CD2DSizeU object from CSize object.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -94,36 +95,36 @@ CD2DSizeU(
     UINT32 cy = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `size`  
- 원본 크기  
+ source size  
   
  `cx`  
- 원본 너비  
+ source width  
   
  `cy`  
- 원본 높이  
+ source height  
   
-##  <a name="isnull"></a>CD2DSizeU::IsNull  
- 식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.  
+##  <a name="isnull"></a>  CD2DSizeU::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 너비와 높이 비어 있습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if width and height are empty; otherwise FALSE.  
   
-##  <a name="operator_csize"></a>CD2DSizeU::operator CSize  
- CD2DSizeU CSize 개체로 변환합니다.  
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
+ Converts CD2DSizeU to CSize object.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>반환 값  
- D2D 크기의 현재 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D size.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

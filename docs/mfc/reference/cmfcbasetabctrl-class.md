@@ -1,11 +1,11 @@
 ---
-title: "CMFCBaseTabCtrl 클래스 | Microsoft 문서"
+title: CMFCBaseTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -130,7 +130,122 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseTabCtrl class
+- CMFCBaseTabCtrl [MFC], AddIcon
+- CMFCBaseTabCtrl [MFC], AddTab
+- CMFCBaseTabCtrl [MFC], ApplyRestoredTabInfo
+- CMFCBaseTabCtrl [MFC], AutoDestroyWindow
+- CMFCBaseTabCtrl [MFC], CalcRectEdit
+- CMFCBaseTabCtrl [MFC], CleanUp
+- CMFCBaseTabCtrl [MFC], ClearImageList
+- CMFCBaseTabCtrl [MFC], DetachTab
+- CMFCBaseTabCtrl [MFC], EnableActivateLastActive
+- CMFCBaseTabCtrl [MFC], EnableAutoColor
+- CMFCBaseTabCtrl [MFC], EnableCustomToolTips
+- CMFCBaseTabCtrl [MFC], EnableInPlaceEdit
+- CMFCBaseTabCtrl [MFC], EnableTabDetach
+- CMFCBaseTabCtrl [MFC], EnableTabSwap
+- CMFCBaseTabCtrl [MFC], EnsureVisible
+- CMFCBaseTabCtrl [MFC], EnterDragMode
+- CMFCBaseTabCtrl [MFC], FindTargetWnd
+- CMFCBaseTabCtrl [MFC], FireChangeActiveTab
+- CMFCBaseTabCtrl [MFC], FireChangingActiveTab
+- CMFCBaseTabCtrl [MFC], GetActiveTab
+- CMFCBaseTabCtrl [MFC], GetActiveTabColor
+- CMFCBaseTabCtrl [MFC], GetActiveTabTextColor
+- CMFCBaseTabCtrl [MFC], GetActiveWnd
+- CMFCBaseTabCtrl [MFC], GetAutoColors
+- CMFCBaseTabCtrl [MFC], GetFirstVisibleTab
+- CMFCBaseTabCtrl [MFC], GetFirstVisibleTabNum
+- CMFCBaseTabCtrl [MFC], GetHighlightedTab
+- CMFCBaseTabCtrl [MFC], GetImageList
+- CMFCBaseTabCtrl [MFC], GetImageSize
+- CMFCBaseTabCtrl [MFC], GetLastVisibleTab
+- CMFCBaseTabCtrl [MFC], GetLocation
+- CMFCBaseTabCtrl [MFC], GetMaxWindowSize
+- CMFCBaseTabCtrl [MFC], GetTabArea
+- CMFCBaseTabCtrl [MFC], GetTabBkColor
+- CMFCBaseTabCtrl [MFC], GetTabBorderSize
+- CMFCBaseTabCtrl [MFC], GetTabByID
+- CMFCBaseTabCtrl [MFC], GetTabCloseButton
+- CMFCBaseTabCtrl [MFC], GetTabFromHwnd
+- CMFCBaseTabCtrl [MFC], GetTabFromPoint
+- CMFCBaseTabCtrl [MFC], GetTabFullWidth
+- CMFCBaseTabCtrl [MFC], GetTabHicon
+- CMFCBaseTabCtrl [MFC], GetTabID
+- CMFCBaseTabCtrl [MFC], GetTabIcon
+- CMFCBaseTabCtrl [MFC], GetTabLabel
+- CMFCBaseTabCtrl [MFC], GetTabRect
+- CMFCBaseTabCtrl [MFC], GetTabsHeight
+- CMFCBaseTabCtrl [MFC], GetTabsRect
+- CMFCBaseTabCtrl [MFC], GetTabTextColor
+- CMFCBaseTabCtrl [MFC], GetTabWnd
+- CMFCBaseTabCtrl [MFC], GetTabWndNoWrapper
+- CMFCBaseTabCtrl [MFC], GetTabsNum
+- CMFCBaseTabCtrl [MFC], GetToolTipCtrl
+- CMFCBaseTabCtrl [MFC], GetVisibleTabsNum
+- CMFCBaseTabCtrl [MFC], HasImage
+- CMFCBaseTabCtrl [MFC], HideSingleTab
+- CMFCBaseTabCtrl [MFC], InsertTab
+- CMFCBaseTabCtrl [MFC], InvalidateTab
+- CMFCBaseTabCtrl [MFC], IsActiveTabCloseButton
+- CMFCBaseTabCtrl [MFC], IsAutoColor
+- CMFCBaseTabCtrl [MFC], IsAutoDestroyWindow
+- CMFCBaseTabCtrl [MFC], IsColored
+- CMFCBaseTabCtrl [MFC], IsDialogControl
+- CMFCBaseTabCtrl [MFC], IsDrawNoPrefix
+- CMFCBaseTabCtrl [MFC], IsFlatFrame
+- CMFCBaseTabCtrl [MFC], IsFlatTab
+- CMFCBaseTabCtrl [MFC], IsHideSingleTab
+- CMFCBaseTabCtrl [MFC], IsIconAdded
+- CMFCBaseTabCtrl [MFC], IsInPlaceEdit
+- CMFCBaseTabCtrl [MFC], IsLeftRightRounded
+- CMFCBaseTabCtrl [MFC], IsMDITab
+- CMFCBaseTabCtrl [MFC], IsOneNoteStyle
+- CMFCBaseTabCtrl [MFC], IsPtInTabArea
+- CMFCBaseTabCtrl [MFC], IsTabCloseButtonHighlighted
+- CMFCBaseTabCtrl [MFC], IsTabCloseButtonPressed
+- CMFCBaseTabCtrl [MFC], IsTabDetachable
+- CMFCBaseTabCtrl [MFC], IsTabIconOnly
+- CMFCBaseTabCtrl [MFC], IsTabSwapEnabled
+- CMFCBaseTabCtrl [MFC], IsTabVisible
+- CMFCBaseTabCtrl [MFC], IsVS2005Style
+- CMFCBaseTabCtrl [MFC], MoveTab
+- CMFCBaseTabCtrl [MFC], OnChangeTabs
+- CMFCBaseTabCtrl [MFC], OnDragEnter
+- CMFCBaseTabCtrl [MFC], OnDragLeave
+- CMFCBaseTabCtrl [MFC], OnDragOver
+- CMFCBaseTabCtrl [MFC], OnDrop
+- CMFCBaseTabCtrl [MFC], OnRenameTab
+- CMFCBaseTabCtrl [MFC], PreTranslateMessage
+- CMFCBaseTabCtrl [MFC], RecalcLayout
+- CMFCBaseTabCtrl [MFC], RemoveAllTabs
+- CMFCBaseTabCtrl [MFC], RemoveTab
+- CMFCBaseTabCtrl [MFC], RenameTab
+- CMFCBaseTabCtrl [MFC], ResetImageList
+- CMFCBaseTabCtrl [MFC], Serialize
+- CMFCBaseTabCtrl [MFC], SetActiveTab
+- CMFCBaseTabCtrl [MFC], SetActiveTabColor
+- CMFCBaseTabCtrl [MFC], SetActiveTabTextColor
+- CMFCBaseTabCtrl [MFC], SetAutoColors
+- CMFCBaseTabCtrl [MFC], SetDockingBarWrapperRTC
+- CMFCBaseTabCtrl [MFC], SetDrawNoPrefix
+- CMFCBaseTabCtrl [MFC], SetImageList
+- CMFCBaseTabCtrl [MFC], SetLocation
+- CMFCBaseTabCtrl [MFC], SetTabBkColor
+- CMFCBaseTabCtrl [MFC], SetTabBorderSize
+- CMFCBaseTabCtrl [MFC], SetTabHicon
+- CMFCBaseTabCtrl [MFC], SetTabIcon
+- CMFCBaseTabCtrl [MFC], SetTabIconOnly
+- CMFCBaseTabCtrl [MFC], SetTabLabel
+- CMFCBaseTabCtrl [MFC], SetTabsHeight
+- CMFCBaseTabCtrl [MFC], SetTabTextColor
+- CMFCBaseTabCtrl [MFC], SetTabsOrder
+- CMFCBaseTabCtrl [MFC], ShowTab
+- CMFCBaseTabCtrl [MFC], StartRenameTab
+- CMFCBaseTabCtrl [MFC], SwapTabs
+- CMFCBaseTabCtrl [MFC], CreateWrapper
+- CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
+- CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 caps.latest.revision: 41
 author: mikeblome
@@ -151,171 +266,173 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d82cde70595bf6d7a4629f54cc48e2b422cd5e8c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a38fa6376a8ecdc1ef60fcc195448389d13df798
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl 클래스
-탭 창의 기본 기능을 구현합니다.  
+# <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
+Implements the base functionality for tabbed windows.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
-|[CMFCBaseTabCtrl::AddTab](#addtab)|탭 창에 새 탭을 추가합니다.|  
+|[CMFCBaseTabCtrl::AddTab](#addtab)|Adds a new tab to the tabbed window.|  
 |[CMFCBaseTabCtrl::ApplyRestoredTabInfo](#applyrestoredtabinfo)||  
 |[CMFCBaseTabCtrl::AutoDestroyWindow](#autodestroywindow)||  
 |[CMFCBaseTabCtrl::CalcRectEdit](#calcrectedit)||  
 |[CMFCBaseTabCtrl::CleanUp](#cleanup)||  
 |[CMFCBaseTabCtrl::ClearImageList](#clearimagelist)||  
-|[CMFCBaseTabCtrl::DetachTab](#detachtab)|탭 창에서 탭을 분리합니다.|  
+|[CMFCBaseTabCtrl::DetachTab](#detachtab)|Detaches a tab from a tabbed window.|  
 |[CMFCBaseTabCtrl::EnableActivateLastActive](#enableactivatelastactive)||  
-|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|탭 자동 색 지정을 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|탭에 사용자 지정 도구 설명을 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|탭 레이블 직접 편집을 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|분리 가능한 탭을 사용하도록 설정합니다.|  
-|[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|사용자가 마우스를 사용해 탭 순서를 변경할 수 있도록 설정하거나 이를 해제합니다.|  
-|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|지정된 탭이 표시될 때까지 탭을 스크롤합니다. 이 메서드는 지정된 탭이 이미 표시되는 경우에는 효과가 없습니다.|  
+|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|Enables or disables automatic tab coloring.|  
+|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|Enables or disables custom tooltips for tabs.|  
+|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Enables or disables direct editing of tab labels.|  
+|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|Enables detachable tabs.|  
+|[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|Enables or disables whether the user can change the tab order by using a mouse.|  
+|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|Scrolls the tabs until the specified tab is visible. This method has no effect if the specified tab is already visible.|  
 |[CMFCBaseTabCtrl::EnterDragMode](#enterdragmode)||  
-|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|지정된 지점에 포함된 창을 반환합니다.|  
+|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|Returns a pane that contains a specified point.|  
 |[CMFCBaseTabCtrl::FireChangeActiveTab](#firechangeactivetab)||  
 |[CMFCBaseTabCtrl::FireChangingActiveTab](#firechangingactivetab)||  
-|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|활성 탭의 인덱스를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|활성 탭의 배경색을 반환합니다.|  
-|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|활성 탭의 텍스트 색을 반환합니다.|  
-|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|탭 컨트롤의 활성 페이지 포인터를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|자동 색 지정에 사용되는 색 배열에 대한 참조를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|첫 번째 표시 탭에 대한 포인터를 반환합니다.|  
+|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|Returns the index of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|Returns the background color of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|Returns the text color of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|Returns a pointer the active page of the tab control.|  
+|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|Returns a reference to the array of colors that are used for automatic coloring.|  
+|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|Returns a pointer to the first visible tab.|  
 |[CMFCBaseTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)||  
-|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|현재 강조 표시된 탭의 인덱스를 반환합니다.|  
+|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|Returns the index of the currently highlighted tab.|  
 |[CMFCBaseTabCtrl::GetImageList](#getimagelist)||  
 |[CMFCBaseTabCtrl::GetImageSize](#getimagesize)||  
 |[CMFCBaseTabCtrl::GetLastVisibleTab](#getlastvisibletab)||  
-|[CMFCBaseTabCtrl::GetLocation](#getlocation)|탭 컨트롤을 기준으로 탭 영역이 배치되는 위치를 나타내는 LOCATION 데이터 형식의 변수를 반환합니다. 예를 들어 위쪽 또는 아래쪽에 있을 수 있습니다.|  
+|[CMFCBaseTabCtrl::GetLocation](#getlocation)|Returns a variable of the LOCATION data type that indicates where the tab area is positioned relative to the tab control. For example, on the top or on the bottom.|  
 |[CMFCBaseTabCtrl::GetMaxWindowSize](#getmaxwindowsize)||  
-|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|탭 창에 있는 탭 영역의 크기와 위치를 반환합니다. 탭 영역의 위치는 좌표를 사용하여 정의됩니다.|  
-|[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|지정된 탭의 배경색을 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|탭 컨트롤의 탭 테두리 크기를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|지정된 ID로 식별되는 탭 인덱스를 반환합니다.|  
+|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|Returns the size and the position of the tab area in the tabbed window. The position of the tab area is defined by using coordinates.|  
+|[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|Returns the background color of the specified tab.|  
+|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|Returns the size of the tab borders in the tab control.|  
+|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|Returns the index of the tab that is identified by a specified ID.|  
 |[CMFCBaseTabCtrl::GetTabCloseButton](#gettabclosebutton)||  
-|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|지정된 HWND 개체가 포함된 탭의 인덱스를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|지정된 지점이 포함된 탭을 반환합니다.|  
+|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|Returns the index of a tab that contains a specified HWND object.|  
+|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|Returns the tab that contains a specified point.|  
 |[CMFCBaseTabCtrl::GetTabFullWidth](#gettabfullwidth)||  
-|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|지정된 키와 연결된 아이콘을 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabID](#gettabid)|탭의 인덱스를 사용하여 탭의 ID를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|지정된 탭에 대한 아이콘 ID를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|지정된 탭의 텍스트를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|지정된 탭의 크기와 위치를 검색합니다.|  
+|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|Returns the icon associated with the specified tab.|  
+|[CMFCBaseTabCtrl::GetTabID](#gettabid)|Returns the ID of a tab by using the index of the tab.|  
+|[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|Returns the icon ID for a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|Returns the text of a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|Retrieves the size and position of a specified tab.|  
 |[CMFCBaseTabCtrl::GetTabsHeight](#gettabsheight)||  
 |[CMFCBaseTabCtrl::GetTabsRect](#gettabsrect)||  
-|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|지정된 탭의 텍스트 색을 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|지정된 탭 페이지에 있는 창에 대한 포인터를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|컨트롤에 래퍼가 있는 경우에도, 지정된 탭 페이지에 있는 컨트롤에 대한 직접 포인터를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|탭 컨트롤에 포함된 탭의 개수를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|`CMFCBaseTabCtrl` 개체와 연결된 도구 설명에 대한 참조를 반환합니다.|  
-|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|표시 탭의 개수를 반환합니다.|  
+|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|Returns the text color of a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Returns the pointer to a pane that resides on a specified tab page.|  
+|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Returns the direct pointer to a control that resides on a specified tab page, even if the control has a wrapper.|  
+|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Returns the number of tabs that are contained in the tab control.|  
+|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Returns a reference to the tooltip control associated with the `CMFCBaseTabCtrl` object.|  
+|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Returns the number of visible tabs.|  
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||  
-|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|탭 창을 숨기는 옵션을 설정합니다. 단, 탭 창이 표시 탭 하나만 표시하는 경우에 해당합니다.|  
-|[CMFCBaseTabCtrl::InsertTab](#inserttab)|새 탭을 삽입합니다.|  
+|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Sets an option that hides a window tab, but only if the tabbed window displays a just one visible tab.|  
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|Inserts a new tab.|  
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||  
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||  
-|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|탭 창이 자동 색 모드인지 여부를 나타내는 값을 반환합니다.|  
+|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Returns a value that indicates whether a tabbed window is in automatic-color mode.|  
 |[CMFCBaseTabCtrl::IsAutoDestroyWindow](#isautodestroywindow)||  
 |[CMFCBaseTabCtrl::IsColored](#iscolored)||  
 |[CMFCBaseTabCtrl::IsDialogControl](#isdialogcontrol)||  
 |[CMFCBaseTabCtrl::IsDrawNoPrefix](#isdrawnoprefix)||  
-|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|탭 영역의 프레임이 평면인지 아니면 3D인지를 나타내는 값을 반환합니다.|  
+|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|Returns a value that indicates whether the frame for the tab area is flat or 3D.|  
 |[CMFCBaseTabCtrl::IsFlatTab](#isflattab)||  
-|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|탭 컨트롤이 탭을 숨기도록 구성되어 있는지 여부를 나타내는 값을 반환합니다. 단, 탭 창에 표시 탭 하나만 있는 경우에 해당합니다.|  
+|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|Returns a value that indicates whether the tab control is configured to hide a tab, but only if a tabbed window has just one visible tab.|  
 |[CMFCBaseTabCtrl::IsIconAdded](#isiconadded)||  
-|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|사용자가 탭의 레이블을 수정할 수 있는지 여부를 나타냅니다.|  
+|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|Indicates whether users can modify the label on a tab.|  
 |[CMFCBaseTabCtrl::IsLeftRightRounded](#isleftrightrounded)||  
 |[CMFCBaseTabCtrl::IsMDITab](#ismditab)||  
-|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|탭 창에 Microsoft OneNote 스타일의 탭이 표시되는지 여부를 나타냅니다.|  
-|[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|지정된 지점이 탭 영역에 있는지 여부를 확인합니다.|  
+|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indicates whether a tabbed window displays tabs in Microsoft OneNote style.|  
+|[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|Checks whether a specified point exists in the tab area.|  
 |[CMFCBaseTabCtrl::IsTabCloseButtonHighlighted](#istabclosebuttonhighlighted)||  
 |[CMFCBaseTabCtrl::IsTabCloseButtonPressed](#istabclosebuttonpressed)||  
-|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|탭이 분리 가능한지 여부를 나타냅니다.|  
-|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|탭에 레이블 대신 아이콘이 표시되는지 여부를 나타냅니다.|  
-|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|사용자가 탭을 끌어 탭 위치를 변경할 수 있는지 여부를 나타냅니다.|  
-|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|지정된 탭이 표시되는지 여부를 나타냅니다.|  
+|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|Indicates whether a tab is detachable.|  
+|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|Indicates whether tabs display icons but not labels.|  
+|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|Indicates whether the user can change tab positions by dragging tabs.|  
+|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|Indicates whether a specified tab is visible.|  
 |[CMFCBaseTabCtrl::IsVS2005Style](#isvs2005style)||  
 |[CMFCBaseTabCtrl::MoveTab](#movetab)||  
-|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|탭 개수가 변경되면 프레임워크에서 호출합니다.|  
+|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|Called by the framework when the number of tabs changes.|  
 |[CMFCBaseTabCtrl::OnDragEnter](#ondragenter)||  
 |[CMFCBaseTabCtrl::OnDragLeave](#ondragleave)||  
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|클래스에서 사용 하는 [CWinApp](../../mfc/reference/cwinapp-class.md) 으로 디스패치 되기 전에 창 메시지를 변환 하는 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. (재정의 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|탭 창의 내부 레이아웃을 다시 계산합니다.|  
-|[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|탭 창에서 모든 탭을 제거합니다.|  
-|[CMFCBaseTabCtrl::RemoveTab](#removetab)|탭 창에서 탭을 제거합니다.|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalculates the internal layout of a tabbed window.|  
+|[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Removes all tabs from the tabbed window.|  
+|[CMFCBaseTabCtrl::RemoveTab](#removetab)|Removes a tab from a tabbed window.|  
 |[CMFCBaseTabCtrl::RenameTab](#renametab)||  
-|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|탭 창에 연결된 이미지 목록을 다시 설정합니다.|  
-|[CMFCBaseTabCtrl::Serialize](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다. (재정의 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CMFCBaseTabCtrl::SetActiveTab](#setactivetab)|탭을 활성화합니다.|  
-|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|현재 활성 탭의 배경색을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|활성 탭의 텍스트 색을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|자동 색 모드에서 적용되는 탭 컨트롤 색을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|설정에서 파생 되지 않은 모든 개체에 대해 사용 되는 래퍼 클래스는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.|  
-|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|레이블이 그려질 때 접두사 처리를 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|아이콘 이미지 목록을 설정합니다.|  
+|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|Resets the image list that is attached to a tabbed window.|  
+|[CMFCBaseTabCtrl::Serialize](#serialize)|Reads or writes this object from or to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CMFCBaseTabCtrl::SetActiveTab](#setactivetab)|Activates a tab.|  
+|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|Sets the background color for the currently active tab.|  
+|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|Sets the text color for active tabs.|  
+|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|Sets the tab control colors that are applied in automatic color mode.|  
+|[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|Sets the wrapper class that is used for any objects that are not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).|  
+|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|Enables and disables the processing of prefix characters when tab labels are drawn.|  
+|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|Sets the icon image list.|  
 |[CMFCBaseTabCtrl::SetLocation](#setlocation)||  
-|[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|지정된 탭의 배경색을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|새 탭 테두리 크기를 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|탭 아이콘을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|탭 아이콘 ID를 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|지정된 탭에 대해 "아이콘만" 모드를 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|탭 레이블을 지정 문자열 값과 같도록 설정합니다.|  
+|[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|Sets the background color for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|Sets a new tab border size.|  
+|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|Sets a tab icon.|  
+|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|Sets a tab icon ID.|  
+|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|Enables and disables the "icon only" mode for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|Sets a tab label equal to a specified string value.|  
 |[CMFCBaseTabCtrl::SetTabsHeight](#settabsheight)||  
-|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|지정된 탭의 텍스트 색을 설정합니다.|  
-|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|지정된 순서대로 탭을 정렬합니다.|  
-|[CMFCBaseTabCtrl::ShowTab](#showtab)|지정된 탭을 표시하거나 숨깁니다.|  
+|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|Sets the text color for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|Arranges tabs in the specified order.|  
+|[CMFCBaseTabCtrl::ShowTab](#showtab)|Shows or hides the specified tab.|  
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||  
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||  
   
-### <a name="protected-methods"></a>보호된 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|파생 된 개체에 대 한 래퍼를 만듭니다 [CWnd](../../mfc/reference/cwnd-class.md) 에서 파생 되지 않은 `CDockablePane`합니다. `CMFCBaseTabCtrl` 개체를 도킹하려면 포함된 모든 컨트롤이 `CDockablePane`에서 파생되었거나 이 컨트롤에 도킹 래퍼가 있어야 합니다.<br /><br /> `SetDockingBayWrapperRTC`를 사용하여 래퍼의 클래스를 설정합니다.|  
+|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Creates a wrapper for an object derived from [CWnd](../../mfc/reference/cwnd-class.md) that is not derived from `CDockablePane`. To dock a `CMFCBaseTabCtrl` object, every embedded control must either have a docking wrapper or be derived from `CDockablePane`.<br /><br /> You set the class of the wrapper by using `SetDockingBayWrapperRTC`.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|마우스 왼쪽 단추 클릭이나 마우스 오른쪽 단추 클릭 중 어느 것을 사용하여 탭을 선택할지를 지정합니다.|  
-|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|탭에 포함된 창이 자동으로 소멸되는지 여부를 지정합니다.|  
+|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Specifies whether tabs are selected by using a left mouse click or a right mouse click.|  
+|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Specifies whether the panes that are contained in the tabs are destroyed automatically.|  
   
-## <a name="remarks"></a>주의  
- `CMFCBaseTabCtrl` 클래스는 추상 클래스입니다. 따라서 인스턴스화할 수 없습니다. 탭 창을 만들려면 `CMFCBaseTabCtrl`에서 클래스를 파생해야 합니다. MFC 라이브러리에는&2; 개는 몇 가지 파생된 클래스 예 [CMFCTabCtrl 클래스](../../mfc/reference/cmfctabctrl-class.md) 및 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCBaseTabCtrl` class is an abstract class. Therefore, it cannot be instantiated. To create a tabbed window, you must derive a class from `CMFCBaseTabCtrl`. The MFC library contains some derived class examples, two of which are [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) and [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)]부터 이 클래스는 Microsoft Active Accessibility를 지원합니다.  
+ Starting with [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], this class supports Microsoft Active Accessibility.  
   
-## <a name="customization-tips"></a>사용자 지정 팁  
- 다음 팁와 관련 된 `CMFCBaseTabCtrl Class` 에서 상속 하는 클래스:  
+## <a name="customization-tips"></a>Customization Tips  
+ The following tips pertain to the `CMFCBaseTabCtrl Class` and any classes that inherit from it:  
   
--   분리 가능한 탭을 사용하도록 설정하는 경우 탭 창에 대한 포인터를 유지하지 마세요. 이러한 분리 가능한 탭은 동적으로 만들고 제거할 수 있습니다. 따라서 포인터가 유효하지 않게 될 수 있습니다.  
+-   If you enable detachable tabs, do not keep pointers to the tabbed windows. These detachable tabs can be created and destroyed dynamically. Therefore, pointers can become invalid.  
   
--   사용자가 마우스를 사용해 탭 컨트롤에서 동적으로 탭을 이동할 수 있도록 탭 컨트롤을 구성할 수 있습니다. 이 기능은 `CMFCBaseTabCtrl` 클래스에서 기본으로 제공됩니다. 호출을 사용 하려면 [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)합니다.  
+-   You can configure the tab control so that users can move tabs dynamically on a tab control by using the mouse. This functionality is built into the `CMFCBaseTabCtrl` class. To enable it, call [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap).  
   
--   탭 컨트롤에 탭을 추가하면 기본적으로 이 탭은 분리 가능한 상태입니다. 사용 하 여 비 분리 가능한 탭을 추가할 수도 있습니다 [CMFCBaseTabCtrl::AddTab](#addtab)합니다. 매개 변수 `bDetachable` 을 `FALSE`로 설정하는 경우 탭을 분리할 수 없습니다. 메서드를 호출 하 여 탭 분리식 인지 여부를 변경할 수도 있습니다 [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)합니다.  
+-   By default, tabs are detachable when you add them to a tab control. You can also add non-detachable tabs by using [CMFCBaseTabCtrl::AddTab](#addtab). If you set the parameter `bDetachable` to `FALSE`, the tab will not be detachable. You can also change whether tabs are detachable by calling the method [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).  
   
--   파생 된 개체는 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 도킹 컨트롤 막대 또는 도킹 가능한 탭에 배치할 수 있습니다. 전체 컨트롤을 도킹하려면 `CWnd` 개체를 도킹 가능하도록 만들어야 합니다. 이를 위해 MFC는 래퍼 클래스를 사용합니다. 이 래퍼 클래스는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)합니다. 도킹 가능한 컨트롤 막대나 도킹 가능한 탭에 추가되는 `CWnd` 개체는 `CDockablePaneAdapter` 개체 내에 래핑됩니다. `m_bEnableWrapping` 개체의 매개 변수 `CMFCBaseTablCtrl` 을 `FALSE`로 설정하여 자동 래핑을 사용하지 않도록 설정할 수 있습니다. 메서드를 사용 하 여 응용 프로그램에서 사용할 래퍼 클래스를 변경할 수도 있습니다 [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)합니다.  
+-   Objects that are derived from the [CWnd Class](../../mfc/reference/cwnd-class.md) can be put on a dockable control bar or dockable tab. For the whole control to be docked, you must make the `CWnd` object dockable. To accomplish this, MFC uses a wrapper class. This wrapper class is the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Any `CWnd` objects that are added to a dockable control bar or dockable tab will be wrapped inside a `CDockablePaneAdapter` object. You can disable the automatic wrapping by setting the parameter `m_bEnableWrapping` of your `CMFCBaseTablCtrl` object to `FALSE`. You can also change the class that your application will use as a wrapper by using the method [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -324,11 +441,11 @@ class CMFCBaseTabCtrl : public CWnd
   
  [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxbasetabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasetabctrl.h  
   
-##  <a name="addicon"></a>CMFCBaseTabCtrl::AddIcon  
- 보호 된 아이콘 목록 아이콘을 추가 `CMap``m_mapAddedIcons` 멤버입니다.  
+##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon  
+ Adds an icon to the list of icons in the protected `CMap m_mapAddedIcons` member.  
   
 ```  
 void AddIcon(
@@ -336,17 +453,17 @@ void AddIcon(
     int iIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- 추가 될 아이콘에 대 한 핸들입니다.  
+ A handle to the icon to be added.  
   
  [in] `iIcon`  
- 보호 된 아이콘의&0;부터 시작 인덱스 `CImageList``m_Images` 멤버입니다.  
+ Zero-based index of the icon in the protected `CImageList m_Images` member.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtab"></a>CMFCBaseTabCtrl::AddTab  
- 탭 컨트롤에 새 탭을 추가합니다.  
+##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab  
+ Adds a new tab to the tab control.  
   
 ```  
 virtual void AddTab(
@@ -363,81 +480,81 @@ virtual void AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pTabWnd`  
- 이 메서드는 새 탭으로 나타내는 창에 대 한 포인터입니다.  
+ A pointer to the window that this method represents as a new tab.  
   
  [in] `lpszTabLabel`  
- 새 탭에 대 한 레이블을 포함 하는 문자열입니다.  
+ A string that contains the label for the new tab.  
   
  [in] `uiImageId`  
- 이미지 목록에서 사용 되는 이미지 ID입니다. 탭 컨트롤의 새 탭에 대 한 아이콘으로이 이미지를 사용합니다.  
+ An image ID from the image list. The tab control uses this image as the icon for the new tab.  
   
  [in] `uiResTabLabel`  
- 레이블에 대 한 리소스 ID입니다.  
+ The resource ID for the label.  
   
  [in] `bDetachable`  
- 새 탭 분리 가능한 지 확인 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether the new tab is detachable.  
   
-### <a name="remarks"></a>주의  
- 경우 `pTabWnd` 에서 파생 되지 않는 개체를 가리킬는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 경우 `bDetachable` 는 `TRUE`, 프레임 워크에 대 한 래퍼를 자동으로 만들고는 `pTabWnd` 개체입니다. 래퍼를 사용 하면는 `pTabWnd` 분리 가능한 개체입니다. 기본적으로 래퍼는의 인스턴스는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)합니다. 기본 래퍼를 제공 하는 기능을 적용할 수 있는 경우 사용 하 여는 [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) 메서드를 다른 래퍼를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ If `pTabWnd` points to an object that is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and if `bDetachable` is `TRUE`, the framework automatically creates a wrapper for the `pTabWnd` object. The wrapper makes the `pTabWnd` object detachable. By default, the wrapper is an instance of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). If the functionality offered by the default wrapper is unacceptable, use the [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) method to specify a different wrapper.  
   
-##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
+
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bUseTabIndexes`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow  
+
   
 ```  
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit  
+
   
 ```  
 virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cleanup"></a>CMFCBaseTabCtrl::CleanUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp  
+
   
 ```  
 virtual void CleanUp();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList  
+
   
 ```  
 virtual void ClearImageList();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createwrapper"></a>CMFCBaseTabCtrl::CreateWrapper  
- 파생 된 프레임 창에 대 한 래퍼를 만듭니다는 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 에서 파생 되지 않은 하지만 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.  
+##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper  
+ Creates a wrapper for a frame window that is derived from the [CWnd Class](../../mfc/reference/cwnd-class.md) but is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
 virtual CWnd* CreateWrapper(
@@ -446,28 +563,28 @@ virtual CWnd* CreateWrapper(
     BOOL bDetachable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndToWrap`  
- 래핑된 프레임 창에 대 한 포인터입니다.  
+ A pointer to the frame window that is wrapped.  
   
  [in] `lpszTabLabel`  
- 창에 대 한 레이블을 포함 하는 문자열입니다.  
+ A string that contains the label for the window.  
   
  [in] `bDetachable`  
- 창 분리 가능한 지 여부를 나타내는 부울 매개 변수입니다.  
+ A Boolean parameter that indicates whether the window is detachable.  
   
-### <a name="return-value"></a>반환 값  
- 파생 된 래퍼에 대 한 포인터는 `CDockablePane` 클래스는 `CreateWrapper` 에 대 한 래퍼 클래스를 성공적으로 만든 `pWndToWrap`합니다. 메서드가 실패 하면 그 반환 `pWndToWrap`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to wrapper derived from the `CDockablePane` class if `CreateWrapper` successfully creates a wrapper class for `pWndToWrap`. If the method fails, it retruns `pWndToWrap`.  
   
-### <a name="remarks"></a>주의  
- 파생 된 개체 탭된 창에 도킹할 수 `CWnd`합니다. 그러나 순서로 `CMFCBaseTabCtrl Class` 도킹 하는 개체, 각 개체에는 `CMFCBaseTabCtrl` 분리 가능한 이어야 합니다. 따라서 `CMFCBaseTabCtrl` 에서 파생 되지 않은 모든 개체를 자동으로 줄 바꿈 `CDockablePane`합니다.  
+### <a name="remarks"></a>Remarks  
+ A tabbed window can dock any object derived from `CWnd`. However, in order for a `CMFCBaseTabCtrl Class` object to be dockable, each object on the `CMFCBaseTabCtrl` must be detachable. Therefore, `CMFCBaseTabCtrl` automatically wraps any objects that are not derived from `CDockablePane`.  
   
- 기본적으로는 `CMFCBaseTabCtrl` 의 인스턴스를 만드는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)합니다. 래퍼의 기본 클래스를 변경 하려면 호출 [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)합니다.  
+ By default, the `CMFCBaseTabCtrl` creates instances of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). To change the wrapper's default class, call [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
- 경우 `pWndToWrap` 에서 파생 된 `CDockablePane`,이 메서드는 래퍼를 만들지 것입니다. 대신, 실패 하 고 반환 `pWndToWrap`합니다.  
+ If `pWndToWrap` is derived from `CDockablePane`, this method will not create a wrapper. Instead, it will fail and return `pWndToWrap`.  
   
-##  <a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab  
- 프레임 워크 탭 컨트롤에서 탭을 분리 하려면이 메서드를 호출 합니다.  
+##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
+ The framework calls this method to detach a tab from the tab control.  
   
 ```  
 virtual BOOL DetachTab(
@@ -476,87 +593,87 @@ virtual BOOL DetachTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dockMethod`  
- 제공 하는 열거형된 데이터 형식의 [CBasePane 클래스](../../mfc/reference/cbasepane-class.md)합니다. 이 데이터 형식은 탭을 분리 하는 데 사용 된 메서드를 지정 합니다.  
+ An enumerated data type provided by the [CBasePane Class](../../mfc/reference/cbasepane-class.md). This data type specifies the method that was used to detach the tab.  
   
  [in] `nTabNum`  
- 분리할 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to be detached.  
   
  [in] `bHide`  
- 프레임 워크에서 분리 된 탭을 숨겨야 하는지 여부를 나타내는 부울 매개 변수입니다.  
+ A Boolean parameter that indicates whether the framework should hide the detached tab.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 탭에 지정 된 경우 `nTabNum` 는 탈부착식,이 함수가 실패 하 고 반환 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ If the tab specified by `nTabNum` is non-detachable, this function fails and returns `FALSE`.  
   
-##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
+
   
 ```  
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bLastActive`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor  
- 탭을 그릴 때 프레임 워크에서 자동 백그라운드 색을 사용 하는지 여부를 제어 합니다.  
+##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor  
+ Controls whether the framework uses the automatic background colors when drawing a tab.  
   
 ```  
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 프레임 워크 자동 색을 사용할지 여부를 결정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether the framework uses automatic colors.  
   
-### <a name="remarks"></a>주의  
- 탭 컨트롤에 몇 가지 미리 정의 된 색의 배열입니다. 프레임 워크에서 자동 색에 사용 될 경우 각 탭에는 일련의 탭이이 배열에서 다음 색을 할당 됩니다.  
+### <a name="remarks"></a>Remarks  
+ A tab control has an array of several predefined colors. When the framework uses automatic colors, each tab in a series of tabs is assigned the next color from this array.  
   
- 기본적으로, 자동 색 라이브러리 정의 된 색으로 결정 됩니다. 호출 하 여 사용자 지정 색의 배열을 제공할 수 있습니다 [CMFCBaseTabCtrl::SetAutoColors](#setautocolors)합니다.  
+ By default, the automatic colors are determined by the library-defined colors. You can provide a custom array of colors by calling [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips  
- 탭 컨트롤에 대 한 사용자 지정 도구 설명이 있습니다.  
+##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips  
+ Enables custom tooltips for the tab control.  
   
 ```  
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 사용자 지정 도구 설명을 사용 여부를 결정 하는 부울입니다.  
+ A Boolean that determines whether to use custom tooltips.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 탭 컨트롤에 보내는 사용자 지정 도구 설명을 사용 하는 경우는 `AFX_WM_ON_GET_TAB_TOOLTIP` 주 프레임에는 메시지입니다. 응용 프로그램에서 사용자 지정 도구를 지원 하려는 경우 주 프레임 창이이 메서드를 처리 하 고 사용자 지정 도구 설명 텍스트를 제공 해야 합니다. 사용자 지정 도구 설명 텍스트를 제공 하는 방법에 대 한 자세한 내용은 참조 [CMFCTabToolTipInfo 구조](../../mfc/reference/cmfctabtooltipinfo-structure.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ If custom tooltips are enabled, the tab control sends the `AFX_WM_ON_GET_TAB_TOOLTIP` message to the main frame. If you want to support custom tooltips in your application, the main frame window must handle this method and provide the custom tooltip text. For more information about providing custom tooltip text, see [CMFCTabToolTipInfo Structure](../../mfc/reference/cmfctabtooltipinfo-structure.md).  
   
-##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEdit  
- 사용자가 탭 레이블 편집 직접 수 있으므로 합니다.  
+##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit  
+ Enables direct editing of the tab labels by the user.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 탭 레이블을 직접 편집할 수 있도록 설정할지 여부를 지정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that specifies whether to enable direct editing of the tab labels.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 직접적인 편집에 탭 레이블 탭 컨트롤에 대 한 비활성화 됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, direct editing of the tab labels is disabled for tab controls.  
   
- 탭 컨트롤에 탭의 하위 집합에 대 한 직접적인 편집에 사용할 수 있습니다. 이 작업을 수행 하려면 메서드를 재정의 `CMFCBaseTabCtrl::StartRenameTab`합니다. `StartRenameTab`레이블 탭을 직접 편집할 수 있는 모든 탭에 대 한&0;이 아닌 값을 반환 해야 합니다.  
+ You can enable direct editing for a subset of the tabs on the tab control. To do this, override the method `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` should return a nonzero value for all tabs that support direct editing of tab labels.  
   
- 에 `CMFCBaseTabCtrl Class`,이 메서드는 순수 가상 함수 이며는 구현 되지 않습니다. 클래스를 파생 하는 경우 `CMFCBaseTabCtrl`,이 함수를 구현 해야 합니다.  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you must implement this function.  
   
-##  <a name="enabletabdetach"></a>CMFCBaseTabCtrl::EnableTabDetach  
- 분리 가능한 탭을 사용하도록 설정합니다.  
+##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach  
+ Enables detachable tabs.  
   
 ```  
 virtual BOOL EnableTabDetach(
@@ -564,162 +681,162 @@ virtual BOOL EnableTabDetach(
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
  [in] `bEnable`  
- 분리 가능한 탭을 만들 것인지 여부를 나타내는 부울입니다.  
+ A Boolean that indicates whether to make the tab detachable.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="enabletabswap"></a>CMFCBaseTabCtrl::EnableTabSwap  
- 사용자를가 마우스를 사용 하 여 탭 순서를 변경할 수 있습니다.  
+##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap  
+ Enables the user to change the tab order using a mouse.  
   
 ```  
 void EnableTabSwap(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 탭 대체의 활성화 여부를 나타내는 부울입니다.  
+ A Boolean that indicates whether to enable tab swapping.  
   
-### <a name="remarks"></a>주의  
- 탭 교환 사용 하는 경우 사용자 탭을 끌어를 업데이트 하 고 탭 컨트롤에서의 상대 위치를 변경할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ When tab swapping is enabled, the user can drag a tab and change its relative position in the tab control.  
   
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible  
- 지정된 탭이 표시될 때까지 탭을 스크롤합니다.  
+##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible  
+ Scrolls the tabs until the specified tab is visible.  
   
 ```  
 virtual BOOL EnsureVisible(int iTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 탭으로 표시 하는 경우에이 메서드가 아무런 영향을 주지 `iTab` 표시 되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method has no effect if the tab indicated by `iTab` is already visible.  
   
- 기본적으로이 메서드는에서 지원 하지는 `CMFCBaseTabCtrl Class`합니다. 이 함수에서 파생 된 사용자 지정 클래스를 구현 해야 `CMFCBaseTabCtrl` 경우 해당 사용자 지정 탭 컨트롤에서 탭 스크롤을 지원 합니다. 이 메서드는에서 지원 되는 [CMFCTabCtrl 클래스](../../mfc/reference/cmfctabctrl-class.md)합니다.  
+ By default, this method is not supported by the `CMFCBaseTabCtrl Class`. You should implement this function in a custom class derived from `CMFCBaseTabCtrl` if that custom tab control supports tab scrolling. This method is supported by the [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md).  
   
-##  <a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode  
+
   
 ```  
 void EnterDragMode();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd  
- 지정된 된 지점에 포함 된 창을 식별 합니다.  
+##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd  
+ Identifies the pane that contains a specified point.  
   
 ```  
 virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pt`  
- 클라이언트 영역을 사용 하 여 정의 된 지점 좌표는 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체입니다.  
+ A point that is defined by using client-area coordinates of the [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 성공 하 고 그렇지 않으면 개체 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object if successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 에 `CMFCBaseTabCtrl` 클래스,이 메서드는 순수 가상 함수:에서 클래스를 파생 하는 경우에 구현 해야 `CMFCBaseTabCtrl`합니다.  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl` class, this method is a pure virtual function: you must implement it if you derive a class from `CMFCBaseTabCtrl`.  
   
-##  <a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab  
+
   
 ```  
 virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nNewTab`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab  
+
   
 ```  
 virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nNewTab`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab  
- 현재 활성 탭의 인덱스를 검색합니다.  
+##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab  
+ Retrieves the index of the currently active tab.  
   
 ```  
 virtual int GetActiveTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 활성 탭;의&0;부터 시작 하는 인덱스 활성 탭이 없는 경우-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the active tab; -1 if there is no active tab.  
   
-##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor  
- 현재 활성 탭의 배경색을 검색합니다.  
+##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor  
+ Retrieves the background color of the currently active tab.  
   
 ```  
 virtual COLORREF GetActiveTabColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 활성 탭의 배경색을 지정 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that specifies the background color of the active tab.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 활성 탭의 배경색은 `COLOR_WINDOW`합니다. 메서드를 사용 하 여 활성 탭에 대 한 배경색을 변경할 수 있습니다 [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the background color of the active tab is `COLOR_WINDOW`. You can change the background color for the active tab by using the method [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
   
-##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor  
- 활성 탭에 대 한 텍스트 색을 검색합니다.  
+##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor  
+ Retrieves the text color for the active tab.  
   
 ```  
 virtual COLORREF GetActiveTabTextColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 활성 탭의 텍스트 색을 지정 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that specifies the text color of the active tab.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 활성 탭에 대 한 텍스트 색은 `COLOR_WINDOWTEXT`합니다. 메서드와 함께 텍스트 색을 변경할 수 있습니다 [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the text color for active tabs is `COLOR_WINDOWTEXT`. You can change the text color with the method [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
   
-##  <a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd  
- 현재 활성 탭 창에 대 한 포인터를 검색합니다.  
+##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd  
+ Retrieves a pointer to the currently active tab window.  
   
 ```  
 virtual CWnd* GetActiveWnd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 창에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a window.  
   
-##  <a name="getautocolors"></a>CMFCBaseTabCtrl::GetAutoColors  
- 자동으로 색에 사용 되는 색의 배열을 검색 합니다.  
+##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors  
+ Retrieves the array of colors used for automatic coloring.  
   
 ```  
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 배열에 대 한 참조를 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 값입니다.는 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 자동 탭 색상 설정에 대 한 개체를 사용 합니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to an array of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values that the [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object uses for automatic tab coloring.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 프레임 워크에는 라이브러리 정의 색상에 대 한 색 배열을 초기화합니다. 메서드를 호출 하 여 사용자 지정 색의 배열을 제공할 수 있습니다 [CMFCBaseTabCtrl::SetAutoColors](#setautocolors)합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework initializes the array of colors to library-defined colors. You can provide a custom array of colors by calling the method [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab  
- 첫 번째 표시 탭에 대 한 포인터를 검색합니다.  
+##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab  
+ Retrieves a pointer to the first visible tab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
@@ -730,104 +847,104 @@ virtual CWnd* GetFirstVisibleTab(
     int& iTabNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `iTabNum`  
- 정수에 대 한 참조입니다. 이 메서드는이 매개 변수를 첫 번째 표시 탭의&0;부터 시작 인덱스를 씁니다.  
+ A reference to an integer. This method writes the zero-based index of the first visible tab to this parameter.  
   
  [in] `iStartFrom`  
- 확인할 첫 번째 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the first tab to check.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 첫 번째 표시 탭에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first visible tab if successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 실패 하면-1 값을 기록 `iStartFrom`합니다.  
+### <a name="remarks"></a>Remarks  
+ If this method fails, it writes the value -1 to `iStartFrom`.  
   
- 경우 `iStartFrom` 보다 크거나 탭 컨트롤의 탭 수와 같지 `GetFirstVisibleTab` 자동으로 실패 합니다.  
+ If `iStartFrom` is larger than or equal to the number of tabs in the tab control, `GetFirstVisibleTab` automatically fails.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
+
   
 ```  
 virtual int GetFirstVisibleTabNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab  
- 현재 강조 표시 된 탭의 인덱스를 검색합니다.  
+##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab  
+ Retrieves the index of the currently highlighted tab.  
   
 ```  
 int GetHighlightedTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 강조 표시 된 탭의&0;부터 시작 하는 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the highlighted tab.  
   
-##  <a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList  
+
   
 ```  
 virtual const CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize  
+
   
 ```  
 virtual CSize GetImageSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab  
+
   
 ```  
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlocation"></a>CMFCBaseTabCtrl::GetLocation  
- 탭 컨트롤의 탭 영역 부분의 위치를 검색합니다.  
+##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation  
+ Retrieves the location of the tab area portion of the tab control.  
   
 ```  
 Location GetLocation() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 탭 영역의 위치입니다.  
+### <a name="return-value"></a>Return Value  
+ The location of the tab area.  
   
-### <a name="remarks"></a>주의  
- 표시 가능한 탭 영역 위치 값은 `LOCATION_BOTTOM` 및 `LOCATION_TOP`합니다.  
+### <a name="remarks"></a>Remarks  
+ Possible tab area location values are `LOCATION_BOTTOM` and `LOCATION_TOP`.  
   
-##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize  
+
   
 ```  
 virtual CSize GetMaxWindowSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea  
- 탭 컨트롤의 탭 영역의 위치와 크기를 검색합니다.  
+##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea  
+ Retrieves the size and position of the tab area of the tab control.  
   
 ```  
 virtual void GetTabArea(
@@ -835,162 +952,162 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rectTabAreaTop`  
- `CRect` 개체에 대한 참조입니다. `GetTabArea`이 개체를 사용 하 여 크기 및 맨 위 탭 영역의 위치를 저장 합니다.  
+ A reference to a `CRect` object. `GetTabArea` uses this object to store the size and position of the top tab area.  
   
  [in] `rectTabAreaBottom`  
- `CRect` 개체에 대한 참조입니다. `GetTabArea`이 개체를 사용 하 여 크기와 아래쪽 탭 영역의 위치를 저장 합니다.  
+ A reference to a `CRect` object. `GetTabArea` uses this object to store the size and position of the bottom tab area.  
   
-### <a name="remarks"></a>주의  
- 후 `GetTabArea` 반환는 `CRect` 매개 변수 크기와 탭 컨트롤의 클라이언트 좌표에서 탭 영역의 위치를 포함 합니다. 위쪽 또는 아래쪽의 탭 컨트롤의 탭 영역이 있는 경우 `rectTabAreaTop` 또는 `rectTabAreaBottom` 비어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ After `GetTabArea` returns, the `CRect` parameters contain the size and position of the tab area in client coordinates of the tab control. If there is no tab area at the top or bottom of the tab control, `rectTabAreaTop` or `rectTabAreaBottom` are empty.  
   
- 에 `CMFCBaseTabCtrl Class`,이 메서드는 순수 가상 함수 이며는 구현 되지 않습니다. 클래스를 파생 하는 경우 `CMFCBaseTabCtrl`,이 함수를 구현 해야 합니다.  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor  
- 지정된 된 탭의 배경색을 검색합니다.  
+##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor  
+ Retrieves the background color of the specified tab.  
   
 ```  
 virtual COLORREF GetTabBkColor(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 경우-1; 지정한 탭의 배경색을 나타내는 값 `iTab` 범위를 벗어났습니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that indicates the background color of the specified tab; -1 if `iTab` is out of range.  
   
-##  <a name="gettabbordersize"></a>CMFCBaseTabCtrl::GetTabBorderSize  
- 탭 컨트롤의 탭 테두리의 크기를 검색합니다.  
+##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
+ Retrieves the size of the tab borders in the tab control.  
   
 ```  
 virtual int GetTabBorderSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 탭 테두리 픽셀에서의 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The size of the tab border, in pixels.  
   
-### <a name="remarks"></a>주의  
- 탭 테두리에 대 한 기본 크기는&3; 픽셀입니다. 메서드로이 테두리 크기를 변경할 수 있습니다 [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)합니다.  
+### <a name="remarks"></a>Remarks  
+ The default size for the tab border is three pixels. You can change this border size with the method [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).  
   
-##  <a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID  
- 탭 ID를 기반으로 하는 탭의 인덱스를 검색 합니다.  
+##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID  
+ Retrieves the index of a tab based on a tab ID.  
   
 ```  
 virtual int GetTabByID(int id) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `id`  
- 탭 id입니다.  
+ A tab ID.  
   
-### <a name="return-value"></a>반환 값  
- 가 있으면; 탭의&0;부터 시작 인덱스 탭 ID가 없으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of a tab if it is found; -1 if the tab ID is not found.  
   
-### <a name="remarks"></a>주의  
- 탭 Id는 때 자동으로 할당 탭 컨트롤에 탭이 추가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The tab IDs are assigned automatically when tabs are added to a tab control.  
   
-##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton  
+
   
 ```  
 CRect GetTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd  
- 지정된 된 HWND 개체를 포함 하는 탭의 인덱스를 검색 합니다.  
+##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd  
+ Retrieves the index of the tab that contains the specified HWND object.  
   
 ```  
 virtual int GetTabFromHwnd(HWND hwnd) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
- 창 핸들입니다.  
+ A handle to a window.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 탭의&0;부터 시작 인덱스 -1을 `hwnd`합니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab if successful; -1 if no tab contains `hwnd`.  
   
-##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint  
- 지정된 된 지점에 포함 된 탭을 검색 합니다.  
+##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
+ Retrieves the tab that contains a specified point.  
   
 ```  
 virtual int GetTabFromPoint(CPoint& pt) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pt`  
- 탭 컨트롤의 클라이언트 좌표에서 점입니다.  
+ A point in client coordinates of the tab control.  
   
-### <a name="return-value"></a>반환 값  
- 포함 된 탭의 인덱스 `pt`;-1을 `pt`합니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the tab that contains `pt`; -1 if no tab contains `pt`.  
   
-##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
+
   
 ```  
 virtual int GetTabFullWidth(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon  
- 지정 된 탭와 관련 된 HICON를 반환 합니다.  
+##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon  
+ Returns the HICON associated with the specified tab.  
   
 ```  
 virtual HICON GetTabHicon(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭에 대 한&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index for the tab.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 탭 레이블와 관련 된 HICON `NULL` HICON 없는 경우 또는 메서드가 실패 하면 됩니다.  
+### <a name="return-value"></a>Return Value  
+ The HICON associated with a tab label if successful; `NULL` if there is no HICON or if the method fails.  
   
-##  <a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon  
- 지정 된 탭 연관 된 아이콘을 검색 합니다.  
+##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon  
+ Retrieves the icon associated with the specified tab.  
   
 ```  
 virtual UINT GetTabIcon(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 지정된 된 탭에 대 한 아이콘 ID 인덱스가 유효 하지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The icon ID for the specified tab if successful; -1 if the index is invalid.  
   
-### <a name="remarks"></a>주의  
- [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체 내부에서 아이콘 저장 [CImageList](../../mfc/reference/cimagelist-class.md) 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object stores the icons in the internal [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-##  <a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID  
- 탭 인덱스에 지정 된 탭에 대 한 ID를 검색 합니다.  
+##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID  
+ Retrieves the ID for a tab specified by the tab index.  
   
 ```  
 int GetTabID(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>반환 값  
- ID 탭 또는 없으면-1 `iTab` 범위를 벗어났습니다.  
+### <a name="return-value"></a>Return Value  
+ An ID of the tab or -1 if `iTab` is out of range.  
   
-##  <a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel  
- 탭 레이블의 텍스트를 검색합니다.  
+##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
+ Retrieves the text of a tab label.  
   
 ```  
 virtual BOOL GetTabLabel(
@@ -998,23 +1115,23 @@ virtual BOOL GetTabLabel(
     CString& strLabel) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
  [out] `strLabel`  
- `CString` 개체에 대한 참조입니다. 이 메서드는이 매개 변수에서 탭의 레이블의 저장합니다.  
+ A reference to a `CString` object. This method stores the label of the tab in this parameter.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 실패 하는 경우 인덱스 `iTab` 올바르지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ This method fails if the index `iTab` is invalid.  
   
- 사용 하 여 탭을 만들 때 탭에 대 한 레이블 설정 [CMFCBaseTabCtrl::AddTab](#addtab)합니다. 메서드로 만든 후 레이블을 변경할 수도 있습니다 [CMFCBaseTabCtrl::SetTabLabel](#settablabel)합니다.  
+ You set the label for a tab when you create the tab by using [CMFCBaseTabCtrl::AddTab](#addtab). You can also change the label after creation with the method [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
-##  <a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect  
- 지정한 탭의 위치와 크기를 검색합니다.  
+##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect  
+ Retrieves the size and position of the specified tab.  
   
 ```  
 virtual BOOL GetTabRect(
@@ -1022,151 +1139,151 @@ virtual BOOL GetTabRect(
     CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
  [out] `rect`  
- `CRect` 개체에 대한 참조입니다. 이 메서드는 크기와 위치 탭의이 매개 변수에 저장합니다.  
+ A reference to a `CRect` object. This method stores the size and position of the tab in this parameter.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 경우 탭 인덱스가 잘못 되었습니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if the tab index is invalid.  
   
-##  <a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight  
+
   
 ```  
 virtual int GetTabsHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum  
- 탭 컨트롤의 탭 수를 검색합니다.  
+##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 탭 컨트롤의 탭 수를 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of tabs in the tab control.  
   
-##  <a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect  
+
   
 ```  
 virtual void GetTabsRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor  
- 지정 된 탭에 대 한 텍스트 색을 검색합니다.  
+##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor  
+ Retrieves the text color for the specified tab.  
   
 ```  
 virtual COLORREF GetTabTextColor(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 경우-1; 지정한 탭의 텍스트 색을 나타내는 매개 변수 `iTab` 범위를 벗어났습니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the text color of the specified tab; -1 if `iTab` is out of range.  
   
-##  <a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd  
- 지정 된 탭에 있는 창에 포인터를 반환 합니다.  
+##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
+ Returns the pointer to the pane that resides on the specified tab.  
   
 ```  
 virtual CWnd* GetTabWnd(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 탭에 있는 개체는 `iTab` 지정 합니다. `NULL`경우 `iTab` 올바르지 않습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object that resides on the tab that `iTab` specifies. `NULL` if `iTab` is invalid.  
   
-### <a name="remarks"></a>주의  
- 반환 된 개체 중 하나를 호출 하면 응용 프로그램이 추가 하는 것은 [CMFCBaseTabCtrl::AddTab](#addtab) 또는 [CMFCBaseTabCtrl::InsertTab](#inserttab)합니다.  
+### <a name="remarks"></a>Remarks  
+ The returned object is the one that the application added when it called either [CMFCBaseTabCtrl::AddTab](#addtab) or [CMFCBaseTabCtrl::InsertTab](#inserttab).  
   
- 탭에 있는 개체 래퍼가 있으면이 메서드는 개체에 대 한 래퍼를 반환 합니다. 래퍼에 대 한 자세한 내용은 참조 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)합니다. 메서드를 사용 하는 래퍼 없이 직접 개체에 대 한 포인터에 액세스 하려는 경우 [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)합니다.  
+ If the object on a tab has a wrapper, this method will return the wrapper for the object. For more information about wrappers, see [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). If you want to access a pointer to the direct object without the wrapper, use the method [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).  
   
-##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper  
- 컨트롤에는 래퍼 하는 경우에 탭에 있는 컨트롤에 대 한 포인터를 반환 합니다.  
+##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper  
+ Returns a pointer to the control that resides on a tab, even if the control has a wrapper.  
   
 ```  
 virtual CWnd* GetTabWndNoWrapper(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) ; 지정된 된 탭에 있는 개체를 `NULL` 경우 `iTab` 올바르지 않습니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object that resides on the specified tab; `NULL` if `iTab` is invalid.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 검색에 대 한 직접 포인터는 `CWnd` 개체는 두 방법 중 하나를 사용 하 여 추가한 [CMFCBaseTabCtrl::AddTab](#addtab) 또는 [CMFCBaseTabCtrl::InsertTab](#inserttab)합니다. `GetTabWndNoWrapper`에서는 추가 된 항목에 대 한 포인터를 검색 합니다 `CWnd`프레임 워크는 개체에 대 한 래퍼를 추가 하는 경우에 있습니다. 래퍼에 대 한 자세한 내용은 및 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md), 참조 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves a direct pointer to the `CWnd` object that you added by using either the method [CMFCBaseTabCtrl::AddTab](#addtab) or [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` will retrieve a pointer to the added `CWnd`, even if the framework added a wrapper for the object. For more information about wrappers and the [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md), see [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
   
- 메서드를 사용 하 여 [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) 래퍼 클래스를 무시 하지 않을 경우.  
+ Use the method [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) if you do not want to ignore the wrapper class.  
   
-##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl  
- 도구 설명 이동 조정에 대 한 참조를 검색합니다.  
+##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl  
+ Retrieves a reference to the tooltip contorl.  
   
 ```  
 CToolTipCtrl& GetToolTipCtrl() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 설명 컨트롤에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the tooltip control.  
   
-##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum  
- 현재 표시 탭 수를 검색합니다.  
+##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum  
+ Retrieves the number of currently visible tabs.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 표시 탭의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of visible tabs.  
   
-##  <a name="hasimage"></a>CMFCBaseTabCtrl::HasImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage  
+
   
 ```  
 virtual BOOL HasImage(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab  
- 표시 탭 경우 탭 컨트롤에 대 한 탭을 숨기는 옵션을 설정 합니다.  
+##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab  
+ Sets the option to hide the tabs for the tab control when there is one visible tab.  
   
 ```  
 virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- 숨기기 단일 탭을 사용 하도록 설정할지 여부를 지정 하는 부울입니다.  
+ A Boolean that specifies whether to enable hiding single tabs.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램은 단일 탭 숨기기 하도록 구성 된, 프레임 워크는 두 번째 탭 탭 컨트롤에 추가 되 면 탭은 자동으로 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ When your application is configured to hide single tabs, the framework automatically displays tabs when a second tab is added to the tab control.  
   
-##  <a name="inserttab"></a>CMFCBaseTabCtrl::InsertTab  
- 탭 컨트롤에 탭을 삽입합니다.  
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab  
+ Inserts a tab into the tab control.  
   
 ```  
 Virtual void InsertTab(
@@ -1185,149 +1302,149 @@ virtual void InsertTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pNewWnd`  
- 이 메서드는 새 테이블로 추가 하는 창에 대 한 포인터입니다.  
+ A pointer to the window that this method adds as a new tab.  
   
  [in] `lpszTabLabel`  
- 새 탭에 대 한 레이블을 포함 하는 문자열입니다.  
+ A string that contains the label for the new tab.  
   
  [in] `nInsertAt`  
- 새 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the new tab.  
   
  [in] `uiImageId`  
- 이미지 목록에서 사용 되는 이미지 ID입니다. 탭 컨트롤의 새 탭에 대 한 아이콘으로이 이미지를 사용합니다.  
+ An image ID from the image list. The tab control uses this image as the icon for the new tab.  
   
  [in] `bDetachable`  
- 새 탭 분리 가능한 지 확인 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether the new tab is detachable.  
   
  [in] `uiResTabLabel`  
- 레이블에 대 한 리소스 ID입니다.  
+ The resource ID for the label.  
   
-### <a name="remarks"></a>주의  
- 개체 표시 하는 경우 `pNewWnd` 에서 파생 되지 않은 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 경우에 `bDetachable` 매개 변수는 `TRUE`, 프레임 워크는 새 탭에 대 한 특별 한 래퍼를 만듭니다. 기본적으로 래퍼는의 인스턴스는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)합니다. 사용 된 [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) 메서드를 다른 래퍼 클래스를 만듭니다. 모든 사용자 지정 래퍼 클래스에서 파생 되어야 하는 데 필요한 `CDockablePaneAdapter`합니다.  
+### <a name="remarks"></a>Remarks  
+ If the object indicated by `pNewWnd` is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and if the `bDetachable` parameter is `TRUE`, the framework creates a special wrapper for the new tab. By default, the wrapper is an instance of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Use the [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) method to create a different wrapper class. Any custom wrapper class needs to be derived from `CDockablePaneAdapter`.  
   
-##  <a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
+
   
 ```  
 void InvalidateTab(int iTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton  
+
   
 ```  
 virtual BOOL IsActiveTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor  
- 탭 컨트롤 자동 색 모드 인지 여부를 결정 합니다.  
+##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor  
+ Determines whether the tab control is in autocolor mode.  
   
 ```  
 BOOL IsAutoColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 컨트롤 자동 색; 모드인 경우 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control is in autocolor mode; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 자동 색 모드를 사용 하지 않도록 설정 하거나 설정할 수는 [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) 메서드.  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable the autocolor mode by using the [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) method.  
   
-##  <a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow  
+
   
 ```  
 BOOL IsAutoDestroyWindow() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iscolored"></a>CMFCBaseTabCtrl::IsColored  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored  
+
   
 ```  
 virtual BOOL IsColored() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl  
+
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix  
+
   
 ```  
 BOOL IsDrawNoPrefix() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame  
- 프레임의 탭 컨트롤의 평면 스타일 또는 3D 스타일을 렌더링 되는지 여부를 나타냅니다.  
+##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame  
+ Indicates whether the frame of the tab control is rendered in a flat style or in a 3D style.  
   
 ```  
 virtual BOOL IsFlatFrame() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`프레임의 탭 컨트롤의 평면 스타일;에서 렌더링 되는 경우 `FALSE` 3D 스타일에는 프레임이 렌더링 되는 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame of the tab control is rendered in a flat style; `FALSE` if the frame is rendered in a 3D style.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) 탭 컨트롤의 프레임에 대 한 스타일을 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) to change the style for the frame of the tab control.  
   
- 플랫 프레임으로 Outlook 스타일을 사용 하는 탭 컨트롤을 렌더링할 수 없습니다. 이때는 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 해당 클래스에서 파생 된 클래스입니다.  
+ Tab controls that use the Outlook style cannot be rendered with flat frames. This includes the [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) and any classes derived from that class.  
   
-##  <a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab  
+
   
 ```  
 virtual BOOL IsFlatTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab  
- 하나의 탭이 있는 경우 탭 컨트롤 탭 레이블을 숨깁니다 있는지 여부를 결정 합니다.  
+##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab  
+ Determines whether the tab control hides the tab label if there is only one tab.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 컨트롤 탭;에 있을 때 탭 레이블을 숨기는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control hides the tab label when it has one tab; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 메서드를 사용 하 여 [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) 하나의 탭이 있는 경우 탭 레이블 숨기기 사용할 수 있도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use the method [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) to enable hiding the tab label when there is only one tab.  
   
-##  <a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded  
+
   
 ```  
 BOOL IsIconAdded(
@@ -1335,197 +1452,197 @@ BOOL IsIconAdded(
     int& iIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
  [in] `iIcon`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit  
- 탭 컨트롤을 동적으로 탭 레이블을 수정할 수 있도록 구성 되어 있는지 여부를 나타냅니다.  
+##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit  
+ Indicates whether the tab control is configured to enable the user to dynamically modify the tab labels.  
   
 ```  
 virtual BOOL IsInPlaceEdit() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 내부 하면 0이 아니고 편집을 사용 합니다. 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if in-place editing is enabled; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 내부 메서드를 호출 하 여 편집을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)합니다.  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable in-place editing by calling the method [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).  
   
-##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded  
+
   
 ```  
 virtual BOOL IsLeftRightRounded() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab  
+
   
 ```  
 BOOL IsMDITab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsOneNoteStyle  
- Microsoft OneNote의 스타일에서 탭 표시 되는지 여부를 결정 합니다.  
+##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle  
+ Determines whether tabs are displayed in the style of Microsoft OneNote.  
   
 ```  
 virtual BOOL IsOneNoteStyle() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`Microsoft OneNote;의 스타일에 탭 표시 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are displayed in the style of Microsoft OneNote; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 메서드를 호출 [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) Microsoft OneNote 스타일을 사용할 수 있도록 합니다. 인스턴스화할 때이 스타일을 사용할 수도 있습니다는 [CMFCTabCtrl 클래스](../../mfc/reference/cmfctabctrl-class.md): 단순히 스타일 STYLE_3D_ONENOTE 메서드에 전달할 [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create)합니다.  
+### <a name="remarks"></a>Remarks  
+ Call the method [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) to enable the Microsoft OneNote style. You can also enable this style when you instantiate the [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md): simply pass the style STYLE_3D_ONENOTE to the method [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).  
   
- 기본적으로 Microsoft OneNote 스타일에서 파생 된 사용자 지정 클래스에서 지원 되지 않습니다는 `CMFCBaseTabCtrl Class`합니다. 그러나에서 지원 되는 `CMFCTabCtrl` 클래스입니다.  
+ By default, the Microsoft OneNote style is not supported in a custom class derived from the `CMFCBaseTabCtrl Class`. However, it is supported in the `CMFCTabCtrl` class.  
   
-##  <a name="isptintabarea"></a>CMFCBaseTabCtrl::IsPtInTabArea  
- 영역 내부에 탭 지점을 인지 여부를 확인 합니다.  
+##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea  
+ Determines if a point is inside the tab area.  
   
 ```  
 virtual BOOL IsPtInTabArea(CPoint point) const = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 테스트 지점입니다.  
+ The point to test.  
   
-### <a name="return-value"></a>반환 값  
- 포인터가 탭 영역이;에 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point is in the tab area; 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 에 `CMFCBaseTabCtrl Class`,이 메서드는 순수 가상 함수 이며는 구현 되지 않습니다. 클래스를 파생 하는 경우 `CMFCBaseTabCtrl`,이 함수를 구현 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
+
   
 ```  
 BOOL IsTabCloseButtonHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed  
+
   
 ```  
 BOOL IsTabCloseButtonPressed() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabdetachable"></a>CMFCBaseTabCtrl::IsTabDetachable  
- 분리 가능한 탭 인지 확인 합니다.  
+##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable  
+ Determines whether a tab is detachable.  
   
 ```  
 virtual BOOL IsTabDetachable(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 확인 하려면 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to check.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`분리 가능한 탭이 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab is detachable; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 분리 가능한 탭을 하려면 메서드를 사용 하 여 [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)합니다.  
+### <a name="remarks"></a>Remarks  
+ To make a tab detachable, use the method [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).  
   
-##  <a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly  
- 탭 레이블 아이콘과 텍스트가 포함 되는지 여부를 결정 합니다.  
+##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly  
+ Determines whether a tab label contains only icons and no text.  
   
 ```  
 virtual BOOL IsTabIconOnly(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 레이블 아이콘만; 있으면 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a tab label has only icons; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 설정 하려면 탭만 아이콘을 표시 하는 응용 프로그램에서 메서드를 호출 [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)합니다.  
+### <a name="remarks"></a>Remarks  
+ To set the tabs in your application to display only icons, call the method [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).  
   
-##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled  
- 탭 컨트롤 사용자가 마우스를 사용 하 여 탭 위치를 변경 하도록 허용 하는지 여부를 결정 합니다.  
+##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled  
+ Determines whether the tab control allows the user to change tab positions by using the mouse.  
   
 ```  
 BOOL IsTabSwapEnabled() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 사용자가 탭 위치를 변경할 수 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if tab positions can be changed by the user; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 사용자가 탭 컨트롤의 탭 순서를 변경할 수 없습니다. 사용 된 [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) 이 기능을 사용 하도록 설정 하는 방법입니다.  
+### <a name="remarks"></a>Remarks  
+ By default, users cannot change the order of tabs in a tab control. Use the [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) method to enable this functionality.  
   
-##  <a name="istabvisible"></a>CMFCBaseTabCtrl::IsTabVisible  
- 지정 된 탭 표시 되는지 여부를 나타냅니다.  
+##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible  
+ Indicates whether the specified tab is visible.  
   
 ```  
 virtual BOOL IsTabVisible(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 확인 하려면 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to check.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 탭 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified tab is visible; otherwise 0.  
   
-##  <a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Style  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style  
+
   
 ```  
 virtual BOOL IsVS2005Style() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
- `m_bActivateTabOnRightClick`사용자가 마우스 오른쪽 단추를 사용 하 여 탭 레이블을 클릭 하면 탭에 포커스가 있을 지 확인 합니다.  
+##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
+ `m_bActivateTabOnRightClick` determines whether tabs are in focus when the user clicks on a tab label by using the right mouse button.  
   
 ```  
 BOOL m_bActivateTabOnRightClick;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버에 대 한 기본값은 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ The default value for this data member is `FALSE`.  
   
-##  <a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow  
- `m_bAutoDestroyWindow`프레임 워크 탭을 제거할 때 자동으로 탭에 있는 개체를 소멸 있는지 여부를 결정 합니다.  
+##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow  
+ `m_bAutoDestroyWindow` determines whether the framework automatically destroys the objects on tabs when the tabs are removed.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버는 기본적으로 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this member is `FALSE`.  
   
-##  <a name="movetab"></a>CMFCBaseTabCtrl::MoveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab  
+
   
 ```  
 virtual void MoveTab(
@@ -1533,24 +1650,24 @@ virtual void MoveTab(
     int nDest);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nSource`  
  [in] `nDest`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs  
- 프레임 워크 탭에서 탭 수 변경 내용을 제어 하는 경우이 메서드를 호출 합니다.  
+##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs  
+ The framework calls this method when the number of tabs on a tab control changes.  
   
 ```  
 virtual void OnChangeTabs();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 탭에서 탭 수 변경 내용을 제어 하는 경우 사용자 지정 코드를 실행 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing. Override this method to execute custom code when the number of tabs on the tab control changes.  
   
-##  <a name="ondrop"></a>CMFCBaseTabCtrl::OnDrop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop  
+
   
 ```  
 virtual BOOL OnDrop(
@@ -1559,17 +1676,17 @@ virtual BOOL OnDrop(
     CPoint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DROPEFFECT`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver  
+
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -1578,26 +1695,26 @@ virtual DROPEFFECT OnDragOver(
     CPoint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DWORD`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave  
+
   
 ```  
 virtual void OnDragLeave();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter  
+
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -1606,66 +1723,66 @@ virtual DROPEFFECT OnDragEnter(
     CPoint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DWORD`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab  
+
   
 ```  
 virtual BOOL OnRenameTab(int, CString&);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `int`  
  [in] `CString&`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout  
- 탭 컨트롤의 내부 레이아웃이 다시 계산 됩니다.  
+##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout  
+ Recalculates the internal layout of the tab control.  
   
 ```  
 virtual void RecalcLayout() = 0;  
 ```  
   
-### <a name="remarks"></a>주의  
- 에 `CMFCBaseTabCtrl Class`,이 메서드는 순수 가상 함수입니다. 클래스를 파생 하는 경우 `CMFCBaseTabCtrl`,이 함수를 구현 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs  
- 탭 컨트롤에서 모든 탭을 제거합니다.  
+##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs  
+ Removes all the tabs from the tab control.  
   
 ```  
 virtual void RemoveAllTabs();
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) 는 `TRUE`, 프레임 워크는 모두 삭제는 [CWnd](../../mfc/reference/cwnd-class.md) 제거 탭에 연결 된 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ If [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) is `TRUE`, the framework deletes all the [CWnd](../../mfc/reference/cwnd-class.md) objects attached to the removed tabs.  
   
-##  <a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab  
- 탭 컨트롤에서 탭을 제거합니다.  
+##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab  
+ Removes a tab from the tab control.  
   
 ```  
 virtual BOOL RemoveTab(
@@ -1673,126 +1790,126 @@ virtual BOOL RemoveTab(
     BOOL bRecalcLayout = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
  [in] `bRecalcLayout`  
- 탭의 레이아웃을 다시 계산 여부를 지정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that specifies whether to recalculate the layout of the tab.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`메서드는 탭을 성공적으로 제거 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method removes the tab successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 경우 [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) 는 `TRUE`, `RemoveTab` 소멸는 [CWnd](../../mfc/reference/cwnd-class.md) 지정 된 탭와 연결 된 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ If [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) is `TRUE`, `RemoveTab` destroys the [CWnd](../../mfc/reference/cwnd-class.md) object associated with the specified tab.  
   
-##  <a name="renametab"></a>CMFCBaseTabCtrl::RenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab  
+
   
 ```  
 virtual BOOL RenameTab();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList  
- 인스턴스에 대 한 이미지 목록을 다시 설정 된 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)합니다.  
+##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList  
+ Resets the image list for an instance of the [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
 void ResetImageList();
 ```  
   
-##  <a name="serialize"></a>CMFCBaseTabCtrl::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab  
- 지정 된 탭을 활성화합니다.  
+##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab  
+ Activates the specified tab.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다. `SetActiveTab`이 인덱스를 사용 하 여 탭을 활성 상태로 만듭니다.  
+ The zero-based index of a tab. `SetActiveTab` makes the tab with this index active.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 에 `CMFCBaseTabCtrl Class`,이 메서드는 순수 가상 함수입니다. 클래스를 파생 하는 경우 `CMFCBaseTabCtrl`,이 함수를 구현 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor  
- 활성 탭에 대 한 배경색을 설정합니다.  
+##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor  
+ Sets the background color for the active tab.  
   
 ```  
 virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `clr`  
- 새 배경색을 지정합니다.  
+ Specifies the new background color.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크에서 활성 탭에 대 한 기본 배경색을 가져옵니다는 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)메서드.  
+### <a name="remarks"></a>Remarks  
+ The framework obtains the default background color for active tabs from the [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)method.  
   
-##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor  
- 활성 탭의 텍스트 색을 설정합니다.  
+##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
+ Sets the text color for active tabs.  
   
 ```  
 virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `clr`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 새 텍스트 색을 지정 하는 매개 변수입니다.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that specifies the new text color.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 프레임 워크에서 텍스트 색을 가져옵니다 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)합니다. 이 기본 색을 사용 하 여 재정의 `SetActiveTabTextColor` 메서드.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework obtains the text color from [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Override this default color by using the `SetActiveTabTextColor` method.  
   
-##  <a name="setautocolors"></a>CMFCBaseTabCtrl::SetAutoColors  
- 프레임 워크를 사용 하는 탭 컨트롤의 자동 색 모드로 설정 합니다.  
+##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
+ Sets the colors of the tab control that the framework uses in automatic color mode.  
   
 ```  
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `arColors`  
- RGB 색의 배열입니다.  
+ An array of RGB colors.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 색의 배열을 제공 하면 색 기본 배열은 무시 됩니다. 경우 매개 변수 `arColors` 는 색의 기본 배열에 비어 있는 경우 프레임 워크 되돌립니다.  
+### <a name="remarks"></a>Remarks  
+ If you provide a custom array of colors, the default array of colors is ignored. If the parameter `arColors` is empty, the framework reverts to the default array of colors.  
   
- 자동 색 모드를 사용 하려면 사용 된 [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) 메서드.  
+ To enable autocolor mode, use the [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) method.  
   
-##  <a name="setdockingbarwrapperrtc"></a>CMFCBaseTabCtrl::SetDockingBarWrapperRTC  
- 설정에서 파생 되지 않은 모든 개체에 대해 사용 되는 래퍼 클래스는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.  
+##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC  
+ Sets the wrapper class that is used for any objects that are not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pRTC`  
- 새 래퍼 클래스에 대 한 런타임 클래스 정보입니다.  
+ The runtime class information for the new wrapper class.  
   
-### <a name="remarks"></a>주의  
- 메서드를 사용 하 여 탭 컨트롤에 탭을 추가 [CMFCBaseTabCtrl::AddTab](#addtab) 및 [CMFCBaseTabCtrl::InsertTab](#inserttab)합니다. 탭에 추가 하면 해당 탭에 있는 각 컨트롤 도킹 가능 해야 합니다. 파생 되지 않은 모든 개체 `CDockablePane` 래핑되어야 합니다. `AddTab`및 `InsertTab` 이러한 개체에 대 한 래퍼를 만듭니다. 기본 래퍼 클래스는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)합니다. 메서드가 `SetDockingBarWrapperRTC` 래퍼 클래스로 사용 되는 클래스를 변경할 수 있습니다. 제공 하는 래퍼 클래스를 파생 합니다 `CDockablePaneAdapter`합니다.  
+### <a name="remarks"></a>Remarks  
+ You add tabs to a tab control by using the methods [CMFCBaseTabCtrl::AddTab](#addtab) and [CMFCBaseTabCtrl::InsertTab](#inserttab). When you add a tab, each control on that tab must be dockable. Any objects that are not derived from `CDockablePane` must be wrapped. `AddTab` and `InsertTab` create a wrapper for these objects. The default wrapper class is the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). The method `SetDockingBarWrapperRTC` enables you to change the class that is used as a wrapper class. The wrapper class that you provide must be derived from `CDockablePaneAdapter`.  
   
-##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix  
- 사용 하 고 탭 레이블에 접두사의 처리를 해제 합니다.  
+##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix  
+ Enables and disables the processing of prefix characters in tab labels.  
   
 ```  
 void SetDrawNoPrefix(
@@ -1800,18 +1917,18 @@ void SetDrawNoPrefix(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bNoPrefix`  
- `TRUE`접두 문자; 처리 하려는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if you want to process prefix characters; otherwise `FALSE`.  
   
  [in] `bRedraw`  
- `TRUE`탭된 창; 다시 그리도록. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if you want to redraw the tabbed window; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 그러나 접두사는 앰퍼샌드 (&) 앞에 오는 니모닉 문자가입니다.  
+### <a name="remarks"></a>Remarks  
+ A prefix character is a mnemonic character that is preceded by an ampersand (&).  
   
-##  <a name="setimagelist"></a>CMFCBaseTabCtrl::SetImageList  
- 탭 컨트롤에 대 한 아이콘 이미지 목록을 가져오거나 설정 합니다.  
+##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList  
+ Sets the icon image list for the tab control.  
   
 ```  
 virtual BOOL SetImageList(
@@ -1822,43 +1939,43 @@ virtual BOOL SetImageList(
 virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 비트맵 리소스 id입니다. `SetImageList`이 리소스에서 이미지 목록을 로드합니다.  
+ A bitmap resource ID. `SetImageList` loads the image list from this resource.  
   
  [in] `cx`  
- 픽셀 단위로 각 이미지의 너비입니다.  
+ The width of each image in pixels.  
   
  [in] `clrTransp`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 이미지의 투명 한 색을 나타내는 매개 변수입니다.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the transparent color of the image.  
   
  [in] `hImageList`  
- 미리 로드 된 이미지 목록에 대 한 핸들입니다.  
+ A handle to a preloaded image list.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method was successful; 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 아이콘 이미지 목록에서 이미지 탭에 대 한 레이블을 함께 표시 됩니다. 아이콘을 표시 하려면 지정 해야 호출 하는 경우 해당 항목이 있는 인덱스 [CMFCBaseTabCtrl::AddTab](#addtab)합니다.  
+### <a name="remarks"></a>Remarks  
+ The images from the icon image list are displayed alongside the labels for the tab. To display an icon, you must specify its index when you call [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList`탭 컨트롤의 평면 스타일으로 만든 경우 실패 합니다. 프레임 워크에서 나타내는 이미지를 로드할 수 없는 경우에 실패할 수도 있습니다 `uiID`합니다.  
+ `SetImageList` will fail if the tab control was created with a flat style. It will also fail if the framework cannot load the image indicated by `uiID`.  
   
- 이 메서드는 이미지 및 텍스트 크기에 따라 탭의 높이 다시 계산합니다.  
+ This method recalculates the height of the tab according to the image and text sizes.  
   
-##  <a name="setlocation"></a>CMFCBaseTabCtrl::SetLocation  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation  
+
   
 ```  
 virtual void SetLocation(Location location);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `location`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor  
- 지정 된 탭에 대 한 배경색을 설정합니다.  
+##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor  
+ Sets the background color for the specified tab.  
   
 ```  
 virtual BOOL SetTabBkColor(
@@ -1866,18 +1983,18 @@ virtual BOOL SetTabBkColor(
     COLORREF color = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
  [in] `color`  
- 설정 하는 색입니다.  
+ The color to set.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-##  <a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize  
- 탭 컨트롤에 대 한 새 테두리 크기를 설정합니다.  
+##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize  
+ Sets a new border size for the tab control.  
   
 ```  
 virtual void SetTabBorderSize(
@@ -1885,15 +2002,15 @@ virtual void SetTabBorderSize(
     BOOL bRepaint = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nTabBorderSize`  
- 새 테두리 크기 (픽셀)에서입니다.  
+ The new border size, in pixels.  
   
  [in] `bRepaint`  
- 프레임 워크 컨트롤 다시 그리는지를 나타내는 부울 매개 변수입니다.  
+ A Boolean parameter that indicates whether the framework redraws the control.  
   
-##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon  
- 탭 레이블에 대 한 아이콘을 설정합니다.  
+##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
+ Sets the icon for a tab label.  
   
 ```  
 virtual BOOL SetTabHicon(
@@ -1901,18 +2018,18 @@ virtual BOOL SetTabHicon(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다. 이 메서드는이 탭에 대 한 아이콘을 변경합니다.  
+ The zero-based index of a tab. This method changes the icon for this tab.  
   
  [in] `hIcon`  
- 아이콘에 대 한 핸들입니다.  
+ A handle to an icon.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon  
- 탭에 대 한 아이콘을 설정합니다.  
+##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon  
+ Sets the icon for a tab.  
   
 ```  
 virtual BOOL SetTabIcon(
@@ -1920,18 +2037,18 @@ virtual BOOL SetTabIcon(
     UINT uiIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 업데이트 하려면 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to update.  
   
  [in] `uiIcon`  
- 새 아이콘에 대 한 아이콘 ID입니다. 이 ID는 내부 참조 [CImageList](../../mfc/reference/cimagelist-class.md) 개체입니다.  
+ The icon ID for the new icon. This ID references the internal [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly  
- 특정 탭에만 (아이콘과 텍스트 레이블 없음)를 표시할 수 있습니다.  
+##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly  
+ Enables displaying only an icon (and no text label) on a specific tab.  
   
 ```  
 virtual BOOL SetTabIconOnly(
@@ -1940,24 +2057,24 @@ virtual BOOL SetTabIconOnly(
     BOOL bShowTooltipAlways = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 변경 하려면 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to change.  
   
  [in] `bIconOnly`  
- 아이콘만 표시 여부를 결정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether to display only icons.  
   
  [in] `bShowTooltipAlways`  
- 프레임 워크만 아이콘을 표시 하는 탭 레이블은 대 한 도구 설명을 표시할지 여부를 결정 하는 부울 매개 변수입니다.  
+ A Boolean parameter that determines whether the framework shows tooltips for a tab label that displays only icons.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 탭 컨트롤에는 각 탭에 대 한 아이콘 및 텍스트 레이블을 표시합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, a tab control displays the icon and text label for each tab.  
   
-##  <a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel  
- 탭 레이블에 대 한 텍스트를 설정합니다.  
+##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel  
+ Sets the text for a tab label.  
   
 ```  
 virtual BOOL SetTabLabel(
@@ -1965,44 +2082,44 @@ virtual BOOL SetTabLabel(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 업데이트 하려면 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to update.  
   
  [in] `strLabel`  
- 탭 레이블에 대 한 새 텍스트를 포함 하는 문자열에 대 한 참조입니다.  
+ A reference to a string that contains the new text for the tab label.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-##  <a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight  
+
   
 ```  
 virtual void SetTabsHeight();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settabsorder"></a>CMFCBaseTabCtrl::SetTabsOrder  
- 에 있는 탭에 지정된 된 순서 대로 정렬합니다.  
+##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder  
+ Arranges the tabs in the specified order.  
   
 ```  
 BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `arOrder`  
- 새 탭 순서를 정의 하는&0;부터 시작 하는 인덱스의 배열입니다.  
+ An array of zero-based indexes that defines the new tab order.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FAIL` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FAIL` otherwise.  
   
-### <a name="remarks"></a>주의  
- 크기는 `arOrder` 배열 탭 컨트롤의 탭 수와 동일 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The size of the `arOrder` array must be equal to the number of tabs in the tab control.  
   
-##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor  
- 특정 탭에 대 한 텍스트 색을 설정합니다.  
+##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
+ Sets the text color for a specific tab.  
   
 ```  
 virtual BOOL SetTabTextColor(
@@ -2010,18 +2127,18 @@ virtual BOOL SetTabTextColor(
     COLORREF color = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab.  
   
  [in] `color`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 새 텍스트 색을 나타내는 매개 변수입니다.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the new text color.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-##  <a name="showtab"></a>CMFCBaseTabCtrl::ShowTab  
- 지정된 탭을 표시하거나 숨깁니다.  
+##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab  
+ Shows or hides the specified tab.  
   
 ```  
 virtual BOOL ShowTab(
@@ -2031,41 +2148,41 @@ virtual BOOL ShowTab(
     BOOL bActivate = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의 인덱스는 `ShowTab` 표시 하거나 숨깁니다.  
+ The index of the tab that `ShowTab` will show or hide.  
   
  [in] `bShow`  
- 탭 표시 여부를 나타내는 부울 매개 변수입니다.  
+ A Boolean parameter that indicates whether to show the tab.  
   
  [in] `bRecalcLayout`  
- 창 레이아웃을 즉시 다시 계산할 것인지 여부를 나타내는 부울 매개 변수입니다.  
+ A Boolean parameter that indicates whether to immediately recalculate the window layout.  
   
  [in] `bActivate`  
- 지정 된 탭을 선택 하지 않을 것인지 여부를 나타내는 부울 매개 변수 `iTab`합니다.  
+ A Boolean parameter that indicates whether to select the tab specified by `iTab`.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 매개 변수 `bActivate` 경우에 적용 `bShow` 는 `TRUE`합니다. 경우 `bActivate` 는 `TRUE` 경우 `ShowTab` 성공 `ShowTab` 탭 창의 부모에 AFX_WM_CHANGE_ACTIVE_TAB 메시지를 보냅니다.  
+### <a name="remarks"></a>Remarks  
+ The parameter `bActivate` only applies if `bShow` is `TRUE`. If `bActivate` is `TRUE` and if `ShowTab` is successful, `ShowTab` will send the message AFX_WM_CHANGE_ACTIVE_TAB to the parent of the tab window.  
   
-##  <a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
+
   
 ```  
 virtual BOOL StartRenameTab(int iTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs  
+
   
 ```  
 virtual void SwapTabs(
@@ -2073,15 +2190,15 @@ virtual void SwapTabs(
     int nSecondTabID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nFisrtTabID`  
  [in] `nSecondTabID`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCTabCtrl 클래스](../../mfc/reference/cmfctabctrl-class.md)   
- [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md)   
+ [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 

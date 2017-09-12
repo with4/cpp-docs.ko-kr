@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarMenuButton 클래스 | Microsoft 문서"
+title: CMFCToolBarMenuButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -57,7 +57,49 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarMenuButton class
+- CMFCToolBarMenuButton [MFC], CMFCToolBarMenuButton
+- CMFCToolBarMenuButton [MFC], CompareWith
+- CMFCToolBarMenuButton [MFC], CopyFrom
+- CMFCToolBarMenuButton [MFC], CreateFromMenu
+- CMFCToolBarMenuButton [MFC], CreateMenu
+- CMFCToolBarMenuButton [MFC], CreatePopupMenu
+- CMFCToolBarMenuButton [MFC], EnableQuickCustomize
+- CMFCToolBarMenuButton [MFC], GetCommands
+- CMFCToolBarMenuButton [MFC], GetImageRect
+- CMFCToolBarMenuButton [MFC], GetPaletteRows
+- CMFCToolBarMenuButton [MFC], GetPopupMenu
+- CMFCToolBarMenuButton [MFC], HasButton
+- CMFCToolBarMenuButton [MFC], HaveHotBorder
+- CMFCToolBarMenuButton [MFC], IsBorder
+- CMFCToolBarMenuButton [MFC], IsClickedOnMenu
+- CMFCToolBarMenuButton [MFC], IsDroppedDown
+- CMFCToolBarMenuButton [MFC], IsEmptyMenuAllowed
+- CMFCToolBarMenuButton [MFC], IsExclusive
+- CMFCToolBarMenuButton [MFC], IsMenuPaletteMode
+- CMFCToolBarMenuButton [MFC], IsQuickMode
+- CMFCToolBarMenuButton [MFC], IsTearOffMenu
+- CMFCToolBarMenuButton [MFC], OnAfterCreatePopupMenu
+- CMFCToolBarMenuButton [MFC], OnBeforeDrag
+- CMFCToolBarMenuButton [MFC], OnCalculateSize
+- CMFCToolBarMenuButton [MFC], OnCancelMode
+- CMFCToolBarMenuButton [MFC], OnChangeParentWnd
+- CMFCToolBarMenuButton [MFC], OnClick
+- CMFCToolBarMenuButton [MFC], OnClickMenuItem
+- CMFCToolBarMenuButton [MFC], OnContextHelp
+- CMFCToolBarMenuButton [MFC], OnDraw
+- CMFCToolBarMenuButton [MFC], OnDrawOnCustomizeList
+- CMFCToolBarMenuButton [MFC], OpenPopupMenu
+- CMFCToolBarMenuButton [MFC], ResetImageToDefault
+- CMFCToolBarMenuButton [MFC], SaveBarState
+- CMFCToolBarMenuButton [MFC], Serialize
+- CMFCToolBarMenuButton [MFC], SetACCData
+- CMFCToolBarMenuButton [MFC], SetMenuOnly
+- CMFCToolBarMenuButton [MFC], SetMenuPaletteMode
+- CMFCToolBarMenuButton [MFC], SetMessageWnd
+- CMFCToolBarMenuButton [MFC], SetRadio
+- CMFCToolBarMenuButton [MFC], SetTearOff
+- CMFCToolBarMenuButton [MFC], DrawDocumentIcon
+- CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
 caps.latest.revision: 31
 author: mikeblome
@@ -77,110 +119,110 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a06fd323862c6869463b4db0977816b5707c3e18
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f9bb3365fb4edb529a06a383eecd2a3f95c67d27
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 클래스
-팝업 메뉴를 포함하는 도구 모음 단추입니다.  
+# <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton Class
+A toolbar button that contains a pop-up menu.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarMenuButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|`CMFCToolBarMenuButton` 개체를 생성합니다.|  
+|[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Constructs a `CMFCToolBarMenuButton` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarMenuButton::CompareWith](#comparewith)|이 인스턴스를 제공 된 `CMFCToolBarButton` 개체입니다. (재정의 [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|  
-|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|현재 단추에 다른 도구 모음 단추의 속성을 복사합니다. (재정의 [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
-|[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|창 메뉴 핸들에서 도구 모음 메뉴를 초기화합니다.|  
-|[CMFCToolBarMenuButton::CreateMenu](#createmenu)|도구 모음 메뉴의 명령으로 이루어진 Windows 메뉴를 만듭니다. 창 메뉴에 대 한 핸들을 반환합니다.|  
-|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|팝업 메뉴 개체를 만듭니다 ( [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)) 도구 모음 메뉴를 표시 합니다.|  
+|[CMFCToolBarMenuButton::CompareWith](#comparewith)|Compares this instance with the provided `CMFCToolBarButton` object. (Overrides [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|  
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Initializes the toolbar menu from a Windows menu handle.|  
+|[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Creates a Windows menu that consists of the commands in the toolbar menu. Returns a handle to the Windows menu.|  
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Creates a pop-up menu object ( [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)) to display the toolbar menu.|  
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||  
-|[CMFCToolBarMenuButton::GetCommands](#getcommands)|도구 모음 메뉴에 있는 명령 목록에 대 한 읽기 전용 액세스를 제공합니다.|  
-|[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|단추 이미지에 대 한 경계 사각형을 검색 합니다.|  
-|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|메뉴 팔레트 모드에 있을 때 팝업 메뉴에서 행의 수를 반환 합니다.|  
-|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|단추와 연결 되는 팝업 메뉴 개체에 대 한 포인터를 반환 합니다.|  
+|[CMFCToolBarMenuButton::GetCommands](#getcommands)|Gives read-only access to the list of commands in the toolbar menu.|  
+|[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Retrieves the bounding rectangle for the button image.|  
+|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Returns the number of rows in the pop-up menu when the menu is in palette mode.|  
+|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Returns a pointer to the pop-up menu object that is associated with the button.|  
 |[CMFCToolBarMenuButton::HasButton](#hasbutton)||  
-|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|사용자가 단추를 선택 단추의 테두리 표시 여부를 결정 합니다. (재정의 [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
+|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Determines whether a border of the button is displayed when a user selects the button. (Overrides [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||  
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||  
-|[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|팝업 메뉴를 표시할지 여부를 결정 합니다.|  
-|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|사용자 선택된 된 메뉴 항목에서 하위 메뉴를 열 수 있는지 여부를 결정 하는 프레임 워크에서 호출 됩니다.|  
-|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|단추 인지 단독 모드, 즉 여부 팝업 메뉴에도 계속 열려 다른 도구 모음이 나 단추 위로 포인터를 이동 하는 경우에 결정 합니다.|  
-|[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|팝업 메뉴 팔레트 모드 인지 여부를 결정 합니다.|  
+|[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Determines whether the pop-up menu is displayed.|  
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Called by the framework to determine whether a user can open a submenu from the selected menu item.|  
+|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Determines whether the button is in exclusive mode, that is, whether the pop-up menu remains open even when the user moves the pointer over another toolbar or button.|  
+|[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Determines whether the pop-up menu is in palette mode.|  
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||  
-|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|팝업 메뉴에 분리 표시줄이 있는지 여부를 결정 합니다.|  
+|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|Determines whether the pop-up menu has a tear-off bar.|  
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
-|[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|단추를 놓을 수 있는지 여부를 지정 합니다. (재정의 [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
-|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|처리 하는 프레임 워크에서 호출 된 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) 메시지입니다. (재정의 [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
-|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|새 도구 모음 단추를 삽입할 경우에 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
-|[CMFCToolBarMenuButton::OnClick](#onclick)|사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|팝업 메뉴에서 항목을 선택할 때 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다. (재정의 [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
-|[CMFCToolBarMenuButton::OnDraw](#ondraw)|지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다. (재정의 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
-|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|사용자가 팝업 메뉴를 열 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|단추와 연결 되는 이미지의 기본값을 설정 합니다. (재정의 [CMFCToolBarButton::ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|  
-|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|도구 모음 단추의 상태를 저장합니다. (재정의 [CMFCToolBarButton::SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|  
-|[CMFCToolBarMenuButton::Serialize](#serialize)|이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다. (재정의 [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|제공 된 정보를 표시 `CAccessibilityData` 도구 모음 단추에서 내게 필요한 옵션 데이터는 개체입니다. (재정의 [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
-|[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|도구 모음에 단추를 추가할 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|팝업 메뉴 팔레트 모드 인지 여부를 지정 합니다.|  
+|[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Specifies whether the button can be dragged. (Overrides [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
+|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Called by the framework to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Overrides [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
+|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarMenuButton::OnClick](#onclick)|Called by the framework when the user clicks the mouse button. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Called by the framework when the user selects an item in the pop-up menu.|  
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message. (Overrides [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCToolBarMenuButton::OnDraw](#ondraw)|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Called by the framework when the user opens the pop-up menu.|  
+|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|Sets to the default value the image that is associated with the button. (Overrides [CMFCToolBarButton::ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|  
+|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|Saves the state of the toolbar button. (Overrides [CMFCToolBarButton::SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|  
+|[CMFCToolBarMenuButton::Serialize](#serialize)|Reads this object from an archive or writes it to an archive. (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|Populates the provided `CAccessibilityData` object with accessibility data from the toolbar button. (Overrides [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
+|[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|Specifies whether the button can be added to a toolbar.|  
+|[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|Specifies whether the pop-up menu is in palette mode.|  
 |[CMFCToolBarMenuButton::SetMessageWnd](#setmessagewnd)||  
-|[CMFCToolBarMenuButton::SetRadio](#setradio)|선택 되어 있는지를 나타내는 아이콘을 표시 하려면 도구 모음 메뉴 단추를 강제로 수행 합니다.|  
-|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|분리 지정 팝업 메뉴에 대 한 ID를 표시 합니다.|  
+|[CMFCToolBarMenuButton::SetRadio](#setradio)|Forces the toolbar menu button to display an icon indicating that it is selected.|  
+|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|Specifies a tear-off bar ID for the pop-up menu.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|메뉴 단추에 아이콘을 그립니다.|  
+|[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Draws an icon on the menu button.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|경우 `TRUE`, 프레임 워크를 항상 호출 [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) 단추를 그릴 때.|  
+|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|If `TRUE`, the framework always calls [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) when a button is drawn.|  
   
-## <a name="remarks"></a>주의  
- A `CMFCToolBarMenuButton` 메뉴, 하위 메뉴에 있는 메뉴 항목, 명령을 실행 하거나 메뉴를 표시 하는 단추 또는 메뉴에만 표시 하는 단추 표시 될 수 있습니다. 이미지, 텍스트, 메뉴 핸들 등의 매개 변수를 지정 하 여 동작 및 메뉴 단추의 모양을 결정 하 고 명령 생성자에서 단추와 연결 된 ID `CMFCToolbarMenuButton::CMFCToolbarMenuButton`합니다.  
+## <a name="remarks"></a>Remarks  
+ A `CMFCToolBarMenuButton` can appear as a menu, a menu item that has a sub-menu, a button that either executes a command or displays a menu, or a button that displays only a menu. You determine the behavior and appearance of the menu button by specifying parameters such as the image, text, menu handle, and command ID that is associated with the button in the constructor `CMFCToolbarMenuButton::CMFCToolbarMenuButton`.  
   
- 사용자 지정 클래스에서 파생 된 `CMFCToolbarMenuButton` 클래스를 사용 해야는 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) 매크로입니다. [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) 매크로 응용 프로그램을 종료 하는 경우 오류를 생성 합니다.  
+ A custom class derived from the `CMFCToolbarMenuButton` class must use the [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro. The [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) macro generates an error when the application closes.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 구성 하는 방법을 한 `CMFCToolBarMenuButton` 개체입니다. 코드는 드롭다운 메뉴 팔레트 모드 임을 지정 하 고 사용자가 메뉴 모음에서 메뉴 단추를 끌 때 생성 되 고 분리 모음에 대 한 ID를 지정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [워드 패드 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCToolBarMenuButton` object. The code illustrates how to specify that the drop-down menu is in palette mode, and specify the ID for the tear-off bar that is created when the user drags the menu button off of a menu bar. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&10;](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbarmenubutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarmenubutton.h  
   
-##  <a name="cmfctoolbarmenubutton"></a>CMFCToolBarMenuButton::CMFCToolBarMenuButton  
- `CMFCToolBarMenuButton` 개체를 생성합니다.  
+##  <a name="cmfctoolbarmenubutton"></a>  CMFCToolBarMenuButton::CMFCToolBarMenuButton  
+ Constructs a `CMFCToolBarMenuButton` object.  
   
 ```  
 CMFCToolBarMenuButton();
@@ -194,105 +236,105 @@ CMFCToolBarMenuButton(
     BOOL bUserButton=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 기존 `CMFCToolBarMenuButton` 이에 복사 될 개체 `CMFCToolBarMenuButton` 개체입니다.  
+ An existing `CMFCToolBarMenuButton` object to be copied into this `CMFCToolBarMenuButton` object.  
   
  [in] `uiID`  
- 단추를 클릭할 때 실행할 명령의 ID 또는 ( `UINT`) 명령을 직접 실행 되지 않는 메뉴 단추에 대 한-1입니다.  
+ The ID of the command to execute when a user clicks the button; or ( `UINT`)-1 for a menu button that does not directly execute a command.  
   
  [in] `hMenu`  
- 메뉴에 대 한 핸들 또는 `NULL` 단추 메뉴 하지 않은 경우.  
+ A handle to a menu; or `NULL` if the button does not have a menu.  
   
  [in] `iImage`  
- 단추;에 대 한 이미지의 인덱스 그렇지 않으면-1이이 단추에 아이콘 없거나 지정 된 명령에 대 한 아이콘을 사용 하 여 `uiID`합니다. 인덱스는 각각에 대해 동일한 `CMFCToolBarImages` 응용 프로그램의 개체입니다.  
+ Index of the image for the button; or -1 if this button does not have an icon or uses the icon for the command specified by `uiID`. The index is the same for each `CMFCToolBarImages` object in your application.  
   
  [in] `lpszText`  
- 도구 모음 메뉴 단추의 텍스트입니다.  
+ The text of the toolbar menu button.  
   
  [in] `bUserButton`  
- `TRUE`단추는 사용자 지정 이미지를 표시 하는 경우 `FALSE` 단추에 의해 지정 된 명령에 연결 된 미리 정의 된 이미지를 표시 하는 경우 `uiID`합니다.  
+ `TRUE` if the button displays a user-defined image; `FALSE` if the button displays a predefined image associated with the command specified by `uiID`.  
   
-### <a name="remarks"></a>주의  
- 경우 `uiID` 유효한 명령 ID, 단추는 사용자가 해당 명령을 수행 합니다. 경우 `hMenu` 유효한 메뉴 핸들 단추 메뉴에 표시 될 경우 도구 모음 또는 하위 메뉴에 표시 될 경우 드롭다운 메뉴를 제공 합니다. 모두 `uiID` 및 `hMenu` 단추는 사용자가 클릭 될 때 명령을 수행할 부분과 아래쪽 화살표가 있는 됩니다 드롭 다운 메뉴에서 사용자가 클릭 하면 일부 분할-단추 유효 합니다. 그러나 경우 `hMenu` 유효 사용자 메뉴에 있는 단추를 삽입 하면 명령을 수행 하려면 단추를 클릭 하 여 수행할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ If `uiID` is a valid command ID, the button performs that command when the user clicks it. If `hMenu` is a valid menu handle, the button provides a drop-down menu when it appears in a toolbar or a submenu when it appears in a menu. If both `uiID` and `hMenu` are valid, the button is a split-button with a portion that will perform the command when the user clicks on it and a portion with a down arrow that will drop-down a menu when the user clicks on it. However, if `hMenu` is valid, a user will not be able to click the button to perform a command when the button is inserted into a menu.  
   
-### <a name="example"></a>예제  
- 개체를 생성 하는 방법은 다음 예제는 `CMFCToolBarMenuButton` 클래스입니다. 이 코드 조각은의 일부인는 [워드 패드 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCToolBarMenuButton` class. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&9;](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
-##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
+##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith  
 
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `other`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom  
 
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createfrommenu"></a>CMFCToolBarMenuButton::CreateFromMenu  
- 창 메뉴 핸들에서 도구 모음 메뉴를 초기화합니다.  
+##  <a name="createfrommenu"></a>  CMFCToolBarMenuButton::CreateFromMenu  
+ Initializes the toolbar menu from a Windows menu handle.  
   
 ```  
 virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hMenu`  
- 메뉴에 대 한 핸들입니다.  
+ A handle to a menu.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 메뉴 단추의 드롭 다운 하위 메뉴를 표시할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A toolbar menu button can display a drop-down submenu.  
   
- 프레임 워크의 명령 메뉴에서 하위 메뉴에서 초기화 하려면이 메서드를 호출 합니다.  
+ The framework calls this method to initialize the commands in the submenu from a menu.  
   
-##  <a name="createmenu"></a>CMFCToolBarMenuButton::CreateMenu  
- 도구 모음 메뉴의 명령으로 구성 된 메뉴를 만듭니다. 메뉴에 대 한 핸들을 반환합니다.  
+##  <a name="createmenu"></a>  CMFCToolBarMenuButton::CreateMenu  
+ Creates a menu that consists of the commands in the toolbar menu. Returns a handle to the menu.  
   
 ```  
 virtual HMENU CreateMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메뉴에 대 한 경우 A 핸들 성공 합니다. `NULL`도구 모음 메뉴 단추와 연결 된 명령 목록이 비어 있습니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the menu if success. `NULL` if the list of commands associated with the toolbar menu button is empty.  
   
-### <a name="remarks"></a>주의  
- 메뉴에 생성 되는 방법을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can override this method in a derived class to customize the way the menu is generated.  
   
-##  <a name="createpopupmenu"></a>CMFCToolBarMenuButton::CreatePopupMenu  
- 만듭니다는 `CMFCPopupMenu` 도구 모음 메뉴를 표시 하는 개체입니다.  
+##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu  
+ Creates a `CMFCPopupMenu` object to display the toolbar menu.  
   
 ```  
 virtual CMFCPopupMenu* CreatePopupMenu();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CMFCPopupMenu` 도구 모음 메뉴 단추와 연결 된 드롭다운 메뉴를 표시 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMFCPopupMenu` object that displays the drop-down menu associated with the toolbar menu button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 단추와 연결 된 드롭다운 메뉴의 표시를 준비 하는 프레임 워크에서 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework to prepare the display of the drop-down menu associated with the button.  
   
- 기본 구현에서 방금 생성 하 고 새 반환 `CMFCPopupMenu` 개체입니다. 파생된 형식을 사용 하려는 경우이 메서드를 재정의 [CMFCPopupMenu 클래스](cmfcpopupmenu-class.md) 또는 추가 초기화를 수행 합니다.  
+ The default implementation just constructs and returns a new `CMFCPopupMenu` object. Override this method if you want to use a derived type of [CMFCPopupMenu Class](cmfcpopupmenu-class.md) or to perform additional initialization.  
   
-##  <a name="drawdocumenticon"></a>CMFCToolBarMenuButton::DrawDocumentIcon  
- 문서 아이콘이 메뉴 단추를 그립니다.  
+##  <a name="drawdocumenticon"></a>  CMFCToolBarMenuButton::DrawDocumentIcon  
+ Draws a document icon on the menu button.  
   
 ```  
 void DrawDocumentIcon(
@@ -301,230 +343,230 @@ void DrawDocumentIcon(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대 한 포인터입니다.  
+ A pointer to the device context.  
   
  [in] `rectImage`  
- 이미지 경계 사각형의 좌표입니다.  
+ Coordinates of the image bounding rectangle.  
   
  [in] `hIcon`  
- 아이콘에 대 한 핸들입니다.  
+ A handle to the icon.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 문서 아이콘을 사용 하 고 가운데에 의해 지정 된 영역 메뉴 단추를 그립니다 `rectImage`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method takes a document icon and draws it on the menu button, centered in the area specified by `rectImage`.  
   
-##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
+##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize  
 
   
 ```  
 void EnableQuickCustomize();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
+##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton  
 
   
 ```  
 virtual BOOL HasButton() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
+##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder  
 
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
+##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder  
 
   
 ```  
 virtual BOOL IsBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
+##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu  
 
   
 ```  
 BOOL IsClickedOnMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
+##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode  
 
   
 ```  
 BOOL IsQuickMode();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcommands"></a>CMFCToolBarMenuButton::GetCommands  
- 도구 모음 메뉴에 있는 명령 목록에 대 한 읽기 전용 액세스를 제공합니다.  
+##  <a name="getcommands"></a>  CMFCToolBarMenuButton::GetCommands  
+ Gives read-only access to the list of commands in the toolbar menu.  
   
 ```  
 const CObList& GetCommands() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- Const에 대 한 참조는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체의 컬렉션을 포함 하는 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reference to a [CObList Class](../../mfc/reference/coblist-class.md) object, which contains a collection of [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) objects.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 메뉴 단추는 하위 메뉴를 표시할 수 있습니다. 생성자 또는 하위 메뉴에 있는 명령의 목록을 제공할 수 있습니다 [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) 으로 메뉴에 대 한 핸들 ( `HMENU`). 메뉴에서 파생 된 개체의 목록으로 변환 됩니다 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 내부에 저장 하 고 `CObList` 개체입니다. 이 메서드를 호출 하 여이 목록에 액세스할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A toolbar menu button can display a submenu. You can provide the list of commands in the submenu in the constructor or in [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) as a handle to a menu ( `HMENU`). The menu is converted to a list of objects that are derived from [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) and stored in the internal `CObList` object. You can access this list by calling this method.  
   
-##  <a name="getimagerect"></a>CMFCToolBarMenuButton::GetImageRect  
- 단추 이미지에 대 한 경계 사각형을 검색 합니다.  
+##  <a name="getimagerect"></a>  CMFCToolBarMenuButton::GetImageRect  
+ Retrieves the bounding rectangle for the button image.  
   
 ```  
 void GetImageRect(CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectImage`  
- 에 대 한 참조는 `CRect` 이미지 경계 사각형의 좌표를 받는 개체입니다.  
+ A reference to a `CRect` object that receives the coordinates of the image bounding rectangle.  
   
-##  <a name="getpaletterows"></a>CMFCToolBarMenuButton::GetPaletteRows  
- 메뉴 팔레트 모드에 있을 때 드롭 다운 메뉴에서 행의 수를 반환 합니다.  
+##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
+ Returns the number of rows in the drop-down menu when the menu is in palette mode.  
   
 ```  
 int GetPaletteRows() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 색상표에 있는 행의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of rows in the palette.  
   
-### <a name="remarks"></a>주의  
- 메뉴 단추 팔레트 모드로 설정 되 면 메뉴 항목의 행 수를 제한 하 여 여러 열에 표시 됩니다. 행의 수를 가져오려면이 메서드를 호출 합니다. 사용 하도록 설정 하 또는 색상표 모드를 사용 하지 않도록 설정 하 고 사용 하 여 행의 수를 지정할 수 [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)합니다.  
+### <a name="remarks"></a>Remarks  
+ When the menu button is set to palette mode, menu items will appear in multiple columns with only a limited number of rows. Call this method to obtain the number of rows. You can enable or disable palette mode and specify the number of rows using [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).  
   
-##  <a name="getpopupmenu"></a>CMFCToolBarMenuButton::GetPopupMenu  
- 에 대 한 포인터를 반환 된 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 단추의 드롭다운 메뉴를 나타내는 개체입니다.  
+##  <a name="getpopupmenu"></a>  CMFCToolBarMenuButton::GetPopupMenu  
+ Returns a pointer to the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object that represents the drop-down menu of the button.  
   
 ```  
 CMFCPopupMenu* GetPopupMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 프레임 워크의 하위 메뉴 도구 모음 메뉴 단추의; 그린 때 생성 된 개체 `NULL` 경우 없는 하위 메뉴가 표시 됩니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object that was created when the framework drew the submenu of the toolbar menu button; `NULL` if no submenu is displayed.  
   
-### <a name="remarks"></a>주의  
- 드롭다운 메뉴를 표시 하는 도구 모음 메뉴 단추의 경우 단추 만듭니다는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 메뉴를 나타내는 개체를 합니다. 에 대 한 포인터를 가져오려면이 메서드를 호출 하 여 `CMFCPopupMenu` 개체입니다. 임시 되 고 사용자가 드롭다운 메뉴를 닫을 때 유효 하지 않게 하기 때문에 반환 된 포인터를 저장 하지 마십시오.  
+### <a name="remarks"></a>Remarks  
+ When a toolbar menu button displays a drop-down menu, the button creates a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object to represent the menu. Call this method to obtain a pointer to the `CMFCPopupMenu` object. You should not store the returned pointer, because it is temporary and becomes invalid when the user closes the drop-down menu.  
   
-##  <a name="isdroppeddown"></a>CMFCToolBarMenuButton::IsDroppedDown  
- 팝업 메뉴는 현재 표시 되어 있는지 여부를 나타냅니다.  
+##  <a name="isdroppeddown"></a>  CMFCToolBarMenuButton::IsDroppedDown  
+ Indicates whether the pop-up menu is currently displayed.  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 메뉴 단추; 고 하위 메뉴를 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar menu button displays its submenu; otherwise `FALSE`.  
   
-##  <a name="isemptymenuallowed"></a>CMFCToolBarMenuButton::IsEmptyMenuAllowed  
- 빈 하위 메뉴 항목에 표시 되는지 여부를 지정 합니다.  
+##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed  
+ Specifies whether menu items shows empty submenus.  
   
 ```  
 virtual BOOL IsEmptyMenuAllowed() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`프레임 워크의 하위 메뉴 비어 있는 경우에 현재 선택 된 메뉴 항목에서 하위 메뉴를 엽니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework opens a submenu from the currently selected menu item even when the submenu is empty; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자가 현재 선택 된 메뉴 항목에서의 하위 메뉴를 열고 하려고 할 때이 메서드를 호출 합니다. 하위 메뉴에서 비어 있는 경우 및 `IsEmptyMenuAllowed` 반환 `FALSE`, 하위 메뉴 열리지 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user tries to open the submenu from the currently selected menu item. If the submenu is empty and `IsEmptyMenuAllowed` returns `FALSE`, the submenu will not open.  
   
- 기본 구현은 `FALSE`를 반환합니다. 이 동작을 사용자 지정 하려면이 메서드를 재정의 합니다.  
+ The default implementation returns `FALSE`. Override this method to customize this behavior.  
   
-##  <a name="isexclusive"></a>CMFCToolBarMenuButton::IsExclusive  
- 단추 단독 모드 인지 여부를 나타냅니다.  
+##  <a name="isexclusive"></a>  CMFCToolBarMenuButton::IsExclusive  
+ Indicates whether the button is in exclusive mode.  
   
 ```  
 virtual BOOL IsExclusive() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`단추 단독 모드에서 작동 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button is working in exclusive mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용자가 다음 다른 도구 모음이 나 메뉴 단추 위로 마우스 포인터를 이동를 단추에 대 한 팝업 메뉴를 열고, 팝업 메뉴 단추 배타 모드에 있지 않으면을 닫습니다.  
+### <a name="remarks"></a>Remarks  
+ When a user opens a popup menu for a button and then moves the mouse pointer over another toolbar or menu button, the popup menu closes unless the button is in exclusive mode.  
   
- 기본 구현에서는 항상 반환 `FALSE`합니다. 단독 모드를 설정 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
+ The default implementation always returns `FALSE`. Override this method in a derived class if you want to turn on exclusive mode.  
   
-##  <a name="ismenupalettemode"></a>CMFCToolBarMenuButton::IsMenuPaletteMode  
- 드롭다운 메뉴 팔레트 모드 인지 여부를 결정 합니다.  
+##  <a name="ismenupalettemode"></a>  CMFCToolBarMenuButton::IsMenuPaletteMode  
+ Determines whether the drop-down menu is in palette mode.  
   
 ```  
 BOOL IsMenuPaletteMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`그렇지 않으면 팔레트 모드가 활성화 된 경우 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the palette mode is enabled, otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 메뉴 단추 팔레트 모드로 설정 되 면 메뉴 항목의 행 수를 제한 하 여 여러 열에 나타납니다. 행의 수를 가져오려면이 메서드를 호출 합니다. 호출 하 여 색상표 모드를 사용 하지 않도록 설정 하거나 설정할 수 있습니다 [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)합니다.  
+### <a name="remarks"></a>Remarks  
+ When the menu button is set to palette mode, menu items appear in multiple columns with only a limited number of rows. Call this method to obtain the number of rows. You can enable or disable the palette mode by calling [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).  
   
-##  <a name="istearoffmenu"></a>CMFCToolBarMenuButton::IsTearOffMenu  
- 드롭다운 메뉴에 분리 표시줄이 있는지 여부를 나타냅니다.  
+##  <a name="istearoffmenu"></a>  CMFCToolBarMenuButton::IsTearOffMenu  
+ Indicates whether the drop-down menu has a tear-off bar.  
   
 ```  
 virtual BOOL IsTearOffMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 메뉴 단추에 분리 표시줄이; 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar menu button has a tear-off bar; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 분리 기능을 사용 하는 분리 설정 ID, 막대 호출 [CMFCToolBarMenuButton::SetTearOff](#settearoff)합니다.  
+### <a name="remarks"></a>Remarks  
+ To enable the tear-off feature and set the tear-off bar ID, call [CMFCToolBarMenuButton::SetTearOff](#settearoff).  
   
-##  <a name="m_balwayscallownerdraw"></a>CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw  
- 프레임 워크를 항상 호출 여부를 지정 [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) 단추를 그릴 때.  
+##  <a name="m_balwayscallownerdraw"></a>  CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw  
+ Specifies whether the framework always calls [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) when a button is drawn.  
   
 ```  
 static BOOL m_bAlwaysCallOwnerDraw;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버 변수를로 설정 되 면 `TRUE`, 단추를 항상 호출 [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) 메서드를 단추에 이미지를 표시 합니다. 때 `m_bAlwaysCallOwnerDraw` 는 `FALSE`를 단추 자체 이미지는 미리 정의 하는 경우 이미지를 그립니다. 그렇지 않으면, 호출 `OnDrawMenuImage`합니다.  
+### <a name="remarks"></a>Remarks  
+ When this member variable is set to `TRUE`, the button always calls [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) method to display the image on the button. When `m_bAlwaysCallOwnerDraw` is `FALSE`, the button itself draws the image if the image is predefined. Otherwise, it calls `OnDrawMenuImage`.  
   
-##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
+##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
 
   
 ```  
 virtual void OnAfterCreatePopupMenu();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
+##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag  
 
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize  
 
   
 ```  
@@ -534,37 +576,37 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `sizeDefault`  
  [in] `bHorz`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode  
 
   
 ```  
 virtual void OnCancelMode();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd  
 
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick  
 
   
 ```  
@@ -573,44 +615,44 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
  [in] `bDelay`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclickmenuitem"></a>CMFCToolBarMenuButton::OnClickMenuItem  
- 드롭 다운 메뉴에서 항목을 선택할 때 프레임 워크에서 호출 합니다.  
+##  <a name="onclickmenuitem"></a>  CMFCToolBarMenuButton::OnClickMenuItem  
+ Called by the framework when the user selects an item in the drop-down menu.  
   
 ```  
 virtual BOOL OnClickMenuItem();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `FALSE`프레임 워크의 기본 메뉴 항목 처리를 계속 해야 하는 경우 그렇지 않으면 `TRUE`합니다. 기본 구현에서는 항상 반환 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `FALSE` if the framework should continue the default menu item processing; otherwise `TRUE`. The default implementation always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용자가 메뉴 항목을 클릭할 때 프레임 워크는 해당 항목과 연결 되는 명령을 실행 합니다.  
+### <a name="remarks"></a>Remarks  
+ When the user clicks a menu item, the framework executes a command that is associated with that item.  
   
- 메뉴 항목 처리를 사용자 지정 하려면 재정의 `OnClickMenuItem` 에서 파생 된 클래스에서 `CMFCToolBarMenuButton` 클래스입니다. 재정의 해야 [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) 파생된 클래스의 인스턴스를 사용 하 여 특수 처리를 필요로 하는 메뉴 단추를 바꿉니다.  
+ To customize the menu item processing, override `OnClickMenuItem` in a class derived from `CMFCToolBarMenuButton` class. You must also override [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) and replace the menu buttons that require special processing with instances of the derived class.  
   
-##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp  
 
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw  
 
   
 ```  
@@ -625,7 +667,7 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `pImages`  
@@ -635,9 +677,9 @@ virtual void OnDraw(
  [in] `bDrawBorder`  
  [in] `bGrayDisabledButtons`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList  
 
   
 ```  
@@ -647,65 +689,65 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `bSelected`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="openpopupmenu"></a>CMFCToolBarMenuButton::OpenPopupMenu  
- 사용자가 도구 모음 메뉴 단추의 드롭다운 메뉴를 열 때 프레임 워크에서 호출 합니다.  
+##  <a name="openpopupmenu"></a>  CMFCToolBarMenuButton::OpenPopupMenu  
+ Called by the framework when the user opens the drop-down menu of a toolbar menu button.  
   
 ```  
 virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 드롭다운 메뉴 명령을 수신 하는 기간을 지정 합니다. 수 `NULL` 도구 모음 메뉴 단추 부모 창에 경우에 있습니다.  
+ Specifies the window that receives the drop-down menu commands. It can be `NULL` only if the toolbar menu button has a parent window.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체 생성 되어 성공적으로 고, 그렇지 않으면 열 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` when a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object was created and opened successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 사용자가 도구 모음 메뉴 단추에서 드롭다운 메뉴를 열 때 프레임 워크에 의해 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework when the user opens a drop-down menu from a toolbar menu button.  
   
-##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
+##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault  
 
   
 ```  
 virtual void ResetImageToDefault();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
+##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState  
 
   
 ```  
 virtual void SaveBarState();
 ```  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 끌어서 놓기 작업의 결과로 도구 모음 단추를 만들 때이 메서드를 호출 합니다. 이 메서드는 [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) 메서드를 다시 해당 메뉴 팝업 메뉴의 부모 단추가 최상위 팝업 메뉴의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it creates a toolbar button as the result of a drag-and-drop operation. This method calls the [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) method of the top-level pop-up menu, which causes the parent button of the pop-up menu to recreate its menu.  
   
-##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize  
 
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setaccdata"></a>CMFCToolBarMenuButton::SetACCData  
- 리본 요소에 대한 내게 필요한 옵션 데이터를 설정합니다.  
+##  <a name="setaccdata"></a>  CMFCToolBarMenuButton::SetACCData  
+ Sets the accessibility data for the ribbon element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -713,35 +755,35 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- 리본 요소에 대한 부모 창입니다.  
+ The parent window for the ribbon element.  
   
  `data`  
- 리본 요소에 대한 내게 필요한 옵션 데이터입니다.  
+ The accessibility data for the ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 이 메서드는 리본 요소에 대한 내게 필요한 옵션 데이터를 설정하고 항상 `TRUE`를 반환합니다. 내게 필요한 옵션 데이터를 설정하고 성공 또는 실패를 나타내는 값을 반환하려면 이 메서드를 재정의합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method sets the accessibility data for the ribbon element and always returns `TRUE`. Override this method to set the accessibility data and return a value that indicates success or failure.  
   
-##  <a name="setmenuonly"></a>CMFCToolBarMenuButton::SetMenuOnly  
- 올바른 명령 ID와 하위 메뉴에 있을 때 단추 메뉴 단추 또는 분할 단추도 그릴지 여부를 지정 합니다.  
+##  <a name="setmenuonly"></a>  CMFCToolBarMenuButton::SetMenuOnly  
+ Specifies whether the button is drawn as a menu button or a split button when it has both a valid command ID and a submenu.  
   
 ```  
 void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMenuOnly`  
- `TRUE`유효한 명령 ID와 하위 메뉴에 있을 때이 단추를 메뉴 단추로 표시 하 `FALSE` 유효한 명령 ID와 하위 메뉴에 있을 때 분할 단추와이 단추를 표시 합니다.  
+ `TRUE` to show this button as a menu button when it has both a valid command ID and a submenu, `FALSE` to show this button as a split button when it has both a valid command ID and a submenu.  
   
-### <a name="remarks"></a>주의  
- 일반적으로 도구 모음 메뉴 단추에는 하위 메뉴 및 명령 ID를 모두 있는 경우 메뉴는 아래쪽 화살표 단추에는 기본 단추 및 연결 된 분할 단추 것 같습니다. 이 메서드를 호출 하 고 `bMenuOnly` 는 `TRUE`, 단추 대신 단추에서 아래쪽 화살표를 사용 하는 단일 메뉴 단추를 표시 합니다. 사용자가 두 모드에 있는 화살표를 클릭 하면 하위 메뉴에서 열리고 클릭할 모드나 프레임 워크 단추의 비 화살표 부분 명령을 실행 합니다.  
+### <a name="remarks"></a>Remarks  
+ Typically, when a toolbar menu button has both a submenu and a command ID, the menu appears to be a split button that has a main button and an attached down arrow button. If you call this method and `bMenuOnly` is `TRUE`, the button instead appears to be a single menu button with a down arrow in the button. When the user clicks the arrow in either mode, the submenu opens, and when the user clicks the non-arrow part of the button in either mode the framework executes the command .  
   
-##  <a name="setmenupalettemode"></a>CMFCToolBarMenuButton::SetMenuPaletteMode  
- 드롭다운 메뉴 팔레트 모드 인지 여부를 지정 합니다.  
+##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode  
+ Specifies whether the drop-down menu is in palette mode.  
   
 ```  
 void SetMenuPaletteMode(
@@ -749,59 +791,59 @@ void SetMenuPaletteMode(
     int nPaletteRows=1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMenuPaletteMode`  
- 드롭다운 메뉴 팔레트 모드 인지 여부를 지정 합니다.  
+ Specifies whether the drop-down menu is in palette mode.  
   
  [in] `nPaletteRows`  
- 색상표에 있는 행의 수입니다.  
+ Number of rows in palette.  
   
-### <a name="remarks"></a>주의  
- 팔레트 모드에서 모든 메뉴 항목은 여러 열 팔레트도 표시 됩니다. 사용 하 여 행의 수를 지정 `nPaletteRows`합니다.  
+### <a name="remarks"></a>Remarks  
+ In the palette mode, all menu items are displayed as a multicolumn palette. You specify the number of rows by using `nPaletteRows`.  
   
-##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
+##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd  
 
   
 ```  
 void SetMessageWnd(CWnd* pWndMessage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndMessage`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setradio"></a>CMFCToolBarMenuButton::SetRadio  
- 선택 시 라디오 단추 스타일 아이콘을 표시 하려면 도구 모음 메뉴 단추를 설정 합니다.  
+##  <a name="setradio"></a>  CMFCToolBarMenuButton::SetRadio  
+ Sets the toolbar menu button to display a radio button style icon when it is checked.  
   
 ```  
 virtual void SetRadio();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 하 고 메뉴 단추를 선택 하는 동안을 그릴 때 [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) 확인 표시 아이콘을 그리는 데 있습니다. 기본적으로 `OnDrawMenuCheck` 현재 비주얼 관리자 확인란을 그립니다 요청 확인 표시 메뉴 단추 스타일 지정 합니다. 이 메서드를 호출 하면 현재 비주얼 관리자를 대신 라디오 단추 스타일 확인 표시 메뉴 단추를 그립니다. 이 변경 내용을 취소할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ When the menu button is drawn while it is checked, it calls [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) to draw a checkmark icon. By default, `OnDrawMenuCheck` requests that the current visual manager draws a checkbox style checkmark on the menu button. After you call this method, the current visual manager instead draws a radio button style checkmark on the menu button. This change cannot be undone.  
   
- 이 메서드를 호출 하는 경우 메뉴 단추 표시 되 고 새로 고쳐집니다.  
+ When you call this method and the menu button is currently being displayed, it will refresh.  
   
-##  <a name="settearoff"></a>CMFCToolBarMenuButton::SetTearOff  
- 드롭다운 메뉴에 대 한 분리 표시줄의 ID를 지정 합니다.  
+##  <a name="settearoff"></a>  CMFCToolBarMenuButton::SetTearOff  
+ Specifies the ID of the tear-off bar for the drop-down menu.  
   
 ```  
 virtual void SetTearOff(UINT uiBarID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiBarID`  
- 새 분리 지정 막대 id입니다.  
+ Specifies a new tear-off bar ID.  
   
-### <a name="remarks"></a>주의  
- 메뉴 모음에서 메뉴 단추를 끌 때 만들어지는 분리 표시줄에 대 한 ID를 지정 하려면이 메서드를 호출 합니다. 하는 경우는 `uiBarID` 매개 변수가 0 이면 사용자 메뉴 단추 떼어낼 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to specify the ID for the tear-off bar that is created when the user drags the menu button off of a menu bar. If the `uiBarID` parameter is 0, the user cannot tear off the menu button.  
   
- 호출 [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) 응용 프로그램에서 분리 메뉴 기능을 활성화 합니다.  
+ Call [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) to enable the tear-off menu feature in your application.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)

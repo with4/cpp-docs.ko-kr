@@ -1,85 +1,102 @@
 ---
-title: "컬렉션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "배열 템플릿"
-  - "배열[C++], 클래스"
-  - "컬렉션 클래스, 컬렉션 클래스 정보"
-  - "컬렉션 클래스, 배열"
-  - "컬렉션 클래스, 목록"
-  - "컬렉션 클래스, 맵"
-  - "컬렉션 클래스, MFC"
-  - "컬렉션 클래스, 도형"
-  - "컬렉션 클래스, 템플릿 기반"
-  - "컬렉션, 컬렉션 정보"
-  - "MFC 컬렉션 클래스"
-  - "MFC, 컬렉션"
-  - "도형"
-  - "도형, 컬렉션"
+title: Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- arrays [MFC], classes
+- MFC collection classes
+- shapes, collection
+- collection classes [MFC], MFC
+- collections, about collections
+- array templates [MFC]
+- collection classes [MFC], template-based
+- collection classes [MFC], about collection classes
+- collection classes [MFC], maps
+- collection classes [MFC], arrays
+- shapes
+- collection classes [MFC], lists
+- collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컬렉션
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ae4981412a7cf494b551de7f5bb26c74512244
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Microsoft Foundation 클래스 라이브러리는 개체 그룹을 관리 하는 컬렉션 클래스를 제공 합니다.  이 클래스는 두 가지 유형입니다.  
+---
+# <a name="collections"></a>Collections
+The Microsoft Foundation Class Library provides collection classes to manage groups of objects. These classes are of two types:  
   
--   [C \+ \+ 템플릿에서 생성 된 컬렉션 클래스](#_core_the_template.2d.based_collection_classes)  
+-   [Collection classes created from C++ templates](#_core_the_template_based_collection_classes)  
   
--   [C \+ \+ 템플릿에서 생성 되지 않은 컬렉션 클래스](#_core_the_collection_classes_not_based_on_templates)  
+-   [Collection classes not created from templates](#_core_the_collection_classes_not_based_on_templates)  
   
 > [!NOTE]
->  코드에서 이미 비템플릿 기반 컬렉션 클래스를 사용 하는 경우을 사용 하 여 계속할 수 있습니다.  사용자 지정 데이터 형식에 대 한 새로운 형식 안전 컬렉션 클래스를 작성 하는 경우 새로운 템플릿 기반 클래스를 사용 하는 것이 좋습니다.  
+>  If your code already uses nontemplate collection classes, you can continue to use them. If you write new type-safe collection classes for your own data types, we recommend that you use the newer template-based classes.  
   
-##  <a name="_core_collection_shapes"></a> 컬렉션 모양  
- 컬렉션 클래스의 "형태" 및 해당 요소의 형식 규정 됩니다.  도형 개체는 구성하고 컬렉션에 저장 하는 방법을 참조합니다.  MFC는 세 가지 기본 컬렉션 모양: 목록, 배열, 및 \(사전\)에 매핑합니다.  특정 프로그래밍 문제에 가장 적합 한 컬렉션 모양을 선택할 수 있습니다.  
+##  <a name="_core_collection_shapes"></a> Collection Shapes  
+ A collection class is characterized by its "shape" and by the types of its elements. The shape refers to the way the objects are organized and stored by the collection. MFC provides three basic collection shapes: lists, arrays, and maps (also known as dictionaries). You can pick the collection shape that is most suited to your particular programming problem.  
   
- 세 개의 도형에 제공 된 컬렉션의 각이 항목의 뒷부분에 간략하게 설명 되어 있습니다.  프로그램에 가장 적합 한 결정 하는 데 도움이 도형 기능 비교를 참조 하십시오. [컬렉션 클래스 선택에 대한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md).  
+ Each of the three provided collection shapes is described briefly later in this topic. To compare the features of the shapes to help you decide which is best for your program, see [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
 -   List  
   
-     List 클래스는 이중 연결된 목록으로 구현 된 요소의 순서가, 인덱스 되지 않은 목록을 제공 합니다.  "머리"와 "꼬리"가 목록과 매우 빠르게가 머리 또는 꼬리 또는 삽입 하거나 삭제할 요소에서에서 요소를 제거 하거나 추가 합니다.  
+     The list class provides an ordered, nonindexed list of elements, implemented as a doubly linked list. A list has a "head" and a "tail," and adding or removing elements from the head or tail, or inserting or deleting elements in the middle, is very fast.  
   
--   배열  
+-   Array  
   
-     Array 클래스는 개체의 크기, 정렬, 및 정수 인덱스 동적 배열을 제공합니다.  
+     The array class provides a dynamically sized, ordered, and integer-indexed array of objects.  
   
--   맵 \(사전\)  
+-   Map (also known as a dictionary)  
   
-     맵을 값 개체를 사용 하 여 키 개체를 연결 하는 컬렉션입니다.  
+     A map is a collection that associates a key object with a value object.  
   
-##  <a name="_core_the_template.2d.based_collection_classes"></a> 템플릿 기반 컬렉션 클래스  
- 모든 형식의 개체를 포함 하는 형식 안전 컬렉션을 구현 하는 가장 쉬운 방법은 MFC 템플릿 기반 클래스 중 하나를 사용 하는 것.  이러한 클래스의 예제를 보려면 MFC 샘플을 [수집](../top/visual-cpp-samples.md)합니다.  
+##  <a name="_core_the_template_based_collection_classes"></a> The Template-Based Collection Classes  
+ The easiest way to implement a type-safe collection that contains objects of any type is to use one of the MFC template-based classes. For examples of these classes, see the MFC sample [COLLECT](../visual-cpp-samples.md).  
   
- 다음 표에서 MFC 템플릿 기반 컬렉션 클래스를 나열합니다.  
+ The following table lists the MFC template-based collection classes.  
   
-### 템플릿 및 컬렉션 클래스  
+### <a name="collection-template-classes"></a>Collection Template Classes  
   
-|컬렉션 내용|배열|목록|맵|  
-|------------|--------|--------|-------|  
-|무작위 형식 개체의 컬렉션입니다.|`CArray`|`CList`|`CMap`|  
-|모든 형식의 개체에 대 한 포인터 컬렉션|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
+|Collection contents|Arrays|Lists|Maps|  
+|-------------------------|------------|-----------|----------|  
+|Collections of objects of any type|`CArray`|`CList`|`CMap`|  
+|Collections of pointers to objects of any type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> 비템플릿 기반 컬렉션 클래스  
- 코드에서 이미 MFC비템플릿 기반 컬렉션 클래스를 사용 하는 경우을 사용 하 여 계속할 수 있습니다.  그러나 새 컬렉션 템플릿 기반 클래스를 사용 하는 것이 좋습니다.  다음 표에서 비템플릿 기반 MFC 컬렉션 클래스입니다.  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> The Collection Classes Not Based on Templates  
+ If your application already uses MFC nontemplate classes, you can continue to use them. However, for new collections, we recommend that you use the template-based classes. The following table lists the MFC collection classes that are not based on templates.  
   
-### 템플릿 및 비 템플릿 컬렉션 클래스  
+### <a name="nontemplate-collection-classes"></a>Nontemplate Collection Classes  
   
-|배열|목록|맵|  
-|--------|--------|-------|  
+|Arrays|Lists|Maps|  
+|------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
 |`CDWordArray`|`CStringList`|`CMapStringToOb`|  
@@ -88,38 +105,40 @@ Microsoft Foundation 클래스 라이브러리는 개체 그룹을 관리 하는
 |`CWordArray`||`CMapWordToOb`|  
 |`CUIntArray`||`CMapWordToPtr`|  
   
- MFC 컬렉션 클래스 특성 테이블에 [컬렉션 클래스 선택에 대한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md) \(도형\)이 아닌 이러한 특성의 관점에서 MFC 컬렉션 클래스에 설명 합니다.  
+ The Characteristics of MFC Collection Classes table in [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md) describes the MFC collection classes in terms of these characteristics (other than shape):  
   
--   클래스는 c \+ \+ 템플릿을 사용 하 여 여부  
+-   Whether the class uses C++ templates  
   
--   요소는 컬렉션에 저장 된 serialize 할 수 있는지 여부  
+-   Whether the elements stored in the collection can be serialized  
   
--   여부 진단에 대 한 컬렉션에 저장 된 요소를 덤프 될 수 있습니다.  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   컬렉션 형식 인지 여부  
+-   Whether the collection is type-safe  
   
-### 수행할 작업  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-#### 일반 컬렉션 클래스 작업  
+#### <a name="general-collection-class-tasks"></a>General Collection-Class Tasks  
   
--   [컬렉션 클래스 선택에 대한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md)  
+-   [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [방법: 형식이 안전한 컬렉션 만들기](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)  
   
--   [스택 및 큐 컬렉션 만들기](../mfc/creating-stack-and-queue-collections.md)  
+-   [Creating Stack and Queue Collections](../mfc/creating-stack-and-queue-collections.md)  
   
--   [CArray::Add](../Topic/CArray::Add.md)  
+-   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### 템플릿 기반 컬렉션 클래스  
+#### <a name="template-based-collection-class-tasks"></a>Template-Based Collection-Class Tasks  
   
--   [템플릿 기반 클래스](../mfc/template-based-classes.md)  
+-   [Template-Based Classes](../mfc/template-based-classes.md)  
   
-#### 컬렉션의 멤버에 액세스 \(템플릿 기반 여부\)  
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accessing the Members of a Collection (Template-Based or Not)  
   
--   [컬렉션의 모든 멤버에 액세스](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
+-   [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## 참고 항목  
- [개념](../mfc/mfc-concepts.md)   
- [일반 MFC 항목](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

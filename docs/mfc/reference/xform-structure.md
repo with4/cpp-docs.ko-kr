@@ -1,5 +1,5 @@
 ---
-title: "XFORM 구조체 | Microsoft 문서"
+title: XFORM Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- XFORM structure
+- XFORM structure [MFC]
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2d23b3838f1e2dcabb2affb96fa6f18942581ff8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f5a82c21f031035f5f9591feb0c3d61eb9193f7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="xform-structure"></a>XFORM 구조체
-`XFORM` 구조체 형식은 다음과 같습니다.  
+# <a name="xform-structure"></a>XFORM Structure
+The `XFORM` structure has the following form:  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct  tagXFORM {  /* xfrm */  
@@ -56,21 +56,21 @@ typedef struct  tagXFORM {  /* xfrm */
 } XFORM;  
 ```  
   
-## <a name="remarks"></a>주의  
- `XFORM` 구조 페이지 공간 변환 월드 공간을 지정 합니다. **eDx** 및 **eDy** 멤버 각각에 가로 및 세로 변환 구성 요소를 지정 합니다. 다음 표에서 작업에 따라 다른 멤버가 사용 하는 방법을 보여 줍니다.  
+## <a name="remarks"></a>Remarks  
+ The `XFORM` structure specifies a world-space to page-space transformation. The **eDx** and **eDy** members specify the horizontal and vertical translation components, respectively. The following table shows how the other members are used, depending on the operation:  
   
-|작업|eM11|eM12|eM21|eM22|  
+|Operation|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|회전 각도의 코사인 값|회전 각도의 사인 값|회전 각도의 사인 한 음수 값|회전 각도의 코사인 값|  
-|**크기 조정**|가로 크기 조정 구성 요소|Nothing|Nothing|세로 크기 조정 구성 요소|  
-|**기울이기**|Nothing|가로 너비 대 높이 비율 상수|세로 너비 대 높이 비율 상수|Nothing|  
-|**리플렉션**|가로 리플렉션 구성 요소|Nothing|Nothing|세로 리플렉션 구성 요소|  
+|`Rotation`|Cosine of rotation angle|Sine of rotation angle|Negative sine of rotation angle|Cosine of rotation angle|  
+|**Scaling**|Horizontal scaling component|Nothing|Nothing|Vertical scaling component|  
+|**Shear**|Nothing|Horizontal proportionality constant|Vertical proportionality constant|Nothing|  
+|**Reflection**|Horizontal reflection component|Nothing|Nothing|Vertical reflection component|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)
 
 

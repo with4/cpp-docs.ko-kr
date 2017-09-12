@@ -1,5 +1,5 @@
 ---
-title: "CUserToolsManager 클래스 | Microsoft 문서"
+title: CUserToolsManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CUserToolsManager class
+- CUserToolsManager [MFC], CUserToolsManager
+- CUserToolsManager [MFC], CreateNewTool
+- CUserToolsManager [MFC], FindTool
+- CUserToolsManager [MFC], GetArgumentsMenuID
+- CUserToolsManager [MFC], GetDefExt
+- CUserToolsManager [MFC], GetFilter
+- CUserToolsManager [MFC], GetInitialDirMenuID
+- CUserToolsManager [MFC], GetMaxTools
+- CUserToolsManager [MFC], GetToolsEntryCmd
+- CUserToolsManager [MFC], GetUserTools
+- CUserToolsManager [MFC], InvokeTool
+- CUserToolsManager [MFC], IsUserToolCmd
+- CUserToolsManager [MFC], LoadState
+- CUserToolsManager [MFC], MoveToolDown
+- CUserToolsManager [MFC], MoveToolUp
+- CUserToolsManager [MFC], RemoveTool
+- CUserToolsManager [MFC], SaveState
+- CUserToolsManager [MFC], SetDefExt
+- CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
 caps.latest.revision: 26
 author: mikeblome
@@ -53,96 +71,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0b82adf0f9eba5ee334ada2c169546f27894c1dd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a6b8e0ebbc5b3aa50ea910eb868d17c9a27ce6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cusertoolsmanager-class"></a>CUserToolsManager 클래스
-컬렉션을 유지 관리 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 응용 프로그램의 개체입니다. 사용자 도구는 외부 응용 프로그램을 실행하는 메뉴 항목입니다. `CUserToolsManager` 개체를 사용하면 사용자 또는 개발자가 응용 프로그램에 새 사용자 도구를 추가할 수 있습니다. 사용자 도구와 연결된 명령 실행을 지원하고 사용자 도구에 관한 정보를 Windows 레지스트리를 저장합니다.  
+# <a name="cusertoolsmanager-class"></a>CUserToolsManager Class
+Maintains the collection of [CUserTool Class](../../mfc/reference/cusertool-class.md) objects in an application. A user tool is a menu item that runs an external application. The `CUserToolsManager` object enables the user or developer to add new user tools to the application. It supports the execution of the commands associated with user tools, and it also saves information about user tools in the Windows registry.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserToolsManager : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|`CUserToolsManager`를 생성합니다.|  
+|[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Constructs a `CUserToolsManager`.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserToolsManager::CreateNewTool](#createnewtool)|새 사용자 도구를 만듭니다.|  
-|[CUserToolsManager::FindTool](#findtool)|에 대 한 포인터를 반환 합니다.는 `CMFCUserTool` 는 지정한 명령 ID와 연결 된 개체|  
-|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|와 연결 된 리소스 ID를 반환 하는 **인수** 메뉴에는 **도구** 탭은 **사용자 지정** 대화 상자.|  
-|[CUserToolsManager::GetDefExt](#getdefext)|기본 확장명을 반환 하는 **파일 열기** 대화 상자 ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog))에서 사용 하는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자.|  
-|[CUserToolsManager::GetFilter](#getfilter)|파일 필터를 반환는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자.|  
-|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|와 연결 된 리소스 ID를 반환 하는 **초기 디렉터리** 메뉴에는 **도구** 탭은 **사용자 지정** 대화 상자.|  
-|[CUserToolsManager::GetMaxTools](#getmaxtools)|응용 프로그램에 할당 될 수 있는 도구를 사용자의 최대 수를 반환 합니다.|  
-|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|사용자 도구에 대 한 메뉴 항목 자리 표시자의 명령 ID를 반환합니다.|  
-|[CUserToolsManager::GetUserTools](#getusertools)|사용자 도구 목록에 대 한 참조를 반환합니다.|  
-|[CUserToolsManager::InvokeTool](#invoketool)|지정 된 명령 ID를 가진 사용자 도구와 연결 된 응용 프로그램 실행|  
-|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|명령 ID는 사용자 도구와 관련이 있는지 여부를 결정 합니다.|  
-|[CUserToolsManager::LoadState](#loadstate)|Windows 레지스트리에서 사용자 도구에 대 한 정보를 로드합니다.|  
-|[CUserToolsManager::MoveToolDown](#movetooldown)|사용자 지정된 도구를 사용자 도구 목록에서 아래로 이동합니다.|  
-|[CUserToolsManager::MoveToolUp](#movetoolup)|사용자 지정된 도구를 사용자 도구 목록에서 위로 이동합니다.|  
-|[CUserToolsManager::RemoveTool](#removetool)|응용 프로그램에서 사용자 지정된 도구를 제거합니다.|  
-|[CUserToolsManager::SaveState](#savestate)|Windows 레지스트리에 사용자 도구에 대 한 정보를 저장합니다.|  
-|[CUserToolsManager::SetDefExt](#setdefext)|기본 확장명을 지정 하는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하 여는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자입니다.|  
-|[CUserToolsManager::SetFilter](#setfilter)|파일을 필터링 하는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하 여는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자입니다.|  
+|[CUserToolsManager::CreateNewTool](#createnewtool)|Creates a new user tool.|  
+|[CUserToolsManager::FindTool](#findtool)|Returns the pointer to the `CMFCUserTool` object that is associated with a specified command ID.|  
+|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|Returns the resource ID that is associated with the **Arguments** menu on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetDefExt](#getdefext)|Returns the default extension that the **File Open** dialog box ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetFilter](#getfilter)|Returns the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|Returns the resource ID that is associated with the **Initial directory** menu on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetMaxTools](#getmaxtools)|Returns the maximum number of user tools that can be allocated in the application.|  
+|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|Returns the command ID of the menu item placeholder for user tools.|  
+|[CUserToolsManager::GetUserTools](#getusertools)|Returns a reference to the list of user tools.|  
+|[CUserToolsManager::InvokeTool](#invoketool)|Executes an application associated with the user tool that has a specified command ID.|  
+|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|Determines whether a command ID is associated with a user tool.|  
+|[CUserToolsManager::LoadState](#loadstate)|Loads information about user tools from the Windows registry.|  
+|[CUserToolsManager::MoveToolDown](#movetooldown)|Moves the specified user tool down in the list of user tools.|  
+|[CUserToolsManager::MoveToolUp](#movetoolup)|Moves the specified user tool up in the list of user tools.|  
+|[CUserToolsManager::RemoveTool](#removetool)|Removes the specified user tool from the application.|  
+|[CUserToolsManager::SaveState](#savestate)|Stores information about user tools in the Windows registry.|  
+|[CUserToolsManager::SetDefExt](#setdefext)|Specifies the default extension that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::SetFilter](#setfilter)|Specifies the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
   
-## <a name="remarks"></a>주의  
- 사용자 도구를 응용 프로그램에 통합 하려면 다음을 수행 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ To incorporate user tools into your application, you must:  
   
- 1. 메뉴 항목 및 사용자 도구 메뉴 항목에 대 한 연결된 명령 ID를 예약 합니다.  
+ 1. Reserve a menu item and an associated command ID for a user tool menu entry.  
   
- 2. 응용 프로그램에서 사용자를 정의할 수 있는 각 사용자 도구에 대 한 순차 명령 ID를 예약 합니다.  
+ 2. Reserve a sequential command ID for each user tool that a user can define in your application.  
   
- 3. 호출의 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 메서드는 다음 매개 변수를 제공 하 고: 메뉴 명령 ID, 첫 번째 사용자 도구 명령 ID 및 마지막 사용자 도구 명령 ID  
+ 3. Call the [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) method and supply the following parameters: menu command ID, first user tool command ID, and last user tool command ID.  
   
- 있어야 하나만 글로벌 `CUserToolsManager` 응용 프로그램별 개체입니다.  
+ There should be only one global `CUserToolsManager` object per application.  
   
- 사용자 도구의 예를 들어 VisualStudioDemo 샘플 프로젝트를 참조 하십시오.  
+ For an example of user tools, see the VisualStudioDemo sample project.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는에 대 한 참조를 검색 하는 방법을 한 `CUserToolsManager` 개체와 새 사용자 도구를 만드는 방법. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a reference to a `CUserToolsManager` object and how to create new user tools. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&38;](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CUserToolsManager`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxusertoolsmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxusertoolsmanager.h  
   
-##  <a name="createnewtool"></a>CUserToolsManager::CreateNewTool  
- 새 사용자 도구를 만듭니다.  
+##  <a name="createnewtool"></a>  CUserToolsManager::CreateNewTool  
+ Creates a new user tool.  
   
 ```  
 CUserTool* CreateNewTool();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 새로 만든된 사용자 도구에 대 한 포인터 또는 `NULL` 경우 사용자 도구 수가 최대값을 초과 했습니다. 반환 된 형식이 전달 되는 형식과 동일 `CWinAppEx::EnableUserTools` 으로 `pToolRTC` 매개 변수입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created user tool, or `NULL` if the number of user tools has exceeded the maximum. The returned type is the same as the type that is passed to `CWinAppEx::EnableUserTools` as the `pToolRTC` parameter.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 호출에 제공 되는 범위에서 첫 번째 사용 가능한 메뉴 명령 ID를 찾으면 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 사용자 도구가이 ID를 할당 하 고  
+### <a name="remarks"></a>Remarks  
+ This method finds the first available menu command ID in the range that is supplied in the call to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) and assigns the user tool this ID.  
   
- 메서드가 도구 수가 최대값에 도달한 경우 실패 합니다. 이 범위에 있는 모든 명령 Id 사용자 도구에 할당 될 때 발생 합니다. 호출 하 여 도구의 최대 수를 검색할 수 있습니다 [CUserToolsManager::GetMaxTools](#getmaxtools)합니다. 호출 하 여 도구 목록에 대 한 액세스를 가져올 수는 [CUserToolsManager::GetUserTools](#getusertools) 메서드.  
+ The method fails if the number of tools has reached the maximum. This occurs when all command IDs within the range are assigned to user tools. You can retrieve the maximum number of tools by calling [CUserToolsManager::GetMaxTools](#getmaxtools). You can get access to the tools list by calling the [CUserToolsManager::GetUserTools](#getusertools) method.  
   
-##  <a name="cusertoolsmanager"></a>CUserToolsManager::CUserToolsManager  
- `CUserToolsManager`를 생성합니다. 각 응용 프로그램에는 최대 하나의 사용자 도구 관리자를 있어야 합니다.  
+##  <a name="cusertoolsmanager"></a>  CUserToolsManager::CUserToolsManager  
+ Constructs a `CUserToolsManager`. Each application must have at most one user tools manager.  
   
 ```  
 CUserToolsManager();
@@ -157,281 +175,281 @@ CUserToolsManager(
     UINT uInitDirMenuID=0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdToolsDummy`  
- 부호 없는 정수 사용자 도구 메뉴의 명령 ID에 대 한 자리 표시자로 사용 하는 프레임 워크입니다.  
+ An unsigned integer that the framework uses as a placeholder for the command ID of the user tools menu.  
   
  [in] `uiCmdFirst`  
- 첫 번째 사용자 도구 명령에 대 한 명령 ID입니다.  
+ The command ID for the first user tool command.  
   
  [in] `uiCmdLast`  
- 마지막 사용자 도구 명령에 대 한 명령 ID입니다.  
+ The command ID for the last user tool command.  
   
  [in] `pToolRTC`  
- 클래스는 [CUserToolsManager::CreateNewTool](#createnewtool) 만듭니다. 이 클래스를 사용 하 여의 파생된 형식을 사용할 수 있습니다 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 기본 구현 대신 합니다.  
+ The class that [CUserToolsManager::CreateNewTool](#createnewtool) creates. By using this class, you can use a derived type of [CUserTool Class](../../mfc/reference/cusertool-class.md) instead of the default implementation.  
   
  [in] `uArgMenuID`  
- 인수 팝업 메뉴의 메뉴 리소스 ID입니다.  
+ The menu resource ID of the arguments popup menu.  
   
  [in] `uInitDirMenuID`  
- 초기 디렉터리 팝업 메뉴의 메뉴 리소스 ID입니다.  
+ The menu resource ID of the initial directory popup menu.  
   
-### <a name="remarks"></a>주의  
- 이 생성자를 호출 하지 마십시오. 대신, 호출 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 사용 사용자 도구 및 호출 [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) 에 대 한 포인터를 얻을 수는 `CUserToolsManager`합니다. 자세한 내용은 참조 [사용자 정의 형식](../../mfc/user-defined-tools.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ Do not call this constructor. Instead, call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools, and call [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) to obtain a pointer to the `CUserToolsManager`. For more information, see [User-defined Tools](../../mfc/user-defined-tools.md).  
   
-##  <a name="findtool"></a>CUserToolsManager::FindTool  
- 에 대 한 포인터를 반환 된 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 는 지정한 명령 ID와 연결 된 개체  
+##  <a name="findtool"></a>  CUserToolsManager::FindTool  
+ Returns the pointer to the [CUserTool Class](../../mfc/reference/cusertool-class.md) object that is associated with a specified command ID.  
   
 ```  
 CUserTool* FindTool(UINT uiCmdId) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 메뉴 명령 식별자입니다.  
+ A menu command identifier.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 또는 `CUserTool`-파생 개체 경우 성공 고, 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CUserTool Class](../../mfc/reference/cusertool-class.md) or `CUserTool`-derived object if success; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 때 `FindTool` 는 성공적으로 반환 된 형식이의 형식과 같은 `pToolRTC` 매개 변수를 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)합니다.  
+### <a name="remarks"></a>Remarks  
+ When `FindTool` is successful, the returned type is the same as the type of the `pToolRTC` parameter to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="getargumentsmenuid"></a>CUserToolsManager::GetArgumentsMenuID  
- 와 연결 된 리소스 ID를 반환 하는 **인수** 메뉴에는 **도구** 탭은 **사용자 지정** 대화 상자.  
+##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
+ Returns the resource ID that is associated with the **Arguments** menu on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 UINT GetArgumentsMenuID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메뉴 리소스의 식별자입니다.  
+### <a name="return-value"></a>Return Value  
+ The identifier of a menu resource.  
   
-### <a name="remarks"></a>주의  
- `uArgMenuID` 의 매개 변수 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 리소스의 ID를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `uArgMenuID` parameter of [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) specifies the ID of the resource.  
   
-##  <a name="getdefext"></a>CUserToolsManager::GetDefExt  
- 기본 확장명을 반환 하는 **파일 열기** 대화 상자 ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog))에서 사용 하는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자.  
+##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
+ Returns the default extension that the **File Open** dialog box ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 const CString& GetDefExt() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 참조는 `CString` 확장을 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `CString` object that contains the extension.  
   
-##  <a name="getfilter"></a>CUserToolsManager::GetFilter  
- 파일 필터를 반환는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자.  
+##  <a name="getfilter"></a>  CUserToolsManager::GetFilter  
+ Returns the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 const CString& GetFilter() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 참조는 `CString` 필터가 포함 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `CString` object that contains the filter.  
   
-##  <a name="getinitialdirmenuid"></a>CUserToolsManager::GetInitialDirMenuID  
- 와 연결 된 리소스 ID를 반환 하는 **초기 디렉터리** 메뉴에는 **도구** 탭은 **사용자 지정** 대화 상자.  
+##  <a name="getinitialdirmenuid"></a>  CUserToolsManager::GetInitialDirMenuID  
+ Returns the resource ID that is associated with the **Initial directory** menu on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 UINT GetInitialDirMenuID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메뉴 리소스 식별자입니다.  
+### <a name="return-value"></a>Return Value  
+ A menu resource identifier.  
   
-### <a name="remarks"></a>주의  
- 에 반환 된 ID가 지정 된 `uInitDirMenuID` 의 매개 변수 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)합니다.  
+### <a name="remarks"></a>Remarks  
+ The returned ID is specified in the `uInitDirMenuID` parameter of [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="getmaxtools"></a>CUserToolsManager::GetMaxTools  
- 응용 프로그램에 할당 될 수 있는 도구를 사용자의 최대 수를 반환 합니다.  
+##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
+ Returns the maximum number of user tools that can be allocated in the application.  
   
 ```  
 int GetMaxTools() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 사용자 도구 할당 될 수 있는 최대 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The maximum number of user tools that can be allocated.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램에 할당 될 수 있는 도구의 최대 개수를 검색 하려면이 메서드를 호출 합니다. 이 숫자는 범위에서 Id 개수는 `uiCmdFirst` 통해는 `uiCmdLast` 매개 변수를 전달 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the maximum number of tools that can be allocated in the application. This number is the number of IDs in the range from the `uiCmdFirst` through the `uiCmdLast` parameters that you pass to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="gettoolsentrycmd"></a>CUserToolsManager::GetToolsEntryCmd  
- 사용자 도구에 대 한 메뉴 항목 자리 표시자의 명령 ID를 반환합니다.  
+##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
+ Returns the command ID of the menu item placeholder for user tools.  
   
 ```  
 UINT GetToolsEntryCmd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 자리 표시자의 명령 ID입니다.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the placeholder.  
   
-### <a name="remarks"></a>주의  
- 사용자 도구를 사용 하도록 설정 하려면 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)합니다. `uiCmdToolsDummy` 매개 변수는 도구 항목 명령의 명령 ID를 지정 합니다. 이 메서드가 반환 도구 항목 명령 id입니다. 메뉴에 해당 ID가 사용 하는 모든 위치 메뉴가 나타나면 사용자 도구 목록으로 대체 됩니다 것.  
+### <a name="remarks"></a>Remarks  
+ To enable user tools, you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). The `uiCmdToolsDummy` parameter specifies the command ID of the tools entry command. This method returns the tools entry command ID. Wherever that ID is used in a menu, it is replaced by the list of user tools when the menu appears.  
   
-##  <a name="getusertools"></a>CUserToolsManager::GetUserTools  
- 사용자 도구 목록에 대 한 참조를 반환합니다.  
+##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
+ Returns a reference to the list of user tools.  
   
 ```  
 const CObList& GetUserTools() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- Const에 대 한 참조는 [CObList 클래스](../../mfc/reference/coblist-class.md) 사용자 도구 목록이 포함 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a list of user tools.  
   
-### <a name="remarks"></a>주의  
- 호출 되는 도구 사용자의 목록을 검색 하려면이 메서드는 [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) 개체를 유지 관리 합니다. 각 사용자 도구는 형식의 개체를 나타내는 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 에서 파생 된 형식 또는 `CUserTool`합니다. 형식은 의해 지정 되는 `pToolRTC` 를 호출할 때 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 사용자 도구를 사용 하도록 설정 하려면.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve a list of user tools that the [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) object maintains. Each user tool is represented by an object of type [CUserTool Class](../../mfc/reference/cusertool-class.md) or a type derived from `CUserTool`. The type is specified by the `pToolRTC` parameter when you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools.  
   
-##  <a name="invoketool"></a>CUserToolsManager::InvokeTool  
- 지정 된 명령 ID를 가진 사용자 도구와 연결 된 응용 프로그램 실행  
+##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
+ Executes an application associated with the user tool that has a specified command ID.  
   
 ```  
 BOOL InvokeTool(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 사용자 도구와 연결 된 메뉴 명령 ID입니다.  
+ The menu command ID associated with the user tool.  
   
-### <a name="return-value"></a>반환 값  
- 사용자 도구와 관련 된 명령이 성공적으로 실행 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the command associated with user tool was executed successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 실행 하는 사용자와 연결 된 응용 프로그램 도구를 호출 하 여 지정 된 명령 ID가 `uiCmdId`합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to execute an application associated with the user tool that has the command ID specified by `uiCmdId`.  
   
-##  <a name="isusertoolcmd"></a>CUserToolsManager::IsUserToolCmd  
- 명령 ID는 사용자 도구와 관련이 있는지 여부를 결정 합니다.  
+##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
+ Determines whether a command ID is associated with a user tool.  
   
 ```  
 BOOL IsUserToolCmd(UINT uiCmdId) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 메뉴 항목의 명령 ID입니다.  
+ A command ID of the menu item.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 명령 하는 경우 0이 아닌 ID와 연결 된 사용자 도구; 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a given command ID is associated with a user tool; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 지정한 명령 ID 명령 ID 범위에 있는지 확인 합니다. 호출 하는 경우 범위 지정 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) 사용자 도구를 사용 하도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method checks whether the given command ID is in the command ID range. You specify the range when you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools.  
   
-##  <a name="loadstate"></a>CUserToolsManager::LoadState  
- Windows 레지스트리에서 사용자 도구에 대 한 정보를 로드합니다.  
+##  <a name="loadstate"></a>  CUserToolsManager::LoadState  
+ Loads information about user tools from the Windows registry.  
   
 ```  
 BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Windows 레지스트리 키의 경로입니다.  
+ The path of the Windows registry key.  
   
-### <a name="return-value"></a>반환 값  
- 상태를 성공적으로 로드 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 상태를 로드 하는이 메서드는 `CUserToolsManager` Windows 레지스트리에서 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This method loads the state of the `CUserToolsManager` object from the Windows registry.  
   
- 일반적으로 호출 하지 않으면이 메서드 직접. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) 작업 영역 초기화 프로세스의 일부로 호출 합니다.  
+ Usually, you do not call this method directly. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) calls it as part of workspace initialization process.  
   
-##  <a name="movetooldown"></a>CUserToolsManager::MoveToolDown  
- 사용자 지정된 도구를 사용자 도구 목록에서 아래로 이동합니다.  
+##  <a name="movetooldown"></a>  CUserToolsManager::MoveToolDown  
+ Moves the specified user tool down in the list of user tools.  
   
 ```  
 BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pTool`  
- 이동 하 고 사용자 도구를 지정 합니다.  
+ Specifies the user tool to move.  
   
-### <a name="return-value"></a>반환 값  
- 사용자 도구를 아래로 이동 되었으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user tool was moved down successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 메서드가 실패 하는 경우 도구는는 `pTool` 지정 내부 목록에 없는 경우이 도구는 목록에서 마지막 합니다.  
+### <a name="remarks"></a>Remarks  
+ The method fails if the tool that the `pTool` specifies is not in the internal list or if the tool is last in the list.  
   
-##  <a name="movetoolup"></a>CUserToolsManager::MoveToolUp  
- 사용자 지정된 도구를 사용자 도구 목록에서 위로 이동합니다.  
+##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
+ Moves the specified user tool up in the list of user tools.  
   
 ```  
 BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pTool`  
- 이동 하 고 사용자 도구를 지정 합니다.  
+ Specifies the user tool to move.  
   
-### <a name="return-value"></a>반환 값  
- 사용자 도구 성공적으로 이동 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user tool was moved up successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 메서드가 실패 하는 경우 도구 하는 `pTool` 내부 목록에 없는 매개 변수를 지정 하거나 도구 목록에서 첫 번째 도구 항목.  
+### <a name="remarks"></a>Remarks  
+ The method fails if the tool that the `pTool` parameter specifies is not in the internal list or if the tool is the first tool item in the list.  
   
-##  <a name="removetool"></a>CUserToolsManager::RemoveTool  
- 응용 프로그램에서 사용자 지정된 도구를 제거합니다.  
+##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
+ Removes the specified user tool from the application.  
   
 ```  
 BOOL RemoveTool(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `pTool`  
- 제거할 사용자 도구에 대 한 포인터입니다.  
+ A pointer to a user tool to be removed.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 도구는 성공적으로 제거 됩니다. 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tool is successfully removed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 삭제 하는 도구가 성공적으로 제거 되 면 `pTool`합니다.  
+### <a name="remarks"></a>Remarks  
+ If the tool is successfully removed, this method deletes `pTool`.  
   
-##  <a name="savestate"></a>CUserToolsManager::SaveState  
- Windows 레지스트리에 사용자 도구에 대 한 정보를 저장합니다.  
+##  <a name="savestate"></a>  CUserToolsManager::SaveState  
+ Stores information about user tools in the Windows registry.  
   
 ```  
 BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Windows 레지스트리 키에 대 한 경로입니다.  
+ A path to the Windows registry key.  
   
-### <a name="return-value"></a>반환 값  
- 상태 저장 했습니다. 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was saved successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 현재 상태를 저장 하는 메서드는 `CUserToolsManager` Windows 레지스트리에 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The method stores the current state of the `CUserToolsManager` object in the Windows registry.  
   
- 이 메서드를 직접 호출할 필요가 없습니다 일반적으로 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) 응용 프로그램의 작업 영역 serialization 프로세스의 일부로 자동으로 호출 합니다.  
+ Usually, you do not need to call this method directly, [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) calls it automatically as a part of the workspace serialization process of the application.  
   
-##  <a name="setdefext"></a>CUserToolsManager::SetDefExt  
- 기본 확장명을 지정 하는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하 여는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자입니다.  
+##  <a name="setdefext"></a>  CUserToolsManager::SetDefExt  
+ Specifies the default extension that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 void SetDefExt(const CString& strDefExt);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `strDefExt`  
- 기본 파일 이름 확장명을 포함 하는 텍스트 문자열입니다.  
+ A text string that contains the default file name extension.  
   
-### <a name="remarks"></a>주의  
- 기본 파일 이름 확장명을 지정 하려면이 메서드를 호출 하는 **파일 열기** 사용자 도구에 연결 하는 응용 프로그램을 선택할 때 표시 되는 대화 상자입니다. 기본값은 "exe".  
+### <a name="remarks"></a>Remarks  
+ Call this method to specify a default file name extension in the **File Open** dialog box, which is displayed when the user selects an application to associate with the user tool. The default is "exe".  
   
-##  <a name="setfilter"></a>CUserToolsManager::SetFilter  
- 파일을 필터링 하는 **파일 열기** 대화 상자 ( [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md))에서 사용 하 여는 **명령** 필드에 **도구** 탭은 **사용자 지정** 대화 상자입니다.  
+##  <a name="setfilter"></a>  CUserToolsManager::SetFilter  
+ Specifies the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 void SetFilter(const CString& strFilter);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `strFilter`  
- 필터를 지정합니다.  
+ Specifies the filter.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)   
- [CUserTool 클래스](../../mfc/reference/cusertool-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
+ [CUserTool Class](../../mfc/reference/cusertool-class.md)
 

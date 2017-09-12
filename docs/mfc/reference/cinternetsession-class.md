@@ -1,5 +1,5 @@
 ---
-title: "CInternetSession 클래스 | Microsoft Docs"
+title: CInternetSession Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,8 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInternetSession class
-- Internet sessions
+- CInternetSession [MFC], CInternetSession
+- CInternetSession [MFC], Close
+- CInternetSession [MFC], EnableStatusCallback
+- CInternetSession [MFC], GetContext
+- CInternetSession [MFC], GetCookie
+- CInternetSession [MFC], GetCookieLength
+- CInternetSession [MFC], GetFtpConnection
+- CInternetSession [MFC], GetGopherConnection
+- CInternetSession [MFC], GetHttpConnection
+- CInternetSession [MFC], OnStatusCallback
+- CInternetSession [MFC], OpenURL
+- CInternetSession [MFC], SetCookie
+- CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
 caps.latest.revision: 25
 author: mikeblome
@@ -48,85 +59,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9544044c34c27ebb366ac8e3ee7fe0ffe4bd61b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinternetsession-class"></a>CInternetSession 클래스
-한 개 또는 여러 개의 동시 인터넷 세션을 만들어 초기화하며, 필요한 경우 프록시 서버에 대한 연결을 설명합니다.  
+# <a name="cinternetsession-class"></a>CInternetSession Class
+Creates and initializes a single or several simultaneous Internet sessions and, if necessary, describes your connection to a proxy server.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInternetSession : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::CInternetSession](#cinternetsession)|`CInternetSession` 개체를 생성합니다.|  
+|[CInternetSession::CInternetSession](#cinternetsession)|Constructs a `CInternetSession` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::Close](#close)|인터넷 세션이 종료 될 때 인터넷 연결을 닫습니다.|  
-|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|상태 콜백 루틴을 설정합니다.|  
-|[CInternetSession::GetContext](#getcontext)|인터넷 세션이 종료 될 때 인터넷 연결을 닫습니다.|  
-|[CInternetSession::GetCookie](#getcookie)|Url 지정 된 URL과 모든 부모에 대 한 쿠키를 반환합니다.|  
-|[CInternetSession::GetCookieLength](#getcookielength)|버퍼에 저장 하는 쿠키의 길이 지정 하는 변수를 검색 합니다.|  
-|[Cinternetsession:: Getftpconnection](#getftpconnection)|서버와 FTP 세션을 엽니다. 사용자가 로그온합니다.|  
-|[CInternetSession::GetGopherConnection](#getgopherconnection)|Gopher 서버 연결을 시도 하는 응용 프로그램을 엽니다.|  
-|[CInternetSession::GetHttpConnection](#gethttpconnection)|연결을 시도 하는 응용 프로그램에 대 한 HTTP 서버를 엽니다.|  
-|[Cinternetsession:: Onstatuscallback](#onstatuscallback)|상태 콜백이 활성화 된 경우 작업의 상태를 업데이트 합니다.|  
-|[CInternetSession::OpenURL](#openurl)|구문 분석 하 고 URL을 엽니다.|  
-|[CInternetSession::SetCookie](#setcookie)|지정된 된 URL에 대 한 쿠키를 설정 합니다.|  
-|[CInternetSession::SetOption](#setoption)|인터넷 세션에 대 한 옵션을 설정합니다.|  
+|[CInternetSession::Close](#close)|Closes the Internet connection when the Internet session is terminated.|  
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Establishes a status callback routine.|  
+|[CInternetSession::GetContext](#getcontext)|Closes the Internet connection when the Internet session is terminated.|  
+|[CInternetSession::GetCookie](#getcookie)|Returns cookies for the specified URL and all its parent URLs.|  
+|[CInternetSession::GetCookieLength](#getcookielength)|Retrieves the variable specifying the length of the cookie stored in the buffer.|  
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Opens an FTP session with a server. Logs on the user.|  
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Opens a gopher server for an application that is trying to open a connection.|  
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Opens an HTTP server for an application that is trying to open a connection.|  
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Updates the status of an operation when status callback is enabled.|  
+|[CInternetSession::OpenURL](#openurl)|Parses and opens a URL.|  
+|[CInternetSession::SetCookie](#setcookie)|Sets a cookie for the specified URL.|  
+|[CInternetSession::SetOption](#setoption)|Sets options for the Internet session.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::operator HINTERNET](#operator_hinternet)|현재 인터넷 세션에 대 한 핸들입니다.|  
+|[CInternetSession::operator HINTERNET](#operator_hinternet)|A handle to the current Internet session.|  
   
-## <a name="remarks"></a>설명  
- 인터넷 연결 응용 프로그램의 기간에 대 한 존재 해야 하는 경우 만들 수 있습니다는 `CInternetSession` 클래스의 멤버 [CWinApp](../../mfc/reference/cwinapp-class.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ If your Internet connection must be maintained for the duration of an application, you can create a `CInternetSession` member of the class [CWinApp](../../mfc/reference/cwinapp-class.md).  
   
- 호출할 수 인터넷 세션을 설정 하 고 나면 [OpenURL](#openurl)합니다. `CInternetSession`다음 전역 함수를 호출 하 여 사용자에 대 한 URL을 구문 분석 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)합니다. 해당 프로토콜 종류에 관계 없이 `CInternetSession` URL을 해석 하 고를 관리 합니다. 지정 된 "file://" URL 리소스를 식별 하는 로컬 파일에 대 한 요청을 처리할 수입니다. `OpenURL`에 대 한 포인터를 반환 합니다는 [CStdioFile](../../mfc/reference/cstdiofile-class.md) 개체를 전달 하는 경우 이름을 로컬 파일입니다.  
+ Once you have established an Internet session, you can call [OpenURL](#openurl). `CInternetSession` then parses the URL for you by calling the global function [AfxParseURL](internet-url-parsing-globals.md#afxparseurl). Regardless of its protocol type, `CInternetSession` interprets the URL and manages it for you. It can handle requests for local files identified with the URL resource "file://". `OpenURL` will return a pointer to a [CStdioFile](../../mfc/reference/cstdiofile-class.md) object if the name you pass it is a local file.  
   
- 사용 하 여 인터넷 서버에는 URL을 열 경우 `OpenURL`, 사이트에서 정보를 읽을 수 있습니다. 서버에 있는 파일에서 (예: HTTP, FTP, 또는 gopher) 용 서비스 관련 작업을 수행 하려는 경우 해당 서버에서 적절 한 연결을 설정 해야 합니다. 특정 종류의 특정 서비스에 직접 연결을 열려면 다음 멤버 함수 중 하나를 사용 합니다.  
+ If you open a URL on an Internet server using `OpenURL`, you can read information from the site. If you want to perform service-specific (for example, HTTP, FTP, or gopher) actions on files located on a server, you must establish the appropriate connection with that server. To open a particular kind of connection directly to a particular service, use one of the following member functions:  
   
-- [GetGopherConnection](#getgopherconnection) gopher 서비스에 연결 합니다.  
+- [GetGopherConnection](#getgopherconnection) to open a connection to a gopher service.  
   
-- [GetHttpConnection](#gethttpconnection) 를 HTTP 서비스의 연결을 엽니다.  
+- [GetHttpConnection](#gethttpconnection) to open a connection to an HTTP service.  
   
-- [GetFtpConnection](#getftpconnection) 를 FTP 서비스의 연결을 엽니다.  
+- [GetFtpConnection](#getftpconnection) to open a connection to an FTP service.  
   
- [SetOption](#setoption) 횟수, 제한 시간 값과 같은 세션의 쿼리 옵션을 설정할 수 있습니다.  
+ [SetOption](#setoption) allows you to set the query options of your session, such as time-out values, number of retries, and so on.  
   
- `CInternetSession`멤버 함수 [SetCookie](#setcookie), [GetCookie](#getcookie), 및 [GetCookieLength](#getcookielength) 있는 서버 및 스크립트 상태 정보를 유지 클라이언트 워크스테이션에 대 한 Win32 쿠키 데이터베이스를 관리 하는 방법을 제공 합니다.  
+ `CInternetSession` member functions [SetCookie](#setcookie), [GetCookie](#getcookie), and [GetCookieLength](#getcookielength) provide the means to manage a Win32 cookie database, through which servers and scripts maintain state information about the client workstation.  
   
- 기본 인터넷 프로그래밍 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다. MFC WinInet 클래스를 사용 하는 방법에 대 한 일반 정보에 대 한 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
+ For more information about basic Internet programming tasks, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md). For general information about using the MFC WinInet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 > [!NOTE]
-> `CInternetSession`throw 합니다는 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) 지원 되지 않는 서비스 형식에 대 한 합니다. 다음 서비스 유형에 현재 지원: FTP, HTTP, gopher, 및 파일입니다.  
+> `CInternetSession` will throw an [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) for unsupported service types. Only the following service types are currently supported: FTP, HTTP, gopher, and file.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CInternetSession`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
- 이 멤버 함수를 호출 하는 경우는 `CInternetSession` 개체가 만들어집니다.  
+##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
+ This member function is called when a `CInternetSession` object is created.  
   
 ```  
 CInternetSession(
@@ -138,95 +149,95 @@ CInternetSession(
     DWORD dwFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrAgent`  
- 응용 프로그램이 나 인터넷 함수 (예를 들어 "Microsoft 인터넷 브라우저")를 호출 하는 엔터티 이름을 식별 하는 문자열에 대 한 포인터입니다. 경우 `pstrAgent` 은 **NULL** 프레임 워크 (기본값), 전역 함수를 호출 [AfxGetAppName](application-information-and-management.md#afxgetappname), 응용 프로그램의 이름을 포함 하는 null로 끝나는 문자열을 반환 하는 합니다. 일부 프로토콜이이 문자열을 사용 하 여 서버에 응용 프로그램을 식별 합니다.  
+ A pointer to a string that identifies the name of the application or entity calling the Internet functions (for example, "Microsoft Internet Browser"). If `pstrAgent` is **NULL** (the default), the framework calls the global function [AfxGetAppName](application-information-and-management.md#afxgetappname), which returns a null-terminated string containing an application's name. Some protocols use this string to identify your application to the server.  
   
  `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. `dwContext`반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
+ The context identifier for the operation. `dwContext` identifies the operation's status information returned by [CInternetSession::OnStatusCallback](#onstatuscallback). The default is set to 1; however, you can explicitly assign a specific context ID for the operation. The object and any work it does will be associated with that context ID.  
   
  `dwAccessType`  
- 필요한 액세스의 형식입니다. 다음은 유효한 값을는 정확히 하나의 제공 될 수 있습니다.  
+ The type of access required. The following are valid values, exactly one of which may be supplied:  
   
-- **INTERNET_OPEN_TYPE_PRECONFIG** 레지스트리에서 미리 구성 된 설정을 사용 하 여 연결 합니다. 이 액세스 형식은 기본값으로 설정 됩니다. TIS 프록시를 통해 연결할 설정 `dwAccessType` ;이 값으로 설정한 레지스트리에 적절 하 게 합니다.  
+- **INTERNET_OPEN_TYPE_PRECONFIG** Connect using preconfigured settings in the registry. This access type is set as the default. To connect through a TIS proxy, set `dwAccessType` to this value; you then set the registry appropriately.  
   
-- `INTERNET_OPEN_TYPE_DIRECT`인터넷에 직접 연결 합니다.  
+- `INTERNET_OPEN_TYPE_DIRECT` Connect directly to Internet.  
   
-- `INTERNET_OPEN_TYPE_PROXY`CERN 프록시를 통해 연결 합니다.  
+- `INTERNET_OPEN_TYPE_PROXY` Connect through a CERN proxy.  
   
- 다양 한 유형의 프록시를 사용 하 여 연결에 대 한 자세한 내용은 참조 [일반적인 FTP 클라이언트 응용 프로그램의 단계를](../../mfc/steps-in-a-typical-ftp-client-application.md)합니다.  
+ For information on connecting with different types of proxies, see [Steps in a Typical FTP Client Application](../../mfc/steps-in-a-typical-ftp-client-application.md).  
   
  *pstrProxyName*  
- 기본 설정 CERN 프록시의 이름을 경우 `dwAccessType` 로 설정 되어 `INTERNET_OPEN_TYPE_PROXY`합니다. 기본값은 **NULL**합니다.  
+ The name of the preferred CERN proxy if `dwAccessType` is set as `INTERNET_OPEN_TYPE_PROXY`. The default is **NULL**.  
   
  *pstrProxyBypass*  
- 서버 주소는 선택적 목록을 포함 하는 문자열에 대 한 포인터입니다. 프록시 액세스를 사용 하는 경우 이러한 주소를 건너뛸 수 있습니다. 경우는 **NULL** 값이 제공, 바이패스 목록 레지스트리에서 읽을 수는 있습니다. 이 매개 변수는 의미 있는 경우에만 `dwAccessType` 로 설정 된 `INTERNET_OPEN_TYPE_PROXY`합니다.  
+ A pointer to a string containing an optional list of server addresses. These addresses may be bypassed when using proxy access. If a **NULL** value is supplied, the bypass list will be read from the registry. This parameter is meaningful only if `dwAccessType` is set to `INTERNET_OPEN_TYPE_PROXY`.  
   
  `dwFlags`  
- 다양 한 캐싱 옵션을 나타냅니다. 기본값은 0으로 설정 됩니다. 가능한 값은 다음과 같습니다.  
+ Indicates various caching options. The default is set to 0. The possible values include:  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateway servers.  
   
-- `INTERNET_FLAG_OFFLINE`다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **|**) 연산자.  
+- `INTERNET_FLAG_OFFLINE` Download operations are satisfied through the persistent cache only. If the item does not exist in the cache, an appropriate error code is returned. This flag may be combined with the bitwise `OR` ( **&#124;**) operator.  
   
-### <a name="remarks"></a>주의  
- **CInternetSession** 함수인는 첫 번째 인터넷 응용 프로그램에서 호출 합니다. 내부 데이터 구조를 초기화 하 고 응용 프로그램의 이후 호출에 대해 준비 합니다.  
+### <a name="remarks"></a>Remarks  
+ **CInternetSession** is the first Internet function called by an application. It initializes internal data structures and prepares for future calls from the application.  
   
- 인터넷 연결을 열 수 있는, `CInternetSession` throw 한 [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)합니다.  
+ If no Internet connection can be opened, `CInternetSession` throws an [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
-### <a name="example"></a>예제  
-  예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="close"></a>CInternetSession::Close  
- 응용 프로그램 사용 하 여 완료 되 면이 함수를 호출는 `CInternetSession` 개체입니다.  
+##  <a name="close"></a>  CInternetSession::Close  
+ Call this member function when your application has finished using the `CInternetSession` object.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="example"></a>예제  
-  예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
- 상태 콜백을 사용 하도록 설정 하려면이 함수를 호출 합니다.  
+##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
+ Call this member function to enable status callback.  
   
 ```  
 BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 콜백 사용 되는지 여부를 지정 합니다. 기본값은 **TRUE**합니다.  
+ Specifies whether callback is enabled or disabled. The default is **TRUE**.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>설명  
- 상태 콜백이 처리할 때는 응용 프로그램의 상태 표시줄에 (예: 이름 확인, 서버 및 기타 등등에 연결) 작업의 진행률에 대 한 상태를 제공할 수 있습니다. 장기 작업 하는 동안 작업 상태 표시는 특히이 좋습니다.  
+### <a name="remarks"></a>Remarks  
+ When handling status callback, you can provide status about the progress of the operation (such as resolving name, connecting to server, and so on) in the status bar of the application. Displaying operation status is especially desirable during a long-term operation.  
   
- 콜백을 요청의 처리 중에 발생 하기 때문에 응용 프로그램 네트워크에 데이터 처리량의 성능 저하를 방지 하기 위해 콜백에서 가능한 최소한의 시간을 할애 해야 합니다. 예를 들어 콜백에서 대화 상자를 배치 이러한 긴 작업 서버 종료 요청을 수 있습니다.  
+ Because callbacks occur during the request's processing, the application should spend as little time as possible in the callback to prevent degradation of data throughput to the network. For example, putting up a dialog box in a callback may be such a lengthy operation that the server terminates the request.  
   
- 상태 콜백 콜백은 보류 중인으로 제거할 수 없습니다.  
+ The status callback cannot be removed as long as any callbacks are pending.  
   
- 모든 작업을 비동기적으로 처리 하려면 고유한 스레드를 만들거나 MFC 없이 WinInet 함수를 사용 해야 합니다.  
+ To handle any operations asynchronously, you must either create your own thread or use the WinInet functions without MFC.  
   
-##  <a name="getcontext"></a>CInternetSession::GetContext  
- 특정 응용 프로그램 세션에 대 한 상황에 맞는 값을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getcontext"></a>  CInternetSession::GetContext  
+ Call this member function to get the context value for a particular application session.  
   
 ```  
 DWORD_PTR GetContext() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 응용 프로그램 정의 컨텍스트 식별자입니다.  
+### <a name="return-value"></a>Return Value  
+ The application-defined context Identifier.  
   
-### <a name="remarks"></a>설명  
- [OnStatusCallback](#onstatuscallback) 에서 반환 된 컨텍스트 ID를 사용 하 여 **GetContext** 특정 응용 프로그램의 상태를 보고 합니다. 예를 들어, 사용자 상태 정보를 반환 하는 인터넷 요청을 활성화할 때 상태 콜백 해당 특정 요청에서 상태 보고 컨텍스트 ID를 사용 합니다. 사용자가 두 개의 별도 활성화 하는 경우 인터넷 요청 상태 정보를 반환 둘 다 포함 `OnStatusCallback` 컨텍스트 식별자를 사용 하 여 해당 요청에 대 한 상태를 반환 합니다. 따라서 모든 상태 콜백 작업에 대 한 컨텍스트 식별자를 사용 하 고 세션은 세션이 종료 될 때까지 연관 된 합니다.  
+### <a name="remarks"></a>Remarks  
+ [OnStatusCallback](#onstatuscallback) uses the context ID returned by **GetContext** to report the status of a particular application. For example, when a user activates an Internet request that involves returning status information, the status callback uses the context ID to report status on that particular request. If the user activates two separate Internet requests that both involve returning status information, `OnStatusCallback` uses the context identifiers to return status about their corresponding requests. Consequently, the context identifier is used for all status callback operations, and it is associated with the session until the session is ended.  
   
- 비동기 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다.  
+ For more information about asynchronous operations, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md).  
   
-##  <a name="getcookie"></a>CInternetSession::GetCookie  
- 이 멤버 함수는 Win32 함수의 동작을 구현 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+##  <a name="getcookie"></a>  CInternetSession::GetCookie  
+ This member function implements the behavior of the Win32 function [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), as described in the Windows SDK.  
   
 ```  
 static BOOL GetCookie(
@@ -242,31 +253,31 @@ static BOOL GetCookie(
     CString& strCookieData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the URL.  
   
  `pstrCookieName`  
- 지정된 된 URL에 대 한 쿠키의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the name of the cookie to get for the specified URL.  
   
  `pstrCookieData`  
- 첫 번째 오버 로드에서 쿠키 데이터를 수신 하는 버퍼의 주소를 포함 하는 문자열에 대 한 포인터입니다. 이 값 **NULL**합니다. 두 번째 오버 로드에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 쿠키 데이터를 받을 개체입니다.  
+ In the first overload, a pointer to a string containing the address of the buffer that receives the cookie data. This value can be **NULL**. In the second overload, a reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object to receive the cookie data.  
   
  `dwBufLen`  
- 크기를 지정 하는 변수는 `pstrCookieData` 버퍼입니다. 버퍼에 복사 하는 데이터의 양을 수신 함수가 성공 하면는 `pstrCookieData` 버퍼입니다. 경우 `pstrCookieData` 은 **NULL**,이 매개 변수는 모든 쿠키 데이터를 복사 하는 데 필요한 버퍼의 크기를 지정 하는 값을 받습니다.  
+ The variable specifying the size of the `pstrCookieData` buffer. If the function succeeds, the buffer receives the amount of data copied to the `pstrCookieData` buffer. If `pstrCookieData` is **NULL**, this parameter receives a value that specifies the size of the buffer necessary to copy all the cookie data.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 하면 또는 **FALSE** 그렇지 않은 경우. 호출이 실패 한 경우 Win32 함수 호출 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 합니다. 다음 오류 값이 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful, or **FALSE** otherwise. If the call fails, call the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to determine the cause of the error. The following error values apply:  
   
-- **ERROR_NO_MORE_ITEMS** 지정된 된 URL에 대 한 쿠키가 없는 모든 부모입니다.  
+- **ERROR_NO_MORE_ITEMS** There is no cookie for the specified URL and all its parents.  
   
-- **ERROR_INSUFFICIENT_BUFFER** 전달 된 값 `dwBufLen` 모든 쿠키 데이터를 복사 하기에 부족 합니다. 반환 된 값 `dwBufLen` 모든 데이터를 가져와야 하는 버퍼의 크기는 합니다.  
+- **ERROR_INSUFFICIENT_BUFFER** The value passed in `dwBufLen` is insufficient to copy all the cookie data. The value returned in `dwBufLen` is the size of the buffer necessary to get all the data.  
   
-### <a name="remarks"></a>주의  
- 두 번째 오버 로드에서 MFC에 제공 된 쿠키 데이터를 검색 `CString` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ In the second overload, MFC retrieves the cookie data into the supplied `CString` object.  
   
-##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
- 이 버퍼에 저장 하는 쿠키의 길이를 가져오는 함수를 호출 합니다.  
+##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
+ Call this member function to get the length of the cookie stored in the buffer.  
   
 ```  
 static DWORD GetCookieLength(
@@ -274,21 +285,21 @@ static DWORD GetCookieLength(
     LPCTSTR pstrCookieName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- URL을 포함 하는 문자열에 대 한 포인터  
+ A pointer to a string containing the URL  
   
  `pstrCookieName`  
- 쿠키의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the name of the cookie.  
   
-### <a name="return-value"></a>반환 값  
- A `DWORD` 버퍼에 저장 하는 쿠키의 길이 나타내는 값입니다. 표시 이름으로 0 이면 쿠키가 없는 `pstrCookieName` 존재 합니다.  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value indicating the length of the cookie, stored in the buffer. Zero if no cookie with the name indicated by `pstrCookieName` exists.  
   
-### <a name="remarks"></a>주의  
- 이 값은 사용 하 여 [GetCookie](#getcookie)합니다.  
+### <a name="remarks"></a>Remarks  
+ This value is used by [GetCookie](#getcookie).  
   
-##  <a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
- FTP 연결을 설정 및 가져오기에 대 한 포인터를이 멤버 함수 호출을 `CFtpConnection` 개체입니다.  
+##  <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection  
+ Call this member function to establish an FTP connection and get a pointer to a `CFtpConnection` object.  
   
 ```  
 CFtpConnection* GetFtpConnection(
@@ -299,40 +310,40 @@ CFtpConnection* GetFtpConnection(
     BOOL bPassive = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- FTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the FTP server name.  
   
  `pstrUserName`  
- 사용자가 로그인의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 경우 **NULL**, 기본값은 익명입니다.  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- 로그인에 사용할 암호를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 두 `pstrPassword` 및 `pstrUserName` 는 **NULL**, 기본 익명 암호는 사용자의 전자 메일 이름입니다. 경우 `pstrPassword` 은 **NULL** (또는 빈 문자열) 하지만 `pstrUserName` 않습니다 **NULL**, 빈 암호가 사용 됩니다. 다음 표에서 설명의 가능한 네 가지 설정에 대 한 동작 `pstrUserName` 및 `pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
-|비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
-|**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
-|비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `nPort`  
- 서버에서 사용 하는 TCP/IP 포트를 식별 하는 번호입니다.  
+ A number that identifies the TCP/IP port to use on the server.  
   
  `bPassive`  
- 이 FTP 세션에 대 한 passive 또는 active 모드를 지정합니다. 경우로 설정 **TRUE**, Win32 API 설정 `dwFlag` 를 **INTERNET_FLAG_PASSIVE**합니다.  
+ Specifies passive or active mode for this FTP session. If set to **TRUE**, it sets the Win32 API `dwFlag` to **INTERNET_FLAG_PASSIVE**.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CFtpConnection](../../mfc/reference/cftpconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>주의  
- `GetFtpConnection`FTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 **CFTPConnection** 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 파일에 쓰거나 읽을 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 FTP 연결 작업을 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ `GetFtpConnection` connects to an FTP server, and creates and returns a pointer to a **CFTPConnection** object. It does not perform any specific operation on the server. If you intend to read or write to files, for example, you must perform those operations as separate steps. See the classes [CFtpConnection](../../mfc/reference/cftpconnection-class.md) and [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) for information about searching for files, opening files, and reading or writing to files. See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common FTP connection tasks.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="getgopherconnection"></a>CInternetSession::GetGopherConnection  
- 호출에 대 한 포인터를 가져와서 새 gopher 연결을 설정 하려면이 함수는 `CGopherConnection` 개체입니다.  
+##  <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection  
+ Call this member function to establish a new gopher connection and get a pointer to a `CGopherConnection` object.  
   
 ```  
 CGopherConnection* GetGopherConnection(
@@ -342,27 +353,27 @@ CGopherConnection* GetGopherConnection(
     INTERNET_PORT nPort = INTERNET_INVALID_PORT_NUMBER);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- Gopher 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the gopher server name.  
   
  `pstrUserName`  
- 사용자 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the user name.  
   
  `pstrPassword`  
- 액세스 암호를 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the access password.  
   
  `nPort`  
- 서버에서 사용 하는 TCP/IP 포트를 식별 하는 번호입니다.  
+ A number that identifies the TCP/IP port to use on the server.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>주의  
- `GetGopherConnection`gopher 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CGopherConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 데이터를 읽거나 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), 및 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. FTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 gopher 연결 작업을 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ `GetGopherConnection` connects to a gopher server, and creates and returns a pointer to a `CGopherConnection` object. It does not perform any specific operation on the server. If you intend to read or write data, for example, you must perform those operations as separate steps. See the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), and [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) for information about searching for files, opening files, and reading or writing to files. For information about browsing an FTP site, see the member function [OpenURL](#openurl). See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common gopher connection tasks.  
   
-##  <a name="gethttpconnection"></a>CInternetSession::GetHttpConnection  
- 이 멤버 함수에 대 한 포인터를 HTTP 연결을 설정할 호출는 `CHttpConnection` 개체입니다.  
+##  <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection  
+ Call this member function to establish an HTTP connection and get a pointer to a `CHttpConnection` object.  
   
 ```  
 CHttpConnection* GetHttpConnection(
@@ -380,30 +391,30 @@ CHttpConnection* GetHttpConnection(
     LPCTSTR pstrPassword = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- HTTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the HTTP server name.  
   
  `nPort`  
- 서버에서 사용 하는 TCP/IP 포트를 식별 하는 번호입니다.  
+ A number that identifies the TCP/IP port to use on the server.  
   
  `pstrUserName`  
- 사용자 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the user name.  
   
  `pstrPassword`  
- 액세스 암호를 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the access password.  
   
  *dwflags*  
- 어떠한 조합의 **INTERNET_ FLAG_\*** 플래그입니다. 표를 참조는 **주의** 섹션 [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) 에 대 한 설명은 `dwFlags` 값입니다.  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) for a description of `dwFlags` values.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CHttpConnection](../../mfc/reference/chttpconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>주의  
- `GetHttpConnection`HTTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CHttpConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. HTTP 헤더를 쿼리 하려는 경우 별도 단계로이 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 및 [CHttpFile](../../mfc/reference/chttpfile-class.md) 작업 대 한 정보는 HTTP 서버에 연결을 사용 하 여 수행할 수 있습니다. HTTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 HTTP 연결 작업을 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ `GetHttpConnection` connects to an HTTP server, and creates and returns a pointer to a `CHttpConnection` object. It does not perform any specific operation on the server. If you intend to query an HTTP header, for example, you must perform this operation as a separate step. See the classes [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CHttpFile](../../mfc/reference/chttpfile-class.md) for information about operations you can perform by using a connection to an HTTP server. For information about browsing an HTTP site, see the member function [OpenURL](#openurl). See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common HTTP connection tasks.  
   
-##  <a name="onstatuscallback"></a>Cinternetsession:: Onstatuscallback  
- 이 멤버 함수는 상태 콜백이 활성화 되어 있고 작업이 보류 중인 상태를 업데이트 하기 위해 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback  
+ This member function is called by the framework to update the status when status callback is enabled and an operation is pending.  
   
 ```  
 virtual void OnStatusCallback(
@@ -413,50 +424,50 @@ virtual void OnStatusCallback(
     DWORD dwStatusInformationLength);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwContext`  
- 응용 프로그램에서 제공 된 컨텍스트 값입니다.  
+ The context value supplied by the application.  
   
  `dwInternetStatus`  
- 콜백이 수행 되는 이유를 나타내는 상태 코드입니다. 참조 **주의** 가능한 값의 테이블에 대 한 합니다.  
+ A status code which indicates why the callback is being made. See **Remarks** for a table of possible values.  
   
  `lpvStatusInformation`  
- 이 콜백은 관련 된 정보를 포함 하는 버퍼에 대 한 포인터입니다.  
+ A pointer to a buffer containing information pertinent to this callback.  
   
  `dwStatusInformationLength`  
- `lpvStatusInformation`의 크기입니다.  
+ The size of `lpvStatusInformation`.  
   
-### <a name="remarks"></a>주의  
- 호출 해야 [EnableStatusCallback](#enablestatuscallback) 상태 콜백 기능을 활용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You must first call [EnableStatusCallback](#enablestatuscallback) to take advantage of status callback.  
   
- `dwInternetStatus` 매개 변수 수행 되는 작업을 나타내며의 내용을 결정 `lpvStatusInformation` 됩니다. `dwStatusInformationLength`에 포함 된 데이터의 길이 나타냅니다 `lpvStatusInformation`합니다. 다음 상태에 대 한 값 `dwInternetStatus` ´ ï ´ ù.  
+ The `dwInternetStatus` parameter indicates the operation being performed and determines what the contents of `lpvStatusInformation` will be. `dwStatusInformationLength` indicates the length of the data included in `lpvStatusInformation`. The following status values for `dwInternetStatus` are defined as follows:  
   
-|값|의미|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`INTERNET_STATUS_RESOLVING_NAME`|에 포함 된 이름의 IP 주소를 찾는 `lpvStatusInformation`합니다.|  
-|`INTERNET_STATUS_NAME_RESOLVED`|에 포함 된 이름의 IP 주소를 찾았습니다 `lpvStatusInformation`합니다.|  
-|`INTERNET_STATUS_CONNECTING_TO_SERVER`|소켓 주소에 연결 ( [SOCKADDR](../../mfc/reference/sockaddr-structure.md))로 가리키는 `lpvStatusInformation`합니다.|  
-|`INTERNET_STATUS_CONNECTED_TO_SERVER`|소켓 주소에 연결 했습니다. ( `SOCKADDR`)로 가리키는 `lpvStatusInformation`합니다.|  
-|`INTERNET_STATUS_SENDING_REQUEST`|서버에 정보 요청을 전송 합니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|**INTERNET_STATUS_ REQUEST_SENT**|서버에 정보 요청을 보냈습니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|`INTERNET_STATUS_RECEIVING_RESPONSE`|서버 요청에 응답을 기다리는 중입니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|`INTERNET_STATUS_RESPONSE_RECEIVED`|서버에서 성공적으로 응답을 받았습니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|`INTERNET_STATUS_CLOSING_CONNECTION`|서버에 연결을 닫는 중입니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|`INTERNET_STATUS_CONNECTION_CLOSED`|서버에 연결을 성공적으로 종료 합니다. `lpvStatusInformation` 매개 변수는 **NULL**합니다.|  
-|`INTERNET_STATUS_HANDLE_CREATED`|Win32 API 함수에 의해 사용 [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) 새 핸들 만들었음을 나타냅니다. 이렇게 하면 응용 프로그램 호출 Win32 함수 [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) 다른 스레드에서 너무 오래 걸리면 연결 합니다. 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]이러한 함수에 대 한 자세한 내용은 합니다.|  
-|`INTERNET_STATUS_HANDLE_CLOSING`|핸들 값이 성공적으로 종료 되었습니다.|  
+|`INTERNET_STATUS_RESOLVING_NAME`|Looking up the IP address of the name contained in `lpvStatusInformation`.|  
+|`INTERNET_STATUS_NAME_RESOLVED`|Successfully found the IP address of the name contained in `lpvStatusInformation`.|  
+|`INTERNET_STATUS_CONNECTING_TO_SERVER`|Connecting to the socket address ( [SOCKADDR](../../mfc/reference/sockaddr-structure.md)) pointed to by `lpvStatusInformation`.|  
+|`INTERNET_STATUS_CONNECTED_TO_SERVER`|Successfully connected to the socket address ( `SOCKADDR`) pointed to by `lpvStatusInformation`.|  
+|`INTERNET_STATUS_SENDING_REQUEST`|Sending the information request to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|**INTERNET_STATUS_ REQUEST_SENT**|Successfully sent the information request to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_RECEIVING_RESPONSE`|Waiting for the server to respond to a request. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_RESPONSE_RECEIVED`|Successfully received a response from the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_CLOSING_CONNECTION`|Closing the connection to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_CONNECTION_CLOSED`|Successfully closed the connection to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_HANDLE_CREATED`|Used by the Win32 API function [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) to indicate that it has created the new handle. This lets the application call the Win32 function [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) from another thread if the connect is taking too long. See the Windows SDKfor more information about these functions.|  
+|`INTERNET_STATUS_HANDLE_CLOSING`|Successfully terminated this handle value.|  
   
- 상태 콜백 루틴을 수행 하기 전에 특별 한 조치를 요구 하려면이 멤버 함수를 재정의 합니다.  
+ Override this member function to require some action before a status callback routine is performed.  
   
 > [!NOTE]
->  상태 콜백 스레드 상태 보호가 필요 합니다. MFC 공유 라이브러리를 사용 하는 경우 재정의의 시작 부분에 다음 줄을 추가 합니다.  
+>  Status callbacks need thread-state protection. If you are using MFC in a shared library, add the following line to the beginning of your override:  
   
- [!code-cpp[NVC_MFCHtmlHttp # 8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
+ [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
   
- 비동기 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다.  
+ For more information about asynchronous operations, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md).  
   
-##  <a name="openurl"></a>CInternetSession::OpenURL  
- HTTP 서버에 지정 된 요청을 보내고 MIME 클라이언트 추가 RFC822 지정을 허용 하는 함수 또는 요청과 함께 보낼 HTTP 헤더에는이 멤버를 호출 합니다.  
+##  <a name="openurl"></a>  CInternetSession::OpenURL  
+ Call this member function to send the specified request to the HTTP server and allow the client to specify additional RFC822, MIME, or HTTP headers to send along with the request.  
   
 ```  
 CStdioFile* OpenURL(
@@ -467,64 +478,64 @@ CStdioFile* OpenURL(
     DWORD dwHeadersLength = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pstrURL*  
- 읽기를 시작할 URL의 이름에 대 한 포인터입니다. Url만 파일 부터는:, ftp:, gopher:, 또는 http: 지원 됩니다. **ASSERT** 경우 *pszURL* 은 **NULL**합니다.  
+ A pointer to the name of the URL to begin reading. Only URLs beginning with file:, ftp:, gopher:, or http: are supported. **ASSERTS** if *pszURL* is **NULL**.  
   
  `dwContext`  
- 응용 프로그램 정의 값 콜백에서 반환된 된 핸들을 전달.  
+ An application-defined value passed with the returned handle in callback.  
   
  `dwFlags`  
- 이 연결을 처리 하는 방법을 설명 하는 플래그입니다. 참조 **주의** 유효한 플래그에 대 한 자세한 내용은 합니다. 유효한 플래그는:  
+ The flags describing how to handle this connection. See **Remarks** for more information about the valid flags. The valid flags are:  
   
-- **INTERNET_FLAG_TRANSFER_ASCII** 기본값입니다. ASCII 텍스트 파일을 전송 합니다.  
+- **INTERNET_FLAG_TRANSFER_ASCII** The default. Transfer the file as ASCII text.  
   
-- **INTERNET_FLAG_TRANSFER_BINARY** 이진 파일로 파일을 전송 합니다.  
+- **INTERNET_FLAG_TRANSFER_BINARY** Transfer the file as a binary file.  
   
-- `INTERNET_FLAG_RELOAD`로컬로 캐시 된 경우에 데이터를 통신에서 가져옵니다.  
+- `INTERNET_FLAG_RELOAD` Get the data from the wire even if it is locally cached.  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateways.  
   
-- `INTERNET_FLAG_SECURE`이 플래그는 HTTP 요청에 적용할 수 있습니다. Secure Sockets Layer 또는 PCT. 통신 중에 보안 트랜잭션을 요청합니다  
+- `INTERNET_FLAG_SECURE` This flag is applicable to HTTP requests only. It requests secure transactions on the wire with Secure Sockets Layer or PCT.  
   
-- **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT** 에 의해 생성 된 새 요청에 대 한 서버에 대 한 기존 연결 다시 사용 가능한 경우 **OpenUrl** 각 연결 요청에 대 한 새 세션을 만드는 대신 합니다.  
+- **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT** If possible, reuse the existing connections to the server for new requests generated by **OpenUrl** instead of creating a new session for each connection request.  
   
-- **INTERNET_FLAG_PASSIVE** FTP 사이트에 사용 합니다. 수동 FTP 의미 체계를 사용 합니다. 함께 사용할 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 의 `OpenURL`합니다.  
+- **INTERNET_FLAG_PASSIVE** Used for an FTP site. Uses passive FTP semantics. Used with [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) of `OpenURL`.  
   
  `pstrHeaders`  
- HTTP 서버에 보내야 하는 헤더를 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the headers to be sent to the HTTP server.  
   
  *dwHeadersLength*  
- 추가 헤더의 문자 길이입니다. -1l 이것이 및 `pstrHeaders` 이 아닌 **NULL**, 다음 `pstrHeaders` 0으로 종료 되 고 길이 계산 간주 됩니다.  
+ The length, in characters, of the additional headers. If this is -1L and `pstrHeaders` is non- **NULL**, then `pstrHeaders` is assumed to be zero terminated and the length is calculated.  
   
-### <a name="return-value"></a>반환 값  
- FTP, GOPHER, HTTP 및 파일 형식 인터넷 서비스에 대 한 파일 핸들을 반환합니다. 반환 **NULL** 실패 한 경우 구문 분석 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a file handle for FTP, GOPHER, HTTP, and FILE-type Internet services only. Returns **NULL** if parsing was unsuccessful.  
   
- 포인터는 `OpenURL` 반환에 따라 달라 집니다 *pszURL*의 서비스의 유형입니다. 아래 표에서 가능한 포인터를 보여 줍니다. `OpenURL` 반환할 수 있습니다.  
+ The pointer that `OpenURL` returns depends on *pszURL*'s type of service. The table below illustrates the possible pointers `OpenURL` can return.  
   
-|URL 형식|반환 값|  
+|URL type|Returns|  
 |--------------|-------------|  
 |file://|**CStdioFile\***|  
 |http://|**CHttpFile\***|  
 |gopher://|**CGopherFile\***|  
-|ftp: / /|**CInternetFile\***|  
+|ftp://|**CInternetFile\***|  
   
-### <a name="remarks"></a>주의  
- 매개 변수 `dwFlags` 하나를 포함 해야 **INTERNET_FLAG_TRANSFER_ASCII** 또는 **INTERNET_FLAG_TRANSFER_BINARY**, 둘 중 하나입니다. 나머지 플래그 비트와 결합할 수 있습니다 `OR` 연산자 ( **|**).  
+### <a name="remarks"></a>Remarks  
+ The parameter `dwFlags` must include either **INTERNET_FLAG_TRANSFER_ASCII** or **INTERNET_FLAG_TRANSFER_BINARY**, but not both. The remaining flags can be combined with the bitwise `OR` operator ( **&#124;**).  
   
- `OpenURL`Win32 함수를 래핑하는 **InternetOpenURL**만 다운로드, 검색 및 인터넷 서버에서 데이터 읽기를 허용 합니다. `OpenURL`no 필요 없는 파일 조작 원격 위치에서 허용 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 개체입니다.  
+ `OpenURL`, which wraps the Win32 function **InternetOpenURL**, allows only downloading, retrieving, and reading the data from an Internet server. `OpenURL` allows no file manipulation on a remote location, so it requires no [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) object.  
   
- 특정 연결을 사용 하려면 (즉, 프로토콜 관련) 함수, 파일에 쓰기 등 세션을 열고, 다음 특정 종류의 연결을 열고 다음 해야 해당 연결을 사용 하 여 원하는 모드에서 한 파일을 엽니다. 참조 `CInternetConnection` 연결에 대 한 함수에 대 한 자세한 내용은 합니다.  
+ To use connection-specific (that is, protocol-specific) functions, such as writing to a file, you must open a session, then open a particular kind of connection, then use that connection to open a file in the desired mode. See `CInternetConnection` for more information about connection-specific functions.  
   
-##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
- 이 연산자를 사용 하 여 현재 인터넷 세션에 대 한 Windows 핸들을 가져올 수 있습니다.  
+##  <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET  
+ Use this operator to get the Windows handle for the current Internet session.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="setcookie"></a>CInternetSession::SetCookie  
- 지정된 된 URL에 대 한 쿠키를 설정 합니다.  
+##  <a name="setcookie"></a>  CInternetSession::SetCookie  
+ Sets a cookie for the specified URL.  
   
 ```  
 static BOOL SetCookie(
@@ -533,24 +544,24 @@ static BOOL SetCookie(
     LPCTSTR pstrCookieData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- 쿠키를 설정 해야 하는 URL을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+ A pointer to a null-terminated string that specifies the URL for which the cookie should be set.  
   
  `pstrCookieName`  
- 쿠키의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the name of the cookie.  
   
  `pstrCookieData`  
- URL에 연결할 실제 문자열 데이터가 포함 된 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the actual string data to associate with the URL.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 하면 또는 **FALSE** 그렇지 않은 경우. 특정 오류 코드를 가져오려면 호출 **GetLastError 합니다.**  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful, or **FALSE** otherwise. To get the specific error code, call **GetLastError.**  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), as described in the Windows SDK.  
   
-##  <a name="setoption"></a>CInternetSession::SetOption  
- 인터넷 세션에 대 한 옵션을 설정 하려면이 함수를 호출 합니다.  
+##  <a name="setoption"></a>  CInternetSession::SetOption  
+ Call this member function to set options for the Internet session.  
   
 ```  
 BOOL SetOption(
@@ -566,34 +577,34 @@ BOOL SetOption(
     DWORD dwFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwOption`  
- 인터넷 옵션 설정입니다. 참조 [옵션 플래그](http://msdn.microsoft.com/library/windows/desktop/aa385328) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]가능한 옵션 목록에 대 한 합니다.  
+ The Internet option to set. See [Option Flags](http://msdn.microsoft.com/library/windows/desktop/aa385328) in the Windows SDKfor a list of the possible options.  
   
  `lpBuffer`  
- 옵션 설정을 포함 하는 버퍼입니다.  
+ A buffer that contains the option setting.  
   
  *dwBufferLength*  
- 길이가 `lpBuffer` 의 크기 또는 `dwValue`합니다.  
+ The length of `lpBuffer` or the size of `dwValue`.  
   
  `dwValue`  
- A `DWORD` 옵션 설정이 들어 있는입니다.  
+ A `DWORD` that contains the option setting.  
   
  `dwFlags`  
- 다양 한 캐싱 옵션을 나타냅니다. 기본값은 0으로 설정 됩니다. 가능한 값은 다음과 같습니다.  
+ Indicates various caching options. The default is set to 0. The possible values include:  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateway servers.  
   
-- `INTERNET_FLAG_OFFLINE`다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **|**) 연산자.  
+- `INTERNET_FLAG_OFFLINE` Download operations are satisfied through the persistent cache only. If the item does not exist in the cache, an appropriate error code is returned. This flag may be combined with the bitwise `OR` ( **&#124;**) operator.  
   
-### <a name="return-value"></a>반환 값  
- 작업에 성공 하면 값이 **TRUE** 반환 됩니다. 오류가 발생 한 값 경우 **FALSE** 반환 됩니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ If the operation was successful, a value of **TRUE** is returned. If an error occurred, a value of **FALSE** is returned. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CInternetConnection 클래스](../../mfc/reference/cinternetconnection-class.md)   
- [CHttpConnection 클래스](../../mfc/reference/chttpconnection-class.md)   
- [CFtpConnection 클래스](../../mfc/reference/cftpconnection-class.md)   
- [CGopherConnection 클래스](../../mfc/reference/cgopherconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpConnection Class](../../mfc/reference/chttpconnection-class.md)   
+ [CFtpConnection Class](../../mfc/reference/cftpconnection-class.md)   
+ [CGopherConnection Class](../../mfc/reference/cgopherconnection-class.md)
 

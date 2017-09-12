@@ -1,5 +1,5 @@
 ---
-title: "COleBusyDialog 클래스 | Microsoft 문서"
+title: COleBusyDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Server Not Responding dialog box
-- Server Busy dialog box
-- COleBusyDialog class
+- COleBusyDialog [MFC], COleBusyDialog
+- COleBusyDialog [MFC], DoModal
+- COleBusyDialog [MFC], GetSelectionType
+- COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
 caps.latest.revision: 22
 author: mikeblome
@@ -40,54 +41,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0c3ed264cdb83bc97337f13279a20f26b21d454b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a985c969c47fe0cac2bcc62f2c88a2ae5f85c86
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colebusydialog-class"></a>COleBusyDialog 클래스
-OLE 서버가 응답하지 않음 또는 서버가 사용 중임 대화 상자에 사용합니다.  
+# <a name="colebusydialog-class"></a>COleBusyDialog Class
+Used for the OLE Server Not Responding or Server Busy dialog boxes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleBusyDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::COleBusyDialog](#colebusydialog)|`COleBusyDialog` 개체를 생성합니다.|  
+|[COleBusyDialog::COleBusyDialog](#colebusydialog)|Constructs a `COleBusyDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::DoModal](#domodal)|OLE 서버 작업 중 대화 상자가 표시 됩니다.|  
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|대화 상자에서 선택한 옵션을 결정 합니다.|  
+|[COleBusyDialog::DoModal](#domodal)|Displays the OLE Server Busy dialog box.|  
+|[COleBusyDialog::GetSelectionType](#getselectiontype)|Determines the choice made in the dialog box.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|형식의 구조 **OLEUIBUSY** 하는 대화 상자의 동작을 제어 합니다.|  
+|[COleBusyDialog::m_bz](#m_bz)|Structure of type **OLEUIBUSY** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>주의  
- 클래스의 개체를 만들 `COleBusyDialog` 이러한 대화 상자를 호출 하려는 경우. 후는 `COleBusyDialog` 개체를 생성, 사용할 수는 [m_bz](#m_bz) 값 또는 대화 상자에서 컨트롤의 상태를 초기화 하는 구조입니다. `m_bz` 형식의 구조는 **OLEUIBUSY**합니다. 이 대화 상자 클래스를 사용 하는 방법에 대 한 자세한 내용은 참조는 [DoModal](#domodal) 멤버 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleBusyDialog` when you want to call these dialog boxes. After a `COleBusyDialog` object has been constructed, you can use the [m_bz](#m_bz) structure to initialize the values or states of controls in the dialog box. The `m_bz` structure is of type **OLEUIBUSY**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  응용 프로그램 컨테이너 마법사에서 생성 된 코드는이 클래스를 사용합니다.  
+>  Application Wizard-generated container code uses this class.  
   
- 자세한 내용은 참조는 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information on OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,11 +103,11 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
- 이 함수가 구성 된 `COleBusyDialog` 개체입니다.  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
+ This function only constructs a `COleBusyDialog` object.  
   
 ```  
 explicit COleBusyDialog(
@@ -116,63 +117,63 @@ explicit COleBusyDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *htaskBusy*  
- 사용 중인 서버 작업에 대 한 핸들입니다.  
+ Handle to the server task that is busy.  
   
  *bNotResponding*  
- 경우 **TRUE**, 서버 작업 중 대화 상자 대신 응답 안 함 대화 상자를 호출 합니다. 서버 작업 중 대화 상자에서 표현을 보다 약간 다른 응답 안 함 대화 상자에서 표현을 이며 취소 단추가 비활성화 됩니다.  
+ If **TRUE**, call the Not Responding dialog box instead of the Server Busy dialog box. The wording in the Not Responding dialog box is slightly different than the wording in the Server Busy dialog box, and the Cancel button is disabled.  
   
  `dwFlags`  
- 생성 플래그입니다. 0 개 이상의 비트 OR 연산자와 함께 다음 값을 포함할 수 있습니다.  
+ Creation flag. Can contain zero or more of the following values combined with the bitwise-OR operator:  
   
-- **BZ_DISABLECANCELBUTTON** 대화 상자를 호출 하는 경우 취소 단추를 사용 하지 않도록 설정 합니다.  
+- **BZ_DISABLECANCELBUTTON** Disable the Cancel button when calling the dialog box.  
   
-- **BZ_DISABLESWITCHTOBUTTON** 대화 상자를 호출 하는 경우 스위치에 단추를 사용 하지 않도록 설정 합니다.  
+- **BZ_DISABLESWITCHTOBUTTON** Disable the Switch To button when calling the dialog box.  
   
-- **BZ_DISABLERETRYBUTTON** 대화 상자를 호출 하는 경우 다시 시도 단추를 사용 하지 않도록 설정 합니다.  
+- **BZ_DISABLERETRYBUTTON** Disable the Retry button when calling the dialog box.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창에 설정 됩니다.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog object is set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 대화 상자를 표시 하려면 호출 [DoModal](#domodal)합니다.  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call [DoModal](#domodal).  
   
- 자세한 내용은 참조는 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
- OLE 서버 작업 중 또는 서버가 응답 하지 않음 대화 상자를 표시 하려면이 함수를 호출 합니다.  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
+ Call this function to display the OLE Server Busy or Server Not Responding dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** 대화 상자가 성공적으로 표시 된 경우.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** 사용자 대화 상자를 취소 합니다.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 `COleDialog::GetLastError` 발생 한 오류 유형에 대 한 자세한 정보를 보려면 멤버 함수입니다. 목록이 가능한 오류에 대 한 참조는 [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) function in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_bz](#m_bz) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_bz](#m_bz) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 경우 `DoModal` 반환 **IDOK**, 다른 구성원 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
- 서버 작업 중 대화 상자에서 사용자가 선택한 선택 형식을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
+ Call this function to get the selection type chosen by the user in the Server Busy dialog box.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 선택한 항목의 형식입니다.  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>주의  
- 반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COleBusyDialog` 클래스입니다.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleBusyDialog` class.  
   
 ```  
 enum Selection {
@@ -182,28 +183,28 @@ enum Selection {
     };
 ```  
   
- 이러한 값에 대 한 간략 한 설명을 따르십시오.  
+ Brief descriptions of these values follow:  
   
-- **COleBusyDialog::switchTo** 스위치에 단추를 눌렀습니다.  
+- **COleBusyDialog::switchTo** Switch To button was pressed.  
   
-- **COleBusyDialog::retry** 재시도 단추를 눌렀습니다.  
+- **COleBusyDialog::retry** Retry button was pressed.  
   
-- **COleBusyDialog::callUnblocked** 서버를 활성화 하려면 호출은 이제 차단 해제 합니다.  
+- **COleBusyDialog::callUnblocked** Call to activate the server is now unblocked.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
- 형식의 구조 **OLEUIBUSY** 서버 작업 중 대화 상자의 동작을 제어 하는 데 사용 합니다.  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
+ Structure of type **OLEUIBUSY** used to control the behavior of the Server Busy dialog box.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 구조체의 멤버는 멤버 함수를 통해 또는 직접 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified directly or through member functions.  
   
- 자세한 내용은 참조는 [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

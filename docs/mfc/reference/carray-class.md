@@ -1,5 +1,5 @@
 ---
-title: "CArray 클래스 | Microsoft Docs"
+title: CArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,10 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CArray class
-- arrays [C++], classes
-- templates, collection classes
-- collection classes, template-based
+- CArray [MFC], CArray
+- CArray [MFC], Add
+- CArray [MFC], Append
+- CArray [MFC], Copy
+- CArray [MFC], ElementAt
+- CArray [MFC], FreeExtra
+- CArray [MFC], GetAt
+- CArray [MFC], GetCount
+- CArray [MFC], GetData
+- CArray [MFC], GetSize
+- CArray [MFC], GetUpperBound
+- CArray [MFC], InsertAt
+- CArray [MFC], IsEmpty
+- CArray [MFC], RemoveAll
+- CArray [MFC], RemoveAt
+- CArray [MFC], SetAt
+- CArray [MFC], SetAtGrow
+- CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 caps.latest.revision: 33
 author: mikeblome
@@ -55,297 +69,297 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d76790072babb607c223937d9c9dae67f90d50b5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94fdb7947d1ef7e993a47b9a55e9faf5903d3d2c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="carray-class"></a>CArray 클래스
-C 배열과 유사 하지만 동적으로 줄일 수 필요에 따라 증가 하는 배열을 지원 합니다.  
+# <a name="carray-class"></a>CArray Class
+Supports arrays that are like C arrays, but can dynamically reduce and grow as necessary.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TYPE, class ARG_TYPE = const TYPE&>  
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `TYPE`  
- 배열에 저장 된 개체의 형식을 지정 하는 템플릿 매개 변수입니다. `TYPE`반환 하는 매개 변수 `CArray`합니다.  
+ Template parameter that specifies the type of objects stored in the array. `TYPE` is a parameter that is returned by `CArray`.  
   
  `ARG` *_* `TYPE`  
- 배열에 저장 된 개체에 액세스 하는 데 사용 되는 인수 형식을 지정 하는 템플릿 매개 변수 에 대 한 참조 종종 `TYPE`합니다. `ARG_TYPE`에 전달 되는 매개 변수 `CArray`합니다.  
+ Template parameter that specifies the argument type that is used to access objects stored in the array. Often a reference to `TYPE`. `ARG_TYPE` is a parameter that is passed to `CArray`.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::CArray](#carray)|빈 배열을 생성합니다.|  
+|[CArray::CArray](#carray)|Constructs an empty array.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::Add](#add)|배열 끝에 요소를 추가하고 필요하면 배열을 확장합니다.|  
-|[CArray::Append](#append)|배열;에 다른 배열을 추가합니다 필요한 경우 배열을 확장합니다|  
-|[CArray::Copy](#copy)|배열에 다른 배열을 복사하고 필요하면 배열을 확장합니다.|  
-|[CArray::ElementAt](#elementat)|배열 내의 요소 포인터에 대한 임시 참조를 반환합니다.|  
-|[CArray::FreeExtra](#freeextra)|현재 상한을 초과하며 사용되지 않는 모든 메모리를 해제합니다.|  
-|[CArray::GetAt](#getat)|지정된 인덱스의 값을 반환합니다.|  
-|[CArray::GetCount](#getcount)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CArray::GetData](#getdata)|배열의 요소에 대한 액세스를 허용합니다. 수 **NULL**합니다.|  
-|[CArray::GetSize](#getsize)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CArray::GetUpperBound](#getupperbound)|유효한 최대 인덱스를 반환합니다.|  
-|[CArray::InsertAt](#insertat)|지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.|  
-|[CArray::IsEmpty](#isempty)|배열이 비어 있는지 여부를 결정 합니다.|  
-|[CArray::RemoveAll](#removeall)|이 배열의 모든 요소를 반환합니다.|  
-|[CArray::RemoveAt](#removeat)|특정 인덱스의 요소를 제거합니다.|  
-|[CArray::SetAt](#setat)|지정된 인덱스의 값을 설정합니다. 배열은 확장할 수 없습니다.|  
-|[CArray::SetAtGrow](#setatgrow)|지정된 인덱스의 값을 설정합니다. 필요한 경우 배열을 확장합니다.|  
-|[CArray::SetSize](#setsize)|이 배열에 포함된 요소의 수를 설정합니다.|  
+|[CArray::Add](#add)|Adds an element to the end of the array; grows the array if necessary.|  
+|[CArray::Append](#append)|Appends another array to the array; grows the array if necessary|  
+|[CArray::Copy](#copy)|Copies another array to the array; grows the array if necessary.|  
+|[CArray::ElementAt](#elementat)|Returns a temporary reference to the element pointer within the array.|  
+|[CArray::FreeExtra](#freeextra)|Frees all unused memory above the current upper bound.|  
+|[CArray::GetAt](#getat)|Returns the value at a given index.|  
+|[CArray::GetCount](#getcount)|Gets the number of elements in this array.|  
+|[CArray::GetData](#getdata)|Allows access to elements in the array. Can be **NULL**.|  
+|[CArray::GetSize](#getsize)|Gets the number of elements in this array.|  
+|[CArray::GetUpperBound](#getupperbound)|Returns the largest valid index.|  
+|[CArray::InsertAt](#insertat)|Inserts an element (or all the elements in another array) at a specified index.|  
+|[CArray::IsEmpty](#isempty)|Determines whether the array is empty.|  
+|[CArray::RemoveAll](#removeall)|Removes all the elements from this array.|  
+|[CArray::RemoveAt](#removeat)|Removes an element at a specific index.|  
+|[CArray::SetAt](#setat)|Sets the value for a given index; array not allowed to grow.|  
+|[CArray::SetAtGrow](#setatgrow)|Sets the value for a given index; grows the array if necessary.|  
+|[CArray::SetSize](#setsize)|Sets the number of elements to be contained in this array.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator&#91;&#93;](#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
+|[operator&#91;&#93;](#operator_at)|Sets or gets the element at the specified index.|  
   
-## <a name="remarks"></a>주의  
- 배열 인덱스는 항상 0 위치부터 시작 합니다. 상한 값을 수정 하거나 현재 바인딩된 지난 요소를 추가 하면 확장에 배열 사용을 여부를 결정할 수 있습니다. 메모리는 일부 요소가 null 하는 경우에 상한 값을 연속적으로 할당 됩니다.  
+## <a name="remarks"></a>Remarks  
+ Array indexes always start at position 0. You can decide whether to fix the upper bound or enable the array to expand when you add elements past the current bound. Memory is allocated contiguously to the upper bound, even if some elements are null.  
   
 > [!NOTE]
->  크기를 조정 하는 대부분의 메서드는 `CArray` 개체 또는 요소를 사용 하 여 추가 [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) 요소를 이동 합니다. 이것은 문제 때문에 `memcpy_s` 생성자를 호출할지 필요로 하는 모든 개체와 호환 되지 않습니다. 경우에 있는 항목의 `CArray` 와 호환 되지 않는 `memcpy_s`, 새 만들어야 `CArray` 적절 한 크기의 합니다. 사용 해야 [CArray::Copy](#copy) 및 [CArray::SetAt](#setat) 이러한 메서드는 할당 연산자를 대신 사용 하기 때문에 새 배열을 채울 `memcpy_s`합니다.  
+>  Most methods that resize a `CArray` object or add elements to it use [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) to move elements. This is a problem because `memcpy_s` is not compatible with any objects that require the constructor to be called. If the items in the `CArray` are not compatible with `memcpy_s`, you must create a new `CArray` of the appropriate size. You must then use [CArray::Copy](#copy) and [CArray::SetAt](#setat) to populate the new array because those methods use an assignment operator instead of `memcpy_s`.  
   
- C 배열에 대 한 액세스 시간과 마찬가지로 `CArray` 인덱싱된 요소는 상수와 배열 크기와 무관 합니다.  
+ As with a C array, the access time for a `CArray` indexed element is constant and is independent of the array size.  
   
 > [!TIP]
->  배열을 사용 하기 전에 사용 하 여 [SetSize](#setsize) 크기로 설정 하 고에 대 한 메모리를 할당 합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  
+>  Before using an array, use [SetSize](#setsize) to establish its size and allocate memory for it. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- 배열에 있는 개별 요소의 덤프가 필요 하면의 깊이 설정 해야는 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 1 또는 더 큰 개체입니다.  
+ If you need a dump of individual elements in an array, you must set the depth of the [CDumpContext](../../mfc/reference/cdumpcontext-class.md) object to 1 or larger.  
   
- 글로벌 도우미 함수를이 클래스 호출의 특정 멤버 함수는 대부분 용도에 대 한 사용자 지정 되어야 합니다는 `CArray` 클래스입니다. 항목을 참조 [컬렉션 클래스 도우미](../../mfc/reference/collection-class-helpers.md) MFC 매크로 및 전역 섹션에 있습니다.  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CArray` class. See the topic [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the MFC Macros and Globals section.  
   
- 배열 클래스를 파생 목록 파생과 비슷합니다.  
+ Array class derivation is like list derivation.  
   
- 사용 하는 방법에 대 한 자세한 내용은 `CArray`, 문서를 참조 [컬렉션](../../mfc/collections.md)합니다.  
+ For more information about how to use `CArray`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CArray`  
   
-## <a name="requirements"></a>요구 사항  
- `Header:`afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
- 1 씩 증가 하는 배열을 배열의 끝에 새 요소를 추가 합니다.  
+##  <a name="add"></a>  CArray::Add  
+ Adds a new element to the end of an array, growing the array by 1.  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- 이 배열의 요소를 참조 하는 인수의 형식을 지정 하는 템플릿 매개 변수  
+ Template parameter specifying the type of arguments referencing elements in this array.  
   
  `newElement`  
- 이 배열에 추가할 요소입니다.  
+ The element to be added to this array.  
   
-### <a name="return-value"></a>반환 값  
- 추가 된 요소의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the added element.  
   
-### <a name="remarks"></a>설명  
- 경우 [SetSize](#setsize) 함께 사용 된는 `nGrowBy` 추가 메모리를 1 보다 큰 값을 할당할 수 있습니다. 그러나 상한만 1 씩 증가 합니다.  
+### <a name="remarks"></a>Remarks  
+ If [SetSize](#setsize) has been used with an `nGrowBy` value greater than 1, then extra memory may be allocated. However, the upper bound will increase by only 1.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>CArray::Append  
- 한 배열의 내용을 다른의 끝에 추가 하려면이 함수를 호출 합니다.  
+##  <a name="append"></a>  CArray::Append  
+ Call this member function to add the contents of one array to the end of another.  
   
 ```  
 INT_PTR Append(const CArray& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *src*  
- 소스 배열에 추가할 요소입니다.  
+ Source of the elements to be appended to an array.  
   
-### <a name="return-value"></a>반환 값  
- 추가 된 첫 번째 요소의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the first appended element.  
   
-### <a name="remarks"></a>주의  
- 배열이 동일한 형식 이어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The arrays must be of the same type.  
   
- 필요한 경우 **Append** 배열에 추가 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
+ If necessary, **Append** may allocate extra memory to accommodate the elements appended to the array.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
- 빈 배열을 생성합니다.  
+##  <a name="carray"></a>  CArray::CArray  
+ Constructs an empty array.  
   
 ```  
 CArray();
 ```  
   
-### <a name="remarks"></a>설명  
- 한 번에 하나의 요소가 증가 하는 배열 합니다.  
+### <a name="remarks"></a>Remarks  
+ The array grows one element at a time.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>CArray::Copy  
- 이 멤버 함수를 사용 하 여 다른 한 배열의 요소를 복사 합니다.  
+##  <a name="copy"></a>  CArray::Copy  
+ Use this member function to copy the elements of one array to another.  
   
 ```  
 void Copy(const CArray& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *src*  
- 소스 배열에 복사할 요소입니다.  
+ Source of the elements to be copied to an array.  
   
-### <a name="remarks"></a>주의  
- 다른 배열의 요소와 한 배열의 요소를 덮어쓰려면이 멤버 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to overwrite the elements of one array with the elements of another array.  
   
- **복사** 메모리를 해제 하지는 않습니다; 하지만 필요한 경우 **복사** 배열에 복사 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
+ **Copy** does not free memory; however, if necessary, **Copy** may allocate extra memory to accommodate the elements copied to the array.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
- 배열 내에서 지정된 된 요소에 대 한 임시 참조를 반환합니다.  
+##  <a name="elementat"></a>  CArray::ElementAt  
+ Returns a temporary reference to the specified element within the array.  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);  
 const TYPE& ElementAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 [GetUpperBound](#getupperbound)합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>반환 값  
- 배열 요소에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to an array element.  
   
-### <a name="remarks"></a>주의  
- 배열에 대 한 왼쪽 할당 연산자를 구현 하는 데 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ It is used to implement the left-side assignment operator for arrays.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetSize](#getsize)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
- 배열 된 증가 하는 동안 할당 된 모든 추가 메모리를 해제 합니다.  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
+ Frees any extra memory that was allocated while the array was grown.  
   
 ```  
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 함수는 크기 또는 배열의 상한에 영향을 주지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ This function has no effect on the size or upper bound of the array.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetData](#getdata)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
- 지정된 된 인덱스에 있는 배열 요소를 반환합니다.  
+##  <a name="getat"></a>  CArray::GetAt  
+ Returns the array element at the specified index.  
   
 ```  
 TYPE& GetAt(INT_PTR nIndex);  
 const TYPE& GetAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수는 배열 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
  `nIndex`  
- 보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 [GetUpperBound](#getupperbound)합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>반환 값  
- 이 인덱스에 현재 있는 배열 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The array element currently at this index.  
   
-### <a name="remarks"></a>주의  
- 반환 된 값 보다 큰 음수 값 또는 값을 전달 `GetUpperBound` 실패 한 어설션이 발생 합니다.  
+### <a name="remarks"></a>Remarks  
+ Passing a negative value or a value greater than the value returned by `GetUpperBound` will result in a failed assertion.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
- 배열 요소의 수를 반환합니다.  
+##  <a name="getcount"></a>  CArray::GetCount  
+ Returns the number of array elements.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 배열의 항목 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the array.  
   
-### <a name="remarks"></a>주의  
- 배열의 요소 수를 검색 하려면이 메서드를 호출 합니다. 인덱스가 0부터 시작 하기 때문에 크기는 1 가장 큰 인덱스 보다 큽니다. 이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CArray::GetSize](#getsize) 메서드.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the array. Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetSize](#getsize) method.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
- 이 멤버 함수를 사용 하 여 배열에 있는 요소에 직접 액세스할 수 있습니다.  
+##  <a name="getdata"></a>  CArray::GetData  
+ Use this member function to gain direct access to the elements in an array.  
   
 ```  
 const TYPE* GetData() const; 
 TYPE* GetData();
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수는 배열 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
-### <a name="return-value"></a>반환 값  
- 배열 요소에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array element.  
   
-### <a name="remarks"></a>설명  
- 요소가 없는 경우 `GetData` null 값을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ If no elements are available, `GetData` returns a null value.  
   
- 배열 요소에 대 한 직접 액세스를 손쉽게 보다 신속 하 게 작업할 수 있습니다를 사용 하 여 주의 호출할 때 `GetData`; 직접적 오류 배열 요소에 영향을 줍니다.  
+ While direct access to the elements of an array can help you work more quickly, use caution when calling `GetData`; any errors you make directly affect the elements of your array.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
- 배열의 크기를 반환합니다.  
+##  <a name="getsize"></a>  CArray::GetSize  
+ Returns the size of the array.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>주의  
- 인덱스가 0부터 시작 하기 때문에 크기는 1 가장 큰 인덱스 보다 큽니다. 이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CArray::GetCount](#getcount) 메서드.  
+### <a name="remarks"></a>Remarks  
+ Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetCount](#getcount) method.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
- 이 배열의 현재 상한 값을 반환합니다.  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
+ Returns the current upper bound of this array.  
   
 ```  
 INT_PTR GetUpperBound() const;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 값 1을 반환 배열 인덱스가 0부터 시작 하기 때문에 보다 작은 `GetSize`합니다.  
+### <a name="remarks"></a>Remarks  
+ Because array indexes are zero-based, this function returns a value 1 less than `GetSize`.  
   
- 조건이 **GetUpperBound ()** =-1 배열에 요소가 포함 되어 있음을 나타냅니다.  
+ The condition **GetUpperBound( )** = -1 indicates that the array contains no elements.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CArray::GetAt](#getat)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
- 첫 번째 버전 `InsertAt` 배열에서 지정된 된 인덱스에 요소 하나 (또는 요소가 여러 개)를 삽입 합니다.  
+##  <a name="insertat"></a>  CArray::InsertAt  
+ The first version of `InsertAt` inserts one element (or multiple copies of an element) at a specified index in an array.  
   
 ```  
 void InsertAt(
@@ -358,70 +372,70 @@ void InsertAt(
     CArray* pNewArray);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 반환 된 값 보다 클 수는 정수 인덱스 `GetUpperBound`합니다.  
+ An integer index that may be greater than the value returned by `GetUpperBound`.  
   
  `ARG_TYPE`  
- 이 배열에 있는 요소의 형식을 지정 하는 템플릿 매개 변수  
+ Template parameter specifying the type of elements in this array.  
   
  `newElement`  
- 이 배열에 배치 될 요소입니다.  
+ The element to be placed in this array.  
   
  `nCount`  
- 이 요소가 해야 하는 횟수 (기본값: 1)를 삽입 합니다.  
+ The number of times this element should be inserted (defaults to 1).  
   
  `nStartIndex`  
- 반환 된 값 보다 클 수는 정수 인덱스 [GetUpperBound](#getupperbound)합니다.  
+ An integer index that may be greater than the value returned by [GetUpperBound](#getupperbound).  
   
  `pNewArray`  
- 이 배열에 추가 하는 요소가 포함 된 다른 배열입니다.  
+ Another array that contains elements to be added to this array.  
   
-### <a name="remarks"></a>주의  
- 프로세스에서 이동 (인덱스 증가) 하 여이 인덱스에서 기존 요소 위에 있는 모든 요소를 이동 합니다.  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts up (by incrementing the index) the existing element at this index, and it shifts up all the elements above it.  
   
- 두 번째 버전에서 다른 모든 요소를 삽입 한 `CArray` 에서 시작 하는 컬렉션의 `nStartIndex` 위치입니다.  
+ The second version inserts all the elements from another `CArray` collection, starting at the `nStartIndex` position.  
   
- `SetAt` 반면, 함수 한 지정 된 배열 요소를 대체 하 고 모든 요소를 이동 하지 않습니다.  
+ The `SetAt` function, in contrast, replaces one specified array element and does not shift any elements.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
- 배열이 비어 있는지 여부를 결정 합니다.  
+##  <a name="isempty"></a>  CArray::IsEmpty  
+ Determines whether the array is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 배열에 요소가; 없으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the array contains no elements; otherwise 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
- 이러한 아래 첨자 연산자는 편리 하 게 대체는 [SetAt](#setat) 및 [GetAt](#getat) 함수입니다.  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
+ These subscript operators are a convenient substitute for the [SetAt](#setat) and [GetAt](#getat) functions.  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
 const TYPE& operator[](int_ptr nindex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 이 배열에 있는 요소의 형식을 지정 하는 템플릿 매개 변수  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in this array.  
   
  `nIndex`  
- 에 액세스 하는 요소의 인덱스입니다.  
+ Index of the element to be accessed.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 연산자는 호출 하지 않은 배열에 대 한 **const**, 대입문의 왼쪽 (l-value) 또는 오른쪽 (r-value)에서 사용할 수 있습니다. 에 대 한 두 번째 호출 **const** 배열, 오른쪽에만 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first operator, called for arrays that are not **const**, may be used on either the right (r-value) or the left (l-value) of an assignment statement. The second, called for **const** arrays, may be used only on the right.  
   
- 라이브러리의 디버그 버전 (중 하나에 대입문의 왼쪽 또는 오른쪽) 아래 첨자 벗어났습니다.이 경우 어설션 합니다.  
+ The Debug version of the library asserts if the subscript (either on the left or right side of an assignment statement) is out of bounds.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
- 배열 확대 되거나 축소 하는 경우 새 버퍼에 데이터를 재배치 됩니다.  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
+ Relocates data to a new buffer when the array should grow or shrink.  
   
 ```  
 template<class TYPE, class ARG_TYPE>  
@@ -431,38 +445,38 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
     INT_PTR nCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pNewData`  
- 배열 요소에 대 한 새 버퍼입니다.  
+ A new buffer for the array of elements.  
   
  `pData`  
- 이전 배열 요소입니다.  
+ The old array of elements.  
   
  `nCount`  
- 이전 배열의 요소 수입니다.  
+ Number of elements in the old array.  
   
-### <a name="remarks"></a>주의  
- `pNewData`항상 모든 포함할 수 있는 크기는 `pData` 요소입니다.  
+### <a name="remarks"></a>Remarks  
+ `pNewData` is always large enough to hold all the `pData` elements.  
   
- [CArray](../../mfc/reference/carray-class.md) 구현 배열 확대 되거나 축소 하는 경우 이전 데이터를 새 버퍼를 복사 하려면이 메서드를 사용 합니다 (때 [SetSize](#setsize) 또는 [FreeExtra](#freeextra) 호출). 기본 구현은 데이터를 복사합니다.  
+ The [CArray](../../mfc/reference/carray-class.md) implementation uses this method to copy the old data to a new buffer when the array should grow or shrink (when [SetSize](#setsize) or [FreeExtra](#freeextra) are called). The default implementation just copies the data.  
   
- 배열 요소 포함 해당 멤버 중 하나에 대 한 포인터 또는 배열 요소 중 하나에 대 한 포인터를 포함 하는 다른 구조에 대 한 포인터 일반 복사에서 업데이트 되지 않습니다. 이 경우의 특수화를 구현 하 여 포인터를 수정할 수 있습니다 `RelocateElements` 관련 형식을 사용 합니다. 또한 데이터를 복사할 책임이 되었습니다.  
+ For arrays in which an element contains a pointer to one of its own members, or another structure contains a pointer to one of the array elements, the pointers are not updated in plain copy. In this case, you can correct pointers by implementing a specialization of `RelocateElements` with the relevant types. You are also responsible for data copying.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
- 이 배열의 모든 요소를 반환합니다.  
+##  <a name="removeall"></a>  CArray::RemoveAll  
+ Removes all the elements from this array.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>주의  
- 배열이 비어 이미 함수는 계속 작동 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the array is already empty, the function still works.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 31입니다.](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
- 배열에서 지정 된 인덱스에서 시작 하는 하나 이상의 요소를 제거 합니다.  
+##  <a name="removeat"></a>  CArray::RemoveAt  
+ Removes one or more elements starting at a specified index in an array.  
   
 ```  
 void RemoveAt(
@@ -470,71 +484,71 @@ void RemoveAt(
     INT_PTR nCount = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 [GetUpperBound](#getupperbound)합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `nCount`  
- 제거할 요소의 수입니다.  
+ The number of elements to remove.  
   
-### <a name="remarks"></a>주의  
- 프로세스에서 제거 된 요소 위에 있는 모든 요소를 아래로 이동합니다. 그 감소 위 배열의 바인딩되지만 메모리를 해제 하지는 않습니다.  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts down all the elements above the removed element(s). It decrements the upper bound of the array but does not free memory.  
   
- 제거 지점 위에 배열에 포함 된 보다 더 많은 요소를 제거 하려고 할 경우 라이브러리의 디버그 버전 어설션 합니다.  
+ If you try to remove more elements than are contained in the array above the removal point, then the Debug version of the library asserts.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
- 지정된 된 인덱스에 있는 배열 요소를 설정합니다.  
+##  <a name="setat"></a>  CArray::SetAt  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 [GetUpperBound](#getupperbound)합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `ARG_TYPE`  
- 템플릿 매개 변수를 배열 요소를 참조 하기 위해 사용 되는 인수 형식을 지정 합니다.  
+ Template parameter specifying the type of arguments used for referencing array elements.  
   
  `newElement`  
- 지정된 된 위치에 저장 하려면 새 요소 값입니다.  
+ The new element value to be stored at the specified position.  
   
-### <a name="remarks"></a>설명  
- `SetAt`증가 배열을 발생 하지 않습니다. 사용 하 여 [SetAtGrow](#setatgrow) 배열 자동으로 증가 하도록 하려는 경우.  
+### <a name="remarks"></a>Remarks  
+ `SetAt` will not cause the array to grow. Use [SetAtGrow](#setatgrow) if you want the array to grow automatically.  
   
- 인덱스 값 배열에서 올바른 위치를 나타내도록 확인 해야 합니다. 범위를 벗어나는 경우 라이브러리의 디버그 버전 어설션 합니다.  
+ You must ensure that your index value represents a valid position in the array. If it is out of bounds, then the Debug version of the library asserts.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetAt](#getat)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
- 지정된 된 인덱스에 있는 배열 요소를 설정합니다.  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 정수 인덱스는 0 보다 크거나 같은 경우입니다.  
+ An integer index that is greater than or equal to 0.  
   
  `ARG_TYPE`  
- 배열에서 요소 형식을 지정 하는 템플릿 매개 변수  
+ Template parameter specifying the type of elements in the array.  
   
  `newElement`  
- 이 배열에 추가할 요소입니다. A **NULL** 값은 사용할 수 있습니다.  
+ The element to be added to this array. A **NULL** value is allowed.  
   
-### <a name="remarks"></a>주의  
- 필요한 경우 배열 자동으로 증가 (상한 하 여 새 요소로 적용 하도록 조정 됩니다.).  
+### <a name="remarks"></a>Remarks  
+ The array grows automatically if necessary (that is, the upper bound is adjusted to accommodate the new element).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCollections # 33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray::SetSize  
- 비어 있거나 기존 배열의; 크기를 설정합니다. 필요한 경우 메모리를 할당 합니다.  
+##  <a name="setsize"></a>  CArray::SetSize  
+ Establishes the size of an empty or existing array; allocates memory if necessary.  
   
 ```  
 void SetSize(
@@ -542,27 +556,27 @@ void SetSize(
     INT_PTR nGrowBy = -1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nNewSize`  
- 새 배열 크기 (요소 수)입니다. 보다 크거나 0 이어야 합니다.  
+ The new array size (number of elements). Must be greater than or equal to 0.  
   
  `nGrowBy`  
- 최소 크기 증가 사용 하는 필요한 경우 할당할 슬롯 요소 수입니다.  
+ The minimum number of element slots to allocate if a size increase is necessary.  
   
-### <a name="remarks"></a>주의  
- 새 크기가 원래 크기 보다 작은 경우 배열이 잘리고 하 고 사용 하지 않는 모든 메모리 해제 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the new size is smaller than the old size, then the array is truncated and all unused memory is released.  
   
- 배열을 사용 하기 전에 배열 크기를 설정 하려면이 함수를 사용 합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  
+ Use this function to set the size of your array before you begin using the array. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- `nGrowBy` 매개 변수 배열의 증가 하는 동안 내부 메모리 할당에 영향을 줍니다. 사용에 영향을 주지 배열 크기에서 보고 [GetSize](#getsize) 및 [GetUpperBound](#getupperbound)합니다. 기본값을 사용 하는 경우 MFC 메모리 조각화를 방지 하 고 대부분의 경우에 대 한 효율을 최적화 하기 위해 계산 방식으로 메모리를 할당 합니다.  
+ The `nGrowBy` parameter affects internal memory allocation while the array is growing. Its use never affects the array size as reported by [GetSize](#getsize) and [GetUpperBound](#getupperbound). If the default value is used, MFC allocates memory in a way calculated to avoid memory fragmentation and optimize efficiency for most cases.  
   
-### <a name="example"></a>예제  
-  예를 참조 [GetData](#getdata)합니다.  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 수집](../../visual-cpp-samples.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CObArray 클래스](../../mfc/reference/cobarray-class.md)   
- [컬렉션 클래스 도우미](../../mfc/reference/collection-class-helpers.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObArray Class](../../mfc/reference/cobarray-class.md)   
+ [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md)
 

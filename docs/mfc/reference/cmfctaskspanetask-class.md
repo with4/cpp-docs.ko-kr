@@ -1,5 +1,5 @@
 ---
-title: "CMFCTasksPaneTask 클래스 | Microsoft 문서"
+title: CMFCTasksPaneTask Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPaneTask class
+- CMFCTasksPaneTask [MFC], CMFCTasksPaneTask
+- CMFCTasksPaneTask [MFC], SetACCData
+- CMFCTasksPaneTask [MFC], m_bAutoDestroyWindow
+- CMFCTasksPaneTask [MFC], m_bIsBold
+- CMFCTasksPaneTask [MFC], m_dwUserData
+- CMFCTasksPaneTask [MFC], m_hwndTask
+- CMFCTasksPaneTask [MFC], m_nIcon
+- CMFCTasksPaneTask [MFC], m_nWindowHeight
+- CMFCTasksPaneTask [MFC], m_pGroup
+- CMFCTasksPaneTask [MFC], m_rect
+- CMFCTasksPaneTask [MFC], m_strName
+- CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
 caps.latest.revision: 27
 author: mikeblome
@@ -46,70 +57,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 20713b45c4b6aadc5cdfeaadb6ed269aaf7b337f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 801e063709db70cfd700d5398f2d7a19f9d875ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 클래스
-`CMFCTasksPaneTask` 클래스는 작업 창 컨트롤에 대 한 작업을 나타내는 도우미 클래스 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). 작업 개체의 작업 그룹에서 항목을 나타냅니다 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). 각 작업은 사용자가 작업을 클릭할 때 프레임워크가 실행하는 명령과 작업 이름의 왼쪽에 나타내는 아이콘을 포함할 수 있습니다.  
+# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask Class
+The `CMFCTasksPaneTask` class is a helper class that represents tasks for the task pane control ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). The task object represents an item in the task group ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Each task can have a command that the framework executes when a user clicks on the task and an icon that appears to the left of the task name.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTasksPaneTask : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|만들고 초기화는 `CMFCTasksPaneTask` 개체입니다.|  
-|`CMFCTasksPaneTask::~CMFCTasksPaneTask`|소멸자|  
+|[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Creates and initializes a `CMFCTasksPaneTask` object.|  
+|`CMFCTasksPaneTask::~CMFCTasksPaneTask`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::SetACCData](#setaccdata)|현재 작업에 대 한 내게 필요한 옵션 데이터를 결정합니다.|  
+|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Determines the accessibility data for the current task.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|작업 창이 자동으로 소멸 되 고 있는지 여부를 결정 합니다.|  
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|프레임 워크에서 굵은 텍스트로 작업 레이블 그릴지 여부를 결정 합니다.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|프레임 워크를 태스크와 연결 하는 사용자 정의 데이터를 포함 합니다. 작업이 연결 된 데이터가 있으면&0;으로 설정 합니다.|  
-|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|작업 창에 대 한 핸들입니다.|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|프레임 워크 작업 옆에 표시 되는 이미지의 이미지 목록 인덱스입니다.|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|작업 창의 높이입니다. 작업에 작업 창이 있는 경우이 값은&0;입니다.|  
-|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|에 대 한 포인터는 `CMFCTasksPaneTaskGroup` 이 작업에 속하는 합니다.|  
-|[CMFCTasksPaneTask::m_rect](#m_rect)|작업의 경계 사각형을 지정합니다.|  
-|[CMFCTasksPaneTask::m_strName](#m_strname)|작업의 이름입니다.|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|작업을 마우스 오른쪽 단추로 클릭할 때 프레임 워크가 실행 되는 명령의 명령 ID를 지정 합니다. 이 값이 유효한 명령 ID가 아닐 경우 작업은 간단한 레이블로로 처리 됩니다.|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determines whether the task window is automatically destroyed.|  
+|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determines whether the framework draws a task label in bold text.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contains user-defined data that the framework associates with the task. Set to zero if the task has no associated data.|  
+|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|A handle to the task window.|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|The index in the image list of the image that the framework displays next to the task.|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|The height of the task window. If the task has no task window, this value is zero.|  
+|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|A pointer to the `CMFCTasksPaneTaskGroup` that this task belongs to.|  
+|[CMFCTasksPaneTask::m_rect](#m_rect)|Specifies the bounding rectangle of the task.|  
+|[CMFCTasksPaneTask::m_strName](#m_strname)|The name of the task.|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Specifies the command ID of the command that the framework executes when the user clicks the task. If this value is not a valid command ID, the task is treated as a simple label.|  
   
-## <a name="remarks"></a>주의  
- 다음 그림에는 세 가지 작업을 포함 하는 작업 그룹을 보여 줍니다.  
+## <a name="remarks"></a>Remarks  
+ The following illustration shows a task group that contains three tasks:  
   
- ![작업 그룹, 확장](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Task group, expanded](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
 > [!NOTE]
->  작업에 유효한 명령 ID를 찾을 수 없는 경우 간단한 레이블로 처리 됩니다.  
+>  If a task does not have a valid command ID, it is treated as a simple label.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxTasksPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
- 만들고 초기화는 `CMFCTasksPaneTask` 개체입니다.  
+##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask  
+ Creates and initializes a `CMFCTasksPaneTask` object.  
   
 ```  
 CMFCTasksPaneTask(
@@ -123,133 +134,133 @@ CMFCTasksPaneTask(
     int nWindowHeight = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- 지정 된 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 작업 속한 합니다.  
+ Specifies the [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) to which the task belongs.  
   
  `lpszName`  
- 작업의 이름을 지정합니다.  
+ Specifies the name of the task.  
   
  `nIcon`  
- 이미지 목록에서 작업의 이미지의 인덱스를 지정합니다.  
+ Specifies the index of the task's image in the image list.  
   
  `uiCommandID`  
- 작업을 클릭할 때 실행 되는 명령의 명령 ID를 지정 합니다.  
+ Specifies the command ID of the command that is executed when the task is clicked.  
   
  `dwUserData`  
- 사용자 정의 데이터입니다.  
+ User-defined data.  
   
  `hwndTask`  
- 작업 창에 대 한 핸들을 지정합니다.  
+ Specifies the handle to the task window.  
   
  `bAutoDestroyWindow`  
- 경우 `TRUE`, 작업 창이 자동으로 소멸 됩니다.  
+ If `TRUE`, the task window will be destroyed automatically.  
   
  `nWindowHeight`  
- 작업 창의 높이 지정합니다.  
+ Specifies the height of the task window.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
- 작업 창이 자동으로 소멸 되 고 있는지 여부를 결정 합니다.  
+##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
+ Determines whether the task window is automatically destroyed.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
-### <a name="remarks"></a>주의  
- 로 설정 `TRUE` 되도록 지정 하려면 작업 창 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 자동으로 고, 그렇지 않으면 제거 되어야 할지 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ Set to `TRUE` to specify that the task window ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) should be destroyed automatically; otherwise, `FALSE`.  
   
-##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
- 굵은 텍스트로 작업 레이블 그릴지 여부를 결정 합니다.  
+##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
+ Determines whether a task label is drawn in bold text.  
   
 ```  
 BOOL m_bIsBold;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 작업 레이블에 대 한 굵은 텍스트로 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display bold text for the task label.  
   
-##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
- 태스크와 연결 된 사용자 정의 데이터를 포함 합니다. 해당 작업과 관련 된 데이터가 없는 경우&0;으로 설정 합니다.  
+##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
+ Contains user-defined data that is associated with the task. Set to zero if no data is associated with the task.  
   
 ```  
 DWORD m_dwUserData;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
- 작업 창에 대 한 핸들입니다.  
+##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
+ A handle to the task window.  
   
 ```  
 HWND m_hwndTask;  
 ```  
   
-### <a name="remarks"></a>주의  
- 작업 창에 추가 하려면 [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)합니다.  
+### <a name="remarks"></a>Remarks  
+ To add a task window, call [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
-##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
- 지정된 된 작업 옆에 표시 되는 이미지를 식별 하는 이미지 목록에서 인덱스 위치입니다.  
+##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
+ The index position in an image list that identifies an image that is displayed next to the specified task.  
   
 ```  
 int m_nIcon;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이미지 목록 설정 되어 [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist)합니다.  
+### <a name="remarks"></a>Remarks  
+ The image list is set by [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
- 설정 `m_nIcon` 이미지 없는 작업을 표시 하려는 경우-1입니다.  
+ Set `m_nIcon` to -1 if you want to display the task without an image.  
   
-##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
- 작업 창의 높이입니다. 작업에 작업 창이 있는 경우이 값은&0;입니다.  
+##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
+ The height of the task window. If the task has no task window, this value is zero.  
   
 ```  
 int m_nWindowHeight;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
- 에 대 한 포인터는 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 이 작업이 속한 합니다.  
+##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
+ Pointer to the [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) to which this task belongs.  
   
 ```  
 CMFCTasksPaneTaskGroup* m_pGroup;  
 ```  
   
-### <a name="remarks"></a>주의  
- 모든 작업에는 상위 그룹이 있어야 합니다. 호출 하 여 작업창으로 그룹을 추가한 [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)합니다.  
+### <a name="remarks"></a>Remarks  
+ Every task must have a parent group. You add groups to a task pane by calling [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
- 작업의 경계 사각형을 지정합니다.  
+##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
+ Specifies the bounding rectangle of the task.  
   
 ```  
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 값은 작업을 그릴 때 프레임 워크에 의해 계산 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This value is calculated by the framework when the task is drawn.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
- 작업의 이름입니다.  
+##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
+ The name of the task.  
   
 ```  
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
- 작업을 마우스 오른쪽 단추로 클릭할 때 실행 되는 명령의 명령 ID를 지정 합니다. 이 값이 유효한 명령 ID가 아닐 경우 작업은 간단한 레이블로로 처리 됩니다.  
+##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
+ Specifies the command ID of the command that is executed when the user clicks the task. If this value is not a valid command ID, the task is treated as a simple label.  
   
 ```  
 UINT m_uiCommandID;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
- 현재 작업에 대 한 내게 필요한 옵션 데이터를 결정합니다.  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
+ Determines the accessibility data for the current task.  
   
 ```  
 virtual BOOL SetACCData(
@@ -257,18 +268,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 현재 태스크의 부모 창을 나타냅니다.  
+ Represents the parent window of the current task.  
   
  [out] `data`  
- 형식의 개체 `CAccessibilityData` 현재 태스크의 내게 필요한 옵션 데이터는 채워집니다.  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current task.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`하는 경우는 `data` 매개 변수는 성공적으로 현재 작업의 내게 필요한 옵션 데이터로 채워진 하 고, 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current task; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

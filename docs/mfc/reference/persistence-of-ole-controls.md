@@ -1,5 +1,5 @@
 ---
-title: "OLE 컨트롤의 지 속성 | Microsoft 문서"
+title: Persistence of OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE controls, persistence
+- OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 caps.latest.revision: 17
@@ -34,41 +34,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4134d8b916fbe2b5a33066708a2078d28cb1ee6c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
-OLE 컨트롤의 한 기능을 속성 지 속성 (또는 serialization)는 OLE 컨트롤을 읽거나 파일 또는 스트림에서 속성 값을 쓸 수 있습니다. 컨테이너 응용 프로그램 serialization을 사용 응용 프로그램 컨트롤 소멸 된 후에 컨트롤의 속성 값을 저장할 수 있습니다. OLE 컨트롤의 속성 값은 파일에서 읽을 수 있습니다 또는 나중에 스트림 컨트롤의 새 인스턴스가 만들어집니다.  
+# <a name="persistence-of-ole-controls"></a>Persistence of OLE Controls
+One capability of OLE controls is property persistence (or serialization), which allows the OLE control to read or write property values to and from a file or stream. A container application can use serialization to store a control's property values even after the application has destroyed the control. The property values of the OLE control can then be read from the file or stream when a new instance of the control is created at a later time.  
   
-### <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성  
+### <a name="persistence-of-ole-controls"></a>Persistence of OLE Controls  
   
 |||  
 |-|-|  
-|[PX_Blob](#px_blob)|이진 대형 개체 (BLOB) 데이터를 저장 하는 컨트롤 속성을 교환 합니다.|  
-|[PX_Bool](#px_bool)|교환 컨트롤 속성 형식의 **BOOL**합니다.|  
-|[PX_Color](#px_color)|컨트롤의 색 속성을 교환합니다.|  
-|[PX_Currency](#px_currency)|교환 컨트롤 속성 형식의 **CY**합니다.|  
-|[PX_DataPath](#px_datapath)|컨트롤 형식의 속성을 교환 `CDataPathProperty`합니다.|  
-|[PX_Double](#px_double)|교환 컨트롤 속성 형식의 **이중**합니다.|  
-|[PX_Font](#px_font)|컨트롤의 글꼴 속성을 교환합니다.|  
-|[PX_Float](#px_float)|교환 컨트롤 속성 형식의 **float**합니다.|  
-|[PX_IUnknown](#px_iunknown)|정의 되지 않은 형식의 컨트롤 속성을 교환합니다.|  
-|[PX_Long](#px_long)|교환 컨트롤 속성 형식의 **긴**합니다.|  
-|[PX_Picture](#px_picture)|컨트롤의 사진 속성을 교환합니다.|  
-|[PX_Short](#px_short)|교환 컨트롤 속성 형식의 **짧은**합니다.|  
-|[PX_ULong](#px_ulong)|교환 컨트롤 속성 형식의 **ULONG**합니다.|  
-|[PX_UShort](#px_ushort)|교환 컨트롤 속성 형식의 **USHORT**합니다.|  
-|[PXstring](#px_string)|문자 문자열 컨트롤 속성을 교환합니다.|  
-|[PX_VBXFontConvert](#px_vbxfontconvert)|에 OLE 컨트롤의 글꼴 속성 VBX 컨트롤의 글꼴 관련 속성을 교환합니다.|  
+|[PX_Blob](#px_blob)|Exchanges a control property that stores binary large object (BLOB) data.|  
+|[PX_Bool](#px_bool)|Exchanges a control property of type **BOOL**.|  
+|[PX_Color](#px_color)|Exchanges a color property of a control.|  
+|[PX_Currency](#px_currency)|Exchanges a control property of type **CY**.|  
+|[PX_DataPath](#px_datapath)|Exchanges a control property of type `CDataPathProperty`.|  
+|[PX_Double](#px_double)|Exchanges a control property of type **double**.|  
+|[PX_Font](#px_font)|Exchanges a font property of a control.|  
+|[PX_Float](#px_float)|Exchanges a control property of type **float**.|  
+|[PX_IUnknown](#px_iunknown)|Exchanges a control property of undefined type.|  
+|[PX_Long](#px_long)|Exchanges a control property of type **long**.|  
+|[PX_Picture](#px_picture)|Exchanges a picture property of a control.|  
+|[PX_Short](#px_short)|Exchanges a control property of type **short**.|  
+|[PX_ULong](#px_ulong)|Exchanges a control property of type **ULONG**.|  
+|[PX_UShort](#px_ushort)|Exchanges a control property of type **USHORT**.|  
+|[PXstring](#px_string)|Exchanges a character string control property.|  
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Exchanges a VBX control's font-related properties into an OLE control font property.|  
   
- 또한는 `AfxOleTypeMatchGuid` 간의 일치 여부를 테스트 하려면 전역 함수는 제공 되는 `TYPEDESC` 및 지정 된 GUID입니다.  
+ In addition, the `AfxOleTypeMatchGuid` global function is provided to test for a match between a `TYPEDESC` and a given GUID.  
   
-##  <a name="px_blob"></a>PX_Blob  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 직렬화 또는 binary large object (BLOB) 데이터를 저장 하는 속성을 초기화 합니다.  
+##  <a name="px_blob"></a>  PX_Blob  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property that stores binary large object (BLOB) data.  
   
 ```  
  
@@ -85,35 +85,35 @@ hBlobDefault
 = NULL);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `hBlob`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `hBlobDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `hBlob`를 적절 하 게 합니다. 이 변수를 초기화 해야 **NULL** 처음 호출 하기 전에 `PX_Blob` 처음으로 (일반적으로 이렇게 컨트롤의 생성자에서). 경우 `hBlobDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 초기화 또는 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `hBlob`, as appropriate. This variable should be initialized to **NULL** before initially calling `PX_Blob` for the first time (typically, this can be done in the control's constructor). If `hBlobDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's initialization or serialization process fails.  
   
- 핸들 `hBlob` 및 `hBlobDefault` 다음을 포함 하는 메모리 블록을를 참조 하십시오.  
+ The handles `hBlob` and `hBlobDefault` refer to a block of memory which contains the following:  
   
--   A `DWORD` 다음에 나오는 이진 데이터의 길이 (바이트)를 포함 하 여 바로 뒤에  
+-   A `DWORD` which contains the length, in bytes, of the binary data that follows, followed immediately by  
   
--   실제 이진 데이터를 포함 하는 메모리의 블록입니다.  
+-   A block of memory containing the actual binary data.  
   
- `PX_Blob` Windows를 사용 하 여 메모리를 할당 합니다 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API를 BLOB 형식 속성을 로드 하는 경우. 이 메모리를 비우는 책임이 있습니다. 따라서 컨트롤의 소멸자를 호출 해야 [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 형식 속성에 대해 해제에 대 한 핸들을 컨트롤에 할당 된 메모리입니다.  
+ Note that `PX_Blob` will allocate memory, using the Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, when loading BLOB-type properties. You are responsible for freeing this memory. Therefore, the destructor of your control should call [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) on any BLOB-type property handles to free up any memory allocated to your control.  
   
-##  <a name="px_bool"></a>PX_Bool  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **BOOL**합니다.  
+##  <a name="px_bool"></a>  PX_Bool  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **BOOL**.  
   
 ```  
  
@@ -136,27 +136,27 @@ bValue  ,
     BOOL bDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `bValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `bDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `bValue`를 적절 하 게 합니다. 경우 `bDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `bValue`, as appropriate. If `bDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_color"></a>PX_Color  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **OLE_COLOR**합니다.  
+##  <a name="px_color"></a>  PX_Color  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **OLE_COLOR**.  
   
 ```  
  
@@ -178,27 +178,27 @@ clrValue  ,
 clrDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `clrValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `clrDefault`  
- 컨트롤 개발자가 정의 된 속성에 대 한 기본값입니다.  
+ Default value for the property, as defined by the control developer.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `clrValue`를 적절 하 게 합니다. 경우 `clrDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `clrValue`, as appropriate. If `clrDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_currency"></a>PX_Currency  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **통화**합니다.  
+##  <a name="px_currency"></a>  PX_Currency  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **currency**.  
   
 ```  
  
@@ -221,27 +221,27 @@ cyValue  ,
     CY cyDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `cyValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `cyDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `cyValue`를 적절 하 게 합니다. 경우 `cyDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `cyValue`, as appropriate. If `cyDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_datapath"></a>PX_DataPath  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 데이터 경로 형식의 속성을 초기화 하는 함수 [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)합니다.  
+##  <a name="px_datapath"></a>  PX_DataPath  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a data path property of type [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
  
@@ -260,24 +260,24 @@ pPX,
     CDataPathProperty& dataPathProperty);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `dataPathProperty`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 데이터 경로 속성 비동기 컨트롤 속성을 구현합니다. 속성의 값은에서 읽거나 쓸에서 참조를 변수에 `dataPathProperty`를 적절 하 게 합니다.  
+### <a name="remarks"></a>Remarks  
+ Data path properties implement asynchronous control properties. The property's value will be read from or written to the variable referenced by `dataPathProperty`, as appropriate.  
   
-##  <a name="px_double"></a>PX_Double  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **이중**합니다.  
+##  <a name="px_double"></a>  PX_Double  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **double**.  
   
 ```  
  
@@ -300,27 +300,27 @@ doubleValue  ,
     double doubleDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `doubleValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `doubleDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `doubleValue`를 적절 하 게 합니다. 경우 `doubleDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `doubleValue`, as appropriate. If `doubleDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_font"></a>PX_Font  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 직렬화 또는 글꼴의 속성을 초기화 합니다.  
+##  <a name="px_font"></a>  PX_Font  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type font.  
   
 ```  
  
@@ -343,30 +343,30 @@ pFontDispAmbient
 = NULL);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `font`  
- 에 대 한 참조는 `CFontHolder` 글꼴 속성을 포함 하는 개체입니다.  
+ A reference to a `CFontHolder` object that contains the font property.  
   
  `pFontDesc`  
- 에 대 한 포인터는 **FONTDESC** font 속성의 경우에서의 기본 상태로 초기화에 사용할 값을 포함 하는 구조를 `pFontDispAmbient` 는 **NULL**합니다.  
+ A pointer to a **FONTDESC** structure containing the values to use in initializing the default state of the font property, in the case where `pFontDispAmbient` is **NULL**.  
   
  `pFontDispAmbient`  
- 에 대 한 포인터는 **IFontDisp** font 속성의 기본 상태로 초기화에 사용 하는 글꼴의 인터페이스입니다.  
+ A pointer to the **IFontDisp** interface of a font to use in initializing the default state of the font property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나 쓴 `font`, `CFontHolder` 를 적절 한 참조입니다. 경우 `pFontDesc` 및 `pFontDispAmbient` 필요할 때 속성의 기본값을 초기화 하는 데 사용 하는 지정 됩니다. 이러한 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다. 일반적으로 전달 하면 **NULL** 에 대 한 `pFontDesc` 앰비언트 값을 반환 하 고 `COleControl::AmbientFont` 에 대 한 `pFontDispAmbient`합니다. 글꼴 개체에서 반환 하는 참고 `COleControl::AmbientFont` 를 호출 하 여 해제 되어야는 **IFontDisp::Release** 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to `font`, a `CFontHolder` reference, when appropriate. If `pFontDesc` and `pFontDispAmbient` are specified, they are used for initializing the property's default value, when needed. These values are used if, for any reason, the control's serialization process fails. Typically, you pass **NULL** for `pFontDesc` and the ambient value returned by `COleControl::AmbientFont` for `pFontDispAmbient`. Note that the font object returned by `COleControl::AmbientFont` must be released by a call to the **IFontDisp::Release** member function.  
   
-##  <a name="px_float"></a>PX_Float  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **float**합니다.  
+##  <a name="px_float"></a>  PX_Float  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **float**.  
   
 ```  
  
@@ -389,27 +389,27 @@ floatValue  ,
     float floatDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `floatValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `floatDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `floatValue`를 적절 하 게 합니다. 경우 `floatDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `floatValue`, as appropriate. If `floatDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 serialize 하거나 개체 함으로써 표시 되는 속성을 초기화 하는 **IUnknown**-파생 인터페이스입니다.  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property represented by an object having an **IUnknown**-derived interface.  
   
 ```  
  
@@ -428,30 +428,30 @@ pUnkDefault
 = NULL);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  *pUnk*  
- 속성의 값을 나타내는 개체의 인터페이스를 포함 하는 변수에 대 한 참조입니다.  
+ Reference to a variable containing the interface of the object that represents the value of the property.  
   
  `iid`  
- 속성 개체의 인터페이스를 나타내는 인터페이스 ID는 컨트롤에 의해 사용 됩니다.  
+ An interface ID indicating which interface of the property object is used by the control.  
   
  `pUnkDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 *펑크*를 적절 하 게 합니다. 경우 `pUnkDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by *pUnk*, as appropriate. If `pUnkDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_long"></a>PX_Long  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **긴**합니다.  
+##  <a name="px_long"></a>  PX_Long  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **long**.  
   
 ```  
  
@@ -474,27 +474,27 @@ lValue  ,
     long lDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `lValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `lDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `lValue`를 적절 하 게 합니다. 경우 `lDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `lValue`, as appropriate. If `lDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_picture"></a>PX_Picture  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버 함수를 serialize 하거나 컨트롤의 사진 속성을 초기화 합니다.  
+##  <a name="px_picture"></a>  PX_Picture  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a picture property of your control.  
   
 ```  
  
@@ -517,27 +517,27 @@ pict  ,
     CPictureHolder& pictDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `pict`  
- 에 대 한 참조는 [CPictureHolder](../../mfc/reference/cpictureholder-class.md) 속성이 저장 된 개체 (일반적으로 클래스의 멤버 변수).  
+ Reference to a [CPictureHolder](../../mfc/reference/cpictureholder-class.md) object where the property is stored (typically a member variable of your class).  
   
  `pictDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `pict`를 적절 하 게 합니다. 경우 `pictDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `pict`, as appropriate. If `pictDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_short"></a>PX_Short  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **짧은**합니다.  
+##  <a name="px_short"></a>  PX_Short  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **short**.  
   
 ```  
  
@@ -560,27 +560,27 @@ sValue  ,
     short sDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `sValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `sDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `sValue`를 적절 하 게 합니다. 경우 `sDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `sValue`, as appropriate. If `sDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_ulong"></a>PX_ULong  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 **ULONG**합니다.  
+##  <a name="px_ulong"></a>  PX_ULong  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **ULONG**.  
   
 ```  
  
@@ -603,27 +603,27 @@ ulValue  ,
     long ulDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ Name of the property being exchanged.  
   
  `ulValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `ulDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `ulValue`를 적절 하 게 합니다. 경우 `ulDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `ulValue`, as appropriate. If `ulDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_ushort"></a>PX_UShort  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` 멤버를 serialize 하거나 형식의 속성을 초기화 하는 함수 `unsigned` **짧은**합니다.  
+##  <a name="px_ushort"></a>  PX_UShort  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type `unsigned` **short**.  
   
 ```  
  
@@ -646,27 +646,27 @@ usValue  ,
     USHORT usDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ Name of the property being exchanged.  
   
  *usValue*  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  *usDefault*  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 *usValue*를 적절 하 게 합니다. 경우 *usDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by *usValue*, as appropriate. If *usDefault* is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_string"></a>PXstring  
- 사용자 컨트롤 내에서이 함수를 호출 **DoPropExchange** 멤버 함수를 직렬화 또는 문자 문자열 속성을 초기화 합니다.  
+##  <a name="px_string"></a>  PXstring  
+ Call this function within your control's **DoPropExchange** member function to serialize or initialize a character string property.  
   
 ```  
  
@@ -689,27 +689,27 @@ strValue  ,
     CString strDefault);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 교환 되는 속성의 이름입니다.  
+ The name of the property being exchanged.  
   
  `strValue`  
- 속성은 저장 된 변수에 대 한 참조 (일반적으로 클래스의 멤버 변수).  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `strDefault`  
- 속성의 기본값입니다.  
+ Default value for the property.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 속성의 값은 읽거나에서 참조 하는 변수를 쓸 `strValue`를 적절 하 게 합니다. 경우 `strDefault` 를 지정 하면 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 프로세스 어떤 이유로 든 실패 하는 경우 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `strValue`, as appropriate. If `strDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
- 사용자 컨트롤 내에서이 함수를 호출 `DoPropExchange` VBX 컨트롤의 글꼴 관련 속성을 변환 하 여 글꼴 속성을 초기화 하는 멤버 함수입니다.  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
+ Call this function within your control's `DoPropExchange` member function to initialize a font property by converting a VBX control's font-related properties.  
   
 ```  
  
@@ -720,24 +720,24 @@ pPX  ,
     CFontHolder& font);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 에 대 한 포인터는 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 대 한 매개 변수로 전달 된 `DoPropExchange`).  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `font`  
- 변환 된 VBX 글꼴 관련 속성을 포함 하는 OLE 컨트롤의 글꼴 속성입니다.  
+ The font property of the OLE control that will contain the converted VBX font-related properties.  
   
-### <a name="return-value"></a>반환 값  
- Exchange에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 VBX 컨트롤에 대 한 직접 대용으로 디자인 된 OLE 컨트롤에 의해서만 사용 합니다. 컨트롤의 Visual Basic 개발 환경, 해당 교체 OLE 컨트롤을 사용 하 여 VBX 컨트롤을 포함 하는 form 변환할 때 호출 **IDataObject::SetData** VBX 컨트롤의 속성 데이터를 포함 하는 속성 집합을 전달 하는 함수입니다. 이 작업을이 수행 하면 컨트롤의 `DoPropExchange` 함수를 호출할 수 있습니다. `DoPropExchange`호출할 수 `PX_VBXFontConvert` VBX 컨트롤의 글꼴 관련 속성을 변환 하려면 (예를 들어 "FontName," "FontSize" 등) OLE 컨트롤의 글꼴 속성의 해당 구성 요소에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be used only by an OLE control that is designed as a direct replacement for a VBX control. When the Visual Basic development environment converts a form containing a VBX control to use the corresponding replacement OLE control, it will call the control's **IDataObject::SetData** function, passing in a property set that contains the VBX control's property data. This operation, in turn, causes the control's `DoPropExchange` function to be invoked. `DoPropExchange` can call `PX_VBXFontConvert` to convert the VBX control's font-related properties (for example, "FontName," "FontSize," and so on) into the corresponding components of the OLE control's font property.  
   
- `PX_VBXFontConvert`컨트롤이 실제로 VBX 양식 응용 프로그램에서 변환할 때에 호출 해야 합니다. 예:  
+ `PX_VBXFontConvert` should only be called when the control is actually being converted from a VBX form application. For example:  
   
- [!code-cpp[NVC_MFCActiveXControl #&14;](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
-[!code-cpp[NVC_MFCActiveXControl #&15;](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
+[!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

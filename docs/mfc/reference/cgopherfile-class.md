@@ -1,5 +1,5 @@
 ---
-title: "CGopherFile 클래스 | Microsoft 문서"
+title: CGopherFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gopher protocol files
-- Internet, gopher
-- CGopherFile class
+- CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
 caps.latest.revision: 23
 author: mikeblome
@@ -37,39 +35,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 40c1e385d0f58095c2aa79cc23168fc00f48ed9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86d539c706a2b0f607d771142ae03dbd86be35ee
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cgopherfile-class"></a>CGopherFile 클래스
-Gopher 서버에서 파일을 찾고 읽는 기능을 제공합니다.  
+# <a name="cgopherfile-class"></a>CGopherFile Class
+Provides the functionality to find and read files on a gopher server.  
   
 > [!NOTE]
->  클래스 `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` 및 해당 멤버 사용이 중단 된 Windows XP 플랫폼에서 작동 하지 않습니다 하지만 계속 이전 플랫폼에서 작동 합니다.  
+>  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CGopherFile : public CInternetFile  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGopherFile::CGopherFile](#cgopherfile)|`CGopherFile` 개체를 생성합니다.|  
+|[CGopherFile::CGopherFile](#cgopherfile)|Constructs a `CGopherFile` object.|  
   
-## <a name="remarks"></a>주의  
- Gopher 서비스 사용자가이 서비스는 주로 인터페이스로 메뉴 기반 정보를 찾기 위한 함수 gopher 파일에 데이터를 쓸 수 없도록 합니다. `CGopherFile` 멤버 함수 **작성**, `WriteString`, 및 `Flush` 에 대 한 구현 되지 않은 `CGopherFile`합니다. 이러한 함수를 호출는 `CGopherFile` 개체를 반환 된 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ The gopher service does not allow users to write data to a gopher file because this service functions mainly as a menu-driven interface for finding information. The `CGopherFile` member functions **Write**, `WriteString`, and `Flush` are not implemented for `CGopherFile`. Calling these functions on a `CGopherFile` object, returns a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 방법에 대 한 자세한 내용을 보려면 `CGopherFile` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
+ To learn more about how `CGopherFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -80,11 +78,11 @@ class CGopherFile : public CInternetFile
   
  `CGopherFile`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
- 이 멤버 함수를 생성 하 라고는 `CGopherFile` 개체입니다.  
+##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
+ This member function is called to construct a `CGopherFile` object.  
   
 ```  
 CGopherFile(
@@ -101,38 +99,38 @@ CGopherFile(
     DWORD_PTR dwContext);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- 에 대 한 핸들은 `HINTERNET` 파일입니다.  
+ A handle to an `HINTERNET` file.  
   
  `refLocator`  
- 에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
+ A reference to a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
  `pConnection`  
- 에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다.  
+ A pointer to a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) object.  
   
  `hSession`  
- 현재 인터넷 세션에 대 한 핸들입니다.  
+ A handle to the current Internet session.  
   
  `pstrLocator`  
- Gopher 서버를 찾는 데 사용 하는 문자열에 대 한 포인터입니다. 참조 [Gopher 세션](https://msdn.microsoft.com/library/24wz8xze.aspx) gopher 로케이터에 대 한 자세한 내용은 합니다.  
+ A pointer to a string used to locate the gopher server. See [Gopher Sessions](https://msdn.microsoft.com/library/24wz8xze.aspx) for more information about gopher locators.  
   
  *dwLocLen*  
- 바이트 수를 포함 하는 DWORD `pstrLocator`합니다.  
+ A DWORD containing the number of bytes in `pstrLocator`.  
   
  `dwContext`  
- 열려는 파일의 컨텍스트 식별자에 대 한 포인터입니다.  
+ A pointer to the context identifier of the file being opened.  
   
-### <a name="remarks"></a>주의  
- 필요한는 `CGopherFile` gopher 인터넷 세션 중 파일에서 읽을 수 있는 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You need a `CGopherFile` object to read from a file during a gopher Internet session.  
   
- 만들 없도록는 `CGopherFile` 개체에 직접. 대신, 호출 [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) gopher 서버에서 파일을 엽니다.  
+ You never create a `CGopherFile` object directly. Instead, call [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) to open a file on a gopher server.  
   
-## <a name="see-also"></a>참고 항목  
- [CInternetFile 클래스](../../mfc/reference/cinternetfile-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CInternetFile 클래스](../../mfc/reference/cinternetfile-class.md)   
- [CGopherLocator 클래스](../../mfc/reference/cgopherlocator-class.md)   
- [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md)   
- [CGopherConnection 클래스](../../mfc/reference/cgopherconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherLocator Class](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFileFind Class](../../mfc/reference/cgopherfilefind-class.md)   
+ [CGopherConnection Class](../../mfc/reference/cgopherconnection-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CPalette 클래스 | Microsoft 문서"
+title: CPalette Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,9 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPalette class
-- HPALETTE
-- color palettes, MFC
+- CPalette [MFC], CPalette
+- CPalette [MFC], AnimatePalette
+- CPalette [MFC], CreateHalftonePalette
+- CPalette [MFC], CreatePalette
+- CPalette [MFC], FromHandle
+- CPalette [MFC], GetEntryCount
+- CPalette [MFC], GetNearestPaletteIndex
+- CPalette [MFC], GetPaletteEntries
+- CPalette [MFC], ResizePalette
+- CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 caps.latest.revision: 23
 author: mikeblome
@@ -46,69 +53,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6ccd389eaf765993c59311cc1041893f2cf9fbfa
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2408f0701ee3fc7b4eb702ab024fc261443a5b40
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpalette-class"></a>CPalette 클래스
-Windows 색상표를 캡슐화합니다.  
+# <a name="cpalette-class"></a>CPalette Class
+Encapsulates a Windows color palette.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPalette : public CGdiObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPalette::CPalette](#cpalette)|생성 된 `CPalette` 연결 된 Windows 색상표가 있는 개체입니다. 초기화 해야는 `CPalette` 개체를 사용 하려면 먼저 초기화 멤버 함수 중 하나입니다.|  
+|[CPalette::CPalette](#cpalette)|Constructs a `CPalette` object with no attached Windows palette. You must initialize the `CPalette` object with one of the initialization member functions before it can be used.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cpalette:: Animatepalette](#animatepalette)|대체 항목으로 식별 되는 논리 색상표에는 `CPalette` 개체입니다. Windows 시스템 팔레트에 새 항목을 즉시 매핑되기 때문에 응용 프로그램의 클라이언트 영역을 업데이트 하 없을지 않습니다.|  
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|장치 컨텍스트에 대 한 하프톤 팔레트를 만들고 연결 하는 `CPalette` 개체입니다.|  
-|[CPalette::CreatePalette](#createpalette)|Windows 색상표를 만들고이에 연결 된 `CPalette` 개체입니다.|  
-|[CPalette::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CPalette` Windows 색상표 개체에 대 한 핸들을 지정 되 면 개체입니다.|  
-|[CPalette::GetEntryCount](#getentrycount)|논리 색상표에서 표 항목의 수를 검색 합니다.|  
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|색 값을 가장 잘 맞는 논리 팔레트에 있는 항목의 인덱스를 반환 합니다.|  
-|[CPalette::GetPaletteEntries](#getpaletteentries)|논리 색상표에서 표 항목의 범위를 검색합니다.|  
-|[CPalette::ResizePalette](#resizepalette)|지정 된 논리 색상표의 크기를 변경는 `CPalette` 개체는 지정 된 항목 수입니다.|  
-|[CPalette::SetPaletteEntries](#setpaletteentries)|논리 색상표에 있는 항목의 범위에서 RGB 색상 값 및 플래그를 설정합니다.|  
+|[CPalette::AnimatePalette](#animatepalette)|Replaces entries in the logical palette identified by the `CPalette` object. The application does not have to update its client area, because Windows maps the new entries into the system palette immediately.|  
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Creates a halftone palette for the device context and attaches it to the `CPalette` object.|  
+|[CPalette::CreatePalette](#createpalette)|Creates a Windows color palette and attaches it to the `CPalette` object.|  
+|[CPalette::FromHandle](#fromhandle)|Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.|  
+|[CPalette::GetEntryCount](#getentrycount)|Retrieves the number of palette entries in a logical palette.|  
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Returns the index of the entry in the logical palette that most closely matches a color value.|  
+|[CPalette::GetPaletteEntries](#getpaletteentries)|Retrieves a range of palette entries in a logical palette.|  
+|[CPalette::ResizePalette](#resizepalette)|Changes the size of the logical palette specified by the `CPalette` object to the specified number of entries.|  
+|[CPalette::SetPaletteEntries](#setpaletteentries)|Sets RGB color values and flags in a range of entries in a logical palette.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[HPALETTE CPalette::operator](#operator_hpalette)|반환 된 `HPALETTE` 연결할는 `CPalette`합니다.|  
+|[CPalette::operator HPALETTE](#operator_hpalette)|Returns the `HPALETTE` attached to the `CPalette`.|  
   
-## <a name="remarks"></a>주의  
- 색상표 색 출력 장치 (예: 디스플레이 장치) 및 응용 프로그램 사이의 인터페이스를 제공 합니다. 인터페이스는 심각 하 게 다른 응용 프로그램에서 표시 되는 색상을 방해 하지 않고 출력 장치의 색 기능을 모두 활용 하려면 응용 프로그램을 허용 합니다. Windows 사용 되는 색을 결정 하는 응용 프로그램의 논리 색상표 (필요한 색 목록) 및 (정의 하는 사용 가능한 색) 시스템 색상표를 사용 합니다.  
+## <a name="remarks"></a>Remarks  
+ A palette provides an interface between an application and a color output device (such as a display device). The interface allows the application to take full advantage of the color capabilities of the output device without severely interfering with the colors displayed by other applications. Windows uses the application's logical palette (a list of needed colors) and the system palette (which defines available colors) to determine the colors used.  
   
- A `CPalette` 개체는 개체에서 참조 하는 색상표를 조작에 대 한 멤버 함수를 제공 합니다. 생성 한 `CPalette` 개체를 실제 팔레트 그래픽 장치 인터페이스 (GDI) 개체를 만들고 해당 항목 및 기타 속성을 조작 하는 멤버 함수를 사용 합니다.  
+ A `CPalette` object provides member functions for manipulating the palette referred to by the object. Construct a `CPalette` object and use its member functions to create the actual palette, a graphics device interface (GDI) object, and to manipulate its entries and other properties.  
   
- 사용 하 여 대 한 자세한 내용은 `CPalette`, 참조 [그래픽 개체](../../mfc/graphic-objects.md)합니다.  
+ For more information on using `CPalette`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CPalette`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="animatepalette"></a>Cpalette:: Animatepalette  
- 항목에 연결 된 논리 팔레트에서 대체는 `CPalette` 개체입니다.  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
+ Replaces entries in the logical palette attached to the `CPalette` object.  
   
 ```  
 void AnimatePalette(
@@ -117,110 +124,110 @@ void AnimatePalette(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 애니메이션 효과를 낼 색상표의 첫 번째 항목을 지정 합니다.  
+ Specifies the first entry in the palette to be animated.  
   
  `nNumEntries`  
- 애니메이션을 적용할 팔레트에서 항목의 수를 지정 합니다.  
+ Specifies the number of entries in the palette to be animated.  
   
  `lpPaletteColors`  
- 배열의 첫 번째 멤버를 가리킵니다 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 로 식별 되는 색상표 항목을 대체 하는 구조 `nStartIndex` 및 `nNumEntries`합니다.  
+ Points to the first member of an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) structures to replace the palette entries identified by `nStartIndex` and `nNumEntries`.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램을 호출할 때 `AnimatePalette`, 없기의 클라이언트 영역을 업데이트 하려면 Windows 시스템 팔레트에 새 항목을 즉시 매핑되기 때문에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ When an application calls `AnimatePalette`, it does not have to update its client area, because Windows maps the new entries into the system palette immediately.  
   
- `AnimatePalette` 함수는 사용 하 여 항목을 변경만 **PC_RESERVED** 플래그가 설정에 해당 **palPaletteEntry** 의 멤버는 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 구조에 연결 된는 `CPalette` 개체입니다. 참조 **LOGPALETTE** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 이 구조에 대 한 자세한 내용은 합니다.  
+ The `AnimatePalette` function will only change entries with the **PC_RESERVED** flag set in the corresponding **palPaletteEntry** member of the [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that is attached to the `CPalette` object. See **LOGPALETTE** in the Windows SDK for more information about this structure.  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
- `CPalette` 개체를 생성합니다.  
+##  <a name="cpalette"></a>  CPalette::CPalette  
+ Constructs a `CPalette` object.  
   
 ```  
 CPalette();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 하기 전에 개체에 연결 된 색상표가 `CreatePalette` 를 하나에 연결 합니다.  
+### <a name="remarks"></a>Remarks  
+ The object has no attached palette until you call `CreatePalette` to attach one.  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
- 장치 컨텍스트에 대 한 하프톤 팔레트를 만듭니다.  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
+ Creates a halftone palette for the device context.  
   
 ```  
 BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 장치 컨텍스트를 식별합니다.  
+ Identifies the device context.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 장치 컨텍스트에의 늘이기 모드로 설정 된 경우 응용 프로그램에서 하프톤 팔레트를 만들어야 **하프톤**합니다. 반환 된 논리적 하프톤 팔레트는 [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) 멤버 함수는 다음 선택 하 고 실현 하기 전에 장치 컨텍스트로 [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) 또는 [StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ An application should create a halftone palette when the stretching mode of a device context is set to **HALFTONE**. The logical halftone palette returned by the [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) member function should then be selected and realized into the device context before the [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) or [StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) function is called.  
   
- 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 에 대 한 자세한 내용은 `CreateHalftonePalette` 및 **StretchDIBits**합니다.  
+ See the Windows SDK for more information about `CreateHalftonePalette` and **StretchDIBits**.  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
- 초기화는 `CPalette` Windows 논리 색상표를 만들고 연결 하 여 개체는 `CPalette` 개체입니다.  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
+ Initializes a `CPalette` object by creating a Windows logical color palette and attaching it to the `CPalette` object.  
   
 ```  
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpLogPalette`  
- 가리키는 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 논리 색상표의 색에 대 한 정보가 포함 된 구조체입니다.  
+ Points to a [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that contains information about the colors in the logical palette.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 에 대 한 자세한 내용은 **LOGPALETTE** 구조입니다.  
+### <a name="remarks"></a>Remarks  
+ See the Windows SDK for more information about the **LOGPALETTE** structure.  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
- 에 대 한 포인터를 반환 합니다.는 `CPalette` Windows 색상표 개체에 대 한 핸들을 지정 되 면 개체입니다.  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
+ Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.  
   
 ```  
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hPalette`  
- Windows GDI 색상표 핸들입니다.  
+ A handle to a Windows GDI color palette.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CPalette` 성공 하 고 그렇지 않으면 개체 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CPalette` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 하는 경우는 `CPalette` 개체는 임시 Windows 색상표에 이미 연결 되지 않은 `CPalette` 개체를 만들어 연결 합니다. 이 임시 `CPalette` 개체는 다음에 응용 프로그램의 경우 이벤트 루프에서 유휴 시간에, 될 때까지 모든 임시 그래픽 그 개체가 삭제 되만 유효 합니다. 즉, 임시 개체는 하나의 창 메시지를 처리 하는 동안에 유효 합니다.  
+### <a name="remarks"></a>Remarks  
+ If a `CPalette` object is not already attached to the Windows palette, a temporary `CPalette` object is created and attached. This temporary `CPalette` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
- 지정 된 논리 색상표에 있는 항목의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
+ Call this member function to retrieve the number of entries in a given logical palette.  
   
 ```  
 int GetEntryCount();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 논리 색상표에 있는 항목의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ Number of entries in a logical palette.  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
- 지정 된 색 값을 가장 잘 맞는 논리 팔레트에 있는 항목의 인덱스를 반환 합니다.  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
+ Returns the index of the entry in the logical palette that most closely matches the specified color value.  
   
 ```  
 UINT GetNearestPaletteIndex(COLORREF crColor) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 일치 여부를 지정 합니다.  
+ Specifies the color to be matched.  
   
-### <a name="return-value"></a>반환 값  
- 논리 색상표에 있는 항목의 인덱스입니다. 항목에 지정 된 색을 거의 대부분 동일한 색을 포함 합니다.  
+### <a name="return-value"></a>Return Value  
+ The index of an entry in a logical palette. The entry contains the color that most nearly matches the specified color.  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
- 논리 색상표에서 표 항목의 범위를 검색합니다.  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
+ Retrieves a range of palette entries in a logical palette.  
   
 ```  
 UINT GetPaletteEntries(
@@ -229,55 +236,55 @@ UINT GetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 검색할 논리 색상표의 첫 번째 항목을 지정 합니다.  
+ Specifies the first entry in the logical palette to be retrieved.  
   
  `nNumEntries`  
- 검색할 논리 팔레트에서 항목의 수를 지정 합니다.  
+ Specifies the number of entries in the logical palette to be retrieved.  
   
  `lpPaletteColors`  
- 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 색상표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 `nNumEntries`합니다.  
+ Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
   
-### <a name="return-value"></a>반환 값  
- 논리 팔레트;에서 검색 된 항목의 수 함수가 실패 하는 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of entries retrieved from the logical palette; 0 if the function failed.  
   
-##  <a name="operator_hpalette"></a>HPALETTE CPalette::operator  
- 이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CPalette` 개체입니다.  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
+ Use this operator to get the attached Windows GDI handle of the `CPalette` object.  
   
 ```  
 operator HPALETTE() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 Windows GDI 개체에 대 한 핸들 표현는 `CPalette` 개체; 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CPalette` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 이 연산자는 직접 사용을 지원 하려면 캐스팅 연산자는 `HPALETTE` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HPALETTE` object.  
   
- 그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
- 에 연결 된 논리 색상표의 크기를 변경 된 `CPalette` 개체에서 지정한 항목의 수를 `nNumEntries`합니다.  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
+ Changes the size of the logical palette attached to the `CPalette` object to the number of entries specified by `nNumEntries`.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nNumEntries`  
- 크기가 조정 된 후에 색상표의 항목 수를 지정 합니다.  
+ Specifies the number of entries in the palette after it has been resized.  
   
-### <a name="return-value"></a>반환 값  
- 색상표 성공적으로 크기를 조정한; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the palette was successfully resized; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램을 호출 하는 경우 `ResizePalette` 팔레트의 크기를 줄이려면 크기가 조정 된 색상표에 남아 있는 항목은 변경 되지 않았습니다. 응용 프로그램을 호출 하는 경우 `ResizePalette` 색상표를 확대 하려면 추가 색상표 항목 검정 (빨간색, 녹색 및 파란색 값은 모두 0)으로 설정 되 고 모든 추가 항목에 대 한 플래그는 0으로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If an application calls `ResizePalette` to reduce the size of the palette, the entries remaining in the resized palette are unchanged. If the application calls `ResizePalette` to enlarge the palette, the additional palette entries are set to black (the red, green, and blue values are all 0), and the flags for all additional entries are set to 0.  
   
- Windows API에 대 한 자세한 내용은 `ResizePalette`, 참조 [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the Windows API `ResizePalette`, see [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) in the Windows SDK.  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
- 논리 색상표에 있는 항목의 범위에서 RGB 색상 값 및 플래그를 설정합니다.  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
+ Sets RGB color values and flags in a range of entries in a logical palette.  
   
 ```  
 UINT SetPaletteEntries(
@@ -286,28 +293,28 @@ UINT SetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 설정에 있는 논리 팔레트의 첫 번째 항목을 지정 합니다.  
+ Specifies the first entry in the logical palette to be set.  
   
  `nNumEntries`  
- 설정에 있는 논리 팔레트의 항목 수를 지정 합니다.  
+ Specifies the number of entries in the logical palette to be set.  
   
  `lpPaletteColors`  
- 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 색상표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 `nNumEntries`합니다.  
+ Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
   
-### <a name="return-value"></a>반환 값  
- 논리 팔레트;에서 설정 하는 항목 수 함수가 실패 하는 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of entries set in the logical palette; 0 if the function failed.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램이 호출 하는 경우 논리 색상표 장치 컨텍스트에서 선택 됩니다 `SetPaletteEntries`, 변경 내용이 적용 되지 것입니다 응용 프로그램이 호출 될 때까지 [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)합니다.  
+### <a name="remarks"></a>Remarks  
+ If the logical palette is selected into a device context when the application calls `SetPaletteEntries`, the changes will not take effect until the application calls [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Windows 구조에 대 한 자세한 내용은 **PALETTEENTRY**, 참조 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the Windows structure **PALETTEENTRY**, see [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 DIBLOOK](../../visual-cpp-samples.md)   
- [CGdiObject 클래스](../../mfc/reference/cgdiobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CPalette::GetPaletteEntries](#getpaletteentries)   
  [CPalette::SetPaletteEntries](#setpaletteentries)
 

@@ -1,5 +1,5 @@
 ---
-title: "CSocket 클래스 | Microsoft 문서"
+title: CSocket Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,10 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WinSock CSocket class
-- CSocket class
-- SOCKET handle
-- sockets classes
+- CSocket [MFC], CSocket
+- CSocket [MFC], Attach
+- CSocket [MFC], CancelBlockingCall
+- CSocket [MFC], Create
+- CSocket [MFC], FromHandle
+- CSocket [MFC], IsBlocking
+- CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 caps.latest.revision: 30
 author: mikeblome
@@ -44,120 +47,120 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 451ea100dbf02e365204fe4fdf1c380e855d8231
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de2adfa1ade231b08c0e66e0fd5e40a1fa620060
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csocket-class"></a>CSocket 클래스
-파생 되며 `CAsyncSocket`, Windows 소켓 API의 해당 캡슐화를 상속 하며 보다 높은 수준의 추상화를 나타내는 `CAsyncSocket` 개체입니다.  
+# <a name="csocket-class"></a>CSocket Class
+Derives from `CAsyncSocket`, inherits its encapsulation of the Windows Sockets API, and represents a higher level of abstraction than that of a `CAsyncSocket` object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSocket : public CAsyncSocket  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::CSocket](#csocket)|`CSocket` 개체를 생성합니다.|  
+|[CSocket::CSocket](#csocket)|Constructs a `CSocket` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|연결을 **소켓** 에 대 한 핸들을 `CSocket` 개체입니다.|  
-|[CSocket::CancelBlockingCall](#cancelblockingcall)|현재 진행 중인 차단 호출을 취소 합니다.|  
-|[CSocket::Create](#create)|소켓을 만듭니다.|  
-|[CSocket::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CSocket` 지정 된 개체는 **소켓** 처리 합니다.|  
-|[CSocket::IsBlocking](#isblocking)|차단 호출 진행 중인지 여부를 결정 합니다.|  
+|[CSocket::Attach](#attach)|Attaches a **SOCKET** handle to a `CSocket` object.|  
+|[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancels a blocking call that is currently in progress.|  
+|[CSocket::Create](#create)|Creates a socket.|  
+|[CSocket::FromHandle](#fromhandle)|Returns a pointer to a `CSocket` object, given a **SOCKET** handle.|  
+|[CSocket::IsBlocking](#isblocking)|Determines whether a blocking call is in progress.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::OnMessagePending](#onmessagepending)|차단 호출이 끝나기를 기다리는 동안 보류 된 메시지는 처리 하기 위해 호출 합니다.|  
+|[CSocket::OnMessagePending](#onmessagepending)|Called to process pending messages while waiting for a blocking call to complete.|  
   
-## <a name="remarks"></a>주의  
- `CSocket`클래스와 함께 사용 `CSocketFile` 및 `CArchive` 를 보내고 받는 데이터를 관리할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ `CSocket` works with classes `CSocketFile` and `CArchive` to manage the sending and receiving of data.  
   
- A `CSocket` 개체에는 차단의 동기 작업 하는 데 필수적인 `CArchive`합니다. 와 같은 기능을 차단 `Receive`, `Send`, `ReceiveFrom`, `SendTo`, 및 `Accept` (에서 상속 되는 모든 `CAsyncSocket`)을 반환 하지 않는 `WSAEWOULDBLOCK` 에 오류가 `CSocket`합니다. 대신 이러한 함수는 작업이 완료 될 때까지 기다립니다. 오류가 발생 하 여 원래 호출 끝납니다 또한 `WSAEINTR` 경우 `CancelBlockingCall` 이러한 함수 중 하나를 차단 하는 동안 호출 됩니다.  
+ A `CSocket` object also provides blocking, which is essential to the synchronous operation of `CArchive`. Blocking functions, such as `Receive`, `Send`, `ReceiveFrom`, `SendTo`, and `Accept` (all inherited from `CAsyncSocket`), do not return a `WSAEWOULDBLOCK` error in `CSocket`. Instead, these functions wait until the operation completes. Additionally, the original call will terminate with the error `WSAEINTR` if `CancelBlockingCall` is called while one of these functions is blocking.  
   
- 사용 하는 `CSocket` 개체, 생성자를 호출 다음 호출 `Create` 내부 만들려는 `SOCKET` 처리 (형식 `SOCKET`). 기본 매개 변수 `Create` 는 스트림 소켓을 만들기와 소켓을 사용 하지 않는 경우에 `CArchive` 개체 대신 데이터 그램 소켓 만들거나 서버 소켓을 만들지 특정 포트에 바인딩 매개 변수를 지정할 수 있습니다. 사용 하 여 클라이언트 소켓에 연결 `Connect` 클라이언트 쪽 및 `Accept` 서버 쪽입니다. 다음 만듭니다는 `CSocketFile` 개체와 연결 하는 `CSocket` 개체는 `CSocketFile` 생성자입니다. 다음으로 만듭니다는 `CArchive` 보내기에 대 한 개체 및 필요에 따라 데이터를 수신 하는 것에 대 한 다음 연결 하는 사용 하 여는 `CSocketFile` 개체는 `CArchive` 생성자입니다. 통신 완료 되 면 삭제는 `CArchive`, `CSocketFile`, 및 `CSocket` 개체입니다. `SOCKET` 데이터 형식의 문서에 설명 되어 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md)합니다.  
+ To use a `CSocket` object, call the constructor, then call `Create` to create the underlying `SOCKET` handle (type `SOCKET`). The default parameters of `Create` create a stream socket, but if you are not using the socket with a `CArchive` object, you can specify a parameter to create a datagram socket instead, or bind to a specific port to create a server socket. Connect to a client socket using `Connect` on the client side and `Accept` on the server side. Then create a `CSocketFile` object and associate it to the `CSocket` object in the `CSocketFile` constructor. Next, create a `CArchive` object for sending and one for receiving data (as needed), then associate them with the `CSocketFile` object in the `CArchive` constructor. When communications are complete, destroy the `CArchive`, `CSocketFile`, and `CSocket` objects. The `SOCKET` data type is described in the article [Windows Sockets: Background](../../mfc/windows-sockets-background.md).  
   
- 사용 하는 경우 `CArchive` 와 `CSocketFile` 및 `CSocket`, 상황이 발생할 수 있습니다 여기서 `CSocket::Receive` 루프로 실행 (여 `PumpMessages(FD_READ)`) 요청된 된 양의 바이트에 대 한 대기 합니다. 이 Windows 소켓 작업할 알림 당 하나의 recv 호출만 허용 하지만 `CSocketFile` 및 `CSocket` 작업할 당 여러 recv 호출을 허용 합니다. 읽을 데이터가 없을 때에 작업할을 받게 되 면 응용 프로그램이 중단 됩니다. 다른 작업할 만들기란 응용 프로그램이 소켓을 통해 통신을 중지 합니다.  
+ When you use `CArchive` with `CSocketFile` and `CSocket`, you might encounter a situation where `CSocket::Receive` enters a loop (by `PumpMessages(FD_READ)`) waiting for the requested amount of bytes. This is because Windows sockets allow only one recv call per FD_READ notification, but `CSocketFile` and `CSocket` allow multiple recv calls per FD_READ. If you get an FD_READ when there is no data to read, the application hangs. If you never get another FD_READ, the application stops communicating over the socket.  
   
- 다음과 같이이 문제를 해결할 수 있습니다. 에 `OnReceive` socket 클래스, 호출의 메서드로 `CAsyncSocket::IOCtl(FIONREAD, ...)` 호출 하기 전에 `Serialize` 소켓에서 읽이 예상된 데이터 TCP 패킷 하나의 (네트워크 매체에 일반적으로 1096 바이트 이상 최대 전송 단위)의 크기를 초과 하는 경우 메시지 클래스의 메서드. 사용 가능한 데이터의 크기 보다 작은 경우, 모든 데이터를 받고 다음 읽기 작업을 시작 될 때까지 기다립니다.  
+ You can resolve this problem as follows. In the `OnReceive` method of your socket class, call `CAsyncSocket::IOCtl(FIONREAD, ...)` before you call the `Serialize` method of your message class when the expected data to be read from the socket exceeds the size of one TCP packet (maximum transmission unit of the network medium, usually at least 1096 bytes). If the size of the available data is less than needed, wait for all the data to be received and only then start the read operation.  
   
- 다음 예에서 `m_dwExpected` 를 받는 사용자가 기대 하는 바이트의 대략적인 수입니다. 선언 하면 다른 곳에서 코드에 가정 됩니다.  
+ In the following example, `m_dwExpected` is the approximate number of bytes that the user expects to receive. It is assumed that you declare it elsewhere in your code.  
   
- [!code-cpp[NVC_MFCSocketThread #&4;](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]  
   
 > [!NOTE]
->  보조 스레드는 정적으로 연결 된 MFC 응용 프로그램에서 MFC 소켓을 사용 하는 경우 호출 해야 `AfxSocketInit` 소켓 라이브러리를 초기화할 수 소켓을 사용 하 여 각 스레드에서 합니다. 기본적으로 `AfxSocketInit` 기본 스레드에만 호출 됩니다.  
+>  When using MFC sockets in secondary threads in a statically linked MFC application, you must call `AfxSocketInit` in each thread that uses sockets to initialize the socket libraries. By default, `AfxSocketInit` is called only in the primary thread.  
   
- 자세한 내용은 참조 [MFC의 Windows 소켓](../../mfc/windows-sockets-in-mfc.md), [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows 소켓: 아카이브 작업을 사용 하는 소켓 어떻게](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows 소켓: 작업 순서](../../mfc/windows-sockets-sequence-of-operations.md), [Windows 소켓: 소켓을 사용 하 여 보관 파일 예제](../../mfc/windows-sockets-example-of-sockets-using-archives.md)합니다.  
+ For more information, see [Windows Sockets in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets: How Sockets with Archives Work](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets: Sequence of Operations](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets: Example of Sockets Using Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAsyncSocket](../../mfc/reference/casyncsocket-class.md)  
   
  `CSocket`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxsock.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
- 연결 하려면이 멤버 함수를 호출 하는 `hSocket` 에 대 한 핸들을 `CSocket` 개체.  
+##  <a name="attach"></a>  CSocket::Attach  
+ Call this member function to attach the `hSocket` handle to a `CSocket` object.  
   
 ```  
 BOOL Attach(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 소켓에 대 한 핸들을 포함합니다.  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하는 경우&0;이 아닙니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful.  
   
-### <a name="remarks"></a>주의  
- **소켓** 핸들 개체에 저장 됩니다 [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) 데이터 멤버입니다.  
+### <a name="remarks"></a>Remarks  
+ The **SOCKET** handle is stored in the object's [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) data member.  
   
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCSocketThread #&1;](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSocketThread#1](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
   
- [!code-cpp[NVC_MFCSocketThread #&2;](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#2](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCSocketThread #&3;](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
- 진행 중인 블로킹 호출을 취소 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
+ Call this member function to cancel a blocking call currently in progress.  
   
 ```  
 void CancelBlockingCall();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는이 소켓에 대 한 모든 미해결 차단 작업을 취소합니다. 원래 차단 호출 오류와 가능한 한 빨리 끝납니다 **WSAEINTR**합니다.  
+### <a name="remarks"></a>Remarks  
+ This function cancels any outstanding blocking operation for this socket. The original blocking call will terminate as soon as possible with the error **WSAEINTR**.  
   
- 차단의 경우 **연결** 작업의 경우 Windows 소켓 구현이 끝납니다 차단 호출 가능한 만들었지만 하지 못할 때까지 연결에 완료 (다음 다시 설정 되었습니다) 출시 될 소켓 리소스에 대 한 즉시 또는 시간 초과 합니다. 이 응용 프로그램에는 즉시 새 소켓 (사용할 수 없는 소켓 경우)를 열거나 같은 피어에 연결 하려고 하는 경우에 뚜렷하게 나타날 수 있습니다.  
+ In the case of a blocking **Connect** operation, the Windows Sockets implementation will terminate the blocking call as soon as possible, but it may not be possible for the socket resources to be released until the connection has completed (and then been reset) or timed out. This is likely to be noticeable only if the application immediately tries to open a new socket (if no sockets are available), or to connect to the same peer.  
   
- 이외의 다른 모든 작업을 취소 **Accept** 소켓 확정 상태로 둘 수 있습니다. 소켓에서 차단 작업을 취소 하는 응용 프로그램을 응용 프로그램에서 소켓을 수행할 수 있는 것에 참조할 수 있는 유일한 작업 인지에 대 한 호출 **닫기**일부 Windows 소켓 구현에서 다른 작업이 실행 될 수도 있지만, 합니다. 응용 프로그램에 대 한 최대 이식성을 원하는 경우 취소 한 후 작업 수행에 종속 되지 않도록 주의 해야 합니다.  
+ Canceling any operation other than **Accept** can leave the socket in an indeterminate state. If an application cancels a blocking operation on a socket, the only operation that the application can depend on being able to perform on the socket is a call to **Close**, although other operations may work on some Windows Sockets implementations. If you desire maximum portability for your application, you must be careful not to depend on performing operations after a cancel.  
   
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
- 호출 된 **만들기** Windows 소켓을 만들고 연결 하는 소켓 개체를 생성 한 후 멤버 함수입니다.  
+##  <a name="create"></a>  CSocket::Create  
+ Call the **Create** member function after constructing a socket object to create the Windows socket and attach it.  
   
 ```  
 BOOL Create(
@@ -166,95 +169,95 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- MFC 포트를 선택 하려는 경우에 소켓 또는 0 함께 사용 되는 특정 포트입니다.  
+ A particular port to be used with the socket, or 0 if you want MFC to select a port.  
   
  `nSocketType`  
- **SOCK_STREAM** 또는 **SOCK_DGRAM**합니다.  
+ **SOCK_STREAM** or **SOCK_DGRAM**.  
   
  `lpszSocketAddress`  
- "128.56.22.8" 등의 점으로 구분 된 숫자를 연결된 된 소켓의 네트워크 주소를 포함 하는 문자열에 대 한 포인터입니다. 전달 된 **NULL** 이 매개 변수를 나타내는 문자열는 **CSocket** 인스턴스는 모든 네트워크 인터페이스에서 클라이언트 활동에 대 한 수신 대기 해야 합니다.  
+ A pointer to a string containing the network address of the connected socket, a dotted number such as "128.56.22.8". Passing the **NULL** string for this parameter indicates the **CSocket** instance should listen for client activity on all network interfaces.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 `GetLastError`합니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling `GetLastError`.  
   
-### <a name="remarks"></a>주의  
- **만들** 다음 호출 **바인딩할** 소켓을 바인딩하지 지정된 된 주소에 있습니다. 다음과 같은 소켓 유형이 지원 됩니다.  
+### <a name="remarks"></a>Remarks  
+ **Create** then calls **Bind** to bind the socket to the specified address. The following socket types are supported:  
   
-- **SOCK_STREAM** 신뢰할 수 있는 양방향 연결 기반 바이트 스트림의 시퀀스를 제공 합니다. 인터넷 주소 패밀리에 대해 전송 제어 프로토콜 (TCP)을 사용합니다.  
+- **SOCK_STREAM** Provides sequenced, reliable, two-way, connection-based byte streams. Uses Transmission Control Protocol (TCP) for the Internet address family.  
   
-- **SOCK_DGRAM** 는 최대 길이가 고정된 (일반적으로 작은)의 연결 없는, 안정적이 지 않은 버퍼는 데이터 그램을 지원 합니다. 인터넷 주소 패밀리에 대해 사용자 데이터 그램 프로토콜 (UDP)을 사용합니다. 이 옵션을 사용 하려면 사용 하면 안 된 소켓을 `CArchive` 개체입니다.  
+- **SOCK_DGRAM** Supports datagrams, which are connectionless, unreliable buffers of a fixed (typically small) maximum length. Uses User Datagram Protocol (UDP) for the Internet address family. To use this option, you must not use the socket with a `CArchive` object.  
   
     > [!NOTE]
-    >  **Accept** 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 **Accept**합니다. 사항으로이 소켓 개체가 범위를 연결이 닫힙니다 사라지면 합니다. 호출 하지 마십시오 **만들기** 이 새 소켓 개체에 대 한 합니다.  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. Keep in mind that if this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object.  
   
- 스트림 및 데이터 그램 소켓에 대 한 자세한 내용은 문서를 참조 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md), [Windows 소켓: 포트 및 소켓 주소](../../mfc/windows-sockets-ports-and-socket-addresses.md), 및 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information about stream and datagram sockets, see the articles [Windows Sockets: Background](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports and Socket Addresses](../../mfc/windows-sockets-ports-and-socket-addresses.md), and [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
- `CSocket` 개체를 생성합니다.  
+##  <a name="csocket"></a>  CSocket::CSocket  
+ Constructs a `CSocket` object.  
   
 ```  
 CSocket();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 해야 하는 생성 후는 **만들기** 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ After construction, you must call the **Create** member function.  
   
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
- 에 대 한 포인터를 반환 합니다.는 `CSocket` 개체입니다.  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
+ Returns a pointer to a `CSocket` object.  
   
 ```  
 static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 소켓에 대 한 핸들을 포함합니다.  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CSocket` 개체 또는 **NULL** 없을 경우 없는 `CSocket` 개체에 연결 된 `hSocket`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CSocket` object, or **NULL** if there is no `CSocket` object attached to `hSocket`.  
   
-### <a name="remarks"></a>주의  
- 지정 된 경우는 **소켓** 경우 처리는 `CSocket` 멤버 함수는 반환 된 핸들에는 개체가 연결 되지 않은, **NULL** 임시 개체를 만들지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ When given a **SOCKET** handle, if a `CSocket` object is not attached to the handle, the member function returns **NULL** and does not create a temporary object.  
   
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
- 차단 호출 진행에서 중인지 확인 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
+ Call this member function to determine if a blocking call is in progress.  
   
 ```  
 BOOL IsBlocking();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소켓; 차단 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the socket is blocking; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
- Windows에서 특정 메시지를 확인 하 고 프로그램 소켓에 응답할 수를이 멤버 함수를 재정의 합니다.  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
+ Override this member function to look for particular messages from Windows and respond to them in your socket.  
   
 ```  
 virtual BOOL OnMessagePending();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메시지가 처리 된 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was handled; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 고급 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This is an advanced overridable.  
   
- 프레임 워크 호출 `OnMessagePending` 소켓은 응용 프로그램에 관심 있는 메시지를 처리 하는 기회를 제공 하려면 Windows 메시지를 펌프 하는 동안. 사용 하는 방법에 대 한 예제 `OnMessagePending`, 문서를 참조 하십시오 [Windows 소켓: 소켓 클래스에서 파생](../../mfc/windows-sockets-deriving-from-socket-classes.md)합니다.  
+ The framework calls `OnMessagePending` while the socket is pumping Windows messages to give you an opportunity to deal with messages of interest to your application. For examples of how you might use `OnMessagePending`, see the article [Windows Sockets: Deriving from Socket Classes](../../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
- 자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-## <a name="see-also"></a>참고 항목  
- [CAsyncSocket 클래스](../../mfc/reference/casyncsocket-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CAsyncSocket 클래스](../../mfc/reference/casyncsocket-class.md)   
- [CSocketFile 클래스](../../mfc/reference/csocketfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CAsyncSocket Class](../../mfc/reference/casyncsocket-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CAsyncSocket Class](../../mfc/reference/casyncsocket-class.md)   
+ [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
 

@@ -1,123 +1,139 @@
 ---
-title: "MFC ActiveX 컨트롤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC ActiveX Controls (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤[C++], MFC"
-  - "COleControl 클래스, MFC ActiveX 컨트롤"
-  - "컨테이너[C++], MFC ActiveX 컨트롤"
-  - "디스패치 맵, MFC ActiveX 컨트롤"
-  - "이벤트[C++], ActiveX 컨트롤"
-  - "MFC ActiveX 컨트롤[C++]"
-  - "MFC ActiveX 컨트롤[C++], 활성/비활성 상태"
-  - "MFC ActiveX 컨트롤[C++], 컨테이너"
-  - "MFC ActiveX 컨트롤[C++], serialize"
-  - "serialization[C++], MFC ActiveX 컨트롤"
+title: MFC ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC ActiveX Controls (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleControl class [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], MFC
+- containers [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], serializing
+- MFC ActiveX controls [MFC], containers
+- serialization [MFC], MFC ActiveX controls
+- dispatch maps [MFC]], for MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- events [MFC], ActiveX controls
+- MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# MFC ActiveX 컨트롤
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a584f1787c8ee5a3bb28cb3b336a138cb9f56f54
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-ActiveX 컨트롤은 광범위한 OLE 기능을 지원하고 다양한 소프트웨어의 요구 사항에 맞게 사용자 지정할 수 있는 COM\(구성 요소 개체 모델\) 기반의 다시 사용 가능한 소프트웨어 구성 요소입니다.  ActiveX 컨트롤은 일반적인 ActiveX 컨트롤 컨테이너와 인터넷의 World Wide Web 웹 페이지 모두에 사용할 수 있도록 디자인되었습니다.  여기에 설명된 MFC나 [액티브 템플릿 라이브러리 \(ATL\)](../atl/active-template-library-atl-concepts.md)로 ActiveX 컨트롤을 만들 수 있습니다.  
+---
+# <a name="mfc-activex-controls"></a>MFC ActiveX Controls
+An ActiveX control is a reusable software component based on the Component Object Model (COM) that supports a wide variety of OLE functionality and can be customized to fit many software needs. ActiveX controls are designed for use both in ordinary ActiveX control containers and on the Internet, in World Wide Web pages. You can create ActiveX controls either with MFC, described here, or with the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- ActiveX 컨트롤은 해당 창에서 이벤트\(예: 마우스 클릭\)에 응답하여 호출될 수 있으며, 자동화 객체와 유사한 속성과 메서드를 포함한 인터페이스를 통해 관리할 수 있습니다.  
+ An ActiveX control can draw itself in its own window, respond to events (such as mouse clicks), and be managed through an interface that includes properties and methods similar to those in Automation objects.  
   
- 이러한 컨트롤은 데이터베이스 접근, 데이터 모니터링 또는 그래프 등의 여러 가지 용도로 개발될 수 있습니다.  ActiveX 컨트롤은 이식성 외에도 이전에는 가능하지 않았던 기존 OLE 컨테이너와의 호환성과, 기존 OLE 컨테이너 메뉴와의 통합 기능 등을 지원합니다.  또한 ActiveX 컨트롤은 컨트롤이 읽기\/쓰기 속성 및 컨트롤 사용자가 호출할 수 있는 메서드 집합을 노출하도록 허용하는 자동화 기능을 완벽하게 지원합니다.  
+ These controls can be developed for many uses, such as database access, data monitoring, or graphing. Besides their portability, ActiveX controls support features previously not available to ActiveX controls, such as compatibility with existing OLE containers and the ability to integrate their menus with the OLE container menus. In addition, an ActiveX control fully supports Automation, which allows the control to expose read\write properties and a set of methods that can be called by the control user.  
   
- 창 없는 ActiveX 컨트롤과 활성화 될 때만 창을 만드는 컨트롤을 만들 수 있습니다.  창 없는 컨트롤은 응용 프로그램의 표시 속도를 높이며 투명하고 사각형 모양이 아닌 컨트롤을 만들 수 있게 합니다.  ActiveX 컨트롤 속성을 비동기적으로 불러올 수도 있습니다.  
+ You can create windowless ActiveX controls and controls that only create a window when they become active. Windowless controls speed up the display of your application and make it possible to have transparent and nonrectangular controls. You can also load ActiveX control properties asynchronously.  
   
- ActiveX 컨트롤은 OLE 컨테이너에서 사용할 수 있는 in\-process 서버 \(일반적으로 작은 개체\) 로 구현됩니다.  ActiveX 컨트롤의 전체 기능은 ActiveX 컨트롤을 인식하도록 설계된 OLE 컨테이너 내에서 사용하는 경우에 사용할 수 있음을 주의하십시오.  ActiveX 컨트롤을 지원하는 컨테이너 목록을 보려면 [ActiveX 컨트롤을 다른 응용 프로그램에 포팅](../mfc/containers-for-activex-controls.md)을 참고하십시오.  이 컨테이너 형식\(이하 "컨트롤 컨테이너"\)는 컨트롤의 속성 및 메서드를 사용하여 ActiveX 컨트롤을 작동할 수 있으며, 이벤트의 양식으로 ActiveX 컨트롤에서 알림을 받습니다.  다음 구조도는 이 상호작용을 보여줍니다.  
+ An ActiveX control is implemented as an in-process server (typically a small object) that can be used in any OLE container. Note that the full functionality of an ActiveX control is available only when used within an OLE container designed to be aware of ActiveX controls. See [Port ActiveX Controls to Other Applications](../mfc/containers-for-activex-controls.md) for a list of containers that support ActiveX controls. This container type, hereafter called a "control container," can operate an ActiveX control by using the control's properties and methods, and receives notifications from the ActiveX control in the form of events. The following figure demonstrates this interaction.  
   
- ![ActiveX 컨트롤 컨테이너 및 컨트롤의 상호 작용](../mfc/media/vc37221.png "vc37221")  
-ActiveX 컨트롤 컨테이너와 창 있는 ActiveX 컨트롤 간의 상호 작용  
+ ![Interplay of ActiveX control container and control](../mfc/media/vc37221.gif "vc37221")  
+Interaction Between an ActiveX Control Container and a Windowed ActiveX Control  
   
- ActiveX 컨트롤 최적화에 대한 최신 정보를 보려면 [MFC ActiveX 컨트롤: 최적화](../mfc/mfc-activex-controls-optimization.md)를 참조하십시오.  
+ For some recent information on optimizing your ActiveX controls, see [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- MFC ActiveX 컨트롤을 만들기 위해서는 [ActiveX 컨트롤 프로젝트 만들기](../mfc/reference/mfc-activex-control-wizard.md)를 참조하십시오.  
+ To create an MFC ActiveX control, see [Create an ActiveX control project](../mfc/reference/mfc-activex-control-wizard.md).  
   
- 자세한 내용은 다음을 참조하십시오.  
+ For more information, see:  
   
--   [ActiveX 컨트롤 컨테이너](../mfc/activex-control-containers.md)  
+-   [ActiveX Control Containers](../mfc/activex-control-containers.md)  
   
--   [액티브 문서](../mfc/active-documents.md)  
+-   [Active Documents](../mfc/active-documents.md)  
   
--   [ActiveX 컨트롤 사용](../data/ado-rdo/using-activex-controls.md)  
+-   [Understanding ActiveX Controls](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
   
--   [\<caps:sentence id\="tgt23" sentenceid\="e07c7a1ebdac21120a91f75018670c81" class\="tgtSentence"\>ActiveX 컨트롤에 대한 이해\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Upgrading an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [인터넷에서 사용하기 위한 기존 ActiveX 컨트롤의 업그레이드](../mfc/upgrading-an-existing-activex-control.md)  
+##  <a name="_core_basic_components_of_an_activex_control"></a> Basic Components of an ActiveX Control  
+ An ActiveX control uses several programmatic elements to interact efficiently with a control container and with the user. These are class [COleControl](../mfc/reference/colecontrol-class.md), a set of event-firing functions, and a dispatch map.  
   
-##  <a name="_core_basic_components_of_an_activex_control"></a> ActiveX 컨트롤의 기본 구성 요소  
- ActiveX 컨트롤은 컨트롤 컨테이너와 사용자 간의 효율적인 상호 작용을 위하여 몇 가지 프로그래밍 요소를 사용합니다.  이들은 클래스 [COleControl](../mfc/reference/colecontrol-class.md), 이벤트 발생 기능의 집합과 디스패치 맵입니다.  
+ Every ActiveX control object you develop inherits a powerful set of features from its MFC base class, `COleControl`. These features include in-place activation, and Automation logic. `COleControl` can provide the control object with the same functionality as an MFC window object, plus the ability to fire events. `COleControl` can also provide [windowless controls](../mfc/providing-windowless-activation.md), which rely on their container for help with some of the functionality a window provides (mouse capture, keyboard focus, scrolling), but offer much faster display.  
   
- 개발되는 모든 ActiveX 컨트롤 개체는 MFC 기본 클래스인 `COleControl`에서 강력한 기능 집합을 상속받습니다.  이러한 기능에는 현재 위치에서 활성화 및 자동화 논리가 포함됩니다.  `COleControl`는 MFC 창 개체와 동일한 기능에 이벤트를 발생시킬 수 기능이 추가된 컨트롤 개체를 제공할 수 있습니다.  `COleControl`는 또한 [창 없는 컨트롤](../mfc/providing-windowless-activation.md)을 제공합니다. 창 없는 컨트롤은 창이 제공하는 일부 기능\(마우스 캡쳐, 키보드 초점, 스크롤링\)은 해당 컨테이너에 의존하지만, 훨씬 빠른 화면 표시를 제공합니다.  
+ Because the control class derives from `COleControl`, it inherits the capability to send, or "fire," messages, called events, to the control container when certain conditions are met. These events are used to notify the control container when something important happens in the control. You can send additional information about an event to the control container by attaching parameters to the event. For more information about ActiveX control events, see the article [MFC ActiveX Controls: Events](../mfc/mfc-activex-controls-events.md).  
   
- `COleControl`에서 나온 컨트롤 클래스이기 때문에, 이는 특정한 조건이 만족됐을 경우 컨트롤 컨테이너에게 메시지를 보내거나 "발생"시키고, 이벤트를 호출하는 기능을 상속합니다.  이러한 이벤트는 컨트롤에서 중요한 일이 발생했을 경우 컨트롤 컨테이너를 통지하는 데에 사용됩니다.  매개 변수를 이벤트에 연결하는 방법으로 이벤트에 관한 추가적인 정보를 컨트롤 컨테이너에 보낼 수 있습니다.  ActiveX 컨트롤의 이벤트에 대한 추가 정보는 [MFC ActiveX 컨트롤: 이벤트](../mfc/mfc-activex-controls-events.md) 문서를 참조하십시오.  
+ The final element is a dispatch map, which is used to expose a set of functions (called methods) and attributes (called properties) to the control user. Properties allow the control container or the control user to manipulate the control in various ways. The user can change the appearance of the control, change certain values of the control, or make requests of the control, such as accessing a specific piece of data that the control maintains. This interface is determined by the control developer and is defined using **Class View**. For more information on ActiveX control methods and properties, see the articles [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md) and [Properties](../mfc/mfc-activex-controls-properties.md).  
   
- 마지막 요소인 디스패치 맵은 함수\(메서드라고 함\)와 특성\(속성 이라고 함\)의 집합을 컨트롤 사용자에게 보여주는 데에 사용됩니다.  속성은 컨트롤 컨테이너 또는 컨트롤 사용자가 다양한 방법으로 컨트롤을 조작할 수 있도록 합니다.  사용자는 컨트롤의 외관, 특정한 값을 변경할 수 있으며, 컨트롤이 유지하는 데이터의 특정 부분에 액세스하도록 하는 컨트롤을 요청할 수 있습니다.  이 인터페이스는 컨트롤 개발자에 의해 결정되며, **클래스 뷰**를 이용하여 정의됩니다.  ActiveX 컨트롤의 메서드 및 속성에 대한 자세한 내용은 [MFC ActiveX 컨트롤: 메서드](../mfc/mfc-activex-controls-methods.md) 및 [속성](../mfc/mfc-activex-controls-properties.md) 문서를 참조하십시오.  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaction Between Controls with Windows and ActiveX Control Containers  
+ When a control is used within a control container, it uses two mechanisms to communicate: it exposes properties and methods, and it fires events. The following figure demonstrates how these two mechanisms are implemented.  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Windows 컨트롤과 ActiveX 컨트롤 컨테이너의 상호 작용  
- 컨트롤 컨테이너에서 컨트롤을 사용하는 경우, 통신을 위해 두 가지 메커니즘을 사용합니다. 속성 및 메서드를 노출하고 이벤트를 발생시킵니다.  다음 그림은 이러한 두 가지 메커니즘이 어떻게 구현되는지를 보여줍니다.  
+ ![ActiveX control communicates with its container](../mfc/media/vc37222.gif "vc37222")  
+Communication Between an ActiveX Control Container and an ActiveX Control  
   
- ![ActiveX 컨트롤은 해당 컨테이너와 통신합니다.](../mfc/media/vc37222.png "vc37222")  
-ActiveX 컨트롤 컨테이너와 ActiveX 컨트롤 간의 통신  
+ The previous figure also illustrates how other OLE interfaces (besides automation and events) are handled by controls.  
   
- 위 그림은 또한 다른 OLE 인터페이스가 \(자동화 및 이벤트와 비교하여\) 어떻게 컨트롤에 의해 처리되는지를 보여줍니다.  
+ All of a control's communication with the container is performed by `COleControl`. To handle some of the container's requests, **COleControl** will call member functions that are implemented in the control class. All methods and some properties are handled in this way. Your control's class can also initiate communication with the container by calling member functions of `COleControl`. Events are fired in this manner.  
   
- 컨테이너를 이용한 모든 컨트롤의 통신은 `COleControl`에 의해 수행됩니다.  컨테이너의 몇몇 요청을 처리하기 위해 **COleControl**은 컨트롤 클래스에서 구현되는 멤버 함수를 호출합니다.  모든 메서드와 일부 속성은 이러한 방식으로 처리 됩니다.  컨트롤 클래스는 `COleControl`의 멤버 함수를 호출하여 컨테이너와 통신을 시작할 수도 있습니다.  이러한 방식으로 이벤트가 발생합니다.  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Active and Inactive States of an ActiveX Control  
+ A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> ActiveX 컨트롤의 활성 및 비활성 상태  
- 컨트롤은 활성 및 비활성의 두 가지 기본 상태를 가집니다.  전통적으로, 이러한 상태는 컨트롤이 창을 가졌는지의 여부에 의해 구별됩니다.  활성 컨트롤은 창을 가지지만 비활성 컨트롤은 그렇지 않습니다.  창 없는 활성화의 도입에 의해, 이러한 구분은 더 이상 절대적이지 않습니다. 그러나 여전히 많은 컨트롤에 적용됩니다.  
+ When a [windowless control](../mfc/providing-windowless-activation.md) goes active, it invokes mouse capture, keyboard focus, scrolling, and other window services from its container. You can also [provide mouse interaction to inactive controls](../mfc/providing-mouse-interaction-while-inactive.md), as well as create controls that [wait until activated to create a window](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- [창 없는 컨트롤](../mfc/providing-windowless-activation.md)이 활성화되는 경우는, 마우스 캡쳐, 키보드 초점, 스크롤링 및 기타 창 서비스를 컨테이너로부터 빌려옵니다.  또한 [창을 만들기 위해 활성화될 때까지 기다림](../mfc/turning-off-the-activate-when-visible-option.md)은 물론, [비활성 컨트롤에 마우스 상호 작용을 제공](../mfc/providing-mouse-interaction-while-inactive.md)합니다.  
+ When a control with a window becomes active, it is able to interact fully with the control container, the user, and Windows. The figure below demonstrates the paths of communication between the ActiveX control, the control container, and the operating system.  
   
- 컨트롤 창이 활성화되면 컨트롤 컨테이너, 사용자 및 Windows와 완전히 상호 작용할 수 있게 됩니다.  아래 그림은 ActiveX 컨트롤, 컨트롤 컨테이너와 운영 체제 사이의 통신 경로를 보여줍니다.  
-  
- ![활성 창이 있는 ActiveX 컨트롤에서 Msg 처리](../mfc/media/vc37223.png "vc37223")  
-창 있는 ActiveX 컨트롤의 Windows 메시지 처리\(활성화된 경우\)  
+ ![Msg processing in active windowed ActiveX control](../mfc/media/vc37223.gif "vc37223")  
+Windows Message Processing in a Windowed ActiveX Control (When Active)  
   
 ##  <a name="_core_serializing_activex_elements"></a> Serialization  
- 영구성이라고도 불리는 데이터 직렬화 기능은 컨트롤이 속성 값을 영구 저장소에 쓸 수 있도록 허용합니다.  컨트롤은 저장소에서 개체의 상태를 읽어들여서 재생성될 수 있습니다.  
+ The ability to serialize data, sometimes referred to as persistence, allows the control to write the value of its properties to persistent storage. Controls can then be recreated by reading the object's state from the storage.  
   
- 컨트롤에 의해 기록 매체에 액세스할 권한을 얻는 것이 아니라는 것에 주의하십시오.  대신에, 컨트롤의 컨테이너가 적절한 때에 사용하기 위하여 기록 매체를 갖는 컨트롤을 제공해야 합니다.  직렬화에 대한 자세한 내용은 [MFC ActiveX 컨트롤: 직렬화](../mfc/mfc-activex-controls-serializing.md) 문서를 참조 하십시오.  직렬화의 최적화에 대한 정보는 ActiveX 컨트롤에서: 최적화의 [영구성 최적화 및 초기화](../mfc/optimizing-persistence-and-initialization.md)를 참조하십시오.  
+ Note that a control is not responsible for obtaining access to the storage medium. Instead, the control's container is responsible for providing the control with a storage medium to use at the appropriate times. For more information on serialization, see the article [MFC ActiveX Controls: Serializing](../mfc/mfc-activex-controls-serializing.md). For information on optimizing serialization, see [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md) in ActiveX Controls: Optimization.  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> ActiveX 컨트롤 클래스 및 도구 설치  
- Visual C\+\+를 설치할 때 설치 화면에서 ActiveX 컨트롤을 선택한 경우\(기본적으로 선택\), MFC ActiveX 컨트롤 클래스와 소매 및 디버그 ActiveX 컨트롤 런타임 DLLs가 자동으로 설치됩니다.  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installing ActiveX Control Classes and Tools  
+ When you install Visual C++, the MFC ActiveX control classes and retail and debug ActiveX control run-time DLLs are automatically installed if ActiveX controls are selected in Setup (they are selected by default).  
   
- 기본적으로 ActiveX 컨트롤 클래스 및 도구는 \\Program Files\\Microsoft Visual Studio.NET의 하위 디렉터리에 설치됩니다.  
+ By default, the ActiveX control classes and tools are installed in the following subdirectories under \Program Files\Microsoft Visual Studio .NET:  
   
--   **\\Common7\\Tools**  
+-   **\Common7\Tools**  
   
-     테스트 컨테이너 파일\(TstCon32.exe과 해당 도움말 파일\)을 포함합니다.  
+     Contains the Test Container files (TstCon32.exe, as well as its Help files).  
   
--   **\\Vc7\\atlmfc\\include**  
+-   **\Vc7\atlmfc\include**  
   
-     MFC로 ActiveX 컨트롤을 개발하는 데에 필요한 인클루드 파일을 포함합니다.  
+     Contains the include files needed to develop ActiveX controls with MFC  
   
--   **\\Vc7\\atlmfc\\src\\mfc**  
+-   **\Vc7\atlmfc\src\mfc**  
   
-     특정 ActiveX 컨트롤 클래스에 대한 MFC 소스 코드를 포함합니다.  
+     Contains the source code for specific ActiveX control classes in MFC  
   
--   **\\Vc7\\atlmfc\\lib**  
+-   **\Vc7\atlmfc\lib**  
   
-     MFC로 ActiveX 컨트롤을 개발하는 데에 필요한 라이브러리를 포함합니다.  
+     Contains the libraries required to develop ActiveX controls with MFC  
   
- MFC ActiveX 컨트롤에 대한 샘플도 있습니다.  이러한 샘플에 대한 자세한 내용은 [컨트롤 샘플: ActiveX 컨트롤 MFC\-Based](../top/visual-cpp-samples.md)를 참조하십시오.  
+ There are also samples for MFC ActiveX controls. For more information about these samples, see [Controls Samples: MFC-Based ActiveX Controls](../visual-cpp-samples.md)  
   
-## 참고 항목  
- [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

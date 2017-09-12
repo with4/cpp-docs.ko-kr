@@ -1,52 +1,71 @@
 ---
-title: "MFC ActiveX 컨트롤 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.activex.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤[C++], 만들기"
-  - "MFC ActiveX 컨트롤[C++], 만들기"
+title: Creating an MFC ActiveX Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.activex.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# MFC ActiveX 컨트롤 만들기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d17052296be743ecf8099fe689974fae1c60d9d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-ActiveX 컨트롤 프로그램은 상위 응용 프로그램에 특정 유형의 기능을 제공하도록 설계된 모듈식 프로그램입니다.  예를 들어, 대화 상자에서 사용할 단추나 웹 페이지에서 사용할 도구 모음과 같은 컨트롤을 만들 수 있습니다.  
+---
+# <a name="creating-an-mfc-activex-control"></a>Creating an MFC ActiveX Control
+ActiveX control programs are modular programs designed to give a specific type of functionality to a parent application. For example, you can create a control such as a button for use in a dialog, or toolbar for use in a Web page.  
   
- MFC ActiveX 컨트롤을 만드는 가장 쉬운 방법은 [MFC ActiveX 컨트롤 마법사](../../mfc/reference/mfc-activex-control-wizard.md)를 사용하는 것입니다.  
+ The easiest way to create an MFC ActiveX control is to use the [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md).  
   
-### MFC ActiveX 컨트롤 마법사를 사용하여 MFC ActiveX 컨트롤을 만들려면  
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>To create an MFC ActiveX Control using the MFC ActiveX Control Wizard  
   
-1.  [Visual C\+\+ 응용 프로그램 마법사로 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md) 도움말 항목에 설명되어 있는 지침을 따릅니다.  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  **새 프로젝트** 대화 상자에서 템플릿 창의 **MFC ActiveX 컨트롤** 아이콘을 선택하여 MFC ActiveX 컨트롤 마법사를 엽니다.  
+2.  In the **New Project** dialog box, select the **MFC ActiveX Control** icon in the Templates pane to open the MFC ActiveX Control Wizard.  
   
-3.  MFC ActiveX 컨트롤 마법사를 사용하여 [응용 프로그램 설정](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [컨트롤 이름](../../mfc/reference/control-names-mfc-activex-control-wizard.md) 및 [컨트롤 설정](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)을 정의합니다.  
+3.  Define your [application settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [control names](../../mfc/reference/control-names-mfc-activex-control-wizard.md), and [control settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) using the MFC ActiveX Control Wizard.  
   
     > [!NOTE]
-    >  마법사의 기본 설정을 그대로 유지하려면 이 단계를 건너 뜁니다.  
+    >  Skip this step to keep the wizard default settings.  
   
-4.  **마침**을 클릭하여 마법사를 닫고 새 프로젝트를 개발 환경에서 엽니다.  
+4.  Click **Finish** to close the wizard and open your new project in the development environment.  
   
- 프로젝트를 만든 후 만들어진 파일을 **솔루션 탐색기**에서 볼 수 있습니다.  마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하십시오.  파일 형식에 대한 자세한 내용은 [Visual C\+\+ 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)을 참조하십시오.  
+ After you have created your project, you can view the files created in **Solution Explorer**. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
- 프로젝트를 만든 후 코드 마법사를 사용하여 [함수](../../ide/add-member-function-wizard.md), [변수](../../ide/add-member-variable-wizard.md), [이벤트](../../ide/add-event-wizard.md), [속성](../../ide/names-add-property-wizard.md) 및 [메서드](../../ide/add-method-wizard.md)를 추가할 수 있습니다.  ActiveX 컨트롤 사용자 지정에 대한 자세한 내용은[MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md)을 참조하십시오.  
+ After you have created your project, you can use the code wizards to add [functions](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [events](../../ide/add-event-wizard.md), [properties](../../ide/names-add-property-wizard.md), and [methods](../../ide/add-method-wizard.md). For more information about customizing your ActiveX control, see [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md).  
   
-## 참고 항목  
- [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [속성 페이지](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/ko-kr/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

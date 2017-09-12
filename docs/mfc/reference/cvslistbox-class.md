@@ -1,5 +1,5 @@
 ---
-title: "CVSListBox 클래스 | Microsoft 문서"
+title: CVSListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CVSListBox::PreTranslateMessage method
-- CVSListBox class
+- CVSListBox [MFC], CVSListBox
+- CVSListBox [MFC], AddItem
+- CVSListBox [MFC], EditItem
+- CVSListBox [MFC], GetCount
+- CVSListBox [MFC], GetItemData
+- CVSListBox [MFC], GetItemText
+- CVSListBox [MFC], GetSelItem
+- CVSListBox [MFC], RemoveItem
+- CVSListBox [MFC], SelectItem
+- CVSListBox [MFC], SetItemData
+- CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 caps.latest.revision: 30
 author: mikeblome
@@ -46,66 +55,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4527249fc1a22a1db0623ea46954065fcbd071f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d84db3fe2c27925db01188f43a3d467e6119ca2b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cvslistbox-class"></a>CVSListBox 클래스
-`CVSListBox` 클래스는 편집 가능한 목록 컨트롤을 지원 합니다.  
+# <a name="cvslistbox-class"></a>CVSListBox Class
+The `CVSListBox` class supports an editable list control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::CVSListBox](#cvslistbox)|`CVSListBox` 개체를 생성합니다.|  
-|`CVSListBox::~CVSListBox`|소멸자|  
+|[CVSListBox::CVSListBox](#cvslistbox)|Constructs a `CVSListBox` object.|  
+|`CVSListBox::~CVSListBox`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::AddItem](#additem)|목록 컨트롤에 문자열을 추가 합니다. (`CVSListBoxBase::AddItem`를 재정의합니다.)|  
-|[CVSListBox::EditItem](#edititem)|목록 컨트롤 항목의 텍스트에서 편집 작업을 시작 합니다. (`CVSListBoxBase::EditItem`를 재정의합니다.)|  
-|[CVSListBox::GetCount](#getcount)|편집할 수 있는 목록 컨트롤에서 문자열의 수를 검색합니다. (`CVSListBoxBase::GetCount`를 재정의합니다.)|  
-|[CVSListBox::GetItemData](#getitemdata)|편집할 수 있는 목록 컨트롤 항목에 연결 하는 응용 프로그램별 32 비트 값을 검색 합니다. (`CVSListBoxBase::GetItemData`를 재정의합니다.)|  
-|[CVSListBox::GetItemText](#getitemtext)|편집 가능한 목록 컨트롤 항목의 텍스트를 검색합니다. (`CVSListBoxBase::GetItemText`를 재정의합니다.)|  
-|[CVSListBox::GetSelItem](#getselitem)|편집할 수 있는 목록 컨트롤에서 현재 선택 된 항목의&0;부터 시작 인덱스를 검색합니다. (`CVSListBoxBase::GetSelItem`를 재정의합니다.)|  
-|`CVSListBox::PreTranslateMessage`|창 메시지를 변환 하 여으로 디스패치 되기 전에 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. 자세한 내용 및 메서드 구문에 대 한 참조 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)합니다. (`CVSListBoxBase::PreTranslateMessage`를 재정의합니다.)|  
-|[CVSListBox::RemoveItem](#removeitem)|편집할 수 있는 목록 컨트롤에서 항목을 제거 합니다. (`CVSListBoxBase::RemoveItem`를 재정의합니다.)|  
-|[CVSListBox::SelectItem](#selectitem)|편집 가능한 목록 제어 문자열을 선택합니다. (`CVSListBoxBase::SelectItem`를 재정의합니다.)|  
-|[CVSListBox::SetItemData](#setitemdata)|편집할 수 있는 목록 컨트롤 항목으로는 응용 프로그램별 32 비트 값을 연결합니다. (`CVSListBoxBase::SetItemData`를 재정의합니다.)|  
+|[CVSListBox::AddItem](#additem)|Adds a string to a list control. (Overrides `CVSListBoxBase::AddItem`.)|  
+|[CVSListBox::EditItem](#edititem)|Starts an edit operation on the text of a list control item. (Overrides `CVSListBoxBase::EditItem`.)|  
+|[CVSListBox::GetCount](#getcount)|Retrieves the number of strings in an editable list control. (Overrides `CVSListBoxBase::GetCount`.)|  
+|[CVSListBox::GetItemData](#getitemdata)|Retrieves an application-specific 32-bit value that is associated with an editable list control item. (Overrides `CVSListBoxBase::GetItemData`.)|  
+|[CVSListBox::GetItemText](#getitemtext)|Retrieves the text of an editable list control item. (Overrides `CVSListBoxBase::GetItemText`.)|  
+|[CVSListBox::GetSelItem](#getselitem)|Retrieves the zero-based index of the currently selected item in an editable list control. (Overrides `CVSListBoxBase::GetSelItem`.)|  
+|`CVSListBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CVSListBoxBase::PreTranslateMessage`.)|  
+|[CVSListBox::RemoveItem](#removeitem)|Removes an item from an editable list control. (Overrides `CVSListBoxBase::RemoveItem`.)|  
+|[CVSListBox::SelectItem](#selectitem)|Selects an editable list control string. (Overrides `CVSListBoxBase::SelectItem`.)|  
+|[CVSListBox::SetItemData](#setitemdata)|Associates an application-specific 32-bit value with an editable list control item. (Overrides `CVSListBoxBase::SetItemData`.)|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::GetListHwnd](#getlisthwnd)|현재 포함 된 목록 뷰 컨트롤에 핸들을 반환 합니다.|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Returns the handle to the current embedded list view control.|  
   
-## <a name="remarks"></a>주의  
- `CVSListBox` 클래스 사용자 만들기, 수정, 삭제 또는 목록 컨트롤에서 항목을 다시 정렬할 수 있는 편집 단추 집합을 제공 합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CVSListBox` class provides a set of edit buttons that enable the user to create, modify, delete, or rearrange the items in a list control.  
   
- 다음은 편집할 수 있는 목록 컨트롤의 그림입니다. "Item2" 제목은, 두 번째 목록 항목을 편집 하기 위해 선택 됩니다.  
+ The following is a picture of the editable list control. The second list entry, which is titled "Item2", is selected for editing.  
   
- ![CVSListBox 컨트롤](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
+ ![CVSListBox control](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
   
- 리소스 편집기를 사용 하 여 편집할 수 있는 목록 컨트롤을 추가 하려면 다음에 유의 **도구 상자** 편집기의 창 편집할 수 있는 미리 정의 된 목록 컨트롤을 제공 하지 않습니다. 대신,와 같은 정적 컨트롤을 추가 **그룹 상자** 제어 합니다. 프레임 워크를 사용 하 여 정적 컨트롤 자리 표시자로 편집할 수 있는 목록 컨트롤의 위치와 크기를 지정 합니다.  
+ If you use the resource editor to add an editable list control, notice that the **Toolbox** pane of the editor does not provide a predefined editable list control. Instead, add a static control such as the **Group Box** control. The framework uses the static control as a placeholder to specify the size and position of the editable list control.  
   
- 대화 상자 템플릿에 편집 가능한 목록 컨트롤을 사용 하려면 선언는 `CVSListBox` 대화 상자 클래스에서 변수입니다. 를 지원 하기 위해 변수와 컨트롤 간의 데이터 교환을 정의 `DDX_Control` 매크로 항목에는 `DoDataExchange` 대화 상자의 메서드. 기본적으로 편집할 수 있는 목록 컨트롤 편집 단추 없이 생성 됩니다. 편집 단추를 사용 하도록 설정 하려면 상속 된 CVSListBoxBase::SetStandardButtons 메서드를 사용 합니다.  
+ To use an editable list control in a dialog box template, declare a `CVSListBox` variable in your dialog box class. To support data exchange between the variable and the control, define a `DDX_Control` macro entry in the `DoDataExchange` method of the dialog box. By default, the editable list control is created without edit buttons. Use the inherited CVSListBoxBase::SetStandardButtons method to enable the edit buttons.  
   
- 자세한 내용은 예제 디렉터리를 참조 하십시오.는 `New Controls` Page3.cpp 및 Page3.h 파일을 샘플링 합니다.  
+ For more information, see the Samples directory, the `New Controls` sample, the Page3.cpp and Page3.h files.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,11 +127,11 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxvslistbox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
- 목록 컨트롤에 문자열을 추가 합니다.  
+##  <a name="additem"></a>  CVSListBox::AddItem  
+ Adds a string to a list control.  
   
 ```  
 virtual int AddItem(
@@ -131,156 +140,156 @@ virtual int AddItem(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `strIext`  
- 문자열에 대 한 참조입니다.  
+ A reference to a string.  
   
  [in] `dwData`  
- 문자열 연결 되는 응용 프로그램별 32 비트 값입니다. 기본값은 0입니다.  
+ An application-specific 32-bit value that is associated with the string. The default value is 0.  
   
  [in] `iIndex`  
- 문자열을 보유 하는 위치의&0;부터 시작 하는 인덱스입니다. 하는 경우는 `iIndex` 매개 변수는-1, 문자열 목록의 끝에 추가 됩니다. 기본값은 -1입니다.  
+ The zero-based index of the position that will hold the string. If the `iIndex` parameter is -1, the string is added to the end of the list. The default value is -1.  
   
-### <a name="return-value"></a>반환 값  
- 목록 컨트롤에서 문자열의 위치의&0;부터 시작 하는 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position of the string in the list control.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CVSListBox::GetItemData](#getitemdata) 로 지정 된 값을 검색 하는 메서드는 `dwData` 매개 변수입니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터를 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::GetItemData](#getitemdata) method to retrieve the value that is specified by the `dwData` parameter. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
- `CVSListBox` 개체를 생성합니다.  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
+ Constructs a `CVSListBox` object.  
   
 ```  
 CVSListBox();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
- 목록 컨트롤 항목의 텍스트에서 편집 작업을 시작 합니다.  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
+ Starts an edit operation on the text of a list control item.  
   
 ```  
 virtual BOOL EditItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 목록 컨트롤 항목의&0;부터 시작 인덱스입니다.  
+ Zero-based index of a list control item.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`편집 작업이 성공적으로 시작 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation starts successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용자가 편집 작업을 시작 항목의 레이블을 두 번 클릭 하거나 눌러는 **F2** 또는 **스페이스바** 항목에 포커스가 있을 때 키입니다.  
+### <a name="remarks"></a>Remarks  
+ The user starts an edit operation either by double-clicking the label of an item, or by pressing the **F2** or **SPACEBAR** key when an item has the focus.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
- 편집할 수 있는 목록 컨트롤에서 문자열의 수를 검색합니다.  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
+ Retrieves the number of strings in an editable list control.  
   
 ```  
 virtual int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 목록 컨트롤의 항목 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list control.  
   
-### <a name="remarks"></a>주의  
- Note 수가 인지 마지막 항목의 인덱스 값 보다&1; 씩 증가 하므로 인덱스는&0;부터 시작 합니다.  
+### <a name="remarks"></a>Remarks  
+ Note that the count is one greater than the index value of the last item because the index is zero-based.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
- 편집할 수 있는 목록 컨트롤 항목에 연결 하는 응용 프로그램별 32 비트 값을 검색 합니다.  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
+ Retrieves an application-specific 32-bit value that is associated with an editable list control item.  
   
 ```  
 virtual DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 편집 가능한 목록 컨트롤 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 항목에 연결 하는 32 비트 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value that is associated with the specified item.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CVSListBox::SetItemData](#setitemdata) 또는 [CVSListBox::AddItem](#additem) 목록 컨트롤 항목으로 32 비트 값을 연결 하는 방법이 있습니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터를 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::SetItemData](#setitemdata) or [CVSListBox::AddItem](#additem) method to associate the 32-bit value with the list control item. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
- 편집 가능한 목록 컨트롤 항목의 텍스트를 검색합니다.  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
+ Retrieves the text of an editable list control item.  
   
 ```  
 virtual CString GetItemText(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 편집 가능한 목록 컨트롤 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>반환 값  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 지정된 된 항목의 텍스트가 포함 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text of the specified item.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
- 현재 포함 된 목록 뷰 컨트롤에 핸들을 반환 합니다.  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
+ Returns the handle to the current embedded list view control.  
   
 ```  
 virtual HWND GetListHwnd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 포함 된 목록 뷰 컨트롤에 대 한 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the embedded list view control.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 지 원하는 포함 된 목록 뷰 컨트롤에 대 한 핸들을 검색 하는 `CVSListBox` 클래스입니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to retrieve a handle to the embedded list view control that supports the `CVSListBox` class.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
- 편집할 수 있는 목록 컨트롤에서 현재 선택 된 항목의&0;부터 시작 인덱스를 검색합니다.  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
+ Retrieves the zero-based index of the currently selected item in an editable list control.  
   
 ```  
 virtual int GetSelItem() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 성공 하는 경우 현재 선택 된 항목;의&0;부터 시작 하는 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ If this method is successful, the zero-based index of the currently selected item; otherwise, -1.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
- 편집할 수 있는 목록 컨트롤에서 항목을 제거 합니다.  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
+ Removes an item from an editable list control.  
   
 ```  
 virtual BOOL RemoveItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 편집 가능한 목록 컨트롤 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`지정된 된 항목이 제거 되는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item is removed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
- 편집 가능한 목록 제어 문자열을 선택합니다.  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
+ Selects an editable list control string.  
   
 ```  
 virtual BOOL SelectItem(int iItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 편집 가능한 목록 컨트롤 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 지정된 된 항목을 선택 하 고, 필요한 경우 항목을 뷰로 스크롤합니다.  
+### <a name="remarks"></a>Remarks  
+ This method selects the specified item, and if it is required, scrolls the item into view.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
- 편집할 수 있는 목록 컨트롤 항목으로는 응용 프로그램별 32 비트 값을 연결합니다.  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
+ Associates an application-specific 32-bit value with an editable list control item.  
   
 ```  
 virtual void SetItemData(
@@ -288,16 +297,16 @@ virtual void SetItemData(
     DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 편집 가능한 목록 컨트롤 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of an editable list control item.  
   
  [in] `dwData`  
- 32 비트 값입니다. 이 값은 응용 프로그램별 정수 또는 다른 데이터에 대 한 포인터를 수 있습니다.  
+ A 32-bit value. This value can be an application-specific integer or a pointer to other data.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

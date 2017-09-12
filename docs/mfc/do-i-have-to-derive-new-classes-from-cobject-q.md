@@ -1,34 +1,51 @@
 ---
-title: "CObject에서 새 클래스를 파생시켜야 합니까? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject 클래스, 사용 시기"
-  - "파생 클래스, CObject에서"
+title: Do I Have to Derive New Classes from CObject? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- derived classes [MFC], from CObject
+- CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CObject에서 새 클래스를 파생시켜야 합니까?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fdcd3a478f05c6cd88c76fbfd84da861f3291ce2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-아니요, 없습니다.  
+---
+# <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Do I Have to Derive New Classes from CObject?
+No, you don't.  
   
- 직렬화 또는 동적 creatability 등을 제공 하는 기능을 할 때  [CObject](../mfc/reference/cobject-class.md)에서 클래스가 파생됩니다.  많은 데이터 클래스 파일로 직렬화 할 필요가 있기 때문에, `CObject`에서 그들을 파생하는 것이 좋습니다   `CObject` 에서 파생 된 클래스의 예는 [Scribble 샘플](../top/visual-cpp-samples.md)을 참조하십시오.  
+ Derive a class from [CObject](../mfc/reference/cobject-class.md) when you need the facilities it provides, such as serialization or dynamic creatability. Many data classes need to be serialized to files, so it's often a good idea to derive them from `CObject`. For an example of a class derived from `CObject`, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## 참고 항목  
- [CObject 클래스: 질문과 대답](../mfc/cobject-class-frequently-asked-questions.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class: Frequently Asked Questions](../mfc/cobject-class-frequently-asked-questions.md)
+

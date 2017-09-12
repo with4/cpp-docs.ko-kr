@@ -1,5 +1,5 @@
 ---
-title: "CAsyncSocket 클래스 | Microsoft 문서"
+title: CAsyncSocket Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,12 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- network communications
-- asynchronous Windows Sockets
-- CAsyncSocket class
-- Windows Sockets [C++], asynchronous
-- communications [C++], network
-- sockets [C++], Windows
+- CAsyncSocket [MFC], CAsyncSocket
+- CAsyncSocket [MFC], Accept
+- CAsyncSocket [MFC], AsyncSelect
+- CAsyncSocket [MFC], Attach
+- CAsyncSocket [MFC], Bind
+- CAsyncSocket [MFC], Close
+- CAsyncSocket [MFC], Connect
+- CAsyncSocket [MFC], Create
+- CAsyncSocket [MFC], Detach
+- CAsyncSocket [MFC], FromHandle
+- CAsyncSocket [MFC], GetLastError
+- CAsyncSocket [MFC], GetPeerName
+- CAsyncSocket [MFC], GetPeerNameEx
+- CAsyncSocket [MFC], GetSockName
+- CAsyncSocket [MFC], GetSockNameEx
+- CAsyncSocket [MFC], GetSockOpt
+- CAsyncSocket [MFC], IOCtl
+- CAsyncSocket [MFC], Listen
+- CAsyncSocket [MFC], Receive
+- CAsyncSocket [MFC], ReceiveFrom
+- CAsyncSocket [MFC], ReceiveFromEx
+- CAsyncSocket [MFC], Send
+- CAsyncSocket [MFC], SendTo
+- CAsyncSocket [MFC], SendToEx
+- CAsyncSocket [MFC], SetSockOpt
+- CAsyncSocket [MFC], ShutDown
+- CASyncSocket [MFC], Socket
+- CAsyncSocket [MFC], OnAccept
+- CAsyncSocket [MFC], OnClose
+- CAsyncSocket [MFC], OnConnect
+- CAsyncSocket [MFC], OnOutOfBandData
+- CAsyncSocket [MFC], OnReceive
+- CAsyncSocket [MFC], OnSend
+- CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 caps.latest.revision: 23
 author: mikeblome
@@ -73,107 +101,107 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c7a175fc12146d98becc5d06f80e975df5b5a008
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 389ca5c63bac4e3546d5132ea90730cb4c4fe084
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="casyncsocket-class"></a>CAsyncSocket 클래스
-Windows 소켓 나타냅니다 — 네트워크 통신의 끝점입니다.  
+# <a name="casyncsocket-class"></a>CAsyncSocket Class
+Represents a Windows Socket — an endpoint of network communication.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAsyncSocket : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::CAsyncSocket](#casyncsocket)|`CAsyncSocket` 개체를 생성합니다.|  
+|[CAsyncSocket::CAsyncSocket](#casyncsocket)|Constructs a `CAsyncSocket` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::Accept](#accept)|소켓에 대 한 연결을 허용합니다.|  
-|[CAsyncSocket::AsyncSelect](#asyncselect)|소켓에 대 한 요청 이벤트 알림입니다.|  
-|[CAsyncSocket::Attach](#attach)|연결에 대 한 소켓 핸들을 `CAsyncSocket` 개체입니다.|  
-|[CAsyncSocket::Bind](#bind)|소켓 로컬 주소에 연결합니다.|  
-|[CAsyncSocket::Close](#close)|소켓을 닫습니다.|  
-|[CAsyncSocket::Connect](#connect)|피어 소켓에 대 한 연결을 설정합니다.|  
-|[CAsyncSocket::Create](#create)|소켓을 만듭니다.|  
-|[CAsyncSocket::Detach](#detach)|소켓 핸들을 분리 한 `CAsyncSocket` 개체입니다.|  
-|[CAsyncSocket::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CAsyncSocket` 소켓 핸들을 지정 된 개체입니다.|  
-|[CAsyncSocket::GetLastError](#getlasterror)|실패 한 마지막 작업에 대 한 오류 상태를 가져옵니다.|  
-|[CAsyncSocket::GetPeerName](#getpeername)|소켓이 연결 되어 있는 피어 소켓의 주소를 가져옵니다.|  
-|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|소켓을 연결된 (핸들 IPv6 주소)는 피어 소켓의 주소를 가져옵니다.|  
-|[CAsyncSocket::GetSockName](#getsockname)|소켓에 대 한 로컬 이름을 가져옵니다.|  
-|[CAsyncSocket::GetSockNameEx](#getsocknameex)|소켓 (핸들 IPv6 주소)에 대 한 로컬 이름을 가져옵니다.|  
-|[CAsyncSocket::GetSockOpt](#getsockopt)|소켓 옵션을 검색합니다.|  
-|[CAsyncSocket::IOCtl](#ioctl)|소켓의 모드를 제어 합니다.|  
-|[CAsyncSocket::Listen](#listen)|들어오는 연결 요청을 수신 대기 소켓을 설정 합니다.|  
-|[CAsyncSocket::Receive](#receive)|소켓에서 데이터를 수신합니다.|  
-|[CAsyncSocket::ReceiveFrom](#receivefrom)|데이터 그램을 수신 하 고 원본 주소를 저장 합니다.|  
-|[CAsyncSocket::ReceiveFromEx](#receivefromex)|데이터 그램을 수신 하 고 원본 주소 (IPv6 주소 핸들)를 저장 합니다.|  
-|[CAsyncSocket::Send](#send)|연결 된 소켓에 데이터를 보냅니다.|  
-|[CAsyncSocket::SendTo](#sendto)|특정 대상에 데이터를 보냅니다.|  
-|[CAsyncSocket::SendToEx](#sendtoex)|데이터를 특정 대상 (핸들 IPv6 주소)를 보냅니다.|  
-|[CAsyncSocket::SetSockOpt](#setsockopt)|소켓 옵션을 설정합니다.|  
-|[CAsyncSocket::ShutDown](#shutdown)|사용 하지 않도록 설정 **보낼** 및/또는 **수신** 소켓에서를 호출 합니다.|  
-|[CASyncSocket::Socket](#socket)|Socket 핸들을 할당합니다.|  
+|[CAsyncSocket::Accept](#accept)|Accepts a connection on the socket.|  
+|[CAsyncSocket::AsyncSelect](#asyncselect)|Requests event notification for the socket.|  
+|[CAsyncSocket::Attach](#attach)|Attaches a socket handle to a `CAsyncSocket` object.|  
+|[CAsyncSocket::Bind](#bind)|Associates a local address with the socket.|  
+|[CAsyncSocket::Close](#close)|Closes the socket.|  
+|[CAsyncSocket::Connect](#connect)|Establishes a connection to a peer socket.|  
+|[CAsyncSocket::Create](#create)|Creates a socket.|  
+|[CAsyncSocket::Detach](#detach)|Detaches a socket handle from a `CAsyncSocket` object.|  
+|[CAsyncSocket::FromHandle](#fromhandle)|Returns a pointer to a `CAsyncSocket` object, given a socket handle.|  
+|[CAsyncSocket::GetLastError](#getlasterror)|Gets the error status for the last operation that failed.|  
+|[CAsyncSocket::GetPeerName](#getpeername)|Gets the address of the peer socket to which the socket is connected.|  
+|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|Gets the address of the peer socket to which the socket is connected (handles IPv6 addresses).|  
+|[CAsyncSocket::GetSockName](#getsockname)|Gets the local name for a socket.|  
+|[CAsyncSocket::GetSockNameEx](#getsocknameex)|Gets the local name for a socket (handles IPv6 addresses).|  
+|[CAsyncSocket::GetSockOpt](#getsockopt)|Retrieves a socket option.|  
+|[CAsyncSocket::IOCtl](#ioctl)|Controls the mode of the socket.|  
+|[CAsyncSocket::Listen](#listen)|Establishes a socket to listen for incoming connection requests.|  
+|[CAsyncSocket::Receive](#receive)|Receives data from the socket.|  
+|[CAsyncSocket::ReceiveFrom](#receivefrom)|Receives a datagram and stores the source address.|  
+|[CAsyncSocket::ReceiveFromEx](#receivefromex)|Receives a datagram and stores the source address (handles IPv6 addresses).|  
+|[CAsyncSocket::Send](#send)|Sends data to a connected socket.|  
+|[CAsyncSocket::SendTo](#sendto)|Sends data to a specific destination.|  
+|[CAsyncSocket::SendToEx](#sendtoex)|Sends data to a specific destination (handles IPv6 addresses).|  
+|[CAsyncSocket::SetSockOpt](#setsockopt)|Sets a socket option.|  
+|[CAsyncSocket::ShutDown](#shutdown)|Disables **Send** and/or **Receive** calls on the socket.|  
+|[CASyncSocket::Socket](#socket)|Allocates a socket handle.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::OnAccept](#onaccept)|호출 하 여 보류 중인 연결 요청 받을 수 있는 수신 대기 소켓 알립니다 **Accept**합니다.|  
-|[CAsyncSocket::OnClose](#onclose)|소켓에 연결 된 소켓을 닫에 알립니다.|  
-|[CAsyncSocket::OnConnect](#onconnect)|연결 시도가 완료 되었는지 여부를 성공 또는 오류에서 소켓에 연결 하는 알립니다.|  
-|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|수신 소켓 긴급 한 메시지는 일반적으로 소켓에서 읽을 수 있는 대역폭을 벗어난 데이터 중임을 알립니다.|  
-|[CAsyncSocket::OnReceive](#onreceive)|호출 하 여 검색 데이터가 수신 대기 소켓 알립니다 **수신**합니다.|  
-|[CAsyncSocket::OnSend](#onsend)|호출 하 여 데이터를 보낼 수는 소켓 알립니다 **보낼**합니다.|  
+|[CAsyncSocket::OnAccept](#onaccept)|Notifies a listening socket that it can accept pending connection requests by calling **Accept**.|  
+|[CAsyncSocket::OnClose](#onclose)|Notifies a socket that the socket connected to it has closed.|  
+|[CAsyncSocket::OnConnect](#onconnect)|Notifies a connecting socket that the connection attempt is complete, whether successfully or in error.|  
+|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|Notifies a receiving socket that there is out-of-band data to be read on the socket, usually an urgent message.|  
+|[CAsyncSocket::OnReceive](#onreceive)|Notifies a listening socket that there is data to be retrieved by calling **Receive**.|  
+|[CAsyncSocket::OnSend](#onsend)|Notifies a socket that it can send data by calling **Send**.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::operator =](#operator_eq)|에 새 값을 할당 한 `CAsyncSocket` 개체입니다.|  
-|[CAsyncSocket::operator 소켓](#operator_socket)|이 연산자를 사용 하 여 검색 하는 **소켓** 의 처리는 `CAsyncSocket` 개체입니다.|  
+|[CAsyncSocket::operator =](#operator_eq)|Assigns a new value to a `CAsyncSocket` object.|  
+|[CAsyncSocket::operator SOCKET](#operator_socket)|Use this operator to retrieve the **SOCKET** handle of the `CAsyncSocket` object.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::m_hSocket](#m_hsocket)|나타냅니다는 **소켓** 이에 연결 된 핸들 `CAsyncSocket` 개체입니다.|  
+|[CAsyncSocket::m_hSocket](#m_hsocket)|Indicates the **SOCKET** handle attached to this `CAsyncSocket` object.|  
   
-## <a name="remarks"></a>주의  
- 클래스 `CAsyncSocket` MFC와 함께에서 Windows 소켓을 사용 하려는 프로그래머를 위한 개체 지향 추상화를 제공 하는 Windows 소켓 함수 API를 캡슐화 합니다.  
+## <a name="remarks"></a>Remarks  
+ Class `CAsyncSocket` encapsulates the Windows Socket Functions API, providing an object-oriented abstraction for programmers who want to use Windows Sockets in conjunction with MFC.  
   
- 이 클래스는 가정을 기반으로 네트워크 통신을 이해 해야 합니다. 차단, 바이트 순서 차이 처리 하는 것에 대 한 책임이 및 유니코드 및 멀티 바이트 문자 간의 변환 집합 (MBCS) 문자열입니다. 이러한 문제를 관리 하는 보다 편리한 인터페이스를 사용 하도록 하려는 경우 클래스를 참조 하십시오. [CSocket](../../mfc/reference/csocket-class.md)합니다.  
+ This class is based on the assumption that you understand network communications. You are responsible for handling blocking, byte-order differences, and conversions between Unicode and multibyte character set (MBCS) strings. If you want a more convenient interface that manages these issues for you, see class [CSocket](../../mfc/reference/csocket-class.md).  
   
- 사용 하는 `CAsyncSocket` 개체를 해당 생성자를 호출 다음 호출는 [만들기](#create) 기본 소켓 핸들을 만들 함수입니다 (형식 `SOCKET`), 수락 된 소켓을 제외 하 고 있습니다. 서버 소켓 호출에 대 한는 [수신](#listen) 멤버 함수 및 클라이언트 소켓 호출에 대해는 [연결](#connect) 멤버 함수입니다. 서버 소켓과 호출 해야는 [Accept](#accept) 연결 요청을 받으면 함수입니다. 나머지를 사용 하 여 `CAsyncSocket` 소켓 사이의 통신을 수행 하는 함수입니다. 완료 되 면 삭제는 `CAsyncSocket` 개체 힙에 만들어졌으면;는 소멸자가 자동으로 호출 하는 [닫기](#close) 함수입니다. `SOCKET` 데이터 형식의 문서에 설명 되어 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md)합니다.  
+ To use a `CAsyncSocket` object, call its constructor, then call the [Create](#create) function to create the underlying socket handle (type `SOCKET`), except on accepted sockets. For a server socket call the [Listen](#listen) member function, and for a client socket call the [Connect](#connect) member function. The server socket should call the [Accept](#accept) function upon receiving a connection request. Use the remaining `CAsyncSocket` functions to carry out communications between sockets. Upon completion, destroy the `CAsyncSocket` object if it was created on the heap; the destructor automatically calls the [Close](#close) function. The `SOCKET` data type is described in the article [Windows Sockets: Background](../../mfc/windows-sockets-background.md).  
   
 > [!NOTE]
->  보조 스레드는 정적으로 연결 된 MFC 응용 프로그램에서 MFC 소켓을 사용 하는 경우 호출 해야 `AfxSocketInit` 소켓 라이브러리를 초기화할 수 소켓을 사용 하 여 각 스레드에서 합니다. 기본적으로 `AfxSocketInit` 기본 스레드에만 호출 됩니다.  
+>  When using MFC sockets in secondary threads in a statically linked MFC application, you must call `AfxSocketInit` in each thread that uses sockets to initialize the socket libraries. By default, `AfxSocketInit` is called only in the primary thread.  
   
- 자세한 내용은 참조 [Windows 소켓: 클래스를 사용 하 여 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) 관련 기사.로 [Windows 소켓 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)합니다.  
+ For more information, see [Windows Sockets: Using Class CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) and related articles., as well as [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CAsyncSocket`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxsock.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
- 소켓 연결을 허용 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
+ Call this member function to accept a connection on a socket.  
   
 ```  
 virtual BOOL Accept(
@@ -182,116 +210,116 @@ virtual BOOL Accept(
     int* lpSockAddrLen = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rConnectedSocket`  
- 연결에 사용할 수 있는 새 소켓을 식별 하는 참조입니다.  
+ A reference identifying a new socket that is available for connection.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 네트워크에 알려 지는 연결의 주소를 수신 하는 구조 소켓 합니다. 정확한 형식을 `lpSockAddr` 인수는 소켓을 만들 때 설정 된 주소 패밀리에 의해 결정 됩니다. 경우 `lpSockAddr` 및/또는 `lpSockAddrLen` 과 같은 **NULL**, 반환 되 고 받아들인된 소켓의 원격 주소에 대 한 정보가 없습니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the address of the connecting socket, as known on the network. The exact format of the `lpSockAddr` argument is determined by the address family established when the socket was created. If `lpSockAddr` and/or `lpSockAddrLen` are equal to **NULL**, then no information about the remote address of the accepted socket is returned.  
   
  `lpSockAddrLen`  
- 주소 길이에 대 한 포인터 `lpSockAddr` (바이트)에서입니다. `lpSockAddrLen` 는 결과 값 매개 변수: 처음 가리키는 공간의 크기를 포함 해야 `lpSockAddr`; 반환이 반환 되는 주소의 실제 길이 (바이트)에 포함 됩니다.  
+ A pointer to the length of the address in `lpSockAddr` in bytes. The `lpSockAddrLen` is a value-result parameter: it should initially contain the amount of space pointed to by `lpSockAddr`; on return it will contain the actual length (in bytes) of the address returned.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수가 너무 작습니다 (의 크기 보다 작은 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조).  
+- **WSAEFAULT** The `lpSockAddrLen` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 호출이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEINVAL** `Listen` 적용할 호출된 전에 없습니다.  
+- **WSAEINVAL** `Listen` was not invoked prior to accept.  
   
-- **WSAEMFILE** 큐가 비어 수락에 진입할 때와 사용할 수 있는 설명자가 없습니다.  
+- **WSAEMFILE** The queue is empty upon entry to accept and there are no descriptors available.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다.  
+- `WSAENOBUFS` No buffer space is available.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP** 참조 된 소켓 연결 지향 서비스를 지 원하는 유형이 아닙니다.  
+- **WSAEOPNOTSUPP** The referenced socket is not a type that supports connection-oriented service.  
   
-- **WSAEWOULDBLOCK** 소켓 표시 되어 비차단 같이 연결을 허용 하기 위해 제공 하 고 있습니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and no connections are present to be accepted.  
   
-### <a name="remarks"></a>주의  
- 이 루틴의 보류 중인 연결 큐에서 첫 번째 연결을 추출,이 소켓 같은 속성을 사용 하 여 새 소켓을 만듭니다 및에 연결 `rConnectedSocket`합니다. 없는 보류 중인 연결 큐에 있는 경우 **Accept**&0;을 반환 하 고 `GetLastError` 에서 오류를 반환 합니다. 받아들인된 소켓 ( *rConnectedSocket)* 더 많은 연결을 허용 하도록 사용할 수 없습니다. 원래 소켓 열려 있는 상태 수신 대기 합니다.  
+### <a name="remarks"></a>Remarks  
+ This routine extracts the first connection in the queue of pending connections, creates a new socket with the same properties as this socket, and attaches it to `rConnectedSocket`. If no pending connections are present on the queue, **Accept** returns zero and `GetLastError` returns an error. The accepted socket ( *rConnectedSocket)* cannot be used to accept more connections. The original socket remains open and listening.  
   
- 인수 `lpSockAddr` 통신 계층에 알려 지는 소켓에는 연결의 주소를 사용 하 여 입력 되는 결과 매개 변수입니다. **수락** 와 같은 소켓 연결 기반 형식을 사용한 **SOCK_STREAM**합니다.  
+ The argument `lpSockAddr` is a result parameter that is filled in with the address of the connecting socket, as known to the communications layer. **Accept** is used with connection-based socket types such as **SOCK_STREAM**.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
- 소켓에 대 한 이벤트 알림을 요청 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
+ Call this member function to request event notification for a socket.  
   
 ```  
 BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lEvent`  
- 응용 프로그램은 관심 있는 네트워크 이벤트의 조합을 지정 하는 비트 마스크입니다.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **작업할** 읽기를 위한 준비 상태에 대 한 알림을 수신 하려면.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** 원하는 데이터를 읽을 수 있는 경우 알림을 받을 수 있습니다.  
+- **FD_WRITE** Want to receive notification when data is available to be read.  
   
-- **FD_OOB** 밴드의 범위를 벗어난 데이터에 대 한 알림을 수신 하려면.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** 들어오는 연결에 대 한 알림을 수신 하려면.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** 연결 결과 대 한 알림을 수신 하려면.  
+- **FD_CONNECT** Want to receive notification of connection results.  
   
-- **FD_CLOSE** 소켓 피어에서 닫힌 때 알림을 받으려면를 합니다.  
+- **FD_CLOSE** Want to receive notification when a socket has been closed by a peer.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** 잘못 되었음이 지정된 된 매개 변수 중 하나를 나타냅니다.  
+- **WSAEINVAL** Indicates that one of the specified parameters was invalid.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 소켓에 대 한 MFC 콜백 알림 함수를 호출할지 지정에 사용 됩니다. `AsyncSelect`이 소켓 비차단 모드 자동 설정 됩니다. 자세한 내용은 문서를 참조 하십시오. [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used to specify which MFC callback notification functions will be called for the socket. `AsyncSelect` automatically sets this socket to nonblocking mode. For more information, see the article [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
- 연결 하려면이 멤버 함수를 호출 하는 `hSocket` 에 대 한 핸들는 `CAsyncSocket` 개체입니다.  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
+ Call this member function to attach the `hSocket` handle to an `CAsyncSocket` object.  
   
 ```  
 BOOL Attach(
     SOCKET hSocket, long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 소켓에 대 한 핸들을 포함합니다.  
+ Contains a handle to a socket.  
   
  `lEvent`  
- 응용 프로그램은 관심 있는 네트워크 이벤트의 조합을 지정 하는 비트 마스크입니다.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **작업할** 읽기를 위한 준비 상태에 대 한 알림을 수신 하려면.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** 원하는 데이터를 읽을 수 있는 경우 알림을 받을 수 있습니다.  
+- **FD_WRITE** Want to receive notification when data is available to be read.  
   
-- **FD_OOB** 밴드의 범위를 벗어난 데이터에 대 한 알림을 수신 하려면.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** 들어오는 연결에 대 한 알림을 수신 하려면.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** 연결 결과 대 한 알림을 수신 하려면.  
+- **FD_CONNECT** Want to receive notification of connection results.  
   
-- **FD_CLOSE** 소켓 피어에서 닫힌 때 알림을 받으려면를 합니다.  
+- **FD_CLOSE** Want to receive notification when a socket has been closed by a peer.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하는 경우&0;이 아닙니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful.  
   
-### <a name="remarks"></a>주의  
- **소켓** 핸들 개체에 저장 됩니다 [m_hSocket](#m_hsocket) 데이터 멤버입니다.  
+### <a name="remarks"></a>Remarks  
+ The **SOCKET** handle is stored in the object's [m_hSocket](#m_hsocket) data member.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
- 소켓 로컬 주소를 연결 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
+ Call this member function to associate a local address with the socket.  
   
 ```  
 BOOL Bind(
@@ -304,67 +332,67 @@ BOOL Bind (
     int nSockAddrLen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- 소켓 응용 프로그램을 식별 하는 포트입니다.  
+ The port identifying the socket application.  
   
  `lpszSocketAddress`  
- 네트워크 주소 "128.56.22.8"와 같은 점으로 구분 된 번호입니다. 전달 된 **NULL** 이 매개 변수를 나타내는 문자열는 **CAsyncSocket** 인스턴스는 모든 네트워크 인터페이스에서 클라이언트 활동에 대 한 수신 대기 해야 합니다.  
+ The network address, a dotted number such as "128.56.22.8". Passing the **NULL** string for this parameter indicates the **CAsyncSocket** instance should listen for client activity on all network interfaces.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 이 소켓에 할당할 주소를 포함 하는 구조입니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address to assign to this socket.  
   
  `nSockAddrLen`  
- 주소 길이 `lpSockAddr` (바이트)에서입니다.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** 지정된 된 주소 이미를 사용 합니다. (참조는 **SO_REUSEADDR** 소켓 옵션 아래에서 [SetSockOpt](#setsockopt).)  
+- **WSAEADDRINUSE** The specified address is already in use. (See the **SO_REUSEADDR** socket option under [SetSockOpt](#setsockopt).)  
   
-- **WSAEFAULT** 는 `nSockAddrLen` 인수가 너무 작습니다 (의 크기 보다 작은 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조).  
+- **WSAEFAULT** The `nSockAddrLen` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 호출이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEAFNOSUPPORT** 이 포트에서 지정된 된 주소 패밀리를 사용할 수 없습니다.  
+- **WSAEAFNOSUPPORT** The specified address family is not supported by this port.  
   
-- **WSAEINVAL** 소켓 주소에 이미 바인딩되어 있습니다.  
+- **WSAEINVAL** The socket is already bound to an address.  
   
-- `WSAENOBUFS`부족 합니다. 사용할 수 있는 버퍼를 너무 많은 연결이 있습니다.  
+- `WSAENOBUFS` Not enough buffers available, too many connections.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- 이 루틴은 사용에 연결 되지 않은 데이터 그램 또는 스트림 소켓 전에 후속 **연결** 또는 `Listen` 호출 합니다. 서버 소켓의 수신 대기 포트 번호를 선택 하 고 쉽게 알려진 Windows 소켓을 호출 하 여 연결 요청을 허용 하려면, **바인딩할**합니다. **바인딩** 는 명명 되지 않은 소켓에 로컬 이름을 할당 하 여 소켓의 로컬 연결 (호스트 주소/포트 번호)을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This routine is used on an unconnected datagram or stream socket, before subsequent **Connect** or `Listen` calls. Before it can accept connection requests, a listening server socket must select a port number and make it known to Windows Sockets by calling **Bind**. **Bind** establishes the local association (host address/port number) of the socket by assigning a local name to an unnamed socket.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
- 빈 소켓 개체를 만듭니다.  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
+ Constructs a blank socket object.  
   
 ```  
 CAsyncSocket();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 해야 개체를 생성 한 후 해당 **만들기** 만들려는 멤버 함수는 **소켓** 데이터 구조 및 해당 주소를 바인딩합니다. (Windows 소켓 통신을 수신 대기 소켓에서 사용 하는 소켓을 만들 때 서버 쪽에서의 **Accept** 호출을 호출 하지 않으면 **만들기** 해당 소켓에 대 한.)  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, you must call its **Create** member function to create the **SOCKET** data structure and bind its address. (On the server side of a Windows Sockets communication, when the listening socket creates a socket to use in the **Accept** call, you do not call **Create** for that socket.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
- 소켓을 닫습니다.  
+##  <a name="close"></a>  CAsyncSocket::Close  
+ Closes the socket.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 오류와 것에 대 한 참조는 실패 하는 더 이상 소켓 설명자를 해제 **WSAENOTSOCK**합니다. 기본 소켓에 대 한 마지막 참조 인 경우에 명명 관련된 정보 및 대기 중인된 데이터가 삭제 됩니다. 소켓 개체의 소멸자 호출 **닫기** 드립니다.  
+### <a name="remarks"></a>Remarks  
+ This function releases the socket descriptor so that further references to it will fail with the error **WSAENOTSOCK**. If this is the last reference to the underlying socket, the associated naming information and queued data are discarded. The socket object's destructor calls **Close** for you.  
   
- 에 대 한 `CAsyncSocket`, 아니라 `CSocket`의 의미 체계 **닫기** 소켓 옵션에 영향을 받는 **SO_LINGER** 및 **SO_DONTLINGER**합니다. 자세한 내용은 멤버 함수를 참조 하십시오. `GetSockOpt`합니다.  
+ For `CAsyncSocket`, but not for `CSocket`, the semantics of **Close** are affected by the socket options **SO_LINGER** and **SO_DONTLINGER**. For further information, see member function `GetSockOpt`.  
   
-##  <a name="connect"></a>CAsyncSocket::Connect  
- 연결 되지 않은 스트림 또는 데이터 그램 소켓에 대 한 연결을 설정 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
+ Call this member function to establish a connection to an unconnected stream or datagram socket.  
   
 ```  
 BOOL Connect(
@@ -377,65 +405,65 @@ BOOL Connect(
     int nSockAddrLen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszHostAddress`  
- 이 개체가 연결 되는 소켓의 네트워크 주소: "형식인" 또는 "128.56.22.8" 등의 점으로 구분 된 숫자를 같은 컴퓨터 이름입니다.  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com", or a dotted number such as "128.56.22.8".  
   
  `nHostPort`  
- 소켓 응용 프로그램을 식별 하는 포트입니다.  
+ The port identifying the socket application.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 연결 된 소켓의 주소를 포함 하는 구조입니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address of the connected socket.  
   
  `nSockAddrLen`  
- 주소 길이 `lpSockAddr` (바이트)에서입니다.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 오류 코드는이 경우 **WSAEWOULDBLOCK**, 및 응용 프로그램에 재정의 가능한 콜백을 사용 하는, 응용 프로그램 받습니다는 `OnConnect` 연결 작업이 완료 되었을 때 메시지. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). If this indicates an error code of **WSAEWOULDBLOCK**, and your application is using the overridable callbacks, your application will receive an `OnConnect` message when the connect operation is complete. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** 지정된 된 주소 이미를 사용 합니다.  
+- **WSAEADDRINUSE** The specified address is already in use.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 호출이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEADDRNOTAVAIL** 지정한 주소는 로컬 컴퓨터에서 사용할 수 없습니다.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** 이 소켓으로 지정된 된 제품군에는 주소를 사용할 수 없습니다.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAECONNREFUSED** 연결 시도가 거부 되었습니다.  
+- **WSAECONNREFUSED** The attempt to connect was rejected.  
   
-- **WSAEDESTADDRREQ** 대상 주소가 필요 합니다.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAEFAULT** 는 `nSockAddrLen` 인수가 올바르지 않습니다.  
+- **WSAEFAULT** The `nSockAddrLen` argument is incorrect.  
   
-- **WSAEINVAL** 잘못 된 호스트 주소입니다.  
+- **WSAEINVAL** Invalid host address.  
   
-- **WSAEISCONN** 소켓이 이미 연결 되어 있습니다.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** 더 이상 파일 설명자가 사용할 수 있습니다.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- **WSAENETUNREACH** 지금은이 호스트에서 네트워크에 연결할 수 없습니다.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be connected.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAETIMEDOUT** 연결 연결을 설정 하지 않고 시간 초과 하려고 합니다.  
+- **WSAETIMEDOUT** Attempt to connect timed out without establishing a connection.  
   
-- **WSAEWOULDBLOCK** 소켓 표시 되어 비차단 같이 연결을 즉시 완료할 수 없습니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the connection cannot be completed immediately.  
   
-### <a name="remarks"></a>주의  
- 소켓에 바인딩되어 있지 않습니다., 고유 값 시스템, 로컬 연결에 할당 하 고 소켓으로 표시 되어 바인딩됩니다. 되는 경우 이름 구조체의 주소 필드는 모두&0;으로 **연결**&0;을 반환 합니다. 확장 정보를 가져오려면 오류를 호출 하는 `GetLastError` 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ If the socket is unbound, unique values are assigned to the local association by the system, and the socket is marked as bound. Note that if the address field of the name structure is all zeroes, **Connect** will return zero. To get extended error information, call the `GetLastError` member function.  
   
- 스트림 소켓에 대 한 (형식 **SOCK_STREAM**), 외부 호스트에 대 한 활성 연결이 시작 됩니다. 소켓 호출이 성공적으로 완료 되 면 소켓이 송신/수신 데이터에 있습니다.  
+ For stream sockets (type **SOCK_STREAM**), an active connection is initiated to the foreign host. When the socket call completes successfully, the socket is ready to send/receive data.  
   
- 데이터 그램 소켓에 대 한 (형식 **SOCK_DGRAM**), 기본 대상 설정 되어 다음에 사용 될 **보낼** 및 **수신** 호출 합니다.  
+ For a datagram socket (type **SOCK_DGRAM**), a default destination is set, which will be used on subsequent **Send** and **Receive** calls.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
- 호출 된 **만들기** Windows 소켓을 만들고 연결 하는 소켓 개체를 생성 한 후 멤버 함수입니다.  
+##  <a name="create"></a>  CAsyncSocket::Create  
+ Call the **Create** member function after constructing a socket object to create the Windows socket and attach it.  
   
 ```  
 BOOL Create(
@@ -445,108 +473,108 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- Windows 소켓 포트를 선택 하려는 경우에 소켓 또는 0 함께 사용 되는 잘 알려진 포트입니다.  
+ A well-known port to be used with the socket, or 0 if you want Windows Sockets to select a port.  
   
  `nSocketType`  
- **SOCK_STREAM** 또는 **SOCK_DGRAM**합니다.  
+ **SOCK_STREAM** or **SOCK_DGRAM**.  
   
  `lEvent`  
- 응용 프로그램은 관심 있는 네트워크 이벤트의 조합을 지정 하는 비트 마스크입니다.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **작업할** 읽기를 위한 준비 상태에 대 한 알림을 수신 하려면.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** 쓰기를 위한 준비에 대 한 알림을 수신 하려면.  
+- **FD_WRITE** Want to receive notification of readiness for writing.  
   
-- **FD_OOB** 밴드의 범위를 벗어난 데이터에 대 한 알림을 수신 하려면.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** 들어오는 연결에 대 한 알림을 수신 하려면.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** 완료 된 연결에 대 한 알림을 수신 하려면.  
+- **FD_CONNECT** Want to receive notification of completed connection.  
   
-- **FD_CLOSE** 소켓 닫기를 처리에 대 한 알림을 수신 하려면.  
+- **FD_CLOSE** Want to receive notification of socket closure.  
   
  *lpszSockAddress*  
- "128.56.22.8" 등의 점으로 구분 된 숫자를 연결된 된 소켓의 네트워크 주소를 포함 하는 문자열에 대 한 포인터입니다. 전달 된 **NULL** 이 매개 변수를 나타내는 문자열는 **CAsyncSocket** 인스턴스는 모든 네트워크 인터페이스에서 클라이언트 활동에 대 한 수신 대기 해야 합니다.  
+ A pointer to a string containing the network address of the connected socket, a dotted number such as "128.56.22.8".Passing the **NULL** string for this parameter indicates the **CAsyncSocket** instance should listen for client activity on all network interfaces.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEAFNOSUPPORT** 지정된 된 주소 패밀리에 지원 되지 않습니다.  
+- **WSAEAFNOSUPPORT** The specified address family is not supported.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEMFILE** 더 이상 파일 설명자가 사용할 수 있습니다.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 만들 수 없습니다.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be created.  
   
-- **WSAEPROTONOSUPPORT** 지정된 된 포트 지원 되지 않습니다.  
+- **WSAEPROTONOSUPPORT** The specified port is not supported.  
   
-- **WSAEPROTOTYPE** 이 소켓에 대해 잘못 된 형식이 지정된 된 포트입니다.  
+- **WSAEPROTOTYPE** The specified port is the wrong type for this socket.  
   
-- **WSAESOCKTNOSUPPORT** 이 주소 패밀리에 지정된 된 소켓 형식이 지원 되지 않습니다.  
+- **WSAESOCKTNOSUPPORT** The specified socket type is not supported in this address family.  
   
-### <a name="remarks"></a>주의  
- **만들** 호출 [소켓](#socket) 호출 성공 하면 [바인딩](#bind) 소켓을 바인딩하지 지정된 된 주소에 있습니다. 다음과 같은 소켓 유형이 지원 됩니다.  
+### <a name="remarks"></a>Remarks  
+ **Create** calls [Socket](#socket) and if successful, it calls [Bind](#bind) to bind the socket to the specified address. The following socket types are supported:  
   
-- **SOCK_STREAM** 신뢰할 수 있는, 전이중, 연결 기반 바이트 스트림의 시퀀스를 제공 합니다. 인터넷 주소 패밀리에 대해 전송 제어 프로토콜 (TCP)을 사용합니다.  
+- **SOCK_STREAM** Provides sequenced, reliable, full-duplex, connection-based byte streams. Uses the Transmission Control Protocol (TCP) for the Internet address family.  
   
-- **SOCK_DGRAM** 최대 길이가 고정된 (일반적으로 작은)의 연결 없는, 안정적이 지 않은 패킷을 인 데이터 그램을 지원 합니다. 인터넷 주소 패밀리에 대해 (UDP (User Datagram Protocol)를 사용합니다.  
+- **SOCK_DGRAM** Supports datagrams, which are connectionless, unreliable packets of a fixed (typically small) maximum length. Uses the User Datagram Protocol (UDP) for the Internet address family.  
   
     > [!NOTE]
-    >  **Accept** 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 **Accept**합니다. 사항으로이 소켓 개체가 범위를 연결이 닫힙니다 사라지면 합니다. 호출 하지 마십시오 **만들기** 이 새 소켓 개체에 대 한 합니다.  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. Keep in mind that if this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object.  
   
 > [!IMPORTANT]
-> **만들** 는 **하지** 스레드로부터 안전 합니다.  를 호출 하는 것 다중 스레드 환경에서 동시에 서로 다른 스레드에 의해 호출 될 수 있는 경우에 뮤텍스 또는 다른 동기화 잠금을 사용 하 여 각 호출을 보호 해야 합니다.  
+> **Create** is **not** thread-safe.  If you are calling it in a multi-threaded environment where it could be invoked simultaneously by different threads, be sure to protect each call with a mutex or other synchronization lock.  
   
- 스트림 및 데이터 그램 소켓에 대 한 자세한 내용은 문서를 참조 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md) 및 [Windows 소켓: 포트 및 소켓 주소](../../mfc/windows-sockets-ports-and-socket-addresses.md) 및 [Windows 소켓 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)합니다.  
+ For more information about stream and datagram sockets, see the articles [Windows Sockets: Background](../../mfc/windows-sockets-background.md) and [Windows Sockets: Ports and Socket Addresses](../../mfc/windows-sockets-ports-and-socket-addresses.md) and [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
- 분리 하려면이 함수를 호출의 **소켓** 에서 처리는 `m_hSocket` 에서 데이터 멤버는 `CAsyncSocket` 개체 및 설정 `m_hSocket` 를 **NULL**합니다.  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
+ Call this member function to detach the **SOCKET** handle in the `m_hSocket` data member from the `CAsyncSocket` object and set `m_hSocket` to **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
- 에 대 한 포인터를 반환 합니다.는 `CAsyncSocket` 개체입니다.  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
+ Returns a pointer to a `CAsyncSocket` object.  
   
 ```  
 static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 소켓에 대 한 핸들을 포함합니다.  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CAsyncSocket` 개체 또는 **NULL** 없을 경우 없는 `CAsyncSocket` 개체에 연결 된 `hSocket`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an `CAsyncSocket` object, or **NULL** if there is no `CAsyncSocket` object attached to `hSocket`.  
   
-### <a name="remarks"></a>주의  
- 지정 된 경우는 **소켓** 경우 처리는 `CAsyncSocket` 멤버 함수는 반환 된 핸들에는 개체가 연결 되지 않은, **NULL**합니다.  
+### <a name="remarks"></a>Remarks  
+ When given a **SOCKET** handle, if a `CAsyncSocket` object is not attached to the handle, the member function returns **NULL**.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
- 실패 한 마지막 작업에 대 한 오류 상태를 가져오려면이 함수를 호출 합니다.  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
+ Call this member function to get the error status for the last operation that failed.  
   
 ```  
 static int PASCAL GetLastError();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 값이이 스레드가 수행한 마지막 Windows 소켓 API 루틴에 대 한 오류 코드를 나타냅니다.  
+### <a name="return-value"></a>Return Value  
+ The return value indicates the error code for the last Windows Sockets API routine performed by this thread.  
   
-### <a name="remarks"></a>주의  
- 특정 멤버 함수, 오류가 발생 했음을 나타냅니다 때 `GetLastError` 적절 한 오류 코드를 검색 하려면를 호출 해야 합니다. 해당 오류 코드의 목록에 대 한 개별 멤버 함수 설명을 참조 하십시오.  
+### <a name="remarks"></a>Remarks  
+ When a particular member function indicates that an error has occurred, `GetLastError` should be called to retrieve the appropriate error code. See the individual member function descriptions for a list of applicable error codes.  
   
- 오류 코드에 대 한 자세한 내용은 참조 [Windows 소켓 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)합니다.  
+ For more information about the error codes, see [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
- 이 소켓 연결 되어 있는 피어 소켓의 주소를 확인 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
+ Call this member function to get the address of the peer socket to which this socket is connected.  
   
 ```  
 BOOL GetPeerName(
@@ -559,39 +587,39 @@ BOOL GetPeerName(
     int* lpSockAddrLen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rPeerAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rPeerPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조체 피어 소켓의 이름입니다.  
+ A pointer to the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the name of the peer socket.  
   
  `lpSockAddrLen`  
- 주소 길이에 대 한 포인터 `lpSockAddr` (바이트)에서입니다. 반환이 이루어지고에 `lpSockAddrLen` 의 실제 크기를 포함 하는 인수 `lpSockAddr` 바이트 단위로 반환 합니다.  
+ A pointer to the length of the address in `lpSockAddr` in bytes. On return, the `lpSockAddrLen` argument contains the actual size of `lpSockAddr` returned in bytes.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수 만큼 크지 않습니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 호출이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAENOTCONN** 는 소켓이 연결 되지 않았습니다.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- IPv6 주소를 처리 하려면 [CAsyncSocket::GetPeerNameEx](#getpeernameex)합니다.  
+### <a name="remarks"></a>Remarks  
+ To handle IPv6 addresses, use [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
- 이 소켓을 연결된 (핸들 IPv6 주소)는 피어 소켓의 주소를 확인 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
+ Call this member function to get the address of the peer socket to which this socket is connected (handles IPv6 addresses).  
   
 ```  
 BOOL GetPeerNameEx(
@@ -599,33 +627,33 @@ BOOL GetPeerNameEx(
     UINT& rPeerPort);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rPeerAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rPeerPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수 만큼 크지 않습니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 호출이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAENOTCONN** 는 소켓이 연결 되지 않았습니다.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 동일 [CAsyncSocket::GetPeerName](#getpeername) 오래 된 파일로 프로토콜 주소를 제외 하 고 i p v&6;을 처리 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is the same as [CAsyncSocket::GetPeerName](#getpeername) except that it handles IPv6 addresses as well as older protocols.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
- 이 소켓에 대 한 로컬 이름을 가져오는 함수를 호출 합니다.  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
+ Call this member function to get the local name for a socket.  
   
 ```  
 BOOL GetSockName(
@@ -638,41 +666,41 @@ BOOL GetSockName(
     int* lpSockAddrLen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rSocketAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조체는 소켓의 주소입니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the address of the socket.  
   
  `lpSockAddrLen`  
- 주소 길이에 대 한 포인터 `lpSockAddr` (바이트)에서입니다.  
+ A pointer to the length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수 만큼 크지 않습니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEINVAL** 소켓에는 주소에 바인딩하지 않으면 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound to an address with **Bind**.  
   
-### <a name="remarks"></a>주의  
- 이 호출은 때 특히 유용는 **연결** 호출 없이 수행 하는 **바인딩할** 이 호출에서 기준이 있는 시스템에서 설정한 로컬 연결을 확인할 수 있습니다 유일한 수단을 제공 하는 먼저;.  
+### <a name="remarks"></a>Remarks  
+ This call is especially useful when a **Connect** call has been made without doing a **Bind** first; this call provides the only means by which you can determine the local association which has been set by the system.  
   
- IPv6 주소를 처리 하려면 [CAsyncSocket::GetSockNameEx](#getsocknameex)  
+ To handle IPv6 addresses, use [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
- 이 소켓 (핸들 IPv6 주소)에 대 한 로컬 이름을 가져오는 함수를 호출 합니다.  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
+ Call this member function to get the local name for a socket (handles IPv6 addresses).  
   
 ```  
 BOOL GetSockNameEx(
@@ -680,35 +708,35 @@ BOOL GetSockNameEx(
     UINT& rSocketPort);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rSocketAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수 만큼 크지 않습니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEINVAL** 소켓에는 주소에 바인딩하지 않으면 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound to an address with **Bind**.  
   
-### <a name="remarks"></a>주의  
- 이 호출은 같습니다 [CAsyncSocket::GetSockName](#getsockname) 오래 된 파일로 프로토콜 주소를 제외 하 고 i p v&6;을 처리 합니다.  
+### <a name="remarks"></a>Remarks  
+ This call is the same as [CAsyncSocket::GetSockName](#getsockname) except that it handles IPv6 addresses as well as older protocols.  
   
- 이 호출은 때 특히 유용는 **연결** 호출 없이 수행 하는 **바인딩할** 이 호출에서 기준이 있는 시스템에서 설정한 로컬 연결을 확인할 수 있습니다 유일한 수단을 제공 하는 먼저;.  
+ This call is especially useful when a **Connect** call has been made without doing a **Bind** first; this call provides the only means by which you can determine the local association which has been set by the system.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
- 소켓 옵션을 검색 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
+ Call this member function to retrieve a socket option.  
   
 ```  
 BOOL GetSockOpt(
@@ -718,71 +746,71 @@ BOOL GetSockOpt(
     int nLevel = SOL_SOCKET);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nOptionName`  
- 값은 검색할 소켓 옵션입니다.  
+ The socket option for which the value is to be retrieved.  
   
  `lpOptionValue`  
- 요청 된 옵션의 값을 반환할 버퍼에 대 한 포인터입니다. 선택된 된 옵션은 연관 된 값은 버퍼에 반환 `lpOptionValue`합니다. 가리키는 정수 `lpOptionLen` (바이트)이이 버퍼의 크기를 원래 포함 되어 있어야 하 고 반환이 반환 되는 값의 크기를 설정할 수는 있습니다. 에 대 한 **SO_LINGER**를이 됩니다의 크기는 `LINGER` 구조체의 크기에 대 한 다른 모든 옵션 됩니다;는 **BOOL** 또는 `int`옵션에 따라 합니다. 옵션 및 주의 섹션에 해당 크기 목록을 참조 하십시오.  
+ A pointer to the buffer in which the value for the requested option is to be returned. The value associated with the selected option is returned in the buffer `lpOptionValue`. The integer pointed to by `lpOptionLen` should originally contain the size of this buffer in bytes; and on return, it will be set to the size of the value returned. For **SO_LINGER**, this will be the size of a `LINGER` structure; for all other options it will be the size of a **BOOL** or an `int`, depending on the option. See the list of options and their sizes in the Remarks section.  
   
  `lpOptionLen`  
- 크기에 대 한 포인터는 `lpOptionValue` 바이트에서 버퍼입니다.  
+ A pointer to the size of the `lpOptionValue` buffer in bytes.  
   
  `nLevel`  
- 이때 옵션 정의 되어 있으면 수준 지원 되는 유일한 수준은 **SOL_SOCKET** 및 **IPPROTO_TCP**합니다.  
+ The level at which the option is defined; the only supported levels are **SOL_SOCKET** and **IPPROTO_TCP**.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 옵션으로 설정 되지 않았으면 경우 `SetSockOpt`, 다음 `GetSockOpt` 옵션에 대 한 기본 값을 반환 합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). If an option was never set with `SetSockOpt`, then `GetSockOpt` returns the default value for the option. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpOptionLen` 인수가 잘못 되었습니다.  
+- **WSAEFAULT** The `lpOptionLen` argument was invalid.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOPROTOOPT** 알 수 없거나 지원 되지 않는 옵션입니다. 특히, **SO_BROADCAST** 형식의 소켓에서 지원 되지 않습니다 **SOCK_STREAM**, 동안 **SO_ACCEPTCONN**, **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, 및 **SO_OOBINLINE** 형식의 소켓에서 지원 되지 않는 **SOCK_DGRAM**합니다.  
+- **WSAENOPROTOOPT** The option is unknown or unsupported. In particular, **SO_BROADCAST** is not supported on sockets of type **SOCK_STREAM**, while **SO_ACCEPTCONN**, **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, and **SO_OOBINLINE** are not supported on sockets of type **SOCK_DGRAM**.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- `GetSockOpt`모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 검색 하 고 해당 결과 `lpOptionValue`합니다. 옵션 패킷과 대역폭을 벗어난 데이터 전송 등의 라우팅 등 소켓 작업을 영향을 줍니다.  
+### <a name="remarks"></a>Remarks  
+ `GetSockOpt` retrieves the current value for a socket option associated with a socket of any type, in any state, and stores the result in `lpOptionValue`. Options affect socket operations, such as the routing of packets, out-of-band data transfer, and so on.  
   
- 다음 옵션에 대해 지원 됩니다 `GetSockOpt`합니다. 형식으로 주소가 지정 된 데이터의 형식을 식별 `lpOptionValue`합니다. **TCP_NODELAY** 옵션 수준을 사용 하 여 **IPPROTO_TCP**; 수준을 사용 하 여 다른 모든 옵션 **SOL_SOCKET**합니다.  
+ The following options are supported for `GetSockOpt`. The Type identifies the type of data addressed by `lpOptionValue`. The **TCP_NODELAY** option uses level **IPPROTO_TCP**; all other options use level **SOL_SOCKET**.  
   
-|값|형식|의미|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_ACCEPTCONN**|**BOOL**|소켓이 수신 중입니다.|  
-|**SO_BROADCAST**|**BOOL**|소켓의 브로드캐스트 메시지 전송에 대 한 구성 됩니다.|  
-|**SO_DEBUG**|**BOOL**|디버깅이 활성화 됩니다.|  
-|**SO_DONTLINGER**|**BOOL**|True 이면는 **SO_LINGER** 옵션을 사용할 수 있습니다.|  
-|**SO_DONTROUTE**|**BOOL**|라우팅이 비활성화 됩니다.|  
-|**SO_ERROR**|`int`|오류 상태를 검색 하 고 지웁니다.|  
-|**SO_KEEPALIVE**|**BOOL**|연결 유지 보내고 있습니다.|  
-|**SO_LINGER**|**LINGER 구조체**|현재 링거 옵션을 반환합니다.|  
-|**SO_OOBINLINE**|**BOOL**|정상 데이터 스트림에서 수신 중인 대역폭을 벗어난 데이터입니다.|  
-|**SO_RCVBUF**|`int`|버퍼 크기를 받습니다.|  
-|**SO_REUSEADDR**|**BOOL**|소켓이 이미 사용 중인 주소에 바인딩할 수 있습니다.|  
-|**SO_SNDBUF**|`int`|버퍼 크기를 보냅니다.|  
-|**SO_TYPE**|`int`|소켓의 유형 (예를 들어 **SOCK_STREAM**).|  
-|**TCP_NODELAY**|**BOOL**|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|  
+|**SO_ACCEPTCONN**|**BOOL**|Socket is listening.|  
+|**SO_BROADCAST**|**BOOL**|Socket is configured for the transmission of broadcast messages.|  
+|**SO_DEBUG**|**BOOL**|Debugging is enabled.|  
+|**SO_DONTLINGER**|**BOOL**|If true, the **SO_LINGER** option is disabled.|  
+|**SO_DONTROUTE**|**BOOL**|Routing is disabled.|  
+|**SO_ERROR**|`int`|Retrieve error status and clear.|  
+|**SO_KEEPALIVE**|**BOOL**|Keep-alives are being sent.|  
+|**SO_LINGER**|**struct LINGER**|Returns the current linger options.|  
+|**SO_OOBINLINE**|**BOOL**|Out-of-band data is being received in the normal data stream.|  
+|**SO_RCVBUF**|`int`|Buffer size for receives.|  
+|**SO_REUSEADDR**|**BOOL**|The socket can be bound to an address which is already in use.|  
+|**SO_SNDBUF**|`int`|Buffer size for sends.|  
+|**SO_TYPE**|`int`|The type of the socket (for example, **SOCK_STREAM**).|  
+|**TCP_NODELAY**|**BOOL**|Disables the Nagle algorithm for send coalescing.|  
   
- 버클리 소프트웨어 배포 (BSD) 옵션에 대 한 지원 되지 않습니다 `GetSockOpt` 됩니다.  
+ Berkeley Software Distribution (BSD) options not supported for `GetSockOpt` are:  
   
-|값|형식|의미|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_RCVLOWAT**|`int`|하위 워터 마크를 수신 합니다.|  
-|**SO_RCVTIMEO**|`int`|수신 제한 시간이 초과 합니다.|  
-|**SO_SNDLOWAT**|`int`|하위 워터 마크를 보냅니다.|  
-|**SO_SNDTIMEO**|`int`|제한 시간을 보냅니다.|  
-|**IP_OPTIONS**||IP 헤더의 옵션을 가져옵니다.|  
-|**TCP_MAXSEG**|`int`|TCP 최대 세그먼트 크기를 가져옵니다.|  
+|**SO_RCVLOWAT**|`int`|Receive low water mark.|  
+|**SO_RCVTIMEO**|`int`|Receive timeout.|  
+|**SO_SNDLOWAT**|`int`|Send low water mark.|  
+|**SO_SNDTIMEO**|`int`|Send timeout.|  
+|**IP_OPTIONS**||Get options in IP header.|  
+|**TCP_MAXSEG**|`int`|Get TCP maximum segment size.|  
   
- 호출 `GetSockOpt` 는 지원 되지 않는 옵션을 사용 하면 오류 코드 **WSAENOPROTOOPT** 에서 반환 되 고 `GetLastError`합니다.  
+ Calling `GetSockOpt` with an unsupported option will result in an error code of **WSAENOPROTOOPT** being returned from `GetLastError`.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
- 소켓의 모드를 제어 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
+ Call this member function to control the mode of a socket.  
   
 ```  
 BOOL IOCtl(
@@ -790,267 +818,267 @@ BOOL IOCtl(
     DWORD* lpArgument);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lCommand`  
- 소켓에서 수행 하는 명령입니다.  
+ The command to perform on the socket.  
   
  `lpArgument`  
- 에 대 한 매개 변수에 대 한 포인터를 `lCommand`합니다.  
+ A pointer to a parameter for `lCommand`.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** `lCommand` 유효한 명령이 아닙니다 또는 `lpArgument` 대 한 허용 가능한 매개 변수가 없는 `lCommand`되었거나 명령을 제공 하는 소켓의 형식에 적용할 수 없습니다.  
+- **WSAEINVAL** `lCommand` is not a valid command, or `lpArgument` is not an acceptable parameter for `lCommand`, or the command is not applicable to the type of socket supplied.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- 이 루틴은 모든 상태에서 모든 소켓에서 사용할 수 있습니다. 가져오기 또는 연결 된 소켓, 프로토콜 및 통신 하위 시스템의 독립적인 운영 매개 변수를 검색 합니다. 사용 됩니다. 다음과 같은 명령이 지원 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This routine can be used on any socket in any state. It is used to get or retrieve operating parameters associated with the socket, independent of the protocol and communications subsystem. The following commands are supported:  
   
-- **FIONBIO** 소켓에 비차단 모드를 사용 하지 않도록 설정 하거나 사용 합니다. `lpArgument` 매개 변수를 가리키는 `DWORD`, 비차단 모드를 사용 하면&0;이 아니고 변수인 및 사용할 수 없게 하는 경우에는&0;입니다. 경우 `AsyncSelect` 사용 하려고 하면 다음 소켓에서 실행 된 **IOCtl** 소켓 차단 모드로 다시 설정에 실패 **WSAEINVAL**합니다. 소켓 차단 모드로 다시 설정 하 고 방지 하는 **WSAEINVAL** 오류, 응용 프로그램 먼저 해제 해야 `AsyncSelect` 를 호출 하 여 `AsyncSelect` 와 `lEvent` 매개 변수를 0으로, 다음 호출 **IOCtl**합니다.  
+- **FIONBIO** Enable or disable nonblocking mode on the socket. The `lpArgument` parameter points at a `DWORD`, which is nonzero if nonblocking mode is to be enabled and zero if it is to be disabled. If `AsyncSelect` has been issued on a socket, then any attempt to use **IOCtl** to set the socket back to blocking mode will fail with **WSAEINVAL**. To set the socket back to blocking mode and prevent the **WSAEINVAL** error, an application must first disable `AsyncSelect` by calling `AsyncSelect` with the `lEvent` parameter equal to 0, then call **IOCtl**.  
   
-- **FIONREAD** 하나를 읽을 수 있는 바이트의 최대 수를 확인할 **수신** 이 소켓에서를 호출 합니다. `lpArgument` 매개 변수를 가리키는 `DWORD` 는 **IOCtl** 결과 저장 합니다. 이 소켓 형식인 경우 **SOCK_STREAM**를 **FIONREAD** 단일에서 읽을 수 있는 데이터의 총 크기를 반환 합니다. **수신**;이 일반적으로 동일한 소켓에서 대기열에 있는 총 데이터 양입니다. 이 소켓 형식인 경우 **SOCK_DGRAM**를 **FIONREAD** 소켓에서 대기열에 있는 첫 번째 데이터 그램의 크기를 반환 합니다.  
+- **FIONREAD** Determine the maximum number of bytes that can be read with one **Receive** call from this socket. The `lpArgument` parameter points at a `DWORD` in which **IOCtl** stores the result. If this socket is of type **SOCK_STREAM**, **FIONREAD** returns the total amount of data which can be read in a single **Receive**; this is normally the same as the total amount of data queued on the socket. If this socket is of type **SOCK_DGRAM**, **FIONREAD** returns the size of the first datagram queued on the socket.  
   
-- **SIOCATMARK** 모든 대역폭을 벗어난 데이터 읽은 있는지 여부를 결정 합니다. 이 형식의 소켓에만 적용 됩니다 **SOCK_STREAM** 있는 모든 대역폭을 벗어난 데이터의 인라인 수신에 구성 된 ( **SO_OOBINLINE**). 없는 대역폭을 벗어난 데이터를 읽을 대기 중인 경우 작업이&0;이 아닌 값을 반환 합니다. 그렇지 않으면 0이 고, 다음 반환 **수신** 또는 `ReceiveFrom` 에서 수행 소켓 기호 앞의 "" 데이터 중 일부 또는 모두 검색 합니다; 응용 프로그램에서 사용 해야는 **SIOCATMARK** 데이터가 남아 있는지 여부를 결정 하는 작업입니다. 일반 데이터 앞에 "긴급" (대역) 데이터를 순서 대로 수신 됩니다. (유의 **수신** 또는 `ReceiveFrom` 대역의 및 일반 데이터는 동일한 호출에서을 혼합 해서는 안 됩니다.) `lpArgument` 매개 변수를 가리키는 `DWORD` 는 **IOCtl** 결과 저장 합니다.  
+- **SIOCATMARK** Determine whether all out-of-band data has been read. This applies only to a socket of type **SOCK_STREAM** which has been configured for in-line reception of any out-of-band data ( **SO_OOBINLINE**). If no out-of-band data is waiting to be read, the operation returns nonzero. Otherwise it returns 0, and the next **Receive** or `ReceiveFrom` performed on the socket will retrieve some or all of the data preceding the "mark"; the application should use the **SIOCATMARK** operation to determine whether any data remains. If there is any normal data preceding the "urgent" (out-of-band) data, it will be received in order. (Note that a **Receive** or `ReceiveFrom` will never mix out-of-band and normal data in the same call.) The `lpArgument` parameter points at a `DWORD` in which **IOCtl** stores the result.  
   
- 이 함수는 하위 집합만 **ioctl()** 버클리 소켓에 사용 되 고 있습니다. 특히는 하는 것과 같은 명령은 **FIOASYNC**, 동안 **SIOCATMARK** 지원 되는 소켓 수준 명령입니다.  
+ This function is a subset of **ioctl()** as used in Berkeley sockets. In particular, there is no command which is equivalent to **FIOASYNC**, while **SIOCATMARK** is the only socket-level command which is supported.  
   
-##  <a name="listen"></a>CAsyncSocket::Listen  
- 들어오는 연결 요청을 수신 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
+ Call this member function to listen for incoming connection requests.  
   
 ```  
 BOOL Listen(int nConnectionBacklog = 5);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nConnectionBacklog*  
- 보류 중인 연결 큐 증가할 수 있는 최대 길이입니다. 유효한 범위는 1에서 5 사이입니다.  
+ The maximum length to which the queue of pending connections can grow. Valid range is from 1 to 5.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** 사용 중인 주소에서 수신 대기 하려고 합니다.  
+- **WSAEADDRINUSE** An attempt has been made to listen on an address in use.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** 소켓으로 바인딩되지 않은 **바인딩할** 또는 이미 연결 되어 있습니다.  
+- **WSAEINVAL** The socket has not been bound with **Bind** or is already connected.  
   
-- **WSAEISCONN** 소켓이 이미 연결 되어 있습니다.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** 더 이상 파일 설명자가 사용할 수 있습니다.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다.  
+- `WSAENOBUFS` No buffer space is available.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP** 참조 된 소켓을 지 원하는 유형이 아닙니다는 `Listen` 작업 합니다.  
+- **WSAEOPNOTSUPP** The referenced socket is not of a type that supports the `Listen` operation.  
   
-### <a name="remarks"></a>주의  
- 연결을 허용 하도록 소켓 먼저 만들어집니다 **만들기**, 들어오는 연결에 대 한 백로그 지정 된 `Listen`, 연결 허용 되며 다음 및 **Accept**합니다. `Listen`에 적용 됩니다 소켓 연결을 지 원하는, 즉, 형식과 **SOCK_STREAM**합니다. 이 소켓 들어오는 연결 된 승인 하 고 프로세스에 의해 승인 보류 중인 큐에 대기 하는 "수동" 모드에 배치 됩니다.  
+### <a name="remarks"></a>Remarks  
+ To accept connections, the socket is first created with **Create**, a backlog for incoming connections is specified with `Listen`, and then the connections are accepted with **Accept**. `Listen` applies only to sockets that support connections, that is, those of type **SOCK_STREAM**. This socket is put into "passive" mode where incoming connections are acknowledged and queued pending acceptance by the process.  
   
- 이 함수는 일반적으로 서버 (또는 연결을 허용 하려는 모든 응용 프로그램)가 사용 되어 한 번에 둘 이상의 연결 요청을 사용할 수 있는: 전체 큐와 연결 요청이 도착 하는 경우 클라이언트 오류가 발생 하는 **WSAECONNREFUSED**합니다.  
+ This function is typically used by servers (or any application that wants to accept connections) that could have more than one connection request at a time: if a connection request arrives with the queue full, the client will receive an error with an indication of **WSAECONNREFUSED**.  
   
- `Listen`계속 해 서 사용할 수 있는 포트 (설명자) 없는 경우 논리적으로 작동을 시도 합니다. 그 큐를 비울 때까지 연결을 허용 합니다. 포트를 사용할 수 있는 경우 한 이후의 호출 `Listen` 또는 **Accept** 가능 하면 현재 또는 가장 최근 "백로그에" 큐를 다시 채우는 하 고 들어오는 연결을 수신 대기를 다시 시작 됩니다.  
+ `Listen` attempts to continue to function rationally when there are no available ports (descriptors). It will accept connections until the queue is emptied. If ports become available, a later call to `Listen` or **Accept** will refill the queue to the current or most recent "backlog," if possible, and resume listening for incoming connections.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
- 포함 된 **소켓** 이 캡슐화 하는 소켓에 대 한 핸들 `CAsyncSocket` 개체입니다.  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
+ Contains the **SOCKET** handle for the socket encapsulated by this `CAsyncSocket` object.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
- 호출 하 여 보류 중인 연결 요청 받을 수 있는 수신 대기 소켓에 알리기 위해 프레임 워크에서 호출 된 [Accept](#accept) 멤버 함수입니다.  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
+ Called by the framework to notify a listening socket that it can accept pending connection requests by calling the [Accept](#accept) member function.  
   
 ```  
 virtual void OnAccept(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnAccept` 멤버 함수:  
+ The most recent error on a socket. The following error codes applies to the `OnAccept` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
- 해당 프로세스에 의해 연결 된 소켓 닫혀 있는지이 소켓에 알리기 위해 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
+ Called by the framework to notify this socket that the connected socket is closed by its process.  
   
 ```  
 virtual void OnClose(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnClose` 멤버 함수:  
+ The most recent error on a socket. The following error codes apply to the `OnClose` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAECONNRESET** 연결이 원격측에서 재설정 되었습니다.  
+- **WSAECONNRESET** The connection was reset by the remote side.  
   
-- **WSAECONNABORTED** 연결이 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The connection was aborted due to timeout or other failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
- 해당 연결 시도가 완료 되 면 성공적으로 또는 오류에서 소켓에이 연결에 알리기 위해 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
+ Called by the framework to notify this connecting socket that its connection attempt is completed, whether successfully or in error.  
   
 ```  
 virtual void OnConnect(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnConnect` 멤버 함수:  
+ The most recent error on a socket. The following error codes apply to the `OnConnect` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAEADDRINUSE** 지정된 된 주소 이미를 사용 합니다.  
+- **WSAEADDRINUSE** The specified address is already in use.  
   
-- **WSAEADDRNOTAVAIL** 지정한 주소는 로컬 컴퓨터에서 사용할 수 없습니다.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** 이 소켓으로 지정된 된 제품군에는 주소를 사용할 수 없습니다.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAECONNREFUSED** 연결 시도가 강제로 거부 되었습니다.  
+- **WSAECONNREFUSED** The attempt to connect was forcefully rejected.  
   
-- **WSAEDESTADDRREQ** 대상 주소가 필요 합니다.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수가 올바르지 않습니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is incorrect.  
   
-- **WSAEINVAL** 소켓 주소에 이미 바인딩되어 있습니다.  
+- **WSAEINVAL** The socket is already bound to an address.  
   
-- **WSAEISCONN** 소켓이 이미 연결 되어 있습니다.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** 더 이상 파일 설명자가 사용할 수 있습니다.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- **WSAENETUNREACH** 지금은이 호스트에서 네트워크에 연결할 수 없습니다.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be connected.  
   
-- **WSAENOTCONN** 는 소켓이 연결 되지 않았습니다.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** 설명자는 파일, 소켓에 없습니다.  
+- **WSAENOTSOCK** The descriptor is a file, not a socket.  
   
-- **WSAETIMEDOUT** 연결을 설정 하지 않고 연결 시도 시간이 초과 되었습니다.  
+- **WSAETIMEDOUT** The attempt to connect timed out without establishing a connection.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  [CSocket](../../mfc/reference/csocket-class.md), `OnConnect` 알림 함수는 호출 되지 않습니다. 연결을 위해를 호출 하면 **연결**, (성공적으로 또는 오류에서)는 연결이 완료 된 경우 반환 합니다. MFC 구현 정보는 연결 알림을 처리 하는 방법입니다.  
+>  In [CSocket](../../mfc/reference/csocket-class.md), the `OnConnect` notification function is never called. For connections, you simply call **Connect**, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.  
   
- 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAsyncSocket #&1;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
- 보내는 소켓에 대역폭을 벗어난 데이터를 보내는 수신 소켓에 알리기 위해 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
+ Called by the framework to notify the receiving socket that the sending socket has out-of-band data to send.  
   
 ```  
 virtual void OnOutOfBandData(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnOutOfBandData` 멤버 함수:  
+ The most recent error on a socket. The following error codes apply to the `OnOutOfBandData` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>주의  
- 대역폭을 벗어난 데이터는 연결 된 각 쌍 형식의 연결 된 소켓의 논리적으로 독립 채널 **SOCK_STREAM**합니다. 채널은 긴급 한 데이터를 보내도록 일반적으로 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Out-of-band data is a logically independent channel that is associated with each pair of connected sockets of type **SOCK_STREAM**. The channel is generally used to send urgent data.  
   
- MFC 클래스의 사용자가 있지만 대역폭을 벗어난 데이터 지원 `CAsyncSocket` 사용 해서는 안 됩니다. 더 쉬운 방법은 이러한 데이터를 전달 하기 위한 두 번째 소켓을 만드는 것입니다. 대역폭을 벗어난 데이터에 대 한 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+ MFC supports out-of-band data, but users of class `CAsyncSocket` are discouraged from using it. The easier way is to create a second socket for passing such data. For more information about out-of-band data, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
- 호출 하 여 검색할 수 있는 버퍼의 데이터는이 소켓에 알리기 위해 프레임 워크에서 호출 된 **수신** 멤버 함수입니다.  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
+ Called by the framework to notify this socket that there is data in the buffer that can be retrieved by calling the **Receive** member function.  
   
 ```  
 virtual void OnReceive(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnReceive` 멤버 함수:  
+ The most recent error on a socket. The following error codes apply to the `OnReceive` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAsyncSocket #&2;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
- 호출 하 여 데이터 보내기 이제 수 소켓에 알리기 위해 프레임 워크에서 호출 된 **보낼** 멤버 함수입니다.  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
+ Called by the framework to notify the socket that it can now send data by calling the **Send** member function.  
   
 ```  
 virtual void OnSend(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- 소켓에 대 한 가장 최근의 오류입니다. 다음 오류 코드에 적용 된 `OnSend` 멤버 함수:  
+ The most recent error on a socket. The following error codes apply to the `OnSend` member function:  
   
-- **0** 성공적으로 실행 하는 함수입니다.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAsyncSocket #&3;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
- 에 새 값을 할당 한 `CAsyncSocket` 개체입니다.  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
+ Assigns a new value to a `CAsyncSocket` object.  
   
 ```  
 void operator=(const CAsyncSocket& rSrc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- 기존에 대 한 참조 `CAsyncSocket` 개체입니다.  
+ A reference to an existing `CAsyncSocket` object.  
   
-### <a name="remarks"></a>주의  
- 기존 복사 하려면이 함수를 호출 `CAsyncSocket` 개체를 다른 `CAsyncSocket` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to copy an existing `CAsyncSocket` object to another `CAsyncSocket` object.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator 소켓  
- 이 연산자를 사용 하 여 검색 하는 **소켓** 의 처리는 `CAsyncSocket` 개체입니다.  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET  
+ Use this operator to retrieve the **SOCKET** handle of the `CAsyncSocket` object.  
   
 ```  
 operator SOCKET() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하는 경우의 핸들은 **소켓** 그렇지 그렇지 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the **SOCKET** object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>주의  
- Windows Api를 직접 호출 하 여 핸들을 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
- 소켓에서 데이터를 수신 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
+ Call this member function to receive data from a socket.  
   
 ```  
 virtual int Receive(
@@ -1059,63 +1087,63 @@ virtual int Receive(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 들어오는 데이터에 대 한 버퍼입니다.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- 길이가 `lpBuf` (바이트)에서입니다.  
+ The length of `lpBuf` in bytes.  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** 들어오는 데이터 보기입니다. 데이터 버퍼에 복사 되지만 입력된 큐에서 제거 되지 않습니다.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** 대역의 데이터를 처리 합니다.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, **수신** 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, **Receive** returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAENOTCONN** 는 소켓이 연결 되지 않았습니다.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 **수신** 후 소켓 `ShutDown` 와 호출 된 `nHow` 0 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call **Receive** on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 **수신** 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the **Receive** operation would block.  
   
-- **WSAEMSGSIZE** 데이터 그램에 지정된 된 버퍼에 맞게 너무 커서 및 잘렸습니다.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAEINVAL** 소켓으로 바인딩되지 않은 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 연결 된 스트림 또는 데이터 그램 소켓에 대 한 사용 하며 들어오는 데이터를 읽는 데 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used for connected stream or datagram sockets and is used to read incoming data.  
   
- 형식의 소켓에 대 한 **SOCK_STREAM**에서 제공 하는 버퍼의 크기 최대 현재 사용할 수 있는 많은 정보 반환 됩니다. 소켓 대역폭을 벗어난 데이터의 인라인 수신에 구성 된 경우 (소켓 옵션 **SO_OOBINLINE**) 및 대역폭을 벗어난 데이터를 읽고, 밴드를만 데이터가 반환 됩니다. 응용 프로그램에서 사용할 수는 **IOCtlSIOCATMARK** 옵션 또는 [OnOutOfBandData](#onoutofbanddata) 읽을 밴드를 더 데이터가 남아 있는지 여부를 확인 하려면.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or [OnOutOfBandData](#onoutofbanddata) to determine whether any more out-of-band data remains to be read.  
   
- 데이터 그램 소켓에 대 한 데이터는 지정 된 버퍼의 크기까지 첫 번째 큐에 배치 된 데이터 그램에서 추출 됩니다. 데이터 그램을 지정 된 버퍼 보다 큰 경우 데이터 그램의 첫 번째 부분으로 된 버퍼가 채워집니다, 초과 데이터는 손실 및 **수신** 의 값을 반환 **SOCKET_ERROR** 로 설정 하는 오류 코드로 인해 **WSAEMSGSIZE**합니다. 값이 소켓에 없는 들어오는 데이터를 사용할 수 **SOCKET_ERROR** 로 설정 하는 오류 코드가 반환 됩니다 **WSAEWOULDBLOCK**합니다. [OnReceive](#onreceive) 더 많은 데이터가 도착할 시기를 결정 하는 콜백 함수를 사용할 수 있습니다.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the datagram, the excess data is lost, and **Receive** returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**. If no incoming data is available at the socket, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The [OnReceive](#onreceive) callback function can be used to determine when more data arrives.  
   
- 소켓 형식인 경우 **SOCK_STREAM** 원격 대화 상대에 대 한 연결 정상적으로 종료, 및는 **수신** 받은 0 바이트와 함께 즉시 완료 됩니다. 연결 다시 설정 하는 경우는 **수신** 오류와 함께 실패 합니다 **WSAECONNRESET**합니다.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a **Receive** will complete immediately with 0 bytes received. If the connection has been reset, a **Receive** will fail with the error **WSAECONNRESET**.  
   
- **수신** 각 시간에 대해 한 번만 호출 해야 [CAsyncSocket::OnReceive](#onreceive) 호출 됩니다.  
+ **Receive** should be called only once for each time [CAsyncSocket::OnReceive](#onreceive) is called.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
- 데이터 그램을 수신 하 고에서 원본 주소를 저장 하려면이 멤버 함수를 호출 하는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조 또는 `rSocketAddress`합니다.  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
+ Call this member function to receive a datagram and store the source address in the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure or in `rSocketAddress`.  
   
 ```  
 int ReceiveFrom(
@@ -1134,76 +1162,76 @@ int ReceiveFrom(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 들어오는 데이터에 대 한 버퍼입니다.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- 길이가 `lpBuf` (바이트)에서입니다.  
+ The length of `lpBuf` in bytes.  
   
  `rSocketAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 반환 시 원본 주소를 보유 하는 구조입니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that holds the source address upon return.  
   
  `lpSockAddrLen`  
- 원본 주소에서의 길이에 대 한 포인터 `lpSockAddr` (바이트)에서입니다.  
+ A pointer to the length of the source address in `lpSockAddr` in bytes.  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** 들어오는 데이터 보기입니다. 데이터 버퍼에 복사 되지만 입력된 큐에서 제거 되지 않습니다.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** 대역의 데이터를 처리 합니다.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, `ReceiveFrom` 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 `GetLastError`합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `ReceiveFrom` returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling `GetLastError`. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수가 잘못 되었습니다:는 `lpSockAddr` 버퍼가 너무 작아서 피어 주소입니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument was invalid: the `lpSockAddr` buffer was too small to accommodate the peer address.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** 소켓으로 바인딩되지 않은 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAENOTCONN** 소켓이 연결 되지 않은 ( **SOCK_STREAM** 만).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 `ReceiveFrom` 후 소켓 `ShutDown` 와 호출 된 `nHow` 0 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `ReceiveFrom` on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 `ReceiveFrom` 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the `ReceiveFrom` operation would block.  
   
-- **WSAEMSGSIZE** 데이터 그램에 지정된 된 버퍼에 맞게 너무 커서 및 잘렸습니다.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 (연결된 수 있음)는 소켓에서 들어오는 데이터를 읽고 데이터를 보낸 주소에 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used to read incoming data on a (possibly connected) socket and capture the address from which the data was sent.  
   
- IPv6 주소를 처리 하려면 [CAsyncSocket::ReceiveFromEx](#receivefromex)합니다.  
+ To handle IPv6 addresses, use [CAsyncSocket::ReceiveFromEx](#receivefromex).  
   
- 형식의 소켓에 대 한 **SOCK_STREAM**에서 제공 하는 버퍼의 크기 최대 현재 사용할 수 있는 많은 정보 반환 됩니다. 소켓 대역폭을 벗어난 데이터의 인라인 수신에 구성 된 경우 (소켓 옵션 **SO_OOBINLINE**) 및 대역폭을 벗어난 데이터를 읽고, 밴드를만 데이터가 반환 됩니다. 응용 프로그램에서 사용할 수는 **IOCtlSIOCATMARK** 옵션 또는 `OnOutOfBandData` 읽을 밴드를 더 데이터가 남아 있는지 여부를 확인 하려면. `lpSockAddr` 및 `lpSockAddrLen` 에 대 한 매개 변수는 무시 **SOCK_STREAM** 소켓.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or `OnOutOfBandData` to determine whether any more out-of-band data remains to be read. The `lpSockAddr` and `lpSockAddrLen` parameters are ignored for **SOCK_STREAM** sockets.  
   
- 데이터 그램 소켓에 대 한 데이터는 지정 된 버퍼의 크기까지 첫 번째 큐에 배치 된 데이터 그램에서 추출 됩니다. 데이터 그램을 지정 된 버퍼 보다 큰 경우 메시지의 첫 번째 부분으로 된 버퍼가 채워집니다, 초과 데이터는 손실 및 `ReceiveFrom` 의 값을 반환 **SOCKET_ERROR** 로 설정 하는 오류 코드로 인해 **WSAEMSGSIZE**합니다.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the message, the excess data is lost, and `ReceiveFrom` returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**.  
   
- 경우 `lpSockAddr` 이 값은&0;와 소켓 종류가 **SOCK_DGRAM**, 데이터를 전송 하는 소켓의 네트워크 주소에 해당 요소에 복사 됩니다 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조입니다. 가리키는 값 `lpSockAddrLen` 이 구조체의 크기로 초기화 되 고 거기에 저장 하는 주소의 실제 크기를 나타내기 위해 반환이 수정 됩니다. 들어오는 데이터가 없는 소켓에서 사용할 수 있는 경우는 `ReceiveFrom` 소켓이 아닌 경우 도착 하는 데이터에 대 한 호출은 기다립니다 비차단 합니다. 이 경우 값은 **SOCKET_ERROR** 로 설정 하는 오류 코드가 반환 됩니다 **WSAEWOULDBLOCK**합니다. `OnReceive` 콜백 도착 시간을 확인할 더 많은 데이터를 사용할 수 있습니다.  
+ If `lpSockAddr` is nonzero, and the socket is of type **SOCK_DGRAM**, the network address of the socket which sent the data is copied to the corresponding [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure. The value pointed to by `lpSockAddrLen` is initialized to the size of this structure, and is modified on return to indicate the actual size of the address stored there. If no incoming data is available at the socket, the `ReceiveFrom` call waits for data to arrive unless the socket is nonblocking. In this case, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The `OnReceive` callback can be used to determine when more data arrives.  
   
- 소켓 형식인 경우 **SOCK_STREAM** 원격 대화 상대에 대 한 연결 정상적으로 종료, 및는 `ReceiveFrom` 받은 0 바이트와 함께 즉시 완료 됩니다.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a `ReceiveFrom` will complete immediately with 0 bytes received.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
- 데이터 그램을 수신 하 고에서 원본 주소를 저장 하려면이 멤버 함수를 호출 하는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조 또는 `rSocketAddress` (IPv6 주소 처리).  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
+ Call this member function to receive a datagram and store the source address in the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure or in `rSocketAddress` (handles IPv6 addresses).  
   
 ```  
 int ReceiveFromEx(
@@ -1214,70 +1242,70 @@ int ReceiveFromEx(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 들어오는 데이터에 대 한 버퍼입니다.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- 길이가 `lpBuf` (바이트)에서입니다.  
+ The length of `lpBuf` in bytes.  
   
  `rSocketAddress`  
- 에 대 한 참조는 `CString` 점선으로 된 숫자 IP 주소를 받는 개체입니다.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- 에 대 한 참조는 **UINT** 포트를 저장 하는 합니다.  
+ Reference to a **UINT** that stores a port.  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** 들어오는 데이터 보기입니다. 데이터 버퍼에 복사 되지만 입력된 큐에서 제거 되지 않습니다.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** 대역의 데이터를 처리 합니다.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, `ReceiveFromEx` 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 `GetLastError`합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `ReceiveFromEx` returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling `GetLastError`. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** 는 `lpSockAddrLen` 인수가 잘못 되었습니다:는 `lpSockAddr` 버퍼가 너무 작아서 피어 주소입니다.  
+- **WSAEFAULT** The `lpSockAddrLen` argument was invalid: the `lpSockAddr` buffer was too small to accommodate the peer address.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** 소켓으로 바인딩되지 않은 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAENOTCONN** 소켓이 연결 되지 않은 ( **SOCK_STREAM** 만).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 `ReceiveFromEx` 후 소켓 `ShutDown` 와 호출 된 `nHow` 0 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `ReceiveFromEx` on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 `ReceiveFromEx` 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the `ReceiveFromEx` operation would block.  
   
-- **WSAEMSGSIZE** 데이터 그램에 지정된 된 버퍼에 맞게 너무 커서 및 잘렸습니다.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 (연결된 수 있음)는 소켓에서 들어오는 데이터를 읽고 데이터를 보낸 주소에 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used to read incoming data on a (possibly connected) socket and capture the address from which the data was sent.  
   
- 이 함수는 동일 [CAsyncSocket::ReceiveFrom](#receivefrom) 오래 된 파일로 프로토콜 주소를 제외 하 고 i p v&6;을 처리 합니다.  
+ This function is the same as [CAsyncSocket::ReceiveFrom](#receivefrom) except that it handles IPv6 addresses as well as older protocols.  
   
- 형식의 소켓에 대 한 **SOCK_STREAM**에서 제공 하는 버퍼의 크기 최대 현재 사용할 수 있는 많은 정보 반환 됩니다. 소켓 대역폭을 벗어난 데이터의 인라인 수신에 구성 된 경우 (소켓 옵션 **SO_OOBINLINE**) 및 대역폭을 벗어난 데이터를 읽고, 밴드를만 데이터가 반환 됩니다. 응용 프로그램에서 사용할 수는 **IOCtlSIOCATMARK** 옵션 또는 `OnOutOfBandData` 읽을 밴드를 더 데이터가 남아 있는지 여부를 확인 하려면. `lpSockAddr` 및 `lpSockAddrLen` 에 대 한 매개 변수는 무시 **SOCK_STREAM** 소켓.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or `OnOutOfBandData` to determine whether any more out-of-band data remains to be read. The `lpSockAddr` and `lpSockAddrLen` parameters are ignored for **SOCK_STREAM** sockets.  
   
- 데이터 그램 소켓에 대 한 데이터는 지정 된 버퍼의 크기까지 첫 번째 큐에 배치 된 데이터 그램에서 추출 됩니다. 데이터 그램을 지정 된 버퍼 보다 큰 경우 메시지의 첫 번째 부분으로 된 버퍼가 채워집니다, 초과 데이터는 손실 및 `ReceiveFromEx` 의 값을 반환 **SOCKET_ERROR** 로 설정 하는 오류 코드로 인해 **WSAEMSGSIZE**합니다.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the message, the excess data is lost, and `ReceiveFromEx` returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**.  
   
- 경우 `lpSockAddr` 이 값은&0;와 소켓 종류가 **SOCK_DGRAM**, 데이터를 전송 하는 소켓의 네트워크 주소에 해당 요소에 복사 됩니다 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조입니다. 가리키는 값 `lpSockAddrLen` 이 구조체의 크기로 초기화 되 고 거기에 저장 하는 주소의 실제 크기를 나타내기 위해 반환이 수정 됩니다. 들어오는 데이터가 없는 소켓에서 사용할 수 있는 경우는 `ReceiveFromEx` 소켓이 아닌 경우 도착 하는 데이터에 대 한 호출은 기다립니다 비차단 합니다. 이 경우 값은 **SOCKET_ERROR** 로 설정 하는 오류 코드가 반환 됩니다 **WSAEWOULDBLOCK**합니다. `OnReceive` 콜백 도착 시간을 확인할 더 많은 데이터를 사용할 수 있습니다.  
+ If `lpSockAddr` is nonzero, and the socket is of type **SOCK_DGRAM**, the network address of the socket which sent the data is copied to the corresponding [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure. The value pointed to by `lpSockAddrLen` is initialized to the size of this structure, and is modified on return to indicate the actual size of the address stored there. If no incoming data is available at the socket, the `ReceiveFromEx` call waits for data to arrive unless the socket is nonblocking. In this case, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The `OnReceive` callback can be used to determine when more data arrives.  
   
- 소켓 형식인 경우 **SOCK_STREAM** 원격 대화 상대에 대 한 연결 정상적으로 종료, 및는 `ReceiveFromEx` 받은 0 바이트와 함께 즉시 완료 됩니다.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a `ReceiveFromEx` will complete immediately with 0 bytes received.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
- 연결 된 소켓에서 데이터를 전송 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="send"></a>  CAsyncSocket::Send  
+ Call this member function to send data on a connected socket.  
   
 ```  
 virtual int Send(
@@ -1286,67 +1314,67 @@ virtual int Send(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 전송할 데이터를 포함 하는 버퍼입니다.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- 에 있는 데이터의 길이 `lpBuf` (바이트)에서입니다.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** 데이터 라우팅 적용 안 되도록 지정 합니다. Windows 소켓 공급 업체가이 플래그를 무시 하도록 선택할 수 있습니다.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** 대역폭을 벗어난 데이터 보내기 ( **SOCK_STREAM** 만).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, **보낼** 전송 되는 문자의 총 수를 반환 합니다. (표시 된 수보다 작을 수 있습니다이 `nBufLen`.) 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, **Send** returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** 요청된 된 주소는 브로드캐스트 주소 하지만 적절 한 플래그를 설정 하지 않았습니다.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** 는 `lpBuf` 인수는 사용자 주소 공간의 유효한 부분에 없습니다.  
+- **WSAEFAULT** The `lpBuf` argument is not in a valid part of the user address space.  
   
-- **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 대 한 연결을 다시 설정 해야 합니다.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** 는 소켓이 연결 되지 않았습니다.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 **보낼** 후 소켓 `ShutDown` 와 호출 된 `nHow` 1 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call **Send** on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 요청 된 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** 소켓 유형입니다 **SOCK_DGRAM**, 및 데이터 그램 Windows 소켓 구현에 의해 지원 되는 최대값 보다 큽니다.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAEINVAL** 소켓으로 바인딩되지 않은 **바인딩할**합니다.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>주의  
- **보내기** 에서 연결 된 스트림 또는 데이터 그램 소켓에 보내는 데이터를 작성 하는 데 사용 됩니다. 데이터 그램 소켓에 대 한 주의 해야 하지 하 여 제공 된 기본 서브넷의 최대 IP 패킷 크기를 초과 하는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 에서 반환 된 구조 `AfxSocketInit`합니다. 데이터가 너무 길어 기본 프로토콜 오류를 원자적으로 통과할 경우 **WSAEMSGSIZE** 를 통해 반환 `GetLastError`, 데이터가 전송 됩니다.  
+### <a name="remarks"></a>Remarks  
+ **Send** is used to write outgoing data on connected stream or datagram sockets. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure returned by `AfxSocketInit`. If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned via `GetLastError`, and no data is transmitted.  
   
- 경우 데이터 그램 소켓 성공적으로 완료 한 **보내기** 데이터가 성공적으로 배달 하는 것을 표시 하지 않습니다.  
+ Note that for a datagram socket the successful completion of a **Send** does not indicate that the data was successfully delivered.  
   
- `CAsyncSocket` 형식의 개체 **SOCK_STREAM**, 쓴 바이트 수, 로컬 및 외부 호스트에 대 한 버퍼 가용성에 따라 요청 된 길이 1 사이의 수 있습니다.  
+ On `CAsyncSocket` objects of type **SOCK_STREAM**, the number of bytes written can be between 1 and the requested length, depending on buffer availability on both the local and foreign hosts.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CAsyncSocket::OnSend](#onsend)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="sendto"></a>CAsyncSocket::SendTo  
- 특정 대상에 데이터를 전송 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
+ Call this member function to send data to a specific destination.  
   
 ```  
 int SendTo(
@@ -1365,88 +1393,88 @@ int SendTo(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 전송할 데이터를 포함 하는 버퍼입니다.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- 에 있는 데이터의 길이 `lpBuf` (바이트)에서입니다.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nHostPort`  
- 소켓 응용 프로그램을 식별 하는 포트입니다.  
+ The port identifying the socket application.  
   
  `lpszHostAddress`  
- 이 개체가 연결 되는 소켓의 네트워크 주소: "형식인" 또는 "128.56.22.8" 등의 점으로 구분 된 숫자를 같은 컴퓨터 이름입니다.  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com," or a dotted number such as "128.56.22.8".  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** 데이터 라우팅 적용 안 되도록 지정 합니다. Windows 소켓 공급 업체가이 플래그를 무시 하도록 선택할 수 있습니다.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** 대역폭을 벗어난 데이터 보내기 ( **SOCK_STREAM** 만).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
  `lpSockAddr`  
- 에 대 한 포인터는 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 대상 소켓의 주소를 포함 하는 구조입니다.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address of the target socket.  
   
  `nSockAddrLen`  
- 주소 길이 `lpSockAddr` (바이트)에서입니다.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, `SendTo` 전송 되는 문자의 총 수를 반환 합니다. (표시 된 수보다 작을 수 있습니다이 `nBufLen`.) 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `SendTo` returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** 요청된 된 주소는 브로드캐스트 주소 하지만 적절 한 플래그를 설정 하지 않았습니다.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** 는 `lpBuf` 또는 `lpSockAddr` 매개 변수 사용자 주소 공간에 속하지 않는 또는 `lpSockAddr` 인수가 너무 작습니다 (의 크기 보다 작은 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조).  
+- **WSAEFAULT** The `lpBuf` or `lpSockAddr` parameters are not part of the user address space, or the `lpSockAddr` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINVAL** 호스트 이름이 잘못 되었습니다.  
+- **WSAEINVAL** The host name is invalid.  
   
-- **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 대 한 연결을 다시 설정 해야 합니다.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** 소켓이 연결 되지 않은 ( **SOCK_STREAM** 만).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 `SendTo` 후 소켓 `ShutDown` 와 호출 된 `nHow` 1 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `SendTo` on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 요청 된 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** 소켓 유형입니다 **SOCK_DGRAM**, 및 데이터 그램 Windows 소켓 구현에 의해 지원 되는 최대값 보다 큽니다.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-- **WSAEADDRNOTAVAIL** 지정한 주소는 로컬 컴퓨터에서 사용할 수 없습니다.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** 이 소켓으로 지정된 된 제품군에는 주소를 사용할 수 없습니다.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAEDESTADDRREQ** 대상 주소가 필요 합니다.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAENETUNREACH** 지금은이 호스트에서 네트워크에 연결할 수 없습니다.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-### <a name="remarks"></a>주의  
- `SendTo`스트림 또는 데이터 그램 소켓에서 사용 되 고 소켓에 보내는 데이터를 작성 하는 데 사용 됩니다. 데이터 그램 소켓에 대 한 주의 해야 하지 하 여 제공 된 기본 서브넷의 최대 IP 패킷 크기를 초과 하는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 작성 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 기본 프로토콜 오류를 원자적으로 통과할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
+### <a name="remarks"></a>Remarks  
+ `SendTo` is used on datagram or stream sockets and is used to write outgoing data on a socket. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure filled out by [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned, and no data is transmitted.  
   
- 성공적으로 완료는 `SendTo` 데이터가 성공적으로 배달 하는 것을 표시 하지 않습니다.  
+ Note that the successful completion of a `SendTo` does not indicate that the data was successfully delivered.  
   
- `SendTo`에 사용 되는 **SOCK_DGRAM** 데이터 그램으로 식별 되는 특정 소켓 보내려고 소켓은 `lpSockAddr` 매개 변수입니다.  
+ `SendTo` is only used on a **SOCK_DGRAM** socket to send a datagram to a specific socket identified by the `lpSockAddr` parameter.  
   
- 브로드캐스트를 보내도록 (에 **SOCK_DGRAM** 만), 주소는 `lpSockAddr` 특수 IP 주소를 사용 하 여 매개 변수를 생성 해야 **INADDR_BROADCAST** (WINSOCK의 Windows 소켓 헤더 파일에 정의 합니다. H)와 함께 원하는 포트 번호입니다. 또는 경우에는 `lpszHostAddress` 매개 변수는 **NULL**, 소켓 브로드캐스트에 대 한 구성 됩니다. 조각화가 발생할 수 크기를 초과 하는 브로드캐스트 데이터 그램에 일반적으로 바람직하지 않습니다 (헤더 제외)는 데이터 그램의 데이터 부분 512 바이트를 넘지 않아야을 의미 합니다.  
+ To send a broadcast (on a **SOCK_DGRAM** only), the address in the `lpSockAddr` parameter should be constructed using the special IP address **INADDR_BROADCAST** (defined in the Windows Sockets header file WINSOCK.H) together with the intended port number. Or, if the `lpszHostAddress` parameter is **NULL**, the socket is configured for broadcast. It is generally inadvisable for a broadcast datagram to exceed the size at which fragmentation can occur, which implies that the data portion of the datagram (excluding headers) should not exceed 512 bytes.  
   
- IPv6 주소를 처리 하려면 [CAsyncSocket::SendToEx](#sendtoex)합니다.  
+ To handle IPv6 addresses, use [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
- 이 데이터를 특정 대상 (핸들 IPv6 주소)를 보내는 함수를 호출 합니다.  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
+ Call this member function to send data to a specific destination (handles IPv6 addresses).  
   
 ```  
 int SendToEx(
@@ -1457,82 +1485,82 @@ int SendToEx(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 전송할 데이터를 포함 하는 버퍼입니다.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- 에 있는 데이터의 길이 `lpBuf` (바이트)에서입니다.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nHostPort`  
- 소켓 응용 프로그램을 식별 하는 포트입니다.  
+ The port identifying the socket application.  
   
  `lpszHostAddress`  
- 이 개체가 연결 되는 소켓의 네트워크 주소: "형식인" 또는 "128.56.22.8" 등의 점으로 구분 된 숫자를 같은 컴퓨터 이름입니다.  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com," or a dotted number such as "128.56.22.8".  
   
  `nFlags`  
- 호출 하는 방법을 지정 합니다. 이 함수의 의미 체계 소켓 옵션에 의해 결정 되 고 `nFlags` 매개 변수입니다. 후자는 c + +는 다음 값 중 하나를 결합 하 여 생성 됩니다 `OR` 연산자:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** 데이터 라우팅 적용 안 되도록 지정 합니다. Windows 소켓 공급 업체가이 플래그를 무시 하도록 선택할 수 있습니다.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** 대역폭을 벗어난 데이터 보내기 ( **SOCK_STREAM** 만).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
-### <a name="return-value"></a>반환 값  
- 오류가 발생 하지 않으면, `SendToEx` 전송 되는 문자의 총 수를 반환 합니다. (표시 된 수보다 작을 수 있습니다이 `nBufLen`.) 그렇지 않으면 값이 **SOCKET_ERROR** 반환 되 면 특정 오류 코드를 호출 하 여 검색할 수 있습니다 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `SendToEx` returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** 요청된 된 주소는 브로드캐스트 주소 하지만 적절 한 플래그를 설정 하지 않았습니다.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** 는 `lpBuf` 또는 `lpSockAddr` 매개 변수 사용자 주소 공간에 속하지 않는 또는 `lpSockAddr` 인수가 너무 작습니다 (의 크기 보다 작은 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조).  
+- **WSAEFAULT** The `lpBuf` or `lpSockAddr` parameters are not part of the user address space, or the `lpSockAddr` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINVAL** 호스트 이름이 잘못 되었습니다.  
+- **WSAEINVAL** The host name is invalid.  
   
-- **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 대 한 연결을 다시 설정 해야 합니다.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** 소켓이 연결 되지 않은 ( **SOCK_STREAM** 만).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** 을 지정 하지 않으면이 소켓 형식의 **SOCK_STREAM**합니다.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** 소켓이 종료 되었습니다; 호출할 수 없는 `SendToEx` 후 소켓 `ShutDown` 와 호출 된 `nHow` 1 또는 2로 설정 합니다.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `SendToEx` on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** 소켓 표시가 같이 비차단 및 요청 된 작업이 중단 됩니다.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** 소켓 유형입니다 **SOCK_DGRAM**, 및 데이터 그램 Windows 소켓 구현에 의해 지원 되는 최대값 보다 큽니다.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAECONNABORTED** 가상 회로가 시간 초과 또는 기타 오류로 인해 중단 되었습니다.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** 가상 회로가 원격 쪽에서 재설정 되었습니다.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-- **WSAEADDRNOTAVAIL** 지정한 주소는 로컬 컴퓨터에서 사용할 수 없습니다.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** 이 소켓으로 지정된 된 제품군에는 주소를 사용할 수 없습니다.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAEDESTADDRREQ** 대상 주소가 필요 합니다.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAENETUNREACH** 지금은이 호스트에서 네트워크에 연결할 수 없습니다.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 동일 [CAsyncSocket::SendTo](#sendto) 오래 된 파일로 프로토콜 주소를 제외 하 고 i p v&6;을 처리 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method is the same as [CAsyncSocket::SendTo](#sendto) except that it handles IPv6 addresses as well as older protocols.  
   
- `SendToEx`스트림 또는 데이터 그램 소켓에서 사용 되 고 소켓에 보내는 데이터를 작성 하는 데 사용 됩니다. 데이터 그램 소켓에 대 한 주의 해야 하지 하 여 제공 된 기본 서브넷의 최대 IP 패킷 크기를 초과 하는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 작성 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 기본 프로토콜 오류를 원자적으로 통과할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
+ `SendToEx` is used on datagram or stream sockets and is used to write outgoing data on a socket. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure filled out by [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned, and no data is transmitted.  
   
- 성공적으로 완료는 `SendToEx` 데이터가 성공적으로 배달 하는 것을 표시 하지 않습니다.  
+ Note that the successful completion of a `SendToEx` does not indicate that the data was successfully delivered.  
   
- `SendToEx`에 사용 되는 **SOCK_DGRAM** 데이터 그램으로 식별 되는 특정 소켓 보내려고 소켓은 `lpSockAddr` 매개 변수입니다.  
+ `SendToEx` is only used on a **SOCK_DGRAM** socket to send a datagram to a specific socket identified by the `lpSockAddr` parameter.  
   
- 브로드캐스트를 보내도록 (에 **SOCK_DGRAM** 만), 주소는 `lpSockAddr` 특수 IP 주소를 사용 하 여 매개 변수를 생성 해야 **INADDR_BROADCAST** (WINSOCK의 Windows 소켓 헤더 파일에 정의 합니다. H)와 함께 원하는 포트 번호입니다. 또는 경우에는 `lpszHostAddress` 매개 변수는 **NULL**, 소켓 브로드캐스트에 대 한 구성 됩니다. 조각화가 발생할 수 크기를 초과 하는 브로드캐스트 데이터 그램에 일반적으로 바람직하지 않습니다 (헤더 제외)는 데이터 그램의 데이터 부분 512 바이트를 넘지 않아야을 의미 합니다.  
+ To send a broadcast (on a **SOCK_DGRAM** only), the address in the `lpSockAddr` parameter should be constructed using the special IP address **INADDR_BROADCAST** (defined in the Windows Sockets header file WINSOCK.H) together with the intended port number. Or, if the `lpszHostAddress` parameter is **NULL**, the socket is configured for broadcast. It is generally inadvisable for a broadcast datagram to exceed the size at which fragmentation can occur, which implies that the data portion of the datagram (excluding headers) should not exceed 512 bytes.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
- 이 소켓 옵션을 설정 하려면 함수를 호출 합니다.  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
+ Call this member function to set a socket option.  
   
 ```  
 BOOL SetSockOpt(
@@ -1542,130 +1570,130 @@ BOOL SetSockOpt(
     int nLevel = SOL_SOCKET);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nOptionName`  
- 값이 설정 되어야 하는 소켓 옵션입니다.  
+ The socket option for which the value is to be set.  
   
  `lpOptionValue`  
- 요청된 된 옵션에 대 한 값은 지정 된 버퍼에 대 한 포인터입니다.  
+ A pointer to the buffer in which the value for the requested option is supplied.  
   
  `nOptionLen`  
- 크기는 `lpOptionValue` 바이트에서 버퍼입니다.  
+ The size of the `lpOptionValue` buffer in bytes.  
   
  `nLevel`  
- 이때 옵션 정의 되어 있으면 수준 지원 되는 유일한 수준은 **SOL_SOCKET** 및 **IPPROTO_TCP**합니다.  
+ The level at which the option is defined; the only supported levels are **SOL_SOCKET** and **IPPROTO_TCP**.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** `lpOptionValue` 프로세스 주소 공간의 유효한 부분에 아닙니다.  
+- **WSAEFAULT** `lpOptionValue` is not in a valid part of the process address space.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** `nLevel` 유효 하지 않거나 또는에 있는 정보 `lpOptionValue` 올바르지 않습니다.  
+- **WSAEINVAL** `nLevel` is not valid, or the information in `lpOptionValue` is not valid.  
   
-- **WSAENETRESET** 연결 시간이 초과 될 때 **SO_KEEPALIVE** 설정 됩니다.  
+- **WSAENETRESET** Connection has timed out when **SO_KEEPALIVE** is set.  
   
-- **WSAENOPROTOOPT** 알 수 없거나 지원 되지 않는 옵션입니다. 특히, **SO_BROADCAST** 형식의 소켓에서 지원 되지 않습니다 **SOCK_STREAM**, 동안 **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, 및 **SO_OOBINLINE** 형식의 소켓에서 지원 되지 않는 **SOCK_DGRAM**합니다.  
+- **WSAENOPROTOOPT** The option is unknown or unsupported. In particular, **SO_BROADCAST** is not supported on sockets of type **SOCK_STREAM**, while **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, and **SO_OOBINLINE** are not supported on sockets of type **SOCK_DGRAM**.  
   
-- **WSAENOTCONN** 연결이 재설정 될 때 **SO_KEEPALIVE** 설정 됩니다.  
+- **WSAENOTCONN** Connection has been reset when **SO_KEEPALIVE** is set.  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- `SetSockOpt`모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 설정 합니다. 옵션 여러 프로토콜 수준에서 존재할 수 있지만이 사양은 "소켓" 최상위 수준에 존재 하는 옵션을 정의 합니다. 옵션 브로드캐스트 메시지는 소켓에서 전송할 수 있으며 등 여부 긴급된 데이터 정상 데이터 스트림에 수신 되는 여부와 같은 소켓 작업을 영향을 줍니다.  
+### <a name="remarks"></a>Remarks  
+ `SetSockOpt` sets the current value for a socket option associated with a socket of any type, in any state. Although options can exist at multiple protocol levels, this specification only defines options that exist at the uppermost "socket" level. Options affect socket operations, such as whether expedited data is received in the normal data stream, whether broadcast messages can be sent on the socket, and so on.  
   
- 소켓 옵션의 두 종류가 있습니다: 기능 또는 동작을 설정 하거나 해제 하는 부울 옵션 및는 정수 값 또는 구조 해야 하는 옵션이 있습니다. 부울 옵션을 사용 하도록 설정 하려면 `lpOptionValue`&0;이 아닌 정수를 가리킵니다. 옵션을 사용 하지 않도록 설정 하려면 `lpOptionValue`&0;과 같은 정수를 가리킵니다. `nOptionLen`같아야 **sizeof (bool)** 부울 옵션입니다. 다른 옵션을 `lpOptionValue` 정수 또는 옵션의 경우 원하는 값이 포함 된 구조체를 가리키는 및 `nOptionLen` 정수 또는 구조체의 길이입니다.  
+ There are two types of socket options: Boolean options that enable or disable a feature or behavior, and options which require an integer value or structure. To enable a Boolean option, `lpOptionValue` points to a nonzero integer. To disable the option `lpOptionValue` points to an integer equal to zero. `nOptionLen` should be equal to **sizeof(BOOL)** for Boolean options. For other options, `lpOptionValue` points to the integer or structure that contains the desired value for the option, and `nOptionLen` is the length of the integer or structure.  
   
- **SO_LINGER** 때 수행 되는 동작 보내지 데이터는 큐에 대기 소켓에서 컨트롤 및 **닫습니다** 함수가 호출 되어 소켓을 닫습니다.  
+ **SO_LINGER** controls the action taken when unsent data is queued on a socket and the **Close** function is called to close the socket.  
   
- 기본적으로는 소켓을 바인딩할 수 없습니다 (참조 [바인딩할](#bind)) 이미 사용 중인 로컬 주소에 있습니다. 그러나 경우에 따라 경우도 있습니다 "다시 사용"이 방법으로 주소입니다. 모든 연결이 로컬 및 원격 주소의 조합으로 고유 하 게 식별 됩니다 이므로 원격 주소는 다른으로 동일한 로컬 주소에 바인딩된 두 개의 소켓 있는 문제가 없습니다.  
+ By default, a socket cannot be bound (see [Bind](#bind)) to a local address which is already in use. On occasion, however, it may be desirable to "reuse" an address in this way. Since every connection is uniquely identified by the combination of local and remote addresses, there is no problem with having two sockets bound to the same local address as long as the remote addresses are different.  
   
- Windows 소켓 구현을 알리기 위해 하는 **바인딩** 원하는 주소가 이미 다른 소켓에서 사용 중 이므로 소켓에 대 한 호출을 허용 되지 해야 응용 프로그램 설정 해야 합니다는 **SO_REUSEADDR** 소켓 실행 하기 전에 소켓에 대 한 옵션의 **바인딩할** 호출 합니다. 옵션의 시간에만 해석 됩니다는 **바인딩할** 호출: 필요한 경우가 아니라면 따라서 무해) (그러나 하지는 기존 주소에 바인딩해야 하는 소켓 옵션을 설정 하려면 설정 하거나 다음 옵션을 다시 설정 하 고는 **바인딩할** 호출에이에 영향을 주지 또는 다른 소켓.  
+ To inform the Windows Sockets implementation that a **Bind** call on a socket should not be disallowed because the desired address is already in use by another socket, the application should set the **SO_REUSEADDR** socket option for the socket before issuing the **Bind** call. Note that the option is interpreted only at the time of the **Bind** call: it is therefore unnecessary (but harmless) to set the option on a socket which is not to be bound to an existing address, and setting or resetting the option after the **Bind** call has no effect on this or any other socket.  
   
- Windows 소켓 구현을 설정 하 여 "유지" 패킷 전송 제어 프로토콜 (TCP) 연결에 사용할 수 있게 응용 프로그램이 요청할 수는 **SO_KEEPALIVE** 소켓 옵션입니다. Windows 소켓 구현이 필요 keep-alive의 사용을 지원 하지: 정확한 의미는 구현과 관련 되지만 RFC 1122의 4.2.3.6를 준수 해야 그렇지 않으면: "인터넷 호스트에 대 한 요구 사항-통신 계층과." 연결이 끊어질 경우 "연결 유지"의 결과로 오류 코드 **WSAENETRESET** 소켓에서 진행 중인 모든 호출에 반환 되 고 모든 후속 호출은 실패 하며 **WSAENOTCONN**합니다.  
+ An application can request that the Windows Sockets implementation enable the use of "keep-alive" packets on Transmission Control Protocol (TCP) connections by turning on the **SO_KEEPALIVE** socket option. A Windows Sockets implementation need not support the use of keep-alives: if it does, the precise semantics are implementation-specific but should conform to section 4.2.3.6 of RFC 1122: "Requirements for Internet Hosts — Communication Layers." If a connection is dropped as the result of "keep-alives" the error code **WSAENETRESET** is returned to any calls in progress on the socket, and any subsequent calls will fail with **WSAENOTCONN**.  
   
- **TCP_NODELAY** 옵션 Nagle 알고리즘을 비활성화 합니다. Nagle 알고리즘은 큰 패킷을 보낼 수까지 승인 되지 않은 송신 데이터를 버퍼링 하 여 호스트를 통해 전송 하는 작은 패킷의 수를 줄이기 위해 사용 됩니다. 그러나 일부 응용 프로그램에 대 한이 알고리즘을 저해할 수 성능 및 **TCP_NODELAY** 해제 데 사용할 수 있습니다. 응용 프로그램 기록기를 설정 하지 않아야 **TCP_NODELAY** 아닌 경우이 따른 영향을 잘 이해 하 고 원하는 설정을 이후 **TCP_NODELAY** 네트워크 성능에 크게 저하 될 수 있습니다. **TCP_NODELAY** 유일한 수준을 사용 하는 소켓 옵션을 지원 **IPPROTO_TCP**; 수준을 사용 하 여 다른 모든 옵션 **SOL_SOCKET**합니다.  
+ The **TCP_NODELAY** option disables the Nagle algorithm. The Nagle algorithm is used to reduce the number of small packets sent by a host by buffering unacknowledged send data until a full-size packet can be sent. However, for some applications this algorithm can impede performance, and **TCP_NODELAY** can be used to turn it off. Application writers should not set **TCP_NODELAY** unless the impact of doing so is well-understood and desired, since setting **TCP_NODELAY** can have a significant negative impact on network performance. **TCP_NODELAY** is the only supported socket option which uses level **IPPROTO_TCP**; all other options use level **SOL_SOCKET**.  
   
- Windows 소켓 공급의 일부 구현 디버그 정보를 출력 하는 경우는 **SO_DEBUG** 옵션은 응용 프로그램으로 설정 합니다.  
+ Some implementations of Windows Sockets supply output debug information if the **SO_DEBUG** option is set by an application.  
   
- 다음 옵션에 대해 지원 됩니다 `SetSockOpt`합니다. 형식으로 주소가 지정 된 데이터의 형식을 식별 `lpOptionValue`합니다.  
+ The following options are supported for `SetSockOpt`. The Type identifies the type of data addressed by `lpOptionValue`.  
   
-|값|형식|의미|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_BROADCAST**|**BOOL**|소켓의 브로드캐스트 메시지의 전송을 허용 합니다.|  
-|**SO_DEBUG**|**BOOL**|디버깅 정보를 기록합니다.|  
-|**SO_DONTLINGER**|**BOOL**|차단 하지 않도록 **닫기** 보내지 않은 데이터를 보낼 때까지 대기 합니다. 이 옵션을 설정 하는 것이 설정에 해당 하는 **SO_LINGER** 와 **l_onoff**&0;으로 설정 합니다.|  
-|**SO_DONTROUTE**|**BOOL**|라우팅 하지 않습니다: 인터페이스에 직접 전송 합니다.|  
-|**SO_KEEPALIVE**|**BOOL**|연결 유지를 보냅니다.|  
-|**SO_LINGER**|**LINGER 구조체**|지연 **닫기** 데이터가 있는지 보내지 않은 경우.|  
-|**SO_OOBINLINE**|**BOOL**|정상 데이터 스트림에서 대역폭을 벗어난 데이터를 수신 합니다.|  
-|**SO_RCVBUF**|`int`|수신 버퍼 크기를 지정 합니다.|  
-|**SO_REUSEADDR**|**BOOL**|소켓이 이미 사용 중인 주소에 바인딩될 수 있도록 합니다. (See [Bind](#bind).)|  
-|**SO_SNDBUF**|`int`|전송에 대 한 버퍼 크기를 지정 합니다.|  
-|**TCP_NODELAY**|**BOOL**|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|  
+|**SO_BROADCAST**|**BOOL**|Allow transmission of broadcast messages on the socket.|  
+|**SO_DEBUG**|**BOOL**|Record debugging information.|  
+|**SO_DONTLINGER**|**BOOL**|Don't block **Close** waiting for unsent data to be sent. Setting this option is equivalent to setting **SO_LINGER** with **l_onoff** set to zero.|  
+|**SO_DONTROUTE**|**BOOL**|Don't route: send directly to interface.|  
+|**SO_KEEPALIVE**|**BOOL**|Send keep-alives.|  
+|**SO_LINGER**|**struct LINGER**|Linger on **Close** if unsent data is present.|  
+|**SO_OOBINLINE**|**BOOL**|Receive out-of-band data in the normal data stream.|  
+|**SO_RCVBUF**|`int`|Specify buffer size for receives.|  
+|**SO_REUSEADDR**|**BOOL**|Allow the socket to be bound to an address which is already in use. (See [Bind](#bind).)|  
+|**SO_SNDBUF**|`int`|Specify buffer size for sends.|  
+|**TCP_NODELAY**|**BOOL**|Disables the Nagle algorithm for send coalescing.|  
   
- 버클리 소프트웨어 배포 (BSD) 옵션에 대 한 지원 되지 않습니다 `SetSockOpt` 됩니다.  
+ Berkeley Software Distribution (BSD) options not supported for `SetSockOpt` are:  
   
-|값|형식|의미|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_ACCEPTCONN**|**BOOL**|소켓이 수신 중|  
-|**SO_ERROR**|`int`|오류 상태를 가져온 다음의 선택을 취소 합니다.|  
-|**SO_RCVLOWAT**|`int`|하위 워터 마크를 수신 합니다.|  
-|**SO_RCVTIMEO**|`int`|수신 시간 제한|  
-|**SO_SNDLOWAT**|`int`|하위 워터 마크를 보냅니다.|  
-|**SO_SNDTIMEO**|`int`|제한 시간을 보냅니다.|  
-|**SO_TYPE**|`int`|소켓의 형식입니다.|  
-|**IP_OPTIONS**||IP 헤더에서 옵션 필드를 설정 합니다.|  
+|**SO_ACCEPTCONN**|**BOOL**|Socket is listening|  
+|**SO_ERROR**|`int`|Get error status and clear.|  
+|**SO_RCVLOWAT**|`int`|Receive low water mark.|  
+|**SO_RCVTIMEO**|`int`|Receive timeout|  
+|**SO_SNDLOWAT**|`int`|Send low water mark.|  
+|**SO_SNDTIMEO**|`int`|Send timeout.|  
+|**SO_TYPE**|`int`|Type of the socket.|  
+|**IP_OPTIONS**||Set options field in IP header.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
- 호출을 사용 하지 않도록 설정 하려면이 멤버 함수를 보내고 받는 소켓에 또는 둘 다.  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
+ Call this member function to disable sends, receives, or both on the socket.  
   
 ```  
 BOOL ShutDown(int nHow = sends);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nHow`  
- 어떤 유형의 작업에 설명 하는 플래그를 더 이상 허용 되도록 다음 열거형된 값을 사용 하 여:  
+ A flag that describes what types of operation will no longer be allowed, using the following enumerated values:  
   
-- **수신 = 0**  
+- **receives = 0**  
   
-- **보냅니다 = 1**  
+- **sends = 1**  
   
-- **모두 = 2**  
+- **both = 2**  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 특정 오류 코드를 검색할 수를 호출 하 여 [GetLastError](#getlasterror)합니다. 다음과 같은 오류가이 멤버 함수에 적용 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** 성공적인 [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) 이 API를 사용 하기 전에 발생 해야 합니다.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** The Windows 소켓 구현이 네트워크 하위 시스템의 실패 했음을 감지 합니다.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** `nHow` 올바르지 않습니다.  
+- **WSAEINVAL** `nHow` is not valid.  
   
-- **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTCONN** 소켓이 연결 되지 않은 ( **SOCK_STREAM** 만).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** 설명자 소켓 아닙니다.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>주의  
- `ShutDown`수신, 전송, 또는 둘 다 사용 하지 않도록 설정 하는 소켓의 모든 형식에 대해 사용 됩니다. 경우 `nHow` 가 0 이므로에 후속 수신 소켓을 사용할 수 없습니다. 이 하위 프로토콜 계층에 영향을 주지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ `ShutDown` is used on all types of sockets to disable reception, transmission, or both. If `nHow` is 0, subsequent receives on the socket will be disallowed. This has no effect on the lower protocol layers.  
   
- 에 대 한 전송 프로토콜 (TCP Control), TCP 창 변경 되지 않은 들어오는 유지 되며 데이터가 창 가득 찰 때까지 (하지만 승인 하지) 허용 합니다. 에 대 한 사용자 데이터 그램 프로토콜 (UDP), 들어오는 데이터 그램은 수락 및 큐에 대기 합니다. 없는 경우에는 ICMP 패킷은 보내 오류가 생성 됩니다. 경우 `nHow` 는 1, 후속 보냅니다 허용 되지 않습니다. TCP 소켓에 대 한 한 FIN 전송 됩니다. 설정 `nHow` 2 모두 사용 하지 않도록 설정 하 고 위에 설명 된 대로 수신 합니다.  
+ For Transmission Control Protocol (TCP), the TCP window is not changed and incoming data will be accepted (but not acknowledged) until the window is exhausted. For User Datagram Protocol (UDP), incoming datagrams are accepted and queued. In no case will an ICMP error packet be generated. If `nHow` is 1, subsequent sends are disallowed. For TCP sockets, a FIN will be sent. Setting `nHow` to 2 disables both sends and receives as described above.  
   
- `ShutDown` 않습니다 하지 close 소켓과 소켓에 연결 된 리소스가 해제 되지 것입니다 될 때까지 **닫습니다** 호출 됩니다. 응용 프로그램이 종료 된 후에 소켓을 다시 사용할 수 있는 것에 있어서는 안 됩니다. 특히, Windows 소켓 구현이 필요가 없습니다의 사용을 지원 **연결** 이러한 소켓에 있습니다.  
+ Note that `ShutDown` does not close the socket, and resources attached to the socket will not be freed until **Close** is called. An application should not rely on being able to reuse a socket after it has been shut down. In particular, a Windows Sockets implementation is not required to support the use of **Connect** on such a socket.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
- Socket 핸들을 할당합니다.  
+##  <a name="socket"></a>  CASyncSocket::Socket  
+ Allocates a socket handle.  
   
 ```  
 BOOL Socket(
@@ -1675,40 +1703,40 @@ BOOL Socket(
     int nAddressFormat = PF_INET);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nSocketType`  
- 지정 `SOCK_STREAM` 또는 `SOCK_DGRAM`합니다.  
+ Specifies `SOCK_STREAM` or `SOCK_DGRAM`.  
   
  `lEvent`  
- 응용 프로그램은 관심 있는 네트워크 이벤트의 조합을 지정 하는 비트 마스크입니다.  
+ A bitmask that specifies a combination of network events in which the application is interested.  
   
-- `FD_READ`: 읽을 준비 상태에 대 한 알림을 수신 하려고 합니다.  
+- `FD_READ`: Want to receive notification of readiness for reading.  
   
-- `FD_WRITE`: 쓰기를 위한 준비에 대 한 알림을 수신 하려고 합니다.  
+- `FD_WRITE`: Want to receive notification of readiness for writing.  
   
-- `FD_OOB`: 밴드의 범위를 벗어난 데이터에 대 한 알림을 수신 하려고 합니다.  
+- `FD_OOB`: Want to receive notification of the arrival of out-of-band data.  
   
-- `FD_ACCEPT`: 들어오는 연결에 대 한 알림을 수신 하려고 합니다.  
+- `FD_ACCEPT`: Want to receive notification of incoming connections.  
   
-- `FD_CONNECT`: 완료 된 연결에 대 한 알림을 수신 하려고 합니다.  
+- `FD_CONNECT`: Want to receive notification of completed connection.  
   
-- `FD_CLOSE`: 소켓 닫기를 처리에 대 한 알림을 수신 하려고 합니다.  
+- `FD_CLOSE`: Want to receive notification of socket closure.  
   
  `nProtocolType`  
- 표시 된 주소 패밀리에 해당 되는 소켓 함께 사용 되는 프로토콜입니다.  
+ Protocol to be used with the socket that is specific to the indicated address family.  
   
  `nAddressFormat`  
- 제품군 사양이 주소입니다.  
+ Address family specification.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`를 반환하고 실패하면 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` on success, `FALSE` on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 소켓 핸들을 할당합니다. 호출 하지 않습니다 [CAsyncSocket::Bind](#bind) 소켓을 바인딩하지 지정된 된 주소에 호출 해야 하므로 `Bind` 나중 소켓에 바인딩할 지정된 된 주소입니다. 사용할 수 있습니다 [CAsyncSocket::SetSockOpt](#setsockopt) 연결 되기 전에 소켓 옵션을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method allocates a socket handle. It does not call [CAsyncSocket::Bind](#bind) to bind the socket to a specified address, so you need to call `Bind` later to bind the socket to a specified address. You can use [CAsyncSocket::SetSockOpt](#setsockopt) to set the socket option before it is bound.  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CSocket 클래스](../../mfc/reference/csocket-class.md)   
- [CSocketFile 클래스](../../mfc/reference/csocketfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSocket Class](../../mfc/reference/csocket-class.md)   
+ [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CTabbedPane 클래스 | Microsoft 문서"
+title: CTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTabbedPane class
+- CTabbedPane [MFC], DetachPane
+- CTabbedPane [MFC], EnableTabAutoColor
+- CTabbedPane [MFC], FloatTab
+- CTabbedPane [MFC], GetTabArea
+- CTabbedPane [MFC], GetTabWnd
+- CTabbedPane [MFC], HasAutoHideMode
+- CTabbedPane [MFC], IsTabLocationBottom
+- CTabbedPane [MFC], ResetTabs
+- CTabbedPane [MFC], SetTabAutoColors
+- CTabbedPane [MFC], m_bTabsAlwaysTop
+- CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
 caps.latest.revision: 27
 author: mikeblome
@@ -45,62 +55,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 70377d6be8ef4ec957c7270e501022107d4b093c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a5a64318a91378cbf14e4eae040702106555728
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabbedpane-class"></a>CTabbedPane 클래스
-분리 가능한 탭이 포함된 창의 기능을 구현합니다.  
+# <a name="ctabbedpane-class"></a>CTabbedPane Class
+Implements the functionality of a pane with detachable tabs.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabbedPane : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CTabbedPane::CTabbedPane`|기본 생성자입니다.|  
+|`CTabbedPane::CTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::DetachPane](#detachpane)|(재정의 [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
-|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|탭의 자동 색 지정을 사용하거나 사용하지 않도록 설정합니다.|  
-|[CTabbedPane::FloatTab](#floattab)|창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다. (재정의 [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CTabbedPane::GetTabArea](#gettabarea)|탭 창 내 탭 영역의 크기와 위치를 반환합니다.|  
+|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
+|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Enables or disables automatic coloring of tabs.|  
+|[CTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CTabbedPane::GetTabArea](#gettabarea)|Returns the size and position of the tab area within the tabbed window.|  
 |[CTabbedPane::GetTabWnd](#gettabwnd)||  
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|탭 창을 자동 숨기기 모드로 전환할 수 있는지 여부를 결정합니다. (재정의 [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
-|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|탭이 창의 맨 아래에 있는지 여부를 결정합니다.|  
-|[CTabbedPane::ResetTabs](#resettabs)|모든 탭 창을 기본 상태로 다시 설정합니다.|  
-|[CTabbedPane::SetTabAutoColors](#settabautocolors)|자동 색 기능이 사용되는 경우 사용할 수 있는 사용자 지정 색 목록을 설정합니다.|  
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to autohide mode. (Overrides [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
+|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Determines whether the tabs are located at the bottom of the window.|  
+|[CTabbedPane::ResetTabs](#resettabs)|Resets all tabbed panes to the default state.|  
+|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Sets a list of custom colors that can be used when the auto color feature is enabled.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|응용 프로그램에서 탭의 기본 위치입니다.|  
-|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|사용자 지정 `CMFCTabCtrl` 파생 개체에 대한 런타임 클래스 정보입니다.|  
+|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|The default location for tabs in the application.|  
+|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Runtime class information for a custom `CMFCTabCtrl`-derived object.|  
   
-## <a name="remarks"></a>주의  
- 사용자가 두 번째 창의 캡션을 가리켜서 한 창을 다른 창에 연결하는 경우 프레임워크에서 자동으로 이 클래스의 인스턴스를 만듭니다. 프레임워크에서 만든 모든 탭 창의 ID는 -1입니다.  
+## <a name="remarks"></a>Remarks  
+ The framework automatically creates an instance of this class when a user attaches one pane to another by pointing to the caption of the second pane. All of the tabbed panes that are created by the framework have an ID of -1.  
   
- Outlook 스타일 탭 대신 일반 탭을 지정 하려면 전달 된 `AFX_CBRS_REGULAR_TABS` 스타일을 [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) 메서드.  
+ To specify regular tabs instead of Outlook-style tabs, pass the `AFX_CBRS_REGULAR_TABS` style to the [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) method.  
   
- 분리 가능한 탭을 포함하는 탭 창을 만드는 경우 프레임워크에서 자동으로 창을 제거할 수 있으므로 포인터를 저장하면 안 됩니다. 탭 창에 대한 포인터를 가져오려면 `CBasePane::GetParentTabbedPane` 메서드를 호출합니다.  
+ If you create a tabbed pane with detachable tabs, the pane may be destroyed automatically by the framework, so you should not store the pointer. To get a pointer to the tabbed pane, call the `CBasePane::GetParentTabbedPane` method.  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `CTabbedPane` 개체를 만듭니다. 다음을 사용 하 여 [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) 추가 탭을 연결 합니다.  
+## <a name="example"></a>Example  
+ In this example we create a `CTabbedPane` object. Next, we use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) to attach additional tabs.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -131,10 +141,10 @@ pTabbededBar->EnableDocking(CBRS_ALIGN_ANY);
 DockPane(pTabbededBar);
 ```  
   
-## <a name="example"></a>예제  
- 탭된 컨트롤 모음 개체를 만드는 또 다른 방법은 사용 하는 것 [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)합니다. `AttachToTabWnd` 메서드를 동적으로 설정 하 여 런타임 클래스 정보를 사용 하는 탭된 창 개체 만듭니다 [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)합니다.  
+## <a name="example"></a>Example  
+ Another way to create a tabbed control bar object is to use [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). The `AttachToTabWnd` method dynamically creates a tabbed pane object using runtime class information set by [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
- 이 예제에서는 탭 창을 동적으로 만들고 두 탭을 연결한 다음 두 번째 탭을 분리 불가능하게 만듭니다.  
+ In this example we create a tabbed pane dynamically, attach two tabs, and make the second tab non-detachable.  
   
 ```  
 DockPane(&m_wndClassView);
@@ -154,7 +164,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
     FALSE);
 ```  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -171,10 +181,10 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTabbedPane.h  
   
-##  <a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
 
   
 ```  
@@ -183,33 +193,33 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `bHide`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
- 탭의 자동 색 지정을 사용하거나 사용하지 않도록 설정합니다.  
+##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
+ Enables or disables automatic coloring of tabs.  
   
 ```  
 static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`탭, 자동 색 지정을 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to enable auto coloring of tabs; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 정적 메서드를 사용 하 여 응용 프로그램에 있는 모든 탭된 창에 탭 중 자동으로 색을 사용할지 여부를 합니다. 이 기능을 사용 하는 경우 각 탭은 고유한 색으로 채워집니다. 호출 하 여 탭 색에 사용 되는 색 목록을 찾을 수는 [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) 메서드.  
+### <a name="remarks"></a>Remarks  
+ Use this static method to enable or disable automatic coloring of tabs in all tabbed panes in the application. When this feature is enabled, each tab is filled by its own color. You can find the list of colors that are used to color the tabs by calling the [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) method.  
   
- 호출 하 여 탭에 사용할 색 목록을 지정할 수 있습니다 [CTabbedPane::SetTabAutoColors](#settabautocolors)합니다.  
+ You can specify the list of colors that will be used for tabs by calling [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
- 기본적으로이 옵션이 비활성화 됩니다.  
+ By default, this option is disabled.  
   
-##  <a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
   
 ```  
@@ -220,18 +230,18 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `nTabID`  
  [in] `dockMethod`  
  [in] `bHide`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
- 탭된 창에 탭 영역의 위치와 크기를 반환합니다.  
+##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
+ Returns the size and position of the tab area in the tabbed window.  
   
 ```  
 virtual void GetTabArea(
@@ -239,106 +249,106 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 크기와 위치를 화면 좌표에서 탭 위쪽 영역에 포함 되어 있습니다.  
+ Contains the size and position, in screen coordinates, of the top tab area.  
   
  [out] `rectTabAreaBottom`  
- 크기와 화면 좌표에서 아래쪽 탭 영역의 위치를 포함합니다.  
+ Contains the size and position, in screen coordinates, of the bottom tab area.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자가 끌지 있는 창을 도킹 하는 방법을 확인 하려면이 메서드를 호출 합니다. 사용자가 창을 대상 창 탭 영역 위로 끌, 프레임 워크에서는 대상 창의 새 탭으로 추가 하려고 시도 합니다. 그렇지 않으면 대상 창의 창 구분선 두 창을 구분 하는 새 창 컨테이너 만들기를 포함 하는 쪽으로 창을 도킹 하려고 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine how to dock a pane that a user is dragging. When the user drags a pane over the tab area of the target pane, the framework tries to add it as a new tab of the target pane. Otherwise, it tries to dock the pane to the side of the target pane, which involves creating a new pane container with a pane divider that separates the two panes.  
   
- 이 메서드를 재정의 하는 `CTabbedPane`-이 동작을 변경 하는 클래스를 파생 합니다.  
+ Override this method in a `CTabbedPane`-derived class to change this behavior.  
   
-##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
- 탭이 창의 맨 아래에 있는지 여부를 결정합니다.  
+##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
+ Determines whether the tabs are located at the bottom of the window.  
   
 ```  
 virtual BOOL IsTabLocationBottom() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 영역이 탭 창의 맨 아래에 있는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab area is located at the bottom of the tabbed window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
- 응용 프로그램에서 탭의 기본 위치입니다.  
+##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
+ The default location for tabs in the application.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 정적 멤버를 설정 `TRUE` 탭된 창 위쪽에 표시 되는 응용 프로그램의 모든 탭을 강제 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this static member to `TRUE` to force all tabs in the application to be displayed at the top of the tabbed pane.  
   
- 탭된 창 생성 되기 전에이 값을 설정 해야 합니다.  
+ You must set this value before a tabbed pane has been created.  
   
- 기본값은 `FALSE`입니다.  
+ The default value is `FALSE`.  
   
-##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
- 사용자 지정 `CMFCTabCtrl` 파생 개체에 대한 런타임 클래스 정보입니다.  
+##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
+ Runtime class information for a custom `CMFCTabCtrl`-derived object.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 정적 멤버 변수의 런타임 클래스 정보에 대 한 포인터를 설정 하는 `CMFCTabCtrl`-탭된 창 내부에서 사용자 지정 탭된 창을 사용 하는 경우 파생 된 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Set this static member variable to a pointer to the runtime class information of a `CMFCTabCtrl`-derived object if you are using a custom tabbed window inside a tabbed pane.  
   
-##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
- 모든 탭 창을 기본 상태로 다시 설정합니다.  
+##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
+ Resets all tabbed panes to the default state.  
   
 ```  
 static void ResetTabs();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 설정으로 모든 탭된 창으로 돌아가려면이 메서드를 호출 합니다. 호출 되 면이 메서드를 테두리 크기와의 모든 탭된 창 자동 색 상태 다시 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to revert all tabbed panes to their default state. When called, this method resets the border sizes and auto color state of all tabbed panes.  
   
-##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
- 자동 색 기능을 사용할 때 사용 되는 사용자 지정 색 목록을 설정 합니다.  
+##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
+ Sets a list of custom colors that are used when the auto color feature is enabled.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `arColors`  
- 설정 하는 색의 배열을 포함 합니다.  
+ Contains the array of colors to set.  
   
-### <a name="remarks"></a>주의  
- 자동 색 기능을 사용 하는 경우 사용 되는 색의 목록을 사용자 지정 하려면이 메서드를 사용 합니다. 정적 함수 이며 응용 프로그램에 있는 모든 탭된 창에 영향을 줍니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to customize the list of colors that are used when the auto color feature is enabled. This is a static function and affects all tabbed panes in your application.  
   
- 사용 하 여 [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) 자동 색 기능을 사용 하도록 설정 하거나 해제 합니다.  
+ Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) to enable or disable the auto color feature.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)   
- [CBaseTabbedPane 클래스](../../mfc/reference/cbasetabbedpane-class.md)   
- [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)
 

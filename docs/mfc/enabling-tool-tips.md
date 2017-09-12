@@ -1,37 +1,56 @@
 ---
-title: "도구 설명을 사용하도록 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "도구 설명을 사용하도록 설정"
-  - "도구 설명 초기화"
-  - "도구 설명[C++], 사용"
-  - "도구 설명[C++], 초기화"
+title: Enabling Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing tool tips [MFC]
+- enabling tool tips [MFC]
+- tool tips [MFC], initializing
+- tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 도구 설명을 사용하도록 설정
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee1005229690073748667706bc3ce6b8609b0ea8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-창의 \(예: 폼 뷰나 대화 상자의 컨트롤\) 자식 컨트롤에 대한 도구 설명 지원을 가능 합니다.  
+---
+# <a name="enabling-tool-tips"></a>Enabling Tool Tips
+You can enable tool tip support for the child controls of a window (such as the controls on a form view or dialog box).  
   
-### 창의 자식 컨트롤에 도구 설명을 활성화 하려면  
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>To enable tool tips for the child controls of a window  
   
-1.  도구 설명을 제공하려는 창에 대해 `EnableToolTips` 를 호출하십시오.  
+1.  Call `EnableToolTips` for the window for which you want to provide tool tips.  
   
-2.  [TTN\_NEEDTEXT notification](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) 처리기에서 각 컨트롤에 대해 문자열을 제공하십시오.  \(예를 들어, 폼 뷰 클래스\) 자식 컨트롤이 포함 된 창의 메시지 맵에 처리기입니다.  이 처리기는 컨트롤을 식별하고 도구 설명 컨트롤에 사용되는 텍스트를 지정하는 **pszText** 를 설정하는 함수를 호출합니다.  
+2.  Provide a string for each control in your [TTN_NEEDTEXT notification](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) handler. The handler is in the message map of the window that contains the child controls (for example, your form view class). This handler should call a function that identifies the control and sets **pszText** to specify the text used by the tool tip control.  
   
-## 참고 항목  
- [CFrameWnd에서 파생되지 않은 창의 도구 설명](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

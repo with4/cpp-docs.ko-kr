@@ -1,58 +1,76 @@
 ---
-title: "MFC 프로젝트에 ATL 지원 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.adding.atl.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, MFC 프로젝트"
-  - "MFC, ATL 지원"
+title: Adding ATL Support to Your MFC Project | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.adding.atl.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, ATL support
+- ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# MFC 프로젝트에 ATL 지원 추가
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b06402781d11f3f0eb1bbb935bac8e2edd742cc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이미 MFC 기반 응용 프로그램을 만든 경우 MFC 프로젝트에 ATL 지원 추가 마법사를 실행하여 ATL\(Active Template Library\)에 대한 지원을 쉽게 추가할 수 있습니다.  
+---
+# <a name="adding-atl-support-to-your-mfc-project"></a>Adding ATL Support to Your MFC Project
+If you have already created an MFC-based application, then you can add support for the Active Template Library (ATL) easily by running the Add ATL Support to MFC Project Wizard.  
   
 > [!NOTE]
 >  ATL and MFC are not generally supported in the Express editions of Visual Studio.  
   
 > [!NOTE]
->  이 지원은 MFC 실행 파일이나 DLL 프로젝트에 추가된 단순 COM 개체에만 적용됩니다.  ActiveX 컨트롤을 포함하여 다른 COM 개체를 MFC 프로젝트에 추가할 수 있지만 개체가 예상한 대로 작동하지 않을 수 있습니다.  
+>  This support applies only to simple COM objects added to an MFC executable or DLL project. You can add other COM objects (including ActiveX controls) to MFC projects, but the objects might not operate as expected.  
   
-### MFC 프로젝트에 ATL 지원을 추가하려면  
+### <a name="to-add-atl-support-to-your-mfc-project"></a>To add ATL support to your MFC project  
   
-1.  솔루션 탐색기에서 ATL 지원을 추가할 프로젝트를 마우스 오른쪽 단추로 클릭합니다.  
+1.  In Solution Explorer, right-click the project to which you want to add ATL support.  
   
-2.  바로 가기 메뉴에서 **추가**를 클릭한 다음 **클래스 추가**를 클릭합니다.  
+2.  On the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  **MFC 프로젝트에 ATL 지원 추가** 아이콘을 선택합니다.  
+3.  Select the **Add ATL Support to MFC Project** icon.  
   
     > [!NOTE]
-    >  이 아이콘은 **범주** 창의 ATL 폴더에 있습니다.  
+    >  This icon is located in the ATL folder in the **Categories** pane.  
   
-4.  확인 메시지가 나타나면 **예**를 클릭하여 ATL 지원을 추가합니다.  
+4.  When prompted, click **Yes** to add ATL support.  
   
- ATL 지원을 추가하여 MFC 프로젝트의 코드를 변경하는 방법에 대한 자세한 내용은 [ATL 마법사로 추가한 ATL 지원에 대한 세부 정보](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)를 참조하십시오.  
+ For more information about how adding ATL support changes your MFC project's code, see [Details of ATL Support Added by the ATL Wizard](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
   
-## 참고 항목  
- [클래스 추가](../../ide/adding-a-class-visual-cpp.md)   
- [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [멤버 함수 추가](../../ide/adding-a-member-function-visual-cpp.md)   
- [멤버 변수 추가](../../ide/adding-a-member-variable-visual-cpp.md)   
- [가상 함수 재정의](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 메시지 처리기](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [클래스 구조 탐색](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+

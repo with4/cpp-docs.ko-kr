@@ -1,5 +1,5 @@
 ---
-title: "CMFCFilterChunkValueImpl 클래스 | Microsoft 문서"
+title: CMFCFilterChunkValueImpl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCFilterChunkValueImpl class
+- CMFCFilterChunkValueImpl [MFC], CMFCFilterChunkValueImpl
+- CMFCFilterChunkValueImpl [MFC], Clear
+- CMFCFilterChunkValueImpl [MFC], CopyChunk
+- CMFCFilterChunkValueImpl [MFC], CopyFrom
+- CMFCFilterChunkValueImpl [MFC], GetChunkGUID
+- CMFCFilterChunkValueImpl [MFC], GetChunkPID
+- CMFCFilterChunkValueImpl [MFC], GetChunkType
+- CMFCFilterChunkValueImpl [MFC], GetString
+- CMFCFilterChunkValueImpl [MFC], GetValue
+- CMFCFilterChunkValueImpl [MFC], GetValueNoAlloc
+- CMFCFilterChunkValueImpl [MFC], IsValid
+- CMFCFilterChunkValueImpl [MFC], SetBoolValue
+- CMFCFilterChunkValueImpl [MFC], SetDwordValue
+- CMFCFilterChunkValueImpl [MFC], SetFileTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetInt64Value
+- CMFCFilterChunkValueImpl [MFC], SetIntValue
+- CMFCFilterChunkValueImpl [MFC], SetLongValue
+- CMFCFilterChunkValueImpl [MFC], SetSystemTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetTextValue
+- CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
 caps.latest.revision: 25
 author: mikeblome
@@ -54,227 +73,227 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8de3cba19a60b8022df96a9edafd13677fa3fecb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df02b6a6b6ac7e0683dbd75f45a77dd6cb5bd06d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 클래스
-청크 및 속성 값 쌍의 논리를 간소화 하는 클래스입니다.  
+# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl Class
+This is a class which simplifies both chunk and property value pair logic.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|개체를 destructs 합니다.|  
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|개체를 생성합니다.|  
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs the object.|  
+|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Constructs the object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::Clear](#clear)|ChunkValue를 지웁니다.|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|이 청크를 청크의 특징을 설명 하는 구조에 복사 합니다.|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|다른 값에서 청크 값을이 초기화합니다.|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|청크 GUID를 검색합니다.|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|청크 PID (속성 ID)를 검색합니다.|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|가져옵니다 청크 형식입니다.|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|검색 된 문자열 값입니다.|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|할당 된 propvariant으로 값을 검색합니다.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|값을 반환 할당 되지 않은 (내부 값)입니다.|  
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|이 속성 값이 유효한 지 여부를 확인 합니다.|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|오버로드됨. 부울으로 키가 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|DWORD에 대 한 키 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|속성은 filetime 키로 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Int64 키로는 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Int 키 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|LONG 키로는 속성을 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|속성을 SystemTime 키로 설정합니다.|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|유니코드 문자열에 키가 속성을 설정합니다.|  
+|[CMFCFilterChunkValueImpl::Clear](#clear)|Clears the ChunkValue.|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copies this chunk to a structure describing the characteristics of a chunk.|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initializes this chunk value from the other value.|  
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Retrieves the chunk GUID.|  
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Retrieves the chunk PID (property ID).|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Gets chunk type.|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Retrieves the the string value.|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Retrieves the value as an allocated propvariant.|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Returns non-allocated (internal value) value.|  
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Checks whether this property value is valid or not.|  
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Overloaded. Sets the property by key to a Boolean.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Sets the property by key to a DWORD.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Sets the property by key to a filetime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Sets the property by key to an int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Sets the property by key to an int.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Sets the property by key to a LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Sets the property by key to a SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Sets the property by key to a Unicode string.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|청크의 공용 속성을 설정 하는 도우미 함수입니다.|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|A helper function that sets the chunk's common properties.|  
   
-## <a name="remarks"></a>주의  
- 를 사용 하려면 단순히 클래스를 만들면 CMFCFilterChunkValueImpl 적합 한 종류의  
+## <a name="remarks"></a>Remarks  
+ To use, you simply create a CMFCFilterChunkValueImpl class of the right kind  
   
- 예제:  
+ Example:  
   
- CMFCFilterChunkValueImpl 청크입니다.  
+ CMFCFilterChunkValueImpl chunk;  
   
- hr = 청크 합니다. SetBoolValue(PKEY_IsAttachment, true);  
+ hr = chunk.SetBoolValue(PKEY_IsAttachment, true);  
   
- 또는  
+ or  
   
- hr = 청크 합니다. SetFileTimeValue (PKEY_ItemDate, ftLastModified);  
+ hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `ATL::IFilterChunkValue`  
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
- ChunkValue를 지웁니다.  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
+ Clears the ChunkValue.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
- 개체를 생성합니다.  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+ Constructs the object.  
   
 ```  
 CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
- 개체를 destructs 합니다.  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl  
+ Destructs the object.  
   
 ```  
 virtual ~CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
- 이 청크를 청크의 특징을 설명 하는 구조에 복사 합니다.  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
+ Copies this chunk to a structure describing the characteristics of a chunk.  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pStatChunk`  
- 청크의 특징을 설명 하는 대상 값에 대 한 포인터입니다.  
+ A pointer to destination value describing the characteristics of the chunk.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
- 다른 값에서 청크 값을이 초기화합니다.  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
+ Initializes this chunk value from the other value.  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pValue`  
- 복사할 원본 값을 지정 합니다.  
+ Specifies the source value to copy from.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
- 청크 GUID를 검색합니다.  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
+ Retrieves the chunk GUID.  
   
 ```  
 REFGUID GetChunkGUID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 청크를 식별 하는 GUID에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to a GUID identifying the chunk.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
- 청크 PID (속성 ID)를 검색합니다.  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
+ Retrieves the chunk PID (property ID).  
   
 ```  
 DWORD GetChunkPID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 속성 ID를 포함 하는 DWORD 값  
+### <a name="return-value"></a>Return Value  
+ A DWORD value containing the property ID.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
- 청크 유형을 검색합니다.  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
+ Retrieves the chunk type.  
   
 ```  
 CHUNKSTATE GetChunkType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 청크는 텍스트 형식 속성 또는 값 형식 속성 인지 여부를 지정 하는 CHUNKSTATE 열거 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A CHUNKSTATE enumerated value, which specifies whether the current chunk is a text-type property or a value-type property.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
- 문자열 값을 검색 합니다.  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
+ Retrieves the string value.  
   
 ```  
 CString &GetString();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 청크 값을 포함 하는 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string containing the chunk value.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
- 할당 된 propvariant으로 값을 검색합니다.  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
+ Retrieves the value as an allocated propvariant.  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ppPropVariant`  
- 함수가 반환 될 때이 매개 변수는 청크 값을 포함 합니다.  
+ When the function returns, this parameter contains the chunk value.  
   
-### <a name="return-value"></a>반환 값  
- PROPVARIANT 성공적으로 할당 된 및 청크 값 성공적으로 복사 하면 s_ok이 고 `ppPropVariant`고, 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if PROPVARIANT was allocated successfully and the chunk value was successfully copied to `ppPropVariant`; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
- 할당 되지 않은 (내부 값)을 반환합니다.  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
+ Returns the non-allocated (internal value) value.  
   
 ```  
 PROPVARIANT GetValueNoAlloc ();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 청크 값을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the current chunk value.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
- 이 속성 값이 유효한 지 여부를 확인 합니다.  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
+ Checks whether this property value is valid or not.  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`현재 청크 값이 올바르지 않습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current chunk value is valid; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
- 오버로드됨. 부울으로 키가 속성을 설정합니다.  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
+ Overloaded. Sets the property by key to a Boolean.  
   
 ```  
 HRESULT SetBoolValue(
@@ -297,35 +316,35 @@ HRESULT SetBoolValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `bVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
- 청크의 공용 속성을 설정 하는 도우미 함수입니다.  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
+ A helper function that sets the chunk's common properties.  
   
 ```  
 HRESULT SetChunk(
@@ -337,32 +356,32 @@ HRESULT SetChunk(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
- DWORD에 대 한 키 속성을 설정 합니다.  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
+ Set the property by key to a DWORD.  
   
 ```  
 HRESULT SetDwordValue(
@@ -375,35 +394,35 @@ HRESULT SetDwordValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `dwVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
- 속성은 filetime 키로 설정 합니다.  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
+ Set the property by key to a filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -416,35 +435,35 @@ HRESULT SetFileTimeValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `dtVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
- Int64 키로 속성을 설정 합니다.  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
+ Set the property by key to an int64.  
   
 ```  
 HRESULT SetInt64Value(
@@ -457,35 +476,35 @@ HRESULT SetInt64Value(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `nVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
- Int 키 속성을 설정 합니다.  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
+ Set the property by key to an int.  
   
 ```  
 HRESULT SetIntValue(
@@ -498,35 +517,35 @@ HRESULT SetIntValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `nVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
- LONG 키로 속성을 설정 합니다.  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
+ Set the property by key to a LONG.  
   
 ```  
 HRESULT SetLongValue(
@@ -539,35 +558,35 @@ HRESULT SetLongValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `lVal`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
- 속성을 SystemTime 키로 설정합니다.  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
+ Sets the property by key to a SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -580,35 +599,35 @@ HRESULT SetSystemTimeValue(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `systemTime`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
- 유니코드 문자열에 키가 속성을 설정합니다.  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
+ Sets the property by key to a Unicode string.  
   
 ```  
 HRESULT SetTextValue(
@@ -621,33 +640,33 @@ HRESULT SetTextValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 속성 키를 지정합니다.  
+ Specifies a property key.  
   
  `pszValue`  
- 청크 설정할 값을 지정 합니다.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 플래그는이 청크는 텍스트 형식 또는 값 형식 속성이 포함 되어 있는지 여부를 나타냅니다. 플래그 값 CHUNKSTATE 열거형에서 가져옵니다.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 언어와 텍스트의 청크와 관련 된 하위 언어입니다. 청크 로캘이 적절 한 단어 텍스트의 분리를 수행 하려면 문서 인덱서에서 사용 됩니다. 청크는 텍스트 형식 아니고 VT_LPWSTR, VT_LPSTR, 하거나 VT_BSTR 데이터 형식과 값 형식,이 필드는 무시 됩니다.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 현재 청크가 나왔습니다 소스 텍스트의 문자 길이입니다. 값이&0; 이면 소스 텍스트와 파생 된 텍스트의 문자 단위로 대응을 나타냅니다. 0이 아닌 값 없는 이러한 직접적인 대응이 존재 한다는 것을 의미 합니다.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 파생 된 일정에 대 한 소스 텍스트 원본 청크에서 시작 되는 오프셋입니다.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 현재 청크에서 이전 청크를 구분 하는 중간의 형식입니다. CHUNK_BREAKTYPE 열거형에서 값은입니다.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

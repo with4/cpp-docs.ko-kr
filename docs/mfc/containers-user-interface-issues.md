@@ -1,39 +1,58 @@
 ---
-title: "컨테이너: 사용자 인터페이스 문제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "컨테이너, 사용자 인터페이스 문제"
-  - "OLE 컨테이너, 사용자 인터페이스"
-  - "사용자 인터페이스 문제"
+title: 'Containers: User-Interface Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- containers [MFC], user-interface issues
+- OLE containers [MFC], user interface
+- user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컨테이너: 사용자 인터페이스 문제
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2fbe71272393cbf019a76fc38502f18053f091b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-You must add a number of features to a container application's user interface to adequately manage linked and embedded items.  These features involve changes to the menu structure and to the events that the application handles.  For detailed information about them, see the following articles:  
+---
+# <a name="containers-user-interface-issues"></a>Containers: User-Interface Issues
+You must add a number of features to a container application's user interface to adequately manage linked and embedded items. These features involve changes to the menu structure and to the events that the application handles. For detailed information about them, see the following articles:  
   
-|For information on|참조|  
-|------------------------|--------|  
+|For information on|See|  
+|------------------------|---------|  
 |Menu additions for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
 |Additional resources for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
-|Painting linked or embedded items|[Container sample](../top/visual-cpp-samples.md)|  
+|Painting linked or embedded items|[Container sample](../visual-cpp-samples.md)|  
 |New dialog boxes for containers|[Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md)|  
   
-## 참고 항목  
- [컨테이너](../mfc/containers.md)   
- [컨테이너: 고급 기능](../mfc/containers-advanced-features.md)   
- [메뉴 및 리소스\(OLE\)](../mfc/menus-and-resources-ole.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

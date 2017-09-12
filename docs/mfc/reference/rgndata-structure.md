@@ -1,5 +1,5 @@
 ---
-title: "RGNDATA 구조체 | Microsoft 문서"
+title: RGNDATA Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- RGNDATA structure
+- RGNDATA structure [MFC]
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
 caps.latest.revision: 14
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 93a7c79f175e22dcb0b40cb39b157cfe21a98e93
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb75f3182e14bf03180566d08e51c62c3fd220ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="rgndata-structure"></a>RGNDATA 구조체
-`RGNDATA` 구조는 헤더 및 영역을 구성 하는 사각형의 배열을 포함 합니다. 이 사각형을 정렬된 하 여 위에서 아래로 왼쪽에서 오른쪽으로 중첩 되지 않습니다.  
+# <a name="rgndata-structure"></a>RGNDATA Structure
+The `RGNDATA` structure contains a header and an array of rectangles that compose a region. These rectangles, sorted top to bottom left to right, do not overlap.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _RGNDATA { /* rgnd */  
@@ -52,18 +52,18 @@ typedef struct _RGNDATA { /* rgnd */
 } RGNDATA;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *rdh*  
- 지정 된 [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) 구조입니다. (이 구조에 대 한 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].) 이 구조체의 멤버는 영역의 형식을 (사각형 또는 인지 사다리꼴), 영역, 사각형 구조를 포함 하는 버퍼의 크기를 구성 하는 사각형의 수를 지정 하 고 등.  
+ Specifies a [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) structure. (For more information on this structure, see the Windows SDK.) The members of this structure specify the type of region (whether it is rectangular or trapezoidal), the number of rectangles that make up the region, the size of the buffer that contains the rectangle structures, and so on.  
   
  `Buffer`  
- 포함 하는 임의 크기의 버퍼를 지정 합니다.는 [RECT](../../mfc/reference/rect-structure1.md) 지역을 구성 하는 구조입니다.  
+ Specifies an arbitrary-size buffer that contains the [RECT](../../mfc/reference/rect-structure1.md) structures that make up the region.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
  [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
 

@@ -1,71 +1,90 @@
 ---
-title: "Typelib에서 클래스 추가 마법사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.typelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TypeLib의 클래스 추가 마법사[C++]"
-  - "COM 인터페이스, 클래스 추가"
+title: Add Class from Typelib Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.typelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- Add Class from TypeLib Wizard [MFC]
+- COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Typelib에서 클래스 추가 마법사
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9622a818e6334caad172f31f717eddc7e1230965
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 마법사에서는 사용 가능한 형식 라이브러리의 MFC 클래스를 추가합니다.  마법사에서는 선택된 형식 라이브러리에서 추가한 각 인터페이스에 대해 클래스를 만듭니다.  
+---
+# <a name="add-class-from-typelib-wizard"></a>Add Class from Typelib Wizard
+Use this wizard to add an MFC class from an available type library. The wizard creates a class for each interface you add from the selected type library.  
   
- **추가할 클래스 위치**  
- 클래스가 만들어지는 형식 라이브러리의 위치를 나타냅니다.  
+ **Add class from**  
+ Specifies the location of the type library, from which the class is created.  
   
-|옵션|설명|  
-|--------|--------|  
-|**레지스트리**|형식 라이브러리가 시스템에 등록됩니다.  등록된 형식 라이브러리는 **사용 가능한 형식 라이브러리**에 표시됩니다.|  
-|**파일**|형식 라이브러리가 반드시 시스템에 등록되지는 않지만 파일에는 포함됩니다.  **위치**에 파일 위치를 지정해야 합니다.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Registry**|The type library is registered in the system. Registered type libraries are listed in **Available type libraries**.|  
+|**File**|The type library is not necessarily registered in the system but is contained in a file. You must provide the file location in **Location**.|  
   
- **사용 가능한 형식 라이브러리**  
- 현재 시스템에 등록되어 있는 형식 라이브러리를 표시합니다.  이 목록에서 형식 라이브러리를 선택하여 **인터페이스** 목록에 해당 인터페이스를 표시합니다.  
+ **Available type libraries**  
+ Lists the type libraries currently registered in the system. Select a type library from this list to display its interfaces in the **Interfaces** list.  
   
- 형식 라이브러리 등록에 대한 자세한 내용은 MSDN Library의 “Inside Distributed COM: Type Libraries and Language Integration”을 참조하십시오.  
+ See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information about registering type libraries.  
   
- **위치**  
- 형식 라이브러리의 위치를 지정합니다.  **추가할 클래스 위치**에서 **파일**을 클릭하면 형식 라이브러리가 포함된 파일의 위치를 지정할 수 있습니다.  파일의 위치를 찾아 보려면 줄임표\(...\) 단추를 클릭합니다.  
+ **Location**  
+ Specifies the location of the type library. If you click **File** under **Add Class From**, you can provide the location of the file containing the type library. To browse to the location of the file, click the ellipsis button.  
   
- **인터페이스**  
- **사용 가능한 형식 라이브러리** 목록에서 현재 선택한 형식 라이브러리의 인터페이스를 표시합니다.  
+ **Interfaces**  
+ Lists the interfaces in the type library currently selected in the **Available type libraries** list.  
   
-|전송 단추|설명|  
-|-----------|--------|  
-|**\>**|**인터페이스** 목록에서 현재 선택된 인터페이스를 추가합니다.  인터페이스가 선택되지 않으면 희미하게 나타납니다.|  
-|**\>\>**|**사용 가능한 형식 라이브러리** 목록에서 현재 선택한 형식 라이브러리의 모든 인터페이스를 추가합니다.|  
-|**\<**|**생성된 클래스** 목록에서 현재 선택된 클래스를 제거합니다.  **생성된 클래스** 목록에서 현재 선택된 클래스가 없으면 이 옵션이 희미하게 나타납니다.|  
-|**\<\<**|**생성된 클래스** 목록의 클래스를 모두 제거합니다.  **생성된 클래스** 목록이 비어 있으면 이 옵션이 희미하게 나타납니다.|  
+|Transfer button|Description|  
+|---------------------|-----------------|  
+|**>**|Adds the interface currently selected in the **Interfaces** list. Dimmed if no interface is selected.|  
+|**>>**|Adds all the interfaces in the type library currently selected in the **Available type libraries** list.|  
+|**<**|Removes the class currently selected in the **Generated classes** list. Dimmed if no class is currently selected in the **Generated classes** list.|  
+|**<\<**|Removes all the classes in the **Generated classes** list. Dimmed if the **Generated classes** list is empty.|  
   
- **생성된 클래스**  
- Specifies the class names to be generated from the interfaces added using the **\>** or **\>\>** button.  이 상자를 클릭하여 클래스를 선택한 다음 위 또는 아래 키를 사용하여 목록을 스크롤하여 **마침**을 클릭할 때 마법사에서 생성하는 **파일** 상자의 파일 이름과 `Class` 상자의 클래스 이름을 확인할 수 있습니다.  이 상자에서는 한 번에 하나의 클래스만 선택할 수 있습니다.  
+ **Generated classes**  
+ Specifies the class names to be generated from the interfaces added using the **>** or **>>** button. You can click this box to select a class, and then use the up or down keys to scroll through the list, viewing each class name in the `Class` box and file name in the **File** box that the wizard generates when you click **Finish**. You can select only one class at a time in this box.  
   
- You can remove a class by selecting it in this list and clicking **\<**.  You do not need to select a class in the Generated classes box to remove all classes; by clicking **\<\<**, you remove all classes in the **Generated classes** box.  
+ You can remove a class by selecting it in this list and clicking **<**. You do not need to select a class in the Generated classes box to remove all classes; by clicking **<<**, you remove all classes in the **Generated classes** box.  
   
  `Class`  
- **마침**을 클릭할 때 마법사에서 추가하는 **생성된 클래스** 상자의 선택된 클래스 이름을 지정합니다.  `Class` 상자에서는 이름을 편집할 수 있습니다.  
+ Specifies the name of the class selected in the **Generated classes** box that the wizard adds when you click **Finish**. You can edit the name in the `Class` box.  
   
- **파일**  
- 새 클래스의 헤더 파일 이름을 설정합니다.  기본적으로 이 이름은 **생성된 클래스**에 입력한 이름을 기본으로 합니다.  원하는 위치에 파일 이름을 저장하거나 기존 파일에 클래스 선언을 추가하려면 줄임표\(...\) 단추를 클릭합니다.  기존 파일을 선택하면 마법사에서 **마침**을 클릭할 때까지 선택한 위치에 파일이 저장되지 않습니다.  
+ **File**  
+ Sets the name of the header file for the new class. By default, this name is based on the name you provide in **Generated classes**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- 또한 마법사에서는 파일을 덮어쓰지 않습니다.  기존 파일 이름을 선택한 경우 **마침**을 클릭하면 파일 내용에 클래스 선언을 추가할 것인지 묻는 메시지가 나타납니다.  파일을 추가하려면 **예**를 클릭하고, 마법사로 돌아가서 다른 파일 이름을 지정하려면 **아니요**를 클릭합니다.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
-## 참고 항목  
- [형식 라이브러리의 MFC 클래스](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
- [자동화 클라이언트: 형식 라이브러리 사용](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class from a Type Library](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

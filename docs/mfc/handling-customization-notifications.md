@@ -1,112 +1,127 @@
 ---
-title: "사용자 지정 알림 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBN_CUSTHELP"
-  - "TBN_QUERYINSERT"
-  - "TBNOTIFY"
-  - "NMHDR"
-  - "TBN_TOOLBARCHANGE"
-  - "TBN_ENDDRAG"
-  - "NM_SETFOCUS"
-  - "TBN_RESET"
-  - "NM_RETURN"
-  - "NM_ENDWAIT"
-  - "NM_STARTWAIT"
-  - "TBN_BEGINDRAG"
-  - "NM_OUTOFMEMORY"
-  - "TBN_QUERYDELETE"
-  - "NM_DBLCLK"
-  - "TBN_ENDADJUST"
-  - "NM_KILLFOCUS"
-  - "NM_RCLICK"
-  - "TBN_BEGINADJUST"
-  - "NM_CLICK"
-  - "NM_RDBLCLK::"
-  - "TBN_GETBUTTONINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TBN_ENDADJUST 알림"
-  - "TBNOTIFY 알림"
-  - "TBN_BEGINDRAG 알림"
-  - "TBN_TOOLBARCHANGE 알림"
-  - "NM_CLICK 알림"
-  - "NM_RETURN 알림"
-  - "NM_RCLICK 알림"
-  - "TBN_ENDDRAG 알림"
-  - "TBN_BEGINADJUST 알림"
-  - "NM_ENDWAIT 알림"
-  - "NM_KILLFOCUS 알림"
-  - "NM_SETFOCUS 알림"
-  - "NM_OUTOFMEMORY 알림"
-  - "TBN_QUERYINSERT 알림"
-  - "NMHDR"
-  - "NM_STARTWAIT 알림"
-  - "CToolBarCtrl 클래스, 알림 처리"
-  - "TBN_CUSTHELP 알림"
-  - "TBN_RESET 알림"
-  - "NM_DBLCLK 알림"
-  - "TBN_QUERYDELETE 알림"
-  - "NM_RDBLCLK 알림"
-  - "TBN_GETBUTTONINFO 알림"
+title: Handling Customization Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBN_CUSTHELP
+- TBN_QUERYINSERT
+- TBNOTIFY
+- NMHDR
+- TBN_TOOLBARCHANGE
+- TBN_ENDDRAG
+- NM_SETFOCUS
+- TBN_RESET
+- NM_RETURN
+- NM_ENDWAIT
+- NM_STARTWAIT
+- TBN_BEGINDRAG
+- NM_OUTOFMEMORY
+- TBN_QUERYDELETE
+- NM_DBLCLK
+- TBN_ENDADJUST
+- NM_KILLFOCUS
+- NM_RCLICK
+- TBN_BEGINADJUST
+- NM_CLICK
+dev_langs:
+- C++
+helpviewer_keywords:
+- TBN_ENDADJUST notification [MFC]
+- TBNOTIFY notification [MFC]
+- TBN_BEGINDRAG notification [MFC]
+- TBN_TOOLBARCHANGE notification [MFC]
+- NM_CLICK notification [MFC]
+- NM_RETURN notification [MFC]
+- NM_RCLICK notification [MFC]
+- TBN_ENDDRAG notification [MFC]
+- TBN_BEGINADJUST notification [MFC]
+- NM_ENDWAIT notification [MFC]
+- NM_KILLFOCUS notification [MFC]
+- NM_SETFOCUS notification [MFC]
+- NM_OUTOFMEMORY notification [MFC]
+- TBN_QUERYINSERT notification [MFC]
+- NMHDR [MFC]
+- NM_STARTWAIT notification [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- TBN_CUSTHELP notification [MFC]
+- TBN_RESET notification [MFC]
+- NM_DBLCLK notification [MFC]
+- TBN_QUERYDELETE notification [MFC]
+- NM_RDBLCLK notification [MFC]
+- TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 사용자 지정 알림 처리
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e91497af12fb29ed1aa017d5cef9d285018bcb1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Windows 도구 모음 공용 컨트롤에 시스템 정의 사용자 지정 대화 상자를 포함한 기본 제공 사용자 지정 기능이 있으며 이 기능을 통해 사용자는 도구 모음 단추를 삽입, 삭제 또는 재정렬할 수 있습니다. 응용 프로그램에서는 사용자 지정 기능이 사용 가능한지 및 사용자가 도구 모음을 사용자 지정할 수 있는 범위를 제어하는지 여부를 결정합니다.  
+---
+# <a name="handling-customization-notifications"></a>Handling Customization Notifications
+A Windows toolbar common control has built-in customization features, including a system-defined customization dialog box, which allow the user to insert, delete, or rearrange toolbar buttons. The application determines whether the customization features are available and controls the extent to which the user can customize the toolbar.  
   
- 도구 모음에 `CCS_ADJUSTABLE` 스타일을 제공하여 사용자가 이러한 사용자 지정 기능을 사용할 수 있도록 해 줍니다. 사용자 지정 기능을 통해 사용자가 단추를 새 위치로 끌거나 도구 모음 밖으로 끌어 단추를 제거할 수 있습니다. 또한 사용자는 도구 모음을 두 번 클릭하여 **도구 모음 사용자 지정** 대화 상자를 표시할 수 있습니다. 이 대화 상자를 통해 사용자는 도구 모음 단추를 추가, 삭제 및 재정렬할 수 있습니다. 응용 프로그램에서는 [사용자 지정](../Topic/CToolBarCtrl::Customize.md) 멤버 함수를 사용하여 대화 상자를 표시할 수 있습니다.  
+ You can make these customization features available to the user by giving the toolbar the `CCS_ADJUSTABLE` style. The customization features allow the user to drag a button to a new position or to remove a button by dragging it off the toolbar. In addition, the user can double-click the toolbar to display the **Customize Toolbar** dialog box, which allows the user to add, delete, and rearrange toolbar buttons. The application can display the dialog box by using the [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) member function.  
   
- 도구 모음 컨트롤에서는 사용자 지정 프로세스의 각 단계에서 부모 창에 알림 메시지를 전송합니다. 사용자가 Shift 키를 누른 채 단추를 끌기 시작하는 경우 도구 모음은 자동으로 끌기 작업을 처리합니다. 도구 모음은 단추를 삭제할 것인지 확인하기 위해 부모 창에 **TBN\_QUERYDELETE** 알림 메시지를 전송합니다. 부모 창에서 **FALSE**가 반환되는 경우 끌기 작업이 종료됩니다. 그렇지 않으면 도구 모음에서는 마우스 입력을 캡처하고 사용자가 마우스 단추를 놓을 때까지 기다립니다.  
+ The toolbar control sends notification messages to the parent window at each step in the customization process. If the user holds the SHIFT key down and begins dragging a button, the toolbar automatically handles the drag operation. The toolbar sends the **TBN_QUERYDELETE** notification message to the parent window to determine whether the button may be deleted. The drag operation ends if the parent window returns **FALSE**. Otherwise, the toolbar captures mouse input and waits for the user to release the mouse button.  
   
- 사용자가 마우스 단추를 놓으면 도구 모음 컨트롤에서는 마우스 커서의 위치를 확인합니다. 커서가 도구 모음 외부에 있는 경우 단추가 삭제됩니다. 커서가 도구 모음 단추에 있는 경우 도구 모음에서는 지정된 단추 왼쪽에 단추를 삽입할 것인지 확인하기 위해 부모 창에 **TBN\_QUERYINSERT** 알림 메시지를 전송합니다. 부모 창에서 **TRUE**가 반환되는 경우 단추가 삽입되고 그렇지 않은 경우에는 삽입되지 않습니다. 도구 모음에서는 끌기 작업의 종료를 표시하기 위해 **TBN\_TOOLBARCHANGE** 알림 메시지를 전송합니다.  
+ When the user releases the mouse button, the toolbar control determines the location of the mouse cursor. If the cursor is outside the toolbar, the button is deleted. If the cursor is on another toolbar button, the toolbar sends the **TBN_QUERYINSERT** notification message to the parent window to determine if a button may be inserted to the left of the given button. The button is inserted if the parent window returns **TRUE**; otherwise, it is not. The toolbar sends the **TBN_TOOLBARCHANGE** notification message to signal the end of the drag operation.  
   
- 사용자가 Shift 키를 누르지 않고 끌기 작업을 시작하는 경우 도구 모음 컨트롤에서는 소유자 창에 **TBN\_BEGINDRAG** 알림 메시지를 전송합니다. 고유한 단추 끌기 코드를 구현하는 응용 프로그램에서는 이 메시지를 끌기 작업의 시작 표시로 사용할 수 있습니다. 도구 모음에서는 끌기 작업의 종료를 표시하기 위해 **TBN\_ENDDRAG** 알림 메시지를 전송합니다.  
+ If the user begins a drag operation without holding down the SHIFT key, the toolbar control sends the **TBN_BEGINDRAG** notification message to the owner window. An application that implements its own button-dragging code can use this message as a signal to begin a drag operation. The toolbar sends the **TBN_ENDDRAG** notification message to signal the end of the drag operation.  
   
- 도구 모음 컨트롤에서는 사용자가 **도구 모음 사용자 지정** 대화 상자를 사용하여 도구 모음을 사용자 지정하는 경우 알림 메시지를 전송합니다. 도구 모음에서는 사용자가 도구 모음을 두 번 클릭한 후 대화 상자가 만들어지기 전에 **TBN\_BEGINADJUST** 알림 메시지를 전송합니다. 그런 다음 도구 모음에서는 해당 도구 모음에 단추를 삽입할 수 있는지 여부를 확인하기 위해 일련의 **TBN\_QUERYINSERT** 알림 메시지를 전송하기 시작합니다. 부모 창에서 **TRUE**가 반환되는 경우 도구 모음에서는 **TBN\_QUERYINSERT** 알림 메시지의 전송을 중지합니다. 부모 창에서 모든 단추에 대해 **TRUE**가 반환되지 않는 경우 도구 모음에서는 대화 상자가 소멸됩니다.  
+ A toolbar control sends notification messages when the user customizes a toolbar by using the **Customize Toolbar** dialog box. The toolbar sends the **TBN_BEGINADJUST** notification message after the user double-clicks the toolbar, but before the dialog box is created. Next, the toolbar begins sending a series of **TBN_QUERYINSERT** notification messages to determine whether the toolbar allows buttons to be inserted. When the parent window returns **TRUE**, the toolbar stops sending **TBN_QUERYINSERT** notification messages. If the parent window does not return **TRUE** for any button, the toolbar destroys the dialog box.  
   
- 그런 다음 도구 모음 컨트롤에서는 도구 모음의 각 단추에 대해 **TBN\_QUERYDELETE** 알림 메시지 하나를 전송하여 도구 모음에서 단추를 삭제할 수 있는지를 확인합니다. 단추를 삭제할 수 있음을 나타내는 경우 부모 창에서 **TRUE**가 반환되고 그렇지 않은 경우 **FALSE**가 반환됩니다. 도구 모음에서는 대화 상자에 모든 도구 모음 단추를 추가하지만 삭제할 수 없는 도구 모음 단추는 회색으로 표시됩니다.  
+ Next, the toolbar control determines if any buttons may be deleted from the toolbar by sending one **TBN_QUERYDELETE** notification message for each button in the toolbar. The parent window returns **TRUE** to indicate that a button may be deleted; otherwise, it returns **FALSE**. The toolbar adds all toolbar buttons to the dialog box, but grays those that may not be deleted.  
   
- 도구 모음 컨트롤에서 도구 모음 사용자 지정 대화 상자의 단추에 대한 정보가 필요할 때마다 **TBN\_GETBUTTONINFO** 알림 메시지를 전송하여 **TBNOTIFY** 구조체의 정보 및 주소가 필요한 단추의 인덱스를 지정합니다. 부모 창에서는 관련 정보로 구조체를 채워야 합니다.  
+ Whenever the toolbar control needs information about a button in the Customize Toolbar dialog box, it sends the **TBN_GETBUTTONINFO** notification message, specifying the index of the button for which it needs information and the address of a **TBNOTIFY** structure. The parent window must fill the structure with the relevant information.  
   
- **도구 모음 사용자 지정** 대화 상자에는 도움말 단추 및 다시 설정 단추가 포함되어 있습니다. 사용자가 도움말 단추를 선택하면 도구 모음 컨트롤에서는 **TBN\_CUSTHELP** 알림 메시지를 전송합니다. 부모 창에서는 도움말 정보를 표시하여 응답해야 합니다. 사용자가 다시 설정 단추를 선택하면 대화 상자에서는 **TBN\_RESET** 알림 메시지를 전송합니다. 이 메시지는 도구 모음에서 대화 상자가 다시 초기화됨을 표시합니다.  
+ The **Customize Toolbar** dialog box includes a Help button and a Reset button. When the user chooses the Help button, the toolbar control sends the **TBN_CUSTHELP** notification message. The parent window should respond by displaying help information. The dialog box sends the **TBN_RESET** notification message when the user selects the Reset button. This message signals that the toolbar is about to reinitialize the dialog box.  
   
- 이러한 메시지는 모두 **WM\_NOTIFY** 메시지이며 소유자 창에서 소유자 창의 메시지 맵에 다음 형식의 메시지 맵 항목을 추가하여 해당 메시지를 처리할 수 있습니다.  
+ These messages are all **WM_NOTIFY** messages, and they can be handled in your owner window by adding message-map entries of the following form to your owner window's message map:  
   
  `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
   
  `wNotifyCode`  
- **TBN\_BEGINADJUST** 같은 알림 메시지 식별자 코드  
+ Notification message identifier code, such as **TBN_BEGINADJUST**.  
   
  `idControl`  
- 알림을 전송하는 컨트롤의 식별자  
+ The identifier of the control sending the notification.  
   
  `memberFxn`  
- 이 알림을 받을 때 호출되는 멤버 함수  
+ The member function to be called when this notification is received.  
   
- 멤버 함수는 다음과 같은 프로토타입으로 선언됩니다.  
+ Your member function would be declared with the following prototype:  
   
  `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
   
- 알림 메시지 처리기에서 값을 반환하는 경우 해당 값을 **result**가 가리키는 *LRESULT*에 두어야 합니다.  
+ If the notification message handler returns a value, it should put it in the **LRESULT** pointed to by *result*.  
   
- 각 메시지의 경우 `pNotifyStruct`는 **NMHDR** 구조체 또는 **TBNOTIFY** 구조체를 가리킵니다. 다음은 이러한 구조체에 대한 설명입니다.  
+ For each message, `pNotifyStruct` points to either an **NMHDR** structure or a **TBNOTIFY** structure. These structures are described below:  
   
- **NMHDR** 구조체에는 다음 멤버가 포함되어 있습니다.  
+ The **NMHDR** structure contains the following members:  
   
  `typedef struct tagNMHDR {`  
   
@@ -119,31 +134,31 @@ Windows 도구 모음 공용 컨트롤에 시스템 정의 사용자 지정 대�
  `} NMHDR;`  
   
  **hwndFrom**  
- 알림을 전송하는 컨트롤의 창 핸들입니다. 이 핸들을 `CWnd` 포인터로 변환하려면 [CWnd::FromHandle](../Topic/CWnd::FromHandle.md)을 사용하십시오.  
+ Window handle of the control that is sending the notification. To convert this handle to a `CWnd` pointer, use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
   
  **idFrom**  
- 알림을 전송하는 컨트롤의 식별자입니다.  
+ Identifier of the control sending the notification.  
   
- **코드**  
- 알림 코드입니다. 이 멤버는 **TBN\_BEGINADJUST** 또는 **TTN\_NEEDTEXT** 같은 컨트롤 형식에서만 사용될 수 있는 값이거나 아래에 나열된 공용 알림 값 중 하나일 수 있습니다.  
+ **code**  
+ Notification code. This member can be a value specific to a control type, such as **TBN_BEGINADJUST** or **TTN_NEEDTEXT**, or it can be one of the common notification values listed below:  
   
--   **NM\_CLICK** 사용자가 컨트롤 내에서 마우스 왼쪽 단추를 클릭했습니다.  
+-   **NM_CLICK** The user has clicked the left mouse button within the control.  
   
--   **NM\_DBLCLK** 사용자가 컨트롤 내에서 마우스 왼쪽 단추를 두 번 클릭했습니다.  
+-   **NM_DBLCLK** The user has double-clicked the left mouse button within the control.  
   
--   **NM\_KILLFOCUS** 컨트롤에서 입력 포커스가 손실되었습니다.  
+-   **NM_KILLFOCUS** The control has lost the input focus.  
   
--   **NM\_OUTOFMEMORY** 사용할 수 있는 메모리가 부족하여 컨트롤이 작업을 완료할 수 없습니다.  
+-   **NM_OUTOFMEMORY** The control could not complete an operation because there is not enough memory available.  
   
--   **NM\_RCLICK** 사용자가 컨트롤 내에서 마우스 오른쪽 단추를 클릭했습니다.  
+-   **NM_RCLICK** The user has clicked the right mouse button within the control.  
   
--   **NM\_RDBLCLK** 사용자가 컨트롤 내에서 마우스 오른쪽 단추를 두 번 클릭했습니다.  
+-   **NM_RDBLCLK** The user has double-clicked the right mouse button within the control.  
   
--   **NM\_RETURN** 컨트롤에서 입력 포커스가 손실되었으며 사용자가 Enter 키를 눌렀습니다.  
+-   **NM_RETURN** The control has the input focus, and the user has pressed the ENTER key.  
   
--   **NM\_SETFOCUS** 컨트롤에서 입력 포커스를 받았습니다.  
+-   **NM_SETFOCUS** The control has received the input focus.  
   
- **TBNOTIFY** 구조체에는 다음 멤버가 포함되어 있습니다.  
+ The **TBNOTIFY** structure contains the following members:  
   
  `typedef struct {`  
   
@@ -159,44 +174,46 @@ Windows 도구 모음 공용 컨트롤에 시스템 정의 사용자 지정 대�
   
  `} TBNOTIFY, FAR* LPTBNOTIFY;`  
   
-## 설명  
+## <a name="remarks"></a>Remarks  
  **hdr**  
- 모든 **WM\_NOTIFY** 메시지에 공통적인 정보입니다.  
+ Information common to all **WM_NOTIFY** messages.  
   
  **iItem**  
- 알림과 연결된 단추의 인덱스입니다.  
+ Index of button associated with notification.  
   
  **tbButton**  
- 알림과 연결된 도구 모음 단추에 대한 정보를 포함하는 `TBBUTTON` 구조체입니다.  
+ `TBBUTTON` structure that contains information about the toolbar button associated with the notification.  
   
  **cchText**  
- 단추 텍스트의 문자 수입니다.  
+ Count of characters in button text.  
   
  **lpszText**  
- 단추 텍스트에 대한 포인터입니다.  
+ Pointer to button text.  
   
- 도구 모음에서 전송되는 알림은 다음과 같습니다.  
+ The notifications the toolbar sends are as follows:  
   
--   **TBN\_BEGINADJUST** 사용자가 도구 모음 컨트롤의 사용자 지정을 시작할 때 전송됩니다. 알림에 대한 정보를 포함하는 **NMHDR** 구조체를 가리키는 포인터입니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_BEGINADJUST** Sent when the user begins customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification. The handler doesn't need to return any specific value.  
   
--   **TBN\_BEGINDRAG** 사용자가 도구 모음 컨트롤에서 단추 끌기를 시작할 때 전송됩니다.**TBNOTIFY** 구조체를 가리키는 포인터입니다.**iItem** 멤버에는 0부터 시작하는 끌어 오는 단추의 인덱스가 포함되어 있습니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_BEGINDRAG** Sent when the user begins dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_CUSTHELP** 사용자가 도구 모음 사용자 지정 대화 상자에서 도움말 단추를 선택할 때 전송됩니다. 반환 값이 없습니다. 알림 메시지에 대한 정보를 포함하는 **NMHDR** 구조체를 가리키는 포인터입니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_CUSTHELP** Sent when the user chooses the Help button in the Customize Toolbar dialog box. No return value. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDADJUST** 사용자가 도구 모음 컨트롤의 사용자 지정을 중지할 때 전송됩니다. 알림 메시지에 대한 정보를 포함하는 **NMHDR** 구조체를 가리키는 포인터입니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_ENDADJUST** Sent when the user stops customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDDRAG** 사용자가 도구 모음 컨트롤에서 단추 끌기를 중지할 때 전송됩니다.**TBNOTIFY** 구조체를 가리키는 포인터입니다.**iItem** 멤버에는 0부터 시작하는 끌어 오는 단추의 인덱스가 포함되어 있습니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_ENDDRAG** Sent when the user stops dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_GETBUTTONINFO** 사용자가 도구 모음 컨트롤을 사용자 지정할 때 전송됩니다. 도구 모음에서는 이 알림 메시지를 사용하여 도구 모음 사용자 지정 대화 상자에 필요한 정보를 검색합니다.**TBNOTIFY** 구조체를 가리키는 포인터입니다.**iItem** 멤버는 0부터 시작하는 단추의 인덱스를 지정합니다.**pszText** 및 **cchText** 멤버는 현재 단추 텍스트 문자의 주소 및 길이를 지정합니다. 응용 프로그램에서는 단추에 대한 정보로 구조체를 채워야 합니다. 단추 정보가 구조체로 복사된 경우에는 **TRUE**를 반환하고 그렇지 않은 경우에는 **FALSE**를 반환합니다.  
+-   **TBN_GETBUTTONINFO** Sent when the user is customizing a toolbar control. The toolbar uses this notification message to retrieve information needed by the Customize Toolbar dialog box. The pointer points to a **TBNOTIFY** structure. The **iItem** member specifies the zero-based index of a button. The **pszText** and **cchText** members specify the address and length, in characters, of the current button text. An application should fill the structure with information about the button. Return **TRUE** if button information was copied to the structure, or **FALSE** otherwise.  
   
--   **TBN\_QUERYDELETE** 사용자가 도구 모음 컨트롤에서 단추를 삭제할 수 있는지 확인하기 위해 도구 모음을 사용자 지정하는 동안 전송됩니다.**TBNOTIFY** 구조체를 가리키는 포인터입니다.**iItem** 멤버에는 0부터 시작하는 삭제할 단추의 인덱스가 포함되어 있습니다. 단추의 삭제를 허용하려면 **TRUE**를 반환하고 단추의 삭제를 방지하려면 **FALSE**를 반환합니다.  
+-   **TBN_QUERYDELETE** Sent while the user is customizing a toolbar to determine whether a button may be deleted from a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be deleted. Return **TRUE** to allow the button to be deleted or **FALSE** to prevent the button from being deleted.  
   
--   **TBN\_QUERYINSERT** 사용자가 지정된 단추 왼쪽에 단추를 삽입할 수 있는지 확인하기 위해 도구 모음 컨트롤을 사용자 지정하는 동안 전송됩니다.**TBNOTIFY** 구조체를 가리키는 포인터입니다.**iItem** 멤버에는 0부터 시작하는 삽입할 단추의 인덱스가 포함되어 있습니다. 지정된 단추 앞에 단추의 삽입을 허용하려면 **TRUE**를 반환하고 단추의 삽입을 방지하려면 **FALSE**를 반환합니다.  
+-   **TBN_QUERYINSERT** Sent while the user is customizing a toolbar control to determine whether a button may be inserted to the left of the given button. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be inserted. Return **TRUE** to allow a button to be inserted in front of the given button or **FALSE** to prevent the button from being inserted.  
   
--   **TBN\_RESET** 사용자가 도구 모음 사용자 지정 대화 상자의 콘텐츠를 다시 설정할 때 전송됩니다. 알림 메시지에 대한 정보를 포함하는 **NMHDR** 구조체를 가리키는 포인터입니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_RESET** Sent when the user resets the content of the Customize Toolbar dialog box. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_TOOLBARCHANGE** 사용자가 도구 모음 컨트롤을 사용자 지정한 후 전송됩니다. 알림 메시지에 대한 정보를 포함하는 **NMHDR** 구조체를 가리키는 포인터입니다. 처리기에서 특정 값을 반환할 필요가 없습니다.  
+-   **TBN_TOOLBARCHANGE** Sent after the user has customized a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
-## 참고 항목  
- [CToolBarCtrl 사용](../mfc/using-ctoolbarctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

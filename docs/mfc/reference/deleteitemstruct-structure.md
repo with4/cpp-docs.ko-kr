@@ -1,5 +1,5 @@
 ---
-title: "DELETEITEMSTRUCT 구조체 | Microsoft 문서"
+title: DELETEITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DELETEITEMSTRUCT structure
+- DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
 caps.latest.revision: 13
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f5936cbb863cf8ace851609cb1dc8352e21f9456
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 609cce99d61b1b3262fc0f72ac9c20cc38369973
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 구조체
-`DELETEITEMSTRUCT` 구조 삭제 된 소유자가 그린 목록 상자 또는 콤보 상자 항목에 설명 합니다.  
+# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT Structure
+The `DELETEITEMSTRUCT` structure describes a deleted owner-drawn list-box or combo-box item.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDELETEITEMSTRUCT { /* ditms */  
@@ -55,30 +55,30 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 } DELETEITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- 지정 **ODT_LISTBOX** (소유자가 그린 목록 상자) 또는 **ODT_COMBOBOX** (소유자가 그린 콤보 상자).  
+ Specifies **ODT_LISTBOX** (an owner-drawn list box) or **ODT_COMBOBOX** (an owner-drawn combo box).  
   
  `CtlID`  
- 목록 상자 또는 콤보 상자의 식별자를 지정합니다.  
+ Specifies the identifier of the list box or combo box.  
   
  `itemID`  
- 제거 하 고 콤보 상자나 목록 상자에 있는 항목의 인덱스를 지정 합니다.  
+ Specifies index of the item in the list box or combo box being removed.  
   
  `hwndItem`  
- 컨트롤을 식별합니다.  
+ Identifies the control.  
   
  `itemData`  
- 항목에 대 한 응용 프로그램 정의 데이터를 지정합니다. 이 값은 컨트롤에 전달 된 **lParam** 목록 상자 또는 콤보 상자에는 항목을 추가 하는 메시지의 매개 변수입니다.  
+ Specifies application-defined data for the item. This value is passed to the control in the **lParam** parameter of the message that adds the item to the list box or combo box.  
   
-## <a name="remarks"></a>주의  
- 항목이 제거 되는 목록 상자 또는 콤보 상자 또는 콤보 상자나 목록 상자 소멸 될 때를 보내는데는 `WM_DELETEITEM` 삭제 된 각 항목에 대 한 소유자에 게는 메시지입니다. **lParam** 메시지의 매개 변수는이 구조에 대 한 포인터를 포함 합니다.  
+## <a name="remarks"></a>Remarks  
+ When an item is removed from the list box or combo box or when the list box or combo box is destroyed, Windows sends the `WM_DELETEITEM` message to the owner for each deleted item. The **lParam** parameter of the message contains a pointer to this structure.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** atldbcli.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** atldbcli.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
 
 

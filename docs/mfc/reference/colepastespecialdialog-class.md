@@ -1,5 +1,5 @@
 ---
-title: "COlePasteSpecialDialog 클래스 | Microsoft 문서"
+title: COlePasteSpecialDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,10 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Paste Special dialog box
-- dialog boxes, Paste Special
-- OLE Paste Special dialog box
-- COlePasteSpecialDialog class
+- COlePasteSpecialDialog [MFC], COlePasteSpecialDialog
+- COlePasteSpecialDialog [MFC], AddFormat
+- COlePasteSpecialDialog [MFC], AddLinkEntry
+- COlePasteSpecialDialog [MFC], AddStandardFormats
+- COlePasteSpecialDialog [MFC], CreateItem
+- COlePasteSpecialDialog [MFC], DoModal
+- COlePasteSpecialDialog [MFC], GetDrawAspect
+- COlePasteSpecialDialog [MFC], GetIconicMetafile
+- COlePasteSpecialDialog [MFC], GetPasteIndex
+- COlePasteSpecialDialog [MFC], GetSelectionType
+- COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 caps.latest.revision: 24
 author: mikeblome
@@ -48,58 +55,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6984d714248815b062c564c7eed5c315990855af
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c958f33095dc87ce63901721b6e188fd051cc34b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 클래스
-OLE 선택하여 붙여넣기 대화 상자에 사용합니다.  
+# <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog Class
+Used for the OLE Paste Special dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COlePasteSpecialDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|`COlePasteSpecialDialog` 개체를 생성합니다.|  
+|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Constructs a `COlePasteSpecialDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::AddFormat](#addformat)|사용자 지정 형식을 응용 프로그램에 붙여 넣을 수는 형식 목록에 추가 합니다.|  
-|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|지원 되는 클립보드 형식 목록에 새 항목을 추가 합니다.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|추가 **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`, 선택적으로 `CF_LINKSOURCE` 응용 프로그램 형식 목록에 붙여넣을 수 있습니다.|  
-|[COlePasteSpecialDialog::CreateItem](#createitem)|지정 된 형식을 사용 하 여 컨테이너 문서에 항목을 만듭니다.|  
-|[COlePasteSpecialDialog::DoModal](#domodal)|OLE 붙여넣기 대화 상자를 표시합니다.|  
-|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|또는 항목을 아이콘으로 그릴 것인지를 알려 줍니다.|  
-|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|이 항목의 아이콘 폼과 연결 된 메타 파일에 대 한 핸들을 가져옵니다.|  
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|사용자가 선택 된 사용 가능한 붙여넣기 옵션의 인덱스를 가져옵니다.|  
-|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|선택한 항목의 형식을 가져옵니다.|  
+|[COlePasteSpecialDialog::AddFormat](#addformat)|Adds custom formats to the list of formats your application can paste.|  
+|[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Adds a new entry to the list of supported Clipboard formats.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Adds **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`, and optionally `CF_LINKSOURCE` to the list of formats your application can paste.|  
+|[COlePasteSpecialDialog::CreateItem](#createitem)|Creates the item in the container document using the specified format.|  
+|[COlePasteSpecialDialog::DoModal](#domodal)|Displays the OLE Paste Special dialog box.|  
+|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Tells whether to draw item as an icon or not.|  
+|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Gets a handle to the metafile associated with the iconic form of this item.|  
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Gets the index of available paste options that was chosen by the user.|  
+|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Gets the type of selection chosen.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::m_ps](#m_ps)|형식의 구조 **OLEUIPASTESPECIAL** 대화 상자의 기능을 제어 하 합니다.|  
+|[COlePasteSpecialDialog::m_ps](#m_ps)|A structure of type **OLEUIPASTESPECIAL** that controls the function of the dialog box.|  
   
-## <a name="remarks"></a>주의  
- 클래스의 개체를 만들 `COlePasteSpecialDialog` 이 대화 상자를 호출 하려는 경우. 후는 `COlePasteSpecialDialog` 개체를 생성, 사용할 수는 [AddFormat](#addformat) 및 [AddStandardFormats](#addstandardformats) 대화 상자에 클립보드 형식을 추가 하는 멤버 함수입니다. 사용할 수도 있습니다는 [m_ps](#m_ps) 구조에서 값 또는 대화 상자에서 컨트롤의 상태를 초기화 합니다. `m_ps` 형식의 구조는 **OLEUIPASTESPECIAL**합니다.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COlePasteSpecialDialog` when you want to call this dialog box. After a `COlePasteSpecialDialog` object has been constructed, you can use the [AddFormat](#addformat) and [AddStandardFormats](#addstandardformats) member functions to add Clipboard formats to the dialog box. You can also use the [m_ps](#m_ps) structure to initialize the values or states of controls in the dialog box. The `m_ps` structure is of type **OLEUIPASTESPECIAL**.  
   
- 자세한 내용은 참조는 [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) structure in the Windows SDK.  
   
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,11 +121,11 @@ class COlePasteSpecialDialog : public COleDialog
   
  `COlePasteSpecialDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
- 응용 프로그램에서 선택 하 여 붙여넣기 작업을 지원할 수 형식 목록에 새 형식을 추가 하려면이 함수를 호출 합니다.  
+##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
+ Call this function to add new formats to the list of formats your application can support in a Paste Special operation.  
   
 ```  
 void AddFormat(
@@ -136,67 +143,67 @@ void AddFormat(
     BOOL bLink);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *fmt*  
- 추가할 데이터 형식에 대 한 참조입니다.  
+ Reference to the data type to add.  
   
  `lpszFormat`  
- 사용자에 게 형식을 설명 하는 문자열입니다.  
+ String that describes the format to the user.  
   
  *lpszResult*  
- 대화 상자에서이 형식을 선택 하면 결과 설명 하는 문자열입니다.  
+ String that describes the result if this format is chosen in the dialog box.  
   
  `flags`  
- 다른 연결 및 포함이 형식에 사용할 수 있는 옵션입니다. 이 플래그는 하나 이상의 다른 값의 비트 조합 된 **OLEUIPASTEFLAG** 열거 형식입니다.  
+ The different linking and embedding options available for this format. This flag is a bitwise combination of one or more of the different values in the **OLEUIPASTEFLAG** enumerated type.  
   
  `cf`  
- 추가할 클립보드 형식입니다.  
+ The clipboard format to add.  
   
- *미디어 유형입니다.*  
- 이 형식으로 사용할 수 있는 미디어 형식입니다. 값 중 하나 이상의 비트 조합입니다.는 **미디어 유형입니다.** 열거 형식입니다.  
+ *tymed*  
+ The types of media available in this format. This is a bitwise combination of one or more of the values in the **TYMED** enumerated type.  
   
  `nFormatID`  
- 이 형식을 식별 하는 문자열의 ID입니다. 이 문자열의 형식은 서로 다른 두 문자열 '\n' 문자로 구분 합니다. 첫 번째 문자열이 같습니다에 전달 되는 *lpstrFormat* 매개 변수를 두 번째 같습니다는 *lpstrResult* 매개 변수입니다.  
+ The ID of the string that identifies this format. The format of this string is two separate strings separated by a '\n' character. The first string is the same that would be passed in the *lpstrFormat* parameter, and the second is the same as the *lpstrResult* parameter.  
   
  *bEnableIcon*  
- 목록 상자에서이 형식을 선택 하면 아이콘으로 표시 확인란을 사용할 수 있는지 여부를 결정 하는 플래그입니다.  
+ Flag that determines whether the Display As Icon check box is enabled when this format is chosen in the list box.  
   
- *깜박임*  
- 목록 상자에서이 형식을 선택 하면 연결 하 여 붙여넣기 라디오 단추를 사용할 수 있는지 여부를 결정 하는 플래그입니다.  
+ *bLink*  
+ Flag that determines whether the Paste Link radio button is enabled when this format is chosen in the list box.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 호출 하 여 등의 표준 형식 중 하나를 추가할 수 있습니다 **CF_TEXT** 또는 **CF_TIFF** 또는 응용 프로그램에 시스템에 등록 된 사용자 지정 형식입니다. 응용 프로그램에 데이터 개체를 붙여 넣는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ This function can be called to add either standard formats such as **CF_TEXT** or **CF_TIFF** or custom formats that your application has registered with the system. For more information about pasting data objects into your application, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 자세한 내용은 참조는 [미디어 유형입니다.](http://msdn.microsoft.com/library/windows/desktop/ms691227) 열거형 형식 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) enumeration type and the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 자세한 내용은 참조는 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 열거 형식에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerated type in the Windows SDK.  
   
-##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
- 지원 되는 클립보드 형식 목록에 새 항목을 추가 합니다.  
+##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
+ Adds a new entry to the list of supported Clipboard formats.  
   
 ```  
 OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 추가할 클립보드 형식입니다.  
+ The clipboard format to add.  
   
-### <a name="return-value"></a>반환 값  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 새 링크 항목에 대 한 정보가 포함 된 구조입니다.  
+### <a name="return-value"></a>Return Value  
+ An [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) structure containing the information for the new link entry.  
   
-##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
- 응용 프로그램에서 선택 하 여 붙여넣기 작업을 지원할 수 형식 목록에 다음 클립보드 형식을 추가 하려면이 함수를 호출 합니다.  
+##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
+ Call this function to add the following Clipboard formats to the list of formats your application can support in a Paste Special operation:  
   
 ```  
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *bEnableLink*  
- 추가할 것인지를 결정 하는 플래그 `CF_LINKSOURCE` 응용 프로그램 형식 목록에 붙여넣을 수 있습니다.  
+ Flag that determines whether to add `CF_LINKSOURCE` to the list of formats your application can paste.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 - **CF_BITMAP**  
   
@@ -204,14 +211,14 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - `CF_METAFILEPICT`  
   
-- **"포함 된 개체"**  
+- **"Embedded Object"**  
   
--   (선택 사항) **"소스 링크"**  
+-   (optionally) **"Link Source"**  
   
- 이러한 형식은 포함 하 고 연결을 지 원하는 데 사용 됩니다.  
+ These formats are used to support embedding and linking.  
   
-##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
- `COlePasteSpecialDialog` 개체를 생성합니다.  
+##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog  
+ Constructs a `COlePasteSpecialDialog` object.  
   
 ```  
 COlePasteSpecialDialog(
@@ -220,121 +227,121 @@ COlePasteSpecialDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 생성 플래그는 비트 OR 연산자를 사용 하 여 결합 하는 다음 플래그를 개수를 제한 없이 포함 되어 있습니다.  
+ Creation flag, contains any number of the following flags combined using the bitwise-OR operator:  
   
-- `PSF_SELECTPASTE`대화 상자가 호출 될 때 붙여넣기 라디오 단추는 처음에 확인을 지정 합니다. 와 함께에서 사용할 수 없습니다 `PSF_SELECTPASTELINK`합니다. 이 값이 기본값입니다.  
+- `PSF_SELECTPASTE` Specifies that the Paste radio button will be checked initially when the dialog box is called. Cannot be used in combination with `PSF_SELECTPASTELINK`. This is the default.  
   
-- `PSF_SELECTPASTELINK`라디오 단추 수 링크 붙여넣기 대화 상자가 호출 될 때 확인 처음 않도록 지정 합니다. 와 함께에서 사용할 수 없습니다 `PSF_SELECTPASTE`합니다.  
+- `PSF_SELECTPASTELINK` Specifies that the Paste Link radio button will be checked initially when the dialog box is called. Cannot be used in combination with `PSF_SELECTPASTE`.  
   
-- `PSF_CHECKDISPLAYASICON`대화 상자가 호출 될 때 아이콘으로 표시 확인란이 처음 검사를 지정 합니다.  
+- `PSF_CHECKDISPLAYASICON` Specifies that the Display As Icon check box will be checked initially when the dialog box is called.  
   
-- `PSF_SHOWHELP`도움말 단추가 표시 대화 상자를 호출할 때 지정 합니다.  
+- `PSF_SHOWHELP` Specifies that the Help button will be displayed when the dialog box is called.  
   
  `pDataObject`  
- 가리키는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 붙여 넣도록 합니다. 이 값이 **NULL**, 가져옵니다는 `COleDataObject` 클립보드에 저장에서 합니다.  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) for pasting. If this value is **NULL**, it gets the `COleDataObject` from the Clipboard.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box is set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 이 함수가 구성 된 `COlePasteSpecialDialog` 개체입니다. 대화 상자를 표시 하려면 호출의 [DoModal](#domodal) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ This function only constructs a `COlePasteSpecialDialog` object. To display the dialog box, call the [DoModal](#domodal) function.  
   
- 자세한 내용은 참조는 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) 열거 형식에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerated type in the Windows SDK.  
   
-##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
- 선택 하 여 붙여넣기 대화 상자에서 선택 된 새 항목을 만듭니다.  
+##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
+ Creates the new item that was chosen in the Paste Special dialog box.  
   
 ```  
 BOOL CreateItem(COleClientItem* pNewItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pNewItem*  
- 가리키는 `COleClientItem` 인스턴스. 안 **NULL**합니다.  
+ Points to a `COleClientItem` instance. Cannot be **NULL**.  
   
-### <a name="return-value"></a>반환 값  
- 항목이 성공적으로 만들어진 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item was created successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 후에이 함수를 호출 해야 [DoModal](#domodal) 반환 **IDOK**합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should only be called after [DoModal](#domodal) returns **IDOK**.  
   
-##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
- OLE 붙여넣기 대화 상자를 표시합니다.  
+##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
+ Displays the OLE Paste Special dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** 대화 상자가 성공적으로 표시 된 경우.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** 사용자 대화 상자를 취소 합니다.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 `COleDialog::GetLastError` 발생 한 오류 유형에 대 한 자세한 정보를 멤버 함수입니다. 목록이 가능한 오류에 대 한 참조는 [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) function in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_ps](#m_ps) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_ps](#m_ps) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 경우 `DoModal` 반환 **IDOK**, 다른 멤버 대화 상자에 설정 또는 사용자가 입력 한 정보를 검색 하는 함수를 호출할 수 있습니다.  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
-##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
- 사용자를 아이콘으로 선택한 항목을 표시 하도록 선택 하는 경우를 결정 합니다.  
+##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
+ Determines if the user chose to display the selected item as an icon.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체를 렌더링 하는 데 필요한 메서드입니다.  
+### <a name="return-value"></a>Return Value  
+ The method needed to render the object.  
   
-- `DVASPECT_CONTENT`대화 상자를 해제할 때 아이콘으로 표시 확인란 확인 하지가 반환 됩니다.  
+- `DVASPECT_CONTENT` Returned if the Display As Icon check box was not checked when the dialog box was dismissed.  
   
-- `DVASPECT_ICON`대화 상자를 해제할 때 아이콘으로 표시 확인란을 선택 하는 경우를 반환 합니다.  
+- `DVASPECT_ICON` Returned if the Display As Icon check box was checked when the dialog box was dismissed.  
   
-### <a name="remarks"></a>주의  
- 만 후이 함수를 호출 [DoModal](#domodal) 반환 **IDOK**합니다.  
+### <a name="remarks"></a>Remarks  
+ Only call this function after [DoModal](#domodal) returns **IDOK**.  
   
- 그리기 측면에 대 한 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on drawing aspect, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
- 사용자가 선택한 항목에 연결 된 메타 파일을 가져옵니다.  
+##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
+ Gets the metafile associated with the item selected by the user.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자를 선택 하 여 해제할 때 아이콘으로 표시 확인란을 선택한 경우 선택한 항목의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들 **확인**고, 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ The handle to the metafile containing the iconic aspect of the selected item, if the Display As Icon check box was selected when the dialog box was dismissed by choosing **OK**; otherwise **NULL**.  
   
-##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
- 가져옵니다 인덱스 값 항목과 연결 된 사용자가 선택한 합니다.  
+##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
+ Gets the index value associated with the entry the user selected.  
   
 ```  
 int GetPasteIndex() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 배열에 대 한 인덱스 **OLEUIPASTEENTRY** 사용자가 선택 된 구조입니다. 붙여넣기 작업을 수행할 때 선택 된 인덱스에 해당 하는 형식을 사용 해야 합니다.  
+### <a name="return-value"></a>Return Value  
+ The index into the array of **OLEUIPASTEENTRY** structures that was selected by the user. The format that corresponds to the selected index should be used when performing the paste operation.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조는 [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) structure in the Windows SDK.  
   
-##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
- 선택한 사용자의 유형을 결정 합니다.  
+##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
+ Determines the type of selection the user made.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 선택한 항목의 형식을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns type of selection made.  
   
-### <a name="remarks"></a>주의  
- 반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COlePasteSpecialDialog` 클래스입니다.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COlePasteSpecialDialog` class.  
   
 ```  
 enum Selection {
@@ -345,31 +352,31 @@ enum Selection {
     };  
 ```  
   
- 이러한 값에 대 한 간략 한 desccriptions를 수행합니다.  
+ Brief desccriptions of these values follow:  
   
-- **COlePasteSpecialDialog::pasteLink** 라디오 단추는 연결 하 여 붙여넣기를 검사 하 고 선택한 형식이 표준 OLE 형식 되었습니다.  
+- **COlePasteSpecialDialog::pasteLink** The Paste Link radio button was checked and the chosen format was a standard OLE format.  
   
-- **COlePasteSpecialDialog::pasteNormal** The 붙여넣기 라디오 단추를 검사 하 고 선택한 형식이 표준 OLE 형식 되었습니다.  
+- **COlePasteSpecialDialog::pasteNormal** The Paste radio button was checked and the chosen format was a standard OLE format.  
   
-- **COlePasteSpecialDialog::pasteOther** 선택한 형식이 표준 OLE 형식입니다.  
+- **COlePasteSpecialDialog::pasteOther** The selected format is not a standard OLE format.  
   
-- **COlePasteSpecialDialog::pasteStatic** 는 선택한 형식의 메타 파일을 했습니다.  
+- **COlePasteSpecialDialog::pasteStatic** The chosen format was a metafile.  
   
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
- 형식의 구조 **OLEUIPASTESPECIAL** 하 여 붙여넣기 대화 상자의 동작을 제어 하는 데 사용 합니다.  
+##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
+ Structure of type **OLEUIPASTESPECIAL** used to control the behavior of the Paste Special dialog box.  
   
 ```  
 OLEUIPASTESPECIAL m_ps;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 구조체의 멤버는 멤버 함수를 통해 또는 직접 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified directly or through member functions.  
   
- 자세한 내용은 참조는 [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) structure in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

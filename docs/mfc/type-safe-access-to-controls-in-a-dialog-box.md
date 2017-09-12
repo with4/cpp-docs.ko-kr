@@ -1,40 +1,59 @@
 ---
-title: "대화 상자의 컨트롤에 대한 형식이 안전한 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "공용 컨트롤[C++], 대화 상자"
-  - "컨트롤[MFC], 대화 상자에서 액세스"
-  - "대화 상자[C++], 컨트롤에 대한 형식이 안전한 액세스"
-  - "MFC 대화 상자, 컨트롤에 대한 형식이 안전한 액세스"
-  - "대화 상자 컨트롤에 대한 안전한 액세스"
-  - "대화 상자 컨트롤에 대한 형식이 안전한 액세스"
-  - "Windows 공용 컨트롤[C++], 대화 상자"
+title: Type-Safe Access to Controls in a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls [MFC], in dialog boxes
+- Windows common controls [MFC], in dialog boxes
+- safe access to dialog box controls
+- dialog boxes [MFC], type-safe access to controls
+- controls [MFC], accessing in dialog boxes
+- type-safe access to dialog box controls
+- MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 대화 상자의 컨트롤에 대한 형식이 안전한 액세스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 31b00f0bfa97c0f725bd0254b171b0da6c79392d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-대화 상자의 컨트롤에서 `CListBox` 및 `CEdit` 같은 MFC 컨트롤 클래스의 인터페이스를 사용할 수 있습니다.  컨트롤 개체를 만들어 대화 상자 컨트롤에 연결할 수 있습니다.  그런 다음 컨트롤에서 작동하는 멤버 함수를 호출하여 해당 클래스 인터페이스를 통해 컨트롤에 액세스할 수 있습니다.  컨트롤에 대한 형식 안전 액세스를 제공하기 위해 여기서 설명한 방법이 설계되었습니다.  특히 입력란 및 목록 상자 같은 컨트롤에 유용합니다.  
+---
+# <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Type-Safe Access to Controls in a Dialog Box
+The controls in a dialog box can use the interfaces of MFC control classes such as `CListBox` and `CEdit`. You can create a control object and attach it to a dialog control. Then you can access the control through its class interface, calling member functions to operate on the control. The methods described here are designed to give you type-safe access to a control. This is especially useful for controls such as edit boxes and list boxes.  
   
- `CDialog`에서 파생된 클래스에서 대화 상자의 컨트롤과 C\+\+ 컨트롤 멤버 변수 간에 연결하기 위한 두 가지 방법은 다음과 같습니다.  
+ There are two approaches to making a connection between a control in a dialog box and a C++ control member variable in a `CDialog`-derived class:  
   
--   [코드 마법사를 사용하지 않는 경우](../mfc/type-safe-access-to-controls-without-code-wizards.md)  
+-   [Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md)  
   
--   [코드 마법사를 사용하는 경우](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
+-   [With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
   
-## 참고 항목  
- [대화 상자](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

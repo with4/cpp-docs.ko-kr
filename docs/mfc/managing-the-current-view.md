@@ -1,39 +1,58 @@
 ---
-title: "현재 뷰 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "프레임 창의 현재 뷰"
-  - "뷰 비활성화"
-  - "프레임 창, 현재 뷰"
-  - "OnActivateView 메서드"
-  - "뷰, 활성화"
-  - "뷰, 및 OnActivateView 메서드"
-  - "뷰, 현재"
-  - "뷰, 비활성화"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 현재 뷰 관리
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-프레임 창의 기본 구현의 일부로 프레임 창은 현재 활성 뷰의 추적을 유지합니다.  분할자 창의 예시와 같이 프레임 창이 하나 이상의 뷰를 포함하는 경우, 현재 뷰는 가장 최근에 사용된 뷰입니다.  활성 뷰는 Windows 나 현재 입력된 포커스를 현재 창과 무관 합니다.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- 활성 뷰가 바뀌면, 프레임워크는 해당 [OnActivateView](../Topic/CView::OnActivateView.md) 멤버 함수를 호출하여 현재 뷰를 알립니다.  `OnActivateView`'s `bActivate` 매개 변수를 시험하여 뷰가 활성화 되었는지에 대한 여부를 알릴 수 있습니다.  기본적으로 `OnActivateView`는 정품 인증의 현재 보기에 포커스를 설정 합니다.  `OnActivateView` 를 재정의 하여 뷰가 재활성화 되거나 비활성화 될 때 특별한 처리작업을 수행할 수 있습니다.  예를 들어, 현재 보기에서 다른 비활성 뷰와 구분할 수 있는 특별한 시각적 신호를 제공 하는 것이 좋습니다.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- [Command Routing](../mfc/command-routing.md) 에 설명된 대로 프레임 창은 명령에 해당 \(활성화된\) 뷰를 표준 명령 라우팅의 일부로 제공합니다.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## 참고 항목  
- [프레임 창 사용](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

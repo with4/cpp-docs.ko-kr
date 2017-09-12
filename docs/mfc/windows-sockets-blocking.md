@@ -1,63 +1,82 @@
 ---
-title: "Windows 소켓: 차단 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "블로킹 모드 소켓"
-  - "소켓[C++], 다른 Windows 플랫폼에서의 동작"
-  - "소켓[C++], 블로킹 모드"
-  - "Windows 소켓[C++], 블로킹 모드"
-  - "Windows 소켓[C++], Windows 플랫폼"
+title: 'Windows Sockets: Blocking | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], blocking mode
+- Windows Sockets [MFC], Windows platforms
+- Windows Sockets [MFC], blocking mode
+- sockets [MFC], behavior on different Windows platforms
+- blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows 소켓: 차단
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f327f551e238f644962b47c26c60632dd0aaf67
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 문서 및 두 개의 안내 문서는 Windows 소켓 프로그래밍의 몇 가지 문제를 설명합니다.  이 문서는 차단에 대해 설명합니다.  다른 문제는 문서 [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) 및 [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)에서 설명합니다.  
+---
+# <a name="windows-sockets-blocking"></a>Windows Sockets: Blocking
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers blocking. The other issues are covered in the articles: [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)를 사용하거나 이에서 파생되었다면, 사용자는 이 문제를 스스로 관리하는 것이 필요합니다.  [CSocket](../mfc/reference/csocket-class.md) 클래스를 사용하거나 이를 이용하여 파생시키면, MFC를 사용자를 위해 그들을 관리합니다.  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## 차단  
- 소켓은 "차단 모드" 또는 "비차단 모드"가 될 수 있습니다. 차단\(또는 동기\) 모드에서 소켓 함수는 작업을 완료할 수 있을 때까지 반환되지 않습니다.  호출이 반환되기 전까지는 호출된 함수의 소켓이 아무 것도 할 수 없기 — 차단되기 — 때문에 이를 차단이라고 합니다.  **Receive** 멤버 함수의 호출은 예를 들어, 전송하는 응용 프로그램이 전송하기를 기다리며 \(이는 `CSocket`를 사용하거나 또는 `CAsyncSocket` 차단과 함께 사용한 경우입니다.\) 완성할 때까지 임의의 긴 시간이 걸릴 수 있습니다.  `CAsyncSocket` 개체가 차단 모드\(비동기식으로 작동하는\)이면, 호출은 즉시 반환되며, [GetLastError](../Topic/CAsyncSocket::GetLastError.md) 멤버 함수를 사용하여 검색 가능한 현재 오류 코드는 호출이 차단되었으며 모드로 인하여 즉시 반환되지 않았다는 것을 나타내는 **WSAEWOULDBLOCK**입니다. \(`CSocket`는 절대로 **WSAEWOULDBLOCK**을 반환하지 않습니다.  클래스는 사용자를 위한 차단을 관리합니다.  
+## <a name="blocking"></a>Blocking  
+ A socket can be in "blocking mode" or "nonblocking mode." The functions of sockets in blocking (or synchronous) mode do not return until they can complete their action. This is called blocking because the socket whose function was called cannot do anything — is blocked — until the call returns. A call to the **Receive** member function, for example, might take an arbitrarily long time to complete as it waits for the sending application to send (this is if you are using `CSocket`, or using `CAsyncSocket` with blocking). If a `CAsyncSocket` object is in nonblocking mode (operating asynchronously), the call returns immediately and the current error code, retrievable with the [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) member function, is **WSAEWOULDBLOCK**, indicating that the call would have blocked had it not returned immediately because of the mode. (`CSocket` never returns **WSAEWOULDBLOCK**. The class manages blocking for you.)  
   
- 소켓의 동작은 32비트 및 64비트 운영 체제\(예를 들어 Windows 95 또는 Windows 98\)에서는 16비트 운영 체제\(예를 들어 Windows3.1\)와 다릅니다.  16비트 운영체제와 달리, 32비트 및 64비트 운영체제는 선점형 멀티태스킹을 사용하고 다중 스레딩을 제공합니다.  32비트 및 64비트 운영체제에서, 소켓을 별도의 작업자 스레드에 넣을 수 있습니다.  스레드의 소켓은 응용 프로그램에서 다른 작업을 방해하지 않고 차단할 수 있고 차단하는 데 계산 시간을 소비하지 않고 차단할 수 있습니다.  다중 스레드 프로그래밍에 대한 정보를 보려면 [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조하십시오.  
+ The behavior of sockets is different under 32-bit and 64-bit operating systems (such as Windows 95 or Windows 98) than under 16-bit operating systems (such as Windows 3.1). Unlike 16-bit operating systems, the 32-bit and 64-bit operating systems use preemptive multitasking and provide multithreading. Under the 32-bit and 64-bit operating systems, you can put your sockets in separate worker threads. A socket in a thread can block without interfering with other activities in your application and without spending compute time on the blocking. For information on multithreaded programming, see the article [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 > [!NOTE]
->  다중 스레드 응용 프로그램에서, 사용자 인터페이스의 응답성에 영향을 주지 않고 사용자 프로그램 디자인을 단순화하기 위해 `CSocket`의 차단 특성을 사용할 수 있습니다.  주 스레드에서 사용자 상호 작용을 처리하고 대체 스레드에서 `CSocket` 프로세싱을 처리하는 방법으로 이러한 논리 연산을 구분할 수 있습니다.  멀티 스레드가 아닌 응용 프로그램에서, 이러한 두 작업은 단일 스레드로써 결합되고 처리되어야 합니다. 이는 보통 `CAsyncSocket`를 사용하여 요구시 통신을 처리할 수 있다는 것을 의미하거나 긴 동기적 작업 도중 사용자 작업을 처리하기 위하여 `CSocket::OnMessagePending`를 오버라이딩한 것을 의미합니다.  
+>  In multithreaded applications, you can use the blocking nature of `CSocket` to simplify your program's design without affecting the responsiveness of the user interface. By handling user interactions in the main thread and `CSocket` processing in alternate threads, you can separate these logical operations. In an application that is not multithreaded, these two activities must be combined and handled as a single thread, which usually means using `CAsyncSocket` so you can handle communications requests on demand, or overriding `CSocket::OnMessagePending` to handle user actions during lengthy synchronous activity.  
   
- 이 설명의 나머지 부분은 16 비트 운영 체제를 대상으로 하는 프로그래머를 위한 것입니다.  
+ The rest of this discussion is for programmers targeting 16-bit operating systems:  
   
- 일반적으로, `CAsyncSocket`를 사용하고 있다면, 차단 작업을 사용하는 것을 피해야 하고 대신에 비동기적으로 수행되어야 합니다.  비동기 작업에서, **Receive**를 호출한 이후 **WSAEWOULDBLOCK** 오류 코드를 수신하는 시점에서, 예를 들어, 다시 읽을 수 있다는 것을 사용자에게 통지하기 위해 `OnReceive` 멤버 함수가 호출될 때까지 기다릴 수 있습니다.  비동기 호출은 [OnReceive](../Topic/CAsyncSocket::OnReceive.md)와 같이 사용자 소켓의 적절한 콜백 통지 함수를 콜백함으로써 이루어집니다.  
+ Normally, if you are using `CAsyncSocket`, you should avoid using blocking operations and operate asynchronously instead. In asynchronous operations, from the point at which you receive a **WSAEWOULDBLOCK** error code after calling **Receive**, for example, you wait until your `OnReceive` member function is called to notify you that you can read again. Asynchronous calls are made by calling back your socket's appropriate callback notification function, such as [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
- Windows에서, 차단 호출은 잘못된 작업으로 간주됩니다.  기본적으로 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)는 비동기 호출을 지원하며, 사용자는 콜백 알림을 사용하여 직접 차단을 관리해야 합니다.  반면에 클래스 [CSocket](../mfc/reference/csocket-class.md)는 동기화됩니다.  Windows 메시지를 띄우고 사용자를 위해 차단을 관리합니다.  
+ Under Windows, blocking calls are considered bad practice. By default, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) supports asynchronous calls, and you must manage the blocking yourself using callback notifications. Class [CSocket](../mfc/reference/csocket-class.md), on the other hand, is synchronous. It pumps Windows messages and manages blocking for you.  
   
- 차단에 대한 자세한 내용은 Windows 소켓 사양을 참조하십시오.  "On" 기능에 대한 자세한 내용은 [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md) 및 [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)을 참조하십시오.  
+ For more information about blocking, see the Windows Sockets specification. For more information about "On" functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md) and [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
- 자세한 내용은 다음을 참조하십시오.  
+ For more information, see:  
   
--   [Windows 소켓: CAsyncSocket 클래스 사용](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows 소켓: 소켓과 아카이브 함께 사용](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows 소켓: 백그라운드](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows 소켓: 스트림 소켓](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows 소켓: 데이터그램 소켓](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 참고 항목  
- [MFC의 Windows 소켓](../mfc/windows-sockets-in-mfc.md)   
- [CAsyncSocket::OnSend](../Topic/CAsyncSocket::OnSend.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
+
+

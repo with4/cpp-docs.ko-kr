@@ -1,5 +1,5 @@
 ---
-title: "컨트롤 이름, MFC ActiveX 컨트롤 마법사 | Microsoft Docs"
+title: Control Names, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,73 +33,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c027e7a3f24c33e4fa15ec666bdc2b7838502f76
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 이름
-컨트롤 클래스 및 속성 페이지 클래스, 형식 이름에 대 한 이름을 지정 하 고 컨트롤에 대 한 식별자를 입력 합니다. 제외 **약식 이름**, 다른 모든 필드 독립적으로 편집할 수 있습니다. 에 대 한 텍스트를 변경 하면 **약식 이름**,이 페이지의 다른 모든 필드의 이름에는 변경 내용이 반영 됩니다. 이 명명 문제는 모든 이름을 쉽게 식별할 수 있도록 사용자에 대 한 컨트롤을 개발 하는 경우 설계 되었습니다.  
+# <a name="control-names-mfc-activex-control-wizard"></a>Control Names, MFC ActiveX Control Wizard
+Specify the names for the control class and property page class, the type names, and type identifiers for your control. With the exception of **Short name**, all other fields can be edited independently. If you change the text for **Short name**, the change is reflected in the names of all other fields in this page. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.  
   
- **짧은 이름**  
- 컨트롤에 대 한 약식된 이름을 제공 합니다. 기본적으로이 이름은에 제공 된 프로젝트 이름에 따라는 **새 프로젝트** 대화 상자. 제공한 이름은 해당 필드를 개별적으로 변경 하지 않는 한 클래스 이름, 형식 이름 및 유형 식별자를 결정 합니다.  
+ **Short name**  
+ Provide an abbreviated name for the control. By default, this name is based on the project name you provided in the **New Project** dialog box. The name you provide determines the class names, the type names, and the type identifiers, unless you change those fields individually.  
   
- **컨트롤 클래스 이름**  
- 기본적으로 컨트롤 클래스의 이름 기반 약식 이름 뒤에 `C` 접두사로 및 `Ctrl` 접미사로 합니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 컨트롤 클래스 이름이 `CPriceCtrl`합니다.  
+ **Control class name**  
+ By default, the name of the control class is based on the short name, with `C` as a prefix and `Ctrl` as a suffix. For example, if your control's short name is `Price`, the control class name is `CPriceCtrl`.  
   
- **제어.h 파일**  
- 기본적으로 헤더 파일의 이름은 기반 약식 이름 뒤에 `Ctrl` 접미사로 및 `.h` 파일 확장명입니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 헤더 파일 이름이 `PriceCtrl.h`합니다. 이 필드의 이름은 컨트롤 클래스 이름과 일치 해야 합니다.  
+ **Control .h file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.h`. The name in this field should match the control class name.  
   
- **제어.cpp 파일**  
- 기본적으로 헤더 파일의 이름은 기반 약식 이름 뒤에 `Ctrl` 접미사로 및 `.cpp` 파일 확장명입니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 헤더 파일 이름이 `PriceCtrl.cpp`합니다. 이 필드의 이름은 헤더 이름이 일치 해야 합니다.  
+ **Control .cpp file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.cpp`. The name in this field should match the header name.  
   
- **컨트롤 형식 이름**  
- 기본적으로 컨트롤 형식의 이름을 약식 이름 뒤에 따라 `Control`합니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 컨트롤 클래스 형식 이름이 `Price Control`합니다. 이 필드에 값을 변경 하는 경우 이름에 상속 나타나는지 확인 합니다.  
+ **Control type name**  
+ By default, the name of the control type is based on the short name, followed by `Control`. For example, if your control's short name is `Price`, the control class type name is `Price Control`. If you change the value in this field, make sure the name indicates an inheritance.  
   
- **컨트롤 종류 ID**  
- 컨트롤 클래스의 컨트롤 형식 ID를 설정합니다. 컨트롤은 프로젝트에 추가 될 때 레지스트리에이 문자열을 씁니다. 컨테이너 응용 프로그램에서는 컨트롤의 인스턴스를 만들고이 문자열을 사용 합니다.  
+ **Control type ID**  
+ Sets the control type ID of the control class. The control writes this string to the registry when it is added to a project. Container applications use this string to create an instance of the control.  
   
- 기본적으로 컨트롤 형식 ID에서 지정한 프로젝트 이름 뒤에 기본는 **새 프로젝트** 대화 상자 및 짧은 이름입니다. 이 이름은 형식 이름이 일치 해야 합니다.  
+ By default, the control type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- 기본적으로 컨트롤 형식 ID는 다음과 같이 나타납니다.  
+ By default, the control type ID appears as follows:  
   
  *ProjectName.ShortName*Ctrl.1  
   
- 이 대화 상자에서 짧은 이름을 변경 하면 컨트롤 형식 ID는 다음과 같이 나타납니다.  
+ If you change the short name in this dialog box, the control type ID appears as follows:  
   
  *ProjectName.NewShortName*Ctrl.1  
   
- **속성 페이지 클래스 이름**  
- 기본적으로 속성 페이지 클래스의 이름은 기반 약식 이름 뒤에 `C` 접두사로 및 `PropPage` 접미사로 합니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 속성 페이지 클래스 이름이 `CPricePropPage`합니다. 이 이름은 추가 된 컨트롤 클래스 이름에 일치 해야 `PropPage`합니다.  
+ **PropPage class name**  
+ By default, the name of the property page class is based on the short name, with `C` as a prefix and `PropPage` as a suffix. For example, if your control's short name is `Price`, the property page class name is `CPricePropPage`. This name should match the control class name, appended with `PropPage`.  
   
- **속성 페이지.h 파일**  
- 기본적으로 속성 페이지 헤더 파일의 이름 기반 약식 이름 뒤에로 `PropPage` 접미사로 및 `.h` 파일 확장명입니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 속성 페이지 헤더 파일 이름이 `PricePropPage.h`합니다. 이 이름은 클래스 이름과 일치 해야 합니다.  
+ **PropPage .h file**  
+ By default, the name of the property page header file is based on the short name, with as a `PropPage` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.h`. This name should match the class name.  
   
- **속성 페이지.cpp 파일**  
- 기본적으로 속성 페이지 구현 파일의 이름 기반 약식 이름 뒤에로 `PropPage` 접미사로 및 `.cpp` 파일 확장명입니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 속성 페이지 헤더 파일 이름이 `PricePropPage.cpp`합니다. 이 이름은 헤더 파일 이름과 일치 해야 합니다.  
+ **PropPage .cpp file**  
+ By default, the name of the property page implementation file is based on the short name, with as a `PropPage` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.cpp`. This name should match the header file name.  
   
- **속성 페이지 형식 이름**  
- 기본적으로 속성 페이지 형식 이름은 다음 약식 이름 뒤에 따라 `Property Page`합니다. 예를 들어, 컨트롤의 약식 이름인 `Price`, 속성 페이지 유형 이름이 `Price Property Page`합니다. 이 필드에 값을 변경 하는 경우 이름에 컨트롤 클래스 나타나는지 확인 합니다.  
+ **PropPage type name**  
+ By default, the property page type name is based on the short name, followed by `Property Page`. For example, if your control's short name is `Price`, the property page type name is `Price Property Page`. If you change the value in this field, make sure the name indicates the control class.  
   
- **속성 페이지 유형 ID**  
- 속성 페이지 클래스의 ID를 설정 합니다. 컨트롤은 프로젝트에 적용 될 때 레지스트리에이 문자열을 씁니다. 컨테이너 응용 프로그램이이 문자열을 사용 하 여 컨트롤의 속성 페이지의 인스턴스를 만듭니다.  
+ **PropPage type ID**  
+ Sets the ID of the property page class. The control writes this string in the registry when it is applied to a project. A container application uses this string to create an instance of the control's property page.  
   
- 속성 페이지 형식 ID에서 지정한 프로젝트 이름에 따라은 기본적으로는 **새 프로젝트** 대화 상자 및 짧은 이름입니다. 이 이름은 형식 이름이 일치 해야 합니다.  
+ By default, the property page type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- 기본적으로 속성 페이지 형식 ID는 다음과 같이 나타납니다.  
+ By default, the property page type ID appears as follows:  
   
  *ProjectName.ShortName*PropPage.1  
   
- 이 대화 상자에서 짧은 이름을 변경 하면 속성 페이지 형식 ID는 다음과 같이 나타납니다.  
+ If you change the short name in this dialog box, the property page type ID appears as follows:  
   
  *ProjectName.NewShortName*PropPage.1  
   
-## <a name="see-also"></a>참고 항목  
- [MFC ActiveX 컨트롤 마법사](../../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC ActiveX 컨트롤 마법사, 응용 프로그램 설정](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [MFC ActiveX 컨트롤 마법사, 컨트롤 설정](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [Visual C++ 프로젝트용 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

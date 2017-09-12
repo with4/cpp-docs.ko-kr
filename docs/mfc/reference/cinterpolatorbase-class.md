@@ -1,5 +1,5 @@
 ---
-title: "CInterpolatorBase 클래스 | Microsoft 문서"
+title: CInterpolatorBase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInterpolatorBase class
+- CInterpolatorBase [MFC], CInterpolatorBase
+- CInterpolatorBase [MFC], CreateInstance
+- CInterpolatorBase [MFC], GetDependencies
+- CInterpolatorBase [MFC], GetDuration
+- CInterpolatorBase [MFC], GetFinalValue
+- CInterpolatorBase [MFC], InterpolateValue
+- CInterpolatorBase [MFC], InterpolateVelocity
+- CInterpolatorBase [MFC], SetCustomInterpolator
+- CInterpolatorBase [MFC], SetDuration
+- CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
 caps.latest.revision: 19
 author: mikeblome
@@ -44,66 +53,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 44c67eef38b34a2a3cf677b42a40304c01668b42
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 258c0403dee25d1b3e08a954010d186880c8f734
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinterpolatorbase-class"></a>CInterpolatorBase 클래스
-애니메이션 API에서 애니메이션 변수의 새 값을 계산해야 할 때 호출하는 콜백을 구현합니다.  
+# <a name="cinterpolatorbase-class"></a>CInterpolatorBase Class
+Implements a callback, which is called by the Animation API when it has to calculate a new value of an animation variable.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|생성 된 `CInterpolatorBase` 개체입니다.|  
+|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Constructs the `CInterpolatorBase` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInterpolatorBase::CreateInstance](#createinstance)|인스턴스를 만들고 `CInterpolatorBase` 이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.|  
-|[CInterpolatorBase::GetDependencies](#getdependencies)|보간의 종속성을 가져옵니다. (`CUIAnimationInterpolatorBase::GetDependencies`를 재정의합니다.)|  
-|[CInterpolatorBase::GetDuration](#getduration)|보간의 기간을 가져옵니다. (`CUIAnimationInterpolatorBase::GetDuration`를 재정의합니다.)|  
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|보간 잠재 고객의 최종 값을 가져옵니다. (`CUIAnimationInterpolatorBase::GetFinalValue`를 재정의합니다.)|  
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|지정된 된 오프셋 위치에서 값을 보간합니다 (재정의 `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|지정된 된 오프셋 위치에서 속도 보간합니다 (재정의 `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|  
-|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.|  
-|[CInterpolatorBase::SetDuration](#setduration)|보간의 기간 설정 (재정의 `CUIAnimationInterpolatorBase::SetDuration`.)|  
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|보간의 초기 값과 개발 속도 설정합니다. (`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`를 재정의합니다.)|  
+|[CInterpolatorBase::CreateInstance](#createinstance)|Creates an instance of `CInterpolatorBase` and stores a pointer to custom interpolator, which will be handling events.|  
+|[CInterpolatorBase::GetDependencies](#getdependencies)|Gets the interpolator's dependencies. (Overrides `CUIAnimationInterpolatorBase::GetDependencies`.)|  
+|[CInterpolatorBase::GetDuration](#getduration)|Gets the interpolator's duration. (Overrides `CUIAnimationInterpolatorBase::GetDuration`.)|  
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Gets the final value to which the interpolator leads. (Overrides `CUIAnimationInterpolatorBase::GetFinalValue`.)|  
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpolates the value at a given offset (Overrides `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpolates the velocity at a given offset (Overrides `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|  
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Stores a pointer to custom interpolator, which will be handling events.|  
+|[CInterpolatorBase::SetDuration](#setduration)|Sets the interpolator's duration (Overrides `CUIAnimationInterpolatorBase::SetDuration`.)|  
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Sets the interpolator's initial value and velocity. (Overrides `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|  
   
-## <a name="remarks"></a>주의  
- 이 처리기가 생성 되 고 전달 된 `IUIAnimationTransitionFactory::CreateTransition` 때는 `CCustomTransition` 애니메이션 초기화 프로세스의 일부로 개체를 만들고 (에 의해 시작 `CAnimationController::AnimateGroup`). 일반적으로이 클래스를 직접 사용 하지 않아도, 모든 이벤트를 방금 라우트를 `CCustomInterpolator`-파생 클래스를 해당 포인터의 생성자에 전달 됩니다 `CCustomTransition`합니다.  
+## <a name="remarks"></a>Remarks  
+ This handler is created and passed to `IUIAnimationTransitionFactory::CreateTransition` when a `CCustomTransition` object is being created as a part of animation initialization process (started by `CAnimationController::AnimateGroup`). Usually you don't need to use this class directly, it just routs all events to a `CCustomInterpolator`-derived class, whose pointer is passed to constructor of `CCustomTransition`.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationInterpolatorBase`  
   
  `CInterpolatorBase`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
- CInterpolatorBase 개체를 만듭니다.  
+##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
+ Constructs the CInterpolatorBase object.  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
- CInterpolatorBase의 인스턴스를 만들어 이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.  
+##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance  
+ Creates an instance of CInterpolatorBase and stores a pointer to custom interpolator, which will be handling events.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -111,17 +120,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationInterpolator** ppHandler);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- 사용자 지정 보간 기에 대 한 포인터입니다.  
+ A pointer to custom interpolator.  
   
  `ppHandler`  
- 출력입니다. 함수가 반환 될 때 CInterpolatorBase의 인스턴스에 대 한 포인터를 포함 합니다.  
+ Output. Contains a pointer to instance of CInterpolatorBase when the function returns.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
- 보간의 종속성을 가져옵니다.  
+##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies  
+ Gets the interpolator's dependencies.  
   
 ```  
 IFACEMETHOD(GetDependencies)(
@@ -130,49 +139,49 @@ IFACEMETHOD(GetDependencies)(
     __out UI_ANIMATION_DEPENDENCIES* durationDependencies);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `initialValueDependencies`  
- 출력입니다. 보간의 초기 값에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
+ Output. Aspects of the interpolator that depend on the initial value passed to SetInitialValueAndVelocity.  
   
  `initialVelocityDependencies`  
- 출력입니다. 보간의 초기 속도에 의존 하는 측면 SetInitialValueAndVelocity에 전달 합니다.  
+ Output. Aspects of the interpolator that depend on the initial velocity passed to SetInitialValueAndVelocity.  
   
  `durationDependencies`  
- 출력입니다. 보간의 기간에 의존 하는 측면 SetDuration에 전달 합니다.  
+ Output. Aspects of the interpolator that depend on the duration passed to SetDuration.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetDependencies 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetDependencies method.  
   
-##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
- 보간의 기간을 가져옵니다.  
+##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
+ Gets the interpolator's duration.  
   
 ```  
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 출력입니다. 시간 (초)에 있는 전환의 기간입니다.  
+ Output. The duration of the transition, in seconds.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetDuration 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetDuration method.  
   
-##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
- 보간 잠재 고객의 최종 값을 가져옵니다.  
+##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
+ Gets the final value to which the interpolator leads.  
   
 ```  
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `value`  
- 출력입니다. 전환의 끝에는 변수의 최종 값입니다.  
+ Output. The final value of a variable at the end of the transition.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 GetFinalValue 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetFinalValue method.  
   
-##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
- 지정된 된 오프셋 위치에서 값을 보간합니다.  
+##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
+ Interpolates the value at a given offset  
   
 ```  
 IFACEMETHOD(InterpolateValue)(
@@ -180,18 +189,18 @@ IFACEMETHOD(InterpolateValue)(
   __out DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `offset`  
- 전환의 시작 오프셋입니다. 오프셋은 항상 보다&0;과 같은 같고는 전환 기간 보다 작은 합니다. 전환 기간은&0; 하는 경우에이 메서드가 호출 되지 않습니다.  
+ The offset from the start of the transition. The offset is always greater than or equal to zero and less than the duration of the transition. This method is not called if the duration of the transition is zero.  
   
  `value`  
- 출력입니다. 보간된 값입니다.  
+ Output. The interpolated value.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 InterpolateValue 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the InterpolateValue method.  
   
-##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
- 지정 된 오프셋 위치 속도를 보간합니다.  
+##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
+ Interpolates the velocity at a given offset  
   
 ```  
 IFACEMETHOD(InterpolateVelocity)(
@@ -199,43 +208,43 @@ IFACEMETHOD(InterpolateVelocity)(
   __out DOUBLE* velocity);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `offset`  
- 전환의 시작 오프셋입니다. 오프셋은 항상&0; 보다 크거나 및 전환의 기간입니다. 전환 기간은&0; 하는 경우에이 메서드가 호출 되지 않습니다.  
+ The offset from the start of the transition. The offset is always greater than or equal to zero and less than or equal to the duration of the transition. This method is not called if the duration of the transition is zero.  
   
  `velocity`  
- 출력입니다. 오프셋에 있는 변수의 속도입니다.  
+ Output. The velocity of the variable at the offset.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 InterpolateVelocity 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the InterpolateVelocity method.  
   
-##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
- 이벤트를 처리 하는 사용자 지정 보간 기에 대 한 포인터를 저장 합니다.  
+##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
+ Stores a pointer to custom interpolator, which will be handling events.  
   
 ```  
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- 사용자 지정 보간 기에 대 한 포인터입니다.  
+ A pointer to custom interpolator.  
   
-##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
- 보간 기의 기간을 설정합니다.  
+##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
+ Sets the interpolator's duration  
   
 ```  
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 전환의 기간입니다.  
+ The duration of the transition.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 SetDuration 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the SetDuration method.  
   
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
- 보간의 초기 값과 개발 속도 설정합니다.  
+##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
+ Sets the interpolator's initial value and velocity.  
   
 ```  
 IFACEMETHOD(SetInitialValueAndVelocity)(
@@ -243,16 +252,16 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
   __in DOUBLE initialVelocity);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `initialValue`  
- 전환의 시작에 있는 변수의 값입니다.  
+ The value of the variable at the start of the transition.  
   
  `initialVelocity`  
- 전환의 시작에 있는 변수의 속도입니다.  
+ The velocity of the variable at the start of the transition.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. CCustomInterpolator 설정 되지 않은 경우 또는 사용자 지정 구현을 SetInitialValueAndVelocity 메서드에서 FALSE 반환 하는 경우에 E_FAIL을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the SetInitialValueAndVelocity method.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

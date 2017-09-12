@@ -1,5 +1,5 @@
 ---
-title: "CFormView 클래스 | Microsoft 문서"
+title: CFormView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views, containing controls
-- CFormView class
-- form views
+- CFormView [MFC], CFormView
+- CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
 caps.latest.revision: 23
 author: mikeblome
@@ -38,46 +37,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 82b38b04aa3cf2368d41ee20847c952c3082d4e4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a300c3ab480127012d51f232884ab57b7e5a2e22
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cformview-class"></a>CFormView 클래스
-폼 뷰에 사용되는 기본 클래스입니다.  
+# <a name="cformview-class"></a>CFormView Class
+The base class used for form views.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFormView : public CScrollView  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFormView::CFormView](#cformview)|`CFormView` 개체를 생성합니다.|  
+|[CFormView::CFormView](#cformview)|Constructs a `CFormView` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cformview:: Isinitdlgcompleted](#isinitdlgcompleted)|초기화하는 동안 동기화에 사용됩니다.|  
+|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Used for synchronization during initialization.|  
   
-## <a name="remarks"></a>주의  
- 폼 뷰는 기본적으로 컨트롤을 포함하는 뷰입니다. 이러한 컨트롤은 대화 상자 템플릿 리소스에 따라 배치됩니다. 응용 프로그램에서 폼을 사용하려면 `CFormView`를 사용합니다. 이러한 뷰 스크롤을 사용 하 여 필요에 따라 지원는 [CScrollView](../../mfc/reference/cscrollview-class.md) 기능입니다.  
+## <a name="remarks"></a>Remarks  
+ A form view is essentially a view that contains controls. These controls are laid out based on a dialog-template resource. Use `CFormView` if you want forms in your application. These views support scrolling, as needed, using the [CScrollView](../../mfc/reference/cscrollview-class.md) functionality.  
   
- 중이면 [폼 기반 응용 프로그램을 만드는](../../mfc/reference/creating-a-forms-based-mfc-application.md), 기반 해당 뷰 클래스를 만들 수 있습니다 `CFormView`, 폼 기반 응용 프로그램을 만드는 합니다.  
+ When you are [Creating a Forms-Based Application](../../mfc/reference/creating-a-forms-based-mfc-application.md), you can base its view class on `CFormView`, making it a forms-based application.  
   
- 새로운 삽입할 수도 있습니다 [양식 항목](../../mfc/form-views-mfc.md) 응용 프로그램 문서 뷰를 기반으로 합니다. 응용 프로그램이 초기에 폼을 지원하지 않은 경우에도 새 폼을 삽입하면 Visual C++에서 이 지원 기능을 추가합니다.  
+ You can also insert new [Form Topics](../../mfc/form-views-mfc.md) into document-view-based applications. Even if your application did not initially support forms, Visual C++ will add this support when you insert a new form.  
   
- 폼 기반 응용 프로그램을 만들 때는 MFC 응용 프로그램 마법사 및 클래스 추가 명령을 사용하는 것이 좋습니다. 이러한 메서드를 사용 하지 않고 폼 기반 응용 프로그램 만들기, 참조 하는 경우 [폼 기반 응용 프로그램을 만드는](../../mfc/reference/creating-a-forms-based-mfc-application.md)합니다.  
+ The MFC Application Wizard and the Add Class command are the preferred methods for creating forms-based applications. If you need to create a forms-based application without using these methods, see [Creating a Forms-Based Application](../../mfc/reference/creating-a-forms-based-mfc-application.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,52 +89,52 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
- `CFormView` 개체를 생성합니다.  
+##  <a name="cformview"></a>  CFormView::CFormView  
+ Constructs a `CFormView` object.  
   
 ```  
 CFormView(LPCTSTR lpszTemplateName);  
 CFormView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
+ Contains a null-terminated string that is the name of a dialog-template resource.  
   
  `nIDTemplate`  
- 대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
+ Contains the ID number of a dialog-template resource.  
   
-### <a name="remarks"></a>주의  
- 파생 된 형식의 개체를 만들 때 `CFormView`, view 개체를 만들고 보기의 기반이 되는 대화 상자 리소스를 식별 하는 생성자 중 하나를 호출 합니다. (생성자에는 문자열을 인수로 전달) 이름 또는 ID (pass 인수로 부호 없는 정수)가 리소스를 식별할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ When you create an object of a type derived from `CFormView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
   
- 폼 보기 창 및 자식 컨트롤 될 때까지 만들어지지 않습니다 `CWnd::Create` 호출 됩니다. `CWnd::Create`문서 서식 파일에 의해 제어 되는 문서와 뷰 만들기 프로세스를의 일환으로 프레임 워크에 의해 호출 됩니다.  
+ The form-view window and child controls are not created until `CWnd::Create` is called. `CWnd::Create` is called by the framework as part of the document and view creation process, which is driven by the document template.  
   
 > [!NOTE]
->  파생된 클래스의 *해야* 자체 생성자를 제공 합니다. 생성자에는 생성자를 호출 `CFormView::CFormView`, 리소스 이름 또는 ID를 인수로 위의 클래스 개요와 같이 합니다.  
+>  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `CFormView::CFormView`, with the resource name or ID as an argument as shown in the preceding class overview.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&90;](../../mfc/codesnippet/cpp/cformview-class_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#90](../../mfc/codesnippet/cpp/cformview-class_1.h)]  
   
- [!code-cpp[NVC_MFCDocView #&91;](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>Cformview:: Isinitdlgcompleted  
- MFC에서 다른 작업을 수행하기 전에 초기화가 완료되었는지 확인하는 데 사용됩니다.  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
+ Used by MFC to ensure that initialization is completed before performing other operations.  
   
 ```  
 BOOL IsInitDlgCompleted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 대화 상자에 대한 초기화 함수가 완료된 경우 true입니다.  
+### <a name="return-value"></a>Return Value  
+ True if the initialization function for this dialog has completed.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 SNAPVW](../../visual-cpp-samples.md)   
- [MFC 샘플 VIEWEX](../../visual-cpp-samples.md)   
- [CScrollView 클래스](../../mfc/reference/cscrollview-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDialog 클래스](../../mfc/reference/cdialog-class.md)   
- [CScrollView 클래스](../../mfc/reference/cscrollview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample SNAPVW](../../visual-cpp-samples.md)   
+ [MFC Sample VIEWEX](../../visual-cpp-samples.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)
 

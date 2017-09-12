@@ -1,5 +1,5 @@
 ---
-title: "CString 서식 지정 및 메시지 상자 표시 | Microsoft Docs"
+title: CString Formatting and Message-Box Display | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CString objects, formatting and message boxes
+- CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
 author: mikeblome
@@ -33,32 +33,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 356562dc61971aa7a74ce9e9be94fc34af58f6f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: abe0ce15f9fdf83c4cd15156916779e112ab72a8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstring-formatting-and-message-box-display"></a>CString 서식 지정 및 메시지 상자 표시
-다양 한 함수가 서식을 지정 하 고 구문 분석을 제공 `CString` 개체입니다. 조작할 수 있는 경우 이러한 함수를 사용할 수 있습니다 `CString` 있지만 개체는 메시지 상자 텍스트에 표시 되는 문자열 형식 지정 하는 데 특히 유용 합니다.  
+# <a name="cstring-formatting-and-message-box-display"></a>CString Formatting and Message-Box Display
+A number of functions are provided to format and parse `CString` objects. You can use these functions whenever you have to manipulate `CString` objects, but they are particularly useful for formatting strings that will appear in message-box text.  
   
- 이 그룹의 함수에 메시지 상자를 표시 하기 위한 글로벌 루틴도 포함 됩니다.  
+ This group of functions also includes a global routine for displaying a message box.  
   
-### <a name="cstring-functions"></a>CString 함수  
+### <a name="cstring-functions"></a>CString Functions  
   
 |||  
 |-|-|  
-|[AfxExtractSubString](#afxextractsubstring)|지정 된 소스 문자열에서 한 문자로 구분 된 부분 문자열을 추출 합니다.|  
-|[AfxFormatString1](#afxformatstring1)|대체 문자열 테이블에 포함 된 문자열의 서식 문자 "%1"에 대 한 지정 된 문자열입니다.|  
-|[AfxFormatString2](#afxformatstring2)|형식에 대 한 대체 두 문자열 "%1" 및 "%2" 문자열에서 문자열 테이블에 포함 된 문자입니다.|  
-|[AfxMessageBox](#afxmessagebox)|메시지 상자를 표시합니다.|  
+|[AfxExtractSubString](#afxextractsubstring)|Extracts substrings separated by a single character from a given source string.|  
+|[AfxFormatString1](#afxformatstring1)|Substitutes a given string for the format characters "%1" in a string contained in the string table.|  
+|[AfxFormatString2](#afxformatstring2)|Substitutes two strings for the format characters "%1" and "%2" in a string contained in the string table.|  
+|[AfxMessageBox](#afxmessagebox)|Displays a message box.|  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
- 이 전역 함수는 지정 된 소스 문자열에서 하위 문자열을 추출할 데 사용할 수 있습니다.  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
+ This global function can be used to extract a substring from a given source string.  
   
 ```   
 BOOL AFXAPI AfxExtractSubString (
@@ -68,35 +68,35 @@ BOOL AFXAPI AfxExtractSubString (
     TCHAR chSep  = '\n'); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *rString*  
- -   에 대 한 참조는 [CString](../../atl-mfc-shared/using-cstring.md) 는 개별 부분 문자열을 받게 될 개체입니다.  
+ -   Reference to a [CString](../../atl-mfc-shared/using-cstring.md) object that will receive an individual substring.  
   
  *lpszFullString*  
- -   추출 하는 데 사용할 문자열의 전체 텍스트를 포함 하는 문자열입니다.  
+ -   String containing the full text of the string to extract from.  
   
  *iSubString*  
- -   추출할 부분 문자열의 0부터 시작 인덱스 *lpszFullString*합니다.  
+ -   Zero-based index of the substring to extract from *lpszFullString*.  
   
  *chSep*  
- -   부분 문자열을 구분 하는 데 사용 되는 구분 문자입니다.  
+ -   Separator character used to delimit substrings.  
   
-### <a name="return-value"></a>반환 값  
- **TRUE** 함수; 지정 된 인덱스에 있는 부분 문자열을 성공적으로 추출 하는 경우 이렇게 하지 않으면 **FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the function successfully extracted the substring at the provided index; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 각 부분 문자열을 구분 하는 알려진된 단일 문자 소스 문자열에서 여러 부분 문자열을 추출 하는 데 유용 합니다. 이 함수 시작 부분에서 검색 된 `lpszFullString` 매개 변수를 호출할 때마다 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for extracting multiple substrings from a source string when a known single character separates each substring. This function searches from the beginning of the `lpszFullString` parameter each time it is called.  
   
- 이 함수는 경우 FALSE를 반환 합니다 `lpszFullString` 로 설정 된 **NULL** 되거나 함수 끝에 도달 `lpszFullString` 찾지 못한 채 `iSubString`+ 1 발견 되는 지정 된 구분 기호 문자입니다. `rString` 매개 변수는 경우 원래 값에서 수정 되지 것입니다 `lpszFullString` 로 설정 된 **NULL**, 그렇지 않으면는 `rString` 매개 변수는 빈 문자열로 설정할 경우 지정된 된 인덱스에 대 한 부분 문자열을 추출할 수 없습니다.  
+ This function will return FALSE if either `lpszFullString` is set to **NULL** or the function reaches the end of `lpszFullString` without finding `iSubString`+1 occurrences of the specified separator character. The `rString` parameter will not be modified from its original value if `lpszFullString` was set to **NULL**; otherwise, the `rString` parameter is set to the empty string if the substring could not be extracted for the specified index.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
- `lpsz1`으로 식별되는 템플릿 문자열 리소스에서 문자 "%1"의 모든 인스턴스에 대해 `nIDS`이 가리키는 문자열을 대체합니다.  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1" in the template string resource identified by `nIDS`.  
   
 ```  
 void  AfxFormatString1(
@@ -105,29 +105,29 @@ void  AfxFormatString1(
     LPCTSTR lpsz1); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 대체가 수행된 후 결과 문자열을 포함하는 `CString` 개체에 대한 참조입니다.  
+ A reference to a `CString` object that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 대체가 수행될 템플릿 문자열의 리소스 ID입니다.  
+ The resource ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 템플릿 문자열에서 서식 문자 "%1"을(를) 대체하는 문자열입니다.  
+ A string that will replace the format characters "%1" in the template string.  
   
-### <a name="remarks"></a>설명  
- 새로 구성된 문자열은 `rString`에 저장됩니다. 예를 들어 문자열 테이블에서 문자열이 "파일 %1을(를) 찾을 수 없음"이고 `lpsz1`이 "C:\MYFILE.TXT"와 같은 경우 `rString`에는 문자열 "파일 C:\MYFILE.TXT을(를) 찾을 수 없음"이 포함됩니다. 이 함수는 메시지 상자와 다른 창에 서식 지정 문자열을 전송하는 데 유용합니다.  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found", and `lpsz1` is equal to "C:\MYFILE.TXT", then `rString` will contain the string "File C:\MYFILE.TXT not found". This function is useful for formatting strings sent to message boxes and other windows.  
   
- 서식 문자 "%1"이(가) 두 번 이상 문자열에 나타나는 경우 대체가 여러 번 수행됩니다.  
+ If the format characters "%1" appear in the string more than once, multiple substitutions will be made.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
- 가 가리키는 문자열을 대체 `lpsz1` 의 "%1", 문자 및 가리키는 문자열의 모든 인스턴스에 대해 `lpsz2` 로 식별 되는 템플릿 문자열 리소스의 문자 "%2"의 모든 인스턴스에 대해 `nIDS`합니다.  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1", and the string pointed to by `lpsz2` for any instances of the characters "%2", in the template string resource identified by `nIDS`.  
   
 ```   
 void AfxFormatString2(
@@ -137,32 +137,32 @@ void AfxFormatString2(
     LPCTSTR lpsz2); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 에 대 한 참조는 `CString` 하는 대체가 수행 된 후 결과 문자열을 포함 합니다.  
+ A reference to the `CString` that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 문자열 테이블에는 대체가 수행 될 템플릿 문자열의 ID입니다.  
+ The string table ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 템플릿 문자열에서 서식 문자 "%1"을(를) 대체하는 문자열입니다.  
+ A string that will replace the format characters "%1" in the template string.  
   
  `lpsz2`  
- 템플릿 문자열에서 문자 "%2"를 형식을 대체 하는 문자열입니다.  
+ A string that will replace the format characters "%2" in the template string.  
   
-### <a name="remarks"></a>설명  
- 새로 구성된 문자열은 `rString`에 저장됩니다. 예를 들어 문자열 테이블에는 문자열은 "파일 %1 %2 디렉터리에서 찾을 수 없습니다" `lpsz1` "MYFILE 가리키는. TXT", 및 `lpsz2` 다음"C:\MYDIR "를 가리키는 `rString` "MYFILE 파일 문자열을 포함입니다. TXT C:\MYDIR 디렉터리에서 찾을 수 없습니다 "  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found in directory %2", `lpsz1` points to "MYFILE.TXT", and `lpsz2` points to "C:\MYDIR", then `rString` will contain the string "File MYFILE.TXT not found in directory C:\MYDIR"  
   
- 형식 문자 "%1" 또는 "%2" 문자열에 두 번 이상 나타날 경우 대체가 여러 수행 됩니다. 숫자 순서로 배열 될 필요가 없습니다.  
+ If the format characters "%1" or "%2" appear in the string more than once, multiple substitutions will be made. They do not have to be in numerical order.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
- 화면에 있는 메시지 상자를 표시합니다.  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
+ Displays a message box on the screen.  
   
 ```  
 int AfxMessageBox(
@@ -176,49 +176,49 @@ int AFXAPI AfxMessageBox(
     UINT nIDHelp = (UINT) -1); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 가리키는 `CString` 개체 또는 메시지 상자에 표시할 메시지를 포함 하는 null로 끝나는 문자열.  
+ Points to a `CString` object or null-terminated string containing the message to be displayed in the message box.  
   
  `nType`  
- 메시지 상자 스타일입니다. 적용 하는 [메시지 상자 스타일](../../mfc/reference/message-box-styles.md) 상자로 합니다.  
+ The style of the message box. Apply any of the [message-box styles](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) to the box.  
   
  `nIDHelp`  
- 메시지;에 대 한 도움말 컨텍스트 ID 0 응용 프로그램의 기본 도움말 컨텍스트를 사용할 것을 나타냅니다.  
+ The Help context ID for the message; 0 indicates the application's default Help context will be used.  
   
  `nIDPrompt`  
- 문자열 테이블에 문자열을 참조 하는 데 사용 하는 고유 ID입니다.  
+ A unique ID used to reference a string in the string table.  
   
-### <a name="return-value"></a>반환 값  
- 메시지 상자; 표시 하는 메모리가 충분 하지 않은 경우 0 그렇지 않은 경우 다음 값 중 하나가 반환 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Zero if there is not enough memory to display the message box; otherwise, one of the following values is returned:  
   
-- **IDABORT** The 중단 단추를 선택 합니다.  
+- **IDABORT** The Abort button was selected.  
   
-- **IDCANCEL** The 취소 단추를 선택 합니다.  
+- **IDCANCEL** The Cancel button was selected.  
   
-- **IDIGNORE** 선택 된 단추는 무시 합니다.  
+- **IDIGNORE** The Ignore button was selected.  
   
-- **IDNO** The No 단추를 선택 합니다.  
+- **IDNO** The No button was selected.  
   
-- **IDOK** The 확인 단추를 선택 합니다.  
+- **IDOK** The OK button was selected.  
   
-- **IDRETRY** 선택 된 단추 다시 시도 하십시오.  
+- **IDRETRY** The Retry button was selected.  
   
-- **IDYES** The 예 단추 선택 되었습니다.  
+- **IDYES** The Yes button was selected.  
   
- 메시지 상자에 취소 단추는 **IDCANCEL** ESC 키를 누르면 또는 취소 단추를 선택 하는 경우 값이 반환 됩니다. 메시지 상자에 "취소" 단추가 없습니다, ESC 키를 누르면 효과가 없습니다.  
+ If a message box has a Cancel button, the **IDCANCEL** value will be returned if either the ESC key is pressed or the Cancel button is selected. If the message box has no Cancel button, pressing the ESC key has no effect.  
   
- 함수 [AfxFormatString1](#afxformatstring1) 및 [AfxFormatString2](#afxformatstring2) 메시지 상자에 나타나는 텍스트 서식 지정에 유용할 수 있습니다.  
+ The functions [AfxFormatString1](#afxformatstring1) and [AfxFormatString2](#afxformatstring2) can be useful in formatting text that appears in a message box.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 형태 가리키는 텍스트 문자열로 표시 합니다. 함수 오버 로드 된 `lpszText` 사용 하 고 메시지 상자 `nIDHelp` 도움말 컨텍스트를 설명 하기 위해 합니다. 도움말 컨텍스트 (일반적으로 F1)의 도움말 키를 누를 때 관련된 된 도움말 항목이 이동할 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The first form of this overloaded function displays a text string pointed to by `lpszText` in the message box and uses `nIDHelp` to describe a Help context. The Help context is used to jump to an associated Help topic when the user presses the Help key (typically F1).  
   
- 함수의 두 번째 형식 문자열 리소스를 사용 하 여 ID를 가진 `nIDPrompt` 메시지 상자에는 메시지를 표시 합니다. 값을 통해 연결 된 도움말 페이지를 찾을 수 `nIDHelp`합니다. 경우 기본값인 `nIDHelp` 은 사용 되는 (-1), 문자열 리소스 ID `nIDPrompt`, 도움말 컨텍스트에 대 한 사용 됩니다. 도움말 컨텍스트를 정의 하는 방법에 대 한 자세한 내용은 참조 [기술 참고 28](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
+ The second form of the function uses the string resource with the ID `nIDPrompt` to display a message in the message box. The associated Help page is found through the value of `nIDHelp`. If the default value of `nIDHelp` is used (-1), the string resource ID, `nIDPrompt`, is used for the Help context. For more information about defining Help contexts, see [Technical Note 28](../../mfc/tn028-context-sensitive-help-support.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCWindowing # 133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)   
- [CStringT 클래스](../../atl-mfc-shared/reference/cstringt-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md)
 

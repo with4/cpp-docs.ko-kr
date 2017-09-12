@@ -1,5 +1,5 @@
 ---
-title: "CIPAddressCtrl 클래스 | Microsoft 문서"
+title: CIPAddressCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,12 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- IP address control
-- Internet address edit box
-- CIPAddressCtrl class
-- Internet protocol address box
-- common controls, Internet Explorer 4.0
-- Internet Explorer 4.0 common controls
+- CIPAddressCtrl [MFC], CIPAddressCtrl
+- CIPAddressCtrl [MFC], ClearAddress
+- CIPAddressCtrl [MFC], Create
+- CIPAddressCtrl [MFC], CreateEx
+- CIPAddressCtrl [MFC], GetAddress
+- CIPAddressCtrl [MFC], IsBlank
+- CIPAddressCtrl [MFC], SetAddress
+- CIPAddressCtrl [MFC], SetFieldFocus
+- CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
 caps.latest.revision: 22
 author: mikeblome
@@ -48,51 +51,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b3849580c7bfd07f241e55cc48144959566d7d09
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f895fb30442e4a0546201004eadba91deeff464
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cipaddressctrl-class"></a>CIPAddressCtrl 클래스
-Windows의 공용 IP 주소 컨트롤의 기능을 제공합니다.  
+# <a name="cipaddressctrl-class"></a>CIPAddressCtrl Class
+Provides the functionality of the Windows common IP Address control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CIPAddressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|`CIPAddressCtrl` 개체를 생성합니다.|  
+|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Constructs a `CIPAddressCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|IP 주소 컨트롤의 내용을 지웁니다.|  
-|[CIPAddressCtrl::Create](#create)|IP 주소 컨트롤을 만들고 연결 하는 `CIPAddressCtrl` 개체입니다.|  
-|[CIPAddressCtrl::CreateEx](#createex)|지정 된 Windows 확장된 스타일을 사용 하 여 IP 주소 컨트롤을 만들고에 연결 된 `CIPAddressCtrl` 개체입니다.|  
-|[CIPAddressCtrl::GetAddress](#getaddress)|IP 주소 컨트롤의 모든&4; 개의 필드에 대 한 주소 값을 검색합니다.|  
-|[CIPAddressCtrl::IsBlank](#isblank)|IP 주소 컨트롤의 모든 필드가 비어 있는 경우를 결정 합니다.|  
-|[CIPAddressCtrl::SetAddress](#setaddress)|IP 주소 컨트롤의 모든&4; 개의 필드에 대 한 주소 값을 설정 합니다.|  
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|IP 주소 컨트롤에 지정된 된 필드를 키보드 포커스를 설정합니다.|  
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|IP 주소 컨트롤의 지정된 된 필드에 범위를 설정합니다.|  
+|[CIPAddressCtrl::ClearAddress](#clearaddress)|Clears the contents of the IP Address Control.|  
+|[CIPAddressCtrl::Create](#create)|Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::CreateEx](#createex)|Creates an IP Address control with the specified Windows extended styles and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::GetAddress](#getaddress)|Retrieves the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::IsBlank](#isblank)|Determines if all fields in the IP Address Control are empty.|  
+|[CIPAddressCtrl::SetAddress](#setaddress)|Sets the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Sets the keyboard focus to the specified field in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Sets the range in the specified field in the IP Address Control.|  
   
-## <a name="remarks"></a>주의  
- 편집 컨트롤을 비슷한은 IP 주소 컨트롤을 사용 하면 입력 하 고 IP (인터넷 프로토콜) 형식으로 숫자 주소를 조작할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ An IP Address control, a control similar to an edit control, allows you to enter and manipulate a numerical address in Internet Protocol (IP) format.  
   
- 이 컨트롤 (및 따라서는 `CIPAddressCtrl` 클래스)에서 Internet Explorer 4.0 이상 실행 되는 프로그램에만 사용할 수 있습니다. 또한 이후 버전의 Windows 및 Windows NT에서 제공 됩니다.  
+ This control (and therefore the `CIPAddressCtrl` class) is available only to programs running under Microsoft Internet Explorer 4.0 and later. They will also be available under future versions of Windows and Windows NT.  
   
- IP 주소 컨트롤에 대 한 자세한 내용은 참조 하십시오. [IP 주소 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb761372) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more general information about the IP Address Control, see [IP Address Controls](http://msdn.microsoft.com/library/windows/desktop/bb761372) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,29 +104,28 @@ class CIPAddressCtrl : public CWnd
   
  `CIPAddressCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
- 
-          `CIPAddressCtrl` 개체를 만듭니다.  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
+ Creates a `CIPAddressCtrl` object.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
- IP 주소 컨트롤의 내용을 지웁니다.  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
+ Clears the contents of the IP Address Control.  
   
 ```  
 void ClearAddress();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), as described in the Windows SDK.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
- IP 주소 컨트롤을 만들고 연결 하는 `CIPAddressCtrl` 개체입니다.  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
+ Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -133,33 +135,33 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용 됩니다. 포함 해야는 **WS_CHILD** 컨트롤을 자식 창 해야 하기 때문에 스타일입니다. 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] windows 스타일의 목록에 대 한 합니다.  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- IP 주소 컨트롤의 크기와 위치에 대 한 참조입니다. 수 중 하나는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조입니다.  
+ A reference to the IP Address Control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- IP 주소 컨트롤의 부모 창에 대 한 포인터입니다. 않아야 **NULL입니다.**  
+ A pointer to the IP Address Control's parent window. It must not be **NULL.**  
   
  `nID`  
- IP 주소 컨트롤의 id입니다.  
+ The IP Address Control's ID.  
   
-### <a name="return-value"></a>반환 값  
- 초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CIPAddressCtrl` 두 단계에서는 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CIPAddressCtrl` object in two steps.  
   
-1.  만드는 생성자를 호출 하는 `CIPAddressCtrl` 개체입니다.  
+1.  Call the constructor, which creates the `CIPAddressCtrl` object.  
   
-2.  호출 **만들기**, IP 주소 컨트롤 만듭니다.  
+2.  Call **Create**, which creates the IP Address Control.  
   
- 컨트롤 확장된 창 스타일을 사용 하는 경우 호출할 [CreateEx](#createex) 대신 **만들기**합니다.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
- 컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CIPAddressCtrl` 개체입니다.  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
+ Call this function to create a control (a child window) and associate it with the `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -170,30 +172,30 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 생성 되는 컨트롤의 확장된 스타일을 지정 합니다. 확장된 창 스타일의 목록에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용 됩니다. 포함 해야는 **WS_CHILD** 컨트롤을 자식 창 해야 하기 때문에 스타일입니다. 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] windows 스타일의 목록에 대 한 합니다.  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에서 만든 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 컨트롤의 부모 창에 대 한 포인터입니다.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 컨트롤의 자식 창 id입니다.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
- IP 주소 컨트롤의 모든&4; 개의 필드에 대 한 주소 값을 검색합니다.  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
+ Retrieves the address values for all four fields in the IP Address Control.  
   
 ```  
 int GetAddress(
@@ -205,50 +207,50 @@ int GetAddress(
 int GetAddress(DWORD& dwAddress);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- 압축 된 IP 주소에서 0 필드 값에 대 한 참조입니다.  
+ A reference to the field 0 value from a packed IP address.  
   
  `nField1`  
- 압축 된 IP 주소에서 1 필드 값에 대 한 참조입니다.  
+ A reference to the field 1 value from a packed IP address.  
   
  `nField2`  
- 압축 된 IP 주소에서 2 필드 값에 대 한 참조입니다.  
+ A reference to the field 2 value from a packed IP address.  
   
  `nField3`  
- 압축 된 IP 주소에서 3 필드 값에 대 한 참조입니다.  
+ A reference to the field 3 value from a packed IP address.  
   
  `dwAddress`  
- 주소에 대 한 참조는 `DWORD` IP 주소를 수신 하는 값입니다. 참조 **주의** 보여 주는 테이블에 대 한 방법을 `dwAddress` 채워집니다.  
+ A reference to the address of a `DWORD` value that receives the IP address. See **Remarks** for a table that shows how `dwAddress` is filled.  
   
-### <a name="return-value"></a>반환 값  
- IP 주소 컨트롤의 공백이 아닌 필드 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of non-blank fields in the IP Address Control.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 위의 첫 번째 프로토타입의 읽기 숫자 0-3 컨트롤의 필드에 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 `dwAddress` 는 다음과 같이 채워집니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|필드|필드 값을 포함 하는 비트|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24-31|  
-|1|부터 23까지 16|  
-|2|8 ~ 15|  
-|3|0 ~ 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
- IP 주소 컨트롤의 모든 필드가 비어 있는 경우를 결정 합니다.  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
+ Determines if all fields in the IP Address Control are empty.  
   
 ```  
 BOOL IsBlank() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 모든 경우에 0이 아닌 IP 주소 컨트롤의 필드가 비어 있습니다. 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if all of the IP Address Control fields are empty; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), as described in the Windows SDK.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
- IP 주소 컨트롤의 모든&4; 개의 필드에 대 한 주소 값을 설정 합니다.  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
+ Sets the address values for all four fields in the IP Address Control.  
   
 ```  
 void SetAddress(
@@ -260,48 +262,48 @@ void SetAddress(
 void SetAddress(DWORD dwAddress);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- 압축 된 IP 주소에서 0 필드 값입니다.  
+ The field 0 value from a packed IP address.  
   
  `nField1`  
- 압축 된 IP 주소에서 1 필드 값입니다.  
+ The field 1 value from a packed IP address.  
   
  `nField2`  
- 압축 된 IP 주소에서 2 필드 값입니다.  
+ The field 2 value from a packed IP address.  
   
  `nField3`  
- 압축 된 IP 주소에서 3 필드 값입니다.  
+ The field 3 value from a packed IP address.  
   
  `dwAddress`  
- A `DWORD` 새 IP 주소를 포함 하는 값입니다. 참조 **주의** 보여 주는 테이블에 대 한 방법을 `DWORD` 값은 채워집니다.  
+ A `DWORD` value that contains the new IP address. See **Remarks** for a table that shows how the `DWORD` value is filled.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 위의 첫 번째 프로토타입의 읽기 숫자 0-3 컨트롤의 필드에 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 `dwAddress` 는 다음과 같이 채워집니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|필드|필드 값을 포함 하는 비트|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24-31|  
-|1|부터 23까지 16|  
-|2|8 ~ 15|  
-|3|0 ~ 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
- IP 주소 컨트롤에 지정된 된 필드를 키보드 포커스를 설정합니다.  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
+ Sets the keyboard focus to the specified field in the IP Address Control.  
   
 ```  
 void SetFieldFocus(WORD nField);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nField`  
- 포커스를 설정 해야 하는&0;부터 시작 필드 인덱스입니다. 이 값 필드의 개수 보다 클 경우 비어 있는 첫 번째 필드에 포커스가 설정 됩니다. 모든 필드가 비어 있지 않은 경우 첫 번째 필드에 포커스가 설정 됩니다.  
+ Zero-based field index to which the focus should be set. If this value is greater than the number of fields, focus is set to the first blank field. If all fields are non-blank, focus is set to the first field.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), as described in the Windows SDK.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
- IP 주소 컨트롤의 지정된 된 필드에 범위를 설정합니다.  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
+ Sets the range in the specified field in the IP Address Control.  
   
 ```  
 void SetFieldRange(
@@ -310,22 +312,22 @@ void SetFieldRange(
     BYTE nUpper);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nField`  
- 범위 적용 될&0;부터 시작 필드 인덱스입니다.  
+ Zero-based field index to which the range will be applied.  
   
  `nLower`  
- 이 IP 주소 컨트롤의 지정된 된 필드의 하한값을 수신 하는 정수에 대 한 참조입니다.  
+ A reference to an integer receiving the lower limit of the specified field in this IP Address Control.  
   
  `nUpper`  
- 이 IP 주소 컨트롤의 지정된 된 필드의 상한값을 수신 하는 정수에 대 한 참조입니다.  
+ A reference to an integer receiving the upper limit of the specified field in this IP Address Control.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 두 개의 매개 변수를 사용 하 여 `nLower` 및 `nUpper`대신 필드의 아래쪽과 위쪽 한계를 나타내기 위해는 *wRange* Win32 메시지와 함께 사용 되는 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), as described in the Windows SDK. Use the two parameters, `nLower` and `nUpper`, to indicate the lower and upper limits of the field, instead of the *wRange* parameter used with the Win32 message.  
   
-## <a name="see-also"></a>참고 항목  
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

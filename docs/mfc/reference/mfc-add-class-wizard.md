@@ -1,5 +1,5 @@
 ---
-title: "MFC 클래스 추가 마법사 | Microsoft 문서"
+title: MFC Add Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,72 +34,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 08d258c2b8386a4dd0c1d24c6ac6aa10f6c04a63
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7960628af7aefae7647ec185e461abc3aac5852
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-add-class-wizard"></a>MFC 클래스 추가 마법사
-기존 MFC 프로젝트에 클래스를 추가 하거나 MFC를 지 원하는 ATL 프로젝트에 클래스를 추가 하려면이 코드 마법사를 사용 합니다. 또한 Win32 가진 프로젝트에 MFC 지원 MFC 클래스를 추가할 수 있습니다. 프로젝트를 만들 때 지정한 기능이 대화 상자에서 사용할 수 있는 옵션을 결정 합니다.  
+# <a name="mfc-add-class-wizard"></a>MFC Add Class Wizard
+Use this code wizard to add a class to an existing MFC project, or to add a class to an ATL project that supports MFC. You can also add MFC classes to Win32 projects that have MFC support. The features you specified when you created your project determine the options available in this dialog box.  
   
-## <a name="names"></a>이름  
- 이 페이지의 클래스 이름, 기본 클래스 및 새 클래스 파일 이름을 지정 합니다.  
+## <a name="names"></a>Names  
+ In this page, specify the class name, the base class, and file names for the new class.  
   
- **클래스 이름**  
- 새 클래스의 이름을 지정 하 고 Id 및이 페이지에는 파일의 이름에 대 한 기본 텍스트를 제공 합니다. 일반적으로 c + + 클래스 예를 들어 "CMyClass"가 "MyClass.h", "C"로 시작 합니다.  
+ **Class name**  
+ Specifies the name of the new class and provides the default basis for the names of IDs and files on this page. C++ classes typically start with "C", so for example, "CMyClass" becomes "MyClass.h", and so on.  
   
- **기본 클래스**  
- 새 클래스에 대 한 기본 클래스의 이름을 지정합니다. 기본 클래스는 기본적으로 [CWnd](../../mfc/reference/cwnd-class.md)합니다. 선택한 기본 클래스의 다른 상자가이 페이지에 활성화 되어 있는지 여부를 결정 합니다.  
+ **Base class**  
+ Specifies the name of the base class for the new class. By default, the base class is [CWnd](../../mfc/reference/cwnd-class.md). The base class you select determines whether other boxes on this page are active.  
   
- 기본 클래스는 클래스에는 대화 ID 또는 리소스 id입니다. 있는지에 따라 결정을 설정 하는 클래스의 유형 클래스의 일반적인 종류는 다음과 같습니다.  
+ The type of class you set as the base class determines whether the class has a dialog ID or a resource ID. The general types of classes are as follows:  
   
--   와 같은 클래스 [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), 또는 [CDocument](../../mfc/reference/cdocument-class.md), 대화 상자가 필요 하지 않은 ID 또는 리소스 id입니다. 이 클래스는 대화 상자 또는 리소스 ID를 사용 하지 않습니다. 기본 클래스에 대 한 이러한 클래스 중 하나를 선택 하는 경우는 **대화 ID** 상자 및 **DHTML 리소스 ID** 상자가 흐리게 표시 됩니다.  
+-   Classes such as [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), or [CDocument](../../mfc/reference/cdocument-class.md), which do not require a dialog ID or resource ID. These classes do not use a dialog or resource ID. If you select one of these classes for your base class, the **Dialog ID** box and the **DHTML resource ID** box are dimmed.  
   
--   와 같은 클래스 [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), 또는 [CPropertyPage](../../mfc/reference/cpropertypage-class.md)는 대화 ID 필요  
+-   Classes such as [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), or [CPropertyPage](../../mfc/reference/cpropertypage-class.md), which require a dialog ID.  
   
--   클래스 [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), 대화 ID, DHTML 리소스 ID는 HTML 파일 이름과 필요 합니다.  
+-   The class [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), which requires a dialog ID, a DHTML resource ID, and an HTML file name.  
   
- 대화 ID를 필요로 하는 클래스에 대 한 경우가 있습니다 더 효율적으로 사용할 수는 [리소스 편집기](../../windows/resource-editors.md) 대화 상자 리소스를 만들려면에서 해당 ID를 할당 된 [속성 창](/visualstudio/ide/reference/properties-window), 다음 해당 리소스 ID와 연결 된 클래스를 만듭니다 참조 [새 대화 상자 만들기](../../windows/creating-a-new-dialog-box.md) 표준 Windows 대화 상자를 만드는 방법에 대 한 자세한 내용은 합니다.  
+ For classes requiring a dialog ID, you might find it more efficient to use the [Resource editor](../../windows/resource-editors.md) to create the dialog resource, assign its ID in the [Properties window](/visualstudio/ide/reference/properties-window), and then create a class associated with that resource ID. See [Creating a New Dialog Box](../../windows/creating-a-new-dialog-box.md) for more information on creating a standard Windows dialog box.  
   
 > [!NOTE]
->  대화 상자 리소스를 먼저 만들 경우 및에서 새 클래스를 파생 `CDHtmlDialog`, 표준 Windows 삭제 **확인** 및 **취소** 기본 대화 상자에 표시 되는 단추입니다. 표준 Windows 대화 상자는 자체 포함 된 DHTML 양식 호스트 **확인** 및 **취소** 단추입니다.  
+>  If you create a dialog resource first and derive its new class from `CDHtmlDialog`, delete the standard Windows **OK** and **Cancel** buttons that appear on the default dialog box. The standard Windows dialog box hosts the DHTML form, which contains its own **OK** and **Cancel** buttons.  
   
- 대화 상자에는 Windows 컨트롤 및 DHTML 컨트롤을 모두 포함 될 수 있습니다, 좋지 않습니다.  
+ While your dialog box can contain both Windows controls and DHTML controls, it is not recommended.  
   
- **대화 ID**  
- 선택한 경우에 대화의 ID를 지정 `CDialog`, `CFormView`, `CPropertyPage`, 또는 `CDHtmlDialog` 으로 **기본 클래스**합니다.  
+ **Dialog ID**  
+ Specifies the ID of the dialog, if you selected `CDialog`, `CFormView`, `CPropertyPage`, or `CDHtmlDialog` as the **Base class**.  
   
- **.h 파일**  
- 새 개체의 클래스에 대 한 헤더 파일의 이름을 설정합니다. 기본적으로이 이름은에서 제공 하는 이름에 따라 **클래스 이름**합니다. 사용자가 선택한 위치에 파일 이름을 저장 하거나 기존 파일을 클래스 선언 추가 하려면 줄임표 단추를 클릭 합니다. 기존 파일을 선택 하면 마법사 파일이 저장 되지 것입니다 선택한 위치에 때까지 클릭 **마침** 마법사에서.  
+ **.h file**  
+ Sets the name of the header file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- 마법사 파일을 덮어쓰지 않습니다. 선택한 경우 기존 파일의 이름을 클릭 하면 **마침**, 클래스 선언에는 파일의 내용을 추가할 것인지 묻는 합니다. 클릭 **예** ; 파일을 추가 클릭 **No** 마법사 돌아가서 다른 파일 이름을 지정 하려면.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **.cpp 파일**  
- 새 개체의 클래스에 대 한 구현 파일의 이름을 설정합니다. 기본적으로이 이름은에서 제공 하는 이름에 따라 **클래스 이름**합니다. 원하는 위치에 파일 이름을 저장 하려면 줄임표 단추를 클릭 합니다. 클릭할 때까지 파일이 선택한 위치에 저장 되지는 않습니다 **마침** 마법사에서.  
+ **.cpp file**  
+ Sets the name of the implementation file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice. The file is not saved to the selected location until you click **Finish** in the wizard.  
   
- 마법사 파일을 덮어쓰지 않습니다. 선택한 경우 기존 파일의 이름을 클릭 하면 **완료**, 마법사에서 클래스에 구현 파일의 내용에 추가할 것인지 여부를 묻는 메시지를 표시 합니다. 클릭 **예** ; 파일을 추가 클릭 **No** 마법사 돌아가서 다른 파일 이름을 지정 하려면.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class implementation should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
  **Active accessibility**  
- 호출 하 여 Active Accessibility에 대 한 MFC의 지원을 통해 [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) 생성자에 있습니다. 파생 된 클래스에이 옵션은 사용할 수 있는 [CWnd](../../mfc/reference/cwnd-class.md)합니다.  
+ Enables MFC's support for Active Accessibility by calling [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) in the constructor. This option is available for classes derived from [CWnd](../../mfc/reference/cwnd-class.md).  
   
- **DHTML 리소스 ID**  
- 파생 된 클래스에 적용 됩니다 `CDHtmlDialog` 만 합니다. DHTML 대화 상자를의 리소스 ID를 지정합니다. 리소스 ID는 HTML 대화 상자가 파일 이름과 함께 프로젝트의.rc 파일의 HTML 섹션에 표시 됩니다. 로 식별 되는 대화 상자에이 ID로 식별 되는 DHTML 리소스는 호스팅됩니다 **대화 ID**합니다.  
+ **DHTML resource ID**  
+ Applies to classes derived from `CDHtmlDialog` only. Specifies the resource ID of the DHTML dialog box. The resource ID appears in the HTML section of the project's .rc file, along with the HTML dialog box file name. The DHTML resource, identified by this ID, is hosted by the dialog box, identified by **Dialog ID**.  
   
- **. HTM 파일**  
- 파생 된 클래스에 적용 됩니다 `CDHtmlDialog` 만 합니다. DHTML 대화 상자에 대 한 HTML 파일의 이름을 설정합니다. 기본적으로이 파일 이름은 클래스 이름을 기반으로 합니다. 파일 이름은 DHTML 대화 상자 리소스 id는 프로젝트의.rc 파일의 HTML 섹션에 표시  
+ **.HTM file**  
+ Applies to classes derived from `CDHtmlDialog` only. Sets the name of the HTML file for the DHTML dialog box. By default, this file name is based on the class name. The file name appears in the HTML section of the project's .rc file, along with the DHTML dialog box resource ID.  
   
- **자동화**  
- 설정에 대 한 지원 클래스 수준 [자동화](../../mfc/automation.md)합니다. 클래스 수준에서 자동화는 자동화를 지 원하는 모든 클래스에 사용할 수 있습니다. 자동화에 대 한 지원을 사용 하 여 만든 프로젝트에 사용할 수 이기도 합니다. 중 하나는 MFC 프로젝트, 즉 [ATL 지원](../../atl/reference/mfc-support-in-atl-projects.md), 또는 선택 된 MFC 프로젝트는 **자동화** 확인란에는 [고급 기능](../../mfc/reference/advanced-features-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다.  
+ **Automation**  
+ Sets the class level of support for [Automation](../../mfc/automation.md). Automation at the class level is available for all classes that support Automation. It is also available for projects created with support for Automation. That is, either an MFC project that [supports ATL](../../atl/reference/mfc-support-in-atl-projects.md), or an MFC project for which you selected the **Automation** check box in the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page of the MFC Application Wizard.  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**없음**|클래스가 자동화를 지원 하지에 있음을 나타냅니다.|  
-|**자동화**|클래스가 자동화를 지원함을 나타냅니다. 이 옵션을 선택 하는 경우에 새로 만든된 클래스는 Microsoft Visual Basic 및 Microsoft Excel과 같은 자동화 클라이언트 응용 프로그램에서 프로그래밍 가능한 개체를 수 있습니다. 이 옵션은이 테이블 뒤에 나열 된 기본 클래스에 사용할 수 없습니다.|  
-|**유형 ID로 생성 가능**|클래스와 프로젝트 모두에 자동화를 사용 하 여이 클래스의 개체를 만드는 다른 응용 프로그램을 지원함을 나타냅니다. 자동화 클라이언트는이 옵션을 자동화 개체를 직접 만들 수 있습니다. 텍스트 상자에 형식 ID; 만들 개체를 지정 하는 클라이언트 응용 프로그램이 사용 됩니다. 시스템 전반에 걸쳐 되며 고유 해야 합니다. 이 옵션은이 테이블 뒤에 나열 된 기본 클래스에 사용할 수 없습니다.|  
+|**None**|Indicates that the class has no Automation support.|  
+|**Automation**|Indicates that the class supports Automation. If you select this option, the newly created class is available as a programmable object by Automation client applications, such as Microsoft Visual Basic and Microsoft Excel. This option is not available for the base classes listed after this table.|  
+|**Creatable by type ID**|Indicates that both the class and project support other applications creating objects of this class using Automation. With this option, automation clients can directly create an Automation object. The type ID in the text box is used by the client application to specify the object to be created; it is systemwide and must be unique. This option is not available for the base classes listed after this table.|  
   
- 다음 기본 클래스에 대 한 자동화 지원 되지 않습니다.  
+ Automation support is not available for the following base classes:  
   
 -   `CAsyncMonitorFile`  
   
@@ -123,15 +123,15 @@ ms.lasthandoff: 02/24/2017
   
 -   `CSocket`  
   
- **유형 ID**  
- 클래스의 유형 ID를 설정합니다. **유형 ID** 상자는 프로젝트 이름과 새 클래스 이름을 연결 다음과 같습니다: *MFCProj.MFCClass*합니다. 이 ID를 선택한 경우에 변경할 수는 **자동화** 옵션 **유형 ID로 생성 가능**합니다.  
+ **Type ID**  
+ Sets the type ID of the class. The **Type ID** box concatenates the project name and the new class name as follows: *MFCProj.MFCClass*. This ID is changeable only if you selected the **Automation** option **Creatable by type ID**.  
   
- **DocTemplate 리소스를 생성 합니다.**  
- 응용 프로그램에서 만든 문서 문서 템플릿 리소스를 갖도록 지정 합니다. 이 확인란을 활성화 하려면 프로젝트에는 MFC 문서/뷰 아키텍처를 지원 해야 하며이 클래스의 기본 클래스 여야 [CFormView](../../mfc/reference/cformview-class.md)합니다.  
+ **Generate DocTemplate resources**  
+ Indicates that the documents created by the application have document template resources. To activate this check box, the project must support the MFC document/view architecture, and the base class of this class must be [CFormView](../../mfc/reference/cformview-class.md).  
   
- 참조 [문서 템플릿 및 문서/뷰 만들기 프로세스](../../mfc/document-templates-and-the-document-view-creation-process.md) 에 대 한 자세한 내용은 합니다.  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 클래스](../../mfc/reference/adding-an-mfc-class.md)   
- [클래스 추가](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "COleResizeBar 클래스 | Microsoft 문서"
+title: COleResizeBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,12 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE items, resizing
-- in-place items
-- in-place items, resizing
-- resizing in-place OLE items
-- control bars, resizing
-- COleResizeBar class
+- COleResizeBar [MFC], COleResizeBar
+- COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
 caps.latest.revision: 23
 author: mikeblome
@@ -41,44 +37,44 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 99ba53c771d018b8c69c5951703b9d6f7b4afe9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd2de81dea121e0b9294e9ba62a77c34c9edadbc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleresizebar-class"></a>COleResizeBar 클래스
-내부 OLE 항목의 크기 변경을 지원하는 컨트롤 막대의 한 종류입니다.  
+# <a name="coleresizebar-class"></a>COleResizeBar Class
+A type of control bar that supports resizing of in-place OLE items.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleResizeBar : public CControlBar  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleResizeBar::COleResizeBar](#coleresizebar)|`COleResizeBar` 개체를 생성합니다.|  
+|[COleResizeBar::COleResizeBar](#coleresizebar)|Constructs a `COleResizeBar` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleResizeBar::Create](#create)|및 Windows 자식 창을 초기화 만들어지고 연결 하는 `COleResizeBar` 개체입니다.|  
+|[COleResizeBar::Create](#create)|Creates and initializes a Windows child window and associates it to the `COleResizeBar` object.|  
   
-## <a name="remarks"></a>주의  
- `COleResizeBar`로 표시 된 개체는 [CRectTracker](../../mfc/reference/crecttracker-class.md) 빗금된 테두리가 있는 및 외부 크기 조정 핸들입니다.  
+## <a name="remarks"></a>Remarks  
+ `COleResizeBar` objects appear as a [CRectTracker](../../mfc/reference/crecttracker-class.md) with a hatched border and outer resize handles.  
   
- `COleResizeBar`개체는 일반적으로 포함 된 멤버에서 파생 된 프레임 창 개체는 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 클래스입니다.  
+ `COleResizeBar` objects are usually embedded members of frame-window objects derived from the [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) class.  
   
- 자세한 내용은 문서를 참조 하십시오. [활성화](../../mfc/activation-cpp.md)합니다.  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,21 +85,21 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
- `COleResizeBar` 개체를 생성합니다.  
+##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
+ Constructs a `COleResizeBar` object.  
   
 ```  
 COleResizeBar();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 **만들기** 크기 조정 막대 개체를 만듭니다.  
+### <a name="remarks"></a>Remarks  
+ Call **Create** to create the resize bar object.  
   
-##  <a name="create"></a>COleResizeBar::Create  
- 자식 창을 만듭니다와 연결 된 `COleResizeBar` 개체입니다.  
+##  <a name="create"></a>  COleResizeBar::Create  
+ Creates a child window and associates it with the `COleResizeBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -112,22 +108,22 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_RESIZE_BAR);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 크기 조정 막대의 부모 창에 대 한 포인터입니다.  
+ Pointer to the parent window of the resize bar.  
   
  `dwStyle`  
- 지정 된 [창 스타일](../../mfc/reference/window-styles.md) 특성입니다.  
+ Specifies the [window style](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributes.  
   
  `nID`  
- 자식 창에 있는 크기 조정 막대의 id입니다.  
+ The resize bar's child window ID.  
   
-### <a name="return-value"></a>반환 값  
- 크기 조정 막대 만들어진 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the resize bar was created; otherwise 0.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 SUPERPAD](../../visual-cpp-samples.md)   
- [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleServerDoc 클래스](../../mfc/reference/coleserverdoc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample SUPERPAD](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)
 

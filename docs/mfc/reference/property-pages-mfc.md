@@ -1,5 +1,5 @@
 ---
-title: "속성 페이지 (MFC) | Microsoft 문서"
+title: Property Pages (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
-- property pages, global MFC functions
+- property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
 caps.latest.revision: 14
 author: mikeblome
@@ -34,47 +34,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f8c11b8b59c2de16180173251b81e5f8fbbf35f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="property-pages-mfc"></a>속성 페이지(MFC)
-속성 페이지 보기 및 편집 대화 상자 데이터 교환 (DDX)를 기반으로 데이터 매핑 메커니즘을 지원 하 여 사용자 지정이 가능한, 그래픽 인터페이스의 특정 OLE 컨트롤 속성의 현재 값을 표시 합니다.  
+# <a name="property-pages-mfc"></a>Property Pages (MFC)
+Property pages display the current values of specific OLE control properties in a customizable, graphical interface for viewing and editing by supporting a data-mapping mechanism based on dialog data exchange (DDX).  
   
- 이 데이터 매핑 메커니즘 OLE 컨트롤의 개별 속성을 속성 페이지 컨트롤을 매핑합니다. 컨트롤 속성의 값에는 상태 또는 속성 페이지 컨트롤의 내용을 반영합니다. 속성 페이지 컨트롤 및 속성 간의 매핑을 지정 하 여 **DDP_** 속성 페이지의 함수 호출 `DoDataExchange` 멤버 함수입니다. 다음 목록은 **DDP_** 컨트롤의 속성 페이지를 사용 하 여 입력 데이터를 교환 하는 기능:  
+ This data-mapping mechanism maps property page controls to the individual properties of the OLE control. The value of the control property reflects the status or content of the property page control. The mapping between property page controls and properties is specified by **DDP_** function calls in the property page's `DoDataExchange` member function. The following is a list of **DDP_** functions that exchange data entered using the property page of your control:  
   
-### <a name="property-page-data-transfer"></a>속성 페이지 데이터 전송  
-  
-|||  
-|-|-|  
-|[DDP_CBIndex](#ddp_cbindex)|콤보 상자 컨트롤의 속성에서에서 선택한 문자열의 인덱스를 연결합니다.|  
-|[DDP_CBString](#ddp_cbstring)|콤보 상자 컨트롤의 속성에서에서 선택한 문자열을 연결합니다. 선택된 된 문자열 속성의 값으로 동일한 문자로 시작할 수 있지만 완전히 일치할 필요가 없습니다.|  
-|[DDP_CBStringExact](#ddp_cbstringexact)|콤보 상자 컨트롤의 속성에서에서 선택한 문자열을 연결합니다. 선택된 된 문자열 및 속성의 문자열 값을 정확 하 게 일치 해야 합니다.|  
-|[DDP_Check](#ddp_check)|컨트롤의 속성으로 컨트롤의 속성 페이지에 있는 확인란을 연결합니다.|  
-|[DDP_LBIndex](#ddp_lbindex)|컨트롤의 속성 목록 상자에서 선택한 문자열의 인덱스를 연결합니다.|  
-|[DDP_LBString](#ddp_lbstring)|컨트롤의 속성 목록 상자에서 선택한 문자열을 연결합니다. 선택된 된 문자열 속성의 값으로 동일한 문자로 시작할 수 있지만 완벽 하 게 일치 하지 않아도 됩니다.|  
-|[DDP_LBStringExact](#ddp_lbstringexact)|컨트롤의 속성 목록 상자에서 선택한 문자열을 연결합니다. 선택된 된 문자열 및 속성의 문자열 값을 정확 하 게 일치 해야 합니다.|  
-|[DDP_PostProcessing](#ddp_postprocessing)|컨트롤에서 속성 값의 전송을 마칩니다.|  
-|[DDP_Radio](#ddp_radio)|컨트롤의 속성으로 컨트롤의 속성 페이지에서 라디오 단추 그룹 링크를 제공 합니다.|  
-|[DDP_Text](#ddp_text)|컨트롤의 속성으로 컨트롤의 속성 페이지에 컨트롤을 연결합니다. 이 함수에서와 같은 여러 다른 종류의 속성을 처리 **double**, **짧은**, `BSTR`, 및 **긴**합니다.|  
-  
- 에 대 한 자세한 내용은 `DoDataExchange` 함수 및 속성 페이지, 문서를 참조 하십시오 [ActiveX 컨트롤: 속성 페이지](../../mfc/mfc-activex-controls-property-pages.md)합니다.  
-  
- 다음은 만들고 OLE 컨트롤에 대 한 속성 페이지를 관리 하는 데 사용 되는 매크로의 목록이 있습니다.  
-  
-### <a name="property-pages"></a>속성 페이지  
+### <a name="property-page-data-transfer"></a>Property Page Data Transfer  
   
 |||  
 |-|-|  
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|속성 페이지 Id 목록을 시작합니다.|  
-|[END_PROPPAGEIDS](#end_proppageids)|속성 페이지 Id 목록을 종료합니다.|  
-|[PROPPAGEID](#proppageid)|컨트롤 클래스의 속성 페이지를 선언합니다.|  
+|[DDP_CBIndex](#ddp_cbindex)|Links the selected string's index in a combo box with a control's property.|  
+|[DDP_CBString](#ddp_cbstring)|Links the selected string in a combo box with a control's property. The selected string can begin with the same letters as the property's value but does not need to match it fully.|  
+|[DDP_CBStringExact](#ddp_cbstringexact)|Links the selected string in a combo box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_Check](#ddp_check)|Links a check box in the control's property page with a control's property.|  
+|[DDP_LBIndex](#ddp_lbindex)|Links the selected string's index in a list box with a control's property.|  
+|[DDP_LBString](#ddp_lbstring)|Links the selected string in a list box with a control's property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|[DDP_LBStringExact](#ddp_lbstringexact)|Links the selected string in a list box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_PostProcessing](#ddp_postprocessing)|Finishes the transfer of property values from your control.|  
+|[DDP_Radio](#ddp_radio)|Links a radio button group in the control's property page with a control's property.|  
+|[DDP_Text](#ddp_text)|Links a control in the control's property page with a control's property. This function handles several different types of properties, such as **double**, **short**, `BSTR`, and **long**.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
- 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 정수 속성의 값을 속성 페이지의 콤보 상자에 있는 현재 선택 항목의 인덱스와 동기화합니다.  
+ For more information about the `DoDataExchange` function and property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
+  
+ The following is a list of macros used to create and manage property pages for an OLE control:  
+  
+### <a name="property-pages"></a>Property Pages  
+  
+|||  
+|-|-|  
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Begins the list of property page IDs.|  
+|[END_PROPPAGEIDS](#end_proppageids)|Ends the list of property page IDs.|  
+|[PROPPAGEID](#proppageid)|Declares a property page of the control class.|  
+  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a combo box on the property page.  
   
 ```   
 void AFXAPI DDP_CBIndex(
@@ -84,27 +84,27 @@ void AFXAPI DDP_CBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- `pszPropName`에 의해 지정된 컨트롤 속성과 연결된 콤보 상자 컨트롤의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- `id`로 지정된 콤보 상자 컨트롤과 교환할 컨트롤 속성의 속성 이름입니다.  
+ The property name of the control property to be exchanged with the combo box control specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_CBIndex` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBIndex` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 속성 페이지의 콤보 상자에서 현재 선택한와 문자열 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBString(
@@ -114,27 +114,27 @@ void AFXAPI DDP_CBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- `pszPropName`에 의해 지정된 컨트롤 속성과 연결된 콤보 상자 컨트롤의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 콤보 상자 문자열와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_CBString` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBString` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 속성 페이지의 콤보 상자에서 현재 선택 영역을 정확 하 게 일치 하는 문자열 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBStringExact(
@@ -144,27 +144,27 @@ void AFXAPI DDP_CBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- `pszPropName`에 의해 지정된 컨트롤 속성과 연결된 콤보 상자 컨트롤의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 콤보 상자 문자열와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_CBStringExact` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBStringExact` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 관련된 속성 페이지 확인란 컨트롤 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_check"></a>  DDP_Check  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of the property with the associated property page check box control.  
   
 ```   
 void AFXAPI DDP_Check(
@@ -174,27 +174,27 @@ void AFXAPI DDP_Check(
     LPCSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- Check box 컨트롤의 리소스 ID 속성에 연결 된 컨트롤에서 지정한 `pszPropName`합니다.  
+ The resource ID of the check box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 로 지정 된 확인란 컨트롤와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the check box control specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_Check` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Check` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 속성 페이지에서 목록 상자에서 현재 선택 된 인덱스에 있는 정수 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBIndex(
@@ -204,27 +204,27 @@ void AFXAPI DDP_LBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 리소스 ID의 목록 상자 컨트롤에 지정 된 컨트롤 속성과 연결 된 `pszPropName`합니다.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 목록 상자 문자열와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_LBIndex` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBIndex` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 속성 페이지에서 목록 상자에서 현재 선택 항목으로는 문자열 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBString(
@@ -234,27 +234,27 @@ void AFXAPI DDP_LBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 리소스 ID의 목록 상자 컨트롤에 지정 된 컨트롤 속성과 연결 된 `pszPropName`합니다.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 목록 상자 문자열와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_LBString` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBString` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 속성 페이지에서 목록 상자에서 현재 선택 영역을 정확 하 게 일치 하는 문자열 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBStringExact(
@@ -264,46 +264,46 @@ void AFXAPI DDP_LBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 리소스 ID의 목록 상자 컨트롤에 지정 된 컨트롤 속성과 연결 된 `pszPropName`합니다.  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 목록 상자 문자열와 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_LBStringExact` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBStringExact` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
- 속성 페이지의이 함수를 호출 `DoDataExchange` 함수, 속성 값을 저장 하는 경우 속성 페이지 컨트롤 속성 값의 전송을 완료 합니다.  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
+ Call this function in your property page's `DoDataExchange` function, to finish the transfer of property values from the property page to your control when property values are being saved.  
   
 ```   
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
-### <a name="remarks"></a>주의  
- 모든 데이터 교환 함수를 완료 한 후이 함수를 호출 해야 합니다. 예:  
+### <a name="remarks"></a>Remarks  
+ This function should be called after all data exchange functions are completed. For example:  
   
- [!code-cpp[NVC_MFCAxCtl #&15;](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
- 컨트롤의이 함수를 호출 `DoPropExchange` 관련된 속성 페이지 라디오 단추 컨트롤 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_radio"></a>  DDP_Radio  
+ Call this function in your control's `DoPropExchange` function to synchronize the value of the property with the associated property page radio button control.  
   
 ```   
 void AFXAPI DDP_Radio(
@@ -313,27 +313,27 @@ void AFXAPI DDP_Radio(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 라디오의 리소스 ID로 지정 된 컨트롤 속성과 연결 된 컨트롤 단추 `pszPropName`합니다.  
+ The resource ID of the radio button control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 로 지정 된 라디오 단추 컨트롤과 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the radio button control specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_Radio` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Radio` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_Text  
- 컨트롤의이 함수를 호출 `DoDataExchange` 관련된 속성 페이지 컨트롤 속성의 값을 동기화 하는 함수입니다.  
+##  <a name="ddp_text"></a>  DDP_Text  
+ Call this function in your control's `DoDataExchange` function to synchronize the value of the property with the associated property page control.  
   
 ```   
 void AFXAPI DDP_Text(
@@ -385,78 +385,78 @@ void AFXAPI DDP_Text(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 지정 된 컨트롤 속성과 연결 된 컨트롤의 리소스 ID `pszPropName`합니다.  
+ The resource ID of the control associated with the control property specified by `pszPropName`.  
   
  `member`  
- `id`로 지정된 속성 페이지 컨트롤 및 `pszPropName`으로 지정된 속성과 연결된 멤버 변수입니다.  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 지정 된 컨트롤과 교환할 컨트롤 속성의 속성 이름을 `id`합니다.  
+ The property name of the control property to be exchanged with the control specified by `id`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 해당 `DDX_Text` 함수 호출 전에 호출되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Text` function call.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
- 컨트롤의 속성 페이지 Id 목록 정의 시작 합니다.  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
+ Begins the definition of your control's list of property page IDs.  
   
 ```   
 BEGIN_PROPPAGEIDS(class_name,  count)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *눈여겨 보십시오*  
- 속성에 대 한 페이지 지정 된 컨트롤 클래스의 이름입니다.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class for which property pages are being specified.  
   
  *count*  
- 컨트롤 클래스에 의해 사용 되는 속성 페이지의 수입니다.  
+ The number of property pages used by the control class.  
   
-### <a name="remarks"></a>주의  
- 클래스 멤버 함수를 정의 하는 구현 (.cpp) 파일에서 사용 하 여 속성 페이지 목록 시작는 `BEGIN_PROPPAGEIDS` 매크로, 그런 다음 각 속성 페이지에 대해 매크로 항목을 추가 하 고 사용 하 여 속성 페이지 목록 완료는 `END_PROPPAGEIDS` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the property page list with the `BEGIN_PROPPAGEIDS` macro, then add macro entries for each of your property pages, and complete the property page list with the `END_PROPPAGEIDS` macro.  
   
- 속성 페이지에 대 한 자세한 내용은 문서를 참조 하십시오. [ActiveX 컨트롤: 속성 페이지](../../mfc/mfc-activex-controls-property-pages.md)합니다.  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
- 속성 페이지 ID 목록의 정의 끝냅니다.  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
+ Ends the definition of your property page ID list.  
   
 ```   
 END_PROPPAGEIDS(class_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *눈여겨 보십시오*  
- 속성 페이지를 소유 하는 컨트롤 클래스의 이름입니다.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class that owns the property page.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
- OLE 컨트롤에 의해 사용에 대 한 속성 페이지를 추가합니다.  
+##  <a name="proppageid"></a>  PROPPAGEID  
+ Adds a property page for use by your OLE control.  
   
 ```   
 PROPPAGEID(clsid)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 속성 페이지의 고유 클래스 ID입니다.  
+ The unique class ID of a property page.  
   
-### <a name="remarks"></a>주의  
- 모든 `PROPPAGEID` 매크로 사이 배치 해야는 `BEGIN_PROPPAGEIDS` 및 `END_PROPPAGEIDS` 컨트롤의 구현 파일에는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ All `PROPPAGEID` macros must be placed between the `BEGIN_PROPPAGEIDS` and `END_PROPPAGEIDS` macros in your control's implementation file.  
 
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
     
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

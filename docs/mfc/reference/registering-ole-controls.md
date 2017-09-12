@@ -1,5 +1,5 @@
 ---
-title: "OLE 컨트롤 등록 | Microsoft 문서"
+title: Registering OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - registering OLE controls
-- OLE controls, registering
+- OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 caps.latest.revision: 15
 author: mikeblome
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 9c54fb7dc3802e78c8dc68df02ff55ef4732a36b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 545b3c44b0ce4866c13f1fd3d62d24aa621a8974
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="registering-ole-controls"></a>OLE 컨트롤 등록
-다른 OLE 서버 개체와 같은 OLE 컨트롤은 다른 OLE 인식 응용 프로그램에서 액세스할 수 있습니다. 이 컨트롤의 형식 라이브러리 및 클래스를 등록 하 여 수행 됩니다.  
+# <a name="registering-ole-controls"></a>Registering OLE Controls
+OLE controls, like other OLE server objects, can be accessed by other OLE-aware applications. This is achieved by registering the control's type library and class.  
   
- 다음 함수에 추가 하 고 Windows 등록 데이터베이스에는 컨트롤의 클래스, 속성 페이지 및 형식 라이브러리를 제거 하면 허용:  
+ The following functions allow you to add and remove the control's class, property pages, and type library in the Windows registration database:  
   
-### <a name="registering-ole-controls"></a>OLE 컨트롤 등록  
+### <a name="registering-ole-controls"></a>Registering OLE Controls  
   
 |||  
 |-|-|  
-|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|컨트롤의 클래스 등록 데이터베이스에 추가합니다.|  
-|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|등록 데이터베이스에 컨트롤 속성 페이지를 추가합니다.|  
-|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|등록 데이터베이스에는 컨트롤의 형식 라이브러리를 추가합니다.|  
-|[AfxOleUnregisterClass](#afxoleunregisterclass)|컨트롤 클래스 또는 속성 페이지 클래스 등록 데이터베이스에서 제거합니다.|  
-|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|컨트롤의 형식 라이브러리 등록 데이터베이스에서 제거합니다.|  
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Adds the control's class to the registration database.|  
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Adds a control property page to the registration database.|  
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Adds the control's type library to the registration database.|  
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Removes a control class or a property page class from the registration database.|  
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Removes the control's type library from the registration database.|  
   
- `AfxOleRegisterTypeLib`일반적으로 컨트롤 DLL의 구현에서 호출 `DllRegisterServer`합니다. 마찬가지로, `AfxOleUnregisterTypeLib` 호출한 `DllUnregisterServer`합니다. `AfxOleRegisterControlClass``AfxOleRegisterPropertyPageClass`, 및 `AfxOleUnregisterClass` 일반적으로 의해 호출 되는 `UpdateRegistry` 컨트롤의 클래스 팩터리 또는 속성 페이지의 멤버 함수입니다.  
+ `AfxOleRegisterTypeLib` is typically called in a control DLL's implementation of `DllRegisterServer`. Similarly, `AfxOleUnregisterTypeLib` is called by `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, and `AfxOleUnregisterClass` are typically called by the `UpdateRegistry` member function of a control's class factory or property page.  
   
-##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
- Windows 등록 데이터베이스를 컨트롤 클래스를 등록합니다.  
+##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass  
+ Registers the control class with the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterControlClass(
@@ -75,38 +75,38 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 컨트롤 클래스와 연결 된 모듈의 인스턴스 핸들입니다.  
+ The instance handle of the module associated with the control class.  
   
  `clsid`  
- 컨트롤의 고유 클래스 ID입니다.  
+ The unique class ID of the control.  
   
  `pszProgID`  
- 컨트롤의 고유 프로그램 ID입니다.  
+ The unique program ID of the control.  
   
  `idTypeName`  
- 컨트롤에 대 한 사용자가 읽을 수 있는 형식 이름을 포함 하는 문자열의 리소스 ID입니다.  
+ The resource ID of the string that contains a user-readable type name for the control.  
   
  *idBitmap*  
- 도구 모음이 나 색상표에서 OLE 컨트롤을 나타내는 데 사용 되는 비트맵의 리소스 ID입니다.  
+ The resource ID of the bitmap used to represent the OLE control in a toolbar or palette.  
   
  `nRegFlags`  
- 다음 플래그 중 하나 이상을 포함 되어 있습니다.  
+ Contains one or more of the following flags:  
   
-- `afxRegInsertable`OLE 개체에 대 한 개체 삽입 대화 상자에 표시를 제어할 수 있습니다.  
+- `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.  
   
-- `afxRegApartmentThreading`스레딩 모델 레지스트리에 ThreadingModel 설정 하는 아파트 =.  
+- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.  
   
-- `afxRegFreeThreading`스레딩 모델 레지스트리에 ThreadingModel 설정 하는 무료 =.  
+- `afxRegFreeThreading` Sets the threading model in the registry to ThreadingModel=Free.  
   
-     두 개의 플래그를 결합할 수 `afxRegApartmentThreading` 및 `afxRegFreeThreading` ThreadingModel를 설정 하려면 = 둘 다. 참조 [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 스레딩 모델 등록에 대 한 자세한 내용은 합니다.  
+     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.  
   
 > [!NOTE]
->  MFC 4.2 이전 버전의 MFC에서는 `int` `nRegFlags` 매개 변수는 한 **BOOL** 매개 변수를 *bInsertable*를 허용 하는 되거나 개체 삽입 대화 상자에서 삽입할 제어를 허용 합니다.  
+>  In MFC versions before MFC 4.2, the `int` `nRegFlags` parameter was a **BOOL** parameter, *bInsertable*, that allowed or disallowed the control to be inserted from the Insert Object dialog box.  
   
  *dwMiscStatus*  
- 상태 플래그 중 하나 이상 포함 (플래그에 대 한 참조 **OLEMISC** 열거형에는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]):  
+ Contains one or more of the following status flags (for a description of the flags, see **OLEMISC** enumeration in the Windows SDK):  
   
 -   OLEMISC_RECOMPOSEONRESIZE  
   
@@ -147,34 +147,34 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 -   OLEMISC_SETCLIENTSITEFIRST  
   
  *tlid*  
- 컨트롤 클래스의 고유 ID입니다.  
+ The unique ID of the control class.  
   
  `wVerMajor`  
- 컨트롤 클래스의 주 버전 번호입니다.  
+ The major version number of the control class.  
   
  `wVerMinor`  
- 컨트롤 클래스의 부 버전 번호입니다.  
+ The minor version number of the control class.  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 클래스를 등록 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control class was registered; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 따라서 컨트롤을 OLE 컨트롤을 인식 하는 컨테이너에서 사용할 수 있습니다. `AfxOleRegisterControlClass`컨트롤의 이름 및 위치는 시스템에서 레지스트리를 업데이트 하 고 또한 컨트롤에서 지 원하는 레지스트리 스레딩 모델을 설정 합니다. 자세한 내용은 참조 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "아파트 모델 스레딩에서 OLE 컨트롤" 및 [에 대 한 프로세스 및 스레드](http://msdn.microsoft.com/library/windows/desktop/ms681917) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This allows the control to be used by containers that are OLE-control aware. `AfxOleRegisterControlClass` updates the registry with the control's name and location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAxCtl #&11;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
   
- 위의 예제를 보여 줍니다 방법을 `AfxOleRegisterControlClass` 삽입 가능 플래그를 사용 하 여 호출 됩니다 및 아파트에 대 한 플래그 모델 ORed 여섯 번째 매개 변수를 만들 수 있습니다.  
+ The above example demonstrates how `AfxOleRegisterControlClass` is called with the flag for insertable and the flag for apartment model ORed together to create the sixth parameter:  
   
- [!code-cpp[NVC_MFCAxCtl #&12;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
   
- 컨트롤이 활성화 된 컨테이너에 대 한 개체 삽입 대화 상자에 표시 됩니다 및 아파트 모델 인식 됩니다. 아파트 모델 인식 컨트롤 한 아파트에 있는 컨트롤은 정적 데이터를 액세스 하는 동안 그 되지 사용 되도록 스케줄러에서 작업이 완료 되 고 동일한 클래스의 다른 인스턴스가 동일한 정적 데이터를 사용 하 여 시작 하기 전에 잠금을 하 여 데이터를 보호 하는 정적 클래스를 확인 해야 합니다. 정적 데이터에 대 한 모든 액세스는 임계 영역 코드도 묶을 수 됩니다.  
+ The control will show up in the Insert Object dialog box for enabled containers, and it will be apartment model-aware. Apartment model-aware controls must ensure that static class data is protected by locks, so that while a control in one apartment is accessing the static data, it isn't disabled by the scheduler before it is finished, and another instance of the same class starts using the same static data. Any accesses to the static data will be surrounded by critical section code.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
- Windows 등록 데이터베이스를 속성 페이지 클래스를 등록합니다.  
+##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
+ Registers the property page class with the Windows registration database.  
   
 ```  
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -184,35 +184,35 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 속성 페이지 클래스와 연결 된 모듈의 인스턴스 핸들입니다.  
+ The instance handle of the module associated with the property page class.  
   
  `clsid`  
- 속성 페이지의 고유 클래스 ID입니다.  
+ The unique class ID of the property page.  
   
  `idTypeName`  
- 속성 페이지에 대 한 사용자가 읽을 수 있는 이름을 포함 하는 문자열의 리소스 ID입니다.  
+ The resource ID of the string that contains a user-readable name for the property page.  
   
  `nRegFlags`  
- 플래그를 포함할 수 있습니다.  
+ May contain the flag:  
   
-- `afxRegApartmentThreading`스레딩 모델 레지스트리에 ThreadingModel 설정 하는 아파트 =.  
+- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel = Apartment.  
   
 > [!NOTE]
->  MFC 4.2 이전 MFC 버전에는 `int` `nRegFlags` 매개 변수를 사용할 수 없습니다. 또한는 `afxRegInsertable` 플래그 속성 페이지에 대 한 올바른 옵션이 아닙니다와 설정 된 경우 MFC에서 어설션을 발생 합니다  
+>  In MFC versions prior to MFC 4.2, the `int` `nRegFlags` parameter was not available. Note also that the `afxRegInsertable` flag is not a valid option for property pages and will cause an ASSERT in MFC if it is set  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 클래스를 등록 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control class was registered; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이렇게 하면 속성 페이지 OLE 컨트롤을 인식 하는 컨테이너에서 사용할 수 있습니다. `AfxOleRegisterPropertyPageClass`속성 페이지 이름 및 해당 위치가 시스템에 레지스트리를 업데이트 하 고 또한 컨트롤에서 지 원하는 레지스트리 스레딩 모델을 설정 합니다. 자세한 내용은 참조 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "아파트 모델 스레딩에서 OLE 컨트롤" 및 [에 대 한 프로세스 및 스레드](http://msdn.microsoft.com/library/windows/desktop/ms681917) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This allows the property page to be used by containers that are OLE-control aware. `AfxOleRegisterPropertyPageClass` updates the registry with the property page name and its location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
- Windows 등록 데이터베이스에 형식 라이브러리를 등록하고 OLE 컨트롤을 인식하는 다른 컨테이너에서 형식 라이브러리를 사용할 수 있도록 허용합니다.  
+##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
+ Registers the type library with the Windows registration database and allows the type library to be used by other containers that are OLE-control aware.  
   
 ```   
 BOOL AfxOleRegisterTypeLib(
@@ -222,73 +222,73 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 형식 라이브러리와 연결된 응용 프로그램의 인스턴스 핸들입니다.  
+ The instance handle of the application associated with the type library.  
   
  *tlid*  
- 형식 라이브러리의 고유 ID입니다.  
+ The unique ID of the type library.  
   
  *pszFileName*  
- 컨트롤에 대해 지역화된 형식 라이브러리(.TLB) 파일의 선택적인 파일 이름을 가리킵니다.  
+ Points to the optional filename of a localized type library (.TLB) file for the control.  
   
  *pszHelpDir*  
- 형식 라이브러리에 대한 도움말 파일을 찾을 수 있는 디렉터리의 이름입니다. 경우 **NULL**, 도움말 파일은 해당 형식 라이브러리 자체와 동일한 디렉터리에 있는 것으로 간주 됩니다.  
+ The name of the directory where the help file for the type library can be found. If **NULL**, the help file is assumed to be in the same directory as the type library itself.  
   
-### <a name="return-value"></a>반환 값  
- 형식 라이브러리가 등록된 경우 0이 아닌 값이고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type library was registered; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 시스템에서 레지스트리를 형식 라이브러리 이름 및 해당 위치로 업데이트합니다.  
+### <a name="remarks"></a>Remarks  
+ This function updates the registry with the type library name and its location on the system.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAutomation #&7;](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#7](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
   
- [!code-cpp[NVC_MFCAutomation #&8;](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
- Windows 등록 데이터베이스에서 컨트롤 또는 속성 페이지 클래스 항목을 제거합니다.  
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
+ Removes the control or property page class entry from the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *clsID*  
- 컨트롤 또는 속성 페이지의 고유 클래스 ID입니다.  
+ The unique class ID of the control or property page.  
   
  `pszProgID`  
- 컨트롤 또는 속성 페이지의 고유 프로그램 ID입니다.  
+ The unique program ID of the control or property page.  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 또는 속성 페이지 클래스를 성공적으로 등록 된; 하지 않았으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control or property page class was successfully unregistered; otherwise 0.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
- Windows 등록 데이터베이스에서 형식 라이브러리 항목을 제거 하려면이 함수를 호출 합니다.  
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
+ Call this function to remove the type library entry from the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `tlID`  
- 형식 라이브러리의 고유 ID입니다.  
+ The unique ID of the type library.  
   
-### <a name="return-value"></a>반환 값  
- 형식 라이브러리를 성공적으로 등록 된; 하지 않았으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type library was successfully unregistered; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCAxCtl #&13;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
 
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

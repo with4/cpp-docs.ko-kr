@@ -1,5 +1,5 @@
 ---
-title: "CBaseTabbedPane 클래스 | Microsoft 문서"
+title: CBaseTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,7 +42,34 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseTabbedPane class
+- CBaseTabbedPane [MFC], AddTab
+- CBaseTabbedPane [MFC], AllowDestroyEmptyTabbedPane
+- CBaseTabbedPane [MFC], ApplyRestoredTabInfo
+- CBaseTabbedPane [MFC], CanFloat
+- CBaseTabbedPane [MFC], CanSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], ConvertToTabbedDocument
+- CBaseTabbedPane [MFC], DetachPane
+- CBaseTabbedPane [MFC], EnableSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], FillDefaultTabsOrderArray
+- CBaseTabbedPane [MFC], FindBarByTabNumber
+- CBaseTabbedPane [MFC], FindPaneByID
+- CBaseTabbedPane [MFC], FloatTab
+- CBaseTabbedPane [MFC], GetDefaultTabsOrder
+- CBaseTabbedPane [MFC], GetFirstVisibleTab
+- CBaseTabbedPane [MFC], GetMinSize
+- CBaseTabbedPane [MFC], GetPaneIcon
+- CBaseTabbedPane [MFC], GetPaneList
+- CBaseTabbedPane [MFC], GetTabArea
+- CBaseTabbedPane [MFC], GetTabsNum
+- CBaseTabbedPane [MFC], GetUnderlyingWindow
+- CBaseTabbedPane [MFC], GetVisibleTabsNum
+- CBaseTabbedPane [MFC], HasAutoHideMode
+- CBaseTabbedPane [MFC], IsHideSingleTab
+- CBaseTabbedPane [MFC], RecalcLayout
+- CBaseTabbedPane [MFC], RemovePane
+- CBaseTabbedPane [MFC], SetAutoDestroy
+- CBaseTabbedPane [MFC], SetAutoHideMode
+- CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 caps.latest.revision: 26
 author: mikeblome
@@ -63,78 +90,78 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b72804dd8b2ca2253caff4cebf5b0631ae6040c6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 675d504f3c27c8ef681d42b1569b0b1127f0ad07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 클래스
-기능을 확장 된 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 탭 창 만들기를 지원 합니다.  
+# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
+Extends the functionality of the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) to support the creation of tabbed windows.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseTabbedPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CBaseTabbedPane::CBaseTabbedPane`|기본 생성자입니다.|  
+|`CBaseTabbedPane::CBaseTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseTabbedPane::AddTab](#addtab)|탭된 창에 새 탭을 추가합니다.|  
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다.|  
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|레지스트리에서 탭된 창에 로드 되는 탭 설정을 적용 합니다.|  
-|[CBaseTabbedPane::CanFloat](#canfloat)|창에서 부동 상태로 있을 수 있는지 여부를 결정 합니다. (재정의 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|탭된 창 캡션의 활성 탭으로 동일한 텍스트를 표시할지 여부를 결정 합니다.|  
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(재정의 [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
-|[CBaseTabbedPane::DetachPane](#detachpane)|하나 이상의 도킹 가능한 창을 MDI 탭 문서로 변환합니다.|  
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|활성 탭에 있는 레이블 텍스트 캡션 텍스트를 동기화 하는 탭된 창의 기능을 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|내부 탭 순서를 기본 상태로 복원합니다.|  
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|탭은&0;부터 시작 하는 탭 인덱스에 의해 식별 될 때 탭에 있는 창을 반환 합니다.|  
+|[CBaseTabbedPane::AddTab](#addtab)|Adds a new tab to a tabbed pane.|  
+|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed.|  
+|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applies tab settings, which are loaded from the registry, to a tabbed pane.|  
+|[CBaseTabbedPane::CanFloat](#canfloat)|Determines whether the pane can float. (Overrides [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
+|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane should display the same text as the active tab.|  
+|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Overrides [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
+|[CBaseTabbedPane::DetachPane](#detachpane)|Converts one or more dockable panes to MDI tabbed documents.|  
+|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.|  
+|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restores the internal tab order to a default state.|  
+|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Returns a pane that resides in a tab when the tab is identified by a zero-based tab index.|  
 |||  
-|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|창 ID로 식별 되는 창을 반환합니다|  
-|[CBaseTabbedPane::FloatTab](#floattab)|창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다.|  
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|창에서 탭의 기본 순서를 반환합니다.|  
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|첫 번째 표시 된 탭에 대 한 포인터를 검색합니다.|  
-|[CBaseTabbedPane::GetMinSize](#getminsize)|창 크기에 허용 되는 최소값을 검색 합니다. (재정의 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|창 아이콘에 대 한 핸들을 반환합니다. (재정의 [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|탭된 창에 포함 된 창 목록을 반환 합니다.|  
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|위쪽 및 아래쪽 탭 영역에 대 한 경계 사각형을 반환합니다.|  
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|탭 창의 탭의 수를 반환 합니다.|  
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|기본 (래핑된) 탭 창을 가져옵니다.|  
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|표시 된 탭의 수를 반환 합니다.|  
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|탭된 창에 자동 숨김 모드로 전환할 수 수 있는지 여부를 결정 합니다.|  
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|탭된 창에 탭이 표시 되는지 숨겨지는지 여부를 결정 합니다.|  
-|`CBaseTabbedPane::LoadSiblingPaneIDs`|Serialization 도중에 내부적으로 사용 합니다.|  
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|창에 대 한 레이아웃 정보를 다시 계산합니다. (재정의 [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
-|[CBaseTabbedPane::RemovePane](#removepane)|창이 탭된 창에서 제거합니다.|  
-|`CBaseTabbedPane::SaveSiblingBarIDs`|Serialization 도중에 내부적으로 사용 합니다.|  
-|`CBaseTabbedPane::Serialize`|(재정의 [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
-|`CBaseTabbedPane::SerializeTabWindow`|Serialization 도중에 내부적으로 사용 합니다.|  
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|탭된 컨트롤 막대를 자동으로 소멸 됩니다 여부를 결정 합니다.|  
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|도킹 창 사이 표시 설정/해제 하 고 자동 숨김 모드입니다. (재정의 [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
-|[CBaseTabbedPane::ShowTab](#showtab)|표시 하거나 탭을 숨깁니다.|  
+|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Returns a pane that is identified by the pane ID.|  
+|[CBaseTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab.|  
+|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Returns the default order of tabs in the pane.|  
+|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Retrieves a pointer to the first displayed tab.|  
+|[CBaseTabbedPane::GetMinSize](#getminsize)|Retrieves the minimum allowed size for the pane. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon. (Overrides [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
+|[CBaseTabbedPane::GetPaneList](#getpanelist)|Returns a list of panes that are contained in the tabbed pane.|  
+|[CBaseTabbedPane::GetTabArea](#gettabarea)|Returns the bounding rectangles for the top and bottom tab areas.|  
+|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Returns the count of tabs in a tab window.|  
+|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Gets the underlying (wrapped) tab window.|  
+|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Returns the count of displayed tabs.|  
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to auto-hide mode.|  
+|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determines whether the tabbed pane is hidden if only one tab is displayed.|  
+|`CBaseTabbedPane::LoadSiblingPaneIDs`|Used internally during serialization.|  
+|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalculates layout information for the pane. (Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CBaseTabbedPane::RemovePane](#removepane)|Removes a pane from the tabbed pane.|  
+|`CBaseTabbedPane::SaveSiblingBarIDs`|Used internally during serialization.|  
+|`CBaseTabbedPane::Serialize`|(Overrides [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::SerializeTabWindow`|Used internally during serialization.|  
+|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determines whether the tabbed control bar will be destroyed automatically.|  
+|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Toggles the docking pane between displayed and auto-hide mode. (Overrides [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
+|[CBaseTabbedPane::ShowTab](#showtab)|Shows or hides a tab.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 추상 클래스 이며 인스턴스화할 수 없습니다. 모든 종류의 탭된 창에 공통 되는 서비스를 구현 합니다.  
+## <a name="remarks"></a>Remarks  
+ This class is an abstract class and cannot be instantiated. It implements the services that are common to all kinds of tabbed panes.  
   
- 라이브러리에서 두 개의 파생된 탭된 창 클래스를 포함 하는 현재: [CTabbedPane 클래스](../../mfc/reference/ctabbedpane-class.md) 및 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)합니다.  
+ Currently, the library includes two derived tabbed pane classes: [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md) and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
- A `CBaseTabbedPane` 개체에 대 한 포인터를 래핑하는 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md) 개체입니다. [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md) 탭 창의 자식 창 됩니다.  
+ A `CBaseTabbedPane` object wraps a pointer to a [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) object. [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) then becomes a child window of the tabbed pane.  
   
- 탭된 창을 만드는 방법에 대 한 자세한 내용은 참조 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md), [CTabbedPane 클래스](../../mfc/reference/ctabbedpane-class.md), 및 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)합니다.  
+ For more information about how to create tabbed panes, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md), and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -149,11 +176,11 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxBaseTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
- 탭된 창에 새 탭을 추가합니다.  
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab  
+ Adds a new tab to a tabbed pane.  
   
 ```  
 virtual BOOL AddTab(
@@ -163,88 +190,88 @@ virtual BOOL AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- [in] [out]`pNewBar`  
- 추가 하 고 창에 대 한 포인터입니다. 이 메서드를 호출한 후이 포인터는 잘못 될 수 있습니다. 자세한 내용은 설명 섹션을 참조하세요.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pNewBar`  
+ A pointer to the pane to add. This pointer may become invalid after you call this method. For more information, see the Remarks section.  
   
  [in] `bVisible`  
- `TRUE`볼 수 있게 하려면 탭입니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to make the tab visible; otherwise, `FALSE`.  
   
  [in] `bSetActive`  
- `TRUE`활성 탭;는 탭을 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
  [in] `bDetachable`  
- `TRUE`분리 가능한 탭을 확인 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to make the tab detachable; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`창에서 탭으로 성공적으로 추가 되었는지 있고 없기 프로세스에서 삭제 합니다. `FALSE`추가 되 고 창 형식의 개체인 경우 `CBaseTabbedPane`합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully added as a tab and was not destroyed in the process. `FALSE` if the pane being added is an object of type `CBaseTabbedPane`. For more information, see the Remarks section.  
   
-### <a name="remarks"></a>주의  
- 창 탭된 창에 새 탭으로 추가 하려면이 메서드를 호출 합니다. 경우 `pNewBar` 형식의 개체를 가리키는 `CBaseTabbedPane`, 모든 탭 탭된 창에 복사 됩니다 차례로 `pNewBar` 소멸 됩니다. 따라서 `pNewBar` 잘못 된 포인터를 되 고 사용할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a pane as a new tab on a tabbed pane. If `pNewBar` points to an object of type `CBaseTabbedPane`, all its tabs are copied onto the tabbed pane and then `pNewBar` is destroyed. Thus, `pNewBar` becomes an invalid pointer and should not be used.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
- 가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다.  
+##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+ Specifies whether an empty tabbed pane can be destroyed.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 비어 있는 경우 창 소멸 될 수 있습니다. 그렇지 않으면 `FALSE`합니다. 기본 구현에서는 항상 반환 `TRUE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 가 빈 탭된 창을 소멸 되도록 허용 되지 않은 경우 프레임 워크 대신 창을 숨깁니다.  
+### <a name="remarks"></a>Remarks  
+ If an empty tabbed pane is not allowed to be destroyed, the framework hides the pane instead.  
   
-##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
- 레지스트리에서 탭의 설정을 로드 하 고 탭된 창에 적용 합니다.  
+##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
+ Loads tab settings from the registry and applies them to a tabbed pane.  
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bUseTabIndexes`  
- 이 매개 변수는 프레임 워크에 의해 내부적으로 사용 됩니다.  
+ This parameter is used internally by the framework.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 레지스트리에서 도킹 상태 정보를 다시 로드 하는 경우 프레임 워크에 의해 호출 됩니다. 메서드는 탭 순서 및 탭된 창에 대 한 탭 이름에 대 한 정보를 가져옵니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when it reloads docking state information from the registry. The method obtains information about tab order and tab names for a tabbed pane.  
   
-##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
- 탭된 창 부동 상태로 있을 수 있는지 여부를 지정 합니다.  
+##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
+ Specifies whether the tabbed pane can float.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우 창에서 부동 상태로 있을 수 있습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can float; otherwise, `FALSE`.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
- 탭된 창 캡션의 활성 탭으로 동일한 텍스트를 표시할지 여부를 결정 합니다.  
+##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
+ Determines whether the caption for the tabbed pane should display the same text as the active tab.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 창의 캡션 텍스트의 활성 탭; 텍스트로 설정 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption text of the tabbed pane is set to the text of the active tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 텍스트에 표시할지 여부 탭된 창 캡션 중복 활성 탭의 레이블을 결정 하는 메서드를 사용 됩니다. 호출 하 여이 기능을 해제 하거나 설정할 수 있습니다 [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)합니다.  
+### <a name="remarks"></a>Remarks  
+ The method is used to determine whether the text displayed on the tabbed pane caption duplicates the label of the active tab. You can enable or disable this functionality by calling [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
- 하나 이상의 도킹 가능한 창을 MDI 탭 문서로 변환합니다.  
+##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
+ Converts one or more dockable panes to MDI tabbed documents.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bActiveTabOnly`  
- 탭된 창으로 변환 하면 지정 `TRUE` 활성 탭만 변환 합니다. 지정 `FALSE` 창의 모든 탭을 변환할 수 있습니다.  
+ When you convert a tabbed pane, specify `TRUE` to convert only the active tab. Specify `FALSE` to convert all tabs in the pane.  
   
-##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
- 창이 탭된 창에서 분리합니다.  
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
+ Detaches a pane from the tabbed pane.  
   
 ```  
 virtual BOOL DetachPane(
@@ -252,59 +279,59 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 분리 하 고 창에 대 한 포인터입니다.  
+ Pointer to the pane to detach.  
   
  [in] `bHide`  
- 분리 된 후 프레임 워크 창을 숨깁니다 있는지 여부를 지정 하는 부울 매개 변수입니다.  
+ Boolean parameter that specifies whether the framework hides the pane after it is detached.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`프레임 워크는 창을;를 성공적으로 분리 하는 경우 `FALSE` 경우 `pBar` 는 `NULL` 하거나 참조 하는 탭된 창에 있지 않은 창입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework successfully detaches the pane; `FALSE` if `pBar` is `NULL` or refers to a pane that is not in the tabbed pane.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 가능한 경우 분리 된 창을 배치 됩니다. 자세한 내용은 참조 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework floats the detached pane if possible. For more information, see [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
- 활성 탭에 있는 레이블 텍스트 캡션 텍스트를 동기화 하는 탭된 창의 기능을 사용 하지 않도록 설정 하거나 사용 합니다.  
+##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
+ Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.  
   
 ```  
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`활성 탭 캡션이; 탭된 창 캡션을 동기화 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to synchronize the tabbed pane caption with the active tab caption; otherwise, `FALSE`.  
   
-##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
- 내부 탭 순서를 기본 상태로 복원합니다.  
+##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
+ Restores the internal tab order to a default state.  
   
 ```  
 void FillDefaultTabsOrderArray();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 프레임 워크를 초기 상태로 Outlook 표시줄을 복원 하는 경우 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called when the framework restores an Outlook bar to an initial state.  
   
-##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
- 창 ID로 식별 되는 창을 반환합니다  
+##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
+ Returns a pane identified by the pane ID.  
   
 ```  
 virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uBarID`  
- 검색할 창 ID를 지정 합니다.  
+ Specifies the ID of the pane to find.  
   
-### <a name="return-value"></a>반환 값  
- 발견 창에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane if it was found; otherwise, `NULL`.  
   
-### <a name="remarks"></a>주의  
- 창의 모든 탭을 비교 하 고로 지정 된 ID 가진 항목을 반환 하는이 메서드는 `uBarID` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ This method compares all tabs in the pane and returns the one with the ID specified by the `uBarID` parameter.  
   
-##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
- 탭에 있는 창을 반환 합니다.  
+##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
+ Returns a pane that resides in a tab.  
   
 ```  
 virtual CWnd* FindBarByTabNumber(
@@ -312,21 +339,21 @@ virtual CWnd* FindBarByTabNumber(
     BOOL bGetWrappedBar = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nTabNum`  
- 검색 탭의&0;부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the tab to retrieve.  
   
  [in] `bGetWrappedBar`  
- `TRUE`자체 창 대신 창의 기본 (래핑된) 창이 되돌리려면 그렇지 않으면 `FALSE`합니다. 이 창에서 파생에 적용 [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)합니다.  
+ `TRUE` to return the underlying (wrapped) window of the pane instead of the pane itself; otherwise `FALSE`. This only applies to panes derived from [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
-### <a name="return-value"></a>반환 값  
- 창 없는 경우 검색 되는 창에 대 한 유효한 포인터를 반환 됩니다. 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ If the pane is found, then a valid pointer to the pane being searched for is returned; otherwise, `NULL`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 하 여 지정 된 탭에 있는 창에서 검색할는 `nTabNum` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the pane residing in the tab specified by the `nTabNum` parameter.  
   
-##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
- 창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다.  
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
+ Floats a pane, but only if the pane currently resides in a detachable tab.  
   
 ```  
 virtual BOOL FloatTab(
@@ -336,84 +363,84 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- [in] [out]`pBar`  
- Float로의 창에 대 한 포인터입니다.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to float.  
   
  [in] `nTabID`  
- Float로 탭의&0;부터 시작 인덱스를 지정합니다.  
+ Specifies the zero-based index of the tab to float.  
   
  [in] `dockMethod`  
- 창을 분리 하는 데 사용할 방법을 지정 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+ Specifies the method to use to make the pane float. For more information, see the Remarks section.  
   
  [in] `bHide`  
- `TRUE`창을 부동; 전에 숨기려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to hide the pane before floating; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`창에서 확장 되 면; 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 분리 가능한 탭에 있는 현재 창에 배치 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to float a pane that currently resides in a detachable tab.  
   
- 창을 프로그래밍 방식으로 분리 하려면 지정 `DM_SHOW` 에 대 한는 `dockMethod` 매개 변수입니다. 이전에 떠 있는 동일한 위치에 있는 창 부동 소수점을 지정 하려는 경우 `DM_DBL_CLICK` 으로 `dockMethod` 매개 변수입니다.  
+ If you want to detach a pane programmatically, specify `DM_SHOW` for the `dockMethod` parameter. If you want to float the pane in the same position where it floated previously, specify `DM_DBL_CLICK` as the `dockMethod` parameter.  
   
-##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
- 창에서 탭의 기본 순서를 반환합니다.  
+##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
+ Returns the default order of tabs in the pane.  
   
 ```  
 const CArray<int,int>& GetDefaultTabsOrder();
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CArray` 창에서 탭의 기본 순서를 지정 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CArray` object that specifies the default order of tabs in the pane.  
   
-### <a name="remarks"></a>주의  
- Outlook 표시줄은 초기 상태로 다시 설정 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when an Outlook bar is reset to an initial state.  
   
-##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
- 첫 번째 표시 된 탭에 대 한 포인터를 검색합니다.  
+##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
+ Retrieves a pointer to the first displayed tab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
- 정수에 대 한 참조입니다. 이 메서드 첫 번째 표시 된 탭의&0;부터 시작 하는 인덱스를 기록이 매개 변수를 그렇지 않으면-1 표시 선택 하지 않으면 탭이 발견 합니다.  
+ A reference to an integer. This method writes the zero-based index of the first displayed tab to this parameter, or -1 if no displayed tab is found.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하는 경우 첫 번째 표시 된 탭;에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the first displayed tab; otherwise, `NULL`.  
   
-##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
- 창 크기에 허용 되는 최소값을 검색 합니다.  
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>매개 변수  
- [out] `size`  
- A `CSize` 크기가 허용 되는 최소값으로 채워진 개체입니다.  
-  
-### <a name="remarks"></a>주의  
- 최소 창 크기의 일관 된 처리 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기에 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워지는 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
-  
-##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
- 창 크기에 허용 되는 최소값을 검색 합니다.  
+##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
+ Retrieves the minimum allowed size for the pane.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `size`  
- A `CSize` 크기가 허용 되는 최소값으로 채워진 개체입니다.  
+ A `CSize` object that is filled with the minimum allowed size.  
   
-### <a name="remarks"></a>주의  
- 최소 창 크기의 일관 된 처리 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기에 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워지는 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
- 탭된 창에 포함 된 창 목록을 반환 합니다.  
+##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
+ Retrieves the minimum allowed size for the pane.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ A `CSize` object that is filled with the minimum allowed size.  
+  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+  
+##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
+ Returns a list of panes that are contained in the tabbed pane.  
   
 ```  
 virtual void GetPaneList(
@@ -421,15 +448,15 @@ virtual void GetPaneList(
     CRuntimeClass* pRTCFilter = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `lst`  
- A `CObList` 하는 탭된 창에 포함 된 창이 채워집니다.  
+ A `CObList` that is filled with the panes that are contained in the tabbed pane.  
   
  [in] `pRTCFilter`  
- 없는 경우 `NULL`, 반환된 된 목록에 지정된 된 런타임 클래스를 가지는 창이 합니다.  
+ If it is not `NULL`, the returned list contains only panes that are of the specified runtime class.  
   
-##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
- 위쪽 및 아래쪽 탭 영역에 대 한 경계 사각형을 반환합니다.  
+##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
+ Returns the bounding rectangles for the top and bottom tab areas.  
   
 ```  
 virtual void GetTabArea(
@@ -437,108 +464,108 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 위 탭 영역이의 화면 좌표를 받습니다.  
+ Receives the screen coordinates of the upper tab area.  
   
  [out] `rectTabAreaBottom`  
- 아래 탭 영역의 화면 좌표를 받습니다.  
+ Receives the screen coordinates of the lower tab area.  
   
-### <a name="remarks"></a>주의  
- 화면 좌표로 상한 및 하 한 탭 영역에 대 한 경계 사각형을 확인 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the bounding rectangles, in screen coordinates, for the upper and lower tab areas.  
   
-##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
- 탭 창의 탭의 수를 반환 합니다.  
+##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
+ Returns the count of tabs in a tab window.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 탭된 창에 탭의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of tabs in the tabbed pane.  
   
-##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
- 기본 (래핑된) 탭 창을 가져옵니다.  
+##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
+ Gets the underlying (wrapped) tab window.  
   
 ```  
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본 탭 창에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the underlying tab window.  
   
-##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
- 표시 탭의 수를 반환 합니다.  
+##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
+ Returns the count of visible tabs.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이&0; 보다 크거나 됩니다 표시 탭의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of visible tabs, which will be greater than or equal to zero.  
   
-### <a name="remarks"></a>주의  
- 탭된 창에 표시 탭 수를 확인 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the number of visible tabs in the tabbed pane.  
   
-##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
- 탭 창을 자동 숨기기 모드로 전환할 수 있는지 여부를 결정합니다.  
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode  
+ Determines whether the tabbed pane can be switched to autohide mode.  
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`창 자동 숨기기; 모드로 전환 될 수 있습니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be switched to autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 자동 숨기기 모드를 비활성화 한 경우 탭된 창 캡션에 없습니다 pin 단추가 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If autohide mode is disabled, no pin button is displayed on the tabbed pane caption.  
   
-##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
- 탭된 창에 탭이 표시 되는지 숨겨지는지 여부를 결정 합니다.  
+##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
+ Determines whether the tabbed pane is hidden if only one tab is displayed.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`표시 탭이 하나 뿐입니다; 없는 경우에 탭 창이 표시 되지 않는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab window is not shown when there is only one visible tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 창에서 탭 하나만 열려 있기 때문에 표시 되지 않으면 탭된 창 제대로 작동 하는지 확인 하려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the pane is not displayed because only one tab is open, you can call this method to determine whether the tabbed pane is working correctly.  
   
-##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
- 창이 탭된 창에서 제거합니다.  
+##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
+ Removes a pane from the tabbed pane.  
   
 ```  
 virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- [in] [out]`pBar`  
- 탭된 창에서 제거 하 고 창에 대 한 포인터입니다.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to remove from the tabbed pane.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`창에서 탭된 창에서 제거 되 고 탭된 창 여전히 유효 합니다. `FALSE`마지막 창 탭된 창에서 제거 되었습니다 고 탭된 창이 소멸 될 예정입니다. 반환 값이 `FALSE`, 탭된 창을 더 이상 사용 하지 마십시오.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully removed from the tabbed pane and if the tabbed pane is still valid. `FALSE` if the last pane has been removed from the tabbed pane and the tabbed pane is about to be destroyed. If the return value is `FALSE`, do not use the tabbed pane any more.  
   
-### <a name="remarks"></a>주의  
- 지정 된 창에서 제거 하려면이 메서드를 호출 하는 `pBar` 탭된 창에서 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove the pane specified by the `pBar` parameter from the tabbed pane.  
   
-##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
- 탭된 컨트롤 막대를 자동으로 소멸 됩니다 여부를 결정 합니다.  
+##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
+ Determines whether the tabbed control bar will be destroyed automatically.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
- `TRUE`탭된 창이 동적으로 생성 하지; 수명을 제어 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the tabbed pane was created dynamically and you are not controlling its lifetime; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 설정의 자동 소멸 모드를 `TRUE` 탭된 창을 동적으로 만드는 고 하지는 수명을 제어 하는 경우. 하는 경우 자동 소멸 모드는 `TRUE`, 탭된 창 프레임 워크에 의해 자동으로 소멸 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Set the auto-destroy mode to `TRUE` if you create a tabbed pane dynamically and if you are not controlling its lifetime. If auto-destroy mode is `TRUE`, the tabbed pane will be destroyed automatically by the framework.  
   
-##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
- 표시 하거나 탭을 숨깁니다.  
+##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
+ Shows or hides a tab.  
   
 ```  
 virtual BOOL ShowTab(
@@ -548,39 +575,39 @@ virtual BOOL ShowTab(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 표시 하거나 숨기려면 창에 대 한 포인터입니다.  
+ A pointer to the pane to show or hide.  
   
  [in] `bShow`  
- `TRUE`창을 표시 하려면 `FALSE` 창을 숨기려면 합니다.  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`탭 레이아웃; 조정 지연 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to delay the adjustment of the tab layout; otherwise, `FALSE`.  
   
  [in] `bActivate`  
- `TRUE`활성 탭;는 탭을 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 표시 또는 숨김 성공적으로 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab was either shown or hidden successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 하면 창을 표시 되거나 값에 따라 숨겨진는 `bShow` 매개 변수입니다. 탭을 숨기고 기본 탭 창의 마지막 표시 탭에는 탭된 창이 숨겨집니다. 표시 탭 이전에 경우에 탭을 표시 하는 경우에 탭된 창 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When you call this method, a pane is either shown or hidden, depending on the value of the `bShow` parameter. If you hide a tab and it is the last visible tab in the underlying tab window, the tabbed pane is hidden. If you show a tab when there were previously no tabs visible, the tabbed pane is shown.  
   
-##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
- 창에 대 한 레이아웃 정보를 다시 계산합니다.  
+##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
+ Recalculates layout information for the pane.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>주의  
- 창 부동 창인 경우이 메서드는 프레임 워크를 미니 프레임의 현재 크기를 창 크기 조정에 알립니다.  
+### <a name="remarks"></a>Remarks  
+ If the pane is floating, this method notifies the framework to resize the pane to the current size of the mini-frame.  
   
- 창에서 고정 되어 있는 경우이 메서드는 아무 작업도 수행 하지 않습니다.  
+ If the pane is docked, this method does nothing.  
   
-##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
- 탭된 창에 분리 가능한 창에 대 한 자동 숨김 모드를 설정합니다.  
+##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
+ Sets the auto-hide mode for detachable panes in the tabbed pane.  
   
 ```  
 virtual CMFCAutoHideToolBar* SetAutoHideMode(
@@ -590,31 +617,31 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMode`  
- `TRUE`자동 숨김 모드를 사용 하도록 설정 하려면 `FALSE` 일반 도킹 모드를 사용 하도록 합니다.  
+ `TRUE` to enable auto-hide mode; `FALSE` to enable regular docking mode.  
   
  [in] `dwAlignment`  
- 만들 되는 자동 숨기기 창 정렬을 지정 합니다. 가능한 값 목록은 참조 하십시오. [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)합니다.  
+ Specifies the alignment of the auto-hide pane that is to be created. For a list of possible values, see [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out]`pCurrAutoHideBar`  
- 현재 자동 숨김 도구 모음에 대 한 포인터입니다. 수 `NULL`합니다.  
+ [in] [out] `pCurrAutoHideBar`  
+ A pointer to the current auto-hide toolbar. Can be `NULL`.  
   
  [in] `bUseTimer`  
- 즉시 창을 숨기려면 또는 창에서 자동 숨김 모드로 전환할 때 자동 숨기기 효과 사용 하 여 지정 합니다.  
+ Specifies whether to use the auto-hide effect when the user switches the pane to auto-hide mode, or to hide the pane immediately.  
   
-### <a name="return-value"></a>반환 값  
- 자동 숨김 모드로 전환할 때 만들어지는 자동 숨김 도구 모음에 대 한 포인터 또는 `NULL` 없는 도구 모음을 만들면 됩니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the auto-hide toolbar that is created when switching to auto-hide mode, or `NULL` if no toolbar is created.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자가 탭된 창 자동 숨기기 모드로 일반 도킹 모드로 전환할 수 있는 핀 단추를 선택 하는 경우이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user chooses the pin button to switch the tabbed pane to auto-hide mode or to regular docking mode.  
   
- 탭된 창에 분리 가능한 각 창에 대 한 자동 숨김 모드로 설정 됩니다. 분리 가능한 비는 창에는 무시 됩니다. 자세한 내용은 참조 [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach)합니다.  
+ Auto-hide mode is set for each detachable pane in the tabbed pane. Panes that are non-detachable are ignored. For more information, see [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
   
- 프로그래밍 방식으로 탭된 창 자동 숨기기 모드로 전환 하려면이 메서드를 호출 합니다. 창을 주 프레임 창에 도킹할 수 해야 ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) 에 대 한 유효한 포인터를 반환 해야는 [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
+ Call this method to switch a tabbed pane to auto-hide mode programmatically. The pane must be docked to the main frame window ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) must return a valid pointer to the [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

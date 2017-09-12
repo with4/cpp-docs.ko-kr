@@ -1,5 +1,5 @@
 ---
-title: "콤보 상자 스타일 | Microsoft 문서"
+title: Combo-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,19 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBS_OWNERDRAWVARIABLE constant
-- CBS_NOINTEGRALHEIGHT constant
-- CBS_SIMPLE constant
-- CBS_AUTOHSCROLL constant
-- CBS_OEMCONVERT constant
-- CBS_DISABLENOSCROLL constant
-- CBS_HASSTRINGS constant
-- CBS_LOWERCASE constant
-- CBS_SORT constant
-- CBS_DROPDOWN constant
-- CBS_OWNERDRAWFIXED constant
-- combo boxes, styles
-- CBS_UPPERCASE constant
+- CBS_OWNERDRAWVARIABLE constant [MFC]
+- CBS_NOINTEGRALHEIGHT constant [MFC]
+- CBS_SIMPLE constant [MFC]
+- CBS_AUTOHSCROLL constant [MFC]
+- CBS_OEMCONVERT constant [MFC]
+- CBS_DISABLENOSCROLL constant [MFC]
+- CBS_HASSTRINGS constant [MFC]
+- CBS_LOWERCASE constant [MFC]
+- CBS_SORT constant [MFC]
+- CBS_DROPDOWN constant [MFC]
+- CBS_OWNERDRAWFIXED constant [MFC]
+- combo boxes [MFC], styles
+- CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
 caps.latest.revision: 12
@@ -59,45 +59,45 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 57069f6e6cd0999773ab3872e671a65e1e880bba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ca7dba78b9265110977b18549ffb6207ce9b877
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-styles"></a>콤보 상자 스타일
-다음 콤보 상자 스타일을 MFC에서 사용할 수 있습니다.  
+# <a name="combo-box-styles"></a>Combo-Box Styles
+The following combo-box styles are available in MFC.  
   
--   **CBS_AUTOHSCROLL** 사용자가 줄의 끝에 문자를 입력하면 편집 컨트롤의 텍스트가 자동으로 오른쪽으로 스크롤됩니다. 이 스타일을 설정하지 않으면 사각형 경계에 포함되는 텍스트만 허용됩니다.  
+-   **CBS_AUTOHSCROLL** Automatically scrolls the text in the edit control to the right when the user types a character at the end of the line. If this style is not set, only text that fits within the rectangular boundary is allowed.  
   
--   **CBS_DISABLENOSCROLL** 목록 상자에 스크롤할 충분한 개수의 항목이 포함되지 않은 경우 비활성화된 세로 스크롤 막대가 표시됩니다. 이 스타일을 사용하지 않으면 목록 상자에 충분한 항목이 포함되지 않은 경우 스크롤 막대가 숨겨집니다.  
+-   **CBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **CBS_DROPDOWN** 사용자가 편집 컨트롤 옆의 아이콘을 선택하지 않은 경우 목록 상자가 표시되지 않는다는 점을 제외하고는 **CBS_SIMPLE**과 유사합니다.  
+-   **CBS_DROPDOWN** Similar to **CBS_SIMPLE**, except that the list box is not displayed unless the user selects an icon next to the edit control.  
   
--   **CBS_DROPDOWNLIST** 편집 컨트롤이 목록 상자의 현재 선택 항목을 표시하는 정적 텍스트 항목으로 대체된다는 점을 제외하고는 **CBS_DROPDOWN**과 유사합니다.  
+-   **CBS_DROPDOWNLIST** Similar to **CBS_DROPDOWN**, except that the edit control is replaced by a static-text item that displays the current selection in the list box.  
   
--   **CBS_HASSTRINGS** 소유자 그리기 콤보 상자에 문자열로 구성된 항목을 포함합니다. 콤보 상자는 응용 프로그램에서 `GetText` 멤버 함수를 사용하여 특정 항목에 대한 텍스트를 검색할 수 있도록 문자열에 대한 포인터 및 메모리를 유지합니다.  
+-   **CBS_HASSTRINGS** An owner-draw combo box contains items consisting of strings. The combo box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **CBS_LOWERCASE** 선택 필드와 목록의 모든 텍스트를 소문자로 변환합니다.  
+-   **CBS_LOWERCASE** Converts to lowercase all text in both the selection field and the list.  
   
--   **CBS_NOINTEGRALHEIGHT** 콤보 상자의 크기가 콤보 상자를 만들 때 응용 프로그램에 지정된 크기와 정확히 일치하도록 지정합니다. 일반적으로 Windows에서는 콤보 상자에 특정 항목이 표시되지 않도록 콤보 상자의 크기를 지정합니다.  
+-   **CBS_NOINTEGRALHEIGHT** Specifies that the size of the combo box is exactly the size specified by the application when it created the combo box. Normally, Windows sizes a combo box so that the combo box does not display partial items.  
   
--   **CBS_OEMCONVERT** 콤보 상자 편집 컨트롤에 입력된 텍스트가 ANSI 문자 집합에서 OEM 문자 집합으로 변환된 다음 다시 ANSI로 변환됩니다. 따라서 응용 프로그램이 콤보 상자의 ANSI 문자열을 OEM 문자로 변환하기 위해 `AnsiToOem` Windows 함수를 호출할 때 문자가 적절히 변환됩니다. 이 스타일은 파일 이름을 포함하는 콤보 상자에 매우 유용하며 **CBS_SIMPLE** 또는 **CBS_DROPDOWN** 스타일로 만들어진 콤보 상자에만 적용됩니다.  
+-   **CBS_OEMCONVERT** Text entered in the combo-box edit control is converted from the ANSI character set to the OEM character set and then back to ANSI. This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the combo box to OEM characters. This style is most useful for combo boxes that contain filenames and applies only to combo boxes created with the **CBS_SIMPLE** or **CBS_DROPDOWN** styles.  
   
--   **CBS_OWNERDRAWFIXED** 목록 상자의 소유자가 내용을 그립니다. 목록 상자의 항목은 높이가 모두 같습니다.  
+-   **CBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are all the same height.  
   
--   **CBS_OWNERDRAWVARIABLE** 목록 상자의 소유자가 내용을 그립니다. 목록 상자의 항목은 높이가 가변적입니다.  
+-   **CBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **CBS_SIMPLE** 목록 상자가 항상 표시 됩니다. 목록 상자에서 현재 선택된 항목이 편집 컨트롤에 표시됩니다.  
+-   **CBS_SIMPLE** The list box is displayed at all times. The current selection in the list box is displayed in the edit control.  
   
--   **CBS_SORT** 목록 상자에 입력되는 문자열을 자동으로 정렬합니다.  
+-   **CBS_SORT** Automatically sorts strings entered into the list box.  
   
--   **CBS_UPPERCASE** 선택 필드와 목록의 모든 텍스트를 대문자로 변환합니다.  
+-   **CBS_UPPERCASE** Converts to uppercase all text in both the selection field and the list.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC에서 사용 되는 스타일](../../mfc/reference/styles-used-by-mfc.md)   
- [CComboBox::Create] (ccombobox class.md # ccombobox__create   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](ccombobox-class.md#ccombobox__create   
 
 
 

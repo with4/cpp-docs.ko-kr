@@ -1,5 +1,5 @@
 ---
-title: "CMDITabInfo 클래스 | Microsoft 문서"
+title: CMDITabInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMDITabInfo class
-- CMDITabInfo class, constructor
+- CMDITabInfo [MFC], Serialize
+- CMDITabInfo [MFC], m_bAutoColor
+- CMDITabInfo [MFC], m_bDocumentMenu
+- CMDITabInfo [MFC], m_bEnableTabSwap
+- CMDITabInfo [MFC], m_bFlatFrame
+- CMDITabInfo [MFC], m_bTabCloseButton
+- CMDITabInfo [MFC], m_bTabCustomTooltips
+- CMDITabInfo [MFC], m_bTabIcons
+- CMDITabInfo [MFC], m_nTabBorderSize
+- CMDITabInfo [MFC], m_style
+- CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
 caps.latest.revision: 37
 author: mikeblome
@@ -46,209 +55,209 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a45532c98d5da7d89d27e3d29d9b40075cf0376f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cceb706f4008cffd4b22bfb33798145451eb8d35
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmditabinfo-class"></a>CMDITabInfo 클래스
-`CMDITabInfo` 클래스는 매개 변수를 전달 하는 데 사용 [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) 메서드. MDI 탭 그룹의 동작을 제어하려면 이 클래스의 멤버를 설정합니다.  
+# <a name="cmditabinfo-class"></a>CMDITabInfo Class
+The `CMDITabInfo` class is used to pass parameters to [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) method. Set members of this class to control the behavior of MDI tabbed groups.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMDITabInfo   
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMDITabInfo::CMDITabInfo`|기본 생성자입니다.|  
+|`CMDITabInfo::CMDITabInfo`|Default constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDITabInfo::Serialize](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다.|  
+|[CMDITabInfo::Serialize](#serialize)|Reads or writes this object from or to an archive.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|지정 여부는 **닫기** 단추가 활성 탭의 레이블에 표시 됩니다.|  
-|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|MDI 탭 색을 지정 합니다.|  
-|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|탭 그룹에 열려 있던 문서 목록을 표시 하거나 스크롤 단추를 표시 하는 팝업 메뉴를 표시할지 여부를 지정 합니다.|  
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|사용자 탭의 위치를 끌어 교환할 수 있는지 여부를 지정 합니다.|  
-|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|탭 플랫 프레임 하는지 여부를 지정 합니다.|  
-|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|각 탭 레이블을 표시할지 여부를 지정 된 **닫기** 단추입니다.|  
-|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|사용자 지정 도구 설명을 사용 되는지 여부를 지정 합니다.|  
-|[CMDITabInfo::m_bTabIcons](#m_btabicons)|MDI 탭에 아이콘을 표시할지 여부를 지정 합니다.|  
-|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|각 탭 창 테두리 크기를 지정합니다.|  
-|[CMDITabInfo::m_style](#m_style)|탭 레이블 스타일을 지정합니다.|  
-|[CMDITabInfo::m_tabLocation](#m_tablocation)|탭 레이블이 위쪽 또는 페이지의 아래에 있는지 여부를 지정 합니다.|  
+|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Specifies whether a **Close** button is displayed on the label of the active tab.|  
+|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Specifies whether to color the MDI tabs.|  
+|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Specifies whether the tab group displays a popup menu that shows a list of opened documents or displays scroll buttons.|  
+|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Specifies whether the user can swap the positions of tabs by dragging.|  
+|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Specifies whether tabs have a flat frame.|  
+|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Specifies whether each tab label displays a **Close** button.|  
+|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Specifies whether custom tooltips are enabled.|  
+|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Specifies whether to display icons on MDI tabs.|  
+|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Specifies the border size of each tab window.|  
+|[CMDITabInfo::m_style](#m_style)|Specifies the style of the tab labels.|  
+|[CMDITabInfo::m_tabLocation](#m_tablocation)|Specifies whether the tabs labels are located at the top or the bottom of the page.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 프레임 워크를 만들고 있는 MDI 탭 그룹의 매개 변수를 지정 합니다.  
+## <a name="remarks"></a>Remarks  
+ This class specifies the parameters of the MDI tab groups that the framework creates.  
   
-## <a name="example"></a>예제  
- 다음 예제에서 다양 한 멤버 변수의 값을 설정 하는 방법을 보여 줍니다 `CMDITabInfo` 클래스입니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the values of the various member variables in `CMDITabInfo` class.  
   
- [!code-cpp[NVC_MFC_MDITab #&1;](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxmdiclientareawnd.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
- 지정 여부는 **닫기** 단추가 활성 탭의 레이블에 표시 됩니다.  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
+ Specifies whether a **Close** button is displayed on the label of the active tab.  
   
 ```  
 BOOL m_bActiveTabCloseButton;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 활성 탭의 표시 될는 **닫기** 단추입니다. **닫기** 단추 탭 영역의 오른쪽 위 모서리에서 제거 됩니다. 활성 탭의 레이블이 표시 되지 것입니다 그렇지는 **닫기** 단추입니다. **닫기** 단추 탭 영역의 오른쪽 위 모서리에 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the label of the active tab will display a **Close** button. The **Close** button will be removed from the right top corner of the tab area. Otherwise, the label of the active tab will not display a **Close** button. The **Close** button will appear in the right top corner of the tab area.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
- 각 MDI 탭에는 자체 색 있는지 여부를 지정 합니다.  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
+ Specifies whether each MDI tab has its own color.  
   
 ```  
 BOOL m_bAutoColor;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 각 탭에는 고유한 색이 됩니다. 색 집합은 MFC 라이브러리에서 관리 됩니다. 그렇지 않으면 탭 흰색으로 표시 됩니다. 기본값은 `FALSE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, each tab will have its own color. The set of colors is managed by the MFC library. Otherwise, the tabs are displayed in white. The default value is `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
- 각 탭의 열린된 문서 탭 영역의 오른쪽 가장자리에 목록이 표시 되는 팝업 메뉴를 표시할지 여부를 지정 합니다.  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
+ Specifies whether each tab displays a popup menu that shows a list of  opened documents at the right edge of the tab area.  
   
 ```  
 BOOL m_bDocumentMenu;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 각 탭 windows 탭 영역의 오른쪽 가장자리에 연 문서 목록을 보여 주는 팝업 메뉴가 표시 됩니다. 그렇지 않으면 탭 창 탭 영역의 오른쪽 모서리에 있는 스크롤 단추를 표시합니다. 기본값은 `FALSE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, each tab windows displays a popup menu that shows a list of opened documents at the right edge of the tab area; Otherwise, the tab window displays scroll buttons at the right edge of the tab area. The default value is `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
- 사용자 탭의 위치를 끌어 교환할 수 있는지 여부를 지정 합니다.  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
+ Specifies whether the user can swap the positions of tabs by dragging.  
   
 ```  
 BOOL m_bEnableTabSwap;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 사용자는 탭을 끌어 탭 위치를 변경할 수 있습니다. 그렇지 않으면 사용자 탭 위치를 변경할 수 없습니다. 기본값은 `TRUE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the user can change the tabs positions by dragging the tabs. Otherwise, the user cannot change the tabs positions. The default value is `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
- 각 탭 창 프레임을 평면에 있는지 여부를 지정 합니다.  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
+ Specifies whether each tab window has a flat frame.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
- 각 탭 창에 표시 되는지 여부를 지정 된 **닫기** 단추입니다.  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
+ Specifies whether each tab window displays a **Close** button.  
   
 ```  
 BOOL m_bTabCloseButton;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 각 탭 창에 표시는 **닫기** 탭의 오른쪽 가장자리에 단추입니다. 그렇지 않은 경우는 **닫기** 단추가 표시 되지 않습니다. 기본값은 `TRUE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, each tab window displays the **Close** button on the right edge of the tab. Otherwise, the **Close** button is not displayed. The default value is `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
- 탭에 도구 설명을 표시할지 여부를 지정 합니다.  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
+ Specifies whether the tabs display tooltips.  
   
 ```  
 BOOL m_bTabCustomTooltips;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 응용 프로그램은 보냅니다는 `AFX_WM_ON_GET_TAB_TOOLTIP` 주 프레임에는 메시지입니다. 사용 하 여이 메시지를 처리할 수는 `ON_REGISTERED_MESSAGE` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the application sends an `AFX_WM_ON_GET_TAB_TOOLTIP` message to the main frame. You can handle this message by using the `ON_REGISTERED_MESSAGE` macro.  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
- MDI 탭에 아이콘을 표시할지 여부를 지정 합니다.  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
+ Specifies whether to display icons on MDI tabs.  
   
 ```  
 BOOL m_bTabIcons;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 아이콘은 각 MDI 탭에 표시 됩니다. 그렇지 않은 경우 아이콘이 탭에 표시 되지 않습니다. 기본값은 `FALSE`입니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, icons are displayed on each MDI tab. Otherwise, icons are not displayed on tabs. The default value is `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
- 각 탭 창을 픽셀 단위로 테두리 크기를 지정합니다.  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
+ Specifies the border size, in pixels, of each tab window.  
   
 ```  
 int m_nTabBorderSize;  
 ```  
   
-### <a name="remarks"></a>주의  
- [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) 기본 값을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) returns the default value.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
- 탭 레이블 스타일을 지정합니다.  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
+ Specifies the style of the tab labels.  
   
 ```  
 CMFCTabCtrl::Style m_style  
 ```  
   
-### <a name="remarks"></a>주의  
- 탭 레이블에 대 한 다음과 같은 스타일 중 하나를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Specify one of the following styles for the tab labels:  
   
  `STYLE_3D`  
- 3D 스타일입니다.  
+ 3D style.  
   
  `STYLE_3D_ONENOTE`  
- Microsoft OneNote 스타일입니다.  
+ Microsoft OneNote style.  
   
  `STYLE_3D_VS2005`  
- Microsoft Visual Studio 2005 스타일입니다.  
+ Microsoft Visual Studio 2005 style.  
   
  `STYLE_3D_SCROLLED`  
- 사각형 탭 레이블이 지정 된&3;D 스타일입니다.  
+ 3D style with rectangle tab labels.  
   
  `STYLE_FLAT_SHARED_HORZ_SCROLL`  
- 공유 가로 스크롤 막대와 플랫 스타일입니다.  
+ Flat style with shared horizontal scroll bar.  
   
  `STYLE_3D_ROUNDED_SCROLL`  
- Round 탭 레이블이 지정 된&3;D 스타일입니다.  
+ 3D style with round tab labels.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
- 탭 레이블이 위쪽 또는 페이지의 아래에 있는지 여부를 지정 합니다.  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
+ Specifies whether the tabs labels are located at the top or the bottom of the page.  
   
 ```  
 CMFCTabCtrl::Location m_tabLocation;  
 ```  
   
-### <a name="remarks"></a>주의  
- 다음 위치 플래그의 탭 하나에 적용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Apply to the tabs one of the following location flags:  
   
--   LOCATION_BOTTOM: 탭 레이블을 페이지의 맨 아래에 나와 있습니다.  
+-   LOCATION_BOTTOM: the tabs labels are located at the bottom of the page.  
   
--   페이지의 맨 위에 LOCATION_TOP: 탭 레이블  
+-   LOCATION_TOP: the tabs labels are located at the top of the page  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
- 읽거나을 보관 또는 보관 파일에서이 개체를 씁니다.  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
+ Reads or writes this object from an archive or to an archive.  
   
 ```  
 void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
- A [CArchive 클래스](../../mfc/reference/carchive-class.md) serialize 할 개체입니다.  
+ A [CArchive Class](../../mfc/reference/carchive-class.md) object to serialize.  
   
-## <a name="see-also"></a>참고 항목  
- [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)   
- [MDI 탭 그룹](../../mfc/mdi-tabbed-groups.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md)   
+ [MDI Tabbed Groups](../../mfc/mdi-tabbed-groups.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

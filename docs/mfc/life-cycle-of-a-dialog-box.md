@@ -1,38 +1,55 @@
 ---
-title: "대화 상자의 수명 주기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "대화 상자, 수명 주기"
-  - "대화 상자의 수명 주기"
-  - "MFC 대화 상자, 수명 주기"
-  - "모달 대화 상자, 수명 주기"
-  - "모덜리스 대화 상자, 수명 주기"
+title: Life Cycle of a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], life cycle
+- modal dialog boxes [MFC], life cycle
+- modeless dialog boxes [MFC], life cycle
+- MFC dialog boxes [MFC], life cycle
+- life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 대화 상자의 수명 주기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 244bc75dfdb4695184ca66b8810260d407507f54
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="life-cycle-of-a-dialog-box"></a>Life Cycle of a Dialog Box
 During the life cycle of a dialog box, the user invokes the dialog box, typically inside a command handler that creates and initializes the dialog object, the user interacts with the dialog box, and the dialog box closes.  
   
- For modal dialog boxes, your handler gathers any data the user entered once the dialog box closes.  Since the dialog object exists after its dialog window has closed, you can simply use the member variables of your dialog class to extract the data.  
+ For modal dialog boxes, your handler gathers any data the user entered once the dialog box closes. Since the dialog object exists after its dialog window has closed, you can simply use the member variables of your dialog class to extract the data.  
   
- For modeless dialog boxes, you may often extract data from the dialog object while the dialog box is still visible.  At some point, the dialog object is destroyed; when this happens depends on your code.  
+ For modeless dialog boxes, you may often extract data from the dialog object while the dialog box is still visible. At some point, the dialog object is destroyed; when this happens depends on your code.  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
 -   [Creating and displaying dialog boxes](../mfc/creating-and-displaying-dialog-boxes.md)  
   
@@ -42,7 +59,7 @@ During the life cycle of a dialog box, the user invokes the dialog box, typicall
   
 -   [Using a dialog template in memory](../mfc/using-a-dialog-template-in-memory.md)  
   
--   [Setting the dialog box's background color](../mfc/setting-the-dialog-box’s-background-color.md)  
+-   [Setting the dialog box's background color](../mfc/setting-the-dialog-boxs-background-color.md)  
   
 -   [Initializing the dialog box](../mfc/initializing-the-dialog-box.md)  
   
@@ -54,9 +71,11 @@ During the life cycle of a dialog box, the user invokes the dialog box, typicall
   
 -   [Destroying the dialog box](../mfc/destroying-the-dialog-box.md)  
   
--   [Dialog data exchange \(DDX\) and validation \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
 -   [Property sheet dialog boxes](../mfc/property-sheets-and-property-pages-mfc.md)  
   
-## 참고 항목  
- [대화 상자](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

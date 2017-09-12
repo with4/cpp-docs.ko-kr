@@ -1,55 +1,73 @@
 ---
-title: "컨트롤(MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows 공용 컨트롤[C++]"
-  - "공용 컨트롤[C++]"
-  - "컨트롤[MFC]"
+title: Controls (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC]
+- common controls [MFC]
+- controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컨트롤(MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a2fad4323b03cd302644561820fa436a3f4a6c6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-컨트롤은 사용자가 데이터를 입력하거나 조작하기 위해 상호 작용할 수 있는 개체입니다. 일반적으로 대화 상자 또는 도구 모음에 나타납니다. 이 항목 군에서는 다음 세 가지 주요 컨트롤 종류를 설명합니다.  
+---
+# <a name="controls-mfc"></a>Controls (MFC)
+Controls are objects that users can interact with to enter or manipulate data. They commonly appear in dialog boxes or on toolbars. This topic family covers three main kinds of controls:  
   
--   소유자가 그린 컨트롤을 비롯한 Windows 공용 컨트롤  
+-   Windows common controls, including owner-drawn controls  
   
--   ActiveX 컨트롤  
+-   ActiveX Controls  
   
--   MFC\(Microsoft Foundation Class\) 라이브러리에서 제공하는 다른 컨트롤 클래스  
+-   Other control classes supplied by the Microsoft Foundation Class Library (MFC)  
   
-## Windows 공용 컨트롤  
- Windows 운영 체제는 항상 많은 Windows 공용 컨트롤을 제공합니다. 이러한 컨트롤 개체는 프로그래밍이 가능하며, Visual C\+\+ 대화 상자 편집기는 컨트롤 개체를 대화 상자에 추가하는 것을 지원합니다. MFC\(Microsoft Foundation Class\) 라이브러리는 [Windows 공용 컨트롤 및 MFC 클래스](#_core_windows_common_controls_and_mfc_classes) 표에 나와 있는 것처럼 각 컨트롤을 캡슐화하는 클래스를 지원합니다. 표의 일부 항목에는 자세히 설명하는 관련 항목이 있습니다. 관련 항목이 없는 컨트롤은 MFC 클래스에 대한 설명서를 참조하세요.  
+## <a name="windows-common-controls"></a>Windows Common Controls  
+ The Windows operating system has always provided a number of Windows common controls. These control objects are programmable, and the Visual C++ dialog editor supports adding them to your dialog boxes. The Microsoft Foundation Class Library (MFC) supplies classes that encapsulate each of these controls, as shown in the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes). (Some items in the table have related topics that describe them further. For controls that lack topics, see the documentation for the MFC class.)  
   
- [CWnd](../mfc/reference/cwnd-class.md) 클래스는 모든 컨트롤 클래스를 포함하는 모든 창 클래스의 기본 클래스입니다. Windows 공용 컨트롤은 다음과 같은 환경에서 지원됩니다.  
+ Class [CWnd](../mfc/reference/cwnd-class.md) is the base class of all window classes, including all of the control classes. The Windows common controls are supported in the following environments:  
   
--   Windows 95, Windows 98 및 Windows 2000  
+-   Windows 95, Windows 98, and Windows 2000  
   
--   Windows NT 버전 3.51 이상  
+-   Windows NT, version 3.51 and later  
   
--   Win32s, 버전 1.3\(Visual C\+\+ 버전 4.2 이상은 Win32s를 지원하지 않음\)  
+-   Win32s, version 1.3 (Visual C++ versions 4.2 and later do not support Win32s)  
   
- 이전 버전의 Windows에서 사용할 수 있었던 이전 공용 컨트롤\(확인란, 콤보 상자, 편집 상자, 목록 상자, 옵션 단추, 누름 단추, 스크롤 막대 컨트롤 및 정적 컨트롤\)도 사용할 수 있습니다.  
+ The older common controls — check boxes, combo boxes, edit boxes, list boxes, option buttons, pushbuttons, scroll bar controls, and static controls — were available in earlier versions of Windows as well.  
   
-## ActiveX 컨트롤  
- 이전에 OLE 컨트롤로 알려진 ActiveX 컨트롤은 Windows 응용 프로그램의 대화 상자 또는 World Wide Web의 HTML 페이지에서 사용할 수 있습니다. 자세한 내용은 [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)을 참조하세요.  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls, formerly known as OLE controls, can be used in dialog boxes in your applications for Windows, or in HTML pages on the World Wide Web. For more information, see [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
-## 다른 MFC 컨트롤 클래스  
- 모든 Windows 공용 컨트롤을 캡슐화하고 사용자 고유의 ActiveX 컨트롤 프로그래밍\(또는 다른 사용자가 제공하는 ActiveX 컨트롤 사용\)을 지원하는 클래스 외에 MFC는 다음과 같은 자체 컨트롤 클래스를 제공합니다.  
+## <a name="other-mfc-control-classes"></a>Other MFC Control Classes  
+ In addition to classes that encapsulate all of the Windows common controls and that support programming your own ActiveX controls (or using ActiveX controls supplied by others), MFC supplies the following control classes of its own:  
   
 -   [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
   
@@ -57,66 +75,68 @@ caps.handback.revision: 7
   
 -   [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
   
-##  <a name="_core_finding_information_about_windows_common_controls"></a> Windows 공용 컨트롤에 대한 정보 찾기  
- 아래 표에서는 각 컨트롤의 MFC 래퍼 클래스를 포함하여 각 Windows 공용 컨트롤을 간략하게 설명합니다.  
+##  <a name="_core_finding_information_about_windows_common_controls"></a> Finding Information About Windows Common Controls  
+ The table below briefly describes each of the Windows common controls, including the control's MFC wrapper class.  
   
-### Windows 공용 컨트롤 및 MFC 클래스  
+### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows Common Controls and MFC Classes  
   
-|컨트롤|MFC 클래스|설명|Windows 95의 새로운 기능|  
-|---------|-------------|--------|------------------------|  
-|[애니메이션](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|AVI 비디오 클립의 연속 프레임을 표시합니다.|예|  
-|단추|[CButton](../mfc/reference/cbutton-class.md)|동작을 발생시키는 누름 단추입니다. 확인란, 라디오 단추 및 그룹 상자에도 사용됩니다.|아니요|  
-|콤보 상자|[CComboBox](../mfc/reference/ccombobox-class.md)|편집 상자와 목록 상자의 조합|아니요|  
-|[날짜 및 시간 선택](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|사용자가 특정 날짜 또는 시간 값을 선택할 수 있습니다.|예|  
-|편집 상자|[CEdit](../mfc/reference/cedit-class.md)|텍스트 입력 상자|아니요|  
-|[확장된 콤보 상자](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|이미지를 표시할 수 있는 콤보 상자 컨트롤|예|  
-|[헤더](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|텍스트 열 위에 표시되는 단추로서, 표시되는 텍스트의 너비를 제어합니다.|예|  
-|[바로 가기 키](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|사용자가 작업을 빠르게 수행하기 위해 "바로 가기 키"를 만들 수 있는 창|예|  
-|[이미지 목록](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|이미지의 컬렉션은 많은 아이콘이나 비트맵을 관리하는 데 사용됩니다\(이미지 목록은 실제로 컨트롤이 아니며, 다른 컨트롤에서 사용되는 목록을 지원함\).|예|  
-|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|아이콘을 사용하여 텍스트 목록을 표시하는 창|예|  
-|목록 상자|[CListBox](../mfc/reference/clistbox-class.md)|문자열 목록이 들어 있는 상자|아니요|  
-|[월 달력](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|날짜 정보를 표시하는 컨트롤|예|  
-|[진행률](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|긴 작업의 진행률을 나타내는 창|예|  
-|[크기 조정 막대](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|컨트롤 형식으로 추가 자식 창을 포함할 수 있는 도구 모음|예|  
-|[서식 있는 편집](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|사용자가 문자와 단락 형식을 사용하여 편집할 수 있는 창\([Rich Edit 컨트롤 관련 클래스](../mfc/classes-related-to-rich-edit-controls.md) 참조\)|예|  
-|스크롤 막대|[CScrollBar](../mfc/reference/cscrollbar-class.md)|대화 상자\(창이 아님\) 내의 컨트롤로 사용되는 스크롤 막대|아니요|  
-|[슬라이더](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|선택적 눈금이 있는 슬라이더 컨트롤을 포함하는 창|예|  
-|[스핀 단추](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|사용자가 클릭하여 값을 증가시키거나 감소시킬 수 있는 화살표 단추 쌍|예|  
-|정적 텍스트|[CStatic](../mfc/reference/cstatic-class.md)|다른 컨트롤에 레이블을 지정하기 위한 텍스트|아니요|  
-|[상태 표시줄](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|MFC 클래스 `CStatusBar`와 유사한 상태 정보를 표시하는 창|예|  
-|[탭](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|전자 필기장의 구분선과 유사하며, "탭 대화 상자" 또는 속성 시트에 사용됨|예|  
-|[도구 모음](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|MFC 클래스 `CToolBar`와 유사한 명령 생성 단추가 있는 창|예|  
-|[도구 설명](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|도구 모음 단추 또는 다른 도구의 용도를 설명하는 작은 팝업 창|예|  
-|[트리](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|항목의 계층 목록을 표시하는 창|예|  
+|Control|MFC class|Description|New in Windows 95|  
+|-------------|---------------|-----------------|------------------------|  
+|[animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Displays successive frames of an AVI video clip|Yes|  
+|button|[CButton](../mfc/reference/cbutton-class.md)|Pushbuttons that cause an action; also used for check boxes, radio buttons, and group boxes|No|  
+|combo box|[CComboBox](../mfc/reference/ccombobox-class.md)|Combination of an edit box and a list box|No|  
+|[date and time picker](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Allows the user to choose a specific date or time value|Yes|  
+|edit box|[CEdit](../mfc/reference/cedit-class.md)|Boxes for entering text|No|  
+|[extended combo box](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|A combo box control with the ability to display images|Yes|  
+|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Button that appears above a column of text; controls width of text displayed|Yes|  
+|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Window that enables user to create a "hot key" to perform an action quickly|Yes|  
+|[image list](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Collection of images used to manage large sets of icons or bitmaps (image list isn't really a control; it supports lists used by other controls)|Yes|  
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Window that displays a list of text with icons|Yes|  
+|list box|[CListBox](../mfc/reference/clistbox-class.md)|Box that contains a list of strings|No|  
+|[month calendar](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Control that displays date information|Yes|  
+|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Window that indicates progress of a long operation|Yes|  
+|[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Tool bar that can contain additional child windows in the form of controls|Yes|  
+|[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Window in which user can edit with character and paragraph formatting (see [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md))|Yes|  
+|scroll bar|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Scroll bar used as a control inside a dialog box (not on a window)|No|  
+|[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Window containing a slider control with optional tick marks|Yes|  
+|[spin button](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Pair of arrow buttons user can click to increment or decrement a value|Yes|  
+|static-text|[CStatic](../mfc/reference/cstatic-class.md)|Text for labeling other controls|No|  
+|[status bar](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Window for displaying status information, similar to MFC class `CStatusBar`|Yes|  
+|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogous to the dividers in a notebook; used in "tab dialog boxes" or property sheets|Yes|  
+|[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Window with command-generating buttons, similar to MFC class `CToolBar`|Yes|  
+|[tool tip](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Small pop-up window that describes purpose of a toolbar button or other tool|Yes|  
+|[tree](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Window that displays a hierarchical list of items|Yes|  
   
-### 추가 정보  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   개별 컨트롤: 모든 컨트롤에 대한 링크는 이 항목에서 [Windows 공용 컨트롤 및 MFC 클래스](#_core_windows_common_controls_and_mfc_classes) 표를 참조하세요.  
+-   An individual control: see the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes) in this topic for links to all controls  
   
--   [컨트롤 만들기 및 사용](../mfc/making-and-using-controls.md)  
+-   [Making and using controls](../mfc/making-and-using-controls.md)  
   
--   [대화 상자 편집기를 사용하여 컨트롤 추가](../mfc/using-the-dialog-editor-to-add-controls.md)  
+-   [Using the dialog editor to add controls](../mfc/using-the-dialog-editor-to-add-controls.md)  
   
--   [대화 상자에 컨트롤을 직접 추가](../mfc/adding-controls-by-hand.md)  
+-   [Adding controls to a dialog box by hand](../mfc/adding-controls-by-hand.md)  
   
--   [MFC 컨트롤 클래스에서 컨트롤 클래스 파생](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Deriving control classes from the MFC control classes](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [공용 컨트롤을 자식 창으로 사용](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Using common controls as child windows](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [공용 컨트롤에서 알림](../mfc/receiving-notification-from-common-controls.md)  
+-   [Notifications from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [대화 상자에 일반 컨트롤 추가](../mfc/using-common-controls-in-a-dialog-box.md)  
+-   [Add common controls to a dialog box](../mfc/using-common-controls-in-a-dialog-box.md).  
   
--   [표준 Windows 컨트롤에서 컨트롤 파생](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Derive a control from a standard Windows control](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [형식 안전성을 사용한 대화 상자 컨트롤 액세스](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
+-   [Access dialog-box controls with type safety](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [공용 컨트롤에서 알림 메시지 받기](../mfc/receiving-notification-from-common-controls.md)  
+-   [Receive notification messages from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [샘플](../mfc/common-control-sample-list.md)  
+-   [Samples](../mfc/common-control-sample-list.md)  
   
- [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]의 Windows 공용 컨트롤에 대한 자세한 내용은 [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493)을 참조하세요.  
+ For information about Windows common controls in the Windows SDK, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
   
-## 참고 항목  
- [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Editor](../windows/dialog-editor.md)
+
+

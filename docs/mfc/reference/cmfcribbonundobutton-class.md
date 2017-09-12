@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonUndoButton 클래스 | Microsoft 문서"
+title: CMFCRibbonUndoButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonUndoButton class
+- CMFCRibbonUndoButton [MFC], CMFCRibbonUndoButton
+- CMFCRibbonUndoButton [MFC], AddUndoAction
+- CMFCRibbonUndoButton [MFC], CleanUpUndoList
+- CMFCRibbonUndoButton [MFC], GetActionNumber
+- CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 caps.latest.revision: 35
 author: mikeblome
@@ -39,48 +43,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d4406e21a7e2a945965020d85a748b93d66b5682
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e99fca219af62c4dc51db71c24caae6af50c11db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 클래스
-`CMFCRibbonUndoButton` 클래스는 가장 최근 사용자 명령에 포함 된 드롭다운 목록에서 단추를 구현 합니다. 사용자에 게 다시 실행 하거나 해당 변경 내용을 취소 하려면 드롭다운 목록에서 가장 최근 명령 중 하나 이상을 선택할 수 있습니다.  
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton Class
+The `CMFCRibbonUndoButton` class implements a drop-down list button that contains the most recent user commands. Users can select one or more of the most recent commands from the drop-down list to either redo or undo them.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonUndoButton : public CMFCRibbonGallery  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|새 `CMFCRibbonUndoButton` 지정 하는 명령 ID, 텍스트 레이블 및 부모 개체의 이미지 목록에서 이미지를 사용 하 여 개체입니다.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|작업 목록에 새 동작을 추가합니다.|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|드롭 다운 목록 작업 목록을 지웁니다.|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|사용자가 선택한 드롭 다운 목록에서 항목의 수를 결정 합니다.|  
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|메뉴 개체에 포함 되어 있는지 여부를 나타냅니다.|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Adds a new action to the list of actions.|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Clears the action list, which is the drop-down list.|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determines the number of items that a user selected from the drop-down list.|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indicates whether the object contains a menu.|  
   
-## <a name="remarks"></a>주의  
- `CMFCRibbonUndoButton` 클래스는 스택을 드롭 다운 목록을 나타내는 데 사용 합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCRibbonUndoButton` class uses a stack to represent the drop-down list.  
   
-## <a name="example"></a>예제  
- 개체를 생성 하는 방법은 다음 예제는 `CMFCRibbonUndoButton` 클래스 및 동작의 목록에 새 작업을 추가 합니다. 이 코드 조각은의 일부인는 [리본 가젯 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonUndoButton` class, and add a new action to the list of actions. This code snippet is part of the [Ribbon Gadgets sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_RibbonGadgets #&2;](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -91,29 +95,29 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxribbonundobutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonundobutton.h  
   
-##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
- 작업 목록에 새 동작을 추가합니다.  
+##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
+ Adds a new action to the list of actions.  
   
 ```  
 void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- 드롭다운 목록에 표시 될 작업 레이블.  
+ The action label that will be displayed in the drop-down list.  
   
-##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
- 드롭 다운 목록 작업 목록을 지웁니다.  
+##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
+ Clears the action list, which is the drop-down list.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- 새 `CMFCRibbonUndoButton` 지정 하는 명령 ID, 텍스트 레이블 및 부모 개체의 이미지 목록에서 이미지를 사용 하 여 개체입니다.  
+##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+ Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -129,47 +133,47 @@ CMFCRibbonUndoButton(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 명령 식별자를 지정합니다.  
+ Specifies the command identifier.  
   
  [in] `lpszText`  
- 단추의 텍스트 레이블을 지정합니다.  
+ Specifies the text label of the button.  
   
  [in] `nSmallImageIndex`  
- 버튼의 작은 이미지에 대 한 부모 개체의 이미지 목록 인덱스&0;부터 시작 합니다.  
+ Zero-based index in the image list of the parent object for the button's small image.  
   
  [in] `nLargeImageIndex`  
- 인덱스에 대 한 부모 개체의 이미지 목록에는 단추의 큰 이미지의 합니다.  
+ Zero-based index in the image list of the parent object for the of button's large image.  
   
  [in] `hIcon`  
- 버튼의 이미지로 사용할 수 있는 아이콘에 대 한 핸들입니다.  
+ A handle to an icon that you can use as a button's image.  
   
-##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
- 사용자가 선택한 드롭 다운 목록에서 항목의 수를 결정 합니다.  
+##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
+ Determines the number of items that a user selected from the drop-down list.  
   
 ```  
 int GetActionNumber() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 사용자가 선택한 항목의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of items that a user selected.  
   
-##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
- 메뉴 개체에 포함 되어 있는지 여부를 나타냅니다.  
+##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
+ Indicates whether the object contains a menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonGallery 클래스](../../mfc/reference/cmfcribbongallery-class.md)   
- [CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonGallery Class](../../mfc/reference/cmfcribbongallery-class.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

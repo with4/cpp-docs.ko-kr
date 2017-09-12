@@ -1,5 +1,5 @@
 ---
-title: "CMFCHeaderCtrl 클래스 | Microsoft 문서"
+title: CMFCHeaderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCHeaderCtrl class
+- CMFCHeaderCtrl [MFC], CMFCHeaderCtrl
+- CMFCHeaderCtrl [MFC], EnableMultipleSort
+- CMFCHeaderCtrl [MFC], GetColumnState
+- CMFCHeaderCtrl [MFC], GetSortColumn
+- CMFCHeaderCtrl [MFC], IsAscending
+- CMFCHeaderCtrl [MFC], IsDialogControl
+- CMFCHeaderCtrl [MFC], IsMultipleSort
+- CMFCHeaderCtrl [MFC], RemoveSortColumn
+- CMFCHeaderCtrl [MFC], SetSortColumn
+- CMFCHeaderCtrl [MFC], OnDrawItem
+- CMFCHeaderCtrl [MFC], OnDrawSortArrow
+- CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 caps.latest.revision: 29
 author: mikeblome
@@ -46,62 +57,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c49ee61b6441e79a0c3c4c1aa133b4bce1578103
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 294d624d9b95bc927a419268e71953a04a27182d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
-`CMFCHeaderCtrl` 클래스 헤더 컨트롤에서 여러 열의 정렬을 지원 합니다.  
+The `CMFCHeaderCtrl` class supports sorting multiple columns in a header control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCHeaderCtrl : public CHeaderCtrl  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|`CMFCHeaderCtrl` 개체를 생성합니다.|  
-|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|소멸자|  
+|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Constructs a `CMFCHeaderCtrl` object.|  
+|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|설정 하거나 해제 *여러 열을 정렬* 현재 헤더 컨트롤에 대 한 모드입니다.|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|열 정렬 되지 않으면 오름차순 또는 내림차순 정렬 하는지 여부를 나타냅니다.|  
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|헤더 컨트롤에서 첫 번째 정렬 된 열의 인덱스를 검색합니다.|  
-|`CMFCHeaderCtrl::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCHeaderCtrl::IsAscending](#isascending)|헤더 컨트롤의 모든 열을 오름차순 정렬 되었는지 여부를 나타냅니다.|  
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|현재 헤더 컨트롤의 부모 창 대화 상자 여부를 나타냅니다.|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|현재 헤더 컨트롤 인지 여부를 나타냅니다 *여러 열을 정렬* 모드입니다.|  
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|정렬 열 목록에서 지정된 된 열을 제거합니다.|  
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|헤더 컨트롤의 지정 된 열의 정렬 순서를 설정합니다.|  
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Enables or disables *multiple column sort* mode for the current header control.|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indicates whether a column is not sorted, or is sorted in ascending or descending order.|  
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Retrieves the zero-based index of the first sorted column in the header control.|  
+|`CMFCHeaderCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Indicates whether any column in the header control is sorted in ascending order.|  
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indicates whether the parent window of the current header control is a dialog box.|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indicates whether the current header control is in *multiple column sort* mode.|  
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Removes the specified column from the list of sort columns.|  
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Sets the sort order of a specified column in a header control.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|헤더 컨트롤 열 그리기를 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|정렬 화살표를 그리는 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|열 머리글 컨트롤의 배경을 채울 프레임 워크에 의해 호출 됩니다.|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Called by the framework to draw a header control column.|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Called by the framework to draw the sort arrow.|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Called by the framework to fill the background of a header control column.|  
   
-## <a name="example"></a>예제  
- 개체를 생성 하는 방법은 다음 예제는 `CMFCHeaderCtrl` 클래스 및 활성화 하는 방법을 *여러 열을 정렬* 현재 헤더 컨트롤에 대 한 모드입니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCHeaderCtrl` class, and how to enable *multiple column sort* mode for the current header control.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&24;](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
-## <a name="remarks"></a>주의  
- `CMFCHeaderCtrl` 클래스를 나타내는 열이 정렬 헤더 컨트롤 열에 정렬 화살표를 그립니다. 사용 하 여 *여러 열을 정렬* 경우 부모 목록 컨트롤에서 열 집합이 모드 ( [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md)) 동시에 정렬할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCHeaderCtrl` class draws a sort arrow on a header control column to indicate that the column is sorted. Use *multiple column sort* mode if a set of columns in the parent list control ( [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)) can be sorted at the same time.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,20 +123,20 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxheaderctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
- `CMFCHeaderCtrl` 개체를 생성합니다.  
+##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
+ Constructs a `CMFCHeaderCtrl` object.  
   
 ```  
 CMFCHeaderCtrl::CMFCHeaderCtrl()  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 생성자는 지정된 된 값으로 다음 멤버 변수를 초기화합니다.  
+### <a name="remarks"></a>Remarks  
+ This constructor initializes the following member variables to the specified values:  
   
-|멤버 변수|값|  
+|Member variable|Value|  
 |---------------------|-----------|  
 |`m_bIsMousePressed`|`FALSE`|  
 |`m_bMultipleSort`|`FALSE`|  
@@ -135,93 +146,93 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
- 설정 하거나 해제 *여러 열을 정렬* 현재 헤더 컨트롤에 대 한 모드입니다.  
+##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
+ Enables or disables *multiple column sort* mode for the current header control.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`여러 열 정렬 모드를 사용 하도록 설정 하려면 `FALSE` 여러 열 정렬 모드를 사용 하지 않도록 설정 하 고 정렬 된 열 목록에서 열을 제거 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to enable multiple column sort mode; `FALSE` to disable multiple column sort mode and to remove any columns from the list of sorted columns. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 여러 열 정렬 모드를 사용할지 여부를이 메서드를 사용 합니다. 헤더 컨트롤 여러 열 정렬 모드에 있으면 두 개 이상의 열 정렬에 참여할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
- 열, 정렬 되지 않은 오름차순 또는 내림차순 정렬 하는지 여부를 나타냅니다.  
+##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
+ Indicates whether a column is unsorted, or is sorted in ascending or descending order.  
   
 ```  
 int GetColumnState(int iColumn) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 열의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a column.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 열의 정렬 상태를 나타내는 값입니다. 다음 표에 가능한 값을 보여 줍니다.  
+### <a name="return-value"></a>Return Value  
+ A value that indicate the sort status of the specified column. The following table lists the possible values:  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|-1|내림차순으로 정렬 합니다.|  
-|0|정렬 되지 않습니다.|  
-|1|내림차순으로 정렬 합니다.|  
+|-1|Sorted in descending order.|  
+|0|Not sorted.|  
+|1|Sorted in ascending order.|  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
- 헤더 컨트롤에서 첫 번째 정렬 된 열의 인덱스를 검색합니다.  
+##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
+ Retrieves the zero-based index of the first sorted column in the header control.  
   
 ```  
 int GetSortColumn() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 인덱스는 정렬 된 열 또는 정렬 된 열이 없으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of a sorted column, or -1 if no sorted column is found.  
   
-### <a name="remarks"></a>주의  
- 헤더 컨트롤에 있으면 *여러 열을 정렬* 이 메서드는 어설션을 하 고 사용 하 여 제안 모드가 고 컴파일된 디버그 모드에서 응용 프로그램은 [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) 메서드 대신 합니다. 헤더 컨트롤은 여러 열 정렬 모드에 소매 모드에서 응용 프로그램을 컴파일한 경우이 메서드는-1을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the header control is in *multiple column sort* mode and you compiled the application in debug mode, this method asserts and advises you to use the [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) method instead. If the header control is in multiple column sort mode and you compiled the application in retail mode, this method returns -1.  
   
-##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
- 헤더 컨트롤의 모든 열을 오름차순 정렬 되었는지 여부를 나타냅니다.  
+##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
+ Indicates whether any column in the header control is sorted in ascending order.  
   
 ```  
 BOOL IsAscending() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`헤더 컨트롤에서 모든 열이 오름차순; 정렬 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if any column in the header control is sorted in ascending order; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 헤더 컨트롤 항목에 적절 한 정렬 화살표를 표시 하려면이 메서드는 반환 값 사용 됩니다. 사용 하는 [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) 메서드 정렬 순서를 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The value that this method returns is used to display the appropriate sort arrow on the header control item. Use the [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) method to set the sort order.  
   
-##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
- 현재 헤더 컨트롤의 부모 창 대화 상자 여부를 나타냅니다.  
+##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
+ Indicates whether the parent window of the current header control is a dialog box.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`현재 헤더 컨트롤의 부모 창은 대화 상자입니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent window of the current header control is a dialog box; otherwise, `FALSE`.  
   
-##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
- 현재 헤더 컨트롤 인지 여부를 나타냅니다 *여러 열을 정렬* 모드입니다.  
+##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
+ Indicates whether the current header control is in *multiple column sort* mode.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`여러 열 정렬 모드를 사용 하면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if multiple column sort mode is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) 메서드를 사용 하도록 설정 하거나 여러 열 정렬 모드를 사용 하지 않도록 합니다. 헤더 컨트롤 여러 열 정렬 모드에 있으면 두 개 이상의 열 정렬에 참여할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
- 헤더 컨트롤 열 그리기를 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
+ Called by the framework to draw a header control column.  
   
 ```  
 virtual void OnDrawItem(
@@ -232,24 +243,24 @@ virtual void OnDrawItem(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `iItem`  
- 그릴 항목의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the item to draw.  
   
  [in] `rect`  
- 그릴 항목에 대 한 경계 사각형입니다.  
+ The bounding rectangle of the item to draw.  
   
  [in] `bIsPressed`  
- `TRUE`항목을 그리는 pressed 상태의; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to draw the item in pressed state; otherwise, `FALSE`.  
   
  [in] `bIsHighlighted`  
- `TRUE`항목을 그리는 강조 표시 된 상태 이면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to draw the item in highlighted state; otherwise, `FALSE`.  
   
-##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
- 정렬 화살표를 그리는 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
+ Called by the framework to draw the sort arrow.  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -257,39 +268,39 @@ virtual void OnDrawSortArrow(
     CRect rectArrow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `rectArrow`  
- 정렬 화살표의 경계 사각형입니다.  
+ The bounding rectangle of the sort arrow.  
   
-##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
- 열 머리글 컨트롤의 배경을 채울 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
+ Called by the framework to fill the background of a header control column.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
- 정렬 열 목록에서 지정된 된 열을 제거합니다.  
+##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
+ Removes the specified column from the list of sort columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 제거할 열의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the column to remove.  
   
-##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
- 헤더 컨트롤의 지정 된 열의 정렬 순서를 설정합니다.  
+##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
+ Sets the sort order of a specified column in a header control.  
   
 ```  
 void SetSortColumn(
@@ -298,27 +309,27 @@ void SetSortColumn(
     BOOL bAdd=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 헤더 컨트롤 열의&0;부터 시작 하는 인덱스입니다. 이 매개 변수는&0; 보다 작은 경우이 메서드는 정렬 열 목록에서 모든 열을 제거 합니다.  
+ The zero-based index of a header control column. If this parameter is less than zero, this method removes all columns from the list of sort columns.  
   
  [in] `bAscending`  
- 열의 정렬 순서를 지정 하는 `iColumn` 매개 변수를 지정 합니다. `TRUE`오름차순; 설정 하려면 `FALSE` 내림차순을 설정할 수 있습니다. 기본값은 `TRUE`입니다.  
+ Specifies the sort order of the column that the `iColumn` parameter specifies. `TRUE` to set ascending order; `FALSE` to set descending order. The default value is `TRUE`.  
   
  [in] `bAdd`  
- `TRUE`에 있는 열의 정렬 순서를 설정의 `iColumn` 매개 변수를 지정 합니다.  
+ `TRUE` to set the sort order of the column that the `iColumn` parameter specifies.  
   
- 현재 헤더 컨트롤에 있으면 *여러 열을 정렬* 모드에서는이 메서드 정렬 열 목록에 지정된 된 열을 추가 합니다. 사용 하 여 [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) 여러 열 정렬 모드를 설정 합니다.  
+ If the current header control is in *multiple column sort* mode, this method adds the specified column to the list of sort columns. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) to set multiple column sort mode.  
   
- 여러 열 정렬 모드 설정 하지 않으면이 메서드는 디버그 모드에서 컴파일된 고,이 메서드는 어설션 합니다. 여러 열 정렬 모드 설정 하지 않으면이 메서드는 소매 모드에서 컴파일된 경우이 메서드는 먼저 열 정렬의 목록에서 모든 열을 제거 하 고 목록에 지정된 된 열을 추가 합니다.  
+ If multiple column sort mode is not set and this method is compiled in debug mode, this method asserts. If multiple column sort mode is not set and this method is compiled in retail mode, this method first removes all columns from the list of sort columns, and then adds the specified column to the list.  
   
- `FALSE`첫 번째 정렬 열 목록에서 모든 열을 제거 하 고 목록에 지정된 된 열을 추가 합니다. 기본값은 `FALSE`입니다.  
+ `FALSE` to first remove all columns from the list of sort columns, and then add the specified column to the list. The default value is `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 열의 정렬 순서를 설정 합니다. 필요한 경우이 메서드는 정렬 열 목록에 열을 추가 합니다. 헤더 컨트롤 정렬 순서를 사용 하 여 위로 또는 아래로 가리키는 정렬 화살표를 그립니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the sort order of a column. If necessary, this method adds the column to the list of sort columns. The header control uses the sort order to draw a sort arrow that points up or down.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)
 

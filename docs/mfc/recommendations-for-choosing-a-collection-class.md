@@ -1,107 +1,127 @@
 ---
-title: "컬렉션 클래스 선택에 대한 권장 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "컬렉션 클래스의 형식 안전성[C++]"
-  - "컬렉션 클래스, serialization"
-  - "컬렉션 클래스, 속도"
-  - "컬렉션 클래스, 형식 안전성"
-  - "컬렉션 클래스, 선택"
-  - "컬렉션 클래스, 기능"
-  - "모양, 컬렉션"
-  - "컬렉션 클래스, 템플릿 기반"
-  - "MFC 컬렉션 클래스, 특성"
-  - "컬렉션 클래스, 컬렉션 클래스 정보"
-  - "serialization[C++], 컬렉션 클래스"
-  - "컬렉션 클래스, 중복 허용됨"
-  - "컬렉션 클래스, 모양"
+title: Recommendations for Choosing a Collection Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type safety of collection classes [MFC]
+- collection classes [MFC], serialization
+- collection classes [MFC], speed
+- collection classes [MFC], type safety
+- collection classes [MFC], choosing
+- collection classes [MFC], functionality
+- shapes, collection
+- collection classes [MFC], template-based
+- MFC collection classes [MFC], characteristics
+- collection classes [MFC], about collection classes [MFC]
+- serialization [MFC], collection classes
+- collection classes [MFC], duplicates allowed
+- collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컬렉션 클래스 선택에 대한 권장 사항
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 293503782cc27ef44654cf7931fcb8235ac66eee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 문서에서는 특정 응용 프로그램 요구 사항에 적합한 컬렉션을 선택하는 데 도움이 되는 자세한 정보를 제공합니다.  
+---
+# <a name="recommendations-for-choosing-a-collection-class"></a>Recommendations for Choosing a Collection Class
+This article contains detailed information designed to help you choose a collection class for your particular application needs.  
   
- 어떤 컬렉션 클래스를 선택할 것인가는 다음과 같은 다양한 요인에 따라 달라집니다.  
+ Your choice of a collection class depends on a number of factors, including:  
   
--   클래스 모양의 특징: 이 항목 뒤에 나오는 [컬렉션 모양 특징](#_core_collection_shape_features) 표에서 설명하는 순서, 인덱싱 및 성능  
+-   The features of the class shape: order, indexing, and performance, as shown in the [Collection Shape Features](#_core_collection_shape_features) table later in this topic  
   
--   클래스에서 C\+\+ 템플릿이 사용되는지 여부  
+-   Whether the class uses C++ templates  
   
--   컬렉션에 저장된 요소의 serialize 가능 여부  
+-   Whether the elements stored in the collection can be serialized  
   
--   컬렉션에 저장된 요소를 진단용으로 덤프할 수 있는지 여부  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   컬렉션이 형식 안전인지 여부  
+-   Whether the collection is type-safe  
   
- 다음 [컬렉션 모양 특징](#_core_collection_shape_features) 표에는 사용 가능한 컬렉션 모양의 특성이 요약되어 있습니다.  
+ The following table, [Collection Shape Features](#_core_collection_shape_features), summarizes the characteristics of the available collection shapes.  
   
--   2번 및 3번 열에서는 각 모양의 순서와 액세스 특성에 대해 설명합니다. 이 표에서 "정렬 여부"는 항목이 삽입되고 삭제되는 순서가 컬렉션의 순서에 따라 결정되는 것을 의미하며 항목이 내용에 따라 정렬된다는 것을 의미하지는 않습니다. "인덱스 여부"는 컬렉션의 항목을 일반 배열의 항목처럼 정수 인덱스로 검색할 수 있음을 의미합니다.  
+-   Columns 2 and 3 describe each shape's ordering and access characteristics. In the table, the term "ordered" means that the order in which items are inserted and deleted determines their order in the collection; it does not mean the items are sorted on their contents. The term "indexed" means that the items in the collection can be retrieved by an integer index, much like items in a typical array.  
   
--   4번 및 5번 열에서는 각 모양의 성능에 대해 설명합니다. 컬렉션에 항목을 많이 삽입해야 하는 응용 프로그램에서는 삽입 속도가 특히 중요합니다. 다른 응용 프로그램에서는 조회 속도가 더 중요할 수도 있습니다.  
+-   Columns 4 and 5 describe each shape's performance. In applications that require many insertions into the collection, insertion speed might be especially important; for other applications, lookup speed may be more important.  
   
--   6번 열에서는 각 모양에 요소가 중복될 수 있는지 여부에 대해 설명합니다.  
+-   Column 6 describes whether each shape allows duplicate elements.  
   
-### 컬렉션 모양 특징  
+### <a name="_core_collection_shape_features"></a>  Collection Shape Features  
   
-|모양|정렬 여부|인덱스 여부|요소 삽입|지정된 요소 검색|요소 중복 가능|  
-|--------|-----------|------------|-----------|---------------|--------------|  
-|목록|예|아니요|Fast|느림|예|  
-|배열|예|정수 기준|느림|느림|예|  
-|맵|아니요|키 기준|Fast|Fast|아니요\(키\) 예\(값\)|  
+|Shape|Ordered|Indexed|Insert an element|Search for specified element|Duplicate elements|  
+|-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
+|List|Yes|No|Fast|Slow|Yes|  
+|Array|Yes|By int|Slow|Slow|Yes|  
+|Map|No|By key|Fast|Fast|No (keys) Yes (values)|  
   
- 다음 [MFC 컬렉션 클래스의 특징](#_core_characteristics_of_mfc_collection_classes) 표에는 선택할 때 도움을 줄 수 있는 특정 MFC 컬렉션 클래스의 다른 중요한 특성이 요약되어 있습니다. 어떤 클래스를 선택할 것인가는 클래스가 C\+\+ 템플릿에 기반을 두는지 여부, MFC의 문서 [serialization](../mfc/serialization-in-mfc.md) 메커니즘에 따라 요소를 serialize할 수 있는지 여부, MFC의 진단 덤핑 메커니즘에 따라 요소를 덤프할 수 있는지 여부 또는 클래스가 형식 안전 상태인지 여부, 즉 요소의 형식이 해당 클래스에 기반한 컬렉션에 저장되어 있고 여기에서 검색되는지 여부 등에 따라 달라집니다.  
+ The following table, [Characteristics of MFC Collection Classes](#_core_characteristics_of_mfc_collection_classes), summarizes other important characteristics of specific MFC collection classes as a guide to selection. Your choice may depend on whether the class is based on C++ templates, whether its elements can be serialized via MFC's document [serialization](../mfc/serialization-in-mfc.md) mechanism, whether its elements can be dumped via MFC's diagnostic dumping mechanism, or whether the class is type-safe — that is, whether you can guarantee the type of elements stored in and retrieved from a collection based on the class.  
   
-### MFC 컬렉션 클래스의 특성  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes  
   
-|클래스|C\+\+ 사용<br /><br /> 템플릿|가능 여부<br /><br /> serialize됨|덤프<br /><br /> 가능 여부|예<br /><br /> 형식 안전\(type\-safe\)|  
-|---------|----------------------|--------------------------|------------------|-------------------------------|  
-|`CArray`|예|예 1|예 1|아니요|  
-|`CByteArray`|아니요|예|예|예 3|  
-|`CDWordArray`|아니요|예|예|예 3|  
-|`CList`|예|예 1|예 1|아니요|  
-|`CMap`|예|예 1|예 1|아니요|  
-|`CMapPtrToPtr`|아니요|아니요|예|아니요|  
-|`CMapPtrToWord`|아니요|아니요|예|아니요|  
-|`CMapStringToOb`|아니요|예|예|아니요|  
-|`CMapStringToPtr`|아니요|아니요|예|아니요|  
-|`CMapStringToString`|아니요|예|예|예 3|  
-|`CMapWordToOb`|아니요|예|예|아니요|  
-|`CMapWordToPtr`|아니요|아니요|예|아니요|  
-|`CObArray`|아니요|예|예|아니요|  
-|`CObList`|아니요|예|예|아니요|  
-|`CPtrArray`|아니요|아니요|예|아니요|  
-|`CPtrList`|아니요|아니요|예|아니요|  
-|`CStringArray`|아니요|예|예|예 3|  
-|`CStringList`|아니요|예|예|예 3|  
-|`CTypedPtrArray`|예|상황에 따라 다름 2|예|예|  
-|`CTypedPtrList`|예|상황에 따라 다름 2|예|예|  
-|`CTypedPtrMap`|예|상황에 따라 다름 2|예|예|  
-|`CUIntArray`|아니요|아니요|예|예 3|  
-|`CWordArray`|아니요|예|예|예 3|  
+|Class|Uses C++<br /><br /> templates|Can be<br /><br /> serialized|Can be<br /><br /> dumped|Is<br /><br /> type-safe|  
+|-----------|------------------------------|---------------------------|-----------------------|-----------------------|  
+|`CArray`|Yes|Yes 1|Yes 1|No|  
+|`CByteArray`|No|Yes|Yes|Yes 3|  
+|`CDWordArray`|No|Yes|Yes|Yes 3|  
+|`CList`|Yes|Yes 1|Yes 1|No|  
+|`CMap`|Yes|Yes 1|Yes 1|No|  
+|`CMapPtrToPtr`|No|No|Yes|No|  
+|`CMapPtrToWord`|No|No|Yes|No|  
+|`CMapStringToOb`|No|Yes|Yes|No|  
+|`CMapStringToPtr`|No|No|Yes|No|  
+|`CMapStringToString`|No|Yes|Yes|Yes 3|  
+|`CMapWordToOb`|No|Yes|Yes|No|  
+|`CMapWordToPtr`|No|No|Yes|No|  
+|`CObArray`|No|Yes|Yes|No|  
+|`CObList`|No|Yes|Yes|No|  
+|`CPtrArray`|No|No|Yes|No|  
+|`CPtrList`|No|No|Yes|No|  
+|`CStringArray`|No|Yes|Yes|Yes 3|  
+|`CStringList`|No|Yes|Yes|Yes 3|  
+|`CTypedPtrArray`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrList`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrMap`|Yes|Depends 2|Yes|Yes|  
+|`CUIntArray`|No|No|Yes|Yes 3|  
+|`CWordArray`|No|Yes|Yes|Yes 3|  
   
- 1. Serialize하려면 컬렉션 개체의 `Serialize` 함수를 명시적으로 호출해야 합니다. 마찬가지로 덤프하려면 `Dump` 함수를 명시적으로 호출해야 합니다. Serialize하는 데 `ar << collObj` 형식을 사용할 수 없으며 덤프하는 데 `dmp` `<< collObj` 형식을 사용할 수 없습니다.  
+ 1. To serialize, you must explicitly call the collection object's `Serialize` function; to dump, you must explicitly call its `Dump` function. You cannot use the form `ar << collObj` to serialize or the form `dmp` `<< collObj` to dump.  
   
- 2. Serialize 가능성은 기본 컬렉션 유형에 따라 다릅니다. 예를 들어, 형식화된 포인터 배열이 `CObArray`에 기반을 두는 경우 이 배열은 serialize할 수 있지만 `CPtrArray`에 기반을 두는 경우에는 serialize할 수 없습니다. 일반적으로 "Ptr" 클래스는 serialize할 수 없습니다.  
+ 2. Serializability depends on the underlying collection type. For example, if a typed pointer array is based on `CObArray`, it is serializable; if based on `CPtrArray`, it is not serializable. In general, the "Ptr" classes cannot be serialized.  
   
- 3. 이 열에서 예로 표시된 경우 원래의 목적대로 사용하면 비템플릿 컬렉션 클래스는 형식 안전 상태입니다. 예를 들어 바이트를 `CByteArray`에 저장하면 배열은 형식 안전 상태가 됩니다. 그러나 이 배열을 문자를 저장하는 데 사용하면 형식 안정성이 불확실해집니다.  
+ 3. If marked Yes in this column, a nontemplate collection class is type-safe provided you use it as intended. For example, if you store bytes in a `CByteArray`, the array is type-safe. But if you use it to store characters, its type safety is less certain.  
   
-## 참고 항목  
- [컬렉션](../mfc/collections.md)   
- [템플릿 기반 클래스](../mfc/template-based-classes.md)   
- [방법: 형식이 안전한 컬렉션 만들기](../mfc/how-to-make-a-type-safe-collection.md)   
- [컬렉션의 모든 멤버에 액세스](../mfc/accessing-all-members-of-a-collection.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)   
+ [Template-Based Classes](../mfc/template-based-classes.md)   
+ [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)   
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

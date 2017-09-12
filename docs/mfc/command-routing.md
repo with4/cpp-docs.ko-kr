@@ -1,56 +1,76 @@
 ---
-title: "명령 라우팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 명령 라우팅"
-  - "명령 처리, 명령 라우팅"
-  - "처리기"
-  - "처리기, 명령"
-  - "명령 라우팅"
+title: Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- handlers [MFC]
+- handlers, command [MFC]
+- command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 명령 라우팅
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b8b2c0deef88405b15d1b04dcd02fa09960bc1d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-명령 작업을 수행하는 경우 사용자의 역할은 메시지 맵을 사용하여 명령과 해당 처리기 함수를 연결하는 것으로 제한됩니다. 이 작업에는 속성 창을 사용합니다. 또한 사용자는 대부분의 명령 처리기를 작성해야 합니다.  
+---
+# <a name="command-routing"></a>Command Routing
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.  
   
- 일반적으로 Windows 메시지는 주 프레임 창에 전달되지만 명령 메시지는 나중에 다른 개체에 라우팅됩니다. 프레임워크는 명령 대상 개체의 표준 시퀀스를 통해 명령을 라우팅하고, 이 개체 중 하나에는 해당 명령에 대한 처리기가 포함됩니다. 각 명령 대상 개체는 자신의 메시지 맵을 확인하여 들어오는 메시지를 처리할 수 있는지 여부를 알아봅니다.  
+ Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.  
   
- 다른 명령 대상 클래스는 개별적으로 자신의 메시지 맵을 확인합니다. 일반적으로 클래스는 명령을 다른 특정 개체에 라우팅하여 해당 명령을 먼저 처리하도록 합니다. 모든 개체가 명령을 처리하지 못하는 경우 원래의 클래스가 자신의 메시지 맵을 확인합니다. 클래스에서 처리기를 제공할 수 없는 경우에는 해당 명령을 여러 명령 대상에 라우팅할 수 있습니다. 다음 [표준 명령 경로](#_core_standard_command_route) 표는 각 클래스가 이 시퀀스를 구성하는 방법을 보여 줍니다. 명령 대상이 명령을 라우팅하는 일반적인 순서는 다음과 같습니다.  
+ Different command-target classes check their own message maps at different times. Typically, a class routes the command to certain other objects to give them first chance at the command. If none of those objects handles the command, the original class checks its own message map. Then, if it can't supply a handler itself, it may route the command to yet more command targets. The table [Standard Command Route](#_core_standard_command_route) below shows how each of the classes structures this sequence. The general order in which a command target routes a command is:  
   
-1.  현재 활성 상태인 자신의 자식 명령 대상 개체  
+1.  To its currently active child command-target object.  
   
-2.  자신  
+2.  To itself.  
   
-3.  다른 명령 대상  
+3.  To other command targets.  
   
- 이 라우팅 메커니즘의 비용 명령에 대한 응답으로 처리기가 수행하는 작업에 비해 라우팅 비용은 낮은 편입니다. 사용자가 사용자 인터페이스 개체와 상호 작용할 경우에만 프레임워크가 명령을 생성한다는 점을 명심하세요.  
+ How expensive is this routing mechanism Compared to what your handler does in response to a command, the cost of the routing is low. Bear in mind that the framework generates commands only when the user interacts with a user-interface object.  
   
-### 표준 명령 경로  
+### <a name="_core_standard_command_route"></a> Standard Command Route  
   
-|명령을 수신하는 개체 형식 입니다. 입니다.|자신 및 다른 명령 대상 개체가 명령을 처리하는 순서|  
-|------------------------------|-----------------------------------|  
-|MDI 프레임 창\(`CMDIFrameWnd`\)|1.  활성 `CMDIChildWnd`<br />2.  이 프레임 창<br />3.  응용 프로그램\(`CWinApp` 개체\)|  
-|문서 프레임 창\(`CFrameWnd`, `CMDIChildWnd`\)|1.  활성 뷰<br />2.  이 프레임 창<br />3.  응용 프로그램\(`CWinApp` 개체\)|  
-|보기|1.  이 뷰<br />2.  뷰에 연결된 문서|  
-|문서|1.  이 문서<br />2.  문서에 연결된 문서 템플릿|  
-|대화 상자|1.  이 대화 상자<br />2.  대화 상자를 소유하는 창<br />3.  응용 프로그램\(`CWinApp` 개체\)|  
+|When an object of this type receives a command . . .|It gives itself and other command-target objects a chance to handle the command in this order:|  
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
+|MDI frame window  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|Document frame window  (`CFrameWnd`, `CMDIChildWnd`)|1.  Active view<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|View|1.  This view<br />2.  Document attached to the view|  
+|Document|1.  This document<br />2.  Document template attached to the document|  
+|Dialog box|1.  This dialog box<br />2.  Window that owns the dialog box<br />3.  Application (`CWinApp` object)|  
   
- 선행하는 테이블의 두 번째 열에 있는 번호가 매겨진 항목에서 다른 개체\(예: 문서\)를 지정한 경우 첫 번째 열에서 해당 항목을 참조합니다. 예를 들어, 두 번째 열에 뷰가 명령을 해당 문서에 전달하는 것으로 지정된 경우 이후의 라우팅을 확인하려면 첫 번째 열에 있는 "문서" 항목을 참조합니다.  
+ Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.  
   
-## 참고 항목  
- [프레임워크가 처리기를 호출하는 방법](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

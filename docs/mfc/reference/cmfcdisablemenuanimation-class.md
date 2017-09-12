@@ -1,5 +1,5 @@
 ---
-title: "CMFCDisableMenuAnimation 클래스 | Microsoft 문서"
+title: CMFCDisableMenuAnimation Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDisableMenuAnimation class
+- CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 caps.latest.revision: 22
 author: mikeblome
@@ -35,77 +35,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ea0be944ca70d6f8317fd4bc60fdd50ecc714438
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e3c4dae9f7d1082cb90fd022b15b4adc43f3d764
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 클래스
-팝업 메뉴 애니메이션을 사용 하지 않도록 설정 합니다.  
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
+Disables pop-up menu animation.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDisableMenuAnimation  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
-  
-|||  
-|-|-|  
-|이름|설명|  
-|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|
-          `CMFCDisableMenuAnimation` 개체를 생성합니다.|  
-|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|소멸자|  
-  
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|이름|설명|  
-|[CMFCDisableMenuAnimation::Restore](#restore)|팝업 메뉴를 표시 하는 데는 프레임 워크는 이전 애니메이션을 복원 합니다.|  
+|Name|Description|  
+|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Constructs a `CMFCDisableMenuAnimation` object.|  
+|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destructor.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|이름|설명|  
-|`CMFCDisableMenuAnimation::m_animType`|이전 팝업 메뉴 애니메이션 형식을 저장합니다.|  
+|Name|Description|  
+|[CMFCDisableMenuAnimation::Restore](#restore)|Restores the previous animation that the framework used to display a pop-up menu.|  
   
-### <a name="remarks"></a>설명  
- 이 도우미 클래스를 사용 하 여 일시적으로 (예: 마우스 또는 키보드 명령을 처리 하는 경우) 팝업 메뉴 애니메이션을 사용 하지 않도록 설정 합니다.  
+### <a name="data-members"></a>Data Members  
   
- A `CMFCDisableMenuAnimation` 개체의 수명 동안 팝업 메뉴 애니메이션 사용 하지 않도록 설정 합니다. 생성자에서 현재 팝업 메뉴 애니메이션 유형을 저장는 `m_animType` 필드 및 현재 애니메이션에 입력 집합 `CMFCPopupMenu::NO_ANIMATION`합니다. 소멸자는 이전 애니메이션 형식을 복원합니다.  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCDisableMenuAnimation::m_animType`|Stores the previous pop-up menu animation type.|  
   
- 만들 수는 `CMFCDisableMenuAnimation` 단일 함수 전체에서 팝업 메뉴 애니메이션 사용 하지 않으려면 스택에 개체입니다. 팝업 메뉴 애니메이션 함수 사이 사용 하지 않도록 설정 하려는 경우 만들기는 `CMFCDisableMenuAnimation` 개체 힙에 대 한 다음 팝업 메뉴 애니메이션을 복원 하려는 경우 삭제 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this helper class to temporarily disable pop-up menu animation (for example, when you process mouse or keyboard commands).  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 메뉴 애니메이션 일시적으로 사용 하지 않으려면 스택을 사용 하는 방법을 보여 줍니다.  
+ A `CMFCDisableMenuAnimation` object disables pop-up menu animation during its lifetime. The constructor stores the current pop-up menu animation type in the `m_animType` field and sets the current animation type to `CMFCPopupMenu::NO_ANIMATION`. The destructor restores the previous animation type.  
   
- [!code-cpp[NVC_MFC_Misc #&1;](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+ You can create a `CMFCDisableMenuAnimation` object on the stack to disable pop-up menu animation throughout a single function. If you want to disable popup menu animation between functions, create a `CMFCDisableMenuAnimation` object on the heap and then delete it when you want to restore pop-up menu animation.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="example"></a>Example  
+ The following example shows how to use the stack to temporarily disable menu animation.  
+  
+ [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxpopupmenu.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpopupmenu.h  
   
-##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
- 팝업 메뉴를 표시 하는 데는 프레임 워크는 이전 애니메이션을 복원 합니다.  
+##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
+ Restores the previous animation that the framework used to display a pop-up menu.  
   
 ```  
 void Restore ();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 `CMFCDisableMenuAnimation` 소멸자가 팝업 메뉴를 표시 하는 데는 프레임 워크는 이전 애니메이션을 복원 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the `CMFCDisableMenuAnimation` destructor to restore the previous animation that the framework used to display a pop-up menu.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)
 

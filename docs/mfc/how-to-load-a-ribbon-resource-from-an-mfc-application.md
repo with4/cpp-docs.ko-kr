@@ -1,50 +1,69 @@
 ---
-title: "방법: MFC 응용 프로그램에서 리본 리소스 로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "리본 리소스, 로드"
+title: 'How to: Load a Ribbon Resource from an MFC Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 방법: MFC 응용 프로그램에서 리본 리소스 로드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e45f63ccf2af52a6e41b3f46e4a04b43101e99b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-응용프로그램에서 리본 리소스를 사용하기 위해 리본 리소스를 로드하려면 응용프로그램을 수정합니다.  
+---
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>How to: Load a Ribbon Resource from an MFC Application
+To use the ribbon resource in your application, modify the application to load the ribbon resource.  
   
-### 리본 리소스를 로드 하려면  
+### <a name="to-load-a-ribbon-resource"></a>To load a ribbon resource  
   
-1.  `CMainFrame` 클래스에서 `Ribbon Control` 개체를 선언합니다.  
+1.  Declare the `Ribbon Control` object in the `CMainFrame` class.  
   
-    ```  
+ ```  
     CMFCRibbonBar m_wndRibbonBar;   
-    ```  
+ ```  
   
-2.  `CMainFrame::OnCreate` 에서, 리본 컨트롤을 만들고 초기화합니다.  
+2.  In `CMainFrame::OnCreate`, create and initialize the Ribbon Control.  
   
-    ```  
+ ```  
     if (!m_wndRibbonBar.Create (this))  
-    {  
-        return -1;  
-    }  
-  
+ {  
+    return -1;  
+ }  
+ 
     if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
-    {  
-        return -1;  
-    }  
-    ```  
+ {  
+    return -1;  
+ }  
+ ```  
   
-## 참고 항목  
- [리본 디자이너\(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

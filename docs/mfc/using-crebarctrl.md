@@ -1,50 +1,69 @@
 ---
-title: "CReBarCtrl 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CReBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "자식 창, rebar 컨트롤"
-  - "콤보 상자, rebar 컨트롤에서"
-  - "rebar 컨트롤"
+title: Using CReBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CReBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- child windows [MFC], rebar controls
+- combo boxes [MFC], in rebar controls
+- rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# CReBarCtrl 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c3d9f122e7217da9fa1751883365c86cdb4a1db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Rebar 컨트롤은 자식 창에 대한 컨테이너 역할을 합니다.  이 자식 창은, 종종 다른 컨트롤, rebar 컨트롤 밴드에 할당됩니다.  Rebar 컨트롤은 각 밴드는 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창이 조합된 하나 이상의 밴드를 포함할 수 있습니다.  그러나 밴드는 둘 이상의 자식 창을 포함할 수 없습니다.  
+---
+# <a name="using-crebarctrl"></a>Using CReBarCtrl
+A rebar control acts as a container for child windows. These child windows, often other controls, are assigned to a rebar control band. A rebar control can contain one or more bands, with each band having any combination of a gripper bar, a bitmap, a text label, and a child window. However, bands cannot contain more than one child window.  
   
- 다음 그림은 두 개의 밴드가 있는 컨트롤을 보여 줍니다.  그리퍼 막대, 텍스트 레이블 \("주소"\) 및 콤보 상자 자식 창을 포함합니다.  다른 밴드는 그리퍼 막대, 텍스트 레이블 및 플랫 도구 모음 \(자식 창과 함께 구현\)를 포함합니다.  
+ The following illustration shows a rebar control that has two bands. One contains a gripper bar, a text label ("Address"), and a combo box child window. The other band contains a gripper bar, a text label, and a flat toolbar (implemented with a child window).  
   
- ![밴드가 2개 있는 rebar 컨트롤](../mfc/media/vc4ruz1.png "vc4RUZ1")  
+ ![Rebar control that has two bands](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [CReBar와 CReBarCtrl 비교](../mfc/crebar-vs-crebarctrl.md)  
+-   [CReBar vs. CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   
--   [Rebar 컨트롤 만들기](../mfc/creating-a-rebar-control.md)  
+-   [Creating a Rebar Control](../mfc/creating-a-rebar-control.md)  
   
--   [Rebar 컨트롤 및 밴드](../mfc/rebar-controls-and-bands.md)  
+-   [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md)  
   
--   [이미지 목록과 Rebar 컨트롤 함께 사용](../mfc/using-an-image-list-with-a-rebar-control.md)  
+-   [Using an Image List with a Rebar Control](../mfc/using-an-image-list-with-a-rebar-control.md)  
   
--   [대화 상자 모음과 Rebar 컨트롤 함께 사용](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
+-   [Using a Dialog Bar with a Rebar Control](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
   
--   [Rebar 컨트롤에서 알림 메시지 처리](../mfc/processing-notification-messages-in-a-rebar-control.md)  
+-   [Processing Notification Messages in a Rebar Control](../mfc/processing-notification-messages-in-a-rebar-control.md)  
   
-## 참고 항목  
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

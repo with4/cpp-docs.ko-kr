@@ -1,5 +1,5 @@
 ---
-title: "CMFCDropDownToolbarButton 클래스 | Microsoft 문서"
+title: CMFCDropDownToolbarButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,8 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDropDownToolbarButton class
-- OnCancelMode method
+- CMFCDropDownToolbarButton [MFC], CMFCDropDownToolbarButton
+- CMFCDropDownToolbarButton [MFC], CopyFrom
+- CMFCDropDownToolbarButton [MFC], DropDownToolbar
+- CMFCDropDownToolbarButton [MFC], ExportToMenuButton
+- CMFCDropDownToolbarButton [MFC], GetDropDownToolBar
+- CMFCDropDownToolbarButton [MFC], IsDropDown
+- CMFCDropDownToolbarButton [MFC], IsExtraSize
+- CMFCDropDownToolbarButton [MFC], OnCalculateSize
+- CMFCDropDownToolbarButton [MFC], OnChangeParentWnd
+- CMFCDropDownToolbarButton [MFC], OnClick
+- CMFCDropDownToolbarButton [MFC], OnClickUp
+- CMFCDropDownToolbarButton [MFC], OnContextHelp
+- CMFCDropDownToolbarButton [MFC], OnCustomizeMenu
+- CMFCDropDownToolbarButton [MFC], OnDraw
+- CMFCDropDownToolbarButton [MFC], OnDrawOnCustomizeList
+- CMFCDropDownToolbarButton [MFC], Serialize
+- CMFCDropDownToolbarButton [MFC], SetDefaultCommand
+- CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
 caps.latest.revision: 31
 author: mikeblome
@@ -53,94 +69,94 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24398ddb605489bf9677bd493a1bc1f490d583b9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab80905ed4055c2d0a4f73c64cc06eaac83db822
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 클래스
-클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음을 엽니다 ( [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
+# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton Class
+A type of toolbar button that behaves like a regular button when it is clicked. However, it opens a drop-down toolbar ( [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md) if the user presses and holds the toolbar button down.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDropDownToolbarButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|`CMFCDropDownToolbarButton` 개체를 생성합니다.|  
-|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|소멸자|  
+|[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Constructs a `CMFCDropDownToolbarButton` object.|  
+|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|현재 단추에 다른 도구 모음 단추의 속성을 복사합니다. (재정의 [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
-|`CMFCDropDownToolbarButton::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|드롭다운 도구 모음을 엽니다.|  
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|도구 모음 단추를 클릭 하 여 메뉴에 텍스트를 복사 합니다. (재정의 [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|단추와 연결 된 드롭다운 도구 모음을 검색 합니다.|  
-|`CMFCDropDownToolbarButton::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|드롭다운 도구 모음이 현재 열려 있는지 여부를 결정 합니다.|  
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|단추는 확장 된 테두리 함께 표시 될 수 있는지 여부를 결정 합니다. (재정의 [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
-|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|처리 하는 프레임 워크에서 호출 된 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) 메시지입니다. (`CMCToolBarButton::OnCancelMode`를 재정의합니다.)|  
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|새 도구 모음 단추를 삽입할 경우에 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
-|[CMFCDropDownToolbarButton::OnClick](#onclick)|사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|마우스 단추를 놓을 때 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다. (재정의 [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|부모 도구 모음에서 응용 프로그램 바로 가기 메뉴를 표시 하는 경우 제공 된 메뉴를 수정 합니다. (재정의 [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
-|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다. (재정의 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
-|[CMFCDropDownToolbarButton::Serialize](#serialize)|이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다. (재정의 [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|단추를 클릭할 때 프레임 워크를 사용 하는 기본 명령을 설정 합니다.|  
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCDropDownToolbarButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Opens a drop-down toolbar.|  
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copies text from the toolbar button to a menu. (Overrides [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Retrieves the drop-down toolbar that is associated with the button.|  
+|`CMFCDropDownToolbarButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Determines whether the drop-down toolbar is currently open.|  
+|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Determines whether the button can be displayed with an extended border. (Overrides [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
+|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Called by the framework to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Overrides `CMCToolBarButton::OnCancelMode`.)|  
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCDropDownToolbarButton::OnClick](#onclick)|Called by the framework when the user clicks the mouse button. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Called by the framework when the user releases the mouse button. (Overrides [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message. (Overrides [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modifies the provided menu when the application displays a shortcut menu on the parent toolbar. (Overrides [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
+|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCDropDownToolbarButton::Serialize](#serialize)|Reads this object from an archive or writes it to an archive. (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Sets the default command that the framework uses when a user clicks the button.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|드롭다운 도구 모음이 표시 되기 전에 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.|  
+|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Specifies the length of time that a user must hold the mouse button down before the drop-down toolbar appears.|  
   
-## <a name="remarks"></a>주의  
- A `CMFCDropDownToolBarButton` 일반 단추는 점에서 다릅니다 단추의 오른쪽 아래 모서리에 작은 화살표가 있는입니다. 사용자가 드롭다운 도구 모음에서 단추를 선택한 후 프레임 워크 최상위 도구 모음 단추 (오른쪽 아래 모서리에 있는 작은 화살표가 있는 단추)에 해당 아이콘을 표시 합니다.  
+## <a name="remarks"></a>Remarks  
+ A `CMFCDropDownToolBarButton` differs from an ordinary button in that it has a small arrow in the lower-right corner of the button. After the user selects a button from the drop-down toolbar, the framework displays its icon on the top-level toolbar button (the button with the small arrow in the lower-right corner).  
   
- 드롭다운 도구 모음을 구현 하는 방법에 대 한 정보를 참조 하십시오. [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)합니다.  
+ For information about how to implement a drop-down toolbar, see [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
- `CMFCDropDownToolBarButton` 개체를 내보낼 수는 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md) 개체 및 팝업 메뉴와 메뉴 단추를 표시 합니다.  
+ The `CMFCDropDownToolBarButton` object can be exported to a [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md) object and displayed as a menu button with a pop-up menu.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdropdowntoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
- 현재 단추에 다른 도구 모음 단추의 속성을 복사합니다.  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 복사할 소스 단추에 대 한 참조입니다.  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>주의  
- 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. `src`형식 이어야 합니다 `CMFCDropDownToolbarButton`합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button. `src` must be of type `CMFCDropDownToolbarButton`.  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
- `CMFCDropDownToolbarButton` 개체를 생성합니다.  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+ Constructs a `CMFCDropDownToolbarButton` object.  
   
 ```  
 CMFCDropDownToolbarButton();
@@ -151,114 +167,114 @@ CMFCDropDownToolbarButton(
     CMFCDropDownToolBar* pToolBar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 단추의 기본 텍스트입니다.  
+ The default text of the button.  
   
  [in] `pToolBar`  
- 에 대 한 포인터는 `CMFCDropDownToolBar` 단추를 누를 때 표시 되는 개체입니다.  
+ A pointer to the `CMFCDropDownToolBar` object that is displayed when the user presses the button.  
   
-### <a name="remarks"></a>주의  
- 도구 모음에서 첫 번째 단추에서 드롭다운 단추에 복사 생성자의 두 번째 오버 로드는 `pToolBar` 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The second overload of the constructor copies to the drop-down button the first button from the toolbar that `pToolBar` specifies.  
   
- 드롭다운 도구 모음 단추를 도구 모음에서 가장 최근에 사용한 단추를 클릭 하 여 텍스트를 사용 하는 일반적으로 `pToolBar` 지정 합니다. 로 지정 된 텍스트를 사용 하 여 `lpszName` 때 단추는 메뉴 단추 또는 변환에 표시 되는 **명령을** 탭은 **사용자 지정** 대화 상자. 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
+ Typically, a drop-down toolbar button uses the text from the most recently used button in the toolbar that `pToolBar` specifies. It uses the text specified by `lpszName` when the button is converted to a menu button or is displayed in the **Commands** tab of the **Customize** dialog box. For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-### <a name="example"></a>예제  
- 개체를 생성 하는 방법은 다음 예제는 `CMFCDropDownToolbarButton` 클래스입니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCDropDownToolbarButton` class. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&31;](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
- 드롭다운 도구 모음을 엽니다.  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
+ Opens a drop-down toolbar.  
   
 ```  
 BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 드롭 다운 프레임의 부모 창 또는 `NULL` 부모 창 드롭다운 도구 모음 단추를 사용 하 여 합니다.  
+ The parent window of the drop-down frame, or `NULL` to use the parent window of the drop-down toolbar button.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- [CMFCDropDownToolbarButton::OnClick](#onclick) 메서드를 클릭 하 고 도구 모음 단추를 누르고 때 드롭다운 도구 모음을 열려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The [CMFCDropDownToolbarButton::OnClick](#onclick) method calls this method to open the drop-down toolbar when the user presses and holds the toolbar button down.  
   
- 이 메서드를 사용 하 여 드롭다운 도구 모음을 만듭니다는 [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) 메서드. 부모 도구 모음에서 세로로 고정 되어 있는 경우이 메서드는 배치 드롭다운 도구 모음에 맞추기에 따라 부모 도구 모음에서의 왼쪽 또는 오른쪽 면 중 하나입니다. 그렇지 않으면이 메서드는 부모 도구 모음 아래에 있는 드롭다운 도구 모음을 배치합니다.  
+ This methods creates the drop-down toolbar by using the [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) method. If the parent toolbar is docked vertically, this method positions the drop-down toolbar either to the left-hand or right-hand side of the parent toolbar, depending on the fit. Otherwise, this method positions the drop-down toolbar underneath the parent toolbar.  
   
- 이 메서드는 실패 하는 경우 `pWnd` 는 `NULL` 드롭다운 도구 모음 단추에 부모 창 없는 합니다.  
+ This method fails if `pWnd` is `NULL` and the drop-down toolbar button does not have a parent window.  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
- 도구 모음 단추를 클릭 하 여 메뉴에 텍스트를 복사 합니다.  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
+ Copies text from the toolbar button to a menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `menuButton`  
- 대상 메뉴 단추에 대 한 참조입니다.  
+ A reference to the target menu button.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공하면 0이 아니고, 실패하면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 호출 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton))을 대상 메뉴 단추에 추가 된 다음이 단추에 대 한 각 도구 모음 메뉴 항목을 포함 하는 팝업 메뉴가 있습니다. 이 메서드는 하위 메뉴 팝업 메뉴에 추가 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls the base class implementation ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) and then appends to the target menu button a pop-up menu that contains each toolbar menu item in this button. This method does not append sub-menus to the pop-up menu.  
   
- 이 메서드는 실패 하는 경우 부모 도구 모음에서 `m_pToolBar`은 `NULL` 하거나 기본 클래스 구현을 반환 `FALSE`합니다.  
+ This method fails if the parent toolbar, `m_pToolBar`, is `NULL` or the base class implementation returns `FALSE`.  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
- 단추와 연결 된 드롭다운 도구 모음을 검색 합니다.  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
+ Retrieves the drop-down toolbar that is associated with the button.  
   
 ```  
 CMFCToolBar* GetDropDownToolBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 드롭다운 도구 모음 단추와 연결 된입니다.  
+### <a name="return-value"></a>Return Value  
+ The drop-down toolbar that is associated with the button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 반환 된 `m_pToolBar` 데이터 멤버입니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns the `m_pToolBar` data member.  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
- 드롭다운 도구 모음이 현재 열려 있는지 여부를 결정 합니다.  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
+ Determines whether the drop-down toolbar is currently open.  
   
 ```  
 BOOL IsDropDown() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 드롭다운 도구 모음이; 현재 열려 있는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop-down toolbar is currently open; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 드롭다운 도구 모음을 사용 하 여 열고는 [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) 메서드. 프레임 워크 드롭다운 도구 모음의 비클라이언트 영역에서 마우스 왼쪽 단추를 누를 때 드롭다운 도구 모음을 닫습니다.  
+### <a name="remarks"></a>Remarks  
+ The framework opens the drop-down toolbar by using the [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) method. The framework closes the drop-down toolbar when the user presses the left-mouse button in the non-client area of the drop-down toolbar.  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
- 단추는 확장 된 테두리 함께 표시 될 수 있는지 여부를 결정 합니다.  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
+ Determines whether the button can be displayed with an extended border.  
   
 ```  
 virtual BOOL IsExtraSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 확장 된 테두리; 도구 모음 단추를 표시할 수 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the toolbar button can be displayed with an extended border; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 확장 된 테두리에 대 한 자세한 내용은 참조 [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about extended borders, see [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
- 드롭다운 도구 모음이 표시 되기 전에 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
+ Specifies the length of time that a user must hold the mouse button down before the drop-down toolbar appears.  
   
 ```  
 static UINT m_uiShowBarDelay;  
 ```  
   
-### <a name="remarks"></a>주의  
- 지연 시간 (밀리초) 단위로 측정 됩니다. 기본값은 500입니다. 이 공유 데이터 멤버의 값을 변경 하 여 다른 지연 시간을 설정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The delay time is measured in milliseconds. The default value is 500. You can set another delay by changing the value of this shared data member.  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
- 지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다.  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
+ Called by the framework to calculate the size of the button for the specified device context and docking state.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -267,38 +283,38 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `sizeDefault`  
- 단추의 기본 크기입니다.  
+ The default size of the button.  
   
  [in] `bHorz`  
- 부모 도구 모음에서의 도킹 상태입니다. 이 매개 변수는 `TRUE` 도구 모음 가로로 도킹 하거나, 부동 또는 `FALSE` 도구 모음에서 세로로 고정 되어 있는 경우.  
+ The dock state of the parent toolbar. This parameter is `TRUE` if the toolbar is docked horizontally or is floating, or `FALSE` if the toolbar is docked vertically.  
   
-### <a name="return-value"></a>반환 값  
- A `SIZE` 픽셀 단위로 단추의 크기를 포함 하는 구조입니다.  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` structure that contains the dimensions of the button, in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) 단추 크기의 가로 크기가에 있는 드롭다운 화살표의 너비를 추가 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) by adding the width of the drop-down arrow to the horizontal dimension of the button size.  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
- 새 도구 모음 단추를 삽입할 경우에 프레임 워크에서 호출 합니다.  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 새 부모 창입니다.  
+ The new parent window.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 텍스트 레이블의 선택을 취소 하 여 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) 설정 하는 [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) 및 [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) 데이터 멤버를 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) by clearing the text label ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) and setting the [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) and [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) data members to `FALSE`.  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
- 사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 합니다.  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
+ Called by the framework when the user clicks the mouse button.  
   
 ```  
 virtual BOOL OnClick(
@@ -306,88 +322,88 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 도구 모음 단추의 부모 창입니다.  
+ The parent window of the toolbar button.  
   
  [in] `bDelay`  
- `TRUE`경우 지연 된 메시지를 처리 합니다.  
+ `TRUE` if the message should be handled with a delay.  
   
-### <a name="return-value"></a>반환 값  
- 단추 클릭 하 여 메시지를 처리 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), 드롭다운 도구 모음 상태를 업데이트 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), by updating the state of the drop-down toolbar.  
   
- 이 메서드는 지정 된 시간을 대기 하는 타이머를 만듭니다 사용자가 도구 모음 단추를 클릭 하면는 [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) 데이터 멤버 및 사용 하 여 엽니다 드롭다운 도구 모음에서 [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) 메서드. 이 메서드는 사용자가 도구 모음 단추 클릭, 두 번째 시간 드롭다운 도구 모음을 닫습니다.  
+ When a user clicks the toolbar button, this method creates a timer that waits the length of time specified by the [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) data member and then opens the drop-down toolbar by using the [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) method. This method closes the drop-down toolbar the second time the user clicks the toolbar button.  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
- 마우스 단추를 놓을 때 프레임 워크에서 호출 합니다.  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
+ Called by the framework when the user releases the mouse button.  
   
 ```  
 virtual BOOL OnClickUp();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추 클릭 하 여 메시지를 처리 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), 드롭다운 도구 모음 상태를 업데이트 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), by updating the state of the drop-down toolbar.  
   
- 이 메서드는 활성 상태 이면 드롭다운 도구 모음 타이머를 중지 합니다. 열려 있는 경우에 드롭다운 도구 모음을 닫습니다.  
+ This method stops the drop-down toolbar timer if it is active. It closes the drop-down toolbar if it is open.  
   
- 드롭다운 도구 모음 및 도구 모음 드롭다운 타이머에 대 한 자세한 내용은 참조 [CMFCDropDownToolbarButton::OnClick](#onclick)합니다.  
+ For more information about the drop-down toolbar and drop-down toolbar timer, see [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
- 부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다.  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
+ Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 도구 모음 단추의 부모 창입니다.  
+ The parent window of the toolbar button.  
   
-### <a name="return-value"></a>반환 값  
- 단추에서 도움말 메시지를 처리 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the help message; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp))를 호출 하 여는 [CMFCDropDownToolbarButton::OnClick](#onclick) 메서드 `bDelay` 로 설정 `FALSE`합니다. 이 메서드가 반환 되는 값을 반환 [CMFCDropDownToolbarButton::OnClick](#onclick)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) by calling the [CMFCDropDownToolbarButton::OnClick](#onclick) method with `bDelay` set to `FALSE`. This method returns the value that is returned by [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
- 에 대 한 자세한 내용은 `WM_HELPHITTEST message, see` [TN028: 상황에 맞는 도움말 지원](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
+ For more information about the `WM_HELPHITTEST message, see` [TN028: Context-Sensitive Help Support](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
- 부모 도구 모음에서 응용 프로그램 바로 가기 메뉴를 표시 하는 경우 제공 된 메뉴를 수정 합니다.  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
+ Modifies the provided menu when the application displays a shortcut menu on the parent toolbar.  
   
 ```  
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pMenu`  
- 메뉴 사용자 지정입니다.  
+ The menu to customize.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) 하 여 다음의 메뉴 항목을 사용 하지 않도록 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) by disabling the following menu items:  
   
-- **단추 이미지 복사**  
+- **Copy Button Image**  
   
-- **단추의 모양**  
+- **Button Appearance**  
   
-- **이미지**  
+- **Image**  
   
-- **텍스트**  
+- **Text**  
   
-- **이미지 및 텍스트**  
+- **Image and Text**  
   
- 사용자 지정 모드에는 프레임 워크가 표시 하는 바로 가기 메뉴를 수정 하려면이 메서드를 재정의 합니다.  
+ Override this method to modify the shortcut menu that the framework displays in customization mode.  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
- 지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
+ Called by the framework to draw the button by using the specified styles and options.  
   
 ```  
 virtual void OnDraw(
@@ -401,36 +417,36 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `rect`  
- 단추는 경계 사각형입니다.  
+ The bounding rectangle of the button.  
   
  [in] `pImages`  
- 단추와 연결 된 도구 모음 이미지의 컬렉션입니다.  
+ The collection of toolbar images that is associated with the button.  
   
  [in] `bHorz`  
- 부모 도구 모음에서의 도킹 상태입니다. 이 매개 변수는 `TRUE` 단추는 가로로 도킹 된 경우 및 `FALSE` 단추를 세로로 도킹 됩니다.  
+ The dock state of the parent toolbar. This parameter is `TRUE` when the button is docked horizontally and `FALSE` when the button is docked vertically.  
   
  [in] `bCustomizeMode`  
- 도구 모음 사용자 지정 모드에 있는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 도구 모음에서이 사용자 지정 모드에 있을 때와 `FALSE` 는 도구 모음을 사용자 지정 모드 없습니다.  
+ Specifies whether the toolbar is in customization mode. This parameter is `TRUE` when the toolbar is in customization mode and `FALSE` when the toolbar is not in customization mode.  
   
  [in] `bHighlight`  
- 단추가 강조 표시 되는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 는 단추가 강조 표시 되 면 및 `FALSE` 때 단추 강조 표시 되지 않습니다.  
+ Specifies whether the button is highlighted. This parameter is `TRUE` when the button is highlighted and `FALSE` when the button is not highlighted.  
   
  [in] `bDrawBorder`  
- 단추 테두리를 표시할지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 때 단추 테두리를 표시할지 및 `FALSE` 단추 테두리를 표시 되지 않아야 합니다.  
+ Specifies whether the button should display its border. This parameter is `TRUE` when the button should display its border and `FALSE` when the button should not display its border.  
   
  [in] `bGrayDisabledButtons`  
- 비활성화 된 단추 음영을 적용 하거나 비활성화 된 이미지 컬렉션을 사용 하 여 것인지 지정 합니다. 이 매개 변수는 `TRUE` 때 비활성화 된 단추를 회색으로 표시 되어야 하 고 `FALSE` 이 메서드는 비활성화 된 이미지 컬렉션을 사용 해야 합니다.  
+ Specifies whether to shade disabled buttons or use the disabled images collection. This parameter is `TRUE` when disabled buttons should be shaded and `FALSE` when this method should use the disabled images collection.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추 그리기를 사용자 지정 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method to customize toolbar button drawing.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
- 단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다.  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+ Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -439,59 +455,59 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `rect`  
- 단추는 경계 사각형입니다.  
+ The bounding rectangle of the button.  
   
  [in] `bSelected`  
- 단추 선택 되었는지 여부를 나타냅니다. 이 매개 변수가 `TRUE`, 단추를 선택 합니다. 이 매개 변수가 `FALSE`, 단추를 선택 하지 않으면.  
+ Whether the button is selected. If this parameter is `TRUE`, the button is selected. If this parameter is `FALSE`, the button is not selected.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 장치 컨텍스트에에서 단추의 픽셀 너비입니다.  
+### <a name="return-value"></a>Return Value  
+ The width, in pixels, of the button on the specified device context.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 사용자 지정 대화 상자 ( **명령을** 탭) 소유자 그리기 목록 상자에 표시 되도록 하는 단추는 필요한 경우.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the customization dialog box ( **Commands** tab) when the button is required to display itself on the owner-draw list box.  
   
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) 단추의 텍스트 레이블을 단추의 이름을 변경 하 여 (즉,의 값에는 `lpszName` 생성자에 전달 하는 매개 변수).  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) by changing the text label of the button to the name of the button (that is,to the value of the `lpszName` parameter that you passed to the constructor).  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
- 이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다.  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
+ Reads this object from an archive or writes it to an archive.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
- `CArchive` 개체를 serialize 또는입니다.  
+ The `CArchive` object from which or to which to serialize.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 부모 도구 모음에서의 리소스 ID를 직렬화 하 여 합니다. 보관 파일을 로드 하는 경우 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)&0;이 아닌 값을 반환)를 설정 하는이 메서드는 `m_pToolBar` 직렬화 된 리소스 ID를 포함 하는 도구 모음에 데이터 멤버  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) by serializing the resource ID of the parent toolbar. When the archive is loading ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) returns a nonzero value), this method sets the `m_pToolBar` data member to the toolbar that contains the serialized resource ID.  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
- 단추를 클릭할 때 프레임 워크를 사용 하는 기본 명령을 설정 합니다.  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
+ Sets the default command that the framework uses when a user clicks the button.  
   
 ```  
 void SetDefaultCommand(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 기본 명령의 ID입니다.  
+ The ID of the default command.  
   
-### <a name="remarks"></a>주의  
- 단추를 클릭할 때 프레임 워크가 실행 하는 기본 명령을 지정 하려면이 메서드를 호출 합니다. 지정 된 명령 ID 가진 항목이 `uiCmd` 부모 드롭다운 도구 모음에 위치 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to specify a default command that the framework executes when the user clicks the button. An item with the command ID specified by `uiCmd` must be located in the parent drop-down toolbar.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
- [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

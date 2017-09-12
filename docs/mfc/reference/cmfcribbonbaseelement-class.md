@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonBaseElement 클래스 | Microsoft 문서"
+title: CMFCRibbonBaseElement Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -127,7 +127,119 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonBaseElement class
+- CMFCRibbonBaseElement [MFC], AddToKeyList
+- CMFCRibbonBaseElement [MFC], AddToListBox
+- CMFCRibbonBaseElement [MFC], CanBeAddedToQuickAccessToolBar
+- CMFCRibbonBaseElement [MFC], CanBeCompacted
+- CMFCRibbonBaseElement [MFC], CanBeStretched
+- CMFCRibbonBaseElement [MFC], CanBeStretchedHorizontally
+- CMFCRibbonBaseElement [MFC], CleanUpSizes
+- CMFCRibbonBaseElement [MFC], ClosePopupMenu
+- CMFCRibbonBaseElement [MFC], CopyFrom
+- CMFCRibbonBaseElement [MFC], DestroyCtrl
+- CMFCRibbonBaseElement [MFC], DrawImage
+- CMFCRibbonBaseElement [MFC], Find
+- CMFCRibbonBaseElement [MFC], FindByData
+- CMFCRibbonBaseElement [MFC], FindByID
+- CMFCRibbonBaseElement [MFC], FindByOriginal
+- CMFCRibbonBaseElement [MFC], GetCompactSize
+- CMFCRibbonBaseElement [MFC], GetData
+- CMFCRibbonBaseElement [MFC], GetDescription
+- CMFCRibbonBaseElement [MFC], GetDroppedDown
+- CMFCRibbonBaseElement [MFC], GetElements
+- CMFCRibbonBaseElement [MFC], GetElementsByID
+- CMFCRibbonBaseElement [MFC], GetHighlighted
+- CMFCRibbonBaseElement [MFC], GetID
+- CMFCRibbonBaseElement [MFC], GetImageSize
+- CMFCRibbonBaseElement [MFC], GetIntermediateSize
+- CMFCRibbonBaseElement [MFC], GetKeys
+- CMFCRibbonBaseElement [MFC], GetKeyTipRect
+- CMFCRibbonBaseElement [MFC], GetKeyTipSize
+- CMFCRibbonBaseElement [MFC], GetLocationInGroup
+- CMFCRibbonBaseElement [MFC], GetMenuKeys
+- CMFCRibbonBaseElement [MFC], GetNotifyID
+- CMFCRibbonBaseElement [MFC], GetOriginal
+- CMFCRibbonBaseElement [MFC], GetParentCategory
+- CMFCRibbonBaseElement [MFC], GetParentPanel
+- CMFCRibbonBaseElement [MFC], GetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], GetParentWnd
+- CMFCRibbonBaseElement [MFC], GetPressed
+- CMFCRibbonBaseElement [MFC], GetQuickAccessToolBarID
+- CMFCRibbonBaseElement [MFC], GetRect
+- CMFCRibbonBaseElement [MFC], GetRegularSize
+- CMFCRibbonBaseElement [MFC], GetSize
+- CMFCRibbonBaseElement [MFC], GetText
+- CMFCRibbonBaseElement [MFC], GetToolTipText
+- CMFCRibbonBaseElement [MFC], GetTopLevelRibbonBar
+- CMFCRibbonBaseElement [MFC], HasCompactMode
+- CMFCRibbonBaseElement [MFC], HasFocus
+- CMFCRibbonBaseElement [MFC], HasIntermediateMode
+- CMFCRibbonBaseElement [MFC], HasLargeMode
+- CMFCRibbonBaseElement [MFC], HasMenu
+- CMFCRibbonBaseElement [MFC], HitTest
+- CMFCRibbonBaseElement [MFC], IsAlignByColumn
+- CMFCRibbonBaseElement [MFC], IsAlwaysLargeImage
+- CMFCRibbonBaseElement [MFC], IsAutoRepeatMode
+- CMFCRibbonBaseElement [MFC], IsChecked
+- CMFCRibbonBaseElement [MFC], IsCompactMode
+- CMFCRibbonBaseElement [MFC], IsDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], IsDisabled
+- CMFCRibbonBaseElement [MFC], IsDroppedDown
+- CMFCRibbonBaseElement [MFC], IsFocused
+- CMFCRibbonBaseElement [MFC], IsGalleryIcon
+- CMFCRibbonBaseElement [MFC], IsHighlighted
+- CMFCRibbonBaseElement [MFC], IsIntermediateMode
+- CMFCRibbonBaseElement [MFC], IsLargeMode
+- CMFCRibbonBaseElement [MFC], IsMenuMode
+- CMFCRibbonBaseElement [MFC], IsPressed
+- CMFCRibbonBaseElement [MFC], IsQATMode
+- CMFCRibbonBaseElement [MFC], IsSeparator
+- CMFCRibbonBaseElement [MFC], IsShowGroupBorder
+- CMFCRibbonBaseElement [MFC], IsShowTooltipOnBottom
+- CMFCRibbonBaseElement [MFC], IsTabStop
+- CMFCRibbonBaseElement [MFC], IsTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], IsVisible
+- CMFCRibbonBaseElement [MFC], IsWholeRowHeight
+- CMFCRibbonBaseElement [MFC], NotifyCommand
+- CMFCRibbonBaseElement [MFC], NotifyHighlightListItem
+- CMFCRibbonBaseElement [MFC], OnAddToQAToolbar
+- CMFCRibbonBaseElement [MFC], OnAfterChangeRect
+- CMFCRibbonBaseElement [MFC], OnAutoRepeat
+- CMFCRibbonBaseElement [MFC], OnCalcTextSize
+- CMFCRibbonBaseElement [MFC], OnChangeMenuHighlight
+- CMFCRibbonBaseElement [MFC], OnDraw
+- CMFCRibbonBaseElement [MFC], OnDrawKeyTip
+- CMFCRibbonBaseElement [MFC], OnDrawMenuImage
+- CMFCRibbonBaseElement [MFC], OnDrawOnList
+- CMFCRibbonBaseElement [MFC], OnKey
+- CMFCRibbonBaseElement [MFC], OnMenuKey
+- CMFCRibbonBaseElement [MFC], OnRTLChanged
+- CMFCRibbonBaseElement [MFC], OnShow
+- CMFCRibbonBaseElement [MFC], OnShowPopupMenu
+- CMFCRibbonBaseElement [MFC], PostMenuCommand
+- CMFCRibbonBaseElement [MFC], Redraw
+- CMFCRibbonBaseElement [MFC], SetACCData
+- CMFCRibbonBaseElement [MFC], SetCompactMode
+- CMFCRibbonBaseElement [MFC], SetData
+- CMFCRibbonBaseElement [MFC], SetDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], SetDescription
+- CMFCRibbonBaseElement [MFC], SetID
+- CMFCRibbonBaseElement [MFC], SetInitialMode
+- CMFCRibbonBaseElement [MFC], SetKeys
+- CMFCRibbonBaseElement [MFC], SetOriginal
+- CMFCRibbonBaseElement [MFC], SetParentCategory
+- CMFCRibbonBaseElement [MFC], SetParentMenu
+- CMFCRibbonBaseElement [MFC], SetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], SetRect
+- CMFCRibbonBaseElement [MFC], SetText
+- CMFCRibbonBaseElement [MFC], SetTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], SetToolTipText
+- CMFCRibbonBaseElement [MFC], SetVisible
+- CMFCRibbonBaseElement [MFC], StretchHorizontally
+- CMFCRibbonBaseElement [MFC], StretchToWholeRow
+- CMFCRibbonBaseElement [MFC], UpdateTooltipInfo
+- CMFCRibbonBaseElement [MFC], OnProcessKey
+- CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 caps.latest.revision: 34
 author: mikeblome
@@ -147,196 +259,195 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c596d7ef6ba87ca0f084c03856cf4f54dc8eac49
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 598454ba44dd00d83046bb67cb5024ca64e07400
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 클래스
-`CMFCRibbonBaseElement` 에 추가할 수 있는 모든 요소에 대 한 기본 클래스는 [리본 표시줄](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  
+# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
+The `CMFCRibbonBaseElement` class is the base class for all elements that you can add to a [ribbon bar](../../mfc/reference/cmfcribbonbar-class.md). Examples of ribbon elements are ribbon buttons, ribbon check boxes, and ribbon combo boxes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonBaseElement : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonBaseElement`|
-          `CMFCRibbonBaseElement` 개체를 생성합니다.|  
+|`CMFCRibbonBaseElement`|Constructs a `CMFCRibbonBaseElement` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|리본 요소에 대 한 keytip keytip이 배열에 추가합니다.|  
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|지정 된 리본 메뉴 명령 목록 상자에는 리본 요소를 추가합니다.|  
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|빠른 실행 도구 모음 리본 요소를 추가할 수 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|리본 요소의 크기가 압축 될 수 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|리본 요소의 높이 리본 행의 높이를 세로 방향으로 늘어날 수 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|리본 요소의 너비 변경할 수 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|리본 요소에 대 한 차원 설정을 정리합니다.|  
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|리본 요소에 대 한 팝업 메뉴를 닫습니다.|  
-|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|지정 된 상태 복사 `CMFCRibbonBaseElement` 현재 개체입니다.|  
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|리본 요소를 소멸 시킵니다.|  
-|[CMFCRibbonBaseElement::DrawImage](#drawimage)|리본 요소에 대 한 이미지를 그립니다.|  
-|[CMFCRibbonBaseElement::Find](#find)|현재 개체를 가리키는 경우에 리본 요소에 지정된 된 포인터를 반환 합니다.|  
-|[CMFCRibbonBaseElement::FindByData](#findbydata)|지정된 된 데이터를 포함 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|해당 요소에 지정 된 명령 ID로 식별 되는 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|원래 리본 요소에 지정 된 리본 요소 일치 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|리본 요소의 압축 크기를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetData](#getdata)|리본 요소와 연결 된 사용자 정의 데이터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetDescription](#getdescription)|리본 요소에 대 한 설명을 반환합니다.|  
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|의 팝업 메뉴를 삭제할 경우에 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetElements](#getelements)|지정된 된 배열에 현재 리본 요소를 추가합니다.|  
-|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|현재 리본 요소는 지정 된 명령 ID를 포함 하는 경우 지정된 된 배열에 현재 리본 요소를 추가|  
-|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|강조 표시 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetID](#getid)|리본 요소의 명령 ID를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|리본 요소의 이미지 크기를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|중간 상태인 리본 요소의 크기를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetKeys](#getkeys)|리본 요소와 관련 된 keytip를 반환 합니다.|  
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|리본 요소에 대 한 keytip 경계 사각형을 검색합니다.|  
-|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Keytip 텍스트의 크기를 검색합니다.|  
-|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|리본 그룹에 있는 리본 요소의 표시 위치를 나타냅니다.|  
-|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|단추와 연결 된 키 설명을 반환 합니다.|  
-|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|리본 요소에 대 한 알림 명령 ID를 검색합니다.|  
-|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|원래 리본 요소를 검색합니다.|  
-|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|리본 요소에 대 한 리본 범주를 검색합니다.|  
-|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|리본 요소를 포함 하는 리본 패널을 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|리본 요소에 대 한 부모 리본 표시줄을 검색합니다.|  
-|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|리본 요소에 대 한 부모 창을 검색합니다.|  
-|[CMFCRibbonBaseElement::GetPressed](#getpressed)|사용자가 현재 누를 경우에 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|빠른 실행 도구 모음에 있는 경우에 리본 요소 명령 ID를 검색 합니다.|  
-|[CMFCRibbonBaseElement::GetRect](#getrect)|리본 요소에 대 한 경계 사각형을 반환합니다.|  
-|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|리본 요소의 보통 크기를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetSize](#getsize)|리본 요소의 현재 크기를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetText](#gettext)|리본 요소와 연결 된 텍스트를 반환 합니다.|  
-|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|리본 요소의 도구 설명 텍스트를 반환합니다.|  
-|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|리본 요소에 대 한 최상위 수준 리본 표시줄을 검색합니다.|  
-|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|리본 요소에 압축 모드가 있는지 여부를 지정합니다.|  
-|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|부모 요소에 키보드 포커스가 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|리본 요소에 중간 모드가 있는지 여부를 지정합니다.|  
-|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|리본 요소에는 큰 모드에 있는지 여부를 지정 합니다.|  
-|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|리본 요소에는 메뉴에 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::HitTest](#hittest)|지정 된 위치에 있으면 리본 요소에 대 한 포인터를 검색 합니다.|  
-|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|리본 요소 다른 리본 요소와 세로 방향으로 정렬 되는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|리본 요소 이미지 크기는 항상 큰 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|리본 요소 자동 반복 모드 인지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsChecked](#ischecked)|리본 요소 검사할지 여부를 지정 합니다.|  
-|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|리본 요소 compact 모드 인지 여부를 지정 합니다.|  
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adds a keytip for the ribbon element to an array of keytips.|  
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adds a ribbon element to the specified ribbon commands list box.|  
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indicates whether the ribbon element can be added to the quick access toolbar.|  
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indicates whether the size of the ribbon element can be compact.|  
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.|  
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indicates whether the width of the ribbon element can change.|  
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Cleans up the dimension settings for the ribbon element.|  
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Closes the popup menu for the ribbon element.|  
+|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copies the state of the specified `CMFCRibbonBaseElement` to the current object.|  
+|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destroys the ribbon element.|  
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Draws the image for the ribbon element.|  
+|[CMFCRibbonBaseElement::Find](#find)|Returns the specified pointer to the ribbon element if it points to the current object.|  
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Retrieves a pointer to the ribbon element if it contains the specified data.|  
+|[CMFCRibbonBaseElement::FindByID](#findbyid)|Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.|  
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Retrieves a pointer to the ribbon element if its original ribbon element matches the specified ribbon element.|  
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Returns the compact size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetData](#getdata)|Retrieves the user-defined data associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Returns the description of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.|  
+|[CMFCRibbonBaseElement::GetElements](#getelements)|Adds the current ribbon element to the specified array.|  
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.|  
+|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Retrieves a pointer to the ribbon element if it is highlighted.|  
+|[CMFCRibbonBaseElement::GetID](#getid)|Returns the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Returns the image size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Returns the size of the ribbon element in its intermediate state.|  
+|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Returns the keytip associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Retrieves the keytip boundary rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Retrieves the size of the keytip text.|  
+|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indicates the display location of the ribbon element in a ribbon group.|  
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Returns the keytips associated with a button.|  
+|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Retrieves the notification command ID for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Retrieves the original ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Retrieves the ribbon category for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Retrieves the ribbon panel that contains the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Retrieves the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Retrieves the parent window for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Retrieves a pointer to the ribbon element if the user currently presses it.|  
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::GetRect](#getrect)|Returns the bounding rectangle of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetSize](#getsize)|Returns the current size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetText](#gettext)|Returns the text associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Returns tooltip text of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Retrieves the top level ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Specifies whether the ribbon element has a compact mode.|  
+|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indicates whether the parent element has keyboard focus.|  
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Specifies whether the ribbon element has an intermediate mode.|  
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Specifies whether the ribbon element has a large mode.|  
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indicates whether the ribbon element has a menu.|  
+|[CMFCRibbonBaseElement::HitTest](#hittest)|Retrieves a pointer to the ribbon element if the specified point is located in it.|  
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indicates whether the ribbon element is aligned vertically with other ribbon elements.|  
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indicates whether the ribbon element image size is always large.|  
+|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indicates whether the ribbon element is in auto repeat mode.|  
+|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Specifies whether the ribbon element is checked.|  
+|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Specifies whether the ribbon element is in a compact mode.|  
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||  
-|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|리본 요소 되지 않는지 여부를 지정 합니다.|  
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|리본 요소 팝업 메뉴를 표시 하 고 삭제 여부를 결정 합니다.|  
-|[CMFCRibbonBaseElement::IsFocused](#isfocused)|리본 요소에 포커스가 있는지 여부를 지정 합니다.|  
-|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|리본 요소 리본 갤러리에 포함 되어 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|리본 요소 강조 표시 되어 있는지 여부를 지정 합니다.|  
-|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|리본 요소에 대 한 현재 이미지 중간 크기 인지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|여부는 현재 이미지 큰는 리본 요소에 대 한 크기를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|리본 요소 메뉴에 포함 되어 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsPressed](#ispressed)|사용자는 리본 요소를 클릭 하 고 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|빠른 실행 도구 모음 리본 요소가 포함 되는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|리본 요소 구분 기호 표시 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|리본 요소에 일반적인 테두리를 표시 하는 그룹에 포함 되는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|도구 설명에 표시할 리본 요소 아래에 표시 되는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|키보드와 리본 요소를 선택할 수 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|리본 요소에 대 한 텍스트 오른쪽에 표시 되는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|리본 요소는 현재 표시 되어 있는지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|리본 요소의 표시 heigth 포함 된 리본 패널의 표시 높이와 같은지 여부를 나타냅니다.|  
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|리본 요소의 부모 창에 명령 알림을 보냅니다.|  
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|사용자 목록에 있는 리본 요소를 강조 표시할 때 리본 표시줄의 부모 창을 알립니다.|  
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|지정 된 빠른 실행 도구 모음 리본 요소를 추가합니다.|  
-|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|리본 요소에 대 한 도구 설명을 업데이트합니다.|  
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|지속적인된 사용자 입력에 대 한 응답으로 리본 요소를 업데이트합니다.|  
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|리본 요소에 대 한 텍스트의 크기를 계산 합니다.|  
-|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|메뉴에 있는 리본 요소에 대 한 강조 표시가 변경 될 때 프레임 워크에서 호출 합니다.|  
-|[CMFCRibbonBaseElement::OnDraw](#ondraw)|리본 요소를 그리기 위해 프레임워크에서 호출됩니다.|  
-|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|리본 요소에 대 한 keytip 그리려는 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|리본 요소에 대 한 메뉴 이미지를 그릴 때 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|명령 목록 상자에서 리본 요소를 그리는 데 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCRibbonBaseElement::OnKey](#onkey)|사용자는 keytip 리본 요소에 포커스가 때 프레임 워크에서 호출 합니다.|  
+|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Specifies whether the ribbon element is disabled.|  
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determines whether the ribbon element displays a popup menu and is dropped down.|  
+|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Specifies whether the ribbon element has the focus.|  
+|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indicates whether the ribbon element is contained in a ribbon gallery.|  
+|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Specifies whether ribbon element is highlighted.|  
+|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indicates whether the current image for the ribbon element is intermediate size.|  
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indicates whether the current image for the ribbon element is large sized.|  
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indicates whether the ribbon element is contained in a menu.|  
+|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indicates whether the user has clicked the ribbon element.|  
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indicates whether the ribbon element is contained in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indicates whether the ribbon element is a display separator.|  
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indicates whether the ribbon element is contained in a group that displays a common border.|  
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indicates whether the tooltip is displayed under the ribbon element.|  
+|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indicates whether the ribbon element can be selected with the keyboard.|  
+|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indicates whether the text for the ribbon element is displayed on the right.|  
+|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indicates whether the ribbon element is currently displayed.|  
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indicates whether the display heigth of the ribbon element is the same as the display height of the ribbon panel that contains it.|  
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Sends a command notification to the parent window of the ribbon element.|  
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.|  
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adds the ribbon element to the specified quick access toolbar.|  
+|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Updates the tooltip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Updates the ribbon element in response to sustained user input.|  
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calculates the size of the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Called by the framework when the highlight changes for a ribbon element that is located in a menu.|  
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Called by the framework to draw the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Called by the framework to draw the keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the menu image for the ribbon element is drawn.|  
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Called by the framework to draw the ribbon element in a commands list box.|  
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Called by the framework when the user presses a keytip and the ribbon element has the focus.|  
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||  
-|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|레이아웃 방향 변경 될 때 프레임 워크에서 호출 합니다.|  
-|[CMFCRibbonBaseElement::OnShow](#onshow)|프레임 워크 표시 하거나 숨기려면 리본 요소에 의해 호출 됩니다.|  
-|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|팝업 메뉴를 표시 하려면 리본 요소 때 프레임 워크에서 호출 합니다.|  
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Called by the framework when the layout changes direction.|  
+|[CMFCRibbonBaseElement::OnShow](#onshow)|Called by the framework to show or hide the ribbon element.|  
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when the ribbon element is going to display a popup menu.|  
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||  
-|[CMFCRibbonBaseElement::Redraw](#redraw)|리본 요소에 대 한 업데이트 됩니다.|  
-|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|리본 요소에 대한 내게 필요한 옵션 데이터를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|리본 요소에 대 한 표시 크기를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetData](#setdata)|데이터 항목을 리본 요소에 연결합니다.|  
+|[CMFCRibbonBaseElement::Redraw](#redraw)|Updates the display for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Sets the accessibility data for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Sets the display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetData](#setdata)|Associates a data item with the ribbon element.|  
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||  
-|[CMFCRibbonBaseElement::SetDescription](#setdescription)|리본 요소에 대한 설명을 설정합니다.|  
-|[CMFCRibbonBaseElement::SetID](#setid)|리본 요소의 명령 ID를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|리본 요소에 대 한 초기 표시 크기를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetKeys](#setkeys)|리본 요소에 대 한 keytip를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|리본 요소에 대 한 원래 리본 요소를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|리본 요소에 대 한 부모 범주를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|부모 메뉴 컨테이너 리본 요소를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|리본 요소에 대 한 부모 리본 표시줄을 설정합니다.|  
-|[CMFCRibbonBaseElement::SetRect](#setrect)|리본 요소에 대 한 사각형을 표시 그 차원 용을 설정 합니다.|  
-|[CMFCRibbonBaseElement::SetText](#settext)|리본 요소의 텍스트를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|오른쪽에 표시 하기 위해 리본 요소에 대 한 텍스트를 설정 합니다.|  
-|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|리본 요소에 대 한 도구 설명 텍스트를 설정합니다.|  
-|[CMFCRibbonBaseElement::SetVisible](#setvisible)|리본 요소의 표시 여부 상태를 설정합니다.|  
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|리본 요소의 너비를 확장합니다.|  
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|지정 된 행 높이에 리본 요소의 표시를 변경합니다.|  
-|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|리본 요소에 대 한 명령 리소스를 사용 하 여 도구 설명 텍스트를 업데이트 합니다.|  
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Sets the description for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetID](#setid)|Sets the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Sets the initial display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Sets a keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Sets the original ribbon element for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Sets the parent category for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Sets the parent menu container for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Sets the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetRect](#setrect)|Sets the dimensions fot he display rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetText](#settext)|Sets the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Sets the text for the ribbon element to display on the right.|  
+|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Sets the tooltip text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Sets the visibility state of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Stretches the width of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Changes the display height of the ribbon element to the specified row height.|  
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Updates the tooltip text by using the command resource for the ribbon element.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|바로 가기 키를 누를 때 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|리본 요소를 수신 하거나 입력된 포커스를 잃을 때 프레임 워크에 의해 호출 됩니다.|  
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Called by the framework when the user presses a shortcut key.|  
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Called by the framework when a ribbon element receives or loses the input focus.|  
   
-## <a name="remarks"></a>주의  
- `CMFCRibbonBaseElement` 클래스 명령 ID, 텍스트 레이블, 도구 설명 텍스트, 요소 설명 및 상태 (수 초점을 맞춘, 누름, 비활성화,이 옵션을 선택 하거나 강조 내려가면)를 포함 하는 모든 리본 요소에 공통 된 속성을 정의 합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCRibbonBaseElement` class defines the properties that are common to all ribbon elements that include command ID, text label, tooltip text, element description, and state (which can be focused, highlighted, pressed, disabled, checked, or dropped down).  
   
- 리본 요소의 이미지 크기는 여 정의 `RibbonImageType` 멤버는 다음 값 중 하나일 수 있습니다.  
+ The image size of a ribbon element is defined by the `RibbonImageType` member, which can be one of the following values:  
   
 - `RibbonImageLarge`  
   
 - `RibbonImageSmall`  
   
- 크기에 따라 리본 요소 중 소규모 또는 대규모 이미지를 표시합니다.  
+ Depending on its size, a ribbon element displays either a small or large image.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCRibbonBaseElement` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에 가져오는 방법을 보여 줍니다는 `CMFCRibbonBaseElement` 에서 개체는 `CMFCRibbonStatusBar` 클래스, 리본 요소에 대 한 설명을 설정, 텍스트를 설정, keytip, 설정 및 리본 요소에 대 한 도구 설명 텍스트를 설정 합니다. 이 코드 조각은의 일부인는 [그리기 클라이언트 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonBaseElement` class. The example shows how to get a `CMFCRibbonBaseElement` object from a `CMFCRibbonStatusBar` class, set the description for the ribbon element, set the text, set a keytip, and set the tooltip text for the ribbon element. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient #&8;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
-[!code-cpp[NVC_MFC_DrawClient #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
+[!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
- 리본 요소에 대 한 keytip keytip이 배열에 추가합니다.  
+##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
+ Adds a keytip for the ribbon element to an array of keytips.  
   
 ```  
 virtual void AddToKeyList(
     CArray<CMFCRibbonKeyTip*, CMFCRibbonKeyTip*>& arElems);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `arElems`  
- 에 대 한 참조는 [CArray](../../mfc/reference/carray-class.md) keytip이입니다.  
+ Reference to a [CArray](../../mfc/reference/carray-class.md) of keytips.  
   
-### <a name="remarks"></a>주의  
- 리본 keytip이 기능을 사용 하는 경우 프레임 워크는 사용자가 ALT 키 또는 F10 키를 누를 때 리본 keytip이 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ When the ribbon keytips feature is enabled, the framework displays ribbon keytips when the user presses the ALT key or the F10 key.  
   
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
- 지정 된 리본 메뉴 명령 목록 상자에는 리본 요소를 추가합니다.  
+##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
+ Adds a ribbon element to the specified ribbon commands list box.  
   
 ```  
 virtual int AddToListBox(
@@ -344,114 +455,114 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- 명령 목록 상자에 대 한 포인터입니다.  
+ Pointer to a commands list box.  
   
  [in] `bDeep`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 추가 된 리본 요소의&0;부터 시작 하는 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the added ribbon element.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자 인터페이스를 사용자 지정할 수 있도록 명령 목록 상자를 리본 요소를 추가 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework adds ribbon elements to a commands list box to enable the user to customize the user interface.  
   
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
- 빠른 실행 도구 모음 리본 요소를 추가할 수 있는지 여부를 나타냅니다.  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+ Indicates whether the ribbon element can be added to the quick access toolbar.  
   
 ```  
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`요소를 추가할 수 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the element can be added; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
- 리본 요소의 크기가 압축 될 수 있는지 여부를 나타냅니다.  
+##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
+ Indicates whether the size of the ribbon element can be compact.  
   
 ```  
 virtual BOOL CanBeCompacted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소의 크기가 압축; 수 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the size of the ribbon element can be compact; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 리본 요소의 크기가 압축, 중급, 또는 대형 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The size of a ribbon element can be compact, intermediate, or large.  
   
-##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
- 리본 요소의 높이 리본 행의 높이를 세로 방향으로 늘어날 수 있는지 여부를 나타냅니다.  
+##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched  
+ Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `TRUE`합니다. 리본 요소의 높이 리본 행의 높이를 세로 방향으로 늘어날 수 있는지 여부를 나타내기 위해이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
- 리본 요소의 너비 변경할 수 있는지 여부를 나타냅니다.  
+##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+ Indicates whether the width of the ribbon element can change.  
   
 ```  
 virtual BOOL CanBeStretchedHorizontally();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 리본 요소의 너비 변경할 수 있는지 여부를 나타내기 위해이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the width of the ribbon element can change.  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
- 리본 요소에 대 한 차원 설정을 정리합니다.  
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes  
+ Cleans up the dimension settings for the ribbon element.  
   
 ```  
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 리본 요소에 대 한 차원 설정을 다시 설정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to reset the dimension settings for the ribbon element.  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
- 리본 요소에 대 한 팝업 메뉴를 닫습니다.  
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu  
+ Closes the pop-up menu for the ribbon element.  
   
 ```  
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
- 지정 된 상태 복사 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) 현재 개체입니다.  
+##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
+ Copies the state of the specified [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) to the current object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 소스 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) 개체입니다.  
+ The source [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) object.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
- 리본 요소를 소멸 시킵니다.  
+##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
+ Destroys the ribbon element.  
   
 ```  
 virtual void DestroyCtrl();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 리본 요소를 삭제 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to destroy the ribbon element.  
   
-##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
- 리본 요소에 대 한 이미지를 그립니다.  
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage  
+ Draws the image for the ribbon element.  
   
 ```  
 virtual void DrawImage(
@@ -460,157 +571,157 @@ virtual void DrawImage(
     CRect rectImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `type`  
- 이미지 유형을 열거 값입니다. 가능한 값의 목록에 대 한 설명 섹션을 참조 합니다.  
+ An image type enumerated value. See the Remarks section for a list of possible values.  
   
  [in] `rectImage`  
- 이미지가 사각형입니다.  
+ The image rectangle.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 리본 요소에 대 한 이미지를 그릴 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to draw the image for the ribbon element.  
   
- 다음 표에서 가능한 값은 `type` 매개 변수:  
+ The following table lists possible values for the `type` parameter:  
   
  `RibbonImageLarge`  
- 대형 32 x 32 픽셀 이미지 크기입니다.  
+ Large 32x32 pixel image size.  
   
  `RibbonImageSmall`  
- 작은 16 x 16 픽셀 이미지 크기입니다.  
+ Small 16x16 pixel image size.  
   
-##  <a name="find"></a>CMFCRibbonBaseElement::Find  
- 현재 개체를 가리키는 경우에 지정된 된 포인터를 반환 합니다.  
+##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
+ Returns the specified pointer if it points to the current object.  
   
 ```  
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소에 대 한 포인터 경우 `pElement` ; 현재 개체를 가리키는 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if `pElement` points to the current object; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
- 지정된 된 데이터를 포함 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
+ Retrieves a pointer to the ribbon element if it contains the specified data.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 리본 요소에 연결 된 데이터입니다.  
+ The data associated with a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 데이터에 포함 된 경우 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it contains the specified data; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
- 해당 요소에 지정 된 명령 ID로 식별 되는 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
+ Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 리본 요소에 대 한 명령 ID입니다.  
+ Command ID for a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 지정 된 명령 ID;으로 식별 되는 경우 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if that element is identified by the specified command ID; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
- 원래 리본 요소에 지정 된 리본 요소 일치 하는 경우 현재 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
+ Retrieves a pointer to the current ribbon element if its original ribbon element matches the specified ribbon element.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 원래 리본 요소에 지정 된 리본 요소;와 일치 하는 경우에 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its original ribbon element matches the specified ribbon element; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 다른 컨테이너에 복사 되는 리본 요소 원래 리본 요소에 대 한 포인터를 유지 합니다.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
- 리본 요소의 압축 크기를 반환합니다.  
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize  
+ Returns the compact size of the ribbon element.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>반환 값  
- 압축 크기는 리본 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The compact size of a ribbon element.  
   
 > [!NOTE]
->  압축 크기 의미 리본 요소 잘립니다 (작은 이미지 또는 텍스트 없이 이미지 표시).  
+>  The compact size means that the ribbon element is truncated (it displays a small image, or an image without a text).  
   
-##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
- 리본 요소와 연결 된 사용자 정의 데이터를 검색 합니다.  
+##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
+ Retrieves the user-defined data associated with the ribbon element.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소와 연결 된 사용자 정의 데이터입니다.  
+### <a name="return-value"></a>Return Value  
+ The user-defined data associated with the ribbon element.  
   
-##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
- 리본 요소에 대 한 설명을 반환합니다.  
+##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
+ Returns the description of the ribbon element.  
   
 ```  
 virtual CString GetDescription() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소에 대 한 설명입니다. 리본 요소에 있는 경우 설명은 상태 표시줄에 또는 도구 설명 또는 메뉴 단추 아래에 표시 됩니다는 [CMFCRibbonMainPanel 클래스](../../mfc/reference/cmfcribbonmainpanel-class.md)합니다.  
+### <a name="return-value"></a>Return Value  
+ The ribbon element description. The description is displayed either on the status bar, or in a tooltip, or under the menu button if the ribbon element is located on the [CMFCRibbonMainPanel Class](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
- 의 팝업 메뉴를 삭제할 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
+ Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 팝업 메뉴 중지 하도록 합니다; 삭제 된 경우 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its pop-up menu is dropped down; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
- 지정된 된 배열에 현재 리본 요소를 추가합니다.  
+##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
+ Adds the current ribbon element to the specified array.  
   
 ```  
 virtual void GetElements(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `arElements`  
- 리본 요소의 배열입니다.  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
- 현재 리본 요소는 지정 된 명령 ID를 포함 하는 경우 지정된 된 배열에 현재 리본 요소를 추가  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
+ Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.  
   
 ```  
 virtual void GetElementsByID(
@@ -618,73 +729,73 @@ virtual void GetElementsByID(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 리본 요소의 명령 ID입니다.  
+ Command ID of a ribbon element.  
   
  [in] `arElements`  
- 리본 요소의 배열입니다.  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
- 강조 표시 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
+ Retrieves a pointer to the ribbon element if it is highlighted.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 강조 표시 되 면 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it is highlighted; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
- 리본 요소의 명령 ID를 반환합니다.  
+##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
+ Returns the command ID of the ribbon element.  
   
 ```  
 UINT GetID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 명령 ID입니다.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element.  
   
-##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
- 리본 요소의 이미지 크기를 반환합니다.  
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize  
+ Returns the image size of the ribbon element.  
   
 ```  
 virtual CSize GetImageSize(RibbonImageType R) const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 이미지 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The image size of the ribbon element.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
- 중간 상태인 리본 요소의 크기를 반환합니다.  
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize  
+ Returns the size of the ribbon element in its intermediate state.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>반환 값  
- 크기의 중간 상태에 있는 리본 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The size of the ribbon element in its intermediate state.  
   
-##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
- 리본 요소와 관련 된 keytip를 반환 합니다.  
+##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
+ Returns the keytip associated with the ribbon element.  
   
 ```  
 LPCTSTR GetKeys() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소와 관련 된에 keytip 합니다.  
+### <a name="return-value"></a>Return Value  
+ A keytip associated with the ribbon element.  
   
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
- 리본 요소에 대 한 keytip 경계 사각형을 검색합니다.  
+##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
+ Retrieves the keytip boundary rectangle for the ribbon element.  
   
 ```  
 virtual CRect GetKeyTipRect(
@@ -692,710 +803,710 @@ virtual CRect GetKeyTipRect(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `bIsMenu`  
- `TRUE`리본 요소는 팝업 메뉴를 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the ribbon element displays a pop-up menu; otherwise `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- 항상 값이 0 인 사각형을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns a rectangle with 0 values.  
   
-### <a name="remarks"></a>주의  
- Keytip 경계 사각형을 반환 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to return the keytip boundary rectangle.  
   
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
- Keytip 텍스트의 크기를 검색합니다.  
+##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
+ Retrieves the size of the keytip text.  
   
 ```  
 virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
-### <a name="return-value"></a>반환 값  
- Keytip 텍스트의 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The size of the keytip text.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
- 리본 그룹에 있는 리본 요소의 표시 위치를 나타냅니다.  
+##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
+ Indicates the display location of the ribbon element in a ribbon group.  
   
 ```  
 RibbonElementLocation GetLocationInGroup() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `RibbonElementLocation` 열거형 값입니다. 다음 표에서 가능한 값을 나열합니다.  
+### <a name="return-value"></a>Return Value  
+ A `RibbonElementLocation` enumerated value. The following table lists possible values.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`RibbonElementNotInGroup`|리본 요소 리본 그룹에 들어 있지 않습니다.|  
-|`RibbonElementSingleInGroup`|리본 요소 리본 그룹에 있는 유일한 항목으로 표시 됩니다.|  
-|`RibbonElementFirstInGroup`|리본 요소 리본 그룹의 왼쪽된 끝에 표시 됩니다.|  
-|`RibbonElementLastInGroup`|리본 요소 리본 그룹의 오른쪽 끝에 표시 됩니다.|  
-|`RibbonElementMiddleInGroup`|리본 요소 리본 그룹의 양쪽 끝에 표시 되지 않습니다.|  
+|`RibbonElementNotInGroup`|The ribbon element is not contained in a ribbon group.|  
+|`RibbonElementSingleInGroup`|The ribbon element is displayed as the only item in a ribbon group.|  
+|`RibbonElementFirstInGroup`|The ribbon element is displayed on the left end of a ribbon group.|  
+|`RibbonElementLastInGroup`|The ribbon element is displayed on the right end of a ribbon group.|  
+|`RibbonElementMiddleInGroup`|The ribbon element is not displayed on either end of a ribbon group.|  
   
-### <a name="remarks"></a>주의  
- 리본 요소 그룹 가로로 정렬만 되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Ribbon element groups are only aligned horizontally.  
   
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
- 리본 요소에 대 한 메뉴 keytip를 반환합니다.  
+##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
+ Returns the menu keytip for the ribbon element.  
   
 ```  
 LPCTSTR GetMenuKeys() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소와 연결 된 메뉴 keytip 합니다.  
+### <a name="return-value"></a>Return Value  
+ The menu keytip associated with the ribbon element.  
   
-### <a name="remarks"></a>주의  
- 호출 되 면 메뉴 keytip 팝업 메뉴를 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ When invoked, a menu keytip displays a pop-up menu.  
   
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
- 리본 요소에 대 한 알림 명령 ID를 검색합니다.  
+##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
+ Retrieves the notification command ID for the ribbon element.  
   
 ```  
 virtual UINT GetNotifyID();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 알림 명령 id입니다.  
+### <a name="return-value"></a>Return Value  
+ The notification command ID.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
- 원래 리본 요소를 검색합니다.  
+##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
+ Retrieves the original ribbon element.  
   
 ```  
 CMFCRibbonBaseElement* GetOriginal() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 원래 리본 요소에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the original ribbon element.  
   
-### <a name="remarks"></a>주의  
- 다른 컨테이너에 복사 되는 리본 요소 원래 리본 요소에 대 한 포인터를 유지 합니다.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
- 리본 요소에 대 한 리본 범주를 검색합니다.  
+##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
+ Retrieves the ribbon category for the ribbon element.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 범주에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon category.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
- 리본 요소를 포함 하는 리본 패널을 검색 합니다.  
+##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
+ Retrieves the ribbon panel that contains the ribbon element.  
   
 ```  
 virtual CMFCRibbonPanel* GetParentPanel() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소를 포함 하는 리본 패널에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon panel that contains the ribbon element.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
- 리본 요소에 대 한 부모 리본 표시줄을 검색합니다.  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
+ Retrieves the parent ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소에 대 한 부모 리본 표시줄에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent ribbon bar for the ribbon element.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
- 리본 요소에 대 한 부모 창을 검색합니다.  
+##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
+ Retrieves the parent window for the ribbon element.  
   
 ```  
 virtual CWnd* GetParentWnd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 리본 요소에 대 한 부모 창에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent window for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>주의  
- 리본 요소에 대 한 부모 창이 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md) 또는 [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581)합니다.  
+### <a name="remarks"></a>Remarks  
+ The parent window for a ribbon element is a [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) or a [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
- 사용자가 현재 누를 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
+ Retrieves a pointer to the ribbon element if the user currently presses it.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetPressed();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재를 누르는 경우, 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if the user currently presses it; otherwise, `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
- 빠른 실행 도구 모음에 있는 경우에 리본 요소 명령 ID를 검색 합니다.  
+##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+ Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.  
   
 ```  
 virtual UINT GetQuickAccessToolBarID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 빠른 실행 도구 모음에 있는 경우에 리본 요소의 명령 ID입니다.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element when it is located in the quick access toolbar.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
- 리본 요소에 대 한 경계 사각형을 반환합니다.  
+##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
+ Returns the bounding rectangle of the ribbon element.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 경계 사각형입니다. 사각형의 위치는 리본 컨트롤 부모의 좌표입니다.  
+### <a name="return-value"></a>Return Value  
+ The bounding rectangle of the ribbon element. The position of the rectangle is in the coordinates of the parent Ribbon control.  
   
-##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
- 리본 요소의 보통 크기를 반환합니다.  
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize  
+ Returns the regular size of the ribbon element.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 일반 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The regular size of the ribbon element.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  일반 크기가 가능한 최대 크기인 리본 요소를 보여 줍니다.  
+>  The regular size is the maximal possible size of the ribbon element.  
   
-##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
- 리본 요소의 현재 크기를 반환합니다.  
+##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
+ Returns the current size of the ribbon element.  
   
 ```  
 virtual CSize GetSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 현재 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The current size of the ribbon element.  
   
-##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
- 리본 요소와 연결 된 텍스트를 반환 합니다.  
+##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
+ Returns the text associated with the ribbon element.  
   
 ```  
 LPCTSTR GetText() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소와 연결 된 텍스트입니다.  
+### <a name="return-value"></a>Return Value  
+ The text associated with the ribbon element.  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
- 리본 요소의 도구 설명 텍스트를 반환합니다.  
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText  
+ Returns tooltip text of the ribbon element.  
   
 ```  
 virtual CString GetToolTipText() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 요소의 도구 설명 텍스트입니다.  
+### <a name="return-value"></a>Return Value  
+ The tooltip text of the ribbon element.  
   
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
- 리본 요소에 대 한 최상위 수준 리본 표시줄을 검색합니다.  
+##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+ Retrieves the top level ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetTopLevelRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 리본 요소에 대 한 상위 수준 리본 표시줄에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the top level ribbon bar for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
- 리본 요소에 압축 모드가 있는지 여부를 지정합니다.  
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode  
+ Specifies whether the ribbon element has a compact mode.  
   
 ```  
 virtual BOOL HasCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 있는 경우 축소 모드입니다. 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a compact mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  축소 모드는 요소는 작은 이미지를 표시합니다.  
+>  In the compact mode, an element displays a small image only.  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
- 리본 요소에 중간 모드가 있는지 여부를 지정합니다.  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode  
+ Specifies whether the ribbon element has an intermediate mode.  
   
 ```  
 virtual BOOL HasIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에는 중간 모드 `FALSE` 그렇지 않은 경우. 중간 모드는 요소는 이미지의 오른쪽에 작은 이미지 및 텍스트를 표시합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has an intermediate mode, `FALSE` otherwise. In the intermediate mode, an element displays a small image and text on the right of the image.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
- 리본 요소에 큰 모드가 있는지 여부를 결정합니다.  
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode  
+ Determines whether the ribbon element has a large mode.  
   
 ```  
 virtual BOOL HasLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 있는 경우 큰 모드입니다. 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a large mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 큰 모드에서 요소는 부모 패널의 전체 높이 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ In the large mode, an element can take the full height of the parent panel.  
   
-##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
- 리본 요소에는 메뉴에 있는지 여부를 나타냅니다.  
+##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu  
+ Indicates whether the ribbon element has a menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 리본 요소에는 메뉴에 있는지 여부를 나타내기 위해 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element has a menu.  
   
-##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
- 지정 된 위치에 있으면 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
+ Retrieves a pointer to the ribbon element if the specified point is located in it.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 이 특성이 있으면; 리본 요소에 대 한 포인터 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it exists; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 유효한 포인터 리본 요소에 있는 경우. 지점 리본 요소에 있는 경우를 나타내기 위해이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns a valid pointer to the ribbon element when it exists. Override this method to indicate if the point resides in the ribbon element.  
   
-##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
- 리본 요소 다른 리본 요소와 세로 방향으로 정렬 되는지 여부를 나타냅니다.  
+##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
+ Indicates whether the ribbon element is aligned vertically with other ribbon elements.  
   
 ```  
 virtual BOOL IsAlignByColumn() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `TRUE`합니다. 파생 된 리본 요소 다른 리본 요소와 세로 방향으로 정렬 되는지 여부를 나타내기 위해 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method in a derived class to indicate whether the derived ribbon element is aligned vertically with other ribbon elements.  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
- 리본 요소 이미지 크기는 항상 큰 있는지 여부를 나타냅니다.  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage  
+ Indicates whether the ribbon element image size is always large.  
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 이미지 크기는 항상 큰; 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element image size is always large; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 큰 이미지 크기는 32 x 32 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
- 리본 요소 자동 반복 모드 인지 여부를 나타냅니다.  
+##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
+ Indicates whether the ribbon element is in auto repeat mode.  
   
 ```  
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nDelay`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 여부를 나타내는 리본 요소를 자동 반복적이이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the ribbon element is in auto repeat mode.  
   
- 자동에서 반복 모드 설정 된 간격에 응답 하는 리본 요소 지속적인된 사용자 입력을 밀리초 단위로 측정 됩니다.  
+ In auto repeat mode, the ribbon element responds at a set interval, measured in milliseconds, to sustained user input.  
   
-##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
- 리본 요소 검사할지 여부를 지정 합니다.  
+##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
+ Specifies whether the ribbon element is checked.  
   
 ```  
 virtual BOOL IsChecked() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소를 검사 합니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is checked; otherwise `FALSE`.  
   
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
- 리본 요소 compact 모드 인지 여부를 지정 합니다.  
+##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
+ Specifies whether the ribbon element is in a compact mode.  
   
 ```  
 BOOL IsCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 축소 모드일 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is in a compact mode; otherwise `FALSE`.  
   
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
- 리본 요소 팝업 명령으로 표시 되도록 설정 되어 있는지 여부를 나타냅니다.  
+##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
+ Indicates whether the ribbon element is set to appear as a pop-up command.  
   
 ```  
 BOOL IsDefaultMenuLook() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 팝업 명령;로 표시 되도록 설정 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is set to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
- 리본 요소 되지 않는지 여부를 지정 합니다.  
+##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
+ Specifies whether the ribbon element is disabled.  
   
 ```  
 virtual BOOL IsDisabled() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 사용 하지 않도록 설정 합니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is disabled; otherwise `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
- 리본 요소 팝업 메뉴를 표시 하 고 삭제 여부를 지정 합니다.  
+##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
+ Specifies whether the ribbon element displays a pop-up menu and is dropped down.  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 삭제 되 고은 팝업 메뉴를 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is dropped down and displays a pop-up menu; otherwise `FALSE`.  
   
-##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
- 리본 요소에 포커스가 있는지 여부를 지정 합니다.  
+##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
+ Specifies whether the ribbon element has the focus.  
   
 ```  
 virtual BOOL IsFocused() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 포커스가 있습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has the focus; otherwise `FALSE`.  
   
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
- 리본 요소 리본 갤러리에 포함 되어 있는지 여부를 나타냅니다.  
+##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
+ Indicates whether the ribbon element is contained in a ribbon gallery.  
   
 ```  
 virtual BOOL IsGalleryIcon() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 리본 요소 리본 갤러리에 포함 되는지 여부를 나타내기 위해 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element is contained in a ribbon gallery.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
- 리본 요소 강조 표시 되어 있는지 여부를 지정 합니다.  
+##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
+ Specifies whether ribbon element is highlighted.  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우 리본 요소가 강조 표시 됩니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
- 리본 요소에 대 한 현재 이미지 중간 크기 인지 여부를 나타냅니다.  
+##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
+ Indicates whether the current image for the ribbon element is intermediate size.  
   
 ```  
 BOOL IsIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 대 한 이미지가 중간 크기입니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is intermediate size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 중간 이미지 크기는 16 x 16 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ Intermediate image size is 16 x 16 pixels.  
   
-##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
- 리본 요소에 대 한 현재 이미지 크기가 큰 여부를 나타냅니다.  
+##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
+ Indicates whether the current image for the ribbon element is large size.  
   
 ```  
 BOOL IsLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 대 한 이미지 크기가 큰 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is large size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 큰 이미지 크기는 32 x 32 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
- 리본 요소 메뉴에 포함 되어 있는지 여부를 나타냅니다.  
+##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
+ Indicates whether the ribbon element is contained in a menu.  
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소는 메뉴에 포함 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a menu; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
- 사용자는 리본 요소를 클릭 하 고 있는지 여부를 나타냅니다.  
+##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
+ Indicates whether the user has clicked the ribbon element.  
   
 ```  
 virtual BOOL IsPressed() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`사용자가 리본 요소를 클릭 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the user has clicked the ribbon element; otherwise `FALSE`.  
   
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
- 빠른 실행 도구 모음 리본 요소가 포함 되는지 여부를 나타냅니다.  
+##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
+ Indicates whether the ribbon element is contained in the quick access toolbar.  
   
 ```  
 BOOL IsQATMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 빠른 실행 도구 모음;에 포함 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in the quick access toolbar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
- 리본 요소 구분 기호 표시 여부를 나타냅니다.  
+##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
+ Indicates whether the ribbon element is a display separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 디스플레이 구분 기호가 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is a display separator; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
- 리본 요소에 일반적인 테두리를 표시 하는 그룹에 포함 되는지 여부를 나타냅니다.  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
+ Indicates whether the ribbon element is contained in a group that displays a common border.  
   
 ```  
 BOOL IsShowGroupBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소; 공통 테두리를 표시 하는 그룹에 포함 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a group that displays a common border; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
- 도구 설명에 표시할 리본 요소 아래에 표시 되는지 여부를 나타냅니다.  
+##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+ Indicates whether the tooltip is displayed under the ribbon element.  
   
 ```  
 virtual BOOL IsShowTooltipOnBottom() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 설명에 표시할 리본 요소; 아래에 표시 되 면 `FALSE` 경우 도구 설명에 표시할 포인터 옆에 표시 됩니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip is displayed under the ribbon element; `FALSE` if the tooltip is displayed near the pointer.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
- 키보드와 리본 요소를 선택할 수 있는지 여부를 나타냅니다.  
+##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
+ Indicates whether the ribbon element can be selected with the keyboard.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `TRUE`합니다. 키보드와 리본 요소를 선택할 수 있는지 여부를 나타내기 위해이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the ribbon element can be selected with the keyboard.  
   
-##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
- 리본 요소에 대 한 텍스트 오른쪽에 표시 되는지 여부를 나타냅니다.  
+##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+ Indicates whether the text for the ribbon element is displayed on the right.  
   
 ```  
 BOOL IsTextAlwaysOnRight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 대 한 텍스트는 오른쪽에 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the text for the ribbon element is displayed on the right; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
- 리본 요소는 현재 표시 되어 있는지 여부를 나타냅니다.  
+##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
+ Indicates whether the ribbon element is currently displayed.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소 현재 표시 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is currently displayed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
- 리본 요소의 디스플레이 높이 포함 된 리본 패널의 표시 높이와 같은지 여부를 나타냅니다.  
+##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
+ Indicates whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
 ```  
 virtual BOOL IsWholeRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 여부를 나타내는 리본 요소의 디스플레이 높이 포함 된 리본 패널의 표시 높이이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
- 리본 요소의 부모 창에 명령 알림을 보냅니다.  
+##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
+ Sends a command notification to the parent window of the ribbon element.  
   
 ```  
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bWithDelay`  
- `TRUE`부모 창의 메시지 큐 명령 알림을 추가 하려면 `FALSE` 부모 창에 메시지를 즉시 보내도록 합니다.  
+ `TRUE` to add the command notification to the message queue of the parent window; `FALSE` to send the message immediately to the parent window.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`메시지를 보낸; 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the message was sent; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
- 사용자 목록에 있는 리본 요소를 강조 표시할 때 리본 표시줄의 부모 창을 알립니다.  
+##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
+ Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.  
   
 ```  
 virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 목록에서 리본 요소의 인덱스입니다.  
+ The index of the ribbon element in the list.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
- 지정 된 빠른 실행 도구 모음 리본 요소를 추가합니다.  
+##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
+ Adds the ribbon element to the specified quick access toolbar.  
   
 ```  
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `qat`  
- 빠른 실행 도구 모음입니다.  
+ The quick access toolbar.  
   
-### <a name="return-value"></a>반환 값  
- 항상 반환 `TRUE` 리본 요소를 나타내는 빠른 실행 도구 모음에 추가 되었습니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` indicating the ribbon element was added to the quick access toolbar.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
- 리본 요소에 대 한 도구 설명을 업데이트합니다.  
+##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
+ Updates the tooltip for the ribbon element.  
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 리본 요소에 대 한 도구 설명을 업데이트합니다. 표시 사각형 변경 된 후에 리본 요소를 업데이트 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method updates the tooltip for the ribbon element. Override this method to update the ribbon element after its display rectangle has changed.  
   
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
- 지속적인된 사용자 입력에 대 한 응답으로 리본 요소를 업데이트합니다.  
+##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
+ Updates the ribbon element in response to sustained user input.  
   
 ```  
 virtual BOOL OnAutoRepeat();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드를 항상 반환 `FALSE`합니다. 지속적인된 사용자 입력을 처리 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always return `FALSE`. Override this method to process sustained user input.  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
- 리본 요소에 대 한 텍스트의 크기를 계산 합니다.  
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize  
+ Calculates the size of the text for the ribbon element.  
   
 ```  
 virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 리본 요소에 대 한 텍스트의 크기를 계산 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to calculate the size of the text for the ribbon element.  
   
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
- 메뉴에 있는 리본 요소에 대 한 강조 표시가 변경 될 때 프레임 워크에서 호출 합니다.  
+##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
+ Called by the framework when the highlight changes for a ribbon element that is located in a menu.  
   
 ```  
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar  
     CMFCRibbonBaseElement* pHot);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pPanelMenuBar`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
  [in] `pHot`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 강조 표시가 변경 될 때 메뉴에 있는 리본 요소를 업데이트 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to update a ribbon element that is located in a menu when the highlight changes.  
   
-##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
- 리본 요소를 그리기 위해 프레임워크에서 호출됩니다.  
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw  
+ Called by the framework to draw the ribbon element.  
   
 ```  
 virtual void OnDraw(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>주의  
- 특정 리본 요소를 그릴 사용자 지정 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to customize the drawing of a specific ribbon element.  
   
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
- 리본 요소에 대 한 keytip 그리려는 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
+ Called by the framework to draw the keytip for the ribbon element.  
   
 ```  
 virtual void OnDrawKeyTip(
@@ -1404,20 +1515,20 @@ virtual void OnDrawKeyTip(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `rect`  
- Keytip에 대 한 경계 사각형입니다.  
+ Boundary rectangle for the keytip.  
   
  [in] `bIsMenu`  
- `TRUE`keytip 팝업 메뉴 단추;에 대 한 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the keytip is for a pop-up menu button; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
- 리본 요소에 대 한 메뉴 이미지를 그릴 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage  
+ Called by the framework when the menu image for the ribbon element is drawn.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1425,20 +1536,20 @@ virtual BOOL OnDrawMenuImage(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ Pointer to a device context.  
   
  [in] `rect`  
- 메뉴 이미지 사각형입니다.  
+ Menu image rectangle.  
   
-### <a name="return-value"></a>반환 값  
- 항상 반환 `TRUE` 이미지 그린 나타냅니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` to indicate the image was drawn.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
- 명령 목록 상자에서 리본 요소를 그리는 데 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
+ Called by the framework to draw the ribbon element in a commands list box.  
   
 ```  
 virtual void OnDrawOnList(
@@ -1450,152 +1561,152 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 리본 요소에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
+ Pointer to a device context for the ribbon element.  
   
  [in] `strText`  
- 표시 텍스트입니다.  
+ The display text.  
   
  [in] `nTextOffset`  
- 거리 (픽셀)의 텍스트를 표시할 목록 상자 왼쪽에서입니다.  
+ Distance, in pixels, from the left side of the list box to the display text.  
   
  [in] `rect`  
- 리본 요소에 대 한 표시 사각형을 지정 합니다.  
+ The display rectangle for the ribbon element.  
   
  [in] `bIsSelected`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
  [in] `bHighlighted`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 명령 목록 상자는 사용자가 빠른 실행 도구 모음을 사용자 지정할 수 있도록 리본 요소를 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ The commands list box displays ribbon elements to enable users to customize the quick access toolbar.  
   
-##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
- 사용자는 keytip 리본 요소에 포커스가 때 프레임 워크에서 호출 합니다.  
+##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
+ Called by the framework when the user presses a keytip and the ribbon element has the focus.  
   
 ```  
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsMenuKey`  
- `TRUE`keytip은 팝업 메뉴를 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the keytip displays a pop-up menu; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이벤트가 처리 되었습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the event was handled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
- 사용자는 기본 패널에서 메뉴 keytip를 누를 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
+ Called by the framework when the user presses a menu keytip on the main panel.  
   
 ```  
 virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nUpperChar`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 항상 반환 `FALSE`합니다. 주 패널에 메뉴 keytip를 누를 때 응답 하도록이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to respond when a user presses a menu keytip on the main panel.  
   
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
- 바로 가기 키를 누를 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
+ Called by the framework when the user presses a shortcut key.  
   
 ```  
 virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 리본 요소의 바로 가기 키를 처리 하려는 경우이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want the ribbon element to process a shortcut key.  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
- 레이아웃 방향 변경 될 때 프레임 워크에서 호출 합니다.  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
+ Called by the framework when the layout changes direction.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 레이아웃 방향 변경 될 때 리본 요소를 조정 하려면이 메서드를 재정의 합니다. 기본 레이아웃 방향은 왼쪽에서 오른쪽입니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to adjust the ribbon element when the layout changes direction. The default layout direction is left-to-right.  
   
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
- 리본 요소를 수신 하거나 입력된 포커스를 잃을 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
+ Called by the framework when a ribbon element receives or loses the input focus.  
   
 ```  
 virtual void OnSetFocus(BOOL B);
 ```  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램의 리본 요소 초점 변경을 처리 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want your application to handle a change in the focus of a ribbon element.  
   
-##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
- 프레임 워크 표시 하거나 숨기려면 리본 요소에 의해 호출 됩니다.  
+##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
+ Called by the framework to show or hide the ribbon element.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 이 메서드를 표시 하거나 숨기려면 리본 요소를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to show or hide the ribbon element.  
   
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
- 리본 요소에는 팝업 메뉴가 표시 되기 전에 프레임 워크에서 호출 합니다.  
+##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
+ Called by the framework before the ribbon element shows a pop-up menu.  
   
 ```  
 virtual void OnShowPopupMenu();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 리본 요소가 팝업 메뉴를 표시 합니다 리본 표시줄의 부모 창은 알립니다.  
+### <a name="remarks"></a>Remarks  
+ This method notifies the parent window of the ribbon bar that the ribbon element will show a pop-up menu.  
   
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
- 리본 요소에 대 한 팝업 메뉴를 닫고 부모 메뉴에 닫기 메시지를 보냅니다.  
+##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
+ Closes the pop-up menu for the ribbon element and sends a close message to the parent menu.  
   
 ```  
 void PostMenuCommand(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 매개 변수가 사용 되지 않습니다.  
+ The parameter is not used.  
   
-### <a name="remarks"></a>주의  
- 닫기 메시지 리본 요소 팝업 메뉴에 있는 경우에 전송 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The close message is only sent if the ribbon element is located on a pop-up menu.  
   
-##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
- 리본 요소에 대 한 업데이트 됩니다.  
+##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
+ Updates the display for the ribbon element.  
   
 ```  
 virtual void Redraw();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 하 여 리본 요소에 대 한 표시 사각형을 다시 그리면 [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) 와 `RDW_INVALIDATE`를 `RDW_ERASE`를 및 `RDW_UPDATENOW` 플래그가 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method redraws the display rectangle for the ribbon element by calling [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) with the `RDW_INVALIDATE`, `RDW_ERASE`, and `RDW_UPDATENOW` flags set.  
   
-##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
- 리본 요소에 대한 내게 필요한 옵션 데이터를 설정합니다.  
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
+ Sets the accessibility data for the ribbon element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1603,105 +1714,105 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- 리본 요소에 대한 부모 창입니다.  
+ The parent window for the ribbon element.  
   
  `data`  
- 리본 요소에 대한 내게 필요한 옵션 데이터입니다.  
+ The accessibility data for the ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 이 메서드는 리본 요소에 대한 내게 필요한 옵션 데이터를 설정하고 항상 `TRUE`를 반환합니다. 내게 필요한 옵션 데이터를 설정하고 성공 또는 실패를 나타내는 값을 반환하려면 이 메서드를 재정의합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method sets the accessibility data for the ribbon element and always returns `TRUE`. Override this method to set the accessibility data and return a value that indicates success or failure.  
   
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
- 리본 요소에 대 한 표시 크기를 설정합니다.  
+##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
+ Sets the display size for the ribbon element.  
   
 ```  
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bCompactMode`  
- `TRUE`리본 요소의 표시 크기를 줄이기 위해 `FALSE` 리본 요소의 디스플레이 크기를 늘려야 합니다.  
+ `TRUE` to reduce the display size of the ribbon element; `FALSE` to increase the display size of the ribbon element.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서이 메서드에 대 한 논리를 보여 줍니다.  
+### <a name="remarks"></a>Remarks  
+ The following table summarizes the logic for this method.  
   
-|`bCompactMode`|현재 리본 요소 크기|새 리본 요소 크기|  
+|`bCompactMode`|Current ribbon element size|New ribbon element size|  
 |--------------------|---------------------------------|-----------------------------|  
-|`TRUE`|축소|변경 되지 않습니다.|  
-|`TRUE`|중간|가능한 경우 압축 합니다.|  
-|`TRUE`|크게|중간 이것이 가능 합니다.|  
-|`FALSE`|축소|중간 이것이 가능 합니다. 그렇지 않으면 큽니다.|  
+|`TRUE`|Compact|No change.|  
+|`TRUE`|Intermediate|Compact if it is possible.|  
+|`TRUE`|Large|Intermediate if it is possible.|  
+|`FALSE`|Compact|Intermediate if it is possible; otherwise large.|  
   
-##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
- 데이터 항목을 리본 요소에 연결합니다.  
+##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
+ Associates a data item with the ribbon element.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 데이터 값입니다.  
+ The data value.  
   
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
- 팝업 명령으로 표시할 리본 요소를 가져오거나 설정 합니다.  
+##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
+ Sets the ribbon element to appear as a pop-up command.  
   
 ```  
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsDefaultMenuLook`  
- `TRUE`팝업 명령;로 표시 되도록 리본 요소를 설정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to set the ribbon element to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
- 리본 요소에 대한 설명을 설정합니다.  
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription  
+ Sets the description for the ribbon element.  
   
 ```  
 virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 리본 요소에 대 한 설명입니다.  
+ The description for the ribbon element.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 상태 표시줄에 또는 도구 모음 또는 메뉴 단추 아래 새 설명을 표시합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework displays the new description either on the status bar, or in the tooltip, or under the menu button.  
   
-##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
- 리본 요소의 명령 ID를 설정합니다.  
+##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
+ Sets the command ID of the ribbon element.  
   
 ```  
 virtual void SetID(UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 명령 ID입니다.  
+ The command ID.  
   
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
- 리본 요소에 대 한 초기 표시 크기를 설정합니다.  
+##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
+ Sets the initial display size for the ribbon element.  
   
 ```  
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bOneRow`  
- `TRUE`압축 또는 중간; 리본 요소에 대 한 표시 크기를 제한 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to limit the display size for the ribbon element to compact or intermediate; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 리본 요소의 표시 크기는 압축, 중급, 또는 대형 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The display size of ribbon elements can be compact, intermediate, or large.  
   
-##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
- 리본 요소에 대 한 키 설명을 설정합니다.  
+##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
+ Sets the keytips for the ribbon element.  
   
 ```  
 virtual void SetKeys(
@@ -1709,95 +1820,95 @@ virtual void SetKeys(
     LPCTSTR lpszMenuKeys=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- 리본 요소에 대 한 keytip 합니다.  
+ The keytip for the ribbon element.  
   
  [in] `lpszMenuKeys`  
- 팝업 메뉴는 리본 요소에 대 한 keytip 합니다.  
+ The keytip for the pop-up menu of the ribbon element.  
   
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
- 리본 요소에 대 한 원래 리본 요소를 설정합니다.  
+##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
+ Sets the original ribbon element for the ribbon element.  
   
 ```  
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>주의  
- 다른 컨테이너에 복사 되는 리본 요소 원래 리본 요소에 대 한 포인터를 유지 합니다.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
- 리본 요소에 대 한 부모 범주를 설정합니다.  
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory  
+ Sets the parent category for the ribbon element.  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 리본 범주에 대 한 포인터입니다.  
+ Pointer to a ribbon category.  
   
-### <a name="remarks"></a>주의  
- 리본 컨트롤에 탭된 그룹에는 범주 라고 합니다.  
+### <a name="remarks"></a>Remarks  
+ The tabbed groups in ribbon controls are called categories.  
   
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
- 부모 메뉴 컨테이너 리본 요소를 설정합니다.  
+##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
+ Sets the parent menu container for the ribbon element.  
   
 ```  
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuBar`  
- 부모 메뉴입니다.  
+ The parent menu.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
- 리본 요소에 대 한 부모 리본 표시줄을 설정합니다.  
+##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
+ Sets the parent ribbon bar for the ribbon element.  
   
 ```  
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- 부모 리본 모음에 대 한 포인터입니다.  
+ Pointer to the parent ribbon bar.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
- 리본 요소에 대 한 디스플레이 사각형의 크기를 설정합니다.  
+##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
+ Sets the dimensions of the display rectangle for the ribbon element.  
   
 ```  
 void SetRect(CRect rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 사각형의 크기입니다.  
+ The dimensions of the rectangle.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
- 리본 요소에 대 한 keytip와 텍스트를 설정합니다.  
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText  
+ Sets the text and keytip for the ribbon element.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 리본 요소에 대 한 keytip와 텍스트입니다.  
+ The text and keytip for the ribbon element.  
   
-### <a name="remarks"></a>주의  
- 리본 요소에 대 한 keytip를 설정 하려면 다음에 keytip 문자를 줄 바꿈 이스케이프 시퀀스를 추가 `lpszText`합니다.  
+### <a name="remarks"></a>Remarks  
+ To set the keytip for the ribbon element, append the newline escape sequence followed by the keytip characters to `lpszText`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```  
 //Set the text for the ribbon element  
@@ -1808,55 +1919,55 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
- 오른쪽에 표시 하기 위해 리본 요소에 대 한 텍스트를 설정 합니다.  
+##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+ Sets the text for the ribbon element to display on the right.  
   
 ```  
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`오른쪽의 텍스트를 표시 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to display the text on the right; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
- 리본 요소에 대 한 도구 설명 텍스트를 설정합니다.  
+##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
+ Sets the tooltip text for the ribbon element.  
   
 ```  
 virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 도구 설명 텍스트입니다.  
+ The tooltip text.  
   
-##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
- 리본 요소의 표시 유형을 설정합니다.  
+##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
+ Sets the visibility of the ribbon element.  
   
 ```  
 void SetVisible(BOOL bIsVisible);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsVisible`  
- `TRUE`리본 요소를 표시 하려면 `FALSE` 리본 요소를 숨기려면 합니다.  
+ `TRUE` to display the ribbon element; `FALSE` to hide the ribbon element.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
- 리본 요소의 너비를 확장합니다.  
+##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
+ Stretches the width of the ribbon element.  
   
 ```  
 virtual void StretchHorizontally();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는 디버그 빌드에서 어설션 오류를 생성 하 고 따라서 호출 하지 않아야 합니다. 리본 요소의 너비를 확장 하도록이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default this method generates an assertion failure in debug builds and therefore should not be called. Override this method to stretch the width of the ribbon element.  
   
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
- 지정 된 행 높이에 리본 요소의 표시를 변경합니다.  
+##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
+ Changes the display height of the ribbon element to the specified row height.  
   
 ```  
 virtual BOOL StretchToWholeRow(
@@ -1864,41 +1975,41 @@ virtual BOOL StretchToWholeRow(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
  [in] `nHeight`  
- 행의 높이입니다.  
+ The height of the row.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`디스플레이 높이 설정 되었으면 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display height was set; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 지정 된 행 높이에 리본 요소의 표시를 변경 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method to change the display height of the ribbon element to the specified row height.  
   
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
- 리본 요소에 대 한 명령 리소스를 사용 하 여 도구 설명 텍스트를 업데이트 합니다.  
+##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
+ Updates the tooltip text by using the command resource for the ribbon element.  
   
 ```  
 virtual void UpdateTooltipInfo();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
- 부모 요소에 키보드 포커스가 있는지 여부를 나타냅니다.  
+##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
+ Indicates whether the parent element has keyboard focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소에 초점을 맞춘; 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is focused; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

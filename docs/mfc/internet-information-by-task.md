@@ -1,27 +1,44 @@
 ---
-title: "작업별 인터넷 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 인터넷 응용 프로그램"
+title: Internet Information by Task | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 작업별 인터넷 정보
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e847bcb7852a0338b07d26759fba9448e564bfd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="internet-information-by-task"></a>Internet Information by Task
 The tasks listed in this topic are sorted based on the task you want to accomplish.  
   
  The following categories of tasks are listed in this topic:  
@@ -30,7 +47,7 @@ The tasks listed in this topic are sorted based on the task you want to accompli
   
 -   [WinInet Tasks](#_core_wininet_tasks)  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX Controls, Documents and Asynchronous Moniker Tasks  
   
@@ -44,7 +61,7 @@ The tasks listed in this topic are sorted based on the task you want to accompli
   
 -   [Optimize an ActiveX control](../mfc/mfc-activex-controls-optimization.md)  
   
--   [Create Signed CAB Files for MFC and ATL Controls](http://msdn.microsoft.com/ko-kr/14e50724-2505-4258-ae6b-326b706de409)  
+-   [Create Signed CAB Files for MFC and ATL Controls](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
   
 ###  <a name="_core_wininet_tasks"></a> WinInet Tasks  
   
@@ -60,5 +77,7 @@ The tasks listed in this topic are sorted based on the task you want to accompli
   
 -   [Write a Gopher client application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
-## 참고 항목  
- [MFC 인터넷 프로그래밍 기본 사항](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

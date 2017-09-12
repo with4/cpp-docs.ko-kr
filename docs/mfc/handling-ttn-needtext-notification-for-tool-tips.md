@@ -1,34 +1,51 @@
 ---
-title: "도구 설명에 대한 TTN_NEEDTEXT 알림 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TTN_NEEDTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "알림, 도구 설명"
-  - "도구 설명[C++], 알림"
-  - "TTN_NEEDTEXT 메시지"
+title: Handling TTN_NEEDTEXT Notification for Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TTN_NEEDTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TTN_NEEDTEXT message [MFC]
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 도구 설명에 대한 TTN_NEEDTEXT 알림 처리
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd7b4e4d9e022f7c33191ca181ae6be3a701800c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-As part of [enabling tool tips](../mfc/enabling-tool-tips.md), you handle the **TTN\_NEEDTEXT** message by adding the following entry to your owner window's message map:  
+---
+# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Handling TTN_NEEDTEXT Notification for Tool Tips
+As part of [enabling tool tips](../mfc/enabling-tool-tips.md), you handle the **TTN_NEEDTEXT** message by adding the following entry to your owner window's message map:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
  `memberFxn`  
  The member function to be called when text is needed for this button.  
@@ -37,26 +54,28 @@ As part of [enabling tool tips](../mfc/enabling-tool-tips.md), you handle the **
   
  Declare your handler function in the class definition as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
   
  where the italicized parameters are:  
   
  `id`  
- Identifier of the control that sent the notification.  사용되지 않습니다.  The control id is taken from the **NMHDR** structure.  
+ Identifier of the control that sent the notification. Not used. The control id is taken from the **NMHDR** structure.  
   
  `pNMHDR`  
- A pointer to the [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) structure.  This structure is also discussed further in [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md).  
+ A pointer to the [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) structure. This structure is also discussed further in [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- A pointer to result code you can set before you return.  **TTN\_NEEDTEXT** handlers can ignore the `pResult` parameter.  
+ A pointer to result code you can set before you return. **TTN_NEEDTEXT** handlers can ignore the `pResult` parameter.  
   
- As an example of a form\-view notification handler:  
+ As an example of a form-view notification handler:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
   
- Call `EnableToolTips` \(this fragment taken from `OnInitDialog`\):  
+ Call `EnableToolTips` (this fragment taken from `OnInitDialog`):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]  
   
-## 참고 항목  
- [CFrameWnd에서 파생되지 않은 창의 도구 설명](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "MFC DLL 마법사, 응용 프로그램 설정 | Microsoft 문서"
+title: Application Settings, MFC DLL Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: df1e3de3e1548fe4c4c340a30127d9916998ba64
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4721fbb1f0abfdda66dfb70ad1f4e44cf848fd3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 마법사, 응용 프로그램 설정
-MFC DLL 마법사의이 페이지를 사용 하 여 설계 하 고 새 MFC DLL 프로젝트에 기본 기능을 추가 합니다.  
+# <a name="application-settings-mfc-dll-wizard"></a>Application Settings, MFC DLL Wizard
+Use this page of the MFC DLL wizard to design and add basic features to a new MFC DLL project.  
   
-## <a name="dll-type"></a>DLL 종류  
- 만들려는 DLL의 유형을 선택 합니다.  
+## <a name="dll-type"></a>DLL type  
+ Select the type of DLL you want to create.  
   
- **공유 MFC DLL을 사용 하 여 기본 DLL**  
- MFC 라이브러리를 공유 DLL로 프로그램에 연결 하려면이 옵션을 선택 합니다. 이 옵션을 사용 하면 DLL과 호출 응용 프로그램 간에 MFC 개체를 공유할 수 없습니다. 프로그램에서는 런타임에 MFC 라이브러리를 호출 합니다. 이 옵션의 MFC 라이브러리를 사용 하는 여러 개의 실행 파일 구성 된 경우 프로그램의 디스크 및 메모리 요구 사항이 줄어듭니다. W i n&32;와 MFC 프로그램 DLL의 함수를 호출할 수 있습니다. 이러한 유형의 프로젝트를 사용 하 여 MFC DLL을 재배포 해야 합니다.  
+ **Regular MFC DLL using shared MFC DLL**  
+ Select this option to link the MFC library to your program as a shared DLL. Using this option, you cannot share MFC objects between your DLL and the calling application. Your program makes calls to the MFC library at run time. This option reduces the disk and memory requirements of your program if it is composed of multiple execution files that use the MFC library. Both Win32 and MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
- **기본 DLL MFC에 정적으로 연결합니다.**  
- 빌드 타임에 정적으로 MFC 라이브러리에 프로그램을 연결 하려면이 옵션을 선택 합니다. W i n&32;와 MFC 프로그램 DLL의 함수를 호출할 수 있습니다. 이 옵션은 프로그램의 크기를 늘립니다, 이러한 유형의 프로젝트를 사용 하 여 MFC DLL을 재배포할 필요가 없습니다. DLL에서 호출 응용 프로그램 사이의 MFC 개체를 공유할 수 없습니다.  
+ **Regular MFC DLL with MFC statically linked**  
+ Select this option to link your program statically to the MFC library at build time. Both Win32 and MFC programs can call functions in your DLL. While this option increases the size of your program, you do not need to redistribute the MFC DLL with this type of project. You cannot share MFC objects between your DLL and the calling application.  
   
- **MFC 확장 DLL**  
- 프로그램 실행 시 MFC 라이브러리를 호출 하 고 DLL과 호출 응용 프로그램 사이 MFC 개체를 공유 하려는 경우이 옵션을 선택 합니다. 이 옵션의 MFC 라이브러리를 사용 하는 여러 개의 실행 파일의 구성 된 경우 프로그램의 디스크 및 메모리 요구 사항이 줄어듭니다. MFC 프로그램만 DLL의 함수를 호출할 수 있습니다. 이러한 유형의 프로젝트를 사용 하 여 MFC DLL을 재배포 해야 합니다.  
+ **MFC extension DLL**  
+ Select this option if you want your program to make calls to the MFC library at run time, and if you want to share MFC objects between your DLL and the calling application. This option reduces the disk and memory requirements of your program, if it is composed of multiple executable files that all use the MFC library. Only MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
-## <a name="additional-features"></a>추가 기능  
- MFC DLL의 자동화 지원 여부 및 Windows 소켓을 지원 해야 하는지 여부를 선택 합니다.  
+## <a name="additional-features"></a>Additional features  
+ Select whether your MFC DLL should support automation and whether it should support Windows sockets.  
   
- **자동화**  
- 선택 **자동화** 를 프로그램에서 다른 응용 프로그램에서 구현 되는 개체를 조작할 수 있도록 합니다. 선택 하면 **자동화** 도 다른 자동화 클라이언트에 프로그램을 노출 합니다. 참조 [자동화](../../mfc/automation.md) 에 대 한 자세한 내용은 합니다.  
+ **Automation**  
+ Select **Automation** to allow your program to manipulate objects implemented in another program. Selecting **Automation** also exposes your program to other Automation clients. See [Automation](../../mfc/automation.md) for more information.  
   
- **Windows 소켓**  
- 프로그램 Windows 소켓을 지원 하는지 나타내려면이 옵션을 선택 합니다. Windows 소켓에는 TCP/IP 네트워크를 통해 통신 하는 프로그램을 작성할 수 있습니다.  
+ **Windows sockets**  
+ Select this option to indicate that your program supports Windows sockets. Windows sockets allow you to write programs that communicate over TCP/IP networks.  
   
- Windows와 MFC DLL에서 소켓 지원을 만들어지면 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 초기화 소켓에 대 한 지원 및 MFC 헤더 파일 StdAfx.h AfxSock.h를 포함 합니다.  
+ When your MFC DLL with Windows sockets support is created, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) initializes support for sockets and the MFC header file StdAfx.h includes AfxSock.h.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC DLL 마법사](../../mfc/reference/mfc-dll-wizard.md)   
- [MFC DLL 프로젝트 만들기](../../mfc/reference/creating-an-mfc-dll-project.md)
+## <a name="see-also"></a>See Also  
+ [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md)   
+ [Creating an MFC DLL Project](../../mfc/reference/creating-an-mfc-dll-project.md)
 
 

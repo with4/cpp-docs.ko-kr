@@ -1,5 +1,5 @@
 ---
-title: "CSyncObject 클래스 | Microsoft 문서"
+title: CSyncObject Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,8 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSyncObject class
-- synchronization classes, CSyncObject
+- CSyncObject [MFC], CSyncObject
+- CSyncObject [MFC], Lock
+- CSyncObject [MFC], Unlock
+- CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
 caps.latest.revision: 21
 author: mikeblome
@@ -39,113 +41,113 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a1f0c8ddfbfaf129bb18c14d36b998dd37d35899
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e73fe4c85e6614a4e1901b02cbfd4917e016503c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csyncobject-class"></a>CSyncObject 클래스
-Win32의 동기화 개체에 일반적인 기능을 제공하는 순수 가상 클래스입니다.  
+# <a name="csyncobject-class"></a>CSyncObject Class
+A pure virtual class that provides functionality common to the synchronization objects in Win32.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSyncObject : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::CSyncObject](#csyncobject)|`CSyncObject` 개체를 생성합니다.|  
+|[CSyncObject::CSyncObject](#csyncobject)|Constructs a `CSyncObject` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::Lock](#lock)|동기화 개체에 액세스 합니다.|  
-|[CSyncObject::Unlock](#unlock)|동기화 개체에 액세스 합니다.|  
+|[CSyncObject::Lock](#lock)|Gains access to the synchronization object.|  
+|[CSyncObject::Unlock](#unlock)|Gains access to the synchronization object.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::operator 핸들](#operator_handle)|동기화 개체에 대 한 액세스를 제공합니다.|  
+|[CSyncObject::operator HANDLE](#operator_handle)|Provides access to the synchronization object.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::m_hObject](#m_hobject)|기본 동기화 개체에 대 한 핸들입니다.|  
+|[CSyncObject::m_hObject](#m_hobject)|The handle to the underlying synchronization object.|  
   
-## <a name="remarks"></a>주의  
- 파생 된 몇 가지 클래스를 제공 하는 Microsoft Foundation Class 라이브러리 `CSyncObject`합니다. 이들은 [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [아니오](../../mfc/reference/ccriticalsection-class.md), 및 [CSemaphore](../../mfc/reference/csemaphore-class.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library provides several classes derived from `CSyncObject`. These are [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), and [CSemaphore](../../mfc/reference/csemaphore-class.md).  
   
- 동기화 개체를 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 [다중 스레딩: 동기화 클래스를 사용 하는 방법을](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
+ For information on how to use the synchronization objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CSyncObject`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
- 제공 된 이름으로는 동기화 개체를 생성합니다.  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
+ Constructs a synchronization object with the supplied name.  
   
 ```  
 explicit CSyncObject(LPCTSTR pstrName);  
 virtual ~CSyncObject();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrName`  
- 개체의 이름입니다. 경우 **NULL**, *pstrName* null이 됩니다.  
+ The name of the object. If **NULL**, *pstrName* will be null.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
- 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 합니다.  
+##  <a name="lock"></a>  CSyncObject::Lock  
+ Call this function to gain access to the resource controlled by the synchronization object.  
   
 ```  
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwTimeout`  
- 시간 (밀리초)를 사용할 수 있는 동기화 개체에 대 한 대기 지정 (신호). 경우 **무한**, `Lock` 반환 하기 전에 개체에 신호가 전달 될 때까지 기다립니다.  
+ Specifies the amount of time in milliseconds to wait for the synchronization object to be available (signaled). If **INFINITE**, `Lock` will wait until the object is signaled before returning.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 동기화 개체가 신호를 받으면 `Lock` 성공적으로 반환 하 고 스레드 개체를 소유 하 게 합니다. 동기화 개체가 신호 없음으로 (사용 불가) `Lock` 신호를 받을 수에 지정 된 시간 (밀리초)까지 동기화 개체에 대 한 대기는 *dwTimeOut* 매개 변수입니다. 동기화 개체는 지정 된 기간에 신호가 전송 되 되지 않은 경우 `Lock` 실패를 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the synchronization object is signaled, `Lock` will return successfully and the thread now owns the object. If the synchronization object is nonsignaled (unavailable), `Lock` will wait for the synchronization object to become signaled up to the number of milliseconds specified in the *dwTimeOut* parameter. If the synchronization object did not become signaled in the specified amount of time, `Lock` returns failure.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
- 기본 동기화 개체에 대 한 핸들입니다.  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
+ The handle to the underlying synchronization object.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator 핸들  
- 이 연산자를 사용 하 여의 핸들을 가져올 수는 `CSyncObject` 개체입니다.  
+##  <a name="operator_handle"></a>  CSyncObject::operator HANDLE  
+ Use this operator to get the handle of the `CSyncObject` object.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 동기화 된 개체의 핸들 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the synchronization object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>주의  
- Windows Api를 직접 호출 하 여 핸들을 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
- 선언 `Unlock` 매개 변수 없이 순수 가상 함수가 고에서 파생 되는 모든 클래스에서 재정의 되어야 `CSyncObject`합니다.  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
+ The declaration of `Unlock` with no parameters is a pure virtual function, and must be overridden by all classes deriving from `CSyncObject`.  
   
 ```  
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -153,22 +155,22 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
     LPLONG lpPrevCount = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- 기본 구현에서 사용 되지 않습니다.  
+ Not used by default implementation.  
   
  `lpPrevCount`  
- 기본 구현에서 사용 되지 않습니다.  
+ Not used by default implementation.  
   
-### <a name="return-value"></a>반환 값  
- 기본 구현에서는 항상 반환 **TRUE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Default implementation always returns **TRUE**.  
   
-### <a name="remarks"></a>주의  
- 두 개의 매개 변수를 사용 하 여 선언 항상의 기본 구현에서는 반환 **TRUE**합니다. 이 함수는 호출 스레드에서 소유 하는 동기화 개체에 대 한 액세스를 해제 하려면 호출 됩니다. 두 번째 선언 세마포 제어 된 리소스의 둘 이상의 액세스를 허용 하는 등의 동기화 개체에 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of the declaration with two parameters always returns **TRUE**. This function is called to release access to the synchronization object owned by the calling thread. The second declaration is provided for synchronization objects such as semaphores that allow more than one access of a controlled resource.  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

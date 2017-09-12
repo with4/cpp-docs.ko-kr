@@ -1,5 +1,5 @@
 ---
-title: "MFC 응용 프로그램 마법사, 사용자 인터페이스 기능 | Microsoft Docs"
+title: User Interface Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,57 +33,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0612ca4dc78cbca0cffdd9f0ecb580864848ec5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 사용자 인터페이스 기능
-이 항목에서는 응용 프로그램의 모양을 지정 하는 데 사용할 수 있는 옵션에 설명 합니다. 프로젝트에 사용할 수 있는 사용자 인터페이스 기능에는 지정 된 응용 프로그램의 유형에 따라 달라는 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다. 예를 들어 단일 문서 인터페이스 응용 프로그램을 만드는 경우 자식 프레임 스타일을 추가할 수 없습니다.  
+# <a name="user-interface-features-mfc-application-wizard"></a>User Interface Features, MFC Application Wizard
+This topic explains the options that you can use to specify the look of your application. The user interface features available for your project depend on the type of application you specified in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard. For example, if you create a single document interface application, you cannot add child frame styles.  
   
- **주 프레임 스타일**  
- 응용 프로그램의 주 창 프레임의 기능을 설정합니다.  
+ **Main frame styles**  
+ Sets the features of your application's main window frame.  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**두꺼운 프레임**|크기 조정 테두리가 있는 창을 만듭니다. 기본값입니다.|  
-|**최소화 상자**|주 프레임 창에 최소화 상자를 포함합니다. 기본값입니다.|  
-|**최대화 상자**|주 프레임 창에 최대화 상자를 포함합니다. 기본값입니다.|  
-|**최소화**|주 프레임 창을 아이콘으로 시작 합니다.|  
-|**최대화**|디스플레이의 전체 크기를 주 프레임 창을 엽니다.|  
-|**시스템 메뉴**|주 프레임 창에 시스템 메뉴를 포함합니다. 기본값입니다.|  
-|**상자 정보**|포함 된 **에 대 한** 응용 프로그램에 대 한 상자. 사용자는 응용 프로그램에서이 상자에 액세스할 수 **도움말** 메뉴. 기본적으로 선택 하지 않으면 변경할 수 **대화 상자 기반**에 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) 페이지.<br /><br /> **참고** 일반적으로 사용할 수 없는 옵션 나타냅니다 마법사 사용할 수 없는 항목의 확인란은 선택 여부과 옵션에는 프로젝트에 적용 되지 않습니다. 이 경우 마법사는 항상 추가 **에 대 한** 먼저 대화 상자 기반으로 프로젝트를 지정 하지 않으면 프로젝트에 상자 및 확인란의 선택을 취소 합니다.|  
-|**초기 상태 표시줄**|응용 프로그램에 상태 표시줄을 추가합니다. 키보드의 CAPS LOCK, NUM LOCK 및 SCROLL LOCK 키에 대 한 자동 표시기를 포함 하는 상태 표시줄 및 단추 메뉴 명령과 도구 모음에 대 한 도움말을 표시 하는 메시지 선 문자열입니다. 이 옵션을 클릭 하면 상태 표시줄을 표시 하거나 숨기려면 메뉴 명령을 추가 합니다. 기본적으로 응용 프로그램 상태 표시줄을 있습니다. 대화 상자 기반 응용 프로그램에도 사용할 수 없습니다.|  
-|**분할 창**|분할 막대를 제공합니다. 응용 프로그램의 기본 보기를 분할 하는 분할 막대입니다. 다중 문서 MDI (인터페이스) 응용 프로그램, MDI 자식 프레임의 클라이언트 창이 분할 창을 있으며 단일 문서 SDI (인터페이스) 응용 프로그램 및 다중 최상위 수준 문서 응용 프로그램에서 주 프레임의 클라이언트 분할자 창입니다. 대화 상자 기반 응용 프로그램에도 사용할 수 없습니다.|  
+|**Thick frame**|Creates a window that has a sizing border. The default.|  
+|**Minimize box**|Includes a minimize box in the main frame window. The default.|  
+|**Maximize box**|Includes a maximize box in the main frame window. The default.|  
+|**Minimized**|Opens the main frame window as an icon.|  
+|**Maximized**|Opens the main frame window to the full size of the display.|  
+|**System menu**|Includes a system menu in the main frame window. The default.|  
+|**About box**|Includes an **About** box for the application. The user can access this box from the application's **Help** menu. The default, and unchangeable unless you select **Dialog based**, in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page.<br /><br /> **Note** Usually, an unavailable option indicates that the wizard does not apply the option to the project, whether the unavailable item's check box is selected or cleared. In this case, the wizard always adds an **About** box to the project unless you first specify the project as dialog based and then uncheck the box.|  
+|**Initial status bar**|Adds a status bar to your application. The status bar contains automatic indicators for the keyboard's CAPS LOCK, NUM LOCK, and SCROLL LOCK keys and a message line that displays help strings for menu commands and toolbar buttons. Clicking this option also adds menu commands to display or hide the status bar. By default, an application has a status bar. Not available for dialog-based application types.|  
+|**Split window**|Provides a splitter bar. The splitter bar splits the application's main views. In a multiple document interface (MDI) application, the MDI child frame's client window is a splitter window, and in a single document interface (SDI) application and multiple top level document application, the main frame's client window is a splitter window. Not available for dialog-based application types.|  
   
- **자식 프레임 스타일**  
- 응용 프로그램의 모양 및 자식 프레임의 초기 상태를 지정합니다. 자식 프레임 스타일은 MDI 응용 프로그램의 경우에 사용할 수 있습니다.  
+ **Child frame styles**  
+ Specifies the appearance and initial state of the child frames in your application. Child frame styles are available for MDI applications only.  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**자식 최소화 상자**|자식 창에 최소화 단추 (기본적으로 사용) 여부를 지정 합니다.|  
-|**자식에 최대화 상자**|자식 창에 최대화 단추 (기본적으로 사용) 여부를 지정 합니다.|  
-|**자식 창 최대화**|자식 창 cs.style 플래그를 설정 하 여 처음 최대화 되었는지 여부를 지정 **WS_MAXIMIZE** 에 [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) 의 멤버 함수 `CChildFrame`합니다.|  
+|**Child minimize box**|Specifies whether a child window has a minimize button (enabled by default).|  
+|**Child maximize box**|Specifies whether a child window has a maximize button (enabled by default).|  
+|**Child maximized**|Specifies whether a child window is initially maximized by setting the cs.style flag **WS_MAXIMIZE** in the [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) member function of `CChildFrame`.|  
   
- **명령 모음 (메뉴/도구 모음/리본)**  
- 응용 프로그램 메뉴, 도구 모음 및/또는 리본 메뉴에 포함 되는지 여부를 나타냅니다. 대화 상자 기반 응용 프로그램에 대해 사용할 수 없습니다.  
+ **Command bars (menu/toolbar/ribbon)**  
+ Indicates whether your application includes menus, toolbars, and/or a ribbon. Not available for dialog-based applications.  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**클래식 메뉴 사용**|응용 프로그램이 클래식, draggable 메뉴에 포함 되도록 지정 합니다.|  
-|**클래식 도킹 도구 모음을 사용 하 여**|응용 프로그램에 표준 Windows 도구 모음을 추가합니다. 도구 모음 단추가; 새 문서 만들기 문서 파일; 열기 및 저장 가공 복사, 붙여넣기, 또는 텍스트를 인쇄 합니다. 도움말 모드를 입력 하 고 있습니다. 이 옵션을 사용 하면을 표시 하거나 숨기려면 도구 모음 메뉴 명령을 추가 합니다.|  
-|**브라우저 스타일 도구 모음 사용**|응용 프로그램에 Internet Explorer 스타일 도구 모음을 추가합니다.|  
-|**메뉴 모음 및 도구 모음을 사용 하 여**|응용 프로그램 도구 모음 및 draggable 메뉴 모음이 포함 되어 있음을 나타냅니다.|  
-|**사용자 정의 도구 모음 및 이미지**|사용자를 도구 모음과 런타임 시 도구 모음 이미지를 사용자 지정할 수 있습니다.|  
-|**개인 설정된 메뉴 동작**|사용자가 가장 자주 사용 하는 명령만 포함 하는 경우 또는 메뉴를 열 때 항목의 전체 목록을 포함 되는지 여부를 지정 합니다.|  
-|**리본 메뉴를 사용 하 여**|Office 2007 like 리본 메뉴 모음이 나 도구는 대신 응용 프로그램에서 사용합니다.|  
+|**Use a classic menu**|Specifies that your application contains a classic, non-draggable menu.|  
+|**Use a classic docking toolbar**|Adds a standard Windows toolbar to your application. The toolbar contains buttons for creating a new document; opening and saving document files; cutting copying, pasting, or printing text; and entering Help mode. Enabling this option also adds menu commands to display or hide the toolbar.|  
+|**Use a browser style toolbar**|Adds an Internet Explorer-style toolbar to your application.|  
+|**Use a menu bar and toolbar**|Indicates that your application contains a draggable menu bar and a toolbar.|  
+|**User-defined toolbars and images**|Allows the user to customize the toolbar and the toolbar images at runtime.|  
+|**Personalized menu behavior**|Specifies whether the menu contains the full list of items when opened, or if it contains only the commands that the user most frequently uses.|  
+|**Use a ribbon**|Uses an Office 2007-like ribbon in your application instead of a menu bar or toolbar.|  
   
- **대화 상자 제목**  
- 에 대 한 [CDialog 클래스](../../mfc/reference/cdialog-class.md)-기반 응용 프로그램 에서만이 제목은 대화 상자의 제목 표시줄에 표시 합니다. 이 필드를 편집 하려면 먼저 선택 해야는 **대화 상자 기반** 옵션에서 **응용 프로그램 종류**합니다. 자세한 내용은 참조 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md)합니다.  
+ **Dialog title**  
+ For [CDialog Class](../../mfc/reference/cdialog-class.md)-based applications only, this title appears in the title bar of the dialog box. To edit this field, you must first select the **Dialog based** option under **Application type**. For more information, see [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

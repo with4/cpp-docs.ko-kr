@@ -1,5 +1,5 @@
 ---
-title: "COleCmdUI 클래스 | Microsoft 문서"
+title: COleCmdUI Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,12 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- COleCmdUI class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- COleCmdUI [MFC], COleCmdUI
+- COleCmdUI [MFC], Enable
+- COleCmdUI [MFC], SetCheck
+- COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
 caps.latest.revision: 21
 author: mikeblome
@@ -43,55 +41,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 38e7019d7636166262028d955455cee675824f8b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77c88a0595038dea342b7e5357e8723cde680646
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colecmdui-class"></a>COleCmdUI 클래스
-응용 프로그램의 `IOleCommandTarget`기반 기능과 관련된 사용자 인터페이스 개체의 상태를 업데이트하기 위한 MFC용 메서드를 구현합니다.  
+# <a name="colecmdui-class"></a>COleCmdUI Class
+Implements a method for MFC to update the state of user-interface objects related to the `IOleCommandTarget`-driven features of your application.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleCmdUI : public CCmdUI  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCmdUI::COleCmdUI](#colecmdui)|`COleCmdUI` 개체를 생성합니다.|  
+|[COleCmdUI::COleCmdUI](#colecmdui)|Constructs a `COleCmdUI` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|설정 하거나 사용 명령 플래그를 지웁니다.|  
-|[COleCmdUI::SetCheck](#setcheck)|켜기/끄기 전환의 상태를 설정 명령입니다.|  
-|[COleCmdUI::SetText](#settext)|명령에 대 한 텍스트 이름 또는 상태 문자열을 반환합니다.|  
+|[COleCmdUI::Enable](#enable)|Sets or clears the enable command flag.|  
+|[COleCmdUI::SetCheck](#setcheck)|Sets the state of an on/off toggle command.|  
+|[COleCmdUI::SetText](#settext)|Returns a text name or status string for a command.|  
   
-## <a name="remarks"></a>주의  
- 사용할 수 없습니다. DocObjects, 사용자 응용 프로그램을 MFC 프로세스에서 메뉴를 볼 때 응용 프로그램에서 **UPDATE_COMMAND_UI** 통해 알림을 합니다. 각 알림에 제공 되는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 특정 명령의 상태를 반영 하도록 조작할 수 있는 개체입니다. 그러나 DocObjects에 응용 프로그램을 사용할 때 MFC 처리 **UPDATE_OLE_COMMAND_UI** 알림 및 할당 `COleCmdUI` 개체입니다.  
+## <a name="remarks"></a>Remarks  
+ In an application that is not enabled for DocObjects, when the user views a menu in the application, MFC processes **UPDATE_COMMAND_UI** notifcations. Each notification is given a [CCmdUI](../../mfc/reference/ccmdui-class.md) object that can be manipulated to reflect the state of a particular command. However, when your application is enabled for DocObjects, MFC processes **UPDATE_OLE_COMMAND_UI** notifications and assigns `COleCmdUI` objects.  
   
- `COleCmdUI`컨테이너의 사용자 인터페이스 (예: FileNew, 열기, 인쇄 및 등)에서 발생 하는 명령을 수신 하도록 DocObject 있으며 컨테이너가 DocObject의 사용자 인터페이스에서 발생 하는 명령을 수신할 수 있도록 합니다. 하지만 `IDispatch` 발송 동일한 명령을 사용할 수 있습니다 `IOleCommandTarget` 쿼리 및 명령의 인수 없이 일반적으로 표준 집합에 의존 하므로 및 관련 된 형식 정보가 없기 때문에 실행 하는 간단한 방법을 제공 합니다. `COleCmdUI`사용 하도록 설정, 업데이트 및 사용자 인터페이스 명령 DocObject의 다른 속성을 설정할 데 사용할 수 있습니다. 명령을 호출 하는 경우 호출 [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)합니다.  
+ `COleCmdUI` allows a DocObject to receive commands that originate in its container's user interface (such as FileNew, Open, Print, and so on), and allows a container to receive commands that originate in the DocObject's user interface. Although `IDispatch` could be used to dispatch the same commands, `IOleCommandTarget` provides a simpler way to query and execute because it relies on a standard set of commands, usually without arguments, and no type information is involved. `COleCmdUI` can be used to enable, update, and set other properties of DocObject user interface commands. When you want to invoke the command, call [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- 참조에 대 한 자세한 내용은 DocObjects [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) 및 [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)합니다. 또한 참조 [인터넷 첫 번째 단계: 활성 문서](../../mfc/active-documents-on-the-internet.md) 및 [액티브 문서](../../mfc/active-documents-on-the-internet.md)합니다.  
+ For further information on DocObjects, see [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) and [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdocobj.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocobj.h  
   
-##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
- 생성 된 `COleCmdUI` 특정 사용자 인터페이스 명령과 연결 된 개체입니다.  
+##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
+ Constructs a `COleCmdUI` object associated with a particular user-interface command.  
   
 ```  
 COleCmdUI(
@@ -100,61 +98,61 @@ COleCmdUI(
     const GUID* m_pGroup);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rgCmds`  
- 지정 된 GUID와 연관 된 지원 되는 명령의 목록입니다. **OLECMD** 구조 명령 플래그 명령에 연결 합니다.  
+ A list of supported commands associated with the given GUID. The **OLECMD** structure associates commands with command flags.  
   
  *cCmds*  
- 명령 수 `rgCmds`합니다.  
+ The count of commands in `rgCmds`.  
   
  `pGroup`  
- 명령 집합을 식별 하는 GUID에 대 한 포인터입니다.  
+ A pointer to a GUID that identifies a set of commands.  
   
-### <a name="remarks"></a>주의  
- `COleCmdUI` 개체는 메뉴 항목, 컨트롤 막대 단추 등의 DocObject 사용자 인터페이스 개체를 업데이트 하기 위한 프로그래밍 인터페이스를 제공 합니다. 사용자 인터페이스 개체를 활성화, 비활성화,이 옵션을 선택 하거나 통해 선택이 취소 수 있습니다는 `COleCmdUI` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The `COleCmdUI` object provides a programmatic interface for updating DocObject user-interface objects such as menu items or control-bar buttons. The user-interface objects can be enabled, disabled, checked, and/or cleared through the `COleCmdUI` object.  
   
-##  <a name="enable"></a>COleCmdUI::Enable  
- 명령 플래그를 설정 하려면이 함수를 호출 하는 `COleCmdUI` 개체를 **OLECOMDF_ENABLED**를 가능 하 고, 활성화는 명령 인터페이스 알려줍니다 또는 명령 플래그를 지우려면.  
+##  <a name="enable"></a>  COleCmdUI::Enable  
+ Call this function to set the command flag of the `COleCmdUI` object to **OLECOMDF_ENABLED**, which tells the interface the command is available and enabled, or to clear the command flag.  
   
 ```  
 virtual void Enable(BOOL bOn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- 와 연결 된 명령이 있는지 여부를 나타내는 `COleCmdUI` 개체를 활성화 또는 비활성화 해야 합니다. 0이 아니면 명령을; 활성화 0 명령을 사용 하지 않도록 설정 합니다.  
+ Indicates whether the command associated with the `COleCmdUI` object should be enabled or disabled. Nonzero enables the command; 0 disables the command.  
   
-##  <a name="setcheck"></a>COleCmdUI::SetCheck  
- 켜기/끄기 전환의 상태를 설정 하려면이 함수를 호출 명령입니다.  
+##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
+ Call this function to set the state of an on/off toggle command.  
   
 ```  
 virtual void SetCheck(int nCheck);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- 켜기/끄기 전환 설정할 상태를 결정 하는 값 명령입니다. 값:  
+ A value determining the state to set an on/off toggle command. Values are:  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|**1**|이 명령은을 켜기로 설정합니다.|  
-|**2**|비활성화 상태의;에 명령을 설정합니다 모두를 켜고 관련 선택 영역에 있는 상태에서이 명령의 특성은 이므로 상태를 확인할 수 없습니다.|  
-|다른 모든 값|명령 off로 설정 합니다.|  
+|**1**|Sets the command to on.|  
+|**2**|Sets the command to indeterminate; the state cannot be determined because the attribute of this command is in both on and off states in the relevant selection.|  
+|any other value|Sets the command to off.|  
   
-##  <a name="settext"></a>COleCmdUI::SetText  
- 명령에 대 한 텍스트 이름 또는 상태 문자열을 반환 하려면이 함수를 호출 합니다.  
+##  <a name="settext"></a>  COleCmdUI::SetText  
+ Call this function to return a text name or status string for a command.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 명령에 사용할 텍스트에 대 한 포인터입니다.  
+ A pointer to the text to be used with the command.  
   
-## <a name="see-also"></a>참고 항목  
- [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCmdUI Class](../../mfc/reference/ccmdui-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

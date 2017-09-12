@@ -1,5 +1,5 @@
 ---
-title: "CWindowDC 클래스 | Microsoft 문서"
+title: CWindowDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,15 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWindowDC
-- No header/CWindowDC
-- No header/CWindowDC::CWindowDC
-- No header/CWindowDC::m_hWnd
+- AFXWIN/CWindowDC
+- AFXWIN/CWindowDC::CWindowDC
+- AFXWIN/CWindowDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
-- device contexts, window
-- screen output classes
-- CWindowDC class
+- CWindowDC [MFC], CWindowDC
+- CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
 caps.latest.revision: 22
 author: mikeblome
@@ -38,85 +37,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8a941e1b6f8a398706498ec5d1ce1bfc9156f115
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6910ab7d9692e9392e660e860973ac721e3154b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwindowdc-class"></a>CWindowDC 클래스
-`CDC`에서 파생됩니다.  
+# <a name="cwindowdc-class"></a>CWindowDC Class
+Derived from `CDC`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWindowDC : public CDC  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWindowDC::CWindowDC](#cwindowdc)|`CWindowDC` 개체를 생성합니다.|  
+|[CWindowDC::CWindowDC](#cwindowdc)|Constructs a `CWindowDC` object.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND` 이 `CWindowDC` 연결 됩니다.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|The `HWND` to which this `CWindowDC` is attached.|  
   
-## <a name="remarks"></a>주의  
- Windows 함수 호출 [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)생성 시 및 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) 소멸 시. 즉, 한 `CWindowDC` 개체의 전체 화면 영역에 액세스 한 [CWnd](../../mfc/reference/cwnd-class.md) (클라이언트와 비클라이언트 영역).  
+## <a name="remarks"></a>Remarks  
+ Calls the Windows function [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)at construction time and [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) at destruction time. This means that a `CWindowDC` object accesses the entire screen area of a [CWnd](../../mfc/reference/cwnd-class.md) (both client and nonclient areas).  
   
- 사용 하 여 대 한 자세한 내용은 `CWindowDC`, 참조 [장치 컨텍스트](../../mfc/device-contexts.md)합니다.  
+ For more information on using `CWindowDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CWindowDC`  
   
-## <a name="requirements"></a>요구 사항  
- 헤더: afxwin.h  
+## <a name="requirements"></a>Requirements  
+ Header: afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
- 생성 된 `CWindowDC` 의 전체 화면 영역 (클라이언트 및 비클라이언트)에 액세스 하는 개체는 `CWnd` 가리키는 개체 `pWnd`합니다.  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
+ Constructs a `CWindowDC` object that accesses the entire screen area (both client and nonclient) of the `CWnd` object pointed to by `pWnd`.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 창 디바이스 컨텍스트 개체에 액세스 하는 클라이언트 영역입니다.  
+ The window whose client area the device-context object will access.  
   
-### <a name="remarks"></a>주의  
- Windows 함수를 호출 하는 생성자 [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947)합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor calls the Windows function [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- 예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows `GetWindowDC` 호출이 실패 합니다. 장치 컨텍스트에 하지 못할 경우 Windows에 이미 할당 된 모든 사용 가능한 장치 컨텍스트. 응용 프로그램은 Windows 아래에서 언제 든 지 사용할 수 있는&5; 개의 일반적인 디스플레이 컨텍스트를 위한 경쟁 합니다.  
+ An exception (of type `CResourceException`) is thrown if the Windows `GetWindowDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&188;](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
- `HWND` 의 `CWnd` 포인터는 생성 하는 데 사용 되는 `CWindowDC` 개체입니다.  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
+ The `HWND` of the `CWnd` pointer is used to construct the `CWindowDC` object.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>주의  
- `m_hWnd`보호 되는 유형의 변수 `HWND`합니다.  
+### <a name="remarks"></a>Remarks  
+ `m_hWnd` is a protected variable of type `HWND`.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CWindowDC::CWindowDC](#cwindowdc)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CWindowDC::CWindowDC](#cwindowdc).  
   
-## <a name="see-also"></a>참고 항목  
- [CDC 클래스](../../mfc/reference/cdc-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDC 클래스](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

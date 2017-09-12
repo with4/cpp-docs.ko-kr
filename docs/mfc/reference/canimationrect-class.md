@@ -1,5 +1,5 @@
 ---
-title: "CAnimationRect 클래스 | Microsoft 문서"
+title: CAnimationRect Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationRect class
+- CAnimationRect [MFC], CAnimationRect
+- CAnimationRect [MFC], AddTransition
+- CAnimationRect [MFC], GetBottom
+- CAnimationRect [MFC], GetDefaultValue
+- CAnimationRect [MFC], GetLeft
+- CAnimationRect [MFC], GetRight
+- CAnimationRect [MFC], GetTop
+- CAnimationRect [MFC], GetValue
+- CAnimationRect [MFC], SetDefaultValue
+- CAnimationRect [MFC], GetAnimationVariableList
+- CAnimationRect [MFC], m_bFixedSize
+- CAnimationRect [MFC], m_bottomValue
+- CAnimationRect [MFC], m_leftValue
+- CAnimationRect [MFC], m_rightValue
+- CAnimationRect [MFC], m_szInitial
+- CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
 caps.latest.revision: 17
 author: mikeblome
@@ -50,87 +65,87 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: f935884301030166572e356fffe88439f843f2c7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a8705bdf9caca25284a9364de297a0fbab57c3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationrect-class"></a>CAnimationRect 클래스
-면에 애니메이션을 적용할 수 있는 사각형 기능을 구현합니다.  
+# <a name="canimationrect-class"></a>CAnimationRect Class
+Implements the functionality of a rectangle whose sides can be animated.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationRect : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::CAnimationRect](#canimationrect)|오버로드됨. 애니메이션 rect 개체를 생성 합니다.|  
+|[CAnimationRect::CAnimationRect](#canimationrect)|Overloaded. Constructs an animation rect object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::AddTransition](#addtransition)|왼쪽, 위쪽, 오른쪽 및 아래쪽 좌표에 대 한 전환을 추가합니다.|  
-|[CAnimationRect::GetBottom](#getbottom)|아래쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|사각형의 경계에 대 한 기본 값을 반환합니다.|  
-|[CAnimationRect::GetLeft](#getleft)|왼쪽된 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationRect::GetRight](#getright)|오른쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationRect::GetTop](#gettop)|위쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationRect::GetValue](#getvalue)|현재 값을 반환 합니다.|  
-|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
+|[CAnimationRect::AddTransition](#addtransition)|Adds transitions for left, top, right and bottom coordinates.|  
+|[CAnimationRect::GetBottom](#getbottom)|Provides access to CAnimationVariable representing bottom coordinate.|  
+|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Returns the default values for rectangle's bounds.|  
+|[CAnimationRect::GetLeft](#getleft)|Provides access to CAnimationVariable representing left coordinate.|  
+|[CAnimationRect::GetRight](#getright)|Provides access to CAnimationVariable representing right coordinate.|  
+|[CAnimationRect::GetTop](#gettop)|Provides access to CAnimationVariable representing top coordinate.|  
+|[CAnimationRect::GetValue](#getvalue)|Returns current value.|  
+|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|목록에 캡슐화 된 애니메이션 변수를 추가합니다. (재정의 [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[RECT CAnimationRect::operator](#operator_rect)|사각형을 한 CAnimationRect 변환|  
-|[CAnimationRect::operator =](#operator_eq)|CAnimationRect에 rect을 할당합니다.|  
+|[CAnimationRect::operator RECT](#operator_rect)|Converts a CAnimationRect to RECT.|  
+|[CAnimationRect::operator=](#operator_eq)|Assigns rect to CAnimationRect.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|사각형 크기는 수정 여부를 지정 합니다.|  
+|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Specifies whether the rectangle has fixed size.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|아래쪽을 나타내는 캡슐화 된 애니메이션 변수의 애니메이션 사각형의 경계입니다.|  
-|[CAnimationRect::m_leftValue](#m_leftvalue)|애니메이션 사각형의 왼쪽을 나타내는 캡슐화 된 애니메이션 변수의 바인딩됩니다.|  
-|[CAnimationRect::m_rightValue](#m_rightvalue)|오른쪽을 나타내는 캡슐화 된 애니메이션 변수의 애니메이션 사각형의 경계입니다.|  
-|[CAnimationRect::m_szInitial](#m_szinitial)|애니메이션 사각형의 초기 크기를 지정합니다.|  
-|[CAnimationRect::m_topValue](#m_topvalue)|애니메이션 사각형의 위쪽을 나타내는 캡슐화 된 애니메이션 변수의 바인딩됩니다.|  
+|[CAnimationRect::m_bottomValue](#m_bottomvalue)|The encapsulated animation variable that represents Bottom bound of animation rectangle.|  
+|[CAnimationRect::m_leftValue](#m_leftvalue)|The encapsulated animation variable that represents Left bound of animation rectangle.|  
+|[CAnimationRect::m_rightValue](#m_rightvalue)|The encapsulated animation variable that represents Right bound of animation rectangle.|  
+|[CAnimationRect::m_szInitial](#m_szinitial)|Specifies initial size of animation rectangle.|  
+|[CAnimationRect::m_topValue](#m_topvalue)|The encapsulated animation variable that represents Top bound of animation rectangle.|  
   
-## <a name="remarks"></a>주의  
- CAnimationRect 클래스는&4; 개의 CAnimationVariable 개체를 캡슐화 하 고 사각형 응용 프로그램에 나타낼 수 있습니다. 응용 프로그램에서이 클래스를 사용 하 여 방금이 클래스의 개체를 인스턴스화할 CAnimationController::AddAnimationObject를 사용 하 여 애니메이션 컨트롤러를 추가 및 왼쪽, 오른쪽 위쪽 및 아래쪽 좌표에 적용 될 각 전환에 대해 AddTransition를 호출 합니다.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationRect class encapsulates four CAnimationVariable objects and can represent in applications a rectangle. To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to left, right top and bottom coordinates.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationRect`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationRect::AddTransition  
- 왼쪽, 위쪽, 오른쪽 및 아래쪽 좌표에 대 한 전환을 추가합니다.  
+##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
+ Adds transitions for left, top, right and bottom coordinates.  
   
 ```  
 void AddTransition(
@@ -140,24 +155,24 @@ void AddTransition(
     CBaseTransition* pBottomTransition);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pLeftTransition`  
- 왼쪽에 대 한 전환을 지정합니다.  
+ Specifies transition for the left side.  
   
  `pTopTransition`  
- 위쪽에 대 한 전환을 지정합니다.  
+ Specifies transition for the top side.  
   
  `pRightTransition`  
- 오른쪽에 대 한 전환을 지정합니다.  
+ Specifies transition for the right side.  
   
  `pBottomTransition`  
- 아래쪽에 대 한 전환을 지정합니다.  
+ Specifies transition for the bottom side.  
   
-### <a name="remarks"></a>주의  
- 지정된 된 전환을 각 사각형 측면에 대 한 변수를 애니메이션에 적용할 변환의 내부 목록에 추가 하려면이 함수를 호출 합니다. 전환에 추가 되지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우. 사각형 측면 중 하나에 전환을 적용할 필요가 없으면 NULL을 전달할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables for each rectangle sides. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of the rectangle sides, you can pass NULL.  
   
-##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
- CAnimationRect 개체를 만듭니다.  
+##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect  
+ Constructs a CAnimationRect object.  
   
 ```  
 CAnimationRect();
@@ -188,42 +203,42 @@ CAnimationRect(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 기본 사각형을 지정합니다.  
+ Specifies default rectangle.  
   
  `nGroupID`  
- 그룹 ID를 지정 합니다.  
+ Specifies Group ID.  
   
  `nObjectID`  
- 개체 ID를 지정 합니다.  
+ Specifies Object ID.  
   
  `dwUserData`  
- 사용자 정의 데이터를 지정합니다.  
+ Specifies user-defined data.  
   
  `pt`  
- 왼쪽 위 모퉁이의 좌표입니다.  
+ Coordinate of top-left corner.  
   
  `sz`  
- 사각형의 크기입니다.  
+ Size of rectangle.  
   
  `nLeft`  
- 경계의 왼쪽 좌표를 지정합니다.  
+ Specifies coordinate of left bound.  
   
  `nTop`  
- 위쪽 경계의 좌표를 지정 합니다.  
+ Specifies coordinate of top bound.  
   
  `nRight`  
- 오른쪽 경계의 좌표를 지정합니다.  
+ Specifies coordinate of right bound.  
   
  `nBottom`  
- 바인딩된 아래쪽의 좌표를 지정 합니다.  
+ Specifies coordinate of bottom bound.  
   
-### <a name="remarks"></a>주의  
- 개체를 생성 하 여 기본값으로 왼쪽, 위쪽, 오른쪽 및 아래쪽에 대 한 개체 ID와 그룹 ID를 0으로 설정 됩니다. SetDefaultValue 및 SetID를 사용 하 여 런타임에 나중에 변경할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The object is constructed with default values for left, top, right and bottom, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
- 목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
+##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList  
+ Puts the encapsulated animation variables into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -231,178 +246,178 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lst`  
- 함수가 반환 하는 경우 사각형의 좌표를 나타내는&4; 개의 CAnimationVariable 개체에 대 한 포인터가 포함 되어 있습니다.  
+ When the function returns, it contains pointers to four CAnimationVariable objects representing coordinates of rectangle.  
   
-##  <a name="getbottom"></a>CAnimationRect::GetBottom  
- 아래쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
+ Provides access to CAnimationVariable representing bottom coordinate.  
   
 ```  
 CAnimationVariable& GetBottom();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 캡슐화 된 CAnimationVariable 아래쪽 좌표를 나타내는에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing bottom coordinate.  
   
-### <a name="remarks"></a>주의  
- 아래쪽 좌표를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the bottom coordinate.  
   
-##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
- 사각형의 경계에 대 한 기본 값을 반환합니다.  
+##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue  
+ Returns the default values for rectangle's bounds.  
   
 ```  
 CRect GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 왼쪽, 오른쪽, 위쪽 및 아래쪽에 대 한 기본값을 포함 하는 CRect 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A CRect value containing defaults for left, right, top and bottom.  
   
-### <a name="remarks"></a>주의  
- 생성자 또는 SetDefaultValue 하 여 이전에 설정 된 기본값을 검색 하려면이 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
   
-##  <a name="getleft"></a>CAnimationRect::GetLeft  
- 왼쪽된 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="getleft"></a>  CAnimationRect::GetLeft  
+ Provides access to CAnimationVariable representing left coordinate.  
   
 ```  
 CAnimationVariable& GetLeft();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 캡슐화 된 CAnimationVariable 왼쪽된 좌표를 나타내는에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing left coordinate.  
   
-### <a name="remarks"></a>주의  
- 왼쪽된 좌표를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the left coordinate.  
   
-##  <a name="getright"></a>CAnimationRect::GetRight  
- 오른쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="getright"></a>  CAnimationRect::GetRight  
+ Provides access to CAnimationVariable representing right coordinate.  
   
 ```  
 CAnimationVariable& GetRight();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 캡슐화 된 CAnimationVariable 오른쪽 좌표를 나타내는에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing right coordinate.  
   
-### <a name="remarks"></a>주의  
- 오른쪽 좌표를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the right coordinate.  
   
-##  <a name="gettop"></a>CAnimationRect::GetTop  
- 위쪽 좌표를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="gettop"></a>  CAnimationRect::GetTop  
+ Provides access to CAnimationVariable representing top coordinate.  
   
 ```  
 CAnimationVariable& GetTop();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 캡슐화 된 CAnimationVariable 위쪽 좌표를 나타내는에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing top coordinate.  
   
-### <a name="remarks"></a>주의  
- 위쪽 좌표를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the top coordinate.  
   
-##  <a name="getvalue"></a>CAnimationRect::GetValue  
- 현재 값을 반환 합니다.  
+##  <a name="getvalue"></a>  CAnimationRect::GetValue  
+ Returns current value.  
   
 ```  
 BOOL GetValue(CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
+ Output. Contains the current value when this method returns.  
   
-### <a name="return-value"></a>반환 값  
- True 이면 현재 값을 검색 했습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if the current value was successfully retrieved; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 사각형의 현재 값을 검색 하려면이 함수를 호출 합니다. 이 메서드가 실패 또는 기본 COM 개체 남아 있는 경우 위쪽, 오른쪽 및 아래쪽 초기화 되지 않은, rect SetDefaultValue 또는 생성자에서 이전에 설정 된 기본값을 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value of animation rectangle. If this method fails or underlying COM objects for left, top, right and bottom have not been initialized, rect contains default value, which was previously set in constructor or by SetDefaultValue.  
   
-##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
- 사각형 크기는 수정 여부를 지정 합니다.  
+##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize  
+ Specifies whether the rectangle has fixed size.  
   
 ```  
 BOOL m_bFixedSize;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버가 true 인 경우 사각형의 크기가 고정 되 고 오른쪽 하 고 하위 값이 고정된 크기에 따라 왼쪽 위의 이동 될 때마다 다시 계산 됩니다. 이 값을 쉽게 화면 주위로 사각형을 이동 하려면 TRUE로 설정 합니다. 이 경우 오른쪽 및 아래쪽 좌표에 적용 된 전환은 무시 됩니다. 크기는 개체를 생성 하거나 SetDefaultValue를 호출 하는 경우 내부적으로 저장 됩니다. 이 멤버는 기본적으로 FALSE로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If this member is true, then the size of rectangle is fixed and right and bottom values are recalculated each time the top-left corner is moved according to the fixed size. Set this value to TRUE to easily move the rectangle around the screen. In this case transitions applied to right and bottom coordinates are ignored. The size is stored internally when you construct the object and/or call SetDefaultValue. By default this member is set to FALSE.  
   
-##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
- 아래쪽을 나타내는 캡슐화 된 애니메이션 변수의 애니메이션 사각형의 경계입니다.  
+##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue  
+ The encapsulated animation variable that represents Bottom bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
- 애니메이션 사각형의 왼쪽을 나타내는 캡슐화 된 애니메이션 변수의 바인딩됩니다.  
+##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue  
+ The encapsulated animation variable that represents Left bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
- 오른쪽을 나타내는 캡슐화 된 애니메이션 변수의 애니메이션 사각형의 경계입니다.  
+##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue  
+ The encapsulated animation variable that represents Right bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
- 애니메이션 사각형의 초기 크기를 지정합니다.  
+##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial  
+ Specifies initial size of animation rectangle.  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
- 애니메이션 사각형의 위쪽을 나타내는 캡슐화 된 애니메이션 변수의 바인딩됩니다.  
+##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue  
+ The encapsulated animation variable that represents Top bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="operator_rect"></a>RECT CAnimationRect::operator  
- 사각형을 한 CAnimationRect 변환  
+##  <a name="operator_rect"></a>  CAnimationRect::operator RECT  
+ Converts a CAnimationRect to RECT.  
   
 ```  
 operator RECT();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 사각형으로 애니메이션 사각형의 현재 값  
+### <a name="return-value"></a>Return Value  
+ Current value of animation rectangle as RECT.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 GetValue 내부적으로 호출 합니다. 어떤 이유로 getvalue가 실패 하면 반환 되는 RECT 모든 사각형 좌표에 대 한 기본 값이 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function internally calls GetValue. If GetValue for some reason fails, the returned RECT will contain default values for all rectangle coordinates.  
   
-##  <a name="operator_eq"></a>CAnimationRect::operator =  
- CAnimationRect에 rect을 할당합니다.  
+##  <a name="operator_eq"></a>  CAnimationRect::operator=  
+ Assigns rect to CAnimationRect.  
   
 ```  
 void operator=(const RECT& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 애니메이션 사각형의 새 값입니다.  
+ The new value of animation rectangle.  
   
-### <a name="remarks"></a>주의  
- 이 연산자는 생성 된 색 구성 요소에 대 한 기본 COM 개체를 다시 만드는 SetDefaultValue를 호출 하기 때문에 애니메이션이 시작 되기 전에 하는 것이 좋습니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for color components if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
- 기본값을 설정합니다.  
+##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(const CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 왼쪽, 위쪽, 오른쪽 및 아래쪽에 대 한 새 기본값을 지정합니다.  
+ Specifies new default values for left, top, right and bottom.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 애니메이션 개체에 기본값을 설정 합니다. 이 메서드는 사각형의 경계를 기본 값을 할당 합니다. 기본 COM 개체를 만든 경우도 다시 것입니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set a default value to animation object. This methods assigns default values to rectangle's bounds. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

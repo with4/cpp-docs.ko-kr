@@ -1,5 +1,5 @@
 ---
-title: "CSpinButtonCtrl 클래스 | Microsoft Docs"
+title: CSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,11 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CSpinButtonCtrl
-- CSpinButtonCtrl class
-- CSpinButtonCtrl class, common controls
-- up-down controls, spin button control
-- spin button control
+- CSpinButtonCtrl [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl [MFC], Create
+- CSpinButtonCtrl [MFC], CreateEx
+- CSpinButtonCtrl [MFC], GetAccel
+- CSpinButtonCtrl [MFC], GetBase
+- CSpinButtonCtrl [MFC], GetBuddy
+- CSpinButtonCtrl [MFC], GetPos
+- CSpinButtonCtrl [MFC], GetRange
+- CSpinButtonCtrl [MFC], SetAccel
+- CSpinButtonCtrl [MFC], SetBase
+- CSpinButtonCtrl [MFC], SetBuddy
+- CSpinButtonCtrl [MFC], SetPos
+- CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 caps.latest.revision: 23
 author: mikeblome
@@ -51,61 +59,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae174d059e23d93cec902cc4c5946052e73e8b41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 클래스
-Windows의 공용 스핀 단추 컨트롤의 기능을 제공합니다.  
+# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl Class
+Provides the functionality of the Windows common spin button control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSpinButtonCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|`CSpinButtonCtrl` 개체를 생성합니다.|  
+|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Constructs a `CSpinButtonCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|스핀 단추 컨트롤을 만들고에 연결 된 `CSpinButtonCtrl` 개체입니다.|  
-|[CSpinButtonCtrl::CreateEx](#createex)|Windows는 지정 된 확장된 스타일을 사용 하 여 스핀 단추 컨트롤을 만들고에 연결 된 `CSpinButtonCtrl` 개체입니다.|  
-|[CSpinButtonCtrl::GetAccel](#getaccel)|스핀 단추 컨트롤에 대 한 가속 정보를 검색합니다.|  
-|[CSpinButtonCtrl::GetBase](#getbase)|스핀 단추 컨트롤에 대 한 현재 자료를 검색합니다.|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|현재 버디 창에 대 한 포인터를 검색합니다.|  
-|[CSpinButtonCtrl::GetPos](#getpos)|스핀 단추 컨트롤의 현재 위치를 검색합니다.|  
-|[CSpinButtonCtrl::GetRange](#getrange)|스핀 단추 컨트롤에 대 한 상한 및 하 한 제한 (범위)를 검색합니다.|  
-|[CSpinButtonCtrl::SetAccel](#setaccel)|스핀 단추 컨트롤에 대 한 가속을 설정합니다.|  
-|[CSpinButtonCtrl::SetBase](#setbase)|스핀 단추 컨트롤을 설정 합니다.|  
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|스핀 단추 컨트롤의 버디 창을 설정입니다.|  
-|[CSpinButtonCtrl::SetPos](#setpos)|컨트롤에 대 한 현재 위치를 설정합니다.|  
-|[CSpinButtonCtrl::SetRange](#setrange)|스핀 단추 컨트롤에 대 한 상한 및 하 한 제한 (범위)를 설정합니다.|  
+|[CSpinButtonCtrl::Create](#create)|Creates a spin button control and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Creates a spin button control with the specified Windows extended styles and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Retrieves acceleration information for a spin button control.|  
+|[CSpinButtonCtrl::GetBase](#getbase)|Retrieves the current base for a spin button control.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Retrieves a pointer to the current buddy window.|  
+|[CSpinButtonCtrl::GetPos](#getpos)|Retrieves the current position of a spin button control.|  
+|[CSpinButtonCtrl::GetRange](#getrange)|Retrieves the upper and lower limits (range) for a spin button control.|  
+|[CSpinButtonCtrl::SetAccel](#setaccel)|Sets the acceleration for a spin button control.|  
+|[CSpinButtonCtrl::SetBase](#setbase)|Sets the base for a spin button control.|  
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Sets the buddy window for a spin button control.|  
+|[CSpinButtonCtrl::SetPos](#setpos)|Sets the current position for the control.|  
+|[CSpinButtonCtrl::SetRange](#setrange)|Sets the upper and lower limits (range) for a spin button control.|  
   
-## <a name="remarks"></a>설명  
- "스핀 단추 컨트롤" (up-down 컨트롤이 라고도 함)는 사용자를 증가 또는 감소 스크롤 위치 또는 도우미 컨트롤에 표시 되는 번호와 같은 값을 클릭할 수 있는 화살표 단추 쌍입니다. 스핀 단추 컨트롤에 연관 된 값의 현재 위치를 라고 합니다. 스핀 단추 컨트롤은 컨트롤과 함께, "버디 창입니다." 이라는 자주 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ A "spin button control" (also known as an up-down control) is a pair of arrow buttons that the user can click to increment or decrement a value, such as a scroll position or a number displayed in a companion control. The value associated with a spin button control is called its current position. A spin button control is most often used with a companion control, called a "buddy window."  
   
- 이 컨트롤 (및 따라서는 `CSpinButtonCtrl` 클래스) 이상 Windows 95/98 및 Windows NT 버전 3.51에서 실행 중인 프로그램에만 사용할 수는 있습니다.  
+ This control (and therefore the `CSpinButtonCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 사용자에 게 스핀 단추 컨트롤 및 버디 창 처럼 표시 됩니다는 단일 제어 합니다. 스핀 단추 컨트롤 자동으로 자체의 버디 창 옆에 놓고 자동으로 설정 있는지 버디 창의 캡션을 현재 위치를 지정할 수 있습니다. 숫자 입력에 대 한 사용자를 편집 컨트롤과 스핀 단추 컨트롤을 사용할 수 있습니다.  
+ To the user, a spin button control and its buddy window often look like a single control. You can specify that a spin button control automatically position itself next to its buddy window, and that it automatically set the caption of the buddy window to its current position. You can use a spin button control with an edit control to prompt the user for numeric input.  
   
- 위쪽 화살표를 클릭 하면 현재 위치에서 최대 방향으로 이동한 최소 방향으로 현재 위치를 이동 아래쪽 화살표를 클릭 합니다. 기본적으로 최소값은 100이 고 최대값은 0입니다. 최소 설정 (예를 들어 기본 설정을 사용 될 때) 설정, 위쪽 화살표 감소를 클릭 하는 최대 길이 보다 큽니다. 언제 든 지 아래쪽 화살표를 클릭 하 고 위치 값 늘립니다.  
+ Clicking the up arrow moves the current position toward the maximum, and clicking the down arrow moves the current position toward the minimum. By default, the minimum is 100 and the maximum is 0. Any time the minimum setting is greater than the maximum setting (for example, when the default settings are used), clicking the up arrow decreases the position value and clicking the down arrow increases it.  
   
- 스핀 단추 컨트롤 버디 창 없이 간소화 된 스크롤 막대의 정렬으로 작동합니다. 예를 들어 탭 컨트롤은 경우에 따라 추가 탭을 스크롤하여 볼 수 있도록 스핀 단추 컨트롤을 표시 합니다.  
+ A spin button control without a buddy window functions as a sort of simplified scroll bar. For example, a tab control sometimes displays a spin button control to enable the user to scroll additional tabs into view.  
   
- 사용 하 여 대 한 자세한 내용은 `CSpinButtonCtrl`, 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [CSpinButtonCtrl 사용 하 여](../../mfc/using-cspinbuttonctrl.md)합니다.  
+ For more information on using `CSpinButtonCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,11 +122,11 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
- 스핀 단추 컨트롤을 만들고에 연결 된 `CSpinButtonCtrl` 개체...  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
+ Creates a spin button control and attaches it to a `CSpinButtonCtrl` object..  
   
 ```  
 virtual BOOL Create(
@@ -128,29 +136,29 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Spin button 컨트롤 스타일을 지정합니다. 스핀 단추 컨트롤 스타일의 조합을 컨트롤에 적용 됩니다. 이러한 스타일에 설명 된 [Up-down 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb759885) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 스핀 단추 컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조  
+ Specifies the spin button control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure  
   
  `pParentWnd`  
- 스핀 단추 컨트롤의 부모 창, 일반적으로에 대 한 포인터는 `CDialog`합니다. 않아야 **NULL입니다.**  
+ A pointer to the spin button control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- 스핀 단추 컨트롤의 ID를 지정 합니다.  
+ Specifies the spin button control's ID.  
   
-### <a name="return-value"></a>반환 값  
- 초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CSpinButtonCtrl` 처음 두 단계에서 개체 생성자를 호출 하 고, 호출 하 **만들기**, 스핀 단추 컨트롤을 만들고에 연결는 `CSpinButtonCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CSpinButtonCtrl` object in two steps First, call the constructor, and then call **Create**, which creates the spin button control and attaches it to the `CSpinButtonCtrl` object.  
   
- 확장된 창 스타일을 사용 하 여 스핀 단추 컨트롤을 만들려면 호출 [CSpinButtonCtrl::CreateEx](#createex) 대신 **만들기**합니다.  
+ To create a spin button control with extended window styles, call [CSpinButtonCtrl::CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
- 에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CSpinButtonCtrl` 개체입니다.  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CSpinButtonCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -161,37 +169,37 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the control being created. For a list of extended windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Spin button 컨트롤 스타일을 지정합니다. 스핀 단추 컨트롤 스타일의 조합을 컨트롤에 적용 됩니다. 이러한 스타일에 설명 된 [Up-down 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb759885) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 컨트롤의 부모 창에 대 한 포인터입니다.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 컨트롤의 자식 창 id입니다.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
- `CSpinButtonCtrl` 개체를 생성합니다.  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
+ Constructs a `CSpinButtonCtrl` object.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
- 스핀 단추 컨트롤에 대 한 가속 정보를 검색합니다.  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
+ Retrieves acceleration information for a spin button control.  
   
 ```  
 UINT GetAccel(
@@ -199,57 +207,57 @@ UINT GetAccel(
     UDACCEL* pAccel) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 변수로 지정 된 배열에 있는 요소의 수 `pAccel`합니다.  
+ Number of elements in the array specified by `pAccel`.  
   
  `pAccel`  
- 배열에 대 한 포인터 [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) 가속 정보를 수신 하는 구조입니다.  
+ Pointer to an array of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures that receives acceleration information.  
   
-### <a name="return-value"></a>반환 값  
- 검색 된 액셀러레이터 키 구조체의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ Number of accelerator structures retrieved.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
- 스핀 단추 컨트롤에 대 한 현재 자료를 검색합니다.  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
+ Retrieves the current base for a spin button control.  
   
 ```  
 UINT GetBase() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 기준 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The current base value.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- 현재 버디 창에 대 한 포인터를 검색합니다.  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
+ Retrieves a pointer to the current buddy window.  
   
 ```  
 CWnd* GetBuddy() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 버디 창에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current buddy window.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
- 스핀 단추 컨트롤의 현재 위치를 검색합니다.  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
+ Retrieves the current position of a spin button control.  
   
 ```  
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpbError*  
- 값 0으로 설정 하는 부울 값에 대 한 포인터 인지 성공적으로 검색 된 0이 아닌 경우 오류가 발생 합니다. 이 매개 변수 설정 하는 경우 **NULL**, 오류가 보고 되지 않습니다.  
+ A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 버전 하위 단어에서 16 비트 현재 위치를 반환합니다. 상위 단어는 오류가 발생 한 경우 0이 아닌 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
   
- 두 번째 버전은 32 비트 위치를 반환 합니다.  
+ The second version returns the 32-bit position.  
   
-### <a name="remarks"></a>설명  
- 반환 되는 값을 처리할 때 컨트롤의 버디 창의 캡션을에 따라 현재 위치를 업데이트 합니다. 컨트롤의 버디 창이 없습니다 또는 캡션을 잘못 되었거나 범위를 벗어난 값을 지정 하는 경우 오류가 반환 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
- 스핀 단추 컨트롤에 대 한 상한 및 하 한 제한 (범위)를 검색합니다.  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
+ Retrieves the upper and lower limits (range) for a spin button control.  
   
 ```  
 DWORD GetRange() const;  
@@ -263,21 +271,21 @@ void GetRange32(
     int &upper) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *더 낮은*  
- 컨트롤에 대 한 하한값을 수신 하는 정수에 대 한 참조입니다.  
+### <a name="parameters"></a>Parameters  
+ *lower*  
+ Reference to an integer that receives the lower limit for the control.  
   
- *위쪽*  
- 컨트롤에 대 한 상한값을 수신 하는 정수에 대 한 참조입니다.  
+ *upper*  
+ Reference to an integer that receives the upper limit for the control.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 버전에서 최대값과 최소값을 포함 하는 32 비트 값을 반환 합니다. 하위 단어는 컨트롤에 대 한 상한값 이며 번호 상위 하한값입니다.  
+### <a name="return-value"></a>Return Value  
+ The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
   
-### <a name="remarks"></a>주의  
- 멤버 함수 `GetRange32` 32 비트 정수로 스핀 단추 컨트롤의 범위를 검색 합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
- 스핀 단추 컨트롤에 대 한 가속을 설정합니다.  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
+ Sets the acceleration for a spin button control.  
   
 ```  
 BOOL SetAccel(
@@ -285,70 +293,70 @@ BOOL SetAccel(
     UDACCEL* pAccel);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 수가 [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) 구조에서 지정한 `pAccel`합니다.  
+ Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
   
  `pAccel`  
- 배열에 대 한 포인터 `UDACCEL` 가속 정보가 포함 된 구조입니다. 요소에 따라 오름차순으로 정렬할지는 **nSec** 멤버입니다.  
+ Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
- 스핀 단추 컨트롤을 설정 합니다.  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
+ Sets the base for a spin button control.  
   
 ```  
 int SetBase(int nBase);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nBase`  
- 컨트롤에 대 한 새 기준 값입니다. 10 진수에 대 한 10 또는 16 진수 수 있습니다.  
+ New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 이전 기준 값 이거나 잘못 된 base가 주어 지 면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ The previous base value if successful, or zero if an invalid base is given.  
   
-### <a name="remarks"></a>주의  
- 기준 값 버디 창의 숫자 10 진수 또는 16 진수로 표시할지 여부를 결정 합니다. 16 진수 숫자는 항상 서명 합니다. 10 진수 서명 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
- 스핀 단추 컨트롤의 버디 창을 설정입니다.  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
+ Sets the buddy window for a spin button control.  
   
 ```  
 CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pWndBuddy`  
- 새 버디 창에 대 한 포인터입니다.  
+ Pointer to the new buddy window.  
   
-### <a name="return-value"></a>반환 값  
- 이전 버디 창에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the previous buddy window.  
   
-### <a name="remarks"></a>설명  
- Spin 컨트롤 예: 일부 콘텐츠를 표시 하는 편집 컨트롤의 다른 창와 거의 항상 관련이 있습니다. 이 다른 창은 spin 컨트롤의 "버디" 라고 합니다.  
+### <a name="remarks"></a>Remarks  
+ A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
- 스핀 단추 컨트롤에 대 한 현재 위치를 설정합니다.  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
+ Sets the current position for a spin button control.  
   
 ```  
 int SetPos(int nPos);  
 int SetPos32(int nPos);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 컨트롤에 대 한 새 위치입니다. 이 값이 컨트롤에 대 한 상한 및 하 한 제한으로 지정 된 범위에 있어야 합니다.  
+ New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
   
-### <a name="return-value"></a>반환 값  
- 이전 위치 (16 비트 전체 자릿수를 `SetPos`, 32 비트에 대 한 전체 자릿수 `SetPos32`).  
+### <a name="return-value"></a>Return Value  
+ The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
   
-### <a name="remarks"></a>주의  
- `SetPos32`32 비트 위치를 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ `SetPos32` sets the 32-bit position.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
- 스핀 단추 컨트롤에 대 한 상한 및 하 한 제한 (범위)를 설정합니다.  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
+ Sets the upper and lower limits (range) for a spin button control.  
   
 ```  
 void SetRange(
@@ -361,19 +369,19 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- `nLower` 및 `nUpper`  
- 컨트롤에 대 한 상한 및 하 한 제한입니다. 에 대 한 `SetRange`, 모두 제한 보다 클 수 **UD_MAXVAL** 또는 미만 **UD_MINVAL**; 또한의 차이 두 가지 제한 초과할 수 없습니다 **UD_MAXVAL**합니다. `SetRange32`제한;에 제한을 두지합니다 모든 정수를 사용 합니다.  
+### <a name="parameters"></a>Parameters  
+ `nLower` and `nUpper`  
+ Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
   
-### <a name="remarks"></a>주의  
- 멤버 함수 `SetRange32` 스핀 단추 컨트롤에 대 한 32 비트 범위를 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function `SetRange32` sets the 32-bit range for the spin button control.  
   
 > [!NOTE]
->  스핀 단추에 대 한 기본 범위에 영 (0)로 설정 하는 최대와 100으로 설정 하는 권한이 있습니다. 최대값은 최소값 보다 작을 이기 때문에 위쪽 화살표를 클릭 하면 위치 줄어들고 아래쪽 화살표를 클릭 하 고 증가 합니다. 사용 하 여 `CSpinButtonCtrl::SetRange` 이러한 값을 조정 해야 합니다.  
+>  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl 클래스](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
 

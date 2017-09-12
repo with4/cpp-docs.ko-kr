@@ -1,5 +1,5 @@
 ---
-title: "CMFCCustomColorsPropertyPage 클래스 | Microsoft 문서"
+title: CMFCCustomColorsPropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCustomColorsPropertyPage class
+- CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
 caps.latest.revision: 23
 author: mikeblome
@@ -35,49 +35,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fa534f22438b7be37e7893e545c3e060df69384f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80168e699ec8005e08ab36327b76a108682dc8f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 클래스
-색 대화 상자에서 사용자 지정 색을 선택할 수 있는 속성 페이지를 나타냅니다.  
+# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage Class
+Represents a property page that can select custom colors in a color dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCustomColorsPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
-  
-|||  
-|-|-|  
-|이름|설명|  
-|`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|기본 생성자입니다.|  
-  
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|이름|설명|  
-|`CMFCCustomColorsPropertyPage::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|속성 페이지의 색 구성 요소로 설정합니다.|  
+|Name|Description|  
+|`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Default constructor.|  
   
-### <a name="remarks"></a>설명  
- `CMFCColorDialog` 클래스가이 클래스를 사용 하 여 사용자 지정 색 속성 페이지를 표시 합니다. 에 대 한 자세한 내용은 `CMFCColorDialog`, 참조 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)합니다.  
+### <a name="public-methods"></a>Public Methods  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 생성 하는 방법을 한 `CMFCCustomColorsPropertyPage` 개체 및 속성 페이지의 색 구성 요소를 설정 합니다.  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCCustomColorsPropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Sets the color components of the property page.|  
   
- [!code-cpp[NVC_MFC_RibbonApp #&35;](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
+### <a name="remarks"></a>Remarks  
+ The `CMFCColorDialog` class uses this class to display the custom color property page. For more information about `CMFCColorDialog`, see [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCCustomColorsPropertyPage` object and set the color components of the property page.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,11 +90,11 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcustomcolorspropertypage.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcustomcolorspropertypage.h  
   
-##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
- 속성 페이지의 색 구성 요소로 설정합니다.  
+##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
+ Sets the color components of the property page.  
   
 ```  
 void Setup(
@@ -103,21 +103,21 @@ void Setup(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|[in] `R`|RGB 값의 빨간색 구성 요소입니다.|  
-|[in] `G`|RGB 값의 녹색 구성 요소입니다.|  
-|[in] `B`|RGB 값의 파란색 구성 요소입니다.|  
+|Parameter|Description|  
+|[in] `R`|The red component of the RGB value.|  
+|[in] `G`|The green component of the RGB value.|  
+|[in] `B`|The blue component of the RGB value.|  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 현재 RGB와의 연결된 된 HLS (색상, 밝기 및 채도) 색 값의 속성 페이지를 업데이트합니다. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) 메서드는 프레임 워크에는 색 대화 상자를 초기화 합니다. 또는 사용자가 왼쪽된 마우스 단추를 누를 때이 메서드를 호출 합니다. 에 대 한 자세한 내용은 `CMFCColorDialog`, 참조 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method updates the current RGB and the associated HLS (hue, lightness, and saturation) color values of the property page. The [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) method calls this method when the framework initializes the color dialog box or the user presses the left mouse button. For more information about `CMFCColorDialog`, see [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)   
- [CMFCStandardColorsPropertyPage 클래스](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)   
+ [CMFCStandardColorsPropertyPage Class](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCAutoHideButton 클래스 | Microsoft 문서"
+title: CMFCAutoHideButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,7 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCAutoHideButton class
+- CMFCAutoHideButton [MFC], BringToTop
+- CMFCAutoHideButton [MFC], Create
+- CMFCAutoHideButton [MFC], GetAlignment
+- CMFCAutoHideButton [MFC], GetAutoHideWindow
+- CMFCAutoHideButton [MFC], GetParentToolBar
+- CMFCAutoHideButton [MFC], GetRect
+- CMFCAutoHideButton [MFC], GetSize
+- CMFCAutoHideButton [MFC], GetTextSize
+- CMFCAutoHideButton [MFC], HighlightButton
+- CMFCAutoHideButton [MFC], IsActive
+- CMFCAutoHideButton [MFC], IsHighlighted
+- CMFCAutoHideButton [MFC], IsHorizontal
+- CMFCAutoHideButton [MFC], IsTop
+- CMFCAutoHideButton [MFC], IsVisible
+- CMFCAutoHideButton [MFC], Move
+- CMFCAutoHideButton [MFC], OnDraw
+- CMFCAutoHideButton [MFC], OnDrawBorder
+- CMFCAutoHideButton [MFC], OnFillBackground
+- CMFCAutoHideButton [MFC], ReplacePane
+- CMFCAutoHideButton [MFC], ShowAttachedWindow
+- CMFCAutoHideButton [MFC], ShowButton
+- CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
 caps.latest.revision: 33
 author: mikeblome
@@ -56,81 +77,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f25072b4362b6add1682ce50fc5ee21cc065637a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f592081e30c9dbdf4ed0dc2d7a21568a40af8fd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 클래스
-표시 하거나 숨기는 단추는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 숨길 하도록 구성 된 합니다.  
+# <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton Class
+A button that displays or hides a [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) that is configured to hide.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCAutoHideButton : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||  
-|[CMFCAutoHideButton::Create](#create)|자동 숨기기 단추를 만들고 초기화합니다.|  
-|[CMFCAutoHideButton::GetAlignment](#getalignment)|자동 숨기기 단추의 맞춤을 검색합니다.|  
-|[CMFCAutoHideButton::GetAutoHideWindow](#getautohidewindow)|반환 된 [CDockablePane](../../mfc/reference/cdockablepane-class.md) 자동 숨기기 단추와 연결 된 개체입니다.|  
+|[CMFCAutoHideButton::Create](#create)|Creates and initializes the auto-hide button.|  
+|[CMFCAutoHideButton::GetAlignment](#getalignment)|Retrieves the alignment of the auto-hide button.|  
+|[CMFCAutoHideButton::GetAutoHideWindow](#getautohidewindow)|Returns the [CDockablePane](../../mfc/reference/cdockablepane-class.md) object associated with the auto-hide button.|  
 |[CMFCAutoHideButton::GetParentToolBar](#getparenttoolbar)||  
 |[CMFCAutoHideButton::GetRect](#getrect)||  
-|[CMFCAutoHideButton::GetSize](#getsize)|자동 숨기기 단추의 크기를 결정합니다.|  
-|[CMFCAutoHideButton::GetTextSize](#gettextsize)|자동 숨기기 단추에 대한 텍스트 레이블의 크기를 반환합니다.|  
-|[CMFCAutoHideButton::HighlightButton](#highlightbutton)|자동 숨기기 단추를 강조 표시합니다.|  
-|[CMFCAutoHideButton::IsActive](#isactive)|자동 숨기기 단추가 활성 상태인지를 나타냅니다.|  
-|[CMFCAutoHideButton::IsHighlighted](#ishighlighted)|자동 숨기기 단추의 강조 표시 상태를 반환합니다.|  
-|[CMFCAutoHideButton::IsHorizontal](#ishorizontal)|자동 숨기기 단추가 가로 또는 세로로 표시되는지를 결정합니다.|  
+|[CMFCAutoHideButton::GetSize](#getsize)|Determines the size of the auto-hide button.|  
+|[CMFCAutoHideButton::GetTextSize](#gettextsize)|Returns the size of the text label for the auto-hide button.|  
+|[CMFCAutoHideButton::HighlightButton](#highlightbutton)|Highlights auto hide button.|  
+|[CMFCAutoHideButton::IsActive](#isactive)|Indicates whether the auto-hide button is active.|  
+|[CMFCAutoHideButton::IsHighlighted](#ishighlighted)|Returns highlight state of auto hide button.|  
+|[CMFCAutoHideButton::IsHorizontal](#ishorizontal)|Determines whether the auto-hide button is horizontal or vertical.|  
 |[CMFCAutoHideButton::IsTop](#istop)||  
-|[CMFCAutoHideButton::IsVisible](#isvisible)|단추의 표시 여부를 나타냅니다.|  
+|[CMFCAutoHideButton::IsVisible](#isvisible)|Indicates whether the button is visible.|  
 |[CMFCAutoHideButton::Move](#move)||  
-|[CMFCAutoHideButton::OnDraw](#ondraw)|자동 숨기기 단추를 그릴 때 프레임워크에서 이 메서드를 호출합니다.|  
-|[CMFCAutoHideButton::OnDrawBorder](#ondrawborder)|자동 숨기기 단추의 테두리를 그릴 때 프레임워크에서 이 메서드를 호출합니다.|  
-|[CMFCAutoHideButton::OnFillBackground](#onfillbackground)|자동 숨기기 단추의 배경을 채울 때 프레임워크에서 이 메서드를 호출합니다.|  
+|[CMFCAutoHideButton::OnDraw](#ondraw)|The framework calls this method when it draws the auto-hide button.|  
+|[CMFCAutoHideButton::OnDrawBorder](#ondrawborder)|The framework calls this method when it draws the border of an auto-hide button.|  
+|[CMFCAutoHideButton::OnFillBackground](#onfillbackground)|The framework calls this method when it fills the background of an auto-hide button.|  
 |[CMFCAutoHideButton::ReplacePane](#replacepane)||  
-|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|표시 하거나 숨기는 연결 된 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.|  
-|[CMFCAutoHideButton::ShowButton](#showbutton)|자동 숨기기 단추를 표시하거나 숨깁니다.|  
+|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|Shows or hides the associated [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).|  
+|[CMFCAutoHideButton::ShowButton](#showbutton)|Shows or hides the auto-hide button.|  
 |[CMFCAutoHideButton::UnSetAutoHideMode](#unsetautohidemode)||  
   
-## <a name="remarks"></a>주의  
- 만들기에 `CMFCAutoHideButton` 개체가 연결 되는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다. 사용자가 `CMFCAutoHideButton` 개체를 조작할 때 `CDockablePane` 개체가 숨겨지거나 표시됩니다.  
+## <a name="remarks"></a>Remarks  
+ On creation, the `CMFCAutoHideButton` object is attached to a [CDockablePane Class](../../mfc/reference/cdockablepane-class.md). The `CDockablePane` object is hidden or displayed as the user interacts with the `CMFCAutoHideButton` object.  
   
- 기본적으로 프레임워크에서는 사용자가 자동 숨기기를 설정할 때 자동으로 `CMFCAutoHideButton`을 만듭니다. 프레임워크에서는 `CMFCAutoHideButton` 클래스 대신 사용자 지정 UI 클래스의 요소를 만들 수 있습니다. 프레임워크에서 사용해야 하는 사용자 지정 UI 클래스를 지정하려면 사용자 지정 UI 클래스와 같은 정적 멤버 변수 `CMFCAutoHideBar::m_pAutoHideButtonRTS`를 설정합니다. 기본적으로 이 변수는 `CMFCAutoHideButton`으로 설정됩니다.  
+ By default, the framework automatically creates a `CMFCAutoHideButton` when the user turns on auto-hide. The framework can create an element of a custom UI class instead of the `CMFCAutoHideButton` class. To specify which custom UI class the framework should use, set the static member variable `CMFCAutoHideBar::m_pAutoHideButtonRTS` equal to the custom UI class. By default, this variable is set to `CMFCAutoHideButton`.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCAutoHideButton` 개체를 생성하고 `CMFCAutoHideButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 `Create` 메서드를 사용하여 `CMFCAutoHideButton` 개체를 초기화하고, 연결된 `CDockablePane` 클래스를 표시하고, 자동 숨기기 단추를 표시하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCAutoHideButton` object and use various methods in the `CMFCAutoHideButton` class. The example shows how to initialize a `CMFCAutoHideButton` object by using its `Create` method, show the associated `CDockablePane` class, and show the auto-hide button.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&32;](../../mfc/reference/codesnippet/cpp/cmfcautohidebutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#32](../../mfc/reference/codesnippet/cpp/cmfcautohidebutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMFCAutoHideButton`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxautohidebutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
 void BringToTop();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
- 만들고 자동 숨기기 단추를 초기화 합니다.  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
+ Creates and initializes an auto-hide button.  
   
 ```  
 virtual BOOL Create(
@@ -139,23 +160,23 @@ virtual BOOL Create(
     DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pParentBar`  
- 부모 도구 모음에 대 한 포인터입니다.  
+ A pointer to the parent toolbar.  
   
  [in] `pAutoHideWnd`  
- 에 대 한 포인터는 [CDockablePane](../../mfc/reference/cdockablepane-class.md) 개체입니다. 이 자동 숨기기 단추 숨겨지고 것을 보여 줍니다 `CDockablePane`합니다.  
+ A pointer to a [CDockablePane](../../mfc/reference/cdockablepane-class.md) object. This auto-hide button hides and shows that `CDockablePane`.  
   
  [in] `dwAlignment`  
- 주 프레임 창으로 단추의 맞춤을 지정 하는 값입니다.  
+ A value that specifies the alignment of the button with the main frame window.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 만들 때 한 `CMFCAutoHideButton` 개체를 특정 자동 숨기기 단추에 연결 해야 `CDockablePane`합니다. 사용자 자동 숨기기 단추를 사용 하 여 연결 된 표시 / 숨기기를 `CDockablePane`합니다.  
+### <a name="remarks"></a>Remarks  
+ When you create a `CMFCAutoHideButton` object, you must associate the auto-hide button with a specific `CDockablePane`. The user can use the auto-hide button to hide and show the associated `CDockablePane`.  
   
- `dwAlignment` 매개 변수는 자동 숨기기 단추가 응용 프로그램에 있음을 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
+ The `dwAlignment` parameter indicates where the auto-hide button resides in the application. The parameter can be any one of the following values:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -165,18 +186,18 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
- 자동 숨기기 단추의 맞춤을 검색합니다.  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
+ Retrieves the alignment of the auto-hide button.  
   
 ```  
 DWORD GetAlignment() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `DWORD` 자동 숨기기 단추의 현재 맞춤을 포함 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value that contains the current alignment of the auto-hide button.  
   
-### <a name="remarks"></a>주의  
- 자동 숨기기 단추 맞춤 응용 프로그램에 단추가 있는 위치를 나타냅니다. 다음 값 중 하나를 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The alignment of the auto-hide button indicates where the button resides on the application. It can be any one of the following values:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -186,127 +207,127 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
- 반환 된 [CDockablePane](../../mfc/reference/cdockablepane-class.md) 자동 숨기기 단추와 연결 된 개체입니다.  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
+ Returns the [CDockablePane](../../mfc/reference/cdockablepane-class.md) object associated with the auto-hide button.  
   
 ```  
 CDockablePane* GetAutoHideWindow() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 연결 된 작업에 대 한 포인터 `CDockablePane` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the associated `CDockablePane` object.  
   
-### <a name="remarks"></a>주의  
- 자동 숨기기 단추와 연결 하는 `CDockablePane`, 전달는 `CDockablePane` 를 매개 변수로 [CMFCAutoHideButton::Create](#create) 메서드.  
+### <a name="remarks"></a>Remarks  
+ To associate an auto-hide button with a `CDockablePane`, pass the `CDockablePane` as a parameter to the [CMFCAutoHideButton::Create](#create) method.  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
 CMFCAutoHideBar* GetParentToolBar();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
- 자동 숨기기 단추의 크기를 결정합니다.  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
+ Determines the size of the auto-hide button.  
   
 ```  
 CSize GetSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CSize` 단추 크기를 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that contains the button size.  
   
-### <a name="remarks"></a>주의  
- 계산 된 크기는 자동 숨김 단추의 테두리의 크기를 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ The calculated size includes the size of the border of the auto-hide button.  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
- 자동 숨기기 단추에 대한 텍스트 레이블의 크기를 반환합니다.  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
+ Returns the size of the text label for the auto-hide button.  
   
 ```  
 virtual CSize GetTextSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) 자동 숨기기 단추에 대 한 텍스트의 크기를 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that contains the size of the text for the auto-hide button.  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
- 자동 숨기기 단추가 활성 상태인지를 나타냅니다.  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
+ Indicates whether the auto-hide button is active.  
   
 ```  
 BOOL IsActive() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`자동 숨기기 단추를 활성화 하는 경우 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the auto-hide button is active; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 자동 숨기기 단추는 활성화는 연결 된 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 창이 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ An auto-hide button is active when the associated [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) window is shown.  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
- 자동 숨기기 단추가 가로 또는 세로로 표시되는지를 결정합니다.  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
+ Determines whether the auto-hide button is horizontal or vertical.  
   
 ```  
 BOOL IsHorizontal() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추는 가로; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is horizontal; 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 방향으로 설정 하는 프레임 워크는 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) 만들 때 개체입니다.  사용 하 여 방향을 제어할 수는 `dwAlignment` 매개 변수는 [CMFCAutoHideButton::Create](#create) 메서드.  
+### <a name="remarks"></a>Remarks  
+ The framework sets the orientation of a [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) object when you create it.  You can control the orientation by using the `dwAlignment` parameter in the [CMFCAutoHideButton::Create](#create) method.  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
 BOOL IsTop() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
- 자동 숨기기 단추를 표시할지 여부를 나타냅니다.  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
+ Indicates whether the auto-hide button is visible.  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`단추에 표시 되 면 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button is visible; `FALSE` otherwise.  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
- 자동 숨기기 단추를 그릴 때 프레임워크에서 이 메서드를 호출합니다.  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
+ The framework calls this method when it draws the auto-hide button.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램에서 자동 숨기기 단추 모양 사용자 지정 하려는 경우에서 파생 된 새 클래스를 만듭니다 `CMFCAutoHideButton`합니다. 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to customize the appearance of auto-hide buttons in your application, create a new class derived from `CMFCAutoHideButton`. In your derived class, override this method.  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
- 자동 숨기기 단추의 테두리를 그릴 때 프레임워크에서 이 메서드를 호출합니다.  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
+ The framework calls this method when it draws the border of an auto-hide button.  
   
 ```  
 virtual void OnDrawBorder(
@@ -315,21 +336,21 @@ virtual void OnDrawBorder(
     CRect rectBorderSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `rectBounds`  
- 자동 숨기기 단추의 경계 사각형입니다.  
+ The bounding rectangle of the auto-hide button.  
   
  [in] `rectBorderSize`  
- 자동 숨기기 단추의 각 측면에 대 한 테두리 두께입니다.  
+ The border thickness for each side of the auto-hide button.  
   
-### <a name="remarks"></a>주의  
- 파생 된 새 클래스를 만듭니다 응용 프로그램에서 각 자동 숨김 단추의 테두리를 사용자 지정 하려는 경우는 `CMFCAutoHideButton`합니다. 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to customize the border of each auto-hide button in your application, create a new class derived from the `CMFCAutoHideButton`. In your derived class, override this method.  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
- 자동 숨기기 단추의 배경을 채울 때 프레임워크에서 이 메서드를 호출합니다.  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
+ The framework calls this method when it fills the background of an auto-hide button.  
   
 ```  
 virtual void OnFillBackground(
@@ -337,103 +358,103 @@ virtual void OnFillBackground(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `rect`  
- 자동 숨기기 단추의 경계 사각형입니다.  
+ The bounding rectangle of the auto-hide button.  
   
-### <a name="remarks"></a>주의  
- 파생 된 새 클래스를 만듭니다 응용 프로그램에서 자동 숨기기 단추에 대 한 바탕 화면 사용자 지정 하려는 경우는 `CMFCAutoHideButton`합니다. 파생된 클래스에서이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to customize the background for auto-hide buttons in your application, create a new class derived from the `CMFCAutoHideButton`. In your derived class, override this method.  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
- 표시 하거나 숨기는 연결 된 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
+ Shows or hides the associated [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
 void ShowAttachedWindow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 이 메서드는 연결 된 표시 되는지 여부를 지정 하는 부울 `CDockablePane`합니다.  
+ A Boolean that specifies whether this method shows the attached `CDockablePane`.  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
- 자동 숨기기 단추를 표시하거나 숨깁니다.  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
+ Shows or hides the auto-hide button.  
   
 ```  
 virtual void ShowButton(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 자동 숨기기 단추를 표시할지 여부를 지정 하는 부울입니다.  
+ A Boolean that specifies whether to show the auto-hide button.  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
 void Move(int nOffset);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nOffset`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
 void ReplacePane(CDockablePane* pNewBar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pNewBar`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
- 자동 숨기기 모드를 사용하지 않도록 설정합니다.  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
+ Disable auto-hide mode.  
   
 ```  
 virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pFirstBarInGroup`  
- 그룹의 첫 번째 막대에 대한 포인터입니다.  
+ A pointer to the first bar in the group.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
- 자동 숨기기 단추를 강조 표시합니다.  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
+ Highlights the auto hide button.  
   
 ```  
 virtual void HighlightButton(BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bHighlight`  
- 새 자동 숨기기 단추 상태를 지정 합니다. `TRUE`단추가 강조 표시, 나타냅니다 `FALSE` 나타냅니다 단추 강조 표시 되지 않습니다.  
+ Specifies the new auto hide button state. `TRUE` indicates the button is highlighted, `FALSE` indicates the button is not highlighted.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
- 자동 숨기기 단추의 강조 표시 상태를 반환 합니다.  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
+ Returns the highlight state of the auto hide button.  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 `TRUE` 자동 숨기기 단추를 강조 표시 하 고, 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the auto hide button is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCAutoHideBar 클래스](../../mfc/reference/cmfcautohidebar-class.md)   
- [CAutoHideDockSite 클래스](../../mfc/reference/cautohidedocksite-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCAutoHideBar Class](../../mfc/reference/cmfcautohidebar-class.md)   
+ [CAutoHideDockSite Class](../../mfc/reference/cautohidedocksite-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarFontComboBox 클래스 | Microsoft 문서"
+title: CMFCToolBarFontComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarFontComboBox class
+- CMFCToolBarFontComboBox [MFC], CMFCToolBarFontComboBox
+- CMFCToolBarFontComboBox [MFC], GetFontDesc
+- CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
 caps.latest.revision: 29
 author: mikeblome
@@ -37,57 +39,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 50b22e19cab4f434ec53383c8a170344e89cbab0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1c4df3e6eaf237c048502657bd2a9b6492b8767
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 클래스
-시스템 글꼴 목록에서 글꼴을 선택 하는 데 사용할 수 있는 콤보 상자 컨트롤을 포함 하는 도구 모음 단추입니다.  
+# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox Class
+A toolbar button that contains a combo box control that enables the user to select a font from a list of system fonts.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|`CMFCToolBarFontComboBox` 개체를 생성합니다.|  
+|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Constructs a `CMFCToolBarFontComboBox` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|에 대 한 포인터를 반환 합니다.는 `CMFCFontInfo` 콤보 상자에서 지정된 된 인덱스에 대 한 개체입니다.|  
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|글꼴의 이름이 나 글꼴의 접두사와 문자 집합 중 하나에 따라 글꼴 콤보 상자에는 글꼴을 선택합니다.|  
+|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.|  
+|[CMFCToolBarFontComboBox::SetFont](#setfont)|Selects a font in the font combo box according to either the name of the font, or the prefix and character set of the font.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
- 글꼴 콤보 상자에 있는 문자의 높이입니다.  
+ The height of the characters in the font combo box.  
   
-## <a name="remarks"></a>주의  
- 글꼴 콤보 상자 단추를 도구 모음을 추가 하려면 다음이 단계를 수행 합니다.  
+## <a name="remarks"></a>Remarks  
+ To add a font combo box button to a toolbar, follow these steps:  
   
-1.  부모 도구 모음 리소스의 단추에 대한 더미 리소스 ID를 예약합니다.  
+1.  Reserve a dummy resource ID for the button in the parent toolbar resource.  
   
-2.  생성 된 `CMFCToolBarFontComboBox` 개체입니다.  
+2.  Construct a `CMFCToolBarFontComboBox` object.  
   
-3.  처리 하는 메시지 처리기에는 `AFX_WM_RESETTOOLBAR` 메시지를 사용 하 여 새 콤보 상자 단추 원래 단추 바꿉니다 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
+3.  In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, replace the original button with the new combo box button by using [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
-4.  동기화를 사용 하 여 문서에 글꼴이 포함 된 콤보 상자에서 선택 된 글꼴의 [CMFCToolBarFontComboBox::SetFont](#setfont) 메서드.  
+4.  Synchronize the font that is selected in the combo box with the font in the document by using the [CMFCToolBarFontComboBox::SetFont](#setfont) method.  
   
- 사용 하 여 문서의 글꼴 콤보 상자에서 선택한 글꼴을 동기화 하려면는 [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) 선택한 글꼴의 특성을 검색 하 고 만들려면 이러한 특성을 사용 하는 메서드는 [CFont 클래스](../../mfc/reference/cfont-class.md) 개체입니다.  
+ To synchronize the document's font with the font selected in the combo box, use the [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) method to retrieve the attributes of the selected font, and use those attributes to create a [CFont Class](../../mfc/reference/cfont-class.md) object.  
   
- Win32 함수를 호출 하는 글꼴 콤보 상자 단추 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) 를 시스템에 사용할 수 있는 화면과 프린터 글꼴을 결정 합니다.  
+ The font combo box button calls the Win32 function [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) to determine the screen and printer fonts available to the system.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
@@ -96,11 +98,11 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbarfontcombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
- 생성 된 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) 개체입니다.  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+ Constructs a [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) object.  
   
 ```  
 public:  
@@ -124,15 +126,15 @@ CMFCToolBarFontComboBox(
 CMFCToolBarFontComboBox();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 콤보 상자의 명령 ID입니다.  
+ The command ID of the combo box.  
   
  [in] `iImage`  
- 도구 모음 이미지의&0;부터 시작 하는 인덱스입니다. 이미지에는 [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md) 개체를 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md) 클래스를 유지 관리 합니다.  
+ The zero-based index of a toolbar image. The image is located in the [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) object that [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md) class maintains.  
   
  [in] `nFontType`  
- 콤보 상자에 포함 되어 있는 글꼴의 형식입니다. 이 매개 변수는 다음 값의 조합 (OR 부울) 될 수 있습니다.  
+ The types of fonts that the combo box contains. This parameter can be a combination (boolean OR) of the following values:  
   
  DEVICE_FONTTYPE  
   
@@ -141,54 +143,54 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] `nCharSet`  
- 집합 DEFAULT_CHARSET, 콤보 상자에 포함 되어 있으면 모든 문자 집합의 모든 고유 하 게 명명 된 글꼴. (동일한 이름의 두 글꼴이 있으면 콤보 상자 포함 그 중 하나입니다.) 콤보 상자 유효한 문자 집합 값으로 설정 포함 되어 있으면 지정 된 문자 집합에만 글꼴. 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 가능한 문자에 대 한 목록을 설정 합니다.  
+ If set to DEFAULT_CHARSET, the combo box contains all uniquely-named fonts in all character sets. (If there are two fonts with the same name, the combo box contains one of them.) If set to a valid character set value, the combo box contains only fonts in the specified character set. See [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) for a listing of possible character sets.  
   
  [in] `dwStyle`  
- 콤보 상자의 스타일입니다. (참조 [콤보 상자 스타일](../../mfc/reference/combo-box-styles.md))  
+ The style of the combo box. (see [Combo-Box Styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
  [in] `iWidth`  
- 편집 컨트롤의 픽셀에서 너비입니다.  
+ The width in pixels of the edit control.  
   
  [in] `nPitchAndFamily`  
- 집합 DEFAULT_PITCH, 콤보 상자에 포함 되어 있으면 피치에 관계 없이 글꼴. 경우 FIXED_PITCH 또는 VARIABLE_PITCH로 설정, 콤보 상자 글꼴만 포함 피치 형식과 함께. 글꼴 패밀리를 기반으로 필터링 현재 지원 되지 않습니다.  
+ If set to DEFAULT_PITCH, the combo box contains fonts regardless of pitch. If set to FIXED_PITCH or VARIABLE_PITCH, the combo box contains only fonts with that pitch type. Filtering based on font family is not currently supported.  
   
  [out] `pLstFontsExternal`  
- 에 대 한 포인터는 [CObList 클래스](../../mfc/reference/coblist-class.md) 사용 가능한 글꼴을 저장 하는 개체입니다.  
+ Pointer to a [CObList Class](../../mfc/reference/coblist-class.md) object that stores the available fonts.  
   
-### <a name="remarks"></a>주의  
- 일반적으로 `CMFCToolBarFontComboBox` 개체에서 공유 되는 하나의 사용 가능한 글꼴 목록을 저장 `CObList` 개체입니다. 생성자의 두 번째 오버 로드를 사용 하 고에 대 한 유효한 포인터를 제공 하는 경우 `pLstFontsExternal`하는 `CMFCToolBarFontComboBox` 개체 대신 채워집니다는 `CObList` 는 `pLstFontsExternal` 사용 가능한 글꼴을 가리킵니다.  
+### <a name="remarks"></a>Remarks  
+ Usually, `CMFCToolBarFontComboBox` objects store the list of available fonts in a single shared `CObList` object. If you use the second overload of the constructor and provide a valid pointer to `pLstFontsExternal`, that `CMFCToolBarFontComboBox` object will instead fill the `CObList` that `pLstFontsExternal` points to with available fonts.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 생성 하는 방법을 한 `CMFCToolBarFontComboBox` 개체입니다. 이 코드 조각은의 일부인는 [워드 패드 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCToolBarFontComboBox` object. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
- 에 대 한 포인터를 반환 합니다.는 `CMFCFontInfo` 콤보 상자에서 지정된 된 인덱스에 대 한 개체입니다.  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
+ Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 콤보 상자 항목의&0;부터 시작 하는 인덱스를 지정합니다.  
+ Specifies the zero-based index of a combo box item.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CMFCFontInfo` 개체입니다. 경우 `iIndex` 유효한 항목 인덱스를 지정 하지 않는 경우 반환 값은 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMFCFontInfo` object. If `iIndex` does not specify a valid item index, the return value is `NULL`.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
- 콤보 상자에는 소유자 그리기 스타일에 글꼴 콤보 상자에 있는 문자의 픽셀 높이 지정 합니다.  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
+ Specifies the height, in pixels, of characters in the font combo box if the combo box has owner draw style.  
   
 ```  
 static int m_nFontHeight  
 ```  
   
-### <a name="remarks"></a>주의  
- 하는 경우는 `m_nFontHeight` 변수는 0, 높이 콤보 상자의 기본 글꼴에 따라 자동으로 계산 됩니다. 높이의 기준선 위에 문자 기준선과 문자 기준선 아래 디센더 모두 포함 되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the `m_nFontHeight` variable is 0, the height is calculated automatically according to the default font of the combo box. The height includes both the ascent of characters above the baseline and the descent of characters underneath the baseline.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
- 글꼴의 글꼴 이름 및 문자에 따라 글꼴 콤보 상자에서 집합을 선택 합니다. 매개 변수에서 지정 됩니다.  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
+ Selects the font in the font combo box according to the font name and character set that are specified in the parameters.  
   
 ```  
 BOOL SetFont(
@@ -197,31 +199,31 @@ BOOL SetFont(
     BOOL bExact=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 글꼴 이름 또는 접두사를 지정합니다.  
+ Specifies the font name or prefix.  
   
  [in] `nCharSet`  
- 문자 집합을 지정 합니다.  
+ Specifies the character set.  
   
  [in] `bExact`  
- 지정 하는지 여부를 `lpszName` 글꼴 이름 또는 글꼴 접두사를 포함 합니다.  
+ Specifies whether `lpszName` contains the font name or the font prefix.  
   
-### <a name="return-value"></a>반환 값  
- 글꼴을 성공적으로 선택한 경우에 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the font was selected successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 경우 `bExact` 는 `TRUE`로 지정 하는 이름을 정확 하 게 일치 하는 글꼴을 선택 하는이 메서드 `lpszName`합니다. 경우 `bExact` 는 `FALSE`로 지정 된 텍스트로 시작 하는 글꼴을 선택 하는이 메서드 `lpszName` 로 지정 하는 문자 집합을 사용 하 여 `nCharSet`합니다. 경우 `nCharSet` 설정 DEFAULT_CHARSET, 문자 집합 됩니다 무시 되 고 유일한 `lpszName` 글꼴을 선택 하는 데 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If `bExact` is `TRUE`, this method selects a font that exactly matches the name that you specified as `lpszName`. If `bExact` is `FALSE`, this method selects a font that starts with the text specified as `lpszName` and that uses the character set that you specified as `nCharSet`. If `nCharSet` is set to DEFAULT_CHARSET, the character set will be ignored and only `lpszName` will be used to select a font.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [CMFCFontInfo 클래스](../../mfc/reference/cmfcfontinfo-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

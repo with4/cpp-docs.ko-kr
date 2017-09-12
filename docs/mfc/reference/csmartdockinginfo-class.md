@@ -1,5 +1,5 @@
 ---
-title: "CSmartDockingInfo 클래스 | Microsoft 문서"
+title: CSmartDockingInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSmartDockingInfo class
+- CSmartDockingInfo [MFC], CopyTo
+- CSmartDockingInfo [MFC], m_bUseThemeColorInShading
+- CSmartDockingInfo [MFC], m_clrBaseBackground
+- CSmartDockingInfo [MFC], m_clrToneDest
+- CSmartDockingInfo [MFC], m_clrToneSrc
+- CSmartDockingInfo [MFC], m_clrTransparent
+- CSmartDockingInfo [MFC], m_nCentralGroupOffset
+- CSmartDockingInfo [MFC], m_sizeTotal
+- CSmartDockingInfo [MFC], m_uiMarkerBmpResID
+- CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 caps.latest.revision: 27
 author: mikeblome
@@ -44,174 +53,174 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9ae735b202299d26b98ec763f65c3f8772d9b914
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 004a49c00566369a14f89c9c383799a3461a9a05
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 클래스
-스마트 도킹 표식의 모양을 정의합니다.  
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+Defines the appearance of smart docking markers.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSmartDockingInfo : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSmartDockingInfo::CSmartDockingInfo`|기본 생성자입니다.|  
+|`CSmartDockingInfo::CSmartDockingInfo`|Default constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|제공 된 현재 스마트 도킹 정보 매개 변수 복사 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) 개체입니다.|  
+|[CSmartDockingInfo::CopyTo](#copyto)|Copies the current smart docking info parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|프레임 워크가 표시 스마트 도킹 표식 때 현재 테마 색을 사용할지 여부를 지정 합니다.|  
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|스마트 도킹 표식의 기본 배경색을 지정 합니다.|  
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|대체 하는 색을 지정 `m_clrToneSrc` 스마트 도킹 표식 비트맵에서입니다.|  
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|스마트 도킹 표식 비트맵의 색을 지정 합니다.|  
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|투명 한 경우 스마트 도킹 표식 비트맵의 색을 지정 합니다.|  
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|중앙 그룹 사각형의 경계에서 스마트 도킹 표식의 중앙 그룹의 오프셋을 지정 합니다.|  
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|그룹의 모든 스마트 도킹 표식의 총 크기를 지정합니다.|  
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|강조 표시 되지 않는 스마트 도킹 표식에 대 한 프레임 워크를 사용 하는 비트맵의 리소스 Id를 정의 합니다.|  
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|강조 표시 되는 스마트 도킹 표식에 대 한 프레임 워크를 사용 하는 비트맵의 리소스 Id를 정의 합니다.|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifies whether to use the current theme color when the framework displays smart docking markers.|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Specifies the base background color of smart docking markers.|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Specifies the color that replaces `m_clrToneSrc` in smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Specifies the color of smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Specifies the color of smart docking marker bitmaps when they are transparent.|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifies the offset of the central group of smart docking markers from the boundaries of the central group rectangle.|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Specifies the total size of all smart docking markers in a group.|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are not highlighted.|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are highlighted.|  
   
-## <a name="remarks"></a>주의  
- 프레임 워크 핸들 도킹 표식을 내부적으로 스마트합니다. 다음 그림에는 표준 스마트 도킹 표식 보여 줍니다.  
+## <a name="remarks"></a>Remarks  
+ The framework handles smart docking markers internally. The following illustration shows the standard smart docking markers:  
   
- ![스마트 도킹의 표준 마커](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![Standard markers for smart docking](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- 이 그림에서 왼쪽에 있는 이미지에는 중앙 그룹 스마트 도킹 표식에 사용 하도록 설정 하는 탭 도킹 하지 않은 보여 줍니다. 가운데에서 이미지에는 오른쪽 가장자리 스마트 도킹 표식을 보여 줍니다. 오른쪽에 있는 이미지는 중앙 그룹 스마트 도킹 표식을 설정 탭에 도킹가 보여 줍니다. 중앙 그룹 스마트 도킹 표식에 주 비트맵이 및&5; 스마트 도킹 표식 비트맵입니다.  
+ In this figure, the image on the left shows a central group smart docking marker that does not have docking to a tab enabled. The image in the middle shows a right edge smart docking marker. The image on the right shows a central group smart docking marker that does have docking to a tab enabled. The central group smart docking marker has a main bitmap and five smart docking marker bitmaps.  
   
- 스마트 도킹 표식의 다음 매개 변수를 사용자 지정할 수 있습니다.  
+ You can customize the following parameters of smart docking markers:  
   
--   색 예를 들어 그림의 표식이 파란색 사용자 정의 색으로 바꿀 수 있습니다.  
+-   Color. For example, you can replace the blue color of the markers in the figure with any user-defined color.  
   
--   투명도 색입니다.  
+-   Transparency color.  
   
--   경계 사각형의 테두리에서 중앙 그룹에서 스마트 도킹 표식의 오프셋입니다.  
+-   Offset of a smart docking marker in the central group from the border of the bounding rectangle.  
   
--   중앙 그룹을 나타내는 주 비트맵입니다.  
+-   The main bitmap that represents the central group.  
   
--   규칙적이 고 강조 표시 된 스마트 도킹 표식 나타내는 비트맵입니다.  
+-   The bitmaps that represents the regular and highlighted smart docking markers.  
   
- 다음 그림에는 사용자 지정 된 스마트 도킹 표식의 예가 나와 있습니다.  
+ The following illustration shows an example of smart docking markers that have been customized:  
   
- ![스마트 도킹의 사용자 지정 마커](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![Custom markers for smart docking](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxDockingManager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
- 제공 된 현재 스마트 도킹 매개 변수 복사 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) 개체입니다.  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
+ Copies the current smart docking parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `params`  
- 형식의 개체 `CSmartDockingInfo` 현재 스마트 도킹 매개 변수는 채워집니다.  
+ An object of type `CSmartDockingInfo` that is populated with the current smart docking parameters.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
- 프레임 워크가 표시 스마트 도킹 표식 때 현재 테마 색을 사용할지 여부를 지정 합니다.  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
+ Specifies whether to use the current theme color when the framework displays smart docking markers.  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `TRUE`, 표식 현재 테마 색을 사용 하 여 그려집니다; 밝은 파란색으로 표식 그렇지 않은 경우에 그려집니다.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the markers are drawn using the current theme color; otherwise the markers are drawn with a light blue color.  
   
- 기본값은 `FALSE`입니다.  
+ The default value is `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
- 스마트 도킹 표식의 기본 배경색을 지정 합니다.  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
+ Specifies the base background color of smart docking markers.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
- 대체 하는 색을 지정 `m_clrToneSrc` 스마트 도킹 표식 비트맵에서입니다.  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
+ Specifies the color that will replace `m_clrToneSrc` in smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneDest;  
 ```  
   
-### <a name="remarks"></a>주의  
- 프로그래밍 방식으로 표식 비트맵의 색을 변경 하려면이 값을 설정 합니다. 예를 들어, 프레임 워크와 함께 제공 되는 표준 표식의 색을 변경 하려는 경우이 값을 원하는 색을 설정 합니다. 기본적으로 [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) RGB (61, 123, 241)로 설정 됩니다 (파랑 추가 색).  
+### <a name="remarks"></a>Remarks  
+ Set this value to change the color of marker bitmaps programmatically. For example, if you want to change the color of the standard markers provided with the framework, set this value to the desired color. By default, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) is set to RGB (61, 123, 241) (a bluish color).  
   
- 사용자 지정 표식 색을 변경 하려면 모두 지정 해야 `m_clrToneDest` 및 `m_clrToneSrc`합니다.  
+ To change the color of custom markers, you must specify both `m_clrToneDest` and `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
- 스마트 도킹 표식 비트맵의 색을 지정 합니다.  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
+ Specifies the color of smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneSrc;  
 ```  
   
-### <a name="remarks"></a>주의  
- 다른 색으로 사용자 지정 비트맵의 색을 대체 하려는 경우에이 값을 설정 합니다. 표준 (프레임 워크 제공)의 색을 변경 하는 경우이 값을 설정할 필요가 없습니다 표식입니다.  
+### <a name="remarks"></a>Remarks  
+ Set this value only when you want to replace the color of a custom bitmap with another color. You do not have to set this value if you are changing the color of a standard (framework provided) marker.  
   
- 사용 하 여 `(COLORREF)-1` 를 스마트 도킹 그룹의 구성원을 비워 둡니다.  
+ Use `(COLORREF)-1` to leave a member of the smart docking group empty.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
- 투명 한 경우 스마트 도킹 표식 비트맵의 색을 지정 합니다.  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
+ Specifies the color of smart docking marker bitmaps when they are transparent.  
   
 ```  
 COLORREF m_clrTransparent;  
 ```  
   
-### <a name="remarks"></a>주의  
- 도킹 그룹에서 사용자 지정 마커 및 사용자 지정 비트맵을 표시 하는 경우에이 값을 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must set this value when you display custom markers and custom bitmaps in the docking group.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
- 스마트 도킹 표식의 중앙 그룹과 중앙 그룹 사각형의 경계 사이의 오프셋을 지정합니다.  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
+ Specifies the offset between the central group of smart docking markers and the boundaries of the central group rectangle.  
   
 ```  
 int m_nCentralGroupOffset;  
 ```  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 마커 스마트 도킹 표식의 중앙 그룹의 경계 사이의 기본 오프셋을 변경 하려는 경우이 값을 지정 합니다. 기본 오프셋은 5 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ Specify this value if you want to change the default offset between custom markers and the bounds of the central group of smart docking markers. The default offset is 5 pixels.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
- 중앙 그룹에서 모든 스마트 도킹 표식을 둘러싸는 경계 사각형의 전체 크기를 지정 합니다.  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
+ Specifies the total size of a bounding rectangle that encloses all smart docking markers in the central group.  
   
 ```  
 CSize m_sizeTotal;  
 ```  
   
-### <a name="remarks"></a>주의  
- 설정 `m_sizeTotal` 중앙 그룹 표식의 경계 사각형의 크기입니다. 표식에 대 한 사용자 지정 비트맵을 사용 하는 경우이 값을 지정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set `m_sizeTotal` to the size of the bounding rectangle of the central group marker. You are required to specify this value if you are using custom bitmaps for markers.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
- 강조 표시 된 비 사용자 지정 스마트 도킹 표식에 사용 되는 비트맵의 리소스 Id를 정의 합니다.  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
+ Defines the resource IDs of the bitmaps that are used for non-highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>주의  
- 스마트 도킹 표식 나타내는 비트맵의 리소스 Id와이 배열을 채웁니다. `AFX_SD_MARKERS_NUM`현재 5로 정의 됩니다. 배열을 다음과 같이 입력합니다.  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -223,15 +232,15 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
- 강조 표시 된 사용자 지정 스마트 도킹 표식에 사용 되는 비트맵의 리소스 Id를 정의 합니다.  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
+ Defines the resource IDs of the bitmaps that are used for highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 배열에 강조 표시 된 스마트 도킹 표식 나타내는 비트맵의 리소스 Id 채웁니다. `AFX_SD_MARKERS_NUM`현재 5로 정의 됩니다. 배열을 다음과 같이 입력합니다.  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the highlighted smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -243,8 +252,8 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

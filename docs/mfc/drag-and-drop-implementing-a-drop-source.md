@@ -1,52 +1,71 @@
 ---
-title: "끌어서 놓기: 놓기 소스 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "끌어서 놓기, DoDragDrop 호출"
-  - "끌어서 놓기, 놓기 소스"
-  - "끌어서 놓기, 끌기 작업 시작"
-  - "OLE 끌어서 놓기, DoDragDrop 호출"
-  - "OLE 끌어서 놓기, 놓기 소스"
-  - "OLE 끌어서 놓기, 끌기 작업 시작"
+title: 'Drag and Drop: Implementing a Drop Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], drop source
+- OLE drag and drop [MFC], calling DoDragDrop
+- drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 끌어서 놓기: 놓기 소스 구현
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3bb2f7b11c3ce4d46f0dda53980c0c751ec41ef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 문서는 끌어서 놓기 작업에 데이터를 제공하는 응용 프로그램을 얻는 방법에 대해 설명합니다.  
+---
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag and Drop: Implementing a Drop Source
+This article explains how to get your application to provide data to a drag-and-drop operation.  
   
- 놓기 소스의 기본 구현은 비교적 간단합니다.  첫 번째 단계는 끌기 작업을 시작하는 이벤트를 결정하는 것입니다.  사용자 인터페이스 설명지침은 끌기 작업의 시작을 데이터 선택 영역과 선택된 데이터 내부의 지점에서 발생한  `WM_LBUTTONDOWN` 이벤트로서 정의하는 것이 권장됩니다.  MFC OLE 샘플 [OCLIENT](../top/visual-cpp-samples.md) 및 [HIERSVR](../top/visual-cpp-samples.md)은 이 설명 지침을 따릅니다.  
+ Basic implementation of a drop source is relatively simple. The first step is to determine what events begin a drag operation. Recommended user interface guidelines define the beginning of a drag operation as the selection of data and a `WM_LBUTTONDOWN` event occurring on a point inside the selected data. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) follow these guidelines.  
   
- 응용 프로그램이 컨테이너이고 선택된 데이터가 형식 `COleClientItem`의 연결되거나 포함된 개체인 경우, `DoDragDrop` 멤버 함수를 호출합니다.  그렇지 않으면 `COleDataSource` 개체를 수행하고, 선택 영역을 사용하여 그것을 초기화하고, 데이터 소스 개체의 `DoDragDrop` 멤버 함수를 호출합니다.  응용 프로그램이 서버인 경우, `COleServerItem::DoDragDrop`를 사용합니다.  표준 끌어서 놓기 동작을 사용자 지정하는 방법에 대한 추가 정보는, [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md)를 참조하세요.  
+ If your application is a container and the selected data is a linked or an embedded object of type `COleClientItem`, call its `DoDragDrop` member function. Otherwise, construct a `COleDataSource` object, initialize it with the selection, and call the data source object's `DoDragDrop` member function. If your application is a server, use `COleServerItem::DoDragDrop`. For information about customizing standard drag-and-drop behavior, see the article [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md).  
   
- `DoDragDrop`가 `DROPEFFECT_MOVE`를 반환하면, 원본 문서에서 원본 데이터를 즉시 삭제합니다.  모든 다른 `DoDragDrop`로부터의 반환값은 놓기 소스에 영향을 미치지 못합니다.  
+ If `DoDragDrop` returns `DROPEFFECT_MOVE`, delete the source data from the source document immediately. No other return value from `DoDragDrop` has any effect on a drop source.  
   
- 자세한 내용은 다음을 참조하십시오.  
+ For more information, see:  
   
--   [놓기 대상 구현](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [사용자 지정 끌어서 놓기](../mfc/drag-and-drop-customizing.md)  
+-   [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md)  
   
--   [OLE 데이터 개체 및 데이터 소스를 생성하거나 소멸시키기](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [데이터 개체 및 데이터 소스 조작](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## 참고 항목  
- [끌어서 놓기\(OLE\)](../mfc/drag-and-drop-ole.md)   
- [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)   
- [COleClientItem::DoDragDrop](../Topic/COleClientItem::DoDragDrop.md)   
- [CView::OnDragLeave](../Topic/CView::OnDragLeave.md)
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
+ [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
+ [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
+ [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+

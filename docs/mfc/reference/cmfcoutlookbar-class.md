@@ -1,5 +1,5 @@
 ---
-title: "CMFCOutlookBar 클래스 | Microsoft 문서"
+title: CMFCOutlookBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCOutlookBar class
+- CMFCOutlookBar [MFC], AllowDestroyEmptyTabbedPane
+- CMFCOutlookBar [MFC], CanAcceptPane
+- CMFCOutlookBar [MFC], CanSetCaptionTextToTabName
+- CMFCOutlookBar [MFC], Create
+- CMFCOutlookBar [MFC], CreateCustomPage
+- CMFCOutlookBar [MFC], DoesAllowDynInsertBefore
+- CMFCOutlookBar [MFC], FloatTab
+- CMFCOutlookBar [MFC], GetButtonsFont
+- CMFCOutlookBar [MFC], GetTabArea
+- CMFCOutlookBar [MFC], IsMode2003
+- CMFCOutlookBar [MFC], OnAfterAnimation
+- CMFCOutlookBar [MFC], OnBeforeAnimation
+- CMFCOutlookBar [MFC], OnScroll
+- CMFCOutlookBar [MFC], RemoveCustomPage
+- CMFCOutlookBar [MFC], SetButtonsFont
+- CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 caps.latest.revision: 34
 author: mikeblome
@@ -51,61 +66,61 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ff58cf786e4979d64aa2b5d7ad4d1a32b96bec3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd48797fab17f4474d177ed3fce91147b5a12b8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 클래스
-Microsoft Outlook 2000 또는 Outlook 2003의 **탐색 창** 과 시각적으로 유사한 탭 창입니다. `CMFCOutlookBar` 개체를 포함 한 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 개체와 일련의 탭 합니다. 탭 수 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 또는 `CWnd`-파생 개체입니다. Outlook 표시줄은 사용자에게 일련의 단추와 표시 영역으로 나타납니다. 사용자가 단추를 클릭하면 해당 컨트롤 또는 단추 창이 표시됩니다.  
+# <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar Class
+A tabbed pane with the visual appearance of the **Navigation Pane** in Microsoft Outlook 2000 or Outlook 2003. The `CMFCOutlookBar` object contains a [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) object and a series of tabs. The tabs can be either [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) objects or `CWnd`-derived objects. To the user, the Outlook bar appears as a series of buttons and a display area. When the user clicks a button, the corresponding control or button pane is displayed.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCOutlookBar : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCOutlookBar::CMFCOutlookBar`|기본 생성자입니다.|  
-|`CMFCOutlookBar::~CMFCOutlookBar`|소멸자|  
+|`CMFCOutlookBar::CMFCOutlookBar`|Default constructor.|  
+|`CMFCOutlookBar::~CMFCOutlookBar`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다. (재정의 [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
-|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|다른 창을 Outlook 표시줄 창에 도킹할 수 수 있는지 여부를 결정 합니다. (CDockablePane::CanAcceptPane 무시 합니다.)|  
-|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|탭된 창에 대 한 캡션을 활성 탭으로 동일한 텍스트를 표시 하는지 여부를 결정 합니다. (재정의 [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
-|[CMFCOutlookBar::Create](#create)|Outlook 표시줄 컨트롤을 만듭니다.|  
-|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|사용자 지정 Outlook 표시줄 탭을 만듭니다.|  
-|`CMFCOutlookBar::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|사용자가 Outlook 표시줄의 외부 가장자리에 있는 컨트롤 막대를 고정할 수 있는지 여부를 결정 합니다.|  
-|[CMFCOutlookBar::FloatTab](#floattab)|창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다. (재정의 [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Outlook 표시줄의 단추에는 텍스트의 글꼴을 반환합니다.|  
-|[CMFCOutlookBar::GetTabArea](#gettabarea)|Outlook 표시줄에서 크기와 탭 영역의 위치를 반환합니다. (재정의 [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
-|`CMFCOutlookBar::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCOutlookBar::IsMode2003](#ismode2003)|Outlook 표시줄의 동작을 모방 (설명 참조) Microsoft Office Outlook 2003의 여부를 결정 합니다.|  
-|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|에 의해 호출 [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 애니메이션을 사용 하 여 활성 탭을 설정 합니다.|  
-|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|에 의해 호출 [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 탭 하기 전에 페이지 애니메이션을 사용 하 여 활성 탭으로 설정 됩니다.|  
-|[CMFCOutlookBar::OnScroll](#onscroll)|위로 또는 아래로 Outlook 표시줄 스크롤 하는 경우에 프레임 워크에서 호출 합니다.|  
-|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|사용자 지정 Outlook 표시줄 탭을 제거합니다.|  
-|[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)|Outlook 표시줄의 단추에는 텍스트의 글꼴을 설정합니다.|  
-|[CMFCOutlookBar::SetMode2003](#setmode2003)|Outlook 표시줄의 동작을 모방 Outlook 2003 (설명 참조)의 여부를 지정 합니다.|  
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed. (Overrides [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
+|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Determines whether another pane can be docked to the Outlook bar pane. (Overrides CDockablePane::CanAcceptPane.)|  
+|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane displays the same text as the active tab. (Overrides [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
+|[CMFCOutlookBar::Create](#create)|Creates the Outlook bar control.|  
+|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Creates a custom Outlook bar tab.|  
+|`CMFCOutlookBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determines whether a user can dock a control bar at the outer edge of the Outlook bar.|  
+|[CMFCOutlookBar::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Returns the font of the text on the buttons of the Outlook bar.|  
+|[CMFCOutlookBar::GetTabArea](#gettabarea)|Returns the size and position of the tab areas on the Outlook bar. (Overrides [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
+|`CMFCOutlookBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCOutlookBar::IsMode2003](#ismode2003)|Determines whether the behavior of the Outlook bar mimics that of Microsoft Office Outlook 2003 (see Remarks).|  
+|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) after the active tab has been set using animation.|  
+|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) before a tab page is set as the active tab using animation.|  
+|[CMFCOutlookBar::OnScroll](#onscroll)|Called by the framework if the Outlook bar is scrolling up or down.|  
+|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|Removes a custom Outlook bar tab.|  
+|[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)|Sets the font of the text on the buttons of the Outlook bar.|  
+|[CMFCOutlookBar::SetMode2003](#setmode2003)|Specifies whether the behavior of the Outlook bar mimics that of Outlook 2003 (see Remarks).|  
   
-## <a name="remarks"></a>주의  
- Outlook 표시줄의 예를 들어 참조는 [OutlookDemo 샘플: MFC OutlookDemo 응용 프로그램](../../visual-cpp-samples.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ For an example of an Outlook bar, see the [OutlookDemo Sample: MFC OutlookDemo Application](../../visual-cpp-samples.md).  
   
-## <a name="implementing-the-outlook-bar"></a>Outlook 표시줄 구현  
- 응용 프로그램에서 `CMFCOutlookBar` 컨트롤을 사용하려면 다음 단계를 수행합니다.  
+## <a name="implementing-the-outlook-bar"></a>Implementing the Outlook Bar  
+ To use the `CMFCOutlookBar` control in your application, follow these steps:  
   
-1.  `CMFCOutlookBar` 개체를 주 프레임 창 클래스에 포함합니다.  
+1.  Embed a `CMFCOutlookBar` object into the main frame window class.  
   
  ```  
     class CMainFrame : public CMDIFrameWnd  
@@ -114,7 +129,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  처리 하는 경우는 `WM_CREATE` 주 프레임을 호출 하는 메시지는 [CMFCOutlookBar::Create](#create) Outlook 표시줄 탭 컨트롤을 만드는 메서드를 합니다.  
+2.  When processing the `WM_CREATE` message in the main frame, call the [CMFCOutlookBar::Create](#create) method to create the Outlook bar tab control.  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -127,13 +142,13 @@ class CMFCOutlookBar : public CBaseTabbedPane
     WS_CHILD | WS_VISIBLE | CBRS_LEFT);
 
  ```  
-3.  기본에 대 한 포인터를 가져올 `CMFCOutlookBarTabCtrl` 를 사용 하 여 [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)합니다.  
+3.  Obtain a pointer to the underlying `CMFCOutlookBarTabCtrl` by using [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow).  
   
  ```  
     CMFCOutlookBarTabCtrl* pOutlookBar = (CMFCOutlookBarTabCtrl*) m_wndOutlookBar.GetUnderlyingWindow ();
 
  ```  
-4.  만들기는 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 단추가 포함 된 각 탭에 대 한 개체입니다.  
+4.  Create a [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) object for each tab that contains buttons.  
   
  ```  
     m_wndOutlookPane.Create (&m_wndOutlookBar,
@@ -150,26 +165,26 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  호출 [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 각 새 탭을 추가 합니다. 설정의 `bDetachable` 매개 변수를 `FALSE` 분리 가능한 아닌 페이지를 만듭니다. 또는 사용 하 여 [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) 분리 가능한 페이지를 추가 합니다.  
+5.  Call [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) to add each new tab. Set the `bDetachable` parameter to `FALSE` to make a page non-detachable. Or, use [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) to add detachable pages.  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
     TRUE);
 
  ```  
-6.  추가 하는 `CWnd`-파생 컨트롤 (예를 들어 [CMFCShellTreeCtrl 클래스](../../mfc/reference/cmfcshelltreectrl-class.md))는 탭 컨트롤 및 호출을 만들기 [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) Outlook 표시줄에 추가 합니다.  
+6.  To add a `CWnd`-derived control (for example, [CMFCShellTreeCtrl Class](../../mfc/reference/cmfcshelltreectrl-class.md)) as a tab, create the control and call [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) to add it to the Outlook bar.  
   
 > [!NOTE]
->  각 고유 컨트롤 Id를 사용 해야 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 및 각 `CWnd`-파생 개체입니다.  
+>  You should use unique control IDs for each [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md) object and for each `CWnd`-derived object.  
   
- 동적으로 추가 하거나 삭제할 런타임에 새 페이지를 사용 하 여 [CMFCOutlookBar::CreateCustomPage](#createcustompage) 및 [CMFCOutlookBar::RemoveCustomPage](#removecustompage)합니다.  
+ To dynamically add or delete new pages at runtime, use [CMFCOutlookBar::CreateCustomPage](#createcustompage) and [CMFCOutlookBar::RemoveCustomPage](#removecustompage).  
   
-## <a name="outlook-2003-mode"></a>Outlook 2003 모드  
- Outlook 2003 모드에서 탭 단추 Outlook 표시줄 창 맨 아래에 배치 됩니다. 단추를 표시할 수 있는 충분 한 공간이 없을 때의 창 하단 도구 모음 같은 영역에 아이콘으로 표시 됩니다.  
+## <a name="outlook-2003-mode"></a>Outlook 2003 Mode  
+ In Outlook 2003 mode, the tab buttons are positioned at the bottom of the Outlook bar pane. When there is not sufficient room to display the buttons, they are displayed as icons in a toolbar-like area along the bottom of the pane.  
   
- 사용 하 여 [CMFCOutlookBar::SetMode2003](#setmode2003) Outlook 2003 모드를 사용 하도록 합니다. 사용 하 여 [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) Outlook 표시줄의 아래쪽에 표시 되는 아이콘이 포함 된 비트맵을 설정할 수 있습니다. 비트맵에 있는 아이콘을 탭 인덱스 별로 정렬 되어야 합니다.  
+ Use [CMFCOutlookBar::SetMode2003](#setmode2003) to enable Outlook 2003 mode. Use [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) to set the bitmap that contains the icons that are displayed on the bottom of the Outlook bar. The icons in the bitmap must be ordered by tab index.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -186,60 +201,60 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
  [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxoutlookbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoutlookbar.h  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
- 가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다.  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+ Specifies whether an empty tabbed pane can be destroyed.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 비어 있는 경우 창 소멸 될 수 있습니다. 그렇지 않으면 `FALSE`합니다. 기본 구현에서는 항상 반환 `TRUE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 가 빈 탭된 창을 소멸 될 수 없으므로, 하는 경우 프레임 워크를 숨기고 대신 합니다.  
+### <a name="remarks"></a>Remarks  
+ If an empty tabbed pane cannot be destroyed, the framework hides it instead.  
   
-##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
- 다른 창을 Outlook 표시줄 창에 도킹할 수 수 있는지 여부를 결정 합니다.  
+##  <a name="canacceptpane"></a>  CMFCOutlookBar::CanAcceptPane  
+ Determines whether another pane can be docked to the Outlook bar pane.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 이 창에 도킹 되 고 다른 창에 대 한 포인터입니다.  
+ A pointer to another pane that is being docked to this pane.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`다른 창에 Outlook 표시줄 창에 도킹할 수 있는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if another pane can be docked to the Outlook bar pane; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- Outlook 표시줄 Outlook 2003 모드에 있으면 도킹은 지원 되지 않으므로 반환 값은 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ If the Outlook bar is in Outlook 2003 mode, docking is not supported, so the return value is `FALSE`.  
   
- 하는 경우는 `pBar` 매개 변수는 `NULL`,이 메서드는 반환 `FALSE`합니다.  
+ If the `pBar` parameter is `NULL`, this method returns `FALSE`.  
   
- 그렇지 않으면이 메서드는 기본 방법으로 동작 [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)점을 제외 하 고 Outlook 표시줄 다른 Outlook 표시줄 위로 도킹할 수를 계속 사용할 수 있습니다 도킹을 사용 하지 않는 경우에 합니다.  
+ Otherwise, this method behaves as the base method [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), except that even if docking is not enabled, an Outlook bar can still enable another Outlook bar to be docked over it.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
- 탭된 창에 대 한 캡션을 활성 탭으로 동일한 텍스트를 표시 하는지 여부를 결정 합니다.  
+##  <a name="cansetcaptiontexttotabname"></a>  CMFCOutlookBar::CanSetCaptionTextToTabName  
+ Determines whether the caption for the tabbed pane displays the same text as the active tab.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`Outlook 표시줄 창 캡션의 활성 탭;의 텍스트를 자동으로 설정 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Outlook bar window caption is automatically set to the text of the active tab; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) 사용 하도록 설정 하거나이 기능을 사용 하지 않도록 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) to enable or disable this functionality.  
   
- Outlook 2003 모드에서이 설정은 항상 설정 됩니다.  
+ In Outlook 2003 mode, this setting is always enabled.  
   
-##  <a name="create"></a>CMFCOutlookBar::Create  
- Outlook 표시줄 컨트롤을 만듭니다.  
+##  <a name="create"></a>  CMFCOutlookBar::Create  
+ Creates the Outlook bar control.  
   
 ```  
 virtual BOOL Create(
@@ -252,44 +267,44 @@ virtual BOOL Create(
     CCreateContext* pContext=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCaption`  
- 창 캡션을 지정합니다.  
+ Specifies the window caption.  
   
  [in] `pParentWnd`  
- 부모 창에 대 한 포인터를 지정합니다. NULL이 아니어야 합니다.  
+ Specifies a pointer to a parent window. It must not be NULL.  
   
  [in] `rect`  
- Outlook 표시줄 크기와 위치 (픽셀) 지정합니다.  
+ Specifies the outlook bar size and position in pixels.  
   
  [in] `nID`  
- 컨트롤 ID를 지정 합니다. 다른 컨트롤을 응용 프로그램에서 사용 되는 Id 구별 되어야 합니다.  
+ Specifies the control ID. Must be distinct from other control IDs used in the application.  
   
  [in] `dwStyle`  
- 원하는 컨트롤 막대 스타일을 지정합니다. 가능한 값에 대 한 참조 [창 스타일](../../mfc/reference/window-styles.md)합니다.  
+ Specifies the desired control bar style. For possible values, see [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  [in] `dwControlBarStyle`  
- 특별 한 라이브러리 정의 된 스타일을 지정합니다.  
+ Specifies the special library-defined styles.  
   
  [in] `pContext`  
- 컨텍스트를 만듭니다.  
+ Create context.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CMFCOutlookBar` 두 단계에서는 개체입니다. 먼저 생성자를 호출 하 고 다음 `Create`, outlook bar 컨트롤을 만들고에 연결 하는 `CMFCOutlookBar` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CMFCOutlookBar` object in two steps. First call the constructor, and then call `Create`, which creates the outlook bar control and attaches it to the `CMFCOutlookBar` object.  
   
- 참조 [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) 을 지정할 수는 사용 가능한 라이브러리 정의 된 스타일의 목록은 `dwControlBarStyle`합니다.  
+ See [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) for the list of the available library-defined styles to be specified by `dwControlBarStyle`.  
   
-### <a name="example"></a>예제  
- 다음 예제에 사용 하는 방법을 보여 줍니다는 `Create` 의 메서드는 `CMFCOutlookBar` 클래스입니다. 이 코드 조각은의 일부인는 [Outlook 다중 보기 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method of the `CMFCOutlookBar` class. This code snippet is part of the [Outlook Multi Views sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_OutlookMultiViews #&1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
-[!code-cpp[NVC_MFC_OutlookMultiViews #&2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
+[!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
- 사용자 지정 Outlook 표시줄 탭을 만듭니다.  
+##  <a name="createcustompage"></a>  CMFCOutlookBar::CreateCustomPage  
+ Creates a custom Outlook bar tab.  
   
 ```  
 CMFCOutlookBarPane* CreateCustomPage(
@@ -299,47 +314,47 @@ CMFCOutlookBarPane* CreateCustomPage(
     BOOL bEnableTextLabels=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPageName`  
- 페이지 레이블입니다.  
+ The page label.  
   
  [in] `bActivatePage`  
- 경우 `TRUE`, 페이지를 만들 때 활성화 됩니다.  
+ If `TRUE`, the page becomes active upon creation.  
   
  [in] `dwEnabledDocking`  
- 페이지 분리 되 면 활성화 된 도킹 측면을 지정 하는 CBRS_ALIGN_ 플래그의 조합입니다.  
+ A combination of CBRS_ALIGN_ flags that specifies the enabled docking sides when the page is detached.  
   
  [in] `bEnableTextLabels`  
- 경우 `TRUE`, 페이지에 있는 단추에 대 한 텍스트 레이블을 사용할 수 있습니다.  
+ If `TRUE`, the text labels are enabled for the buttons that reside on the page.  
   
-### <a name="return-value"></a>반환 값  
- 새로 만든된 페이지에 대 한 포인터 또는 `NULL` 생성에 실패 하는 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created page, or `NULL` if the creation failed.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 사용자 지정 Outlook 표시줄 페이지를 사용자가 사용할 수 있도록 합니다. 응용 프로그램 당 최대 100 개의 페이지를 만들 수 있습니다. 페이지 컨트롤 Id 0xf000 시작합니다. 사용자 지정 Outlook 표시줄 페이지의 총 100을 초과 하는 경우 만들기가 실패 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable the users to create custom Outlook bar pages. You can create up to 100 pages per application. The page control IDs start from 0xF000. The creation fails if the total number of custom Outlook bar pages exceeds 100.  
   
- 사용 하 여 [CMFCOutlookBar::RemoveCustomPage](#removecustompage) 사용자 지정 페이지를 삭제 합니다.  
+ Use [CMFCOutlookBar::RemoveCustomPage](#removecustompage) to delete custom pages.  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
- 사용자가 Outlook 표시줄의 외부 가장자리에 창 도킹할 수 있는지 여부를 지정 합니다.  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCOutlookBar::DoesAllowDynInsertBefore  
+ Specifies whether a user can dock a pane at the outer edge of the Outlook bar.  
   
 ```  
 DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본 구현은 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 호출의 `DoesAllowDynInsertBefore` 메서드를 동적 창 도킹 위치를 찾습니다. 함수가 반환 하는 경우 `FALSE`, 프레임 워크 창 외부 가장자리에 모든 동적 창의 도킹을 허용 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls the `DoesAllowDynInsertBefore` method when it looks for a location to dock a dynamic pane. If the function returns `FALSE`, the framework does not allow the docking of any dynamic pane at the outer edges of the pane.  
   
- 일반적으로 정적 비 부동 컨트롤로 Outlook 표시줄을 만듭니다. 파생된 클래스에서이 함수를 재정의 하 고 반환 `TRUE` 이 동작을 변경할 수 있습니다.  
+ Usually, you create an Outlook bar as a static non-floating control. You can override this function in a derived class and return `TRUE` to change this behavior.  
   
 > [!NOTE]
->  동적 창 상태 정적 도킹 된 창 도킹 하는 경우를 확인 하기 때문에 가능 하면 항상 정적 창 후 동적 창을 도킹할 해야 있습니다.  
+>  Because dynamic panes check the status of docked static panes when docking, you should dock dynamic panes after static panes whenever possible.  
   
-##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
- 창을 배치 됩니다.  
+##  <a name="floattab"></a>  CMFCOutlookBar::FloatTab  
+ Floats a pane.  
   
 ```  
 virtual BOOL FloatTab(
@@ -349,40 +364,40 @@ virtual BOOL FloatTab(
     BOOL bHide);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Float로의 창에 대 한 포인터입니다.  
+ A pointer to the pane to float.  
   
  [in] `nTabID`  
- Float로 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab to float.  
   
  [in] `dockMethod`  
- 창을 분리 하는 데 사용할 방법을 지정 합니다.  자세한 내용은 참조 [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)합니다.  
+ Specifies the method to use to make the pane float.  For more information, see [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
  [in] `bHide`  
- `TRUE`창을 부동; 전에 숨기려면 그렇지 않으면 `FALSE`합니다. 이 메서드의 기본 클래스 버전 달리이 매개 변수 없는 기본 값입니다.  
+ `TRUE` to hide the pane before floating; otherwise, `FALSE`. Unlike the base class version of this method, this parameter does not have a default value.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`창에서 확장 되 면; 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 방법은 [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) 제외 하 고 float로 Outlook 표시줄 컨트롤에 대해 마지막으로 남은 탭을 사용 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ This method is like [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) except that it does not enable the last remaining tab on an Outlook bar control to float.  
   
-##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
- Outlook 표시줄의 단추 탭 페이지에는 텍스트의 글꼴을 반환합니다.  
+##  <a name="getbuttonsfont"></a>  CMFCOutlookBar::GetButtonsFont  
+ Returns the font of the text on the page button tabs of the Outlook bar.  
   
 ```  
 CFont* GetButtonsFont() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 페이지 단추 탭 표시줄 Outlook에 텍스트를 표시 하는 데 사용 되는 글꼴 개체에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the font object that is used to display text on Outlook bar page button tabs.  
   
-### <a name="remarks"></a>주의  
- Outlook 페이지 단추 탭에 텍스트를 표시 하는 데 사용 되는 글꼴을 검색 하려면이 함수를 사용 합니다. 호출 하 여 글꼴을 설정할 수 있습니다 [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to retrieve the font that is used to display the text on Outlook page button tabs. You can set the font by calling on [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
-##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
- Outlook 표시줄에 있는 탭 영역의 위치와 크기를 결정합니다.  
+##  <a name="gettabarea"></a>  CMFCOutlookBar::GetTabArea  
+ Determines the size and position of the tab areas on the Outlook bar.  
   
 ```  
 virtual void GetTabArea(
@@ -390,78 +405,78 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 함수가 반환 될 때 탭 위쪽 영역 (클라이언트 좌표로) 위치와 크기를 포함 합니다.  
+ Contains the size and position (in the client coordinates) of the top tab area when the function returns.  
   
  [out] `rectTabAreaBottom`  
- 함수가 반환 될 때 탭 아래쪽 영역 (클라이언트 좌표로) 위치와 크기를 포함 합니다.  
+ Contains the size and position (in the client coordinates) of the bottom tab area when the function returns.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 대상 창에 도킹 유형을 확인 하려면이 메서드를 호출 합니다. 프레임 워크를 대상 창 탭 영역 위로 도킹 창 끌으로 파악 하는 경우 대상 창의 새 탭으로 첫 번째 창에 추가 하려고 합니다. 그렇지 않은 경우에 적절 한 쪽의 대상 창에서 첫 번째 창 도킹 가져오려고 시도 합니다. 프레임 워크 추가 도킹 된 창에 맞게 슬라이더로 새 컨테이너를 만듭니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine the type of docking to the target pane. When the framework determines that the user drags the pane to be docked over the tab area of the target pane, it tries to add the first pane as a new tab of the target pane. Otherwise, it tries to dock the first pane at an appropriate side of the target pane. The framework creates a new container with a slider to accommodate the additional docked pane.  
   
- 기본 구현은 `GetTabArea` Outlook 표시줄에 있는 정적; 이면 Outlook 표시줄의 전체 클라이언트 영역을 반환 합니다. Outlook 표시줄 부동 소수점 수 없는 경우. 그렇지 않으면 페이지 단추에서 위쪽 및 아래쪽 Outlook bar 컨트롤을 사용 하는 영역을 반환 합니다.  
+ The default implementation of `GetTabArea` returns the whole client area of the Outlook bar if the Outlook bar is static; that is, if the Outlook bar cannot float. Otherwise, it returns the area that page buttons take at the top and bottom of the Outlook bar control.  
   
- 파생 된 클래스에서이 메서드를 재정의 `CMFCOutlookBar` 이 동작을 변경할 수 있습니다.  
+ Override this method in class derived from `CMFCOutlookBar` to change this behavior.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
- Outlook 표시줄의 동작을 모방 Microsoft Office Outlook 2003의 여부를 지정 합니다.  
+##  <a name="ismode2003"></a>  CMFCOutlookBar::IsMode2003  
+ Specifies whether the behavior of the Outlook bar mimics that of Microsoft Office Outlook 2003.  
   
 ```  
 BOOL IsMode2003() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- Outlook 표시줄은 Microsoft Office 2003 모드에서 실행 중인 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the Outlook bar is running in Microsoft Office 2003 mode; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여이 모드를 사용할 수 있습니다 [CMFCOutlookBar::SetMode2003](#setmode2003)합니다.  
+### <a name="remarks"></a>Remarks  
+ You can enable this mode by using [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
-##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
- 에 의해 호출 [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 애니메이션을 사용 하 여 활성 탭을 설정 합니다.  
+##  <a name="onafteranimation"></a>  CMFCOutlookBar::OnAfterAnimation  
+ Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) after the active tab has been set using animation.  
   
 ```  
 virtual void OnAfterAnimation(int nPage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nPage`  
- 활성 설정한 탭 페이지의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab page that has been made active.  
   
-### <a name="remarks"></a>주의  
- 활성 탭 설정의 시각 효과 애니메이션 설정 여부에 따라 달라 집니다. 자세한 내용은 참조 [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)합니다.  
+### <a name="remarks"></a>Remarks  
+ The visual effect of setting the active tab depends on whether you have enabled animation. For more information, see [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
-##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
- 에 의해 호출 [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 탭 하기 전에 페이지 애니메이션을 사용 하 여 활성 탭으로 설정 됩니다.  
+##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation  
+ Called by [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) before a tab page is set as the active tab using animation.  
   
 ```  
 virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nPage`  
- 활성 설정 하는 탭 페이지의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the tab page that is about to be set active.  
   
-### <a name="return-value"></a>반환 값  
- 반환 `TRUE` 새 활성 탭 설정에 애니메이션을 사용 하는 경우 또는 `FALSE` 애니메이션 사용 하지 않도록 설정 해야 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if animation should be used in setting the new active tab, or `FALSE` if animation should be disabled.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
- 위로 또는 아래로 Outlook 표시줄 스크롤 하는 경우에 프레임 워크에서 호출 합니다.  
+##  <a name="onscroll"></a>  CMFCOutlookBar::OnScroll  
+ Called by the framework if the Outlook bar is scrolling up or down.  
   
 ```  
 virtual void OnScroll(BOOL bDown);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bDown`  
- `TRUE`Outlook 표시줄 아래로 스크롤 하는 경우 또는 `FALSE` 위로 스크롤 하는 경우.  
+ `TRUE` if the Outlook bar is scrolling down, or `FALSE` if it is scrolling up.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
- 사용자 지정 Outlook 표시줄 탭 페이지를 제거합니다.  
+##  <a name="removecustompage"></a>  CMFCOutlookBar::RemoveCustomPage  
+ Removes a custom Outlook bar tab page.  
   
 ```  
 BOOL RemoveCustomPage(
@@ -469,25 +484,25 @@ BOOL RemoveCustomPage(
     CMFCOutlookBarTabCtrl* pTargetWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiPage`  
- 부모 Outlook 창에 있는 페이지의&0;부터 시작 인덱스입니다.  
+ Zero-based index of the page in the parent Outlook window.  
   
  [in] `pTargetWnd`  
- Pointerto 부모 Outlook 창입니다.  
+ Pointerto the parent Outlook window.  
   
-### <a name="return-value"></a>반환 값  
- 사용자 지정 페이지 성공적으로 제거 된 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the custom page has been removed successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 페이지를 삭제 하려면이 함수를 호출 합니다. 페이지가 제거 될 때 해당 컨트롤 ID는 사용 가능한 Id의 풀에 반환 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to delete custom pages. When the page is removed its control ID is returned to the pool of available IDs.  
   
- 에 대 한 포인터를 제공 해야 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 페이지를 현재 제거할 수 있는 개체입니다. 다른 Outlook 막대 사이의 사용자 분리 가능한 페이지를 이동할 수 있지만 사용자 지정 페이지에 대 한 정보를 호출한 Outlook 표시줄 개체에 있는 [CMFCOutlookBar::CreateCustomPage](#createcustompage)합니다.  
+ You must provide a pointer to [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) object in which the page to be removed currently resides. Note that a user can move detachable pages between different Outlook bars, but the information about a custom page resides in the Outlook bar object for which you have called [CMFCOutlookBar::CreateCustomPage](#createcustompage).  
   
- 사용 하 여 [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) Outlook 창에 대 한 포인터를 얻을 수 있습니다.  
+ Use [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) to obtain a pointer to the Outlook window.  
   
-##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
- Outlook 표시줄의 단추에는 텍스트의 글꼴을 설정합니다.  
+##  <a name="setbuttonsfont"></a>  CMFCOutlookBar::SetButtonsFont  
+ Sets the font of the text on the buttons of the Outlook bar.  
   
 ```  
 void SetButtonsFont(
@@ -495,39 +510,39 @@ void SetButtonsFont(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pFont`  
- 새 글꼴을 지정합니다.  
+ Specifies the new font.  
   
  [in] `bRedraw`  
- 경우 `TRUE`, Outlook 표시줄 다시 그려집니다.  
+ If `TRUE`, the Outlook bar will be redrawn.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 outlook 탭 페이지 단추에 표시 되는 텍스트 글꼴을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a font for the text displayed on outlook tab page buttons.  
   
-##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
- Outlook 표시줄의 동작을 모방 Outlook 2003의 여부를 지정 합니다.  
+##  <a name="setmode2003"></a>  CMFCOutlookBar::SetMode2003  
+ Specifies whether the behavior of the Outlook bar mimics that of Outlook 2003.  
   
 ```  
 void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMode2003`  
- True 인 경우, Office 2003 모드가 사용 됩니다.  
+ If TRUE, Office 2003 mode is enabled.  
   
-### <a name="remarks"></a>주의  
- Office 2003 모드를 사용할지 여부를이 함수를 사용 합니다. 이 모드에서는 Outlook 표시줄에는 사용자 지정 단추는 추가 도구 모음을 있습니다. Outlook 표시줄의 동작은 Microsoft Office 2003에서 Outlook 표시줄의 동작을 따릅니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to enable or disable Office 2003 mode. In this mode, the Outlook bar has an additional toolbar with a customization button. The behavior of the Outlook bar conforms to the behavior of the Outlook bar in Microsoft Office 2003.  
   
- 기본적으로이 모드는 사용할 수 없습니다.  
+ By default, this mode is disabled.  
   
 > [!NOTE]
->  이 함수를 호출 하기 전에 해야 [CMFCOutlookBar::Create](#create)합니다.  
+>  This function must be called before [CMFCOutlookBar::Create](#create).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CBaseTabbedPane 클래스](../../mfc/reference/cbasetabbedpane-class.md)   
- [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md)   
- [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)   
+ [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)   
+ [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md)
 

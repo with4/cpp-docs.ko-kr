@@ -1,5 +1,5 @@
 ---
-title: "MFC 응용 프로그램 마법사, 응용 프로그램 종류 | Microsoft Docs"
+title: Application Type, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,91 +33,91 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bd862d4a537f2297c1ee5a6fd517e22f7c684fa4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fef2f03dddd85b8b4469172cb0c594e3643a62da
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-type-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 응용 프로그램 종류
-이 페이지는 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md) 디자인 하 고 새 MFC 응용 프로그램에 기본 기능을 추가 합니다.  
+# <a name="application-type-mfc-application-wizard"></a>Application Type, MFC Application Wizard
+Use this page of the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) to design and add basic features to a new MFC application.  
   
- **응용 프로그램 종류**  
- 응용 프로그램에서 만들려는 지원 문서 유형을 지정 합니다. 선택한 응용 프로그램 종류는 응용 프로그램에 사용할 수 있는 사용자 인터페이스 옵션을 결정 합니다. 참조 [MFC 응용 프로그램 마법사, 사용자 인터페이스 기능](../../mfc/reference/user-interface-features-mfc-application-wizard.md) 자세한 정보에 대 한 합니다.  
+ **Application type**  
+ Specifies the type of document support that you want to create in your application. The type of application you select determines the user interface options that are available for your application. See [User Interface Features, MFC Application Wizard](../../mfc/reference/user-interface-features-mfc-application-wizard.md) for more information.  
   
- 문서 종류에 대 한 자세한 내용은 다음을 참조:  
+ For more information about the types of documents, see:  
   
--   [SDI 및 MDI](../../mfc/sdi-and-mdi.md)  
+-   [SDI and MDI](../../mfc/sdi-and-mdi.md)  
   
--   [프레임 창](../../mfc/frame-windows.md)  
+-   [Frame Windows](../../mfc/frame-windows.md)  
   
--   [프레임 창 클래스](../../mfc/frame-window-classes.md)  
+-   [Frame-Window Classes](../../mfc/frame-window-classes.md)  
   
--   [문서, 뷰 및 프레임워크](../../mfc/documents-views-and-the-framework.md)  
+-   [Documents, Views, and the Framework](../../mfc/documents-views-and-the-framework.md)  
   
--   [대화 상자](../../mfc/dialog-boxes.md)  
+-   [Dialog Boxes](../../mfc/dialog-boxes.md)  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**단일 문서**|뷰 클래스 기반으로 응용 프로그램에 대 한 단일 문서 SDI (인터페이스)는 아키텍처가 생성 [CView 클래스](../../mfc/reference/cview-class.md)합니다. 뷰에 대 한 기본 클래스를 변경할 수는 [MFC 응용 프로그램 마법사, 생성 된 클래스](../../mfc/reference/generated-classes-mfc-application-wizard.md) 마법사의 페이지입니다. 폼 기반 응용 프로그램을 만들려면 사용 예를 들어 [CFormView 클래스](../../mfc/reference/cformview-class.md) 뷰 클래스에 대 한 합니다.<br /><br /> 이 유형의 응용 프로그램에는 문서 프레임 창 하나의 문서를 포함할 수 있습니다.|  
-|**여러 문서**|뷰 클래스 기반으로 응용 프로그램에 대 한 다중 문서 인터페이스 (mdi 다중) 아키텍처를 만듭니다 `CView`합니다. 뷰에 대 한 기본 클래스를 변경할 수는 **생성 된 클래스** 마법사의 페이지입니다. 폼 기반 응용 프로그램을 만들려면 사용 예를 들어 `CFormView` 뷰 클래스에 대 한 합니다.<br /><br /> 이 유형의 응용 프로그램에는 문서 프레임 창 수 여러 자식 창을 포함할 합니다.|  
-|**탭된 문서**|별도 탭에 각 문서를 배치합니다.|  
-|**대화 상자 기반**|대화 상자 클래스 기반으로 하는 응용 프로그램에 대 한 대화 상자 기반 아키텍처를 만들고 `CDialog`합니다. (HTML 대화를 만들려면 선택 **사용**.)|  
-|**HTML 사용 하 여 대화 상자**|대화 상자 응용 프로그램만 해당 합니다. 대화 상자 클래스에서 파생 [CDHtmlDialog 클래스](../../mfc/reference/cdhtmldialog-class.md) 대신 [CDialog 클래스](../../mfc/reference/cdialog-class.md)합니다. 이 상자를 선택 하는 경우 `CDHtmlDialog` 에 나열 된는 **기본 클래스** 상자에 [MFC 응용 프로그램 마법사, 생성 된 클래스](../../mfc/reference/generated-classes-mfc-application-wizard.md) 마법사의 페이지입니다.<br /><br /> A `CDHtmlDialog`-HTML 기반 대화 상자를 표시 하는 파생 된 대화 상자, html 데이터를 교환 제어 하 고 HTML 이벤트를 처리 합니다.|  
-|**다중 최상위 문서**|뷰 클래스 기반으로 응용 프로그램에 대 한 여러 최상위 아키텍처를 만듭니다 `CView`합니다.<br /><br /> 이 유형의 응용 프로그램을 클릭할 때 **새로** (또는 **새 프레임**)에 **파일** 응용 프로그램 메뉴에서 해당 부모는 암시적으로 바탕 화면 창을 만듭니다. 새 문서 프레임 작업 표시줄에 표시 되 고 응용 프로그램 창의 클라이언트 영역에 제한 되지 않습니다.|  
+|**Single document**|Creates a single document interface (SDI) architecture for your application, where a view class is based on [CView Class](../../mfc/reference/cview-class.md). You can change the base class for the view in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a form-based application, for example, use [CFormView Class](../../mfc/reference/cformview-class.md) for the view class.<br /><br /> In this type of application, the document's frame window can hold only one document.|  
+|**Multiple documents**|Creates a multiple document interface (MDI) architecture for your application, where a view class is based on `CView`. You can change the base class for the view in the **Generated Classes** page of the wizard. To create a form-based application, for example, use `CFormView` for the view class.<br /><br /> In this type of application, the document's frame window can hold multiple child windows.|  
+|**Tabbed documents**|Places each document on a separate tab.|  
+|**Dialog based**|Creates a dialog-based architecture for your application where a dialog class is based on `CDialog`. (To create an HTML dialog, select the box **Use HTML dialog**.)|  
+|**Use HTML dialog**|For dialog box applications only. Derives the dialog class from [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md) instead of [CDialog Class](../../mfc/reference/cdialog-class.md). If you check this box, `CDHtmlDialog` is listed in the **Base class** box in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.<br /><br /> A `CDHtmlDialog`-derived dialog box displays HTML-based dialog boxes, exchanges data with HTML controls and handles HTML events.|  
+|**Multiple top-level documents**|Creates a multiple top-level architecture for your application, where a view class is based on `CView`.<br /><br /> In this type of application, when a user clicks **New** (or **New Frame**) on the **File** menu, the application creates a window whose parent is implicitly the desktop. The new document frame appears in the taskbar and is not restricted to the client area of the application window.|  
   
- **문서/뷰 아키텍처 지원**  
- 문서/뷰 아키텍처를 사용 하 여 응용 프로그램에 포함할지 여부를 지정 된 [CDocument 클래스](../../mfc/reference/cdocument-class.md) 및 [CView 클래스](../../mfc/reference/cview-class.md) (기본값). 컴파일된 실행 파일의 크기를 줄이는 경우 또는 비 MFC 응용 프로그램을 이식 하는 경우이 확인란의 선택을 취소 합니다. 기본적으로 문서/뷰 아키텍처 없이 응용 프로그램에서 파생 된 [CWinApp 클래스](../../mfc/reference/cwinapp-class.md), 디스크 파일에서 문서를 열에 대 한 MFC 지원을 포함 하지 않습니다.  
+ **Document/view architecture support**  
+ Specifies whether to include document/view architecture in your application by using the [CDocument Class](../../mfc/reference/cdocument-class.md) and the [CView Class](../../mfc/reference/cview-class.md) (default). Clear this check box if you are porting a non-MFC application or if you want to reduce the size of your compiled executable. By default, an application without document/view architecture is derived from [CWinApp Class](../../mfc/reference/cwinapp-class.md), and it does not include MFC support for opening a document from a disk file.  
   
- **리소스 언어**  
- 리소스의 언어를 설정합니다. 목록으로 Visual Studio 설치 된 시스템에서 사용할 수 있는 언어를 표시 합니다. 시스템 언어 이외의 언어를 선택 하려면 해당 언어에 대 한 템플릿 폴더가 이미 설치 되어 있어야 합니다. 에 있는 기본와에서 다른 언어 리소스를 설치 하는 방법에 대 한 자세한 내용은 **리소스 언어** 목록에서 참조 [다른 언어에 대 한 마법사 지원](../../ide/wizard-support-for-other-languages.md)합니다.  
+ **Resource language**  
+ Sets the language of your resources. The list displays the languages available on your system, as installed by Visual Studio. If you want to select a language other than your system language, the appropriate template folder for that language must already be installed. For more information about installing language resources different from the defaults available in the **Resource language** list, see [Wizard Support for Other Languages](../../ide/wizard-support-for-other-languages.md).  
   
- 선택한 언어에 반영 됩니다는 **지역화 된 문자열** 의 옵션은 [MFC 응용 프로그램 마법사, 문서 템플릿 문자열](../../mfc/reference/document-template-strings-mfc-application-wizard.md) 마법사의 페이지입니다.  
+ The language that you select is reflected in the **Localized strings** option of the [Document Template Strings, MFC Application Wizard](../../mfc/reference/document-template-strings-mfc-application-wizard.md) page of the wizard.  
   
- **유니코드 라이브러리 사용**  
- MFC 라이브러리의 유니코드 또는 비유니코드 버전 사용 여부를 지정 합니다.  
+ **Use Unicode libraries**  
+ Specifies whether the Unicode or non-Unicode version of the MFC libraries is used.  
   
- **프로젝트 스타일**  
- 응용 프로그램에 표준 MFC, 파일 탐색기, Visual Studio 또는 아키텍처 및 표시 여부를 나타냅니다. 자세한 내용은 참조 [파일 탐색기 스타일 MFC 응용 프로그램을 만드는](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)합니다.  
+ **Project style**  
+ Indicates whether your application has a standard MFC, File Explorer, Visual Studio, or Office architecture and display. For more information, see [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md).  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**MFC 표준**|표준 MFC 응용 프로그램 아키텍처를 제공합니다.|  
-|**파일 탐색기**|여기서는 왼쪽된 창 분할 창을 사용 하 여 파일 탐색기와 같은 응용 프로그램을 구현 하는 [CTreeView 클래스](../../mfc/reference/ctreeview-class.md) 오른쪽 창은 [CListView 클래스](../../mfc/reference/clistview-class.md)합니다.|  
-|**Visual Studio**|도킹 가능한 네 개의 창이 포함 된 Visual Studio와 유사한 응용 프로그램 구현 (**파일 보기**, **클래스 뷰**, **속성**, 및 **출력**)에서 파생 되는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 에서 파생 된 주 프레임 창 및 [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md) (기본값).|  
-|**Office**|파생 된 리본 메뉴를 포함 하는 Office와 비슷한 응용 프로그램을 구현 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)에서 파생 된 Outlook 표시줄 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)에서 파생 된 캡션 표시줄 [CMFCCaptionBar 클래스](../../mfc/reference/cmfccaptionbar-class.md), 및에서 파생 된 주 프레임 [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)합니다.|  
+|**MFC standard**|Provides a standard MFC application architecture.|  
+|**File Explorer**|Implements a File Explorer-like application by using a splitter window where the left pane is a [CTreeView Class](../../mfc/reference/ctreeview-class.md) and the right pane is a [CListView Class](../../mfc/reference/clistview-class.md).|  
+|**Visual Studio**|Implements a Visual Studio-like application that contains four dockable panes (**File View**, **Class View**, **Properties**, and **Output**) that are derived from [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and a main frame window that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md) (default).|  
+|**Office**|Implements an Office-like application that contains a ribbon that is derived from [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md), an Outlook bar that is derived from [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md), a caption bar that is derived from [CMFCCaptionBar Class](../../mfc/reference/cmfccaptionbar-class.md), and a main frame that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).|  
   
- **비주얼 스타일과 색**  
- 응용 프로그램의 비주얼 스타일을 결정합니다. 다음 옵션을 사용할 수 있습니다.  
+ **Visual style and colors**  
+ Determines the visual style of the application. The following options are available:  
   
--   **Windows 네이티브/기본값**  
+-   **Windows Native/Default**  
   
 -   **Office 2003**  
   
 -   **Visual Studio 2005**  
   
--   **Office 2007 (파랑 테마)**  
+-   **Office 2007 (Blue theme)**  
   
--   **Office 2007 (검정 테마)**  
+-   **Office 2007 (Black theme)**  
   
--   **Office 2007 (은색 테마)**  
+-   **Office 2007 (Silver theme)**  
   
--   **Office 2007 (바다색 테마)**  
+-   **Office 2007 (Aqua theme)**  
   
- **비주얼 스타일 전환 사용**  
- 여부 사용자를 변경할 수 런타임에 응용 프로그램의 비주얼 스타일 일반적으로 메뉴 또는 리본 메뉴에서 적절 한 시각적 스타일을 선택 하 여 지정 합니다.  
+ **Enable visual style switching**  
+ Specifies whether the user can change the visual style of the application at runtime, usually by selecting the appropriate visual style from a menu or ribbon.  
   
- **MFC 사용**  
- MFC 라이브러리에 연결 하는 방법을 지정 합니다. 기본적으로 MFC 공유 DLL로 연결 됩니다.  
+ **Use of MFC**  
+ Specifies how to link to the MFC library. By default, MFC is linked as a shared DLL.  
   
-|옵션|설명|  
+|Option|Description|  
 |------------|-----------------|  
-|**공유 DLL에서 MFC 사용**|MFC 라이브러리를 공유 DLL로 응용 프로그램에 연결합니다. 응용 프로그램에서는 실행 시 MFC 라이브러리를 호출 합니다. 이 옵션에는 MFC 라이브러리를 사용 하는 여러 실행 파일의 구성 된 응용 프로그램의 디스크 및 메모리 요구 사항을 줄일 수 있습니다. Win32 및 MFC 응용 프로그램 모두 (기본값) DLL의 함수를 호출할 수 있습니다.|  
-|**정적 라이브러리에서 MFC 사용**|빌드 시 정적 MFC 라이브러리에 응용 프로그램을 연결합니다.|  
+|**Use MFC in a shared DLL**|Links the MFC library to an application as a shared DLL. The application makes calls to the MFC library at run time. This option reduces the disk and memory requirements of applications that consist of multiple executable files that use the MFC library. Both Win32 and MFC applications can call functions in your DLL (default)|  
+|**Use MFC in a static library**|Links an application to the static MFC library at build time.|  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)   
- [Visual C++ 프로젝트용 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

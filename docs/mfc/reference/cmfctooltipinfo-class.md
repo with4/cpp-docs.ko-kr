@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolTipInfo 클래스 | Microsoft 문서"
+title: CMFCToolTipInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,7 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolTipInfo class
+- CMFCToolTipInfo [MFC], m_bBalloonTooltip
+- CMFCToolTipInfo [MFC], m_bBoldLabel
+- CMFCToolTipInfo [MFC], m_bDrawDescription
+- CMFCToolTipInfo [MFC], m_bDrawIcon
+- CMFCToolTipInfo [MFC], m_bDrawSeparator
+- CMFCToolTipInfo [MFC], m_bRoundedCorners
+- CMFCToolTipInfo [MFC], m_bVislManagerTheme
+- CMFCToolTipInfo [MFC], m_clrBorder
+- CMFCToolTipInfo [MFC], m_clrFill
+- CMFCToolTipInfo [MFC], m_clrFillGradient
+- CMFCToolTipInfo [MFC], m_clrText
+- CMFCToolTipInfo [MFC], m_nGradientAngle
+- CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 caps.latest.revision: 27
 author: mikeblome
@@ -47,202 +59,202 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed15ce9f3e1abb48c0a6c4eacdf662cc2ef3f9c9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e489fa20aa86f2106c42d288ddd8c4f410ece7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 클래스
-도구 설명의 시각적 모양에 대한 정보를 저장합니다.  
+# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
+Stores information about the visual appearance of tooltips.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolTipInfo  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::operator =](#operator_eq)||  
+|[CMFCToolTipInfo::operator=](#operator_eq)||  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|도구 설명이 풍선 모양인지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|도구 설명 레이블이 굵은 글꼴로 표시되는지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|도구 설명이 설명을 포함하는지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|도구 설명이 아이콘을 포함하는지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|도구 설명 레이블과 도구 설명 사이에 구분 기호가 표시되는지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|도구 설명 모서리가 둥근지 여부를 나타내는 부울 변수입니다.|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|비주얼 관리자에서 도구 설명의 모양을 제어 해야 하는지 여부를 나타내는 부울 변수 (참조 [CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md)).|  
-|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|도구 설명 테두리 색입니다.|  
-|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|도구 설명 배경색입니다.|  
-|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|도구 설명의 그라데이션 채우기 색입니다.|  
-|[CMFCToolTipInfo::m_clrText](#m_clrtext)|도구 설명의 텍스트 색입니다.|  
-|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|도구 설명의 그라데이션 채우기 각도입니다.|  
-|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|도구 설명의 가능한 최대 설명 너비(픽셀)입니다.|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|A Boolean variable that indicates whether the tooltip has a balloon appearance.|  
+|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|A Boolean variable that indicates whether tooltip labels are displayed in a bold font.|  
+|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|A Boolean variable that indicates whether the tooltip contains a description.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|A Boolean variable that indicates whether the tooltip contains an icon.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|A Boolean variable that indicates whether a separator is displayed between the tooltip label and the tooltip description.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|A Boolean variable that indicates whether the tooltip has rounded corners.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|A Boolean variable that indicates whether the appearance of the tooltip should be controlled by a visual manager (see [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|The color of the tooltip border.|  
+|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|The color of the tooltip background.|  
+|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|The color of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_clrText](#m_clrtext)|The text color in the tooltip.|  
+|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|The angle of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|The maximum possible width, in pixels, of the description in the tooltip.|  
   
-## <a name="remarks"></a>주의  
- 사용 하 여 [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, 및 [CTooltipManager 클래스](../../mfc/reference/ctooltipmanager-class.md) 응용 프로그램에서 사용자 지정된 도구를 구현할 수 있습니다. 이러한 도구 설명 클래스를 사용 하는 방법의 예를 들어 참조는 [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md) 항목입니다.  
+## <a name="remarks"></a>Remarks  
+ Use [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, and [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md) together to implement customized tooltips in your application. For an example of how to use these tooltip classes, see the [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md) topic.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCToolTipInfo` 클래스에서 다양한 멤버 변수의 값을 설정하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the values of the various member variables in the `CMFCToolTipInfo` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&42;](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtooltipctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtooltipctrl.h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
- 모든 도구 설명의 표시 스타일을 지정합니다.  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
+ Specifies the display style of all tooltips.  
   
 ```  
 BOOL m_bBalloonTooltip;  
 ```  
   
-### <a name="remarks"></a>주의  
- `TRUE`도구 설명 풍선 스타일을 사용 함을 나타냅니다 `FALSE` 도구 설명 사각형 스타일을 사용 함을 나타냅니다.  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that tooltips use the balloon style, `FALSE` indicates that tooltips use the rectangular style.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
- 도구 설명 텍스트의 글꼴을 굵게 있는지 여부를 지정 합니다.  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
+ Specifies whether the font of the tooltip text is bold.  
   
 ```  
 BOOL m_bBoldLabel;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 도구 설명 텍스트를 굵은 글꼴로 표시 또는 `FALSE` 굵은 글꼴이 아닌 글꼴 도구 설명 레이블을 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display tooltip text with bold font, or `FALSE` to display tooltip labels with non-bold font.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
- 각 도구 설명을 설명 텍스트를 표시 하는지 여부를 지정 합니다.  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
+ Specifies whether each tooltip displays description text.  
   
 ```  
 BOOL m_bDrawDescription;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 설명을 표시 하려면 또는 `FALSE` 숨기려면 설명 합니다. 호출 하 여 도구 설명에 대 한 설명을 지정할 수 있습니다 [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display the description, or `FALSE` to hide the description. You can specify the description on a tooltip by calling [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
- 모든 도구 설명 아이콘을 표시 하는지 여부를 지정 합니다.  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
+ Specifies whether all tooltips display icons.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 각 도구 설명에 아이콘을 표시 하려면 또는 `FALSE` 아이콘이 없는 도구 설명을 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display an icon on each tooltip, or `FALSE` to display tooltips without icons.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
- 각 도구 설명 레이블을 설명 사이 구분 기호에 있는지 여부를 지정 합니다.  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
+ Specifies whether each tooltip has a separator between its label and its description.  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 도구 설명 레이블 및 설명, 사이 구분 기호를 표시 하려면 또는 `FALSE` 구분 기호 없이 차례로 도구 설명을 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display separator between tooltip label and description, or `FALSE` to display tooltips with no separator.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
- 모든 도구 설명 모퉁이가 둥근 여부를 지정 합니다.  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
+ Specifies whether all tooltips have rounded corners.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버를 설정 `TRUE` 둥근된 모서리, 도구 설명에 표시 하려면 또는 `FALSE` 사각형 모서리 도구 설명에 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display rounded corners on tooltips, or `FALSE` to display rectangular corners on tooltips.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
- 모든 도구 설명에는 테두리의 색을 지정합니다.  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
+ Specifies the color of the borders on all tooltips.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
- 도구 설명 배경 색을 지정합니다.  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
+ Specifies the color of tooltip backgrounds.  
   
 ```  
 COLORREF m_clrFill;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) 은-1, 도구 설명 배경색은 `m_clrFill`합니다. 그렇지 않으면 `m_clrFill` 그라데이션의 시작 색을 지정 하 고 `m_clrFillGradient` 그라데이션의 끝 색을 지정 합니다. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) 그라데이션의 방향을 결정 합니다.  
+### <a name="remarks"></a>Remarks  
+ If [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) is -1, the tooltip background color is `m_clrFill`. Otherwise, `m_clrFill` specifies the color of the beginning of the gradient and `m_clrFillGradient` specifies the color of the end of the gradient. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
- 그라데이션 배경이 도구 설명에 대 한 마지막 색을 지정합니다.  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
+ Specifies the end color for a gradient background for tooltips.  
   
 ```  
 COLORREF m_clrFillGradient;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `m_clrFillGradient` 은-1는 그라데이션 없음. 그라데이션 색을 초기 붙습니다 그렇지 [CMFCToolTipInfo::m_clrFill](#m_clrfill) 완료 그라데이션 색은에서 지정 하 고 `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) 그라데이션의 방향을 결정 합니다.  
+### <a name="remarks"></a>Remarks  
+ If `m_clrFillGradient` is -1, there is no gradient. Otherwise, the gradient initial color is specified by [CMFCToolTipInfo::m_clrFill](#m_clrfill) and the gradient finish color is specified by `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
- 모든 도구 설명의 텍스트 색을 지정합니다.  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
+ Specifies text color of all tooltips.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
- 도구 설명의 배경에 그라데이션을 그릴 각도 지정 합니다.  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
+ Specifies the angle at which a gradient is drawn on the background of tooltips.  
   
 ```  
 int m_nGradientAngle;  
 ```  
   
-### <a name="remarks"></a>주의  
- `m_nGradientAngle`각도 도구 설명의 배경에 그라데이션 수평에서 오프셋 되는 각도 지정 합니다. 경우 `m_nGradientAngle` 가 0 이면 그라데이션 왼쪽에서 오른쪽에 그려집니다. 경우 `m_nGradientAngle` 는 1에서 360 사이의 그라데이션을 회전 시계 방향으로 각도 만큼 해당 합니다. 경우 `m_nGradientAngle` 인 기본값-1은 그라데이션 위쪽에서 아래쪽에 그려집니다. 이 설정과 동일 `m_nGradientAngle` 90으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ `m_nGradientAngle` specifies the angle, in degrees, that the gradient on the background of tooltips is offset from horizontal. If `m_nGradientAngle` is 0, the gradient is drawn from left to right. If `m_nGradientAngle` is between 1 and 360, the gradient is rotating clockwise by that number of degrees. If `m_nGradientAngle` is -1, which is the default value, the gradient is drawn from top to bottom. This is the same as setting `m_nGradientAngle` to 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` 그라데이션의 시작 색을 지정 하 고 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` 그라데이션의 끝 색을 지정 합니다. 경우 `m_clrFillGradient` 은-1는 그라데이션 없음.  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifies the color of the beginning of the gradient and [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifies the color of the end of the gradient. If `m_clrFillGradient` is -1, there is no gradient.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
- 각 도구 설명에는 표시 되는 설명의 최대 너비를 지정 합니다. 설명 너비 지정된 된 값을 초과 하면 텍스트가 래핑됩니다.  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
+ Specifies the maximum width of the description that it displayed in each tooltip. If the description width exceeds the specified value, the text is wrapped.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
- 응용 프로그램의 시각적 관리자에서 모든 도구 설명의 모양을 제어 하는지 여부를 지정 합니다.  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
+ Specifies whether the visual manager of the application controls the appearance of all tooltips.  
   
 ```  
 BOOL m_bVislManagerTheme;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 `m_bVislManagerTheme` 는 `TRUE`, 새 요청 하는 모든 도구 설명 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) , 화면에 나타나는 모양을 확인 하려면 해당 개체에 값을 사용 하기 전에 응용 프로그램의 시각적 관리자에서. 다른 구성원에 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) 무시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If `m_bVislManagerTheme` is `TRUE`, every tooltip requests a new [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) from the visual manager of the application before they appear on the screen, and uses the values in that object to determine their appearance. The other members of your [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) are ignored.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator=  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CTooltipManager 클래스](../../mfc/reference/ctooltipmanager-class.md)   
- [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md)   
+ [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md)
 

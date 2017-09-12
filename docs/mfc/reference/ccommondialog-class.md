@@ -1,5 +1,5 @@
 ---
-title: "CCommonDialog 클래스 | Microsoft 문서"
+title: CCommonDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,13 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes [C++], Windows common dialogs
-- common dialog boxes [C++], common dialog classes
-- common dialog classes [C++]
-- MFC dialog boxes, Windows common dialogs
-- Windows common dialogs [C++]
-- CCommonDialog class
-- dialog classes [C++], common
+- CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
 caps.latest.revision: 20
 author: mikeblome
@@ -41,32 +35,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 93d4cd4ca794095c225641bc67353b9a53080c3c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1175cd18e0c57a6ec65b1fbe655264ba86a7676
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccommondialog-class"></a>CCommonDialog 클래스
-Windows 공용 대화 상자의 기능을 캡슐화하는 클래스의 기본 클래스입니다.  
+# <a name="ccommondialog-class"></a>CCommonDialog Class
+The base class for classes that encapsulate functionality of the Windows common dialogs.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCommonDialog : public CDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommonDialog::CCommonDialog](#ccommondialog)|`CCommonDialog` 개체를 생성합니다.|  
+|[CCommonDialog::CCommonDialog](#ccommondialog)|Constructs a `CCommonDialog` object.|  
   
-## <a name="remarks"></a>주의  
- 다음 클래스는 Windows 공용 대화 상자의의 기능을 캡슐화 합니다.  
+## <a name="remarks"></a>Remarks  
+ The following classes encapsulate the functionality of the Windows common dialogs:  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -84,7 +78,7 @@ class CCommonDialog : public CDialog
   
 - [COleDialog](../../mfc/reference/coledialog-class.md)  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -95,31 +89,31 @@ class CCommonDialog : public CDialog
   
  `CCommonDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
- `CCommonDialog` 개체를 생성합니다.  
+##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog  
+ Constructs a `CCommonDialog` object.  
   
 ```  
 explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+ Points to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 참조 [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) 완전 한 정보에 대 한 합니다.  
+### <a name="remarks"></a>Remarks  
+ See [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) for complete information.  
   
-## <a name="see-also"></a>참고 항목  
- [CDialog 클래스](../../mfc/reference/cdialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)   
- [CFontDialog 클래스](../../mfc/reference/cfontdialog-class.md)   
- [CColorDialog 클래스](../../mfc/reference/ccolordialog-class.md)   
- [CPageSetupDialog 클래스](../../mfc/reference/cpagesetupdialog-class.md)   
- [CPrintDialog 클래스](../../mfc/reference/cprintdialog-class.md)   
- [CFindReplaceDialog 클래스](../../mfc/reference/cfindreplacedialog-class.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDialog Class](../../mfc/reference/cdialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)   
+ [CFontDialog Class](../../mfc/reference/cfontdialog-class.md)   
+ [CColorDialog Class](../../mfc/reference/ccolordialog-class.md)   
+ [CPageSetupDialog Class](../../mfc/reference/cpagesetupdialog-class.md)   
+ [CPrintDialog Class](../../mfc/reference/cprintdialog-class.md)   
+ [CFindReplaceDialog Class](../../mfc/reference/cfindreplacedialog-class.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

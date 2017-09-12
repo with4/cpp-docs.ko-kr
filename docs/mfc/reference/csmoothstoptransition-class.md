@@ -1,5 +1,5 @@
 ---
-title: "CSmoothStopTransition 클래스 | Microsoft 문서"
+title: CSmoothStopTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSmoothStopTransition class
+- CSmoothStopTransition [MFC], CSmoothStopTransition
+- CSmoothStopTransition [MFC], Create
+- CSmoothStopTransition [MFC], m_dblFinalValue
+- CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
 caps.latest.revision: 18
 author: mikeblome
@@ -38,58 +41,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 60cdc3528d10270187dccd42a634f7483c58821f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b4d248fd256c5fd65c914f886c982f7c30434c96
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 클래스
-부드러운 중지 전환을 캡슐화합니다.  
+# <a name="csmoothstoptransition-class"></a>CSmoothStopTransition Class
+Encapsulates a smooth-stop transition.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSmoothStopTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|부드러운 중지 전환을 생성 하 고 최대 기간과 최종 값을 초기화 합니다.|  
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Constructs a smooth-stop transition and initializes its maximum duration and final value.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmoothStopTransition::Create](#create)|캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다. (재정의 [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CSmoothStopTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|전환의 끝에 있는 애니메이션 변수의 값입니다.|  
-|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|전환의 최대 기간입니다.|  
+|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|The value of the animation variable at the end of the transition.|  
+|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|The maximum duration of the transition.|  
   
-## <a name="remarks"></a>주의  
- 부드러운 중지 전환을 가까워지면 최종 값을 지정된 하 고 속도&0;에 도달 느려집니다. 전환 기간은 초기 속도 초기 및 최종 값과 지정 된 최대 시간 차이 의해 결정 됩니다. 단일 포물선 원호로 구성 되는 솔루션이 없으면이 메서드는&3; 차원 전환을 만듭니다. 전환 되는 모든 자동으로 지워집니다 것이 좋습니다 하 고 할당 된 새 연산자를 사용 하 여 합니다. 캡슐화 IUIAnimationTransition COM 개체는 NULL이 될 때까지 CAnimationController::AnimateGroup, 하 여 생성 됩니다. 이 COM 개체의 생성에 영향을 주지 않습니다 후 멤버 변수를 변경 합니다.  
+## <a name="remarks"></a>Remarks  
+ A smooth-stop transition slows down as it approaches a given final value, and reaches it with a velocity of zero. The duration of the transition is determined by the initial velocity, the difference between the initial and final values, and the specified maximum duration. If there is no solution consisting of a single parabolic arc, this method creates a cubic transition. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSmoothStopTransition::Create  
- 캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
+##  <a name="create"></a>  CSmoothStopTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -97,15 +100,15 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- 표준 전환 만드는 담당 하는 전환 라이브러리에 대 한 포인터입니다.  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
- 부드러운 중지 전환을 생성 하 고 최대 기간과 최종 값을 초기화 합니다.  
+##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition  
+ Constructs a smooth-stop transition and initializes its maximum duration and final value.  
   
 ```  
 CSmoothStopTransition(
@@ -113,27 +116,27 @@ CSmoothStopTransition(
     DOUBLE dblFinalValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maximumDuration`  
- 전환의 최대 기간입니다.  
+ The maximum duration of the transition.  
   
  `dblFinalValue`  
- 전환의 끝에 있는 애니메이션 변수의 값입니다.  
+ The value of the animation variable at the end of the transition.  
   
-##  <a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
- 전환의 끝에 있는 애니메이션 변수의 값입니다.  
+##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  
+ The value of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
- 전환의 최대 기간입니다.  
+##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration  
+ The maximum duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_maximumDuration;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

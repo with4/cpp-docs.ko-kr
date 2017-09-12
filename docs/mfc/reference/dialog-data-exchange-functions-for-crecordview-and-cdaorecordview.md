@@ -1,5 +1,5 @@
 ---
-title: "CRecordView 및 CDaoRecordView에 대 한 대화 상자 데이터 교환 함수 | Microsoft Docs"
+title: Dialog Data Exchange Functions for CRecordView and CDaoRecordView | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,12 +22,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DDX_Field functions
-- ODBC [C++], dialog data exchange (DDX) support
-- DDX (dialog data exchange) [C++], database support
-- DDX (dialog data exchange) [C++], functions
-- databases [C++], dialog data exchange (DDX) support
-- DAO [C++], dialog data exchange (DDX) support
+- DDX_Field functions [MFC]
+- ODBC [MFC], dialog data exchange (DDX) support
+- DDX (dialog data exchange) [MFC], database support
+- DDX (dialog data exchange) [MFC], functions
+- databases [MFC], dialog data exchange (DDX) support
+- DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
 author: mikeblome
@@ -47,37 +47,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c6256e6a510e3640bfdfd43cace5afbdec72b849
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b9321b9e63e6509fb71dfb09040212fdf974830e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 및 CDaoRecordView에 대한 대화 상자 데이터 교환 함수
-이 항목에서는 간에 데이터를 교환 하는 데 사용 DDX_Field 함수는 [CRecordset](../../mfc/reference/crecordset-class.md) 및 [CRecordView](../../mfc/reference/crecordview-class.md) 양식 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 폼입니다.  
+# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialog Data Exchange Functions for CRecordView and CDaoRecordView
+This topic lists the DDX_Field functions used to exchange data between a [CRecordset](../../mfc/reference/crecordset-class.md) and a [CRecordView](../../mfc/reference/crecordview-class.md) form or a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) and a [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
   
 > [!NOTE]
->  DDX_Field 함수 양식의 컨트롤을 사용 하 여 데이터를 교환 DDX 함수와 비슷합니다. 하지만 필드 자체 레코드 보기 대신 보기의 관련된 레코드 집합 개체의 필드를 사용 하 여 데이터를 교환 하기, DDX와 달리 합니다. 자세한 내용은 클래스를 참조 하십시오. `CRecordView` 및 `CDaoRecordView`합니다.  
+>  DDX_Field functions are like DDX functions in that they exchange data with controls in a form. But unlike DDX, they exchange data with the fields of the view's associated recordset object rather than with fields of the record view itself. For more information, see classes `CRecordView` and `CDaoRecordView`.  
   
-### <a name="ddxfield-functions"></a>DDX_Field 함수  
+### <a name="ddxfield-functions"></a>DDX_Field Functions  
   
 |||  
 |-|-|  
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|레코드 집합 필드 데이터 멤버 및 콤보 상자에 현재 선택 항목의 인덱스 간에 정수 데이터를 전송는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)합니다.|  
-|[DDX_FieldCBString](#ddx_fieldcbstring)|전송 `CString` 레코드 집합 필드 데이터 멤버 및 콤보 편집 컨트롤 간의 데이터 상자에 `CRecordView` 또는 `CDaoRecordView`합니다. 데이터를 레코드 집합에서 컨트롤을 이동할 때는이 함수는 지정된 된 문자열에는 문자로 시작 하는 콤보 상자에서 항목을 선택 합니다.|  
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|전송 `CString` 레코드 집합 필드 데이터 멤버 및 콤보 편집 컨트롤 간의 데이터 상자에 `CRecordView` 또는 `CDaoRecordView`합니다. 데이터를 레코드 집합에서 컨트롤을 이동할 때는이 함수는 지정 된 문자열과 정확히 일치 하는 콤보 상자에서 항목을 선택 합니다.|  
-|[DDX_FieldCheck](#ddx_fieldcheck)|레코드 집합 필드 데이터 멤버 및 확인란에 간에 부울 데이터를 전송는 `CRecordView` 또는 `CDaoRecordView`합니다.|  
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|레코드 집합 필드 데이터 멤버와 목록 상자에서 현재 선택 항목의 인덱스 간의 정수 데이터를 전송는 `CRecordView` 또는 `CDaoRecordView`합니다.|  
-|[DDX_FieldLBString](#ddx_fieldlbstring)|전송을 관리 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 목록 상자 컨트롤 및 레코드 집합의 필드 데이터 멤버 간에 데이터입니다. 컨트롤에는 레코드 집합에서 데이터를 이동,이 함수는 지정 된 문자열의 문자로 시작 하는 목록 상자에서 항목을 선택 합니다.|  
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|전송을 관리 `CString` 목록 상자 컨트롤 및 레코드 집합의 필드 데이터 멤버 간에 데이터입니다. 컨트롤에는 레코드 집합에서 데이터를 이동,이 함수는 지정 된 문자열과 정확히 일치 하는 첫 번째 항목을 선택 합니다.|  
-|[DDX_FieldRadio](#ddx_fieldradio)|레코드 집합 필드 데이터 멤버와의 라디오 단추 그룹 간에 정수 데이터를 전송는 `CRecordView` 또는 `CDaoRecordView`합니다.|  
-|[DDX_FieldScroll](#ddx_fieldscroll)|스크롤 막대 컨트롤의 스크롤 위치를 가져오거나 설정 합니다.는 `CRecordView` 또는 `CDaoRecordView`합니다. 호출 프로그램 [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) 함수입니다.|  
-|[DDX_FieldSlider](#ddx_fieldslider)|레코드 뷰에서의 슬라이더 컨트롤의 스크롤 상자 위치를 동기화 및 `int` 레코드 집합의 필드 데이터 멤버입니다. |
-|[DDX_FieldText](#ddx_fieldtext)|오버 로드 된 버전을 전송 하는 데 사용할 수 `int`, **UINT**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **짧은**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), 및 [COleCurrency](../../mfc/reference/colecurrency-class.md) 레코드 집합 필드 데이터 멤버 및 편집 간에 데이터 상자에 `CRecordView` 또는 `CDaoRecordView`합니다.|  
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a combo box in a [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that begins with the characters in the specified string.|  
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that exactly matches the specified string.|  
+|[DDX_FieldCheck](#ddx_fieldcheck)|Transfers Boolean data between a recordset field data member and a check box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a list box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the item in the list box that begins with the characters in the specified string.|  
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Manages the transfer of `CString` data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the first item that exactly matches the specified string.|  
+|[DDX_FieldRadio](#ddx_fieldradio)|Transfers integer data between a recordset field data member and a group of radio buttons in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldScroll](#ddx_fieldscroll)|Sets or gets the scroll position of a scroll bar control in a `CRecordView` or `CDaoRecordView`. Call from your [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) function.|  
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset. |
+|[DDX_FieldText](#ddx_fieldtext)|Overloaded versions are available for transferring `int`, **UINT**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **short**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) data between a recordset field data member and an edit box in a `CRecordView` or `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
- `DDX_FieldCBIndex` 레코드 뷰에서의 콤보 상자 컨트롤의 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
+ The `DDX_FieldCBIndex` function synchronizes the index of the selected item in the list box control of a combo box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBIndex(
@@ -93,34 +93,34 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *인덱스*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 이 함수에 지정 된 값에 따라 컨트롤에서 선택 항목을 설정 데이터를 레코드 집합에서 컨트롤을 이동할 때는 *인덱스*합니다. 전송 레코드 집합에서 컨트롤을 레코드 집합 필드는 Null, MFC 설정 된 인덱스의 값을 0으로 합니다. 레코드 집합에 컨트롤에서 전송, 컨트롤 비어 있거나 없는 항목을 선택 하는 경우 레코드 집합 필드를 0으로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty or if no item is selected, the recordset field is set to 0.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 이 예제에 대 한 유사 합니다 `DDX_FieldCBIndex`합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example would be similar for `DDX_FieldCBIndex`.  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
- `DDX_FieldCBString` 함수의 전송을 관리 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 간에 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
+ The `DDX_FieldCBString` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBString(
@@ -136,34 +136,34 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 이 함수에 지정 된 문자열의 문자로 시작 하는 첫 번째 행에 콤보 상자에서 현재 선택 영역을 설정 데이터를 레코드 집합에서 컨트롤을 이동할 때는 *값*합니다. 레코드 집합에서 전송 하기 위해서는 컨트롤에서 레코드 집합 필드에 Null 인 경우 모든 선택 콤보 상자에서 제거 되 고 콤보 상자의 편집 컨트롤 설정 비어 있는 것으로 합니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤 비어 있으면 레코드 집합 필드 Null로 설정 됩니다 필드에서 허용 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that begins with the characters in the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the combo box and the edit control of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null if the field permits.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 예제에 대 한 호출에 포함 되어 `DDX_FieldCBString`합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example includes a call to `DDX_FieldCBString`.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
- `DDX_FieldCBStringExact` 함수의 전송을 관리 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 간에 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
+ The `DDX_FieldCBStringExact` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBStringExact(
@@ -179,34 +179,34 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 이 함수에 지정 된 문자열과 정확히 일치 하는 첫 번째 행에 콤보 상자에서 현재 선택 영역을 설정 데이터를 레코드 집합에서 컨트롤을 이동할 때는 *값*합니다. 레코드 집합에서 전송 하기 위해서는 컨트롤에서 레코드 집합 필드에 NULL 인 경우 모든 선택 콤보 상자에서 제거 되 고 콤보 상자의 편집 상자 설정 되어 비어 있는 것으로 합니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드가 NULL로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is NULL, any selection is removed from the combo box and the edit box of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to NULL.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldCBStringExact` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldCBStringExact` would be similar.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
- `DDX_FieldCheck` 함수의 전송을 관리 `int` 대화 상자에서 확인란 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
+ The `DDX_FieldCheck` function manages the transfer of `int` data between a check box control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -222,29 +222,29 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 컨트롤 속성에 연결 된 확인란 컨트롤의 리소스 ID입니다.  
+ The resource ID of the check box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_FieldCheck` 호출 되 *값* 확인란 컨트롤의 현재 상태를 설정 하거나 컨트롤의 상태가 되도록 설정 되어 *값*전송의 방향에 따라 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_FieldCheck` is called, *value* is set to the current state of the check box control, or the control's state is set to *value*, depending on the direction of transfer.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
- `DDX_FieldLBIndex` 레코드 뷰에 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
+ The `DDX_FieldLBIndex` function synchronizes the index of the selected item in a list box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -260,34 +260,34 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *인덱스*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 이 함수에 지정 된 값에 따라 컨트롤에서 선택 항목을 설정 데이터를 레코드 집합에서 컨트롤을 이동할 때는 *인덱스*합니다. 전송 레코드 집합에서 컨트롤을 레코드 집합 필드는 Null, MFC 설정 된 인덱스의 값을 0으로 합니다. 레코드 집합에 컨트롤에서 전송, 컨트롤 비어 있으면 레코드 집합 필드를 0으로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty, the recordset field is set to 0.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
- `DDX_FieldLBString` 레코드 뷰를 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
+ The `DDX_FieldLBString` copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBString(
@@ -303,34 +303,34 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 이 함수에서 지정 된 문자열의 문자로 시작 하는 첫 번째 행을 목록 상자에서 현재 선택 영역 설정 반대 방향에서 *값*합니다. 컨트롤에 레코드 집합에서으로 전송에서 레코드 집합 필드는 Null을 모든 선택 목록 상자에서 제거 됩니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드가 Null로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that begins with the characters in the string specified by *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldLBString` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBString` would be similar.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
- `DDX_FieldLBStringExact` 함수를 레코드 뷰에 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
+ The `DDX_FieldLBStringExact` function copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBStringExact(
@@ -346,34 +346,34 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 이 함수에 지정 된 문자열과 정확히 일치 하는 첫 번째 행에 있는 목록 상자에서 현재 선택 영역 설정 방향의 역방향 *값*합니다. 컨트롤에 레코드 집합에서으로 전송에서 레코드 집합 필드는 Null을 모든 선택 목록 상자에서 제거 됩니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드가 Null로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldLBStringExact` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBStringExact` would be similar.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
- `DDX_FieldRadio` 함수는 0부터 시작 연결 `int` 레코드 보기에서 라디오 단추 그룹에서 현재 선택 된 라디오 단추와 레코드 뷰의 레코드 집합의 멤버 변수입니다.  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
+ The `DDX_FieldRadio` function associates a zero-based `int` member variable of a record view's recordset with the currently selected radio button in a group of radio buttons in the record view.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -389,34 +389,34 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 첫 번째 ID 그룹의 (스타일으로 **WS_GROUP**) 인접 한 라디오 단추 컨트롤에 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 보기에서 레코드 집합 필드를 전송,이 함수를 설정의 *n 번째* (0부터 시작) 라디오 단추와 있는 단추를 해제 합니다. 반대 방향으로이 함수는 현재 (선택)에 있는 라디오 단추의 서 수를 레코드 집합 필드를 설정 합니다. 컨트롤에 레코드 집합에서으로 전송 레코드 집합 필드는 Null 인 경우 단추가 선택 되어 있습니다. 레코드 집합에 컨트롤에서으로 전송에서 없는 컨트롤을 선택 레코드 집합 필드는 Null로 설정 필드를 허용 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ When transferring from the recordset field to the view, this function turns on the *nth* radio button (zero-based) and turns off the other buttons. In the reverse direction, this function sets the recordset field to the ordinal number of the radio button that is currently on (checked). On a transfer from the recordset to the control, if the recordset field is Null, no button is selected. On a transfer from control to recordset, if no control is selected, the recordset field is set to Null if the field permits that.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldRadio` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldRadio` would be similar.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
- `DDX_FieldScroll` 레코드 뷰에서의 스크롤 막대 컨트롤의 스크롤 위치를 동기화 하는 함수 및 `int` 레코드 뷰 (또는 매핑하도록 선택 하면 모든 정수 변수)과 관련 된 레코드 집합의 필드 데이터 멤버입니다.  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
+ The `DDX_FieldScroll` function synchronizes the scroll position of a scroll bar control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -432,36 +432,36 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *nIDC\**  
- 첫 번째 ID 그룹의 (스타일으로 **WS_GROUP**) 인접 한 라디오 단추 컨트롤에 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 이 함수에 지정 된 값에 스크롤 막대 컨트롤의 스크롤 위치를 설정 데이터를 레코드 집합에서 컨트롤을 이동할 때는 *값*합니다. 컨트롤에 레코드 집합에서으로 전송에서 레코드 집합 필드는 Null, 스크롤 막대 컨트롤을 0으로 설정 됩니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드의 값은 0입니다.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the scroll position of the scroll bar control to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the scroll bar control is set to 0. On a transfer from control to recordset, if the control is empty, the value of the recordset field is 0.  
   
- ODBC 기반 클래스를 사용 하는 경우에 첫 번째 버전을 사용 합니다. DAO 기반 클래스를 사용 하는 경우에 두 번째 버전을 사용 합니다.  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldScroll` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldScroll` would be similar.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name = "ddx_fieldslider" ></a> DDX_FieldSlider
-`DDX_FieldSlider` 레코드 뷰에서의 슬라이더 컨트롤의 스크롤 상자 위치를 동기화 하는 함수 및 `int` 레코드 뷰 (또는 매핑하도록 선택 하면 모든 정수 변수)과 관련 된 레코드 집합의 필드 데이터 멤버입니다.  
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+The `DDX_FieldSlider` function synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
    
-### <a name="syntax"></a>구문  
+### <a name="syntax"></a>Syntax  
   ```
    void AFXAPI DDX_FieldSlider(  
        CDataExchange* pDX,  
@@ -475,39 +475,39 @@ void AFXAPI DDX_FieldSlider(
      int& value,  
      CDaoRecordset* pRecordset );  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 슬라이더 컨트롤의 리소스 ID입니다.  
+ The resource ID of the slider control.  
   
  *value*  
- 교환할 값에 대 한 참조입니다. 이 매개 변수를 보유 하거나 슬라이더 컨트롤의 현재 스크롤 상자 위치를 설정 하는 데 사용 됩니다.  
+ A reference to the value to be exchanged. This parameter holds or will be used to set the slider control's current thumb position.  
   
  `pRecordset`  
- 연결 된에 대 한 포인터 `CRecordset` 또는 `CDaoRecordset` 개체 데이터를 교환 합니다.  
+ A pointer to the associated `CRecordset` or `CDaoRecordset` object with which data is exchanged.  
    
-### <a name="remarks"></a>설명  
- 이 함수에 지정 된 값으로 슬라이더의 위치를 설정 데이터를 레코드 집합에서 슬라이더를 이동할 때는 *값*합니다. 컨트롤에는 레코드 집합에서 전송, 레코드 집합 필드는 Null 인 경우 슬라이더 컨트롤의 위치를 0으로 설정 됩니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드의 값은 0입니다.  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the slider, this function sets the position of the slider to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the slider control's position is set to 0. On a transfer from the control to the recordset, if the control is empty, the value of the recordset field is 0.  
   
- `DDX_FieldSlider`위치 단순히 보다는 범위를 설정할 수 있는 슬라이더 컨트롤을 사용 하 여 범위 정보를 교환 하지 않습니다.  
+ `DDX_FieldSlider` does not exchange range information with slider controls capable of setting a range rather than simply a position.  
   
- ODBC 기반 클래스를 사용 하는 경우 함수의 첫 번째 재정의 사용 합니다. DAO 기반 클래스와 두 번째 재정의 사용 합니다.  
+ Use the first override of the function if you are working with the ODBC-based classes. Use the second override with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 `CRecordView` 및 `CDaoRecordView` 필드 참조 [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다. 슬라이더 컨트롤에 대 한 정보를 참조 하십시오. [CSliderCtrl 사용 하 여](../using-csliderctrl.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md). For examples and more information about DDX for `CRecordView` and `CDaoRecordView` fields, see [Record Views](../../data/record-views-mfc-data-access.md). For information about slider controls, see [Using CSliderCtrl](../using-csliderctrl.md).  
    
-### <a name="example"></a>예제  
- 참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldSlider` 유사 합니다.  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldSlider` would be similar.  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
    
-### <a name="see-also"></a>참고 항목  
- [매크로 및 전역](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
- `DDX_FieldText` 함수의 전송을 관리 `int`, **짧은**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, 또는 **바이트** 편집 상자 컨트롤 및 레코드 집합의 필드 데이터 멤버 간에 데이터입니다.  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
+ The `DDX_FieldText` function manages the transfer of `int`, **short**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, or **BYTE** data between an edit box control and the field data members of a recordset.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -619,35 +619,35 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
  *value*  
- 연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다. 값의 데이터 형식 중의 오버 로드 된 버전에 따라 달라 집니다 `DDX_FieldText` 사용 합니다.  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object. The data type of value depends on which of the overloaded versions of `DDX_FieldText` you use.  
   
  `pRecordset`  
- 에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 데이터를 교환 합니다. 이 포인터를 사용 하 `DDX_FieldText` 를 감지 하 여 Null 값을 설정 합니다.  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged. This pointer enables `DDX_FieldText` to detect and set Null values.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 `DDX_FieldText` 전송도 관리 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), 및 [COleCurrency](../../mfc/reference/colecurrency-class.md) 값입니다. 빈 편집 상자 컨트롤에는 Null 값을 나타냅니다. 컨트롤에는 레코드 집합에서 전송, 레코드 집합 필드는 Null 인 경우 편집 상자 설정 비어 있는 것으로 합니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드가 Null로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ For [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objects, `DDX_FieldText` also manages transferring [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) values. An empty edit box control indicates a Null value. On a transfer from the recordset to the control, if the recordset field is Null, the edit box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- 버전을 사용 하 여 [CRecordset](../../mfc/reference/crecordset-class.md) 매개 변수는 ODBC 기반 클래스를 사용 하는 경우. 버전을 사용 하 여 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 매개 변수는 DAO 기반 클래스를 사용 하는 경우.  
+ Use the versions with [CRecordset](../../mfc/reference/crecordset-class.md) parameters if you are working with the ODBC-based classes. Use the versions with [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) parameters if you are working with the DAO-based classes.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>예제  
- 다음 `DoDataExchange` 에 대 한 함수는 [CRecordView](../../mfc/reference/crecordview-class.md) 포함 `DDX_FieldText` 세 개의 데이터 형식에 대 한 함수 호출: `IDC_COURSELIST` 은 콤보 상자; 다른 두 컨트롤은 편집 상자입니다. DAO 프로그래밍에 대 한는 *하기 위해* 매개 변수는에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)합니다.  
+### <a name="example"></a>Example  
+ The following `DoDataExchange` function for a [CRecordView](../../mfc/reference/crecordview-class.md) contains `DDX_FieldText` function calls for three data types: `IDC_COURSELIST` is a combo box; the other two controls are edit boxes. For DAO programming, the *m_pSet* parameter is a pointer to a [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- [!code-cpp[NVC_MFCDatabase # 43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
     
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

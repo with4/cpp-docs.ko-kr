@@ -1,5 +1,5 @@
 ---
-title: "CMFCBaseToolBar 클래스 | Microsoft 문서"
+title: CMFCBaseToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseToolBar class, constructor
-- CMFCBaseToolBar class, destructor
-- ~CMFCBaseToolBar destructor
-- CreateObject method
-- CMFCBaseToolBar class
+- CMFCBaseToolBar [MFC], GetDockingMode
+- CMFCBaseToolBar [MFC], GetMinSize
+- CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
 author: mikeblome
@@ -41,41 +39,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb896d2c03f8b25ec615444111fa6307e4dfd63e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 클래스
-도구 모음에 대 한 기본 클래스입니다.  
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar Class
+Base class for toolbars.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseToolBar : public CPane  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CMFCBaseToolBar`|기본 생성자입니다.|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|소멸자|  
+|`CMFCBaseToolBar::CMFCBaseToolBar`|Default constructor.|  
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|도킹 모드를 반환합니다. (재정의 [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|도구 모음의 최소 크기를 반환합니다. (재정의 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|프레임 워크의 창 부모 변경 된 후 호출 합니다. (재정의 [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|`CMFCBaseToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Returns the docking mode. (Overrides [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Returns the minimum size of a toolbar. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Called by the framework after the pane's parent changes. (Overrides [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,42 +86,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxbasetoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
- 도킹 모드를 반환합니다.  
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
+ Returns the docking mode.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도킹 모드입니다.  
+### <a name="return-value"></a>Return Value  
+ The docking mode.  
   
-##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
- 도구 모음의 최소 크기를 반환합니다.  
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
+ Returns the minimum size of a toolbar.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `size`  
- 도구 모음의 최소 크기입니다.  
+ The minimum size of a toolbar.  
   
-##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
- 프레임 워크의 창 부모 변경 된 후 호출 합니다.  
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
+ Called by the framework after the pane's parent changes.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndOldParent`  
- 이전 부모 창에 대 한 포인터입니다.  
+ A pointer to the previous parent window.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CLinkCtrl 클래스 | Microsoft 문서"
+title: CLinkCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,11 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CLinkCtrl class
-- Web pages, link control
-- controls [MFC], links
-- links [C++], link control
-- SysLink control
+- CLinkCtrl [MFC], CLinkCtrl
+- CLinkCtrl [MFC], Create
+- CLinkCtrl [MFC], CreateEx
+- CLinkCtrl [MFC], GetIdealHeight
+- CLinkCtrl [MFC], GetIdealSize
+- CLinkCtrl [MFC], GetItem
+- CLinkCtrl [MFC], GetItemID
+- CLinkCtrl [MFC], GetItemState
+- CLinkCtrl [MFC], GetItemUrl
+- CLinkCtrl [MFC], HitTest
+- CLinkCtrl [MFC], SetItem
+- CLinkCtrl [MFC], SetItemID
+- CLinkCtrl [MFC], SetItemState
+- CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
 caps.latest.revision: 23
 author: mikeblome
@@ -52,56 +61,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 710fef79306c906e13e99beac15401835422ecbe
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 08b9d812c3e753c96b4618f9ba84dc1685b92c55
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="clinkctrl-class"></a>CLinkCtrl 클래스
-Windows의 공용 SysLink 컨트롤의 기능을 제공합니다.  
+# <a name="clinkctrl-class"></a>CLinkCtrl Class
+Provides the functionality of the Windows common SysLink control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CLinkCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinkCtrl::CLinkCtrl](#clinkctrl)|`CLinkCtrl` 개체를 생성합니다.|  
+|[CLinkCtrl::CLinkCtrl](#clinkctrl)|Constructs a `CLinkCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinkCtrl::Create](#create)|링크 컨트롤을 만들고이에 연결 된 `CLinkCtrl` 개체입니다.|  
-|[CLinkCtrl::CreateEx](#createex)|확장된 스타일을 사용 하 여 링크 컨트롤을 만들고에 연결 된 `CLinkCtrl` 개체입니다.|  
-|[CLinkCtrl::GetIdealHeight](#getidealheight)|링크 컨트롤의 이상적인 높이 검색합니다.|  
-|[CLinkCtrl::GetIdealSize](#getidealsize)|링크의 지정된 된 너비에 따라 현재 링크 컨트롤에 대 한 링크 텍스트의 기본 설정된 높이 계산합니다.|  
-|[CLinkCtrl::GetItem](#getitem)|상태 및 링크 컨트롤 항목의 특성을 검색합니다.|  
-|[CLinkCtrl::GetItemID](#getitemid)|링크 컨트롤 항목의 ID를 검색합니다.|  
-|[CLinkCtrl::GetItemState](#getitemstate)|링크 컨트롤 항목의 상태를 검색합니다.|  
-|[CLinkCtrl::GetItemUrl](#getitemurl)|링크 컨트롤 항목으로 표현 하는 URL을 검색 합니다.|  
-|[CLinkCtrl::HitTest](#hittest)|사용자 지정된 된 링크를 클릭 했는지 여부를 결정 합니다.|  
-|[CLinkCtrl::SetItem](#setitem)|상태를 설정 하는 링크 컨트롤 항목의 특성입니다.|  
-|[CLinkCtrl::SetItemID](#setitemid)|링크 컨트롤 항목의 ID를 설정합니다.|  
-|[CLinkCtrl::SetItemState](#setitemstate)|링크 컨트롤 항목의 상태를 설정합니다.|  
-|[CLinkCtrl::SetItemUrl](#setitemurl)|링크 컨트롤 항목으로 나타내는 URL을 설정 합니다.|  
+|[CLinkCtrl::Create](#create)|Creates a link control and attaches it to a `CLinkCtrl` object.|  
+|[CLinkCtrl::CreateEx](#createex)|Creates a link control with extended styles and attaches it to a `CLinkCtrl` object.|  
+|[CLinkCtrl::GetIdealHeight](#getidealheight)|Retrieves the ideal height of the link control.|  
+|[CLinkCtrl::GetIdealSize](#getidealsize)|Calculates the preferred height of the link text for the current link control, depending on the specified width of the link.|  
+|[CLinkCtrl::GetItem](#getitem)|Retrieves the states and attributes of a link control item.|  
+|[CLinkCtrl::GetItemID](#getitemid)|Retrieves the ID of a link control item.|  
+|[CLinkCtrl::GetItemState](#getitemstate)|Retrieves the state of the link control item.|  
+|[CLinkCtrl::GetItemUrl](#getitemurl)|Retrieves the URL represented by the link control item.|  
+|[CLinkCtrl::HitTest](#hittest)|Determines whether the user clicked the specified link.|  
+|[CLinkCtrl::SetItem](#setitem)|Sets the states and attributes of a link control item.|  
+|[CLinkCtrl::SetItemID](#setitemid)|Sets the ID of a link control item.|  
+|[CLinkCtrl::SetItemState](#setitemstate)|Sets the state of the link control item.|  
+|[CLinkCtrl::SetItemUrl](#setitemurl)|Sets the URL represented by the link control item.|  
   
-## <a name="remarks"></a>주의  
- "링크 컨트롤" 창에 하이퍼텍스트 링크를 포함 하는 편리한 방법을 제공 합니다. 실제 컨트롤에는 마크업 텍스트를 렌더링 하 고 포함된 된 링크를 클릭할 때 적절 한 응용 프로그램을 시작 하는 창입니다. 여러 개의 링크를 하나의 컨트롤 내에서 지원 되 고 인덱스는&0;부터 시작 하 여 액세스할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ A "link control" provides a convenient way to embed hypertext links in a window. The actual control is a window that renders marked-up text and launches appropriate applications when the user clicks an embedded link. Multiple links are supported within one control and can be accessed by a zero-based index.  
   
- 이 컨트롤 (및 따라서는 `CLinkCtrl` 클래스) 및 나중에 Windows XP에서 실행 되는 프로그램에만 사용할 수 있습니다.  
+ This control (and therefore the `CLinkCtrl` class) is available only to programs running under Windows XP and later.  
   
- 자세한 내용은 참조 [SysLink 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb760706) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [SysLink Control](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -110,18 +119,18 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
- `CLinkCtrl` 개체를 생성합니다.  
+##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
+ Constructs a `CLinkCtrl` object.  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="create"></a>CLinkCtrl::Create  
- 링크 컨트롤을 만들고이에 연결 된 `CLinkCtrl` 개체입니다.  
+##  <a name="create"></a>  CLinkCtrl::Create  
+ Creates a link control and attaches it to a `CLinkCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -138,42 +147,42 @@ virtual BOOL Create(DWORD dwStyle,
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszLinkMarkup`  
- 표시는 표시할 텍스트를 포함 하는&0;로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤의 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706) 에 [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)합니다.  
+ Pointer to a zero-terminated string that contains the marked up text to display. For more information, see the section "Markup and Link Access" in the topic [Overview of SysLink Controls](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
   
  `dwStyle`  
- 링크 컨트롤의 스타일을 지정합니다. 모든 조합의 컨트롤 스타일을 적용 합니다. 참조 [일반적인 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 `Windows SDK` 자세한 내용은 합니다.  
+ Specifies the link control's style. Apply any combination of control styles. See [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the `Windows SDK` for more information.  
   
  `rect`  
- 링크 컨트롤의 크기와 위치를 지정합니다. 수 중 하나는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
+ Specifies the link control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 링크 컨트롤의 부모 창을 지정합니다. 않아야 `NULL`합니다.  
+ Specifies the link control's parent window. It must not be `NULL`.  
   
  `nID`  
- 링크 컨트롤의 ID를 지정 합니다.  
+ Specifies the link control's ID.  
   
-### <a name="return-value"></a>반환 값  
- `true`초기화에 성공 하면 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if initialization was successful; otherwise `false`.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CLinkCtrl` 두 단계에서는 개체입니다. 먼저, 생성자를 호출 하 고 다음 호출 `Create`, 링크 컨트롤을 만들고에 연결 하는 `CLinkCtrl` 개체입니다. 컨트롤 확장된 창 스타일을 사용 하는 경우 호출할 [CLinkCtrl::CreateEx](#createex) 대신 `Create`합니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CLinkCtrl` object in two steps. First, call the constructor and then call `Create`, which creates the link control and attaches it to the `CLinkCtrl` object. If you want to use extended windows styles with your control, call [CLinkCtrl::CreateEx](#createex) instead of `Create`.  
   
- 두 번째 형태는 `Create` 메서드는 사용 되지 않습니다. 지정 하는 첫 번째 폼을 사용 하 여는 `lpszLinkMarkup` 매개 변수입니다.  
+ The second form of the `Create` method is deprecated. Use the first form that specifies the `lpszLinkMarkup` parameter.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 라는 두 개의 변수를 정의 `m_Link1` 및 `m_Link2`, 두 개의 링크 컨트롤에 액세스 하는 데 사용 되는 합니다.  
+### <a name="example"></a>Example  
+ The following code example defines two variables, named `m_Link1` and `m_Link2`, that are used to access two link controls.  
   
- [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 다른 링크 컨트롤의 위치에 따라 하나의 링크 컨트롤을 만듭니다. 리소스 로더는 응용 프로그램을 시작 하는 경우 첫 번째 링크 컨트롤을 만듭니다. 응용 프로그램의 OnInitDialog 메서드 들어가면 첫 번째 링크 컨트롤의 위치를 기준으로 두 번째 링크 컨트롤을 만듭니다. 그런 다음 두 번째 링크 컨트롤을 표시 하는 텍스트에 맞게 조정 있습니다.  
+### <a name="example"></a>Example  
+ The following code example creates one link control based on the location of another link control. The resource loader creates the first link control when your application starts. When your application enters the OnInitDialog method, you create the second link control relative to the position of the first link control. Then you resize the second link control to fit the text that it displays.  
   
- [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CLinkCtrl::CreateEx  
- 확장된 스타일을 사용 하 여 링크 컨트롤을 만들고에 연결 된 `CLinkCtrl` 개체입니다.  
+##  <a name="createex"></a>  CLinkCtrl::CreateEx  
+ Creates a link control with extended styles and attaches it to a `CLinkCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -192,48 +201,48 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
     UINT  nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszLinkMarkup`  
- 표시는 표시할 텍스트를 포함 하는&0;로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤의 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706) 에 [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)합니다.  
+ Pointer to a zero-terminated string that contains the marked up text to display. For more information, see the section "Markup and Link Access" in the topic [Overview of SysLink Controls](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
   
  `dwExStyle`  
- 링크 컨트롤의 확장된 스타일을 지정합니다. 확장된 창 스타일의 목록에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the link control. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 링크 컨트롤의 스타일을 지정합니다. 모든 조합의 컨트롤 스타일을 적용 합니다. 자세한 내용은 참조 [일반적인 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the link control's style. Apply any combination of control styles. For more information, see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK.  
   
  `rect`  
- 링크 컨트롤의 크기와 위치를 지정합니다. 수 중 하나는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
+ Specifies the link control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 링크 컨트롤의 부모 창을 지정합니다. 않아야 `NULL`합니다.  
+ Specifies the link control's parent window. It must not be `NULL`.  
   
  `nID`  
- 링크 컨트롤의 ID를 지정 합니다.  
+ Specifies the link control's ID.  
   
-### <a name="return-value"></a>반환 값  
- `true`초기화에 성공 하면 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if initialization was successful; otherwise `false`.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) 확장된 Windows 스타일 상수를 적용 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows style constants.  
   
- 두 번째 형태는 `CreateEx` 메서드는 사용 되지 않습니다. 지정 하는 첫 번째 폼을 사용 하 여는 `lpszLinkMarkup` 매개 변수입니다.  
+ The second form of the `CreateEx` method is deprecated. Use the first form that specifies the `lpszLinkMarkup` parameter.  
   
-##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
- 링크 컨트롤의 이상적인 높이 검색합니다.  
+##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
+ Retrieves the ideal height of the link control.  
   
 ```  
 int GetIdealHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 픽셀 단위의 컨트롤의 이상적인 높이입니다.  
+### <a name="return-value"></a>Return Value  
+ The ideal height of the control, in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), as described in the Windows SDK.  
   
-##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
- 링크의 지정된 된 너비에 따라 현재 링크 컨트롤에 대 한 링크 텍스트의 기본 설정된 높이 계산합니다.  
+##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
+ Calculates the preferred height of the link text for the current link control, depending on the specified width of the link.  
   
 ```  
 int GetIdealSize(
@@ -241,40 +250,40 @@ int GetIdealSize(
     SIZE* pSize) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|픽셀 단위로 링크의 최대 너비입니다.|  
-|[out] *`pSize`|Windows에 대 한 포인터 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조입니다. 이 메서드가 반환 하는 경우는 `cy` 의 멤버는 `SIZE` 구조에 의해 지정 된 링크 텍스트 너비에 대 한 이상적인 링크 텍스트 높이 `cxMaxWidth`합니다. `cx` 구조체의 멤버에 실제로 필요한 링크 텍스트 너비를 포함 합니다.|  
+|[in] `cxMaxWidth`|The maximum width of the link, in pixels.|  
+|[out] * `pSize`|A pointer to a Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. When this method returns, the `cy` member of the `SIZE` structure contains the ideal link text height for the link text width that is specified by `cxMaxWidth`. The `cx` member of the structure contains the link text width that is actually needed.|  
   
-### <a name="return-value"></a>반환 값  
- 링크 텍스트 (픽셀)에서의 기본 설정된 높이입니다. 값과 같으면 반환 값은는 `cy` 의 멤버는 `SIZE` 구조입니다.  
+### <a name="return-value"></a>Return Value  
+ The preferred height of the link text, in pixels. The return value is the same as the value of the `cy` member of the `SIZE` structure.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 예제는 `GetIdealSize` 메서드 예제를 참조 하십시오 [CLinkCtrl::Create](#create)합니다.  
+### <a name="remarks"></a>Remarks  
+ For an example of the `GetIdealSize` method, see the example in [CLinkCtrl::Create](#create).  
   
- 이 메서드는 전송 된 [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ This method sends the [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) message, which is described in the Windows SDK.  
   
-##  <a name="getitem"></a>CLinkCtrl::GetItem  
- 상태 및 링크 컨트롤 항목의 특성을 검색합니다.  
+##  <a name="getitem"></a>  CLinkCtrl::GetItem  
+ Retrieves the states and attributes of a link control item.  
   
 ```  
 BOOL GetItem(PLITEM pItem) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 에 대 한 포인터는 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) 구조 항목 정보를 받을 수 있습니다.  
+ A pointer to a [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure to receive item information.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), as described in the Windows SDK.  
   
-##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
- 링크 컨트롤 항목의 ID를 검색합니다.  
+##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
+ Retrieves the ID of a link control item.  
   
 ```  
 BOOL GetItemID(
@@ -287,30 +296,30 @@ BOOL GetItemID(
     UINT cchID) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  *strID*  
- A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 지정된 된 항목의 ID를 포함 하는 개체입니다.  
+ A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) object containing the ID of the specified item.  
   
  *szID*  
- 지정된 된 항목의 ID가 포함 된 null로 끝나는 문자열입니다.  
+ A null-terminated string containing the ID of the specified item.  
   
  *cchID*  
- 크기의 문자는 *szID* 버퍼입니다.  
+ The size in characters of the *szID* buffer.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
 > [!NOTE]
->  또한이 함수는 반환 **FALSE** 경우의 버퍼 *szID 또는 strID* 보다 작으면 **MAX_LINKID_TEXT**합니다.  
+>  This function also returns **FALSE** if the buffer of *szID or strID* is smaller than **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>주의  
- 특정 링크 컨트롤 항목의 ID를 검색합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Retrieves the ID of a specific link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
- 링크 컨트롤 항목의 상태를 검색합니다.  
+##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
+ Retrieves the state of the link control item.  
   
 ```  
 BOOL GetItemState(
@@ -319,24 +328,24 @@ BOOL GetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  `pnState`  
- 지정 된 상태 항목의 값입니다.  
+ The value of the specified state item.  
   
  `stateMask`  
- 가져올 어떤 상태 항목을 설명 하는 플래그의 조합입니다. 값의 목록에 대 한 설명을 참조는 **상태** 멤버에는 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) 구조입니다. 허용 가능한 항목은에서 허용 하는 것과 동일 **상태**합니다.  
+ Combination of flags describing which state item to get. For a list of values, see the description of the **state** member in the [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Allowable items are identical to those allowed in **state**.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 특정 링크 컨트롤 항목의 지정 된 상태 항목의 값을 검색합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Retrieves the value of the specified state item of a specific link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
- 링크 컨트롤 항목으로 표현 하는 URL을 검색 합니다.  
+##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
+ Retrieves the URL represented by the link control item.  
   
 ```  
 BOOL GetItemUrl(
@@ -349,64 +358,64 @@ BOOL GetItemUrl(
     UINT cchUrl) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  `strUrl`  
- A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 지정된 된 항목을 나타내는 URL이 포함 된 개체  
+ A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) object containing the URL represented by the specified item  
   
  `szUrl`  
- 지정된 된 항목으로 표시 하는 URL을 포함 하는 null로 끝나는 문자열  
+ A null-terminated string containing the URL represented by the specified item  
   
  *cchUrl*  
- 크기의 문자는 *szURL* 버퍼입니다.  
+ The size in characters of the *szURL* buffer.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
 > [!NOTE]
->  또한이 함수는 반환 **FALSE** 경우의 버퍼 *szUrl 또는 strUrl* 보다 작으면 **MAX_LINKID_TEXT**합니다.  
+>  This function also returns **FALSE** if the buffer of *szUrl or strUrl* is smaller than **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>주의  
- 지정 된 링크 컨트롤 항목으로 표현 하는 URL을 검색 합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Retrieves the URL represented by the specified link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="hittest"></a>CLinkCtrl::HitTest  
- 사용자가 지정된 된 링크를 클릭 하는 경우를 결정 합니다.  
+##  <a name="hittest"></a>  CLinkCtrl::HitTest  
+ Determines if the user clicked the specified link.  
   
 ```  
 BOOL HitTest(PLHITTESTINFO phti) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *phti*  
- 에 대 한 포인터는 **LHITTESTINFO** 링크에 대 한 사용자가 클릭 한 모든 정보가 포함 된 구조입니다.  
+ Pointer to a **LHITTESTINFO** structure containing any information about the link the user clicked.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), as described in the Windows SDK.  
   
-##  <a name="setitem"></a>CLinkCtrl::SetItem  
- 상태를 설정 하는 링크 컨트롤 항목의 특성입니다.  
+##  <a name="setitem"></a>  CLinkCtrl::SetItem  
+ Sets the states and attributes of a link control item.  
   
 ```  
 BOOL SetItem(PLITEM pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 에 대 한 포인터는 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) 설정 하는 정보가 포함 된 구조입니다.  
+ A pointer to a [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure containing the information to set.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), as described in the Windows SDK.  
   
-##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
- 링크 컨트롤 항목의 ID를 검색합니다.  
+##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
+ Retrieves the ID of a link control item.  
   
 ```  
 BOOL SetItemID(
@@ -414,21 +423,21 @@ BOOL SetItemID(
     LPCWSTR szID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  *szID*  
- 지정된 된 항목의 ID가 포함 된 null로 끝나는 문자열입니다.  
+ A null-terminated string containing the ID of the specified item.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 특정 링크 컨트롤 항목의 ID를 설정 합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Sets the ID of a specific link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
- 링크 컨트롤 항목의 상태를 검색합니다.  
+##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
+ Retrieves the state of the link control item.  
   
 ```  
 BOOL SetItemState(
@@ -437,24 +446,24 @@ BOOL SetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  `pnState`  
- 설정 되 고 지정 된 상태 항목의 값입니다.  
+ The value of the specified state item being set.  
   
  `stateMask`  
- 설정 중인 상태 항목을 설명 하는 플래그의 조합입니다. 값의 목록에 대 한 설명을 참조는 **상태** 멤버에는 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) 구조입니다. 허용 가능한 항목은에서 허용 하는 것과 동일 **상태**합니다.  
+ Combination of flags describing the state item being set. For a list of values, see the description of the **state** member in the [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Allowable items are identical to those allowed in **state**.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 특정 링크 컨트롤 항목의 지정 된 상태 항목의 값을 설정합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Sets the value of the specified state item of a specific link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
- 링크 컨트롤 항목으로 나타내는 URL을 설정 합니다.  
+##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
+ Sets the URL represented by the link control item.  
   
 ```  
 BOOL SetItemUrl(
@@ -462,20 +471,20 @@ BOOL SetItemUrl(
     LPCWSTR szUrl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 링크 컨트롤 항목의 인덱스입니다.  
+ The index of a link control item.  
   
  `szUrl`  
- 지정된 된 항목으로 표시 하는 URL을 포함 하는 null로 끝나는 문자열  
+ A null-terminated string containing the URL represented by the specified item  
   
-### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 성공 **FALSE** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>주의  
- 지정 된 링크 컨트롤 항목으로 나타내는 URL을 설정 합니다. 자세한 내용은 Win32 메시지를 참조 하십시오. [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ Sets the URL represented by the specified link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)
 

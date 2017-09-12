@@ -1,30 +1,47 @@
 ---
-title: "명령 라우팅 설명 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "명령 처리, 명령 라우팅"
-  - "명령 라우팅, OnCmdMsg 처리기"
-  - "MFC, 명령 라우팅"
+title: Command Routing Illustration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 명령 라우팅 설명
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17f5b5930936f1c7839b5f435eafbeae611d39fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-To illustrate, consider a command message from a Clear All menu item in an MDI application's Edit menu.  Suppose the handler function for this command happens to be a member function of the application's document class.  Here's how that command reaches its handler after the user chooses the menu item:  
+---
+# <a name="command-routing-illustration"></a>Command Routing Illustration
+To illustrate, consider a command message from a Clear All menu item in an MDI application's Edit menu. Suppose the handler function for this command happens to be a member function of the application's document class. Here's how that command reaches its handler after the user chooses the menu item:  
   
 1.  The main frame window receives the command message first.  
   
@@ -34,9 +51,11 @@ To illustrate, consider a command message from a Clear All menu item in an MDI a
   
 4.  The view checks its own message map first and, finding no handler, next routes the command to its associated document.  
   
-5.  The document checks its message map and finds a handler.  This document member function is called and the routing stops.  
+5.  The document checks its message map and finds a handler. This document member function is called and the routing stops.  
   
- If the document did not have a handler, it would next route the command to its document template.  Then the command would return to the view and then the frame window.  Finally, the frame window would check its message map.  If that check failed as well, the command would be routed back to the main MDI frame window and then to the application object — the ultimate destination of unhandled commands.  
+ If the document did not have a handler, it would next route the command to its document template. Then the command would return to the view and then the frame window. Finally, the frame window would check its message map. If that check failed as well, the command would be routed back to the main MDI frame window and then to the application object — the ultimate destination of unhandled commands.  
   
-## 참고 항목  
- [프레임워크가 처리기를 호출하는 방법](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

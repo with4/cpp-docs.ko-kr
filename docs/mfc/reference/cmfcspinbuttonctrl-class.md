@@ -1,5 +1,5 @@
 ---
-title: "CMFCSpinButtonCtrl 클래스 | Microsoft 문서"
+title: CMFCSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCSpinButtonCtrl class
+- CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 caps.latest.revision: 25
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c1832062461f2ed53df07a72428089179ed493ab
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11b76a4a73bb505182a3c380566dd9b392617f08
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 클래스
-`CMFCSpinButtonCtrl` 클래스 스핀 단추 컨트롤을 그리는 비주얼 관리자를 지원 합니다.  
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl Class
+The `CMFCSpinButtonCtrl` class supports a visual manager that draws a spin button control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|기본 생성자입니다.|  
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|소멸자|  
+|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Default constructor.|  
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|현재 스핀 단추 컨트롤을 다시 그립니다.|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Repaints the current spin button control.|  
   
-## <a name="remarks"></a>주의  
- 응용 프로그램에서 스핀 단추 컨트롤을 그리는 비주얼 관리자를 사용 하려면의 모든 인스턴스를 대체는 `CSpinButtonCtrl` 클래스는 `CMFCSpinButtonCtrl` 클래스입니다.  
+## <a name="remarks"></a>Remarks  
+ To use a visual manager to draw a spin button control in your application, replace all instances of the `CSpinButtonCtrl` class with the `CMFCSpinButtonCtrl` class.  
   
-## <a name="example"></a>예제  
- 다음 예제에는 개체를 만드는 방법을 보여 줍니다는 `CMFCSpinButtonCtrl` 클래스 및 사용 하 여 해당 `Create` 메서드.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create an object of the `CMFCSpinButtonCtrl` class and use its `Create` method.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&25;](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -85,25 +85,25 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
  [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxspinbuttonctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
- 현재 스핀 단추 컨트롤을 다시 그립니다.  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
+ Repaints the current spin button control.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 호출의 `CMFCSpinButtonCtrl::OnPaint` 메서드를 처리 하는 [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) 메시지 및 메서드를 차례로 호출 하는이 `CMFCSpinButtonCtrl::OnDraw` 메서드. 프레임 워크 스핀 단추 컨트롤을 그리는 방법을 사용자 지정 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls the `CMFCSpinButtonCtrl::OnPaint` method to handle the [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message, and that method in turn calls this `CMFCSpinButtonCtrl::OnDraw` method. Override this method to customize the way the framework draws the spin button control.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
 

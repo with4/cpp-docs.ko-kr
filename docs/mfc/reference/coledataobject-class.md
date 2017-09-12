@@ -1,5 +1,5 @@
 ---
-title: "COleDataObject 클래스 | Microsoft 문서"
+title: COleDataObject Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,18 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag and drop [C++], MFC support
-- Clipboard [C++], OLE support
-- uniform data transfer
-- OLE [C++], uniform data transfer
-- Clipboard [C++], MFC support
-- OLE Clipboard [C++], support
-- IDataObject interface, MFC encapsulation
-- data transfer [C++]
-- data transfer [C++], OLE
-- OLE data transfer [C++]
-- COleDataObject class
-- uniform data transfer, OLE
+- COleDataObject [MFC], COleDataObject
+- COleDataObject [MFC], Attach
+- COleDataObject [MFC], AttachClipboard
+- COleDataObject [MFC], BeginEnumFormats
+- COleDataObject [MFC], Detach
+- COleDataObject [MFC], GetData
+- COleDataObject [MFC], GetFileData
+- COleDataObject [MFC], GetGlobalData
+- COleDataObject [MFC], GetNextFormat
+- COleDataObject [MFC], IsDataAvailable
+- COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 caps.latest.revision: 20
 author: mikeblome
@@ -56,64 +55,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f30ca208252fe81f1e47d9e8f817cb9137656540
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f27818432b8c28445d344e6e92f853882b1f3b08
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledataobject-class"></a>COleDataObject 클래스
-끌어 놓기를 통해 클립보드에서 또는 포함된 OLE 항목에서 다양한 형식의 데이터를 검색하기 위해 데이터를 전송하는 데 사용됩니다.  
+# <a name="coledataobject-class"></a>COleDataObject Class
+Used in data transfers for retrieving data in various formats from the Clipboard, through drag and drop, or from an embedded OLE item.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDataObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataObject::COleDataObject](#coledataobject)|`COleDataObject` 개체를 생성합니다.|  
+|[COleDataObject::COleDataObject](#coledataobject)|Constructs a `COleDataObject` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataObject::Attach](#attach)|지정 된 OLE 데이터 개체에 연결 된 `COleDataObject`합니다.|  
-|[COleDataObject::AttachClipboard](#attachclipboard)|클립보드에 저장 되는 데이터 개체에 연결 합니다.|  
-|[COleDataObject::BeginEnumFormats](#beginenumformats)|하나에 대 한 볼륨이 나 더 후속 준비 `GetNextFormat` 호출 합니다.|  
-|[COleDataObject::Detach](#detach)|연결 된 분리 `IDataObject` 개체입니다.|  
-|[COleDataObject::GetData](#getdata)|지정된 된 형식에 연결 된 OLE 데이터 개체에서 데이터를 복사 합니다.|  
-|[COleDataObject::GetFileData](#getfiledata)|에 연결된 된 OLE 데이터 개체에서 데이터를 복사는 `CFile` 지정 된 형식의 포인터입니다.|  
-|[COleDataObject::GetGlobalData](#getglobaldata)|에 연결된 된 OLE 데이터 개체에서 데이터를 복사는 `HGLOBAL` 지정 된 형식에서입니다.|  
-|[COleDataObject::GetNextFormat](#getnextformat)|사용 가능한 다음 데이터 형식을 반환합니다.|  
-|[COleDataObject::IsDataAvailable](#isdataavailable)|데이터를 지정된 된 형식에서 사용할 수 있는지 여부를 확인 합니다.|  
-|[COleDataObject::Release](#release)|분리 및 연결 된 해제 `IDataObject` 개체입니다.|  
+|[COleDataObject::Attach](#attach)|Attaches the specified OLE data object to the `COleDataObject`.|  
+|[COleDataObject::AttachClipboard](#attachclipboard)|Attaches the data object that is on the Clipboard.|  
+|[COleDataObject::BeginEnumFormats](#beginenumformats)|Prepares for one or more subsequent `GetNextFormat` calls.|  
+|[COleDataObject::Detach](#detach)|Detaches the associated `IDataObject` object.|  
+|[COleDataObject::GetData](#getdata)|Copies data from the attached OLE data object in a specified format.|  
+|[COleDataObject::GetFileData](#getfiledata)|Copies data from the attached OLE data object into a `CFile` pointer in the specified format.|  
+|[COleDataObject::GetGlobalData](#getglobaldata)|Copies data from the attached OLE data object into an `HGLOBAL` in the specified format.|  
+|[COleDataObject::GetNextFormat](#getnextformat)|Returns the next data format available.|  
+|[COleDataObject::IsDataAvailable](#isdataavailable)|Checks whether data is available in a specified format.|  
+|[COleDataObject::Release](#release)|Detaches and releases the associated `IDataObject` object.|  
   
-## <a name="remarks"></a>주의  
- `COleDataObject`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `COleDataObject` does not have a base class.  
   
- 이러한 종류의 데이터 전송 원본과 대상에 포함 합니다. 데이터 소스 개체로 구현 되는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 클래스입니다. 때마다 대상 응용 프로그램 데이터를 삭제 했거나 개체 클립보드에서 붙여넣기 작업을 수행 하 라는 메시지가 표시 되는 `COleDataObject` 클래스를 만들어야 합니다.  
+ These kinds of data transfers include a source and a destination. The data source is implemented as an object of the [COleDataSource](../../mfc/reference/coledatasource-class.md) class. Whenever a destination application has data dropped in it or is asked to perform a paste operation from the Clipboard, an object of the `COleDataObject` class must be created.  
   
- 이 클래스를 사용 하면 데이터가 지정된 된 형식에 있는지 여부를 확인할 수 있습니다. 또한 사용 가능한 데이터 형식 열거 또는 지정 된 형식을 사용할 수 있는지 확인을 기본 설정된 된 형식에서 데이터를 검색 합니다. 사용을 포함 하는 여러 가지 방법으로, 개체 검색을 수행할 수 있습니다는 [CFile](../../mfc/reference/cfile-class.md), `HGLOBAL`, 또는 **STGMEDIUM** 구조입니다.  
+ This class enables you to determine whether the data exists in a specified format. You can also enumerate the available data formats or check whether a given format is available and then retrieve the data in the preferred format. Object retrieval can be accomplished in several different ways, including the use of a [CFile](../../mfc/reference/cfile-class.md), an `HGLOBAL`, or an **STGMEDIUM** structure.  
   
- 자세한 내용은 참조는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in the Windows SDK.  
   
- 응용 프로그램에서 데이터 개체를 사용 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [데이터 개체 및 데이터 소스 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)합니다.  
+ For more information about using data objects in your application, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `COleDataObject`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
- 연결 하려면이 함수를 호출 하는 `COleDataObject` 개체는 OLE 데이터 개체를 사용 합니다.  
+##  <a name="attach"></a>  COleDataObject::Attach  
+ Call this function to associate the `COleDataObject` object with an OLE data object.  
   
 ```  
 void Attach(
@@ -121,72 +120,72 @@ void Attach(
     BOOL bAutoRelease = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpDataObject*  
- OLE 데이터 개체를 가리킵니다.  
+ Points to an OLE data object.  
   
  `bAutoRelease`  
- **True 이면** OLE 데이터 개체 해야 하면 면이 해제는 `COleDataObject` 개체가 소멸 되 고, 그렇지 않으면 **FALSE**합니다.  
+ **TRUE** if the OLE data object should be released when the `COleDataObject` object is destroyed; otherwise **FALSE**.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) in the Windows SDK.  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
- 클립보드에 현재 있는 데이터 개체를 연결 하려면이 함수를 호출 하 여 `COleDataObject` 개체입니다.  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
+ Call this function to attach the data object that is currently on the Clipboard to the `COleDataObject` object.  
   
 ```  
 BOOL AttachClipboard();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  이 데이터 개체가 해제 될 때까지 클립보드를 잠급니다이 함수를 호출 합니다. 데이터 개체에 대 한 소멸자에서 해제 되 고 `COleDataObject`합니다. 자세한 내용은 참조 [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) 및 [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 설명서의 합니다.  
+>  Calling this function locks the Clipboard until this data object is released. The data object is released in the destructor for the `COleDataObject`. For more information, see [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) and [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) in the Win32 documention.  
   
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
- 이 함수에 대 한 후속 호출에 대 한 준비를 호출 `GetNextFormat` 항목에서 데이터 형식의 목록을 검색 합니다.  
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
+ Call this function to prepare for subsequent calls to `GetNextFormat` for retrieving a list of data formats from the item.  
   
 ```  
 void BeginEnumFormats();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출한 후 `BeginEnumFormats`,이 데이터 개체에서 지원 되는 첫 번째 형식의 위치에 저장 됩니다. 연속적으로 호출 `GetNextFormat` 데이터 개체에 사용할 수 있는 형식의 목록을 열거 합니다.  
+### <a name="remarks"></a>Remarks  
+ After a call to `BeginEnumFormats`, the position of the first format supported by this data object is stored. Successive calls to `GetNextFormat` will enumerate the list of available formats in the data object.  
   
- 사용 하 여 지정된 된 형식으로 데이터의 가용성을 확인 하려면 [COleDataObject::IsDataAvailable](#isdataavailable)합니다.  
+ To check on the availability of data in a given format, use [COleDataObject::IsDataAvailable](#isdataavailable).  
   
- 자세한 내용은 참조 [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) in the Windows SDK.  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
- `COleDataObject` 개체를 생성합니다.  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
+ Constructs a `COleDataObject` object.  
   
 ```  
 COleDataObject();
 ```  
   
-### <a name="remarks"></a>주의  
- 에 대 한 호출 [COleDataObject::Attach](#attach) 또는 [COleDataObject::AttachClipboard](#attachclipboard) 다른를 호출 하기 전에 만들어야 `COleDataObject` 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ A call to [COleDataObject::Attach](#attach) or [COleDataObject::AttachClipboard](#attachclipboard) must be made before calling other `COleDataObject` functions.  
   
 > [!NOTE]
->  에 대 한 포인터를 끌어서 놓기 처리기 매개 변수 중 하나 이므로 `COleDataObject`, 끌어서 놓기 지원 하기 위해이 생성자를 호출할 필요가 없습니다.  
+>  Since one of the parameters to the drag-and-drop handlers is a pointer to a `COleDataObject`, there is no need to call this constructor to support drag and drop.  
   
-##  <a name="detach"></a>COleDataObject::Detach  
- 이 함수를 분리를 호출 하는 `COleDataObject` 데이터 개체를 해제 하지 않고 연결된 된 OLE 데이터 개체에서 개체입니다.  
+##  <a name="detach"></a>  COleDataObject::Detach  
+ Call this function to detach the `COleDataObject` object from its associated OLE data object without releasing the data object.  
   
 ```  
 LPDATAOBJECT Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 분리 된 OLE 데이터 개체에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the OLE data object that was detached.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
- 지정 된 형식의 항목에서 데이터를 검색 하려면이 함수를 호출 합니다.  
+##  <a name="getdata"></a>  COleDataObject::GetData  
+ Call this function to retrieve data from the item in the specified format.  
   
 ```  
 BOOL GetData(
@@ -195,26 +194,26 @@ BOOL GetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터 반환 되는 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpStgMedium`  
- 가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 데이터를 받을 구조입니다.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure that will receive data.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정 된 클립보드 형식 이외의 추가 형식 정보를 지정 하려는 경우이 매개 변수 값을 제공 `cfFormat`합니다. 있으면 **NULL**, 다른 필드에 대 한 기본 값이 사용 되는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
- 만들려면이 함수를 호출 하는 `CFile` 또는 `CFile`-파생 개체에 지정 된 형식의 데이터를 검색 하 고는 `CFile` 포인터입니다.  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
+ Call this function to create a `CFile` or `CFile`-derived object and to retrieve data in the specified format into a `CFile` pointer.  
   
 ```  
 CFile* GetFileData(
@@ -222,28 +221,28 @@ CFile* GetFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터 반환 되는 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정 된 클립보드 형식 이외의 추가 형식 정보를 지정 하려는 경우이 매개 변수 값을 제공 `cfFormat`합니다. 있으면 **NULL**, 다른 필드에 대 한 기본 값이 사용 되는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>반환 값  
- 새 포인터 `CFile` 또는 `CFile`-성공적이 고 그렇지 않으면 데이터를 포함 하는 파생 된 개체 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the new `CFile` or `CFile`-derived object containing the data if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 데이터에 저장 된 미디어를 따라 반환 값은가 가리키는 실제 형식이 될 수 있습니다 `CFile`, `CSharedFile`, 또는 `COleStreamFile`합니다.  
+### <a name="remarks"></a>Remarks  
+ Depending on the medium the data is stored in, the actual type pointed to by the return value may be `CFile`, `CSharedFile`, or `COleStreamFile`.  
   
 > [!NOTE]
->  `CFile` 이 함수의 반환 값으로 액세스 하는 개체를 호출자가 소유 합니다. 것은 호출자의 책임 **삭제** 는 `CFile` 있으므로 파일을 닫는 개체입니다.  
+>  The `CFile` object accessed by the return value of this function is owned by the caller. It is the responsibility of the caller to **delete** the `CFile` object, thereby closing the file.  
   
- 자세한 내용은 참조 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
- 전역 메모리 블록을 할당 하 고에 지정 된 형식의 데이터를 검색 하려면이 함수를 호출 하는 `HGLOBAL`합니다.  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
+ Call this function to allocate a global memory block and to retrieve data in the specified format into an `HGLOBAL`.  
   
 ```  
 HGLOBAL GetGlobalData(
@@ -251,44 +250,44 @@ HGLOBAL GetGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 데이터 반환 되는 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정 된 클립보드 형식 이외의 추가 형식 정보를 지정 하려는 경우이 매개 변수 값을 제공 `cfFormat`합니다. 있으면 **NULL**, 다른 필드에 대 한 기본 값이 사용 되는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 데이터를 포함 하는 전역 메모리 블록의 핸들 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ The handle of the global memory block containing the data if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
- 반복 해 서 항목에서 데이터 검색에 사용할 수 있는 모든 형식을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
+ Call this function repeatedly to obtain all the formats available for retrieving data from the item.  
   
 ```  
 BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 함수 호출에서 반환 된 형식 정보를 수신 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure that receives the format information when the function call returns.  
   
-### <a name="return-value"></a>반환 값  
- 다른 경우에 0이 아닌 형식은 사용할 수 있습니다. 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if another format is available; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 호출한 후 [COleDataObject::BeginEnumFormats](#beginenumformats),이 데이터 개체에서 지원 되는 첫 번째 형식의 위치에 저장 됩니다. 연속적으로 호출 `GetNextFormat` 데이터 개체에 사용할 수 있는 형식의 목록을 열거 합니다. 이러한 함수를 사용 하 여 사용 가능한 형식 목록입니다.  
+### <a name="remarks"></a>Remarks  
+ After a call to [COleDataObject::BeginEnumFormats](#beginenumformats), the position of the first format supported by this data object is stored. Successive calls to `GetNextFormat` will enumerate the list of available formats in the data object. Use these functions to list the available formats.  
   
- 지정 된 형식의 가용성을 확인 하려면 호출 [COleDataObject::IsDataAvailable](#isdataavailable)합니다.  
+ To check for the availability of a given format, call [COleDataObject::IsDataAvailable](#isdataavailable).  
   
- 자세한 내용은 참조 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) in the Windows SDK.  
   
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
- OLE 항목에서 데이터 검색에 사용할 수 있는 특정 형식 인지 확인 하려면이 함수를 호출 합니다.  
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
+ Call this function to determine if a particular format is available for retrieving data from the OLE item.  
   
 ```  
 BOOL IsDataAvailable(
@@ -296,41 +295,41 @@ BOOL IsDataAvailable(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 구조에 사용할 클립보드 데이터 형식에서 가리키는 `lpFormatEtc`합니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ The Clipboard data format to be used in the structure pointed to by `lpFormatEtc`. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 원하는 형식을 설명 하는 구조입니다. 지정 된 클립보드 형식 이외의 추가 형식 정보를 지정 하려는 경우에이 매개 변수 값을 제공 `cfFormat`합니다. 있으면 **NULL**, 다른 필드에 대 한 기본 값이 사용 되는 **FORMATETC** 구조입니다.  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format desired. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>반환 값  
- 데이터가 지정된 된 형식에서 사용할 수 있는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if data is available in the specified format; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 호출 하기 전에 유용 `GetData`, `GetFileData`, 또는 `GetGlobalData`합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is useful before calling `GetData`, `GetFileData`, or `GetGlobalData`.  
   
- 자세한 내용은 참조 [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
- 자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="release"></a>COleDataObject::Release  
- 소유권을 해제 하려면이 함수를 호출 하는 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 이전에 연결 된 개체는 `COleDataObject` 개체입니다.  
+##  <a name="release"></a>  COleDataObject::Release  
+ Call this function to release ownership of the [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) object that was previously associated with the `COleDataObject` object.  
   
 ```  
 void Release();
 ```  
   
-### <a name="remarks"></a>주의  
- `IDataObject` 와 연결 된는 `COleDataObject` 를 호출 하 여 **연결** 또는 `AttachClipboard` 프레임 워크에 의해 명시적으로 또는 합니다. 하는 경우는 `bAutoRelease` 의 매개 변수 **연결** 는 **FALSE**, `IDataObject` 개체 해제 되지 것입니다. 이 경우 호출자는 해제 하는 데는 `IDataObject` 를 호출 하 여 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)합니다.  
+### <a name="remarks"></a>Remarks  
+ The `IDataObject` was associated with the `COleDataObject` by calling **Attach** or `AttachClipboard` explicitly or by the framework. If the `bAutoRelease` parameter of **Attach** is **FALSE**, the `IDataObject` object will not be released. In this case, the caller is responsible for releasing the `IDataObject` by calling [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDataSource 클래스](../../mfc/reference/coledatasource-class.md)   
- [활성화 클래스](../../mfc/reference/coleclientitem-class.md)   
- [COleServerItem 클래스](../../mfc/reference/coleserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDataSource Class](../../mfc/reference/coledatasource-class.md)   
+ [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
 

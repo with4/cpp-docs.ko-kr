@@ -1,5 +1,5 @@
 ---
-title: "COleDBRecordView 클래스 | Microsoft Docs"
+title: COleDBRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC, OLE DB
-- COleDBRecordView class
+- COleDBRecordView [MFC], COleDBRecordView
+- COleDBRecordView [MFC], OnGetRowset
+- COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
 caps.latest.revision: 20
 author: mikeblome
@@ -38,50 +39,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4c4bfa973b7ff7fb2b93e5fcc60cf18325986a8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView 클래스
-컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  
+# <a name="coledbrecordview-class"></a>COleDBRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDBRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|`COleDBRecordView` 개체를 생성합니다.|  
+|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Constructs a `COleDBRecordView` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|표준 반환 `HRESULT` 값입니다.|  
-|[COleDBRecordView::OnMove](#onmove)|데이터 원본에 대해 (dirty) 경우 현재 레코드를 업데이트 하 고 다음 지정된 된 레코드를 이동 합니다 (다음, 이전, 첫 번째 또는 마지막).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Returns a standard `HRESULT` value.|  
+|[COleDBRecordView::OnMove](#onmove)|Updates the current record (if dirty) on the data source and then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>주의  
- 뷰는에 직접 연결 하는 폼 보기는 `CRowset` 개체입니다. 뷰는 대화 상자 템플릿 리소스에서 만들어지고 필드가 표시 됩니다는 `CRowset` 대화 상자 템플릿에 컨트롤에는 개체입니다. `COleDBRecordView` 대화 상자 데이터 교환 (DDX)을 사용 하 여 개체 및 탐색 기능에 기본 제공 `CRowset`, 폼에 컨트롤 및 행 집합의 필드 간의 데이터 이동을 자동화할 수 있습니다. `COleDBRecordView`또한 이동 하는 기본 구현을 제공 하면 첫 번째 다음, 이전 또는 마지막 레코드 및 보기에 현재 레코드를 업데이트 하기 위한 인터페이스입니다.  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CRowset` object. The view is created from a dialog template resource and displays the fields of the `CRowset` object in the dialog template's controls. The `COleDBRecordView` object uses dialog data exchange (DDX), and the navigational functionality built into `CRowset`, to automate the movement of data between the controls on the form and the fields of the rowset. `COleDBRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently on view.  
   
- DDX 함수를 사용할 수 있습니다 **COleDbRecordView** 데이터베이스 레코드 집합에서 직접 데이터를 가져오고 대화 상자 컨트롤에 표시를 합니다. 사용 해야는 **DDX_\*** 메서드 (같은 `DDX_Text`)이 아니라는 **DDX_Field\* ** 함수 (같은 `DDX_FieldText`)와 **COleDbRecordView**합니다. `DDX_FieldText`작동 하지 것입니다 **COleDbRecordView** 때문에 `DDX_FieldText` 형식의 추가 인수를 사용 **CRecordset\*** (에 대 한 `CRecordView`) 또는 **CDaoRecordset\* ** (에 대 한 `CDaoRecordView`).  
+ You can use DDX functions with **COleDbRecordView** to get data directly from the database recordset and display it in a dialog control. You should use the **DDX_\*** methods (such as `DDX_Text`), not the **DDX_Field\*** functions (such as `DDX_FieldText`) with **COleDbRecordView**. `DDX_FieldText` will not work with **COleDbRecordView** because `DDX_FieldText` takes an additional argument of type **CRecordset\*** (for `CRecordView`) or **CDaoRecordset\*** (for `CDaoRecordView`).  
   
 > [!NOTE]
->  클래스를 사용 하 여 OLE DB 소비자 템플릿 클래스 아닌 개체 DAO (Data Access) 클래스와 함께 작업 하는 경우 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 대신 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
+>  If you are working with the Data Access Objects (DAO) classes rather than the OLE DB Consumer Template classes, use class [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`레코드 뷰 사용자 인터페이스를 업데이트할 수 있도록 행 집합에서 사용자의 위치는 추적 합니다. 레코드 뷰 사용자 인터페이스 개체는 사용자가 행 집합의 한쪽 끝을 이동 하는 경우 비활성화-예: 메뉴 항목 또는 도구 모음 단추-이동 하기 위한 같은 방향으로 추가 합니다.  
+ `COleDBRecordView` keeps track of the user's position in the rowset so that the record view can update the user interface. When the user moves to either end of the rowset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- 행 집합 클래스에 대 한 자세한 내용은 참조는 [를 사용 하 여 OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md) 문서.  
+ For more information about rowset classes, see the [Using OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md) article.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -96,85 +97,85 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxoledb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
- `COleDBRecordView` 개체를 생성합니다.  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
+ Constructs a `COleDBRecordView` object.  
   
 ```  
 COleDBRecordView(LPCTSTR lpszTemplateName);  
 COleDBRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
+ Contains a null-terminated string that is the name of a dialog-template resource.  
   
  `nIDTemplate`  
- 대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
+ Contains the ID number of a dialog-template resource.  
   
-### <a name="remarks"></a>주의  
- 파생 된 형식의 개체를 만들 때 `COleDBRecordView`, view 개체를 만들고 보기의 기반이 되는 대화 상자 리소스를 식별 하는 생성자 중 하나를 호출 합니다. (생성자에 인수로 문자열 전달) 이름 또는 ID (부호 없는 정수를 인수로 전달)가 리소스를 식별할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ When you create an object of a type derived from `COleDBRecordView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
   
 > [!NOTE]
->  파생 된 클래스 *해야* 자체 생성자를 제공 합니다. 생성자에서 생성자를 호출 `COleDBRecordView::COleDBRecordView`, 리소스 이름 또는 ID를 인수로 사용 합니다.  
+>  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `COleDBRecordView::COleDBRecordView`, with the resource name or ID as an argument.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
- 에 대 한 핸들을 반환 하는 **CRowset<> </>** 레코드 보기와 연결 된 개체입니다.  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
+ Returns a handle for the **CRowset<>** object associated with the record view.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="remarks"></a>주의  
- 생성 또는 행 집합 개체를 가져오고,에 대 한 핸들을 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 행 집합 핸들을 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 행 집합 개체를 생성 그렇지 않은 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 핸들을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a rowset object and return a handle to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the rowset handle stored in the record view if one exists. If not, it constructs a rowset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a handle to the object.  
   
 > [!NOTE]
->  MFC 7.0 이전의 `OnGetRowset` 에 대 한 포인터를 반환 `CRowset`합니다. 호출 하는 코드가 있는 경우 `OnGetRowset`, 템플릿 화 클래스에 반환 형식을 변경 해야 할 **CRowset<>**합니다.  
+>  Previous to MFC 7.0, `OnGetRowset` returned a pointer to `CRowset`. If you have code that calls `OnGetRowset`, you need to change the return type to the templatized class **CRowset<>**.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- 자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
- 해당 필드가 레코드의 컨트롤의 보기를 표시 고 행 집합에서 다른 레코드로 이동 합니다.  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
+ Moves to a different record in the rowset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- 표준 명령 ID 값이 다음 중 하나입니다.  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`-레코드 집합의 첫 번째 레코드로 이동 합니다.  
+- `ID_RECORD_FIRST` — Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`-마지막으로 이동 레코드가 레코드 집합의 합니다.  
+- `ID_RECORD_LAST` — Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`-레코드 집합의 다음 레코드로 이동 합니다.  
+- `ID_RECORD_NEXT` — Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`-레코드 집합의 이전 레코드로 이동 합니다.  
+- `ID_RECORD_PREV` — Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>반환 값  
- 이동에 성공 하면 0이 아닌 그렇지 않은 경우 0 이동 요청이 거부 되었습니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 적절 한 호출 **이동** 의 멤버 함수는 `CRowset` 레코드 보기와 연결 된 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate **Move** member function of the `CRowset` object associated with the record view.  
   
- 기본적으로 `OnMove` 사용자 레코드 보기에서 변경 된 경우 데이터 소스에서 현재 레코드를 업데이트 합니다.  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- 응용 프로그램 마법사는 첫 번째 레코드, 마지막 레코드, 다음 레코드 및 이전 레코드 메뉴 항목과 함께 메뉴 리소스를 만듭니다. 도킹 가능한 도구 모음 옵션을 선택 하면 응용 프로그램 마법사는 이러한 명령에 해당 하는 단추가 포함 된 도구 모음도 만듭니다.  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Dockable Toolbar option, The Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- 레코드 집합의 마지막 레코드를 지 나 이동 하는 경우 레코드 뷰 계속 마지막 레코드를 표시 됩니다. 첫 번째 레코드를 지 나 뒤로 이동 하는 경우 첫 번째 레코드를 표시 하는 레코드 뷰 계속 합니다.  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

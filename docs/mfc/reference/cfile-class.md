@@ -1,5 +1,5 @@
 ---
-title: "CFile 클래스 | Microsoft Docs"
+title: CFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFile class
-- CArchive class, using with CFile
-- files [C++], classes for
+- CFile [MFC], CFile
+- CFile [MFC], Abort
+- CFile [MFC], Close
+- CFile [MFC], Duplicate
+- CFile [MFC], Flush
+- CFile [MFC], GetFileName
+- CFile [MFC], GetFilePath
+- CFile [MFC], GetFileTitle
+- CFile [MFC], GetLength
+- CFile [MFC], GetPosition
+- CFile [MFC], GetStatus
+- CFile [MFC], LockRange
+- CFile [MFC], Open
+- CFile [MFC], Read
+- CFile [MFC], Remove
+- CFile [MFC], Rename
+- CFile [MFC], Seek
+- CFile [MFC], SeekToBegin
+- CFile [MFC], SeekToEnd
+- CFile [MFC], SetFilePath
+- CFile [MFC], SetLength
+- CFile [MFC], SetStatus
+- CFile [MFC], UnlockRange
+- CFile [MFC], Write
+- CFile [MFC], hFileNull
+- CFile [MFC], m_hFile
+- CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 caps.latest.revision: 22
 author: mikeblome
@@ -63,115 +87,115 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 8f79d96483e6826a58c49847c0a2bcd915b7b077
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4768b9232dbb3a25f74362f228ced0b55505060
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfile-class"></a>CFile 클래스
-MFC 파일 클래스의 기본 클래스입니다.  
+# <a name="cfile-class"></a>CFile Class
+The base class for Microsoft Foundation Class file classes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFile : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFile::CFile](#cfile)|생성 된 `CFile` 경로 또는 파일 핸들에서 개체입니다.|  
+|[CFile::CFile](#cfile)|Constructs a `CFile` object from a path or file handle.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cfile:: Abort](#abort)|모든 경고 및 오류를 무시 합니다. 파일을 닫습니다.|  
-|[CFile::Close](#close)|파일을 닫고 개체를 삭제 합니다.|  
-|[CFile::Duplicate](#duplicate)|이 파일에 따라 중복 개체를 생성 합니다.|  
-|[CFile::Flush](#flush)|모든 데이터가 기록 될 아직 플러시 수입니다.|  
-|[CFile::GetFileName](#getfilename)|선택한 파일의 파일 이름을 검색합니다.|  
-|[CFile::GetFilePath](#getfilepath)|선택한 파일의 전체 파일 경로 검색합니다.|  
-|[CFile::GetFileTitle](#getfiletitle)|선택한 파일의 제목을 검색합니다.|  
-|[CFile::GetLength](#getlength)|파일의 길이 검색합니다.|  
-|[CFile::GetPosition](#getposition)|현재 파일 포인터를 검색합니다.|  
-|[CFile::GetStatus](#getstatus)|정적 버전 또는 열려 있는 파일의 상태를 검색, 지정된 된 파일 (정적, 가상 함수)의 상태를 검색 합니다.|  
-|[CFile::LockRange](#lockrange)|파일에 바이트 범위를 잠급니다.|  
-|[CFile::Open](#open)|안전 하 게 오류 테스트 옵션으로 파일을 엽니다.|  
-|[CFile::Read](#read)|현재 파일 위치에 파일에서 (버퍼 되지 않음된) 데이터를 읽습니다.|  
-|[CFile::Remove](#remove)|지정된 된 파일 (정적 함수)를 삭제합니다.|  
-|[CFile::Rename](#rename)|지정된 된 파일을 (정적 함수)의 이름을 바꿉니다.|  
-|[CFile::Seek](#seek)|현재 파일 포인터를 놓습니다.|  
-|[CFile::SeekToBegin](#seektobegin)|파일의 시작 부분에서 현재 파일 포인터를 놓습니다.|  
-|[CFile::SeekToEnd](#seektoend)|파일의 끝에 있는 현재 파일 포인터를 놓습니다.|  
-|[CFile::SetFilePath](#setfilepath)|선택한 파일의 전체 파일 경로 설정합니다.|  
-|[CFile::SetLength](#setlength)|파일의 길이 변경합니다.|  
-|[CFile::SetStatus](#setstatus)|지정된 된 파일 (정적, 가상 함수)의 상태를 설정합니다.|  
-|[CFile::UnlockRange](#unlockrange)|파일에 바이트 범위 잠금 해제합니다.|  
-|[CFile::Write](#write)|현재 파일 위치를 파일에 (버퍼 되지 않음된) 데이터를 씁니다.|  
+|[CFile::Abort](#abort)|Closes a file ignoring all warnings and errors.|  
+|[CFile::Close](#close)|Closes a file and deletes the object.|  
+|[CFile::Duplicate](#duplicate)|Constructs a duplicate object based on this file.|  
+|[CFile::Flush](#flush)|Flushes any data yet to be written.|  
+|[CFile::GetFileName](#getfilename)|Retrieves the filename of the selected file.|  
+|[CFile::GetFilePath](#getfilepath)|Retrieves the full file path of the selected file.|  
+|[CFile::GetFileTitle](#getfiletitle)|Retrieves the title of the selected file.|  
+|[CFile::GetLength](#getlength)|Retrieves the length of the file.|  
+|[CFile::GetPosition](#getposition)|Retrieves the current file pointer.|  
+|[CFile::GetStatus](#getstatus)|Retrieves the status of the open file, or in the static version, retrieves the status of the specified file (static, virtual function).|  
+|[CFile::LockRange](#lockrange)|Locks a range of bytes in a file.|  
+|[CFile::Open](#open)|Safely opens a file with an error-testing option.|  
+|[CFile::Read](#read)|Reads (unbuffered) data from a file at the current file position.|  
+|[CFile::Remove](#remove)|Deletes the specified file (static function).|  
+|[CFile::Rename](#rename)|Renames the specified file (static function).|  
+|[CFile::Seek](#seek)|Positions the current file pointer.|  
+|[CFile::SeekToBegin](#seektobegin)|Positions the current file pointer at the beginning of the file.|  
+|[CFile::SeekToEnd](#seektoend)|Positions the current file pointer at the end of the file.|  
+|[CFile::SetFilePath](#setfilepath)|Sets the full file path of the selected file.|  
+|[CFile::SetLength](#setlength)|Changes the length of the file.|  
+|[CFile::SetStatus](#setstatus)|Sets the status of the specified file (static, virtual function).|  
+|[CFile::UnlockRange](#unlockrange)|Unlocks a range of bytes in a file.|  
+|[CFile::Write](#write)|Writes (unbuffered) data in a file to the current file position.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFile::operator 핸들](#operator_handle)|에 대 한 핸들을 `CFile` 개체입니다.|  
+|[CFile::operator HANDLE](#operator_handle)|A handle to a `CFile` object.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFile::hFileNull](#hfilenull)|있는지 여부를 확인는 `CFile` 개체에 유효한 핸들입니다.|  
-|[CFile::m_hFile](#m_hfile)|일반적으로 운영 체제 파일 핸들을 포함 합니다.|  
+|[CFile::hFileNull](#hfilenull)|Determines if the `CFile` object has a valid handle.|  
+|[CFile::m_hFile](#m_hfile)|Usually contains the operating-system file handle.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFile::m_pTM](#m_ptm)|에 대 한 포인터 `CAtlTransactionManager` 개체입니다.|  
+|[CFile::m_pTM](#m_ptm)|Pointer to `CAtlTransactionManager` object.|  
   
-## <a name="remarks"></a>주의  
- 버퍼링 되지 않은, 이진 디스크 입/출력 서비스를 직접 제공 하 고 직접 지원 하지는 파생된 클래스를 통해 메모리 파일 및 텍스트 파일입니다. `CFile`와 함께에서 작동 하는 `CArchive` Microsoft Foundation Class 개체의 serialization을 지원 하기 위해 클래스입니다.  
+## <a name="remarks"></a>Remarks  
+ It directly provides unbuffered, binary disk input/output services, and it indirectly supports text files and memory files through its derived classes. `CFile` works in conjunction with the `CArchive` class to support serialization of Microsoft Foundation Class objects.  
   
- 이 클래스와 해당 파생된 클래스 간의 계층 관계는 다형성을 통해 모든 파일 개체에 작동 하도록 프로그램을 사용 하면 `CFile` 인터페이스입니다. 메모리 파일은 예를 들어 디스크 파일 처럼 동작합니다.  
+ The hierarchical relationship between this class and its derived classes allows your program to operate on all file objects through the polymorphic `CFile` interface. A memory file, for example, behaves like a disk file.  
   
- 사용 하 여 `CFile` 및 범용 디스크 I/O에 대 한 파생된 클래스입니다. 사용 하 여 `ofstream` 또는 디스크 파일을 전송 하는 서식 있는 텍스트에 대 한 다른 Microsoft iostream 클래스입니다.  
+ Use `CFile` and its derived classes for general-purpose disk I/O. Use `ofstream` or other Microsoft iostream classes for formatted text sent to a disk file.  
   
- 일반적으로 디스크 파일을 열에서 자동으로 `CFile` 생성과에 닫힌된 소멸 합니다. 정적 멤버 함수를 허용 파일을 열지 않고 파일의 상태를 검색할 수 있습니다.  
+ Normally, a disk file is opened automatically on `CFile` construction and closed on destruction. Static member functions permit you to interrogate a file's status without opening the file.  
   
- 사용 하 여 대 한 자세한 내용은 `CFile`, 문서를 참조 [MFC의 파일](../../mfc/files-in-mfc.md) 및 [파일 처리](../../c-runtime-library/file-handling.md) 에 *런타임 라이브러리 참조*합니다.  
+ For more information on using `CFile`, see the articles [Files in MFC](../../mfc/files-in-mfc.md) and [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CFile`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="abort"></a>Cfile:: Abort  
- 이 개체와 연결 된 파일을 닫고 파일을 읽거나 쓰기 위해 사용할 수 없게 하 게 합니다.  
+##  <a name="abort"></a>  CFile::Abort  
+ Closes the file associated with this object and makes the file unavailable for reading or writing.  
   
 ```  
 virtual void Abort();
 ```  
   
-### <a name="remarks"></a>설명  
- 개체를 제거 하기 전에 파일을 닫지 않은 경우 소멸자를 닫습니다.  
+### <a name="remarks"></a>Remarks  
+ If you have not closed the file before destroying the object, the destructor closes it for you.  
   
- 예외를 처리 하는 경우 `CFile::Abort` 에서 다른 `CFile::Close` 같은 두 가지 중요 한 차이점이 있습니다. 첫째, 고 **중단** 함수는 예외를 throw 하지 오류에 실패 하 여 무시 되기 때문에 **중단**합니다. 두 번째, **중단** 되지 것입니다 **ASSERT** 파일이 아직 열려 있지 않거나 이전에 닫혔습니다.  
+ When handling exceptions, `CFile::Abort` differs from `CFile::Close` in two important ways. First, the **Abort** function will not throw an exception on failures because failures are ignored by **Abort**. Second, **Abort** will not **ASSERT** if the file has not been opened or was closed previously.  
   
- 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. **Abort** sets `m_hFile` to `CFile::hFileNull`.  
+ If you used **new** to allocate the `CFile` object on the heap, then you must delete it after closing the file. **Abort** sets `m_hFile` to `CFile::hFileNull`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
   
-##  <a name="cfile"></a>CFile::CFile  
- `CFile` 개체를 생성하고 초기화합니다.  
+##  <a name="cfile"></a>  CFile::CFile  
+ Constructs and initializes a `CFile` object.  
   
 ```  
 CFile();  
@@ -190,208 +214,207 @@ UINT nOpenFlags,
 CAtlTransactionManager* pTM);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- `CFile` 개체에 연결할 파일의 핸들입니다.  
+ Handle of a file to attach to the `CFile` object.  
   
  `lpszFileName`  
- 
-          `CFile` 개체에 연결할 파일의 상대 또는 전체 경로입니다.  
+ Relative or full path of a file to attach to the `CFile` object.  
   
  `nOpenFlags`  
- 지정한 파일에 대한 파일 액세스 옵션의 비트 조합(OR)입니다. 사용 가능한 옵션은 설명 섹션을 참조하세요.  
+ Bitwise combination (OR) of file access options for the specified file. See the Remarks section for possible options.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="remarks"></a>주의  
- 다음 5개 테이블에는 `nOpenFlags` 매개 변수에 사용 가능한 옵션이 나와 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The following five tables list the possible options for the `nOpenFlags` parameter.  
   
- 다음 파일 액세스 모드 옵션 중 하나만 선택해야 합니다. 기본 파일 액세스 모드는 `CFile::modeRead`(읽기 전용)입니다.  
+ Choose only one of the following file access mode options. The default file access mode is `CFile::modeRead`, which is read only.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::modeRead`|읽기 권한만 요청합니다.|  
-|`CFile::modeWrite`|쓰기 권한만 요청합니다.|  
-|`CFile::modeReadWrite`|읽기 및 쓰기 권한을 요청합니다.|  
+|`CFile::modeRead`|Requests read access only.|  
+|`CFile::modeWrite`|Requests write access only.|  
+|`CFile::modeReadWrite`|Requests read and write access.|  
   
- 다음 문자 모드 옵션 중 하나를 선택합니다.  
+ Choose one of the following character mode options.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::typeBinary`|이진 모드를 설정합니다(파생 클래스에만 사용됨).|  
-|`CFile::typeText`|캐리지 리턴-줄 바꿈 쌍 (파생된 클래스에만 사용 됨)에 대 한 특수 한 처리 된 텍스트 모드를 설정 합니다.|  
-|`CFile::typeUnicode`|유니코드 모드를 설정합니다(파생 클래스에만 사용됨). 응용 프로그램을 유니코드 구성에서 빌드할 때는 텍스트가 유니코드 형식으로 파일에 기록됩니다. BOM이 파일에 기록되지 않습니다.|  
+|`CFile::typeBinary`|Sets binary mode (used in derived classes only).|  
+|`CFile::typeText`|Sets text mode with special processing for carriage return-linefeed pairs (used in derived classes only).|  
+|`CFile::typeUnicode`|Sets Unicode mode (used in derived classes only). Text is written to the file in Unicode format when the application is built in a Unicode configuration. No BOM is written to the file.|  
   
- 다음 파일 공유 모드 옵션 중 하나만 선택해야 합니다. 기본 파일 공유 모드는 `CFile::shareExclusive`(단독)입니다.  
+ Choose only one of the following file share mode options. The default file share mode is `CFile::shareExclusive`, which is exclusive.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::shareDenyNone`|공유 제한이 없습니다.|  
-|`CFile::shareDenyRead`|다른 모든 사용자에 대해 읽기 권한을 거부합니다.|  
-|`CFile::shareDenyWrite`|다른 모든 사용자에 대해 쓰기 권한을 거부합니다.|  
-|`CFile::shareExclusive`|다른 모든 사용자에 대해 읽기 및 쓰기 권한을 거부합니다.|  
+|`CFile::shareDenyNone`|No sharing restrictions.|  
+|`CFile::shareDenyRead`|Denies read access to all others.|  
+|`CFile::shareDenyWrite`|Denies write access to all others.|  
+|`CFile::shareExclusive`|Denies read and write access to all others.|  
   
- 다음 파일 만들기 모드 옵션 중 첫 번째 옵션 또는 두 옵션을 모두 선택합니다. 기본 만들기 모드는 `CFile::modeNoTruncate`(기존 파일 열기)입니다.  
+ Choose the first, or both, of the following file creation mode options. The default creation mode is `CFile::modeNoTruncate`, which is open existing.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|파일이 없으면 새 파일을 만듭니다.; 파일이 이미 있는 경우 [CFileException](../../mfc/reference/cfileexception-class.md) 발생 합니다.|  
-|`CFile::modeNoTruncate`|파일이 없으면 새 파일을 만듭니다. 파일이 이미 있으면 `CFile` 개체에 연결됩니다.|  
+|`CFile::modeCreate`|Creates a new file if no file exists.; If the file already exists, [CFileException](../../mfc/reference/cfileexception-class.md) is raised.|  
+|`CFile::modeNoTruncate`|Creates a new file if no file exists; otherwise, if the file already exists, it is attached to the `CFile` object.|  
   
- 설명에 따라 다음 파일 캐싱 옵션을 선택합니다. 기본적으로 시스템은 옵션으로 제공되지 않는 범용 캐싱 구성표를 사용합니다.  
+ Choose the following file caching options as described. By default, the system uses a general purpose caching scheme that is not available as an option.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::osNoBuffer`|시스템에서 파일에 대해 중간 캐시를 사용하지 않습니다. 이 옵션은 다음 2개 옵션을 취소합니다.|  
-|`CFile::osRandomAccess`|임의 액세스를 위해 파일 캐시가 최적화됩니다. 이 옵션과 순차 검색 옵션을 함께 사용해서는 안 됩니다.|  
-|`CFile::osSequentialScan`|순차 액세스를 위해 파일 캐시가 최적화됩니다. 이 옵션과 임의 액세스 옵션을 함께 사용해서는 안 됩니다.|  
-|`CFile::osWriteThrough`|쓰기 작업이 지연 없이 수행됩니다.|  
+|`CFile::osNoBuffer`|The system does not use an intermediate cache for the file. This option cancels the following 2 options.|  
+|`CFile::osRandomAccess`|The file cache is optimized for random access. Do not use this option and the sequential scan option.|  
+|`CFile::osSequentialScan`|The file cache is optimized for sequential access. Do not use this option and the random access option.|  
+|`CFile::osWriteThrough`|Write operations are performed without delay.|  
   
- 파일 핸들이 상속되지 않도록 하려면 다음 보안 옵션을 선택합니다. 기본적으로 새 자식 프로세스는 파일 핸들을 사용할 수 있습니다.  
+ Choose the following security option to prevent the file handle from being inherited. By default, any new child processes can use the file handle.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::modeNoInherit`|자식 프로세스가 파일 핸들을 사용하지 못하도록 차단합니다.|  
+|`CFile::modeNoInherit`|Prevents any child processes from using the file handle.|  
   
- 기본 생성자는 멤버를 초기화하지만 파일을 `CFile` 개체에 연결하지는 않습니다. 이 생성자를 사용 하 여를 사용 하 여는 [CFile::Open](#open) 파일을 열에 연결 하는 메서드는 `CFile` 개체입니다.  
+ The default constructor initializes members but does not attach a file to the `CFile` object. After using this constructor, use the [CFile::Open](#open) method to open a file and attach it to the `CFile` object.  
   
- 매개 변수가 하나 포함된 생성자는 멤버를 초기화하고 기존 파일을 `CFile` 개체에 연결합니다.  
+ The constructor with one parameter initializes members and attaches an existing file to the `CFile` object.  
   
- 매개 변수가 두 개 포함된 생성자는 멤버를 초기화하고 지정한 파일 열기를 시도합니다. 이 생성자가 지정한 파일을 정상적으로 열면 파일은 `CFile` 개체에 연결되고, 그렇지 않으면 이 생성자가 `CInvalidArgException` 개체에 대한 포인터를 throw합니다. 예외를 처리 하는 방법에 대 한 자세한 내용은 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ The constructor with two parameters initializes members and tries to open the specified file. If this constructor successfully opens the specified file, the file is attached to the `CFile` object; otherwise, this constructor throws a pointer to a `CInvalidArgException` object. For more information about how to handle exceptions, see [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
- `CFile` 개체가 지정한 파일을 정상적으로 열면 `CFile` 개체 제거 시 이 파일이 자동으로 닫힙니다. 그렇지 않으면 `CFile` 개체에서 파일 연결을 끊은 후 파일을 명시적으로 닫아야 합니다.  
+ If a `CFile` object successfully opens a specified file, it will close this file automatically when the `CFile` object is destroyed; otherwise, you must explicitly close the file after it is no longer attached to the `CFile` object.  
   
-### <a name="example"></a>예제  
- 다음 코드에서는 `CFile` 사용 방법을 보여줍니다.  
+### <a name="example"></a>Example  
+ The following code shows how to use a `CFile`.  
   
- [!code-cpp[NVC_MFCFiles # 4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
   
-##  <a name="close"></a>CFile::Close  
- 이 개체와 연결 된 파일을 닫고 파일을 읽거나 쓰기 위해 사용할 수 없게 하 게 합니다.  
+##  <a name="close"></a>  CFile::Close  
+ Closes the file associated with this object and makes the file unavailable for reading or writing.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>주의  
- 개체를 제거 하기 전에 파일을 닫지 않은 경우 소멸자를 닫습니다.  
+### <a name="remarks"></a>Remarks  
+ If you have not closed the file before destroying the object, the destructor closes it for you.  
   
- 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. **Close** sets `m_hFile` to `CFile::hFileNull`.  
+ If you used **new** to allocate the `CFile` object on the heap, then you must delete it after closing the file. **Close** sets `m_hFile` to `CFile::hFileNull`.  
   
-### <a name="example"></a>예제  
- 예를 참조 [CFile::CFile](#cfile)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CFile::CFile](#cfile).  
   
-##  <a name="duplicate"></a>CFile::Duplicate  
- 중복 생성 `CFile` 지정된 된 파일에 대 한 개체입니다.  
+##  <a name="duplicate"></a>  CFile::Duplicate  
+ Constructs a duplicate `CFile` object for a given file.  
   
 ```  
 virtual CFile* Duplicate() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 복제본에 대 한 포인터 `CFile` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a duplicate `CFile` object.  
   
-### <a name="remarks"></a>설명  
- 이 C 런타임 함수와 동일 `_dup`합니다.  
+### <a name="remarks"></a>Remarks  
+ This is equivalent to the C run-time function `_dup`.  
   
-##  <a name="flush"></a>CFile::Flush  
- 파일에 쓸 파일 버퍼에에서 남아 있는 모든 데이터를 강제로 수행 합니다.  
+##  <a name="flush"></a>  CFile::Flush  
+ Forces any data remaining in the file buffer to be written to the file.  
   
 ```  
 virtual void Flush();
 ```  
   
-### <a name="remarks"></a>주의  
- 사용 `Flush` 플러시해야를 보장 하지는 않습니다 `CArchive` 버퍼입니다. 아카이브를 사용 하는 경우 호출 [CArchive::Flush](../../mfc/reference/carchive-class.md#flush) 첫 번째입니다.  
+### <a name="remarks"></a>Remarks  
+ The use of `Flush` does not guarantee flushing of `CArchive` buffers. If you are using an archive, call [CArchive::Flush](../../mfc/reference/carchive-class.md#flush) first.  
   
-### <a name="example"></a>예제  
- 예를 참조 [CFile::SetFilePath](#setfilepath)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CFile::SetFilePath](#setfilepath).  
   
-##  <a name="getfilename"></a>CFile::GetFileName  
- 지정된 된 파일의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getfilename"></a>  CFile::GetFileName  
+ Call this member function to retrieve the name of a specified file.  
   
 ```  
 virtual CString GetFileName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 파일의 이름입니다.  
+### <a name="return-value"></a>Return Value  
+ The name of the file.  
   
-### <a name="remarks"></a>주의  
- 예를 들어 호출 하는 경우 `GetFileName` 파일에 대 한 사용자에 게 메시지를 생성 하 `c:\windows\write\myfile.wri`, 파일 이름, `myfile.wri`, 반환 됩니다.  
+### <a name="remarks"></a>Remarks  
+ For example, when you call `GetFileName` to generate a message to the user about the file `c:\windows\write\myfile.wri`, the filename, `myfile.wri`, is returned.  
   
- 이름을 포함 하는 파일의 전체 경로 반환 하려면 호출 [GetFilePath](#getfilepath)합니다. 반환할 파일의 제목 ( `myfile`), 호출 [GetFileTitle](#getfiletitle)합니다.  
+ To return the entire path of the file, including the name, call [GetFilePath](#getfilepath). To return the title of the file ( `myfile`), call [GetFileTitle](#getfiletitle).  
   
-### <a name="example"></a>예제  
- 이 코드 조각은 시스템을 엽니다. WINDOWS 디렉터리에서 INI 파일입니다. 하는 경우,이 예제에서는 출력 됩니다 이름 및 경로, 제목, 출력에 표시 된 대로:  
+### <a name="example"></a>Example  
+ This code fragment opens the SYSTEM.INI file in your WINDOWS directory. If found, the example will print out the name and path and title, as shown under Output:  
   
- [!code-cpp[NVC_MFCFiles # 6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
+ [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
   
-##  <a name="getfilepath"></a>CFile::GetFilePath  
- 지정된 된 파일의 전체 경로 검색 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getfilepath"></a>  CFile::GetFilePath  
+ Call this member function to retrieve the full path of a specified file.  
   
 ```  
 virtual CString GetFilePath() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 파일의 전체 경로입니다.  
+### <a name="return-value"></a>Return Value  
+ The full path of the specified file.  
   
-### <a name="remarks"></a>주의  
- 예를 들어 호출 하는 경우 `GetFilePath` 파일에 대 한 사용자에 게 메시지를 생성 하 `c:\windows\write\myfile.wri`, 파일 경로 `c:\windows\write\myfile.wri`, 반환 됩니다.  
+### <a name="remarks"></a>Remarks  
+ For example, when you call `GetFilePath` to generate a message to the user about the file `c:\windows\write\myfile.wri`, the file path, `c:\windows\write\myfile.wri`, is returned.  
   
- 파일의 이름만 반환 하려면 ( `myfile.wri`), 호출 [GetFileName](#getfilename)합니다. 반환할 파일의 제목 ( `myfile`), 호출 [GetFileTitle](#getfiletitle)합니다.  
+ To return just the name of the file ( `myfile.wri`), call [GetFileName](#getfilename). To return the title of the file ( `myfile`), call [GetFileTitle](#getfiletitle).  
   
-### <a name="example"></a>예제  
- 예를 참조 [GetFileName](#getfilename)합니다.  
+### <a name="example"></a>Example  
+ See the example for [GetFileName](#getfilename).  
   
-##  <a name="getfiletitle"></a>CFile::GetFileTitle  
- 파일에 대 한 파일 제목 (표시 이름)을 검색 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="getfiletitle"></a>  CFile::GetFileTitle  
+ Call this member function to retrieve the file title (the display name) for the file.  
   
 ```  
 virtual CString GetFileTitle() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본 파일의 제목입니다.  
+### <a name="return-value"></a>Return Value  
+ The title of the underlying file.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) 검색할 파일의 제목입니다. 성공 하면 메서드는 시스템 파일 이름을 사용자에 게 표시 하는 데 사용할 문자열을 반환 합니다. 그렇지 않으면 메서드 호출 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) 를 기본 파일의 파일 이름 (파일 확장명 포함)를 검색 합니다. 따라서 파일 확장명은 하지에 항상 포함 되어야 반환 되는 파일 제목 문자열입니다. 자세한 내용은 참조 [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) 및 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) to retrieve the title of the file. If successful, the method returns the string that the system would use to display the file name to the user. Otherwise, the method calls [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) to retrieve the file name (including the file extension) of the underlying file. Therefore, the file extension will not always be included in the returned file title string. For more information, see [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) and [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) in the Windows SDK.  
   
- 이름을 포함 하는 파일의 전체 경로 반환 하려면 호출 [GetFilePath](#getfilepath)합니다. 파일의 이름만 반환 하려면 호출 [GetFileName](#getfilename)합니다.  
+ To return the entire path of the file, including the name, call [GetFilePath](#getfilepath). To return just the name of the file, call [GetFileName](#getfilename).  
   
-### <a name="example"></a>예제  
- 예를 참조 [GetFileName](#getfilename)합니다.  
+### <a name="example"></a>Example  
+ See the example for [GetFileName](#getfilename).  
   
-##  <a name="getlength"></a>CFile::GetLength  
- 바이트에 있는 파일의 현재 논리적 길이 가져옵니다.  
+##  <a name="getlength"></a>  CFile::GetLength  
+ Obtains the current logical length of the file in bytes.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 파일의 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The length of the file.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
   
-##  <a name="getposition"></a>CFile::GetPosition  
- 에 대 한 후속 호출에 사용 될 수 있는 파일 포인터의 현재 값을 가져옵니다. `Seek`합니다.  
+##  <a name="getposition"></a>  CFile::GetPosition  
+ Obtains the current value of the file pointer, which can be used in subsequent calls to `Seek`.  
   
 ```  
 virtual ULONGLONG GetPosition() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 파일에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ The file pointer.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
   
-##  <a name="getstatus"></a>CFile::GetStatus  
- 와 관련 된 상태 정보를 검색 하는이 메서드는 지정 된 `CFile` 개체 인스턴스 또는 지정 된 파일 경로입니다.  
+##  <a name="getstatus"></a>  CFile::GetStatus  
+ This method retrieves status information related to a given `CFile` object instance or a given file path.  
   
 ```  
 BOOL GetStatus(CFileStatus& rStatus) const;  
@@ -402,35 +425,35 @@ static BOOL PASCAL GetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rStatus`  
- 사용자가 제공한에 대 한 참조 **CFileStatus** 상태 정보를 받을 구조입니다. **CFileStatus** 구조에는 다음 필드가 있습니다.  
+ A reference to a user-supplied **CFileStatus** structure that will receive the status information. The **CFileStatus** structure has the following fields:  
   
-- **CTime m_ctime** 는 파일을 만든 날짜와 시간입니다.  
+- **CTime m_ctime** The date and time the file was created.  
   
-- **CTime m_mtime** 파일이 마지막으로 수정 된 시간과 날짜입니다.  
+- **CTime m_mtime** The date and time the file was last modified.  
   
-- **CTime m_atime** 날짜와 읽기 위해 파일에 마지막으로 액세스 하는 시간입니다.  
+- **CTime m_atime** The date and time the file was last accessed for reading.  
   
-- **ULONGLONG m_size** 바이트 DIR 명령에 의해 보고 된 파일의 논리적 크기입니다.  
+- **ULONGLONG m_size** The logical size of the file in bytes, as reported by the DIR command.  
   
-- **바이트 m_attribute** 파일의 특성 바이트입니다.  
+- **BYTE m_attribute** The attribute byte of the file.  
   
-- **char [_MAX_PATH] m_szFullName** Windows 문자 집합의 절대 파일 이름입니다.  
+- **char m_szFullName[_MAX_PATH]** The absolute filename in the Windows character set.  
   
  `lpszFileName`  
- Windows 문자에서 문자열 즉 경로를 설정 하려는 파일. 상대 또는 절대 경로일 수 있습니다 또는 네트워크 경로 이름을 포함할 수 있습니다.  
+ A string in the Windows character set that is the path to the desired file. The path can be relative or absolute, or it can contain a network path name.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="return-value"></a>반환 값  
- **True 이면** 지정된 된 파일에 대 한 상태 정보를 성공적으로 가져온 고, 그렇지 않으면 **FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the status information for the specified file is successfully obtained; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>주의  
- Static이 아닌 버전의 **GetStatus** 와 관련 된 열려 있는 파일의 상태 정보를 검색 된 주어진 `CFile` 개체입니다.  정적 버전 **GetStatus** 실제로 파일을 열지 않고 지정 된 파일 경로에서 파일 상태를 가져옵니다. 이 파일의 존재 여부 및 액세스 권한을 테스트 하는 데 유용 합니다.  
+### <a name="remarks"></a>Remarks  
+ The non-static version of **GetStatus** retrieves status information of the open file associated with the given `CFile` object.  The static version of **GetStatus** obtains the file status from a given file path without actually opening the file. This is useful for testing the existence and access rights of a file.  
   
- **m_attribute** 의 멤버는 **CFileStatus** 구조 파일 특성 집합을 나타냅니다. `CFile` 클래스를 제공는 **특성** 열거형 입력 파일 특성을 기호로 지정할 수 있습니다.  
+ The **m_attribute** member of the **CFileStatus** structure refers to the file attribute set. The `CFile` class provides the **Attribute** enumeration type so file attributes can be specified symbolically:  
   
 ```  
 enum Attribute {
@@ -444,25 +467,25 @@ enum Attribute {
     };
 ```    
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
   
-##  <a name="hfilenull"></a>CFile::hFileNull  
- 에 대 한 잘못 된 파일 핸들의 존재 여부를 결정은 `CFile` 개체입니다.  
+##  <a name="hfilenull"></a>  CFile::hFileNull  
+ Determines the presence of a valid file handle for the `CFile` object.  
   
 ```  
 static AFX_DATA const HANDLE hFileNull;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 상수 여부를 확인 하는 데 사용 되는 `CFile` 개체에 대 한 잘못 된 파일 핸들입니다.  
+### <a name="remarks"></a>Remarks  
+ This constant is used to determine if the `CFile` object has a valid file handle.  
   
- 다음 예제에서는이 작업을 보여 줍니다.  
+ The following example demonstrates this operation:  
   
- [!code-cpp[NVC_MFCFiles # 22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]  
+ [!code-cpp[NVC_MFCFiles#22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]  
   
-##  <a name="lockrange"></a>CFile::LockRange  
- 파일이 이미 잠겨 있는 경우 예외를 throw 하는 열려 있는 파일의 바이트 범위를 잠급니다.  
+##  <a name="lockrange"></a>  CFile::LockRange  
+ Locks a range of bytes in an open file, throwing an exception if the file is already locked.  
   
 ```  
 virtual void LockRange(
@@ -470,47 +493,47 @@ virtual void LockRange(
     ULONGLONG dwCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwPos`  
- 잠글 바이트 범위 시작의 바이트 오프셋입니다.  
+ The byte offset of the start of the byte range to lock.  
   
  `dwCount`  
- 잠글 범위의의 바이트 수입니다.  
+ The number of bytes in the range to lock.  
   
-### <a name="remarks"></a>설명  
- 파일의 바이트를 잠그면 다른 프로세스에서 해당 바이트에 액세스할 수 없습니다. 파일의 둘 이상의 영역을 잠글 수 있습니다 하지만 겹치는 지역이 없습니다. 허용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Locking bytes in a file prevents access to those bytes by other processes. You can lock more than one region of a file, but no overlapping regions are allowed.  
   
- 사용 하 여 지역의 잠금을 해제 하면는 `UnlockRange` 멤버 함수를 바이트 범위는 이전에 잠겨 있는 영역에 정확 하 게 일치 해야 합니다. `LockRange` 함수는 인접 한 영역을 병합 하지 않으면 각 영역을 개별적으로 잠금을 해제 해야 두 잠긴된 영역을 인접 한 경우.  
+ When you unlock the region, using the `UnlockRange` member function, the byte range must correspond exactly to the region that was previously locked. The `LockRange` function does not merge adjacent regions; if two locked regions are adjacent, you must unlock each region separately.  
   
 > [!NOTE]
->  이 함수를 사용할 수 없습니다는 `CMemFile`-클래스를 파생 합니다.  
+>  This function is not available for the `CMemFile`-derived class.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="m_hfile"></a>CFile::m_hFile  
- 열려 있는 파일에 대 한 운영 체제 파일 핸들을 포함합니다.  
+##  <a name="m_hfile"></a>  CFile::m_hFile  
+ Contains the operating-system file handle for an open file.  
   
 ```  
 HANDLE m_hFile;  
 ```  
   
-### <a name="remarks"></a>주의  
- `m_hFile`형식의 공용 변수 **UINT**합니다. 포함 된 `CFile::hFileNull` (운영 체제-독립적인 빈 파일 표시기) 핸들 할당 되지 않은 경우.  
+### <a name="remarks"></a>Remarks  
+ `m_hFile` is a public variable of type **UINT**. It contains `CFile::hFileNull` (an operating-system-independent empty file indicator) if the handle has not been assigned.  
   
- 사용 하 여 `m_hFile` 멤버의 의미는 파생된 클래스에 따라 달라 지므로 권장 되지 않습니다. `m_hFile`비 다형 지원에 편의 위해 공용 멤버 클래스의 사용 하 여 이루어집니다.  
+ Use of `m_hFile` is not recommended because the member's meaning depends on the derived class. `m_hFile` is made a public member for convenience in supporting nonpolymorphic use of the class.  
   
-##  <a name="m_ptm"></a>CFile::m_pTM  
- `CAtlTransactionManager` 개체에 대한 포인터입니다.  
+##  <a name="m_ptm"></a>  CFile::m_pTM  
+ Pointer to a `CAtlTransactionManager` object.  
   
 ```  
 CAtlTransactionManager* m_pTM;  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="open"></a>CFile::Open  
- 오버로드됨. **열기** 기본 사용 하도록 설계 `CFile` 생성자입니다.  
+##  <a name="open"></a>  CFile::Open  
+ Overloaded. **Open** is designed for use with the default `CFile` constructor.  
   
 ```  
 virtual BOOL Open(
@@ -526,50 +549,50 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 문자열은 원하는 파일을 경로입니다. Relative, absolute, 또는 네트워크 이름 (UNC) 경로일 수 있습니다.  
+ A string that is the path to the desired file. The path can be relative, absolute, or a network name (UNC).  
   
  `nOpenFlags`  
- A **UINT** 파일의 공유 및 액세스 모드를 정의 하는 합니다. 파일을 열 때 수행할 동작을 지정 합니다. 비트 OR를 사용 하 여 옵션을 결합할 수 있습니다 ( **|** ) 연산자. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, **modeCreate** 및 **modeNoInherit** 모드는 선택 사항입니다. 참조는 [CFile](#cfile) 모드 옵션 목록에 대 한 생성자입니다.  
+ A **UINT** that defines the file's sharing and access mode. It specifies the action to take when opening the file. You can combine options by using the bitwise-OR ( **&#124;** ) operator. One access permission and one share option are required; the **modeCreate** and **modeNoInherit** modes are optional. See the [CFile](#cfile) constructor for a list of mode options.  
   
  `pError`  
- 실패 한 작업의 상태를 수신할 기존 파일 예외 개체에 대 한 포인터입니다.  
+ A pointer to an existing file-exception object that will receive the status of a failed operation.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="return-value"></a>반환 값  
- 열기에 성공 하면 0이 아닌 그렇지 않으면 0입니다. `pError` 매개 변수는 0이 반환 되는 경우에 의미가 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the open was successful; otherwise 0. The `pError` parameter is meaningful only if 0 is returned.  
   
-### <a name="remarks"></a>설명  
- 두 함수는 오류는 일반, 예상 상태 파일 열기에 대 한 "안전한" 메서드를 형성 합니다.  
+### <a name="remarks"></a>Remarks  
+ The two functions form a "safe" method for opening a file where a failure is a normal, expected condition.  
   
- 동안는 `CFile` 생성자 오류 조건에서 예외가 throw 됩니다 **열려** 돌아갑니다 **FALSE** 오류 조건에 대 한 합니다. **하지만 열기** 여전히 초기화할 수는 [CFileException](../../mfc/reference/cfileexception-class.md) 오류를 설명 하는 개체입니다. 지정 하지 않으면는 `pError` 매개 변수를 전달 하는 경우 또는 **NULL** 에 대 한 `pError`, **열려** 돌아갑니다 **FALSE** 하며 throw 하지는 `CFileException`합니다. 기존에 대 한 포인터를 전달 하는 경우 `CFileException`, 및 **열려** 에서 오류가 발생 함수는 정보로 채운 해당 오류를 설명 하는 합니다. 두 사례 됩니다 **열려** 예외를 throw 합니다.  
+ While the `CFile` constructor will throw an exception in an error condition, **Open** will return **FALSE** for error conditions. **Open** can still initialize a [CFileException](../../mfc/reference/cfileexception-class.md) object to describe the error, however. If you don't supply the `pError` parameter, or if you pass **NULL** for `pError`, **Open** will return **FALSE** and not throw a `CFileException`. If you pass a pointer to an existing `CFileException`, and **Open** encounters an error, the function will fill it with information describing that error. In neither case will **Open** throw an exception.  
   
- 다음 표에서 설명의 가능한 결과 **열려**합니다.  
+ The following table describes the possible results of **Open**.  
   
-|`pError`|오류가 발생 했습니다.|반환 값|CFileException 콘텐츠|  
+|`pError`|Error encountered|Return value|CFileException content|  
 |--------------|------------------------|------------------|----------------------------|  
-|**NULL**|아니요|**TRUE**|해당 없음|  
-|포인터를`CFileException`|아니요|**TRUE**|변경 안 됨|  
-|**NULL**|예|**FALSE**|해당 없음|  
-|포인터를`CFileException`|예|**FALSE**|오류를 설명 하기 위해 초기화|  
+|**NULL**|No|**TRUE**|n/a|  
+|ptr to `CFileException`|No|**TRUE**|unchanged|  
+|**NULL**|Yes|**FALSE**|n/a|  
+|ptr to `CFileException`|Yes|**FALSE**|initialized to describe error|  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 13](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#13](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_9.cpp)]  
   
- [!code-cpp[NVC_MFCFiles # 14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
+ [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
-##  <a name="operator_handle"></a>CFile::operator 핸들  
- 이 연산자를 사용 하 여에 대 한 핸들을 전달 하는 `CFile` 와 같은 함수에 개체 [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) 및 [GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) 예상 하는 `HANDLE`합니다.  
+##  <a name="operator_handle"></a>  CFile::operator HANDLE  
+ Use this operator to pass a handle to a `CFile` object to functions such as [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) and [GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) that expect a `HANDLE`.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-##  <a name="read"></a>CFile::Read  
- 연결 된 파일에서 버퍼에 데이터를 읽습니다.는 `CFile` 개체입니다.  
+##  <a name="read"></a>  CFile::Read  
+ Reads data into a buffer from the file associated with the `CFile` object.  
   
 ```  
 virtual UINT Read(
@@ -577,23 +600,23 @@ virtual UINT Read(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 파일에서 읽은 데이터를 수신 하는 사용자가 제공한 버퍼에 대 한 포인터입니다.  
+ Pointer to the user-supplied buffer that is to receive the data read from the file.  
   
  `nCount`  
- 파일에서 읽을 바이트의 최대 수입니다. 텍스트 모드 파일의 경우 캐리지 리턴-줄 바꿈 쌍을 단일 문자로 계산 됩니다.  
+ The maximum number of bytes to be read from the file. For text-mode files, carriage return-linefeed pairs are counted as single characters.  
   
-### <a name="return-value"></a>반환 값  
- 버퍼로 전송된 바이트 수입니다. 모든 사항에 유의 `CFile` 클래스, 반환 값 경우도 미만 `nCount` 경우 파일의 끝에 도달 했습니다.  
+### <a name="return-value"></a>Return Value  
+ The number of bytes transferred to the buffer. Note that for all `CFile` classes, the return value may be less than `nCount` if the end of file was reached.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
   
- 또 다른 예에 대 한 참조 [CFile::Open](#open)합니다.  
+ For another example see [CFile::Open](#open).  
   
-##  <a name="remove"></a>CFile::Remove  
- 이 정적 함수는 경로 지정 된 파일을 삭제 합니다.  
+##  <a name="remove"></a>  CFile::Remove  
+ This static function deletes the file specified by the path.  
   
 ```  
 static void PASCAL Remove(
@@ -601,23 +624,23 @@ static void PASCAL Remove(
     CAtlTransactionManager* pTM = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 문자열은 원하는 파일을 경로입니다. 경로 상대 또는 절대 일 수 있습니다 및 네트워크 이름을 지정할 수 있습니다.  
+ A string that is the path to the desired file. The path can be relative or absolute, and can contain a network name.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="remarks"></a>주의  
- 디렉터리를 제거 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ It will not remove a directory.  
   
- **제거** 멤버 함수는 파일을 제거할 수 없는 경우 또는 연결 된 파일이 열려 있으면 예외를 throw 합니다. DEL 명령에는 것과 같습니다.  
+ The **Remove** member function throws an exception if the connected file is open or if the file cannot be removed. This is equivalent to the DEL command.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
   
-##  <a name="rename"></a>CFile::Rename  
- 이 정적 함수는 지정된 된 파일을 이름을 바꿉니다.  
+##  <a name="rename"></a>  CFile::Rename  
+ This static function renames the specified file.  
   
 ```  
 static void PASCAL Rename(
@@ -626,24 +649,24 @@ static void PASCAL Rename(
     CAtlTransactionManager* pTM = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszOldName`  
- 이전 경로입니다.  
+ The old path.  
   
  `lpszNewName`  
- 새 경로입니다.  
+ The new path.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="remarks"></a>주의  
- 디렉터리의 이름을 바꿀 수 없습니다. REN 명령에는 것과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ Directories cannot be renamed. This is equivalent to the REN command.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
   
-##  <a name="seek"></a>CFile::Seek  
- 열려 있는 파일의 파일 포인터 위치를 변경 합니다.  
+##  <a name="seek"></a>  CFile::Seek  
+ Repositions the file pointer in an open file.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -651,103 +674,103 @@ LONGLONG lOff,
 UINT nFrom);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lOff`  
- 파일 포인터를 이동 하는 바이트 수입니다. 파일의 끝까지 파일 포인터를 이동 하는 값은 양수 값 음수 값은 파일의 시작 부분 쪽으로 파일 포인터를 이동 합니다.  
+ Number of bytes to move the file pointer. Positive values move the file pointer towards the end of the file; negative values move the file pointer towards the start of the file.  
   
  `nFrom`  
- 검색할 위치입니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오.  
+ Position to seek from. See the Remarks section for possible values.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 파일 포인터의 위치 그렇지 않으면 반환 값이 정의 되지 및에 대 한 포인터는 `CFileException` 예외가 throw 됩니다.  
+### <a name="return-value"></a>Return Value  
+ The position of the file pointer if the method was successful; otherwise, the return value is undefined and a pointer to a `CFileException` exception is thrown.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 사용할 수 있는 값의 `nFrom` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ The following table lists possible values for the `nFrom` parameter.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CFile::begin`|파일의 시작 부분에서 검색 합니다.|  
-|`CFile::current`|파일 포인터의 현재 위치에서 검색 합니다.|  
-|`CFile::end`|파일의 끝에서 검색 합니다.|  
+|`CFile::begin`|Seek from the start of the file.|  
+|`CFile::current`|Seek from the current location of the file pointer.|  
+|`CFile::end`|Seek from the end of the file.|  
   
- 파일을 열 때 파일 포인터는 0으로는 파일의 시작 부분에 배치 됩니다.  
+ When a file is opened, the file pointer is positioned at 0, the start of the file.  
   
- 파일의 끝을 넘어 위치로 파일 포인터를 설정할 수 있습니다. 이 작업을 수행 하는 경우 파일에 쓸 때까지 파일의 크기 증가 하지 않습니다.  
+ You can set the file pointer to a position beyond the end of a file. If you do this, the size of the file does not increase until you write to the file.  
   
- 이 메서드에 대 한 예외 처리기는 예외를 처리 한 후 예외 개체를 삭제 해야 합니다.  
+ The exception handler for this method must delete the exception object after the exception is processed.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
   
-##  <a name="seektobegin"></a>CFile::SeekToBegin  
- 파일의 시작 부분으로 파일 포인터의 값을 설정합니다.  
+##  <a name="seektobegin"></a>  CFile::SeekToBegin  
+ Sets the value of the file pointer to the beginning of the file.  
   
 ```  
 void SeekToBegin();
 ```  
   
-### <a name="remarks"></a>주의  
- `SeekToBegin()`는 `Seek( 0L, CFile::begin )`와 같습니다.  
+### <a name="remarks"></a>Remarks  
+ `SeekToBegin()` is equivalent to `Seek( 0L, CFile::begin )`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="seektoend"></a>CFile::SeekToEnd  
- 파일의 논리적 끝으로 파일 포인터의 값을 설정합니다.  
+##  <a name="seektoend"></a>  CFile::SeekToEnd  
+ Sets the value of the file pointer to the logical end of the file.  
   
 ```  
 ULONGLONG SeekToEnd();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 파일의 길이(바이트)입니다.  
+### <a name="return-value"></a>Return Value  
+ The length of the file in bytes.  
   
-### <a name="remarks"></a>주의  
- `SeekToEnd()`는 `CFile::Seek( 0L, CFile::end )`와 같습니다.  
+### <a name="remarks"></a>Remarks  
+ `SeekToEnd()` is equivalent to `CFile::Seek( 0L, CFile::end )`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="setfilepath"></a>CFile::SetFilePath  
- 파일의 경로 지정 하려면이 함수를 호출 합니다. 예를 들어, 파일의 경로 사용할 수 없는 경우 시기는 [CFile](../../mfc/reference/cfile-class.md) 개체가 만들어지면 호출 `SetFilePath` 을 제공 합니다.  
+##  <a name="setfilepath"></a>  CFile::SetFilePath  
+ Call this function to specify the path of the file; for example, if the path of a file is not available when a [CFile](../../mfc/reference/cfile-class.md) object is constructed, call `SetFilePath` to provide it.  
   
 ```  
 virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszNewName`  
- 새 경로 지정 하는 문자열에 대 한 포인터입니다.  
+ Pointer to a string specifying the new path.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
-> `SetFilePath`파일을 열 하지 않거나; 파일 만들기 단순히 연결는 `CFile` 경로 이름을 사용할 수 있는 개체입니다.  
+> `SetFilePath` does not open the file or create the file; it simply associates the `CFile` object with a path name, which can then be used.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
   
-##  <a name="setlength"></a>CFile::SetLength  
- 파일의 길이 변경 하려면이 함수를 호출 합니다.  
+##  <a name="setlength"></a>  CFile::SetLength  
+ Call this function to change the length of the file.  
   
 ```  
 virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwNewLen`  
- 바이트에 있는 파일의 원하는 길이입니다. 이 값은 파일의 현재 길이 보다 크거나 작을 수 있습니다. 파일 또는 확장 잘린 적절 하 게 됩니다.  
+ Desired length of the file in bytes. This value can be larger or smaller than the current length of the file. The file will be extended or truncated as appropriate.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  와 `CMemFile`,이 함수에서 throw 할 수 있습니다는 `CMemoryException` 개체입니다.  
+>  With `CMemFile`, this function could throw a `CMemoryException` object.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
   
-##  <a name="setstatus"></a>CFile::SetStatus  
- 이 파일 위치와 연결 된 파일의 상태를 설정 합니다.  
+##  <a name="setstatus"></a>  CFile::SetStatus  
+ Sets the status of the file associated with this file location.  
   
 ```  
 static void PASCAL SetStatus(
@@ -756,26 +779,26 @@ static void PASCAL SetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 문자열은 원하는 파일을 경로입니다. 경로 상대 또는 절대 일 수 있습니다 및 네트워크 이름을 지정할 수 있습니다.  
+ A string that is the path to the desired file. The path can be relative or absolute, and can contain a network name.  
   
  *status*  
- 새 상태 정보를 포함 하는 버퍼입니다. 호출 된 **GetStatus** prefill 하려면 멤버 함수는 **CFileStatus** 현재 값으로 구성 하 고 필요에 따라 변경 내용을 확인 합니다. 값이 0 이면 해당 상태 항목이 업데이트 되지 않습니다. 참조는 [GetStatus](#getstatus) 멤버 함수에 대 한 설명은 **CFileStatus** 구조입니다.  
+ The buffer containing the new status information. Call the **GetStatus** member function to prefill the **CFileStatus** structure with current values, then make changes as required. If a value is 0, then the corresponding status item is not updated. See the [GetStatus](#getstatus) member function for a description of the **CFileStatus** structure.  
   
  `pTM`  
- CAtlTransactionManager 개체에 대한 포인터  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="remarks"></a>주의  
- 시간을 설정 하려면 수정 된 **m_mtime** 필드 *상태*합니다.  
+### <a name="remarks"></a>Remarks  
+ To set the time, modify the **m_mtime** field of *status*.  
   
- 유의 사항에 대 한 호출을 할 때 `SetStatus` 파일의 특성에만 변경 하려고 및 **m_mtime** 파일 상태 구조체의 멤버는 0이 아니고, 특성도 달라질 수 있습니다 (스탬프 특성에 의도 하지 않은 수 시간 변경). 만 파일의 특성을 변경 하려는 경우 먼저 설정 된 **m_mtime** 0 다음에 대 한 호출을 수행 하는 파일 상태 구조체의 멤버 `SetStatus`합니다.  
+ Please note that when you make a call to `SetStatus` in an attempt to change only the attributes of the file, and the **m_mtime** member of the file status structure is nonzero, the attributes may also be affected (changing the time stamp may have side effects on the attributes). If you want to only change the attributes of the file, first set the **m_mtime** member of the file status structure to zero and then make a call to `SetStatus`.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
   
-##  <a name="unlockrange"></a>CFile::UnlockRange  
- 열려 있는 파일의 바이트 범위 잠금 해제합니다.  
+##  <a name="unlockrange"></a>  CFile::UnlockRange  
+ Unlocks a range of bytes in an open file.  
   
 ```  
 virtual void UnlockRange(
@@ -783,24 +806,24 @@ virtual void UnlockRange(
     ULONGLONG dwCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwPos`  
- 바이트 범위 잠금 해제 하려면 시작의 바이트 오프셋입니다.  
+ The byte offset of the start of the byte range to unlock.  
   
  `dwCount`  
- 잠금을 해제할 범위의의 바이트 수입니다.  
+ The number of bytes in the range to unlock.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 설명을 참조는 [LockRange](#lockrange) 세부 정보에 대 한 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ See the description of the [LockRange](#lockrange) member function for details.  
   
 > [!NOTE]
->  이 함수를 사용할 수 없습니다는 `CMemFile`-클래스를 파생 합니다.  
+>  This function is not available for the `CMemFile`-derived class.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="write"></a>CFile::Write  
- 연결 된 파일에는 버퍼에서 데이터를 쓰고는 `CFile` 개체입니다.  
+##  <a name="write"></a>  CFile::Write  
+ Writes data from a buffer to the file associated with the `CFile` object.  
   
 ```  
 virtual void Write(
@@ -808,25 +831,25 @@ virtual void Write(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 파일에 쓸 데이터를 포함 하는 사용자가 제공한 버퍼에 대 한 포인터입니다.  
+ A pointer to the user-supplied buffer that contains the data to be written to the file.  
   
  `nCount`  
- 버퍼에서 전송할 바이트 수입니다. 텍스트 모드 파일의 경우 캐리지 리턴-줄 바꿈 쌍을 단일 문자로 계산 됩니다.  
+ The number of bytes to be transferred from the buffer. For text-mode files, carriage return-linefeed pairs are counted as single characters.  
   
-### <a name="remarks"></a>설명  
- **쓰기** 꽉 차서를 포함 하 여 여러 조건에 대 한 응답에 예외를 throw 합니다.  
+### <a name="remarks"></a>Remarks  
+ **Write** throws an exception in response to several conditions, including the disk-full condition.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles # 16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]  
   
- 또한 예제를 참조 하십시오. [CFile::CFile](#cfile) 및 [CFile::Open](#open)합니다.  
+ In addition, see the examples for [CFile::CFile](#cfile) and [CFile::Open](#open).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 DRAWCLI](../../visual-cpp-samples.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CStdioFile 클래스](../../mfc/reference/cstdiofile-class.md)   
- [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DRAWCLI](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CStdioFile Class](../../mfc/reference/cstdiofile-class.md)   
+ [CMemFile Class](../../mfc/reference/cmemfile-class.md)
 

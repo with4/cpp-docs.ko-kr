@@ -1,5 +1,5 @@
 ---
-title: "CFieldExchange 클래스 | Microsoft 문서"
+title: CFieldExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,13 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- enum FieldType, CFieldExchange
-- RFX (record field exchange) [C++]
-- RFX (record field exchange) [C++], classes for
-- CFieldExchange class
-- FieldType enumeration
-- data types [C++], custom
-- enum FieldType
+- CFieldExchange [MFC], IsFieldType
+- CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 caps.latest.revision: 24
 author: mikeblome
@@ -42,84 +37,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 948f13dc54fcd83941bab8e63b2ab2704d84cb87
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1508a522e31e38731f73672831aa7c4bb21b5fdf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfieldexchange-class"></a>CFieldExchange 클래스
-데이터베이스 클래스에서 사용되는 RFX(레코드 필드 교환) 및 대량 RFX(레코드 필드 교환) 루틴을 지원합니다.  
+# <a name="cfieldexchange-class"></a>CFieldExchange Class
+Supports the record field exchange (RFX) and bulk record field exchange (Bulk RFX) routines used by the database classes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFieldExchange  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFieldExchange::IsFieldType](#isfieldtype)|업데이트 되는 필드의 형식에 적합 한 현재 작업이&0;이 아닌 반환 합니다.|  
-|[CFieldExchange::SetFieldType](#setfieldtype)|레코드 집합 데이터 멤버의 유형을 지정-열 또는 매개 변수-다음 호출 될 때까지 다음 모든 RFX 함수 호출을 나타내는 `SetFieldType`합니다.|  
+|[CFieldExchange::IsFieldType](#isfieldtype)|Returns nonzero if the current operation is appropriate for the type of field being updated.|  
+|[CFieldExchange::SetFieldType](#setfieldtype)|Specifies the type of recordset data member — column or parameter — represented by all following calls to RFX functions until the next call to `SetFieldType`.|  
   
-## <a name="remarks"></a>주의  
- `CFieldExchange`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CFieldExchange` does not have a base class.  
   
- 대량 행 페칭 (fetching);를 구현 하는 경우 또는 사용자 지정 데이터 형식에 대 한 데이터 교환 루틴을 작성 하는 경우이 클래스를 사용 합니다. 이렇게 하면 사용 하지 않습니다 직접이 클래스. RFX와 대량 RFX 데이터 소스에서 현재 레코드에서 해당 필드와 레코드 집합 개체의 필드 데이터 멤버 간에 데이터를 교환 합니다.  
+ Use this class if you are writing data exchange routines for custom data types or when you are implementing bulk row fetching; otherwise, you will not directly use this class. RFX and Bulk RFX exchanges data between the field data members of your recordset object and the corresponding fields of the current record on the data source.  
   
 > [!NOTE]
->  클래스를 사용 하 여 연결 ODBC (Open Database) 클래스를 사용 하지 않고 데이터 액세스 개체 (DAO) 클래스와 작업 하는 경우 [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) 대신 합니다. 자세한 내용은 문서를 참조 하십시오. [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
+>  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) instead. For more information, see the article [Overview:Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` 개체 컨텍스트 정보가 필요한 레코드 필드 교환 또는 되려면 대량 레코드 필드 교환에 대 한 배치를 제공 합니다. `CFieldExchange`개체는 바인딩 매개 변수 및 필드 데이터 멤버를 포함 하 여 현재 레코드의 필드에서 다양 한 플래그를 설정 및 작업의 수를 지원 합니다. RFX와 대량 RFX 작업이 동일 하 여 정의 된 형식의 레코드 집합 클래스 데이터 멤버에는 `enum` **FieldType** 에서 `CFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CFieldExchange` object provides the context information needed for record field exchange or bulk record field exchange to take place. `CFieldExchange` objects support a number of operations, including binding parameters and field data members and setting various flags on the fields of the current record. RFX and Bulk RFX operations are performed on recordset-class data members of types defined by the `enum`**FieldType** in `CFieldExchange`. Possible **FieldType** values are:  
   
-- **CFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
+- **CFieldExchange::outputColumn** for field data members.  
   
-- **CFieldExchange::inputParam** 또는 **CFieldExchange::param** 입력된 매개 변수 데이터 멤버에 대 한 합니다.  
+- **CFieldExchange::inputParam** or **CFieldExchange::param** for input parameter data members.  
   
-- **CFieldExchange::outputParam** 출력 매개 변수 데이터 멤버에 대 한 합니다.  
+- **CFieldExchange::outputParam** for output parameter data members.  
   
-- **CFieldExchange::inoutParam** 입/출력 매개 변수 데이터 멤버에 대 한 합니다.  
+- **CFieldExchange::inoutParam** for input/output parameter data members.  
   
- 클래스의 멤버 함수 및 데이터 멤버의 대부분은 사용자 고유의 사용자 지정 RFX 루틴을 작성 하기 위한 제공 됩니다. 사용 하 여 `SetFieldType` 자주 합니다. 자세한 내용은 문서를 참조 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md) 및 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)합니다. 대량 행 페칭 (fetching)에 대 한 내용은 문서를 참조 하십시오. [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다. RFX와 대량 RFX 전역 함수에 대 한 자세한 참조 [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md) 이 참조의 MFC 매크로 및 전역 섹션에 있습니다.  
+ Most of the class's member functions and data members are provided for writing your own custom RFX routines. You will use `SetFieldType` frequently. For more information, see the articles [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md) and [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). For information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). For details about the RFX and Bulk RFX global functions, see [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) in the MFC Macros and Globals section of this reference.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CFieldExchange`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
- 사용자가 직접 RFX 함수를 작성 하는 경우 호출 `IsFieldType` 는 특정 필드 또는 매개 변수 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 결정 하는 함수 맨 앞에 (한 **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, 또는 **CFieldExchange::inoutParam**).  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
+ If you write your own RFX function, call `IsFieldType` at the beginning of your function to determine whether the current operation can be performed on a particular field or parameter data member type (a **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, or **CFieldExchange::inoutParam**).  
   
 ```  
 BOOL IsFieldType(UINT* pnField);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pnField*  
- 필드 또는 매개 변수 데이터 멤버의 일련 번호는이 매개 변수에서 반환 됩니다. 데이터 멤버의 순서에 해당 하는이 숫자는 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 또는 [CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 함수입니다.  
+ The sequential number of the field or parameter data member is returned in this parameter. This number corresponds to the data member's order in the [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) or [CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) function.  
   
-### <a name="return-value"></a>반환 값  
- 이 속성을&0;이 아닌 경우 현재 필드 또는 매개 변수 형식에 현재 작업을 수행할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current operation can be performed on the current field or parameter type.  
   
-### <a name="remarks"></a>주의  
- RFX 함수 기존 모델을 따릅니다.  
+### <a name="remarks"></a>Remarks  
+ Follow the model of the existing RFX functions.  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
- 에 대 한 호출을 해야 `SetFieldType` 레코드 집합 클래스에서 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 또는 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 재정의 합니다.  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
+ You need a call to `SetFieldType` in your recordset class's [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) or [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) override.  
   
 ```  
 void SetFieldType(UINT nFieldType);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFieldType`  
- 값은 **enum FieldType**안에서 선언 된 `CFieldExchange`, 다음 중 하나일 수 있습니다.  
+ A value of the **enum FieldType**, declared in `CFieldExchange`, which can be one of the following:  
   
 - **CFieldExchange::outputColumn**  
   
@@ -131,28 +126,28 @@ void SetFieldType(UINT nFieldType);
   
 - **CFieldExchange::inoutParam**  
   
-### <a name="remarks"></a>주의  
- 필드 데이터 멤버에 대 한 호출 해야 `SetFieldType` 의 매개 변수와 함께 **CFieldExchange::outputColumn**와 RFX 또는 대량 RFX 함수를 호출 합니다. 대량 행 페칭 (fetching)를 구현 하지 경우 클래스 마법사 배치이 `SetFieldType` 의 필드 맵 부분를 대신 호출 `DoFieldExchange`합니다.  
+### <a name="remarks"></a>Remarks  
+ For field data members, you must call `SetFieldType` with a parameter of **CFieldExchange::outputColumn**, followed by calls to the RFX or Bulk RFX functions. If you have not implemented bulk row fetching, then ClassWizard places this `SetFieldType` call for you in the field map section of `DoFieldExchange`.  
   
- 레코드 집합 클래스를 매개 변수화를 호출 해야 `SetFieldType` 다시 모든 필드 맵 섹션 외부 뒤 RFX 호출 하 여 모든 매개 변수 데이터 멤버에 대 한 합니다. 각 형식 매개 변수 데이터 멤버의 있어야 자체 `SetFieldType` 를 호출 합니다. 다음 표에서 여러 다른 값을 전달할 수 있습니다 구별 `SetFieldType` 클래스의 매개 변수 데이터 멤버를 나타내는:  
+ If you parameterize your recordset class, you must call `SetFieldType` again, outside any field map section, followed by RFX calls for all the parameter data members. Each type of parameter data member must have its own `SetFieldType` call. The following table distinguishes the different values you can pass to `SetFieldType` to represent the parameter data members of your class:  
   
-|SetFieldType 매개 변수 값|형식의 매개 변수 데이터 멤버|  
+|SetFieldType parameter value|Type of parameter data member|  
 |----------------------------------|-----------------------------------|  
-|**CFieldExchange::inputParam**|입력된 매개 변수입니다. 레코드 집합의 쿼리 또는 저장된 프로시저에 전달 되는 값입니다.|  
-|**CFieldExchange::param**|동일 **CFieldExchange::inputParam**합니다.|  
-|**CFieldExchange::outputParam**|출력 매개 변수입니다. 레코드 집합의 저장된 프로시저의 반환 값입니다.|  
-|**CFieldExchange::inoutParam**|입/출력 매개 변수입니다. 에 전달 되 고 레코드 집합의 저장된 프로시저에서 반환 하는 값입니다.|  
+|**CFieldExchange::inputParam**|Input parameter. A value that is passed into the recordset's query or stored procedure.|  
+|**CFieldExchange::param**|Same as **CFieldExchange::inputParam**.|  
+|**CFieldExchange::outputParam**|Output parameter. A return value of the recordset's stored procedure.|  
+|**CFieldExchange::inoutParam**|Input/output parameter. A value that is passed into and returned from the recordset's stored procedure.|  
   
- 일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결 된 RFX 함수 호출의 각 그룹 앞에 야를 호출 하 여 `SetFieldType`합니다. `nFieldType` 각 매개 변수 `SetFieldType` 호출 다음에 나오는 RFX 함수 호출을 나타내는 데이터 멤버의 형식을 식별 하는 `SetFieldType` 를 호출 합니다.  
+ In general, each group of RFX function calls associated with field data members or parameter data members must be preceded by a call to `SetFieldType`. The `nFieldType` parameter of each `SetFieldType` call identifies the type of the data members represented by the RFX function calls that follow the `SetFieldType` call.  
   
- 출력 및 입/출력 매개 변수를 처리 하는 방법에 대 한 자세한 내용은 참조는 `CRecordset` 멤버 함수 [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)합니다. RFX와 대량 RFX 함수에 대 한 자세한 내용은 항목을 참조 하십시오. [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다. 대량 행 페칭 (fetching) 하는 방법에 대 한 관련된 정보에 대 한 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about handling output and input/output parameters, see the `CRecordset` member function [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). For more information about the RFX and Bulk RFX functions, see the topic [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md). For related information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
- 이 예제에 대 한 호출을 수행할 RFX 함수를 여러 번 호출 `SetFieldType`합니다. `SetFieldType` 통해 호출 하는 `pFX` 에 대 한 포인터는 `CFieldExchange` 개체입니다.  
+### <a name="example"></a>Example  
+ This example shows several calls to RFX functions with accompanying calls to `SetFieldType`. Note that `SetFieldType` is called through the `pFX` pointer to a `CFieldExchange` object.  
   
- [!code-cpp[NVC_MFCDatabase #&33;](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CRecordset 클래스](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CRecordset Class](../../mfc/reference/crecordset-class.md)
 

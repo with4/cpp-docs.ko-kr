@@ -1,5 +1,5 @@
 ---
-title: "CShellManager 클래스 | Microsoft 문서"
+title: CShellManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CShellManager class
+- CShellManager [MFC], CShellManager
+- CShellManager [MFC], BrowseForFolder
+- CShellManager [MFC], ConcatenateItem
+- CShellManager [MFC], CopyItem
+- CShellManager [MFC], CreateItem
+- CShellManager [MFC], FreeItem
+- CShellManager [MFC], GetItemCount
+- CShellManager [MFC], GetItemSize
+- CShellManager [MFC], GetNextItem
+- CShellManager [MFC], GetParentItem
+- CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
 caps.latest.revision: 23
 author: mikeblome
@@ -45,60 +55,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2bf6be5c0d106344024d32e90cc6cfb1e3299075
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b8ea86dd42a701d441c53effe51db9081ea0b48d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cshellmanager-class"></a>CShellManager 클래스
-PIDL(식별자 포인터 목록)에 대한 포인터를 사용하여 작업할 수 있는 몇 가지 메서드를 구현합니다.  
+# <a name="cshellmanager-class"></a>CShellManager Class
+Implements several methods that enable you to work with pointers to identifier lists (PIDLs).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CShellManager : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CShellManager::CShellManager](#cshellmanager)|`CShellManager` 개체를 생성합니다.|  
+|[CShellManager::CShellManager](#cshellmanager)|Constructs a `CShellManager` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CShellManager::BrowseForFolder](#browseforfolder)|셸 폴더를 선택 하는 데 사용할 수 있는 대화 상자가 표시 됩니다.|  
-|[CShellManager::ConcatenateItem](#concatenateitem)|두 개의 Pidl를 연결합니다.|  
-|[CShellManager::CopyItem](#copyitem)|새 PIDL 만들고 제공 된 PIDL을 복사 합니다.|  
-|[CShellManager::CreateItem](#createitem)|지정된 된 크기의 새 PIDL를 만듭니다.|  
-|[CShellManager::FreeItem](#freeitem)|제공 된 PIDL를 삭제합니다.|  
-|[CShellManager::GetItemCount](#getitemcount)|제공 된 PIDL에서 항목의 수를 반환합니다.|  
-|[CShellManager::GetItemSize](#getitemsize)|제공 된 PIDL의 크기를 반환 합니다.|  
-|[CShellManager::GetNextItem](#getnextitem)|PIDL에서 다음 항목을 반환합니다.|  
-|[CShellManager::GetParentItem](#getparentitem)|제공 된 항목의 부모 항목을 검색합니다.|  
-|[CShellManager::ItemFromPath](#itemfrompath)|제공 된 경로 의해 식별 되는 항목에 대 한 PIDL를 검색 합니다.|  
+|[CShellManager::BrowseForFolder](#browseforfolder)|Displays a dialog box that enables the user to select a shell folder.|  
+|[CShellManager::ConcatenateItem](#concatenateitem)|Concatenates two PIDLs.|  
+|[CShellManager::CopyItem](#copyitem)|Creates a new PIDL and copies the supplied PIDL to it.|  
+|[CShellManager::CreateItem](#createitem)|Creates a new PIDL of the specified size.|  
+|[CShellManager::FreeItem](#freeitem)|Deletes the supplied PIDL.|  
+|[CShellManager::GetItemCount](#getitemcount)|Returns the number of items in the supplied PIDL.|  
+|[CShellManager::GetItemSize](#getitemsize)|Returns the size of the supplied PIDL.|  
+|[CShellManager::GetNextItem](#getnextitem)|Returns the next item from the PIDL.|  
+|[CShellManager::GetParentItem](#getparentitem)|Retrieves the parent item of the supplied item.|  
+|[CShellManager::ItemFromPath](#itemfrompath)|Retrieves the PIDL for the item identified by the supplied path.|  
   
-## <a name="remarks"></a>주의  
- 메서드는 `CShellManager` Pidl 처리 하도록 모든 클래스입니다. PIDL은 셸 개체에 대 한 고유 식별자입니다.  
+## <a name="remarks"></a>Remarks  
+ The methods of the `CShellManager` class all deal with PIDLs. A PIDL is a unique identifier for a shell object.  
   
- 만들어야 합니다를 `CShellManager` 개체를 수동으로. 응용 프로그램의 프레임 워크에 의해 자동으로 만들 수는 있습니다. 하지만 호출 해야 [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) 응용 프로그램의 초기화 과정입니다. 응용 프로그램에 대 한 셸 관리자에 대 한 포인터를 가져오려면, 호출 [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)합니다.  
+ You should not create a `CShellManager` object manually. It will be created automatically by the framework of your application. However, you should call [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) during the initialization process of your application. To get a pointer to the shell manager for your application, call [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CShellManager](../../mfc/reference/cshellmanager-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxshellmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxshellmanager.h  
   
-##  <a name="browseforfolder"></a>CShellManager::BrowseForFolder  
- 셸 폴더를 선택 하는 데 사용할 수 있는 대화 상자가 표시 됩니다.  
+##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder  
+ Displays a dialog box that enables the user to select a shell folder.  
   
 ```  
 BOOL BrowseForFolder(
@@ -110,38 +120,38 @@ BOOL BrowseForFolder(
     LPINT piFolderImage = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `strOutFolder`  
- 선택한 폴더의 경로 저장 하는 메서드에서 사용 하는 문자열입니다.  
+ The string used by the method to store the path of the selected folder.  
   
  [in] `pWndParent`  
- 부모 창에 대 한 포인터입니다.  
+ A pointer to the parent window.  
   
  [in] `lplszInitialFolder`  
- 대화 상자가 표시 되 면 기본적으로 선택 되어 있는 폴더를 포함 하는 문자열입니다.  
+ A string that contains the folder that is selected by default when the dialog box is displayed.  
   
  [in] `lpszTitle`  
- 대화 상자 제목입니다.  
+ The title for the dialog box.  
   
  [in] `ulFlags`  
- 대화 상자에 대 한 옵션을 지정 하는 플래그입니다. 참조 [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) 에 대 한 자세한 설명은 합니다.  
+ Flags specifying options for the dialog box. See [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) for the detailed description.  
   
  [out] `piFolderImage`  
- 메서드는 선택 된 폴더의 이미지 인덱스를 기록 하는 위치는 정수 값에 대 한 포인터입니다.  
+ A pointer to the integer value where the method writes the image index of the selected folder.  
   
-### <a name="return-value"></a>반환 값  
- 사용자가 대화 상자;에서 폴더를 선택 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user selects a folder from the dialog box; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출할 때 응용 프로그램 만들고 폴더를 선택 하는 데 사용할 수 있는 대화 상자를 표시 합니다. 메서드는 기록에 폴더의 경로 `strOutFolder` 매개 변수.  
+### <a name="remarks"></a>Remarks  
+ When you call this method, the application creates and shows a dialog box that enables the user to select a folder. The method will write the path of the folder into the `strOutFolder` parameter.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는에 대 한 참조를 검색 하는 방법을 `CShellManager` 사용 하 여 개체는 `CWinAppEx::GetShellManager` 메서드 및 사용 방법에는 `BrowseForFolder` 메서드. 이 코드 조각은의 일부인는 [탐색기 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a reference to a `CShellManager` object by using the `CWinAppEx::GetShellManager` method and how to use the `BrowseForFolder` method. This code snippet is part of the [Explorer sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_Explorer #&6;](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
-##  <a name="concatenateitem"></a>CShellManager::ConcatenateItem  
- 두 개의 Pidl를 포함 하는 새 목록을 만듭니다.  
+##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem  
+ Creates a new list containing two PIDLs.  
   
 ```  
 LPITEMIDLIST ConcatenateItem(
@@ -149,118 +159,118 @@ LPITEMIDLIST ConcatenateItem(
     LPCITEMIDLIST pidl2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidl1`  
- 첫 번째 항목입니다.  
+ The first item.  
   
  [in] `pidl2`  
- 두 번째 항목입니다.  
+ The second item.  
   
-### <a name="return-value"></a>반환 값  
- 그렇지 않으면 함수가 성공 하면 새 항목 목록에 대 한 포인터 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new item list if the function succeeds, otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 만드는 새 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 모두 포함 될 수 있을 만큼 큰 `pidl1` 및 `pidl2`합니다. 그런 다음 복사 `pidl1` 및 `pidl2` 새 목록에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method creates a new [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) large enough to contain both `pidl1` and `pidl2`. It then copies `pidl1` and `pidl2` to the new list.  
   
-##  <a name="copyitem"></a>CShellManager::CopyItem  
- 항목 목록에 복사합니다.  
+##  <a name="copyitem"></a>  CShellManager::CopyItem  
+ Copies an item list.  
   
 ```  
 LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidlSource`  
- 원래 항목 목록입니다.  
+ The original item list.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하는 경우에 새로 만든된 항목 목록에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created item list if successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 새로 만든된 항목 목록에는 동일한 크기의 원본 항목 목록에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The newly created item list has the same size as the source item list.  
   
-##  <a name="createitem"></a>CShellManager::CreateItem  
- 새 PIDL를 만듭니다.  
+##  <a name="createitem"></a>  CShellManager::CreateItem  
+ Creates a new PIDL.  
   
 ```  
 LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `cbSize`  
- 항목 목록의 크기입니다.  
+ The size of the item list.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하는 경우에 만든된 항목 목록에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the created item list if successful; otherwise `NULL`.  
   
-##  <a name="cshellmanager"></a>CShellManager::CShellManager  
- `CShellManager` 개체를 생성합니다.  
+##  <a name="cshellmanager"></a>  CShellManager::CShellManager  
+ Constructs a `CShellManager` object.  
   
 ```  
 CShellManager();
 ```  
   
-### <a name="remarks"></a>주의  
- 대부분의 경우에서 않아도 만들려는 `CShellManager` 직접. 기본적으로 프레임 워크를 만듭니다. 에 대 한 포인터를 얻으려면는 `CShellManager`, 호출 [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)합니다. 만들면는 `CShellManager` 수동으로 방법으로 초기화 해야 [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager)합니다.  
+### <a name="remarks"></a>Remarks  
+ In most cases, you do not have to create a `CShellManager` directly. By default, the framework creates one for you. To get a pointer to the `CShellManager`, call [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). If you do create a `CShellManager` manually, you must initialize it with the method [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
   
-##  <a name="freeitem"></a>CShellManager::FreeItem  
- 항목 목록을 삭제합니다.  
+##  <a name="freeitem"></a>  CShellManager::FreeItem  
+ Deletes an item list.  
   
 ```  
 void FreeItem(LPITEMIDLIST pidl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidl`  
- 삭제 하는 항목 목록입니다.  
+ An item list to delete.  
   
-##  <a name="getitemcount"></a>CShellManager::GetItemCount  
- 항목 목록에서 항목의 수를 반환합니다.  
+##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
+ Returns the number of items in an item list.  
   
 ```  
 UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidl`  
- 항목 목록에 대 한 포인터입니다.  
+ A pointer to an item list.  
   
-### <a name="return-value"></a>반환 값  
- 항목 목록에서 항목의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the item list.  
   
-##  <a name="getitemsize"></a>CShellManager::GetItemSize  
- 항목 목록의 크기를 반환합니다.  
+##  <a name="getitemsize"></a>  CShellManager::GetItemSize  
+ Returns the size of an item list.  
   
 ```  
 UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidl`  
- 항목 목록에 대 한 포인터입니다.  
+ A pointer to an item list.  
   
-### <a name="return-value"></a>반환 값  
- 항목 목록의 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The size of the item list.  
   
-##  <a name="getnextitem"></a>CShellManager::GetNextItem  
- 항목 식별자 목록 (PIDL)에 대 한 포인터에서 다음 항목을 검색합니다.  
+##  <a name="getnextitem"></a>  CShellManager::GetNextItem  
+ Retrieves the next item from a pointer to an item identifier list (PIDL).  
   
 ```  
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pidl`  
- 반복 하는 항목의 목록입니다.  
+ The list of items to iterate.  
   
-### <a name="return-value"></a>반환 값  
- 목록에서 다음 항목에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next item in the list.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 하는 경우 더 많은 항목이 없는 목록에서 `NULL`합니다.  
+### <a name="remarks"></a>Remarks  
+ If there are no more items in the list, this method returns `NULL`.  
   
-##  <a name="getparentitem"></a>CShellManager::GetParentItem  
- 항목 식별자 목록 (PIDL)에 대 한 포인터의 부모를 검색합니다.  
+##  <a name="getparentitem"></a>  CShellManager::GetParentItem  
+ Retrieves the parent of a pointer to an item identifier list (PIDL).  
   
 ```  
 int GetParentItem(
@@ -268,21 +278,21 @@ int GetParentItem(
     LPITEMIDLIST& lpidlParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpidl`  
- PIDL 부모가 검색 됩니다.  
+ A PIDL whose parent will be retrieved.  
   
  [out] `lpidlParent`  
- 메서드 결과 저장 하는 PIDL에 대 한 참조입니다.  
+ A reference to a PIDL where the method will store the result.  
   
-### <a name="return-value"></a>반환 값  
- PIDL 부모 수준입니다.  
+### <a name="return-value"></a>Return Value  
+ The level of the parent PIDL.  
   
-### <a name="remarks"></a>주의  
- 바탕 화면을 기준으로 한 PIDL의 수준이입니다. 데스크톱 PIDL 0 수준으로 간주 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The level of a PIDL is relative to the desktop. The desktop PIDL is considered to have a level of 0.  
   
-##  <a name="itemfrompath"></a>CShellManager::ItemFromPath  
- 문자열 경로 의해 식별 되는 항목에서 항목 식별자 목록 (PIDL)에 포인터를 검색 합니다.  
+##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath  
+ Retrieves the pointer to an item identifier list (PIDL) from the item identified by a string path.  
   
 ```  
 HRESULT ItemFromPath(
@@ -290,17 +300,17 @@ HRESULT ItemFromPath(
     LPITEMIDLIST& pidl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPath`  
- 항목에 대 한 경로 지정 하는 문자열입니다.  
+ A string that specifies the path for the item.  
   
  [out] `pidl`  
- PIDL에 대 한 참조입니다. 메서드 반환 값에 대 한 포인터를 저장 하려면이 PIDL를 사용 합니다.  
+ A reference to a PIDL. The method uses this PIDL to store the pointer to its return value.  
   
-### <a name="return-value"></a>반환 값  
- 반환 `NOERROR` 성공 하면 오류 OLE 정의 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `NOERROR` if successful; an OLE-defined error value.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

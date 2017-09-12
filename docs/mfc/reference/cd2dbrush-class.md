@@ -1,5 +1,5 @@
 ---
-title: "CD2DBrush 클래스 | Microsoft 문서"
+title: CD2DBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DBrush class
+- CD2DBrush [MFC], CD2DBrush
+- CD2DBrush [MFC], Attach
+- CD2DBrush [MFC], Destroy
+- CD2DBrush [MFC], Detach
+- CD2DBrush [MFC], Get
+- CD2DBrush [MFC], GetOpacity
+- CD2DBrush [MFC], GetTransform
+- CD2DBrush [MFC], IsValid
+- CD2DBrush [MFC], SetOpacity
+- CD2DBrush [MFC], SetTransform
+- CD2DBrush [MFC], m_pBrush
+- CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
 caps.latest.revision: 17
 author: mikeblome
@@ -46,88 +57,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b9902445fb6e18df20073d132a2117c67e695b25
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a067a0913012c24c0ebd7e2d2ac341b135beb927
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dbrush-class"></a>CD2DBrush 클래스
-ID2D1Brush에 대 한 래퍼입니다.  
+# <a name="cd2dbrush-class"></a>CD2DBrush Class
+A wrapper for ID2D1Brush.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DBrush : public CD2DResource;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::CD2DBrush](#cd2dbrush)|CD2DBrush 개체를 만듭니다.|  
-|[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|소멸자입니다. D2D 브러시 개체가 소멸 될 때 호출 됩니다.|  
+|[CD2DBrush::CD2DBrush](#cd2dbrush)|Constructs a CD2DBrush object.|  
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|The destructor. Called when a D2D brush object is being destroyed.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|  
-|[CD2DBrush::Destroy](#destroy)|CD2DBrush 개체를 소멸 시킵니다. (재정의 [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DBrush::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|  
-|[CD2DBrush::Get](#get)|반환 ID2D1Brush 인터페이스|  
-|[CD2DBrush::GetOpacity](#getopacity)|이 브러시의 불투명도 수준을 가져옵니다.|  
-|[CD2DBrush::GetTransform](#gettransform)|렌더링 대상의 현재 변환을 가져옵니다.|  
-|[CD2DBrush::IsValid](#isvalid)|리소스 유효성 검사 (재정의 [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DBrush::SetOpacity](#setopacity)|이 브러시의 불투명도 수준을 설정합니다.|  
-|[CD2DBrush::SetTransform](#settransform)|기존 변환을 대체 렌더링 대상에 지정된 된 변환을 적용 합니다. 이후의 모든 그리기 작업은 변환 된 공간에서 발생|  
+|[CD2DBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DBrush::Destroy](#destroy)|Destroys a CD2DBrush object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DBrush::Get](#get)|Returns ID2D1Brush interface|  
+|[CD2DBrush::GetOpacity](#getopacity)|Gets the degree of opacity of this brush|  
+|[CD2DBrush::GetTransform](#gettransform)|Gets the current transform of the render target|  
+|[CD2DBrush::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DBrush::SetOpacity](#setopacity)|Sets the degree of opacity of this brush|  
+|[CD2DBrush::SetTransform](#settransform)|Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|반환 ID2D1Brush 인터페이스|  
+|[CD2DBrush::operator ID2D1Brush*](#operator_id2d1brush_star)|Returns ID2D1Brush interface|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBrush::m_pBrush](#m_pbrush)|ID2D1Brush 개체에 대 한 포인터를 저장합니다.|  
-|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|브러시 속성입니다.|  
+|[CD2DBrush::m_pBrush](#m_pbrush)|Stores a pointer to an ID2D1Brush object.|  
+|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Brush properties.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DBrush`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
- 소멸자입니다. D2D 브러시 개체가 소멸 될 때 호출 됩니다.  
+##  <a name="_dtorcd2dbrush"></a>  CD2DBrush::~CD2DBrush  
+ The destructor. Called when a D2D brush object is being destroyed.  
   
 ```  
 virtual ~CD2DBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBrush::Attach  
- 기존 개체에 대 한 리소스 인터페이스를 연결.  
+##  <a name="attach"></a>  CD2DBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Brush* pResource);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
- CD2DBrush 개체를 만듭니다.  
+##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
+ Constructs a CD2DBrush object.  
   
 ```  
 CD2DBrush(
@@ -136,120 +147,120 @@ CD2DBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 렌더링 대상에 대 한 포인터입니다.  
+ A pointer to the render target.  
   
  `pBrushProperties`  
- 불투명도 및 브러시의 변환에 대 한 포인터입니다.  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="destroy"></a>CD2DBrush::Destroy  
- CD2DBrush 개체를 소멸 시킵니다.  
+##  <a name="destroy"></a>  CD2DBrush::Destroy  
+ Destroys a CD2DBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBrush::Detach  
- 개체에서 리소스 인터페이스를 분리합니다.  
+##  <a name="detach"></a>  CD2DBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Brush* Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 분리 된 리소스 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DBrush::Get  
- 반환 ID2D1Brush 인터페이스  
+##  <a name="get"></a>  CD2DBrush::Get  
+ Returns ID2D1Brush interface  
   
 ```  
 ID2D1Brush* Get();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Brush 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.  
   
-##  <a name="getopacity"></a>CD2DBrush::GetOpacity  
- 이 브러시의 불투명도 수준을 가져옵니다.  
+##  <a name="getopacity"></a>  CD2DBrush::GetOpacity  
+ Gets the degree of opacity of this brush  
   
 ```  
 FLOAT GetOpacity() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 0에서 브러시의 불투명도 나타내는 1 사이의 값입니다. 이 값은 선형으로 브러시에 의해 채워진 모든 픽셀의 알파 값을 조정 하는 상수 승수입니다. 불투명도 값은 고정 됩니다. 0에서 1 사이의 서로 곱하기 전에  
+### <a name="return-value"></a>Return Value  
+ A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together  
   
-##  <a name="gettransform"></a>CD2DBrush::GetTransform  
- 렌더링 대상의 현재 변환을 가져옵니다.  
+##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
+ Gets the current transform of the render target  
   
 ```  
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `transform`  
- 를 반환 하는 경우에 렌더링 대상의 현재 변환을 포함 되어 있습니다. 이 매개 변수는 초기화 되지 않은 상태로 전달 됩니다.  
+ When this returns, contains the current transform of the render target. This parameter is passed uninitialized  
   
-##  <a name="isvalid"></a>CD2DBrush::IsValid  
- 리소스 유효성 검사  
+##  <a name="isvalid"></a>  CD2DBrush::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pbrush"></a>CD2DBrush::m_pBrush  
- ID2D1Brush 개체에 대 한 포인터를 저장합니다.  
+##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush  
+ Stores a pointer to an ID2D1Brush object.  
   
 ```  
 ID2D1Brush* m_pBrush;  
 ```  
   
-##  <a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
- 브러시 속성입니다.  
+##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties  
+ Brush properties.  
   
 ```  
 CD2DBrushProperties* m_pBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
- 반환 ID2D1Brush 인터페이스  
+##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::operator ID2D1Brush*  
+ Returns ID2D1Brush interface  
   
 ```  
 operator ID2D1Brush*();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Brush 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.  
   
-##  <a name="setopacity"></a>CD2DBrush::SetOpacity  
- 이 브러시의 불투명도 수준을 설정합니다.  
+##  <a name="setopacity"></a>  CD2DBrush::SetOpacity  
+ Sets the degree of opacity of this brush  
   
 ```  
 void SetOpacity(FLOAT opacity);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `opacity`  
- 0에서 브러시의 불투명도 나타내는 1 사이의 값입니다. 이 값은 선형으로 브러시에 의해 채워진 모든 픽셀의 알파 값을 조정 하는 상수 승수입니다. 불투명도 값은 고정 됩니다. 0에서 1 사이의 서로 곱하기 전에  
+ A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together  
   
-##  <a name="settransform"></a>CD2DBrush::SetTransform  
- 기존 변환을 대체 렌더링 대상에 지정된 된 변환을 적용 합니다. 이후의 모든 그리기 작업은 변환 된 공간에서 발생  
+##  <a name="settransform"></a>  CD2DBrush::SetTransform  
+ Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `transform`  
- 렌더링 대상에 적용할 변환  
+ The transform to apply to the render target  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

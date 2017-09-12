@@ -1,5 +1,5 @@
 ---
-title: "ToolBar 컨트롤 스타일 | Microsoft 문서"
+title: ToolBar Control Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- ToolBar control styles
+- ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
 author: mikeblome
@@ -31,65 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c50009a50c5b80e007add9de679315df6aecea9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 383120b1eecd7db663ef878c386f51ad6a2a92f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="toolbar-control-styles"></a>ToolBar 컨트롤 스타일
-[CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 단추의 동작 및 모양을 결정 하는 스타일 플래그 집합이 했습니다. 호출 하 여 이러한 플래그의 조합을 설정할 수 있습니다 [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)합니다. 이 항목에는 스타일 플래그 값 및 해당 의미가 나열됩니다.  
+# <a name="toolbar-control-styles"></a>ToolBar Control Styles
+[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) has a set of style flags that determine the appearance and behavior of the button. You can set a combination of these flags by calling             [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). This topic lists the style flag values and their meanings.  
   
-## <a name="property-values"></a>속성 값  
- 다음 값에 따라 컨트롤에서 제공되는 단추 형식이 결정됩니다.  
+## <a name="property-values"></a>Property Values  
+ The following values determine the type of button that the control represents:  
   
  TBBS_BUTTON  
- 표준 누름 단추입니다(기본값).  
+ Standard pushbutton (default).  
   
  TBBS_CHECKBOX  
- 확인란입니다.  
+ Check box.  
   
  TBBS_CHECKGROUP  
- 확인란 그룹의 시작 부분입니다.  
+ The start of a group of checkboxes.  
   
  TBBS_GROUP  
- 여러 단추 그룹의 시작 부분입니다.  
+ The start of a group of buttons.  
   
  TBBS_SEPARATOR  
- 구분선입니다.  
+ Separator.  
   
- 다음 값은 컨트롤의 현재 상태를 나타냅니다.  
+ The following values represent the current status of the control:  
   
  TBBS_CHECKED  
- 확인란이 선택되었습니다.  
+ Check box is checked.  
   
  TBBS_DISABLED  
- 컨트롤이 비활성화되었습니다.  
+ Control is disabled.  
   
  TBBS_INDETERMINATE  
- 확인란이 결정되지 않은 상태입니다.  
+ Check box is in an indeterminate state.  
   
  TBBS_PRESSED  
- 단추를 눌렀습니다.  
+ Button is pressed.  
   
- 다음 값은 도구 모음에 있는 단추의 레이아웃을 변경합니다.  
+ The following value changes the layout of the button in the toolbar:  
   
  TBBS_BREAK  
- 새 줄에 항목을 배치하거나 열을 구분하지 않기 새 열에 배치합니다.  
+ Places the item on a new line or in a new column without separating columns.  
   
-## <a name="remarks"></a>주의  
- 현재 스타일에 저장 된 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)합니다. 새 값을 설정 하지 않은 `m_nStyle` 를 직접 일부 파생 된 클래스를 호출할 때 추가 처리를 수행 하기 때문에 `SetStyles`합니다.  
+## <a name="remarks"></a>Remarks  
+ The current style is stored in                 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Do not set a new value in                 `m_nStyle` directly, because some derived classes perform additional processing when you call                 `SetStyles`.  
   
- 시각화 관리자는 각 상태에서 단추의 모양을 결정합니다. 참조 [시각화 관리자](../../mfc/visualization-manager.md) 에 대 한 자세한 내용은 합니다.  
+ The visual manager determines the appearance of buttons in each state. See                 [Visualization Manager](../../mfc/visualization-manager.md) for more information.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbarbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarbutton.h  
   
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)   
- [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [시각화 관리자](../../mfc/visualization-manager.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Visualization Manager](../../mfc/visualization-manager.md)
 
 
 

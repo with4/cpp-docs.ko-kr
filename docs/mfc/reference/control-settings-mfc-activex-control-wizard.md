@@ -1,5 +1,5 @@
 ---
-title: "MFC ActiveX 컨트롤 마법사, 컨트롤 설정 | Microsoft 문서"
+title: Control Settings, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,82 +33,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 35ec579e6f777a3dffd87adc5a86af2ea38b30f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a2d6f7e2db8002a276e5304301399c84182dffbb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 설정
-마법사의이 페이지를 사용 하 여 컨트롤이 동작 하는 방법을 지정 합니다. 예를 들어 표준 Windows 컨트롤 형식에 컨트롤을 기본 동작 및 모양을 최적화 하거나 컨트롤이 다른 컨트롤에 대 한 컨테이너로 작용할 수 있는지를 나타낼 수 있습니다.  
+# <a name="control-settings-mfc-activex-control-wizard"></a>Control Settings, MFC ActiveX Control Wizard
+Use this page of the wizard to specify how you want the control to behave. For example, you can base the control on standard Windows control types, optimize its behavior and appearance, or indicate that the control can act as a container for other controls.  
   
- 컨트롤의 효율성을 최대화 하기 위해이 페이지에서 옵션을 선택 하는 방법에 대 한 자세한 내용은 참조 [MFC ActiveX 컨트롤: 최적화](../../mfc/mfc-activex-controls-optimization.md)합니다.  
+ For more information about how to select options on this page to maximize the efficiency of the control, see [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).  
   
-## <a name="uielement-list"></a>UI 요소 목록  
- **기반으로 하는 컨트롤 만들기**  
- 이 목록에 컨트롤이 상속 해야 하는 컨트롤의 종류를 선택할 수 있습니다. 목록에 사용할 수 있는 컨트롤 클래스의 하위 집합인 `CreateWindowEx` 및 commctrl.h에 지정 된 공용 컨트롤을 추가 합니다. 선택 영역에서 컨트롤의 스타일을 결정은 `PreCreateWindow` 함수는 *ProjName*Ctrl.cpp 파일입니다. 자세한 내용은 참조 [MFC ActiveX 컨트롤: Windows 컨트롤 서브클래싱](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)합니다.  
+## <a name="uielement-list"></a>UIElement List  
+ **Create control based on**  
+ On this list, you can select the kind of control from which your control should inherit. The list is a subset of the control classes that are available for `CreateWindowEx` and additional common controls that are specified in commctrl.h. Your selection determines the style of the control in the `PreCreateWindow` function in the *ProjName*Ctrl.cpp file. For more information, see [MFC ActiveX Controls: Subclassing a Windows Control](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|컨트롤|설명|  
+|Control|Description|  
 |-------------|-----------------|  
-|**단추**|Windows button 컨트롤|  
-|**콤보 상자**|Windows 콤보 상자 컨트롤|  
-|**편집**|Windows 편집 컨트롤|  
-|**목록 상자**|Windows 목록 상자 컨트롤|  
-|**스크롤 막대**|Windows 스크롤 막대 컨트롤|  
-|**정적**|Windows 정적 컨트롤|  
-|**msctls_hotkey32**|바로 가기 키 공용 컨트롤|  
-|**msctls_progress32**|진행률 표시줄 공용 컨트롤|  
-|**msctls_statusbar32**|상태 표시줄 공용 컨트롤|  
-|**msctls_trackbar32**|트랙 표시줄 공용 컨트롤|  
-|**msctls_updown32**|스핀 단추 (또는 위-아래) 공용 컨트롤|  
-|**SysAnimate32**|애니메이션 공용 컨트롤|  
-|**SysHeader32**|공용 헤더 컨트롤|  
-|**SysListView32**|목록 뷰 공용 컨트롤|  
-|**SysTabControl32**|공용 탭 컨트롤|  
-|**SysTreeView32**|트리 뷰 공용 컨트롤|  
+|**BUTTON**|A Windows button control|  
+|**COMBOBOX**|A Windows combo box control|  
+|**EDIT**|A Windows edit box control|  
+|**LISTBOX**|A Windows list box control|  
+|**SCROLLBAR**|A Windows scroll bar control|  
+|**STATIC**|A Windows static control|  
+|**msctls_hotkey32**|A hot key common control|  
+|**msctls_progress32**|A progress bar common control|  
+|**msctls_statusbar32**|A status bar common control|  
+|**msctls_trackbar32**|A track bar common control|  
+|**msctls_updown32**|A spin button (or up-down) common control|  
+|**SysAnimate32**|An animation common control|  
+|**SysHeader32**|A header common control|  
+|**SysListView32**|A list view common control|  
+|**SysTabControl32**|A tab common control|  
+|**SysTreeView32**|A tree view common control|  
   
- **표시 되었을 때 활성화**  
- 액세스할 때 컨트롤에 대 한 창이 만들어지도록 지정 합니다. 기본적으로는 **표시 되었을 때 활성화** 옵션을 선택 합니다. (예: 마우스 클릭 하면) 컨테이너 필요로 할 때까지 제어 정품 인증을 연기 하려는 경우이 옵션의 선택을 취소 합니다. 이 기능을 해제 하는 경우 필요한 될 때까지 컨트롤 창 만드는 비용이 발생 하지 않습니다. 자세한 내용은 참조 [때 표시 활성화 옵션 해제](../../mfc/turning-off-the-activate-when-visible-option.md)합니다.  
+ **Activates when visible**  
+ Specifies that a window is created for the control when it is accessed. By default, the **Activates when visible** option is selected. If you want to defer control activation until the container requires it (for example, when a user clicks the mouse), clear this option. When this feature is off, the control does not incur the expense of window creation until it is required. For more information, see [Turning off the Activate When Visible Option](../../mfc/turning-off-the-activate-when-visible-option.md).  
   
- **런타임 시 표시 되지 않습니다.**  
- 컨트롤에는 사용자 인터페이스가 없는 실행 시를 지정 합니다. 타이머는 표시 되지 않도록 하려는 경우 컨트롤의 종류입니다.  
+ **Invisible at run time**  
+ Specifies that the control has no user interface at run time. A timer is a kind of control that you might want to be invisible.  
   
- **에 정보 대화 상자**  
- 컨트롤에는 표준 Windows 지정 **에 대 한** 버전 번호 및 저작권 정보를 표시 하는 대화 상자입니다.  
+ **Has an About box dialog**  
+ Specifies that the control has the standard Windows **About** dialog box, which displays version number and copyright information.  
   
 > [!NOTE]
->  사용자가 컨트롤에 대 한 도움말을 액세스 하는 방법 도움말 구현 방법 및 도움을 받아 컨테이너 컨트롤 도움말 통합 했는지 여부에 따라 달라 집니다. 도움말을 통합 하는 방법에 대 한 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) 웹 사이트 "추가 상황에 맞는 도움말에 MFC ActiveX 컨트롤"을 검색 합니다.  
+>  How the user accesses help for the control depends on how you have implemented the help and whether you have integrated the control help with the container help. For more information about how to integrate help, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Adding Context-Sensitive Help to an MFC ActiveX Control".  
   
- 삽입이 옵션을 선택 하는 경우는 `AboutBox` 프로젝트 컨트롤 클래스에서 메서드를 제어 (C*ProjName*Ctrl.cpp) AboutBox 프로젝트 디스패치 지도를 추가 합니다. 기본적으로 이 옵션이 선택됩니다.  
+ When you select this option, it inserts the `AboutBox` control method in the project control class (C*ProjName*Ctrl.cpp) and adds AboutBox to the project dispatch map. By default, this option is selected.  
   
- **그리기 코드 최적화**  
- 컨테이너 원래 GDI 개체를 복원 자동으로 모두에 동일한 장치 컨텍스트로 그려지는 그려진 하는 컨테이너 컨트롤을 지정 합니다. 이 기능에 대 한 자세한 내용은 참조 [컨트롤 그리기 최적화](../../mfc/optimizing-control-drawing.md)합니다.  
+ **Optimized drawing code**  
+ Specifies that the container restores the original GDI objects automatically after all the container controls, which are drawn to the same device context, have been drawn. For more information about this feature, see [Optimizing Control Drawing](../../mfc/optimizing-control-drawing.md).  
   
- **창 없는 활성화**  
- 컨트롤이 활성화 될 때 창을 생성 하지 않는 것을 지정 합니다. 직사각형 또는 투명 한 컨트롤에 대 한 창 없는 활성화를 허용 하며 창 없는 컨트롤 기간이 있는 컨트롤 보다 시스템 오버 헤드를 덜 필요 합니다. 잘리지 않는 장치 컨텍스트 또는 깜빡임 없는 활성화에 대 한 창 없는 컨트롤을 허용 하지 않습니다. 1996 년 이전에 만들어진 컨테이너가 창 없는 활성화를 지원 하지 않습니다. 이 옵션을 사용 하는 방법에 대 한 자세한 내용은 참조 [창 없는 활성화 제공](../../mfc/providing-windowless-activation.md)합니다.  
+ **Windowless activation**  
+ Specifies that the control does not produce a window when it is activated. Windowless activation allows for nonrectangular or transparent controls, and a windowless control requires less system overhead than a control that has a window requires. A windowless control does not allow for an unclipped device context or flicker-free activation. Containers that were created before 1996 do not support windowless activation. For more information about how to use this option, see [Providing Windowless Activation](../../mfc/providing-windowless-activation.md).  
   
- **잘리지 않는 장치 컨텍스트**  
- 재정의 [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) 제어 헤더에서 (*projname*ctrl.h)에 대 한 호출을 사용 하지 않도록 설정 하려면 `IntersectClipRect` 수행한 `COleControl`합니다. 이 옵션을 선택 하면 속도가 약간 이점이 제공 됩니다. 선택 하는 경우 **창 없는 활성화**,이 기능을 사용할 수 없습니다. 자세한 내용은 참조 [잘리지 않는 장치 컨텍스트 사용](../../mfc/using-an-unclipped-device-context.md)합니다.  
+ **Unclipped device context**  
+ Overrides [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) in the control header (*projname*ctrl.h) to disable the call to `IntersectClipRect` made by `COleControl`. When you select this option, it provides a small speed advantage. If you select **Windowless activation**, this feature is not available. For more information, see [Using an Unclipped Device Context](../../mfc/using-an-unclipped-device-context.md).  
   
- **깜빡임 없는 활성화**  
- 그리기 작업 및 깜빡임을 컨트롤의 활성 및 비활성 상태 간에 발생 하는 제거 합니다. 선택 하는 경우 **창 없는 활성화**,이 기능을 사용할 수 없습니다. 이 옵션을 설정 하는 경우는 `noFlickerActivate` 플래그에 의해 반환 된 플래그 중 하나는 [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 자세한 내용은 참조 [깜빡임 없는 활성화 제공](../../mfc/providing-flicker-free-activation.md)합니다.  
+ **Flicker-free activation**  
+ Eliminates the drawing operations and the accompanying visual flicker that occur between the active and inactive states of the control. If you select **Windowless activation**, this feature is not available. When you set this option, the `noFlickerActivate` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information, see [Providing Flicker-Free Activation](../../mfc/providing-flicker-free-activation.md).  
   
- **개체 삽입 대화 상자에서 사용할 수 있는**  
- 컨트롤에서 제공 되도록 지정 된 **개체 삽입** 활성화 된 컨테이너에 대 한 대화 상자입니다. 이 옵션을 선택 하는 경우는 `afxRegInsertable` 플래그에 의해 반환 된 플래그 중 하나는 `AfxOleRegisterControlClass`합니다. 사용 하 여는 **개체 삽입** 대화 상자에서 사용자는 새로 만든 삽입할 수 또는 복합 문서에 기존 개체입니다.  
+ **Available in Insert Object dialog**  
+ Specifies that the control will be available in the **Insert Object** dialog box for enabled containers. When you select this option, the `afxRegInsertable` flag is one of the flags that are returned by `AfxOleRegisterControlClass`. By using the **Insert Object** dialog box, a user can insert newly created or existing objects into a compound document.  
   
- **마우스 포인터 알림을 비활성 상태일 때**  
- 인지 여부를 제어 활성 컨트롤을 마우스 포인터 알림 처리할 수 있습니다. 이 옵션을 선택 하는 경우는 `pointerInactive` 플래그에 의해 반환 된 플래그 중 하나는 [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 이 옵션을 사용 하는 방법에 대 한 자세한 내용은 참조 [제공 마우스 상호 작용 하는 동안 비활성](../../mfc/providing-mouse-interaction-while-inactive.md)합니다.  
+ **Mouse pointer notifications when inactive**  
+ Enables the control to process mouse pointer notifications, whether control is active or not. When you select this option, the `pointerInactive` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information about how to use this option, see [Providing Mouse Interaction While Inactive](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
- **단순 프레임 컨트롤의 역할**  
- 컨트롤을 설정 하 여 다른 컨트롤에 대 한 컨테이너 임을 지정는 `OLEMISC_SIMPLEFRAME` 컨트롤에 대 한 비트가 있습니다. 자세한 내용은는 [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) 웹 사이트, "간단한 프레임 사이트 포함 항목"를 검색 합니다.  
+ **Acts as a simple frame control**  
+ Specifies that the control is a container for other controls by setting the `OLEMISC_SIMPLEFRAME` bit for the control. For more information, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Simple Frame Site Containment".  
   
- **속성을 비동기적으로 로드**  
- 이전 비동기 데이터를 다시 설정 하 고 컨트롤의 비동기 속성의 새 부하를 시작 합니다.  
+ **Loads properties asynchronously**  
+ Enables a reset of any previous asynchronous data and initiates a new load of the asynchronous property of the control.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC ActiveX 컨트롤 마법사](../../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC ActiveX 컨트롤 마법사, 응용 프로그램 설정](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [MFC ActiveX 컨트롤 마법사, 컨트롤 이름](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 
 

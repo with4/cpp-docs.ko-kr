@@ -1,5 +1,5 @@
 ---
-title: "CD2DTextFormat 클래스 | Microsoft 문서"
+title: CD2DTextFormat Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DTextFormat class
+- CD2DTextFormat [MFC], CD2DTextFormat
+- CD2DTextFormat [MFC], Create
+- CD2DTextFormat [MFC], Destroy
+- CD2DTextFormat [MFC], Get
+- CD2DTextFormat [MFC], GetFontFamilyName
+- CD2DTextFormat [MFC], GetLocaleName
+- CD2DTextFormat [MFC], IsValid
+- CD2DTextFormat [MFC], ReCreate
+- CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
 caps.latest.revision: 16
 author: mikeblome
@@ -43,74 +51,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f7347dbbad8290bfdc800cbacaf21400583a392
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec537322ff432d83edd742076cc8f4c53a228e43
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dtextformat-class"></a>CD2DTextFormat 클래스
-IDWriteTextFormat에 대 한 래퍼입니다.  
+# <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
+A wrapper for IDWriteTextFormat.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DTextFormat : public CD2DResource;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|CD2DTextFormat 개체를 만듭니다.|  
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|소멸자입니다. D2D 텍스트 형식 개체가 소멸 될 때 호출 됩니다.|  
+|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Constructs a CD2DTextFormat object.|  
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|The destructor. Called when a D2D text format object is being destroyed.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::Create](#create)|CD2DTextFormat를 만듭니다. (재정의 [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DTextFormat::Destroy](#destroy)|CD2DTextFormat 개체를 소멸 시킵니다. (재정의 [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DTextFormat::Get](#get)|반환 IDWriteTextFormat 인터페이스|  
-|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|글꼴 패밀리 이름을의 복사본을 가져옵니다.|  
-|[CD2DTextFormat::GetLocaleName](#getlocalename)|로캘 이름의 복사본을 가져옵니다.|  
-|[CD2DTextFormat::IsValid](#isvalid)|리소스 유효성 검사 (재정의 [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DTextFormat::ReCreate](#recreate)|CD2DTextFormat를 다시 만듭니다. (재정의 [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
+|[CD2DTextFormat::Create](#create)|Creates a CD2DTextFormat. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DTextFormat::Destroy](#destroy)|Destroys a CD2DTextFormat object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DTextFormat::Get](#get)|Returns IDWriteTextFormat interface|  
+|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Gets a copy of the font family name.|  
+|[CD2DTextFormat::GetLocaleName](#getlocalename)|Gets a copy of the locale name.|  
+|[CD2DTextFormat::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DTextFormat::ReCreate](#recreate)|Re-creates a CD2DTextFormat. (Overrides [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|반환 IDWriteTextFormat 인터페이스|  
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Returns IDWriteTextFormat interface|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat에 대 한 포인터입니다.|  
+|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|A pointer to an IDWriteTextFormat.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
- 소멸자입니다. D2D 텍스트 형식 개체가 소멸 될 때 호출 됩니다.  
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat  
+ The destructor. Called when a D2D text format object is being destroyed.  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
- CD2DTextFormat 개체를 만듭니다.  
+##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat  
+ Constructs a CD2DTextFormat object.  
   
 ```  
 CD2DTextFormat(
@@ -125,118 +133,118 @@ CD2DTextFormat(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 렌더링 대상에 대 한 포인터입니다.  
+ A pointer to the render target.  
   
  `strFontFamilyName`  
- 글꼴 패밀리의 이름을 포함 하는 CString 개체입니다.  
+ A CString object that contains the name of the font family.  
   
  `fontSize`  
- DIP ("장치 독립적 픽셀") 단위로 글꼴의 논리적 크기입니다. DIPequals 1/96 인치입니다.  
+ The logical size of the font in DIP ("device-independent pixel") units. A DIPequals 1/96 inch.  
   
  `fontWeight`  
- 텍스트 개체에 대 한 글꼴 두께 나타내는 값입니다.  
+ A value that indicates the font weight for the text object.  
   
  `fontStyle`  
- 텍스트 개체에 대 한 글꼴 스타일을 나타내는 값입니다.  
+ A value that indicates the font style for the text object.  
   
  `fontStretch`  
- 텍스트 개체에 대 한 글꼴 늘이기를 나타내는 값입니다.  
+ A value that indicates the font stretch for the text object.  
   
  `strFontLocale`  
- 로캘 이름을 포함 하는 CString 개체입니다.  
+ A CString object that contains the locale name.  
   
  `pFontCollection`  
- 글꼴 컬렉션 개체에 대 한 포인터입니다. NULL 인 경우 시스템 글꼴 컬렉션을 나타냅니다.  
+ A pointer to a font collection object. When this is NULL, indicates the system font collection.  
   
  `bAutoDestroy`  
- 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DTextFormat::Create  
- CD2DTextFormat를 만듭니다.  
+##  <a name="create"></a>  CD2DTextFormat::Create  
+ Creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DTextFormat::Destroy  
- CD2DTextFormat 개체를 소멸 시킵니다.  
+##  <a name="destroy"></a>  CD2DTextFormat::Destroy  
+ Destroys a CD2DTextFormat object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextFormat::Get  
- 반환 IDWriteTextFormat 인터페이스  
+##  <a name="get"></a>  CD2DTextFormat::Get  
+ Returns IDWriteTextFormat interface  
   
 ```  
 IDWriteTextFormat* Get();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 IDWriteTextFormat 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
- 글꼴 패밀리 이름을의 복사본을 가져옵니다.  
+##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName  
+ Gets a copy of the font family name.  
   
 ```  
 CString GetFontFamilyName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 글꼴 패밀리 이름을 포함 하는 CString 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current font family name.  
   
-##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
- 로캘 이름의 복사본을 가져옵니다.  
+##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName  
+ Gets a copy of the locale name.  
   
 ```  
 CString GetLocaleName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 로캘 이름이 포함 된 CString 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current locale name.  
   
-##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
- 리소스 유효성 검사  
+##  <a name="isvalid"></a>  CD2DTextFormat::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
- IDWriteTextFormat에 대 한 포인터입니다.  
+##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat  
+ A pointer to an IDWriteTextFormat.  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
- 반환 IDWriteTextFormat 인터페이스  
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*  
+ Returns IDWriteTextFormat interface  
   
 ```  
 operator IDWriteTextFormat*();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 IDWriteTextFormat 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
- CD2DTextFormat를 다시 만듭니다.  
+##  <a name="recreate"></a>  CD2DTextFormat::ReCreate  
+ Re-creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT ReCreate(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK가 반환 됩니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

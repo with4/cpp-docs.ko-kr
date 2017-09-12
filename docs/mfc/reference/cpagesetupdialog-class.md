@@ -1,5 +1,5 @@
 ---
-title: "CPageSetupDialog 클래스 | Microsoft 문서"
+title: CPageSetupDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,11 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- page setup
-- Print Setup dialog box
-- Page Setup dialog box
-- OLE Page Setup dialog box
-- CPageSetupDialog class
+- CPageSetupDialog [MFC], CPageSetupDialog
+- CPageSetupDialog [MFC], CreatePrinterDC
+- CPageSetupDialog [MFC], DoModal
+- CPageSetupDialog [MFC], GetDeviceName
+- CPageSetupDialog [MFC], GetDevMode
+- CPageSetupDialog [MFC], GetDriverName
+- CPageSetupDialog [MFC], GetMargins
+- CPageSetupDialog [MFC], GetPaperSize
+- CPageSetupDialog [MFC], GetPortName
+- CPageSetupDialog [MFC], OnDrawPage
+- CPageSetupDialog [MFC], PreDrawPage
+- CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 caps.latest.revision: 24
 author: mikeblome
@@ -50,64 +57,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 81d36b3a005a291aca4c77dc9771a4fe92c304ee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f8b6cc626f6ae19ddb3f147441c16c83bdf74bfe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpagesetupdialog-class"></a>CPageSetupDialog 클래스
-인쇄 여백 설정과 수정이 추가로 지원되는 Windows 공용 OLE 페이지 설정 대화 상자에서 제공하는, 서비스를 캡슐화합니다.  
+# <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
+Encapsulates the services provided by the Windows common OLE Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPageSetupDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|`CPageSetupDialog` 개체를 생성합니다.|  
+|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Constructs a `CPageSetupDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|인쇄를 위한 장치 컨텍스트를 만듭니다.|  
-|[CPageSetupDialog::DoModal](#domodal)|대화 상자를 표시 하 고 사용자 만들기를 선택할 수 있습니다.|  
-|[CPageSetupDialog::GetDeviceName](#getdevicename)|프린터의 장치 이름을 반환합니다.|  
-|[CPageSetupDialog::GetDevMode](#getdevmode)|현재 반환 `DEVMODE` 프린터의 합니다.|  
-|[CPageSetupDialog::GetDriverName](#getdrivername)|프린터에서 사용 하는 드라이버를 반환 합니다.|  
-|[CPageSetupDialog::GetMargins](#getmargins)|프린터의 현재 여백 설정을 반환합니다.|  
-|[CPageSetupDialog::GetPaperSize](#getpapersize)|프린터의 용지 크기를 반환합니다.|  
-|[CPageSetupDialog::GetPortName](#getportname)|출력 포트 이름을 반환합니다.|  
-|[CPageSetupDialog::OnDrawPage](#ondrawpage)|인쇄 된 페이지의 화면 이미지를 렌더링 하는 프레임 워크에서 호출 됩니다.|  
-|[CPageSetupDialog::PreDrawPage](#predrawpage)|인쇄 된 페이지의 화면 이미지를 렌더링 하기 전에 프레임 워크에서 호출 합니다.|  
+|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Creates a device context for printing.|  
+|[CPageSetupDialog::DoModal](#domodal)|Displays the dialog box and allows the user make a selection.|  
+|[CPageSetupDialog::GetDeviceName](#getdevicename)|Returns the device name of the printer.|  
+|[CPageSetupDialog::GetDevMode](#getdevmode)|Returns the current `DEVMODE` of the printer.|  
+|[CPageSetupDialog::GetDriverName](#getdrivername)|Returns the driver used by the printer.|  
+|[CPageSetupDialog::GetMargins](#getmargins)|Returns the current margin settings of the printer.|  
+|[CPageSetupDialog::GetPaperSize](#getpapersize)|Returns the paper size of the printer.|  
+|[CPageSetupDialog::GetPortName](#getportname)|Returns the output port name.|  
+|[CPageSetupDialog::OnDrawPage](#ondrawpage)|Called by the framework to render a screen image of a printed page.|  
+|[CPageSetupDialog::PreDrawPage](#predrawpage)|Called by the framework before rendering a screen image of a printed page.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::m_psd](#m_psd)|사용자 지정 하는 데 사용 되는 구조는 `CPageSetupDialog` 개체입니다.|  
+|[CPageSetupDialog::m_psd](#m_psd)|A structure used to customize a `CPageSetupDialog` object.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 인쇄 설정 대화 상자의 위치를 차지 하도록 설계 되었습니다.  
+## <a name="remarks"></a>Remarks  
+ This class is designed to take the place of the Print Setup dialog box.  
   
- 사용 하는 `CPageSetupDialog` 개체를 사용 하 여 개체를 만들려면 먼저는 `CPageSetupDialog` 생성자입니다. 대화 상자를 생성 한 후이 설정 하거나 모든 값을 수정할 수 있습니다는 `m_psd` 데이터 멤버를 대화 상자의 컨트롤의 값을 초기화 합니다. [m_psd](#m_psd) 형식의 구조는 **PAGESETUPDLG**합니다.  
+ To use a `CPageSetupDialog` object, first create the object using the `CPageSetupDialog` constructor. Once the dialog box has been constructed, you can set or modify any values in the `m_psd` data member to initialize the values of the dialog box's controls. The [m_psd](#m_psd) structure is of type **PAGESETUPDLG**.  
   
- 대화 상자 컨트롤을 초기화 한 후 호출 하는 `DoModal` 멤버 함수를 대화 상자를 표시 하 고 인쇄 옵션을 선택 하는 데 사용할 수 있습니다. `DoModal`사용자는 확인 선택 여부를 반환 ( **IDOK**) 하거나 취소 ( **IDCANCEL**) 단추입니다.  
+ After initializing the dialog box controls, call the `DoModal` member function to display the dialog box and allow the user to select print options. `DoModal` returns whether the user selected the OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- 경우 `DoModal` 반환 **IDOK**, 몇 가지를 사용할 수 있습니다 `CPageSetupDialog`의 멤버 함수 또는 액세스는 `m_psd` 사용자가 입력 한 정보를 검색할 데이터 멤버입니다.  
+ If `DoModal` returns **IDOK**, you can use several of `CPageSetupDialog`'s member functions, or access the `m_psd` data member, to retrieve information input by the user.  
   
 > [!NOTE]
->  일반 OLE 페이지 설정 대화 상자를 무시 한 후 사용자가 변경한 프레임 워크에 의해 저장 되지 않습니다. 이 대화 상자에서 응용 프로그램의 문서 또는 응용 프로그램 클래스의 멤버와 같은 영구적인 위치 값을 저장 하려면 응용 프로그램 자체는 합니다.  
+>  After the common OLE Page Setup dialog box is dismissed, any changes made by the user will not be saved by the framework. It is up to the application itself to save any values from this dialog box to a permanent location, such as member of the application's document or application class.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -120,11 +127,11 @@ class CPageSetupDialog : public CCommonDialog
   
  `CPageSetupDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
- 생성 하려면이 함수를 호출 하는 `CPageSetupDialog` 개체입니다.  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
+ Call this function to construct a `CPageSetupDialog` object.  
   
 ```  
 CPageSetupDialog(
@@ -132,124 +139,124 @@ CPageSetupDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 하나 이상의 플래그 대화 상자의 설정을 사용자 지정 하는 데 사용할 수 있습니다. 비트 OR 연산자를 사용 하 여 값을 결합할 수 있습니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
+ One or more flags you can use to customize the settings of the dialog box. The values can be combined using the bitwise-OR operator. These values have the following meanings:  
   
-- **PSD_DEFAULTMINMARGINS** 프린터의 최소값으로 동일 해야 페이지 여백에 대해 허용 가능한 최소 너비를 설정 합니다. 이 플래그는 무시 됩니다는 **PSD_MARGINS** 및 **PSD_MINMARGINS** 플래그 지정 됩니다.  
+- **PSD_DEFAULTMINMARGINS** Sets the minimum allowable widths for the page margins to be the same as the printer's minimums. This flag is ignored if the **PSD_MARGINS** and **PSD_MINMARGINS** flags are also specified.  
   
-- **PSD_INWININIINTLMEASURE** 구현 되지 않았습니다.  
+- **PSD_INWININIINTLMEASURE** Not implemented.  
   
-- **PSD_MINMARGINS** 하면 시스템에 지정 된 값을 사용 하는 **rtMinMargin** 왼쪽, 위쪽, 오른쪽 및 아래쪽 여백에 대 한 허용 가능한 최소 너비와 멤버입니다. 시스템을 지정된 최소값 보다 작으면 너비를 입력할 사용자 수 없습니다. 경우 **PSD_MINMARGINS** 를 지정 하지 않으면 시스템 프린터에서 허용 하는 것을 허용 가능한 최소 너비를 설정 합니다.  
+- **PSD_MINMARGINS** Causes the system to use the values specified in the **rtMinMargin** member as the minimum allowable widths for the left, top, right, and bottom margins. The system prevents the user from entering a width that is less than the specified minimum. If **PSD_MINMARGINS** is not specified, the system sets the minimum allowable widths to those allowed by the printer.  
   
-- **PSD_MARGINS** 여백 컨트롤 영역을 활성화 합니다.  
+- **PSD_MARGINS** Activates the margin control area.  
   
-- **PSD_INTHOUSANDTHSOFINCHES** 하면 대화 상자 단위 인치의 1/1000 단위로 측정할 수입니다.  
+- **PSD_INTHOUSANDTHSOFINCHES** Causes the units of the dialog box to be measured in 1/1000 of an inch.  
   
-- **PSD_INHUNDREDTHSOFMILLIMETERS** 1/100 밀리미터 단위로 측정 되는 대화 상자의 단위 발생 합니다.  
+- **PSD_INHUNDREDTHSOFMILLIMETERS** Causes the units of the dialog box to be measured in 1/100 of a millimeter.  
   
-- **PSD_DISABLEMARGINS** 여백 대화 상자 컨트롤을 사용 하지 않도록 설정 합니다.  
+- **PSD_DISABLEMARGINS** Disables the margin dialog box controls.  
   
-- **PSD_DISABLEPRINTER** 프린터 단추를 사용 하지 않도록 설정 합니다.  
+- **PSD_DISABLEPRINTER** Disables the Printer button.  
   
-- **PSD_NOWARNING** 기본 프린터가 있을 때 표시 되지 않도록 경고 메시지를 방지할 수 있습니다.  
+- **PSD_NOWARNING** Prevents the warning message from being displayed when there is no default printer.  
   
-- **PSD_DISABLEORIENTATION** 페이지 방향 대화 상자 컨트롤을 사용 하지 않도록 설정 합니다.  
+- **PSD_DISABLEORIENTATION** Disables the page orientation dialog control.  
   
-- **PSD_RETURNDEFAULT** 하면 `CPageSetupDialog` 반환할 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 대화 상자를 표시 하지 않고 시스템 기본 프린터에 대해 초기화 하는 구조입니다. 가정 하는 두 **hDevNames** 및 **hDevMode** 는 **NULL**고, 그렇지 않으면 함수는 오류를 반환 합니다. 시스템 기본 프린터는 오래 된 프린터 드라이버 (이전 Windows 버전 3.0)에서 지원 되는 경우만 **hDevNames** 를 반환 합니다. **hDevMode** is **NULL**.  
+- **PSD_RETURNDEFAULT** Causes `CPageSetupDialog` to return [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) and [DEVNAMES](../../mfc/reference/devnames-structure.md) structures that are initialized for the system default printer without displaying a dialog box. It is assumed that both **hDevNames** and **hDevMode** are **NULL**; otherwise, the function returns an error. If the system default printer is supported by an old printer driver (earlier than Windows version 3.0), only **hDevNames** is returned; **hDevMode** is **NULL**.  
   
-- **PSD_DISABLEPAPER** 용지 선택 컨트롤을 사용 하지 않도록 설정 합니다.  
+- **PSD_DISABLEPAPER** Disables the paper selection control.  
   
-- **PSD_SHOWHELP** 대화 상자에 도움말 단추를 표시 합니다. **hwndOwner** 멤버 아니어야 **NULL** 이 플래그를 지정 합니다.  
+- **PSD_SHOWHELP** Causes the dialog box to show the Help button. The **hwndOwner** member must not be **NULL** if this flag is specified.  
   
-- **PSD_ENABLEPAGESETUPHOOK** 를 통해 후크 함수에 지정 된 **lpfnSetupHook**합니다.  
+- **PSD_ENABLEPAGESETUPHOOK** Enables the hook function specified in **lpfnSetupHook**.  
   
-- **PSD_ENABLEPAGESETUPTEMPLATE** 로 식별 되는 대화 템플릿 상자를 사용 하 여 대화 상자를 만드는 운영 체제 **hInstance** 및 **lpSetupTemplateName**합니다.  
+- **PSD_ENABLEPAGESETUPTEMPLATE** Causes the operating system to create the dialog box by using the dialog template box identified by **hInstance** and **lpSetupTemplateName**.  
   
-- **PSD_ENABLEPAGESETUPTEMPLATEHANDLE** 나타내는 **hInstance** 미리 로드 대화 상자 템플릿에 포함 된 데이터 블록을 식별 합니다. 시스템은 무시 **lpSetupTemplateName** 이 플래그를 지정 합니다.  
+- **PSD_ENABLEPAGESETUPTEMPLATEHANDLE** Indicates that **hInstance** identifies a data block that contains a preloaded dialog box template. The system ignores **lpSetupTemplateName** if this flag is specified.  
   
-- **PSD_ENABLEPAGEPAINTHOOK** 를 통해 후크 함수에 지정 된 **lpfnPagePaintHook**합니다.  
+- **PSD_ENABLEPAGEPAINTHOOK** Enables the hook function specified in **lpfnPagePaintHook**.  
   
-- **PSD_DISABLEPAGEPAINTING** 대화 상자의 그리기 영역을 사용 하지 않도록 설정 합니다.  
+- **PSD_DISABLEPAGEPAINTING** Disables the draw area of the dialog box.  
   
  `pParentWnd`  
- 이 대화 상자의 부모 또는 소유자에 대 한 포인터입니다.  
+ Pointer to the dialog box's parent or owner.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 함수 대화 상자를 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [DoModal](../../mfc/reference/cdialog-class.md#domodal) function to display the dialog box.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&94;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
- 프린터 장치 컨텍스트를 만듭니다는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 구조입니다.  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
+ Creates a printer device context from the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) and [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
   
 ```  
 HDC CreatePrinterDC();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 새로 만든된 프린터 장치 컨텍스트 (DC)에 대 한 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ Handle to the newly created printer device context (DC).  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
- Windows 일반 OLE 페이지 설정 대화 상자를 표시 하 고 사용자가 인쇄 여백, 크기 및 용지 방향을 대상 프린터와 같은 다양 한 인쇄 설정 옵션을 선택 하도록 허용 하려면이 함수를 호출 합니다.  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
+ Call this function to display the Windows common OLE Page Setup dialog box and allow the user to select various print setup options such as the printing margins, size and orientation of the paper, and destination printer.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- **IDOK** 또는 **IDCANCEL**합니다. 경우 **IDCANCEL** 은 Windows 호출 반환 [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) 함수 오류가 발생 한 것인지 확인 합니다.  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK** 및 **IDCANCEL** 는 사용자 확인 또는 취소 단추를 선택 하는지 여부를 나타내는 상수입니다.  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>주의  
- 또한 사용자 네트워크 위치 및 선택한 프린터에 특정 속성과 같은 프린터 설치 옵션을 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ In addition, the user can access the printer setup options such as network location and properties specific to the selected printer.  
   
- 멤버를 설정 하 여 다양 한 페이지 설정 대화 상자 옵션을 초기화 하려는 경우는 `m_psd` 구조를 호출 하기 전에 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하 고 있습니다. 호출한 후 `DoModal`, 다른 멤버 대화 상자에 설정 또는 사용자가 입력 한 정보를 검색 하는 함수를 호출 합니다.  
+ If you want to initialize the various Page Setup dialog options by setting members of the `m_psd` structure, you should do so before calling `DoModal`, and after the dialog object is constructed. After calling `DoModal`, call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
- 사용자가 입력 한 현재 설정을 전파 하려는 경우에 전화를 거 [CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter)합니다. 정보를 사용 하는이 함수는 `CPageSetupDialog` 개체를 초기화 하 고 적절 한 특성을 가진 새 프린터 DC를 선택 합니다.  
+ If you want to propagate the current settings entered by the user, make a call to [CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). This function takes the information from the `CPageSetupDialog` object and initializes and selects a new printer DC with the proper attributes.  
   
- [!code-cpp[NVC_MFCDocView #&95;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]  
   
-### <a name="example"></a>예제  
-  예를 참조 [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
- 한 후이 함수를 호출 `DoModal` 현재 선택 된 프린터의 이름을 검색할 수 있습니다.  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
+ Call this function after `DoModal` to retrieve the name of the currently selected printer.  
   
 ```  
 CString GetDeviceName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 사용 하는 장치 이름은 **CPageSetupDialog** 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The device name used by the **CPageSetupDialog** object.  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
- 이 함수를 호출한 후 호출 `DoModal` 의 프린터 장치 컨텍스트에 대 한 정보를 검색 하는 `CPageSetupDialog` 개체입니다.  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
+ Call this function after calling `DoModal` to retrieve information about the printer device context of the `CPageSetupDialog` object.  
   
 ```  
 LPDEVMODE GetDevMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 장치 초기화 및 인쇄 드라이버의 환경에 대 한 정보가 포함 된 데이터 구조입니다. 이 구조는 windows에서 사용 되는 메모리를 잠금 해제 해야 [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) 에 설명 된 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="return-value"></a>Return Value  
+ The [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) data structure, which contains information about the device initialization and environment of a print driver. You must unlock the memory taken by this structure with the Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) function, which is described in the Windows SDK.  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
- 이 함수를 호출한 후 호출 [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) 시스템에서 정의 된 프린터 장치 드라이버의 이름을 검색할 수 있습니다.  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
+ Call this function after calling [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) to retrieve the name of the system-defined printer device driver.  
   
 ```  
 CString GetDriverName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CString` 드라이버 시스템 정의 이름을 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ A `CString` specifying the system-defined driver name.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 `lpszDriverName` 에 대 한 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
+### <a name="remarks"></a>Remarks  
+ Use a pointer to the `CString` object returned by `GetDriverName` as the value of `lpszDriverName` in a call to [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
- 호출한 후이 함수를 호출 `DoModal` 프린터 장치 드라이버의 여백을 검색할 수 있습니다.  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
+ Call this function after a call to `DoModal` to retrieve the margins of the printer device driver.  
   
 ```  
 void GetMargins(
@@ -257,51 +264,51 @@ void GetMargins(
     LPRECT lpRectMinMargins) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpRectMargins*  
- 에 대 한 포인터는 [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 현재 선택 된 프린터에 대 한 인쇄 여백 (1/1000 인치 또는 1/100 m m)에서 설명 하는 개체입니다. 전달 **NULL** 이 사각형에 관심이 없는 경우이 매개 변수에 있습니다.  
+ Pointer to a [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that describes (in 1/1000 inches or 1/100 mm) the print margins for the currently selected printer. Pass **NULL** for this parameter, if you are not interested in this rectangle.  
   
  *lpRectMinMargins*  
- 에 대 한 포인터는 `RECT` 구조 또는 `CRect` 현재 선택 된 프린터에 대 한 최소 인쇄 여백 (1/1000 인치 또는 1/100 m m)에서 설명 하는 개체입니다. 전달 **NULL** 이 사각형에 관심이 없는 경우이 매개 변수에 있습니다.  
+ Pointer to a `RECT` structure or `CRect` object that describes (in 1/1000 inches or 1/100 mm) the minimum print margins for the currently selected printer. Pass **NULL** for this parameter, if you are not interested in this rectangle.  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
- 인쇄 하기 위해 선택한 용지 크기를 검색 하려면이 함수를 호출 합니다.  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
+ Call this function to retrieve the size of the paper selected for printing.  
   
 ```  
 CSize GetPaperSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) (1/1000 인치 또는 1/100 m m)에서 인쇄를 위해 선택한 용지 크기를 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object containing the size of the paper (in 1/1000 inches or 1/100 mm) selected for printing.  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
- 이 함수를 호출한 후 호출 `DoModal` 현재 선택 된 프린터 포트의 이름을 검색할 수 있습니다.  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
+ Call this function after calling `DoModal` to retrieve the name of the currently selected printer port.  
   
 ```  
 CString GetPortName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 선택 된 프린터 포트의 이름입니다.  
+### <a name="return-value"></a>Return Value  
+ The name of the currently selected printer port.  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
- 형식의 구조 **PAGESETUPDLG**, 대화 상자 개체의 특성을 저장 하는 구성원으로 포함 합니다.  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
+ A structure of type **PAGESETUPDLG**, whose members store the characteristics of the dialog object.  
   
 ```  
 PAGESETUPDLG m_psd;  
 ```  
   
-### <a name="remarks"></a>주의  
- 생성 한 후 한 `CPageSetupDialog` 개체를 사용할 수 있습니다 `m_psd` 호출 하기 전에 대화 상자의 다양 한 측면을 설정 하는 `DoModal` 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CPageSetupDialog` object, you can use `m_psd` to set various aspects of the dialog box before calling the `DoModal` member function.  
   
- 수정 하는 경우는 `m_psd` 데이터 멤버를 직접 모든 기본 동작을 재정의 하 합니다.  
+ If you modify the `m_psd` data member directly, you will override any default behavior.  
   
- 대 한 자세한 내용은 [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) structure, see the Windows SDK.  
   
- 예를 참조 [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)합니다.  
+ See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
- 인쇄 된 페이지의 화면 이미지를 그릴 프레임 워크에 의해 호출 됩니다.  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
+ Called by the framework to draw a screen image of a printed page.  
   
 ```  
 virtual UINT OnDrawPage(
@@ -310,42 +317,42 @@ virtual UINT OnDrawPage(
     LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 프린터 장치 컨텍스트에 대 한 포인터입니다.  
+ Pointer to the printer device context.  
   
  `nMessage`  
- 그리고 현재 페이지의 영역을 나타내는 메시지를 지정 합니다. 다음 중 하나일 수 있습니다.  
+ Specifies a message, indicating the area of the page currently being drawn. Can be one of the following:  
   
-- **WM_PSD_FULLPAGERECT** 전체 페이지 영역입니다.  
+- **WM_PSD_FULLPAGERECT** The entire page area.  
   
-- **WM_PSD_MINMARGINRECT** 현재 최소 여백입니다.  
+- **WM_PSD_MINMARGINRECT** Current minimum margins.  
   
-- **WM_PSD_MARGINRECT** 현재 여백입니다.  
+- **WM_PSD_MARGINRECT** Current margins.  
   
-- **WM_PSD_GREEKTEXTRECT** 페이지의 내용입니다.  
+- **WM_PSD_GREEKTEXTRECT** Contents of the page.  
   
-- **WM_PSD_ENVSTAMPRECT** 영역 우표 표현 하기 위해 예약 되어 있습니다.  
+- **WM_PSD_ENVSTAMPRECT** Area reserved for a postage stamp representation.  
   
-- **WM_PSD_YAFULLPAGERECT** 반송 주소 표현에 대 한 영역입니다. 이 영역 샘플 페이지 영역의 가장자리를 확장합니다.  
+- **WM_PSD_YAFULLPAGERECT** Area for a return address representation. This area extends to the edges of the sample page area.  
   
  `lpRect`  
- 에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는 [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) 그리기 영역의 좌표를 포함 하는 개체입니다.  
+ Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) object containing the coordinates of the drawing area.  
   
-### <a name="return-value"></a>반환 값  
- 처리 하는 경우 0이 아닌 값 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero value if handled; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 이미지는 일반 OLE 페이지 설정 대화 상자의 일부로 표시 됩니다. 기본 구현은 텍스트 페이지의 이미지를 그립니다.  
+### <a name="remarks"></a>Remarks  
+ This image is then displayed as part of the common OLE Page Setup dialog box. The default implementation draws an image of a page of text.  
   
- 이미지, 또는 전체 이미지의 특정 영역 그리기를 사용자 지정 하려면이 함수를 재정의 합니다. 사용 하 여이 수행할 수는 `switch` 문을 **사례** 의 값을 검사 하는 문을 `nMessage`합니다. 예를 들어 페이지 이미지의 내용을 렌더링을 사용자 지정 하려면 다음 예제 코드를 사용할 수 있습니다.  
+ Override this function to customize the drawing of a specific area of the image, or the entire image. You can do this by using a `switch` statement with **case** statements checking the value of `nMessage`. For example, to customize the rendering of the contents of the page image, you could use the following example code:  
   
- [!code-cpp[NVC_MFCDocView #&96;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- 모든 사례를 처리할 필요가 없습니다 `nMessage`합니다. 이미지, 이미지, 또는 전체 영역이의 여러 구성 요소에의 한 구성 요소를 처리 하도록 선택할 수 있습니다.  
+ Note that you do not need to handle every case of `nMessage`. You can choose to handle one component of the image, several components of the image, or the whole area.  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
- 인쇄 된 페이지의 화면 이미지를 그리기 전에 프레임 워크에서 호출 됩니다.  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
+ Called by the framework before drawing the screen image of a printed page.  
   
 ```  
 virtual UINT PreDrawPage(
@@ -354,42 +361,42 @@ virtual UINT PreDrawPage(
     LPPAGESETUPDLG pPSD);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *wPaper*  
- 용지 크기를 나타내는 값을 지정 합니다. 이 값 중 하나일 수 있습니다는 **DMPAPER_** 의 설명에 나열 된 값은 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 구조입니다.  
+ Specifies a value that indicates the paper size. This value can be one of the **DMPAPER_** values listed in the description of the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure.  
   
  `wFlags`  
- 용지 또는 봉투의 방향을 나타냅니다 및 프린터 도트 또는 HPPCL (Hewlett Packard 프린터 제어 언어) 장치 인지 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ Indicates the orientation of the paper or envelope, and whether the printer is a dot-matrix or HPPCL (Hewlett Packard Printer Control Language) device. This parameter can have one of the following values:  
   
--   0x001 종이 가로 모드 (점 행렬)  
+-   0x001   Paper in landscape mode (dot matrix)  
   
--   0x003 종이 가로 모드 (HPPCL)  
+-   0x003   Paper in landscape mode (HPPCL)  
   
--   0x005 종이 세로 모드 (점 행렬)  
+-   0x005   Paper in portrait mode (dot matrix)  
   
--   0x007 종이 세로 모드 (HPPCL)  
+-   0x007   Paper in portrait mode (HPPCL)  
   
--   0x00b 가로 모드 (HPPCL) 봉투 (envelope)  
+-   0x00b   Envelope in landscape mode (HPPCL)  
   
--   0x00d 세로 모드 (점 행렬)의 봉투 (envelope)  
+-   0x00d   Envelope in portrait mode (dot matrix)  
   
--   0x019 가로 모드 (점 매트릭스) 봉투 (envelope)  
+-   0x019   Envelope in landscape mode (dot matrix)  
   
--   0x01f 세로 모드 (점 행렬)의 봉투 (envelope)  
+-   0x01f   Envelope in portrait mode (dot matrix)  
   
  `pPSD`  
- 에 대 한 포인터는 **PAGESETUPDLG** 구조입니다. 대 한 자세한 내용은 [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Pointer to a **PAGESETUPDLG** structure. For more information on [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), see the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 처리 하는 경우 0이 아닌 값 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero value if handled; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이미지를 그리는 사용자 지정 하려면이 함수를 재정의 합니다. 이 함수를 재정의 하 고 반환 하는 경우 **TRUE**, 전체 이미지를 그릴 해야 합니다. 이 함수를 재정의 하 고 반환 하는 경우 **FALSE**, 프레임 워크에 의해에 전체 기본 이미지를 그립니다.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the drawing of the image. If you override this function and return **TRUE**, you must draw the entire image. If you override this function and return **FALSE**, the entire default image is drawn by the framework.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 워드 패드](../../visual-cpp-samples.md)   
- [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample WORDPAD](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

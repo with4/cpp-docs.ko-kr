@@ -1,48 +1,67 @@
 ---
-title: "Rebar 컨트롤 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBarCtrl 클래스, 만들기"
-  - "rebar 컨트롤, 만들기"
+title: Creating a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], creating
+- CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rebar 컨트롤 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0ed89f4b375331aab4390ac2e4128e8a8a8b5536
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-[CReBarCtrl](../mfc/reference/crebarctrl-class.md) 개체는 부모 개체가 표시 되기 전에 만들어 져야 합니다.  이렇게 하면 칠하기 문제가 발생할 가능성이 최소화 됩니다.  
+---
+# <a name="creating-a-rebar-control"></a>Creating a Rebar Control
+[CReBarCtrl](../mfc/reference/crebarctrl-class.md) objects should be created before the parent object is visible. This minimizes the possibilities of painting problems.  
   
- 예를 들어, rebar 컨트롤 \(프레임 창 개체에 사용 되는\)는 일반적으로 도구 모음 컨트롤에 대한 부모 창으로 사용 됩니다.  따라서 rebar 컨트롤의 부모는 프레임 창 개체입니다.  프레임 창 개체는 부모이기 때문에, `OnCreate` 멤버 함수는 rebar 컨트롤을 생성하기 위한 최적의 장소입니다.  
+ For instance, rebar controls (used in frame window objects) are commonly used as parent windows for toolbar controls. Therefore, the parent of the rebar control is the frame window object. Because the frame window object is the parent, the `OnCreate` member function (of the parent) is an excellent place to create the rebar control.  
   
- `CReBarCtrl` 개체를 사용하려면, 일반적으로 다음 단계를 수행해야 합니다.  
+ To use a `CReBarCtrl` object, you will typically follow these steps:  
   
-### CReBarCtrl 개체를 사용 하려면  
+### <a name="to-use-a-crebarctrl-object"></a>To use a CReBarCtrl object  
   
-1.  [CReBarCtrl](../mfc/reference/crebarctrl-class.md) 개체를 생성합니다.  
+1.  Construct the [CReBarCtrl](../mfc/reference/crebarctrl-class.md) object.  
   
-2.  [Create](../Topic/CReBarCtrl::Create.md) 을 호출하여 Windows rebar 명령 컨트롤을 만들고 요구되는 스타일을 지정하는 `CReBarCtrl` 개체와 연결하십시오.  
+2.  Call [Create](../mfc/reference/crebarctrl-class.md#create) to create the Windows rebar common control and attach it to the `CReBarCtrl` object, specifying any desired styles.  
   
-3.  rebar 컨트롤 개체의 배경으로 사용되는 [CBitmap::LoadBitmap](../Topic/CBitmap::LoadBitmap.md) 를 호출하여 비트맵을 로드하십시오.  
+3.  Load a bitmap, with a call to [CBitmap::LoadBitmap](../mfc/reference/cbitmap-class.md#loadbitmap), to be used as the background of the rebar control object.  
   
-4.  자식 창 개체\(도구 모음, 대화 상자 컨트롤 등등\) 를 만들고 초기화하십시오. rebar 컨트롤 개체가 포함합니다.  
+4.  Create and initialize any child window objects (toolbars, dialog controls, and so on) that will be contained by the rebar control object.  
   
-5.  밴드를 삽입하는데 필요한 정보를 사용하여 **REBARBANDINFO** 구조체를 초기화 하십시오.  
+5.  Initialize a **REBARBANDINFO** structure with the necessary information for the band about to be inserted.  
   
-6.  [InsertBand](../Topic/CReBarCtrl::InsertBand.md) 를 호출하여 기존 자식 창\(`m_wndReToolBar`와 같은\)을 새 rebar 컨트롤에 삽입하십시오.  기존 rebar 컨트롤에 밴드를 삽입하는 방법에 대한 자세한 내용은 [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md) 를 참조하십시오.  
+6.  Call [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) to insert existing child windows (such as `m_wndReToolBar`) into the new rebar control. For more information on inserting bands into an existing rebar control, see [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md).  
   
-## 참고 항목  
- [CReBarCtrl 사용](../mfc/using-crebarctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

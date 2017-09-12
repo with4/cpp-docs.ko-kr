@@ -1,46 +1,65 @@
 ---
-title: "대화 상자 리소스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "대화 상자 리소스"
-  - "대화 상자 템플릿, 대화 상자 리소스 만들기"
-  - "MFC 대화 상자, 만들기"
-  - "MFC 대화 상자, 대화 상자 리소스"
-  - "리소스[MFC], 대화 상자 만들기"
-  - "템플릿, 만들기"
+title: Creating the Dialog Resource | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog resources
+- MFC dialog boxes [MFC], creating
+- dialog templates [MFC], creating dialog resource
+- templates [MFC], creating
+- resources [MFC], creating dialog boxes
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 대화 상자 리소스 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af33a71f914e5e7545d9719bf2f620f3feb4faa7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-[dialog box](../mfc/dialog-boxes.md) 를 디자인하고 대화 상자 리소스를 생성하려면, [dialog editor](../mfc/dialog-editor.md) 를 사용할 수 있습니다.  대화 상자 편집기에서 다음을 수행할 수 있습니다.  
+---
+# <a name="creating-the-dialog-resource"></a>Creating the Dialog Resource
+To design the [dialog box](../mfc/dialog-boxes.md) and create the dialog resource, you use the [dialog editor](../windows/dialog-editor.md). In the dialog editor, you can:  
   
--   나타나는 대화 상자의 위치와 크기를 조정 합니다.  
+-   Adjust the size and location your dialog box will have when it appears.  
   
--   컨트롤 팔레트에서 컨트롤의 다양한 종류를 끌고 대화 상자에서 원하는 위치에 놓습니다.  
+-   Drag various kinds of controls from a controls palette and drop them where you want them in the dialog box.  
   
--   도구 모음에서 맞춤 단추를 사용 하여 컨트롤을 배치 합니다.  
+-   Position the controls with alignment buttons on the toolbar.  
   
--   모양 및 동작을 프로그램에서 시뮬레이션 하여 대화 상자를 테스트 합니다.  테스트 모드에서, 텍스트 박스에 입력하고 입력 버튼은 누르는 등 대화 상자의 컨트롤을 조작할 수 있습니다.  
+-   Test your dialog box by simulating the appearance and behavior it will have in your program. In Test mode, you can manipulate the dialog box's controls by typing text in text boxes, clicking pushbuttons, and so on.  
   
- 마쳤으면, 대화 상자 템플릿 리소스 응용 프로그램의 리소스 스크립트 파일에 저장 됩니다.  필요한 경우 나중에 편집할 수 있습니다.  대화 상자 리소스를 만들고 편집하는 방법의 자세한 설명은 [dialog editor](../mfc/dialog-editor.md) 를 참조하십시오.  이 기술은 [CFormView](../mfc/reference/cformview-class.md) 및 [CRecordView](../mfc/reference/crecordview-class.md) 클래스에 대해 대화 상자 템플릿 리소스를 생성하는데 사용될 수 있습니다.  
+ When you finish, your dialog-template resource is stored in your application's resource script file. You can edit it later if needed. For a full description of how to create and edit dialog resources, see the [dialog editor](../windows/dialog-editor.md) topics. This technique is also used to create the dialog-template resources for [CFormView](../mfc/reference/cformview-class.md) and [CRecordView](../mfc/reference/crecordview-class.md) classes.  
   
- [Creating a Dialog Class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md) 에 설명된 것과 같이 대화상자의 모양이 적합할 때, 대화 상자 클래스를 만들고 메세지를 매핑하십시오.  
+ When the dialog box's appearance suits you, create a dialog class and map its messages, as discussed in [Creating a Dialog Class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md).  
   
-## 참고 항목  
- [대화 상자](../mfc/dialog-boxes.md)   
- [대화 상자의 수명 주기](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

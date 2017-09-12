@@ -1,61 +1,80 @@
 ---
-title: "ActiveX 컨트롤 컨테이너 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤 컨테이너[C++]"
-  - "OLE 컨트롤[C++], 컨테이너"
+title: ActiveX Control Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC]
+- OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 컨트롤 컨테이너
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 928c59eaa4c3440f5c1ec3679a6c39631155b7e7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-ActiveX 컨트롤 컨테이너는 ActiveX 컨트롤을 완벽하게 지원하는 컨테이너고 그들을 그것의 창 또는 대화 상자에 통합시킬 수 있습니다.  ActiveX 컨트롤은 많은 개발 프로젝트에서 사용할 수 있는 재사용 가능한 소트프웨어 요소입니다.  컨트롤은 응용 프로그램의 사용자가 데이터베이스와 모니터 데이터에 접근할 수 있게 허용하고, 응용 프로그램 내에서 다양한 선택을 합니다.  ActiveX 컨트롤에 대한 자세한 내용은 [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)을 참조하십시오.  
+---
+# <a name="activex-control-containers"></a>ActiveX Control Containers
+An ActiveX control container is a container that fully supports ActiveX controls and can incorporate them into its own windows or dialogs. An ActiveX control is a reusable software element that you can use in many development projects. Controls allow your application's user to access databases, monitor data, and make various selections within your applications. For more information on ActiveX controls, see the article [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
- 컨트롤 컨테이너는 일반적으로 프로젝트에서 두 가지 형태를 취합니다.  
+ Control containers typically take two forms in a project:  
   
--   대화 상자에서 ActiveX 컨트롤이 사용되는 곳은 대화 상자 및 폼 뷰와 같은 대화 상자와 비슷한 창입니다.  
+-   Dialogs and dialog-like windows such as form views, where an ActiveX control is used somewhere in the dialog box.  
   
--   ActiveX에서 응용 프로그램 창은 툴바 또는 사용자 창의 다른 위치에서 사용됩니다.  
+-   Windows in an application, where an ActiveX control is used in a toolbar, or other location in the user window.  
   
- ActiveX 컨트롤 컨테이너는 노출된 [methods](../mfc/mfc-activex-controls-methods.md) 및 [properities](../mfc/mfc-activex-controls-properties.md)를 경유한 컨트롤과 상호 작용합니다.  컨트롤 컨테이너에 의해 접근되거나 수정될 수 있는 이러한 방법과 속성은 ActiveX 컨트롤 컨테이너 프로젝트에서 래퍼 클래스를 통해 접근됩니다.  포함된 ActiveX 컨트롤은 또한 동작이 발생한 컨테이너를 통지하기 위해 [events](../mfc/mfc-activex-controls-events.md)를 전송하는 방법으로 컨테이너와 상호 작용할 수도 있습니다.  컨트롤 컨테이너는 이러한 알림에 의거하여 작업하는 것을 선택하거나 그렇지 않을 수 있습니다.  
+ The ActiveX control container interacts with the control via exposed [methods](../mfc/mfc-activex-controls-methods.md) and [properties](../mfc/mfc-activex-controls-properties.md). These methods and properties, which can be accessed and modified by the control container, are accessed through a wrapper class in the ActiveX control container project. The embedded ActiveX control can also interact with the container by firing (sending) [events](../mfc/mfc-activex-controls-events.md) to notify the container that an action has occurred. The control container can choose to act upon these notifications or not.  
   
- 추가 문서는 ActiveX 컨트롤 컨테이너 프로젝트에서 시작하여 Visual C\+\+을 사용하여 만든 ActiveX 컨트롤 컨테이너와 관련 있는 기본 구현 문제까지에 대한 몇 가지 주제에 대해 설명합니다.  
+ Additional articles discuss several topics, from creating an ActiveX control container project to basic implementation issues related to ActiveX control containers built with Visual C++:  
   
--   [MFC ActiveX 컨트롤 컨테이너 만들기](../mfc/reference/creating-an-mfc-activex-control-container.md)  
+-   [Creating an MFC ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md)  
   
--   [ActiveX 컨트롤에 대한 컨테이너](../mfc/containers-for-activex-controls.md)  
+-   [Containers for ActiveX Controls](../mfc/containers-for-activex-controls.md)  
   
--   [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
+-   [ActiveX Control Containers: Manually Enabling ActiveX Control Containment](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
   
--   [ActiveX 컨트롤 컨테이너: 컨트롤 컨테이너 응용 프로그램에 컨트롤 삽입](../mfc/inserting-a-control-into-a-control-container-application.md)  
+-   [ActiveX Control Containers: Inserting a Control into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md)  
   
--   [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤을 멤버 변수에 연결](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
+-   [ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
   
--   [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 보낸 이벤트 처리](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
+-   [ActiveX Control Containers: Handling Events from an ActiveX control](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
   
--   [ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
+-   [ActiveX Control Containers: Viewing and Modifying Control Properties](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
   
--   [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
--   [ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤 사용](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
+-   [ActiveX Control Containers: Using Controls in a Non-Dialog Container](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
   
- 대화 상자에서 ActiveX 컨트롤 사용에 대한 자세한 내용은 [Dialog Editor](../mfc/dialog-editor.md)을 참조하세요.  
+ For more information about using ActiveX controls in a dialog box, see the [Dialog Editor](../windows/dialog-editor.md) topics.  
   
- Visual C\+\+와 MFC ActiveX 컨트롤 클래스를 사용한 ActiveX 컨트롤 개발의 세부 정보를 설명하는 문서 목록은, [MFC ActiveX controls](../mfc/mfc-activex-controls.md)을 참조하십시오.  항목은 기능 범주별로 그룹화 됩니다.  
+ For a list of articles that explain the details of developing ActiveX controls using Visual C++ and the MFC ActiveX control classes, see [MFC ActiveX controls](../mfc/mfc-activex-controls.md). The articles are grouped by functional categories.  
   
-## 참고 항목  
- [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

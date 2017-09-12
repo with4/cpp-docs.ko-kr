@@ -1,5 +1,5 @@
 ---
-title: "CException 클래스 | Microsoft 문서"
+title: CException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,20 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDispatchException class, base class
-- CException class
-- exceptions, classes for
-- CInternetException class, base class
-- macros, exception handling
-- CNotSupportedException class, base class
-- CFileException class, base class
-- CDBException class, base class
-- CArchiveException class, base class
-- CUserException class
-- CDaoException class, base class
-- CMemoryException class, base class
-- COleException class, base class
-- CResourceException class, base class
+- CException [MFC], CException
+- CException [MFC], Delete
+- CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
 caps.latest.revision: 22
 author: mikeblome
@@ -50,103 +39,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4cbb69ff79a1b201260d83b1bd568b63519a33b5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f62c848764447f84b418e4b81925dbcf33aa3775
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cexception-class"></a>CException 클래스
-MFC 라이브러리의 모든 예외에 대한 기본 클래스입니다.  
+# <a name="cexception-class"></a>CException Class
+The base class for all exceptions in the Microsoft Foundation Class Library.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CException : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CException::CException](#cexception)|`CException` 개체를 생성합니다.|  
+|[CException::CException](#cexception)|Constructs a `CException` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CException::Delete](#delete)|삭제는 `CException` 개체입니다.|  
-|[CException::ReportError](#reporterror)|메시지 상자에 오류 메시지가 사용자에 게 보고합니다.|  
+|[CException::Delete](#delete)|Deletes a `CException` object.|  
+|[CException::ReportError](#reporterror)|Reports an error message in a message box to the user.|  
   
-## <a name="remarks"></a>주의  
- 때문에 `CException` 클래스는 추상 기본 클래스를 만들 수 없습니다 `CException` 개체는 파생 된 클래스의 개체를 만들어야 합니다. 직접 작성 해야 할 경우 `CException`-스타일 클래스 모델로 위에 나열 된 파생된 클래스 중 하나를 사용 합니다. 파생 된 클래스도 사용 하는지 확인 `IMPLEMENT_DYNAMIC`합니다.  
+## <a name="remarks"></a>Remarks  
+ Because `CException` is an abstract base class you cannot create `CException` objects directly; you must create objects of derived classes. If you need to create your own `CException`-style class, use one of the derived classes listed above as a model. Make sure that your derived class also uses `IMPLEMENT_DYNAMIC`.  
   
- 파생된 클래스 및 해당 설명을 보려면 아래에 나와 있습니다.  
+ The derived classes and their descriptions are listed below:  
   
 |||  
 |-|-|  
-|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|한 리소스에 중요 한 MFC 예외의 기본 클래스|  
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|잘못 된 인수 예외 상태|  
-|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|메모리 부족 예외|  
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|지원 되지 않는 작업에 대 한 요청|  
-|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|보관 파일 관련 예외|  
-|[CFileException](../../mfc/reference/cfileexception-class.md)|파일 관련 예외|  
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows 리소스를 찾을 수 없거나 불가|  
-|[COleException](../../mfc/reference/coleexception-class.md)|OLE 예외|  
-|[잠금](../../mfc/reference/cdbexception-class.md)|데이터베이스 예외 (즉,: MFC 데이터베이스 클래스 개방형 데이터베이스 연결에 따라 발생 하는 예외 조건)|  
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE 디스패치 (자동화) 예외|  
-|[CUserException](../../mfc/reference/cuserexception-class.md)|리소스를 찾을 수 없음을 나타냅니다 예외|  
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|데이터 액세스 개체 예외 (즉,: DAO 클래스에 대 한 발생 하는 예외 조건)|  
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|인터넷 예외 (즉,: 인터넷 클래스에 대해 발생 하는 예외 조건).|  
+|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|A base class for resource-critical MFC exceptions|  
+|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Invalid argument exception condition|  
+|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Out-of-memory exception|  
+|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Request for an unsupported operation|  
+|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Archive-specific exception|  
+|[CFileException](../../mfc/reference/cfileexception-class.md)|File-specific exception|  
+|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows resource not found or not creatable|  
+|[COleException](../../mfc/reference/coleexception-class.md)|OLE exception|  
+|[CDBException](../../mfc/reference/cdbexception-class.md)|Database exception (that is, exception conditions arising for MFC database classes based on Open Database Connectivity)|  
+|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE dispatch (automation) exception|  
+|[CUserException](../../mfc/reference/cuserexception-class.md)|Exception that indicates that a resource could not be found|  
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Data access object exception (that is, exception conditions arising for DAO classes)|  
+|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Internet exception (that is, exception conditions arising for Internet classes).|  
   
- 이러한 예외는 사용 하기 위한 것은 [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [시도](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), 및 [end_catch](exception-processing.md#end_catch) 매크로입니다. 예외에 대 한 자세한 내용은 참조 하십시오. [예외 처리](exception-processing.md), 문서를 참조 하거나 [예외 처리 (MFC)](../exception-handling-in-mfc.md)합니다.  
+ These exceptions are intended to be used with the [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [try](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), and [end_catch](exception-processing.md#end_catch) macros. For more information on exceptions, see [Exception Processing](exception-processing.md), or see the article [Exception Handling (MFC)](../exception-handling-in-mfc.md).  
   
- 특정 예외를 catch 하려면 적절 한 파생된 클래스를 사용 합니다. 잡다한 종류의 예외를 사용 `CException`를 사용 하 여 [CObject::IsKindOf](cobject-class.md#iskindof) 사이에서 구별을 `CException`-파생 된 클래스입니다. `CObject::IsKindOf` 으로 선언 된 클래스에 대해서만 작동은 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) 동적 형식 검사의 이점을 얻으려면 매크로입니다. 모든 `CException`-만드는 파생된 클래스를 사용 하 여는 `IMPLEMENT_DYNAMIC` 매크로 너무 합니다.  
+ To catch a specific exception, use the appropriate derived class. To catch all types of exceptions, use `CException`, and then use [CObject::IsKindOf](cobject-class.md#iskindof) to differentiate among `CException`-derived classes. Note that `CObject::IsKindOf` works only for classes declared with the [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro, in order to take advantage of dynamic type checking. Any `CException`-derived class that you create should use the `IMPLEMENT_DYNAMIC` macro, too.  
   
- 호출 하 여 사용자에 게 예외에 대 한 세부 정보를 보고할 수 [GetErrorMessage](cfileexception-class.md#geterrormessage) 또는 [ReportError](#reporterror), 두 개의 멤버 함수 중 하나에서 작동 하는 `CException`의 파생 클래스입니다.  
+ You can report details about exceptions to the user by calling [GetErrorMessage](cfileexception-class.md#geterrormessage) or [ReportError](#reporterror), two member functions that work with any of `CException`'s derived classes.  
   
- 매크로 중 하나에서 예외가 포착 되는 경우는 `CException` 삭제 하지 않을 사용자가 직접; 개체는 자동으로 삭제 됩니다. 사용 하 여 예외가 포착 되는 경우는 **catch** 키워드를 자동으로 삭제 되지 않습니다. 문서를 참조 하십시오 [예외 처리 (MFC)](../exception-handling-in-mfc.md) 예외 개체를 삭제 하는 경우에 대 한 자세한 내용은 합니다.  
+ If an exception is caught by one of the macros, the `CException` object is deleted automatically; do not delete it yourself. If an exception is caught by using a **catch** keyword, it is not automatically deleted. See the article [Exception Handling (MFC)](../exception-handling-in-mfc.md) for more information about when to delete an exeption object.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](cobject-class.md)  
   
  `CException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
- 이 멤버 함수를 생성 한 `CException` 개체입니다.  
+##  <a name="cexception"></a>  CException::CException  
+ This member function constructs a `CException` object.  
   
 ```  
 explicit CException(BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *b_AutoDelete*  
- 지정 **TRUE** 하는 경우에 대 한 메모리는 `CException` 힙에 할당 된 개체입니다. 이 인해는 `CException` 삭제할 때 개체는 **삭제** 멤버 함수가 호출 되어 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CException` 개체는 되지 삭제는 **삭제** 멤버 함수를 호출 합니다.  
+ Specify **TRUE** if the memory for the `CException` object has been allocated on the heap. This will cause the `CException` object to be deleted when the **Delete** member function is called to delete the exception. Specify **FALSE** if the `CException` object is on the stack or is a global object. In this case, the `CException` object will not be deleted when the **Delete** member function is called.  
   
-### <a name="remarks"></a>주의  
- 되지 일반적으로이 생성자를 직접 호출 해야 합니다. 인스턴스를 만들어야 한다는 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식을 throw 하 합니다. 이 설명서는 완전성을 위해서만 제공 됩니다.  
+### <a name="remarks"></a>Remarks  
+ You would normally never need to call this constructor directly. A function that throws an exception should create an instance of a `CException`-derived class and call its constructor, or it should use one of the MFC throw functions, such as [AfxThrowFileException](exception-processing.md#afxthrowfileexception), to throw a predefined type. This documentation is provided only for completeness.  
   
-##  <a name="delete"></a>CException::Delete  
- 확인 하는 경우는이 함수는 **CException** 힙에서 개체가 만들어진 하 고 그럴 경우 호출 하는 **삭제** 개체에 연산자.  
+##  <a name="delete"></a>  CException::Delete  
+ This function checks to see if the **CException** object was created on the heap, and if so, it calls the **delete** operator on the object.  
   
 ```  
 void Delete();
 ```  
   
-### <a name="remarks"></a>주의  
- 삭제 하는 경우는 **CException** 개체를 사용 하 여는 **삭제** 멤버 함수는 예외를 삭제 합니다. 사용 하지 않는 **삭제** 연산자를 직접 때문에 `CException` 개체는 전역 개체 이거나 스택에 만든 합니다.  
+### <a name="remarks"></a>Remarks  
+ When deleting a **CException** object, use the **Delete** member function to delete the exception. Do not use the **delete** operator directly, because the `CException` object may be a global object or have been created on the stack.  
   
- 개체를 생성 하는 경우 개체 삭제 되어야 할지 여부를 지정할 수 있습니다. 자세한 내용은 참조 [CException::CException](#cexception)합니다.  
+ You can specify whether the object should be deleted when the object is constructed. For more information, see [CException::CException](#cexception).  
   
- 호출 하기만 하면 **삭제** 는 c + +를 사용 하는 경우 **시도**- **catch** 메커니즘입니다. MFC 매크로 사용 하는 경우 **시도** 및 **CATCH**을 이러한 매크로 자동으로이 함수를 호출 합니다.  
+ You only need to call **Delete** if you are using the C++ **try**- **catch** mechanism. If you are using the MFC macros **TRY** and **CATCH**, then these macros will automatically call this function.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
  ```cpp  
  CFile* pFile = NULL;
 // Constructing a CFile object with this override may throw
@@ -196,8 +185,8 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
- 사용자에 게 메시지 상자에 보고서 오류 텍스트에이 멤버 함수를 호출 합니다.  
+##  <a name="reporterror"></a>  CException::ReportError  
+ Call this member function to report error text in a message box to the user.  
   
 ```  
 virtual int ReportError(
@@ -205,18 +194,18 @@ virtual int ReportError(
     UINT nMessageID = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nType`  
- 메시지 상자의 스타일을 지정합니다. 조합이 적용 된 [메시지 상자 스타일](message-box-styles.md) 상자에 있습니다. 이 매개 변수를 지정 하지 않으면 기본값은 **MB_OK**합니다.  
+ Specifies the style of the message box. Apply any combination of the [message-box styles](message-box-styles.md) to the box. If you don't specify this parameter, the default is **MB_OK**.  
   
  *nMessageID*  
- 예외 개체에 오류 메시지가 없는 경우 표시할 메시지를의 리소스 ID (문자열 항목)를 지정 합니다. 0 인 경우, 메시지 "오류 메시지가 없으면 사용할 수 있는"가 표시 됩니다.  
+ Specifies the resource ID (string table entry) of a message to display if the exception object does not have an error message. If 0, the message "No error message is available" is displayed.  
   
-### <a name="return-value"></a>반환 값  
- `AfxMessageBox` 값, 메시지 상자를 표시할 메모리가 충분 하지 않은 경우에 그렇지 않으면 0입니다. 참조 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 가능한 반환 값입니다.  
+### <a name="return-value"></a>Return Value  
+ An `AfxMessageBox` value; otherwise 0 if there is not enough memory to display the message box. See [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) for the possible return values.  
   
-### <a name="example"></a>예제  
- 다음은 사용의 예 `CException::ReportError`합니다. 다른 예에 대 한 예제를 참조 하십시오. [CATCH](exception-processing.md#catch)합니다.  
+### <a name="example"></a>Example  
+ Here is an example of the use of `CException::ReportError`. For another example, see the example for [CATCH](exception-processing.md#catch).  
   
 ```cpp  
 CFile fileInput;
@@ -250,11 +239,11 @@ else
 }
 ```
 
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](cobject-class.md)   
- [계층 구조 차트](../hierarchy-chart.md)   
- [예외 처리](exception-processing.md)   
- [I: 나만의 사용자 지정 예외 클래스를 만드는 방법](http://go.microsoft.com/fwlink/linkid=128045)
+## <a name="see-also"></a>See Also  
+ [CObject Class](cobject-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)   
+ [Exception Processing](exception-processing.md)   
+ [How Do I: Create my Own Custom Exception Classes](http://go.microsoft.com/fwlink/linkid=128045)
 
 
 

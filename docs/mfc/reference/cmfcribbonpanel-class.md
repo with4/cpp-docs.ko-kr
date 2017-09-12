@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonPanel 클래스 | Microsoft 문서"
+title: CMFCRibbonPanel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -68,7 +68,60 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonPanel class
+- CMFCRibbonPanel [MFC], CMFCRibbonPanel
+- CMFCRibbonPanel [MFC], Add
+- CMFCRibbonPanel [MFC], AddSeparator
+- CMFCRibbonPanel [MFC], AddToolBar
+- CMFCRibbonPanel [MFC], FindByData
+- CMFCRibbonPanel [MFC], FindByID
+- CMFCRibbonPanel [MFC], GetCaptionHeight
+- CMFCRibbonPanel [MFC], GetCount
+- CMFCRibbonPanel [MFC], GetData
+- CMFCRibbonPanel [MFC], GetDefaultButton
+- CMFCRibbonPanel [MFC], GetDroppedDown
+- CMFCRibbonPanel [MFC], GetElement
+- CMFCRibbonPanel [MFC], GetElements
+- CMFCRibbonPanel [MFC], GetElementsByID
+- CMFCRibbonPanel [MFC], GetFocused
+- CMFCRibbonPanel [MFC], GetGalleryRect
+- CMFCRibbonPanel [MFC], GetHighlighted
+- CMFCRibbonPanel [MFC], GetIndex
+- CMFCRibbonPanel [MFC], GetItemIDsList
+- CMFCRibbonPanel [MFC], GetName
+- CMFCRibbonPanel [MFC], GetParentButton
+- CMFCRibbonPanel [MFC], GetParentCategory
+- CMFCRibbonPanel [MFC], GetParentMenuBar
+- CMFCRibbonPanel [MFC], GetPreferedMenuLocation
+- CMFCRibbonPanel [MFC], GetPressed
+- CMFCRibbonPanel [MFC], GetRect
+- CMFCRibbonPanel [MFC], GetVisibleElements
+- CMFCRibbonPanel [MFC], HasElement
+- CMFCRibbonPanel [MFC], HitTest
+- CMFCRibbonPanel [MFC], HitTestEx
+- CMFCRibbonPanel [MFC], Insert
+- CMFCRibbonPanel [MFC], InsertSeparator
+- CMFCRibbonPanel [MFC], IsCenterColumnVert
+- CMFCRibbonPanel [MFC], IsCollapsed
+- CMFCRibbonPanel [MFC], IsHighlighted
+- CMFCRibbonPanel [MFC], IsJustifyColumns
+- CMFCRibbonPanel [MFC], IsMainPanel
+- CMFCRibbonPanel [MFC], IsMenuMode
+- CMFCRibbonPanel [MFC], MakeGalleryItemVisible
+- CMFCRibbonPanel [MFC], OnKey
+- CMFCRibbonPanel [MFC], RecalcWidths
+- CMFCRibbonPanel [MFC], Remove
+- CMFCRibbonPanel [MFC], RemoveAll
+- CMFCRibbonPanel [MFC], Replace
+- CMFCRibbonPanel [MFC], ReplaceByID
+- CMFCRibbonPanel [MFC], SetCenterColumnVert
+- CMFCRibbonPanel [MFC], SetData
+- CMFCRibbonPanel [MFC], SetElementMenu
+- CMFCRibbonPanel [MFC], SetElementRTC
+- CMFCRibbonPanel [MFC], SetElementRTCByID
+- CMFCRibbonPanel [MFC], SetFocused
+- CMFCRibbonPanel [MFC], SetJustifyColumns
+- CMFCRibbonPanel [MFC], SetKeys
+- CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 caps.latest.revision: 34
 author: mikeblome
@@ -88,134 +141,134 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1f833e1fa59f733734da321718d5db73377fa4bd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c5cacd36aea782c2b92dcb93afa3f7cf04d11fb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 클래스
-리본 요소 집합이 포함된 패널을 구현합니다. 패널을 그리면 지정된 패널 크기에 가능한 한 많은 요소를 표시합니다.  
+# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel Class
+Implements a panel that contains a set of ribbon elements. When the panel is drawn, it displays as many elements as possible, given the size of the panel.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonPanel : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|`CMFCRibbonPanel` 개체를 생성하고 초기화합니다.|  
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Constructs and initializes a `CMFCRibbonPanel` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonPanel::Add](#add)|패널에는 리본 요소를 추가합니다.|  
-|[CMFCRibbonPanel::AddSeparator](#addseparator)|리본 패널에 구분 기호를 추가 합니다.|  
-|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|도구 모음 리본 패널에 추가합니다.|  
+|[CMFCRibbonPanel::Add](#add)|Adds a ribbon element to the panel.|  
+|[CMFCRibbonPanel::AddSeparator](#addseparator)|Adds a separator to the ribbon panel.|  
+|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Adds a toolbar to the ribbon panel.|  
 |[CMFCRibbonPanel::FindByData](#findbydata)||  
-|[CMFCRibbonPanel::FindByID](#findbyid)|지정 된 명령 ID로 식별 하는 요소를 반환 합니다.|  
+|[CMFCRibbonPanel::FindByID](#findbyid)|Returns an element identified by a specified command ID.|  
 |[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||  
-|[CMFCRibbonPanel::GetCount](#getcount)|리본 패널의 요소 수를 반환합니다.|  
-|[CMFCRibbonPanel::GetData](#getdata)|패널에 연결 된 사용자 정의 데이터를 반환 합니다.|  
+|[CMFCRibbonPanel::GetCount](#getcount)|Returns the number of elements in the ribbon panel.|  
+|[CMFCRibbonPanel::GetData](#getdata)|Returns the user-defined data associated with the panel.|  
 |[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||  
 |[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||  
-|[CMFCRibbonPanel::GetElement](#getelement)|지정된 된 인덱스에 있는 리본 요소를 반환 합니다.|  
-|[CMFCRibbonPanel::GetElements](#getelements)|리본 패널에 포함 된 모든 요소를 검색 합니다.|  
+|[CMFCRibbonPanel::GetElement](#getelement)|Returns the ribbon element located at a specified index.|  
+|[CMFCRibbonPanel::GetElements](#getelements)|Retrieves all elements that are contained in the ribbon panel.|  
 |[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||  
-|[CMFCRibbonPanel::GetFocused](#getfocused)|포커스가 지정된 요소를 반환합니다.|  
-|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|갤러리 요소의 경계 사각형을 반환합니다.|  
+|[CMFCRibbonPanel::GetFocused](#getfocused)|Returns a focused element.|  
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Returns a bounding rectangle of Gallery element.|  
 |[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||  
 |[CMFCRibbonPanel::GetIndex](#getindex)||  
 |[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||  
 |[CMFCRibbonPanel::GetName](#getname)||  
 |[CMFCRibbonPanel::GetParentButton](#getparentbutton)||  
-|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|리본 패널의 부모 범주를 반환합니다.|  
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Returns the parent category of the ribbon panel.|  
 |[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||  
 |[CMFCRibbonPanel::GetPressed](#getpressed)||  
 |[CMFCRibbonPanel::GetRect](#getrect)||  
-|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|표시 된 요소의 배열을 가져옵니다.|  
+|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Obtains an array of visible elements.|  
 |[CMFCRibbonPanel::HasElement](#haselement)||  
 |[CMFCRibbonPanel::HitTest](#hittest)||  
 |[CMFCRibbonPanel::HitTestEx](#hittestex)||  
-|[CMFCRibbonPanel::Insert](#insert)|지정된 된 위치에는 리본 요소를 삽입합니다.|  
-|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|지정된 된 위치에는 구분 기호를 삽입합니다.|  
-|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|열에 있는지 여부를 패널의 모든 요소에 맞춰야 (정렬)을 세로로 지정 합니다.|  
+|[CMFCRibbonPanel::Insert](#insert)|Inserts a ribbon element at the given position.|  
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Inserts a separator at the given position.|  
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Specifies whether all panel elements should be centered (aligned) vertically, by column.|  
 |[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||  
 |[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||  
-|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|패널의 모든 열 너비를 같게 만들기 하는지 여부를 지정 합니다.|  
+|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Specifies whether all panel columns have the same width.|  
 |[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||  
 |[CMFCRibbonPanel::IsMenuMode](#ismenumode)||  
-|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|지정된 된 리본 요소를 표시 하려면 갤러리를 스크롤합니다.|  
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Scrolls the gallery to make the specified Ribbon element visible.|  
 |[CMFCRibbonPanel::OnKey](#onkey)||  
 |[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||  
-|[CMFCRibbonPanel::Remove](#remove)|제거 하 고 필요에 따라 지정된 된 인덱스에 있는 요소를 삭제 합니다.|  
-|[CMFCRibbonPanel::RemoveAll](#removeall)|리본 패널에서 모든 요소를 제거합니다.|  
-|[CMFCRibbonPanel::Replace](#replace)|각 인덱스 값에 따라 다른 하나의 요소를 바꿉니다.|  
-|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|한 요소를 다른 지정 된 명령 ID를 기반으로 바꿉니다.|  
-|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|패널에 요소를 세로로 정렬, 열으로 정렬 합니다.|  
-|[CMFCRibbonPanel::SetData](#setdata)|리본 패널을 사용 하 여 사용자 정의 데이터 연결 합니다.|  
-|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|팝업 메뉴는 지정한 명령 ID를 가진 요소에 할당|  
-|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|리본 패널에 제공 된 런타임 클래스 정보로 지정 된 리본 요소를 추가 합니다.|  
-|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|리본 패널에 제공 된 런타임 클래스 정보로 지정 된 리본 요소를 추가 합니다.|  
-|[CMFCRibbonPanel::SetFocused](#setfocused)|지정된 된 리본 요소에 포커스를 설정 합니다.|  
-|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|열의 맞춤을 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[CMFCRibbonPanel::SetKeys](#setkeys)|리본 패널을 표시 하는 바로 가기 키를 설정 합니다.|  
+|[CMFCRibbonPanel::Remove](#remove)|Removes and optionally deletes an element located at the specified index.|  
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Removes all elements from the ribbon panel.|  
+|[CMFCRibbonPanel::Replace](#replace)|Replaces one element with another based on their respective index values.|  
+|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Replaces one element with another based on a specified command ID.|  
+|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Orders the panel to align elements vertically, by column.|  
+|[CMFCRibbonPanel::SetData](#setdata)|Associates user-defined data with the ribbon panel.|  
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Assigns a popup menu to the element that has the given command ID.|  
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Adds a ribbon element specified by the provided runtime class information to the ribbon panel.|  
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Adds a ribbon element specified by the provided runtime class information to the ribbon panel.|  
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Sets focus to the specified Ribbon element.|  
+|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Enables or disables column justification.|  
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Sets the keyboard shortcut that displays the ribbon panel.|  
 |[CMFCRibbonPanel::ShowPopup](#showpopup)||  
   
-## <a name="remarks"></a>주의  
- 리본 패널은 리본 범주 내에서 만든 관련된 작업의 논리적 그룹화입니다. 리본 변경의 크기로 패널 레이아웃 하도록 자동으로 조정 가능한 많은 요소를 표시 합니다.  
+## <a name="remarks"></a>Remarks  
+ Ribbon panels are logical groupings of related tasks that you create within ribbon categories. As the size of the ribbon changes, the panel layout automatically adjusts to display as many elements as possible.  
   
- 리본 메뉴를 호출 하 여 리본 범주에 포함 된 패널을 얻을 수는 [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) 메서드.  
+ You can get a ribbon panels that is contained in a ribbon category by calling the [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) method.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 구성 방법을 보여 줍니다.는 `CMFCRibbonPanel` 의 다양 한 메서드를 사용 하 여 개체의 `CMFCRibbonPanel` 클래스입니다. 리본 패널을 표시 하는 바로 가기 키를 설정 하 고 패널에 요소를 세로로 정렬 열로 열 양쪽 맞춤을 사용 하도록 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCRibbonPanel` object by using various methods in the `CMFCRibbonPanel` class. The example shows how to set the keyboard shortcut that displays the ribbon panel, align elements in the panel vertically by column, and enable column justification. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo #&10;](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxRibbonPanel.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonPanel.h  
   
-##  <a name="add"></a>CMFCRibbonPanel::Add  
- 리본 패널에 포함 된 리본 요소의 배열에 지정 된 리본 요소를 추가 합니다.  
+##  <a name="add"></a>  CMFCRibbonPanel::Add  
+ Appends the specified ribbon element to the array of ribbon elements that is contained in the ribbon panel.  
   
 ```  
 virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `pElem`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addseparator"></a>CMFCRibbonPanel::AddSeparator  
- 리본 패널에 구분 기호를 추가 합니다.  
+##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator  
+ Adds a separator to the ribbon panel.  
   
 ```  
 virtual void AddSeparator();
 ```  
   
-### <a name="remarks"></a>주의  
- 리본 패널에는 구분 기호를 추가 하려면이 메서드를 호출 합니다. 이전 호출에 의해 추가 된 리본 요소 옆에 있는 구분 기호를 추가할 [CMFCRibbonPanel::Add](#add)합니다. 지정된 된 위치에는 구분 기호를 삽입 하려면 호출 [CMFCRibbonPanel::InsertSeparator](#insertseparator)합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a separator to the ribbon panel. The separator will be added next to the ribbon element that was added by the previous call to [CMFCRibbonPanel::Add](#add). To insert a separator at a given position, call [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
   
-##  <a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar  
- 도구 모음 리본 패널에 추가합니다.  
+##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar  
+ Adds a toolbar to the ribbon panel.  
   
 ```  
 CMFCRibbonButtonsGroup* AddToolBar(
@@ -225,27 +278,27 @@ UINT uiHotResID = 0,
 UINT uiDisabledResID = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiToolbarResID`  
- 추가할 도구 모음의 리소스 ID를 지정 합니다.  
+ Specifies the resource ID of the toolbar to add.  
   
  [in] `uiColdResID`  
- 도구 모음의 콜드 이미지의 리소스 ID를 지정합니다.  
+ Specifies the resource ID of the toolbar's cold images.  
   
  [in] `uiHotResID`  
- 도구 모음의 핫 이미지의 리소스 ID를 지정합니다.  
+ Specifies the resource ID of the toolbar's hot images.  
   
  [in] `uiDisabledResID`  
- 도구 모음의 비활성화 된 이미지의 리소스 ID를 지정합니다.  
+ Specifies the resource ID of the toolbar's disabled images.  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 리본 패널에 추가 하려면이 메서드를 호출 합니다. 이전 호출에 의해 추가 되는 리본 요소 옆에 있는 도구 모음을 추가할 [CMFCRibbonPanel::Add](#add)합니다.  
+### <a name="return-value"></a>Return Value  
+ Call this method to add a toolbar to the ribbon panel. The toolbar will be added next to the ribbon element added by the previous call to [CMFCRibbonPanel::Add](#add).  
   
-### <a name="remarks"></a>주의  
- 도구 모음, 핫 이미지, 콜드 이미지 및 비활성화 된 이미지에 대 한 자세한 내용은 참조 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about toolbars, hot images, cold images, and disabled images, see [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md).  
   
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel  
- 생성 하 고 초기화는 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) 개체입니다.  
+##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel  
+ Constructs and initializes a [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) object.  
   
 ```  
 CMFCRibbonPanel(
@@ -255,133 +308,133 @@ HICON hIcon = NULL);
 CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 리본 패널의 이름입니다.  
+ The name of the ribbon panel.  
   
  [in] `hIcon`  
- 리본 패널에 대 한 기본 단추 아이콘에 대 한 핸들입니다.  
+ Handle to the icon of the default button for the ribbon panel.  
   
  [in] `pPaletteButton`  
- 리본 패널에 대 한 리본 갤러리에 대 한 포인터입니다.  
+ Pointer to a ribbon gallery for the ribbon panel.  
   
-##  <a name="findbydata"></a>CMFCRibbonPanel::FindByData  
- 지정된 된 데이터와 관련이 있는 리본 요소를 검색 합니다.  
+##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
+ Retrieves the ribbon element that is associated with the specified data.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 리본 요소에 연결 된 데이터입니다.  
+ The data associated with a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonPanel::FindByID  
- 지정한 명령 ID로 식별 되는 리본 요소를 검색 합니다.  
+##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID  
+ Retrieves the ribbon element that is identified by the specified command ID.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 리본 요소의 명령 ID입니다.  
+ The command ID of a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 명령 ID;로 식별 되는 리본 요소 그렇지 않으면 `NULL` 리본 요소가 지정 된 명령 id입니다.로 식별 되 면  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that is identified by the specified command ID; otherwise `NULL` if no ribbon element is identified with the specified command ID.  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight  
- 리본 패널에 대 한 캡션 높이 검색합니다.  
+##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight  
+ Retrieves the height of a caption for the ribbon panel.  
   
 ```  
 int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널에 대 한 캡션 픽셀 높이입니다.  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of a caption for the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCRibbonPanel::GetCount  
- 리본 패널에 포함 된 리본 요소 수를 검색 합니다.  
+##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount  
+ Retrieves the number of ribbon elements that are contained in the ribbon panel.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널에 포함 된 리본 요소의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of ribbon elements that are contained in the ribbon panel.  
   
-##  <a name="getdata"></a>CMFCRibbonPanel::GetData  
- 패널에 연결 된 사용자 정의 데이터를 반환 합니다.  
+##  <a name="getdata"></a>  CMFCRibbonPanel::GetData  
+ Returns the user-defined data associated with the panel.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 패널에 연결 된 사용자 정의 데이터입니다.  
+### <a name="return-value"></a>Return Value  
+ The user-defined data associated with the panel.  
   
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton  
- 리본 패널에 대 한 기본 단추를 검색합니다.  
+##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton  
+ Retrieves the default button for the ribbon panel.  
   
 ```  
 CMFCRibbonButton& GetDefaultButton();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널에 대 한 기본 단추입니다.  
+### <a name="return-value"></a>Return Value  
+ The default button for the ribbon panel.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에는 리본 요소를 표시할 공간이 부족 한 기본 단추가 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The default button is displayed when a ribbon panel has insufficient space to display its ribbon elements.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown  
- 의 팝업 메뉴를 삭제할 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown  
+ Retrieves a pointer to a ribbon element if its pop-up menu is dropped down.  
   
 ```  
 CMFCRibbonBaseElement* GetDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 내려가면;의 팝업 메뉴에 있는 리본 요소에 대 한 포인터 그렇지 않으면 `NULL` 리본 요소 내려가면 팝업 메뉴에 없으면 합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the ribbon element that has its pop-up menu dropped down; otherwise `NULL` if no ribbon element has its pop-up menu dropped down.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에 포함 된 리본 요소만 테스트 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="getelement"></a>CMFCRibbonPanel::GetElement  
- 지정된 된 인덱스에 있는 리본 요소를 반환 합니다.  
+##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement  
+ Returns the ribbon element located at a specified index.  
   
 ```  
 CMFCRibbonBaseElement* GetElement(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 검색할 요소의&0;부터 시작 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the element to retrieve.  
   
-### <a name="return-value"></a>반환 값  
- 기본 리본 요소에 대 한 유효한 포인터 위치에 있는 `nIndex` 리본 패널에서 또는 `NULL` 지정된 된 인덱스에 요소가 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to the base ribbon element located at position `nIndex` in the ribbon panel, or `NULL` if there is no element at the specified index.  
   
-##  <a name="getelements"></a>CMFCRibbonPanel::GetElements  
- 리본 패널에 포함 된 모든 리본 요소를 검색 합니다.  
+##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
+ Retrieves all ribbon elements that are contained in the ribbon panel.  
   
 ```  
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `arElements`  
- 리본 패널에 포함 된 모든 리본 요소를 채울 배열입니다.  
+ An array to fill with all the ribbon elements that are contained in the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID  
- 지정된 된 명령 ID를 지정 된 배열에 있는 리본 요소를 추가 합니다.  
+##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID  
+ Adds ribbon elements that have the specified command ID to the specified array.  
   
 ```  
 void GetElementsByID(
@@ -389,160 +442,160 @@ UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 리본 요소에 대 한 명령 ID입니다.  
+ Command ID for a ribbon element.  
   
  [in] `arElements`  
- 리본 요소의 배열입니다.  
+ Array of ribbon elements.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에 포함 된 리본 요소만 테스트 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted  
- 리본 패널에 강조 표시 되어 있는 리본 요소를 검색 합니다.  
+##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted  
+ Retrieves the ribbon element that is highlighted on the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* GetHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널에 강조 표시 되어 있는 리본 요소에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the ribbon element that is highlighted on the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getindex"></a>CMFCRibbonPanel::GetIndex  
- 리본 패널에 포함 된 리본 요소 배열에서 지정 된 리본 요소의&0;부터 시작 인덱스를 검색 합니다.  
+##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex  
+ Retrieves the zero-based index of the specified ribbon element from the array of ribbon elements that are contained in the ribbon panel.  
   
 ```  
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pElem`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 지정 된 리본 요소의&0;부터 시작 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the specified ribbon element if the method was successful; otherwise -1.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList  
- 리본 패널의 모든 리본 요소에 대 한 명령 Id를 검색합니다.  
+##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList  
+ Retrieves the command IDs for all ribbon elements in the ribbon panel.  
   
 ```  
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `lstItems`  
- 목록에는 리본 패널이 포함 되어 있는 리본 요소에 대 한 명령 Id입니다.  
+ The list of command IDs for ribbon elements that are contained in the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getname"></a>CMFCRibbonPanel::GetName  
- 리본 패널의 이름을 검색합니다.  
+##  <a name="getname"></a>  CMFCRibbonPanel::GetName  
+ Retrieves the name of the ribbon panel.  
   
 ```  
 LPCTSTR GetName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널의 이름입니다.  
+### <a name="return-value"></a>Return Value  
+ The name of the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton  
 
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory  
- 리본 패널의 부모 범주를 반환합니다.  
+##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory  
+ Returns the parent category of the ribbon panel.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 리본 패널을 포함 하는 리본 범주에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon category that contains this ribbon panel.  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar  
 
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation  
- 리본 패널의 팝업 메뉴에 대 한 기본 표시 사각형을 검색합니다.  
+##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation  
+ Retrieves the preferred display rectangle for the pop-up menu of the ribbon panel.  
   
 ```  
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- 이 매개 변수는 사용되지 않습니다.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 항상 `FALSE`을 반환합니다. 리본 패널의 팝업 메뉴에 대 한 기본 표시 사각형을 검색 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method always returns `FALSE`. Override this method to retrieve the preferred display rectangle for the pop-up menu of the ribbon panel.  
   
-##  <a name="getpressed"></a>CMFCRibbonPanel::GetPressed  
- 사용자가 현재 누를 경우에 리본 패널에는 리본 요소에 대 한 포인터를 검색 합니다.  
+##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed  
+ Retrieves a pointer to a ribbon element on the ribbon panel if the user currently presses it.  
   
 ```  
 CMFCRibbonBaseElement* GetPressed() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재를 누르는 경우, 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a ribbon element if the user currently presses it; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonPanel::GetRect  
- 리본 패널에 대 한 표시 영역을 검색 합니다.  
+##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect  
+ Retrieves the display rectangle for the ribbon panel.  
   
 ```  
 const CRect& GetRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 리본 패널에 대 한 표시 사각형을 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The display rectangle for the ribbon panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haselement"></a>CMFCRibbonPanel::HasElement  
- 지정 된 리본 요소 리본 패널에 포함 되는지 여부를 나타냅니다.  
+##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement  
+ Indicates whether the ribbon panel contains the specified ribbon element.  
   
 ```  
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pElem`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 패널 지정 된 리본 요소를 포함 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon panel contains the specified ribbon element; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="highlight"></a>CMFCRibbonPanel::Highlight  
- 지점에서 지정 된 리본 요소에 대 한 선택 된 리본 패널에 강조 표시 색을 설정 합니다.  
+##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight  
+ Sets the highlight color for the selected ribbon panel and for the ribbon element specified by the point.  
   
 ```  
 virtual void Highlight(
@@ -550,17 +603,17 @@ BOOL bHighlight,
 CPoint point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bHighlight`  
- `TRUE`리본 패널에 강조 표시 `FALSE` unhighlight 리본 패널에 있습니다.  
+ `TRUE` to highlight the ribbon panel; `FALSE` to unhighlight the ribbon panel.  
   
  [in] `point`  
- 창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hittest"></a>CMFCRibbonPanel::HitTest  
- 지정 된 위치에 있으면 리본 요소를 검색 합니다.  
+##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest  
+ Retrieves a ribbon element if the specified point is located in it.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(
@@ -568,38 +621,38 @@ CPoint point,
 BOOL bCheckPanelCaption = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`리본 패널 캡션;를 테스트 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to test the ribbon panel caption; otherwise `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 위치에 있으면, 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the specified point is located in it; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에 포함 된 리본 요소만 테스트 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="hittestex"></a>CMFCRibbonPanel::HitTestEx  
- 지정된 된 지점 그 안에 있는 리본 요소의&0;부터 시작 인덱스를 검색 합니다.  
+##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx  
+ Retrieves the zero-based index of the ribbon element that has the specified point located in it.  
   
 ```  
 virtual int HitTestEx(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>반환 값  
- 에 있는 지정된 된 점이 있는 리본 요소 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the ribbon element that has the specified point located in it; otherwise -1.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에 포함 된 리본 요소만 테스트 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="insert"></a>CMFCRibbonPanel::Insert  
- 지정된 된 위치에 배열에 있는 리본 요소에 리본 패널이 포함 되어 있는 지정 된 리본 요소를 삽입 합니다.  
+##  <a name="insert"></a>  CMFCRibbonPanel::Insert  
+ Inserts the specified ribbon element at the specified position in the array of ribbon elements that is contained in the ribbon panel.  
   
 ```  
 virtual BOOL Insert(
@@ -607,124 +660,124 @@ CMFCRibbonBaseElement* pElem,
 int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `pElem`  
- 리본 요소에 대 한 포인터입니다.  
+ Pointer to a ribbon element.  
   
  [in] `nIndex`  
- 배열에 포함 된 리본 요소 수까지-1에서&0;부터 시작 값입니다.  
+ Zero-based value, ranging from -1 to the number of ribbon elements that are contained in the array.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소를 성공적으로 삽입 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element was inserted successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 경우의 값 `nIndex` -1 인 경우 `nIndex` 리본 배열의 요소 수와 같으면, 지정 된 리본 요소가 배열의 끝에 추가 됩니다. 하는 경우의 값 `nIndex` 는 범위를 벗어났거나 메서드가 실패 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the value of `nIndex` is -1, or if `nIndex` equals the number of ribbon elements in the array, the specified ribbon element is added to the end of the array. If the value of `nIndex` is out of range, the method will fail.  
   
-##  <a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator  
- 지정된 된 위치에는 구분 기호를 삽입합니다.  
+##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
+ Inserts a separator at the given position.  
   
 ```  
 virtual BOOL InsertSeparator(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 인덱스는 구분 기호를 삽입 하는 위치를 지정 합니다.  
+ Specifies the zero-based index where the separator is inserted.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`구분 기호를 성공적으로 삽입 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the separator has been inserted successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 로 지정 된 위치에는 구분 기호를 삽입 하려면이 메서드를 호출 `nIndex`합니다. 가장 최근에 추가 된 리본 요소 옆에 있는 구분 기호를 삽입 하려면 호출 [CMFCRibbonPanel::AddSeparator](#addseparator)합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to insert a separator at the position specified by `nIndex`. To insert a separator next to the most recently added ribbon element, call [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert  
- 리본 요소의 세로 위치는 해당 표시 영역 내에서 가운데 정렬 여부를 나타냅니다.  
+##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
+ Indicates whether the vertical positions of ribbon elements are centered within their display rectangle.  
   
 ```  
 BOOL IsCenterColumnVert() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 요소의 표시 사각형;에서 가운데 맞춤 됩니다의 세로 위치 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the vertical positions of ribbon elements are centered within their display rectangle; otherwise `FALSE`.  
   
-##  <a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed  
- 리본 패널의 표시 크기를 가로 방향으로 최소화 되었는지 여부를 나타냅니다.  
+##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed  
+ Indicates whether the display size of the ribbon panel is minimized in the horizontal direction.  
   
 ```  
 BOOL IsCollapsed() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`가로 방향의 리본 패널의 표시 크기를 최소화 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display size of the ribbon panel is minimized in the horizontal direction; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 리본 패널을 축소 하는 경우만 해당 기본 단추, 해당 이름 및 드롭다운 화살표를 표시 합니다.  
+### <a name="remarks"></a>Remarks  
+ When a ribbon panel is collapsed, it only displays its default button, its name, and a drop-down arrow.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted  
- 리본 패널의 표시 강조 표시 되어 있는지 여부를 나타냅니다.  
+##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted  
+ Indicates whether the display of the ribbon panel is highlighted.  
   
 ```  
 BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 패널의 표시는 강조 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display of the ribbon panel is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 리본 패널의 표시에 포인터 위로 가져갈 때 강조 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The display of a ribbon panel is highlighted when the pointer is over it.  
   
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns  
- 리본 패널에 같은 열에 있는 리본 요소 디스플레이 크기 같은 너비로 설정 되었는지 여부를 나타냅니다.  
+##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns  
+ Indicates whether the display dimensions of ribbon elements that are in the same column in the ribbon panel are set to the same width.  
   
 ```  
 BOOL IsJustifyColumns() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`리본 패널에 같은 열에 있는 리본 요소 디스플레이 크기; 동일한 너비로 설정 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display dimensions of ribbon elements that are in the same column in the ribbon panel are set to the same width; otherwise `FALSE`.  
   
-##  <a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel  
- 리본 패널 주 리본 패널 인지를 나타냅니다.  
+##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel  
+ Indicates whether the ribbon panel is the main ribbon panel.  
   
 ```  
 virtual BOOL IsMainPanel() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `FALSE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 항상 `FALSE`을 반환합니다. 리본 패널 주 리본 패널 인지 지정 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method always returns `FALSE`. Override this method to indicate whether the ribbon panel is the main ribbon panel.  
   
- 사용자가 응용 프로그램 단추를 선택 하는 경우 주 리본 패널이 표시 됩니다.  
+ The main ribbon panel is displayed when the user selects the application button.  
   
-##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode  
 
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey  
 
   
 ```  
 virtual BOOL OnKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths  
- 각 리본 패널에 대 한 레이아웃 구성 표시의 너비를 다시 계산합니다.  
+##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths  
+ Recalculates the width of each display layout configuration for the ribbon panel.  
   
 ```  
 virtual void RecalcWidths(
@@ -732,18 +785,18 @@ CDC* pDC,
 int nHeight);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 리본 패널에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
+ Pointer to a device context for the ribbon panel.  
   
  [in] `nHeight`  
- 리본 패널의 높이입니다.  
+ The height of the ribbon panel.  
   
-### <a name="remarks"></a>주의  
- 리본 패널 사용 가능한 너비 변경 되 면 해당 레이아웃 구성을 변경합니다.  
+### <a name="remarks"></a>Remarks  
+ A ribbon panel changes its layout configuration as the available width changes.  
   
-##  <a name="remove"></a>CMFCRibbonPanel::Remove  
- 제거 하 고 필요에 따라 지정된 된 인덱스에 있는 요소를 삭제 합니다.  
+##  <a name="remove"></a>  CMFCRibbonPanel::Remove  
+ Removes and optionally deletes an element located at the specified index.  
   
 ```  
 BOOL Remove(
@@ -751,31 +804,31 @@ int nIndex,
 BOOL bDelete = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 리본 패널에서 제거 된 요소의&0;부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the element that is removed from the ribbon panel.  
   
  [in] `bDelete`  
- `TRUE`제거 되 고 요소를 삭제 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to delete the element being removed; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`요소를 제거 하 고 삭제 된 경우 (경우 `bDelete` 는 `TRUE`); `FALSE` 경우 요소가 제거 되지 않은 또는 리본 요소에 있는 경우 `nIndex`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the element has been removed and deleted (if `bDelete` is `TRUE`); `FALSE` if the element was not removed or if there is no ribbon element located at `nIndex`.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에서 요소를 제거 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove an element from the ribbon panel.  
   
-##  <a name="removeall"></a>CMFCRibbonPanel::RemoveAll  
- 리본 패널에서 모든 리본 요소를 삭제합니다.  
+##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll  
+ Deletes all ribbon elements from the ribbon panel.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>주의  
- 모든 리본 요소를 리본 패널에서 삭제 되 고 삭제 합니다.  
+### <a name="remarks"></a>Remarks  
+ All ribbon elements are deleted from the ribbon panel and destroyed.  
   
-##  <a name="replace"></a>CMFCRibbonPanel::Replace  
- 해당 인덱스 값에 따라 다른 하나의 요소를 바꿉니다.  
+##  <a name="replace"></a>  CMFCRibbonPanel::Replace  
+ Replaces one element with another based on their index value.  
   
 ```  
 BOOL Replace(
@@ -783,21 +836,21 @@ int nIndex,
 CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 바꿀 요소의 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the element to replace.  
   
- [in] [out]`pElem`  
- 원래 요소로 대체 하는 요소에 대 한 유효한 포인터입니다.  
+ [in] [out] `pElem`  
+ A valid pointer to the element that replaces the original element.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`원래 리본 요소; 새 리본 요소에 의해 성공적으로 교체 된 경우 `FALSE` 리본 요소를 교체 하지 않았습니다 또는 지정된 된 인덱스에 요소가 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the original ribbon element has been replaced successfully by the new ribbon element; `FALSE` if the ribbon element was not replaced or if there is no element at the specified index.  
   
-### <a name="remarks"></a>주의  
- 리본 요소를 명령 ID로 바꾸려면 호출 [CMFCRibbonPanel::ReplaceByID](#replacebyid)합니다.  
+### <a name="remarks"></a>Remarks  
+ To replace a ribbon element by command ID, call [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
   
-##  <a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID  
- 한 요소를 다른 지정 된 명령 ID를 기반으로 바꿉니다.  
+##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID  
+ Replaces one element with another based on a specified command ID.  
   
 ```  
 BOOL ReplaceByID(
@@ -805,48 +858,48 @@ UINT uiCmdID,
 CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 바꿀 요소의 명령 ID를 지정 합니다.  
+ Specifies the command ID of the element to replace.  
   
- [in] [out]`pElem`  
- 유효한 포인터는 원래 요소를 대체 하는 요소입니다.  
+ [in] [out] `pElem`  
+ A valid pointer to the element that will replace the original element.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`원래 리본 요소; 새 리본 요소에 의해 성공적으로 교체 된 경우 `FALSE` 리본 요소를 교체 하지 않았습니다 또는 지정된 된 명령 ID 가진 요소가 실제로 존재 하는 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the original ribbon element has been replaced successfully by the new ribbon element; `FALSE` if the ribbon element was not replaced or if no element with the specified command ID actually exists.  
   
-### <a name="remarks"></a>주의  
- 위치에 따라 리본 요소를 바꾸려면 호출 [CMFCRibbonPanel::Replace](#replace)합니다.  
+### <a name="remarks"></a>Remarks  
+ To replace a ribbon element based on position, call [CMFCRibbonPanel::Replace](#replace).  
   
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert  
- 표시 사각형 내에 리본 요소의 세로 위치를 가운데 맞춤을 사용 하지 않도록 설정 하거나 사용 합니다.  
+##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert  
+ Enables or disables the centering of the vertical positions of ribbon elements within their display rectangle.  
   
 ```  
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`리본 메뉴의 표시 사각형; 요소로,의 세로 위치를 가운데 맞춤 하려면 `FALSE` 이 기능을 해제할 수 있습니다.  
+ `TRUE` to center the vertical positions of ribbon elements within their display rectangle; `FALSE` to disable this feature.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdata"></a>CMFCRibbonPanel::SetData  
- 리본 패널을 사용 하 여 사용자 정의 데이터 연결 합니다.  
+##  <a name="setdata"></a>  CMFCRibbonPanel::SetData  
+ Associates user-defined data with the ribbon panel.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 사용자 정의 설정할 데이터를 지정 합니다.  
+ Specifies the user-defined data to set.  
   
-### <a name="remarks"></a>주의  
- 리본 패널와 사용자 정의 데이터를 연결 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to associate user-defined data with the ribbon panel.  
   
-##  <a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu  
- 팝업 메뉴는 지정한 명령 ID를 가진 요소에 할당  
+##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu  
+ Assigns a popup menu to the element that has the given command ID.  
   
 ```  
 BOOL SetElementMenu(
@@ -863,30 +916,30 @@ BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 명령 메뉴를 추가 하는 위치는 리본 요소 ID를 지정 합니다.  
+ Specifies the command ID of the ribbon element where the menu is added.  
   
  [in] `hMenu`  
- 리본 패널에 추가 하기 위해 Windows 메뉴에 대 한 핸들을 지정 합니다.  
+ Specifies the handle to the Windows menu to add to the ribbon panel.  
   
  [in] `bIsDefautCommand`  
- `TRUE`리본 요소를 클릭할 경우 리본 요소와 연결 된 명령 실행 않아야 함을 지정 합니다. 이 경우에 메뉴는 리본 요소 옆의 화살표를 클릭할 때 엽니다. `FALSE`리본 요소를 클릭할 경우 리본 요소와 관련 된 명령이 실행 되지 해야를 지정 합니다. 이 경우 요소에는 사용자가 클릭 하는 위치에 관계 없이 팝업 메뉴가 나타납니다.  
+ `TRUE` to specify that the command associated with the ribbon element should be executed if the ribbon element is clicked. In this case, the menu is only opened when the user clicks the arrow next to the ribbon element. `FALSE` to specify that the command associated with the ribbon element should not be executed if the ribbon element is clicked. In this case, the popup menu appears regardless of where the user clicks on the element.  
   
  [in] `bRightAlign`  
- `TRUE`지정 하는 팝업 메뉴가 오른쪽에 맞춰집니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to specify that the popup menu is right-aligned; otherwise, `FALSE`.  
   
  [in] `uiMenuResID`  
- 리본 패널에 추가할 메뉴의 리소스 ID를 지정 합니다.  
+ Specifies the resource ID of the menu to add to the ribbon panel.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`메뉴는 리본 요소에 할당 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the menu has been assigned to the ribbon element; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 팝업 메뉴는 지정한 명령 ID를 가진 리본 요소에 할당 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to assign a popup menu to the ribbon element that has the given command ID.  
   
-##  <a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC  
- 리본 패널에 제공 된 런타임 클래스 정보로 지정 된 리본 요소를 추가 합니다.  
+##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC  
+ Adds the ribbon element that is specified by the provided runtime class information to the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* SetElementRTC(
@@ -894,21 +947,21 @@ int nIndex,
 CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 리본 요소를 추가 하려면의&0;부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the ribbon element to add.  
   
- [in] [out]`pRTC`  
- 리본 패널에 추가 하는 리본 요소에 대 한 런타임 클래스 정보에 대 한 포인터입니다.  
+ [in] [out] `pRTC`  
+ A pointer to the runtime class information for the ribbon element that is added to the ribbon panel.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 런타임 클래스 정보를 사용 하 여 생성 된 리본 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that was created by using the specified runtime class information.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에는 사용자 지정 요소 (예를 들어, 색상 단추)를 추가 하려는 경우에 사용자 지정 요소의 런타임 클래스 정보를 지정 해야 합니다. 리본이이 정보를 저장 및 사용자 지정 요소를 만듭니다 (으로 식별 됨)은 기존 요소를 대체 합니다. 지정 된 명령 id입니다. 다음 리본 메뉴는 새로 만든된 요소에 대 한 포인터를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to add a custom element (for example, a color button) to the ribbon panel, you must specify the custom element's runtime class information. The ribbon stores this information, creates the custom element, and replaces an existing element that is located (identified by) the specified command ID. The ribbon then returns a pointer to the newly created element.  
   
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID  
- 리본 패널에 제공 된 런타임 클래스 정보로 지정 된 리본 요소를 추가 합니다.  
+##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID  
+ Adds a ribbon element that is specified by the provided runtime class information to the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -916,21 +969,21 @@ UINT uiCmdID,
 CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 리본 요소를 추가 하려면 명령 ID를 지정 합니다.  
+ Specifies the command ID of the ribbon element to add.  
   
- [in] [out]`pRTC`  
- 리본 패널에 추가 하는 리본 요소와 관련 된 런타임 클래스 정보에 대 한 포인터입니다.  
+ [in] [out] `pRTC`  
+ A pointer to the runtime class information associated with the ribbon element that is added to the ribbon panel.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 런타임 클래스 정보를 사용 하 여 생성 된 리본 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that was created by using the specified runtime class information.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에는 사용자 지정 요소 (예를 들어, 색상 단추)를 추가 하려는 경우에 사용자 지정 요소의 런타임 클래스 정보를 지정 해야 합니다. 리본이이 정보를 저장, 사용자 지정 요소를 만듭니다 및 지정 된 명령 ID가 있는 기존 요소를 대체 합니다. 그런 다음 새로 만든된 요소에 대 한 포인터를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to add a custom element (for example, a color button) to the ribbon panel, you must specify the custom element's runtime class information. The ribbon stores this information, creates the custom element, and replaces an existing element located by the specified command ID. It then returns a pointer to the newly created element.  
   
-### <a name="example"></a>예제  
- 다음 예제를 사용 하는 방법을 보여 줍니다는 `SetElementRTCByID` 메서드:  
+### <a name="example"></a>Example  
+ The following example shows how to use the `SetElementRTCByID` method:  
   
 ```  
  
@@ -955,91 +1008,91 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));  
 ```  
   
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns  
- 사용 하거나 리본 요소에 동일한 열 너비를 조정 하면 사용 하지 않도록 설정 합니다.  
+##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns  
+ Enables or disables the adjustment of the width of ribbon elements in the same column.  
   
 ```  
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`리본 요소에 열을 가장 큰 리본 요소의 너비에 동일한 열 너비를 조정 하려면 `FALSE` 이 너비 조정을 해제 하려면.  
+ `TRUE` to adjust the width of ribbon elements in the same column to the width of the largest ribbon element in the column; `FALSE` to disable this width adjustment.  
   
-### <a name="remarks"></a>주의  
- 를 리본 패널에서이 기능을 사용할 때 리본 요소에 동일한 열 너비의 같은 열에 가장 큰 리본 요소 너비를 조정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When this feature is enabled in a ribbon panel, the widths of ribbon elements in the same column are adjusted to the width of the largest ribbon element in the same column.  
   
-##  <a name="setkeys"></a>CMFCRibbonPanel::SetKeys  
- 리본 패널의 기본 단추에 대 한 keytip를 설정합니다.  
+##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys  
+ Sets the keytip for the default button of the ribbon panel.  
   
 ```  
 void SetKeys(LPCTSTR lpszKeys);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- 리본 패널의 기본 단추에 대 한 keytip 합니다.  
+ The keytip for the default button of the ribbon panel.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에는 리본 요소를 표시할 공간이 부족 한 기본 단추가 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The default button is displayed when a ribbon panel has insufficient space to display its ribbon elements.  
   
-##  <a name="showpopup"></a>CMFCRibbonPanel::ShowPopup  
- 만들고 리본 패널에 대 한 팝업 메뉴를 표시 합니다.  
+##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup  
+ Creates and displays a pop-up menu for the ribbon panel.  
   
 ```  
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 리본 패널에 대 한 기본 단추에 대 한 포인터입니다.  
+ Pointer to the default button for the ribbon panel.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 리본 패널에 대 한 팝업 메뉴에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the pop-up menu for the ribbon panel if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>주의  
- 리본 패널에 대 한 팝업 메뉴는 리본 패널의 표시 축소 되는 경우에 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The pop-up menu for the ribbon panel is only available when the display of the ribbon panel is collapsed.  
   
-##  <a name="setfocused"></a>CMFCRibbonPanel::SetFocused  
- 지정된 된 리본 요소에 포커스를 설정 합니다.  
+##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused  
+ Sets focus to the specified Ribbon element.  
   
 ```  
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pNewFocus`  
- 포커스를 받을 수 있는 리본 요소에 대 한 포인터입니다.  
+ A pointer to a Ribbon element that receives focus.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible  
- 지정된 된 리본 요소를 표시 하려면 갤러리를 스크롤합니다.  
+##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible  
+ Scrolls the gallery to make the specified Ribbon element visible.  
   
 ```  
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 표시할 리본 요소에 대 한 포인터입니다.  
+ A pointer to a Ribbon element to show.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look  
- 부모 리본 (작은 사각형 응용 프로그램 단추)를 확인 하는 Windows 7에 있는지 여부를 나타냅니다.  
+##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look  
+ Indicates whether the parent ribbon has Windows 7 look (small rectangular application button).  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`부모 리본에 Windows 7을 표시 합니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent ribbon has Windows 7 look; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements  
- 표시 된 요소의 배열을 검색합니다.  
+##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements  
+ Retrieves an array of visible elements.  
   
 ```  
 void GetVisibleElements(
@@ -1047,40 +1100,40 @@ CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `arElements`  
- 함수가 반환 될 때이 매개 변수는 표시 된 요소의 배열이 포함 됩니다.  
+ When the function returns, this parameter contains an array of visible elements.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect  
- 갤러리 요소의 경계 사각형을 반환합니다.  
+##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect  
+ Returns a bounding rectangle of a Gallery element.  
   
 ```  
 CRect GetGalleryRect();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 크기와이 패널에 있는 갤러리 요소의 위치입니다.  
+### <a name="return-value"></a>Return Value  
+ Size and position of the Gallery element within this panel.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getfocused"></a>CMFCRibbonPanel::GetFocused  
- 포커스가 지정된 요소를 반환합니다.  
+##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused  
+ Returns a focused element.  
   
 ```  
 CMFCRibbonBaseElement* GetFocused() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 포커스가 있는 요소에 대 한 포인터 또는 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a focused element or `NULL`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonBaseElement 클래스](../../mfc/reference/cmfcribbonbaseelement-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
+ [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
 

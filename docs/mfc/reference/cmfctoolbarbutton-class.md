@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarButton 클래스 | Microsoft 문서"
+title: CMFCToolBarButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -91,7 +91,83 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarButton class
+- CMFCToolBarButton [MFC], CMFCToolBarButton
+- CMFCToolBarButton [MFC], CanBeDropped
+- CMFCToolBarButton [MFC], CanBeStored
+- CMFCToolBarButton [MFC], CanBeStretched
+- CMFCToolBarButton [MFC], CompareWith
+- CMFCToolBarButton [MFC], CopyFrom
+- CMFCToolBarButton [MFC], CreateFromOleData
+- CMFCToolBarButton [MFC], EnableWindow
+- CMFCToolBarButton [MFC], ExportToMenuButton
+- CMFCToolBarButton [MFC], GetClipboardFormat
+- CMFCToolBarButton [MFC], GetHwnd
+- CMFCToolBarButton [MFC], GetImage
+- CMFCToolBarButton [MFC], GetInvalidateRect
+- CMFCToolBarButton [MFC], GetParentWnd
+- CMFCToolBarButton [MFC], GetProtectedCommands
+- CMFCToolBarButton [MFC], GetTextSize
+- CMFCToolBarButton [MFC], HasFocus
+- CMFCToolBarButton [MFC], HaveHotBorder
+- CMFCToolBarButton [MFC], IsDrawImage
+- CMFCToolBarButton [MFC], IsDrawText
+- CMFCToolBarButton [MFC], IsDroppedDown
+- CMFCToolBarButton [MFC], IsEditable
+- CMFCToolBarButton [MFC], IsExtraSize
+- CMFCToolBarButton [MFC], IsFirstInGroup
+- CMFCToolBarButton [MFC], IsHidden
+- CMFCToolBarButton [MFC], IsHorizontal
+- CMFCToolBarButton [MFC], IsLastInGroup
+- CMFCToolBarButton [MFC], IsLocked
+- CMFCToolBarButton [MFC], IsOwnerOf
+- CMFCToolBarButton [MFC], IsVisible
+- CMFCToolBarButton [MFC], IsWindowVisible
+- CMFCToolBarButton [MFC], NotifyCommand
+- CMFCToolBarButton [MFC], OnAddToCustomizePage
+- CMFCToolBarButton [MFC], OnBeforeDrag
+- CMFCToolBarButton [MFC], OnBeforeDrop
+- CMFCToolBarButton [MFC], OnCalculateSize
+- CMFCToolBarButton [MFC], OnCancelMode
+- CMFCToolBarButton [MFC], OnChangeParentWnd
+- CMFCToolBarButton [MFC], OnClick
+- CMFCToolBarButton [MFC], OnClickUp
+- CMFCToolBarButton [MFC], OnContextHelp
+- CMFCToolBarButton [MFC], OnCtlColor
+- CMFCToolBarButton [MFC], OnCustomizeMenu
+- CMFCToolBarButton [MFC], OnDblClk
+- CMFCToolBarButton [MFC], OnDraw
+- CMFCToolBarButton [MFC], OnDrawOnCustomizeList
+- CMFCToolBarButton [MFC], OnGetCustomToolTipText
+- CMFCToolBarButton [MFC], OnGlobalFontsChanged
+- CMFCToolBarButton [MFC], OnMove
+- CMFCToolBarButton [MFC], OnShow
+- CMFCToolBarButton [MFC], OnSize
+- CMFCToolBarButton [MFC], OnToolHitTest
+- CMFCToolBarButton [MFC], OnUpdateToolTip
+- CMFCToolBarButton [MFC], PrepareDrag
+- CMFCToolBarButton [MFC], Rect
+- CMFCToolBarButton [MFC], ResetImageToDefault
+- CMFCToolBarButton [MFC], SaveBarState
+- CMFCToolBarButton [MFC], Serialize
+- CMFCToolBarButton [MFC], SetACCData
+- CMFCToolBarButton [MFC], SetClipboardFormatName
+- CMFCToolBarButton [MFC], SetImage
+- CMFCToolBarButton [MFC], SetProtectedCommands
+- CMFCToolBarButton [MFC], SetRadio
+- CMFCToolBarButton [MFC], SetRect
+- CMFCToolBarButton [MFC], SetStyle
+- CMFCToolBarButton [MFC], SetVisible
+- CMFCToolBarButton [MFC], Show
+- CMFCToolBarButton [MFC], m_bImage
+- CMFCToolBarButton [MFC], m_bText
+- CMFCToolBarButton [MFC], m_bTextBelow
+- CMFCToolBarButton [MFC], m_bUserButton
+- CMFCToolBarButton [MFC], m_bWholeText
+- CMFCToolBarButton [MFC], m_bWrap
+- CMFCToolBarButton [MFC], m_bWrapText
+- CMFCToolBarButton [MFC], m_nID
+- CMFCToolBarButton [MFC], m_nStyle
+- CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
 caps.latest.revision: 34
 author: mikeblome
@@ -111,196 +187,196 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 0139779cd00a514684c20b2c589d96247a532733
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c1093bf607748437e3e00227986aa9c332e7dc4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 클래스
-도구 모음 단추 기능을 제공합니다.  
+# <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton Class
+Provides button functionality to toolbars.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarButton : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|`CMFCToolBarButton` 개체를 생성하고 초기화합니다.|  
-|`CMFCToolBarButton::~CMFCToolBarButton`|소멸자|  
+|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Constructs and initializes a `CMFCToolBarButton` object.|  
+|`CMFCToolBarButton::~CMFCToolBarButton`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarButton::CanBeDropped](#canbedropped)|사용자 사용자 지정 하는 동안 도구 모음이 나 메뉴에 있는 단추를 배치할 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::CanBeStored](#canbestored)|단추를 저장할 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::CanBeStretched](#canbestretched)|사용자가 사용자 지정 하는 동안 단추를 늘릴 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::CompareWith](#comparewith)|이 인스턴스를 제공 된 `CMFCToolBarButton` 개체입니다.|  
-|[CMFCToolBarButton::CopyFrom](#copyfrom)|현재 단추에 다른 도구 모음 단추의 속성을 복사합니다.|  
-|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|만듭니다는 `CMFCToolBarButton` 개체에서 제공 된 `COleDataObject` 개체입니다.|  
-|`CMFCToolBarButton::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCToolBarButton::EnableWindow](#enablewindow)|마우스 및 키보드 입력을 사용하거나 사용하지 않도록 설정합니다.|  
-|[CMFCToolBarButton::ExportToMenuButton](#exporttomenubutton)|도구 모음 단추를 클릭 하 여 메뉴에 텍스트를 복사 합니다.|  
-|[CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)|응용 프로그램에 대 한 전역 클립보드 형식을 검색합니다.|  
-|[CMFCToolBarButton::GetHwnd](#gethwnd)|도구 모음 단추와 연결 된 창 핸들을 검색 합니다.|  
-|[CMFCToolBarButton::GetImage](#getimage)|단추의 이미지 인덱스를 검색합니다.|  
-|[CMFCToolBarButton::GetInvalidateRect](#getinvalidaterect)|다시 그려야 하는 단추의 클라이언트 영역의 영역을 검색 합니다.|  
-|[CMFCToolBarButton::GetParentWnd](#getparentwnd)|단추의 부모 창을 검색합니다.|  
-|[CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)|사용자를 사용자 지정할 수 있는 명령의 목록을 검색 합니다.|  
-|[CMFCToolBarButton::GetTextSize](#gettextsize)|단추 텍스트의 크기를 검색 합니다.|  
-|[CMFCToolBarButton::HasFocus](#hasfocus)|단추는 현재 입력된 포커스를가지고 있는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::HaveHotBorder](#havehotborder)|사용자가 단추를 선택 단추의 테두리 표시 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsDrawImage](#isdrawimage)|이미지 단추에 표시 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsDrawText](#isdrawtext)|단추 텍스트 레이블을 표시 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsDroppedDown](#isdroppeddown)|단추는 하위 메뉴를 표시 하는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsEditable](#iseditable)|단추를 사용자 지정할 수 있는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsExtraSize](#isextrasize)|단추는 확장 된 테두리 함께 표시 될 수 있는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsFirstInGroup](#isfirstingroup)|해당 단추 그룹의 첫 번째 위치에 있는 단추 인지 확인 합니다.|  
-|[CMFCToolBarButton::IsHidden](#ishidden)|단추를 숨길지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsHorizontal](#ishorizontal)|가로 도구 모음 단추는 있는 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsLastInGroup](#islastingroup)|단추 단추 그룹의 마지막 위치에 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::IsLocked](#islocked)|잠긴 (비-사용자 지정 가능) 도구 모음 단추 인지 확인 합니다.|  
-|[CMFCToolBarButton::IsOwnerOf](#isownerof)|단추는 제공 된 창 핸들의 소유자 인지 확인 합니다.|  
-|[CMFCToolBarButton::IsVisible](#isvisible)|도구 모음 단추가 표시 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|단추의 내부 창 핸들이 표시 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|단추를 처리 하는 여부를 지정 된 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지입니다.|  
-|[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자입니다.|  
-|[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|단추를 놓을 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|사용자를 대상 도구 모음 단추를 삭제할 수 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|처리 하는 프레임 워크에서 호출 된 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) 메시지입니다.|  
-|[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|새 도구 모음 단추를 삽입할 경우에 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::OnClick](#onclick)|사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::OnClickUp](#onclickup)|마우스 단추를 놓을 때 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다.|  
-|[CMFCToolBarButton::OnCtlColor](#onctlcolor)|부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_CTLCOLOR` 메시지입니다.|  
-|[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|부모 도구 모음에서 응용 프로그램 바로 가기 메뉴를 표시 하는 경우 제공 된 메뉴를 수정 하려면 단추를 수 있습니다.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다.|  
-|[CMFCToolBarButton::OnDraw](#ondraw)|지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다.|  
-|[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다.|  
-|[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|단추에 대 한 사용자 지정 도구 설명 텍스트를 검색 하는 프레임 워크에서 호출 됩니다.|  
-|[CMFCToolBarButton::OnGlobalFontsChanged](#onglobalfontschanged)|전역 글꼴 변경 된 경우에 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCToolBarButton::OnMove](#onmove)|부모 도구 모음에서 이동 하면 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCToolBarButton::OnShow](#onshow)|프레임 워크에 의해 때 호출 단추 수 표시 되거나 표시 되지 않습니다.|  
-|[CMFCToolBarButton::OnSize](#onsize)|부모 도구 모음에서 변경 크기 또는 위치와 이러한 변경 단추 크기를 변경 하려면 필요한 경우는 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::OnToolHitTest](#ontoolhittest)|부모 도구 모음 단추의 경계 사각형에는 점이 인지 여부를 결정 해야 할 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::OnUpdateToolTip](#onupdatetooltip)|부모 도구 모음에서 도구 설명 텍스트를 업데이트 하는 경우에 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::PrepareDrag](#preparedrag)|단추는 끌어서 놓기 작업을 수행 하려고 할 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCToolBarButton::Rect](#rect)|단추에 대 한 경계 사각형을 검색합니다.|  
-|[CMFCToolBarButton::ResetImageToDefault](#resetimagetodefault)|단추와 연결 되는 이미지의 기본값을 설정 합니다.|  
-|[CMFCToolBarButton::SaveBarState](#savebarstate)|도구 모음 단추의 상태를 저장합니다.|  
-|[CMFCToolBarButton::Serialize](#serialize)|이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다. (재정의 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CMFCToolBarButton::SetACCData](#setaccdata)|제공 된 정보를 표시 `CAccessibilityData` 도구 모음 단추에서 내게 필요한 옵션 데이터는 개체입니다.|  
-|[CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname)|전역 클립보드 형식을 이름을 바꿉니다.|  
-|[CMFCToolBarButton::SetImage](#setimage)|단추의 이미지 인덱스를 설정합니다.|  
-|[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)|사용자를 사용자 지정할 수 있는 명령의 목록을 설정 합니다.|  
-|[CMFCToolBarButton::SetRadio](#setradio)|단추의 선택된 상태가 변경 될 때 프레임 워크에 의해 호출 됩니다.|  
-|[CMFCToolBarButton::SetRect](#setrect)|단추에 대 한 경계 사각형을 설정합니다.|  
-|[CMFCToolBarButton::SetStyle](#setstyle)|단추 스타일을 설정합니다.|  
-|[CMFCToolBarButton::SetVisible](#setvisible)|단추가 표시 되는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::Show](#show)|표시 하거나 단추를 숨깁니다.|  
+|[CMFCToolBarButton::CanBeDropped](#canbedropped)|Specifies whether a user can position a button on a toolbar or menu during customization.|  
+|[CMFCToolBarButton::CanBeStored](#canbestored)|Specifies whether the button can be stored.|  
+|[CMFCToolBarButton::CanBeStretched](#canbestretched)|Specifies whether a user can stretch the button during customization.|  
+|[CMFCToolBarButton::CompareWith](#comparewith)|Compares this instance with the provided `CMFCToolBarButton` object.|  
+|[CMFCToolBarButton::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button.|  
+|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Creates a `CMFCToolBarButton` object from the provided `COleDataObject` object.|  
+|`CMFCToolBarButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCToolBarButton::EnableWindow](#enablewindow)|Enables or disables mouse and keyboard input.|  
+|[CMFCToolBarButton::ExportToMenuButton](#exporttomenubutton)|Copies text from the toolbar button to a menu.|  
+|[CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)|Retrieves the global clipboard format for the application.|  
+|[CMFCToolBarButton::GetHwnd](#gethwnd)|Retrieves the window handle that is associated with the toolbar button.|  
+|[CMFCToolBarButton::GetImage](#getimage)|Retrieves the image index of the button.|  
+|[CMFCToolBarButton::GetInvalidateRect](#getinvalidaterect)|Retrieves the region of the client area of the button that must be redrawn.|  
+|[CMFCToolBarButton::GetParentWnd](#getparentwnd)|Retrieves the parent window of the button.|  
+|[CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)|Retrieves the list of commands that the user cannot customize.|  
+|[CMFCToolBarButton::GetTextSize](#gettextsize)|Retrieves the size of the button text.|  
+|[CMFCToolBarButton::HasFocus](#hasfocus)|Determines whether the button has the current input focus.|  
+|[CMFCToolBarButton::HaveHotBorder](#havehotborder)|Determines whether a border of the button is displayed when a user selects the button.|  
+|[CMFCToolBarButton::IsDrawImage](#isdrawimage)|Determines whether an image is displayed on the button.|  
+|[CMFCToolBarButton::IsDrawText](#isdrawtext)|Determines whether a text label is displayed on the button.|  
+|[CMFCToolBarButton::IsDroppedDown](#isdroppeddown)|Determines whether the button displays a submenu.|  
+|[CMFCToolBarButton::IsEditable](#iseditable)|Determines whether the button can be customized.|  
+|[CMFCToolBarButton::IsExtraSize](#isextrasize)|Determines whether the button can be displayed with an extended border.|  
+|[CMFCToolBarButton::IsFirstInGroup](#isfirstingroup)|Determines whether the button is in the first position in its button group.|  
+|[CMFCToolBarButton::IsHidden](#ishidden)|Determines whether the button is hidden.|  
+|[CMFCToolBarButton::IsHorizontal](#ishorizontal)|Determines whether the button is located on a horizontal toolbar.|  
+|[CMFCToolBarButton::IsLastInGroup](#islastingroup)|Specifies whether the button is in the last position in its button group.|  
+|[CMFCToolBarButton::IsLocked](#islocked)|Determines whether the button is on a locked (non-customizable) toolbar.|  
+|[CMFCToolBarButton::IsOwnerOf](#isownerof)|Determines whether the button is the owner of the provided window handle.|  
+|[CMFCToolBarButton::IsVisible](#isvisible)|Determines whether the toolbar button is visible.|  
+|[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Determines whether the underlying window handle of the button is visible.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.|  
+|[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Called by the framework when the button is added to a **Customize** dialog box.|  
+|[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Specifies whether the button can be dragged.|  
+|[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Specifies whether a user can drop the button onto the target toolbar.|  
+|[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Called by the framework to calculate the size of the button for the specified device context and docking state.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Called by the framework to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message.|  
+|[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar.|  
+|[CMFCToolBarButton::OnClick](#onclick)|Called by the framework when the user clicks the mouse button.|  
+|[CMFCToolBarButton::OnClickUp](#onclickup)|Called by the framework when the user releases the mouse button.|  
+|[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message.|  
+|[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message.|  
+|[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Allows the button to modify the provided menu when the application displays a shortcut menu on the parent toolbar.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Called by the framework when the parent toolbar handles a [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) message.|  
+|[CMFCToolBarButton::OnDraw](#ondraw)|Called by the framework to draw the button by using the specified styles and options.|  
+|[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box.|  
+|[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Called by the framework to retrieve the custom tooltip text for the button.|  
+|[CMFCToolBarButton::OnGlobalFontsChanged](#onglobalfontschanged)|Called by the framework when the global font has changed.|  
+|[CMFCToolBarButton::OnMove](#onmove)|Called by the framework when the parent toolbar moves.|  
+|[CMFCToolBarButton::OnShow](#onshow)|Called by the framework when the button becomes visible or invisible.|  
+|[CMFCToolBarButton::OnSize](#onsize)|Called by the framework when the parent toolbar changes its size or position and this change requires the button to change size.|  
+|[CMFCToolBarButton::OnToolHitTest](#ontoolhittest)|Called by the framework when the parent toolbar must determine whether a point is in the bounding rectangle of the button.|  
+|[CMFCToolBarButton::OnUpdateToolTip](#onupdatetooltip)|Called by the framework when the parent toolbar updates its tooltip text.|  
+|[CMFCToolBarButton::PrepareDrag](#preparedrag)|Called by the framework when the button is about to perform a drag-and-drop operation.|  
+|[CMFCToolBarButton::Rect](#rect)|Retrieves the bounding rectangle of the button.|  
+|[CMFCToolBarButton::ResetImageToDefault](#resetimagetodefault)|Sets to the default value the image that is associated with the button.|  
+|[CMFCToolBarButton::SaveBarState](#savebarstate)|Saves the state of the toolbar button.|  
+|[CMFCToolBarButton::Serialize](#serialize)|Reads this object from an archive or writes it to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CMFCToolBarButton::SetACCData](#setaccdata)|Populates the provided `CAccessibilityData` object with accessibility data from the toolbar button.|  
+|[CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname)|Renames the global clipboard format.|  
+|[CMFCToolBarButton::SetImage](#setimage)|Sets the image index of the button.|  
+|[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)|Sets the list of commands that the user cannot customize.|  
+|[CMFCToolBarButton::SetRadio](#setradio)|Called by the framework when a button changes its checked state.|  
+|[CMFCToolBarButton::SetRect](#setrect)|Sets the bounding rectangle of the button.|  
+|[CMFCToolBarButton::SetStyle](#setstyle)|Sets the style of the button.|  
+|[CMFCToolBarButton::SetVisible](#setvisible)|Specifies whether the button is visible.|  
+|[CMFCToolBarButton::Show](#show)|Shows or hides the button.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarButton::m_bImage](#m_bimage)|이미지 단추에 표시 되는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bText](#m_btext)|단추 텍스트 레이블을 표시 되는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bTextBelow](#m_btextbelow)|단추 이미지 아래 텍스트 레이블을 표시 되는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bUserButton](#m_buserbutton)|단추는 사용자 지정 이미지에 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bWholeText](#m_bwholetext)|단추는 경계 사각형에 맞지 않을 경우에 전체 텍스트 레이블을 표시할지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bWrap](#m_bwrap)|구분 기호 옆에 있는 단추 다음 행에 넣을 있는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_bWrapText](#m_bwraptext)|여러 줄 텍스트 레이블을 사용 되는지 여부를 지정 합니다.|  
-|[CMFCToolBarButton::m_nID](#m_nid)|단추의 명령 ID입니다.|  
-|[CMFCToolBarButton::m_nStyle](#m_nstyle)|단추 스타일입니다.|  
-|[CMFCToolBarButton::m_strText](#m_strtext)|단추의 텍스트 레이블입니다.|  
+|[CMFCToolBarButton::m_bImage](#m_bimage)|Specifies whether an image is displayed on the button.|  
+|[CMFCToolBarButton::m_bText](#m_btext)|Specifies whether a text label is displayed on the button.|  
+|[CMFCToolBarButton::m_bTextBelow](#m_btextbelow)|Specifies whether the text label is displayed underneath the image on the button.|  
+|[CMFCToolBarButton::m_bUserButton](#m_buserbutton)|Specifies whether the button has a user-defined image.|  
+|[CMFCToolBarButton::m_bWholeText](#m_bwholetext)|Specifies whether the button displays its full text label even if it does not fit in the bounding rectangle.|  
+|[CMFCToolBarButton::m_bWrap](#m_bwrap)|Specifies whether the button next to a separator will be put on the next row.|  
+|[CMFCToolBarButton::m_bWrapText](#m_bwraptext)|Specifies whether multi-line text labels are enabled.|  
+|[CMFCToolBarButton::m_nID](#m_nid)|The command ID of the button.|  
+|[CMFCToolBarButton::m_nStyle](#m_nstyle)|The style of the button.|  
+|[CMFCToolBarButton::m_strText](#m_strtext)|The text label of the button.|  
   
-## <a name="remarks"></a>주의  
- A `CMFCToolbarButton` 개체가 도구 모음에 있는 컨트롤입니다. 동작 하는 일반 단추 유사합니다. 이 개체에는 이미지와 텍스트 레이블을 할당할 수 있습니다. 도구 모음 단추의 명령 id입니다. 있을 수도 있습니다. 사용자가 도구 모음 단추를 클릭 하면 프레임 워크는이 ID를 지정 하는 명령을 실행 합니다.  
+## <a name="remarks"></a>Remarks  
+ A `CMFCToolbarButton` object is a control that resides on a toolbar. Its behavior resembles that of an ordinary button. You can assign an image and a text label to this object. A toolbar button can also have a command ID. When the user clicks the toolbar button, the framework executes the command that this ID specifies.  
   
- 일반적으로 도구 모음 단추 사용자 지정할 수 있습니다: 사용자 수, 다른 하나는 도구 모음에서 단추를 끌어서 및 복사, 붙여넣기, 삭제 및 텍스트 레이블 및 이미지를 편집 합니다. 사용자는 도구 모음 사용자 지정 되지 않도록 하려면 두 가지 방법 중 하나에 도구 모음을 잠글 수 있습니다. 집합 중 하나는 `bLocked` 플래그를 `TRUE` 호출 하는 경우 [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar), 개별 단추의 명령 ID를 사용 하 여 보호 된 명령의 전체 목록에 추가할는 [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands) 메서드.  
+ Typically, toolbar buttons can be customized: the user can drag buttons from one toolbar to another, and copy, paste, delete, and edit text labels and images. To prevent the user from customizing the toolbar, you can lock the toolbar in one of two ways. Either set the `bLocked` flag to `TRUE` when you call [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar), or add the command ID of an individual button to the global list of protected commands by using the [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands) method.  
   
- `CMFCToolBarButton`응용 프로그램에서 도구 모음 이미지의 전역 컬렉션에서 이미지를 표시 하는 개체입니다. 이러한 컬렉션은 부모 도구 모음에서 유지 관리 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)합니다. 자세한 내용은 참조 [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md)합니다.  
+ `CMFCToolBarButton` objects display images from the global collections of toolbar images in the application. These collections are maintained by the parent toolbar, [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md). For more information, see [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md).  
   
- 사용자가 도구 모음 단추를 클릭 하면 해당 부모 도구 모음에서 마우스 메시지를 처리 단추에 적절 한 조치를 통신 합니다. 부모 도구 모음에서 전송 단추에 유효한 명령 ID는 `WM_COMMAND` 메시지 부모 프레임입니다.  
+ When the user clicks a toolbar button, its parent toolbar processes the mouse message and communicates the appropriate actions to the button. If the button has a valid command ID, the parent toolbar sends the `WM_COMMAND` message to the parent frame.  
   
- `CMFCToolBarButton` 클래스는 다른 도구 모음 단추 클래스에 대 한 기본 클래스와 같은 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md), [CMFCToolBarEditBoxButton 클래스](../../mfc/reference/cmfctoolbareditboxbutton-class.md), 및 [CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다.  
+ The `CMFCToolBarButton` class is the base class for other toolbar button classes, such as [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md), [CMFCToolBarEditBoxButton Class](../../mfc/reference/cmfctoolbareditboxbutton-class.md), and [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 구성 방법을 보여 줍니다.는 `CMFCToolBarButton` 의 다양 한 메서드를 사용 하 여 개체의 `CMFCToolBarButton` 클래스입니다. 예제에는 마우스를 사용 하도록 설정 하 고 키보드 입력, 단추 이미지 인덱스 설정 단추를의 경계 사각형을 설정한 단추를 보이게 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [탭 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCToolBarButton` object by using various methods in the `CMFCToolBarButton` class. The example illustrates how to enable the mouse and keyboard input, set the image index of the button, set the bounding rectangle of the button, and make the button visible. This code snippet is part of the [Tab Control sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_TabControl #&1;](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]  
-[!code-cpp[NVC_MFC_TabControl #&2;](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]  
+[!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbarbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarbutton.h  
   
-##  <a name="canbedropped"></a>CMFCToolBarButton::CanBeDropped  
- 사용자 사용자 지정 하는 동안 도구 모음이 나 메뉴에 있는 단추를 배치할 수 있는지 여부를 지정 합니다.  
+##  <a name="canbedropped"></a>  CMFCToolBarButton::CanBeDropped  
+ Specifies whether a user can position a button on a toolbar or menu during customization.  
   
 ```  
 virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pToolbar`  
- 사용되지 않습니다.  
+ Unused.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 도구 모음 단추를 놓을 수에 모든 사용자 지정 가능한 (즉, 잠겨 있지 않은) 도구 모음입니다.  
+### <a name="remarks"></a>Remarks  
+ By default, a toolbar button can be dropped on every customizable (that is, non-locked) toolbar.  
   
- 이 메서드의 기본 구현에서는 반환 `TRUE`합니다. 이 메서드를 재정의 하 고 반환 `FALSE` 사용자가 단추 위치를 변경 하지 못하도록 하려는 경우.  
+ The default implementation of this method returns `TRUE`. Override this method and return `FALSE` if you want to prevent the user from repositioning the button.  
   
-##  <a name="canbestored"></a>CMFCToolBarButton::CanBeStored  
- 단추를 저장할 수 있는지 여부를 결정 합니다.  
+##  <a name="canbestored"></a>  CMFCToolBarButton::CanBeStored  
+ Determines whether the button can be stored.  
   
 ```  
 virtual BOOL CanBeStored() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 단추를 끌어서 놓기 작업에 참여할 수 있는지 여부를 결정 하는 프레임 워크입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework uses this method to determine whether the button can participate in a drag-and-drop operation.  
   
- 기본 구현은 `TRUE`를 반환합니다. 단추를 끌어서 놓기 작업의 일부로 저장할 수 없을 경우이 메서드를 재정의 합니다. 끌어서 놓기 작업에 대 한 자세한 내용은 참조 [끌어서 놓기 (OLE)](../../mfc/drag-and-drop-ole.md)합니다.  
+ The default implementation returns `TRUE`. Override this method if your button cannot be stored as part of a drag-and-drop operation. For more information about drag-and-drop operations, see [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-##  <a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched  
- 사용자가 사용자 지정 하는 동안 단추를 늘릴 수 있는지 여부를 지정 합니다.  
+##  <a name="canbestretched"></a>  CMFCToolBarButton::CanBeStretched  
+ Specifies whether a user can stretch the button during customization.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 사용자 지정 모드에 있는 단추를 확장할 수 있는지 여부를 결정 하는 프레임 워크에서 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is used by the framework to determine whether the button can be stretched in customization mode.  
   
- 이 메서드의 기본 구현에서는 반환 `FALSE`합니다. 이 메서드가 반환 하도록 재정의 `TRUE` 콤보 상자 또는 슬라이더와 같은 가변 너비 컨트롤에 대 한 합니다.  
+ The default implementation of this method returns `FALSE`. Override this method to return `TRUE` for a variable-width control such as a combo box or slider.  
   
- 사용자 지정 모드에 대 한 자세한 내용은 참조 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)합니다.  
+ For more information about customization mode, see [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode).  
   
-##  <a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton  
- `CMFCToolBarButton` 개체를 생성하고 초기화합니다.  
+##  <a name="cmfctoolbarbutton"></a>  CMFCToolBarButton::CMFCToolBarButton  
+ Constructs and initializes a `CMFCToolBarButton` object.  
   
 ```  
 CMFCToolBarButton(
@@ -311,584 +387,584 @@ CMFCToolBarButton(
     BOOL bLocked=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 단추의 명령 ID입니다.  
+ The command ID of the button.  
   
  [in] `iImage`  
- 이미지의 컬렉션의 단추 이미지 인덱스입니다.  
+ The image index of the button in the collection of images.  
   
  [in] `lpszText`  
- 단추의 텍스트 레이블입니다. 수 `NULL`합니다.  
+ The text label of the button. Can be `NULL`.  
   
  [in] `bUserButton`  
- 사용자 지정 단추 인지를 결정 하는 부울 값입니다. 이 매개 변수가 `TRUE`, 단추는 사용자 정의 합니다. 그렇지 않으면, 단추 이미지 리소스에서 로드 됩니다.  
+ A Boolean value that determines whether the button is user-defined. If this parameter is `TRUE`, the button is user-defined. Otherwise, the button image is loaded from a resource.  
   
  [in] `bLocked`  
- 단추를 사용자 지정할 수 있는지 여부를 결정 하는 부울 값입니다. 이 매개 변수가 `TRUE`, 단추를 사용자 지정할 수 없습니다. 그렇지 않으면 단추를 사용자 지정할 수 있습니다.  
+ A Boolean value that determines whether the button can be customized. If this parameter is `TRUE`, the button cannot be customized. Otherwise, the button can be customized.  
   
-##  <a name="comparewith"></a>CMFCToolBarButton::CompareWith  
- 이 인스턴스를 제공 된 `CMFCToolBarButton` 개체입니다.  
+##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
+ Compares this instance with the provided `CMFCToolBarButton` object.  
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `other`  
- 이 인스턴스와 비교할 개체에 대 한 참조입니다.  
+ Reference to the object to compare with this instance.  
   
-### <a name="return-value"></a>반환 값  
- 제공된 된 개체와이 인스턴스의; 값이 일치 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the provided object equals the value of this instance; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 기본 구현에서는 제공된 된 개체의 명령 ID와이 인스턴스의 명령 ID를 같은지 여부를 결정 합니다. 이 메서드를 재정의 하 여 두 개의 지 여부를 결정 하는 추가 처리를 수행 해야 하는 경우 `CMFCToolBarButton` 개체는 동일 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation determines whether the command ID of the provided object equals the command ID of this instance. Override this method if you must perform additional processing to determine whether two `CMFCToolBarButton` objects are equal.  
   
-##  <a name="copyfrom"></a>CMFCToolBarButton::CopyFrom  
- 현재 단추에 다른 도구 모음 단추의 속성을 복사합니다.  
+##  <a name="copyfrom"></a>  CMFCToolBarButton::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 복사할 소스 단추에 대 한 참조입니다.  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>주의  
- 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button.  
   
-##  <a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData  
- 만듭니다는 `CMFCToolBarButton` 개체에서 제공 된 `COleDataObject` 개체입니다.  
+##  <a name="createfromoledata"></a>  CMFCToolBarButton::CreateFromOleData  
+ Creates a `CMFCToolBarButton` object from the provided `COleDataObject` object.  
   
 ```  
 static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObject);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 원본 OLE 데이터 개체입니다.  
+ The source OLE data object.  
   
-### <a name="return-value"></a>반환 값  
- 만든 `CMFCToolBarButton` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The created `CMFCToolBarButton` object.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 다양 한 형식에서 데이터 전송을 수행 하는 프레임 워크에서 사용 됩니다. 예를 들어는 `CMFCOutlookBarPane::OnDragOver` 메서드가이 메서드를 사용 하 여 끌어서 놓기 작업을 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method is used by the framework to perform data transfer in various formats. For example, the `CMFCOutlookBarPane::OnDragOver` method uses this method to perform drag-and-drop operations.  
   
-##  <a name="enablewindow"></a>CMFCToolBarButton::EnableWindow  
- 마우스 및 키보드 입력을 사용하거나 사용하지 않도록 설정합니다.  
+##  <a name="enablewindow"></a>  CMFCToolBarButton::EnableWindow  
+ Enables or disables mouse and keyboard input.  
   
 ```  
 virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 이 매개 변수를 설정 `TRUE` 입력을 사용할 수 있도록 또는 `FALSE` 에 입력을 사용 하지 않도록 설정 합니다.  
+ Set this parameter to `TRUE` to enable input, or to `FALSE` to disable input.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 호출의 `EnableWindow` 함수를 사용 하도록 설정 하거나 입력을 사용 하지 않도록 합니다. 자세한 내용은 참조 [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls the `EnableWindow` function to enable or disable input. For more information, see [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) in the Windows SDK.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton  
- 도구 모음 단추를 클릭 하 여 메뉴에 텍스트를 복사 합니다.  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
+ Copies text from the toolbar button to a menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `menuButton`  
- 대상 메뉴 단추에 대 한 참조입니다.  
+ A reference to the target menu button.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 메뉴 단추를 도구 모음 단추에서 텍스트를 복사 하려면이 메서드를 호출 합니다. 기본 구현은 단추의 텍스트 레이블을 복사합니다. 텍스트 레이블을 비어 있으면이 메서드는 단추의 도구 설명 텍스트를 복사 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to copy the text from a toolbar button to a menu button. The default implementation copies the text label of the button. If the text label is empty, this method copies the tooltip text of the button.  
   
- 이 메서드의 기본 구현에서는 반환 `TRUE`합니다. 프레임 워크에서 파생 된 개체를 변환 하는 경우 추가 작업을 수행 하려는 경우이 메서드를 재정의 [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md) 메뉴 단추에 있습니다.  
+ The default implementation of this method returns `TRUE`. Override this method if you want to take additional actions when the framework converts an object that is derived from [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md) to a menu button.  
   
-##  <a name="getclipboardformat"></a>CMFCToolBarButton::GetClipboardFormat  
- 응용 프로그램에 대 한 전역 클립보드 형식을 검색합니다.  
+##  <a name="getclipboardformat"></a>  CMFCToolBarButton::GetClipboardFormat  
+ Retrieves the global clipboard format for the application.  
   
 ```  
 static CLIPFORMAT __stdcall GetClipboardFormat();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 전역 `CLIPFORMAT` 응용 프로그램에 대 한 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The global `CLIPFORMAT` value for the application.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 OLE 데이터 전송 작업에 대 한 클립보드 형식을 검색 하려면이 메서드를 호출 합니다. 예를 들어는 [CMFCToolBarButton::CreateFromOleData](#createfromoledata) 메서드가이 메서드를 사용 하 여 소스 OLE 데이터 개체에서 데이터를 복사 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to retrieve the clipboard format for OLE data transfer operations. For example, the [CMFCToolBarButton::CreateFromOleData](#createfromoledata) method uses this method to copy data from a source OLE data object.  
   
- 이 메서드는 전역 설정 `CLIPFORMAT` 처음으로이 메서드는 값입니다. 모든 후속 호출에이 메서드는이 값을 반환 합니다.  
+ This method sets the global `CLIPFORMAT` value the first time this method is called. All subsequent calls to this method return this value.  
   
- 끌어서 놓기 작업이 응용 프로그램 간에 발생할 수 있도록 호출의 [CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname) 메서드.  
+ To allow drag-and-drop operations to occur between applications, call the [CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname) method.  
   
- MFC에서 클립보드에 대 한 자세한 내용은 참조 [클립보드](../../mfc/clipboard.md)합니다.  
+ For more information about clipboards in MFC, see [Clipboard](../../mfc/clipboard.md).  
   
-##  <a name="gethwnd"></a>CMFCToolBarButton::GetHwnd  
- 도구 모음 단추와 연결 된 창 핸들을 검색 합니다.  
+##  <a name="gethwnd"></a>  CMFCToolBarButton::GetHwnd  
+ Retrieves the window handle that is associated with the toolbar button.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 단추와 연결 된 창 핸들 또는 `NULL` 도구 모음 단추에 연결 된 창 핸들이 없습니다.  
+### <a name="return-value"></a>Return Value  
+ The window handle that is associated with the toolbar button or `NULL` if the toolbar button has no associated window handle.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현에서는 반환 `NULL`합니다. 특정 컨트롤의 창 핸들을 반환 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method returns `NULL`. Override this method to return the window handle of your specific control.  
   
-##  <a name="getimage"></a>CMFCToolBarButton::GetImage  
- 단추의 이미지 인덱스를 검색합니다.  
+##  <a name="getimage"></a>  CMFCToolBarButton::GetImage  
+ Retrieves the image index of the button.  
   
 ```  
 int GetImage() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 단추와 연결 된 이미지의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the image associated with this button.  
   
-### <a name="remarks"></a>주의  
- 단추에 사용자 지정 이미지를 사용 하는 경우 (즉, `bUserButton` 가 `TRUE` 생성자에서), 사용자 지정 이미지의 컬렉션에서 이미지를 지정 하는 반환 된 인덱스 (참조 [CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). 인덱스를 리소스 파일에서 로드 되는 이미지의 컬렉션에서 이미지를 지정 하는 그렇지 않은 경우 (참조 [CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)). 리소스 파일에 대 한 자세한 내용은 참조 [리소스 파일에 대해 작업](../../windows/working-with-resource-files.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ If the button has a user-defined image (that is, if `bUserButton` was `TRUE` in the constructor), the returned index specifies an image in the collection of user-defined images (see [CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). Otherwise, the index specifies an image in the collection of images that are loaded from a resource file (see [CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)). For more information about resource files, see [Working with Resource Files](../../windows/working-with-resource-files.md).  
   
-##  <a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect  
- 다시 그려야 하는 단추의 클라이언트 영역의 영역을 검색 합니다.  
+##  <a name="getinvalidaterect"></a>  CMFCToolBarButton::GetInvalidateRect  
+ Retrieves the region of the client area of the button that must be redrawn.  
   
 ```  
 virtual const CRect GetInvalidateRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CRect` 다시 그려야 하는 지역을 지정 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that specifies the region that must be redrawn.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 전체 클라이언트 영역을 반환 합니다. 다시 그릴 다른 영역을 사용 하려는 경우이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method returns the whole client area. Override this method if you want a different area to be redrawn.  
   
-##  <a name="getparentwnd"></a>CMFCToolBarButton::GetParentWnd  
- 단추의 부모 창을 검색합니다.  
+##  <a name="getparentwnd"></a>  CMFCToolBarButton::GetParentWnd  
+ Retrieves the parent window of the button.  
   
 ```  
 CWnd* GetParentWnd() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추의 부모 창입니다.  
+### <a name="return-value"></a>Return Value  
+ The parent window of the button.  
   
-##  <a name="getprotectedcommands"></a>CMFCToolBarButton::GetProtectedCommands  
- 사용자를 사용자 지정할 수 있는 명령의 목록을 검색 합니다.  
+##  <a name="getprotectedcommands"></a>  CMFCToolBarButton::GetProtectedCommands  
+ Retrieves the list of commands that the user cannot customize.  
   
 ```  
 static const CList<UINT,UINT>& GetProtectedCommands();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 보호 된 명령 목록입니다.  
+### <a name="return-value"></a>Return Value  
+ The list of protected commands.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 모드는 프레임 워크는 보호 되는 도구 모음 단추 명령을 해제 합니다. 사용자는 끌어서 놓기 수행 하 고 사용할 수 없는 도구 모음 단추에 대 한 작업을 편집할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ In customization mode, the framework disables toolbar button commands that are protected. The user cannot perform drag-and-drop and edit operations on disabled toolbar buttons.  
   
- 사용 된 [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands) 의 목록을 정의 하는 메서드는 명령을 보호 합니다.  
+ Use the [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands) method to define the list of protected commands.  
   
-##  <a name="gettextsize"></a>CMFCToolBarButton::GetTextSize  
- 단추 텍스트의 크기를 검색 합니다.  
+##  <a name="gettextsize"></a>  CMFCToolBarButton::GetTextSize  
+ Retrieves the size of the button text.  
   
 ```  
 SIZE GetTextSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `SIZE` 단추 텍스트를 픽셀 단위로 크기를 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` object that contains the size, in pixels, of the button text.  
   
-##  <a name="hasfocus"></a>CMFCToolBarButton::HasFocus  
- 단추는 현재 입력된 포커스를가지고 있는지 여부를 결정 합니다.  
+##  <a name="hasfocus"></a>  CMFCToolBarButton::HasFocus  
+ Determines whether the button has the current input focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추에 입력된 포커스가; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button has the input focus; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 없으면&0;이 아닌 입력된 포커스를가지고 단추나는 자식 또는 하위 항목 창에 입력된 포커스가 있는 창입니다. 이 동작을 사용자 지정 하려면이 함수를 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method returns nonzero if the button has the input focus or is a child or descendant window of the window that has the input focus. You can override this function to customize this behavior.  
   
-##  <a name="havehotborder"></a>CMFCToolBarButton::HaveHotBorder  
- 사용자가 단추를 선택 단추의 테두리 표시 여부를 결정 합니다.  
+##  <a name="havehotborder"></a>  CMFCToolBarButton::HaveHotBorder  
+ Determines whether a border of the button is displayed when a user selects the button.  
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자가 선택할 때 도구 모음 단추에서 테두리를 표시 되는지 여부를 확인 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the toolbar button should display its border when a user selects it.  
   
- 기본 구현은 `TRUE`를 반환합니다. 이 동작을 사용자 지정 하려면이 메서드를 재정의할 수 있습니다.  
+ The default implementation returns `TRUE`. You can override this method to customize this behavior.  
   
-##  <a name="isdrawimage"></a>CMFCToolBarButton::IsDrawImage  
- 이미지 단추에 표시 되는지 여부를 결정 합니다.  
+##  <a name="isdrawimage"></a>  CMFCToolBarButton::IsDrawImage  
+ Determines whether an image is displayed on the button.  
   
 ```  
 BOOL IsDrawImage() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이미지 단추;에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if an image is displayed on the button; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 `FALSE` 경우 도구 모음 단추에 연결 된 이미지가 없습니다 ( [CMFCToolBarButton::GetImage](#getimage) -1을 반환) 또는 [CMFCToolBarButton::m_bImage](#m_bimage) 로 설정 된 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns `FALSE` if the toolbar button has no associated image ( [CMFCToolBarButton::GetImage](#getimage) returns -1) or if [CMFCToolBarButton::m_bImage](#m_bimage) is set to `FALSE`.  
   
-##  <a name="isdrawtext"></a>CMFCToolBarButton::IsDrawText  
- 단추 텍스트 레이블을 표시 되는지 여부를 결정 합니다.  
+##  <a name="isdrawtext"></a>  CMFCToolBarButton::IsDrawText  
+ Determines whether a text label is displayed on the button.  
   
 ```  
 BOOL IsDrawText() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 텍스트 레이블이 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a text label is displayed; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 `FALSE` 도구 모음 단추에 연결 된 텍스트 레이블이 없는 경우 ( [CMFCToolBarButton::m_strText](#m_strtext) 비어) 또는 [CMFCToolBarButton::m_bText](#m_btext) 로 설정 된 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns `FALSE` if the toolbar button has no associated text label ( [CMFCToolBarButton::m_strText](#m_strtext) is empty) or [CMFCToolBarButton::m_bText](#m_btext) is set to `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCToolBarButton::IsDroppedDown  
- 단추는 하위 메뉴를 표시 하는지 여부를 결정 합니다.  
+##  <a name="isdroppeddown"></a>  CMFCToolBarButton::IsDroppedDown  
+ Determines whether the button displays a submenu.  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현에서는 반환 `FALSE`합니다. 이 메서드가 반환 하도록 재정의 `TRUE` 컨트롤 하위 메뉴를 표시 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method returns `FALSE`. Override this method to return `TRUE` if your control displays a submenu.  
   
-##  <a name="iseditable"></a>CMFCToolBarButton::IsEditable  
- 단추를 사용자 지정할 수 있는지 여부를 결정 합니다.  
+##  <a name="iseditable"></a>  CMFCToolBarButton::IsEditable  
+ Determines whether the button can be customized.  
   
 ```  
 virtual BOOL IsEditable() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 사용자가 단추를 사용자 지정할 수 있습니다 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a button can be customized by the user; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 끌어서 놓기 사용 하 여 도구 모음 단추를 사용자 지정 하거나 작업을 편집할 수 있는지 여부를 확인 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the user can customize the toolbar button by using drag-and-drop or edit operations.  
   
- 기본 구현에서는 반환 `FALSE` 단추의 명령 ID가 표준 명령 (호출 하 여이 확인할 수 있습니다는 `IsStandardCommand` 함수) 되거나 ID 목록에는 명령 명령을 보호 합니다. 보호 된 명령에 대 한 자세한 내용은 참조 [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands) 및 [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)합니다.  
+ The default implementation returns `FALSE` if the command ID of the button is a standard command (you can determine this by calling the `IsStandardCommand` function) or if the command ID is in the list of protected commands. For more information about protected commands, see [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands) and [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands).  
   
- 해당 동작을 사용자 지정 하려면이 메서드를 재정의 합니다.  
+ Override this method to customize its behavior.  
   
-##  <a name="isextrasize"></a>CMFCToolBarButton::IsExtraSize  
- 단추는 확장 된 테두리 함께 표시 될 수 있는지 여부를 결정 합니다.  
+##  <a name="isextrasize"></a>  CMFCToolBarButton::IsExtraSize  
+ Determines whether the button can be displayed with an extended border.  
   
 ```  
 virtual BOOL IsExtraSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 확장 된 테두리; 도구 모음 단추를 표시할 수 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the toolbar button can be displayed with an extended border; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 여러 개의 스킨 테두리 도구 모음 단추 (예를 들어 원형 단추)에 대 한 추가 크기를 사용합니다.  
+### <a name="remarks"></a>Remarks  
+ Several skins use extra size for the borders of toolbar buttons (for example, round buttons).  
   
- 프레임 워크를 호출 하는 경우이 단추 도구 모음에서 다른 위치로 이동 하는 사용자는 [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) 메서드. [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) 메서드를 새 부모 도구 모음에서의 추가 크기 플래그를 설정 합니다 (자세한 내용은 참조 [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)).  
+ If the user moves this button from one toolbar to another, the framework calls the [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) method. The [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) method sets the extra size flag to that of the new parent toolbar (for more information, see [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)).  
   
-##  <a name="isfirstingroup"></a>CMFCToolBarButton::IsFirstInGroup  
- 해당 단추 그룹의 첫 번째 위치에 있는 단추 인지 확인 합니다.  
+##  <a name="isfirstingroup"></a>  CMFCToolBarButton::IsFirstInGroup  
+ Determines whether the button is in the first position in its button group.  
   
 ```  
 virtual BOOL IsFirstInGroup() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`해당 단추 그룹;에 있는 첫 번째 단추의 경우 단추 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button is the first button in its button group; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 정의 *단추 그룹* 으로 인접 단추 집합을 같은 행에 위치 하는 구분 기호 또는 테두리 도구 모음에 의해 제한 됩니다. 이 메서드가 반환 `FALSE` 도구 모음 단추에서 참조 하는 경우는 **사용자 지정** 단추입니다. 에 대 한 자세한 내용은 **사용자 지정** 단추, 참조 [CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method defines a *button group* as a neighboring set of buttons that are positioned on the same row and are bounded by separators or the border of the toolbar. This method returns `FALSE` if the toolbar button refers to the **Customize** button. For more information about the **Customize** button, see [CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).  
   
- 호출의 [CMFCToolBarButton::IsLastInGroup](#islastingroup) 메서드 단추 그룹의 마지막 위치에 있는 단추 인지 여부를 확인 합니다.  
+ Call the [CMFCToolBarButton::IsLastInGroup](#islastingroup) method to determine whether the button is in the last position in its button group.  
   
-##  <a name="ishidden"></a>CMFCToolBarButton::IsHidden  
- 단추를 숨길지 여부를 결정 합니다.  
+##  <a name="ishidden"></a>  CMFCToolBarButton::IsHidden  
+ Determines whether the button is hidden.  
   
 ```  
 BOOL IsHidden() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추 (보이지 않음); 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is hidden (invisible); otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 부모 도구 모음에서 도구 모음 단추가 표시 되는지 확인 하려면 확장 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the parent toolbar is stretched to determine whether the toolbar button is visible.  
   
- 사용 하 여 표시 되지 않도록 하려면 단추를 설정 하는 경우는 [CMFCToolBarButton::SetVisible](#setvisible) 메서드를 사용 하 여 [CMFCToolBarButton::IsVisible](#isvisible) 도구 모음 단추가 표시 되는지 확인 하려면.  
+ If you set the button to be invisible by using the [CMFCToolBarButton::SetVisible](#setvisible) method, use [CMFCToolBarButton::IsVisible](#isvisible) to determine whether the toolbar button is visible.  
   
- 기본적으로 모든 도구 모음 단추가 표시 됩니다. 사용 된 [CMFCToolBarButton::Show](#show) 메서드를 숨기 거 나 도구 모음 단추를 표시 합니다.  
+ By default, all toolbar buttons are visible. Use the [CMFCToolBarButton::Show](#show) method to hide or show toolbar buttons.  
   
-##  <a name="ishorizontal"></a>CMFCToolBarButton::IsHorizontal  
- 가로 도구 모음 단추는 있는 여부를 결정 합니다.  
+##  <a name="ishorizontal"></a>  CMFCToolBarButton::IsHorizontal  
+ Determines whether the button is located on a horizontal toolbar.  
   
 ```  
 BOOL IsHorizontal() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 단추의 가로 도구 모음;에 있는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a toolbar button is located on a horizontal toolbar; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 도구 모음 단추의 레이아웃을 결정 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine the layout of toolbar buttons.  
   
- 이 메서드는 반환 된 `m_bHorz` 데이터 멤버입니다. 기본값은 `m_bHorz` 데이터 멤버는 `TRUE`;를 호출할 때마다 다시 설정 되는 [CMFCToolBarButton::OnDraw](#ondraw) 메서드.  
+ This method returns the `m_bHorz` data member. The default value of the `m_bHorz` data member is `TRUE`; it is reset on each call to the [CMFCToolBarButton::OnDraw](#ondraw) method.  
   
-##  <a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup  
- 단추 단추 그룹의 마지막 위치에 있는지 여부를 지정 합니다.  
+##  <a name="islastingroup"></a>  CMFCToolBarButton::IsLastInGroup  
+ Specifies whether the button is in the last position in its button group.  
   
 ```  
 virtual BOOL IsLastInGroup() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`단추를 해당 단추 그룹;의 마지막 단추 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button is the last button in its button group; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 정의 *단추 그룹* 인접가 같은 행에 위치 하 고 구분 기호 또는 테두리 도구 모음에 의해 제한 되는 단추 집합으로이 메서드는 다음과 같이 반환 됩니다. `FALSE` 도구 모음 단추에는 부모 도구 모음 없음 또는 도구 모음 단추를 참조 하는 경우는 **사용자 지정** 단추입니다. 에 대 한 자세한 내용은 **사용자 지정** 단추, 참조 [CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method defines a *button group* as a neighboring set of buttons that are positioned on the same row and are bounded by separators or the border of the toolbar This method returns `FALSE` if the toolbar button has no parent toolbar or the toolbar button refers to the **Customize** button. For more information about the **Customize** button, see [CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).  
   
- 호출의 [CMFCToolBarButton::IsFirstInGroup](#isfirstingroup) 메서드 단추 그룹의 첫 번째 위치에 있는 단추 인지 여부를 확인 합니다.  
+ Call the [CMFCToolBarButton::IsFirstInGroup](#isfirstingroup) method to determine whether the button is in the first position in its button group.  
   
-##  <a name="islocked"></a>CMFCToolBarButton::IsLocked  
- 잠긴 (비-사용자 지정 가능) 도구 모음 단추 인지 확인 합니다.  
+##  <a name="islocked"></a>  CMFCToolBarButton::IsLocked  
+ Determines whether the button is on a locked (non-customizable) toolbar.  
   
 ```  
 BOOL IsLocked() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추, 잠긴된 도구 모음에 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is on a locked toolbar; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 끌어서 놓기 사용 하 여 도구 모음 단추를 사용자 지정 하거나 작업을 편집할 수 있는지 여부를 확인 하려면이 메서드를 호출 합니다. 잠긴된 특성을 사용 하 여 부모 도구 모음에서 설정 된 [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar) 메서드. 각 도구 모음 단추의 생성자에이 특성의 값을 전달 하는 프레임 워크 ( [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) 부모 도구 모음에 삽입 하는 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the user can customize the toolbar button by using drag-and-drop or edit operations. Set the locked attribute on the parent toolbar by using the [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar) method. The framework passes the value of this attribute to the constructor of each toolbar button ( [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) that it inserts into the parent toolbar.  
   
-##  <a name="isownerof"></a>CMFCToolBarButton::IsOwnerOf  
- 단추는 제공 된 창 핸들의 소유자 인지 확인 합니다.  
+##  <a name="isownerof"></a>  CMFCToolBarButton::IsOwnerOf  
+ Determines whether the button is the owner of the provided window handle.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
- 창 핸들입니다.  
+ A window handle.  
   
-### <a name="return-value"></a>반환 값  
- 단추는 제공 된 창 핸들;의 소유자 인 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is the owner of the provided window handle; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가&0;이 아닌 경우 반환 `hwnd` 직접 창 핸들을 참조 하거나 자식 단추와 연결 된 창 핸들입니다. 이 메서드는 경우 0을 반환 `hwnd` 는 `NULL`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns nonzero if `hwnd` either refers to the direct window handle or is a child of the window handle that is associated with the button. This method returns 0 if `hwnd` is `NULL`.  
   
-##  <a name="isvisible"></a>CMFCToolBarButton::IsVisible  
- 도구 모음 단추가 표시 되는지 여부를 결정 합니다.  
+##  <a name="isvisible"></a>  CMFCToolBarButton::IsVisible  
+ Determines whether the toolbar button is visible.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 단추가 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the toolbar button is visible; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 표시 하거나 도구 모음 단추를 사용 하 여 숨길 수는 [CMFCToolBarButton::SetVisible](#setvisible) 메서드. 호출 된 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) 메서드를 호출한 후 부모 도구 모음에서 [CMFCToolBarButton::SetVisible](#setvisible) 를 부모 도구 모음에서 레이아웃을 다시 계산 합니다.  
+### <a name="remarks"></a>Remarks  
+ You can show or hide the toolbar button by using the [CMFCToolBarButton::SetVisible](#setvisible) method. Call the [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) method on the parent toolbar after you call [CMFCToolBarButton::SetVisible](#setvisible) to recalculate the layout of a parent toolbar.  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarButton::IsWindowVisible  
- 단추의 내부 창 핸들이 표시 되는지 여부를 결정 합니다.  
+##  <a name="iswindowvisible"></a>  CMFCToolBarButton::IsWindowVisible  
+ Determines whether the underlying window handle of the button is visible.  
   
 ```  
 virtual BOOL IsWindowVisible();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추의 내부 창 핸들이 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the underlying window handle of the button is visible; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 창 핸들의 스타일 특성을 포함 하는 경우&0;이 아닌 반환는 `WS_VISIBLE` 스타일입니다. 이 메서드가 반환 `FALSE` 단추의 내부 창 핸들이 `NULL`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns nonzero if the styles attribute of the underlying window handle contains the `WS_VISIBLE` style. This method returns `FALSE` if the underlying window handle of the button is `NULL`.  
   
-##  <a name="m_bimage"></a>CMFCToolBarButton::m_bImage  
- 이미지 단추에 표시 되는지 여부를 지정 합니다.  
+##  <a name="m_bimage"></a>  CMFCToolBarButton::m_bImage  
+ Specifies whether an image is displayed on the button.  
   
 ```  
 BOOL m_bImage;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버 설정 된 경우 `TRUE`, 프레임 워크 도구 모음 단추와 연결 된 이미지를 표시 하며 그렇지 않으면 프레임 워크 이미지가 표시 되지 않습니다. 이 멤버의 반환 값에 영향을 줍니다는 [CMFCToolBarButton::m_bImage](#m_bimage) 메서드.  
+### <a name="remarks"></a>Remarks  
+ If this data member is set to `TRUE`, the framework displays the image that is associated with the toolbar button; otherwise the framework does not display the image. This member affects the return value of the [CMFCToolBarButton::m_bImage](#m_bimage) method.  
   
-##  <a name="m_btext"></a>CMFCToolBarButton::m_bText  
- 단추 텍스트 레이블을 표시 되는지 여부를 지정 합니다.  
+##  <a name="m_btext"></a>  CMFCToolBarButton::m_bText  
+ Specifies whether a text label is displayed on the button.  
   
 ```  
 BOOL m_bText;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버 설정 된 경우 `TRUE`, 프레임 워크에는 도구 모음 단추의 텍스트 레이블이 표시 됩니다; 그렇지 않으면 프레임 워크 텍스트 레이블을 표시 하지 않습니다. 이 멤버의 반환 값에 영향을 줍니다는 [CMFCToolBarButton::m_bText](#m_btext) 메서드.  
+### <a name="remarks"></a>Remarks  
+ If this data member is set to `TRUE`, the framework displays the text label of the toolbar button; otherwise the framework does not display the text label. This member affects the return value of the [CMFCToolBarButton::m_bText](#m_btext) method.  
   
-##  <a name="m_btextbelow"></a>CMFCToolBarButton::m_bTextBelow  
- 단추 이미지 아래 텍스트 레이블을 표시 되는지 여부를 지정 합니다.  
+##  <a name="m_btextbelow"></a>  CMFCToolBarButton::m_bTextBelow  
+ Specifies whether the text label is displayed underneath the image on the button.  
   
 ```  
 BOOL m_bTextBelow;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버 변수로 설정 된 경우 `TRUE`, 프레임 워크가 이미지 아래에 있는 단추의 텍스트를 표시 합니다. 이 멤버의 기본값은 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ If this member variable is set to `TRUE`, the framework displays the text of the button underneath the image. The default value of this member is `FALSE`.  
   
-##  <a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton  
- 단추는 사용자 지정 이미지에 있는지 여부를 지정 합니다.  
+##  <a name="m_buserbutton"></a>  CMFCToolBarButton::m_bUserButton  
+ Specifies whether the button has a user-defined image  
   
 ```  
 BOOL m_bUserButton;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버가로 설정 된 `TRUE` 때 단추에 연결 된 사용자 지정 이미지가 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This data member is set to `TRUE` when the button has a user-defined image associated with it.  
   
-##  <a name="m_bwholetext"></a>CMFCToolBarButton::m_bWholeText  
- 단추는 경계 사각형에 맞지 않을 경우에 전체 텍스트 레이블을 표시할지 여부를 지정 합니다.  
+##  <a name="m_bwholetext"></a>  CMFCToolBarButton::m_bWholeText  
+ Specifies whether the button displays its full text label even if it does not fit in the bounding rectangle.  
   
 ```  
 BOOL m_bWholeText;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버 설정 된 경우 `TRUE`, 프레임 워크는 단추를 확대 하 여 전체 텍스트 레이블을 표시 합니다. 프레임 워크 잘라서는 줄임표 (...)를 추가 합니다. 그렇지 않으면 ( **... **) 텍스트 레이블에 합니다.  
+### <a name="remarks"></a>Remarks  
+ If this data member is set to `TRUE`, the framework displays the full text label by enlarging the button. Otherwise, the framework truncates and appends an ellipsis ( **...**) to the text label.  
   
-##  <a name="m_bwrap"></a>CMFCToolBarButton::m_bWrap  
- 구분 기호 옆에 있는 단추 다음 행에 넣을 있는지 여부를 지정 합니다.  
+##  <a name="m_bwrap"></a>  CMFCToolBarButton::m_bWrap  
+ Specifies whether the button next to a separator will be put on the next row.  
   
 ```  
 BOOL m_bWrap;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버 설정 하는 프레임 워크 `TRUE` 하거나 레이아웃 (예를 들어 한 특정 개수의 행 마다 도구 모음 단추)를 지정 하는 경우 현재 행에 있는 도구 모음 단추 맞지 않는 경우.  
+### <a name="remarks"></a>Remarks  
+ The framework sets this data member to `TRUE` when the toolbar button does not fit on the current row or when you specify a layout (for example, a specific number of toolbar buttons per row).  
   
- 이 데이터 멤버가로 설정 된 경우 다음 행에서이 단추는 프레임 워크 배치 `TRUE` 가로로 도킹 또는 부동 도구 모음을 하 고 있습니다.  
+ The framework places this button on the next row if this data member is set to `TRUE` and the toolbar is docked horizontally or floating.  
   
- 이 데이터 멤버의 기본값은 `FALSE`합니다.  
+ The default value of this data member is `FALSE`.  
   
-##  <a name="m_bwraptext"></a>CMFCToolBarButton::m_bWrapText  
- 여러 줄 텍스트 레이블을 사용 되는지 여부를 지정 합니다.  
+##  <a name="m_bwraptext"></a>  CMFCToolBarButton::m_bWrapText  
+ Specifies whether multi-line text labels are enabled.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bWrapText;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 정적 멤버 변수가 `TRUE`, 프레임 워크 도구 모음 단추에 여러 줄 텍스트 레이블을 표시 하려면 도구 모음을 모두 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ If this static member variable is `TRUE`, the framework enables all toolbars to display multi-line text labels on toolbar buttons.  
   
- 이 데이터 멤버의 기본값은 `FALSE`합니다.  
+ The default value of this data member is `FALSE`.  
   
-##  <a name="m_nid"></a>CMFCToolBarButton::m_nID  
- 단추의 명령 ID입니다.  
+##  <a name="m_nid"></a>  CMFCToolBarButton::m_nID  
+ The command ID of the button.  
   
 ```  
 UINT m_nID;  
 ```  
   
-### <a name="remarks"></a>주의  
- -1의 명령 ID 단추는 구분을 나타냅니다. 모든 단추 구분 기호는는 `TBBS_SEPARATOR` 스타일입니다. 참조 [CMFCToolBarButton::m_nStyle](#m_nstyle) 단추 스타일에 대 한 자세한 내용은 합니다.  
+### <a name="remarks"></a>Remarks  
+ A command ID of -1 indicates that the button is a separator. All button separators have the `TBBS_SEPARATOR` style. See [CMFCToolBarButton::m_nStyle](#m_nstyle) for more information about button styles.  
   
-##  <a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle  
- 단추 스타일입니다.  
+##  <a name="m_nstyle"></a>  CMFCToolBarButton::m_nStyle  
+ The style of the button.  
   
 ```  
 UINT m_nStyle;  
 ```  
   
-### <a name="remarks"></a>주의  
- 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 목록은 사용 가능한 도구 모음 단추 스타일입니다.  
+### <a name="remarks"></a>Remarks  
+ See [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md) for the list of available toolbar button styles.  
   
-##  <a name="m_strtext"></a>CMFCToolBarButton::m_strText  
- 단추의 텍스트 레이블입니다.  
+##  <a name="m_strtext"></a>  CMFCToolBarButton::m_strText  
+ The text label of the button.  
   
 ```  
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버에는 단추의 텍스트 레이블을 포함합니다. 텍스트 레이블을 비어 있을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This data member contains the text label of the button. The text label can be empty.  
   
-##  <a name="notifycommand"></a>CMFCToolBarButton::NotifyCommand  
- 단추를 처리 하는 여부를 지정 된 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지입니다.  
+##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
+ Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iNotifyCode`  
- 명령과 사용 하 여 연결 된 알림 메시지입니다.  
+ The notification message that is associated with the command.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 보내려는 경우이 메서드를 호출을 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지를 부모 창입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it is about to send a [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message to the parent window.  
   
- 기본적으로이 메서드는 다음과 같이 반환 됩니다. `FALSE`합니다. 반환 하려면이 메서드를 재정의 `TRUE` 처리 하려는 경우는 `WM_COMMAND` 메시지 또는 `FALSE` 부모 도구 모음에서 메시지를 처리 해야 함을 나타냅니다.  
+ By default, this method returns `FALSE`. Override this method to return `TRUE` if you want to process the `WM_COMMAND` message or `FALSE` to indicate that the parent toolbar should handle the message.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarButton::OnAddToCustomizePage  
- 단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자입니다.  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarButton::OnAddToCustomizePage  
+ Called by the framework when the button is added to a **Customize** dialog box.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 단추에 추가 될 때 어떤 작업을 수행 하려는 경우이 메서드를 재정의 하는 **사용자 지정** 대화 상자입니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method if you want to perform some action when the button is added to a **Customize** dialog box.  
   
-##  <a name="onbeforedrag"></a>CMFCToolBarButton::OnBeforeDrag  
- 단추를 놓을 수 있는지 여부를 지정 합니다.  
+##  <a name="onbeforedrag"></a>  CMFCToolBarButton::OnBeforeDrag  
+ Specifies whether the button can be dragged.  
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이면 단추를 끌 수 있습니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button can be dragged; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 사용자가 단추를 끌기 시작 하기 전에이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method before the user starts to drag the button.  
   
- 이 메서드의 기본 구현에서는 반환 `TRUE`합니다. 이 메서드가 반환 하도록 재정의 `FALSE` 단추 끌기를 사용 하지 않으려면 합니다.  
+ The default implementation of this method returns `TRUE`. Override this method to return `FALSE` to disable dragging of the button.  
   
-##  <a name="onbeforedrop"></a>CMFCToolBarButton::OnBeforeDrop  
- 사용자를 대상 도구 모음 단추를 삭제할 수 있는지 여부를 지정 합니다.  
+##  <a name="onbeforedrop"></a>  CMFCToolBarButton::OnBeforeDrop  
+ Specifies whether a user can drop the button onto the target toolbar.  
   
 ```  
 virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pTarget`  
- 끌어서 놓기 작업의 대상입니다.  
+ The target of the drag-and-drop operation.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`제공 된 대상 모음에 단추 끌어 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button can be dropped onto the provided target toolbar; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 단추는 도구 모음으로 끌어 놓으면 전에이 메서드를 호출 하는 프레임 워크.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method before the button is dropped onto a toolbar.  
   
- 이 메서드의 기본 구현에서는 반환 `TRUE`합니다. 반환 하려면이 메서드를 재정의 `FALSE` 에 지정된 된 대상에서 놓기 작업을 사용 하지 않도록 설정 합니다.  
+ The default implementation of this method returns `TRUE`. Override this method to return `FALSE` to disable the drop operation on the specified target.  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarButton::OnCalculateSize  
- 지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추의 크기를 계산 하는 프레임 워크에서 호출 됩니다.  
+##  <a name="oncalculatesize"></a>  CMFCToolBarButton::OnCalculateSize  
+ Called by the framework to calculate the size of the button for the specified device context and docking state.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -897,54 +973,54 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `sizeDefault`  
- 단추의 기본 크기입니다.  
+ The default size of the button.  
   
  [in] `bHorz`  
- 부모 도구 모음에서의 도킹 상태입니다. 이 매개 변수는 `TRUE` 도구 모음 가로로 도킹 하거나, 부동 또는 `FALSE` 도구 모음에서 세로로 고정 되어 있는 경우.  
+ The dock state of the parent toolbar. This parameter is `TRUE` if the toolbar is docked horizontally or is floating, or `FALSE` if the toolbar is docked vertically.  
   
-### <a name="return-value"></a>반환 값  
- A `SIZE` 픽셀 단위로 단추의 크기를 포함 하는 구조입니다.  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` structure that contains the dimensions of the button, in pixels.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 지정 된 장치 컨텍스트에 대 한 도구 모음 단추의 크기를 결정 하 고 상태를 고정 하려면이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine the size of the toolbar button for the specified device context and dock state.  
   
- 기본 구현 (표시 된) 경우 텍스트와 이미지 크기, 텍스트 및 이미지 위치 (텍스트 또는 이미지의 오른쪽 아래), 및 도구 모음 도킹 상태를 고려 합니다.  
+ The default implementation considers the text and image sizes (if they are displayed), the text and image positions (the text below or at the right-hand side of the image), and the toolbar dock state.  
   
- 크기의 비표준 단추 (예를 들어 편집 상자 단추)를 제공 하려는 경우이 메서드를 재정의 합니다.  
+ Override this method if you want to provide the size of a non-standard button (for example, an edit box button).  
   
-##  <a name="oncancelmode"></a>CMFCToolBarButton::OnCancelMode  
- 처리 하는 프레임 워크에서 호출 된 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) 메시지입니다.  
+##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
+ Called by the framework to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 이 메서드를 재정의 하 여 처리 하려는 경우는 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method if you want to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message.  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarButton::OnChangeParentWnd  
- 새 도구 모음 단추를 삽입할 경우에 프레임 워크에서 호출 합니다.  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 새 부모 창입니다.  
+ The new parent window.  
   
-### <a name="remarks"></a>주의  
- 사용자가 끌어올 하나의 도구 모음에서 다른 도구 모음에 단추가 예를 들어 도구 모음에 삽입 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The button is inserted into a toolbar, for example, when the user drags it from one toolbar to another toolbar.  
   
- 이 메서드의 기본 구현은 아무 작업도 수행합니다.  
+ The default implementation of this method does nothing.  
   
-##  <a name="onclick"></a>CMFCToolBarButton::OnClick  
- 사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 합니다.  
+##  <a name="onclick"></a>  CMFCToolBarButton::OnClick  
+ Called by the framework when the user clicks the mouse button.  
   
 ```  
 virtual BOOL OnClick(
@@ -952,57 +1028,57 @@ virtual BOOL OnClick(
     BOOL bDelay=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 도구 모음 단추의 부모 창입니다.  
+ The parent window of the toolbar button.  
   
  [in] `bDelay`  
- `TRUE`경우 지연 된 메시지를 처리 합니다.  
+ `TRUE` if the message should be handled with a delay.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추를 클릭할 때 프레임 워크에서이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user clicks the toolbar button.  
   
- 기본 구현은 없으며 반환 `FALSE`합니다. 단추 클릭 하 여 메시지를 처리 하는 경우&0;이 아닌 값을 반환 하려면이 메서드를 재정의 합니다.  
+ The default implementation does nothing and returns `FALSE`. Override this method to return a nonzero value if the button processes the click message.  
   
-##  <a name="onclickup"></a>CMFCToolBarButton::OnClickUp  
- 마우스 단추를 놓을 때 프레임 워크에서 호출 합니다.  
+##  <a name="onclickup"></a>  CMFCToolBarButton::OnClickUp  
+ Called by the framework when the user releases the mouse button.  
   
 ```  
 virtual BOOL OnClickUp();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추를 놓을 때이 메서드를 호출 하는 프레임 워크입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user releases the toolbar button.  
   
- 기본 구현은 없으며 반환 `FALSE`합니다. 단추 클릭 하 여 메시지를 처리 하는 경우&0;이 아닌 값을 반환 하려면이 메서드를 재정의 합니다.  
+ The default implementation does nothing and returns `FALSE`. Override this method to return a nonzero value if the button processes the click message.  
   
-##  <a name="oncontexthelp"></a>CMFCToolBarButton::OnContextHelp  
- 부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다.  
+##  <a name="oncontexthelp"></a>  CMFCToolBarButton::OnContextHelp  
+ Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 도구 모음 단추의 부모 창입니다.  
+ The parent window of the toolbar button.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 없으며 반환 `FALSE`합니다. 단추 도움말 메시지를 처리 하는 경우&0;이 아닌 값을 반환 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing and returns `FALSE`. Override this method to return a nonzero value if the button processes the help message.  
   
- 에 대 한 자세한 내용은 `WM_HELPHITTEST` 메시지에서 참조 [TN028: 상황에 맞는 도움말 지원](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
+ For more information about the `WM_HELPHITTEST` message, see [TN028: Context-Sensitive Help Support](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor  
- 부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 `WM_CTLCOLOR` 메시지입니다.  
+##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor  
+ Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -1010,58 +1086,58 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `nCtlColor`  
- 특정 색 알림입니다.  
+ The specific color notification.  
   
-### <a name="return-value"></a>반환 값  
- 프레임 워크를 사용 하 여 단추의 배경을 그릴 brush 개체에 대 한 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the brush object that the framework uses to paint the background of the button.  
   
-### <a name="remarks"></a>주의  
- 부모 도구 모음에서 처리 하는 경우이 메서드를 호출 프레임 워크는 `WM_CTLCOLOR` Windows 컨트롤을 포함 하는 도구 모음 단추에 대 한 메시지입니다. 프레임 워크 도구 모음 단추가 창 없는 경우이 메서드를 호출 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the parent toolbar processes the `WM_CTLCOLOR` message for a toolbar button that contains a Windows control. The framework does not call this method if the toolbar button is windowless.  
   
- 프레임 워크는 사용자 지정 모드에는 도구 모음 프레임 워크 및 도구 모음 단추 잠금이 해제 하는 경우이 메서드를 호출 합니다. 사용자 지정 모드에 대 한 자세한 내용은 참조 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)합니다. 도구 모음 단추 잠금에 대 한 자세한 내용은 참조 [CMFCToolBarButton::IsLocked](#islocked)합니다.  
+ The framework calls this method when the toolbar framework is in customization mode and the toolbar button is unlocked. For more information about customization mode, see [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode). For more information about locking toolbar buttons, see [CMFCToolBarButton::IsLocked](#islocked).  
   
- 기본 구현은 없으며 반환 `NULL`합니다.  
+ The default implementation does nothing and returns `NULL`.  
   
-##  <a name="oncustomizemenu"></a>CMFCToolBarButton::OnCustomizeMenu  
- 부모 도구 모음에서 응용 프로그램 바로 가기 메뉴를 표시 하는 경우 제공 된 메뉴를 수정 하려면 단추를 수 있습니다.  
+##  <a name="oncustomizemenu"></a>  CMFCToolBarButton::OnCustomizeMenu  
+ Allows the button to modify the provided menu when the application displays a shortcut menu on the parent toolbar.  
   
 ```  
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pMenu`  
- 메뉴 사용자 지정입니다.  
+ The menu to customize.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 없으며 반환 `FALSE`합니다. 이 메서드를 재정의 하 고 제공 된 메뉴의 내용을 수정 하려는 경우&0;이 아닌 값을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing and returns `FALSE`. Override this method and return a nonzero value if you want to modify the contents of the provided menu.  
   
-##  <a name="ondblclk"></a>CMFCToolBarButton::OnDblClk  
- 부모 도구 모음에서 처리 하는 경우에 프레임 워크에서 호출 된 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다.  
+##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
+ Called by the framework when the parent toolbar handles a [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) message.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- -   단추의 부모 창입니다.  
+ -   The parent window of the button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 `CMFCToolBar::OnLButtonDblClk` 부모 도구 모음에서 처리 하는 경우 메서드는 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the `CMFCToolBar::OnLButtonDblClk` method when the parent toolbar handles a [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) message.  
   
- 이 메서드의 기본 구현은 아무 작업도 수행합니다.  
+ The default implementation of this method does nothing.  
   
-##  <a name="ondraw"></a>CMFCToolBarButton::OnDraw  
- 지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="ondraw"></a>  CMFCToolBarButton::OnDraw  
+ Called by the framework to draw the button by using the specified styles and options.  
   
 ```  
 virtual void OnDraw(
@@ -1075,36 +1151,36 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `rect`  
- 단추는 경계 사각형입니다.  
+ The bounding rectangle of the button.  
   
  [in] `pImages`  
- 단추와 연결 된 도구 모음 이미지의 컬렉션입니다.  
+ The collection of toolbar images that is associated with the button.  
   
  [in] `bHorz`  
- 부모 도구 모음에서의 도킹 상태입니다. 이 매개 변수는 `TRUE` 단추는 가로로 도킹 된 경우 및 `FALSE` 단추를 세로로 도킹 됩니다.  
+ The dock state of the parent toolbar. This parameter is `TRUE` when the button is docked horizontally and `FALSE` when the button is docked vertically.  
   
  [in] `bCustomizeMode`  
- 도구 모음 사용자 지정 모드에 있는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 도구 모음에서이 사용자 지정 모드에 있을 때와 `FALSE` 는 도구 모음을 사용자 지정 모드 없습니다.  
+ Specifies whether the toolbar is in customization mode. This parameter is `TRUE` when the toolbar is in customization mode and `FALSE` when the toolbar is not in customization mode.  
   
  [in] `bHighlight`  
- 단추가 강조 표시 되는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 는 단추가 강조 표시 되 면 및 `FALSE` 때 단추 강조 표시 되지 않습니다.  
+ Specifies whether the button is highlighted. This parameter is `TRUE` when the button is highlighted and `FALSE` when the button is not highlighted.  
   
  [in] `bDrawBorder`  
- 단추 테두리를 표시할지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 때 단추 테두리를 표시할지 및 `FALSE` 단추 테두리를 표시 되지 않아야 합니다.  
+ Specifies whether the button should display its border. This parameter is `TRUE` when the button should display its border and `FALSE` when the button should not display its border.  
   
  [in] `bGrayDisabledButtons`  
- 비활성화 된 단추 음영을 적용 하거나 비활성화 된 이미지 컬렉션을 사용 하 여 것인지 지정 합니다. 이 매개 변수는 `TRUE` 때 비활성화 된 단추를 회색으로 표시 되어야 하 고 `FALSE` 이 메서드는 비활성화 된 이미지 컬렉션을 사용 해야 합니다.  
+ Specifies whether to shade disabled buttons or use the disabled images collection. This parameter is `TRUE` when disabled buttons should be shaded and `FALSE` when this method should use the disabled images collection.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추 그리기를 사용자 지정 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this method to customize toolbar button drawing.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarButton::OnDrawOnCustomizeList  
- 단추를 그리기 위해 프레임 워크에 의해 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자입니다.  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarButton::OnDrawOnCustomizeList  
+ Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -1113,95 +1189,95 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `rect`  
- 단추는 경계 사각형입니다.  
+ The bounding rectangle of the button.  
   
  [in] `bSelected`  
- 단추가 선택 되어 있는지 여부를 지정 합니다. 이 매개 변수가 `TRUE`, 단추를 선택 합니다. 이 매개 변수가 `FALSE`, 단추를 선택 하지 않으면.  
+ Specifies whether the button is selected. If this parameter is `TRUE`, the button is selected. If this parameter is `FALSE`, the button is not selected.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 장치 컨텍스트에에서 단추의 픽셀 너비입니다.  
+### <a name="return-value"></a>Return Value  
+ The width, in pixels, of the button on the specified device context.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 사용자 지정 대화 상자 ( **명령을** 탭) 되는 단추 소유자 그리기 목록 상자에 표시 되도록 할 때입니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the customization dialog box ( **Commands** tab) when the button is about to display itself on the owner-draw list box.  
   
- 이 메서드의 기본 구현을 사용할 수 있는 경우 단추의 이미지 및 텍스트 레이블을 표시 합니다. 단추의 텍스트 레이블을 사용할 수 없는 경우 메서드는 도구 설명 텍스트를 표시 합니다.  
+ The default implementation of this method displays the image and text label of the button if they are available. If the text label of the button is not available, the method displays the tooltip text.  
   
- 사용자 지정 그리기를 수행 하려면이 메서드를 재정의 합니다.  
+ Override this method to perform custom drawing.  
   
-##  <a name="ongetcustomtooltiptext"></a>CMFCToolBarButton::OnGetCustomToolTipText  
- 단추에 대 한 사용자 지정 도구 설명 텍스트를 검색 하는 프레임 워크에서 호출 됩니다.  
+##  <a name="ongetcustomtooltiptext"></a>  CMFCToolBarButton::OnGetCustomToolTipText  
+ Called by the framework to retrieve the custom tooltip text for the button.  
   
 ```  
 virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `strToolTip`  
- A `CString` 사용자 지정 도구 설명 텍스트를 받는 개체입니다.  
+ A `CString` object that receives the custom tooltip text.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추에 대 한 도구 설명을 표시할 때이 메서드를 호출 하는 프레임 워크입니다. 이 메서드가 반환 하는 경우 `FALSE`, 프레임 워크에서는 기본 도구 설명 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it displays the tooltip for the toolbar button. If this method returns `FALSE`, the framework uses a default tooltip.  
   
- 기본 구현은 없으며 반환 `FALSE`합니다. 이 메서드를 재정의 하 고 도구 모음 단추에 대 한 사용자 지정 도구 설명 텍스트를 제공 하는&0;이 아닌 값을 반환 합니다.  
+ The default implementation does nothing and returns `FALSE`. Override this method and return a nonzero value to provide custom tooltip text for the toolbar button.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarButton::OnGlobalFontsChanged  
- 전역 글꼴 변경 된 경우에 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarButton::OnGlobalFontsChanged  
+ Called by the framework when the global font has changed.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 단추 텍스트를 표시 하는 데 사용 되는 글꼴을 업데이트 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method to update the font that is used to display the button text.  
   
-##  <a name="onmove"></a>CMFCToolBarButton::OnMove  
- 부모 도구 모음에서 이동 하면 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onmove"></a>  CMFCToolBarButton::OnMove  
+ Called by the framework when the parent toolbar moves.  
   
 ```  
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 부모 도구 모음에서 이동할 때 단추 위치를 변경 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method to reposition the button when the parent toolbar moves.  
   
-##  <a name="onshow"></a>CMFCToolBarButton::OnShow  
- 프레임 워크에 의해 때 호출 단추 수 표시 되거나 표시 되지 않습니다.  
+##  <a name="onshow"></a>  CMFCToolBarButton::OnShow  
+ Called by the framework when the button becomes visible or invisible.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 단추가 표시 되는지 여부를 지정 합니다. 이 매개 변수가 `TRUE`, 단추에 표시 됩니다. 그렇지 않으면 단추 표시 되지 않습니다.  
+ Specifies whether the button is visible. If this parameter is `TRUE`, the button is visible. Otherwise, the button is not visible.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 단추의 표시 여부를 업데이트 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method to update the visibility of the button.  
   
-##  <a name="onsize"></a>CMFCToolBarButton::OnSize  
- 부모 도구 모음에서 크기가 변경 되거나 위치와 이러한 변경 하면 크기를 변경 하려면 단추가 될 때 프레임 워크에서 호출 합니다.  
+##  <a name="onsize"></a>  CMFCToolBarButton::OnSize  
+ Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iSize`  
- 새 단추의 너비입니다.  
+ The new width of the button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 크기 또는 부모 도구 모음에서의 위치 변경 될 때 단추 크기를 조정 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method to resize the button when the size or position of the parent toolbar changes.  
   
-##  <a name="ontoolhittest"></a>CMFCToolBarButton::OnToolHitTest  
- 부모 도구 모음 단추의 경계 사각형에는 점이 인지 여부를 결정 해야 할 때에 프레임 워크에서 호출 합니다.  
+##  <a name="ontoolhittest"></a>  CMFCToolBarButton::OnToolHitTest  
+ Called by the framework when the parent toolbar must determine whether a point is in the bounding rectangle of the button.  
   
 ```  
 virtual BOOL OnToolHitTest(
@@ -1209,18 +1285,18 @@ virtual BOOL OnToolHitTest(
     TOOLINFO* pTI);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 단추의 부모 창입니다. 수 `NULL`합니다.  
+ The parent window of the button. Can be `NULL`.  
   
  [in] `pTI`  
- A `TOOLINFO` 도구 설명 컨트롤에 도구에 대 한 정보가 포함 된 구조체입니다.  
+ A `TOOLINFO` structure that contains information about a tool in a tooltip control.  
   
-### <a name="return-value"></a>반환 값  
- 결과 `OnMenuButtonToolHitTest` 단추 부모 프레임 창;에 대 한 포인터를 검색할 수 있으면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ The result of `OnMenuButtonToolHitTest` if the button can retrieve a pointer to the parent frame window; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 유효한 frame 개체에 부모 창 변환할 수 있으면 다음 방법 중 하나를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls one of the following methods if it can convert the parent window to a valid frame object:  
   
 - [CMDIFrameWndEx::OnMenuButtonToolHitTest](../../mfc/reference/cmdiframewndex-class.md#onmenubuttontoolhittest)  
   
@@ -1228,8 +1304,8 @@ virtual BOOL OnToolHitTest(
   
 - [COleIPFrameWndEx::OnMenuButtonToolHitTest](../../mfc/reference/coleipframewndex-class.md#onmenubuttontoolhittest)  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarButton::OnUpdateToolTip  
- 부모 도구 모음에서 도구 설명 텍스트를 업데이트 하는 경우에 프레임 워크에서 호출 합니다.  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarButton::OnUpdateToolTip  
+ Called by the framework when the parent toolbar updates its tooltip text.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -1239,98 +1315,98 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 부모 창입니다.  
+ The parent window.  
   
  [in] `iButtonIndex`  
- 부모 단추 컬렉션에 있는 단추의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the button in the parent button collection.  
   
  [in] `wndToolTip`  
- 도구 설명 텍스트를 표시 하는 컨트롤입니다.  
+ The control that displays the tooltip text.  
   
  [out] `str`  
- A `CString` 업데이트 된 도구 설명 텍스트를 받는 개체입니다.  
+ A `CString` object that receives the updated tooltip text.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 없으며 반환 `FALSE`합니다. 도구 설명 텍스트 문자열을 제공 하는 경우&0;이 아닌 값을 반환 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing and returns `FALSE`. Override this method to return a nonzero value if you provide a tooltip text string.  
   
-##  <a name="preparedrag"></a>CMFCToolBarButton::PrepareDrag  
- 단추는 끌어서 놓기 작업을 수행 하려고 할 때에 프레임 워크에서 호출 합니다.  
+##  <a name="preparedrag"></a>  CMFCToolBarButton::PrepareDrag  
+ Called by the framework when the button is about to perform a drag-and-drop operation.  
   
 ```  
 virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `srcItem`  
- A `COleDataSource` 끌어서 놓기 작업에 대 한 상태 정보를 저장 하는 개체입니다.  
+ A `COleDataSource` object that stores state information about the drag-and-drop operation.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`작업이 성공 합니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the operation succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크에 제공 된 상태를 저장 하려면 도구 모음 단추를 준비 하려면이 메서드를 호출 `COleDataSource` 개체입니다. 공유 파일에 대 한 직렬화 자체와 해당 파일을 전달 하 여 해당 상태를 저장 하는이 메서드는 [COleDataSource::CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) 메서드. 도구 모음 단추 serialization에 대 한 자세한 내용은 참조 [CMFCToolBarButton::Serialize](#serialize)합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to prepare the toolbar button to store its state in the provided `COleDataSource` object. This method stores its state by serializing itself to a shared file and then passing that file to the [COleDataSource::CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) method. For more information about toolbar button serialization, see [CMFCToolBarButton::Serialize](#serialize).  
   
- 이 메서드는 아무 작업도 수행 하 고 반환 `TRUE` 단추를 저장할 수 없을 경우 (의 [CMFCToolBarButton::CanBeStored](#canbestored) 메서드 반환 `FALSE`). 반환 `FALSE` 개체 직렬화 하는 동안 예외가 발생 합니다.  
+ This method does nothing and returns `TRUE` if the button cannot be stored (the [CMFCToolBarButton::CanBeStored](#canbestored) method returns `FALSE`). It returns `FALSE` if an exception occurs during object serialization.  
   
- OLE 끌어서 놓기 작업에 대 한 자세한 내용은 참조 [끌어서 놓기 (OLE)](../../mfc/drag-and-drop-ole.md)합니다.  
+ For more information about OLE drag-and-drop operations, see [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-##  <a name="rect"></a>CMFCToolBarButton::Rect  
- 단추에 대 한 경계 사각형을 검색합니다.  
+##  <a name="rect"></a>  CMFCToolBarButton::Rect  
+ Retrieves the bounding rectangle of the button.  
   
 ```  
 const CRect& Rect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CRect` 단추의 경계 사각형을 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that contains the bounding rectangle of a button.  
   
-##  <a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault  
- 단추와 연결 되는 이미지의 기본값을 설정 합니다.  
+##  <a name="resetimagetodefault"></a>  CMFCToolBarButton::ResetImageToDefault  
+ Sets to the default value the image that is associated with the button.  
   
 ```  
 virtual void ResetImageToDefault();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 해당 부모 도구 모음에서 기본 이미지를 검색 된 [CMFCToolBar::GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage) 메서드. 이 메서드를 사용 하 여 해당 문자열 리소스에 따라 단추의 텍스트 레이블을 설정 단추에 연결 된 기본 이미지가 있는 경우는 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring) 메서드. 문자열 리소스에 대 한 자세한 내용은 참조 [리소스 파일에 대해 작업](../../windows/working-with-resource-files.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the default image from its parent toolbar by using the [CMFCToolBar::GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage) method. If the button has no associated default image, this method sets the text label of the button according to its string resource by using the [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring) method. For more information about string resources, see [Working with Resource Files](../../windows/working-with-resource-files.md).  
   
- 단추에 사용자 지정 이미지를 사용 하는 경우이 메서드는 아무 것도 않습니다.  
+ This method does nothing if the button has a user-defined image.  
   
-##  <a name="savebarstate"></a>CMFCToolBarButton::SaveBarState  
- 도구 모음 단추의 상태를 저장합니다.  
+##  <a name="savebarstate"></a>  CMFCToolBarButton::SaveBarState  
+ Saves the state of the toolbar button.  
   
 ```  
 virtual void SaveBarState();
 ```  
   
-### <a name="remarks"></a>주의  
- 프레임 워크를 만들 때이 메서드를 호출을 `CMFCToolBarButton` 끌어서 놓기 작업의 결과로 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it creates a `CMFCToolBarButton` object as the result of a drag-and-drop operation.  
   
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 외부 데이터 원본에 도구 모음 단추의 상태를 저장 하려면이 메서드를 재정의 합니다.  
+ The default implementation of this method does nothing. Override this method to save the state of the toolbar button to an external data source.  
   
-##  <a name="serialize"></a>CMFCToolBarButton::Serialize  
- 이 개체는 보관 파일에서 읽거나 보관 파일에 씁니다.  
+##  <a name="serialize"></a>  CMFCToolBarButton::Serialize  
+ Reads this object from an archive or writes it to an archive.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
- `CArchive` 개체를 serialize 또는입니다.  
+ The `CArchive` object from which or to which to serialize.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 클립보드 또는 끌어 놓기 작업과 같은 데이터 전송 프로세스를 지원합니다. 읽거나 씁니다 ID, 텍스트 레이블 및 이미지 ID 등 단추의 속성에서 제공 된 `CArchive` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This method supports data transfer processes such as clipboard or drag-and-drop operations. It reads or writes properties of the button such as the ID, text label, and image ID from or to the provided `CArchive` object.  
   
- Serialization 예제를 보려면 [Serialization: 개체를 직렬화 하는 작업](../../mfc/serialization-serializing-an-object.md)합니다.  
+ For serialization examples, see [Serialization: Serializing an Object](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="setaccdata"></a>CMFCToolBarButton::SetACCData  
- 제공 된 정보를 표시 `CAccessibilityData` 도구 모음 단추에서 내게 필요한 옵션 데이터는 개체입니다.  
+##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData  
+ Populates the provided `CAccessibilityData` object with accessibility data from the toolbar button.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1338,140 +1414,140 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 도구 모음 단추의 부모 창입니다.  
+ The parent window of the toolbar button.  
   
  [in] `data`  
- A `CAccessibilityData` 도구 모음 단추의 내게 필요한 옵션 데이터로 채워지는 개체입니다.  
+ A `CAccessibilityData` object that is populated with the accessibility data of the toolbar button.  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 하도록 재정의 `FALSE` 도구 모음 단추는 내게 필요한 옵션 데이터를 제공 하지 않는 경우.  
+### <a name="remarks"></a>Remarks  
+ Override this method to return `FALSE` if your toolbar button does not provide accessibility data.  
   
-##  <a name="setclipboardformatname"></a>CMFCToolBarButton::SetClipboardFormatName  
- 전역 클립보드 형식을 이름을 바꿉니다.  
+##  <a name="setclipboardformatname"></a>  CMFCToolBarButton::SetClipboardFormatName  
+ Renames the global clipboard format.  
   
 ```  
 static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 전역 클립보드 형식의 새 이름입니다. 안 `NULL`합니다.  
+ The new name of the global clipboard format. Cannot be `NULL`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하면 끌어서 놓기 작업이 여러 응용 프로그램에서 발생할 수 있습니다. 각 응용 프로그램에는 동일한 클립보드 형식 이름을 제공 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method makes it possible for drag-and-drop operations to occur among multiple applications. Each application must supply the same clipboard format name.  
   
- 프레임 워크 호출 하기 전에이 메서드를 호출 해야 [CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)합니다.  
+ You must call this method before the framework calls [CMFCToolBarButton::GetClipboardFormat](#getclipboardformat).  
   
-##  <a name="setimage"></a>CMFCToolBarButton::SetImage  
- 단추의 이미지 인덱스를 설정합니다.  
+##  <a name="setimage"></a>  CMFCToolBarButton::SetImage  
+ Sets the image index of the button.  
   
 ```  
 virtual void SetImage(int iImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iImage`  
- 도구 모음 이미지의 컬렉션에 있는 이미지의 인덱스입니다.  
+ The index of the image in the collection of toolbar images.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 단추는 구분 기호 이면 `iImage` 구분 기호 단추의 새 너비를 참조 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the toolbar button is a separator, `iImage` refers to the new width of the separator button.  
   
- 경우 `iImage` 작으면&0; 보다이 방법을 이미지를 그리는 비활성화 하 고 단추의 텍스트 레이블의 그리기가 허용 합니다.  
+ If `iImage` is less than zero, this method disables drawing of the image and enables drawing of the text label of the button.  
   
-##  <a name="setprotectedcommands"></a>CMFCToolBarButton::SetProtectedCommands  
- 사용자를 사용자 지정할 수 있는 명령의 목록을 설정 합니다.  
+##  <a name="setprotectedcommands"></a>  CMFCToolBarButton::SetProtectedCommands  
+ Sets the list of commands that the user cannot customize.  
   
 ```  
 static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lstCmds`  
- 보호 된 명령 목록입니다.  
+ The list of protected commands.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 모드는 프레임 워크는 보호 되는 도구 모음 단추 명령을 해제 합니다. 사용자는 끌어서 놓기 수행 하 고 사용할 수 없는 도구 모음 단추에 대 한 작업을 편집할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ In customization mode, the framework disables toolbar button commands that are protected. The user cannot perform drag-and-drop and edit operations on disabled toolbar buttons.  
   
- 사용 된 [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands) 의 목록을 검색 하려면 메서드 명령을 보호 합니다.  
+ Use the [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands) method to retrieve the list of protected commands.  
   
-##  <a name="setradio"></a>CMFCToolBarButton::SetRadio  
- 단추의 선택된 상태가 변경 될 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="setradio"></a>  CMFCToolBarButton::SetRadio  
+ Called by the framework when a button changes its checked state.  
   
 ```  
 virtual void SetRadio();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드의 기본 구현은 아무 작업도 수행합니다. 단추의 선택된 상태가 변경 될 때 사용자 지정 작업을 수행 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this method does nothing. Override this method to perform a custom action when the button changes its checked state.  
   
-##  <a name="setrect"></a>CMFCToolBarButton::SetRect  
- 단추에 대 한 경계 사각형을 설정합니다.  
+##  <a name="setrect"></a>  CMFCToolBarButton::SetRect  
+ Sets the bounding rectangle of the button.  
   
 ```  
 void SetRect(const CRect rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 단추의 새 경계 사각형입니다.  
+ The new bounding rectangle of the button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출의 [CMFCToolBarButton::OnMove](#onmove) 메서드 후 새 경계 사각형을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method calls the [CMFCToolBarButton::OnMove](#onmove) method after it sets the new bounding rectangle.  
   
-##  <a name="setstyle"></a>CMFCToolBarButton::SetStyle  
- 단추 스타일을 설정합니다.  
+##  <a name="setstyle"></a>  CMFCToolBarButton::SetStyle  
+ Sets the style of the button.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nStyle`  
- 새 스타일 단추입니다.  
+ The new style of the button.  
   
-### <a name="remarks"></a>주의  
- 기본 구현에서는 설정 된 [CMFCToolBarButton::m_nStyle](#m_nstyle) 데이터 멤버를 `nStyle`합니다. 스타일의 변경을 처리 하는 추가 처리를 수행 하려는 경우이 메서드를 재정의 합니다. 참조 [ToolBar 컨트롤 스타일](toolbar-control-styles.md) 유효한 스타일 플래그의 목록은 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation sets the [CMFCToolBarButton::m_nStyle](#m_nstyle) data member to `nStyle`. Override this method if you want to perform additional processing to handle the change in style. See [ToolBar Control Styles](toolbar-control-styles.md) for a list of valid style flags.  
   
-##  <a name="setvisible"></a>CMFCToolBarButton::SetVisible  
- 단추가 표시 되는지 여부를 지정 합니다.  
+##  <a name="setvisible"></a>  CMFCToolBarButton::SetVisible  
+ Specifies whether the button is visible.  
   
 ```  
 void SetVisible(BOOL bShow=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 단추를 표시할지 여부를 지정 하는 부울 값입니다. 이 매개 변수가 `TRUE`, 단추가 나와 있습니다. 매개 변수가 `FALSE`, 단추가 숨겨집니다.  
+ A Boolean value that specifies whether to show or hide the button. If this parameter is `TRUE`, the button is shown. If the parameter is `FALSE`, the button is hidden.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 숨기 거 나 특정 도구 모음 단추를 표시 합니다. 호출의 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) 메서드가이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to hide or show a particular toolbar button. Call the [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) method after you call this method.  
   
-##  <a name="show"></a>CMFCToolBarButton::Show  
- 표시 하거나 단추를 숨깁니다.  
+##  <a name="show"></a>  CMFCToolBarButton::Show  
+ Shows or hides the button.  
   
 ```  
 void Show(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 단추를 표시할지 여부를 지정 하는 부울 값입니다. 이 매개 변수가 `TRUE`, 단추가 나와 있습니다. 매개 변수가 `FALSE`, 단추가 숨겨집니다.  
+ A Boolean value that specifies whether to show or hide the button. If this parameter is `TRUE`, the button is shown. If the parameter is `FALSE`, the button is hidden.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는 해당 부모 도구 모음에서 크기를 조정할 때 도구 모음 단추의 표시 여부를 업데이트 하려면이 메서드를 호출 합니다. 이 메서드를 호출 하는 프레임 워크 `bShow` 로 설정 `FALSE` 단추 도구 모음 범위 내에서 더 이상 맞지 때. 이 메서드를 호출 하는 프레임 워크 `bShow` 로 설정 `TRUE` 크기를 조정한 후 단추 다시 적합 한 도구 모음 범위 내에서 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to update the visibility of toolbar buttons when their parent toolbar is resized. The framework calls this method with `bShow` set to `FALSE` when the button no longer fits within the bounds of the toolbar. The framework calls this method with `bShow` set to `TRUE` when after resizing the button again fits within the bounds of the toolbar.  
   
- 사용 하 여는 [CMFCToolBarButton::SetVisible](#setvisible) 메서드를 일반 단추의 표시 여부를 설정 합니다.  
+ Use the [CMFCToolBarButton::SetVisible](#setvisible) method to set the general visibility of the button.  
   
- 이 메서드는 [CMFCToolBarButton::OnShow](#onshow) 단추의 표시 여부 상태를 업데이트 한 후에 메서드.  
+ This method calls the [CMFCToolBarButton::OnShow](#onshow) method after it updates the visibility state of the button.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md)
 

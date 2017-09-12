@@ -1,5 +1,5 @@
 ---
-title: "CNotSupportedException 클래스 | Microsoft 문서"
+title: CNotSupportedException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CNotSupportedException class
-- unsupported features
-- exceptions, not supported
+- CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
 caps.latest.revision: 20
 author: mikeblome
@@ -37,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 6cb66448d0dadaf1f70c3606bc1b9027bd217a38
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83bc88d4618939650296e73a1c991b6e75883272
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cnotsupportedexception-class"></a>CNotSupportedException 클래스
-지원되지 않는 기능을 요청한 결과인 예외를 나타냅니다.  
+# <a name="cnotsupportedexception-class"></a>CNotSupportedException Class
+Represents an exception that is the result of a request for an unsupported feature.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CNotSupportedException : public CSimpleException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|`CNotSupportedException` 개체를 생성합니다.|  
+|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Constructs a `CNotSupportedException` object.|  
   
-## <a name="remarks"></a>주의  
- 더 이상 없는 한정 가능한 것은 필요 합니다.  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible.  
   
- 사용 하 여 대 한 자세한 내용은 `CNotSupportedException`, 문서를 참조 하십시오 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information on using `CNotSupportedException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -75,22 +73,22 @@ class CNotSupportedException : public CSimpleException
   
  `CNotSupportedException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
- `CNotSupportedException` 개체를 생성합니다.  
+##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException  
+ Constructs a `CNotSupportedException` object.  
   
 ```  
 CNotSupportedException();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 생성자를 직접 사용 하지 않고 대신 전역 함수를 호출 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)합니다. 예외 처리에 대 한 자세한 내용은 문서를 참조 하십시오. [MFC의 예외 처리](../exception-handling-in-mfc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). for more information about exception processing, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>참고 항목  
- [CException 클래스](cexception-class.md)   
- [계층 구조 차트](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

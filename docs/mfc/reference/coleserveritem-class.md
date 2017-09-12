@@ -1,5 +1,5 @@
 ---
-title: "COleServerItem 클래스 | Microsoft Docs"
+title: COleServerItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,11 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, OLE
-- OLE server applications, managing server documents
-- OLE server applications, server interfaces
-- OLE server documents
-- COleServerItem class
+- COleServerItem [MFC], COleServerItem
+- COleServerItem [MFC], AddOtherClipboardData
+- COleServerItem [MFC], CopyToClipboard
+- COleServerItem [MFC], DoDragDrop
+- COleServerItem [MFC], GetClipboardData
+- COleServerItem [MFC], GetDocument
+- COleServerItem [MFC], GetEmbedSourceData
+- COleServerItem [MFC], GetItemName
+- COleServerItem [MFC], GetLinkSourceData
+- COleServerItem [MFC], GetObjectDescriptorData
+- COleServerItem [MFC], IsConnected
+- COleServerItem [MFC], IsLinkedItem
+- COleServerItem [MFC], NotifyChanged
+- COleServerItem [MFC], OnDoVerb
+- COleServerItem [MFC], OnDraw
+- COleServerItem [MFC], OnDrawEx
+- COleServerItem [MFC], OnGetClipboardData
+- COleServerItem [MFC], OnGetExtent
+- COleServerItem [MFC], OnInitFromData
+- COleServerItem [MFC], OnQueryUpdateItems
+- COleServerItem [MFC], OnRenderData
+- COleServerItem [MFC], OnRenderFileData
+- COleServerItem [MFC], OnRenderGlobalData
+- COleServerItem [MFC], OnSetColorScheme
+- COleServerItem [MFC], OnSetData
+- COleServerItem [MFC], OnSetExtent
+- COleServerItem [MFC], OnUpdate
+- COleServerItem [MFC], OnUpdateItems
+- COleServerItem [MFC], SetItemName
+- COleServerItem [MFC], GetDataSource
+- COleServerItem [MFC], OnHide
+- COleServerItem [MFC], OnOpen
+- COleServerItem [MFC], OnShow
+- COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 caps.latest.revision: 23
 author: mikeblome
@@ -72,88 +101,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2daa8b6131593039c6827475e7721a100a657828
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa58f06301de65f0d7d1b0aad8aa979c0050138a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleserveritem-class"></a>COleServerItem 클래스
-OLE 항목에 대한 서버 인터페이스를 제공합니다.  
+# <a name="coleserveritem-class"></a>COleServerItem Class
+Provides the server interface to OLE items.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleServerItem : public CDocItem  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerItem::COleServerItem](#coleserveritem)|`COleServerItem` 개체를 생성합니다.|  
+|[COleServerItem::COleServerItem](#coleserveritem)|Constructs a `COleServerItem` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|프레젠테이션 및 변환 형식에 배치 된 `COleDataSource` 개체입니다.|  
-|[COleServerItem::CopyToClipboard](#copytoclipboard)|항목을 클립보드에 복사 합니다.|  
-|[COleServerItem::DoDragDrop](#dodragdrop)|끌어서 놓기 작업을 수행합니다.|  
-|[COleServerItem::GetClipboardData](#getclipboarddata)|데이터 전송 (끌어서 놓기 또는 클립보드)에서 사용 하기 위해 데이터 소스를 가져옵니다.|  
-|[COleServerItem::GetDocument](#getdocument)|항목이 포함 된 서버 문서를 반환 합니다.|  
-|[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|가져옵니다는 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.|  
-|[COleServerItem::GetItemName](#getitemname)|항목의 이름을 반환합니다. 연결 된 항목에 사용 합니다.|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|가져옵니다는 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.|  
-|[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|가져옵니다는 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.|  
-|[COleServerItem::IsConnected](#isconnected)|항목이 현재 활성 컨테이너에 연결 되어 있는지 여부를 나타냅니다.|  
-|[COleServerItem::IsLinkedItem](#islinkeditem)|항목에 연결 된 OLE 항목을 나타내는지 여부를 나타냅니다.|  
-|[COleServerItem::NotifyChanged](#notifychanged)|자동 링크 업데이트와 함께 모든 컨테이너를 업데이트합니다.|  
-|[COleServerItem::OnDoVerb](#ondoverb)|동사를 실행 하기 위해 호출 합니다.|  
-|[Coleserveritem:: Ondraw](#ondraw)|컨테이너; 항목을 그리는 요청할 때 호출 필요한 구현입니다.|  
-|[COleServerItem::OnDrawEx](#ondrawex)|특수 항목 그리기에 대 한 호출 됩니다.|  
-|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|데이터를 클립보드에 복사 합니다를 확보 하기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnGetExtent](#ongetextent)|OLE 항목의 크기를 검색 하기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnInitFromData](#oninitfromdata)|지정 된 데이터 전송 개체의 내용을 사용 하 여 OLE 항목을 초기화 하기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|연결된 된 항목이 업데이트 해야 하는지 여부를 결정 하기 위해 호출 합니다.|  
-|[COleServerItem::OnRenderData](#onrenderdata)|지연 된 렌더링의 일환으로 데이터를 검색합니다.|  
-|[COleServerItem::OnRenderFileData](#onrenderfiledata)|데이터를 검색 한 `CFile` 지연 된 렌더링의 일부로 개체입니다.|  
-|[COleServerItem::OnRenderGlobalData](#onrenderglobaldata)|데이터를 검색 한 `HGLOBAL` 지연 된 렌더링의 일환으로 합니다.|  
-|[COleServerItem::OnSetColorScheme](#onsetcolorscheme)|항목의 색 구성표를 설정 하기 위해 호출 합니다.|  
-|[COleServerItem::OnSetData](#onsetdata)|항목의 데이터를 설정 하기 위해 호출 합니다.|  
-|[COleServerItem::OnSetExtent](#onsetextent)|OLE 항목의 크기를 설정 하기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnUpdate](#onupdate)|호출 문서 항목의 일부분에 속하는 경우 변경 됩니다.|  
-|[COleServerItem::OnUpdateItems](#onupdateitems)|서버 문서에서 모든 항목의 프레젠테이션 캐시를 업데이트 하기 위해 호출 합니다.|  
-|[COleServerItem::SetItemName](#setitemname)|항목의 이름을 설정합니다. 연결 된 항목에 사용 합니다.|  
+|[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Places presentation and conversion formats in a `COleDataSource` object.|  
+|[COleServerItem::CopyToClipboard](#copytoclipboard)|Copies the item to the Clipboard.|  
+|[COleServerItem::DoDragDrop](#dodragdrop)|Performs a drag-and-drop operation.|  
+|[COleServerItem::GetClipboardData](#getclipboarddata)|Gets the data source for use in data transfer (drag and drop or Clipboard).|  
+|[COleServerItem::GetDocument](#getdocument)|Returns the server document that contains the item.|  
+|[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Gets the **CF_EMBEDSOURCE** data for an OLE item.|  
+|[COleServerItem::GetItemName](#getitemname)|Returns the name of the item. Used for linked items only.|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Gets the `CF_LINKSOURCE` data for an OLE item.|  
+|[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Gets the **CF_OBJECTDESCRIPTOR** data for an OLE item.|  
+|[COleServerItem::IsConnected](#isconnected)|Indicates whether the item is currently attached to an active container.|  
+|[COleServerItem::IsLinkedItem](#islinkeditem)|Indicates whether the item represents a linked OLE item.|  
+|[COleServerItem::NotifyChanged](#notifychanged)|Updates all containers with automatic link update.|  
+|[COleServerItem::OnDoVerb](#ondoverb)|Called to execute a verb.|  
+|[COleServerItem::OnDraw](#ondraw)|Called when the container requests to draw the item; implementation required.|  
+|[COleServerItem::OnDrawEx](#ondrawex)|Called for specialized item drawing.|  
+|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Called by the framework to get the data that would be copied to the Clipboard.|  
+|[COleServerItem::OnGetExtent](#ongetextent)|Called by the framework to retrieve the size of the OLE item.|  
+|[COleServerItem::OnInitFromData](#oninitfromdata)|Called by the framework to initialize an OLE item using the contents of the data transfer object specified.|  
+|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|Called to determine whether any linked items require updating.|  
+|[COleServerItem::OnRenderData](#onrenderdata)|Retrieves data as part of delayed rendering.|  
+|[COleServerItem::OnRenderFileData](#onrenderfiledata)|Retrieves data into a `CFile` object as part of delayed rendering.|  
+|[COleServerItem::OnRenderGlobalData](#onrenderglobaldata)|Retrieves data into an `HGLOBAL` as part of delayed rendering.|  
+|[COleServerItem::OnSetColorScheme](#onsetcolorscheme)|Called to set the item's color scheme.|  
+|[COleServerItem::OnSetData](#onsetdata)|Called to set the item's data.|  
+|[COleServerItem::OnSetExtent](#onsetextent)|Called by the framework to set the size of the OLE item.|  
+|[COleServerItem::OnUpdate](#onupdate)|Called when some portion of the document the item belongs in is changed.|  
+|[COleServerItem::OnUpdateItems](#onupdateitems)|Called to update the presentation cache of all items in the server document.|  
+|[COleServerItem::SetItemName](#setitemname)|Sets the name of the item. Used for linked items only.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerItem::GetDataSource](#getdatasource)|변환 형식을 저장 하는 데 사용 하는 개체를 가져옵니다.|  
-|[COleServerItem::OnHide](#onhide)|OLE 항목을 숨기기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnOpen](#onopen)|OLE 항목을 자체 최상위 창에 표시 하기 위해 프레임 워크에서 호출 됩니다.|  
-|[COleServerItem::OnShow](#onshow)|컨테이너 항목을 표시 하기 위해 요청 하면 호출 됩니다.|  
+|[COleServerItem::GetDataSource](#getdatasource)|Gets the object used to store conversion formats.|  
+|[COleServerItem::OnHide](#onhide)|Called by the framework to hide the OLE item.|  
+|[COleServerItem::OnOpen](#onopen)|Called by the framework to display the OLE item in its own top-level window.|  
+|[COleServerItem::OnShow](#onshow)|Called when the container requests to show the item.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerItem::m_sizeExtent](#m_sizeextent)|OLE 항목의 표시 되는 방법에 대 한 서버를 알립니다.|  
+|[COleServerItem::m_sizeExtent](#m_sizeextent)|Informs the server about how much of the OLE item is visible.|  
   
-## <a name="remarks"></a>주의  
- 링크 된 항목 일부 또는 전체 서버 문서를 나타낼 수 있습니다. 포함된 된 항목은 항상 전체 서버 문서를 나타냅니다.  
+## <a name="remarks"></a>Remarks  
+ A linked item can represent some or all of a server document. An embedded item always represents an entire server document.  
   
- `COleServerItem` 클래스 정의 OLE 시스템 동적 연결 라이브러리 (Dll)에 의해 호출 되는 몇 가지 재정의 가능한 멤버 함수 일반적으로 컨테이너 응용 프로그램의 요청에 대 한 응답에서입니다. 이러한 멤버 함수는 표시, 동사를 실행 하거나 다양 한 형식의 데이터 검색 하는 등 다양 한 방법으로 간접적으로 항목을 조작 하는 컨테이너 응용 프로그램을 허용 합니다.  
+ The `COleServerItem` class defines several overridable member functions that are called by the OLE system dynamic-link libraries (DLLs), usually in response to requests from the container application. These member functions allow the container application to manipulate the item indirectly in various ways, such as by displaying it, executing its verbs, or retrieving its data in various formats.  
   
- 사용 하려면 `COleServerItem`를 여기에서 클래스를 파생 하 고 구현 된 [OnDraw](#ondraw) 및 [Serialize](../../mfc/reference/cobject-class.md#serialize) 멤버 함수입니다. `OnDraw` 함수 컨테이너 응용 프로그램이 복합 문서를 열 때 표시 될 수 있도록 항목의 메타 파일 표시를 제공 합니다. `Serialize` 의 기능은 `CObject` 포함 된 항목을 서버 및 컨테이너 응용 프로그램 간에 전송 될 수 있도록 항목의 기본 표시를 제공 합니다. [OnGetExtent](#ongetextent) 항목 크기를 조정 하려면 컨테이너를 사용 하면 컨테이너에 대 한 항목의 원래 크기를 제공 합니다.  
+ To use `COleServerItem`, derive a class from it and implement the [OnDraw](#ondraw) and [Serialize](../../mfc/reference/cobject-class.md#serialize) member functions. The `OnDraw` function provides the metafile representation of an item, allowing it to be displayed when a container application opens a compound document. The `Serialize` function of `CObject` provides the native representation of an item, allowing an embedded item to be transferred between the server and container applications. [OnGetExtent](#ongetextent) provides the natural size of the item to the container, enabling the container to size the item.  
   
- 서버 및 관련된 항목에 대 한 자세한 내용은 문서 참조 [서버: 서버 구현](../../mfc/servers-implementing-a-server.md) 및 문서에 "컨테이너/서버 응용 만들기" [컨테이너: 고급 기능](../../mfc/containers-advanced-features.md)합니다.  
+ For more information about servers and related topics, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md) and "Creating a Container/Server Application" in the article [Containers: Advanced Features](../../mfc/containers-advanced-features.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -162,25 +191,25 @@ class COleServerItem : public CDocItem
   
  `COleServerItem`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
- 지정 된 OLE 항목에 대 한 프레젠테이션 및 변환 형식을 추가 하려면이 함수를 호출 `COleDataSource` 개체입니다.  
+##  <a name="addotherclipboarddata"></a>  COleServerItem::AddOtherClipboardData  
+ Call this function to place the presentation and conversion formats for the OLE item in the specified `COleDataSource` object.  
   
 ```  
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDataSource`  
- 에 대 한 포인터는 `COleDataSource` 개체에서 데이터를 배치 합니다.  
+ Pointer to the `COleDataSource` object in which the data should be placed.  
   
-### <a name="remarks"></a>설명  
- 구현 해야 합니다는 [OnDraw](#ondraw) 멤버 함수를 항목에 대 한 표시 형식 (예: 메타 파일 그림)을 제공 합니다. 를 지원 하기 위해 다른 변환 형식을 등록 합니다를 사용 하는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 에서 반환 된 개체 [GetDataSource](#getdatasource) 재정의 [OnRenderData](#onrenderdata) 멤버 함수를 지원 하려면 형식에 데이터를 제공 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must have implemented the [OnDraw](#ondraw) member function to provide the presentation format (a metafile picture) for the item. To support other conversion formats, register them using the [COleDataSource](../../mfc/reference/coledatasource-class.md) object returned by [GetDataSource](#getdatasource) and override the [OnRenderData](#onrenderdata) member function to provide data in the formats you want to support.  
   
-##  <a name="coleserveritem"></a>COleServerItem::COleServerItem  
- 생성 된 `COleServerItem` 문서 항목의 서버 문서 컬렉션에 추가 하는 개체입니다.  
+##  <a name="coleserveritem"></a>  COleServerItem::COleServerItem  
+ Constructs a `COleServerItem` object and adds it to the server document's collection of document items.  
   
 ```  
 COleServerItem(
@@ -188,29 +217,29 @@ COleServerItem(
     BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pServerDoc`  
- 새 항목을 포함 하는 문서에 대 한 포인터입니다.  
+ Pointer to the document that will contain the new item.  
   
  `bAutoDelete`  
- 에 대 한 링크가 해제 될 때 개체를 삭제할 수 있는지 여부를 나타내는 플래그입니다. 이 속성을 설정 **FALSE** 경우는 `COleServerItem` 개체를 삭제 해야 하는 문서의 데이터의 필수적인 부분입니다. 이 속성을 설정 **TRUE** 개체는 프레임 워크에서 삭제할 수 있는 문서의 데이터에서 특정 범위를 식별 하는 데 사용 되는 보조 구조 하는 경우.  
+ Flag indicating whether the object can be deleted when a link to it is released. Set this to **FALSE** if the `COleServerItem` object is an integral part of your document's data which you must delete. Set this to **TRUE** if the object is a secondary structure used to identify a range in your document's data that can be deleted by the framework.  
   
-##  <a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
- OLE 항목을 클립보드로 복사 하려면이 함수를 호출 합니다.  
+##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
+ Call this function to copy the OLE item to the Clipboard.  
   
 ```  
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bIncludeLink`  
- 이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 이 속성을 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
+ Set this to **TRUE** if link data should be copied to the Clipboard. Set this to **FALSE** if your server application does not support links.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용는 [OnGetClipboardData](#ongetclipboarddata) 만들려는 멤버 함수는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 지원 되는 형식에서 OLE 항목의 데이터를 포함 하는 개체입니다. 그런 다음 저장 하는 함수는 `COleDataSource` 개체를 사용 하 여 클립보드에는 [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) 함수입니다. `COleDataSource` 개체 항목의 네이티브 데이터와 표현 포함 `CF_METAFILEPICT` 으로 형식으로 데이터를 지원 하도록 선택 하면 모든 변환 형식입니다. 구현한 해야 [Serialize](../../mfc/reference/cobject-class.md#serialize) 및 [OnDraw](#ondraw) 작동 하려면이 멤버 함수에 대 한 합니다.  
+### <a name="remarks"></a>Remarks  
+ The function uses the [OnGetClipboardData](#ongetclipboarddata) member function to create a [COleDataSource](../../mfc/reference/coledatasource-class.md) object containing the OLE item's data in the formats supported. The function then places the `COleDataSource` object on the Clipboard by using the [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) function. The `COleDataSource` object includes the item's native data and its representation in `CF_METAFILEPICT` format, as well as data in any conversion formats you choose to support. You must have implemented [Serialize](../../mfc/reference/cobject-class.md#serialize) and [OnDraw](#ondraw) for this member function to work.  
   
-##  <a name="dodragdrop"></a>COleServerItem::DoDragDrop  
- 호출 된 `DoDragDrop` 멤버 함수를 끌어서 놓기 작업을 수행 합니다.  
+##  <a name="dodragdrop"></a>  COleServerItem::DoDragDrop  
+ Call the `DoDragDrop` member function to perform a drag-and-drop operation.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -221,40 +250,40 @@ DROPEFFECT DoDragDrop(
     LPCRECT lpRectStartDrag = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpRectItem*  
- 클라이언트 영역 상대적인 화면에서 항목의 사각형입니다.  
+ The item's rectangle on screen, in pixels, relative to the client area.  
   
  `ptOffset`  
- 오프셋 `lpItemRect` 끌기 당시에 있던 마우스 위치입니다.  
+ The offset from `lpItemRect` where the mouse position was at the time of the drag.  
   
  `bIncludeLink`  
- 이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 로 설정 **FALSE** 응용 프로그램 링크를 지원 하지 않는 경우.  
+ Set this to **TRUE** if link data should be copied to the Clipboard. Set it to **FALSE** if your application does not support links.  
   
  `dwEffects`  
- 끌기 작업 (복사, 이동 및 링크의 조합)에 끌기 소스를 사용할 수 있는 효과 결정 합니다.  
+ Determines the effects that the drag source will allow in the drag operation (a combination of Copy, Move, and Link).  
   
  `lpRectStartDrag`  
- 끌기 실제로 시작 위치를 정의 하는 사각형에 대 한 포인터입니다. 자세한 내용은 아래 설명 부분을 참조하십시오.  
+ Pointer to the rectangle that defines where the drag actually starts. For more information, see the following Remarks section.  
   
-### <a name="return-value"></a>반환 값  
- `DROPEFFECT` 열거형의 값입니다. 이 경우 `DROPEFFECT_MOVE`, 원래 데이터를 제거 해야 합니다.  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumeration. If it is `DROPEFFECT_MOVE`, the original data should be removed.  
   
-### <a name="remarks"></a>설명  
- 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 `lpRectStartDrag` 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 `lpRectStartDrag` 은 **NULL**, 하나의 픽셀 마우스 커서를 이동 하는 경우 끌기 시작 되도록 기본 사각형 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The drag-and-drop operation does not start immediately. It waits until the mouse cursor leaves the rectangle specified by `lpRectStartDrag` or until a specified number of milliseconds have passed. If `lpRectStartDrag` is **NULL**, a default rectangle is used so that the drag starts when the mouse cursor moves one pixel.  
   
- 레지스트리 키 설정 지연 시간 지정 됩니다. 호출 하 여 지연 시간을 변경할 수 있습니다 [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)합니다. 지연 시간을 지정 하지 않으면 기본값은 200 밀리초 사용 됩니다. 끌어서 지연 시간을 다음과 같이 저장 됩니다.  
+ The delay time is specified by a registry key setting. You can change the delay time by calling [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) or [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). If you do not specify the delay time, a default value of 200 milliseconds is used. Drag delay time is stored as follows:  
   
--   Windows NT 끌어서 지연 시간 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay에 저장 됩니다.  
+-   Windows NT   Drag delay time is stored in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Windows 3.x 끌어서 지연 시간 WIN에 저장 됩니다. INI 파일 [Windows} 섹션.  
+-   Windows 3.x   Drag delay time is stored in the WIN.INI file, under the [Windows} section.  
   
--   Windows 95/98 끌어서 지연 시간 WIN의 캐시 된 버전에 저장 됩니다. INI 합니다.  
+-   Windows 95/98   Drag delay time is stored in a cached version of WIN.INI.  
   
- 연기 된 정보는 레지스트리에 저장 됩니다는 방법에 대 한 자세한 내용은 끌어에 대 한 또는 합니다. INI 파일 참조 [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about how drag delay information is stored in either the registry or the .INI file, see [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in the Windows SDK.  
   
-##  <a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
- 이 함수를 지정 된 채우기 호출 [COleDataSource](../../mfc/reference/coledatasource-class.md) 개체를 호출한 경우 클립보드에 복사할 수 있는 모든 데이터로 [CopyToClipboard](#copytoclipboard) (호출한 경우에 동일한 데이터를 전송 합니다 [DoDragDrop](#dodragdrop)).  
+##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
+ Call this function to fill the specified [COleDataSource](../../mfc/reference/coledatasource-class.md) object with all the data that would be copied to the Clipboard if you called [CopyToClipboard](#copytoclipboard) (the same data would also be transferred if you called [DoDragDrop](#dodragdrop)).  
   
 ```  
 void GetClipboardData(
@@ -264,104 +293,104 @@ void GetClipboardData(
     LPSIZE lpSize = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDataSource`  
- 에 대 한 포인터는 `COleDataSource` 지원 되는 모든 형식에서 OLE 항목의 데이터를 받게 될 개체입니다.  
+ Pointer to the `COleDataSource` object that will receive the OLE item's data in all supported formats.  
   
  `bIncludeLink`  
- **True 이면** 링크 데이터를 클립보드에 복사할 경우. **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
+ **TRUE** if link data should be copied to the Clipboard. **FALSE** if your server application does not support links.  
   
  `lpOffset`  
- 개체의 원점부터 마우스 커서를 픽셀 단위로 오프셋입니다.  
+ The offset, in pixels, of the mouse cursor from the origin of the object.  
   
  `lpSize`  
- 픽셀 단위로 개체의 크기입니다.  
+ The size of the object in pixels.  
   
-### <a name="remarks"></a>설명  
- 이 함수 호출의 [GetEmbedSourceData](#getembedsourcedata) OLE 항목 및 호출에 대 한 원시 데이터를 가져오려는 멤버 함수는 [AddOtherClipboardData](#addotherclipboarddata) 표시 형식 및 모든 멤버 함수 변환 형식을 지원 합니다. 경우 `bIncludeLink` 은 **TRUE**,이 함수는 호출 또한 [GetLinkSourceData](#getlinksourcedata) 항목에 대 한 연결 데이터를 가져오려는 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function calls the [GetEmbedSourceData](#getembedsourcedata) member function to get the native data for the OLE item and calls the [AddOtherClipboardData](#addotherclipboarddata) member function to get the presentation format and any supported conversion formats. If `bIncludeLink` is **TRUE**, the function also calls [GetLinkSourceData](#getlinksourcedata) to get the link data for the item.  
   
- 형식에 배치 하려는 경우이 함수를 재정의 한 `COleDataSource` 앞 이나 뒤에서 제공 하는 해당 형식의 개체 `CopyToClipboard`합니다.  
+ Override this function if you want to put formats in a `COleDataSource` object before or after those formats supplied by `CopyToClipboard`.  
   
-##  <a name="getdatasource"></a>COleServerItem::GetDataSource  
- 가져오려면이 함수를 호출 하 여 [COleDataSource](../../mfc/reference/coledatasource-class.md) 서버 응용 프로그램이 지 원하는 변환 형식을 저장 하는 데 사용 되는 개체입니다.  
+##  <a name="getdatasource"></a>  COleServerItem::GetDataSource  
+ Call this function to get the [COleDataSource](../../mfc/reference/coledatasource-class.md) object used to store the conversion formats that the server application supports.  
   
 ```  
 COleDataSource* GetDataSource();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `COleDataSource` 변환 형식을 저장 하는 데 사용 되는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `COleDataSource` object used to store the conversion formats.  
   
-### <a name="remarks"></a>주의  
- 서버 응용 프로그램 작업 데이터를 전송 하는 동안 다양 한 형식에 데이터를 제공 하려는 경우 해당 형식으로 등록는 `COleDataSource` 이 함수에서 반환 된 개체입니다. 제공 하려는 경우 등는 **CF_TEXT** 클립보드 또는 끌어 놓기 작업에 대 한 OLE 항목의 표시를 하는 형식으로 등록 합니다는 `COleDataSource` 다음 재정의 하 고이 함수를 반환 하는 개체는 **OnRenderXxxData** 멤버 함수가 데이터를 제공 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want your server application to offer data in a variety of formats during data transfer operations, register those formats with the `COleDataSource` object returned by this function. For example, if you want to supply a **CF_TEXT** representation of the OLE item for Clipboard or drag-and-drop operations, you would register the format with the `COleDataSource` object this function returns, and then override the **OnRenderXxxData** member function to provide the data.  
   
-##  <a name="getdocument"></a>COleServerItem::GetDocument  
- 항목을 포함 하는 문서에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
+##  <a name="getdocument"></a>  COleServerItem::GetDocument  
+ Call this function to get a pointer to the document that contains the item.  
   
 ```  
 COleServerDoc* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항목이 포함 된 문서에 대 한 포인터 **NULL** 항목이 문서의 일부가 아닌 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the item; **NULL** if the item is not part of a document.  
   
-### <a name="remarks"></a>주의  
- 이렇게 하면에 대 한 인수로 전달 되는 서버 문서에 대 한 액세스는 `COleServerItem` 생성자입니다.  
+### <a name="remarks"></a>Remarks  
+ This allows access to the server document that you passed as an argument to the `COleServerItem` constructor.  
   
-##  <a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
- 가져오려면이 함수를 호출 하 여 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.  
+##  <a name="getembedsourcedata"></a>  COleServerItem::GetEmbedSourceData  
+ Call this function to get the **CF_EMBEDSOURCE** data for an OLE item.  
   
 ```  
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStgMedium`  
- 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.  
+ Pointer to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure that will receive the **CF_EMBEDSOURCE** data for the OLE item.  
   
-### <a name="remarks"></a>주의  
- 이 형식 항목의 네이티브 데이터를 포함 합니다. 구현 해야 합니다는 `Serialize` 제대로 작동 하려면이 함수에 대 한 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ This format includes the item's native data. You must have implemented the `Serialize` member function for this function to work properly.  
   
- 결과 수를 사용 하 여 다음 데이터 원본에 추가 하는 수 [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata)합니다. 이 함수는 자동으로 호출 [COleServerItem::OnGetClipboardData](#ongetclipboarddata)합니다.  
+ The result can then be added to a data source by using [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata). This function is called automatically by [COleServerItem::OnGetClipboardData](#ongetclipboarddata).  
   
- 자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in the Windows SDK.  
   
-##  <a name="getitemname"></a>COleServerItem::GetItemName  
- 항목의 이름을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getitemname"></a>  COleServerItem::GetItemName  
+ Call this function to get the name of the item.  
   
 ```  
 const CString& GetItemName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항목의 이름입니다.  
+### <a name="return-value"></a>Return Value  
+ The name of the item.  
   
-### <a name="remarks"></a>주의  
- 일반적으로 연결 된 항목에 대해서만이 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ You typically call this function only for linked items.  
   
-##  <a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
- 가져오려면이 함수를 호출 하 여 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.  
+##  <a name="getlinksourcedata"></a>  COleServerItem::GetLinkSourceData  
+ Call this function to get the `CF_LINKSOURCE` data for an OLE item.  
   
 ```  
 BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStgMedium`  
- 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.  
+ Pointer to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure that will receive the `CF_LINKSOURCE` data for the OLE item.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 형식에는 OLE 항목 유형과 OLE 항목을 포함 하는 문서를 찾는 데 필요한 정보를 설명 하는 CLSID 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This format includes the CLSID describing the type of the OLE item and the information needed to locate the document containing the OLE item.  
   
- 결과 데이터 원본에 추가할 수 있습니다 [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata)합니다. 이 함수는 자동으로 호출 [OnGetClipboardData](#ongetclipboarddata)합니다.  
+ The result can then be added to a data source with [COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata). This function is called automatically by [OnGetClipboardData](#ongetclipboarddata).  
   
- 자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in the Windows SDK.  
   
-##  <a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
- 가져오려면이 함수를 호출 하 여 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.  
+##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
+ Call this function to get the **CF_OBJECTDESCRIPTOR** data for an OLE item.  
   
 ```  
 void GetObjectDescriptorData(
@@ -370,111 +399,111 @@ void GetObjectDescriptorData(
     LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpOffset`  
- OLE 항목의 왼쪽 위 모서리에서 마우스 클릭의 오프셋입니다. 수 **NULL**합니다.  
+ Offset of the mouse click from the upper-left corner of the OLE item. Can be **NULL**.  
   
  `lpSize`  
- OLE 항목의 크기입니다. 수 **NULL**합니다.  
+ Size of the OLE item. Can be **NULL**.  
   
  `lpStgMedium`  
- 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.  
+ Pointer to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure that will receive the **CF_OBJECTDESCRIPTOR** data for the OLE item.  
   
-### <a name="remarks"></a>설명  
- 정보에 복사 되는 **STGMEDIUM** 가리키는 구조 `lpStgMedium`합니다. 이 형식 붙여넣기 대화 상자에 필요한 정보를 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ The information is copied into the **STGMEDIUM** structure pointed to by `lpStgMedium`. This format includes the information needed for the Paste Special dialog.  
   
- 자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in the Windows SDK.  
   
-##  <a name="isconnected"></a>COleServerItem::IsConnected  
- OLE 항목이 연결 되어 있는지 확인 하려면이 함수를 호출 합니다.  
+##  <a name="isconnected"></a>  COleServerItem::IsConnected  
+ Call this function to see if the OLE item is connected.  
   
 ```  
 BOOL IsConnected() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항목이 연결 된; 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is connected; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- OLE 항목에 하나 이상의 컨테이너 항목에 대 한 참조가 있는 경우 연결로 간주 됩니다. 항목 참조 개수가 0 보다 큰 경우 있거나 보고서가 포함된 된 항목에 연결 되어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ An OLE item is considered connected if one or more containers have references to the item. An item is connected if its reference count is greater than 0 or if it is an embedded item.  
   
-##  <a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
- OLE 항목이 연결된 된 항목 인지 확인 하려면이 함수를 호출 합니다.  
+##  <a name="islinkeditem"></a>  COleServerItem::IsLinkedItem  
+ Call this function to see if the OLE item is a linked item.  
   
 ```  
 BOOL IsLinkedItem() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항목이 연결된 된 항목; 이면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is a linked item; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 항목은 항목이 유효 포함 된 항목의 문서 목록에 반환 되지 않습니다 연결 됩니다. 링크 된 항목 수 또는 컨테이너에 연결 하지 않을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ An item is linked if the item is valid and is not returned in the document's list of embedded items. A linked item might or might not be connected to a container.  
   
- 연결 및 포함 된 항목에 대 한 동일한 클래스를 사용 하는 경우 `IsLinkedItem`대부분의 경우 코드가 자주 발생 하지만 포함 된 항목을 다르게 동작 하는 연결 된 항목을 만들 수 있습니다.  
+ It is common to use the same class for both linked and embedded items. `IsLinkedItem` allows you to make linked items behave differently than embedded items, although many times the code is common.  
   
-##  <a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
- 이 멤버는 개체의 표시 되는 컨테이너 문서의 서버에 알려 줍니다.  
+##  <a name="m_sizeextent"></a>  COleServerItem::m_sizeExtent  
+ This member tells the server how much of the object is visible in the container document.  
   
 ```  
 CSize m_sizeExtent;  
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 [OnSetExtent](#onsetextent) 이 멤버를 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of [OnSetExtent](#onsetextent) sets this member.  
   
-##  <a name="notifychanged"></a>COleServerItem::NotifyChanged  
- 연결된 된 항목이 변경 되 면이 함수를 호출 합니다.  
+##  <a name="notifychanged"></a>  COleServerItem::NotifyChanged  
+ Call this function after the linked item has been changed.  
   
 ```  
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nDrawAspect`  
- 값은 `DVASPECT` 변경 된 OLE 항목의 어떤 부분을 나타내는 열거형입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ A value from the `DVASPECT` enumeration that indicates which aspect of the OLE item has changed. This parameter can have any of the following values:  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
-### <a name="remarks"></a>주의  
- 컨테이너 항목이 들어 자동 링크가 포함 된 문서에 연결 된 경우 해당 항목 변경 내용을 반영 하도록 업데이트 됩니다. Microsoft Foundation Class 라이브러리를 사용 하 여 작성 하는 컨테이너 응용 프로그램에서 [COleClientItem::OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 눌렀을 때 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If a container item is linked to the document with an automatic link, the item is updated to reflect the changes. In container applications written using the Microsoft Foundation Class Library, [COleClientItem::OnChange](../../mfc/reference/coleclientitem-class.md#onchange) is called in response.  
   
-##  <a name="ondoverb"></a>COleServerItem::OnDoVerb  
- 지정된 된 동사를 실행 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb  
+ Called by the framework to execute the specified verb.  
   
 ```  
 virtual void OnDoVerb(LONG iVerb);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iVerb`  
- 실행 하는 동사를 지정 합니다. 다음 중 하나가 수 있습니다.  
+ Specifies the verb to execute. It can be any one of the following:  
   
-|값|의미|기호|  
+|Value|Meaning|Symbol|  
 |-----------|-------------|------------|  
-|0|기본 동사|`OLEIVERB_PRIMARY`|  
-|1|보조 동사|(None)|  
-|- 1|편집을 위해 표시 항목|`OLEIVERB_SHOW`|  
-|- 2|별도 창에서 항목을 편집|`OLEIVERB_OPEN`|  
-|- 3|항목 숨기기|`OLEIVERB_HIDE`|  
+|0|Primary verb|`OLEIVERB_PRIMARY`|  
+|1|Secondary verb|(None)|  
+|- 1|Display item for editing|`OLEIVERB_SHOW`|  
+|- 2|Edit item in separate window|`OLEIVERB_OPEN`|  
+|- 3|Hide item|`OLEIVERB_HIDE`|  
   
- 일반적으로-1 값은 다른 동사에 대 한 별칭입니다. 편집 열고 지원 되지 않는 경우-2가-1과 같습니다. 추가 값에 대 한 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The -1 value is typically an alias for another verb. If open editing is not supported, -2 has the same effect as -1. For additional values, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
   
-### <a name="remarks"></a>설명  
- Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현 호출은 [문서가](#onshow) 멤버 함수는 경우 기본 동사 또는 `OLEIVERB_SHOW` 지정 된 [OnOpen](#onopen) 경우 보조 동사 또는 `OLEIVERB_OPEN` 지정 된 및 [OnHide](#onhide) 경우 `OLEIVERB_HIDE` 지정 합니다. 기본 구현 호출 `OnShow` 경우 `iVerb` 위에 나열 된 동사 중 하나가 아닙니다.  
+### <a name="remarks"></a>Remarks  
+ If the container application was written with the Microsoft Foundation Class Library, this function is called when the [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate) member function of the corresponding `COleClientItem` object is called. The default implementation calls the [OnShow](#onshow) member function if the primary verb or `OLEIVERB_SHOW` is specified, [OnOpen](#onopen) if the secondary verb or `OLEIVERB_OPEN` is specified, and [OnHide](#onhide) if `OLEIVERB_HIDE` is specified. The default implementation calls `OnShow` if `iVerb` is not one of the verbs listed above.  
   
- 기본 동사 프로그램 항목이 표시 되지 않을 경우이 함수를 재정의 합니다. 예를 들어 항목 사운드 녹음 이며 해당 기본 동사는 재생 하는 경우 항목을 재생할 서버 응용 프로그램을 표시 해야 없습니다.  
+ Override this function if your primary verb does not show the item. For example, if the item is a sound recording and its primary verb is Play, you would not have to display the server application to play the item.  
   
- 자세한 내용은 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
   
-##  <a name="ondraw"></a>Coleserveritem:: Ondraw  
- 프레임워크에서 호출되어 OLE 항목을 메타파일로 렌더링합니다.  
+##  <a name="ondraw"></a>  COleServerItem::OnDraw  
+ Called by the framework to render the OLE item into a metafile.  
   
 ```  
 virtual BOOL OnDraw(
@@ -482,21 +511,21 @@ virtual BOOL OnDraw(
     CSize& rSize) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 에 대 한 포인터는 [CDC](../../mfc/reference/cdc-class.md) 개체 항목을 그리는입니다. 디스플레이 컨텍스트는 자동으로 연결 특성 디스플레이 컨텍스트 되므로 특성 함수를 호출할 수 있지만 이렇게 하면 지금 하 게 만드는 메타 파일 장치 전용입니다.  
+ A pointer to the [CDC](../../mfc/reference/cdc-class.md) object on which to draw the item. The display context is automatically connected to the attribute display context so you can call attribute functions, although doing so would make the metafile device-specific.  
   
  `rSize`  
- 크기에 **HIMETRIC** 를 그릴 메타 파일의 단위입니다.  
+ Size, in **HIMETRIC** units, in which to draw the metafile.  
   
-### <a name="return-value"></a>반환 값  
- 항목이 성공적으로 그린; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item was successfully drawn; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- OLE 항목의 메타 파일 표시는 컨테이너 응용 프로그램에서 항목을 표시 하는 데 사용 됩니다. 메타 파일에 사용 되는 Microsoft Foundation 클래스 라이브러리와 컨테이너 응용 프로그램 작성 된 있는지는 [그리기](../../mfc/reference/coleclientitem-class.md#draw) 멤버 함수는 해당 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 개체입니다. 기본 구현은 없습니다. 에 지정 된 장치 컨텍스트의 항목을 그릴이 함수를 재정의 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The metafile representation of the OLE item is used to display the item in the container application. If the container application was written with the Microsoft Foundation Class Library, the metafile is used by the [Draw](../../mfc/reference/coleclientitem-class.md#draw) member function of the corresponding [COleClientItem](../../mfc/reference/coleclientitem-class.md) object. There is no default implementation. You must override this function to draw the item into the device context specified.  
   
-##  <a name="ondrawex"></a>COleServerItem::OnDrawEx  
- 모든 그리기 위한 프레임 워크에서 호출 됩니다.  
+##  <a name="ondrawex"></a>  COleServerItem::OnDrawEx  
+ Called by the framework for all drawing.  
   
 ```  
 virtual BOOL OnDrawEx(
@@ -505,34 +534,34 @@ virtual BOOL OnDrawEx(
     CSize& rSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 에 대 한 포인터는 [CDC](../../mfc/reference/cdc-class.md) 개체 항목을 그리는입니다. DC는 자동으로 연결 특성 DC에 되므로 특성 함수를 호출할 수 있지만 이렇게 하면 지금 하 게 만드는 메타 파일 장치 전용입니다.  
+ A pointer to the [CDC](../../mfc/reference/cdc-class.md) object on which to draw the item. The DC is automatically connected to the attribute DC so you can call attribute functions, although doing so would make the metafile device-specific.  
   
  `nDrawAspect`  
- `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ A value from the `DVASPECT` enumeration. This parameter can have any of the following values:  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
  `rSize`  
- 에 있는 항목의 크기 **HIMETRIC** 단위입니다.  
+ Size of the item in **HIMETRIC** units.  
   
-### <a name="return-value"></a>반환 값  
- 항목이 성공적으로 그린; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item was successfully drawn; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 기본 구현 호출 `OnDraw` 때 `DVASPECT` 같으면 `DVASPECT_CONTENT`; 그렇지 않으면 요청이 실패 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls `OnDraw` when `DVASPECT` is equal to `DVASPECT_CONTENT`; otherwise it fails.  
   
- 이 함수 이외의 다른 측면에 대 한 프레젠테이션 데이터를 제공 하도록 재정의 `DVASPECT_CONTENT`와 같은 `DVASPECT_ICON` 또는 `DVASPECT_THUMBNAIL`합니다.  
+ Override this function to provide presentation data for aspects other than `DVASPECT_CONTENT`, such as `DVASPECT_ICON` or `DVASPECT_THUMBNAIL`.  
   
-##  <a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
- 가져오려는 프레임 워크에서 호출을 `COleDataSource` 개체를 호출 하 여 클립보드에 배치 하는 모든 데이터를 포함 하는 [CopyToClipboard](#copytoclipboard) 멤버 함수입니다.  
+##  <a name="ongetclipboarddata"></a>  COleServerItem::OnGetClipboardData  
+ Called by the framework to get a `COleDataSource` object containing all the data that would be placed on the Clipboard by a call to the [CopyToClipboard](#copytoclipboard) member function.  
   
 ```  
 virtual COleDataSource* OnGetClipboardData(
@@ -541,24 +570,24 @@ virtual COleDataSource* OnGetClipboardData(
     LPSIZE lpSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bIncludeLink`  
- 이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 이 속성을 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
+ Set this to **TRUE** if link data should be copied to the Clipboard. Set this to **FALSE** if your server application does not support links.  
   
  `lpOffset`  
- 픽셀 단위로 개체의 원점부터 마우스 커서의 오프셋입니다.  
+ The offset of the mouse cursor from the origin of the object in pixels.  
   
  `lpSize`  
- 픽셀 단위로 개체의 크기입니다.  
+ The size of the object in pixels.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 클립보드 데이터를 포함 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [COleDataSource](../../mfc/reference/coledatasource-class.md) object containing the Clipboard data.  
   
-### <a name="remarks"></a>설명  
- 이 함수의 기본 구현을 호출 [GetClipboardData](#getclipboarddata)합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls [GetClipboardData](#getclipboarddata).  
   
-##  <a name="ongetextent"></a>COleServerItem::OnGetExtent  
- 에 크기를 검색 하기 위해 프레임 워크에서 호출 **HIMETRIC** OLE 항목의 단위입니다.  
+##  <a name="ongetextent"></a>  COleServerItem::OnGetExtent  
+ Called by the framework to retrieve the size, in **HIMETRIC** units, of the OLE item.  
   
 ```  
 virtual BOOL OnGetExtent(
@@ -566,39 +595,39 @@ virtual BOOL OnGetExtent(
     CSize& rSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nDrawAspect`  
- 검색할 수 있는 경계는 해당 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ Specifies the aspect of the OLE item whose bounds are to be retrieved. This parameter can have any of the following values:  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
  `rSize`  
- 에 대 한 참조는 `CSize` OLE 항목의 크기를 받게 될 개체입니다.  
+ Reference to a `CSize` object that will receive the size of the OLE item.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현은 아무 작업도 수행하지 않습니다. 사용자가 직접를 그 구현 해야 합니다. OLE 항목의 크기에 대 한 요청을 처리할 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the container application was written with the Microsoft Foundation Class Library, this function is called when the [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) member function of the corresponding `COleClientItem` object is called. The default implementation does nothing. You must implement it yourself. Override this function if you want to perform special processing when handling a request for the size of the OLE item.  
   
-##  <a name="onhide"></a>COleServerItem::OnHide  
- OLE 항목을 숨기기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onhide"></a>  COleServerItem::OnHide  
+ Called by the framework to hide the OLE item.  
   
 ```  
 virtual void OnHide();
 ```  
   
-### <a name="remarks"></a>설명  
- 기본 호출 **COleServerDoc::OnShowDocument (FALSE)**합니다. 또한 함수 OLE 항목은 숨겨진 컨테이너 알립니다. OLE 항목을 숨길 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default calls **COleServerDoc::OnShowDocument( FALSE )**. The function also notifies the container that the OLE item has been hidden. Override this function if you want to perform special processing when hiding an OLE item.  
   
-##  <a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
- 내용을 사용 하 여 OLE 항목을 초기화 하기 위해 프레임 워크에서 호출 `pDataObject`합니다.  
+##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
+ Called by the framework to initialize an OLE item using the contents of `pDataObject`.  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -606,50 +635,50 @@ virtual BOOL OnInitFromData(
     BOOL bCreation);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- OLE 항목을 초기화 하기 위한 다양 한 형식의 데이터를 포함 하는 OLE 데이터 개체에 대 한 포인터입니다.  
+ Pointer to an OLE data object containing data in various formats for initializing the OLE item.  
   
  `bCreation`  
- **True 이면** 컨테이너 응용 프로그램에서 새롭게 작성 되 고 OLE 항목을 초기화 하는 함수가 호출 됩니다. **FALSE** 이미 기존 OLE 항목의 내용을 대체 하는 함수가 호출 됩니다.  
+ **TRUE** if the function is called to initialize an OLE item being newly created by a container application. **FALSE** if the function is called to replace the contents of an already existing OLE item.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 경우 `bCreation` 은 **TRUE**, 컨테이너 현재 선택을 기반으로 새 개체 삽입을 구현 하는 경우이 함수를 호출 합니다. 선택한 데이터는 새 OLE 항목을 만들 때 사용 됩니다. 예를 들어 때 스프레드시트 프로그램에서 셀 범위를 선택 하 고 다음 삽입할 새 개체를 사용 하 여 차트를 만드는 값에 따라 선택한 범위에 있습니다. 기본 구현은 아무 작업도 수행하지 않습니다. 제공 하는 것에서 허용 되는 형식이 선택 하려면이 함수를 재정의 `pDataObject` 제공 되는 데이터에 따라 OLE 항목을 초기화 합니다. 고급 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If `bCreation` is **TRUE**, this function is called if a container implements Insert New Object based on the current selection. The data selected is used when creating the new OLE item. For example, when selecting a range of cells in a spreadsheet program and then using the Insert New Object to create a chart based on the values in the selected range. The default implementation does nothing. Override this function to choose an acceptable format from those offered by `pDataObject` and initialize the OLE item based on the data provided. This is an advanced overridable.  
   
- 자세한 내용은 참조 [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) in the Windows SDK.  
   
-##  <a name="onopen"></a>COleServerItem::OnOpen  
- 서버 응용 프로그램의 개별 인스턴스가 아닌 내부 OLE 항목을 표시 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onopen"></a>  COleServerItem::OnOpen  
+ Called by the framework to display the OLE item in a separate instance of the server application, rather than in place.  
   
 ```  
 virtual void OnOpen();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 활성화; OLE 항목을 포함 하는 문서를 표시 하는 첫 번째 프레임 창 미니 서버 응용 프로그램을 사용 하는 경우 기본 구현에는 주 창을 보여 줍니다. 또한 함수 OLE 항목 열렸음을 컨테이너 알립니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation activates the first frame window displaying the document that contains the OLE item; if the application is a mini-server, the default implementation shows the main window. The function also notifies the container that the OLE item has been opened.  
   
- OLE 항목을 열 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다. 이 특히 일반적 열릴 때 링크를 선택 영역을 설정 하려면 연결 된 항목으로 발생 합니다.  
+ Override this function if you want to perform special processing when opening an OLE item. This is especially common with linked items where you want to set the selection to the link when it is opened.  
   
- 자세한 내용은 참조 [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) in the Windows SDK.  
   
-##  <a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
- 현재 서버 문서에 연결된 된 항목이 만료 되는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
+ Called by the framework to determine whether any linked items in the current server document are out of date.  
   
 ```  
 virtual BOOL OnQueryUpdateItems();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 문서에 필요한 업데이트; 항목에는 0이 아닌 모든 항목은 최신 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document has items needing updates; 0 if all items are up to date.  
   
-### <a name="remarks"></a>주의  
- 원본 문서 변경 되었지만 연결된 된 항목은 문서의 변경 내용을 반영 하도록 업데이트 되지 않은 경우 항목이 최신이 아닙니다.  
+### <a name="remarks"></a>Remarks  
+ An item is out of date if its source document has been changed but the linked item has not been updated to reflect the changes in the document.  
   
-##  <a name="onrenderdata"></a>COleServerItem::OnRenderData  
- 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderdata"></a>  COleServerItem::OnRenderData  
+ Called by the framework to retrieve data in the specified format.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -657,27 +686,27 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `lpStgMedium`  
- 가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 반환 될 데이터는 구조입니다.  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in which the data is to be returned.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 또는 [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현을 호출 [OnRenderFileData](#onrenderfiledata) 또는 [OnRenderGlobalData](#onrenderglobaldata)각각 제공 되는 저장소 미디어로 파일 또는 메모리 경우. 이러한 형식 중 아무것도 지정 하지 기본 구현에서는 0을 반환 하 고 아무 작업도 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) or [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) member function for delayed rendering. The default implementation of this function calls [OnRenderFileData](#onrenderfiledata) or [OnRenderGlobalData](#onrenderglobaldata), respectively, if the supplied storage medium is either a file or memory. If neither of these formats is supplied, the default implementation returns 0 and does nothing.  
   
- 경우 `lpStgMedium` ->  *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 할당는 및에 지정 된 대로 채워진 *tymed-> lpFormatEtc*합니다. 그렇지 않은 경우 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
+ If `lpStgMedium`-> *tymed* is **TYMED_NULL**, the **STGMEDIUM** should allocated and filled as specified by *lpFormatEtc->tymed*. If not **TYMED_NULL**, the **STGMEDIUM** should be filled in place with the data.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 데이터가 작고 크기가 고정 되어 있으면 재정의 `OnRenderGlobalData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
+ This is an advanced overridable. Override this function to provide your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If your data is small and fixed in size, override `OnRenderGlobalData`. If your data is in a file, or is of variable size, override `OnRenderFileData`.  
   
- 자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), 및 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), and [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) in the Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
- 저장소 미디어로 파일을 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
+ Called by the framework to retrieve data in the specified format when the storage medium is a file.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -685,25 +714,25 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `pFile`  
- 가리키는 `CFile` 데이터 렌더링 해야 하는 개체입니다.  
+ Points to a `CFile` object in which the data is to be rendered.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수는 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 [OnRenderFileData](#onrenderfiledata)합니다.  
+ This is an advanced overridable. Override this function to provide your data in the requested format and medium. Depending on your data, you might want to override one of the other versions of this function instead. If you want to handle multiple storage mediums, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override [OnRenderFileData](#onrenderfiledata).  
   
- 자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
- 지정 된 저장소 미디어로 전역 메모리 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is global memory.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -711,46 +740,46 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `phGlobal`  
- 반환 될 데이터는 전역 메모리에 대 한 핸들을 가리킵니다. 이 매개 변수 수 없는 메모리를 할당할 **NULL**합니다.  
+ Points to a handle to global memory in which the data is to be returned. If no memory has been allocated, this parameter can be **NULL**.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 경우 `phGlobal` 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 `phGlobal`합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 `phGlobal` 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
+ If `phGlobal` is **NULL**, then a new `HGLOBAL` should be allocated and returned in `phGlobal`. Otherwise, the `HGLOBAL` specified by `phGlobal` should be filled with the data. The amount of data placed in the `HGLOBAL` must not exceed the current size of the memory block. Also, the block cannot be reallocated to a larger size.  
   
- 고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 [OnRenderFileData](#onrenderfiledata)합니다.  
+ This is an advanced overridable. Override this function to provide your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If you want to handle multiple storage mediums, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override [OnRenderFileData](#onrenderfiledata).  
   
- 자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
- OLE 항목을 편집할 때 사용할 색상표를 지정 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
+ Called by the framework to specify a color palette to be used when editing the OLE item.  
   
 ```  
 virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpLogPalette`  
- Windows에 대 한 포인터 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 구조입니다.  
+ Pointer to a Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure.  
   
-### <a name="return-value"></a>반환 값  
- 색상표; 사용 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the color palette is used; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 컨테이너 응용 프로그램에서 Microsoft Foundation Class 라이브러리를 사용 하 여 작성 된 경우이 함수는 호출 될 때는 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현은 반환 **FALSE**합니다. 권장된 팔레트를 사용 하려는 경우이 함수를 재정의 합니다. 제안 된 색상표를 사용 하는 서버 응용 프로그램이 않아도 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the container application was written using the Microsoft Foundation Class Library, this function is called when the [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) function of the corresponding `COleClientItem` object is called. The default implementation returns **FALSE**. Override this function if you want to use the recommended palette. The server application is not required to use the suggested palette.  
   
- 자세한 내용은 참조 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) in the Windows SDK.  
   
-##  <a name="onsetdata"></a>COleServerItem::OnSetData  
- 지정 된 데이터 OLE 항목의 데이터를 대체 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
+ Called by the framework to replace the OLE item's data with the specified data.  
   
 ```  
 virtual BOOL OnSetData(
@@ -759,28 +788,28 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 데이터의 형식을 지정 합니다.  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format of the data.  
   
  `lpStgMedium`  
- 에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조에서 멤버의 데이터입니다.  
+ Pointer to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in which the data resides.  
   
  `bRelease`  
- 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 `bRelease`합니다. 경우 `bRelease` 가 0이 아닌 경우 서버 항목 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 `bRelease` 은 0, 호출자에 게 소유권을 보유 하 고 서버 항목은 호출 기간 동안에만 저장 매체를 사용할 수 있습니다.  
+ Indicates who has ownership of the storage medium after completing the function call. The caller decides who is responsible for releasing the resources allocated on behalf of the storage medium. The caller does this by setting `bRelease`. If `bRelease` is nonzero, the server item takes ownership, freeing the medium when it has finished using it. When `bRelease` is 0, the caller retains ownership and the server item can use the storage medium only for the duration of the call.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 서버 항목은 변경 내용이 데이터를 소유는 성공적으로 가져온 것입니다. 즉, 소유권을 고려 되지 경우 0을 반환 합니다. 데이터 원본 변수를 사용할 경우 소유권 저장 매체를 호출 하 여 해제 된 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The server item does not take ownership of the data until it has successfully obtained it. That is, it does not take ownership if it returns 0. If the data source takes ownership, it frees the storage medium by calling the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) function.  
   
- 기본 구현은 아무 작업도 수행하지 않습니다. 지정 된 데이터 OLE 항목의 데이터를 대체 하려면이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
+ The default implementation does nothing. Override this function to replace the OLE item's data with the specified data. This is an advanced overridable.  
   
- 자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), 및 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), and [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in the Windows SDK.  
   
-##  <a name="onsetextent"></a>COleServerItem::OnSetExtent  
- 컨테이너 문서에 사용 가능한 공간을 OLE 항목에 지시 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
+ Called by the framework to tell the OLE item how much space is available to it in the container document.  
   
 ```  
 virtual BOOL OnSetExtent(
@@ -788,41 +817,41 @@ virtual BOOL OnSetExtent(
     const CSize& size);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nDrawAspect`  
- 해당 범위가 지정 된 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ Specifies the aspect of the OLE item whose bounds are being specified. This parameter can have any of the following values:  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
  `size`  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) OLE 항목의 새 크기를 지정 하는 구조입니다.  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) structure specifying the new size of the OLE item.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현에서는 설정 된 [m_sizeExtent](#m_sizeextent) 멤버 지정된 된 크기를 경우 `nDrawAspect` 은 `DVASPECT_CONTENT`; 그렇지 않으면 0을 반환 합니다. 항목의 크기를 변경 하면 특수 한 처리를 수행 하려면이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the container application was written with the Microsoft Foundation Class Library, this function is called when the [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) member function of the corresponding `COleClientItem` object is called. The default implementation sets the [m_sizeExtent](#m_sizeextent) member to the specified size if `nDrawAspect` is `DVASPECT_CONTENT`; otherwise it returns 0. Override this function to perform special processing when you change the size of the item.  
   
-##  <a name="onshow"></a>COleServerItem::OnShow  
- 원위치에서 OLE 항목을 표시 하는 서버 응용 프로그램에 지시 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onshow"></a>  COleServerItem::OnShow  
+ Called by the framework to instruct the server application to display the OLE item in place.  
   
 ```  
 virtual void OnShow();
 ```  
   
-### <a name="remarks"></a>주의  
- 표시할 항목을 필요로 하는 컨테이너 응용 프로그램의 사용자는 항목을 만들거나 편집 같은 한 동사를 실행 하는 경우이 함수는 일반적으로 호출 합니다. 기본 구현에는 내부 활성화를 시도합니다. 실패 하면, 함수 호출의 `OnOpen` OLE 항목을 별도 창에 표시 하려면 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ This function is typically called when the user of the container application creates an item or executes a verb, such as Edit, that requires the item to be shown. The default implementation attempts in-place activation. If this fails, the function calls the `OnOpen` member function to display the OLE item in a separate window.  
   
- OLE 항목을 표시할 때 특별 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
+ Override this function if you want to perform special processing when an OLE item is shown.  
   
-##  <a name="onupdate"></a>COleServerItem::OnUpdate  
- 항목이 수정 된 때 프레임 워크에서 호출 됩니다.  
+##  <a name="onupdate"></a>  COleServerItem::OnUpdate  
+ Called by the framework when an item has been modified.  
   
 ```  
 virtual void OnUpdate(
@@ -832,59 +861,59 @@ virtual void OnUpdate(
     DVASPECT nDrawAspect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- 문서를 수정 하는 항목에 대 한 포인터입니다. 수 **NULL**합니다.  
+ Pointer to the item that modified the document. Can be **NULL**.  
   
  `lHint`  
- 수정에 대 한 정보를 포함합니다.  
+ Contains information about the modification.  
   
  `pHint`  
- 수정에 대 한 정보를 저장 하는 개체에 대 한 포인터입니다.  
+ Pointer to an object storing information about the modification.  
   
  `nDrawAspect`  
- `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
+ A value from the `DVASPECT` enumeration. This parameter can have any one of the following values:  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
-### <a name="remarks"></a>설명  
- 기본 구현 호출 [NotifyChanged](#notifychanged)힌트 또는 보낸 사람에 관계 없이, 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls [NotifyChanged](#notifychanged), regardless of the hint or sender.  
   
-##  <a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
- 서버 문서에서 모든 항목을 업데이트 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="onupdateitems"></a>  COleServerItem::OnUpdateItems  
+ Called by the framework to update all items in the server document.  
   
 ```  
 virtual void OnUpdateItems();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 구현 호출 [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) 모든 `COleClientItem` 문서의 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) for all `COleClientItem` objects in the document.  
   
-##  <a name="setitemname"></a>COleServerItem::SetItemName  
- 해당 이름을 설정 하는 연결 된 항목을 만들 때이 함수를 호출 합니다.  
+##  <a name="setitemname"></a>  COleServerItem::SetItemName  
+ Call this function when you create a linked item to set its name.  
   
 ```  
 void SetItemName(LPCTSTR lpszItemName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszItemName`  
- 항목의 새 이름에 대 한 포인터입니다.  
+ Pointer to the new name of the item.  
   
-### <a name="remarks"></a>주의  
- 이름은 문서 내에서 고유 해야 합니다. 연결 된 항목을 편집 하는 서버 응용 프로그램 호출 되 면 응용 프로그램에서 항목을 찾습니다.이 이름을 사용 합니다. 포함 된 항목에 대 한이 함수를 호출할 필요가 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The name must be unique within the document. When a server application is called to edit a linked item, the application uses this name to find the item. You do not need to call this function for embedded items.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   
- [CDocItem 클래스](../../mfc/reference/cdocitem-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleClientItem 클래스](../../mfc/reference/coleclientitem-class.md)   
- [COleServerDoc 클래스](../../mfc/reference/coleserverdoc-class.md)   
- [COleTemplateServer 클래스](../../mfc/reference/coletemplateserver-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [CDocItem Class](../../mfc/reference/cdocitem-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)   
+ [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)   
+ [COleTemplateServer Class](../../mfc/reference/coletemplateserver-class.md)
 

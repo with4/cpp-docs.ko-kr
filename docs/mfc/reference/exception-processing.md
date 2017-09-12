@@ -1,5 +1,5 @@
 ---
-title: "예외 처리 | Microsoft Docs"
+title: Exception Processing | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,14 +13,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, exception handling
-- DAO (Data Access Objects), exceptions
-- OLE exceptions, MFC functions
-- exceptions, processing
-- exception macros
+- macros [MFC], exception handling
+- DAO (Data Access Objects), exceptions [MFC]
+- OLE exceptions [MFC], MFC functions
+- exceptions [MFC], processing
+- exception macros [MFC]
 - termination functions, MFC
 - MFC, exceptions
-- exceptions, MFC throwing functions
+- exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 caps.latest.revision: 16
 author: mikeblome
@@ -40,281 +40,281 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: fc136efaa6312edf3edfa8420411eda73e1c2468
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 69cc68402930b677c6585602c0e6575e18db64a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="exception-processing"></a>예외 처리
-프로그램이 실행 될 때 다양 한 비정상적인 상태 및 "예외" 라는 오류가 발생할 수 있습니다. 이러한 메모리, 리소스 할당 오류와 파일을 찾을 수는 실패의 부족 포함 될 수 있습니다.  
+# <a name="exception-processing"></a>Exception Processing
+When a program executes, a number of abnormal conditions and errors called "exceptions" can occur. These may include running out of memory, resource allocation errors, and failure to find files.  
   
- Microsoft Foundation Class 라이브러리는 c + +에 대 한 ANSI 표준 위원회에서 제안한 하나 후 밀접 하 게 모델링 되는 예외 처리 체계를 사용 합니다. 에 비정상적인 상황이 발생할 수 있는 함수를 호출 하기 전에 예외 처리기를 설정 해야 합니다. 함수는 비정상 상태를 발견 하는 경우 예외를 throw 하 고 예외 처리기로 제어가 전달 됩니다.  
+ The Microsoft Foundation Class Library uses an exception-handling scheme that is modeled closely after the one proposed by the ANSI standards committee for C++. An exception handler must be set up before calling a function that may encounter an abnormal situation. If the function encounters an abnormal condition, it throws an exception and control is passed to the exception handler.  
   
- Microsoft Foundation Class 라이브러리에 포함 된 여러 매크로 예외 처리기를 설정 합니다. 다양 한 다른 전역 함수가 필요한 경우 특수 한 예외를 throw 하 고 프로그램을 종료 하려면 도움말 합니다. 이러한 매크로 및 전역 함수는 다음 범주에 속합니다.  
+ Several macros included with the Microsoft Foundation Class Library will set up exception handlers. A number of other global functions help to throw specialized exceptions and terminate programs, if necessary. These macros and global functions fall into the following categories:  
   
-- 예외 매크로 예외 처리기를 구성 합니다.  
+- Exception macros, which structure your exception handler.  
   
-- 함수 Exception-throwing), 특정 형식의 예외를 생성 하는 합니다.  
+- Exception-throwing functions), which generate exceptions of specific types.  
   
-- 프로그램 종료의 원인이 종료 함수입니다.  
+- Termination functions, which cause program termination.  
   
- 예제 및 자세한 정보에 대 한 문서를 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For examples and more details, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="exception-macros"></a>예외 매크로  
-  
-|||  
-|-|-|  
-|[시도](#try)|예외 처리를 위해 코드 블록을 지정합니다.|  
-|[CATCH](#catch)|앞에서 예외를 catch 하기 위한 코드 블록을 지정 **시도** 블록입니다.|  
-|[CATCH_ALL](#catch_all)|앞에서 모든 예외를 catch 하는 코드 블록을 지정 **시도** 블록입니다.|  
-|[AND_CATCH](#and_catch)|앞에서 추가 예외 유형을 catch 하기 위한 코드 블록을 지정 **시도** 블록입니다.|  
-|[AND_CATCH_ALL](#and_catch_all)|앞에서 throw 된 다른 모든 추가 예외 형식을 catch 하기 위한 코드 블록을 지정 **시도** 블록입니다.|  
-|[END_CATCH](#end_catch)|마지막 종료 **CATCH** 또는 `AND_CATCH` 코드 블록입니다.|  
-|[END_CATCH_ALL](#end_catch_all)|마지막 종료 `CATCH_ALL` 코드 블록입니다.|  
-|[THROW](#throw)|지정 된 예외를 throw합니다.|  
-|[THROW_LAST](#throw_last)|다음 외부 처리기를 현재 처리 된 예외를 throw합니다.|  
-  
-### <a name="exception-throwing-functions"></a>예외 Throw 함수  
+### <a name="exception-macros"></a>Exception Macros  
   
 |||  
 |-|-|  
-|[AfxThrowArchiveException](#afxthrowarchiveexception)|아카이브 예외를 throw합니다.|  
-|[AfxThrowFileException](#afxthrowfileexception)|파일 예외를 throw합니다.|  
-|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|잘못 된 인수 예외를 throw합니다.|
-|[AfxThrowMemoryException](#afxthrowmemoryexception)|메모리 예외가 throw 됩니다.|  
-|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|지원 되지 않는 예외를 throw합니다.|  
-|[AfxThrowResourceException](#afxthrowresourceexception)|Windows 리소스를 찾을 수 없다는 예외를 throw 합니다.|  
-|[AfxThrowUserException](#afxthrowuserexception)|사용자가 시작한 프로그램 작업에서 예외를 throw 합니다.|  
+|[TRY](#try)|Designates a block of code for exception processing.|  
+|[CATCH](#catch)|Designates a block of code for catching an exception from the preceding **TRY** block.|  
+|[CATCH_ALL](#catch_all)|Designates a block of code for catching all exceptions from the preceding **TRY** block.|  
+|[AND_CATCH](#and_catch)|Designates a block of code for catching additional exception types from the preceding **TRY** block.|  
+|[AND_CATCH_ALL](#and_catch_all)|Designates a block of code for catching all other additional exception types thrown in a preceding **TRY** block.|  
+|[END_CATCH](#end_catch)|Ends the last **CATCH** or `AND_CATCH` code block.|  
+|[END_CATCH_ALL](#end_catch_all)|Ends the last `CATCH_ALL` code block.|  
+|[THROW](#throw)|Throws a specified exception.|  
+|[THROW_LAST](#throw_last)|Throws the currently handled exception to the next outer handler.|  
   
- MFC는 OLE 예외에 대 한 구체적으로 두 개의 예외 throw 함수를 제공합니다.  
-  
-### <a name="ole-exception-functions"></a>OLE 예외 함수  
-  
-|||  
-|-|-|  
-|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|OLE 자동화 함수 내에서 예외가 throw 됩니다.|  
-|[AfxThrowOleException](#afxthrowoleexception)|OLE 예외를 throw 합니다.|  
-  
- 데이터베이스 예외를 지원 하려면 데이터베이스 클래스는 두 개의 예외 클래스를 제공 `CDBException` 및 `CDaoException`, 예외 형식을 지원 하기 위해 전역 함수 및:  
-  
-### <a name="dao-exception-functions"></a>DAO 예외 함수  
+### <a name="exception-throwing-functions"></a>Exception-Throwing Functions  
   
 |||  
 |-|-|  
-|[AfxThrowDAOException](#afxthrowdaoexception)|throw 한 [CDaoException](../../mfc/reference/cdaoexception-class.md) 사용자 고유의 코드에서.|  
-|[AfxThrowDBException](#afxthrowdbexception)|throw 한 [잠금을](../../mfc/reference/cdbexception-class.md) 사용자 고유의 코드에서.|  
+|[AfxThrowArchiveException](#afxthrowarchiveexception)|Throws an archive exception.|  
+|[AfxThrowFileException](#afxthrowfileexception)|Throws a file exception.|  
+|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|Throws an invalid argument exception.|
+|[AfxThrowMemoryException](#afxthrowmemoryexception)|Throws a memory exception.|  
+|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|Throws a not-supported exception.|  
+|[AfxThrowResourceException](#afxthrowresourceexception)|Throws a Windows resource-not-found exception.|  
+|[AfxThrowUserException](#afxthrowuserexception)|Throws an exception in a user-initiated program action.|  
   
- MFC는 다음과 같은 종료 함수를 제공합니다.  
+ MFC provides two exception-throwing functions specifically for OLE exceptions:  
   
-### <a name="termination-functions"></a>종료 함수  
+### <a name="ole-exception-functions"></a>OLE Exception Functions  
   
 |||  
 |-|-|  
-|[AfxAbort](#afxabort)|호출 시 오류가 응용 프로그램을 종료 하 발생 합니다.|  
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Throws an exception within an OLE automation function.|  
+|[AfxThrowOleException](#afxthrowoleexception)|Throws an OLE exception.|  
   
-##  <a name="try"></a>시도  
- 설정 된 **시도** 블록입니다.  
+ To support database exceptions, the database classes provide two exception classes, `CDBException` and `CDaoException`, and global functions to support the exception types:  
+  
+### <a name="dao-exception-functions"></a>DAO Exception Functions  
+  
+|||  
+|-|-|  
+|[AfxThrowDAOException](#afxthrowdaoexception)|Throws a [CDaoException](../../mfc/reference/cdaoexception-class.md) from your own code.|  
+|[AfxThrowDBException](#afxthrowdbexception)|Throws a [CDBException](../../mfc/reference/cdbexception-class.md) from your own code.|  
+  
+ MFC provides the following termination function:  
+  
+### <a name="termination-functions"></a>Termination Functions  
+  
+|||  
+|-|-|  
+|[AfxAbort](#afxabort)|Called to terminate an application when a fatal error occurs.|  
+  
+##  <a name="try"></a>  TRY  
+ Sets up a **TRY** block.  
   
 ```   
 TRY   
 ```  
   
-### <a name="remarks"></a>주의  
- A **시도** 블록 예외를 throw 할 수 있는 코드 블록을 식별 합니다. 다음에서 처리 되는 이러한 예외 **CATCH** 및 `AND_CATCH` 블록입니다. 재귀 ï ´ ù: 예외 외부에 전달할 수 있습니다 **시도** 을 무시 하거나 사용 하 여 블록에서 `THROW_LAST` 매크로입니다. 종료는 **시도** 블록와 함께 `END_CATCH` 또는 `END_CATCH_ALL` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ A **TRY** block identifies a block of code that might throw exceptions. Those exceptions are handled in the following **CATCH** and `AND_CATCH` blocks. Recursion is allowed: exceptions may be passed to an outer **TRY** block, either by ignoring them or by using the `THROW_LAST` macro. End the **TRY** block with an `END_CATCH` or `END_CATCH_ALL` macro.  
   
- 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>예제  
- 예를 참조 [CATCH](#catch)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
 
-### <a name="requirements"></a>요구 사항
-헤더: afx.h
+### <a name="requirements"></a>Requirements
+Header: afx.h
 
-##  <a name="catch"></a>CATCH  
- 이전에 throw 되는 첫 번째 예외 형식을 catch 하는 코드 블록을 정의 **시도** 블록입니다.  
+##  <a name="catch"></a>  CATCH  
+ Defines a block of code that catches the first exception type thrown in the preceding **TRY** block.  
   
 ```   
 CATCH(exception_class, exception_object_pointer_name)  
  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *exception_class*  
- 테스트 하기 위해 예외 유형을 지정 합니다. 목록이 표준 예외 클래스에 대 한 클래스를 참조 하십시오. [CException](../../mfc/reference/cexception-class.md)합니다.  
+ Specifies the exception type to test for. For a list of standard exception classes, see class [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- 매크로에 의해 생성되는 예외-개체 포인터에 대한 이름을 지정합니다. 포인터 이름을 사용 하 여 내에서 예외 개체에 액세스 하는 **CATCH** 블록입니다. 이 변수는 자동으로 선언됩니다.  
+ Specifies a name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the **CATCH** block. This variable is declared for you.  
   
-### <a name="remarks"></a>주의  
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. `THROW_LAST` 매크로를 호출하여 다음 외부 예외 프레임으로 처리를 이동합니다. 종료는 **시도** 블록와 함께 `END_CATCH` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Invoke the `THROW_LAST` macro to shift processing to the next outer exception frame. End the **TRY** block with an `END_CATCH` macro.  
   
- 경우 *exception_class* 클래스 `CException`, 다음 예외 형식 모두 발견 됩니다. 사용할 수는 [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) 멤버 함수를 특정 예외 throw 되었는지 확인 합니다. 여러 종류의 예외를 catch 하에 더 좋은 방법은 순차적 사용 하는 것 `AND_CATCH` 각각 다른 예외 형식을 문입니다.  
+ If *exception_class* is the class `CException`, then all exception types will be caught. You can use the [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) member function to determine which specific exception was thrown. A better way to catch several kinds of exceptions is to use sequential `AND_CATCH` statements, each with a different exception type.  
   
- 예외 개체 포인터는 매크로 의해 생성 됩니다. 직접 선언할 필요가 없습니다.  
+ The exception object pointer is created by the macro. You do not need to declare it yourself.  
   
 > [!NOTE]
->  **CATCH** 블록은 중괄호로 구분 된 c + + 범위로 정의 됩니다. 이 범위에서 변수를 선언하면 해당 범위 내에서만 액세스할 수 있습니다. 이 적용 됩니다. *exception_object_pointer_name*합니다.  
+>  The **CATCH** block is defined as a C++ scope delineated by braces. If you declare variables in this scope, they are accessible only within that scope. This also applies to *exception_object_pointer_name*.  
   
- 예외에 대 한 자세한 내용은 및 **CATCH** 매크로 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information on exceptions and the **CATCH** macro, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCExceptions # 26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
- 정의 따르면 이전에 throw 되는 모든 예외 형식을 catch 하는 코드 블록이 **시도** 블록입니다.  
+##  <a name="catch_all"></a>  CATCH_ALL  
+ Defines a block of code that catches all exception types thrown in the preceding **TRY** block.  
   
 ```   
 CATCH_ALL(exception_object_pointer_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer_name*  
- 매크로에 의해 생성되는 예외-개체 포인터에 대한 이름을 지정합니다. 포인터 이름을 사용해서 `CATCH_ALL` 블록 내에서 예외 개체에 액세스할 수 있습니다. 이 변수는 자동으로 선언됩니다.  
+ Specifies a name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `CATCH_ALL` block. This variable is declared for you.  
   
-### <a name="remarks"></a>설명  
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. `THROW_LAST` 매크로를 호출하여 다음 외부 예외 프레임으로 처리를 이동합니다. 사용 하는 경우 `CATCH_ALL`, 최종의 **시도** 블록와 함께 `END_CATCH_ALL` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Invoke the `THROW_LAST` macro to shift processing to the next outer exception frame. If you use `CATCH_ALL`, end the **TRY** block with an `END_CATCH_ALL` macro.  
   
 > [!NOTE]
->  `CATCH_ALL` 블록은 중괄호로 구분된 C++ 범위로 정의됩니다. 이 범위에서 변수를 선언하면 해당 범위 내에서만 액세스할 수 있습니다.  
+>  The `CATCH_ALL` block is defined as a C++ scope delineated by braces. If you declare variables in this scope, they are accessible only within that scope.  
   
- 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information on exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>예제  
- 예를 참조 [cfile:: Abort](../../mfc/reference/cfile-class.md#abort)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
- 앞에서 발생 하는 추가 예외 형식을 catch 하기 위한 코드 블록을 정의 **시도** 블록입니다.  
+##  <a name="and_catch"></a>  AND_CATCH  
+ Defines a block of code for catching additional exception types thrown in a preceding **TRY** block.  
   
 ```   
 AND_CATCH(exception_class, exception_object_pointer_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *exception_class*  
- 테스트 하기 위해 예외 유형을 지정 합니다. 목록이 표준 예외 클래스에 대 한 클래스를 참조 하십시오. [CException](../../mfc/reference/cexception-class.md)합니다.  
+ Specifies the exception type to test for. For a list of standard exception classes, see class [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- 매크로 의해 생성 되는 예외-개체 포인터에 대 한 이름입니다. 포인터 이름을 사용해서 `AND_CATCH` 블록 내에서 예외 개체에 액세스할 수 있습니다. 이 변수는 자동으로 선언됩니다.  
+ A name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `AND_CATCH` block. This variable is declared for you.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여는 **CATCH** 매크로를 하나의 예외 형식을 catch 하면 `AND_CATCH` 각 후속 형식을 catch 하는 매크로입니다. 종료는 **시도** 블록와 함께 `END_CATCH` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the **CATCH** macro to catch one exception type, then the `AND_CATCH` macro to catch each subsequent type. End the **TRY** block with an `END_CATCH` macro.  
   
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH`앞의 끝을 표시 **CATCH** 또는 `AND_CATCH` 블록입니다.  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Call the `THROW_LAST` macro within the `AND_CATCH` block to shift processing to the next outer exception frame. `AND_CATCH` marks the end of the preceding **CATCH** or `AND_CATCH` block.  
   
 > [!NOTE]
->  `AND_CATCH` 블록 (중괄호로 구분)을 c + + 범위로 정의 됩니다. 이 범위에서 변수를 선언 하는 경우 해당 범위 내 에서만 액세스할 수 있는지를 기억 합니다. 이 적용 됩니다.는 *exception_object_pointer_name* 변수입니다.  
+>  The `AND_CATCH` block is defined as a C++ scope (delineated by curly braces). If you declare variables in this scope, remember that they are accessible only within that scope. This also applies to the *exception_object_pointer_name* variable.  
   
-### <a name="example"></a>예제  
- 예를 참조 [CATCH](#catch)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
- 앞에서 발생 하는 추가 예외 형식을 catch 하기 위한 코드 블록을 정의 **시도** 블록입니다.  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
+ Defines a block of code for catching additional exception types thrown in a preceding **TRY** block.  
   
 ```   
 AND_CATCH_ALL(exception_object_pointer_name)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer_name*  
- 매크로 의해 생성 되는 예외-개체 포인터에 대 한 이름입니다. 포인터 이름을 사용해서 `AND_CATCH_ALL` 블록 내에서 예외 개체에 액세스할 수 있습니다. 이 변수는 자동으로 선언됩니다.  
+ A name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `AND_CATCH_ALL` block. This variable is declared for you.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여는 **CATCH** 매크로를 하나의 예외 형식을 catch 하면 `AND_CATCH_ALL` 매크로를 다른 모든 후속 형식을 catch 합니다. 사용 하는 경우 `AND_CATCH_ALL`, 최종의 **시도** 블록와 함께 `END_CATCH_ALL` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the **CATCH** macro to catch one exception type, then the `AND_CATCH_ALL` macro to catch all other subsequent types. If you use `AND_CATCH_ALL`, end the **TRY** block with an `END_CATCH_ALL` macro.  
   
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH_ALL` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH_ALL`앞의 끝을 표시 **CATCH** 또는 `AND_CATCH_ALL` 블록입니다.  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Call the `THROW_LAST` macro within the `AND_CATCH_ALL` block to shift processing to the next outer exception frame. `AND_CATCH_ALL` marks the end of the preceding **CATCH** or `AND_CATCH_ALL` block.  
   
 > [!NOTE]
->  `AND_CATCH_ALL` 블록 (중괄호로 구분)을 c + + 범위로 정의 됩니다. 이 범위에서 변수를 선언 하는 경우 해당 범위 내 에서만 액세스할 수 있는지를 기억 합니다.  
+>  The `AND_CATCH_ALL` block is defined as a C++ scope (delineated by braces). If you declare variables in this scope, remember that they are accessible only within that scope.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
- 마지막의 끝을 표시 **CATCH** 또는 `AND_CATCH` 블록입니다.  
+##  <a name="end_catch"></a>  END_CATCH  
+ Marks the end of the last **CATCH** or `AND_CATCH` block.  
   
 ```   
 END_CATCH  
 ```  
   
-### <a name="remarks"></a>설명  
- 대 한 자세한 내용은 `END_CATCH` 매크로 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information on the `END_CATCH` macro, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
- 마지막의 끝을 표시 `CATCH_ALL` 또는 `AND_CATCH_ALL` 블록입니다.  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
+ Marks the end of the last `CATCH_ALL` or `AND_CATCH_ALL` block.  
   
 ```   
 END_CATCH_ALL  
 ```  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
- 지정된 된 예외를 throw합니다.  
+##  <a name="throw"></a>  THROW (MFC)  
+ Throws the specified exception.  
   
 ```   
 THROW(exception_object_pointer) 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer*  
- 파생 된 예외 개체를 가리킵니다 `CException`합니다.  
+ Points to an exception object derived from `CException`.  
   
-### <a name="remarks"></a>설명  
- **THROW** 인터럽트 프로그램 실행, 연결 된 컨트롤을 전달 **CATCH** 프로그램에서 차단 합니다. 제공 되지 않은 경우는 **CATCH** 차단 컨트롤이 인쇄는 오류 메시지 및 종료 하는 Microsoft Foundation Class 라이브러리 모듈에 전달 합니다.  
+### <a name="remarks"></a>Remarks  
+ **THROW** interrupts program execution, passing control to the associated **CATCH** block in your program. If you have not provided the **CATCH** block, then control is passed to a Microsoft Foundation Class Library module that prints an error message and exits.  
   
- 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
- 다음 예외를 다시 throw 외부 **CATCH** 블록입니다.  
+##  <a name="throw_last"></a>  THROW_LAST  
+ Throws the exception back to the next outer **CATCH** block.  
   
 ```   
 THROW_LAST()   
 ```  
   
-### <a name="remarks"></a>주의  
- 이 매크로 사용 하면 로컬에서 만든된 예외를 throw 수 있습니다. 방금 따라잡을 예외를 throw 하려는 경우 일반적으로 범위를 벗어납니다 하 고 삭제할 수 있습니다. 와 `THROW_LAST`, 다음 예외를 올바르게 전달 **CATCH** 처리기입니다.  
+### <a name="remarks"></a>Remarks  
+ This macro allows you to throw a locally created exception. If you try to throw an exception that you have just caught, it will normally go out of scope and be deleted. With `THROW_LAST`, the exception is passed correctly to the next **CATCH** handler.  
   
- 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>예제  
- 예를 참조 [cfile:: Abort](../../mfc/reference/cfile-class.md#abort)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
- 아카이브 예외를 throw합니다.  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
+ Throws an archive exception.  
   
 ```   
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 예외에 대 한 이유를 나타내는 정수를 지정 합니다. 목록이 가능한 값에 대 한 참조 [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)합니다.  
+ Specifies an integer that indicates the reason for the exception. For a list of the possible values, see [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).  
   
  `lpszArchiveName`  
- 이름을 포함 하는 문자열을 가리키는 `CArchive` (있는 경우) 예외를 발생 시킨 개체입니다.  
+ Points to a string containing the name of the `CArchive` object that caused the exception (if available).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
- 파일 예외를 throw합니다.  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
+ Throws a file exception.  
   
 ```   
 void AfxThrowFileException(
@@ -323,93 +323,93 @@ void AfxThrowFileException(
     LPCTSTR lpszFileName = NULL); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 예외에 대 한 이유를 나타내는 정수를 지정 합니다. 목록이 가능한 값에 대 한 참조 [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)합니다.  
+ Specifies an integer that indicates the reason for the exception. For a list of the possible values, see [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).  
   
  `lOsError`  
- (있는 경우) 운영 체제 오류 번호가 예외의 원인을 설명 하는 합니다. 오류 코드 목록에 대 한 운영 체제 설명서를 참조 하십시오.  
+ Contains the operating-system error number (if available) that states the reason for the exception. See your operating-system manual for a listing of error codes.  
   
  `lpszFileName`  
- (있는 경우) 예외를 발생 시킨 파일의 이름을 포함 하는 문자열을 가리킵니다.  
+ Points to a string containing the name of the file that caused the exception (if available).  
   
-### <a name="remarks"></a>주의  
- 운영 체제 오류 코드에 따라 원인을 책임이 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You are responsible for determining the cause based on the operating-system error code.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
-잘못 된 인수 예외를 throw합니다.  
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
+Throws an invalid argument exception.  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxThrowInvalidArgException( );  
 ```  
    
-### <a name="remarks"></a>설명  
- 이 함수는 잘못 된 인수가 사용 될 때 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is called when invalid arguments are used.  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
    
-### <a name="see-also"></a>참고 항목  
- [매크로 및 전역](mfc-macros-and-globals.md)   
- [CInvalidArgException 클래스](cinvalidargexception-class.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [CInvalidArgException Class](cinvalidargexception-class.md)   
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
- 메모리 예외가 throw 됩니다.  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
+ Throws a memory exception.  
   
 ```   
 void AfxThrowMemoryException(); 
 ```  
   
-### <a name="remarks"></a>설명  
- 경우이 함수를 호출 기본 시스템 메모리 할당자에 대 한 호출 (같은 `malloc` 및 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 함수)에 실패 합니다. 에 대 한 호출을 위해 불필요 **새** 때문에 **새** 에서 예외를 throw 메모리 자동으로 메모리 할당에 실패 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ Call this function if calls to underlying system memory allocators (such as `malloc` and the [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows function) fail. You do not need to call it for **new** because **new** will throw a memory exception automatically if the memory allocation fails.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
- 지원 되지 않는 기능을 요청한 결과인 예외를 throw 합니다.  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
+ Throws an exception that is the result of a request for an unsupported feature.  
   
 ```  
 void AfxThrowNotSupportedException(); 
 ```  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
- 리소스 예외를 throw합니다.  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
+ Throws a resource exception.  
   
 ```   
 void  AfxThrowResourceException(); 
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 일반적으로 Windows 리소스를 로드할 수 없는 경우 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is normally called when a Windows resource cannot be loaded.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
- 최종 사용자 작업을 중지 하도록 예외가 throw 됩니다.  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
+ Throws an exception to stop an end-user operation.  
   
 ```   
 void AfxThrowUserException(); 
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 일반적으로 한 직후 호출 `AfxMessageBox` 사용자에 게 오류를 보고 했습니다.  
+### <a name="remarks"></a>Remarks  
+ This function is normally called immediately after `AfxMessageBox` has reported an error to the user.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
- 이 함수를 사용 하 여 OLE 자동화 함수 내에서 예외를 throw 합니다.  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
+ Use this function to throw an exception within an OLE automation function.  
   
 ```   
 void AFXAPI AfxThrowOleDispatchException(
@@ -423,51 +423,51 @@ void AFXAPI AfxThrowOleDispatchException(
     UINT nHelpID = -1); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `wCode`  
- 응용 프로그램에 오류 코드입니다.  
+ An error code specific to your application.  
   
  `lpszDescription`  
- 오류의 설명입니다.  
+ Verbal description of the error.  
   
  `nDescriptionID`  
- 일반 언어로 된 오류 설명에 대 한 리소스 ID입니다.  
+ Resource ID for the verbal error description.  
   
  `nHelpID`  
- 응용 프로그램의 도움말에 대 한 도움말 컨텍스트 (합니다. HLP) 파일입니다.  
+ A help context for your application's help (.HLP) file.  
   
-### <a name="remarks"></a>설명  
- (Microsoft Visual Basic 또는 다른 OLE 자동화 클라이언트 응용 프로그램) 구동 응용 프로그램에서이 함수에 제공 된 정보를 표시할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The information provided to this function can be displayed by the driving application (Microsoft Visual Basic or another OLE automation client application).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCExceptions # 25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
- 형식의 개체를 만듭니다. `COleException` 예외를 throw 합니다.  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
+ Creates an object of type `COleException` and throws an exception.  
   
 ``` 
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `sc`  
- 예외에 대 한 이유를 나타내는 OLE 상태 코드입니다.  
+ An OLE status code that indicates the reason for the exception.  
   
  `hr`  
- 예외에 대 한 이유를 나타내는 결과 코드에 대 한 핸들입니다.  
+ Handle to a result code that indicates the reason for the exception.  
   
-### <a name="remarks"></a>주의  
- 사용 하는 버전은 `HRESULT` 인수로 해당 결과 코드를 해당로 변환 하는 대로 `SCODE`합니다. 대 한 자세한 내용은 `HRESULT` 및 `SCODE`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ The version that takes an `HRESULT` as an argument converts that result code into the corresponding `SCODE`. For more information on `HRESULT` and `SCODE`, see [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) in the Windows SDK.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
- 형식의 예외를 throw 하려면이 함수를 호출 [CDaoException](../../mfc/reference/cdaoexception-class.md) 사용자 고유의 코드에서.  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
+ Call this function to throw an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md) from your own code.  
   
 ```   
 void AFXAPI AfxThrowDaoException(
@@ -475,23 +475,23 @@ void AFXAPI AfxThrowDaoException(
     SCODE scode = S_OK); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nAfxDaoError`  
- 확장 된 오류 코드는 DAO를 나타내는 정수 값을는 나열 될 수 있습니다는 값 중 하나에서 [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)합니다.  
+ An integer value representing a DAO extended error code, which can be one of the values listed under [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).  
   
  *scode*  
- OLE 오류 코드 유형의 DAO에서 `SCODE`합니다. 자세한 내용은 참조 [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)합니다.  
+ An OLE error code from DAO, of type `SCODE`. For information, see [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).  
   
-### <a name="remarks"></a>주의  
- 프레임 워크에서 호출 또한 `AfxThrowDaoException`합니다. 호출에서 매개 변수 중 하나 또는 둘 모두를 전달할 수 있습니다. 에 오류 정보에서 정의 된 발생 중 하나를 하려는 경우 예를 들어 **CDaoException::nAfxDaoError** 에 대 한 중요 하지 않은 있지만 *scode* 매개 변수를 전달에 올바른 코드는 `nAfxDaoError` 매개 변수에 대 한 기본값을 그대로 및 *scode*합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework also calls `AfxThrowDaoException`. In your call, you can pass one of the parameters or both. For example, if you want to raise one of the errors defined in **CDaoException::nAfxDaoError** but you do not care about the *scode* parameter, pass a valid code in the `nAfxDaoError` parameter and accept the default value for *scode*.  
   
- MFC DAO 클래스와 관련 된 예외에 대 한 내용은 클래스를 참조 하십시오. `CDaoException` 이 책 목록과 문서에서 [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)합니다.  
+ For information about exceptions related to the MFC DAO classes, see class `CDaoException` in this book and the article [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdb.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
- 형식의 예외를 throw 하려면이 함수를 호출 `CDBException` 사용자 고유의 코드에서.  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
+ Call this function to throw an exception of type `CDBException` from your own code.  
   
 ```  
 void AfxThrowDBException(
@@ -500,41 +500,41 @@ void AfxThrowDBException(
     HSTMT hstmt);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nRetCode`  
- 형식의 값 **RETCODE**, 오류를 throw 한 예외를 발생 시킨 유형을 정의 합니다.  
+ A value of type **RETCODE**, defining the type of error that caused the exception to be thrown.  
   
  `pdb`  
- 에 대 한 포인터는 `CDatabase` 예외와 관련 된 데이터 원본 연결을 나타내는 개체입니다.  
+ A pointer to the `CDatabase` object that represents the data source connection with which the exception is associated.  
   
  `hstmt`  
- ODBC **HSTMT** 예외와 관련 된 문 핸들을 지정 하는 핸들입니다.  
+ An ODBC **HSTMT** handle that specifies the statement handle with which the exception is associated.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크를 호출 하 여 `AfxThrowDBException` ODBC를 받을 때 **RETCODE** ODBC API 호출에서 함수를 해석 하는 **RETCODE** expectable 오류가 아닌 예외 상황을 합니다. 예를 들어, 디스크 읽기 오류 때문에 데이터 액세스 작업이 실패할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls `AfxThrowDBException` when it receives an ODBC **RETCODE** from a call to an ODBC API function and interprets the **RETCODE** as an exceptional condition rather than an expectable error. For example, a data access operation might fail because of a disk read error.  
   
- 에 대 한 내용은 **RETCODE** ODBC에 정의 된 값의 8 장, "검색 상태 및 오류 정보를" 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 이러한 코드에 대 한 MFC 확장에 대 한 내용은 클래스를 참조 하십시오. [잠금을](../../mfc/reference/cdbexception-class.md)합니다.  
+ For information about the **RETCODE** values defined by ODBC, see Chapter 8, "Retrieving Status and Error Information," in the Windows SDK. For information about MFC extensions to these codes, see class [CDBException](../../mfc/reference/cdbexception-class.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
- MFC에서 제공 하는 기본 종료 함수  
+##  <a name="afxabort"></a>  AfxAbort  
+ The default termination function supplied by MFC.  
   
 ```   
 void  AfxAbort(); 
 ```  
   
-### <a name="remarks"></a>주의  
- `AfxAbort`내부적으로 호출 MFC 멤버 함수에 의해 확인할 수 없는 예외가 처리할 수 없는 등의 심각한 오류가 있을 때. 호출할 수 있습니다 `AfxAbort` 복구할 수 없는 치명적인 오류가 발생 하는 경우에 드문 경우에서입니다.  
+### <a name="remarks"></a>Remarks  
+ `AfxAbort` is called internally by MFC member functions when there is a fatal error, such as an uncaught exception that cannot be handled. You can call `AfxAbort` in the rare case when you encounter a catastrophic error from which you cannot recover.  
   
-### <a name="example"></a>예제  
- 예를 참조 [CATCH](#catch)합니다.  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
 
-### <a name="requirements"></a>요구 사항  
-  **헤더** afx.h   
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h   
   
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)   
- [CException 클래스](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 
